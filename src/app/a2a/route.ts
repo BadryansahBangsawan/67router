@@ -18,6 +18,7 @@ import { createA2AStream, SSE_HEADERS } from "@/lib/a2a/streaming";
 import { A2A_SKILL_HANDLERS, executeA2ATaskWithState } from "@/lib/a2a/taskExecution";
 import { getSettings } from "@/lib/db/settings";
 import { authenticateA2ARequest, resolveA2AOwner } from "@/lib/a2a/authenticate";
+import { sanitizeErrorMessage } from "@omniroute/open-sse/utils/error";
 
 // ============ A2A v1.0 ↔ v0.3 compatibility layer ============
 // A2A 1.0 renamed the JSON-RPC methods (message/send → SendMessage,
@@ -265,7 +266,8 @@ export async function POST(req: NextRequest) {
         });
       } catch (err) {
         console.error("A2A ERROR TRACE:", err);
-        const msg = err instanceof Error ? err.message : String(err);
+        // Stored on the task (tasks/get) and returned to the caller — sanitize once.
+        const msg = sanitizeErrorMessage(err instanceof Error ? err.message : String(err));
         tm.updateTask(task.id, "failed", [{ type: "error", content: msg }], msg);
         return jsonRpcError(id, -32603, `Skill execution failed: ${msg}`);
       }
@@ -324,7 +326,7 @@ export async function POST(req: NextRequest) {
         const task = tm.cancelTask(taskId, callerOwner);
         return jsonRpcResult(id, { task: { id: task.id, state: task.state } });
       } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
+        const msg = sanitizeErrorMessage(err instanceof Error ? err.message : String(err));
         return jsonRpcError(id, -32603, msg);
       }
     }
