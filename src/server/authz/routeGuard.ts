@@ -196,6 +196,11 @@ export const ALWAYS_PROTECTED_API_PATHS: ReadonlyArray<string> = [
   // client/public IPs, and the handler only calls requireManagementAuth() with no
   // alwaysRequireAuth. Found sweeping the GHSA-5926-2w35-7h4q class.
   "/api/logs/export",
+  // Log-export destinations: POST stores a caller-chosen sink (optionally with
+  // request/response bodies) and /destinations/{id}/run starts the export in a
+  // child process. Same data class as /api/logs/export above, so it must not sit
+  // on the fail-open MANAGEMENT tier. The prefix covers every child route.
+  "/api/log-export",
   // Codex CLI profile store. GET leaks the operator's account label; PUT writes
   // attacker-supplied auth.json + config.toml straight into the operator's Codex
   // CLI config (ensureCliConfigWriteAllowed() only checks CLI_ALLOW_CONFIG_WRITES,
