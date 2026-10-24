@@ -150,12 +150,6 @@ export const COLLECTORS = [
     sources: ["vitest.config.ts"],
     anchors: { "vitest.config.ts": "src/lib/skills/__tests__/**/*.test.ts" },
   },
-  // vitest.config.ts include — single-file entry for the .test.ts encryption file.
-  {
-    glob: "tests/unit/encryption.test.ts",
-    sources: ["vitest.config.ts"],
-    anchors: { "vitest.config.ts": "tests/unit/encryption.test.ts" },
-  },
   // Playwright — test:e2e (o script passa tests/e2e/*.spec.ts; testMatch **/*.spec.ts)
   { glob: "tests/e2e/*.spec.ts", sources: ["package.json"] },
   // Runners custom — test:ecosystem / test:protocols:e2e (spawnam vitest com o arquivo)
