@@ -302,7 +302,9 @@ test("v1 search POST accepts authless SearXNG with provider_options baseUrl", as
           provider: "searxng-search",
           search_type: "news",
           provider_options: {
-            baseUrl: "http://127.0.0.1:9090/custom-search",
+            // A caller-supplied baseUrl must name a public host (public-only);
+            // loopback/LAN SearXNG is configured on the provider connection.
+            baseUrl: "http://93.184.216.34:9090/custom-search",
           },
         }),
       })
@@ -312,7 +314,7 @@ test("v1 search POST accepts authless SearXNG with provider_options baseUrl", as
     assert.equal(response.status, 200);
     assert.equal(
       capturedUrl,
-      "http://127.0.0.1:9090/custom-search/search?q=self+hosted+meta+search&format=json&categories=news"
+      "http://93.184.216.34:9090/custom-search/search?q=self+hosted+meta+search&format=json&categories=news"
     );
     assert.equal(body.provider, "searxng-search");
     assert.equal(body.results[0].title, "SearXNG result");

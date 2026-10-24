@@ -9,6 +9,7 @@
  */
 
 import { saveCallLog } from "@/lib/usageDb";
+import { safeOutboundFetch } from "@/shared/network/safeOutboundFetch";
 import { sanitizeErrorMessage } from "../../utils/error.ts";
 import { formatSearchProviderFailure } from "./providerFailure.ts";
 import { HTTP_STATUS } from "../../config/constants.ts";
@@ -194,6 +195,12 @@ export interface ExecuteProviderFetchParams {
    * ./reportedCost.ts). Absent or not opted in: usage is `costPerQuery`.
    */
   costContext?: { apiKeyId?: string; providerSpecificData?: Record<string, unknown> };
+  /**
+   * The URL came from caller input (`provider_options.baseUrl`): fetch it
+   * public-only (every resolved address checked), DNS-pinned on a direct
+   * connection, and without following redirects.
+   */
+  untrustedTarget?: boolean;
   normalize: (
     providerId: string,
     data: unknown,
@@ -241,9 +248,17 @@ export async function executeProviderFetch(
     });
 
   try {
-    const response = await fetchWithSearchProxy(proxy, () =>
-      fetch(url, { ...init, signal: controller.signal })
-    );
+    const response = p.untrustedTarget
+      ? await safeOutboundFetch(url, {
+          ...init,
+          signal: controller.signal,
+          guard: "public-only",
+          pinDns: true,
+          allowRedirect: false,
+          retry: false,
+          proxyConfig: proxy || undefined,
+        })
+      : await fetchWithSearchProxy(proxy, () => fetch(url, { ...init, signal: controller.signal }));
     clearTimeout(timer);
 
     if (!response.ok) {
@@ -344,7 +359,9 @@ export async function executeProviderFetch(
       await emitEvent("error");
       return { success: false, status, error: `Search provider ${config.id}: ${safeMsg}` };
     }
-    const isTimeout = error.name === "AbortError";
+    // safeOutboundFetch (untrusted targets) wraps the abort in SafeOutboundFetchError.
+    const isTimeout =
+      error.name === "AbortError" || (error.cause as { name?: string })?.name === "AbortError";
     const safeMsg = sanitizeErrorMessage(error.message) || "fetch failed";
     if (log) {
       log.error("SEARCH", `${config.id} ${isTimeout ? "timeout" : "fetch error"}: ${safeMsg}`);
