@@ -424,11 +424,11 @@ export async function runAuthzPipeline(
     return rejection;
   }
 
-  if (
-    classification.routeClass === "MANAGEMENT" &&
-    outcome.subject.kind === "dashboard_session" &&
-    isUnsafeMutationMethod(method)
-  ) {
+  // Browser-origin check for every unsafe MANAGEMENT request, whatever the subject
+  // kind: in open mode (requireLogin=false) the subject is `anonymous`, and a
+  // cross-site page must not be able to drive management writes. Clients that send
+  // neither Origin nor Sec-Fetch-Site (CLI, curl, server-side fetch) still pass.
+  if (classification.routeClass === "MANAGEMENT" && isUnsafeMutationMethod(method)) {
     const originVerdict = validateBrowserMutationOrigin(request);
     const csrfOriginFallback =
       originVerdict.reason === "invalid-origin" && validateDashboardCsrfToken(request);
