@@ -129,6 +129,7 @@ test("SPAWN_CAPABLE_PREFIXES is defined in the server-free constants leaf with t
     "/api/discovery/",
     "/api/issue-agent/",
     "/api/oauth/kiro/auto-import",
+    "/api/oauth/cliproxy-import",
   ]) {
     assert.ok(
       SPAWN_CAPABLE_PREFIXES.includes(prefix),
@@ -138,6 +139,7 @@ test("SPAWN_CAPABLE_PREFIXES is defined in the server-free constants leaf with t
   // 20 at extraction time + 14 (GHSA-35fw-cv32-2373) + 2 (GHSA-jx89-f37j-pq89) + 1 (version-manager)
   // + 14 LOCAL_ONLY spawn / code-exec routes that had never been mirrored here.
   // + 1 host-credential read (/api/oauth/kiro/auto-import) that must never be bypassable.
+  // + 1 host-credential read (/api/oauth/cliproxy-import), same class as the Kiro entry.
   // qwen-settings is the one pre-existing entry not enumerated above.
-  assert.equal(SPAWN_CAPABLE_PREFIXES.length, 52);
+  assert.equal(SPAWN_CAPABLE_PREFIXES.length, 53);
 });

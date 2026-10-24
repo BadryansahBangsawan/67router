@@ -65,6 +65,8 @@ const CODE_EXEC_ROUTES: ReadonlyArray<{ prefix: string; sample: string }> = [
   // Not a spawn: reads host-local Kiro credential files (kiro-cli SQLite, ~/.aws/sso/cache).
   // Held to the same never-bypassable bar so a manage-scoped key cannot read them remotely.
   { prefix: "/api/oauth/kiro/auto-import", sample: "/api/oauth/kiro/auto-import" },
+  // Same class: reads the host's CLIProxyAPI auth dir (~/.cli-proxy-api) and imports it.
+  { prefix: "/api/oauth/cliproxy-import", sample: "/api/oauth/cliproxy-import" },
 ];
 
 function schemaRejectsBypassPrefix(prefix: string): boolean {
