@@ -12,9 +12,8 @@ import {
   errorResponse,
   unavailableResponse,
   errorResponseWithComboDiagnostics,
-  logRetryHintUnreadable,
-  readProseRetryAfter,
 } from "../../utils/error.ts";
+import { extractComboErrorInfo } from "./errorInfo.ts";
 import { buildRecoveryHint } from "./pinRecovery.ts";
 import { buildContextBudgetResponse } from "./budgetExhaustion.ts";
 import { formatExhaustedConnectionKey } from "./comboDiagFormat.ts";
@@ -973,33 +972,14 @@ export async function handleRoundRobinCombo({
           }
 
           // Extract error info
-          let errorText = result.statusText || "";
-          let retryAfter: ComboRetryAfter | null = null;
-          let errorBody: ComboErrorBody = null;
-          let bodyText = "";
-          try {
-            const cloned = result.clone();
-            try {
-              const text = await cloned.text();
-              bodyText = text;
-              if (text) {
-                errorText = text.substring(0, 500);
-                errorBody = JSON.parse(text);
-                const parsedError = errorBody?.error;
-                errorText =
-                  (typeof parsedError === "object" && parsedError?.message) ||
-                  (typeof parsedError === "string" ? parsedError : null) ||
-                  errorBody?.message ||
-                  errorText;
-                retryAfter = errorBody?.retryAfter || null;
-              }
-            } catch {
-              logRetryHintUnreadable(log, "COMBO-RR", modelStr, result.status, "unparseable body");
-            }
-          } catch {
-            logRetryHintUnreadable(log, "COMBO-RR", modelStr, result.status, "clone failed");
-          }
-          retryAfter ||= readProseRetryAfter(bodyText); // #13672 opt-in prose hints
+          const extracted = await extractComboErrorInfo(result, {
+            log,
+            tag: "COMBO-RR",
+            modelStr,
+          });
+          let errorText = extracted.errorText;
+          const errorBody: ComboErrorBody = extracted.errorBody;
+          const retryAfter: ComboRetryAfter | null = extracted.retryAfter;
 
           if (result.status === 499) {
             log.info(
