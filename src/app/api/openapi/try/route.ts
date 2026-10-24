@@ -6,7 +6,10 @@
 import { z } from "zod";
 import { NextRequest, NextResponse } from "next/server";
 import { sanitizeErrorMessage } from "@omniroute/open-sse/utils/error";
+import { createErrorResponse } from "@/lib/api/errorResponse";
 import { requireManagementAuth } from "@/lib/api/requireManagementAuth";
+import { isLocalOnlyPath } from "@/server/authz/routeGuard";
+import { getRequestPeerLocality } from "@/shared/utils/apiAuth";
 import { validateBody, isValidationFailure } from "@/shared/validation/helpers";
 
 const ALLOWED_TRY_PATH_PREFIXES = ["/api/", "/v1/", "/v1beta/", "/a2a", "/.well-known/agent.json"];
@@ -27,6 +30,10 @@ const BLOCKED_FORWARD_HEADERS = new Set([
   "x-forwarded-proto",
 ]);
 
+function isAllowedTryPath(value: string) {
+  return ALLOWED_TRY_PATH_PREFIXES.some((prefix) => value.startsWith(prefix));
+}
+
 const tryRequestSchema = z.object({
   method: z
     .enum(["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"])
@@ -37,10 +44,7 @@ const tryRequestSchema = z.object({
     .min(1, "Path is required")
     .startsWith("/", "Path must start with /")
     .refine((value) => !value.startsWith("//"), "Path must be a same-origin path")
-    .refine(
-      (value) => ALLOWED_TRY_PATH_PREFIXES.some((prefix) => value.startsWith(prefix)),
-      "Path must target an OmniRoute API endpoint"
-    ),
+    .refine((value) => isAllowedTryPath(value), "Path must target an OmniRoute API endpoint"),
   headers: z.record(z.string(), z.string()).optional().default({}),
   body: z.any().optional(),
 });
@@ -79,6 +83,26 @@ export async function POST(request: NextRequest) {
     if (targetUrl.origin !== origin) {
       return NextResponse.json({ error: "Path must be same-origin" }, { status: 400 });
     }
+    // Re-check the allowlist on the resolved pathname: dot segments ("/v1/../x")
+    // pass the raw-string check but resolve elsewhere.
+    if (!isAllowedTryPath(targetUrl.pathname)) {
+      return NextResponse.json(
+        { error: "Path must target an OmniRoute API endpoint" },
+        { status: 400 }
+      );
+    }
+
+    // The inner fetch goes to this server's own (loopback) bind address, so it would
+    // satisfy the LOCAL_ONLY tier on its own. Only callers who could reach a
+    // LOCAL_ONLY route directly (loopback / private LAN) may target one here.
+    const callerLocality = getRequestPeerLocality(request);
+    if (callerLocality === "remote" && isLocalOnlyPath(targetUrl.pathname, method)) {
+      return createErrorResponse({
+        status: 403,
+        message: "This endpoint is only reachable from the local machine",
+        type: "invalid_request",
+      });
+    }
 
     const start = performance.now();
 
@@ -89,6 +113,12 @@ export async function POST(request: NextRequest) {
     const cookie = request.headers.get("cookie");
     if (cookie && !forwardHeaders["Cookie"]) {
       forwardHeaders["Cookie"] = cookie;
+    }
+
+    // Remote caller: mark the inner request as a proxy hop so every downstream
+    // loopback-trust check (peer stamp → via-proxy) sees it as non-local.
+    if (callerLocality === "remote") {
+      forwardHeaders["Via"] = "1.1 omniroute-openapi-try";
     }
 
     if (reqBody && !forwardHeaders["Content-Type"]) {
