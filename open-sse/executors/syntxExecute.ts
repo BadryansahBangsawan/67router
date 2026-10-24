@@ -2,6 +2,7 @@
  * SYNTX execute pipeline — split out of SyntxExecutor so each step stays
  * under the complexity / max-lines / cognitive new-code caps.
  */
+import { fetchUntrustedRemoteImage } from "@/shared/network/remoteImageFetch";
 import type { ExecuteInput, ExecutorExecuteResult } from "./base.ts";
 import {
   makeExecutorErrorResult as makeErrorResult,
@@ -296,8 +297,7 @@ async function uploadSyntxBytes(
 }
 
 async function resolveImageBytes(
-  source: SyntxImageSource,
-  fetchImpl: typeof fetch
+  source: SyntxImageSource
 ): Promise<{ bytes: Uint8Array; mime: string; name: string } | null> {
   let bytes = source.bytes;
   let mime = source.mime || "image/png";
@@ -308,11 +308,11 @@ async function resolveImageBytes(
     return decoded;
   }
   if (!bytes && source.url?.startsWith("https://")) {
-    const fetched = await fetchImpl(source.url);
-    if (!fetched.ok) return null;
-    const buf = new Uint8Array(await fetched.arrayBuffer());
-    mime = fetched.headers.get("content-type")?.split(";")[0]?.trim() || mime;
-    return { bytes: buf, mime, name };
+    // Client-supplied URL: public-only, DNS-pinned, HTTPS on every redirect hop.
+    // Throws on a refused/failed download; the caller skips that image.
+    const fetched = await fetchUntrustedRemoteImage(source.url, { enforceHttps: true });
+    mime = fetched.contentType?.split(";")[0]?.trim() || mime;
+    return { bytes: new Uint8Array(fetched.buffer), mime, name };
   }
   if (!bytes) return null;
   return { bytes, mime, name };
@@ -324,7 +324,7 @@ async function uploadSyntxImage(
   fetchImpl: typeof fetch
 ): Promise<string | null> {
   if (source.url && source.url.startsWith("https://r2.syntx.ai/")) return source.url;
-  const resolved = await resolveImageBytes(source, fetchImpl);
+  const resolved = await resolveImageBytes(source);
   if (!resolved) return null;
   const uploaded = await uploadSyntxBytes(token, resolved, fetchImpl);
   return uploaded?.url || null;
