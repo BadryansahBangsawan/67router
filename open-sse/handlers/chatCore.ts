@@ -2428,6 +2428,7 @@ async function handleChatCoreInner({
     clientResponseFormat,
     clientAbortSignal: clientRawRequest?.signal,
     allowCompletedToolHandoffGrace: isCodexResponsesEcho,
+    log,
   });
 
   const dedupRequestBody = { ...translatedBody, model: `${provider}/${model}`, stream };
