@@ -273,6 +273,26 @@ function pendingDetailBytes(detail: PendingRequestDetail): number {
 }
 
 /**
+ * Bytes each entry currently contributes to `totalPendingDetailBytes`. Removal
+ * subtracts exactly what was added: re-measuring at removal time counted stream
+ * chunks attached after insert (requestLogger, updatePendingRequestStreamChunks)
+ * that were never added, drifting the total below zero so the byte ceiling
+ * never fired.
+ */
+const accountedPendingBytes = new WeakMap<PendingRequestDetail, number>();
+
+function remeasurePendingDetail(detail: PendingRequestDetail): void {
+  const bytes = pendingDetailBytes(detail);
+  totalPendingDetailBytes += bytes - (accountedPendingBytes.get(detail) ?? 0);
+  accountedPendingBytes.set(detail, bytes);
+}
+
+function releasePendingDetailBytes(detail: PendingRequestDetail): void {
+  totalPendingDetailBytes -= accountedPendingBytes.get(detail) ?? 0;
+  accountedPendingBytes.delete(detail);
+}
+
+/**
  * Hard byte ceiling on the pending map. Runs after every insert so a burst of
  * large-context requests cannot push the process past the 85% heap guard before
  * the 5-minute age sweep runs. Eviction order matches the count-cap path
@@ -288,7 +308,7 @@ function enforcePendingByteCeiling(): void {
     if (totalPendingDetailBytes <= MAX_PENDING_DETAIL_BYTES) break;
     const modelKey = detail.provider ? `${detail.model} (${detail.provider})` : detail.model;
     pendingById.delete(detail.id);
-    totalPendingDetailBytes -= pendingDetailBytes(detail);
+    releasePendingDetailBytes(detail);
     if (detail.connectionId && isSafeKey(modelKey)) {
       const bucket = pendingRequests.details[detail.connectionId]?.[modelKey];
       if (bucket) {
@@ -344,7 +364,7 @@ export function sweepStalePendingRequests(
   const remove = (detail: PendingRequestDetail): void => {
     const modelKey = detail.provider ? `${detail.model} (${detail.provider})` : detail.model;
     pendingById.delete(detail.id);
-    totalPendingDetailBytes -= pendingDetailBytes(detail);
+    releasePendingDetailBytes(detail);
     if (detail.connectionId && isSafeKey(modelKey)) {
       const bucket = pendingRequests.details[detail.connectionId]?.[modelKey];
       if (bucket) {
@@ -358,12 +378,18 @@ export function sweepStalePendingRequests(
   };
 
   for (const detail of pendingById.values()) {
-    if (detail.stale) continue;
-    if (now - detail.startedAt > maxAgeMs) {
+    if (!detail.stale && now - detail.startedAt > maxAgeMs) {
       detail.stale = true;
       detail.sweptAt = now;
+      // A request stuck past the age limit stays listed, but nobody will read
+      // its multi-MB payloads again: keep the row, drop what it retains.
+      for (const field of PENDING_PAYLOAD_FIELDS) delete detail[field];
     }
+    // requestLogger keeps appending to stream-chunk arrays it attached earlier,
+    // so re-measure every entry here to keep the byte ceiling honest.
+    remeasurePendingDetail(detail);
   }
+  enforcePendingByteCeiling();
 
   // Hard backstop: if entries are still piling up faster than they age out, drop the oldest
   // beyond the cap.
@@ -494,7 +520,7 @@ export function trackPendingRequest(
       };
       pendingRequests.details[connectionId][modelKey].push(newDetail);
       pendingById.set(newDetail.id, newDetail);
-      totalPendingDetailBytes += pendingDetailBytes(newDetail);
+      remeasurePendingDetail(newDetail);
       enforcePendingByteCeiling();
       if (normalizedMetadata.correlationId) {
         pendingIdByCorrelation.set(normalizedMetadata.correlationId, {
@@ -512,13 +538,13 @@ export function trackPendingRequest(
         );
         if (removed) {
           pendingById.delete(removed.id);
-          totalPendingDetailBytes -= pendingDetailBytes(removed);
+          releasePendingDetailBytes(removed);
         }
       } else if (pendingRequests.details[connectionId]?.[modelKey]?.length) {
         const removed = pendingRequests.details[connectionId][modelKey].shift();
         if (removed) {
           pendingById.delete(removed.id);
-          totalPendingDetailBytes -= pendingDetailBytes(removed);
+          releasePendingDetailBytes(removed);
         }
       }
       if (!pendingRequests.details[connectionId]?.[modelKey]?.length) {
@@ -546,17 +572,15 @@ export function updatePendingRequest(
   // providerRequest / providerResponse / clientResponse land HERE, on an
   // already-tracked entry, not on insert. Without re-measuring, the running total
   // undercounts and the byte ceiling silently stops enforcing in production.
-  const before = pendingDetailBytes(details[lastIdx]);
   Object.assign(details[lastIdx], normalizePendingMetadata(metadata));
-  totalPendingDetailBytes += pendingDetailBytes(details[lastIdx]) - before;
+  remeasurePendingDetail(details[lastIdx]);
 }
 
 export function updatePendingRequestById(id: string | null, metadata: PendingRequestMetadata) {
   const detail = id ? pendingById.get(id) : null;
   if (!detail) return false;
-  const before = pendingDetailBytes(detail);
   Object.assign(detail, normalizePendingMetadata(metadata));
-  totalPendingDetailBytes += pendingDetailBytes(detail) - before;
+  remeasurePendingDetail(detail);
   return true;
 }
 
@@ -625,8 +649,9 @@ function finalizePendingDetailAt(
   if (!details?.length || index < 0 || index >= details.length) return null;
 
   const completedAt = Date.now();
+  const original = details[index];
   const updated = {
-    ...details[index],
+    ...original,
     ...normalizePendingMetadata(metadata),
     completedAt,
     durationMs: Math.max(0, completedAt - details[index].startedAt),
@@ -639,7 +664,7 @@ function finalizePendingDetailAt(
 
   details.splice(index, 1);
   pendingById.delete(updated.id);
-  totalPendingDetailBytes -= pendingDetailBytes(updated);
+  releasePendingDetailBytes(original);
   cleanupPendingDetails(connectionId, modelKey);
   decrementPendingCounters(modelKey, connectionId);
   return updated.id;
@@ -706,6 +731,7 @@ export function updatePendingRequestStreamChunks(
   const details = pendingRequests.details[connectionId]?.[modelKey];
   if (!details?.length) return;
   details[0].streamChunks = streamChunks;
+  remeasurePendingDetail(details[0]);
 }
 
 /**
