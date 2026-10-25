@@ -1838,5 +1838,6 @@ async function tryProvider(
     costContext: { apiKeyId, providerSpecificData },
     normalize: normalizeResponse,
     untrustedTarget: usesCallerSearchBaseUrl(config, { ...params, providerSpecificData }),
+    untrustedFetch: safeOutboundFetch,
   });
 }
