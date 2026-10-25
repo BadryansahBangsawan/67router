@@ -86,7 +86,7 @@ test("reservoir keeps refreshing after updateSettings() touches an already-heart
   // at least one real setTimeout(0) (yieldLoop) before storeOptions reflects the
   // new value.
   // #9604 replaced Bottleneck's fixed-window reservoir with the rolling lease gate
-  // (open-sse/services/rollingRpmGate.ts), so `reservoir` is null now and pinning it
+  // (the since-removed rollingRpmGate.ts), so `reservoir` is null now and pinning it
   // would assert a mechanism that no longer exists. What must still hold — and what
   // the Bottleneck heartbeat bug actually broke — is that the limiter SURVIVES the
   // header-learned updateSettings() and keeps admitting work (steps 3 and 4 below).
