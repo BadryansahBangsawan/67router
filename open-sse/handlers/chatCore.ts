@@ -109,6 +109,7 @@ import { collectCustomToolNamesForSourceFormat } from "../translator/request/ope
 import { THINKING_MARKER_HEADER } from "../utils/thinkCloseMarker.ts";
 import { resolveAgentGoalPolicy } from "../utils/agentGoalPolicy.ts";
 import { createChatStreamController } from "./chatCore/chatStreamController.ts";
+import { logFailOpenError } from "./chatCore/failOpenLog.ts";
 import * as streamFailure from "../utils/streamFailureFinalization.ts";
 import { normalizeUsage } from "../utils/usageTracking.ts";
 import { refreshWithRetry, runWithOnPersist, runWithCasGuard } from "../services/tokenRefresh.ts";
@@ -2427,6 +2428,7 @@ async function handleChatCoreInner({
     clientResponseFormat,
     clientAbortSignal: clientRawRequest?.signal,
     allowCompletedToolHandoffGrace: isCodexResponsesEcho,
+    log,
   });
 
   const dedupRequestBody = { ...translatedBody, model: `${provider}/${model}`, stream };
@@ -2815,7 +2817,14 @@ async function handleChatCoreInner({
                   await import("@/lib/usage/providerLimits");
                 const { usage } = await fetchAndPersistProviderLimits(errorConnectionId, "manual");
                 kimiRateLimitResetAt = getKimiTemporaryRateLimitResetAt(usage);
-              } catch {}
+              } catch (limitsErr) {
+                logFailOpenError(log, "PROVIDER_ERROR_BOOKKEEPING", "kimi limits refresh", limitsErr, {
+                  provider,
+                  model: targetModel,
+                  connectionId: errorConnectionId,
+                  status: statusCode,
+                });
+              }
             }
 
             let quotaCooldownMs = kimiRateLimitResetAt
@@ -3010,7 +3019,17 @@ async function handleChatCoreInner({
             }
           }
         }
-      } catch {}
+      } catch (bookkeepingErr) {
+        // Fail-open: the request's own error response must still go out, but a
+        // failed cooldown/lock/terminal-status write must leave a trace.
+        logFailOpenError(log, "PROVIDER_ERROR_BOOKKEEPING", "provider error bookkeeping", bookkeepingErr, {
+          provider,
+          model: targetModel,
+          connectionId: errorConnectionId,
+          status: statusCode,
+          errorType,
+        });
+      }
     }
 
     if (headers) updateFromHeaders(provider, errorConnectionId, headers, statusCode, targetModel);

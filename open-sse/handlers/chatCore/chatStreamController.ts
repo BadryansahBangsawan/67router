@@ -15,6 +15,7 @@ import { STREAM_DISCONNECT_GRACE_PERIOD_MS } from "../../config/constants.ts";
 import type { StreamControllerOptions } from "../../utils/streamControllerTypes.ts";
 import { createStreamController } from "../../utils/streamHandler.ts";
 import type { PipelineStreamErrorHandler } from "../../utils/streamFailureFinalization.ts";
+import { logFailOpenError, type FailOpenLogger } from "./failOpenLog.ts";
 
 type DisconnectEvent = Parameters<NonNullable<StreamControllerOptions["onDisconnect"]>>[0];
 
@@ -31,6 +32,7 @@ export function createChatStreamController<TScope>({
   clientResponseFormat,
   clientAbortSignal,
   allowCompletedToolHandoffGrace,
+  log,
 }: {
   getClientDisconnectFinalize: () => ((event: DisconnectEvent) => boolean) | null;
   getPipelineStreamError: () => PipelineStreamErrorHandler | null;
@@ -47,13 +49,24 @@ export function createChatStreamController<TScope>({
   clientResponseFormat: string | null | undefined;
   clientAbortSignal: AbortSignal | null | undefined;
   allowCompletedToolHandoffGrace: boolean;
+  log?: FailOpenLogger;
 }) {
+  // Every disconnect step stays fail-open, but a failure is logged (Hard Rule #6).
+  const logStepFailure = (stage: string, err: unknown) =>
+    logFailOpenError(log, "STREAM_DISCONNECT", stage, err, {
+      provider,
+      model,
+      connectionId: connectionId ?? null,
+      requestId: pendingRequestId,
+    });
   return createStreamController({
     onDisconnect: (event) => {
       let finalized = false;
       try {
         finalized = getClientDisconnectFinalize()?.(event) === true;
-      } catch {}
+      } catch (err) {
+        logStepFailure("stream tail disconnect finalize", err);
+      }
       if (!finalized) {
         try {
           finalizePendingScope(pendingScope, {
@@ -62,11 +75,15 @@ export function createChatStreamController<TScope>({
             errorCode: "client_disconnected",
           });
           finalized = true;
-        } catch {}
+        } catch (err) {
+          logStepFailure("pending scope finalize", err);
+        }
       }
       try {
         onDisconnect?.(event);
-      } catch {}
+      } catch (err) {
+        logStepFailure("onDisconnect callback", err);
+      }
       return finalized;
     },
     onError: (event) => getPipelineStreamError()?.(event),
