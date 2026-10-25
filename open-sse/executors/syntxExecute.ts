@@ -2,8 +2,8 @@
  * SYNTX execute pipeline — split out of SyntxExecutor so each step stays
  * under the complexity / max-lines / cognitive new-code caps.
  */
-import { fetchUntrustedRemoteImage } from "@/shared/network/remoteImageFetch";
 import type { ExecuteInput, ExecutorExecuteResult } from "./base.ts";
+import { fetchRemoteMedia } from "../utils/chatgptWebAttachments.ts";
 import {
   makeExecutorErrorResult as makeErrorResult,
   sanitizeErrorMessage,
@@ -310,7 +310,13 @@ async function resolveImageBytes(
   if (!bytes && source.url?.startsWith("https://")) {
     // Client-supplied URL: public-only, DNS-pinned, HTTPS on every redirect hop.
     // Throws on a refused/failed download; the caller skips that image.
-    const fetched = await fetchUntrustedRemoteImage(source.url, { enforceHttps: true });
+    // Same policy as fetchUntrustedRemoteImage, via the engine's single re-export of the
+    // app module (open-sse → src boundary ratchet).
+    const fetched = await fetchRemoteMedia(source.url, {
+      guard: "public-only",
+      pinDns: true,
+      enforceHttps: true,
+    });
     mime = fetched.contentType?.split(";")[0]?.trim() || mime;
     return { bytes: new Uint8Array(fetched.buffer), mime, name };
   }

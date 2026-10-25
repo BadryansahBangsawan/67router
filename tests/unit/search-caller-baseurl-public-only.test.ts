@@ -118,3 +118,35 @@ test("/v1/search does not follow a redirect from a caller baseUrl", async () => 
     globalThis.fetch = originalFetch;
   }
 });
+
+test("untrusted target without an injected guarded fetch never reaches the network", async () => {
+  const { executeProviderFetch } = await import("../../open-sse/handlers/search/searchProxy.ts");
+  const realFetch = globalThis.fetch;
+  let called = false;
+  globalThis.fetch = (async () => {
+    called = true;
+    return new Response("{}");
+  }) as typeof fetch;
+  try {
+    const controller = new AbortController();
+    const result = await executeProviderFetch({
+      config: searxng,
+      url: "http://127.0.0.1:8888/search?q=q",
+      init: { method: "GET" },
+      controller,
+      timer: setTimeout(() => {}, 0),
+      query: "q",
+      searchType: "web",
+      maxResults: 5,
+      startTime: Date.now(),
+      proxy: null,
+      proxyLevel: "none",
+      untrustedTarget: true,
+      normalize: () => ({ results: [], totalResults: 0 }),
+    });
+    assert.equal(called, false, "plain fetch must not be used for an untrusted target");
+    assert.equal(result.success, false);
+  } finally {
+    globalThis.fetch = realFetch;
+  }
+});

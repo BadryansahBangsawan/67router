@@ -9,7 +9,6 @@
  */
 
 import { saveCallLog } from "@/lib/usageDb";
-import { safeOutboundFetch } from "@/shared/network/safeOutboundFetch";
 import { sanitizeErrorMessage } from "../../utils/error.ts";
 import { formatSearchProviderFailure } from "./providerFailure.ts";
 import { HTTP_STATUS } from "../../config/constants.ts";
@@ -201,6 +200,12 @@ export interface ExecuteProviderFetchParams {
    * connection, and without following redirects.
    */
   untrustedTarget?: boolean;
+  /**
+   * Guarded fetch used for `untrustedTarget` (safeOutboundFetch, injected by search.ts so
+   * the engine gains no new import of the app module — open-sse → src boundary ratchet).
+   * Required when `untrustedTarget` is set; the request is refused without it.
+   */
+  untrustedFetch?: (url: string, init: Record<string, unknown>) => Promise<Response>;
   normalize: (
     providerId: string,
     data: unknown,
@@ -248,8 +253,11 @@ export async function executeProviderFetch(
     });
 
   try {
+    if (p.untrustedTarget && !p.untrustedFetch) {
+      throw new Error("untrusted search target requires a guarded fetch");
+    }
     const response = p.untrustedTarget
-      ? await safeOutboundFetch(url, {
+      ? await p.untrustedFetch!(url, {
           ...init,
           signal: controller.signal,
           guard: "public-only",
