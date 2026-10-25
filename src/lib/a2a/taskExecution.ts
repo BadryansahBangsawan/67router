@@ -2,6 +2,7 @@ import type { A2ATask, TaskArtifact } from "./taskManager";
 import { appendA2ATaskEvent } from "@/lib/db/a2aTasks";
 import { memoryManager } from "@/lib/memory/manager";
 import { logger } from "@omniroute/open-sse/utils/logger";
+import { sanitizeErrorMessage } from "@omniroute/open-sse/utils/error";
 
 const log = logger("A2A_TASKS");
 
@@ -183,7 +184,8 @@ export async function executeA2ATaskWithState(
     tm.updateTask(task.id, "completed", result.artifacts);
     return result;
   } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err);
+    // Persisted on the task and served back by tasks/get — never store raw text.
+    const msg = sanitizeErrorMessage(err instanceof Error ? err.message : String(err));
     try {
       tm.updateTask(task.id, "failed", [{ type: "error", content: msg }], msg);
     } catch {

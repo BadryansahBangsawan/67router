@@ -86,6 +86,7 @@ export const SPAWN_CAPABLE_PREFIXES: ReadonlyArray<string> = [
   // home directory and imports them, so a manage-scoped key must never reach it remotely
   // either. Held to the same never-bypassable bar as the spawn routes above.
   "/api/oauth/kiro/auto-import", // reads kiro-cli data.sqlite3, ~/.aws/sso/cache and the Kiro profile.json
+  "/api/oauth/cliproxy-import", // reads the CLIProxyAPI auth dir (~/.cli-proxy-api) and imports its credentials
 ];
 
 /**

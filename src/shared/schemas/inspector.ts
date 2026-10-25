@@ -1,7 +1,12 @@
 import { z } from "zod";
 
+import { isValidHostsFileHostname } from "@/shared/network/hostsFileHostname";
+
 export const InspectorCustomHostSchema = z.object({
-  host: z.string().min(1),
+  host: z
+    .string()
+    .min(1)
+    .refine(isValidHostsFileHostname, { message: "host must be a valid hostname" }),
   enabled: z.boolean().default(true),
   label: z.string().nullable().optional(),
   kind: z.enum(["llm", "app", "custom"]).default("custom"),

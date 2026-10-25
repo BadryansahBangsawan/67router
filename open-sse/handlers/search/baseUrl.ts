@@ -17,10 +17,19 @@
  *     and a block-metadata check does nothing about that, because the attacker
  *     simply names their own public host.
  *
- * Full coverage: tests/unit/search-baseurl-client-override-3f8g.test.ts.
+ * A caller override must also name a PUBLIC host: it is checked public-only
+ * here, and the request itself goes out public-only + DNS-pinned with no
+ * redirects (see `usesCallerSearchBaseUrl` and searchProxy.ts). A self-hosted
+ * SearXNG on loopback/LAN is configured on the provider connection instead.
+ *
+ * Full coverage: tests/unit/search-baseurl-client-override-3f8g.test.ts,
+ * tests/unit/search-caller-baseurl-public-only.test.ts.
  */
 
-import { parseAndValidateNonMetadataUrl } from "@/shared/network/outboundUrlGuard";
+import {
+  parseAndValidateNonMetadataUrl,
+  parseAndValidatePublicUrl,
+} from "@/shared/network/outboundUrlGuard";
 import type { SearchProviderConfig } from "../../config/searchRegistry.ts";
 
 interface BaseUrlParams {
@@ -58,9 +67,26 @@ export function resolveSearchBaseUrl(config: SearchProviderConfig, params: BaseU
     if (!config.allowClientBaseUrlOverride || config.authType === "apikey") {
       throw new SearchBaseUrlOverrideError(config.id);
     }
-    parseAndValidateNonMetadataUrl(callerOverride);
+    parseAndValidatePublicUrl(callerOverride);
     return callerOverride.replace(/\/+$/, "");
   }
 
   return config.baseUrl.replace(/\/+$/, "");
+}
+
+/**
+ * True when `resolveSearchBaseUrl` would return the CALLER's
+ * `provider_options.baseUrl` (no operator override is set). Such a target is
+ * untrusted and must be fetched public-only, DNS-pinned, without redirects.
+ */
+export function usesCallerSearchBaseUrl(
+  config: SearchProviderConfig,
+  params: BaseUrlParams
+): boolean {
+  return (
+    config.allowClientBaseUrlOverride === true &&
+    config.authType !== "apikey" &&
+    !readSetting(params.providerSpecificData, "baseUrl") &&
+    !!readSetting(params.providerOptions, "baseUrl")
+  );
 }

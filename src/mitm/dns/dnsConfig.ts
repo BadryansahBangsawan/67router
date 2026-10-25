@@ -9,6 +9,7 @@ import {
   runElevatedPowerShell,
 } from "../systemCommands.ts";
 import { ALL_TARGETS } from "../targets/index.ts";
+import { isValidHostsFileHostname } from "../../shared/network/hostsFileHostname.ts";
 
 // Legacy Antigravity defaults preserved for backward compat.
 const ANTIGRAVITY_HOSTS = [
@@ -154,6 +155,11 @@ export async function addDNSEntries(
   deps?: DnsCommandDependencies
 ): Promise<void> {
   if (process.env.OMNIROUTE_SKIP_DNS_WRITE === "1") return;
+  // Defence in depth: every value becomes its own hosts-file line, so refuse the
+  // whole batch if any entry is not a plain hostname (no whitespace/control chars).
+  if (!hosts.every(isValidHostsFileHostname)) {
+    throw new Error("Refusing to write hosts-file entries: invalid hostname");
+  }
   const commands = resolveCommandDependencies(deps);
   const hostsContent = readHostsFile();
   const missingEntries: string[] = [];

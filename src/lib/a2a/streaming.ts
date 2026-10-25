@@ -5,6 +5,7 @@
  * Features: heartbeat (15s), chunk emission, metadata final event, cancellation.
  */
 
+import { sanitizeErrorMessage } from "@omniroute/open-sse/utils/error";
 import type { A2ATask } from "./taskManager";
 
 export interface SSEChunkEvent {
@@ -137,7 +138,7 @@ export function createA2AStream(
         // Emit completion with metadata
         controller.enqueue(encoder.encode(createCompletionEvent(task.id, result.metadata)));
       } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
+        const msg = sanitizeErrorMessage(err instanceof Error ? err.message : String(err));
         controller.enqueue(encoder.encode(createFailureEvent(task.id, msg)));
       } finally {
         clearInterval(heartbeatInterval);
