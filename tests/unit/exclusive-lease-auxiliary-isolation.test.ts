@@ -128,8 +128,9 @@ test("translator request preview materializes a FREE lease-capable credential", 
   );
   const body = await response.text();
 
+  // 200 proves the FREE lease connection was selected; its key is redacted in the preview.
   assert.equal(response.status, 200);
-  assert.equal(body.includes("sk-translator-preview-free-lease"), true);
+  assert.equal(body.includes("sk-translator-preview-free-lease"), false);
   assert.equal(externalCalls, 0);
 });
 

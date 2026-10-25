@@ -159,3 +159,117 @@ test("openapi try route strips hop-by-hop headers and proxies same-origin API pa
   assert.equal(forwardedHeaders["X-Forwarded-Proto"], undefined);
   assert.equal(forwardedHeaders.Cookie, cookie);
 });
+
+type TryRequest = Parameters<typeof route.POST>[0];
+
+function makeRemoteRequest(body: unknown, cookie: string) {
+  return new Request("http://localhost/api/openapi/try", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      cookie,
+      // Post-pipeline locality verdict, trusted only while a stamp token exists.
+      "x-omniroute-peer-locality": "remote",
+    },
+    body: JSON.stringify(body),
+  });
+}
+
+async function withStampToken<T>(fn: () => Promise<T>): Promise<T> {
+  const original = process.env.OMNIROUTE_PEER_STAMP_TOKEN;
+  process.env.OMNIROUTE_PEER_STAMP_TOKEN = "openapi-try-stamp-token";
+  try {
+    return await fn();
+  } finally {
+    if (original === undefined) delete process.env.OMNIROUTE_PEER_STAMP_TOKEN;
+    else process.env.OMNIROUTE_PEER_STAMP_TOKEN = original;
+  }
+}
+
+test("openapi try route refuses local-only targets for a remote caller", async () => {
+  const cookie = await createAuthCookie();
+  let fetchCalled = false;
+  globalThis.fetch = async () => {
+    fetchCalled = true;
+    return new Response("unexpected");
+  };
+
+  for (const target of [
+    { method: "POST", path: "/api/services/9router/start" },
+    { method: "GET", path: "/api/cli-tools/status" },
+    { method: "POST", path: "/api/settings/mitm" },
+  ]) {
+    const response = await withStampToken(() =>
+      route.POST(makeRemoteRequest(target, cookie) as unknown as TryRequest)
+    );
+    assert.equal(response.status, 403, `${target.method} ${target.path}`);
+  }
+  assert.equal(fetchCalled, false);
+});
+
+test("openapi try route validates the resolved path, not the raw string", async () => {
+  const cookie = await createAuthCookie();
+  let fetchCalled = false;
+  globalThis.fetch = async () => {
+    fetchCalled = true;
+    return new Response("unexpected");
+  };
+
+  const response = await route.POST(
+    makeRequest({ method: "GET", path: "/v1/../dashboard" }, cookie) as unknown as TryRequest
+  );
+  assert.equal(response.status, 400);
+
+  const traversal = await withStampToken(() =>
+    route.POST(
+      makeRemoteRequest(
+        { method: "POST", path: "/v1/../api/services/9router/start" },
+        cookie
+      ) as unknown as TryRequest
+    )
+  );
+  assert.equal(traversal.status, 403);
+  assert.equal(fetchCalled, false);
+});
+
+test("openapi try route marks remote callers' inner request as proxied", async () => {
+  const cookie = await createAuthCookie();
+  let fetchInit: RequestInit | undefined;
+  globalThis.fetch = async (_url, init) => {
+    fetchInit = init;
+    return new Response(JSON.stringify({ ok: true }), {
+      status: 200,
+      headers: { "content-type": "application/json" },
+    });
+  };
+
+  const response = await withStampToken(() =>
+    route.POST(
+      makeRemoteRequest({ method: "GET", path: "/v1/models" }, cookie) as unknown as TryRequest
+    )
+  );
+  assert.equal(response.status, 200);
+  const headers = fetchInit?.headers as Record<string, string>;
+  assert.ok(headers.Via, "inner request must carry a proxy-hop marker");
+});
+
+test("openapi try route still proxies local-only targets for a loopback caller", async () => {
+  const cookie = await createAuthCookie();
+  let fetchUrl = "";
+  let fetchInit: RequestInit | undefined;
+  globalThis.fetch = async (url, init) => {
+    fetchUrl = String(url);
+    fetchInit = init;
+    return new Response(JSON.stringify({ ok: true }), {
+      status: 200,
+      headers: { "content-type": "application/json" },
+    });
+  };
+
+  const response = await route.POST(
+    makeRequest({ method: "GET", path: "/api/cli-tools/status" }, cookie) as unknown as TryRequest
+  );
+  assert.equal(response.status, 200);
+  assert.equal(fetchUrl, "http://localhost/api/cli-tools/status");
+  assert.equal((fetchInit?.headers as Record<string, string>).Via, undefined);
+});

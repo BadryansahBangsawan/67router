@@ -65,11 +65,7 @@ export async function validateChatGptWebCodexProvider({
     const cdpEndpoint = process.env.CHATGPT_WEB_CODEX_CDP_URL?.trim();
     const { detectChromeExecutable } =
       await import("@omniroute/open-sse/executors/chatgpt-web-codex.ts");
-    const chromeExecutablePath = detectChromeExecutable(
-      typeof providerSpecificData.chromeExecutablePath === "string"
-        ? providerSpecificData.chromeExecutablePath
-        : undefined
-    );
+    const chromeExecutablePath = detectChromeExecutable();
     if (!chromeExecutablePath && !cdpEndpoint) {
       return {
         valid: false,

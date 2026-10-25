@@ -185,6 +185,20 @@ function attemptedKeysOf(body: Record<string, unknown> | null | undefined): stri
   );
 }
 
+/**
+ * Stored secrets that never leave the server through the settings payload: the decrypted OIDC
+ * client secret and the plaintext Qdrant / deep-health tokens. They are omitted rather than
+ * masked so a client that round-trips the payload into PATCH cannot overwrite the real value
+ * with a placeholder; each is still writable by sending a new value.
+ */
+const RESPONSE_OMITTED_SECRET_KEYS = ["oidcClientSecret", "qdrantApiKey", "deepHealthToken"];
+
+function omitSettingsSecrets<T extends Record<string, unknown>>(settings: T): T {
+  const copy: Record<string, unknown> = { ...settings };
+  for (const key of RESPONSE_OMITTED_SECRET_KEYS) delete copy[key];
+  return copy as T;
+}
+
 export async function GET(request: Request) {
   const authError = await requireManagementAuth(request);
   if (authError) return authError;
@@ -217,7 +231,7 @@ export async function GET(request: Request) {
 
     return NextResponse.json(
       {
-        ...safeSettings,
+        ...omitSettingsSecrets(safeSettings),
         settingsRevision,
         hasPassword: hasManagementPasswordConfigured(settings),
         runtimePorts,
@@ -552,7 +566,7 @@ export async function PATCH(request: Request) {
     } = settings;
     const settingsRevision = await getSettingsRevision();
     const response = NextResponse.json(
-      { ...safeSettings, settingsRevision },
+      { ...omitSettingsSecrets(safeSettings), settingsRevision },
       { headers: settingsResponseHeaders(settingsRevision) }
     );
     // The browser that changed the password keeps its own session: swap its cookie for one issued

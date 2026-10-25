@@ -32,9 +32,7 @@ export async function getChatGptWebCodexDoctorStatus(connection: {
   const paths = connectionRuntimePaths(connectionId);
   const tunnelPaths = tunnelClientPaths();
   const cdpConfigured = Boolean(process.env.CHATGPT_WEB_CODEX_CDP_URL?.trim());
-  const chrome = detectChromeExecutable(
-    typeof data.chromeExecutablePath === "string" ? data.chromeExecutablePath : undefined
-  );
+  const chrome = detectChromeExecutable();
   let storageState = false;
   let login = false;
   let solAvailable = data.solAvailable !== false;

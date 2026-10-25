@@ -252,10 +252,10 @@ describe("ChatGPT Web clean-room executor request adapter", () => {
 });
 
 describe("ChatGPT Web clean-room storage state", () => {
-  test("prefers an explicit installed Chrome path for the headed first-party session", () => {
+  test("prefers the CHATGPT_WEB_CHROME_PATH browser for the headed first-party session", () => {
     const checked: string[] = [];
-    const resolved = resolveChatGptWebChromeExecutable("/custom/chrome", {
-      env: {},
+    const resolved = resolveChatGptWebChromeExecutable({
+      env: { CHATGPT_WEB_CHROME_PATH: "/custom/chrome" },
       exists: (candidate) => {
         checked.push(candidate);
         return candidate === "/custom/chrome";

@@ -324,8 +324,11 @@ function optionalString(value: unknown): string | undefined {
   return typeof value === "string" && value.trim() ? value.trim() : undefined;
 }
 
+/**
+ * The browser binary to launch: environment and well-known install paths only. Connection
+ * data is writable through the provider API and must never choose an executable on the host.
+ */
 export function resolveChatGptWebChromeExecutable(
-  explicit?: string,
   deps: {
     env?: NodeJS.ProcessEnv;
     exists?: (path: string) => boolean;
@@ -334,7 +337,6 @@ export function resolveChatGptWebChromeExecutable(
   const env = deps.env ?? process.env;
   const exists = deps.exists ?? existsSync;
   const candidates = [
-    explicit,
     env.CHATGPT_WEB_CHROME_PATH,
     env.CHROME_PATH,
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -456,9 +458,7 @@ export async function executeChatGptWebCleanRoom(
     userAgent: optionalString(providerData?.customUserAgent),
     locale: optionalString(providerData?.locale),
     timezone: optionalString(providerData?.timezone),
-    chromeExecutablePath: resolveChatGptWebChromeExecutable(
-      optionalString(providerData?.chromeExecutablePath)
-    ),
+    chromeExecutablePath: resolveChatGptWebChromeExecutable(),
   });
   const result = await (deps.runTurn ?? runChatGptWebBrowserTurn)(session, {
     prompt: prepared.prompt,

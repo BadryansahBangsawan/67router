@@ -97,9 +97,13 @@ function configuredString(data: Record<string, unknown>, ...keys: string[]): str
   return undefined;
 }
 
-export function detectChromeExecutable(explicit?: string): string | undefined {
+/**
+ * The browser binary to launch. Environment and well-known install paths only: connection
+ * data (providerSpecificData) is writable through the provider API and must never choose an
+ * executable on the host.
+ */
+export function detectChromeExecutable(): string | undefined {
   const candidates = [
-    explicit,
     process.env.CHATGPT_WEB_CODEX_CHROME_PATH,
     process.env.CHROME_PATH,
     "/usr/bin/google-chrome",
@@ -177,9 +181,7 @@ function buildProviderConfig(
   const paths = connectionRuntimePaths(connectionId);
   const cdpEndpoint =
     configuredString(data, "browserCdpEndpoint") ?? process.env.CHATGPT_WEB_CODEX_CDP_URL;
-  const chromeExecutablePath = detectChromeExecutable(
-    configuredString(data, "chromeExecutablePath")
-  );
+  const chromeExecutablePath = detectChromeExecutable();
   if (!chromeExecutablePath && !cdpEndpoint) {
     throw new Error("No supported Chrome or Chromium executable was found");
   }
@@ -324,9 +326,7 @@ export class ChatGptWebCodexExecutor extends BaseExecutor {
       const cdpEndpoint =
         configuredString(providerData, "browserCdpEndpoint") ??
         process.env.CHATGPT_WEB_CODEX_CDP_URL;
-      const chromeExecutablePath = detectChromeExecutable(
-        configuredString(providerData, "chromeExecutablePath")
-      );
+      const chromeExecutablePath = detectChromeExecutable();
       if (!chromeExecutablePath && !cdpEndpoint) {
         throw new Error("No supported Chrome or Chromium executable was found");
       }
@@ -349,7 +349,6 @@ export class ChatGptWebCodexExecutor extends BaseExecutor {
         providerData.solAvailable = capabilities.solAvailable;
         providerData.proAvailable = capabilities.proAvailable;
         providerData.browserVerified = true;
-        if (chromeExecutablePath) providerData.chromeExecutablePath = chromeExecutablePath;
         if (cdpEndpoint) providerData.browserCdpEndpoint = cdpEndpoint;
         await input.onCredentialsRefreshed?.({
           providerSpecificData: {
@@ -357,7 +356,6 @@ export class ChatGptWebCodexExecutor extends BaseExecutor {
             solAvailable: capabilities.solAvailable,
             proAvailable: capabilities.proAvailable,
             browserVerified: true,
-            ...(chromeExecutablePath ? { chromeExecutablePath } : {}),
             ...(cdpEndpoint ? { browserCdpEndpoint: cdpEndpoint } : {}),
           },
         });

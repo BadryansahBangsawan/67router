@@ -1,8 +1,9 @@
 /**
  * GET /api/cli-tools/keys must only hand plaintext API keys (`rawKey`) to the instance
- * operator (dashboard session, machine-bound local CLI credential, or an instance with
- * login disabled). Machine credentials — API keys of any scope and `oma_` access tokens,
- * including read-scoped ones — still get the listing, but only with the masked `key`.
+ * operator (dashboard session or machine-bound local CLI credential) — an instance with
+ * login disabled no longer counts as the operator for this listing. Machine credentials — API
+ * keys of any scope and `oma_` access tokens, including read-scoped ones — still get the
+ * listing, but only with the masked `key`.
  * If the operator check itself fails, the route fails closed with a 503.
  */
 import test from "node:test";
@@ -106,12 +107,14 @@ test("the machine-bound local CLI credential still receives rawKey", async () =>
   assert.equal(entryFor(await res.json()).rawKey, victimKey.key);
 });
 
-test("an instance with login disabled still receives rawKey", async () => {
+test("an anonymous caller on an instance with login disabled gets no rawKey", async () => {
   await updateSettings({ requireLogin: false });
   try {
     const res = await keysRoute.GET(new Request(URL_KEYS));
     assert.equal(res.status, 200);
-    assert.equal(entryFor(await res.json()).rawKey, victimKey.key);
+    const raw = await res.text();
+    assert.ok(!raw.includes(victimKey.key), "plaintext key must not appear anywhere in the body");
+    assert.equal(entryFor(JSON.parse(raw)).rawKey, undefined);
   } finally {
     await updateSettings({ requireLogin: true });
   }

@@ -37,6 +37,24 @@ function getProviderBaseUrl(providerSpecificData: unknown): string | undefined {
   return typeof baseUrl === "string" && baseUrl.trim().length > 0 ? baseUrl : undefined;
 }
 
+// Header names whose values carry upstream credentials. The step-4 preview only needs to
+// show the request's shape, so these values are never echoed back.
+const CREDENTIAL_HEADER_PATTERN =
+  /authorization|api[-_]?key|token|secret|cookie|session|password|signature/i;
+
+function redactCredentialHeaders(headers: unknown): Record<string, unknown> {
+  const redacted: Record<string, unknown> = {};
+  for (const [name, value] of Object.entries(asJsonRecord(headers))) {
+    if (!CREDENTIAL_HEADER_PATTERN.test(name)) {
+      redacted[name] = value;
+      continue;
+    }
+    const scheme = typeof value === "string" ? /^(bearer|basic)\s/i.exec(value)?.[1] : undefined;
+    redacted[name] = scheme ? `${scheme} [REDACTED]` : "[REDACTED]";
+  }
+  return redacted;
+}
+
 async function getActiveProviderSpecificData(provider?: string | null): Promise<JsonRecord | null> {
   if (!provider) return null;
   const connection = await getUnmanagedActiveConnection(provider);
@@ -208,7 +226,7 @@ export async function POST(request) {
         result = {
           timestamp: new Date().toISOString(),
           url: url,
-          headers: headers,
+          headers: redactCredentialHeaders(headers),
           body: actualBody,
         };
         break;
