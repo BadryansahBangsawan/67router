@@ -1,7 +1,6 @@
 import Icon from "@/shared/components/Icon";
 import Link from "next/link";
 import { Metadata } from "next";
-import { source } from "@/lib/source";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -73,6 +72,8 @@ const sections = [
 
 export default async function DocsHomePage() {
   const t = await getTranslations("docs");
+  // Loaded lazily: see tests/unit/docs-source-lazy-import.test.ts.
+  const { source } = await import("@/lib/source");
   const pages = source.getPages();
 
   return (

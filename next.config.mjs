@@ -241,6 +241,10 @@ const nextConfig = {
       "lodash",
       "lodash-es",
       "next-intl",
+      // omniglyph's root barrel re-exports its renderer and ~13 MB glyph atlas
+      // and declares no `sideEffects`, so compression/stats.ts importing two
+      // vision-token helpers kept the atlas resident from server start.
+      "omniglyph",
     ],
   },
   outputFileTracingRoot: projectRoot,
@@ -310,6 +314,10 @@ const nextConfig = {
     // require at runtime, where node_modules/tiktoken/tiktoken_bg.wasm
     // resolves normally.
     "tiktoken",
+    // js-tiktoken's full build inlines every BPE rank table (~5.6 MB of source).
+    // Bundled, Turbopack emitted it into two server chunks that load at start;
+    // external, tiktokenCounter's createRequire() loads it on the first count.
+    "js-tiktoken",
     // sqlite-vec ships a native vec0.so loaded at runtime via createRequire().
     // Turbopack otherwise tries to bundle the .so and fails with "Unknown module
     // type"; externalizing it keeps the require at runtime (like better-sqlite3).

@@ -40,7 +40,7 @@ export const CLAUDE_THINKING_MEMORY_TTL_MS = 1000 * 60 * 60;
 export const MAX_CLAUDE_THINKING_ENTRIES = 1000;
 /** Upper bound for one assistant turn (sum of thinking text + signature/data chars). */
 export const MAX_CLAUDE_THINKING_ENTRY_CHARS = 2 * 1024 * 1024;
-const MAX_CLAUDE_THINKING_TOTAL_CHARS = 64 * 1024 * 1024;
+const MAX_CLAUDE_THINKING_TOTAL_CHARS = 32 * 1024 * 1024;
 
 const entries = new Map<string, Entry>();
 // Non-serialized provenance; weak references add no retention beyond the request.
@@ -143,12 +143,15 @@ export function storeClaudeThinkingBlocks(args: {
 
   const now = Date.now();
   const provider = normalizeProvider(args.provider);
+  // Sibling tool_use ids of one turn share a single copy: stored blocks are only
+  // ever read, and restore hands out fresh clones.
+  const storedBlocks = cloneBlocks(normalizedBlocks);
   for (const toolUseId of toolUseIds) {
     deleteKey(toolUseId);
     entries.set(toolUseId, {
       provider,
       model,
-      blocks: cloneBlocks(normalizedBlocks),
+      blocks: storedBlocks,
       size,
       expiresAt: now + CLAUDE_THINKING_MEMORY_TTL_MS,
     });
