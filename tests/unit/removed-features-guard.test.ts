@@ -30,6 +30,10 @@ const REMOVED_PATHS: string[] = [
   "src/shared/constants/batchEndpoints.ts",
   "bin/cli/commands/batches.mjs",
   "bin/cli/commands/files.mjs",
+  // moderations
+  "src/app/api/v1/moderations",
+  "open-sse/handlers/moderations.ts",
+  "bin/cli/api-commands/moderations.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -48,6 +52,9 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /constants\/(batch|batchEndpoints)\b/,
   /api\/v1\/(batches|files)/,
   /\binitBatchProcessor\b/,
+  // moderations
+  /handlers\/moderations/,
+  /api\/v1\/moderations/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

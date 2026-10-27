@@ -1070,11 +1070,6 @@
       "count": 1
     }
   },
-  "src/app/api/v1/moderations/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "src/app/api/v1/music/generations/route.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -3733,11 +3728,6 @@
   "tests/unit/modelsDevSync.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
-    }
-  },
-  "tests/unit/moderations-handler.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 7
     }
   },
   "tests/unit/nanobanana-image-generation.test.ts": {

@@ -20,7 +20,6 @@ export type PlaygroundEndpoint =
   | "audio.speech"
   | "video"
   | "music"
-  | "moderations"
   | "rerank"
   | "search"
   | "web.fetch";
@@ -92,7 +91,6 @@ export const PlaygroundStateSchema = z.object({
     "audio.speech",
     "video",
     "music",
-    "moderations",
     "rerank",
     "search",
     "web.fetch",
@@ -137,7 +135,6 @@ export function endpointToPath(endpoint: PlaygroundEndpoint): string {
     "audio.speech": "/v1/audio/speech",
     video: "/v1/videos/generations",
     music: "/v1/music/generations",
-    moderations: "/v1/moderations",
     rerank: "/v1/rerank",
     search: "/v1/search",
     "web.fetch": "/v1/web/fetch",
@@ -246,13 +243,6 @@ function buildBody(state: PlaygroundState): Record<string, unknown> {
       };
       if (params) Object.assign(body, params);
       return body;
-    }
-
-    case "moderations": {
-      return {
-        model: model ?? "text-moderation-latest",
-        input: state.prompt ?? "Hello world",
-      };
     }
 
     case "rerank": {
