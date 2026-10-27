@@ -78,7 +78,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "api-manager": "apiManagerDescription",
   providers: "providerDescription",
   combos: "comboDescription",
-  batch: "batchDescription",
   costs: "costsDescription",
   analytics: "analyticsDescription",
   cache: "cacheDescription",
@@ -109,8 +108,6 @@ const HEADER_DESCRIPTIONS: Partial<
   mcp: "mcpDescription",
   a2a: "a2aDescription",
   "api-endpoints": "apiEndpointsDescription",
-  // Agents & AI sub-pages
-  "batch-files": "batchFilesDescription",
   // Analytics sub-pages
   "analytics-evals": "analyticsEvalsDescription",
   "analytics-search": "analyticsSearchDescription",

@@ -45,7 +45,6 @@ export type SkillArea =
   | "cli-tunnel"
   | "cli-backup-sync"
   | "cli-policy-audit"
-  | "cli-batches"
   | "cli-eval"
   | "cli-plugins-skills"
   | "cli-setup"

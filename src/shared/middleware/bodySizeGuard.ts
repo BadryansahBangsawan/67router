@@ -25,9 +25,6 @@ export const MAX_BODY_BYTES_IMPORT = 100 * 1024 * 1024;
 /** Larger limit for audio transcription uploads: 100 MB */
 export const MAX_BODY_BYTES_AUDIO = 100 * 1024 * 1024;
 
-/** Larger limit for file uploads: 500 MB */
-export const MAX_BODY_BYTES_FILE = 500 * 1024 * 1024;
-
 /** Larger limit for LLM request payloads: 50 MB */
 export const MAX_BODY_BYTES_LLM_API = 50 * 1024 * 1024;
 
@@ -67,7 +64,6 @@ const ROUTE_LIMITS: BodySizeRule[] = [
   { prefix: "/api/v1/images", limit: MAX_BODY_BYTES_MEDIA },
   { prefix: "/api/v1/videos", limit: MAX_BODY_BYTES_MEDIA },
   { prefix: "/api/v1/audio/transcriptions", limit: MAX_BODY_BYTES_AUDIO },
-  { prefix: "/api/v1/files", limit: MAX_BODY_BYTES_FILE },
 ];
 
 const PROVIDER_IMAGE_GENERATION_ROUTE = /^\/api\/v1\/providers\/[^/]+\/images\/generations(?:\/|$)/;

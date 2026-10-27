@@ -95,9 +95,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "gamification-admin",
   // Other Features — flat
   "media",
-  // Other Features > Batch
-  "batch",
-  "batch-files",
   // Configuration
   "settings-general",
   "settings-appearance",

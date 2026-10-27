@@ -70,8 +70,6 @@ const PATH_LABELS = {
   audit: "audit",
   a2a: "a2a",
   mcp: "mcp",
-  batch: "batch",
-  files: "files",
   media: "media",
   cache: "cache",
   changelog: "changelog",

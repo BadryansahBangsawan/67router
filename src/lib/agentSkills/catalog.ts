@@ -64,7 +64,6 @@ export const CLI_SKILL_IDS: readonly string[] = [
   "cli-tunnel",
   "cli-backup-sync",
   "cli-policy-audit",
-  "cli-batches",
   "cli-eval",
   "cli-plugins-skills",
   "cli-setup",

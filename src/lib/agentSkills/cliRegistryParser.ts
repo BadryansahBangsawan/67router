@@ -80,8 +80,6 @@ const FILE_FAMILY_MAP: Record<string, SkillArea> = {
   policy: "cli-policy-audit",
   logs: "cli-policy-audit",
   telemetry: "cli-policy-audit",
-  batches: "cli-batches",
-  files: "cli-batches",
   eval: "cli-eval",
   simulate: "cli-eval",
   skills: "cli-plugins-skills",

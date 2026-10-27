@@ -16,6 +16,20 @@ const REMOVED_PATHS: string[] = [
   "src/app/api/v1/relay",
   "src/app/(dashboard)/dashboard/relay",
   "src/lib/db/relayProxies.ts",
+  // batch + files
+  "src/lib/batches",
+  "open-sse/services/batchProcessor.ts",
+  "src/app/api/v1/batches",
+  "src/app/api/batches",
+  "src/app/(dashboard)/dashboard/batch",
+  "src/app/api/v1/files",
+  "src/app/api/files",
+  "src/lib/db/batches.ts",
+  "src/lib/db/files.ts",
+  "src/shared/constants/batch.ts",
+  "src/shared/constants/batchEndpoints.ts",
+  "bin/cli/commands/batches.mjs",
+  "bin/cli/commands/files.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -27,6 +41,13 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /db\/relayProxies/,
   /app\/api\/relay\/|api\/v1\/relay\//,
   /dashboard\/relay/,
+  // batch + files
+  /lib\/batches\//,
+  /batchProcessor/,
+  /db\/(batches|files)\b/,
+  /constants\/(batch|batchEndpoints)\b/,
+  /api\/v1\/(batches|files)/,
+  /\binitBatchProcessor\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

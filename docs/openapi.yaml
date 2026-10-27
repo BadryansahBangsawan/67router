@@ -118,8 +118,6 @@ tags:
     description: Assess endpoints (generated route coverage)
   - name: Auth
     description: Auth endpoints (generated route coverage)
-  - name: Batches
-    description: Batches endpoints (generated route coverage)
   - name: Cache
     description: Cache endpoints (generated route coverage)
   - name: Chaos
@@ -148,8 +146,6 @@ tags:
     description: Docs endpoints (generated route coverage)
   - name: Evals
     description: Evals endpoints (generated route coverage)
-  - name: Files
-    description: Files endpoints (generated route coverage)
   - name: Free models
     description: Free models endpoints (generated route coverage)
   - name: Free provider rankings
@@ -9939,22 +9935,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/batches:
-    get:
-      tags:
-        - Batches
-      summary: "GET batches"
-      responses:
-        "200":
-          description: OK
-  /api/batches/{id}:
-    get:
-      tags:
-        - Batches
-      summary: "GET batches › <id>"
-      responses:
-        "200":
-          description: OK
   /api/cache/entries:
     delete:
       tags:
@@ -10817,22 +10797,6 @@ paths:
       tags:
         - Evals
       summary: "PUT evals › suites › <suiteId>"
-      responses:
-        "200":
-          description: OK
-  /api/files:
-    get:
-      tags:
-        - Files
-      summary: "GET files"
-      responses:
-        "200":
-          description: OK
-  /api/files/{id}/content:
-    get:
-      tags:
-        - Files
-      summary: "GET files › <id> › content"
       responses:
         "200":
           description: OK
@@ -14181,52 +14145,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/v1/batches:
-    get:
-      tags:
-        - V1 Batches
-      summary: "GET batches"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - V1 Batches
-      summary: "POST batches"
-      responses:
-        "200":
-          description: OK
-  /api/v1/batches/{id}:
-    delete:
-      tags:
-        - V1 Batches
-      summary: "DELETE batches › <id>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - V1 Batches
-      summary: "GET batches › <id>"
-      responses:
-        "200":
-          description: OK
-  /api/v1/batches/{id}/cancel:
-    post:
-      tags:
-        - V1 Batches
-      summary: "POST batches › <id> › cancel"
-      responses:
-        "200":
-          description: OK
-  /api/v1/batches/delete-completed:
-    delete:
-      tags:
-        - V1 Batches
-      summary: "DELETE batches › delete completed"
-      responses:
-        "200":
-          description: OK
   /api/v1/classify:
     post:
       tags:
@@ -14251,44 +14169,6 @@ paths:
       tags:
         - V1 Completions
       summary: "POST completions"
-      responses:
-        "200":
-          description: OK
-  /api/v1/files:
-    get:
-      tags:
-        - V1 Files
-      summary: "GET files"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - V1 Files
-      summary: "POST files"
-      responses:
-        "200":
-          description: OK
-  /api/v1/files/{id}:
-    delete:
-      tags:
-        - V1 Files
-      summary: "DELETE files › <id>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - V1 Files
-      summary: "GET files › <id>"
-      responses:
-        "200":
-          description: OK
-  /api/v1/files/{id}/content:
-    get:
-      tags:
-        - V1 Files
-      summary: "GET files › <id> › content"
       responses:
         "200":
           description: OK
@@ -14324,7 +14204,7 @@ paths:
         Serves media that a video job stored on this gateway because the provider's own result URL
         is auth-gated (OpenRouter `unsigned_urls`). The id is returned in the `url` of a
         `/api/v1/videos/generations` response. Readable by the API key that generated it, a
-        manage-scope key or the dashboard session (same ownership rule as `/api/v1/files/{id}/content`);
+        manage-scope key or the dashboard session;
         anything else, an unknown id or an expired file (call-log retention window) answers 404.
       parameters:
         - name: id

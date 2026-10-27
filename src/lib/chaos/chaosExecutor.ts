@@ -15,8 +15,7 @@ import { POST as postChatCompletion } from "@/app/api/v1/chat/completions/route"
 
 // Wrapped in an object (rather than called as a bare imported function) so unit
 // tests can swap it out via `mock.method(chatDispatch, "postChatCompletion", ...)`
-// without hitting real upstream providers — the same pattern src/lib/batches/
-// dispatch.ts uses for its `dispatch` export (ES module named bindings are
+// without hitting real upstream providers (ES module named bindings are
 // read-only and cannot be mocked directly).
 export const chatDispatch = {
   postChatCompletion,
@@ -277,7 +276,7 @@ function buildDispatchErrorResult(
  * Dispatch to OmniRoute's own /v1/chat/completions handler for a given
  * provider+model — in-process, via a synthetic Request handed directly to the
  * route's POST handler. No network hop, no port dependency. Mirrors the
- * established pattern in src/lib/batches/dispatch.ts and src/lib/evals/runtime.ts
+ * established pattern in src/lib/evals/runtime.ts
  * (which the codebase's outbound-self-call convention requires — see #6679 review).
  */
 async function dispatchToModel(

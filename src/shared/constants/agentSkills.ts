@@ -393,15 +393,6 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     icon: "policy",
   },
   {
-    id: "cli-batches",
-    name: "CLI: Batches & Files",
-    description:
-      "Submit and monitor batch inference jobs from the CLI. Upload and manage files for batch processing, retrieve results, and integrate batch pipelines with CI/CD workflows.",
-    category: "cli",
-    area: "cli-batches",
-    icon: "batch_prediction",
-  },
-  {
     id: "cli-eval",
     name: "CLI: Evals",
     description:

@@ -40,20 +40,6 @@ const routes: Array<{
   params: Array<{ name: string; valid: string }>;
 }> = [
   {
-    name: "/api/batches",
-    path: "/api/batches",
-    load: () => import("../../src/app/api/batches/route.ts"),
-    auth: "key",
-    params: [{ name: "limit", valid: "5" }],
-  },
-  {
-    name: "/api/files",
-    path: "/api/files",
-    load: () => import("../../src/app/api/files/route.ts"),
-    auth: "key",
-    params: [{ name: "limit", valid: "5" }],
-  },
-  {
     name: "/api/logs/detail",
     path: "/api/logs/detail",
     load: () => import("../../src/app/api/logs/detail/route.ts"),
