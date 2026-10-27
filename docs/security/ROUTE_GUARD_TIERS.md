@@ -58,7 +58,6 @@ spawn-capable prefixes and fails CI if any is not classified local-only.
 | `/api/settings/mitm`                                                                                     | Enables MITM interception (system-level proxy state)                                            |
 | `/api/issue-agent/`                                                                                      | Issue agent — spawns local tooling against the repo                                             |
 | `/api/plugins/`, `/api/plugins`                                                                          | Plugins — load/execute via `worker_threads` + `child_process`                                   |
-| `/api/middleware/`                                                                                       | User middleware — loads/executes operator code in-process                                       |
 | `/api/system/version`                                                                                    | Auto-update (POST only; GET/HEAD/OPTIONS exempt) — spawns `git checkout` + `npm install`        |
 | `/api/db-backups/exportAll`                                                                              | Spawns `tar` for the export archive                                                             |
 | `/api/local/`                                                                                            | 1-click local launchers (Redis today) — spawns podman/docker                                    |
@@ -196,7 +195,6 @@ server process.
 | `/api/settings/import-json`               | Replaces the full settings blob                |
 | `/api/providers/health-autopilot/actions` | Executes autopilot remediation actions         |
 | `/api/settings/obsidian`                  | Mints reusable WebDAV creds for any vault root |
-| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens   |
 
 **Response on violation:** `401 Authentication required`
 

@@ -240,7 +240,7 @@ export function useDisplayBaseUrl(): string {
   // The pre-mount value is rendered by SSR and by the client's hydration pass, so it may only
   // read values both bundles share: NEXT_PUBLIC_* is inlined into the client, PORT is not
   // (server-only), and a PORT-based fallback made the SSR text differ — React #418 on
-  // /dashboard/relay (F4). The effect below swaps in the live browser origin after mount.
+  // dashboard pages (F4). The effect below swaps in the live browser origin after mount.
   const [url, setUrl] = useState<string>(() =>
     resolveDisplayBaseUrl(
       envValue ?? undefined,

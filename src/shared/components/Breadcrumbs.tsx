@@ -105,7 +105,6 @@ const PATH_LABELS = {
   "provider-stats": "providerStats",
   new: "new",
   quota: "quota",
-  relay: "relay",
   "search-tools": "searchTools",
   security: "security",
   sidebar: "sidebar",

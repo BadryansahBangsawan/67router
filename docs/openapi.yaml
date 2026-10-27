@@ -202,8 +202,6 @@ tags:
     description: Quota endpoints (generated route coverage)
   - name: Radar
     description: Radar endpoints (generated route coverage)
-  - name: Relay
-    description: Relay endpoints (generated route coverage)
   - name: Resilience
     description: Resilience endpoints (generated route coverage)
   - name: Routing
@@ -12309,48 +12307,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/relay/tokens:
-    get:
-      tags:
-        - Relay
-      summary: "GET relay › tokens"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Relay
-      summary: "POST relay › tokens"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
-  /api/relay/tokens/{id}:
-    delete:
-      tags:
-        - Relay
-      summary: "DELETE relay › tokens › <id>"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Relay
-      summary: "GET relay › tokens › <id>"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
-    patch:
-      tags:
-        - Relay
-      summary: "PATCH relay › tokens › <id>"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
   /api/resilience/model-cooldowns:
     delete:
       tags:
@@ -14602,22 +14558,6 @@ paths:
           $ref: "#/components/responses/ManagementAuthenticationRequired"
         "403":
           $ref: "#/components/responses/ManagementInvalidToken"
-  /api/v1/relay/chat/completions:
-    post:
-      tags:
-        - V1 Relay
-      summary: "POST relay › chat › completions"
-      responses:
-        "200":
-          description: OK
-  /api/v1/relay/chat/completions/bifrost:
-    post:
-      tags:
-        - V1 Relay
-      summary: "POST relay › chat › completions › bifrost"
-      responses:
-        "200":
-          description: OK
   /api/v1/responses/{path}:
     post:
       tags:

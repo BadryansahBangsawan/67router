@@ -2248,11 +2248,6 @@
       "count": 1
     }
   },
-  "tests/unit/api/v1/relay-completions-errors.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 3
-    }
-  },
   "tests/unit/api/webhooks/webhook-url-ssrf-guard.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1

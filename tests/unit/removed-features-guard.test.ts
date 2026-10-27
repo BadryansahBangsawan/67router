@@ -11,6 +11,11 @@ const REMOVED_PATHS: string[] = [
   "src/lib/middleware/types.ts",
   "src/app/api/middleware",
   "src/lib/db/middleware.ts",
+  // relay
+  "src/app/api/relay",
+  "src/app/api/v1/relay",
+  "src/app/(dashboard)/dashboard/relay",
+  "src/lib/db/relayProxies.ts",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -18,6 +23,10 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /lib\/middleware\/(registry|types)/,
   /api\/middleware\/hooks/,
   /\binitPreRequestRegistry\b|\brunHooks\b/,
+  // relay
+  /db\/relayProxies/,
+  /app\/api\/relay\/|api\/v1\/relay\//,
+  /dashboard\/relay/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

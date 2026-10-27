@@ -65,15 +65,15 @@ The manifest intentionally excludes:
 should treat it as the machine-readable answer to "what can this provider do", instead of
 re-reading the TypeScript sources.
 
-| Tag                  | Meaning                                                           |
-| -------------------- | ----------------------------------------------------------------- |
-| `apikey`             | Accepts an API key (`authType` is `apikey` or `optional`).        |
-| `oauth`              | Uses an OAuth or session flow.                                    |
-| `responses`          | Exposes an OpenAI Responses-API base URL.                         |
-| `passthrough-models` | Serves models straight from upstream instead of a static catalog. |
-| `custom-executor`    | Runs a non-default executor, so it stays on the TypeScript path.  |
-| `sidecar-candidate`  | Mirrors `sidecar.eligible` — safe to consider for sidecar import. |
-| `usage-fetch`        | Has a wired usage or quota fetcher (`getUsageForProvider`).       |
+| Tag                  | Meaning                                                             |
+| -------------------- | ------------------------------------------------------------------- |
+| `apikey`             | Accepts an API key (`authType` is `apikey` or `optional`).          |
+| `oauth`              | Uses an OAuth or session flow.                                      |
+| `responses`          | Exposes an OpenAI Responses-API base URL.                           |
+| `passthrough-models` | Serves models straight from upstream instead of a static catalog.   |
+| `custom-executor`    | Runs a non-default executor, so it stays on the TypeScript path.    |
+| `sidecar-candidate`  | Mirrors `sidecar.eligible` — safe to consider for sidecar import.   |
+| `usage-fetch`        | Has a wired usage or quota fetcher (`getUsageForProvider`).         |
 | `usage-supported`    | The usage API accepts this provider (`isSupportedUsageConnection`). |
 
 `usage-fetch` is discovery only. It reports that OmniRoute knows how to read usage for the
@@ -111,8 +111,7 @@ Suggested migration phases:
 1. Generate and validate the provider plugin manifest from the TS registry.
 2. Teach Bifrost or CLIProxyAPI to import the manifest for API-key/static
    providers.
-3. Route eligible providers through the sidecar behind `OMNIROUTE_RELAY_BACKEND`
-   while keeping TS fallback enabled.
+3. Route eligible providers through the sidecar while keeping TS fallback enabled.
 4. Promote providers only when success rate, p99 latency, streaming behavior,
    and unsupported-param handling match the TS path.
 5. Add sidecar-native plugins for custom executors one provider family at a
