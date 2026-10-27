@@ -161,7 +161,7 @@ OmniRoute expune 6 skill-uri A2A conectate în `src/lib/a2a/taskExecution.ts::A2
 | Provider Discovery | `provider-discovery` | Listează providerii instalați cu capabilități, indicatori de nivel gratuit și stare OAuth                                                                                    | providers, discovery       | "Ce provideri sunt disponibili?"                     |
 | Cost Analysis      | `cost-analysis`      | Estimează costul unei cereri/conversații pe baza catalogului și al utilizării recente                                                                                        | cost, usage                | "Estimează costul acestei conversații"               |
 | Health Report      | `health-report`      | Agregă starea circuit breaker, cooldown și lockout per provider                                                                                                              | health, resilience         | "Afișează starea de sănătate a tuturor providerilor" |
-| List Capabilities  | `list-capabilities`  | Returnează catalogul complet de 45 de intrări Agent Skills (23 API + 21 CLI + 1 config) sub formă de tabel markdown cu URL-uri raw către SKILL.md pentru injecția de context | catalog, discovery, skills | "Listează toate capabilitățile OmniRoute"            |
+| List Capabilities  | `list-capabilities`  | Returnează catalogul complet de 43 de intrări Agent Skills (22 API + 20 CLI + 1 config) sub formă de tabel markdown cu URL-uri raw către SKILL.md pentru injecția de context | catalog, discovery, skills | "Listează toate capabilitățile OmniRoute"            |
 
 > Cardul de agent ar trebui menținut aliniat cu catalogul live de 375 de provideri; numărul de provideri și metadatele free/no-auth provin din registrul de runtime.
 

@@ -23,7 +23,7 @@ OmniRoute, birbirinden farklı ancak birbirini tamamlayan iki beceri sistemine s
 | Doğruluk kaynağı    | `src/lib/skills/` + pazaryeri                                      | `src/lib/agentSkills/` + `skills/` dizini                                                      |
 | Çalışma zamanı modu | Giden isteklere enjekte edilir, araç çağrısı olaylarında yürütülür | Statik markdown kataloğu + REST/MCP/A2A keşif uç noktaları                                     |
 | Kim kullanır        | OmniRoute'un kendisi (birleşik yönlendirme, gelen LLM çağrıları)   | Harici aracılar, MCP istemcileri, A2A orkestratörleri                                          |
-| Sayı                | Değişken (pazaryerine bağlı)                                       | 45 katalog girdisi (23 API + 21 CLI + 1 yapılandırma)                                          |
+| Sayı                | Değişken (pazaryerine bağlı)                                       | 43 katalog girdisi (22 API + 20 CLI + 1 yapılandırma)                                          |
 | Biçim               | Araç şeması + işleyici içeren `SkillDefinition`                    | `SKILL.md` ön bilgisi + markdown gövdesi                                                       |
 | Keşif               | `/api/skills/*` REST + `omniroute_skills_*` MCP araçları           | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP araçları + A2A `list-capabilities` |
 

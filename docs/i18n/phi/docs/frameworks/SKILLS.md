@@ -23,7 +23,7 @@ May dalawang magkaiba ngunit magkaugnay na sistema ng kasanayan ang OmniRoute:
 | Pinagmumulan ng katotohanan | `src/lib/skills/` + marketplace                                            | `src/lib/agentSkills/` + direktoryong `skills/`                                                   |
 | Runtime mode                | Ini-inject sa mga papalabas na request, isinasagawa sa mga tool-call event | Static na markdown catalog + mga endpoint sa pagtuklas na REST/MCP/A2A                            |
 | Gumagamit nito              | Ang OmniRoute mismo (combo routing, mga papasok na LLM call)               | Mga panlabas na agent, MCP client, A2A orchestrator                                               |
-| Bilang                      | Nagbabago (nakabatay sa marketplace)                                       | 45 entry sa catalog (23 API + 21 CLI + 1 config)                                                  |
+| Bilang                      | Nagbabago (nakabatay sa marketplace)                                       | 43 entry sa catalog (22 API + 20 CLI + 1 config)                                                  |
 | Format                      | `SkillDefinition` na may tool schema + handler                             | `SKILL.md` frontmatter + markdown body                                                            |
 | Pagtuklas                   | `/api/skills/*` REST + mga MCP tool na `omniroute_skills_*`                | `/api/agent-skills/*` REST + mga MCP tool na `omniroute_agent_skills_*` + A2A `list-capabilities` |
 

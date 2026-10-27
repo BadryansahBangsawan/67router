@@ -161,7 +161,7 @@ curl -X POST http://localhost:20128/a2a \
 | Provider Discovery | `provider-discovery` | Καταγράφει τους εγκατεστημένους providers με δυνατότητες, σημαίες δωρεάν επιπέδου, κατάσταση OAuth                                                         | providers, discovery       | "Ποιοι providers είναι διαθέσιμοι;"                      |
 | Cost Analysis      | `cost-analysis`      | Εκτιμά το κόστος ενός αιτήματος/συνομιλίας με βάση τον κατάλογο + την πρόσφατη χρήση                                                                       | cost, usage                | "Εκτίμησε το κόστος για αυτή τη συνομιλία"               |
 | Health Report      | `health-report`      | Συγκεντρώνει την κατάσταση circuit breaker, cooldown, lockout ανά provider                                                                                 | health, resilience         | "Εμφάνισε την κατάσταση υγείας όλων των providers"       |
-| List Capabilities  | `list-capabilities`  | Επιστρέφει τον πλήρη κατάλογο 45 καταχωρήσεων Agent Skills (23 API + 21 CLI + 1 config) ως πίνακα markdown με ακατέργαστα URL SKILL.md για έγχυση πλαισίου | catalog, discovery, skills | "Κατάγραψε όλες τις δυνατότητες του OmniRoute"           |
+| List Capabilities  | `list-capabilities`  | Επιστρέφει τον πλήρη κατάλογο 43 καταχωρήσεων Agent Skills (22 API + 20 CLI + 1 config) ως πίνακα markdown με ακατέργαστα URL SKILL.md για έγχυση πλαισίου | catalog, discovery, skills | "Κατάγραψε όλες τις δυνατότητες του OmniRoute"           |
 
 > Η Agent Card θα πρέπει να παραμένει ευθυγραμμισμένη με τον ζωντανό κατάλογο 375 providers· οι αριθμοί providers και τα μεταδεδομένα free/no-auth προέρχονται από το μητρώο χρόνου εκτέλεσης.
 

@@ -161,7 +161,7 @@ O OmniRoute expõe 6 habilidades A2A conectadas em `src/lib/a2a/taskExecution.ts
 | Provider Discovery | `provider-discovery` | Lista os provedores instalados com capacidades, sinalizações de nível gratuito e status de OAuth                                                                      | providers, discovery       | "Quais provedores estão disponíveis?"             |
 | Cost Analysis      | `cost-analysis`      | Estima o custo de uma requisição/conversa com base no catálogo + uso recente                                                                                          | cost, usage                | "Estime o custo desta conversa"                   |
 | Health Report      | `health-report`      | Agrega o estado de circuit breaker, cooldown e bloqueio por provedor                                                                                                  | health, resilience         | "Mostre o status de saúde de todos os provedores" |
-| List Capabilities  | `list-capabilities`  | Retorna o catálogo completo de 45 entradas de Agent Skills (23 API + 21 CLI + 1 config) como uma tabela markdown com URLs brutas de SKILL.md para injeção de contexto | catalog, discovery, skills | "Liste todas as capacidades do OmniRoute"         |
+| List Capabilities  | `list-capabilities`  | Retorna o catálogo completo de 43 entradas de Agent Skills (22 API + 20 CLI + 1 config) como uma tabela markdown com URLs brutas de SKILL.md para injeção de contexto | catalog, discovery, skills | "Liste todas as capacidades do OmniRoute"         |
 
 > O Agent Card deve ser mantido alinhado com o catálogo ativo de 375 provedores; as contagens de provedores e os metadados de gratuidade/sem autenticação são obtidos do registro em tempo de execução.
 

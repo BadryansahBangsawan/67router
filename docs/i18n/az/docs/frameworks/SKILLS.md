@@ -23,7 +23,7 @@ OmniRoute bir-birindən fərqli, lakin bir-birini tamamlayan iki bacarıq sistem
 | Həqiqət mənbəyi   | `src/lib/skills/` + marketplace                                       | `src/lib/agentSkills/` + `skills/` qovluğu                                                     |
 | İş vaxtı rejimi   | Gedən sorğulara daxil edilir, alət çağırışı hadisələrində icra olunur | Statik markdown kataloqu + REST/MCP/A2A aşkarlama son nöqtələri                                |
 | Kim istifadə edir | OmniRoute özü (combo marşrutlaşdırması, daxil olan LLM çağırışları)   | Xarici agentlər, MCP müştəriləri, A2A orkestratorları                                          |
-| Say               | Dəyişkən (marketplace tərəfindən müəyyən edilir)                      | 45 kataloq qeydi (23 API + 21 CLI + 1 konfiqurasiya)                                           |
+| Say               | Dəyişkən (marketplace tərəfindən müəyyən edilir)                      | 43 kataloq qeydi (22 API + 20 CLI + 1 konfiqurasiya)                                           |
 | Format            | Alət sxemi + emalçı ilə `SkillDefinition`                             | `SKILL.md` ön maddəsi + markdown məzmunu                                                       |
 | Aşkarlama         | `/api/skills/*` REST + `omniroute_skills_*` MCP alətləri              | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP alətləri + A2A `list-capabilities` |
 

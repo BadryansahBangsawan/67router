@@ -13,7 +13,7 @@ Agent Skills xarici agentlərə, MCP klientlərinə və A2A orkestratorlarına O
 
 ## İcmal
 
-Kataloqda **45 Agent Skill** (23 REST API + 21 CLI + 1 konfiqurasiya iş axını) mövcuddur. Hər skill aşağıdakılara malikdir:
+Kataloqda **43 Agent Skill** (22 REST API + 20 CLI + 1 konfiqurasiya iş axını) mövcuddur. Hər skill aşağıdakılara malikdir:
 
 - **Kanonik ID** (`omni-auth`, `cli-serve` və s.)
 - `skills/{id}/SKILL.md` daxilində YAML ön məlumatı (`name`, `description`) + zəngin markdown məzmunu olan **SKILL.md** faylı

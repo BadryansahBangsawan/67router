@@ -23,7 +23,7 @@ OmniRoute heeft twee verschillende, maar elkaar aanvullende skillsystemen:
 | Bron van waarheid | `src/lib/skills/` + marketplace                                   | `src/lib/agentSkills/` + map `skills/`                                                      |
 | Runtime-modus     | Geïnjecteerd in uitgaande verzoeken, uitgevoerd bij toolaanroepen | Statische markdown-catalogus + REST/MCP/A2A-discovery-endpoints                             |
 | Wie gebruikt het  | OmniRoute zelf (combinatieroutering, inkomende LLM-aanroepen)     | Externe agents, MCP-clients, A2A-orchestrators                                              |
-| Aantal            | Variabel (aangestuurd door de marketplace)                        | 45 catalogusvermeldingen (23 API + 21 CLI + 1 configuratie)                                 |
+| Aantal            | Variabel (aangestuurd door de marketplace)                        | 43 catalogusvermeldingen (22 API + 20 CLI + 1 configuratie)                                 |
 | Indeling          | `SkillDefinition` met toolschema + handler                        | `SKILL.md`-frontmatter + markdown-inhoud                                                    |
 | Discovery         | `/api/skills/*` REST + `omniroute_skills_*` MCP-tools             | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-tools + A2A `list-capabilities` |
 

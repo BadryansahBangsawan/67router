@@ -23,7 +23,7 @@ OmniRoutessa on kaksi erillistä mutta toisiaan täydentävää taitojärjestelm
 | Totuuden lähde | `src/lib/skills/` + markkinapaikka                                              | `src/lib/agentSkills/` + `skills/`-hakemisto                                                   |
 | Suoritustila   | Lisätään lähteviin pyyntöihin ja suoritetaan työkalukutsutapahtumien yhteydessä | Staattinen markdown-luettelo + REST/MCP/A2A-löytämisen päätepisteet                            |
 | Käyttäjä       | OmniRoute itse (yhdistelmäreititys, saapuvat LLM-kutsut)                        | Ulkoiset agentit, MCP-asiakkaat, A2A-orkestraattorit                                           |
-| Määrä          | Vaihteleva (markkinapaikan ohjaama)                                             | 45 luettelomerkintää (23 API + 21 CLI + 1 määritys)                                            |
+| Määrä          | Vaihteleva (markkinapaikan ohjaama)                                             | 43 luettelomerkintää (22 API + 20 CLI + 1 määritys)                                            |
 | Muoto          | `SkillDefinition`, joka sisältää työkaluskeeman ja käsittelijän                 | `SKILL.md`-frontmatter + markdown-sisältö                                                      |
 | Löytäminen     | `/api/skills/*` REST + `omniroute_skills_*` MCP-työkalut                        | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-työkalut + A2A `list-capabilities` |
 

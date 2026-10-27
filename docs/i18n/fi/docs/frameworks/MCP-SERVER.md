@@ -224,7 +224,7 @@ Määritelty tiedostossa `open-sse/mcp-server/tools/agentSkillTools.ts`. Taustal
 | :-------------------------------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Listaa kaikki 45 agenttitaitoa valinnaisilla `category` (api\|cli) ja `area` -suodattimilla; palauttaa metatiedot + kattavuuden                                 |
 | `omniroute_agent_skills_get`      | `read:catalog` | Hae täydelliset metatiedot + SKILL.md-sisältö yhdelle taidolle kanonisella `id`:llä                                                                             |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Kattavuustilastot: kuinka monella 23 API-, 21 CLI- ja 1 konfiguraatiotaidosta on SKILL.md-tiedostot tiedostojärjestelmässä verrattuna luettelon kokonaismääriin |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Kattavuustilastot: kuinka monella 22 API-, 20 CLI- ja 1 konfiguraatiotaidosta on SKILL.md-tiedostot tiedostojärjestelmässä verrattuna luettelon kokonaismääriin |
 
 Katso [AGENT-SKILLS.md](./AGENT-SKILLS.md) koko luettelosta ja siitä, miten ulkoiset agentit käyttävät sitä.
 

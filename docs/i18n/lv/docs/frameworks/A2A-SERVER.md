@@ -154,7 +154,7 @@ OmniRoute piedāvā 6 A2A prasmes, kas pieslēgtas `src/lib/a2a/taskExecution.ts
 | Provider Discovery | `provider-discovery` | Uzskaita instalētos sniedzējus ar iespējām, bezmaksas līmeņa karodziņiem, OAuth statusu                                                                    | providers, discovery       | "Kādi sniedzēji ir pieejami?"             |
 | Cost Analysis      | `cost-analysis`      | Novērtē pieprasījuma/sarunas izmaksas, ņemot vērā katalogu + neseno lietojumu                                                                              | cost, usage                | "Novērtē šīs sarunas izmaksas"            |
 | Health Report      | `health-report`      | Apkopo ķēdes pārtraucēja, atdzesēšanas un bloķēšanas stāvokli katram sniedzējam                                                                            | health, resilience         | "Parādi visu sniedzēju veselības statusu" |
-| List Capabilities  | `list-capabilities`  | Atgriež pilnu 45 ierakstu Agent Skills katalogu (23 API + 21 CLI + 1 konfigurācija) kā markdown tabulu ar neapstrādātiem SKILL.md URL konteksta injekcijai | catalog, discovery, skills | "Uzskaiti visas OmniRoute iespējas"       |
+| List Capabilities  | `list-capabilities`  | Atgriež pilnu 43 ierakstu Agent Skills katalogu (22 API + 20 CLI + 1 konfigurācija) kā markdown tabulu ar neapstrādātiem SKILL.md URL konteksta injekcijai | catalog, discovery, skills | "Uzskaiti visas OmniRoute iespējas"       |
 
 > Agent Card jāuztur saskaņotu ar aktuālo 375 sniedzēju katalogu; sniedzēju skaits un bezmaksas/bez autentifikācijas metadati tiek iegūti no izpildlaika reģistra.
 

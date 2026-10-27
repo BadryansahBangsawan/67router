@@ -23,7 +23,7 @@ OmniRoute પાસે બે અલગ પરંતુ પરસ્પર પ�
 | સત્યનો સ્રોત          | `src/lib/skills/` + marketplace                                 | `src/lib/agentSkills/` + `skills/` directory                                                |
 | Runtime mode          | આઉટબાઉન્ડ વિનંતીઓમાં દાખલ થાય છે, tool-call events પર ચલાવાય છે | Static markdown catalog + REST/MCP/A2A discovery endpoints                                  |
 | તેનો ઉપયોગ કોણ કરે છે | OmniRoute પોતે (combo routing, inbound LLM calls)               | બાહ્ય agents, MCP clients, A2A orchestrators                                                |
-| સંખ્યા                | પરિવર્તનશીલ (marketplace દ્વારા સંચાલિત)                        | 45 catalog entries (23 API + 21 CLI + 1 config)                                             |
+| સંખ્યા                | પરિવર્તનશીલ (marketplace દ્વારા સંચાલિત)                        | 43 catalog entries (22 API + 20 CLI + 1 config)                                             |
 | ફોર્મેટ               | tool schema + handler સાથેનું `SkillDefinition`                 | `SKILL.md` frontmatter + markdown body                                                      |
 | શોધ                   | `/api/skills/*` REST + `omniroute_skills_*` MCP tools           | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP tools + A2A `list-capabilities` |
 

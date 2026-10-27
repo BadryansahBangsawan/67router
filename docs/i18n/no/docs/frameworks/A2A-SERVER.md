@@ -161,7 +161,7 @@ OmniRoute eksponerer 6 A2A-ferdigheter konfigurert i `src/lib/a2a/taskExecution.
 | Leverandøroppdagelse | `provider-discovery` | Lister installerte leverandører med egenskaper, flagg for gratisnivå og OAuth-status                                                                              | providers, discovery       | "What providers are available?"        |
 | Kostnadsanalyse      | `cost-analysis`      | Estimerer kostnaden for en forespørsel/samtale gitt katalogen + nylig bruk                                                                                        | cost, usage                | "Estimate cost for this conversation"  |
 | Helse rapport        | `health-report`      | Samler status for circuit breaker, nedkjøling og utestenging per leverandør                                                                                       | health, resilience         | "Show health status of all providers"  |
-| List egenskaper      | `list-capabilities`  | Returnerer hele Agent Skills-katalogen med 45 oppføringer (23 API + 21 CLI + 1 konfigurasjon) som en markdown-tabell med rå SKILL.md-URL-er for kontekstinjeksjon | catalog, discovery, skills | "List all OmniRoute capabilities"      |
+| List egenskaper      | `list-capabilities`  | Returnerer hele Agent Skills-katalogen med 43 oppføringer (22 API + 20 CLI + 1 konfigurasjon) som en markdown-tabell med rå SKILL.md-URL-er for kontekstinjeksjon | catalog, discovery, skills | "List all OmniRoute capabilities"      |
 
 > Agent-kortet bør holdes i synk med den levende katalogen over 375 leverandører; antall leverandører og metadata om gratis/uten autentisering hentes fra kjøringsmiljøets register.
 

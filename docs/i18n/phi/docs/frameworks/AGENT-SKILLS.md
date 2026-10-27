@@ -13,7 +13,7 @@ Ang Agent Skills ay mga nakaayos na SKILL.md file na nagtuturo sa mga external a
 
 ## Pangkalahatang-ideya
 
-Naglalaman ang catalog ng **45 Agent Skills** (23 REST API + 21 CLI + 1 workflow ng configuration). Ang bawat skill ay may:
+Naglalaman ang catalog ng **43 Agent Skills** (22 REST API + 20 CLI + 1 workflow ng configuration). Ang bawat skill ay may:
 
 - Isang **canonical ID** (`omni-auth`, `cli-serve`, atbp.)
 - Isang **SKILL.md** file sa `skills/{id}/SKILL.md` na may YAML frontmatter (`name`, `description`) + detalyadong markdown body

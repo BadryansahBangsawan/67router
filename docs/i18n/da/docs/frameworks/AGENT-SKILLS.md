@@ -13,7 +13,7 @@ Agent Skills er strukturerede SKILL.md-filer, der lærer eksterne agenter, MCP-k
 
 ## Oversigt
 
-Kataloget indeholder **45 Agent Skills** (23 REST API + 21 CLI + 1 konfigurationsworkflow). Hver skill har:
+Kataloget indeholder **43 Agent Skills** (22 REST API + 20 CLI + 1 konfigurationsworkflow). Hver skill har:
 
 - Et **kanonisk ID** (`omni-auth`, `cli-serve` osv.)
 - En **SKILL.md**-fil i `skills/{id}/SKILL.md` med YAML-frontmatter (`name`, `description`) + omfattende markdown-indhold

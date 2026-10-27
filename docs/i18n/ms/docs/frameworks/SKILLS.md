@@ -23,7 +23,7 @@ OmniRoute mempunyai dua sistem kemahiran yang berbeza tetapi saling melengkapi:
 | Sumber rujukan utama | `src/lib/skills/` + pasaran                                                                | `src/lib/agentSkills/` + direktori `skills/`                                               |
 | Mod masa jalan       | Disuntik ke dalam permintaan keluar, dilaksanakan apabila peristiwa panggilan alat berlaku | Katalog markdown statik + titik akhir penemuan REST/MCP/A2A                                |
 | Pengguna             | OmniRoute sendiri (penghalaan gabungan, panggilan LLM masuk)                               | Ejen luaran, klien MCP, pengatur A2A                                                       |
-| Bilangan             | Berubah-ubah (dipacu oleh pasaran)                                                         | 45 entri katalog (23 API + 21 CLI + 1 konfigurasi)                                         |
+| Bilangan             | Berubah-ubah (dipacu oleh pasaran)                                                         | 43 entri katalog (22 API + 20 CLI + 1 konfigurasi)                                         |
 | Format               | `SkillDefinition` dengan skema alat + pengendali                                           | Bahagian hadapan `SKILL.md` + isi markdown                                                 |
 | Penemuan             | REST `/api/skills/*` + alat MCP `omniroute_skills_*`                                       | REST `/api/agent-skills/*` + alat MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 

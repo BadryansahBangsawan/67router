@@ -23,7 +23,7 @@ OmniRoute má dva odlišné, ale vzájomne sa dopĺňajúce systémy zručností
 | Zdroj pravdy   | `src/lib/skills/` + trhovisko                                                          | `src/lib/agentSkills/` + adresár `skills/`                                                     |
 | Režim za behu  | Vkladajú sa do odchádzajúcich požiadaviek a spúšťajú pri udalostiach volania nástrojov | Statický katalóg vo formáte markdown + koncové body REST/MCP/A2A na vyhľadávanie               |
 | Kto ho používa | Samotný OmniRoute (kombinované smerovanie, prichádzajúce volania LLM)                  | Externí agenti, klienti MCP, orchestrátory A2A                                                 |
-| Počet          | Premenlivý (riadený trhoviskom)                                                        | 45 položiek katalógu (23 API + 21 CLI + 1 konfigurácia)                                        |
+| Počet          | Premenlivý (riadený trhoviskom)                                                        | 43 položiek katalógu (22 API + 20 CLI + 1 konfigurácia)                                        |
 | Formát         | `SkillDefinition` so schémou nástroja + obslužnou rutinou                              | Frontmatter `SKILL.md` + telo vo formáte markdown                                              |
 | Vyhľadávanie   | REST `/api/skills/*` + nástroje MCP `omniroute_skills_*`                               | REST `/api/agent-skills/*` + nástroje MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 

@@ -235,7 +235,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------ |
 | `omniroute_agent_skills_list`     | `read:catalog` | ሁሉንም 45 የወኪል ክህሎቶች በአማራጭ `category` (api\|cli) እና `area` ማጣሪያዎች ይዘርዝራል፤ ሜታዳታ + ሽፋን ይመልሳል                |
 | `omniroute_agent_skills_get`      | `read:catalog` | አንድን ክህሎት በቀኖናዊ `id` በመጠቀም ሙሉ ሜታዳታውን + የSKILL.md ይዘቱን ያገኛል                                              |
-| `omniroute_agent_skills_coverage` | `read:catalog` | የሽፋን ስታቲስቲክስ፦ ከካታሎጉ ድምር ጋር ሲነጻጸር ከ23 API፣ 21 CLI እና 1 ውቅር ክህሎቶች ምን ያህሎቹ በፋይል ስርዓቱ ላይ SKILL.md ፋይሎች አሏቸው |
+| `omniroute_agent_skills_coverage` | `read:catalog` | የሽፋን ስታቲስቲክስ፦ ከካታሎጉ ድምር ጋር ሲነጻጸር ከ22 API፣ 20 CLI እና 1 ውቅር ክህሎቶች ምን ያህሎቹ በፋይል ስርዓቱ ላይ SKILL.md ፋይሎች አሏቸው |
 
 ሙሉውን ካታሎግ እና ውጫዊ ወኪሎች እንዴት እንደሚጠቀሙበት ለማየት [AGENT-SKILLS.md](./AGENT-SKILLS.md)ን ይመልከቱ።
 

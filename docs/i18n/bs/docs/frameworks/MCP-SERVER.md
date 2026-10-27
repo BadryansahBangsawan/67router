@@ -236,7 +236,7 @@ Definisani u `open-sse/mcp-server/tools/agentSkillTools.ts`. Podržani putem `sr
 | :-------------------------------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Navodi svih 45 vještina agenata uz opcionalne filtere `category` (api\|cli) i `area`; vraća metapodatke + pokrivenost                                        |
 | `omniroute_agent_skills_get`      | `read:catalog` | Dohvata potpune metapodatke + sadržaj SKILL.md za jednu vještinu prema kanonskom `id`-u                                                                      |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistika pokrivenosti: koliko od 23 API, 21 CLI i 1 konfiguracijske vještine ima SKILL.md datoteke u datotečnom sistemu u odnosu na ukupan broj u katalogu |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistika pokrivenosti: koliko od 22 API, 20 CLI i 1 konfiguracijske vještine ima SKILL.md datoteke u datotečnom sistemu u odnosu na ukupan broj u katalogu |
 
 Pogledajte [AGENT-SKILLS.md](./AGENT-SKILLS.md) za kompletan katalog i način na koji ga vanjski agenti koriste.
 

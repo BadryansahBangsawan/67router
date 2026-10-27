@@ -236,7 +236,7 @@ Definite în `open-sse/mcp-server/tools/agentSkillTools.ts`. Susținute de `src/
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Listează toate cele 45 de abilități ale agenților, cu filtre opționale `category` (api\|cli) și `area`; returnează metadate + acoperire                                    |
 | `omniroute_agent_skills_get`      | `read:catalog` | Obține metadatele complete + conținutul SKILL.md pentru o singură abilitate, pe baza `id`-ului canonic                                                                     |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistici de acoperire: câte dintre cele 23 de abilități API, 21 CLI și 1 de configurare au fișiere SKILL.md în sistemul de fișiere, comparativ cu totalurile din catalog |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistici de acoperire: câte dintre cele 22 de abilități API, 20 CLI și 1 de configurare au fișiere SKILL.md în sistemul de fișiere, comparativ cu totalurile din catalog |
 
 Consultați [AGENT-SKILLS.md](./AGENT-SKILLS.md) pentru catalogul complet și modul în care îl utilizează agenții externi.
 

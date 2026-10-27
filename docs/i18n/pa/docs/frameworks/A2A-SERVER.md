@@ -156,7 +156,7 @@ OmniRoute 6 A2A ਸਕਿੱਲਾਂ ਐਕਸਪੋਜ਼ ਕਰਦਾ ਹੈ 
 | ਪ੍ਰੋਵਾਈਡਰ ਖੋਜ     | `provider-discovery` | ਇੰਸਟਾਲ ਕੀਤੇ ਪ੍ਰੋਵਾਈਡਰਾਂ ਨੂੰ ਸਮਰੱਥਾਵਾਂ, free-tier ਫਲੈਗਾਂ ਅਤੇ OAuth ਸਥਿਤੀ ਸਮੇਤ ਸੂਚੀਬੱਧ ਕਰਦਾ ਹੈ                                                      | providers, discovery       | "ਕਿਹੜੇ ਪ੍ਰੋਵਾਈਡਰ ਉਪਲਬਧ ਹਨ?"                     |
 | ਲਾਗਤ ਵਿਸ਼ਲੇਸ਼ਣ    | `cost-analysis`      | ਕੈਟਾਲਾਗ + ਹਾਲੀਆ ਵਰਤੋਂ ਦੇ ਆਧਾਰ 'ਤੇ ਕਿਸੇ ਰਿਕਵੈਸਟ/ਗੱਲਬਾਤ ਦੀ ਲਾਗਤ ਦਾ ਅਨੁਮਾਨ ਲਗਾਉਂਦਾ ਹੈ                                                                | cost, usage                | "ਇਸ ਗੱਲਬਾਤ ਦੀ ਲਾਗਤ ਦਾ ਅਨੁਮਾਨ ਲਗਾਓ"              |
 | ਹੈਲਥ ਰਿਪੋਰਟ       | `health-report`      | ਹਰੇਕ ਪ੍ਰੋਵਾਈਡਰ ਲਈ circuit breaker, cooldown, lockout ਸਥਿਤੀ ਨੂੰ ਇਕੱਠਾ ਕਰਦਾ ਹੈ                                                                      | health, resilience         | "ਸਾਰੇ ਪ੍ਰੋਵਾਈਡਰਾਂ ਦੀ ਹੈਲਥ ਸਥਿਤੀ ਦਿਖਾਓ"          |
-| ਸਮਰੱਥਾਵਾਂ ਦੀ ਸੂਚੀ | `list-capabilities`  | ਪੂਰਾ 45-ਐਂਟਰੀ Agent Skills ਕੈਟਾਲਾਗ (23 API + 21 CLI + 1 config) context injection ਲਈ raw SKILL.md URLs ਦੇ ਨਾਲ ਇੱਕ markdown ਟੇਬਲ ਵਜੋਂ ਵਾਪਸ ਕਰਦਾ ਹੈ | catalog, discovery, skills | "ਸਾਰੀਆਂ OmniRoute ਸਮਰੱਥਾਵਾਂ ਸੂਚੀਬੱਧ ਕਰੋ"        |
+| ਸਮਰੱਥਾਵਾਂ ਦੀ ਸੂਚੀ | `list-capabilities`  | ਪੂਰਾ 43-ਐਂਟਰੀ Agent Skills ਕੈਟਾਲਾਗ (22 API + 20 CLI + 1 config) context injection ਲਈ raw SKILL.md URLs ਦੇ ਨਾਲ ਇੱਕ markdown ਟੇਬਲ ਵਜੋਂ ਵਾਪਸ ਕਰਦਾ ਹੈ | catalog, discovery, skills | "ਸਾਰੀਆਂ OmniRoute ਸਮਰੱਥਾਵਾਂ ਸੂਚੀਬੱਧ ਕਰੋ"        |
 
 > Agent Card ਨੂੰ ਲਾਈਵ 375-ਪ੍ਰੋਵਾਈਡਰ ਕੈਟਾਲਾਗ ਨਾਲ ਸੰਰੇਖਿਤ ਰੱਖਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ; ਪ੍ਰੋਵਾਈਡਰ ਗਿਣਤੀਆਂ ਅਤੇ free/no-auth ਮੈਟਾਡੇਟਾ runtime registry ਤੋਂ ਲਿਆ ਜਾਂਦਾ ਹੈ।
 

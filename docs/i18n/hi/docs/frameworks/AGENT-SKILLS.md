@@ -13,7 +13,7 @@ Agent Skills संरचित SKILL.md फ़ाइलें हैं, जो
 
 ## अवलोकन
 
-कैटलॉग में **45 Agent Skills** (23 REST API + 21 CLI + 1 कॉन्फ़िगरेशन वर्कफ़्लो) शामिल हैं। प्रत्येक स्किल में निम्नलिखित होते हैं:
+कैटलॉग में **43 Agent Skills** (22 REST API + 20 CLI + 1 कॉन्फ़िगरेशन वर्कफ़्लो) शामिल हैं। प्रत्येक स्किल में निम्नलिखित होते हैं:
 
 - एक **कैनोनिकल ID** (`omni-auth`, `cli-serve`, आदि)
 - `skills/{id}/SKILL.md` में एक **SKILL.md** फ़ाइल, जिसमें YAML frontmatter (`name`, `description`) + विस्तृत markdown बॉडी होती है

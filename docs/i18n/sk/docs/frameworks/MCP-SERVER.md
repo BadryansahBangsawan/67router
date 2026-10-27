@@ -228,7 +228,7 @@ Definované v `open-sse/mcp-server/tools/agentSkillTools.ts`. Podporené `src/li
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Zoznam všetkých 45 zručností agenta s voliteľnými filtrami `category` (api\|cli) a `area`; vracia metadáta + pokrytie                              |
 | `omniroute_agent_skills_get`      | `read:catalog` | Získanie úplných metadát + obsahu SKILL.md pre jednu zručnosť podľa kanonického `id`                                                               |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Štatistiky pokrytia: koľko z 23 API, 21 CLI a 1 konfiguračných zručností má súbory SKILL.md v súborovom systéme oproti celkovým katalógovým údajom |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Štatistiky pokrytia: koľko z 22 API, 20 CLI a 1 konfiguračných zručností má súbory SKILL.md v súborovom systéme oproti celkovým katalógovým údajom |
 
 Úplný katalóg a spôsob, akým ho využívajú externí agenti, nájdete v [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 

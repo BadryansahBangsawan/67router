@@ -23,7 +23,7 @@
 | Πηγή αλήθειας         | `src/lib/skills/` + marketplace                                                 | `src/lib/agentSkills/` + κατάλογος `skills/`                                                   |
 | Λειτουργία εκτέλεσης  | Εισάγονται στα εξερχόμενα αιτήματα και εκτελούνται σε συμβάντα κλήσης εργαλείων | Στατικός κατάλογος markdown + endpoints εντοπισμού REST/MCP/A2A                                |
 | Ποιος το χρησιμοποιεί | Το ίδιο το OmniRoute (συνδυαστική δρομολόγηση, εισερχόμενες κλήσεις LLM)        | Εξωτερικοί agents, πελάτες MCP, ενορχηστρωτές A2A                                              |
-| Πλήθος                | Μεταβλητό (καθορίζεται από το marketplace)                                      | 45 καταχωρίσεις καταλόγου (23 API + 21 CLI + 1 διαμόρφωσης)                                    |
+| Πλήθος                | Μεταβλητό (καθορίζεται από το marketplace)                                      | 43 καταχωρίσεις καταλόγου (22 API + 20 CLI + 1 διαμόρφωσης)                                    |
 | Μορφή                 | `SkillDefinition` με σχήμα εργαλείου + χειριστή                                 | Frontmatter `SKILL.md` + σώμα markdown                                                         |
 | Εντοπισμός            | REST `/api/skills/*` + εργαλεία MCP `omniroute_skills_*`                        | REST `/api/agent-skills/*` + εργαλεία MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 

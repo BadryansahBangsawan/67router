@@ -13,7 +13,7 @@ L-Agent Skills huma fajls SKILL.md strutturati li jgħallmu lill-aġenti esterni
 
 ## Ħarsa ġenerali
 
-Il-katalgu fih **45 Agent Skill** (23 REST API + 21 CLI + fluss tax-xogħol wieħed għall-konfigurazzjoni). Kull skill għandha:
+Il-katalgu fih **43 Agent Skill** (22 REST API + 20 CLI + fluss tax-xogħol wieħed għall-konfigurazzjoni). Kull skill għandha:
 
 - **ID kanoniku** (`omni-auth`, `cli-serve`, eċċ.)
 - Fajl **SKILL.md** f’`skills/{id}/SKILL.md` b’YAML frontmatter (`name`, `description`) + korp markdown dettaljat

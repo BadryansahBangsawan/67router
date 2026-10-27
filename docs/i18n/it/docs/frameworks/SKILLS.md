@@ -23,7 +23,7 @@ OmniRoute dispone di due sistemi di skill distinti ma complementari:
 | Fonte primaria   | `src/lib/skills/` + marketplace                                                 | `src/lib/agentSkills/` + directory `skills/`                                                    |
 | Modalità runtime | Inserite nelle richieste in uscita, eseguite in caso di chiamate agli strumenti | Catalogo markdown statico + endpoint di individuazione REST/MCP/A2A                             |
 | Chi le utilizza  | OmniRoute stesso (routing combinato, chiamate LLM in ingresso)                  | Agenti esterni, client MCP, orchestratori A2A                                                   |
-| Numero           | Variabile (determinato dal marketplace)                                         | 45 voci di catalogo (23 API + 21 CLI + 1 configurazione)                                        |
+| Numero           | Variabile (determinato dal marketplace)                                         | 43 voci di catalogo (22 API + 20 CLI + 1 configurazione)                                        |
 | Formato          | `SkillDefinition` con schema dello strumento + handler                          | Frontmatter `SKILL.md` + corpo markdown                                                         |
 | Individuazione   | REST `/api/skills/*` + strumenti MCP `omniroute_skills_*`                       | REST `/api/agent-skills/*` + strumenti MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 

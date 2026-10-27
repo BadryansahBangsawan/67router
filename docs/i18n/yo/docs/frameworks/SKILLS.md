@@ -23,7 +23,7 @@ OmniRoute ní àwọn ètò skill méjì tó yàtọ̀ síra ṣùgbọ́n tí w
 | Orísun òtítọ́   | `src/lib/skills/` + ibi-ọjà                                               | `src/lib/agentSkills/` + àpò-ọ̀nà `skills/`                                                        |
 | Ìpo àsìkò-ṣiṣe | A máa fi sínú àwọn ìbéèrè tó ń jáde, a sì máa ṣiṣẹ́ nígbà ìṣẹ̀lẹ̀ ìpè-irinṣẹ́ | Àkójọ markdown àìyípadà + àwọn endpoint ìṣàwárí REST/MCP/A2A                                      |
 | Ẹni tó ń lò ó  | OmniRoute fúnra rẹ̀ (combo routing, àwọn ìpè LLM tó ń wọlé)                | Àwọn agent òde, àwọn client MCP, àwọn orchestrator A2A                                            |
-| Iye            | Ó lè yípadà (ibi-ọjà ló ń darí rẹ̀)                                        | Àwọn àkọsílẹ̀ àkójọ 45 (23 API + 21 CLI + 1 config)                                                |
+| Iye            | Ó lè yípadà (ibi-ọjà ló ń darí rẹ̀)                                        | Àwọn àkọsílẹ̀ àkójọ 43 (22 API + 20 CLI + 1 config)                                                |
 | Fọ́ọ̀mù          | `SkillDefinition` pẹ̀lú schema irinṣẹ́ + handler                            | frontmatter `SKILL.md` + ara markdown                                                             |
 | Ìṣàwárí        | `/api/skills/*` REST + àwọn irinṣẹ́ MCP `omniroute_skills_*`               | `/api/agent-skills/*` REST + àwọn irinṣẹ́ MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 

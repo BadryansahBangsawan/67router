@@ -236,7 +236,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | İsteğe bağlı `category` (api\|cli) ve `area` filtreleriyle 45 agent yeteneğinin tümünü listeler; meta verileri + kapsamı döndürür                              |
 | `omniroute_agent_skills_get`      | `read:catalog` | Kanonik `id` değerine göre tek bir yeteneğin tüm meta verilerini + SKILL.md içeriğini getirir                                                                  |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Kapsam istatistikleri: 23 API, 21 CLI ve 1 yapılandırma yeteneğinden kaçının dosya sisteminde SKILL.md dosyası bulunduğunu katalog toplamlarıyla karşılaştırır |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Kapsam istatistikleri: 22 API, 20 CLI ve 1 yapılandırma yeteneğinden kaçının dosya sisteminde SKILL.md dosyası bulunduğunu katalog toplamlarıyla karşılaştırır |
 
 Kataloğun tamamı ve harici agent'ların bunu nasıl kullandığı için [AGENT-SKILLS.md](./AGENT-SKILLS.md) belgesine bakın.
 

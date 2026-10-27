@@ -236,7 +236,7 @@ Apibrėžti faile `open-sse/mcp-server/tools/agentSkillTools.ts`. Veikimą užti
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Pateikia visus 45 agentų įgūdžius su pasirenkamais `category` (api\|cli) ir `area` filtrais; grąžina metaduomenis ir aprėptį                                |
 | `omniroute_agent_skills_get`      | `read:catalog` | Pagal kanoninį `id` gauna visus vieno įgūdžio metaduomenis ir SKILL.md turinį                                                                               |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Aprėpties statistika: kiek iš 23 API, 21 CLI ir 1 konfigūracijos įgūdžio turi SKILL.md failus failų sistemoje, palyginti su katalogo bendraisiais skaičiais |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Aprėpties statistika: kiek iš 22 API, 20 CLI ir 1 konfigūracijos įgūdžio turi SKILL.md failus failų sistemoje, palyginti su katalogo bendraisiais skaičiais |
 
 Visą katalogą ir informaciją, kaip jį naudoja išoriniai agentai, rasite [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 

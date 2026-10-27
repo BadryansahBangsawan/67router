@@ -28,9 +28,6 @@ const residualKeys = [
   "stats.noAccountUsage",
   "requestLogger.detail.correlationIdValue",
   "requestLogger.detail.detailedPayloadInfo",
-  "settings.oneproxyDescription",
-  "settings.oneproxyClearAllConfirm",
-  "settings.oneproxyGoogle",
   "settings.memorySkillsSkillsmpDescription",
   "settings.memorySkillsActiveProviderDescription",
   "settings.routingCcBridgeCatalogName",
@@ -59,13 +56,8 @@ test("French and Vietnamese residual translations are complete", () => {
   }
 });
 
-test("Oneproxy and SkillsMP messages preserve their runtime values", () => {
+test("SkillsMP messages preserve their runtime values", () => {
   const messages = readMessages("en");
-  assert.equal(
-    getMessage(messages, "settings.oneproxySyncSuccess"),
-    "Synced {total} proxies ({added} new, {updated} updated)"
-  );
-  assert.equal(getMessage(messages, "settings.oneproxySyncFailed"), "Sync failed: {error}");
   assert.match(getMessage(messages, "settings.skillsmpApiKeyHintAfter") as string, /\{limit\}/);
 });
 

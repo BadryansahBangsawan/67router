@@ -161,7 +161,7 @@ OmniRoute ń ṣàfihàn àwọn ìmọ̀-ìṣẹ́ A2A mẹ́fà tí a sopọ�
 | Provider Discovery | `provider-discovery` | Ń ṣàkójọ àwọn olùpèsè tí a fi sọ́rọ̀ pẹ̀lú àwọn agbára wọn, àwọn àmì free-tier, àti ipò OAuth                                                                 | providers, discovery       | "Àwọn olùpèsè wo ni wọ́n wà?"               |
 | Cost Analysis      | `cost-analysis`      | Ń ṣe ìṣirò iye owó ìbéèrè/ìjíròrò kan ní gbígbá kàtálógì + lílò láìpẹ́ yìí sínú rò                                                                          | cost, usage                | "Ṣe ìṣirò iye owó ìjíròrò yìí"             |
 | Health Report      | `health-report`      | Ń ṣàkópọ̀ ipò circuit breaker, cooldown, àti lockout fún olùpèsè kọ̀ọ̀kan                                                                                     | health, resilience         | "Fi ipò èròjà gbogbo àwọn olùpèsè hàn"     |
-| List Capabilities  | `list-capabilities`  | Ń dá kàtálógì Agent Skills kíkún pẹ̀lú ẹ̀yà 45 (23 API + 21 CLI + 1 config) padà gẹ́gẹ́ bí tábìlì markdown pẹ̀lú àwọn URL SKILL.md gangan fún context injection | catalog, discovery, skills | "Ṣàkójọ gbogbo àwọn agbára OmniRoute"      |
+| List Capabilities  | `list-capabilities`  | Ń dá kàtálógì Agent Skills kíkún pẹ̀lú ẹ̀yà 43 (22 API + 20 CLI + 1 config) padà gẹ́gẹ́ bí tábìlì markdown pẹ̀lú àwọn URL SKILL.md gangan fún context injection | catalog, discovery, skills | "Ṣàkójọ gbogbo àwọn agbára OmniRoute"      |
 
 > Ó yẹ kí wọ́n máa mú kí Agent Card bá kàtálógì olùpèsè 375 tó ń ṣiṣẹ́ lọ́wọ́ mu; àwọn iye olùpèsè àti metadata free/no-auth ń wá láti inú runtime registry.
 

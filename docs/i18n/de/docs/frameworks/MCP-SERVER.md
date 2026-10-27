@@ -235,7 +235,7 @@ Definiert in `open-sse/mcp-server/tools/agentSkillTools.ts`. Unterstützt durch 
 | :-------------------------------- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog`       | Listet alle 45 Agent Skills mit optionalen Filtern für `category` (api\|cli) und `area` auf; gibt Metadaten und Abdeckung zurück                                      |
 | `omniroute_agent_skills_get`      | `read:catalog`       | Ruft anhand der kanonischen `id` die vollständigen Metadaten und den Inhalt von SKILL.md für einen einzelnen Skill ab                                                 |
-| `omniroute_agent_skills_coverage` | `read:catalog`       | Abdeckungsstatistik: Wie viele der 23 API-, 21 CLI- und 1 Konfigurations-Skills über SKILL.md-Dateien im Dateisystem verfügen, verglichen mit den Kataloggesamtzahlen |
+| `omniroute_agent_skills_coverage` | `read:catalog`       | Abdeckungsstatistik: Wie viele der 22 API-, 20 CLI- und 1 Konfigurations-Skills über SKILL.md-Dateien im Dateisystem verfügen, verglichen mit den Kataloggesamtzahlen |
 
 Den vollständigen Katalog und Informationen dazu, wie externe Agenten ihn nutzen, finden Sie unter [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 

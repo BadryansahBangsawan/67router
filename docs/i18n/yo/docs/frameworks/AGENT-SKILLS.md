@@ -13,7 +13,7 @@ Agent Skills jẹ́ àwọn fáìlì SKILL.md tí a ṣètò sí ìlànà, tí �
 
 ## Àkíyèsí Gbogbogbò
 
-Àkójọ náà ní **45 Agent Skills** (23 REST API + 21 CLI + 1 ìṣàn-iṣẹ́ ìṣètò). Skill kọ̀ọ̀kan ní:
+Àkójọ náà ní **43 Agent Skills** (22 REST API + 20 CLI + 1 ìṣàn-iṣẹ́ ìṣètò). Skill kọ̀ọ̀kan ní:
 
 - **ID àṣẹ** kan (`omni-auth`, `cli-serve`, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ)
 - Fáìlì **SKILL.md** kan nínú `skills/{id}/SKILL.md` pẹ̀lú YAML frontmatter (`name`, `description`) + àkóónú markdown ọlọ́rọ̀

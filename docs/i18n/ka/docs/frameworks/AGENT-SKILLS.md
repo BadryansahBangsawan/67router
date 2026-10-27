@@ -13,7 +13,7 @@ Agent Skills წარმოადგენს სტრუქტურირე
 
 ## მიმოხილვა
 
-კატალოგი შეიცავს **45 Agent Skills-ს** (23 REST API + 21 CLI + 1 კონფიგურაციის სამუშაო პროცესი). თითოეულ უნარს აქვს:
+კატალოგი შეიცავს **43 Agent Skills-ს** (22 REST API + 20 CLI + 1 კონფიგურაციის სამუშაო პროცესი). თითოეულ უნარს აქვს:
 
 - **კანონიკური ID** (`omni-auth`, `cli-serve` და ა.შ.)
 - **SKILL.md** ფაილი `skills/{id}/SKILL.md`-ში, YAML frontmatter-ით (`name`, `description`) + შინაარსობრივად მდიდარი markdown ტექსტით

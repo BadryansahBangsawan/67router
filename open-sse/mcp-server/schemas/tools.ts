@@ -1340,8 +1340,8 @@ export const agentSkillsListOutput = z.object({
   ),
   count: z.number(),
   coverage: z.object({
-    api: z.object({ have: z.number(), total: z.literal(23) }),
-    cli: z.object({ have: z.number(), total: z.literal(21) }),
+    api: z.object({ have: z.number(), total: z.literal(22) }),
+    cli: z.object({ have: z.number(), total: z.literal(20) }),
     config: z.object({ have: z.number(), total: z.literal(1) }),
     totalSkills: z.number(),
     generatedAt: z.string(),
@@ -1408,8 +1408,8 @@ export const agentSkillsGetTool: McpToolDefinition<
 export const agentSkillsCoverageInput = z.object({}).describe("No parameters required");
 
 export const agentSkillsCoverageOutput = z.object({
-  api: z.object({ have: z.number(), total: z.literal(23) }),
-  cli: z.object({ have: z.number(), total: z.literal(21) }),
+  api: z.object({ have: z.number(), total: z.literal(22) }),
+  cli: z.object({ have: z.number(), total: z.literal(20) }),
   config: z.object({ have: z.number(), total: z.literal(1) }),
   totalSkills: z.number(),
   generatedAt: z.string(),

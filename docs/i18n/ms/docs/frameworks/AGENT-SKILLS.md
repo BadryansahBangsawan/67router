@@ -13,7 +13,7 @@ Agent Skills ialah fail SKILL.md berstruktur yang mengajar ejen luaran, klien MC
 
 ## Gambaran Keseluruhan
 
-Katalog ini mengandungi **45 Agent Skills** (23 REST API + 21 CLI + 1 aliran kerja konfigurasi). Setiap kemahiran mempunyai:
+Katalog ini mengandungi **43 Agent Skills** (22 REST API + 20 CLI + 1 aliran kerja konfigurasi). Setiap kemahiran mempunyai:
 
 - **ID kanonik** (`omni-auth`, `cli-serve`, dan sebagainya)
 - Fail **SKILL.md** dalam `skills/{id}/SKILL.md` dengan bahagian hadapan YAML (`name`, `description`) + kandungan markdown yang lengkap

@@ -234,7 +234,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | वैकल्पिक `category` (api\|cli) और `area` फ़िल्टर्स के साथ सभी 45 agent skills सूचीबद्ध करता है; मेटाडेटा + कवरेज लौटाता है                 |
 | `omniroute_agent_skills_get`      | `read:catalog` | कैनोनिकल `id` द्वारा किसी एक skill का पूर्ण मेटाडेटा + SKILL.md सामग्री प्राप्त करता है                                                    |
-| `omniroute_agent_skills_coverage` | `read:catalog` | कवरेज आँकड़े: 23 API, 21 CLI और 1 config skills में से कितनों के लिए फ़ाइल सिस्टम पर SKILL.md फ़ाइलें उपलब्ध हैं बनाम कैटलॉग के कुल आँकड़े |
+| `omniroute_agent_skills_coverage` | `read:catalog` | कवरेज आँकड़े: 22 API, 20 CLI और 1 config skills में से कितनों के लिए फ़ाइल सिस्टम पर SKILL.md फ़ाइलें उपलब्ध हैं बनाम कैटलॉग के कुल आँकड़े |
 
 पूर्ण कैटलॉग और बाहरी एजेंट्स द्वारा इसके उपयोग के तरीके के लिए [AGENT-SKILLS.md](./AGENT-SKILLS.md) देखें।
 

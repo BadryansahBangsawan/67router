@@ -23,7 +23,7 @@ OmniRoute ሁለት የተለያዩ ግን እርስ በርስ የሚደጋገ�
 | የእውነት ምንጭ    | `src/lib/skills/` + የገበያ ቦታ                           | `src/lib/agentSkills/` + `skills/` ማውጫ                                                      |
 | የruntime ሁነታ | ወደ ውጪ በሚላኩ ጥያቄዎች ውስጥ ይገባል፣ በtool-call events ላይ ይፈጸማል | የማይለወጥ markdown ካታሎግ + REST/MCP/A2A የማግኛ endpoints                                          |
 | ማን ይጠቀምበታል   | OmniRoute ራሱ (combo routing፣ ገቢ LLM calls)            | ውጫዊ agents፣ MCP clients፣ A2A orchestrators                                                  |
-| ብዛት          | ተለዋዋጭ (በገበያ ቦታ የሚመራ)                                  | 45 የካታሎግ ግቤቶች (23 API + 21 CLI + 1 config)                                                  |
+| ብዛት          | ተለዋዋጭ (በገበያ ቦታ የሚመራ)                                  | 43 የካታሎግ ግቤቶች (22 API + 20 CLI + 1 config)                                                  |
 | ቅርጸት         | `SkillDefinition` ከtool schema + handler ጋር           | `SKILL.md` frontmatter + markdown body                                                      |
 | ማግኘት         | `/api/skills/*` REST + `omniroute_skills_*` MCP tools | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP tools + A2A `list-capabilities` |
 

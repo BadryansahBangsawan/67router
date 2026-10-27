@@ -154,7 +154,7 @@ OmniRoute 6 A2A ችሎታዎችን ያቀርባል፣ እነዚህም በ `src/l
 | Provider Discovery | `provider-discovery` | የተጫኑ አቅራቢዎችን ከችሎታዎቻቸው፣ ከነፃ-ደረጃ ምልክቶች እና ከOAuth ሁኔታ ጋር ይዘረዝራል                                                                 | providers, discovery       | "ምን ምን አቅራቢዎች ዝግጁ ናቸው?"            |
 | Cost Analysis      | `cost-analysis`      | ካታሎጉን እና የቅርብ ጊዜ አጠቃቀምን በመጠቀም የጥያቄን/የውይይትን ወጪ ይገምታል                                                                          | cost, usage                | "ለዚህ ውይይት ወጪን ግምት"                 |
 | Health Report      | `health-report`      | የcircuit breaker፣ የcooldown እና የlockout ሁኔታዎችን በአቅራቢ ደረጃ ይሰበስባል                                                              | health, resilience         | "የሁሉንም አቅራቢዎች የጤና ሁኔታ አሳይ"         |
-| List Capabilities  | `list-capabilities`  | ሙሉውን 45-እዴታ የAgent Skills ካታሎግ (23 API + 21 CLI + 1 config) ከጥሬ SKILL.md URLs ጋር እንደ markdown ሰንጠረዥ ለcontext injection ይመልሳል | catalog, discovery, skills | "ሁሉንም የOmniRoute ችሎታዎች ዘርዝር"       |
+| List Capabilities  | `list-capabilities`  | ሙሉውን 43-እዴታ የAgent Skills ካታሎግ (22 API + 20 CLI + 1 config) ከጥሬ SKILL.md URLs ጋር እንደ markdown ሰንጠረዥ ለcontext injection ይመልሳል | catalog, discovery, skills | "ሁሉንም የOmniRoute ችሎታዎች ዘርዝር"       |
 
 > የAgent Card ከሕያው 375-አቅራቢ ካታሎግ ጋር የተጣጣመ መሆን አለበት፤ የአቅራቢ ብዛቶች እና free/no-auth ሜታዳታ ከruntime registry የሚወሰዱ ናቸው።
 

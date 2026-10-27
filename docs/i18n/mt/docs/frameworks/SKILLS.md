@@ -23,7 +23,7 @@ OmniRoute għandu żewġ sistemi ta’ skills distinti iżda komplementari:
 | Sors awtorevoli          | `src/lib/skills/` + is-suq                                                        | `src/lib/agentSkills/` + id-direttorju `skills/`                                                 |
 | Modalità waqt it-tħaddim | Injettati fit-talbiet li joħorġu, eżegwiti mal-avvenimenti ta’ sejħiet tal-għodod | Katalgu statiku ta’ markdown + endpoints ta’ skoperta REST/MCP/A2A                               |
 | Min jużahom              | OmniRoute innifsu (routing ikkombinat, sejħiet LLM deħlin)                        | Aġenti esterni, klijenti MCP, orkestraturi A2A                                                   |
-| Għadd                    | Varjabbli (immexxi mis-suq)                                                       | 45 entrata fil-katalgu (23 API + 21 CLI + 1 konfigurazzjoni)                                     |
+| Għadd                    | Varjabbli (immexxi mis-suq)                                                       | 43 entrata fil-katalgu (22 API + 20 CLI + 1 konfigurazzjoni)                                     |
 | Format                   | `SkillDefinition` bi schema tal-għodda + handler                                  | frontmatter ta’ `SKILL.md` + korp markdown                                                       |
 | Skoperta                 | REST `/api/skills/*` + għodod MCP `omniroute_skills_*`                            | REST `/api/agent-skills/*` + għodod MCP `omniroute_agent_skills_*` + `list-capabilities` ta’ A2A |
 

@@ -13,7 +13,7 @@
 
 ## Επισκόπηση
 
-Ο κατάλογος περιέχει **45 Agent Skills** (23 REST API + 21 CLI + 1 ροή εργασίας διαμόρφωσης). Κάθε skill διαθέτει:
+Ο κατάλογος περιέχει **43 Agent Skills** (22 REST API + 20 CLI + 1 ροή εργασίας διαμόρφωσης). Κάθε skill διαθέτει:
 
 - Ένα **κανονικό ID** (`omni-auth`, `cli-serve` κ.λπ.)
 - Ένα αρχείο **SKILL.md** στο `skills/{id}/SKILL.md` με YAML frontmatter (`name`, `description`) + εμπλουτισμένο σώμα markdown

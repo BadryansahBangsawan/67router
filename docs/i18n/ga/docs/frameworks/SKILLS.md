@@ -23,7 +23,7 @@ Tá dhá chóras scileanna ar leith ach comhlántach ag OmniRoute:
 | Foinse na fírinne | `src/lib/skills/` + an margadh                                            | `src/lib/agentSkills/` + comhadlann `skills/`                                                 |
 | Mód ama rite      | Insteallta in iarratais amach, forghníomhaithe ar theagmhais glao uirlise | Catalóg statach markdown + críochphointí aimsithe REST/MCP/A2A                                |
 | Cé a úsáideann é  | OmniRoute féin (routáil teaglama, glaonna LLM isteach)                    | Gníomhairí seachtracha, cliaint MCP, ceolfhoirneoirí A2A                                      |
-| Líon              | Athraitheach (faoi stiúir an mhargaidh)                                   | 45 iontráil chatalóige (23 API + 21 CLI + 1 chumraíocht)                                      |
+| Líon              | Athraitheach (faoi stiúir an mhargaidh)                                   | 43 iontráil chatalóige (22 API + 20 CLI + 1 chumraíocht)                                      |
 | Formáid           | `SkillDefinition` le scéimre uirlise + láimhseálaí                        | Ábhar tosaigh `SKILL.md` + corp markdown                                                      |
 | Aimsiú            | REST `/api/skills/*` + uirlisí MCP `omniroute_skills_*`                   | REST `/api/agent-skills/*` + uirlisí MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 

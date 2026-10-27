@@ -15,7 +15,7 @@ Vještine agenata (Agent Skills) su strukturirane SKILL.md datoteke koje poduča
 
 ## Pregled
 
-Katalog sadrži **45 vještina agenata** (23 REST API + 21 CLI + 1 konfiguracijski radni tok). Svaka vještina ima:
+Katalog sadrži **43 vještina agenata** (22 REST API + 20 CLI + 1 konfiguracijski radni tok). Svaka vještina ima:
 
 - **Konični ID** (`omni-auth`, `cli-serve`, itd.)
 - Datoteku **SKILL.md** u `skills/{id}/SKILL.md` sa YAML zaglavljem (`name`, `description`) + bogatim markdown tijelom

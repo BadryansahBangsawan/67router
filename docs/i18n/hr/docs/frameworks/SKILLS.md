@@ -23,7 +23,7 @@ OmniRoute ima dva različita, ali komplementarna sustava vještina:
 | Izvor istine    | `src/lib/skills/` + tržište                                          | `src/lib/agentSkills/` + direktorij `skills/`                                               |
 | Način izvođenja | Umeću se u odlazne zahtjeve i izvršavaju pri događajima poziva alata | Statički markdown katalog + krajnje točke za otkrivanje putem REST/MCP/A2A                  |
 | Tko ih koristi  | Sam OmniRoute (kombinirano usmjeravanje, dolazni LLM pozivi)         | Vanjski agenti, MCP klijenti, A2A orkestratori                                              |
-| Broj            | Promjenjiv (ovisi o tržištu)                                         | 45 kataloških stavki (23 API + 21 CLI + 1 konfiguracijska)                                  |
+| Broj            | Promjenjiv (ovisi o tržištu)                                         | 43 kataloških stavki (22 API + 20 CLI + 1 konfiguracijska)                                  |
 | Format          | `SkillDefinition` sa shemom alata + rukovateljem                     | `SKILL.md` frontmatter + markdown sadržaj                                                   |
 | Otkrivanje      | `/api/skills/*` REST + `omniroute_skills_*` MCP alati                | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP alati + A2A `list-capabilities` |
 

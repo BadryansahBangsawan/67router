@@ -13,7 +13,7 @@ Agent Skills là các tệp SKILL.md có cấu trúc, hướng dẫn các tác t
 
 ## Tổng quan
 
-Danh mục chứa **45 Agent Skills** (23 REST API + 21 CLI + 1 quy trình cấu hình). Mỗi skill có:
+Danh mục chứa **43 Agent Skills** (22 REST API + 20 CLI + 1 quy trình cấu hình). Mỗi skill có:
 
 - Một **ID chuẩn** (`omni-auth`, `cli-serve`, v.v.)
 - Một tệp **SKILL.md** trong `skills/{id}/SKILL.md` với phần mở đầu YAML (`name`, `description`) + nội dung markdown phong phú
