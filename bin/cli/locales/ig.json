@@ -791,38 +791,6 @@
       "description": "Gosi kaadị akara maka mmemme ntule emechara"
     }
   },
-  "webhooks": {
-    "description": "Jikwaa webhook OmniRoute",
-    "events": {
-      "description": "Depụta ụdị event webhook niile dị"
-    },
-    "list": {
-      "description": "Depụta webhook ndị ahaziri"
-    },
-    "get": {
-      "description": "Nweta nkọwa webhook site na ID"
-    },
-    "add": {
-      "description": "Debanye webhook ọhụrụ",
-      "url": "URL ebe a ga-eziga ya",
-      "events": "Ndepụta ụdị event ndị e ji rikoma kewaa",
-      "secret": "Nzuzo mbinye aka HMAC",
-      "header": "Header mgbakwunye n’ụdị key=value (enwere ike ikwugharị)",
-      "no_enabled": "Mepụta webhook n’ọnọdụ agbanyụghị"
-    },
-    "update": {
-      "description": "Melite webhook dị ugbu a",
-      "enabled": "Tọọ ọnọdụ agbanyere (true|false)"
-    },
-    "remove": {
-      "description": "Hichapụ webhook",
-      "yes": "Mafere ajụjụ nkwenye"
-    },
-    "test": {
-      "description": "Zipụ mmemme nnwale na webhook",
-      "event": "Ụdị mmemme a ga-eme ka ọ dị (ndabara: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Onye Nhazi Ụzọ AI Nwere Ọgụgụ Isi nke nwere Ndaghachi Akpaka",
     "version": "Bipụta ụdị ma pụọ",
@@ -1069,33 +1037,6 @@
       "top": "Ọnụọgụ ndị ndọrọndọrọ kacha elu a ga-egosi (ndabara: 5)",
       "explain": "Bipụta ihe kpatara ya na stderr",
       "switch": "Mee ka combo nke nọ n'ọkwa kachasị elu rụọ ọrụ"
-    }
-  },
-  "oneproxy": {
-    "description": "Jikwaa ọdọ mmiri upstream nke OneProxy",
-    "stats": {
-      "provider": "Were provider nyochaa",
-      "period": "Ogologo oge (ndabara: 24h)"
-    },
-    "fetch": {
-      "description": "Weta proxies site n'ọdọ mmiri ahụ",
-      "count": "Ọnụọgụ proxies a ga-eweta (ndabara: 1)",
-      "type": "Ụdị proxy: http|socks5 (ndabara: http)"
-    },
-    "rotate": {
-      "description": "Manye ntụgharị proxy",
-      "provider": "Provider a ga-atụgharị maka ya",
-      "connectionId": "NJ njikọ a kapịrị ọnụ a ga-atụgharị"
-    },
-    "config": {
-      "description": "Gosi ma ọ bụ melite nhazi OneProxy",
-      "enabled": "Mee ka ọdọ mmiri proxy rụọ ọrụ (true|false)",
-      "poolSize": "Nha ọdọ mmiri",
-      "providerSource": "URL maka proxy provider",
-      "rotationPolicy": "Usoro ntụgharị: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Depụta ọdọ mmiri proxy dị ugbu a tinyere metrik"
     }
   },
   "open": {

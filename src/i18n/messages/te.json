@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "ఇన్‌ఫరెన్స్ (OpenAI-compatible)",
-        "description": "కోర్ OpenAI-compatible ఇన్‌ఫరెన్స్ ఎండ్‌పాయింట్‌లు: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, మరియు Responses API. AI ఏజెంట్ల కోసం ప్రాథమిక ఇంటిగ్రేషన్ సర్ఫేస్."
+        "description": "కోర్ OpenAI-compatible ఇన్‌ఫరెన్స్ ఎండ్‌పాయింట్‌లు: chat completions, embeddings, images, audio (TTS/STT), rerank, మరియు Responses API. AI ఏజెంట్ల కోసం ప్రాథమిక ఇంటిగ్రేషన్ సర్ఫేస్."
       },
       "cli-serve": {
         "name": "CLI: సర్వ్",

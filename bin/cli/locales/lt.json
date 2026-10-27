@@ -791,38 +791,6 @@
       "description": "Rodyti užbaigto vertinimo vykdymo rezultatų suvestinę"
     }
   },
-  "webhooks": {
-    "description": "Tvarkyti OmniRoute žiniatinklio atgalinius iškvietimus",
-    "events": {
-      "description": "Rodyti visų galimų žiniatinklio atgalinių iškvietimų įvykių tipų sąrašą"
-    },
-    "list": {
-      "description": "Rodyti sukonfigūruotų žiniatinklio atgalinių iškvietimų sąrašą"
-    },
-    "get": {
-      "description": "Gauti žiniatinklio atgalinio iškvietimo informaciją pagal ID"
-    },
-    "add": {
-      "description": "Užregistruoti naują žiniatinklio atgalinį iškvietimą",
-      "url": "Paskirties URL",
-      "events": "Kableliais atskirtas įvykių tipų sąrašas",
-      "secret": "HMAC pasirašymo slaptasis raktas",
-      "header": "Papildoma antraštė key=value formatu (galima kartoti)",
-      "no_enabled": "Sukurti išjungtos būsenos žiniatinklio atgalinį iškvietimą"
-    },
-    "update": {
-      "description": "Atnaujinti esamą žiniatinklio atgalinį iškvietimą",
-      "enabled": "Nustatyti įjungimo būseną (true|false)"
-    },
-    "remove": {
-      "description": "Ištrinti žiniatinklio sąsają",
-      "yes": "Praleisti patvirtinimo užklausą"
-    },
-    "test": {
-      "description": "Siųsti bandomąjį įvykį į žiniatinklio sąsają",
-      "event": "Imituojamo įvykio tipas (numatytasis: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — išmanusis DI maršruto parinktuvas su automatiniu atsarginiu perjungimu",
     "version": "Parodyti versiją ir išeiti",
@@ -1069,33 +1037,6 @@
       "top": "Rodomų geriausių kandidatų skaičius (numatytoji reikšmė: 5)",
       "explain": "Išvesti pagrindimą į stderr",
       "switch": "Aktyvinti aukščiausiai įvertintą derinį"
-    }
-  },
-  "oneproxy": {
-    "description": "Valdyti OneProxy išorinį telkinį",
-    "stats": {
-      "provider": "Filtruoti pagal teikėją",
-      "period": "Laikotarpis (numatytoji reikšmė: 24h)"
-    },
-    "fetch": {
-      "description": "Gauti tarpinius serverius iš telkinio",
-      "count": "Gaunamų tarpinių serverių skaičius (numatytoji reikšmė: 1)",
-      "type": "Tarpinio serverio tipas: http|socks5 (numatytoji reikšmė: http)"
-    },
-    "rotate": {
-      "description": "Priverstinai pakeisti tarpinį serverį",
-      "provider": "Teikėjas, kuriam atliekamas pakeitimas",
-      "connectionId": "Konkretaus ryšio ID, kuriam atliekamas pakeitimas"
-    },
-    "config": {
-      "description": "Rodyti arba atnaujinti OneProxy konfigūraciją",
-      "enabled": "Įjungti tarpinių serverių telkinį (true|false)",
-      "poolSize": "Telkinio dydis",
-      "providerSource": "Tarpinių serverių teikėjo URL",
-      "rotationPolicy": "Keitimo politika: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Rodyti dabartinį tarpinių serverių telkinį su metrikomis"
     }
   },
   "open": {

@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "ઇન્ફરન્સ (OpenAI-compatible)",
-        "description": "મુખ્ય OpenAI-compatible ઇન્ફરન્સ એન્ડપોઇન્ટ્સ: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, અને Responses API. AI એજન્ટ્સ માટે પ્રાથમિક ઇન્ટિગ્રેશન સરફેસ."
+        "description": "મુખ્ય OpenAI-compatible ઇન્ફરન્સ એન્ડપોઇન્ટ્સ: chat completions, embeddings, images, audio (TTS/STT), rerank, અને Responses API. AI એજન્ટ્સ માટે પ્રાથમિક ઇન્ટિગ્રેશન સરફેસ."
       },
       "cli-serve": {
         "name": "CLI: સર્વ કરો",

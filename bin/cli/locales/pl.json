@@ -791,38 +791,6 @@
       "description": "Pokaż kartę wyników zakończonego przebiegu ewaluacji"
     }
   },
-  "webhooks": {
-    "description": "Zarządzaj webhookami OmniRoute",
-    "events": {
-      "description": "Wyświetl wszystkie dostępne typy zdarzeń webhooków"
-    },
-    "list": {
-      "description": "Wyświetl skonfigurowane webhooki"
-    },
-    "get": {
-      "description": "Pobierz szczegóły webhooka według ID"
-    },
-    "add": {
-      "description": "Zarejestruj nowy webhook",
-      "url": "Docelowy URL",
-      "events": "Lista typów zdarzeń rozdzielonych przecinkami",
-      "secret": "Sekret do podpisu HMAC",
-      "header": "Dodatkowy nagłówek w formacie key=value (opcja powtarzalna)",
-      "no_enabled": "Utwórz webhook w stanie wyłączonym"
-    },
-    "update": {
-      "description": "Zaktualizuj istniejący webhook",
-      "enabled": "Ustaw stan włączenia (true|false)"
-    },
-    "remove": {
-      "description": "Usuń webhook",
-      "yes": "Pomiń monit o potwierdzenie"
-    },
-    "test": {
-      "description": "Wyślij zdarzenie testowe do webhooka",
-      "event": "Typ zdarzenia do symulacji (domyślnie: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Inteligentny router AI z automatycznym fallbackiem",
     "version": "Wydrukuj wersję i wyjdź",
@@ -1069,33 +1037,6 @@
       "top": "Liczba najlepszych kandydatów do wyświetlenia (domyślnie: 5)",
       "explain": "Wyświetl uzasadnienie na standardowym wyjściu błędów",
       "switch": "Aktywuj najwyżej ocenioną kombinację"
-    }
-  },
-  "oneproxy": {
-    "description": "Zarządzaj pulą serwerów nadrzędnych OneProxy",
-    "stats": {
-      "provider": "Filtruj według dostawcy",
-      "period": "Okres (domyślnie: 24h)"
-    },
-    "fetch": {
-      "description": "Pobierz serwery proxy z puli",
-      "count": "Liczba serwerów proxy do pobrania (domyślnie: 1)",
-      "type": "Typ proxy: http|socks5 (domyślnie: http)"
-    },
-    "rotate": {
-      "description": "Wymuś rotację proxy",
-      "provider": "Dostawca, dla którego ma zostać wykonana rotacja",
-      "connectionId": "Identyfikator konkretnego połączenia do rotacji"
-    },
-    "config": {
-      "description": "Wyświetl lub zaktualizuj konfigurację OneProxy",
-      "enabled": "Włącz pulę serwerów proxy (true|false)",
-      "poolSize": "Rozmiar puli",
-      "providerSource": "URL dostawcy proxy",
-      "rotationPolicy": "Zasady rotacji: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Wyświetl bieżącą pulę serwerów proxy wraz z metrykami"
     }
   },
   "open": {

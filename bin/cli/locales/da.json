@@ -791,38 +791,6 @@
       "description": "Vis scorekort for en fuldført evalueringskørsel"
     }
   },
-  "webhooks": {
-    "description": "Administrer OmniRoute-webhooks",
-    "events": {
-      "description": "Vis alle tilgængelige webhook-hændelsestyper"
-    },
-    "list": {
-      "description": "Vis konfigurerede webhooks"
-    },
-    "get": {
-      "description": "Hent webhook-oplysninger via ID"
-    },
-    "add": {
-      "description": "Registrer en ny webhook",
-      "url": "Destinations-URL",
-      "events": "Kommasepareret liste over hændelsestyper",
-      "secret": "HMAC-signeringshemmelighed",
-      "header": "Ekstra header i formatet key=value (kan gentages)",
-      "no_enabled": "Opret webhook i deaktiveret tilstand"
-    },
-    "update": {
-      "description": "Opdater en eksisterende webhook",
-      "enabled": "Angiv aktiveret tilstand (true|false)"
-    },
-    "remove": {
-      "description": "Slet en webhook",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "test": {
-      "description": "Send en testhændelse til en webhook",
-      "event": "Hændelsestype, der skal simuleres (standard: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Smart AI-router med automatisk fallback",
     "version": "Vis version og afslut",
@@ -1069,33 +1037,6 @@
       "top": "Antal topkandidater, der skal vises (standard: 5)",
       "explain": "Udskriv begrundelse til stderr",
       "switch": "Aktivér den højest rangerede kombination"
-    }
-  },
-  "oneproxy": {
-    "description": "Administrer OneProxy-upstreampuljen",
-    "stats": {
-      "provider": "Filtrer efter udbyder",
-      "period": "Tidsperiode (standard: 24h)"
-    },
-    "fetch": {
-      "description": "Hent proxyer fra puljen",
-      "count": "Antal proxyer, der skal hentes (standard: 1)",
-      "type": "Proxytype: http|socks5 (standard: http)"
-    },
-    "rotate": {
-      "description": "Gennemtving proxyrotation",
-      "provider": "Udbyder, der skal roteres for",
-      "connectionId": "Specifikt forbindelses-id, der skal roteres"
-    },
-    "config": {
-      "description": "Vis eller opdater OneProxy-konfigurationen",
-      "enabled": "Aktivér proxypulje (true|false)",
-      "poolSize": "Puljestørrelse",
-      "providerSource": "URL til proxyudbyder",
-      "rotationPolicy": "Rotationspolitik: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Vis den aktuelle proxypulje med målinger"
     }
   },
   "open": {

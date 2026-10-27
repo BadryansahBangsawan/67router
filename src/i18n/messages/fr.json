@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "Inférence (compatible OpenAI)",
-        "description": "Les points de terminaison d'inférence principaux compatibles OpenAI : chat completions, embeddings, images, audio (TTS/STT), moderations, rerank et l'API Responses. La surface d'intégration principale pour les agents IA."
+        "description": "Les points de terminaison d'inférence principaux compatibles OpenAI : chat completions, embeddings, images, audio (TTS/STT), rerank et l'API Responses. La surface d'intégration principale pour les agents IA."
       },
       "cli-serve": {
         "name": "CLI : serveur",

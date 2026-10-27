@@ -791,38 +791,6 @@
       "description": "完了した評価実行のスコアカードを表示"
     }
   },
-  "webhooks": {
-    "description": "OmniRouteのWebhookを管理",
-    "events": {
-      "description": "利用可能なすべてのWebhookイベントタイプを一覧表示"
-    },
-    "list": {
-      "description": "設定済みのWebhookを一覧表示"
-    },
-    "get": {
-      "description": "IDでWebhookの詳細を取得"
-    },
-    "add": {
-      "description": "新しいWebhookを登録",
-      "url": "送信先URL",
-      "events": "イベントタイプのカンマ区切りリスト",
-      "secret": "HMAC署名シークレット",
-      "header": "key=value形式の追加ヘッダー（複数指定可）",
-      "no_enabled": "無効状態でWebhookを作成"
-    },
-    "update": {
-      "description": "既存のWebhookを更新",
-      "enabled": "有効状態を設定（true|false）"
-    },
-    "remove": {
-      "description": "Webhookを削除",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "test": {
-      "description": "Webhookにテストイベントを送信",
-      "event": "シミュレートするイベントタイプ（デフォルト: request.completed）"
-    }
-  },
   "program": {
     "description": "OmniRoute — 自動フォールバック付きスマートAIルーター",
     "version": "バージョンを表示して終了",
@@ -1069,33 +1037,6 @@
       "top": "表示する上位候補数（デフォルト: 5）",
       "explain": "根拠を stderr に出力",
       "switch": "最上位のコンボを有効化"
-    }
-  },
-  "oneproxy": {
-    "description": "OneProxy アップストリームプールを管理",
-    "stats": {
-      "provider": "プロバイダーで絞り込み",
-      "period": "期間（デフォルト: 24h）"
-    },
-    "fetch": {
-      "description": "プールからプロキシを取得",
-      "count": "取得するプロキシ数（デフォルト: 1）",
-      "type": "プロキシタイプ: http|socks5（デフォルト: http）"
-    },
-    "rotate": {
-      "description": "プロキシを強制的にローテーション",
-      "provider": "ローテーション対象のプロバイダー",
-      "connectionId": "ローテーション対象の特定の接続 ID"
-    },
-    "config": {
-      "description": "OneProxy の設定を表示または更新",
-      "enabled": "プロキシプールを有効化 (true|false)",
-      "poolSize": "プールサイズ",
-      "providerSource": "プロキシプロバイダーのURL",
-      "rotationPolicy": "ローテーションポリシー: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "現在のプロキシプールをメトリクス付きで一覧表示"
     }
   },
   "open": {

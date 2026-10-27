@@ -791,38 +791,6 @@
       "description": "Nuna katin sakamako na gudanarwar tantancewa da aka kammala"
     }
   },
-  "webhooks": {
-    "description": "Sarrafa webhooks na OmniRoute",
-    "events": {
-      "description": "Jera duk nau'ikan abubuwan da suka faru na webhook da ake da su"
-    },
-    "list": {
-      "description": "Jera webhooks da aka saita"
-    },
-    "get": {
-      "description": "Samo bayanan webhook ta ID"
-    },
-    "add": {
-      "description": "Yi rajistar sabon webhook",
-      "url": "URL na inda za a aika",
-      "events": "Jerin nau'ikan abubuwan da suka faru da aka raba da waƙafi",
-      "secret": "Sirrin sanya hannu na HMAC",
-      "header": "Ƙarin header a tsarin key=value (ana iya maimaitawa)",
-      "no_enabled": "Ƙirƙiri webhook a yanayin da aka kashe"
-    },
-    "update": {
-      "description": "Sabunta webhook da ke akwai",
-      "enabled": "Saita yanayin kunnawa (true|false)"
-    },
-    "remove": {
-      "description": "Goge webhook",
-      "yes": "Tsallake saƙon neman tabbatarwa"
-    },
-    "test": {
-      "description": "Aika taron gwaji zuwa webhook",
-      "event": "Nau'in taron da za a kwaikwaya (tsoho: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Mai Zabar Hanyar AI Mai Wayo tare da Komawar Kai-tsaye",
     "version": "Buga sigar sannan a fita",
@@ -1069,33 +1037,6 @@
       "top": "Adadin manyan zaɓuɓɓukan da za a nuna (tsoho: 5)",
       "explain": "Buga dalili zuwa stderr",
       "switch": "Kunna combo mafi girman matsayi"
-    }
-  },
-  "oneproxy": {
-    "description": "Sarrafa tarin upstream na OneProxy",
-    "stats": {
-      "provider": "Tace ta provider",
-      "period": "Tsawon lokaci (tsoho: 24h)"
-    },
-    "fetch": {
-      "description": "Dauko proxies daga tarin",
-      "count": "Adadin proxies da za a dauko (tsoho: 1)",
-      "type": "Nau'in proxy: http|socks5 (tsoho: http)"
-    },
-    "rotate": {
-      "description": "Tilasta sauya proxy",
-      "provider": "Provider da za a sauya wa",
-      "connectionId": "Takamaiman ID na haɗin da za a sauya"
-    },
-    "config": {
-      "description": "Nuna ko sabunta saitunan OneProxy",
-      "enabled": "Kunna tarin proxy (true|false)",
-      "poolSize": "Girman tarin",
-      "providerSource": "URL na proxy provider",
-      "rotationPolicy": "Manufar sauyawa: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Jera tarin proxy na yanzu tare da ma'aunai"
     }
   },
   "open": {

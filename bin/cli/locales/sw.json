@@ -791,38 +791,6 @@
       "description": "Onyesha kadi ya alama ya uendeshaji wa tathmini uliokamilika"
     }
   },
-  "webhooks": {
-    "description": "Dhibiti webhook za OmniRoute",
-    "events": {
-      "description": "Orodhesha aina zote za matukio ya webhook zinazopatikana"
-    },
-    "list": {
-      "description": "Orodhesha webhook zilizosanidiwa"
-    },
-    "get": {
-      "description": "Pata maelezo ya webhook kwa ID"
-    },
-    "add": {
-      "description": "Sajili webhook mpya",
-      "url": "URL lengwa",
-      "events": "Orodha ya aina za matukio zilizotenganishwa kwa koma",
-      "secret": "Siri ya kutia saini ya HMAC",
-      "header": "Kichwa cha ziada katika muundo wa key=value (kinaweza kurudiwa)",
-      "no_enabled": "Unda webhook ikiwa imezimwa"
-    },
-    "update": {
-      "description": "Sasisha webhook iliyopo",
-      "enabled": "Weka hali ya kuwashwa (true|false)"
-    },
-    "remove": {
-      "description": "Futa webhook",
-      "yes": "Ruka ombi la uthibitisho"
-    },
-    "test": {
-      "description": "Tuma tukio la majaribio kwa webhook",
-      "event": "Aina ya tukio la kuiga (chaguomsingi: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Kipanga Njia Mahiri cha AI chenye Njia Mbadala ya Kiotomatiki",
     "version": "Chapisha toleo na uondoke",
@@ -1069,33 +1037,6 @@
       "top": "Idadi ya wagombea bora wa kuonyesha (chaguo-msingi: 5)",
       "explain": "Chapisha sababu kwenye stderr",
       "switch": "Washa mseto ulioorodheshwa wa kwanza"
-    }
-  },
-  "oneproxy": {
-    "description": "Dhibiti hifadhi ya seva za juu za OneProxy",
-    "stats": {
-      "provider": "Chuja kulingana na mtoa huduma",
-      "period": "Kipindi cha muda (chaguo-msingi: 24h)"
-    },
-    "fetch": {
-      "description": "Leta proksi kutoka kwenye hifadhi",
-      "count": "Idadi ya proksi za kuleta (chaguo-msingi: 1)",
-      "type": "Aina ya proksi: http|socks5 (chaguo-msingi: http)"
-    },
-    "rotate": {
-      "description": "Lazimisha ubadilishaji wa proksi",
-      "provider": "Mtoa huduma wa kufanyiwa ubadilishaji",
-      "connectionId": "Kitambulisho mahususi cha muunganisho cha kubadilisha"
-    },
-    "config": {
-      "description": "Onyesha au sasisha usanidi wa OneProxy",
-      "enabled": "Washa hifadhi ya proksi (true|false)",
-      "poolSize": "Ukubwa wa hifadhi",
-      "providerSource": "URL ya mtoa huduma wa proksi",
-      "rotationPolicy": "Sera ya ubadilishaji: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Orodhesha hifadhi ya sasa ya proksi pamoja na vipimo"
     }
   },
   "open": {

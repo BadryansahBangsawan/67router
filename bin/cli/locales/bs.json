@@ -791,38 +791,6 @@
       "description": "Prikaži bodovni list za završeno evaluacijsko pokretanje"
     }
   },
-  "webhooks": {
-    "description": "Upravljajte OmniRoute webhookovima",
-    "events": {
-      "description": "Izlistaj sve dostupne tipove webhook događaja"
-    },
-    "list": {
-      "description": "Izlistaj konfigurirane webhookove"
-    },
-    "get": {
-      "description": "Preuzmi detalje webhook-a putem ID-a"
-    },
-    "add": {
-      "description": "Registrujte novi webhook",
-      "url": "URL odredišta",
-      "events": "Zarezom odvojena lista tipova događaja",
-      "secret": "HMAC tajna za potpisivanje",
-      "header": "Dodatni zaglavlje u key=value formatu (ponovljivo)",
-      "no_enabled": "Kreiraj webhook u onemogućenom stanju"
-    },
-    "update": {
-      "description": "Ažurirajte postojeći webhook",
-      "enabled": "Postavi stanje omogućeno (true|false)"
-    },
-    "remove": {
-      "description": "Obriši webhook",
-      "yes": "Preskoči potvrdu"
-    },
-    "test": {
-      "description": "Pošaljite testni događaj na webhook",
-      "event": "Tip događaja za simulaciju (podrazumijevano: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Pametni AI ruter sa automatskim fallback-om",
     "version": "Ispiši verziju i izađi",
@@ -1069,33 +1037,6 @@
       "top": "Broj najboljih kandidata za prikaz (podrazumijevano: 5)",
       "explain": "Ispiši obrazloženje u stderr",
       "switch": "Aktiviraj najbolje rangiranu kombinaciju"
-    }
-  },
-  "oneproxy": {
-    "description": "Upravljajte OneProxy upstream pool-om",
-    "stats": {
-      "provider": "Filtriraj po dobavljaču",
-      "period": "Vremenski period (podrazumijevano: 24h)"
-    },
-    "fetch": {
-      "description": "Preuzmi proksije iz pool-a",
-      "count": "Broj proxyja za preuzimanje (podrazumijevano: 1)",
-      "type": "Tip proxyja: http|socks5 (podrazumijevano: http)"
-    },
-    "rotate": {
-      "description": "Prisili rotaciju proxyja",
-      "provider": "Provajder za rotaciju za",
-      "connectionId": "Specifični ID veze za rotaciju"
-    },
-    "config": {
-      "description": "Prikaži ili ažuriraj OneProxy konfiguraciju",
-      "enabled": "Omogući proxy pool (true|false)",
-      "poolSize": "Veličina pool-a",
-      "providerSource": "URL za provajdera proxyja",
-      "rotationPolicy": "Politika rotacije: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Izlistaj trenutni pool proxyja sa metrikama"
     }
   },
   "open": {

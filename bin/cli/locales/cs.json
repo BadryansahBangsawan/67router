@@ -791,38 +791,6 @@
       "description": "Zobrazit přehled skóre dokončeného běhu vyhodnocení"
     }
   },
-  "webhooks": {
-    "description": "Spravovat webhooky OmniRoute",
-    "events": {
-      "description": "Vypsat všechny dostupné typy událostí webhooků"
-    },
-    "list": {
-      "description": "Vypsat nakonfigurované webhooky"
-    },
-    "get": {
-      "description": "Získat podrobnosti webhooku podle ID"
-    },
-    "add": {
-      "description": "Zaregistrovat nový webhook",
-      "url": "Cílová URL",
-      "events": "Seznam typů událostí oddělených čárkami",
-      "secret": "Tajný klíč pro podepisování HMAC",
-      "header": "Dodatečná hlavička ve formátu key=value (lze opakovat)",
-      "no_enabled": "Vytvořit webhook v zakázaném stavu"
-    },
-    "update": {
-      "description": "Aktualizovat existující webhook",
-      "enabled": "Nastavit stav povolení (true|false)"
-    },
-    "remove": {
-      "description": "Odstranit webhook",
-      "yes": "Přeskočit výzvu k potvrzení"
-    },
-    "test": {
-      "description": "Odeslat testovací událost webhooku",
-      "event": "Typ události k simulaci (výchozí: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Chytrý AI router s automatickým přepínáním",
     "version": "Vypsat verzi a skončit",
@@ -1069,33 +1037,6 @@
       "top": "Počet nejlepších kandidátů k zobrazení (výchozí: 5)",
       "explain": "Vypsat odůvodnění na standardní chybový výstup",
       "switch": "Aktivovat nejlépe hodnocenou kombinaci"
-    }
-  },
-  "oneproxy": {
-    "description": "Spravovat fond upstream serverů OneProxy",
-    "stats": {
-      "provider": "Filtrovat podle poskytovatele",
-      "period": "Časové období (výchozí: 24h)"
-    },
-    "fetch": {
-      "description": "Načíst proxy servery z fondu",
-      "count": "Počet proxy serverů k načtení (výchozí: 1)",
-      "type": "Typ proxy: http|socks5 (výchozí: http)"
-    },
-    "rotate": {
-      "description": "Vynutit rotaci proxy",
-      "provider": "Poskytovatel, pro kterého se má provést rotace",
-      "connectionId": "ID konkrétního připojení, které se má rotovat"
-    },
-    "config": {
-      "description": "Zobrazit nebo aktualizovat konfiguraci OneProxy",
-      "enabled": "Povolit fond proxy serverů (true|false)",
-      "poolSize": "Velikost fondu",
-      "providerSource": "URL poskytovatele proxy",
-      "rotationPolicy": "Zásady rotace: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Vypsat aktuální fond proxy serverů včetně metrik"
     }
   },
   "open": {

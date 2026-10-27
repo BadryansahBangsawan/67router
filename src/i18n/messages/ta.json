@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "அனுமானம் (OpenAI-இணக்கமானது)",
-        "description": "முக்கிய OpenAI-இணக்கமான அனுமான எண்ட்பாயிண்ட்டுகள்: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank மற்றும் Responses API. AI ஏஜெண்டுகளுக்கான முதன்மை ஒருங்கிணைப்பு பரப்பு."
+        "description": "முக்கிய OpenAI-இணக்கமான அனுமான எண்ட்பாயிண்ட்டுகள்: chat completions, embeddings, images, audio (TTS/STT), rerank மற்றும் Responses API. AI ஏஜெண்டுகளுக்கான முதன்மை ஒருங்கிணைப்பு பரப்பு."
       },
       "cli-serve": {
         "name": "CLI: சேவையளித்தல்",

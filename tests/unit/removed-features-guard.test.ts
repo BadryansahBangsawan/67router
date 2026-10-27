@@ -42,6 +42,7 @@ const REMOVED_PATHS: string[] = [
   "src/lib/db/oneproxy.ts",
   "src/app/(dashboard)/dashboard/settings/components/proxy/FreePoolTab.tsx",
   "bin/cli/commands/oneproxy.mjs",
+  "src/app/(dashboard)/dashboard/system/1proxy",
   // webhooks
   "src/lib/webhookDispatcher.ts",
   "src/lib/webhooks",

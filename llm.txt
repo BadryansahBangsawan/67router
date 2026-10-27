@@ -59,7 +59,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │       └── usage/        # Usage history
 │   │   ├── api/                  # REST API endpoints (100+ route directories)
 │   │   │   ├── v1/               # OpenAI-compatible API (chat, completions, models, embeddings,
-│   │   │   │                     #   images, audio, videos, music, moderations, rerank, search,
+│   │   │   │                     #   images, audio, videos, music, rerank, search,
 │   │   │   │                     #   responses, messages, registered-keys, quotas, accounts)
 │   │   │   ├── v1beta/           # Gemini-compatible API
 │   │   │   ├── a2a/              # A2A agent management API
@@ -73,7 +73,6 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │   ├── evals/            # Eval runner API
 │   │   │   ├── mcp/              # MCP HTTP transport API
 │   │   │   ├── search/           # Search provider API
-│   │   │   ├── webhooks/         # Webhook management
 │   │   │   ├── tunnels/          # Cloudflare tunnel management
 │   │   │   └── ...               # Other endpoints (usage, logs, health, settings, pricing, etc.)
 │   │   ├── landing/              # Landing page
@@ -112,7 +111,6 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │   ├── backup.ts         # Database backup/restore
 │   │   │   ├── proxies.ts        # Proxy registry
 │   │   │   ├── prompts.ts        # Prompt templates
-│   │   │   ├── webhooks.ts       # Webhook subscriptions
 │   │   │   ├── detailedLogs.ts   # Detailed request logging
 │   │   │   ├── domainState.ts    # Domain state persistence
 │   │   │   ├── registeredKeys.ts # Registered API keys with quotas
@@ -154,7 +152,6 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   ├── pricingSync.ts        # LiteLLM pricing data sync
 │   │   ├── semanticCache.ts      # Semantic caching layer
 │   │   ├── tokenHealthCheck.ts   # Background OAuth token refresh scheduler
-│   │   ├── webhookDispatcher.ts  # Webhook event dispatcher
 │   │   └── localDb.ts            # Unified re-export layer for all DB modules
 │   ├── middleware/               # Request middleware
 │   │   └── promptInjectionGuard.ts # Prompt injection detection
@@ -204,7 +201,6 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   ├── musicGeneration.ts    # Music generation
 │   │   ├── audioSpeech.ts        # Text-to-speech
 │   │   ├── audioTranscription.ts # Speech-to-text (Whisper, Deepgram, AssemblyAI)
-│   │   ├── moderations.ts        # Content moderation
 │   │   ├── rerank.ts             # Reranking API
 │   │   └── search.ts             # Web search API
 │   ├── mcp-server/               # Built-in MCP server (107 tools, 3 transports: stdio/SSE/streamable-HTTP)

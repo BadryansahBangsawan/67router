@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "ইনফারেন্স (OpenAI-সামঞ্জস্যপূর্ণ)",
-        "description": "কোর OpenAI-সামঞ্জস্যপূর্ণ ইনফারেন্স এন্ডপয়েন্টসমূহ: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank এবং Responses API। AI এজেন্টদের জন্য প্রাথমিক ইন্টিগ্রেশন সারফেস।"
+        "description": "কোর OpenAI-সামঞ্জস্যপূর্ণ ইনফারেন্স এন্ডপয়েন্টসমূহ: chat completions, embeddings, images, audio (TTS/STT), rerank এবং Responses API। AI এজেন্টদের জন্য প্রাথমিক ইন্টিগ্রেশন সারফেস।"
       },
       "cli-serve": {
         "name": "CLI: সার্ভ",

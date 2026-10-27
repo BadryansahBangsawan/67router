@@ -791,38 +791,6 @@
       "description": "완료된 평가 실행의 스코어카드 보기"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute 웹훅 관리",
-    "events": {
-      "description": "사용 가능한 모든 웹훅 이벤트 유형 목록 보기"
-    },
-    "list": {
-      "description": "구성된 웹훅 목록 보기"
-    },
-    "get": {
-      "description": "ID로 웹훅 세부 정보 가져오기"
-    },
-    "add": {
-      "description": "새 웹훅 등록",
-      "url": "대상 URL",
-      "events": "쉼표로 구분된 이벤트 유형 목록",
-      "secret": "HMAC 서명 비밀 키",
-      "header": "key=value 형식의 추가 헤더(반복 가능)",
-      "no_enabled": "비활성화 상태로 웹훅 만들기"
-    },
-    "update": {
-      "description": "기존 웹훅 업데이트",
-      "enabled": "활성화 상태 설정(true|false)"
-    },
-    "remove": {
-      "description": "웹훅 삭제",
-      "yes": "확인 프롬프트 건너뛰기"
-    },
-    "test": {
-      "description": "웹훅에 테스트 이벤트 보내기",
-      "event": "시뮬레이션할 이벤트 유형(기본값: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — 자동 폴백 기능을 갖춘 스마트 AI 라우터",
     "version": "버전 출력 후 종료",
@@ -1069,33 +1037,6 @@
       "top": "표시할 상위 후보 수(기본값: 5)",
       "explain": "근거를 stderr에 출력",
       "switch": "가장 높은 순위의 콤보 활성화"
-    }
-  },
-  "oneproxy": {
-    "description": "OneProxy 업스트림 풀 관리",
-    "stats": {
-      "provider": "제공업체별 필터링",
-      "period": "기간(기본값: 24h)"
-    },
-    "fetch": {
-      "description": "풀에서 프록시 가져오기",
-      "count": "가져올 프록시 수(기본값: 1)",
-      "type": "프록시 유형: http|socks5 (기본값: http)"
-    },
-    "rotate": {
-      "description": "프록시 강제 교체",
-      "provider": "교체할 제공업체",
-      "connectionId": "교체할 특정 연결 ID"
-    },
-    "config": {
-      "description": "OneProxy 설정 표시 또는 업데이트",
-      "enabled": "프록시 풀 활성화 (true|false)",
-      "poolSize": "풀 크기",
-      "providerSource": "프록시 제공업체 URL",
-      "rotationPolicy": "로테이션 정책: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "현재 프록시 풀과 메트릭 목록 표시"
     }
   },
   "open": {

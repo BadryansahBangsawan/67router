@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "Inferenca (kompatibilna sa OpenAI)",
-        "description": "Osnovne krajnje tačke za inferencu kompatibilne sa OpenAI: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank i Responses API. Primarna tačka integracije za AI agente."
+        "description": "Osnovne krajnje tačke za inferencu kompatibilne sa OpenAI: chat completions, embeddings, images, audio (TTS/STT), rerank i Responses API. Primarna tačka integracije za AI agente."
       },
       "cli-serve": {
         "name": "CLI: Pokretanje servera",

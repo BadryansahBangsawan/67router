@@ -791,38 +791,6 @@
       "description": "Hiển thị bảng điểm của một lượt chạy đánh giá đã hoàn tất"
     }
   },
-  "webhooks": {
-    "description": "Quản lý webhook của OmniRoute",
-    "events": {
-      "description": "Liệt kê tất cả các loại sự kiện webhook hiện có"
-    },
-    "list": {
-      "description": "Liệt kê các webhook đã cấu hình"
-    },
-    "get": {
-      "description": "Lấy thông tin chi tiết về webhook theo ID"
-    },
-    "add": {
-      "description": "Đăng ký webhook mới",
-      "url": "URL đích",
-      "events": "Danh sách các loại sự kiện, phân tách bằng dấu phẩy",
-      "secret": "Khóa bí mật ký HMAC",
-      "header": "Tiêu đề bổ sung ở định dạng key=value (có thể lặp lại)",
-      "no_enabled": "Tạo webhook ở trạng thái vô hiệu hóa"
-    },
-    "update": {
-      "description": "Cập nhật webhook hiện có",
-      "enabled": "Đặt trạng thái kích hoạt (true|false)"
-    },
-    "remove": {
-      "description": "Xóa webhook",
-      "yes": "Bỏ qua lời nhắc xác nhận"
-    },
-    "test": {
-      "description": "Gửi một sự kiện thử nghiệm đến webhook",
-      "event": "Loại sự kiện cần mô phỏng (mặc định: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Bộ định tuyến AI thông minh với tự động chuyển đổi dự phòng",
     "version": "In phiên bản và thoát",
@@ -1069,33 +1037,6 @@
       "top": "Số ứng viên hàng đầu cần hiển thị (mặc định: 5)",
       "explain": "In lý do ra stderr",
       "switch": "Kích hoạt tổ hợp được xếp hạng cao nhất"
-    }
-  },
-  "oneproxy": {
-    "description": "Quản lý nhóm máy chủ thượng nguồn của OneProxy",
-    "stats": {
-      "provider": "Lọc theo nhà cung cấp",
-      "period": "Khoảng thời gian (mặc định: 24h)"
-    },
-    "fetch": {
-      "description": "Lấy proxy từ nhóm",
-      "count": "Số lượng proxy cần lấy (mặc định: 1)",
-      "type": "Loại proxy: http|socks5 (mặc định: http)"
-    },
-    "rotate": {
-      "description": "Buộc xoay vòng proxy",
-      "provider": "Nhà cung cấp cần xoay vòng",
-      "connectionId": "ID kết nối cụ thể cần xoay vòng"
-    },
-    "config": {
-      "description": "Hiển thị hoặc cập nhật cấu hình OneProxy",
-      "enabled": "Bật nhóm proxy (true|false)",
-      "poolSize": "Kích thước nhóm",
-      "providerSource": "URL của nhà cung cấp proxy",
-      "rotationPolicy": "Chính sách luân chuyển: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Liệt kê nhóm proxy hiện tại cùng các chỉ số"
     }
   },
   "open": {

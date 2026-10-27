@@ -791,38 +791,6 @@
       "description": "Yakunlangan baholash ishga tushirilishi uchun natijalar jadvalini ko‘rsatish"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute vebhuklarini boshqarish",
-    "events": {
-      "description": "Barcha mavjud vebhuk hodisasi turlarini ro‘yxatlash"
-    },
-    "list": {
-      "description": "Sozlangan vebhuklarni ro‘yxatlash"
-    },
-    "get": {
-      "description": "Vebhuk tafsilotlarini ID bo‘yicha olish"
-    },
-    "add": {
-      "description": "Yangi vebhukni ro‘yxatdan o‘tkazish",
-      "url": "Manzil URL",
-      "events": "Vergul bilan ajratilgan hodisa turlari ro‘yxati",
-      "secret": "HMAC imzolash siri",
-      "header": "key=value formatidagi qo‘shimcha sarlavha (takrorlash mumkin)",
-      "no_enabled": "Vebhukni o‘chirilgan holatda yaratish"
-    },
-    "update": {
-      "description": "Mavjud vebhukni yangilash",
-      "enabled": "Yoqilganlik holatini belgilash (true|false)"
-    },
-    "remove": {
-      "description": "Vebhukni o‘chirish",
-      "yes": "Tasdiqlash so‘rovini o‘tkazib yuborish"
-    },
-    "test": {
-      "description": "Vebhukka sinov hodisasini yuborish",
-      "event": "Simulyatsiya qilinadigan hodisa turi (standart: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — avtomatik zaxira yo‘naltirishga ega aqlli AI routeri",
     "version": "Versiyani ko‘rsatish va chiqish",
@@ -1069,33 +1037,6 @@
       "top": "Koʻrsatiladigan eng yaxshi nomzodlar soni (standart: 5)",
       "explain": "Asoslantirishni stderr ga chiqarish",
       "switch": "Eng yuqori baholangan kombinatsiyani faollashtirish"
-    }
-  },
-  "oneproxy": {
-    "description": "OneProxy yuqori oqim pulini boshqarish",
-    "stats": {
-      "provider": "Provayder boʻyicha filtrlash",
-      "period": "Vaqt oraligʻi (standart: 24h)"
-    },
-    "fetch": {
-      "description": "Puldan proksilarni olish",
-      "count": "Olinadigan proksilar soni (standart: 1)",
-      "type": "Proksi turi: http|socks5 (standart: http)"
-    },
-    "rotate": {
-      "description": "Proksini majburiy almashtirish",
-      "provider": "Almashtiriladigan provayder",
-      "connectionId": "Almashtiriladigan muayyan ulanish identifikatori"
-    },
-    "config": {
-      "description": "OneProxy konfiguratsiyasini koʻrsatish yoki yangilash",
-      "enabled": "Proksi pulini yoqish (true|false)",
-      "poolSize": "Pul hajmi",
-      "providerSource": "Proksi provayderi uchun URL",
-      "rotationPolicy": "Almashtirish siyosati: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Joriy proksi pulini koʻrsatkichlari bilan roʻyxatlash"
     }
   },
   "open": {

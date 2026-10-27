@@ -560,8 +560,6 @@ export async function executeTargetAttempt(
           );
         }
       }
-      // Webhook fan-out: best-effort, never blocks the response stream.
-
       // Silent-stop fix: reset the consecutive-failure counter for this session-combo pair
       // on every successful dispatch so a transient recovery doesn't get "credited" against
       // the threshold the user already paid through to clear the stale pin.

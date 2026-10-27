@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "추론 (OpenAI 호환)",
-        "description": "핵심 OpenAI 호환 추론 엔드포인트: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank 및 Responses API. AI 에이전트를 위한 기본 통합 인터페이스입니다."
+        "description": "핵심 OpenAI 호환 추론 엔드포인트: chat completions, embeddings, images, audio (TTS/STT), rerank 및 Responses API. AI 에이전트를 위한 기본 통합 인터페이스입니다."
       },
       "cli-serve": {
         "name": "CLI: 서버 실행",

@@ -791,38 +791,6 @@
       "description": "Afficher la fiche de résultats d’une exécution d’évaluation terminée"
     }
   },
-  "webhooks": {
-    "description": "Gérer les webhooks OmniRoute",
-    "events": {
-      "description": "Lister tous les types d’événements de webhook disponibles"
-    },
-    "list": {
-      "description": "Lister les webhooks configurés"
-    },
-    "get": {
-      "description": "Obtenir les détails d’un webhook par ID"
-    },
-    "add": {
-      "description": "Enregistrer un nouveau webhook",
-      "url": "URL de destination",
-      "events": "Liste des types d’événements séparés par des virgules",
-      "secret": "Secret de signature HMAC",
-      "header": "En-tête supplémentaire au format key=value (répétable)",
-      "no_enabled": "Créer le webhook à l’état désactivé"
-    },
-    "update": {
-      "description": "Mettre à jour un webhook existant",
-      "enabled": "Définir l’état d’activation (true|false)"
-    },
-    "remove": {
-      "description": "Supprimer un webhook",
-      "yes": "Ignorer l’invite de confirmation"
-    },
-    "test": {
-      "description": "Envoyer un événement de test à un webhook",
-      "event": "Type d’événement à simuler (par défaut : request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Routeur IA intelligent avec basculement automatique",
     "version": "Afficher la version et quitter",
@@ -1069,33 +1037,6 @@
       "top": "Nombre de meilleurs candidats à afficher (par défaut : 5)",
       "explain": "Afficher la justification dans stderr",
       "switch": "Activer la combinaison la mieux classée"
-    }
-  },
-  "oneproxy": {
-    "description": "Gérer le pool en amont de OneProxy",
-    "stats": {
-      "provider": "Filtrer par fournisseur",
-      "period": "Période (par défaut : 24h)"
-    },
-    "fetch": {
-      "description": "Récupérer des proxys depuis le pool",
-      "count": "Nombre de proxys à récupérer (par défaut : 1)",
-      "type": "Type de proxy : http|socks5 (par défaut : http)"
-    },
-    "rotate": {
-      "description": "Forcer la rotation du proxy",
-      "provider": "Fournisseur pour lequel effectuer la rotation",
-      "connectionId": "ID de connexion spécifique à renouveler"
-    },
-    "config": {
-      "description": "Afficher ou mettre à jour la configuration de OneProxy",
-      "enabled": "Activer le pool de proxys (true|false)",
-      "poolSize": "Taille du pool",
-      "providerSource": "URL du fournisseur de proxys",
-      "rotationPolicy": "Politique de rotation : sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Répertorier le pool de proxys actuel avec ses métriques"
     }
   },
   "open": {

@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "Інференс (сумісний з OpenAI)",
-        "description": "Основні сумісні з OpenAI кінцеві точки інференсу: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank та Responses API. Головний інтерфейс інтеграції для AI-агентів."
+        "description": "Основні сумісні з OpenAI кінцеві точки інференсу: chat completions, embeddings, images, audio (TTS/STT), rerank та Responses API. Головний інтерфейс інтеграції для AI-агентів."
       },
       "cli-serve": {
         "name": "CLI: запуск сервера",

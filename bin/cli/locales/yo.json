@@ -791,38 +791,6 @@
       "description": "Ṣàfihàn káàdì ìṣírò fún ìṣiṣẹ́ eval tó ti parí"
     }
   },
-  "webhooks": {
-    "description": "Ṣàkóso àwọn webhook OmniRoute",
-    "events": {
-      "description": "Ṣàtòjọ gbogbo irú ìṣẹ̀lẹ̀ webhook tó wà"
-    },
-    "list": {
-      "description": "Ṣàtòjọ àwọn webhook tí a ti ṣètò"
-    },
-    "get": {
-      "description": "Gba àwọn àlàyé webhook nípasẹ̀ ID"
-    },
-    "add": {
-      "description": "Forúkọsílẹ̀ webhook tuntun kan",
-      "url": "URL ibi àfojúsùn",
-      "events": "Àtòjọ irú ìṣẹ̀lẹ̀ tí a fi àmì-kọ́má yà",
-      "secret": "Àṣírí ìfọwọ́sí HMAC",
-      "header": "Àfikún àkọlé ní ìrísí key=value (ó ṣeé tún ṣe)",
-      "no_enabled": "Ṣẹ̀dá webhook ní ipò àìṣiṣẹ́"
-    },
-    "update": {
-      "description": "Ṣàfikún webhook tó ti wà",
-      "enabled": "Ṣètò ipò ìṣiṣẹ́ (true|false)"
-    },
-    "remove": {
-      "description": "Pa webhook rẹ́",
-      "yes": "Fò ìbéèrè ìmúdájú"
-    },
-    "test": {
-      "description": "Fi ìṣẹ̀lẹ̀ ìdánwò ránṣẹ́ sí webhook kan",
-      "event": "Irú ìṣẹ̀lẹ̀ láti ṣe àfarawé (àìpéye: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Olùdarí AI ọlọ́gbọ́n pẹ̀lú ìpadà-aifọwọ́yi",
     "version": "Ṣàfihàn ẹ̀dà kí o sì jáde",
@@ -1069,33 +1037,6 @@
       "top": "Iye àwọn olùdíje tó ga jù láti ṣàfihàn (àìyípadà: 5)",
       "explain": "Tẹ ìdí jáde sí stderr",
       "switch": "Mú combo tó wà ní ipò àkọ́kọ́ ṣiṣẹ́"
-    }
-  },
-  "oneproxy": {
-    "description": "Ṣàkóso àkójọpọ̀ upstream OneProxy",
-    "stats": {
-      "provider": "Ṣe àlẹ̀mọ́ nípa olùpèsè",
-      "period": "Àkókò (àìyípadà: 24h)"
-    },
-    "fetch": {
-      "description": "Gba àwọn proxy láti inú àkójọpọ̀ náà",
-      "count": "Iye àwọn proxy láti gbà (àìyípadà: 1)",
-      "type": "Irú proxy: http|socks5 (àìyípadà: http)"
-    },
-    "rotate": {
-      "description": "Fi ipá mú ìyípo proxy ṣẹlẹ̀",
-      "provider": "Olùpèsè tí a ó yípo fún",
-      "connectionId": "ID ìsopọ̀ pàtó láti yípo"
-    },
-    "config": {
-      "description": "Ṣàfihàn tàbí ṣàfikún àtúnṣe sí ìṣètò OneProxy",
-      "enabled": "Mú àkójọpọ̀ proxy ṣiṣẹ́ (true|false)",
-      "poolSize": "Ìwọ̀n àkójọpọ̀",
-      "providerSource": "URL fún olùpèsè proxy",
-      "rotationPolicy": "Ìlànà ìyípo: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Ṣàkọsílẹ̀ àkójọpọ̀ proxy lọ́wọ́lọ́wọ́ pẹ̀lú àwọn òṣùwọ̀n"
     }
   },
   "open": {

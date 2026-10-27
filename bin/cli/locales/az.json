@@ -791,38 +791,6 @@
       "description": "Tamamlanmış qiymətləndirmə icrası üçün qiymət cədvəlini göstər"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute vebhuklarını idarə et",
-    "events": {
-      "description": "Bütün mövcud vebhuk hadisə növlərini siyahıya al"
-    },
-    "list": {
-      "description": "Konfiqurasiya edilmiş vebhukları siyahıya al"
-    },
-    "get": {
-      "description": "Vebhuk təfərrüatlarını ID üzrə əldə et"
-    },
-    "add": {
-      "description": "Yeni vebhuk qeydiyyatdan keçir",
-      "url": "Təyinat URL-i",
-      "events": "Vergüllə ayrılmış hadisə növlərinin siyahısı",
-      "secret": "HMAC imzalama sirri",
-      "header": "key=value formatında əlavə başlıq (təkrarlana bilər)",
-      "no_enabled": "Vebhuku deaktiv vəziyyətdə yarat"
-    },
-    "update": {
-      "description": "Mövcud vebhuku yenilə",
-      "enabled": "Aktivlik vəziyyətini təyin et (true|false)"
-    },
-    "remove": {
-      "description": "Vebhuku sil",
-      "yes": "Təsdiq sorğusunu keç"
-    },
-    "test": {
-      "description": "Vebhuka sınaq hadisəsi göndər",
-      "event": "Simulyasiya ediləcək hadisə növü (standart: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Avtomatik Fallback ilə Ağıllı AI Marşrutlaşdırıcısı",
     "version": "Versiyasını çap et və çıx",
@@ -1069,33 +1037,6 @@
       "top": "Göstəriləcək ən yaxşı namizədlərin sayı (standart: 5)",
       "explain": "Əsaslandırmanı stderr-ə çıxarın",
       "switch": "Ən yüksək reytinqli kombinasiyanı aktivləşdirin"
-    }
-  },
-  "oneproxy": {
-    "description": "OneProxy yuxarı axın hovuzunu idarə edin",
-    "stats": {
-      "provider": "Provayderə görə filtrləyin",
-      "period": "Vaxt müddəti (standart: 24h)"
-    },
-    "fetch": {
-      "description": "Hovuzdan proksiləri əldə edin",
-      "count": "Əldə ediləcək proksilərin sayı (standart: 1)",
-      "type": "Proksi növü: http|socks5 (standart: http)"
-    },
-    "rotate": {
-      "description": "Proksinin məcburi rotasiyası",
-      "provider": "Rotasiya ediləcək provayder",
-      "connectionId": "Rotasiya ediləcək konkret bağlantı ID-si"
-    },
-    "config": {
-      "description": "OneProxy konfiqurasiyasını göstərin və ya yeniləyin",
-      "enabled": "Proksi hovuzunu aktivləşdir (true|false)",
-      "poolSize": "Hovuz ölçüsü",
-      "providerSource": "Proksi provayderinin URL-i",
-      "rotationPolicy": "Rotasiya siyasəti: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Cari proksi hovuzunu metrikalarla birlikdə siyahıla"
     }
   },
   "open": {

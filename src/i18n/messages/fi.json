@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "Päättely (OpenAI-yhteensopiva)",
-        "description": "Keskeiset OpenAI-yhteensopivat päättelypäätepisteet: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank ja Responses API. Ensisijainen integraatiopinta tekoälyagenteille."
+        "description": "Keskeiset OpenAI-yhteensopivat päättelypäätepisteet: chat completions, embeddings, images, audio (TTS/STT), rerank ja Responses API. Ensisijainen integraatiopinta tekoälyagenteille."
       },
       "cli-serve": {
         "name": "CLI: Palvelun käynnistäminen",

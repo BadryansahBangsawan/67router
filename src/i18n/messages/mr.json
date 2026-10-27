@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "इन्फरन्स (OpenAI-सुसंगत)",
-        "description": "मुख्य OpenAI-सुसंगत इन्फरन्स एंडपॉइंट्स: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, आणि Responses API. AI एजंट्ससाठी प्राथमिक एकत्रीकरण पृष्ठभाग."
+        "description": "मुख्य OpenAI-सुसंगत इन्फरन्स एंडपॉइंट्स: chat completions, embeddings, images, audio (TTS/STT), rerank, आणि Responses API. AI एजंट्ससाठी प्राथमिक एकत्रीकरण पृष्ठभाग."
       },
       "cli-serve": {
         "name": "CLI: सर्व्ह",

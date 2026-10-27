@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "Inference (mai dacewa da OpenAI)",
-        "description": "Muhimman ƙarshen inference masu dacewa da OpenAI: kammalawar taɗi, embeddings, hotuna, sauti (TTS/STT), moderations, rerank, da Responses API. Ita ce babbar hanyar haɗawa ga wakilan AI."
+        "description": "Muhimman ƙarshen inference masu dacewa da OpenAI: kammalawar taɗi, embeddings, hotuna, sauti (TTS/STT), rerank, da Responses API. Ita ce babbar hanyar haɗawa ga wakilan AI."
       },
       "cli-serve": {
         "name": "CLI: Bayar da Sabis",

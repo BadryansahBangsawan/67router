@@ -791,38 +791,6 @@
       "description": "Scorekaart voor een voltooide evaluatierun weergeven"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute-webhooks beheren",
-    "events": {
-      "description": "Alle beschikbare webhookgebeurtenistypen weergeven"
-    },
-    "list": {
-      "description": "Geconfigureerde webhooks weergeven"
-    },
-    "get": {
-      "description": "Webhookdetails ophalen op ID"
-    },
-    "add": {
-      "description": "Een nieuwe webhook registreren",
-      "url": "Bestemmings-URL",
-      "events": "Door komma's gescheiden lijst met gebeurtenistypen",
-      "secret": "HMAC-ondertekeningsgeheim",
-      "header": "Extra header in key=value-indeling (herhaalbaar)",
-      "no_enabled": "Webhook in uitgeschakelde status maken"
-    },
-    "update": {
-      "description": "Een bestaande webhook bijwerken",
-      "enabled": "Ingeschakelde status instellen (true|false)"
-    },
-    "remove": {
-      "description": "Een webhook verwijderen",
-      "yes": "Bevestigingsprompt overslaan"
-    },
-    "test": {
-      "description": "Een testgebeurtenis naar een webhook verzenden",
-      "event": "Te simuleren gebeurtenistype (standaard: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Slimme AI-router met automatische fallback",
     "version": "Versie afdrukken en afsluiten",
@@ -1069,33 +1037,6 @@
       "top": "Aantal beste kandidaten om weer te geven (standaard: 5)",
       "explain": "Motivering naar stderr uitvoeren",
       "switch": "De hoogst gerangschikte combinatie activeren"
-    }
-  },
-  "oneproxy": {
-    "description": "De OneProxy-upstreampool beheren",
-    "stats": {
-      "provider": "Filteren op provider",
-      "period": "Tijdsperiode (standaard: 24h)"
-    },
-    "fetch": {
-      "description": "Proxy's ophalen uit de pool",
-      "count": "Aantal op te halen proxy's (standaard: 1)",
-      "type": "Proxytype: http|socks5 (standaard: http)"
-    },
-    "rotate": {
-      "description": "Proxyrotatie forceren",
-      "provider": "Provider waarvoor moet worden geroteerd",
-      "connectionId": "Specifieke verbindings-ID om te roteren"
-    },
-    "config": {
-      "description": "OneProxy-configuratie weergeven of bijwerken",
-      "enabled": "Proxypool inschakelen (true|false)",
-      "poolSize": "Poolgrootte",
-      "providerSource": "URL voor proxyprovider",
-      "rotationPolicy": "Rotatiebeleid: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Huidige proxypool met statistieken weergeven"
     }
   },
   "open": {

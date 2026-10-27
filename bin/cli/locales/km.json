@@ -791,38 +791,6 @@
       "description": "បង្ហាញប័ណ្ណពិន្ទុសម្រាប់ការដំណើរការ eval ដែលបានបញ្ចប់"
     }
   },
-  "webhooks": {
-    "description": "គ្រប់គ្រង webhook របស់ OmniRoute",
-    "events": {
-      "description": "រាយប្រភេទព្រឹត្តិការណ៍ webhook ដែលមានទាំងអស់"
-    },
-    "list": {
-      "description": "រាយ webhook ដែលបានកំណត់រចនាសម្ព័ន្ធ"
-    },
-    "get": {
-      "description": "ទទួលព័ត៌មានលម្អិតរបស់ webhook តាម ID"
-    },
-    "add": {
-      "description": "ចុះឈ្មោះ webhook ថ្មី",
-      "url": "URL គោលដៅ",
-      "events": "បញ្ជីប្រភេទព្រឹត្តិការណ៍ដែលបំបែកដោយសញ្ញាក្បៀស",
-      "secret": "សម្ងាត់សម្រាប់ចុះហត្ថលេខា HMAC",
-      "header": "បឋមកថាបន្ថែមក្នុងទម្រង់ key=value (អាចធ្វើម្តងទៀតបាន)",
-      "no_enabled": "បង្កើត webhook ក្នុងស្ថានភាពបិទ"
-    },
-    "update": {
-      "description": "ធ្វើបច្ចុប្បន្នភាព webhook ដែលមានស្រាប់",
-      "enabled": "កំណត់ស្ថានភាពបើក (true|false)"
-    },
-    "remove": {
-      "description": "លុប webhook",
-      "yes": "រំលងសារបញ្ជាក់"
-    },
-    "test": {
-      "description": "ផ្ញើព្រឹត្តិការណ៍សាកល្បងទៅ webhook",
-      "event": "ប្រភេទព្រឹត្តិការណ៍ដែលត្រូវក្លែងធ្វើ (លំនាំដើម៖ request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — រ៉ោតទ័រ AI ឆ្លាតវៃជាមួយការប្ដូរទៅជម្រើសបម្រុងដោយស្វ័យប្រវត្តិ",
     "version": "បង្ហាញកំណែ ហើយចាកចេញ",
@@ -1069,33 +1037,6 @@
       "top": "ចំនួនបេក្ខភាពលំដាប់កំពូលដែលត្រូវបង្ហាញ (លំនាំដើម៖ 5)",
       "explain": "បោះពុម្ពហេតុផលទៅ stderr",
       "switch": "ធ្វើឱ្យបន្សំដែលមានចំណាត់ថ្នាក់កំពូលសកម្ម"
-    }
-  },
-  "oneproxy": {
-    "description": "គ្រប់គ្រងក្រុម upstream របស់ OneProxy",
-    "stats": {
-      "provider": "ត្រងតាមអ្នកផ្តល់សេវា",
-      "period": "រយៈពេល (លំនាំដើម៖ 24h)"
-    },
-    "fetch": {
-      "description": "ទាញយកប្រូកស៊ីពីក្រុម",
-      "count": "ចំនួនប្រូកស៊ីដែលត្រូវទាញយក (លំនាំដើម៖ 1)",
-      "type": "ប្រភេទប្រូកស៊ី៖ http|socks5 (លំនាំដើម៖ http)"
-    },
-    "rotate": {
-      "description": "បង្ខំឱ្យប្តូរប្រូកស៊ី",
-      "provider": "អ្នកផ្តល់សេវាដែលត្រូវប្តូរ",
-      "connectionId": "លេខសម្គាល់ការតភ្ជាប់ជាក់លាក់ដែលត្រូវប្តូរ"
-    },
-    "config": {
-      "description": "បង្ហាញ ឬធ្វើបច្ចុប្បន្នភាពការកំណត់រចនាសម្ព័ន្ធ OneProxy",
-      "enabled": "បើកប្រើក្រុមប្រូកស៊ី (true|false)",
-      "poolSize": "ទំហំក្រុម",
-      "providerSource": "URL សម្រាប់អ្នកផ្តល់សេវាប្រូកស៊ី",
-      "rotationPolicy": "គោលការណ៍ប្តូរ៖ sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "រាយបញ្ជីក្រុមប្រូកស៊ីបច្ចុប្បន្នជាមួយរង្វាស់"
     }
   },
   "open": {

@@ -791,38 +791,6 @@
       "description": "Tunjukkan kad skor untuk pelaksanaan penilaian yang telah selesai"
     }
   },
-  "webhooks": {
-    "description": "Urus webhook OmniRoute",
-    "events": {
-      "description": "Senaraikan semua jenis peristiwa webhook yang tersedia"
-    },
-    "list": {
-      "description": "Senaraikan webhook yang dikonfigurasikan"
-    },
-    "get": {
-      "description": "Dapatkan butiran webhook mengikut ID"
-    },
-    "add": {
-      "description": "Daftarkan webhook baharu",
-      "url": "URL destinasi",
-      "events": "Senarai jenis acara yang dipisahkan dengan koma",
-      "secret": "Rahsia penandatanganan HMAC",
-      "header": "Pengepala tambahan dalam format key=value (boleh diulang)",
-      "no_enabled": "Cipta webhook dalam keadaan dinyahdayakan"
-    },
-    "update": {
-      "description": "Kemas kini webhook sedia ada",
-      "enabled": "Tetapkan keadaan didayakan (true|false)"
-    },
-    "remove": {
-      "description": "Padam webhook",
-      "yes": "Langkau gesaan pengesahan"
-    },
-    "test": {
-      "description": "Hantar acara ujian kepada webhook",
-      "event": "Jenis acara untuk disimulasikan (lalai: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Penghala AI Pintar dengan Sandaran Automatik",
     "version": "Paparkan versi dan keluar",
@@ -1069,33 +1037,6 @@
       "top": "Bilangan calon teratas untuk dipaparkan (lalai: 5)",
       "explain": "Cetak rasional ke stderr",
       "switch": "Aktifkan gabungan dengan kedudukan tertinggi"
-    }
-  },
-  "oneproxy": {
-    "description": "Urus kumpulan huluan OneProxy",
-    "stats": {
-      "provider": "Tapis mengikut penyedia",
-      "period": "Tempoh masa (lalai: 24h)"
-    },
-    "fetch": {
-      "description": "Dapatkan proksi daripada kumpulan",
-      "count": "Bilangan proksi untuk didapatkan (lalai: 1)",
-      "type": "Jenis proksi: http|socks5 (lalai: http)"
-    },
-    "rotate": {
-      "description": "Paksa penggiliran proksi",
-      "provider": "Penyedia untuk digilirkan",
-      "connectionId": "ID sambungan khusus untuk digilirkan"
-    },
-    "config": {
-      "description": "Tunjukkan atau kemas kini konfigurasi OneProxy",
-      "enabled": "Dayakan kumpulan proksi (true|false)",
-      "poolSize": "Saiz kumpulan",
-      "providerSource": "URL untuk penyedia proksi",
-      "rotationPolicy": "Dasar penggiliran: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Senaraikan kumpulan proksi semasa berserta metrik"
     }
   },
   "open": {

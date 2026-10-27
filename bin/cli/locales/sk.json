@@ -791,38 +791,6 @@
       "description": "Zobraziť kartu skóre dokončeného evaluačného behu"
     }
   },
-  "webhooks": {
-    "description": "Spravovať webhooky OmniRoute",
-    "events": {
-      "description": "Zobraziť zoznam všetkých dostupných typov udalostí webhookov"
-    },
-    "list": {
-      "description": "Zobraziť zoznam nakonfigurovaných webhookov"
-    },
-    "get": {
-      "description": "Získať podrobnosti webhooku podľa ID"
-    },
-    "add": {
-      "description": "Zaregistrovať nový webhook",
-      "url": "Cieľová URL",
-      "events": "Čiarkami oddelený zoznam typov udalostí",
-      "secret": "Tajný kľúč na podpisovanie HMAC",
-      "header": "Dodatočná hlavička vo formáte key=value (možno opakovať)",
-      "no_enabled": "Vytvoriť webhook v zakázanom stave"
-    },
-    "update": {
-      "description": "Aktualizovať existujúci webhook",
-      "enabled": "Nastaviť stav povolenia (true|false)"
-    },
-    "remove": {
-      "description": "Odstrániť webhook",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "test": {
-      "description": "Odoslať testovaciu udalosť do webhooku",
-      "event": "Typ udalosti na simuláciu (predvolené: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Inteligentný AI router s automatickým prepínaním",
     "version": "Vypísať verziu a skončiť",
@@ -1069,33 +1037,6 @@
       "top": "Počet najlepších kandidátov na zobrazenie (predvolené: 5)",
       "explain": "Vypísať odôvodnenie na štandardný chybový výstup",
       "switch": "Aktivovať najvyššie hodnotenú kombináciu"
-    }
-  },
-  "oneproxy": {
-    "description": "Spravovať nadradený fond OneProxy",
-    "stats": {
-      "provider": "Filtrovať podľa poskytovateľa",
-      "period": "Časové obdobie (predvolené: 24h)"
-    },
-    "fetch": {
-      "description": "Načítať proxy servery z fondu",
-      "count": "Počet proxy serverov na načítanie (predvolené: 1)",
-      "type": "Typ proxy servera: http|socks5 (predvolené: http)"
-    },
-    "rotate": {
-      "description": "Vynútiť rotáciu proxy servera",
-      "provider": "Poskytovateľ, pre ktorého sa má vykonať rotácia",
-      "connectionId": "Konkrétne ID pripojenia na rotáciu"
-    },
-    "config": {
-      "description": "Zobraziť alebo aktualizovať konfiguráciu OneProxy",
-      "enabled": "Povoliť fond proxy serverov (true|false)",
-      "poolSize": "Veľkosť fondu",
-      "providerSource": "URL poskytovateľa proxy",
-      "rotationPolicy": "Politika rotácie: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Zobraziť aktuálny fond proxy serverov s metrikami"
     }
   },
   "open": {

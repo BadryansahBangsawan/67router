@@ -791,38 +791,6 @@
       "description": "Kuva lõpetatud hindamiskäituse tulemuskaart"
     }
   },
-  "webhooks": {
-    "description": "Halda OmniRoute veebihaake",
-    "events": {
-      "description": "Kuva kõikide saadaolevate veebihaagi sündmuste tüüpide loend"
-    },
-    "list": {
-      "description": "Kuva seadistatud veebihaakide loend"
-    },
-    "get": {
-      "description": "Hangi veebihaagi üksikasjad ID järgi"
-    },
-    "add": {
-      "description": "Registreeri uus veebihaak",
-      "url": "Sihtkoha URL",
-      "events": "Komadega eraldatud sündmuste tüüpide loend",
-      "secret": "HMAC allkirjastamise saladus",
-      "header": "Lisapäis kuju key=value (korratav)",
-      "no_enabled": "Loo veebihaak keelatud olekus"
-    },
-    "update": {
-      "description": "Uuenda olemasolevat veebihaaki",
-      "enabled": "Määra lubatud olek (true|false)"
-    },
-    "remove": {
-      "description": "Kustuta veebihaak",
-      "yes": "Jäta kinnitusküsimus vahele"
-    },
-    "test": {
-      "description": "Saada veebihaagile testsündmus",
-      "event": "Simuleeritav sündmuse tüüp (vaikimisi: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — nutikas AI ruuter automaatse tõrketaluvusega",
     "version": "Prindi versioon ja väljume",
@@ -1069,33 +1037,6 @@
       "top": "Kuvatavate parimate kandidaatide arv (vaikimisi: 5)",
       "explain": "Kuva põhjendus stderr-is",
       "switch": "Aktiveeri parim komboarvestus"
-    }
-  },
-  "oneproxy": {
-    "description": "Halda OneProxy ülemvoolu puuli",
-    "stats": {
-      "provider": "Filtreeri teenusepakkuja järgi",
-      "period": "Ajaperiood (vaikimisi: 24h)"
-    },
-    "fetch": {
-      "description": "Hangi puulist proksisid",
-      "count": "Hangitavate proksite arv (vaikimisi: 1)",
-      "type": "Proksi tüüp: http|socks5 (vaikimisi: http)"
-    },
-    "rotate": {
-      "description": "Sunni proksi rotatsiooni",
-      "provider": "Teenusepakkuja, kelle jaoks rotatsiooni läbi viia",
-      "connectionId": "Konkreetne ühenduse ID, mida rotatsiooni viia"
-    },
-    "config": {
-      "description": "Kuva või uuenda OneProxy seadeid",
-      "enabled": "Luba proksipuul (true|false)",
-      "poolSize": "Puuli suurus",
-      "providerSource": "Proksiteenuse pakkuja URL",
-      "rotationPolicy": "Rotatsiooni reegel: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Kuva praegune proksipuul koos meetrikatega"
     }
   },
   "open": {

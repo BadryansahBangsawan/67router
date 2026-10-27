@@ -791,38 +791,6 @@
       "description": "Scorecard für einen abgeschlossenen Evaluierungslauf anzeigen"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute-Webhooks verwalten",
-    "events": {
-      "description": "Alle verfügbaren Webhook-Ereignistypen auflisten"
-    },
-    "list": {
-      "description": "Konfigurierte Webhooks auflisten"
-    },
-    "get": {
-      "description": "Webhook-Details anhand der ID abrufen"
-    },
-    "add": {
-      "description": "Einen neuen Webhook registrieren",
-      "url": "Ziel-URL",
-      "events": "Kommagetrennte Liste von Ereignistypen",
-      "secret": "HMAC-Signaturgeheimnis",
-      "header": "Zusätzlicher Header im Format key=value (wiederholbar)",
-      "no_enabled": "Webhook im deaktivierten Zustand erstellen"
-    },
-    "update": {
-      "description": "Einen vorhandenen Webhook aktualisieren",
-      "enabled": "Aktivierungsstatus festlegen (true|false)"
-    },
-    "remove": {
-      "description": "Einen Webhook löschen",
-      "yes": "Bestätigungsabfrage überspringen"
-    },
-    "test": {
-      "description": "Ein Testereignis an einen Webhook senden",
-      "event": "Zu simulierender Ereignistyp (Standard: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Intelligenter AI-Router mit automatischem Fallback",
     "version": "Version ausgeben und beenden",
@@ -1069,33 +1037,6 @@
       "top": "Anzahl der anzuzeigenden besten Kandidaten (Standard: 5)",
       "explain": "Begründung nach stderr ausgeben",
       "switch": "Bestplatzierte Kombination aktivieren"
-    }
-  },
-  "oneproxy": {
-    "description": "Den OneProxy-Upstream-Pool verwalten",
-    "stats": {
-      "provider": "Nach Anbieter filtern",
-      "period": "Zeitraum (Standard: 24h)"
-    },
-    "fetch": {
-      "description": "Proxys aus dem Pool abrufen",
-      "count": "Anzahl der abzurufenden Proxys (Standard: 1)",
-      "type": "Proxy-Typ: http|socks5 (Standard: http)"
-    },
-    "rotate": {
-      "description": "Proxy-Rotation erzwingen",
-      "provider": "Anbieter, für den die Rotation durchgeführt werden soll",
-      "connectionId": "Bestimmte Verbindungs-ID für die Rotation"
-    },
-    "config": {
-      "description": "OneProxy-Konfiguration anzeigen oder aktualisieren",
-      "enabled": "Proxy-Pool aktivieren (true|false)",
-      "poolSize": "Pool-Größe",
-      "providerSource": "URL des Proxy-Anbieters",
-      "rotationPolicy": "Rotationsrichtlinie: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Aktuellen Proxy-Pool mit Metriken auflisten"
     }
   },
   "open": {

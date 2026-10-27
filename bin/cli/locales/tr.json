@@ -791,38 +791,6 @@
       "description": "Tamamlanmış bir değerlendirme çalıştırmasının puan kartını göster"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute webhook'larını yönet",
-    "events": {
-      "description": "Kullanılabilir tüm webhook olay türlerini listele"
-    },
-    "list": {
-      "description": "Yapılandırılmış webhook'ları listele"
-    },
-    "get": {
-      "description": "Kimliğe göre webhook ayrıntılarını getir"
-    },
-    "add": {
-      "description": "Yeni bir webhook kaydet",
-      "url": "Hedef URL",
-      "events": "Virgülle ayrılmış olay türleri listesi",
-      "secret": "HMAC imzalama gizli anahtarı",
-      "header": "key=value biçiminde ek başlık (tekrarlanabilir)",
-      "no_enabled": "Webhook'u devre dışı durumda oluştur"
-    },
-    "update": {
-      "description": "Mevcut bir webhook'u güncelle",
-      "enabled": "Etkin durumunu ayarla (true|false)"
-    },
-    "remove": {
-      "description": "Bir webhook'u sil",
-      "yes": "Onay istemini atla"
-    },
-    "test": {
-      "description": "Bir webhook'a test olayı gönder",
-      "event": "Simüle edilecek olay türü (varsayılan: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Otomatik Fallback ile Akıllı AI Yönlendirici",
     "version": "Sürümü yazdır ve çık",
@@ -1069,33 +1037,6 @@
       "top": "Gösterilecek en iyi adayların sayısı (varsayılan: 5)",
       "explain": "Gerekçeyi stderr'e yazdır",
       "switch": "En yüksek sıralamalı kombinasyonu etkinleştir"
-    }
-  },
-  "oneproxy": {
-    "description": "OneProxy üst sunucu havuzunu yönet",
-    "stats": {
-      "provider": "Sağlayıcıya göre filtrele",
-      "period": "Zaman aralığı (varsayılan: 24h)"
-    },
-    "fetch": {
-      "description": "Havuzdan proxy'leri getir",
-      "count": "Getirilecek proxy sayısı (varsayılan: 1)",
-      "type": "Proxy türü: http|socks5 (varsayılan: http)"
-    },
-    "rotate": {
-      "description": "Proxy rotasyonunu zorla",
-      "provider": "Rotasyon yapılacak sağlayıcı",
-      "connectionId": "Rotasyon yapılacak belirli bağlantı kimliği"
-    },
-    "config": {
-      "description": "OneProxy yapılandırmasını göster veya güncelle",
-      "enabled": "Proxy havuzunu etkinleştir (true|false)",
-      "poolSize": "Havuz boyutu",
-      "providerSource": "Proxy sağlayıcısının URL'si",
-      "rotationPolicy": "Döndürme ilkesi: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Geçerli proxy havuzunu metriklerle listele"
     }
   },
   "open": {

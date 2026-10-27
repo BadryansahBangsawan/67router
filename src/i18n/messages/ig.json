@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "Ntụpụta (dakọtara na OpenAI)",
-        "description": "Ebe njedebe ndị bụ isi maka ntụpụta dakọtara na OpenAI: mmezu nkata, embeddings, onyonyo, ọdịyo (TTS/STT), moderations, nhazigharị ọkwa, na Responses API. Nke a bụ ebe njikọta bụ isi maka ndị nnọchi anya AI."
+        "description": "Ebe njedebe ndị bụ isi maka ntụpụta dakọtara na OpenAI: mmezu nkata, embeddings, onyonyo, ọdịyo (TTS/STT), nhazigharị ọkwa, na Responses API. Nke a bụ ebe njikọta bụ isi maka ndị nnọchi anya AI."
       },
       "cli-serve": {
         "name": "CLI: Nye Ọrụ",

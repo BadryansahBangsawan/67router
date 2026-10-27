@@ -791,38 +791,6 @@
       "description": "Ipakita ang scorecard para sa isang nakumpletong eval run"
     }
   },
-  "webhooks": {
-    "description": "Pamahalaan ang mga webhook ng OmniRoute",
-    "events": {
-      "description": "Ilista ang lahat ng available na uri ng webhook event"
-    },
-    "list": {
-      "description": "Ilista ang mga naka-configure na webhook"
-    },
-    "get": {
-      "description": "Kunin ang mga detalye ng webhook ayon sa ID"
-    },
-    "add": {
-      "description": "Magrehistro ng bagong webhook",
-      "url": "Destination URL",
-      "events": "Listahan ng mga uri ng event na pinaghihiwalay ng kuwit",
-      "secret": "Lihim sa paglagda gamit ang HMAC",
-      "header": "Karagdagang header sa format na key=value (maaaring ulitin)",
-      "no_enabled": "Gumawa ng webhook na naka-disable"
-    },
-    "update": {
-      "description": "I-update ang kasalukuyang webhook",
-      "enabled": "Itakda ang enabled state (true|false)"
-    },
-    "remove": {
-      "description": "Magtanggal ng webhook",
-      "yes": "Laktawan ang prompt ng kumpirmasyon"
-    },
-    "test": {
-      "description": "Magpadala ng test event sa isang webhook",
-      "event": "Uri ng event na isi-simulate (default: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Matalinong AI Router na may Awtomatikong Fallback",
     "version": "I-print ang bersyon at lumabas",
@@ -1069,33 +1037,6 @@
       "top": "Bilang ng mga nangungunang kandidato na ipapakita (default: 5)",
       "explain": "I-print ang paliwanag sa stderr",
       "switch": "I-activate ang combo na may pinakamataas na ranggo"
-    }
-  },
-  "oneproxy": {
-    "description": "Pamahalaan ang upstream pool ng OneProxy",
-    "stats": {
-      "provider": "I-filter ayon sa provider",
-      "period": "Yugto ng panahon (default: 24h)"
-    },
-    "fetch": {
-      "description": "Kumuha ng mga proxy mula sa pool",
-      "count": "Bilang ng mga proxy na kukunin (default: 1)",
-      "type": "Uri ng proxy: http|socks5 (default: http)"
-    },
-    "rotate": {
-      "description": "Pilitin ang pag-rotate ng proxy",
-      "provider": "Provider na pagra-rotate-an",
-      "connectionId": "Partikular na connection ID na ira-rotate"
-    },
-    "config": {
-      "description": "Ipakita o i-update ang config ng OneProxy",
-      "enabled": "I-enable ang proxy pool (true|false)",
-      "poolSize": "Laki ng pool",
-      "providerSource": "URL para sa provider ng proxy",
-      "rotationPolicy": "Patakaran sa pag-rotate: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Ilista ang kasalukuyang proxy pool kasama ang mga sukatan"
     }
   },
   "open": {

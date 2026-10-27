@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "İnferensiya (OpenAI ilə uyğun)",
-        "description": "Əsas OpenAI ilə uyğun inferensiya son nöqtələri: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank və Responses API. AI agentləri üçün əsas inteqrasiya sahəsi."
+        "description": "Əsas OpenAI ilə uyğun inferensiya son nöqtələri: chat completions, embeddings, images, audio (TTS/STT), rerank və Responses API. AI agentləri üçün əsas inteqrasiya sahəsi."
       },
       "cli-serve": {
         "name": "CLI: Xidmət göstərmə",

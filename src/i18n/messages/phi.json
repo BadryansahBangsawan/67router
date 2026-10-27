@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "Inference (compatible sa OpenAI)",
-        "description": "Ang mga pangunahing OpenAI-compatible na inference endpoint: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, at ang Responses API. Ang pangunahing integration surface para sa mga AI agent."
+        "description": "Ang mga pangunahing OpenAI-compatible na inference endpoint: chat completions, embeddings, images, audio (TTS/STT), rerank, at ang Responses API. Ang pangunahing integration surface para sa mga AI agent."
       },
       "cli-serve": {
         "name": "CLI: Pag-serve",

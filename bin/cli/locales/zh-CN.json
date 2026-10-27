@@ -791,38 +791,6 @@
       "description": "显示已完成评估运行的记分卡"
     }
   },
-  "webhooks": {
-    "description": "管理 OmniRoute Webhook",
-    "events": {
-      "description": "列出所有可用的 Webhook 事件类型"
-    },
-    "list": {
-      "description": "列出已配置的 Webhook"
-    },
-    "get": {
-      "description": "按 ID 获取 Webhook 详情"
-    },
-    "add": {
-      "description": "注册新的 Webhook",
-      "url": "目标 URL",
-      "events": "逗号分隔的事件类型列表",
-      "secret": "HMAC 签名密钥",
-      "header": "额外的标头（key=value 格式，可重复）",
-      "no_enabled": "以禁用状态创建 Webhook"
-    },
-    "update": {
-      "description": "更新现有 Webhook",
-      "enabled": "设置启用状态（true|false）"
-    },
-    "remove": {
-      "description": "删除 Webhook",
-      "yes": "跳过确认提示"
-    },
-    "test": {
-      "description": "向 Webhook 发送测试事件",
-      "event": "要模拟的事件类型（默认：request.completed）"
-    }
-  },
   "program": {
     "description": "OmniRoute — 具有自动故障转移的智能 AI 路由器",
     "version": "打印版本并退出",
@@ -1069,33 +1037,6 @@
       "top": "要显示的候选数（默认：5）",
       "explain": "将理由打印到 stderr",
       "switch": "激活排名最高的组合"
-    }
-  },
-  "oneproxy": {
-    "description": "管理 OneProxy 上游代理池",
-    "stats": {
-      "provider": "按提供者筛选",
-      "period": "时间范围（默认：24h）"
-    },
-    "fetch": {
-      "description": "从代理池获取代理",
-      "count": "要获取的代理数（默认：1）",
-      "type": "代理类型：http|socks5（默认：http）"
-    },
-    "rotate": {
-      "description": "强制轮换代理",
-      "provider": "要轮换的提供者",
-      "connectionId": "要轮换的特定连接 ID"
-    },
-    "config": {
-      "description": "显示或更新 OneProxy 配置",
-      "enabled": "启用代理池（true|false）",
-      "poolSize": "池大小",
-      "providerSource": "代理提供者的 URL",
-      "rotationPolicy": "轮换策略：sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "列出当前代理池及指标"
     }
   },
   "open": {

@@ -791,38 +791,6 @@
       "description": "הצגת כרטיס ניקוד עבור הרצת הערכה שהושלמה"
     }
   },
-  "webhooks": {
-    "description": "ניהול רכיבי webhook של OmniRoute",
-    "events": {
-      "description": "הצגת כל סוגי אירועי ה-webhook הזמינים"
-    },
-    "list": {
-      "description": "הצגת רכיבי webhook שהוגדרו"
-    },
-    "get": {
-      "description": "קבלת פרטי webhook לפי ID"
-    },
-    "add": {
-      "description": "רישום webhook חדש",
-      "url": "כתובת URL של היעד",
-      "events": "רשימה מופרדת בפסיקים של סוגי אירועים",
-      "secret": "סוד חתימת HMAC",
-      "header": "כותרת נוספת בפורמט key=value (ניתן לחזור עליה)",
-      "no_enabled": "יצירת webhook במצב מושבת"
-    },
-    "update": {
-      "description": "עדכון webhook קיים",
-      "enabled": "הגדרת מצב הפעלה (true|false)"
-    },
-    "remove": {
-      "description": "מחיקת webhook",
-      "yes": "דילוג על בקשת האישור"
-    },
-    "test": {
-      "description": "שליחת אירוע בדיקה ל-webhook",
-      "event": "סוג האירוע להדמיה (ברירת מחדל: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — נתב AI חכם עם מעבר אוטומטי לגיבוי",
     "version": "הדפסת הגרסה ויציאה",
@@ -1069,33 +1037,6 @@
       "top": "מספר המועמדים המובילים להצגה (ברירת מחדל: 5)",
       "explain": "הדפסת הנימוקים אל stderr",
       "switch": "הפעלת השילוב המדורג במקום הראשון"
-    }
-  },
-  "oneproxy": {
-    "description": "ניהול מאגר שרתי המקור של OneProxy",
-    "stats": {
-      "provider": "סינון לפי ספק",
-      "period": "תקופת זמן (ברירת מחדל: 24h)"
-    },
-    "fetch": {
-      "description": "משיכת שרתי Proxy מהמאגר",
-      "count": "מספר שרתי ה-Proxy למשיכה (ברירת מחדל: 1)",
-      "type": "סוג Proxy: http|socks5 (ברירת מחדל: http)"
-    },
-    "rotate": {
-      "description": "אילוץ החלפת Proxy",
-      "provider": "הספק שעבורו תתבצע ההחלפה",
-      "connectionId": "מזהה חיבור ספציפי להחלפה"
-    },
-    "config": {
-      "description": "הצגה או עדכון של תצורת OneProxy",
-      "enabled": "הפעלת מאגר Proxy‏ (true|false)",
-      "poolSize": "גודל המאגר",
-      "providerSource": "כתובת URL של ספק ה-Proxy",
-      "rotationPolicy": "מדיניות החלפה: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "הצגת מאגר ה-Proxy הנוכחי עם מדדים"
     }
   },
   "open": {

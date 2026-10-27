@@ -12709,7 +12709,7 @@
       },
       "omni-inference": {
         "name": "การอนุมาน (รองรับรูปแบบ OpenAI)",
-        "description": "ปลายทางการอนุมานหลักที่เข้ากันได้กับ OpenAI: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank และ Responses API ซึ่งเป็นส่วนการผสานรวมหลักสำหรับเอเจนต์ AI"
+        "description": "ปลายทางการอนุมานหลักที่เข้ากันได้กับ OpenAI: chat completions, embeddings, images, audio (TTS/STT), rerank และ Responses API ซึ่งเป็นส่วนการผสานรวมหลักสำหรับเอเจนต์ AI"
       },
       "cli-serve": {
         "name": "CLI: ให้บริการ",

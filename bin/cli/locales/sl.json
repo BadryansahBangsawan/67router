@@ -791,38 +791,6 @@
       "description": "Prikaži preglednico rezultatov za dokončan zagon vrednotenja"
     }
   },
-  "webhooks": {
-    "description": "Upravljaj webhooke OmniRoute",
-    "events": {
-      "description": "Prikaži seznam vseh razpoložljivih vrst dogodkov webhookov"
-    },
-    "list": {
-      "description": "Prikaži seznam konfiguriranih webhookov"
-    },
-    "get": {
-      "description": "Pridobi podrobnosti webhooka po ID-ju"
-    },
-    "add": {
-      "description": "Registriraj nov webhook",
-      "url": "Ciljni URL",
-      "events": "Seznam vrst dogodkov, ločenih z vejicami",
-      "secret": "Skrivnost za podpisovanje HMAC",
-      "header": "Dodatna glava v obliki key=value (ponovljivo)",
-      "no_enabled": "Ustvari webhook v onemogočenem stanju"
-    },
-    "update": {
-      "description": "Posodobi obstoječi webhook",
-      "enabled": "Nastavi stanje omogočenosti (true|false)"
-    },
-    "remove": {
-      "description": "Izbriši spletni klic",
-      "yes": "Preskoči poziv za potrditev"
-    },
-    "test": {
-      "description": "Pošlji preskusni dogodek spletnemu klicu",
-      "event": "Vrsta dogodka za simulacijo (privzeto: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — pametni usmerjevalnik za UI s samodejnim preklopom",
     "version": "Izpiši različico in končaj",
@@ -1069,33 +1037,6 @@
       "top": "Število najboljših kandidatov za prikaz (privzeto: 5)",
       "explain": "Izpiši utemeljitev v stderr",
       "switch": "Aktiviraj najbolje uvrščeno kombinacijo"
-    }
-  },
-  "oneproxy": {
-    "description": "Upravljaj skupino posredniških strežnikov OneProxy",
-    "stats": {
-      "provider": "Filtriraj po ponudniku",
-      "period": "Časovno obdobje (privzeto: 24h)"
-    },
-    "fetch": {
-      "description": "Pridobi posredniške strežnike iz skupine",
-      "count": "Število posredniških strežnikov za pridobitev (privzeto: 1)",
-      "type": "Vrsta posredniškega strežnika: http|socks5 (privzeto: http)"
-    },
-    "rotate": {
-      "description": "Vsili zamenjavo posredniškega strežnika",
-      "provider": "Ponudnik, za katerega naj se izvede zamenjava",
-      "connectionId": "ID določene povezave za zamenjavo"
-    },
-    "config": {
-      "description": "Prikaži ali posodobi konfiguracijo OneProxy",
-      "enabled": "Omogoči skupino posredniških strežnikov (true|false)",
-      "poolSize": "Velikost skupine",
-      "providerSource": "URL ponudnika posredniških strežnikov",
-      "rotationPolicy": "Pravilnik zamenjave: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Prikaži trenutno skupino posredniških strežnikov z metrikami"
     }
   },
   "open": {

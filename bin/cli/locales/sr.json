@@ -791,38 +791,6 @@
       "description": "Prikaži karticu rezultata za završeno eval pokretanje"
     }
   },
-  "webhooks": {
-    "description": "Upravljanje OmniRoute webhook-ovima",
-    "events": {
-      "description": "Prikaži sve dostupne tipove webhook događaja"
-    },
-    "list": {
-      "description": "Prikaži listu konfigurisanih webhook-ova"
-    },
-    "get": {
-      "description": "Prikaži detalje webhook-a po ID-u"
-    },
-    "add": {
-      "description": "Registruj novi webhook",
-      "url": "Odredišni URL",
-      "events": "Lista tipova događaja odvojena zapetama",
-      "secret": "HMAC tajni ključ za potpisivanje",
-      "header": "Dodatni header u formatu ključ=vrednost (može se ponavljati)",
-      "no_enabled": "Kreiraj webhook u onemogućenom stanju"
-    },
-    "update": {
-      "description": "Ažuriraj postojeći webhook",
-      "enabled": "Podesi omogućeno stanje (true|false)"
-    },
-    "remove": {
-      "description": "Обриши webhook",
-      "yes": "Прескочи потврду"
-    },
-    "test": {
-      "description": "Пошаљи тестни догађај на webhook",
-      "event": "Тип догађаја за симулацију (подразумевано: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — паметни AI рутер са аутоматским пребацивањем на резервну опцију",
     "version": "Прикажи верзију и изађи",
@@ -1069,33 +1037,6 @@
       "top": "Broj najboljih kandidata za prikaz (podrazumevano: 5)",
       "explain": "Ispiši obrazloženje u stderr",
       "switch": "Aktiviraj najbolje rangiranu kombinaciju"
-    }
-  },
-  "oneproxy": {
-    "description": "Upravljanje OneProxy skupom nadređenih proksija",
-    "stats": {
-      "provider": "Filtriraj po dobavljaču",
-      "period": "Vremenski period (podrazumevano: 24h)"
-    },
-    "fetch": {
-      "description": "Preuzmi proksije iz skupa",
-      "count": "Broj proksija za preuzimanje (podrazumevano: 1)",
-      "type": "Tip proksija: http|socks5 (podrazumevano: http)"
-    },
-    "rotate": {
-      "description": "Prisilna rotacija proksija",
-      "provider": "Dobavljač za koji se vrši rotacija",
-      "connectionId": "ID konkretne konekcije za rotaciju"
-    },
-    "config": {
-      "description": "Prikaži ili ažuriraj OneProxy konfiguraciju",
-      "enabled": "Omogući skup proksija (true|false)",
-      "poolSize": "Veličina skupa",
-      "providerSource": "URL dobavljača proksija",
-      "rotationPolicy": "Politika rotacije: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Prikaži trenutni skup proksija sa metrikama"
     }
   },
   "open": {
