@@ -161,7 +161,20 @@ type PendingContinuationEntry = {
 // which never reaches "ready" (e.g. detailState becomes "missing") falls back
 // to the same permanent not-found the durable path already gives today.
 const PENDING_CONTINUATION_TTL_MS = 60_000;
+// Each entry holds a full conversation. TTL expiry used to happen only on
+// lookup, so an id whose durable write never landed and that no client asked
+// for again stayed in memory forever. Seeding now sweeps expired entries and
+// keeps at most this many (newest win: they are the ones about to be continued).
+const MAX_PENDING_CONTINUATIONS = 1000;
 const pendingContinuationStates = new Map<string, PendingContinuationEntry>();
+
+function prunePendingContinuationStates(now: number): void {
+  for (const [responseId, entry] of pendingContinuationStates) {
+    if (now > entry.expiresAt || pendingContinuationStates.size > MAX_PENDING_CONTINUATIONS) {
+      pendingContinuationStates.delete(responseId);
+    }
+  }
+}
 
 /**
  * Called from callLogs.ts the moment a response id and its pipeline payload
@@ -179,11 +192,15 @@ export function seedPendingContinuationState(
   if (!responseId) return;
   const state = extractContinuationState(pipeline, videoContentRemoved);
   if (!state) return;
+  const now = Date.now();
+  // Re-insert so Map order stays oldest-first for the cap below.
+  pendingContinuationStates.delete(responseId);
   pendingContinuationStates.set(responseId, {
     apiKeyId,
     state,
-    expiresAt: Date.now() + PENDING_CONTINUATION_TTL_MS,
+    expiresAt: now + PENDING_CONTINUATION_TTL_MS,
   });
+  prunePendingContinuationStates(now);
 }
 
 /** Called from callLogs.ts once the durable row lands -- the DB is now
@@ -191,6 +208,16 @@ export function seedPendingContinuationState(
 export function clearPendingContinuationState(responseId: string): void {
   if (!responseId) return;
   pendingContinuationStates.delete(responseId);
+}
+
+/** Entries currently held by the pending bridge (diagnostics + tests). */
+export function getPendingContinuationCount(): number {
+  return pendingContinuationStates.size;
+}
+
+/** Drop every pending bridge entry (tests). */
+export function clearAllPendingContinuationStates(): void {
+  pendingContinuationStates.clear();
 }
 
 function resolvePendingContinuationState(
@@ -414,7 +441,8 @@ export function resolveTurnCompletionState(
   // Same dual-shape concern as resolvePreviousResponseState above: a
   // streaming reply nests status/output under `.summary`, a non-streaming
   // one carries them at the top level.
-  const status = clientResponse?.summary?.status ?? (clientResponse as { status?: unknown })?.status;
+  const status =
+    clientResponse?.summary?.status ?? (clientResponse as { status?: unknown })?.status;
   if (typeof status === "string" && status !== "completed") {
     return cacheTurnCompletion(artifactRelPath, "incomplete");
   }
@@ -431,7 +459,10 @@ export function resolveTurnCompletionState(
   const hasPendingFunctionCall = output.some(
     (item) => isPlainRecord(item) && item.type === "function_call"
   );
-  return cacheTurnCompletion(artifactRelPath, hasPendingFunctionCall ? "tool_call_pending" : "stop");
+  return cacheTurnCompletion(
+    artifactRelPath,
+    hasPendingFunctionCall ? "tool_call_pending" : "stop"
+  );
 }
 
 /** Grace period before a still-unanswered tool call counts as a stall, not a
