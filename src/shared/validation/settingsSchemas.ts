@@ -25,6 +25,13 @@ import { isHttpUrl } from "@/shared/validation/schemas/misc";
 
 const signatureCacheModeValues = ["enabled", "bypass", "bypass-strict"] as const;
 
+function knownIdsArray<T extends string>(knownIds: readonly T[]) {
+  const known = new Set<string>(knownIds);
+  return z
+    .array(z.string().max(100))
+    .transform((ids) => ids.filter((id): id is T => known.has(id)));
+}
+
 // Legacy account "weighted" always ran fill-first; accept old settings without offering it.
 const accountFallbackStrategySchema = z
   .enum([...ACCOUNT_FALLBACK_STRATEGY_VALUES, "weighted"])
@@ -225,14 +232,12 @@ export const updateSettingsSchema = z.object({
   probeCanDisable: z.boolean().optional(),
   debugMode: z.boolean().optional(),
   logToolSources: z.boolean().optional(),
-  hiddenSidebarItems: z.array(z.enum(HIDEABLE_SIDEBAR_ITEM_IDS)).optional(),
-  hiddenSidebarSections: z
-    .array(z.enum(SIDEBAR_SECTIONS.map((s) => s.id) as [string, ...string[]]))
-    .optional(),
-  hiddenSidebarGroupLabels: z.array(z.enum(HIDEABLE_SIDEBAR_GROUP_IDS)).optional(),
-  sidebarSectionOrder: z
-    .array(z.enum(SIDEBAR_SECTIONS.map((s) => s.id) as [string, ...string[]]))
-    .optional(),
+  // Saved settings may still name sidebar entries of removed features; drop unknown ids
+  // instead of rejecting the whole update.
+  hiddenSidebarItems: knownIdsArray(HIDEABLE_SIDEBAR_ITEM_IDS).optional(),
+  hiddenSidebarSections: knownIdsArray(SIDEBAR_SECTIONS.map((s) => s.id)).optional(),
+  hiddenSidebarGroupLabels: knownIdsArray(HIDEABLE_SIDEBAR_GROUP_IDS).optional(),
+  sidebarSectionOrder: knownIdsArray(SIDEBAR_SECTIONS.map((s) => s.id)).optional(),
   sidebarItemOrder: z.record(z.string(), z.array(z.string().max(100))).optional(),
   sidebarActivePreset: z
     .enum(["all", "essentials", "minimal", "developer", "admin"])
