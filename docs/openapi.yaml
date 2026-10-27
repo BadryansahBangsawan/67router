@@ -180,8 +180,6 @@ tags:
     description: Logs endpoints (generated route coverage)
   - name: Mcp
     description: Mcp endpoints (generated route coverage)
-  - name: Middleware
-    description: Middleware endpoints (generated route coverage)
   - name: Model capability overrides
     description: Model capability overrides endpoints (generated route coverage)
   - name: Model combo mappings
@@ -11393,48 +11391,6 @@ paths:
       tags:
         - Mcp
       summary: "GET mcp › tools"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/middleware/hooks:
-    get:
-      tags:
-        - Middleware
-      summary: "GET middleware › hooks"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Middleware
-      summary: "POST middleware › hooks"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/middleware/hooks/{name}:
-    delete:
-      tags:
-        - Middleware
-      summary: "DELETE middleware › hooks › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Middleware
-      summary: "GET middleware › hooks › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Middleware
-      summary: "PUT middleware › hooks › <name>"
       x-loopback-only: true
       responses:
         "200":

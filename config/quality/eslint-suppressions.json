@@ -963,11 +963,6 @@
       "count": 2
     }
   },
-  "src/app/api/middleware/hooks/[name]/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "src/app/api/oauth/[provider]/[action]/route.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 4
@@ -1369,11 +1364,6 @@
     }
   },
   "src/lib/memory/sqliteBackend.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
-  "src/lib/middleware/registry.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
     }

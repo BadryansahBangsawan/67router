@@ -66,7 +66,6 @@ import {
 import { getPassthroughProviders } from "@omniroute/open-sse/config/providerRegistry.ts";
 import * as log from "../utils/logger";
 import { checkAndRefreshToken } from "../services/tokenRefresh";
-import { createHookContext, runHooks, initPreRequestRegistry } from "@/lib/middleware/registry";
 import { rejectPeerRequest } from "@/shared/resilience/peerRouting";
 import { isRuntimeProviderRetirementError } from "@/shared/constants/providerRetirement";
 import { isCommonChatGptWebRetirementError } from "@/shared/constants/chatgptWebRetirement";
@@ -1005,45 +1004,6 @@ async function handleChatImplementation(
       }
       registerKeySession(apiKeyInfo.id, sessionId);
     }
-  }
-
-  // T09 — Pre-request Middleware Hooks
-  // Execute user-defined hooks BEFORE task-aware routing and combo selection
-  initPreRequestRegistry();
-  const hookContext = createHookContext({
-    body: body as Record<string, unknown>,
-    headers: Object.fromEntries(request?.headers?.entries() || []) as Record<
-      string,
-      string | string[] | undefined
-    >,
-    model: modelStr,
-    combo: undefined,
-    apiKeyInfo: apiKeyInfo ? { ...apiKeyInfo } : undefined,
-    log,
-  });
-
-  const { context: hookCtx, response: hookResponse } = await runHooks(hookContext);
-
-  // Apply hook mutations
-  body = hookCtx.body as any;
-  ({ body, modelStr } = RoutingModelOps.reconcileModelOverride({
-    body,
-    modelStr,
-    overrideModel: hookCtx.model,
-    logTag: "Hook model override",
-    log,
-  }));
-
-  // Short-circuit if a hook returned a direct response
-  if (hookResponse) {
-    return logHandlerRejection(errorResponse(hookResponse.status, hookResponse.body as any), {
-      path: new URL(request.url).pathname,
-      model: modelStr,
-      requestBody: body ?? null,
-      apiKeyId: apiKeyInfo?.id ?? null,
-      apiKeyName: apiKeyInfo?.name ?? null,
-      correlationId: reqId,
-    });
   }
 
   // T05 — Task-Aware Smart Routing

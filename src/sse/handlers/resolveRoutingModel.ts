@@ -86,37 +86,6 @@ type GuardrailRerouteLogger = {
 };
 
 /**
- * Keep body.model glued to modelStr after a stage that may override modelStr
- * (e.g. a pre-request hook) without necessarily rewriting body.model itself.
- * Returns the (possibly new) body/modelStr and logs the override when the
- * hook actually changed modelStr.
- */
-export function reconcileModelOverride<T extends { model?: unknown }>(params: {
-  body: T;
-  modelStr: string;
-  overrideModel: string | null | undefined;
-  logTag: string;
-  log: GuardrailRerouteLogger;
-}): { body: T; modelStr: string } {
-  const { body, overrideModel, logTag, log } = params;
-  let { modelStr } = params;
-
-  if (overrideModel && overrideModel !== modelStr) {
-    log.info("ROUTING", `${logTag}: ${modelStr} → ${overrideModel}`);
-    modelStr = overrideModel;
-    if (typeof body?.model !== "string" || body.model !== modelStr) {
-      return { body: { ...body, model: modelStr }, modelStr };
-    }
-    return { body, modelStr };
-  }
-  if (modelStr && typeof body?.model === "string" && body.model !== modelStr) {
-    // The stage rewrote body without updating model — restore the routing model.
-    return { body: { ...body, model: modelStr }, modelStr };
-  }
-  return { body, modelStr };
-}
-
-/**
  * Reconcile body.model after the pre-call guardrail pipeline runs. A guardrail
  * (e.g. Vision Bridge auto-reroute) can swap body.model AFTER
  * enforceApiKeyPolicy already validated modelStr's allowlist/budget, so any
@@ -165,5 +134,4 @@ export async function reconcileGuardrailReroute<T extends { model?: unknown }>(p
 export const RoutingModelOps = {
   align: applyRoutingModelAlignment,
   reconcileGuardrailReroute,
-  reconcileModelOverride,
 };

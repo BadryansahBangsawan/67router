@@ -5,9 +5,20 @@ import path from "node:path";
 
 // Features permanently removed from 67router. Each entry is one line, grouped by feature,
 // so a revert or an upstream merge that brings a feature back fails here first.
-const REMOVED_PATHS: string[] = [];
+const REMOVED_PATHS: string[] = [
+  // middleware hooks
+  "src/lib/middleware/registry.ts",
+  "src/lib/middleware/types.ts",
+  "src/app/api/middleware",
+  "src/lib/db/middleware.ts",
+];
 
-const FORBIDDEN_IMPORTS: RegExp[] = [];
+const FORBIDDEN_IMPORTS: RegExp[] = [
+  // middleware hooks
+  /lib\/middleware\/(registry|types)/,
+  /api\/middleware\/hooks/,
+  /\binitPreRequestRegistry\b|\brunHooks\b/,
+];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const SCAN_DIRS = ["src", "open-sse", "bin"];
