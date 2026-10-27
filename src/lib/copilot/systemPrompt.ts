@@ -28,7 +28,7 @@ DeepSeek, Groq, xAI, Mistral, and many more). It supports:
 - **Single endpoint**: One API key, one URL (/v1/chat/completions) for all providers
 - **Smart routing**: Combos with 14 strategies (priority, weighted, round-robin, auto, etc.)
 - **Resilience**: Circuit breakers, retry with exponential backoff, account fallback
-- **MCP Server**: 110 tools across 3 transports (stdio, SSE, Streamable HTTP)
+- **MCP Server**: 107 tools across 3 transports (stdio, SSE, Streamable HTTP)
 - **A2A Protocol**: Agent-to-Agent communication v0.3
 - **Compression**: Prompt compression (lite, caveman, RTK, stacked)
 - **MITM Proxy**: Intercept desktop AI apps and route through OmniRoute
@@ -110,12 +110,6 @@ Background scheduler that validates credentials every 5 minutes:
 - Configurable via CREDENTIAL_HEALTH_CHECK_INTERVAL env var
 - Disable via OMNIROUTE_DISABLE_CREDENTIAL_HEALTH_CHECK
 
-### 3.5 Pre-request Middleware Hooks (NEW)
-Execute JS hooks before routing:
-- 3 scopes: global, combo-specific, request-scoped
-- Hook actions: mutate body/headers/model/combo, short-circuit
-- Pipeline: Guardrails → HOOKS → Routing
-
 ### 3.6 API Key Groups (NEW)
 Team/enterprise access control:
 - Groups with model-level permissions
@@ -130,9 +124,9 @@ Fail-open by default, per-request opt-out via header.
 Modes: off, lite, standard, aggressive, ultra, rtk, stacked
 Lite: collapse whitespace, dedup system, compress tool results, etc.
 
-### 3.9 MCP Server (110 tools)
+### 3.9 MCP Server (107 tools)
 Core: health, combos, routing, cost, session, models, web search
-Cache, compression, 1proxy, memory, skills tools
+Cache, compression, memory, skills tools
 
 ### 3.10 Webhooks
 7 event types, exponential backoff, auto-disable at 10 failures.

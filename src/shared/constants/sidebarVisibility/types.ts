@@ -41,7 +41,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "log-export",
   // OmniProxy — proxy tools
   "mitm-proxy",
-  "1proxy",
   // Analytics
   "analytics",
   "analytics-combo-health",

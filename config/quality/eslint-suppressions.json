@@ -2606,14 +2606,6 @@
       "count": 1
     }
   },
-  "tests/unit/cli-oneproxy-commands.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 13
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "tests/unit/cli-open-command.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
@@ -4028,11 +4020,6 @@
   "tests/unit/proxy-management-v1-route.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 22
-    }
-  },
-  "tests/unit/proxy-pool-sync-4878.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
     }
   },
   "tests/unit/proxy-registry.test.ts": {

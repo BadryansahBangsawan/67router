@@ -25,7 +25,6 @@ export const MCP_SCOPE_LIST = [
   "write:cache",
   "read:compression",
   "write:compression",
-  "read:proxies",
 ] as const;
 
 export type McpScope = (typeof MCP_SCOPE_LIST)[number];
@@ -72,9 +71,6 @@ export const MCP_TOOL_SCOPES: Record<string, readonly McpScope[]> = {
   omniroute_ccr_list: ["read:compression"],
   omniroute_ccr_delete: ["write:compression"],
   omniroute_ccr_stats: ["read:compression"],
-  omniroute_oneproxy_fetch: ["read:proxies"],
-  omniroute_oneproxy_rotate: ["read:proxies"],
-  omniroute_oneproxy_stats: ["read:proxies"],
 
   // Web-session pool observability (read) + lifecycle (write)
   omniroute_pool_status: ["read:health"],

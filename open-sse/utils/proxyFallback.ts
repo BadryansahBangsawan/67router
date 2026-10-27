@@ -11,7 +11,6 @@
 import { fetch as undiciFetch } from "undici";
 import { createProxyDispatcher, normalizeProxyUrl } from "./proxyDispatcher.ts";
 import { resolveProxyForScopeFromRegistry, listProxies } from "@/lib/db/proxies";
-import { listOneproxyProxies } from "@/lib/db/oneproxy";
 import { decodeUserinfo } from "@/shared/utils/decodeUserinfo";
 import { isFeatureFlagEnabled } from "@/shared/utils/featureFlags";
 
@@ -157,8 +156,7 @@ function resolveEnvProxyUrl(targetUrl: string): string | null {
  * Collect all available proxy candidates from every source:
  * 1. Global proxy from registry
  * 2. All user-configured proxies from the proxy registry
- * 3. Top 5 1proxy marketplace proxies
- * 4. Environment proxy (HTTP_PROXY / HTTPS_PROXY / ALL_PROXY)
+ * 3. Environment proxy (HTTP_PROXY / HTTPS_PROXY / ALL_PROXY)
  *
  * @param targetUrl Optional. When provided, the env proxy is resolved for this URL.
  * @returns Deduplicated array of normalized proxy URLs.
@@ -188,19 +186,7 @@ export async function getProxyCandidates(targetUrl?: string): Promise<string[]> 
     // Table may not exist yet
   }
 
-  // 3. Top 5 1proxy marketplace proxies
-  try {
-    const oneproxyProxies = await listOneproxyProxies({ limit: 5 });
-    for (const p of oneproxyProxies) {
-      if (p.host && p.port) {
-        candidates.add(proxyRecordToUrl(p as unknown as ProxyShape));
-      }
-    }
-  } catch {
-    // Table may not exist yet
-  }
-
-  // 4. Environment proxy (needs targetUrl to determine protocol)
+  // 3. Environment proxy (needs targetUrl to determine protocol)
   if (targetUrl) {
     try {
       const envProxy = resolveEnvProxyUrl(targetUrl);

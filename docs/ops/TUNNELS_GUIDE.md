@@ -325,7 +325,7 @@ or run the daemon yourself (`sudo systemctl start tailscaled`).
 
 ## See also
 
-- [PROXY_GUIDE.md](./PROXY_GUIDE.md) — outbound proxy (1proxy, SOCKS5, HTTP) for
+- [PROXY_GUIDE.md](./PROXY_GUIDE.md) — outbound proxy (SOCKS5, HTTP) for
   egress traffic.
 - [ENVIRONMENT.md](../reference/ENVIRONMENT.md) — full list of env vars including
   `NEXT_PUBLIC_BASE_URL`.

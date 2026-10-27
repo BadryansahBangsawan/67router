@@ -34,6 +34,14 @@ const REMOVED_PATHS: string[] = [
   "src/app/api/v1/moderations",
   "open-sse/handlers/moderations.ts",
   "bin/cli/api-commands/moderations.mjs",
+  // free proxies
+  "src/lib/freeProxyProviders",
+  "src/app/api/settings/free-proxies",
+  "src/app/api/settings/oneproxy",
+  "src/lib/db/freeProxies.ts",
+  "src/lib/db/oneproxy.ts",
+  "src/app/(dashboard)/dashboard/settings/components/proxy/FreePoolTab.tsx",
+  "bin/cli/commands/oneproxy.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -55,6 +63,12 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   // moderations
   /handlers\/moderations/,
   /api\/v1\/moderations/,
+  // free proxies
+  /freeProxyProviders/,
+  /db\/(freeProxies|oneproxy)\b/,
+  /settings\/(free-proxies|oneproxy)/,
+  /omniroute_oneproxy_/,
+  /FreePoolTab/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

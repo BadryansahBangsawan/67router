@@ -64,12 +64,6 @@
 - [`GET /api/settings/feature-flags`](#get-apisettingsfeature-flags)
 - [`PUT /api/settings/feature-flags`](#put-apisettingsfeature-flags)
 - [`DELETE /api/settings/feature-flags`](#delete-apisettingsfeature-flags)
-- [`GET /api/settings/free-proxies`](#get-apisettingsfree-proxies)
-- [`DELETE /api/settings/free-proxies`](#delete-apisettingsfree-proxies)
-- [`POST /api/settings/free-proxies/{id}/add-to-pool`](#post-apisettingsfree-proxiesidadd-to-pool)
-- [`POST /api/settings/free-proxies/bulk-add-to-pool`](#post-apisettingsfree-proxiesbulk-add-to-pool)
-- [`GET /api/settings/free-proxies/stats`](#get-apisettingsfree-proxiesstats)
-- [`POST /api/settings/free-proxies/sync`](#post-apisettingsfree-proxiessync)
 - [`POST /api/settings/import-json`](#post-apisettingsimport-json)
 - [`DELETE /api/settings/lkgp-cache`](#delete-apisettingslkgp-cache)
 - [`GET /api/settings/local-corpus`](#get-apisettingslocal-corpus)
@@ -93,10 +87,6 @@
 - [`GET /api/settings/obsidian/webdav`](#get-apisettingsobsidianwebdav)
 - [`POST /api/settings/obsidian/webdav`](#post-apisettingsobsidianwebdav)
 - [`DELETE /api/settings/obsidian/webdav`](#delete-apisettingsobsidianwebdav)
-- [`GET /api/settings/oneproxy`](#get-apisettingsoneproxy)
-- [`POST /api/settings/oneproxy`](#post-apisettingsoneproxy)
-- [`DELETE /api/settings/oneproxy`](#delete-apisettingsoneproxy)
-- [`POST /api/settings/oneproxy/rotate`](#post-apisettingsoneproxyrotate)
 - [`GET /api/settings/proxies`](#get-apisettingsproxies)
 - [`POST /api/settings/proxies`](#post-apisettingsproxies)
 - [`PATCH /api/settings/proxies`](#patch-apisettingsproxies)
@@ -808,66 +798,6 @@ curl -X DELETE http://localhost:20128/api/settings/feature-flags \
   -H "Authorization: Bearer $OMNIROUTE_TOKEN"
 ```
 
-### GET /api/settings/free-proxies
-
-GET settings › free proxies
-
-```bash
-curl http://localhost:20128/api/settings/free-proxies \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### DELETE /api/settings/free-proxies
-
-DELETE settings › free proxies
-
-```bash
-curl -X DELETE http://localhost:20128/api/settings/free-proxies \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### POST /api/settings/free-proxies/{id}/add-to-pool
-
-POST settings › free proxies › <id> › add to pool
-
-```bash
-curl -X POST http://localhost:20128/api/settings/free-proxies/{id}/add-to-pool \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### POST /api/settings/free-proxies/bulk-add-to-pool
-
-POST settings › free proxies › bulk add to pool
-
-```bash
-curl -X POST http://localhost:20128/api/settings/free-proxies/bulk-add-to-pool \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### GET /api/settings/free-proxies/stats
-
-GET settings › free proxies › stats
-
-```bash
-curl http://localhost:20128/api/settings/free-proxies/stats \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### POST /api/settings/free-proxies/sync
-
-POST settings › free proxies › sync
-
-```bash
-curl -X POST http://localhost:20128/api/settings/free-proxies/sync \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
 ### POST /api/settings/import-json
 
 POST settings › import json
@@ -1093,46 +1023,6 @@ DELETE settings › obsidian › webdav
 ```bash
 curl -X DELETE http://localhost:20128/api/settings/obsidian/webdav \
   -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### GET /api/settings/oneproxy
-
-GET settings › oneproxy
-
-```bash
-curl http://localhost:20128/api/settings/oneproxy \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### POST /api/settings/oneproxy
-
-POST settings › oneproxy
-
-```bash
-curl -X POST http://localhost:20128/api/settings/oneproxy \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### DELETE /api/settings/oneproxy
-
-DELETE settings › oneproxy
-
-```bash
-curl -X DELETE http://localhost:20128/api/settings/oneproxy \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### POST /api/settings/oneproxy/rotate
-
-POST settings › oneproxy › rotate
-
-```bash
-curl -X POST http://localhost:20128/api/settings/oneproxy/rotate \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
 ```
 
 ### GET /api/settings/proxies

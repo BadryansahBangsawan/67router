@@ -176,7 +176,6 @@ Subsequent migrations add tables such as:
 - `compression_*` tables — compression system
 - `webhook_*` tables — webhook delivery log
 - `acp_*` tables — Agent Client Protocol
-- `oneproxy_*` tables — 1proxy marketplace
 - `proxy_assignments` — proxy scope bindings
 - `detailed_call_artifacts` — call log artifacts metadata
 - `quota_alert_history` — quota alert audit

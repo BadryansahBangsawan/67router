@@ -12575,53 +12575,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/settings/free-proxies:
-    delete:
-      tags:
-        - Settings
-      summary: "DELETE settings › free proxies"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Settings
-      summary: "GET settings › free proxies"
-      responses:
-        "200":
-          description: OK
-  /api/settings/free-proxies/{id}/add-to-pool:
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › free proxies › <id> › add to pool"
-      responses:
-        "200":
-          description: OK
-  /api/settings/free-proxies/bulk-add-to-pool:
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › free proxies › bulk add to pool"
-      responses:
-        "200":
-          description: OK
-  /api/settings/free-proxies/stats:
-    get:
-      tags:
-        - Settings
-      summary: "GET settings › free proxies › stats"
-      responses:
-        "200":
-          description: OK
-  /api/settings/free-proxies/sync:
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › free proxies › sync"
-      responses:
-        "200":
-          description: OK
   /api/settings/import-json:
     post:
       tags:
@@ -12804,36 +12757,6 @@ paths:
         - Settings
       summary: "POST settings › obsidian › webdav"
       x-always-protected: true
-      responses:
-        "200":
-          description: OK
-  /api/settings/oneproxy:
-    delete:
-      tags:
-        - Settings
-      summary: "DELETE settings › oneproxy"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Settings
-      summary: "GET settings › oneproxy"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › oneproxy"
-      responses:
-        "200":
-          description: OK
-  /api/settings/oneproxy/rotate:
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › oneproxy › rotate"
       responses:
         "200":
           description: OK
