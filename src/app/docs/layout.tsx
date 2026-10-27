@@ -1,6 +1,5 @@
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
-import { source } from "@/lib/source";
 import type { ReactNode } from "react";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 import { Suspense } from "react";
@@ -24,6 +23,8 @@ export async function generateMetadata() {
 
 export default async function Layout({ children }: { children: ReactNode }) {
   const t = await getTranslations("docs");
+  // Loaded lazily: see tests/unit/docs-source-lazy-import.test.ts.
+  const { source } = await import("@/lib/source");
   const docsLayoutOptions: BaseLayoutProps = {
     nav: {
       title: t("layoutNavTitle"),
