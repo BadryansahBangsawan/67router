@@ -86,8 +86,6 @@ const PATH_AREA_MAP: Array<[string, SkillArea]> = [
   // DB backups
   ["/api/system", "db-backups"],
   ["/api/backup", "db-backups"],
-  // Webhooks
-  ["/api/webhooks", "webhooks"],
   // MCP
   ["/api/mcp", "mcp"],
   // A2A

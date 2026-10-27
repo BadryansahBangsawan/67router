@@ -190,7 +190,7 @@ Full step-by-step recipes: [`docs/architecture/MODIFICATION_SCENARIOS.md`](docs/
 - **New A2A skill**: `src/lib/a2a/skills/` → `A2A_SKILL_HANDLERS` → Agent Card → tests + doc table.
 - **New cloud agent**: `src/lib/cloudAgent/agents/` (extends `CloudAgentBase`) → `registry.ts` → OAuth → tests + doc.
 - **New embedded service**: installer → `bootstrap.ts` → DB seed → 8 API endpoints + `isLocalOnlyPath()` guard → UI tab → docs + OpenAPI → tests.
-- **Guardrail / eval / skill / webhook / log-export destination**: see the detail doc.
+- **Guardrail / eval / skill / log-export destination**: see the detail doc.
 
 ---
 
@@ -205,7 +205,7 @@ For any non-trivial change, read the matching deep-dive first:
 - Skills framework — `docs/frameworks/SKILLS.md` · Radar (free-model catalog overlay) — `docs/frameworks/RADAR.md` · Memory system (FTS5 + Qdrant) — `docs/frameworks/MEMORY.md`
 - Cloud agents — `docs/frameworks/CLOUD_AGENT.md` · Agent protocols (A2A / ACP / Cloud) — `docs/frameworks/AGENT_PROTOCOLS_GUIDE.md`
 - Guardrails (PII / injection / vision) — `docs/security/GUARDRAILS.md` · Public upstream credentials (Gemini/etc.) — `docs/security/PUBLIC_CREDS.md` · Error message sanitization — `docs/security/ERROR_SANITIZATION.md` · Compliance / audit — `docs/security/COMPLIANCE.md` · Stealth (TLS / fingerprint) — `docs/security/STEALTH_GUIDE.md`
-- Evals — `docs/frameworks/EVALS.md` · Webhooks — `docs/frameworks/WEBHOOKS.md` · Log export (call logs → BigQuery/…) — `docs/frameworks/LOG-EXPORT.md`
+- Evals — `docs/frameworks/EVALS.md` · Log export (call logs → BigQuery/…) — `docs/frameworks/LOG-EXPORT.md`
 - Authorization pipeline — `docs/architecture/AUTHZ_GUIDE.md`
 - MCP server — `docs/frameworks/MCP-SERVER.md` · A2A server — `docs/frameworks/A2A-SERVER.md`
 - API reference + OpenAPI — `docs/reference/API_REFERENCE.md` + `docs/openapi.yaml` · Provider catalog (auto-generated) — `docs/reference/PROVIDER_REFERENCE.md`

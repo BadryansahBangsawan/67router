@@ -276,8 +276,6 @@ tags:
     description: Version manager endpoints (generated route coverage)
   - name: Vnc session
     description: Vnc session endpoints (generated route coverage)
-  - name: Webhooks
-    description: Webhooks endpoints (generated route coverage)
 
 paths:
   /api/v1/session-leases:
@@ -14670,68 +14668,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/webhooks:
-    get:
-      tags:
-        - Webhooks
-      summary: "GET webhooks"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Webhooks
-      summary: "POST webhooks"
-      responses:
-        "200":
-          description: OK
-  /api/webhooks/{id}:
-    delete:
-      tags:
-        - Webhooks
-      summary: "DELETE webhooks › <id>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Webhooks
-      summary: "GET webhooks › <id>"
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Webhooks
-      summary: "PUT webhooks › <id>"
-      responses:
-        "200":
-          description: OK
-  /api/webhooks/{id}/deliveries:
-    get:
-      tags:
-        - Webhooks
-      summary: "GET webhooks › <id> › deliveries"
-      responses:
-        "200":
-          description: OK
-  /api/webhooks/{id}/test:
-    post:
-      tags:
-        - Webhooks
-      summary: "POST webhooks › <id> › test"
-      responses:
-        "200":
-          description: OK
-  /api/webhooks/validate-url:
-    post:
-      tags:
-        - Webhooks
-      summary: "POST webhooks › validate url"
-      responses:
-        "200":
-          description: OK
-
 components:
   securitySchemes:
     BearerAuth:

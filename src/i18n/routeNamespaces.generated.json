@@ -1634,34 +1634,6 @@
       "trafficInspector",
       "usage",
       "usageLimits"
-    ],
-    "webhooks": [
-      "agentSkills",
-      "analytics",
-      "breadcrumbs",
-      "cache",
-      "cloudSyncStatus",
-      "codexKeyServiceMode",
-      "common",
-      "costs",
-      "cursorAuthModal",
-      "header",
-      "kiroAuthModal",
-      "kiroSocialOAuthModal",
-      "noAuthProvider",
-      "oauthModal",
-      "proxyConfigModal",
-      "proxyLog",
-      "proxyLogger",
-      "reasoningRouting",
-      "requestLogger",
-      "requestTimeline",
-      "sharedComponents",
-      "sidebar",
-      "stats",
-      "traeAuthModal",
-      "trafficInspector",
-      "webhooks"
     ]
   }
 }

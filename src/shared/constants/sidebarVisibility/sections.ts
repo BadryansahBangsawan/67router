@@ -306,13 +306,6 @@ const INTEGRATIONS_GROUP: SidebarItemGroup = {
       icon: "api",
     },
     {
-      id: "webhooks",
-      href: "/dashboard/webhooks",
-      i18nKey: "webhooks",
-      subtitleKey: "webhooksSubtitle",
-      icon: "webhook",
-    },
-    {
       id: "log-export",
       href: "/dashboard/log-export",
       i18nKey: "logExport",

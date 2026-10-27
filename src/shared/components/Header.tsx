@@ -100,7 +100,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "search-tools": "searchToolsDescription",
   logs: "logsDescription",
   audit: "auditDescription",
-  webhooks: "webhooksDescription",
   health: "healthDescription",
   proxy: "proxyDescription",
   changelog: "changelogDescription",

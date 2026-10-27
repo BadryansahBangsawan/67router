@@ -4,9 +4,8 @@ import { Agent, fetch as undiciFetch } from "undici";
 
 /**
  * Shared DNS-resolve-then-pin primitives (#12569). Originally written only for
- * `remoteImageFetch.ts` (GHSA-cmhj-wh2f-9cgx); extracted here so the webhook outbound-URL
- * guard (`webhookFetch.ts`) can reuse the exact same connection-pinning mechanism instead of
- * duplicating it. `remoteImageFetch.ts` re-exports `createPinnedFetch` from here for backward
+ * `remoteImageFetch.ts` (GHSA-cmhj-wh2f-9cgx) and extracted here so other outbound-URL
+ * guards can reuse the same connection-pinning mechanism. `remoteImageFetch.ts` re-exports `createPinnedFetch` from here for backward
  * compatibility with its existing import path.
  */
 

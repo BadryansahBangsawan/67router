@@ -37,7 +37,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "discovery",
   // OmniProxy > Integrations
   "api-endpoints",
-  "webhooks",
   "log-export",
   // OmniProxy — proxy tools
   "mitm-proxy",

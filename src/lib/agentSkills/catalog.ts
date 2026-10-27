@@ -35,7 +35,6 @@ export const API_SKILL_IDS: readonly string[] = [
   "omni-tunnels",
   "omni-sync-cloud",
   "omni-db-backups",
-  "omni-webhooks",
   "omni-mcp",
   "omni-agents-a2a",
   "omni-version-manager",

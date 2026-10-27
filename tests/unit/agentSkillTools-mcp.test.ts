@@ -58,17 +58,17 @@ test("each agentSkillTool has name, description, inputSchema, and handler", () =
 
 // ─── omniroute_agent_skills_list ────────────────────────────────────────────
 
-// 45 since #9058 added the ponytail external entry (44 canonical + 1 external).
-test("omniroute_agent_skills_list with no filters returns all 45 skills", async () => {
+// 44 since #9058 added the ponytail external entry (43 canonical + 1 external).
+test("omniroute_agent_skills_list with no filters returns all 44 skills", async () => {
   const result = await agentSkillTools.omniroute_agent_skills_list.handler({});
-  assert.equal(result.count, 45, `Expected 45 but got ${result.count}`);
+  assert.equal(result.count, 44, `Expected 44 but got ${result.count}`);
   assert.ok(Array.isArray(result.skills));
-  assert.equal(result.skills.length, 45);
+  assert.equal(result.skills.length, 44);
 });
 
-test("omniroute_agent_skills_list({category:'api'}) returns exactly 23 entries", async () => {
+test("omniroute_agent_skills_list({category:'api'}) returns exactly 22 entries", async () => {
   const result = await agentSkillTools.omniroute_agent_skills_list.handler({ category: "api" });
-  assert.equal(result.count, 23, `Expected 23 api skills but got ${result.count}`);
+  assert.equal(result.count, 22, `Expected 22 api skills but got ${result.count}`);
   assert.ok(result.skills.every((s: { category: string }) => s.category === "api"));
 });
 
@@ -90,7 +90,7 @@ test("omniroute_agent_skills_list result includes coverage shape", async () => {
   assert.ok(typeof result.coverage.api === "object");
   assert.ok(typeof result.coverage.cli === "object");
   assert.ok(typeof result.coverage.config === "object");
-  assert.equal(result.coverage.api.total, 23);
+  assert.equal(result.coverage.api.total, 22);
   assert.equal(result.coverage.cli.total, 20);
   assert.equal(result.coverage.config.total, 1);
   assert.ok(typeof result.coverage.totalSkills === "number");
@@ -190,12 +190,12 @@ test("omniroute_agent_skills_coverage({}) returns coverage shape", async () => {
   assert.ok(typeof result.api === "object");
   assert.ok(typeof result.cli === "object");
   assert.ok(typeof result.config === "object");
-  assert.equal(result.api.total, 23);
+  assert.equal(result.api.total, 22);
   assert.equal(result.cli.total, 20);
   assert.equal(result.config.total, 1);
   assert.ok(typeof result.api.have === "number");
   assert.ok(typeof result.cli.have === "number");
-  assert.ok(result.api.have >= 0 && result.api.have <= 23);
+  assert.ok(result.api.have >= 0 && result.api.have <= 22);
   assert.ok(result.cli.have >= 0 && result.cli.have <= 20);
   assert.ok(result.config.have >= 0 && result.config.have <= 1);
   assert.ok(typeof result.totalSkills === "number");

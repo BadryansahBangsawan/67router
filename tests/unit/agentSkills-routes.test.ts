@@ -5,7 +5,7 @@
  * Auth tested via requireManagementAuth with live DB in temp directory.
  *
  * Coverage goals:
- * - GET  /api/agent-skills           — happy path (45 skills), filters, invalid category
+ * - GET  /api/agent-skills           — happy path (44 skills), filters, invalid category
  * - GET  /api/agent-skills/[id]      — found, 404 not found
  * - GET  /api/agent-skills/[id]/raw  — found, 404 not found, 502 on GitHub failure
  * - GET  /api/agent-skills/coverage  — happy path
@@ -101,26 +101,26 @@ test.after(() => {
 // GET /api/agent-skills
 // ═════════════════════════════════════════════════════════════════════════════
 
-// 45 = 23 api + 20 cli + 1 config + 1 external ("ponytail", added in #9058 / 2e799b33a7).
-test("GET /api/agent-skills — returns 45 skills with count and coverage", async () => {
+// 44 = 22 api + 20 cli + 1 config + 1 external ("ponytail", added in #9058 / 2e799b33a7).
+test("GET /api/agent-skills — returns 44 skills with count and coverage", async () => {
   const req = makeRequest("GET", "http://localhost/api/agent-skills");
   const res = await listRoute.GET(req);
 
   assert.equal(res.status, 200);
   const body = (await res.json()) as { skills: unknown[]; count: number; coverage: unknown };
-  assert.equal(body.count, 45, `Expected 45 skills but got ${body.count}`);
+  assert.equal(body.count, 44, `Expected 44 skills but got ${body.count}`);
   assert.equal(Array.isArray(body.skills), true);
-  assert.equal(body.skills.length, 45);
+  assert.equal(body.skills.length, 44);
   assert.ok(body.coverage !== undefined, "coverage should be present");
 });
 
-test("GET /api/agent-skills?category=api — returns 23 api skills", async () => {
+test("GET /api/agent-skills?category=api — returns 22 api skills", async () => {
   const req = makeRequest("GET", "http://localhost/api/agent-skills?category=api");
   const res = await listRoute.GET(req);
 
   assert.equal(res.status, 200);
   const body = (await res.json()) as { skills: Array<{ category: string }>; count: number };
-  assert.equal(body.count, 23);
+  assert.equal(body.count, 22);
   assert.ok(
     body.skills.every((s) => s.category === "api"),
     "All skills should be api category"
@@ -287,7 +287,7 @@ test("GET /api/agent-skills/coverage — returns valid SkillCoverage shape", asy
     generatedAt: string;
   };
 
-  assert.equal(body.api.total, 23, "api.total must be 23");
+  assert.equal(body.api.total, 22, "api.total must be 22");
   assert.equal(body.cli.total, 20, "cli.total must be 20");
   assert.ok(typeof body.totalSkills === "number", "totalSkills must be a number");
   assert.ok(typeof body.generatedAt === "string", "generatedAt must be a string");

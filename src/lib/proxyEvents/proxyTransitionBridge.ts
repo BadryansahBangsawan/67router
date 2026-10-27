@@ -2,8 +2,7 @@
  * Proxy transition bridge.
  *
  * Subscribes to proxy set-aside transitions from the refusal store and emits
- * `proxy.set_aside` to the dashboard event bus plus the webhook dispatcher
- * (fire-and-forget). Imported once at server boot (see instrumentation-node);
+ * `proxy.set_aside` to the dashboard event bus. Imported once at server boot (see instrumentation-node);
  * importing this module registers the subscription as a side effect.
  *
  * Pure helpers (maskEgressKey, buildPoolExhaustedEvent, shouldEmitPoolExhausted)
@@ -69,13 +68,6 @@ export function emitSetAside(transition: ProxyTransition): boolean {
     timestamp: now,
   };
   emit("proxy.set_aside", payload);
-  void import("@/lib/webhookDispatcher")
-    .then(({ notifyWebhookEvent }) => {
-      notifyWebhookEvent("proxy.set_aside", payload);
-    })
-    .catch(() => {
-      /* webhook delivery is best-effort */
-    });
   return true;
 }
 
@@ -138,13 +130,6 @@ export function maybeEmitPoolExhausted(
   if (!shouldEmitPoolExhausted(scope, candidates.length, setAsideCount, now)) return false;
   const event = buildPoolExhaustedEvent(scope, candidates.length, setAsideCount, now);
   emit("proxy.pool.exhausted", event);
-  void import("@/lib/webhookDispatcher")
-    .then(({ notifyWebhookEvent }) => {
-      notifyWebhookEvent("proxy.pool.exhausted", event);
-    })
-    .catch(() => {
-      /* webhook delivery is best-effort */
-    });
   return true;
 }
 

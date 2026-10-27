@@ -45,7 +45,7 @@ The v3.7.x → v3.8.0 cycle added zero-config auto routing, new providers, OAuth
 - 🤝 **GitLab Duo OAuth provider** — login with GitLab credentials
 - 🧠 **Reasoning Replay Cache** — hybrid in-memory + SQLite persistence of reasoning traces
 
-📚 **Related docs:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
+📚 **Related docs:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
 
 ---
 

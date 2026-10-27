@@ -34,7 +34,6 @@ DeepSeek, Groq, xAI, Mistral, and many more). It supports:
 - **MITM Proxy**: Intercept desktop AI apps and route through OmniRoute
 - **Dashboard**: Web UI for monitoring and configuration
 - **CLI**: Full command-line interface for headless operations
-- **Webhooks**: HMAC-signed delivery with exponential backoff
 - **Memory system**: Persistent conversational memory across sessions
 - **Skills system**: Extensible skill framework with sandbox execution
 
@@ -127,9 +126,6 @@ Lite: collapse whitespace, dedup system, compress tool results, etc.
 ### 3.9 MCP Server (107 tools)
 Core: health, combos, routing, cost, session, models, web search
 Cache, compression, memory, skills tools
-
-### 3.10 Webhooks
-7 event types, exponential backoff, auto-disable at 10 failures.
 
 ---
 

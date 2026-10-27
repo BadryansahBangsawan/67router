@@ -132,7 +132,6 @@ export const KNOWN_MISSING_ERROR_HELPER = new Set([
   "src/app/api/cli-tools/grok-build-settings/route.ts",
   "src/app/api/github-skills/route.ts", // inner per-target catch in a results map
   "src/app/api/skills/collect/install/route.ts", // inner per-target catch
-  "src/app/api/webhooks/[id]/test/route.ts",
 ]);
 
 // G-03 (#15159): a line that actually routes an error value through a sanitizer

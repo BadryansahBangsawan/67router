@@ -42,6 +42,15 @@ const REMOVED_PATHS: string[] = [
   "src/lib/db/oneproxy.ts",
   "src/app/(dashboard)/dashboard/settings/components/proxy/FreePoolTab.tsx",
   "bin/cli/commands/oneproxy.mjs",
+  // webhooks
+  "src/lib/webhookDispatcher.ts",
+  "src/lib/webhooks",
+  "src/shared/network/webhookFetch.ts",
+  "src/lib/db/webhooks.ts",
+  "src/lib/db/webhookDeliveries.ts",
+  "src/app/api/webhooks",
+  "src/app/(dashboard)/dashboard/webhooks",
+  "bin/cli/commands/webhooks.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -69,6 +78,12 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /settings\/(free-proxies|oneproxy)/,
   /omniroute_oneproxy_/,
   /FreePoolTab/,
+  // webhooks
+  /webhookDispatcher/,
+  /lib\/webhooks\//,
+  /db\/webhook(s|Deliveries)\b/,
+  /api\/webhooks/,
+  /dashboard\/webhooks/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

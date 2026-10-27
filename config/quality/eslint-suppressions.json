@@ -2225,11 +2225,6 @@
       "count": 1
     }
   },
-  "tests/unit/api/webhooks/webhook-url-ssrf-guard.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "tests/unit/apikey-connection-health-check.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 1
@@ -2756,11 +2751,6 @@
   "tests/unit/cli-usage.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 17
-    }
-  },
-  "tests/unit/cli-webhooks-commands.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 23
     }
   },
   "tests/unit/cli/alias-resolver-7791.test.ts": {
@@ -4939,11 +4929,6 @@
   "tests/unit/web-session-pool-health.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 2
-    }
-  },
-  "tests/unit/webhook-abort-timer-cleanup.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 5
     }
   },
   "tests/unit/xiaomi-providers-registry.test.ts": {

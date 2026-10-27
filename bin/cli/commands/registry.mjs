@@ -5,7 +5,6 @@ import { registerOAuth } from "./oauth.mjs";
 import { registerLogin } from "./login.mjs";
 import { registerCloud } from "./cloud.mjs";
 import { registerEval } from "./eval.mjs";
-import { registerWebhooks } from "./webhooks.mjs";
 import { registerPolicy } from "./policy.mjs";
 import { registerCompression } from "./compression.mjs";
 import { registerTranslator } from "./translator.mjs";
@@ -92,7 +91,6 @@ export function registerCommands(program) {
   registerLogin(program);
   registerCloud(program);
   registerEval(program);
-  registerWebhooks(program);
   registerPolicy(program);
   registerCompression(program);
   registerTranslator(program);

@@ -132,8 +132,6 @@ Main pages under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/cloud-agents` — cloud-hosted agent tasks (Codex Cloud, Devin, Jules) and task lifecycle
 - `/dashboard/skills` — A2A skill registry, sandbox execution, built-in skill catalog
 - `/dashboard/memory` — persistent conversational memory inspection and retrieval
-- `/dashboard/webhooks` — outbound webhook subscriptions, secret rotation, retry stats
-- `/dashboard/batch` — batch job submission and progress
 - `/dashboard/cache` — read-through and reasoning cache statistics, eviction controls
 - `/dashboard/playground` — interactive chat playground against any configured combo/model
 - `/dashboard/changelog` — in-app changelog viewer (renders `CHANGELOG.md`)
@@ -505,13 +503,8 @@ the global circuit breaker / connection cooldown / model lockout layers:
 For the full stealth playbook and operational guidance, see
 `docs/security/STEALTH_GUIDE.md` (git; not compiled into `/docs`).
 
-### H. Webhooks, Reasoning Cache, Read Cache
+### H. Reasoning Cache, Read Cache
 
-- **Webhooks** — outbound dispatch for provider/account/task events.
-  - Dispatcher: `src/lib/webhookDispatcher.ts`
-  - Storage: `webhooks` SQLite table (via `src/lib/db/webhooks.ts`)
-  - Dashboard: `/dashboard/webhooks` (subscriptions, secrets, retry history)
-  - For event taxonomy and retry semantics, see [`docs/frameworks/WEBHOOKS.md`](../frameworks/WEBHOOKS.md).
 - **Reasoning Cache** — replayable reasoning blocks for providers that emit
   thinking tokens (Claude, GLMT, etc.) so consecutive turns can skip re-thinking.
   - DB layer: `src/lib/db/reasoningCache.ts`

@@ -19,7 +19,6 @@ export type SkillArea =
   | "tunnels"
   | "sync-cloud"
   | "db-backups"
-  | "webhooks"
   | "mcp"
   | "agents-a2a"
   | "version-manager"

@@ -31,7 +31,6 @@ For the focused OpenAI-compatible protocol and provider capability matrix, see
 - [Semantic Cache](#semantic-cache)
 - [Dashboard & Management](#dashboard--management)
 - [Combo Management](#combo-management)
-- [Webhooks](#webhooks)
 - [Registered Keys (Auto-Management)](#registered-keys-auto-management)
 - [Agents Protocol](#agents-protocol)
 - [Management Proxies](#management-proxies)
@@ -1686,23 +1685,6 @@ Higher-level routing combos (already summarized under `/api/combos*`) can also b
 
 ---
 
-## Webhooks
-
-Outbound webhook subscriptions for OmniRoute events (request completion, quota exhaustion, key rotation, etc.).
-
-| Method | Path                      | Description                                                           |
-| ------ | ------------------------- | --------------------------------------------------------------------- |
-| GET    | `/api/webhooks`           | List webhooks (secrets are masked to `<prefix>...`)                   |
-| POST   | `/api/webhooks`           | Create webhook — body: `{url, events?: ["*"], secret?, description?}` |
-| GET    | `/api/webhooks/[id]`      | Retrieve a webhook                                                    |
-| PUT    | `/api/webhooks/[id]`      | Update url/events/secret/description                                  |
-| DELETE | `/api/webhooks/[id]`      | Remove a webhook                                                      |
-| POST   | `/api/webhooks/[id]/test` | Send a test payload to the webhook URL and return delivery status     |
-
-**Auth:** management session/API key (`requireManagementAuth`).
-
----
-
 ## Registered Keys (Auto-Management)
 
 Used by the auto-key management subsystem to issue and rotate API keys against a backing provider/account, with daily/hourly quotas.
@@ -2157,26 +2139,6 @@ Manage persistent memory (FTS5 + vector embeddings).
 | GET    | `/api/memory?q=`   | Search memory (FTS5 + vector) — stats are included in the same response |
 
 **Auth:** Requires management session or management-scoped API key.
-
----
-
-## Webhooks
-
-Manage webhook subscriptions for events.
-
-| Method | Path                            | Description                                                               |
-| ------ | ------------------------------- | ------------------------------------------------------------------------- |
-| GET    | `/api/webhooks`                 | List all webhook subscriptions                                            |
-| POST   | `/api/webhooks`                 | Create a webhook subscription — body: `{url, events[], secret?, active?}` |
-| GET    | `/api/webhooks/[id]`            | Get a specific webhook subscription                                       |
-| PUT    | `/api/webhooks/[id]`            | Update a webhook subscription                                             |
-| DELETE | `/api/webhooks/[id]`            | Delete a webhook subscription                                             |
-| GET    | `/api/webhooks/[id]/deliveries` | List delivery history for a webhook (success/failure log)                 |
-| POST   | `/api/webhooks/[id]/test`       | Send a test event to a webhook                                            |
-
-**Auth:** Requires management session.
-
-See [Webhooks Framework](../frameworks/WEBHOOKS.md) for full event types.
 
 ---
 

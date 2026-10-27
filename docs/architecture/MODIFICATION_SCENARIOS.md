@@ -83,7 +83,6 @@ lastUpdated: 2026-10-18
 - Guardrail: `src/lib/guardrails/` → docs: `docs/security/GUARDRAILS.md`
 - Eval suite: `src/lib/evals/` → docs: `docs/frameworks/EVALS.md`
 - Skill (sandbox): `src/lib/skills/` → docs: `docs/frameworks/SKILLS.md`
-- Webhook event: `src/lib/webhookDispatcher.ts` → docs: `docs/frameworks/WEBHOOKS.md`
 - Log-export destination: add `src/lib/logExport/destinations/<name>.ts` + one line in
   `src/lib/logExport/registry.ts` → docs: `docs/frameworks/LOG-EXPORT.md`. The runner, REST layer
   and dashboard form all read the registry, so nothing else changes.
