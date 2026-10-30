@@ -280,7 +280,7 @@ Google SDK เข้ามาใช้ โทเค็นการเข้า�
 - `send()` **ต้อง throw** เมื่อเกิดความล้มเหลวบางส่วน การ resolve หมายความว่า "ปลายทางมีแถวเหล่านี้แล้ว"
   และเคอร์เซอร์จะเลื่อนผ่านแถวเหล่านั้นอย่างถาวร
 - ปลายทางที่รับ URL จากผู้ใช้ต้องตรวจสอบ URL ผ่าน
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) ก่อนทำการ fetch
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) ก่อนทำการ fetch
   เช่นเดียวกับที่ webhook ทำ ส่วน BigQuery ไม่จำเป็นต้องทำเช่นนี้ เนื่องจากโฮสต์ของ BigQuery เป็นค่าคงที่
 
 ---

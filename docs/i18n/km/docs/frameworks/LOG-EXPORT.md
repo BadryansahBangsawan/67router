@@ -270,7 +270,7 @@ Batch ត្រូវបានបែងចែកជា chunk ដោយផ្អ�
 - `send()` **ត្រូវតែ throw** នៅពេលមានការបរាជ័យមួយផ្នែក។ ការដោះស្រាយបានជោគជ័យមានន័យថា «គោលដៅមានជួរដេកទាំងនេះ» ហើយ
   cursor នឹងផ្លាស់ទីរំលងពួកវាជាអចិន្ត្រៃយ៍។
 - គោលដៅដែលទទួល URL ផ្តល់ដោយអ្នកប្រើ ត្រូវតែ validate វាតាមរយៈ
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) មុនពេល fetch
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) មុនពេល fetch
   ដូចគ្នានឹងរបៀបដែល webhook ធ្វើ។ BigQuery មិនត្រូវការវាទេ៖ host របស់វាជាតម្លៃថេរ។
 
 ---

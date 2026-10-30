@@ -272,7 +272,7 @@ insertAll կանչերի, ուստի մեծ `batch_size`-ը չի կարող գե
 - Մասնակի ձախողման դեպքում `send()`-ը **պետք է բացառություն նետի**։ Հաջող ավարտը նշանակում է՝ «նպատակակետն ունի այս տողերը»,
   և կուրսորը մշտապես անցնում է դրանցից հետո։
 - Օգտատիրոջ տրամադրած URL ընդունող նպատակակետը հարցում կատարելուց առաջ պետք է վավերացնի այն
-  `parseAndValidateWebhookUrl`-ի (`src/shared/network/outboundUrlGuardPolicy.ts`) միջոցով՝
+  `parseAndValidatePublicUrl`-ի (`src/shared/network/outboundUrlGuard.ts`) միջոցով՝
   նույն կերպ, ինչպես դա անում են webhook-ները։ BigQuery-ի դեպքում սա անհրաժեշտ չէ. դրա հոսթերը հաստատուն են։
 
 ---

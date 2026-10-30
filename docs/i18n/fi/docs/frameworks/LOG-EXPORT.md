@@ -273,7 +273,7 @@ Uutta kohdetta koskee kaksi sääntöä:
 - `send()`-metodin **on aiheutettava poikkeus** osittaisen epäonnistumisen yhteydessä. Onnistunut suoritus tarkoittaa, että kohteessa ovat kyseiset rivit,
   ja kohdistin siirtyy pysyvästi niiden ohi.
 - Käyttäjän antaman URL-osoitteen vastaanottavan kohteen on validoitava se
-  `parseAndValidateWebhookUrl`-funktion (`src/shared/network/outboundUrlGuardPolicy.ts`) avulla ennen noutoa
+  `parseAndValidatePublicUrl`-funktion (`src/shared/network/outboundUrlGuard.ts`) avulla ennen noutoa
   samalla tavalla kuin webhookit. BigQuery ei tarvitse tätä, sillä sen isäntänimet ovat vakioita.
 
 ---

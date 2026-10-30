@@ -270,7 +270,7 @@ Dve pravidlá pre nový cieľ:
 - `send()` **musí vyvolať výnimku** pri čiastočnom zlyhaní. Úspešné dokončenie znamená „cieľ obsahuje tieto riadky“
   a kurzor sa natrvalo posunie za ne.
 - Cieľ, ktorý prijíma adresu URL zadanú používateľom, ju musí pred načítaním overiť pomocou
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) rovnakým spôsobom
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) rovnakým spôsobom
   ako webhooky. BigQuery to nepotrebuje: jeho hostitelia sú konštanty.
 
 ---

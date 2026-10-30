@@ -291,7 +291,7 @@ l-formola tad-dashboard kollha jaqraw mir-reġistru.
 - `send()` **għandu joħroġ eċċezzjoni** f'każ ta' falliment parzjali. Jekk jitlesta b'suċċess, dan ifisser "id-destinazzjoni għandha dawn ir-ringieli",
   u l-cursor jgħaddi lil hinn minnhom b'mod permanenti.
 - Destinazzjoni li tieħu URL ipprovdut mill-utent trid tivvalidah permezz ta'
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) qabel tagħmel fetch,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) qabel tagħmel fetch,
   bl-istess mod bħall-webhooks. BigQuery m'għandux bżonn dan: il-hosts tiegħu huma kostanti.
 
 ---

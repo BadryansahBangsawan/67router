@@ -270,7 +270,7 @@ Dwie zasady dotyczące nowego miejsca docelowego:
 - `send()` **musi zgłaszać wyjątek** w przypadku częściowego niepowodzenia. Pomyślne zakończenie oznacza „miejsce docelowe zawiera te wiersze”,
   a kursor zostaje trwale przesunięty poza nie.
 - Miejsce docelowe przyjmujące adres URL podany przez użytkownika musi przed pobraniem zweryfikować go za pomocą
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   tak samo jak webhooki. BigQuery tego nie wymaga, ponieważ jego hosty są stałe.
 
 ---

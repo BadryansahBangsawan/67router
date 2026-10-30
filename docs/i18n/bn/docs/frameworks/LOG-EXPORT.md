@@ -282,7 +282,7 @@ insertAll কলে ভাগ করে, তাই বড় `batch_size` BigQue
 - আংশিক ব্যর্থতায় `send()`-কে **অবশ্যই এরর থ্রো করতে হবে**। সফলভাবে রিজলভ হওয়ার অর্থ হলো, "গন্তব্যটিতে এই সারিগুলো রয়েছে",
   এবং কার্সর স্থায়ীভাবে সেগুলো অতিক্রম করে এগিয়ে যায়।
 - ব্যবহারকারীর দেওয়া URL গ্রহণ করে এমন গন্তব্যকে fetch করার আগে অবশ্যই
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`)-এর মাধ্যমে সেটি যাচাই করতে হবে,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`)-এর মাধ্যমে সেটি যাচাই করতে হবে,
   ঠিক যেভাবে webhooks করে। BigQuery-এর ক্ষেত্রে এটি প্রয়োজন নেই: এর হোস্টগুলো ধ্রুবক।
 
 ---

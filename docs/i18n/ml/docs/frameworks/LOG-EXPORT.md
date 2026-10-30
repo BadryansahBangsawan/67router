@@ -277,7 +277,7 @@ insertAll കോളുകളായി വിഭജിക്കുന്നു, �
 - ഭാഗിക പരാജയം സംഭവിക്കുമ്പോൾ `send()` **നിർബന്ധമായും throw ചെയ്യണം**. Resolve ചെയ്യുന്നത് "destination-ൽ ഈ rows ഉണ്ട്" എന്നാണ് അർത്ഥമാക്കുന്നത്,
   തുടർന്ന് cursor അവയെ ശാശ്വതമായി മറികടന്ന് മുന്നോട്ട് നീങ്ങും.
 - ഉപയോക്താവ് നൽകുന്ന URL സ്വീകരിക്കുന്ന destination, fetch ചെയ്യുന്നതിന് മുമ്പ്
-  webhooks ചെയ്യുന്നതുപോലെതന്നെ, `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) വഴി അത് validate ചെയ്യണം.
+  webhooks ചെയ്യുന്നതുപോലെതന്നെ, `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) വഴി അത് validate ചെയ്യണം.
   BigQuery-യ്ക്ക് ഇത് ആവശ്യമില്ല: അതിന്റെ hosts constants ആണ്.
 
 ---

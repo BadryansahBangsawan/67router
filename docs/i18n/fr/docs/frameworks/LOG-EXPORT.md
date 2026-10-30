@@ -282,7 +282,7 @@ Deux règles s’appliquent à une nouvelle destination :
 - `send()` **doit lever une exception** en cas d’échec partiel. Une résolution signifie que « la
   destination possède ces lignes », et le curseur les dépasse définitivement.
 - Une destination qui accepte une URL fournie par l’utilisateur doit la valider à l’aide de
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) avant d’effectuer
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) avant d’effectuer
   la requête, de la même manière que les webhooks. BigQuery n’en a pas besoin : ses hôtes sont
   des constantes.
 

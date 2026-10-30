@@ -275,8 +275,8 @@ dashboard form ಎಲ್ಲವೂ registry ಅನ್ನು ಓದುತ್ತವ
 - ಭಾಗಶಃ ವೈಫಲ್ಯ ಸಂಭವಿಸಿದಾಗ `send()` **throw ಮಾಡಲೇಬೇಕು**. resolve ಆಗುವುದು ಎಂದರೆ "ಗಮ್ಯಸ್ಥಾನವು ಈ rows ಅನ್ನು ಹೊಂದಿದೆ"
   ಎಂದರ್ಥ, ಮತ್ತು cursor ಅವುಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ದಾಟಿ ಮುಂದೆ ಸಾಗುತ್ತದೆ.
 - ಬಳಕೆದಾರರು ಒದಗಿಸಿದ URL ಅನ್ನು ಸ್ವೀಕರಿಸುವ ಗಮ್ಯಸ್ಥಾನವು fetch ಮಾಡುವ ಮೊದಲು,
-  webhooks ಮಾಡುವಂತೆಯೇ, `parseAndValidateWebhookUrl`
-  (`src/shared/network/outboundUrlGuardPolicy.ts`) ಮೂಲಕ ಅದನ್ನು validate ಮಾಡಬೇಕು. BigQuery ಗೆ ಇದರ ಅಗತ್ಯವಿಲ್ಲ:
+  webhooks ಮಾಡುವಂತೆಯೇ, `parseAndValidatePublicUrl`
+  (`src/shared/network/outboundUrlGuard.ts`) ಮೂಲಕ ಅದನ್ನು validate ಮಾಡಬೇಕು. BigQuery ಗೆ ಇದರ ಅಗತ್ಯವಿಲ್ಲ:
   ಅದರ hosts ಸ್ಥಿರಾಂಕಗಳಾಗಿವೆ.
 
 ---

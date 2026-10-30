@@ -254,7 +254,7 @@ Node 來隔離事件迴圈與 OOM；此處並未將 Bun 視為僅供開發使用
 - `send()` 在部分失敗時**必須擲出例外**。成功回傳表示「目的地已擁有這些資料列」，
   且游標會永久移過這些資料列。
 - 接受使用者提供 URL 的目的地，必須在擷取前透過
-  `parseAndValidateWebhookUrl`（`src/shared/network/outboundUrlGuardPolicy.ts`）驗證該 URL，
+  `parseAndValidatePublicUrl`（`src/shared/network/outboundUrlGuard.ts`）驗證該 URL，
   與 Webhook 的處理方式相同。BigQuery 不需要這麼做：其主機為常數。
 
 ---

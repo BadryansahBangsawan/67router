@@ -274,7 +274,7 @@ Dua aturan untuk destinasi baru:
 - `send()` **harus melempar error** saat terjadi kegagalan parsial. Jika berhasil diselesaikan, artinya "destinasi memiliki baris-baris ini",
   dan kursor akan bergerak melewatinya secara permanen.
 - Destinasi yang menerima URL dari pengguna harus memvalidasinya melalui
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) sebelum melakukan pengambilan,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) sebelum melakukan pengambilan,
   dengan cara yang sama seperti webhook. BigQuery tidak memerlukan ini: host-nya adalah konstanta.
 
 ---

@@ -272,8 +272,8 @@ Two rules for a new destination:
 - `send()` **must throw** on a partial failure. Resolving means "the destination has these rows",
   and the cursor moves past them permanently.
 - A destination that takes a user-supplied URL must validate it through
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) before fetching,
-  the same way webhooks do. BigQuery does not need this: its hosts are constants.
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) before fetching.
+  BigQuery does not need this: its hosts are constants.
 
 ---
 

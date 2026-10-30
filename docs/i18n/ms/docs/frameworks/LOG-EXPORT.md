@@ -270,7 +270,7 @@ Dua peraturan untuk destinasi baharu:
 - `send()` **mesti membuang pengecualian** apabila berlaku kegagalan separa. Penyelesaian bermaksud "destinasi mempunyai baris-baris ini",
   dan kursor bergerak melepasi baris-baris tersebut secara kekal.
 - Destinasi yang menerima URL yang dibekalkan pengguna mesti mengesahkannya melalui
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) sebelum membuat permintaan,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) sebelum membuat permintaan,
   dengan cara yang sama seperti webhook. BigQuery tidak memerlukannya: hosnya ialah pemalar.
 
 ---

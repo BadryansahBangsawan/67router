@@ -279,7 +279,7 @@ Yeni bir hedef için iki kural vardır:
 - `send()`, kısmi bir hata durumunda **mutlaka hata fırlatmalıdır**. Başarıyla sonuçlanması, "hedef bu satırlara sahip"
   anlamına gelir ve imleç kalıcı olarak bu satırların ötesine ilerler.
 - Kullanıcı tarafından sağlanan bir URL'yi alan hedef, isteği göndermeden önce bu URL'yi
-  webhook'larla aynı şekilde `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) aracılığıyla doğrulamalıdır.
+  webhook'larla aynı şekilde `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) aracılığıyla doğrulamalıdır.
   BigQuery için buna gerek yoktur: kullandığı ana makineler sabittir.
 
 ---

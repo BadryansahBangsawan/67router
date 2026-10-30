@@ -285,7 +285,7 @@ Dos reglas para un destino nuevo:
 - `send()` **debe lanzar una excepción** ante un fallo parcial. Que se resuelva significa que «el destino tiene estas filas»,
   y el cursor avanza más allá de ellas permanentemente.
 - Un destino que acepte una URL proporcionada por el usuario debe validarla mediante
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) antes de realizar la solicitud,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) antes de realizar la solicitud,
   del mismo modo que lo hacen los webhooks. BigQuery no lo necesita: sus hosts son constantes.
 
 ---

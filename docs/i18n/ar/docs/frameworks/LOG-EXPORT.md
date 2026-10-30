@@ -267,7 +267,7 @@ Node لعزل حلقة الأحداث وحالات نفاد الذاكرة؛ و�
 - **يجب على `send()` طرح استثناء** عند حدوث فشل جزئي. ويعني اكتمالها بنجاح أن «الوجهة تحتوي على هذه الصفوف»،
   وأن المؤشر سيتجاوزها نهائيًا.
 - يجب على أي وجهة تقبل عنوان URL يقدمه المستخدم التحقق منه من خلال
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) قبل جلبه،
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) قبل جلبه،
   بالطريقة نفسها التي تتبعها خطافات الويب. لا يحتاج BigQuery إلى ذلك، لأن مضيفيه عبارة عن ثوابت.
 
 ---

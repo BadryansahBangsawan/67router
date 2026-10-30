@@ -286,7 +286,7 @@ Pro nový cíl platí dvě pravidla:
 - `send()` **musí vyvolat výjimku** při částečném selhání. Úspěšné dokončení znamená, že „cíl tyto řádky obsahuje“,
   a kurzor se za ně trvale posune.
 - Cíl, který přijímá adresu URL zadanou uživatelem, ji musí před načtením ověřit pomocí
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   stejně jako webhooky. BigQuery to nepotřebuje: jeho hostitelé jsou konstantní.
 
 ---

@@ -271,7 +271,7 @@ PII ਤੋਂ ਸਾਫ਼ ਅਤੇ ਗੁਪਤ ਜਾਣਕਾਰੀ ਤੋ�
 - ਅੰਸ਼ਕ ਅਸਫਲਤਾ ਹੋਣ 'ਤੇ `send()` ਨੂੰ **ਲਾਜ਼ਮੀ ਤੌਰ 'ਤੇ ਥ੍ਰੋ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ**। ਰਿਜ਼ਾਲਵ ਹੋਣ ਦਾ ਅਰਥ ਹੈ, "ਡੈਸਟਿਨੇਸ਼ਨ ਕੋਲ ਇਹ ਕਤਾਰਾਂ ਮੌਜੂਦ ਹਨ",
   ਅਤੇ ਕਰਸਰ ਉਨ੍ਹਾਂ ਤੋਂ ਪੱਕੇ ਤੌਰ 'ਤੇ ਅੱਗੇ ਚਲਾ ਜਾਂਦਾ ਹੈ।
 - ਉਪਭੋਗਤਾ ਵੱਲੋਂ ਦਿੱਤਾ URL ਲੈਣ ਵਾਲੇ ਡੈਸਟਿਨੇਸ਼ਨ ਨੂੰ fetch ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ,
-  webhooks ਵਾਂਗ ਹੀ, `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) ਰਾਹੀਂ ਉਸਦੀ ਵੈਧਤਾ ਜਾਂਚਣੀ ਲਾਜ਼ਮੀ ਹੈ।
+  webhooks ਵਾਂਗ ਹੀ, `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) ਰਾਹੀਂ ਉਸਦੀ ਵੈਧਤਾ ਜਾਂਚਣੀ ਲਾਜ਼ਮੀ ਹੈ।
   BigQuery ਨੂੰ ਇਸਦੀ ਲੋੜ ਨਹੀਂ ਹੈ: ਇਸਦੇ hosts ਸਥਿਰ ਹਨ।
 
 ---

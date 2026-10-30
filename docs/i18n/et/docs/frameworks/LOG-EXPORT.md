@@ -283,7 +283,7 @@ Kaks reeglit uue sihtkoha jaoks:
 - `send()` **peab osalise nurjumise korral erindi viskama**. Edukas lõpulejõudmine tähendab, et „sihtkohas on need read olemas”,
   ning kursor liigub neist jäädavalt edasi.
 - Kasutaja antud URL-i kasutav sihtkoht peab selle enne päringu tegemist valideerima funktsiooniga
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   samamoodi nagu veebihaagid. BigQuery puhul pole see vajalik: selle hostid on konstantsed.
 
 ---

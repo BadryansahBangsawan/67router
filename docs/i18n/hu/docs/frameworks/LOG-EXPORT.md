@@ -290,7 +290,7 @@ Két szabály vonatkozik az új célokra:
 - A `send()` függvénynek részleges hiba esetén **kivételt kell dobnia**. A sikeres visszatérés azt jelenti, hogy „a cél rendelkezik ezekkel a sorokkal”,
   és a kurzor véglegesen túllép rajtuk.
 - A felhasználó által megadott URL-t fogadó célnak a lekérés előtt a
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) segítségével kell ellenőriznie azt,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) segítségével kell ellenőriznie azt,
   ugyanúgy, ahogy a webhookok teszik. A BigQuery esetében erre nincs szükség: a gazdagépnevei állandók.
 
 ---
