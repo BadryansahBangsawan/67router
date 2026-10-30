@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Instrukcje wstawiane po prompcie agenta/provider...",
     "chars": "{count} znaków",
     "thinkingBudgetTitle": "Budżet na thinking",
-    "thinkingBudgetDesc": "__MISSING__:Controls whether 67router rewrites client thinking/reasoning parameters before requests go upstream. This is separate from compression, prompt cache, and API-key token limits.",
+    "thinkingBudgetDesc": "Kontrolowanie zużycia tokens reasoning AI we wszystkich żądaniach.",
     "thinkingBudgetIndependenceHint": "Funkcje kompresji, routingu i limitu tokenów działają w każdym trybie. Auto nie oznacza „automatycznego pokazywania myślenia” — usuwa pola rozumowania klienta.",
     "passthrough": "Przekazywanie bez zmian",
     "passthroughDesc": "Brak zmian — klient kontroluje budżet na thinking.",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Podgląd",
-    "description": "__MISSING__:Context-as-image compression. Renders the system prompt, tool documentation, and dense history as compact PNG pages for the measured Claude Fable 5 path. The published OmniGlyph package also exposes native GPT 5.6 transformers, but 67router keeps those routes fail-closed until provider fidelity and reading receipts exist.",
+    "description": "Kompresja kontekstu do obrazu. Renderuje monit systemowy, dokumentację narzędzi i gęstą historię jako kompaktowe strony PNG, które Claude Fable 5 odczytuje zamiast tekstu. Tokeny obrazu są rozliczane na podstawie wymiarów, a nie znaków, dzięki czemu przekonwertowany blok kosztuje około 10-krotnie mniej. Tylko bezpośrednia trasa Anthropic.",
     "economicsTitle": "Ekonomia",
     "economics": {
       "fewerTokens": "mniej tokenów w przekonwertowanym bloku",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "__MISSING__:Only the measured Fable 5 path is enabled in 67router. GPT 5.6 is structurally supported by the package but remains blocked until its provider receipt; unverified families such as Grok stay text-only."
+        "why": "Tylko Fable 5 odczytuje gęste strony ze 100% dokładnością (zmierzono, n=30). GPT-5.5 i Gemini 2.5 Flash są zablokowane."
       },
       "transport": {
         "label": "Transport",

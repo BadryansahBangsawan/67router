@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Agent/provayder promptundan sonra daxil edilən təlimatlar...",
     "chars": "{count} simvol",
     "thinkingBudgetTitle": "Düşünmə Büdcəsi",
-    "thinkingBudgetDesc": "__MISSING__:Controls whether 67router rewrites client thinking/reasoning parameters before requests go upstream. This is separate from compression, prompt cache, and API-key token limits.",
+    "thinkingBudgetDesc": "Control AI reasoning token usage across all requests",
     "thinkingBudgetIndependenceHint": "Sıxma, yönləndirmə və token-limit xüsusiyyətləri hər bir rejimdə işləməyə davam edir. Auto \"avtomatik düşüncə göstərmək\" demək deyil - bu, müştəri düşüncə sahələrini çıxarır.",
     "passthrough": "Dəyişikliksiz ötürmə",
     "passthroughDesc": "Dəyişiklik yoxdur — düşünmə büdcəsini müştəri idarə edir",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Önizləmə",
-    "description": "__MISSING__:Context-as-image compression. Renders the system prompt, tool documentation, and dense history as compact PNG pages for the measured Claude Fable 5 path. The published OmniGlyph package also exposes native GPT 5.6 transformers, but 67router keeps those routes fail-closed until provider fidelity and reading receipts exist.",
+    "description": "Kontekstin şəkil kimi sıxılması. Sistem sorğusunu, alət sənədlərini və sıx tarixçəni Claude Fable 5-in mətn əvəzinə oxuduğu yığcam PNG səhifələri kimi render edir. Şəkil tokenləri simvollar əvəzinə ölçülərə görə hesablanır, buna görə də çevrilmiş blok təxminən 10× daha ucuz başa gəlir. Yalnız birbaşa Anthropic marşrutu.",
     "economicsTitle": "İqtisadiyyat",
     "economics": {
       "fewerTokens": "çevrilmiş blokda daha az token",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "__MISSING__:Only the measured Fable 5 path is enabled in 67router. GPT 5.6 is structurally supported by the package but remains blocked until its provider receipt; unverified families such as Grok stay text-only."
+        "why": "Yalnız Fable 5 sıx səhifələri 100% dəqiqliklə oxuyur (ölçülmüş, n=30). GPT-5.5 və Gemini 2.5 Flash bloklanıb."
       },
       "transport": {
         "label": "Ötürmə",

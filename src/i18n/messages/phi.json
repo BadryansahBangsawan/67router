@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "__MISSING__:Configure AI coding assistants to route through 67router",
+    "toolCategoriesDesc": "Tool Categories Desc",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "__MISSING__:Use this provider only for relays that serve Claude Code clients exclusively. 67router rewrites any incoming request into the Claude Code-compatible wire format so those relays accept it. If you only want to use Claude Code CLI, or you are not sure what this relay type means, use a regular Anthropic-compatible provider instead.",
+    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Mga tagubiling isiningit pagkatapos ng prompt ng agent/provider...",
     "chars": "{count} character",
     "thinkingBudgetTitle": "Pag-iisip na Badyet",
-    "thinkingBudgetDesc": "__MISSING__:Controls whether 67router rewrites client thinking/reasoning parameters before requests go upstream. This is separate from compression, prompt cache, and API-key token limits.",
+    "thinkingBudgetDesc": "Kontrolin ang paggamit ng token ng pangangatwiran ng AI sa lahat ng kahilingan",
     "thinkingBudgetIndependenceHint": "Ang mga tampok ng compression, routing, at token-limit ay patuloy na gumagana sa bawat mode. Ang Auto ay hindi nangangahulugang \"auto-show thinking\" — inaalis nito ang mga field ng pag-iisip ng kliyente.",
     "passthrough": "Direktang Pagpasa",
     "passthroughDesc": "Walang pagbabago — kinokontrol ng kliyente ang pag-iisip na badyet",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Paunang tingin",
-    "description": "__MISSING__:Context-as-image compression. Renders the system prompt, tool documentation, and dense history as compact PNG pages for the measured Claude Fable 5 path. The published OmniGlyph package also exposes native GPT 5.6 transformers, but 67router keeps those routes fail-closed until provider fidelity and reading receipts exist.",
+    "description": "Context-as-image compression. Nire-render ang system prompt, dokumentasyon ng tool, at siksik na history bilang mga compact na PNG page na binabasa ng Claude Fable 5 sa halip na text. Ang mga image token ay sinisingil ayon sa mga dimensyon sa halip na mga character, kaya ang na-convert na block ay nagkakahalaga ng humigit-kumulang 10× na mas mababa. Direktang Anthropic route lamang.",
     "economicsTitle": "Ang ekonomiks",
     "economics": {
       "fewerTokens": "mas kaunting mga token sa na-convert na block",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Modelo",
         "pass": "claude-fable-5",
-        "why": "__MISSING__:Only the measured Fable 5 path is enabled in 67router. GPT 5.6 is structurally supported by the package but remains blocked until its provider receipt; unverified families such as Grok stay text-only."
+        "why": "Tanging Fable 5 lamang ang nagbabasa ng mga siksik na page sa 100% katumpakan (nasukat, n=30). Naka-block ang GPT-5.5 at Gemini 2.5 Flash."
       },
       "transport": {
         "label": "Transportasyon",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Ayusin ang 'command not found'",
     "setupGuideCommandMissingDesc": "Tiyaking umiiral sa PATH ang CLI command, magbukas ng bagong terminal session, at patakbuhin muli ang Refresh.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "__MISSING__:If you want to point Claude Code, Cursor, Codex, or any IDE at 67router as a proxy, go to CLI Tools instead. This page is for the reverse — using local CLI binaries as execution targets that 67router can spawn and route requests through.",
+    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "__MISSING__:When a request arrives, 67router can spawn a local CLI binary (e.g., claude, codex, goose) and pipe the request through it. The CLI processes the request using its own credentials and returns the result back through 67router.",
+    "architectureDescription": "Architecture Description",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "__MISSING__:2 · 67router spawns local binary",
+    "flowSpawn": "Flow Spawn",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "CLI Tools vs Agent Targets — Ano ang Pagkakaiba?",
     "comparisonCliToolsLabel": "Pahina ng CLI Tools",

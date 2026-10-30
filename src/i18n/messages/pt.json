@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "__MISSING__:Configure AI coding assistants to route through 67router",
+    "toolCategoriesDesc": "Tool Categories Desc",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -5840,7 +5840,7 @@
     "ccAliasLoadError": "Não foi possível carregar as definições dos aliases de deteção: {error}",
     "ccAliasSaveError": "Não foi possível guardar a definição do alias de deteção: {error}",
     "compatUpstreamHeadersLabel": "Cabeçalhos upstream extra",
-    "compatUpstreamHeadersHint": "__MISSING__:High-privilege setting — same trust level as editing provider API credentials; only trusted admins should use it. Merged after 67router adds auth from the provider API key. If a custom header uses the same name as an existing one (e.g. Authorization), your value fully replaces the auto-generated header (including the Bearer token) — the upstream only sees what you typed, not the key from settings. Misconfiguration can cause 401 or broken upstream auth. One row per header (e.g. extra Authentication for some gateways). Hover or focus the value to preview. Saves on blur, outside click, or closing this panel.",
+    "compatUpstreamHeadersHint": "Definição de alto privilégio — mesmo nível de confiança que editar credenciais de API do fornecedor; só admins de confiança devem usar.",
     "compatUpstreamHeaderName": "Nome do cabeçalho",
     "compatUpstreamHeaderValue": "Valor",
     "compatUpstreamAddRow": "Adicionar cabeçalho",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "__MISSING__:Use this provider only for relays that serve Claude Code clients exclusively. 67router rewrites any incoming request into the Claude Code-compatible wire format so those relays accept it. If you only want to use Claude Code CLI, or you are not sure what this relay type means, use a regular Anthropic-compatible provider instead.",
+    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -6930,7 +6930,7 @@
     "memoryTitle": "Memória",
     "memoryDesc": "Memória conversacional persistente entre sessões",
     "memoryEnabled": "Ativar Memória",
-    "memoryEnabledDesc": "__MISSING__:When enabled, 67router will inject relevant past context.",
+    "memoryEnabledDesc": "Quando ativado, injetará o contexto passado relevante de forma dinâmica.",
     "memoryTokenCostWarning": "Atenção: com a memória ativada, o 67router injeta até {tokens} tokens de contexto recuperado em cada pedido de chat — isto aumenta o uso de tokens e o custo. Para ignorar a injeção num pedido específico, envie o cabeçalho \"x-omniroute-no-memory: true\".",
     "maxTokens": "Tokens Máximos",
     "retentionDays": "Retenção",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Instruções inseridas após o prompt do agente/provedor...",
     "chars": "{count} caracteres",
     "thinkingBudgetTitle": "Pensando no orçamento",
-    "thinkingBudgetDesc": "__MISSING__:Controls whether 67router rewrites client thinking/reasoning parameters before requests go upstream. This is separate from compression, prompt cache, and API-key token limits.",
+    "thinkingBudgetDesc": "Controle o uso do token de raciocínio de IA em todas as solicitações",
     "thinkingBudgetIndependenceHint": "Os recursos de compressão, roteamento e limite de tokens continuam a funcionar em todos os modos. Auto não significa \"auto-exibir raciocínio\" — remove os campos de raciocínio do cliente.",
     "passthrough": "Passagem",
     "passthroughDesc": "Sem alterações – o cliente controla o orçamento pensado",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Pré-visualização",
-    "description": "__MISSING__:Context-as-image compression. Renders the system prompt, tool documentation, and dense history as compact PNG pages for the measured Claude Fable 5 path. The published OmniGlyph package also exposes native GPT 5.6 transformers, but 67router keeps those routes fail-closed until provider fidelity and reading receipts exist.",
+    "description": "Compressão de contexto como imagem. Renderiza a instrução do sistema, a documentação das ferramentas e o histórico denso como páginas PNG compactas que o Claude Fable 5 lê em vez de texto. Os tokens de imagem são faturados pelas dimensões e não pelos carateres, pelo que o bloco convertido custa cerca de 10× menos. Apenas rota direta da Anthropic.",
     "economicsTitle": "A economia",
     "economics": {
       "fewerTokens": "menos tokens no bloco convertido",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Modelo",
         "pass": "claude-fable-5",
-        "why": "__MISSING__:Only the measured Fable 5 path is enabled in 67router. GPT 5.6 is structurally supported by the package but remains blocked until its provider receipt; unverified families such as Grok stay text-only."
+        "why": "Apenas o Fable 5 lê páginas densas com 100% de precisão (medido, n=30). O GPT-5.5 e o Gemini 2.5 Flash estão bloqueados."
       },
       "transport": {
         "label": "Transporte",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Corrigir erro 'comando não encontrado'",
     "setupGuideCommandMissingDesc": "Certifica-te de que o comando CLI existe no PATH, abre uma nova sessão de terminal e volta a correr Atualizar.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "__MISSING__:If you want to point Claude Code, Cursor, Codex, or any IDE at 67router as a proxy, go to CLI Tools instead. This page is for the reverse — using local CLI binaries as execution targets that 67router can spawn and route requests through.",
+    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "__MISSING__:When a request arrives, 67router can spawn a local CLI binary (e.g., claude, codex, goose) and pipe the request through it. The CLI processes the request using its own credentials and returns the result back through 67router.",
+    "architectureDescription": "Architecture Description",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "__MISSING__:2 · 67router spawns local binary",
+    "flowSpawn": "Flow Spawn",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "Ferramentas CLI versus alvos de agente – Qual é a diferença?",
     "comparisonCliToolsLabel": "Página de ferramentas CLI",
@@ -11203,7 +11203,7 @@
     "tableProvider": "Fornecedor",
     "tableModel": "Modelo",
     "performanceTitle": "Desempenho",
-    "semanticCacheSectionDesc": "__MISSING__:67router's own deterministic response cache. When enabled, repeated non-streaming temperature=0 requests can be served locally without hitting the upstream provider.",
+    "semanticCacheSectionDesc": "Secção de cache semântica",
     "semanticCacheDisabledDesc": "A cache semântica está desativada. O 67router vai saltar a reutilização local de respostas até a reativares nas Definições.",
     "semanticEntriesDesc": "Registos de cache semântica persistidos atualmente armazenados em SQLite. A atividade de cache de prompt do lado do fornecedor não está listada aqui.",
     "searchEntries": "Pesquisar entradas...",
@@ -13101,7 +13101,7 @@
       },
       "cli-serve": {
         "name": "CLI: Servir",
-        "description": "__MISSING__:Start, stop, and restart the 67router server from the CLI. Manage daemon mode, port configuration, auto-recovery, system tray integration, and the dashboard open shortcut."
+        "description": "Serve o agente localmente"
       },
       "cli-health": {
         "name": "CLI: Saúde",
@@ -13121,7 +13121,7 @@
       },
       "cli-chat": {
         "name": "CLI: Conversa",
-        "description": "__MISSING__:Send chat completions, stream responses, and start an interactive REPL session from the CLI. Supports all 67router providers, combo routing, and system prompt configuration."
+        "description": "Cliente de chat em linha de comandos"
       },
       "cli-routing": {
         "name": "CLI: Encaminhamento e Combos",

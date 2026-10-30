@@ -9349,7 +9349,7 @@
   },
   "omniglyph": {
     "preview": "Xem trước",
-    "description": "__MISSING__:Context-as-image compression. Renders the system prompt, tool documentation, and dense history as compact PNG pages for the measured Claude Fable 5 path. The published OmniGlyph package also exposes native GPT 5.6 transformers, but 67router keeps those routes fail-closed until provider fidelity and reading receipts exist.",
+    "description": "Nén ngữ cảnh thành hình ảnh. Kết xuất prompt hệ thống, tài liệu công cụ và lịch sử dày đặc thành các trang PNG gọn nhẹ để Claude Fable 5 đọc thay cho văn bản. Token hình ảnh được tính phí theo kích thước thay vì số ký tự, nên khối đã chuyển đổi có chi phí thấp hơn khoảng 10 lần. Chỉ dùng định tuyến Anthropic trực tiếp.",
     "economicsTitle": "Hiệu quả kinh tế",
     "economics": {
       "fewerTokens": "ít token hơn cho khối đã chuyển đổi",
@@ -9369,7 +9369,7 @@
       "model": {
         "label": "Mô hình",
         "pass": "claude-fable-5",
-        "why": "__MISSING__:Only the measured Fable 5 path is enabled in 67router. GPT 5.6 is structurally supported by the package but remains blocked until its provider receipt; unverified families such as Grok stay text-only."
+        "why": "Chỉ Fable 5 đọc chính xác 100% các trang dày đặc (đã đo, n=30). GPT-5.5 và Gemini 2.5 Flash bị chặn."
       },
       "transport": {
         "label": "Đường truyền",

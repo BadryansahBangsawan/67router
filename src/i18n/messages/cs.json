@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "__MISSING__:Configure AI coding assistants to route through 67router",
+    "toolCategoriesDesc": "Tool Categories Desc",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "__MISSING__:Use this provider only for relays that serve Claude Code clients exclusively. 67router rewrites any incoming request into the Claude Code-compatible wire format so those relays accept it. If you only want to use Claude Code CLI, or you are not sure what this relay type means, use a regular Anthropic-compatible provider instead.",
+    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Instrukce vložené za prompt agenta/poskytovatele...",
     "chars": "{count} znaků",
     "thinkingBudgetTitle": "Promýšlení rozpočtu",
-    "thinkingBudgetDesc": "__MISSING__:Controls whether 67router rewrites client thinking/reasoning parameters before requests go upstream. This is separate from compression, prompt cache, and API-key token limits.",
+    "thinkingBudgetDesc": "Řídí využití AI reasoning tokenů v požadavcích",
     "thinkingBudgetIndependenceHint": "Funkce komprese, směrování a limit tokenů fungují ve všech režimech. Automatický režim neznamená „automatické zobrazení myšlení“ — odstraňuje pole pro uvažování klienta.",
     "passthrough": "Průchod",
     "passthroughDesc": "Beze změny – klient kontroluje rozpočet",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Náhled",
-    "description": "__MISSING__:Context-as-image compression. Renders the system prompt, tool documentation, and dense history as compact PNG pages for the measured Claude Fable 5 path. The published OmniGlyph package also exposes native GPT 5.6 transformers, but 67router keeps those routes fail-closed until provider fidelity and reading receipts exist.",
+    "description": "Komprese kontextu na obrázek. Vykresluje systémový prompt, dokumentaci k nástrojům a hustou historii jako kompaktní stránky PNG, které Claude Fable 5 čte místo textu. Obrázkové tokeny jsou účtovány podle rozměrů namísto znaků, takže převedený blok stojí přibližně 10× méně. Pouze přímá trasa Anthropic.",
     "economicsTitle": "Ekonomika",
     "economics": {
       "fewerTokens": "méně tokenů v převedeném bloku",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "__MISSING__:Only the measured Fable 5 path is enabled in 67router. GPT 5.6 is structurally supported by the package but remains blocked until its provider receipt; unverified families such as Grok stay text-only."
+        "why": "Pouze Fable 5 čte husté stránky se 100% přesností (měřeno, n=30). GPT-5.5 a Gemini 2.5 Flash jsou blokovány."
       },
       "transport": {
         "label": "Přenos",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Opravte chybu‚ příkaz nenalezen",
     "setupGuideCommandMissingDesc": "Ujistěte se, že CLI příkaz existuje v PATH, otevřete novou relaci terminálu a znovu spusťte tlačítko Obnovit.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "__MISSING__:If you want to point Claude Code, Cursor, Codex, or any IDE at 67router as a proxy, go to CLI Tools instead. This page is for the reverse — using local CLI binaries as execution targets that 67router can spawn and route requests through.",
+    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "__MISSING__:When a request arrives, 67router can spawn a local CLI binary (e.g., claude, codex, goose) and pipe the request through it. The CLI processes the request using its own credentials and returns the result back through 67router.",
+    "architectureDescription": "Architecture Description",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "__MISSING__:2 · 67router spawns local binary",
+    "flowSpawn": "Flow Spawn",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "Nástroje CLI vs cíle agentů – jaký je rozdíl?",
     "comparisonCliToolsLabel": "Stránka Nástroje CLI",

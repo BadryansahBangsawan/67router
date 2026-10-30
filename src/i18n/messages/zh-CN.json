@@ -6074,7 +6074,7 @@
     "t3ChatWebCookieHint": "打开 t3.chat → 开发工具 → 应用程序 → 本地存储 → https://t3.chat，复制“凸会话 ID”。然后打开 DevTools → Network，从任何聊天请求中复制完整的 Cookie 标头。将这两个值粘贴到下面的字段中。",
     "t3ChatWebCookiePlaceholder": "凸会话 ID=abc123...",
     "grokWebCookieHint": "从 Grok Web 会话复制 Cookie。",
-    "blockClaudeExtraUsageDescription": "__MISSING__:When enabled, 67router marks this Claude connection unavailable as soon as the usage API reports queued extra usage, so fallback switches to another connection instead of continuing on pay-as-you-go extra billing.",
+    "blockClaudeExtraUsageDescription": "隐藏部分供应商返回的重复Claude额外用量记录，避免和主token统计重复。",
     "blockClaudeExtraUsageLabel": "屏蔽重复Claude用量",
     "claudeLowPriorityModeLabel": "达到 5 小时限额后以较低优先级继续",
     "claudeLowPriorityModeDescription": "当此账户达到 5 小时使用限额且 Anthropic 提供较低优先级通道时，67router 会接受该通道，并继续发送带有 anthropic-usage-limit: slow 的请求，直到时间窗口重置，而不是让连接进入冷却状态。每周限额仍然适用，响应可能需要等待空闲容量。",
@@ -6840,7 +6840,7 @@
     "routingOpDropBlockContainsDesc": "移除整个系统块(而非仅段落),只要其文本包含任一指定子串。当一整块带指纹时使用,例如注入的 MCP 服务器描述。",
     "routingOpPrependSystemBlockDesc": "在系统数组的开头插入一个新的文本块。用于添加 Anthropic 分类器期望的 SDK 身份声明 'You are a Claude agent, built on Anthropic's Claude Agent SDK.'。",
     "routingOpAppendSystemBlockDesc": "在系统数组末尾追加一个新文本块。用于不必置于 [0] 位置的修饰性内容。",
-    "routingOpInjectBillingHeaderDesc": "__MISSING__:Prepends the special 'x-anthropic-billing-header: cc_version=...; cc_entrypoint=...; cch=...;' text block that Anthropic's classifier validates. Required for CC bridge relay endpoints; for the native claude provider 67router already injects its own billing line so this op is usually redundant there.",
+    "routingOpInjectBillingHeaderDesc": "在前置位置插入特殊的 'x-anthropic-billing-header: cc_version=...; cc_entrypoint=...; cch=...;' 文本块,用于通过 Anthropic 分类器校验。CC 桥接转发端点必须使用;原生 claude 提供者已自带计费行,在那里通常无需此操作。",
     "routingOpObfuscateWordsDesc": "在每个指定词的首字母后插入零宽连字符,例如 'opencode' 变为 'o‍pencode'。视觉上对人类完全相同,但能绕过分类器的词匹配。作用于系统块、用户/助手消息以及工具描述。",
     "routingNeedlesHint": "子串列表。段落只要包含其中任一项即匹配。通过「添加条目」逐行添加。",
     "routingPrefixesHint": "字符串列表。段落以其中任一项开头即匹配(匹配前会去除前导空白)。",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "插入到代理/提供者提示词之后的指令...",
     "chars": "{count} 字符",
     "thinkingBudgetTitle": "思考预算",
-    "thinkingBudgetDesc": "__MISSING__:Controls whether 67router rewrites client thinking/reasoning parameters before requests go upstream. This is separate from compression, prompt cache, and API-key token limits.",
+    "thinkingBudgetDesc": "控制所有请求中 AI 推理令牌的使用",
     "thinkingBudgetIndependenceHint": "压缩、路由和令牌限制功能在每种模式下都能正常工作。自动并不意味着“自动显示思维”——它会剥离客户端推理字段。",
     "passthrough": "直通",
     "passthroughDesc": "没有变化——客户控制思维预算",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "预览",
-    "description": "__MISSING__:Context-as-image compression. Renders the system prompt, tool documentation, and dense history as compact PNG pages for the measured Claude Fable 5 path. The published OmniGlyph package also exposes native GPT 5.6 transformers, but 67router keeps those routes fail-closed until provider fidelity and reading receipts exist.",
+    "description": "上下文转图像压缩。将系统提示词、工具文档和密集历史记录渲染为紧凑的 PNG 页面，供 Claude Fable 5 读取以替代文本。图像 Token 按尺寸而非字符计费，因此转换后的区块成本降低约 10 倍。仅限 Anthropic 直连路由。",
     "economicsTitle": "经济效益",
     "economics": {
       "fewerTokens": "转换区块减少的 Token",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "模型",
         "pass": "claude-fable-5",
-        "why": "__MISSING__:Only the measured Fable 5 path is enabled in 67router. GPT 5.6 is structurally supported by the package but remains blocked until its provider receipt; unverified families such as Grok stay text-only."
+        "why": "仅 Fable 5 能以 100% 的准确率读取密集页面（实测，n=30）。GPT-5.5 和 Gemini 2.5 Flash 会被拦截。"
       },
       "transport": {
         "label": "传输方式",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "修复“command not found”",
     "setupGuideCommandMissingDesc": "请确认 CLI 命令已存在于 PATH 中，重新打开一个终端会话后再次点击“刷新”。",
     "cliToolsRedirectTitle": "CLI 工具已移至专用页面",
-    "cliToolsRedirectDesc": "__MISSING__:If you want to point Claude Code, Cursor, Codex, or any IDE at 67router as a proxy, go to CLI Tools instead. This page is for the reverse — using local CLI binaries as execution targets that 67router can spawn and route requests through.",
+    "cliToolsRedirectDesc": "在 CLI Tools 页面管理 Agent CLI 集成与重定向。",
     "spawnArgsPlaceholder": "启动参数占位符",
     "binaryNamePlaceholder": "二进制名称占位符",
     "versionCommandPlaceholder": "版本命令占位符",
@@ -10966,7 +10966,7 @@
     "agentNamePlaceholder": "Agent 名称占位符",
     "architectureDescription": "了解 67router 如何在客户端、路由器和 Agent 目标之间转发请求。",
     "flowExecute": "执行",
-    "flowSpawn": "__MISSING__:2 · 67router spawns local binary",
+    "flowSpawn": "启动",
     "cliToolsRedirectCta": "打开 CLI Tools",
     "comparisonTitle": "CLI 工具与 Agent 目标有什么区别？",
     "comparisonCliToolsLabel": "CLI 工具页面",
