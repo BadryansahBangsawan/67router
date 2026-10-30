@@ -2,7 +2,7 @@ import { randomBytes } from "crypto";
 import { requireManagementAuth } from "@/lib/api/requireManagementAuth";
 import { createErrorResponse, createErrorResponseFromUnknown } from "@/lib/api/errorResponse";
 import { isValidationFailure, validateBody } from "@/shared/validation/helpers";
-import { denoDeploySchema } from "@/shared/validation/freeProxySchemas";
+import { denoDeploySchema } from "@/shared/validation/proxyDeploySchemas";
 import { createProxy } from "@/lib/db/proxies";
 import { encrypt } from "@/lib/db/encryption";
 import { isPrivateRelayHostname } from "@/lib/proxyRelay/privateHostname";
