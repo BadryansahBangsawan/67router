@@ -323,7 +323,7 @@ export default function AutoComboCatalog({
           <div className="flex items-center gap-2">
             <Icon name="auto_awesome" size={16} className="text-text-muted" />
             <h2 className="text-sm font-semibold text-text-main">{t("autoCatalogTitle")}</h2>
-            <Badge size="sm" variant="secondary" className="tabular-nums">
+            <Badge size="sm" className="tabular-nums">
               {liveItems
                 ? t("autoCatalogComboCount", { count: liveItems.length })
                 : t("autoCatalogTemplateCount", { count: FALLBACK_ITEMS.length })}

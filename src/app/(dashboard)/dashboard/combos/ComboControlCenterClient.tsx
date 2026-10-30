@@ -163,14 +163,10 @@ function TargetConfiguredRow({ target }: { target: ComboControlCenterTarget }) {
             <span className="inline-flex size-6 items-center justify-center rounded-full border border-border bg-bg-subtle text-xs font-medium tabular-nums text-text-main">
               {target.index + 1}
             </span>
-            <Badge size="sm" variant="secondary">
+            <Badge size="sm">
               {target.kind === "combo-ref" ? t("nestedCombo") : t("modelTarget")}
             </Badge>
-            {target.weight > 0 && (
-              <Badge size="sm" variant="outline">
-                {t("weight", { value: target.weight })}
-              </Badge>
-            )}
+            {target.weight > 0 && <Badge size="sm">{t("weight", { value: target.weight })}</Badge>}
           </div>
           <p className="mt-2 truncate font-mono text-sm text-text-main">{target.label}</p>
           <p className="mt-1 text-xs text-text-muted">
