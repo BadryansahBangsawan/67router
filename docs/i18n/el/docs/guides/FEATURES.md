@@ -43,8 +43,6 @@
 - 🤝 **Πάροχος OAuth GitLab Duo** — σύνδεση με διαπιστευτήρια GitLab
 - 🧠 **Κρυφή μνήμη επανάληψης συλλογισμού** — υβριδική επιμονή στη μνήμη και SQLite ιχνών συλλογισμού
 
-📚 **Σχετικά έγγραφα:** [Πλαίσιο Δεξιοτήτων](../frameworks/SKILLS.md) · [Σύστημα Μνήμης](../frameworks/MEMORY.md) · [Πράκτορες Cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Κρυφή Μνήμη Επανάληψης Συλλογισμού](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Πάροχοι

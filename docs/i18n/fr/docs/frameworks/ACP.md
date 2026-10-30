@@ -128,4 +128,3 @@ cible.
 - [Contrats de lancement des CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Outils CLI](../reference/CLI-TOOLS.md)
 - [Serveur A2A](./A2A-SERVER.md)
-- [Agents cloud](./CLOUD_AGENT.md)

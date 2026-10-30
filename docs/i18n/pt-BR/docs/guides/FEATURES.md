@@ -43,8 +43,6 @@ O ciclo v3.7.x → v3.8.0 adicionou roteamento automático sem configuração, n
 - 🤝 **Provedor OAuth do GitLab Duo** — login com credenciais do GitLab
 - 🧠 **Cache de repetição de raciocínio** — persistência híbrida em memória + SQLite de rastros de raciocínio
 
-📚 **Documentos relacionados:** [Framework de Skills](../frameworks/SKILLS.md) · [Sistema de memória](../frameworks/MEMORY.md) · [Agentes na nuvem](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Cache de repetição de raciocínio](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provedores

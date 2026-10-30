@@ -128,7 +128,6 @@ v3.8.0 プラットフォームの正規かつバージョン管理された Mer
 - `/dashboard/limits` — クォータ/レート制御
 - `/dashboard/cli-tools` — CLI オンボーディング、ランタイム検出、設定生成
 - `/dashboard/agents` — 検出された ACP エージェント + カスタムエージェント登録
-- `/dashboard/cloud-agents` — クラウドホスト型エージェントタスク（Codex Cloud、Devin、Jules）とタスクライフサイクル
 - `/dashboard/skills` — A2A スキルレジストリ、サンドボックス実行、組み込みスキルカタログ
 - `/dashboard/memory` — 永続的な会話メモリの検査と取得
 - `/dashboard/webhooks` — 送信 Webhook サブスクリプション、シークレットローテーション、再試行統計
@@ -370,23 +369,6 @@ Auto Combo は、静的なコンボ定義に依存するのではなく、リク
 
 アルゴリズムの詳細 (要素の計算式、重みの調整) については、
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) を参照してください。
-
-### B. Cloud Agents
-
-Cloud Agents は、サードパーティーのホスト型コードエージェントプラットフォーム (Codex Cloud、Devin、
-Jules) を、DB に支えられた統一的なタスクライフサイクルでラップします。すべてのタスク作成および確認用
-エンドポイントでは、管理認証が必要です。
-
-- モジュールルート: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`、および `agents/` 配下のエージェント別サブディレクトリ)
-- エージェント別の実装: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- パブリックエンドポイント: `/api/v1/agents/tasks/*` (一覧取得/作成/取得/キャンセル)
-- 管理エンドポイント: `/api/cloud/*` (プロビジョニング、ステータス、バッチ)
-- ダッシュボード: `/dashboard/cloud-agents`
-- ストレージ: `cloud_agent_tasks` テーブル
-
-エージェント別のプロビジョニングと OAuth の詳細については、
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) を参照してください。
 
 ### C. ガードレール
 

@@ -1759,31 +1759,6 @@ Podsistem za samodejno upravljanje ključev jih uporablja za izdajanje in rotaci
 
 ---
 
-## Protokol agentov
-
-Opravila agentov v oblaku (Claude Code, Codex Cloud, OpenHands itd.), ki se izvajajo oddaljeno v imenu uporabnikov OmniRoute.
-
-| Metoda | Pot                           | Opis                                                                                                                                        |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Prikaži opravila — izbirno `?provider=`, `?status=`, `?limit=` (1–500, privzeto 50)                                                         |
-| POST   | `/api/v1/agents/tasks`        | Ustvari opravilo — telo preveri `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Vrne `201` z ovojnico opravila |
-| DELETE | `/api/v1/agents/tasks?id=...` | Izbriši opravilo                                                                                                                            |
-| GET    | `/api/v1/agents/tasks/[id]`   | Preberi opravilo — ko je nastavljen `external_id`, sinhrono osveži stanje iz zunanjega agenta v oblaku                                      |
-| POST   | `/api/v1/agents/tasks/[id]`   | Razlikovalno dejanje: `{action: "approve"}`, `{action: "message", message}` ali `{action: "cancel"}`                                        |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Izbriši določeno opravilo glede na id                                                                                                       |
-
-> **Preverjanje pristnosti:** preverjanje pristnosti za upravljanje je zahtevano pri vsaki metodi (`requireCloudAgentManagementAuth`). Pred različico v3.8.0 te metode niso zahtevale preverjanja pristnosti — za prelomno spremembo glejte potrditev `588a0333`.
-
-```bash
-# Ustvari opravilo Claude Code v oblaku
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Posredniški strežniki za upravljanje
 
 Izhodni posredniški strežniki HTTP(S)/SOCKS, ki jih je mogoče dodeliti ponudnikom, računom ali globalno.
@@ -2288,5 +2263,3 @@ glejte [Preverjanje pristnosti za upravljanje](../guides/MANAGEMENT-AUTH.md).
 - Nastavitev `requireLogin` je mogoče preklopiti prek `/api/settings/require-login`
 - Poti `/v1/*` lahko zahtevajo API-ključ Bearer, ko je `REQUIRE_API_KEY=true`
 - »Upravljalski žeton« / »API-ključ z obsegom upravljanja« v tem priročniku pomeni eno od družin iz navedenega vodnika — ne pa dodatne, neopredeljene vrste skrivnosti
-
-> **Prelomna sprememba (v3.8.0)** — `/api/v1/agents/tasks/*` in končne točke za upravljanje obdobja ohlajanja zdaj zahtevajo **preverjanje pristnosti za upravljanje** (piškotek nadzorne plošče `auth_token` ali API-ključ z obsegom upravljanja). Odjemalci, ki so te poti prej klicali brez preverjanja pristnosti, bodo prejeli `401 Unauthorized`. Glejte potrditev `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

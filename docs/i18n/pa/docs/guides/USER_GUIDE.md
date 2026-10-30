@@ -24,7 +24,6 @@
 - [ਸਕਿੱਲਜ਼ ਸਿਸਟਮ](#-skills-system)
 - [ਮੈਮੋਰੀ ਸਿਸਟਮ](#-memory-system)
 - [ਵੈੱਬਹੁੱਕਸ](#-webhooks)
-- [ਕਲਾਉਡ ਏਜੰਟ](#-cloud-agents)
 - [ਪ੍ਰੋਗਰਾਮੈਟਿਕ ਪ੍ਰਬੰਧਨ](#-programmatic-management)
 - [ਅੰਦਰੂਨੀ CLI](#-internal-cli)
 - [ਡੈਸਕਟਾਪ ਐਪਲੀਕੇਸ਼ਨ (Electron)](#-desktop-application-electron)
@@ -1271,18 +1270,6 @@ OmniRoute ਹਾਈਬ੍ਰਿਡ ਪ੍ਰਾਪਤੀ ਨਾਲ **ਲੰਬ�
 - ਮੁੜ ਕੋਸ਼ਿਸ਼ਾਂ: ਐਕਸਪੋਨੇਨਸ਼ੀਅਲ ਬੈਕਆਫ਼ ਨਾਲ 3 ਕੋਸ਼ਿਸ਼ਾਂ, ਫਿਰ ਡੈੱਡ-ਲੈਟਰ ਕਤਾਰ
 
 ਪੂਰੀ ਸਕੀਮਾ [WEBHOOKS.md](../frameworks/WEBHOOKS.md) ਵਿੱਚ ਹੈ।
-
----
-
-## ☁️ ਕਲਾਉਡ ਏਜੰਟ
-
-OmniRoute ਕਲਾਉਡ ਕੋਡਿੰਗ ਏਜੰਟਾਂ (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ਨਾਲ ਏਕੀਕ੍ਰਿਤ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਉਸੇ ਡੈਸ਼ਬੋਰਡ ਤੋਂ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਚੱਲਣ ਵਾਲੇ ਕੰਮ ਭੇਜ ਸਕੋ ਜੋ ਤੁਹਾਡੀ ਸਥਾਨਕ ਰੂਟਿੰਗ ਨੂੰ ਸੰਭਾਲਦਾ ਹੈ।
-
-- **Dashboard → Cloud Agents** ਵਿੱਚ ਜਾਂ `POST /api/v1/agents/tasks` ਰਾਹੀਂ ਕੰਮ ਬਣਾਓ
-- ਹਰੇਕ ਕੰਮ ਦੀ ਸਥਿਤੀ, ਲੌਗ ਅਤੇ ਆਰਟੀਫੈਕਟ ਟ੍ਰੈਕ ਕਰੋ
-- ਹਰੇਕ ਪ੍ਰਦਾਤਾ ਲਈ ਆਪਣੀ API ਕੁੰਜੀ ਵਰਤੋ — ਪ੍ਰਮਾਣ-ਪੱਤਰ ਕਦੇ ਵੀ OmniRoute ਇੰਸਟੈਂਸ ਤੋਂ ਬਾਹਰ ਨਹੀਂ ਜਾਂਦੇ
-
-ਪੂਰਾ ਹਵਾਲਾ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)।
 
 ---
 

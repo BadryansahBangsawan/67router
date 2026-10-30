@@ -24,7 +24,6 @@ Comparación objetiva de características frente a routers de IA de código abie
 | **Protocolo A2A**                                              |                ✅ 6 habilidades                |         ❌          |        ❌         |     ❌      |
 | **Memoria (FTS5 + vector)**                                    |                       ✅                       |         ❌          |        ❌         |     ❌      |
 | **Guardrails (PII, inyección, visión)**                        |                       ✅                       |       parcial       |        ❌         | ✅ de pago  |
-| **Integraciones con agentes en la nube**                       |          Codex, Cursor, Devin, Jules           |         ❌          |        ❌         |     ❌      |
 | **Circuit breaker por proveedor**                              |      ✅ 3 estados, recuperación diferida       |       básico        |        ❌         |     ✅      |
 | **Sigilo de huella TLS (JA3/JA4)**                             |                   ✅ wreq-js                   |         ❌          |        ❌         |     ❌      |
 | **Framework de evaluación**                                    |                  ✅ integrado                  |         ❌          |        ❌         |  ⚠ de pago  |

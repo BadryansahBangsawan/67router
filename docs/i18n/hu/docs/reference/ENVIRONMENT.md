@@ -1387,11 +1387,11 @@ módosításukhoz kódszerkesztés szükséges, nem környezeti változó:
 
 Lehetővé teszi a felhasználók számára, hogy közvetlenül az irányítópultról jelentsenek problémákat.
 
-| Változó               | Alapértelmezett     | Forrásfájl                                       | Leírás                                                                                                                                                             |
-| --------------------- | ------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(nincs beállítva)_ | `src/app/api/v1/issues/report/route.ts`          | Adattár `owner/repo` formátumban.                                                                                                                                  |
-| `GITHUB_ISSUES_TOKEN` | _(nincs beállítva)_ | `src/app/api/v1/issues/report/route.ts`          | GitHub személyes hozzáférési token `issues:write` hatókörrel.                                                                                                      |
-| `GITHUB_TOKEN`        | _(nincs beállítva)_ | problémaosztályozási / felhőügynök-segédfunkciók | Általános GitHub hozzáférési token, amely a `GITHUB_ISSUES_TOKEN` tartalékaként szolgál, és amelyet a `src/lib/cloudAgent/*` felhőügynök-segédfunkciói használnak. |
+| Változó               | Alapértelmezett     | Forrásfájl                                       | Leírás                                                                                                                                                                          |
+| --------------------- | ------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(nincs beállítva)_ | `src/app/api/v1/issues/report/route.ts`          | Adattár `owner/repo` formátumban.                                                                                                                                               |
+| `GITHUB_ISSUES_TOKEN` | _(nincs beállítva)_ | `src/app/api/v1/issues/report/route.ts`          | GitHub személyes hozzáférési token `issues:write` hatókörrel.                                                                                                                   |
+| `GITHUB_TOKEN`        | _(nincs beállítva)_ | problémaosztályozási / felhőügynök-segédfunkciók | Általános GitHub hozzáférési token, amely a `GITHUB_ISSUES_TOKEN` tartalékaként szolgál, és amelyet a `src/lib/skills/githubCollector.ts` felhőügynök-segédfunkciói használnak. |
 
 ---
 

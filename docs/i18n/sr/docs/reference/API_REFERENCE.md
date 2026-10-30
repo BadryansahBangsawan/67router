@@ -1764,31 +1764,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## Протокол агената
-
-Задаци агената у облаку (Claude Code, Codex Cloud, OpenHands итд.) који се извршавају удаљено у име OmniRoute корисника.
-
-| Метод  | Путања                        | Опис                                                                                                                                                   |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Наводи задатке — опционо `?provider=`, `?status=`, `?limit=` (1–500, подразумевано 50)                                                                 |
-| POST   | `/api/v1/agents/tasks`        | Креира задатак — тело се проверава помоћу `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Враћа `201` са омотачем задатка |
-| DELETE | `/api/v1/agents/tasks?id=...` | Брише задатак                                                                                                                                          |
-| GET    | `/api/v1/agents/tasks/[id]`   | Чита задатак — синхроно освежава статус од узводног агента у облаку када је постављен `external_id`                                                    |
-| POST   | `/api/v1/agents/tasks/[id]`   | Дискриминисана радња: `{action: "approve"}`, `{action: "message", message}` или `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Брише одређени задатак према ID-у                                                                                                                      |
-
-> **Аутентификација:** аутентификација за управљање је обавезна за сваки метод (`requireCloudAgentManagementAuth`). Пре верзије v3.8.0 ови методи нису захтевали аутентификацију — погледајте комит `588a0333` за некомпатибилну измену.
-
-```bash
-# Креирање Claude Code задатка у облаку
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Проксији за управљање
 
 Излазни HTTP(S)/SOCKS проксији који се могу доделити добављачима, налозима или глобално.
@@ -2291,5 +2266,3 @@ devin-cli итд.). Погледајте [Референцу добављача]
 - `requireLogin` се може укључити или искључити преко `/api/settings/require-login`
 - Руте `/v1/*` опционо захтевају Bearer API кључ када је `REQUIRE_API_KEY=true`
 - „токен за управљање“ / „API кључ са опсегом за управљање“ у овој референци означава једну од врста из тог водича — а не недефинисани додатни тип тајне
-
-> **Промена која нарушава компатибилност (v3.8.0)** — `/api/v1/agents/tasks/*` и крајње тачке за управљање периодом мировања сада захтевају **аутентификацију за управљање** (колачић `auth_token` контролне табле или API кључ са опсегом за управљање). Клијенти који су раније позивали ове руте без аутентификације добиће `401 Unauthorized`. Погледајте комит `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

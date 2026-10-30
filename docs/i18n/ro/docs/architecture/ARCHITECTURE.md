@@ -128,7 +128,6 @@ Pagini principale din `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — controale pentru cote/limite de rată
 - `/dashboard/cli-tools` — integrarea CLI, detectarea mediului de execuție, generarea configurației
 - `/dashboard/agents` — agenți ACP detectați + înregistrarea agenților personalizați
-- `/dashboard/cloud-agents` — sarcini ale agenților găzduiți în cloud (Codex Cloud, Devin, Jules) și ciclul de viață al sarcinilor
 - `/dashboard/skills` — registrul abilităților A2A, execuția în sandbox, catalogul de abilități integrate
 - `/dashboard/memory` — inspectarea și recuperarea memoriei conversaționale persistente
 - `/dashboard/webhooks` — abonamente webhook pentru ieșire, rotația secretelor, statistici privind reîncercările
@@ -382,23 +381,6 @@ Capabilități principale:
 
 Pentru detalii complete despre algoritm (formulele factorilor, ajustarea ponderilor), consultați
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agenți cloud
-
-Cloud Agents integrează platforme terțe găzduite pentru agenți de cod (Codex Cloud, Devin,
-Jules) în spatele unui ciclu de viață uniform al sarcinilor, susținut de o bază de date. Toate endpointurile pentru crearea/inspectarea
-sarcinilor necesită autentificare de administrare.
-
-- Rădăcina modulului: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, plus subdirectoare pentru fiecare agent în `agents/`)
-- Implementări pentru fiecare agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpointuri publice: `/api/v1/agents/tasks/*` (listare/creare/obținere/anulare)
-- Endpointuri de administrare: `/api/cloud/*` (provizionare, stare, procesare în lot)
-- Panou de control: `/dashboard/cloud-agents`
-- Stocare: tabelul `cloud_agent_tasks`
-
-Pentru detalii despre provizionare și OAuth specifice fiecărui agent, consultați
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Mecanisme de protecție
 

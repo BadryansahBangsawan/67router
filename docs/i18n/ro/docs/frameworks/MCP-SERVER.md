@@ -246,17 +246,6 @@ Inventarul de instrumente MCP de mai sus (110 instrumente unice, calculat de `co
 limitat la operațiunile de rutare/cache/comprimare/memorie/abilități/proxy/surse de context din timpul execuției. Două cadre adiacente
 sunt livrate împreună cu serverul MCP în v3.8.0 și sunt documentate separat:
 
-### Agenți cloud
-
-Agenții cloud sunt agenți AI de programare care rulează în afara procesului (codex-cloud, cursor-cloud, devin, jules), integrați în
-OmniRoute prin același model de conexiune utilizat pentru furnizorii LLM. Aceștia sunt expuși prin
-propria interfață REST (`/api/v1/agents/*`) și **nu** fac parte din catalogul de instrumente MCP
-— apelarea unui agent cloud nu consumă un domeniu MCP.
-
-- Implementare: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ciclu de viață: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentație: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Mecanisme de protecție
 
 Mecanismele de protecție sunt filtre pre/post-execuție (vision-bridge, pii-masker, prompt-injection)

@@ -122,4 +122,3 @@ try {
 - [CLI ಪ್ರಾರಂಭಿಕ ಒಪ್ಪಂದಗಳು](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ಟೂಲ್ಗಳು](../reference/CLI-TOOLS.md)
 - [A2A ಸರ್ವರ್](./A2A-SERVER.md)
-- [ಕ್ಲೌಡ್ ಏಜೆಂಟ್ಗಳು](./CLOUD_AGENT.md)

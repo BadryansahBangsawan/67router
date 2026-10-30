@@ -43,10 +43,6 @@ OmniRoute 通过一个集中式允许列表，控制哪些**浏览器源**可以
 
 因此，`CORS_ALLOW_ALL=true` 的**剩余**暴露仅限于：(a) 对本就无需身份验证的数据进行不带凭据的跨源**读取**；以及 (b) 允许管理路由的 CORS **预检请求通过**——但这些路由仍然需要身份验证，而跨源页面无法提供相应凭据。在共享 CORS 路径上，这**不会**导致会话劫持或凭据窃取。
 
-### 一个真正的例外——`/api/v1/agents/`
-
-Cloud-Agent 路由（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）会设置其**自己的** CORS 响应头（`src/lib/cloudAgent/api.ts`、`getCloudAgentCorsHeaders`），并且**确实会**同时发出 `Access-Control-Allow-Origin: <origin>|*` 和 `Access-Control-Allow-Credentials: true`。这是唯一同时存在源回显与凭据的接口面，并且它**独立于 `CORS_ALLOW_ALL`**。这些路由需要管理身份验证（`requireManagementAuth`）；将仪表板暴露到主机外部的运维人员应注意，这是唯一一个响应头允许跨源读取凭据响应的位置。将其限制为显式允许列表的工作会与本 CORS 指南分开跟踪。
-
 ## 生产环境检查清单
 
 - **切勿在生产环境中设置 `CORS_ALLOW_ALL=true`。** 请保持其未设置状态。
@@ -114,15 +110,14 @@ location / {
 
 ## 源文件
 
-| 关注点                              | 文件                                                                 |
-| ----------------------------------- | -------------------------------------------------------------------- |
-| 允许列表解析 + `getCorsStatus()`    | `src/server/cors/origins.ts`                                         |
-| 中间件应用（单一事实来源）          | `src/server/authz/pipeline.ts`                                       |
-| Settings → 运行时源注入             | `src/lib/config/runtimeSettings.ts`                                  |
-| 控制面板的运行时状态                | `src/app/api/settings/authz-inventory/route.ts`                      |
-| 控制面板警告横幅                    | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| CORS Allowed Origins 字段           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent 每路由 CORS（例外情况） | `src/lib/cloudAgent/api.ts`                                          |
+| 关注点                           | 文件                                                                 |
+| -------------------------------- | -------------------------------------------------------------------- |
+| 允许列表解析 + `getCorsStatus()` | `src/server/cors/origins.ts`                                         |
+| 中间件应用（单一事实来源）       | `src/server/authz/pipeline.ts`                                       |
+| Settings → 运行时源注入          | `src/lib/config/runtimeSettings.ts`                                  |
+| 控制面板的运行时状态             | `src/app/api/settings/authz-inventory/route.ts`                      |
+| 控制面板警告横幅                 | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| CORS Allowed Origins 字段        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## 另请参阅
 

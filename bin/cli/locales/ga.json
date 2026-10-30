@@ -698,54 +698,6 @@
       "yes": "Cuir an moladh deimhnithe ar ceal"
     }
   },
-  "cloud": {
-    "description": "Bainistigh tascanna gníomhaí cloud AI (codex, devin, jules)",
-    "agents": {
-      "description": "Liostaigh gníomhaí cloud atá ar fáil"
-    },
-    "agent": {
-      "description": "Bainistigh tascanna gníomhaí cloud {agent}",
-      "auth": {
-        "description": "Údáigh {agent} tríd an OAuth"
-      }
-    },
-    "task": {
-      "description": "Bainistigh tascanna gníomhaí cloud",
-      "create": {
-        "description": "Cruthaigh tasc gníomhaí nua",
-        "title": "Teideal tasc (réamhshocraítear go dtí na chéad 80 carachtar den phrómpt)",
-        "prompt": "Téacs prómpta an tasc",
-        "prompt_file": "Léigh prómpt ó chomhad",
-        "repo": "URL stór le clónadh don tasc",
-        "branch": "Ainm brainse le húsáid",
-        "metadata": "Oibiacht mheite sonraí JSON"
-      },
-      "list": {
-        "description": "Liostaigh tascanna gníomhaí",
-        "status": "Scag de réir stádais (ag rith|críochnaithe|teipite|curtha ar ceal)",
-        "limit": "Uasmhéid torthaí (réamhshocrú: 50)"
-      },
-      "get": {
-        "description": "Faigh sonraí tasc le ID"
-      },
-      "status": {
-        "description": "Priontáil stádas tasc (ag rith|críochnaithe|teipite|curtha ar ceal)"
-      },
-      "cancel": {
-        "description": "Cealaigh tasc atá ag rith",
-        "yes": "Neamhordú moladh deimhniú"
-      },
-      "approve": {
-        "description": "Cinnigh plean an tseiseáin chun tosaigh ar fheidhmiú"
-      },
-      "message": {
-        "description": "Seol teachtaireacht go tasc ag rith"
-      }
-    },
-    "sources": {
-      "description": "Liosta comhad foinse cruthaithe le tasc"
-    }
-  },
   "program": {
     "description": "OmniRoute — Ródaí AI Cliste le Filleadh Uathoibríoch",
     "version": "Priontáil leagan agus scoir",

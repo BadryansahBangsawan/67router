@@ -43,8 +43,6 @@ Il ciclo v3.7.x → v3.8.0 ha introdotto l'instradamento automatico senza config
 - 🤝 **Provider OAuth GitLab Duo** — accesso con credenziali GitLab
 - 🧠 **Cache di riproduzione del ragionamento** — persistenza ibrida in memoria + SQLite delle tracce di ragionamento
 
-📚 **Documentazione correlata:** [Framework delle competenze](../frameworks/SKILLS.md) · [Sistema di memoria](../frameworks/MEMORY.md) · [Agenti cloud](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Cache di riproduzione del ragionamento](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provider

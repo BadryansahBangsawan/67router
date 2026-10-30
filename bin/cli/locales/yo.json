@@ -698,54 +698,6 @@
       "yes": "Fo ìbéèrè ìmúdájú kọjá"
     }
   },
-  "cloud": {
-    "description": "Ṣàkóso àwọn iṣẹ́ aṣojú AI awọsanma (codex, devin, jules)",
-    "agents": {
-      "description": "Ṣe àtòjọ àwọn aṣojú awọsanma tó wà"
-    },
-    "agent": {
-      "description": "Ṣàkóso àwọn iṣẹ́ aṣojú awọsanma {agent}",
-      "auth": {
-        "description": "Fún {agent} ní àṣẹ nípasẹ̀ OAuth"
-      }
-    },
-    "task": {
-      "description": "Ṣàkóso àwọn iṣẹ́ aṣojú awọsanma",
-      "create": {
-        "description": "Ṣẹ̀dá iṣẹ́ aṣojú tuntun kan",
-        "title": "Àkọlé iṣẹ́ (àìyẹsẹ̀ sí àwọn àmì kọ́ọ̀kan 80 àkọ́kọ́ ti prompt)",
-        "prompt": "Ọ̀rọ̀ prompt iṣẹ́",
-        "prompt_file": "Ka prompt láti inú fáìlì",
-        "repo": "URL ibi ìpamọ́ láti ṣe clone fún iṣẹ́ náà",
-        "branch": "Orúkọ branch láti lò",
-        "metadata": "Ohun metadata JSON"
-      },
-      "list": {
-        "description": "Ṣe àtòjọ àwọn iṣẹ́ aṣojú",
-        "status": "Ṣe àlẹ̀mọ́ nípa ipò (running|completed|failed|cancelled)",
-        "limit": "Iye èsì tó pọ̀ jù (àìyẹsẹ̀: 50)"
-      },
-      "get": {
-        "description": "Gba àwọn àlàyé iṣẹ́ nípasẹ̀ ID"
-      },
-      "status": {
-        "description": "Tẹ ipò iṣẹ́ jáde (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Fagilé iṣẹ́ tí ń lọ lọ́wọ́",
-        "yes": "Fo ìbéèrè ìmúdájú kọjá"
-      },
-      "approve": {
-        "description": "Fọwọ́sí ètò aṣojú náà láti bẹ̀rẹ̀ ìmúṣẹ"
-      },
-      "message": {
-        "description": "Fi ìránṣẹ́ ránṣẹ́ sí iṣẹ́ tí ń lọ lọ́wọ́"
-      }
-    },
-    "sources": {
-      "description": "Ṣàtòjọ àwọn fáìlì orísun tí iṣẹ́ kan ṣẹ̀dá"
-    }
-  },
   "program": {
     "description": "OmniRoute — Olùdarí AI ọlọ́gbọ́n pẹ̀lú ìpadà-aifọwọ́yi",
     "version": "Ṣàfihàn ẹ̀dà kí o sì jáde",

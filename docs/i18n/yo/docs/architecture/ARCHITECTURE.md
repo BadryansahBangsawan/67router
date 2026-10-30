@@ -128,7 +128,6 @@ OmniRoute jẹ́ ẹnu-ọ̀nà ìdarí AI abẹ́lẹ̀ àti pátákó ìdarí 
 - `/dashboard/limits` — àwọn ìṣàkóso ìpín/lílewọ̀n
 - `/dashboard/cli-tools` — ìṣàgbékalẹ̀ ìbẹ̀rẹ̀ CLI, ìṣàwárí àkókò-ṣiṣe, ìṣẹ̀dá àtúnṣe
 - `/dashboard/agents` — àwọn aṣojú ACP tí a ṣàwárí + ìforúkọsílẹ̀ aṣojú àdáni
-- `/dashboard/cloud-agents` — àwọn iṣẹ́ aṣojú tí a gbàlejò lórí awọsánmà (Codex Cloud, Devin, Jules) àti ìgbésí-ayé iṣẹ́
 - `/dashboard/skills` — àkọsílẹ̀ ọgbọ́n A2A, ìṣiṣẹ́ àyíká ìdánwò, àkójọ ọgbọ́n inú-ẹ̀rọ
 - `/dashboard/memory` — àyẹ̀wò àti ìmúpadàbọ̀ ìrántí ìjíròrò aláìpé
 - `/dashboard/webhooks` — àwọn ìforúkọsílẹ̀ webhook tí ń jáde, yíyí àṣírí padà, àwọn ìṣirò àtúnṣe
@@ -381,23 +380,6 @@ gbígbẹ́kẹ̀ lé ìtumọ̀ combo tí kò yí padà. Ó ń ṣiṣẹ́ fú
 
 Fún ẹ̀kúnrẹ́rẹ́ àlàyé algoridimu (àwọn fọ́ọ̀mùlà kókó, àtúnṣe ìwọ̀n), wo
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Àwọn Aṣojú Àwọsánmà
-
-Cloud Agents máa ń fi àwọn pẹpẹ aṣojú-kóòdù tí ẹlòmíràn gbà lálejò (Codex Cloud, Devin,
-Jules) sí ẹ̀yìn ìgbésí-ayé iṣẹ́ kan ṣoṣo tí ibi-ìpamọ́ dátà ń ṣe àtìlẹ́yìn fún. Gbogbo àwọn endpoint
-fún ṣíṣẹ̀dá/ṣàyẹ̀wò iṣẹ́ nílò ìfàṣẹsí ìṣàkóso.
-
-- Gbòǹgbò mójúùlù: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, pẹ̀lú àwọn ìtọ́kasí abẹ́ fún aṣojú kọ̀ọ̀kan lábẹ́ `agents/`)
-- Àwọn ìmúṣẹ́ fún aṣojú kọ̀ọ̀kan: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Àwọn endpoint gbogbogbò: `/api/v1/agents/tasks/*` (ṣe àtòjọ/ṣẹ̀dá/gba/fagilé)
-- Àwọn endpoint ìṣàkóso: `/api/cloud/*` (ìpèsè, ipò, àkójọpọ̀)
-- Pẹpẹ ìṣàkóso: `/dashboard/cloud-agents`
-- Ìpamọ́: tábìlì `cloud_agent_tasks`
-
-Fún ìpèsè aṣojú kọ̀ọ̀kan àti àwọn kúlẹ̀kúlẹ̀ OAuth, wo
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Àwọn Ààbò-Ààlà
 

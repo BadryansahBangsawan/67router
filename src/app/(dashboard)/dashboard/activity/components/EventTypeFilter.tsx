@@ -30,7 +30,7 @@ const CATEGORY_PREFIXES: Record<EventCategory, string[]> = {
   settings: ["setting."],
   quota: ["quota.", "budget."],
   auth: ["auth."],
-  system: ["update.", "deploy.", "skill.", "cloud_agent.", "mcp."],
+  system: ["update.", "deploy.", "skill.", "mcp."],
 };
 
 export function matchesCategory(action: string, category: EventCategory): boolean {

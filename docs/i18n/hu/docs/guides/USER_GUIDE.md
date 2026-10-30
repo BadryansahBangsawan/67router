@@ -24,7 +24,6 @@ Teljes körű útmutató a szolgáltatók konfigurálásához, a kombinációk l
 - [Készségrendszer](#-skills-system)
 - [Memóriarendszer](#-memory-system)
 - [Webhookok](#-webhooks)
-- [Felhőalapú ügynökök](#-cloud-agents)
 - [Programozott kezelés](#-programmatic-management)
 - [Belső CLI](#-internal-cli)
 - [Asztali alkalmazás (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Iratkozzon fel az OmniRoute eseményeire valós idejű monitorozáshoz és autom
 - Újrapróbálkozások: 3 kísérlet exponenciális várakozással, majd továbbítás a sikertelen üzenetek várólistájára
 
 A teljes séma itt található: [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Felhőalapú ügynökök
-
-Az OmniRoute integrálható felhőalapú kódolóügynökökkel (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), így hosszú ideig futó feladatokat indíthat ugyanarról a vezérlőpultról, amely a helyi útválasztást is kezeli.
-
-- Hozzon létre feladatokat a **Vezérlőpult → Felhőalapú ügynökök** menüpontban vagy a `POST /api/v1/agents/tasks` végponton keresztül
-- Kövesse nyomon az egyes feladatok állapotát, naplóit és műtermékeit
-- Minden szolgáltatóhoz saját API-kulcsot használhat — a hitelesítő adatok soha nem hagyják el az OmniRoute-példányt
-
-A teljes referencia: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

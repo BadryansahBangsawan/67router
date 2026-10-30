@@ -1700,31 +1700,6 @@ Used by the auto-key management subsystem to issue and rotate API keys against a
 
 ---
 
-## Agents Protocol
-
-Cloud agent tasks (Claude Code, Codex Cloud, OpenHands, etc.) executed remotely on behalf of OmniRoute users.
-
-| Method | Path                          | Description                                                                                                                                   |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | List tasks — optional `?provider=`, `?status=`, `?limit=` (1–500, default 50)                                                                 |
-| POST   | `/api/v1/agents/tasks`        | Create task — body validated by `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returns `201` with task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | Delete a task                                                                                                                                 |
-| GET    | `/api/v1/agents/tasks/[id]`   | Read task — synchronously refreshes status from the upstream cloud agent when an `external_id` is set                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | Discriminated action: `{action: "approve"}`, `{action: "message", message}`, or `{action: "cancel"}`                                          |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Delete a specific task by id                                                                                                                  |
-
-> **Auth:** management auth required on every method (`requireCloudAgentManagementAuth`). Prior to v3.8.0 these were unauthenticated — see commit `588a0333` for the breaking change.
-
-```bash
-# Create a Claude Code cloud task
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Management Proxies
 
 Outbound HTTP(S)/SOCKS proxies that can be assigned to providers, accounts, or globally.
@@ -2211,4 +2186,4 @@ Token, manage-scoped API key) and how they differ from inference keys.
 - `/v1/*` routes optionally require Bearer API key when `REQUIRE_API_KEY=true`
 - "management token" / "management-scoped API key" in this reference means one of the families in that guide — not an undefined extra secret type
 
-> **Breaking change (v3.8.0)** — `/api/v1/agents/tasks/*` and the cooldown management endpoints now require **management auth** (dashboard `auth_token` cookie or a management-scoped API key). Clients that previously called these routes unauthenticated will receive `401 Unauthorized`. See commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).
+> **Breaking change (v3.8.0)** — the cooldown management endpoints now require **management auth** (dashboard `auth_token` cookie or a management-scoped API key). Clients that previously called these routes unauthenticated will receive `401 Unauthorized`. See commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

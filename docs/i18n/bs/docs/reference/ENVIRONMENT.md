@@ -1379,11 +1379,11 @@ njihova izmjena zahtijeva izmjenu koda, a ne env varijablu:
 
 Omogućite korisnicima da prijavljuju probleme direktno s kontrolne ploče.
 
-| Varijabla             | Zadana vrijednost    | Izvorna datoteka                                    | Opis                                                                                                                                                              |
-| --------------------- | -------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(nije postavljeno)_ | `src/app/api/v1/issues/report/route.ts`             | Repozitorij u formatu `owner/repo`.                                                                                                                               |
-| `GITHUB_ISSUES_TOKEN` | _(nije postavljeno)_ | `src/app/api/v1/issues/report/route.ts`             | GitHub lični pristupni token s opsegom `issues:write`.                                                                                                            |
-| `GITHUB_TOKEN`        | _(nije postavljeno)_ | pomoćni alati za trijažu problema / agenta u oblaku | Generički GitHub pristupni token koji se koristi kao rezervna opcija za `GITHUB_ISSUES_TOKEN`, kao i u pomoćnim alatima agenta u oblaku u `src/lib/cloudAgent/*`. |
+| Varijabla             | Zadana vrijednost    | Izvorna datoteka                                    | Opis                                                                                                                                                                           |
+| --------------------- | -------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `GITHUB_ISSUES_REPO`  | _(nije postavljeno)_ | `src/app/api/v1/issues/report/route.ts`             | Repozitorij u formatu `owner/repo`.                                                                                                                                            |
+| `GITHUB_ISSUES_TOKEN` | _(nije postavljeno)_ | `src/app/api/v1/issues/report/route.ts`             | GitHub lični pristupni token s opsegom `issues:write`.                                                                                                                         |
+| `GITHUB_TOKEN`        | _(nije postavljeno)_ | pomoćni alati za trijažu problema / agenta u oblaku | Generički GitHub pristupni token koji se koristi kao rezervna opcija za `GITHUB_ISSUES_TOKEN`, kao i u pomoćnim alatima agenta u oblaku u `src/lib/skills/githubCollector.ts`. |
 
 ---
 

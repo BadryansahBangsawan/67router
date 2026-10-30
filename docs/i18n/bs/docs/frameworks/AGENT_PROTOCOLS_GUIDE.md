@@ -6,7 +6,6 @@
 
 # Vodič kroz protokole agenata
 
-> **Izvor:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40
 
 OmniRoute izlaže tri različite površine povezane s agentima. Na prvi pogled izgledaju slično, ali rješavaju različite probleme. Koristite ovu stranicu da odaberete pravu.
@@ -22,20 +21,6 @@ OmniRoute izlaže tri različite površine povezane s agentima. Na prvi pogled i
 Ove tri su nezavisne — odaberite bilo koji podskup.
 
 ## Stablo odlučivanja
-
-```
-Trebate li cloud servis za obavljanje posla izvan ove mašine (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ DA → Cloud Agents (POST /api/v1/agents/tasks)
-└─ NE → Nastavi
-    │
-    Imate li ravnopravnog agenta koji govori A2A i želi sarađivati?
-    ├─ DA → A2A (POST /a2a)
-    └─ NE → Nastavi
-        │
-        Trebate li izlistati / konfigurirati CLI agente za kodiranje instalirane lokalno?
-        ├─ DA → ACP (GET /api/acp/agents)
-        └─ NE → Koristite običan /v1/chat/completions
-```
 
 ## 1. A2A — Agent-to-Agent
 
@@ -127,48 +112,6 @@ Struktura tijela za POST (`customAgentBodySchema` u `src/app/api/acp/agents/rout
   rezervna opcija pružatelja. Za uobičajenu interaktivnu upotrebu sami pokrenite konfigurirani CLI ili
   koristite `omniroute run`.
 
-## 3. Cloud agenti
-
-**OmniRoute krajnje tačke:** `/api/v1/agents/tasks/*` (životni ciklus) + `/api/cloud/*` (infrastruktura)
-**Izvor:** `src/lib/cloudAgent/`
-
-### Šta je to
-
-Jedinstveni interfejs preko cloud agenata za kodiranje trećih strana. Vi šaljete prompt + URL repozitorijuma, OmniRoute prosljeđuje odgovarajućem cloud agentu, provjerava status i vraća rezultate.
-
-### Podržani agenti (4, svi potvrđeni u `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Životni ciklus
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() po klasi agenta
-  → eksterni servis započinje rad
-  → red zadatka kreiran u bazi podataka (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → lijena sinhronizacija statusa od provajdera
-  → vraća trenutni status + plan + dnevnik aktivnosti
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → prosljeđuje provajderu (ili označava kao otkazano lokalno)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokalno otkazivanje
-```
-
-### Autorizacija
-
-⚠️ **Sve `/api/v1/agents/tasks/*` krajnje tačke zahtijevaju upravljačku autorizaciju** (commit `588a0333`). Pozivaoci koji koriste samo Bearer token dobijaju 401 od verzije v3.8.0.
-
-### Detaljan pregled
-
-Pogledajte [CLOUD_AGENT.md](./CLOUD_AGENT.md) za `CloudAgentBase` ugovor, specifičnosti po agentu, detalje šeme i krajnje tačke za upravljanje akreditivima.
-
 ## Poređenje: A2A vs Cloud Agents
 
 Oba imaju "dugotrajne zadatke" (long-running tasks), ali na različitim nivoima:
@@ -233,27 +176,7 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ### Slanje zadatka za Cloud Agent
 
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
 ### Provjera statusa cloud zadatka
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
 
 ## Kada koristiti šta
 
@@ -286,7 +209,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Vidi također
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Detaljan pregled A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Detaljan pregled Cloud agenata
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Vanjske CLI integracije (koriste ACP)
 - [SKILLS.md](./SKILLS.md) — Okvir vještina (razlikuje se od A2A vještina — lokalno okruženje za izvršavanje)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referenca krajnjih tačaka

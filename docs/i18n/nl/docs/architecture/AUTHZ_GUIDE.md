@@ -267,8 +267,6 @@ Het afdwingen van client-API-sleutels gebruikt `isRequireApiKeyEnabled()` in `sr
 
 ## Incompatibele wijziging — v3.8.0
 
-De eindpunten `/api/v1/agents/tasks/*` en `/api/resilience/model-cooldowns` **vereisen nu beheerauthenticatie** (commit `588a0333`). Clients die eerder een normale API-sleutel zonder de scope `manage` verzonden, ontvangen `403`. Migratie: wijs de scope `manage` toe aan de sleutel in het API Keys-dashboard of gebruik een aangemelde dashboardsessie.
-
 ## Gedragswijziging — v3.8.2
 
 `/api/mcp/*` (de externe MCP-server) is standaard nog steeds LOCAL_ONLY, maar accepteert nu niet-loopbackrequests wanneer de header `Authorization: Bearer <api-key>` de scope `manage` bevat. De uitzondering wordt expliciet per pad beheerd via `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` in `src/server/authz/routeGuard.ts`; het verwante LOCAL_ONLY-prefix `/api/cli-tools/runtime/*` kan bewust NIET worden omzeild, omdat het willekeurige subprocessen kan starten. Anonieme requests naar `/api/mcp/*` die niet van loopback afkomstig zijn, blijven `403 LOCAL_ONLY` retourneren — de standaard voor elk nieuw LOCAL_ONLY-pad blijft strikt beperkt tot loopback. Zie [Route Guard-niveaus](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

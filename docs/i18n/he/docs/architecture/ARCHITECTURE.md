@@ -128,7 +128,6 @@ OmniRoute הוא שער ניתוב מקומי לבינה מלאכותית ולו
 - `/dashboard/limits` — בקרות מכסה/קצב
 - `/dashboard/cli-tools` — קליטת CLI, זיהוי סביבת ריצה ויצירת תצורה
 - `/dashboard/agents` — סוכני ACP שזוהו + רישום סוכנים מותאמים אישית
-- `/dashboard/cloud-agents` — משימות סוכנים המתארחות בענן (Codex Cloud, Devin, Jules) ומחזור חיי המשימה
 - `/dashboard/skills` — מרשם מיומנויות A2A, הרצה בארגז חול וקטלוג מיומנויות מובנות
 - `/dashboard/memory` — בדיקה ואחזור של זיכרון שיחה מתמשך
 - `/dashboard/webhooks` — מינויים ל-webhook יוצא, החלפת סודות ונתוני ניסיונות חוזרים
@@ -382,23 +381,6 @@ Auto Combo מדרג ובוחר באופן דינמי יעדי ניתוב בזמ�
 
 לפרטים אלגוריתמיים מלאים (נוסחאות הגורמים, כוונון משקלים), ראו
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. סוכני ענן
-
-Cloud Agents עוטף פלטפורמות צד שלישי מתארחות לסוכני קוד (Codex Cloud, Devin,
-Jules) מאחורי מחזור חיים אחיד של משימות המגובה במסד נתונים. כל נקודות הקצה
-ליצירה ולבדיקה של משימות דורשות אימות ניהולי.
-
-- שורש המודול: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, וכן תתי-תיקיות לכל סוכן תחת `agents/`)
-- מימושים לכל סוכן: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- נקודות קצה ציבוריות: `/api/v1/agents/tasks/*` (הצגה/יצירה/אחזור/ביטול)
-- נקודות קצה ניהוליות: `/api/cloud/*` (הקצאה, מצב, אצווה)
-- לוח בקרה: `/dashboard/cloud-agents`
-- אחסון: טבלת `cloud_agent_tasks`
-
-לפרטי הקצאה ו-OAuth עבור כל סוכן, ראו
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. מנגנוני הגנה
 

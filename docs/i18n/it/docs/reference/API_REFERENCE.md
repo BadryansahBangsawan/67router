@@ -1766,31 +1766,6 @@ Utilizzate dal sottosistema di gestione automatica delle chiavi per emettere e r
 
 ---
 
-## Protocollo degli agenti
-
-Attività degli agenti cloud (Claude Code, Codex Cloud, OpenHands, ecc.) eseguite da remoto per conto degli utenti di OmniRoute.
-
-| Metodo | Percorso                      | Descrizione                                                                                                                                                         |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Elenca le attività — parametri facoltativi `?provider=`, `?status=`, `?limit=` (1–500, valore predefinito 50)                                                       |
-| POST   | `/api/v1/agents/tasks`        | Crea un'attività — corpo convalidato da `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Restituisce `201` con l'envelope dell'attività |
-| DELETE | `/api/v1/agents/tasks?id=...` | Elimina un'attività                                                                                                                                                 |
-| GET    | `/api/v1/agents/tasks/[id]`   | Legge un'attività — aggiorna in modo sincrono lo stato dall'agente cloud upstream quando è impostato un `external_id`                                               |
-| POST   | `/api/v1/agents/tasks/[id]`   | Azione discriminata: `{action: "approve"}`, `{action: "message", message}` oppure `{action: "cancel"}`                                                              |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Elimina un'attività specifica in base all'id                                                                                                                        |
-
-> **Autenticazione:** l'autenticazione di gestione è obbligatoria per ogni metodo (`requireCloudAgentManagementAuth`). Prima della versione v3.8.0 questi endpoint non richiedevano autenticazione — vedere il commit `588a0333` per la modifica incompatibile.
-
-```bash
-# Crea un'attività cloud di Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy di gestione
 
 Proxy HTTP(S)/SOCKS in uscita che possono essere assegnati a provider, account oppure globalmente.
@@ -2293,5 +2268,3 @@ famiglie di credenziali (sessione della dashboard, token CLI locale, token di ac
 - `requireLogin` è attivabile o disattivabile tramite `/api/settings/require-login`
 - Le route `/v1/*` possono richiedere facoltativamente una chiave API Bearer quando `REQUIRE_API_KEY=true`
 - In questa documentazione, "token di gestione" / "chiave API con ambito di gestione" indica una delle famiglie descritte in quella guida, non un tipo aggiuntivo di segreto non definito
-
-> **Modifica incompatibile (v3.8.0)** — `/api/v1/agents/tasks/*` e gli endpoint di gestione del cooldown ora richiedono l'**autenticazione per la gestione** (cookie `auth_token` della dashboard o una chiave API con ambito di gestione). I client che in precedenza chiamavano queste route senza autenticazione riceveranno `401 Unauthorized`. Consulta il commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

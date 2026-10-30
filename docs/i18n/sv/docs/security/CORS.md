@@ -69,20 +69,6 @@ att CORS-**förhandskontroller godkänns** på hanteringsrutter — vilka fortfa
 som en sida med ett annat ursprung inte kan tillhandahålla. Det är **inte** en vektor för sessionskapning eller
 stöld av autentiseringsuppgifter i den gemensamma CORS-sökvägen.
 
-### Ett verkligt undantag — `/api/v1/agents/`
-
-Cloud-Agent-rutterna (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) anger
-sina **egna** CORS-huvuden
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) och skickar **faktiskt**
-`Access-Control-Allow-Origin: <origin>|*` tillsammans med
-`Access-Control-Allow-Credentials: true`. Detta är den enda ytan där
-returnering av ursprung och autentiseringsuppgifter förekommer samtidigt, och den är **oberoende av
-`CORS_ALLOW_ALL`**. Dessa rutter är hanteringsautentiserade
-(`requireManagementAuth`); operatörer som exponerar instrumentpanelen utanför värddatorn bör vara
-medvetna om att detta är det enda stället där svarshuvudena tillåter en autentiserad läsning mellan
-olika ursprung. En skärpning till en explicit tillåtelselista hanteras
-separat från denna CORS-vägledning.
-
 ## Checklista för produktion
 
 - **Ange aldrig `CORS_ALLOW_ALL=true` i produktion.** Lämna den odefinierad.
@@ -163,7 +149,6 @@ Säkerhet), inte i proxyn.
 | Körningsstatus för instrumentpanelen                 | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Varningsbanderoll på instrumentpanelen               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Fält för tillåtna CORS-ursprung                      | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Routningsspecifik CORS för Cloud-Agent (undantaget)  | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Se även
 

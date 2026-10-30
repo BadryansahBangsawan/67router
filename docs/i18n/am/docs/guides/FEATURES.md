@@ -43,8 +43,6 @@
 - 🤝 **GitLab Duo OAuth አቅራቢ** — በGitLab ማረጋገጫዎች ይግቡ
 - 🧠 **Reasoning Replay Cache** — የማመዛዘኛ ዱካዎችን በድብልቅ የማስታወሻ-ውስጥ + SQLite ቋሚ ማከማቻ
 
-📚 **ተዛማጅ ሰነዶች፦** [የክህሎት ማዕቀፍ](../frameworks/SKILLS.md) · [የማስታወሻ ስርዓት](../frameworks/MEMORY.md) · [የደመና ወኪሎች](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 አቅራቢዎች

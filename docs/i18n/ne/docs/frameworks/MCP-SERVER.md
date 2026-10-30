@@ -241,17 +241,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 रनटाइम राउटिङ/क्यास/कम्प्रेसन/मेमोरी/स्किल/प्रोक्सी/कन्टेक्स्ट-स्रोत सञ्चालनहरूमा सीमित छ। दुई निकटवर्ती
 फ्रेमवर्कहरू v3.8.0 मा MCP सर्भरसँगै उपलब्ध हुन्छन् र तिनको दस्तावेजीकरण अलग्गै गरिएको छ:
 
-### Cloud Agents
-
-Cloud Agents प्रक्रियाबाहिरका AI कोडिङ एजेन्टहरू (codex-cloud, cursor-cloud, devin, jules) हुन्, जुन
-LLM प्रदायकहरूका लागि प्रयोग हुने उही जडान मोडेलमार्फत OmniRoute मा जोडिएका छन्। तिनीहरूका
-आफ्नै REST सतह (`/api/v1/agents/*`) मार्फत उपलब्ध छन् र MCP उपकरण क्याटलगको भाग **होइनन्**
-— Cloud Agent कल गर्दा MCP स्कोप खपत हुँदैन।
-
-- कार्यान्वयन: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)।
-- जीवनचक्र: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`।
-- दस्तावेजीकरण: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)।
-
 ### Guardrails
 
 Guardrails च्याट पाइपलाइनभित्र लागू हुने पूर्व/पश्चात्-कार्यान्वयन फिल्टरहरू (vision-bridge, pii-masker, prompt-injection)

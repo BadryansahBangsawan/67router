@@ -1374,11 +1374,11 @@ biex jinbidlu hemm bżonn modifika fil-kodiċi, mhux varjabbli ambjentali:
 
 Ippermetti lill-utenti jirrapportaw problemi direttament mid-Dashboard.
 
-| Varjabbli             | Valur Predefinit   | Fajl tas-Sors                                                | Deskrizzjoni                                                                                                                                                  |
-| --------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(mhux issettjat)_ | `src/app/api/v1/issues/report/route.ts`                      | Repożitorju fil-format `owner/repo`.                                                                                                                          |
-| `GITHUB_ISSUES_TOKEN` | _(mhux issettjat)_ | `src/app/api/v1/issues/report/route.ts`                      | Token ta' Aċċess Personali ta' GitHub bl-ambitu `issues:write`.                                                                                               |
-| `GITHUB_TOKEN`        | _(mhux issettjat)_ | għodod għall-klassifikazzjoni tal-problemi / aġent tal-cloud | Token ġeneriku ta' aċċess għal GitHub użat bħala alternattiva għal `GITHUB_ISSUES_TOKEN` u kkunsmat mill-għodod tal-aġent tal-cloud f'`src/lib/cloudAgent/*`. |
+| Varjabbli             | Valur Predefinit   | Fajl tas-Sors                                                | Deskrizzjoni                                                                                                                                                               |
+| --------------------- | ------------------ | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(mhux issettjat)_ | `src/app/api/v1/issues/report/route.ts`                      | Repożitorju fil-format `owner/repo`.                                                                                                                                       |
+| `GITHUB_ISSUES_TOKEN` | _(mhux issettjat)_ | `src/app/api/v1/issues/report/route.ts`                      | Token ta' Aċċess Personali ta' GitHub bl-ambitu `issues:write`.                                                                                                            |
+| `GITHUB_TOKEN`        | _(mhux issettjat)_ | għodod għall-klassifikazzjoni tal-problemi / aġent tal-cloud | Token ġeneriku ta' aċċess għal GitHub użat bħala alternattiva għal `GITHUB_ISSUES_TOKEN` u kkunsmat mill-għodod tal-aġent tal-cloud f'`src/lib/skills/githubCollector.ts`. |
 
 ---
 

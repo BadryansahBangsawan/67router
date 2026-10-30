@@ -120,4 +120,3 @@ test တစ်ခု လိုအပ်သည်။
 - [CLI launch contract များ](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI tool များ](../reference/CLI-TOOLS.md)
 - [A2A server](./A2A-SERVER.md)
-- [Cloud agent များ](./CLOUD_AGENT.md)

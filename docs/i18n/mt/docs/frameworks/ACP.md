@@ -120,4 +120,3 @@ fl-ambjent fil-mira.
 - [Kuntratti tat-tnedija tas-CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Għodod tas-CLI](../reference/CLI-TOOLS.md)
 - [Server A2A](./A2A-SERVER.md)
-- [Aġenti tal-cloud](./CLOUD_AGENT.md)

@@ -128,7 +128,6 @@ Paġni ewlenin taħt `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kontrolli tal-kwota/rata
 - `/dashboard/cli-tools` — onboarding tal-CLI, identifikazzjoni tal-runtime, ġenerazzjoni tal-konfigurazzjoni
 - `/dashboard/agents` — aġenti ACP identifikati + reġistrazzjoni ta' aġenti custom
-- `/dashboard/cloud-agents` — xogħlijiet tal-aġenti ospitati fil-cloud (Codex Cloud, Devin, Jules) u l-ċiklu tal-ħajja tax-xogħol
 - `/dashboard/skills` — reġistru tal-ħiliet A2A, twettiq tas-sandbox, katalgu tal-ħiliet integrati
 - `/dashboard/memory` — spezzjoni u retrieves tal-memorja konversazzjonali reżistenti
 - `/dashboard/webhooks` — abbonamenti tal-webhook outbound, rotazzjoni tal-isigri, statistika tal-ħdid mill-ġdid
@@ -383,23 +382,6 @@ Kapaċitajiet ewlenin:
 
 Għad-dettalji algoritmiċi kollha (formuli tal-fatturi, irfinar tal-piżijiet), ara
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Aġenti tal-Cloud
-
-Cloud Agents jiġbor pjattaformi ospitati ta' aġenti tal-kodiċi minn partijiet terzi (Codex Cloud, Devin,
-Jules) wara ċiklu tal-ħajja uniformi tal-kompiti sostnut minn DB. L-endpoints kollha għall-ħolqien/spezzjoni
-tal-kompiti jeħtieġu awtentikazzjoni ta' ġestjoni.
-
-- Għerq tal-modulu: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, flimkien ma' subdirettorji għal kull aġent taħt `agents/`)
-- Implimentazzjonijiet għal kull aġent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoints pubbliċi: `/api/v1/agents/tasks/*` (elenka/oħloq/ikseb/ikkanċella)
-- Endpoints ta' ġestjoni: `/api/cloud/*` (proviżjonament, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Ħażna: it-tabella `cloud_agent_tasks`
-
-Għad-dettalji tal-proviżjonament u ta' OAuth għal kull aġent, ara
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrails
 

@@ -24,7 +24,6 @@ Komplett guide för att konfigurera leverantörer, skapa kombinationer, integrer
 - [Kompetenssystem](#-skills-system)
 - [Minnessystem](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Molnagenter](#-cloud-agents)
 - [Programmatisk hantering](#-programmatic-management)
 - [Internt CLI](#-internal-cli)
 - [Skrivbordsapplikation (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Prenumerera på OmniRoute-händelser för övervakning och automatisering i real
 - Återförsök: 3 försök med exponentiell väntetid, därefter kö för obearbetade meddelanden
 
 Fullständigt schema finns i [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Molnagenter
-
-OmniRoute integreras med molnbaserade kodningsagenter (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) så att du kan skicka långvariga uppgifter från samma instrumentpanel som hanterar din lokala routning.
-
-- Skapa uppgifter via **Instrumentpanel → Molnagenter** eller `POST /api/v1/agents/tasks`
-- Följ status, loggar och artefakter för varje uppgift
-- Använd en egen API-nyckel per leverantör — autentiseringsuppgifterna lämnar aldrig OmniRoute-instansen
-
-Fullständig referens: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

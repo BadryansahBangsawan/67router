@@ -208,12 +208,12 @@ function buildRootAndSourceEdges(
 }
 
 export function mergeSnapshot(
-  parts: { cloudAgent: Part; a2a: Part; conductor: Part },
+  parts: { a2a: Part; conductor: Part },
   sources: SourceStatus[],
   opts: MergeOptions
 ): OrchSnapshot {
-  let nodes: OrchNode[] = [...parts.cloudAgent.nodes, ...parts.a2a.nodes, ...parts.conductor.nodes];
-  let edges: OrchEdge[] = [...parts.cloudAgent.edges, ...parts.a2a.edges, ...parts.conductor.edges];
+  let nodes: OrchNode[] = [...parts.a2a.nodes, ...parts.conductor.nodes];
+  let edges: OrchEdge[] = [...parts.a2a.edges, ...parts.conductor.edges];
 
   const dropped = new Set<string>();
   ({ nodes, edges } = dedupeConductorMirrors(nodes, edges, dropped));

@@ -43,8 +43,6 @@ Chuir an timthriall v3.7.x → v3.8.0 aicsíú uath-bhealach gan chumrú, solát
 - 🤝 **Soláthraí OAuth GitLab Duo** — logáil isteach le creidmheachtaí GitLab
 - 🧠 **Taisce Athsheolta Réasúnaithe** — cur i gcomhar cuimhne in-aiarraide + marthanacht SQLite de lorganna réasúnaithe
 
-📚 **Doiciméid gaolmhara:** [Creat Scileanna](../frameworks/SKILLS.md) · [Córas Cuimhne](../frameworks/MEMORY.md) · [Gníomhairí Scátháin](../frameworks/CLOUD_AGENT.md) · [Gréasáin](../frameworks/WEBHOOKS.md) · [Taisce Athsheolta Réasúnaithe](../routing/REASONING_REPLAY.md)
-
 ## 🔌 Soláthraithe
 
 Bainistigh ceangail soláthraithe AI: soláthraithe OAuth (Claude Code, Codex), soláthraithe eochair API (Groq, DeepSeek, OpenRouter), agus soláthraithe saor in aisce (Qoder, Kiro). Áirítear le cuntais Kiro rianú iarmhairid creidmheacha — creidmheacha fágtha, ceadliomh iomlán, agus dáta athnuaite le feiceáil i deais → Úsáid.

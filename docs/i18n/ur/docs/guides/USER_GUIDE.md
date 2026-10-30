@@ -24,7 +24,6 @@
 - [مہارتوں کا نظام](#-skills-system)
 - [میموری سسٹم](#-memory-system)
 - [ویب ہُکس](#-webhooks)
-- [کلاؤڈ ایجنٹس](#-cloud-agents)
 - [پروگرامی انتظام](#-programmatic-management)
 - [اندرونی CLI](#-internal-cli)
 - [ڈیسک ٹاپ ایپلیکیشن (Electron)](#-desktop-application-electron)
@@ -1273,18 +1272,6 @@ OmniRoute ہائبرڈ بازیافت کے ساتھ **طویل مدتی مکال
 - دوبارہ کوششیں: exponential backoff کے ساتھ 3 کوششیں، پھر dead-letter queue
 
 مکمل schema کے لیے [WEBHOOKS.md](../frameworks/WEBHOOKS.md) دیکھیں۔
-
----
-
-## ☁️ کلاؤڈ ایجنٹس
-
-OmniRoute کلاؤڈ کوڈنگ ایجنٹس (**OpenAI Codex Cloud**، **Devin**، **Jules**، **Antigravity**) کے ساتھ ضم ہوتا ہے، تاکہ آپ اسی dashboard سے طویل دورانیے کے ٹاسکس روانہ کر سکیں جو آپ کی مقامی routing کو سنبھالتا ہے۔
-
-- **Dashboard → Cloud Agents** میں یا `POST /api/v1/agents/tasks` کے ذریعے ٹاسکس بنائیں
-- ہر ٹاسک کی حیثیت، logs اور artifacts کو ٹریک کریں
-- ہر provider کے لیے اپنی API key استعمال کریں — اسناد کبھی بھی OmniRoute instance سے باہر نہیں جاتیں
-
-مکمل حوالہ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)۔
 
 ---
 

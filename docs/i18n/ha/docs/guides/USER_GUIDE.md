@@ -24,7 +24,6 @@ Cikakken jagora don saita masu samarwa, ƙirƙirar haɗe-haɗe, haɗa kayan aiki
 - [Tsarin Ƙwarewa](#-skills-system)
 - [Tsarin Ƙwaƙwalwa](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Wakilan Cloud](#-cloud-agents)
 - [Gudanarwa ta Shirye-shirye](#-programmatic-management)
 - [CLI na Ciki](#-internal-cli)
 - [Manhajar Kwamfutar Tebur (Electron)](#-desktop-application-electron)
@@ -1277,18 +1276,6 @@ Yi rajista ga abubuwan da ke faruwa a OmniRoute domin sa ido da sarrafa ayyuka t
 - Sake gwadawa: yunƙuri 3 tare da ƙarin jinkiri a hankali, sannan a tura zuwa jerin saƙonnin da suka gaza
 
 Cikakken schema yana cikin [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Wakilan Cloud
-
-OmniRoute yana haɗuwa da wakilan rubuta lamba na cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) domin ku iya aika ayyuka masu ɗaukar dogon lokaci daga dashboard ɗin da ke kula da routing na cikin gida.
-
-- Ƙirƙiri ayyuka a **Dashboard → Cloud Agents** ko ta `POST /api/v1/agents/tasks`
-- Bibiyi matsayi, logs, da artifacts na kowane aiki
-- Yi amfani da maɓallin API naka ga kowane provider — bayanan shiga ba sa taɓa barin instance na OmniRoute
-
-Cikakken bayani: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

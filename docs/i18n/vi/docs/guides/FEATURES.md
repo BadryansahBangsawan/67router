@@ -43,8 +43,6 @@ Chu kỳ v3.7.x → v3.8.0 bổ sung tính năng tự động định tuyến kh
 - 🤝 **Nhà cung cấp GitLab Duo OAuth** — đăng nhập bằng thông tin xác thực GitLab
 - 🧠 **Bộ nhớ đệm phát lại suy luận** — lưu trữ bền vững kết hợp giữa bộ nhớ trong và SQLite cho các dấu vết suy luận
 
-📚 **Tài liệu liên quan:** [Khung kỹ năng](../frameworks/SKILLS.md) · [Hệ thống bộ nhớ](../frameworks/MEMORY.md) · [Tác nhân đám mây](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Bộ nhớ đệm phát lại suy luận](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Nhà cung cấp

@@ -698,54 +698,6 @@
       "yes": "ਪੁਸ਼ਟੀਕਰਨ ਪ੍ਰੌਂਪਟ ਛੱਡੋ"
     }
   },
-  "cloud": {
-    "description": "ਕਲਾਉਡ AI ਏਜੰਟ ਕਾਰਜਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ (codex, devin, jules)",
-    "agents": {
-      "description": "ਉਪਲਬਧ ਕਲਾਉਡ ਏਜੰਟਾਂ ਦੀ ਸੂਚੀ ਦਿਖਾਓ"
-    },
-    "agent": {
-      "description": "{agent} ਕਲਾਉਡ ਏਜੰਟ ਕਾਰਜਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ",
-      "auth": {
-        "description": "OAuth ਰਾਹੀਂ {agent} ਨੂੰ ਅਧਿਕਾਰਤ ਕਰੋ"
-      }
-    },
-    "task": {
-      "description": "ਕਲਾਉਡ ਏਜੰਟ ਕਾਰਜਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ",
-      "create": {
-        "description": "ਇੱਕ ਨਵਾਂ ਏਜੰਟ ਕਾਰਜ ਬਣਾਓ",
-        "title": "ਕਾਰਜ ਦਾ ਸਿਰਲੇਖ (ਡਿਫੌਲਟ ਤੌਰ 'ਤੇ ਪ੍ਰੌਂਪਟ ਦੇ ਪਹਿਲੇ 80 ਅੱਖਰ)",
-        "prompt": "ਕਾਰਜ ਪ੍ਰੌਂਪਟ ਲਿਖਤ",
-        "prompt_file": "ਫਾਇਲ ਤੋਂ ਪ੍ਰੌਂਪਟ ਪੜ੍ਹੋ",
-        "repo": "ਕਾਰਜ ਲਈ ਕਲੋਨ ਕਰਨ ਵਾਸਤੇ ਰਿਪੋਜ਼ਟਰੀ URL",
-        "branch": "ਵਰਤਣ ਲਈ ਬ੍ਰਾਂਚ ਦਾ ਨਾਮ",
-        "metadata": "JSON ਮੈਟਾਡੇਟਾ ਔਬਜੈਕਟ"
-      },
-      "list": {
-        "description": "ਏਜੰਟ ਕਾਰਜਾਂ ਦੀ ਸੂਚੀ ਦਿਖਾਓ",
-        "status": "ਸਥਿਤੀ ਮੁਤਾਬਕ ਫਿਲਟਰ ਕਰੋ (running|completed|failed|cancelled)",
-        "limit": "ਵੱਧ ਤੋਂ ਵੱਧ ਨਤੀਜੇ (ਡਿਫੌਲਟ: 50)"
-      },
-      "get": {
-        "description": "ID ਰਾਹੀਂ ਕਾਰਜ ਦੇ ਵੇਰਵੇ ਪ੍ਰਾਪਤ ਕਰੋ"
-      },
-      "status": {
-        "description": "ਕਾਰਜ ਦੀ ਸਥਿਤੀ ਪ੍ਰਿੰਟ ਕਰੋ (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "ਚੱਲ ਰਹੇ ਟਾਸਕ ਨੂੰ ਰੱਦ ਕਰੋ",
-        "yes": "ਪੁਸ਼ਟੀਕਰਨ ਪ੍ਰੌਂਪਟ ਛੱਡੋ"
-      },
-      "approve": {
-        "description": "ਕਾਰਵਾਈ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਏਜੰਟ ਯੋਜਨਾ ਨੂੰ ਮਨਜ਼ੂਰ ਕਰੋ"
-      },
-      "message": {
-        "description": "ਚੱਲ ਰਹੇ ਟਾਸਕ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ"
-      }
-    },
-    "sources": {
-      "description": "ਟਾਸਕ ਦੁਆਰਾ ਤਿਆਰ ਕੀਤੀਆਂ ਸਰੋਤ ਫ਼ਾਈਲਾਂ ਦੀ ਸੂਚੀ ਦਿਖਾਓ"
-    }
-  },
   "program": {
     "description": "OmniRoute — ਆਟੋ ਫਾਲਬੈਕ ਵਾਲਾ ਸਮਾਰਟ AI ਰਾਊਟਰ",
     "version": "ਵਰਜਨ ਪ੍ਰਿੰਟ ਕਰੋ ਅਤੇ ਬਾਹਰ ਨਿਕਲੋ",

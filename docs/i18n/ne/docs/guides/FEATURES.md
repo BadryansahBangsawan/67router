@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 चक्रले शून्य-कन्फिग स्�
 - 🤝 **GitLab Duo OAuth प्रदायक** — GitLab प्रमाणहरूद्वारा लगइन गर्नुहोस्
 - 🧠 **Reasoning Replay Cache** — तर्क ट्रेसहरूको हाइब्रिड इन-मेमोरी + SQLite स्थायित्व
 
-📚 **सम्बन्धित दस्तावेजहरू:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 प्रदायकहरू

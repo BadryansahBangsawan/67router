@@ -69,20 +69,6 @@ leidimu sėkmingai atlikti CORS **išankstinę užklausą** valdymo maršrutuose
 o kito šaltinio puslapis jo suteikti negali. Bendrame CORS kelyje tai **nėra** sesijos užgrobimo ar
 kredencialų vagystės vektorius.
 
-### Viena tikra išimtis — `/api/v1/agents/`
-
-Cloud-Agent maršrutai (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) nustato
-**savo** CORS antraštes
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ir **išsiunčia**
-`Access-Control-Allow-Origin: <origin>|*` kartu su
-`Access-Control-Allow-Credentials: true`. Tai vienintelė sąsaja, kurioje
-šaltinio grąžinimas ir kredencialai naudojami kartu, ir ji **nepriklauso nuo
-`CORS_ALLOW_ALL`**. Šiuose maršrutuose naudojamas valdymo autentifikavimas
-(`requireManagementAuth`); operatoriai, kurie prietaisų skydelį padaro pasiekiamą už pagrindinio kompiuterio ribų, turėtų
-žinoti, kad tai yra vienintelė vieta, kurioje atsakymo antraštės leidžia skaityti iš kito šaltinio
-naudojant kredencialus. Jo apribojimas iki aiškaus leidžiamų šaltinių sąrašo stebimas
-atskirai nuo šių CORS gairių.
-
 ## Produkcinės aplinkos kontrolinis sąrašas
 
 - **Produkcinėje aplinkoje niekada nenustatykite `CORS_ALLOW_ALL=true`.** Palikite šį parametrą nenustatytą.
@@ -161,7 +147,6 @@ skirtuke „Sauga“), o ne tarpiniame serveryje.
 | Vykdymo būsena valdymo skydeliui                                    | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Valdymo skydelio įspėjamoji reklamjuostė                            | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Leidžiamų CORS šaltinių laukas                                      | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| „Cloud-Agent“ kiekvieno maršruto CORS (išimtis)                     | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Taip pat žr.
 

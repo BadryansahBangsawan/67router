@@ -24,7 +24,6 @@ Obiektywne porównanie funkcji z popularnymi routerami AI open-source.
 | **Protokół A2A**                                      |              ✅ 6 umiejętności               |           ❌           |         ❌          |      ❌      |
 | **Pamięć (FTS5 + wektory)**                           |                      ✅                      |           ❌           |         ❌          |      ❌      |
 | **Zabezpieczenia (PII, iniekcja promptów, wizja)**    |                      ✅                      |       częściowe        |         ❌          |  ✅ płatne   |
-| **Integracje z agentami chmurowymi**                  |         Codex, Cursor, Devin, Jules          |           ❌           |         ❌          |      ❌      |
 | **Circuit breaker dla każdego dostawcy**              |      ✅ 3-stanowy, leniwe odzyskiwanie       |       podstawowy       |         ❌          |      ✅      |
 | **Maskowanie odcisków TLS (JA3/JA4)**                 |                  ✅ wreq-js                  |           ❌           |         ❌          |      ❌      |
 | **Framework ewaluacyjny**                             |                 ✅ wbudowany                 |           ❌           |         ❌          |   ⚠ płatne   |

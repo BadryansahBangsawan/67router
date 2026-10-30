@@ -1354,11 +1354,11 @@ ich zmena vyžaduje úpravu kódu, nie env premennú:
 
 Umožnite používateľom nahlasovať problémy priamo z ovládacieho panela.
 
-| Premenná              | Predvolená hodnota | Zdrojový súbor                                           | Popis                                                                                                                                                        |
-| --------------------- | ------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(nenastavené)_    | `src/app/api/v1/issues/report/route.ts`                  | Repozitár vo formáte `owner/repo`.                                                                                                                           |
-| `GITHUB_ISSUES_TOKEN` | _(nenastavené)_    | `src/app/api/v1/issues/report/route.ts`                  | Osobný prístupový token GitHubu s rozsahom `issues:write`.                                                                                                   |
-| `GITHUB_TOKEN`        | _(nenastavené)_    | triedenie problémov / pomocné nástroje cloudového agenta | Všeobecný prístupový token GitHubu používaný ako záložná možnosť pre `GITHUB_ISSUES_TOKEN` a pomocnými nástrojmi cloudového agenta v `src/lib/cloudAgent/*`. |
+| Premenná              | Predvolená hodnota | Zdrojový súbor                                           | Popis                                                                                                                                                                     |
+| --------------------- | ------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(nenastavené)_    | `src/app/api/v1/issues/report/route.ts`                  | Repozitár vo formáte `owner/repo`.                                                                                                                                        |
+| `GITHUB_ISSUES_TOKEN` | _(nenastavené)_    | `src/app/api/v1/issues/report/route.ts`                  | Osobný prístupový token GitHubu s rozsahom `issues:write`.                                                                                                                |
+| `GITHUB_TOKEN`        | _(nenastavené)_    | triedenie problémov / pomocné nástroje cloudového agenta | Všeobecný prístupový token GitHubu používaný ako záložná možnosť pre `GITHUB_ISSUES_TOKEN` a pomocnými nástrojmi cloudového agenta v `src/lib/skills/githubCollector.ts`. |
 
 ---
 

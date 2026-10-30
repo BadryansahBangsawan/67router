@@ -245,17 +245,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 لعمليات التوجيه/التخزين المؤقت/الضغط/الذاكرة/المهارات/الوكيل/مصدر السياق في وقت التشغيل. يُشحن إطارا عمل
 متجاوران إلى جانب خادم MCP في v3.8.0، وقد جرى توثيقهما بصورة منفصلة:
 
-### الوكلاء السحابيون
-
-الوكلاء السحابيون هم وكلاء برمجة بالذكاء الاصطناعي يعملون خارج العملية (codex-cloud، cursor-cloud، devin، jules)، وقد دُمجوا في
-OmniRoute من خلال نموذج الاتصال نفسه المستخدم لموفري LLM. ويُتاحون عبر
-واجهة REST خاصة بهم (`/api/v1/agents/*`)، وهم **ليسوا** جزءًا من كتالوج أدوات MCP
-— ولا يستهلك استدعاء وكيل سحابي نطاق MCP.
-
-- التنفيذ: `src/lib/cloudAgent/` ‏(`registry.ts`، `agents/codex.ts`، `agents/cursor.ts`، `agents/devin.ts`، `agents/jules.ts`).
-- دورة الحياة: `createTask`، `getStatus`، `approvePlan`، `sendMessage`، `listSources`.
-- التوثيق: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### حواجز الحماية
 
 حواجز الحماية هي مرشحات تسبق التنفيذ أو تليه (vision-bridge، pii-masker، prompt-injection)

@@ -698,54 +698,6 @@
       "yes": "דילוג על בקשת האישור"
     }
   },
-  "cloud": {
-    "description": "ניהול משימות של סוכני AI בענן (codex, devin, jules)",
-    "agents": {
-      "description": "הצגת סוכני הענן הזמינים"
-    },
-    "agent": {
-      "description": "ניהול משימות סוכן הענן {agent}",
-      "auth": {
-        "description": "הרשאת {agent} באמצעות OAuth"
-      }
-    },
-    "task": {
-      "description": "ניהול משימות של סוכני ענן",
-      "create": {
-        "description": "יצירת משימת סוכן חדשה",
-        "title": "כותרת המשימה (ברירת המחדל היא 80 התווים הראשונים של ההנחיה)",
-        "prompt": "טקסט ההנחיה למשימה",
-        "prompt_file": "קריאת ההנחיה מקובץ",
-        "repo": "כתובת ה-URL של המאגר לשכפול עבור המשימה",
-        "branch": "שם הענף לשימוש",
-        "metadata": "אובייקט מטא-נתונים של JSON"
-      },
-      "list": {
-        "description": "הצגת משימות סוכן",
-        "status": "סינון לפי סטטוס (running|completed|failed|cancelled)",
-        "limit": "מספר תוצאות מרבי (ברירת מחדל: 50)"
-      },
-      "get": {
-        "description": "קבלת פרטי משימה לפי ID"
-      },
-      "status": {
-        "description": "הצגת סטטוס המשימה (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "ביטול משימה פעילה",
-        "yes": "דילוג על בקשת האישור"
-      },
-      "approve": {
-        "description": "אישור תוכנית הסוכן כדי להתחיל בביצוע"
-      },
-      "message": {
-        "description": "שליחת הודעה למשימה פעילה"
-      }
-    },
-    "sources": {
-      "description": "הצגת קובצי המקור שהופקו על ידי משימה"
-    }
-  },
   "program": {
     "description": "OmniRoute — נתב AI חכם עם מעבר אוטומטי לגיבוי",
     "version": "הדפסת הגרסה ויציאה",

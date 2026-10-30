@@ -24,7 +24,6 @@ Objektív funkcióösszehasonlítás népszerű nyílt forráskódú AI-routerek
 | **A2A protokoll**                                      |                 ✅ 6 készség                 |       ❌       |        ❌         |     ❌     |
 | **Memória (FTS5 + vektor)**                            |                      ✅                      |       ❌       |        ❌         |     ❌     |
 | **Védőkorlátok (PII, injekció, gépi látás)**           |                      ✅                      |   részleges    |        ❌         | ✅ fizetős |
-| **Felhős ügynökintegrációk**                           |         Codex, Cursor, Devin, Jules          |       ❌       |        ❌         |     ❌     |
 | **Szolgáltatónkénti megszakító (circuit breaker)**     |      ✅ 3 állapotú, lusta helyreállítás      |      alap      |        ❌         |     ✅     |
 | **TLS-ujjlenyomat-rejtőzés (JA3/JA4)**                 |                  ✅ wreq-js                  |       ❌       |        ❌         |     ❌     |
 | **Értékelési keretrendszer**                           |                 ✅ beépített                 |       ❌       |        ❌         | ⚠ fizetős  |

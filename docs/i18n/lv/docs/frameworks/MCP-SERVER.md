@@ -245,14 +245,6 @@ Pilnu katalogu un informāciju par to, kā ārējie aģenti to izmanto, skatiet 
 
 Iepriekš minētais MCP rīku inventārs (110 unikāli rīki, aprēķināts ar `countUniqueMcpTools()`) ir apzināti ierobežots līdz izpildlaika maršrutēšanas/kešatmiņas/saspiešanas/atmiņas/prasmju/starpniekservera/konteksta avota darbībām. Divi blakus ietvari tiek piegādāti kopā ar MCP serveri v3.8.0 versijā un ir dokumentēti atsevišķi:
 
-### Mākoņa aģenti
-
-Mākoņa aģenti ir ārpusprocesa AI programmēšanas aģenti (codex-cloud, cursor-cloud, devin, jules), kas ir savienoti ar OmniRoute, izmantojot to pašu savienojuma modeli, ko izmanto LLM nodrošinātāji. Tie ir pieejami, izmantojot savu REST saskarni (`/api/v1/agents/*`), un **nav** MCP rīku kataloga daļa — mākoņa aģenta izsaukšana nepatērē MCP tvērumu.
-
-- Implementācija: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Dzīves cikls: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentācija: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Aizsargmehānismi
 
 Aizsargmehānismi ir pirms/pēc izpildes filtri (vision-bridge, pii-masker, prompt-injection), kas tiek lietoti tērzēšanas konveijerā. Tie darbojas, pirms tiek sasniegts MCP rīku/maršrutu slānis, un audita konveijeram izvada strukturētus pārkāpumus; tie netiek izsaukti kā MCP rīki.

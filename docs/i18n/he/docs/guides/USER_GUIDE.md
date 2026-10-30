@@ -24,7 +24,6 @@
 - [מערכת מיומנויות](#-skills-system)
 - [מערכת זיכרון](#-memory-system)
 - [Webhooks](#-webhooks)
-- [סוכני ענן](#-cloud-agents)
 - [ניהול תכנותי](#-programmatic-management)
 - [CLI פנימי](#-internal-cli)
 - [יישום שולחן עבודה (Electron)](#-desktop-application-electron)
@@ -1278,18 +1277,6 @@ OmniRoute שומרת **זיכרון שיחתי לטווח ארוך** באמצע�
 - ניסיונות חוזרים: 3 ניסיונות עם השהיה מעריכית, ולאחר מכן העברה לתור הודעות כושלות
 
 הסכמה המלאה נמצאת ב-[WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ סוכני ענן
-
-OmniRoute משתלבת עם סוכני תכנות בענן (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), כך שתוכלו לשלוח משימות ממושכות מאותו לוח בקרה שמטפל בניתוב המקומי שלכם.
-
-- צרו משימות דרך **לוח הבקרה → סוכני ענן** או באמצעות `POST /api/v1/agents/tasks`
-- עקבו אחר הסטטוס, היומנים והתוצרים של כל משימה
-- השתמשו במפתח API משלכם עבור כל ספק — פרטי הגישה לעולם אינם יוצאים ממופע OmniRoute
-
-תיעוד מלא: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

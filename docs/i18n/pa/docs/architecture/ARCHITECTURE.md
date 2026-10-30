@@ -128,7 +128,6 @@ v3.8.0 ਪਲੇਟਫਾਰਮ ਲਈ ਮਿਆਰੀ, ਵਰਜਨ-ਨਿਯ�
 - `/dashboard/limits` — ਕੋਟਾ/ਦਰ ਨਿਯੰਤਰਣ
 - `/dashboard/cli-tools` — CLI ਆਨਬੋਰਡਿੰਗ, ਰਨਟਾਈਮ ਖੋਜ, ਕੌਂਫਿਗਰੇਸ਼ਨ ਤਿਆਰ ਕਰਨਾ
 - `/dashboard/agents` — ਖੋਜੇ ਗਏ ACP ਏਜੰਟ + ਕਸਟਮ ਏਜੰਟ ਰਜਿਸਟ੍ਰੇਸ਼ਨ
-- `/dashboard/cloud-agents` — ਕਲਾਉਡ-ਹੋਸਟ ਕੀਤੇ ਏਜੰਟ ਟਾਸਕ (Codex Cloud, Devin, Jules) ਅਤੇ ਟਾਸਕ ਜੀਵਨ-ਚੱਕਰ
 - `/dashboard/skills` — A2A ਹੁਨਰ ਰਜਿਸਟਰੀ, ਸੈਂਡਬਾਕਸ ਐਗਜ਼ੀਕਿਊਸ਼ਨ, ਬਿਲਟ-ਇਨ ਹੁਨਰ ਕੈਟਾਲੌਗ
 - `/dashboard/memory` — ਸਥਾਈ ਗੱਲਬਾਤੀ ਮੈਮੋਰੀ ਦੀ ਜਾਂਚ ਅਤੇ ਪ੍ਰਾਪਤੀ
 - `/dashboard/webhooks` — ਆਊਟਬਾਊਂਡ ਵੈੱਬਹੁੱਕ ਸਬਸਕ੍ਰਿਪਸ਼ਨ, ਸੀਕ੍ਰੇਟ ਰੋਟੇਸ਼ਨ, ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਅੰਕੜੇ
@@ -380,23 +379,6 @@ OmniRoute ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਚੱਲ ਰਹੀਆਂ AI ਟੂ�
 
 ਪੂਰੇ ਐਲਗੋਰਿਦਮਿਕ ਵੇਰਵੇ (ਕਾਰਕ ਫਾਰਮੂਲੇ, ਭਾਰ ਟਿਊਨਿੰਗ) ਲਈ,
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) ਵੇਖੋ।
-
-### B. ਕਲਾਊਡ ਏਜੰਟ
-
-ਕਲਾਊਡ ਏਜੰਟ ਤੀਜੀ-ਧਿਰ ਦੇ ਹੋਸਟ ਕੀਤੇ ਕੋਡ-ਏਜੰਟ ਪਲੇਟਫਾਰਮਾਂ (Codex Cloud, Devin,
-Jules) ਨੂੰ ਇੱਕਸਾਰ DB-ਸਮਰਥਿਤ ਕਾਰਜ ਜੀਵਨ-ਚੱਕਰ ਦੇ ਪਿੱਛੇ ਸਮੇਟਦਾ ਹੈ। ਸਾਰੇ ਕਾਰਜ ਬਣਾਉਣ/ਨਿਰੀਖਣ
-ਐਂਡਪੌਇੰਟਾਂ ਲਈ ਪ੍ਰਬੰਧਨ ਪ੍ਰਮਾਣੀਕਰਨ ਲੋੜੀਂਦਾ ਹੈ।
-
-- ਮੋਡੀਊਲ ਰੂਟ: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, ਨਾਲ ਹੀ `agents/` ਅਧੀਨ ਹਰੇਕ ਏਜੰਟ ਲਈ ਉਪ-ਡਾਇਰੈਕਟਰੀਆਂ)
-- ਹਰੇਕ ਏਜੰਟ ਲਈ ਲਾਗੂਕਰਨ: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- ਜਨਤਕ ਐਂਡਪੌਇੰਟ: `/api/v1/agents/tasks/*` (ਸੂਚੀ/ਬਣਾਓ/ਪ੍ਰਾਪਤ ਕਰੋ/ਰੱਦ ਕਰੋ)
-- ਪ੍ਰਬੰਧਨ ਐਂਡਪੌਇੰਟ: `/api/cloud/*` (ਪ੍ਰੋਵਿਜ਼ਨਿੰਗ, ਸਥਿਤੀ, ਬੈਚ)
-- ਡੈਸ਼ਬੋਰਡ: `/dashboard/cloud-agents`
-- ਸਟੋਰੇਜ: `cloud_agent_tasks` ਟੇਬਲ
-
-ਹਰੇਕ ਏਜੰਟ ਲਈ ਪ੍ਰੋਵਿਜ਼ਨਿੰਗ ਅਤੇ OAuth ਦੇ ਵਿਸ਼ੇਸ਼ ਵੇਰਵਿਆਂ ਲਈ,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) ਵੇਖੋ।
 
 ### C. ਗਾਰਡਰੇਲ
 

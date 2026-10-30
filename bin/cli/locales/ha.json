@@ -698,54 +698,6 @@
       "yes": "Tsallake saƙon neman tabbatarwa"
     }
   },
-  "cloud": {
-    "description": "Sarrafa ayyukan wakilan AI na gajimare (codex, devin, jules)",
-    "agents": {
-      "description": "Jera wakilan gajimare da ake da su"
-    },
-    "agent": {
-      "description": "Sarrafa ayyukan wakilin gajimare na {agent}",
-      "auth": {
-        "description": "Ba wa {agent} izini ta OAuth"
-      }
-    },
-    "task": {
-      "description": "Sarrafa ayyukan wakilan gajimare",
-      "create": {
-        "description": "Ƙirƙiri sabon aikin wakili",
-        "title": "Taken aiki (tsoho shi ne haruffa 80 na farko na umarni)",
-        "prompt": "Rubutun umarnin aiki",
-        "prompt_file": "Karanta umarni daga fayil",
-        "repo": "URL na ma'ajiyar da za a kwafa don aikin",
-        "branch": "Sunan reshen da za a yi amfani da shi",
-        "metadata": "Abun metadata na JSON"
-      },
-      "list": {
-        "description": "Jera ayyukan wakili",
-        "status": "Tace ta matsayi (running|completed|failed|cancelled)",
-        "limit": "Matsakaicin sakamako (tsoho: 50)"
-      },
-      "get": {
-        "description": "Samo cikakkun bayanan aiki ta ID"
-      },
-      "status": {
-        "description": "Buga matsayin aiki (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Soke aiki da ke gudana",
-        "yes": "Tsallake tambayar tabbatarwa"
-      },
-      "approve": {
-        "description": "Amince da shirin wakilin don fara aiwatarwa"
-      },
-      "message": {
-        "description": "Aika saƙo zuwa aikin da ke gudana"
-      }
-    },
-    "sources": {
-      "description": "Jera fayilolin tushe da wani aiki ya samar"
-    }
-  },
   "program": {
     "description": "OmniRoute — Mai Zabar Hanyar AI Mai Wayo tare da Komawar Kai-tsaye",
     "version": "Buga sigar sannan a fita",

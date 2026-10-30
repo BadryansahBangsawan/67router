@@ -246,17 +246,6 @@ Inventaris alat MCP di atas (110 alat unik, dihitung oleh `countUniqueMcpTools()
 dibatasi pada operasi perutean/cache/kompresi/memori/keterampilan/proxy/sumber-konteks saat runtime. Dua
 kerangka kerja terkait disertakan bersama server MCP dalam v3.8.0 dan didokumentasikan secara terpisah:
 
-### Agen Cloud
-
-Agen Cloud adalah agen pengodean AI di luar proses (codex-cloud, cursor-cloud, devin, jules) yang terhubung ke
-OmniRoute melalui model koneksi yang sama dengan yang digunakan untuk penyedia LLM. Agen-agen ini diekspos melalui
-antarmuka REST tersendiri (`/api/v1/agents/*`) dan **bukan** bagian dari katalog alat MCP
-— memanggil Agen Cloud tidak menggunakan cakupan MCP.
-
-- Implementasi: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Siklus hidup: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentasi: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrail
 
 Guardrail adalah filter pra/pascaeksekusi (vision-bridge, pii-masker, prompt-injection)

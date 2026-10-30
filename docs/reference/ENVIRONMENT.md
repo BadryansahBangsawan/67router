@@ -1375,7 +1375,7 @@ Allow users to report issues directly from the Dashboard.
 | --------------------- | --------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `GITHUB_ISSUES_REPO`  | _(unset)_ | `src/app/api/v1/issues/report/route.ts` | Repository in `owner/repo` format.                                                                                                    |
 | `GITHUB_ISSUES_TOKEN` | _(unset)_ | `src/app/api/v1/issues/report/route.ts` | GitHub Personal Access Token with `issues:write` scope.                                                                               |
-| `GITHUB_TOKEN`        | _(unset)_ | issue triage / cloud agent helpers      | Generic GitHub access token used as fallback for `GITHUB_ISSUES_TOKEN` and consumed by cloud agent helpers in `src/lib/cloudAgent/*`. |
+| `GITHUB_TOKEN`        | _(unset)_ | GitHub helpers                          | Generic GitHub access token used as fallback for `GITHUB_ISSUES_TOKEN` and by the GitHub skill collector and release checker. |
 
 ---
 

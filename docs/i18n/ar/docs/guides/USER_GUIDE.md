@@ -24,7 +24,6 @@
 - [نظام المهارات](#-skills-system)
 - [نظام الذاكرة](#-memory-system)
 - [خطافات الويب](#-webhooks)
-- [الوكلاء السحابيون](#-cloud-agents)
 - [الإدارة البرمجية](#-programmatic-management)
 - [واجهة سطر الأوامر الداخلية](#-internal-cli)
 - [تطبيق سطح المكتب (Electron)](#-desktop-application-electron)
@@ -1278,18 +1277,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 - إعادة المحاولة: 3 محاولات مع تراجع أُسّي، ثم النقل إلى قائمة الرسائل غير القابلة للتسليم
 
 المخطط الكامل في [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ الوكلاء السحابيون
-
-يتكامل OmniRoute مع وكلاء البرمجة السحابيين (**OpenAI Codex Cloud** و**Devin** و**Jules** و**Antigravity**) بحيث يمكنك إرسال المهام طويلة الأمد من لوحة التحكم نفسها التي تدير التوجيه المحلي.
-
-- أنشئ المهام في **لوحة التحكم → الوكلاء السحابيون** أو عبر `POST /api/v1/agents/tasks`
-- تتبّع الحالة والسجلات والمخرجات لكل مهمة
-- استخدم مفتاح API خاصًا بك لكل مزوّد — لا تغادر بيانات الاعتماد مثيل OmniRoute أبدًا
-
-المرجع الكامل: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

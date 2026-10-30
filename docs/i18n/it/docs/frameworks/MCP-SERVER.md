@@ -246,17 +246,6 @@ L'inventario degli strumenti MCP riportato sopra (110 strumenti univoci, calcola
 limitato alle operazioni di routing/cache/compressione/memoria/skill/proxy/origine del contesto in fase di esecuzione. Due framework
 adiacenti sono distribuiti insieme al server MCP nella v3.8.0 e sono documentati separatamente:
 
-### Cloud Agents
-
-I Cloud Agents sono agenti di programmazione IA eseguiti fuori processo (codex-cloud, cursor-cloud, devin, jules), integrati in
-OmniRoute tramite lo stesso modello di connessione utilizzato per i provider LLM. Sono esposti tramite
-una propria interfaccia REST (`/api/v1/agents/*`) e **non** fanno parte del catalogo degli strumenti MCP
-— la chiamata a un Cloud Agent non utilizza alcun ambito MCP.
-
-- Implementazione: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ciclo di vita: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentazione: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrail
 
 I guardrail sono filtri pre/post-esecuzione (vision-bridge, pii-masker, prompt-injection)

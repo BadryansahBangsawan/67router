@@ -69,20 +69,6 @@ OmniRoute שולט באילו **מקורות דפדפן** רשאים לקרוא 
 שדף חוצה-מקור אינו יכול לספק. זה **אינו** וקטור לחטיפת סשן או
 לגניבת פרטי הזדהות בנתיב ה-CORS המשותף.
 
-### חריג ממשי אחד — `/api/v1/agents/`
-
-נתיבי Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) מגדירים
-כותרות CORS **משלהם**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ו**כן** פולטים
-`Access-Control-Allow-Origin: <origin>|*` יחד עם
-`Access-Control-Allow-Credentials: true`. זהו הממשק היחיד שבו
-החזרת המקור ופרטי הזדהות מתקיימים יחד, והוא **בלתי תלוי
-ב-`CORS_ALLOW_ALL`**. נתיבים אלה מאומתים כממשקי ניהול
-(`requireManagementAuth`); מפעילים שחושפים את לוח הבקרה מחוץ למארח צריכים להיות
-מודעים לכך שזהו המקום היחיד שבו כותרות התגובה מתירות קריאה חוצת-מקור עם פרטי
-הזדהות. הקשחתו לרשימת היתרים מפורשת נמצאת במעקב
-בנפרד מהנחיות CORS אלה.
-
 ## רשימת תיוג לייצור
 
 - **לעולם אל תגדירו `CORS_ALLOW_ALL=true` בסביבת ייצור.** השאירו אותו לא מוגדר.
@@ -161,7 +147,6 @@ location / {
 | מצב זמן הריצה עבור לוח הבקרה            | `src/app/api/settings/authz-inventory/route.ts`                      |
 | כרזת האזהרה בלוח הבקרה                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | השדה CORS Allowed Origins               | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS לפי נתיב של Cloud-Agent (החריג)    | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ראו גם
 

@@ -698,54 +698,6 @@
       "yes": "Mafere ozi nkwenye"
     }
   },
-  "cloud": {
-    "description": "Jikwaa ọrụ ndị nnọchiteanya AI igwe ojii (codex, devin, jules)",
-    "agents": {
-      "description": "Depụta ndị nnọchiteanya igwe ojii dị"
-    },
-    "agent": {
-      "description": "Jikwaa ọrụ ndị nnọchiteanya igwe ojii {agent}",
-      "auth": {
-        "description": "Nye {agent} ikike site na OAuth"
-      }
-    },
-    "task": {
-      "description": "Jikwaa ọrụ ndị nnọchiteanya igwe ojii",
-      "create": {
-        "description": "Mepụta ọrụ nnọchiteanya ọhụrụ",
-        "title": "Aha ọrụ (ndabara bụ mkpụrụedemede 80 mbụ nke ntụziaka)",
-        "prompt": "Ederede ntụziaka ọrụ",
-        "prompt_file": "Gụọ ntụziaka site na faịlụ",
-        "repo": "URL ebe nchekwa koodu a ga-eme oyiri maka ọrụ ahụ",
-        "branch": "Aha alaka a ga-eji",
-        "metadata": "Ihe metadata JSON"
-      },
-      "list": {
-        "description": "Depụta ọrụ ndị nnọchiteanya",
-        "status": "Jiri ọnọdụ yọcha (running|completed|failed|cancelled)",
-        "limit": "Nsonaazụ kachasị (ndabara: 50)"
-      },
-      "get": {
-        "description": "Were nkọwa ọrụ site na ID"
-      },
-      "status": {
-        "description": "Bipụta ọnọdụ ọrụ (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Kagbuo ọrụ na-aga n’ihu",
-        "yes": "Mafere ajụjụ nkwenye"
-      },
-      "approve": {
-        "description": "Kwado atụmatụ nke agent ka mmezu malite"
-      },
-      "message": {
-        "description": "Ziga ozi na ọrụ na-aga n’ihu"
-      }
-    },
-    "sources": {
-      "description": "Depụta faịlụ isi mmalite ndị otu ọrụ mepụtara"
-    }
-  },
   "program": {
     "description": "OmniRoute — Onye Nhazi Ụzọ AI Nwere Ọgụgụ Isi nke nwere Ndaghachi Akpaka",
     "version": "Bipụta ụdị ma pụọ",

@@ -24,7 +24,6 @@ Objectieve functievergelijking versus populaire open-source AI-routers.
 | **A2A-protocol**                                        |                   ✅ 6 skills                    |           ❌            |         ❌          |     ❌      |
 | **Geheugen (FTS5 + vector)**                            |                        ✅                        |           ❌            |         ❌          |     ❌      |
 | **Guardrails (PII, injectie, vision)**                  |                        ✅                        |      gedeeltelijk       |         ❌          | ✅ betaald  |
-| **Cloud-agentintegraties**                              |           Codex, Cursor, Devin, Jules            |           ❌            |         ❌          |     ❌      |
 | **Circuit breaker per provider**                        |          ✅ 3 toestanden, lazy recovery          |          basis          |         ❌          |     ✅      |
 | **TLS-fingerprint-stealth (JA3/JA4)**                   |                    ✅ wreq-js                    |           ❌            |         ❌          |     ❌      |
 | **Evaluatieframework**                                  |                   ✅ ingebouwd                   |           ❌            |         ❌          |  ⚠ betaald  |

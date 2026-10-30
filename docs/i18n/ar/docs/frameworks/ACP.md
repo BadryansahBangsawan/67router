@@ -82,4 +82,3 @@ try {
 - [عقود تشغيل CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [أدوات CLI](../reference/CLI-TOOLS.md)
 - [خادم A2A](./A2A-SERVER.md)
-- [الوكلاء السحابيون](./CLOUD_AGENT.md)

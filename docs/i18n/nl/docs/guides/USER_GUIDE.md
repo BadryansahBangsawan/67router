@@ -24,7 +24,6 @@ Volledige handleiding voor het configureren van providers, het maken van combo's
 - [Vaardighedensysteem](#-skills-system)
 - [Geheugensysteem](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloudagents](#-cloud-agents)
 - [Programmatisch beheer](#-programmatic-management)
 - [Interne CLI](#-internal-cli)
 - [Desktopapplicatie (Electron)](#-desktop-application-electron)
@@ -1275,18 +1274,6 @@ Abonneer u op OmniRoute-gebeurtenissen voor realtimebewaking en automatisering.
 - Nieuwe pogingen: 3 pogingen met exponentiële vertraging, gevolgd door plaatsing in de wachtrij voor niet-afgeleverde berichten
 
 Het volledige schema staat in [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloudagents
-
-OmniRoute integreert met programmeeragents in de cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), zodat u langlopende taken kunt starten vanuit hetzelfde dashboard waarmee u uw lokale routering beheert.
-
-- Maak taken aan via **Dashboard → Cloudagents** of met `POST /api/v1/agents/tasks`
-- Volg per taak de status, logboeken en artefacten
-- Gebruik uw eigen API-sleutel per provider — referenties verlaten de OmniRoute-instantie nooit
-
-Volledige naslag: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

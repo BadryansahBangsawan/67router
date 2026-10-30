@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 ચક્રમાં શૂન્ય-રૂપરેખાં
 - 🤝 **GitLab Duo OAuth પ્રદાતા** — GitLab ઓળખપત્રો વડે લૉગિન કરો
 - 🧠 **Reasoning Replay Cache** — રીઝનિંગ ટ્રેસિસનું સંયુક્ત ઇન-મેમરી + SQLite પર્સિસ્ટન્સ
 
-📚 **સંબંધિત દસ્તાવેજો:** [કૌશલ્ય ફ્રેમવર્ક](../frameworks/SKILLS.md) · [મેમરી સિસ્ટમ](../frameworks/MEMORY.md) · [ક્લાઉડ એજન્ટ્સ](../frameworks/CLOUD_AGENT.md) · [વેબહુક્સ](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 પ્રદાતાઓ

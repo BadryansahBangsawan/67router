@@ -24,7 +24,6 @@ Objektivna primerjava lastnosti v primerjavi s priljubljenimi odprtokodnimi usme
 | **Protokol A2A**                                        |                 ✅ 6 veščin                  |          ❌           |         ❌         |      ❌      |
 | **Pomnilnik (FTS5 + vektor)**                           |                      ✅                      |          ❌           |         ❌         |      ❌      |
 | **Zaščitne omejitve (PII, vbrizgavanje, vid)**          |                      ✅                      |         delno         |         ❌         | ✅ plačljivo |
-| **Integracije oblačnih agentov**                        |         Codex, Cursor, Devin, Jules          |          ❌           |         ❌         |      ❌      |
 | **Prekinjevalnik vezja na ponudnika**                   |         ✅ 3 stanja, leno okrevanje          |        osnovno        |         ❌         |      ✅      |
 | **Prikrivanje prstnega odtisa TLS (JA3/JA4)**           |                  ✅ wreq-js                  |          ❌           |         ❌         |      ❌      |
 | **Ogrodje za evalvacijo**                               |                 ✅ vgrajeno                  |          ❌           |         ❌         | ⚠ plačljivo  |

@@ -1739,31 +1739,6 @@ Các đăng ký webhook gửi đi cho các sự kiện OmniRoute (hoàn tất y�
 
 ---
 
-## Giao thức tác tử
-
-Các tác vụ tác tử đám mây (Claude Code, Codex Cloud, OpenHands, v.v.) được thực thi từ xa thay mặt cho người dùng OmniRoute.
-
-| Phương thức | Đường dẫn                     | Mô tả                                                                                                                                                       |
-| ----------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/v1/agents/tasks`        | Liệt kê tác vụ — tùy chọn `?provider=`, `?status=`, `?limit=` (1–500, mặc định 50)                                                                          |
-| POST        | `/api/v1/agents/tasks`        | Tạo tác vụ — phần thân được xác thực bởi `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Trả về `201` cùng với phong bì tác vụ |
-| DELETE      | `/api/v1/agents/tasks?id=...` | Xóa một tác vụ                                                                                                                                              |
-| GET         | `/api/v1/agents/tasks/[id]`   | Đọc tác vụ — đồng bộ làm mới trạng thái từ tác tử đám mây nguồn khi `external_id` được thiết lập                                                            |
-| POST        | `/api/v1/agents/tasks/[id]`   | Hành động phân biệt: `{action: "approve"}`, `{action: "message", message}`, hoặc `{action: "cancel"}`                                                       |
-| DELETE      | `/api/v1/agents/tasks/[id]`   | Xóa một tác vụ cụ thể theo id                                                                                                                               |
-
-> **Xác thực:** mọi phương thức đều yêu cầu xác thực quản lý (`requireCloudAgentManagementAuth`). Trước v3.8.0, các phương thức này không yêu cầu xác thực — xem commit `588a0333` để biết thay đổi gây mất tương thích.
-
-```bash
-# Tạo một tác vụ đám mây Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy quản lý
 
 Các proxy HTTP(S)/SOCKS đi ra có thể được gán cho nhà cung cấp, tài khoản hoặc áp dụng trên toàn hệ thống.
@@ -2266,5 +2241,3 @@ Token `oma_live_…`, khóa API có phạm vi quản lý) và điểm khác bi�
 - Có thể bật/tắt `requireLogin` qua `/api/settings/require-login`
 - Các tuyến `/v1/*` có thể yêu cầu khóa API Bearer khi `REQUIRE_API_KEY=true`
 - Trong tài liệu tham khảo này, "token quản lý" / "khóa API có phạm vi quản lý" có nghĩa là một trong các nhóm được nêu trong hướng dẫn đó — không phải một loại bí mật bổ sung chưa được định nghĩa
-
-> **Thay đổi không tương thích (v3.8.0)** — `/api/v1/agents/tasks/*` và các điểm cuối quản lý thời gian chờ hiện yêu cầu **xác thực quản lý** (cookie `auth_token` của bảng điều khiển hoặc khóa API có phạm vi quản lý). Các máy khách trước đây gọi những tuyến này mà không xác thực sẽ nhận được `401 Unauthorized`. Xem commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

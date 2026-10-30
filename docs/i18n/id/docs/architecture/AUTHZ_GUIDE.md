@@ -229,8 +229,6 @@ Penegakan kunci API klien menggunakan `isRequireApiKeyEnabled()` di `src/shared/
 
 ## Perubahan yang Tidak Kompatibel — v3.8.0
 
-Endpoint `/api/v1/agents/tasks/*` dan `/api/resilience/model-cooldowns` **kini memerlukan autentikasi pengelolaan** (commit `588a0333`). Klien yang sebelumnya mengirimkan kunci API biasa tanpa cakupan `manage` akan menerima `403`. Migrasi: berikan cakupan `manage` pada kunci tersebut di dasbor Kunci API, atau gunakan sesi dasbor yang telah login.
-
 ## Perubahan Perilaku — v3.8.2
 
 `/api/mcp/*` (server MCP jarak jauh) masih bersifat LOCAL_ONLY secara default, tetapi kini menerima permintaan non-loopback ketika header `Authorization: Bearer <api-key>` memiliki cakupan `manage`. Pengecualian ini dibatasi secara eksplisit per jalur melalui `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` di `src/server/authz/routeGuard.ts`; prefiks LOCAL_ONLY terkait `/api/cli-tools/runtime/*` sengaja TIDAK dapat dilewati karena dapat menjalankan subproses arbitrer. Permintaan anonim ke `/api/mcp/*` dari non-loopback akan tetap menghasilkan `403 LOCAL_ONLY` — perilaku default untuk setiap jalur LOCAL_ONLY baru tetap loopback-ketat. Lihat [Tingkatan Pengaman Rute](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

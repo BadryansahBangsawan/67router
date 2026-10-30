@@ -1358,11 +1358,11 @@ thagarthas — éilíonn a n-athrú eagarthóireacht ar an gcód, ní athróg ch
 
 Lig d’úsáideoirí fadhbanna a thuairisciú go díreach ón Deais.
 
-| Athróg                | Réamhshocrú   | Comhad Foinse                                   | Cur Síos                                                                                                                                                    |
-| --------------------- | ------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(gan socrú)_ | `src/app/api/v1/issues/report/route.ts`         | Stór i bhformáid `owner/repo`.                                                                                                                              |
-| `GITHUB_ISSUES_TOKEN` | _(gan socrú)_ | `src/app/api/v1/issues/report/route.ts`         | Comhartha Rochtana Pearsanta GitHub a bhfuil an scóip `issues:write` aige.                                                                                  |
-| `GITHUB_TOKEN`        | _(gan socrú)_ | triáiseáil fadhbanna / cúntóirí gníomhaire néil | Comhartha ginearálta rochtana GitHub a úsáidtear mar chúltaca do `GITHUB_ISSUES_TOKEN` agus a úsáideann cúntóirí gníomhaire néil in `src/lib/cloudAgent/*`. |
+| Athróg                | Réamhshocrú   | Comhad Foinse                                   | Cur Síos                                                                                                                          |
+| --------------------- | ------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(gan socrú)_ | `src/app/api/v1/issues/report/route.ts`         | Stór i bhformáid `owner/repo`.                                                                                                    |
+| `GITHUB_ISSUES_TOKEN` | _(gan socrú)_ | `src/app/api/v1/issues/report/route.ts`         | Comhartha Rochtana Pearsanta GitHub a bhfuil an scóip `issues:write` aige.                                                        |
+| `GITHUB_TOKEN`        | _(gan socrú)_ | triáiseáil fadhbanna / cúntóirí gníomhaire néil | Comhartha ginearálta rochtana GitHub a úsáidtear mar chúltaca do `GITHUB_ISSUES_TOKEN` agus a úsáideann cúntóirí gníomhaire néil. |
 
 ---
 

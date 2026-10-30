@@ -698,54 +698,6 @@
       "yes": "Pomiń monit o potwierdzenie"
     }
   },
-  "cloud": {
-    "description": "Zarządzaj zadaniami agentów AI w chmurze (codex, devin, jules)",
-    "agents": {
-      "description": "Wyświetl dostępnych agentów chmurowych"
-    },
-    "agent": {
-      "description": "Zarządzaj zadaniami agenta chmurowego {agent}",
-      "auth": {
-        "description": "Autoryzuj agenta {agent} przez OAuth"
-      }
-    },
-    "task": {
-      "description": "Zarządzaj zadaniami agentów chmurowych",
-      "create": {
-        "description": "Utwórz nowe zadanie agenta",
-        "title": "Tytuł zadania (domyślnie pierwsze 80 znaków monitu)",
-        "prompt": "Treść monitu zadania",
-        "prompt_file": "Wczytaj monit z pliku",
-        "repo": "URL repozytorium do sklonowania na potrzeby zadania",
-        "branch": "Nazwa gałęzi do użycia",
-        "metadata": "Obiekt metadanych JSON"
-      },
-      "list": {
-        "description": "Wyświetl zadania agentów",
-        "status": "Filtruj według stanu (running|completed|failed|cancelled)",
-        "limit": "Maksymalna liczba wyników (domyślnie: 50)"
-      },
-      "get": {
-        "description": "Pobierz szczegóły zadania według identyfikatora"
-      },
-      "status": {
-        "description": "Wyświetl stan zadania (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Anuluj trwające zadanie",
-        "yes": "Pomiń monit o potwierdzenie"
-      },
-      "approve": {
-        "description": "Zatwierdź plan agenta, aby rozpocząć wykonywanie"
-      },
-      "message": {
-        "description": "Wyślij wiadomość do trwającego zadania"
-      }
-    },
-    "sources": {
-      "description": "Wyświetl pliki źródłowe utworzone przez zadanie"
-    }
-  },
   "program": {
     "description": "OmniRoute — Inteligentny router AI z automatycznym fallbackiem",
     "version": "Wydrukuj wersję i wyjdź",

@@ -131,4 +131,3 @@ CLI को आफ्नै स्थानीय प्रमाणीकरण�
 - [CLI लन्च सम्झौताहरू](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI उपकरणहरू](../reference/CLI-TOOLS.md)
 - [A2A सर्भर](./A2A-SERVER.md)
-- [क्लाउड एजेन्टहरू](./CLOUD_AGENT.md)

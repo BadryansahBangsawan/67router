@@ -43,8 +43,6 @@ O ciclo v3.7.x → v3.8.0 adicionou encaminhamento automático sem configuraçã
 - 🤝 **Fornecedor OAuth GitLab Duo** — inicie sessão com credenciais do GitLab
 - 🧠 **Cache de reprodução de raciocínio** — persistência híbrida, em memória + SQLite, dos rastos de raciocínio
 
-📚 **Documentação relacionada:** [Arquitetura de competências](../frameworks/SKILLS.md) · [Sistema de memória](../frameworks/MEMORY.md) · [Agentes na nuvem](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Cache de reprodução de raciocínio](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Fornecedores

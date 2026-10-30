@@ -2,7 +2,6 @@
 /** Fetches per-source task detail on drawer open + approve/cancel/repeat actions. */
 import { useEffect, useState } from "react";
 import type { OrchNode } from "../model/orchestrationTypes";
-import type { CloudAgentTask } from "@/lib/cloudAgent/types";
 import type { A2ATask } from "@/lib/a2a/taskManager";
 import type { ConductorTaskDetail } from "@/lib/conductor/hubProxy";
 
@@ -31,15 +30,6 @@ function routeFor(node: OrchNode): SourceRoute {
       ? { headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }
       : {}),
   });
-  if (node.id.startsWith("cloud-agent:")) {
-    const id = node.id.slice("cloud-agent:".length).replace(/:activity$/, "");
-    const url = `/api/v1/agents/tasks/${encodeURIComponent(id)}`;
-    return {
-      detailUrl: url,
-      cancelReq: { url, init: post({ action: "cancel" }) },
-      approveReq: { url, init: post({ action: "approve" }) },
-    };
-  }
   if (node.id.startsWith("a2a:")) {
     const id = node.id.slice("a2a:".length);
     return {
@@ -68,9 +58,6 @@ function routeFor(node: OrchNode): SourceRoute {
  * EVERY field the target route treats as mandatory, not merely one of them (a partially
  * recoverable detail is not recoverable: a POST missing one required field 400s, which is
  * an enabled button that cannot work):
- *   - cloud-agent → `POST /api/v1/agents/tasks`, `CreateCloudAgentTaskSchema` shape
- *     (`src/lib/cloudAgent/types.ts`) — `providerId`, `prompt` and `source` are all
- *     required there; `options` is optional.
  *   - a2a → `POST /a2a`, JSON-RPC `message/send` (`src/app/a2a/route.ts`) — only
  *     `messages` is required (`skill` defaults to `"smart-routing"`, `metadata` is
  *     optional), so that is the only field guarded here.
@@ -103,21 +90,6 @@ function postJson(body: unknown): RequestInit {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
-  };
-}
-
-/** cloud-agent repeat builder — `POST /api/v1/agents/tasks`, `CreateCloudAgentTaskSchema` shape. */
-function repeatReqForCloudAgent(detail: unknown): { url: string; init: RequestInit } | null {
-  const d = detail as CloudAgentTask | null;
-  if (!d?.providerId || !d?.prompt || !d?.source) return null;
-  return {
-    url: "/api/v1/agents/tasks",
-    init: postJson({
-      providerId: d.providerId,
-      prompt: d.prompt,
-      source: d.source,
-      options: d.options,
-    }),
   };
 }
 
@@ -171,7 +143,6 @@ export function repeatReqFor(
   node: OrchNode,
   detail: unknown
 ): { url: string; init: RequestInit } | null {
-  if (node.id.startsWith("cloud-agent:")) return repeatReqForCloudAgent(detail);
   if (node.id.startsWith("a2a:")) return repeatReqForA2a(node.id, detail);
   if (node.id.startsWith("conductor:task:")) return repeatReqForConductor(detail);
   return null;
@@ -189,17 +160,12 @@ function prefixedNodeId(prefix: string, id: unknown): string | null {
  * (`mergeSnapshot.ts`), so the raw upstream id is never returned on its own. Response
  * envelopes, verified against the live routes:
  *   - conductor (`POST /api/conductor/tasks`): `{ task_id }`.
- *   - cloud-agent (`POST /api/v1/agents/tasks`): `{ data: { id } }`.
  *   - a2a (`POST /a2a`, JSON-RPC `message/send`): `{ result: { task: { id } } }`.
  */
 export function newNodeIdFrom(node: OrchNode, body: unknown): string | null {
   if (!body || typeof body !== "object") return null;
   const b = body as Record<string, unknown>;
   if (node.id.startsWith("conductor:task:")) return prefixedNodeId("conductor:task:", b.task_id);
-  if (node.id.startsWith("cloud-agent:")) {
-    const data = b.data as { id?: unknown } | undefined;
-    return prefixedNodeId("cloud-agent:", data?.id);
-  }
   if (node.id.startsWith("a2a:")) {
     const result = b.result as { task?: { id?: unknown } } | undefined;
     return prefixedNodeId("a2a:", result?.task?.id);
@@ -210,7 +176,6 @@ export function newNodeIdFrom(node: OrchNode, body: unknown): string | null {
 /**
  * Unwraps a task-detail GET response to the actual task payload. Each source's
  * route has its own envelope — verified against the live handlers, not assumed:
- *   - cloud-agent (`GET /api/v1/agents/tasks/[id]`): `{ data: CloudAgentTask }`.
  *   - a2a (`GET /api/a2a/tasks/[id]`): `{ task: A2ATask }` — NOT `{ data }`. A
  *     generic `.data` fallback silently keeps the whole `{ task }` wrapper as
  *     `detail`, which every downstream `detail as A2ATask` read then crashes on

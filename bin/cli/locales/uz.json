@@ -698,54 +698,6 @@
       "yes": "Tasdiqlash so‘rovini o‘tkazib yuborish"
     }
   },
-  "cloud": {
-    "description": "Bulutli AI agent vazifalarini boshqarish (codex, devin, jules)",
-    "agents": {
-      "description": "Mavjud bulutli agentlarni ko‘rsatish"
-    },
-    "agent": {
-      "description": "{agent} bulutli agenti vazifalarini boshqarish",
-      "auth": {
-        "description": "{agent} uchun OAuth orqali avtorizatsiya qilish"
-      }
-    },
-    "task": {
-      "description": "Bulutli agent vazifalarini boshqarish",
-      "create": {
-        "description": "Yangi agent vazifasini yaratish",
-        "title": "Vazifa sarlavhasi (standart: so‘rovning dastlabki 80 ta belgisi)",
-        "prompt": "Vazifa so‘rovi matni",
-        "prompt_file": "So‘rovni fayldan o‘qish",
-        "repo": "Vazifa uchun klonlanadigan repozitoriy URLi",
-        "branch": "Foydalaniladigan tarmoq nomi",
-        "metadata": "JSON metama’lumotlar obyekti"
-      },
-      "list": {
-        "description": "Agent vazifalarini ko‘rsatish",
-        "status": "Holat bo‘yicha filtrlash (running|completed|failed|cancelled)",
-        "limit": "Natijalarning maksimal soni (standart: 50)"
-      },
-      "get": {
-        "description": "ID bo‘yicha vazifa tafsilotlarini olish"
-      },
-      "status": {
-        "description": "Vazifa holatini chiqarish (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Ishlayotgan vazifani bekor qilish",
-        "yes": "Tasdiqlash so‘rovini o‘tkazib yuborish"
-      },
-      "approve": {
-        "description": "Bajarishni boshlash uchun agent rejasini tasdiqlash"
-      },
-      "message": {
-        "description": "Ishlayotgan vazifaga xabar yuborish"
-      }
-    },
-    "sources": {
-      "description": "Vazifa yaratgan manba fayllarini ro‘yxatlash"
-    }
-  },
   "program": {
     "description": "OmniRoute — avtomatik zaxira yo‘naltirishga ega aqlli AI routeri",
     "version": "Versiyani ko‘rsatish va chiqish",

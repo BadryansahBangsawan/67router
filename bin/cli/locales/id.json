@@ -698,54 +698,6 @@
       "yes": "Lewati permintaan konfirmasi"
     }
   },
-  "cloud": {
-    "description": "Kelola tugas agen AI cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Cantumkan agen cloud yang tersedia"
-    },
-    "agent": {
-      "description": "Kelola tugas agen cloud {agent}",
-      "auth": {
-        "description": "Otorisasi {agent} melalui OAuth"
-      }
-    },
-    "task": {
-      "description": "Kelola tugas agen cloud",
-      "create": {
-        "description": "Buat tugas agen baru",
-        "title": "Judul tugas (default ke 80 karakter pertama dari prompt)",
-        "prompt": "Teks prompt tugas",
-        "prompt_file": "Baca prompt dari file",
-        "repo": "URL repositori yang akan dikloning untuk tugas",
-        "branch": "Nama branch yang akan digunakan",
-        "metadata": "Objek metadata JSON"
-      },
-      "list": {
-        "description": "Cantumkan tugas agen",
-        "status": "Filter berdasarkan status (running|completed|failed|cancelled)",
-        "limit": "Hasil maksimum (default: 50)"
-      },
-      "get": {
-        "description": "Dapatkan detail tugas berdasarkan ID"
-      },
-      "status": {
-        "description": "Cetak status tugas (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Batalkan tugas yang sedang berjalan",
-        "yes": "Lewati permintaan konfirmasi"
-      },
-      "approve": {
-        "description": "Setujui rencana agen untuk memulai eksekusi"
-      },
-      "message": {
-        "description": "Kirim pesan ke tugas yang sedang berjalan"
-      }
-    },
-    "sources": {
-      "description": "Cantumkan file sumber yang dihasilkan oleh tugas"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI Cerdas dengan Fallback Otomatis",
     "version": "Cetak versi dan keluar",

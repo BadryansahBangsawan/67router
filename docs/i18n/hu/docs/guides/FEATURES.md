@@ -43,8 +43,6 @@ A v3.7.x → v3.8.0 fejlesztési ciklus konfigurációmentes automatikus útvál
 - 🤝 **GitLab Duo OAuth-szolgáltató** — bejelentkezés GitLab hitelesítő adatokkal
 - 🧠 **Reasoning Replay Cache** — az érvelési nyomvonalak hibrid, memóriában és SQLite-ban történő megőrzése
 
-📚 **Kapcsolódó dokumentáció:** [Készségkeretrendszer](../frameworks/SKILLS.md) · [Memóriarendszer](../frameworks/MEMORY.md) · [Felhőügynökök](../frameworks/CLOUD_AGENT.md) · [Webhookok](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Szolgáltatók

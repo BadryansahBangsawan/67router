@@ -4,7 +4,6 @@
 
 ---
 
-> **Sors:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
 OmniRoute jesponi tliet interfaċċi differenti relatati mal-aġenti. Għall-ewwel jidhru simili, iżda jsolvu problemi differenti. Uża din il-paġna biex tagħżel dik it-tajba.
@@ -20,20 +19,6 @@ OmniRoute jesponi tliet interfaċċi differenti relatati mal-aġenti. Għall-eww
 It-tlieta huma indipendenti — agħżel kwalunkwe subsett.
 
 ## Siġra tad-Deċiżjonijiet
-
-```
-Għandek bżonn servizz cloud biex jagħmel xogħol barra minn din il-magna (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ IVA → Aġenti tal-Cloud (POST /api/v1/agents/tasks)
-└─ LE → Kompli
-    │
-    Għandek aġent pari li juża A2A u jrid jikkollabora?
-    ├─ IVA → A2A (POST /a2a)
-    └─ LE → Kompli
-        │
-        Għandek bżonn telenka / tikkonfigura aġenti CLI għall-ipprogrammar installati lokalment?
-        ├─ IVA → ACP (GET /api/acp/agents)
-        └─ LE → Uża /v1/chat/completions direttament
-```
 
 ## 1. A2A — Minn Aġent għal Aġent
 
@@ -125,61 +110,6 @@ Struttura tal-body għal POST (`customAgentBodySchema` f’`src/app/api/acp/agen
   tal-fornitur. Għal użu interattiv ordinarju, niedi l-CLI kkonfigurata int stess jew
   uża `omniroute run`.
 
-## 3. Aġenti tal-Cloud
-
-**Endpoints ta’ OmniRoute:** `/api/v1/agents/tasks/*` (ċiklu tal-ħajja) + `/api/cloud/*` (infrastruttura ta’ konnessjoni)
-**Sors:** `src/lib/cloudAgent/`
-
-### X’inhu
-
-Interfaċċa uniformi għall-aġenti tal-ipprogrammar tal-cloud ta’ partijiet terzi. Int tibgħat prompt + URL tar-repożitorju, OmniRoute jgħaddih lill-aġent tal-cloud it-tajjeb, jiċċekkja perjodikament l-istatus, u jirritorna r-riżultati.
-
-### Aġenti appoġġjati (4, kollha kkonfermati f’`src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Ċiklu tal-ħajja
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() għal kull klassi ta’ aġent
-  → is-servizz estern jibda x-xogħol
-  → tinħoloq ringiela tal-kompitu fid-DB (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → sinkronizzazzjoni għażżiena tal-istatus mill-fornitur
-  → jirritorna l-istatus attwali + il-pjan + ir-reġistru tal-attività
-  ↓
-POST /api/v1/agents/tasks/[id]   (azzjoni: "approve" | "message" | "cancel")
-  → jgħaddiha lill-fornitur (jew jimmarkaha bħala kkanċellata lokalment)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → kanċellazzjoni lokali
-```
-
-### Awtentikazzjoni
-
-⚠️ **L-endpoints kollha `/api/v1/agents/tasks/*` jeħtieġu awtentikazzjoni tal-ġestjoni** (commit `588a0333`). Min jagħmel sejħiet b’Bearer biss jirċievi 401 minn v3.8.0 ’l quddiem.
-
-### Analiżi dettaljata
-
-Ara [CLOUD_AGENT.md](./CLOUD_AGENT.md) għall-kuntratt `CloudAgentBase`, id-dettalji speċifiċi għal kull aġent, id-dettalji tal-iskema, u l-endpoints tal-infrastruttura tal-kredenzjali.
-
-## Tqabbil: A2A vs Aġenti tal-Cloud
-
-It-tnejn għandhom "kompiti fit-tul", iżda f'livelli differenti:
-
-| Aspett                     | A2A                                                                                                                  | Aġenti tal-Cloud                                           |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| Standard                   | Open A2A v0.3                                                                                                        | Speċifiku għal OmniRoute                                   |
-| Fejn isir il-komputazzjoni | Ġewwa OmniRoute (juża l-kombinazzjonijiet ikkonfigurati)                                                             | Esternament (servers ta' Codex / Devin / Jules)            |
-| Tul tal-kompitu            | TTL predefinit ta' 5 minuti (konfigurabbli f'`TaskManager`)                                                          | Minn minuti sa sigħat                                      |
-| Konxju tar-repożitorju     | Le (jgħaddi biss il-prompts)                                                                                         | Iva (URL tar-repożitorju + fergħa)                         |
-| Każ ta' użu                | Kollaborazzjoni bejn l-aġenti, routing intelliġenti bħala servizz                                                    | Iddelega "implimenta l-karatteristika X fir-repożitorju Y" |
-| Awtentikazzjoni            | `OMNIROUTE_API_KEY` fakultattiva għal `/a2a`; awtentikazzjoni ta' ġestjoni għall-għodod awżiljarji REST `/api/a2a/*` | Dejjem awtentikazzjoni ta' ġestjoni                        |
-
 ## Eżempji ta' Integrazzjoni
 
 ### Skopri l-kapaċitajiet A2A ta' OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Issottometti kompitu lil Aġent tal-Cloud
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Iċċekkja perjodikament l-istatus tal-kompitu fil-cloud
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Meta Għandek Tuża Xiex
 
 - **Frontend ta' chatbot / copilot** → `/v1/chat/completions` (kompatibbli ma' OpenAI — mhux protokoll tal-aġenti)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Ara Wkoll
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Analiżi fil-fond ta’ A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Analiżi fil-fond tal-Aġenti tal-Cloud
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrazzjonijiet CLI esterni (juża ACP)
 - [SKILLS.md](./SKILLS.md) — Qafas tal-ħiliet (differenti mill-ħiliet A2A — sandbox ta’ eżekuzzjoni lokali)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referenza tal-endpoint

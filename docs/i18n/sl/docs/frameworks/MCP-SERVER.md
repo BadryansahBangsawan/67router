@@ -244,17 +244,6 @@ Zgornji inventar orodij MCP (110 edinstvenih orodij, izračunanih s `countUnique
 omejen na izvajalne operacije usmerjanja/predpomnjenja/stiskanja/pomnilnika/veščin/posredniškega strežnika/vira konteksta. Dve sosednji
 ogrodji sta v v3.8.0 dobavljeni skupaj s strežnikom MCP in dokumentirani ločeno:
 
-### Agenti v oblaku
-
-Agenti v oblaku so zunanji agenti AI za programiranje (codex-cloud, cursor-cloud, devin, jules), povezani z
-OmniRoute prek istega modela povezave, ki se uporablja za ponudnike LLM. Izpostavljeni so prek
-lastnega vmesnika REST (`/api/v1/agents/*`) in **niso** del kataloga orodij MCP
-— klic agenta v oblaku ne uporablja obsega MCP.
-
-- Implementacija: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Življenjski cikel: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentacija: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Varovalni mehanizmi
 
 Varovalni mehanizmi so filtri pred izvedbo in po njej (vision-bridge, pii-masker, prompt-injection),

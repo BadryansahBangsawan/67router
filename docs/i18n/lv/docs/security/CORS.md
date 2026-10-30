@@ -71,20 +71,6 @@ un (b) atļauju CORS **pirmslidojuma pārbaudēm** izdoties pārvaldības maršr
 joprojām ir nepieciešama autentifikācija, ko starpizcelsmju lapa nevar nodrošināt. Tas
 koplietotajā CORS ceļā **nav** sesijas nolaupīšanas vai akreditācijas datu zādzības vektors.
 
-### Viens patiess izņēmums — `/api/v1/agents/`
-
-Cloud-Agent maršruti (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) iestata
-savas **CORS galvenes**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) un **izvada**
-`Access-Control-Allow-Origin: <origin>|*` kopā ar
-`Access-Control-Allow-Credentials: true`. Šī ir vienīgā saskarne, kurā
-izcelsmes atgriešana un akreditācijas dati pastāv vienlaikus, un tā ir **neatkarīga no
-`CORS_ALLOW_ALL`**. Šie maršruti ir autentificēti pārvaldības līmenī
-(`requireManagementAuth`); operatoriem, kuri padara informācijas paneli pieejamu ārpus
-resursdatora, jāapzinās, ka šī ir vienīgā vieta, kur atbildes galvenes atļauj starpizcelsmju
-lasīšanu ar akreditācijas datiem. Tās ierobežošana līdz precīzam atļauto izcelsmju
-sarakstam tiek izsekota atsevišķi no šiem CORS norādījumiem.
-
 ## Produkcijas kontrolsaraksts
 
 - **Nekad neiestatiet `CORS_ALLOW_ALL=true` produkcijas vidē.** Atstājiet to neiestatītu.
@@ -163,7 +149,6 @@ cilnē Drošība), nevis starpniekserverī.
 | Izpildlaika statuss informācijas panelim                   | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Informācijas paneļa brīdinājuma reklāmkarogs               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Lauks CORS Allowed Origins                                 | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent CORS katram maršrutam (izņēmums)               | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Skatiet arī
 

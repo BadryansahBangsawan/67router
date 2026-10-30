@@ -1667,31 +1667,6 @@ OmniRoute 事件的對外 Webhook 訂閱（請求完成、配額耗盡、金鑰�
 
 ---
 
-## 代理程式協定
-
-代表 OmniRoute 使用者遠端執行的雲端代理程式任務（Claude Code、Codex Cloud、OpenHands 等）。
-
-| 方法   | 路徑                          | 說明                                                                                                                           |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | 列出任務 — 可選用 `?provider=`、`?status=`、`?limit=`（1–500，預設為 50）                                                      |
-| POST   | `/api/v1/agents/tasks`        | 建立任務 — 請求主體由 `CreateCloudAgentTaskSchema` 驗證（`providerId`、`prompt`、`source`、`options?`）。傳回 `201` 及任務封套 |
-| DELETE | `/api/v1/agents/tasks?id=...` | 刪除任務                                                                                                                       |
-| GET    | `/api/v1/agents/tasks/[id]`   | 讀取任務 — 設定 `external_id` 時，會同步從上游雲端代理程式重新整理狀態                                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | 可辨識聯集動作：`{action: "approve"}`、`{action: "message", message}` 或 `{action: "cancel"}`                                  |
-| DELETE | `/api/v1/agents/tasks/[id]`   | 依 id 刪除特定任務                                                                                                             |
-
-> **驗證：**每個方法都需要管理驗證（`requireCloudAgentManagementAuth`）。在 v3.8.0 之前，這些方法不需要驗證 — 有關此破壞性變更，請參閱提交 `588a0333`。
-
-```bash
-# 建立 Claude Code 雲端任務
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## 管理代理伺服器
 
 可指派給提供者、帳戶或全域使用的外送 HTTP(S)/SOCKS 代理伺服器。
@@ -2195,5 +2170,3 @@ devin-cli 等）。完整清單請參閱[提供者參考](./PROVIDER_REFERENCE.m
 - `requireLogin` 可透過 `/api/settings/require-login` 切換
 - 當 `REQUIRE_API_KEY=true` 時，`/v1/*` 路由可選擇要求 Bearer API 金鑰
 - 本參考文件中的「管理權杖」／「具管理範圍的 API 金鑰」是指該指南中的其中一種憑證類別，而不是未定義的其他密鑰類型
-
-> **重大變更（v3.8.0）** — `/api/v1/agents/tasks/*` 與冷卻時間管理端點現在需要**管理驗證**（儀表板 `auth_token` Cookie 或具管理範圍的 API 金鑰）。先前未經驗證即呼叫這些路由的用戶端將收到 `401 Unauthorized`。請參閱提交 `588a0333`（`fix(auth): require management auth for agent and cooldown APIs`）。

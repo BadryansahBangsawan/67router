@@ -1762,31 +1762,6 @@ Izmanto automātiskās atslēgu pārvaldības apakšsistēma, lai izsniegtu un r
 
 ---
 
-## Aģentu protokols
-
-Mākoņa aģentu uzdevumi (Claude Code, Codex Cloud, OpenHands u.c.), kas tiek attālināti izpildīti OmniRoute lietotāju vārdā.
-
-| Metode | Ceļš                          | Apraksts                                                                                                                                          |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Uzdevumu saraksts — neobligāti `?provider=`, `?status=`, `?limit=` (1–500, pēc noklusējuma 50)                                                    |
-| POST   | `/api/v1/agents/tasks`        | Izveido uzdevumu — ķermeni validē `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Atgriež `201` ar uzdevuma aploksni |
-| DELETE | `/api/v1/agents/tasks?id=...` | Dzēš uzdevumu                                                                                                                                     |
-| GET    | `/api/v1/agents/tasks/[id]`   | Nolasa uzdevumu — sinhroni atsvaidzina statusu no ārējā mākoņa aģenta, ja ir iestatīts `external_id`                                              |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskriminēta darbība: `{action: "approve"}`, `{action: "message", message}` vai `{action: "cancel"}`                                              |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Dzēš konkrētu uzdevumu pēc identifikatora                                                                                                         |
-
-> **Autentifikācija:** katrai metodei ir nepieciešama pārvaldības autentifikācija (`requireCloudAgentManagementAuth`). Pirms v3.8.0 šie galapunkti nebija autentificēti — par nesavietojamajām izmaiņām skatiet komitu `588a0333`.
-
-```bash
-# Izveido Claude Code mākoņa uzdevumu
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Pārvaldības starpniekserveri
 
 Izejošie HTTP(S)/SOCKS starpniekserveri, kurus var piešķirt nodrošinātājiem, kontiem vai globāli.
@@ -2292,5 +2267,3 @@ pilnvaru, API atslēgu ar pārvaldības tvērumu) un to atšķirībām no infere
 - `requireLogin` var ieslēgt vai izslēgt, izmantojot `/api/settings/require-login`
 - `/v1/*` maršruti var pieprasīt Bearer API atslēgu, ja `REQUIRE_API_KEY=true`
 - Šajā atsaucē „pārvaldības pilnvara” / „API atslēga ar pārvaldības tvērumu” nozīmē kādu no šajā ceļvedī aprakstītajām saimēm, nevis kādu nedefinētu papildu slepenā noslēpuma veidu
-
-> **Nesaderīga izmaiņa (v3.8.0)** — `/api/v1/agents/tasks/*` un atdzišanas perioda pārvaldības galapunktiem tagad ir nepieciešama **pārvaldības autentifikācija** (informācijas paneļa `auth_token` sīkfails vai API atslēga ar pārvaldības tvērumu). Klienti, kuri iepriekš izsauca šos maršrutus bez autentifikācijas, saņems `401 Unauthorized`. Skatiet komitu `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

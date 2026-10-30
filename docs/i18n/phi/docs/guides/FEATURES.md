@@ -43,8 +43,6 @@ Nagdagdag ang siklong v3.7.x → v3.8.0 ng zero-config na awtomatikong pagruruta
 - 🤝 **GitLab Duo OAuth provider** — mag-login gamit ang mga kredensyal ng GitLab
 - 🧠 **Reasoning Replay Cache** — hybrid na in-memory + SQLite persistence ng mga reasoning trace
 
-📚 **Mga kaugnay na dokumento:** [Framework ng Mga Skill](../frameworks/SKILLS.md) · [Sistema ng Memory](../frameworks/MEMORY.md) · [Mga Cloud Agent](../frameworks/CLOUD_AGENT.md) · [Mga Webhook](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Mga Provider

@@ -1762,31 +1762,6 @@ Utilizate de subsistemul de administrare automată a cheilor pentru a emite și 
 
 ---
 
-## Protocolul agenților
-
-Sarcini pentru agenți cloud (Claude Code, Codex Cloud, OpenHands etc.) executate de la distanță în numele utilizatorilor OmniRoute.
-
-| Metodă | Cale                          | Descriere                                                                                                                                              |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Listează sarcinile — parametri opționali `?provider=`, `?status=`, `?limit=` (1–500, implicit 50)                                                      |
-| POST   | `/api/v1/agents/tasks`        | Creează o sarcină — corp validat de `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returnează `201` cu anvelopa sarcinii |
-| DELETE | `/api/v1/agents/tasks?id=...` | Șterge o sarcină                                                                                                                                       |
-| GET    | `/api/v1/agents/tasks/[id]`   | Citește sarcina — actualizează sincron starea de la agentul cloud din amonte când este setat un `external_id`                                          |
-| POST   | `/api/v1/agents/tasks/[id]`   | Acțiune discriminatorie: `{action: "approve"}`, `{action: "message", message}` sau `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Șterge o anumită sarcină după id                                                                                                                       |
-
-> **Autentificare:** autentificarea de administrare este obligatorie pentru fiecare metodă (`requireCloudAgentManagementAuth`). Înainte de v3.8.0, acestea nu necesitau autentificare — consultați commitul `588a0333` pentru modificarea incompatibilă.
-
-```bash
-# Creează o sarcină cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy-uri de administrare
 
 Proxy-uri HTTP(S)/SOCKS pentru trafic de ieșire, care pot fi atribuite furnizorilor, conturilor sau la nivel global.
@@ -2292,5 +2267,3 @@ familii de credențiale (sesiune de panou de control, token CLI local, token de 
 - `requireLogin` poate fi activat sau dezactivat prin `/api/settings/require-login`
 - Rutele `/v1/*` necesită opțional o cheie API Bearer când `REQUIRE_API_KEY=true`
 - În această documentație de referință, „token de administrare” / „cheie API cu domeniu de administrare” înseamnă una dintre familiile descrise în ghidul respectiv — nu un tip suplimentar de secret nedefinit
-
-> **Modificare incompatibilă (v3.8.0)** — `/api/v1/agents/tasks/*` și endpointurile de administrare a perioadei de așteptare necesită acum **autentificare pentru administrare** (cookie-ul `auth_token` al panoului de control sau o cheie API cu domeniu de administrare). Clienții care apelau anterior aceste rute fără autentificare vor primi `401 Unauthorized`. Consultați commitul `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

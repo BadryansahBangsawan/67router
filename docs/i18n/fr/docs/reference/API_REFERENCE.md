@@ -1733,31 +1733,6 @@ Utilisées par le sous-système de gestion automatique des clés pour émettre e
 
 ---
 
-## Protocole des agents
-
-Tâches d’agents cloud (Claude Code, Codex Cloud, OpenHands, etc.) exécutées à distance pour le compte des utilisateurs d’OmniRoute.
-
-| Méthode | Chemin                        | Description                                                                                                                                               |
-| ------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Répertorie les tâches — paramètres facultatifs `?provider=`, `?status=`, `?limit=` (1–500, 50 par défaut)                                                 |
-| POST    | `/api/v1/agents/tasks`        | Crée une tâche — corps validé par `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Renvoie `201` avec l’enveloppe de la tâche |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Supprime une tâche                                                                                                                                        |
-| GET     | `/api/v1/agents/tasks/[id]`   | Lit une tâche — actualise de manière synchrone son statut depuis l’agent cloud en amont lorsqu’un `external_id` est défini                                |
-| POST    | `/api/v1/agents/tasks/[id]`   | Action discriminée : `{action: "approve"}`, `{action: "message", message}` ou `{action: "cancel"}`                                                        |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Supprime une tâche spécifique par identifiant                                                                                                             |
-
-> **Authentification :** authentification de gestion requise pour chaque méthode (`requireCloudAgentManagementAuth`). Avant la v3.8.0, ces méthodes n’étaient pas authentifiées — voir le commit `588a0333` pour cette modification incompatible.
-
-```bash
-# Créer une tâche cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxys de gestion
 
 Proxys HTTP(S)/SOCKS sortants pouvant être attribués aux fournisseurs, aux comptes ou globalement.
@@ -2258,5 +2233,3 @@ Consultez [Authentification de gestion](../guides/MANAGEMENT-AUTH.md) pour déco
 - `requireLogin` peut être activé ou désactivé via `/api/settings/require-login`
 - Les routes `/v1/*` peuvent exiger une clé API Bearer lorsque `REQUIRE_API_KEY=true`
 - Dans cette référence, « jeton de gestion » / « clé API limitée à la gestion » désigne l’une des familles décrites dans ce guide, et non un type de secret supplémentaire non défini
-
-> **Rupture de compatibilité (v3.8.0)** — `/api/v1/agents/tasks/*` et les points de terminaison de gestion du délai de récupération nécessitent désormais une **authentification de gestion** (cookie `auth_token` du tableau de bord ou clé API limitée à la gestion). Les clients qui appelaient auparavant ces routes sans authentification recevront `401 Unauthorized`. Consultez le commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

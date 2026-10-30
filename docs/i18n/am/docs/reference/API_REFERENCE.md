@@ -1739,31 +1739,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## የኤጀንቶች ፕሮቶኮል
-
-በOmniRoute ተጠቃሚዎች ስም በርቀት የሚከናወኑ የደመና ኤጀንት ተግባራት (Claude Code፣ Codex Cloud፣ OpenHands፣ ወዘተ)።
-
-| ዘዴ     | ዱካ                            | መግለጫ                                                                                                                                  |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | ተግባራትን ዘርዝር — እንደ አማራጭ `?provider=`፣ `?status=`፣ `?limit=` (1–500፣ ነባሪው 50)                                                           |
-| POST   | `/api/v1/agents/tasks`        | ተግባር ፍጠር — የጥያቄው ይዘት በ`CreateCloudAgentTaskSchema` (`providerId`፣ `prompt`፣ `source`፣ `options?`) ይረጋገጣል። የተግባር ማቀፊያን ከ`201` ጋር ይመልሳል |
-| DELETE | `/api/v1/agents/tasks?id=...` | ተግባር ሰርዝ                                                                                                                              |
-| GET    | `/api/v1/agents/tasks/[id]`   | ተግባር አንብብ — `external_id` ከተዋቀረ ሁኔታውን ከላይኛው የደመና ኤጀንት በተመሳሰለ ሁኔታ ያድሳል                                                                 |
-| POST   | `/api/v1/agents/tasks/[id]`   | ተለይቶ የሚታወቅ ድርጊት፦ `{action: "approve"}`፣ `{action: "message", message}`፣ ወይም `{action: "cancel"}`                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | አንድን የተወሰነ ተግባር በid ሰርዝ                                                                                                               |
-
-> **ማረጋገጫ፦** በእያንዳንዱ ዘዴ የአስተዳደር ማረጋገጫ ያስፈልጋል (`requireCloudAgentManagementAuth`)። ከv3.8.0 በፊት እነዚህ ያለማረጋገጫ ይሰሩ ነበር — ለዚህ ለውጥ commit `588a0333`ን ይመልከቱ።
-
-```bash
-# የClaude Code የደመና ተግባር ፍጠር
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## የአስተዳደር ፕሮክሲዎች
 
 ለአቅራቢዎች፣ መለያዎች ወይም በዓለም አቀፍ ደረጃ ሊመደቡ የሚችሉ ወደ ውጭ የሚደረጉ HTTP(S)/SOCKS ፕሮክሲዎች።
@@ -2267,5 +2242,3 @@ devin-cli ወዘተ) ያስተዳድሩ። ሙሉውን ዝርዝር ለማየ�
 - `requireLogin` በ`/api/settings/require-login` በኩል ማብራት ወይም ማጥፋት ይቻላል
 - የ`/v1/*` መንገዶች `REQUIRE_API_KEY=true` በሚሆንበት ጊዜ እንደ አማራጭ የBearer API ቁልፍ ይፈልጋሉ
 - በዚህ ማጣቀሻ ውስጥ “የአስተዳደር ቶከን” / “በአስተዳደር ወሰን የተገደበ API ቁልፍ” ማለት በዚያ መመሪያ ውስጥ ካሉት ቤተሰቦች አንዱን ነው — ያልተገለጸ ተጨማሪ የምስጢር ዓይነትን አይደለም
-
-> **ተኳኋኝነትን የሚያፈርስ ለውጥ (v3.8.0)** — `/api/v1/agents/tasks/*` እና የማቀዝቀዣ ጊዜ አስተዳደር የመጨረሻ ነጥቦች አሁን **የአስተዳደር ማረጋገጫ** (የዳሽቦርድ `auth_token` ኩኪ ወይም በአስተዳደር ወሰን የተገደበ API ቁልፍ) ይፈልጋሉ። ከዚህ ቀደም እነዚህን መንገዶች ያለ ማረጋገጫ የሚጠሩ ደንበኞች `401 Unauthorized` ይቀበላሉ። commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`)ን ይመልከቱ።

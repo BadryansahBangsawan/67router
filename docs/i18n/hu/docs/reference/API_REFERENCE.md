@@ -1721,31 +1721,6 @@ Az automatikus kulcskezelési alrendszer használja API-kulcsok kiadására és 
 
 ---
 
-## Ügynökprotokoll
-
-Az OmniRoute felhasználói nevében távolról végrehajtott felhőügynök-feladatok (Claude Code, Codex Cloud, OpenHands stb.).
-
-| Metódus | Útvonal                       | Leírás                                                                                                                                                             |
-| ------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/v1/agents/tasks`        | Feladatok listázása — opcionális `?provider=`, `?status=`, `?limit=` (1–500, alapértelmezés: 50)                                                                   |
-| POST    | `/api/v1/agents/tasks`        | Feladat létrehozása — a törzset a `CreateCloudAgentTaskSchema` validálja (`providerId`, `prompt`, `source`, `options?`). `201` választ ad vissza feladatburkolóval |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Feladat törlése                                                                                                                                                    |
-| GET     | `/api/v1/agents/tasks/[id]`   | Feladat lekérése — `external_id` beállítása esetén szinkron módon frissíti az állapotot a külső felhőügynöktől                                                     |
-| POST    | `/api/v1/agents/tasks/[id]`   | Megkülönböztetett művelet: `{action: "approve"}`, `{action: "message", message}` vagy `{action: "cancel"}`                                                         |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Adott azonosítójú feladat törlése                                                                                                                                  |
-
-> **Hitelesítés:** minden metódushoz felügyeleti hitelesítés szükséges (`requireCloudAgentManagementAuth`). A v3.8.0 előtt ezek nem igényeltek hitelesítést — a kompatibilitást megszakító módosítást lásd a `588a0333` commitban.
-
-```bash
-# Claude Code-felhőfeladat létrehozása
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Felügyeleti proxyk
 
 Kimenő HTTP(S)/SOCKS-proxyk, amelyek szolgáltatókhoz, fiókokhoz vagy globálisan rendelhetők hozzá.
@@ -2246,5 +2221,3 @@ A négy hitelesítőadat-családról (irányítópult-munkamenet, helyi CLI-toke
 - A `requireLogin` a `/api/settings/require-login` útvonalon kapcsolható be vagy ki
 - A `/v1/*` útvonalakhoz opcionálisan Bearer API-kulcs szükséges, ha `REQUIRE_API_KEY=true`
 - Ebben a referenciában a „kezelési token” / „kezelési hatókörű API-kulcs” az útmutatóban ismertetett családok egyikét jelenti — nem pedig egy meghatározatlan, további titoktípust
-
-> **Kompatibilitást megszakító változás (v3.8.0)** — A `/api/v1/agents/tasks/*` és a várakozási idő kezelésére szolgáló végpontok mostantól **kezelési hitelesítést** igényelnek (az irányítópult `auth_token` cookie-ját vagy egy kezelési hatókörű API-kulcsot). Azok a kliensek, amelyek korábban hitelesítés nélkül hívták meg ezeket az útvonalakat, `401 Unauthorized` választ kapnak. Lásd a `588a0333` commitot (`fix(auth): require management auth for agent and cooldown APIs`).

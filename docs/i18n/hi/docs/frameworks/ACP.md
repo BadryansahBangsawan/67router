@@ -120,4 +120,3 @@ try {
 - [CLI लॉन्च अनुबंध](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI टूल](../reference/CLI-TOOLS.md)
 - [A2A सर्वर](./A2A-SERVER.md)
-- [क्लाउड एजेंट](./CLOUD_AGENT.md)

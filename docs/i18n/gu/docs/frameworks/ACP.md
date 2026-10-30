@@ -122,4 +122,3 @@ try {
 - [CLI લૉન્ચ કરારો](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ટૂલ્સ](../reference/CLI-TOOLS.md)
 - [A2A સર્વર](./A2A-SERVER.md)
-- [ક્લાઉડ એજન્ટ્સ](./CLOUD_AGENT.md)

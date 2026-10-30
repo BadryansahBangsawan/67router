@@ -4,7 +4,6 @@
 
 ---
 
-> **Lähde:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Viimeksi päivitetty:** 2026-06-28 — v3.8.40
 
 OmniRoute tarjoaa kolme erilaista agentteihin liittyvää rajapintaa. Ne näyttävät ensi silmäyksellä samankaltaisilta, mutta ratkaisevat eri ongelmia. Tämän sivun avulla voit valita oikean vaihtoehdon.
@@ -20,20 +19,6 @@ OmniRoute tarjoaa kolme erilaista agentteihin liittyvää rajapintaa. Ne näytt�
 Nämä kolme ovat toisistaan riippumattomia — voit valita niistä minkä tahansa yhdistelmän.
 
 ## Päätöspuu
-
-```
-Tarvitsetko pilvipalvelua tekemään työtä tämän koneen ulkopuolella (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ KYLLÄ → Cloud Agents (POST /api/v1/agents/tasks)
-└─ EI → Jatka
-    │
-    Onko sinulla A2A:ta käyttävä vertaisagentti, joka haluaa tehdä yhteistyötä?
-    ├─ KYLLÄ → A2A (POST /a2a)
-    └─ EI → Jatka
-        │
-        Haluatko luetella tai määrittää paikallisesti asennettuja CLI-koodausagentteja?
-        ├─ KYLLÄ → ACP (GET /api/acp/agents)
-        └─ EI → Käytä tavallista /v1/chat/completions-rajapintaa
-```
 
 ## 1. A2A — Agent-to-Agent
 
@@ -118,61 +103,6 @@ POST-pyynnön rungon muoto (`customAgentBodySchema` tiedostossa `src/app/api/acp
 
 - HTTP-rekisteri ei vastaanota tehtäviä eikä tarjoa prosessien käynnistystä. Sisäinen hallinta voi käynnistää rekisteröidyn CLI:n, mutta sitä ei ole kytketty automaattiseksi palveluntarjoajan varajärjestelmäksi. Tavallisessa vuorovaikutteisessa käytössä käynnistä määritetty CLI itse tai käytä komentoa `omniroute run`.
 
-## 3. Pilviagentit
-
-**OmniRoute-päätepisteet:** `/api/v1/agents/tasks/*` (elinkaari) + `/api/cloud/*` (taustatoiminnot)
-**Lähde:** `src/lib/cloudAgent/`
-
-### Mikä se on
-
-Yhtenäinen rajapinta kolmansien osapuolten pilvipohjaisiin ohjelmointiagentteihin. Lähetät kehotteen + tietovaraston URL-osoitteen, minkä jälkeen OmniRoute välittää tehtävän oikealle pilviagentille, kyselee tehtävän tilaa ja palauttaa tulokset.
-
-### Tuetut agentit (3, kaikki vahvistettu hakemistossa `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Elinkaari
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() agenttiluokkakohtaisesti
-  → ulkoinen palvelu aloittaa työn
-  → tehtävärivi luodaan tietokantaan (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → tilan laiska synkronointi palveluntarjoajalta
-  → palauttaa nykyisen tilan + suunnitelman + toimintalokin
-  ↓
-POST /api/v1/agents/tasks/[id]   (toiminto: "approve" | "message" | "cancel")
-  → välittää palveluntarjoajalle (tai merkitsee paikallisesti peruutetuksi)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → paikallinen peruutus
-```
-
-### Todennus
-
-⚠️ **Kaikki `/api/v1/agents/tasks/*`-päätepisteet edellyttävät hallintatodennusta** (commit `588a0333`). Pelkkää Bearer-todennusta käyttävät kutsujat saavat vastauksen 401 versiosta v3.8.0 alkaen.
-
-### Syvällisempi katsaus
-
-Katso tiedostosta [CLOUD_AGENT.md](./CLOUD_AGENT.md) lisätietoja `CloudAgentBase`-sopimuksesta, agenttikohtaisista yksityiskohdista, skeeman tiedoista ja tunnistetietojen välityksen päätepisteistä.
-
-## Vertailu: A2A vs. pilviagentit
-
-Molemmissa on "pitkäkestoisia tehtäviä", mutta eri tasoilla:
-
-| Ominaisuus              | A2A                                                                                                 | Pilviagentit                                  |
-| ----------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| Standardi               | Avoin A2A v0.3                                                                                      | OmniRoute-kohtainen                           |
-| Missä laskenta tapahtuu | OmniRouten sisällä (käyttää määritettyjä yhdistelmiä)                                               | Ulkoisesti (Codex-/Devin-/Jules-palvelimilla) |
-| Tehtävän kesto          | Oletusarvoinen TTL 5 min (määritettävissä `TaskManager`-luokassa)                                   | Minuuteista tunteihin                         |
-| Repositoriotietoinen    | Ei (välittää vain kehotteet)                                                                        | Kyllä (repositorion URL + haara)              |
-| Käyttötapaus            | Agenttien välinen yhteistyö, älykäs reititys palveluna                                              | Delegoi "toteuta ominaisuus X repossa Y"      |
-| Todennus                | Valinnainen `OMNIROUTE_API_KEY` reitille `/a2a`; hallintatodennus `/api/a2a/*`-REST-aputoiminnoille | Aina hallintatodennus                         |
-
 ## Integrointiesimerkkejä
 
 ### Tutustu OmniRouten A2A-ominaisuuksiin
@@ -222,30 +152,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Lähetä pilviagenttitehtävä
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Tarkista pilvitehtävän tila
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Mitä käytetään missäkin tilanteessa
 
 - **Chatbotin/copilotin käyttöliittymä** → `/v1/chat/completions` (OpenAI-yhteensopiva — ei agenttiprotokolla)
@@ -277,7 +183,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Katso myös
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2A:n syvällinen esittely
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Pilviagenttien syvällinen esittely
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Ulkoiset CLI-integraatiot (käyttävät ACP:tä)
 - [SKILLS.md](./SKILLS.md) — Taitokehys (eri asia kuin A2A-taidot — paikallinen suoritushiekkalaatikko)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — päätepisteiden viite

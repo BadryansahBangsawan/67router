@@ -1762,31 +1762,6 @@ Automaatse võtmehalduse alamsüsteem kasutab neid API-võtmete väljastamiseks 
 
 ---
 
-## Agentide protokoll
-
-Pilveagentide ülesanded (Claude Code, Codex Cloud, OpenHands jne), mida täidetakse eemalt OmniRoute’i kasutajate nimel.
-
-| Meetod | Tee                           | Kirjeldus                                                                                                                                              |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Ülesannete loend — valikulised `?provider=`, `?status=`, `?limit=` (1–500, vaikimisi 50)                                                               |
-| POST   | `/api/v1/agents/tasks`        | Ülesande loomine — keha valideerib `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Tagastab `201` koos ülesande ümbrikuga |
-| DELETE | `/api/v1/agents/tasks?id=...` | Ülesande kustutamine                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | Ülesande lugemine — kui `external_id` on määratud, värskendab sünkroonselt olekut ülesvoolu pilveagendilt                                              |
-| POST   | `/api/v1/agents/tasks/[id]`   | Eristatud toiming: `{action: "approve"}`, `{action: "message", message}` või `{action: "cancel"}`                                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Konkreetse ülesande kustutamine ID alusel                                                                                                              |
-
-> **Autentimine:** igal meetodil on nõutav halduse autentimine (`requireCloudAgentManagementAuth`). Enne versiooni v3.8.0 ei nõudnud need autentimist — murrangulise muudatuse kohta vt commit’i `588a0333`.
-
-```bash
-# Claude Code'i pilveülesande loomine
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Halduse puhverserverid
 
 Väljamineva HTTP(S)-/SOCKS-liikluse puhverserverid, mida saab määrata teenusepakkujatele, kontodele või globaalselt.
@@ -2292,5 +2267,3 @@ haldusulatusega API-võti) ja nende erinevuste kohta inferentsivõtmetest vaadak
 - Seadet `requireLogin` saab muuta marsruudi `/api/settings/require-login` kaudu
 - Marsruudid `/v1/*` võivad nõuda Bearer API-võtit, kui `REQUIRE_API_KEY=true`
 - „Haldusluba” / „haldusulatusega API-võti” tähendab selles viites üht vastavas juhendis kirjeldatud perekonda, mitte määratlemata täiendavat saladuse tüüpi
-
-> **Ühilduvust katkestav muudatus (v3.8.0)** — `/api/v1/agents/tasks/*` ja ooteaja halduse lõpp-punktid nõuavad nüüd **haldusautentimist** (juhtpaneeli küpsis `auth_token` või haldusulatusega API-võti). Kliendid, mis varem kutsusid neid marsruute autentimata, saavad vastuseks `401 Unauthorized`. Vaadake muudatust `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

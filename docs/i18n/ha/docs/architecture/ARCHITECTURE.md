@@ -128,7 +128,6 @@ Manyan shafuka da ke ƙarƙashin `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — sarrafa ƙayyadadden amfani/yawan buƙatu
 - `/dashboard/cli-tools` — shigar da CLI, gano yanayin gudanarwa, samar da saituna
 - `/dashboard/agents` — wakilan ACP da aka gano + rajistar wakili na al'ada
-- `/dashboard/cloud-agents` — ayyukan wakilai masu masaukin gajimare (Codex Cloud, Devin, Jules) da zagayowar rayuwar aiki
 - `/dashboard/skills` — rajistar ƙwarewar A2A, aiwatarwa a sandbox, jerin ginannun ƙwarewa
 - `/dashboard/memory` — dubawa da dawo da ƙwaƙwalwar tattaunawa mai ɗorewa
 - `/dashboard/webhooks` — rajistar webhook masu fita, sauya sirri, ƙididdigar sake gwadawa
@@ -382,23 +381,6 @@ Muhimman ƙwarewa:
 
 Don cikakkun bayanan algorithm (dabarun abubuwa, daidaita ma’auni), duba
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Cloud Agents yana lulluɓe dandamalin code-agent na wasu kamfanoni da ake gudanarwa a waje (Codex Cloud, Devin,
-Jules) a bayan daidaitaccen tsarin rayuwar aiki mai goyon bayan DB. Duk endpoints na ƙirƙira/duba
-aiki suna buƙatar tantancewar gudanarwa.
-
-- Tushen module: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, tare da ƙananan kundin adireshin kowane agent a ƙarƙashin `agents/`)
-- Aiwatarwar kowane agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoints na jama’a: `/api/v1/agents/tasks/*` (jera/ƙirƙira/samu/soke)
-- Endpoints na gudanarwa: `/api/cloud/*` (tanadi, matsayi, rukuni)
-- Dashboard: `/dashboard/cloud-agents`
-- Ma’ajiya: teburin `cloud_agent_tasks`
-
-Don bayanan tanadin kowane agent da takamaiman bayanan OAuth, duba
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrails
 

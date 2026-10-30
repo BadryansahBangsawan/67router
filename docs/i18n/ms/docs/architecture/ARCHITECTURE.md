@@ -128,7 +128,6 @@ Halaman utama di bawah `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kawalan kuota/kadar
 - `/dashboard/cli-tools` — pengenalan CLI, pengesanan masa jalan, penjanaan konfigurasi
 - `/dashboard/agents` — ejen ACP yang dikesan + pendaftaran ejen tersuai
-- `/dashboard/cloud-agents` — tugas ejen yang dihoskan di awan (Codex Cloud, Devin, Jules) dan kitar hayat tugas
 - `/dashboard/skills` — daftar kemahiran A2A, pelaksanaan kotak pasir, katalog kemahiran terbina dalam
 - `/dashboard/memory` — pemeriksaan dan pemerolehan semula memori perbualan berterusan
 - `/dashboard/webhooks` — langganan webhook keluar, putaran rahsia, statistik percubaan semula
@@ -382,23 +381,6 @@ Keupayaan utama:
 
 Untuk butiran algoritma penuh (formula faktor, penalaan pemberat), lihat
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Ejen Awan
-
-Ejen Awan membungkus platform ejen kod dihoskan pihak ketiga (Codex Cloud, Devin,
-Jules) di sebalik kitaran hayat tugas seragam yang disokong pangkalan data. Semua titik akhir penciptaan/pemeriksaan
-tugas memerlukan pengesahan pengurusan.
-
-- Akar modul: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, serta subdirektori setiap ejen di bawah `agents/`)
-- Pelaksanaan setiap ejen: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Titik akhir awam: `/api/v1/agents/tasks/*` (senarai/cipta/dapatkan/batal)
-- Titik akhir pengurusan: `/api/cloud/*` (peruntukan, status, kelompok)
-- Papan pemuka: `/dashboard/cloud-agents`
-- Storan: jadual `cloud_agent_tasks`
-
-Untuk butiran peruntukan dan OAuth bagi setiap ejen, lihat
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Pagar Keselamatan
 

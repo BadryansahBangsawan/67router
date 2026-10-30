@@ -1694,31 +1694,6 @@ Otomatik anahtar yönetimi alt sistemi tarafından, günlük/saatlik kotalarla d
 
 ---
 
-## Aracılar Protokolü
-
-OmniRoute kullanıcıları adına uzaktan yürütülen bulut aracısı görevleri (Claude Code, Codex Cloud, OpenHands vb.).
-
-| Yöntem | Yol                           | Açıklama                                                                                                                                                 |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Görevleri listeler — isteğe bağlı `?provider=`, `?status=`, `?limit=` (1–500, varsayılan 50)                                                             |
-| POST   | `/api/v1/agents/tasks`        | Görev oluşturur — gövde `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) tarafından doğrulanır. Görev zarfıyla `201` döndürür |
-| DELETE | `/api/v1/agents/tasks?id=...` | Bir görevi siler                                                                                                                                         |
-| GET    | `/api/v1/agents/tasks/[id]`   | Görevi okur — bir `external_id` ayarlandığında durumu yukarı akıştaki bulut aracısından eşzamanlı olarak yeniler                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | Ayırt edilmiş eylem: `{action: "approve"}`, `{action: "message", message}` veya `{action: "cancel"}`                                                     |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Belirli bir görevi kimliğine göre siler                                                                                                                  |
-
-> **Kimlik doğrulama:** her yöntemde yönetim kimlik doğrulaması gereklidir (`requireCloudAgentManagementAuth`). v3.8.0 öncesinde bunlar kimlik doğrulaması gerektirmiyordu — uyumluluğu bozan değişiklik için `588a0333` commit'ine bakın.
-
-```bash
-# Bir Claude Code bulut görevi oluşturun
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Yönetim Proxy'leri
 
 Sağlayıcılara, hesaplara veya genel olarak atanabilen giden HTTP(S)/SOCKS proxy'leri.
@@ -2222,5 +2197,3 @@ Dört kimlik bilgisi ailesi (pano oturumu, yerel CLI belirteci, `oma_live_…` E
 - `requireLogin`, `/api/settings/require-login` aracılığıyla açılıp kapatılabilir
 - `/v1/*` rotaları, `REQUIRE_API_KEY=true` olduğunda isteğe bağlı olarak Bearer API anahtarı gerektirir
 - Bu referansta "yönetim belirteci" / "yönetim kapsamlı API anahtarı", söz konusu kılavuzdaki ailelerden birini ifade eder; tanımlanmamış ek bir gizli bilgi türünü değil
-
-> **Geriye dönük uyumsuz değişiklik (v3.8.0)** — `/api/v1/agents/tasks/*` ve bekleme süresi yönetimi uç noktaları artık **yönetim kimlik doğrulaması** (pano `auth_token` çerezi veya yönetim kapsamlı bir API anahtarı) gerektiriyor. Daha önce bu rotaları kimlik doğrulaması olmadan çağıran istemciler `401 Unauthorized` yanıtını alacaktır. `588a0333` commit'ine bakın (`fix(auth): require management auth for agent and cooldown APIs`).

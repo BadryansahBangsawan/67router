@@ -128,7 +128,6 @@ Galvenās lapas mapē `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kvotu un ātruma ierobežojumu vadīklas
 - `/dashboard/cli-tools` — CLI ieviešana, izpildlaika noteikšana, konfigurācijas ģenerēšana
 - `/dashboard/agents` — noteiktie ACP aģenti un pielāgotu aģentu reģistrācija
-- `/dashboard/cloud-agents` — mākonī mitināti aģentu uzdevumi (Codex Cloud, Devin, Jules) un uzdevumu dzīves cikls
 - `/dashboard/skills` — A2A prasmju reģistrs, izpilde smilškastē, iebūvēto prasmju katalogs
 - `/dashboard/memory` — pastāvīgās sarunu atmiņas pārbaude un izgūšana
 - `/dashboard/webhooks` — izejošo tīmekļa āķu abonementi, noslēpumu rotācija, atkārtojumu statistika
@@ -382,23 +381,6 @@ Galvenās iespējas:
 
 Pilnu algoritmisko informāciju (faktoru formulas, svaru pielāgošanu) skatiet
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Mākoņa aģenti
-
-Mākoņa aģenti ietver trešo pušu mitinātās koda aģentu platformas (Codex Cloud, Devin,
-Jules), nodrošinot vienotu, datubāzē uzturētu uzdevumu dzīves ciklu. Visiem uzdevumu izveides un pārbaudes
-galapunktiem ir nepieciešama pārvaldības autentifikācija.
-
-- Moduļa sakne: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, kā arī katra aģenta apakšdirektoriji zem `agents/`)
-- Katra aģenta realizācijas: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Publiskie galapunkti: `/api/v1/agents/tasks/*` (uzskaitīšana/izveide/iegūšana/atcelšana)
-- Pārvaldības galapunkti: `/api/cloud/*` (nodrošināšana, statuss, pakešapstrāde)
-- Informācijas panelis: `/dashboard/cloud-agents`
-- Glabāšana: tabula `cloud_agent_tasks`
-
-Informāciju par katra aģenta nodrošināšanu un OAuth specifiku skatiet
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Drošības ierobežojumi
 

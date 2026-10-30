@@ -1740,31 +1740,6 @@ Síntiúis crúca gréasáin amach do theagmhais OmniRoute (cur i gcrích iarrat
 
 ---
 
-## Prótacal Gníomhairí
-
-Tascanna gníomhairí néil (Claude Code, Codex Cloud, OpenHands, srl.) a chuirtear i gcrích go cianda thar ceann úsáideoirí OmniRoute.
-
-| Modh   | Conair                        | Cur síos                                                                                                                                                |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Liostaigh tascanna — `?provider=`, `?status=`, `?limit=` roghnach (1–500, 50 de réir réamhshocraithe)                                                   |
-| POST   | `/api/v1/agents/tasks`        | Cruthaigh tasc — corp bailíochtaithe ag `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Filleann sé `201` le clúdach taisc |
-| DELETE | `/api/v1/agents/tasks?id=...` | Scrios tasc                                                                                                                                             |
-| GET    | `/api/v1/agents/tasks/[id]`   | Léigh tasc — athnuachan sioncrónach ar an stádas ón ngníomhaire néil réamhtheachtach nuair atá `external_id` socraithe                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Gníomh idirdhealaithe: `{action: "approve"}`, `{action: "message", message}`, nó `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Scrios tasc sonrach de réir id                                                                                                                          |
-
-> **Údarú:** tá údarú bainistíochta riachtanach do gach modh (`requireCloudAgentManagementAuth`). Roimh v3.8.0 ní raibh siad seo údaraithe — féach gealltanas `588a0333` don athrú bristeach.
-
-```bash
-# Cruthaigh tasc néil Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Seachfhreastalaithe Bainistíochta
 
 Seachfhreastalaithe HTTP(S)/SOCKS amach is féidir a shannadh do sholáthraithe, do chuntais, nó go domhanda.
@@ -2270,5 +2245,3 @@ theaghlach dintiúr (seisiún deais, comhartha CLI áitiúil, Comhartha Rochtana
 - Is féidir `requireLogin` a scoránú trí `/api/settings/require-login`
 - Féadfaidh eochair API Bearer a bheith riachtanach do bhealaí `/v1/*` nuair atá `REQUIRE_API_KEY=true`
 - Ciallaíonn "comhartha bainistíochta" / "eochair API le raon feidhme bainistíochta" sa tagairt seo ceann de na teaghlaigh sa treoir sin — ní cineál rúin bhreise neamhshainithe
-
-> **Athrú bristeach (v3.8.0)** — teastaíonn **fíordheimhniú bainistíochta** anois ó `/api/v1/agents/tasks/*` agus ó chríochphointí bainistíochta na tréimhse fuaraithe (fianán deais `auth_token` nó eochair API le raon feidhme bainistíochta). Gheobhaidh cliaint a ghlaoigh ar na bealaí seo roimhe seo gan fíordheimhniú `401 Unauthorized`. Féach gealltanas `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

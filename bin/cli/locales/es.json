@@ -698,54 +698,6 @@
       "yes": "Omitir la solicitud de confirmación"
     }
   },
-  "cloud": {
-    "description": "Gestionar tareas de agentes de IA en la nube (codex, devin, jules)",
-    "agents": {
-      "description": "Listar los agentes en la nube disponibles"
-    },
-    "agent": {
-      "description": "Gestionar las tareas del agente en la nube {agent}",
-      "auth": {
-        "description": "Autorizar a {agent} mediante OAuth"
-      }
-    },
-    "task": {
-      "description": "Gestionar tareas de agentes en la nube",
-      "create": {
-        "description": "Crear una nueva tarea de agente",
-        "title": "Título de la tarea (de forma predeterminada, los primeros 80 caracteres de la instrucción)",
-        "prompt": "Texto de la instrucción de la tarea",
-        "prompt_file": "Leer la instrucción desde un archivo",
-        "repo": "URL del repositorio que se va a clonar para la tarea",
-        "branch": "Nombre de la rama que se va a utilizar",
-        "metadata": "Objeto de metadatos JSON"
-      },
-      "list": {
-        "description": "Listar las tareas del agente",
-        "status": "Filtrar por estado (running|completed|failed|cancelled)",
-        "limit": "Número máximo de resultados (predeterminado: 50)"
-      },
-      "get": {
-        "description": "Obtener los detalles de la tarea por ID"
-      },
-      "status": {
-        "description": "Mostrar el estado de la tarea (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancelar una tarea en ejecución",
-        "yes": "Omitir la solicitud de confirmación"
-      },
-      "approve": {
-        "description": "Aprobar el plan del agente para iniciar la ejecución"
-      },
-      "message": {
-        "description": "Enviar un mensaje a una tarea en ejecución"
-      }
-    },
-    "sources": {
-      "description": "Listar los archivos fuente producidos por una tarea"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router de IA inteligente con fallback automático",
     "version": "Mostrar versión y salir",

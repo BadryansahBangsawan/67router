@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 dövründə sıfır konfiqurasiyalı avtomatik marşrutlaşdı
 - 🤝 **GitLab Duo OAuth provayderi** — GitLab giriş məlumatları ilə daxil olun
 - 🧠 **Reasoning Replay Cache** — düşünmə izlərinin hibrid, yaddaşdaxili + SQLite əsaslı davamlı saxlanması
 
-📚 **Əlaqəli sənədlər:** [Bacarıqlar Çərçivəsi](../frameworks/SKILLS.md) · [Yaddaş Sistemi](../frameworks/MEMORY.md) · [Bulud Agentləri](../frameworks/CLOUD_AGENT.md) · [Vebhuklar](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provayderlər

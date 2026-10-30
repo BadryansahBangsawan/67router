@@ -4,7 +4,6 @@
 
 ---
 
-> **Origem:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Última atualização:** 2026-06-28 — v3.8.40
 
 O OmniRoute disponibiliza três interfaces diferentes relacionadas a agentes. À primeira vista, elas parecem semelhantes, mas resolvem problemas distintos. Use esta página para escolher a opção certa.
@@ -20,20 +19,6 @@ O OmniRoute disponibiliza três interfaces diferentes relacionadas a agentes. À
 As três opções são independentes — escolha qualquer subconjunto delas.
 
 ## Árvore de decisão
-
-```
-Você precisa que um serviço na nuvem execute trabalho fora desta máquina (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ SIM → Agentes na nuvem (POST /api/v1/agents/tasks)
-└─ NÃO → Continue
-    │
-    Você tem um agente par compatível com A2A que deseja colaborar?
-    ├─ SIM → A2A (POST /a2a)
-    └─ NÃO → Continue
-        │
-        Você precisa listar / configurar agentes de programação CLI instalados localmente?
-        ├─ SIM → ACP (GET /api/acp/agents)
-        └─ NÃO → Use apenas /v1/chat/completions
-```
 
 ## 1. A2A — Agente para Agente
 
@@ -125,61 +110,6 @@ Formato do corpo da solicitação POST (`customAgentBodySchema` em `src/app/api/
   de provedor. Para uso interativo comum, inicie você mesmo a CLI configurada ou
   use `omniroute run`.
 
-## 3. Agentes de nuvem
-
-**Endpoints do OmniRoute:** `/api/v1/agents/tasks/*` (ciclo de vida) + `/api/cloud/*` (infraestrutura)
-**Código-fonte:** `src/lib/cloudAgent/`
-
-### O que é
-
-Uma interface uniforme para agentes de programação em nuvem de terceiros. Você envia um prompt + URL do repositório, o OmniRoute encaminha a solicitação ao agente de nuvem correto, consulta periodicamente o status e retorna os resultados.
-
-### Agentes compatíveis (4, todos confirmados em `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Ciclo de vida
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() por classe de agente
-  → o serviço externo inicia o trabalho
-  → uma linha de tarefa é criada no banco de dados (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → sincronização tardia do status com o provedor
-  → retorna o status atual + plano + registro de atividades
-  ↓
-POST /api/v1/agents/tasks/[id]   (ação: "approve" | "message" | "cancel")
-  → encaminha ao provedor (ou marca como cancelada localmente)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → cancelamento local
-```
-
-### Autenticação
-
-⚠️ **Todos os endpoints `/api/v1/agents/tasks/*` exigem autenticação de gerenciamento** (commit `588a0333`). Chamadores que usam somente Bearer recebem 401 desde a v3.8.0.
-
-### Análise detalhada
-
-Consulte [CLOUD_AGENT.md](./CLOUD_AGENT.md) para ver o contrato `CloudAgentBase`, detalhes específicos de cada agente, detalhes do esquema e endpoints da infraestrutura de credenciais.
-
-## Comparação: A2A vs Agentes de Nuvem
-
-Ambos têm "tarefas de longa duração", mas em camadas diferentes:
-
-| Aspecto                    | A2A                                                                                       | Agentes de Nuvem                                          |
-| -------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| Padrão                     | Open A2A v0.3                                                                             | Específico do OmniRoute                                   |
-| Onde o processamento roda  | Dentro do OmniRoute (usa combinações configuradas)                                        | Externamente (servidores Codex / Devin / Jules)           |
-| Duração da tarefa          | TTL padrão de 5 min (configurável em `TaskManager`)                                       | De minutos a horas                                        |
-| Compatível com repositório | Não (envia apenas prompts)                                                                | Sim (URL do repositório + branch)                         |
-| Caso de uso                | Colaboração entre agentes, roteamento inteligente como serviço                            | Delegar "implementar a funcionalidade X no repositório Y" |
-| Autenticação               | `OMNIROUTE_API_KEY` opcional para `/a2a`; gerenciamento para auxiliares REST `/api/a2a/*` | Sempre gerenciamento                                      |
-
 ## Exemplos de Integração
 
 ### Descobrir os recursos A2A do OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Enviar uma tarefa de Agente de Nuvem
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Consultar o status da tarefa na nuvem
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Quando Usar Cada Opção
 
 - **Frontend de chatbot / copiloto** → `/v1/chat/completions` (compatível com OpenAI — não é um protocolo de agentes)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Veja também
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Análise detalhada do A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Análise detalhada dos agentes na nuvem
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrações externas de CLI (usam ACP)
 - [SKILLS.md](./SKILLS.md) — Framework de habilidades (diferente das habilidades A2A — sandbox de execução local)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referência dos endpoints

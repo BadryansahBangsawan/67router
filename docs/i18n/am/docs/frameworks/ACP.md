@@ -121,4 +121,3 @@ regressions እንደተሸፈኑ ይቆያሉ። እነዚህ tests ቀጥታ �
 - [የCLI ማስጀመሪያ ውሎች](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [የCLI tools](../reference/CLI-TOOLS.md)
 - [የA2A server](./A2A-SERVER.md)
-- [የCloud agents](./CLOUD_AGENT.md)

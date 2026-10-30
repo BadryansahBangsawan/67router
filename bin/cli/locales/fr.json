@@ -698,54 +698,6 @@
       "yes": "Ignorer l’invite de confirmation"
     }
   },
-  "cloud": {
-    "description": "Gérer les tâches des agents IA cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Lister les agents cloud disponibles"
-    },
-    "agent": {
-      "description": "Gérer les tâches de l’agent cloud {agent}",
-      "auth": {
-        "description": "Autoriser {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Gérer les tâches des agents cloud",
-      "create": {
-        "description": "Créer une nouvelle tâche d’agent",
-        "title": "Titre de la tâche (par défaut, les 80 premiers caractères de l’invite)",
-        "prompt": "Texte de l’invite de la tâche",
-        "prompt_file": "Lire l’invite depuis un fichier",
-        "repo": "URL du dépôt à cloner pour la tâche",
-        "branch": "Nom de la branche à utiliser",
-        "metadata": "Objet de métadonnées JSON"
-      },
-      "list": {
-        "description": "Lister les tâches des agents",
-        "status": "Filtrer par statut (running|completed|failed|cancelled)",
-        "limit": "Nombre maximal de résultats (par défaut : 50)"
-      },
-      "get": {
-        "description": "Obtenir les détails d’une tâche par ID"
-      },
-      "status": {
-        "description": "Afficher le statut de la tâche (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Annuler une tâche en cours d’exécution",
-        "yes": "Ignorer l’invite de confirmation"
-      },
-      "approve": {
-        "description": "Approuver le plan de l’agent pour démarrer l’exécution"
-      },
-      "message": {
-        "description": "Envoyer un message à une tâche en cours d’exécution"
-      }
-    },
-    "sources": {
-      "description": "Lister les fichiers sources produits par une tâche"
-    }
-  },
   "program": {
     "description": "OmniRoute — Routeur IA intelligent avec basculement automatique",
     "version": "Afficher la version et quitter",

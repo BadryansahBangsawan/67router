@@ -230,8 +230,6 @@ Aplicarea cheii API a clientului folosește `isRequireApiKeyEnabled()` din `src/
 
 ## Modificare incompatibilă — v3.8.0
 
-Endpointurile `/api/v1/agents/tasks/*` și `/api/resilience/model-cooldowns` **necesită acum autentificare pentru administrare** (commitul `588a0333`). Clienții care trimiteau anterior o cheie API obișnuită, fără domeniul de acces `manage`, primesc `403`. Migrare: fie acordați cheii domeniul de acces `manage` în panoul API Keys, fie utilizați o sesiune autentificată în panoul de control.
-
 ## Modificare de comportament — v3.8.2
 
 `/api/mcp/*` (serverul MCP la distanță) este în continuare LOCAL_ONLY în mod implicit, dar acceptă acum cereri non-loopback atunci când antetul `Authorization: Bearer <api-key>` conține domeniul de acces `manage`. Excepția este activată explicit pentru fiecare cale prin `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` în `src/server/authz/routeGuard.ts`; prefixul LOCAL_ONLY înrudit `/api/cli-tools/runtime/*` nu poate fi eludat în mod intenționat, deoarece poate genera subprocese arbitrare. Cererile anonime către `/api/mcp/*` provenite din afara interfeței loopback continuă să returneze `403 LOCAL_ONLY` — comportamentul implicit pentru orice cale LOCAL_ONLY nouă rămâne restricționarea strictă la loopback. Consultați [Nivelurile mecanismului de protecție a rutelor](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

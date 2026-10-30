@@ -44,10 +44,6 @@ OmniRoute は、一元管理された単一の許可リストを使用して、�
 
 したがって、`CORS_ALLOW_ALL=true` による **残余** の公開範囲は、次のものに限定されます。(a) すでに未認証で利用可能なデータに対する、認証情報を伴わないクロスオリジンの **読み取り**、および (b) 管理ルートで CORS **プリフライトを通過させること**。ただし、これらのルートには引き続き認証が必要であり、クロスオリジンページがその認証を提供することはできません。共有 CORS パスにおいて、これはセッションハイジャックや認証情報窃取の攻撃経路では **ありません**。
 
-### 唯一の実質的な例外 — `/api/v1/agents/`
-
-Cloud-Agent ルート（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）は **独自の** CORS ヘッダー（`src/lib/cloudAgent/api.ts`、`getCloudAgentCorsHeaders`）を設定し、`Access-Control-Allow-Origin: <origin>|*` と `Access-Control-Allow-Credentials: true` を同時に送信 **します**。これはオリジンのエコーと認証情報が共存する唯一のサーフェスであり、`CORS_ALLOW_ALL` とは **独立しています**。これらのルートは管理認証（`requireManagementAuth`）で保護されています。ダッシュボードをホスト外部に公開する運用担当者は、レスポンスヘッダーによってクロスオリジンの認証情報付き読み取りが許可される唯一の箇所がここであることを認識しておく必要があります。これを明示的な許可リストに制限する対応は、この CORS ガイダンスとは別に追跡されています。
-
 ## 本番環境向けチェックリスト
 
 - **本番環境では絶対に `CORS_ALLOW_ALL=true` を設定しないでください。** 未設定のままにしてください。
@@ -127,7 +123,6 @@ Security タブ）で設定してください。
 | ダッシュボード向けのランタイム状態           | `src/app/api/settings/authz-inventory/route.ts`                      |
 | ダッシュボードの警告バナー                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins フィールド              | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent のルート単位 CORS（例外）        | `src/lib/cloudAgent/api.ts`                                          |
 
 ## 関連項目
 

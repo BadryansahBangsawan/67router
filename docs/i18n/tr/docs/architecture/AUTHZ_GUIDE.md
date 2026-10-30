@@ -225,8 +225,6 @@ Katalog ve eşleştirme kuralları (aynı dize veya `*` ile biten verilmiş bir 
 
 ## Uyumluluğu Bozan Değişiklik — v3.8.0
 
-`/api/v1/agents/tasks/*` ve `/api/resilience/model-cooldowns` uç noktaları **artık yönetim kimlik doğrulaması gerektirir** (`588a0333` commit'i). Daha önce `manage` kapsamı olmadan normal bir API anahtarı gönderen istemciler `403` yanıtı alır. Geçiş: API Keys panosunda anahtara `manage` kapsamını verin veya oturum açılmış bir dashboard oturumu kullanın.
-
 ## Davranış Değişikliği — v3.8.2
 
 `/api/mcp/*` (uzak MCP sunucusu) varsayılan olarak hâlâ LOCAL_ONLY'dir; ancak `Authorization: Bearer <api-key>` üstbilgisi `manage` kapsamını taşıdığında artık geri döngü dışı istekleri kabul eder. Bu istisna, `src/server/authz/routeGuard.ts` içindeki `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` aracılığıyla yol başına açıkça denetlenir; aynı düzeydeki LOCAL_ONLY öneki `/api/cli-tools/runtime/*`, rastgele alt süreçler başlatabildiği için kasıtlı olarak atlanamaz. Geri döngü dışından `/api/mcp/*` yoluna yapılan anonim istekler `403 LOCAL_ONLY` döndürmeye devam eder — yeni LOCAL_ONLY yollar için varsayılan davranış, yalnızca geri döngüye kesin biçimde izin vermeye devam eder. Bkz. [Rota Koruması Düzeyleri](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

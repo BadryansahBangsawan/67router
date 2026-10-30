@@ -230,8 +230,6 @@ Provedba API ključa klijenta koristi `isRequireApiKeyEnabled()` u `src/shared/u
 
 ## Nekompatibilna promjena — v3.8.0
 
-Krajnje točke `/api/v1/agents/tasks/*` i `/api/resilience/model-cooldowns` **sada zahtijevaju autentifikaciju za upravljanje** (commit `588a0333`). Klijenti koji su prethodno slali običan API ključ bez opsega `manage` primaju `403`. Migracija: ključu dodijelite opseg `manage` na nadzornoj ploči API ključeva ili upotrijebite prijavljenu sesiju nadzorne ploče.
-
 ## Promjena ponašanja — v3.8.2
 
 `/api/mcp/*` (udaljeni MCP poslužitelj) i dalje je prema zadanim postavkama LOCAL_ONLY, ali sada prihvaća zahtjeve koji ne dolaze s povratne petlje kada zaglavlje `Authorization: Bearer <api-key>` sadrži opseg `manage`. Iznimka se izričito omogućuje za svaku putanju putem `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` u `src/server/authz/routeGuard.ts`; srodni prefiks LOCAL_ONLY `/api/cli-tools/runtime/*` namjerno se ne može zaobići jer može pokrenuti proizvoljne potprocese. Anonimni zahtjevi prema `/api/mcp/*` koji ne dolaze s povratne petlje i dalje vraćaju `403 LOCAL_ONLY` — zadano ponašanje za svaku novu putanju LOCAL_ONLY ostaje strogo ograničeno na povratnu petlju. Pogledajte [Razine zaštite ruta](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

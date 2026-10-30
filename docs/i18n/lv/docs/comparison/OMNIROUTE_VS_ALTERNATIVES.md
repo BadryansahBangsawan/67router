@@ -24,7 +24,6 @@ Objektīvs funkciju salīdzinājums ar populāriem atvērtā pirmkoda AI maršru
 | **A2A protokols**                                                     |                   ✅ 6 prasmes                   |          ❌           |        ❌         |     ❌      |
 | **Atmiņa (FTS5 + vektors)**                                           |                        ✅                        |          ❌           |        ❌         |     ❌      |
 | **Aizsargmehānismi (PII, injekcijas, redze)**                         |                        ✅                        |        daļēji         |        ❌         |  ✅ maksas  |
-| **Mākoņa aģentu integrācijas**                                        |           Codex, Cursor, Devin, Jules            |          ❌           |        ❌         |     ❌      |
 | **Ķēdes pārtraucējs katram nodrošinātājam**                           |         ✅ 3 stāvokļi, slinkā atkopšana          |        pamata         |        ❌         |     ✅      |
 | **TLS pirkstu nospiedumu maskēšana (JA3/JA4)**                        |                    ✅ wreq-js                    |          ❌           |        ❌         |     ❌      |
 | **Novērtēšanas ietvars**                                              |                   ✅ iebūvēts                    |          ❌           |        ❌         |  ⚠ maksas   |

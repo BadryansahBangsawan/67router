@@ -24,7 +24,6 @@
 - [ប្រព័ន្ធជំនាញ](#-skills-system)
 - [ប្រព័ន្ធអង្គចងចាំ](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [ការគ្រប់គ្រងតាមកម្មវិធី](#-programmatic-management)
 - [CLI ផ្ទៃក្នុង](#-internal-cli)
 - [កម្មវិធីកុំព្យូទ័រលើតុ (Electron)](#-desktop-application-electron)
@@ -1278,18 +1277,6 @@ OmniRoute រក្សាទុក **អង្គចងចាំការសន�
 - ការព្យាយាមឡើងវិញ៖ ព្យាយាម 3 ដងជាមួយការពន្យារពេលកើនឡើងជាអិចស្ប៉ូណង់ស្យែល បន្ទាប់មកបញ្ជូនទៅជួរ dead-letter
 
 គ្រោងការណ៍ពេញលេញមាននៅក្នុង [WEBHOOKS.md](../frameworks/WEBHOOKS.md)។
-
----
-
-## ☁️ ភ្នាក់ងារ Cloud
-
-OmniRoute រួមបញ្ចូលជាមួយភ្នាក់ងារសរសេរកូដលើ cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ដូច្នេះអ្នកអាចបញ្ជូនភារកិច្ចដែលដំណើរការរយៈពេលយូរពី dashboard ដូចគ្នាដែលគ្រប់គ្រងការបញ្ជូនផ្លូវក្នុងម៉ាស៊ីនរបស់អ្នក។
-
-- បង្កើតភារកិច្ចក្នុង **Dashboard → Cloud Agents** ឬតាមរយៈ `POST /api/v1/agents/tasks`
-- តាមដានស្ថានភាព កំណត់ហេតុ និងវត្ថុលទ្ធផលតាមភារកិច្ចនីមួយៗ
-- ប្រើ API key ផ្ទាល់ខ្លួនរបស់អ្នកសម្រាប់ provider នីមួយៗ — ព័ត៌មានសម្ងាត់មិនដែលចាកចេញពី instance របស់ OmniRoute ទេ
-
-ឯកសារយោងពេញលេញ៖ [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)។
 
 ---
 

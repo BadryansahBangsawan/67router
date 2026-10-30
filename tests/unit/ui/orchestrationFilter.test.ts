@@ -22,24 +22,24 @@ function filterWith(over: Partial<OrchFilter>): OrchFilter {
 }
 
 // Fixture: orchestrator + 3 sources + works:
-//   cloud-agent:1 (label "fix login bug", sublabel "jules", raw {providerId:"jules"}, running)
-//     + cloud-agent:1:activity (activity follows its parent work node)
+//   conductor:task:1 (label "fix login bug", sublabel "jules", raw {runner:"jules"}, running)
+//     + conductor:task:1:activity (activity follows its parent work node)
 //   a2a:2 (label "smart-routing", state succeeded, raw {})
 //   conductor:task:3 (label "deploy", raw {runner:"vm-9"}, state failed)
-//   overflow:cloud-agent (always survives; counts/droppedByState must stay untouched)
+//   overflow:conductor (always survives; counts/droppedByState must stay untouched)
 const caNode: OrchNode = {
-  id: "cloud-agent:1",
+  id: "conductor:task:1",
   kind: "work",
-  source: "cloud-agent",
+  source: "conductor",
   state: "running",
   label: "fix login bug",
   sublabel: "jules",
-  raw: { providerId: "jules" },
+  raw: { runner: "jules" },
 };
 const caActivity: OrchNode = {
-  id: "cloud-agent:1:activity",
+  id: "conductor:task:1:activity",
   kind: "activity",
-  source: "cloud-agent",
+  source: "conductor",
   label: "npm test",
 };
 const a2aNode: OrchNode = {
@@ -60,19 +60,12 @@ const condNode: OrchNode = {
 };
 const overflowCounts = { failed: 3 };
 const overflowNode: OrchNode = {
-  id: "overflow:cloud-agent",
+  id: "overflow:conductor",
   kind: "overflow",
-  source: "cloud-agent",
+  source: "conductor",
   label: "+3 more",
   counts: overflowCounts,
   droppedByState: overflowCounts,
-};
-const sourceCloudAgent: OrchNode = {
-  id: "source:cloud-agent",
-  kind: "source",
-  source: "cloud-agent",
-  label: "cloud-agent",
-  counts: { running: 1 },
 };
 const sourceA2A: OrchNode = {
   id: "source:a2a",
@@ -86,14 +79,13 @@ const sourceConductor: OrchNode = {
   kind: "source",
   source: "conductor",
   label: "conductor",
-  counts: { failed: 1 },
+  counts: { running: 1, failed: 1 },
 };
 const orchestratorNode: OrchNode = { id: "orchestrator", kind: "orchestrator", label: "OmniRoute" };
 
 const snap: OrchSnapshot = {
   nodes: [
     orchestratorNode,
-    sourceCloudAgent,
     sourceA2A,
     sourceConductor,
     caNode,
@@ -103,13 +95,6 @@ const snap: OrchSnapshot = {
     overflowNode,
   ],
   edges: [
-    {
-      id: "e:orchestrator→source:cloud-agent",
-      from: "orchestrator",
-      to: "source:cloud-agent",
-      kind: "owns",
-      active: false,
-    },
     {
       id: "e:orchestrator→source:a2a",
       from: "orchestrator",
@@ -125,16 +110,16 @@ const snap: OrchSnapshot = {
       active: false,
     },
     {
-      id: "e:source:cloud-agent→cloud-agent:1",
-      from: "source:cloud-agent",
-      to: "cloud-agent:1",
+      id: "e:source:conductor→conductor:task:1",
+      from: "source:conductor",
+      to: "conductor:task:1",
       kind: "owns",
       active: true,
     },
     {
-      id: "e:cloud-agent:1→cloud-agent:1:activity",
-      from: "cloud-agent:1",
-      to: "cloud-agent:1:activity",
+      id: "e:conductor:task:1→conductor:task:1:activity",
+      from: "conductor:task:1",
+      to: "conductor:task:1:activity",
       kind: "owns",
       active: true,
     },
@@ -153,15 +138,14 @@ const snap: OrchSnapshot = {
       active: false,
     },
     {
-      id: "e:source:cloud-agent→overflow:cloud-agent",
-      from: "source:cloud-agent",
-      to: "overflow:cloud-agent",
+      id: "e:source:conductor→overflow:conductor",
+      from: "source:conductor",
+      to: "overflow:conductor",
       kind: "owns",
       active: false,
     },
   ],
   sources: [
-    { source: "cloud-agent", ok: true },
     { source: "a2a", ok: true },
     { source: "conductor", ok: true },
   ],
@@ -177,18 +161,18 @@ test("q matches label case-insensitively and drops non-matching works + their ac
   const out = filterSnapshot(snap, filterWith({ q: "SMART" }));
   const ids = out.nodes.map((n) => n.id);
   assert.ok(ids.includes("a2a:2"));
-  assert.ok(!ids.includes("cloud-agent:1"), "non-matching work dropped");
-  assert.ok(!ids.includes("cloud-agent:1:activity"), "its activity is dropped along with it");
+  assert.ok(!ids.includes("conductor:task:1"), "non-matching work dropped");
+  assert.ok(!ids.includes("conductor:task:1:activity"), "its activity is dropped along with it");
   assert.ok(!ids.includes("conductor:task:3"), "non-matching work dropped");
 });
 
 test("q matching a work keeps its activity node and the edges between them", () => {
   const out = filterSnapshot(snap, filterWith({ q: "login" }));
   const ids = out.nodes.map((n) => n.id);
-  assert.ok(ids.includes("cloud-agent:1"));
-  assert.ok(ids.includes("cloud-agent:1:activity"));
+  assert.ok(ids.includes("conductor:task:1"));
+  assert.ok(ids.includes("conductor:task:1:activity"));
   assert.ok(
-    out.edges.some((e) => e.from === "cloud-agent:1" && e.to === "cloud-agent:1:activity")
+    out.edges.some((e) => e.from === "conductor:task:1" && e.to === "conductor:task:1:activity")
   );
 });
 
@@ -196,7 +180,7 @@ test("state chip keeps only matching works", () => {
   const out = filterSnapshot(snap, filterWith({ states: new Set(["failed"]) }));
   const works = out.nodes.filter((n) => n.kind === "work").map((n) => n.id);
   assert.deepEqual(works, ["conductor:task:3"]);
-  assert.ok(!out.nodes.some((n) => n.id === "cloud-agent:1:activity"));
+  assert.ok(!out.nodes.some((n) => n.id === "conductor:task:1:activity"));
 });
 
 test("source chip keeps only matching works", () => {
@@ -212,7 +196,7 @@ test("provider chip matches nodeProviderKey", () => {
 
   const out = filterSnapshot(snap, filterWith({ providers: new Set(["jules"]) }));
   const works = out.nodes.filter((n) => n.kind === "work").map((n) => n.id);
-  assert.deepEqual(works, ["cloud-agent:1"]);
+  assert.deepEqual(works, ["conductor:task:1"]);
 });
 
 test("dimensions AND together", () => {
@@ -229,11 +213,11 @@ test("source/orchestrator/overflow nodes always survive; counts untouched", () =
 
   assert.ok(out.nodes.some((n) => n.id === "orchestrator"));
   const sources = out.nodes.filter((n) => n.kind === "source");
-  assert.equal(sources.length, 3);
-  const survivedSourceCloudAgent = out.nodes.find((n) => n.id === "source:cloud-agent");
-  assert.equal(survivedSourceCloudAgent?.counts, sourceCloudAgent.counts);
+  assert.equal(sources.length, 2);
+  const survivedSourceConductor = out.nodes.find((n) => n.id === "source:conductor");
+  assert.equal(survivedSourceConductor?.counts, sourceConductor.counts);
 
-  const survivedOverflow = out.nodes.find((n) => n.id === "overflow:cloud-agent");
+  const survivedOverflow = out.nodes.find((n) => n.id === "overflow:conductor");
   assert.ok(survivedOverflow, "overflow node must survive even with zero matching works");
   assert.equal(survivedOverflow?.counts, overflowNode.counts);
   assert.equal(survivedOverflow?.droppedByState, overflowNode.droppedByState);

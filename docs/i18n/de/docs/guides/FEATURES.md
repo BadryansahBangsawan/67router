@@ -43,8 +43,6 @@ Der Zyklus v3.7.x → v3.8.0 bringt konfigurationsfreies automatisches Routing, 
 - 🤝 **GitLab Duo-OAuth-Anbieter** — Anmeldung mit GitLab-Anmeldedaten
 - 🧠 **Reasoning Replay Cache** — hybride Persistenz von Reasoning-Traces im Arbeitsspeicher und in SQLite
 
-📚 **Zugehörige Dokumentation:** [Skills-Framework](../frameworks/SKILLS.md) · [Speichersystem](../frameworks/MEMORY.md) · [Cloud-Agenten](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Anbieter

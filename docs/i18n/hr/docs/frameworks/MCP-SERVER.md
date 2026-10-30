@@ -245,17 +245,6 @@ Gornji popis MCP alata (110 jedinstvenih alata, izračunato pomoću `countUnique
 ograničen na operacije usmjeravanja u stvarnom vremenu/predmemorije/kompresije/memorije/vještina/proxyja/kontekstnog izvora. Dva susjedna
 okvira isporučuju se zajedno s MCP poslužiteljem u v3.8.0 i dokumentirani su zasebno:
 
-### Cloud Agenti
-
-Cloud Agenti su AI agenti za kodiranje izvan procesa (codex-cloud, cursor-cloud, devin, jules) koji su spojeni u
-OmniRoute kroz isti model veze koji se koristi za LLM pružatelje usluga. Izloženi su putem
-vlastite REST površine (`/api/v1/agents/*`) i **nisu** dio kataloga MCP alata
-— pozivanje Cloud Agenta ne troši MCP opseg.
-
-- Implementacija: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Životni ciklus: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentacija: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Zaštitne Mjere
 
 Zaštitne mjere su filtri pred-/post-izvođenja (vision-bridge, pii-masker, prompt-injection)

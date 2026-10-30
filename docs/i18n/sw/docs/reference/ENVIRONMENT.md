@@ -1374,11 +1374,11 @@ kuvibadilisha kunahitaji kuhariri msimbo, si kutumia kigezo cha mazingira:
 
 Ruhusu watumiaji kuripoti matatizo moja kwa moja kutoka kwenye Dashboard.
 
-| Kigezo                | Chaguo-msingi   | Faili Chanzo                                        | Maelezo                                                                                                                                                                |
-| --------------------- | --------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(hakijawekwa)_ | `src/app/api/v1/issues/report/route.ts`             | Hazina katika muundo wa `owner/repo`.                                                                                                                                  |
-| `GITHUB_ISSUES_TOKEN` | _(hakijawekwa)_ | `src/app/api/v1/issues/report/route.ts`             | Tokeni ya Ufikiaji Binafsi ya GitHub yenye wigo wa `issues:write`.                                                                                                     |
-| `GITHUB_TOKEN`        | _(hakijawekwa)_ | usaidizi wa uchambuzi wa matatizo / ajenti wa wingu | Tokeni ya jumla ya ufikiaji wa GitHub inayotumika kama mbadala wa `GITHUB_ISSUES_TOKEN` na inayotumiwa na visaidizi vya ajenti wa wingu katika `src/lib/cloudAgent/*`. |
+| Kigezo                | Chaguo-msingi   | Faili Chanzo                                        | Maelezo                                                                                                                                                                             |
+| --------------------- | --------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(hakijawekwa)_ | `src/app/api/v1/issues/report/route.ts`             | Hazina katika muundo wa `owner/repo`.                                                                                                                                               |
+| `GITHUB_ISSUES_TOKEN` | _(hakijawekwa)_ | `src/app/api/v1/issues/report/route.ts`             | Tokeni ya Ufikiaji Binafsi ya GitHub yenye wigo wa `issues:write`.                                                                                                                  |
+| `GITHUB_TOKEN`        | _(hakijawekwa)_ | usaidizi wa uchambuzi wa matatizo / ajenti wa wingu | Tokeni ya jumla ya ufikiaji wa GitHub inayotumika kama mbadala wa `GITHUB_ISSUES_TOKEN` na inayotumiwa na visaidizi vya ajenti wa wingu katika `src/lib/skills/githubCollector.ts`. |
 
 ---
 

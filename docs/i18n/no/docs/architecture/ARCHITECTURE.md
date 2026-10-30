@@ -128,7 +128,6 @@ Hovedsider under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kvote- og hastighetskontroller
 - `/dashboard/cli-tools` — CLI-oppsett, kjøretidsdeteksjon og konfigurasjonsgenerering
 - `/dashboard/agents` — oppdagede ACP-agenter og registrering av egendefinerte agenter
-- `/dashboard/cloud-agents` — oppgaver for skybaserte agenter (Codex Cloud, Devin, Jules) og oppgavenes livssyklus
 - `/dashboard/skills` — A2A-ferdighetsregister, sandkassekjøring og innebygd ferdighetskatalog
 - `/dashboard/memory` — inspeksjon og henting av varig samtaleminne
 - `/dashboard/webhooks` — utgående webhook-abonnementer, rotering av hemmeligheter og statistikk for nye forsøk
@@ -382,23 +381,6 @@ Viktige funksjoner:
 
 For fullstendige algoritmiske detaljer (faktorformler, vektjustering), se
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Skyagenter
-
-Skyagenter pakker inn tredjeparts vertsbaserte kodeagentplattformer (Codex Cloud, Devin,
-Jules) bak en enhetlig, databasestøttet livssyklus for oppgaver. Alle endepunkter for opprettelse/inspeksjon
-av oppgaver krever administrasjonsautentisering.
-
-- Modulrot: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, pluss underkataloger per agent under `agents/`)
-- Implementasjoner per agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Offentlige endepunkter: `/api/v1/agents/tasks/*` (liste/opprett/hent/avbryt)
-- Administrasjonsendepunkter: `/api/cloud/*` (klargjøring, status, masseoperasjoner)
-- Kontrollpanel: `/dashboard/cloud-agents`
-- Lagring: tabellen `cloud_agent_tasks`
-
-For detaljer om klargjøring og OAuth per agent, se
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Sikkerhetsmekanismer
 

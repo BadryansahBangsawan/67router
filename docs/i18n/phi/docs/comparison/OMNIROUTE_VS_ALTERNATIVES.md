@@ -24,7 +24,6 @@ Layunin na paghahambing ng mga feature vs mga sikat na open-source AI router.
 | **A2A protocol**                                      |                  ✅ 6 skills                   |        ❌         |        ❌         |      ❌      |
 | **Memorya (FTS5 + vector)**                           |                       ✅                       |        ❌         |        ❌         |      ❌      |
 | **Guardrails (PII, injection, vision)**               |                       ✅                       |      bahagya      |        ❌         | ✅ may bayad |
-| **Mga cloud agent integration**                       |          Codex, Cursor, Devin, Jules           |        ❌         |        ❌         |      ❌      |
 | **Circuit breaker bawat provider**                    |           ✅ 3-state, lazy recovery            |       basic       |        ❌         |      ✅      |
 | **TLS fingerprint stealth (JA3/JA4)**                 |                   ✅ wreq-js                   |        ❌         |        ❌         |      ❌      |
 | **Eval framework**                                    |                  ✅ built-in                   |        ❌         |        ❌         | ⚠ may bayad  |

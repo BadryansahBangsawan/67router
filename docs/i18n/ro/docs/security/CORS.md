@@ -68,20 +68,6 @@ permiterea reușitei solicitărilor CORS **preflight** pe rutele de administrare
 pe care o pagină de altă origine nu o poate furniza. Aceasta **nu** reprezintă un vector pentru deturnarea sesiunii sau
 furtul credențialelor pe calea CORS partajată.
 
-### O singură excepție reală — `/api/v1/agents/`
-
-Rutele Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) își setează
-**propriile** anteturi CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) și **emit**
-`Access-Control-Allow-Origin: <origin>|*` împreună cu
-`Access-Control-Allow-Credentials: true`. Aceasta este singura suprafață unde
-returnarea originii și credențialele coexistă și este **independentă de
-`CORS_ALLOW_ALL`**. Aceste rute sunt autentificate pentru administrare
-(`requireManagementAuth`); operatorii care expun panoul de control în afara gazdei trebuie să
-știe că acesta este singurul loc în care anteturile răspunsului permit o citire cu credențiale
-între origini. Restrângerea acesteia la o listă explicită de permisiuni este urmărită
-separat de aceste recomandări CORS.
-
 ## Listă de verificare pentru producție
 
 - **Nu setați niciodată `CORS_ALLOW_ALL=true` în producție.** Lăsați variabila nesetată.
@@ -160,7 +146,6 @@ Security), nu în proxy.
 | Starea la rulare pentru tabloul de bord             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Bannerul de avertizare din tabloul de bord          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Câmpul Origini CORS permise                         | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS per rută pentru Cloud-Agent (excepția)         | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Consultați și
 

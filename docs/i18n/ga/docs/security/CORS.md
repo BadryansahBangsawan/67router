@@ -68,20 +68,6 @@ ligean do **réamheitilt** CORS pas a fháil ar bhealaí bainistíochta — beal
 nach féidir le leathanach trastionscnaimh a sholáthar. **Ní** veicteoir é chun seisiún a fhuadach ná
 dintiúir a ghoid ar chonair chomhroinnte CORS.
 
-### Fíoreisceacht amháin — `/api/v1/agents/`
-
-Socraíonn bealaí Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)
-a gceanntásca CORS **féin**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) agus astaíonn siad
-`Access-Control-Allow-Origin: <origin>|*` in éineacht le
-`Access-Control-Allow-Credentials: true`. Is é seo an t-aon dromchla amháin ina
-bhfuil macalla bunfhoinse agus dintiúir le chéile, agus tá sé **neamhspleách ar
-`CORS_ALLOW_ALL`**. Tá fíordheimhniú bainistíochta de dhíth ar na bealaí seo
-(`requireManagementAuth`); ba cheart d’oibreoirí a nochtann an deais lasmuigh den óstríomhaire a bheith
-ar an eolas gurb é seo an t-aon áit amháin ina gceadaítear léamh trastionscnaimh a bhfuil dintiúir leis de réir
-cheanntásca an fhreagra. Tá géarú an tsocraithe seo go liosta ceadaithe sainráite á rianú
-ar leithligh ón treoir CORS seo.
-
 ## Seicliosta táirgeachta
 
 - **Ná socraigh `CORS_ALLOW_ALL=true` i dtáirgeadh riamh.** Fág gan socrú é.
@@ -149,15 +135,14 @@ Socraigh bunús ceadaithe na mbrabhsálaithe in OmniRoute (`CORS_ALLOWED_ORIGINS
 
 ## Comhaid fhoinseacha
 
-| Ábhar imní                                                 | Comhad                                                               |
-| ---------------------------------------------------------- | -------------------------------------------------------------------- |
-| Réiteach an liosta ceadaithe + `getCorsStatus()`           | `src/server/cors/origins.ts`                                         |
-| Feidhmiú lárearraí (foinse aonair na fírinne)              | `src/server/authz/pipeline.ts`                                       |
-| Socruithe → instealladh bunúis ag am rite                  | `src/lib/config/runtimeSettings.ts`                                  |
-| Stádas ama rite don deais                                  | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Meirge rabhaidh na deaise                                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| Réimse Bunús Ceadaithe CORS                                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS in aghaidh an bhealaigh do Cloud-Agent (an eisceacht) | `src/lib/cloudAgent/api.ts`                                          |
+| Ábhar imní                                       | Comhad                                                               |
+| ------------------------------------------------ | -------------------------------------------------------------------- |
+| Réiteach an liosta ceadaithe + `getCorsStatus()` | `src/server/cors/origins.ts`                                         |
+| Feidhmiú lárearraí (foinse aonair na fírinne)    | `src/server/authz/pipeline.ts`                                       |
+| Socruithe → instealladh bunúis ag am rite        | `src/lib/config/runtimeSettings.ts`                                  |
+| Stádas ama rite don deais                        | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Meirge rabhaidh na deaise                        | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| Réimse Bunús Ceadaithe CORS                      | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Féach freisin
 

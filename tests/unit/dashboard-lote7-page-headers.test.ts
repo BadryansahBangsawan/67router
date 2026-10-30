@@ -12,7 +12,6 @@ const PAGES: Array<[string, string, string]> = [
   ["src/app/(dashboard)/dashboard/memory/page.tsx", "memory", "memorySubtitle"],
   ["src/app/(dashboard)/dashboard/mcp/page.tsx", "mcp", "mcpSubtitle"],
   ["src/app/(dashboard)/dashboard/a2a/page.tsx", "a2a", "a2aSubtitle"],
-  ["src/app/(dashboard)/dashboard/cloud-agents/page.tsx", "cloudAgents", "cloudAgentsSubtitle"],
   [
     "src/app/(dashboard)/dashboard/agent-skills/AgentSkillsPageClient.tsx",
     "agentSkills",

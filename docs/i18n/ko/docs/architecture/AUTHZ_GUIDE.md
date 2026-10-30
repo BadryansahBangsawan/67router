@@ -214,8 +214,6 @@ API 키는 `scopes` 배열을 가집니다 (`api_keys.scopes`에 JSON으로 저�
 
 ## 호환성을 깨는 변경 사항 — v3.8.0
 
-`/api/v1/agents/tasks/*` 및 `/api/resilience/model-cooldowns` 엔드포인트는 **이제 관리 인증이 필요합니다**(커밋 `588a0333`). 이전처럼 `manage` 범위가 없는 일반 API 키를 보내는 클라이언트는 `403`을 받습니다. 마이그레이션: API Keys 대시보드에서 해당 키에 `manage` 범위를 부여하거나, 로그인된 대시보드 세션을 사용하세요.
-
 ## 동작 변경 사항 — v3.8.2
 
 `/api/mcp/*`(원격 MCP 서버)는 여전히 기본적으로 LOCAL_ONLY이지만, 이제 `Authorization: Bearer <api-key>` 헤더에 `manage` 범위가 포함된 경우 비루프백 요청을 허용합니다. 이 예외는 `src/server/authz/routeGuard.ts`의 `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES`를 통해 경로별로 명시적으로 제한됩니다. 같은 계층의 LOCAL_ONLY 접두사인 `/api/cli-tools/runtime/*`는 임의의 하위 프로세스를 생성할 수 있으므로 의도적으로 우회할 수 없습니다. 비루프백에서 `/api/mcp/*`로 보내는 익명 요청은 계속 `403 LOCAL_ONLY`를 반환하며, 새로운 LOCAL_ONLY 경로의 기본값은 엄격한 루프백 전용으로 유지됩니다. [라우트 가드 계층](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out)을 참조하세요.

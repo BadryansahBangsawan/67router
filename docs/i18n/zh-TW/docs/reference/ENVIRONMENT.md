@@ -1333,11 +1333,11 @@ Adobe Firefly 網頁提供者的瀏覽器驅動工作階段重新整理功能
 
 允許使用者直接從儀表板回報問題。
 
-| 變數                  | 預設值       | 來源檔案                                | 說明                                                                                                                |
-| --------------------- | ------------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _（未設定）_ | `src/app/api/v1/issues/report/route.ts` | 採用 `owner/repo` 格式的儲存庫。                                                                                    |
-| `GITHUB_ISSUES_TOKEN` | _（未設定）_ | `src/app/api/v1/issues/report/route.ts` | 具有 `issues:write` 範圍的 GitHub 個人存取權杖。                                                                    |
-| `GITHUB_TOKEN`        | _（未設定）_ | 問題分類／雲端代理程式輔助工具          | 通用 GitHub 存取權杖，作為 `GITHUB_ISSUES_TOKEN` 的備援，並供 `src/lib/cloudAgent/*` 中的雲端代理程式輔助工具使用。 |
+| 變數                  | 預設值       | 來源檔案                                | 說明                                                                                                                             |
+| --------------------- | ------------ | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _（未設定）_ | `src/app/api/v1/issues/report/route.ts` | 採用 `owner/repo` 格式的儲存庫。                                                                                                 |
+| `GITHUB_ISSUES_TOKEN` | _（未設定）_ | `src/app/api/v1/issues/report/route.ts` | 具有 `issues:write` 範圍的 GitHub 個人存取權杖。                                                                                 |
+| `GITHUB_TOKEN`        | _（未設定）_ | 問題分類／雲端代理程式輔助工具          | 通用 GitHub 存取權杖，作為 `GITHUB_ISSUES_TOKEN` 的備援，並供 `src/lib/skills/githubCollector.ts` 中的雲端代理程式輔助工具使用。 |
 
 ---
 

@@ -698,54 +698,6 @@
       "yes": "Qabżu l-konferma tal-iskrin"
     }
   },
-  "cloud": {
-    "description": "Immaniġġja l-kompiti tal-aġenti AI fil-cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Tella' l-aġenti tal-cloud disponibbli"
-    },
-    "agent": {
-      "description": "Immaniġġja l-kompiti tal-aġent cloud {agent}",
-      "auth": {
-        "description": "Awtorizza {agent} permezz ta' OAuth"
-      }
-    },
-    "task": {
-      "description": "Immaniġġja l-kompiti tal-aġent cloud",
-      "create": {
-        "description": "Oħloq xogħol ġdid ta' aġent",
-        "title": "Titlu tal-Compiti (jista' jinbagħat b'mod awtomatiku għal l-ewwel 80 karattru tal-prompt)",
-        "prompt": "Test tal-Mistoqsija tax-Xogħol",
-        "prompt_file": "Aqra prompt minn fajl",
-        "repo": "URL tal-Repository biex tikkuntrabbja għat-task",
-        "branch": "Isem il-filjali biex tużah",
-        "metadata": "JSON metadata oġġett"
-      },
-      "list": {
-        "description": "Elenca l-kompiti tal-aġent",
-        "status": "Filtra bl-istatuth (jeġri|lest|falla|kanċellat)",
-        "limit": "Rizultati massimi (default: 50)"
-      },
-      "get": {
-        "description": "Iqbad dettalji tal-ħidma bl-ID"
-      },
-      "status": {
-        "description": "Ipprintja l-istatus tat-task (għaddej|tlesta|falla|ikkanċellat)"
-      },
-      "cancel": {
-        "description": "Ikkanċella kompitu li qed jaħdem",
-        "yes": "Aqbeż il-prompt ta' konferma"
-      },
-      "approve": {
-        "description": "Ipprova l-pjan tal-aġent biex tibda l-eżekuzzjoni"
-      },
-      "message": {
-        "description": "Ibgħat messaġġ lil kompitu li qed jaħdem"
-      }
-    },
-    "sources": {
-      "description": "Lista ta' fajls sors prodotti minn kompitu"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI Intelliġenti b'Fallback Awtomatiku",
     "version": "Ipprintja l-verżjoni u oħroġ",

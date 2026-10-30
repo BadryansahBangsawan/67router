@@ -171,7 +171,6 @@ src/
 | `auth/`                                  | 会话、密码哈希、令牌验证                                                                                                                                                                                                                                                                                    |
 | `batches/`                               | OpenAI Batches API 处理程序                                                                                                                                                                                                                                                                                 |
 | `catalog/`                               | 提供者目录 Zod 验证 + 功能解析                                                                                                                                                                                                                                                                              |
-| `cloudAgent/`                            | 云端 Agent（Codex Cloud、Devin、Jules）——参见 `docs/frameworks/CLOUD_AGENT.md`                                                                                                                                                                                                                              |
 | `combos/`                                | 组合解析 + 重新排序辅助工具                                                                                                                                                                                                                                                                                 |
 | `audit/`                                 | 活动动态辅助工具：`highLevelActions.ts`（允许列表 + `isHighLevelAction()`）、`activityIcons.ts`（操作 → 图标/动词映射）、`timeline.ts`（groupByDay/relativeTime）——参见 `docs/architecture/MONITORING_SECTIONS.md`                                                                                          |
 | `compliance/`                            | 审计日志 + 提供者审计——参见 `docs/security/COMPLIANCE.md`                                                                                                                                                                                                                                                   |
@@ -399,7 +398,6 @@ open-sse/
 | `MCP-SERVER.md`                              | MCP 服务器：110 个工具、3 种传输方式、33 个作用域、REST 端点 |
 | `A2A-SERVER.md`                              | A2A v0.3：JSON-RPC、6 项技能、REST 辅助工具、智能体卡片      |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | 统一指南：A2A、ACP 与云端智能体的对比                        |
-| `CLOUD_AGENT.md`                             | Codex Cloud / Devin / Jules 编排                             |
 | `SKILLS.md`                                  | 技能框架（内置 + 市场 + SkillsSH + 沙箱）                    |
 | `RADAR.md`                                   | Radar 免费模型目录覆盖层（`RADAR_ENABLED`，默认关闭）        |
 | `MEMORY.md`                                  | 记忆系统（SQLite FTS5 + Qdrant）                             |

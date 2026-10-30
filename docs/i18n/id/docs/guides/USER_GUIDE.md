@@ -24,7 +24,6 @@ Panduan lengkap untuk mengonfigurasi penyedia, membuat combo, mengintegrasikan a
 - [Sistem Skill](#-skills-system)
 - [Sistem Memori](#-memory-system)
 - [Webhook](#-webhooks)
-- [Agen Cloud](#-cloud-agents)
 - [Pengelolaan Terprogram](#-programmatic-management)
 - [CLI Internal](#-internal-cli)
 - [Aplikasi Desktop (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Berlangganan event OmniRoute untuk pemantauan dan otomatisasi secara real-time.
 - Percobaan ulang: 3 kali dengan backoff eksponensial, lalu dimasukkan ke antrean dead-letter
 
 Skema lengkap tersedia di [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agen Cloud
-
-OmniRoute terintegrasi dengan agen pemrograman cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) sehingga Anda dapat mengirim tugas berdurasi panjang dari dasbor yang sama untuk menangani perutean lokal Anda.
-
-- Buat tugas di **Dasbor → Agen Cloud** atau melalui `POST /api/v1/agents/tasks`
-- Lacak status, log, dan artefak untuk setiap tugas
-- Gunakan API key Anda sendiri untuk setiap penyedia — kredensial tidak pernah meninggalkan instans OmniRoute
-
-Referensi lengkap: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

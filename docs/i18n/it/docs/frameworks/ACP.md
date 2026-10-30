@@ -128,4 +128,3 @@ nell'ambiente di destinazione.
 - [Contratti di avvio delle CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Strumenti CLI](../reference/CLI-TOOLS.md)
 - [Server A2A](./A2A-SERVER.md)
-- [Agenti cloud](./CLOUD_AGENT.md)

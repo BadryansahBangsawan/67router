@@ -79,4 +79,3 @@ try {
 - [חוזי הפעלת CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [כלי CLI](../reference/CLI-TOOLS.md)
 - [שרת A2A](./A2A-SERVER.md)
-- [סוכני ענן](./CLOUD_AGENT.md)

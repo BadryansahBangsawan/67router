@@ -1343,11 +1343,11 @@ A na-eji constants e hibere n'ime koodu n'ime
 
 Kwe ka ndị ọrụ nwee ike ịkọ nsogbu ozugbo site na Dashboard.
 
-| Ihe Mgbanwe           | Ndabara      | Faịlụ Isi Mmalite                                 | Nkọwa                                                                                                                                              |
-| --------------------- | ------------ | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(edobeghị)_ | `src/app/api/v1/issues/report/route.ts`           | Ebe nchekwa n'ụdị `owner/repo`.                                                                                                                    |
-| `GITHUB_ISSUES_TOKEN` | _(edobeghị)_ | `src/app/api/v1/issues/report/route.ts`           | GitHub Personal Access Token nwere ikike `issues:write`.                                                                                           |
-| `GITHUB_TOKEN`        | _(edobeghị)_ | nhazi mbido nke nsogbu / ihe enyemaka cloud agent | Token nnweta GitHub izugbe a na-eji dị ka ndabere maka `GITHUB_ISSUES_TOKEN`, nke ihe enyemaka cloud agent dị na `src/lib/cloudAgent/*` na-ejikwa. |
+| Ihe Mgbanwe           | Ndabara      | Faịlụ Isi Mmalite                                 | Nkọwa                                                                                                                                                           |
+| --------------------- | ------------ | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(edobeghị)_ | `src/app/api/v1/issues/report/route.ts`           | Ebe nchekwa n'ụdị `owner/repo`.                                                                                                                                 |
+| `GITHUB_ISSUES_TOKEN` | _(edobeghị)_ | `src/app/api/v1/issues/report/route.ts`           | GitHub Personal Access Token nwere ikike `issues:write`.                                                                                                        |
+| `GITHUB_TOKEN`        | _(edobeghị)_ | nhazi mbido nke nsogbu / ihe enyemaka cloud agent | Token nnweta GitHub izugbe a na-eji dị ka ndabere maka `GITHUB_ISSUES_TOKEN`, nke ihe enyemaka cloud agent dị na `src/lib/skills/githubCollector.ts` na-ejikwa. |
 
 ---
 

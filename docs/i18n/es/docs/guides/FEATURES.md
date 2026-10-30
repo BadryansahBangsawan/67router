@@ -43,8 +43,6 @@ El ciclo v3.7.x → v3.8.0 incorporó enrutamiento automático sin configuració
 - 🤝 **Proveedor OAuth de GitLab Duo** — inicio de sesión con credenciales de GitLab
 - 🧠 **Caché de reproducción de razonamiento** — persistencia híbrida en memoria + SQLite de trazas de razonamiento
 
-📚 **Documentación relacionada:** [Marco de habilidades](../frameworks/SKILLS.md) · [Sistema de memoria](../frameworks/MEMORY.md) · [Agentes en la nube](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Caché de reproducción de razonamiento](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Proveedores

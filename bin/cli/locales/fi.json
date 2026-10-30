@@ -698,54 +698,6 @@
       "yes": "Ohita vahvistuskehote"
     }
   },
-  "cloud": {
-    "description": "Hallitse pilvipohjaisten AI-agenttien tehtäviä (codex, devin, jules)",
-    "agents": {
-      "description": "Luettele käytettävissä olevat pilviagentit"
-    },
-    "agent": {
-      "description": "Hallitse pilviagentin {agent} tehtäviä",
-      "auth": {
-        "description": "Valtuuta {agent} OAuthilla"
-      }
-    },
-    "task": {
-      "description": "Hallitse pilviagenttien tehtäviä",
-      "create": {
-        "description": "Luo uusi agenttitehtävä",
-        "title": "Tehtävän otsikko (oletuksena kehotteen ensimmäiset 80 merkkiä)",
-        "prompt": "Tehtäväkehotteen teksti",
-        "prompt_file": "Lue kehote tiedostosta",
-        "repo": "Tehtävää varten kloonattavan tietovaraston URL",
-        "branch": "Käytettävän haaran nimi",
-        "metadata": "JSON-metatieto-objekti"
-      },
-      "list": {
-        "description": "Luettele agenttitehtävät",
-        "status": "Suodata tilan mukaan (running|completed|failed|cancelled)",
-        "limit": "Tulosten enimmäismäärä (oletus: 50)"
-      },
-      "get": {
-        "description": "Hae tehtävän tiedot tunnuksen perusteella"
-      },
-      "status": {
-        "description": "Tulosta tehtävän tila (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Peruuta käynnissä oleva tehtävä",
-        "yes": "Ohita vahvistuskehote"
-      },
-      "approve": {
-        "description": "Hyväksy agentin suunnitelma suorituksen aloittamiseksi"
-      },
-      "message": {
-        "description": "Lähetä viesti käynnissä olevaan tehtävään"
-      }
-    },
-    "sources": {
-      "description": "Luettele tehtävän tuottamat lähdetiedostot"
-    }
-  },
   "program": {
     "description": "OmniRoute — Älykäs AI-reititin automaattisella fallbackilla",
     "version": "Tulosta versio ja poistu",

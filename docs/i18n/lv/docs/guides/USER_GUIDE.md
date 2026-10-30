@@ -24,7 +24,6 @@ Pilnīgs ceļvedis pakalpojumu sniedzēju konfigurēšanai, kombināciju izveide
 - [Prasmju sistēma](#-skills-system)
 - [Atmiņas sistēma](#-memory-system)
 - [Webhooki](#-webhooks)
-- [Mākoņa agenti](#-cloud-agents)
 - [Programmatiskā pārvaldība](#-programmatic-management)
 - [Iekšējais CLI](#-internal-cli)
 - [Darbvirsmas lietotne (Electron)](#-desktop-application-electron)
@@ -1277,18 +1276,6 @@ Abonējiet OmniRoute notikumus reāllaika uzraudzībai un automatizācijai.
 - Atkārtojumi: 3 mēģinājumi ar eksponenciālu atkāpšanos, pēc tam mirušās vēstules rinda
 
 Pilna shēma atrodama [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Mākoņa aģenti
-
-OmniRoute integrējas ar mākoņa kodēšanas aģentiem (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), lai jūs varētu uzdot ilgstošus uzdevumus no tā paša vadības paneļa, kas apstrādā jūsu vietējo maršrutēšanu.
-
-- Izveidojiet uzdevumus **Vadības panelī → Mākoņa aģenti** vai caur `POST /api/v1/agents/tasks`
-- Izsekojiet statusu, žurnālus un izstrādājumus katram uzdevumam
-- Izmantojiet savu API atslēgu katram pakalpojuma sniedzējam — akreditācijas dati nekad neatstāj OmniRoute instanci
-
-Pilna atsauce: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

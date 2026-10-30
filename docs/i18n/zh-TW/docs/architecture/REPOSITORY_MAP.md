@@ -171,7 +171,6 @@ src/
 | `auth/`                                  | 工作階段、密碼雜湊、權杖驗證                                                                                                                                                                                                                                                                                   |
 | `batches/`                               | OpenAI Batches API 處理常式                                                                                                                                                                                                                                                                                    |
 | `catalog/`                               | Provider 目錄的 Zod 驗證 + 能力解析                                                                                                                                                                                                                                                                            |
-| `cloudAgent/`                            | Cloud Agents（Codex Cloud、Devin、Jules）——請參閱 `docs/frameworks/CLOUD_AGENT.md`                                                                                                                                                                                                                             |
 | `combos/`                                | Combo 解析 + 重新排序輔助工具                                                                                                                                                                                                                                                                                  |
 | `audit/`                                 | 活動摘要輔助工具：`highLevelActions.ts`（允許清單 + `isHighLevelAction()`）、`activityIcons.ts`（動作 → 圖示／動詞對應表）、`timeline.ts`（groupByDay/relativeTime）——請參閱 `docs/architecture/MONITORING_SECTIONS.md`                                                                                        |
 | `compliance/`                            | 稽核記錄 + Provider 稽核——請參閱 `docs/security/COMPLIANCE.md`                                                                                                                                                                                                                                                 |
@@ -401,7 +400,6 @@ open-sse/
 | `MCP-SERVER.md`                              | MCP 伺服器：110 個工具、3 種傳輸方式、33 個範圍、REST 端點 |
 | `A2A-SERVER.md`                              | A2A v0.3：JSON-RPC、6 項技能、REST 輔助工具、代理卡片      |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | 統一指南：A2A、ACP 與 Cloud Agents 的比較                  |
-| `CLOUD_AGENT.md`                             | Codex Cloud / Devin / Jules 協調管理                       |
 | `SKILLS.md`                                  | 技能框架（內建 + 市集 + SkillsSH + 沙箱）                  |
 | `RADAR.md`                                   | Radar 免費模型目錄覆蓋層（`RADAR_ENABLED`，預設關閉）      |
 | `MEMORY.md`                                  | 記憶系統（SQLite FTS5 + Qdrant）                           |

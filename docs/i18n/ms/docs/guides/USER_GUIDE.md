@@ -24,7 +24,6 @@ Panduan lengkap untuk mengkonfigurasi penyedia, mencipta kombo, mengintegrasikan
 - [Sistem Kemahiran](#-skills-system)
 - [Sistem Memori](#-memory-system)
 - [Webhook](#-webhooks)
-- [Ejen Awan](#-cloud-agents)
 - [Pengurusan Secara Pengaturcaraan](#-programmatic-management)
 - [CLI Dalaman](#-internal-cli)
 - [Aplikasi Desktop (Electron)](#-desktop-application-electron)
@@ -1277,18 +1276,6 @@ Langgan peristiwa OmniRoute untuk pemantauan dan automasi masa nyata.
 - Percubaan semula: 3 percubaan dengan sela masa eksponen, kemudian dihantar ke baris gilir surat mati
 
 Skema penuh dalam [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Ejen Awan
-
-OmniRoute bersepadu dengan ejen pengekodan awan (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) supaya anda boleh menghantar tugas yang berjalan lama daripada papan pemuka yang sama yang mengendalikan penghalaan setempat anda.
-
-- Cipta tugas dalam **Papan Pemuka → Ejen Awan** atau melalui `POST /api/v1/agents/tasks`
-- Jejaki status, log dan artifak bagi setiap tugas
-- Gunakan kunci API anda sendiri bagi setiap penyedia — bukti kelayakan tidak pernah meninggalkan tika OmniRoute
-
-Rujukan penuh: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

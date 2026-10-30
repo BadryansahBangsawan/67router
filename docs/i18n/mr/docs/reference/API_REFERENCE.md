@@ -1708,31 +1708,6 @@ OmniRoute इव्हेंट्ससाठी आउटबाउंड व�
 
 ---
 
-## एजंट्स प्रोटोकॉल
-
-OmniRoute वापरकर्त्यांच्या वतीने दूरस्थपणे कार्यान्वित केलेली क्लाउड एजंट कार्ये (Claude Code, Codex Cloud, OpenHands इ.).
-
-| पद्धत  | पाथ                           | वर्णन                                                                                                                                                            |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | कार्यांची यादी — पर्यायी `?provider=`, `?status=`, `?limit=` (1–500, डीफॉल्ट 50)                                                                                 |
-| POST   | `/api/v1/agents/tasks`        | कार्य तयार करा — बॉडीचे प्रमाणीकरण `CreateCloudAgentTaskSchema` द्वारे केले जाते (`providerId`, `prompt`, `source`, `options?`). कार्य एन्व्हलपसह `201` परत करते |
-| DELETE | `/api/v1/agents/tasks?id=...` | कार्य हटवा                                                                                                                                                       |
-| GET    | `/api/v1/agents/tasks/[id]`   | कार्य वाचा — `external_id` सेट केलेले असताना अपस्ट्रीम क्लाउड एजंटकडून स्थिती समकालिकपणे रीफ्रेश करते                                                            |
-| POST   | `/api/v1/agents/tasks/[id]`   | विभेदित कृती: `{action: "approve"}`, `{action: "message", message}`, किंवा `{action: "cancel"}`                                                                  |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id द्वारे विशिष्ट कार्य हटवा                                                                                                                                     |
-
-> **प्रमाणीकरण:** प्रत्येक पद्धतीसाठी व्यवस्थापन प्रमाणीकरण आवश्यक आहे (`requireCloudAgentManagementAuth`). v3.8.0 पूर्वी या पद्धती अप्रमाणित होत्या — ब्रेकिंग बदलासाठी कमिट `588a0333` पहा.
-
-```bash
-# Claude Code क्लाउड कार्य तयार करा
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## व्यवस्थापन प्रॉक्सी
 
 प्रोव्हायडर, खाती किंवा जागतिक स्तरावर नियुक्त करता येणारे आउटबाउंड HTTP(S)/SOCKS प्रॉक्सी.
@@ -2236,5 +2211,3 @@ OmniRoute प्लगइन्स (तृतीय-पक्ष एक्स्
 - `requireLogin` हे `/api/settings/require-login` द्वारे टॉगल करता येते
 - `REQUIRE_API_KEY=true` असताना `/v1/*` मार्गांना पर्यायाने Bearer API की आवश्यक असते
 - या संदर्भातील "व्यवस्थापन टोकन" / "व्यवस्थापन-व्याप्ती असलेली API की" म्हणजे त्या मार्गदर्शिकेतील प्रकारांपैकी एक — अपरिभाषित अतिरिक्त गुप्त प्रकार नव्हे
-
-> **सुसंगतता भंग करणारा बदल (v3.8.0)** — `/api/v1/agents/tasks/*` आणि कूलडाउन व्यवस्थापन एंडपॉइंटना आता **व्यवस्थापन प्रमाणीकरण** (डॅशबोर्ड `auth_token` कुकी किंवा व्यवस्थापन-व्याप्ती असलेली API की) आवश्यक आहे. पूर्वी प्रमाणीकरणाशिवाय या मार्गांना कॉल करणाऱ्या क्लायंटना `401 Unauthorized` मिळेल. कमिट `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) पहा.

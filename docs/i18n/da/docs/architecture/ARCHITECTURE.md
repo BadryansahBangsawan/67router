@@ -128,7 +128,6 @@ Hovedsider under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kvote- og hastighedskontroller
 - `/dashboard/cli-tools` — CLI-introduktion, runtime-registrering og generering af konfiguration
 - `/dashboard/agents` — registrerede ACP-agenter og registrering af brugerdefinerede agenter
-- `/dashboard/cloud-agents` — cloudhostede agentopgaver (Codex Cloud, Devin, Jules) og opgavernes livscyklus
 - `/dashboard/skills` — A2A-kompetenceregister, sandbox-kørsel og indbygget kompetencekatalog
 - `/dashboard/memory` — inspektion og hentning af vedvarende samtalehukommelse
 - `/dashboard/webhooks` — udgående webhook-abonnementer, rotation af hemmeligheder og statistik over genforsøg
@@ -382,23 +381,6 @@ Vigtigste funktioner:
 
 Se alle algoritmiske detaljer (faktorformler, finjustering af vægte) i
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Cloud Agents samler tredjeparts-hostede kodeagentplatforme (Codex Cloud, Devin,
-Jules) bag en ensartet, databaseunderstøttet opgavelivscyklus. Alle endpoints til oprettelse og inspektion
-af opgaver kræver management-godkendelse.
-
-- Modulets rod: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` samt undermapper for hver agent under `agents/`)
-- Implementeringer for hver agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Offentlige endpoints: `/api/v1/agents/tasks/*` (vis/opret/hent/annuller)
-- Management-endpoints: `/api/cloud/*` (provisionering, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Lager: tabellen `cloud_agent_tasks`
-
-Se detaljer om provisionering og OAuth for hver agent i
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Sikkerhedsrækværk
 

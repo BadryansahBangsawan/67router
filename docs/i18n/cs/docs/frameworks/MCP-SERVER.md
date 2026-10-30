@@ -245,17 +245,6 @@ Výše uvedený inventář nástrojů MCP (110 jedinečných nástrojů, vypoč�
 omezen na běhové operace směrování, mezipaměti, komprese, paměti, dovedností, proxy a zdrojů kontextu. Společně
 se serverem MCP jsou ve v3.8.0 dodávány dva související frameworky, které jsou zdokumentovány samostatně:
 
-### Cloudoví agenti
-
-Cloudoví agenti jsou AI agenti pro programování běžící mimo proces (codex-cloud, cursor-cloud, devin, jules), kteří jsou
-propojeni s OmniRoute prostřednictvím stejného modelu připojení, jaký se používá pro poskytovatele LLM. Jsou zpřístupněni
-prostřednictvím vlastního rozhraní REST (`/api/v1/agents/*`) a **nejsou** součástí katalogu nástrojů MCP
-— volání cloudového agenta nespotřebovává rozsah MCP.
-
-- Implementace: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Životní cyklus: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentace: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Ochranná pravidla
 
 Ochranná pravidla jsou filtry aplikované před spuštěním nebo po něm (vision-bridge, pii-masker, prompt-injection)

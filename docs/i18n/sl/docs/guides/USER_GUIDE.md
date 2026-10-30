@@ -24,7 +24,6 @@ Celovit vodnik za konfiguriranje ponudnikov, ustvarjanje kombinacij, integracijo
 - [Sistem veščin](#-skills-system)
 - [Pomnilniški sistem](#-memory-system)
 - [Spletni kavlji](#-webhooks)
-- [Agenti v oblaku](#-cloud-agents)
 - [Programsko upravljanje](#-programmatic-management)
 - [Notranji CLI](#-internal-cli)
 - [Namizna aplikacija (Electron)](#-desktop-application-electron)
@@ -1277,18 +1276,6 @@ Naročite se na dogodke OmniRoute za spremljanje in avtomatizacijo v realnem ča
 - Ponovni poskusi: 3 poskusi z eksponentnim podaljševanjem premora, nato premik v čakalno vrsto neuspelih sporočil
 
 Celotna shema je na voljo v [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agenti v oblaku
-
-OmniRoute se integrira z agenti za programiranje v oblaku (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), zato lahko dolgotrajna opravila pošiljate z iste nadzorne plošče, s katero upravljate lokalno usmerjanje.
-
-- Ustvarite opravila prek **Nadzorna plošča → Agenti v oblaku** ali z `POST /api/v1/agents/tasks`
-- Spremljajte stanje, dnevnike in artefakte posameznega opravila
-- Uporabite lasten ključ API za vsakega ponudnika — poverilnice nikoli ne zapustijo primerka OmniRoute
-
-Celotna referenčna dokumentacija: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

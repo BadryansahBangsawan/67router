@@ -120,4 +120,3 @@ in de doelomgeving vereist.
 - [CLI-startcontracten](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-tools](../reference/CLI-TOOLS.md)
 - [A2A-server](./A2A-SERVER.md)
-- [Cloudagents](./CLOUD_AGENT.md)

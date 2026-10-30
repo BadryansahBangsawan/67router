@@ -128,7 +128,6 @@ v3.8.0 प्लेटफर्मका प्रमाणिक, संस्�
 - `/dashboard/limits` — कोटा/दर नियन्त्रणहरू
 - `/dashboard/cli-tools` — CLI अनबोर्डिङ, रनटाइम पहिचान, कन्फिगरेसन उत्पादन
 - `/dashboard/agents` — पहिचान गरिएका ACP एजेन्टहरू + अनुकूलन एजेन्ट दर्ता
-- `/dashboard/cloud-agents` — क्लाउड-होस्ट गरिएका एजेन्ट कार्यहरू (Codex Cloud, Devin, Jules) र कार्य जीवनचक्र
 - `/dashboard/skills` — A2A सीप रजिस्ट्री, स्यान्डबक्स कार्यान्वयन, अन्तर्निर्मित सीप क्याटलग
 - `/dashboard/memory` — स्थायी संवादात्मक मेमोरी निरीक्षण र पुनर्प्राप्ति
 - `/dashboard/webhooks` — आउटबाउन्ड वेबहुक सदस्यताहरू, गोप्य कुञ्जी रोटेसन, पुनःप्रयास तथ्याङ्क
@@ -380,23 +379,6 @@ Auto Combo ले स्थिर combo परिभाषामा निर्
 
 पूर्ण algorithmic विवरणका लागि (factor formulas, weight tuning),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) हेर्नुहोस्।
-
-### B. Cloud Agents
-
-Cloud Agents ले तेस्रो-पक्षद्वारा host गरिएका code-agent platforms (Codex Cloud, Devin,
-Jules) लाई एकसमान DB-backed task lifecycle पछाडि समेट्छ। सबै task creation/inspection
-endpoints का लागि management authentication आवश्यक हुन्छ।
-
-- Module root: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, साथै `agents/` अन्तर्गत प्रत्येक agent का subdirectories)
-- प्रत्येक agent का implementations: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoints: `/api/v1/agents/tasks/*` (सूची/सिर्जना/प्राप्ति/रद्द)
-- Management endpoints: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-प्रत्येक agent को provisioning र OAuth सम्बन्धी विशिष्ट विवरणका लागि,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) हेर्नुहोस्।
 
 ### C. Guardrails
 

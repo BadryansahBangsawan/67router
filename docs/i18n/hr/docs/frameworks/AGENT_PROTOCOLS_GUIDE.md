@@ -4,7 +4,6 @@
 
 ---
 
-> **Izvor:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40
 
 OmniRoute nudi tri različita sučelja povezana s agentima. Na prvi pogled izgledaju slično, ali rješavaju različite probleme. Ova će vam stranica pomoći odabrati odgovarajuće sučelje.
@@ -20,20 +19,6 @@ OmniRoute nudi tri različita sučelja povezana s agentima. Na prvi pogled izgle
 Sva su tri sučelja neovisna — odaberite bilo koju kombinaciju.
 
 ## Stablo odlučivanja
-
-```
-Treba li vam usluga u oblaku za obavljanje posla izvan ovog računala (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ DA → Agenti u oblaku (POST /api/v1/agents/tasks)
-└─ NE → Nastavite
-    │
-    Imate li drugog agenta koji podržava A2A i želi surađivati?
-    ├─ DA → A2A (POST /a2a)
-    └─ NE → Nastavite
-        │
-        Trebate li prikazati / konfigurirati CLI agente za programiranje instalirane lokalno?
-        ├─ DA → ACP (GET /api/acp/agents)
-        └─ NE → Upotrijebite obični /v1/chat/completions
-```
 
 ## 1. A2A — Agent-to-Agent
 
@@ -125,61 +110,6 @@ Oblik tijela za POST (`customAgentBodySchema` u `src/app/api/acp/agents/route.ts
   opcija pružatelja. Za uobičajenu interaktivnu upotrebu sami pokrenite konfigurirani CLI ili
   upotrijebite `omniroute run`.
 
-## 3. Agenti u oblaku
-
-**OmniRoute krajnje točke:** `/api/v1/agents/tasks/*` (životni ciklus) + `/api/cloud/*` (infrastruktura)
-**Izvor:** `src/lib/cloudAgent/`
-
-### Što je to
-
-Jedinstveno sučelje za agente za programiranje u oblaku drugih pružatelja. Pošaljete upit i URL repozitorija, OmniRoute ga prosljeđuje odgovarajućem agentu u oblaku, provjerava status i vraća rezultate.
-
-### Podržani agenti (4, svi potvrđeni u `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Životni ciklus
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() za svaku klasu agenta
-  → vanjska usluga započinje rad
-  → redak zadatka stvara se u bazi podataka (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → odgođena sinkronizacija statusa s pružateljem
-  → vraća trenutačni status + plan + zapisnik aktivnosti
-  ↓
-POST /api/v1/agents/tasks/[id]   (radnja: "approve" | "message" | "cancel")
-  → prosljeđuje pružatelju (ili lokalno označava kao otkazano)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokalno otkazivanje
-```
-
-### Autentifikacija
-
-⚠️ **Sve krajnje točke `/api/v1/agents/tasks/*` zahtijevaju upravljačku autentifikaciju** (commit `588a0333`). Pozivatelji koji upotrebljavaju samo Bearer autentifikaciju od verzije v3.8.0 primaju 401.
-
-### Detaljan pregled
-
-Pogledajte [CLOUD_AGENT.md](./CLOUD_AGENT.md) za ugovor `CloudAgentBase`, pojedinosti o svakom agentu, detalje sheme i krajnje točke infrastrukture vjerodajnica.
-
-## Usporedba: A2A i agenti u oblaku
-
-Oba podržavaju „dugotrajne zadatke”, ali na različitim razinama:
-
-| Aspekt                  | A2A                                                                                                      | Agenti u oblaku                                                 |
-| ----------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Standard                | Otvoreni A2A v0.3                                                                                        | Specifično za OmniRoute                                         |
-| Gdje se izvršava obrada | Unutar sustava OmniRoute (upotrebljava konfigurirane kombinacije)                                        | Izvana (poslužitelji Codex / Devin / Jules)                     |
-| Trajanje zadatka        | Zadani TTL iznosi 5 min (može se konfigurirati u `TaskManager`)                                          | Od nekoliko minuta do nekoliko sati                             |
-| Poznavanje repozitorija | Ne (prosljeđuje samo upite)                                                                              | Da (URL repozitorija + grana)                                   |
-| Slučaj upotrebe         | Suradnja među agentima, pametno usmjeravanje kao usluga                                                  | Delegiranje zadatka „implementiraj značajku X u repozitoriju Y” |
-| Autentifikacija         | Neobavezni `OMNIROUTE_API_KEY` za `/a2a`; upravljački pristup za REST pomoćne krajnje točke `/api/a2a/*` | Uvijek upravljački pristup                                      |
-
 ## Primjeri integracije
 
 ### Otkrijte A2A mogućnosti sustava OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Pošaljite zadatak agentu u oblaku
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Provjeravajte status zadatka u oblaku
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Kada što upotrebljavati
 
 - **Sučelje chatbota / kopilota** → `/v1/chat/completions` (kompatibilno s OpenAI-jem — nije protokol za agente)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Pogledajte i
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — detaljan pregled A2A-a
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — detaljan pregled agenata u oblaku
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — vanjske CLI integracije (upotrebljavaju ACP)
 - [SKILLS.md](./SKILLS.md) — okvir vještina (razlikuje se od A2A vještina — lokalno izolirano okruženje za izvršavanje)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referenca krajnjih točaka

@@ -1758,31 +1758,6 @@ Routing combos កម្រិតខ្ពស់ជាង (ដែលបានស
 
 ---
 
-## ពិធីការ Agents
-
-កិច្ចការរបស់ cloud agent (Claude Code, Codex Cloud, OpenHands ជាដើម) ដែលត្រូវបានប្រតិបត្តិពីចម្ងាយក្នុងនាមអ្នកប្រើប្រាស់ OmniRoute។
-
-| វិធីសាស្ត្រ | ផ្លូវ                         | សេចក្ដីពិពណ៌នា                                                                                                                                             |
-| ----------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/v1/agents/tasks`        | រាយបញ្ជីកិច្ចការ — អាចប្រើ `?provider=`, `?status=`, `?limit=` (1–500, លំនាំដើម 50)                                                                        |
-| POST        | `/api/v1/agents/tasks`        | បង្កើតកិច្ចការ — body ត្រូវបានផ្ទៀងផ្ទាត់ដោយ `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`)។ ត្រឡប់ `201` ជាមួយ task envelope |
-| DELETE      | `/api/v1/agents/tasks?id=...` | លុបកិច្ចការមួយ                                                                                                                                             |
-| GET         | `/api/v1/agents/tasks/[id]`   | អានកិច្ចការ — ធ្វើបច្ចុប្បន្នភាពស្ថានភាពដោយសមកាលកម្មពី cloud agent ខាងដើម នៅពេលបានកំណត់ `external_id`                                                      |
-| POST        | `/api/v1/agents/tasks/[id]`   | សកម្មភាពបែងចែកតាមប្រភេទ៖ `{action: "approve"}`, `{action: "message", message}` ឬ `{action: "cancel"}`                                                      |
-| DELETE      | `/api/v1/agents/tasks/[id]`   | លុបកិច្ចការជាក់លាក់មួយតាម id                                                                                                                               |
-
-> **ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ៖** តម្រូវឱ្យមានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណសម្រាប់ការគ្រប់គ្រងលើគ្រប់វិធីសាស្ត្រ (`requireCloudAgentManagementAuth`)។ មុនកំណែ v3.8.0 វិធីសាស្ត្រទាំងនេះមិនត្រូវការការផ្ទៀងផ្ទាត់អត្តសញ្ញាណទេ — សូមមើល commit `588a0333` សម្រាប់ការផ្លាស់ប្ដូរដែលមិនឆបគ្នានេះ។
-
-```bash
-# បង្កើតកិច្ចការ cloud របស់ Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## ប្រូកស៊ីសម្រាប់ការគ្រប់គ្រង
 
 ប្រូកស៊ី HTTP(S)/SOCKS សម្រាប់ចរាចរចេញ ដែលអាចកំណត់ទៅឱ្យអ្នកផ្ដល់សេវា គណនី ឬជាសកល។
@@ -2283,5 +2258,3 @@ devin-cli ជាដើម)។ សូមមើល [ឯកសារយោងអ្
 - `requireLogin` អាចបើក ឬបិទបានតាមរយៈ `/api/settings/require-login`
 - ផ្លូវ `/v1/*` អាចតម្រូវឱ្យមាន Bearer API key នៅពេល `REQUIRE_API_KEY=true`
 - ក្នុងឯកសារយោងនេះ "management token" / "management-scoped API key" មានន័យថាជាប្រភេទមួយក្នុងចំណោមប្រភេទដែលមានក្នុងមគ្គុទ្ទេសក៍នោះ — មិនមែនជាប្រភេទ secret បន្ថែមដែលមិនបានកំណត់នោះទេ
-
-> **ការផ្លាស់ប្ដូរដែលមិនត្រូវគ្នាជាមួយកំណែមុន (v3.8.0)** — `/api/v1/agents/tasks/*` និង endpoint សម្រាប់ការគ្រប់គ្រង cooldown ឥឡូវនេះតម្រូវឱ្យមាន **ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណសម្រាប់ការគ្រប់គ្រង** (cookie `auth_token` របស់ dashboard ឬ API key ដែលមានវិសាលភាពគ្រប់គ្រង)។ Client ដែលពីមុនបានហៅផ្លូវទាំងនេះដោយគ្មានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ នឹងទទួលបាន `401 Unauthorized`។ សូមមើល commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`)។

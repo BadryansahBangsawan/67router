@@ -4,7 +4,6 @@
 
 ---
 
-> **Källa:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40
 
 OmniRoute exponerar tre olika agentrelaterade gränssnitt. De ser vid första anblicken likadana ut men löser olika problem. Använd den här sidan för att välja rätt gränssnitt.
@@ -20,20 +19,6 @@ OmniRoute exponerar tre olika agentrelaterade gränssnitt. De ser vid första an
 De tre är oberoende av varandra — välj valfri kombination.
 
 ## Beslutsträd
-
-```
-Behöver du en molntjänst som utför arbete utanför den här datorn (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ JA → Molnagenter (POST /api/v1/agents/tasks)
-└─ NEJ → Fortsätt
-    │
-    Har du en annan agent som använder A2A och vill samarbeta?
-    ├─ JA → A2A (POST /a2a)
-    └─ NEJ → Fortsätt
-        │
-        Behöver du lista eller konfigurera lokalt installerade CLI-kodningsagenter?
-        ├─ JA → ACP (GET /api/acp/agents)
-        └─ NEJ → Använd vanliga /v1/chat/completions
-```
 
 ## 1. A2A — agent till agent
 
@@ -125,61 +110,6 @@ Brödtextformat för POST (`customAgentBodySchema` i `src/app/api/acp/agents/rou
   för leverantörer. För vanlig interaktiv användning startar du själv den konfigurerade CLI:n eller
   använder `omniroute run`.
 
-## 3. Molnagenter
-
-**OmniRoute-slutpunkter:** `/api/v1/agents/tasks/*` (livscykel) + `/api/cloud/*` (underliggande infrastruktur)
-**Källa:** `src/lib/cloudAgent/`
-
-### Vad det är
-
-Ett enhetligt gränssnitt mot molnbaserade programmeringsagenter från tredje part. Du skickar en prompt och en URL till ett repo, varefter OmniRoute vidarebefordrar uppgiften till rätt molnagent, kontrollerar statusen regelbundet och returnerar resultaten.
-
-### Agenter som stöds (4, samtliga bekräftade i `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Livscykel
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() per agentklass
-  → extern tjänst påbörjar arbetet
-  → uppgiftsrad skapas i databasen (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → lat synkronisering av status från leverantören
-  → returnerar aktuell status + plan + aktivitetslogg
-  ↓
-POST /api/v1/agents/tasks/[id]   (åtgärd: "approve" | "message" | "cancel")
-  → vidarebefordrar till leverantören (eller markerar som avbruten lokalt)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokal avbrytning
-```
-
-### Autentisering
-
-⚠️ **Alla slutpunkter under `/api/v1/agents/tasks/*` kräver administratörsautentisering** (commit `588a0333`). Anropare som enbart använder Bearer-token får 401 sedan v3.8.0.
-
-### Fördjupning
-
-Se [CLOUD_AGENT.md](./CLOUD_AGENT.md) för kontraktet `CloudAgentBase`, agentspecifika detaljer, schemadetaljer och slutpunkter för hantering av autentiseringsuppgifter.
-
-## Jämförelse: A2A kontra molnagenter
-
-Båda har ”långvariga uppgifter”, men på olika lager:
-
-| Aspekt                 | A2A                                                                                                     | Molnagenter                                     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| Standard               | Öppna A2A v0.3                                                                                          | Specifik för OmniRoute                          |
-| Var körs beräkningen   | Inuti OmniRoute (använder konfigurerade kombinationer)                                                  | Externt (Codex-/Devin-/Jules-servrar)           |
-| Uppgiftens varaktighet | Standard-TTL på 5 min (kan konfigureras i `TaskManager`)                                                | Minuter till timmar                             |
-| Kodlageranpassad       | Nej (skickar endast prompter)                                                                           | Ja (kodlagrets URL + gren)                      |
-| Användningsfall        | Samarbete mellan agenter, smart dirigering som tjänst                                                   | Delegera ”implementera funktion X i kodlager Y” |
-| Autentisering          | Valfri `OMNIROUTE_API_KEY` för `/a2a`; administratörsbehörighet för REST-hjälpfunktionerna `/api/a2a/*` | Alltid administratörsbehörighet                 |
-
 ## Integrationsexempel
 
 ### Upptäck OmniRoutes A2A-funktioner
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Skicka in en uppgift till en molnagent
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Kontrollera molnuppgiftens status regelbundet
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## När du ska använda vad
 
 - **Chattbot-/copilot-gränssnitt** → `/v1/chat/completions` (OpenAI-kompatibelt – inte ett agentprotokoll)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Se även
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Fördjupning om A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Fördjupning om molnagenter
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Externa CLI-integrationer (använder ACP)
 - [SKILLS.md](./SKILLS.md) — Ramverk för färdigheter (skiljer sig från A2A-färdigheter — lokal exekveringssandlåda)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referens för slutpunkter

@@ -698,54 +698,6 @@
       "yes": "Laktawan ang prompt ng kumpirmasyon"
     }
   },
-  "cloud": {
-    "description": "Pamahalaan ang mga gawain ng cloud AI agent (codex, devin, jules)",
-    "agents": {
-      "description": "Ilista ang mga available na cloud agent"
-    },
-    "agent": {
-      "description": "Pamahalaan ang mga gawain ng {agent} cloud agent",
-      "auth": {
-        "description": "Awtorisahan ang {agent} sa pamamagitan ng OAuth"
-      }
-    },
-    "task": {
-      "description": "Pamahalaan ang mga gawain ng cloud agent",
-      "create": {
-        "description": "Gumawa ng bagong gawain para sa agent",
-        "title": "Pamagat ng gawain (default ang unang 80 character ng prompt)",
-        "prompt": "Teksto ng prompt ng gawain",
-        "prompt_file": "Basahin ang prompt mula sa file",
-        "repo": "Repository URL na iko-clone para sa gawain",
-        "branch": "Pangalan ng branch na gagamitin",
-        "metadata": "JSON metadata object"
-      },
-      "list": {
-        "description": "Ilista ang mga gawain ng agent",
-        "status": "I-filter ayon sa status (running|completed|failed|cancelled)",
-        "limit": "Pinakamaraming resulta (default: 50)"
-      },
-      "get": {
-        "description": "Kunin ang mga detalye ng gawain ayon sa ID"
-      },
-      "status": {
-        "description": "I-print ang status ng gawain (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Kanselahin ang tumatakbong gawain",
-        "yes": "Laktawan ang prompt sa pagkumpirma"
-      },
-      "approve": {
-        "description": "Aprubahan ang plano ng agent upang simulan ang pagpapatupad"
-      },
-      "message": {
-        "description": "Magpadala ng mensahe sa tumatakbong gawain"
-      }
-    },
-    "sources": {
-      "description": "Ilista ang mga source file na ginawa ng isang gawain"
-    }
-  },
   "program": {
     "description": "OmniRoute — Matalinong AI Router na may Awtomatikong Fallback",
     "version": "I-print ang bersyon at lumabas",

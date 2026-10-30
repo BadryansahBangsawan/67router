@@ -5,7 +5,7 @@
 
 export type OrchState =
   "queued" | "running" | "waiting_approval" | "succeeded" | "failed" | "cancelled";
-export type OrchSource = "cloud-agent" | "a2a" | "conductor" | "routing";
+export type OrchSource = "a2a" | "conductor" | "routing";
 export type OrchNodeKind = "orchestrator" | "source" | "work" | "activity" | "overflow";
 // SourceNode only: why a source placeholder was materialized — replaces the
 // magic-string comparison against `sublabel` ("error"/"offline") with a typed union.

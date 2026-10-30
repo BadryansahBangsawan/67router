@@ -128,7 +128,6 @@ v3.8.0 플랫폼의 표준 버전 관리 Mermaid 소스는
 - `/dashboard/limits` — 할당량/속도 제어
 - `/dashboard/cli-tools` — CLI 온보딩, 런타임 감지, 구성 생성
 - `/dashboard/agents` — 감지된 ACP 에이전트 + 사용자 정의 에이전트 등록
-- `/dashboard/cloud-agents` — 클라우드 호스팅 에이전트 작업(Codex Cloud, Devin, Jules) 및 작업 수명 주기
 - `/dashboard/skills` — A2A 스킬 레지스트리, 샌드박스 실행, 기본 제공 스킬 카탈로그
 - `/dashboard/memory` — 영속적 대화 메모리 검사 및 검색
 - `/dashboard/webhooks` — 아웃바운드 웹훅 구독, 시크릿 교체, 재시도 통계
@@ -370,23 +369,6 @@ Auto Combo는 정적 combo 정의에 의존하는 대신 요청 시점에 라우
 
 전체 알고리즘 세부 사항(요소 공식, 가중치 조정)은
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)를 참조하십시오.
-
-### B. Cloud Agents
-
-Cloud Agents는 타사 호스팅 code-agent 플랫폼(Codex Cloud, Devin,
-Jules)을 DB 기반의 통합된 task lifecycle로 래핑합니다. 모든 task 생성/검사
-endpoint에는 management authentication이 필요합니다.
-
-- 모듈 루트: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, 그리고 `agents/` 아래 agent별 하위 디렉터리)
-- Agent별 구현: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoint: `/api/v1/agents/tasks/*` (목록/생성/조회/취소)
-- Management endpoint: `/api/cloud/*` (프로비저닝, 상태, 일괄 처리)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-Agent별 프로비저닝 및 OAuth 세부 사항은
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)를 참조하십시오.
 
 ### C. Guardrails
 

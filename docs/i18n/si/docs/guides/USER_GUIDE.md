@@ -24,7 +24,6 @@
 - [කුසලතා පද්ධතිය](#-skills-system)
 - [මතක පද්ධතිය](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [ක්රමලේඛනගත කළමනාකරණය](#-programmatic-management)
 - [අභ්යන්තර CLI](#-internal-cli)
 - [ඩෙස්ක්ටොප් යෙදුම (Electron)](#-desktop-application-electron)
@@ -1276,18 +1275,6 @@ OmniRoute දෙමුහුන් ලබාගැනීම සමඟ **දි�
 - නැවත උත්සාහ කිරීම්: ඝාතීය ප්රමාදය සමඟ උත්සාහ 3ක්, ඉන්පසු dead-letter පෝලිමට යොමු කෙරේ
 
 සම්පූර්ණ schema එක [WEBHOOKS.md](../frameworks/WEBHOOKS.md) තුළ ඇත.
-
----
-
-## ☁️ Cloud නියෝජිතයන්
-
-ඔබේ දේශීය routing කළමනාකරණය කරන එම උපකරණ පුවරුවෙන්ම දිගු වේලාවක් ධාවනය වන කාර්යයන් යැවිය හැකි වන පරිදි OmniRoute cloud coding නියෝජිතයන් (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) සමඟ ඒකාබද්ධ වේ.
-
-- **උපකරණ පුවරුව → Cloud නියෝජිතයන්** තුළින් හෝ `POST /api/v1/agents/tasks` හරහා කාර්යයන් සාදන්න
-- එක් එක් කාර්යයේ තත්ත්වය, ලොග් සහ කෘතිකයන් නිරීක්ෂණය කරන්න
-- එක් එක් provider සඳහා ඔබේම API යතුර රැගෙන එන්න — අක්තපත්ර කිසිවිටෙක OmniRoute instance එකෙන් පිටතට නොයයි
-
-සම්පූර්ණ යොමුව: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

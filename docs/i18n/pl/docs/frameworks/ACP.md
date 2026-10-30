@@ -121,4 +121,3 @@ dymnego w środowisku docelowym.
 - [Kontrakty uruchamiania CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Narzędzia CLI](../reference/CLI-TOOLS.md)
 - [Serwer A2A](./A2A-SERVER.md)
-- [Agenci chmurowi](./CLOUD_AGENT.md)

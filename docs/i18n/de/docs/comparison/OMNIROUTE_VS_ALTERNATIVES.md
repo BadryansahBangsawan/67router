@@ -24,7 +24,6 @@ Objektiver Funktionsvergleich mit beliebten Open-Source-KI-Routern.
 | **A2A-Protokoll**                                        |                 ✅ 6 Skills                 |        ❌         |        ❌         |         ❌         |
 | **Speicher (FTS5 + Vektor)**                             |                     ✅                      |        ❌         |        ❌         |         ❌         |
 | **Guardrails (PII, Injection, Vision)**                  |                     ✅                      |     teilweise     |        ❌         | ✅ kostenpflichtig |
-| **Cloud-Agent-Integrationen**                            |         Codex, Cursor, Devin, Jules         |        ❌         |        ❌         |         ❌         |
 | **Circuit Breaker pro Anbieter**                         |        ✅ 3 Zustände, Lazy Recovery         |      einfach      |        ❌         |         ✅         |
 | **TLS-Fingerprint-Verschleierung (JA3/JA4)**             |                 ✅ wreq-js                  |        ❌         |        ❌         |         ❌         |
 | **Eval-Framework**                                       |                ✅ integriert                |        ❌         |        ❌         | ⚠ kostenpflichtig  |

@@ -123,4 +123,3 @@ try {
 - [Уговори за покретање CLI алата](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI алати](../reference/CLI-TOOLS.md)
 - [A2A сервер](./A2A-SERVER.md)
-- [Агенти у облаку](./CLOUD_AGENT.md)

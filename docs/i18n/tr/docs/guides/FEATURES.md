@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 döngüsü; sıfır yapılandırmalı otomatik yönlendirme, y
 - 🤝 **GitLab Duo OAuth sağlayıcısı** — GitLab kimlik bilgileriyle oturum açma
 - 🧠 **Akıl Yürütme Yeniden Oynatma Önbelleği** — akıl yürütme izlerinin hibrit bellek içi + SQLite kalıcılığı
 
-📚 **İlgili belgeler:** [Beceri Çerçevesi](../frameworks/SKILLS.md) · [Bellek Sistemi](../frameworks/MEMORY.md) · [Bulut Aracıları](../frameworks/CLOUD_AGENT.md) · [Webhook'lar](../frameworks/WEBHOOKS.md) · [Akıl Yürütme Yeniden Oynatma Önbelleği](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Sağlayıcılar

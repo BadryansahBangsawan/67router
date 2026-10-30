@@ -1740,31 +1740,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## Àdéhùn Àwọn Aṣojú
-
-Àwọn iṣẹ́ aṣojú àwọsánmà (Claude Code, Codex Cloud, OpenHands, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) tí a ń ṣiṣẹ́ láti ọ̀nà jíjìn dípò àwọn olumulo OmniRoute.
-
-| Ọ̀nà    | Ipa-ọ̀nà                       | Àpèjúwe                                                                                                                                    |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Ṣàkójọ àwọn iṣẹ́ — `?provider=`, `?status=`, `?limit=` jẹ́ àṣàyàn (1–500, àìròtẹ́lẹ̀ 50)                                                       |
-| POST   | `/api/v1/agents/tasks`        | Ṣẹ̀dá iṣẹ́ — a fìdí body múlẹ̀ pẹ̀lú `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Ó dá `201` padà pẹ̀lú àpò iṣẹ́ |
-| DELETE | `/api/v1/agents/tasks?id=...` | Pa iṣẹ́ kan rẹ́                                                                                                                              |
-| GET    | `/api/v1/agents/tasks/[id]`   | Ka iṣẹ́ — ó tún ipò ṣe lẹ́sẹ̀kẹsẹ̀ láti ọ̀dọ̀ aṣojú àwọsánmà òkè nígbà tí a bá ṣètò `external_id`                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Ìgbésẹ̀ tí a yà sọ́tọ̀: `{action: "approve"}`, `{action: "message", message}`, tàbí `{action: "cancel"}`                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Pa iṣẹ́ pàtó kan rẹ́ nípa id                                                                                                                 |
-
-> **Ìfàṣẹsí:** a nílò ìfàṣẹsí ìṣàkóso lórí gbogbo ọ̀nà (`requireCloudAgentManagementAuth`). Ṣáájú v3.8.0, àwọn wọ̀nyí kò nílò ìfàṣẹsí — wo commit `588a0333` fún ìyípadà tí kò bá ẹ̀yà àtijọ́ mu.
-
-```bash
-# Ṣẹ̀dá iṣẹ́ àwọsánmà Claude Code kan
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Àwọn Prọ́ksì Ìṣàkóso
 
 Àwọn prọ́ksì HTTP(S)/SOCKS tí ń jáde, tí a lè yàn sí àwọn olùpèsè, àwọn àkọọ́lẹ̀, tàbí ní gbogbo àgbá.
@@ -2269,5 +2244,3 @@ Wo [Ìfàṣẹsí Ìṣàkóso](../guides/MANAGEMENT-AUTH.md) fún ìdílé m�
 - A lè tan tàbí pa `requireLogin` nípasẹ̀ `/api/settings/require-login`
 - Àwọn route `/v1/*` lè béèrè fún kọ́kọ́rọ́ API Bearer bí `REQUIRE_API_KEY=true`
 - “token ìṣàkóso” / “kọ́kọ́rọ́ API tó ní àyè ìṣàkóso” nínú ìtọ́kasí yìí túmọ̀ sí ọ̀kan lára àwọn ìdílé tó wà nínú ìtọ́sọ́nà yẹn — kì í ṣe irú àṣírí àfikún tí a kò ṣàlàyé
-
-> **Àyípadà tó ń ba ìbámu tẹ́lẹ̀ jẹ́ (v3.8.0)** — `/api/v1/agents/tasks/*` àti àwọn endpoint ìṣàkóso cooldown ti nílò **ìfàṣẹsí ìṣàkóso** báyìí (cookie `auth_token` dashboard tàbí kọ́kọ́rọ́ API tó ní àyè ìṣàkóso). Àwọn client tó ń pe àwọn route wọ̀nyí láìsí ìfàṣẹsí tẹ́lẹ̀ yóò gba `401 Unauthorized`. Wo commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

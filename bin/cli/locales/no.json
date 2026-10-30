@@ -698,54 +698,6 @@
       "yes": "Hopp over bekreftelsesforespørsel"
     }
   },
-  "cloud": {
-    "description": "Administrer oppgaver for skybaserte AI-agenter (codex, devin, jules)",
-    "agents": {
-      "description": "Vis tilgjengelige skyagenter"
-    },
-    "agent": {
-      "description": "Administrer oppgaver for skyagenten {agent}",
-      "auth": {
-        "description": "Autoriser {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Administrer oppgaver for skyagenter",
-      "create": {
-        "description": "Opprett en ny agentoppgave",
-        "title": "Oppgavetittel (bruker som standard de første 80 tegnene i instruksen)",
-        "prompt": "Tekst for oppgaveinstruks",
-        "prompt_file": "Les instruks fra fil",
-        "repo": "URL til repositoriet som skal klones for oppgaven",
-        "branch": "Grennavn som skal brukes",
-        "metadata": "JSON-metadataobjekt"
-      },
-      "list": {
-        "description": "Vis agentoppgaver",
-        "status": "Filtrer etter status (running|completed|failed|cancelled)",
-        "limit": "Maksimalt antall resultater (standard: 50)"
-      },
-      "get": {
-        "description": "Hent oppgavedetaljer etter ID"
-      },
-      "status": {
-        "description": "Skriv ut oppgavestatus (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Avbryt en kjørende oppgave",
-        "yes": "Hopp over bekreftelsesforespørsel"
-      },
-      "approve": {
-        "description": "Godkjenn agentplanen for å starte kjøringen"
-      },
-      "message": {
-        "description": "Send en melding til en kjørende oppgave"
-      }
-    },
-    "sources": {
-      "description": "Vis kildefiler produsert av en oppgave"
-    }
-  },
   "program": {
     "description": "OmniRoute — Smart AI-ruter med automatisk fallback",
     "version": "Skriv ut versjon og avslutt",

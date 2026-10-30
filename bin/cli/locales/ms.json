@@ -698,54 +698,6 @@
       "yes": "Langkau gesaan pengesahan"
     }
   },
-  "cloud": {
-    "description": "Urus tugas ejen AI awan (codex, devin, jules)",
-    "agents": {
-      "description": "Senaraikan ejen awan yang tersedia"
-    },
-    "agent": {
-      "description": "Urus tugas ejen awan {agent}",
-      "auth": {
-        "description": "Benarkan {agent} melalui OAuth"
-      }
-    },
-    "task": {
-      "description": "Urus tugas ejen awan",
-      "create": {
-        "description": "Cipta tugas ejen baharu",
-        "title": "Tajuk tugas (lalai kepada 80 aksara pertama gesaan)",
-        "prompt": "Teks gesaan tugas",
-        "prompt_file": "Baca gesaan daripada fail",
-        "repo": "URL repositori untuk diklon bagi tugas",
-        "branch": "Nama cabang untuk digunakan",
-        "metadata": "Objek metadata JSON"
-      },
-      "list": {
-        "description": "Senaraikan tugas ejen",
-        "status": "Tapis mengikut status (running|completed|failed|cancelled)",
-        "limit": "Hasil maksimum (lalai: 50)"
-      },
-      "get": {
-        "description": "Dapatkan butiran tugas mengikut ID"
-      },
-      "status": {
-        "description": "Paparkan status tugas (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Batalkan tugas yang sedang berjalan",
-        "yes": "Langkau gesaan pengesahan"
-      },
-      "approve": {
-        "description": "Luluskan pelan ejen untuk memulakan pelaksanaan"
-      },
-      "message": {
-        "description": "Hantar mesej kepada tugas yang sedang berjalan"
-      }
-    },
-    "sources": {
-      "description": "Senaraikan fail sumber yang dihasilkan oleh tugas"
-    }
-  },
   "program": {
     "description": "OmniRoute — Penghala AI Pintar dengan Sandaran Automatik",
     "version": "Paparkan versi dan keluar",

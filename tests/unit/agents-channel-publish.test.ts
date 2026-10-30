@@ -1,10 +1,9 @@
 /**
- * Task B2 (Orchestration Canvas Fase 2): the cloud-agent and A2A task writers must publish
+ * Task B2 (Orchestration Canvas Fase 2): the A2A task writer must publish
  * `agent.task.updated` on every write, best-effort (a throwing listener must never break the
  * write path). Covers:
  *   (a) A2ATaskManager.createTask / updateTask / cleanupExpired (TTL branch)
- *   (b) cloud-agent insertCloudAgentTask / updateCloudAgentTask
- *   (c) a throwing listener does not break the write path
+ *   (b) a throwing listener does not break the write path
  */
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -23,7 +22,6 @@ const TEST_DATA_DIR = fs.mkdtempSync(path.join(os.tmpdir(), "omniroute-agents-ch
 process.env.DATA_DIR = TEST_DATA_DIR;
 
 const core = await import("../../src/lib/db/core.ts");
-const cloudAgentDb = await import("../../src/lib/cloudAgent/db.ts");
 
 test.after(() => {
   core.resetDbInstance();
@@ -125,129 +123,6 @@ test("a throwing agent.task.updated listener does not break A2ATaskManager.creat
     });
     assert.ok(task);
     assert.equal(tm.getTask(task!.id)?.id, task!.id);
-  } finally {
-    unsubscribe();
-  }
-});
-
-// ── (b) cloud-agent DB writers ──────────────────────────────────────────────────────────
-
-function makeTaskRow(
-  overrides: Partial<Parameters<typeof cloudAgentDb.insertCloudAgentTask>[0]> = {}
-) {
-  const now = new Date().toISOString();
-  return {
-    id: `task-${Math.random().toString(36).slice(2)}`,
-    provider_id: "codex-cloud",
-    external_id: null,
-    status: "queued",
-    prompt: "do something",
-    source: "dashboard",
-    options: "{}",
-    result: null,
-    activities: "[]",
-    error: null,
-    created_at: now,
-    updated_at: now,
-    completed_at: null,
-    ...overrides,
-  };
-}
-
-test.beforeEach(() => {
-  core.resetDbInstance();
-  cloudAgentDb.createCloudAgentTaskTable();
-});
-
-test("insertCloudAgentTask emits agent.task.updated {source: cloud-agent, state: queued}", () => {
-  const row = makeTaskRow({ status: "queued" });
-
-  const events: AgentTaskUpdatedPayload[] = [];
-  const unsubscribe = on("agent.task.updated", (payload) => events.push(payload));
-  try {
-    cloudAgentDb.insertCloudAgentTask(row);
-
-    assert.equal(events.length, 1);
-    assert.equal(events[0].source, "cloud-agent");
-    assert.equal(events[0].taskId, row.id);
-    assert.equal(events[0].state, "queued");
-  } finally {
-    unsubscribe();
-  }
-});
-
-test("updateCloudAgentTask emits agent.task.updated with the new status", () => {
-  const row = makeTaskRow({ status: "queued" });
-  cloudAgentDb.insertCloudAgentTask(row);
-
-  const events: AgentTaskUpdatedPayload[] = [];
-  const unsubscribe = on("agent.task.updated", (payload) => events.push(payload));
-  try {
-    cloudAgentDb.updateCloudAgentTask(row.id, { status: "running" });
-
-    assert.equal(events.length, 1);
-    assert.equal(events[0].source, "cloud-agent");
-    assert.equal(events[0].taskId, row.id);
-    assert.equal(events[0].state, "running");
-  } finally {
-    unsubscribe();
-  }
-});
-
-test("updateCloudAgentTask without a status field emits the row's current status", () => {
-  const row = makeTaskRow({ status: "queued" });
-  cloudAgentDb.insertCloudAgentTask(row);
-  cloudAgentDb.updateCloudAgentTask(row.id, { status: "running" });
-
-  const events: AgentTaskUpdatedPayload[] = [];
-  const unsubscribe = on("agent.task.updated", (payload) => events.push(payload));
-  try {
-    cloudAgentDb.updateCloudAgentTask(row.id, { result: "partial output" });
-
-    assert.equal(events.length, 1);
-    assert.equal(events[0].source, "cloud-agent");
-    assert.equal(events[0].taskId, row.id);
-    assert.equal(events[0].state, "running");
-  } finally {
-    unsubscribe();
-  }
-});
-
-test("updateCloudAgentTask on an unknown id does not emit (nothing was written)", () => {
-  const events: AgentTaskUpdatedPayload[] = [];
-  const unsubscribe = on("agent.task.updated", (payload) => events.push(payload));
-  try {
-    cloudAgentDb.updateCloudAgentTask("task-does-not-exist", { result: "partial output" });
-
-    assert.equal(events.length, 0);
-  } finally {
-    unsubscribe();
-  }
-});
-
-test("updateCloudAgentTask with no valid fields does not emit (no-op write)", () => {
-  const row = makeTaskRow({ status: "queued" });
-  cloudAgentDb.insertCloudAgentTask(row);
-
-  const events: AgentTaskUpdatedPayload[] = [];
-  const unsubscribe = on("agent.task.updated", (payload) => events.push(payload));
-  try {
-    cloudAgentDb.updateCloudAgentTask(row.id, {});
-
-    assert.equal(events.length, 0);
-  } finally {
-    unsubscribe();
-  }
-});
-
-test("a throwing agent.task.updated listener does not break insertCloudAgentTask", () => {
-  const row = makeTaskRow({ status: "queued" });
-  const unsubscribe = on("agent.task.updated", () => {
-    throw new Error("listener boom");
-  });
-  try {
-    assert.doesNotThrow(() => cloudAgentDb.insertCloudAgentTask(row));
-    assert.equal(cloudAgentDb.getCloudAgentTaskById(row.id)?.id, row.id);
   } finally {
     unsubscribe();
   }

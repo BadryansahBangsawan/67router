@@ -4,7 +4,6 @@
 
 ---
 
-> **来源：** `src/lib/{a2a,acp,cloudAgent}/`、`src/app/api/{a2a,acp,cloud}/`、`src/app/api/v1/agents/`
 > **最后更新：** 2026-06-28 — v3.8.40
 
 OmniRoute 提供了三个不同的智能体相关接口。它们乍看之下很相似，但解决的是不同的问题。请使用本页选择合适的接口。
@@ -20,20 +19,6 @@ OmniRoute 提供了三个不同的智能体相关接口。它们乍看之下很�
 三者彼此独立，可任意选择其中一个或多个。
 
 ## 决策树
-
-```
-是否需要云服务在本机之外执行工作（Codex Cloud / Cursor Cloud / Devin / Jules）？
-├─ 是 → 云智能体（POST /api/v1/agents/tasks）
-└─ 否 → 继续
-    │
-    是否有一个支持 A2A 并希望进行协作的对等智能体？
-    ├─ 是 → A2A（POST /a2a）
-    └─ 否 → 继续
-        │
-        是否需要列出 / 配置本地安装的 CLI 编码智能体？
-        ├─ 是 → ACP（GET /api/acp/agents）
-        └─ 否 → 使用普通的 /v1/chat/completions
-```
 
 ## 1. A2A — 智能体到智能体
 
@@ -123,61 +108,6 @@ POST 的请求体结构（`src/app/api/acp/agents/route.ts` 中的 `customAgentB
   后备方案。对于普通交互式使用，请自行启动已配置的 CLI，或
   使用 `omniroute run`。
 
-## 3. 云代理
-
-**OmniRoute 端点：** `/api/v1/agents/tasks/*`（生命周期）+ `/api/cloud/*`（底层衔接）
-**源代码：** `src/lib/cloudAgent/`
-
-### 简介
-
-这是第三方云端编程代理的统一接口。你可以提交提示词和仓库 URL，OmniRoute 会将任务分派给相应的云代理、轮询状态并返回结果。
-
-### 支持的代理（3 个，均已在 `src/lib/cloudAgent/agents/` 中确认）
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### 生命周期
-
-```
-POST /api/v1/agents/tasks
-  → 每个代理类的 BaseAgent.createTask()
-  → 外部服务开始执行工作
-  → 在 DB 中创建任务记录（cloud_agent_tasks）
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → 从提供者延迟同步状态
-  → 返回当前状态 + 计划 + 活动日志
-  ↓
-POST /api/v1/agents/tasks/[id]   （action: "approve" | "message" | "cancel"）
-  → 转发给提供者（或在本地标记为已取消）
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → 在本地取消
-```
-
-### 认证
-
-⚠️ **所有 `/api/v1/agents/tasks/*` 端点都需要管理认证**（提交 `588a0333`）。从 v3.8.0 开始，仅使用 Bearer 认证的调用方会收到 401 响应。
-
-### 深入了解
-
-有关 `CloudAgentBase` 契约、各代理的具体信息、模式详情以及凭据衔接端点，请参阅 [CLOUD_AGENT.md](./CLOUD_AGENT.md)。
-
-## 对比：A2A 与 Cloud Agents
-
-两者都有“长时间运行的任务”，但所处层级不同：
-
-| 方面         | A2A                                                                             | Cloud Agents                         |
-| ------------ | ------------------------------------------------------------------------------- | ------------------------------------ |
-| 标准         | 开放标准 A2A v0.3                                                               | OmniRoute 专用                       |
-| 计算运行位置 | OmniRoute 内部（使用已配置的组合）                                              | 外部（Codex / Devin / Jules 服务器） |
-| 任务持续时间 | 默认 TTL 为 5 分钟（可在 `TaskManager` 中配置）                                 | 数分钟至数小时                       |
-| 仓库感知     | 否（仅传递提示词）                                                              | 是（仓库 URL + 分支）                |
-| 使用场景     | 跨智能体协作、将智能路由作为服务                                                | 委派“在仓库 Y 中实现功能 X”          |
-| 身份验证     | `/a2a` 可选使用 `OMNIROUTE_API_KEY`；`/api/a2a/*` REST 辅助接口使用管理身份验证 | 始终使用管理身份验证                 |
-
 ## 集成示例
 
 ### 探索 OmniRoute 的 A2A 能力
@@ -227,30 +157,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### 提交 Cloud Agent 任务
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### 轮询云任务状态
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## 何时使用哪一种
 
 - **聊天机器人 / copilot 前端** → `/v1/chat/completions`（兼容 OpenAI，但不是智能体协议）
@@ -282,7 +188,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## 另请参阅
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2A 深入解析
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — 云端 Agent 深入解析
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — 外部 CLI 集成（使用 ACP）
 - [SKILLS.md](./SKILLS.md) — Skills 框架（不同于 A2A Skills——本地执行沙箱）
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — 端点参考

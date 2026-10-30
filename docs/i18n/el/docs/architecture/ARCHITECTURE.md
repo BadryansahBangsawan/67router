@@ -128,7 +128,6 @@ _Τελευταία ενημέρωση: 2026-06-28_
 - `/dashboard/limits` — έλεγχοι ποσόστωσης/ρυθμού
 - `/dashboard/cli-tools` — εισαγωγή CLI, ανίχνευση runtime, δημιουργία ρυθμίσεων
 - `/dashboard/agents` — ανιχνευμένοι ACP agents + εγγραφή προσαρμοσμένου agent
-- `/dashboard/cloud-agents` — εργασίες agent φιλοξενούμενες στο cloud (Codex Cloud, Devin, Jules) και κύκλος ζωής εργασίας
 - `/dashboard/skills` — μητρώο A2A skill, εκτέλεση σε sandbox, ενσωματωμένος κατάλογος skill
 - `/dashboard/memory` — επισκόπηση και ανάκτηση επίμονης συνομιλιακής μνήμης
 - `/dashboard/webhooks` — εξερχόμενες συνδρομές webhook, εναλλαγή secret, στατιστικά επανάληψης
@@ -382,23 +381,6 @@ flowchart LR
 
 Για πλήρεις αλγοριθμικές λεπτομέρειες (τύποι παραγόντων, ρύθμιση βαρών), ανατρέξτε στο
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Το Cloud Agents ενσωματώνει πλατφόρμες φιλοξενούμενων πρακτόρων κώδικα τρίτων (Codex Cloud, Devin,
-Jules) πίσω από έναν ενιαίο κύκλο ζωής εργασιών που υποστηρίζεται από βάση δεδομένων. Όλα τα τελικά σημεία δημιουργίας/επιθεώρησης
-εργασιών απαιτούν έλεγχο ταυτότητας διαχείρισης.
-
-- Ρίζα λειτουργικής μονάδας: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, καθώς και υποκατάλογοι ανά πράκτορα κάτω από το `agents/`)
-- Υλοποιήσεις ανά πράκτορα: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Δημόσια τελικά σημεία: `/api/v1/agents/tasks/*` (παράθεση/δημιουργία/ανάκτηση/ακύρωση)
-- Τελικά σημεία διαχείρισης: `/api/cloud/*` (παροχή, κατάσταση, μαζική επεξεργασία)
-- Πίνακας ελέγχου: `/dashboard/cloud-agents`
-- Αποθήκευση: πίνακας `cloud_agent_tasks`
-
-Για λεπτομέρειες σχετικά με την παροχή και το OAuth ανά πράκτορα, ανατρέξτε στο
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Μηχανισμοί Προστασίας
 

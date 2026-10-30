@@ -68,20 +68,6 @@ permitir que la **solicitud de comprobación previa** de CORS se complete en las
 que una página de otro origen no puede proporcionar. **No** constituye un vector de secuestro de sesión ni
 de robo de credenciales en la ruta CORS compartida.
 
-### Una excepción real — `/api/v1/agents/`
-
-Las rutas de Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) establecen
-sus **propios** encabezados CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) y **sí** emiten
-`Access-Control-Allow-Origin: <origin>|*` junto con
-`Access-Control-Allow-Credentials: true`. Esta es la única superficie en la que
-la devolución del origen y las credenciales coexisten, y es **independiente de
-`CORS_ALLOW_ALL`**. Estas rutas están autenticadas para administración
-(`requireManagementAuth`); los operadores que expongan el panel fuera del host deben
-tener en cuenta que este es el único lugar donde los encabezados de respuesta permiten una lectura entre orígenes con credenciales.
-La restricción de este comportamiento a una lista explícita de permitidos se gestiona
-por separado de estas directrices sobre CORS.
-
 ## Lista de comprobación para producción
 
 - **Nunca establezca `CORS_ALLOW_ALL=true` en producción.** Déjelo sin definir.
@@ -160,7 +146,6 @@ pestaña Seguridad), no en el proxy.
 | Estado de ejecución para el panel                          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Banner de advertencia del panel                            | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Campo de orígenes CORS permitidos                          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS por ruta de Cloud-Agent (la excepción)                | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Véase también
 

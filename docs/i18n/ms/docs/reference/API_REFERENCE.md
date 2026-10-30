@@ -1756,31 +1756,6 @@ Digunakan oleh subsistem pengurusan kunci automatik untuk mengeluarkan dan mengg
 
 ---
 
-## Protokol Ejen
-
-Tugas ejen awan (Claude Code, Codex Cloud, OpenHands, dll.) yang dilaksanakan dari jauh bagi pihak pengguna OmniRoute.
-
-| Kaedah | Laluan                        | Penerangan                                                                                                                                                 |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Senaraikan tugas — pilihan `?provider=`, `?status=`, `?limit=` (1–500, lalai 50)                                                                           |
-| POST   | `/api/v1/agents/tasks`        | Cipta tugas — kandungan disahkan oleh `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Mengembalikan `201` dengan sampul tugas |
-| DELETE | `/api/v1/agents/tasks?id=...` | Padam tugas                                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | Baca tugas — menyegarkan status secara segerak daripada ejen awan huluan apabila `external_id` ditetapkan                                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Tindakan terdiskriminasi: `{action: "approve"}`, `{action: "message", message}`, atau `{action: "cancel"}`                                                 |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Padam tugas tertentu mengikut id                                                                                                                           |
-
-> **Pengesahan:** pengesahan pengurusan diperlukan untuk setiap kaedah (`requireCloudAgentManagementAuth`). Sebelum v3.8.0, kaedah ini tidak memerlukan pengesahan — lihat komit `588a0333` untuk perubahan yang memecahkan keserasian.
-
-```bash
-# Cipta tugas awan Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proksi Pengurusan
 
 Proksi HTTP(S)/SOCKS keluar yang boleh diberikan kepada penyedia, akaun atau secara global.
@@ -2286,5 +2261,3 @@ keluarga kelayakan (sesi papan pemuka, token CLI setempat, Token Akses
 - `requireLogin` boleh ditogol melalui `/api/settings/require-login`
 - Laluan `/v1/*` secara pilihan memerlukan kunci API Bearer apabila `REQUIRE_API_KEY=true`
 - "token pengurusan" / "kunci API berskop pengurusan" dalam rujukan ini bermaksud salah satu keluarga dalam panduan tersebut — bukan jenis rahsia tambahan yang tidak ditakrifkan
-
-> **Perubahan pecah keserasian (v3.8.0)** — `/api/v1/agents/tasks/*` dan titik akhir pengurusan tempoh bertenang kini memerlukan **pengesahan pengurusan** (kuki `auth_token` papan pemuka atau kunci API berskop pengurusan). Klien yang sebelum ini memanggil laluan ini tanpa pengesahan akan menerima `401 Unauthorized`. Lihat komit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

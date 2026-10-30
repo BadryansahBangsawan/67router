@@ -246,17 +246,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ให้ครอบคลุมการดำเนินงานด้านการกำหนดเส้นทาง/แคช/การบีบอัด/หน่วยความจำ/Skill/พร็อกซี/แหล่งที่มาของบริบทในขณะรันไทม์ มีเฟรมเวิร์กที่เกี่ยวข้องอีกสองรายการ
 ซึ่งมาพร้อมกับเซิร์ฟเวอร์ MCP ใน v3.8.0 และมีเอกสารแยกต่างหาก:
 
-### Cloud Agents
-
-Cloud Agents คือเอเจนต์ AI สำหรับเขียนโค้ดที่ทำงานนอกโพรเซส (codex-cloud, cursor-cloud, devin, jules) ซึ่งเชื่อมต่อกับ
-OmniRoute ผ่านโมเดลการเชื่อมต่อเดียวกับที่ใช้สำหรับผู้ให้บริการ LLM โดยเปิดให้เข้าถึงผ่าน
-REST ของตนเอง (`/api/v1/agents/*`) และ **ไม่ได้** เป็นส่วนหนึ่งของแค็ตตาล็อกเครื่องมือ MCP
-— การเรียก Cloud Agent จะไม่ใช้ขอบเขตสิทธิ์ MCP
-
-- การใช้งานจริง: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)
-- วงจรการทำงาน: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`
-- เอกสาร: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)
-
 ### Guardrails
 
 Guardrails คือตัวกรองก่อน/หลังการดำเนินการ (vision-bridge, pii-masker, prompt-injection)

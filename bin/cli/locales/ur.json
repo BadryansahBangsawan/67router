@@ -698,54 +698,6 @@
       "yes": "تصدیقی پرامپٹ چھوڑ دیں"
     }
   },
-  "cloud": {
-    "description": "کلاؤڈ AI ایجنٹ ٹاسکس کا نظم کریں (codex, devin, jules)",
-    "agents": {
-      "description": "دستیاب کلاؤڈ ایجنٹس کی فہرست دکھائیں"
-    },
-    "agent": {
-      "description": "{agent} کلاؤڈ ایجنٹ ٹاسکس کا نظم کریں",
-      "auth": {
-        "description": "OAuth کے ذریعے {agent} کو اجازت دیں"
-      }
-    },
-    "task": {
-      "description": "کلاؤڈ ایجنٹ ٹاسکس کا نظم کریں",
-      "create": {
-        "description": "نیا ایجنٹ ٹاسک بنائیں",
-        "title": "ٹاسک کا عنوان (ڈیفالٹ: پرامپٹ کے پہلے 80 حروف)",
-        "prompt": "ٹاسک پرامپٹ کا متن",
-        "prompt_file": "فائل سے پرامپٹ پڑھیں",
-        "repo": "ٹاسک کے لیے کلون کرنے کی ریپوزٹری کا URL",
-        "branch": "استعمال کرنے کے لیے برانچ کا نام",
-        "metadata": "JSON میٹا ڈیٹا آبجیکٹ"
-      },
-      "list": {
-        "description": "ایجنٹ کے کاموں کی فہرست دکھائیں",
-        "status": "حالت کے لحاظ سے فلٹر کریں (running|completed|failed|cancelled)",
-        "limit": "زیادہ سے زیادہ نتائج (طے شدہ: 50)"
-      },
-      "get": {
-        "description": "ID کے ذریعے کام کی تفصیلات حاصل کریں"
-      },
-      "status": {
-        "description": "کام کی حالت پرنٹ کریں (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "جاری کام منسوخ کریں",
-        "yes": "تصدیقی پرامپٹ چھوڑ دیں"
-      },
-      "approve": {
-        "description": "عمل درآمد شروع کرنے کے لیے ایجنٹ کے منصوبے کی منظوری دیں"
-      },
-      "message": {
-        "description": "جاری کام کو پیغام بھیجیں"
-      }
-    },
-    "sources": {
-      "description": "کسی کام کے ذریعے تیار کردہ سورس فائلوں کی فہرست دکھائیں"
-    }
-  },
   "program": {
     "description": "OmniRoute — خودکار فال بیک کے ساتھ اسمارٹ AI راؤٹر",
     "version": "ورژن پرنٹ کریں اور باہر نکلیں",

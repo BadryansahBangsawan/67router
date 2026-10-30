@@ -128,7 +128,6 @@ Pagrindiniai puslapiai, esantys `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kvotų ir dažnio valdikliai
 - `/dashboard/cli-tools` — CLI parengimas naudoti, vykdymo aplinkos aptikimas ir konfigūracijos generavimas
 - `/dashboard/agents` — aptikti ACP agentai ir pasirinktinių agentų registravimas
-- `/dashboard/cloud-agents` — debesijoje talpinamų agentų užduotys (Codex Cloud, Devin, Jules) ir užduočių gyvavimo ciklas
 - `/dashboard/skills` — A2A gebėjimų registras, izoliuotosios aplinkos vykdymas ir integruotų gebėjimų katalogas
 - `/dashboard/memory` — išsaugomos pokalbių atminties peržiūra ir paieška
 - `/dashboard/webhooks` — siunčiamų webhook prenumeratos, paslapčių keitimas ir pakartotinių bandymų statistika
@@ -382,23 +381,6 @@ Pagrindinės galimybės:
 
 Išsamią algoritmo informaciją (veiksnių formules, svorių derinimą) žr.
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Debesijos agentai
-
-Debesijos agentų modulis trečiųjų šalių debesijoje teikiamas programinio kodo agentų platformas („Codex Cloud“, „Devin“,
-„Jules“) apgaubia vienodu, duomenų baze pagrįstu užduočių gyvavimo ciklu. Visiems užduočių kūrimo ir tikrinimo
-galiniams taškams reikalingas valdymo autentifikavimas.
-
-- Modulio šaknis: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` ir kiekvieno agento pakatalogiai kataloge `agents/`)
-- Kiekvieno agento realizacijos: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Viešieji galiniai taškai: `/api/v1/agents/tasks/*` (sąrašo gavimas, kūrimas, gavimas, atšaukimas)
-- Valdymo galiniai taškai: `/api/cloud/*` (parengimas, būsena, paketinis apdorojimas)
-- Valdymo skydelis: `/dashboard/cloud-agents`
-- Saugykla: lentelė `cloud_agent_tasks`
-
-Išsamią kiekvieno agento parengimo ir OAuth informaciją žr.
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Apsaugos priemonės
 

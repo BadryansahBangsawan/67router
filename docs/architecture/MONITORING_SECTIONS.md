@@ -100,7 +100,6 @@ the Activity feed. The allowlist includes:
 - API key lifecycle (create, revoke, rotate)
 - Budget threshold reached
 - Auth login/logout
-- Cloud agent session creation
 - MCP tool registration
 - Webhook create/delete
 - Quota pool/plan changes (`quota.*` actions, Group B)

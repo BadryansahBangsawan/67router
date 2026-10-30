@@ -128,7 +128,6 @@ Glavne strani v `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — nadzor kvot/hitrosti
 - `/dashboard/cli-tools` — uvajanje CLI, zaznavanje izvajalnega okolja in ustvarjanje konfiguracije
 - `/dashboard/agents` — zaznani agenti ACP + registracija agentov po meri
-- `/dashboard/cloud-agents` — opravila agentov, gostovanih v oblaku (Codex Cloud, Devin, Jules), in življenjski cikel opravil
 - `/dashboard/skills` — register veščin A2A, izvajanje v peskovniku in katalog vgrajenih veščin
 - `/dashboard/memory` — pregledovanje in pridobivanje trajnega pogovornega pomnilnika
 - `/dashboard/webhooks` — naročnine na izhodne spletne kavlje, menjava skrivnosti in statistika ponovnih poskusov
@@ -382,23 +381,6 @@ Ključne zmogljivosti:
 
 Za vse podrobnosti algoritma (formule dejavnikov, prilagajanje uteži) glejte
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agenti v oblaku
-
-Agenti v oblaku ponujajo enoten življenjski cikel nalog, podprt s podatkovno zbirko, za
-gostovane platforme kodnih agentov tretjih oseb (Codex Cloud, Devin, Jules). Vse končne točke
-za ustvarjanje in pregledovanje nalog zahtevajo skrbniško avtentikacijo.
-
-- Koren modula: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` ter podmape posameznih agentov v `agents/`)
-- Implementacije posameznih agentov: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Javne končne točke: `/api/v1/agents/tasks/*` (seznam/ustvarjanje/pridobivanje/preklic)
-- Skrbniške končne točke: `/api/cloud/*` (zagotavljanje virov, stanje, paketna obdelava)
-- Nadzorna plošča: `/dashboard/cloud-agents`
-- Shramba: tabela `cloud_agent_tasks`
-
-Za podrobnosti o zagotavljanju virov in OAuth za posamezne agente glejte
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Varovalni mehanizmi
 

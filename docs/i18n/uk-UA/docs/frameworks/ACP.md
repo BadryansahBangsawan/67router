@@ -126,4 +126,3 @@ SDK. Буфери скидаються для кожного запиту.
 - [Контракти запуску CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Інструменти CLI](../reference/CLI-TOOLS.md)
 - [Сервер A2A](./A2A-SERVER.md)
-- [Хмарні агенти](./CLOUD_AGENT.md)

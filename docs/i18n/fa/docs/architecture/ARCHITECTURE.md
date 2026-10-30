@@ -128,7 +128,6 @@ OmniRoute یک درگاه مسیریابی محلی هوش مصنوعی و دا�
 - `/dashboard/limits` — کنترلهای سهمیه/نرخ
 - `/dashboard/cli-tools` — راهاندازی CLI، تشخیص زمان اجرا و تولید پیکربندی
 - `/dashboard/agents` — عاملهای ACP شناساییشده + ثبت عامل سفارشی
-- `/dashboard/cloud-agents` — وظایف عاملهای میزبانیشده در ابر (Codex Cloud، Devin، Jules) و چرخهٔ عمر وظایف
 - `/dashboard/skills` — رجیستری مهارتهای A2A، اجرای سندباکس و کاتالوگ مهارتهای داخلی
 - `/dashboard/memory` — بازرسی و بازیابی حافظهٔ مکالمهای ماندگار
 - `/dashboard/webhooks` — اشتراکهای وبهوک خروجی، چرخش کلید محرمانه و آمار تلاش مجدد
@@ -382,23 +381,6 @@ Auto Combo در زمان درخواست، اهداف مسیریابی را به�
 
 برای جزئیات کامل الگوریتمی (فرمول عوامل و تنظیم وزن)، به
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) مراجعه کنید.
-
-### B. عاملهای ابری
-
-Cloud Agents پلتفرمهای میزبانیشده عامل کدنویسی شخص ثالث (Codex Cloud، Devin،
-Jules) را پشت یک چرخه حیات وظیفه یکنواخت و مبتنی بر پایگاه داده قرار میدهد. همه نقاط پایانی
-ایجاد/بازرسی وظیفه به احراز هویت مدیریتی نیاز دارند.
-
-- ریشه ماژول: `src/lib/cloudAgent/` (`baseAgent.ts`، `registry.ts`، `api.ts`،
-  `types.ts`، `db.ts`، بهعلاوه زیردایرکتوریهای هر عامل در `agents/`)
-- پیادهسازیهای هر عامل: `agents/codex/`، `agents/devin/`، `agents/jules/`
-- نقاط پایانی عمومی: `/api/v1/agents/tasks/*` (فهرست/ایجاد/دریافت/لغو)
-- نقاط پایانی مدیریتی: `/api/cloud/*` (تأمین، وضعیت، دستهای)
-- داشبورد: `/dashboard/cloud-agents`
-- ذخیرهسازی: جدول `cloud_agent_tasks`
-
-برای جزئیات تأمین و OAuth مختص هر عامل، به
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) مراجعه کنید.
 
 ### C. حفاظها
 

@@ -120,4 +120,3 @@ testas.
 - [CLI paleidimo sutartys](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI įrankiai](../reference/CLI-TOOLS.md)
 - [A2A serveris](./A2A-SERVER.md)
-- [Debesijos agentai](./CLOUD_AGENT.md)

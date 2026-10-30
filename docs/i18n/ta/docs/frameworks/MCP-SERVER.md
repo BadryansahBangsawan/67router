@@ -242,14 +242,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 
 மேலே உள்ள MCP கருவிப் பட்டியல் (110 தனித்துவமான கருவிகள், `countUniqueMcpTools()` மூலம் கணக்கிடப்பட்டது) இயக்கநேர routing/cache/compression/memory/skills/proxy/context-source செயல்பாடுகளுக்கு நோக்கத்துடன் வரம்பிடப்பட்டுள்ளது. v3.8.0-இல் MCP சேவையகத்துடன் இரண்டு தொடர்புடைய கட்டமைப்புகள் வழங்கப்படுகின்றன; அவை தனித்தனியாக ஆவணப்படுத்தப்பட்டுள்ளன:
 
-### Cloud Agents
-
-Cloud Agents என்பவை LLM வழங்குநர்களுக்குப் பயன்படுத்தப்படும் அதே இணைப்பு மாதிரி வழியாக OmniRoute-உடன் இணைக்கப்பட்ட, செயல்முறைக்கு வெளியே இயங்கும் AI நிரலாக்க முகவர்கள் (codex-cloud, cursor-cloud, devin, jules). அவை அவற்றுக்கென தனியான REST பரப்பின் (`/api/v1/agents/*`) மூலம் வெளிப்படுத்தப்படுகின்றன; மேலும் அவை MCP கருவிப் பட்டியலின் பகுதியாக **இல்லை** — Cloud Agent ஒன்றை அழைப்பது MCP அணுகல் வரம்பைப் பயன்படுத்தாது.
-
-- செயலாக்கம்: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- வாழ்க்கைச் சுழற்சி: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- ஆவணங்கள்: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails என்பவை அரட்டைச் செயலாக்கத் தொடருக்குள் பயன்படுத்தப்படும் முன்/பின்-செயலாக்க வடிப்பான்கள் (vision-bridge, pii-masker, prompt-injection). MCP கருவி/வழித்தட அடுக்கு அடையப்படுவதற்கு முன்பே அவை இயங்கி, கட்டமைக்கப்பட்ட மீறல்களைத் தணிக்கைச் செயலாக்கத் தொடருக்கு அனுப்புகின்றன; அவை MCP கருவிகளாக அழைக்கப்படுவதில்லை.

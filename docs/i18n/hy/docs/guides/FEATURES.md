@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 ցիկլն ավելացրել է առանց կարգավորմ
 - 🤝 **GitLab Duo OAuth մատակարար** — մուտք GitLab հավատարմագրերով
 - 🧠 **Reasoning Replay Cache** — դատողության հետքերի հիբրիդային պահպանում՝ հիշողության մեջ + SQLite-ում
 
-📚 **Առնչվող փաստաթղթեր․** [Հմտությունների շրջանակ](../frameworks/SKILLS.md) · [Հիշողության համակարգ](../frameworks/MEMORY.md) · [Ամպային գործակալներ](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Մատակարարներ

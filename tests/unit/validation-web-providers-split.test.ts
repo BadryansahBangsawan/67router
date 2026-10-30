@@ -32,8 +32,6 @@ test("webProvidersB exposes its nine validators (muse-spark/adapta/claude/gemini
     "validateGeminiWebProvider",
     "validateCopilotWebProvider",
     "validateT3WebProvider",
-    "validateJulesProvider",
-    "validateDevinCloudAgentProvider",
     "validateInnerAiProvider",
   ]) {
     assert.equal(typeof (B as Record<string, unknown>)[name], "function", `B missing ${name}`);

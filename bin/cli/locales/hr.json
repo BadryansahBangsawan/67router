@@ -698,54 +698,6 @@
       "yes": "Preskoči potvrdu"
     }
   },
-  "cloud": {
-    "description": "Upravljaj zadacima cloud AI agenata (codex, devin, jules)",
-    "agents": {
-      "description": "Prikaži dostupne cloud agente"
-    },
-    "agent": {
-      "description": "Upravljaj zadacima {agent} cloud agenta",
-      "auth": {
-        "description": "Autoriziraj {agent} putem OAuth-a"
-      }
-    },
-    "task": {
-      "description": "Upravljaj zadacima cloud agenta",
-      "create": {
-        "description": "Stvori novi zadatak agenta",
-        "title": "Naslov zadatka (zadano: prvih 80 znakova upita)",
-        "prompt": "Tekst upita zadatka",
-        "prompt_file": "Pročitaj upit iz datoteke",
-        "repo": "URL repozitorija za kloniranje za zadatak",
-        "branch": "Naziv granice za korištenje",
-        "metadata": "JSON objekt metapodataka"
-      },
-      "list": {
-        "description": "Prikaži zadatke agenta",
-        "status": "Filtriraj po statusu (running|completed|failed|cancelled)",
-        "limit": "Maksimalan broj rezultata (zadano: 50)"
-      },
-      "get": {
-        "description": "Dohvati detalje zadatka po ID-u"
-      },
-      "status": {
-        "description": "Ispiši status zadatka (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Otkaži zadatak koji je u tijeku",
-        "yes": "Zaobiđi upit za potvrdu"
-      },
-      "approve": {
-        "description": "Odobri plan agenta za pokretanje izvršavanja"
-      },
-      "message": {
-        "description": "Pošalji poruku zadatku koji je u tijeku"
-      }
-    },
-    "sources": {
-      "description": "Prikaži popis izvornih datoteka koje je izradio zadatak"
-    }
-  },
   "program": {
     "description": "OmniRoute — Pametni AI Router s automatskim prebacivanjem",
     "version": "Ispiši verziju i izađi",

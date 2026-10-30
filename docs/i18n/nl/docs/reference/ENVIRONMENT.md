@@ -1391,11 +1391,11 @@ het wijzigen ervan vereist een code-aanpassing, geen env-var:
 
 Sta gebruikers toe om problemen rechtstreeks vanuit het Dashboard te melden.
 
-| Variabele             | Standaardwaarde    | Bronbestand                             | Beschrijving                                                                                                                                                 |
-| --------------------- | ------------------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(niet ingesteld)_ | `src/app/api/v1/issues/report/route.ts` | Repository in de indeling `owner/repo`.                                                                                                                      |
-| `GITHUB_ISSUES_TOKEN` | _(niet ingesteld)_ | `src/app/api/v1/issues/report/route.ts` | GitHub Personal Access Token met het bereik `issues:write`.                                                                                                  |
-| `GITHUB_TOKEN`        | _(niet ingesteld)_ | probleemtriage-/cloudagenthelpers       | Algemeen GitHub-toegangstoken dat als fallback voor `GITHUB_ISSUES_TOKEN` wordt gebruikt en door cloudagenthelpers in `src/lib/cloudAgent/*` wordt gebruikt. |
+| Variabele             | Standaardwaarde    | Bronbestand                             | Beschrijving                                                                                                                       |
+| --------------------- | ------------------ | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(niet ingesteld)_ | `src/app/api/v1/issues/report/route.ts` | Repository in de indeling `owner/repo`.                                                                                            |
+| `GITHUB_ISSUES_TOKEN` | _(niet ingesteld)_ | `src/app/api/v1/issues/report/route.ts` | GitHub Personal Access Token met het bereik `issues:write`.                                                                        |
+| `GITHUB_TOKEN`        | _(niet ingesteld)_ | probleemtriage-/cloudagenthelpers       | Algemeen GitHub-toegangstoken dat als fallback voor `GITHUB_ISSUES_TOKEN` wordt gebruikt en door cloudagenthelpers wordt gebruikt. |
 
 ---
 

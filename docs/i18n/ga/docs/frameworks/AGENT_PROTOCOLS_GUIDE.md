@@ -4,7 +4,6 @@
 
 ---
 
-> **Foinse:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
 Cuireann OmniRoute trí chomhéadan éagsúla a bhaineann le gníomhairí ar fáil. Tá cuma chomhchosúil orthu ar an gcéad amharc, ach réitíonn siad fadhbanna éagsúla. Úsáid an leathanach seo chun an ceann ceart a roghnú.
@@ -20,20 +19,6 @@ Cuireann OmniRoute trí chomhéadan éagsúla a bhaineann le gníomhairí ar fá
 Tá na trí cinn neamhspleách ar a chéile — roghnaigh aon fhothacar díobh.
 
 ## Crann Cinnidh
-
-```
-An dteastaíonn seirbhís néalríomhaireachta uait chun obair a dhéanamh lasmuigh den ríomhaire seo (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ TÁ → Gníomhairí Néalríomhaireachta (POST /api/v1/agents/tasks)
-└─ NÍL → Lean ar aghaidh
-    │
-    An bhfuil piarghníomhaire agat a úsáideann A2A agus ar mian leis comhoibriú?
-    ├─ TÁ → A2A (POST /a2a)
-    └─ NÍL → Lean ar aghaidh
-        │
-        An gá duit gníomhairí códúcháin CLI atá suiteáilte go háitiúil a liostú / a chumrú?
-        ├─ TÁ → ACP (GET /api/acp/agents)
-        └─ NÍL → Úsáid /v1/chat/completions lom
-```
 
 ## 1. A2A — Gníomhaire le Gníomhaire
 
@@ -125,61 +110,6 @@ Cruth an choirp do POST (`customAgentBodySchema` in `src/app/api/acp/agents/rout
   uathoibríoch. Le haghaidh gnáthúsáide idirghníomhaí, tosaigh an CLI cumraithe tú féin nó
   úsáid `omniroute run`.
 
-## 3. Gníomhairí Néalríomhaireachta
-
-**Críochphointí OmniRoute:** `/api/v1/agents/tasks/*` (saolré) + `/api/cloud/*` (bonneagar nasctha)
-**Foinse:** `src/lib/cloudAgent/`
-
-### Cad é atá ann
-
-Comhéadan aonfhoirmeach thar ghníomhairí códaithe néalríomhaireachta tríú páirtí. Cuireann tú leid + URL stórtha isteach, seolann OmniRoute chuig an ngníomhaire néalríomhaireachta ceart é, déanann sé stádas a pholláil, agus seolann sé na torthaí ar ais.
-
-### Gníomhairí a dtacaítear leo (4, iad uile deimhnithe in `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Saolré
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() de réir aicme an ghníomhaire
-  → tosaíonn an tseirbhís sheachtrach an obair
-  → cruthaítear ró tasc sa bhunachar sonraí (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → sioncronú leisciúil stádais ón soláthraí
-  → seolann sé an stádas reatha + plean + loga gníomhaíochta ar ais
-  ↓
-POST /api/v1/agents/tasks/[id]   (gníomh: "approve" | "message" | "cancel")
-  → cuirtear ar aghaidh chuig an soláthraí é (nó marcáiltear mar chealaithe go háitiúil é)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → cealú áitiúil
-```
-
-### Fíordheimhniú
-
-⚠️ **Teastaíonn fíordheimhniú bainistíochta ó gach críochphointe `/api/v1/agents/tasks/*`** (tiomantas `588a0333`). Faigheann glaoiteoirí nach n-úsáideann ach Bearer freagra 401 ó v3.8.0 i leith.
-
-### Mionscrúdú
-
-Féach [CLOUD_AGENT.md](./CLOUD_AGENT.md) le haghaidh chonradh `CloudAgentBase`, sonraí a bhaineann go sonrach le gach gníomhaire, mionsonraí scéimre, agus críochphointí bhonneagar na ndintiúr.
-
-## Comparáid: A2A vs Gníomhairí Néalríomhaireachta
-
-Tá “tascanna fadtéarmacha” ag an dá cheann, ach ag sraitheanna éagsúla:
-
-| Gné                  | A2A                                                                                 | Gníomhairí Néalríomhaireachta                       |
-| -------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Caighdeán            | Open A2A v0.3                                                                       | Sonrach do OmniRoute                                |
-| Cá ritheann an ríomh | Laistigh de OmniRoute (úsáideann sé teaglamaí cumraithe)                            | Go seachtrach (freastalaithe Codex / Devin / Jules) |
-| Fad an taisc         | TTL réamhshocraithe 5 nóiméad (inchumraithe in `TaskManager`)                       | Nóiméid go huaireanta                               |
-| Feasach ar stór      | Níl (ní sheolann sé ach leideanna)                                                  | Tá (URL an stóir + brainse)                         |
-| Cás úsáide           | Comhoibriú trasghníomhairí, ródú cliste mar sheirbhís                               | “Cuir gné X i bhfeidhm i stór Y” a tharmligean      |
-| Fíordheimhniú        | `OMNIROUTE_API_KEY` roghnach do `/a2a`; bainistíocht do chúntóirí REST `/api/a2a/*` | Bainistíocht i gcónaí                               |
-
 ## Samplaí Comhtháthaithe
 
 ### Faigh amach cumais A2A OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cuir tasc Gníomhaire Néalríomhaireachta isteach
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Seiceáil stádas an taisc néalríomhaireachta go tréimhsiúil
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Cathain is Ceart Gach Ceann a Úsáid
 
 - **Comhéadan úsáideora róbhrá / comhphíolóta** → `/v1/chat/completions` (comhoiriúnach le OpenAI — ní prótacal gníomhaire é)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Féach Freisin
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — mionléargas ar A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — mionléargas ar Ghníomhairí Néil
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — comhtháthuithe seachtracha CLI (úsáideann ACP)
 - [SKILLS.md](./SKILLS.md) — creat scileanna (éagsúil ó scileanna A2A — bosca gainimh rite áitiúil)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — tagairt críochphointe

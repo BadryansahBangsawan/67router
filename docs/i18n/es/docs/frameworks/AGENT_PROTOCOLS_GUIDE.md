@@ -4,7 +4,6 @@
 
 ---
 
-> **Fuente:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Última actualización:** 2026-06-28 — v3.8.40
 
 OmniRoute expone tres interfaces diferentes relacionadas con agentes. A primera vista parecen similares, pero resuelven problemas distintos. Usa esta página para elegir la adecuada.
@@ -20,20 +19,6 @@ OmniRoute expone tres interfaces diferentes relacionadas con agentes. A primera 
 Las tres son independientes; puedes elegir cualquier subconjunto.
 
 ## Árbol de decisión
-
-```
-¿Necesitas que un servicio en la nube realice trabajo fuera de esta máquina (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ SÍ → Agentes en la nube (POST /api/v1/agents/tasks)
-└─ NO → Continúa
-    │
-    ¿Tienes un agente par que utiliza A2A y desea colaborar?
-    ├─ SÍ → A2A (POST /a2a)
-    └─ NO → Continúa
-        │
-        ¿Necesitas enumerar / configurar agentes de programación CLI instalados localmente?
-        ├─ SÍ → ACP (GET /api/acp/agents)
-        └─ NO → Usa directamente /v1/chat/completions
-```
 
 ## 1. A2A — Agente a agente
 
@@ -125,61 +110,6 @@ Estructura del cuerpo para POST (`customAgentBodySchema` en `src/app/api/acp/age
   automático de reserva para proveedores. Para el uso interactivo habitual, inicia tú mismo la CLI configurada o
   utiliza `omniroute run`.
 
-## 3. Agentes en la nube
-
-**Endpoints de OmniRoute:** `/api/v1/agents/tasks/*` (ciclo de vida) + `/api/cloud/*` (infraestructura)
-**Código fuente:** `src/lib/cloudAgent/`
-
-### Qué es
-
-Una interfaz uniforme para agentes de programación en la nube de terceros. Envías un prompt y la URL de un repositorio; OmniRoute delega la tarea en el agente en la nube adecuado, consulta periódicamente su estado y devuelve los resultados.
-
-### Agentes compatibles (4, todos confirmados en `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Ciclo de vida
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() por clase de agente
-  → el servicio externo comienza a trabajar
-  → se crea una fila de tarea en la base de datos (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → sincronización diferida del estado desde el proveedor
-  → devuelve el estado actual + plan + registro de actividad
-  ↓
-POST /api/v1/agents/tasks/[id]   (acción: "approve" | "message" | "cancel")
-  → reenvía al proveedor (o marca la tarea como cancelada localmente)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → cancelación local
-```
-
-### Autenticación
-
-⚠️ **Todos los endpoints `/api/v1/agents/tasks/*` requieren autenticación de administración** (commit `588a0333`). Desde v3.8.0, los clientes que solo utilizan Bearer reciben un error 401.
-
-### Análisis detallado
-
-Consulta [CLOUD_AGENT.md](./CLOUD_AGENT.md) para obtener información sobre el contrato `CloudAgentBase`, los detalles específicos de cada agente, los detalles del esquema y los endpoints de gestión de credenciales.
-
-## Comparación: A2A frente a Cloud Agents
-
-Ambos tienen «tareas de larga duración», pero en capas diferentes:
-
-| Aspecto                          | A2A                                                                                            | Cloud Agents                                                 |
-| -------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Estándar                         | A2A abierto v0.3                                                                               | Específico de OmniRoute                                      |
-| Dónde se ejecuta el cómputo      | Dentro de OmniRoute (usa las combinaciones configuradas)                                       | Externo (servidores de Codex / Devin / Jules)                |
-| Duración de la tarea             | TTL predeterminado de 5 min (configurable en `TaskManager`)                                    | De minutos a horas                                           |
-| Con conocimiento del repositorio | No (solo pasa prompts)                                                                         | Sí (URL del repositorio + rama)                              |
-| Caso de uso                      | Colaboración entre agentes, enrutamiento inteligente como servicio                             | Delegar «implementar la funcionalidad X en el repositorio Y» |
-| Autenticación                    | `OMNIROUTE_API_KEY` opcional para `/a2a`; administración para los auxiliares REST `/api/a2a/*` | Siempre mediante administración                              |
-
 ## Ejemplos de integración
 
 ### Descubrir las capacidades A2A de OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Enviar una tarea de Cloud Agent
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implementa la funcionalidad X en el repositorio Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Consultar el estado de una tarea en la nube
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Cuándo usar cada opción
 
 - **Frontend de chatbot / copiloto** → `/v1/chat/completions` (compatible con OpenAI; no es un protocolo de agentes)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Véase también
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Análisis detallado de A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Análisis detallado de los agentes en la nube
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integraciones con CLI externas (utilizan ACP)
 - [SKILLS.md](./SKILLS.md) — Marco de habilidades (diferente de las habilidades de A2A: entorno aislado de ejecución local)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — Referencia de endpoints

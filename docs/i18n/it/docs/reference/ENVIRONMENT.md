@@ -1378,11 +1378,11 @@ modificarle richiede una modifica del codice, non una variabile d'ambiente:
 
 Consente agli utenti di segnalare problemi direttamente dalla Dashboard.
 
-| Variabile             | Predefinito       | File sorgente                                             | Descrizione                                                                                                                                      |
-| --------------------- | ----------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(non impostato)_ | `src/app/api/v1/issues/report/route.ts`                   | Repository nel formato `owner/repo`.                                                                                                             |
-| `GITHUB_ISSUES_TOKEN` | _(non impostato)_ | `src/app/api/v1/issues/report/route.ts`                   | Personal Access Token di GitHub con ambito `issues:write`.                                                                                       |
-| `GITHUB_TOKEN`        | _(non impostato)_ | valutazione delle segnalazioni / helper dell'agente cloud | Token di accesso GitHub generico utilizzato come alternativa a `GITHUB_ISSUES_TOKEN` e dagli helper dell'agente cloud in `src/lib/cloudAgent/*`. |
+| Variabile             | Predefinito       | File sorgente                                             | Descrizione                                                                                                            |
+| --------------------- | ----------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(non impostato)_ | `src/app/api/v1/issues/report/route.ts`                   | Repository nel formato `owner/repo`.                                                                                   |
+| `GITHUB_ISSUES_TOKEN` | _(non impostato)_ | `src/app/api/v1/issues/report/route.ts`                   | Personal Access Token di GitHub con ambito `issues:write`.                                                             |
+| `GITHUB_TOKEN`        | _(non impostato)_ | valutazione delle segnalazioni / helper dell'agente cloud | Token di accesso GitHub generico utilizzato come alternativa a `GITHUB_ISSUES_TOKEN` e dagli helper dell'agente cloud. |
 
 ---
 

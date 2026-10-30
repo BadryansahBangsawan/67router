@@ -698,54 +698,6 @@
       "yes": "Bevestigingsprompt overslaan"
     }
   },
-  "cloud": {
-    "description": "Cloud-AI-agenttaken beheren (codex, devin, jules)",
-    "agents": {
-      "description": "Beschikbare cloudagents weergeven"
-    },
-    "agent": {
-      "description": "Cloudagenttaken voor {agent} beheren",
-      "auth": {
-        "description": "{agent} autoriseren via OAuth"
-      }
-    },
-    "task": {
-      "description": "Cloudagenttaken beheren",
-      "create": {
-        "description": "Een nieuwe agenttaak aanmaken",
-        "title": "Taaktitel (standaard de eerste 80 tekens van de prompt)",
-        "prompt": "Tekst van taakprompt",
-        "prompt_file": "Prompt uit bestand lezen",
-        "repo": "Repository-URL om voor de taak te klonen",
-        "branch": "Te gebruiken branchnaam",
-        "metadata": "JSON-metadataobject"
-      },
-      "list": {
-        "description": "Agenttaken weergeven",
-        "status": "Filteren op status (running|completed|failed|cancelled)",
-        "limit": "Maximumaantal resultaten (standaard: 50)"
-      },
-      "get": {
-        "description": "Taakdetails op ID ophalen"
-      },
-      "status": {
-        "description": "Taakstatus weergeven (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Een actieve taak annuleren",
-        "yes": "Bevestigingsprompt overslaan"
-      },
-      "approve": {
-        "description": "Het agentplan goedkeuren om de uitvoering te starten"
-      },
-      "message": {
-        "description": "Een bericht naar een actieve taak sturen"
-      }
-    },
-    "sources": {
-      "description": "Door een taak geproduceerde bronbestanden weergeven"
-    }
-  },
   "program": {
     "description": "OmniRoute — Slimme AI-router met automatische fallback",
     "version": "Versie afdrukken en afsluiten",

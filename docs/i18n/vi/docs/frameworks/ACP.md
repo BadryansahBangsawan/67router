@@ -120,4 +120,3 @@ hoặc suy luận thành công từ nhà cung cấp; những việc đó yêu c�
 - [Các hợp đồng khởi chạy CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Các công cụ CLI](../reference/CLI-TOOLS.md)
 - [Máy chủ A2A](./A2A-SERVER.md)
-- [Các tác nhân đám mây](./CLOUD_AGENT.md)

@@ -120,4 +120,3 @@ frame περιορίζεται σε 2 MiB byte πριν από την ανάλυ
 - [Συμβάσεις εκκίνησης CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Εργαλεία CLI](../reference/CLI-TOOLS.md)
 - [Διακομιστής A2A](./A2A-SERVER.md)
-- [Agents cloud](./CLOUD_AGENT.md)

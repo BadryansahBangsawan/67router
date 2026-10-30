@@ -698,54 +698,6 @@
       "yes": "確認プロンプトをスキップ"
     }
   },
-  "cloud": {
-    "description": "クラウドAIエージェントのタスクを管理（codex、devin、jules）",
-    "agents": {
-      "description": "利用可能なクラウドエージェントを一覧表示"
-    },
-    "agent": {
-      "description": "{agent}クラウドエージェントのタスクを管理",
-      "auth": {
-        "description": "OAuth経由で{agent}を認可"
-      }
-    },
-    "task": {
-      "description": "クラウドエージェントのタスクを管理",
-      "create": {
-        "description": "新しいエージェントタスクを作成",
-        "title": "タスクのタイトル（デフォルトはプロンプトの先頭80文字）",
-        "prompt": "タスクのプロンプトテキスト",
-        "prompt_file": "ファイルからプロンプトを読み込む",
-        "repo": "タスク用にクローンするリポジトリURL",
-        "branch": "使用するブランチ名",
-        "metadata": "JSONメタデータオブジェクト"
-      },
-      "list": {
-        "description": "エージェントタスクを一覧表示",
-        "status": "ステータスで絞り込み（running|completed|failed|cancelled）",
-        "limit": "最大結果数（デフォルト：50）"
-      },
-      "get": {
-        "description": "IDを指定してタスクの詳細を取得"
-      },
-      "status": {
-        "description": "タスクのステータスを出力（running|completed|failed|cancelled）"
-      },
-      "cancel": {
-        "description": "実行中のタスクをキャンセル",
-        "yes": "確認プロンプトをスキップ"
-      },
-      "approve": {
-        "description": "エージェントのプランを承認して実行を開始"
-      },
-      "message": {
-        "description": "実行中のタスクにメッセージを送信"
-      }
-    },
-    "sources": {
-      "description": "タスクによって生成されたソースファイルを一覧表示"
-    }
-  },
   "program": {
     "description": "OmniRoute — 自動フォールバック付きスマートAIルーター",
     "version": "バージョンを表示して終了",

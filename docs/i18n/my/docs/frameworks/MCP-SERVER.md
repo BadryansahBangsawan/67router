@@ -245,17 +245,6 @@ Catalog အပြည့်အစုံနှင့် ပြင်ပ agent မ�
 အထက်ပါ MCP ကိရိယာစာရင်း (ထပ်တူမရှိသော ကိရိယာ 110 ခု၊ `countUniqueMcpTools()` ဖြင့် တွက်ချက်ထားသည်) ကို runtime routing/cache/compression/memory/skills/proxy/context-source လုပ်ဆောင်ချက်များအတွက် ရည်ရွယ်ချက်ရှိရှိ
 ကန့်သတ်ထားသည်။ v3.8.0 တွင် MCP server နှင့်အတူ ဆက်စပ် framework နှစ်ခုပါဝင်ပြီး ၎င်းတို့ကို သီးခြားမှတ်တမ်းတင်ထားသည်။
 
-### Cloud Agent များ
-
-Cloud Agent များသည် LLM provider များအတွက် အသုံးပြုသည့် တူညီသော connection model မှတစ်ဆင့်
-OmniRoute နှင့် ချိတ်ဆက်ထားသော process ပြင်ပ AI coding agent များ (codex-cloud, cursor-cloud, devin, jules) ဖြစ်သည်။ ၎င်းတို့ကို
-သီးခြား REST မျက်နှာပြင် (`/api/v1/agents/*`) မှတစ်ဆင့် ဖော်ထုတ်ပေးထားပြီး MCP ကိရိယာ catalog ၏ အစိတ်အပိုင်း **မဟုတ်ပါ**
-— Cloud Agent တစ်ခုကို ခေါ်ယူခြင်းသည် MCP scope ကို အသုံးမပြုပါ။
-
-- အကောင်အထည်ဖော်မှု: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)။
-- Lifecycle: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`။
-- စာရွက်စာတမ်း: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)။
-
 ### Guardrail များ
 
 Guardrail များသည် chat pipeline အတွင်း အသုံးပြုသည့် execution မတိုင်မီ/ပြီးနောက် filter များ (vision-bridge, pii-masker, prompt-injection)

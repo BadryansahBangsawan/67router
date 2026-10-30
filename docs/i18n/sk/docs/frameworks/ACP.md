@@ -126,4 +126,3 @@ poskytovateľa; tie vyžadujú samostatne autorizovaný základný test v cieľo
 - [Spúšťacie kontrakty CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Nástroje CLI](../reference/CLI-TOOLS.md)
 - [Server A2A](./A2A-SERVER.md)
-- [Cloudoví agenti](./CLOUD_AGENT.md)

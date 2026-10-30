@@ -72,20 +72,6 @@ neověřená čtení již veřejně dostupných dat z jiného zdroje a (b) povol
 ověření, které stránka z jiného zdroje nemůže poskytnout. Ve sdílené cestě CORS
 **nejde** o vektor pro únos relace ani krádež přihlašovacích údajů.
 
-### Jediná skutečná výjimka — `/api/v1/agents/`
-
-Trasy Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)
-nastavují **vlastní** hlavičky CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) a **generují**
-`Access-Control-Allow-Origin: <origin>|*` společně s
-`Access-Control-Allow-Credentials: true`. Jde o jediné rozhraní, kde se současně
-používá vrácení zdroje a přihlašovací údaje, a je **nezávislé na
-`CORS_ALLOW_ALL`**. Tyto trasy jsou ověřovány na úrovni správy
-(`requireManagementAuth`); provozovatelé, kteří zpřístupňují řídicí panel mimo
-hostitelský systém, by si měli uvědomit, že jde o jediné místo, kde hlavičky
-odpovědi povolují ověřené čtení z jiného zdroje. Omezení na explicitní seznam
-povolených zdrojů se řeší odděleně od těchto pokynů pro CORS.
-
 ## Kontrolní seznam pro produkční prostředí
 
 - **V produkčním prostředí nikdy nenastavujte `CORS_ALLOW_ALL=true`.** Ponechte tuto proměnnou nenastavenou.
@@ -165,7 +151,6 @@ kartě Security), nikoli v proxy.
 | Stav za běhu pro řídicí panel                             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Varovný banner řídicího panelu                            | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Pole Povolené zdroje CORS                                 | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS pro jednotlivé trasy Cloud-Agent (výjimka)           | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Viz také
 

@@ -128,7 +128,6 @@ OmniRoute គឺជា gateway សម្រាប់បញ្ជូនសំណ�
 - `/dashboard/limits` — ការគ្រប់គ្រង quota/rate
 - `/dashboard/cli-tools` — ការណែនាំឱ្យចាប់ផ្តើមប្រើ CLI, ការរកឃើញ runtime និងការបង្កើត config
 - `/dashboard/agents` — agent ACP ដែលបានរកឃើញ + ការចុះឈ្មោះ agent ផ្ទាល់ខ្លួន
-- `/dashboard/cloud-agents` — កិច្ចការ agent ដែលបង្ហោះលើ cloud (Codex Cloud, Devin, Jules) និងវដ្តជីវិតកិច្ចការ
 - `/dashboard/skills` — បញ្ជីឈ្មោះ skill A2A, ការប្រតិបត្តិក្នុង sandbox និងកាតាឡុក skill ដែលភ្ជាប់មកជាមួយ
 - `/dashboard/memory` — ការត្រួតពិនិត្យ និងការទាញយកអង្គចងចាំសន្ទនាដែលរក្សាទុកជាប់លាប់
 - `/dashboard/webhooks` — ការជាវ webhook ចេញ, ការប្តូរ secret និងស្ថិតិនៃការព្យាយាមឡើងវិញ
@@ -382,23 +381,6 @@ Auto Combo គណនាពិន្ទុ និងជ្រើសរើសគ�
 
 សម្រាប់ព័ត៌មានលម្អិតពេញលេញអំពីក្បួនដោះស្រាយ (រូបមន្តកត្តា, ការកែសម្រួលទម្ងន់) សូមមើល
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)។
-
-### B. ភ្នាក់ងារក្លោដ
-
-Cloud Agents រុំវេទិកាភ្នាក់ងារកូដដែលបង្ហោះដោយភាគីទីបី (Codex Cloud, Devin,
-Jules) នៅពីក្រោយវដ្តជីវិតភារកិច្ចឯកសណ្ឋានដែលគាំទ្រដោយមូលដ្ឋានទិន្នន័យ។ ចំណុចបញ្ចប់សម្រាប់បង្កើត/ត្រួតពិនិត្យភារកិច្ចទាំងអស់
-តម្រូវឱ្យមានការផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវសម្រាប់ការគ្រប់គ្រង។
-
-- ថតឫសម៉ូឌុល៖ `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, រួមទាំងថតរងសម្រាប់ភ្នាក់ងារនីមួយៗនៅក្រោម `agents/`)
-- ការអនុវត្តសម្រាប់ភ្នាក់ងារនីមួយៗ៖ `agents/codex/`, `agents/devin/`, `agents/jules/`
-- ចំណុចបញ្ចប់សាធារណៈ៖ `/api/v1/agents/tasks/*` (រាយបញ្ជី/បង្កើត/ទទួលយក/បោះបង់)
-- ចំណុចបញ្ចប់សម្រាប់ការគ្រប់គ្រង៖ `/api/cloud/*` (ការរៀបចំផ្តល់ធនធាន, ស្ថានភាព, ជាបាច់)
-- ផ្ទាំងគ្រប់គ្រង៖ `/dashboard/cloud-agents`
-- ការផ្ទុក៖ តារាង `cloud_agent_tasks`
-
-សម្រាប់ព័ត៌មានជាក់លាក់នៃការរៀបចំផ្តល់ធនធាន និង OAuth សម្រាប់ភ្នាក់ងារនីមួយៗ សូមមើល
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)។
 
 ### C. របាំងការពារ
 

@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 週期新增了零設定自動路由、新提供者、OAuth �
 - 🤝 **GitLab Duo OAuth 提供者** — 使用 GitLab 憑證登入
 - 🧠 **推理重播快取** — 以混合式記憶體內 + SQLite 持久化方式儲存推理軌跡
 
-📚 **相關文件：** [技能框架](../frameworks/SKILLS.md) · [記憶系統](../frameworks/MEMORY.md) · [雲端代理](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [推理重播快取](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 提供者

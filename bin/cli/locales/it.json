@@ -698,54 +698,6 @@
       "yes": "Salta la richiesta di conferma"
     }
   },
-  "cloud": {
-    "description": "Gestisci le attività degli agenti AI nel cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Elenca gli agenti cloud disponibili"
-    },
-    "agent": {
-      "description": "Gestisci le attività dell'agente cloud {agent}",
-      "auth": {
-        "description": "Autorizza {agent} tramite OAuth"
-      }
-    },
-    "task": {
-      "description": "Gestisci le attività degli agenti cloud",
-      "create": {
-        "description": "Crea una nuova attività dell'agente",
-        "title": "Titolo dell'attività (per impostazione predefinita, i primi 80 caratteri del prompt)",
-        "prompt": "Testo del prompt dell'attività",
-        "prompt_file": "Leggi il prompt da un file",
-        "repo": "URL del repository da clonare per l'attività",
-        "branch": "Nome del branch da utilizzare",
-        "metadata": "Oggetto JSON con i metadati"
-      },
-      "list": {
-        "description": "Elenca le attività dell'agente",
-        "status": "Filtra per stato (running|completed|failed|cancelled)",
-        "limit": "Numero massimo di risultati (valore predefinito: 50)"
-      },
-      "get": {
-        "description": "Ottieni i dettagli dell'attività tramite ID"
-      },
-      "status": {
-        "description": "Stampa lo stato dell'attività (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Annulla un'attività in esecuzione",
-        "yes": "Salta la richiesta di conferma"
-      },
-      "approve": {
-        "description": "Approva il piano dell'agente per avviare l'esecuzione"
-      },
-      "message": {
-        "description": "Invia un messaggio a un'attività in esecuzione"
-      }
-    },
-    "sources": {
-      "description": "Elenca i file sorgente prodotti da un'attività"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI intelligente con fallback automatico",
     "version": "Stampa la versione ed esci",

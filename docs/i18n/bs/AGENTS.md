@@ -390,11 +390,8 @@ Dokumentacija mora opisivati provjereno ponašanje, a ne vjerovatno ponašanje.
 
 ### Dodavanje novog agenta u oblaku
 
-1. Kreirajte klasu agenta u `src/lib/cloudAgent/agents/` koja proširuje `CloudAgentBase` (već postoje 4: codex-cloud, devin, jules, cursor-cloud)
 2. Implementirajte `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`
-3. Registrujte je u `src/lib/cloudAgent/registry.ts`
-4. Dodajte rukovanje OAuth-om/akreditivima ako je potrebno (`src/lib/oauth/providers/`)
-5. Dodajte testove i dokumentujte je u `docs/frameworks/CLOUD_AGENT.md`
+3. Dodajte rukovanje OAuth-om/akreditivima ako je potrebno (`src/lib/oauth/providers/`)
 
 ### Dodavanje nove ugrađene usluge
 
@@ -433,7 +430,6 @@ Za svaku netrivijalnu izmjenu prvo pročitajte odgovarajući detaljni dokument:
 | Okvir za vještine                                                   | `docs/frameworks/SKILLS.md`                             |
 | Radar (sloj kataloga besplatnih modela)                             | `docs/frameworks/RADAR.md`                              |
 | Memorijski sistem (FTS5 + Qdrant)                                   | `docs/frameworks/MEMORY.md`                             |
-| Agenti u oblaku                                                     | `docs/frameworks/CLOUD_AGENT.md`                        |
 | Zaštitne mjere (PII / ubacivanje instrukcija / vizija)              | `docs/security/GUARDRAILS.md`                           |
 | Javni pristupni podaci uzvodnih servisa (Gemini itd.)               | `docs/security/PUBLIC_CREDS.md`                         |
 | Sanitizacija poruka o greškama                                      | `docs/security/ERROR_SANITIZATION.md`                   |

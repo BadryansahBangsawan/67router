@@ -698,54 +698,6 @@
       "yes": "Hoppa över bekräftelsefrågan"
     }
   },
-  "cloud": {
-    "description": "Hantera molnbaserade AI-agentuppgifter (codex, devin, jules)",
-    "agents": {
-      "description": "Lista tillgängliga molnagenter"
-    },
-    "agent": {
-      "description": "Hantera molnagentuppgifter för {agent}",
-      "auth": {
-        "description": "Auktorisera {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Hantera molnagentuppgifter",
-      "create": {
-        "description": "Skapa en ny agentuppgift",
-        "title": "Uppgiftens titel (som standard de första 80 tecknen i prompten)",
-        "prompt": "Text för uppgiftsprompt",
-        "prompt_file": "Läs prompt från fil",
-        "repo": "URL till kodarkiv att klona för uppgiften",
-        "branch": "Grennamn att använda",
-        "metadata": "JSON-metadataobjekt"
-      },
-      "list": {
-        "description": "Lista agentuppgifter",
-        "status": "Filtrera efter status (running|completed|failed|cancelled)",
-        "limit": "Maximalt antal resultat (standard: 50)"
-      },
-      "get": {
-        "description": "Hämta uppgiftsinformation efter ID"
-      },
-      "status": {
-        "description": "Skriv ut uppgiftsstatus (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Avbryt en pågående uppgift",
-        "yes": "Hoppa över bekräftelsefrågan"
-      },
-      "approve": {
-        "description": "Godkänn agentplanen för att starta körningen"
-      },
-      "message": {
-        "description": "Skicka ett meddelande till en pågående uppgift"
-      }
-    },
-    "sources": {
-      "description": "Lista källfiler som skapats av en uppgift"
-    }
-  },
   "program": {
     "description": "OmniRoute — Smart AI-router med automatisk fallback",
     "version": "Skriv ut version och avsluta",

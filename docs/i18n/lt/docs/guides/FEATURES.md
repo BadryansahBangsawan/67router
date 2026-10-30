@@ -43,8 +43,6 @@ Perėjimo iš v3.7.x į v3.8.0 cikle pridėtas automatinis maršruto parinkimas 
 - 🤝 **GitLab Duo OAuth paslaugų teikėjas** — prisijungimas naudojant GitLab prisijungimo duomenis
 - 🧠 **Samprotavimo pakartojimo podėlis** — hibridinis samprotavimo sekų išsaugojimas atmintyje ir SQLite
 
-📚 **Susiję dokumentai:** [Įgūdžių sistema](../frameworks/SKILLS.md) · [Atminties sistema](../frameworks/MEMORY.md) · [Debesijos agentai](../frameworks/CLOUD_AGENT.md) · [Žiniatinklio atgaliniai iškvietimai](../frameworks/WEBHOOKS.md) · [Samprotavimo pakartojimo podėlis](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Teikėjai

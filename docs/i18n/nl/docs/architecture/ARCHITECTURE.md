@@ -128,7 +128,6 @@ Hoofdpagina's onder `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — quota- en frequentiebeheer
 - `/dashboard/cli-tools` — CLI-onboarding, runtimedetectie, configuratiegeneratie
 - `/dashboard/agents` — gedetecteerde ACP-agents + registratie van aangepaste agents
-- `/dashboard/cloud-agents` — in de cloud gehoste agenttaken (Codex Cloud, Devin, Jules) en taaklevenscyclus
 - `/dashboard/skills` — A2A-vaardighedenregister, uitvoering in sandbox, ingebouwde vaardighedencatalogus
 - `/dashboard/memory` — inspectie en ophalen van persistent gespreksgeheugen
 - `/dashboard/webhooks` — uitgaande webhookabonnementen, rotatie van geheimen, statistieken voor nieuwe pogingen
@@ -372,23 +371,6 @@ Belangrijkste mogelijkheden:
 
 Zie voor alle algoritmische details (factorformules, afstemming van gewichten)
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Cloud Agents plaatst extern gehoste platforms voor code-agents (Codex Cloud, Devin,
-Jules) achter een uniforme, door een database ondersteunde taaklevenscyclus. Alle eindpunten voor het
-aanmaken en inspecteren van taken vereisen beheerautorisatie.
-
-- Hoofdmap van module: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, plus submappen per agent onder `agents/`)
-- Implementaties per agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Openbare eindpunten: `/api/v1/agents/tasks/*` (weergeven/aanmaken/ophalen/annuleren)
-- Beheereindpunten: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Opslag: tabel `cloud_agent_tasks`
-
-Zie voor details over provisioning en OAuth per agent
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrails
 

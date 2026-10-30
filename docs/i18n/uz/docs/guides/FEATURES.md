@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 siklida sozlashni talab qilmaydigan avtomatik marshrutlash, ya
 - 🤝 **GitLab Duo OAuth provayderi** — GitLab hisob maʼlumotlari bilan kirish
 - 🧠 **Reasoning Replay Cache** — mulohaza izlarini xotirada va SQLiteʼda gibrid saqlash
 
-📚 **Tegishli hujjatlar:** [Koʻnikmalar freymvorki](../frameworks/SKILLS.md) · [Xotira tizimi](../frameworks/MEMORY.md) · [Bulut agentlari](../frameworks/CLOUD_AGENT.md) · [Vebhuklar](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provayderlar

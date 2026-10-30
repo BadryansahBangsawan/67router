@@ -1371,11 +1371,11 @@ ca referință — modificarea lor necesită o editare a codului, nu o variabil�
 
 Permiteți utilizatorilor să raporteze probleme direct din Panoul de control.
 
-| Variabilă             | Valoare implicită | Fișier sursă                                              | Descriere                                                                                                                                         |
-| --------------------- | ----------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(nesetat)_       | `src/app/api/v1/issues/report/route.ts`                   | Depozit în formatul `owner/repo`.                                                                                                                 |
-| `GITHUB_ISSUES_TOKEN` | _(nesetat)_       | `src/app/api/v1/issues/report/route.ts`                   | Token de acces personal GitHub cu permisiunea `issues:write`.                                                                                     |
-| `GITHUB_TOKEN`        | _(nesetat)_       | clasificarea problemelor / utilitare pentru agentul cloud | Token generic de acces GitHub, utilizat ca alternativă pentru `GITHUB_ISSUES_TOKEN` și de utilitarele agentului cloud din `src/lib/cloudAgent/*`. |
+| Variabilă             | Valoare implicită | Fișier sursă                                              | Descriere                                                                                                                                                      |
+| --------------------- | ----------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(nesetat)_       | `src/app/api/v1/issues/report/route.ts`                   | Depozit în formatul `owner/repo`.                                                                                                                              |
+| `GITHUB_ISSUES_TOKEN` | _(nesetat)_       | `src/app/api/v1/issues/report/route.ts`                   | Token de acces personal GitHub cu permisiunea `issues:write`.                                                                                                  |
+| `GITHUB_TOKEN`        | _(nesetat)_       | clasificarea problemelor / utilitare pentru agentul cloud | Token generic de acces GitHub, utilizat ca alternativă pentru `GITHUB_ISSUES_TOKEN` și de utilitarele agentului cloud din `src/lib/skills/githubCollector.ts`. |
 
 ---
 

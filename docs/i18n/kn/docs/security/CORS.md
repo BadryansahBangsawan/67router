@@ -60,17 +60,6 @@ OWASP ನ ಸಾಮಾನ್ಯ ಎಚ್ಚರಿಕೆಯನ್ನು ("ವೈ
 ಕ್ರಾಸ್-ಒರಿಜಿನ್ ಪುಟ ಒದಗಿಸಲು ಸಾಧ್ಯವಿಲ್ಲದ ದೃಢೀಕರಣದ ಅಗತ್ಯವಿದೆ. ಹಂಚಿಕೆಯ CORS ಮಾರ್ಗದಲ್ಲಿ ಇದು ಸೆಷನ್ ಅಪಹರಣ ಅಥವಾ
 ರುಜುವಾತು ಕಳವು ಮಾಡುವ ಮಾರ್ಗ **ಅಲ್ಲ**.
 
-### ಒಂದು ನೈಜ ಅಪವಾದ — `/api/v1/agents/`
-
-Cloud-Agent ರೂಟ್ಗಳು (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ತಮ್ಮ
-**ಸ್ವಂತ** CORS ಹೆಡರ್ಗಳನ್ನು ಹೊಂದಿಸುತ್ತವೆ
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ಮತ್ತು
-`Access-Control-Allow-Origin: <origin>|*` ಜೊತೆಗೆ
-`Access-Control-Allow-Credentials: true` ಅನ್ನೂ **ಹೊರಸೂಸುತ್ತವೆ**. ಮೂಲದ ಪ್ರತಿಧ್ವನಿ ಮತ್ತು ರುಜುವಾತುಗಳು ಒಟ್ಟಿಗೆ ಇರುವ ಏಕೈಕ ಮೇಲ್ಮೈ ಇದು, ಮತ್ತು ಇದು
-`CORS_ALLOW_ALL` ನಿಂದ **ಸ್ವತಂತ್ರವಾಗಿದೆ**. ಈ ರೂಟ್ಗಳು ನಿರ್ವಹಣಾ ದೃಢೀಕರಣವನ್ನು ಹೊಂದಿವೆ
-(`requireManagementAuth`); ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಅನ್ನು ಹೋಸ್ಟ್ನ ಹೊರಗೆ ಬಹಿರಂಗಪಡಿಸುವ ನಿರ್ವಾಹಕರು, ಪ್ರತಿಕ್ರಿಯೆ ಹೆಡರ್ಗಳು ಕ್ರಾಸ್-ಒರಿಜಿನ್ ರುಜುವಾತುಗಳಿರುವ ಓದುವಿಕೆಯನ್ನು ಅನುಮತಿಸುವ ಏಕೈಕ ಸ್ಥಳ ಇದೇ ಎಂಬುದನ್ನು ತಿಳಿದಿರಬೇಕು. ಇದನ್ನು ಸ್ಪಷ್ಟ ಅನುಮತಿ ಪಟ್ಟಿಗೆ ಬಿಗಿಗೊಳಿಸುವ ಕಾರ್ಯವನ್ನು
-ಈ CORS ಮಾರ್ಗದರ್ಶನದಿಂದ ಪ್ರತ್ಯೇಕವಾಗಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ.
-
 ## ಪ್ರೊಡಕ್ಷನ್ ಪರಿಶೀಲನಾಪಟ್ಟಿ
 
 - **ಪ್ರೊಡಕ್ಷನ್ನಲ್ಲಿ ಎಂದಿಗೂ `CORS_ALLOW_ALL=true` ಹೊಂದಿಸಬೇಡಿ.** ಅದನ್ನು ಹೊಂದಿಸದೆ ಬಿಡಿ.
@@ -152,7 +141,6 @@ Security ಟ್ಯಾಬ್ನಲ್ಲಿ) ಹೊಂದಿಸಿ.
 | ಡ್ಯಾಶ್ಬೋರ್ಡ್ಗಾಗಿ ರನ್ಟೈಮ್ ಸ್ಥಿತಿ        | `src/app/api/settings/authz-inventory/route.ts`                      |
 | ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಎಚ್ಚರಿಕೆ ಬ್ಯಾನರ್          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins ಕ್ಷೇತ್ರ           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| ಪ್ರತಿ-ರೂಟ್ Cloud-Agent CORS (ಅಪವಾದ)    | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ಇದನ್ನೂ ನೋಡಿ
 

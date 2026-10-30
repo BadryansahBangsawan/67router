@@ -43,8 +43,6 @@
 - 🤝 **ارائهدهنده OAuth مربوط به GitLab Duo** — ورود با اعتبارنامههای GitLab
 - 🧠 **کش بازپخش استدلال** — ماندگاری ترکیبی ردپاهای استدلال در حافظه و SQLite
 
-📚 **مستندات مرتبط:** [چارچوب مهارتها](../frameworks/SKILLS.md) · [سیستم حافظه](../frameworks/MEMORY.md) · [عاملهای ابری](../frameworks/CLOUD_AGENT.md) · [وبهوکها](../frameworks/WEBHOOKS.md) · [کش بازپخش استدلال](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 ارائهدهندگان

@@ -69,20 +69,6 @@ barin CORS **preflight ya wuce** a routes na gudanarwa — waɗanda har yanzu su
 wanda shafi daga wani asali ba zai iya bayarwa ba. Wannan **ba** hanya ce ta sace zaman mai amfani ko
 satar bayanan shaida a hanyar CORS ta bai ɗaya ba.
 
-### Keɓantaccen yanayi guda ɗaya na gaske — `/api/v1/agents/`
-
-Routes na Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) suna saita
-headers na CORS **nasu**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) kuma **suna** fitar da
-`Access-Control-Allow-Origin: <origin>|*` tare da
-`Access-Control-Allow-Credentials: true`. Wannan shi ne surface guda ɗaya inda
-mayar da asali da credentials suke tare, kuma **ba ya dogara da
-`CORS_ALLOW_ALL`**. Waɗannan routes suna buƙatar auth na gudanarwa
-(`requireManagementAuth`); ya kamata masu gudanarwa da suke fallasa dashboard a wajen host su
-sani cewa wannan ne wuri guda ɗaya da headers na amsa suke ba da damar karatu mai shaida daga
-wani asali. Ana bin diddigin ƙuntata shi zuwa takamaiman jerin izini
-dabam da wannan jagorar CORS.
-
 ## Jerin dubawa na samarwa
 
 - **Kada ka taɓa saita `CORS_ALLOW_ALL=true` a yanayin samarwa.** Bar shi ba a saita ba.
@@ -153,15 +139,14 @@ Security tab), ba a cikin proxy ba.
 
 ## Fayilolin tushe
 
-| Abin da ya shafa                                 | Fayil                                                                |
-| ------------------------------------------------ | -------------------------------------------------------------------- |
-| Tantance allowlist + `getCorsStatus()`           | `src/server/cors/origins.ts`                                         |
-| Aiwatar da middleware (tushe guda na gaskiya)    | `src/server/authz/pipeline.ts`                                       |
-| Settings → saka asali na lokacin aiki            | `src/lib/config/runtimeSettings.ts`                                  |
-| Matsayin lokacin aiki don dashboard              | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Tutar gargaɗin dashboard                         | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| Filin CORS Allowed Origins                       | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS na kowace hanya na Cloud-Agent (keɓantacce) | `src/lib/cloudAgent/api.ts`                                          |
+| Abin da ya shafa                              | Fayil                                                                |
+| --------------------------------------------- | -------------------------------------------------------------------- |
+| Tantance allowlist + `getCorsStatus()`        | `src/server/cors/origins.ts`                                         |
+| Aiwatar da middleware (tushe guda na gaskiya) | `src/server/authz/pipeline.ts`                                       |
+| Settings → saka asali na lokacin aiki         | `src/lib/config/runtimeSettings.ts`                                  |
+| Matsayin lokacin aiki don dashboard           | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Tutar gargaɗin dashboard                      | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| Filin CORS Allowed Origins                    | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Duba kuma
 

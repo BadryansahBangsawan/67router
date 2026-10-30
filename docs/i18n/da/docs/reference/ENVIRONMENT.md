@@ -1360,11 +1360,11 @@ Genoprettelsens tilbageholdelsesadfærd styres af hardkodede konstanter i
 
 Giv brugerne mulighed for at rapportere problemer direkte fra dashboardet.
 
-| Variabel              | Standardværdi    | Kildefil                                        | Beskrivelse                                                                                                                                   |
-| --------------------- | ---------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(ikke angivet)_ | `src/app/api/v1/issues/report/route.ts`         | Repository i formatet `owner/repo`.                                                                                                           |
-| `GITHUB_ISSUES_TOKEN` | _(ikke angivet)_ | `src/app/api/v1/issues/report/route.ts`         | GitHub Personal Access Token med omfanget `issues:write`.                                                                                     |
-| `GITHUB_TOKEN`        | _(ikke angivet)_ | hjælperfunktioner til problemtriage/cloud-agent | Generisk GitHub-adgangstoken, der bruges som reserve for `GITHUB_ISSUES_TOKEN` og af cloud-agent-hjælpefunktionerne i `src/lib/cloudAgent/*`. |
+| Variabel              | Standardværdi    | Kildefil                                        | Beskrivelse                                                                                                                                                |
+| --------------------- | ---------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(ikke angivet)_ | `src/app/api/v1/issues/report/route.ts`         | Repository i formatet `owner/repo`.                                                                                                                        |
+| `GITHUB_ISSUES_TOKEN` | _(ikke angivet)_ | `src/app/api/v1/issues/report/route.ts`         | GitHub Personal Access Token med omfanget `issues:write`.                                                                                                  |
+| `GITHUB_TOKEN`        | _(ikke angivet)_ | hjælperfunktioner til problemtriage/cloud-agent | Generisk GitHub-adgangstoken, der bruges som reserve for `GITHUB_ISSUES_TOKEN` og af cloud-agent-hjælpefunktionerne i `src/lib/skills/githubCollector.ts`. |
 
 ---
 

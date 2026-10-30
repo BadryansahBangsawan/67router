@@ -121,4 +121,3 @@ sau o inferență reușită a furnizorului; acestea necesită un test de verific
 - [Contracte de lansare CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Instrumente CLI](../reference/CLI-TOOLS.md)
 - [Server A2A](./A2A-SERVER.md)
-- [Agenți cloud](./CLOUD_AGENT.md)

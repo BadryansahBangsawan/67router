@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 版本周期新增了零配置自动路由、新提供者、OA
 - 🤝 **GitLab Duo OAuth 提供者** — 使用 GitLab 凭据登录
 - 🧠 **推理重放缓存** — 采用内存与 SQLite 混合方式持久化推理轨迹
 
-📚 **相关文档：** [技能框架](../frameworks/SKILLS.md) · [记忆系统](../frameworks/MEMORY.md) · [云端代理](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [推理重放缓存](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 提供者

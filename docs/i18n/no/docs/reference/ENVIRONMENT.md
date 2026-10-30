@@ -1379,11 +1379,11 @@ Tilbakeholdingsatferden ved gjenoppretting justeres av hardkodede konstanter i
 
 La brukere rapportere problemer direkte fra dashbordet.
 
-| Variabel              | Standardverdi   | Kildefil                                              | Beskrivelse                                                                                                                                                  |
-| --------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(ikke angitt)_ | `src/app/api/v1/issues/report/route.ts`               | Repositorium i formatet `owner/repo`.                                                                                                                        |
-| `GITHUB_ISSUES_TOKEN` | _(ikke angitt)_ | `src/app/api/v1/issues/report/route.ts`               | Personlig GitHub-tilgangstoken med omfanget `issues:write`.                                                                                                  |
-| `GITHUB_TOKEN`        | _(ikke angitt)_ | problemklassifisering / hjelpefunksjoner for skyagent | Generisk GitHub-tilgangstoken som brukes som reserve for `GITHUB_ISSUES_TOKEN`, og som benyttes av hjelpefunksjoner for skyagenter i `src/lib/cloudAgent/*`. |
+| Variabel              | Standardverdi   | Kildefil                                              | Beskrivelse                                                                                                                                                               |
+| --------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(ikke angitt)_ | `src/app/api/v1/issues/report/route.ts`               | Repositorium i formatet `owner/repo`.                                                                                                                                     |
+| `GITHUB_ISSUES_TOKEN` | _(ikke angitt)_ | `src/app/api/v1/issues/report/route.ts`               | Personlig GitHub-tilgangstoken med omfanget `issues:write`.                                                                                                               |
+| `GITHUB_TOKEN`        | _(ikke angitt)_ | problemklassifisering / hjelpefunksjoner for skyagent | Generisk GitHub-tilgangstoken som brukes som reserve for `GITHUB_ISSUES_TOKEN`, og som benyttes av hjelpefunksjoner for skyagenter i `src/lib/skills/githubCollector.ts`. |
 
 ---
 

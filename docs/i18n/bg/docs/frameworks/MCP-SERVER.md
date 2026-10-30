@@ -246,17 +246,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ограничен до операции по маршрутизиране по време на изпълнение, кеширане, компресиране, памет, умения, прокси и източници на контекст. Две съседни
 платформи се доставят заедно с MCP сървъра във v3.8.0 и са документирани отделно:
 
-### Облачни агенти
-
-Облачните агенти са AI агенти за програмиране, изпълнявани извън процеса (codex-cloud, cursor-cloud, devin, jules), свързани с
-OmniRoute чрез същия модел за свързване, който се използва за доставчиците на LLM. Те са достъпни чрез
-собствен REST интерфейс (`/api/v1/agents/*`) и **не** са част от каталога с MCP инструменти
-— извикването на облачен агент не използва MCP обхват.
-
-- Реализация: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Жизнен цикъл: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Документация: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Предпазни механизми
 
 Предпазните механизми са филтри преди/след изпълнение (vision-bridge, pii-masker, prompt-injection),

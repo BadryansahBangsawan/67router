@@ -43,8 +43,6 @@ Cyklus v3.7.x → v3.8.0 přinesl automatické směrování bez nutnosti konfigu
 - 🤝 **Poskytovatel GitLab Duo OAuth** — přihlášení pomocí přihlašovacích údajů GitLab
 - 🧠 **Mezipaměť Reasoning Replay Cache** — hybridní uchovávání stop uvažování v paměti a v SQLite
 
-📚 **Související dokumentace:** [Framework dovedností](../frameworks/SKILLS.md) · [Paměťový systém](../frameworks/MEMORY.md) · [Cloudoví agenti](../frameworks/CLOUD_AGENT.md) · [Webhooky](../frameworks/WEBHOOKS.md) · [Mezipaměť Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Poskytovatelé

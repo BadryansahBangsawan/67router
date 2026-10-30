@@ -215,8 +215,6 @@ Ang client API key enforcement ay gumagamit ng `isRequireApiKeyEnabled()` sa `sr
 
 ## Breaking Change — v3.8.0
 
-Ang mga endpoint na `/api/v1/agents/tasks/*` at `/api/resilience/model-cooldowns` ay **nangangailangan na ngayon ng management auth** (commit `588a0333`). Ang mga client na dati ay nagpapadala ng karaniwang API key na walang `manage` scope ay makatatanggap ng `403`. Pag-migrate: italaga sa key ang `manage` scope sa API Keys dashboard, o gumamit ng naka-log-in na dashboard session.
-
 ## Pagbabago sa Gawi — v3.8.2
 
 Ang `/api/mcp/*` (ang remote MCP server) ay LOCAL_ONLY pa rin bilang default ngunit tumatanggap na ngayon ng mga non-loopback request kapag ang `Authorization: Bearer <api-key>` header ay may `manage` scope. Tahasang nililimitahan ang eksepsiyon sa bawat path sa pamamagitan ng `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` sa `src/server/authz/routeGuard.ts`; sadyang HINDI maaaring i-bypass ang kapatid na LOCAL_ONLY prefix na `/api/cli-tools/runtime/*` dahil maaari itong magsimula ng anumang subprocess. Patuloy na magbabalik ng `403 LOCAL_ONLY` ang mga anonymous na request sa `/api/mcp/*` mula sa non-loopback — nananatiling strict-loopback ang default para sa anumang bagong LOCAL_ONLY path. Tingnan ang [Mga Antas ng Route Guard](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

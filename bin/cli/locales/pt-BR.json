@@ -698,54 +698,6 @@
       "yes": "Pular confirmação"
     }
   },
-  "cloud": {
-    "description": "Gerenciar tarefas de agentes cloud de IA (codex, devin, jules)",
-    "agents": {
-      "description": "Listar agentes cloud disponíveis"
-    },
-    "agent": {
-      "description": "Gerenciar tarefas do agente cloud {agent}",
-      "auth": {
-        "description": "Autorizar {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Gerenciar tarefas de agentes cloud",
-      "create": {
-        "description": "Criar nova tarefa de agente",
-        "title": "Título da tarefa (padrão: primeiros 80 chars do prompt)",
-        "prompt": "Texto do prompt da tarefa",
-        "prompt_file": "Ler prompt de arquivo",
-        "repo": "URL do repositório para clonar na tarefa",
-        "branch": "Nome do branch a usar",
-        "metadata": "Objeto JSON de metadados"
-      },
-      "list": {
-        "description": "Listar tarefas de agentes",
-        "status": "Filtrar por status (running|completed|failed|cancelled)",
-        "limit": "Máximo de resultados (padrão: 50)"
-      },
-      "get": {
-        "description": "Obter detalhes da tarefa por ID"
-      },
-      "status": {
-        "description": "Exibir status da tarefa (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancelar uma tarefa em execução",
-        "yes": "Pular confirmação"
-      },
-      "approve": {
-        "description": "Aprovar o plano do agente para iniciar execução"
-      },
-      "message": {
-        "description": "Enviar mensagem para uma tarefa em execução"
-      }
-    },
-    "sources": {
-      "description": "Listar arquivos de origem produzidos por uma tarefa"
-    }
-  },
   "program": {
     "description": "OmniRoute — Roteador de IA com Fallback Automático",
     "version": "Exibir versão e sair",

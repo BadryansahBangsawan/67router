@@ -247,17 +247,6 @@ Yuqoridagi MCP vositalari inventari (110 ta noyob vosita, `countUniqueMcpTools()
 ish vaqtidagi marshrutlash/kesh/siqish/xotira/ko‘nikmalar/proksi/kontekst manbasi amallari bilan
 cheklangan. v3.8.0 versiyasida MCP serveri bilan birga ikkita yondosh freymvork taqdim etiladi va ular alohida hujjatlashtirilgan:
 
-### Bulut agentlari
-
-Bulut agentlari — LLM provayderlari uchun ishlatiladigan ulanish modeli orqali OmniRoute bilan
-bog‘langan, jarayondan tashqarida ishlovchi AI dasturlash agentlari (codex-cloud, cursor-cloud, devin, jules). Ular
-o‘zlarining REST interfeysi (`/api/v1/agents/*`) orqali taqdim etiladi va MCP vositalari katalogining
-qismi **emas** — Bulut agentini chaqirish MCP qo‘llanish doirasini sarflamaydi.
-
-- Amalga oshirish: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Hayot sikli: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Hujjatlar: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Himoya mexanizmlari
 
 Himoya mexanizmlari — chat konveyeri ichida qo‘llanadigan bajarilishdan oldingi/keyingi filtrlar

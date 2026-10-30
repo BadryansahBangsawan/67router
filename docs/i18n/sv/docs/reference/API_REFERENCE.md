@@ -1755,31 +1755,6 @@ Används av undersystemet för automatisk nyckelhantering för att utfärda och 
 
 ---
 
-## Agentprotokoll
-
-Molnagentuppgifter (Claude Code, Codex Cloud, OpenHands osv.) som körs på distans åt OmniRoute-användare.
-
-| Metod  | Sökväg                        | Beskrivning                                                                                                                                                  |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Lista uppgifter — valfria `?provider=`, `?status=`, `?limit=` (1–500, standardvärde 50)                                                                      |
-| POST   | `/api/v1/agents/tasks`        | Skapa uppgift — innehållet valideras av `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returnerar `201` med ett uppgiftsomslag |
-| DELETE | `/api/v1/agents/tasks?id=...` | Ta bort en uppgift                                                                                                                                           |
-| GET    | `/api/v1/agents/tasks/[id]`   | Läs uppgift — uppdaterar synkront statusen från den överordnade molnagenten när ett `external_id` har angetts                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskriminerad åtgärd: `{action: "approve"}`, `{action: "message", message}` eller `{action: "cancel"}`                                                       |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Ta bort en specifik uppgift efter ID                                                                                                                         |
-
-> **Autentisering:** hanteringsautentisering krävs för varje metod (`requireCloudAgentManagementAuth`). Före v3.8.0 var dessa oautentiserade — se incheckning `588a0333` för den bakåtinkompatibla ändringen.
-
-```bash
-# Skapa en Claude Code-molnuppgift
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Hanteringsproxyservrar
 
 Utgående HTTP(S)-/SOCKS-proxyservrar som kan tilldelas leverantörer, konton eller globalt.
@@ -2280,5 +2255,3 @@ Se [Autentisering för hantering](../guides/MANAGEMENT-AUTH.md) för de fyra typ
 - `requireLogin` kan aktiveras eller inaktiveras via `/api/settings/require-login`
 - `/v1/*`-rutter kan valfritt kräva en Bearer API-nyckel när `REQUIRE_API_KEY=true`
 - ”hanteringstoken”/”API-nyckel med hanteringsbehörighet” i denna referens avser någon av typerna i den guiden – inte en odefinierad extra typ av hemlighet
-
-> **Bakåtinkompatibel ändring (v3.8.0)** – `/api/v1/agents/tasks/*` och hanteringsändpunkterna för cooldown kräver nu **hanteringsautentisering** (dashboard-cookien `auth_token` eller en API-nyckel med hanteringsbehörighet). Klienter som tidigare anropade dessa rutter utan autentisering får nu `401 Unauthorized`. Se commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

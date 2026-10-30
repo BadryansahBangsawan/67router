@@ -698,54 +698,6 @@
       "yes": "Onay istemini atla"
     }
   },
-  "cloud": {
-    "description": "Bulut yapay zekâ aracısı görevlerini yönet (codex, devin, jules)",
-    "agents": {
-      "description": "Kullanılabilir bulut aracılarını listele"
-    },
-    "agent": {
-      "description": "{agent} bulut aracısı görevlerini yönet",
-      "auth": {
-        "description": "{agent} için OAuth üzerinden yetkilendirme yap"
-      }
-    },
-    "task": {
-      "description": "Bulut aracısı görevlerini yönet",
-      "create": {
-        "description": "Yeni bir aracı görevi oluştur",
-        "title": "Görev başlığı (varsayılan olarak istemin ilk 80 karakteri kullanılır)",
-        "prompt": "Görev istemi metni",
-        "prompt_file": "İstemi dosyadan oku",
-        "repo": "Görev için klonlanacak depo URL'si",
-        "branch": "Kullanılacak dal adı",
-        "metadata": "JSON meta veri nesnesi"
-      },
-      "list": {
-        "description": "Aracı görevlerini listele",
-        "status": "Duruma göre filtrele (running|completed|failed|cancelled)",
-        "limit": "Maksimum sonuç sayısı (varsayılan: 50)"
-      },
-      "get": {
-        "description": "Görev ayrıntılarını kimliğe göre getir"
-      },
-      "status": {
-        "description": "Görev durumunu yazdır (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Çalışan bir görevi iptal et",
-        "yes": "Onay istemini atla"
-      },
-      "approve": {
-        "description": "Yürütmeyi başlatmak için aracı planını onayla"
-      },
-      "message": {
-        "description": "Çalışan bir göreve mesaj gönder"
-      }
-    },
-    "sources": {
-      "description": "Bir görev tarafından oluşturulan kaynak dosyaları listele"
-    }
-  },
   "program": {
     "description": "OmniRoute — Otomatik Fallback ile Akıllı AI Yönlendirici",
     "version": "Sürümü yazdır ve çık",

@@ -123,4 +123,3 @@ sprioc-thimpeallacht dóibh sin.
 - [Conarthaí seolta CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Uirlisí CLI](../reference/CLI-TOOLS.md)
 - [Freastalaí A2A](./A2A-SERVER.md)
-- [Gníomhairí néil](./CLOUD_AGENT.md)

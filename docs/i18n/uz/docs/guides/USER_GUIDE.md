@@ -24,7 +24,6 @@ Provayderlarni sozlash, kombinatsiyalar yaratish, CLI vositalarini integratsiya 
 - [Koʻnikmalar tizimi](#-skills-system)
 - [Xotira tizimi](#-memory-system)
 - [Vebhuklar](#-webhooks)
-- [Bulutli agentlar](#-cloud-agents)
 - [Dasturiy boshqaruv](#-programmatic-management)
 - [Ichki CLI](#-internal-cli)
 - [Ish stoli ilovasi (Electron)](#-desktop-application-electron)
@@ -1276,18 +1275,6 @@ Real vaqt rejimida kuzatish va avtomatlashtirish uchun OmniRoute hodisalariga ob
 - Qayta urinishlar: eksponensial kechikish bilan 3 ta urinish, shundan keyin yetkazilmagan xabarlar navbatiga yuboriladi
 
 Toʻliq sxema [WEBHOOKS.md](../frameworks/WEBHOOKS.md) faylida.
-
----
-
-## ☁️ Bulut agentlari
-
-OmniRoute bulutli dasturlash agentlari (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) bilan integratsiyalashadi, shu sababli uzoq davom etadigan vazifalarni mahalliy marshrutlashni boshqaradigan oʻsha boshqaruv panelidan yuborishingiz mumkin.
-
-- Vazifalarni **Boshqaruv paneli → Bulut agentlari** orqali yoki `POST /api/v1/agents/tasks` yordamida yarating
-- Har bir vazifa boʻyicha holat, jurnallar va artefaktlarni kuzating
-- Har bir provayder uchun oʻz API kalitingizdan foydalaning — hisob maʼlumotlari OmniRoute instansiyasidan hech qachon tashqariga chiqmaydi
-
-Toʻliq maʼlumotnoma: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

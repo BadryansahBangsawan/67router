@@ -227,8 +227,6 @@ Vynucení klientského API klíče používá `isRequireApiKeyEnabled()` v `src/
 
 ## Zásadní změna — v3.8.0
 
-Koncové body `/api/v1/agents/tasks/*` a `/api/resilience/model-cooldowns` **nyní vyžadují ověření pro správu** (commit `588a0333`). Klienti, kteří dříve odesílali běžný klíč API bez rozsahu oprávnění `manage`, obdrží `403`. Migrace: buď klíči přidělte rozsah oprávnění `manage` na panelu API Keys, nebo použijte přihlášenou relaci panelu.
-
 ## Změna chování — v3.8.2
 
 `/api/mcp/*` (vzdálený server MCP) je ve výchozím nastavení stále LOCAL_ONLY, ale nyní přijímá požadavky mimo zpětnou smyčku, pokud hlavička `Authorization: Bearer <api-key>` obsahuje rozsah oprávnění `manage`. Tato výjimka je explicitně povolována pro jednotlivé cesty prostřednictvím `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` v `src/server/authz/routeGuard.ts`; související prefix LOCAL_ONLY `/api/cli-tools/runtime/*` záměrně nelze obejít, protože může spouštět libovolné podprocesy. Anonymní požadavky na `/api/mcp/*` mimo zpětnou smyčku nadále vracejí `403 LOCAL_ONLY` — výchozí nastavení pro každou novou cestu LOCAL_ONLY nadále striktně vyžaduje zpětnou smyčku. Viz [Úrovně ochrany tras](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

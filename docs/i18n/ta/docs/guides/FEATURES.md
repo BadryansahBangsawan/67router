@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 சுழற்சியில் உள்ளமைவு த
 - 🤝 **GitLab Duo OAuth வழங்குநர்** — GitLab சான்றுகளுடன் உள்நுழையலாம்
 - 🧠 **Reasoning Replay Cache** — பகுத்தறிவுத் தடங்களுக்கான நினைவகத்திலுள்ள + SQLite நிலைபேற்றத்தை ஒருங்கிணைக்கும் கலப்பு சேமிப்பு
 
-📚 **தொடர்புடைய ஆவணங்கள்:** [திறன்கள் கட்டமைப்பு](../frameworks/SKILLS.md) · [நினைவக அமைப்பு](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 வழங்குநர்கள்

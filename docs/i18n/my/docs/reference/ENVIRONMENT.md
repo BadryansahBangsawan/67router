@@ -1343,11 +1343,11 @@ recovery holdback အပြုအမူအား `open-sse/config/constants.ts` 
 
 အသုံးပြုသူများအား Dashboard မှတစ်ဆင့် ပြဿနာများကို တိုက်ရိုက်တင်ပြနိုင်စေသည်။
 
-| ကိန်းရှင်             | ပုံသေတန်ဖိုး    | ရင်းမြစ်ဖိုင်                                           | ဖော်ပြချက်                                                                                                                                        |
-| --------------------- | --------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(သတ်မှတ်မထား)_ | `src/app/api/v1/issues/report/route.ts`                 | `owner/repo` ဖော်မတ်ဖြင့် ရေးထားသော repository။                                                                                                   |
-| `GITHUB_ISSUES_TOKEN` | _(သတ်မှတ်မထား)_ | `src/app/api/v1/issues/report/route.ts`                 | `issues:write` scope ပါရှိသည့် GitHub Personal Access Token။                                                                                      |
-| `GITHUB_TOKEN`        | _(သတ်မှတ်မထား)_ | ပြဿနာအမျိုးအစားခွဲခြားခြင်း / cloud agent အကူကိရိယာများ | `GITHUB_ISSUES_TOKEN` အတွက် အရန်အဖြစ် အသုံးပြုပြီး `src/lib/cloudAgent/*` ရှိ cloud agent အကူကိရိယာများက အသုံးပြုသည့် ယေဘုယျ GitHub access token။ |
+| ကိန်းရှင်             | ပုံသေတန်ဖိုး    | ရင်းမြစ်ဖိုင်                                           | ဖော်ပြချက်                                                                                                                                                     |
+| --------------------- | --------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(သတ်မှတ်မထား)_ | `src/app/api/v1/issues/report/route.ts`                 | `owner/repo` ဖော်မတ်ဖြင့် ရေးထားသော repository။                                                                                                                |
+| `GITHUB_ISSUES_TOKEN` | _(သတ်မှတ်မထား)_ | `src/app/api/v1/issues/report/route.ts`                 | `issues:write` scope ပါရှိသည့် GitHub Personal Access Token။                                                                                                   |
+| `GITHUB_TOKEN`        | _(သတ်မှတ်မထား)_ | ပြဿနာအမျိုးအစားခွဲခြားခြင်း / cloud agent အကူကိရိယာများ | `GITHUB_ISSUES_TOKEN` အတွက် အရန်အဖြစ် အသုံးပြုပြီး `src/lib/skills/githubCollector.ts` ရှိ cloud agent အကူကိရိယာများက အသုံးပြုသည့် ယေဘုယျ GitHub access token။ |
 
 ---
 

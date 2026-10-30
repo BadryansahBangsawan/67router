@@ -128,7 +128,6 @@ v3.8.0 প্ল্যাটফর্মের প্রামাণ্য, স�
 - `/dashboard/limits` — কোটা/রেট নিয়ন্ত্রণ
 - `/dashboard/cli-tools` — CLI অনবোর্ডিং, রানটাইম শনাক্তকরণ ও কনফিগারেশন তৈরি
 - `/dashboard/agents` — শনাক্ত করা ACP এজেন্ট + কাস্টম এজেন্ট নিবন্ধন
-- `/dashboard/cloud-agents` — ক্লাউডে হোস্ট করা এজেন্ট টাস্ক (Codex Cloud, Devin, Jules) ও টাস্ক লাইফসাইকেল
 - `/dashboard/skills` — A2A স্কিল রেজিস্ট্রি, স্যান্ডবক্স এক্সিকিউশন ও বিল্ট-ইন স্কিল ক্যাটালগ
 - `/dashboard/memory` — স্থায়ী কথোপকথন মেমরি পরিদর্শন ও পুনরুদ্ধার
 - `/dashboard/webhooks` — আউটবাউন্ড ওয়েবহুক সাবস্ক্রিপশন, সিক্রেট রোটেশন ও পুনঃচেষ্টার পরিসংখ্যান
@@ -379,23 +378,6 @@ Auto Combo একটি স্থির combo সংজ্ঞার ওপর �
 
 অ্যালগরিদমের সম্পূর্ণ বিবরণের জন্য (ফ্যাক্টরের সূত্র, weight tuning), দেখুন
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)।
-
-### B. Cloud Agents
-
-Cloud Agents তৃতীয়-পক্ষের হোস্ট করা code-agent platform (Codex Cloud, Devin,
-Jules)-কে একটি অভিন্ন DB-সমর্থিত task lifecycle-এর আড়ালে আবৃত করে। সব task তৈরি ও
-পরিদর্শনের endpoint-এর জন্য management authentication প্রয়োজন।
-
-- মডিউল রুট: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, এবং `agents/`-এর অধীনে প্রতিটি agent-এর subdirectory)
-- প্রতিটি agent-এর implementation: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- পাবলিক endpointসমূহ: `/api/v1/agents/tasks/*` (তালিকা/তৈরি/আহরণ/বাতিল)
-- Management endpointসমূহ: `/api/cloud/*` (provisioning, status, batch)
-- ড্যাশবোর্ড: `/dashboard/cloud-agents`
-- স্টোরেজ: `cloud_agent_tasks` টেবিল
-
-প্রতিটি agent-এর provisioning এবং OAuth-সংক্রান্ত সুনির্দিষ্ট তথ্যের জন্য দেখুন
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)।
 
 ### C. Guardrails
 

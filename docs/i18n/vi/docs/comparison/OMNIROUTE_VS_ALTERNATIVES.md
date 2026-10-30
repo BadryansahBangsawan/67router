@@ -24,7 +24,6 @@ So sánh tính năng khách quan với các bộ định tuyến AI mã nguồn 
 | **Giao thức A2A**                                      |                ✅ 6 kỹ năng                 |       ❌        |        ❌         |      ❌       |
 | **Bộ nhớ (FTS5 + vector)**                             |                     ✅                      |       ❌        |        ❌         |      ❌       |
 | **Guardrails (PII, injection, thị giác)**              |                     ✅                      |    một phần     |        ❌         |  ✅ trả phí   |
-| **Tích hợp cloud agent**                               |         Codex, Cursor, Devin, Jules         |       ❌        |        ❌         |      ❌       |
 | **Circuit breaker theo từng nhà cung cấp**             |       ✅ 3 trạng thái, khôi phục lười       |     cơ bản      |        ❌         |      ✅       |
 | **Che dấu vân tay TLS (JA3/JA4)**                      |                 ✅ wreq-js                  |       ❌        |        ❌         |      ❌       |
 | **Framework đánh giá**                                 |               ✅ tích hợp sẵn               |       ❌        |        ❌         |   ⚠ trả phí   |

@@ -270,8 +270,6 @@ L'applicazione delle chiavi API client usa `isRequireApiKeyEnabled()` in `src/sh
 
 ## Modifica incompatibile — v3.8.0
 
-Gli endpoint `/api/v1/agents/tasks/*` e `/api/resilience/model-cooldowns` **ora richiedono l'autenticazione di gestione** (commit `588a0333`). I client che in precedenza inviavano una normale chiave API senza l'ambito `manage` ricevono `403`. Migrazione: assegnare alla chiave l'ambito `manage` nella dashboard delle chiavi API oppure utilizzare una sessione autenticata della dashboard.
-
 ## Modifica del comportamento — v3.8.2
 
 `/api/mcp/*` (il server MCP remoto) è ancora LOCAL_ONLY per impostazione predefinita, ma ora accetta richieste non di loopback quando l'header `Authorization: Bearer <api-key>` contiene l'ambito `manage`. L'eccezione viene abilitata esplicitamente per ogni percorso tramite `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` in `src/server/authz/routeGuard.ts`; il prefisso LOCAL_ONLY correlato `/api/cli-tools/runtime/*` intenzionalmente NON può essere escluso dalla restrizione, poiché può avviare sottoprocessi arbitrari. Le richieste anonime a `/api/mcp/*` provenienti da indirizzi non di loopback continuano a restituire `403 LOCAL_ONLY`: l'impostazione predefinita per qualsiasi nuovo percorso LOCAL_ONLY rimane rigorosamente limitata al loopback. Vedere [Livelli della protezione delle route](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

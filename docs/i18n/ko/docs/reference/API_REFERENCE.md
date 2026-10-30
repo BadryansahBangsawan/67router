@@ -1688,31 +1688,6 @@ OmniRoute 이벤트(요청 완료, 할당량 소진, 키 교체 등)를 위한 �
 
 ---
 
-## 에이전트 프로토콜
-
-OmniRoute 사용자를 대신하여 원격으로 실행되는 클라우드 에이전트 작업(Claude Code, Codex Cloud, OpenHands 등)입니다.
-
-| 메서드 | 경로                          | 설명                                                                                                                                                     |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | 작업 목록 — 선택적 `?provider=`, `?status=`, `?limit=`(1~500, 기본값 50)                                                                                 |
-| POST   | `/api/v1/agents/tasks`        | 작업 생성 — 요청 본문은 `CreateCloudAgentTaskSchema`(`providerId`, `prompt`, `source`, `options?`)로 검증됩니다. 작업 엔벌로프와 함께 `201`을 반환합니다 |
-| DELETE | `/api/v1/agents/tasks?id=...` | 작업 삭제                                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | 작업 조회 — `external_id`가 설정되어 있으면 업스트림 클라우드 에이전트에서 상태를 동기적으로 새로 고칩니다                                               |
-| POST   | `/api/v1/agents/tasks/[id]`   | 판별된 작업: `{action: "approve"}`, `{action: "message", message}` 또는 `{action: "cancel"}`                                                             |
-| DELETE | `/api/v1/agents/tasks/[id]`   | ID로 특정 작업 삭제                                                                                                                                      |
-
-> **인증:** 모든 메서드에 관리 인증이 필요합니다(`requireCloudAgentManagementAuth`). v3.8.0 이전에는 인증이 필요하지 않았습니다. 호환성이 깨지는 변경 사항은 커밋 `588a0333`을 참조하세요.
-
-```bash
-# Claude Code 클라우드 작업 생성
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## 관리 프록시
 
 공급자, 계정 또는 전역에 할당할 수 있는 아웃바운드 HTTP(S)/SOCKS 프록시입니다.
@@ -2216,5 +2191,3 @@ OmniRoute 플러그인(서드 파티 확장 기능)을 관리합니다.
 - `requireLogin`은 `/api/settings/require-login`을 통해 전환할 수 있습니다
 - `REQUIRE_API_KEY=true`인 경우 `/v1/*` 경로에 Bearer API 키가 필요할 수 있습니다
 - 이 참조 문서에서 "관리 토큰" / "관리 범위 API 키"는 해당 가이드에 설명된 유형 중 하나를 의미하며, 별도로 정의되지 않은 추가 비밀 유형을 의미하지 않습니다
-
-> **호환성을 깨는 변경 사항(v3.8.0)** — 이제 `/api/v1/agents/tasks/*` 및 쿨다운 관리 엔드포인트에는 **관리 인증**(대시보드 `auth_token` 쿠키 또는 관리 범위 API 키)이 필요합니다. 이전에 인증 없이 이러한 경로를 호출했던 클라이언트는 `401 Unauthorized`를 받게 됩니다. 커밋 `588a0333`(`fix(auth): require management auth for agent and cooldown APIs`)을 참조하세요.

@@ -69,20 +69,6 @@ ikke-legitimerte **lesinger** på tvers av opprinnelser av data som allerede er 
 en side fra en annen opprinnelse ikke kan oppgi. Det er **ikke** en vektor for øktkapring eller
 legitimasjonstyveri i den delte CORS-koden.
 
-### Ett reelt unntak — `/api/v1/agents/`
-
-Cloud-Agent-rutene (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) angir
-sine **egne** CORS-headere
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) og sender **faktisk**
-`Access-Control-Allow-Origin: <origin>|*` sammen med
-`Access-Control-Allow-Credentials: true`. Dette er den eneste overflaten der
-returnering av opprinnelsen og legitimasjon brukes samtidig, og den er **uavhengig av
-`CORS_ALLOW_ALL`**. Disse rutene er administrasjonsautentiserte
-(`requireManagementAuth`); operatører som eksponerer kontrollpanelet utenfor vertsmaskinen, bør være
-oppmerksomme på at dette er det eneste stedet der svarheaderne tillater en legitimert lesing på tvers av
-opprinnelser. Innstramming til en eksplisitt tillatelsesliste følges opp
-separat fra denne CORS-veiledningen.
-
 ## Sjekkliste for produksjon
 
 - **Sett aldri `CORS_ALLOW_ALL=true` i produksjon.** La den være udefinert.
@@ -161,7 +147,6 @@ fanen Security), ikke i proxyen.
 | Kjøretidsstatus for kontrollpanelet                | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Varselbanner i kontrollpanelet                     | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Feltet CORS Allowed Origins                        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS per rute for Cloud-Agent (unntaket)           | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Se også
 

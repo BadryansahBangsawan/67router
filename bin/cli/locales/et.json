@@ -698,54 +698,6 @@
       "yes": "Jäta kinnitusküsimus vahele"
     }
   },
-  "cloud": {
-    "description": "Halda pilve AI-agentide ülesandeid (codex, devin, jules)",
-    "agents": {
-      "description": "Loetle saadaolevad pilveagendid"
-    },
-    "agent": {
-      "description": "Halda {agent} pilveagendi ülesandeid",
-      "auth": {
-        "description": "Autoriseeri {agent} OAuth kaudu"
-      }
-    },
-    "task": {
-      "description": "Halda pilveagendi ülesandeid",
-      "create": {
-        "description": "Loo uus agendi ülesanne",
-        "title": "Ülesande pealkiri (vaikimisi vihje esimesed 80 tähemärki)",
-        "prompt": "Ülesande vihje tekst",
-        "prompt_file": "Loe vihje failist",
-        "repo": "Ülesande jaoks kloonitava hoidla URL",
-        "branch": "Kasutatava haru nimi",
-        "metadata": "JSON-metaandmete objekt"
-      },
-      "list": {
-        "description": "Loetle agendi ülesanded",
-        "status": "Filtreeri oleku alusel (running|completed|failed|cancelled)",
-        "limit": "Maksimaalne tulemuste arv (vaikimisi: 50)"
-      },
-      "get": {
-        "description": "Hangi ülesande üksikasjad ID järgi"
-      },
-      "status": {
-        "description": "Kuva ülesande olek (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Tühista käimasolev ülesanne",
-        "yes": "Jäta kinnitusküsimus vahele"
-      },
-      "approve": {
-        "description": "Kinnita agendi plaan täitmise alustamiseks"
-      },
-      "message": {
-        "description": "Saada sõnum käimasolevale ülesandele"
-      }
-    },
-    "sources": {
-      "description": "Kuva ülesande loodud lähtefailide loend"
-    }
-  },
   "program": {
     "description": "OmniRoute — nutikas AI ruuter automaatse tõrketaluvusega",
     "version": "Prindi versioon ja väljume",

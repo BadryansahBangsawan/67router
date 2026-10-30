@@ -29,7 +29,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "cli-code",
   "cli-agents",
   "acp-agents",
-  "cloud-agents",
   "conductor",
   "orchestration",
   "agent-bridge",

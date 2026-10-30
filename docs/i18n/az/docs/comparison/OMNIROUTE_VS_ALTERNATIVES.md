@@ -24,7 +24,6 @@ Populyar açıq mənbəli AI routerləri ilə obyektiv xüsusiyyət müqayisəsi
 | **A2A protokolu**                                   |                  ✅ 6 bacarıq                  |        ❌        |        ❌         |     ❌      |
 | **Yaddaş (FTS5 + vektor)**                          |                       ✅                       |        ❌        |        ❌         |     ❌      |
 | **Guardrails (PII, inyeksiya, görmə)**              |                       ✅                       |      qismən      |        ❌         | ✅ ödənişli |
-| **Bulud agent inteqrasiyaları**                     |          Codex, Cursor, Devin, Jules           |        ❌        |        ❌         |     ❌      |
 | **Hər provayder üzrə circuit breaker**              |          ✅ 3 vəziyyətli, lazy bərpa           |       əsas       |        ❌         |     ✅      |
 | **TLS barmaq izi gizliliyi (JA3/JA4)**              |                   ✅ wreq-js                   |        ❌        |        ❌         |     ❌      |
 | **Eval çərçivəsi**                                  |                   ✅ daxili                    |        ❌        |        ❌         | ⚠ ödənişli  |

@@ -698,54 +698,6 @@
       "yes": "Ruka ombi la uthibitisho"
     }
   },
-  "cloud": {
-    "description": "Dhibiti majukumu ya mawakala wa AI wa wingu (codex, devin, jules)",
-    "agents": {
-      "description": "Orodhesha mawakala wa wingu wanaopatikana"
-    },
-    "agent": {
-      "description": "Dhibiti majukumu ya wakala wa wingu wa {agent}",
-      "auth": {
-        "description": "Idhinisha {agent} kupitia OAuth"
-      }
-    },
-    "task": {
-      "description": "Dhibiti majukumu ya wakala wa wingu",
-      "create": {
-        "description": "Unda jukumu jipya la wakala",
-        "title": "Kichwa cha jukumu (chaguo-msingi ni herufi 80 za kwanza za kidokezo)",
-        "prompt": "Maandishi ya kidokezo cha jukumu",
-        "prompt_file": "Soma kidokezo kutoka kwenye faili",
-        "repo": "URL ya hazina ya kunakili kwa ajili ya jukumu",
-        "branch": "Jina la tawi la kutumia",
-        "metadata": "Kipengee cha metadata cha JSON"
-      },
-      "list": {
-        "description": "Orodhesha kazi za ajenti",
-        "status": "Chuja kwa hali (running|completed|failed|cancelled)",
-        "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 50)"
-      },
-      "get": {
-        "description": "Pata maelezo ya kazi kwa ID"
-      },
-      "status": {
-        "description": "Chapisha hali ya kazi (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Ghairi kazi inayoendelea",
-        "yes": "Ruka kidokezo cha uthibitishaji"
-      },
-      "approve": {
-        "description": "Idhinisha mpango wa ajenti ili kuanza utekelezaji"
-      },
-      "message": {
-        "description": "Tuma ujumbe kwa kazi inayoendelea"
-      }
-    },
-    "sources": {
-      "description": "Orodhesha faili chanzo zilizoundwa na kazi"
-    }
-  },
   "program": {
     "description": "OmniRoute — Kipanga Njia Mahiri cha AI chenye Njia Mbadala ya Kiotomatiki",
     "version": "Chapisha toleo na uondoke",

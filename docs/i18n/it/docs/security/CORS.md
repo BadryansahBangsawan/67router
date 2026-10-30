@@ -69,20 +69,6 @@ consentire il superamento del **preflight** CORS sulle route di gestione, che ri
 un'autenticazione che una pagina cross-origin non può fornire. **Non** costituisce un vettore per
 il dirottamento della sessione o il furto di credenziali nel percorso CORS condiviso.
 
-### Un'unica vera eccezione — `/api/v1/agents/`
-
-Le route Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) impostano
-i **propri** header CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ed emettono effettivamente
-`Access-Control-Allow-Origin: <origin>|*` insieme a
-`Access-Control-Allow-Credentials: true`. Questa è l'unica superficie in cui
-la restituzione dell'origine e le credenziali coesistono ed è **indipendente da
-`CORS_ALLOW_ALL`**. Queste route sono autenticate per la gestione
-(`requireManagementAuth`); gli operatori che espongono la dashboard all'esterno dell'host devono
-essere consapevoli che questo è l'unico punto in cui gli header della risposta consentono una lettura
-cross-origin con credenziali. La relativa restrizione a un'allowlist esplicita viene monitorata
-separatamente da queste indicazioni CORS.
-
 ## Checklist per la produzione
 
 - **Non impostare mai `CORS_ALLOW_ALL=true` in produzione.** Lascialo non impostato.
@@ -164,7 +150,6 @@ scheda Sicurezza), non nel proxy.
 | Stato a runtime per la dashboard                      | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Banner di avviso della dashboard                      | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Campo CORS Allowed Origins                            | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS per route di Cloud-Agent (l'eccezione)           | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Vedi anche
 

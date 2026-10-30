@@ -120,4 +120,3 @@ a célkörnyezetben.
 - [CLI-indítási szerződések](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-eszközök](../reference/CLI-TOOLS.md)
 - [A2A-kiszolgáló](./A2A-SERVER.md)
-- [Felhőalapú ügynökök](./CLOUD_AGENT.md)

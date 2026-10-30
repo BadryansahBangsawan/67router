@@ -78,21 +78,6 @@
 διάνυσμα υποκλοπής συνεδρίας ή κλοπής διαπιστευτηρίων στην κοινόχρηστη διαδρομή
 CORS.
 
-### Μία πραγματική εξαίρεση — `/api/v1/agents/`
-
-Οι διαδρομές Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)
-ορίζουν τις **δικές τους** κεφαλίδες CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) και **εκπέμπουν**
-`Access-Control-Allow-Origin: <origin>|*` μαζί με
-`Access-Control-Allow-Credentials: true`. Αυτή είναι η μοναδική επιφάνεια όπου
-συνυπάρχουν η επιστροφή της προέλευσης και τα διαπιστευτήρια και είναι
-**ανεξάρτητη από το `CORS_ALLOW_ALL`**. Αυτές οι διαδρομές διαθέτουν έλεγχο
-ταυτότητας διαχείρισης (`requireManagementAuth`)· οι διαχειριστές που εκθέτουν
-τον πίνακα ελέγχου εκτός του κεντρικού host θα πρέπει να γνωρίζουν ότι αυτό είναι
-το μοναδικό σημείο όπου οι κεφαλίδες απόκρισης επιτρέπουν διαπιστευμένη ανάγνωση
-μεταξύ διαφορετικών προελεύσεων. Ο περιορισμός του σε μια ρητή λίστα
-επιτρεπόμενων παρακολουθείται ξεχωριστά από αυτές τις οδηγίες CORS.
-
 ## Λίστα ελέγχου για περιβάλλον παραγωγής
 
 - **Μην ορίζετε ποτέ `CORS_ALLOW_ALL=true` σε περιβάλλον παραγωγής.** Αφήστε το χωρίς τιμή.
@@ -171,7 +156,6 @@ location / {
 | Κατάσταση εκτέλεσης για τον πίνακα ελέγχου              | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Banner προειδοποίησης πίνακα ελέγχου                    | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Πεδίο CORS Allowed Origins                              | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS ανά διαδρομή του Cloud-Agent (η εξαίρεση)          | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Δείτε επίσης
 

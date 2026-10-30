@@ -2493,14 +2493,6 @@
       "count": 3
     }
   },
-  "tests/unit/cli-cloud-commands.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 18
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 6
-    }
-  },
   "tests/unit/cli-combo-suggest-commands.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 14
@@ -2751,11 +2743,6 @@
   "tests/unit/cliproxyapi-executor.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 3
-    }
-  },
-  "tests/unit/cloud-agent-cursor-4227.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 2
     }
   },
   "tests/unit/cloudflare-models-uuid-4259.test.ts": {

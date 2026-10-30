@@ -235,17 +235,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ランタイムのルーティング、キャッシュ、圧縮、メモリ、スキル、プロキシ、コンテキストソース操作に限定されています。v3.8.0では、
 隣接する2つのフレームワークがMCPサーバーとともに提供されており、それぞれ個別にドキュメント化されています。
 
-### クラウドエージェント
-
-クラウドエージェントは、LLMプロバイダーに使用されるものと同じ接続モデルを通じて
-OmniRouteに統合された、プロセス外のAIコーディングエージェント（codex-cloud、cursor-cloud、devin、jules）です。これらは
-独自のRESTインターフェース（`/api/v1/agents/*`）を介して公開され、MCPツールカタログには**含まれません**
-— クラウドエージェントを呼び出してもMCPスコープは消費されません。
-
-- 実装：`src/lib/cloudAgent/`（`registry.ts`、`agents/codex.ts`、`agents/cursor.ts`、`agents/devin.ts`、`agents/jules.ts`）。
-- ライフサイクル：`createTask`、`getStatus`、`approvePlan`、`sendMessage`、`listSources`。
-- ドキュメント：[docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)。
-
 ### ガードレール
 
 ガードレールは、チャットパイプライン内で適用される実行前後のフィルター（vision-bridge、pii-masker、prompt-injection）です。

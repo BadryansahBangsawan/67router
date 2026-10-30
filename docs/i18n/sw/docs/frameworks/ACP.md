@@ -125,4 +125,3 @@ lililoidhinishwa katika mazingira lengwa.
 - [Mikataba ya uzinduzi wa CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Zana za CLI](../reference/CLI-TOOLS.md)
 - [Seva ya A2A](./A2A-SERVER.md)
-- [Mawakala wa wingu](./CLOUD_AGENT.md)

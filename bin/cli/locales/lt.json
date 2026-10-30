@@ -698,54 +698,6 @@
       "yes": "Praleisti patvirtinimo užklausą"
     }
   },
-  "cloud": {
-    "description": "Tvarkyti debesijos DI agentų užduotis (codex, devin, jules)",
-    "agents": {
-      "description": "Rodyti galimus debesijos agentus"
-    },
-    "agent": {
-      "description": "Tvarkyti {agent} debesijos agento užduotis",
-      "auth": {
-        "description": "Autorizuoti {agent} naudojant OAuth"
-      }
-    },
-    "task": {
-      "description": "Tvarkyti debesijos agentų užduotis",
-      "create": {
-        "description": "Sukurti naują agento užduotį",
-        "title": "Užduoties pavadinimas (numatytoji reikšmė – pirmieji 80 užklausos simbolių)",
-        "prompt": "Užklausos tekstas",
-        "prompt_file": "Skaityti užklausą iš failo",
-        "repo": "Saugyklos URL, skirtas klonuoti užduočiai",
-        "branch": "Naudotinos šakos pavadinimas",
-        "metadata": "JSON metaduomenų objektas"
-      },
-      "list": {
-        "description": "Rodyti agentų užduotis",
-        "status": "Filtruoti pagal būseną (running|completed|failed|cancelled)",
-        "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 50)"
-      },
-      "get": {
-        "description": "Gauti išsamią užduoties informaciją pagal ID"
-      },
-      "status": {
-        "description": "Išvesti užduoties būseną (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Atšaukti vykdomą užduotį",
-        "yes": "Praleisti patvirtinimo raginimą"
-      },
-      "approve": {
-        "description": "Patvirtinti agento planą ir pradėti vykdymą"
-      },
-      "message": {
-        "description": "Siųsti pranešimą vykdomai užduočiai"
-      }
-    },
-    "sources": {
-      "description": "Rodyti užduoties sugeneruotų šaltinio failų sąrašą"
-    }
-  },
   "program": {
     "description": "OmniRoute — išmanusis DI maršruto parinktuvas su automatiniu atsarginiu perjungimu",
     "version": "Parodyti versiją ir išeiti",

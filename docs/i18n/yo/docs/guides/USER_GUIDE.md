@@ -24,7 +24,6 @@
 - [Ètò Àwọn Òye](#-skills-system)
 - [Ètò Ìrántí](#-memory-system)
 - [Àwọn Webhook](#-webhooks)
-- [Àwọn Aṣojú Àwọsánmà](#-cloud-agents)
 - [Ìṣàkóso Nípasẹ̀ Ètò](#-programmatic-management)
 - [CLI Abẹ́nú](#-internal-cli)
 - [Ohun Èlò Orí Kọ̀ǹpútà (Electron)](#-desktop-application-electron)
@@ -1273,18 +1272,6 @@ Forúkọ sílẹ̀ fún àwọn ìṣẹ̀lẹ̀ OmniRoute láti ṣe àbójút
 - Àwọn àtúngbìyànjú: ìgbìyànjú mẹ́ta pẹ̀lú ìdádúró tó ń pọ̀ sí i lọ́nà exponential, lẹ́yìn náà a ó fi sí dead-letter queue
 
 Schema kíkún wà ní [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Àwọn Aṣojú Cloud
-
-OmniRoute ń ṣiṣẹ́ pọ̀ mọ́ àwọn aṣojú ìkọ̀wé kóòdù lórí cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) kí o lè rán àwọn iṣẹ́ tó máa gba àkókò gígùn láti dashboard kan náà tó ń ṣàkóso routing abẹ́lé rẹ.
-
-- Ṣẹ̀dá àwọn iṣẹ́ ní **Dashboard → Cloud Agents** tàbí nípasẹ̀ `POST /api/v1/agents/tasks`
-- Tọpinpin ipò, àwọn log, àti àwọn artifact fún iṣẹ́ kọ̀ọ̀kan
-- Mú kọ́kọ́rọ́ API tìrẹ fún provider kọ̀ọ̀kan — àwọn credential kì í fi instance OmniRoute sílẹ̀ láéláé
-
-Ìtọ́kasí kíkún: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

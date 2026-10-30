@@ -1756,31 +1756,6 @@ Ginagamit ng subsystem para sa awtomatikong pamamahala ng key upang mag-isyu at 
 
 ---
 
-## Protocol ng mga Agent
-
-Mga gawain ng cloud agent (Claude Code, Codex Cloud, OpenHands, atbp.) na isinasagawa nang malayuan para sa mga user ng OmniRoute.
-
-| Paraan | Path                          | Paglalarawan                                                                                                                                                           |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Ilista ang mga gawain — opsyonal ang `?provider=`, `?status=`, `?limit=` (1–500, default na 50)                                                                        |
-| POST   | `/api/v1/agents/tasks`        | Gumawa ng gawain — bina-validate ang body ng `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Nagbabalik ng `201` kasama ang task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | Magtanggal ng gawain                                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | Basahin ang gawain — sabayang nire-refresh ang status mula sa upstream cloud agent kapag nakatakda ang `external_id`                                                   |
-| POST   | `/api/v1/agents/tasks/[id]`   | Discriminated action: `{action: "approve"}`, `{action: "message", message}`, o `{action: "cancel"}`                                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Magtanggal ng partikular na gawain ayon sa id                                                                                                                          |
-
-> **Auth:** kinakailangan ang management auth sa bawat paraan (`requireCloudAgentManagementAuth`). Bago ang v3.8.0, walang authentication ang mga ito — tingnan ang commit `588a0333` para sa breaking change.
-
-```bash
-# Gumawa ng Claude Code cloud task
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Mga Management Proxy
 
 Mga outbound HTTP(S)/SOCKS proxy na maaaring italaga sa mga provider, account, o sa buong sistema.
@@ -2283,5 +2258,3 @@ Token, API key na may saklaw na manage) at kung paano naiiba ang mga ito sa mga 
 - Maaaring i-toggle ang `requireLogin` sa pamamagitan ng `/api/settings/require-login`
 - Opsyonal na nangangailangan ang mga rutang `/v1/*` ng Bearer API key kapag `REQUIRE_API_KEY=true`
 - Ang "token sa pamamahala" / "API key na may saklaw sa pamamahala" sa sangguniang ito ay tumutukoy sa isa sa mga pamilya sa gabay na iyon — hindi sa isang hindi tinukoy na karagdagang uri ng lihim
-
-> **Pagbabagong hindi backward-compatible (v3.8.0)** — Nangangailangan na ngayon ang `/api/v1/agents/tasks/*` at ang mga endpoint sa pamamahala ng cooldown ng **pagpapatunay sa pamamahala** (cookie na `auth_token` ng dashboard o API key na may saklaw sa pamamahala). Makakatanggap ang mga client na dating tumatawag sa mga rutang ito nang walang pagpapatunay ng `401 Unauthorized`. Tingnan ang commit na `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

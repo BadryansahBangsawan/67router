@@ -1741,31 +1741,6 @@ Użati mis-subsistema tal-ġestjoni awtomatika taċ-ċwievet biex toħroġ u dda
 
 ---
 
-## Protokoll tal-Aġenti
-
-Kompiti tal-aġenti fil-cloud (Claude Code, Codex Cloud, OpenHands, eċċ.) eżegwiti mill-bogħod f’isem l-utenti ta’ OmniRoute.
-
-| Metodu | Mogħdija                      | Deskrizzjoni                                                                                                                                                    |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Elenka l-kompiti — `?provider=`, `?status=`, `?limit=` fakultattivi (1–500, valur predefinit 50)                                                                |
-| POST   | `/api/v1/agents/tasks`        | Oħloq kompitu — il-body jiġi vvalidat minn `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Jirritorna `201` bl-envelop tal-kompitu |
-| DELETE | `/api/v1/agents/tasks?id=...` | Ħassar kompitu                                                                                                                                                  |
-| GET    | `/api/v1/agents/tasks/[id]`   | Aqra kompitu — jaġġorna b’mod sinkroniku l-istatus mill-aġent cloud upstream meta jkun issettjat `external_id`                                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Azzjoni diskriminata: `{action: "approve"}`, `{action: "message", message}`, jew `{action: "cancel"}`                                                           |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Ħassar kompitu speċifiku skont l-id                                                                                                                             |
-
-> **Awtentikazzjoni:** awtentikazzjoni tal-ġestjoni meħtieġa għal kull metodu (`requireCloudAgentManagementAuth`). Qabel v3.8.0 dawn ma kinux awtentikati — ara l-commit `588a0333` għall-bidla li tikser il-kompatibbiltà.
-
-```bash
-# Oħloq kompitu cloud ta’ Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxies tal-Ġestjoni
 
 Proxies HTTP(S)/SOCKS ħerġin li jistgħu jiġu assenjati lil fornituri, kontijiet, jew globalment.
@@ -2271,5 +2246,3 @@ ta’ Aċċess `oma_live_…`, ċavetta API bl-ambitu tal-ġestjoni) u kif dawn 
 - `requireLogin` jista’ jiġi attivat jew diżattivat permezz ta’ `/api/settings/require-login`
 - Ir-rotot `/v1/*` jistgħu jeħtieġu b’mod fakultattiv ċavetta API Bearer meta `REQUIRE_API_KEY=true`
 - “token tal-ġestjoni” / “ċavetta API bl-ambitu tal-ġestjoni” f’din ir-referenza tfisser waħda mill-familji f’dik il-gwida — mhux tip addizzjonali ta’ sigriet mhux definit
-
-> **Bidla inkompatibbli (v3.8.0)** — `/api/v1/agents/tasks/*` u l-endpoints tal-ġestjoni tal-cooldown issa jeħtieġu **awtentikazzjoni tal-ġestjoni** (cookie `auth_token` tad-dashboard jew ċavetta API bl-ambitu tal-ġestjoni). Il-klijenti li qabel kienu jsejħu dawn ir-rotot mingħajr awtentikazzjoni se jirċievu `401 Unauthorized`. Ara l-commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

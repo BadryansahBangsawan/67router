@@ -1761,31 +1761,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## פרוטוקול סוכנים
-
-משימות סוכן בענן (Claude Code, Codex Cloud, OpenHands וכו׳) המבוצעות מרחוק עבור משתמשי OmniRoute.
-
-| שיטה   | נתיב                          | תיאור                                                                                                                                          |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | הצגת רשימת משימות — הפרמטרים `?provider=`, `?status=`, `?limit=` הם אופציונליים (1–500, ברירת מחדל 50)                                         |
-| POST   | `/api/v1/agents/tasks`        | יצירת משימה — גוף הבקשה מאומת באמצעות `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). מחזיר `201` עם מעטפת המשימה |
-| DELETE | `/api/v1/agents/tasks?id=...` | מחיקת משימה                                                                                                                                    |
-| GET    | `/api/v1/agents/tasks/[id]`   | קריאת משימה — מרענן באופן סינכרוני את הסטטוס מסוכן הענן במעלה הזרם כאשר מוגדר `external_id`                                                    |
-| POST   | `/api/v1/agents/tasks/[id]`   | פעולה מובחנת: `{action: "approve"}`, `{action: "message", message}`, או `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | מחיקת משימה מסוימת לפי מזהה                                                                                                                    |
-
-> **אימות:** נדרש אימות ניהולי בכל שיטה (`requireCloudAgentManagementAuth`). לפני v3.8.0 נקודות קצה אלה לא דרשו אימות — ראו commit `588a0333` לפרטים על השינוי השובר.
-
-```bash
-# יצירת משימת ענן של Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## שרתי Proxy ניהוליים
 
 שרתי Proxy יוצאים מסוג HTTP(S)/SOCKS שניתן להקצות לספקים, לחשבונות או באופן גלובלי.
@@ -2291,5 +2266,3 @@ devin-cli וכדומה). לרשימה המלאה, ראו [חומר עזר בנו
 - ניתן להפעיל או להשבית את `requireLogin` דרך `/api/settings/require-login`
 - נתיבי `/v1/*` דורשים באופן אופציונלי מפתח API מסוג Bearer כאשר `REQUIRE_API_KEY=true`
 - „אסימון ניהול” / „מפתח API בהיקף ניהול” במסמך עזר זה פירושם אחת מהמשפחות שבמדריך זה — ולא סוג נוסף ובלתי מוגדר של סוד
-
-> **שינוי שובר תאימות (v3.8.0)** — הנתיבים `/api/v1/agents/tasks/*` ונקודות הקצה לניהול תקופת הצינון דורשים כעת **אימות לניהול** (קובץ Cookie מסוג `auth_token` של לוח המחוונים או מפתח API בהיקף ניהול). לקוחות שקראו בעבר לנתיבים אלה ללא אימות יקבלו `401 Unauthorized`. ראו את ה-commit ‏`588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -1714,31 +1714,6 @@ OmniRoute イベント（リクエスト完了、クォータ枯渇、キーの�
 
 ---
 
-## エージェントプロトコル
-
-OmniRoute ユーザーに代わってリモートで実行されるクラウドエージェントタスク（Claude Code、Codex Cloud、OpenHands など）。
-
-| メソッド | パス                          | 説明                                                                                                                                                                      |
-| -------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET      | `/api/v1/agents/tasks`        | タスクを一覧表示 — オプションで `?provider=`、`?status=`、`?limit=`（1～500、デフォルトは50）を指定可能                                                                   |
-| POST     | `/api/v1/agents/tasks`        | タスクを作成 — リクエストボディは `CreateCloudAgentTaskSchema`（`providerId`、`prompt`、`source`、`options?`）で検証されます。タスクエンベロープとともに `201` を返します |
-| DELETE   | `/api/v1/agents/tasks?id=...` | タスクを削除                                                                                                                                                              |
-| GET      | `/api/v1/agents/tasks/[id]`   | タスクを取得 — `external_id` が設定されている場合、上流のクラウドエージェントからステータスを同期的に更新します                                                           |
-| POST     | `/api/v1/agents/tasks/[id]`   | 識別アクション：`{action: "approve"}`、`{action: "message", message}`、または `{action: "cancel"}`                                                                        |
-| DELETE   | `/api/v1/agents/tasks/[id]`   | ID を指定して特定のタスクを削除                                                                                                                                           |
-
-> **認証：** すべてのメソッドで管理認証（`requireCloudAgentManagementAuth`）が必要です。v3.8.0 より前は認証されていませんでした — 破壊的変更についてはコミット `588a0333` を参照してください。
-
-```bash
-# Claude Codeクラウドタスクを作成
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## 管理プロキシ
 
 プロバイダー、アカウント、またはグローバルに割り当て可能な送信 HTTP(S)/SOCKS プロキシ。
@@ -2239,5 +2214,3 @@ OmniRoute プラグイン（サードパーティ製拡張機能）を管理し�
 - `requireLogin` は `/api/settings/require-login` で切り替え可能です
 - `REQUIRE_API_KEY=true` の場合、`/v1/*` ルートでは必要に応じて Bearer API キーが要求されます
 - このリファレンスにおける「管理トークン」または「管理スコープの API キー」とは、そのガイドに記載されている認証情報ファミリーのいずれかを指し、未定義の追加シークレット種別を意味するものではありません
-
-> **破壊的変更（v3.8.0）** — `/api/v1/agents/tasks/*` およびクールダウン管理エンドポイントでは、**管理認証**（ダッシュボードの `auth_token` Cookie または管理スコープの API キー）が必須になりました。これまで認証なしでこれらのルートを呼び出していたクライアントには、`401 Unauthorized` が返されます。コミット `588a0333`（`fix(auth): require management auth for agent and cooldown APIs`）を参照してください。

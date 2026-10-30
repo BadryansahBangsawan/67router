@@ -43,8 +43,6 @@ Cyklussen v3.7.x → v3.8.0 tilføjede automatisk routing uden konfiguration, ny
 - 🤝 **GitLab Duo OAuth-udbyder** — log ind med GitLab-legitimationsoplysninger
 - 🧠 **Reasoning Replay Cache** — hybrid lagring af ræsonnementsspor i hukommelsen og SQLite
 
-📚 **Relateret dokumentation:** [Kompetencerammeværk](../frameworks/SKILLS.md) · [Hukommelsessystem](../frameworks/MEMORY.md) · [Cloud-agenter](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Udbydere

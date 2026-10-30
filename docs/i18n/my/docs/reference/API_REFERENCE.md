@@ -1690,31 +1690,6 @@ OmniRoute ဖြစ်ရပ်များ (တောင်းဆိုမှ�
 
 ---
 
-## Agent များဆိုင်ရာ ပရိုတိုကော
-
-OmniRoute အသုံးပြုသူများကိုယ်စား အဝေးမှ လုပ်ဆောင်သည့် cloud agent လုပ်ဆောင်ချက်များ (Claude Code, Codex Cloud, OpenHands စသည်တို့)။
-
-| မက်သဒ် | လမ်းကြောင်း                   | ဖော်ပြချက်                                                                                                                                                                                  |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | လုပ်ဆောင်ချက်များကို စာရင်းပြုစုရန် — `?provider=`, `?status=`, `?limit=` (1–500၊ မူလသတ်မှတ်ချက် 50) တို့ကို ရွေးချယ်ထည့်နိုင်သည်                                                           |
-| POST   | `/api/v1/agents/tasks`        | လုပ်ဆောင်ချက် ဖန်တီးရန် — body ကို `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ဖြင့် အတည်ပြုစစ်ဆေးသည်။ လုပ်ဆောင်ချက် envelope နှင့်အတူ `201` ကို ပြန်ပေးသည် |
-| DELETE | `/api/v1/agents/tasks?id=...` | လုပ်ဆောင်ချက်တစ်ခုကို ဖျက်ရန်                                                                                                                                                               |
-| GET    | `/api/v1/agents/tasks/[id]`   | လုပ်ဆောင်ချက်ကို ဖတ်ရန် — `external_id` သတ်မှတ်ထားသောအခါ upstream cloud agent ထံမှ အခြေအနေကို တစ်ပြိုင်တည်း ပြန်လည်ရယူမွမ်းမံသည်                                                            |
-| POST   | `/api/v1/agents/tasks/[id]`   | ခွဲခြားသတ်မှတ်ထားသော လုပ်ဆောင်မှု — `{action: "approve"}`, `{action: "message", message}` သို့မဟုတ် `{action: "cancel"}`                                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | သီးခြားလုပ်ဆောင်ချက်တစ်ခုကို id ဖြင့် ဖျက်ရန်                                                                                                                                               |
-
-> **အထောက်အထားစိစစ်ခြင်း:** မက်သဒ်တိုင်းတွင် စီမံခန့်ခွဲမှုဆိုင်ရာ အထောက်အထားစိစစ်ခြင်း လိုအပ်သည် (`requireCloudAgentManagementAuth`)။ v3.8.0 မတိုင်မီတွင် ၎င်းတို့သည် အထောက်အထားစိစစ်ခြင်း မရှိခဲ့ပါ — အပြောင်းအလဲကြီးအတွက် commit `588a0333` ကို ကြည့်ပါ။
-
-```bash
-# Claude Code cloud လုပ်ဆောင်ချက်တစ်ခုကို ဖန်တီးရန်
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## စီမံခန့်ခွဲမှု Proxy များ
 
 Provider များ၊ account များ သို့မဟုတ် ကမ္ဘာလုံးဆိုင်ရာအဖြစ် သတ်မှတ်ပေးနိုင်သည့် အထွက် HTTP(S)/SOCKS proxy များ။
@@ -2219,5 +2194,3 @@ Token၊ manage-scoped API key) နှင့် ၎င်းတို့က infe
 - `requireLogin` ကို `/api/settings/require-login` မှတစ်ဆင့် ဖွင့်/ပိတ်နိုင်သည်
 - `REQUIRE_API_KEY=true` ဖြစ်သည့်အခါ `/v1/*` route များသည် Bearer API key ကို လိုအပ်နိုင်သည်
 - ဤကိုးကားချက်ရှိ "စီမံခန့်ခွဲမှု token" / "စီမံခန့်ခွဲမှုနယ်ပယ်သတ်မှတ်ထားသော API key" ဆိုသည်မှာ အဆိုပါလမ်းညွှန်ရှိ အမျိုးအစားများထဲမှ တစ်မျိုးကို ဆိုလိုခြင်းဖြစ်ပြီး—သတ်မှတ်မထားသည့် ထပ်ဆောင်း secret အမျိုးအစားကို မဆိုလိုပါ
-
-> **လိုက်ဖက်ညီမှုကို ချိုးဖောက်သော ပြောင်းလဲမှု (v3.8.0)** — `/api/v1/agents/tasks/*` နှင့် cooldown စီမံခန့်ခွဲမှု endpoint များသည် ယခုအခါ **စီမံခန့်ခွဲမှုဆိုင်ရာ စစ်မှန်ကြောင်းအတည်ပြုမှု** (dashboard `auth_token` cookie သို့မဟုတ် စီမံခန့်ခွဲမှုနယ်ပယ်သတ်မှတ်ထားသော API key) ကို လိုအပ်သည်။ ယခင်က ဤ route များကို စစ်မှန်ကြောင်းအတည်ပြုမှုမရှိဘဲ ခေါ်ဆိုခဲ့သည့် client များသည် `401 Unauthorized` ကို လက်ခံရရှိမည်ဖြစ်သည်။ commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) ကို ကြည့်ပါ။

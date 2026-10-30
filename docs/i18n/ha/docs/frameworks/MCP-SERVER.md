@@ -246,17 +246,6 @@ Jerin kayan aikin MCP da ke sama (kayan aiki na musamman 110, waɗanda `countUni
 zuwa ayyukan sarrafa hanya/cache/matsawa/ƙwaƙwalwa/ƙwarewa/proxy/tushen mahallin lokacin aiki. Wasu tsaruka biyu masu alaƙa
 ana jigilar su tare da sabar MCP a v3.8.0 kuma an rubuta takardunsu daban:
 
-### Wakilan Cloud
-
-Wakilan Cloud su ne wakilan rubuta lambar AI masu aiki a wajen tsarin (codex-cloud, cursor-cloud, devin, jules) waɗanda aka haɗa da
-OmniRoute ta hanyar tsarin haɗi iri ɗaya da ake amfani da shi ga masu samar da LLM. Ana samar da damar amfani da su ta
-nasu REST (`/api/v1/agents/*`) kuma **ba sa** cikin kasidar kayan aikin MCP
-— kiran Wakilin Cloud ba ya cin wani iyakar MCP.
-
-- Aiwatarwa: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Zagayen rayuwa: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Takardu: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Matakan Kariya
 
 Matakan Kariya matatu ne na kafin/bayan aiwatarwa (vision-bridge, pii-masker, prompt-injection)

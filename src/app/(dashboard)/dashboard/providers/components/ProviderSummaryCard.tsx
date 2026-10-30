@@ -26,7 +26,6 @@ export interface ProviderSummaryStats {
   audio: SummaryStat;
   local: SummaryStat;
   upstreamproxy: SummaryStat;
-  cloudagent: SummaryStat;
   ide: SummaryStat;
   webfetch: SummaryStat;
 }
@@ -167,12 +166,6 @@ export default function ProviderSummaryCard({
       color: "bg-emerald-500",
       label: providerText(t, "categoryLocal", "Local"),
       stat: summaryStats.local,
-    },
-    {
-      key: "cloudagent",
-      color: "bg-violet-500",
-      label: providerText(t, "categoryCloudAgent", "Cloud Agent"),
-      stat: summaryStats.cloudagent,
     },
   ].filter((category) => category.key !== "no-auth" || category.stat.total > 0);
 

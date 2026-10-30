@@ -67,7 +67,6 @@ test("primary sidebar items place limits after cache", () => {
       "cli-code",
       "cli-agents",
       "acp-agents",
-      "cloud-agents",
       "conductor",
       "orchestration", // +1: orchestration (PR-2 of the orchestration canvas)
       "agent-bridge",

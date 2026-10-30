@@ -68,20 +68,6 @@ CORS-**esitarkistuspyyntöjen läpäiseminen** hallintareiteillä — jotka edel
 jota eri alkuperässä oleva sivu ei voi toimittaa. Tämä **ei** muodosta istunnon kaappaus- tai
 tunnistetietojen varastamisriskiä yhteisellä CORS-polulla.
 
-### Yksi todellinen poikkeus — `/api/v1/agents/`
-
-Cloud-Agent-reitit (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) asettavat
-**omat** CORS-otsakkeensa
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ja **lähettävät**
-`Access-Control-Allow-Origin: <origin>|*`-otsakkeen yhdessä
-`Access-Control-Allow-Credentials: true` -otsakkeen kanssa. Tämä on ainoa rajapinta, jossa
-alkuperän palauttaminen ja tunnistetiedot esiintyvät yhdessä, ja se on **riippumaton
-`CORS_ALLOW_ALL`**-asetuksesta. Nämä reitit todennetaan hallintatunnuksilla
-(`requireManagementAuth`); hallintapaneelin isäntäkoneen ulkopuolelle tuovien ylläpitäjien tulisi
-tiedostaa, että tämä on ainoa kohta, jossa vastausotsakkeet sallivat tunnistetietoja sisältävän
-vastauksen lukemisen eri alkuperästä. Sen rajaamista nimenomaiseen sallittujen luetteloon seurataan
-erillään tästä CORS-ohjeistuksesta.
-
 ## Tuotantoympäristön tarkistuslista
 
 - **Älä koskaan aseta tuotantoympäristössä arvoa `CORS_ALLOW_ALL=true`.** Jätä se määrittämättä.
@@ -160,7 +146,6 @@ Security-välilehti), älä välityspalvelimessa.
 | Hallintapaneelin ajonaikainen tila                  | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Hallintapaneelin varoitusbanneri                    | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins -kenttä                        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agentin reittikohtainen CORS (poikkeus)       | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Katso myös
 

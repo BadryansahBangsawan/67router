@@ -43,8 +43,6 @@
 - 🤝 **ผู้ให้บริการ GitLab Duo OAuth** — เข้าสู่ระบบด้วยข้อมูลประจำตัว GitLab
 - 🧠 **Reasoning Replay Cache** — จัดเก็บร่องรอยการให้เหตุผลแบบผสมผสานระหว่างหน่วยความจำกับ SQLite
 
-📚 **เอกสารที่เกี่ยวข้อง:** [เฟรมเวิร์ก Skills](../frameworks/SKILLS.md) · [ระบบหน่วยความจำ](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 ผู้ให้บริการ

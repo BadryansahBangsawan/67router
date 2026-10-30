@@ -24,7 +24,6 @@ Objektiv funktionsjämförelse mot populära AI-routrar med öppen källkod.
 | **A2A-protokoll**                                     |                 ✅ 6 färdigheter                 |        ❌         |        ❌         |     ❌     |
 | **Minne (FTS5 + vektor)**                             |                        ✅                        |        ❌         |        ❌         |     ❌     |
 | **Guardrails (PII, injektion, vision)**               |                        ✅                        |      delvis       |        ❌         | ✅ betald  |
-| **Molnagentintegrationer**                            |           Codex, Cursor, Devin, Jules            |        ❌         |        ❌         |     ❌     |
 | **Circuit breaker per leverantör**                    |         ✅ 3-tillstånd, lat återhämtning         |   grundläggande   |        ❌         |     ✅     |
 | **TLS-fingeravtrycksstealth (JA3/JA4)**               |                    ✅ wreq-js                    |        ❌         |        ❌         |     ❌     |
 | **Utvärderingsramverk**                               |                    ✅ inbyggt                    |        ❌         |        ❌         |  ⚠ betald  |

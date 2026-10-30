@@ -4,7 +4,6 @@
 
 ---
 
-> **Nguồn:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
 OmniRoute cung cấp ba giao diện khác nhau liên quan đến agent. Thoạt nhìn, chúng có vẻ giống nhau nhưng giải quyết các vấn đề khác nhau. Hãy sử dụng trang này để chọn giao diện phù hợp.
@@ -20,20 +19,6 @@ OmniRoute cung cấp ba giao diện khác nhau liên quan đến agent. Thoạt 
 Cả ba đều độc lập — có thể chọn bất kỳ tập hợp con nào.
 
 ## Cây quyết định
-
-```
-Bạn có cần một dịch vụ đám mây thực hiện công việc bên ngoài máy này không (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ CÓ → Cloud Agents (POST /api/v1/agents/tasks)
-└─ KHÔNG → Tiếp tục
-    │
-    Bạn có một agent ngang hàng hỗ trợ A2A và muốn cộng tác không?
-    ├─ CÓ → A2A (POST /a2a)
-    └─ KHÔNG → Tiếp tục
-        │
-        Bạn có cần liệt kê / cấu hình các agent lập trình CLI được cài đặt cục bộ không?
-        ├─ CÓ → ACP (GET /api/acp/agents)
-        └─ KHÔNG → Sử dụng trực tiếp /v1/chat/completions
-```
 
 ## 1. A2A — Agent-to-Agent
 
@@ -125,61 +110,6 @@ Cấu trúc phần thân cho POST (`customAgentBodySchema` trong `src/app/api/ac
   dự phòng cho nhà cung cấp. Đối với việc sử dụng tương tác thông thường, hãy tự khởi chạy CLI đã cấu hình hoặc
   sử dụng `omniroute run`.
 
-## 3. Cloud Agent
-
-**Các endpoint OmniRoute:** `/api/v1/agents/tasks/*` (vòng đời) + `/api/cloud/*` (hạ tầng kết nối)
-**Mã nguồn:** `src/lib/cloudAgent/`
-
-### Đây là gì
-
-Một giao diện thống nhất dành cho các agent lập trình đám mây của bên thứ ba. Bạn gửi một lời nhắc + URL kho mã nguồn, OmniRoute sẽ chuyển tiếp đến đúng cloud agent, thăm dò trạng thái và trả về kết quả.
-
-### Các agent được hỗ trợ (4, tất cả đều được xác nhận trong `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Vòng đời
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() cho từng lớp agent
-  → dịch vụ bên ngoài bắt đầu xử lý
-  → hàng tác vụ được tạo trong DB (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → đồng bộ trạng thái trì hoãn từ nhà cung cấp
-  → trả về trạng thái hiện tại + kế hoạch + nhật ký hoạt động
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → chuyển tiếp đến nhà cung cấp (hoặc đánh dấu đã hủy cục bộ)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → hủy cục bộ
-```
-
-### Xác thực
-
-⚠️ **Tất cả endpoint `/api/v1/agents/tasks/*` đều yêu cầu xác thực quản trị** (commit `588a0333`). Các trình gọi chỉ sử dụng Bearer sẽ nhận mã 401 kể từ v3.8.0.
-
-### Tìm hiểu chuyên sâu
-
-Xem [CLOUD_AGENT.md](./CLOUD_AGENT.md) để biết hợp đồng `CloudAgentBase`, thông tin cụ thể của từng agent, chi tiết schema và các endpoint phục vụ việc kết nối thông tin xác thực.
-
-## So sánh: A2A và Cloud Agents
-
-Cả hai đều có "tác vụ chạy trong thời gian dài" nhưng ở các tầng khác nhau:
-
-| Khía cạnh               | A2A                                                                                              | Cloud Agents                                  |
-| ----------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
-| Tiêu chuẩn              | Open A2A v0.3                                                                                    | Đặc thù của OmniRoute                         |
-| Nơi thực hiện tính toán | Bên trong OmniRoute (sử dụng các tổ hợp đã cấu hình)                                             | Bên ngoài (máy chủ Codex / Devin / Jules)     |
-| Thời lượng tác vụ       | TTL mặc định là 5 phút (có thể cấu hình trong `TaskManager`)                                     | Từ vài phút đến vài giờ                       |
-| Nhận biết kho mã nguồn  | Không (chỉ chuyển tiếp prompt)                                                                   | Có (URL kho mã nguồn + nhánh)                 |
-| Trường hợp sử dụng      | Cộng tác giữa các tác nhân, định tuyến thông minh dưới dạng dịch vụ                              | Ủy quyền "triển khai tính năng X trong kho Y" |
-| Xác thực                | `OMNIROUTE_API_KEY` tùy chọn cho `/a2a`; quyền quản trị cho các trình trợ giúp REST `/api/a2a/*` | Luôn yêu cầu quyền quản trị                   |
-
 ## Ví dụ tích hợp
 
 ### Khám phá các khả năng A2A của OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Gửi một tác vụ Cloud Agent
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Triển khai tính năng X trong kho Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Thăm dò trạng thái tác vụ đám mây
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Khi nào nên sử dụng giải pháp nào
 
 - **Giao diện chatbot / copilot** → `/v1/chat/completions` (tương thích OpenAI — không phải giao thức tác nhân)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Xem thêm
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Tìm hiểu chuyên sâu về A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Tìm hiểu chuyên sâu về Tác nhân đám mây
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Các tích hợp CLI bên ngoài (sử dụng ACP)
 - [SKILLS.md](./SKILLS.md) — Khung kỹ năng (khác với kỹ năng A2A — sandbox thực thi cục bộ)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — tài liệu tham khảo về endpoint

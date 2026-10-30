@@ -1354,11 +1354,11 @@ aufgeführt sind – ihre Änderung erfordert eine Code-Änderung, keine Umgebun
 
 Ermöglicht Benutzern, Probleme direkt über das Dashboard zu melden.
 
-| Variable              | Standardwert      | Quelldatei                                           | Beschreibung                                                                                                                                                           |
-| --------------------- | ----------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(nicht gesetzt)_ | `src/app/api/v1/issues/report/route.ts`              | Repository im Format `owner/repo`.                                                                                                                                     |
-| `GITHUB_ISSUES_TOKEN` | _(nicht gesetzt)_ | `src/app/api/v1/issues/report/route.ts`              | Persönliches GitHub-Zugriffstoken mit dem Berechtigungsumfang `issues:write`.                                                                                          |
-| `GITHUB_TOKEN`        | _(nicht gesetzt)_ | Problemklassifizierung / Cloud-Agent-Hilfsfunktionen | Allgemeines GitHub-Zugriffstoken, das als Rückfalloption für `GITHUB_ISSUES_TOKEN` dient und von Cloud-Agent-Hilfsfunktionen in `src/lib/cloudAgent/*` verwendet wird. |
+| Variable              | Standardwert      | Quelldatei                                           | Beschreibung                                                                                                                                 |
+| --------------------- | ----------------- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(nicht gesetzt)_ | `src/app/api/v1/issues/report/route.ts`              | Repository im Format `owner/repo`.                                                                                                           |
+| `GITHUB_ISSUES_TOKEN` | _(nicht gesetzt)_ | `src/app/api/v1/issues/report/route.ts`              | Persönliches GitHub-Zugriffstoken mit dem Berechtigungsumfang `issues:write`.                                                                |
+| `GITHUB_TOKEN`        | _(nicht gesetzt)_ | Problemklassifizierung / Cloud-Agent-Hilfsfunktionen | Allgemeines GitHub-Zugriffstoken, das als Rückfalloption für `GITHUB_ISSUES_TOKEN` dient und von Cloud-Agent-Hilfsfunktionen verwendet wird. |
 
 ---
 

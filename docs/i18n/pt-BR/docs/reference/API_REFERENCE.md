@@ -1754,31 +1754,6 @@ Usadas pelo subsistema de gerenciamento automático de chaves para emitir e rota
 
 ---
 
-## Protocolo de Agentes
-
-Tarefas de agentes na nuvem (Claude Code, Codex Cloud, OpenHands etc.) executadas remotamente em nome dos usuários do OmniRoute.
-
-| Método | Caminho                       | Descrição                                                                                                                                                |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Lista tarefas — aceita opcionalmente `?provider=`, `?status=`, `?limit=` (1–500, padrão 50)                                                              |
-| POST   | `/api/v1/agents/tasks`        | Cria uma tarefa — corpo validado por `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Retorna `201` com o envelope da tarefa |
-| DELETE | `/api/v1/agents/tasks?id=...` | Exclui uma tarefa                                                                                                                                        |
-| GET    | `/api/v1/agents/tasks/[id]`   | Lê uma tarefa — atualiza de forma síncrona o status a partir do agente de nuvem upstream quando um `external_id` está definido                           |
-| POST   | `/api/v1/agents/tasks/[id]`   | Ação discriminada: `{action: "approve"}`, `{action: "message", message}` ou `{action: "cancel"}`                                                         |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Exclui uma tarefa específica por id                                                                                                                      |
-
-> **Autenticação:** a autenticação de gerenciamento é obrigatória em todos os métodos (`requireCloudAgentManagementAuth`). Antes da v3.8.0, eles não exigiam autenticação — consulte o commit `588a0333` para ver a alteração incompatível.
-
-```bash
-# Cria uma tarefa de nuvem do Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxies de Gerenciamento
 
 Proxies HTTP(S)/SOCKS de saída que podem ser atribuídos a provedores, contas ou globalmente.
@@ -2282,5 +2257,3 @@ Consulte [Autenticação de gerenciamento](../guides/MANAGEMENT-AUTH.md) para co
 - `requireLogin` pode ser alternado por meio de `/api/settings/require-login`
 - As rotas `/v1/*` podem exigir opcionalmente uma chave de API Bearer quando `REQUIRE_API_KEY=true`
 - Nesta referência, "token de gerenciamento" / "chave de API com escopo de gerenciamento" refere-se a uma das famílias descritas nesse guia — não a um tipo de segredo adicional não definido
-
-> **Alteração incompatível (v3.8.0)** — `/api/v1/agents/tasks/*` e os endpoints de gerenciamento de cooldown agora exigem **autenticação de gerenciamento** (cookie `auth_token` do dashboard ou uma chave de API com escopo de gerenciamento). Os clientes que anteriormente chamavam essas rotas sem autenticação receberão `401 Unauthorized`. Consulte o commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

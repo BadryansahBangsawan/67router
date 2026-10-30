@@ -698,54 +698,6 @@
       "yes": "Preskoči poziv za potrditev"
     }
   },
-  "cloud": {
-    "description": "Upravljaj opravila agentov umetne inteligence v oblaku (codex, devin, jules)",
-    "agents": {
-      "description": "Prikaži razpoložljive agente v oblaku"
-    },
-    "agent": {
-      "description": "Upravljaj opravila agenta v oblaku {agent}",
-      "auth": {
-        "description": "Avtoriziraj agenta {agent} prek OAuth"
-      }
-    },
-    "task": {
-      "description": "Upravljaj opravila agentov v oblaku",
-      "create": {
-        "description": "Ustvari novo opravilo agenta",
-        "title": "Naslov opravila (privzeto prvih 80 znakov poziva)",
-        "prompt": "Besedilo poziva opravila",
-        "prompt_file": "Preberi poziv iz datoteke",
-        "repo": "URL repozitorija, ki ga je treba klonirati za opravilo",
-        "branch": "Ime veje, ki naj se uporabi",
-        "metadata": "Objekt metapodatkov JSON"
-      },
-      "list": {
-        "description": "Prikaži opravila agentov",
-        "status": "Filtriraj po stanju (running|completed|failed|cancelled)",
-        "limit": "Največje število rezultatov (privzeto: 50)"
-      },
-      "get": {
-        "description": "Pridobi podrobnosti opravila po ID-ju"
-      },
-      "status": {
-        "description": "Izpiši stanje opravila (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Prekliči opravilo, ki se izvaja",
-        "yes": "Preskoči poziv za potrditev"
-      },
-      "approve": {
-        "description": "Odobri načrt agenta za začetek izvajanja"
-      },
-      "message": {
-        "description": "Pošlji sporočilo opravilu, ki se izvaja"
-      }
-    },
-    "sources": {
-      "description": "Prikaži seznam izvornih datotek, ki jih je ustvarilo opravilo"
-    }
-  },
   "program": {
     "description": "OmniRoute — pametni usmerjevalnik za UI s samodejnim preklopom",
     "version": "Izpiši različico in končaj",

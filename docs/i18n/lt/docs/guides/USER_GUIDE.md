@@ -24,7 +24,6 @@ Išsamus paslaugų teikėjų konfigūravimo, derinių kūrimo, CLI įrankių int
 - [Įgūdžių sistema](#-skills-system)
 - [Atminties sistema](#-memory-system)
 - [Žiniatinklio sąsajos](#-webhooks)
-- [Debesijos agentai](#-cloud-agents)
 - [Programinis valdymas](#-programmatic-management)
 - [Vidinė CLI](#-internal-cli)
 - [Darbalaukio programa („Electron“)](#-desktop-application-electron)
@@ -1261,18 +1260,6 @@ Prenumeruokite „OmniRoute“ įvykius, kad galėtumėte stebėti sistemą ir a
 - Pakartotiniai bandymai: 3 bandymai su eksponentiškai didėjančia delsa, o tada pranešimas perkeliamas į neapdorotų pranešimų eilę
 
 Visa schema pateikta [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Debesijos agentai
-
-„OmniRoute“ integruojama su debesijos programavimo agentais (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), todėl ilgai vykdomas užduotis galite siųsti iš to paties valdymo skydo, kuriame tvarkomas vietinis maršruto parinkimas.
-
-- Kurkite užduotis skiltyje **Valdymo skydas → Debesijos agentai** arba naudodami `POST /api/v1/agents/tasks`
-- Stebėkite kiekvienos užduoties būseną, žurnalus ir artefaktus
-- Kiekvienam teikėjui naudokite savo API raktą — prisijungimo duomenys niekada nepalieka „OmniRoute“ egzemplioriaus
-
-Išsami dokumentacija: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

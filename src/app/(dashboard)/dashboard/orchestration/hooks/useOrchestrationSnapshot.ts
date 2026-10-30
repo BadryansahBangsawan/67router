@@ -1,15 +1,13 @@
 "use client";
 /**
- * Polls the 3 agent sources (allSettled), listens to the `agents` WS channel as a refetch
+ * Polls the 2 agent sources (allSettled), listens to the `agents` WS channel as a refetch
  * trigger, and relaxes the poll interval from 5s to 30s while that WS connection is up (the
  * channel event still forces an immediate debounced refetch either way).
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLiveDashboard } from "@/hooks/useLiveDashboard";
-import type { CloudAgentTask } from "@/lib/cloudAgent/types";
 import type { A2ATask } from "@/lib/a2a/taskManager";
 import type { FleetSnapshot } from "@/lib/conductor/hubProxy";
-import { fromCloudAgent } from "../model/fromCloudAgent";
 import { fromA2A } from "../model/fromA2A";
 import { fromConductor } from "../model/fromConductor";
 import { mergeSnapshot } from "../model/mergeSnapshot";
@@ -20,12 +18,10 @@ export const POLL_MS_WS_CONNECTED = 30_000;
 export const WS_REFETCH_DEBOUNCE_MS = 1_000;
 
 interface Raw {
-  cloudAgent: CloudAgentTask[];
   a2a: A2ATask[];
   conductor: FleetSnapshot;
 }
 const EMPTY_RAW: Raw = {
-  cloudAgent: [],
   a2a: [],
   conductor: { offline: true, runners: [], tasks: [] },
 };
@@ -60,7 +56,7 @@ export function snapshotContentKey(s: OrchSnapshot): string {
 }
 
 /**
- * Builds the 3-source status list from a `Promise.allSettled` triple.
+ * Builds the 2-source status list from a `Promise.allSettled` pair.
  *
  * `prev` is the source-status list from the previous poll: a source that is failing NOW
  * reuses the `staleSince` it already had when it was ALSO failing in `prev` (so the
@@ -70,7 +66,6 @@ export function snapshotContentKey(s: OrchSnapshot): string {
  * failing for the first time (or failing again after recovering) is stamped with `nowIso`.
  */
 function buildSourceStatuses(
-  ca: PromiseSettledResult<{ data: CloudAgentTask[] }>,
   a2a: PromiseSettledResult<{ tasks: A2ATask[] }>,
   cond: PromiseSettledResult<FleetSnapshot>,
   nowIso: string,
@@ -81,14 +76,6 @@ function buildSourceStatuses(
     return prevStatus && !prevStatus.ok && prevStatus.staleSince ? prevStatus.staleSince : nowIso;
   };
   const next: SourceStatus[] = [];
-  if (ca.status === "fulfilled") next.push({ source: "cloud-agent", ok: true });
-  else
-    next.push({
-      source: "cloud-agent",
-      ok: false,
-      error: String(ca.reason),
-      staleSince: staleSinceFor("cloud-agent"),
-    });
   if (a2a.status === "fulfilled") next.push({ source: "a2a", ok: true });
   else
     next.push({
@@ -136,8 +123,7 @@ export function useOrchestrationSnapshot() {
     const controller = new AbortController();
 
     const poll = async () => {
-      const [ca, a2a, cond] = await Promise.allSettled([
-        fetchJson<{ data: CloudAgentTask[] }>("/api/v1/agents/tasks?limit=100", controller.signal),
+      const [a2a, cond] = await Promise.allSettled([
         fetchJson<{ tasks: A2ATask[] }>("/api/a2a/tasks?limit=200", controller.signal),
         fetchJson<FleetSnapshot>("/api/conductor/fleet", controller.signal),
       ]);
@@ -148,14 +134,13 @@ export function useOrchestrationSnapshot() {
       // Failed sources keep the previously stored slice — only overwrite what
       // actually resolved this round ("last good data" contract from the brief).
       setRaw((prev) => ({
-        cloudAgent: ca.status === "fulfilled" ? ca.value.data : prev.cloudAgent,
         a2a: a2a.status === "fulfilled" ? a2a.value.tasks : prev.a2a,
         conductor: cond.status === "fulfilled" ? cond.value : prev.conductor,
       }));
       // Functional updater form: gives `buildSourceStatuses` the latest previous
       // statuses (for the staleSince-pinning rule) without a stale closure over
       // `statuses` and without adding a ref or an extra effect for it.
-      setStatuses((prevStatuses) => buildSourceStatuses(ca, a2a, cond, nowIso, prevStatuses));
+      setStatuses((prevStatuses) => buildSourceStatuses(a2a, cond, nowIso, prevStatuses));
       setPolledAt(nowMs);
       setIsLoading(false);
     };
@@ -202,7 +187,6 @@ export function useOrchestrationSnapshot() {
     () =>
       mergeSnapshot(
         {
-          cloudAgent: fromCloudAgent(raw.cloudAgent),
           a2a: fromA2A(raw.a2a),
           conductor: fromConductor(raw.conductor),
         },

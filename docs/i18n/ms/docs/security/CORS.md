@@ -68,20 +68,6 @@ membenarkan **prapenerbangan** CORS diluluskan pada laluan pengurusan — yang m
 yang tidak boleh diberikan oleh halaman silang origin. Ia **bukan** vektor rampasan sesi atau
 pencurian bukti kelayakan pada laluan CORS dikongsi.
 
-### Satu pengecualian sebenar — `/api/v1/agents/`
-
-Laluan Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) menetapkan
-pengepala CORS **sendiri**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) dan **sememangnya** mengeluarkan
-`Access-Control-Allow-Origin: <origin>|*` bersama-sama dengan
-`Access-Control-Allow-Credentials: true`. Ini ialah satu-satunya permukaan yang
-menggabungkan pantulan origin dengan bukti kelayakan, dan ia **tidak bergantung pada
-`CORS_ALLOW_ALL`**. Laluan ini disahkan oleh pengurusan
-(`requireManagementAuth`); pengendali yang mendedahkan papan pemuka di luar hos harus
-sedar bahawa inilah satu-satunya tempat pembacaan silang origin menggunakan bukti kelayakan dibenarkan oleh
-pengepala respons. Pengetatannya kepada senarai dibenarkan yang eksplisit dijejaki
-secara berasingan daripada panduan CORS ini.
-
 ## Senarai semak produksi
 
 - **Jangan sekali-kali tetapkan `CORS_ALLOW_ALL=true` dalam produksi.** Biarkannya tidak ditetapkan.
@@ -160,7 +146,6 @@ tab Security), bukan dalam proksi.
 | Status masa jalan untuk papan pemuka                       | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Sepanduk amaran papan pemuka                               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Medan CORS Allowed Origins                                 | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS per laluan Cloud-Agent (pengecualian)                 | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Lihat juga
 

@@ -71,11 +71,9 @@ Faili hizi zina ufunikaji wa chini zaidi wa mistari kwa sasa (< 60%) na zinatoa 
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |    13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |    13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |    13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |    13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |    14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |    14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |    15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |    15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |    16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |    16.66% |
 
@@ -83,7 +81,6 @@ Maudhui makuu ya Awamu za 6-7:
 
 - `open-sse/services/compression/**` ndilo kundi lenye msongamano mkubwa zaidi wa ufunikaji mdogo na linachangia sehemu kubwa ya pengo lililosalia.
 - Njia za API za batch na rerank (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) zinahitaji majaribio katika kiwango cha handler.
-- Adapta za wakala wa wingu (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) na `tierResolver.ts` zinahitaji majaribio ya matukio.
 - Vipengele vya UI ya nyaraka na `src/mitm/systemCommands.ts` vina kipaumbele cha chini lakini vina fursa rahisi za kuongeza ufunikaji wa matawi.
 
 ## Orodha hakiki ya utekelezaji

@@ -43,8 +43,6 @@ Kitaran v3.7.x → v3.8.0 menambahkan penghalaan automatik tanpa konfigurasi, pe
 - 🤝 **Penyedia OAuth GitLab Duo** — log masuk dengan kelayakan GitLab
 - 🧠 **Cache Main Semula Penaakulan** — pengekalan hibrid dalam memori + SQLite untuk jejak penaakulan
 
-📚 **Dokumen berkaitan:** [Rangka Kerja Kemahiran](../frameworks/SKILLS.md) · [Sistem Memori](../frameworks/MEMORY.md) · [Ejen Awan](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Cache Main Semula Penaakulan](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Penyedia

@@ -1761,31 +1761,6 @@ Brukes av delsystemet for automatisk nøkkeladministrasjon til å utstede og rot
 
 ---
 
-## Agentprotokoll
-
-Skyagentoppgaver (Claude Code, Codex Cloud, OpenHands osv.) som kjøres eksternt på vegne av OmniRoute-brukere.
-
-| Metode | Bane                          | Beskrivelse                                                                                                                                                           |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | List oppgaver — valgfritt `?provider=`, `?status=`, `?limit=` (1–500, standardverdi 50)                                                                               |
-| POST   | `/api/v1/agents/tasks`        | Opprett oppgave — forespørselskroppen valideres av `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returnerer `201` med oppgavekonvolutt |
-| DELETE | `/api/v1/agents/tasks?id=...` | Slett en oppgave                                                                                                                                                      |
-| GET    | `/api/v1/agents/tasks/[id]`   | Les oppgave — oppdaterer status synkront fra den oppstrøms skyagenten når en `external_id` er angitt                                                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskriminert handling: `{action: "approve"}`, `{action: "message", message}`, eller `{action: "cancel"}`                                                              |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Slett en bestemt oppgave etter ID                                                                                                                                     |
-
-> **Autentisering:** administrasjonsautentisering kreves for alle metoder (`requireCloudAgentManagementAuth`). Før v3.8.0 var disse uautentiserte — se commit `588a0333` for den inkompatible endringen.
-
-```bash
-# Opprett en Claude Code-skyoppgave
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Administrasjonsproxyer
 
 Utgående HTTP(S)-/SOCKS-proxyer som kan tilordnes leverandører, kontoer eller globalt.
@@ -2291,5 +2266,3 @@ API-nøkkel med administrasjonsomfang) og hvordan de skiller seg fra inferensnø
 - `requireLogin` kan slås av og på via `/api/settings/require-login`
 - `/v1/*`-ruter kan kreve en Bearer API-nøkkel når `REQUIRE_API_KEY=true`
 - «administrasjonstoken» / «API-nøkkel med administrasjonsomfang» i denne referansen betyr én av familiene i denne veiledningen — ikke en udefinert ekstra type hemmelighet
-
-> **Inkompatibel endring (v3.8.0)** — `/api/v1/agents/tasks/*` og endepunktene for administrasjon av nedkjøling krever nå **administrasjonsautentisering** (`auth_token`-informasjonskapsel for instrumentbordet eller en API-nøkkel med administrasjonsomfang). Klienter som tidligere kalte disse rutene uten autentisering, vil motta `401 Unauthorized`. Se commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

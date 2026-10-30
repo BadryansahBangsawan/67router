@@ -24,7 +24,6 @@ Kompletny przewodnik dotyczący konfigurowania dostawców, tworzenia kombinacji,
 - [System umiejętności](#-skills-system)
 - [System pamięci](#-memory-system)
 - [Webhooki](#-webhooks)
-- [Agenci w chmurze](#-cloud-agents)
 - [Zarządzanie programistyczne](#-programmatic-management)
 - [Wewnętrzny interfejs CLI](#-internal-cli)
 - [Aplikacja desktopowa (Electron)](#-desktop-application-electron)
@@ -1278,18 +1277,6 @@ Subskrybuj zdarzenia OmniRoute na potrzeby monitorowania i automatyzacji w czasi
 - Ponowienia: 3 próby z wykładniczym wydłużaniem opóźnienia, a następnie kolejka komunikatów niedostarczonych
 
 Pełny schemat znajduje się w [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agenci chmurowi
-
-OmniRoute integruje się z chmurowymi agentami programistycznymi (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), dzięki czemu możesz zlecać długotrwałe zadania z tego samego panelu, który obsługuje lokalne trasowanie.
-
-- Twórz zadania w sekcji **Panel → Agenci chmurowi** lub za pomocą `POST /api/v1/agents/tasks`
-- Śledź stan, logi i artefakty poszczególnych zadań
-- Używaj własnego klucza API dla każdego dostawcy — dane uwierzytelniające nigdy nie opuszczają instancji OmniRoute
-
-Pełna dokumentacja: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

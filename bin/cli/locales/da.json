@@ -698,54 +698,6 @@
       "yes": "Spring bekræftelsesprompten over"
     }
   },
-  "cloud": {
-    "description": "Administrer opgaver for cloudbaserede AI-agenter (codex, devin, jules)",
-    "agents": {
-      "description": "Vis tilgængelige cloudagenter"
-    },
-    "agent": {
-      "description": "Administrer opgaver for cloudagenten {agent}",
-      "auth": {
-        "description": "Godkend {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Administrer cloudagentopgaver",
-      "create": {
-        "description": "Opret en ny agentopgave",
-        "title": "Opgavetitel (som standard de første 80 tegn i prompten)",
-        "prompt": "Prompttekst til opgaven",
-        "prompt_file": "Læs prompt fra fil",
-        "repo": "URL til repository, der skal klones til opgaven",
-        "branch": "Navn på branch, der skal bruges",
-        "metadata": "JSON-metadataobjekt"
-      },
-      "list": {
-        "description": "Vis agentopgaver",
-        "status": "Filtrer efter status (running|completed|failed|cancelled)",
-        "limit": "Maksimalt antal resultater (standard: 50)"
-      },
-      "get": {
-        "description": "Hent opgavedetaljer efter id"
-      },
-      "status": {
-        "description": "Udskriv opgavestatus (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Annuller en kørende opgave",
-        "yes": "Spring bekræftelsesprompten over"
-      },
-      "approve": {
-        "description": "Godkend agentplanen for at starte udførelsen"
-      },
-      "message": {
-        "description": "Send en besked til en kørende opgave"
-      }
-    },
-    "sources": {
-      "description": "Vis kildefiler, der er oprettet af en opgave"
-    }
-  },
   "program": {
     "description": "OmniRoute — Smart AI-router med automatisk fallback",
     "version": "Vis version og afslut",

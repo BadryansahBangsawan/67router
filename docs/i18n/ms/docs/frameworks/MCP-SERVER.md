@@ -246,17 +246,6 @@ Inventori alat MCP di atas (110 alat unik, dikira oleh `countUniqueMcpTools()`) 
 dihadkan kepada operasi penghalaan/cache/pemampatan/memori/kemahiran/proksi/sumber-konteks masa jalan. Dua rangka kerja
 bersebelahan disertakan bersama pelayan MCP dalam v3.8.0 dan didokumentasikan secara berasingan:
 
-### Ejen Awan
-
-Ejen Awan ialah ejen pengekodan AI luar proses (codex-cloud, cursor-cloud, devin, jules) yang disepadukan ke dalam
-OmniRoute melalui model sambungan yang sama seperti yang digunakan untuk penyedia LLM. Ejen ini didedahkan melalui
-permukaan REST tersendiri (`/api/v1/agents/*`) dan **bukan** sebahagian daripada katalog alat MCP
-— memanggil Ejen Awan tidak menggunakan skop MCP.
-
-- Pelaksanaan: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Kitar hayat: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentasi: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Kawalan Keselamatan
 
 Kawalan keselamatan ialah penapis pra/pasca pelaksanaan (vision-bridge, pii-masker, prompt-injection)

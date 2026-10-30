@@ -24,7 +24,6 @@ Guia completo para configurar fornecedores, criar combinações, integrar ferram
 - [Sistema de Competências](#-skills-system)
 - [Sistema de Memória](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Agentes na Nuvem](#-cloud-agents)
 - [Gestão Programática](#-programmatic-management)
 - [CLI Interna](#-internal-cli)
 - [Aplicação de Ambiente de Trabalho (Electron)](#-desktop-application-electron)
@@ -1278,18 +1277,6 @@ Subscreva eventos do OmniRoute para monitorização e automatização em tempo r
 - Novas tentativas: 3 tentativas com espera exponencial, seguidas de envio para a fila de mensagens não processadas
 
 Esquema completo em [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agentes na Cloud
-
-O OmniRoute integra-se com agentes de programação na cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), permitindo-lhe enviar tarefas de longa duração a partir do mesmo painel que gere o encaminhamento local.
-
-- Crie tarefas em **Painel → Agentes na Cloud** ou através de `POST /api/v1/agents/tasks`
-- Acompanhe o estado, os registos e os artefactos de cada tarefa
-- Utilize a sua própria chave de API para cada fornecedor — as credenciais nunca saem da instância do OmniRoute
-
-Referência completa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

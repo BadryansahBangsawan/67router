@@ -24,7 +24,6 @@ Komplet vejledning til konfiguration af udbydere, oprettelse af kombinationer, i
 - [Færdighedssystem](#-skills-system)
 - [Hukommelsessystem](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud-agenter](#-cloud-agents)
 - [Programmatisk administration](#-programmatic-management)
 - [Intern CLI](#-internal-cli)
 - [Desktopapplikation (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Abonner på OmniRoute-hændelser med henblik på overvågning og automatisering 
 - Gentagne forsøg: 3 forsøg med eksponentiel ventetid og derefter en kø til meddelelser, der ikke kunne leveres
 
 Det fulde skema findes i [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloudagenter
-
-OmniRoute integrerer med cloudbaserede kodeagenter (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), så du kan sende langvarige opgaver fra det samme kontrolpanel, som håndterer din lokale routing.
-
-- Opret opgaver under **Kontrolpanel → Cloudagenter** eller via `POST /api/v1/agents/tasks`
-- Følg status, logfiler og artefakter for hver opgave
-- Brug din egen API-nøgle for hver udbyder — legitimationsoplysninger forlader aldrig OmniRoute-instansen
-
-Fuld dokumentation: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

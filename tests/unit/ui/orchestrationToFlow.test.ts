@@ -35,11 +35,11 @@ const multiSourceSnap: OrchSnapshot = {
       state: "running",
       label: "thinking",
     },
-    { id: "source:cloud-agent", kind: "source", source: "cloud-agent", label: "Cloud Agent" },
+    { id: "source:conductor", kind: "source", source: "conductor", label: "Conductor" },
     {
-      id: "cloud-agent:t1",
+      id: "conductor:task:t1",
       kind: "work",
-      source: "cloud-agent",
+      source: "conductor",
       state: "queued",
       label: "build",
     },
@@ -48,8 +48,8 @@ const multiSourceSnap: OrchSnapshot = {
     { id: "e1", from: "orchestrator", to: "source:a2a", kind: "owns", active: false },
     { id: "e2", from: "source:a2a", to: "a2a:t1", kind: "owns", active: true },
     { id: "e3", from: "a2a:t1", to: "a2a:t1:activity", kind: "owns", active: true },
-    { id: "e4", from: "orchestrator", to: "source:cloud-agent", kind: "owns", active: false },
-    { id: "e5", from: "source:cloud-agent", to: "cloud-agent:t1", kind: "owns", active: false },
+    { id: "e4", from: "orchestrator", to: "source:conductor", kind: "owns", active: false },
+    { id: "e5", from: "source:conductor", to: "conductor:task:t1", kind: "owns", active: false },
   ],
   sources: [],
   generatedAt: "2026-08-30T12:00:00Z",
@@ -134,7 +134,7 @@ describe("orchestrationToFlow", () => {
       collapsed: new Set(["a2a"]),
     });
     const ids = nodes.map((n) => n.id).sort();
-    assert.deepEqual(ids, ["cloud-agent:t1", "orchestrator", "source:a2a", "source:cloud-agent"]);
+    assert.deepEqual(ids, ["conductor:task:t1", "orchestrator", "source:a2a", "source:conductor"]);
     const edgeIds = edges.map((e) => e.id).sort();
     assert.deepEqual(edgeIds, ["e1", "e4", "e5"]);
   });
@@ -142,9 +142,9 @@ describe("orchestrationToFlow", () => {
   it("SourceNode for a collapsed source carries data.collapsed === true; others do not", () => {
     const { nodes } = orchestrationToFlow(multiSourceSnap, { collapsed: new Set(["a2a"]) });
     const sourceA2a = nodes.find((n) => n.id === "source:a2a");
-    const sourceCloudAgent = nodes.find((n) => n.id === "source:cloud-agent");
+    const sourceConductor = nodes.find((n) => n.id === "source:conductor");
     assert.equal((sourceA2a?.data as { collapsed?: boolean }).collapsed, true);
-    assert.equal((sourceCloudAgent?.data as { collapsed?: boolean }).collapsed, undefined);
+    assert.equal((sourceConductor?.data as { collapsed?: boolean }).collapsed, undefined);
   });
 
   it("fitKey changes when the collapsed set changes and is stable otherwise", () => {
@@ -152,7 +152,7 @@ describe("orchestrationToFlow", () => {
     const k1 = orchestrationToFlow(multiSourceSnap, { collapsed: new Set(["a2a"]) }).fitKey;
     const k1Again = orchestrationToFlow(multiSourceSnap, { collapsed: new Set(["a2a"]) }).fitKey;
     const k2 = orchestrationToFlow(multiSourceSnap, {
-      collapsed: new Set(["cloud-agent"]),
+      collapsed: new Set(["conductor"]),
     }).fitKey;
     assert.equal(k1, k1Again);
     assert.notEqual(k1, base);

@@ -58,19 +58,6 @@ OWASPની સામાન્ય ચેતવણી ("વાઇલ્ડકા�
 જે ક્રોસ-ઓરિજિન પૃષ્ઠ આપી શકતું નથી. શેર કરેલા CORS પાથ પર તે સેશન હાઇજૅકિંગ અથવા
 ક્રેડેન્શિયલ ચોરીનું માધ્યમ **નથી**.
 
-### એક વાસ્તવિક અપવાદ — `/api/v1/agents/`
-
-Cloud-Agent રૂટ્સ (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) તેમના
-**પોતાના** CORS હેડર્સ સેટ કરે છે
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) અને
-`Access-Control-Allow-Origin: <origin>|*` સાથે
-`Access-Control-Allow-Credentials: true` પણ **મોકલે છે**. આ એકમાત્ર એવી સપાટી છે જ્યાં
-ઓરિજિન-ઇકો અને ક્રેડેન્શિયલ્સ એકસાથે અસ્તિત્વ ધરાવે છે, અને તે
-`CORS_ALLOW_ALL`થી **સ્વતંત્ર** છે. આ રૂટ્સ મેનેજમેન્ટ-પ્રમાણિત છે
-(`requireManagementAuth`); જે ઑપરેટર્સ ડૅશબોર્ડને હોસ્ટની બહાર ઉપલબ્ધ કરાવે છે તેમણે
-ધ્યાન રાખવું જોઈએ કે પ્રતિસાદ હેડર્સ દ્વારા ક્રોસ-ઓરિજિન ક્રેડેન્શિયલ ધરાવતા વાંચનની મંજૂરી મળતી હોય તેવું આ એકમાત્ર સ્થાન છે. તેને સ્પષ્ટ મંજૂરીસૂચિ સુધી મર્યાદિત કરવાનું કાર્ય
-આ CORS માર્ગદર્શનથી અલગ રીતે ટ્રૅક કરવામાં આવે છે.
-
 ## પ્રોડક્શન ચેકલિસ્ટ
 
 - **પ્રોડક્શનમાં ક્યારેય `CORS_ALLOW_ALL=true` સેટ કરશો નહીં.** તેને અનસેટ રાખો.
@@ -149,7 +136,6 @@ Security ટૅબમાં) સેટ કરો.
 | ડૅશબોર્ડ માટે રનટાઇમ સ્થિતિ              | `src/app/api/settings/authz-inventory/route.ts`                      |
 | ડૅશબોર્ડ ચેતવણી બૅનર                     | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins ફીલ્ડ               | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent પ્રતિ-રૂટ CORS (અપવાદ)       | `src/lib/cloudAgent/api.ts`                                          |
 
 ## આ પણ જુઓ
 

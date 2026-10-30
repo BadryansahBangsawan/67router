@@ -703,7 +703,6 @@ export const providersBatchTestSchema = z
       "audio",
       "local",
       "upstream-proxy",
-      "cloud-agent",
       "ide",
       "selected",
     ]),

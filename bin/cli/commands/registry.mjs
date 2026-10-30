@@ -3,7 +3,6 @@ import { registerSkills } from "./skills.mjs";
 import { registerAudit } from "./audit.mjs";
 import { registerOAuth } from "./oauth.mjs";
 import { registerLogin } from "./login.mjs";
-import { registerCloud } from "./cloud.mjs";
 import { registerPolicy } from "./policy.mjs";
 import { registerCompression } from "./compression.mjs";
 import { registerTranslator } from "./translator.mjs";
@@ -88,7 +87,6 @@ export function registerCommands(program) {
   registerAudit(program);
   registerOAuth(program);
   registerLogin(program);
-  registerCloud(program);
   registerPolicy(program);
   registerCompression(program);
   registerTranslator(program);

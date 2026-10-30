@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 အဆင့်မြှင့်တင်မှုစက်�
 - 🤝 **GitLab Duo OAuth provider** — GitLab အထောက်အထားများဖြင့် login ဝင်နိုင်သည်
 - 🧠 **Reasoning Replay Cache** — စဉ်းစားဆင်ခြင်မှု မှတ်တမ်းများကို memory အတွင်းနှင့် SQLite တွင် ပေါင်းစပ်သိမ်းဆည်း၍ ရေရှည်တည်တံ့စေသည်
 
-📚 **ဆက်စပ်စာတမ်းများ:** [ကျွမ်းကျင်မှု မူဘောင်](../frameworks/SKILLS.md) · [မှတ်ဉာဏ်စနစ်](../frameworks/MEMORY.md) · [Cloud Agent များ](../frameworks/CLOUD_AGENT.md) · [Webhook များ](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 ပံ့ပိုးသူများ

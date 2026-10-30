@@ -1347,11 +1347,11 @@ norint jas pakeisti reikia redaguoti kodą, o ne aplinkos kintamąjį:
 
 Leiskite naudotojams pranešti apie problemas tiesiogiai iš valdymo skydelio.
 
-| Kintamasis            | Numatytoji reikšmė | Šaltinio failas                                            | Aprašymas                                                                                                                                                                  |
-| --------------------- | ------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(nenustatyta)_    | `src/app/api/v1/issues/report/route.ts`                    | Saugykla `owner/repo` formatu.                                                                                                                                             |
-| `GITHUB_ISSUES_TOKEN` | _(nenustatyta)_    | `src/app/api/v1/issues/report/route.ts`                    | GitHub asmeninės prieigos prieigos raktas su `issues:write` teisių sritimi.                                                                                                |
-| `GITHUB_TOKEN`        | _(nenustatyta)_    | problemų rūšiavimo / debesijos agento pagalbinės priemonės | Bendrasis GitHub prieigos raktas, naudojamas kaip atsarginis `GITHUB_ISSUES_TOKEN` variantas ir debesijos agento pagalbinėse priemonėse, esančiose `src/lib/cloudAgent/*`. |
+| Kintamasis            | Numatytoji reikšmė | Šaltinio failas                                            | Aprašymas                                                                                                                                                                               |
+| --------------------- | ------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(nenustatyta)_    | `src/app/api/v1/issues/report/route.ts`                    | Saugykla `owner/repo` formatu.                                                                                                                                                          |
+| `GITHUB_ISSUES_TOKEN` | _(nenustatyta)_    | `src/app/api/v1/issues/report/route.ts`                    | GitHub asmeninės prieigos prieigos raktas su `issues:write` teisių sritimi.                                                                                                             |
+| `GITHUB_TOKEN`        | _(nenustatyta)_    | problemų rūšiavimo / debesijos agento pagalbinės priemonės | Bendrasis GitHub prieigos raktas, naudojamas kaip atsarginis `GITHUB_ISSUES_TOKEN` variantas ir debesijos agento pagalbinėse priemonėse, esančiose `src/lib/skills/githubCollector.ts`. |
 
 ---
 

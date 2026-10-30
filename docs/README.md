@@ -97,10 +97,9 @@ Pluggable subsystems exposed to clients, agents, and operators.
 - [MCP-SERVER.md](frameworks/MCP-SERVER.md) — Model Context Protocol server.
 - [A2A-SERVER.md](frameworks/A2A-SERVER.md) — Agent-to-Agent (A2A) JSON-RPC server.
 - [ACP.md](frameworks/ACP.md) — Agent Client Protocol.
-- [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — A2A / ACP / Cloud agent overview.
+- [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — A2A / ACP overview.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — IDE agent bridge.
 - [AGENT-SKILLS.md](frameworks/AGENT-SKILLS.md) — agent skills catalog.
-- [CLOUD_AGENT.md](frameworks/CLOUD_AGENT.md) — cloud agent runtime and providers.
 - [SKILLS.md](frameworks/SKILLS.md) — Skills framework (sandboxed extension).
 - [MEMORY.md](frameworks/MEMORY.md) — persistent memory (FTS5 + Qdrant).
 - [GAMIFICATION.md](frameworks/GAMIFICATION.md) — gamification & leaderboard system.

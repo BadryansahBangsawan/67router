@@ -128,7 +128,6 @@ Na príomhleathanaigh faoi `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — rialuithe cuóta/ráta
 - `/dashboard/cli-tools` — ionduchtú CLI, brath ama rite, giniúint cumraíochta
 - `/dashboard/agents` — gníomhairí ACP braite + clárú gníomhairí saincheaptha
-- `/dashboard/cloud-agents` — tascanna gníomhairí néalóstáilte (Codex Cloud, Devin, Jules) agus saolré tascanna
 - `/dashboard/skills` — clárlann scileanna A2A, rith i mbosca gainimh, catalóg scileanna ionsuite
 - `/dashboard/memory` — iniúchadh agus aisghabháil cuimhne comhrá marthanaí
 - `/dashboard/webhooks` — síntiúis webhook amach, rothlú rún, staitisticí atrialacha
@@ -382,23 +381,6 @@ Príomhchumais:
 
 Le haghaidh sonraí iomlána algartamacha (foirmlí fachtóirí, mionchoigeartú ualuithe), féach
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Gníomhairí Néalríomhaireachta
-
-Cuireann Gníomhairí Néalríomhaireachta ardáin óstáilte tríú páirtí do ghníomhairí cód (Codex Cloud, Devin,
-Jules) taobh thiar de shaolré aonfhoirmeach tascanna le tacaíocht bunachair sonraí. Teastaíonn fíordheimhniú bainistíochta
-ó gach críochphointe um chruthú agus iniúchadh tascanna.
-
-- Fréamh an mhodúil: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, chomh maith le fochomhadlanna do gach gníomhaire faoi `agents/`)
-- Feidhmiúcháin do gach gníomhaire: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Críochphointí poiblí: `/api/v1/agents/tasks/*` (liostú/cruthú/fáil/cealú)
-- Críochphointí bainistíochta: `/api/cloud/*` (soláthar, stádas, baisc)
-- Deais: `/dashboard/cloud-agents`
-- Stóráil: tábla `cloud_agent_tasks`
-
-Le haghaidh sonraí faoi sholáthar gach gníomhaire agus faoi OAuth, féach
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Ráillí Cosanta
 

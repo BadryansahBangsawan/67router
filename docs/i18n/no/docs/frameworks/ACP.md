@@ -130,4 +130,3 @@ målmiljøet.
 - [CLI-oppstartskontrakter](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-verktøy](../reference/CLI-TOOLS.md)
 - [A2A-server](./A2A-SERVER.md)
-- [Skyagenter](./CLOUD_AGENT.md)

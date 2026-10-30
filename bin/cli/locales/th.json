@@ -698,54 +698,6 @@
       "yes": "ข้ามข้อความแจ้งให้ยืนยัน"
     }
   },
-  "cloud": {
-    "description": "จัดการงานเอเจนต์ AI บนคลาวด์ (codex, devin, jules)",
-    "agents": {
-      "description": "แสดงรายการเอเจนต์บนคลาวด์ที่พร้อมใช้งาน"
-    },
-    "agent": {
-      "description": "จัดการงานเอเจนต์ {agent} บนคลาวด์",
-      "auth": {
-        "description": "อนุญาต {agent} ผ่าน OAuth"
-      }
-    },
-    "task": {
-      "description": "จัดการงานเอเจนต์บนคลาวด์",
-      "create": {
-        "description": "สร้างงานเอเจนต์ใหม่",
-        "title": "ชื่องาน (ค่าเริ่มต้นคือ 80 อักขระแรกของพรอมต์)",
-        "prompt": "ข้อความพรอมต์ของงาน",
-        "prompt_file": "อ่านพรอมต์จากไฟล์",
-        "repo": "URL ของรีพอซิทอรีที่จะโคลนสำหรับงาน",
-        "branch": "ชื่อแบรนช์ที่จะใช้",
-        "metadata": "ออบเจ็กต์ข้อมูลเมตา JSON"
-      },
-      "list": {
-        "description": "แสดงรายการงานของเอเจนต์",
-        "status": "กรองตามสถานะ (running|completed|failed|cancelled)",
-        "limit": "จำนวนผลลัพธ์สูงสุด (ค่าเริ่มต้น: 50)"
-      },
-      "get": {
-        "description": "ดูรายละเอียดงานตาม ID"
-      },
-      "status": {
-        "description": "แสดงสถานะงาน (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "ยกเลิกงานที่กำลังทำงานอยู่",
-        "yes": "ข้ามข้อความแจ้งให้ยืนยัน"
-      },
-      "approve": {
-        "description": "อนุมัติแผนของเอเจนต์เพื่อเริ่มดำเนินการ"
-      },
-      "message": {
-        "description": "ส่งข้อความไปยังงานที่กำลังทำงานอยู่"
-      }
-    },
-    "sources": {
-      "description": "แสดงรายการไฟล์ต้นฉบับที่สร้างโดยงาน"
-    }
-  },
   "program": {
     "description": "OmniRoute — AI Router อัจฉริยะพร้อม Auto Fallback",
     "version": "แสดงเวอร์ชันและออก",

@@ -698,54 +698,6 @@
       "yes": "Preskočiť výzvu na potvrdenie"
     }
   },
-  "cloud": {
-    "description": "Spravovať úlohy cloudových agentov AI (codex, devin, jules)",
-    "agents": {
-      "description": "Zobraziť zoznam dostupných cloudových agentov"
-    },
-    "agent": {
-      "description": "Spravovať úlohy cloudového agenta {agent}",
-      "auth": {
-        "description": "Autorizovať agenta {agent} prostredníctvom OAuth"
-      }
-    },
-    "task": {
-      "description": "Spravovať úlohy cloudových agentov",
-      "create": {
-        "description": "Vytvoriť novú úlohu agenta",
-        "title": "Názov úlohy (predvolene prvých 80 znakov zadania)",
-        "prompt": "Text zadania úlohy",
-        "prompt_file": "Načítať zadanie zo súboru",
-        "repo": "URL repozitára, ktorý sa má naklonovať pre úlohu",
-        "branch": "Názov vetvy, ktorá sa má použiť",
-        "metadata": "Objekt metadát JSON"
-      },
-      "list": {
-        "description": "Zobraziť zoznam úloh agenta",
-        "status": "Filtrovať podľa stavu (running|completed|failed|cancelled)",
-        "limit": "Maximálny počet výsledkov (predvolené: 50)"
-      },
-      "get": {
-        "description": "Získať podrobnosti úlohy podľa ID"
-      },
-      "status": {
-        "description": "Vypísať stav úlohy (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Zrušiť spustenú úlohu",
-        "yes": "Preskočiť výzvu na potvrdenie"
-      },
-      "approve": {
-        "description": "Schváliť plán agenta a spustiť vykonávanie"
-      },
-      "message": {
-        "description": "Odoslať správu spustenej úlohe"
-      }
-    },
-    "sources": {
-      "description": "Zobraziť zoznam zdrojových súborov vytvorených úlohou"
-    }
-  },
   "program": {
     "description": "OmniRoute — Inteligentný AI router s automatickým prepínaním",
     "version": "Vypísať verziu a skončiť",

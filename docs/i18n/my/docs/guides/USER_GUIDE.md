@@ -24,7 +24,6 @@
 - [ကျွမ်းကျင်မှုစနစ်](#-skills-system)
 - [မှတ်ဉာဏ်စနစ်](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [ပရိုဂရမ်ဖြင့် စီမံခန့်ခွဲခြင်း](#-programmatic-management)
 - [အတွင်းပိုင်း CLI](#-internal-cli)
 - [Desktop အပလီကေးရှင်း (Electron)](#-desktop-application-electron)
@@ -1274,18 +1273,6 @@ OmniRoute သည် ပေါင်းစပ်ရှာဖွေရယူမှ
 - ပြန်လည်ကြိုးပမ်းမှုများ- exponential backoff ဖြင့် 3 ကြိမ် ကြိုးပမ်းပြီးနောက် dead-letter queue သို့ ပို့သည်
 
 Schema အပြည့်အစုံကို [WEBHOOKS.md](../frameworks/WEBHOOKS.md) တွင် ကြည့်ပါ။
-
----
-
-## ☁️ Cloud Agent များ
-
-OmniRoute သည် cloud coding agent များ (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) နှင့် ပေါင်းစပ်ထားသောကြောင့် local routing ကို ကိုင်တွယ်သည့် dashboard တစ်ခုတည်းမှ အချိန်ကြာမြင့်စွာ လုပ်ဆောင်ရသော task များကိုလည်း ပေးပို့လုပ်ဆောင်နိုင်သည်။
-
-- **Dashboard → Cloud Agents** တွင် သို့မဟုတ် `POST /api/v1/agents/tasks` မှတစ်ဆင့် task များ ဖန်တီးပါ
-- Task တစ်ခုချင်းအလိုက် အခြေအနေ၊ log များနှင့် artifact များကို ခြေရာခံပါ
-- Provider တစ်ခုချင်းအတွက် သင့်ကိုယ်ပိုင် API key ကို အသုံးပြုပါ — credential များသည် OmniRoute instance ပြင်ပသို့ မည်သည့်အခါမျှ ထွက်မသွားပါ
-
-အပြည့်အစုံကို [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md) တွင် ကြည့်ပါ။
 
 ---
 

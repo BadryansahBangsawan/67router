@@ -2,24 +2,20 @@
  * Pure history-grid model for the Orchestration Canvas "History" tab (Airflow-grid style).
  * No React, no side effects. Spec: _tasks/superpowers/specs/2026-08-30-orchestration-canvas-design.md
  *
- * Converts persisted A2A task-history rows (`GET /api/a2a/tasks/history`, Task C3) and the
- * existing in-memory Cloud Agent task list (`GET /api/v1/agents/tasks`) into a shared
+ * Converts persisted A2A task-history rows (`GET /api/a2a/tasks/history`, Task C3) into a
  * `HistoryItem` shape, then buckets them into a time-sliced grid — one row per
  * (source, identity) pair, one column per time bucket.
  *
- * State mapping intentionally repeats (rather than imports) the per-source maps already
- * defined locally in `model/fromA2A.ts` / `model/fromCloudAgent.ts` — those maps are not
- * exported (keeping the live-snapshot mappers v1 unchanged), and history rows come from a
- * different shape (a persisted DB row for A2A, not a live `A2ATask`) so sharing a map across
- * both would couple two independent evolution paths.
+ * State mapping intentionally repeats (rather than imports) the map already defined locally
+ * in `model/fromA2A.ts` — it is not exported (keeping the live-snapshot mapper v1 unchanged),
+ * and history rows come from a different shape (a persisted DB row, not a live `A2ATask`).
  */
 import type { OrchState } from "./orchestrationTypes";
-import type { CloudAgentTask } from "@/lib/cloudAgent/types";
 
 export interface HistoryItem {
-  id: string; // "a2a:<id>" | "cloud-agent:<id>"
-  source: "a2a" | "cloud-agent";
-  identity: string; // skill (a2a) | providerId (cloud-agent)
+  id: string; // "a2a:<id>"
+  source: "a2a";
+  identity: string; // skill
   state: OrchState;
   label: string; // skill | prompt truncado
   createdAt: string;
@@ -36,20 +32,6 @@ const A2A_STATE_MAP: Record<string, OrchState> = {
   failed: "failed",
   cancelled: "cancelled",
 };
-
-// Mirrors model/fromCloudAgent.ts:5 (STATE_MAP) — not exported there, repeated here on purpose.
-const CLOUD_AGENT_STATE_MAP: Record<string, OrchState> = {
-  queued: "queued",
-  running: "running",
-  awaiting_approval: "waiting_approval",
-  completed: "succeeded",
-  failed: "failed",
-  cancelled: "cancelled",
-};
-
-function truncate(s: string, n = 60): string {
-  return s.length > n ? `${s.slice(0, n - 1)}…` : s;
-}
 
 function durationBetween(createdAt: string, completedAt: string | null): number | null {
   if (!completedAt) return null;
@@ -79,23 +61,6 @@ export function historyItemFromA2A(row: {
     durationMs: durationBetween(row.createdAt, row.completedAt),
     cost: null,
     raw: row,
-  };
-}
-
-export function historyItemFromCloudAgent(t: CloudAgentTask): HistoryItem {
-  const state = CLOUD_AGENT_STATE_MAP[t.status] ?? "failed";
-  const completedAt = t.completedAt ?? null;
-  return {
-    id: `cloud-agent:${t.id}`,
-    source: "cloud-agent",
-    identity: t.providerId,
-    state,
-    label: truncate(t.prompt),
-    createdAt: t.createdAt,
-    completedAt,
-    durationMs: durationBetween(t.createdAt, completedAt),
-    cost: t.result?.cost ?? null,
-    raw: t,
   };
 }
 

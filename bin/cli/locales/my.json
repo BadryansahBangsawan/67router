@@ -698,54 +698,6 @@
       "yes": "အတည်ပြုရန် အချက်ပေးချက်ကို ကျော်ရန်"
     }
   },
-  "cloud": {
-    "description": "cloud AI agent လုပ်ဆောင်စရာများကို စီမံရန် (codex, devin, jules)",
-    "agents": {
-      "description": "အသုံးပြုနိုင်သော cloud agent များကို စာရင်းပြုရန်"
-    },
-    "agent": {
-      "description": "{agent} cloud agent လုပ်ဆောင်စရာများကို စီမံရန်",
-      "auth": {
-        "description": "OAuth မှတစ်ဆင့် {agent} ကို ခွင့်ပြုရန်"
-      }
-    },
-    "task": {
-      "description": "cloud agent လုပ်ဆောင်စရာများကို စီမံရန်",
-      "create": {
-        "description": "agent လုပ်ဆောင်စရာအသစ်တစ်ခု ဖန်တီးရန်",
-        "title": "လုပ်ဆောင်စရာ ခေါင်းစဉ် (မူလအားဖြင့် prompt ၏ ပထမစာလုံး 80 လုံး)",
-        "prompt": "လုပ်ဆောင်စရာ prompt စာသား",
-        "prompt_file": "ဖိုင်မှ prompt ကို ဖတ်ရန်",
-        "repo": "လုပ်ဆောင်စရာအတွက် clone ပြုလုပ်မည့် repository URL",
-        "branch": "အသုံးပြုမည့် branch အမည်",
-        "metadata": "JSON မက်တာဒေတာ အရာဝတ္ထု"
-      },
-      "list": {
-        "description": "agent လုပ်ဆောင်စရာများကို စာရင်းပြုရန်",
-        "status": "အခြေအနေအလိုက် စစ်ထုတ်ရန် (running|completed|failed|cancelled)",
-        "limit": "အများဆုံးရလဒ်အရေအတွက် (မူလသတ်မှတ်ချက်: 50)"
-      },
-      "get": {
-        "description": "ID ဖြင့် လုပ်ဆောင်စရာအသေးစိတ်ကို ရယူရန်"
-      },
-      "status": {
-        "description": "လုပ်ဆောင်စရာအခြေအနေကို ဖော်ပြရန် (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "လုပ်ဆောင်နေသည့် တာဝန်ကို ပယ်ဖျက်ရန်",
-        "yes": "အတည်ပြုချက်တောင်းခံမှုကို ကျော်ရန်"
-      },
-      "approve": {
-        "description": "စတင်လုပ်ဆောင်ရန် အေးဂျင့်အစီအစဉ်ကို အတည်ပြုရန်"
-      },
-      "message": {
-        "description": "လုပ်ဆောင်နေသည့် တာဝန်ထံ မက်ဆေ့ချ်ပို့ရန်"
-      }
-    },
-    "sources": {
-      "description": "တာဝန်တစ်ခုမှ ထုတ်ပေးထားသည့် ရင်းမြစ်ဖိုင်များကို စာရင်းပြုစုရန်"
-    }
-  },
   "program": {
     "description": "OmniRoute — အလိုအလျောက် အရန်ပြောင်းစနစ်ပါဝင်သော စမတ် AI Router",
     "version": "ဗားရှင်းကို ပြသပြီး ထွက်ရန်",

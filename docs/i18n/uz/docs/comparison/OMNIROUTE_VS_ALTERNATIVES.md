@@ -24,7 +24,6 @@ Ommabop ochiq kodli AI routerlarga nisbatan obyektiv xususiyatlar taqqoslanishi.
 | **A2A protokoli**                                             |                 ✅ 6 koʻnikma                  |         ❌         |        ❌         |    ❌     |
 | **Xotira (FTS5 + vektor)**                                    |                       ✅                       |         ❌         |        ❌         |    ❌     |
 | **Guardrails (PII, inyeksiya, vizion)**                       |                       ✅                       |       qisman       |        ❌         | ✅ pullik |
-| **Bulut agentlari integratsiyalari**                          |          Codex, Cursor, Devin, Jules           |         ❌         |        ❌         |    ❌     |
 | **Har bir provayder uchun circuit breaker**                   |      ✅ 3 holatli, kechiktirilgan tiklash      |       oddiy        |        ❌         |    ✅     |
 | **TLS barmoq izini yashirish (JA3/JA4)**                      |                   ✅ wreq-js                   |         ❌         |        ❌         |    ❌     |
 | **Baholash freymvorki**                                       |                 ✅ oʻrnatilgan                 |         ❌         |        ❌         | ⚠ pullik  |

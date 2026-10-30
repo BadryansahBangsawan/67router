@@ -1354,11 +1354,11 @@ nuni kawai — canza su yana buƙatar gyaran lambar (code), ba canjin env var ba
 
 Ba masu amfani damar kai rahoton matsaloli kai tsaye daga Dashboard.
 
-| Sauyi                 | Tsoho             | Fayil ɗin Tushe                               | Bayani                                                                                                                                                                           |
-| --------------------- | ----------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(ba a saita ba)_ | `src/app/api/v1/issues/report/route.ts`       | Ma'ajiyar lamba a tsarin `owner/repo`.                                                                                                                                           |
-| `GITHUB_ISSUES_TOKEN` | _(ba a saita ba)_ | `src/app/api/v1/issues/report/route.ts`       | GitHub Personal Access Token mai izinin `issues:write`.                                                                                                                          |
-| `GITHUB_TOKEN`        | _(ba a saita ba)_ | tantance matsaloli / mataimakan wakilin cloud | Alamar samun damar GitHub ta gama-gari da ake amfani da ita a matsayin madadin `GITHUB_ISSUES_TOKEN`, kuma mataimakan wakilin cloud a `src/lib/cloudAgent/*` suna amfani da ita. |
+| Sauyi                 | Tsoho             | Fayil ɗin Tushe                               | Bayani                                                                                                                                                                                        |
+| --------------------- | ----------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(ba a saita ba)_ | `src/app/api/v1/issues/report/route.ts`       | Ma'ajiyar lamba a tsarin `owner/repo`.                                                                                                                                                        |
+| `GITHUB_ISSUES_TOKEN` | _(ba a saita ba)_ | `src/app/api/v1/issues/report/route.ts`       | GitHub Personal Access Token mai izinin `issues:write`.                                                                                                                                       |
+| `GITHUB_TOKEN`        | _(ba a saita ba)_ | tantance matsaloli / mataimakan wakilin cloud | Alamar samun damar GitHub ta gama-gari da ake amfani da ita a matsayin madadin `GITHUB_ISSUES_TOKEN`, kuma mataimakan wakilin cloud a `src/lib/skills/githubCollector.ts` suna amfani da ita. |
 
 ---
 

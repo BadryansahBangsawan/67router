@@ -24,7 +24,6 @@ Objektiv funktionssammenligning med populære open source AI-routere.
 | **A2A-protokol**                                         |              ✅ 6 færdigheder              |        ❌         |        ❌         |     ❌     |
 | **Hukommelse (FTS5 + vektor)**                           |                     ✅                     |        ❌         |        ❌         |     ❌     |
 | **Guardrails (PII, injektion, vision)**                  |                     ✅                     |      delvis       |        ❌         | ✅ betalt  |
-| **Cloud-agentintegrationer**                             |        Codex, Cursor, Devin, Jules         |        ❌         |        ❌         |     ❌     |
 | **Circuit breaker pr. udbyder**                          |    ✅ 3 tilstande, doven genoprettelse     |   grundlæggende   |        ❌         |     ✅     |
 | **TLS-fingeraftryk-stealth (JA3/JA4)**                   |                 ✅ wreq-js                 |        ❌         |        ❌         |     ❌     |
 | **Evalueringsframework**                                 |                ✅ indbygget                |        ❌         |        ❌         |  ⚠ betalt  |

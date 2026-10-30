@@ -128,7 +128,6 @@ Các trang chính trong `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kiểm soát hạn ngạch/tần suất
 - `/dashboard/cli-tools` — hướng dẫn thiết lập CLI ban đầu, phát hiện môi trường chạy, tạo cấu hình
 - `/dashboard/agents` — các tác nhân ACP được phát hiện + đăng ký tác nhân tùy chỉnh
-- `/dashboard/cloud-agents` — tác vụ của tác nhân được lưu trữ trên đám mây (Codex Cloud, Devin, Jules) và vòng đời tác vụ
 - `/dashboard/skills` — sổ đăng ký kỹ năng A2A, thực thi trong sandbox, danh mục kỹ năng tích hợp sẵn
 - `/dashboard/memory` — kiểm tra và truy xuất bộ nhớ hội thoại bền vững
 - `/dashboard/webhooks` — đăng ký webhook gửi đi, luân chuyển bí mật, số liệu thống kê thử lại
@@ -382,23 +381,6 @@ Các khả năng chính:
 
 Để biết đầy đủ chi tiết về thuật toán (công thức của các yếu tố, tinh chỉnh trọng số), hãy xem
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Cloud Agents bao bọc các nền tảng tác nhân mã được lưu trữ bởi bên thứ ba (Codex Cloud, Devin,
-Jules) sau một vòng đời tác vụ thống nhất được hỗ trợ bởi cơ sở dữ liệu. Tất cả endpoint tạo/kiểm tra
-tác vụ đều yêu cầu xác thực quản trị.
-
-- Thư mục gốc của mô-đun: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, cùng các thư mục con cho từng tác nhân trong `agents/`)
-- Phần triển khai cho từng tác nhân: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Các endpoint công khai: `/api/v1/agents/tasks/*` (liệt kê/tạo/lấy/hủy)
-- Các endpoint quản trị: `/api/cloud/*` (cấp phát, trạng thái, xử lý hàng loạt)
-- Bảng điều khiển: `/dashboard/cloud-agents`
-- Lưu trữ: bảng `cloud_agent_tasks`
-
-Để biết chi tiết về cấp phát và OAuth cho từng tác nhân, hãy xem
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Các rào chắn
 

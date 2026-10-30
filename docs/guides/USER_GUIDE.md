@@ -25,7 +25,6 @@ Complete guide for configuring providers, creating combos, integrating CLI tools
 - [MCP & A2A Integration](#-mcp--a2a-integration)
 - [Skills System](#-skills-system)
 - [Memory System](#-memory-system)
-- [Cloud Agents](#-cloud-agents)
 - [Programmatic Management](#-programmatic-management)
 - [Internal CLI](#-internal-cli)
 - [Desktop Application (Electron)](#-desktop-application-electron)
@@ -1269,18 +1268,6 @@ OmniRoute persists **long-term conversational memory** with hybrid retrieval:
 - Memories are scoped per API key and per session
 
 Manage memories in **Dashboard → Memory** (search, edit, export, purge). The HTTP surface (`/api/memory/*`) lets agents push and query facts programmatically — see [MEMORY.md](../frameworks/MEMORY.md).
-
----
-
-## ☁️ Cloud Agents
-
-OmniRoute integrates with cloud coding agents (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) so you can dispatch long-running tasks from the same dashboard that handles your local routing.
-
-- Create tasks in **Dashboard → Cloud Agents** or via `POST /api/v1/agents/tasks`
-- Track status, logs, and artifacts per task
-- Bring-your-own API key per provider — credentials never leave the OmniRoute instance
-
-Full reference: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

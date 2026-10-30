@@ -128,7 +128,6 @@ v3.8.0 ပလက်ဖောင်းအတွက် စံသတ်မှတ်
 - `/dashboard/limits` — quota/rate ထိန်းချုပ်မှုများ
 - `/dashboard/cli-tools` — CLI စတင်အသုံးပြုမှု၊ runtime ရှာဖွေသတ်မှတ်မှုနှင့် config ထုတ်လုပ်မှု
 - `/dashboard/agents` — ရှာဖွေတွေ့ရှိထားသော ACP agent များ + စိတ်ကြိုက် agent မှတ်ပုံတင်ခြင်း
-- `/dashboard/cloud-agents` — cloud ပေါ်တွင် လက်ခံထားသော agent လုပ်ငန်းများ (Codex Cloud၊ Devin၊ Jules) နှင့် လုပ်ငန်းသက်တမ်းစက်ဝန်း
 - `/dashboard/skills` — A2A skill registry၊ sandbox လုပ်ဆောင်မှုနှင့် ထည့်သွင်းပေးထားသော skill catalog
 - `/dashboard/memory` — အမြဲတမ်းသိမ်းဆည်းထားသော စကားဝိုင်းမှတ်ဉာဏ်ကို စစ်ဆေးခြင်းနှင့် ပြန်လည်ရယူခြင်း
 - `/dashboard/webhooks` — အပြင်သို့ပို့သည့် webhook စာရင်းသွင်းမှုများ၊ secret လှည့်လည်ပြောင်းလဲခြင်းနှင့် ပြန်လည်ကြိုးစားမှု ကိန်းဂဏန်းများ
@@ -371,23 +370,6 @@ Auto Combo သည် ပုံသေ combo သတ်မှတ်ချက်အ�
 
 algorithm ဆိုင်ရာ အသေးစိတ်အပြည့်အစုံ (factor formula များ၊ weight ချိန်ညှိခြင်း) အတွက်
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) ကို ကြည့်ပါ။
-
-### B. Cloud Agents
-
-Cloud Agents သည် third-party hosted code-agent platform များ (Codex Cloud, Devin,
-Jules) ကို တူညီသော DB-backed task lifecycle နောက်ကွယ်တွင် ထုပ်ပိုးပေးသည်။ task ဖန်တီးခြင်း/စစ်ဆေးခြင်း
-endpoint အားလုံးအတွက် management authentication လိုအပ်သည်။
-
-- Module root: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` နှင့် `agents/` အောက်ရှိ agent တစ်ခုချင်းစီဆိုင်ရာ subdirectory များ)
-- Agent တစ်ခုချင်းစီဆိုင်ရာ implementation များ: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoint များ: `/api/v1/agents/tasks/*` (စာရင်းပြုစု/ဖန်တီး/ရယူ/ပယ်ဖျက်)
-- Management endpoint များ: `/api/cloud/*` (provisioning၊ အခြေအနေ၊ batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-Agent တစ်ခုချင်းစီ၏ provisioning နှင့် OAuth အသေးစိတ်များအတွက်
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) ကို ကြည့်ပါ။
 
 ### C. Guardrails
 

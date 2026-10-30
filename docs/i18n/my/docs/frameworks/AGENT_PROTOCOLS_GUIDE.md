@@ -4,7 +4,6 @@
 
 ---
 
-> **ရင်းမြစ်:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **နောက်ဆုံးမွမ်းမံထားသည်:** 2026-06-28 — v3.8.40
 
 OmniRoute သည် agent နှင့်သက်ဆိုင်သော မျက်နှာပြင် သုံးမျိုးကို ဖော်ထုတ်ပေးထားသည်။ ၎င်းတို့သည် အပေါ်ယံအားဖြင့် ဆင်တူသော်လည်း မတူညီသော ပြဿနာများကို ဖြေရှင်းပေးသည်။ သင့်လျော်သောတစ်ခုကို ရွေးချယ်ရန် ဤစာမျက်နှာကို အသုံးပြုပါ။
@@ -20,20 +19,6 @@ OmniRoute သည် agent နှင့်သက်ဆိုင်သော မ�
 ဤသုံးမျိုးသည် တစ်ခုနှင့်တစ်ခု သီးခြားလွတ်လပ်သည် — မည်သည့်အစုခွဲကိုမဆို ရွေးချယ်နိုင်သည်။
 
 ## ဆုံးဖြတ်ချက်ချရန် လမ်းညွှန်ပုံ
-
-```
-ဤစက်ပြင်ပတွင် အလုပ်လုပ်ဆောင်ရန် cloud service တစ်ခု (Codex Cloud / Cursor Cloud / Devin / Jules) လိုအပ်ပါသလား?
-├─ လိုအပ်သည် → Cloud Agents (POST /api/v1/agents/tasks)
-└─ မလိုအပ်ပါ → ဆက်လက်စဉ်းစားပါ
-    │
-    A2A ကို အသုံးပြုပြီး ပူးပေါင်းဆောင်ရွက်လိုသော peer agent ရှိပါသလား?
-    ├─ ရှိသည် → A2A (POST /a2a)
-    └─ မရှိပါ → ဆက်လက်စဉ်းစားပါ
-        │
-        စက်တွင် ထည့်သွင်းထားသော CLI coding agent များကို စာရင်းပြုစုရန် / စီစဉ်သတ်မှတ်ရန် လိုအပ်ပါသလား?
-        ├─ လိုအပ်သည် → ACP (GET /api/acp/agents)
-        └─ မလိုအပ်ပါ → ရိုးရိုး /v1/chat/completions ကို အသုံးပြုပါ
-```
 
 ## 1. A2A — Agent အချင်းချင်း
 
@@ -124,61 +109,6 @@ POST အတွက် body ပုံစံ (`src/app/api/acp/agents/route.ts` ရ
   fallback အဖြစ် ချိတ်ဆက်ထားခြင်းမရှိပါ။ ပုံမှန် အပြန်အလှန်အသုံးပြုမှုအတွက် ပြင်ဆင်သတ်မှတ်ထားသော CLI ကို ကိုယ်တိုင်စတင်ပါ သို့မဟုတ်
   `omniroute run` ကို အသုံးပြုပါ။
 
-## 3. Cloud Agent များ
-
-**OmniRoute endpoint များ:** `/api/v1/agents/tasks/*` (lifecycle) + `/api/cloud/*` (plumbing)
-**ရင်းမြစ်:** `src/lib/cloudAgent/`
-
-### ၎င်းက ဘာလဲ
-
-Third-party cloud coding agent များပေါ်တွင် တစ်သမတ်တည်းရှိသော interface တစ်ခုဖြစ်သည်။ သင်သည် prompt + repo URL ကို ပေးပို့ပြီး၊ OmniRoute က သင့်လျော်သည့် cloud agent ထံ လွှဲပြောင်းပေးကာ status ကို အခါအားလျော်စွာ စစ်ဆေးပြီး ရလဒ်များကို ပြန်ပေးသည်။
-
-### ပံ့ပိုးထားသော agent များ (4 ခု၊ အားလုံးကို `src/lib/cloudAgent/agents/` တွင် အတည်ပြုထားသည်)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Lifecycle
-
-```
-POST /api/v1/agents/tasks
-  → agent class တစ်ခုစီအတွက် BaseAgent.createTask()
-  → ပြင်ပ service က အလုပ်စတင်သည်
-  → DB တွင် task row ဖန်တီးသည် (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → provider ထံမှ lazy status sync
-  → လက်ရှိ status + plan + activity log ကို ပြန်ပေးသည်
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → provider ထံ လွှဲပို့သည် (သို့မဟုတ် စက်တွင်း၌ ပယ်ဖျက်ထားကြောင်း မှတ်သားသည်)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → စက်တွင်း၌ ပယ်ဖျက်သည်
-```
-
-### Auth
-
-⚠️ **`/api/v1/agents/tasks/*` endpoint အားလုံးသည် management auth လိုအပ်သည်** (commit `588a0333`)။ v3.8.0 မှစ၍ Bearer တစ်မျိုးတည်းသာ အသုံးပြုသော caller များသည် 401 ကို ရရှိမည်။
-
-### အသေးစိတ်လေ့လာရန်
-
-`CloudAgentBase` contract၊ agent တစ်ခုချင်းစီ၏ အသေးစိတ်အချက်များ၊ schema အသေးစိတ်များနှင့် credential plumbing endpoint များအတွက် [CLOUD_AGENT.md](./CLOUD_AGENT.md) ကို ကြည့်ပါ။
-
-## နှိုင်းယှဉ်ချက်: A2A နှင့် Cloud Agents
-
-နှစ်ခုစလုံးတွင် "အချိန်ကြာမြင့်စွာ လုပ်ဆောင်သည့် task များ" ရှိသော်လည်း မတူညီသော layer များတွင် လုပ်ဆောင်ပါသည်-
-
-| အချက်အလက်                     | A2A                                                                                                                    | Cloud Agents                                                     |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| စံနှုန်း                      | Open A2A v0.3                                                                                                          | OmniRoute အတွက် သီးသန့်                                          |
-| တွက်ချက်မှု လုပ်ဆောင်သည့်နေရာ | OmniRoute အတွင်း (`configured combos` များကို အသုံးပြုသည်)                                                             | ပြင်ပ (Codex / Devin / Jules ဆာဗာများ)                           |
-| Task ကြာချိန်                 | မူလ TTL 5 မိနစ် (`TaskManager` တွင် ပြင်ဆင်သတ်မှတ်နိုင်သည်)                                                            | မိနစ်များမှ နာရီများအထိ                                          |
-| Repo အကြောင်း သိရှိမှု        | မရှိ (`prompt` များကိုသာ ပေးပို့သည်)                                                                                   | ရှိ (repo URL + branch)                                          |
-| အသုံးပြုမှု                   | Agent များအကြား ပူးပေါင်းလုပ်ဆောင်ခြင်း၊ smart routing ကို service တစ်ခုအဖြစ် အသုံးပြုခြင်း                            | "repo Y တွင် feature X ကို ဖန်တီးပါ" ဟူသော အလုပ်ကို လွှဲအပ်ခြင်း |
-| စစ်မှန်ကြောင်း အတည်ပြုမှု     | `/a2a` အတွက် `OMNIROUTE_API_KEY` ကို ရွေးချယ်အသုံးပြုနိုင်သည်၊ `/api/a2a/*` REST helper များအတွက် management လိုအပ်သည် | အမြဲတမ်း management လိုအပ်သည်                                    |
-
 ## ပေါင်းစပ်အသုံးပြုမှု နမူနာများ
 
 ### OmniRoute ၏ A2A စွမ်းဆောင်ရည်များကို ရှာဖွေကြည့်ရှုခြင်း
@@ -228,30 +158,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cloud Agent task တစ်ခု ပေးပို့ခြင်း
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Cloud task ၏ အခြေအနေကို အချိန်အပိုင်းအခြားအလိုက် စစ်ဆေးခြင်း
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## မည်သည့်အချိန်တွင် မည်သည့်အရာကို အသုံးပြုသင့်သနည်း
 
 - **Chatbot / copilot frontend** → `/v1/chat/completions` (OpenAI နှင့် တွဲဖက်အသုံးပြုနိုင်သည် — agent protocol မဟုတ်ပါ)
@@ -283,7 +189,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## ထပ်မံကြည့်ရှုရန်
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2A အကြောင်း အသေးစိတ်လေ့လာရန်
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Cloud Agents အကြောင်း အသေးစိတ်လေ့လာရန်
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — ပြင်ပ CLI ပေါင်းစည်းမှုများ (ACP ကို အသုံးပြုသည်)
 - [SKILLS.md](./SKILLS.md) — Skills framework (A2A skills နှင့် ကွဲပြားသည် — ဒေသတွင်း လုပ်ဆောင်မှု sandbox)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpoint ကိုးကားချက်

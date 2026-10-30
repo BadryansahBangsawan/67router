@@ -1383,11 +1383,11 @@ att ändra dem kräver en kodändring, inte en miljövariabel:
 
 Tillåt användare att rapportera problem direkt från instrumentpanelen.
 
-| Variabel              | Standardvärde    | Källfil                                           | Beskrivning                                                                                                                                  |
-| --------------------- | ---------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(inte angivet)_ | `src/app/api/v1/issues/report/route.ts`           | Kodförråd i formatet `owner/repo`.                                                                                                           |
-| `GITHUB_ISSUES_TOKEN` | _(inte angivet)_ | `src/app/api/v1/issues/report/route.ts`           | Personlig GitHub-åtkomsttoken med behörigheten `issues:write`.                                                                               |
-| `GITHUB_TOKEN`        | _(inte angivet)_ | problemtriagering/hjälpfunktioner för molnagenter | Allmän GitHub-åtkomsttoken som används som reserv för `GITHUB_ISSUES_TOKEN` och av hjälpfunktioner för molnagenter i `src/lib/cloudAgent/*`. |
+| Variabel              | Standardvärde    | Källfil                                           | Beskrivning                                                                                                                                               |
+| --------------------- | ---------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(inte angivet)_ | `src/app/api/v1/issues/report/route.ts`           | Kodförråd i formatet `owner/repo`.                                                                                                                        |
+| `GITHUB_ISSUES_TOKEN` | _(inte angivet)_ | `src/app/api/v1/issues/report/route.ts`           | Personlig GitHub-åtkomsttoken med behörigheten `issues:write`.                                                                                            |
+| `GITHUB_TOKEN`        | _(inte angivet)_ | problemtriagering/hjälpfunktioner för molnagenter | Allmän GitHub-åtkomsttoken som används som reserv för `GITHUB_ISSUES_TOKEN` och av hjälpfunktioner för molnagenter i `src/lib/skills/githubCollector.ts`. |
 
 ---
 

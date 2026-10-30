@@ -43,8 +43,6 @@ Cykl v3.7.x → v3.8.0 wprowadził automatyczny routing bez konfiguracji, nowych
 - 🤝 **Dostawca GitLab Duo OAuth** — logowanie przy użyciu danych uwierzytelniających GitLab
 - 🧠 **Pamięć podręczna Reasoning Replay Cache** — hybrydowe przechowywanie śladów rozumowania w pamięci i SQLite
 
-📚 **Powiązana dokumentacja:** [Framework umiejętności](../frameworks/SKILLS.md) · [System pamięci](../frameworks/MEMORY.md) · [Agenci chmurowi](../frameworks/CLOUD_AGENT.md) · [Webhooki](../frameworks/WEBHOOKS.md) · [Pamięć podręczna Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Dostawcy

@@ -1382,11 +1382,11 @@ mengubahnya memerlukan penyuntingan kode, bukan variabel env:
 
 Izinkan pengguna melaporkan masalah secara langsung dari Dashboard.
 
-| Variabel              | Default          | File Sumber                             | Deskripsi                                                                                                                                                |
-| --------------------- | ---------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(belum diatur)_ | `src/app/api/v1/issues/report/route.ts` | Repositori dalam format `owner/repo`.                                                                                                                    |
-| `GITHUB_ISSUES_TOKEN` | _(belum diatur)_ | `src/app/api/v1/issues/report/route.ts` | GitHub Personal Access Token dengan cakupan `issues:write`.                                                                                              |
-| `GITHUB_TOKEN`        | _(belum diatur)_ | triase masalah / pembantu agen cloud    | Token akses GitHub generik yang digunakan sebagai cadangan untuk `GITHUB_ISSUES_TOKEN` dan digunakan oleh pembantu agen cloud di `src/lib/cloudAgent/*`. |
+| Variabel              | Default          | File Sumber                             | Deskripsi                                                                                                                                                             |
+| --------------------- | ---------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(belum diatur)_ | `src/app/api/v1/issues/report/route.ts` | Repositori dalam format `owner/repo`.                                                                                                                                 |
+| `GITHUB_ISSUES_TOKEN` | _(belum diatur)_ | `src/app/api/v1/issues/report/route.ts` | GitHub Personal Access Token dengan cakupan `issues:write`.                                                                                                           |
+| `GITHUB_TOKEN`        | _(belum diatur)_ | triase masalah / pembantu agen cloud    | Token akses GitHub generik yang digunakan sebagai cadangan untuk `GITHUB_ISSUES_TOKEN` dan digunakan oleh pembantu agen cloud di `src/lib/skills/githubCollector.ts`. |
 
 ---
 

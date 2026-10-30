@@ -71,6 +71,13 @@ const REMOVED_PATHS: string[] = [
   "src/shared/validation/schemas/evals.ts",
   "bin/cli/commands/eval.mjs",
   "bin/cli/tui/EvalWatch.jsx",
+  // cloud agents
+  "src/lib/cloudAgent",
+  "src/app/api/v1/agents",
+  "src/app/(dashboard)/dashboard/cloud-agents",
+  "src/app/(dashboard)/dashboard/orchestration/model/fromCloudAgent.ts",
+  "src/shared/constants/providers/cloud-agent.ts",
+  "bin/cli/commands/cloud.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -124,6 +131,13 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /\borderTargetsByEvalScores\b|\bevalRoutingSchema\b|\.evalRouting\b/,
   /schemas\/evals\b/,
   /\bregisterEval\b|\bEvalWatch\b/,
+  // cloud agents
+  /lib\/cloudAgent\b/,
+  /api\/v1\/agents\//,
+  /dashboard\/cloud-agents\b/,
+  /\bCLOUD_AGENT_PROVIDERS\b|\bCloudAgentTask\b|\bfromCloudAgent\b/,
+  /\bvalidate(Jules|DevinCloudAgent)Provider\b/,
+  /\bregisterCloud\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

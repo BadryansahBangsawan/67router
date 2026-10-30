@@ -214,8 +214,6 @@ API keys មាន array `scopes` (រក្សាទុកជា JSON ក្ន
 
 ## ការផ្លាស់ប្តូរដែលមិនត្រូវគ្នាជាមួយកំណែមុន — v3.8.0
 
-endpoint `/api/v1/agents/tasks/*` និង `/api/resilience/model-cooldowns` **ឥឡូវនេះតម្រូវឱ្យមានការផ្ទៀងផ្ទាត់សម្រាប់ការគ្រប់គ្រង** (commit `588a0333`)។ Client ដែលពីមុនផ្ញើ API key ធម្មតាដោយគ្មានវិសាលភាព `manage` នឹងទទួលបាន `403`។ ការធ្វើ migration៖ ផ្តល់វិសាលភាព `manage` ដល់ key នៅក្នុង dashboard API Keys ឬប្រើ dashboard session ដែលបាន log in។
-
 ## ការផ្លាស់ប្តូរឥរិយាបថ — v3.8.2
 
 `/api/mcp/*` (ម៉ាស៊ីនមេ MCP ពីចម្ងាយ) នៅតែជា LOCAL_ONLY តាមលំនាំដើម ប៉ុន្តែឥឡូវនេះវាទទួលយក request ដែលមិនមែនជា loopback នៅពេល header `Authorization: Bearer <api-key>` មានវិសាលភាព `manage`។ ករណីលើកលែងនេះត្រូវបានគ្រប់គ្រងយ៉ាងច្បាស់លាស់តាម path នីមួយៗតាមរយៈ `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` នៅក្នុង `src/server/authz/routeGuard.ts`។ prefix LOCAL_ONLY ដែលនៅជាប់គ្នា `/api/cli-tools/runtime/*` មានចេតនា **មិន** អនុញ្ញាតឱ្យរំលងទេ ព្រោះវាអាចបង្កើត subprocess តាមអំពើចិត្ត។ Anonymous request ទៅកាន់ `/api/mcp/*` ពី non-loopback នៅតែបន្តទទួលបាន `403 LOCAL_ONLY` — លំនាំដើមសម្រាប់ path LOCAL_ONLY ថ្មីណាមួយនៅតែតម្រូវឱ្យជា loopback យ៉ាងតឹងរ៉ឹង។ សូមមើល [កម្រិត Route Guard](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out)។

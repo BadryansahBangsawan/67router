@@ -246,17 +246,6 @@ O inventário de ferramentas MCP acima (110 ferramentas únicas, calculadas por 
 limitado a operações de encaminhamento/cache/compressão/memória/competências/proxy/fontes de contexto em tempo de execução. Duas frameworks adjacentes
 são fornecidas juntamente com o servidor MCP na v3.8.0 e estão documentadas separadamente:
 
-### Agentes na Cloud
-
-Os Agentes na Cloud são agentes de programação de IA executados fora do processo (codex-cloud, cursor-cloud, devin, jules), integrados no
-OmniRoute através do mesmo modelo de ligação utilizado para os fornecedores de LLM. São disponibilizados através da
-sua própria interface REST (`/api/v1/agents/*`) e **não** fazem parte do catálogo de ferramentas MCP
-— invocar um Agente na Cloud não consome um âmbito MCP.
-
-- Implementação: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ciclo de vida: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentação: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Mecanismos de Proteção
 
 Os mecanismos de proteção são filtros de pré/pós-execução (vision-bridge, pii-masker, prompt-injection)

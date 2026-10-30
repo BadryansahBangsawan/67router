@@ -1367,11 +1367,11 @@ balki kodni tahrirlashni talab qiladi:
 
 Foydalanuvchilarga muammolar haqida bevosita Boshqaruv panelidan xabar berish imkonini bering.
 
-| Oʻzgaruvchi           | Standart qiymat   | Manba fayli                                       | Tavsif                                                                                                                                                                               |
-| --------------------- | ----------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(oʻrnatilmagan)_ | `src/app/api/v1/issues/report/route.ts`           | `owner/repo` formatidagi repozitoriy.                                                                                                                                                |
-| `GITHUB_ISSUES_TOKEN` | _(oʻrnatilmagan)_ | `src/app/api/v1/issues/report/route.ts`           | `issues:write` doirasiga ega GitHub shaxsiy kirish tokeni.                                                                                                                           |
-| `GITHUB_TOKEN`        | _(oʻrnatilmagan)_ | muammolarni saralash / bulut agenti yordamchilari | `GITHUB_ISSUES_TOKEN` uchun zaxira sifatida ishlatiladigan va `src/lib/cloudAgent/*` ichidagi bulut agenti yordamchilari tomonidan isteʼmol qilinadigan umumiy GitHub kirish tokeni. |
+| Oʻzgaruvchi           | Standart qiymat   | Manba fayli                                       | Tavsif                                                                                                                                                                                            |
+| --------------------- | ----------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(oʻrnatilmagan)_ | `src/app/api/v1/issues/report/route.ts`           | `owner/repo` formatidagi repozitoriy.                                                                                                                                                             |
+| `GITHUB_ISSUES_TOKEN` | _(oʻrnatilmagan)_ | `src/app/api/v1/issues/report/route.ts`           | `issues:write` doirasiga ega GitHub shaxsiy kirish tokeni.                                                                                                                                        |
+| `GITHUB_TOKEN`        | _(oʻrnatilmagan)_ | muammolarni saralash / bulut agenti yordamchilari | `GITHUB_ISSUES_TOKEN` uchun zaxira sifatida ishlatiladigan va `src/lib/skills/githubCollector.ts` ichidagi bulut agenti yordamchilari tomonidan isteʼmol qilinadigan umumiy GitHub kirish tokeni. |
 
 ---
 

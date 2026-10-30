@@ -68,20 +68,6 @@ jíjẹ́ kí **preflight** CORS kọjá lórí àwọn ọ̀nà ìṣàkóso �
 tí ojú-ìwé láti orísun mìíràn kò lè pèsè. Èyí **kì í ṣe** ọ̀nà jíjà gbà ìgbà
 tàbí jíjí ẹ̀rí ìdánimọ̀ lórí ọ̀nà CORS tí a pín.
 
-### Ìyàtọ̀ gidi kan — `/api/v1/agents/`
-
-Àwọn ọ̀nà Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) máa ń ṣètò
-àwọn akọlé CORS **tiwọn fúnra wọn**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) wọ́n sì **máa ń** fi
-`Access-Control-Allow-Origin: <origin>|*` ránṣẹ́ papọ̀ pẹ̀lú
-`Access-Control-Allow-Credentials: true`. Èyí ni ojú-iṣẹ́ kan ṣoṣo níbi tí
-dídá orísun padà àti ẹ̀rí ìdánimọ̀ ti wà papọ̀, ó sì jẹ́ **òmìnira kúrò lọ́dọ̀
-`CORS_ALLOW_ALL`**. Àwọn ọ̀nà wọ̀nyí nílò ìfàṣẹsí ìṣàkóso
-(`requireManagementAuth`); àwọn olùṣàkóso tí wọ́n ṣí pátákó ìṣàkóso sílẹ̀ níta ẹ̀rọ agbàlejò gbọ́dọ̀
-mọ̀ pé ibí yìí nìkan ni àwọn akọlé ìdáhùn ti yọ̀ǹda fún kíkà láti orísun mìíràn tí ó ní ẹ̀rí ìdánimọ̀.
-Ṣíṣe ààlà rẹ̀ sí àtòjọ ìyọ̀ǹda pàtó ni a ń tọpinpin
-lọ́tọ̀ sí ìtọ́sọ́nà CORS yìí.
-
 ## Àtòjọ àyẹ̀wò fún production
 
 - **Má ṣe ṣètò `CORS_ALLOW_ALL=true` ní production láéláé.** Fi sílẹ̀ láìṣètò.
@@ -152,15 +138,14 @@ taabu Security), kì í ṣe nínú proxy.
 
 ## Àwọn fáìlì orísun
 
-| Ohun tó kan                                 | Fáìlì                                                                |
-| ------------------------------------------- | -------------------------------------------------------------------- |
-| Ìpinnu allowlist + `getCorsStatus()`        | `src/server/cors/origins.ts`                                         |
-| Ìmúlò middleware (orísun òtítọ́ kan ṣoṣo)    | `src/server/authz/pipeline.ts`                                       |
-| Settings → fífi origin sínú runtime         | `src/lib/config/runtimeSettings.ts`                                  |
-| Ipò runtime fún dashboard                   | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Àsìá ìkìlọ̀ dashboard                        | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| Ààyè CORS Allowed Origins                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS Cloud-Agent fún route kọ̀ọ̀kan (ìyàsọ́tọ̀) | `src/lib/cloudAgent/api.ts`                                          |
+| Ohun tó kan                              | Fáìlì                                                                |
+| ---------------------------------------- | -------------------------------------------------------------------- |
+| Ìpinnu allowlist + `getCorsStatus()`     | `src/server/cors/origins.ts`                                         |
+| Ìmúlò middleware (orísun òtítọ́ kan ṣoṣo) | `src/server/authz/pipeline.ts`                                       |
+| Settings → fífi origin sínú runtime      | `src/lib/config/runtimeSettings.ts`                                  |
+| Ipò runtime fún dashboard                | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Àsìá ìkìlọ̀ dashboard                     | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| Ààyè CORS Allowed Origins                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Wo pẹ̀lú
 

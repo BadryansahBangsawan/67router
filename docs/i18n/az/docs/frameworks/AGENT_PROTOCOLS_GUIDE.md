@@ -4,7 +4,6 @@
 
 ---
 
-> **Mənbə:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
 OmniRoute agentlərlə əlaqəli üç fərqli interfeys təqdim edir. İlk baxışda oxşar görünsələr də, fərqli problemləri həll edirlər. Uyğun olanı seçmək üçün bu səhifədən istifadə edin.
@@ -20,20 +19,6 @@ OmniRoute agentlərlə əlaqəli üç fərqli interfeys təqdim edir. İlk baxı
 Bu üçü bir-birindən müstəqildir — istənilən alt çoxluğu seçə bilərsiniz.
 
 ## Qərar Ağacı
-
-```
-Bu cihazdan kənarda işi görmək üçün bulud xidmətinə (Codex Cloud / Cursor Cloud / Devin / Jules) ehtiyacınız var?
-├─ BƏLİ → Bulud Agentləri (POST /api/v1/agents/tasks)
-└─ XEYR → Davam edin
-    │
-    A2A protokolundan istifadə edən və əməkdaşlıq etmək istəyən həmkar agentiniz var?
-    ├─ BƏLİ → A2A (POST /a2a)
-    └─ XEYR → Davam edin
-        │
-        Lokal olaraq quraşdırılmış CLI proqramlaşdırma agentlərini siyahıya almaq / konfiqurasiya etmək istəyirsiniz?
-        ├─ BƏLİ → ACP (GET /api/acp/agents)
-        └─ XEYR → Adi /v1/chat/completions istifadə edin
-```
 
 ## 1. A2A — Agentdən agentə
 
@@ -119,61 +104,6 @@ POST üçün sorğu gövdəsinin strukturu (`src/app/api/acp/agents/route.ts` da
 
 - HTTP reyestri tapşırıqları qəbul etmir və proseslərin işə salınması imkanını təqdim etmir. Daxili menecer qeydiyyatdan keçirilmiş CLI-ni işə sala bilər, lakin avtomatik provayder ehtiyat mexanizmi kimi qoşulmayıb. Adi interaktiv istifadə üçün konfiqurasiya edilmiş CLI-ni özünüz başladın və ya `omniroute run` istifadə edin.
 
-## 3. Bulud Agentləri
-
-**OmniRoute son nöqtələri:** `/api/v1/agents/tasks/*` (həyat dövrü) + `/api/cloud/*` (infrastruktur)
-**Mənbə:** `src/lib/cloudAgent/`
-
-### Bu nədir
-
-Üçüncü tərəf bulud proqramlaşdırma agentləri üzərində vahid interfeysdir. Siz sorğu mətni + repozitoriya URL-i göndərirsiniz, OmniRoute onu uyğun bulud agentinə yönləndirir, statusu mütəmadi yoxlayır və nəticələri qaytarır.
-
-### Dəstəklənən agentlər (4, hamısı `src/lib/cloudAgent/agents/` daxilində təsdiqlənib)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Həyat dövrü
-
-```
-POST /api/v1/agents/tasks
-  → hər agent sinfi üçün BaseAgent.createTask()
-  → xarici xidmət işi başladır
-  → verilənlər bazasında tapşırıq sətri yaradılır (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → provayderdən tənbəl status sinxronizasiyası
-  → cari statusu + planı + fəaliyyət jurnalını qaytarır
-  ↓
-POST /api/v1/agents/tasks/[id]   (əməliyyat: "approve" | "message" | "cancel")
-  → provayderə yönləndirir (və ya lokal olaraq ləğv edilmiş kimi işarələyir)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokal ləğvetmə
-```
-
-### Autentifikasiya
-
-⚠️ **Bütün `/api/v1/agents/tasks/*` son nöqtələri idarəetmə autentifikasiyası tələb edir** (`588a0333` kommiti). Yalnız Bearer istifadə edən çağırışçılar v3.8.0-dan etibarən 401 cavabı alırlar.
-
-### Ətraflı məlumat
-
-`CloudAgentBase` müqaviləsi, hər agentə aid xüsusiyyətlər, sxem təfərrüatları və autentifikasiya məlumatlarının ötürülməsi son nöqtələri üçün [CLOUD_AGENT.md](./CLOUD_AGENT.md) sənədinə baxın.
-
-## Müqayisə: A2A və Bulud Agentləri
-
-Hər ikisində "uzunmüddətli tapşırıqlar" var, lakin fərqli səviyyələrdə:
-
-| Aspekt                   | A2A                                                                                        | Bulud Agentləri                                                  |
-| ------------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| Standart                 | Açıq A2A v0.3                                                                              | OmniRoute-a xas                                                  |
-| Hesablamanın icra yeri   | OmniRoute daxilində (konfiqurasiya edilmiş kombinasiyalardan istifadə edir)                | Xarici (Codex / Devin / Jules serverləri)                        |
-| Tapşırığın müddəti       | Standart TTL 5 dəqiqə (`TaskManager` daxilində konfiqurasiya edilə bilər)                  | Dəqiqələrdən saatlara qədər                                      |
-| Repozitoriyadan xəbərdar | Xeyr (yalnız sorğuları ötürür)                                                             | Bəli (repo URL-si + budaq)                                       |
-| İstifadə ssenarisi       | Agentlərarası əməkdaşlıq, xidmət kimi ağıllı marşrutlaşdırma                               | "Y reposunda X funksiyasını reallaşdır" tapşırığını həvalə etmək |
-| Autentifikasiya          | `/a2a` üçün istəyə bağlı `OMNIROUTE_API_KEY`; `/api/a2a/*` REST köməkçiləri üçün idarəetmə | Həmişə idarəetmə                                                 |
-
 ## İnteqrasiya Nümunələri
 
 ### OmniRoute-un A2A imkanlarını kəşf edin
@@ -223,30 +153,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Bulud Agenti tapşırığını göndərin
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Bulud tapşırığının statusunu sorğulayın
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Hansını Nə Zaman İstifadə Etməli
 
 - **Çatbot / kopilot istifadəçi interfeysi** → `/v1/chat/completions` (OpenAI ilə uyğun — agent protokolu deyil)
@@ -278,7 +184,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Həmçinin baxın
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2A haqqında ətraflı məlumat
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Bulud agentləri haqqında ətraflı məlumat
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Xarici CLI inteqrasiyaları (ACP-dən istifadə edir)
 - [SKILLS.md](./SKILLS.md) — Bacarıqlar çərçivəsi (A2A bacarıqlarından fərqlidir — lokal icra qum qutusu)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — son nöqtələr üzrə arayış

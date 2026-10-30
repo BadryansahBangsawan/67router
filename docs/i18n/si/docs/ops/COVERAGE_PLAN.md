@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          | 13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` | 13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  | 13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         | 13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      | 14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             | 14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              | 15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         | 15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          | 16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                | 16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` යනු අඩු ආවරණයක් සහිත ගොනුවල වඩාත්ම ඝන පොකුර වන අතර, ඉතිරි පරතරයෙන් වැඩි කොටස එයට අයත් වේ.
 - කාණ්ඩ සහ නැවත ශ්රේණිගත කිරීමේ API මාර්ග (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) සඳහා හසුරුවන්නා-මට්ටමේ පරීක්ෂණ අවශ්ය වේ.
-- වලාකුළු නියෝජිත ඇඩැප්ටර (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) සහ `tierResolver.ts` සඳහා අවස්ථානුකූල පරීක්ෂණ අවශ්ය වේ.
 - ලේඛන UI සංරචක සහ `src/mitm/systemCommands.ts` සඳහා ප්රමුඛතාව අඩු නමුත්, අඩු වියදමකින් ශාඛා ආවරණය වැඩි කළ හැක.
 
 ## ක්රියාත්මක කිරීමේ පිරික්සුම් ලැයිස්තුව

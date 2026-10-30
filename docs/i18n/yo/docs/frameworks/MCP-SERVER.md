@@ -246,17 +246,6 @@ Wo [AGENT-SKILLS.md](./AGENT-SKILLS.md) fún àkójọ kíkún àti bí àwọn 
 fi ààlà sí àwọn iṣẹ́ routing/cache/compression/memory/skills/proxy/context-source ní àkókò ìṣiṣẹ́. Àwọn
 framework méjì tó sún mọ́ ọn wà pẹ̀lú olupin MCP nínú v3.8.0, a sì ṣe àkọsílẹ̀ wọn lọ́tọ̀ọ̀tọ̀:
 
-### Àwọn Aṣojú Cloud
-
-Àwọn Aṣojú Cloud jẹ́ àwọn aṣojú AI fún kíkọ kóòdù tí ń ṣiṣẹ́ níta process (codex-cloud, cursor-cloud, devin, jules), tí a so mọ́
-OmniRoute nípasẹ̀ àwòṣe ìsopọ̀ kan náà tí a ń lò fún àwọn olùpèsè LLM. A ṣí wọn sílẹ̀ nípasẹ̀
-REST surface tiwọn (`/api/v1/agents/*`), wọn kò sì jẹ́ apá kan nínú àkójọ irinṣẹ́ MCP
-— pípè Aṣojú Cloud kan kì í lo ààlà MCP kan.
-
-- Ìmúṣẹ: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ìgbésí-ayé: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Ìwé àkọsílẹ̀: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Àwọn Guardrail
 
 Àwọn Guardrail jẹ́ àsẹ̀ ṣáájú/lẹ́yìn ìmúṣẹ (vision-bridge, pii-masker, prompt-injection)

@@ -698,54 +698,6 @@
       "yes": "تخطي مطالبة التأكيد"
     }
   },
-  "cloud": {
-    "description": "إدارة مهام وكلاء الذكاء الاصطناعي السحابيين (codex, devin, jules)",
-    "agents": {
-      "description": "سرد الوكلاء السحابيين المتاحين"
-    },
-    "agent": {
-      "description": "إدارة مهام الوكيل السحابي {agent}",
-      "auth": {
-        "description": "تفويض {agent} عبر OAuth"
-      }
-    },
-    "task": {
-      "description": "إدارة مهام الوكلاء السحابيين",
-      "create": {
-        "description": "إنشاء مهمة وكيل جديدة",
-        "title": "عنوان المهمة (يُضبط افتراضيًا على أول 80 حرفًا من المطالبة)",
-        "prompt": "نص مطالبة المهمة",
-        "prompt_file": "قراءة المطالبة من ملف",
-        "repo": "عنوان URL للمستودع المراد استنساخه للمهمة",
-        "branch": "اسم الفرع المراد استخدامه",
-        "metadata": "كائن بيانات وصفية بتنسيق JSON"
-      },
-      "list": {
-        "description": "سرد مهام الوكيل",
-        "status": "التصفية حسب الحالة (running|completed|failed|cancelled)",
-        "limit": "الحد الأقصى للنتائج (الافتراضي: 50)"
-      },
-      "get": {
-        "description": "الحصول على تفاصيل المهمة حسب المعرّف"
-      },
-      "status": {
-        "description": "طباعة حالة المهمة (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "إلغاء مهمة قيد التشغيل",
-        "yes": "تخطي مطالبة التأكيد"
-      },
-      "approve": {
-        "description": "الموافقة على خطة الوكيل لبدء التنفيذ"
-      },
-      "message": {
-        "description": "إرسال رسالة إلى مهمة قيد التشغيل"
-      }
-    },
-    "sources": {
-      "description": "سرد ملفات المصدر التي أنشأتها مهمة"
-    }
-  },
   "program": {
     "description": "OmniRoute — جهاز توجيه الذكاء الاصطناعي مع التبديل التلقائي",
     "version": "عرض الإصدار والخروج",

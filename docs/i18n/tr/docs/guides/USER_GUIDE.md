@@ -24,7 +24,6 @@ Sağlayıcıları yapılandırma, kombinasyonlar oluşturma, CLI araçlarını e
 - [Yetenek Sistemi](#-skills-system)
 - [Bellek Sistemi](#-memory-system)
 - [Webhook'lar](#-webhooks)
-- [Bulut Aracıları](#-cloud-agents)
 - [Programatik Yönetim](#-programmatic-management)
 - [Dahili CLI](#-internal-cli)
 - [Masaüstü Uygulaması (Electron)](#-desktop-application-electron)
@@ -1276,18 +1275,6 @@ Gerçek zamanlı izleme ve otomasyon için OmniRoute olaylarına abone olun.
 - Yeniden denemeler: üstel geri çekilme ile 3 deneme, ardından teslim edilemeyen iletiler kuyruğu
 
 Şemanın tamamı için bkz. [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Bulut Ajanları
-
-OmniRoute, uzun süreli görevleri yerel yönlendirmenizi yönettiğiniz aynı panelden gönderebilmeniz için bulut kodlama ajanlarıyla (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) entegre olur.
-
-- **Panel → Bulut Ajanları** bölümünden veya `POST /api/v1/agents/tasks` aracılığıyla görevler oluşturun
-- Her görev için durumu, günlükleri ve çıktıları takip edin
-- Her sağlayıcı için kendi API anahtarınızı kullanın — kimlik bilgileri OmniRoute örneğinden asla ayrılmaz
-
-Tam referans: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

@@ -1359,11 +1359,11 @@ to maiņai nepieciešama koda labošana, nevis vides mainīgais:
 
 Ļaujiet lietotājiem ziņot par problēmām tieši no informācijas paneļa.
 
-| Mainīgais             | Noklusējums       | Avota fails                                           | Apraksts                                                                                                                                                                    |
-| --------------------- | ----------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(nav iestatīts)_ | `src/app/api/v1/issues/report/route.ts`               | Repozitorijs formātā `owner/repo`.                                                                                                                                          |
-| `GITHUB_ISSUES_TOKEN` | _(nav iestatīts)_ | `src/app/api/v1/issues/report/route.ts`               | GitHub personiskās piekļuves pilnvara ar tvērumu `issues:write`.                                                                                                            |
-| `GITHUB_TOKEN`        | _(nav iestatīts)_ | problēmu izvērtēšanas / mākoņa aģenta palīgkomponenti | Vispārīga GitHub piekļuves pilnvara, kas tiek izmantota kā `GITHUB_ISSUES_TOKEN` rezerves variants un ko izmanto mākoņa aģenta palīgkomponenti ceļā `src/lib/cloudAgent/*`. |
+| Mainīgais             | Noklusējums       | Avota fails                                           | Apraksts                                                                                                                                                                                 |
+| --------------------- | ----------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(nav iestatīts)_ | `src/app/api/v1/issues/report/route.ts`               | Repozitorijs formātā `owner/repo`.                                                                                                                                                       |
+| `GITHUB_ISSUES_TOKEN` | _(nav iestatīts)_ | `src/app/api/v1/issues/report/route.ts`               | GitHub personiskās piekļuves pilnvara ar tvērumu `issues:write`.                                                                                                                         |
+| `GITHUB_TOKEN`        | _(nav iestatīts)_ | problēmu izvērtēšanas / mākoņa aģenta palīgkomponenti | Vispārīga GitHub piekļuves pilnvara, kas tiek izmantota kā `GITHUB_ISSUES_TOKEN` rezerves variants un ko izmanto mākoņa aģenta palīgkomponenti ceļā `src/lib/skills/githubCollector.ts`. |
 
 ---
 

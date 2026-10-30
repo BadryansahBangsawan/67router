@@ -246,17 +246,6 @@ Inventeringen av MCP-verktyg ovan (110 unika verktyg, beräknat av `countUniqueM
 avgränsad till åtgärder för routning, cachelagring, komprimering, minne, färdigheter, proxy och kontextkällor under körning. Två närliggande
 ramverk levereras tillsammans med MCP-servern i v3.8.0 och dokumenteras separat:
 
-### Molnagenter
-
-Molnagenter är AI-kodningsagenter utanför processen (codex-cloud, cursor-cloud, devin, jules) som är anslutna till
-OmniRoute genom samma anslutningsmodell som används för LLM-leverantörer. De exponeras via
-sitt eget REST-gränssnitt (`/api/v1/agents/*`) och ingår **inte** i MCP-verktygskatalogen
-— att anropa en molnagent förbrukar inte någon MCP-omfattning.
-
-- Implementering: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Livscykel: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentation: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Skyddsräcken
 
 Skyddsräcken är filter före/efter körning (vision-bridge, pii-masker, prompt-injection)

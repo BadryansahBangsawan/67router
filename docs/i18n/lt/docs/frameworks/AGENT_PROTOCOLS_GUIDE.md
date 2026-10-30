@@ -4,7 +4,6 @@
 
 ---
 
-> **Šaltinis:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
 OmniRoute suteikia tris skirtingas su agentais susijusias sąsajas. Iš pirmo žvilgsnio jos atrodo panašios, tačiau sprendžia skirtingas problemas. Šiame puslapyje rasite pagalbos pasirenkant tinkamą sąsają.
@@ -20,20 +19,6 @@ OmniRoute suteikia tris skirtingas su agentais susijusias sąsajas. Iš pirmo ž
 Šios trys sąsajos yra nepriklausomos — galite pasirinkti bet kurį jų poaibį.
 
 ## Sprendimų medis
-
-```
-Ar jums reikia debesijos paslaugos, kuri atliktų darbą už šio kompiuterio ribų (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ TAIP → Debesijos agentai (POST /api/v1/agents/tasks)
-└─ NE → Tęskite
-    │
-    Ar turite A2A palaikantį kitą agentą, kuris nori bendradarbiauti?
-    ├─ TAIP → A2A (POST /a2a)
-    └─ NE → Tęskite
-        │
-        Ar reikia peržiūrėti / konfigūruoti vietoje įdiegtus CLI programavimo agentus?
-        ├─ TAIP → ACP (GET /api/acp/agents)
-        └─ NE → Naudokite įprastą /v1/chat/completions
-```
 
 ## 1. A2A — agentas agentui
 
@@ -125,61 +110,6 @@ POST užklausos turinio struktūra (`customAgentBodySchema` faile `src/app/api/a
   teikėjas. Įprastam interaktyviam naudojimui sukonfigūruotą CLI paleiskite patys arba
   naudokite `omniroute run`.
 
-## 3. Debesijos agentai
-
-**OmniRoute galiniai taškai:** `/api/v1/agents/tasks/*` (gyvavimo ciklas) + `/api/cloud/*` (vidinė infrastruktūra)
-**Šaltinis:** `src/lib/cloudAgent/`
-
-### Kas tai yra
-
-Vienoda sąsaja trečiųjų šalių debesijos programavimo agentams. Pateikiate užklausą ir saugyklos URL, OmniRoute perduoda juos tinkamam debesijos agentui, periodiškai tikrina būseną ir grąžina rezultatus.
-
-### Palaikomi agentai (3, visi patvirtinti `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Gyvavimo ciklas
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() kiekvienai agento klasei
-  → išorinė paslauga pradeda darbą
-  → DB sukuriamas užduoties įrašas (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → atidėtas būsenos sinchronizavimas su teikėju
-  → grąžinama dabartinė būsena + planas + veiklos žurnalas
-  ↓
-POST /api/v1/agents/tasks/[id]   (veiksmas: "approve" | "message" | "cancel")
-  → persiunčiama teikėjui (arba vietoje pažymima kaip atšaukta)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → vietinis atšaukimas
-```
-
-### Autentifikavimas
-
-⚠️ **Visiems `/api/v1/agents/tasks/*` galiniams taškams reikalingas valdymo autentifikavimas** (įsipareigojimas `588a0333`). Nuo v3.8.0 klientai, naudojantys tik „Bearer“ autentifikavimą, gauna 401 atsakymą.
-
-### Išsamiau
-
-`CloudAgentBase` sutartis, kiekvieno agento ypatybės, išsami schemos informacija ir prisijungimo duomenų infrastruktūros galiniai taškai aprašyti dokumente [CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
-## Palyginimas: A2A ir Cloud Agents
-
-Abu palaiko „ilgai vykdomas užduotis“, tačiau skirtinguose sluoksniuose:
-
-| Aspektas                      | A2A                                                                                                                   | Cloud Agents                                    |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| Standartas                    | Atvirasis A2A v0.3                                                                                                    | Specifinis „OmniRoute“                          |
-| Kur vykdomi skaičiavimai      | „OmniRoute“ viduje (naudojami sukonfigūruoti deriniai)                                                                | Išorėje („Codex“ / „Devin“ / „Jules“ serveriai) |
-| Užduoties trukmė              | Numatytoji TTL – 5 min. (konfigūruojama `TaskManager`)                                                                | Nuo kelių minučių iki kelių valandų             |
-| Saugyklos konteksto žinojimas | Ne (perduodamos tik užklausos)                                                                                        | Taip (saugyklos URL ir šaka)                    |
-| Naudojimo atvejis             | Kelių agentų bendradarbiavimas, išmanusis maršruto parinkimas kaip paslauga                                           | „Įdiegti funkciją X saugykloje Y“ delegavimas   |
-| Autentifikavimas              | Pasirenkamas `OMNIROUTE_API_KEY`, skirtas `/a2a`; valdymo autentifikavimas – `/api/a2a/*` REST pagalbinėms funkcijoms | Visada valdymo autentifikavimas                 |
-
 ## Integravimo pavyzdžiai
 
 ### „OmniRoute“ A2A galimybių aptikimas
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cloud Agent užduoties pateikimas
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Cloud užduoties būsenos tikrinimas
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Kada ką naudoti
 
 - **Pokalbių robotas / kopiloto sąsaja** → `/v1/chat/completions` (suderinama su „OpenAI“ – tai nėra agento protokolas)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Taip pat žr.
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — išsami A2A apžvalga
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — išsami debesijos agentų apžvalga
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — išorinės CLI integracijos (naudoja ACP)
 - [SKILLS.md](./SKILLS.md) — įgūdžių sistema (skiriasi nuo A2A įgūdžių — vietinė izoliuota vykdymo aplinka)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — galinių taškų žinynas

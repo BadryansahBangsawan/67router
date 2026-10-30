@@ -132,4 +132,3 @@ teste de fumo com autorização separada no ambiente de destino.
 - [Contratos de arranque de CLIs](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Ferramentas de CLI](../reference/CLI-TOOLS.md)
 - [Servidor A2A](./A2A-SERVER.md)
-- [Agentes na cloud](./CLOUD_AGENT.md)

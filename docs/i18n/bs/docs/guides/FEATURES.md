@@ -45,8 +45,6 @@ Ciklus v3.7.x → v3.8.0 uveo je automatsko rutiranje bez konfiguracije (zero-co
 - 🤝 **GitLab Duo OAuth provider** — prijava sa GitLab vjerodostojnostima
 - 🧠 **Reasoning Replay Cache** — hibridna in-memory + SQLite persistencija tragova zaključivanja (reasoning traces)
 
-📚 **Povezana dokumentacija:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provajderi

@@ -88,7 +88,6 @@ Podsystemy wtykowe udostępniane klientom, agentom i operatorom.
 - [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — przegląd agentów A2A / ACP / Cloud.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — most agenta IDE.
 - [AGENT-SKILLS.md](frameworks/AGENT-SKILLS.md) — katalog umiejętności agentów.
-- [CLOUD_AGENT.md](frameworks/CLOUD_AGENT.md) — runtime i dostawcy cloud agent.
 - [SKILLS.md](frameworks/SKILLS.md) — framework Skills (piaskownicowe rozszerzenie).
 - [MEMORY.md](frameworks/MEMORY.md) — trwała pamięć (FTS5 + Qdrant).
 - [WEBHOOKS.md](frameworks/WEBHOOKS.md) — zdarzenia webhook i dyspozycja.

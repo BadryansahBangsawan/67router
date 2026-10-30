@@ -1,16 +1,16 @@
 ---
 title: "Provider Reference"
 version: 3.8.53
-lastUpdated: 2026-10-20
+lastUpdated: 2026-10-30
 ---
 
 # Provider Reference
 
 > **Auto-generated** from `src/shared/constants/providers.ts` — do not edit by hand.
 > Regenerate with: `npm run gen:provider-reference`
-> **Last generated:** 2026-10-20
+> **Last generated:** 2026-10-30
 
-Total providers: **375**. See category breakdown below.
+Total providers: **372**. See category breakdown below.
 
 ## Categories
 
@@ -23,7 +23,6 @@ Total providers: **375**. See category breakdown below.
 - **Search** — web search providers
 - **Audio** — audio-only providers (TTS/STT)
 - **Upstream proxy** — providers that proxy to other providers
-- **Cloud agent** — long-running coding agents (Codex Cloud, Devin, Jules)
 - **System** — OmniRoute-internal providers (loopback, etc.)
 
 Additional tags: `image`, `video`, `aggregator`, `enterprise`, `embed/rerank`, `self-hosted`.
@@ -444,14 +443,6 @@ Use the dashboard at `/dashboard/providers` to enable, configure, and test each 
 |----|-------|------|------|---------|-------|
 | `9router` | `nr` | 9router | Upstream proxy | [link](https://www.npmjs.com/package/9router) | — |
 | `cliproxyapi` | `cpa` | CLIProxyAPI | Upstream proxy | [link](https://github.com/router-for-me/CLIProxyAPI) | — |
-
-## Cloud Agent Providers (3)
-
-| ID | Alias | Name | Tags | Website | Notes |
-|----|-------|------|------|---------|-------|
-| `codex-cloud` | `codex-cloud` | Codex Cloud | Cloud agent | [link](https://openai.com/codex) | OpenAI API key with Codex Cloud task access. |
-| `devin` | `devin` | Devin | Cloud agent | [link](https://devin.ai) | Devin API key for cloud agent sessions. |
-| `jules` | `jules` | Google Jules | Cloud agent | [link](https://jules.google) | Jules API key for creating and managing cloud coding tasks. |
 
 ## System Providers (1)
 

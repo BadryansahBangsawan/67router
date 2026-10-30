@@ -4,7 +4,6 @@
 
 ---
 
-> **Manba:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
 OmniRoute agentlarga oid uch xil interfeysni taqdim etadi. Bir qarashda ular oʻxshash koʻrinadi, ammo turli muammolarni hal qiladi. Toʻgʻri variantni tanlash uchun ushbu sahifadan foydalaning.
@@ -20,20 +19,6 @@ OmniRoute agentlarga oid uch xil interfeysni taqdim etadi. Bir qarashda ular oʻ
 Uchala interfeys ham bir-biridan mustaqil — ularning istalgan kombinatsiyasini tanlashingiz mumkin.
 
 ## Qaror daraxti
-
-```
-Ushbu qurilmadan tashqarida ish bajarishi uchun bulut xizmati kerakmi (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ HA → Bulut agentlari (POST /api/v1/agents/tasks)
-└─ YOʻQ → Davom eting
-    │
-    Siz bilan hamkorlik qilmoqchi boʻlgan va A2A protokolida ishlaydigan tengdosh agent bormi?
-    ├─ HA → A2A (POST /a2a)
-    └─ YOʻQ → Davom eting
-        │
-        Mahalliy oʻrnatilgan CLI dasturlash agentlarini roʻyxatlash / sozlash kerakmi?
-        ├─ HA → ACP (GET /api/acp/agents)
-        └─ YOʻQ → Oddiy /v1/chat/completions dan foydalaning
-```
 
 ## 1. A2A — Agentdan agentga
 
@@ -118,61 +103,6 @@ POST uchun tana tuzilishi (`src/app/api/acp/agents/route.ts` ichidagi `customAge
 
 - HTTP reyestri vazifalarni qabul qilmaydi yoki jarayonlarni ishga tushirish imkoniyatini taqdim etmaydi. Ichki menejer ro‘yxatdan o‘tkazilgan CLI'ni ishga tushira oladi, biroq u avtomatik provayder zaxira varianti sifatida ulanmagan. Oddiy interaktiv foydalanish uchun sozlangan CLI'ni o‘zingiz ishga tushiring yoki `omniroute run` buyrug‘idan foydalaning.
 
-## 3. Bulut agentlari
-
-**OmniRoute endpointlari:** `/api/v1/agents/tasks/*` (hayot sikli) + `/api/cloud/*` (infratuzilma)
-**Manba:** `src/lib/cloudAgent/`
-
-### Bu nima
-
-Uchinchi tomon bulutli dasturlash agentlari uchun yagona interfeys. Siz so‘rov + repozitoriy URL manzilini yuborasiz, OmniRoute uni tegishli bulut agentiga yo‘naltiradi, holatni davriy tekshiradi va natijalarni qaytaradi.
-
-### Qo‘llab-quvvatlanadigan agentlar (4 ta, barchasi `src/lib/cloudAgent/agents/` da tasdiqlangan)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Hayot sikli
-
-```
-POST /api/v1/agents/tasks
-  → har bir agent klassi uchun BaseAgent.createTask()
-  → tashqi xizmat ishni boshlaydi
-  → DB’da vazifa qatori yaratiladi (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → provayderdan kechiktirilgan holat sinxronizatsiyasi
-  → joriy holat + reja + faoliyat jurnalini qaytaradi
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → provayderga uzatadi (yoki mahalliy ravishda bekor qilingan deb belgilaydi)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → mahalliy bekor qilish
-```
-
-### Autentifikatsiya
-
-⚠️ **Barcha `/api/v1/agents/tasks/*` endpointlari boshqaruv autentifikatsiyasini talab qiladi** (`588a0333` kommiti). Faqat Bearer’dan foydalanuvchi chaqiruvchilar v3.8.0 dan beri 401 javobini oladi.
-
-### Batafsil ma’lumot
-
-`CloudAgentBase` shartnomasi, har bir agentga xos tafsilotlar, sxema tafsilotlari va hisob ma’lumotlari infratuzilmasi endpointlari uchun [CLOUD_AGENT.md](./CLOUD_AGENT.md) fayliga qarang.
-
-## Taqqoslash: A2A va Cloud Agents
-
-Ikkalasida ham «uzoq davom etuvchi vazifalar» mavjud, ammo ular turli qatlamlarda ishlaydi:
-
-| Jihat                        | A2A                                                                                                            | Cloud Agents                                                      |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| Standart                     | Ochiq A2A v0.3                                                                                                 | OmniRouteʼga xos                                                  |
-| Hisoblash qayerda bajariladi | OmniRoute ichida (sozlangan kombinatsiyalardan foydalanadi)                                                    | Tashqi serverlarda (Codex / Devin / Jules serverlari)             |
-| Vazifa davomiyligi           | Standart TTL — 5 daqiqa (`TaskManager` ichida sozlanadi)                                                       | Bir necha daqiqadan bir necha soatgacha                           |
-| Repozitoriydan xabardor      | Yoʻq (faqat promptlarni uzatadi)                                                                               | Ha (repo URL manzili + tarmoq)                                    |
-| Qoʻllanish holati            | Agentlararo hamkorlik, xizmat sifatida aqlli yoʻnaltirish                                                      | «Y reposida X funksiyasini amalga oshirish» vazifasini topshirish |
-| Autentifikatsiya             | `/a2a` uchun ixtiyoriy `OMNIROUTE_API_KEY`; `/api/a2a/*` REST yordamchilari uchun boshqaruv autentifikatsiyasi | Har doim boshqaruv autentifikatsiyasi                             |
-
 ## Integratsiya misollari
 
 ### OmniRouteʼning A2A imkoniyatlarini aniqlash
@@ -222,30 +152,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cloud Agent vazifasini yuborish
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Bulut vazifasi holatini soʻrab turish
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Qachon qaysi biridan foydalanish kerak
 
 - **Chatbot / copilot frontend qismi** → `/v1/chat/completions` (OpenAI bilan mos — agent protokoli emas)
@@ -277,7 +183,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Shuningdek qarang
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2A haqida batafsil
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — bulut agentlari haqida batafsil
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — tashqi CLI integratsiyalari (ACP’dan foydalanadi)
 - [SKILLS.md](./SKILLS.md) — ko‘nikmalar freymvorki (A2A ko‘nikmalaridan farq qiladi — lokal bajarish qumdoni)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpoint ma’lumotnomasi

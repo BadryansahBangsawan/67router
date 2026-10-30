@@ -128,7 +128,6 @@ Halaman utama di bawah `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kontrol kuota/laju
 - `/dashboard/cli-tools` — onboarding CLI, deteksi runtime, pembuatan konfigurasi
 - `/dashboard/agents` — agen ACP yang terdeteksi + pendaftaran agen khusus
-- `/dashboard/cloud-agents` — tugas agen yang di-host di cloud (Codex Cloud, Devin, Jules) dan siklus hidup tugas
 - `/dashboard/skills` — registri skill A2A, eksekusi sandbox, katalog skill bawaan
 - `/dashboard/memory` — pemeriksaan dan pengambilan memori percakapan persisten
 - `/dashboard/webhooks` — langganan webhook keluar, rotasi secret, statistik percobaan ulang
@@ -382,23 +381,6 @@ Kemampuan utama:
 
 Untuk detail algoritmik lengkap (rumus faktor, penyesuaian bobot), lihat
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agen Cloud
-
-Agen Cloud membungkus platform agen kode yang dihosting pihak ketiga (Codex Cloud, Devin,
-Jules) di balik siklus hidup tugas seragam yang didukung basis data. Semua endpoint pembuatan/pemeriksaan
-tugas memerlukan autentikasi manajemen.
-
-- Root modul: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, beserta subdirektori per agen di bawah `agents/`)
-- Implementasi per agen: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoint publik: `/api/v1/agents/tasks/*` (daftar/buat/dapatkan/batalkan)
-- Endpoint manajemen: `/api/cloud/*` (penyediaan, status, batch)
-- Dasbor: `/dashboard/cloud-agents`
-- Penyimpanan: tabel `cloud_agent_tasks`
-
-Untuk detail penyediaan per agen dan OAuth, lihat
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrail
 

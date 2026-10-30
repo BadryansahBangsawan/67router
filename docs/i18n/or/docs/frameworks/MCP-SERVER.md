@@ -239,16 +239,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ରନ୍ଟାଇମ୍ ରାଉଟିଂ/କ୍ୟାଶ୍/କମ୍ପ୍ରେସନ୍/ମେମୋରି/ସ୍କିଲ୍/ପ୍ରକ୍ସି/କଣ୍ଟେକ୍ସ୍ଟ-ସୋର୍ସ ଅପରେସନ୍ଗୁଡ଼ିକ ମଧ୍ୟରେ ସୀମିତ। v3.8.0-ରେ MCP ସର୍ଭର୍ ସହିତ ଦୁଇଟି ସମୀପବର୍ତ୍ତୀ
 ଫ୍ରେମ୍ୱର୍କ ମଧ୍ୟ ପ୍ରଦାନ କରାଯାଏ ଏବଂ ସେଗୁଡ଼ିକୁ ପୃଥକ ଭାବେ ଡକ୍ୟୁମେଣ୍ଟ କରାଯାଇଛି:
 
-### Cloud Agents
-
-Cloud Agents ହେଉଛନ୍ତି ଆଉଟ୍-ଅଫ୍-ପ୍ରୋସେସ୍ AI କୋଡିଂ ଏଜେଣ୍ଟ (codex-cloud, cursor-cloud, devin, jules), ଯେଉଁମାନେ LLM ପ୍ରଦାତାମାନଙ୍କ ପାଇଁ ବ୍ୟବହୃତ ସମାନ ସଂଯୋଗ ମଡେଲ୍ ମାଧ୍ୟମରେ
-OmniRoute ସହିତ ସଂଯୁକ୍ତ। ସେମାନଙ୍କୁ ସେମାନଙ୍କର ନିଜସ୍ୱ REST ସର୍ଫେସ୍ (`/api/v1/agents/*`) ମାଧ୍ୟମରେ ଉପଲବ୍ଧ କରାଯାଏ ଏବଂ ସେମାନେ MCP ଟୁଲ୍ କ୍ୟାଟାଲଗ୍ର ଅଂଶ **ନୁହଁନ୍ତି**
-— ଏକ Cloud Agent-କୁ କଲ୍ କରିବା ଦ୍ୱାରା କୌଣସି MCP ସ୍କୋପ୍ ବ୍ୟବହୃତ ହୁଏ ନାହିଁ।
-
-- କାର୍ଯ୍ୟାନ୍ୱୟନ: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)।
-- ଲାଇଫ୍ସାଇକେଲ୍: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`।
-- ଡକ୍ୟୁମେଣ୍ଟେସନ୍: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)।
-
 ### Guardrails
 
 Guardrails ହେଉଛି ପୂର୍ବ/ପରବର୍ତ୍ତୀ-ନିଷ୍ପାଦନ ଫିଲ୍ଟର୍ (vision-bridge, pii-masker, prompt-injection),

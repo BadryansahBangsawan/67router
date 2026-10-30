@@ -24,7 +24,6 @@ Hướng dẫn đầy đủ về cách cấu hình nhà cung cấp, tạo tổ h
 - [Hệ thống kỹ năng](#-skills-system)
 - [Hệ thống bộ nhớ](#-memory-system)
 - [Webhook](#-webhooks)
-- [Tác nhân đám mây](#-cloud-agents)
 - [Quản lý bằng lập trình](#-programmatic-management)
 - [CLI nội bộ](#-internal-cli)
 - [Ứng dụng máy tính để bàn (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Quản lý bộ nhớ trong **Dashboard → Memory** (tìm kiếm, chỉnh sửa
 - Thử lại: 3 lần với thời gian chờ tăng theo cấp số nhân, sau đó chuyển vào hàng đợi thư lỗi
 
 Schema đầy đủ có trong [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agent đám mây
-
-OmniRoute tích hợp với các agent lập trình trên đám mây (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), cho phép bạn gửi các tác vụ chạy dài từ cùng một dashboard dùng để quản lý việc định tuyến cục bộ.
-
-- Tạo tác vụ trong **Dashboard → Cloud Agents** hoặc qua `POST /api/v1/agents/tasks`
-- Theo dõi trạng thái, nhật ký và các artifact của từng tác vụ
-- Sử dụng API key riêng của bạn cho từng nhà cung cấp — thông tin xác thực không bao giờ rời khỏi phiên bản OmniRoute
-
-Tài liệu tham khảo đầy đủ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

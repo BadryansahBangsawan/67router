@@ -55,16 +55,6 @@ OWASP의 일반적인 경고("와일드카드 CORS = 모든 사이트가 API를 
 
 따라서 `CORS_ALLOW_ALL=true`의 **잔여** 노출은 다음으로 제한됩니다. (a) 이미 인증 없이 접근할 수 있는 데이터에 대한 자격 증명 없는 교차 출처 **읽기**, (b) 관리 라우트에서 CORS **프리플라이트를 통과**시키는 것. 단, 이러한 라우트에는 여전히 교차 출처 페이지가 제공할 수 없는 인증이 필요합니다. 공유 CORS 경로에서 이는 세션 탈취나 자격 증명 탈취 벡터가 **아닙니다**.
 
-### 실제 예외 한 가지 — `/api/v1/agents/`
-
-Cloud-Agent 라우트(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)는
-**자체** CORS 헤더
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`)를 설정하며,
-`Access-Control-Allow-Origin: <origin>|*`와
-`Access-Control-Allow-Credentials: true`를 함께 전송합니다. 이는 출처 반환과 자격 증명이 공존하는 유일한 영역이며,
-`CORS_ALLOW_ALL`과 **무관합니다**. 이러한 라우트에는 관리 인증이 적용됩니다
-(`requireManagementAuth`). 대시보드를 호스트 외부에 노출하는 운영자는 응답 헤더가 교차 출처 자격 증명 포함 읽기를 허용하는 유일한 위치가 이곳이라는 점을 인지해야 합니다. 이를 명시적인 허용 목록으로 제한하는 작업은 이 CORS 지침과 별도로 추적됩니다.
-
 ## 프로덕션 체크리스트
 
 - **프로덕션에서는 절대로 `CORS_ALLOW_ALL=true`로 설정하지 마세요.** 설정하지 않은 상태로 두세요.
@@ -143,7 +133,6 @@ location / {
 | 대시보드용 런타임 상태             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | 대시보드 경고 배너                 | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS 허용 출처 필드                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent 경로별 CORS(예외)      | `src/lib/cloudAgent/api.ts`                                          |
 
 ## 참고 항목
 

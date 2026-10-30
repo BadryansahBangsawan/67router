@@ -225,8 +225,6 @@ Uveljavljanje ključa API odjemalca uporablja `isRequireApiKeyEnabled()` v `src/
 
 ## Nezdružljiva sprememba — v3.8.0
 
-Končne točke `/api/v1/agents/tasks/*` in `/api/resilience/model-cooldowns` **zdaj zahtevajo upravljalsko preverjanje pristnosti** (potrditev `588a0333`). Odjemalci, ki so prej pošiljali običajen ključ API brez obsega `manage`, prejmejo `403`. Migracija: ključu bodisi dodelite obseg `manage` na nadzorni plošči API Keys bodisi uporabite prijavljeno sejo nadzorne plošče.
-
 ## Sprememba vedenja — v3.8.2
 
 `/api/mcp/*` (oddaljeni strežnik MCP) je privzeto še vedno LOCAL_ONLY, vendar zdaj sprejema zahtevke, ki ne izvirajo iz povratne zanke, kadar glava `Authorization: Bearer <api-key>` vsebuje obseg `manage`. Izjema je za vsako pot izrecno nadzorovana prek `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` v `src/server/authz/routeGuard.ts`; sorodne predpone LOCAL_ONLY `/api/cli-tools/runtime/*` namenoma ni mogoče zaobiti, ker lahko zažene poljubne podprocese. Anonimni zahtevki za `/api/mcp/*`, ki ne izvirajo iz povratne zanke, še naprej vračajo `403 LOCAL_ONLY` — privzeto pravilo za vsako novo pot LOCAL_ONLY ostaja strogo omejeno na povratno zanko. Glejte [Ravni varovanja poti](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

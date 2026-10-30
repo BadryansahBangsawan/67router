@@ -1352,11 +1352,11 @@ Claude Code CLI nìkan, tàbí kò ṣe kedere fún ọ ohun tí àwọn relay w
 
 Fún àwọn aṣàmúlò láyè láti jabo àwọn ìṣòro tààrà láti Dashboard.
 
-| Àyípadà               | Àiyipada      | Fáìlì Orísun                                | Àpèjúwe                                                                                                                                             |
-| --------------------- | ------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(a kò ṣètò)_ | `src/app/api/v1/issues/report/route.ts`     | Ibi ìfipamọ́ ní ìlànà `owner/repo`.                                                                                                                  |
-| `GITHUB_ISSUES_TOKEN` | _(a kò ṣètò)_ | `src/app/api/v1/issues/report/route.ts`     | GitHub Personal Access Token pẹ̀lú àyè `issues:write`.                                                                                               |
-| `GITHUB_TOKEN`        | _(a kò ṣètò)_ | ìṣàyẹ̀wò ìṣòro / àwọn olùrànlọ́wọ́ aṣojú cloud | Àmì ìwọlé GitHub gbogbogbò tí a ń lò gẹ́gẹ́ bí àfirọ́pò fún `GITHUB_ISSUES_TOKEN`, tí àwọn olùrànlọ́wọ́ aṣojú cloud nínú `src/lib/cloudAgent/*` sì ń lò. |
+| Àyípadà               | Àiyipada      | Fáìlì Orísun                                | Àpèjúwe                                                                                                                                                          |
+| --------------------- | ------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(a kò ṣètò)_ | `src/app/api/v1/issues/report/route.ts`     | Ibi ìfipamọ́ ní ìlànà `owner/repo`.                                                                                                                               |
+| `GITHUB_ISSUES_TOKEN` | _(a kò ṣètò)_ | `src/app/api/v1/issues/report/route.ts`     | GitHub Personal Access Token pẹ̀lú àyè `issues:write`.                                                                                                            |
+| `GITHUB_TOKEN`        | _(a kò ṣètò)_ | ìṣàyẹ̀wò ìṣòro / àwọn olùrànlọ́wọ́ aṣojú cloud | Àmì ìwọlé GitHub gbogbogbò tí a ń lò gẹ́gẹ́ bí àfirọ́pò fún `GITHUB_ISSUES_TOKEN`, tí àwọn olùrànlọ́wọ́ aṣojú cloud nínú `src/lib/skills/githubCollector.ts` sì ń lò. |
 
 ---
 

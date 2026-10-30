@@ -1354,11 +1354,11 @@ tutaj w celach informacyjnych — ich zmiana wymaga edycji kodu, a nie zmiennej
 
 Umożliwia użytkownikom zgłaszanie problemów bezpośrednio z Panelu.
 
-| Zmienna               | Wartość domyślna | Plik źródłowy                                     | Opis                                                                                                                                                  |
-| --------------------- | ---------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(nieustawiona)_ | `src/app/api/v1/issues/report/route.ts`           | Repozytorium w formacie `owner/repo`.                                                                                                                 |
-| `GITHUB_ISSUES_TOKEN` | _(nieustawiona)_ | `src/app/api/v1/issues/report/route.ts`           | Osobisty token dostępu GitHub z zakresem `issues:write`.                                                                                              |
-| `GITHUB_TOKEN`        | _(nieustawiona)_ | segregacja zgłoszeń / narzędzia agenta chmurowego | Ogólny token dostępu GitHub używany jako wartość zastępcza dla `GITHUB_ISSUES_TOKEN` oraz przez narzędzia agenta chmurowego w `src/lib/cloudAgent/*`. |
+| Zmienna               | Wartość domyślna | Plik źródłowy                                     | Opis                                                                                                                                                               |
+| --------------------- | ---------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `GITHUB_ISSUES_REPO`  | _(nieustawiona)_ | `src/app/api/v1/issues/report/route.ts`           | Repozytorium w formacie `owner/repo`.                                                                                                                              |
+| `GITHUB_ISSUES_TOKEN` | _(nieustawiona)_ | `src/app/api/v1/issues/report/route.ts`           | Osobisty token dostępu GitHub z zakresem `issues:write`.                                                                                                           |
+| `GITHUB_TOKEN`        | _(nieustawiona)_ | segregacja zgłoszeń / narzędzia agenta chmurowego | Ogólny token dostępu GitHub używany jako wartość zastępcza dla `GITHUB_ISSUES_TOKEN` oraz przez narzędzia agenta chmurowego w `src/lib/skills/githubCollector.ts`. |
 
 ---
 

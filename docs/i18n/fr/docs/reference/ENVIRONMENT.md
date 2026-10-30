@@ -1362,11 +1362,11 @@ les modifier nécessite une modification du code, pas une variable d'env :
 
 Permet aux utilisateurs de signaler des problèmes directement depuis le tableau de bord.
 
-| Variable              | Valeur par défaut | Fichier source                                  | Description                                                                                                                                                         |
-| --------------------- | ----------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(non définie)_   | `src/app/api/v1/issues/report/route.ts`         | Dépôt au format `owner/repo`.                                                                                                                                       |
-| `GITHUB_ISSUES_TOKEN` | _(non définie)_   | `src/app/api/v1/issues/report/route.ts`         | Jeton d'accès personnel GitHub avec la portée `issues:write`.                                                                                                       |
-| `GITHUB_TOKEN`        | _(non définie)_   | triage des problèmes / assistants d'agent cloud | Jeton d'accès GitHub générique utilisé comme solution de repli pour `GITHUB_ISSUES_TOKEN` et exploité par les assistants d'agent cloud dans `src/lib/cloudAgent/*`. |
+| Variable              | Valeur par défaut | Fichier source                                  | Description                                                                                                                                                                      |
+| --------------------- | ----------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(non définie)_   | `src/app/api/v1/issues/report/route.ts`         | Dépôt au format `owner/repo`.                                                                                                                                                    |
+| `GITHUB_ISSUES_TOKEN` | _(non définie)_   | `src/app/api/v1/issues/report/route.ts`         | Jeton d'accès personnel GitHub avec la portée `issues:write`.                                                                                                                    |
+| `GITHUB_TOKEN`        | _(non définie)_   | triage des problèmes / assistants d'agent cloud | Jeton d'accès GitHub générique utilisé comme solution de repli pour `GITHUB_ISSUES_TOKEN` et exploité par les assistants d'agent cloud dans `src/lib/skills/githubCollector.ts`. |
 
 ---
 

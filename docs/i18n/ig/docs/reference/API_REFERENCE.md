@@ -1760,31 +1760,6 @@ Usoro nta njikwa igodo akpaaka na-eji ya ewepụta ma tụgharịa igodo API sit
 
 ---
 
-## Usoro Ndị Agent
-
-Ọrụ cloud agent (Claude Code, Codex Cloud, OpenHands, wdg.) ndị a na-arụ n’ebe dị anya n’aha ndị ọrụ OmniRoute.
-
-| Method | Path                          | Description                                                                                                                                       |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Depụta ọrụ — `?provider=`, `?status=`, `?limit=` bụ nhọrọ (1–500, ndabara bụ 50)                                                                  |
-| POST   | `/api/v1/agents/tasks`        | Mepụta ọrụ — `CreateCloudAgentTaskSchema` na-enyocha body (`providerId`, `prompt`, `source`, `options?`). Ọ na-eweghachi `201` yana task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | Hichapụ otu ọrụ                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | Gụọ ọrụ — ọ na-emelite status ozugbo site na upstream cloud agent mgbe e debere `external_id`                                                     |
-| POST   | `/api/v1/agents/tasks/[id]`   | Omume a na-amata iche: `{action: "approve"}`, `{action: "message", message}`, ma ọ bụ `{action: "cancel"}`                                        |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Jiri id hichapụ otu ọrụ kpọmkwem                                                                                                                  |
-
-> **Nnwale ikike:** a chọrọ ikike njikwa na method ọ bụla (`requireCloudAgentManagementAuth`). Tupu v3.8.0, ndị a achọghị ikike — lee commit `588a0333` maka mgbanwe na-emebi ndakọrịta.
-
-```bash
-# Mepụta ọrụ cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy Nchịkwa
 
 Proxy HTTP(S)/SOCKS na-apụ apụ, nke enwere ike ikenye ndị provider, account, ma ọ bụ n’ogo zuru ụwa ọnụ.
@@ -2290,5 +2265,3 @@ igodo API nwere ikike njikwa) na otu ha si dị iche na igodo inference.
 - Enwere ike ịgbanwuo `requireLogin` site na `/api/settings/require-login`
 - Ụzọ `/v1/*` nwere ike ịchọ igodo API Bearer mgbe `REQUIRE_API_KEY=true`
 - “token njikwa” / “igodo API nwere ikike njikwa” n'ime ntụaka a pụtara otu n'ime ụdị ndị dị n'akwụkwọ ndu ahụ — ọ bụghị ụdị nzuzo ọzọ a na-akọwaghị
-
-> **Mgbanwe na-emebi ndakọrịta (v3.8.0)** — `/api/v1/agents/tasks/*` na endpoint njikwa cooldown chọrọzi **nyocha njirimara njikwa** (kuki dashboard `auth_token` ma ọ bụ igodo API nwere ikike njikwa). Ndị ahịa kpọburu ụzọ ndị a na-enweghị nyocha njirimara ga-enweta `401 Unauthorized`. Hụ commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -76,21 +76,6 @@ Authentifizierung erfordern, welche eine Cross-Origin-Seite nicht bereitstellen
 kann. Im gemeinsamen CORS-Pfad handelt es sich **nicht** um einen Angriffsvektor
 für Sitzungsübernahmen oder den Diebstahl von Zugangsdaten.
 
-### Eine echte Ausnahme — `/api/v1/agents/`
-
-Die Cloud-Agent-Routen
-(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) setzen ihre **eigenen**
-CORS-Header (`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) und geben
-**tatsächlich** `Access-Control-Allow-Origin: <origin>|*` zusammen mit
-`Access-Control-Allow-Credentials: true` aus. Dies ist die einzige Oberfläche,
-auf der die Rückgabe des Ursprungs und die Übermittlung von Anmeldedaten
-zusammentreffen, und sie ist **unabhängig von `CORS_ALLOW_ALL`**. Diese Routen
-sind per Management-Authentifizierung geschützt (`requireManagementAuth`);
-Betreiber, die das Dashboard außerhalb des Hosts verfügbar machen, sollten sich
-bewusst sein, dass dies die einzige Stelle ist, an der die Antwort-Header einen
-authentifizierten Cross-Origin-Lesezugriff zulassen. Die Einschränkung auf eine
-explizite Positivliste wird unabhängig von diesen CORS-Leitlinien nachverfolgt.
-
 ## Checkliste für die Produktion
 
 - **Setzen Sie `CORS_ALLOW_ALL=true` niemals in der Produktion.** Lassen Sie die Variable ungesetzt.
@@ -161,15 +146,14 @@ Registerkarte „Sicherheit“) fest, nicht im Proxy.
 
 ## Quelldateien
 
-| Aspekt                                                 | Datei                                                                |
-| ------------------------------------------------------ | -------------------------------------------------------------------- |
-| Auflösung der Zulassungsliste + `getCorsStatus()`      | `src/server/cors/origins.ts`                                         |
-| Middleware-Anwendung (einzige maßgebliche Quelle)      | `src/server/authz/pipeline.ts`                                       |
-| Einstellungen → Einbindung der Ursprünge zur Laufzeit  | `src/lib/config/runtimeSettings.ts`                                  |
-| Laufzeitstatus für das Dashboard                       | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Warnbanner im Dashboard                                | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| Feld „CORS Allowed Origins“                            | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Routenspezifisches CORS des Cloud-Agent (die Ausnahme) | `src/lib/cloudAgent/api.ts`                                          |
+| Aspekt                                                | Datei                                                                |
+| ----------------------------------------------------- | -------------------------------------------------------------------- |
+| Auflösung der Zulassungsliste + `getCorsStatus()`     | `src/server/cors/origins.ts`                                         |
+| Middleware-Anwendung (einzige maßgebliche Quelle)     | `src/server/authz/pipeline.ts`                                       |
+| Einstellungen → Einbindung der Ursprünge zur Laufzeit | `src/lib/config/runtimeSettings.ts`                                  |
+| Laufzeitstatus für das Dashboard                      | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Warnbanner im Dashboard                               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| Feld „CORS Allowed Origins“                           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Siehe auch
 

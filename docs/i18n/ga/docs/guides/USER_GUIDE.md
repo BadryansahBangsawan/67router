@@ -1277,18 +1277,6 @@ Scéimre iomlán i [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ---
 
-## ☁️ Gníomhairí Scáileáin
-
-Comhtháthaíonn OmniRoute le gníomhairí códála scáileáin (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ionas gur féidir leat tascanna fadthéarmacha a sheoladh ón an chéanna dashboard a bhainistíonn do ródú áitiúil.
-
-- Cruthaigh tascanna i **Dashboard → Cloud Agents** nó trí `POST /api/v1/agents/tasks`
-- Rianaigh stádas, logaanna, agus airtealaí in aghaidh an tasc
-- Eochracha API féin-iompairtha in aghaidh an soláthraí — ní fhágann ainmneacha teagmhasa instanciú OmniRoute choíche
-
-Lámhleabhar iomlán: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
-
----
-
 ## 🛠️ Bainisteoireacht Clárlann
 
 Is féidir leat gach acmhainn OmniRoute (soláthraithe, tiompáin, eochracha, socruithe) a bhainistiú thar HTTP ag baint úsáide as **eochair bearer leis an scóip `manage`**.

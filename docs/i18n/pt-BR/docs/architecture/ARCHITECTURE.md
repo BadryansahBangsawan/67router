@@ -128,7 +128,6 @@ Páginas principais em `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — controles de cota/taxa
 - `/dashboard/cli-tools` — integração inicial da CLI, detecção de runtime e geração de configuração
 - `/dashboard/agents` — agentes ACP detectados + registro de agentes personalizados
-- `/dashboard/cloud-agents` — tarefas de agentes hospedados na nuvem (Codex Cloud, Devin, Jules) e ciclo de vida das tarefas
 - `/dashboard/skills` — registro de habilidades A2A, execução em sandbox e catálogo de habilidades integradas
 - `/dashboard/memory` — inspeção e recuperação de memória conversacional persistente
 - `/dashboard/webhooks` — assinaturas de webhooks de saída, rotação de segredos e estatísticas de novas tentativas
@@ -382,23 +381,6 @@ Principais recursos:
 
 Para obter todos os detalhes algorítmicos (fórmulas dos fatores, ajuste de pesos), consulte
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agentes na Nuvem
-
-O Cloud Agents encapsula plataformas de agentes de código hospedadas por terceiros (Codex Cloud, Devin,
-Jules) por trás de um ciclo de vida de tarefas uniforme e respaldado por banco de dados. Todos os endpoints de criação/inspeção
-de tarefas exigem autenticação de gerenciamento.
-
-- Raiz do módulo: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, além dos subdiretórios de cada agente em `agents/`)
-- Implementações por agente: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoints públicos: `/api/v1/agents/tasks/*` (listar/criar/obter/cancelar)
-- Endpoints de gerenciamento: `/api/cloud/*` (provisionamento, status, operações em lote)
-- Painel: `/dashboard/cloud-agents`
-- Armazenamento: tabela `cloud_agent_tasks`
-
-Para obter detalhes específicos de provisionamento e OAuth de cada agente, consulte
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Proteções
 

@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 -julkaisukierros toi käyttöön ilman määrityksiä toimivan
 - 🤝 **GitLab Duo OAuth -palveluntarjoaja** — kirjaudu GitLab-tunnuksilla
 - 🧠 **Reasoning Replay Cache** — päättelyjälkien yhdistetty muisti- ja SQLite-pysyvyys
 
-📚 **Aiheeseen liittyvät ohjeet:** [Taitokehys](../frameworks/SKILLS.md) · [Muistijärjestelmä](../frameworks/MEMORY.md) · [Pilviagentit](../frameworks/CLOUD_AGENT.md) · [Webhookit](../frameworks/WEBHOOKS.md) · [Päättelyn toistovälimuisti](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Palveluntarjoajat

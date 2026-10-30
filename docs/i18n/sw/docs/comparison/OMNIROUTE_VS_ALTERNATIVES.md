@@ -24,7 +24,6 @@ Ulinganisho wa vipengele bila upendeleo dhidi ya maruta maarufu ya AI ya chanzo 
 | **Itifaki ya A2A**                                      |                   ✅ ujuzi 6                   |           ❌            |         ❌         |        ❌         |
 | **Kumbukumbu (FTS5 + vekta)**                           |                       ✅                       |           ❌            |         ❌         |        ❌         |
 | **Vizuizi vya ulinzi (PII, injection, maono)**          |                       ✅                       |         sehemu          |         ❌         |   ✅ ya kulipia   |
-| **Uunganishaji wa mawakala wa wingu**                   |          Codex, Cursor, Devin, Jules           |           ❌            |         ❌         |        ❌         |
 | **Kivunja mzunguko kwa kila mtoa huduma**               |         ✅ hali 3, urejeshaji wa uvivu         |       cha msingi        |         ❌         |        ✅         |
 | **Kujificha kwa alama za TLS (JA3/JA4)**                |                   ✅ wreq-js                   |           ❌            |         ❌         |        ❌         |
 | **Mfumo wa tathmini**                                   |             ✅ iliyojengewa ndani              |           ❌            |         ❌         |   ⚠ ya kulipia    |

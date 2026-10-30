@@ -72,21 +72,6 @@ OmniRoute керує тим, які **джерела браузера** можу
 все одно вимагають автентифікації, недоступної для сторонньої сторінки. На
 спільному шляху CORS це **не** є вектором викрадення сеансу або облікових даних.
 
-### Один справжній виняток — `/api/v1/agents/`
-
-Маршрути Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)
-встановлюють **власні** заголовки CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) і **додають**
-`Access-Control-Allow-Origin: <origin>|*` разом із
-`Access-Control-Allow-Credentials: true`. Це єдина поверхня, де повернення
-джерела поєднується з обліковими даними, і вона **не залежить від
-`CORS_ALLOW_ALL`**. Ці маршрути автентифікуються як маршрути керування
-(`requireManagementAuth`); операторам, які роблять панель керування доступною
-поза локальним хостом, слід враховувати, що це єдине місце, де заголовки
-відповіді дозволяють міжджерельне читання з обліковими даними. Обмеження цього
-доступу явним списком дозволів відстежується окремо від цих рекомендацій щодо
-CORS.
-
 ## Контрольний список для продакшену
 
 - **Ніколи не встановлюйте `CORS_ALLOW_ALL=true` у продакшені.** Залиште цю змінну невстановленою.
@@ -165,7 +150,6 @@ location / {
 | Стан середовища виконання для панелі керування          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Банер попередження на панелі керування                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Поле CORS Allowed Origins                               | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS для окремих маршрутів Cloud-Agent (виняток)        | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Див. також
 

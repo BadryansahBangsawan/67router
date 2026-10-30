@@ -698,54 +698,6 @@
       "yes": "រំលងសារជំរុញឱ្យបញ្ជាក់"
     }
   },
-  "cloud": {
-    "description": "គ្រប់គ្រងកិច្ចការភ្នាក់ងារ AI លើ cloud (codex, devin, jules)",
-    "agents": {
-      "description": "រាយភ្នាក់ងារ cloud ដែលមាន"
-    },
-    "agent": {
-      "description": "គ្រប់គ្រងកិច្ចការរបស់ភ្នាក់ងារ cloud {agent}",
-      "auth": {
-        "description": "ផ្តល់សិទ្ធិឱ្យ {agent} តាមរយៈ OAuth"
-      }
-    },
-    "task": {
-      "description": "គ្រប់គ្រងកិច្ចការរបស់ភ្នាក់ងារ cloud",
-      "create": {
-        "description": "បង្កើតកិច្ចការភ្នាក់ងារថ្មី",
-        "title": "ចំណងជើងកិច្ចការ (លំនាំដើមគឺតួអក្សរ 80 ដំបូងនៃសេចក្តីណែនាំ)",
-        "prompt": "អត្ថបទសេចក្តីណែនាំកិច្ចការ",
-        "prompt_file": "អានសេចក្តីណែនាំពីឯកសារ",
-        "repo": "URL របស់ឃ្លាំងកូដសម្រាប់ clone ដើម្បីប្រើក្នុងកិច្ចការ",
-        "branch": "ឈ្មោះ branch ដែលត្រូវប្រើ",
-        "metadata": "វត្ថុ metadata ជា JSON"
-      },
-      "list": {
-        "description": "រាយកិច្ចការរបស់ភ្នាក់ងារ",
-        "status": "ត្រងតាមស្ថានភាព (running|completed|failed|cancelled)",
-        "limit": "ចំនួនលទ្ធផលអតិបរមា (លំនាំដើម៖ 50)"
-      },
-      "get": {
-        "description": "ទទួលយកព័ត៌មានលម្អិតនៃកិច្ចការតាម ID"
-      },
-      "status": {
-        "description": "បោះពុម្ពស្ថានភាពកិច្ចការ (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "បោះបង់កិច្ចការដែលកំពុងដំណើរការ",
-        "yes": "រំលងសារបញ្ជាក់"
-      },
-      "approve": {
-        "description": "អនុម័តផែនការរបស់ភ្នាក់ងារ ដើម្បីចាប់ផ្តើមប្រតិបត្តិការ"
-      },
-      "message": {
-        "description": "ផ្ញើសារទៅកិច្ចការដែលកំពុងដំណើរការ"
-      }
-    },
-    "sources": {
-      "description": "រាយឯកសារប្រភពដែលបានបង្កើតដោយកិច្ចការ"
-    }
-  },
   "program": {
     "description": "OmniRoute — រ៉ោតទ័រ AI ឆ្លាតវៃជាមួយការប្ដូរទៅជម្រើសបម្រុងដោយស្វ័យប្រវត្តិ",
     "version": "បង្ហាញកំណែ ហើយចាកចេញ",

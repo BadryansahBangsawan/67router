@@ -121,4 +121,3 @@ nínú environment àfojúsùn.
 - [Àwọn àdéhùn ìfilọ́lẹ̀ CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Àwọn irinṣẹ́ CLI](../reference/CLI-TOOLS.md)
 - [Server A2A](./A2A-SERVER.md)
-- [Àwọn aṣojú cloud](./CLOUD_AGENT.md)

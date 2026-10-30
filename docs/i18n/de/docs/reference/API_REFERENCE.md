@@ -1754,31 +1754,6 @@ Wird vom Subsystem zur automatischen Schlüsselverwaltung verwendet, um API-Schl
 
 ---
 
-## Agentenprotokoll
-
-Cloud-Agent-Aufgaben (Claude Code, Codex Cloud, OpenHands usw.), die im Auftrag von OmniRoute-Benutzern remote ausgeführt werden.
-
-| Methode | Pfad                          | Beschreibung                                                                                                                                                                   |
-| ------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/v1/agents/tasks`        | Aufgaben auflisten — optional `?provider=`, `?status=`, `?limit=` (1–500, Standardwert 50)                                                                                     |
-| POST    | `/api/v1/agents/tasks`        | Aufgabe erstellen — Anfragetext wird anhand von `CreateCloudAgentTaskSchema` validiert (`providerId`, `prompt`, `source`, `options?`). Gibt `201` mit Aufgaben-Envelope zurück |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Eine Aufgabe löschen                                                                                                                                                           |
-| GET     | `/api/v1/agents/tasks/[id]`   | Aufgabe abrufen — aktualisiert den Status synchron vom vorgelagerten Cloud-Agent, wenn eine `external_id` gesetzt ist                                                          |
-| POST    | `/api/v1/agents/tasks/[id]`   | Diskriminierte Aktion: `{action: "approve"}`, `{action: "message", message}` oder `{action: "cancel"}`                                                                         |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Eine bestimmte Aufgabe anhand ihrer ID löschen                                                                                                                                 |
-
-> **Authentifizierung:** Für jede Methode ist eine Verwaltungs-Authentifizierung erforderlich (`requireCloudAgentManagementAuth`). Vor v3.8.0 waren diese nicht authentifiziert — siehe Commit `588a0333` zur nicht abwärtskompatiblen Änderung.
-
-```bash
-# Eine Claude-Code-Cloud-Aufgabe erstellen
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Verwaltungs-Proxys
 
 Ausgehende HTTP(S)-/SOCKS-Proxys, die Anbietern, Konten oder global zugewiesen werden können.
@@ -2281,5 +2256,3 @@ Token, API-Schlüssel mit Management-Berechtigung) und ihre Unterschiede zu Infe
 - `requireLogin` kann über `/api/settings/require-login` umgeschaltet werden
 - `/v1/*`-Routen erfordern optional einen Bearer-API-Schlüssel, wenn `REQUIRE_API_KEY=true` gilt
 - „Management-Token“ / „API-Schlüssel mit Management-Berechtigung“ bezeichnet in dieser Referenz eine der Familien aus diesem Leitfaden — nicht einen zusätzlichen, undefinierten Geheimnistyp
-
-> **Inkompatible Änderung (v3.8.0)** — `/api/v1/agents/tasks/*` und die Endpunkte zur Cooldown-Verwaltung erfordern jetzt eine **Management-Authentifizierung** (`auth_token`-Cookie des Dashboards oder einen API-Schlüssel mit Management-Berechtigung). Clients, die diese Routen zuvor ohne Authentifizierung aufgerufen haben, erhalten nun `401 Unauthorized`. Siehe Commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

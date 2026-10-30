@@ -128,7 +128,6 @@ Pages principales sous `src/app/(dashboard)/dashboard/` :
 - `/dashboard/limits` — contrôles des quotas et des débits
 - `/dashboard/cli-tools` — prise en main de la CLI, détection de l’environnement d’exécution, génération de la configuration
 - `/dashboard/agents` — agents ACP détectés et enregistrement d’agents personnalisés
-- `/dashboard/cloud-agents` — tâches des agents hébergés dans le cloud (Codex Cloud, Devin, Jules) et cycle de vie des tâches
 - `/dashboard/skills` — registre des compétences A2A, exécution en bac à sable, catalogue de compétences intégrées
 - `/dashboard/memory` — inspection et récupération de la mémoire conversationnelle persistante
 - `/dashboard/webhooks` — abonnements aux webhooks sortants, rotation des secrets, statistiques de nouvelles tentatives
@@ -382,23 +381,6 @@ Fonctionnalités principales :
 
 Pour obtenir tous les détails algorithmiques (formules des facteurs, réglage des pondérations), consultez
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agents cloud
-
-Cloud Agents encapsule les plateformes tierces hébergées d’agents de code (Codex Cloud, Devin,
-Jules) derrière un cycle de vie uniforme des tâches, adossé à une base de données. Tous les points de terminaison de création et d’inspection
-des tâches nécessitent une authentification de gestion.
-
-- Racine du module : `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, ainsi que les sous-répertoires propres à chaque agent sous `agents/`)
-- Implémentations propres à chaque agent : `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Points de terminaison publics : `/api/v1/agents/tasks/*` (lister/créer/obtenir/annuler)
-- Points de terminaison de gestion : `/api/cloud/*` (provisionnement, état, traitement par lots)
-- Tableau de bord : `/dashboard/cloud-agents`
-- Stockage : table `cloud_agent_tasks`
-
-Pour les détails de provisionnement et les spécificités OAuth propres à chaque agent, consultez
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Garde-fous
 

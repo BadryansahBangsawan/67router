@@ -24,7 +24,6 @@ Guia completo para configurar provedores, criar combos, integrar ferramentas de 
 - [Sistema de Skills](#-skills-system)
 - [Sistema de Memória](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Agentes na Nuvem](#-cloud-agents)
 - [Gerenciamento Programático](#-programmatic-management)
 - [CLI Interna](#-internal-cli)
 - [Aplicativo para Desktop (Electron)](#-desktop-application-electron)
@@ -1277,18 +1276,6 @@ Inscreva-se em eventos do OmniRoute para monitoramento e automação em tempo re
 - Novas tentativas: 3 tentativas com backoff exponencial e, em seguida, envio para a fila de mensagens mortas
 
 Esquema completo em [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agentes na Nuvem
-
-O OmniRoute integra-se a agentes de programação na nuvem (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), permitindo que você envie tarefas de longa duração pelo mesmo dashboard que gerencia seu roteamento local.
-
-- Crie tarefas em **Dashboard → Cloud Agents** ou via `POST /api/v1/agents/tasks`
-- Acompanhe o status, os logs e os artefatos de cada tarefa
-- Use sua própria chave de API para cada provedor — as credenciais nunca saem da instância do OmniRoute
-
-Referência completa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

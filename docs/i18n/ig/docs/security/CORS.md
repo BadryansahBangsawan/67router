@@ -68,20 +68,6 @@ ikwe ka **preflight CORS gafere** na route njikwa — nke ka na-achọ nyocha nj
 nke ibe sitere n’isi mmalite ọzọ na-enweghị ike inye. Ọ **abụghị** ụzọ iji zuo oge njikọ ma ọ bụ
 nzere n’ụzọ CORS nkịtị ahụ.
 
-### Otu ezigbo mwepu — `/api/v1/agents/`
-
-Route Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) na-edobe
-header CORS **nke ha**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ma **na-ewepụta**
-`Access-Control-Allow-Origin: <origin>|*` tinyere
-`Access-Control-Allow-Credentials: true`. Nke a bụ naanị interface ebe
-izighachi isi mmalite na nzere na-adịkọ ọnụ, ọ **dabereghị na
-`CORS_ALLOW_ALL`**. A na-eji njikwa eme nyocha njirimara nke route ndị a
-(`requireManagementAuth`); ndị ọrụ na-eme ka dashboard dị n’èzí host kwesịrị
-ịma na nke a bụ naanị ebe header nzaghachi na-ekwe ka a gụọ nzaghachi nwere nzere site n’isi mmalite ọzọ.
-A na-enyocha ime ka ọ sie ike site n’iji ndepụta ikike doro anya
-iche na ntuziaka CORS a.
-
 ## Ndepụta nyocha maka production
 
 - **Edokwala `CORS_ALLOW_ALL=true` na production.** Hapụ ya n’enweghị nhazi.
@@ -152,15 +138,14 @@ taabụ Security), ọ bụghị n'ime proxy.
 
 ## Faịlụ source
 
-| Ihe metụtara                                 | Faịlụ                                                                |
-| -------------------------------------------- | -------------------------------------------------------------------- |
-| Mkpebi allowlist + `getCorsStatus()`         | `src/server/cors/origins.ts`                                         |
-| Itinye middleware n’ọrụ (otu isi eziokwu)    | `src/server/authz/pipeline.ts`                                       |
-| Settings → itinye origin n’ime runtime       | `src/lib/config/runtimeSettings.ts`                                  |
-| Ọnọdụ runtime maka dashboard                 | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Ọkọlọtọ ịdọ aka ná ntị nke dashboard         | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| Mpaghara CORS Allowed Origins                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS kwa route nke Cloud-Agent (ihe dị iche) | `src/lib/cloudAgent/api.ts`                                          |
+| Ihe metụtara                              | Faịlụ                                                                |
+| ----------------------------------------- | -------------------------------------------------------------------- |
+| Mkpebi allowlist + `getCorsStatus()`      | `src/server/cors/origins.ts`                                         |
+| Itinye middleware n’ọrụ (otu isi eziokwu) | `src/server/authz/pipeline.ts`                                       |
+| Settings → itinye origin n’ime runtime    | `src/lib/config/runtimeSettings.ts`                                  |
+| Ọnọdụ runtime maka dashboard              | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Ọkọlọtọ ịdọ aka ná ntị nke dashboard      | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| Mpaghara CORS Allowed Origins             | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Hụkwa
 

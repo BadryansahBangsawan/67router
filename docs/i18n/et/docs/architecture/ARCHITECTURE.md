@@ -128,7 +128,6 @@ Peamised lehed kausta `src/app/(dashboard)/dashboard/` alt:
 - `/dashboard/limits` — kvoodi/kiirusepiirangute kontroll
 - `/dashboard/cli-tools` — CLI kasutuselevõtt, käitusaja tuvastamine, konfiguratsiooni genereerimine
 - `/dashboard/agents` — tuvastatud ACP agendid + kohandatud agendi registreerimine
-- `/dashboard/cloud-agents` — pilves majutatud agendi ülesanded (Codex Cloud, Devin, Jules) ja ülesande eluring
 - `/dashboard/skills` — A2A oskuste registreerimine, sandbox täitmine, sisseehitatud oskuste katalog
 - `/dashboard/memory` — püsiva vestlusmälu ülevaatus ja pärimine
 - `/dashboard/webhooks` — väljuvad veebihaagi (webhook) tellimused, saladuste rotatsioon, uuestisaatmise statistika
@@ -381,23 +380,6 @@ Põhivõimalused:
 
 Täielikud algoritmilised üksikasjad (tegurite valemid, kaalude häälestamine) leiate failist
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Pilveagendid
-
-Pilveagendid koondavad kolmandate poolte majutatud koodiagendi platvormid (Codex Cloud, Devin,
-Jules) ühtse andmebaasipõhise ülesande elutsükli taha. Kõik ülesannete loomise ja kontrollimise
-otspunktid nõuavad haldusautentimist.
-
-- Mooduli juurkataloog: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` ning agendipõhised alamkataloogid kataloogis `agents/`)
-- Agendipõhised teostused: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Avalikud otspunktid: `/api/v1/agents/tasks/*` (loendamine/loomine/hankimine/tühistamine)
-- Haldusotspunktid: `/api/cloud/*` (ettevalmistamine, olek, pakktöötlus)
-- Juhtpaneel: `/dashboard/cloud-agents`
-- Salvestusruum: tabel `cloud_agent_tasks`
-
-Agendipõhise ettevalmistamise ja OAuthi üksikasjad leiate failist
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Kaitsepiirded
 

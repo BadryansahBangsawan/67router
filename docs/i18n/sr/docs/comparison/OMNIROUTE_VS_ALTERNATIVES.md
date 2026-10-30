@@ -24,7 +24,6 @@ Objektivno poređenje funkcija u odnosu na popularne open-source AI rutere.
 | **A2A protokol**                                      |                 ✅ 6 veština                  |           ❌            |          ❌          |      ❌       |
 | **Memorija (FTS5 + vektorska)**                       |                      ✅                       |           ❌            |          ❌          |      ❌       |
 | **Zaštitne mere (PII, injekcija, vid)**               |                      ✅                       |        delimično        |          ❌          |  ✅ plaćeno   |
-| **Integracije cloud agenata**                         |          Codex, Cursor, Devin, Jules          |           ❌            |          ❌          |      ❌       |
 | **Circuit breaker po provajderu**                     |        ✅ 3 stanja, odloženi oporavak         |         osnovni         |          ❌          |      ✅       |
 | **Prikrivanje TLS otiska (JA3/JA4)**                  |                  ✅ wreq-js                   |           ❌            |          ❌          |      ❌       |
 | **Okvir za evaluaciju**                               |                  ✅ ugrađen                   |           ❌            |          ❌          |   ⚠ plaćeno   |

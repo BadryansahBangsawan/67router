@@ -121,4 +121,3 @@ e nyere authorization iche na target environment.
 - [Nkwekọrịta mmalite CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Tool CLI](../reference/CLI-TOOLS.md)
 - [Server A2A](./A2A-SERVER.md)
-- [Agent cloud](./CLOUD_AGENT.md)

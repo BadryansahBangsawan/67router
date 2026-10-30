@@ -7,7 +7,6 @@ import { StatusDot } from "@/shared/components/flow/StatusDot";
 import { orchStateColor, type OrchNode, type OrchState } from "../model/orchestrationTypes";
 import { useDrawerDetail } from "./useDrawerDetail";
 import type { DrawerError, RepeatOutcome } from "./useDrawerDetail";
-import type { CloudAgentTask } from "@/lib/cloudAgent/types";
 import type { A2ATask } from "@/lib/a2a/taskManager";
 
 const TOAST_MS = 2500;
@@ -15,7 +14,6 @@ const REPEAT_CONFIRM_MS = 3000;
 
 /** Timeline normalized by source — the same data the Timeline component displays. */
 function normalizedTimeline(node: OrchNode, detail: unknown): unknown {
-  if (node.source === "cloud-agent") return (detail as CloudAgentTask | null)?.activities ?? [];
   if (node.source === "a2a") return (detail as A2ATask | null)?.events ?? [];
   return null; // conductor/overflow: the raw payload already is the trace
 }
@@ -45,16 +43,6 @@ const STATE_KEY: Record<OrchState, string> = {
 };
 const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
 
-/**
- * `result.prUrl` is upstream-provider-controlled (Cloud Agent task result). Only
- * render it as a clickable `<a href>` when it's a plain http(s) URL — anything
- * else (e.g. `javascript:`) renders as inert text instead, so a malicious/buggy
- * provider response can never become a click-to-execute link (review r1 finding).
- */
-function isHttpUrl(url: string | undefined): url is string {
-  return !!url && /^https?:\/\//i.test(url);
-}
-
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-4">
@@ -65,19 +53,6 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 function Timeline({ node, detail }: { node: OrchNode; detail: unknown }) {
-  if (node.source === "cloud-agent") {
-    const t = detail as CloudAgentTask | null;
-    return (
-      <ol className="text-xs flex flex-col gap-1.5">
-        {(t?.activities ?? []).map((a) => (
-          <li key={a.id} className="flex gap-2">
-            <code className="text-[9px] shrink-0 text-text-muted">{a.type}</code>
-            <span className="break-words">{a.content}</span>
-          </li>
-        ))}
-      </ol>
-    );
-  }
   if (node.source === "a2a") {
     const t = detail as A2ATask | null;
     return (
@@ -157,35 +132,19 @@ function DrawerHeader({
 }
 
 /**
- * Narrows the loaded detail payload to the typed shape of the node's source — the
- * non-matching one is always `null`, so each section can read its own shape safely.
+ * Narrows the loaded detail payload to the A2A task shape — `null` for every other source,
+ * so each section can read its own shape safely.
  */
-function narrowDetail(
-  node: OrchNode,
-  detail: unknown
-): { ca: CloudAgentTask | null; a2a: A2ATask | null } {
-  return {
-    ca: node.source === "cloud-agent" ? (detail as CloudAgentTask | null) : null,
-    a2a: node.source === "a2a" ? (detail as A2ATask | null) : null,
-  };
+function narrowDetail(node: OrchNode, detail: unknown): { a2a: A2ATask | null } {
+  return { a2a: node.source === "a2a" ? (detail as A2ATask | null) : null };
 }
 
-/** Objective section: the agent prompt / first A2A message, falling back to the node labels. */
-function DrawerObjective({
-  node,
-  ca,
-  a2a,
-  t,
-}: {
-  node: OrchNode;
-  ca: CloudAgentTask | null;
-  a2a: A2ATask | null;
-  t: Translate;
-}) {
+/** Objective section: the first A2A message, falling back to the node labels. */
+function DrawerObjective({ node, a2a, t }: { node: OrchNode; a2a: A2ATask | null; t: Translate }) {
   return (
     <Section title={t("drawerObjective")}>
       <p className="text-xs break-words">
-        {ca?.prompt ?? a2a?.input?.messages[0]?.content ?? node.sublabel ?? node.label}
+        {a2a?.input?.messages[0]?.content ?? node.sublabel ?? node.label}
       </p>
     </Section>
   );
@@ -218,49 +177,22 @@ function DrawerBanners({
   );
 }
 
-/** Cost/duration metrics section — omitted entirely when neither value is present. */
-function DrawerMetrics({
-  node,
-  ca,
-  t,
-}: {
-  node: OrchNode;
-  ca: CloudAgentTask | null;
-  t: Translate;
-}) {
-  if (node.cost == null && ca?.result?.duration == null) return null;
+/** Cost metrics section — omitted entirely when no cost is present. */
+function DrawerMetrics({ node, t }: { node: OrchNode; t: Translate }) {
+  if (node.cost == null) return null;
   return (
     <Section title={t("drawerMetrics")}>
-      <p className="text-xs">
-        {node.cost != null && usd.format(node.cost)}
-        {ca?.result?.duration != null && ` · ${ca.result.duration}s`}
-      </p>
+      <p className="text-xs">{usd.format(node.cost)}</p>
     </Section>
   );
 }
 
-/** Result section: Cloud Agent PR link (sanitized, see `isHttpUrl`) + A2A artifacts. */
-function DrawerResult({
-  ca,
-  a2a,
-  t,
-}: {
-  ca: CloudAgentTask | null;
-  a2a: A2ATask | null;
-  t: Translate;
-}) {
-  const hasResult = !!ca?.result?.prUrl || (a2a?.artifacts?.length ?? 0) > 0;
+/** Result section: A2A artifacts. */
+function DrawerResult({ a2a, t }: { a2a: A2ATask | null; t: Translate }) {
+  const hasResult = (a2a?.artifacts?.length ?? 0) > 0;
   if (!hasResult) return null;
   return (
     <Section title={t("drawerResult")}>
-      {ca?.result?.prUrl &&
-        (isHttpUrl(ca.result.prUrl) ? (
-          <a className="text-xs underline" href={ca.result.prUrl} target="_blank" rel="noreferrer">
-            {ca.result.prUrl}
-          </a>
-        ) : (
-          <span className="text-xs break-words">{ca.result.prUrl}</span>
-        ))}
       {a2a?.artifacts?.map((art, i) => (
         <pre key={i} className="text-[10px] bg-surface-muted rounded p-2 mt-1 overflow-x-auto">
           {art.content}
@@ -510,9 +442,8 @@ export function OrchestrationDrawer({
 
   if (!node) return null;
   const state = node.state ?? "queued";
-  const { ca, a2a } = narrowDetail(node, detail);
-  const showRepeat =
-    node.source === "cloud-agent" || node.source === "a2a" || node.source === "conductor";
+  const { a2a } = narrowDetail(node, detail);
+  const showRepeat = node.source === "a2a" || node.source === "conductor";
 
   return (
     // Kit Sheet (Radix Dialog): overlay click and Escape close it, focus is trapped while open
@@ -546,12 +477,12 @@ export function OrchestrationDrawer({
           t={t}
         />
 
-        <DrawerObjective node={node} ca={ca} a2a={a2a} t={t} />
+        <DrawerObjective node={node} a2a={a2a} t={t} />
         <Section title={t("drawerTimeline")}>
           <Timeline node={node} detail={detail} />
         </Section>
-        <DrawerMetrics node={node} ca={ca} t={t} />
-        <DrawerResult ca={ca} a2a={a2a} t={t} />
+        <DrawerMetrics node={node} t={t} />
+        <DrawerResult a2a={a2a} t={t} />
         <DrawerMemory a2a={a2a} t={t} />
         <DrawerActions
           canApprove={canApprove}

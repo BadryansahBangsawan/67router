@@ -171,7 +171,6 @@ src/
 | `auth/`                                  | 세션, 비밀번호 해싱, 토큰 유효성 검사                                                                                                                                                                                                                                                                              |
 | `batches/`                               | OpenAI Batches API 핸들러                                                                                                                                                                                                                                                                                          |
 | `catalog/`                               | 공급자 카탈로그 Zod 유효성 검사 + 기능 결정                                                                                                                                                                                                                                                                        |
-| `cloudAgent/`                            | 클라우드 에이전트(Codex Cloud, Devin, Jules) — `docs/frameworks/CLOUD_AGENT.md` 참조                                                                                                                                                                                                                               |
 | `combos/`                                | 콤보 결정 + 순서 변경 헬퍼                                                                                                                                                                                                                                                                                         |
 | `audit/`                                 | 활동 피드 헬퍼: `highLevelActions.ts`(허용 목록 + `isHighLevelAction()`), `activityIcons.ts`(작업 → 아이콘/동사 매핑), `timeline.ts`(groupByDay/relativeTime) — `docs/architecture/MONITORING_SECTIONS.md` 참조                                                                                                    |
 | `compliance/`                            | 감사 로그 + 공급자 감사 — `docs/security/COMPLIANCE.md` 참조                                                                                                                                                                                                                                                       |
@@ -401,7 +400,6 @@ open-sse/
 | `MCP-SERVER.md`                             | MCP 서버: 도구 110개, 전송 방식 3개, 범위 33개, REST 엔드포인트   |
 | `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, 스킬 6개, REST 도우미, 에이전트 카드          |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | 통합 가이드: A2A와 ACP 및 Cloud Agents 비교                       |
-| `CLOUD_AGENT.md`                            | Codex Cloud / Devin / Jules 오케스트레이션                        |
 | `SKILLS.md`                                 | 스킬 프레임워크(기본 제공 + 마켓플레이스 + SkillsSH + 샌드박스)   |
 | `RADAR.md`                                  | Radar 무료 모델 카탈로그 오버레이(`RADAR_ENABLED`, 기본값은 꺼짐) |
 | `MEMORY.md`                                 | 메모리 시스템(SQLite FTS5 + Qdrant)                               |

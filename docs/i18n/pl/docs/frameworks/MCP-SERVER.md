@@ -247,17 +247,6 @@ Powyższy zestaw narzędzi MCP (110 unikalnych narzędzi, obliczonych przez `cou
 ograniczony do operacji routingu, pamięci podręcznej, kompresji, pamięci, umiejętności, proxy i źródeł kontekstu w czasie wykonywania. Dwa sąsiednie
 frameworki są dostarczane wraz z serwerem MCP w v3.8.0 i udokumentowane osobno:
 
-### Agenci chmurowi
-
-Agenci chmurowi to działający poza procesem agenci AI do programowania (codex-cloud, cursor-cloud, devin, jules), zintegrowani z
-OmniRoute za pomocą tego samego modelu połączeń, który jest używany dla dostawców LLM. Są udostępniani za pośrednictwem
-własnego interfejsu REST (`/api/v1/agents/*`) i **nie** stanowią części katalogu narzędzi MCP
-— wywołanie agenta chmurowego nie wykorzystuje zakresu MCP.
-
-- Implementacja: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Cykl życia: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentacja: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Mechanizmy ochronne
 
 Mechanizmy ochronne to filtry wykonywane przed operacją lub po niej (vision-bridge, pii-masker, prompt-injection),

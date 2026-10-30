@@ -1350,11 +1350,11 @@ jejich změna vyžaduje úpravu kódu, nikoli proměnnou prostředí:
 
 Umožňuje uživatelům hlásit problémy přímo z Dashboardu.
 
-| Proměnná              | Výchozí hodnota | Zdrojový soubor                                       | Popis                                                                                                                                                     |
-| --------------------- | --------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(nenastaveno)_ | `src/app/api/v1/issues/report/route.ts`               | Repozitář ve formátu `owner/repo`.                                                                                                                        |
-| `GITHUB_ISSUES_TOKEN` | _(nenastaveno)_ | `src/app/api/v1/issues/report/route.ts`               | Osobní přístupový token GitHubu s oprávněním `issues:write`.                                                                                              |
-| `GITHUB_TOKEN`        | _(nenastaveno)_ | třídění problémů / pomocné nástroje cloudového agenta | Obecný přístupový token GitHubu používaný jako záložní hodnota pro `GITHUB_ISSUES_TOKEN` a pomocnými nástroji cloudového agenta v `src/lib/cloudAgent/*`. |
+| Proměnná              | Výchozí hodnota | Zdrojový soubor                                       | Popis                                                                                                                                                                  |
+| --------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(nenastaveno)_ | `src/app/api/v1/issues/report/route.ts`               | Repozitář ve formátu `owner/repo`.                                                                                                                                     |
+| `GITHUB_ISSUES_TOKEN` | _(nenastaveno)_ | `src/app/api/v1/issues/report/route.ts`               | Osobní přístupový token GitHubu s oprávněním `issues:write`.                                                                                                           |
+| `GITHUB_TOKEN`        | _(nenastaveno)_ | třídění problémů / pomocné nástroje cloudového agenta | Obecný přístupový token GitHubu používaný jako záložní hodnota pro `GITHUB_ISSUES_TOKEN` a pomocnými nástroji cloudového agenta v `src/lib/skills/githubCollector.ts`. |
 
 ---
 

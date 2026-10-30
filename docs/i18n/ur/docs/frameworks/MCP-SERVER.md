@@ -244,17 +244,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 رن ٹائم روٹنگ/کیش/کمپریشن/میموری/اسکلز/پراکسی/کانٹیکسٹ-سورس آپریشنز تک محدود ہے۔ v3.8.0 میں MCP سرور کے ساتھ
 دو ملحقہ فریم ورکس بھی فراہم کیے جاتے ہیں اور ان کی دستاویزات علیحدہ ہیں:
 
-### کلاؤڈ ایجنٹس
-
-کلاؤڈ ایجنٹس آؤٹ آف پروسیس AI کوڈنگ ایجنٹس (codex-cloud، cursor-cloud، devin، jules) ہیں، جو
-LLM فراہم کنندگان کے لیے استعمال ہونے والے اسی کنکشن ماڈل کے ذریعے OmniRoute سے منسلک ہیں۔ انہیں
-ان کے اپنے REST انٹرفیس (`/api/v1/agents/*`) کے ذریعے دستیاب کیا جاتا ہے اور وہ MCP ٹول کیٹلاگ کا حصہ **نہیں** ہیں
-— کلاؤڈ ایجنٹ کو کال کرنے سے MCP دائرۂ کار استعمال نہیں ہوتا۔
-
-- نفاذ: `src/lib/cloudAgent/` (`registry.ts`، `agents/codex.ts`، `agents/cursor.ts`، `agents/devin.ts`، `agents/jules.ts`)۔
-- لائف سائیکل: `createTask`، `getStatus`، `approvePlan`، `sendMessage`، `listSources`۔
-- دستاویزات: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)۔
-
 ### گارڈ ریلز
 
 گارڈ ریلز عمل درآمد سے پہلے/بعد کے فلٹرز (vision-bridge، pii-masker، prompt-injection) ہیں

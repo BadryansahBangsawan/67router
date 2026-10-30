@@ -4,7 +4,6 @@
 
 ---
 
-> **Sumber:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
 OmniRoute menyediakan tiga antarmuka terkait agen yang berbeda. Sekilas ketiganya tampak serupa, tetapi menyelesaikan masalah yang berbeda. Gunakan halaman ini untuk memilih yang tepat.
@@ -20,20 +19,6 @@ OmniRoute menyediakan tiga antarmuka terkait agen yang berbeda. Sekilas ketigany
 Ketiganya bersifat independen — pilih kombinasi mana pun.
 
 ## Pohon Keputusan
-
-```
-Apakah Anda memerlukan layanan cloud untuk melakukan pekerjaan di luar mesin ini (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ YA → Agen Cloud (POST /api/v1/agents/tasks)
-└─ TIDAK → Lanjutkan
-    │
-    Apakah Anda memiliki agen sejawat yang menggunakan A2A dan ingin berkolaborasi?
-    ├─ YA → A2A (POST /a2a)
-    └─ TIDAK → Lanjutkan
-        │
-        Apakah Anda perlu mencantumkan / mengonfigurasi agen pemrograman CLI yang terinstal secara lokal?
-        ├─ YA → ACP (GET /api/acp/agents)
-        └─ TIDAK → Gunakan /v1/chat/completions biasa
-```
 
 ## 1. A2A — Agen-ke-Agen
 
@@ -125,61 +110,6 @@ Struktur body untuk POST (`customAgentBodySchema` di `src/app/api/acp/agents/rou
   fallback penyedia otomatis. Untuk penggunaan interaktif biasa, jalankan sendiri CLI
   yang telah dikonfigurasi atau gunakan `omniroute run`.
 
-## 3. Agen Cloud
-
-**Endpoint OmniRoute:** `/api/v1/agents/tasks/*` (siklus hidup) + `/api/cloud/*` (infrastruktur penghubung)
-**Sumber:** `src/lib/cloudAgent/`
-
-### Apa itu Agen Cloud
-
-Antarmuka terpadu untuk agen pemrograman cloud pihak ketiga. Anda mengirimkan prompt + URL repositori, lalu OmniRoute meneruskannya ke agen cloud yang sesuai, memeriksa status secara berkala, dan mengembalikan hasil.
-
-### Agen yang didukung (4, semuanya dikonfirmasi di `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Siklus hidup
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() untuk setiap kelas agen
-  → layanan eksternal mulai bekerja
-  → baris tugas dibuat di DB (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → sinkronisasi status secara lazy dari penyedia
-  → mengembalikan status saat ini + rencana + log aktivitas
-  ↓
-POST /api/v1/agents/tasks/[id]   (tindakan: "approve" | "message" | "cancel")
-  → meneruskan ke penyedia (atau menandainya dibatalkan secara lokal)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → pembatalan lokal
-```
-
-### Autentikasi
-
-⚠️ **Semua endpoint `/api/v1/agents/tasks/*` memerlukan autentikasi manajemen** (commit `588a0333`). Pemanggil yang hanya menggunakan Bearer menerima respons 401 sejak v3.8.0.
-
-### Pembahasan mendalam
-
-Lihat [CLOUD_AGENT.md](./CLOUD_AGENT.md) untuk kontrak `CloudAgentBase`, detail khusus setiap agen, detail skema, dan endpoint pengelolaan kredensial.
-
-## Perbandingan: A2A vs Cloud Agents
-
-Keduanya memiliki "tugas berdurasi panjang", tetapi pada lapisan yang berbeda:
-
-| Aspek                     | A2A                                                                                             | Cloud Agents                                             |
-| ------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| Standar                   | Open A2A v0.3                                                                                   | Khusus OmniRoute                                         |
-| Tempat komputasi berjalan | Di dalam OmniRoute (menggunakan kombinasi yang dikonfigurasi)                                   | Eksternal (server Codex / Devin / Jules)                 |
-| Durasi tugas              | TTL default 5 menit (dapat dikonfigurasi di `TaskManager`)                                      | Beberapa menit hingga beberapa jam                       |
-| Memahami repositori       | Tidak (hanya meneruskan prompt)                                                                 | Ya (URL repositori + branch)                             |
-| Kasus penggunaan          | Kolaborasi lintas agen, perutean cerdas sebagai layanan                                         | Mendelegasikan "implementasikan fitur X di repositori Y" |
-| Autentikasi               | `OMNIROUTE_API_KEY` opsional untuk `/a2a`; autentikasi manajemen untuk helper REST `/api/a2a/*` | Selalu menggunakan autentikasi manajemen                 |
-
 ## Contoh Integrasi
 
 ### Menemukan kapabilitas A2A OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Mengirimkan tugas Cloud Agent
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Memeriksa status tugas cloud secara berkala
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Kapan Menggunakan Apa
 
 - **Frontend chatbot / copilot** → `/v1/chat/completions` (kompatibel dengan OpenAI — bukan protokol agen)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Lihat Juga
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Pembahasan mendalam tentang A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Pembahasan mendalam tentang Agen Cloud
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrasi CLI eksternal (menggunakan ACP)
 - [SKILLS.md](./SKILLS.md) — Kerangka kerja keterampilan (berbeda dari keterampilan A2A — sandbox eksekusi lokal)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referensi titik akhir

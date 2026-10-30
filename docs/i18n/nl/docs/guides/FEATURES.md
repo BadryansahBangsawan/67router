@@ -43,8 +43,6 @@ De cyclus v3.7.x → v3.8.0 voegde automatische routering zonder configuratie, n
 - 🤝 **GitLab Duo OAuth-provider** — aanmelden met GitLab-inloggegevens
 - 🧠 **Reasoning Replay Cache** — hybride persistentie van redeneertraces in het geheugen en SQLite
 
-📚 **Gerelateerde documentatie:** [Skills-framework](../frameworks/SKILLS.md) · [Geheugensysteem](../frameworks/MEMORY.md) · [Cloudagents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Providers

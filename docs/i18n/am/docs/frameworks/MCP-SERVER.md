@@ -245,17 +245,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 በአሂድ ጊዜ ማስተላለፍ/መሸጎጫ/መጭመቅ/ማህደረ ትውስታ/ክህሎቶች/ወኪል አገልጋይ/የአውድ-ምንጭ ክዋኔዎች ላይ የተወሰነ ነው። ሁለት አጎራባች
 ማዕቀፎች ከMCP አገልጋዩ ጎን ለጎን በv3.8.0 ውስጥ ይቀርባሉ፣ እና ለየብቻ ተሰንደዋል፦
 
-### የደመና ወኪሎች
-
-የደመና ወኪሎች ከሂደቱ ውጭ የሚሰሩ የAI ኮድ ማዘጋጃ ወኪሎች (codex-cloud, cursor-cloud, devin, jules) ሲሆኑ፣ ለLLM አቅራቢዎች ጥቅም ላይ በሚውለው
-ተመሳሳይ የግንኙነት ሞዴል በኩል ከOmniRoute ጋር ተያይዘዋል። በራሳቸው
-የREST በይነገጽ (`/api/v1/agents/*`) በኩል ይቀርባሉ፣ እና የMCP መሣሪያ ካታሎግ አካል **አይደሉም**
-— የደመና ወኪልን መጥራት የMCP ወሰን አይጠቀምም።
-
-- አተገባበር፦ `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)።
-- የሕይወት ዑደት፦ `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`።
-- ሰነድ፦ [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)።
-
 ### መከላከያዎች
 
 መከላከያዎች በውይይት ሂደቱ ውስጥ የሚተገበሩ ከአፈጻጸም በፊት/በኋላ ማጣሪያዎች (vision-bridge, pii-masker, prompt-injection)

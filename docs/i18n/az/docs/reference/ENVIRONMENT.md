@@ -1361,11 +1361,11 @@ onları dəyişdirmək mühit dəyişəni ilə yox, kod düzəlişi ilə mümkü
 
 İstifadəçilərə problemləri birbaşa İdarəetmə panelindən bildirməyə imkan verin.
 
-| Dəyişən               | Standart dəyər      | Mənbə faylı                                          | Təsvir                                                                                                                                                                               |
-| --------------------- | ------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(təyin edilməyib)_ | `src/app/api/v1/issues/report/route.ts`              | `owner/repo` formatında repozitoriya.                                                                                                                                                |
-| `GITHUB_ISSUES_TOKEN` | _(təyin edilməyib)_ | `src/app/api/v1/issues/report/route.ts`              | `issues:write` əhatə dairəsinə malik GitHub Şəxsi Giriş Tokeni.                                                                                                                      |
-| `GITHUB_TOKEN`        | _(təyin edilməyib)_ | problemlərin çeşidlənməsi / bulud agenti köməkçiləri | `GITHUB_ISSUES_TOKEN` üçün ehtiyat variant kimi istifadə edilən və `src/lib/cloudAgent/*` daxilindəki bulud agenti köməkçiləri tərəfindən istifadə olunan ümumi GitHub giriş tokeni. |
+| Dəyişən               | Standart dəyər      | Mənbə faylı                                          | Təsvir                                                                                                                                                                                            |
+| --------------------- | ------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(təyin edilməyib)_ | `src/app/api/v1/issues/report/route.ts`              | `owner/repo` formatında repozitoriya.                                                                                                                                                             |
+| `GITHUB_ISSUES_TOKEN` | _(təyin edilməyib)_ | `src/app/api/v1/issues/report/route.ts`              | `issues:write` əhatə dairəsinə malik GitHub Şəxsi Giriş Tokeni.                                                                                                                                   |
+| `GITHUB_TOKEN`        | _(təyin edilməyib)_ | problemlərin çeşidlənməsi / bulud agenti köməkçiləri | `GITHUB_ISSUES_TOKEN` üçün ehtiyat variant kimi istifadə edilən və `src/lib/skills/githubCollector.ts` daxilindəki bulud agenti köməkçiləri tərəfindən istifadə olunan ümumi GitHub giriş tokeni. |
 
 ---
 

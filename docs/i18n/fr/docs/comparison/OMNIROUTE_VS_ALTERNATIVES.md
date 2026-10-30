@@ -24,7 +24,6 @@ Comparaison objective des fonctionnalités avec les routeurs IA open source popu
 | **Protocole A2A**                                               |                ✅ 6 compétences                |        ❌         |        ❌         |      ❌      |
 | **Mémoire (FTS5 + vectorielle)**                                |                       ✅                       |        ❌         |        ❌         |      ❌      |
 | **Garde-fous (PII, injection, vision)**                         |                       ✅                       |      partiel      |        ❌         |  ✅ payant   |
-| **Intégrations d'agents cloud**                                 |          Codex, Cursor, Devin, Jules           |        ❌         |        ❌         |      ❌      |
 | **Disjoncteur par fournisseur**                                 |          ✅ 3 états, reprise différée          |      basique      |        ❌         |      ✅      |
 | **Furtivité des empreintes TLS (JA3/JA4)**                      |                   ✅ wreq-js                   |        ❌         |        ❌         |      ❌      |
 | **Framework d'évaluation**                                      |                   ✅ intégré                   |        ❌         |        ❌         |   ⚠ payant   |

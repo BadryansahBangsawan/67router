@@ -698,54 +698,6 @@
       "yes": "Skip confirmation prompt"
     }
   },
-  "cloud": {
-    "description": "Manage cloud AI agent tasks (codex, devin, jules)",
-    "agents": {
-      "description": "List available cloud agents"
-    },
-    "agent": {
-      "description": "Manage {agent} cloud agent tasks",
-      "auth": {
-        "description": "Authorize {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Manage cloud agent tasks",
-      "create": {
-        "description": "Create a new agent task",
-        "title": "Task title (defaults to first 80 chars of prompt)",
-        "prompt": "Task prompt text",
-        "prompt_file": "Read prompt from file",
-        "repo": "Repository URL to clone for the task",
-        "branch": "Branch name to use",
-        "metadata": "JSON metadata object"
-      },
-      "list": {
-        "description": "List agent tasks",
-        "status": "Filter by status (running|completed|failed|cancelled)",
-        "limit": "Maximum results (default: 50)"
-      },
-      "get": {
-        "description": "Get task details by ID"
-      },
-      "status": {
-        "description": "Print task status (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancel a running task",
-        "yes": "Skip confirmation prompt"
-      },
-      "approve": {
-        "description": "Approve the agent plan to start execution"
-      },
-      "message": {
-        "description": "Send a message to a running task"
-      }
-    },
-    "sources": {
-      "description": "List source files produced by a task"
-    }
-  },
   "program": {
     "description": "OmniRoute — Smart AI Router with Auto Fallback",
     "version": "Print version and exit",

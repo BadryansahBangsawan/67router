@@ -24,7 +24,6 @@ Kumpletong gabay para sa pag-configure ng mga provider, paggawa ng mga combo, pa
 - [Sistema ng mga Skill](#-skills-system)
 - [Sistema ng Memorya](#-memory-system)
 - [Mga Webhook](#-webhooks)
-- [Mga Cloud Agent](#-cloud-agents)
 - [Pamamahala sa Pamamagitan ng Programa](#-programmatic-management)
 - [Internal na CLI](#-internal-cli)
 - [Desktop Application (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Mag-subscribe sa mga event ng OmniRoute para sa real-time na pagsubaybay at auto
 - Mga retry: 3 pagtatangka na may exponential backoff, pagkatapos ay ililipat sa dead-letter queue
 
 Kumpletong schema sa [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Mga Cloud Agent
-
-Naka-integrate ang OmniRoute sa mga cloud coding agent (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) upang makapagpadala ka ng mga matagal na task mula sa parehong dashboard na namamahala sa iyong lokal na routing.
-
-- Gumawa ng mga task sa **Dashboard → Cloud Agents** o sa pamamagitan ng `POST /api/v1/agents/tasks`
-- Subaybayan ang status, mga log, at mga artifact ng bawat task
-- Gumamit ng sarili mong API key para sa bawat provider — hindi kailanman lumalabas ang mga credential sa instance ng OmniRoute
-
-Kumpletong sanggunian: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

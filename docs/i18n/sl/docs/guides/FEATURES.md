@@ -43,8 +43,6 @@ Razvojni cikel v3.7.x → v3.8.0 je prinesel samodejno usmerjanje brez konfigura
 - 🤝 **Ponudnik GitLab Duo OAuth** — prijava s poverilnicami GitLab
 - 🧠 **Predpomnilnik Reasoning Replay** — hibridna hramba sledi sklepanja v pomnilniku in zbirki SQLite
 
-📚 **Povezana dokumentacija:** [Ogrodje veščin](../frameworks/SKILLS.md) · [Pomnilniški sistem](../frameworks/MEMORY.md) · [Agenti v oblaku](../frameworks/CLOUD_AGENT.md) · [Spletni kavlji](../frameworks/WEBHOOKS.md) · [Predpomnilnik Reasoning Replay](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Ponudniki

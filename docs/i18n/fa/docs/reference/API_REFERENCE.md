@@ -1736,31 +1736,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## پروتکل عاملها
-
-وظایف عامل ابری (Claude Code، Codex Cloud، OpenHands و غیره) که از راه دور و از طرف کاربران OmniRoute اجرا میشوند.
-
-| متد    | مسیر                          | توضیحات                                                                                                                                                       |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | فهرست وظایف — پارامترهای اختیاری `?provider=`، `?status=`، `?limit=` (از 1 تا 500، پیشفرض 50)                                                                 |
-| POST   | `/api/v1/agents/tasks`        | ایجاد وظیفه — بدنه توسط `CreateCloudAgentTaskSchema` اعتبارسنجی میشود (`providerId`، `prompt`، `source`، `options?`). پاکت وظیفه را با وضعیت `201` برمیگرداند |
-| DELETE | `/api/v1/agents/tasks?id=...` | حذف یک وظیفه                                                                                                                                                  |
-| GET    | `/api/v1/agents/tasks/[id]`   | خواندن وظیفه — هنگامی که `external_id` تنظیم شده باشد، وضعیت را بهصورت همگام از عامل ابری بالادستی بهروزرسانی میکند                                           |
-| POST   | `/api/v1/agents/tasks/[id]`   | اقدام تفکیکشده: `{action: "approve"}`، `{action: "message", message}` یا `{action: "cancel"}`                                                                 |
-| DELETE | `/api/v1/agents/tasks/[id]`   | حذف یک وظیفه مشخص بر اساس شناسه                                                                                                                               |
-
-> **احراز هویت:** احراز هویت مدیریتی برای همه متدها الزامی است (`requireCloudAgentManagementAuth`). پیش از v3.8.0 این مسیرها بدون احراز هویت بودند — برای مشاهده تغییر ناسازگار، به کامیت `588a0333` مراجعه کنید.
-
-```bash
-# ایجاد یک وظیفه ابری Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## پروکسیهای مدیریتی
 
 پروکسیهای خروجی HTTP(S)/SOCKS که میتوان آنها را به ارائهدهندگان، حسابها یا بهصورت سراسری اختصاص داد.
@@ -2261,5 +2236,3 @@ devin-cli و غیره) مدیریت کنید. برای مشاهده فهرست �
 - گزینهٔ `requireLogin` از طریق `/api/settings/require-login` قابل تغییر است
 - مسیرهای `/v1/*` در صورت تنظیم `REQUIRE_API_KEY=true` میتوانند به کلید API از نوع Bearer نیاز داشته باشند
 - «توکن مدیریتی» / «کلید API با دامنهٔ مدیریتی» در این مرجع به یکی از خانوادههای ذکرشده در آن راهنما اشاره دارد — نه به یک نوع رمز محرمانهٔ اضافی و تعریفنشده
-
-> **تغییر ناسازگار (v3.8.0)** — مسیرهای `/api/v1/agents/tasks/*` و نقاط پایانی مدیریت دورهٔ انتظار اکنون به **احراز هویت مدیریتی** (کوکی `auth_token` داشبورد یا یک کلید API با دامنهٔ مدیریتی) نیاز دارند. کلاینتهایی که پیشتر این مسیرها را بدون احراز هویت فراخوانی میکردند، پاسخ `401 Unauthorized` دریافت خواهند کرد. به کامیت `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) مراجعه کنید.

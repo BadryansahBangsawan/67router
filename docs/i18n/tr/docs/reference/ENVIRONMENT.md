@@ -1346,11 +1346,11 @@ gösterilmiştir — bunları değiştirmek bir ortam değişkeni değil, kod d�
 
 Kullanıcıların sorunları doğrudan Dashboard üzerinden bildirmesine olanak tanıyın.
 
-| Değişken              | Varsayılan       | Kaynak Dosya                               | Açıklama                                                                                                                                                           |
-| --------------------- | ---------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(ayarlanmamış)_ | `src/app/api/v1/issues/report/route.ts`    | `owner/repo` biçimindeki depo.                                                                                                                                     |
-| `GITHUB_ISSUES_TOKEN` | _(ayarlanmamış)_ | `src/app/api/v1/issues/report/route.ts`    | `issues:write` kapsamına sahip GitHub Kişisel Erişim Token'ı.                                                                                                      |
-| `GITHUB_TOKEN`        | _(ayarlanmamış)_ | sorun triyajı / bulut aracısı yardımcıları | `GITHUB_ISSUES_TOKEN` için yedek olarak kullanılan ve `src/lib/cloudAgent/*` içindeki bulut aracısı yardımcıları tarafından tüketilen genel GitHub erişim token'ı. |
+| Değişken              | Varsayılan       | Kaynak Dosya                               | Açıklama                                                                                                                                                                        |
+| --------------------- | ---------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(ayarlanmamış)_ | `src/app/api/v1/issues/report/route.ts`    | `owner/repo` biçimindeki depo.                                                                                                                                                  |
+| `GITHUB_ISSUES_TOKEN` | _(ayarlanmamış)_ | `src/app/api/v1/issues/report/route.ts`    | `issues:write` kapsamına sahip GitHub Kişisel Erişim Token'ı.                                                                                                                   |
+| `GITHUB_TOKEN`        | _(ayarlanmamış)_ | sorun triyajı / bulut aracısı yardımcıları | `GITHUB_ISSUES_TOKEN` için yedek olarak kullanılan ve `src/lib/skills/githubCollector.ts` içindeki bulut aracısı yardımcıları tarafından tüketilen genel GitHub erişim token'ı. |
 
 ---
 

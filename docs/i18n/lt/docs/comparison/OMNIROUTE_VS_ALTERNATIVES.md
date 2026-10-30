@@ -24,7 +24,6 @@ Objektyvus funkcijų palyginimas su populiariausiais atvirojo kodo AI maršrutiz
 | **A2A protokolas**                                                   |                  ✅ 6 įgūdžiai                   |        ❌        |        ❌         |      ❌      |
 | **Atmintis (FTS5 + vektorinė paieška)**                              |                        ✅                        |        ❌        |        ❌         |      ❌      |
 | **Apsaugos (PII, injekcijos, rega)**                                 |                        ✅                        |     dalinės      |        ❌         |  ✅ mokama   |
-| **Debesijos agentų integracijos**                                    |           Codex, Cursor, Devin, Jules            |        ❌        |        ❌         |      ❌      |
 | **Grandinės pertraukiklis kiekvienam tiekėjui**                      |         ✅ 3 būsenų, atidėtas atkūrimas          |   pagrindinis    |        ❌         |      ✅      |
 | **TLS pirštų atspaudų maskavimas (JA3/JA4)**                         |                    ✅ wreq-js                    |        ❌        |        ❌         |      ❌      |
 | **Vertinimo karkasas**                                               |                  ✅ integruotas                  |        ❌        |        ❌         |   ⚠ mokama   |

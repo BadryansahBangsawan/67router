@@ -246,17 +246,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 περιορισμένο εύρος σε λειτουργίες δρομολόγησης/κρυφής μνήμης/συμπίεσης/μνήμης/δεξιοτήτων/proxy/πηγών-περιβάλλοντος κατά το χρόνο εκτέλεσης. Δύο συμπληρωματικά
 πλαίσια παρέχονται μαζί με τον MCP server στην έκδοση v3.8.0 και τεκμηριώνονται χωριστά:
 
-### Cloud Agents
-
-Τα Cloud Agents είναι πράκτορες κώδικα τεχνητής νοημοσύνης εκτός διεργασίας (codex-cloud, cursor-cloud, devin, jules) που συνδέονται στο
-OmniRoute μέσω του ίδιου μοντέλου σύνδεσης που χρησιμοποιείται για τους παρόχους LLM. Εκτίθενται μέσω
-της δικής τους REST επιφάνειας (`/api/v1/agents/*`) και **δεν** αποτελούν μέρος του καταλόγου εργαλείων MCP
-— η κλήση ενός Cloud Agent δεν καταναλώνει εμβέλεια MCP.
-
-- Υλοποίηση: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Κύκλος ζωής: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Τεκμηρίωση: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Τα Guardrails είναι φίλτρα πριν/μετά την εκτέλεση (vision-bridge, pii-masker, prompt-injection)

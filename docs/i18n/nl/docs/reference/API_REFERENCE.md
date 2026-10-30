@@ -1762,31 +1762,6 @@ Wordt gebruikt door het subsysteem voor automatisch sleutelbeheer om API-sleutel
 
 ---
 
-## Agents-protocol
-
-Cloudagenttaken (Claude Code, Codex Cloud, OpenHands enz.) die op afstand worden uitgevoerd namens OmniRoute-gebruikers.
-
-| Methode | Pad                           | Beschrijving                                                                                                                                         |
-| ------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Taken weergeven — optioneel `?provider=`, `?status=`, `?limit=` (1–500, standaard 50)                                                                |
-| POST    | `/api/v1/agents/tasks`        | Taak aanmaken — body gevalideerd door `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Retourneert `201` met taakenvelop |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Een taak verwijderen                                                                                                                                 |
-| GET     | `/api/v1/agents/tasks/[id]`   | Taak lezen — vernieuwt de status synchroon vanuit de upstream-cloudagent wanneer een `external_id` is ingesteld                                      |
-| POST    | `/api/v1/agents/tasks/[id]`   | Gediscrimineerde actie: `{action: "approve"}`, `{action: "message", message}` of `{action: "cancel"}`                                                |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Een specifieke taak op id verwijderen                                                                                                                |
-
-> **Authenticatie:** beheerauthenticatie is vereist voor elke methode (`requireCloudAgentManagementAuth`). Vóór v3.8.0 waren deze niet geauthenticeerd — zie commit `588a0333` voor de incompatibele wijziging.
-
-```bash
-# Een Claude Code-cloudtaak aanmaken
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Beheerproxy's
 
 Uitgaande HTTP(S)/SOCKS-proxy's die aan providers, accounts of globaal kunnen worden toegewezen.
@@ -2289,5 +2264,3 @@ API-sleutel met beheerbereik) en hoe deze verschillen van inferentiesleutels.
 - `requireLogin` kan worden in- en uitgeschakeld via `/api/settings/require-login`
 - Routes onder `/v1/*` vereisen optioneel een Bearer-API-sleutel wanneer `REQUIRE_API_KEY=true`
 - Met "beheertoken" / "API-sleutel met beheerbereik" wordt in deze referentie een van de families uit die handleiding bedoeld — niet een ongedefinieerd extra geheimtype
-
-> **Incompatibele wijziging (v3.8.0)** — `/api/v1/agents/tasks/*` en de eindpunten voor cooldownbeheer vereisen nu **beheerauthenticatie** (de dashboardcookie `auth_token` of een API-sleutel met beheerbereik). Clients die deze routes eerder zonder authenticatie aanriepen, ontvangen nu `401 Unauthorized`. Zie commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

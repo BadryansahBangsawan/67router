@@ -24,7 +24,6 @@ Perbandingan fitur objektif dengan router AI open-source populer.
 | **Protokol A2A**                                    |                ✅ 6 skills                 |         ❌         |        ❌         |     ❌      |
 | **Memori (FTS5 + vektor)**                          |                     ✅                     |         ❌         |        ❌         |     ❌      |
 | **Guardrails (PII, injeksi, visi)**                 |                     ✅                     |      sebagian      |        ❌         | ✅ berbayar |
-| **Integrasi agen cloud**                            |        Codex, Cursor, Devin, Jules         |         ❌         |        ❌         |     ❌      |
 | **Circuit breaker per penyedia**                    |         ✅ 3-state, pemulihan lazy         |       dasar        |        ❌         |     ✅      |
 | **Penyamaran fingerprint TLS (JA3/JA4)**            |                 ✅ wreq-js                 |         ❌         |        ❌         |     ❌      |
 | **Framework evaluasi**                              |                 ✅ bawaan                  |         ❌         |        ❌         | ⚠ berbayar  |

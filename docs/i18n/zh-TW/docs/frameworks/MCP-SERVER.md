@@ -244,17 +244,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 限定於執行階段路由、快取、壓縮、記憶體、技能、代理及內容來源操作。v3.8.0 隨 MCP 伺服器
 一併提供另外兩個相鄰框架，並分別記載於獨立文件中：
 
-### 雲端代理
-
-雲端代理是程序外的 AI 程式設計代理（codex-cloud、cursor-cloud、devin、jules），透過與
-LLM 提供者相同的連線模型接入 OmniRoute。它們透過自身的 REST 介面
-（`/api/v1/agents/*`）公開，且**不**屬於 MCP 工具目錄的一部分
-——呼叫雲端代理不會耗用 MCP 範圍。
-
-- 實作：`src/lib/cloudAgent/`（`registry.ts`、`agents/codex.ts`、`agents/cursor.ts`、`agents/devin.ts`、`agents/jules.ts`）。
-- 生命週期：`createTask`、`getStatus`、`approvePlan`、`sendMessage`、`listSources`。
-- 文件：[docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)。
-
 ### 防護機制
 
 防護機制是在聊天管線內套用的執行前／執行後篩選器（vision-bridge、pii-masker、prompt-injection）。

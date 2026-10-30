@@ -4,7 +4,6 @@
 
 ---
 
-> **ソース:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **最終更新:** 2026-06-28 — v3.8.40
 
 OmniRoute は、エージェントに関連する3つの異なるインターフェースを提供します。一見似ていますが、それぞれ異なる問題を解決します。このページを参考に、適切なものを選択してください。
@@ -20,20 +19,6 @@ OmniRoute は、エージェントに関連する3つの異なるインターフ
 これら3つは独立しています。必要なものを自由に組み合わせて選択してください。
 
 ## 判断フロー
-
-```
-このマシンの外部にあるクラウドサービス（Codex Cloud / Cursor Cloud / Devin / Jules）に作業を依頼する必要がありますか？
-├─ はい → クラウドエージェント（POST /api/v1/agents/tasks）
-└─ いいえ → 続行
-    │
-    A2A に対応し、連携を希望するピアエージェントがありますか？
-    ├─ はい → A2A（POST /a2a）
-    └─ いいえ → 続行
-        │
-        ローカルにインストールされている CLI コーディングエージェントを一覧表示または設定する必要がありますか？
-        ├─ はい → ACP（GET /api/acp/agents）
-        └─ いいえ → 通常の /v1/chat/completions を使用
-```
 
 ## 1. A2A — エージェント間連携
 
@@ -118,61 +103,6 @@ POSTの本文形式（`src/app/api/acp/agents/route.ts`内の`customAgentBodySch
 
 - HTTPレジストリはタスクを受け付けず、プロセス起動機能も公開しません。内部マネージャーは登録済みCLIを起動できますが、自動的なプロバイダーのフォールバックとしては接続されていません。通常の対話的な使用では、設定済みのCLIを自分で起動するか、`omniroute run`を使用してください。
 
-## 3. クラウドエージェント
-
-**OmniRoute エンドポイント:** `/api/v1/agents/tasks/*`（ライフサイクル）+ `/api/cloud/*`（基盤処理）
-**ソース:** `src/lib/cloudAgent/`
-
-### 概要
-
-サードパーティ製クラウドコーディングエージェントに対する統一インターフェースです。プロンプトとリポジトリ URL を送信すると、OmniRoute が適切なクラウドエージェントに処理を割り当て、ステータスをポーリングし、結果を返します。
-
-### サポート対象エージェント（4、すべて `src/lib/cloudAgent/agents/` で確認済み）
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### ライフサイクル
-
-```
-POST /api/v1/agents/tasks
-  → エージェントクラスごとに BaseAgent.createTask()
-  → 外部サービスが処理を開始
-  → DB にタスク行を作成（cloud_agent_tasks）
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → プロバイダーから遅延ステータス同期
-  → 現在のステータス + 計画 + アクティビティログを返す
-  ↓
-POST /api/v1/agents/tasks/[id]   （action: "approve" | "message" | "cancel"）
-  → プロバイダーに転送（またはローカルでキャンセル済みとして記録）
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → ローカルキャンセル
-```
-
-### 認証
-
-⚠️ **すべての `/api/v1/agents/tasks/*` エンドポイントには管理認証が必要です**（コミット `588a0333`）。v3.8.0 以降、Bearer のみを使用する呼び出し元には 401 が返されます。
-
-### 詳細
-
-`CloudAgentBase` のコントラクト、エージェントごとの詳細、スキーマの詳細、および認証情報に関する基盤エンドポイントについては、[CLOUD_AGENT.md](./CLOUD_AGENT.md) を参照してください。
-
-## 比較: A2A と Cloud Agents
-
-どちらも「長時間実行タスク」を扱いますが、異なるレイヤーで動作します。
-
-| 観点                         | A2A                                                                              | Cloud Agents                             |
-| ---------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------- |
-| 標準                         | Open A2A v0.3                                                                    | OmniRoute 固有                           |
-| コンピューティングの実行場所 | OmniRoute 内部（設定済みの組み合わせを使用）                                     | 外部（Codex / Devin / Jules のサーバー） |
-| タスクの所要時間             | デフォルト TTL は 5 分（`TaskManager` で設定可能）                               | 数分から数時間                           |
-| リポジトリ対応               | なし（プロンプトのみを渡す）                                                     | あり（リポジトリ URL + ブランチ）        |
-| ユースケース                 | エージェント間連携、サービスとしてのスマートルーティング                         | 「リポジトリ Y に機能 X を実装」を委任   |
-| 認証                         | `/a2a` では `OMNIROUTE_API_KEY` は任意。`/api/a2a/*` REST ヘルパーでは管理者認証 | 常に管理者認証が必要                     |
-
 ## 統合例
 
 ### OmniRoute の A2A 機能を検出する
@@ -222,30 +152,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cloud Agent タスクを送信する
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### クラウドタスクのステータスをポーリングする
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## 用途別の使い分け
 
 - **チャットボット / コパイロットのフロントエンド** → `/v1/chat/completions`（OpenAI 互換 — エージェントプロトコルではない）
@@ -277,7 +183,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## 関連項目
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2Aの詳細
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — クラウドエージェントの詳細
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — 外部CLI統合（ACPを使用）
 - [SKILLS.md](./SKILLS.md) — スキルフレームワーク（A2Aスキルとは異なるローカル実行サンドボックス）
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — エンドポイントリファレンス

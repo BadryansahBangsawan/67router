@@ -43,8 +43,6 @@
 - 🤝 **អ្នកផ្តល់សេវា GitLab Duo OAuth** — ចូលដោយប្រើព័ត៌មានសម្គាល់អត្តសញ្ញាណ GitLab
 - 🧠 **Reasoning Replay Cache** — ការរក្សាទុកដាននៃការវែកញែកបែបកូនកាត់ក្នុងអង្គចងចាំ + SQLite
 
-📚 **ឯកសារពាក់ព័ន្ធ៖** [ក្របខណ្ឌជំនាញ](../frameworks/SKILLS.md) · [ប្រព័ន្ធអង្គចងចាំ](../frameworks/MEMORY.md) · [ភ្នាក់ងារ Cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [ឃ្លាំងសម្ងាត់សម្រាប់ចាក់ឡើងវិញនូវការវែកញែក](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 អ្នកផ្តល់សេវា

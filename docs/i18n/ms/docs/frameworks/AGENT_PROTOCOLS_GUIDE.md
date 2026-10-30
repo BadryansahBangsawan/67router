@@ -4,7 +4,6 @@
 
 ---
 
-> **Sumber:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40
 
 OmniRoute menyediakan tiga antara muka berkaitan ejen yang berbeza. Ketiga-tiganya kelihatan serupa pada pandangan pertama tetapi menyelesaikan masalah yang berbeza. Gunakan halaman ini untuk memilih antara muka yang sesuai.
@@ -20,20 +19,6 @@ OmniRoute menyediakan tiga antara muka berkaitan ejen yang berbeza. Ketiga-tigan
 Ketiga-tiganya adalah bebas — pilih mana-mana gabungan.
 
 ## Pepohon Keputusan
-
-```
-Adakah anda memerlukan perkhidmatan awan untuk melakukan kerja di luar mesin ini (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ YA → Ejen Awan (POST /api/v1/agents/tasks)
-└─ TIDAK → Teruskan
-    │
-    Adakah anda mempunyai ejen rakan setara yang menggunakan A2A dan mahu bekerjasama?
-    ├─ YA → A2A (POST /a2a)
-    └─ TIDAK → Teruskan
-        │
-        Adakah anda perlu menyenaraikan / mengkonfigurasi ejen pengekodan CLI yang dipasang secara setempat?
-        ├─ YA → ACP (GET /api/acp/agents)
-        └─ TIDAK → Gunakan /v1/chat/completions biasa
-```
 
 ## 1. A2A — Ejen-ke-Ejen
 
@@ -125,61 +110,6 @@ Bentuk isi untuk POST (`customAgentBodySchema` dalam `src/app/api/acp/agents/rou
   penyedia automatik. Untuk penggunaan interaktif biasa, lancarkan sendiri CLI yang telah
   dikonfigurasi atau gunakan `omniroute run`.
 
-## 3. Ejen Awan
-
-**Titik akhir OmniRoute:** `/api/v1/agents/tasks/*` (kitaran hayat) + `/api/cloud/*` (infrastruktur)
-**Sumber:** `src/lib/cloudAgent/`
-
-### Apakah itu
-
-Antara muka seragam untuk ejen pengekodan awan pihak ketiga. Anda menyerahkan gesaan + URL repositori, OmniRoute menghantarnya kepada ejen awan yang betul, meninjau status dan mengembalikan hasil.
-
-### Ejen yang disokong (4, semuanya disahkan dalam `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Kitaran hayat
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() bagi setiap kelas ejen
-  → perkhidmatan luaran mula berfungsi
-  → baris tugas dicipta dalam DB (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → penyegerakan status secara malas daripada penyedia
-  → mengembalikan status semasa + rancangan + log aktiviti
-  ↓
-POST /api/v1/agents/tasks/[id]   (tindakan: "approve" | "message" | "cancel")
-  → memajukan kepada penyedia (atau menandakan sebagai dibatalkan secara setempat)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → pembatalan setempat
-```
-
-### Pengesahan
-
-⚠️ **Semua titik akhir `/api/v1/agents/tasks/*` memerlukan pengesahan pengurusan** (komit `588a0333`). Pemanggil yang hanya menggunakan Bearer menerima 401 sejak v3.8.0.
-
-### Perincian mendalam
-
-Lihat [CLOUD_AGENT.md](./CLOUD_AGENT.md) untuk kontrak `CloudAgentBase`, butiran khusus bagi setiap ejen, butiran skema dan titik akhir infrastruktur kelayakan.
-
-## Perbandingan: A2A berbanding Ejen Awan
-
-Kedua-duanya mempunyai "tugas jangka panjang", tetapi pada lapisan yang berbeza:
-
-| Aspek                    | A2A                                                                                   | Ejen Awan                                 |
-| ------------------------ | ------------------------------------------------------------------------------------- | ----------------------------------------- |
-| Piawaian                 | Open A2A v0.3                                                                         | Khusus untuk OmniRoute                    |
-| Tempat pengiraan berlaku | Dalam OmniRoute (menggunakan gabungan yang dikonfigurasikan)                          | Luaran (pelayan Codex / Devin / Jules)    |
-| Tempoh tugas             | TTL lalai 5 min (boleh dikonfigurasikan dalam `TaskManager`)                          | Beberapa minit hingga beberapa jam        |
-| Peka repositori          | Tidak (hanya menghantar gesaan)                                                       | Ya (URL repositori + cabang)              |
-| Kes penggunaan           | Kerjasama merentas ejen, penghalaan pintar sebagai perkhidmatan                       | Wakilkan "laksanakan ciri X dalam repo Y" |
-| Pengesahan               | `OMNIROUTE_API_KEY` pilihan untuk `/a2a`; pengurusan untuk pembantu REST `/api/a2a/*` | Sentiasa menggunakan pengurusan           |
-
 ## Contoh Integrasi
 
 ### Temui keupayaan A2A OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Hantar tugas Ejen Awan
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Semak status tugas awan secara berkala
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Bila Perlu Menggunakan Apa
 
 - **Antara muka chatbot / pembantu pengaturcaraan** → `/v1/chat/completions` (serasi dengan OpenAI — bukan protokol ejen)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Lihat Juga
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Penjelasan mendalam tentang A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Penjelasan mendalam tentang Agen Awan
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Penyepaduan CLI luaran (menggunakan ACP)
 - [SKILLS.md](./SKILLS.md) — Rangka kerja kemahiran (berbeza daripada kemahiran A2A — kotak pasir pelaksanaan setempat)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — rujukan titik akhir

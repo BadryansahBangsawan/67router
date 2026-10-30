@@ -4,7 +4,6 @@
 
 ---
 
-> **Orísun:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Ìmúdójúìwọ̀n tó gbẹ̀yìn:** 2026-06-28 — v3.8.40
 
 OmniRoute ń pèsè ojú-ọ̀nà mẹ́ta ọ̀tọ̀ọ̀tọ̀ tó ní í ṣe pẹ̀lú àwọn agent. Wọ́n jọra ní ìwò àkọ́kọ́, ṣùgbọ́n wọ́n ń yanjú àwọn ìṣòro ọ̀tọ̀ọ̀tọ̀. Lo ojú-ewé yìí láti yan èyí tó tọ́.
@@ -20,20 +19,6 @@ OmniRoute ń pèsè ojú-ọ̀nà mẹ́ta ọ̀tọ̀ọ̀tọ̀ tó ní í ṣ
 Àwọn mẹ́tẹ̀ẹ̀ta ò sinmi lé ara wọn — yan èyíkéyìí nínú wọn.
 
 ## Igi Ìpinnu
-
-```
-Ṣé o nílò iṣẹ́ cloud láti ṣe iṣẹ́ níta ẹ̀rọ yìí (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ BẸ́Ẹ̀NI → Àwọn Agent Cloud (POST /api/v1/agents/tasks)
-└─ RÁRÁ → Tẹ̀síwájú
-    │
-    Ṣé o ní agent ẹlẹgbẹ́ kan tó ń lo A2A tí ó sì fẹ́ fọwọ́sowọ́pọ̀?
-    ├─ BẸ́Ẹ̀NI → A2A (POST /a2a)
-    └─ RÁRÁ → Tẹ̀síwájú
-        │
-        Ṣé o nílò láti ṣe àtòjọ / àtúnṣe àwọn agent ìkọ̀-kóòdù CLI tí a fi sórí ẹ̀rọ agbègbè?
-        ├─ BẸ́Ẹ̀NI → ACP (GET /api/acp/agents)
-        └─ RÁRÁ → Lo /v1/chat/completions lásán
-```
 
 ## 1. A2A — Agent-sí-Agent
 
@@ -125,61 +110,6 @@ Wo [Ìforúkọsílẹ̀ ACP àti àwọn olùbẹ̀rẹ̀](./ACP.md) fún àw�
   àfidípò aládàáṣiṣẹ́. Fún lílò ìbánisọ̀rọ̀ ojoojúmọ́, bẹ̀rẹ̀ CLI tí a ti ṣètò fúnra rẹ tàbí
   lo `omniroute run`.
 
-## 3. Àwọn Aṣojú Àwọsánmà
-
-**OmniRoute endpoints:** `/api/v1/agents/tasks/*` (ìgbésí-ayé) + `/api/cloud/*` (àsopọ̀ abẹ́nú)
-**Orísun:** `src/lib/cloudAgent/`
-
-### Ohun tí ó jẹ́
-
-Àtẹ̀jáde ìṣọ̀kan kan lórí àwọn aṣojú ìkọ́kóòdù àwọsánmà ẹni-kẹta. O fi ìtọ́ni + URL ibi ìpamójú kóòdù ránṣẹ́, OmniRoute yóò fi ránṣẹ́ sí aṣojú àwọsánmà tó tọ́, yóò máa ṣàyẹ̀wò ipò rẹ̀, yóò sì dá àwọn àbájáde padà.
-
-### Àwọn aṣojú tí a ṣe àtìlẹ́yìn fún (4, gbogbo wọn ni a ti fìdí rẹ̀ múlẹ̀ nínú `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Ìgbésí-ayé
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() fún kiláàsì aṣojú kọ̀ọ̀kan
-  → iṣẹ́ òde bẹ̀rẹ̀ iṣẹ́
-  → a ṣẹ̀dá ìlà iṣẹ́ nínú DB (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → ìṣiṣẹ́pọ̀ ipò lọ́nà ọ̀lẹ láti ọ̀dọ̀ olupèsè
-  → dá ipò lọ́wọ́lọ́wọ́ + ètò + àkọsílẹ̀ ìgbòkègbodò padà
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → fi ránṣẹ́ sí olupèsè (tàbí samisi rẹ̀ gẹ́gẹ́ bí èyí tí a fagilé ní abẹ́nú)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → fagilé ní abẹ́nú
-```
-
-### Ìfàṣẹsí
-
-⚠️ **Gbogbo àwọn endpoint `/api/v1/agents/tasks/*` nílò ìfàṣẹsí ìṣàkóso** (commit `588a0333`). Àwọn olùpè tó ń lo Bearer nìkan ń gba 401 láti v3.8.0.
-
-### Àlàyé jíjinlẹ̀
-
-Wo [CLOUD_AGENT.md](./CLOUD_AGENT.md) fún àdéhùn `CloudAgentBase`, àwọn àlàyé pàtó fún aṣojú kọ̀ọ̀kan, àwọn àlàyé schema, àti àwọn endpoint àsopọ̀ ẹ̀rí ìdánimọ̀.
-
-## Ìfiwéra: A2A àti Cloud Agents
-
-Àwọn méjèèjì ní “àwọn iṣẹ́ tó máa ń gba àkókò pípẹ́,” ṣùgbọ́n ní àwọn ìpele tó yàtọ̀:
-
-| Abala                  | A2A                                                                                     | Cloud Agents                                             |
-| ---------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| Ìlànà                  | Open A2A v0.3                                                                           | Ìlànà pàtó fún OmniRoute                                 |
-| Ibi tí ìṣirò ti ń ṣiṣẹ́ | Nínú OmniRoute (ó ń lo àwọn àkójọpọ̀ tí a ti ṣètò)                                       | Níta (àwọn olupin Codex / Devin / Jules)                 |
-| Àkókò iṣẹ́              | TTL àìyípadà jẹ́ ìṣẹ́jú 5 (a lè ṣàtúnṣe rẹ̀ nínú `TaskManager`)                            | Láti ìṣẹ́jú dé ọ̀pọ̀ wákàtí                                 |
-| Ìmọ̀ ibi-ìpamọ́ kóòdù    | Rárá (àwọn ìtọ́ni nìkan ni ó ń fi ránṣẹ́)                                                 | Bẹ́ẹ̀ ni (URL ibi-ìpamọ́ + ẹ̀ka)                             |
-| Ìlò                    | Ìfọwọ́sowọ́pọ̀ láàárín àwọn aṣojú, ìdarí ọlọ́gbọ́n gẹ́gẹ́ bí iṣẹ́                               | Fífi “ṣe àfikún ẹ̀yà X sínú ibi-ìpamọ́ Y” lé ẹlòmíràn lọ́wọ́ |
-| Ìfàṣẹsí                | `OMNIROUTE_API_KEY` jẹ́ àṣàyàn fún `/a2a`; ìṣàkóso fún àwọn olùrànlọ́wọ́ REST `/api/a2a/*` | Ìṣàkóso nígbà gbogbo                                     |
-
 ## Àwọn Àpẹẹrẹ Ìṣọ̀kan
 
 ### Ṣàwárí àwọn agbára A2A ti OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Fi iṣẹ́ Cloud Agent kan ránṣẹ́
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Ṣàyẹ̀wò ipò iṣẹ́ cloud léraléra
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Ìgbà Tó Yẹ Kí O Lo Ọ̀kọ̀ọ̀kan
 
 - **Ìrísí chatbot / copilot** → `/v1/chat/completions` (ó bá OpenAI mu — kì í ṣe ìlànà aṣojú)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Tún Wo
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Ìtúpalẹ̀ jinlẹ̀ A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Ìtúpalẹ̀ jinlẹ̀ àwọn Aṣojú Àwọsanma
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Àwọn ìsopọ̀ mọ́ CLI ìta (ń lo ACP)
 - [SKILLS.md](./SKILLS.md) — Àgbékalẹ̀ àwọn ọgbọ́n (ó yàtọ̀ sí àwọn ọgbọ́n A2A — ààyè àdánwò ìṣiṣẹ́ agbègbè)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — ìtọ́kasí endpoint

@@ -68,20 +68,6 @@ management routes पर CORS **preflight को pass होने देना*
 की आवश्यकता होती है जिसे कोई cross-origin page उपलब्ध नहीं करा सकता। shared CORS path पर यह
 session-hijack या credential-theft vector **नहीं** है।
 
-### एक वास्तविक अपवाद — `/api/v1/agents/`
-
-Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) अपने
-**स्वयं के** CORS headers सेट करते हैं
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) और
-`Access-Control-Allow-Origin: <origin>|*` को
-`Access-Control-Allow-Credentials: true` के साथ emit **करते हैं**। यह एकमात्र surface है जहाँ
-origin-echo और credentials साथ मौजूद हैं, और यह
-`CORS_ALLOW_ALL` से **स्वतंत्र** है। ये routes management-authenticated हैं
-(`requireManagementAuth`); जो operators dashboard को host के बाहर expose करते हैं, उन्हें
-ध्यान रखना चाहिए कि यह एकमात्र स्थान है जहाँ response headers द्वारा cross-origin credentialed read की अनुमति दी जाती है।
-इसे explicit allowlist तक सीमित करने का कार्य
-इस CORS guidance से अलग track किया जाता है।
-
 ## प्रोडक्शन चेकलिस्ट
 
 - **प्रोडक्शन में कभी भी `CORS_ALLOW_ALL=true` सेट न करें।** इसे अनसेट ही छोड़ें।
@@ -160,7 +146,6 @@ location / {
 | डैशबोर्ड के लिए रनटाइम स्थिति          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | डैशबोर्ड चेतावनी बैनर                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins फ़ील्ड            | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent प्रति-रूट CORS (अपवाद)     | `src/lib/cloudAgent/api.ts`                                          |
 
 ## यह भी देखें
 

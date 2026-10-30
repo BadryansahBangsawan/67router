@@ -43,8 +43,6 @@ Ciclul v3.7.x → v3.8.0 a adăugat rutare automată fără configurare, furnizo
 - 🤝 **Furnizor OAuth GitLab Duo** — autentificare cu acreditările GitLab
 - 🧠 **Cache pentru redarea raționamentului** — persistență hibridă, în memorie + SQLite, a urmelor de raționament
 
-📚 **Documentație asociată:** [Cadrul pentru abilități](../frameworks/SKILLS.md) · [Sistemul de memorie](../frameworks/MEMORY.md) · [Agenți cloud](../frameworks/CLOUD_AGENT.md) · [Webhook-uri](../frameworks/WEBHOOKS.md) · [Cache pentru redarea raționamentului](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Furnizori

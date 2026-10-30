@@ -9,7 +9,7 @@ lastUpdated: 2026-06-28
 AgentBridge is OmniRoute's MITM (Man-in-the-Middle) proxy that intercepts HTTPS traffic from IDE AI agents and reroutes it through OmniRoute's unified routing engine. It supports **10 IDE agents** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, and Trae (investigating) — making OmniRoute the broadest-coverage MITM proxy for AI coding assistants on the market.
 
 **Dashboard location:** `/dashboard/tools/agent-bridge`
-**Sidebar group:** Tools (after Cloud Agents)
+**Sidebar group:** Tools
 **See also:** [`TRAFFIC_INSPECTOR.md`](./TRAFFIC_INSPECTOR.md) — monitor all intercepted traffic in real-time; `docs/security/MITM-TPROXY-DECRYPT.md` (git; not compiled into `/docs`) — the Linux TPROXY transparent-decrypt capture mode driven by the `/api/tools/agent-bridge/tproxy` route.
 
 ---

@@ -24,7 +24,6 @@ Mwongozo kamili wa kusanidi watoa huduma, kuunda michanganyiko, kuunganisha zana
 - [Mfumo wa Ujuzi](#-skills-system)
 - [Mfumo wa Kumbukumbu](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Mawakala wa Wingu](#-cloud-agents)
 - [Usimamizi wa Kiprogramu](#-programmatic-management)
 - [CLI ya Ndani](#-internal-cli)
 - [Programu ya Eneo-kazi (Electron)](#-desktop-application-electron)
@@ -1278,18 +1277,6 @@ Jisajili kupokea matukio ya OmniRoute kwa ufuatiliaji na uendeshaji otomatiki wa
 - Majaribio ya kurudia: majaribio 3 yenye muda wa kusubiri unaoongezeka kwa kasi, kisha foleni ya ujumbe ulioshindikana
 
 Schema kamili katika [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Mawakala wa Wingu
-
-OmniRoute huunganishwa na mawakala wa uandishi wa msimbo wa wingu (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ili uweze kutuma kazi za muda mrefu kutoka kwenye dashboard ileile inayoshughulikia uratibu wako wa ndani.
-
-- Unda kazi katika **Dashboard → Cloud Agents** au kupitia `POST /api/v1/agents/tasks`
-- Fuatilia hali, kumbukumbu za matukio na vizalishwa kwa kila kazi
-- Tumia ufunguo wako mwenyewe wa API kwa kila mtoa huduma — vitambulisho haviondoki kamwe kwenye instance ya OmniRoute
-
-Rejeleo kamili: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

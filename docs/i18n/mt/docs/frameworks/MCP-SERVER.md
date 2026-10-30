@@ -245,17 +245,6 @@ L-inventarju tal-għodod MCP iktar 'l fuq (110 għodod uniċi, ikkalkulat minn `
 skopjat għall-operazzjonijiet ta' routing/cache/kompressjoni/memorja/ħiliet/proxy/kontenut-sors runtime. Żewġ frawmworks
 tal-madwar jmorru flimkien mal-server MCP fil-v3.8.0 u huma dokumentati separatament:
 
-### Aġenti tal-Ħruġ (Cloud Agents)
-
-L-Aġenti tal-Ħruġ huma aġenti tal-kodiċjarja AI barra mill-proċess (codex-cloud, cursor-cloud, devin, jules) marbutin
-mal-Omniroute permezz tal-mudell ta' konnessjoni stess użat għall-fornituri LLM. Huma esposti permezz
-ta' wieqfa REST propja (`/api/v1/agents/*`) u **mhumiex** parti mill-katalgu tal-għodod MCP
-— il-ħolqien ta' Aġent tal-Ħruġ ma jikkonsmax skop MCP.
-
-- Implimentazzjoni: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ħajja: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentazzjoni: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Ħarsien (Guardrails)
 
 L-Ħarsien huma filtrijiet ta' qabel/wara l-eżekuzzjoni (vision-bridge, pii-masker, prompt-injection)

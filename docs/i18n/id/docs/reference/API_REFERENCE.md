@@ -1761,31 +1761,6 @@ Digunakan oleh subsistem manajemen kunci otomatis untuk menerbitkan dan merotasi
 
 ---
 
-## Protokol Agen
-
-Tugas agen cloud (Claude Code, Codex Cloud, OpenHands, dll.) yang dijalankan dari jarak jauh atas nama pengguna OmniRoute.
-
-| Metode | Path                          | Deskripsi                                                                                                                                                 |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Menampilkan daftar tugas — mendukung `?provider=`, `?status=`, `?limit=` opsional (1–500, default 50)                                                     |
-| POST   | `/api/v1/agents/tasks`        | Membuat tugas — body divalidasi oleh `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Mengembalikan `201` dengan amplop tugas |
-| DELETE | `/api/v1/agents/tasks?id=...` | Menghapus tugas                                                                                                                                           |
-| GET    | `/api/v1/agents/tasks/[id]`   | Membaca tugas — secara sinkron memperbarui status dari agen cloud upstream ketika `external_id` ditetapkan                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Tindakan terdiskriminasi: `{action: "approve"}`, `{action: "message", message}`, atau `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Menghapus tugas tertentu berdasarkan id                                                                                                                   |
-
-> **Autentikasi:** autentikasi pengelolaan diwajibkan pada setiap metode (`requireCloudAgentManagementAuth`). Sebelum v3.8.0, metode-metode ini tidak memerlukan autentikasi — lihat commit `588a0333` untuk perubahan yang tidak kompatibel tersebut.
-
-```bash
-# Membuat tugas cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proksi Pengelolaan
 
 Proksi HTTP(S)/SOCKS keluar yang dapat ditetapkan ke penyedia, akun, atau secara global.
@@ -2291,5 +2266,3 @@ kunci API dengan cakupan manajemen) dan perbedaannya dari kunci inferensi.
 - `requireLogin` dapat diaktifkan atau dinonaktifkan melalui `/api/settings/require-login`
 - Rute `/v1/*` secara opsional memerlukan kunci API Bearer ketika `REQUIRE_API_KEY=true`
 - "token manajemen" / "kunci API dengan cakupan manajemen" dalam referensi ini berarti salah satu kelompok dalam panduan tersebut — bukan jenis rahasia tambahan yang tidak didefinisikan
-
-> **Perubahan yang merusak kompatibilitas (v3.8.0)** — `/api/v1/agents/tasks/*` dan endpoint manajemen cooldown kini memerlukan **autentikasi manajemen** (cookie `auth_token` dasbor atau kunci API dengan cakupan manajemen). Klien yang sebelumnya memanggil rute ini tanpa autentikasi akan menerima `401 Unauthorized`. Lihat commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -1681,31 +1681,6 @@ Avtomatik kalit boshqaruvi quyi tizimi tomonidan asosiy provayder/hisob qaydnoma
 
 ---
 
-## Agentlar protokoli
-
-OmniRoute foydalanuvchilari nomidan masofadan bajariladigan bulut agenti vazifalari (Claude Code, Codex Cloud, OpenHands va boshqalar).
-
-| Metod  | Yoʻl                          | Tavsif                                                                                                                                                                 |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Vazifalarni roʻyxatlash — ixtiyoriy `?provider=`, `?status=`, `?limit=` (1–500, standart qiymat 50)                                                                    |
-| POST   | `/api/v1/agents/tasks`        | Vazifa yaratish — soʻrov tanasi `CreateCloudAgentTaskSchema` orqali tekshiriladi (`providerId`, `prompt`, `source`, `options?`). Vazifa konverti bilan `201` qaytaradi |
-| DELETE | `/api/v1/agents/tasks?id=...` | Vazifani oʻchirish                                                                                                                                                     |
-| GET    | `/api/v1/agents/tasks/[id]`   | Vazifani oʻqish — `external_id` oʻrnatilgan boʻlsa, yuqori oqimdagi bulut agentidan holatni sinxron ravishda yangilaydi                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Ajratilgan amal: `{action: "approve"}`, `{action: "message", message}` yoki `{action: "cancel"}`                                                                       |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Muayyan vazifani identifikatori boʻyicha oʻchirish                                                                                                                     |
-
-> **Autentifikatsiya:** har bir metod uchun boshqaruv autentifikatsiyasi talab qilinadi (`requireCloudAgentManagementAuth`). v3.8.0 dan oldin ular autentifikatsiyasiz edi — moslikni buzuvchi oʻzgarish uchun `588a0333` kommitiga qarang.
-
-```bash
-# Claude Code bulut vazifasini yaratish
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Boshqaruv proksilari
 
 Provayderlar, hisoblar yoki global miqyosda biriktirilishi mumkin boʻlgan chiquvchi HTTP(S)/SOCKS proksilari.
@@ -2209,5 +2184,3 @@ To‘rtta hisob ma’lumotlari oilasi (boshqaruv paneli seansi, mahalliy CLI tok
 - `requireLogin` sozlamasini `/api/settings/require-login` orqali yoqish yoki o‘chirish mumkin
 - `REQUIRE_API_KEY=true` bo‘lganda, `/v1/*` marshrutlari ixtiyoriy ravishda Bearer API kalitini talab qiladi
 - Ushbu ma’lumotnomadagi "boshqaruv tokeni" / "boshqaruv doirasidagi API kaliti" iboralari qo‘llanmada ko‘rsatilgan oilalardan birini anglatadi — alohida, ta’riflanmagan maxfiy ma’lumot turini emas
-
-> **Moslikni buzuvchi o‘zgarish (v3.8.0)** — `/api/v1/agents/tasks/*` va kutish muddatini boshqarish endpointlari endi **boshqaruv autentifikatsiyasini** (boshqaruv panelining `auth_token` cookie-fayli yoki boshqaruv doirasidagi API kaliti) talab qiladi. Ilgari ushbu marshrutlarga autentifikatsiyasiz murojaat qilgan mijozlar `401 Unauthorized` javobini oladi. `588a0333` kommitiga qarang (`fix(auth): require management auth for agent and cooldown APIs`).

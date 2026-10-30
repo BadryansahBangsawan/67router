@@ -43,8 +43,6 @@ Mzunguko wa v3.7.x → v3.8.0 umeongeza uelekezaji otomatiki usiohitaji usanidi,
 - 🤝 **Mtoa huduma wa GitLab Duo OAuth** — ingia kwa kutumia vitambulisho vya GitLab
 - 🧠 **Akiba ya Kurudia Uchakataji wa Kimantiki** — uhifadhi mseto wa kumbukumbu ya ndani + SQLite wa vifuatilizi vya uchakataji wa kimantiki
 
-📚 **Nyaraka zinazohusiana:** [Mfumo wa Ujuzi](../frameworks/SKILLS.md) · [Mfumo wa Kumbukumbu](../frameworks/MEMORY.md) · [Mawakala wa Wingu](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Akiba ya Kurudia Uchakataji wa Kimantiki](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Watoa huduma

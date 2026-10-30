@@ -1326,11 +1326,11 @@ Adobe Firefly Web 提供者的浏览器驱动会话刷新
 
 允许用户直接从仪表板报告问题。
 
-| 变量                  | 默认值       | 源文件                                  | 描述                                                                                                              |
-| --------------------- | ------------ | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _（未设置）_ | `src/app/api/v1/issues/report/route.ts` | 采用 `owner/repo` 格式的仓库。                                                                                    |
-| `GITHUB_ISSUES_TOKEN` | _（未设置）_ | `src/app/api/v1/issues/report/route.ts` | 具有 `issues:write` 权限范围的 GitHub 个人访问令牌。                                                              |
-| `GITHUB_TOKEN`        | _（未设置）_ | 问题分类处理/云代理辅助工具             | 通用 GitHub 访问令牌，用作 `GITHUB_ISSUES_TOKEN` 的回退选项，并由 `src/lib/cloudAgent/*` 中的云代理辅助工具使用。 |
+| 变量                  | 默认值       | 源文件                                  | 描述                                                                                                                           |
+| --------------------- | ------------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `GITHUB_ISSUES_REPO`  | _（未设置）_ | `src/app/api/v1/issues/report/route.ts` | 采用 `owner/repo` 格式的仓库。                                                                                                 |
+| `GITHUB_ISSUES_TOKEN` | _（未设置）_ | `src/app/api/v1/issues/report/route.ts` | 具有 `issues:write` 权限范围的 GitHub 个人访问令牌。                                                                           |
+| `GITHUB_TOKEN`        | _（未设置）_ | 问题分类处理/云代理辅助工具             | 通用 GitHub 访问令牌，用作 `GITHUB_ISSUES_TOKEN` 的回退选项，并由 `src/lib/skills/githubCollector.ts` 中的云代理辅助工具使用。 |
 
 ---
 

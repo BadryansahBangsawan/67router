@@ -246,17 +246,6 @@ Orodha ya zana za MCP iliyo hapo juu (zana 110 za kipekee, zilizohesabiwa na `co
 upeo wa shughuli za uelekezaji wakati wa utekelezaji/hifadhi-akiba/ubanaji/kumbukumbu/ujuzi/proksi/chanzo-cha-muktadha. Mifumo miwili inayohusiana
 inasambazwa pamoja na seva ya MCP katika v3.8.0 na imeandikwa kando:
 
-### Maajenti wa Wingu
-
-Maajenti wa Wingu ni maajenti wa AI wa kuandika msimbo wanaotekelezwa nje ya mchakato (codex-cloud, cursor-cloud, devin, jules) na kuunganishwa na
-OmniRoute kupitia muundo uleule wa muunganisho unaotumiwa kwa watoa huduma wa LLM. Wanapatikana kupitia
-kiolesura chao wenyewe cha REST (`/api/v1/agents/*`) na **si** sehemu ya katalogi ya zana za MCP
-— kuita Ajenti wa Wingu hakutumii upeo wa MCP.
-
-- Utekelezaji: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Mzunguko wa maisha: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Nyaraka: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Vizuizi vya Usalama
 
 Vizuizi vya usalama ni vichujio vya kabla/baada ya utekelezaji (vision-bridge, pii-masker, prompt-injection)

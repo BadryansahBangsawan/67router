@@ -120,4 +120,3 @@ test sa target environment.
 - [Mga kontrata sa paglulunsad ng CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Mga tool ng CLI](../reference/CLI-TOOLS.md)
 - [A2A server](./A2A-SERVER.md)
-- [Mga cloud agent](./CLOUD_AGENT.md)

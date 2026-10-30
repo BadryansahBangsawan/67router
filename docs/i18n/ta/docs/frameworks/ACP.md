@@ -119,4 +119,3 @@ EventEmitter பிழையை ஏற்படுத்த முடியா�
 - [CLI தொடக்க ஒப்பந்தங்கள்](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI கருவிகள்](../reference/CLI-TOOLS.md)
 - [A2A சர்வர்](./A2A-SERVER.md)
-- [கிளவுட் ஏஜென்ட்கள்](./CLOUD_AGENT.md)

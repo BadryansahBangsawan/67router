@@ -698,54 +698,6 @@
       "yes": "跳過確認提示"
     }
   },
-  "cloud": {
-    "description": "管理雲 AI 代理任務（codex, devin, jules）",
-    "agents": {
-      "description": "列出可用的雲代理"
-    },
-    "agent": {
-      "description": "管理 {agent} 雲代理任務",
-      "auth": {
-        "description": "通過 OAuth 授權 {agent}"
-      }
-    },
-    "task": {
-      "description": "管理雲代理任務",
-      "create": {
-        "description": "建立新的代理任務",
-        "title": "任務標題（預設為提示的前 80 個字元）",
-        "prompt": "任務提示文本",
-        "prompt_file": "從檔案讀取提示",
-        "repo": "要克隆的任務倉庫 URL",
-        "branch": "要使用的分支名稱",
-        "metadata": "JSON 後設資料物件"
-      },
-      "list": {
-        "description": "列出代理任務",
-        "status": "按狀態篩選（running|completed|failed|cancelled）",
-        "limit": "最大結果數（預設：50）"
-      },
-      "get": {
-        "description": "按 ID 獲取任務詳情"
-      },
-      "status": {
-        "description": "列印任務狀態（running|completed|failed|cancelled）"
-      },
-      "cancel": {
-        "description": "取消執行中的任務",
-        "yes": "跳過確認提示"
-      },
-      "approve": {
-        "description": "批准代理計劃開始執行"
-      },
-      "message": {
-        "description": "向執行中的任務傳送訊息"
-      }
-    },
-    "sources": {
-      "description": "列出任務產生的原始檔"
-    }
-  },
   "program": {
     "description": "OmniRoute — 具有自動故障轉移的智慧 AI 路由器",
     "version": "列印版本並退出",

@@ -698,54 +698,6 @@
       "yes": "Ignorar pedido de confirmação"
     }
   },
-  "cloud": {
-    "description": "Gerir tarefas de agentes de IA na cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Listar agentes disponíveis na cloud"
-    },
-    "agent": {
-      "description": "Gerir tarefas do agente {agent} na cloud",
-      "auth": {
-        "description": "Autorizar {agent} através de OAuth"
-      }
-    },
-    "task": {
-      "description": "Gerir tarefas de agentes na cloud",
-      "create": {
-        "description": "Criar uma nova tarefa de agente",
-        "title": "Título da tarefa (por predefinição, os primeiros 80 carateres do pedido)",
-        "prompt": "Texto do pedido da tarefa",
-        "prompt_file": "Ler o pedido a partir de um ficheiro",
-        "repo": "URL do repositório a clonar para a tarefa",
-        "branch": "Nome do ramo a utilizar",
-        "metadata": "Objeto de metadados JSON"
-      },
-      "list": {
-        "description": "Listar tarefas de agentes",
-        "status": "Filtrar por estado (running|completed|failed|cancelled)",
-        "limit": "Número máximo de resultados (predefinição: 50)"
-      },
-      "get": {
-        "description": "Obter detalhes da tarefa por ID"
-      },
-      "status": {
-        "description": "Mostrar o estado da tarefa (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancelar uma tarefa em execução",
-        "yes": "Ignorar pedido de confirmação"
-      },
-      "approve": {
-        "description": "Aprovar o plano do agente para iniciar a execução"
-      },
-      "message": {
-        "description": "Enviar uma mensagem para uma tarefa em execução"
-      }
-    },
-    "sources": {
-      "description": "Listar ficheiros de origem produzidos por uma tarefa"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router de IA inteligente com fallback automático",
     "version": "Mostrar versão e sair",

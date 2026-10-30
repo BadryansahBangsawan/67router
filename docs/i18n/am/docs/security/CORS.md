@@ -69,21 +69,6 @@ OmniRoute የትኞቹ **የአሳሽ origins** ከአንድ ማዕከላዊ የ
 ማረጋገጫ ይፈልጋሉ። ይህ በጋራው CORS መንገድ ላይ የsession ጠለፋ ወይም
 የማረጋገጫ መረጃ ስርቆት መንገድ **አይደለም**።
 
-### አንድ እውነተኛ ልዩ ሁኔታ — `/api/v1/agents/`
-
-የCloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)
-**የራሳቸውን** CORS headers
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ያዘጋጃሉ እና
-`Access-Control-Allow-Origin: <origin>|*`ን ከ
-`Access-Control-Allow-Credentials: true` ጋር **በእርግጥ ይልካሉ**። ይህ
-origin መልሶ ማንጸባረቅ እና credentials አብረው የሚኖሩበት ብቸኛው surface
-ነው፣ እና ከ`CORS_ALLOW_ALL` **ነፃ ነው**። እነዚህ routes በmanagement
-ማረጋገጫ የተጠበቁ ናቸው (`requireManagementAuth`)፤ ዳሽቦርዱን ከhost ውጭ
-የሚያጋልጡ operators በምላሽ headers የተሻጋሪ-origin ማረጋገጫ ያለው ንባብ
-የሚፈቀድበት ብቸኛው ቦታ ይህ መሆኑን ማወቅ አለባቸው። ይህን ወደ ግልጽ
-የፈቃድ ዝርዝር ማጥበቅ ከዚህ CORS መመሪያ ተለይቶ ክትትል እየተደረገበት
-ነው።
-
 ## የምርት አካባቢ ማረጋገጫ ዝርዝር
 
 - **በምርት አካባቢ `CORS_ALLOW_ALL=true`ን ፈጽሞ አያዘጋጁ።** ሳይዘጋጅ ይተዉት።
@@ -162,7 +147,6 @@ location / {
 | ለdashboardው የruntime ሁኔታ            | `src/app/api/settings/authz-inventory/route.ts`                      |
 | የDashboard ማስጠንቀቂያ ባነር              | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | የCORS Allowed Origins መስክ           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| የCloud-Agent በየroute CORS (ልዩ ሁኔታው) | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ተጨማሪ ይመልከቱ
 

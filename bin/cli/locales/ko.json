@@ -698,54 +698,6 @@
       "yes": "확인 프롬프트 건너뛰기"
     }
   },
-  "cloud": {
-    "description": "클라우드 AI 에이전트 작업 관리(codex, devin, jules)",
-    "agents": {
-      "description": "사용 가능한 클라우드 에이전트 목록 표시"
-    },
-    "agent": {
-      "description": "{agent} 클라우드 에이전트 작업 관리",
-      "auth": {
-        "description": "OAuth를 통해 {agent} 인증"
-      }
-    },
-    "task": {
-      "description": "클라우드 에이전트 작업 관리",
-      "create": {
-        "description": "새 에이전트 작업 생성",
-        "title": "작업 제목(기본값: 프롬프트의 처음 80자)",
-        "prompt": "작업 프롬프트 텍스트",
-        "prompt_file": "파일에서 프롬프트 읽기",
-        "repo": "작업용으로 복제할 저장소 URL",
-        "branch": "사용할 브랜치 이름",
-        "metadata": "JSON 메타데이터 객체"
-      },
-      "list": {
-        "description": "에이전트 작업 목록 표시",
-        "status": "상태별 필터링(running|completed|failed|cancelled)",
-        "limit": "최대 결과 수(기본값: 50)"
-      },
-      "get": {
-        "description": "ID로 작업 세부 정보 가져오기"
-      },
-      "status": {
-        "description": "작업 상태 출력(running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "실행 중인 작업 취소",
-        "yes": "확인 프롬프트 건너뛰기"
-      },
-      "approve": {
-        "description": "실행을 시작하도록 에이전트 계획 승인"
-      },
-      "message": {
-        "description": "실행 중인 작업에 메시지 보내기"
-      }
-    },
-    "sources": {
-      "description": "작업에서 생성된 소스 파일 목록 표시"
-    }
-  },
   "program": {
     "description": "OmniRoute — 자동 폴백 기능을 갖춘 스마트 AI 라우터",
     "version": "버전 출력 후 종료",

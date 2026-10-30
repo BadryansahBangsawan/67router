@@ -43,8 +43,6 @@ Zagayen v3.7.x → v3.8.0 ya ƙara sarrafa hanya ta atomatik ba tare da saiti ba
 - 🤝 **Mai samar da GitLab Duo OAuth** — shiga da bayanan shaidar GitLab
 - 🧠 **Reasoning Replay Cache** — haɗaɗɗen adanawa na cikin ƙwaƙwalwa + SQLite na sawun tunani
 
-📚 **Takardu masu alaƙa:** [Tsarin Skills](../frameworks/SKILLS.md) · [Tsarin Ƙwaƙwalwa](../frameworks/MEMORY.md) · [Wakilan Cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Masu Bayarwa

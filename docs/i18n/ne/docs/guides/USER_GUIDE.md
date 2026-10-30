@@ -24,7 +24,6 @@
 - [सिप प्रणाली](#-skills-system)
 - [मेमोरी प्रणाली](#-memory-system)
 - [वेबहुकहरू](#-webhooks)
-- [क्लाउड एजेन्टहरू](#-cloud-agents)
 - [प्रोग्राममार्फत व्यवस्थापन](#-programmatic-management)
 - [आन्तरिक CLI](#-internal-cli)
 - [डेस्कटप अनुप्रयोग (Electron)](#-desktop-application-electron)
@@ -1275,18 +1274,6 @@ OmniRoute ले हाइब्रिड पुनर्प्राप्त�
 - पुनःप्रयासहरू: exponential backoff सहित 3 प्रयास, त्यसपछि dead-letter queue
 
 पूर्ण schema [WEBHOOKS.md](../frameworks/WEBHOOKS.md) मा उपलब्ध छ।
-
----
-
-## ☁️ Cloud Agents
-
-OmniRoute ले cloud coding agents (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) सँग एकीकृत भएर तपाईंलाई स्थानीय routing सम्हाल्ने त्यही dashboard बाट लामो समयसम्म चल्ने tasks पठाउन सक्षम बनाउँछ।
-
-- **Dashboard → Cloud Agents** मा वा `POST /api/v1/agents/tasks` मार्फत tasks सिर्जना गर्नुहोस्
-- प्रत्येक task को status, logs र artifacts ट्र्याक गर्नुहोस्
-- प्रत्येक provider का लागि आफ्नै API key प्रयोग गर्नुहोस् — credentials कहिल्यै OmniRoute instance बाहिर जाँदैनन्
-
-पूर्ण सन्दर्भ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)।
 
 ---
 

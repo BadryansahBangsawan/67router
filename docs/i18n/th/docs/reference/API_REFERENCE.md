@@ -1757,31 +1757,6 @@ Combo สำหรับการกำหนดเส้นทางระด�
 
 ---
 
-## โปรโตคอล Agents
-
-งานของ Cloud Agent (Claude Code, Codex Cloud, OpenHands เป็นต้น) ที่ดำเนินการจากระยะไกลในนามของผู้ใช้ OmniRoute
-
-| เมธอด  | พาธ                           | คำอธิบาย                                                                                                                                         |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | แสดงรายการงาน — รองรับ `?provider=`, `?status=`, `?limit=` เป็นตัวเลือก (1–500, ค่าเริ่มต้น 50)                                                  |
-| POST   | `/api/v1/agents/tasks`        | สร้างงาน — เนื้อหา body ตรวจสอบด้วย `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ส่งคืน `201` พร้อม task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | ลบงาน                                                                                                                                            |
-| GET    | `/api/v1/agents/tasks/[id]`   | อ่านงาน — รีเฟรชสถานะจาก Cloud Agent ต้นทางแบบซิงโครนัสเมื่อตั้งค่า `external_id`                                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | การดำเนินการแบบจำแนก: `{action: "approve"}`, `{action: "message", message}` หรือ `{action: "cancel"}`                                            |
-| DELETE | `/api/v1/agents/tasks/[id]`   | ลบงานที่ระบุตาม id                                                                                                                               |
-
-> **การยืนยันตัวตน:** ทุกเมธอดต้องมีการยืนยันตัวตนสำหรับการจัดการ (`requireCloudAgentManagementAuth`) ก่อน v3.8.0 จุดเชื่อมต่อเหล่านี้ไม่มีการยืนยันตัวตน — ดูการเปลี่ยนแปลงที่ส่งผลให้เข้ากันไม่ได้ใน commit `588a0333`
-
-```bash
-# สร้างงาน Claude Code บนคลาวด์
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## พร็อกซีสำหรับการจัดการ
 
 พร็อกซี HTTP(S)/SOCKS ขาออกที่สามารถกำหนดให้กับผู้ให้บริการ บัญชี หรือกำหนดแบบส่วนกลางได้
@@ -2284,5 +2259,3 @@ devin-cli ฯลฯ) ดูรายการทั้งหมดได้ท�
 - สามารถสลับเปิดหรือปิด `requireLogin` ผ่าน `/api/settings/require-login`
 - เส้นทาง `/v1/*` สามารถกำหนดให้ต้องใช้คีย์ API แบบ Bearer ได้เมื่อ `REQUIRE_API_KEY=true`
 - ในเอกสารอ้างอิงนี้ "โทเค็นสำหรับการจัดการ" / "คีย์ API ที่มีขอบเขตสำหรับการจัดการ" หมายถึงข้อมูลรับรองประเภทใดประเภทหนึ่งในคู่มือดังกล่าว ไม่ใช่ประเภทข้อมูลลับเพิ่มเติมที่ไม่ได้กำหนดไว้
-
-> **การเปลี่ยนแปลงที่ไม่รองรับเวอร์ชันก่อนหน้า (v3.8.0)** — ขณะนี้ `/api/v1/agents/tasks/*` และเอ็นด์พอยต์สำหรับจัดการระยะพักต้องใช้ **การยืนยันตัวตนสำหรับการจัดการ** (คุกกี้ `auth_token` ของแดชบอร์ดหรือคีย์ API ที่มีขอบเขตสำหรับการจัดการ) ไคลเอนต์ที่ก่อนหน้านี้เรียกใช้เส้นทางเหล่านี้โดยไม่มีการยืนยันตัวตนจะได้รับ `401 Unauthorized` ดูคอมมิต `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`)

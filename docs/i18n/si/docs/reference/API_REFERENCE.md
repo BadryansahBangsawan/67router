@@ -1753,31 +1753,6 @@ OmniRoute සිදුවීම් (ඉල්ලීම් සම්පූර්�
 
 ---
 
-## නියෝජිත ප්රොටෝකෝලය
-
-OmniRoute පරිශීලකයන් වෙනුවෙන් දුරස්ථව ක්රියාත්මක කරන cloud agent කාර්යයන් (Claude Code, Codex Cloud, OpenHands ආදිය).
-
-| ක්රමය  | මාර්ගය                        | විස්තරය                                                                                                                                                          |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | කාර්යයන් ලැයිස්තුගත කරයි — විකල්ප `?provider=`, `?status=`, `?limit=` (1–500, පෙරනිමිය 50)                                                                       |
-| POST   | `/api/v1/agents/tasks`        | කාර්යයක් සාදයි — body එක `CreateCloudAgentTaskSchema` මඟින් වලංගු කෙරේ (`providerId`, `prompt`, `source`, `options?`). කාර්ය envelope එක සමඟ `201` ආපසු ලබා දෙයි |
-| DELETE | `/api/v1/agents/tasks?id=...` | කාර්යයක් මකයි                                                                                                                                                    |
-| GET    | `/api/v1/agents/tasks/[id]`   | කාර්යය කියවයි — `external_id` සකසා ඇති විට upstream cloud agent වෙතින් තත්ත්වය සමමුහුර්තව නැවුම් කරයි                                                            |
-| POST   | `/api/v1/agents/tasks/[id]`   | වෙනස්කොට හඳුනාගත් ක්රියාව: `{action: "approve"}`, `{action: "message", message}`, හෝ `{action: "cancel"}`                                                        |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id අනුව නිශ්චිත කාර්යයක් මකයි                                                                                                                                    |
-
-> **සත්යාපනය:** සෑම ක්රමයක් සඳහාම management සත්යාපනය අවශ්ය වේ (`requireCloudAgentManagementAuth`). v3.8.0 ට පෙර මේවා සත්යාපනය නොකළ ඒවා විය — අනුකූලතාව බිඳ දමන වෙනස සඳහා `588a0333` commit එක බලන්න.
-
-```bash
-# Claude Code cloud කාර්යයක් සාදන්න
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## කළමනාකරණ Proxy
 
 providers, accounts වෙත හෝ සමස්ත පද්ධතියට පැවරිය හැකි පිටතට යන HTTP(S)/SOCKS proxy.
@@ -2281,5 +2256,3 @@ OmniRoute ප්ලගින (තෙවන පාර්ශ්වීය දිග
 - `requireLogin`, `/api/settings/require-login` හරහා සක්රිය හෝ අක්රිය කළ හැක
 - `REQUIRE_API_KEY=true` වන විට `/v1/*` මාර්ග සඳහා විකල්ප ලෙස Bearer API යතුරක් අවශ්ය වේ
 - මෙම යොමුවේ "කළමනාකරණ ටෝකනය" / "කළමනාකරණ විෂයපථයක් සහිත API යතුර" යන්නෙන් අදහස් වන්නේ එම මාර්ගෝපදේශයේ සඳහන් වර්ගවලින් එකකි — නිර්වචනය නොකළ අමතර රහස් වර්ගයක් නොවේ
-
-> **පසුගාමී අනුකූලතාව බිඳ දමන වෙනස (v3.8.0)** — `/api/v1/agents/tasks/*` සහ විරාම කාල කළමනාකරණ අන්ත ලක්ෂ්ය සඳහා දැන් **කළමනාකරණ සත්යාපනය** (උපකරණ පුවරුවේ `auth_token` කුකිය හෝ කළමනාකරණ විෂයපථයක් සහිත API යතුරක්) අවශ්ය වේ. මීට පෙර සත්යාපනයකින් තොරව මෙම මාර්ග ඇමතූ සේවාලාභීන්ට `401 Unauthorized` ලැබෙනු ඇත. `588a0333` කමිටුව බලන්න (`fix(auth): require management auth for agent and cooldown APIs`).

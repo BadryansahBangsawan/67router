@@ -43,8 +43,6 @@ Siklus v3.7.x → v3.8.0 menghadirkan perutean otomatis tanpa konfigurasi, penye
 - 🤝 **Penyedia OAuth GitLab Duo** — masuk dengan kredensial GitLab
 - 🧠 **Cache Pemutaran Ulang Penalaran** — persistensi jejak penalaran secara hibrida dalam memori + SQLite
 
-📚 **Dokumentasi terkait:** [Kerangka Kerja Skills](../frameworks/SKILLS.md) · [Sistem Memori](../frameworks/MEMORY.md) · [Agen Cloud](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Cache Pemutaran Ulang Penalaran](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Penyedia

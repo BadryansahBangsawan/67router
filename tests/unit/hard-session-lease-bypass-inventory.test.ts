@@ -221,7 +221,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     "src/instrumentation-node.ts": 1,
     "src/lib/a2a/skills/providerDiscovery.ts": 1,
     "src/lib/chaos/chaosExecutor.ts": 1,
-    "src/lib/cloudAgent/api.ts": 1,
     "src/lib/cloudSync.ts": 1,
     "src/lib/combos/builderOptions.ts": 1,
     "src/lib/copilot/tools.ts": 1,

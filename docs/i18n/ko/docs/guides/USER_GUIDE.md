@@ -24,7 +24,6 @@
 - [스킬 시스템](#-skills-system)
 - [메모리 시스템](#-memory-system)
 - [웹훅](#-webhooks)
-- [클라우드 에이전트](#-cloud-agents)
 - [프로그래밍 방식 관리](#-programmatic-management)
 - [내부 CLI](#-internal-cli)
 - [데스크톱 애플리케이션(Electron)](#-desktop-application-electron)
@@ -1276,18 +1275,6 @@ OmniRoute는 하이브리드 검색을 활용해 **장기 대화 메모리**를 
 - 재시도: 지수 백오프 방식으로 3회 시도한 후 데드 레터 큐로 이동
 
 전체 스키마는 [WEBHOOKS.md](../frameworks/WEBHOOKS.md)를 참조하세요.
-
----
-
-## ☁️ 클라우드 에이전트
-
-OmniRoute는 클라우드 코딩 에이전트(**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**)와 통합되어 로컬 라우팅을 처리하는 동일한 대시보드에서 장시간 실행되는 작업을 전달할 수 있습니다.
-
-- **대시보드 → 클라우드 에이전트** 또는 `POST /api/v1/agents/tasks`를 통해 작업 생성
-- 작업별 상태, 로그 및 아티팩트 추적
-- 제공자별로 자체 API 키 사용 — 자격 증명은 OmniRoute 인스턴스 외부로 절대 전송되지 않음
-
-전체 레퍼런스: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

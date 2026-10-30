@@ -1379,11 +1379,11 @@ nende muutmine nõuab koodimuudatust, mitte keskkonnamuutujat:
 
 Võimaldab kasutajatel teatada probleemidest otse töölaualt.
 
-| Muutuja               | Vaikeväärtus  | Lähtefail                                        | Kirjeldus                                                                                                                                                              |
-| --------------------- | ------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(määramata)_ | `src/app/api/v1/issues/report/route.ts`          | Repositoorium vormingus `owner/repo`.                                                                                                                                  |
-| `GITHUB_ISSUES_TOKEN` | _(määramata)_ | `src/app/api/v1/issues/report/route.ts`          | GitHubi isiklik pääsutõend õigusega `issues:write`.                                                                                                                    |
-| `GITHUB_TOKEN`        | _(määramata)_ | probleemide triaaž / pilveagendi abifunktsioonid | Üldine GitHubi pääsutõend, mida kasutatakse `GITHUB_ISSUES_TOKEN` varuvariandina ja mida kasutavad asukohas `src/lib/cloudAgent/*` olevad pilveagendi abifunktsioonid. |
+| Muutuja               | Vaikeväärtus  | Lähtefail                                        | Kirjeldus                                                                                                                                                                           |
+| --------------------- | ------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(määramata)_ | `src/app/api/v1/issues/report/route.ts`          | Repositoorium vormingus `owner/repo`.                                                                                                                                               |
+| `GITHUB_ISSUES_TOKEN` | _(määramata)_ | `src/app/api/v1/issues/report/route.ts`          | GitHubi isiklik pääsutõend õigusega `issues:write`.                                                                                                                                 |
+| `GITHUB_TOKEN`        | _(määramata)_ | probleemide triaaž / pilveagendi abifunktsioonid | Üldine GitHubi pääsutõend, mida kasutatakse `GITHUB_ISSUES_TOKEN` varuvariandina ja mida kasutavad asukohas `src/lib/skills/githubCollector.ts` olevad pilveagendi abifunktsioonid. |
 
 ---
 

@@ -236,8 +236,6 @@ Penguatkuasaan kunci API klien menggunakan `isRequireApiKeyEnabled()` dalam `src
 
 ## Perubahan Pecah Keserasian — v3.8.0
 
-Titik akhir `/api/v1/agents/tasks/*` dan `/api/resilience/model-cooldowns` **kini memerlukan pengesahan pengurusan** (komit `588a0333`). Klien yang sebelum ini menghantar kunci API biasa tanpa skop `manage` akan menerima `403`. Migrasi: sama ada berikan skop `manage` kepada kunci dalam papan pemuka API Keys, atau gunakan sesi papan pemuka yang telah dilog masuk.
-
 ## Perubahan Tingkah Laku — v3.8.2
 
 `/api/mcp/*` (pelayan MCP jauh) masih LOCAL_ONLY secara lalai tetapi kini menerima permintaan bukan gelung balik apabila pengepala `Authorization: Bearer <api-key>` membawa skop `manage`. Pengecualian ini dikawal secara eksplisit bagi setiap laluan melalui `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` dalam `src/server/authz/routeGuard.ts`; awalan LOCAL_ONLY yang setara, `/api/cli-tools/runtime/*`, sengaja TIDAK boleh dipintas kerana ia boleh mewujudkan subproses sewenang-wenangnya. Permintaan tanpa nama ke `/api/mcp/*` daripada bukan gelung balik terus mengembalikan `403 LOCAL_ONLY` — lalai bagi mana-mana laluan LOCAL_ONLY baharu kekal sebagai gelung balik ketat. Lihat [Tahap Pengawal Laluan](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

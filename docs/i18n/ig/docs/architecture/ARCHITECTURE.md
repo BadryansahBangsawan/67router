@@ -128,7 +128,6 @@ Peeji ndị bụ isi dị n’okpuru `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — njikwa quota/rate
 - `/dashboard/cli-tools` — ntinye CLI, nchọpụta runtime, na imepụta nhazi
 - `/dashboard/agents` — agent ACP achọpụtara + ndebanye agent ahaziri iche
-- `/dashboard/cloud-agents` — ọrụ agent ndị a na-akwado na cloud (Codex Cloud, Devin, Jules) na usoro ndụ ọrụ
 - `/dashboard/skills` — ndekọ skill A2A, mmezu sandbox, na katalọgụ skill arụnyere n’ime ya
 - `/dashboard/memory` — nyocha na iweghachite ebe nchekwa mkparịta ụka na-adịgide adịgide
 - `/dashboard/webhooks` — ndebanye webhook na-apụ apụ, mgbanwe secret, na ọnụ ọgụgụ nnwale ọzọ
@@ -382,23 +381,6 @@ Ike ndị bụ isi:
 
 Maka nkọwa algọridim zuru ezu (usoro mgbako ihe, nhazi ibu), lee
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Ndị Nnọchi Anya Cloud
-
-Cloud Agents na-etinye nyiwe code-agent ndị ọzọ na-akwado (Codex Cloud, Devin,
-Jules) n'azụ okirikiri ndụ ọrụ edo edo nke DB na-akwado. Endpoint niile maka imepụta/nyochaa
-ọrụ chọrọ nkwenye njikwa.
-
-- Mgbọrọgwụ modul: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, tinyere subdirectory nke agent ọ bụla n'okpuru `agents/`)
-- Mmejuputa nke agent ọ bụla: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoint ọha: `/api/v1/agents/tasks/*` (depụta/mepụta/nweta/kagbuo)
-- Endpoint njikwa: `/api/cloud/*` (ịkwadebe, ọnọdụ, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Nchekwa: tebụl `cloud_agent_tasks`
-
-Maka nkọwa gbasara ịkwadebe agent ọ bụla na OAuth, lee
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Ihe Nchekwa
 

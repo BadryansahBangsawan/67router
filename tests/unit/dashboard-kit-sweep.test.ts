@@ -129,9 +129,9 @@ test("hard-coded palette hues and dark: variants only where the exception is doc
   const HUE_ALLOWED: Record<string, number> = {
     "src/app/(dashboard)/dashboard/providers/components/CategoryDot.tsx": 1,
     "src/app/(dashboard)/dashboard/providers/components/NoAuthProvidersSection.tsx": 1,
-    "src/app/(dashboard)/dashboard/providers/components/ProviderCard.tsx": 11,
-    "src/app/(dashboard)/dashboard/providers/components/ProviderSummaryCard.tsx": 13,
-    "src/app/(dashboard)/dashboard/providers/page.tsx": 17,
+    "src/app/(dashboard)/dashboard/providers/components/ProviderCard.tsx": 10,
+    "src/app/(dashboard)/dashboard/providers/components/ProviderSummaryCard.tsx": 12,
+    "src/app/(dashboard)/dashboard/providers/page.tsx": 16,
   };
   assert.deepEqual(countBy(DASHBOARD, HUE), HUE_ALLOWED);
 

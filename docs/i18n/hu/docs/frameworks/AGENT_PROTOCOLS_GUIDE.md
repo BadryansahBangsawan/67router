@@ -4,7 +4,6 @@
 
 ---
 
-> **Forrás:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Legutóbb frissítve:** 2026-06-28 — v3.8.40
 
 Az OmniRoute három különböző, ügynökökkel kapcsolatos felületet biztosít. Első pillantásra hasonlónak tűnnek, de eltérő problémákat oldanak meg. Ezen az oldalon kiválaszthatja a megfelelőt.
@@ -20,20 +19,6 @@ Az OmniRoute három különböző, ügynökökkel kapcsolatos felületet biztos�
 A három egymástól független — bármelyik részhalmazuk használható.
 
 ## Döntési fa
-
-```
-Szüksége van egy felhőszolgáltatásra, amely ezen a gépen kívül végzi el a munkát (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ IGEN → Felhőügynökök (POST /api/v1/agents/tasks)
-└─ NEM → Folytatás
-    │
-    Van olyan partnerügynöke, amely használja az A2A protokollt, és együtt szeretne működni?
-    ├─ IGEN → A2A (POST /a2a)
-    └─ NEM → Folytatás
-        │
-        Szüksége van a helyileg telepített CLI kódolóügynökök listázására vagy konfigurálására?
-        ├─ IGEN → ACP (GET /api/acp/agents)
-        └─ NEM → Használja a sima /v1/chat/completions végpontot
-```
 
 ## 1. A2A — ügynökök között
 
@@ -125,61 +110,6 @@ A POST törzsének szerkezete (`customAgentBodySchema` itt: `src/app/api/acp/age
   tartalékmegoldásként bekötve. Szokásos interaktív használathoz indítsa el saját maga a konfigurált CLI-t, vagy
   használja az `omniroute run` parancsot.
 
-## 3. Felhőalapú ügynökök
-
-**OmniRoute-végpontok:** `/api/v1/agents/tasks/*` (életciklus) + `/api/cloud/*` (háttér-infrastruktúra)
-**Forrás:** `src/lib/cloudAgent/`
-
-### Mi ez?
-
-Egységes felület külső szolgáltatók felhőalapú programozási ügynökeihez. Ön elküld egy promptot és egy adattár-URL-t, az OmniRoute továbbítja ezeket a megfelelő felhőalapú ügynöknek, lekérdezi az állapotot, majd visszaadja az eredményeket.
-
-### Támogatott ügynökök (4, mind megerősítve az `src/lib/cloudAgent/agents/` könyvtárban)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Életciklus
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() ügynökosztályonként
-  → a külső szolgáltatás megkezdi a munkát
-  → létrejön egy feladatsor az adatbázisban (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → késleltetett állapotszinkronizálás a szolgáltatótól
-  → visszaadja az aktuális állapotot + tervet + tevékenységnaplót
-  ↓
-POST /api/v1/agents/tasks/[id]   (művelet: "approve" | "message" | "cancel")
-  → továbbítja a szolgáltatónak (vagy helyileg megszakítottként jelöli meg)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → helyi megszakítás
-```
-
-### Hitelesítés
-
-⚠️ **Minden `/api/v1/agents/tasks/*` végpont kezelői hitelesítést igényel** (`588a0333` commit). A kizárólag Bearer-hitelesítést használó hívók a v3.8.0 óta 401-es választ kapnak.
-
-### Részletes ismertető
-
-A `CloudAgentBase` szerződésről, az egyes ügynökök sajátosságairól, a séma részleteiről és a hitelesítő adatok kezelésére szolgáló végpontokról lásd: [CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
-## Összehasonlítás: A2A kontra Cloud Agents
-
-Mindkettő támogat „hosszú ideig futó feladatokat”, de különböző rétegekben:
-
-| Szempont                    | A2A                                                                                                       | Cloud Agents                                            |
-| --------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| Szabvány                    | Nyílt A2A v0.3                                                                                            | OmniRoute-specifikus                                    |
-| A számítás futtatási helye  | Az OmniRoute-on belül (a konfigurált kombinációkat használja)                                             | Külső (Codex / Devin / Jules szerverek)                 |
-| Feladat időtartama          | Alapértelmezett TTL: 5 perc (a `TaskManager` osztályban konfigurálható)                                   | Percektől órákig                                        |
-| Tároló tartalmának ismerete | Nem (csak promptokat továbbít)                                                                            | Igen (tároló URL-je + ág)                               |
-| Felhasználási eset          | Ügynökök közötti együttműködés, intelligens útválasztás szolgáltatásként                                  | „Valósítsd meg az X funkciót az Y tárolóban” delegálása |
-| Hitelesítés                 | Opcionális `OMNIROUTE_API_KEY` az `/a2a` számára; felügyeleti hitelesítés az `/api/a2a/*` REST-segédekhez | Mindig felügyeleti hitelesítés                          |
-
 ## Integrációs példák
 
 ### Az OmniRoute A2A-képességeinek felderítése
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cloud Agent-feladat beküldése
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Valósítsd meg az X funkciót az Y tárolóban",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Felhőfeladat állapotának lekérdezése
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Mikor melyiket érdemes használni?
 
 - **Chatbot-/copilot-frontend** → `/v1/chat/completions` (OpenAI-kompatibilis — nem ügynökprotokoll)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Lásd még
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Az A2A részletes ismertetése
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — A felhőügynökök részletes ismertetése
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Külső CLI-integrációk (ACP-t használnak)
 - [SKILLS.md](./SKILLS.md) — Képességkeretrendszer (eltér az A2A-képességektől — helyi végrehajtási környezet)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — végpontreferencia

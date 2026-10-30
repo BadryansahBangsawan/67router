@@ -698,54 +698,6 @@
       "yes": "رد کردن درخواست تأیید"
     }
   },
-  "cloud": {
-    "description": "مدیریت وظایف عامل هوش مصنوعی ابری (codex, devin, jules)",
-    "agents": {
-      "description": "فهرست عاملهای ابری موجود"
-    },
-    "agent": {
-      "description": "مدیریت وظایف عامل ابری {agent}",
-      "auth": {
-        "description": "اعطای مجوز به {agent} از طریق OAuth"
-      }
-    },
-    "task": {
-      "description": "مدیریت وظایف عامل ابری",
-      "create": {
-        "description": "ایجاد وظیفه جدید برای عامل",
-        "title": "عنوان وظیفه (پیشفرض: ۸۰ نویسه نخست درخواست)",
-        "prompt": "متن درخواست وظیفه",
-        "prompt_file": "خواندن درخواست از فایل",
-        "repo": "URL مخزن برای همسانهسازی جهت انجام وظیفه",
-        "branch": "نام شاخه مورد استفاده",
-        "metadata": "شیء فراداده JSON"
-      },
-      "list": {
-        "description": "فهرست وظایف عامل",
-        "status": "فیلتر بر اساس وضعیت (running|completed|failed|cancelled)",
-        "limit": "حداکثر نتایج (پیشفرض: 50)"
-      },
-      "get": {
-        "description": "دریافت جزئیات وظیفه بر اساس شناسه"
-      },
-      "status": {
-        "description": "چاپ وضعیت وظیفه (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "لغو وظیفه در حال اجرا",
-        "yes": "رد کردن درخواست تأیید"
-      },
-      "approve": {
-        "description": "تأیید برنامه عامل برای شروع اجرا"
-      },
-      "message": {
-        "description": "ارسال پیام به یک وظیفه در حال اجرا"
-      }
-    },
-    "sources": {
-      "description": "فهرست فایلهای منبع تولیدشده توسط یک وظیفه"
-    }
-  },
   "program": {
     "description": "OmniRoute — روتر هوشمند هوش مصنوعی با fallback خودکار",
     "version": "نمایش نسخه و خروج",

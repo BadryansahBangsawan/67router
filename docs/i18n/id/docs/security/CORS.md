@@ -69,20 +69,6 @@ memungkinkan **preflight CORS lolos** pada rute manajemen — yang tetap memerlu
 yang tidak dapat diberikan oleh halaman lintas origin. Ini **bukan** vektor pembajakan sesi atau
 pencurian kredensial pada jalur CORS bersama.
 
-### Satu pengecualian nyata — `/api/v1/agents/`
-
-Rute Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) menetapkan
-header CORS **miliknya sendiri**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) dan **memang** mengirimkan
-`Access-Control-Allow-Origin: <origin>|*` bersama dengan
-`Access-Control-Allow-Credentials: true`. Ini adalah satu-satunya permukaan tempat
-pengembalian origin dan kredensial hadir bersamaan, dan hal ini **tidak bergantung pada
-`CORS_ALLOW_ALL`**. Rute-rute ini diautentikasi untuk manajemen
-(`requireManagementAuth`); operator yang mengekspos dasbor di luar host perlu
-mengetahui bahwa ini adalah satu-satunya tempat pembacaan lintas origin dengan kredensial diizinkan oleh
-header respons. Pembatasannya ke daftar izin eksplisit dilacak
-secara terpisah dari panduan CORS ini.
-
 ## Daftar periksa produksi
 
 - **Jangan pernah menetapkan `CORS_ALLOW_ALL=true` dalam produksi.** Biarkan tidak ditetapkan.
@@ -161,7 +147,6 @@ tab Security), bukan di proxy.
 | Status runtime untuk dasbor                      | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Banner peringatan dasbor                         | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Kolom CORS Allowed Origins                       | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS per rute Cloud-Agent (pengecualian)         | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Lihat juga
 

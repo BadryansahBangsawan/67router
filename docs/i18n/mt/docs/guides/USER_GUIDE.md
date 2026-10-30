@@ -24,7 +24,6 @@ Gwida kompluta għall-konfigurazzjoni tal-fornituri, il-ħolqien ta’ kombinazz
 - [Sistema ta' Ħiliet (Skills)](#-skills-system)
 - [Sistema ta' Memorja](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Aġenti Cloud](#-cloud-agents)
 - [Ġestjoni Programmattika](#-programmatic-management)
 - [CLI Intern](#-internal-cli)
 - [Applikazzjoni Desktop (Electron)](#-desktop-application-electron)
@@ -1275,18 +1274,6 @@ Abbona għall-avvenimenti tal-OmniRoute għal monitoraġġ u awtomazzjoni f'ħin
 - Storji: 3 attentat b'retroċessjoniment esponenzjali, imbagħad il-queue tal-mewt
 
 Is-sema sħiħa f' [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Aġenti tal-Cloud
-
-OmniRoute jintegra ma' aġenti tal-kodiċi tal-cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) sabiex tista' tiddispatchja xogħlijiet li jdumu fit-tul minn l-istess dashboard li tiġġestixxi r-rotta lokali tiegħek.
-
-- Oħloq xogħlijiet f' **Dashboard → Aġenti tal-Cloud** jew permezz ta' `POST /api/v1/agents/tasks`
-- Iġbor l-istatus, il-logs, u l-artifatti għal kull xogħol
-- Ġib ċavetta tal-API tiegħek stess għal kull fornitur — il-kredenzjali qatt ma ħarġu minn l-istanza tal-OmniRoute
-
-Referenza sħiħa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

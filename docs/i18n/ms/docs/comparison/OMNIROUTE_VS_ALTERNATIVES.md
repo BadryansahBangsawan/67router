@@ -24,7 +24,6 @@ Perbandingan ciri objektif berbanding penghala AI sumber terbuka popular.
 | **Protokol A2A**                                      |                ✅ 6 kemahiran                 |          ❌          |        ❌         |     ❌      |
 | **Memori (FTS5 + vektor)**                            |                      ✅                       |          ❌          |        ❌         |     ❌      |
 | **Guardrails (PII, suntikan, penglihatan)**           |                      ✅                       |        separa        |        ❌         | ✅ berbayar |
-| **Integrasi ejen awan**                               |          Codex, Cursor, Devin, Jules          |          ❌          |        ❌         |     ❌      |
 | **Pemutus litar setiap penyedia**                     |         ✅ 3-keadaan, pemulihan lazy          |         asas         |        ❌         |     ✅      |
 | **Stealth cap jari TLS (JA3/JA4)**                    |                  ✅ wreq-js                   |          ❌          |        ❌         |     ❌      |
 | **Rangka kerja eval**                                 |               ✅ terbina dalam                |          ❌          |        ❌         | ⚠ berbayar  |

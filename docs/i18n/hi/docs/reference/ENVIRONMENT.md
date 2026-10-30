@@ -1350,7 +1350,6 @@ Anthropic-संगत प्रोवाइडर जोड़ें।
 | वेरिएबल | डिफ़ॉल्ट | स्रोत फ़ाइल | विवरण |
 | --------------------- | --------- | --------------------------------------- | `owner/repo` प्रारूप में रिपॉजिटरी। |
 | `GITHUB_ISSUES_REPO` | _(अनसेट)_ | `src/app/api/v1/issues/report/route.ts` | `issues:write` स्कोप के साथ GitHub पर्सनल एक्सेस टोकन। |
-| `GITHUB_ISSUES_TOKEN` | _(अनसेट)_ | `src/app/api/v1/issues/report/route.ts` | `GITHUB_ISSUES_TOKEN` के लिए फ़ॉलबैक के रूप में उपयोग किया जाने वाला और `src/lib/cloudAgent/*` में क्लाउड एजेंट हेल्पर द्वारा उपयोग किया जाने वाला जेनेरिक GitHub एक्सेस टोकन। |
 | `GITHUB_TOKEN` | _(अनसेट)_ | issue triage / cloud agent helpers |
 
 ---

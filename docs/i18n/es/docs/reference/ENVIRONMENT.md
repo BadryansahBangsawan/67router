@@ -1380,11 +1380,11 @@ modificarlas requiere editar el código, no una variable de entorno:
 
 Permite a los usuarios informar de problemas directamente desde el panel de control.
 
-| Variable              | Valor predeterminado | Archivo de origen                                              | Descripción                                                                                                                                                |
-| --------------------- | -------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(sin definir)_      | `src/app/api/v1/issues/report/route.ts`                        | Repositorio con el formato `owner/repo`.                                                                                                                   |
-| `GITHUB_ISSUES_TOKEN` | _(sin definir)_      | `src/app/api/v1/issues/report/route.ts`                        | Token de acceso personal de GitHub con el ámbito `issues:write`.                                                                                           |
-| `GITHUB_TOKEN`        | _(sin definir)_      | clasificación de incidencias / asistentes de agente en la nube | Token de acceso genérico de GitHub utilizado como alternativa a `GITHUB_ISSUES_TOKEN` y por los asistentes de agente en la nube de `src/lib/cloudAgent/*`. |
+| Variable              | Valor predeterminado | Archivo de origen                                              | Descripción                                                                                                                                                             |
+| --------------------- | -------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(sin definir)_      | `src/app/api/v1/issues/report/route.ts`                        | Repositorio con el formato `owner/repo`.                                                                                                                                |
+| `GITHUB_ISSUES_TOKEN` | _(sin definir)_      | `src/app/api/v1/issues/report/route.ts`                        | Token de acceso personal de GitHub con el ámbito `issues:write`.                                                                                                        |
+| `GITHUB_TOKEN`        | _(sin definir)_      | clasificación de incidencias / asistentes de agente en la nube | Token de acceso genérico de GitHub utilizado como alternativa a `GITHUB_ISSUES_TOKEN` y por los asistentes de agente en la nube de `src/lib/skills/githubCollector.ts`. |
 
 ---
 

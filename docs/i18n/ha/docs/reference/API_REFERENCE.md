@@ -1758,31 +1758,6 @@ Tsarin gudanar da maɓalli ta atomatik yana amfani da su don bayarwa da sauya ma
 
 ---
 
-## Ka'idar Wakilai
-
-Ayyukan wakilan girgije (Claude Code, Codex Cloud, OpenHands, da sauransu) waɗanda ake aiwatarwa daga nesa a madadin masu amfani da OmniRoute.
-
-| Hanya  | Tafarki                       | Bayani                                                                                                                                                   |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Jera ayyuka — `?provider=`, `?status=`, `?limit=` na zaɓi ne (1–500, tsoho 50)                                                                           |
-| POST   | `/api/v1/agents/tasks`        | Ƙirƙiri aiki — ana inganta jiki ta `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Yana dawo da `201` tare da kunshin aikin |
-| DELETE | `/api/v1/agents/tasks?id=...` | Share aiki                                                                                                                                               |
-| GET    | `/api/v1/agents/tasks/[id]`   | Karanta aiki — yana sabunta matsayi kai tsaye daga wakilin girgije na sama idan an saita `external_id`                                                   |
-| POST   | `/api/v1/agents/tasks/[id]`   | Aikin da aka bambanta: `{action: "approve"}`, `{action: "message", message}`, ko `{action: "cancel"}`                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Share takamaiman aiki ta id                                                                                                                              |
-
-> **Tabbatarwa:** ana buƙatar tabbatarwar gudanarwa a kowace hanya (`requireCloudAgentManagementAuth`). Kafin v3.8.0 waɗannan ba su buƙatar tabbatarwa ba — duba commit `588a0333` don sauyin da ya karya dacewa.
-
-```bash
-# Ƙirƙiri aikin girgije na Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Wakilan Tsakani na Gudanarwa
 
 Wakilan tsakani na HTTP(S)/SOCKS masu fita waɗanda za a iya sanyawa ga masu samarwa, asusu, ko a matakin duniya.
@@ -2288,5 +2263,3 @@ maɓallin API mai izinin gudanarwa) da yadda suka bambanta da maɓallan inferenc
 - Ana iya kunna ko kashe `requireLogin` ta hanyar `/api/settings/require-login`
 - Hanyoyin `/v1/*` za su iya buƙatar maɓallin API na Bearer idan `REQUIRE_API_KEY=true`
 - “token na gudanarwa” / “maɓallin API mai izinin gudanarwa” a wannan bayanin yana nufin ɗaya daga cikin nau’ukan da ke cikin wancan jagorar — ba wani ƙarin nau’in sirri da ba a bayyana ba
-
-> **Canji mai karya dacewa (v3.8.0)** — `/api/v1/agents/tasks/*` da wuraren ƙarshen gudanar da cooldown yanzu suna buƙatar **tantancewar gudanarwa** (kukin dashboard na `auth_token` ko maɓallin API mai izinin gudanarwa). Abokan hulɗa da a baya suke kiran waɗannan hanyoyin ba tare da tantancewa ba za su karɓi `401 Unauthorized`. Duba commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

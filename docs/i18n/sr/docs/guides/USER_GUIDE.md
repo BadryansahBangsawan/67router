@@ -24,7 +24,6 @@
 - [Sistem vештina](#-skills-system)
 - [Sistem memorije](#-memory-system)
 - [Webhook-ovi](#-webhooks)
-- [Cloud agenti](#-cloud-agents)
 - [Programsko upravljanje](#-programmatic-management)
 - [Interni CLI](#-internal-cli)
 - [Desktop aplikacija (Electron)](#-desktop-application-electron)
@@ -1275,18 +1274,6 @@ Pretplatite se na OmniRoute događaje za praćenje u realnom vremenu i automatiz
 - Ponovni pokušaji: 3 pokušaja sa eksponencijalnim odlaganjem, zatim red za neisporučene poruke (dead-letter queue)
 
 Kompletna šema u [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloud Agents
-
-OmniRoute se integriše sa cloud agentima za kodiranje (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) tako da možete slati dugotrajne zadatke iz istog dashboarda koji upravlja vašim lokalnim rutiranjem.
-
-- Kreirajte zadatke u **Dashboard → Cloud Agents** ili preko `POST /api/v1/agents/tasks`
-- Praćenje statusa, logova i artefakata po zadatku
-- Sopstveni API ključ po provajderu — kredencijali nikada ne napuštaju OmniRoute instancu
-
-Kompletna referenca: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

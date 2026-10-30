@@ -55,15 +55,6 @@ Shunday qilib, `CORS_ALLOW_ALL=true` ning **qoldiq** taʼsiri quyidagilar bilan 
 allaqachon autentifikatsiya talab qilmaydigan maʼlumotlarni hisob maʼlumotlarisiz boshqa origindan **oʻqish** va (b)
 boshqaruv marshrutlarida CORS **preflight tekshiruvining oʻtishiga** ruxsat berish — ammo ular baribir boshqa origin sahifasi taqdim eta olmaydigan autentifikatsiyani talab qiladi. Umumiy CORS yoʻlida bu seansni oʻgʻirlash yoki hisob maʼlumotlarini oʻgʻirlash vektori **emas**.
 
-### Bitta haqiqiy istisno — `/api/v1/agents/`
-
-Cloud-Agent marshrutlari (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) oʻzlarining **alohida** CORS sarlavhalarini oʻrnatadi
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) va
-`Access-Control-Allow-Origin: <origin>|*` bilan birga
-`Access-Control-Allow-Credentials: true` sarlavhasini ham **chiqaradi**. Bu originni qaytarish va hisob maʼlumotlari birga mavjud boʻlgan yagona yuza boʻlib,
-`CORS_ALLOW_ALL` dan **mustaqil**. Ushbu marshrutlar boshqaruv autentifikatsiyasidan oʻtkaziladi
-(`requireManagementAuth`); boshqaruv panelini hostdan tashqariga ochadigan operatorlar aynan shu joyda javob sarlavhalari boshqa origindan hisob maʼlumotlari bilan yuborilgan javobni oʻqishga ruxsat berishini bilishlari kerak. Uni aniq ruxsat roʻyxati bilan cheklash ushbu CORS koʻrsatmalaridan alohida ravishda kuzatib boriladi.
-
 ## Ishlab chiqarish muhiti uchun tekshiruv roʻyxati
 
 - **Ishlab chiqarish muhitida hech qachon `CORS_ALLOW_ALL=true` qilib belgilamang.** Uni belgilanmagan holda qoldiring.
@@ -139,15 +130,14 @@ Security ichki oynasida) belgilang.
 
 ## Manba fayllari
 
-| Vazifa                                                      | Fayl                                                                 |
-| ----------------------------------------------------------- | -------------------------------------------------------------------- |
-| Ruxsat etilgan roʻyxatni aniqlash + `getCorsStatus()`       | `src/server/cors/origins.ts`                                         |
-| Oraliq dastur qoʻllanilishi (yagona haqiqat manbai)         | `src/server/authz/pipeline.ts`                                       |
-| Settings → ish vaqtidagi manbani kiritish                   | `src/lib/config/runtimeSettings.ts`                                  |
-| Boshqaruv paneli uchun ish vaqti holati                     | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Boshqaruv panelidagi ogohlantirish banneri                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| CORS Allowed Origins maydoni                                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Har bir marshrut uchun Cloud-Agent CORS sozlamasi (istisno) | `src/lib/cloudAgent/api.ts`                                          |
+| Vazifa                                                | Fayl                                                                 |
+| ----------------------------------------------------- | -------------------------------------------------------------------- |
+| Ruxsat etilgan roʻyxatni aniqlash + `getCorsStatus()` | `src/server/cors/origins.ts`                                         |
+| Oraliq dastur qoʻllanilishi (yagona haqiqat manbai)   | `src/server/authz/pipeline.ts`                                       |
+| Settings → ish vaqtidagi manbani kiritish             | `src/lib/config/runtimeSettings.ts`                                  |
+| Boshqaruv paneli uchun ish vaqti holati               | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Boshqaruv panelidagi ogohlantirish banneri            | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| CORS Allowed Origins maydoni                          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Shuningdek qarang
 

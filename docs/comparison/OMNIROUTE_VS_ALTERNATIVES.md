@@ -26,7 +26,6 @@ Objective feature comparison vs popular open-source AI routers.
 | **A2A protocol**                                   |                 ✅ 6 skills                 |       ❌       |        ❌         |     ❌      |
 | **Memory (FTS5 + vector)**                         |                     ✅                      |       ❌       |        ❌         |     ❌      |
 | **Guardrails (PII, injection, vision)**            |                     ✅                      |    partial     |        ❌         |   ✅ paid   |
-| **Cloud agent integrations**                       |         Codex, Cursor, Devin, Jules         |       ❌       |        ❌         |     ❌      |
 | **Circuit breaker per provider**                   |          ✅ 3-state, lazy recovery          |     basic      |        ❌         |     ✅      |
 | **TLS fingerprint stealth (JA3/JA4)**              |                 ✅ wreq-js                  |       ❌       |        ❌         |     ❌      |
 | **Eval framework**                                 |                 ✅ built-in                 |       ❌       |        ❌         |   ⚠ paid    |

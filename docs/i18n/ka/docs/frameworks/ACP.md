@@ -132,4 +132,3 @@ SDK-ის დამუშავებამდე ნატიური სა�
 - [CLI გაშვების კონტრაქტები](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ხელსაწყოები](../reference/CLI-TOOLS.md)
 - [A2A სერვერი](./A2A-SERVER.md)
-- [ღრუბლოვანი აგენტები](./CLOUD_AGENT.md)

@@ -1379,11 +1379,11 @@ việc thay đổi chúng đòi hỏi chỉnh sửa mã nguồn, không phải b
 
 Cho phép người dùng báo cáo sự cố trực tiếp từ Dashboard.
 
-| Biến                  | Mặc định           | Tệp nguồn                                 | Mô tả                                                                                                                                                                   |
-| --------------------- | ------------------ | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(chưa thiết lập)_ | `src/app/api/v1/issues/report/route.ts`   | Kho lưu trữ theo định dạng `owner/repo`.                                                                                                                                |
-| `GITHUB_ISSUES_TOKEN` | _(chưa thiết lập)_ | `src/app/api/v1/issues/report/route.ts`   | GitHub Personal Access Token có phạm vi `issues:write`.                                                                                                                 |
-| `GITHUB_TOKEN`        | _(chưa thiết lập)_ | trợ giúp phân loại sự cố / tác tử đám mây | Token truy cập GitHub chung được dùng làm phương án dự phòng cho `GITHUB_ISSUES_TOKEN` và được các tiện ích hỗ trợ tác tử đám mây trong `src/lib/cloudAgent/*` sử dụng. |
+| Biến                  | Mặc định           | Tệp nguồn                                 | Mô tả                                                                                                                                                                                |
+| --------------------- | ------------------ | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `GITHUB_ISSUES_REPO`  | _(chưa thiết lập)_ | `src/app/api/v1/issues/report/route.ts`   | Kho lưu trữ theo định dạng `owner/repo`.                                                                                                                                             |
+| `GITHUB_ISSUES_TOKEN` | _(chưa thiết lập)_ | `src/app/api/v1/issues/report/route.ts`   | GitHub Personal Access Token có phạm vi `issues:write`.                                                                                                                              |
+| `GITHUB_TOKEN`        | _(chưa thiết lập)_ | trợ giúp phân loại sự cố / tác tử đám mây | Token truy cập GitHub chung được dùng làm phương án dự phòng cho `GITHUB_ISSUES_TOKEN` và được các tiện ích hỗ trợ tác tử đám mây trong `src/lib/skills/githubCollector.ts` sử dụng. |
 
 ---
 

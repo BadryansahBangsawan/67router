@@ -4,7 +4,6 @@
 
 ---
 
-> **Sursă:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
 OmniRoute expune trei interfețe diferite legate de agenți. La prima vedere, acestea par similare, dar rezolvă probleme diferite. Folosiți această pagină pentru a o alege pe cea potrivită.
@@ -20,20 +19,6 @@ OmniRoute expune trei interfețe diferite legate de agenți. La prima vedere, ac
 Cele trei sunt independente — puteți alege orice combinație.
 
 ## Arbore decizional
-
-```
-Aveți nevoie ca un serviciu cloud să efectueze activități în afara acestui dispozitiv (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ DA → Agenți cloud (POST /api/v1/agents/tasks)
-└─ NU → Continuați
-    │
-    Aveți un agent partener care utilizează A2A și dorește să colaboreze?
-    ├─ DA → A2A (POST /a2a)
-    └─ NU → Continuați
-        │
-        Trebuie să listați / configurați agenții CLI pentru programare instalați local?
-        ├─ DA → ACP (GET /api/acp/agents)
-        └─ NU → Utilizați direct /v1/chat/completions
-```
 
 ## 1. A2A — Agent-la-Agent
 
@@ -125,61 +110,6 @@ Structura corpului pentru POST (`customAgentBodySchema` în `src/app/api/acp/age
   pentru furnizori. Pentru utilizarea interactivă obișnuită, lansați personal instrumentul CLI configurat sau
   utilizați `omniroute run`.
 
-## 3. Agenți cloud
-
-**Endpointuri OmniRoute:** `/api/v1/agents/tasks/*` (ciclu de viață) + `/api/cloud/*` (infrastructură)
-**Sursă:** `src/lib/cloudAgent/`
-
-### Ce este
-
-O interfață uniformă pentru agenții de programare cloud de la terți. Trimiteți un prompt și adresa URL a unui depozit, iar OmniRoute deleagă sarcina agentului cloud corespunzător, verifică periodic starea și returnează rezultatele.
-
-### Agenți acceptați (4, toți confirmați în `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Ciclul de viață
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() pentru fiecare clasă de agent
-  → serviciul extern începe lucrul
-  → este creat un rând pentru sarcină în baza de date (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → sincronizare întârziată a stării de la furnizor
-  → returnează starea curentă + planul + jurnalul de activitate
-  ↓
-POST /api/v1/agents/tasks/[id]   (acțiune: "approve" | "message" | "cancel")
-  → transmite către furnizor (sau marchează local drept anulată)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → anulare locală
-```
-
-### Autentificare
-
-⚠️ **Toate endpointurile `/api/v1/agents/tasks/*` necesită autentificare de administrare** (commit `588a0333`). Apelanții care utilizează numai un token Bearer primesc 401 începând cu v3.8.0.
-
-### Analiză detaliată
-
-Consultați [CLOUD_AGENT.md](./CLOUD_AGENT.md) pentru contractul `CloudAgentBase`, detaliile specifice fiecărui agent, detaliile schemei și endpointurile infrastructurii pentru acreditări.
-
-## Comparație: A2A vs Cloud Agents
-
-Ambele au „sarcini de lungă durată”, dar la niveluri diferite:
-
-| Aspect                  | A2A                                                                                                                         | Cloud Agents                                                            |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Standard                | Open A2A v0.3                                                                                                               | Specific OmniRoute                                                      |
-| Unde rulează procesarea | În OmniRoute (utilizează combinațiile configurate)                                                                          | Extern (servere Codex / Devin / Jules)                                  |
-| Durata sarcinii         | TTL implicit de 5 min. (configurabil în `TaskManager`)                                                                      | De la câteva minute la câteva ore                                       |
-| Conștient de repository | Nu (transmite doar prompturi)                                                                                               | Da (URL-ul repository-ului + ramura)                                    |
-| Caz de utilizare        | Colaborare între agenți, rutare inteligentă ca serviciu                                                                     | Delegarea cererii „implementează funcționalitatea X în repository-ul Y” |
-| Autentificare           | `OMNIROUTE_API_KEY` opțională pentru `/a2a`; autentificare de administrare pentru endpointurile REST auxiliare `/api/a2a/*` | Întotdeauna autentificare de administrare                               |
-
 ## Exemple de integrare
 
 ### Descoperirea capabilităților A2A ale OmniRoute
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Trimiterea unei sarcini către un Cloud Agent
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Verificarea periodică a stării sarcinii din cloud
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Ce să utilizați și când
 
 - **Interfață frontend pentru chatbot / copilot** → `/v1/chat/completions` (compatibil OpenAI — nu este un protocol pentru agenți)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Consultați și
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — Prezentare detaliată a A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Prezentare detaliată a agenților cloud
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrări CLI externe (utilizează ACP)
 - [SKILLS.md](./SKILLS.md) — Cadru pentru abilități (diferit de abilitățile A2A — mediu izolat pentru execuție locală)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referința endpointurilor

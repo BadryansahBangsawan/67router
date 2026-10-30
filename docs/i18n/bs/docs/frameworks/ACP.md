@@ -120,4 +120,3 @@ test u ciljnom okruženju.
 - [Ugovori za pokretanje CLI-ja](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI alati](../reference/CLI-TOOLS.md)
 - [A2A server](./A2A-SERVER.md)
-- [Agenti u oblaku](./CLOUD_AGENT.md)

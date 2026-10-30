@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 주기에는 설정이 필요 없는 자동 라우팅, 새로�
 - 🤝 **GitLab Duo OAuth 제공자** — GitLab 자격 증명으로 로그인
 - 🧠 **Reasoning Replay Cache** — 추론 추적을 위한 인메모리 + SQLite 하이브리드 영속성
 
-📚 **관련 문서:** [Skills 프레임워크](../frameworks/SKILLS.md) · [메모리 시스템](../frameworks/MEMORY.md) · [클라우드 에이전트](../frameworks/CLOUD_AGENT.md) · [웹훅](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 제공업체

@@ -1362,11 +1362,11 @@ de ambiente:
 
 Permita que os utilizadores comuniquem problemas diretamente a partir do Dashboard.
 
-| Variável              | Predefinição     | Ficheiro de origem                                 | Descrição                                                                                                                                              |
-| --------------------- | ---------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(não definido)_ | `src/app/api/v1/issues/report/route.ts`            | Repositório no formato `owner/repo`.                                                                                                                   |
-| `GITHUB_ISSUES_TOKEN` | _(não definido)_ | `src/app/api/v1/issues/report/route.ts`            | Token de acesso pessoal do GitHub com o âmbito `issues:write`.                                                                                         |
-| `GITHUB_TOKEN`        | _(não definido)_ | triagem de problemas/auxiliares do agente na cloud | Token genérico de acesso ao GitHub utilizado como alternativa a `GITHUB_ISSUES_TOKEN` e pelos auxiliares do agente na cloud em `src/lib/cloudAgent/*`. |
+| Variável              | Predefinição     | Ficheiro de origem                                 | Descrição                                                                                                                                                           |
+| --------------------- | ---------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(não definido)_ | `src/app/api/v1/issues/report/route.ts`            | Repositório no formato `owner/repo`.                                                                                                                                |
+| `GITHUB_ISSUES_TOKEN` | _(não definido)_ | `src/app/api/v1/issues/report/route.ts`            | Token de acesso pessoal do GitHub com o âmbito `issues:write`.                                                                                                      |
+| `GITHUB_TOKEN`        | _(não definido)_ | triagem de problemas/auxiliares do agente na cloud | Token genérico de acesso ao GitHub utilizado como alternativa a `GITHUB_ISSUES_TOKEN` e pelos auxiliares do agente na cloud em `src/lib/skills/githubCollector.ts`. |
 
 ---
 

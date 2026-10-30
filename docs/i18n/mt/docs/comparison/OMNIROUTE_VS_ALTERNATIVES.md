@@ -24,7 +24,6 @@ Paragun oġġettiv tal-karatteristiċi ma' routers tal-AI open-source popolari.
 | **Protokoll A2A**                                       |                    ✅ 6 ħiliet                    |          ❌          |        ❌         |      ❌      |
 | **Memorja (FTS5 + vettur)**                             |                        ✅                         |          ❌          |        ❌         |      ❌      |
 | **Guardrails (PII, injezzjoni, viżjoni)**               |                        ✅                         |       parzjali       |        ❌         |  ✅ bi ħlas  |
-| **Integrazzjonijiet ma' aġenti fil-cloud**              |            Codex, Cursor, Devin, Jules            |          ❌          |        ❌         |      ❌      |
 | **Circuit breaker għal kull fornitur**                  |              ✅ 3 stati, rkupru lazy              |        bażiku        |        ❌         |      ✅      |
 | **Stealth tal-fingerprint TLS (JA3/JA4)**               |                    ✅ wreq-js                     |          ❌          |        ❌         |      ❌      |
 | **Framework ta' evalwazzjoni**                          |                   ✅ inkorporat                   |          ❌          |        ❌         |  ⚠ bi ħlas   |

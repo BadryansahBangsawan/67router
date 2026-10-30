@@ -4,7 +4,6 @@
 
 ---
 
-> **Avots:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Pēdējo reizi atjaunināts:** 2026-06-28 — v3.8.40
 
 OmniRoute nodrošina trīs dažādas ar aģentiem saistītas saskarnes. Sākotnēji tās šķiet līdzīgas, taču risina atšķirīgas problēmas. Izmantojiet šo lapu, lai izvēlētos piemērotāko.
@@ -20,20 +19,6 @@ OmniRoute nodrošina trīs dažādas ar aģentiem saistītas saskarnes. Sākotn�
 Visas trīs saskarnes ir neatkarīgas — izvēlieties jebkuru to kombināciju.
 
 ## Lēmumu koks
-
-```
-Vai jums ir nepieciešams mākoņpakalpojums, kas veic darbu ārpus šī datora (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ JĀ → Mākoņa aģenti (POST /api/v1/agents/tasks)
-└─ NĒ → Turpiniet
-    │
-    Vai jums ir cits aģents, kas izmanto A2A un vēlas sadarboties?
-    ├─ JĀ → A2A (POST /a2a)
-    └─ NĒ → Turpiniet
-        │
-        Vai jums ir jāuzskaita vai jākonfigurē lokāli instalētie CLI programmēšanas aģenti?
-        ├─ JĀ → ACP (GET /api/acp/agents)
-        └─ NĒ → Izmantojiet parasto /v1/chat/completions
-```
 
 ## 1. A2A — Agent-to-Agent
 
@@ -125,61 +110,6 @@ POST pieprasījuma pamatteksta struktūra (`customAgentBodySchema` failā `src/a
   atkāpšanās mehānisms. Parastai interaktīvai lietošanai palaidiet konfigurēto CLI pats vai
   izmantojiet `omniroute run`.
 
-## 3. Mākoņa aģenti
-
-**OmniRoute galapunkti:** `/api/v1/agents/tasks/*` (dzīves cikls) + `/api/cloud/*` (infrastruktūra)
-**Avots:** `src/lib/cloudAgent/`
-
-### Kas tas ir
-
-Vienota saskarne darbam ar trešo pušu mākoņa programmēšanas aģentiem. Jūs iesniedzat uzvedni un repozitorija URL, OmniRoute nosūta pieprasījumu pareizajam mākoņa aģentam, periodiski pārbauda statusu un atgriež rezultātus.
-
-### Atbalstītie aģenti (3, visi apstiprināti mapē `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Dzīves cikls
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() katrai aģenta klasei
-  → ārējais pakalpojums sāk darbu
-  → datubāzē tiek izveidota uzdevuma rinda (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → atlikta statusa sinhronizācija no nodrošinātāja
-  → atgriež pašreizējo statusu + plānu + darbību žurnālu
-  ↓
-POST /api/v1/agents/tasks/[id]   (darbība: "approve" | "message" | "cancel")
-  → pārsūta nodrošinātājam (vai lokāli atzīmē kā atceltu)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokāla atcelšana
-```
-
-### Autentifikācija
-
-⚠️ **Visiem `/api/v1/agents/tasks/*` galapunktiem ir nepieciešama pārvaldības autentifikācija** (komits `588a0333`). Izsaucēji, kas izmanto tikai Bearer autentifikāciju, kopš v3.8.0 saņem 401.
-
-### Padziļināta informācija
-
-Informāciju par `CloudAgentBase` līgumu, katra aģenta specifiku, shēmu detaļām un akreditācijas datu infrastruktūras galapunktiem skatiet [CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
-## Salīdzinājums: A2A un mākoņa aģenti
-
-Abiem ir „ilgstoši uzdevumi”, taču dažādos līmeņos:
-
-| Aspekts                  | A2A                                                                                                    | Mākoņa aģenti                               |
-| ------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------- |
-| Standarts                | Atvērtais A2A v0.3                                                                                     | Specifisks OmniRoute                        |
-| Kur notiek izpilde       | OmniRoute iekšienē (izmanto konfigurētās kombinācijas)                                                 | Ārēji (Codex / Devin / Jules serveros)      |
-| Uzdevuma ilgums          | Noklusējuma TTL — 5 min (konfigurējams sadaļā `TaskManager`)                                           | No minūtēm līdz stundām                     |
-| Repozitorija pārzināšana | Nē (nodod tikai uzvednes)                                                                              | Jā (repozitorija URL + zars)                |
-| Lietošanas gadījums      | Aģentu savstarpēja sadarbība, viedā maršrutēšana kā pakalpojums                                        | Deleģēt „ieviest funkciju X repozitorijā Y” |
-| Autentifikācija          | Neobligāts `OMNIROUTE_API_KEY` ceļam `/a2a`; pārvaldības autentifikācija `/api/a2a/*` REST palīgceļiem | Vienmēr pārvaldības autentifikācija         |
-
 ## Integrācijas piemēri
 
 ### OmniRoute A2A iespēju atklāšana
@@ -229,30 +159,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Mākoņa aģenta uzdevuma iesniegšana
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Mākoņa uzdevuma statusa periodiska pārbaude
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Ko un kad izmantot
 
 - **Tērzēšanas robots / otrā pilota priekšgalsistēma** → `/v1/chat/completions` (saderīgs ar OpenAI — nav aģentu protokols)
@@ -284,7 +190,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## Skatiet arī
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — padziļināts A2A apskats
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — padziļināts mākoņa aģentu apskats
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — ārējo CLI integrācijas (izmanto ACP)
 - [SKILLS.md](./SKILLS.md) — prasmju ietvars (atšķiras no A2A prasmēm — lokāla izpildes smilškaste)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — galapunktu atsauce

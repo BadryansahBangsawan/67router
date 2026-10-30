@@ -126,4 +126,3 @@ try {
 - [قراردادهای راهاندازی CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [ابزارهای CLI](../reference/CLI-TOOLS.md)
 - [سرور A2A](./A2A-SERVER.md)
-- [عاملهای ابری](./CLOUD_AGENT.md)

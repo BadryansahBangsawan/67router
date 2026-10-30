@@ -4,7 +4,6 @@
 
 ---
 
-> **स्रोत:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **अंतिम अपडेट:** 2026-06-28 — v3.8.40
 
 OmniRoute एजेंट-संबंधी तीन अलग-अलग इंटरफ़ेस उपलब्ध कराता है। पहली नज़र में वे समान दिखते हैं, लेकिन अलग-अलग समस्याओं का समाधान करते हैं। सही इंटरफ़ेस चुनने के लिए इस पृष्ठ का उपयोग करें।
@@ -20,20 +19,6 @@ OmniRoute एजेंट-संबंधी तीन अलग-अलग इ�
 ये तीनों स्वतंत्र हैं — इनमें से कोई भी संयोजन चुनें।
 
 ## निर्णय वृक्ष
-
-```
-क्या आपको इस मशीन के बाहर काम करने के लिए किसी क्लाउड सेवा (Codex Cloud / Cursor Cloud / Devin / Jules) की आवश्यकता है?
-├─ हाँ → क्लाउड एजेंट (POST /api/v1/agents/tasks)
-└─ नहीं → आगे बढ़ें
-    │
-    क्या आपके पास कोई ऐसा समकक्ष एजेंट है जो A2A का उपयोग करता है और सहयोग करना चाहता है?
-    ├─ हाँ → A2A (POST /a2a)
-    └─ नहीं → आगे बढ़ें
-        │
-        क्या आपको स्थानीय रूप से इंस्टॉल किए गए CLI कोडिंग एजेंटों को सूचीबद्ध / कॉन्फ़िगर करना है?
-        ├─ हाँ → ACP (GET /api/acp/agents)
-        └─ नहीं → साधारण /v1/chat/completions का उपयोग करें
-```
 
 ## 1. A2A — एजेंट-से-एजेंट
 
@@ -124,61 +109,6 @@ POST के लिए बॉडी का स्वरूप (`src/app/api/acp/a
   फ़ॉलबैक के रूप में जोड़ा नहीं गया है। सामान्य इंटरैक्टिव उपयोग के लिए, कॉन्फ़िगर किया हुआ CLI स्वयं लॉन्च करें या
   `omniroute run` का उपयोग करें।
 
-## 3. क्लाउड एजेंट
-
-**OmniRoute एंडपॉइंट:** `/api/v1/agents/tasks/*` (जीवनचक्र) + `/api/cloud/*` (आंतरिक संयोजन)
-**स्रोत:** `src/lib/cloudAgent/`
-
-### यह क्या है
-
-तृतीय-पक्ष क्लाउड कोडिंग एजेंट के लिए एक समान इंटरफ़ेस। आप एक प्रॉम्प्ट + रिपॉज़िटरी URL सबमिट करते हैं, OmniRoute उसे सही क्लाउड एजेंट को भेजता है, स्थिति की जाँच करता है और परिणाम लौटाता है।
-
-### समर्थित एजेंट (4, सभी की पुष्टि `src/lib/cloudAgent/agents/` में की गई है)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### जीवनचक्र
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() per agent class
-  → external service starts work
-  → task row created in DB (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → lazy status sync from provider
-  → returns current status + plan + activity log
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → forwards to provider (or marks cancelled locally)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → local cancel
-```
-
-### प्रमाणीकरण
-
-⚠️ **सभी `/api/v1/agents/tasks/*` एंडपॉइंट के लिए प्रबंधन प्रमाणीकरण आवश्यक है** (कमिट `588a0333`)। v3.8.0 से केवल Bearer का उपयोग करने वाले कॉलर को 401 प्राप्त होता है।
-
-### विस्तृत जानकारी
-
-`CloudAgentBase` अनुबंध, प्रत्येक एजेंट की विशिष्टताओं, स्कीमा विवरण और क्रेडेंशियल संयोजन एंडपॉइंट के लिए [CLOUD_AGENT.md](./CLOUD_AGENT.md) देखें।
-
-## तुलना: A2A बनाम Cloud Agents
-
-दोनों में "लंबे समय तक चलने वाले कार्य" होते हैं, लेकिन अलग-अलग स्तरों पर:
-
-| पहलू                 | A2A                                                                                  | Cloud Agents                                |
-| -------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------- |
-| मानक                 | खुला A2A v0.3                                                                        | OmniRoute-विशिष्ट                           |
-| कंप्यूट कहाँ चलता है | OmniRoute के अंदर (कॉन्फ़िगर किए गए संयोजनों का उपयोग करता है)                       | बाहरी (Codex / Devin / Jules सर्वर)         |
-| कार्य की अवधि        | डिफ़ॉल्ट TTL 5 मिनट (`TaskManager` में कॉन्फ़िगर करने योग्य)                         | मिनटों से घंटों तक                          |
-| रिपॉज़िटरी-अवगत      | नहीं (केवल प्रॉम्प्ट पास करता है)                                                    | हाँ (रिपॉज़िटरी URL + ब्रांच)               |
-| उपयोग का मामला       | क्रॉस-एजेंट सहयोग, सेवा के रूप में स्मार्ट रूटिंग                                    | "रिपॉज़िटरी Y में फ़ीचर X लागू करें" सौंपना |
-| प्रमाणीकरण           | `/a2a` के लिए वैकल्पिक `OMNIROUTE_API_KEY`; `/api/a2a/*` REST सहायकों के लिए प्रबंधन | हमेशा प्रबंधन                               |
-
 ## एकीकरण के उदाहरण
 
 ### OmniRoute की A2A क्षमताओं का पता लगाएँ
@@ -228,30 +158,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cloud Agent कार्य सबमिट करें
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### क्लाउड कार्य की स्थिति पोल करें
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## किस स्थिति में क्या उपयोग करें
 
 - **चैटबॉट / कोपायलट फ़्रंटएंड** → `/v1/chat/completions` (OpenAI-संगत — एजेंट प्रोटोकॉल नहीं)
@@ -283,7 +189,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## यह भी देखें
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2A का गहन विवरण
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — क्लाउड एजेंट का गहन विवरण
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — बाहरी CLI एकीकरण (ACP का उपयोग करता है)
 - [SKILLS.md](./SKILLS.md) — कौशल फ़्रेमवर्क (A2A कौशलों से अलग — स्थानीय निष्पादन सैंडबॉक्स)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — एंडपॉइंट संदर्भ

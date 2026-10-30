@@ -43,8 +43,6 @@ Cyklus v3.7.x → v3.8.0 priniesol automatické smerovanie bez potreby konfigur�
 - 🤝 **Poskytovateľ GitLab Duo OAuth** — prihlásenie pomocou prihlasovacích údajov GitLab
 - 🧠 **Vyrovnávacia pamäť Reasoning Replay** — hybridné uchovávanie záznamov odôvodňovania v pamäti a databáze SQLite
 
-📚 **Súvisiaca dokumentácia:** [Framework Skills](../frameworks/SKILLS.md) · [Pamäťový systém](../frameworks/MEMORY.md) · [Cloudoví agenti](../frameworks/CLOUD_AGENT.md) · [Webhooky](../frameworks/WEBHOOKS.md) · [Vyrovnávacia pamäť Reasoning Replay](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Poskytovatelia

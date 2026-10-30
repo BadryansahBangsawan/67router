@@ -69,20 +69,6 @@ middleware (`src/server/authz/pipeline.ts`) اعمال میشود — handlerه�
 نیاز دارند که یک صفحه بینمبدأیی نمیتواند فراهم کند. این وضعیت در مسیر اشتراکی CORS،
 بردار ربودن session یا سرقت اعتبارنامه **نیست**.
 
-### یک استثنای واقعی — `/api/v1/agents/`
-
-routeهای Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)،
-headerهای CORS **مختص خودشان** را تنظیم میکنند
-(`src/lib/cloudAgent/api.ts`، `getCloudAgentCorsHeaders`) و
-`Access-Control-Allow-Origin: <origin>|*` را همراه با
-`Access-Control-Allow-Credentials: true` **ارسال میکنند**. این تنها سطحی است که در آن
-بازتاب مبدأ و اعتبارنامهها همزمان وجود دارند و این رفتار **مستقل از
-`CORS_ALLOW_ALL`** است. این routeها با احراز هویت مدیریتی محافظت میشوند
-(`requireManagementAuth`)؛ اپراتورهایی که داشبورد را خارج از host در دسترس قرار میدهند باید
-بدانند که این تنها بخشی است که headerهای پاسخ در آن اجازه خواندن بینمبدأیی دارای اعتبارنامه را
-میدهند. محدود کردن آن به یک فهرست مجاز صریح، جدا از این راهنمای CORS
-پیگیری میشود.
-
 ## چکلیست محیط عملیاتی
 
 - **هرگز در محیط عملیاتی `CORS_ALLOW_ALL=true` را تنظیم نکنید.** آن را تنظیمنشده باقی بگذارید.
@@ -150,15 +136,14 @@ location / {
 
 ## فایلهای منبع
 
-| موضوع                                     | فایل                                                                 |
-| ----------------------------------------- | -------------------------------------------------------------------- |
-| حل allowlist و `getCorsStatus()`          | `src/server/cors/origins.ts`                                         |
-| اعمال middleware (منبع واحد حقیقت)        | `src/server/authz/pipeline.ts`                                       |
-| Settings → تزریق مبدأ در زمان اجرا        | `src/lib/config/runtimeSettings.ts`                                  |
-| وضعیت زمان اجرا برای داشبورد              | `src/app/api/settings/authz-inventory/route.ts`                      |
-| بنر هشدار داشبورد                         | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| فیلد CORS Allowed Origins                 | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS مختص هر مسیر در Cloud-Agent (استثنا) | `src/lib/cloudAgent/api.ts`                                          |
+| موضوع                              | فایل                                                                 |
+| ---------------------------------- | -------------------------------------------------------------------- |
+| حل allowlist و `getCorsStatus()`   | `src/server/cors/origins.ts`                                         |
+| اعمال middleware (منبع واحد حقیقت) | `src/server/authz/pipeline.ts`                                       |
+| Settings → تزریق مبدأ در زمان اجرا | `src/lib/config/runtimeSettings.ts`                                  |
+| وضعیت زمان اجرا برای داشبورد       | `src/app/api/settings/authz-inventory/route.ts`                      |
+| بنر هشدار داشبورد                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| فیلد CORS Allowed Origins          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## همچنین ببینید
 

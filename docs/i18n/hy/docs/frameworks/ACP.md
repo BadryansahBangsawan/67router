@@ -120,4 +120,3 @@ try {
 - [CLI գործարկման պայմանագրեր](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI գործիքներ](../reference/CLI-TOOLS.md)
 - [A2A սերվեր](./A2A-SERVER.md)
-- [Ամպային գործակալներ](./CLOUD_AGENT.md)

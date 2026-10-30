@@ -698,54 +698,6 @@
       "yes": "Bỏ qua lời nhắc xác nhận"
     }
   },
-  "cloud": {
-    "description": "Quản lý các tác vụ tác nhân AI đám mây (codex, devin, jules)",
-    "agents": {
-      "description": "Liệt kê các tác nhân đám mây có sẵn"
-    },
-    "agent": {
-      "description": "Quản lý các tác vụ tác nhân đám mây {agent}",
-      "auth": {
-        "description": "Ủy quyền cho {agent} qua OAuth"
-      }
-    },
-    "task": {
-      "description": "Quản lý các tác vụ tác nhân đám mây",
-      "create": {
-        "description": "Tạo tác vụ tác nhân mới",
-        "title": "Tiêu đề tác vụ (mặc định là 80 ký tự đầu tiên của lời nhắc)",
-        "prompt": "Nội dung lời nhắc tác vụ",
-        "prompt_file": "Đọc lời nhắc từ tệp",
-        "repo": "URL kho lưu trữ cần sao chép cho tác vụ",
-        "branch": "Tên nhánh cần sử dụng",
-        "metadata": "Đối tượng siêu dữ liệu JSON"
-      },
-      "list": {
-        "description": "Liệt kê các tác vụ của tác nhân",
-        "status": "Lọc theo trạng thái (running|completed|failed|cancelled)",
-        "limit": "Số kết quả tối đa (mặc định: 50)"
-      },
-      "get": {
-        "description": "Lấy thông tin chi tiết tác vụ theo ID"
-      },
-      "status": {
-        "description": "In trạng thái tác vụ (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Hủy tác vụ đang chạy",
-        "yes": "Bỏ qua lời nhắc xác nhận"
-      },
-      "approve": {
-        "description": "Phê duyệt kế hoạch của tác nhân để bắt đầu thực thi"
-      },
-      "message": {
-        "description": "Gửi tin nhắn đến tác vụ đang chạy"
-      }
-    },
-    "sources": {
-      "description": "Liệt kê các tệp nguồn do tác vụ tạo ra"
-    }
-  },
   "program": {
     "description": "OmniRoute — Bộ định tuyến AI thông minh với tự động chuyển đổi dự phòng",
     "version": "In phiên bản và thoát",

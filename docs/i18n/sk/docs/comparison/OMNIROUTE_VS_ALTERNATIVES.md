@@ -24,7 +24,6 @@ Objektívne porovnanie funkcií oproti populárnym open-source AI smerovačom.
 | **Protokol A2A**                                       |               ✅ 6 schopností                |       ❌       |        ❌         |      ❌      |
 | **Pamäť (FTS5 + vektor)**                              |                      ✅                      |       ❌       |        ❌         |      ❌      |
 | **Guardrails (PII, injekcia, videnie)**                |                      ✅                      |   čiastočne    |        ❌         |  ✅ platené  |
-| **Integrácie cloudových agentov**                      |         Codex, Cursor, Devin, Jules          |       ❌       |        ❌         |      ❌      |
 | **Circuit breaker pre každého poskytovateľa**          |         ✅ 3-stavový, lazy recovery          |    základný    |        ❌         |      ✅      |
 | **Skrývanie TLS odtlačkov (JA3/JA4)**                  |                  ✅ wreq-js                  |       ❌       |        ❌         |      ❌      |
 | **Framework na evaluáciu**                             |                 ✅ vstavaný                  |       ❌       |        ❌         |  ⚠ platené   |

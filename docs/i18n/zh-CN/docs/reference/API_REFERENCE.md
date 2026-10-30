@@ -1677,31 +1677,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## 智能体协议
-
-代表 OmniRoute 用户远程执行的云智能体任务（Claude Code、Codex Cloud、OpenHands 等）。
-
-| 方法   | 路径                          | 描述                                                                                                                             |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | 列出任务 — 可选参数 `?provider=`、`?status=`、`?limit=`（1–500，默认值为 50）                                                    |
-| POST   | `/api/v1/agents/tasks`        | 创建任务 — 请求体由 `CreateCloudAgentTaskSchema` 验证（`providerId`、`prompt`、`source`、`options?`）。返回 `201` 及任务封装数据 |
-| DELETE | `/api/v1/agents/tasks?id=...` | 删除任务                                                                                                                         |
-| GET    | `/api/v1/agents/tasks/[id]`   | 读取任务 — 设置了 `external_id` 时，同步从上游云智能体刷新状态                                                                   |
-| POST   | `/api/v1/agents/tasks/[id]`   | 可区分的操作：`{action: "approve"}`、`{action: "message", message}` 或 `{action: "cancel"}`                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | 按 id 删除特定任务                                                                                                               |
-
-> **身份验证：** 每个方法均需要管理身份验证（`requireCloudAgentManagementAuth`）。在 v3.8.0 之前，这些方法无需身份验证 — 有关此破坏性变更，请参阅提交 `588a0333`。
-
-```bash
-# 创建 Claude Code 云任务
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## 管理代理
 
 可分配给提供者、账户或全局使用的出站 HTTP(S)/SOCKS 代理。
@@ -2202,5 +2177,3 @@ devin-cli 等）。完整列表请参阅[提供者参考](./PROVIDER_REFERENCE.m
 - 可通过 `/api/settings/require-login` 切换 `requireLogin`
 - 当 `REQUIRE_API_KEY=true` 时，`/v1/*` 路由可以要求提供 Bearer API 密钥
 - 本参考文档中的“管理令牌”/“管理范围的 API 密钥”是指该指南中介绍的某一类凭据，而不是某种未定义的额外密钥类型
-
-> **破坏性变更（v3.8.0）** — `/api/v1/agents/tasks/*` 和冷却期管理端点现在要求进行**管理身份验证**（控制面板 `auth_token` Cookie 或管理范围的 API 密钥）。之前以未经身份验证的方式调用这些路由的客户端将收到 `401 Unauthorized`。请参阅提交 `588a0333`（`fix(auth): require management auth for agent and cooldown APIs`）。

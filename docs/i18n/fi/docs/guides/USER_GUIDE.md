@@ -24,7 +24,6 @@ Kattava opas palveluntarjoajien määrittämiseen, yhdistelmien luomiseen, CLI-t
 - [Taitojärjestelmä](#-skills-system)
 - [Muistijärjestelmä](#-memory-system)
 - [Webhookit](#-webhooks)
-- [Pilviagentit](#-cloud-agents)
 - [Ohjelmallinen hallinta](#-programmatic-management)
 - [Sisäinen CLI](#-internal-cli)
 - [Työpöytäsovellus (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Tilaa OmniRoute-tapahtumia reaaliaikaista valvontaa ja automaatiota varten.
 - Uudelleenyritykset: 3 yritystä eksponentiaalisella viiveellä, minkä jälkeen tapahtuma siirretään käsittelemättömien viestien jonoon
 
 Täydellinen skeema on tiedostossa [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Pilviagentit
-
-OmniRoute integroituu pilvipohjaisiin koodausagentteihin (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), joten voit lähettää pitkäkestoisia tehtäviä samasta hallintapaneelista, jolla hallitset paikallista reititystä.
-
-- Luo tehtäviä kohdassa **Hallintapaneeli → Pilviagentit** tai käyttäen `POST /api/v1/agents/tasks`
-- Seuraa kunkin tehtävän tilaa, lokeja ja artefakteja
-- Käytä omaa API-avaintasi kullekin palveluntarjoajalle — tunnistetiedot eivät koskaan poistu OmniRoute-instanssista
-
-Täydellinen viite: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

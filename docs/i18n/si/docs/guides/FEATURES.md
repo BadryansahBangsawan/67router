@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 චක්රය මඟින් වින්යාස කි�
 - 🤝 **GitLab Duo OAuth සපයන්නා** — GitLab අක්තපත්ර සමඟ පිවිසෙන්න
 - 🧠 **Reasoning Replay Cache** — තර්කන සලකුණු සඳහා මතකය තුළ + SQLite දෙමුහුන් ස්ථායී ගබඩාකරණය
 
-📚 **අදාළ ලේඛන:** [කුසලතා රාමුව](../frameworks/SKILLS.md) · [මතක පද්ධතිය](../frameworks/MEMORY.md) · [වලාකුළු නියෝජිතයන්](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 සැපයුම්කරුවන්

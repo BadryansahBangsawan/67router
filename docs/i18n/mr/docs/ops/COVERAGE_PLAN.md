@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |   13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |   13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |   13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |   13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |   14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |   14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |   15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |   15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |   16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |   16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` हा कमी कव्हरेज असलेल्या फाइल्सचा सर्वांत दाट समूह आहे आणि उर्वरित तफावतीत त्याचा सर्वाधिक वाटा आहे.
 - बॅच आणि रीरँक API रूट्सना (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) हँडलर-स्तरीय चाचण्यांची आवश्यकता आहे.
-- क्लाउड एजंट अडॅप्टर्स (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) आणि `tierResolver.ts` यांना परिस्थिती-आधारित चाचण्यांची आवश्यकता आहे.
 - दस्तऐवज UI घटक आणि `src/mitm/systemCommands.ts` यांना कमी प्राधान्य आहे, परंतु त्यांमधून कमी खर्चात ब्रँच कव्हरेज वाढवता येईल.
 
 ## अंमलबजावणी तपासणीसूची

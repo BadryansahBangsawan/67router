@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 ଚକ୍ର ଜିରୋ-କନ୍ଫିଗ ଅଟୋ ରା�
 - 🤝 **GitLab Duo OAuth ପ୍ରୋଭାଇଡର** — GitLab ସାର୍ଟିଫିକେଟ ସହ ଲଗଇନ୍ କରନ୍ତୁ
 - 🧠 **ରିଜନିଂ ରିପ୍ଲେ କ୍ୟାଚ** — ରିଜନିଂ ଟ୍ରେସ୍ର ହାଇବ୍ରିଡ୍ ମେମୋରୀ + SQLite ପର୍ସିଷ୍ଟେନ୍ସ
 
-📚 **ସମ୍ପର୍କିତ ଡକ୍ସ:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ## 🔌 ପ୍ରଦାୟକ
 
 AI ପ୍ରଦାୟକ ସଂଯୋଗ ପରିଚାଳନା କରନ୍ତୁ: OAuth ପ୍ରଦାୟକ (Claude Code, Codex), API କୀ ପ୍ରଦାୟକ (Groq, DeepSeek, OpenRouter), ଏବଂ ମାଗଣା ପ୍ରଦାୟକ (Qoder, Kiro)। Kiro ଆକାଉଣ୍ଟ ସହିତ କ୍ରେଡିଟ୍ ବାଲାନ୍ସ ଟ୍ରାକିଂ ଅନ୍ତର୍ଭୁକ୍ତ - ବାକି ଥିବା କ୍ରେଡିଟ୍, ମୋଟ ଅନୁମୋଦନ, ଏବଂ ନବୀକରଣ ତାରିଖ ଡ୍ୟାସବୋର୍ଡ → ବ୍ୟବହାରରେ ଦୃଶ୍ୟମାନ।

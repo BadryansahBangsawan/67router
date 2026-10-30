@@ -128,7 +128,6 @@ Hlavní stránky v `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — řízení kvót a rychlostních limitů
 - `/dashboard/cli-tools` — úvodní nastavení CLI, detekce běhového prostředí a generování konfigurace
 - `/dashboard/agents` — detekovaní agenti ACP a registrace vlastních agentů
-- `/dashboard/cloud-agents` — úlohy agentů hostovaných v cloudu (Codex Cloud, Devin, Jules) a životní cyklus úloh
 - `/dashboard/skills` — registr dovedností A2A, spouštění v sandboxu a katalog vestavěných dovedností
 - `/dashboard/memory` — kontrola a načítání trvalé konverzační paměti
 - `/dashboard/webhooks` — odběry odchozích webhooků, rotace tajných klíčů a statistiky opakovaných pokusů
@@ -382,23 +381,6 @@ Klíčové funkce:
 
 Úplné podrobnosti o algoritmu (vzorce faktorů, ladění vah) naleznete v
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloudoví agenti
-
-Cloudoví agenti zpřístupňují hostované platformy agentů pro kód třetích stran (Codex Cloud, Devin,
-Jules) prostřednictvím jednotného životního cyklu úloh podporovaného databází. Všechny koncové body pro vytváření a kontrolu
-úloh vyžadují autentizaci pro správu.
-
-- Kořen modulu: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` a podadresáře jednotlivých agentů v `agents/`)
-- Implementace jednotlivých agentů: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Veřejné koncové body: `/api/v1/agents/tasks/*` (výpis/vytvoření/získání/zrušení)
-- Koncové body pro správu: `/api/cloud/*` (zřizování, stav, dávkové operace)
-- Řídicí panel: `/dashboard/cloud-agents`
-- Úložiště: tabulka `cloud_agent_tasks`
-
-Podrobnosti o zřizování jednotlivých agentů a specifikách OAuth naleznete v
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Ochranná pravidla
 

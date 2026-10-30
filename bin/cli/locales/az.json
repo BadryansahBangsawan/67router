@@ -698,54 +698,6 @@
       "yes": "Təsdiq sorğusunu ötür"
     }
   },
-  "cloud": {
-    "description": "Bulud süni intellekt agenti tapşırıqlarını idarə et (codex, devin, jules)",
-    "agents": {
-      "description": "Mövcud bulud agentlərini siyahıla"
-    },
-    "agent": {
-      "description": "{agent} bulud agentinin tapşırıqlarını idarə et",
-      "auth": {
-        "description": "{agent} üçün OAuth vasitəsilə avtorizasiya et"
-      }
-    },
-    "task": {
-      "description": "Bulud agenti tapşırıqlarını idarə et",
-      "create": {
-        "description": "Yeni agent tapşırığı yarat",
-        "title": "Tapşırığın başlığı (standart olaraq sorğunun ilk 80 simvolu)",
-        "prompt": "Tapşırıq sorğusunun mətni",
-        "prompt_file": "Sorğunu fayldan oxu",
-        "repo": "Tapşırıq üçün klonlanacaq repozitoriyanın URL-si",
-        "branch": "İstifadə ediləcək budağın adı",
-        "metadata": "JSON metadata obyekti"
-      },
-      "list": {
-        "description": "Agent tapşırıqlarını siyahıla",
-        "status": "Statusa görə filtrlə (running|completed|failed|cancelled)",
-        "limit": "Maksimum nəticə sayı (standart: 50)"
-      },
-      "get": {
-        "description": "ID-yə görə tapşırıq təfərrüatlarını əldə et"
-      },
-      "status": {
-        "description": "Tapşırıq statusunu göstər (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "İcra olunan tapşırığı ləğv et",
-        "yes": "Təsdiq sorğusunu ötür"
-      },
-      "approve": {
-        "description": "İcraya başlamaq üçün agent planını təsdiqlə"
-      },
-      "message": {
-        "description": "İcra olunan tapşırığa mesaj göndər"
-      }
-    },
-    "sources": {
-      "description": "Tapşırıq tərəfindən yaradılmış mənbə fayllarını siyahıla"
-    }
-  },
   "program": {
     "description": "OmniRoute — Avtomatik Fallback ilə Ağıllı AI Marşrutlaşdırıcısı",
     "version": "Versiyasını çap et və çıx",

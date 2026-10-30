@@ -24,7 +24,6 @@
 - [スキルシステム](#-skills-system)
 - [メモリシステム](#-memory-system)
 - [Webhook](#-webhooks)
-- [クラウドエージェント](#-cloud-agents)
 - [プログラムによる管理](#-programmatic-management)
 - [内部 CLI](#-internal-cli)
 - [デスクトップアプリケーション（Electron）](#-desktop-application-electron)
@@ -1252,18 +1251,6 @@ OmniRoute は、ハイブリッド検索を使用して**長期的な会話メ�
 - 再試行：指数バックオフで 3 回試行後、デッドレターキューへ送信
 
 完全なスキーマは [WEBHOOKS.md](../frameworks/WEBHOOKS.md) を参照してください。
-
----
-
-## ☁️ クラウドエージェント
-
-OmniRoute はクラウドコーディングエージェント（**OpenAI Codex Cloud**、**Devin**、**Jules**、**Antigravity**）と統合されており、ローカルルーティングを管理するものと同じダッシュボードから、長時間実行タスクを送信できます。
-
-- **ダッシュボード → クラウドエージェント**、または `POST /api/v1/agents/tasks` を使用してタスクを作成
-- タスクごとにステータス、ログ、アーティファクトを追跡
-- プロバイダーごとに独自の API キーを使用可能 — 認証情報が OmniRoute インスタンスの外部に送信されることはありません
-
-完全なリファレンス：[CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)。
 
 ---
 

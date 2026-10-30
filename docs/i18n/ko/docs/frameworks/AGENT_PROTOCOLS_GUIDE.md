@@ -4,7 +4,6 @@
 
 ---
 
-> **출처:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **마지막 업데이트:** 2026-06-28 — v3.8.40
 
 OmniRoute는 서로 다른 세 가지 에이전트 관련 인터페이스를 제공합니다. 언뜻 보기에는 비슷하지만 서로 다른 문제를 해결합니다. 이 페이지를 참고하여 적합한 인터페이스를 선택하세요.
@@ -20,20 +19,6 @@ OmniRoute는 서로 다른 세 가지 에이전트 관련 인터페이스를 제
 세 인터페이스는 서로 독립적이므로 필요한 것만 선택해 사용할 수 있습니다.
 
 ## 결정 트리
-
-```
-이 컴퓨터 외부에서 작업을 수행할 클라우드 서비스(Codex Cloud / Cursor Cloud / Devin / Jules)가 필요한가요?
-├─ 예 → 클라우드 에이전트(POST /api/v1/agents/tasks)
-└─ 아니요 → 계속
-    │
-    A2A를 사용하며 협업하려는 동료 에이전트가 있나요?
-    ├─ 예 → A2A(POST /a2a)
-    └─ 아니요 → 계속
-        │
-        로컬에 설치된 CLI 코딩 에이전트를 나열하거나 구성해야 하나요?
-        ├─ 예 → ACP(GET /api/acp/agents)
-        └─ 아니요 → 일반 /v1/chat/completions 사용
-```
 
 ## 1. A2A — 에이전트 간 통신
 
@@ -118,61 +103,6 @@ POST 본문 형식(`src/app/api/acp/agents/route.ts`의 `customAgentBodySchema`)
 
 - HTTP 레지스트리는 작업을 받거나 프로세스 실행 기능을 노출하지 않습니다. 내부 관리자는 등록된 CLI를 실행할 수 있지만 자동 제공자 폴백으로 연결되어 있지는 않습니다. 일반적인 대화형 사용의 경우 구성된 CLI를 직접 실행하거나 `omniroute run`을 사용하세요.
 
-## 3. 클라우드 에이전트
-
-**OmniRoute 엔드포인트:** `/api/v1/agents/tasks/*`(수명 주기) + `/api/cloud/*`(연결 기반 기능)
-**소스:** `src/lib/cloudAgent/`
-
-### 개요
-
-타사 클라우드 코딩 에이전트를 위한 통합 인터페이스입니다. 프롬프트와 저장소 URL을 제출하면 OmniRoute가 적절한 클라우드 에이전트에 작업을 전달하고, 상태를 폴링한 후 결과를 반환합니다.
-
-### 지원되는 에이전트(`src/lib/cloudAgent/agents/`에서 모두 확인됨)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### 수명 주기
-
-```
-POST /api/v1/agents/tasks
-  → 에이전트 클래스별 BaseAgent.createTask()
-  → 외부 서비스가 작업 시작
-  → DB에 작업 행 생성(cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → 제공자에서 지연 상태 동기화
-  → 현재 상태 + 계획 + 활동 로그 반환
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → 제공자에게 전달(또는 로컬에서 취소됨으로 표시)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → 로컬 취소
-```
-
-### 인증
-
-⚠️ **모든 `/api/v1/agents/tasks/*` 엔드포인트에는 관리 인증이 필요합니다**(커밋 `588a0333`). v3.8.0부터 Bearer 전용 호출자는 401 응답을 받습니다.
-
-### 자세히 알아보기
-
-`CloudAgentBase` 계약, 에이전트별 세부 사항, 스키마 상세 정보 및 자격 증명 연결 엔드포인트는 [CLOUD_AGENT.md](./CLOUD_AGENT.md)를 참조하세요.
-
-## 비교: A2A와 Cloud Agents
-
-둘 다 "장기 실행 작업"을 지원하지만 서로 다른 계층에서 작동합니다.
-
-| 측면             | A2A                                                                              | Cloud Agents                     |
-| ---------------- | -------------------------------------------------------------------------------- | -------------------------------- |
-| 표준             | Open A2A v0.3                                                                    | OmniRoute 전용                   |
-| 컴퓨팅 실행 위치 | OmniRoute 내부(구성된 조합 사용)                                                 | 외부(Codex / Devin / Jules 서버) |
-| 작업 소요 시간   | 기본 TTL 5분(`TaskManager`에서 구성 가능)                                        | 수분에서 수시간                  |
-| 저장소 인식      | 아니요(프롬프트만 전달)                                                          | 예(저장소 URL + 브랜치)          |
-| 사용 사례        | 에이전트 간 협업, 서비스 형태의 스마트 라우팅                                    | "저장소 Y에 기능 X 구현" 위임    |
-| 인증             | `/a2a`에는 선택적 `OMNIROUTE_API_KEY`, `/api/a2a/*` REST 헬퍼에는 관리 인증 필요 | 항상 관리 인증 필요              |
-
 ## 통합 예시
 
 ### OmniRoute의 A2A 기능 검색
@@ -222,30 +152,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cloud Agent 작업 제출
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### 클라우드 작업 상태 폴링
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## 상황별 사용 방법
 
 - **챗봇 / 코파일럿 프런트엔드** → `/v1/chat/completions` (OpenAI 호환 — 에이전트 프로토콜이 아님)
@@ -277,7 +183,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 ## 함께 보기
 
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2A 심층 분석
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — 클라우드 에이전트 심층 분석
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — 외부 CLI 통합(ACP 사용)
 - [SKILLS.md](./SKILLS.md) — 스킬 프레임워크(A2A 스킬과는 다른 로컬 실행 샌드박스)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — 엔드포인트 참조

@@ -120,4 +120,3 @@ try {
 - [สัญญาการเรียกใช้งาน CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [เครื่องมือ CLI](../reference/CLI-TOOLS.md)
 - [เซิร์ฟเวอร์ A2A](./A2A-SERVER.md)
-- [เอเจนต์บนคลาวด์](./CLOUD_AGENT.md)

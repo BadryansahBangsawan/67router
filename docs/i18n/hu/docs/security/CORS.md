@@ -78,22 +78,6 @@ hitelesítést igényelnek, amelyet egy más eredetű oldal nem tud biztosítani
 megosztott CORS-útvonalon ez **nem** munkamenet-eltérítési vagy
 hitelesítőadat-lopási támadási vektor.
 
-### Egy valódi kivétel — `/api/v1/agents/`
-
-A Cloud-Agent útvonalai
-(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) **saját** CORS-fejléceket
-állítanak be (`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`), és
-**kibocsátják** az `Access-Control-Allow-Origin: <origin>|*` fejlécet az
-`Access-Control-Allow-Credentials: true` fejléccel együtt. Ez az egyetlen olyan
-felület, ahol az eredet visszatükrözése és a hitelesítési adatok együttesen vannak
-jelen, és ez **független a `CORS_ALLOW_ALL` beállítástól**. Ezek a felügyeleti
-hitelesítést használó útvonalak (`requireManagementAuth`); azoknak az
-üzemeltetőknek, akik a gazdagépen kívülről is elérhetővé teszik az irányítópultot,
-tudniuk kell, hogy ez az egyetlen hely, ahol a válaszfejlécek lehetővé teszik a
-hitelesítési adatokat tartalmazó, más eredetű olvasást. Ennek explicit
-engedélyezési listára szűkítését a jelen CORS-útmutatástól elkülönítve követjük
-nyomon.
-
 ## Éles környezet ellenőrzőlistája
 
 - **Éles környezetben soha ne állítsa be a `CORS_ALLOW_ALL=true` értéket.** Hagyja beállítatlanul.
@@ -169,7 +153,6 @@ Az engedélyezett böngészőeredeteket az OmniRoute-ban (`CORS_ALLOWED_ORIGINS`
 | Futásidejű állapot az irányítópult számára        | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Irányítópult figyelmeztetősávja                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Engedélyezett CORS-eredetek mező                  | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent útvonalankénti CORS-a (a kivétel)     | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Lásd még
 

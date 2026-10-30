@@ -286,7 +286,6 @@ export const KNOWN_TRANSITIVE_SPAWN_SINKS: Record<string, string> = {
   "src/lib/logExport/childRunner.ts": `${G09_BASELINE} (child_process)`,
   "src/lib/plugins/loader.ts": `${G09_BASELINE} (child_process + worker_threads)`,
   "src/lib/providerModels/cursorAgent.ts": `${G09_BASELINE} (child_process)`,
-  "src/lib/providers/validation/webProvidersB.ts": `${G09_BASELINE} (child_process)`,
   "src/lib/proxySubscription/coreConfig/apply.ts": `${G09_BASELINE} (child_process)`,
   "src/lib/proxySubscription/coreConfig/reload.ts": `${G09_BASELINE} (child_process)`,
   "src/lib/skills/containerProvider.ts": `${G09_BASELINE} (child_process)`,

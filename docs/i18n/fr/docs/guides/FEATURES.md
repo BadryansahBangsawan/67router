@@ -43,8 +43,6 @@ Le cycle v3.7.x → v3.8.0 a ajouté le routage automatique sans configuration, 
 - 🤝 **Fournisseur OAuth GitLab Duo** — connexion avec les identifiants GitLab
 - 🧠 **Cache de relecture du raisonnement** — persistance hybride en mémoire et dans SQLite des traces de raisonnement
 
-📚 **Documentation associée :** [Framework de compétences](../frameworks/SKILLS.md) · [Système de mémoire](../frameworks/MEMORY.md) · [Agents cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Cache de relecture du raisonnement](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Fournisseurs

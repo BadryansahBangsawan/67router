@@ -246,17 +246,6 @@ De bovenstaande inventaris van MCP-tools (110 unieke tools, berekend door `count
 beperkt tot runtimebewerkingen voor routering, cache, compressie, geheugen, skills, proxy's en contextbronnen. Twee aangrenzende
 frameworks worden in v3.8.0 samen met de MCP-server geleverd en worden afzonderlijk gedocumenteerd:
 
-### Cloud Agents
-
-Cloud Agents zijn AI-programmeeragents buiten het proces (codex-cloud, cursor-cloud, devin, jules) die met
-OmniRoute zijn verbonden via hetzelfde verbindingsmodel dat voor LLM-providers wordt gebruikt. Ze worden beschikbaar gesteld via
-hun eigen REST-interface (`/api/v1/agents/*`) en maken **geen** deel uit van de MCP-toolcatalogus
-— het aanroepen van een Cloud Agent verbruikt geen MCP-scope.
-
-- Implementatie: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Levenscyclus: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentatie: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails zijn filters vóór/na uitvoering (vision-bridge, pii-masker, prompt-injection)

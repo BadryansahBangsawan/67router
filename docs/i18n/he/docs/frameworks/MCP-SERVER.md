@@ -245,17 +245,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 לפעולות ניתוב/מטמון/דחיסה/זיכרון/מיומנויות/פרוקסי/מקור-הקשר בזמן ריצה. שתי מסגרות סמוכות
 מסופקות לצד שרת ה-MCP ב-v3.8.0 ומתועדות בנפרד:
 
-### סוכני ענן
-
-סוכני ענן הם סוכני קידוד מבוססי AI הפועלים מחוץ לתהליך (codex-cloud, cursor-cloud, devin, jules), המשולבים
-ב-OmniRoute באמצעות אותו מודל חיבור המשמש ספקי LLM. הם נחשפים באמצעות
-ממשק REST משלהם (`/api/v1/agents/*`) ו**אינם** חלק מקטלוג כלי ה-MCP
-— קריאה לסוכן ענן אינה צורכת היקף MCP.
-
-- מימוש: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- מחזור חיים: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- תיעוד: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### מנגנוני הגנה
 
 מנגנוני הגנה הם מסננים המופעלים לפני/אחרי ביצוע (vision-bridge, pii-masker, prompt-injection)

@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 のサイクルでは、設定不要の自動ルーティン�
 - 🤝 **GitLab Duo OAuth プロバイダー** — GitLab の認証情報を使用してログイン
 - 🧠 **Reasoning Replay Cache** — 推論トレースをインメモリと SQLite のハイブリッド方式で永続化
 
-📚 **関連ドキュメント：** [スキルフレームワーク](../frameworks/SKILLS.md) · [メモリシステム](../frameworks/MEMORY.md) · [クラウドエージェント](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 プロバイダー

@@ -243,17 +243,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 রানটাইম রাউটিং/ক্যাশ/কম্প্রেশন/মেমরি/স্কিল/প্রক্সি/কনটেক্সট-সোর্স অপারেশনে সীমাবদ্ধ। v3.8.0-এ MCP সার্ভারের
 পাশাপাশি দুটি সংলগ্ন ফ্রেমওয়ার্ক সরবরাহ করা হয় এবং সেগুলো আলাদাভাবে নথিভুক্ত:
 
-### ক্লাউড এজেন্টসমূহ
-
-ক্লাউড এজেন্ট হলো আউট-অব-প্রসেস AI কোডিং এজেন্ট (codex-cloud, cursor-cloud, devin, jules), যেগুলো
-LLM প্রদানকারীদের জন্য ব্যবহৃত একই সংযোগ মডেলের মাধ্যমে OmniRoute-এর সঙ্গে যুক্ত। এগুলো নিজস্ব
-REST সারফেসের (`/api/v1/agents/*`) মাধ্যমে উন্মুক্ত এবং MCP টুল ক্যাটালগের অংশ **নয়**
-— কোনো ক্লাউড এজেন্ট কল করলে MCP স্কোপ ব্যবহৃত হয় না।
-
-- বাস্তবায়ন: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)।
-- লাইফসাইকেল: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`।
-- ডকুমেন্টেশন: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)।
-
 ### গার্ডরেইলসমূহ
 
 গার্ডরেইল হলো প্রি/পোস্ট-এক্সিকিউশন ফিল্টার (vision-bridge, pii-masker, prompt-injection),

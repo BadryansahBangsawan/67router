@@ -1757,31 +1757,6 @@ OmniRoute ইভেন্টগুলোর জন্য আউটবাউন�
 
 ---
 
-## এজেন্ট প্রোটোকল
-
-OmniRoute ব্যবহারকারীদের পক্ষ থেকে দূরবর্তীভাবে সম্পাদিত ক্লাউড এজেন্ট টাস্কসমূহ (Claude Code, Codex Cloud, OpenHands ইত্যাদি)।
-
-| মেথড   | পাথ                           | বিবরণ                                                                                                                                             |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | টাস্কের তালিকা — ঐচ্ছিক `?provider=`, `?status=`, `?limit=` (1–500, ডিফল্ট 50)                                                                    |
-| POST   | `/api/v1/agents/tasks`        | টাস্ক তৈরি — বডি `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) দ্বারা যাচাই করা হয়। টাস্ক এনভেলপসহ `201` ফেরত দেয় |
-| DELETE | `/api/v1/agents/tasks?id=...` | একটি টাস্ক মুছে দেয়                                                                                                                              |
-| GET    | `/api/v1/agents/tasks/[id]`   | টাস্ক পড়ে — কোনো `external_id` সেট থাকলে আপস্ট্রিম ক্লাউড এজেন্ট থেকে সিঙ্ক্রোনাসভাবে স্ট্যাটাস রিফ্রেশ করে                                      |
-| POST   | `/api/v1/agents/tasks/[id]`   | পৃথকীকৃত অ্যাকশন: `{action: "approve"}`, `{action: "message", message}`, অথবা `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id অনুযায়ী নির্দিষ্ট একটি টাস্ক মুছে দেয়                                                                                                        |
-
-> **প্রমাণীকরণ:** প্রতিটি মেথডে ম্যানেজমেন্ট প্রমাণীকরণ আবশ্যক (`requireCloudAgentManagementAuth`)। v3.8.0-এর আগে এগুলো প্রমাণীকরণবিহীন ছিল — ব্রেকিং পরিবর্তনটির জন্য commit `588a0333` দেখুন।
-
-```bash
-# একটি Claude Code ক্লাউড টাস্ক তৈরি করুন
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## ম্যানেজমেন্ট প্রক্সি
 
 প্রোভাইডার, অ্যাকাউন্ট অথবা বৈশ্বিকভাবে বরাদ্দ করা যায় এমন আউটবাউন্ড HTTP(S)/SOCKS প্রক্সি।
@@ -2285,5 +2260,3 @@ OmniRoute প্লাগইনসমূহ (তৃতীয়-পক্ষে�
 - `requireLogin` `/api/settings/require-login`-এর মাধ্যমে টগল করা যায়
 - `REQUIRE_API_KEY=true` হলে `/v1/*` রুটগুলোর জন্য ঐচ্ছিকভাবে Bearer API কী প্রয়োজন হয়
 - এই রেফারেন্সে "ম্যানেজমেন্ট টোকেন" / "ম্যানেজমেন্ট-স্কোপড API কী" বলতে ওই নির্দেশিকায় উল্লেখিত শ্রেণিগুলোর একটিকে বোঝায়—সংজ্ঞায়িত নয় এমন কোনো অতিরিক্ত গোপন তথ্যের ধরনকে নয়
-
-> **ব্রেকিং পরিবর্তন (v3.8.0)** — `/api/v1/agents/tasks/*` এবং কুলডাউন ম্যানেজমেন্ট এন্ডপয়েন্টগুলোর জন্য এখন **ম্যানেজমেন্ট প্রমাণীকরণ** (ড্যাশবোর্ড `auth_token` কুকি বা একটি ম্যানেজমেন্ট-স্কোপড API কী) আবশ্যক। যেসব ক্লায়েন্ট আগে প্রমাণীকরণ ছাড়াই এই রুটগুলো কল করত, তারা `401 Unauthorized` পাবে। কমিট `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) দেখুন।

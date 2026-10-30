@@ -121,4 +121,3 @@ lyckad leverantörsinferens; dessa kräver ett separat auktoriserat röktest i m
 - [CLI-startkontrakt](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-verktyg](../reference/CLI-TOOLS.md)
 - [A2A-server](./A2A-SERVER.md)
-- [Molnagenter](./CLOUD_AGENT.md)

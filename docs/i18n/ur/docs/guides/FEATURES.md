@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 دور میں زیرو-کنفیگ خودکار روٹنگ، ن
 - 🤝 **GitLab Duo OAuth پرووائیڈر** — GitLab اسناد کے ساتھ لاگ اِن
 - 🧠 **ریزننگ ری پلے کیش** — ریزننگ ٹریسز کی ہائبرڈ اِن-میموری + SQLite پائیداریت
 
-📚 **متعلقہ دستاویزات:** [اسکلز فریم ورک](../frameworks/SKILLS.md) · [میموری سسٹم](../frameworks/MEMORY.md) · [کلاؤڈ ایجنٹس](../frameworks/CLOUD_AGENT.md) · [ویب ہکس](../frameworks/WEBHOOKS.md) · [ریزننگ ری پلے کیش](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 فراہم کنندگان

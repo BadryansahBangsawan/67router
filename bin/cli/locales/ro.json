@@ -698,54 +698,6 @@
       "yes": "Omite solicitarea de confirmare"
     }
   },
-  "cloud": {
-    "description": "Gestionează sarcinile agenților AI din cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Listează agenții din cloud disponibili"
-    },
-    "agent": {
-      "description": "Gestionează sarcinile agentului {agent} din cloud",
-      "auth": {
-        "description": "Autorizează {agent} prin OAuth"
-      }
-    },
-    "task": {
-      "description": "Gestionează sarcinile agenților din cloud",
-      "create": {
-        "description": "Creează o sarcină nouă pentru agent",
-        "title": "Titlul sarcinii (implicit, primele 80 de caractere ale solicitării)",
-        "prompt": "Textul solicitării pentru sarcină",
-        "prompt_file": "Citește solicitarea din fișier",
-        "repo": "URL-ul depozitului de clonat pentru sarcină",
-        "branch": "Numele ramurii de utilizat",
-        "metadata": "Obiect JSON cu metadate"
-      },
-      "list": {
-        "description": "Listează sarcinile agentului",
-        "status": "Filtrează după stare (running|completed|failed|cancelled)",
-        "limit": "Numărul maxim de rezultate (implicit: 50)"
-      },
-      "get": {
-        "description": "Obține detaliile sarcinii după ID"
-      },
-      "status": {
-        "description": "Afișează starea sarcinii (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Anulează o sarcină în curs de executare",
-        "yes": "Omite solicitarea de confirmare"
-      },
-      "approve": {
-        "description": "Aprobă planul agentului pentru a începe executarea"
-      },
-      "message": {
-        "description": "Trimite un mesaj unei sarcini în curs de executare"
-      }
-    },
-    "sources": {
-      "description": "Listează fișierele sursă produse de o sarcină"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI inteligent cu fallback automat",
     "version": "Afișează versiunea și ieși",

@@ -24,7 +24,6 @@ Kompletná príručka ku konfigurácii poskytovateľov, vytváraniu kombinácií
 - [Systém zručností](#-skills-system)
 - [Pamäťový systém](#-memory-system)
 - [Webhooky](#-webhooks)
-- [Cloudoví agenti](#-cloud-agents)
 - [Programová správa](#-programmatic-management)
 - [Interné CLI](#-internal-cli)
 - [Desktopová aplikácia (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Prihláste sa na odber udalostí OmniRoute na monitorovanie a automatizáciu v r
 - Opakované pokusy: 3 pokusy s exponenciálnym predlžovaním intervalov, potom presun do frontu neúspešných správ
 
 Kompletná schéma je uvedená v [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloudoví agenti
-
-OmniRoute sa integruje s cloudovými programovacími agentmi (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), takže môžete odosielať dlhotrvajúce úlohy z rovnakého ovládacieho panela, ktorý spravuje vaše lokálne smerovanie.
-
-- Vytvárajte úlohy cez **Dashboard → Cloud Agents** alebo pomocou `POST /api/v1/agents/tasks`
-- Sledujte stav, protokoly a artefakty jednotlivých úloh
-- Použite vlastný API kľúč pre každého poskytovateľa — prihlasovacie údaje nikdy neopustia inštanciu OmniRoute
-
-Kompletná dokumentácia: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

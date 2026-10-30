@@ -246,17 +246,6 @@ MCP-verktøybeholdningen ovenfor (110 unike verktøy, beregnet av `countUniqueMc
 avgrenset til operasjoner for ruting, hurtigbuffer, komprimering, minne, ferdigheter, proxy og kontekstkilder under kjøring. To tilstøtende
 rammeverk leveres sammen med MCP-serveren i v3.8.0 og er dokumentert separat:
 
-### Skyagenter
-
-Skyagenter er AI-kodingsagenter som kjører utenfor prosessen (codex-cloud, cursor-cloud, devin, jules), og som er koblet til
-OmniRoute gjennom den samme tilkoblingsmodellen som brukes for LLM-leverandører. De eksponeres via
-sitt eget REST-grensesnitt (`/api/v1/agents/*`) og er **ikke** en del av MCP-verktøykatalogen
-— kall til en skyagent bruker ikke et MCP-omfang.
-
-- Implementasjon: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Livssyklus: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentasjon: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Sikkerhetsmekanismer
 
 Sikkerhetsmekanismer er filtre før/etter kjøring (vision-bridge, pii-masker, prompt-injection)

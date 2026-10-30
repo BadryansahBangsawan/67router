@@ -1765,31 +1765,6 @@ Bruges af undersystemet til automatisk nøgleadministration til at udstede og ro
 
 ---
 
-## Agentprotokol
-
-Cloud-agentopgaver (Claude Code, Codex Cloud, OpenHands osv.), der udføres eksternt på vegne af OmniRoute-brugere.
-
-| Metode | Sti                           | Beskrivelse                                                                                                                                       |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Vis opgaver — valgfrit `?provider=`, `?status=`, `?limit=` (1–500, standard 50)                                                                   |
-| POST   | `/api/v1/agents/tasks`        | Opret opgave — body valideres af `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returnerer `201` med opgavekonvolut |
-| DELETE | `/api/v1/agents/tasks?id=...` | Slet en opgave                                                                                                                                    |
-| GET    | `/api/v1/agents/tasks/[id]`   | Læs opgave — opdaterer synkront status fra den eksterne cloud-agent, når et `external_id` er angivet                                              |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskrimineret handling: `{action: "approve"}`, `{action: "message", message}` eller `{action: "cancel"}`                                          |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Slet en bestemt opgave efter id                                                                                                                   |
-
-> **Godkendelse:** Administrationsgodkendelse kræves for hver metode (`requireCloudAgentManagementAuth`). Før v3.8.0 var disse ikke godkendelsesbeskyttede — se commit `588a0333` for den inkompatible ændring.
-
-```bash
-# Opret en Claude Code-cloudopgave
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Administrationsproxyer
 
 Udgående HTTP(S)/SOCKS-proxyer, der kan tildeles udbydere, konti eller globalt.
@@ -2292,5 +2267,3 @@ API-nøgle med administrationsomfang), og hvordan de adskiller sig fra inferensn
 - `requireLogin` kan slås til eller fra via `/api/settings/require-login`
 - `/v1/*`-ruter kræver valgfrit en Bearer-API-nøgle, når `REQUIRE_API_KEY=true`
 - "administrationstoken" / "API-nøgle med administrationsomfang" i denne reference betyder en af familierne i den pågældende vejledning — ikke en udefineret ekstra type hemmelighed
-
-> **Inkompatibel ændring (v3.8.0)** — `/api/v1/agents/tasks/*` og administrationsendepunkterne for cooldown kræver nu **administrationsgodkendelse** (dashboardets `auth_token`-cookie eller en API-nøgle med administrationsomfang). Klienter, der tidligere kaldte disse ruter uden godkendelse, vil modtage `401 Unauthorized`. Se commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

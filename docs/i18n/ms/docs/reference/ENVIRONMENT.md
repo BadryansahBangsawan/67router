@@ -1386,11 +1386,11 @@ rujukan — mengubahnya memerlukan suntingan kod, bukan pembolehubah persekitara
 
 Benarkan pengguna melaporkan isu secara langsung daripada Dashboard.
 
-| Pemboleh Ubah         | Lalai                | Fail Sumber                             | Penerangan                                                                                                                                                         |
-| --------------------- | -------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(tidak ditetapkan)_ | `src/app/api/v1/issues/report/route.ts` | Repositori dalam format `owner/repo`.                                                                                                                              |
-| `GITHUB_ISSUES_TOKEN` | _(tidak ditetapkan)_ | `src/app/api/v1/issues/report/route.ts` | Token Akses Peribadi GitHub dengan skop `issues:write`.                                                                                                            |
-| `GITHUB_TOKEN`        | _(tidak ditetapkan)_ | pembantu pengelasan isu / ejen awan     | Token akses GitHub generik yang digunakan sebagai pilihan sandaran untuk `GITHUB_ISSUES_TOKEN` dan digunakan oleh pembantu ejen awan dalam `src/lib/cloudAgent/*`. |
+| Pemboleh Ubah         | Lalai                | Fail Sumber                             | Penerangan                                                                                                                                                                      |
+| --------------------- | -------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(tidak ditetapkan)_ | `src/app/api/v1/issues/report/route.ts` | Repositori dalam format `owner/repo`.                                                                                                                                           |
+| `GITHUB_ISSUES_TOKEN` | _(tidak ditetapkan)_ | `src/app/api/v1/issues/report/route.ts` | Token Akses Peribadi GitHub dengan skop `issues:write`.                                                                                                                         |
+| `GITHUB_TOKEN`        | _(tidak ditetapkan)_ | pembantu pengelasan isu / ejen awan     | Token akses GitHub generik yang digunakan sebagai pilihan sandaran untuk `GITHUB_ISSUES_TOKEN` dan digunakan oleh pembantu ejen awan dalam `src/lib/skills/githubCollector.ts`. |
 
 ---
 

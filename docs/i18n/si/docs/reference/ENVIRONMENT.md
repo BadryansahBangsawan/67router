@@ -1382,11 +1382,11 @@ env var එකක් නොව කේත සංස්කරණයක් අව�
 
 Dashboard වෙතින් සෘජුවම ගැටලු වාර්තා කිරීමට පරිශීලකයින්ට ඉඩ දෙන්න.
 
-| විචල්යය               | පෙරනිමිය     | මූලාශ්ර ගොනුව                           | විස්තරය                                                                                                                                                 |
-| --------------------- | ------------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_ISSUES_REPO`  | _(සකසා නැත)_ | `src/app/api/v1/issues/report/route.ts` | `owner/repo` ආකෘතියේ repository එක.                                                                                                                     |
-| `GITHUB_ISSUES_TOKEN` | _(සකසා නැත)_ | `src/app/api/v1/issues/report/route.ts` | `issues:write` විෂයපථය සහිත GitHub Personal Access Token එක.                                                                                            |
-| `GITHUB_TOKEN`        | _(සකසා නැත)_ | ගැටලු වර්ගීකරණ / cloud agent සහායක      | `GITHUB_ISSUES_TOKEN` සඳහා fallback එකක් ලෙස භාවිත වන සහ `src/lib/cloudAgent/*` හි cloud agent සහායක මඟින් පරිභෝජනය කරන සාමාන්ය GitHub ප්රවේශ token එක. |
+| විචල්යය               | පෙරනිමිය     | මූලාශ්ර ගොනුව                           | විස්තරය                                                                                                                                                              |
+| --------------------- | ------------ | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(සකසා නැත)_ | `src/app/api/v1/issues/report/route.ts` | `owner/repo` ආකෘතියේ repository එක.                                                                                                                                  |
+| `GITHUB_ISSUES_TOKEN` | _(සකසා නැත)_ | `src/app/api/v1/issues/report/route.ts` | `issues:write` විෂයපථය සහිත GitHub Personal Access Token එක.                                                                                                         |
+| `GITHUB_TOKEN`        | _(සකසා නැත)_ | ගැටලු වර්ගීකරණ / cloud agent සහායක      | `GITHUB_ISSUES_TOKEN` සඳහා fallback එකක් ලෙස භාවිත වන සහ `src/lib/skills/githubCollector.ts` හි cloud agent සහායක මඟින් පරිභෝජනය කරන සාමාන්ය GitHub ප්රවේශ token එක. |
 
 ---
 

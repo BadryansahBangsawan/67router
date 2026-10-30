@@ -24,7 +24,6 @@
 - [Skills 系統](#-skills-system)
 - [記憶系統](#-memory-system)
 - [Webhooks](#-webhooks)
-- [雲端代理](#-cloud-agents)
 - [程式化管理](#-programmatic-management)
 - [內部 CLI](#-internal-cli)
 - [桌面應用程式（Electron）](#-desktop-application-electron)
@@ -1272,18 +1271,6 @@ OmniRoute 透過混合式檢索持久保存**長期對話記憶**：
 - 重試：採用指數退避進行 3 次嘗試，之後移至無效信件佇列
 
 完整結構定義請參閱 [WEBHOOKS.md](../frameworks/WEBHOOKS.md)。
-
----
-
-## ☁️ 雲端代理程式
-
-OmniRoute 可與雲端程式設計代理程式（**OpenAI Codex Cloud**、**Devin**、**Jules**、**Antigravity**）整合，讓您能從管理本機路由的同一個儀表板派送長時間執行的任務。
-
-- 在**儀表板 → 雲端代理程式**中建立任務，或透過 `POST /api/v1/agents/tasks` 建立
-- 追蹤每個任務的狀態、日誌與成品
-- 各提供者可使用自備的 API 金鑰 — 認證資料絕不會離開 OmniRoute 執行個體
-
-完整參考資料：[CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)。
 
 ---
 

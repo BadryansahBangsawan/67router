@@ -122,4 +122,3 @@ secara terpisah di environment target.
 - [Kontrak peluncuran CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Alat CLI](../reference/CLI-TOOLS.md)
 - [Server A2A](./A2A-SERVER.md)
-- [Agen cloud](./CLOUD_AGENT.md)

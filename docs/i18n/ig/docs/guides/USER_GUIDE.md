@@ -24,7 +24,6 @@ Nduzi zuru ezu maka ịhazi ndị na-enye ọrụ, imepụta combo, ijikọ ngwa
 - [Sistemụ Skills](#-skills-system)
 - [Sistemụ Memory](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [Nlekọta Site na Mmemme](#-programmatic-management)
 - [CLI Dị n’Ime](#-internal-cli)
 - [Ngwa Desktop (Electron)](#-desktop-application-electron)
@@ -1275,18 +1274,6 @@ Debanye aha maka mmemme OmniRoute iji mee nlekota na akpaaka ozugbo.
 - Nnwale ọzọ: mgbalị 3 nwere oge nchere na-abawanye n'usoro exponential, emesịa ebufe ya na dead-letter queue
 
 Schema zuru ezu dị na [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Ndị Nnọchiteanya Cloud
-
-OmniRoute na-ejikọta na ndị nnọchiteanya cloud maka ide koodu (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ka ị nwee ike iziga ọrụ ndị na-ewe ogologo oge site n'otu dashboard ahụ nke na-ahụ maka routing mpaghara gị.
-
-- Mepụta ọrụ na **Dashboard → Cloud Agents** ma ọ bụ site na `POST /api/v1/agents/tasks`
-- Soro ọnọdụ, ndekọ, na artifacts nke ọrụ ọ bụla
-- Weta igodo API nke gị maka provider ọ bụla — ozi nzere anaghị apụ n'ime instance OmniRoute
-
-Ntụaka zuru ezu: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

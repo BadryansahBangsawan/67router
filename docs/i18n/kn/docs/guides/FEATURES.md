@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 ಆವೃತ್ತಿ ಚಕ್ರವು ಶೂನ್ಯ-ಸ�
 - 🤝 **GitLab Duo OAuth ಪೂರೈಕೆದಾರ** — GitLab ರುಜುವಾತುಗಳೊಂದಿಗೆ ಲಾಗಿನ್ ಮಾಡಿ
 - 🧠 **Reasoning Replay Cache** — ತಾರ್ಕಿಕ ಚಿಂತನೆಯ ಟ್ರೇಸ್ಗಳ ಹೈಬ್ರಿಡ್ ಇನ್-ಮೆಮೊರಿ + SQLite ಸ್ಥಿರ ಸಂಗ್ರಹಣೆ
 
-📚 **ಸಂಬಂಧಿತ ದಸ್ತಾವೇಜುಗಳು:** [ಕೌಶಲ್ಯಗಳ ಫ್ರೇಮ್ವರ್ಕ್](../frameworks/SKILLS.md) · [ಮೆಮೊರಿ ಸಿಸ್ಟಮ್](../frameworks/MEMORY.md) · [ಕ್ಲೌಡ್ ಏಜೆಂಟ್ಗಳು](../frameworks/CLOUD_AGENT.md) · [ವೆಬ್ಹುಕ್ಗಳು](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 ಪೂರೈಕೆದಾರರು

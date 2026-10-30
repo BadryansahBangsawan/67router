@@ -24,7 +24,6 @@
 - [የክህሎቶች ሥርዓት](#-skills-system)
 - [የማስታወሻ ሥርዓት](#-memory-system)
 - [Webhooks](#-webhooks)
-- [የደመና ወኪሎች](#-cloud-agents)
 - [ፕሮግራማዊ አስተዳደር](#-programmatic-management)
 - [ውስጣዊ CLI](#-internal-cli)
 - [የዴስክቶፕ መተግበሪያ (Electron)](#-desktop-application-electron)
@@ -1277,18 +1276,6 @@ OmniRoute በድብልቅ ሰርስሮ ማውጣት አማካኝነት **የረ�
 - ዳግም ሙከራዎች፦ እየጨመረ በሚሄድ የጥበቃ ጊዜ 3 ሙከራዎች፣ ከዚያም ያልተሳኩ መልዕክቶች ወረፋ
 
 ሙሉው እቅድ በ[WEBHOOKS.md](../frameworks/WEBHOOKS.md) ውስጥ ይገኛል።
-
----
-
-## ☁️ የደመና ኤጀንቶች
-
-OmniRoute ረጅም ጊዜ የሚወስዱ ተግባራትን የአካባቢዎን ማስተላለፊያ ከሚያስተዳድረው ተመሳሳይ ዳሽቦርድ ለመላክ እንዲችሉ ከደመና የኮድ ኤጀንቶች (**OpenAI Codex Cloud**፣ **Devin**፣ **Jules**፣ **Antigravity**) ጋር ይዋሃዳል።
-
-- ተግባራትን በ**Dashboard → Cloud Agents** ውስጥ ወይም በ`POST /api/v1/agents/tasks` በኩል ይፍጠሩ
-- የእያንዳንዱን ተግባር ሁኔታ፣ ምዝግቦች እና ውጤቶች ይከታተሉ
-- ለእያንዳንዱ አቅራቢ የራስዎን API ቁልፍ ይጠቀሙ — የመግቢያ ማስረጃዎች ከOmniRoute አብነት ፈጽሞ አይወጡም
-
-ሙሉ ማጣቀሻ፦ [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)።
 
 ---
 

@@ -24,7 +24,6 @@ Confronto oggettivo delle funzionalità rispetto ai più diffusi router AI open-
 | **Protocollo A2A**                                            |                  ✅ 6 skill                   |         ❌         |        ❌         |       ❌       |
 | **Memoria (FTS5 + vettoriale)**                               |                      ✅                       |         ❌         |        ❌         |       ❌       |
 | **Guardrail (PII, injection, visione)**                       |                      ✅                       |      parziale      |        ❌         | ✅ a pagamento |
-| **Integrazioni con agenti cloud**                             |          Codex, Cursor, Devin, Jules          |         ❌         |        ❌         |       ❌       |
 | **Circuit breaker per provider**                              |         ✅ a 3 stati, ripristino lazy         |        base        |        ❌         |       ✅       |
 | **Fingerprint TLS stealth (JA3/JA4)**                         |                  ✅ wreq-js                   |         ❌         |        ❌         |       ❌       |
 | **Framework di valutazione**                                  |                 ✅ integrato                  |         ❌         |        ❌         | ⚠ a pagamento  |

@@ -1760,31 +1760,6 @@ Używane przez podsystem automatycznego zarządzania kluczami do wydawania i rot
 
 ---
 
-## Protokół agentów
-
-Zadania agentów chmurowych (Claude Code, Codex Cloud, OpenHands itp.) wykonywane zdalnie w imieniu użytkowników OmniRoute.
-
-| Metoda | Ścieżka                       | Opis                                                                                                                                                          |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Wyświetla listę zadań — opcjonalne `?provider=`, `?status=`, `?limit=` (1–500, domyślnie 50)                                                                  |
-| POST   | `/api/v1/agents/tasks`        | Tworzy zadanie — treść żądania walidowana przez `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Zwraca `201` z obwiednią zadania |
-| DELETE | `/api/v1/agents/tasks?id=...` | Usuwa zadanie                                                                                                                                                 |
-| GET    | `/api/v1/agents/tasks/[id]`   | Odczytuje zadanie — synchronicznie odświeża stan z nadrzędnego agenta chmurowego, gdy ustawiono `external_id`                                                 |
-| POST   | `/api/v1/agents/tasks/[id]`   | Akcja rozróżniana: `{action: "approve"}`, `{action: "message", message}` lub `{action: "cancel"}`                                                             |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Usuwa określone zadanie według identyfikatora                                                                                                                 |
-
-> **Uwierzytelnianie:** uwierzytelnianie zarządzania jest wymagane dla każdej metody (`requireCloudAgentManagementAuth`). Przed wersją v3.8.0 te punkty końcowe nie wymagały uwierzytelniania — zmianę niezgodną wstecznie opisuje commit `588a0333`.
-
-```bash
-# Utwórz zadanie chmurowe Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Serwery proxy zarządzania
 
 Wychodzące serwery proxy HTTP(S)/SOCKS, które można przypisać do dostawców, kont lub globalnie.
@@ -2287,5 +2262,3 @@ klucz API z zakresem zarządzania) oraz różnice między nimi a kluczami infere
 - Opcję `requireLogin` można przełączać za pomocą `/api/settings/require-login`
 - Trasy `/v1/*` mogą opcjonalnie wymagać klucza API Bearer, gdy `REQUIRE_API_KEY=true`
 - „token zarządzania” / „klucz API z zakresem zarządzania” w tym dokumencie oznacza jedną z rodzin opisanych w tym przewodniku — nie dodatkowy, niezdefiniowany typ sekretu
-
-> **Zmiana niezgodna wstecznie (v3.8.0)** — `/api/v1/agents/tasks/*` oraz punkty końcowe zarządzania okresem oczekiwania wymagają teraz **uwierzytelniania zarządzania** (pliku cookie panelu `auth_token` lub klucza API z zakresem zarządzania). Klienci, którzy wcześniej wywoływali te trasy bez uwierzytelniania, otrzymają odpowiedź `401 Unauthorized`. Zobacz commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

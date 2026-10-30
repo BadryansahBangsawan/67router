@@ -36,9 +36,6 @@
 //       bater bidirecionalmente com skills[].id expostos no Agent Card
 //       (src/app/.well-known/agent.json/route.ts). Divergência em qualquer direção = fail.
 //
-//   (6) CLOUD AGENTS — entradas de AGENTS em src/lib/cloudAgent/registry.ts DEVEM bater
-//       bidirecionalmente com os arquivos de classe em src/lib/cloudAgent/agents/
-//       (basename sem extensão). Divergência = fail.
 //
 // Catraca: cada divergência pré-existente fica numa allowlist documentada e sai 0 hoje.
 // Padrão herdado de scripts/check/check-provider-consistency.ts (gate .ts via
@@ -54,9 +51,9 @@
 // uma entrada nelas exige que o par/tool continue VIVO no registry — o oposto de
 // supressão — então a semântica de stale-enforcement não se aplica a elas.
 
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { dirname, resolve as resolvePath, basename, extname } from "node:path";
+import { dirname, resolve as resolvePath } from "node:path";
 import { assertNoStale } from "./lib/allowlist.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -408,67 +405,6 @@ export function diffA2ASkills(handlers: Set<string>, agentCard: Set<string>): A2
 }
 
 // ───────────────────────────────────────────────────────────────────────────
-// (6) CLOUD AGENTS — registry keys vs agent class files
-// ───────────────────────────────────────────────────────────────────────────
-
-export type CloudAgentDiff = {
-  /** Registry keys with no corresponding agent file in agents/ */
-  inRegistryNotFiles: string[];
-  /** Agent files with no corresponding registry key */
-  inFilesNotRegistry: string[];
-};
-
-/**
- * Bidirectionally diffs cloud agent registry keys against agent file basenames
- * (filename without extension, e.g. "codex.ts" → "codex"). Note: registry key
- * "codex-cloud" maps to file "codex.ts" — this mapping is handled by the
- * caller (main) which reads the actual class-name-to-key binding from registry.ts.
- * The pure function here just diffs two already-normalised sets.
- */
-export function diffCloudAgents(
-  registryKeys: Set<string>,
-  agentFiles: Set<string>
-): CloudAgentDiff {
-  const inRegistryNotFiles = [...registryKeys].filter((k) => !agentFiles.has(k)).sort();
-  const inFilesNotRegistry = [...agentFiles].filter((f) => !registryKeys.has(f)).sort();
-  return { inRegistryNotFiles, inFilesNotRegistry };
-}
-
-/**
- * Reads the registry.ts source file and returns the set of provider IDs
- * (keys in the AGENTS object literal).
- */
-export function extractCloudAgentRegistryKeys(registrySource: string): Set<string> {
-  // Match the AGENTS object: find start, extract keys
-  const start = registrySource.indexOf("const AGENTS: Record<string, CloudAgentBase> = {");
-  if (start < 0) throw new Error("could not find `const AGENTS:` in cloudAgent/registry.ts");
-  const end = registrySource.indexOf("\n};", start);
-  if (end < 0) throw new Error("could not find end of AGENTS map");
-  const block = registrySource.slice(start, end);
-  // Match quoted or bare keys: "codex-cloud": or jules:
-  const keyRe = /^\s*(?:"([^"]+)"|([A-Za-z0-9_$-]+))\s*:/gm;
-  const keys = new Set<string>();
-  let match: RegExpExecArray | null;
-  while ((match = keyRe.exec(block)) !== null) {
-    const key = match[1] ?? match[2];
-    // Skip the TypeScript type annotation line
-    if (key && key !== "Record") keys.add(key);
-  }
-  return keys;
-}
-
-/**
- * Lists agent file basenames (without extension) from the agents/ directory.
- * Maps known filename→registryKey aliases (e.g. "codex" → "codex-cloud").
- */
-export const AGENT_FILE_TO_REGISTRY_KEY: Record<string, string> = {
-  codex: "codex-cloud",
-  // #4227: file agents/cursor.ts ↔ registry key "cursor-cloud" (distinct from the
-  // OAuth chat provider `cursor`).
-  cursor: "cursor-cloud",
-};
-
-// ───────────────────────────────────────────────────────────────────────────
 // main() — importa módulos reais, lê fontes, roda as seis sub-checagens
 // ───────────────────────────────────────────────────────────────────────────
 
@@ -669,40 +605,6 @@ async function main(): Promise<void> {
     );
   }
 
-  // ── (6) Cloud agents ─────────────────────────────────────────────────────
-  const registrySource = readFileSync(
-    resolvePath(REPO_ROOT, "src/lib/cloudAgent/registry.ts"),
-    "utf8"
-  );
-  const registryKeys = extractCloudAgentRegistryKeys(registrySource);
-
-  // Read agent file basenames from agents/ directory, applying the alias map.
-  const agentsDir = resolvePath(REPO_ROOT, "src/lib/cloudAgent/agents");
-  const agentFileBases = new Set(
-    readdirSync(agentsDir)
-      .filter((f) => /\.(ts|js)$/.test(f) && !f.endsWith(".d.ts") && !f.endsWith(".test.ts"))
-      .map((f) => {
-        const base = basename(f, extname(f));
-        return AGENT_FILE_TO_REGISTRY_KEY[base] ?? base;
-      })
-  );
-
-  const { inRegistryNotFiles, inFilesNotRegistry } = diffCloudAgents(registryKeys, agentFileBases);
-  if (inRegistryNotFiles.length) {
-    failures.push(
-      `[cloud-agents] ${inRegistryNotFiles.length} chave(s) no registry sem arquivo de classe em agents/:\n` +
-        inRegistryNotFiles.map((k) => `    ✗ ${k}`).join("\n") +
-        `\n    → crie o arquivo src/lib/cloudAgent/agents/<name>.ts ou atualize AGENT_FILE_TO_REGISTRY_KEY.`
-    );
-  }
-  if (inFilesNotRegistry.length) {
-    failures.push(
-      `[cloud-agents] ${inFilesNotRegistry.length} arquivo(s) em agents/ sem entrada no registry:\n` +
-        inFilesNotRegistry.map((f) => `    ✗ ${f}`).join("\n") +
-        `\n    → registre o agente em src/lib/cloudAgent/registry.ts ou adicione o alias em AGENT_FILE_TO_REGISTRY_KEY.`
-    );
-  }
-
   // ── Resultado ─────────────────────────────────────────────────────────────
   if (failures.length) {
     console.error(
@@ -726,8 +628,7 @@ async function main(): Promise<void> {
       `${canonical.length} estratégias canônicas (${handled.size} via despacho + ${Object.keys(IMPLICIT_DEFAULT_STRATEGIES).length} default(s) implícito(s)); ` +
       `${livePairs.size} pares de tradutor vivos vs ${KNOWN_TRANSLATOR_PAIRS.length} congelados${newPairsNote}; ` +
       `${liveMcpToolNames.size} tools MCP (${toolsWithoutScopes.length === 0 ? "todos com scope" : `${toolsWithoutScopes.length} sem scope`}) vs ${KNOWN_MCP_TOOL_NAMES.length} congelados${newMcpNote}; ` +
-      `${handlerKeys.size} A2A skills (handlers↔card OK); ` +
-      `${registryKeys.size} cloud agents (registry↔files OK)`
+      `${handlerKeys.size} A2A skills (handlers↔card OK)`
   );
 }
 

@@ -43,8 +43,6 @@ Cykeln v3.7.x → v3.8.0 lade till automatisk routing utan konfiguration, nya le
 - 🤝 **GitLab Duo OAuth-leverantör** — logga in med GitLab-autentiseringsuppgifter
 - 🧠 **Reasoning Replay Cache** — hybridlagring av resonemangsspår i minnet och SQLite
 
-📚 **Relaterad dokumentation:** [Ramverk för färdigheter](../frameworks/SKILLS.md) · [Minnessystem](../frameworks/MEMORY.md) · [Molnagenter](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Leverantörer

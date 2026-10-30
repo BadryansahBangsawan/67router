@@ -1758,31 +1758,6 @@ Naudojama automatinio raktų valdymo posistemio API raktams išduoti ir keisti n
 
 ---
 
-## Agentų protokolas
-
-Debesijos agentų užduotys („Claude Code“, „Codex Cloud“, „OpenHands“ ir kt.), nuotoliniu būdu vykdomos „OmniRoute“ naudotojų vardu.
-
-| Metodas | Kelias                        | Aprašymas                                                                                                                                            |
-| ------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Pateikti užduočių sąrašą — pasirinktinai `?provider=`, `?status=`, `?limit=` (1–500, numatytoji reikšmė 50)                                          |
-| POST    | `/api/v1/agents/tasks`        | Sukurti užduotį — turinį patikrina `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Grąžina `201` su užduoties apvalkalu |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Ištrinti užduotį                                                                                                                                     |
-| GET     | `/api/v1/agents/tasks/[id]`   | Nuskaityti užduotį — sinchroniškai atnaujina būseną iš pirminio debesijos agento, kai nustatytas `external_id`                                       |
-| POST    | `/api/v1/agents/tasks/[id]`   | Veiksmas pagal skiriamąjį lauką: `{action: "approve"}`, `{action: "message", message}` arba `{action: "cancel"}`                                     |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Ištrinti konkrečią užduotį pagal ID                                                                                                                  |
-
-> **Autentifikavimas:** kiekvienam metodui būtinas valdymo autentifikavimas (`requireCloudAgentManagementAuth`). Iki v3.8.0 šie metodai nebuvo autentifikuojami — apie nesuderinamą pakeitimą žr. įsipareigojimą `588a0333`.
-
-```bash
-# Sukurti „Claude Code“ debesijos užduotį
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Valdymo tarpiniai serveriai
 
 Išeinamojo HTTP(S)/SOCKS srauto tarpiniai serveriai, kuriuos galima priskirti teikėjams, paskyroms arba visuotinai.
@@ -2287,5 +2262,3 @@ raktą ir valdymo aprėpties API raktą) bei jų skirtumus nuo išvadų generavi
 - `requireLogin` galima perjungti naudojant `/api/settings/require-login`
 - Kai `REQUIRE_API_KEY=true`, `/v1/*` maršrutams gali būti privalomas „Bearer“ API raktas
 - Šiame apraše „valdymo prieigos raktas“ / „valdymo aprėpties API raktas“ reiškia vieną iš tame vadove aprašytų grupių, o ne neapibrėžtą papildomą slaptojo rakto tipą
-
-> **Nesuderinamas pakeitimas (v3.8.0)** — `/api/v1/agents/tasks/*` ir atvėsimo laikotarpio valdymo galiniai taškai dabar reikalauja **valdymo autentifikavimo** (valdymo skydelio `auth_token` slapuko arba valdymo aprėpties API rakto). Klientai, kurie anksčiau šiuos maršrutus iškviesdavo be autentifikavimo, gaus `401 Unauthorized`. Žr. pakeitimą `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -43,8 +43,6 @@
 - 🤝 **ספק GitLab Duo OAuth** — כניסה באמצעות פרטי הזדהות של GitLab
 - 🧠 **מטמון הפעלה חוזרת של חשיבה** — שמירה היברידית בזיכרון וב-SQLite של עקבות חשיבה
 
-📚 **תיעוד קשור:** [מסגרת המיומנויות](../frameworks/SKILLS.md) · [מערכת הזיכרון](../frameworks/MEMORY.md) · [סוכני ענן](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [מטמון הפעלה חוזרת של חשיבה](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 ספקים

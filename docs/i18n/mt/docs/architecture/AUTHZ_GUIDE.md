@@ -215,8 +215,6 @@ L-infurzar tač-ċavetta tal-API tal-klijent juża `isRequireApiKeyEnabled()` f'
 
 ## Bidla li Tkisser il-Kompatibbiltà — v3.8.0
 
-L-endpoints `/api/v1/agents/tasks/*` u `/api/resilience/model-cooldowns` **issa jeħtieġu awtentikazzjoni tal-ġestjoni** (commit `588a0333`). Klijenti li qabel kienu jibagħtu ċavetta tal-API normali mingħajr l-ambitu `manage` jirċievu `403`. Migrazzjoni: jew assenja l-ambitu `manage` liċ-ċavetta fid-dashboard API Keys, jew uża sessjoni tad-dashboard illoggjata.
-
 ## Bidla fl-Imġiba — v3.8.2
 
 `/api/mcp/*` (is-server remot tal-MCP) għadu LOCAL_ONLY b’mod awtomatiku, iżda issa jaċċetta talbiet mhux loopback meta l-header `Authorization: Bearer <api-key>` ikun fih l-ambitu `manage`. L-eċċezzjoni hija kkontrollata espliċitament għal kull path permezz ta’ `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` f’`src/server/authz/routeGuard.ts`; il-prefiss LOCAL_ONLY relatat `/api/cli-tools/runtime/*` intenzjonalment ma jistax jiġi bypassed għax jista’ jniedi subproċessi arbitrarji. Talbiet anonimi lejn `/api/mcp/*` minn konnessjonijiet mhux loopback jibqgħu jirritornaw `403 LOCAL_ONLY` — l-imġiba awtomatika għal kull path LOCAL_ONLY ġdid tibqa’ strict-loopback. Ara [Livelli tal-Gwardja tar-Rotot](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

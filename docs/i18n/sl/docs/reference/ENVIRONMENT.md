@@ -1347,11 +1347,11 @@ njihovo spreminjanje zahteva urejanje kode, ne okoljske spremenljivke:
 
 Uporabnikom omogočite prijavljanje težav neposredno z nadzorne plošče.
 
-| Spremenljivka         | Privzeto           | Izvorna datoteka                              | Opis                                                                                                                                                                     |
-| --------------------- | ------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(ni nastavljeno)_ | `src/app/api/v1/issues/report/route.ts`       | Repozitorij v obliki `owner/repo`.                                                                                                                                       |
-| `GITHUB_ISSUES_TOKEN` | _(ni nastavljeno)_ | `src/app/api/v1/issues/report/route.ts`       | GitHubov osebni žeton za dostop z obsegom `issues:write`.                                                                                                                |
-| `GITHUB_TOKEN`        | _(ni nastavljeno)_ | pomočniki za razvrščanje težav/oblačne agente | Splošni GitHubov žeton za dostop, ki se uporablja kot nadomestna možnost za `GITHUB_ISSUES_TOKEN` in ga uporabljajo pomočniki oblačnih agentov v `src/lib/cloudAgent/*`. |
+| Spremenljivka         | Privzeto           | Izvorna datoteka                              | Opis                                                                                                                                                                                  |
+| --------------------- | ------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(ni nastavljeno)_ | `src/app/api/v1/issues/report/route.ts`       | Repozitorij v obliki `owner/repo`.                                                                                                                                                    |
+| `GITHUB_ISSUES_TOKEN` | _(ni nastavljeno)_ | `src/app/api/v1/issues/report/route.ts`       | GitHubov osebni žeton za dostop z obsegom `issues:write`.                                                                                                                             |
+| `GITHUB_TOKEN`        | _(ni nastavljeno)_ | pomočniki za razvrščanje težav/oblačne agente | Splošni GitHubov žeton za dostop, ki se uporablja kot nadomestna možnost za `GITHUB_ISSUES_TOKEN` in ga uporabljajo pomočniki oblačnih agentov v `src/lib/skills/githubCollector.ts`. |
 
 ---
 

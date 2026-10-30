@@ -698,54 +698,6 @@
       "yes": "Megerősítési kérdés kihagyása"
     }
   },
-  "cloud": {
-    "description": "Felhőalapú AI-ügynökfeladatok kezelése (codex, devin, jules)",
-    "agents": {
-      "description": "Elérhető felhőalapú ügynökök listázása"
-    },
-    "agent": {
-      "description": "A(z) {agent} felhőalapú ügynök feladatainak kezelése",
-      "auth": {
-        "description": "A(z) {agent} engedélyezése OAuth használatával"
-      }
-    },
-    "task": {
-      "description": "Felhőalapú ügynökfeladatok kezelése",
-      "create": {
-        "description": "Új ügynökfeladat létrehozása",
-        "title": "Feladat címe (alapértelmezés szerint a prompt első 80 karaktere)",
-        "prompt": "A feladat promptjának szövege",
-        "prompt_file": "Prompt beolvasása fájlból",
-        "repo": "A feladathoz klónozandó adattár URL-je",
-        "branch": "Használandó ág neve",
-        "metadata": "JSON-metaadatobjektum"
-      },
-      "list": {
-        "description": "Ügynökfeladatok listázása",
-        "status": "Szűrés állapot szerint (running|completed|failed|cancelled)",
-        "limit": "Találatok maximális száma (alapértelmezett: 50)"
-      },
-      "get": {
-        "description": "Feladat részleteinek lekérése azonosító alapján"
-      },
-      "status": {
-        "description": "Feladat állapotának kiírása (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Futó feladat megszakítása",
-        "yes": "Megerősítési kérdés kihagyása"
-      },
-      "approve": {
-        "description": "Az ügynök tervének jóváhagyása a végrehajtás elindításához"
-      },
-      "message": {
-        "description": "Üzenet küldése egy futó feladatnak"
-      }
-    },
-    "sources": {
-      "description": "Egy feladat által létrehozott forrásfájlok listázása"
-    }
-  },
   "program": {
     "description": "OmniRoute — Intelligens AI útválasztó automatikus fallbackkel",
     "version": "Verzió kiírása és kilépés",

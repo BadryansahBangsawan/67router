@@ -128,7 +128,6 @@ v3.8.0 प्लेटफ़ॉर्म के लिए कैनोनिक�
 - `/dashboard/limits` — कोटा/दर नियंत्रण
 - `/dashboard/cli-tools` — CLI ऑनबोर्डिंग, रनटाइम पहचान, कॉन्फ़िगरेशन जनरेशन
 - `/dashboard/agents` — पहचाने गए ACP एजेंट + कस्टम एजेंट पंजीकरण
-- `/dashboard/cloud-agents` — क्लाउड-होस्ट किए गए एजेंट कार्य (Codex Cloud, Devin, Jules) और कार्य जीवनचक्र
 - `/dashboard/skills` — A2A कौशल रजिस्ट्री, सैंडबॉक्स निष्पादन, अंतर्निहित कौशल कैटलॉग
 - `/dashboard/memory` — स्थायी संवादात्मक मेमोरी का निरीक्षण और पुनर्प्राप्ति
 - `/dashboard/webhooks` — आउटबाउंड वेबहुक सदस्यताएँ, सीक्रेट रोटेशन, पुनः प्रयास के आँकड़े
@@ -381,23 +380,6 @@ Auto Combo स्थिर कॉम्बो परिभाषा पर न�
 
 पूर्ण एल्गोरिद्मिक विवरण (कारक सूत्र, भार समायोजन) के लिए,
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) देखें।
-
-### B. Cloud Agents
-
-Cloud Agents तृतीय-पक्ष द्वारा होस्ट किए गए कोड-एजेंट प्लेटफ़ॉर्म (Codex Cloud, Devin,
-Jules) को एक समान, DB-समर्थित कार्य जीवनचक्र के पीछे समाहित करता है। कार्य बनाने और उनका निरीक्षण करने वाले
-सभी एंडपॉइंट के लिए प्रबंधन प्रमाणीकरण आवश्यक है।
-
-- मॉड्यूल रूट: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, साथ ही `agents/` के अंतर्गत प्रत्येक एजेंट की उप-डायरेक्टरी)
-- प्रत्येक एजेंट का कार्यान्वयन: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- सार्वजनिक एंडपॉइंट: `/api/v1/agents/tasks/*` (सूचीबद्ध करना/बनाना/प्राप्त करना/रद्द करना)
-- प्रबंधन एंडपॉइंट: `/api/cloud/*` (प्रोविज़निंग, स्थिति, बैच)
-- डैशबोर्ड: `/dashboard/cloud-agents`
-- स्टोरेज: `cloud_agent_tasks` तालिका
-
-प्रत्येक एजेंट की प्रोविज़निंग और OAuth संबंधी विशिष्टताओं के लिए,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) देखें।
 
 ### C. Guardrails
 

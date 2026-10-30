@@ -121,4 +121,3 @@ SIGKILL を送信します。レガシープロンプトのタイムアウトで
 - [CLI 起動コントラクト](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ツール](../reference/CLI-TOOLS.md)
 - [A2A サーバー](./A2A-SERVER.md)
-- [クラウドエージェント](./CLOUD_AGENT.md)

@@ -43,8 +43,6 @@ Ciklus v3.7.x → v3.8.0 donio je automatsko usmjeravanje bez konfiguracije, nov
 - 🤝 **GitLab Duo OAuth pružatelj usluga** — prijava putem GitLab vjerodajnica
 - 🧠 **Predmemorija ponovnog odigravanja rezoniranja** — hibridna postojanost tragova rezoniranja u memoriji i SQLite bazi
 
-📚 **Povezana dokumentacija:** [Okvir vještina](../frameworks/SKILLS.md) · [Sustav memorije](../frameworks/MEMORY.md) · [Agenti u oblaku](../frameworks/CLOUD_AGENT.md) · [Webhookovi](../frameworks/WEBHOOKS.md) · [Predmemorija ponovnog odigravanja rezoniranja](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provideri

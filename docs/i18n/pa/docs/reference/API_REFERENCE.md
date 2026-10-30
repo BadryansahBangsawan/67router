@@ -1758,31 +1758,6 @@ OmniRoute ਇਵੈਂਟਾਂ (ਬੇਨਤੀ ਪੂਰੀ ਹੋਣਾ, ਕ�
 
 ---
 
-## ਏਜੰਟ ਪ੍ਰੋਟੋਕੋਲ
-
-OmniRoute ਵਰਤੋਂਕਾਰਾਂ ਦੀ ਤਰਫ਼ੋਂ ਰਿਮੋਟ ਤੌਰ 'ਤੇ ਚਲਾਏ ਜਾਂਦੇ ਕਲਾਉਡ ਏਜੰਟ ਟਾਸਕ (Claude Code, Codex Cloud, OpenHands ਆਦਿ)।
-
-| ਵਿਧੀ   | ਪਾਥ                           | ਵੇਰਵਾ                                                                                                                                                             |
-| ------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | ਟਾਸਕਾਂ ਦੀ ਸੂਚੀ — ਵਿਕਲਪਿਕ `?provider=`, `?status=`, `?limit=` (1–500, ਮੂਲ 50)                                                                                      |
-| POST   | `/api/v1/agents/tasks`        | ਟਾਸਕ ਬਣਾਓ — ਬਾਡੀ ਨੂੰ `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ਦੁਆਰਾ ਪ੍ਰਮਾਣਿਤ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਟਾਸਕ ਐਨਵਲਪ ਸਮੇਤ `201` ਵਾਪਸ ਕਰਦਾ ਹੈ |
-| DELETE | `/api/v1/agents/tasks?id=...` | ਕੋਈ ਟਾਸਕ ਮਿਟਾਓ                                                                                                                                                    |
-| GET    | `/api/v1/agents/tasks/[id]`   | ਟਾਸਕ ਪੜ੍ਹੋ — ਜਦੋਂ ਕੋਈ `external_id` ਸੈੱਟ ਹੋਵੇ, ਤਾਂ ਅੱਪਸਟ੍ਰੀਮ ਕਲਾਉਡ ਏਜੰਟ ਤੋਂ ਸਥਿਤੀ ਨੂੰ ਸਮਕਾਲੀ ਢੰਗ ਨਾਲ ਤਾਜ਼ਾ ਕਰਦਾ ਹੈ                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | ਭੇਦਕ ਕਾਰਵਾਈ: `{action: "approve"}`, `{action: "message", message}`, ਜਾਂ `{action: "cancel"}`                                                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id ਦੁਆਰਾ ਕੋਈ ਖਾਸ ਟਾਸਕ ਮਿਟਾਓ                                                                                                                                       |
-
-> **ਪ੍ਰਮਾਣੀਕਰਨ:** ਹਰ ਵਿਧੀ ਲਈ ਪ੍ਰਬੰਧਨ ਪ੍ਰਮਾਣੀਕਰਨ ਲਾਜ਼ਮੀ ਹੈ (`requireCloudAgentManagementAuth`)। v3.8.0 ਤੋਂ ਪਹਿਲਾਂ ਇਹ ਬਿਨਾਂ ਪ੍ਰਮਾਣੀਕਰਨ ਦੇ ਸਨ — ਬ੍ਰੇਕਿੰਗ ਤਬਦੀਲੀ ਲਈ commit `588a0333` ਵੇਖੋ।
-
-```bash
-# ਇੱਕ Claude Code ਕਲਾਉਡ ਟਾਸਕ ਬਣਾਓ
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## ਪ੍ਰਬੰਧਨ ਪ੍ਰਾਕਸੀ
 
 ਆਊਟਬਾਊਂਡ HTTP(S)/SOCKS ਪ੍ਰਾਕਸੀ, ਜਿਨ੍ਹਾਂ ਨੂੰ ਪ੍ਰਦਾਤਾਵਾਂ, ਖਾਤਿਆਂ ਜਾਂ ਗਲੋਬਲ ਤੌਰ 'ਤੇ ਨਿਰਧਾਰਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
@@ -2286,5 +2261,3 @@ OmniRoute ਪਲੱਗਇਨਾਂ (ਤੀਜੀ-ਧਿਰ ਐਕਸਟੈਂਸ
 - `requireLogin` ਨੂੰ `/api/settings/require-login` ਰਾਹੀਂ ਟੌਗਲ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ
 - ਜਦੋਂ `REQUIRE_API_KEY=true` ਹੋਵੇ, ਤਾਂ `/v1/*` ਰੂਟਾਂ ਲਈ ਵਿਕਲਪਿਕ ਤੌਰ 'ਤੇ ਬੇਅਰਰ API ਕੁੰਜੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ
 - ਇਸ ਹਵਾਲੇ ਵਿੱਚ "ਪ੍ਰਬੰਧਨ ਟੋਕਨ" / "ਪ੍ਰਬੰਧਨ-ਸਕੋਪ ਵਾਲੀ API ਕੁੰਜੀ" ਦਾ ਅਰਥ ਉਸ ਗਾਈਡ ਵਿੱਚ ਦਿੱਤੇ ਪਰਿਵਾਰਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ — ਕੋਈ ਅਪਰਿਭਾਸ਼ਿਤ ਵਾਧੂ ਗੁਪਤ ਕਿਸਮ ਨਹੀਂ
-
-> **ਅਨੁਕੂਲਤਾ ਤੋੜਨ ਵਾਲਾ ਬਦਲਾਅ (v3.8.0)** — `/api/v1/agents/tasks/*` ਅਤੇ ਕੂਲਡਾਊਨ ਪ੍ਰਬੰਧਨ ਐਂਡਪੌਇੰਟਾਂ ਲਈ ਹੁਣ **ਪ੍ਰਬੰਧਨ ਪ੍ਰਮਾਣੀਕਰਨ** (ਡੈਸ਼ਬੋਰਡ `auth_token` ਕੁਕੀ ਜਾਂ ਪ੍ਰਬੰਧਨ-ਸਕੋਪ ਵਾਲੀ API ਕੁੰਜੀ) ਦੀ ਲੋੜ ਹੈ। ਜਿਹੜੇ ਕਲਾਇੰਟ ਪਹਿਲਾਂ ਬਿਨਾਂ ਪ੍ਰਮਾਣੀਕਰਨ ਦੇ ਇਨ੍ਹਾਂ ਰੂਟਾਂ ਨੂੰ ਕਾਲ ਕਰਦੇ ਸਨ, ਉਨ੍ਹਾਂ ਨੂੰ `401 Unauthorized` ਮਿਲੇਗਾ। ਕਮਿਟ `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) ਵੇਖੋ।

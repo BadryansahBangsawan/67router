@@ -244,17 +244,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 રનટાઇમ રાઉટિંગ/કૅશ/કમ્પ્રેશન/મેમરી/સ્કિલ્સ/પ્રોક્સી/કૉન્ટેક્સ્ટ-સોર્સ ઑપરેશન્સ સુધી મર્યાદિત છે. v3.8.0 માં MCP સર્વરની
 સાથે બે સંલગ્ન ફ્રેમવર્ક્સ પણ આપવામાં આવે છે અને તેમનું દસ્તાવેજીકરણ અલગથી કરેલું છે:
 
-### ક્લાઉડ એજન્ટ્સ
-
-ક્લાઉડ એજન્ટ્સ આઉટ-ઓફ-પ્રોસેસ AI કોડિંગ એજન્ટ્સ (codex-cloud, cursor-cloud, devin, jules) છે, જે
-LLM પ્રદાતાઓ માટે વપરાતા સમાન કનેક્શન મોડેલ દ્વારા OmniRoute સાથે જોડાયેલા છે. તેઓ
-પોતાના REST સરફેસ (`/api/v1/agents/*`) દ્વારા ઉપલબ્ધ થાય છે અને MCP ટૂલ કેટલોગનો ભાગ **નથી**
-— ક્લાઉડ એજન્ટને કૉલ કરવાથી MCP સ્કોપનો ઉપયોગ થતો નથી.
-
-- અમલીકરણ: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- લાઇફસાઇકલ: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- દસ્તાવેજીકરણ: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### ગાર્ડરેલ્સ
 
 ગાર્ડરેલ્સ પૂર્વ/પશ્ચાત્-એક્ઝિક્યુશન ફિલ્ટર્સ (vision-bridge, pii-masker, prompt-injection) છે,

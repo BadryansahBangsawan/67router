@@ -229,8 +229,6 @@ Klient-API-nøglehåndhævelsen bruger `isRequireApiKeyEnabled()` i `src/shared/
 
 ## Inkompatibel ændring — v3.8.0
 
-Slutpunkterne `/api/v1/agents/tasks/*` og `/api/resilience/model-cooldowns` **kræver nu administrationsgodkendelse** (commit `588a0333`). Klienter, der tidligere sendte en normal API-nøgle uden adgangsområdet `manage`, modtager `403`. Migrering: Tildel enten nøglen adgangsområdet `manage` i API Keys-dashboardet, eller brug en dashboard-session, hvor der er logget ind.
-
 ## Adfærdsændring — v3.8.2
 
 `/api/mcp/*` (den eksterne MCP-server) er stadig LOCAL_ONLY som standard, men accepterer nu anmodninger, der ikke er loopback-anmodninger, når headeren `Authorization: Bearer <api-key>` indeholder adgangsområdet `manage`. Undtagelsen styres eksplicit pr. sti via `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` i `src/server/authz/routeGuard.ts`; det relaterede LOCAL_ONLY-præfiks `/api/cli-tools/runtime/*` kan bevidst IKKE omgås, fordi det kan starte vilkårlige underprocesser. Anonyme anmodninger til `/api/mcp/*`, der ikke er loopback-anmodninger, returnerer fortsat `403 LOCAL_ONLY` — standarden for enhver ny LOCAL_ONLY-sti er fortsat udelukkende at tillade loopback. Se [Niveauer for rutebeskyttelse](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

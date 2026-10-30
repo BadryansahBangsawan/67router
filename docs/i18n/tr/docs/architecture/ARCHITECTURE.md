@@ -128,7 +128,6 @@ diğerlerine alana özgü kılavuzlardan bağlantı verilmiştir.
 - `/dashboard/limits` — kota/hız kontrolleri
 - `/dashboard/cli-tools` — CLI ilk kurulumu, çalışma zamanı algılama ve yapılandırma oluşturma
 - `/dashboard/agents` — algılanan ACP ajanları ve özel ajan kaydı
-- `/dashboard/cloud-agents` — bulutta barındırılan ajan görevleri (Codex Cloud, Devin, Jules) ve görev yaşam döngüsü
 - `/dashboard/skills` — A2A beceri kayıt defteri, korumalı alan yürütmesi ve yerleşik beceri kataloğu
 - `/dashboard/memory` — kalıcı konuşma belleğini inceleme ve geri getirme
 - `/dashboard/webhooks` — giden webhook abonelikleri, gizli anahtar döndürme ve yeniden deneme istatistikleri
@@ -379,23 +378,6 @@ Temel yetenekler:
 
 Algoritmaya ilişkin tüm ayrıntılar (faktör formülleri, ağırlık ayarlama) için
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) belgesine bakın.
-
-### B. Bulut Aracıları
-
-Bulut Aracıları, üçüncü taraf barındırılan kod aracısı platformlarını (Codex Cloud, Devin,
-Jules) tek tip, veritabanı destekli bir görev yaşam döngüsünün arkasında birleştirir. Tüm görev oluşturma/inceleme
-uç noktaları yönetim kimlik doğrulaması gerektirir.
-
-- Modül kökü: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` ve `agents/` altındaki aracı başına alt dizinler)
-- Aracı başına uygulamalar: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Genel uç noktalar: `/api/v1/agents/tasks/*` (listeleme/oluşturma/getirme/iptal etme)
-- Yönetim uç noktaları: `/api/cloud/*` (kaynak sağlama, durum, toplu işlemler)
-- Kontrol paneli: `/dashboard/cloud-agents`
-- Depolama: `cloud_agent_tasks` tablosu
-
-Aracı başına kaynak sağlama ve OAuth ayrıntıları için
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) belgesine bakın.
 
 ### C. Koruma Önlemleri
 

@@ -135,7 +135,6 @@ Główne strony w `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kontrole quota/rate
 - `/dashboard/cli-tools` — onboarding CLI, detekcja runtime, generowanie konfiguracji
 - `/dashboard/agents` — wykryte agenty ACP + rejestracja niestandardowych agentów
-- `/dashboard/cloud-agents` — zadania agentów hostowanych w chmurze (Codex Cloud, Devin, Jules) i cykl życia zadań
 - `/dashboard/skills` — rejestr skilli A2A, wykonanie w sandboxie, katalog wbudowanych skilli
 - `/dashboard/memory` — podgląd i retrieval trwałej pamięci konwersacyjnej
 - `/dashboard/webhooks` — subskrypcje webhooków wychodzących, rotacja sekretów, statystyki retry
@@ -389,23 +388,6 @@ Najważniejsze możliwości:
 
 Pełne szczegóły algorytmiczne (wzory czynników, dostrajanie wag) znajdują się w
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agenci chmurowi
-
-Agenci chmurowi udostępniają zewnętrzne, hostowane platformy agentów programistycznych (Codex Cloud, Devin,
-Jules) za jednolitym, opartym na bazie danych cyklem życia zadań. Wszystkie punkty końcowe
-tworzenia i inspekcji zadań wymagają uwierzytelnienia administracyjnego.
-
-- Katalog główny modułu: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` oraz podkatalogi poszczególnych agentów w `agents/`)
-- Implementacje poszczególnych agentów: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Publiczne punkty końcowe: `/api/v1/agents/tasks/*` (wyświetlanie/tworzenie/pobieranie/anulowanie)
-- Administracyjne punkty końcowe: `/api/cloud/*` (aprowizacja, status, operacje wsadowe)
-- Panel: `/dashboard/cloud-agents`
-- Przechowywanie danych: tabela `cloud_agent_tasks`
-
-Szczegóły dotyczące aprowizacji i OAuth dla poszczególnych agentów znajdują się w
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Mechanizmy ochronne
 

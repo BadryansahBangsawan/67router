@@ -1761,31 +1761,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## بروتوكول الوكلاء
-
-مهام الوكلاء السحابيين (Claude Code وCodex Cloud وOpenHands وغيرها) التي تُنفَّذ عن بُعد نيابةً عن مستخدمي OmniRoute.
-
-| الطريقة | المسار                        | الوصف                                                                                                                                                       |
-| ------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | سرد المهام — مع دعم اختياري لـ `?provider=` و`?status=` و`?limit=` (من 1 إلى 500، والقيمة الافتراضية 50)                                                    |
-| POST    | `/api/v1/agents/tasks`        | إنشاء مهمة — يجري التحقق من صحة النص الأساسي بواسطة `CreateCloudAgentTaskSchema` (`providerId` و`prompt` و`source` و`options?`). يُرجع `201` مع غلاف المهمة |
-| DELETE  | `/api/v1/agents/tasks?id=...` | حذف مهمة                                                                                                                                                    |
-| GET     | `/api/v1/agents/tasks/[id]`   | قراءة مهمة — يُحدِّث الحالة بشكل متزامن من الوكيل السحابي الخارجي عند تعيين `external_id`                                                                   |
-| POST    | `/api/v1/agents/tasks/[id]`   | إجراء مميَّز: `{action: "approve"}` أو `{action: "message", message}` أو `{action: "cancel"}`                                                               |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | حذف مهمة محددة حسب المعرّف                                                                                                                                  |
-
-> **المصادقة:** يلزم إجراء مصادقة الإدارة لكل طريقة (`requireCloudAgentManagementAuth`). قبل v3.8.0، لم تكن هذه الواجهات تتطلب المصادقة — راجع الالتزام `588a0333` لمعرفة التغيير غير المتوافق.
-
-```bash
-# إنشاء مهمة سحابية لـ Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## وكلاء الإدارة
 
 وكلاء HTTP(S)/SOCKS الصادرون الذين يمكن تعيينهم لمزوّدي الخدمة أو الحسابات أو على المستوى العام.
@@ -2291,5 +2266,3 @@ devin-cli وغيرها). راجع [مرجع المزوّدين](./PROVIDER_REFER
 - يمكن تبديل `requireLogin` عبر `/api/settings/require-login`
 - قد تتطلب مسارات `/v1/*` اختياريًا مفتاح API من نوع Bearer عندما تكون `REQUIRE_API_KEY=true`
 - يُقصد بـ «رمز الإدارة» / «مفتاح API بنطاق الإدارة» في هذا المرجع إحدى العائلات الواردة في ذلك الدليل — وليس نوعًا إضافيًا غير معرّف من الأسرار
-
-> **تغيير غير متوافق (v3.8.0)** — تتطلب الآن `/api/v1/agents/tasks/*` ونقاط نهاية إدارة فترة الانتظار **مصادقة الإدارة** (ملف تعريف الارتباط `auth_token` الخاص بلوحة المعلومات أو مفتاح API بنطاق الإدارة). ستتلقى التطبيقات العميلة التي كانت تستدعي هذه المسارات سابقًا من دون مصادقة الاستجابة `401 Unauthorized`. راجع الالتزام `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

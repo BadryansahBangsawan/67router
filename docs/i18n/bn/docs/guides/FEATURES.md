@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 চক্রে যোগ হয়েছে শূন্য-�
 - 🤝 **GitLab Duo OAuth প্রোভাইডার** — GitLab ক্রেডেনশিয়াল দিয়ে লগইন
 - 🧠 **Reasoning Replay Cache** — রিজনিং ট্রেসের হাইব্রিড ইন-মেমরি + SQLite পার্সিস্টেন্স
 
-📚 **সংশ্লিষ্ট ডকুমেন্ট:** [স্কিলস ফ্রেমওয়ার্ক](../frameworks/SKILLS.md) · [মেমরি সিস্টেম](../frameworks/MEMORY.md) · [ক্লাউড এজেন্ট](../frameworks/CLOUD_AGENT.md) · [ওয়েবহুক](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 প্রোভাইডারসমূহ

@@ -24,7 +24,6 @@
 - [Σύστημα Δεξιοτήτων](#-skills-system)
 - [Σύστημα Μνήμης](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Πράκτορες Cloud](#-cloud-agents)
 - [Διαχείριση μέσω Κώδικα](#-programmatic-management)
 - [Εσωτερικό CLI](#-internal-cli)
 - [Εφαρμογή Επιφάνειας Εργασίας (Electron)](#-desktop-application-electron)
@@ -1278,18 +1277,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 - Επαναλήψεις: 3 προσπάθειες με εκθετική καθυστέρηση, έπειτα ουρά νεκρών γραμμάτων
 
 Πλήρες σχήμα στο [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloud Agents
-
-Το OmniRoute ενσωματώνεται με cloud agents κωδικοποίησης (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ώστε να μπορείτε να αναθέτετε εργασίες μεγάλης διάρκειας από το ίδιο dashboard που διαχειρίζεται την τοπική σας δρομολόγηση.
-
-- Δημιουργήστε εργασίες στο **Dashboard → Cloud Agents** ή μέσω `POST /api/v1/agents/tasks`
-- Παρακολουθήστε κατάσταση, αρχεία καταγραφής και artifacts ανά εργασία
-- Χρησιμοποιήστε το δικό σας κλειδί API ανά πάροχο — τα διαπιστευτήρια δεν εγκαταλείπουν ποτέ την παρουσία του OmniRoute
-
-Πλήρης αναφορά: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

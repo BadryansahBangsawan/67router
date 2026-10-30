@@ -1766,31 +1766,6 @@ Používa ich subsystém automatickej správy kľúčov na vydávanie a rotáciu
 
 ---
 
-## Protokol agentov
-
-Úlohy cloudových agentov (Claude Code, Codex Cloud, OpenHands atď.) vykonávané vzdialene v mene používateľov OmniRoute.
-
-| Metóda | Cesta                         | Popis                                                                                                                                            |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Zoznam úloh — voliteľné `?provider=`, `?status=`, `?limit=` (1–500, predvolene 50)                                                               |
-| POST   | `/api/v1/agents/tasks`        | Vytvorenie úlohy — telo overené pomocou `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Vráti `201` s obálkou úlohy |
-| DELETE | `/api/v1/agents/tasks?id=...` | Odstránenie úlohy                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | Načítanie úlohy — synchrónne obnoví stav z nadradeného cloudového agenta, keď je nastavené `external_id`                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | Rozlíšená akcia: `{action: "approve"}`, `{action: "message", message}` alebo `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Odstránenie konkrétnej úlohy podľa ID                                                                                                            |
-
-> **Autentifikácia:** pri každej metóde sa vyžaduje autentifikácia správy (`requireCloudAgentManagementAuth`). Pred verziou v3.8.0 neboli tieto metódy autentifikované — zlomovú zmenu nájdete v commite `588a0333`.
-
-```bash
-# Vytvorenie cloudovej úlohy Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy servery správy
 
 Odchádzajúce proxy servery HTTP(S)/SOCKS, ktoré možno priradiť poskytovateľom, účtom alebo globálne.
@@ -2291,5 +2266,3 @@ Informácie o štyroch skupinách prihlasovacích údajov (relácia ovládacieho
 - Nastavenie `requireLogin` možno prepínať prostredníctvom `/api/settings/require-login`
 - Trasy `/v1/*` môžu voliteľne vyžadovať kľúč API typu Bearer, keď je `REQUIRE_API_KEY=true`
 - „token správy“ / „kľúč API s rozsahom správy“ v tejto referenčnej príručke označuje jednu zo skupín uvedených v danej príručke — nejde o nedefinovaný dodatočný typ tajného údaja
-
-> **Nekompatibilná zmena (v3.8.0)** — `/api/v1/agents/tasks/*` a koncové body správy časového obmedzenia teraz vyžadujú **autentifikáciu správy** (súbor cookie `auth_token` ovládacieho panela alebo kľúč API s rozsahom správy). Klienti, ktorí predtým volali tieto trasy bez autentifikácie, dostanú odpoveď `401 Unauthorized`. Pozrite si commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

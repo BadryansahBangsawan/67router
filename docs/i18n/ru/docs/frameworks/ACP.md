@@ -124,4 +124,3 @@ try {
 - [Контракты запуска CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Инструменты CLI](../reference/CLI-TOOLS.md)
 - [Сервер A2A](./A2A-SERVER.md)
-- [Облачные агенты](./CLOUD_AGENT.md)

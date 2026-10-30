@@ -1756,31 +1756,6 @@ OmniRoute واقعات (درخواست کی تکمیل، کوٹا ختم ہون�
 
 ---
 
-## ایجنٹس پروٹوکول
-
-Cloud agent ٹاسکس (Claude Code، Codex Cloud، OpenHands وغیرہ) جو OmniRoute صارفین کی جانب سے ریموٹ طور پر چلائے جاتے ہیں۔
-
-| طریقہ  | پاتھ                          | تفصیل                                                                                                                                                               |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | ٹاسکس کی فہرست — اختیاری `?provider=`، `?status=`، `?limit=` (1–500، ڈیفالٹ 50)                                                                                     |
-| POST   | `/api/v1/agents/tasks`        | ٹاسک بنائیں — باڈی کی توثیق `CreateCloudAgentTaskSchema` (`providerId`، `prompt`، `source`، `options?`) کے ذریعے کی جاتی ہے۔ ٹاسک انویلپ کے ساتھ `201` واپس کرتا ہے |
-| DELETE | `/api/v1/agents/tasks?id=...` | ٹاسک حذف کریں                                                                                                                                                       |
-| GET    | `/api/v1/agents/tasks/[id]`   | ٹاسک پڑھیں — جب `external_id` سیٹ ہو تو upstream cloud agent سے اسٹیٹس کو ہم وقتی طور پر ریفریش کرتا ہے                                                             |
-| POST   | `/api/v1/agents/tasks/[id]`   | امتیازی ایکشن: `{action: "approve"}`، `{action: "message", message}`، یا `{action: "cancel"}`                                                                       |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id کے ذریعے مخصوص ٹاسک حذف کریں                                                                                                                                     |
-
-> **تصدیق:** ہر طریقے پر management auth درکار ہے (`requireCloudAgentManagementAuth`)۔ v3.8.0 سے پہلے یہ بغیر تصدیق کے تھے — اس breaking change کے لیے commit `588a0333` دیکھیں۔
-
-```bash
-# Claude Code کا cloud task بنائیں
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## مینجمنٹ پراکسیز
 
 آؤٹ باؤنڈ HTTP(S)/SOCKS پراکسیز جنہیں providers، accounts، یا عالمی سطح پر تفویض کیا جا سکتا ہے۔
@@ -2285,5 +2260,3 @@ OmniRoute پلگ اِنز (فریقِ ثالث ایکسٹینشنز) کا نظم
 - `requireLogin` کو `/api/settings/require-login` کے ذریعے فعال یا غیر فعال کیا جا سکتا ہے
 - جب `REQUIRE_API_KEY=true` ہو تو `/v1/*` روٹس کے لیے اختیاری طور پر بیئرر API کلید درکار ہوتی ہے
 - اس حوالہ میں "انتظامی ٹوکن" / "انتظامی دائرۂ کار والی API کلید" سے مراد اس رہنما میں بیان کردہ اقسام میں سے کوئی ایک ہے — کوئی غیر متعین اضافی خفیہ قسم نہیں
-
-> **اہم تبدیلی (v3.8.0)** — `/api/v1/agents/tasks/*` اور کول ڈاؤن کے انتظامی اینڈ پوائنٹس کے لیے اب **انتظامی توثیق** (ڈیش بورڈ `auth_token` کوکی یا انتظامی دائرۂ کار والی API کلید) درکار ہے۔ وہ کلائنٹس جو پہلے توثیق کے بغیر ان روٹس کو کال کرتے تھے، اب `401 Unauthorized` وصول کریں گے۔ کمٹ `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) دیکھیں۔

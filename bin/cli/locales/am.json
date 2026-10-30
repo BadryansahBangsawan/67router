@@ -698,54 +698,6 @@
       "yes": "የማረጋገጫ ጥያቄውን ዝለል"
     }
   },
-  "cloud": {
-    "description": "የደመና AI ወኪል ተግባራትን (codex, devin, jules) አስተዳድር",
-    "agents": {
-      "description": "ያሉትን የደመና ወኪሎች ዘርዝር"
-    },
-    "agent": {
-      "description": "የ{agent} የደመና ወኪል ተግባራትን አስተዳድር",
-      "auth": {
-        "description": "ለ{agent} በOAuth በኩል ፈቃድ ስጥ"
-      }
-    },
-    "task": {
-      "description": "የደመና ወኪል ተግባራትን አስተዳድር",
-      "create": {
-        "description": "አዲስ የወኪል ተግባር ፍጠር",
-        "title": "የተግባር ርዕስ (በነባሪ የጥያቄውን የመጀመሪያ 80 ቁምፊዎች ይጠቀማል)",
-        "prompt": "የተግባር ጥያቄ ጽሑፍ",
-        "prompt_file": "ጥያቄውን ከፋይል አንብብ",
-        "repo": "ለተግባሩ የሚባዛው የማከማቻ URL",
-        "branch": "የሚጠቀመው የቅርንጫፍ ስም",
-        "metadata": "የJSON ዲበ ውሂብ ነገር"
-      },
-      "list": {
-        "description": "የወኪል ተግባራትን ዘርዝር",
-        "status": "በሁኔታ አጣራ (running|completed|failed|cancelled)",
-        "limit": "ከፍተኛው የውጤቶች ብዛት (ነባሪ፦ 50)"
-      },
-      "get": {
-        "description": "የተግባር ዝርዝሮችን በID አግኝ"
-      },
-      "status": {
-        "description": "የተግባሩን ሁኔታ (running|completed|failed|cancelled) አትም"
-      },
-      "cancel": {
-        "description": "በሂደት ላይ ያለ ተግባርን ሰርዝ",
-        "yes": "የማረጋገጫ ጥያቄን ዝለል"
-      },
-      "approve": {
-        "description": "አፈጻጸሙን ለመጀመር የወኪሉን ዕቅድ አጽድቅ"
-      },
-      "message": {
-        "description": "በሂደት ላይ ላለ ተግባር መልዕክት ላክ"
-      }
-    },
-    "sources": {
-      "description": "በአንድ ተግባር የተፈጠሩ የምንጭ ፋይሎችን ዘርዝር"
-    }
-  },
   "program": {
     "description": "OmniRoute — ራስ-ሰር ተተኪ ያለው ብልህ AI ራውተር",
     "version": "ስሪቱን አትምና ውጣ",

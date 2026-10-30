@@ -24,7 +24,6 @@ Popüler açık kaynak AI yönlendiricileriyle tarafsız özellik karşılaştı
 | **A2A protokolü**                                   |                 ✅ 6 beceri                  |       ❌        |        ❌         |     ❌     |
 | **Bellek (FTS5 + vektör)**                          |                      ✅                      |       ❌        |        ❌         |     ❌     |
 | **Güvenlik korkulukları (PII, injection, görüntü)** |                      ✅                      |      kısmi      |        ❌         | ✅ ücretli |
-| **Bulut ajan entegrasyonları**                      |         Codex, Cursor, Devin, Jules          |       ❌        |        ❌         |     ❌     |
 | **Sağlayıcı başına devre kesici**                   |         ✅ 3 durumlu, lazy kurtarma          |      temel      |        ❌         |     ✅     |
 | **TLS parmak izi gizleme (JA3/JA4)**                |                  ✅ wreq-js                  |       ❌        |        ❌         |     ❌     |
 | **Değerlendirme (eval) çerçevesi**                  |                 ✅ yerleşik                  |       ❌        |        ❌         | ⚠ ücretli  |

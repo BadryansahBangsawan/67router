@@ -1362,11 +1362,11 @@ hindi env var:
 
 Payagan ang mga user na direktang mag-ulat ng mga isyu mula sa Dashboard.
 
-| Variable              | Default             | Source File                                  | Paglalarawan                                                                                                                                                       |
-| --------------------- | ------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(hindi nakatakda)_ | `src/app/api/v1/issues/report/route.ts`      | Repository na nasa format na `owner/repo`.                                                                                                                         |
-| `GITHUB_ISSUES_TOKEN` | _(hindi nakatakda)_ | `src/app/api/v1/issues/report/route.ts`      | GitHub Personal Access Token na may saklaw na `issues:write`.                                                                                                      |
-| `GITHUB_TOKEN`        | _(hindi nakatakda)_ | pag-uuri ng isyu / mga helper ng cloud agent | Pangkalahatang GitHub access token na ginagamit bilang fallback para sa `GITHUB_ISSUES_TOKEN` at ginagamit ng mga helper ng cloud agent sa `src/lib/cloudAgent/*`. |
+| Variable              | Default             | Source File                                  | Paglalarawan                                                                                                                                                                    |
+| --------------------- | ------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(hindi nakatakda)_ | `src/app/api/v1/issues/report/route.ts`      | Repository na nasa format na `owner/repo`.                                                                                                                                      |
+| `GITHUB_ISSUES_TOKEN` | _(hindi nakatakda)_ | `src/app/api/v1/issues/report/route.ts`      | GitHub Personal Access Token na may saklaw na `issues:write`.                                                                                                                   |
+| `GITHUB_TOKEN`        | _(hindi nakatakda)_ | pag-uuri ng isyu / mga helper ng cloud agent | Pangkalahatang GitHub access token na ginagamit bilang fallback para sa `GITHUB_ISSUES_TOKEN` at ginagamit ng mga helper ng cloud agent sa `src/lib/skills/githubCollector.ts`. |
 
 ---
 

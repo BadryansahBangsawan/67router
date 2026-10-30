@@ -43,8 +43,6 @@
 - 🤝 **Olùpèsè GitLab Duo OAuth** — wọlé pẹ̀lú àwọn ẹ̀rí GitLab
 - 🧠 **Reasoning Replay Cache** — ìtọ́jú àpapọ̀ inú-memory + SQLite fún àwọn ipa reasoning
 
-📚 **Àwọn ìwé tó jọmọ́:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Àwọn Olùpèsè

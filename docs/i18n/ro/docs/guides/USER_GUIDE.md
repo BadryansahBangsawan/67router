@@ -24,7 +24,6 @@ Ghid complet pentru configurarea furnizorilor, crearea combinațiilor, integrare
 - [Sistemul de abilități](#-skills-system)
 - [Sistemul de memorie](#-memory-system)
 - [Webhook-uri](#-webhooks)
-- [Agenți cloud](#-cloud-agents)
 - [Gestionare programatică](#-programmatic-management)
 - [CLI intern](#-internal-cli)
 - [Aplicație desktop (Electron)](#-desktop-application-electron)
@@ -1278,18 +1277,6 @@ Abonați-vă la evenimentele OmniRoute pentru monitorizare și automatizare în 
 - Reîncercări: 3 încercări cu întârziere exponențială, urmate de trimiterea în coada pentru mesaje nelivrate
 
 Schema completă este disponibilă în [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agenți în cloud
-
-OmniRoute se integrează cu agenți de programare în cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), astfel încât să puteți expedia sarcini de lungă durată din același panou de control care gestionează rutarea locală.
-
-- Creați sarcini în **Panou de control → Agenți în cloud** sau prin `POST /api/v1/agents/tasks`
-- Urmăriți starea, jurnalele și artefactele fiecărei sarcini
-- Folosiți propria cheie API pentru fiecare furnizor — datele de autentificare nu părăsesc niciodată instanța OmniRoute
-
-Referință completă: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

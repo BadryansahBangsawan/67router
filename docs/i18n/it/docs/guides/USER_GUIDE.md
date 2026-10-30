@@ -24,7 +24,6 @@ Guida completa alla configurazione dei provider, alla creazione delle combinazio
 - [Sistema delle skill](#-skills-system)
 - [Sistema di memoria](#-memory-system)
 - [Webhook](#-webhooks)
-- [Agenti cloud](#-cloud-agents)
 - [Gestione programmatica](#-programmatic-management)
 - [CLI interna](#-internal-cli)
 - [Applicazione desktop (Electron)](#-desktop-application-electron)
@@ -1279,18 +1278,6 @@ Sottoscrivi gli eventi di OmniRoute per il monitoraggio e l'automazione in tempo
 - Tentativi: 3 tentativi con backoff esponenziale, quindi inserimento nella coda dei messaggi non recapitabili
 
 Schema completo in [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agenti cloud
-
-OmniRoute si integra con agenti di programmazione cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), consentendoti di assegnare attività di lunga durata dalla stessa dashboard utilizzata per gestire l'instradamento locale.
-
-- Crea attività in **Dashboard → Cloud Agents** o tramite `POST /api/v1/agents/tasks`
-- Monitora stato, log e artefatti per ciascuna attività
-- Usa la tua chiave API per ogni provider — le credenziali non lasciano mai l'istanza OmniRoute
-
-Documentazione completa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

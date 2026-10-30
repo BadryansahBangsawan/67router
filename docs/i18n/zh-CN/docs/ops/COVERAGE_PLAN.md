@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          | 13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` | 13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  | 13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         | 13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      | 14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             | 14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              | 15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         | 15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          | 16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                | 16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` 是低覆盖率最密集的聚类，占据了剩余缺口的大部分。
 - 批量处理和重排序 API 路由（`src/app/api/v1/batches/**`、`src/app/api/v1/rerank/route.ts`）需要处理器级测试。
-- 云代理适配器（`src/lib/cloudAgent/agents/jules.ts`、`codex.ts`）和 `tierResolver.ts` 需要场景测试。
 - 文档界面组件和 `src/mitm/systemCommands.ts` 优先级较低，但属于低成本的分支覆盖收益。
 
 ## 执行检查清单

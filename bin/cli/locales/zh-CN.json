@@ -698,54 +698,6 @@
       "yes": "跳过确认提示"
     }
   },
-  "cloud": {
-    "description": "管理云 AI 代理任务（codex, devin, jules）",
-    "agents": {
-      "description": "列出可用的云代理"
-    },
-    "agent": {
-      "description": "管理 {agent} 云代理任务",
-      "auth": {
-        "description": "通过 OAuth 授权 {agent}"
-      }
-    },
-    "task": {
-      "description": "管理云代理任务",
-      "create": {
-        "description": "创建新的代理任务",
-        "title": "任务标题（默认为提示的前 80 个字符）",
-        "prompt": "任务提示文本",
-        "prompt_file": "从文件读取提示",
-        "repo": "要克隆的任务仓库 URL",
-        "branch": "要使用的分支名称",
-        "metadata": "JSON 元数据对象"
-      },
-      "list": {
-        "description": "列出代理任务",
-        "status": "按状态筛选（running|completed|failed|cancelled）",
-        "limit": "最大结果数（默认：50）"
-      },
-      "get": {
-        "description": "按 ID 获取任务详情"
-      },
-      "status": {
-        "description": "打印任务状态（running|completed|failed|cancelled）"
-      },
-      "cancel": {
-        "description": "取消运行中的任务",
-        "yes": "跳过确认提示"
-      },
-      "approve": {
-        "description": "批准代理计划开始执行"
-      },
-      "message": {
-        "description": "向运行中的任务发送消息"
-      }
-    },
-    "sources": {
-      "description": "列出任务产生的源文件"
-    }
-  },
   "program": {
     "description": "OmniRoute — 具有自动故障转移的智能 AI 路由器",
     "version": "打印版本并退出",

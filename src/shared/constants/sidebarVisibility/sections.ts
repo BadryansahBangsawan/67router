@@ -246,13 +246,6 @@ const TOOLS_GROUP: SidebarItemGroup = {
       icon: "device_hub",
     },
     {
-      id: "cloud-agents",
-      href: "/dashboard/cloud-agents",
-      i18nKey: "cloudAgents",
-      subtitleKey: "cloudAgentsSubtitle",
-      icon: "cloud",
-    },
-    {
       id: "conductor",
       href: "/dashboard/conductor",
       i18nKey: "conductor",

@@ -1366,11 +1366,11 @@ niiden muuttaminen vaatii koodimuutoksen, ei ympäristömuuttujaa:
 
 Salli käyttäjien ilmoittaa ongelmista suoraan Dashboardista.
 
-| Muuttuja              | Oletusarvo      | Lähdetiedosto                                   | Kuvaus                                                                                                                                                                         |
-| --------------------- | --------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GITHUB_ISSUES_REPO`  | _(ei asetettu)_ | `src/app/api/v1/issues/report/route.ts`         | Tietovarasto muodossa `owner/repo`.                                                                                                                                            |
-| `GITHUB_ISSUES_TOKEN` | _(ei asetettu)_ | `src/app/api/v1/issues/report/route.ts`         | GitHub Personal Access Token, jolla on `issues:write`-käyttöoikeus.                                                                                                            |
-| `GITHUB_TOKEN`        | _(ei asetettu)_ | ongelmien luokittelu / pilviagentin apuohjelmat | Yleinen GitHub-käyttöoikeustunnus, jota käytetään `GITHUB_ISSUES_TOKEN`-muuttujan varatunnuksena ja jota `src/lib/cloudAgent/*`-hakemiston pilviagentin apuohjelmat käyttävät. |
+| Muuttuja              | Oletusarvo      | Lähdetiedosto                                   | Kuvaus                                                                                                                                                                                      |
+| --------------------- | --------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GITHUB_ISSUES_REPO`  | _(ei asetettu)_ | `src/app/api/v1/issues/report/route.ts`         | Tietovarasto muodossa `owner/repo`.                                                                                                                                                         |
+| `GITHUB_ISSUES_TOKEN` | _(ei asetettu)_ | `src/app/api/v1/issues/report/route.ts`         | GitHub Personal Access Token, jolla on `issues:write`-käyttöoikeus.                                                                                                                         |
+| `GITHUB_TOKEN`        | _(ei asetettu)_ | ongelmien luokittelu / pilviagentin apuohjelmat | Yleinen GitHub-käyttöoikeustunnus, jota käytetään `GITHUB_ISSUES_TOKEN`-muuttujan varatunnuksena ja jota `src/lib/skills/githubCollector.ts`-hakemiston pilviagentin apuohjelmat käyttävät. |
 
 ---
 

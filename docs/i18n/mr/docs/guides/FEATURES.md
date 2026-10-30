@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 या आवृत्ती-चक्रात शून्�
 - 🤝 **GitLab Duo OAuth प्रदाता** — GitLab क्रेडेन्शियल्ससह लॉगिन
 - 🧠 **Reasoning Replay Cache** — तर्क-विचार ट्रेसेसचे संकरित इन-मेमरी + SQLite सातत्यपूर्ण संचयन
 
-📚 **संबंधित दस्तऐवज:** [कौशल्य फ्रेमवर्क](../frameworks/SKILLS.md) · [मेमरी प्रणाली](../frameworks/MEMORY.md) · [क्लाउड एजंट्स](../frameworks/CLOUD_AGENT.md) · [वेबहुक्स](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 प्रदाते

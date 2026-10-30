@@ -238,17 +238,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ਰਨਟਾਈਮ ਰਾਊਟਿੰਗ/ਕੈਸ਼/ਕੰਪ੍ਰੈਸ਼ਨ/ਮੈਮੋਰੀ/ਸਕਿੱਲ/ਪ੍ਰੌਕਸੀ/ਕਾਂਟੈਕਸਟ-ਸਰੋਤ ਕਾਰਵਾਈਆਂ ਤੱਕ ਸੀਮਿਤ ਰੱਖਿਆ ਗਿਆ ਹੈ। v3.8.0 ਵਿੱਚ MCP ਸਰਵਰ ਦੇ ਨਾਲ ਦੋ ਨਜ਼ਦੀਕੀ
 ਫਰੇਮਵਰਕ ਵੀ ਸ਼ਾਮਲ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਵੱਖਰੇ ਤੌਰ 'ਤੇ ਦਸਤਾਵੇਜ਼ਬੱਧ ਕੀਤਾ ਗਿਆ ਹੈ:
 
-### ਕਲਾਊਡ ਏਜੰਟ
-
-ਕਲਾਊਡ ਏਜੰਟ ਵੱਖਰੀ ਪ੍ਰਕਿਰਿਆ ਵਿੱਚ ਚੱਲਣ ਵਾਲੇ AI ਕੋਡਿੰਗ ਏਜੰਟ (codex-cloud, cursor-cloud, devin, jules) ਹਨ, ਜੋ
-LLM ਪ੍ਰਦਾਤਾਵਾਂ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਉਸੇ ਕਨੈਕਸ਼ਨ ਮਾਡਲ ਰਾਹੀਂ OmniRoute ਨਾਲ ਜੋੜੇ ਗਏ ਹਨ। ਉਹ
-ਆਪਣੇ REST ਇੰਟਰਫੇਸ (`/api/v1/agents/*`) ਰਾਹੀਂ ਉਪਲਬਧ ਹਨ ਅਤੇ MCP ਟੂਲ ਕੈਟਾਲਾਗ ਦਾ ਹਿੱਸਾ **ਨਹੀਂ** ਹਨ
-— ਕਿਸੇ ਕਲਾਊਡ ਏਜੰਟ ਨੂੰ ਕਾਲ ਕਰਨ ਨਾਲ ਕੋਈ MCP ਸਕੋਪ ਵਰਤਿਆ ਨਹੀਂ ਜਾਂਦਾ।
-
-- ਇੰਪਲੀਮੈਂਟੇਸ਼ਨ: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)।
-- ਜੀਵਨ-ਚੱਕਰ: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`।
-- ਦਸਤਾਵੇਜ਼: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)।
-
 ### ਗਾਰਡਰੇਲ
 
 ਗਾਰਡਰੇਲ ਚਲਾਉਣ ਤੋਂ ਪਹਿਲਾਂ/ਬਾਅਦ ਦੇ ਫਿਲਟਰ (vision-bridge, pii-masker, prompt-injection) ਹਨ,

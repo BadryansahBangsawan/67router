@@ -1757,31 +1757,6 @@ Hutumiwa na mfumo mdogo wa usimamizi otomatiki wa funguo kutoa na kubadilisha fu
 
 ---
 
-## Itifaki ya Ajenti
-
-Kazi za ajenti wa wingu (Claude Code, Codex Cloud, OpenHands, n.k.) zinazotekelezwa kwa mbali kwa niaba ya watumiaji wa OmniRoute.
-
-| Mbinu  | Njia                          | Maelezo                                                                                                                                                                 |
-| ------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Orodhesha kazi — hiari `?provider=`, `?status=`, `?limit=` (1–500, chaguo-msingi 50)                                                                                    |
-| POST   | `/api/v1/agents/tasks`        | Unda kazi — sehemu kuu ya ombi inathibitishwa na `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Hurejesha `201` pamoja na bahasha ya kazi |
-| DELETE | `/api/v1/agents/tasks?id=...` | Futa kazi                                                                                                                                                               |
-| GET    | `/api/v1/agents/tasks/[id]`   | Soma kazi — husasisha hali kwa wakati mmoja kutoka kwa ajenti wa wingu wa chanzo wakati `external_id` imewekwa                                                          |
-| POST   | `/api/v1/agents/tasks/[id]`   | Kitendo bainifu: `{action: "approve"}`, `{action: "message", message}`, au `{action: "cancel"}`                                                                         |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Futa kazi mahususi kwa kutumia id                                                                                                                                       |
-
-> **Uthibitishaji:** uthibitishaji wa usimamizi unahitajika kwa kila mbinu (`requireCloudAgentManagementAuth`). Kabla ya v3.8.0, hizi hazikuhitaji uthibitishaji — tazama commit `588a0333` kwa mabadiliko yanayovunja utangamano.
-
-```bash
-# Unda kazi ya wingu ya Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proksi za Usimamizi
 
 Proksi za HTTP(S)/SOCKS zinazotoka ambazo zinaweza kukabidhiwa kwa watoa huduma, akaunti, au kwa kiwango cha kimataifa.
@@ -2284,5 +2259,3 @@ vitambulisho (kipindi cha dashibodi, tokeni ya ndani ya CLI, Tokeni ya Ufikiaji 
 - `requireLogin` inaweza kuwashwa au kuzimwa kupitia `/api/settings/require-login`
 - Njia za `/v1/*` zinaweza kuhitaji ufunguo wa API wa Bearer wakati `REQUIRE_API_KEY=true`
 - "tokeni ya usimamizi" / "ufunguo wa API wenye upeo wa usimamizi" katika rejeleo hili humaanisha mojawapo ya familia zilizo katika mwongozo huo — si aina ya ziada ya siri ambayo haijafafanuliwa
-
-> **Mabadiliko yanayovunja utangamano (v3.8.0)** — `/api/v1/agents/tasks/*` na vituo vya usimamizi wa vipindi vya kusubiri sasa vinahitaji **uthibitishaji wa usimamizi** (kidakuzi cha `auth_token` cha dashibodi au ufunguo wa API wenye upeo wa usimamizi). Wateja ambao hapo awali walitumia njia hizi bila uthibitishaji watapokea `401 Unauthorized`. Tazama commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

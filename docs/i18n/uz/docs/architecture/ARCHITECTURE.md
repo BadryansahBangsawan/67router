@@ -128,7 +128,6 @@ qolganlariga tegishli soha qoʻllanmalaridan havolalar berilgan.
 - `/dashboard/limits` — kvota/tezlik boshqaruvlari
 - `/dashboard/cli-tools` — CLI bilan ish boshlash, ish muhitini aniqlash, konfiguratsiya yaratish
 - `/dashboard/agents` — aniqlangan ACP agentlari + maxsus agentni roʻyxatdan oʻtkazish
-- `/dashboard/cloud-agents` — bulutda joylashtirilgan agent vazifalari (Codex Cloud, Devin, Jules) va vazifaning hayotiy sikli
 - `/dashboard/skills` — A2A koʻnikmalar reyestri, sinov muhitida bajarish, ichki koʻnikmalar katalogi
 - `/dashboard/memory` — doimiy suhbat xotirasini tekshirish va olish
 - `/dashboard/webhooks` — chiquvchi webhook obunalari, maxfiy kalitni almashtirish, qayta urinish statistikasi
@@ -379,23 +378,6 @@ Asosiy imkoniyatlar:
 
 Algoritmga oid to‘liq tafsilotlar (omil formulalari, vaznlarni sozlash) uchun
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) ga qarang.
-
-### B. Cloud Agents
-
-Cloud Agents uchinchi tomonning xost qilingan kod agenti platformalarini (Codex Cloud, Devin,
-Jules) maʼlumotlar bazasi bilan qo‘llab-quvvatlanadigan yagona vazifa hayotiy sikli ortida birlashtiradi. Vazifalarni yaratish/tekshirish
-uchun barcha endpointlar boshqaruv autentifikatsiyasini talab qiladi.
-
-- Modul ildizi: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, shuningdek `agents/` ostidagi har bir agentga tegishli quyi kataloglar)
-- Har bir agentga tegishli implementatsiyalar: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Ommaviy endpointlar: `/api/v1/agents/tasks/*` (ro‘yxatlash/yaratish/olish/bekor qilish)
-- Boshqaruv endpointlari: `/api/cloud/*` (resurslarni tayyorlash, holat, to‘plamli operatsiyalar)
-- Boshqaruv paneli: `/dashboard/cloud-agents`
-- Saqlash: `cloud_agent_tasks` jadvali
-
-Har bir agent uchun resurslarni tayyorlash va OAuth tafsilotlari haqida
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) ga qarang.
 
 ### C. Himoya cheklovlari
 

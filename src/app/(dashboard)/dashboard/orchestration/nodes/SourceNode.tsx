@@ -10,7 +10,6 @@ import {
 } from "../model/orchestrationTypes";
 const HANDLE = "!bg-transparent !border-0 !w-0 !h-0";
 const LABEL_KEY: Record<string, string> = {
-  "cloud-agent": "sourceCloudAgent",
   a2a: "sourceA2A",
   conductor: "sourceConductor",
 };

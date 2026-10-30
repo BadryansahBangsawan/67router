@@ -43,8 +43,6 @@ Syklusen v3.7.x → v3.8.0 introduserte automatisk ruting uten konfigurasjon, ny
 - 🤝 **GitLab Duo OAuth-leverandør** — logg inn med GitLab-legitimasjon
 - 🧠 **Reasoning Replay Cache** — hybrid lagring av resonneringsspor i minnet og SQLite
 
-📚 **Relatert dokumentasjon:** [Rammeverk for ferdigheter](../frameworks/SKILLS.md) · [Minnesystem](../frameworks/MEMORY.md) · [Skyagenter](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Leverandører

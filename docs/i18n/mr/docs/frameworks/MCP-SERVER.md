@@ -241,17 +241,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 रनटाइम राउटिंग/कॅशे/कॉम्प्रेशन/मेमरी/कौशल्ये/प्रॉक्सी/कॉन्टेक्स्ट-स्रोत ऑपरेशन्सपुरती मर्यादित आहे. दोन संलग्न
 फ्रेमवर्क्स v3.8.0 मध्ये MCP सर्व्हरसह वितरित केले जातात आणि त्यांचे दस्तऐवजीकरण स्वतंत्रपणे केले आहे:
 
-### क्लाउड एजंट्स
-
-क्लाउड एजंट्स हे प्रक्रियेबाहेर चालणारे AI कोडिंग एजंट्स (codex-cloud, cursor-cloud, devin, jules) आहेत, जे
-LLM प्रदात्यांसाठी वापरल्या जाणाऱ्या त्याच कनेक्शन मॉडेलद्वारे OmniRoute शी जोडलेले आहेत. ते
-त्यांच्या स्वतःच्या REST पृष्ठभागाद्वारे (`/api/v1/agents/*`) उपलब्ध केले जातात आणि MCP साधन कॅटलॉगचा भाग **नाहीत**
-— क्लाउड एजंटला कॉल केल्याने MCP व्याप्ती वापरली जात नाही.
-
-- अंमलबजावणी: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- जीवनचक्र: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- दस्तऐवजीकरण: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### गार्डरेल्स
 
 गार्डरेल्स हे चॅट पाइपलाइनमध्ये लागू केले जाणारे अंमलबजावणीपूर्व/अंमलबजावणीनंतरचे फिल्टर्स (vision-bridge, pii-masker, prompt-injection)

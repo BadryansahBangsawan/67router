@@ -194,9 +194,9 @@ describe("OrchestrationDrawer memory section", () => {
       vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve(detail) }))
     );
     const node = {
-      id: "cloud-agent:t1",
+      id: "conductor:task:t1",
       kind: "work",
-      source: "cloud-agent",
+      source: "conductor",
       state: "succeeded",
       label: "x",
     };
@@ -212,95 +212,6 @@ describe("OrchestrationDrawer memory section", () => {
 });
 
 describe("repeatReqFor", () => {
-  it("builds the cloud-agent repeat request from the loaded detail (CreateCloudAgentTaskSchema shape)", () => {
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "succeeded",
-      label: "x",
-    };
-    const detail = {
-      id: "t1",
-      providerId: "devin",
-      prompt: "do the thing",
-      source: { repoName: "r", repoUrl: "https://x" },
-      options: { autoCreatePr: true },
-      activities: [],
-    };
-    const req = repeatReqFor(node as never, detail);
-    expect(req?.url).toBe("/api/v1/agents/tasks");
-    expect(req?.init.method).toBe("POST");
-    expect(JSON.parse(String(req?.init.body))).toEqual({
-      providerId: "devin",
-      prompt: "do the thing",
-      source: { repoName: "r", repoUrl: "https://x" },
-      options: { autoCreatePr: true },
-    });
-  });
-
-  it("returns null for cloud-agent when neither providerId nor prompt is recoverable", () => {
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "succeeded",
-      label: "x",
-    };
-    expect(repeatReqFor(node as never, { source: {}, options: {}, activities: [] })).toBeNull();
-  });
-
-  it("returns null for cloud-agent when providerId is the only missing field", () => {
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "succeeded",
-      label: "x",
-    };
-    const detail = {
-      prompt: "do the thing",
-      source: { repoName: "r", repoUrl: "https://x" },
-      options: {},
-      activities: [],
-    };
-    expect(repeatReqFor(node as never, detail)).toBeNull();
-  });
-
-  it("returns null for cloud-agent when prompt is the only missing field", () => {
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "succeeded",
-      label: "x",
-    };
-    const detail = {
-      providerId: "devin",
-      source: { repoName: "r", repoUrl: "https://x" },
-      options: {},
-      activities: [],
-    };
-    expect(repeatReqFor(node as never, detail)).toBeNull();
-  });
-
-  it("returns null for cloud-agent when source is the only missing field (CreateCloudAgentTaskSchema also requires it — the field this fix started checking)", () => {
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "succeeded",
-      label: "x",
-    };
-    const detail = {
-      providerId: "devin",
-      prompt: "do the thing",
-      options: {},
-      activities: [],
-    };
-    expect(repeatReqFor(node as never, detail)).toBeNull();
-  });
-
   it("builds the a2a repeat request as a message/send JSON-RPC call from detail.input", () => {
     const node = { id: "a2a:1", kind: "work", source: "a2a", state: "succeeded", label: "x" };
     const detail = {
@@ -867,8 +778,6 @@ describe("newNodeIdFrom", () => {
   it("maps each source's creation response to the CANVAS node id (prefixed), never the raw id", () => {
     const cond = { id: "conductor:task:1", source: "conductor" };
     expect(newNodeIdFrom(cond as never, { task_id: "t2" })).toBe("conductor:task:t2");
-    const ca = { id: "cloud-agent:1", source: "cloud-agent" };
-    expect(newNodeIdFrom(ca as never, { data: { id: "c2" } })).toBe("cloud-agent:c2");
     const a2a = { id: "a2a:1", source: "a2a" };
     expect(newNodeIdFrom(a2a as never, { result: { task: { id: "n2" } } })).toBe("a2a:n2");
   });
@@ -880,8 +789,6 @@ describe("newNodeIdFrom", () => {
     expect(newNodeIdFrom(cond as never, { task_id: "" })).toBeNull();
     expect(newNodeIdFrom(cond as never, { task_id: 7 })).toBeNull();
     expect(newNodeIdFrom(cond as never, "nope")).toBeNull();
-    const ca = { id: "cloud-agent:1", source: "cloud-agent" };
-    expect(newNodeIdFrom(ca as never, { data: {} })).toBeNull();
     const a2a = { id: "a2a:1", source: "a2a" };
     expect(newNodeIdFrom(a2a as never, { result: {} })).toBeNull();
   });

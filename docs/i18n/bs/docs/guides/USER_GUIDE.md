@@ -26,7 +26,6 @@ Kompletan vodič za konfigurisanje provajdera, kreiranje combo-va, integraciju C
 - [Sistem vještina](#-skills-system)
 - [Sistem memorije](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud agenti](#-cloud-agents)
 - [Programsko upravljanje](#-programmatic-management)
 - [Interni CLI](#-internal-cli)
 - [Desktop aplikacija (Electron)](#-desktop-application-electron)
@@ -1280,18 +1279,6 @@ Pretplatite se na OmniRoute događaje za praćenje u stvarnom vremenu i automati
 - Ponovni pokušaji: 3 pokušaja sa eksponencijalnim odlaganjem (exponential backoff), zatim dead-letter queue
 
 Potpuna shema u [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloud agenti
-
-OmniRoute se integriše sa cloud agentima za kodiranje (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) tako da možete slati zadatke koji dugo traju iz iste kontrolne ploče koja upravlja vašim lokalnim rutiranjem.
-
-- Kreirajte zadatke u **Dashboard → Cloud Agents** ili putem `POST /api/v1/agents/tasks`
-- Pratite status, logove i artefakte po zadatku
-- Koristite vlastiti API ključ po provajderu — vjerdanja nikada ne napuštaju OmniRoute instancu
-
-Potpuna referenca: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 

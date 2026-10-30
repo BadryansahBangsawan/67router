@@ -1682,31 +1682,6 @@ Gündəlik/saatlıq kvotalarla təminatçı/hesab əsasında API açarlarını y
 
 ---
 
-## Agentlər Protokolu
-
-OmniRoute istifadəçiləri adından uzaqdan icra edilən bulud agenti tapşırıqları (Claude Code, Codex Cloud, OpenHands və s.).
-
-| Metod  | Yol                           | Təsvir                                                                                                                                               |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Tapşırıqları siyahıla — istəyə bağlı `?provider=`, `?status=`, `?limit=` (1–500, standart 50)                                                        |
-| POST   | `/api/v1/agents/tasks`        | Tapşırıq yarat — gövdə `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ilə yoxlanılır. Tapşırıq zərfi ilə `201` qaytarır |
-| DELETE | `/api/v1/agents/tasks?id=...` | Tapşırığı sil                                                                                                                                        |
-| GET    | `/api/v1/agents/tasks/[id]`   | Tapşırığı oxu — `external_id` təyin edildikdə statusu yuxarı axındakı bulud agentindən sinxron şəkildə yeniləyir                                     |
-| POST   | `/api/v1/agents/tasks/[id]`   | Fərqləndirilən əməl: `{action: "approve"}`, `{action: "message", message}` və ya `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Konkret tapşırığı id əsasında sil                                                                                                                    |
-
-> **Autentifikasiya:** hər metod üçün idarəetmə autentifikasiyası tələb olunur (`requireCloudAgentManagementAuth`). v3.8.0-dan əvvəl bunlar autentifikasiya tələb etmirdi — geriyə uyğunluğu pozan dəyişiklik üçün `588a0333` kommitinə baxın.
-
-```bash
-# Claude Code bulud tapşırığı yaradın
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## İdarəetmə Proksiləri
 
 Provayderlərə, hesablara və ya qlobal şəkildə təyin edilə bilən çıxış HTTP(S)/SOCKS proksiləri.
@@ -2210,5 +2185,3 @@ Dörd etimadnamə ailəsi (idarəetmə paneli sessiyası, lokal CLI tokeni, `oma
 - `requireLogin` parametri `/api/settings/require-login` vasitəsilə aktivləşdirilə və ya deaktivləşdirilə bilər
 - `REQUIRE_API_KEY=true` olduqda `/v1/*` marşrutları istəyə bağlı olaraq Bearer API açarı tələb edir
 - Bu arayışda "idarəetmə tokeni" / "idarəetmə əhatəli API açarı" həmin təlimatda göstərilən ailələrdən birini ifadə edir — ayrıca, müəyyən edilməmiş əlavə məxfi məlumat növünü deyil
-
-> **Uyğunluğu pozan dəyişiklik (v3.8.0)** — `/api/v1/agents/tasks/*` və gözləmə müddətinin idarə edilməsi son nöqtələri artıq **idarəetmə autentifikasiyası** (idarəetmə panelinin `auth_token` kukisi və ya idarəetmə əhatəli API açarı) tələb edir. Əvvəllər bu marşrutları autentifikasiya olmadan çağıran klientlər `401 Unauthorized` cavabı alacaqlar. `588a0333` kommitinə baxın (`fix(auth): require management auth for agent and cooldown APIs`).

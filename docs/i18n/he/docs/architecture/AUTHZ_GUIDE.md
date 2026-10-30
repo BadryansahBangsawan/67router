@@ -229,8 +229,6 @@ export async function POST(request: Request) {
 
 ## שינוי שובר תאימות — v3.8.0
 
-נקודות הקצה `/api/v1/agents/tasks/*` ו-`/api/resilience/model-cooldowns` **דורשות כעת אימות ניהול** (commit `588a0333`). לקוחות ששלחו בעבר מפתח API רגיל ללא היקף ההרשאה `manage` מקבלים `403`. מיגרציה: יש להעניק למפתח את היקף ההרשאה `manage` בלוח הבקרה API Keys, או להשתמש בהפעלת Dashboard שבה המשתמש מחובר.
-
 ## שינוי התנהגות — v3.8.2
 
 `/api/mcp/*` (שרת ה-MCP המרוחק) עדיין מוגדר כברירת מחדל כ-LOCAL_ONLY, אך כעת מקבל בקשות שאינן loopback כאשר הכותרת `Authorization: Bearer <api-key>` מכילה את היקף ההרשאה `manage`. החריגה נשלטת במפורש עבור כל נתיב באמצעות `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` שב-`src/server/authz/routeGuard.ts`; בכוונה לא ניתן לעקוף את תחילית ה-LOCAL_ONLY המקבילה `/api/cli-tools/runtime/*`, משום שהיא יכולה להפעיל תהליכי משנה שרירותיים. בקשות אנונימיות אל `/api/mcp/*` שאינן מ-loopback ממשיכות להחזיר `403 LOCAL_ONLY` — ברירת המחדל עבור כל נתיב LOCAL_ONLY חדש נותרת loopback בלבד באופן מחמיר. ראו [רמות הגנת נתיבים](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).
