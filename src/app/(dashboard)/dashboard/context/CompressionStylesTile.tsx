@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Badge from "@/shared/components/Badge";
-import Card from "@/shared/components/Card";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 
 interface Summary {
   totalRuns: number;
@@ -40,28 +40,29 @@ export default function CompressionStylesTile() {
   const styles = Object.entries(summary.appliedStyleCounts);
 
   return (
-    <Card padding="none" className="px-5 py-4" data-testid="compression-styles-tile">
-      <p className="text-[13px] text-text-muted">{t("compressionStylesTileTitle")}</p>
-      <p className="mt-1 text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
-        {summary.totalTokensSaved.toLocaleString(locale, { useGrouping: false })}
-      </p>
-      <p className="text-[12.5px] text-text-muted">
-        {t("compressionStylesTileSummary", {
-          tokens: summary.totalTokensSaved,
-          runs: summary.runsWithStyles,
-        })}
-      </p>
-      <div className="mt-2 flex flex-wrap gap-1">
-        {styles.length === 0 ? (
-          <span className="text-xs text-text-muted">{t("compressionStylesTileEmpty")}</span>
-        ) : (
-          styles.map(([id, count]) => (
-            <Badge key={id} size="sm" className="font-mono">
-              {id} · {count}
-            </Badge>
-          ))
-        )}
+    <KpiStrip gridClassName="grid-cols-1" data-testid="compression-styles-tile">
+      <div className="min-w-0">
+        <KpiCell
+          className="pb-0"
+          label={t("compressionStylesTileTitle")}
+          value={summary.totalTokensSaved.toLocaleString(locale, { useGrouping: false })}
+          footnote={t("compressionStylesTileSummary", {
+            tokens: summary.totalTokensSaved,
+            runs: summary.runsWithStyles,
+          })}
+        />
+        <div className="flex flex-wrap gap-1 px-5 pb-4 pt-2">
+          {styles.length === 0 ? (
+            <span className="text-xs text-text-muted">{t("compressionStylesTileEmpty")}</span>
+          ) : (
+            styles.map(([id, count]) => (
+              <Badge key={id} size="sm" className="font-mono">
+                {id} · {count}
+              </Badge>
+            ))
+          )}
+        </div>
       </div>
-    </Card>
+    </KpiStrip>
   );
 }
