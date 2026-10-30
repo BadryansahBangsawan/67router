@@ -746,7 +746,7 @@ async function handleChatImplementation(
     return logHandlerRejection(
       errorResponse(
         HTTP_STATUS.BAD_REQUEST,
-        `Model '${modelStr}' is an image-generation model and cannot be used on /v1/chat/completions. Image generation is not supported on this server.`
+        `Model '${modelStr}' is an image-generation model. Image generation is not supported on this server, so it cannot be used with POST /v1/chat/completions.`
       ),
       {
         path: new URL(request.url).pathname,
