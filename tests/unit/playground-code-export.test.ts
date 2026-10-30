@@ -1,8 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-const { exportCode, exportAllLanguages, endpointToPath, API_KEY_PLACEHOLDER } =
-  await import("../../src/lib/playground/codeExport.ts");
+const {
+  exportCode,
+  exportAllLanguages,
+  endpointToPath,
+  normalizePlaygroundEndpoint,
+  API_KEY_PLACEHOLDER,
+} = await import("../../src/lib/playground/codeExport.ts");
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -23,6 +28,19 @@ function assertSecurityInvariants(generated: string, label: string) {
 }
 
 // ── endpointToPath ─────────────────────────────────────────────────────────────
+
+test("normalizePlaygroundEndpoint: keeps known endpoints, falls back to chat for unknown or removed ones", () => {
+  assert.equal(normalizePlaygroundEndpoint("embeddings"), "embeddings");
+  assert.equal(normalizePlaygroundEndpoint("web.fetch"), "web.fetch");
+  // A preset saved before /v1/moderations was removed.
+  assert.equal(normalizePlaygroundEndpoint("moderations"), "chat.completions");
+  assert.equal(normalizePlaygroundEndpoint("nope"), "chat.completions");
+  assert.equal(normalizePlaygroundEndpoint(undefined), "chat.completions");
+  assert.equal(normalizePlaygroundEndpoint(null), "chat.completions");
+  // Prototype keys must not count as endpoints.
+  assert.equal(normalizePlaygroundEndpoint("toString"), "chat.completions");
+  assert.equal(endpointToPath(normalizePlaygroundEndpoint("moderations")), "/v1/chat/completions");
+});
 
 test("endpointToPath: maps all 13 endpoints correctly (D4-rev2)", () => {
   assert.equal(endpointToPath("chat.completions"), "/v1/chat/completions");

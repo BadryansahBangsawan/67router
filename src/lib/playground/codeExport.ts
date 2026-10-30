@@ -120,26 +120,37 @@ export const PlaygroundStateSchema = z.object({
 /** Constante: placeholder de API key — NUNCA embutir key real. */
 export const API_KEY_PLACEHOLDER = "$OMNIROUTE_API_KEY";
 
+const ENDPOINT_PATHS: Record<PlaygroundEndpoint, string> = {
+  "chat.completions": "/v1/chat/completions",
+  responses: "/v1/responses",
+  completions: "/v1/completions",
+  embeddings: "/v1/embeddings",
+  images: "/v1/images/generations",
+  "audio.transcriptions": "/v1/audio/transcriptions",
+  "audio.speech": "/v1/audio/speech",
+  video: "/v1/videos/generations",
+  music: "/v1/music/generations",
+  rerank: "/v1/rerank",
+  search: "/v1/search",
+  "web.fetch": "/v1/web/fetch",
+};
+
 /**
  * Resolve o path HTTP a partir do endpoint (ex.: "chat.completions" → "/v1/chat/completions").
  * Exportado para reuso em testes.
  */
 export function endpointToPath(endpoint: PlaygroundEndpoint): string {
-  const map: Record<PlaygroundEndpoint, string> = {
-    "chat.completions": "/v1/chat/completions",
-    responses: "/v1/responses",
-    completions: "/v1/completions",
-    embeddings: "/v1/embeddings",
-    images: "/v1/images/generations",
-    "audio.transcriptions": "/v1/audio/transcriptions",
-    "audio.speech": "/v1/audio/speech",
-    video: "/v1/videos/generations",
-    music: "/v1/music/generations",
-    rerank: "/v1/rerank",
-    search: "/v1/search",
-    "web.fetch": "/v1/web/fetch",
-  };
-  return map[endpoint];
+  return ENDPOINT_PATHS[endpoint];
+}
+
+/**
+ * Coerce a stored endpoint value (e.g. from a saved preset) to a supported endpoint.
+ * Unknown or removed endpoints (such as the old "moderations") fall back to chat completions.
+ */
+export function normalizePlaygroundEndpoint(value: unknown): PlaygroundEndpoint {
+  return typeof value === "string" && Object.hasOwn(ENDPOINT_PATHS, value)
+    ? (value as PlaygroundEndpoint)
+    : "chat.completions";
 }
 
 /**

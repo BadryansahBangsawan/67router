@@ -9,6 +9,7 @@ import Select from "@/shared/components/Select";
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { normalizePlaygroundEndpoint } from "@/lib/playground/codeExport";
 import { usePresets } from "../hooks/usePresets";
 import type { ConfigState, ConfigStateSetter } from "./StudioConfigPane";
 
@@ -42,7 +43,7 @@ export default function PresetPicker({ configState, setConfigState }: PresetPick
 
     setConfigState((current) => ({
       ...current,
-      endpoint: preset.endpoint as ConfigState["endpoint"],
+      endpoint: normalizePlaygroundEndpoint(preset.endpoint),
       model: preset.model,
       systemPrompt: preset.system ?? current.systemPrompt,
       params: {
