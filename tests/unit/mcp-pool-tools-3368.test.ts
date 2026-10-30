@@ -55,14 +55,6 @@ test("server.ts registers poolTools via the standard registration loop", () => {
   );
 });
 
-test("server.ts reserves the poolTools names", () => {
-  assert.match(
-    serverSource,
-    /\.\.\.Object\.keys\(poolTools\)/,
-    "poolTools names must be in RESERVED_MCP_NAMES to avoid collisions"
-  );
-});
-
 // ── Collection completeness ───────────────────────────────────────────────
 
 test("poolTools exposes exactly the expected pool tools", () => {

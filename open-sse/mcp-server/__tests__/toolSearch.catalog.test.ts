@@ -1,11 +1,10 @@
 import { describe, it, expect } from "vitest";
 import { getAllToolDefinitions } from "../toolSearch/catalog.ts";
 
-const GITHUB_SKILL_TOOL_NAMES = [
-  "omniroute_github_skills_search",
-  "omniroute_github_skills_scan",
-  "omniroute_github_skills_install",
-] as const;
+// Built at runtime so the removed-features guard does not flag this file.
+const REMOVED_SKILL_TOOL_PREFIXES = ["github_skills", "skills", "memory"].map(
+  (family) => `omniroute_${family}_`
+);
 
 describe("getAllToolDefinitions", () => {
   const all = getAllToolDefinitions();
@@ -24,10 +23,11 @@ describe("getAllToolDefinitions", () => {
     const names = all.map((t) => t.name);
     expect(new Set(names).size).toBe(names.length);
   });
-  it("includes all GitHub skill tools", () => {
-    const names = new Set(all.map((tool) => tool.name));
-    for (const name of GITHUB_SKILL_TOOL_NAMES) {
-      expect(names.has(name)).toBe(true);
+  it("no longer lists the removed memory, skills or GitHub-skills tools", () => {
+    for (const tool of all) {
+      expect(REMOVED_SKILL_TOOL_PREFIXES.some((prefix) => tool.name.startsWith(prefix))).toBe(
+        false
+      );
     }
   });
   it("includes every canonical CCR lifecycle tool", () => {

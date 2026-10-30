@@ -1,22 +1,12 @@
 /**
  * Security regression (GHSA-jx89-f37j-pq89): /api/skills/install and
- * /api/skills/executions must be classified LOCAL_ONLY so loopback enforcement
+ * /api/skills/executions stay classified LOCAL_ONLY so loopback enforcement
  * runs unconditionally before any auth check.
  *
- * POST /api/skills/install stores the request's `handlerCode` string verbatim as
- * the skill's `handler` with no allowlist (src/app/api/skills/install/route.ts).
- * POST /api/skills/executions then calls skillExecutor.execute(), whose handler
- * resolution (src/lib/skills/executor.ts) falls through to the built-in table —
- * so a handler string that equals `execute_command` or `eval_code` runs the real
- * built-in (src/lib/skills/builtins.ts), which reaches
- * childProcess.spawn(<container runtime>) in src/lib/skills/sandbox.ts. The
- * sandbox is a hardened docker/podman container, but the spawn is real and
- * transitive: the 6A.8 source-scan gate only greps route.ts, so it cannot see it.
- *
- * Both routes were only behind requireManagementAuth() / isAuthenticated(),
- * which waive auth whenever requireLogin=false — the identical class already
- * closed for /api/acp/agents (GHSA-hf57-cqmx-p4gr) and /api/skills/collect/.
- * Hard Rules #15 + #17. See docs/security/ROUTE_GUARD_TIERS.md.
+ * The Skills framework behind these routes (custom skill install + sandboxed
+ * execute_command / eval_code built-ins) was removed in 67router. The prefixes
+ * are kept on purpose: if an upstream merge reintroduces the routes, they must
+ * never open remotely. Hard Rules #15 + #17. See docs/security/ROUTE_GUARD_TIERS.md.
  */
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -25,7 +15,6 @@ import {
   isLocalOnlyPath,
 } from "../../src/server/authz/routeGuard.ts";
 import { SPAWN_CAPABLE_PREFIXES } from "../../src/shared/constants/spawnCapablePrefixes.ts";
-import { SPAWN_CAPABLE_ROUTE_ROOTS } from "../../scripts/check/check-route-guard-membership.ts";
 
 test("GHSA-jx89: /api/skills/install is LOCAL_ONLY (registers a handler that can alias execute_command)", () => {
   assert.equal(isLocalOnlyPath("/api/skills/install"), true);
@@ -51,11 +40,6 @@ test("GHSA-jx89: neither skills execution route can be opened through the manage
     );
     assert.equal(isLocalOnlyBypassableByManageScope(route), false);
   }
-});
-
-test("GHSA-jx89: the spawn-capable route audit enumerates both skills execution routes", () => {
-  assert.ok(SPAWN_CAPABLE_ROUTE_ROOTS.includes("src/app/api/skills/install"));
-  assert.ok(SPAWN_CAPABLE_ROUTE_ROOTS.includes("src/app/api/skills/executions"));
 });
 
 test("GHSA-jx89: the existing /api/skills/collect/ gate is untouched", () => {

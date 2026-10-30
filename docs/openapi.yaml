@@ -150,8 +150,6 @@ tags:
     description: Free tier endpoints (generated route coverage)
   - name: Gamification
     description: Gamification endpoints (generated route coverage)
-  - name: Github skills
-    description: Github skills endpoints (generated route coverage)
   - name: Guardrails
     description: Guardrails endpoints (generated route coverage)
   - name: Headroom
@@ -10129,21 +10127,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/github-skills:
-    get:
-      tags:
-        - Github skills
-      summary: "GET github skills"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Github skills
-      summary: "POST github skills"
-      responses:
-        "200":
-          description: OK
   /api/guardrails:
     get:
       tags:
@@ -12447,111 +12430,12 @@ paths:
             Machine credential refused. Selective transfer requires the dashboard session or
             the local CLI (or login disabled); API keys of any scope and `oma_` access tokens
             get 403.
-  /api/skills:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills"
-      responses:
-        "200":
-          description: OK
-  /api/skills/{id}:
-    delete:
-      tags:
-        - Skills
-      summary: "DELETE skills › <id>"
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Skills
-      summary: "PUT skills › <id>"
-      responses:
-        "200":
-          description: OK
   /api/skills/collect/chaos:
     post:
       tags:
         - Skills
       summary: "POST skills › collect › chaos"
       x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/collect/detect:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills › collect › detect"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/collect/install:
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › collect › install"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/executions:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills › executions"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › executions"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/install:
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › install"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/marketplace:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills › marketplace"
-      responses:
-        "200":
-          description: OK
-  /api/skills/marketplace/install:
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › marketplace › install"
-      responses:
-        "200":
-          description: OK
-  /api/skills/skillssh:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills › skillssh"
-      responses:
-        "200":
-          description: OK
-  /api/skills/skillssh/install:
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › skillssh › install"
       responses:
         "200":
           description: OK

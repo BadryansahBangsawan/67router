@@ -46,7 +46,7 @@ A boolean flag is considered **enabled** when its effective value is `"true"`,
 
 ## Flag Catalog
 
-110 flags across 6 categories. **Default** is the definition default — the value
+109 flags across 6 categories. **Default** is the definition default — the value
 used when neither a DB override nor an environment variable is present.
 
 ### Security (10)
@@ -180,13 +180,12 @@ used when neither a DB override nor an environment variable is present.
 | `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES`  | boolean | `false` |         | After a provider model sync, automatically (re)write ~/.codex/*.config.toml profile files from the live catalog. Never changes the active/default Codex config. Off by default.                          |
 | `OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES` | boolean | `false` |         | After a provider model sync, automatically (re)write ~/.claude/profiles/<name>/settings.json Claude Code profiles from the live catalog. Never changes the active/default Claude config. Off by default. |
 
-### Health (7)
+### Health (6)
 
 | Key                                       | Type    | Default | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------- | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK`     | boolean | `false` | Disable the local instance health check endpoint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `OMNIROUTE_DISABLE_TOKEN_HEALTHCHECK`     | boolean | `false` | Disable the token validation health check.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `SKILLS_SANDBOX_NETWORK_ENABLED`          | boolean | `false` | Enable network access in the skills sandbox environment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `PROXY_HEALTH_BLOCKED_RESETS_STREAK`      | boolean | `false` | In the proxy health sweep, a probe the target refused (401/403/429) resets the proxy's consecutive-failure streak. Off by default: a refusal stays neutral (#10654). A 5xx stays inconclusive either way; a refusal never removes, disables or re-activates a proxy.                                                                                                                                                                                                                                                                                             |
 | `DB_HEALTHCHECK_STARTUP_DEFERRED_ENABLED` | boolean | `false` | Run the startup DB integrity/health check after the server starts accepting requests (via `setImmediate`) instead of blocking startup until it completes (#13717). Off by default: startup blocks exactly like before this PR.                                                                                                                                                                                                                                                                                                                                   |
 | `CREDENTIAL_HEALTH_RETEST_AUTO_DISABLED`  | boolean | `false` | Let the credential health sweep retest connections the gateway switched off by itself (marked `autoDisabledAt`; at most once per 6 h each and 5 per sweep) and switch one back on when its retest passes (#16190). Off by default: such connections stay off until an operator acts, exactly like before. Operator-disabled connections (`operatorDisabledAt`) and connections switched off after a permanent ban (`banDisabledAt`) are never retested.                                                                                                          |
@@ -254,7 +253,7 @@ Returns every flag with its effective value, source, and a summary.
       "requiresRestart": false,
       "warningLevel": "caution",
     },
-    // ... all 110 flags
+    // ... all 109 flags
   ],
   "summary": {
     "total": 56,

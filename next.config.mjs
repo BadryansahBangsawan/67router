@@ -514,11 +514,6 @@ const nextConfig = {
     return [
       // Dashboard routes
       {
-        source: "/dashboard/skills",
-        destination: "/dashboard/omni-skills",
-        permanent: true,
-      },
-      {
         source: "/dashboard/providers/freepik",
         destination: "/dashboard/providers/magnific",
         permanent: true,

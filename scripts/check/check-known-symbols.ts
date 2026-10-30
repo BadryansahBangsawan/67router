@@ -27,7 +27,7 @@
 //       novos não falham — apenas são reportados — para não bloquear adições legítimas.
 //
 //   (4) MCP TOOLS — todos os tools registrados em createMcpServer() (base MCP_TOOLS +
-//       skillTools + gamificationTools + pluginTools + notionTools +
+//       gamificationTools + pluginTools + notionTools +
 //       obsidianTools) DEVEM ter ao menos um escopo atribuído (scope-enforcement). Os
 //       nomes são congelados em KNOWN_MCP_TOOL_NAMES. Catraca: tool removido = fail.
 //       Tool novo = report (não bloqueia adições legítimas).
@@ -284,7 +284,6 @@ export function findNewMcpTools(frozen: readonly string[], live: Set<string>): s
  *
  * Sources:
  *   - MCP_TOOLS (34 base tools: omniroute_* + compression + agent_skills)
- *   - skillTools (4): omniroute_skills_*
  *   - gamificationTools (8): gamification_*
  *   - pluginTools (8): plugin_*
  *   - notionTools (6): notion_*
@@ -324,11 +323,6 @@ export const KNOWN_MCP_TOOL_NAMES: readonly string[] = [
   "omniroute_agent_skills_list",
   "omniroute_agent_skills_get",
   "omniroute_agent_skills_coverage",
-  // skillTools (4)
-  "omniroute_skills_list",
-  "omniroute_skills_enable",
-  "omniroute_skills_execute",
-  "omniroute_skills_executions",
   // gamificationTools (8)
   "gamification_leaderboard",
   "gamification_rank",
@@ -584,7 +578,6 @@ async function main(): Promise<void> {
 
   // ── (4) MCP tools scope + snapshot ───────────────────────────────────────
   const { MCP_TOOLS } = await import("@omniroute/open-sse/mcp-server/schemas/tools.ts");
-  const { skillTools } = await import("@omniroute/open-sse/mcp-server/tools/skillTools.ts");
   const { gamificationTools } =
     await import("@omniroute/open-sse/mcp-server/tools/gamificationTools.ts");
   const { pluginTools } = await import("@omniroute/open-sse/mcp-server/tools/pluginTools.ts");
@@ -595,7 +588,6 @@ async function main(): Promise<void> {
   // agentSkillTools + compressionTools are already in MCP_TOOLS).
   const liveMcpTools: McpToolLike[] = [
     ...(MCP_TOOLS as unknown as McpToolLike[]),
-    ...Object.values(skillTools as Record<string, McpToolLike>),
     ...(gamificationTools as unknown as McpToolLike[]),
     ...(pluginTools as unknown as McpToolLike[]),
     ...(notionTools as unknown as McpToolLike[]),

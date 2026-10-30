@@ -600,13 +600,6 @@ const AGENTIC_FEATURES_ITEMS: readonly SidebarSectionChild[] = [
     subtitleFallback: "Multi-model parallel execution",
     icon: "blender",
   },
-  {
-    id: "skills",
-    href: "/dashboard/omni-skills",
-    i18nKey: "omniSkills",
-    subtitleKey: "omniSkillsSubtitle",
-    icon: "auto_fix_high",
-  },
   MCP_ITEM,
   {
     id: "a2a",

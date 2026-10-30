@@ -24,7 +24,6 @@ const TEST_DATA_DIR = fs.mkdtempSync(path.join(os.tmpdir(), "omni-db-backups-ski
 process.env.DATA_DIR = TEST_DATA_DIR;
 
 const core = await import("../../src/lib/db/core.ts");
-const skillsMod = await import("../../src/lib/db/skills.ts");
 const backupMod = await import("../../src/lib/db/backup.ts");
 
 // ──────────────── Helpers ────────────────
@@ -34,88 +33,7 @@ function uniqueId(prefix = "test") {
 }
 
 /** Insert a minimal skills row directly (bypasses the module under test). */
-function seedSkill(overrides: Partial<Record<string, unknown>> = {}) {
-  const db = core.getDbInstance();
-  const id = uniqueId("skill");
-  db.prepare(
-    `INSERT INTO skills
-      (id, api_key_id, name, version, description, schema, handler, enabled, mode)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
-  ).run(
-    overrides.id ?? id,
-    overrides.api_key_id ?? "key-1",
-    overrides.name ?? "test-skill",
-    overrides.version ?? "1.0.0",
-    overrides.description ?? "desc",
-    overrides.schema ?? "{}",
-    overrides.handler ?? "handler",
-    overrides.enabled ?? 1,
-    overrides.mode ?? "auto"
-  );
-  return (overrides.id as string) ?? id;
-}
-
 // ──────────────── updateSkill ────────────────
-
-test("updateSkill — patches enabled+mode, updates updated_at", () => {
-  const id = seedSkill({ enabled: 1, mode: "auto" });
-
-  // Act
-  const changed = skillsMod.updateSkill(id, { enabled: 0, mode: "off" });
-
-  assert.equal(changed, 1, "should affect 1 row");
-
-  const db = core.getDbInstance();
-  const row = db.prepare("SELECT enabled, mode FROM skills WHERE id = ?").get(id) as {
-    enabled: number;
-    mode: string;
-  };
-  assert.equal(row.enabled, 0);
-  assert.equal(row.mode, "off");
-});
-
-test("updateSkill — only mode provided keeps enabled consistent", () => {
-  const id = seedSkill({ enabled: 0, mode: "off" });
-
-  skillsMod.updateSkill(id, { mode: "on" });
-
-  const db = core.getDbInstance();
-  const row = db.prepare("SELECT enabled, mode FROM skills WHERE id = ?").get(id) as {
-    enabled: number;
-    mode: string;
-  };
-  assert.equal(row.mode, "on");
-});
-
-test("updateSkill — unknown columns are silently ignored (allowlist guard)", () => {
-  const id = seedSkill({ enabled: 1, mode: "auto" });
-
-  // Inject an unknown key; this must NOT throw or produce SQL with an injected column.
-  const patch = { enabled: 0, "'; DROP TABLE skills; --": 1 } as Record<string, unknown>;
-  // Cast via any to bypass TS type — testing the runtime allowlist
-  const changed = skillsMod.updateSkill(id, patch as Parameters<typeof skillsMod.updateSkill>[1]);
-  assert.equal(changed, 1, "should still apply the known field");
-
-  const db = core.getDbInstance();
-  const tableExists = db
-    .prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='skills'")
-    .get();
-  assert.ok(tableExists, "skills table must still exist after attempted injection");
-});
-
-test("updateSkill — empty patch (all unknown columns) returns 0 changes", () => {
-  const id = seedSkill();
-  const patch = { unknownField: "x" } as Parameters<typeof skillsMod.updateSkill>[1];
-  const changed = skillsMod.updateSkill(id, patch);
-  assert.equal(changed, 0);
-});
-
-test("updateSkill — non-existent id returns 0 changes", () => {
-  const changed = skillsMod.updateSkill("non-existent-id", { enabled: 1 });
-  assert.equal(changed, 0);
-});
-
-// ──────────────── exportAllSummaryRows ────────────────
 
 test("exportAllSummaryRows — returns key_value rows", () => {
   const db = core.getDbInstance();

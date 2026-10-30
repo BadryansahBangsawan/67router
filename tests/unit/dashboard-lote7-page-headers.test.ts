@@ -17,11 +17,6 @@ const PAGES: Array<[string, string, string]> = [
     "agentSkills",
     "agentSkillsSubtitle",
   ],
-  [
-    "src/app/(dashboard)/dashboard/omni-skills/OmniSkillsPageClient.tsx",
-    "omniSkills",
-    "omniSkillsSubtitle",
-  ],
 ];
 
 test("the six lote-7 pages render a kit PageHeader with their sidebar title", () => {

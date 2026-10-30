@@ -69,6 +69,33 @@ const REMOVED_PATHS: string[] = [
   "open-sse/handlers/chatCore/memorySkillsInjection.ts",
   "bin/cli/commands/memory.mjs",
   "bin/cli/api-commands/memory.mjs",
+  // skills framework (the chat tool-loop core and builtin web_search/web_fetch stay)
+  "src/lib/skills/registry.ts",
+  "src/lib/skills/executor.ts",
+  "src/lib/skills/injection.ts",
+  "src/lib/skills/githubCollector.ts",
+  "src/lib/skills/skillssh.ts",
+  "src/lib/skills/providerSettings.ts",
+  "src/lib/skills/sandbox.ts",
+  "src/lib/skills/containerProvider.ts",
+  "src/lib/skills/schemas.ts",
+  "src/lib/skills/types.ts",
+  "src/lib/skills/builtin",
+  "src/lib/skills/__tests__",
+  "src/lib/db/skills.ts",
+  "src/app/api/skills/route.ts",
+  "src/app/api/skills/[id]",
+  "src/app/api/skills/executions",
+  "src/app/api/skills/install",
+  "src/app/api/skills/marketplace",
+  "src/app/api/skills/skillssh",
+  "src/app/api/skills/collect/detect",
+  "src/app/api/skills/collect/install",
+  "src/app/api/github-skills",
+  "src/app/(dashboard)/dashboard/omni-skills",
+  "open-sse/mcp-server/tools/skillTools.ts",
+  "open-sse/mcp-server/tools/githubSkillTools.ts",
+  "bin/cli/commands/skills.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -114,6 +141,13 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /\bmemoryTools\b|omniroute_memory_/,
   /memoryBuiltins|memorySkillsInjection|chatCore\/memoryExtraction/,
   /\b(injectMemory|retrieveMemories|extractFacts|runMemoryExtractionGate)\b/,
+  // skills framework
+  /lib\/skills\/(registry|executor|injection|githubCollector|skillssh|providerSettings|sandbox|containerProvider|schemas|types|builtin\/)\b/,
+  /db\/skills\b/,
+  /app\/api\/skills\/(executions|install|marketplace|skillssh|\[id\])|app\/api\/github-skills/,
+  /dashboard\/omni-skills/,
+  /\b(skillTools|githubSkillTools)\b|omniroute_(skills|github_skills)_/,
+  /\b(skillRegistry|skillExecutor|registerBuiltinSkills)\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

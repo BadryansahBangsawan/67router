@@ -19,7 +19,6 @@ import assert from "node:assert/strict";
 // runtime.
 
 // Dynamic imports for ESM + tsx compatibility (mirrors agentSkillTools-mcp.test.ts)
-const { skillTools } = await import("../../open-sse/mcp-server/tools/skillTools.ts");
 const { compressionTools } = await import("../../open-sse/mcp-server/tools/compressionTools.ts");
 const { poolTools } = await import("../../open-sse/mcp-server/tools/poolTools.ts");
 
@@ -32,7 +31,6 @@ type McpToolDef = {
 };
 
 const COLLECTIONS: Record<string, Record<string, McpToolDef>> = {
-  skillTools: skillTools as unknown as Record<string, McpToolDef>,
   compressionTools: compressionTools as unknown as Record<string, McpToolDef>,
   poolTools: poolTools as unknown as Record<string, McpToolDef>,
 };

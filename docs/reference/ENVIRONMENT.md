@@ -42,7 +42,6 @@ lastUpdated: 2026-10-11
 - [21. Proxy Health](#21-proxy-health)
 - [22. Debugging](#22-debugging)
 - [23. GitHub Integration](#23-github-integration)
-- [24. Skills Sandbox (v3.8.0+)](#24-skills-sandbox-v380)
 - [27. Radar Feed (Self-Hosting)](#27-radar-feed-self-hosting)
 - [Deployment Scenarios](#deployment-scenarios)
 - [Audit: Removed / Dead Variables](#audit-removed--dead-variables)
@@ -1414,27 +1413,6 @@ CORS_ORIGIN=https://omniroute.example.com
 ENABLE_TLS_FINGERPRINT=true
 CLI_COMPAT_ALL=1
 ```
-
----
-
-## 24. Skills Sandbox (v3.8.0+)
-
-Limits and safety knobs applied when the Skills framework (`src/lib/skills/`) executes user-defined automations in a sandboxed environment.
-
-| Variable                          | Default                                       | Source File                                                        | Description                                                                                                                                                                                                                                                           |
-| --------------------------------- | --------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `SKILLS_SANDBOX_TIMEOUT_MS`       | `10000` (10 s)                                | `src/lib/skills/builtins.ts`                                       | Per-execution wall-clock timeout for sandboxed skill code. Hard cap; anything longer is killed.                                                                                                                                                                       |
-| `SKILLS_EXECUTION_TIMEOUT_MS`     | _(falls back to `SKILLS_SANDBOX_TIMEOUT_MS`)_ | `src/lib/skills/`                                                  | High-level skill orchestration timeout. Set higher than `SKILLS_SANDBOX_TIMEOUT_MS` to allow multi-step workflows.                                                                                                                                                    |
-| `SKILLS_MAX_FILE_BYTES`           | `1048576` (1 MB)                              | `src/lib/skills/builtins.ts`                                       | Max bytes a skill may read from any single sandboxed file.                                                                                                                                                                                                            |
-| `SKILLS_MAX_HTTP_RESPONSE_BYTES`  | `256000` (250 KB)                             | `src/lib/skills/builtins.ts`                                       | Max bytes captured from any single HTTP response inside a skill.                                                                                                                                                                                                      |
-| `SKILLS_MAX_SANDBOX_OUTPUT_CHARS` | `100000`                                      | `src/lib/skills/builtins.ts`                                       | Hard cap on stdout/stderr characters returned from a sandbox invocation.                                                                                                                                                                                              |
-| `SKILLS_SANDBOX_NETWORK_ENABLED`  | `false`                                       | `src/lib/skills/builtins.ts`                                       | Set `1`/`true` to allow outbound network from inside the sandbox. Defaults to **isolated** for safety.                                                                                                                                                                |
-| `SKILLS_ALLOWED_SANDBOX_IMAGES`   | _(empty)_                                     | `src/lib/skills/builtins.ts`                                       | Comma-separated allowlist of container images permitted for sandbox execution. Empty means built-in default only.                                                                                                                                                     |
-| `SKILLS_SANDBOX_DOCKER_IMAGE`     | _(built-in default)_                          | `src/lib/skills/`                                                  | Container image used when spawning a Docker-backed sandbox. Override to pin a custom hardened base image.                                                                                                                                                             |
-| `SKILLS_SANDBOX_RUNTIME`          | `auto`                                        | `src/lib/skills/sandbox.ts`, `src/lib/skills/containerProvider.ts` | Container runtime for skill sandboxing: `auto` \| `docker` \| `apple` \| `wsl` \| `orbstack` \| `podman`. `auto` picks the best installed runtime per host OS (Apple Container/OrbStack on macOS, WSL Container on Windows, Podman on Linux), falling back to Docker. |
-
-> [!CAUTION]
-> Enabling `SKILLS_SANDBOX_NETWORK_ENABLED=true` opens an egress path from arbitrary skill code. Pair with `OUTBOUND_SSRF_GUARD_ENABLED=true` and a strict `CORS_ORIGIN`/proxy policy in shared deployments.
 
 ---
 

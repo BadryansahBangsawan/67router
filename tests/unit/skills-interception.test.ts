@@ -31,6 +31,10 @@ test.after(() => {
   mutableBuiltins.web_fetch = originalWebFetch;
 });
 
+test("only the web_search / web_fetch builtins remain server-executable", () => {
+  assert.deepEqual(Object.keys(builtinSkills).sort(), ["web_fetch", "web_search"]);
+});
+
 test("buildWebSearchCallItem emits a native web_search_call item only for successful web-search fallback results", () => {
   const call = { id: "call_search", name: OMNIROUTE_WEB_SEARCH_FALLBACK_TOOL_NAME, arguments: {} };
   const item = buildWebSearchCallItem(call, {
