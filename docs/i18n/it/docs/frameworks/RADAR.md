@@ -42,7 +42,7 @@ ospitata o integrazione esterna sia attualmente disponibile.
 | Offerte per i supporter                 | Implementate come feed separato, firmato e disponibile solo live, con una pagina dedicata nella dashboard. Il client riconvalida lo schema chiuso dei vantaggi, conserva l'ultima cache valida, filtra le voci scadute ed etichetta esplicitamente le offerte dei partner.                                  |
 | Intel e riconoscimento dei supporter    | Implementati come feed rigorosamente firmato e disponibile solo live, con ELO gestito da Radar, dati fattuali sull'aggiornamento e sull'andamento del catalogo, un badge locale verificato per i supporter, una pagina nella dashboard e comandi CLI di stato/sincronizzazione disponibili solo localmente. |
 | Pagamenti ed email transazionali        | Non implementati nel client OSS. Acquisto, donazione, revisione delle ricevute, recupero e invio delle email appartengono al servizio privato; la disponibilità del servizio ospitato dipende comunque dalla sua distribuzione supervisionata e dalla configurazione del provider.                          |
-| Filone di lavoro dell'agente di ricerca | Non fa parte di questa release del client. I contenuti curati dei feed rimangono dati lato server; nessun agente di ricerca autonomo viene eseguito in un'installazione di OmniRoute.                                                                                                                       |
+| Filone di lavoro dell'agente di ricerca | Non fa parte di questa release del client. I contenuti curati dei feed rimangono dati lato server; nessun agente di ricerca autonomo viene eseguito in un'installazione di 67router.                                                                                                                        |
 
 ---
 
@@ -116,7 +116,7 @@ Quando entrambi sono attivi, il flusso di sincronizzazione è il seguente:
    dell'IP con rotazione giornaliera per il controllo manuale degli abusi; queste tabelle non conservano né la chiave né
    l'IP in formato non elaborato. I log di accesso dell'infrastruttura e la coda di consegna crittografata costituiscono
    limiti operativi separati.
-3. OmniRoute non invia mai al servizio Radar prompt, risposte, conversazioni, credenziali dei provider, traffico dei modelli,
+3. 67router non invia mai al servizio Radar prompt, risposte, conversazioni, credenziali dei provider, traffico dei modelli,
    tempo di attività, latenza o la configurazione locale dei provider.
 4. La risposta viene verificata, convalidata e memorizzata nella cache locale (vedere
    [Modello di sicurezza](#security-model)). Radar dispone esattamente di quattro percorsi di rete lato server:
@@ -240,13 +240,13 @@ che ne possiede già una può attivarla.
 ### Attivazione end-to-end e configurazione guidata
 
 Il servizio di feed privato e questo client OSS hanno un confine volutamente ristretto: il servizio
-emette e convalida la chiave sostenitore, mentre l'installazione locale di OmniRoute crittografa la chiave,
+emette e convalida la chiave sostenitore, mentre l'installazione locale di 67router crittografa la chiave,
 sincronizza lato server gli artefatti firmati e guida la configurazione del provider. L'ordine della convalida assistita è:
 
 1. Ottenere una chiave appena emessa o recuperata dal percorso di richiesta del collaboratore, piani/checkout, recupero
    oppure da un operatore autorizzato di server privati. Non incollare la chiave non elaborata in log,
    screenshot, commenti nelle issue o argomenti della riga di comando.
-2. Abilitare il feature flag `RADAR_ENABLED` nell'installazione locale di OmniRoute. Questo rende visibile l'interfaccia utente,
+2. Abilitare il feature flag `RADAR_ENABLED` nell'installazione locale di 67router. Questo rende visibile l'interfaccia utente,
    ma non attiva alcuna comunicazione di rete finché non viene salvato il consenso esplicito separato.
 3. Aprire `/dashboard/radar`, incollare la chiave e attivare. Il browser invia una singola richiesta locale
    `POST /api/radar/settings` con `{ optIn: true, supporterKey }`; la chiave viene crittografata localmente e
@@ -311,7 +311,7 @@ sincronizzazione successiva.
 ### Override tramite variabili d'ambiente per facilitare i fork
 
 Due variabili d'ambiente consentono ai fork e a chi esegue un'istanza self-hosted di indirizzare il client verso il proprio feed anziché
-verso il servizio OmniRoute predefinito; vedere
+verso il servizio 67router predefinito; vedere
 [Come eseguire il self-hosting di un feed](#how-to-self-host-a-feed) di seguito:
 
 | Variabile           | Scopo                                                                                                                            |
@@ -464,7 +464,7 @@ Un valore `enabled: false` nel feed rimane l'eccezione di sicurezza: prevale su 
 Le pubblicazioni del catalogo usano `schemaVersion: 2`. `contextWindow` e ciascuno tra `tools`, `vision` e
 `thinking` sono indipendentemente `number | null` / `boolean | null`: `null` indica un valore sconosciuto, mentre
 `false` indica che una fonte ufficiale del provider, confermata secondo D16, dichiara esplicitamente che la funzionalità è assente.
-I flag interni del registro/delle specifiche dei modelli di OmniRoute non vengono mai promossi direttamente a fatti del feed. Il client
+I flag interni del registro/delle specifiche dei modelli di 67router non vengono mai promossi direttamente a fatti del feed. Il client
 continua ad accettare gli snapshot v1; poiché il vecchio builder usava `false` come segnaposto per l'assenza, in v1 `false` viene
 normalizzato come sconosciuto, mentre `true` rimane un dato di fatto. Le versioni dello schema sconosciute falliscono in modo sicuro e
 l'ultima cache valida rimane disponibile. Ogni modello v2 con un contesto/una funzionalità non null deve includere
@@ -525,7 +525,7 @@ Le famiglie di route Radar locali riportate di seguito supportano l'interfaccia 
 | `/api/radar/local-model-state` | DELETE | Cancella i campi di override modificabili preservando l'eventuale tombstone.                                                                  |
 
 **Regola inderogabile: queste route non fungono mai da proxy per il servizio di feed.** Il browser comunica esclusivamente
-con il server OmniRoute locale. I quattro moduli che interagiscono con il servizio Radar sono
+con il server 67router locale. I quattro moduli che interagiscono con il servizio Radar sono
 `src/lib/radar/sync.ts` (catalogo), `src/lib/radar/referralsSync.ts` (referral) e
 `src/lib/radar/offersSync.ts` (offerte), oltre a `src/lib/radar/intelSync.ts` (Intel); vengono tutti eseguiti
 lato server, mai lato client. In questo modo,
@@ -567,7 +567,7 @@ Intel è un artefatto firmato disponibile all'indirizzo `GET /v1/intel/latest`. 
 
 `syncRadarIntel()` applica gli stessi requisiti delle offerte: Bearer lato server, timeout di 30 secondi, limite dello stream di 10 MiB, verifica Ed25519 sugli esatti byte, schema rigoroso, requisito `live` nel corpo e nell'header, versione minima e preservazione dell'ultima cache valida. Dopo aver reso persistente uno snapshot live verificato, il client deriva `radar:<sha256(supporter key)>`, memorizza esclusivamente tale identità unidirezionale ed emette l'evento di riconoscimento dedicato `radar_supporter`. Il relativo badge `radar-supporter` è idempotente e assegna zero XP; non aggiorna mai le classifiche né riutilizza `token_share`. `/dashboard/radar/intel` esegue il rendering del badge esclusivamente in base ai metadati verificati della cache locale.
 
-La CLI espone `omniroute radar status` e `omniroute radar sync`. Entrambi comunicano esclusivamente con l'API locale di OmniRoute. `status` esegue un `GET /api/radar/status` di sola lettura; `sync` invia una singola richiesta `POST /api/radar/sync-all` e stampa un risultato per ciascun feed. Nessuno dei due comandi legge, accetta o stampa la chiave per sostenitori e nessuno contatta direttamente il servizio Radar.
+La CLI espone `omniroute radar status` e `omniroute radar sync`. Entrambi comunicano esclusivamente con l'API locale di 67router. `status` esegue un `GET /api/radar/status` di sola lettura; `sync` invia una singola richiesta `POST /api/radar/sync-all` e stampa un risultato per ciascun feed. Nessuno dei due comandi legge, accetta o stampa la chiave per sostenitori e nessuno contatta direttamente il servizio Radar.
 
 ---
 

@@ -4,14 +4,14 @@
 
 ---
 
-IDE සැසියක් නොමැතිව Cursor, OmniRoute පිටුපස තැබිය හැකි ක්රම දෙකක්:
+IDE සැසියක් නොමැතිව Cursor, 67router පිටුපස තැබිය හැකි ක්රම දෙකක්:
 
 1. **`cursor-api` සපයන්නා** ("Cursor API" කාඩ්පත, අන්වර්ථ නාමය `cua`): Cursor පරිශීලක API යතුරක් (`crsr_…`, `https://cursor.com/dashboard/api` වෙතින් ජනනය කළ) රඳවා ගන්නා API-යතුරු
-   සපයන්නෙකි. ඉන්පසු ඕනෑම OmniRoute සේවාලාභියෙකුට සාමාන්ය කෝටා, පසුබැසීමේ සහ ලොග්කරණ ස්තර සමඟින්, `cursor-api/<model>` හෝ
+   සපයන්නෙකි. ඉන්පසු ඕනෑම 67router සේවාලාභියෙකුට සාමාන්ය කෝටා, පසුබැසීමේ සහ ලොග්කරණ ස්තර සමඟින්, `cursor-api/<model>` හෝ
    `cua/<model>` ලෙස `/v1/chat/completions` හරහා Cursor ආකෘති වෙත ළඟා විය හැක. IDE
    සපයන්නා (`cursor`, OAuth/IDE සැසිය) නොවෙනස්ව පවතී.
-2. **Cursor CLI සෘජු යොමුකිරීම**: Cursor CLI (`agent`) OmniRoute වෙත යොමු කරන්න, එවිට
-   CLI විසින් සිදු කරන සෑම RPC එකක්ම OmniRoute API යතුරකින් සත්යාපනය කර,
+2. **Cursor CLI සෘජු යොමුකිරීම**: Cursor CLI (`agent`) 67router වෙත යොමු කරන්න, එවිට
+   CLI විසින් සිදු කරන සෑම RPC එකක්ම 67router API යතුරකින් සත්යාපනය කර,
    `cursor-api` සම්බන්ධතාවයක අක්තපත්රය සමඟ Cursor වෙත යොමු කර, Logs
    පිටුවේ සටහන් කෙරේ.
 
@@ -57,7 +57,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 සටහන්:
 
 - `cursor-api` සඳහා ආකෘති ලැයිස්තුව ස්ථිතික Cursor රෙජිස්ට්රියෙන් පැමිණේ (IDE
-  සපයන්නා පසුබසින ලැයිස්තුවම වේ); OmniRoute සත්කාරකය මත `cursor-agent` ස්ථාපනය කිරීම
+  සපයන්නා පසුබසින ලැයිස්තුවම වේ); 67router සත්කාරකය මත `cursor-agent` ස්ථාපනය කිරීම
   අවශ්ය නොවේ.
 - `POST /api/providers/{id}/refresh-cursor` යනු `cursor` IDE සපයන්නා සඳහා
   පමණි; `cursor-api` සම්බන්ධතාවලට අලුත් කිරීමට IDE සැසියක් නොමැත.
@@ -65,7 +65,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 ## ස්වදේශීය ආකෘති ID සහ ප්රයත්නය
 
 `cursor` / `cu` සහ `cursor-api` / `cua` සඳහා, හවුල් Claude-ප්රයත්න සාමාන්යකාරකය
-ඉල්ලා ඇති ආකෘති ID එක නොවෙනස්ව තබයි. OmniRoute ප්රයත්න අන්වර්ථ නාමයක් ලෙස නොව, සැබෑ ආකෘති ID එකක කොටසක් ලෙස
+ඉල්ලා ඇති ආකෘති ID එක නොවෙනස්ව තබයි. 67router ප්රයත්න අන්වර්ථ නාමයක් ලෙස නොව, සැබෑ ආකෘති ID එකක කොටසක් ලෙස
 Cursor හට `-low` වැනි උපසර්ගයක් ප්රචාරය කළ හැක.
 Cursor ක්රියාත්මකකාරකය නිශ්චිත සජීවී-නාමාවලි ගැළපීමක් සංරක්ෂණය කරයි; ගැළපීමක් නොමැති විට,
 එහි පවතින ආකෘති විසඳුම්කාරකය උපසර්ගයෙන්-පරාමිතියට පසුබැසීම හසුරුවයි.
@@ -80,18 +80,18 @@ Cursor ක්රියාත්මකකාරකය නිශ්චිත ස�
 `src/shared/constants/publicApiRoutes.ts` තුළ ලියාපදිංචි කර ඇත්තේ handler එක
 තමන්ගේම සත්යාපනය බලාත්මක කරන බැවිනි:
 
-| මාර්ගය                                                                                                                            | CLI වෙතින් අපේක්ෂිත සත්යාපනය | OmniRoute සිදු කරන දේ                                                                                                                                                                         |
+| මාර්ගය                                                                                                                            | CLI වෙතින් අපේක්ෂිත සත්යාපනය | 67router සිදු කරන දේ                                                                                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                                | `Bearer <OmniRoute API key>` | යතුර වලංගු කර, පැය 1ක HS256 JWT එකක් (`JWT_SECRET` සමඟ අත්සන් කළ) නිර්මාණය කර එය ආපසු ලබා දෙයි                                                                                                |
+| `POST /auth/exchange_user_api_key`                                                                                                | `Bearer <67router API key>`  | යතුර වලංගු කර, පැය 1ක HS256 JWT එකක් (`JWT_SECRET` සමඟ අත්සන් කළ) නිර්මාණය කර එය ආපසු ලබා දෙයි                                                                                                |
 | අනෙකුත් සෑම මාර්ගයක්ම (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`          | නිකුත් කරන්නා/ප්රේක්ෂකයා/කල් ඉකුත්වීම සත්යාපනය කර, සක්රිය `cursor-api` සම්බන්ධතාවක් තෝරා, Authorization header එක හුවමාරු කළ Cursor token එකෙන් ප්රතිස්ථාපනය කර ප්රතිචාරය stream කර ආපසු යවයි |
 
 CLI එකට ලැබෙන ඕනෑම token එකකින් එය `exp` decode කරයි. එබැවින් එයට opaque
 token එකක් ලබා දීමෙන් සෑම request එකකටම පාහේ පෙර එය නැවත exchange කරයි; නිර්මාණය කළ JWT එක
-එය වළක්වයි. OmniRoute වෙතින් ලැබෙන 401 එකක් CLI එකට නැවත exchange කිරීමට හේතු වේ.
+එය වළක්වයි. 67router වෙතින් ලැබෙන 401 එකක් CLI එකට නැවත exchange කිරීමට හේතු වේ.
 
 ### සැකසුම
 
-1. OmniRoute API යතුරක් (Dashboard → API keys) සහ `cursor-api`
+1. 67router API යතුරක් (Dashboard → API keys) සහ `cursor-api`
    සම්බන්ධතාවක් සාදන්න.
 2. agent stream එක සඳහා HTTP/1.1 භාවිත කරන ලෙස CLI එකට දන්වන්න.
    `~/.cursor/cli-config.json` තුළ:
@@ -103,7 +103,7 @@ token එකක් ලබා දීමෙන් සෑම request එකකට�
    මෙය නොමැතිව CLI එක, වෙනම වින්යාස කළ agent host එකකට HTTP/2 හරහා agent turn එක
    විවෘත කරන අතර endpoint එක හරහා යන්නේ control-plane RPC පමණි.
 
-3. OmniRoute වෙත යොමු කර CLI එක ධාවනය කරන්න:
+3. 67router වෙත යොමු කර CLI එක ධාවනය කරන්න:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -112,18 +112,18 @@ token එකක් ලබා දීමෙන් සෑම request එකකට�
    ```
 
 සෑම hop එකක්ම provider `cursor-api`, request type `cursor-cli`,
-path `/api/cursor-cli/<rpc>` ලෙස Logs තුළ සටහන් වන අතර, එය OmniRoute API යතුරට සහ
+path `/api/cursor-cli/<rpc>` ලෙස Logs තුළ සටහන් වන අතර, එය 67router API යතුරට සහ
 එය සපයා දුන් සම්බන්ධතාවට ආරෝපණය කෙරේ.
 
 ### අසාර්ථක වීමේ ආකාර
 
-| තත්ත්වය                                               | CLI වෙත ලැබෙන ප්රතිචාරය                                |
-| ----------------------------------------------------- | ------------------------------------------------------ |
-| නොදන්නා OmniRoute යතුරක් සහ `REQUIRE_API_KEY=true`    | exchange කිරීමේදී 401 `unauthenticated`                |
-| `REQUIRE_API_KEY=false`                               | නිර්නාමික session එකක් (`/v1/*` හැසිරීම පිළිබිඹු කරයි) |
-| කල් ඉකුත් වූ / විදේශීය / වෙනස් කළ session JWT         | 401, CLI එක නැවත exchange කරයි                         |
-| exchange කිරීමෙන් පසු OmniRoute API යතුර අවලංගු කර ඇත | ඊළඟ RPC එකේදී 401                                      |
-| සක්රිය `cursor-api` සම්බන්ධතාවක් නොමැත                | 503 `unavailable`                                      |
-| Cursor විසින් සම්බන්ධතාවේ යතුර ප්රතික්ෂේප කරයි        | 401 `unauthenticated`, cache කළ session එක ඉවත් කෙරේ   |
-| Upstream වෙත ළඟා විය නොහැක                            | 502 `unavailable` (පිරිසිදු කළ පණිවිඩය)                |
-| `JWT_SECRET` සකසා නොමැත                               | exchange කිරීමේදී 503                                  |
+| තත්ත්වය                                              | CLI වෙත ලැබෙන ප්රතිචාරය                                |
+| ---------------------------------------------------- | ------------------------------------------------------ |
+| නොදන්නා 67router යතුරක් සහ `REQUIRE_API_KEY=true`    | exchange කිරීමේදී 401 `unauthenticated`                |
+| `REQUIRE_API_KEY=false`                              | නිර්නාමික session එකක් (`/v1/*` හැසිරීම පිළිබිඹු කරයි) |
+| කල් ඉකුත් වූ / විදේශීය / වෙනස් කළ session JWT        | 401, CLI එක නැවත exchange කරයි                         |
+| exchange කිරීමෙන් පසු 67router API යතුර අවලංගු කර ඇත | ඊළඟ RPC එකේදී 401                                      |
+| සක්රිය `cursor-api` සම්බන්ධතාවක් නොමැත               | 503 `unavailable`                                      |
+| Cursor විසින් සම්බන්ධතාවේ යතුර ප්රතික්ෂේප කරයි       | 401 `unauthenticated`, cache කළ session එක ඉවත් කෙරේ   |
+| Upstream වෙත ළඟා විය නොහැක                           | 502 `unavailable` (පිරිසිදු කළ පණිවිඩය)                |
+| `JWT_SECRET` සකසා නොමැත                              | exchange කිරීමේදී 503                                  |

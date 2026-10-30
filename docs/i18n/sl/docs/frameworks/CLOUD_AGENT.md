@@ -7,7 +7,7 @@
 > **Vir resnice:** `src/lib/cloudAgent/` in `src/app/api/v1/agents/tasks/`
 > **Nazadnje posodobljeno:** 2026-06-28 — v3.8.40 (osvežitev frontmatterja; 4 agenti, vključno s cursor-cloud)
 
-OmniRoute usklajuje kodirne agente tretjih ponudnikov, ki gostujejo v oblaku (Codex Cloud, Cursor,
+67router usklajuje kodirne agente tretjih ponudnikov, ki gostujejo v oblaku (Codex Cloud, Cursor,
 Devin, Jules), kot dolgotrajna opravila. Vsak agent je ovit v enoten vmesnik, tako da
 lahko odjemalci pošljejo poziv + URL repozitorija in prejmejo rezultate, ne da bi se morali ukvarjati
 z API-ji posameznih ponudnikov.

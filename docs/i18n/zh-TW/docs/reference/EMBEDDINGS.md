@@ -4,7 +4,7 @@
 
 ---
 
-當 OmniRoute 位於 Hindsight 0.9.1（僅文字的 `encode(list[str])`）和 Memorix 1.6.0（Jina 媒體閘道）前方時，關於 `POST /v1/embeddings` 的操作說明。已於 2026-08-17 針對 OmniRoute 3.8.49 在 `https://omniroute.jaguar-fish.ts.net/v1` 進行實際驗證。以下不含任何密鑰。
+當 67router 位於 Hindsight 0.9.1（僅文字的 `encode(list[str])`）和 Memorix 1.6.0（Jina 媒體閘道）前方時，關於 `POST /v1/embeddings` 的操作說明。已於 2026-08-17 針對 67router 3.8.49 在 `https://omniroute.jaguar-fish.ts.net/v1` 進行實際驗證。以下不含任何密鑰。
 
 ## 可用的模型 id
 
@@ -70,7 +70,7 @@ curl -sS https://omniroute.example/v1/embeddings \
   -d '{"model":"openrouter/google/gemini-embedding-2","input":["alpha","beta"]}'
 ```
 
-原生 `gemini-embedding-2` 無法僅透過 GitOps 成功執行。必須將 Google AI Studio 金鑰新增為 `gemini` 提供者連線（透過儀表板，或將 `GEMINI_API_KEY` 匯入 OmniRoute）。此儲存庫中不含該密鑰。
+原生 `gemini-embedding-2` 無法僅透過 GitOps 成功執行。必須將 Google AI Studio 金鑰新增為 `gemini` 提供者連線（透過儀表板，或將 `GEMINI_API_KEY` 匯入 67router）。此儲存庫中不含該密鑰。
 
 ### Jina 多模態路徑
 
@@ -91,7 +91,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 ### Jina / Memorix 圖片物件
 
-OmniRoute 標準圖片項目（28×28 PNG，784 個像素 — Jina 會拒絕 1×1）：
+67router 標準圖片項目（28×28 PNG，784 個像素 — Jina 會拒絕 1×1）：
 
 ```json
 {
@@ -138,10 +138,10 @@ Memorix 1.6.0 / Jina 原生格式：
 
 ### Hindsight 0.9.1
 
-Hindsight 嵌入僅支援文字（`encode(list[str])`）。它不會傳送圖片物件。請將 Hindsight 的 OpenAI 相容嵌入基礎 URL 指向 OmniRoute `/v1`，並使用上表中的可用 id（`jina-ai/jina-embeddings-v5-omni-small` 或 `openrouter/google/gemini-embedding-2`）。除非閘道上已有 `gemini` API 金鑰，否則請勿將模型設為裸 `gemini-embedding-2`。
+Hindsight 嵌入僅支援文字（`encode(list[str])`）。它不會傳送圖片物件。請將 Hindsight 的 OpenAI 相容嵌入基礎 URL 指向 67router `/v1`，並使用上表中的可用 id（`jina-ai/jina-embeddings-v5-omni-small` 或 `openrouter/google/gemini-embedding-2`）。除非閘道上已有 `gemini` API 金鑰，否則請勿將模型設為裸 `gemini-embedding-2`。
 
 ### Memorix 1.6.0
 
-Memorix 只會將符合 `/jina\.ai/i` 的 `baseUrl` 視為原生媒體端點。即使模型是 Jina omni，OmniRoute URL 仍會使用僅文字的路徑。此閘道限制是 Memorix 用戶端的問題。除此之外，即使閘道開啟，OmniRoute 仍會拒絕 Memorix 所傳送的 Jina `{image: "data:..."}` 主體，因此若不採用標準 `{type,source}` 結構描述，Jina 相容用戶端就無法透過 OmniRoute 嵌入圖片。
+Memorix 只會將符合 `/jina\.ai/i` 的 `baseUrl` 視為原生媒體端點。即使模型是 Jina omni，67router URL 仍會使用僅文字的路徑。此閘道限制是 Memorix 用戶端的問題。除此之外，即使閘道開啟，67router 仍會拒絕 Memorix 所傳送的 Jina `{image: "data:..."}` 主體，因此若不採用標準 `{type,source}` 結構描述，Jina 相容用戶端就無法透過 67router 嵌入圖片。
 
-文字請使用 `jina-ai/jina-embeddings-v5-omni-small`。請勿將 Memorix 的 `base_url` 指向 `https://api.jina.ai` — 請維持 OmniRoute 為唯一的中繼站。
+文字請使用 `jina-ai/jina-embeddings-v5-omni-small`。請勿將 Memorix 的 `base_url` 指向 `https://api.jina.ai` — 請維持 67router 為唯一的中繼站。

@@ -14,7 +14,7 @@
 
 ## Għaliex dan l-approċċ huwa konservattiv
 
-L-istruttura eżistenti tad-deployment ta’ OmniRoute hija diġà ħafifa u ppruvata:
+L-istruttura eżistenti tad-deployment ta’ 67router hija diġà ħafifa u ppruvata:
 
 - **`redis:7-alpine`** jimmaniġġja l-workload tal-limitazzjoni tar-rata/cache fuq skala ta’ produzzjoni.
 - **SQLite + sqlite-vec + FTS5** ikopru l-memorja lokali + vetturi + tiftix fit-test (ara [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Iż-żewġ profili hawnhekk huma **għażliet ta’ scale-out għal deployments 
 
 - Tħaddem ≥3 repliki ta’ `omniroute` u trid li r-rotazzjoni tal-providers tkun iċċentralizzata fi proċess Go wieħed.
 - Trid wiċċ wieħed għall-awditjar/logging tat-talbiet lill-providers upstream mir-repliki kollha.
-- Trid skalabbiltà orizzontali tas-saff tar-routing tal-Livell 1 indipendentement mir-repliki ta’ OmniRoute.
+- Trid skalabbiltà orizzontali tas-saff tar-routing tal-Livell 1 indipendentement mir-repliki ta’ 67router.
 
 **X’iżid:**
 

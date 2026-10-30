@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookie 제공자는 API 키 대신 기존 브라우저 세션을 통해 OmniRoute가 AI 서비스를 사용할 수 있게 합니다. 웹사이트를 통해 이미 서비스에 액세스할 수 있고 OmniRoute에서도 동일한 인증 세션을 사용하려는 경우에 유용합니다.
+Web Cookie 제공자는 API 키 대신 기존 브라우저 세션을 통해 67router가 AI 서비스를 사용할 수 있게 합니다. 웹사이트를 통해 이미 서비스에 액세스할 수 있고 67router에서도 동일한 인증 세션을 사용하려는 경우에 유용합니다.
 
 API 키 제공자와 달리 Web Cookie 제공자는 브라우저가 웹사이트에 전송하는 자격 증명을 사용하여 인증합니다.
 
@@ -49,7 +49,7 @@ DevTools
 
 `Cookie` 요청 헤더에는 브라우저가 성공적으로 사용한 정확한 인증 정보가 포함되어 있습니다.
 
-대부분의 Web Cookie 제공자에서는 이 값을 OmniRoute에 붙여넣어야 합니다.
+대부분의 Web Cookie 제공자에서는 이 값을 67router에 붙여넣어야 합니다.
 
 ---
 
@@ -63,7 +63,7 @@ DevTools
 4. 페이지를 새로고침합니다.
 5. 인증된 채팅 또는 대화 요청을 엽니다.
 6. 필요한 인증 자격 증명을 복사합니다.
-7. OmniRoute를 엽니다.
+7. 67router를 엽니다.
 8. **Providers → Add Provider**로 이동합니다.
 9. 사용할 Web Cookie 제공자를 선택합니다.
 10. 자격 증명을 붙여넣습니다.
@@ -92,17 +92,17 @@ DevTools
 
 ## NoTrack (notrack-web)
 
-NoTrack([notrack.ai](https://notrack.ai))은 가입 없이 무료로 사용할 수 있는 소비자용 채팅 플랫폼입니다. 첫 방문 시 익명 세션이 생성되며 `uid`, `si_usr_id`, `si_ses_id`라는 세 개의 쿠키를 통해 유지됩니다. OmniRoute는 단일 모델 ID(`notrack-c`, 별칭 `ntw`)를 통해 동일한 `/api/dispatch` 엔드포인트를 프록시합니다.
+NoTrack([notrack.ai](https://notrack.ai))은 가입 없이 무료로 사용할 수 있는 소비자용 채팅 플랫폼입니다. 첫 방문 시 익명 세션이 생성되며 `uid`, `si_usr_id`, `si_ses_id`라는 세 개의 쿠키를 통해 유지됩니다. 67router는 단일 모델 ID(`notrack-c`, 별칭 `ntw`)를 통해 동일한 `/api/dispatch` 엔드포인트를 프록시합니다.
 
 ### 연결 단계
 
 1. 브라우저에서 [notrack.ai](https://notrack.ai)를 열고 익명 세션 쿠키가 설정되도록 합니다.
 2. **DevTools → Network**를 열고 페이지를 새로 고친 다음 아무 `/api` 요청이나 클릭합니다.
 3. **Request Headers**에서 전체 `Cookie` 헤더 값을 복사합니다.
-4. OmniRoute에서 **Providers → Add Provider → NoTrack Web (Free)**로 이동합니다.
+4. 67router에서 **Providers → Add Provider → NoTrack Web (Free)**로 이동합니다.
 5. 쿠키 문자열을 `apiKey` 필드에 붙여넣고 **Save**를 클릭합니다.
 
-OmniRoute는 붙여넣은 문자열에서 `uid`, `si_usr_id`, `si_ses_id`를 추출하고 해당 키-값 쌍만 포함하는 깔끔한 `Cookie` 헤더를 다시 구성합니다. 로그인한 계정에 설정되는 `ntk_…` 토큰인 `nt_session`이 있으면 이 값도 포함합니다. 세 값 중 하나라도 누락된 경우 운영자가 다른 형식을 실험할 수 있도록 붙여넣은 원본 문자열을 변경 없이 전달합니다.
+67router는 붙여넣은 문자열에서 `uid`, `si_usr_id`, `si_ses_id`를 추출하고 해당 키-값 쌍만 포함하는 깔끔한 `Cookie` 헤더를 다시 구성합니다. 로그인한 계정에 설정되는 `ntk_…` 토큰인 `nt_session`이 있으면 이 값도 포함합니다. 세 값 중 하나라도 누락된 경우 운영자가 다른 형식을 실험할 수 있도록 붙여넣은 원본 문자열을 변경 없이 전달합니다.
 
 ### 모델 ID
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## 브라우저에서는 쿠키가 작동하지만 OmniRoute에서는 작동하지 않음
+## 브라우저에서는 쿠키가 작동하지만 67router에서는 작동하지 않음
 
 일부 제공자는 인증된 요청 중에만 전송되는 쿠키를 포함합니다.
 

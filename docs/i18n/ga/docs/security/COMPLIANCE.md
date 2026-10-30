@@ -7,7 +7,7 @@
 > **Foinse údaráis:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
-Taifeadann OmniRoute gníomhartha riaracháin, teagmhais fíordheimhnithe, athruithe
+Taifeadann 67router gníomhartha riaracháin, teagmhais fíordheimhnithe, athruithe
 ar shaolré dhintiúir soláthraithe, agus agairtí uirlisí MCP i dtáblaí iniúchta
 le tacaíocht SQLite. Mínítear ar an leathanach seo cad a logáiltear, cá bhfuil
 sé stóráilte, cá fhad a choinnítear é, conas is féidir le heochracha API roghnú

@@ -11,11 +11,11 @@
 
 ## Mis see on
 
-OmniRoute saab ühendada **Notioni** tööruumiga, kasutades seda **kontekstiallikana** — lugemis- ja kirjutamisõigusega
+67router saab ühendada **Notioni** tööruumiga, kasutades seda **kontekstiallikana** — lugemis- ja kirjutamisõigusega
 teadmusbaasina, millele agendid pääsevad juurde sisseehitatud MCP-serveri kaudu. Kui Notioni
 integratsioonitoken on seadistatud, võimaldavad MCP-tööriistad LLM-il otsida lehti ja andmebaase,
 lugeda lehtede sisu ja plokipuid, teha andmebaasipäringuid filtrite ja sortimisega ning lisada uusi
-plokke — kõike seda vahendab OmniRoute (koos korduskatsete, ajalõpu ja vigade liigitamisega),
+plokke — kõike seda vahendab 67router (koos korduskatsete, ajalõpu ja vigade liigitamisega),
 nii et mudel ei pöördu kunagi otse Notioni API poole.
 
 Integratsioon on ametliku Notioni REST API õhuke, töökindlamaks muudetud ümbris
@@ -40,7 +40,7 @@ tabelisse `key_value` (nimeruum `notion`, võti `integration_token`) faili
 > [!NOTE]
 > Token on **Notioni sisemise integratsiooni token**. Looge integratsioon aadressil
 > <https://www.notion.com/my-integrations> ja seejärel jagage integratsiooniga lehti/andmebaase, millele
-> soovite OmniRoute'ile juurdepääsu anda (Notioni õiguste mudel põhineb jagamisel,
+> soovite 67router'ile juurdepääsu anda (Notioni õiguste mudel põhineb jagamisel,
 > mitte kogu tööruumi hõlmaval juurdepääsul).
 
 ### Seadistamine REST-i kaudu
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Kõik kolm meetodit nõuavad töölaua autentimist (`isAuthenticated`). `POST`-päringu korral
-salvestab OmniRoute tokeni ja käivitab kohe ühe tulemusega testotsingu; kui Notion
+salvestab 67router tokeni ja käivitab kohe ühe tulemusega testotsingu; kui Notion
 tagastab veaobjekti, kustutatakse token ja kutse nurjub olekukoodiga `400`.
 
 ## MCP-tööriistad (6)

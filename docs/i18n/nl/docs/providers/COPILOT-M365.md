@@ -39,7 +39,7 @@ De volledige URL heeft de volgende indeling:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Ga in OmniRoute naar **Providers → Add Provider**, selecteer **Microsoft 365 Copilot
+6. Ga in 67router naar **Providers → Add Provider**, selecteer **Microsoft 365 Copilot
    (BizChat)** en plak de referentie in de volgende indeling:
 
 ```
@@ -56,9 +56,9 @@ exporteren vanuit DevTools:
 1. Open **DevTools → Network**.
 2. Start of vervolg een BizChat-gesprek (hierdoor wordt de WebSocket-verbinding geactiveerd).
 3. Klik met de rechtermuisknop in het paneel Network en selecteer **Save all as HAR with content**.
-4. Gebruik in OmniRoute de knop **Import .har file** in het dialoogvenster voor de providerverbinding.
+4. Gebruik in 67router de knop **Import .har file** in het dialoogvenster voor de providerverbinding.
 
-OmniRoute scant de HAR op de Chathub-WebSocket-URL, extraheert
+67router scant de HAR op de Chathub-WebSocket-URL, extraheert
 `access_token` en `chathubPath` en vult de referentievelden automatisch in. De
 HAR-import decodeert de vervaldatum van de JWT en toont de resterende levensduur van het token.
 
@@ -81,7 +81,7 @@ Om te voorkomen dat u de referentie handmatig opnieuw moet vastleggen, kunt u ee
 | `tier`         | `individual` (standaard), `edu` of `enterprise`                                 |
 
 Verkrijg het vernieuwingstoken via een Microsoft device-code- of authorization-code-flow
-met het bereik `substrate.office.com/sydney`. Wanneer `refreshToken` is ingesteld, vernieuwt OmniRoute
+met het bereik `substrate.office.com/sydney`. Wanneer `refreshToken` is ingesteld, vernieuwt 67router
 het `access_token` voorafgaand aan elk verzoek, zodat u het niet
 na elke vervalperiode van ~75 minuten opnieuw hoeft vast te leggen.
 

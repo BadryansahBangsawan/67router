@@ -36,7 +36,7 @@ Para sa bawat candidate sa pool (`open-sse/services/autoCombo/virtualFactory.ts:
 kaagad pagkatapos ng `filterPaidOnlyCandidates`):
 
 1. **Wala sa `FREE_MODEL_BUDGETS`** → hindi isinasama. Saklaw nito ang mga tunay na bayad na
-   modelo at anumang provider/model na hindi pa naikaklasipika ng OmniRoute — nagsisimulang hindi
+   modelo at anumang provider/model na hindi pa naikaklasipika ng 67router — nagsisimulang hindi
    kasama ang mga bagong candidate, sa halip na awtomatikong isama.
 2. **`freeType: "keyless"`** → agad na pumapasa, **ngunit para lamang sa isang candidate na tunay
    na nagmula sa no-auth path** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -98,7 +98,7 @@ at hindi kailanman ibang hindi na-verify na account sa parehong kandidato. Tingn
 (mga keyless-bypass na kaso A/B/C, mga multi-account na kaso 1-5).
 
 `awtomatikong natuklasan`: ang isang provider/model na ilalabas bukas na may wastong metadata (nasa
-catalog, may usage adapter, `hardStopGuaranteed: true`) ay magagamit sa sandaling malaman ito ng OmniRoute
+catalog, may usage adapter, `hardStopGuaranteed: true`) ay magagamit sa sandaling malaman ito ng 67router
 — walang pagbabago sa code, walang entry sa whitelist, at walang kailangang i-edit sa module na ito. Ang isang inalis mula
 sa catalog ay mawawala rin sa parehong paraan. Tingnan ang
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` para sa patunay laban sa regression (sa pamamagitan ng

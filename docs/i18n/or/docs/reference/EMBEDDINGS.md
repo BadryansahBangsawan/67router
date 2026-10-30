@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, Hindsight 0.9.1 (କେବଳ-ଟେକ୍ସଟ୍ `encode(list[str])`) ଏବଂ Memorix 1.6.0 (Jina ମିଡିଆ ଗେଟ୍) ସମ୍ମୁଖରେ ଥିବାବେଳେ `POST /v1/embeddings` ପାଇଁ ଅପରେଟର୍ ଟିପ୍ପଣୀ। `https://omniroute.jaguar-fish.ts.net/v1` ଠାରେ OmniRoute 3.8.49 ବିପକ୍ଷରେ 2026-08-17 ରେ ଲାଇଭ୍ ଯାଞ୍ଚ କରାଯାଇଛି। ନିମ୍ନରେ କୌଣସି ଗୁପ୍ତ ତଥ୍ୟ ନାହିଁ।
+67router, Hindsight 0.9.1 (କେବଳ-ଟେକ୍ସଟ୍ `encode(list[str])`) ଏବଂ Memorix 1.6.0 (Jina ମିଡିଆ ଗେଟ୍) ସମ୍ମୁଖରେ ଥିବାବେଳେ `POST /v1/embeddings` ପାଇଁ ଅପରେଟର୍ ଟିପ୍ପଣୀ। `https://omniroute.jaguar-fish.ts.net/v1` ଠାରେ 67router 3.8.49 ବିପକ୍ଷରେ 2026-08-17 ରେ ଲାଇଭ୍ ଯାଞ୍ଚ କରାଯାଇଛି। ନିମ୍ନରେ କୌଣସି ଗୁପ୍ତ ତଥ୍ୟ ନାହିଁ।
 
 ## କାର୍ଯ୍ୟକ୍ଷମ ମଡେଲ୍ id
 
@@ -70,7 +70,7 @@ curl -sS https://omniroute.example/v1/embeddings \
   -d '{"model":"openrouter/google/gemini-embedding-2","input":["alpha","beta"]}'
 ```
 
-ନେଟିଭ୍ `gemini-embedding-2` କେବଳ GitOps ରୁ ସଫଳ ହୋଇପାରିବ ନାହିଁ। ଏକ Google AI Studio କୀକୁ `gemini` ପ୍ରୋଭାଇଡର୍ ସଂଯୋଗ ଭାବରେ ଯୋଡ଼ିବା ଆବଶ୍ୟକ (ଡ୍ୟାସ୍ବୋର୍ଡ କିମ୍ବା OmniRoute ଭିତରକୁ ଆମଦାନୀ ହୋଇଥିବା `GEMINI_API_KEY`)। ସେହି ଗୁପ୍ତ ତଥ୍ୟ ଏହି repo ରେ ନାହିଁ।
+ନେଟିଭ୍ `gemini-embedding-2` କେବଳ GitOps ରୁ ସଫଳ ହୋଇପାରିବ ନାହିଁ। ଏକ Google AI Studio କୀକୁ `gemini` ପ୍ରୋଭାଇଡର୍ ସଂଯୋଗ ଭାବରେ ଯୋଡ଼ିବା ଆବଶ୍ୟକ (ଡ୍ୟାସ୍ବୋର୍ଡ କିମ୍ବା 67router ଭିତରକୁ ଆମଦାନୀ ହୋଇଥିବା `GEMINI_API_KEY`)। ସେହି ଗୁପ୍ତ ତଥ୍ୟ ଏହି repo ରେ ନାହିଁ।
 
 ### Jina ମଲ୍ଟିମୋଡାଲ୍ ପଥ
 
@@ -91,7 +91,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 ### Jina / Memorix ଛବି ଅବଜେକ୍ଟ
 
-OmniRoute କ୍ୟାନୋନିକାଲ୍ ଛବି ଆଇଟମ୍ (28×28 PNG, 784 ପିକ୍ସେଲ୍ — Jina 1×1 କୁ ପ୍ରତ୍ୟାଖ୍ୟାନ କରେ):
+67router କ୍ୟାନୋନିକାଲ୍ ଛବି ଆଇଟମ୍ (28×28 PNG, 784 ପିକ୍ସେଲ୍ — Jina 1×1 କୁ ପ୍ରତ୍ୟାଖ୍ୟାନ କରେ):
 
 ```json
 {
@@ -138,10 +138,10 @@ Memorix 1.6.0 / Jina ନେଟିଭ୍ ଆକୃତି:
 
 ### Hindsight 0.9.1
 
-Hindsight embeddings କେବଳ-ଟେକ୍ସଟ୍ (`encode(list[str])`)। ଏହା ଛବି ଅବଜେକ୍ଟ ପଠାଏ ନାହିଁ। Hindsight ର OpenAI-ସୁସଙ୍ଗତ embeddings ବେସ୍ URL କୁ OmniRoute `/v1` ଆଡ଼କୁ ନିର୍ଦ୍ଦେଶ କରନ୍ତୁ ଏବଂ ଉପରୋକ୍ତ ସାରଣୀରୁ ଏକ କାର୍ଯ୍ୟକ୍ଷମ id (`jina-ai/jina-embeddings-v5-omni-small` କିମ୍ବା `openrouter/google/gemini-embedding-2`) ବ୍ୟବହାର କରନ୍ତୁ। ଗେଟ୍ୱେରେ ଏକ `gemini` API କୀ ନଥିଲେ ମଡେଲ୍କୁ ଖାଲି `gemini-embedding-2` ଭାବେ ସେଟ୍ କରନ୍ତୁ ନାହିଁ।
+Hindsight embeddings କେବଳ-ଟେକ୍ସଟ୍ (`encode(list[str])`)। ଏହା ଛବି ଅବଜେକ୍ଟ ପଠାଏ ନାହିଁ। Hindsight ର OpenAI-ସୁସଙ୍ଗତ embeddings ବେସ୍ URL କୁ 67router `/v1` ଆଡ଼କୁ ନିର୍ଦ୍ଦେଶ କରନ୍ତୁ ଏବଂ ଉପରୋକ୍ତ ସାରଣୀରୁ ଏକ କାର୍ଯ୍ୟକ୍ଷମ id (`jina-ai/jina-embeddings-v5-omni-small` କିମ୍ବା `openrouter/google/gemini-embedding-2`) ବ୍ୟବହାର କରନ୍ତୁ। ଗେଟ୍ୱେରେ ଏକ `gemini` API କୀ ନଥିଲେ ମଡେଲ୍କୁ ଖାଲି `gemini-embedding-2` ଭାବେ ସେଟ୍ କରନ୍ତୁ ନାହିଁ।
 
 ### Memorix 1.6.0
 
-Memorix କେବଳ `/jina\.ai/i` ସହିତ ମେଳ ଖାଉଥିବା `baseUrl` କୁ ନେଟିଭ୍ ମିଡିଆ ଭାବେ ବିବେଚନା କରେ। ମଡେଲ୍ଟି Jina omni ହୋଇଥିଲେ ମଧ୍ୟ ଏକ OmniRoute URL କେବଳ-ଟେକ୍ସଟ୍ ପଥରେ ରହିଥାଏ। ସେହି ଗେଟ୍ ହେଉଛି ଏକ Memorix କ୍ଲାଏଣ୍ଟ ସମସ୍ୟା। ସ୍ୱତନ୍ତ୍ର ଭାବରେ, ଗେଟ୍ ଖୋଲିଲେ Memorix ପଠାଇବାକୁ ଥିବା Jina `{image: "data:..."}` ବଡିକୁ OmniRoute ଏବେ ମଧ୍ୟ ପ୍ରତ୍ୟାଖ୍ୟାନ କରେ, ତେଣୁ କ୍ୟାନୋନିକାଲ୍ `{type,source}` ସ୍କିମା ବିନା Jina-ସୁସଙ୍ଗତ କ୍ଲାଏଣ୍ଟଗୁଡ଼ିକ OmniRoute ମାଧ୍ୟମରେ ଛବି embed କରିପାରିବେ ନାହିଁ।
+Memorix କେବଳ `/jina\.ai/i` ସହିତ ମେଳ ଖାଉଥିବା `baseUrl` କୁ ନେଟିଭ୍ ମିଡିଆ ଭାବେ ବିବେଚନା କରେ। ମଡେଲ୍ଟି Jina omni ହୋଇଥିଲେ ମଧ୍ୟ ଏକ 67router URL କେବଳ-ଟେକ୍ସଟ୍ ପଥରେ ରହିଥାଏ। ସେହି ଗେଟ୍ ହେଉଛି ଏକ Memorix କ୍ଲାଏଣ୍ଟ ସମସ୍ୟା। ସ୍ୱତନ୍ତ୍ର ଭାବରେ, ଗେଟ୍ ଖୋଲିଲେ Memorix ପଠାଇବାକୁ ଥିବା Jina `{image: "data:..."}` ବଡିକୁ 67router ଏବେ ମଧ୍ୟ ପ୍ରତ୍ୟାଖ୍ୟାନ କରେ, ତେଣୁ କ୍ୟାନୋନିକାଲ୍ `{type,source}` ସ୍କିମା ବିନା Jina-ସୁସଙ୍ଗତ କ୍ଲାଏଣ୍ଟଗୁଡ଼ିକ 67router ମାଧ୍ୟମରେ ଛବି embed କରିପାରିବେ ନାହିଁ।
 
-ଟେକ୍ସଟ୍ ପାଇଁ `jina-ai/jina-embeddings-v5-omni-small` ବ୍ୟବହାର କରନ୍ତୁ। Memorix `base_url` କୁ `https://api.jina.ai` ଆଡ଼କୁ ନିର୍ଦ୍ଦେଶ କରନ୍ତୁ ନାହିଁ — OmniRoute କୁ ଏକମାତ୍ର ହପ୍ ଭାବେ ରଖନ୍ତୁ।
+ଟେକ୍ସଟ୍ ପାଇଁ `jina-ai/jina-embeddings-v5-omni-small` ବ୍ୟବହାର କରନ୍ତୁ। Memorix `base_url` କୁ `https://api.jina.ai` ଆଡ଼କୁ ନିର୍ଦ୍ଦେଶ କରନ୍ତୁ ନାହିଁ — 67router କୁ ଏକମାତ୍ର ହପ୍ ଭାବେ ରଖନ୍ତୁ।

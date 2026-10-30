@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector는 OmniRoute에 내장된 HTTPS 트래픽 디버거로, Charles Proxy / mitmweb / HTTP Toolkit과 유사하면서 **LLM 인식** 및 **에이전트 인식** 기능을 제공합니다. `/dashboard/tools/traffic-inspector`에서 사용할 수 있으며 최대 5개의 동시 캡처 소스로부터 실시간 트래픽을 수신합니다.
+Traffic Inspector는 67router에 내장된 HTTPS 트래픽 디버거로, Charles Proxy / mitmweb / HTTP Toolkit과 유사하면서 **LLM 인식** 및 **에이전트 인식** 기능을 제공합니다. `/dashboard/tools/traffic-inspector`에서 사용할 수 있으며 최대 5개의 동시 캡처 소스로부터 실시간 트래픽을 수신합니다.
 
 **대시보드 위치:** `/dashboard/tools/traffic-inspector`
 **사이드바 그룹:** 도구(AgentBridge 다음)
@@ -16,21 +16,21 @@ Traffic Inspector는 OmniRoute에 내장된 HTTPS 트래픽 디버거로, Charle
 
 ### Traffic Inspector만의 차별점
 
-| 기능                                                                   |  mitmweb  | Charles |  Fiddler  | **OmniRoute Traffic Inspector** |
-| ---------------------------------------------------------------------- | :-------: | :-----: | :-------: | :-----------------------------: |
-| 웹 기반                                                                |     ✓     |    ✗    |     ✗     |                ✓                |
-| 오픈 소스                                                              |     ✓     |    ✗    | 부분 지원 |                ✓                |
-| **에이전트 인식**(요청이 Antigravity/Copilot 등에서 전송되었는지 식별) |     ✗     |    ✗    |     ✗     |                ✓                |
-| **LLM 인식**(OpenAI/Anthropic/Gemini 형식, 토큰, 모델 파싱)            |     ✗     |    ✗    |     ✗     |                ✓                |
-| **모델 매핑 표시**(gemini-3-flash → claude-sonnet-4.7)                 |     ✗     |    ✗    |     ✗     |                ✓                |
-| **프록시/업스트림 지연 시간 분리**                                     | 부분 지원 |    ✗    |     ✗     |                ✓                |
-| OmniRoute의 라우팅, 폴백, 비용과 **통합**                              |     ✗     |    ✗    |     ✗     |                ✓                |
-| **시스템 전체 프록시 디버깅**(머신의 모든 앱)                          |     ✓     |    ✓    |     ✓     |                ✓                |
-| **사용자 지정 호스트 캡처**(호스트별 DNS 리디렉션)                     |     ✓     |    ✓    |     ✓     |                ✓                |
-| **HTTP_PROXY 환경 변수 모드**                                          |     ✓     |    ✓    |     ✓     |                ✓                |
-| **대화 보기**(다중 턴 말풍선, tool_use/tool_result)                    |     ✗     |    ✗    |     ✗     |                ✓                |
-| **SSE 스트림 병합기**(델타 이벤트로부터 재구성)                        |     ✗     |    ✗    |     ✗     |                ✓                |
-| **세션 기록**(이름 지정 가능, .har/.jsonl로 내보내기 가능)             |     ✗     |    ✓    |     ✓     |                ✓                |
+| 기능                                                                   |  mitmweb  | Charles |  Fiddler  | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------- | :-------: | :-----: | :-------: | :----------------------------: |
+| 웹 기반                                                                |     ✓     |    ✗    |     ✗     |               ✓                |
+| 오픈 소스                                                              |     ✓     |    ✗    | 부분 지원 |               ✓                |
+| **에이전트 인식**(요청이 Antigravity/Copilot 등에서 전송되었는지 식별) |     ✗     |    ✗    |     ✗     |               ✓                |
+| **LLM 인식**(OpenAI/Anthropic/Gemini 형식, 토큰, 모델 파싱)            |     ✗     |    ✗    |     ✗     |               ✓                |
+| **모델 매핑 표시**(gemini-3-flash → claude-sonnet-4.7)                 |     ✗     |    ✗    |     ✗     |               ✓                |
+| **프록시/업스트림 지연 시간 분리**                                     | 부분 지원 |    ✗    |     ✗     |               ✓                |
+| 67router의 라우팅, 폴백, 비용과 **통합**                               |     ✗     |    ✗    |     ✗     |               ✓                |
+| **시스템 전체 프록시 디버깅**(머신의 모든 앱)                          |     ✓     |    ✓    |     ✓     |               ✓                |
+| **사용자 지정 호스트 캡처**(호스트별 DNS 리디렉션)                     |     ✓     |    ✓    |     ✓     |               ✓                |
+| **HTTP_PROXY 환경 변수 모드**                                          |     ✓     |    ✓    |     ✓     |               ✓                |
+| **대화 보기**(다중 턴 말풍선, tool_use/tool_result)                    |     ✗     |    ✗    |     ✗     |               ✓                |
+| **SSE 스트림 병합기**(델타 이벤트로부터 재구성)                        |     ✗     |    ✗    |     ✗     |               ✓                |
+| **세션 기록**(이름 지정 가능, .har/.jsonl로 내보내기 가능)             |     ✗     |    ✓    |     ✓     |               ✓                |
 
 ### 한 단락으로 보는 아키텍처
 
@@ -260,7 +260,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // SSE 응답이면 true
   mappedTo: string | null; // x-omniroute-mapped 헤더
-  costEstimateUsd: number | null; // OmniRoute 가격을 기반으로 추정한 비용
+  costEstimateUsd: number | null; // 67router 가격을 기반으로 추정한 비용
 }
 ```
 
@@ -388,7 +388,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### 시스템 프록시가 되돌려지지 않음
 
-시스템 전체 프록시 모드가 활성화된 상태에서 OmniRoute가 충돌하는 경우:
+시스템 전체 프록시 모드가 활성화된 상태에서 67router가 충돌하는 경우:
 
 **macOS:**
 
@@ -433,7 +433,7 @@ netsh winhttp reset proxy
 | GET    | `/requests`                 | 요청 목록 조회(필터링 가능: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | 단일 요청 세부 정보                                                                 |
 | DELETE | `/requests`                 | 인메모리 버퍼 비우기                                                                |
-| POST   | `/requests/{id}/replay`     | OmniRoute 라우터를 통해 동일한 요청 재실행                                          |
+| POST   | `/requests/{id}/replay`     | 67router 라우터를 통해 동일한 요청 재실행                                           |
 | PUT    | `/requests/{id}/annotation` | 요청에 대한 메모 저장 또는 업데이트                                                 |
 
 ### WebSocket

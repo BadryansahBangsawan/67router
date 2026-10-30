@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute heeft **twee** proceslokale lane-systemen met verschillende bereiken. Ze zijn
+67router heeft **twee** proceslokale lane-systemen met verschillende bereiken. Ze zijn
 complementair; operators moeten weten naar welk systeem ze kijken.
 
 ## 1. Procesbrede toelating op byteniveau (`chatBodyAdmission.ts`)

@@ -11,12 +11,12 @@
 
 ## X’inhu
 
-OmniRoute jista’ jaqbad ma’ spazju tax-xogħol ta’ **Notion** bħala **sors ta’ kuntest** —
+67router jista’ jaqbad ma’ spazju tax-xogħol ta’ **Notion** bħala **sors ta’ kuntest** —
 bażi tal-għarfien għall-qari u l-kitba li l-aġenti jaċċessaw permezz tas-server MCP
 inkorporat. Ladarba jiġi kkonfigurat token ta’ integrazzjoni ta’ Notion, l-għodod MCP
 jippermettu lil LLM ifittex paġni u databases, jaqra l-kontenut tal-paġni u s-siġar
 tal-blokki, jagħmel queries fuq databases b’filtri/ortjar, u jżid blokki ġodda —
-kollox ipproksjat permezz ta’ OmniRoute (b’tentattivi mill-ġdid, timeout, u
+kollox ipproksjat permezz ta’ 67router (b’tentattivi mill-ġdid, timeout, u
 klassifikazzjoni tal-iżbalji) sabiex il-mudell qatt ma jaċċessa direttament l-API ta’
 Notion.
 
@@ -44,7 +44,7 @@ tas-settings.
 > [!NOTE]
 > It-token huwa **token ta’ integrazzjoni interna ta’ Notion**. Oħloq integrazzjoni fuq
 > <https://www.notion.com/my-integrations>, imbagħad aqsam ma’ dik l-integrazzjoni
-> l-paġni/databases li trid li OmniRoute jaċċessa (il-mudell tal-permessi ta’ Notion huwa
+> l-paġni/databases li trid li 67router jaċċessa (il-mudell tal-permessi ta’ Notion huwa
 > bbażat fuq il-kondiviżjoni, mhux fuq l-ispazju tax-xogħol kollu).
 
 ### Ikkonfigura permezz ta’ REST
@@ -63,7 +63,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 It-tliet metodi kollha jeħtieġu awtentikazzjoni tad-dashboard (`isAuthenticated`). Fuq
-`POST`, OmniRoute jissejvja t-token u immedjatament iwettaq tfittxija tat-test b’riżultat
+`POST`, 67router jissejvja t-token u immedjatament iwettaq tfittxija tat-test b’riżultat
 wieħed; jekk Notion jirritorna oġġett ta’ żball, it-token jitneħħa u s-sejħa tfalli
 b’`400`.
 

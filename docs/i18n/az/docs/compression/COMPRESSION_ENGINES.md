@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute sıxışdırması mühərrik müqavilələri əsasında qurulub. Rejim birbaşa bir mühərriki
+67router sıxışdırması mühərrik müqavilələri əsasında qurulub. Rejim birbaşa bir mühərriki
 (`caveman` və ya `rtk`) və ya bir neçə mühərriki ardıcıllıqla icra edən deterministik yığılmış konveyeri işlədə bilər.
 
 ## Rejimlər
@@ -45,9 +45,9 @@ mühərrik heç nəyi çevirmir. Məhz buna görə standart olaraq ən təhlük�
 `aggressive` istifadə olunur.
 
 Paket öz model əhatə dairəsini və profilini mühit konfiqurasiyasından müəyyən edir.
-OmniRoute qərarı heç vaxt həvalə etmir: adapter model keçidini paketin ən məhdudlaşdırıcı
+67router qərarı heç vaxt həvalə etmir: adapter model keçidini paketin ən məhdudlaşdırıcı
 əhatə dairəsinə sabitləyir, buna görə host mühitinin parametrləri icazə siyahısını yalnız
-daralda bilər, onu heç vaxt OmniRoute-un ölçülmüş nəticələrindən kənara genişləndirə bilməz.
+daralda bilər, onu heç vaxt 67router-un ölçülmüş nəticələrindən kənara genişləndirə bilməz.
 
 ## Mühərrik reyestri
 
@@ -112,7 +112,7 @@ Caveman rejimi adi mətnin semantik sıxlaşdırılmasına yönəlib:
 
 Caveman-in yuxarı axın layihəsi çıxış tokenlərinin `~75%` azalmasını, müqayisəli testlərdə
 `22-87%` diapazonu ilə orta hesabla `65%` çıxış qənaətini və `~46%` giriş sıxlaşdırmasını bildirir.
-OmniRoute birləşdirilmiş sorğu/kontekst qənaətini sənədləşdirərkən Caveman-in giriş tərəfi üçün
+67router birləşdirilmiş sorğu/kontekst qənaətini sənədləşdirərkən Caveman-in giriş tərəfi üçün
 göstəricidən istifadə edir; Caveman çıxış rejimi isə ayrıca cavab davranışı funksiyası olaraq qalır.
 
 ## RTK

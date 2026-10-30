@@ -5,7 +5,7 @@
 ---
 
 مجموعهٔ self-hosted روی سرور **.113** (`tomni-proxmox-113`) اجرا میشود. از 2026-10-18، هر
-runner در OmniRoute دارای **یک نقش**، یک label و بودجهٔ حافظه/CPU متناسب با بار کاری
+runner در 67router دارای **یک نقش**، یک label و بودجهٔ حافظه/CPU متناسب با بار کاری
 اندازهگیریشدهٔ خود است. اسلات Turbopack منابع موردنیاز build را دریافت میکند؛ اسلاتهای دیگر براساس
 بیشینهٔ مصرف اندازهگیریشدهٔ خود تخصیص یافتهاند. سرور تنها زمانی بیشتخصیص دارد که یک build با Turbopack
 همزمان با یک build با webpack در Release-Green و یک job مربوط به lint اجرا شود؛ swap میزبان (16 GB)
@@ -28,7 +28,7 @@ runner در OmniRoute دارای **یک نقش**، یک label و بودجهٔ ح
 | swap      | 16 GB                        | `omniroute-113-5` با swap غیرفعال (`MemorySwapMax=0`) اجرا میشود تا یک build مهارنشده بهجای درگیرکردن swap کل سرور، هنگام رسیدن به سقف خود متوقف شود                                                                                                                                                                                                                                                                                                     |
 | `/tmp`    | **12 GB tmpfs = RAM**        | هر چیزی که در آن قرار گیرد، حافظه مصرف میکند؛ باقیماندهها پس از 3 ساعت پاکسازی میشوند                                                                                                                                                                                                                                                                                                                                                                    |
 | CPU       | بار 60 روی 32 هسته مشاهده شد | پیش از اعمال quotaها، یک build با Turbopack (حدود 1166 % CPU) بههمراه یک مجموعهتست coverage روی همان سرور، heartbeatهای listenerهای دیگر را از منابع محروم کرد (`The self-hosted runner lost communication`، #16853)                                                                                                                                                                                                                                     |
-| runnerها  | **6 listener**               | 4 مورد OmniRoute بهعلاوهٔ OmniHeuris و OmniMind؛ `omniroute-113-3/-4/-7/-8` غیرفعال هستند (`systemctl enable --now` یکی از آنها را دوباره فعال میکند)                                                                                                                                                                                                                                                                                                    |
+| runnerها  | **6 listener**               | 4 مورد 67router بهعلاوهٔ OmniHeuris و OmniMind؛ `omniroute-113-3/-4/-7/-8` غیرفعال هستند (`systemctl enable --now` یکی از آنها را دوباره فعال میکند)                                                                                                                                                                                                                                                                                                     |
 
 محدودیتها در `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` مربوط به هر unit
 قرار دارند (مقادیر قبلی با نام `override.conf.bak-20261018` نگهداری شدهاند) و بهصورت زنده با
@@ -76,7 +76,7 @@ ssh root@192.168.0.113 'chmod +x /opt/omniroute-ops/runner-janitor.sh; apt-get i
 
 مقدار پیشفرض `KillMode=process` در runner باعث میشود هنگام توقف یا راهاندازی مجدد یک
 unit، زنجیرهٔ `Runner.Worker → npm → next-build` زنده بماند — یک build یتیم، بدون
-هیچ job متصلی، همچنان RAM و CPU مصرف میکند. هر unit مربوط به OmniRoute یک drop-in
+هیچ job متصلی، همچنان RAM و CPU مصرف میکند. هر unit مربوط به 67router یک drop-in
 در مسیر
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 با `KillMode=mixed` دارد: ابتدا SIGTERM برای listener و سپس در زمان `TimeoutStop`،
@@ -128,7 +128,7 @@ SIGKILL برای کل cgroup ارسال میشود. این تنظیم در را�
   بههمراه `lint-guard` در `quality.yml`. برای `omniroute-113` تا
   2026-10-18 مقدار `MemoryHigh=4G` تنظیم شده بود — build مربوط به promptfoo بهمدت 54 دقیقه تحت بازیابی مداوم حافظه
   پیش رفت؛ 8 GB این throttling را برطرف میکند.
-- **تعداد کمتر listenerها عمدی است.** چهار unit مربوط به OmniRoute در 2026-08-29 غیرفعال
+- **تعداد کمتر listenerها عمدی است.** چهار unit مربوط به 67router در 2026-08-29 غیرفعال
   شدند — هر listener اضافی، مصرفکنندهٔ دیگری برای بودجهٔ حافظهٔ بالا است. سقف نظافتگر 6
   است (`MAX_ACTIVE_RUNNERS=6` در cron): این مقدار همهٔ `Runner.Listener`های روی سیستم را
   میشمارد و OmniHeuris + OmniMind نیز دو مورد به چهار مورد ما اضافه میکنند.

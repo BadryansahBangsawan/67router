@@ -7,7 +7,7 @@
 > **Sannhetskilde:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Sist oppdatert:** 2026-06-28 — v3.8.40
 
-OmniRoute inkluderer et lokal-først-gamifiseringslag som belønner brukere for
+67router inkluderer et lokal-først-gamifiseringslag som belønner brukere for
 å engasjere seg i plattformen — ved å sende forespørsler, bytte leverandører,
 opprette kombinasjoner, dele tokens og bidra til fellesskapet. All tilstand
 lagres i SQLite; føderering med fellesskapsservere er valgfritt og push-basert.
@@ -36,7 +36,7 @@ nivåer, merker), sosial bekreftelse (resultatlister) og økonomiske insentiver
 | Resultatlister          | Globale, ukentlige, månedlige, tokendelings- og bidragsbaserte omfang         |
 | Tokendeling             | Overfør kreditter mellom brukere via et dobbelt bokføringsregister            |
 | Invitasjon og innløsing | Henvisningskoder med SHA-256-hashet lagring                                   |
-| Fellesskapsservere      | Føderer med eksterne OmniRoute-instanser                                      |
+| Fellesskapsservere      | Føderer med eksterne 67router-instanser                                       |
 | Anti-juks               | Poengberegning på serversiden, frekvensbegrensning og z-score-avviksdeteksjon |
 
 ### Designprinsipper
@@ -115,7 +115,7 @@ src/app/api/gamification/
 
 ### Databasetabeller
 
-Alle tabeller ligger i OmniRoutes primære SQLite-database, opprettet av migreringen
+Alle tabeller ligger i 67routers primære SQLite-database, opprettet av migreringen
 `060_create_gamification.sql`. WAL-loggføring arves fra singleton-instansen
 `getDbInstance()` i `src/lib/db/core.ts`.
 
@@ -174,7 +174,7 @@ Alle tabeller ligger i OmniRoutes primære SQLite-database, opprettet av migreri
 
 ### Domenemodul: `src/lib/db/gamification.ts`
 
-Følger OmniRoutes standardmønster — importerer `getDbInstance()` fra
+Følger 67routers standardmønster — importerer `getDbInstance()` fra
 `core.ts` og eksporterer typede CRUD-funksjoner. Ingen rå SQL i rutehåndterere.
 
 Nøkkelfunksjoner:
@@ -237,7 +237,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Handling          | XP  | Beskrivelse                                                 |
 | ----------------- | --- | ----------------------------------------------------------- |
-| `request`         | 1   | Per API-forespørsel rutet gjennom OmniRoute                 |
+| `request`         | 1   | Per API-forespørsel rutet gjennom 67router                  |
 | `provider_switch` | 5   | Bytte til en annen leverandør                               |
 | `model_switch`    | 3   | Bytte til en annen modell                                   |
 | `combo_create`    | 10  | Opprette en ny kombinasjon                                  |
@@ -581,7 +581,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unik, indeksert) |
 | `token_hash` | SHA-256(raw_token)           |
 
-Det rå tokenet returneres til brukeren nøyaktig én gang ved opprettelse. OmniRoute
+Det rå tokenet returneres til brukeren nøyaktig én gang ved opprettelse. 67router
 lagrer eller viser det aldri igjen — bare hashen beholdes.
 
 ### Forhindring av selvhenvisning
@@ -716,7 +716,7 @@ Administratorer kan spørre etter hele revisjonssporet via `GET /api/gamificatio
 
 ## API-ruter
 
-Alle ruter følger standardmønsteret for OmniRoute:
+Alle ruter følger standardmønsteret for 67router:
 
 ```
 Rute → CORS-preflight → Validering av forespørselskropp (Zod) → Autentisering (extractApiKey)

@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute 提供了使用 OpenAI Codex 的**两种**方式：
+67router 提供了使用 OpenAI Codex 的**两种**方式：
 
 | 提供者                 | 与 OpenAI 通信的方式                                                                                                                                  | 使用注意事项                               |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | **`codex`**            | 将你的 ChatGPT/OpenAI OAuth 令牌直接重放到 Responses API                                                                                              | **有** — 官方会话未获准用于代理/路由器用途 |
-| **`codex-app-server`** | 通过 JSON-RPC/WebSocket 驱动 **Codex CLI 自身的 `codex app-server`**；CLI 会像交互式 `codex` 会话一样，自行持有并刷新其 OAuth（`~/.codex/auth.json`） | **无** — OmniRoute 从不向 API 重放令牌     |
+| **`codex-app-server`** | 通过 JSON-RPC/WebSocket 驱动 **Codex CLI 自身的 `codex app-server`**；CLI 会像交互式 `codex` 会话一样，自行持有并刷新其 OAuth（`~/.codex/auth.json`） | **无** — 67router 从不向 API 重放令牌      |
 
 由于 `codex-app-server` 从不重放令牌，因此不存在会话重放方面的使用注意事项。它确实要求在配置的 app-server URL 上存在**可访问的 Codex CLI**，并且该 CLI 必须**已登录**。
 
@@ -18,7 +18,7 @@ OmniRoute 提供了使用 OpenAI Codex 的**两种**方式：
 ## 1. 架构
 
 ```
-┌─ OmniRoute 应用 ────────────────┐        ┌─ codex-app-server 边车 ─────────────┐
+┌─ 67router 应用 ────────────────┐        ┌─ codex-app-server 边车 ─────────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  （+ 能力令牌）                   │  JSON  │  --ws-auth capability-token         │
@@ -70,7 +70,7 @@ docker compose --profile base --profile codex-app-server up -d
   `~/.codex` 挂载到边车（`codex-appserver-home`），并跳过登录步骤。
 - **公共用户，本地未安装 codex** — 无关紧要：边车已包含 CLI。
   用户只需通过仪表板进行身份验证。
-- **裸机 OmniRoute（无边车，使用主机上的 codex）** — 将
+- **裸机 67router（无边车，使用主机上的 codex）** — 将
   `OMNIROUTE_CODEX_APPSERVER_WS` 指向你自己的 `codex app-server`，并确保
   主机上的 codex 已登录；如果缺少该二进制文件，则会显示“未安装 codex”的提示。
 

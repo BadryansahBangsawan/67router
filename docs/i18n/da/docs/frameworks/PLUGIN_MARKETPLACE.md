@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Senest opdateret:** 2026-06-28 — v3.8.40
 
-OmniRoute leveres med et WordPress-lignende pluginsystem. Plugins er selvstændige
+67router leveres med et WordPress-lignende pluginsystem. Plugins er selvstændige
 mapper — hver med et `plugin.json`-manifest og en startfil — som kobler sig på
 forespørgselspipelinen (`onRequest` / `onResponse` / `onError`) og
 livscyklushændelser (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -153,7 +153,7 @@ tillades.
 
 ### Pluginmappe
 
-Plugins findes under OmniRoutes datamappe:
+Plugins findes under 67routers datamappe:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -7,7 +7,7 @@
 > **Gezaghebbende bron:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
-OmniRoute kan zijn lokale server (`http://localhost:20128`) via drie tunnelbackends
+67router kan zijn lokale server (`http://localhost:20128`) via drie tunnelbackends
 toegankelijk maken vanaf het openbare internet. Dit is nuttig voor:
 
 - OAuth-callbacks van cloudproviders (Antigravity, Gemini, Cursor) die een
@@ -15,7 +15,7 @@ toegankelijk maken vanaf het openbare internet. Dit is nuttig voor:
 - Het delen van je lokale instantie met teamgenoten zonder een VM te implementeren.
 - Testen op mobiele apparaten, op afstand of tussen verschillende netwerken.
 
-Alle drie de backends worden in-process beheerd — OmniRoute start/stopt het
+Alle drie de backends worden in-process beheerd — 67router start/stopt het
 onderliggende binaire bestand of de SDK via het dashboard of de REST-API. Er is
 geen configuratie van een reverse proxy of systemd vereist.
 
@@ -43,7 +43,7 @@ een configuratie voor een benoemde tunnel:
 http://localhost:<apiPort>` uit en haalt de toegewezen `*.trycloudflare.com`-URL
   uit stdout. URL's zijn tijdelijk en veranderen na elke herstart.
 - **Named tunnel (optioneel).** Wanneer `CLOUDFLARED_CONFIG` verwijst naar een
-  lokaal beheerde `config.yml` van cloudflared, voert OmniRoute `cloudflared
+  lokaal beheerde `config.yml` van cloudflared, voert 67router `cloudflared
 tunnel --no-autoupdate --config <path> run` uit, waardoor je een **stabiele,
   benoemde hostnaam** krijgt. De configuratie bevat de tunnel-UUID, het
   `credentials-file` en de `ingress`-routering. Daardoor wordt er geen `--url`
@@ -54,7 +54,7 @@ tunnel --no-autoupdate --config <path> run` uit, waardoor je een **stabiele,
 
 Belangrijk gedrag:
 
-- **Automatische installatie.** Bij het eerste gebruik downloadt OmniRoute het
+- **Automatische installatie.** Bij het eerste gebruik downloadt 67router het
   nieuwste binaire bestand van `cloudflared` uit de officiële GitHub-releases
   (de beheerde installatie bevindt zich onder `DATA_DIR/cloudflared/`). De
   SHA256 van het gedownloade bestand wordt vóór uitvoering geverifieerd aan de
@@ -74,7 +74,7 @@ Belangrijk gedrag:
    ```
 
 2. Maak een `~/.cloudflared/config.yml` die je hostnaam naar de lokale
-   API-poort van OmniRoute routeert (standaard 20128):
+   API-poort van 67router routeert (standaard 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -85,11 +85,11 @@ Belangrijk gedrag:
      - service: http_status:404
    ```
 
-3. Laat OmniRoute naar de configuratie verwijzen en start de tunnel (opnieuw):
+3. Laat 67router naar de configuratie verwijzen en start de tunnel (opnieuw):
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # optioneel — overschrijft de hostnaam die OmniRoute rapporteert; anders wordt deze
+   # optioneel — overschrijft de hostnaam die 67router rapporteert; anders wordt deze
    # uit de eerste ingress-regel van de configuratie gelezen:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -131,9 +131,9 @@ Of via het dashboard: **Instellingen → Tunnels → Cloudflare**.
 
 | Variabele                                            | Doel                                                                                                                                                                                             |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `CLOUDFLARED_BIN`                                    | Overschrijft het pad naar het binaire bestand. Indien ingesteld en geldig, gebruikt OmniRoute dit in plaats van het te downloaden.                                                               |
+| `CLOUDFLARED_BIN`                                    | Overschrijft het pad naar het binaire bestand. Indien ingesteld en geldig, gebruikt 67router dit in plaats van het te downloaden.                                                                |
 | `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transportprotocol (standaard `http2`; ook `quic`, `auto`).                                                                                                                                       |
-| `CLOUDFLARED_CONFIG`                                 | Pad naar een lokaal beheerd cloudflared-`config.yml`. Indien ingesteld, voert OmniRoute een **benoemde/permanente** tunnel (`tunnel --config <path> run`) uit in plaats van een snelle tunnel.   |
+| `CLOUDFLARED_CONFIG`                                 | Pad naar een lokaal beheerd cloudflared-`config.yml`. Indien ingesteld, voert 67router een **benoemde/permanente** tunnel (`tunnel --config <path> run`) uit in plaats van een snelle tunnel.    |
 | `CLOUDFLARED_HOSTNAME`                               | Overschrijft de gerapporteerde openbare hostnaam van de benoemde tunnel (bijv. `ai.example.com`). Indien niet ingesteld, wordt deze uit de eerste `ingress`-hostnaam in de configuratie gelezen. |
 
 ## 2. ngrok
@@ -179,7 +179,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Het antwoord bevat de toegewezen `publicUrl` (bijv.
 `https://abcd-1234.ngrok-free.app`). Aangepaste domeinen, regio's en beleidsregels
-moeten in het ngrok-dashboard worden geconfigureerd — OmniRoute stuurt zelf alleen
+moeten in het ngrok-dashboard worden geconfigureerd — 67router stuurt zelf alleen
 de lokale doel-URL door naar de SDK.
 
 ## 3. Tailscale Funnel
@@ -194,14 +194,14 @@ openbare URL heeft de vorm `https://<machine>.<tailnet>.ts.net/`.
 
 ### Vereisten
 
-1. Installeer Tailscale (of laat OmniRoute dit doen — zie het `install`-endpoint hieronder).
-2. Meld je aan (`tailscale login` of via OmniRoute's `login`-endpoint).
+1. Installeer Tailscale (of laat 67router dit doen — zie het `install`-endpoint hieronder).
+2. Meld je aan (`tailscale login` of via 67router's `login`-endpoint).
 3. Schakel Funnel voor je tailnet in via de Tailscale-beheerconsole:
    <https://login.tailscale.com/admin/settings/features>.
 
 Op Linux en macOS vereist het aansturen van de daemon (`tailscaled`) `sudo`. De
 POST-endpoints accepteren een optioneel veld `sudoPassword`, dat voor de duur
-van de aanroep wordt doorgestuurd naar OmniRoute's MITM-wachtwoordcache
+van de aanroep wordt doorgestuurd naar 67router's MITM-wachtwoordcache
 (`getCachedPassword` / `setCachedPassword`). Windows gebruikt de standaardinstallatie
 van de service op `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -262,7 +262,7 @@ onafhankelijk.
 
 ## Aandachtspunten voor OAuth-callbacks
 
-Wanneer u OmniRoute via een tunnel beschikbaar maakt, moeten het dashboard en de OAuth-stromen
+Wanneer u 67router via een tunnel beschikbaar maakt, moeten het dashboard en de OAuth-stromen
 callback-URL's samenstellen op basis van de **publieke** hostnaam, niet van `localhost`. Anders
 leidt de OAuth-provider de gebruiker terug naar een URL die niet bereikbaar is voor de servers van de provider,
 waardoor de handshake mislukt.
@@ -278,7 +278,7 @@ Stel het volgende in:
 NEXT_PUBLIC_BASE_URL=https://<uw-tunnel-host>
 ```
 
-en start OmniRoute opnieuw voordat u OAuth initialiseert. Bij tijdelijke Cloudflare Quick
+en start 67router opnieuw voordat u OAuth initialiseert. Bij tijdelijke Cloudflare Quick
 Tunnels verandert de URL na elke herstart. Geef daarom voor productiegebruik van OAuth de voorkeur aan ngrok met een gereserveerd
 domein of Tailscale Funnel.
 
@@ -293,14 +293,14 @@ Het dashboard toont de tunnelstatus onder **Instellingen → Tunnels**:
 - Het laatste foutbericht, indien aanwezig.
 
 Voor programmatische monitoring kunt u de `GET`-endpoints per backend pollen. Het is toegestaan om meer
-dan één backend tegelijk uit te voeren; OmniRoute houdt elke backend
+dan één backend tegelijk uit te voeren; 67router houdt elke backend
 onafhankelijk bij.
 
 ## Problemen oplossen
 
 ### "cloudflared-binary niet gevonden"
 
-OmniRoute probeert bij het eerste gebruik automatisch een installatie uit te voeren. Als de installatie wordt geblokkeerd
+67router probeert bij het eerste gebruik automatisch een installatie uit te voeren. Als de installatie wordt geblokkeerd
 (beperkt netwerk, geen toegang tot GitHub), downloadt u `cloudflared` handmatig van
 <https://github.com/cloudflare/cloudflared/releases> en stelt u
 `CLOUDFLARED_BIN=/path/to/cloudflared` in.

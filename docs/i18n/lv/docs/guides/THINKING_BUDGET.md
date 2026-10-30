@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Avots:** `open-sse/services/thinkingBudget.ts`
 
-Domāšanas budžets nosaka, vai OmniRoute **pārraksta klienta domāšanas/spriešanas parametrus**, nosūtot pieprasījumus pakalpojumu sniedzējiem. Tas **neieslēdz un neizslēdz** saspiešanu, maršrutēšanu vai uzvedņu kešatmiņu.
+Domāšanas budžets nosaka, vai 67router **pārraksta klienta domāšanas/spriešanas parametrus**, nosūtot pieprasījumus pakalpojumu sniedzējiem. Tas **neieslēdz un neizslēdz** saspiešanu, maršrutēšanu vai uzvedņu kešatmiņu.
 
 ## Režīmi
 
-| Režīms                          | OmniRoute darbība                                                                                                     | Kad izmantot                                                                                                                                                                                      |
+| Režīms                          | 67router darbība                                                                                                      | Kad izmantot                                                                                                                                                                                      |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (noklusējums) | Atstāj klienta laukus nemainītus (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` utt.). | **Codex / Desktop / jebkurš klients, kam jākontrolē piepūles līmenis un spriešanas kopsavilkumi.** Nepieciešams redzamiem domāšanas paneļiem, kad klients pieprasa `reasoning.summary`.           |
 | **`auto`**                      | Pirms nosūtīšanas augšupstraumei no pieprasījuma pamatteksta **noņem visus** domāšanas/spriešanas laukus.             | Tikai tad, ja apzināti vēlaties, lai **pakalpojumu sniedzējs** izveido noklusējuma vērtības, un jums nav nepieciešama klienta kontrolēta domāšana. Tas **nenozīmē** „automātiski rādīt domāšanu”. |
@@ -38,7 +38,7 @@ Ja klients (piemēram, Codex Desktop) nosūtīja `reasoning: { effort: "ultra", 
 | **Kombinētā maršrutēšana / atkāpšanās varianti**        | Atsevišķa funkcija. Netiek ietekmēta.                                                                                                                                      |
 | **API atslēgu marķieru ierobežojumi / izmaksu budžeti** | Atsevišķa funkcija. Netiek ietekmēta.                                                                                                                                      |
 | **Spriešanas atkārtotās atskaņošanas kešatmiņa**        | Vairāku sarunas kārtu atkārtota ievietošana stingriem pakalpojumu sniedzējiem (DeepSeek, Kimi, Qwen-thinking, …). Tas nav tas pats, kas Desktop funkcija „rādīt domāšanu”. |
-| **`encrypted_content` atšifrēšana**                     | **Nav iespējama.** OpenAI/Codex privātie spriešanas blobi ir necaurredzami. OmniRoute tos nekad neatšifrē (#7095 / #7176 / #7304).                                         |
+| **`encrypted_content` atšifrēšana**                     | **Nav iespējama.** OpenAI/Codex privātie spriešanas blobi ir necaurredzami. 67router tos nekad neatšifrē (#7095 / #7176 / #7304).                                          |
 
 ## Redzamā domāšana (Codex / Responses klienti)
 
@@ -51,7 +51,7 @@ Lai klients rādītu domāšanas tekstu, ir nepieciešams **viss** tālāk minē
 Ja saņemat tikai “šifrētu privāto domāšanu”, iemesls ir kāds no šiem:
 
 - režīms bija **`auto`** (klienta pieprasījums tika noņemts), vai
-- augšupējais pakalpojums atgrieza `encrypted_content` bez kopsavilkuma teksta (pakalpojuma sniedzēja ierobežojums; OmniRoute var parādīt tikai vietturi, nevis nešifrētu tekstu).
+- augšupējais pakalpojums atgrieza `encrypted_content` bez kopsavilkuma teksta (pakalpojuma sniedzēja ierobežojums; 67router var parādīt tikai vietturi, nevis nešifrētu tekstu).
 
 ## API piemēri
 
@@ -71,7 +71,7 @@ Shēma (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapt
 
 ### Saglabāšana / restartēšana
 
-Vērtība tiek glabāta zem iestatījumu atslēgas `thinkingBudget` un ielādēta procesa palaišanas laikā (`hydrateThinkingBudgetConfig`). Pēc tās mainīšanas datubāzē vai citos ceļos, kas neizmanto API, **restartējiet OmniRoute procesu**, lai atmiņā esošais vienīgais eksemplārs atbilstu diskā saglabātajam.
+Vērtība tiek glabāta zem iestatījumu atslēgas `thinkingBudget` un ielādēta procesa palaišanas laikā (`hydrateThinkingBudgetConfig`). Pēc tās mainīšanas datubāzē vai citos ceļos, kas neizmanto API, **restartējiet 67router procesu**, lai atmiņā esošais vienīgais eksemplārs atbilstu diskā saglabātajam.
 
 ## Operatora kontrolsaraksts
 

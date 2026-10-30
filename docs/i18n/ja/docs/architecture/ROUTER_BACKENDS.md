@@ -20,10 +20,10 @@ VibeProxy互換エンジン間の関係を明確に定め、コントリビュ�
 **2つの独立した軸**によって表されます。
 
 1. **ライフサイクル**（`RouterBackendLifecycle`）— _エンジンがどのように実行されるか_：
-   - `in-process` — OmniRouteのNodeプロセス内で実行されます（ネイティブTSパイプライン）。
-   - `supervised` — OmniRouteが`ServiceSupervisor`を介してインストール、起動、停止、
+   - `in-process` — 67routerのNodeプロセス内で実行されます（ネイティブTSパイプライン）。
+   - `supervised` — 67routerが`ServiceSupervisor`を介してインストール、起動、停止、
      ヘルスチェックを行い、その後プロバイダー接続として利用するローカル子プロセスです。
-   - `external` — OmniRouteがリクエストをディスパッチするものの、管理は**行わない**
+   - `external` — 67routerがリクエストをディスパッチするものの、管理は**行わない**
      HTTPエンドポイントです（環境変数のベースURLで設定）。
    - `disabled` — 登録されていますが、選択できません。
 2. **選択軸**（リレールーティングバックエンド）— _リレーがそのエンジンにディスパッチするかどうか_：

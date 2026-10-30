@@ -15,7 +15,7 @@ Die Quota-Sharing-Engine verteilt das zeitbasierte Kontingent eines Anbieters (z
 5-Stunden-Fenster, Kimi 1500 Anfragen/h) fair auf mehrere API-Schlüssel, die dieselbe
 Verbindung verwenden.
 
-**Gelöstes Problem:** OmniRoute leitet viele API-Schlüssel über dasselbe Konto beim
+**Gelöstes Problem:** 67router leitet viele API-Schlüssel über dasselbe Konto beim
 Upstream-Anbieter weiter. Ohne Freigabelogik kann eine Lastspitze von Schlüssel A das
 Anbieterkontingent für die Stunde ausschöpfen, sodass die Schlüssel B und C blockiert
 bleiben, bis das Fenster zurückgesetzt wird. Die Engine verhindert dies durch:
@@ -119,7 +119,7 @@ Redis-Treiber: Lua-EVAL-Skript für atomare Inkrementierung — wird als einzeln
 
 - Tabelle: `quota_consumption` (siehe Migration `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Am besten für Bereitstellungen mit einer einzelnen Instanz geeignet.
-- Die gesamte Persistenz erfolgt in der bestehenden OmniRoute-SQLite-DB (`DATA_DIR/storage.sqlite`).
+- Die gesamte Persistenz erfolgt in der bestehenden 67router-SQLite-DB (`DATA_DIR/storage.sqlite`).
 
 ### Redis (optional, mehrere Instanzen)
 

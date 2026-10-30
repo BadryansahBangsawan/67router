@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-un hər sorğunun xərcini necə təxmin etdiyi, qeydə aldığı və hesabatlaşdırdığı — və nə üçün
+67router-un hər sorğunun xərcini necə təxmin etdiyi, qeydə aldığı və hesabatlaşdırdığı — və nə üçün
 idarə panelindəki rəqəmin hesab deyil, **qənaət izləyicisi** olduğu.
 
 Həmçinin baxın: [İstifadəçi təlimatı](./USER_GUIDE.md) · [Funksiyalar qalereyası](./FEATURES.md)
@@ -13,12 +13,12 @@ Həmçinin baxın: [İstifadəçi təlimatı](./USER_GUIDE.md) · [Funksiyalar q
 
 ## Bu nədir (və nə deyil)
 
-OmniRoute token saylarını modelin qiymət tariflərinə vuraraq hər tamamlanma üçün sorğu üzrə
+67router token saylarını modelin qiymət tariflərinə vuraraq hər tamamlanma üçün sorğu üzrə
 USD xərcini hesablayır. Bu rəqəmlər **Xərclər** idarə panelində, `omniroute cost` /
 `omniroute usage` CLI komandalarında, CSV/JSON ixraclarında və hər API açarı üzrə büdcələrdə
 istifadə olunur.
 
-> **İdarə panelindəki «xərc» hesab deyil, qənaət izləyicisidir.** OmniRoute sizdən heç vaxt
+> **İdarə panelindəki «xərc» hesab deyil, qənaət izləyicisidir.** 67router sizdən heç vaxt
 > ödəniş almır — o, sorğularınızı artıq qoşduğunuz provayderlərə (öz abunəliklərinizə,
 > pulsuz tariflərə və API açarlarınıza) yönləndirir. Tamamilə pulsuz modellərdə yığılmış
 > «$290 ümumi xərc» o deməkdir ki, ödənişli API-yə təxminən **$290 ödəməmisiniz**. Bu rəqəm
@@ -31,7 +31,7 @@ panelindəki 'xərc' hesab deyil, qənaət izləyicisidir»).
 
 Bu rəqəm təxmini olduğuna görə:
 
-- O, OmniRoute-un hər model üçün malik olduğu qiymət cədvəlindən asılıdır. Qiymət qeydi
+- O, 67router-un hər model üçün malik olduğu qiymət cədvəlindən asılıdır. Qiymət qeydi
   olmayan model `0` xərc hesablayır (araşdırıcıda «Köhnə / Pulsuz» sətri kimi göstərilir).
 - Pulsuz tarif və abunəlik trafiki üçün də _təxmini_ xərc hesablanır — bu, borclu olduğunuz
   məbləğ deyil, qənaət etdiyiniz məbləğdir.
@@ -50,7 +50,7 @@ Xərclər aşağıdakı üstünlük sırasına əsasən müəyyən edilən qiym�
 2. **Sinxronlaşdırılmış xarici qiymətlər** — sinxronizasiya aktiv olduqda LiteLLM-in açıq
    `model_prices_and_context_window.json` faylından əldə edilir (əvəzləmələrinizi heç vaxt
    dəyişdirməməsi üçün ayrıca `pricing_synced` ad fəzasında saxlanılır).
-3. **Sərt kodlaşdırılmış standart dəyərlər** — OmniRoute ilə birlikdə təqdim olunur.
+3. **Sərt kodlaşdırılmış standart dəyərlər** — 67router ilə birlikdə təqdim olunur.
 
 Xarici qiymət sinxronizasiyası **seçim əsasında aktivləşdirilir** və standart olaraq
 deaktivdir. Müvafiq mühit dəyişənləri
@@ -199,7 +199,7 @@ Qeyd edilmədiyi halda, bunların hamısı idarəetmə autentifikasiyası tələ
 
 ## CLI
 
-OmniRoute-un CLI interfeysi xərc, istifadə və qiymətləndirmə əmrlərini təqdim edir (əmrlər
+67router-un CLI interfeysi xərc, istifadə və qiymətləndirmə əmrlərini təqdim edir (əmrlər
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs) faylında qeydiyyatdan keçirilib).
 
 ### `omniroute cost`

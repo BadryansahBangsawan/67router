@@ -49,7 +49,7 @@ meio de um túnel **não pode** acionar esse caminho de código.
 | Linux+Firefox/Chromium | atualização do banco de dados NSS de cada perfil via `certutil -d sql:<profile>`                                  |
 
 Esses são os mesmos comandos usados por `mitmproxy`, Charles Proxy, Fiddler e
-Caddy. O fato de eles existirem no OmniRoute está documentado em
+Caddy. O fato de eles existirem no 67router está documentado em
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mitigação da v3.8.6**:
@@ -105,7 +105,7 @@ automações. Ela será removida na v3.9.
 
 **Por que mantemos isso**: a importação do Zed é o caminho de integração mais
 amigável para usuários que já utilizam o Zed e desejam espelhar suas chaves de
-provedores no OmniRoute sem precisar colá-las novamente.
+provedores no 67router sem precisar colá-las novamente.
 
 ---
 
@@ -116,7 +116,7 @@ provedores no OmniRoute sem precisar colá-las novamente.
 **Por que foi sinalizado**: o chunk reexporta `execFileWithPassword`,
 `runElevatedPowerShell` e o auxiliar compartilhado `quotePowerShell`. O
 classificador de IA do Socket.dev os interpreta como um "kit de ferramentas
-genérico para execução no host + elevação de privilégios". No OmniRoute, eles
+genérico para execução no host + elevação de privilégios". No 67router, eles
 são usados somente pelo fluxo de instalação do certificado MITM (§1) e por
 `execFileWithPassword` para a execução de comandos `sudo`.
 
@@ -171,7 +171,7 @@ estritamente voluntária.
 
 ---
 
-## §5 — Gravação de credenciais do OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Gravação de credenciais do 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Arquivos-fonte**:
 
@@ -206,7 +206,7 @@ rawBody)`) antes de analisar o JSON. Se o segredo estiver definido, a
    ativá-la explicitamente.
 
 **Por que mantemos esse recurso**: o Cloud Sync é a única forma de um tenant
-do OmniRoute Cloud centralizar as credenciais da equipe. A correção torna o
+do 67router Cloud centralizar as credenciais da equipe. A correção torna o
 modelo de ameaças transparente: "o servidor assina, o cliente verifica, o
 operador ativa explicitamente."
 

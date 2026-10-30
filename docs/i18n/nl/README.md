@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute-dashboard" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="67router-dashboard" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — De gratis AI-gateway
+# 🚀 67router — De gratis AI-gateway
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Stop nooit met programmeren. Elke AI-tool → 375 providers — 150+ gratis — via één endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity naar GRATIS Claude / GPT / Gemini met automatische fallback. Gecombineerde RTK- en Caveman-compressie bespaart 15–95% tokens (~89% gemiddeld) — bereik nooit meer limieten. 375 AI-providers · 150+ gratis niveaus · ~1,62 mld. gratis tokens/mnd. · 20 routeringsstrategieën · $0 om te beginnen."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Stop nooit met programmeren. Elke AI-tool → 375 providers — 150+ gratis — via één endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity naar GRATIS Claude / GPT / Gemini met automatische fallback. Gecombineerde RTK- en Caveman-compressie bespaart 15–95% tokens (~89% gemiddeld) — bereik nooit meer limieten. 375 AI-providers · 150+ gratis niveaus · ~1,62 mld. gratis tokens/mnd. · 20 routeringsstrategieën · $0 om te beginnen."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **Gebruik je eigen provideraccounts.** Dit is een geschatte optelsom van afzonderlijk beschikbare gratis niveaus van derden, geen tokentoekenning van OmniRoute. Meld je aan, verkrijg waar nodig inloggegevens en koppel de providers die je kunt gebruiken; elke provider bepaalt zijn eigen limieten, beschikbaarheid en voorwaarden.
+> **Gebruik je eigen provideraccounts.** Dit is een geschatte optelsom van afzonderlijk beschikbare gratis niveaus van derden, geen tokentoekenning van 67router. Meld je aan, verkrijg waar nodig inloggegevens en koppel de providers die je kunt gebruiken; elke provider bepaalt zijn eigen limieten, beschikbaarheid en voorwaarden.
 >
-> Gratis niveaus handmatig combineren is omslachtig — tientallen SDK's, tientallen snelheidslimieten en geen idee hoeveel je daadwerkelijk hebt. OmniRoute catalogiseert **471 gratis niveaus verdeeld over 34 terugkerende poolsleutels** en berekent het vermelde aantal tokens op basis van de **17 pools met een gepubliceerd positief maandelijks budget plus vijf Groq-limieten per model**, waarbij gedeelde pools worden gededupliceerd. Quota die pas beschikbaar worden na een regionale identiteitscontrole (momenteel: ModelScope), worden afzonderlijk weergegeven als +~6M achter regionale identiteitsverificatie en worden nooit bij het vermelde totaal opgeteld. Het resultaat blijft zichtbaar op het dashboard (`/dashboard/free-tiers`).
+> Gratis niveaus handmatig combineren is omslachtig — tientallen SDK's, tientallen snelheidslimieten en geen idee hoeveel je daadwerkelijk hebt. 67router catalogiseert **471 gratis niveaus verdeeld over 34 terugkerende poolsleutels** en berekent het vermelde aantal tokens op basis van de **17 pools met een gepubliceerd positief maandelijks budget plus vijf Groq-limieten per model**, waarbij gedeelde pools worden gededupliceerd. Quota die pas beschikbaar worden na een regionale identiteitscontrole (momenteel: ModelScope), worden afzonderlijk weergegeven als +~6M achter regionale identiteitsverificatie en worden nooit bij het vermelde totaal opgeteld. Het resultaat blijft zichtbaar op het dashboard (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Budgetkaart voor gratis niveaus van OmniRoute: stabiel ~1.62B gratis tokens per maand, tot ~2.22B in de eerste maand met aanmeldtegoeden, afkomstig van 34 gedocumenteerde terugkerende poolsleutels die 471 gecatalogiseerde gratis niveaus achter één endpoint omvatten. Eerlijke berekening met deduplicatie per pool — elke gedeelde pool wordt één keer meegeteld, waaronder 17 terugkerende pools met een gepubliceerd positief maandelijks tokenbudget plus vijf Groq-limieten per model; 12 providers zijn in de catalogus voor voorwaardenrisico's gemarkeerd als te vermijden, zodat je zelf beslist. De budgetbalk omvat Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (vijf limieten per model) en kleinere pools, plus aanmeldtegoeden voor de eerste maand en permanent gratis providers zonder tokenlimiet die afzonderlijk worden weergegeven, zodat ze het vermelde totaal nooit opblazen. Live gebruikt/resterend op /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Budgetkaart voor gratis niveaus van 67router: stabiel ~1.62B gratis tokens per maand, tot ~2.22B in de eerste maand met aanmeldtegoeden, afkomstig van 34 gedocumenteerde terugkerende poolsleutels die 471 gecatalogiseerde gratis niveaus achter één endpoint omvatten. Eerlijke berekening met deduplicatie per pool — elke gedeelde pool wordt één keer meegeteld, waaronder 17 terugkerende pools met een gepubliceerd positief maandelijks tokenbudget plus vijf Groq-limieten per model; 12 providers zijn in de catalogus voor voorwaardenrisico's gemarkeerd als te vermijden, zodat je zelf beslist. De budgetbalk omvat Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (vijf limieten per model) en kleinere pools, plus aanmeldtegoeden voor de eerste maand en permanent gratis providers zonder tokenlimiet die afzonderlijk worden weergegeven, zodat ze het vermelde totaal nooit opblazen. Live gebruikt/resterend op /dashboard/free-tiers."/>
 
 > Geanimeerde samenvatting van de livepagina `/dashboard/free-tiers`. Volledige methodologie (pooldeduplicatie, tegoedniveaus, providervoorwaarden): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,8 +108,8 @@
   <tr>
     <td align="right"><b>💡 Meer informatie</b></td>
     <td align="center"><a href="#-the-promise">💥 De belofte</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Waarom OmniRoute</a></td>
-    <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Wat OmniRoute onderscheidt</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Waarom 67router</a></td>
+    <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Wat 67router onderscheidt</a></td>
   </tr>
   <tr>
     <td align="right"><b>⚙️ Functies</b></td>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Drie stappen: installeer en start OmniRoute, verbind een geschikte provider met je eigen account of API-sleutel en wijs je tool vervolgens naar localhost:20128/v1 met een OmniRoute API-sleutel en model auto. Routering is afhankelijk van beschikbare geschikte verbindingen en providerlimieten."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Drie stappen: installeer en start 67router, verbind een geschikte provider met je eigen account of API-sleutel en wijs je tool vervolgens naar localhost:20128/v1 met een 67router API-sleutel en model auto. Routering is afhankelijk van beschikbare geschikte verbindingen en providerlimieten."/>
 
 ```bash
-# After connecting a provider, copy your OmniRoute key from Dashboard → Endpoints:
+# After connecting a provider, copy your 67router key from Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 Waarom OmniRoute?
+# 🤔 Waarom 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Waarom OmniRoute — stop met jongleren tussen 10 dashboards, dode API-sleutels en verrassingsrekeningen. Tien dagelijkse problemen versus oplossingen: quota verloopt ongebruikt → maximaliseer abonnementen; rate limits midden in het coderen → automatische fallback in 4 lagen (Abonnement → API → Goedkoop → Gratis); tool-outputs verbranden tokens → RTK + Caveman-compressie (15–95%); dure API's → kosten-geoptimaliseerde routering; elke tool heeft zijn eigen setup → één endpoint, één dashboard; AI geblokkeerd → proxy op 3 niveaus + TLS-stealth; dode sleutels → veerkracht in 3 lagen (circuit breakers, key-cooldown, model-lockout); team deelt één abonnement → sleutelpoolen met eerlijke quota-verdeling; prompts via iemands cloud → local-first met AES-256-GCM-versleutelde sleutels; geen inzicht in uitgaven → live analytics (gebruik, quota, besparingen, p95-latentie)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Waarom 67router — stop met jongleren tussen 10 dashboards, dode API-sleutels en verrassingsrekeningen. Tien dagelijkse problemen versus oplossingen: quota verloopt ongebruikt → maximaliseer abonnementen; rate limits midden in het coderen → automatische fallback in 4 lagen (Abonnement → API → Goedkoop → Gratis); tool-outputs verbranden tokens → RTK + Caveman-compressie (15–95%); dure API's → kosten-geoptimaliseerde routering; elke tool heeft zijn eigen setup → één endpoint, één dashboard; AI geblokkeerd → proxy op 3 niveaus + TLS-stealth; dode sleutels → veerkracht in 3 lagen (circuit breakers, key-cooldown, model-lockout); team deelt één abonnement → sleutelpoolen met eerlijke quota-verdeling; prompts via iemands cloud → local-first met AES-256-GCM-versleutelde sleutels; geen inzicht in uitgaven → live analytics (gebruik, quota, besparingen, p95-latentie)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute-verzoekstroom: je IDE of CLI (Claude Code, Cursor, Cline…) roept één lokaal endpoint aan (http://localhost:20128/v1); de OmniRoute Smart Router (RTK + Caveman-compressie, 20 routeringsstrategieën, circuit breakers, TLS-stealth, MCP, A2A, guardrails) kan terugvallen over 4 providerlagen zolang er een geschikt gezond doel beschikbaar blijft — Laag 1 Abonnement, Laag 2 API-sleutel, Laag 3 Goedkoop en Laag 4 Gratis."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="67router-verzoekstroom: je IDE of CLI (Claude Code, Cursor, Cline…) roept één lokaal endpoint aan (http://localhost:20128/v1); de 67router Smart Router (RTK + Caveman-compressie, 20 routeringsstrategieën, circuit breakers, TLS-stealth, MCP, A2A, guardrails) kan terugvallen over 4 providerlagen zolang er een geschikt gezond doel beschikbaar blijft — Laag 1 Abonnement, Laag 2 API-sleutel, Laag 3 Goedkoop en Laag 4 Gratis."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Wil je meedoen als Open Source Vriend?** Dit zijn de bedrijven die open source ondersteunen en OmniRoute draaiende houden — en we vermelden publiekelijk waar elke token die ze ons geven naartoe gaat. Neem contact op: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Wil je meedoen als Open Source Vriend?** Dit zijn de bedrijven die open source ondersteunen en 67router draaiende houden — en we vermelden publiekelijk waar elke token die ze ons geven naartoe gaat. Neem contact op: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Oprichter Open Source Vriend"/>
     </td>
     <td>
-      Dank aan <b>Kimi (Moonshot AI)</b>, onze oprichtende Open Source Vriend, voor het ondersteunen van dit project! Kimi is het AI-lab achter de open-weight K2 en K3 modelfamilies — <b>Kimi K3</b> levert een 1M-token contextvenster, native visie en grensverleggende codering tegen een fractie van de prijzen van gesloten modellen, en werkt direct met Claude Code, Codex en elke coderingstool die OmniRoute ondersteunt.
+      Dank aan <b>Kimi (Moonshot AI)</b>, onze oprichtende Open Source Vriend, voor het ondersteunen van dit project! Kimi is het AI-lab achter de open-weight K2 en K3 modelfamilies — <b>Kimi K3</b> levert een 1M-token contextvenster, native visie en grensverleggende codering tegen een fractie van de prijzen van gesloten modellen, en werkt direct met Claude Code, Codex en elke coderingstool die 67router ondersteunt.
       <br/><br/>
-      <b>Wat Kimi's ondersteuning mogelijk maakt:</b> Kimi's API-credits voeden OmniRoute's AI-gevalideerde release-pijplijn — de <i>samenvoegvalidatie aangedreven door Kimi K3</i>-fase die elke pull request beoordeelt voordat deze wordt verzonden — plus dagelijkse functieontwikkeling. Eersteklas Kimi-ondersteuning wordt op beide manieren geleverd: de directe <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) en het <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code coderingsplan</a> (OAuth en API-sleutel). OmniRoute is ook het eerste Braziliaanse open-source project in Kimi's ondersteuningsprogramma. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Ontvang een Kimi API-sleutel met 15% extra credits →</b></a>
+      <b>Wat Kimi's ondersteuning mogelijk maakt:</b> Kimi's API-credits voeden 67router's AI-gevalideerde release-pijplijn — de <i>samenvoegvalidatie aangedreven door Kimi K3</i>-fase die elke pull request beoordeelt voordat deze wordt verzonden — plus dagelijkse functieontwikkeling. Eersteklas Kimi-ondersteuning wordt op beide manieren geleverd: de directe <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) en het <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code coderingsplan</a> (OAuth en API-sleutel). 67router is ook het eerste Braziliaanse open-source project in Kimi's ondersteuningsprogramma. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Ontvang een Kimi API-sleutel met 15% extra credits →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Open Source Vriend"/>
     </td>
     <td>
-      Dank aan <b>Cheaper Inference</b>, een OmniRoute Open Source Vriend, voor het ondersteunen van dit project! Cheaper Inference is een op kosten gerangschikte gateway die 42 grensverleggende modellen — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok en MiniMax — doorverkoopt via één OpenAI-compatibel eindpunt, waarbij elke aanvraag naar de goedkoopste in aanmerking komende provider wordt gerouteerd zonder ooit meer te rekenen dan de catalogusprijs van de modelmaker.
+      Dank aan <b>Cheaper Inference</b>, een 67router Open Source Vriend, voor het ondersteunen van dit project! Cheaper Inference is een op kosten gerangschikte gateway die 42 grensverleggende modellen — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok en MiniMax — doorverkoopt via één OpenAI-compatibel eindpunt, waarbij elke aanvraag naar de goedkoopste in aanmerking komende provider wordt gerouteerd zonder ooit meer te rekenen dan de catalogusprijs van de modelmaker.
       <br/><br/>
-      <b>Eersteklas ondersteuning in OmniRoute:</b> Chat Completions, het native <code>/v1/responses</code> eindpunt, visie, tool calling en 3 afbeeldingsmodellen (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, bereikbaar als <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Ontvang een API-sleutel →</b></a>
+      <b>Eersteklas ondersteuning in 67router:</b> Chat Completions, het native <code>/v1/responses</code> eindpunt, visie, tool calling en 3 afbeeldingsmodellen (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, bereikbaar als <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Ontvang een API-sleutel →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Affiliates Promo</b> — gratis aanmeldingscoupons van providers die we niet sponsoren (klik om uit te vouwen)</sub></summary>
 
-<sub><i>Deze sectie is alleen voor verwijzings-/couponcodes. Gesponsorde partnerschappen staan hierboven in <b>🤝 Ondersteund door onze Open Source Vrienden</b>. OmniRoute heeft geen sponsoring of partnerschap met de hier vermelde providers — dit zijn openbare coupons die iedereen kan gebruiken.</i></sub>
+<sub><i>Deze sectie is alleen voor verwijzings-/couponcodes. Gesponsorde partnerschappen staan hierboven in <b>🤝 Ondersteund door onze Open Source Vrienden</b>. 67router heeft geen sponsoring of partnerschap met de hier vermelde providers — dit zijn openbare coupons die iedereen kan gebruiken.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — affiliate aanmelding · <b>$100 gratis credits</b> bij aanmelding (gratis server, verwacht hogere latentie — het beste voor testen, niet voor productie). Eersteklas ondersteuning in OmniRoute sinds <b>v3.8.50</b>: Chat Completions, het Anthropic-compatibele wire format en het OpenAI-compatibele pad. Beschikbare modellen zijn onder andere <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> en meer. <b><a href="https://agentrouter.org/register?aff=70LM">Pak je $100 →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — affiliate aanmelding · <b>$100 gratis credits</b> bij aanmelding (gratis server, verwacht hogere latentie — het beste voor testen, niet voor productie). Eersteklas ondersteuning in 67router sinds <b>v3.8.50</b>: Chat Completions, het Anthropic-compatibele wire format en het OpenAI-compatibele pad. Beschikbare modellen zijn onder andere <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> en meer. <b><a href="https://agentrouter.org/register?aff=70LM">Pak je $100 →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Affiliate link — OmniRoute heeft geen sponsoring of partnerschap met deze provider.</i></sub>
+      <sub>⚠️ <i>Affiliate link — 67router heeft geen sponsoring of partnerschap met deze provider.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>Ken je een andere provider met een royale gratis aanmeldingscoupon die OmniRoute-gebruikers ten goede komt? Open een issue en we voegen het hier toe.</sub>
+<sub>Ken je een andere provider met een royale gratis aanmeldingscoupon die 67router-gebruikers ten goede komt? Open een issue en we voegen het hier toe.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Geanimeerde voorbeelden van 18 van de 20 routeringsstrategieën voor combo's — één tegel per strategie: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized en quota-weighted zijn niet geanimeerd; de onderstaande tabel beschrijft alle 20."/>
 
-> Een **combo** is een keten van modellen waarlangs OmniRoute **automatisch** routeert. Als het quotum opraakt, een provider uitvalt of de kosten plotseling stijgen, kan de combo doorgaan naar het volgende geschikte, correct werkende model. 🛡️
+> Een **combo** is een keten van modellen waarlangs 67router **automatisch** routeert. Als het quotum opraakt, een provider uitvalt of de kosten plotseling stijgen, kan de combo doorgaan naar het volgende geschikte, correct werkende model. 🛡️
 
 ### ⚡ Geen configuratie — gebruik gewoon `auto`
 
-Je hoeft geen combo te maken. Stel je model in op `auto` (of een variant) en OmniRoute bouwt een virtuele combo op basis van je gekoppelde providers, die live worden beoordeeld:
+Je hoeft geen combo te maken. Stel je model in op `auto` (of een variant) en 67router bouwt een virtuele combo op basis van je gekoppelde providers, die live worden beoordeeld:
 
 <table>
   <tr><th align="left">Model-ID</th><th align="left">Waarvoor het optimaliseert</th></tr>
@@ -496,7 +498,7 @@ Alle **20** strategieën — naar wens te combineren per combostap:
 
 ### 🧱 Veerkracht is ingebouwd (3 onafhankelijke lagen)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Veerkracht van OmniRoute — 3 onafhankelijke zelfherstellende lagen, de juiste laag voor de juiste storing. Laag 1: circuitbreaker voor providers (volledige provider): wordt alleen geactiveerd bij 408/5xx, drempelwaarden OAuth 8× / API-sleutel 12× / lokaal 2×, wordt na 60s/30s/15s gereset en voert dan een HALF-OPEN-probe uit, herstel op aanvraag; zolang deze OPEN is, leidt de combo verzoeken om naar de volgende provider. Laag 2: afkoelperiode voor verbindingen (één sleutel/account): basisduur 5s OAuth / 3s API-sleutel, exponentiële ×2-back-off met bescherming tegen een plotselinge verzoekenpiek, bij 429 wordt Retry-After gerespecteerd, bij succes wordt de volledige foutstatus gewist; één afkoelende sleutel wordt overgeslagen terwijl andere sleutels actief blijven. Laag 3: modelblokkering (één model): 429 per model, lokale 404 of modusweigeringen blokkeren alleen dat model — nooit de volledige verbinding. Eindstatussen (geblokkeerd, verlopen, tegoed uitgeput) zijn bestemd voor de beheerder en leiden niet tot afkoelperioden."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Veerkracht van 67router — 3 onafhankelijke zelfherstellende lagen, de juiste laag voor de juiste storing. Laag 1: circuitbreaker voor providers (volledige provider): wordt alleen geactiveerd bij 408/5xx, drempelwaarden OAuth 8× / API-sleutel 12× / lokaal 2×, wordt na 60s/30s/15s gereset en voert dan een HALF-OPEN-probe uit, herstel op aanvraag; zolang deze OPEN is, leidt de combo verzoeken om naar de volgende provider. Laag 2: afkoelperiode voor verbindingen (één sleutel/account): basisduur 5s OAuth / 3s API-sleutel, exponentiële ×2-back-off met bescherming tegen een plotselinge verzoekenpiek, bij 429 wordt Retry-After gerespecteerd, bij succes wordt de volledige foutstatus gewist; één afkoelende sleutel wordt overgeslagen terwijl andere sleutels actief blijven. Laag 3: modelblokkering (één model): 429 per model, lokale 404 of modusweigeringen blokkeren alleen dat model — nooit de volledige verbinding. Eindstatussen (geblokkeerd, verlopen, tegoed uitgeput) zijn bestemd voor de beheerder en leiden niet tot afkoelperioden."/>
 
 <sub>📖 [Auto-Combo-engine](docs/routing/AUTO-COMBO.md) · [Veerkrachthandleiding](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ Alle **20** strategieën — naar wens te combineren per combostap:
 
 <div align="center">
 
-## 🏆 Wat OmniRoute onderscheidt
+## 🏆 Wat 67router onderscheidt
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Wat OmniRoute onderscheidt — een momentopname van functies vergeleken met 9router, OpenRouter, CLIProxyAPI en LiteLLM op basis van 13 mogelijkheden. OmniRoute: 375 providers, meer dan 150 ingebouwde gratis niveaus, 20 routeringsstrategieën, tokencompressie met 12 engines, ingebouwde MCP-server met 110 tools, A2A-agentprotocol, persistent geheugen, beveiligingsregels, cloudagents, onopvallende TLS-fingerprinting, Desktop/Termux/PWA en 67 UI-talen. OmniRoute heeft een MIT-licentie en kan zelf worden gehost. De mogelijkheden en aantallen van concurrenten kunnen veranderen; raadpleeg de gekoppelde methodologie."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Wat 67router onderscheidt — een momentopname van functies vergeleken met 9router, OpenRouter, CLIProxyAPI en LiteLLM op basis van 13 mogelijkheden. 67router: 375 providers, meer dan 150 ingebouwde gratis niveaus, 20 routeringsstrategieën, tokencompressie met 12 engines, ingebouwde MCP-server met 110 tools, A2A-agentprotocol, persistent geheugen, beveiligingsregels, cloudagents, onopvallende TLS-fingerprinting, Desktop/Termux/PWA en 67 UI-talen. 67router heeft een MIT-licentie en kan zelf worden gehost. De mogelijkheden en aantallen van concurrenten kunnen veranderen; raadpleeg de gekoppelde methodologie."/>
 
 <sub>📊 Volledige methodologie &amp; details per functie vergeleken met 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Steun OmniRoute
+## 💚 Steun 67router
 
-OmniRoute heeft een MIT-licentie en wordt openbaar onderhouden. Als het je tijd of geld bespaart, kun je het zo onafhankelijk helpen houden — kies wat bij je past. Sponsoring heeft nooit invloed op de routeringsprioriteit; het zorgt voor zichtbaarheid, niet voor een hogere positie.
+67router heeft een MIT-licentie en wordt openbaar onderhouden. Als het je tijd of geld bespaart, kun je het zo onafhankelijk helpen houden — kies wat bij je past. Sponsoring heeft nooit invloed op de routeringsprioriteit; het zorgt voor zichtbaarheid, niet voor een hogere positie.
 
 <table>
-  <tr><td nowrap>⭐ <b>Geef de repository een ster</b></td><td>Gratis — helpt echt met de zichtbaarheid</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Geef OmniRoute een ster</a></td></tr>
+  <tr><td nowrap>⭐ <b>Geef de repository een ster</b></td><td>Gratis — helpt echt met de zichtbaarheid</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Geef 67router een ster</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Eenmalig of maandelijks · geen platformkosten</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Snelle eenmalige fooi, geen registratie voor de donateur nodig</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Klein, informeel gebaar</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute heeft een MIT-licentie en wordt openbaar onderhouden. Als het je tijd 
 
 **🇧🇷 PIX** — direct, zonder kosten (Brazilië)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="QR-code voor OmniRoute PIX"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="QR-code voor 67router PIX"/>
 
 Sleutel (willekeurig): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ Pix kopiëren en plakken:
 
 <p><strong>Opmerkingen voor ontwikkelaars:</strong> Het project kan tijdens npm install/postinstall voor het gemak van ontwikkelaars een lokaal <code>.env</code>-bestand genereren. Dit bestand wordt bewust genegeerd via <code>.gitignore</code> (zie <code>.gitignore</code>) en mag nooit worden gecommit — als het per ongeluk toch is gecommit, roteer dan alle blootgestelde geheimen en verwijder het bestand uit de geschiedenis. Zie <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> voor richtlijnen over het beheren van lokale omgevingsbestanden en geheimen.</p>
 
-## 📡 OmniRoute Radar
+## 📡 67router Radar
 
-De belangrijkste claim voor de gratis laag blijft **~1,62 mld. tokens/maand** uit de hierboven gedocumenteerde catalogus, waarbij dubbele vermeldingen in gedeelde pools zijn verwijderd. Tijdelijke aanmeldtegoeden van providers kunnen de eerste maand afzonderlijk verhogen tot **~2,22 mld.** Radar is een optionele, ondertekende catalogusoverlay voor mensen die tussen OmniRoute-releases door actuelere beschikbaarheidsinformatie over gratis modellen willen; de communitycatalogus en alle bestaande gratis functies blijven gratis.
+De belangrijkste claim voor de gratis laag blijft **~1,62 mld. tokens/maand** uit de hierboven gedocumenteerde catalogus, waarbij dubbele vermeldingen in gedeelde pools zijn verwijderd. Tijdelijke aanmeldtegoeden van providers kunnen de eerste maand afzonderlijk verhogen tot **~2,22 mld.** Radar is een optionele, ondertekende catalogusoverlay voor mensen die tussen 67router-releases door actuelere beschikbaarheidsinformatie over gratis modellen willen; de communitycatalogus en alle bestaande gratis functies blijven gratis.
 
 Supporters kunnen de livecatalogus en aanvullende mogelijkheden van providers ontvangen. Het afzonderlijke, veranderlijke maximum bedraagt **hooguit ongeveer 3 mld. tokens/maand**, afhankelijk van de beschikbaarheid bij providers. Dat maximum is geen garantie: providers kunnen quota, deelnamevoorwaarden, modellen of regio's op elk moment wijzigen.
 
-Radar is opt-in en gebruikt alleen GET. De OmniRoute-client uploadt geen prompts, verkeer, providerconfiguratie, gebruikstelemetrie of de lokaal opgeslagen status van weggeklikte meldingen. Lees meer over de deelnamevoorwaarden en de huidige catalogus op **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
+Radar is opt-in en gebruikt alleen GET. De 67router-client uploadt geen prompts, verkeer, providerconfiguratie, gebruikstelemetrie of de lokaal opgeslagen status van weggeklikte meldingen. Lees meer over de deelnamevoorwaarden en de huidige catalogus op **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
 <br/>
 
@@ -593,7 +595,7 @@ Radar is opt-in en gebruikt alleen GET. De OmniRoute-client uploadt geen prompts
 - **💸 Eerlijke vaste-tariefkosten** — abonnement- / coding-plan-providers tonen **$0** in kostenanalyses; budget, quota en routing blijven schatten. → [API Reference](docs/reference/API_REFERENCE.md)
 - **⚖️ Quota-Share-routing** — verdeel de quota van een gedeeld account eerlijk over gepoolde sleutels, work-conserving zodat inactieve delen worden uitgeleend. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 CLI/agent-installatie met één opdracht** — 15 geregistreerde `setup-*`-opdrachten; `omniroute run` start 7 CLI's (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` ondersteunt 11 doelen met een interactieve provider+model-kiezer en favorieten per context. → [CLI Integrations](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Externe modus** — bestuur een externe OmniRoute met tokens met beperkte reikwijdte (`connect` / `contexts` / `tokens`) + een `antigravity`-OAuth-hulp voor VPS-installaties. → [Remote Mode](docs/guides/REMOTE-MODE.md)
+- **🛰️ Externe modus** — bestuur een externe 67router met tokens met beperkte reikwijdte (`connect` / `contexts` / `tokens`) + een `antigravity`-OAuth-hulp voor VPS-installaties. → [Remote Mode](docs/guides/REMOTE-MODE.md)
 - **🧭 Slimmere auto-routing** — `auto/<category>:<tier>`-combo's, **Fusion** (modelpanel + judge), taakbewuste routing, overschrijvingen per verzoek van model / modus / USD-budget. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ Plugbare compressie** — 12 combineerbare engines + Compression Studios: LLMLingua-2, tweelaags Ultra, omniglyph, fidelity-gate per stap, GCF v3.2, editor met slepen en neerzetten om te herordenen. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Transparante MITM-ontsleuteling (TPROXY)** — leg CLI's vast die proxy-omgevingsvariabelen negeren, met een CA per SNI + installateur voor de truststore. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -663,7 +665,7 @@ Radar is opt-in en gebruikt alleen GET. De OmniRoute-client uploadt geen prompts
 
 <br/>
 
-**Start elke ondersteunde CLI met één opdracht via OmniRoute** — er worden geen configuratiebestanden geschreven,
+**Start elke ondersteunde CLI met één opdracht via 67router** — er worden geen configuratiebestanden geschreven,
 referenties worden per proces geïnjecteerd en Qwen/Gemini krijgen een tijdelijke, geïsoleerde thuismap:
 
 ```bash
@@ -756,7 +758,7 @@ de geschiedenis van je shell. → [CLI-integraties](docs/guides/CLI-INTEGRATIONS
 
 <div align="center">
 
-## 🖥️ Waar OmniRoute draait — overal
+## 🖥️ Waar 67router draait — overal
 
 </div>
 
@@ -772,7 +774,7 @@ de geschiedenis van je shell. → [CLI-integraties](docs/guides/CLI-INTEGRATIONS
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">Draait <b>op je telefoon</b>, 24/7, zonder root</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"Toevoegen aan startscherm"</td><td align="left">Schermvullend, offline, installeerbaar vanuit de browser</td></tr>
   <tr><td align="left" nowrap>🧩 <b>OpenCode-plug-in</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">Native OpenCode-integratie</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>installeer de extensie <b>OmniCopilot</b></td><td align="left">Elk OmniRoute-model in de native Copilot Chat-kiezer — stabiel &amp; Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>installeer de extensie <b>OmniCopilot</b></td><td align="left">Elk 67router-model in de native Copilot Chat-kiezer — stabiel &amp; Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>Vanuit de broncode</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">Pas het aan, draag bij</td></tr>
 </table>
 
@@ -782,18 +784,18 @@ de geschiedenis van je shell. → [CLI-integraties](docs/guides/CLI-INTEGRATIONS
 
 <div align="center">
 
-### 🧩 Nieuw: OmniRoute in de native Copilot Chat van VS Code
+### 🧩 Nieuw: 67router in de native Copilot Chat van VS Code
 
 </div>
 
-> Geen nieuwe zijbalk, geen nieuwe chatinterface — elk model dat OmniRoute aanbiedt, verschijnt direct in de
+> Geen nieuwe zijbalk, geen nieuwe chatinterface — elk model dat 67router aanbiedt, verschijnt direct in de
 > **Copilot Chat-modelkiezer die je al gebruikt**. Sinds VS Code 1.122 werken providermodellen
 > zonder aanmelding bij GitHub of Copilot-abonnement — agentmodus, het aanroepen van tools en beeldverwerking,
 > gratis.
 
 Installeer de extensie **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)**, verbind deze
-met je OmniRoute-server (standaard `localhost:20128`) en open vervolgens Copilot Chat → modelkiezer
-→ **Modellen beheren…** → **OmniRoute**.
+met je 67router-server (standaard `localhost:20128`) en open vervolgens Copilot Chat → modelkiezer
+→ **Modellen beheren…** → **67router**.
 
 <table>
   <tr><th align="left">Store</th><th align="left">Link</th><th align="left">Werkt met</th></tr>
@@ -801,7 +803,7 @@ met je OmniRoute-server (standaard `localhost:20128`) en open vervolgens Copilot
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">Installeren →</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-Vanuit de editor: open de weergave **Extensies**, zoek naar **"OmniRoute"** en klik op **Installeren**
+Vanuit de editor: open de weergave **Extensies**, zoek naar **"67router"** en klik op **Installeren**
 — werkt op dezelfde manier in beide stores. De broncode, issues en het publicatiedraaiboek zijn te vinden op
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -821,9 +823,9 @@ Vanuit de editor: open de weergave **Extensies**, zoek naar **"OmniRoute"** en k
 > terminalvenster dat open hoeft te blijven en geen `npm install -g omniroute` om voortdurend in de gaten te houden.**
 
 Gebouwd met [Tauri v2](https://v2.tauri.app/) (een Rust-kern die nauwelijks ruimte inneemt), wordt het geleverd
-met een eigen ondertekende Node 24-runtime en beheert het een OmniRoute-installatie die eigendom is van de app, zodat deze nooit botst met je
+met een eigen ondertekende Node 24-runtime en beheert het een 67router-installatie die eigendom is van de app, zodat deze nooit botst met je
 globale `node`/`bun`. Het **deelt je bestaande configuratie en database in `~/.omniroute/`** — het is dus
-dezelfde OmniRoute die je al gebruikt, maar dan met een hoed op. 🎩
+dezelfde 67router die je al gebruikt, maar dan met een hoed op. 🎩
 
 <table>
   <tr><th align="left">Wat het doet</th><th align="left">Hoe</th></tr>
@@ -841,7 +843,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>Liever downloaden? Haal de nieuwste <code>.dmg</code> op via
 <a href="https://github.com/zoispag/omniroute-tray/releases">Releases</a>. Broncode, issues en builddocumentatie
 zijn te vinden op <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 Een communityproject van <a href="https://github.com/zoispag">@zoispag</a> — geen officiële OmniRoute-release.</sub>
+<br/>💛 Een communityproject van <a href="https://github.com/zoispag">@zoispag</a> — geen officiële 67router-release.</sub>
 
 <br/>
 
@@ -851,7 +853,7 @@ zijn te vinden op <a href="https://github.com/zoispag/omniroute-tray">zoispag/om
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privé en lokaal-eerst — de gateway en het beheervlak van OmniRoute draaien op je eigen machine. Prompts worden verzonden naar de upstreamprovider die voor elke aanvraag is geselecteerd; OmniRoute voegt geen gehoste tussenstap voor promptverwerking toe en telemetrie is standaard uitgeschakeld. Inloggegevens worden in rust versleuteld met AES-256-GCM; beveiligingsmaatregelen omvatten beperking van API-sleutels, IP-filtering, frequentielimieten, bescherming tegen promptinjectie, opschoning van upstreamheaders, optionele redactie van persoonsgegevens, opgeschoonde fouten en een lokaal SQLite-auditlogboek. OmniRoute heeft een MIT-licentie en kan zelf worden gehost."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privé en lokaal-eerst — de gateway en het beheervlak van 67router draaien op je eigen machine. Prompts worden verzonden naar de upstreamprovider die voor elke aanvraag is geselecteerd; 67router voegt geen gehoste tussenstap voor promptverwerking toe en telemetrie is standaard uitgeschakeld. Inloggegevens worden in rust versleuteld met AES-256-GCM; beveiligingsmaatregelen omvatten beperking van API-sleutels, IP-filtering, frequentielimieten, bescherming tegen promptinjectie, opschoning van upstreamheaders, optionele redactie van persoonsgegevens, opgeschoonde fouten en een lokaal SQLite-auditlogboek. 67router heeft een MIT-licentie en kan zelf worden gehost."/>
 
 <sub>📖 [Autorisatie](docs/architecture/AUTHZ_GUIDE.md) · [Beveiligingsmaatregelen](docs/security/GUARDRAILS.md) · [Naleving](docs/security/COMPLIANCE.md)</sub>
 
@@ -863,7 +865,7 @@ zijn te vinden op <a href="https://github.com/zoispag/omniroute-tray">zoispag/om
 
 </div>
 
-> Naast de server is OmniRoute een **volledige commandocentrale voor de opdrachtregel** met **meer dan 80 commando's**, plus open agentprotocollen zodat een AI-agent deze **zelfstandig** kan bedienen.
+> Naast de server is 67router een **volledige commandocentrale voor de opdrachtregel** met **meer dan 80 commando's**, plus open agentprotocollen zodat een AI-agent deze **zelfstandig** kan bedienen.
 
 ### ⌨️ Een echte CLI (niet alleen `start`)
 
@@ -874,9 +876,9 @@ omniroute setup         # begeleide wizard voor de eerste configuratie
 omniroute doctor        # providers, poorten en native afhankelijkheden diagnosticeren
 ```
 
-### 🛰️ Externe modus — voer de CLI hier uit en OmniRoute op een VPS
+### 🛰️ Externe modus — voer de CLI hier uit en 67router op een VPS
 
-Draait OmniRoute op een server? Bedien het vanaf je laptop met **dezelfde CLI**. Log eenmaal in
+Draait 67router op een server? Bedien het vanaf je laptop met **dezelfde CLI**. Log eenmaal in
 met een toegangstoken met beperkt bereik; daarna wordt elk commando op de externe server uitgevoerd.
 
 ```bash
@@ -892,13 +894,13 @@ Tokens hebben het bereik `read` / `write` / `admin`; routes die processen starte
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Geanimeerde terminaldemo van de OmniRoute-CLI — omniroute providers list, omniroute combo list en omniroute health — doorloopt het oppervlak van 89 hoofdcommando's: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Geanimeerde terminaldemo van de 67router-CLI — omniroute providers list, omniroute combo list en omniroute health — doorloopt het oppervlak van 89 hoofdcommando's: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Verbind een agent — en deze bestuurt OmniRoute zelf
+### 🤝 Verbind een agent — en deze bestuurt 67router zelf
 
-Stel OmniRoute beschikbaar via **MCP**, **A2A**, een **REST API**, **webhooks** of een **externe CLI** — elke geschikte agent (of je eigen code) krijgt toegang tot de volledige gateway: routering, providers, combinaties, cache, compressie en geheugen — volledig autonoom. De onderstaande HTTP-eindpunten zijn beschikbaar onder `http://localhost:20128`.
+Stel 67router beschikbaar via **MCP**, **A2A**, een **REST API**, **webhooks** of een **externe CLI** — elke geschikte agent (of je eigen code) krijgt toegang tot de volledige gateway: routering, providers, combinaties, cache, compressie en geheugen — volledig autonoom. De onderstaande HTTP-eindpunten zijn beschikbaar onder `http://localhost:20128`.
 
 <table>
   <tr><th align="left">Interface</th><th align="left">Eindpunt / commando</th><th align="left">Te gebruiken voor</th></tr>
@@ -912,7 +914,7 @@ Stel OmniRoute beschikbaar via **MCP**, **A2A**, een **REST API**, **webhooks** 
 </table>
 
 ```bash
-# Geef Claude Code via MCP toegang tot de volledige OmniRoute-toolset:
+# Geef Claude Code via MCP toegang tot de volledige 67router-toolset:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
@@ -928,7 +930,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 Hoe het werkt — pipeline, architectuur en besparingsberekening
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute-compressiepipeline: een illustratieve clientaanvraag van 10.000 tokens gaat door 12 combineerbare engines — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra en OmniGlyph — en kan de provider in het gedocumenteerde gestapelde voorbeeld met ongeveer 1.080 tokens bereiken. Gestructureerde inhoud wordt beschermd door behoudsguards en fidelity-gates per stap; expliciete lossy- of experimentele modi kunnen in aanmerking komende inhoud transformeren."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="67router-compressiepipeline: een illustratieve clientaanvraag van 10.000 tokens gaat door 12 combineerbare engines — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra en OmniGlyph — en kan de provider in het gedocumenteerde gestapelde voorbeeld met ongeveer 1.080 tokens bereiken. Gestructureerde inhoud wordt beschermd door behoudsguards en fidelity-gates per stap; expliciete lossy- of experimentele modi kunnen in aanmerking komende inhoud transformeren."/>
 
 De standaard gestapelde combinatie voert `RTK → Caveman` uit. Wanneer beide op dezelfde tool-/contextpayload inwerken, stapelen de besparingen zich op:
 
@@ -940,7 +942,7 @@ range    = 78.4 – 94.6%
 
 Codeblokken, URL's, JSON en gestructureerde data worden **altijd beschermd** door de preservation-engine.
 
-> **Waarom veel tokens gebruiken als weinig tokens volstaan?** Elke aanvraag gaat **transparant** door de compressiepipeline van OmniRoute — geen wijzigingen aan de client. Het is nu een **stack van 12 combineerbare engines** die in volgorde draaien en per routingcombinatie worden gemixt en gematcht — voortbouwend op ideeën van [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) en [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Waarom veel tokens gebruiken als weinig tokens volstaan?** Elke aanvraag gaat **transparant** door de compressiepipeline van 67router — geen wijzigingen aan de client. Het is nu een **stack van 12 combineerbare engines** die in volgorde draaien en per routingcombinatie worden gemixt en gematcht — voortbouwend op ideeën van [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) en [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 De stack van 12 engines
 
@@ -1025,7 +1027,7 @@ omniroute
 ```
 
 > 💡 Zie je `npm warn ERESOLVE` of peer-dep-waarschuwingen? [Die zijn onschadelijk](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Gebruik je npm 11 of nieuwer?** npm kan lifecycle-scripts van packages blokkeren tenzij ze zijn toegestaan. De `postinstall` van OmniRoute (`node scripts/build/postinstall.mjs`) is vereist om de native runtime-bestanden voor te bereiden. Sta de packages toe die in de waarschuwing van npm worden genoemd bij een globale installatie. Voor de packageset die OmniRoute 3.8.53 meldt:
+> **Gebruik je npm 11 of nieuwer?** npm kan lifecycle-scripts van packages blokkeren tenzij ze zijn toegestaan. De `postinstall` van 67router (`node scripts/build/postinstall.mjs`) is vereist om de native runtime-bestanden voor te bereiden. Sta de packages toe die in de waarschuwing van npm worden genoemd bij een globale installatie. Voor de packageset die 67router 3.8.53 meldt:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1063,9 +1065,9 @@ Model:    auto            (routeert over geschikte verbindingen — of kies prov
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Je zou je verbonden modellen in de lijst moeten zien. 🎉 Klaar — begin met coderen, en OmniRoute routeert en valt automatisch terug voor je.
+Je zou je verbonden modellen in de lijst moeten zien. 🎉 Klaar — begin met coderen, en 67router routeert en valt automatisch terug voor je.
 
-Als je client geen custom headers kan versturen, biedt OmniRoute ook getokeniseerde compatibiliteitsaliassen:
+Als je client geen custom headers kan versturen, biedt 67router ook getokeniseerde compatibiliteitsaliassen:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1115,7 +1117,7 @@ Volledige tabel: [Docker-handleiding — RAM tijdens runtime](docs/guides/DOCKER
 
 De standaardopdracht `bun install` en globale installatie (`bun install -g omniroute`) worden ondersteund via detectie van de Bun-runtime:
 
-- **Ingebouwde `bun:sqlite`**: OmniRoute gebruikt het ingebouwde `bun:sqlite`-stuurprogramma van Bun wanneer het onder Bun wordt uitgevoerd en valt bij Node.js terug op `better-sqlite3` of `sql.js`.
+- **Ingebouwde `bun:sqlite`**: 67router gebruikt het ingebouwde `bun:sqlite`-stuurprogramma van Bun wanneer het onder Bun wordt uitgevoerd en valt bij Node.js terug op `better-sqlite3` of `sql.js`.
 - **Automatische selectie van de Webpack-bundler tijdens ontwikkeling**: De ontwikkelmodus (`bun run dev`) detecteert Bun automatisch en schakelt Turbopack uit ten gunste van Webpack om incompatibiliteit met native V8-bindings te voorkomen. Productiebuilds (`bun run build`) volgen `OMNIROUTE_USE_TURBOPACK` precies zoals bij Node: standaard Turbopack, of `OMNIROUTE_USE_TURBOPACK=0` om met Webpack te bouwen (`Dockerfile.bun` stelt dit beschikbaar als een `--build-arg`).
 - **Specifieke Bun-Dockerfile**: `Dockerfile.bun` met meerdere fasen voor native Bun-productie-implementaties (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1199,7 +1201,7 @@ proces op één poort aangeboden, dus er is momenteel geen afzonderlijk pakket m
 
 <div align="center">
 
-# 🎬 OmniRoute in actie
+# 🎬 67router in actie
 
 </div>
 
@@ -1263,7 +1265,7 @@ proces op één poort aangeboden, dus er is momenteel geen afzonderlijk pakket m
 
 Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 bekende weergaven** (`v > 0`) · **1.210 kanalen/profielen per netwerk**. Het ruwe dashboard bevat 1.976 regels (YouTube 1.352 = 740 lange video's + 612 Shorts · TikTok 334 · Instagram 290); na normalisatie op basis van de canonieke URL zijn er geen duplicaten overgebleven, waarbij het hoogste aantal per video wordt behouden. De gegevensverzameling van YouTube is bevroren op 2026-10-13 (API-quotum uitgeput van 14 t/m 18/10) en die van TikTok/Instagram sinds 2026-09-02 (geen verzamelcredits); voor 76 video's ontbreekt nog steeds het aantal weergaven.
 
-> 🎬 **Heb je een video over OmniRoute gemaakt?** Open een [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) of [discussie](https://github.com/diegosouzapw/OmniRoute/discussions) met de link — dan nemen we deze hier op.
+> 🎬 **Heb je een video over 67router gemaakt?** Open een [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) of [discussie](https://github.com/diegosouzapw/OmniRoute/discussions) met de link — dan nemen we deze hier op.
 
 <br/>
 
@@ -1273,20 +1275,20 @@ Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 b
 
 > Alles op één plek — volg de beheerder, chat met de community of open een issue.
 
-| Kanaal                                      | Waar / hoe                                                                                                                |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 💼 **LinkedIn** — volg de beheerder         | [linkedin.com/in/diegosouzapw](https://www.linkedin.com/in/diegosouzapw/)                                                 |
-| 🐙 **GitHub** — volg voor releases en tips  | [@diegosouzapw](https://github.com/diegosouzapw)                                                                          |
-| 💬 **Discord**                              | [discord.gg/U47eFqAXCn](https://discord.gg/U47eFqAXCn)                                                                    |
-| ✈️ **Telegram**                             | [t.me/omnirouteOficial](https://t.me/omnirouteOficial)                                                                    |
-| 🟢 **WhatsApp — 🌍 Wereldwijd**             | [word lid van de groep](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                  |
-| 🟢 **WhatsApp — 🇧🇷 Brazilië**               | [word lid van de groep](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                  |
-| 🌍 **Website**                              | [omniroute.online](https://omniroute.online)                                                                              |
-| 🌍 **🌍StHub OmniRoute-community (gratis)** | [StHub-portaal](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                    |
-| 📦 **Broncode**                             | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                            |
-| 🐛 **Een bug melden**                       | [open een issue](https://github.com/diegosouzapw/OmniRoute/issues) — voeg de uitvoer van `npm run system-info` toe        |
-| 🤝 **Bijdragen**                            | [CONTRIBUTING.md](CONTRIBUTING.md) · [Branch- en releasemodel](docs/ops/BRANCHING_MODEL.md) · kies een `good first issue` |
-| 💚 **Steun het project**                    | [Manieren om te steunen ↑](#-support-omniroute) · [GitHub Sponsors](https://github.com/sponsors/diegosouzapw)             |
+| Kanaal                                     | Waar / hoe                                                                                                                |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| 💼 **LinkedIn** — volg de beheerder        | [linkedin.com/in/diegosouzapw](https://www.linkedin.com/in/diegosouzapw/)                                                 |
+| 🐙 **GitHub** — volg voor releases en tips | [@diegosouzapw](https://github.com/diegosouzapw)                                                                          |
+| 💬 **Discord**                             | [discord.gg/U47eFqAXCn](https://discord.gg/U47eFqAXCn)                                                                    |
+| ✈️ **Telegram**                            | [t.me/omnirouteOficial](https://t.me/omnirouteOficial)                                                                    |
+| 🟢 **WhatsApp — 🌍 Wereldwijd**            | [word lid van de groep](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                  |
+| 🟢 **WhatsApp — 🇧🇷 Brazilië**              | [word lid van de groep](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                  |
+| 🌍 **Website**                             | [omniroute.online](https://omniroute.online)                                                                              |
+| 🌍 **🌍StHub 67router-community (gratis)** | [StHub-portaal](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                    |
+| 📦 **Broncode**                            | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                            |
+| 🐛 **Een bug melden**                      | [open een issue](https://github.com/diegosouzapw/OmniRoute/issues) — voeg de uitvoer van `npm run system-info` toe        |
+| 🤝 **Bijdragen**                           | [CONTRIBUTING.md](CONTRIBUTING.md) · [Branch- en releasemodel](docs/ops/BRANCHING_MODEL.md) · kies een `good first issue` |
+| 💚 **Steun het project**                   | [Manieren om te steunen ↑](#-support-omniroute) · [GitHub Sponsors](https://github.com/sponsors/diegosouzapw)             |
 
 </div>
 
@@ -1335,8 +1337,8 @@ Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 b
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">Gebruikershandleiding</a></b></td><td>Providers, combinaties, CLI-integratie, implementatie</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Installatiehandleiding</a></b></td><td>Alle installatiemethoden, configuraties van CLI-tools, protocolinstellingen, afstemming van time-outs</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">Handleiding voor CLI-tools</a></b></td><td>Installatie per tool voor Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo, Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Externe modus</a></b></td><td>Bedien een externe OmniRoute (VPS) vanaf de CLI op je laptop via toegangstokens met een beperkt bereik</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code-configuratie</a></b></td><td>Verbind Claude Code met OmniRoute (lokaal/extern) via <code>launch</code> en profielen per model</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Externe modus</a></b></td><td>Bedien een externe 67router (VPS) vanaf de CLI op je laptop via toegangstokens met een beperkt bereik</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code-configuratie</a></b></td><td>Verbind Claude Code met 67router (lokaal/extern) via <code>launch</code> en profielen per model</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Snel aan de slag</a></b></td><td>Installeren → verbinden → configureren in 3 stappen</td></tr>
 </table>
 
@@ -1348,7 +1350,7 @@ Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 b
   <tr><td nowrap><b><a href="contrib/podman/README.md">Podman-handleiding</a></b></td><td>Quadlet systemd-integratie, podman-compose, SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">VM-implementatie</a></b></td><td>Volledige handleiding: configuratie van VM + nginx + Cloudflare</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Fly.io-implementatie</a></b></td><td>Implementeren op Fly.io met permanente opslag</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux-handleiding</a></b></td><td>Voer OmniRoute uit op Android via Termux</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux-handleiding</a></b></td><td>Voer 67router uit op Android via Termux</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">PWA-handleiding</a></b></td><td>Installatie, caching en architectuur van de Progressive Web App</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Verwijderingshandleiding</a></b></td><td>Volledige verwijdering voor alle installatiemethoden</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Omgevingsconfiguratie</a></b></td><td>Volledig overzicht en naslagwerk van <code>.env</code>-variabelen</td></tr>
@@ -1403,7 +1405,7 @@ Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 b
 
 # ⭐ Topbijdragers
 
-> OmniRoute wordt gevormd door een gepassioneerde opensourcecommunity. Deze personen hebben uitzonderlijke bijdragen geleverd die rechtstreeks van invloed zijn op de kwaliteit, stabiliteit en het bereik van het project. **Bedankt.**
+> 67router wordt gevormd door een gepassioneerde opensourcecommunity. Deze personen hebben uitzonderlijke bijdragen geleverd die rechtstreeks van invloed zijn op de kwaliteit, stabiliteit en het bereik van het project. **Bedankt.**
 
 ### Externe bijdragers op basis van samengevoegde pull requests
 
@@ -1521,7 +1523,7 @@ Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 b
 
 <sub>Opnieuw gecontroleerd op 2026-10-18 14:44:45 UTC: aan GitHub toegeschreven commits die door de Contributors API van de repository zijn gerapporteerd voor de standaardbranch <code>release/v3.8.52</code>. De API retourneerde 849 identiteiten (429 gebruikers, 2 bots, 418 anonieme identiteiten); deze tabel sluit de beheerder, bots en anonieme identiteiten uit en behoudt gedeelde posities. Deze tabel verschilt zowel van de rangschikking op basis van samengevoegde PR's hierboven als van de inventarisatie van Git-metagegevens hieronder.</sub>
 
-> 🙏 De functies, bugfixes en infrastructuurverbeteringen van deze bijdragers vormen een **essentieel onderdeel** van wat OmniRoute betrouwbaar en functierijk maakt. Elke pull request, elke testcase en elk i18n-vertaalbestand is belangrijk. Open source wordt gebouwd door mensen zoals zij.
+> 🙏 De functies, bugfixes en infrastructuurverbeteringen van deze bijdragers vormen een **essentieel onderdeel** van wat 67router betrouwbaar en functierijk maakt. Elke pull request, elke testcase en elk i18n-vertaalbestand is belangrijk. Open source wordt gebouwd door mensen zoals zij.
 
 </div>
 
@@ -1533,7 +1535,7 @@ Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 b
 
 <div align="center">
 
-Een welgemeend dankjewel aan de mensen die OmniRoute uit eigen zak financieren — elke bijdrage houdt het project gratis, onafhankelijk en in beweging.
+Een welgemeend dankjewel aan de mensen die 67router uit eigen zak financieren — elke bijdrage houdt het project gratis, onafhankelijk en in beweging.
 
 <table>
   <tr>
@@ -1623,7 +1625,7 @@ Een welgemeend dankjewel aan de mensen die OmniRoute uit eigen zak financieren �
 
 <sub>Openbare GitHub Sponsors zijn op 2026-10-18 opnieuw gevalideerd via de GitHub Sponsors GraphQL API: 11 openbare sponsorbijdragen (6 actief, 5 voormalig) van in totaal 14. De <code>isActive</code>-status van GitHub bepaalt de actieve labels hierboven; voormalige openbare eenmalige supporters blijven vermeld als dank, en privésponsors blijven anoniem. Donaties via Ko-fi, Buy Me a Coffee, Liberapay, PIX en crypto worden niet vermeld, omdat daarvoor geen openbaar sponsorprofiel bestaat.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Word sponsor →</a></b> — elke dollar houdt OmniRoute gratis en onafhankelijk.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Word sponsor →</a></b> — elke dollar houdt 67router gratis en onafhankelijk.
 
 </div>
 
@@ -1695,14 +1697,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute staat op de schouders van reuzen. Het begon als een fork van **[9router](https://github.com/decolua/9router)** en een TypeScript-port van het Go-project **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — en vanaf dat punt werd elk onderstaand subsysteem geïnspireerd door een opensourceproject dat ons voorging. Elk daarvan heeft een concreet onderdeel van OmniRoute vormgegeven. Hiermee willen we ze allemaal bedanken. 🙏
+67router staat op de schouders van reuzen. Het begon als een fork van **[9router](https://github.com/decolua/9router)** en een TypeScript-port van het Go-project **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — en vanaf dat punt werd elk onderstaand subsysteem geïnspireerd door een opensourceproject dat ons voorging. Elk daarvan heeft een concreet onderdeel van 67router vormgegeven. Hiermee willen we ze allemaal bedanken. 🙏
 
 > ⭐ aantallen sterren geverifieerd via GitHubs REST API op 18 oktober 2026 — geef deze projecten een ster. De aantallen vormen een exacte, gedateerde momentopname en zullen vanzelf veranderen.
 
 ### 🧬 Afstamming & gateway
 
 <table>
-  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het OmniRoute inspireerde</th></tr>
+  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het 67router inspireerde</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>Het oorspronkelijke project waarop deze fork is gebouwd — hier uitgebreid met multimodale API's en een volledige herschrijving in TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>De Go-implementatie die deze JavaScript-/TypeScript-port inspireerde.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>De AI-gateway waarvan de openbare prijsgegevens onze synchronisatie voor kostentracking voeden en waarvan het model voor providernormalisatie onze routering mede heeft vormgegeven.</td></tr>
@@ -1710,19 +1712,19 @@ OmniRoute staat op de schouders van reuzen. Het begon als een fork van **[9route
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>Patronen die zijn overgenomen voor streamherstel, aliassen zonder denkproces, fallback voor zoeken op het web, limieten op basis van een schuivend venster, redactie van logboeken en versterkte opstartflows.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>Patronen voor toolkeuze, uitvoerbeperkingen en toolbevestiging van Cursor Composer die zijn aangepast voor de native Cursor-executor.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>Patronen voor nieuwe aanmeldingen en rotatie van vernieuwingstokens die zijn overgenomen voor Codex OAuth-herauthenticatie.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Met Claude Code compatibele standaardwaarden voor transformaties en gedrag van factureringsheaders, gegeneraliseerd in OmniRoutes configuratiegestuurde bridge.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>De Grok-modeltoewijzingen, de Statsig-generator met een gesimuleerde TypeError, standaardwaarden voor verzoeken en apparaten en de NDJSON-responseprocessor zijn in belangrijke mate aangepast voor OmniRoutes Grok Web-executor.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Met Claude Code compatibele standaardwaarden voor transformaties en gedrag van factureringsheaders, gegeneraliseerd in 67routers configuratiegestuurde bridge.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>De Grok-modeltoewijzingen, de Statsig-generator met een gesimuleerde TypeError, standaardwaarden voor verzoeken en apparaten en de NDJSON-responseprocessor zijn in belangrijke mate aangepast voor 67routers Grok Web-executor.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>De belangrijkste transitieve codebron achter grok2api-merged; de implementaties voor modellen, headers, payloads, Statsig en verwerking ervan zijn behouden in de afstamming van Grok Web.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>De onderliggende MIT-broncode voor standaardwaarden van Grok-payloads en -apparaten, de Statsig-generator en de <code>result.response</code>-processor die via TQZHR en grok2api-merged zijn overgenomen.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Een transitieve bron die door grok2api-merged wordt vermeld voor de proxy-poollaag; OmniRoute behoudt die afstammingsvermelding, maar claimt geen port van een proxy-pool in zijn afgebakende Grok Web-executor.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>De via cookies geauthenticeerde Grok-proxy en het streamingpatroon met <code>result.response.token</code> hebben OmniRoutes Grok Web-transport mede vormgegeven.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Een transitieve bron die door grok2api-merged wordt vermeld voor de proxy-poollaag; 67router behoudt die afstammingsvermelding, maar claimt geen port van een proxy-pool in zijn afgebakende Grok Web-executor.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>De via cookies geauthenticeerde Grok-proxy en het streamingpatroon met <code>result.response.token</code> hebben 67routers Grok Web-transport mede vormgegeven.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>Voor de oorspronkelijke Grok Web-implementatie is het upstreamontwerp voor HTTP en browsers geraadpleegd; het directe HTTP-pad is afgeleid van GrokProxy, waardoor geen aanspraak wordt gemaakt op een onafhankelijke codeport.</td></tr>
 </table>
 
 ### 🗜️ Context- en tokencompressie — engines
 
 <table>
-  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het OmniRoute inspireerde</th></tr>
+  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het 67router inspireerde</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>Het virale project "waarom veel tokens gebruiken als weinig tokens volstaan" — de holbewonersfilosofie ervan vormt de basis voor onze standaardcompressiemodus en meer dan 30 regels voor het verwijderen van opvulling en verdichting.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Hoogwaardige compressie van opdrachtuitvoer — inspireerde onze RTK-engine, JSON-filter-DSL, herstel van ruwe uitvoer en de gestapelde RTK → Caveman-pijplijn.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Omkeerbare contextcompressie (SmartCrusher) — inspireerde onze <code>headroom</code>-engine en het patroon met <code>ccr</code>-ophaalaanduidingen.</td></tr>
@@ -1730,15 +1732,15 @@ OmniRoute staat op de schouders van reuzen. Het begon als een fork van **[9route
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>De JS/ONNX-port (MobileBERT / XLM-RoBERTa) die als worker-thread-backend voor onze LLMLingua-engine wordt gebruikt.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>PT-BR-tokencompressie — vormt de basis voor ons pt-BR-taalpakket: vermindering van pleonasmen en verwijdering van opvulwoorden, afgestemd op de Braziliaans-Portugese grammatica.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>De virale YAGNI-codeervaardigheid voor "luie senior developers" — inspireerde onze <b>less-code</b>-uitvoerstijl: sturen op de kleinste werkende wijziging, waardoor de hoeveelheid _gegenereerde_ code afneemt (de tegenhanger op de uitvoeras van het beknopte proza van Caveman).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>De actiegerichte, ADHD-vriendelijke antwoordstijl ervan werd aangepast tot de beknopte uitvoerstijl van OmniRoute in vijf talen.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>De actiegerichte, ADHD-vriendelijke antwoordstijl ervan werd aangepast tot de beknopte uitvoerstijl van 67router in vijf talen.</td></tr>
 </table>
 
 ### 🧩 Compacte indelingen, tokenonderzoek & codebewuste tooling
 
 <table>
-  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het OmniRoute inspireerde</th></tr>
+  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het 67router inspireerde</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Token-Oriented Object Notation — het kolomgerichte model met koptekst en rijen gaf vorm aan onze fase voor tabelverdichting.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Het compacte graafformaat en ontwerp met generieke profielen vormden de basis voor de tabelverdichting en het Headroom-codecformaat van OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Het compacte graafformaat en ontwerp met generieke profielen vormden de basis voor de tabelverdichting en het Headroom-codecformaat van 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>De MIT TypeScript-implementatie die rechtstreeks werd opgenomen en uitgebreid als de Headroom-codec met generiek profiel.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Brotli/SQLite-cache + contextdelta per sessie — inspireerde onze <code>session-dedup</code>-engine.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Verdichting van Bash-uitvoer + MCP-profielen — inspireerde onze discipline om compressie tijdig af te breken en de reductie van MCP-toolmanifesten.</td></tr>
@@ -1755,7 +1757,7 @@ OmniRoute staat op de schouders van reuzen. Het begon als een fork van **[9route
 ### 🧠 Geheugen & RAG
 
 <table>
-  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het OmniRoute inspireerde</th></tr>
+  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het 67router inspireerde</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Universele geheugenlaag — het model waarbij de proxy als grens voor schrijven en lezen fungeert, vormde onze geheugenarchitectuur.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Stateful agents met gelaagd geheugen — inspireerde ons gelaagde model voor Context Control & Recovery (CCR).</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>De ProblemMap-taxonomie van 16 terugkerende RAG/LLM-foutscenario's — de gedeelde terminologie in onze probleemoplossingsgids.</td></tr>
@@ -1764,15 +1766,15 @@ OmniRoute staat op de schouders van reuzen. Het begon als een fork van **[9route
 ### 🛰️ Verkeersinspectie, MITM & transparante proxy
 
 <table>
-  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het OmniRoute inspireerde</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>MITM-onderschepping en -analyse van verkeer tussen codeerassistenten en LLM's vormden de basis voor de eerste vereisten van Traffic Inspector. Vier eerder afgeleide modules — SSE-samenvoeging, gespreksnormalisatie, geheimenmaskering en opschoning van headers — zijn vervangen door onafhankelijke cleanroomimplementaties op basis van openbare protocolstandaarden. De twee oppervlakken voor host-passthrough (<code>passthrough.ts</code> en <code>_internal/bypass.cjs</code>) blijven interne OmniRoute-implementaties die onafhankelijk zijn geclassificeerd; ze zijn niet herschreven als onderdeel van die vervanging.</td></tr>
+  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het 67router inspireerde</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>MITM-onderschepping en -analyse van verkeer tussen codeerassistenten en LLM's vormden de basis voor de eerste vereisten van Traffic Inspector. Vier eerder afgeleide modules — SSE-samenvoeging, gespreksnormalisatie, geheimenmaskering en opschoning van headers — zijn vervangen door onafhankelijke cleanroomimplementaties op basis van openbare protocolstandaarden. De twee oppervlakken voor host-passthrough (<code>passthrough.ts</code> en <code>_internal/bypass.cjs</code>) blijven interne 67router-implementaties die onafhankelijk zijn geclassificeerd; ze zijn niet herschreven als onderdeel van die vervanging.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Transparante proxyroutering per proces — inspireerde onze crashbestendige MITM-beëindiging, time-outs voor inactieve sockets, procestoewijzing via <code>/proc</code> en TPROXY-vastlegging.</td></tr>
 </table>
 
 ### 📚 Modelgegevens, observeerbaarheid & UI
 
 <table>
-  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het OmniRoute inspireerde</th></tr>
+  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het 67router inspireerde</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>Open database met specificaties, prijzen en mogelijkheden van AI-modellen — rechtstreeks gesynchroniseerd met onze modelcatalogus.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>De nodegebaseerde grafiekbibliotheek achter onze realtime Compression Studio en Combo/Routing Studio.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>De livevisualisatie van workflowgrafieken in LangGraph Studio inspireerde de realtime cascadeweergave van onze Studio's.</td></tr>
@@ -1785,19 +1787,19 @@ OmniRoute staat op de schouders van reuzen. Het begon als een fork van **[9route
 ### 🛡️ Beveiliging
 
 <table>
-  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het OmniRoute inspireerde</th></tr>
+  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het 67router inspireerde</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>Een samengestelde lijst van standaard beveiligde bibliotheken die richting geeft aan onze beveiligingskeuzes (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Aanvullende hulpmiddelen
 
 <table>
-  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het OmniRoute inspireerde</th></tr>
+  <tr><th align="left">Project</th><th align="center">⭐</th><th align="left">Hoe het 67router inspireerde</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Inspireerde verzoekdeduplicatie, een kosteloos noodfallbackmechanisme, uitbreidbare Auto-Combo-strategieën en meertalige intentieclassificatie.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>De accountbewuste modelhertoewijzing, validatie van uitvoerbare bestandspaden en verwerking van planlabels vormden de basis voor de Antigravity-runtime van OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>De compacte notatie voor het aftellen tot het opnieuw instellen van quota inspireerde de bijbehorende weergave van providerlimieten in OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>De ACP-integraties inspireerden de automatische detectie van geïnstalleerde CLI-agents door OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Identificeerde de quota-interface van Grok Build; OmniRoute verifieerde en corrigeerde vervolgens zelfstandig de actuele wire-indeling.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>De accountbewuste modelhertoewijzing, validatie van uitvoerbare bestandspaden en verwerking van planlabels vormden de basis voor de Antigravity-runtime van 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>De compacte notatie voor het aftellen tot het opnieuw instellen van quota inspireerde de bijbehorende weergave van providerlimieten in 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>De ACP-integraties inspireerden de automatische detectie van geïnstalleerde CLI-agents door 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Identificeerde de quota-interface van Grok Build; 67router verifieerde en corrigeerde vervolgens zelfstandig de actuele wire-indeling.</td></tr>
 </table>
 
 ## 📄 Licentie
@@ -1810,7 +1812,7 @@ MIT-licentie - zie [LICENSE](LICENSE) voor details.
 
 **[⬆ Terug naar boven](#-omniroute)** · Gebouwd met ❤️ voor de open-source AI-community.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT-licentie · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · MIT-licentie · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions ingeschakeld voor community Q&A -->

@@ -7,7 +7,7 @@
 > **Tushen ingantacciyar gaskiya:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute ya ƙunshi tsarin kimantawa na gama-gari wanda za ka iya amfani da shi don auna ingancin saitunan routing, providers/models guda ɗaya, ko tarin gwaje-gwajen "golden set" da aka haɗa.
+67router ya ƙunshi tsarin kimantawa na gama-gari wanda za ka iya amfani da shi don auna ingancin saitunan routing, providers/models guda ɗaya, ko tarin gwaje-gwajen "golden set" da aka haɗa.
 Yi amfani da shi don tabbatar da sauye-sauyen routing, tantance sabbin providers, da hana fitar da sabbin sigogi har sai sun cika sharuɗɗa kafin a tura su zuwa zirga-zirgar production.
 
 An aiwatar da tsarin kamar haka:

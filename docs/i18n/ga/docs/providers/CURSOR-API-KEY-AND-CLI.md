@@ -4,16 +4,16 @@
 
 ---
 
-Dhá bhealach chun Cursor a chur taobh thiar de OmniRoute gan seisiún IDE:
+Dhá bhealach chun Cursor a chur taobh thiar de 67router gan seisiún IDE:
 
 1. **Soláthraí `cursor-api`** (cárta "Cursor API", ailias `cua`): soláthraí eochrach API
    a choinníonn eochair API úsáideora Cursor (`crsr_…`, a ghintear ag
-   `https://cursor.com/dashboard/api`). Is féidir le cliant OmniRoute ar bith ansin samhlacha
+   `https://cursor.com/dashboard/api`). Is féidir le cliant 67router ar bith ansin samhlacha
    Cursor a rochtain trí `/v1/chat/completions` mar `cursor-api/<model>` nó
    `cua/<model>`, leis na gnáthshraitheanna cuóta, cúltaca agus logála. Níl aon athrú ar an soláthraí
    IDE (`cursor`, seisiún OAuth/IDE).
-2. **Pas-trí Cursor CLI**: treoraigh Cursor CLI (`agent`) chuig OmniRoute ionas
-   go bhfíordheimhnítear gach RPC a dhéanann an CLI le heochair API OmniRoute, go gcuirtear ar aghaidh
+2. **Pas-trí Cursor CLI**: treoraigh Cursor CLI (`agent`) chuig 67router ionas
+   go bhfíordheimhnítear gach RPC a dhéanann an CLI le heochair API 67router, go gcuirtear ar aghaidh
    chuig Cursor é le dintiúr naisc `cursor-api`, agus go dtaifeadtar é ar an
    leathanach Logs.
 
@@ -60,7 +60,7 @@ Nótaí:
 
 - Tagann liostú samhlacha do `cursor-api` ó chlárlann statach Cursor (an
   liosta céanna a úsáideann an soláthraí IDE mar chúltaca); ní gá `cursor-agent` a shuiteáil
-  ar óstach OmniRoute.
+  ar óstach 67router.
 - Is don soláthraí IDE `cursor` amháin é `POST /api/providers/{id}/refresh-cursor`;
   níl aon seisiún IDE le hathnuachan ag naisc `cursor-api`.
 
@@ -68,7 +68,7 @@ Nótaí:
 
 I gcás `cursor` / `cu` agus `cursor-api` / `cua`, fágann comhnormalaitheoir iarrachta Claude
 aitheantas iarrtha na samhla gan athrú. Is féidir le Cursor iarmhír amhail
-`-low` a fhógairt mar chuid d’aitheantas fíor samhla, seachas mar ailias iarrachta OmniRoute.
+`-low` a fhógairt mar chuid d’aitheantas fíor samhla, seachas mar ailias iarrachta 67router.
 Caomhnaíonn riteoir Cursor meaitseáil bheacht leis an gcatalóg bheo; nuair nach bhfuil aon
 mheaitseáil ann, láimhseálann a réiteoir samhla reatha an tiontú cúltaca ó iarmhír go paraiméadar.
 
@@ -83,19 +83,19 @@ Bealach: `src/app/api/cursor-cli/[...path]/route.ts` →
 cláraithe in `src/shared/constants/publicApiRoutes.ts` toisc go
 bhforfheidhmíonn an láimhseálaí a fhíordheimhniú féin:
 
-| Conair                                                                                                                       | Fíordheimhniú a bhfuiltear ag súil leis ón CLI | An méid a dhéanann OmniRoute                                                                                                                                                                                          |
+| Conair                                                                                                                       | Fíordheimhniú a bhfuiltear ag súil leis ón CLI | An méid a dhéanann 67router                                                                                                                                                                                           |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <OmniRoute API key>`                   | Bailíochtaíonn sé an eochair, eisíonn sé JWT HS256 a mhaireann 1u (sínithe le `JWT_SECRET`) agus seolann sé ar ais é                                                                                                  |
+| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <67router API key>`                    | Bailíochtaíonn sé an eochair, eisíonn sé JWT HS256 a mhaireann 1u (sínithe le `JWT_SECRET`) agus seolann sé ar ais é                                                                                                  |
 | gach conair eile (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`                            | Fíoraíonn sé an t-eisitheoir/an spriocphobal/an dáta éaga, roghnaíonn sé ceangal gníomhach `cursor-api`, cuireann sé an comhartha Cursor malartaithe sa cheanntásc Authorization agus sruthaíonn sé an freagra ar ais |
 
 Díchódaíonn an CLI `exp` as cibé comhartha a fhaigheann sé, mar sin má thugtar
 comhartha teimhneach dó, déanann sé malartú arís roimh bheagnach gach iarratas;
-seachnaíonn an JWT eisithe é sin. Má fhaigheann sé 401 ó OmniRoute, déanann an
+seachnaíonn an JWT eisithe é sin. Má fhaigheann sé 401 ó 67router, déanann an
 CLI malartú arís.
 
 ### Socrú
 
-1. Cruthaigh eochair API OmniRoute (Painéal → Eochracha API) agus ceangal
+1. Cruthaigh eochair API 67router (Painéal → Eochracha API) agus ceangal
    `cursor-api`.
 2. Abair leis an CLI HTTP/1.1 a úsáid do shruth an ghníomhaire. In
    `~/.cursor/cli-config.json`:
@@ -108,7 +108,7 @@ CLI malartú arís.
    gníomhaire atá cumraithe ar leithligh agus ní théann ach RPCanna an phlána
    rialaithe tríd an gcríochphointe.
 
-3. Rith an CLI in aghaidh OmniRoute:
+3. Rith an CLI in aghaidh 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -118,17 +118,17 @@ CLI malartú arís.
 
 Taispeántar gach céim sna Logaí leis an soláthraí `cursor-api`, leis an gcineál
 iarratais `cursor-cli`, agus leis an gconair `/api/cursor-cli/<rpc>`, agus í
-curtha i leith eochair API OmniRoute agus an cheangail a rinne freastal uirthi.
+curtha i leith eochair API 67router agus an cheangail a rinne freastal uirthi.
 
 ### Módanna teipe
 
-| Cás                                                     | Freagra don CLI                                      |
-| ------------------------------------------------------- | ---------------------------------------------------- |
-| Eochair anaithnid OmniRoute agus `REQUIRE_API_KEY=true` | 401 `unauthenticated` le linn an mhalartaithe        |
-| `REQUIRE_API_KEY=false`                                 | seisiún gan ainm (ar aon dul le hiompar `/v1/*`)     |
-| JWT seisiúin atá imithe in éag / eachtrach / cúbláilte  | 401, déanann an CLI malartú arís                     |
-| Eochair API OmniRoute cúlghairthe tar éis malartaithe   | 401 ar an gcéad RPC eile                             |
-| Gan aon cheangal gníomhach `cursor-api`                 | 503 `unavailable`                                    |
-| Diúltaíonn Cursor d’eochair an cheangail                | 401 `unauthenticated`, baintear an seisiún ón taisce |
-| Ní féidir an córas réamhtheachtach a bhaint amach       | 502 `unavailable` (teachtaireacht slánaithe)         |
-| `JWT_SECRET` gan socrú                                  | 503 le linn an mhalartaithe                          |
+| Cás                                                    | Freagra don CLI                                      |
+| ------------------------------------------------------ | ---------------------------------------------------- |
+| Eochair anaithnid 67router agus `REQUIRE_API_KEY=true` | 401 `unauthenticated` le linn an mhalartaithe        |
+| `REQUIRE_API_KEY=false`                                | seisiún gan ainm (ar aon dul le hiompar `/v1/*`)     |
+| JWT seisiúin atá imithe in éag / eachtrach / cúbláilte | 401, déanann an CLI malartú arís                     |
+| Eochair API 67router cúlghairthe tar éis malartaithe   | 401 ar an gcéad RPC eile                             |
+| Gan aon cheangal gníomhach `cursor-api`                | 503 `unavailable`                                    |
+| Diúltaíonn Cursor d’eochair an cheangail               | 401 `unauthenticated`, baintear an seisiún ón taisce |
+| Ní féidir an córas réamhtheachtach a bhaint amach      | 502 `unavailable` (teachtaireacht slánaithe)         |
+| `JWT_SECRET` gan socrú                                 | 503 le linn an mhalartaithe                          |

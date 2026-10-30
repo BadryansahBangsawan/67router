@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute huja na ufuatiliaji wa afya uliojengewa ndani, rubani otomatiki wa watoa huduma, ufuatiliaji wa kiwango cha matumizi, na viunganishi vya uangalizi. Mwongozo huu unaelezea dashibodi, arifa, na utatuzi wa matatizo.
+> **TL;DR**: 67router huja na ufuatiliaji wa afya uliojengewa ndani, rubani otomatiki wa watoa huduma, ufuatiliaji wa kiwango cha matumizi, na viunganishi vya uangalizi. Mwongozo huu unaelezea dashibodi, arifa, na utatuzi wa matatizo.
 
 **Vyanzo:**
 
@@ -20,7 +20,7 @@
 
 ## Muhtasari
 
-OmniRoute ina **tabaka 3 za ufuatiliaji**:
+67router ina **tabaka 3 za ufuatiliaji**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Kwa kila mchanganyiko:
 
 ## API ya Ukaguzi wa Afya
 
-OmniRoute hutoa sehemu **mbili** za HTTP za ukaguzi wa afya. Hazitumiki kwa kubadilishana kwa waratibu.
+67router hutoa sehemu **mbili** za HTTP za ukaguzi wa afya. Hazitumiki kwa kubadilishana kwa waratibu.
 
 | Njia                         | Madhumuni                                                                 | Uzito                                      | Tumia kwa                                                                           |
 | ---------------------------- | ------------------------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ endpointi hii. Tumia `failed` + `failedConnections` kwa hitilafu za vipimo vya m
 
 ### Mapendekezo ya vipimo vya Kubernetes
 
-OmniRoute ni **mchakato mmoja wa Node** (mzunguko mmoja wa matukio). `HEALTHCHECK` ya kawaida ya Docker hulenga `/healthz` iliyo nyepesi. `/api/monitoring/health` ni **nzito mno** kwa vipindi vya ukaguzi wa uhai vya kubelet.
+67router ni **mchakato mmoja wa Node** (mzunguko mmoja wa matukio). `HEALTHCHECK` ya kawaida ya Docker hulenga `/healthz` iliyo nyepesi. `/api/monitoring/health` ni **nzito mno** kwa vipindi vya ukaguzi wa uhai vya kubelet.
 
 | Uchunguzi        | Lengo linalopendekezwa                                                                   | Maelezo                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Yanayohusiana: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) 
 
 ### watchdog ya systemd (kitanzi cha matukio kilichoganda)
 
-Kwenye seva pangishi ya systemd, OmniRoute humjulisha kidhibiti cha huduma inapokuwa tayari na huendelea kukitumia ping, ili seva ambayo kitanzi chake cha matukio kimekwama iuawe na kuanzishwa upya badala ya kuendelea kufanya kazi kimya. Ping hutoka kwenye kitanzi cha matukio cha seva yenyewe: kinapozuiwa, ping husimama, na systemd huanzisha upya huduma mara tu muda wa `WatchdogSec` unapopita bila ping.
+Kwenye seva pangishi ya systemd, 67router humjulisha kidhibiti cha huduma inapokuwa tayari na huendelea kukitumia ping, ili seva ambayo kitanzi chake cha matukio kimekwama iuawe na kuanzishwa upya badala ya kuendelea kufanya kazi kimya. Ping hutoka kwenye kitanzi cha matukio cha seva yenyewe: kinapozuiwa, ping husimama, na systemd huanzisha upya huduma mara tu muda wa `WatchdogSec` unapopita bila ping.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) tayari huandika unit ya mtumiaji yenye kipengele hiki. Unit unayoandika mwenyewe (`Type=simple` kwa chaguo-msingi) haina watchdog, kwa hivyo ongeza mistari hii kwenye sehemu yake ya `[Service]`:
 
@@ -443,7 +443,7 @@ Usanidi wa ukaguzi wa afya ya tokeni hushughulikiwa kwa ndani na `tokenHealthChe
 
 ### Njia Zilizojengewa Ndani
 
-OmniRoute inatumia **njia 3 za tahadhari**:
+67router inatumia **njia 3 za tahadhari**:
 
 | Njia               | Usanidi        | Matumizi                             |
 | ------------------ | -------------- | ------------------------------------ |
@@ -559,7 +559,7 @@ Unda `~/.omniroute/dashboard.json`:
 ### "Kiasi kinachoruhusiwa kinasema kiko sawa lakini ninaona 429"
 
 - 429 inamaanisha mtoa huduma anasema umetumia kiasi chako kinachoruhusiwa
-- Ufuatiliaji wa kiasi kinachoruhusiwa wa OmniRoute unaweza kuwa **umepitwa na wakati** — taarifa sahihi ya mtoa huduma iko kwenye huduma ya juu
+- Ufuatiliaji wa kiasi kinachoruhusiwa wa 67router unaweza kuwa **umepitwa na wakati** — taarifa sahihi ya mtoa huduma iko kwenye huduma ya juu
 - Data ya kiasi kinachoruhusiwa huonyeshwa upya kiotomatiki kupitia kifuatiliaji cha ndani cha kiasi kinachoruhusiwa
 
 ### "Combo inashindwa lakini malengo yote yanaonekana kuwa sawa"
@@ -572,7 +572,7 @@ Unda `~/.omniroute/dashboard.json`:
 
 - Endesha `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Ikiwa ni "ok" — ni tahadhari ya uongo, ukaguzi wa afya una masharti makali mno
-- Ikiwa ni kitu kingine chochote — **simamisha OmniRoute** na ufuate [mwongozo wa urejeshaji baada ya janga](./DATABASE_GUIDE.md#disaster-recovery)
+- Ikiwa ni kitu kingine chochote — **simamisha 67router** na ufuate [mwongozo wa urejeshaji baada ya janga](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Shinikizo la heap ya kumbukumbu ni hatari"
 

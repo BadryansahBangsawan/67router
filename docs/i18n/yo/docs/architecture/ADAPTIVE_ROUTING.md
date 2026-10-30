@@ -5,14 +5,14 @@
 ---
 
 Àkọsílẹ̀ yìí ṣàpèjúwe ìpìlẹ̀ ìdarí-ọ̀nà aṣamubadọgba tí ìdáhùn ń darí, èyí tí a ṣàfikún sí
-OmniRoute. A mọ̀ọ́mọ̀ jẹ́ kó kéré: ó ṣàfikún ikanni àbájáde-ìdarí-ọ̀nà tí a ti sọ irú rẹ̀,
+67router. A mọ̀ọ́mọ̀ jẹ́ kó kéré: ó ṣàfikún ikanni àbájáde-ìdarí-ọ̀nà tí a ti sọ irú rẹ̀,
 àmì dídára lórí-ayelujara tí ń pèsè ìdáhùn fún olùṣírò auto-combo tó ti wà, olùkó-jáde
 OpenTelemetry àṣàyàn, àti endpoint ìṣàlàyé. Kò **rò** àkójọpọ̀ ìfaradà tó ti wà
 (circuit breaker, connection cooldown, model lockout, health matrix, autopilot) — ó ń ṣe àfikún sí i.
 
 ## 1. Àyíká iṣẹ́-àwòrán
 
-OmniRoute jẹ́ pẹ̀lẹ́bẹ̀ dátà tó ní **ọ̀nà kíákíá ìbéèrè** àti **pẹ̀lẹ́bẹ̀
+67router jẹ́ pẹ̀lẹ́bẹ̀ dátà tó ní **ọ̀nà kíákíá ìbéèrè** àti **pẹ̀lẹ́bẹ̀
 ìṣàkóso/òye**. Ọ̀nà kíákíá náà gbọ́dọ̀ máa yára, lo ìrántí lọ́nà tó péye, ṣiṣẹ́ láìdúró-de,
 ní ìfaradà, kí ó sì ṣeé sọ àsọtẹ́lẹ̀. Ìṣàyẹ̀wò, fífúnni ní àmì dídára, àdánwò àti ìtúpalẹ̀ ìtàn
 jẹ́ ti pẹ̀lẹ́bẹ̀ ìṣàkóso.
@@ -22,7 +22,7 @@ Aṣojú AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   pẹ̀lẹ́bẹ̀ dátà (yára, sync, inú ìrántí)
+│    67router        │   pẹ̀lẹ́bẹ̀ dátà (yára, sync, inú ìrántí)
 │  ìdarí-ọ̀nà / failover │
 │  ìlera / guardrail  │
 │  cache / streaming  │
@@ -233,7 +233,7 @@ TTFT/ITL/interrupted ń wọ inú `RoutingEvent` (`ttftMs`, `itlMs`), a sì
 - Àwọn span ń tẹ̀lé àwọn àdéhùn ìtumọ̀ GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) pẹ̀lú àwọn ànímọ́ ìdarí
-  OmniRoute (àbájáde, ipò, ttft, àwọn ìgbìyànjú-àtúnṣe, fallback).
+  67router (àbájáde, ipò, ttft, àwọn ìgbìyànjú-àtúnṣe, fallback).
 - `record()` kàn ń fi ohun sínú buffer oníwọ̀n tó lopin (O(1)); timer abẹ́lẹ̀ kan
   ń flush nípasẹ̀ `POST {endpoint}/v1/traces` láìdúró. Nígbà ìrùpọ̀ iṣẹ́,
   àwọn event tó ti pẹ́ jù ni a ń yọ kúrò (`dropped` counter) — kò gbọdọ̀ fa backpressure sí data
@@ -254,7 +254,7 @@ TTFT/ITL/interrupted ń wọ inú `RoutingEvent` (`ttftMs`, `itlMs`), a sì
 
 ## 6. Ìṣọ̀kan pẹ̀lú evaluation-plane (Ìmúrasílẹ̀ fún Future AGI)
 
-OmniRoute ka Future AGI (tàbí evaluator èyíkéyìí) sí **backend
+67router ka Future AGI (tàbí evaluator èyíkéyìí) sí **backend
 ọgbọ́n/ìṣàyẹ̀wò tó ṣeé lò, kì í ṣe dependency**. Àwọn ojú-ọ̀nà náà ni:
 
 - `RoutingEventSink` kan lè fi àwọn event ránṣẹ́ sí evaluator láìdúró.

@@ -14,7 +14,7 @@ plugin ಒಪ್ಪಂದವನ್ನು ವ್ಯಾಖ್ಯಾನಿಸುತ
 processನ ಹೊರಗೆ ಚಲಿಸುವ sidecarಗಳಿಗಾಗಿ ಇದೇ manifest
 `GET /api/v1/provider-plugin-manifest` ಮೂಲಕ HTTPಯಲ್ಲಿಯೂ ಲಭ್ಯವಿದೆ.
 
-OmniRoute, `X-OmniRoute-Provider-Manifest-Url` request header ಮೂಲಕ ಆ URL ಅನ್ನು
+67router, `X-OmniRoute-Provider-Manifest-Url` request header ಮೂಲಕ ಆ URL ಅನ್ನು
 Bifrost ಮತ್ತು CLIProxyAPIಗೆ ತಿಳಿಸುತ್ತದೆ. sidecarಗೆ ಸ್ಥಳೀಯ request origin ಬದಲಾಗಿ
 ಸಾರ್ವಜನಿಕ ಅಥವಾ container network URL ಅಗತ್ಯವಿದ್ದಾಗ
 `OMNIROUTE_PROVIDER_MANIFEST_URL` ಅನ್ನು ಹೊಂದಿಸಿ.
@@ -31,7 +31,7 @@ responseಗೆ body ಇರುವುದಿಲ್ಲ; sidecar ತನ್ನ cached 
 ## ಗುರಿ
 
 provider metadataವನ್ನು plugin ಒಪ್ಪಂದದತ್ತ ವರ್ಗಾಯಿಸುವುದು, ಇದರಿಂದ ಅಂತಿಮವಾಗಿ ಕಡಿಮೆ
-latencyಯ sidecar ಬಿಸಿ request path ಅನ್ನು ನಿರ್ವಹಿಸಬಹುದು ಮತ್ತು OmniRoute,
+latencyಯ sidecar ಬಿಸಿ request path ಅನ್ನು ನಿರ್ವಹಿಸಬಹುದು ಮತ್ತು 67router,
 TypeScript route ಅನ್ನು policy gate ಮತ್ತು fallback ಆಗಿ ಉಳಿಸಿಕೊಳ್ಳಬಹುದು. manifest
 ಸಂಯೋಜನಾತ್ಮಕವಾಗಿದೆ: ಅದು ಸ್ವತಃ request routing ಅನ್ನು ಬದಲಾಯಿಸುವುದಿಲ್ಲ.
 
@@ -75,7 +75,7 @@ machine-readable ಉತ್ತರವಾಗಿ ಇದನ್ನು ಪರಿಗಣ�
 | `usage-fetch`        | ಸಂಯೋಜಿಸಲಾದ usage ಅಥವಾ quota fetcher (`getUsageForProvider`) ಹೊಂದಿದೆ.                      |
 | `usage-supported`    | usage API ಈ provider ಅನ್ನು ಸ್ವೀಕರಿಸುತ್ತದೆ (`isSupportedUsageConnection`).                 |
 
-`usage-fetch` ಕೇವಲ ಅನ್ವೇಷಣೆಗಾಗಿ. providerಗಾಗಿ usage ಅನ್ನು ಹೇಗೆ ಓದಬೇಕು ಎಂಬುದು OmniRouteಗೆ
+`usage-fetch` ಕೇವಲ ಅನ್ವೇಷಣೆಗಾಗಿ. providerಗಾಗಿ usage ಅನ್ನು ಹೇಗೆ ಓದಬೇಕು ಎಂಬುದು 67routerಗೆ
 ತಿಳಿದಿದೆ ಎಂದು ಇದು ವರದಿ ಮಾಡುತ್ತದೆ; ಇದು fetching ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವುದಿಲ್ಲ, quota semantics ಅನ್ನು
 ಬದಲಾಯಿಸುವುದಿಲ್ಲ ಅಥವಾ providerಗಾಗಿ Dashboard quota widget ಸಕ್ರಿಯವಾಗಿದೆ ಎಂದು ಸೂಚಿಸುವುದಿಲ್ಲ —
 ಆ widget ಅನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ `USAGE_SUPPORTED_PROVIDERS` ಮೂಲಕ gate ಮಾಡಲಾಗುತ್ತದೆ. ಅಧಿಕೃತ ಮೂಲವು

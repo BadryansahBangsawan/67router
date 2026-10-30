@@ -5,7 +5,7 @@
 ---
 
 Oʻzida joylashtirilgan pool **.113** mashinasida (`tomni-proxmox-113`) ishlaydi. 2026-10-18 sanasidan beri har bir
-OmniRoute runneri **bitta rol**, bitta label hamda uning ish yuklamasi bo‘yicha o‘lchangan natijalarga
+67router runneri **bitta rol**, bitta label hamda uning ish yuklamasi bo‘yicha o‘lchangan natijalarga
 mos xotira/CPU budjetiga ega. Turbopack slotiga build uchun zarur resurslar ajratiladi; qolgan slotlar
 ularning o‘lchangan eng yuqori ko‘rsatkichlariga moslab sozlangan. Mashinada resurslar faqat Turbopack
 buildi Release-Green webpack buildi va lint job bilan bir vaqtda ishlaganda ortiqcha taqsimlanadi;
@@ -28,7 +28,7 @@ Turbopack sloti ko‘pincha bo‘sh turadi:
 | swap      | 16 GB                        | `omniroute-113-5` swap o‘chirilgan holda (`MemorySwapMax=0`) ishlaydi, shuning uchun nazoratdan chiqqan build mashinani swap ishlatishga majbur qilish o‘rniga o‘z limitida to‘xtatiladi                                                                                                                                                                                                                            |
 | `/tmp`    | **12 GB tmpfs = RAM**        | bu yerda saqlangan har qanday narsa xotirani egallaydi; qoldiqlar 3 soatdan keyin tozalanadi                                                                                                                                                                                                                                                                                                                        |
 | CPU       | 32 yadroda 60 load kuzatildi | kvotalardan oldin bitta Turbopack buildi (~1166 % CPU) va shu mashinadagi coverage to‘plami boshqa listenerlarning heartbeatlarini resursdan mahrum qilgan (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                    |
-| runnerlar | **6 ta listener**            | 4 ta OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` o‘chirilgan (`systemctl enable --now` ulardan birini qayta ishga tushiradi)                                                                                                                                                                                                                                                                      |
+| runnerlar | **6 ta listener**            | 4 ta 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` o‘chirilgan (`systemctl enable --now` ulardan birini qayta ishga tushiradi)                                                                                                                                                                                                                                                                       |
 
 Limitlar har bir unitning `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 faylida joylashgan (avvalgi qiymatlar `override.conf.bak-20261018` sifatida saqlangan) va
@@ -79,7 +79,7 @@ worker vazifa bekor qilinganini xabar qiladi, listener esa o‘z-o‘zidan yana 
 Runner’ning standart `KillMode=process` sozlamasi unit to‘xtatilganda yoki qayta ishga
 tushirilganda `Runner.Worker → npm → next-build` jarayonlarini tirik qoldiradi — yetim build
 hech qanday vazifaga biriktirilmagan holda RAM va CPU’ni iste’mol qilishda davom etadi. Har bir
-OmniRoute unit’ida `KillMode=mixed` sozlamali drop-in mavjud
+67router unit’ida `KillMode=mixed` sozlamali drop-in mavjud
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`):
 avval listener’ga SIGTERM, `TimeoutStop` vaqtida esa butun cgroup’ga SIGKILL yuboriladi.
 Bu sozlama unit keyingi safar qayta ishga tushirilganda kuchga kiradi — **bir vaqtda faqat bitta
@@ -129,7 +129,7 @@ ishga tushirish bitta buyruq ichida bajarilsin.
   `lint-guard`ni bajaradi. `omniroute-113`da 2026-10-18gacha `MemoryHigh=4G` bo‘lgan — promptfoo
   build u yerda 54 daqiqa davomida xotirani qayta bo‘shatib ishlagan; 8 GB throttlingni bartaraf
   etadi.
-- **Listenerlar ataylab kamaytirilgan.** To‘rtta OmniRoute unit 2026-08-29da o‘chirildi — har bir
+- **Listenerlar ataylab kamaytirilgan.** To‘rtta 67router unit 2026-08-29da o‘chirildi — har bir
   qo‘shimcha listener yuqoridagi xotira budjetining yana bir iste’molchisidir. Janitor limiti 6 ta
   (`MAX_ACTIVE_RUNNERS=6` cron ichida): u mashinadagi har bir `Runner.Listener`ni hisoblaydi,
   OmniHeuris va OmniMind esa bizning to‘rttamizga yana ikkitasini qo‘shadi.

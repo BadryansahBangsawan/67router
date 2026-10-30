@@ -15,7 +15,7 @@ Quota Sharing Engine phân phối hạn mức dựa trên thời gian của nhà
 5 giờ của Codex, 1500 req/h của Kimi) một cách công bằng giữa nhiều khóa API dùng chung
 một kết nối.
 
-**Vấn đề được giải quyết:** OmniRoute dùng nhiều khóa API để truy cập cùng một tài khoản
+**Vấn đề được giải quyết:** 67router dùng nhiều khóa API để truy cập cùng một tài khoản
 nhà cung cấp thượng nguồn. Nếu không có logic chia sẻ, lưu lượng tăng đột biến từ khóa A có thể làm cạn
 hạn mức của nhà cung cấp trong giờ đó, khiến các khóa B và C bị chặn cho đến khi cửa sổ được đặt lại.
 Engine ngăn chặn điều này bằng cách:
@@ -119,7 +119,7 @@ Trình điều khiển Redis: tập lệnh Lua EVAL để tăng nguyên tử —
 
 - Bảng: `quota_consumption` (xem migration `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Phù hợp nhất cho các triển khai đơn phiên bản.
-- Toàn bộ dữ liệu lưu trữ bền vững nằm trong DB SQLite hiện có của OmniRoute (`DATA_DIR/storage.sqlite`).
+- Toàn bộ dữ liệu lưu trữ bền vững nằm trong DB SQLite hiện có của 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (tùy chọn, đa phiên bản)
 

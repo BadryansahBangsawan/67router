@@ -4,7 +4,7 @@
 
 ---
 
-Stiskanje RTK je OmniRouteov mehanizem za stiskanje izhoda terminala in orodij, ki upošteva ukaze. Zasnovan je za seje kodirnih agentov, pri katerih večina rasti konteksta izvira iz dnevnikov testov, izhoda gradenj, šuma upravljalnikov paketov, prepisov lupine, izhoda Dockerja, izhoda gita in sledi sklada.
+Stiskanje RTK je 67routerov mehanizem za stiskanje izhoda terminala in orodij, ki upošteva ukaze. Zasnovan je za seje kodirnih agentov, pri katerih večina rasti konteksta izvira iz dnevnikov testov, izhoda gradenj, šuma upravljalnikov paketov, prepisov lupine, izhoda Dockerja, izhoda gita in sledi sklada.
 
 RTK se lahko izvaja neposredno z `defaultMode: "rtk"` ali kot prvi korak v sestavljenem cevovodu, običajno:
 
@@ -15,7 +15,7 @@ rtk -> caveman
 Ta vrstni red najprej stisne šumni strojni izhod, nato pa omogoči Cavemanu, da zgosti preostalo besedilo.
 
 Izvorni RTK poroča o `60-90%` prihranku pri izhodu ukazov. Vzorčna seja v njegovem README se zmanjša s
-`~118,000` standardnih žetonov na `~23,900` žetonov RTK, kar pomeni `79.7%` prihranka (`~80%`). OmniRoute uporablja
+`~118,000` standardnih žetonov na `~23,900` žetonov RTK, kar pomeni `79.7%` prihranka (`~80%`). 67router uporablja
 to izvorno povprečje za izračun sestavljenega prihranka s Cavemanovim stiskanjem vhoda:
 
 ```txt
@@ -52,7 +52,7 @@ RTK nalaga filtre v tem vrstnem redu:
 2. Globalni filtri iz `DATA_DIR/rtk/filters.toml` in `DATA_DIR/rtk/filters.json`.
 3. Vgrajeni filtri iz `open-sse/services/compression/engines/rtk/filters/`.
 
-Znotraj istega obsega imajo filtri sheme RTK TOML v1 prednost pred filtri OmniRoute JSON. Izrazi TOML
+Znotraj istega obsega imajo filtri sheme RTK TOML v1 prednost pred filtri 67router JSON. Izrazi TOML
 `match_command` se preverijo pred ujemanjem vrste ukaza, tako da lahko uvoženi filter za določen ukaz
 preglasi splošnejši filter v tem obsegu. Projektni obseg ima še vedno prednost pred globalnim
 obsegom ne glede na obliko datoteke.
@@ -82,7 +82,7 @@ preskočeni in navedeni v diagnostiki `/api/context/rtk/filters`. Neveljavni vgr
 
 ## Združljivost s shemo RTK TOML v1
 
-OmniRoute lahko razčleni, preveri, preizkusi in namesti deklarativne datoteke filtrov, ki uporabljajo shemo RTK TOML v1.
+67router lahko razčleni, preveri, preizkusi in namesti deklarativne datoteke filtrov, ki uporabljajo shemo RTK TOML v1.
 Podprta polja so `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` in vdelani preizkusi `[[tests.<filter>]]`.
@@ -91,7 +91,7 @@ Neznana polja, neveljavni ali nevarni regularni izrazi, sočasna pravila za odst
 preveriti za namen pregleda, vendar je ni mogoče namestiti ali naložiti. Napake pri nalaganju datotek po meri še naprej
 omogočajo nemoteno delovanje: neveljavna datoteka je preskočena, preostali filtri pa še naprej delujejo.
 
-OmniRoute prejme izhod orodja, potem ko ga je odjemalec že zajel, zato `filter_stderr = true`
+67router prejme izhod orodja, potem ko ga je odjemalec že zajel, zato `filter_stderr = true`
 ne more spremeniti zajemanja procesa. Polje je sprejeto brez učinka, preverjanje pa vrne opozorilo.
 To je namenoma opisano kot **združljivost s shemo RTK TOML v1** in ne kot popolna združljivost
 z izvršljivo datoteko RTK, lupinskimi kavlji, implementacijami ukazov v jeziku Rust ali njegovo strukturo shrambe zaupanja.

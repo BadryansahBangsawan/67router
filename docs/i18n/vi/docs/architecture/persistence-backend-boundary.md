@@ -10,7 +10,7 @@
 
 ## Bối cảnh
 
-OmniRoute hiện cung cấp các hàm lưu trữ bền vững hướng miền từ `src/lib/db/`, trong khi kết nối dùng chung do `src/lib/db/core.ts` trả về triển khai giao ước `SqliteAdapter` đồng bộ trong `src/lib/db/adapters/types.ts`. Adapter đó hỗ trợ nhiều runtime SQLite, nhưng bề mặt của nó vẫn mang đặc trưng SQLite: các câu lệnh chuẩn bị sẵn đồng bộ, `pragma`, giao dịch trì hoãn và tức thời, sao lưu gốc/sao chép tệp, checkpoint và một handle cơ sở dữ liệu cục bộ.
+67router hiện cung cấp các hàm lưu trữ bền vững hướng miền từ `src/lib/db/`, trong khi kết nối dùng chung do `src/lib/db/core.ts` trả về triển khai giao ước `SqliteAdapter` đồng bộ trong `src/lib/db/adapters/types.ts`. Adapter đó hỗ trợ nhiều runtime SQLite, nhưng bề mặt của nó vẫn mang đặc trưng SQLite: các câu lệnh chuẩn bị sẵn đồng bộ, `pragma`, giao dịch trì hoãn và tức thời, sao lưu gốc/sao chép tệp, checkpoint và một handle cơ sở dữ liệu cục bộ.
 
 Luồng khởi động và khôi phục hiện tại cũng quản lý vòng đời tệp SQLite. `src/lib/db/core.ts` phân giải `storage.sqlite`, duy trì một adapter toàn cục cho mỗi tiến trình, tạo checkpoint cho WAL, bảo toàn các bảng được chọn trong quá trình khôi phục và xóa các tệp phụ trợ của SQLite khi dựng lại cơ sở dữ liệu. Việc lựa chọn driver trong `src/lib/db/adapters/driverFactory.ts` chọn giữa các runtime SQLite được hỗ trợ; đây không phải là một lớp trừu tượng cho backend bên ngoài.
 

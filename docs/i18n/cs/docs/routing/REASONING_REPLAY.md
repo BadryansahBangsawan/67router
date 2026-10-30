@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Poslední aktualizace:** 2026-06-28 — v3.8.40
 
-OmniRoute zachycuje `reasoning_content` asistenta vytvořený modely v režimu přemýšlení a transparentně jej přehrává u vícekolových požadavků, pokud to poskytovatel upstreamu vyžaduje. Tím se eliminují chyby HTTP 400, které striktní poskytovatelé vracejí, když v historii konverzace klienta chybí uvažování z předchozího kola.
+67router zachycuje `reasoning_content` asistenta vytvořený modely v režimu přemýšlení a transparentně jej přehrává u vícekolových požadavků, pokud to poskytovatel upstreamu vyžaduje. Tím se eliminují chyby HTTP 400, které striktní poskytovatelé vracejí, když v historii konverzace klienta chybí uvažování z předchozího kola.
 
 ## Proč tato funkce existuje
 
@@ -17,7 +17,7 @@ Několik poskytovatelů režimu přemýšlení odmítne navazující kolo, pokud
 Nesprávný parametr: reasoning_content v režimu přemýšlení musí být předán zpět rozhraní API.
 ```
 
-Běžní klienti (Cursor, Cline, Roo Code, OpenAI SDK) však `reasoning_content` z historie, kterou znovu odesílají, odstraňují. OmniRoute jej obnoví z mezipaměti na straně serveru, aby byl požadavek, který upstream obdrží, konzistentní. Issue #1628 zavedl hybridní perzistenci v paměti/SQLite, aby mezipaměť přežila restart procesu.
+Běžní klienti (Cursor, Cline, Roo Code, OpenAI SDK) však `reasoning_content` z historie, kterou znovu odesílají, odstraňují. 67router jej obnoví z mezipaměti na straně serveru, aby byl požadavek, který upstream obdrží, konzistentní. Issue #1628 zavedl hybridní perzistenci v paměti/SQLite, aby mezipaměť přežila restart procesu.
 
 ## Architektura
 

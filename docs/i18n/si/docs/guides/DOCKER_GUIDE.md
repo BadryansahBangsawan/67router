@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (සිංහල)
+# 🐳 Docker Guide — 67router (සිංහල)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [පරිසර ගොනුවක් සමඟ](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [ලබාගත හැකි පැතිකඩ](#available-profiles)
-- [OmniRoute Docker තුළ ධාවනය වන විට සත්කාරක CLI මෙවලම් වින්යාස කිරීම](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [67router Docker තුළ ධාවනය වන විට සත්කාරක CLI මෙවලම් වින්යාස කිරීම](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [නිෂ්පාදන Compose](#production-compose)
 - [Dockerfile අදියර](#dockerfile-stages)
@@ -83,7 +83,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## ලබාගත හැකි පැතිකඩ
 
-OmniRoute ප්රධාන යෙදවුම් ආකාර සඳහා Compose පැතිකඩ සමඟ සපයනු ලැබේ. ඔබගේ පරිසරයට ගැළපෙන එක තෝරන්න.
+67router ප්රධාන යෙදවුම් ආකාර සඳහා Compose පැතිකඩ සමඟ සපයනු ලැබේ. ඔබගේ පරිසරයට ගැළපෙන එක තෝරන්න.
 
 | පැතිකඩ           | සේවාව            | භාවිත කළ යුත්තේ කවදාද                                                                                                                       | විධානය                                       |
 | ---------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -95,7 +95,7 @@ OmniRoute ප්රධාන යෙදවුම් ආකාර සඳහා Com
 
 > පැතිකඩ කිහිපයක් ඒකාබද්ධ කළ හැක: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## OmniRoute Docker තුළ ක්රියාත්මක වන විට host CLI මෙවලම් වින්යාස කිරීම
+## 67router Docker තුළ ක්රියාත්මක වන විට host CLI මෙවලම් වින්යාස කිරීම
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` සහ dashboard හි
 **වින්යාසය සුරකින්න** බොත්තම යන සියල්ලම `~/.codex/*.config.toml` වැනි ගොනු ලියයි. එම paths
@@ -104,11 +104,11 @@ OmniRoute ප්රධාන යෙදවුම් ආකාර සඳහා Com
 image එක `USER node` ලෙස ක්රියාත්මක වේ) යයි. කිසිදු host CLI එකක් එය කිසිදා කියවන්නේ නැති අතර,
 container එක නැවත නිර්මාණය කළ සැණින් එය ඉවත දැමේ.
 
-OmniRoute මෙය හඳුනාගෙන, ඔබට භාවිත කළ නොහැකි සාර්ථකත්වයක් වාර්තා කිරීම වෙනුවට
+67router මෙය හඳුනාගෙන, ඔබට භාවිත කළ නොහැකි සාර්ථකත්වයක් වාර්තා කිරීම වෙනුවට
 උපදෙස් සමඟ ලිවීම ප්රතික්ෂේප කරයි: CLI එක `2` සමඟ පිටවන අතර API එක
 `containerEphemeralTarget: true` සමඟ `422` ලෙස පිළිතුරු දෙයි.
 
-### නිර්දේශිත ක්රමය: CLI එක host එකේත්, OmniRoute Docker තුළත් ක්රියාත්මක කරන්න
+### නිර්දේශිත ක්රමය: CLI එක host එකේත්, 67router Docker තුළත් ක්රියාත්මක කරන්න
 
 Container එක API එක සපයයි; CLI එක ඔබේ host මෙවලම් වින්යාස කරයි.
 
@@ -138,7 +138,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Path එක විශ්වාසදායක කරන්නේ bind mount එකයි: OmniRoute
+Path එක විශ්වාසදායක කරන්නේ bind mount එකයි: 67router
 `/proc/self/mountinfo` කියවා mounted paths වෙත (සහ එහි child directories
 mount කර ඇති directories වෙතද — ඉහත `/host-home` ආකෘතිය හරියටම එයයි)
 ලිවීමට ඉඩ දෙන අතර, mount නොකළ ඒවා තවදුරටත් ප්රතික්ෂේප කරයි.
@@ -181,7 +181,7 @@ CLIs සැබවින්ම container එක තුළ පවතින වි�
 
 ## Redis Sidecar
 
-OmniRoute විසින් බෙදාහැරුණු අනුපාත සීමාකාරකය සහ හවුල් හැඹිලිය සඳහා Redis භාවිත කරයි. `redis` සේවාව `docker-compose.yml` තුළ **සැමවිටම අර්ථ දක්වා ඇත** (එයට පැතිකඩ දොරටුවක් නොමැත) සහ වෙනත් ඕනෑම පැතිකඩක් සමඟ ආරම්භ වේ.
+67router විසින් බෙදාහැරුණු අනුපාත සීමාකාරකය සහ හවුල් හැඹිලිය සඳහා Redis භාවිත කරයි. `redis` සේවාව `docker-compose.yml` තුළ **සැමවිටම අර්ථ දක්වා ඇත** (එයට පැතිකඩ දොරටුවක් නොමැත) සහ වෙනත් ඕනෑම පැතිකඩක් සමඟ ආරම්භ වේ.
 
 | විස්තරය                  | අගය                                      |
 | ------------------------ | ---------------------------------------- |
@@ -367,7 +367,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ## උපමාර්ගයක Reverse Proxy (Traefik / nginx)
 
-Next.js `basePath` එක standalone bundle එක තුළට compile කෙරේ. OmniRoute විසින් යෙදුමේ root හි ඇති sentinel ගොනුවක build කරන ලද අගය සටහන් කරයි (`npm run build` අතරතුර ලියනු ලබන අතර,
+Next.js `basePath` එක standalone bundle එක තුළට compile කෙරේ. 67router විසින් යෙදුමේ root හි ඇති sentinel ගොනුවක build කරන ලද අගය සටහන් කරයි (`npm run build` අතරතුර ලියනු ලබන අතර,
 `scripts/docker/ensure-docker-base-path.mjs` මඟින් කියවනු ලැබේ) සහ container එක ආරම්භ වන විට එය
 `OMNIROUTE_BASE_PATH` සමඟ සසඳයි. ඒවා වෙනස් වන විට සහ image එක domain root සඳහා
 build කර ඇති විට, entrypoint එක `node dev/run-standalone.mjs` ධාවනය වීමට පෙර
@@ -439,7 +439,7 @@ readiness සඳහා රැඳී නොසිටී). මේ දෙකම req
 
 ## Caddy සමඟ Docker Compose (HTTPS Auto-TLS)
 
-Caddy හි ස්වයංක්රීය SSL සැපයීම භාවිතයෙන් OmniRoute ආරක්ෂිතව නිරාවරණය කළ හැක. ඔබගේ වසමේ DNS A වාර්තාව ඔබගේ සේවාදායකයේ IP ලිපිනය වෙත යොමු වන බව සහතික කරගන්න.
+Caddy හි ස්වයංක්රීය SSL සැපයීම භාවිතයෙන් 67router ආරක්ෂිතව නිරාවරණය කළ හැක. ඔබගේ වසමේ DNS A වාර්තාව ඔබගේ සේවාදායකයේ IP ලිපිනය වෙත යොමු වන බව සහතික කරගන්න.
 
 ```yaml
 services:
@@ -471,10 +471,10 @@ volumes:
 ```
 
 Caddy විසින් upstream බහාලුම සඳහා සම්මත යොමුකිරීමේ ශීර්ෂක සකසයි. OAuth ආපසු කැඳවීම් සහ ජනනය කළ පොදු
-සබැඳි සඳහා සම්මත පොදු මූලාරම්භය ලෙස OmniRoute විසින් `NEXT_PUBLIC_BASE_URL` භාවිත කරයි;
+සබැඳි සඳහා සම්මත පොදු මූලාරම්භය ලෙස 67router විසින් `NEXT_PUBLIC_BASE_URL` භාවිත කරයි;
 සත්යාපිත උපකරණ පුවරු ලිවීම් එකම මූලාරම්භයේ ඉල්ලීම් සහ සැසියට බැඳුණු CSRF
 ආරක්ෂාව භාවිත කරයි. පැහැදිලි වින්යාසය වෙනුවට විශ්වාසදායක යොමු කළ ශීර්ෂකවලින් පොදු මූලාරම්භය
-ව්යුත්පන්න කිරීමට OmniRoute හිතාමතාම යොදාගන්නා උසස් යෙදවීම් සඳහා පමණක් `OMNIROUTE_TRUST_PROXY`
+ව්යුත්පන්න කිරීමට 67router හිතාමතාම යොදාගන්නා උසස් යෙදවීම් සඳහා පමණක් `OMNIROUTE_TRUST_PROXY`
 සක්රීය කරන්න.
 
 ## Cloudflare Quick Tunnel
@@ -486,11 +486,11 @@ Docker යෙදවීම් සඳහා වන උපකරණ පුවරු
 ### උමං සටහන්
 
 - Quick Tunnel URL තාවකාලික වන අතර සෑම නැවත ආරම්භ කිරීමකටම පසුව වෙනස් වේ.
-- OmniRoute හෝ බහාලුම නැවත ආරම්භ කිරීමෙන් පසුව Quick Tunnels ස්වයංක්රීයව ප්රතිසාධනය නොවේ. අවශ්ය විට උපකරණ පුවරුවෙන් ඒවා නැවත සක්රීය කරන්න.
+- 67router හෝ බහාලුම නැවත ආරම්භ කිරීමෙන් පසුව Quick Tunnels ස්වයංක්රීයව ප්රතිසාධනය නොවේ. අවශ්ය විට උපකරණ පුවරුවෙන් ඒවා නැවත සක්රීය කරන්න.
 - කළමනාකරණය කළ ස්ථාපනය දැනට `x64` / `arm64` මත Linux, macOS සහ Windows සඳහා සහය දක්වයි.
 - සීමා සහිත බහාලුම් පරිසරවල ශබ්දකාරී QUIC UDP බෆර් අනතුරු ඇඟවීම් වළක්වා ගැනීම සඳහා, කළමනාකරණය කළ Quick Tunnels පෙරනිමියෙන් HTTP/2 ප්රවාහනය භාවිත කරයි. ඔබට වෙනත් ප්රවාහනයක් අවශ්ය නම් `CLOUDFLARED_PROTOCOL=quic` හෝ `auto` සකසන්න.
 - Docker අනුරූ පද්ධති CA මූලයන් සමඟ පැමිණ ඒවා කළමනාකරණය කළ `cloudflared` වෙත ලබා දෙයි; එමඟින් උමඟ බහාලුම තුළ ආරම්භ වන විට TLS විශ්වාස අසාර්ථකවීම් වළක්වයි.
-- OmniRoute විසින් එකක් බාගත කිරීම වෙනුවට පවතින ද්විමය ගොනුවක් භාවිත කිරීමට ඔබට අවශ්ය නම් `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` සකසන්න.
+- 67router විසින් එකක් බාගත කිරීම වෙනුවට පවතින ද්විමය ගොනුවක් භාවිත කිරීමට ඔබට අවශ්ය නම් `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` සකසන්න.
 
 ## අනුරූ ටැග
 
@@ -503,7 +503,7 @@ Docker යෙදවීම් සඳහා වන උපකරණ පුවරු
 
 ### නිකුතු නාලිකා
 
-OmniRoute ස්ථායී නිකුතු, සක්රීය නිකුතු-ශාඛා පරීක්ෂණ සහ සංවර්ධන ගොඩනැගීම් සඳහා වෙන වෙනම Docker නාලිකා ප්රකාශයට පත් කරයි.
+67router ස්ථායී නිකුතු, සක්රීය නිකුතු-ශාඛා පරීක්ෂණ සහ සංවර්ධන ගොඩනැගීම් සඳහා වෙන වෙනම Docker නාලිකා ප්රකාශයට පත් කරයි.
 
 | නාලිකාව                         | මූලාශ්රය                          | වෙනස් කළ හැකි බව                 | නිර්දේශිත භාවිතය                                                                                                              |
 | ------------------------------- | --------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -556,7 +556,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-පරීක්ෂා කිරීමට පෙර, OmniRoute data volume එක හෝ bind-mounted data directory එක උපස්ථ කරන්න. පෙර තත්ත්වයට ප්රතිවර්තනය කිරීමට, කලින් භාවිත කළ ස්ථාවර version එක හෝ digest එක ප්රතිස්ථාපනය කර container එක නැවත නිර්මාණය කරන්න:
+පරීක්ෂා කිරීමට පෙර, 67router data volume එක හෝ bind-mounted data directory එක උපස්ථ කරන්න. පෙර තත්ත්වයට ප්රතිවර්තනය කිරීමට, කලින් භාවිත කළ ස්ථාවර version එක හෝ digest එක ප්රතිස්ථාපනය කර container එක නැවත නිර්මාණය කරන්න:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -576,7 +576,7 @@ docker compose up -d
 
 ## Docker තුළ Dashboard යාවත්කාලීන කිරීම්
 
-ප්රකාශිත image එකකින් සෑදූ container එකකට තමන්වම ප්රතිස්ථාපනය කළ නොහැක. OmniRoute තමන් container එකක් තුළ ධාවනය වන බව හඳුනාගත් විට (`.git` checkout එකක් නොමැති සහ npm ස්ථාපනයක් නොවන විට), මුල් dashboard එකේ යාවත්කාලීන banner එක npm/git උපදෙස් වෙනුවට ධාවනය කළ යුතු host command එක copy button එකක් සමඟ පෙන්වයි:
+ප්රකාශිත image එකකින් සෑදූ container එකකට තමන්වම ප්රතිස්ථාපනය කළ නොහැක. 67router තමන් container එකක් තුළ ධාවනය වන බව හඳුනාගත් විට (`.git` checkout එකක් නොමැති සහ npm ස්ථාපනයක් නොවන විට), මුල් dashboard එකේ යාවත්කාලීන banner එක npm/git උපදෙස් වෙනුවට ධාවනය කළ යුතු host command එක copy button එකක් සමඟ පෙන්වයි:
 
 ```bash
 docker compose pull omniroute && docker compose up -d --force-recreate omniroute
@@ -586,7 +586,7 @@ docker compose pull omniroute && docker compose up -d --force-recreate omniroute
 
 ### Host trigger file එකක් භාවිතයෙන් එක්-click යාවත්කාලීන කිරීම්
 
-Container එකට host එකේ root ප්රවේශය ලබා දෙන `/var/run/docker.sock` mount නොකර **Update Now** ක්රියාත්මකව තබා ගැනීමට (ඉහත `cli` profile අනතුරු ඇඟවීම බලන්න), OmniRoute සේවාව මත `DOCKER_UPDATE_TRIGGER_FILE` සකසා host එක මත watcher එකක් ධාවනය කරන්න:
+Container එකට host එකේ root ප්රවේශය ලබා දෙන `/var/run/docker.sock` mount නොකර **Update Now** ක්රියාත්මකව තබා ගැනීමට (ඉහත `cli` profile අනතුරු ඇඟවීම බලන්න), 67router සේවාව මත `DOCKER_UPDATE_TRIGGER_FILE` සකසා host එක මත watcher එකක් ධාවනය කරන්න:
 
 ```yaml
 services:
@@ -597,14 +597,14 @@ services:
       - ./data:/app/data
 ```
 
-Path එක `DATA_DIR` තුළ තිබිය යුතුය (සාපේක්ෂ අගයන් එයට සාපේක්ෂව resolve වේ); වෙනත් ඕනෑම දෙයක් ප්රතික්ෂේප කෙරේ. එවිට **Update Now** මඟින් `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` එම file එකට ලියා, `202` පිළිතුරු දී, නව version එක සජීවී වන තෙක් dashboard එක `/api/system/version` poll කර නැවත load කරයි. මෙම mode එකේදී OmniRoute කිසිවිටෙක shell හෝ Docker command එකක් ධාවනය නොකරයි. සෑම යාවත්කාලීන ක්රියාවක් මෙන්ම, ඉල්ලීම පිළිගන්නේ loopback/LAN client වෙතින් පමණි.
+Path එක `DATA_DIR` තුළ තිබිය යුතුය (සාපේක්ෂ අගයන් එයට සාපේක්ෂව resolve වේ); වෙනත් ඕනෑම දෙයක් ප්රතික්ෂේප කෙරේ. එවිට **Update Now** මඟින් `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` එම file එකට ලියා, `202` පිළිතුරු දී, නව version එක සජීවී වන තෙක් dashboard එක `/api/system/version` poll කර නැවත load කරයි. මෙම mode එකේදී 67router කිසිවිටෙක shell හෝ Docker command එකක් ධාවනය නොකරයි. සෑම යාවත්කාලීන ක්රියාවක් මෙන්ම, ඉල්ලීම පිළිගන්නේ loopback/LAN client වෙතින් පමණි.
 
 Bind-mount කළ data directory එකක් host එකට නිරීක්ෂණය කිරීමට ස්ථාවර path එකක් ලබා දෙයි. නියැදි `systemd` unit (`/srv/omniroute` ඔබගේ compose file එක සහ `data/` අඩංගු directory එකට ගැළපෙන ලෙස සකසන්න):
 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=OmniRoute dashboard යාවත්කාලීන ඉල්ලීම් නිරීක්ෂණය කරන්න
+Description=67router dashboard යාවත්කාලීන ඉල්ලීම් නිරීක්ෂණය කරන්න
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -616,7 +616,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=OmniRoute container එක pull කර නැවත සාදන්න
+Description=67router container එක pull කර නැවත සාදන්න
 
 [Service]
 Type=oneshot
@@ -635,13 +635,13 @@ sudo systemctl enable --now omniroute-update.path
 
 ## ලබාගත හැකි බව: පෙරනිමි SQLite එක single-replica වේ
 
-සම්මත Docker / Kubernetes OmniRoute යනු **එක් Node process එකක් + එක් SQLite writer එකක්** වේ. මෙම topology එක මත high availability සඳහා **සහාය නොදක්වයි**.
+සම්මත Docker / Kubernetes 67router යනු **එක් Node process එකක් + එක් SQLite writer එකක්** වේ. මෙම topology එක මත high availability සඳහා **සහාය නොදක්වයි**.
 
-| සීමාව                                               | ප්රතිවිපාකය                                                                                                                                                                                                                                                                                                                                                     |
-| --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| එක් writer එකක්                                     | එකම SQLite file එකට එරෙහිව replicas කිහිපයක් ධාවනය **නොකරන්න**. එය DB එක දූෂිත කරයි.                                                                                                                                                                                                                                                                            |
-| නැවත සෑදීම / restart කිරීම / HEALTHCHECK kill කිරීම | ක්රියාත්මක වෙමින් පවතින SSE, dashboard session සහ memory තුළ ඇති state එකේ **සම්පූර්ණ බිඳවැටීමක්** සිදු වේ. සම්බන්ධිත සෑම client කෙනෙක්ම විසන්ධි වේ. Endpoint එක නොමැති කාල පරාසය තුළ ලැබෙන නව ඉල්ලීම්වලට OmniRoute JSON වෙනුවට reverse-proxy **`502 Bad Gateway: Unknown error`** ලැබේ — client හට මෙය provider අසාර්ථකත්වයකින් වෙන්කර හඳුනාගත නොහැක (#11015). |
-| `/healthz` සමඟ එකම event loop එක                    | කාර්යබහුල catalog හෝ compression tick එකක් probe ප්රමාද කළ හැක; එවිට කෙටි timeout එකක් **එකම** replica එක restart කරයි.                                                                                                                                                                                                                                         |
+| සීමාව                                               | ප්රතිවිපාකය                                                                                                                                                                                                                                                                                                                                                    |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| එක් writer එකක්                                     | එකම SQLite file එකට එරෙහිව replicas කිහිපයක් ධාවනය **නොකරන්න**. එය DB එක දූෂිත කරයි.                                                                                                                                                                                                                                                                           |
+| නැවත සෑදීම / restart කිරීම / HEALTHCHECK kill කිරීම | ක්රියාත්මක වෙමින් පවතින SSE, dashboard session සහ memory තුළ ඇති state එකේ **සම්පූර්ණ බිඳවැටීමක්** සිදු වේ. සම්බන්ධිත සෑම client කෙනෙක්ම විසන්ධි වේ. Endpoint එක නොමැති කාල පරාසය තුළ ලැබෙන නව ඉල්ලීම්වලට 67router JSON වෙනුවට reverse-proxy **`502 Bad Gateway: Unknown error`** ලැබේ — client හට මෙය provider අසාර්ථකත්වයකින් වෙන්කර හඳුනාගත නොහැක (#11015). |
+| `/healthz` සමඟ එකම event loop එක                    | කාර්යබහුල catalog හෝ compression tick එකක් probe ප්රමාද කළ හැක; එවිට කෙටි timeout එකක් **එකම** replica එක restart කරයි.                                                                                                                                                                                                                                        |
 
 **Probe matrix** ([Kubernetes probe නිර්දේශ](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations) ද බලන්න):
 
@@ -744,7 +744,7 @@ IPv4/IPv6 සම්බන්ධතාව, VPN මාර්ගගත කිරී
 
 ### සම්බන්ධතාවට විශේෂිත ප්රොක්සියක් වඩාත් සුදුසුය
 
-බලපෑමට ලක් වූ Gemini සම්බන්ධතාව සඳහා OmniRoute හි
+බලපෑමට ලක් වූ Gemini සම්බන්ධතාව සඳහා 67router හි
 [සම්බන්ධතාවකට විශේෂිත ප්රොක්සි වින්යාසය](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 භාවිත කර, ඉන්පසු එම ආකෘතියම සමඟ **සම්බන්ධතාව පරීක්ෂා කරන්න** සහ කුඩා ඉල්ලීමක් නැවත සිදු කරන්න.
 මෙය මාර්ගගත කිරීමේ වෙනස එම සම්බන්ධතාවට පමණක් සීමා කරයි. කන්ටේනරයෙන් ප්රොක්සියට ළඟා විය හැකි බවත්,
@@ -816,7 +816,7 @@ IPv4-පමණක් භාවිත කිරීමෙන් ඇති වන �
 
 ## වැදගත් සටහන්
 
-- **SQLite WAL ප්රකාරය:** OmniRoute හට නවතම වෙනස්කම් `storage.sqlite` වෙත checkpoint කිරීමට හැකි වන පරිදි `docker stop` අවසන් වීමට ඉඩ දිය යුතුය. ඇතුළත් කර ඇති Compose ගොනු දැනටමත් තත්පර 40ක නැවැත්වීමේ සහන කාලයක් සකසා ඇත. ඔබ image එක සෘජුව ධාවනය කරන්නේ නම්, `--stop-timeout 40` එලෙසම තබා ගන්න.
+- **SQLite WAL ප්රකාරය:** 67router හට නවතම වෙනස්කම් `storage.sqlite` වෙත checkpoint කිරීමට හැකි වන පරිදි `docker stop` අවසන් වීමට ඉඩ දිය යුතුය. ඇතුළත් කර ඇති Compose ගොනු දැනටමත් තත්පර 40ක නැවැත්වීමේ සහන කාලයක් සකසා ඇත. ඔබ image එක සෘජුව ධාවනය කරන්නේ නම්, `--stop-timeout 40` එලෙසම තබා ගන්න.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** සාමාන්ය/ලිවීමට-පෙර backups බාහිරව කළමනාකරණය කරන්නේ නම් මෙය `true` ලෙස සකසන්න. පවතින-database migrations සඳහා තවමත් ඒවාටම වෙන් වූ කල්පවත්නා ආරක්ෂිත snapshot එකක් සහ සමූහ-migration ආරක්ෂණයක් අවශ්ය වේ.
 - **දත්ත ස්ථායීතාව:** container නැවත ආරම්භ කිරීම් හරහා ඔබේ database, keys සහ configurations ස්ථිරව තබා ගැනීමට සෑම විටම `/app/data` වෙත volume එකක් mount කරන්න.
 - **Port වින්යාසය:** පෙරනිමි `20128` port එක වෙනස් කිරීමට `PORT` environment variable එක override කරන්න.

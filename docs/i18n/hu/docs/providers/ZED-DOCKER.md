@@ -4,7 +4,7 @@
 
 ---
 
-Amikor az OmniRoute Dockerben fut, a szabványos „Importálás a Zed kulcstartójából” folyamat sikertelen,
+Amikor a 67router Dockerben fut, a szabványos „Importálás a Zed kulcstartójából” folyamat sikertelen,
 mert a konténer nem éri el a gazda operációs rendszer kulcstartó-démonját (Linuxon a libsecretet,
 macOS-en a Keychaint, Windowson pedig a Credential Managert), továbbá a gazdagép fájlrendszerén
 található Zed-konfigurációs könyvtárak alapértelmezés szerint nem láthatók a konténerből.
@@ -20,7 +20,7 @@ Egy konténerben két akadály merül fel:
    modul Unix-socketen vagy D-Bus-munkameneten keresztül kommunikál az operációs rendszer kulcstartó-szolgáltatásával.
    Alapértelmezés szerint egyik sincs átvezetve a konténerbe, ezért a hitelesítő adatok beolvasása mindig sikertelen.
 
-Az OmniRoute két heurisztika segítségével észleli a Docker-környezetet:
+A 67router két heurisztika segítségével észleli a Docker-környezetet:
 
 - A `/.dockerenv` jelenléte (ezt a Docker-démon hozza létre a konténer indításakor).
 - A `docker` karakterlánc előfordulása a `/proc/1/cgroup` fájlban (Linux cgroup v1).
@@ -32,7 +32,7 @@ Ha bármelyik heurisztika találatot ad, az importálási útvonal HTTP 422 vál
 
 1. Nyissa meg az **Irányítópult → Szolgáltatók → Zed** oldalt.
 2. A **Kézi tokenimportálás** panel a kulcstartóból történő importálás kártyája alatt jelenik meg. Amikor
-   az OmniRoute Dockert észlel, ez a panel automatikusan kibomlik az első sikertelen
+   a 67router Dockert észlel, ez a panel automatikusan kibomlik az első sikertelen
    kulcstartó-importálási kísérlet után.
 3. Válassza ki a szolgáltatót a legördülő listából (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter vagy DeepSeek).

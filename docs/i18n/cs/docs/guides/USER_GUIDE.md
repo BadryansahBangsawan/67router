@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Kompletní průvodce konfigurací poskytovatelů, vytvářením kombinací, integrací nástrojů CLI a nasazením OmniRoute.
+Kompletní průvodce konfigurací poskytovatelů, vytvářením kombinací, integrací nástrojů CLI a nasazením 67router.
 
 ---
 
@@ -137,11 +137,11 @@ Modely:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Tip pro profesionály:** Pro složité úlohy používejte Opus, pro rychlost Sonnet. OmniRoute sleduje kvótu pro každý model!
+**Tip pro profesionály:** Pro složité úlohy používejte Opus, pro rychlost Sonnet. 67router sleduje kvótu pro každý model!
 
-Nemáte na hostiteli OmniRoute prohlížeč? Spusťte `claude setup-token` kdekoli, kde jste přihlášeni ke Claude Code, a vložte roční token na kartu **Token nastavení**. Viz [Claude Code s tokenem nastavení](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Nemáte na hostiteli 67router prohlížeč? Spusťte `claude setup-token` kdekoli, kde jste přihlášeni ke Claude Code, a vložte roční token na kartu **Token nastavení**. Viz [Claude Code s tokenem nastavení](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Trasy kompatibilní s Claude a Claude Code zachovávají pro modely Opus a Sonnet úroveň intenzity přemýšlení `max`. Modely Haiku úroveň intenzity `max` nepřijímají, takže OmniRoute před odesláním požadavku nadřazenému poskytovateli sníží tuto úroveň na vysoký rozpočet pro přemýšlení.
+Trasy kompatibilní s Claude a Claude Code zachovávají pro modely Opus a Sonnet úroveň intenzity přemýšlení `max`. Modely Haiku úroveň intenzity `max` nepřijímají, takže 67router před odesláním požadavku nadřazenému poskytovateli sníží tuto úroveň na vysoký rozpočet pro přemýšlení.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -261,16 +261,16 @@ Cena: aktuálně uváděna jako $0; podmínky a dostupnost se mohou změnit
 
 ### Cursor IDE
 
-**Použití Cursoru jako klienta OmniRoute** (směrování chatu Cursoru přes OmniRoute):
+**Použití Cursoru jako klienta 67router** (směrování chatu Cursoru přes 67router):
 
 ```
 Nastavení → Modely → Pokročilé:
   Základní URL OpenAI API: http://localhost:20128/v1
-  Klíč OpenAI API: [z řídicího panelu OmniRoute]
+  Klíč OpenAI API: [z řídicího panelu 67router]
   Model: cc/claude-opus-4-7
 ```
 
-**Použití OmniRoute jako poskytovatele Cursoru** (OmniRoute volá Cursor jako nadřazenou službu): upřednostněte
+**Použití 67router jako poskytovatele Cursoru** (67router volá Cursor jako nadřazenou službu): upřednostněte
 **Řídicí panel → Poskytovatelé → Cursor → Přihlásit se pomocí Cursoru**. Pro Docker viz
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -357,7 +357,7 @@ CLI automaticky načítá `.env` z `~/.omniroute/.env` nebo `./.env`.
 
 ### Režim systémové lišty
 
-Spusťte OmniRoute v systémové liště:
+Spusťte 67router v systémové liště:
 
 ```bash
 omniroute serve --tray
@@ -374,7 +374,7 @@ Pomocí nabídky v systémové liště můžete provádět následující akce:
 - Otevřít řídicí panel.
 - Otevřít `/dashboard/logs`.
 - Změnit automatické spouštění.
-- Zastavit OmniRoute.
+- Zastavit 67router.
 
 Nekombinujte `--tray` s následujícími možnostmi:
 
@@ -400,14 +400,14 @@ omniroute autostart disable
 
 ### Odinstalace
 
-Pokud už OmniRoute nepotřebujete, nabízíme dva rychlé skripty pro čisté odebrání:
+Pokud už 67router nepotřebujete, nabízíme dva rychlé skripty pro čisté odebrání:
 
 | Příkaz                   | Akce                                                                                  |
 | ------------------------ | ------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Odebere systémovou aplikaci, ale **ponechá databázi a konfigurace** v `~/.omniroute`. |
 | `npm run uninstall:full` | Odebere aplikaci A zároveň trvale **vymaže všechny konfigurace, klíče a databáze**.   |
 
-> Poznámka: Chcete-li tyto příkazy spustit, přejděte do složky projektu OmniRoute (pokud jste jej naklonovali) a spusťte je. Pokud jste jej nainstalovali globálně, můžete jednoduše spustit `npm uninstall -g omniroute`.
+> Poznámka: Chcete-li tyto příkazy spustit, přejděte do složky projektu 67router (pokud jste jej naklonovali) a spusťte je. Pokud jste jej nainstalovali globálně, můžete jednoduše spustit `npm uninstall -g omniroute`.
 
 ### Nasazení na VPS
 
@@ -479,7 +479,7 @@ Informace o režimu integrovaném s hostitelem a binárními soubory CLI nalezne
 
 ### Void Linux (xbps-src)
 
-Uživatelé Void Linuxu mohou OmniRoute sestavit do balíčku a nativně nainstalovat pomocí frameworku `xbps-src` pro křížovou kompilaci. Ten automatizuje samostatné sestavení Node.js společně s požadovanými nativními vazbami `better-sqlite3`.
+Uživatelé Void Linuxu mohou 67router sestavit do balíčku a nativně nainstalovat pomocí frameworku `xbps-src` pro křížovou kompilaci. Ten automatizuje samostatné sestavení Node.js společně s požadovanými nativními vazbami `better-sqlite3`.
 
 <details>
 <summary><b>Zobrazit šablonu xbps-src</b></summary>
@@ -659,7 +659,7 @@ post_install() {
 
 **Další kompatibilní poskytovatelé** (výběr): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (prostřednictvím `aws-bedrock`), `azure-ai`, `openrouter` (průchozí katalog), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Každý z nich spravuje vlastní seznam modelů v souboru `providerRegistry.ts` a lze jej automaticky synchronizovat, pokud poskytovatel zpřístupňuje koncový bod `/models`.
 
-**Poznámka k ID modelů:** OmniRoute používá nativní ID poskytovatelů (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Některá ID obsahují verze s tečkami, protože je tak očekává upstreamové API. Pokud model není uveden výše, ověřte jeho dostupnost spuštěním příkazu `omniroute models --search <term>` nebo voláním `GET /api/models/catalog`.
+**Poznámka k ID modelů:** 67router používá nativní ID poskytovatelů (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Některá ID obsahují verze s tečkami, protože je tak očekává upstreamové API. Pokud model není uveden výše, ověřte jeho dostupnost spuštěním příkazu `omniroute models --search <term>` nebo voláním `GET /api/models/catalog`.
 
 </details>
 
@@ -725,9 +725,9 @@ chybou uvádějící integrovaného poskytovatele nebo jeho přihlašovací úda
 vyhrazený: uzly uložené před zavedením tohoto pravidla zůstávají uložené, ale jejich prefix směruje požadavky
 k integrovanému poskytovateli. Upravte uzel a přidělte mu nový prefix.
 
-### Řetězení partnerských instancí OmniRoute
+### Řetězení partnerských instancí 67router
 
-Další bránu OmniRoute lze přidat jako **vlastního poskytovatele kompatibilního s OpenAI**. Použijte
+Další bránu 67router lze přidat jako **vlastního poskytovatele kompatibilního s OpenAI**. Použijte
 základní URL partnerské instance s `/v1` a vyhrazený klíč API s minimálními oprávněními vydaný touto partnerskou instancí.
 
 Pro obousměrné nebo víceúrovňové řetězce povolte na každé bráně volitelnou ochranu proti smyčkám:
@@ -753,7 +753,7 @@ počtu přeskoků pomocí HTTP `508 Loop Detected`; běžní upstream poskytovat
 Řetězení partnerských instancí není replikací databáze ani převzetím služeb hostitele při selhání. Každá brána udržuje nezávislý
 stav SQLite, mezipaměti, čítače limitů a relace. Pro dostupnost active/passive nebo active/active použijte reverzní proxy
 s kontrolou stavu nebo převzetí služeb na straně klienta a nikdy nepřipojujte jednu databázi SQLite
-k více spuštěným instancím OmniRoute.
+k více spuštěným instancím 67router.
 
 ### Vyhrazené trasy poskytovatelů
 
@@ -804,7 +804,7 @@ Vrací modely seskupené podle poskytovatele s typy (`chat`, `embedding`, `image
 - K dispozici v **Dashboard → Endpoints** pro Docker a další nasazení s vlastním hostingem
 - Vytvoří dočasnou URL adresu `https://*.trycloudflare.com`, která přesměrovává na váš aktuální koncový bod `/v1` kompatibilní s OpenAI
 - Při prvním povolení se `cloudflared` nainstaluje pouze v případě potřeby; při pozdějších restartech se znovu použije stejný spravovaný binární soubor
-- Quick Tunnels se po restartu OmniRoute nebo kontejneru automaticky neobnoví; v případě potřeby je znovu povolte z řídicího panelu
+- Quick Tunnels se po restartu 67router nebo kontejneru automaticky neobnoví; v případě potřeby je znovu povolte z řídicího panelu
 - URL adresy tunelů jsou dočasné a změní se při každém zastavení/spuštění tunelu
 - Spravované Quick Tunnels používají ve výchozím nastavení přenos přes HTTP/2, aby se v kontejnerech s omezenými prostředky zabránilo zahlcení varováními o vyrovnávací paměti QUIC UDP
 - Pokud chcete přepsat volbu spravovaného přenosu, nastavte `CLOUDFLARED_PROTOCOL=quic` nebo `auto`
@@ -821,7 +821,7 @@ Vrací modely seskupené podle poskytovatele s typy (`chat`, `embedding`, `image
 
 ### Překladatelské hřiště
 
-Přístup přes **Dashboard → Translator**. Ladění a vizualizace způsobu, jakým OmniRoute překládá požadavky API mezi poskytovateli.
+Přístup přes **Dashboard → Translator**. Ladění a vizualizace způsobu, jakým 67router překládá požadavky API mezi poskytovateli.
 
 | Režim              | Účel                                                                                     |
 | ------------------ | ---------------------------------------------------------------------------------------- |
@@ -874,7 +874,7 @@ Pro externí afinitu relace (například agenti Claude Code/Codex za reverzními
 X-Session-Id: your-session-key
 ```
 
-OmniRoute přijímá také `x_session_id` a vrací efektivní klíč relace v `X-OmniRoute-Session-Id`.
+67router přijímá také `x_session_id` a vrací efektivní klíč relace v `X-OmniRoute-Session-Id`.
 
 Pokud používáte Nginx a odesíláte hlavičky s podtržítky, povolte:
 
@@ -908,7 +908,7 @@ Definujte globální řetězce záložních možností, které se použijí pro 
 
 ### Běžné kombinace poskytovatelů a vzory směrování
 
-Zde jsou příklady vzorů pro kombinování více poskytovatelů a směrování mezi nimi v OmniRoute:
+Zde jsou příklady vzorů pro kombinování více poskytovatelů a směrování mezi nimi v 67router:
 
 #### 1. Kombinace pro programovacího agenta: Pokročilé uvažování se záložní variantou optimalizovanou na cenu/rychlost
 
@@ -969,7 +969,7 @@ Kombinuje specializované modely pro zpracování obrazu s vysokorychlostním ge
 
 Konfigurujte prostřednictvím **Dashboard → Settings → Resilience**.
 
-OmniRoute implementuje odolnost na úrovni poskytovatelů pomocí pěti komponent:
+67router implementuje odolnost na úrovni poskytovatelů pomocí pěti komponent:
 
 1. **Fronta požadavků a řízení tempa** — Řízení toku požadavků na systémové úrovni:
    - **Požadavky za minutu (RPM)** — Maximální počet požadavků za minutu na jeden účet
@@ -994,7 +994,7 @@ OmniRoute implementuje odolnost na úrovni poskytovatelů pomocí pěti komponen
 
    Provozní stav jističe poskytovatele se zobrazuje pouze na stránce **Dashboard → Health**.
 
-4. **Čekání na dobu zklidnění** — Pokud jsou všechna kandidátní připojení právě v režimu zklidnění, OmniRoute může počkat na skončení nejbližší doby zklidnění a automaticky zopakovat stejný požadavek klienta.
+4. **Čekání na dobu zklidnění** — Pokud jsou všechna kandidátní připojení právě v režimu zklidnění, 67router může počkat na skončení nejbližší doby zklidnění a automaticky zopakovat stejný požadavek klienta.
 
 5. **Automatická detekce omezení rychlosti** — Když nadřazení poskytovatelé vrátí explicitní intervaly čekání, tyto údaje při povoleném nastavení přepíší místní dobu zklidnění připojení.
 
@@ -1028,7 +1028,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Případy použití:**
 
-- Migrace OmniRoute mezi počítači
+- Migrace 67router mezi počítači
 - Vytváření externích záloh pro zotavení po havárii
 - Sdílení konfigurací mezi členy týmu (exportovat vše → sdílet archiv)
 
@@ -1080,7 +1080,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Přepis zvuku
 
-OmniRoute podporuje přepis zvuku prostřednictvím koncového bodu kompatibilního s OpenAI:
+67router podporuje přepis zvuku prostřednictvím koncového bodu kompatibilního s OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1156,7 +1156,7 @@ Vypněte **vyrovnávací paměť tokenů pro uvažování**, pokud nadřazení p
 limity `max_tokens` / `maxOutputTokens`. Je-li tato možnost povolena, kombinované směrování přidává rezervu pro modely uvažování
 pouze u modelů se známým limitem výstupu a ponechává klientský limit tokenů beze změny, pokud by
 bezpečná hodnota s rezervou tento limit překročila. Pokud je klientský limit již vyšší než známý limit,
-OmniRoute jej před odesláním požadavku nadřazenému poskytovateli sníží na tento limit.
+67router jej před odesláním požadavku nadřazenému poskytovateli sníží na tento limit.
 
 ---
 
@@ -1179,7 +1179,7 @@ Přístup přes **Řídicí panel → Stav**. Přehled stavu systému v reálné
 
 ## 🤖 Automatické směrování (bez konfigurace)
 
-OmniRoute obsahuje **automatický směrovač řízený skóre**, který pro každý požadavek vybere nejlepší model napříč všemi připojenými poskytovateli — není třeba udržovat žádnou kombinaci. Stačí požadavek odeslat s jednou z předpon `auto/*` a OmniRoute za běhu sestaví virtuální kombinaci, přičemž kandidáty ohodnotí podle latence, nákladů, úspěšnosti, vhodnosti kontextu, vhodnosti modelu pro danou úlohu, nedávných selhání, kvóty a stavu jističe.
+67router obsahuje **automatický směrovač řízený skóre**, který pro každý požadavek vybere nejlepší model napříč všemi připojenými poskytovateli — není třeba udržovat žádnou kombinaci. Stačí požadavek odeslat s jednou z předpon `auto/*` a 67router za běhu sestaví virtuální kombinaci, přičemž kandidáty ohodnotí podle latence, nákladů, úspěšnosti, vhodnosti kontextu, vhodnosti modelu pro danou úlohu, nedávných selhání, kvóty a stavu jističe.
 
 | Předpona       | Optimalizuje pro                                                                                                  |
 | -------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -1210,7 +1210,7 @@ Automatický směrovač je podrobně popsán v dokumentu [AUTO-COMBO.md](../rout
 
 ## 🔌 Integrace MCP a A2A
 
-OmniRoute je současně **server MCP** (Model Context Protocol) a **server A2A** (Agent-to-Agent JSON-RPC 2.0). Libovolné IDE kompatibilní s MCP nebo hostitel agentů může nástroje OmniRoute volat přímo — není vyžadována žádná další obálka.
+67router je současně **server MCP** (Model Context Protocol) a **server A2A** (Agent-to-Agent JSON-RPC 2.0). Libovolné IDE kompatibilní s MCP nebo hostitel agentů může nástroje 67router volat přímo — není vyžadována žádná další obálka.
 
 ### Přenosy MCP
 
@@ -1245,7 +1245,7 @@ MCP aktuálně definuje 32 pojmenovaných rozsahů oprávnění. Každý klíč 
 
 ## 🧠 Systém dovedností
 
-OmniRoute poskytuje rozšiřitelný **framework dovedností** (`src/lib/skills/`), díky němuž mohou agenti a koncový bod A2A spouštět rutiny specifické pro konkrétní doménu (např. `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router poskytuje rozšiřitelný **framework dovedností** (`src/lib/skills/`), díky němuž mohou agenti a koncový bod A2A spouštět rutiny specifické pro konkrétní doménu (např. `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Uživatelské rozhraní tržiště** — Procházejte a instalujte dovednosti v části **Dashboard → Skills**
 - **Rozsahy pro jednotlivé klíče** — Omezte, které API klíče mohou vyvolávat jednotlivé dovednosti
@@ -1257,7 +1257,7 @@ OmniRoute poskytuje rozšiřitelný **framework dovedností** (`src/lib/skills/`
 
 ## 💾 Systém paměti
 
-OmniRoute uchovává **dlouhodobou konverzační paměť** s hybridním vyhledáváním:
+67router uchovává **dlouhodobou konverzační paměť** s hybridním vyhledáváním:
 
 - **SQLite FTS5** pro vyhledávání podle klíčových slov v předchozích interakcích
 - **Vektorové úložiště Qdrant** (volitelné) pro sémantické vybavování
@@ -1270,7 +1270,7 @@ Paměti můžete spravovat v části **Dashboard → Memory** (vyhledávání, �
 
 ## 🔔 Webhooky
 
-Přihlaste se k odběru událostí OmniRoute pro monitorování a automatizaci v reálném čase.
+Přihlaste se k odběru událostí 67router pro monitorování a automatizaci v reálném čase.
 
 - Vytvořte webhook v části **Dashboard → Webhooks** se cílovou URL adresou a tajným klíčem pro podepisování HMAC
 - Dostupné události: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1283,11 +1283,11 @@ Přihlaste se k odběru událostí OmniRoute pro monitorování a automatizaci v
 
 ## ☁️ Cloudoví agenti
 
-OmniRoute se integruje s cloudovými agenty pro programování (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), takže můžete zadávat dlouhotrvající úlohy ze stejného ovládacího panelu, který spravuje vaše místní směrování.
+67router se integruje s cloudovými agenty pro programování (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), takže můžete zadávat dlouhotrvající úlohy ze stejného ovládacího panelu, který spravuje vaše místní směrování.
 
 - Vytvářejte úlohy v části **Dashboard → Cloud Agents** nebo prostřednictvím `POST /api/v1/agents/tasks`
 - Sledujte stav, protokoly a artefakty jednotlivých úloh
-- Použijte vlastní API klíč pro každého poskytovatele — přihlašovací údaje nikdy neopustí instanci OmniRoute
+- Použijte vlastní API klíč pro každého poskytovatele — přihlašovací údaje nikdy neopustí instanci 67router
 
 Úplná dokumentace: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1295,7 +1295,7 @@ OmniRoute se integruje s cloudovými agenty pro programování (**OpenAI Codex C
 
 ## 🛠️ Programová správa
 
-Každý prostředek OmniRoute (poskytovatele, kombinace, klíče, nastavení) můžete spravovat přes HTTP pomocí **klíče Bearer s rozsahem `manage`**.
+Každý prostředek 67router (poskytovatele, kombinace, klíče, nastavení) můžete spravovat přes HTTP pomocí **klíče Bearer s rozsahem `manage`**.
 
 Vygenerujte klíč v části **Dashboard → API Keys → New Key → Scope: manage** a poté:
 
@@ -1328,7 +1328,7 @@ curl -X POST http://localhost:20128/api/keys -H "Authorization: Bearer $OMNIROUT
 
 ## 💻 Interní CLI
 
-OmniRoute obsahuje interní CLI (`omniroute …`) pro nastavení, diagnostiku a řízení za běhu. Je **oddělené od stránky „Nástroje CLI“ v ovládacím panelu**, která konfiguruje CLI nástroje třetích stran (Claude Code, Cursor, Codex, Cline, …), aby mohly komunikovat s OmniRoute.
+67router obsahuje interní CLI (`omniroute …`) pro nastavení, diagnostiku a řízení za běhu. Je **oddělené od stránky „Nástroje CLI“ v ovládacím panelu**, která konfiguruje CLI nástroje třetích stran (Claude Code, Cursor, Codex, Cline, …), aby mohly komunikovat s 67router.
 
 ```bash
 omniroute setup                    # Interaktivní průvodce (heslo, poskytovatelé, kombinace)
@@ -1359,7 +1359,7 @@ Tip: propojte `omniroute doctor --json` se svým monitorovacím nástrojem, abys
 
 ## 🖥️ Desktopová aplikace (Electron)
 
-OmniRoute je k dispozici jako nativní desktopová aplikace pro Windows, macOS a Linux.
+67router je k dispozici jako nativní desktopová aplikace pro Windows, macOS a Linux.
 
 ### Instalace
 

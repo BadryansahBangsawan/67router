@@ -7,7 +7,7 @@
 > **ആധികാരിക ഉറവിടം:** `electron/` workspace
 > **അവസാനം പുതുക്കിയത്:** 2026-06-28 — v3.8.40
 
-**Electron 41** + **electron-builder 26.10** അടിസ്ഥാനമാക്കി നിർമ്മിച്ച ഒരു ക്രോസ്-പ്ലാറ്റ്ഫോം ഡെസ്ക്ടോപ്പ് ആപ്പ് (Windows / macOS / Linux) OmniRoute നൽകുന്നു. ഡെസ്ക്ടോപ്പ് ആപ്പ് Next.js standalone server-നെ ഒരു child process ആയി ആരംഭിക്കുകയും, ഒരു `BrowserWindow` അതിലേക്ക് ചൂണ്ടുകയും, system tray, auto-updater, IPC bridge, zero-config secret bootstrap എന്നിവ ചേർക്കുകയും ചെയ്യുന്നു.
+**Electron 41** + **electron-builder 26.10** അടിസ്ഥാനമാക്കി നിർമ്മിച്ച ഒരു ക്രോസ്-പ്ലാറ്റ്ഫോം ഡെസ്ക്ടോപ്പ് ആപ്പ് (Windows / macOS / Linux) 67router നൽകുന്നു. ഡെസ്ക്ടോപ്പ് ആപ്പ് Next.js standalone server-നെ ഒരു child process ആയി ആരംഭിക്കുകയും, ഒരു `BrowserWindow` അതിലേക്ക് ചൂണ്ടുകയും, system tray, auto-updater, IPC bridge, zero-config secret bootstrap എന്നിവ ചേർക്കുകയും ചെയ്യുന്നു.
 
 ## ആർക്കിടെക്ചർ
 
@@ -190,7 +190,7 @@ spawn(process.execPath, [serverScript], {
 - `BrowserWindow`: 1400×900 (കുറഞ്ഞത് 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, ട്രാഫിക്-ലൈറ്റ് `{ x: 16, y: 16 }` എന്ന സ്ഥാനത്ത്.
 - Windows/Linux: നേറ്റീവ് ടൈറ്റിൽ ബാർ.
-- ക്ലോസ് ബട്ടൺ ആപ്പിനെ ട്രേയിലേക്ക് മിനിമൈസ് ചെയ്യുന്നു; ട്രേ മെനുവിൽ **OmniRoute തുറക്കുക**, **ഡാഷ്ബോർഡ് തുറക്കുക** (ബാഹ്യ ബ്രൗസർ), **സെർവർ പോർട്ട്** ഉപമെനു, **അപ്ഡേറ്റുകൾ പരിശോധിക്കുക**, **പുറത്തുകടക്കുക** എന്നിവയുണ്ട്.
+- ക്ലോസ് ബട്ടൺ ആപ്പിനെ ട്രേയിലേക്ക് മിനിമൈസ് ചെയ്യുന്നു; ട്രേ മെനുവിൽ **67router തുറക്കുക**, **ഡാഷ്ബോർഡ് തുറക്കുക** (ബാഹ്യ ബ്രൗസർ), **സെർവർ പോർട്ട്** ഉപമെനു, **അപ്ഡേറ്റുകൾ പരിശോധിക്കുക**, **പുറത്തുകടക്കുക** എന്നിവയുണ്ട്.
 
 ## ഉള്ളടക്ക സുരക്ഷാ നയം
 

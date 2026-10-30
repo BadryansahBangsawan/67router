@@ -4,7 +4,7 @@
 
 ---
 
-Nuolatinis, laipsniškas „OmniRoute“ skambučių žurnalų eksportavimas į išorinę analizės duomenų saugyklą.
+Nuolatinis, laipsniškas „67router“ skambučių žurnalų eksportavimas į išorinę analizės duomenų saugyklą.
 
 Žurnalų valdymo skydelio skirtuke užklausų istorija saugoma SQLite (`call_logs`), o jos apimtį
 riboja rotacija ir saugojimo laikotarpis. Žurnalų eksportavimo funkcija pagal tvarkaraštį išsiunčia

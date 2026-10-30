@@ -7,29 +7,29 @@
 > **Sumber rujukan utama:** `src/lib/skills/` dan `src/app/api/skills/`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40
 
-OmniRoute menyediakan rangka kerja Skills yang boleh diperluas, yang membolehkan model bahasa (dan pengendali) menggabungkan keupayaan yang boleh digunakan semula — daripada pembacaan sistem fail dan permintaan HTTP hingga pelaksanaan kod dalam kotak pasir serta kemahiran pasaran yang dipilih susun.
+67router menyediakan rangka kerja Skills yang boleh diperluas, yang membolehkan model bahasa (dan pengendali) menggabungkan keupayaan yang boleh digunakan semula — daripada pembacaan sistem fail dan permintaan HTTP hingga pelaksanaan kod dalam kotak pasir serta kemahiran pasaran yang dipilih susun.
 
-Kemahiran ialah unit kerja berversi dan ditakrifkan oleh skema. OmniRoute boleh menyuntik kemahiran sebagai takrif alat ke dalam permintaan keluar, memintas panggilan alat yang dikembalikan oleh model, menjalankan pengendali yang sepadan, dan menyalurkan hasilnya kembali kepada model supaya perbualan boleh diteruskan. Model tidak pernah melihat pelaksanaannya — hanya antara muka alat.
+Kemahiran ialah unit kerja berversi dan ditakrifkan oleh skema. 67router boleh menyuntik kemahiran sebagai takrif alat ke dalam permintaan keluar, memintas panggilan alat yang dikembalikan oleh model, menjalankan pengendali yang sepadan, dan menyalurkan hasilnya kembali kepada model supaya perbualan boleh diteruskan. Model tidak pernah melihat pelaksanaannya — hanya antara muka alat.
 
 ---
 
 ## Agent Skills berbanding Omni Skills
 
-OmniRoute mempunyai dua sistem kemahiran yang berbeza tetapi saling melengkapi:
+67router mempunyai dua sistem kemahiran yang berbeza tetapi saling melengkapi:
 
 | Dimensi              | **Omni Skills** (dokumen ini)                                                              | **Agent Skills**                                                                           |
 | :------------------- | :----------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
 | Tujuan               | Suntikan alat LLM + pelaksanaan dalam kotak pasir                                          | Katalog SKILL.md untuk ditemui dan digunakan oleh ejen luaran                              |
 | Sumber rujukan utama | `src/lib/skills/` + pasaran                                                                | `src/lib/agentSkills/` + direktori `skills/`                                               |
 | Mod masa jalan       | Disuntik ke dalam permintaan keluar, dilaksanakan apabila peristiwa panggilan alat berlaku | Katalog markdown statik + titik akhir penemuan REST/MCP/A2A                                |
-| Pengguna             | OmniRoute sendiri (penghalaan gabungan, panggilan LLM masuk)                               | Ejen luaran, klien MCP, pengatur A2A                                                       |
+| Pengguna             | 67router sendiri (penghalaan gabungan, panggilan LLM masuk)                                | Ejen luaran, klien MCP, pengatur A2A                                                       |
 | Bilangan             | Berubah-ubah (dipacu oleh pasaran)                                                         | 43 entri katalog (22 API + 20 CLI + 1 konfigurasi)                                         |
 | Format               | `SkillDefinition` dengan skema alat + pengendali                                           | Bahagian hadapan `SKILL.md` + isi markdown                                                 |
 | Penemuan             | REST `/api/skills/*` + alat MCP `omniroute_skills_*`                                       | REST `/api/agent-skills/*` + alat MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 
-**Omni Skills** ialah enjin pelaksanaan — ia mentakrifkan perkara yang _boleh dilakukan_ oleh OmniRoute apabila LLM menggunakan alat.
+**Omni Skills** ialah enjin pelaksanaan — ia mentakrifkan perkara yang _boleh dilakukan_ oleh 67router apabila LLM menggunakan alat.
 
-**Agent Skills** ialah katalog dokumentasi — ia menerangkan kepada ejen luaran _cara menggunakan_ REST API dan CLI OmniRoute, dengan fail SKILL.md berstruktur yang boleh dimasukkan terus ke dalam prom ejen.
+**Agent Skills** ialah katalog dokumentasi — ia menerangkan kepada ejen luaran _cara menggunakan_ REST API dan CLI 67router, dengan fail SKILL.md berstruktur yang boleh dimasukkan terus ke dalam prom ejen.
 
 Untuk katalog Agent Skills, penjana, alat MCP, dan kemahiran A2A, lihat [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Untuk katalog Agent Skills, penjana, alat MCP, dan kemahiran A2A, lihat [docs/fr
 
 Tiga sumber kemahiran wujud bersama-sama dalam pendaftaran yang sama:
 
-1. **Kemahiran terbina dalam** (`src/lib/skills/builtins.ts`) — disertakan bersama OmniRoute. Merangkumi kes penggunaan umum:
+1. **Kemahiran terbina dalam** (`src/lib/skills/builtins.ts`) — disertakan bersama 67router. Merangkumi kes penggunaan umum:
    - `file_read`, `file_write` — ruang kerja kotak pasir bagi setiap kunci API di bawah `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP keluar melalui `safeOutboundFetch` dengan `guard: "public-only"`
    - `web_search` — penyedia carian boleh pasang dengan cache (`executeWebSearch`)
    - `eval_code` — pelaksanaan `node` atau `python` dalam kotak pasir Docker
    - `execute_command` — perintah shell dalam kotak pasir Docker
    - `browser` — perancah berasaskan Playwright, dinyahdayakan secara lalai (`builtin/browser.ts`)
-2. **SkillsMP** (Pasaran OmniRoute) — diambil daripada `https://skillsmp.com/api/v1/skills/search`. Memerlukan `skillsmpApiKey` dalam Tetapan.
+2. **SkillsMP** (Pasaran 67router) — diambil daripada `https://skillsmp.com/api/v1/skills/search`. Memerlukan `skillsmpApiKey` dalam Tetapan.
 3. **SkillsSH** (katalog komuniti `skills.sh`) — diambil daripada `https://skills.sh/api/search`. Tiada pengesahan diperlukan; kandungan SKILL.md ditarik daripada fail mentah GitHub.
 
 Satu "penyedia aktif" mengawal katalog yang digunakan oleh papan pemuka untuk pemasangan (`src/lib/skills/providerSettings.ts`). Tukarkannya di bawah **Tetapan → Memori & Kemahiran**. Lalai: `skillsmp`.
@@ -440,7 +440,7 @@ dokumen ini; tiada ambang apungan gaya `0.6` dan tiada penskoran `registry.ts`.
 
 ## Katalog Kemahiran Terbina Dalam
 
-OmniRoute disertakan dengan set kemahiran terbina dalam yang dipilih susun dalam `src/lib/skills/builtin/`. Antara yang paling lazim:
+67router disertakan dengan set kemahiran terbina dalam yang dipilih susun dalam `src/lib/skills/builtin/`. Antara yang paling lazim:
 
 ### Kemahiran Automasi Pelayar
 

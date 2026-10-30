@@ -5,7 +5,7 @@
 ---
 
 > **Énlinjes beskrivelse av hver mappe og fil i rotkatalogen.**
-> Sist oppdatert: 2026-06-28 — OmniRoute v3.8.40
+> Sist oppdatert: 2026-06-28 — 67router v3.8.40
 >
 > Bruk dette kartet til å navigere raskt i kodebasen. Følg lenkene til egen dokumentasjon for mer inngående informasjon.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Fullstendig utgivelsesflyt (ferdigheter, husky, konvensjonelle commits, utrulling)                  |
 | `COVERAGE_PLAN.md`          | Mål for testdekning og nåværende status                                                             |
 | `FREE_TIERS.md`             | Kuratert oversikt over leverandører med gratisnivå (48+ gratis + 11 OAuth)                          |
-| `CLI-TOOLS.md`              | Eksterne CLI-integrasjoner + intern OmniRoute-CLI                                                   |
+| `CLI-TOOLS.md`              | Eksterne CLI-integrasjoner + intern 67router-CLI                                                    |
 | `I18N.md`                   | i18n-arkitektur, hvordan legge til et språk, 67 lokaliteter                                         |
 | `UNINSTALL.md`              | Fremgangsmåte for ren avinstallering                                                                |
 | `PROVIDER_REFERENCE.md`     | **Automatisk generert** katalog over 375 leverandører (regenerer: `npm run gen:provider-reference`) |

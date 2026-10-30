@@ -167,83 +167,83 @@ const OMNIROUTE_BUILTIN_GROUPS = [
     id: "auto/best-coding",
     displayName: "Auto: Best Coding (OmniRoute)",
     descriptionText:
-      "OmniRoute dynamic routing to the highest benchmark coding model available (Mistral Codestral)",
+      "67router dynamic routing to the highest benchmark coding model available (Mistral Codestral)",
   },
   {
     id: "auto/best-reasoning",
     displayName: "Auto: Best Reasoning (OmniRoute)",
     descriptionText:
-      "OmniRoute dynamic routing to the highest benchmark reasoning model available (Nemotron 3 Super 120B)",
+      "67router dynamic routing to the highest benchmark reasoning model available (Nemotron 3 Super 120B)",
   },
   {
     id: "auto/best-fast",
     displayName: "Auto: Best Fast (OmniRoute)",
-    descriptionText: "OmniRoute sub-second lowest latency high-throughput model (Groq LPUs)",
+    descriptionText: "67router sub-second lowest latency high-throughput model (Groq LPUs)",
   },
   {
     id: "auto/best-vision",
     displayName: "Auto: Best Vision (OmniRoute)",
-    descriptionText: "OmniRoute multimodal & computer vision routing",
+    descriptionText: "67router multimodal & computer vision routing",
   },
   {
     id: "auto/best-free",
     displayName: "Auto: Best Free (OmniRoute)",
-    descriptionText: "OmniRoute 100% unmetered free tier model routing (Qwen 3.8 27B)",
+    descriptionText: "67router 100% unmetered free tier model routing (Qwen 3.8 27B)",
   },
   {
     id: "auto/coding:pro",
     displayName: "Auto: Coding Pro (OmniRoute)",
-    descriptionText: "OmniRoute frontier pro-tier coding model (Codestral)",
+    descriptionText: "67router frontier pro-tier coding model (Codestral)",
   },
   {
     id: "auto/coding:fast",
     displayName: "Auto: Coding Fast (OmniRoute)",
-    descriptionText: "OmniRoute fast sub-second daily coding model (Groq 120B)",
+    descriptionText: "67router fast sub-second daily coding model (Groq 120B)",
   },
   {
     id: "auto/coding:free",
     displayName: "Auto: Coding Free (OmniRoute)",
-    descriptionText: "OmniRoute zero-cost free coding model",
+    descriptionText: "67router zero-cost free coding model",
   },
   {
     id: "auto/coding:reliable",
     displayName: "Auto: Coding Reliable (OmniRoute)",
-    descriptionText: "OmniRoute maximum uptime and reliability coding model",
+    descriptionText: "67router maximum uptime and reliability coding model",
   },
   {
     id: "auto/reasoning:pro",
     displayName: "Auto: Reasoning Pro (OmniRoute)",
-    descriptionText: "OmniRoute deep reasoning frontier model",
+    descriptionText: "67router deep reasoning frontier model",
   },
   {
     id: "auto/smart",
     displayName: "Auto: Smart (OmniRoute)",
-    descriptionText: "OmniRoute highest intelligence general-purpose model",
+    descriptionText: "67router highest intelligence general-purpose model",
   },
   {
     id: "auto/claude-sonnet",
     displayName: "Auto: Claude Sonnet (OmniRoute)",
-    descriptionText: "OmniRoute automated routing across Claude Sonnet providers",
+    descriptionText: "67router automated routing across Claude Sonnet providers",
   },
   {
     id: "auto/claude-opus",
     displayName: "Auto: Claude Opus (OmniRoute)",
-    descriptionText: "OmniRoute automated routing across Claude Opus providers",
+    descriptionText: "67router automated routing across Claude Opus providers",
   },
   {
     id: "auto/gemini",
     displayName: "Auto: Gemini (OmniRoute)",
-    descriptionText: "OmniRoute automated routing across Gemini providers",
+    descriptionText: "67router automated routing across Gemini providers",
   },
   {
     id: "auto/llama",
     displayName: "Auto: Llama (OmniRoute)",
-    descriptionText: "OmniRoute automated routing across Llama providers",
+    descriptionText: "67router automated routing across Llama providers",
   },
   {
     id: "auto/gemma",
     displayName: "Auto: Gemma (OmniRoute)",
-    descriptionText: "OmniRoute automated routing across Gemma providers",
+    descriptionText: "67router automated routing across Gemma providers",
   },
   // Active, verified provider models
   {
@@ -348,7 +348,7 @@ const internalApp = http.createServer(async (req, res) => {
   if (shouldIntercept) {
     const resolvedModel = resolveTargetModel(model);
     console.log(
-      `[Bridge] 🔀 INTERCEPTING -> OmniRoute: "${model || "default"}" => "${resolvedModel}" (${url})`
+      `[Bridge] 🔀 INTERCEPTING -> 67router: "${model || "default"}" => "${resolvedModel}" (${url})`
     );
 
     let outgoingBuffer = bodyBuffer;
@@ -390,7 +390,7 @@ const internalApp = http.createServer(async (req, res) => {
         console.error(`[Bridge] ❌ Error forwarding to OmniRoute: ${err.message}`);
         if (!res.headersSent) {
           res.writeHead(502, { "Content-Type": "application/json" });
-          res.end(JSON.stringify({ error: { message: `OmniRoute bridge error: ${err.message}` } }));
+          res.end(JSON.stringify({ error: { message: `67router bridge error: ${err.message}` } }));
         }
       });
 
@@ -508,7 +508,7 @@ internalApp.headersTimeout = 66000;
 const proxyServer = http.createServer((req, res) => {
   // Plain HTTP request (non-CONNECT)
   res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("OmniRoute Antigravity Bridge Proxy Active\n");
+  res.end("67router Antigravity Bridge Proxy Active\n");
 });
 
 proxyServer.keepAliveTimeout = 65000;
@@ -591,7 +591,7 @@ if (isMain) {
   const certModel =
     tlsProvider.mode === "use-root-ca" ? "root CA, per-host leaf" : "legacy leaf certificate";
   proxyServer.listen(PORT, "127.0.0.1", () => {
-    console.log(`🚀 OmniRoute Antigravity Bridge listening on 127.0.0.1:${PORT}`);
+    console.log(`🚀 67router Antigravity Bridge listening on 127.0.0.1:${PORT}`);
     console.log(`   Routing non-Gemini 3.8 model traffic -> ${ROUTER_URL}`);
     console.log(`   Preserving Gemini 3.8 native traffic -> Google`);
     console.log(`   TLS: ${certModel} from ${tlsProvider.certDir}`);

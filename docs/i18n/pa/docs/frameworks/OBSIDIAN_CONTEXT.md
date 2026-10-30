@@ -13,7 +13,7 @@
 
 ## ਇਹ ਕੀ ਹੈ
 
-OmniRoute ਇੱਕ **Obsidian** ਵਾਲਟ ਨਾਲ **ਕੰਟੈਕਸਟ ਸਰੋਤ** ਵਜੋਂ ਜੁੜਦਾ ਹੈ — ਇੱਕ ਸਥਾਨਕ Markdown
+67router ਇੱਕ **Obsidian** ਵਾਲਟ ਨਾਲ **ਕੰਟੈਕਸਟ ਸਰੋਤ** ਵਜੋਂ ਜੁੜਦਾ ਹੈ — ਇੱਕ ਸਥਾਨਕ Markdown
 ਗਿਆਨ-ਅਧਾਰ, ਜਿਸਨੂੰ ਏਜੰਟ ਬਿਲਟ-ਇਨ MCP ਸਰਵਰ ਰਾਹੀਂ ਪੜ੍ਹਦੇ ਅਤੇ ਲਿਖਦੇ ਹਨ। ਇਹ
 ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਡੈਸਕਟਾਪ ਐਪ ਦੇ ਅੰਦਰ ਚੱਲ ਰਹੇ **Obsidian Local REST API** ਕਮਿਊਨਿਟੀ ਪਲੱਗਇਨ
 ਨਾਲ ਸੰਚਾਰ ਕਰਦੀ ਹੈ, ਤਾਂ ਜੋ ਏਜੰਟ ਨੋਟ ਖੋਜ ਸਕਣ, ਫਾਇਲਾਂ ਪੜ੍ਹ/ਲਿਖ/ਪੈਚ ਕਰ ਸਕਣ, ਵਾਲਟ ਦੀ ਸੂਚੀ
@@ -76,7 +76,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### WebDAV vault sync
 
 `src/app/api/settings/obsidian/webdav/route.ts` ਇੱਕ ਵਿਕਲਪਿਕ WebDAV-backed
-vault sync ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਦਾ ਹੈ (ਜਿਸਨੂੰ `src/lib/obsidianSync.ts` ਚਲਾਉਂਦਾ ਹੈ)। ਇਸਨੂੰ ਸਮਰੱਥ ਕਰਨ ਨਾਲ OmniRoute ਨੂੰ ਇੱਕ
+vault sync ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਦਾ ਹੈ (ਜਿਸਨੂੰ `src/lib/obsidianSync.ts` ਚਲਾਉਂਦਾ ਹੈ)। ਇਸਨੂੰ ਸਮਰੱਥ ਕਰਨ ਨਾਲ 67router ਨੂੰ ਇੱਕ
 ਲੋਕਲ vault ਡਾਇਰੈਕਟਰੀ ਵੱਲ ਨਿਰਦੇਸ਼ਿਤ ਕੀਤਾ ਜਾਂਦਾ ਹੈ ਅਤੇ ਇੱਕ random WebDAV username/password ਜੋੜਾ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ:
 
 ```bash
@@ -111,8 +111,8 @@ server ਦੀ environment identity ਨੂੰ inherit ਨਹੀਂ ਕਰ ਸਕ�
 ## MCP ਟੂਲ (22)
 
 `open-sse/mcp-server/tools/obsidianTools.ts` ਵਿੱਚ ਪਰਿਭਾਸ਼ਿਤ ਹਨ। ਟੋਕਨ/base-URL ਨੂੰ
-ਹਰੇਕ ਕਾਲ ਲਈ ਹੱਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ (ਪਹਿਲਾਂ ਪ੍ਰਤੀ-API-key, ਫਿਰ ਗਲੋਬਲ)। OmniRoute **ਸਿੰਕ ਸਰਵਰ**
-ਨੂੰ ਵਰਤਣ ਵਾਲੇ ਟੂਲਾਂ (ਚਾਰ `obsidian_sync_*` ਟੂਲ) ਲਈ OmniRoute ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੰਰਚਿਤ
+ਹਰੇਕ ਕਾਲ ਲਈ ਹੱਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ (ਪਹਿਲਾਂ ਪ੍ਰਤੀ-API-key, ਫਿਰ ਗਲੋਬਲ)। 67router **ਸਿੰਕ ਸਰਵਰ**
+ਨੂੰ ਵਰਤਣ ਵਾਲੇ ਟੂਲਾਂ (ਚਾਰ `obsidian_sync_*` ਟੂਲ) ਲਈ 67router ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੰਰਚਿਤ
 ਸਿੰਕ ਪ੍ਰਮਾਣੀਕਰਨ ਟੋਕਨ ਦੀ ਵੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।
 
 ### ਰੀਡ ਟੂਲ (`read:obsidian`)
@@ -130,7 +130,7 @@ server ਦੀ environment identity ਨੂੰ inherit ਨਹੀਂ ਕਰ ਸਕ�
 | `obsidian_get_periodic_note` | ਕਿਸੇ ਤਾਰੀਖ ਲਈ ਰੋਜ਼ਾਨਾ/ਹਫ਼ਤਾਵਾਰੀ/ਮਹੀਨਾਵਾਰੀ ਆਵਰਤੀ ਨੋਟ ਪ੍ਰਾਪਤ ਕਰੋ (ਨਾ ਦਿੱਤੇ ਜਾਣ 'ਤੇ ਅੱਜ ਦਾ)। |
 | `obsidian_get_tags`          | ਸਾਰੇ ਵਾਲਟ ਟੈਗਾਂ ਨੂੰ ਉਨ੍ਹਾਂ ਦੀਆਂ ਆਵ੍ਰਿੱਤੀਆਂ ਸਮੇਤ ਸੂਚੀਬੱਧ ਕਰੋ।                              |
 | `obsidian_list_commands`     | ਉਪਲਬਧ Obsidian ਕਮਾਂਡ ID ਸੂਚੀਬੱਧ ਕਰੋ (`obsidian_execute_command` ਨਾਲ ਵਰਤੋ)।                |
-| `obsidian_sync_status`       | OmniRoute ਸਿੰਕ ਸਰਵਰ ਦੀ ਸਥਿਤੀ: ਚੱਲ ਰਿਹਾ ਹੈ ਜਾਂ ਨਹੀਂ, ਵਾਲਟ ਨਾਮ, ਪੋਰਟ, ਅਪਟਾਈਮ, ਆਖਰੀ ਸਿੰਕ।    |
+| `obsidian_sync_status`       | 67router ਸਿੰਕ ਸਰਵਰ ਦੀ ਸਥਿਤੀ: ਚੱਲ ਰਿਹਾ ਹੈ ਜਾਂ ਨਹੀਂ, ਵਾਲਟ ਨਾਮ, ਪੋਰਟ, ਅਪਟਾਈਮ, ਆਖਰੀ ਸਿੰਕ।     |
 | `obsidian_sync_conflicts`    | ਅਣਸੁਲਝੇ ਸਿੰਕ ਟਕਰਾਵਾਂ ਦੀ ਸੂਚੀ ਦਿਓ (ਪਾਥ, ਟਕਰਾਅ ਪਾਥ, ਪਤਾ ਲੱਗਣ ਦਾ ਸਮਾਂ)।                      |
 
 ### ਰਾਈਟ ਟੂਲ (`write:obsidian`)

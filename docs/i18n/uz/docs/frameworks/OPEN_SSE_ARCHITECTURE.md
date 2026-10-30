@@ -4,7 +4,7 @@
 
 ---
 
-> **Qisqacha**: `open-sse/` — OmniRoute’dagi har bir LLM soʻrovini boshqaradigan asosiy oqimli uzatish mexanizmi. U soʻrov konveyeri, ijrochilar, xizmatlar, MCP serveri va tarjima qatlamini amalga oshiruvchi ~1 400 ta faylni oʻz ichiga oladi. Ushbu qoʻllanma bu qismlar qanday birgalikda ishlashini tushuntiradi.
+> **Qisqacha**: `open-sse/` — 67router’dagi har bir LLM soʻrovini boshqaradigan asosiy oqimli uzatish mexanizmi. U soʻrov konveyeri, ijrochilar, xizmatlar, MCP serveri va tarjima qatlamini amalga oshiruvchi ~1 400 ta faylni oʻz ichiga oladi. Ushbu qoʻllanma bu qismlar qanday birgalikda ishlashini tushuntiradi.
 
 **Manba:** `open-sse/` (ish maydoni paketi, testga oid boʻlmagan ~1 440 ta `.ts` fayl)
 
@@ -12,10 +12,10 @@
 
 ## Nima uchun alohida ish maydoni paketi?
 
-`open-sse/` bir nechta sabablarga koʻra OmniRoute monoreposida **mustaqil ish maydoni** hisoblanadi:
+`open-sse/` bir nechta sabablarga koʻra 67router monoreposida **mustaqil ish maydoni** hisoblanadi:
 
 1. **Qayta foydalanish imkoniyati** — `open-sse` npm’da `@omniroute/open-sse` sifatida chop etiladi, shuning uchun boshqa loyihalar undan mustaqil ravishda foydalanishi mumkin
-2. **Aniq chegaralar** — oqimli uzatish mexanizmi OmniRoute’ga xos UI/DB qatlamidan ajratilgan
+2. **Aniq chegaralar** — oqimli uzatish mexanizmi 67router’ga xos UI/DB qatlamidan ajratilgan
 3. **Unumdorlik** — mexanizmda Next.js bogʻliqliklari yoʻq, bu CLI/serverless muhitlarida sovuq ishga tushishni tezlashtiradi
 4. **Versiyalash** — `open-sse` oʻz jadvali boʻyicha reliz chiqarishi mumkin
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Nima uchun alohida transformator kerak?
 
-Responses API — OpenAI’ning **holatni saqlovchi suhbatlar** (`previous_response_id`) imkoniyatiga ega yangi formati. Mijoz Responses so‘rovini yuborganda, OmniRoute:
+Responses API — OpenAI’ning **holatni saqlovchi suhbatlar** (`previous_response_id`) imkoniyatiga ega yangi formati. Mijoz Responses so‘rovini yuborganda, 67router:
 
 1. Responses formatini ichki tarzda Chat Completions formatiga o‘zgartiradi
 2. Provayderga yuboradi (Chat Completions’ni qo‘llab-quvvatlaydigan istalgan provayder)

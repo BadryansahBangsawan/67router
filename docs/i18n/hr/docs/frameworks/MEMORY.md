@@ -7,7 +7,7 @@
 > **Izvor istine:** `src/lib/memory/` i `src/app/api/memory/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40 (prema zadanim postavkama isključeno + naknadna int8 kvantizacija)
 
-OmniRoute pruža trajnu konverzacijsku memoriju vezanu uz API ključ (i
+67router pruža trajnu konverzacijsku memoriju vezanu uz API ključ (i
 neobavezno ID sesije). Stavke memorije automatski se izdvajaju iz odgovora LLM-a
 pomoću jednostavnog podudaranja regex uzoraka te se ponovno umeću u sljedeće
 zahtjeve kao početna sistemska poruka (ili prva korisnička poruka za pružatelje
@@ -640,7 +640,7 @@ zadani TTL 5 min).
 
 ## Odabir pružatelja ugradnji (v3.8.16+)
 
-OmniRouteov memorijski pogon podržava **četiri izvora ugradnji** (`src/lib/memory/embedding/`). Svaki ima različite kompromise u pogledu **latencije, troška, kvalitete modela i složenosti postavljanja**.
+67routerov memorijski pogon podržava **četiri izvora ugradnji** (`src/lib/memory/embedding/`). Svaki ima različite kompromise u pogledu **latencije, troška, kvalitete modela i složenosti postavljanja**.
 
 ### Izvori ugradnji
 
@@ -1062,13 +1062,13 @@ Proces se veže samo na loopback sučelje, što zaštita od SSRF-a u `GenericMem
 Ovaj prilagodnik ne ublažava tu zaštitu: host je čvrsto postavljen na `127.0.0.1`, a konfiguracijska
 shema (`ClaudeMemBackendConfigSchema`, `.strict()`) prihvaća samo:
 
-| Ključ       | Vrsta  | Zadano | Napomene                                                                                                                                       |
-| ----------- | ------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —      | Obavezno, 1024–65535. Port radnika claude-mem iz njegove datoteke postavki (zadano `37700 + uid % 100`).                                       |
-| `project`   | string | —      | Projekt claude-mem koji će se upotrebljavati. Ako nije postavljeno → svaki OmniRoute API ključ preslikava se na vlastiti projekt (`apiKeyId`). |
-| `timeoutMs` | number | `5000` | Vremensko ograničenje po zahtjevu, 100–30000.                                                                                                  |
+| Ključ       | Vrsta  | Zadano | Napomene                                                                                                                                      |
+| ----------- | ------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —      | Obavezno, 1024–65535. Port radnika claude-mem iz njegove datoteke postavki (zadano `37700 + uid % 100`).                                      |
+| `project`   | string | —      | Projekt claude-mem koji će se upotrebljavati. Ako nije postavljeno → svaki 67router API ključ preslikava se na vlastiti projekt (`apiKeyId`). |
+| `timeoutMs` | number | `5000` | Vremensko ograničenje po zahtjevu, 100–30000.                                                                                                 |
 
-Omogućite ga putem `PUT /api/settings/memory` i ponovno pokrenite OmniRoute (pozadinski sustavi registriraju se
+Omogućite ga putem `PUT /api/settings/memory` i ponovno pokrenite 67router (pozadinski sustavi registriraju se
 jednom, u `initMemoryBackends()`):
 
 ```json
@@ -1085,7 +1085,7 @@ Preslikavanje i ograničenja:
 
 - ID-ovi su `claude-mem:<observationId>`; `get`/`delete` zanemaruju ID-ove drugih pozadinskih sustava bez
   mrežnog poziva.
-- `create` → `POST /api/memory/save`; polja OmniRoutea (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; polja 67routera (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) prenose se unutar `metadata.omniroute` sustava claude-mem i vraćaju pri čitanju.
 - `search` → `GET /api/search?format=json&type=observations`, skraćeno na `maxTokens`
   (broj znakova / 4). `list` → paginirana krajnja točka radnika za opažanja (`total` je donja granica — radnik
@@ -1097,16 +1097,16 @@ Preslikavanje i ograničenja:
 - Umetanje u prompt (`retrieval.ts`) i MCP alati `omniroute_memory_*` i dalje izravno čitaju SQLite
   — ne prolaze kroz `memoryManager`, pa im ovaj pozadinski sustav ne pruža podatke.
 
-**Usmjeravanje vlastitih LLM poziva sustava claude-mem kroz OmniRoute.** claude-mem sažima opažanja
+**Usmjeravanje vlastitih LLM poziva sustava claude-mem kroz 67router.** claude-mem sažima opažanja
 pomoću LLM-a (zadano: Claude Agent SDK). Njegov pružatelj `openai-compatible` može se usmjeriti na
-OmniRoute te tako koristiti kombinirani pričuvni mehanizam i praćenje troškova. U `~/.claude-mem/settings.json`:
+67router te tako koristiti kombinirani pričuvni mehanizam i praćenje troškova. U `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API ključ>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model ili kombinacija>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API ključ>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model ili kombinacija>"
 }
 ```
 

@@ -10,7 +10,7 @@
 > blokavimo režimas kaip privaloma riba (#16413) ir kas mato atsakymą prieš post-call)
 
 Apsaugos (angl. _guardrails_) vykdo saugos, politikos ir turinio transformacijas
-riboje tarp OmniRoute ir išorinių tiekėjų. Kiekviena apsauga gali tikrinti (ir
+riboje tarp 67router ir išorinių tiekėjų. Kiekviena apsauga gali tikrinti (ir
 pasirinktinai atmesti, transformuoti arba anotuoti) užklausų duomenis
 (`preCall`) ir išorinių tiekėjų atsakymus (`postCall`).
 
@@ -114,7 +114,7 @@ Kai skambintojo API raktas apriboja `allowedConnections`, kvotų telkinius
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), tiltas parenka tik
 tuos peradresavimo ir aprašymo modelius, kuriuos raktui leidžiama naudoti, ir
 tik tas jungtis, kurias raktui leidžiama naudoti. Aprašymo užklausa tuomet
-visada eina per OmniRoute savaiminę kilpą su `x-omniroute-self-loop-key-id`
+visada eina per 67router savaiminę kilpą su `x-omniroute-self-loop-key-id`
 antrašte, todėl gaunanti pokalbių užklausa vėl įgyvendina to rakto jungčių ir
 modelių politiką. `enforceApiKeyPolicy()` pripažįsta šią antraštę tik kartu su
 savaiminės kilpos bearer žetonu, todėl ji gali tik susiaurinti prieigą, o ID,
@@ -144,7 +144,7 @@ nepriklausomai nuo jokio kliento signalo. Mažo detalumo apdorojimas pablogina
 OCR tikslumą būtent teksto transkribavimo užduočiai, kurios šis raginimas
 prašo, todėl pati aprašymo užklausa visada prašo aukšto detalumo, nepaisant
 to, kokį detalumo lygį naudojo pradinė įeinanti užklausa. Tai veikia tik
-vidinės aprašymo užklausos turinį; tai nekeičia to, kaip OmniRoute persiunčia
+vidinės aprašymo užklausos turinį; tai nekeičia to, kaip 67router persiunčia
 skambintojo paties `image_url.detail` pirminėje užklausoje — ta numatytoji
 reikšmė taikoma atskirai ir tik aptiktiems OpenCode klientams, funkcijoje
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`).
@@ -224,7 +224,7 @@ naująjį puslapį; ji nebeturi antros formos kopijos. Media Providers taip pat
 sieja Image-to-Text ir Speech-to-Text darbo eigas su atitinkamais Modality
 Bridge skirtukais, nepašalindama esamos Speech-to-Text bandomosios aikštelės (playground).
 
-**Vidinės kilpos priėmimo apeinimas:** kai describe užklausa nukreipiama per paties OmniRoute
+**Vidinės kilpos priėmimo apeinimas:** kai describe užklausa nukreipiama per paties 67router
 `/v1` vidinę kilpą (nestandartinis tiekėjo modelis), antrinė užklausa siunčia
 `x-omniroute-admission-bypass: internal` ir autentifikuojama išspręstu vidinės kilpos
 kredentialu — vietiniu `sk_omniroute` žymekliu (sentinel) vietiniu režimu arba
@@ -424,7 +424,7 @@ scenarijus niekada neišgalvoja nė vieno iš šių rezultatų.
 
 Kiekvienas kadras ribojamas iki 4 MiB, visi neapdoroti kadrai kartu — iki 23 MiB, o
 serializuotas brokerio atsakymas — iki 32 MiB. Privatus laikinas katalogas
-pašalinamas `finally` bloke. OmniRoute neįtraukia FFmpeg ir nepriima pasirinktinio
+pašalinamas `finally` bloke. 67router neįtraukia FFmpeg ir nepriima pasirinktinio
 vykdomojo failo kelio. Prieš antraščių generavimą tiltas taiko konservatyvų vaizdinės
 dedublikacijos etapą: kiekvienas JPEG sumažinamas iki 16×16 pilkų atspalvių buferio ir
 lyginamas tik su paskutiniu išsaugotu kadru. Kai prašomas antraščių biudžetas
@@ -467,7 +467,7 @@ Iškvietėjai gali pridėti neprivalomą `transcript.cues` masyvą prie palaikom
 `text`, baigtinį `start`/`end` intervalą nustatytos trukmės ribose ir leidžiamų
 reikšmių sąraše esantį `source` (`client`, `embedded` arba `audio-bridge`);
 `confidence` pagal numatymą yra `1` ir turi likti tarp `0` ir `1`. Tikslūs
-pasikartojantys įrašai sujungiami. OmniRoute niekada nepradeda transkripcijos iš šių
+pasikartojantys įrašai sujungiami. 67router niekada nepradeda transkripcijos iš šių
 metaduomenų: patvirtinti įrašai nukopijuojami į aprašytą rezultatą su šaltiniu,
 pasitikėjimu ir intervalu ir pateikiami kaip nepatikimi stebėjimai šalia kadrų
 antraščių. Neteisingas, už ribų esantis arba be kilmės nurodymo tekstas atmetamas, o
@@ -987,7 +987,7 @@ rankinis paleidimas) yra dvi užduotys:
   tikrina, kad atsakyme būtų `error.code === "SECURITY_001"`, t. y. kad apsauga
   iš tiesų atmetė užklausą.
 - **`garak` (rekomendacinė)** — vykdo garak `--probes promptinject,dan,leakreplay`
-  prieš vietinę OmniRoute instanciją (`http://localhost:20128/v1`). Priklauso nuo
+  prieš vietinę 67router instanciją (`http://localhost:20128/v1`). Priklauso nuo
   tiekėjo sekreto (`PROMPTFOO_PROVIDER_KEY`); sklandžiai praleidžiama ir turi
   priesagą `|| true`, todėl pateikia ataskaitą nežlugdydama CI.
 

@@ -4,9 +4,9 @@
 
 ---
 
-Operatora piezīmes par `POST /v1/embeddings`, kad OmniRoute atrodas priekšā
+Operatora piezīmes par `POST /v1/embeddings`, kad 67router atrodas priekšā
 Hindsight 0.9.1 (tikai teksta `encode(list[str])`) un Memorix 1.6.0 (Jina multivides
-vārteja). Reālajā vidē pārbaudīts 2026-08-17 ar OmniRoute 3.8.49 adresē
+vārteja). Reālajā vidē pārbaudīts 2026-08-17 ar 67router 3.8.49 adresē
 `https://omniroute.jaguar-fish.ts.net/v1`. Tālāk nav nekādu noslēpumu.
 
 ## Darbojošies modeļu ID
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Vietējais `gemini-embedding-2` nevar darboties, izmantojot tikai GitOps. Google AI
 Studio atslēga jāpievieno kā `gemini` nodrošinātāja savienojums (informācijas panelī vai
-importējot `GEMINI_API_KEY` OmniRoute). Šī slepenā vērtība nav šajā repozitorijā.
+importējot `GEMINI_API_KEY` 67router). Šī slepenā vērtība nav šajā repozitorijā.
 
 ### Jina multimodālais ceļš
 
@@ -100,7 +100,7 @@ Izmantojiet `POST /v1/embeddings`, līdz ir pieejams aizstājvārds.
 
 ### Jina / Memorix attēla objekts
 
-OmniRoute kanoniskais attēla elements (28×28 PNG, 784 pikseļi — Jina noraida 1×1):
+67router kanoniskais attēla elements (28×28 PNG, 784 pikseļi — Jina noraida 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Faktiskais rezultāts: HTTP **400**
 
 Hindsight iegulšanas ir paredzētas tikai tekstam (`encode(list[str])`). Tas nesūta
 attēlu objektus. Norādiet Hindsight ar OpenAI saderīgo iegulšanu bāzes URL uz
-OmniRoute `/v1` un izmantojiet darbojošos ID no iepriekšējās tabulas
+67router `/v1` un izmantojiet darbojošos ID no iepriekšējās tabulas
 (`jina-ai/jina-embeddings-v5-omni-small` vai
 `openrouter/google/gemini-embedding-2`). Neiestatiet modeli tikai kā
 `gemini-embedding-2`, ja vien vārtejā nav `gemini` API atslēgas.
@@ -157,11 +157,11 @@ OmniRoute `/v1` un izmantojiet darbojošos ID no iepriekšējās tabulas
 ### Memorix 1.6.0
 
 Memorix tikai tādu `baseUrl`, kas atbilst `/jina\.ai/i`, uzskata par vietējo multivides
-URL. OmniRoute URL paliek tikai teksta ceļā pat tad, ja modelis ir Jina omni.
-Šī vārteja ir Memorix klienta problēma. Neatkarīgi no tā OmniRoute joprojām noraida
+URL. 67router URL paliek tikai teksta ceļā pat tad, ja modelis ir Jina omni.
+Šī vārteja ir Memorix klienta problēma. Neatkarīgi no tā 67router joprojām noraida
 Jina `{image: "data:..."}` pieprasījuma pamattekstu, ko Memorix nosūtītu, ja vārteja
-tiktu atvērta, tādēļ ar Jina saderīgi klienti nevar iegult attēlus, izmantojot OmniRoute,
+tiktu atvērta, tādēļ ar Jina saderīgi klienti nevar iegult attēlus, izmantojot 67router,
 bez kanoniskās `{type,source}` shēmas.
 
 Tekstam izmantojiet `jina-ai/jina-embeddings-v5-omni-small`. Nenorādiet Memorix
-`base_url` uz `https://api.jina.ai` — saglabājiet OmniRoute kā vienīgo starpnieku.
+`base_url` uz `https://api.jina.ai` — saglabājiet 67router kā vienīgo starpnieku.

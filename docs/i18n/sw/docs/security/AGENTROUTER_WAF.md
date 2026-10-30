@@ -52,7 +52,7 @@ shughuli. Hiki ndicho kidhibiti kilekile cha kasi kinachofungamanishwa na IP na 
 hitilafu za vipindi vya `400 content-blocked` wakati Claude Code au Codex CLI
 inapofanya miito mingi ya matumizi ya zana / utumaji wa ujumbe kwa mfululizo wa haraka.
 
-## Hatua za kupunguza tatizo ambazo tayari zimetumika katika OmniRoute
+## Hatua za kupunguza tatizo ambazo tayari zimetumika katika 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — kinga dhidi ya maombi ya mfululizo inayoweka
    pengo la chini kabisa la ms 500 kati ya maombi yanayotumwa kwa URL yoyote ya `agentrouter:*`.

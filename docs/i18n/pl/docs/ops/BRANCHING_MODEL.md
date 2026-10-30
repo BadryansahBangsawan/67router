@@ -5,7 +5,7 @@ lastUpdated: 2026-07-22
 
 # Model gałęzi i wydań
 
-OmniRoute stosuje model wydań oparty na **równoległych cyklach**: dedykowana gałąź
+67router stosuje model wydań oparty na **równoległych cyklach**: dedykowana gałąź
 `release/vX.Y.Z` dla aktywnego cyklu, `main` dla opublikowanej linii oraz niezmienny
 tag `vX.Y.Z`, gdy dany cykl trafia do produkcji. Widok commitów lądujących na
 `release/*` _oraz_ na `main` jest oczekiwany — to nie pomyłka.

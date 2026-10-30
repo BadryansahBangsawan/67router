@@ -7,29 +7,29 @@
 > **Zdroj pravdy:** `src/lib/skills/` a `src/app/api/skills/`
 > **Posledná aktualizácia:** 2026-06-28 — v3.8.40
 
-OmniRoute poskytuje rozšíriteľný rámec Skills, ktorý umožňuje jazykovým modelom (a operátorom) skladať opakovane použiteľné funkcie — od čítania súborového systému a HTTP požiadaviek až po spúšťanie kódu v sandboxe a overené zručnosti z trhoviska.
+67router poskytuje rozšíriteľný rámec Skills, ktorý umožňuje jazykovým modelom (a operátorom) skladať opakovane použiteľné funkcie — od čítania súborového systému a HTTP požiadaviek až po spúšťanie kódu v sandboxe a overené zručnosti z trhoviska.
 
-Zručnosť je verzovaná, schémou definovaná jednotka práce. OmniRoute môže vložiť zručnosti ako definície nástrojov do odchádzajúcich požiadaviek, zachytiť volania nástrojov prichádzajúce späť z modelu, spustiť zodpovedajúcu obslužnú rutinu a odovzdať výsledok späť modelu, aby mohla konverzácia pokračovať. Model nikdy nevidí implementáciu — iba rozhranie nástroja.
+Zručnosť je verzovaná, schémou definovaná jednotka práce. 67router môže vložiť zručnosti ako definície nástrojov do odchádzajúcich požiadaviek, zachytiť volania nástrojov prichádzajúce späť z modelu, spustiť zodpovedajúcu obslužnú rutinu a odovzdať výsledok späť modelu, aby mohla konverzácia pokračovať. Model nikdy nevidí implementáciu — iba rozhranie nástroja.
 
 ---
 
 ## Agent Skills verzus Omni Skills
 
-OmniRoute má dva odlišné, ale vzájomne sa dopĺňajúce systémy zručností:
+67router má dva odlišné, ale vzájomne sa dopĺňajúce systémy zručností:
 
 | Dimenzia       | **Omni Skills** (tento dokument)                                                       | **Agent Skills**                                                                               |
 | :------------- | :------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | Účel           | Vkladanie nástrojov LLM + spúšťanie v sandboxe                                         | Katalóg SKILL.md, ktorý môžu externí agenti objavovať a používať                               |
 | Zdroj pravdy   | `src/lib/skills/` + trhovisko                                                          | `src/lib/agentSkills/` + adresár `skills/`                                                     |
 | Režim za behu  | Vkladajú sa do odchádzajúcich požiadaviek a spúšťajú pri udalostiach volania nástrojov | Statický katalóg vo formáte markdown + koncové body REST/MCP/A2A na vyhľadávanie               |
-| Kto ho používa | Samotný OmniRoute (kombinované smerovanie, prichádzajúce volania LLM)                  | Externí agenti, klienti MCP, orchestrátory A2A                                                 |
+| Kto ho používa | Samotný 67router (kombinované smerovanie, prichádzajúce volania LLM)                   | Externí agenti, klienti MCP, orchestrátory A2A                                                 |
 | Počet          | Premenlivý (riadený trhoviskom)                                                        | 43 položiek katalógu (22 API + 20 CLI + 1 konfigurácia)                                        |
 | Formát         | `SkillDefinition` so schémou nástroja + obslužnou rutinou                              | Frontmatter `SKILL.md` + telo vo formáte markdown                                              |
 | Vyhľadávanie   | REST `/api/skills/*` + nástroje MCP `omniroute_skills_*`                               | REST `/api/agent-skills/*` + nástroje MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 
-**Omni Skills** predstavujú vykonávací mechanizmus — definujú, čo OmniRoute _dokáže vykonať_, keď LLM vyvolá nástroj.
+**Omni Skills** predstavujú vykonávací mechanizmus — definujú, čo 67router _dokáže vykonať_, keď LLM vyvolá nástroj.
 
-**Agent Skills** predstavujú katalóg dokumentácie — vysvetľujú externým agentom, _ako používať_ REST API a CLI systému OmniRoute, pričom používajú štruktúrované súbory SKILL.md, ktoré možno priamo vložiť do promptov agentov.
+**Agent Skills** predstavujú katalóg dokumentácie — vysvetľujú externým agentom, _ako používať_ REST API a CLI systému 67router, pričom používajú štruktúrované súbory SKILL.md, ktoré možno priamo vložiť do promptov agentov.
 
 Informácie o katalógu Agent Skills, generátore, nástrojoch MCP a zručnosti A2A nájdete v dokumente [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Informácie o katalógu Agent Skills, generátore, nástrojoch MCP a zručnosti 
 
 V rovnakom registri existujú súčasne tri zdroje zručností:
 
-1. **Vstavané zručnosti** (`src/lib/skills/builtins.ts`) — dodávajú sa spolu s OmniRoute. Pokrývajú bežné prípady:
+1. **Vstavané zručnosti** (`src/lib/skills/builtins.ts`) — dodávajú sa spolu s 67router. Pokrývajú bežné prípady:
    - `file_read`, `file_write` — pracovný priestor sandboxu pre každý kľúč API v `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — odchádzajúce HTTP prostredníctvom `safeOutboundFetch` s `guard: "public-only"`
    - `web_search` — vymeniteľný poskytovateľ vyhľadávania s ukladaním do vyrovnávacej pamäte (`executeWebSearch`)
    - `eval_code` — spúšťanie `node` alebo `python` v sandboxe Docker
    - `execute_command` — spúšťanie príkazov shellu v sandboxe Docker
    - `browser` — základná infraštruktúra využívajúca Playwright, predvolene vypnutá (`builtin/browser.ts`)
-2. **SkillsMP** (trhovisko OmniRoute) — načítava sa z `https://skillsmp.com/api/v1/skills/search`. Vyžaduje `skillsmpApiKey` v nastaveniach.
+2. **SkillsMP** (trhovisko 67router) — načítava sa z `https://skillsmp.com/api/v1/skills/search`. Vyžaduje `skillsmpApiKey` v nastaveniach.
 3. **SkillsSH** (komunitný katalóg `skills.sh`) — načítava sa z `https://skills.sh/api/search`. Nevyžaduje sa žiadne overenie; obsah SKILL.md sa získava priamo zo služby GitHub raw.
 
 Jeden „aktívny poskytovateľ“ určuje, z ktorého katalógu ovládací panel inštaluje zručnosti (`src/lib/skills/providerSettings.ts`). Môžete ho zmeniť v časti **Nastavenia → Pamäť a zručnosti**. Predvolená hodnota: `skillsmp`.
@@ -442,7 +442,7 @@ neexistuje žiadna prahová hodnota s desatinným číslom v štýle `0.6` ani �
 
 ## Katalóg vstavaných zručností
 
-OmniRoute sa dodáva s vybranou súpravou vstavaných zručností v `src/lib/skills/builtin/`. Najčastejšie používané sú:
+67router sa dodáva s vybranou súpravou vstavaných zručností v `src/lib/skills/builtin/`. Najčastejšie používané sú:
 
 ### Zručnosť automatizácie prehliadača
 

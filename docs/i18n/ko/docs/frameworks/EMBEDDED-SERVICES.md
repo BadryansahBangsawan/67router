@@ -8,7 +8,7 @@
 > **최종 업데이트:** 2026-09-16
 > **대상:** 임베디드 서비스(9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua)를 추가, 유지 관리 또는 디버깅하는 엔지니어.
 
-임베디드 서비스는 OmniRoute가 설치하고 감독하며 일급 라우팅 대상으로 노출하는, 로컬에 설치된 프로세스 사이드카 도구입니다. 외부 제공업체(API 키를 통해 인터넷으로 연결)와 달리, 임베디드 서비스는 OmniRoute와 동일한 머신에서 실행되며 루프백을 통해 통신합니다.
+임베디드 서비스는 67router가 설치하고 감독하며 일급 라우팅 대상으로 노출하는, 로컬에 설치된 프로세스 사이드카 도구입니다. 외부 제공업체(API 키를 통해 인터넷으로 연결)와 달리, 임베디드 서비스는 67router와 동일한 머신에서 실행되며 루프백을 통해 통신합니다.
 
 ---
 
@@ -33,7 +33,7 @@
 
 | 서비스          | npm 패키지                         | 기본 포트 | 용도                                                                                                                                                                                                                                                                                                                                |
 | --------------- | ---------------------------------- | :-------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                          |   20130   | OmniRoute가 하위 공급자로 사용할 수 있는 AI 라우터입니다. 모델은 `9router/{sub}/{model}` 형식으로 노출됩니다.                                                                                                                                                                                                                       |
+| **9Router**     | `9router`                          |   20130   | 67router가 하위 공급자로 사용할 수 있는 AI 라우터입니다. 모델은 `9router/{sub}/{model}` 형식으로 노출됩니다.                                                                                                                                                                                                                        |
 | **CLIProxyAPI** | GitHub 릴리스 바이너리(`cliproxy`) |   8317    | Anthropic CLI 인증 흐름을 위한 로컬 프록시 어댑터입니다. OAuth 토큰이 만료될 때 대체 라우팅을 제공합니다.                                                                                                                                                                                                                           |
 | **Mux**         | `mux`(헤드리스 `mux server`)       |   8322    | 로컬 에이전트 오케스트레이션 데몬(coder/mux)입니다. 수명 주기만 관리되며 라우팅 대상이 아닙니다(LLM 프록시 기능 없음).                                                                                                                                                                                                              |
 | **Bifrost**     | `@maximhq/bifrost`                 |   8080    | Go AI 게이트웨이 릴레이 백엔드입니다. 실행 중이면 릴레이 경로(`/v1/relay/`)에서 자동으로 선택됩니다.                                                                                                                                                                                                                                |
@@ -43,21 +43,21 @@
 
 7개 서비스 모두 동일한 감독 모델을 따릅니다.
 
-- OmniRoute는 서비스를 `DATA_DIR/services/{name}/` 아래에 설치합니다(OmniRoute 자체 `package.json`과 격리됨).
-- OmniRoute는 서비스를 자식 프로세스로 실행하고 모니터링합니다.
-- OmniRoute는 임시 API 키를 자식 프로세스의 환경에 주입하고, 해당되는 경우 중단 없이 교체합니다.
+- 67router는 서비스를 `DATA_DIR/services/{name}/` 아래에 설치합니다(67router 자체 `package.json`과 격리됨).
+- 67router는 서비스를 자식 프로세스로 실행하고 모니터링합니다.
+- 67router는 임시 API 키를 자식 프로세스의 환경에 주입하고, 해당되는 경우 중단 없이 교체합니다.
 - 모든 관리 경로(`/api/services/*`)는 **LOCAL_ONLY**입니다. 즉, 루프백에서만 접근할 수 있습니다(엄격한 규칙 #17).
 
 ### 주요 결정 사항(설계 계획 기준)
 
-| 결정                                     | 값                                                                          |
-| ---------------------------------------- | --------------------------------------------------------------------------- |
-| 9Router 네이티브 UI에 대한 대시보드 접근 | `/dashboard/providers/services/9router/embed/*`의 리버스 프록시             |
-| 설치 메커니즘                            | `execFile`을 통한 `npm install {package}`(셸 보간 없음)                     |
-| 사용 모드                                | 라우팅 엔진에 `9router/{sub}/{model}` 형식으로 공급자 등록                  |
-| API 키 관리                              | OmniRoute가 생성하고 저장 시 암호화(AES-256-GCM)한 후 환경 변수를 통해 주입 |
-| 대시보드 위치                            | `/dashboard/providers/services`(탭 3개)                                     |
-| 자동 시작                                | 서비스별 토글, 기본값 OFF                                                   |
+| 결정                                     | 값                                                                         |
+| ---------------------------------------- | -------------------------------------------------------------------------- |
+| 9Router 네이티브 UI에 대한 대시보드 접근 | `/dashboard/providers/services/9router/embed/*`의 리버스 프록시            |
+| 설치 메커니즘                            | `execFile`을 통한 `npm install {package}`(셸 보간 없음)                    |
+| 사용 모드                                | 라우팅 엔진에 `9router/{sub}/{model}` 형식으로 공급자 등록                 |
+| API 키 관리                              | 67router가 생성하고 저장 시 암호화(AES-256-GCM)한 후 환경 변수를 통해 주입 |
+| 대시보드 위치                            | `/dashboard/providers/services`(탭 3개)                                    |
+| 자동 시작                                | 서비스별 토글, 기본값 OFF                                                  |
 
 ---
 
@@ -219,7 +219,7 @@
 #### `POST /api/services/9router/install`
 
 npm에서 9Router를 설치합니다. 자체 `package.json` 및 `node_modules/`를 포함하는
-`DATA_DIR/services/9router/`를 생성합니다. OmniRoute 자체 의존성과 충돌하지 않습니다.
+`DATA_DIR/services/9router/`를 생성합니다. 67router 자체 의존성과 충돌하지 않습니다.
 
 **요청 본문**(모두 선택 사항):
 
@@ -377,7 +377,7 @@ npm 설치를 실행하여 새 버전을 현재 위치에 설치하고 서비스
 
 #### `POST /api/services/9router/auto-start`
 
-자동 시작 플래그를 전환합니다. `enabled: true`인 경우 다음번에 OmniRoute가 부팅될 때
+자동 시작 플래그를 전환합니다. `enabled: true`인 경우 다음번에 67router가 부팅될 때
 서비스가 설치되어 있으면 자동으로 시작됩니다.
 
 **요청 본문:**
@@ -589,7 +589,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 이 프록시는 다음을 수행합니다.
 
 - 요청을 `http://127.0.0.1:{port}/{path}`로 전달합니다(루프백 전용).
-- 수신 `cookie` 및 `authorization` 헤더를 제거합니다(OmniRoute 세션 유출 방지).
+- 수신 `cookie` 및 `authorization` 헤더를 제거합니다(67router 세션 유출 방지).
 - 9Router 인증을 위해 `Authorization: Bearer {apiKey}`를 주입합니다.
 - 응답에서 `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*`를 제거합니다.
 - HTML 응답을 재작성하여 `<base href>`를 주입하고 절대 경로를 정규화합니다(`/foo` → `/dashboard/.../embed/foo`).
@@ -625,7 +625,7 @@ JWT를 획득하더라도 임베드된 서비스로 프록시할 수 없습니�
 ### API 키 주입
 
 9Router와 Mux는 자체 HTTP 엔드포인트에 API 키/베어러 토큰을 요구합니다.
-OmniRoute는 다음과 같이 처리합니다.
+67router는 다음과 같이 처리합니다.
 
 1. `crypto.randomBytes(32).toString("base64url")`를 사용하여 서비스별 접두사가
    포함된 키를 생성합니다(9Router는 `nr_`, Mux는 `mx_`).
@@ -805,7 +805,7 @@ auto-start/route.ts POST — auto_start 플래그 전환
 **확인 목록:**
 
 1. `GET /api/services/{name}/logs`(또는 대시보드의 로그 패널)를 확인합니다. `Error: ENOENT`, `address already in use`, `Cannot find module`과 같은 줄을 찾습니다.
-2. PATH에 `npm`이 포함되어 있는지 확인합니다. OmniRoute를 실행하는 동일한 사용자 계정에서 `which npm`을 실행합니다.
+2. PATH에 `npm`이 포함되어 있는지 확인합니다. 67router를 실행하는 동일한 사용자 계정에서 `which npm`을 실행합니다.
 3. 서비스가 설치되어 있는지 확인합니다. `GET /api/services/{name}/status`에서 `installedVersion`을 확인합니다. 값이 `null`이면 먼저 설치를 실행합니다.
 4. `DATA_DIR/services/{name}/node_modules/`가 존재하고 비어 있지 않은지 확인합니다.
 5. 상태 응답의 `lastError` 필드에서 정제된 종료 사유를 확인합니다.
@@ -837,7 +837,7 @@ auto-start/route.ts POST — auto_start 플래그 전환
 2. 충돌하는 프로세스를 찾아 종료합니다. `lsof -ti :20130 | xargs kill -9`.
 3. 포트는 `bootstrap.ts`의 `port` 필드를 통해 서비스별로 구성할 수 있습니다.
 
-**참고:** 9Router는 OmniRoute의 기본 포트 20128과의 충돌을 방지하기 위해 기본적으로 포트 20130을 사용합니다.
+**참고:** 9Router는 67router의 기본 포트 20128과의 충돌을 방지하기 위해 기본적으로 포트 20130을 사용합니다.
 
 ---
 
@@ -847,13 +847,13 @@ auto-start/route.ts POST — auto_start 플래그 전환
 
 **원인:**
 
-- OmniRoute 프로세스에 `DATA_DIR` 또는 그 상위 디렉터리에 대한 쓰기 권한이 없습니다.
+- 67router 프로세스에 `DATA_DIR` 또는 그 상위 디렉터리에 대한 쓰기 권한이 없습니다.
 - 매핑된 볼륨에 대한 쓰기 권한 없이 루트리스 Docker 내부에서 실행 중입니다.
 
 **해결 방법:**
 
 1. `DATA_DIR`(기본값: `~/.omniroute/`)을 확인합니다. `ls -la ~/.omniroute/`
-2. OmniRoute 프로세스 사용자가 디렉터리를 소유하는지 확인합니다. `chown -R $USER ~/.omniroute/`
+2. 67router 프로세스 사용자가 디렉터리를 소유하는지 확인합니다. `chown -R $USER ~/.omniroute/`
 3. Docker에서는 볼륨 마운트에 컨테이너 사용자에 대한 올바른 권한이 설정되어 있는지 확인합니다.
 
 ---
@@ -893,14 +893,14 @@ auto-start/route.ts POST — auto_start 플래그 전환
 
 **Q: 프로덕션/클라우드 배포에서 9Router와 CLIProxyAPI를 사용할 수 있나요?**
 
-예. 두 서비스 모두 OmniRoute 자체와 동일한 로컬 우선 모델을 따릅니다. 동일한 머신에서 실행되며 루프백을 통해 통신합니다. 여기서 "프로덕션"은 원격 클라우드 제공업체가 아니라 OmniRoute가 배포된 VPS 또는 로컬 서버를 의미합니다.
+예. 두 서비스 모두 67router 자체와 동일한 로컬 우선 모델을 따릅니다. 동일한 머신에서 실행되며 루프백을 통해 통신합니다. 여기서 "프로덕션"은 원격 클라우드 제공업체가 아니라 67router가 배포된 VPS 또는 로컬 서버를 의미합니다.
 
 ---
 
 **Q: 슈퍼바이저를 디버깅하려면 어떻게 해야 하나요?**
 
 1. SSE 로그 스트림을 실시간으로 확인합니다: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. OmniRoute의 pino 출력에서 `service:supervisor` 네임스페이스로 필터링된 구조화 로그를 확인합니다.
+2. 67router의 pino 출력에서 `service:supervisor` 네임스페이스로 필터링된 구조화 로그를 확인합니다.
 3. DB 행을 검사합니다: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. `GET /api/services/9router/status`를 사용하여 현재 실시간 상태, PID, 상태 점검 결과 및 `lastError`를 한 번의 호출로 확인합니다.
 

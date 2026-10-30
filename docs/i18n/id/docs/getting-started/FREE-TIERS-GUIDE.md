@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Gunakan akun penyedia yang memenuhi syarat milik Anda sendiri. OmniRoute menggabungkan koneksi yang Anda konfigurasikan; OmniRoute tidak memberikan anggaran token agregat yang diiklankan. Akses gratis mungkin memerlukan pendaftaran, API key, persetujuan, atau metode pembayaran. Batasan penyedia, kebijakan privasi, dan ketentuan tetap berlaku.
+> **TL;DR**: Gunakan akun penyedia yang memenuhi syarat milik Anda sendiri. 67router menggabungkan koneksi yang Anda konfigurasikan; 67router tidak memberikan anggaran token agregat yang diiklankan. Akses gratis mungkin memerlukan pendaftaran, API key, persetujuan, atau metode pembayaran. Batasan penyedia, kebijakan privasi, dan ketentuan tetap berlaku.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Banyak penyedia AI menawarkan suatu bentuk **akses gratis**. Bergantung pada penyedianya, hal tersebut dapat berarti endpoint tanpa autentikasi, kuota berkala, akses tanpa batas kuota dengan pembatasan laju, jatah saat pendaftaran, persetujuan manual, atau promosi sementara. Beberapa opsi memerlukan akun, kunci API, kartu kredit, KYC, atau persetujuan terhadap ketentuan khusus penyedia.
 
-OmniRoute **mengagregasikan** koneksi yang dikonfigurasi ke dalam satu endpoint. Anda tetap perlu mendaftar secara terpisah ke setiap penyedia yang memerlukan akun. Hubungkan akun tersebut dan gunakan `model: "auto"` untuk merutekan permintaan di antara target yang memenuhi syarat. Instalasi baru mungkin tidak memiliki target tanpa kunci yang memenuhi syarat; memasang OmniRoute saja tidak menjamin respons percakapan yang berhasil.
+67router **mengagregasikan** koneksi yang dikonfigurasi ke dalam satu endpoint. Anda tetap perlu mendaftar secara terpisah ke setiap penyedia yang memerlukan akun. Hubungkan akun tersebut dan gunakan `model: "auto"` untuk merutekan permintaan di antara target yang memenuhi syarat. Instalasi baru mungkin tidak memiliki target tanpa kunci yang memenuhi syarat; memasang 67router saja tidak menjamin respons percakapan yang berhasil.
 
 ---
 
@@ -57,7 +57,7 @@ Penyedia berikut memiliki **tingkat gratis** dengan batas tertentu:
 
 ## Cara Menumpuk Tingkat Gratis
 
-Keunggulan OmniRoute adalah **menumpuk tingkat gratis**. Alih-alih mengandalkan satu penyedia, Anda menghubungkan beberapa penyedia gratis dan membiarkan OmniRoute secara otomatis memilih penyedia terbaik untuk setiap permintaan.
+Keunggulan 67router adalah **menumpuk tingkat gratis**. Alih-alih mengandalkan satu penyedia, Anda menghubungkan beberapa penyedia gratis dan membiarkan 67router secara otomatis memilih penyedia terbaik untuk setiap permintaan.
 
 ### Contoh: Cakupan Tingkat Gratis yang Lebih Luas
 
@@ -68,7 +68,7 @@ Hubungkan beberapa penyedia untuk mengurangi ketergantungan pada satu kuota:
 3. **Pollinations** — akses tanpa kunci dengan pembatasan laju
 4. **LongCat** — alokasi satu kali saat mendaftar (memerlukan KYC)
 
-Kemudian gunakan `model: "auto"` dan OmniRoute akan:
+Kemudian gunakan `model: "auto"` dan 67router akan:
 
 - Mencoba koneksi memenuhi syarat dengan peringkat tertinggi terlebih dahulu
 - Jika kuota habis atau pemeriksaan kondisinya gagal → mencoba penyedia berikutnya yang dikonfigurasi
@@ -102,7 +102,7 @@ akses tanpa batas/tanpa kunci, kredit pendaftaran, entri yang dihentikan, dan su
 
 ### Langkah 5: Klik Hubungkan
 
-Untuk penyedia `NOAUTH`, OmniRoute tidak meminta kredensial upstream. Hal ini tidak menjamin bahwa upstream menerima klien pihak ketiga atau memiliki kapasitas yang tersedia. Penyedia OAuth dan kunci API harus dihubungkan melalui alur akun yang didokumentasikan. Klien Anda tetap menggunakan kunci API OmniRoute yang ditampilkan di **Dasbor → Endpoint** saat autentikasi router diaktifkan.
+Untuk penyedia `NOAUTH`, 67router tidak meminta kredensial upstream. Hal ini tidak menjamin bahwa upstream menerima klien pihak ketiga atau memiliki kapasitas yang tersedia. Penyedia OAuth dan kunci API harus dihubungkan melalui alur akun yang didokumentasikan. Klien Anda tetap menggunakan kunci API 67router yang ditampilkan di **Dasbor → Endpoint** saat autentikasi router diaktifkan.
 
 ### Langkah 6: Ulangi
 
@@ -112,7 +112,7 @@ Hubungkan beberapa penyedia yang ketentuan dan model privasinya sesuai dengan ka
 
 ## Membaca Katalog dengan Benar
 
-- `NOAUTH` berarti OmniRoute tidak meminta kredensial penyedia dari Anda; hal ini tidak
+- `NOAUTH` berarti 67router tidak meminta kredensial penyedia dari Anda; hal ini tidak
   menjamin waktu aktif, privasi, atau kapasitas tanpa batas.
 - `hasFree` adalah metadata penemuan. Ini dapat merepresentasikan kuota berulang, akses tanpa kunci,
   kredit pendaftaran, program persetujuan, atau promosi.
@@ -125,15 +125,15 @@ Hubungkan beberapa penyedia yang ketentuan dan model privasinya sesuai dengan ka
 
 ---
 
-## Cara OmniRoute Meningkatkan Tingkat Gratis
+## Cara 67router Meningkatkan Tingkat Gratis
 
 ### 1. Peralihan Otomatis
 
-Jika satu penyedia gratis sibuk atau tidak aktif, OmniRoute secara otomatis mencoba penyedia berikutnya. Anda tidak perlu melakukan apa pun.
+Jika satu penyedia gratis sibuk atau tidak aktif, 67router secara otomatis mencoba penyedia berikutnya. Anda tidak perlu melakukan apa pun.
 
 ### 2. Perutean Cerdas
 
-OmniRoute memilih **penyedia gratis terbaik** untuk setiap permintaan berdasarkan:
+67router memilih **penyedia gratis terbaik** untuk setiap permintaan berdasarkan:
 
 - Kecepatan — Penyedia mana yang paling cepat saat ini?
 - Kualitas — Penyedia mana yang terbaik untuk tugas ini?
@@ -141,13 +141,13 @@ OmniRoute memilih **penyedia gratis terbaik** untuk setiap permintaan berdasarka
 
 ### 3. Penghematan Token
 
-Alur kompresi OmniRoute dapat mengurangi token dari prompt dan keluaran alat yang memenuhi syarat.
+Alur kompresi 67router dapat mengurangi token dari prompt dan keluaran alat yang memenuhi syarat.
 Penghematan aktual bergantung pada konten, mesin yang dipilih, penghitungan penyedia, dan pengaturan
 fidelitas; kompresi tidak melipatgandakan setiap kuota penyedia dengan jumlah yang tetap.
 
 ### 4. Dukungan Multiakun
 
-Jika ketentuan penyedia mengizinkan beberapa akun atau kredensial, OmniRoute dapat memperlakukan setiap
+Jika ketentuan penyedia mengizinkan beberapa akun atau kredensial, 67router dapat memperlakukan setiap
 koneksi sebagai kandidat perutean terpisah. Jangan membuat akun tambahan untuk menghindari
 kebijakan kuota atau akses penyedia.
 
@@ -162,7 +162,7 @@ Katalog aktif yang telah dideduplikasi berdasarkan kumpulan saat ini mencatat:
 | Kuota terukur berulang                 | **~1.62B token/bulan** | Kumpulan bersama dihitung sekali; penyedia tanpa batas tidak disertakan dalam jumlah |
 | Bulan pertama dengan kuota pendaftaran |       **~2.22B token** | Total berulang ditambah kredit satu kali dan kredit berulang                         |
 
-Ini adalah estimasi untuk seluruh katalog pada akun-akun terpisah yang memenuhi syarat, bukan kuota yang disediakan oleh OmniRoute atau prediksi untuk instalasi baru. Kapasitas yang dapat Anda gunakan bergantung pada penyedia yang Anda hubungkan dan ketentuan mereka saat ini. Nilai tersebut dihitung dari `open-sse/config/freeModelCatalog.ts`; lihat
+Ini adalah estimasi untuk seluruh katalog pada akun-akun terpisah yang memenuhi syarat, bukan kuota yang disediakan oleh 67router atau prediksi untuk instalasi baru. Kapasitas yang dapat Anda gunakan bergantung pada penyedia yang Anda hubungkan dan ketentuan mereka saat ini. Nilai tersebut dihitung dari `open-sse/config/freeModelCatalog.ts`; lihat
 [Referensi Tingkat Gratis](../reference/FREE_TIERS.md) untuk deduplikasi kumpulan, penanda Ketentuan Layanan,
 entri yang dihentikan, dan metodologi kredit pendaftaran.
 
@@ -189,7 +189,7 @@ produksi Anda. Beban kerja penting harus memiliki cadangan yang dipantau dan ses
 
 Konsekuensinya dapat mencakup batasan ketat, daftar tunggu, KYC, verifikasi kartu kredit, pelatihan dengan
 prompt, privasi yang lebih lemah, tanpa SLA, pergantian model, pembatasan geografis, biaya atas kelebihan penggunaan, atau
-risiko terkait kebijakan akun. OmniRoute menampilkan metadata yang tersedia; Anda memilih apa yang akan diaktifkan.
+risiko terkait kebijakan akun. 67router menampilkan metadata yang tersedia; Anda memilih apa yang akan diaktifkan.
 
 ### "Bagaimana cara mendapatkan lebih banyak kuota gratis?"
 
@@ -208,7 +208,7 @@ halaman Peringkat Penyedia Gratis sebagai indikator kualitas dan verifikasi mode
 
 ## Langkah Selanjutnya?
 
-- **[Panduan Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Biarkan OmniRoute memilih AI terbaik untuk Anda
+- **[Panduan Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Biarkan 67router memilih AI terbaik untuk Anda
 - **[Panduan Penyedia](./PROVIDERS-GUIDE.md)** — Hubungkan lebih banyak penyedia
 - **[Pemecahan Masalah](../guides/TROUBLESHOOTING.md)** — Atasi masalah umum
 - **[Referensi Tingkat Gratis](../reference/FREE_TIERS.md)** — Daftar lengkap tingkat gratis

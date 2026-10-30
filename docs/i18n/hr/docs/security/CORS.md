@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute kontrolira koja **izvorišta preglednika** smiju čitati odgovore iz drugih izvorišta
+67router kontrolira koja **izvorišta preglednika** smiju čitati odgovore iz drugih izvorišta
 putem jednog centraliziranog popisa dopuštenih izvorišta. Model je **prema zadanim postavkama zatvoren**:
 nijedno izvorište nije dopušteno dok ga izričito ne omogućite. Ova stranica opisuje kako se popis dopuštenih
 izvorišta razrješava, što `CORS_ALLOW_ALL=true` zapravo izlaže (i, što je važno, što
@@ -46,13 +46,13 @@ sljedećim redoslijedom:
 ## Model prijetnji — što `CORS_ALLOW_ALL=true` zapravo izlaže
 
 Generičko upozorenje OWASP-a („CORS sa zamjenskim znakom = bilo koja web-lokacija može pozvati vaš API”) vrijedi
-shvatiti ozbiljno, ali izloženost OmniRoutea **uža je od generičkog slučaja**
+shvatiti ozbiljno, ali izloženost 67routera **uža je od generičkog slučaja**
 zbog jedne konkretne implementacijske činjenice:
 
 > **Središnji `applyCorsHeaders()` nikada ne emitira
 > `Access-Control-Allow-Credentials`.** Preglednik neće izložiti _autentificirani_
 > odgovor iz drugog izvorišta (koji sadrži kolačić) osim ako poslužitelj pošalje
-> `Access-Control-Allow-Credentials: true`. OmniRouteov zajednički CORS put to nikada
+> `Access-Control-Allow-Credentials: true`. 67routerov zajednički CORS put to nikada
 > ne čini.
 
 To za svaku površinu znači sljedeće, čak i uz `CORS_ALLOW_ALL=true`:
@@ -92,7 +92,7 @@ odvojeno od ovih CORS smjernica.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Ako se OmniRoute izvodi iza obrnutog proxyja / tunela (nginx, Caddy, Cloudflare
+- Ako se 67router izvodi iza obrnutog proxyja / tunela (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **nije** jedina kontrola — zaštita ruta za povratnu petlju
   i dalje štiti rute koje mogu pokretati procese (pogledajte
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Nemojte krivotvoriti
@@ -108,7 +108,7 @@ odvojeno od ovih CORS smjernica.
 Čak vam je i tijekom razvoja zamjenski znak rijetko potreban. Dopustite samo razvojne poslužitelje koje upotrebljavate:
 
 ```bash
-# Razvojni poslužitelji Vite (5173) + Next.js (3000) koji pozivaju lokalni OmniRoute
+# Razvojni poslužitelji Vite (5173) + Next.js (3000) koji pozivaju lokalni 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +128,14 @@ ponovnog pokretanja.
   izvore za upravljanje/nadzornu ploču ni u jednu permisivnu konfiguraciju; za njih se mora i dalje
   strogo primjenjivati odbijanje pristupa u slučaju pogreške.
 
-## Primjer: obrnuti proxy ispred OmniRoutea
+## Primjer: obrnuti proxy ispred 67routera
 
-CORS provodi sam OmniRoute, pa proxy u pravilu **ne bi trebao** dodavati ni
+CORS provodi sam 67router, pa proxy u pravilu **ne bi trebao** dodavati ni
 prepisivati zaglavlja `Access-Control-*` (dvostruka zaglavlja uzrokuju probleme u preglednicima). Završite TLS
-i proslijedite promet — prepustite OmniRouteu da odgovori na predzahtjev:
+i proslijedite promet — prepustite 67routeru da odgovori na predzahtjev:
 
 ```nginx
-# nginx — proslijedi u OmniRoute; ovdje NEMOJ umetati Access-Control-*
+# nginx — proslijedi u 67router; ovdje NEMOJ umetati Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +143,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Zadržite zaglavlja za prosljeđivanje: proxy na istom računalu povezuje se s adrese povratne petlje, a upravo
-    # ona govore OmniRouteu da pozivatelj nije lokalni operater. Proxy koji ne dodaje nijedno od njih
+    # ona govore 67routeru da pozivatelj nije lokalni operater. Proxy koji ne dodaje nijedno od njih
     # čini da svaki udaljeni pozivatelj izgleda kao lokalni. Također nikada ne postavljajte X-Forwarded-For na 127.0.0.1.
 }
 ```
 
-Dopuštena izvorišta preglednika postavite u OmniRouteu (`CORS_ALLOWED_ORIGINS` ili na
+Dopuštena izvorišta preglednika postavite u 67routeru (`CORS_ALLOWED_ORIGINS` ili na
 kartici Security), a ne u proxyju.
 
 ## Izvorne datoteke

@@ -45,7 +45,7 @@ jerġa’ jistabbilixxi l-fluss kompletament awtomatiku li kellu l-proġett sa v
 il-garanzija WS1.3 (token żvelat ma jistax jippubblika waħdu — ma jeżisti l-ebda token).
 
 **Konfigurazzjoni ta’ darba (sid):** npmjs.com → pakkett `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: sid `diegosouzapw`, repo `OmniRoute`, fluss tax-xogħol `npm-publish.yml`
+Publisher_ → GitHub: sid `diegosouzapw`, repo `67router`, fluss tax-xogħol `npm-publish.yml`
 (ambjent: ebda wieħed). Sakemm dan ikun jeżisti, il-pass awtomatiku jfalli b’`ENEEDAUTH`:
 erġa’ skattah b’`publish_mode=staged` (hawn taħt) jew `direct`.
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **Kas yra šis dokumentas.** Kritinis „OmniRoute“ kokybės vartų sistemos vertinimas,
+> **Kas yra šis dokumentas.** Kritinis „67router“ kokybės vartų sistemos vertinimas,
 > palygintas su geriausia pramonės praktika, **ir** išsamus visų kokybės
 > kontrolės taškų katalogas bei **nuo įrankių nepriklausomas atkartojimo planas**, skirtas tai pačiai sistemai pritaikyti
 > bet kuriam projektui. Sugeneruota 2026-06-16 pagal tikrąją saugyklos būseną (ne iš atminties).
@@ -100,62 +100,62 @@ leidžiantis tą patį įgyvendinti naudojant bet kokį technologijų rinkinį.
 
 ### 1. Stilius ir formatavimas (deterministinis, greitas)
 
-- **OmniRoute:** Prettier + ESLint per lint-staged (prieš patvirtinant pakeitimus), 2 tarpai / dvigubos kabutės / 100 stulpelių.
+- **67router:** Prettier + ESLint per lint-staged (prieš patvirtinant pakeitimus), 2 tarpai / dvigubos kabutės / 100 stulpelių.
 - **Bendrai:** vienas automatiškai pataisantis formatavimo įrankis + vienas analizatorius, prieš patvirtinant pakeitimus vykdomi su paruoštais failais.
 
 ### 2. Tipai
 
-- **OmniRoute:** `typecheck:core` (blokuojantis) + `typecheck:noimplicit:core` (patariamasis) + `type-coverage` kartelė 92.17% + kiekvieno failo `any` biudžetas.
+- **67router:** `typecheck:core` (blokuojantis) + `typecheck:noimplicit:core` (patariamasis) + `type-coverage` kartelė 92.17% + kiekvieno failo `any` biudžetas.
 - **Bendrai:** griežta tipų patikra CI aplinkoje + tik didinama tipų aprėpties metrikos kartelė + kiekvieno failo `any` / išimčių biudžetas.
 
 ### 3. Testai (intensyvumas)
 
-- **OmniRoute:** 2 nepersidengiantys vykdymo įrankiai (Node integruotas + vitest), 8 dalys, bendroji aprėptis 60/60/60/60 + kartelė ~76% + **8 kiekvieno modulio minimalios aprėpties ribos kritiniams moduliams** + kasnaktiniai savybėmis pagrįsti testai + kasnaktinis **mutacinis testavimas**.
+- **67router:** 2 nepersidengiantys vykdymo įrankiai (Node integruotas + vitest), 8 dalys, bendroji aprėptis 60/60/60/60 + kartelė ~76% + **8 kiekvieno modulio minimalios aprėpties ribos kritiniams moduliams** + kasnaktiniai savybėmis pagrįsti testai + kasnaktinis **mutacinis testavimas**.
 - **Bendrai:** testų vykdymo įrankis (-iai) + **absoliuti** minimali aprėpties riba (apsauga nuo nulio) + aprėpties **kartelė** (apsauga nuo regreso) + **kiekvieno modulio minimalios ribos didelės rizikos kodui** (apsauga nuo Goodharto dėsnio) + savybėmis pagrįsti testai grynajai logikai + kasnaktinis **mutacinis testavimas** kaip tikrasis testų kokybės matas.
 
 ### 4. Testų politika (apsauga nuo manipuliavimo)
 
-- **OmniRoute:** `pr-test-policy` (produkcinio kodo pakeitimams būtinas testas), `check-test-masking` (blokuoja susilpnintus patvirtinimus), `pr-evidence` (teiginiui apie sėkmę būtinas įrodymų blokas), `test-discovery` (kiekvieną testą turi aptikti vykdymo įrankis).
+- **67router:** `pr-test-policy` (produkcinio kodo pakeitimams būtinas testas), `check-test-masking` (blokuoja susilpnintus patvirtinimus), `pr-evidence` (teiginiui apie sėkmę būtinas įrodymų blokas), `test-discovery` (kiekvieną testą turi aptikti vykdymo įrankis).
 - **Bendrai:** „naujas kodas ⇒ naujas testas“ kontrolė + pašalintų patvirtinimų / tautologijų aptikimo priemonė + įrodymų reikalavimas (TDD arba veikiantis testas) + garantija, kad nė vienas testas neliktų neaprėptas paieškos šablonų.
 
 ### 5. Sudėtingumas ir kodo būklė (kartelės)
 
-- **OmniRoute:** ESLint įspėjimai (3769↓), jscpd dubliavimas (5.72%↓), ciklomatinis sudėtingumas ir didžiausias eilučių skaičius (1800↓), kognityvinis sudėtingumas sonarjs (753↓), nenaudojamas kodas / nenaudojami eksportai knip (339↓), kiekvieno failo dydis (užfiksuotas, gali tik mažėti), ciklinės priklausomybės (individualus Tarjan algoritmas, blokuojantis).
+- **67router:** ESLint įspėjimai (3769↓), jscpd dubliavimas (5.72%↓), ciklomatinis sudėtingumas ir didžiausias eilučių skaičius (1800↓), kognityvinis sudėtingumas sonarjs (753↓), nenaudojamas kodas / nenaudojami eksportai knip (339↓), kiekvieno failo dydis (užfiksuotas, gali tik mažėti), ciklinės priklausomybės (individualus Tarjan algoritmas, blokuojantis).
 - **Bendrai:** taikykite kartelę kiekvienai kodo būklės metrikai (įspėjimams, dubliavimui, ciklomatiniam **ir** kognityviniam sudėtingumui, nenaudojamam kodui, failų dydžiui, importavimo ciklams). Kryptis visada yra „jokio regreso“.
 
 ### 6. Statinis saugumas (SAST + paslaptys)
 
-- **OmniRoute:** CodeQL (įspėjimų kartelė = 0), gitleaks (`[extend] useDefault=true` — itin svarbu!), SonarQube, individualios saugumo taisyklės (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (įspėjimų kartelė = 0), gitleaks (`[extend] useDefault=true` — itin svarbu!), SonarQube, individualios saugumo taisyklės (public-creds, error-helper, route-guard-membership, route-validation).
 - **Bendrai:** SAST (CodeQL/Sonar/semgrep) su įspėjimų kartele + paslapčių skaitytuvas su **paveldėtu numatytuoju taisyklių rinkiniu** (numatytąjį rinkinį pakeičianti individuali konfigūracija sukuria akląją zoną) + projektui būdingos griežtųjų taisyklių saugumo kontrolės.
 
 ### 7. Tiekimo grandinė (priklausomybės)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX leidžiamųjų sąrašas), lockfile-lint (HTTPS+sha512+registry), `check-deps` apsauga nuo „slopsquatting“ (leidžiamųjų sąrašas + amžius ≥72 val.).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX leidžiamųjų sąrašas), lockfile-lint (HTTPS+sha512+registry), `check-deps` apsauga nuo „slopsquatting“ (leidžiamųjų sąrašas + amžius ≥72 val.).
 - **Bendrai:** kelių šaltinių SCA + licencijų leidžiamųjų sąrašas + priklausomybių užrakto failo vientisumo patikra + priklausomybių leidžiamųjų sąrašas su amžiaus / „typosquatting“ patikra + atnaujinimus grupuojantis robotas.
 
 ### 8. Tiekimo grandinė (kompiliavimas ir leidyba)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA kilmės patvirtinimas (`--provenance`), OpenSSF Scorecard (kas savaitę), darbo eigų sustiprinimas (zizmor: artipacked→`persist-credentials:false`, podėlio užnuodijimas, prieigos raktų leidimai).
+- **67router:** SBOM (CycloneDX + syft), SLSA kilmės patvirtinimas (`--provenance`), OpenSSF Scorecard (kas savaitę), darbo eigų sustiprinimas (zizmor: artipacked→`persist-credentials:false`, podėlio užnuodijimas, prieigos raktų leidimai).
 - **Bendrai:** publikuojant sugeneruoti SBOM + pasirašytas kilmės patvirtinimas (SLSA L2+) + periodinis Scorecard + sustiprintos visos darbo eigos (mažiausių būtinų privilegijų prieigos raktai, neišsaugomi kredencialai, kai kodą išsiregistruoja pakeitimų neišsiunčiantys procesai, veiksmai susieti su konkrečiu SHA).
 
 ### 9. Kontraktai ir API
 
-- **OmniRoute:** oasdiff (nesuderinami OpenAPI pakeitimai), schemathesis (kasnaktinis kontraktų „fuzz“ testavimas), openapi-coverage (dokumentuotų maršrutų procentas, kartelė 38.3%), openapi-security-tiers (specifikacija ir maršruto apsauga).
+- **67router:** oasdiff (nesuderinami OpenAPI pakeitimai), schemathesis (kasnaktinis kontraktų „fuzz“ testavimas), openapi-coverage (dokumentuotų maršrutų procentas, kartelė 38.3%), openapi-security-tiers (specifikacija ir maršruto apsauga).
 - **Bendrai:** nesuderinamų kontrakto pakeitimų palyginimas (oasdiff/buf) + savybėmis pagrįstas „fuzz“ testavimas pagal specifikaciją (schemathesis) + tik didinama dokumentacijos aprėpties kartelė + specifikacijos ir kodo nuoseklumas.
 
 ### 10. Dokumentacija ir i18n (apsauga nuo pasenimo)
 
-- **OmniRoute:** docs-sync (veidrodinės versijos), docs-counts-sync (skaičiai dokumentacijoje ir kode), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + kartelė 80.1%).
+- **67router:** docs-sync (veidrodinės versijos), docs-counts-sync (skaičiai dokumentacijoje ir kode), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + kartelė 80.1%).
 - **Bendrai:** sinchronizuokite versijas / skaičius / aplinkos kintamuosius tarp dokumentacijos ir kodo (tikrinkite, o ne pasitikėkite) + tikrinkite vidines nuorodas + taikykite tik didinamą i18n aprėpties kartelę.
 
 ### 11. Apsauga nuo haliucinacijų / nuoseklumas (reta kategorija)
 
-- **OmniRoute:** known-symbols (tekstinė iškvietimo nuoroda ⇒ egzistuojantis simbolis), provider-consistency, fetch-targets (kliento užklausa ⇒ realus maršrutas), docs-symbols, db-rules (griežtosios taisyklės #2/#5), migration-numbering.
+- **67router:** known-symbols (tekstinė iškvietimo nuoroda ⇒ egzistuojantis simbolis), provider-consistency, fetch-targets (kliento užklausa ⇒ realus maršrutas), docs-symbols, db-rules (griežtosios taisyklės #2/#5), migration-numbering.
 - **Bendrai:** kiekvienam „dubliuojamam tiesos šaltiniui“ (registrui, tekstinėmis reikšmėmis grindžiamam iškvietimui, nuorodoms tarp sluoksnių) sukurkite kontrolę, įrodančią, kad abi pusės sutampa. Taip aptinkamas pasenimas, kurio tipų patikra ir testai neaptinka.
 
 ### 12. Atsparumas ir srities specifika (priklauso nuo produkto)
 
-- **OmniRoute:** chaos (gedimų įterpimas), heap-growth (atminties nuotėkis), k6 (ilgalaikės apkrovos testavimas), promptfoo+garak (LLM pažeidžiamumų testavimas pagal OWASP LLM Top 10), 3 atsparumo dėsniai (grandinės pertraukiklis / atvėsimo laikotarpis / blokavimas).
+- **67router:** chaos (gedimų įterpimas), heap-growth (atminties nuotėkis), k6 (ilgalaikės apkrovos testavimas), promptfoo+garak (LLM pažeidžiamumų testavimas pagal OWASP LLM Top 10), 3 atsparumo dėsniai (grandinės pertraukiklis / atvėsimo laikotarpis / blokavimas).
 - **Bendrai:** nustatykite **jūsų** sričiai būdingus gedimų režimus ir kiekvienam sukurkite kontrolę (net jei ji vykdoma tik kasnakt). DI programoms: įterpimo atakų testavimas. Paskirstytosioms sistemoms: chaoso + nuotėkio + ilgalaikės apkrovos testavimas.
 
 ---

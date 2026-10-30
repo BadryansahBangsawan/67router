@@ -4,12 +4,12 @@
 
 ---
 
-Az OmniRoute **kétféle** módot kínál az OpenAI Codex használatára:
+A 67router **kétféle** módot kínál az OpenAI Codex használatára:
 
 | Szolgáltató            | Hogyan kommunikál az OpenAI-jal                                                                                                                                                                                                                    | Használati korlátozás                                                                |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | **`codex`**            | A ChatGPT/OpenAI OAuth-tokenjét közvetlenül továbbítja a Responses API-nak                                                                                                                                                                         | **Igen** — a hivatalos munkamenet nem használható proxykon vagy routereken keresztül |
-| **`codex-app-server`** | A **Codex CLI saját `codex app-server` folyamatát** vezérli JSON-RPC/WebSocket kapcsolaton keresztül; az OAuth-hitelesítést (`~/.codex/auth.json`) a CLI kezeli és frissíti automatikusan, pontosan úgy, mint egy interaktív `codex` munkamenetben | **Nincs** — az OmniRoute soha nem továbbít tokent az API-nak                         |
+| **`codex-app-server`** | A **Codex CLI saját `codex app-server` folyamatát** vezérli JSON-RPC/WebSocket kapcsolaton keresztül; az OAuth-hitelesítést (`~/.codex/auth.json`) a CLI kezeli és frissíti automatikusan, pontosan úgy, mint egy interaktív `codex` munkamenetben | **Nincs** — a 67router soha nem továbbít tokent az API-nak                           |
 
 Mivel a `codex-app-server` soha nem továbbít tokent, nem vonatkozik rá a
 munkamenet-továbbítással kapcsolatos használati korlátozás. Ehhez azonban
@@ -21,7 +21,7 @@ amelybe **be kell jelentkezni**.
 ## 1. Architektúra
 
 ```
-┌─ OmniRoute alkalmazás ───────────┐        ┌─ codex-app-server segédkonténer ───┐
+┌─ 67router alkalmazás ───────────┐        ┌─ codex-app-server segédkonténer ───┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ képességtoken)               │  JSON  │  --ws-auth capability-token         │
@@ -81,7 +81,7 @@ lévő token elavult (mindig készül biztonsági másolat).
 - **Nyilvános felhasználó, helyileg telepített codex nélkül** — ez nem számít:
   a segédkonténer tartalmazza a CLI-t. A felhasználó csak a vezérlőpulton
   keresztül végez hitelesítést.
-- **Közvetlenül a gépre telepített OmniRoute (segédkonténer nélkül, gazdagépi codexszel)** —
+- **Közvetlenül a gépre telepített 67router (segédkonténer nélkül, gazdagépi codexszel)** —
   állítsa az `OMNIROUTE_CODEX_APPSERVER_WS` értékét a saját `codex app-server`
   példányára, és győződjön meg arról, hogy be van jelentkezve a gazdagépi
   codexbe; ha a bináris hiányzik, megjelenik a „codex nincs telepítve” tipp.

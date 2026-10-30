@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector የOmniRoute አብሮገነብ HTTPS ትራፊክ ማረሚያ ነው — ከCharles Proxy / mitmweb / HTTP Toolkit ጋር ተመሳሳይ፣ **LLM-aware** እና **agent-aware** የሆነ መሣሪያ ነው። በ`/dashboard/tools/traffic-inspector` ላይ የሚገኝ ሲሆን እስከ 5 ከሚደርሱ በአንድ ጊዜ ከሚሠሩ የቀረጻ ምንጮች ቀጥታ ትራፊክ ይቀበላል።
+Traffic Inspector የ67router አብሮገነብ HTTPS ትራፊክ ማረሚያ ነው — ከCharles Proxy / mitmweb / HTTP Toolkit ጋር ተመሳሳይ፣ **LLM-aware** እና **agent-aware** የሆነ መሣሪያ ነው። በ`/dashboard/tools/traffic-inspector` ላይ የሚገኝ ሲሆን እስከ 5 ከሚደርሱ በአንድ ጊዜ ከሚሠሩ የቀረጻ ምንጮች ቀጥታ ትራፊክ ይቀበላል።
 
 **የዳሽቦርድ መገኛ:** `/dashboard/tools/traffic-inspector`
 **የጎን አሞሌ ቡድን:** መሣሪያዎች (ከAgentBridge በኋላ)
@@ -16,21 +16,21 @@ Traffic Inspector የOmniRoute አብሮገነብ HTTPS ትራፊክ ማረሚ�
 
 ### Traffic Inspectorን ልዩ የሚያደርጉት ነገሮች
 
-| ባህሪ                                                                 | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| በድር ላይ የተመሠረተ                                                       |    ✓    |    ✗    |    ✗    |                ✓                |
-| ክፍት ምንጭ                                                             |    ✓    |    ✗    |   ከፊል   |                ✓                |
-| **Agent-aware** (ጥያቄው ከAntigravity/Copilot/ወዘተ መምጣቱን ያውቃል)          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM-aware** (የOpenAI/Anthropic/Gemini ቅርጽን፣ ቶከኖችን እና ሞዴልን ይተነትናል) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **የሞዴል ማዛመድ ይታያል** (gemini-3-flash → claude-sonnet-4.7)             |    ✗    |    ✗    |    ✗    |                ✓                |
-| **የፕሮክሲ/የላይኛው አገልጋይ መዘግየት መለያየት**                                   |   ከፊል   |    ✗    |    ✗    |                ✓                |
-| **ከOmniRoute ጋር የተዋሃደ** መስመር ማስያዝ፣ አማራጭ መንገድ እና ወጪ                  |    ✗    |    ✗    |    ✗    |                ✓                |
-| **የሥርዓቱ አጠቃላይ ፕሮክሲ ማረም** (በማሽኑ ላይ ያለ ማንኛውም መተግበሪያ)                  |    ✓    |    ✓    |    ✓    |                ✓                |
-| **ብጁ አስተናጋጅ ቀረጻ** (ለእያንዳንዱ አስተናጋጅ የDNS ማዘዋወር)                       |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY የአካባቢ ተለዋዋጭ ሁነታ**                                      |    ✓    |    ✓    |    ✓    |                ✓                |
-| **የውይይት እይታ** (ባለብዙ ዙር አረፋዎች፣ tool_use/tool_result)                 |    ✗    |    ✗    |    ✗    |                ✓                |
-| **የSSE ዥረት ማዋሃጃ** (ከልዩነት ክስተቶች መልሶ ይገነባል)                           |    ✗    |    ✗    |    ✗    |                ✓                |
-| **የክፍለ ጊዜ ቀረጻ** (ስም ሊሰጠው እና ወደ .har/.jsonl ሊላክ የሚችል)                |    ✗    |    ✓    |    ✓    |                ✓                |
+| ባህሪ                                                                 | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| በድር ላይ የተመሠረተ                                                       |    ✓    |    ✗    |    ✗    |               ✓                |
+| ክፍት ምንጭ                                                             |    ✓    |    ✗    |   ከፊል   |               ✓                |
+| **Agent-aware** (ጥያቄው ከAntigravity/Copilot/ወዘተ መምጣቱን ያውቃል)          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM-aware** (የOpenAI/Anthropic/Gemini ቅርጽን፣ ቶከኖችን እና ሞዴልን ይተነትናል) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **የሞዴል ማዛመድ ይታያል** (gemini-3-flash → claude-sonnet-4.7)             |    ✗    |    ✗    |    ✗    |               ✓                |
+| **የፕሮክሲ/የላይኛው አገልጋይ መዘግየት መለያየት**                                   |   ከፊል   |    ✗    |    ✗    |               ✓                |
+| **ከ67router ጋር የተዋሃደ** መስመር ማስያዝ፣ አማራጭ መንገድ እና ወጪ                   |    ✗    |    ✗    |    ✗    |               ✓                |
+| **የሥርዓቱ አጠቃላይ ፕሮክሲ ማረም** (በማሽኑ ላይ ያለ ማንኛውም መተግበሪያ)                  |    ✓    |    ✓    |    ✓    |               ✓                |
+| **ብጁ አስተናጋጅ ቀረጻ** (ለእያንዳንዱ አስተናጋጅ የDNS ማዘዋወር)                       |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY የአካባቢ ተለዋዋጭ ሁነታ**                                      |    ✓    |    ✓    |    ✓    |               ✓                |
+| **የውይይት እይታ** (ባለብዙ ዙር አረፋዎች፣ tool_use/tool_result)                 |    ✗    |    ✗    |    ✗    |               ✓                |
+| **የSSE ዥረት ማዋሃጃ** (ከልዩነት ክስተቶች መልሶ ይገነባል)                           |    ✗    |    ✗    |    ✗    |               ✓                |
+| **የክፍለ ጊዜ ቀረጻ** (ስም ሊሰጠው እና ወደ .har/.jsonl ሊላክ የሚችል)                |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### አርክቴክቸሩ በአንድ አንቀጽ
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // ምላሹ SSE ከሆነ true
   mappedTo: string | null; // x-omniroute-mapped ራስጌ
-  costEstimateUsd: number | null; // በOmniRoute ዋጋ አወጣጥ ላይ የተመሠረተ የተገመተ ወጪ
+  costEstimateUsd: number | null; // በ67router ዋጋ አወጣጥ ላይ የተመሠረተ የተገመተ ወጪ
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### የስርዓት ፕሮክሲ ወደ ቀድሞው አለመመለስ
 
-OmniRoute የስርዓት-አቀፍ ፕሮክሲ ሁነታ ንቁ በሆነበት ጊዜ ከተበላሸ፦
+67router የስርዓት-አቀፍ ፕሮክሲ ሁነታ ንቁ በሆነበት ጊዜ ከተበላሸ፦
 
 **macOS፦**
 
@@ -438,7 +438,7 @@ netsh winhttp reset proxy
 | GET    | `/requests`                 | ጥያቄዎችን ዘርዝር (ሊጣራ የሚችል፦ `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | የአንድ ጥያቄ ዝርዝሮች                                                                 |
 | DELETE | `/requests`                 | በማህደረ ትውስታ ያለውን buffer አጽዳ                                                     |
-| POST   | `/requests/{id}/replay`     | ተመሳሳዩን ጥያቄ በOmniRoute router በኩል እንደገና አስፈጽም                                   |
+| POST   | `/requests/{id}/replay`     | ተመሳሳዩን ጥያቄ በ67router router በኩል እንደገና አስፈጽም                                    |
 | PUT    | `/requests/{id}/annotation` | በጥያቄ ላይ ማስታወሻ አስቀምጥ ወይም አዘምን                                                   |
 
 ### WebSocket

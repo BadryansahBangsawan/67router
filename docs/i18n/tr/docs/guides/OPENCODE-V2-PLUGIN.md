@@ -4,14 +4,14 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2`, modeller, kombinasyonlar ve otomatik kombinasyonlar dahil olmak üzere tüm OmniRoute kataloğunuzu görünen adlar, fiyatlandırma ve ücretsiz kullanım katmanı limitleriyle OpenCode v2'nin model seçicisine ekler.
+`@omniroute/opencode-plugin-v2`, modeller, kombinasyonlar ve otomatik kombinasyonlar dahil olmak üzere tüm 67router kataloğunuzu görünen adlar, fiyatlandırma ve ücretsiz kullanım katmanı limitleriyle OpenCode v2'nin model seçicisine ekler.
 
 OpenCode v1 ve v2 eklentileri farklı sözleşmeler üzerinden yüklediği için bu paket, `@omniroute/opencode-plugin` paketinden ayrıdır. OpenCode ana sürümünüzle eşleşeni seçin; aralarında hiçbir şey paylaşılmadığından birini yükseltmek diğerini yükseltmenizi gerektirmez.
 
 ## Gereksinimler
 
 - OpenCode v2.
-- Erişilebilir bir OmniRoute ağ geçidi (varsayılan olarak `http://localhost:20128`).
+- Erişilebilir bir 67router ağ geçidi (varsayılan olarak `http://localhost:20128`).
 - Node.js 22 veya 24.
 
 ## Kurulum
@@ -103,7 +103,7 @@ Bunu kapatmak için `"geminiSanitization": false` ayarını kullanın.
 
 | Belirti                                                    | Neden                                                                                                                             |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Seçicide OmniRoute modeli görünmüyor                       | Anahtar çözümlenemedi (başlangıç uyarısını kontrol edin) veya ağ geçidine erişilemiyor                                            |
+| Seçicide 67router modeli görünmüyor                        | Anahtar çözümlenemedi (başlangıç uyarısını kontrol edin) veya ağ geçidine erişilemiyor                                            |
 | Ham model kimlikleri var; kombinasyon ve fiyatlandırma yok | Yönetim uç noktaları belirteci reddetti — `managementReadToken` değerini ayarlayın                                                |
 | Kısa veya boş `freeOnly` kataloğu                          | Yönetim belirteci yok veya belirteç reddedildi — ana makine günlüğündeki yenileme özeti satırını (`unmatched-free` sayısı) okuyun |
 | `opencode-<id>/…` öğesine sabitlenmiş bir oturum           | v1 eklentisi `opencode-<id>` yayımlıyordu; v2 ise doğrudan `<id>` yayımlar, bu nedenle modeli `<id>/…` altında yeniden seçin      |

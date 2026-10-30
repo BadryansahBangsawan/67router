@@ -7,11 +7,11 @@
 Para sa nakabahaging executable manifest, mga pinaghihigpitang child environment, at persistent na pag-setup ng
 Gemini, tingnan ang [mga kontrata sa paglulunsad ng CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-May kasamang pamilya ng mga command na `setup-*` ang OmniRoute na nagko-configure ng coding
-CLI (Codex, Claude Code, OpenCode, Cline, …) upang gamitin ang OmniRoute bilang backend nito — kaya
-nakikipag-ugnayan ang tool sa **isang** endpoint at nagru-route ang OmniRoute sa tamang provider gamit ang
+May kasamang pamilya ng mga command na `setup-*` ang 67router na nagko-configure ng coding
+CLI (Codex, Claude Code, OpenCode, Cline, …) upang gamitin ang 67router bilang backend nito — kaya
+nakikipag-ugnayan ang tool sa **isang** endpoint at nagru-route ang 67router sa tamang provider gamit ang
 awtomatikong fallback. Binabasa ng bawat command ang **live** na catalog ng modelo mula sa tumatakbong
-OmniRoute (lokal o remote) at isinusulat ang sariling config file ng tool sa **iyong**
+67router (lokal o remote) at isinusulat ang sariling config file ng tool sa **iyong**
 machine. Ginagamit ang environment variable bilang reference sa API key saanman ito sinusuportahan ng tool.
 Nakatala sa ibaba ang mga command na nagpapanatili ng environment file na lokal sa tool.
 
@@ -53,7 +53,7 @@ mga masusing gabay para sa bawat tool:
 
 - [Configuration ng Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Configuration ng Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Remote Mode](./REMOTE-MODE.md) — kontrolin ang remote na OmniRoute (VPS / Tailnet) mula sa iyong laptop
+- [Remote Mode](./REMOTE-MODE.md) — kontrolin ang remote na 67router (VPS / Tailnet) mula sa iyong laptop
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — ang extension na OmniCopilot; maaari rin nitong patakbuhin ang mga
   command na `setup-*` na ito para sa iyo mula mismo sa editor
 
@@ -88,7 +88,7 @@ kapag may `--remote` (o aktibong remote context), kinukuha nito ang catalog mula
 
 Mga tala tungkol sa mga flag (beripikado sa source ng command):
 
-- `--remote <url>` — kunin ang catalog mula sa isang remote na OmniRoute (ino-override ang `--port`
+- `--remote <url>` — kunin ang catalog mula sa isang remote na 67router (ino-override ang `--port`
   at ang aktibong context). Ibinibigay ng `--api-key <key>` ang credential para sa
   server na iyon (default ang env var na `OMNIROUTE_API_KEY`, o ang token ng aktibong context).
 - `--only <patterns>` — mga substring na pinaghihiwalay ng kuwit; panatilihin lamang ang mga model ID na tumutugma
@@ -109,7 +109,7 @@ Mga tala tungkol sa mga flag (beripikado sa source ng command):
   **codex** sa pamamagitan ng mga argumentong `-c model_providers.omniroute.*`. **Ang Qwen lamang ang run
   target na mahigpit na nangangailangan ng `--model`** — ang `omniroute run qwen` nang wala nito ay lumalabas
   na may `2` at tahasang error.
-- `--port <port>` — lokal na port ng OmniRoute (default ang `20128`, binabalewala kapag nakatakda ang `--remote`).
+- `--port <port>` — lokal na port ng 67router (default ang `20128`, binabalewala kapag nakatakda ang `--remote`).
   Makikita sa lahat ng `setup-*` at sa parehong launcher.
 - Mga exit code ng `omniroute run`: ipinapasa nang eksakto ang sariling exit code ng child CLI;
   `2` = mga di-wastong argumento (hindi suportadong target, nawawalang kinakailangang
@@ -153,7 +153,7 @@ hindi ipinapakita bilang mga target na maaaring ilunsad.
 
 ## Lokal na paggamit
 
-Kapag tumatakbo ang OmniRoute sa `localhost:20128`, patakbuhin lang ang setup command para sa iyong tool. Kinukuha ang catalog mula sa lokal na server.
+Kapag tumatakbo ang 67router sa `localhost:20128`, patakbuhin lang ang setup command para sa iyong tool. Kinukuha ang catalog mula sa lokal na server.
 
 ```bash
 # Codex: magsulat ng isang profile para sa bawat tumugmang model sa ~/.codex/
@@ -180,8 +180,8 @@ omniroute setup-continue --dry-run
 Maglunsad nang hindi nagsusulat ng anumang config (env-injection lamang):
 
 ```bash
-omniroute launch                 # Claude Code → lokal na OmniRoute
-omniroute launch-codex           # Codex CLI → lokal na OmniRoute
+omniroute launch                 # Claude Code → lokal na 67router
+omniroute launch-codex           # Codex CLI → lokal na 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -199,7 +199,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Malayuang paggamit
 
-Ituro ang anumang setup command sa isang malayuang OmniRoute gamit ang `--remote` + `--api-key`. Kinukuha ang catalog mula sa remote; isinusulat ang config sa iyong lokal na machine.
+Ituro ang anumang setup command sa isang malayuang 67router gamit ang `--remote` + `--api-key`. Kinukuha ang catalog mula sa remote; isinusulat ang config sa iyong lokal na machine.
 
 ```bash
 # OpenCode laban sa isang malayuang VPS, panatilihin lamang ang mga glm/kimi model
@@ -237,7 +237,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Ang dalawang anyo ay parehong nagsusulat ng isang **auth profile** ng 5dive, at pagkatapos ay kumokonekta sa OmniRoute ang bawat `claude` seat na nakatali sa profile na iyon. Tatlong bagay ang natatangi sa target na ito:
+Ang dalawang anyo ay parehong nagsusulat ng isang **auth profile** ng 5dive, at pagkatapos ay kumokonekta sa 67router ang bawat `claude` seat na nakatali sa profile na iyon. Tatlong bagay ang natatangi sa target na ito:
 
 - **Tumatakbo ito sa fleet host bilang root.** Kumikilos ang mga verb ng 5dive sa mga lokal na systemd unit at sa isang state dir na pag-aari ng root; walang remote mode. Muling pinapatakbo ng recipe ang sarili nito sa pamamagitan ng `sudo` kapag hindi pa ito root (`--no-sudo` ang nag-o-off nito at sa halip ay nagpi-print ng command).
 - **Dapat ay `https://` ang endpoint maliban kung loopback ito.** Sumasama ang API key ng agent sa URL na iyon sa bawat request, at hindi tinatanggap ng 5dive ang isang plaintext na endpoint sa labas ng machine. Hindi eksepsiyon ang isang pribadong LAN address.
@@ -245,13 +245,13 @@ Ang dalawang anyo ay parehong nagsusulat ng isang **auth profile** ng 5dive, at 
 
 Ipinapasa ang API key sa 5dive sa pamamagitan ng **stdin** (`--api-key=-`), kaya hindi ito kailanman lumilitaw sa output ng `ps`.
 
-Ang pagtutok ng profile sa isang **combo** ng OmniRoute sa halip na sa iisang model ang nagbibigay sa fleet ng provider failover: nang tuluyang bumagsak ang pangunahing endpoint sa kalagitnaan ng turn sa run na naitala sa [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), tinapos ng agent ang mga natitirang hakbang nito gamit ang fallback at hindi kailanman inilantad ang outage.
+Ang pagtutok ng profile sa isang **combo** ng 67router sa halip na sa iisang model ang nagbibigay sa fleet ng provider failover: nang tuluyang bumagsak ang pangunahing endpoint sa kalagitnaan ng turn sa run na naitala sa [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), tinapos ng agent ang mga natitirang hakbang nito gamit ang fallback at hindi kailanman inilantad ang outage.
 
 ---
 
 ## Mga kumbensiyon sa Base URL (kung aling mga tool ang nangangailangan ng `/v1`)
 
-Inilalantad ng OmniRoute ang OpenAI interface sa `/v1`, ang Anthropic interface sa root,
+Inilalantad ng 67router ang OpenAI interface sa `/v1`, ang Anthropic interface sa root,
 at ang native na Gemini interface sa `/v1beta`. Ang bawat integrasyon ay nakakonpigura sa anyong
 inaasahan ng tool nito (beripikado sa source ng command):
 
@@ -273,7 +273,7 @@ inaasahan ng tool nito (beripikado sa source ng command):
 ## Pagpapanatili ng mga native dep sa pag-update: `--include=optional`
 
 Kapag nag-update ka gamit ang `omniroute update` (pagkatapos magkumpirma, o gamit ang `--apply`),
-pinapatakbo ng OmniRoute ang pag-install na may nakapaloob nang `--include=optional`:
+pinapatakbo ng 67router ang pag-install na may nakapaloob nang `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -301,13 +301,13 @@ luma na), `--apply` (mag-install nang hindi nagtatanong), `--changelog`, `--no-b
 Na-verify ang contract laban sa `@google/gemini-cli` 0.50.0: sinusunod ng CLI ang
 `GOOGLE_GEMINI_BASE_URL` at nagpapadala ng `POST /v1beta/models/<model>:generateContent`
 (at `:streamGenerateContent?alt=sse`) dito — eksaktong native
-Gemini surface (`/v1beta`) ng OmniRoute. Awtomatikong kino-configure iyon ng `omniroute run gemini`:
+Gemini surface (`/v1beta`) ng 67router. Awtomatikong kino-configure iyon ng `omniroute run gemini`:
 
-- `GOOGLE_GEMINI_BASE_URL` → ang aktibong OmniRoute base URL (root, walang `/v1`);
-- `GEMINI_API_KEY` → ang na-resolve na kredensiyal ng OmniRoute (option/env/context);
+- `GOOGLE_GEMINI_BASE_URL` → ang aktibong 67router base URL (root, walang `/v1`);
+- `GEMINI_API_KEY` → ang na-resolve na kredensiyal ng 67router (option/env/context);
 - isang **pansamantala at nakahiwalay na `GEMINI_CLI_HOME`** na ang `.gemini/settings.json`
   ay pumipili ng `gemini-api-key` auth, upang hindi kailanman ma-override ng nakaimbak na Google OAuth session (Code Assist)
-  ang launch na nakadirekta sa OmniRoute — inaalis pagkatapos mag-exit;
+  ang launch na nakadirekta sa 67router — inaalis pagkatapos mag-exit;
 - **kalinisan ng env**: inaalis sa child env ang `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` at `GOOGLE_GENAI_USE_GCA` (na magre-redirect
   ng auth sa Vertex/Code Assist), at itinatakda ang `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -331,7 +331,7 @@ agent-protocol integration para sa `/dashboard/acp-agents`.
 
 Tumatakbo sa CI ang mga deterministic na launch-plan regression (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Upang i-validate ang mga AKTUWAL na binary laban sa isang AKTUWAL na
-OmniRoute server, may opt-in harness sa
+67router server, may opt-in harness sa
 `tests/integration/upstream-cli-smoke.int.test.ts`. Hindi ito kailanman awtomatikong tumatakbo
 (nilalaktawan ang bawat sub-test maliban kung `RUN_CLI_SMOKE=1`), ipinapasa ang credential sa pamamagitan ng PANGALAN ng env-var
 (hindi kailanman sa pamamagitan ng value), nire-redact ang mga string na mukhang key mula sa anumang naitalang output, nilalaktawan ang

@@ -6,7 +6,7 @@
 
 ## Prezentare generală
 
-Redis este o **dependență opțională, neesențială** în OmniRoute — aplicația își reduce funcționalitatea în mod controlat (folosind
+Redis este o **dependență opțională, neesențială** în 67router — aplicația își reduce funcționalitatea în mod controlat (folosind
 mecanisme de rezervă în memorie) atunci când Redis nu este disponibil. În producție, optimizarea Redis reduce latența pentru patru
 sarcini de lucru distincte:
 
@@ -17,7 +17,7 @@ sarcini de lucru distincte:
 | Stocare pentru cote                      | `redisQuotaStore.ts`          | Instanță singleton `getRedisClient(url)` separată                        | `<prefix>quota:*`, configurabil per instanță            |
 | Întrerupător de circuit pentru încălzire | `redisCircuitBreakerStore.ts` | Client separat în `circuitBreakerFactory.ts`                             | `<prefix>warmup:cb:<connectionId>`                      |
 
-Toate cele patru sarcini de lucru folosesc același prefix de spațiu de nume, astfel încât OmniRoute să poată coexista cu alte aplicații pe o
+Toate cele patru sarcini de lucru folosesc același prefix de spațiu de nume, astfel încât 67router să poată coexista cu alte aplicații pe o
 singură instanță Redis (de exemplu, `127.0.0.1:6379`). Consultați [Spațiul de nume al cheilor](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ singură instanță Redis (de exemplu, `127.0.0.1:6379`). Consultați [Spațiul 
 
 ## Spațiul de nume al cheilor
 
-OmniRoute partajează o instanță Redis cu orice altceva rulează pe gazdă. Fără un spațiu de nume,
+67router partajează o instanță Redis cu orice altceva rulează pe gazdă. Fără un spațiu de nume,
 chei precum `auth:api_key:<sha256>` sau `rl:*` ar putea intra în conflict cu cheile altor aplicații
 care utilizează aceeași instanță Redis (această instanță rulează Redis la `127.0.0.1:6379` alături de alte servicii).
 
-Setați `REDIS_KEY_PREFIX` la un șir nevid pentru a adăuga un prefix la **fiecare** cheie OmniRoute:
+Setați `REDIS_KEY_PREFIX` la un șir nevid pentru a adăuga un prefix la **fiecare** cheie 67router:
 
 ```bash
-# .env — toate cheile OmniRoute devin omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — toate cheile 67router devin omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # păstrează spațiu pentru cache-ul de pagini al sistemului de operare
 maxmemory-policy allkeys-lru         # elimină intrările învechite din cache-ul de autentificare în condiții de presiune
 
-# Persistență (opțională — OmniRoute este sigur în caz de oprire neașteptată și fără aceasta)
+# Persistență (opțională — 67router este sigur în caz de oprire neașteptată și fără aceasta)
 save 300 1                           # creează un instantaneu cel puțin la fiecare 5 min dacă s-a modificat ≥1 cheie
 appendonly no                        # AOF nu este necesar; datele pot fi regenerate
 appendfsync no                       # fără costul suplimentar al fsync (RDB este suficient)

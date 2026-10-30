@@ -8,9 +8,9 @@
 > **Aġġornat l-aħħar:** 2026-09-16
 > **Udjenza:** Inġiniera li jżidu, iżommu, jew jiddebaggjaw servizzi inkorporati (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Is-servizzi inkorporati huma għodod sidecar ta’ proċessi installati lokalment li OmniRoute jinstalla, jissorvelja, u
+Is-servizzi inkorporati huma għodod sidecar ta’ proċessi installati lokalment li 67router jinstalla, jissorvelja, u
 jesponi bħala miri tar-routing tal-ewwel klassi. Għall-kuntrarju tal-fornituri esterni (li jiġu aċċessati permezz tal-internet
-bl-użu ta’ API keys), is-servizzi inkorporati jitħaddmu fuq l-istess magna bħal OmniRoute u jikkomunikaw permezz tal-loopback.
+bl-użu ta’ API keys), is-servizzi inkorporati jitħaddmu fuq l-istess magna bħal 67router u jikkomunikaw permezz tal-loopback.
 
 ---
 
@@ -35,7 +35,7 @@ Hemm seba' servizzi integrati:
 
 | Servizz         | Pakkett npm                                      | Port predefinit | Għan                                                                                                                                                                                                                                                                                                                                                                                                           |
 | --------------- | ------------------------------------------------ | :-------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                        |      20130      | Router tal-IA li OmniRoute jista' juża bħala sottoproveditur. Il-mudelli jiġu esposti bħala `9router/{sub}/{model}`                                                                                                                                                                                                                                                                                            |
+| **9Router**     | `9router`                                        |      20130      | Router tal-IA li 67router jista' juża bħala sottoproveditur. Il-mudelli jiġu esposti bħala `9router/{sub}/{model}`                                                                                                                                                                                                                                                                                             |
 | **CLIProxyAPI** | Binarju tar-rilaxx ta' GitHub (`cliproxy`)       |      8317       | Adattatur proxy lokali għall-flussi ta' awtentikazzjoni tal-Anthropic CLI. Jipprovdi routing alternattiv meta jiskadu t-tokens OAuth                                                                                                                                                                                                                                                                           |
 | **Mux**         | `mux` (`mux server` mingħajr interfaċċa grafika) |      8322       | Daemon lokali għall-orkestrazzjoni tal-aġenti (coder/mux). Jiġi ġestit biss iċ-ċiklu tal-ħajja tiegħu — mhuwiex destinazzjoni tar-routing (ebda proxying tal-LLM).                                                                                                                                                                                                                                             |
 | **Bifrost**     | `@maximhq/bifrost`                               |      8080       | Backend relay ta' gateway tal-IA bil-Go. Meta jkun qed jaħdem, jintgħażel awtomatikament mir-rotta relay (`/v1/relay/`)                                                                                                                                                                                                                                                                                        |
@@ -45,21 +45,21 @@ Hemm seba' servizzi integrati:
 
 Is-seba' kollha jsegwu l-istess mudell ta' superviżjoni:
 
-- OmniRoute jinstallahom taħt `DATA_DIR/services/{name}/` (iżolati mill-`package.json` ta' OmniRoute stess)
-- OmniRoute iniedihom u jimmonitorjahom bħala proċessi sekondarji
-- OmniRoute jinjetta ċavetta API temporanja fl-ambjent tal-proċess sekondarju u jdawwarha mingħajr waqfien tas-servizz (fejn applikabbli)
+- 67router jinstallahom taħt `DATA_DIR/services/{name}/` (iżolati mill-`package.json` ta' 67router stess)
+- 67router iniedihom u jimmonitorjahom bħala proċessi sekondarji
+- 67router jinjetta ċavetta API temporanja fl-ambjent tal-proċess sekondarju u jdawwarha mingħajr waqfien tas-servizz (fejn applikabbli)
 - Ir-rotot kollha tal-ġestjoni (`/api/services/*`) huma **LOCAL_ONLY** — aċċessibbli biss mil-loopback (regola stretta #17)
 
 ### Deċiżjonijiet ewlenin (mill-pjan tad-disinn)
 
-| Deċiżjoni                                         | Valur                                                                                     |
-| ------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Aċċess mid-dashboard għall-UI nattiva ta' 9Router | Reverse proxy f'`/dashboard/providers/services/9router/embed/*`                           |
-| Mekkaniżmu tal-installazzjoni                     | `npm install {package}` permezz ta' `execFile` (mingħajr interpolazzjoni tas-shell)       |
-| Modalità tal-użu                                  | Il-proveditur irreġistrat bħala `9router/{sub}/{model}` fil-magna tar-routing             |
-| Ġestjoni taċ-ċavetta API                          | OmniRoute jiġġenera, jikkripta waqt il-ħżin (AES-256-GCM), u jinjetta permezz tal-ambjent |
-| Post fid-dashboard                                | `/dashboard/providers/services` (tliet tabs)                                              |
-| Tnedija awtomatika                                | Toggle għal kull servizz, diżattivat b'mod predefinit                                     |
+| Deċiżjoni                                         | Valur                                                                                    |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Aċċess mid-dashboard għall-UI nattiva ta' 9Router | Reverse proxy f'`/dashboard/providers/services/9router/embed/*`                          |
+| Mekkaniżmu tal-installazzjoni                     | `npm install {package}` permezz ta' `execFile` (mingħajr interpolazzjoni tas-shell)      |
+| Modalità tal-użu                                  | Il-proveditur irreġistrat bħala `9router/{sub}/{model}` fil-magna tar-routing            |
+| Ġestjoni taċ-ċavetta API                          | 67router jiġġenera, jikkripta waqt il-ħżin (AES-256-GCM), u jinjetta permezz tal-ambjent |
+| Post fid-dashboard                                | `/dashboard/providers/services` (tliet tabs)                                             |
+| Tnedija awtomatika                                | Toggle għal kull servizz, diżattivat b'mod predefinit                                    |
 
 ---
 
@@ -220,7 +220,7 @@ Talbiet mhux minn loopback jirċievu `403 LOCAL_ONLY` irrispettivament mit-token
 #### `POST /api/services/9router/install`
 
 Installa 9Router minn npm. Joħloq `DATA_DIR/services/9router/` bil-`package.json`
-u n-`node_modules/` tiegħu stess. Ma joħloqx kunflitt mad-dipendenzi ta’ OmniRoute stess.
+u n-`node_modules/` tiegħu stess. Ma joħloqx kunflitt mad-dipendenzi ta’ 67router stess.
 
 **Korp tat-talba** (kollha fakultattivi):
 
@@ -381,7 +381,7 @@ Jirritorna status ikkombinat f’ħin reali + mid-DB, inklużi l-metadata tal-ve
 #### `POST /api/services/9router/auto-start`
 
 Jixgħel jew jitfi l-flag tal-bidu awtomatiku. Meta `enabled: true`, is-servizz jibda awtomatikament
-id-darba li jmiss li OmniRoute jibda (jekk is-servizz ikun installat).
+id-darba li jmiss li 67router jibda (jekk is-servizz ikun installat).
 
 **Korp tat-talba:**
 
@@ -592,7 +592,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Dan il-proxy:
 
 - Jgħaddi t-talba lil `http://127.0.0.1:{port}/{path}` (loopback biss)
-- Ineħħi l-headers `cookie` u `authorization` deħlin (l-ebda tnixxija tas-sessjoni ta’ OmniRoute)
+- Ineħħi l-headers `cookie` u `authorization` deħlin (l-ebda tnixxija tas-sessjoni ta’ 67router)
 - Jinjetta `Authorization: Bearer {apiKey}` għall-awtentikazzjoni ta’ 9Router
 - Ineħħi `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` mir-rispons
 - Jikteb mill-ġdid ir-risponsi HTML biex jinjetta `<base href>` u jinnormalizza l-mogħdijiet assoluti (`/foo` → `/dashboard/.../embed/foo`)
@@ -629,7 +629,7 @@ tal-livelli.
 ### Injezzjoni taċ-ċavetta tal-API
 
 9Router u Mux jeħtieġu ċavetta tal-API/token bearer għall-endpoints HTTP tagħhom stess.
-OmniRoute:
+67router:
 
 1. Jiġġenera ċavetta permezz ta’ `crypto.randomBytes(32).toString("base64url")` bi
    prefiss speċifiku għas-servizz (`nr_` għal 9Router, `mx_` għal Mux).
@@ -809,7 +809,7 @@ Jekk is-servizz inkorporat jesponi endpoint `/v1/chat/completions` kompatibbli m
 
 1. Iċċekkja `GET /api/services/{name}/logs` (jew il-pannell Logs fid-dashboard). Fittex
    għal linji bħal `Error: ENOENT`, `address already in use`, jew `Cannot find module`.
-2. Ivverifika li `npm` jinsab fil-PATH: `which npm` mill-istess kont tal-utent li jħaddem OmniRoute.
+2. Ivverifika li `npm` jinsab fil-PATH: `which npm` mill-istess kont tal-utent li jħaddem 67router.
 3. Ivverifika li s-servizz huwa installat: iċċekkja `GET /api/services/{name}/status` għal
    `installedVersion`. Jekk ikun `null`, l-ewwel ħaddem l-installazzjoni.
 4. Iċċekkja li `DATA_DIR/services/{name}/node_modules/` jeżisti u mhuwiex vojt.
@@ -847,7 +847,7 @@ ta' bidu, żid `healthIntervalMs` għal 5000 u `stopTimeoutMs` għal 30 000.
 3. Il-port jista' jiġi kkonfigurat għal kull servizz f'`bootstrap.ts` permezz tal-qasam `port`.
 
 **Nota:** 9Router juża l-port 20130 b'mod predefinit speċifikament biex jevita kunflitt
-mal-port predefinit 20128 ta' OmniRoute.
+mal-port predefinit 20128 ta' 67router.
 
 ---
 
@@ -857,13 +857,13 @@ mal-port predefinit 20128 ta' OmniRoute.
 
 **Kawżi:**
 
-- `DATA_DIR` jew id-direttorju ġenitur tiegħu ma jistax jinkiteb mill-proċess ta' OmniRoute.
+- `DATA_DIR` jew id-direttorju ġenitur tiegħu ma jistax jinkiteb mill-proċess ta' 67router.
 - Qed jitħaddem ġewwa Docker rootless mingħajr aċċess għall-kitba fil-volum immappjat.
 
 **Soluzzjoni:**
 
 1. Iċċekkja `DATA_DIR` (predefinit: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Kun żgur li l-utent tal-proċess ta' OmniRoute huwa sid id-direttorju: `chown -R $USER ~/.omniroute/`
+2. Kun żgur li l-utent tal-proċess ta' 67router huwa sid id-direttorju: `chown -R $USER ~/.omniroute/`
 3. F'Docker, kun żgur li l-immuntar tal-volum għandu l-permessi korretti għall-utent tal-container.
 
 ---
@@ -911,16 +911,16 @@ tal-kamp ta’ applikazzjoni tal-ġestjoni. Ara `docs/security/ROUTE_GUARD_TIERS
 
 **M: 9Router u CLIProxyAPI se jkunu disponibbli f’deployments tal-produzzjoni/cloud?**
 
-Iva. Iż-żewġ servizzi jsegwu l-istess mudell ibbażat l-ewwel fuq l-użu lokali bħal OmniRoute innifsu. Dawn jaħdmu
+Iva. Iż-żewġ servizzi jsegwu l-istess mudell ibbażat l-ewwel fuq l-użu lokali bħal 67router innifsu. Dawn jaħdmu
 fuq l-istess magna u jikkomunikaw permezz tal-loopback. “Produzzjoni” hawnhekk tfisser il-VPS
-jew is-server lokali fejn jiġi deployed OmniRoute, mhux fornitur remot tal-cloud.
+jew is-server lokali fejn jiġi deployed 67router, mhux fornitur remot tal-cloud.
 
 ---
 
 **M: Kif niddibaggja s-superviżur?**
 
 1. Segwi l-fluss tal-logs SSE: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Iċċekkja l-logs strutturati fl-output pino ta’ OmniRoute, iffiltrati skont
+2. Iċċekkja l-logs strutturati fl-output pino ta’ 67router, iffiltrati skont
    in-namespace `service:supervisor`.
 3. Spezzjona r-ringiela fid-DB: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Uża `GET /api/services/9router/status` biex tara l-istat attwali dirett, il-PID, is-saħħa,

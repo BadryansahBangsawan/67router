@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector គឺជាឧបករណ៍បំបាត់កំហុសចរាចរណ៍ HTTPS ដែលភ្ជាប់មកជាមួយ OmniRoute — ជាឧបករណ៍ស្រដៀងនឹង Charles Proxy / mitmweb / HTTP Toolkit ដែល **យល់ដឹងអំពី LLM** និង **យល់ដឹងអំពី agent**។ វាស្ថិតនៅ `/dashboard/tools/traffic-inspector` ហើយទទួលចរាចរណ៍ផ្ទាល់ពីប្រភពចាប់យករហូតដល់ 5 ក្នុងពេលដំណាលគ្នា។
+Traffic Inspector គឺជាឧបករណ៍បំបាត់កំហុសចរាចរណ៍ HTTPS ដែលភ្ជាប់មកជាមួយ 67router — ជាឧបករណ៍ស្រដៀងនឹង Charles Proxy / mitmweb / HTTP Toolkit ដែល **យល់ដឹងអំពី LLM** និង **យល់ដឹងអំពី agent**។ វាស្ថិតនៅ `/dashboard/tools/traffic-inspector` ហើយទទួលចរាចរណ៍ផ្ទាល់ពីប្រភពចាប់យករហូតដល់ 5 ក្នុងពេលដំណាលគ្នា។
 
 **ទីតាំងផ្ទាំងគ្រប់គ្រង:** `/dashboard/tools/traffic-inspector`
 **ក្រុមរបារចំហៀង:** ឧបករណ៍ (បន្ទាប់ពី AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector គឺជាឧបករណ៍បំបាត់កំហុ�
 
 ### អ្វីដែលធ្វើឱ្យ Traffic Inspector មានលក្ខណៈពិសេស
 
-| មុខងារ                                                                        | mitmweb  | Charles | Fiddler  | **OmniRoute Traffic Inspector** |
-| ----------------------------------------------------------------------------- | :------: | :-----: | :------: | :-----------------------------: |
-| ផ្អែកលើវេប                                                                    |    ✓     |    ✗    |    ✗     |                ✓                |
-| ប្រភពបើកចំហ                                                                   |    ✓     |    ✗    | មួយផ្នែក |                ✓                |
-| **យល់ដឹងអំពី agent** (ដឹងថាសំណើមកពី Antigravity/Copilot/ជាដើម)                |    ✗     |    ✗    |    ✗     |                ✓                |
-| **យល់ដឹងអំពី LLM** (ញែកទម្រង់ OpenAI/Anthropic/Gemini, token, model)          |    ✗     |    ✗    |    ✗     |                ✓                |
-| **អាចមើលឃើញការផ្គូផ្គង model** (gemini-3-flash → claude-sonnet-4.7)           |    ✗     |    ✗    |    ✗     |                ✓                |
-| **ការបែងចែក latency រវាង proxy/upstream**                                     | មួយផ្នែក |    ✗    |    ✗     |                ✓                |
-| **រួមបញ្ចូលជាមួយការកំណត់ផ្លូវ ការប្រើ fallback និងការគណនាថ្លៃរបស់ OmniRoute** |    ✗     |    ✗    |    ✗     |                ✓                |
-| **ការបំបាត់កំហុស proxy ទូទាំងប្រព័ន្ធ** (កម្មវិធីណាមួយនៅលើម៉ាស៊ីន)            |    ✓     |    ✓    |    ✓     |                ✓                |
-| **ការចាប់យក host ផ្ទាល់ខ្លួន** (ការបញ្ជូនបន្ត DNS តាម host នីមួយៗ)            |    ✓     |    ✓    |    ✓     |                ✓                |
-| **របៀប env HTTP_PROXY**                                                       |    ✓     |    ✓    |    ✓     |                ✓                |
-| **ទិដ្ឋភាពសន្ទនា** (ពពុះសារច្រើនវេន, tool_use/tool_result)                    |    ✗     |    ✗    |    ✗     |                ✓                |
-| **ឧបករណ៍បញ្ចូលស្ទ្រីម SSE** (បង្កើតឡើងវិញពីព្រឹត្តិការណ៍ delta)               |    ✗     |    ✗    |    ✗     |                ✓                |
-| **ការថត session** (មានឈ្មោះ អាចនាំចេញជា .har/.jsonl)                          |    ✗     |    ✓    |    ✓     |                ✓                |
+| មុខងារ                                                                       | mitmweb  | Charles | Fiddler  | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------------- | :------: | :-----: | :------: | :----------------------------: |
+| ផ្អែកលើវេប                                                                   |    ✓     |    ✗    |    ✗     |               ✓                |
+| ប្រភពបើកចំហ                                                                  |    ✓     |    ✗    | មួយផ្នែក |               ✓                |
+| **យល់ដឹងអំពី agent** (ដឹងថាសំណើមកពី Antigravity/Copilot/ជាដើម)               |    ✗     |    ✗    |    ✗     |               ✓                |
+| **យល់ដឹងអំពី LLM** (ញែកទម្រង់ OpenAI/Anthropic/Gemini, token, model)         |    ✗     |    ✗    |    ✗     |               ✓                |
+| **អាចមើលឃើញការផ្គូផ្គង model** (gemini-3-flash → claude-sonnet-4.7)          |    ✗     |    ✗    |    ✗     |               ✓                |
+| **ការបែងចែក latency រវាង proxy/upstream**                                    | មួយផ្នែក |    ✗    |    ✗     |               ✓                |
+| **រួមបញ្ចូលជាមួយការកំណត់ផ្លូវ ការប្រើ fallback និងការគណនាថ្លៃរបស់ 67router** |    ✗     |    ✗    |    ✗     |               ✓                |
+| **ការបំបាត់កំហុស proxy ទូទាំងប្រព័ន្ធ** (កម្មវិធីណាមួយនៅលើម៉ាស៊ីន)           |    ✓     |    ✓    |    ✓     |               ✓                |
+| **ការចាប់យក host ផ្ទាល់ខ្លួន** (ការបញ្ជូនបន្ត DNS តាម host នីមួយៗ)           |    ✓     |    ✓    |    ✓     |               ✓                |
+| **របៀប env HTTP_PROXY**                                                      |    ✓     |    ✓    |    ✓     |               ✓                |
+| **ទិដ្ឋភាពសន្ទនា** (ពពុះសារច្រើនវេន, tool_use/tool_result)                   |    ✗     |    ✗    |    ✗     |               ✓                |
+| **ឧបករណ៍បញ្ចូលស្ទ្រីម SSE** (បង្កើតឡើងវិញពីព្រឹត្តិការណ៍ delta)              |    ✗     |    ✗    |    ✗     |               ✓                |
+| **ការថត session** (មានឈ្មោះ អាចនាំចេញជា .har/.jsonl)                         |    ✗     |    ✓    |    ✓     |               ✓                |
 
 ### ស្ថាបត្យកម្មក្នុងមួយកថាខណ្ឌ
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true ប្រសិនបើជាការឆ្លើយតប SSE
   mappedTo: string | null; // header x-omniroute-mapped
-  costEstimateUsd: number | null; // តម្លៃប៉ាន់ស្មានផ្អែកលើតម្លៃរបស់ OmniRoute
+  costEstimateUsd: number | null; // តម្លៃប៉ាន់ស្មានផ្អែកលើតម្លៃរបស់ 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### ប្រូកស៊ីប្រព័ន្ធមិនត្រូវបានត្រឡប់ទៅស្ថានភាពដើម
 
-ប្រសិនបើ OmniRoute គាំង ខណៈដែលមុខងារប្រូកស៊ីទូទាំងប្រព័ន្ធកំពុងសកម្ម៖
+ប្រសិនបើ 67router គាំង ខណៈដែលមុខងារប្រូកស៊ីទូទាំងប្រព័ន្ធកំពុងសកម្ម៖
 
 **macOS៖**
 
@@ -438,7 +438,7 @@ Route ទាំងអស់គឺ `LOCAL_ONLY` (សម្រាប់តែ loop
 | GET         | `/requests`                 | រាយសំណើ (អាចត្រងបាន៖ `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET         | `/requests/{id}`            | ព័ត៌មានលម្អិតនៃសំណើតែមួយ                                                     |
 | DELETE      | `/requests`                 | សម្អាត buffer ក្នុងអង្គចងចាំ                                                 |
-| POST        | `/requests/{id}/replay`     | ប្រតិបត្តិសំណើដដែលឡើងវិញតាមរយៈ router របស់ OmniRoute                         |
+| POST        | `/requests/{id}/replay`     | ប្រតិបត្តិសំណើដដែលឡើងវិញតាមរយៈ router របស់ 67router                          |
 | PUT         | `/requests/{id}/annotation` | រក្សាទុក ឬធ្វើបច្ចុប្បន្នភាពកំណត់ចំណាំលើសំណើ                                 |
 
 ### WebSocket

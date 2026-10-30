@@ -4,7 +4,7 @@
 
 ---
 
-Masu samar da Web Cookie suna ba OmniRoute damar amfani da sabis na AI ta hanyar zaman burauzarka na yanzu maimakon maɓallin API. Suna da amfani idan kana da damar amfani da wani sabis ta shafinsa kuma kana son OmniRoute ya yi amfani da wannan zaman da aka riga aka tantance.
+Masu samar da Web Cookie suna ba 67router damar amfani da sabis na AI ta hanyar zaman burauzarka na yanzu maimakon maɓallin API. Suna da amfani idan kana da damar amfani da wani sabis ta shafinsa kuma kana son 67router ya yi amfani da wannan zaman da aka riga aka tantance.
 
 Ba kamar masu samarwa masu amfani da maɓallin API ba, masu samar da Web Cookie suna tantancewa ta amfani da bayanan shaidar da burauzarka ke aikawa zuwa shafin yanar gizon.
 
@@ -49,7 +49,7 @@ DevTools
 
 Kan buƙatar `Cookie` yana ɗauke da ainihin bayanan tantancewa da burauzarka ta yi amfani da su cikin nasara.
 
-Ga yawancin masu samar da Web Cookie, wannan shi ne ƙimar da ya kamata a liƙa cikin OmniRoute.
+Ga yawancin masu samar da Web Cookie, wannan shi ne ƙimar da ya kamata a liƙa cikin 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Tsarin saiti iri ɗaya ne ga yawancin masu samar da Web Cookie.
 4. Sabunta shafin.
 5. Buɗe buƙatar taɗi ko tattaunawa da aka tantance.
 6. Kwafi bayanan shaidar tantancewa da ake buƙata.
-7. Buɗe OmniRoute.
+7. Buɗe 67router.
 8. Je zuwa **Providers → Add Provider**.
 9. Zaɓi mai samar da Web Cookie naka.
 10. Liƙa bayanan shaidar.
@@ -92,17 +92,17 @@ Shafukan yanar gizo daban-daban suna adana bayanan tantancewa ta hanyoyi daban-d
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) dandali ne na tattaunawa kyauta ga masu amfani wanda ba ya buƙatar yin rajista — ana ƙirƙirar zaman ba tare da bayyana suna ba a ziyarar farko, kuma yana ci gaba ta hanyar cookies guda uku: `uid`, `si_usr_id`, da `si_ses_id`. OmniRoute yana wakiltar endpoint ɗin `/api/dispatch` ɗaya ta hanyar id na model guda (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) dandali ne na tattaunawa kyauta ga masu amfani wanda ba ya buƙatar yin rajista — ana ƙirƙirar zaman ba tare da bayyana suna ba a ziyarar farko, kuma yana ci gaba ta hanyar cookies guda uku: `uid`, `si_usr_id`, da `si_ses_id`. 67router yana wakiltar endpoint ɗin `/api/dispatch` ɗaya ta hanyar id na model guda (`notrack-c`, alias `ntw`).
 
 ### Matakan haɗawa
 
 1. Buɗe [notrack.ai](https://notrack.ai) a browser ɗinka kuma ka bari a saita cookie na zaman da ba a bayyana suna ba.
 2. Buɗe **DevTools → Network**, sake loda shafin, sannan ka danna kowace buƙatar `/api`.
 3. A cikin **Request Headers**, kwafi cikakkiyar ƙimar header na `Cookie`.
-4. A cikin OmniRoute, je zuwa **Providers → Add Provider → NoTrack Web (Free)**.
+4. A cikin 67router, je zuwa **Providers → Add Provider → NoTrack Web (Free)**.
 5. Liƙa string ɗin cookie a cikin filin `apiKey`, sannan ka danna **Save**.
 
-OmniRoute yana fitar da `uid`, `si_usr_id`, da `si_ses_id` daga string ɗin da aka liƙa, sannan ya sake gina tsaftataccen header na `Cookie` mai ɗauke da waɗannan nau'i-nau'in maɓalli da ƙima kawai — tare da `nt_session` (token na `ntk_…` da ake saitawa ga asusun da aka shiga) idan yana nan. Idan ɗaya daga cikin ukun ya ɓace, ana tura ɗanyen string ɗin da aka liƙa ba tare da canji ba domin masu gudanarwa su iya gwada wasu tsare-tsare.
+67router yana fitar da `uid`, `si_usr_id`, da `si_ses_id` daga string ɗin da aka liƙa, sannan ya sake gina tsaftataccen header na `Cookie` mai ɗauke da waɗannan nau'i-nau'in maɓalli da ƙima kawai — tare da `nt_session` (token na `ntk_…` da ake saitawa ga asusun da aka shiga) idan yana nan. Idan ɗaya daga cikin ukun ya ɓace, ana tura ɗanyen string ɗin da aka liƙa ba tare da canji ba domin masu gudanarwa su iya gwada wasu tsare-tsare.
 
 ### Id na model
 
@@ -198,7 +198,7 @@ Manhaja
 
 ---
 
-## Kuki Yana Aiki a Burauza Amma Ba Ya Aiki a OmniRoute
+## Kuki Yana Aiki a Burauza Amma Ba Ya Aiki a 67router
 
 Wasu masu samarwa suna haɗa kukis waɗanda ake aikawa ne kawai yayin buƙatun da aka tabbatar da shaida.
 

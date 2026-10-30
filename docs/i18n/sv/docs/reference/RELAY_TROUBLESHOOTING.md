@@ -5,9 +5,9 @@
 ---
 
 Reläer (Vercel, Deno, Cloudflare) avslutar uppströmsanslutningen i en
-serverlös backend så att OmniRoute kan skicka utgående trafik från en stabil region samtidigt som
+serverlös backend så att 67router kan skicka utgående trafik från en stabil region samtidigt som
 leverantörens API-nyckel hålls på serversidan. Det här dokumentet beskriver de två fellägen
-som operatörer stöter på i produktion och de återställningsvägar som OmniRoute tillhandahåller för
+som operatörer stöter på i produktion och de återställningsvägar som 67router tillhandahåller för
 vart och ett.
 
 ## Så lagras reläautentisering
@@ -35,7 +35,7 @@ reläet skickar ingen autentisering.
 1. Öppna **Inställningar → Proxypool**.
 2. Relärader som saknar autentisering visar en gul etikett med `autentisering saknas`
    och knappen **Reparera**.
-3. Klicka på **Reparera**. OmniRoute anropar
+3. Klicka på **Reparera**. 67router anropar
    `POST /api/settings/proxies/[id]/repair-relay`, som:
    - dekrypterar `relayAuthEnc` med den **aktuella** nyckeln,
    - skriver tillbaka `relayAuth` i klartext till `notes`,
@@ -70,7 +70,7 @@ den manuellt.
 **Symptom:** proxytestet (knappen `speed`) visar att reläet är tillgängligt,
 men begäranden misslyckas fortfarande emellanåt.
 
-Kontrollera de relämedvetna huvuden som returneras av OmniRoutes automatiska
+Kontrollera de relämedvetna huvuden som returneras av 67routers automatiska
 testsond (se **Inställningar → Proxypool** och räknarna `relayTested` /
 `relayAlive`):
 

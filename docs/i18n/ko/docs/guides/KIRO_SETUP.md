@@ -4,7 +4,7 @@
 
 ---
 
-이 가이드에서는 OmniRoute에 Kiro(AWS에서 호스팅되는 AI 코딩 어시스턴트) 계정을 추가하는 방법을 설명하며,
+이 가이드에서는 67router에 Kiro(AWS에서 호스팅되는 AI 코딩 어시스턴트) 계정을 추가하는 방법을 설명하며,
 세션 충돌 없이 여러 계정을 동시에 실행하는 데 중점을 둡니다.
 
 ---
@@ -22,10 +22,10 @@ Kiro의 백엔드는 AWS SSO OIDC 클라이언트 등록을 사용하여 활성 
 
 ---
 
-## OmniRoute의 해결 방법(v3.8.0+)
+## 67router의 해결 방법(v3.8.0+)
 
-v3.8.0부터 OmniRoute는 모든 Kiro 연결을 가져올 때 `registerClient()`(AWS SSO OIDC)를
-호출합니다. 이를 통해 각 OmniRoute 연결에는 전용 OIDC 클라이언트 등록이 할당됩니다.
+v3.8.0부터 67router는 모든 Kiro 연결을 가져올 때 `registerClient()`(AWS SSO OIDC)를
+호출합니다. 이를 통해 각 67router 연결에는 전용 OIDC 클라이언트 등록이 할당됩니다.
 각 클라이언트 등록은 서로 독립적이므로 한 계정을 새로 고치거나 재인증해도 다른
 계정의 새로 고침 토큰에는 영향을 주지 않습니다.
 
@@ -58,7 +58,7 @@ v3.8.0 이전에 가져온 연결에는 `providerSpecificData`에 저장된 전�
 
 ### 사전 요구 사항
 
-- OmniRoute v3.8.0 이상.
+- 67router v3.8.0 이상.
 - 정상적으로 작동하는 Kiro 계정(이메일 + 비밀번호, Google 또는 GitHub 로그인).
 - 선택적으로 사용할 두 번째 Kiro 계정.
 
@@ -69,7 +69,7 @@ v3.8.0 이전에 가져온 연결에는 `providerSpecificData`에 저장된 전�
    - **토큰 가져오기** — `aorAAAAAG`로 시작하는 새로 고침 토큰을 붙여넣습니다.
    - **API 키** — 수명이 긴 Kiro / CodeWhisperer API 키를 붙여넣습니다.
    - **Google / GitHub 로그인** — 브라우저에서 OAuth 흐름을 완료합니다.
-   - **자동 가져오기** — 버튼을 클릭합니다. OmniRoute가 로컬 kiro-cli 데이터베이스
+   - **자동 가져오기** — 버튼을 클릭합니다. 67router가 로컬 kiro-cli 데이터베이스
      또는 `~/.aws/sso/cache`에서 자격 증명을 읽습니다.
 3. 연결이 저장됩니다. 새로 고침 토큰 흐름은 전용 OIDC 클라이언트를 자동으로
    등록합니다. API 키 흐름은 AWS를 통해 키를 검증하며 새로 고침 토큰을 저장하지 않습니다.
@@ -123,7 +123,7 @@ API 키 인증은 장기간 유효한 Kiro / AWS CodeWhisperer 전달자 자격 
 2. **API 키**를 선택합니다.
 3. API 키를 붙여 넣고 AWS 리전을 선택합니다. **자동 감지**(기본값), **미국 동부
    (버지니아 북부)** 또는 **유럽(프랑크푸르트)** 중 하나를 선택할 수 있습니다.
-4. OmniRoute는 키를 검증하고 해당 키가 작동하는 리전에 고정하여 연결을 저장합니다.
+4. 67router는 키를 검증하고 해당 키가 작동하는 리전에 고정하여 연결을 저장합니다.
 
 ### API
 
@@ -171,7 +171,7 @@ API 경로는 `KiroService.validateApiKey()`를 호출하여 키를 검증하며
 
 ## OIDC 클라이언트 만료
 
-AWS SSO OIDC 공개 클라이언트는 일반적으로 90일 후에 만료됩니다(`clientSecretExpiresAt`). OmniRoute는 관찰 가능성을 위해 이 타임스탬프를 `providerSpecificData`에 저장합니다. 약 90일 후 연결의 갱신이 중단되면 연결을 다시 가져와 새로운 OIDC 클라이언트 등록을 받으세요. 만료 시 자동 재등록 기능은 향후 개선 사항으로 추적되고 있습니다.
+AWS SSO OIDC 공개 클라이언트는 일반적으로 90일 후에 만료됩니다(`clientSecretExpiresAt`). 67router는 관찰 가능성을 위해 이 타임스탬프를 `providerSpecificData`에 저장합니다. 약 90일 후 연결의 갱신이 중단되면 연결을 다시 가져와 새로운 OIDC 클라이언트 등록을 받으세요. 만료 시 자동 재등록 기능은 향후 개선 사항으로 추적되고 있습니다.
 
 API 키 연결은 AWS SSO OIDC를 통해 갱신되지 않으므로 OIDC 클라이언트 만료가 없습니다.
 
@@ -186,12 +186,12 @@ API 키 연결은 AWS SSO OIDC를 통해 갱신되지 않으므로 OIDC 클라�
 ### "Token validation failed" 오류로 가져오기에 실패하는 경우
 
 - 갱신 토큰이 `aorAAAAAG`로 시작하는지 확인하세요.
-- OmniRoute가 `https://oidc.us-east-1.amazonaws.com`(또는 구성된 리전)에 연결할 수 있는지 확인하세요. 기업 프록시 뒤에 있는 경우 **Dashboard → Settings → Proxies**에서 제공자 수준 프록시를 설정하세요.
+- 67router가 `https://oidc.us-east-1.amazonaws.com`(또는 구성된 리전)에 연결할 수 있는지 확인하세요. 기업 프록시 뒤에 있는 경우 **Dashboard → Settings → Proxies**에서 제공자 수준 프록시를 설정하세요.
 
 ### API 키 가져오기에 실패하는 경우
 
 - 키가 갱신 토큰이 아니라 Kiro / CodeWhisperer API 키인지 확인하세요.
 - AWS 리전이 키/계정과 일치하는지 확인하세요. 기본값은 `us-east-1`입니다.
-- 키로 `ListAvailableProfiles`를 호출할 수 있어야 합니다. 그렇지 않으면 OmniRoute가 필요한 `profileArn`을 확인할 수 없습니다.
+- 키로 `ListAvailableProfiles`를 호출할 수 있어야 합니다. 그렇지 않으면 67router가 필요한 `profileArn`을 확인할 수 없습니다.
 
 기타 문제는 기본 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)를 참조하세요.

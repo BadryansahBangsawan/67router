@@ -8,7 +8,7 @@
 > **A ṣe àtúnṣe rẹ̀ gbẹ̀yìn:** 2026-10-17 — v3.8.52 (a fikún un [Ìbòòrò àti àwọn àlààfin](#coverage-and-limits):
 > àwọn route àti ọ̀nà ìdáhùn tí àwọn hook kan láéláé, àwọn akọlé disable tí a darapọ̀ (#16412), ipo ìdíwọ́ injection gẹ́gẹ́ bí àlààfin tó jẹ́ dandan (#16413), àti ohun tó ń rí ìdáhùn ṣáájú ìpe post-call)
 
-Àwọn guardrail ń ṣe ìmúṣe ààbò, ilana, àti àyípadà àkóónú lójú àlààfin tó wà láàrin OmniRoute àti àwọn olùpèsè upstream. Guardrail kọ̀ọ̀kan lè ṣàyẹ̀wò (kí ó sì bí ó bá fẹ́, kọ̀ sílẹ̀, yí padà, tàbí ṣe àlàyé lórí) àwọn payload ìbéèrè (`preCall`) àti àwọn ìdáhùn upstream (`postCall`).
+Àwọn guardrail ń ṣe ìmúṣe ààbò, ilana, àti àyípadà àkóónú lójú àlààfin tó wà láàrin 67router àti àwọn olùpèsè upstream. Guardrail kọ̀ọ̀kan lè ṣàyẹ̀wò (kí ó sì bí ó bá fẹ́, kọ̀ sílẹ̀, yí padà, tàbí ṣe àlàyé lórí) àwọn payload ìbéèrè (`preCall`) àti àwọn ìdáhùn upstream (`postCall`).
 
 Ètò náà jẹ́ **fail-open**: bí guardrail kan bá ju àṣìṣe nígbà tó ń ṣiṣẹ́, registry máa kọ àṣìṣe náà sílẹ̀ kí ó sì tẹ̀síwájú pẹ̀lú guardrail tókàn dípò kí ó jẹ́ kí ìbéèrè náà kùnà. Ìdíwọ́ jẹ́ ìpinnu tó ṣe kedere (`block: true`), kì í ṣe ohun tó ṣẹlẹ̀ ní àìfẹ́. Ẹyọ kan ṣoṣo tó yàtọ̀ ni ìbéèrè tí a fagi lé: nígbà tí a bá fagi lé `signal` ti ẹni tó ń pe, guardrail tó ju àṣìṣe máa kọ̀ ìṣiṣẹ́ hook náà dípò kí a fò ó.
 
@@ -66,7 +66,7 @@ Nígbà tí kọ́kọ́rọ́ API olùpè bá fi ààlà sí `allowedConnection
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), afárá náà yóò yan
 àwọn módẹ́lì ìdarípadà àti àpèjúwe tí kọ́kọ́rọ́ náà lè lò nìkan, lórí àwọn ìsopọ̀
 tí kọ́kọ́rọ́ náà lè lò. Lẹ́yìn náà, ìpè àpèjúwe máa ń gba ọ̀nà ìyíká-padà-sí-ara-ẹni
-OmniRoute nígbà gbogbo pẹ̀lú akọlé `x-omniroute-self-loop-key-id`, kí ìbéèrè
+67router nígbà gbogbo pẹ̀lú akọlé `x-omniroute-self-loop-key-id`, kí ìbéèrè
 ìbánisọ̀rọ̀ tó gbà á lè tún fi ìlànà ìsopọ̀ àti módẹ́lì kọ́kọ́rọ́ náà múlò.
 `enforceApiKeyPolicy()` máa ń tẹ̀lé akọlé yẹn nìkan nígbà tí ó bá wà papọ̀ pẹ̀lú
 bearer ìyíká-padà-sí-ara-ẹni, nítorí náà ó lè dín ààyè ìwọlé kù nìkan, a sì máa
@@ -97,7 +97,7 @@ olùpè/olùpèsè, láìdá lórí àmì kankan láti ọ̀dọ̀ client. Ìṣ
 kékeré máa ń dín ìpéye OCR kù fún iṣẹ́ ṣíṣe àdàkọ ọ̀rọ̀ tí ìtọ́nisọ́nà yìí ń
 béèrè gan-an, nítorí náà ìpè àpèjúwe fúnra rẹ̀ máa ń béèrè kúlẹ̀kúlẹ̀ gíga nígbà
 gbogbo láìka ipele kúlẹ̀kúlẹ̀ tí ìbéèrè àkọ́kọ́ tó wọlé lò sí. Èyí kan ara
-ìbéèrè àpèjúwe inú nìkan; kò yí bí OmniRoute ṣe ń fi `image_url.detail` ti olùpè
+ìbéèrè àpèjúwe inú nìkan; kò yí bí 67router ṣe ń fi `image_url.detail` ti olùpè
 ránṣẹ́ síwájú lórí ìbéèrè àkọ́kọ́ — a lo àìyípadà yẹn lọ́tọ̀, àti fún àwọn client
 OpenCode tí a ṣàwárí nìkan, nínú `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`). Ẹ̀ka wire-format Anthropic ti
@@ -160,7 +160,7 @@ Ojú-ìwé dashboard pàtó náà ni `/dashboard/settings/modality-bridge`. Àw�
 
 Káàdì Vision Bridge àtijọ́ lábẹ́ àwọn ìṣètò AI ti di ọ̀nà-ìsopọ̀ ìbáṣepọ̀ sí ojú-ìwé tuntun náà; kò ní ẹ̀dá kejì fọ́ọ̀mù náà mọ́. Media Providers tún so àwọn ìlànà Image-to-Text àti Speech-to-Text pọ̀ mọ́ àwọn taabu Modality Bridge tó bá wọn mu láì yọ ibi ìdánwò Speech-to-Text tó wà tẹ́lẹ̀ kúrò.
 
-**Ìkọjá ìgbàwọlé self-loop:** nígbà tí ìpe describe bá ń kọjá `/v1` self-loop ti OmniRoute fúnra rẹ̀ (awoṣe olùpèsè tí kì í ṣe déédéé), ìbéèrè-abẹ́lẹ̀ náà ń rán `x-omniroute-admission-bypass: internal` wá a sì jẹ́ fìfọwọ́sí pẹ̀lú ẹ̀rì self-loop tí a yan — ìṣọ́mọ̀ `sk_omniroute` ìbílẹ̀ nínú ìpo ìbílẹ̀, tàbí kìí ayíká `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` tí aláṣàápèèrè ṣètò (#1350) kí àwọn ìfìlọlẹ̀ `REQUIRE_API_KEY=true` lè ṣì ṣe ìpe describe náà. Wọ́n mọ̀ọ́mọ̀ ìkọjá náà fún àwọn ẹ̀rì wọ̀nyí gan-an nìkan, nítorí náà àwọn oníbàárà òde kò lè lo header náà láti fo ìgbàwọlé.
+**Ìkọjá ìgbàwọlé self-loop:** nígbà tí ìpe describe bá ń kọjá `/v1` self-loop ti 67router fúnra rẹ̀ (awoṣe olùpèsè tí kì í ṣe déédéé), ìbéèrè-abẹ́lẹ̀ náà ń rán `x-omniroute-admission-bypass: internal` wá a sì jẹ́ fìfọwọ́sí pẹ̀lú ẹ̀rì self-loop tí a yan — ìṣọ́mọ̀ `sk_omniroute` ìbílẹ̀ nínú ìpo ìbílẹ̀, tàbí kìí ayíká `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` tí aláṣàápèèrè ṣètò (#1350) kí àwọn ìfìlọlẹ̀ `REQUIRE_API_KEY=true` lè ṣì ṣe ìpe describe náà. Wọ́n mọ̀ọ́mọ̀ ìkọjá náà fún àwọn ẹ̀rì wọ̀nyí gan-an nìkan, nítorí náà àwọn oníbàárà òde kò lè lo header náà láti fo ìgbàwọlé.
 
 Àwọn àtìjànírere àtijọ́ wà nínú `src/shared/constants/visionBridgeDefaults.ts`; àwọn àtìjànírere tuntun fún ìpo/iṣẹ́-mọ̀ọ́mọ̀/cache àti olùyanjú ìṣètò wà nínú `src/shared/constants/modalityBridgeDefaults.ts`. Ìdíwọ́ ààbò (guardrail) ṣíṣàfihàn àṣàyàn olùkọ́já `deps` kí àwọn ìdánwò lè fi àwọn ìmúṣe `getSettings` àti `callVisionModel` irọ́ sínú.
 
@@ -281,7 +281,7 @@ Nínú broker náà, `ffprobe` ń ka fáìlì àdáni kan lórí ẹ̀rọ náà
 
 Férémù kọ̀ọ̀kan ní ààlà 4 MiB, gbogbo àwọn férémù àìṣe papọ̀ ní ààlà 23 MiB, àti
 ìdáhùn aláràágbà tí a sọ di sẹ́ríà ní ààlà 32 MiB. A máa yọ àkójọ fáìlì àkókò
-aládàáni kúrò nínú `finally`. OmniRoute kò kó FFmpeg mọ́ra, kò sì gba ọ̀nà
+aládàáni kúrò nínú `finally`. 67router kò kó FFmpeg mọ́ra, kò sì gba ọ̀nà
 sí fáìlì ìṣiṣẹ́ àdáni. Ṣáájú ṣíṣe àkọlé, afárá náà máa ń ṣe ìyọkúrò àwọn àwòrán
 àfihàn tó jọra pẹ̀lú ìṣọ́ra: a máa dín JPEG kọ̀ọ̀kan sí buffer àwọ̀ eérú 16×16,
 a sì máa fi wé férémù tó kẹ́yìn tí a dá sí. Fún ìwọ̀n àkọlé tí a béèrè
@@ -329,7 +329,7 @@ fún nígbà tí wọ́n bá ti ní ọ̀rọ̀ tó bára mu. Cue kọ̀ọ̀kan
 àárín `start`/`end` tó ní iye òpin tí ó sì wà nínú iye àkókò tí a ṣàyẹ̀wò, àti
 `source` tí ó wà nínú àkójọ ìfọwọ́sí (`client`, `embedded`, tàbí
 `audio-bridge`); iye àkọ́kọ́ `confidence` ni `1`, ó sì gbọ́dọ̀ wà láàárín `0`
-àti `1`. A máa darapọ̀ àwọn cue tó jọ ara wọn pátápátá. OmniRoute kì í bẹ̀rẹ̀
+àti `1`. A máa darapọ̀ àwọn cue tó jọ ara wọn pátápátá. 67router kì í bẹ̀rẹ̀
 ìkọ̀wé-ohùn láti inú metadata yìí: a máa da àwọn cue tí a fìdí rẹ̀ múlẹ̀ sínú
 àbájáde tí a ṣàlàyé pẹ̀lú orísun, ìgbẹ́kẹ̀lé, àti àárín, a sì máa ṣe àfihàn
 wọn gẹ́gẹ́ bí àwọn àkíyèsí tí a kò fọkàn tán lẹ́gbẹ̀ẹ́ àwọn àkọlé férémù. A máa
@@ -802,7 +802,7 @@ ní àwọn iṣẹ́ méjì:
   previous instructions…", àwọn jailbreaks àpẹẹrẹ-DAN) fìdí múlẹ̀ pé ìdáhùn náà gbé
   `error.code === "SECURITY_001"`, èyí túmọ̀ sí pé ààbò náà kọ ìbéèrè náà ní tòótọ́.
 - **`garak` (ìmọ̀ràn)** — ń ṣe garak `--probes promptinject,dan,leakreplay`
-  lórí àpẹẹrẹ OmniRoute abílé (`http://localhost:20128/v1`). Wọ́n dá a lé àṣírí
+  lórí àpẹẹrẹ 67router abílé (`http://localhost:20128/v1`). Wọ́n dá a lé àṣírí
   olùpèsè kan (`PROMPTFOO_PROVIDER_KEY`); ó ń fò kúlẹ̀ ní rọrùn àti pé a fi
   `|| true` kún un lẹ́yìn, nítorí náà ó ń jàbọ́ láìjẹ́ kí CI kùnà.
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-compressie is opgebouwd rond enginecontracten. Een modus kan één engine rechtstreeks uitvoeren
+67router-compressie is opgebouwd rond enginecontracten. Een modus kan één engine rechtstreeks uitvoeren
 (`caveman` of `rtk`) of een deterministische gestapelde pipeline die meerdere engines op volgorde uitvoert.
 
 ## Modi
@@ -43,9 +43,9 @@ geschiedenis heeft opgebouwd, stopt bij `below_min_chars` en de engine transform
 is waarom de standaard `aggressive` is in plaats van het veiligste profiel.
 
 Het pakket lost zijn eigen modelbereik en profiel op uit zijn omgevingsconfiguratie.
-OmniRoute delegeert de beslissing nooit: de adapter koppelt de modelpoort aan het meest
+67router delegeert de beslissing nooit: de adapter koppelt de modelpoort aan het meest
 restrictieve bereik van het pakket, zodat hostomgevingsinstellingen de allowlist alleen kunnen
-verkleinen, nooit verbreden voorbij de gemeten ontvangsten van OmniRoute.
+verkleinen, nooit verbreden voorbij de gemeten ontvangsten van 67router.
 
 ## Engineregister
 
@@ -107,7 +107,7 @@ De Caveman-modus richt zich op semantische condensatie van normale proza:
 Het dashboardonderdeel is `Dashboard -> Context & Cache -> Caveman`.
 
 Caveman upstream rapporteert `~75%` minder uitvoertokens, gemiddeld `65%` besparing op uitvoer in benchmarks
-met een bereik van `22-87%`, en een hulpmiddel voor invoercompressie van `~46%`. OmniRoute gebruikt het Caveman-cijfer voor invoer
+met een bereik van `22-87%`, en een hulpmiddel voor invoercompressie van `~46%`. 67router gebruikt het Caveman-cijfer voor invoer
 bij het documenteren van gecombineerde besparingen op prompts/context; de Caveman-uitvoermodus blijft een afzonderlijke
 functie voor responsgedrag.
 

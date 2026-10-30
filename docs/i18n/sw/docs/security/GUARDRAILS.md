@@ -10,7 +10,7 @@
 > hali ya kuzuia injection kama mpaka wa lazima (#16413), na nini kinaona jibu kabla ya post-call)
 
 Guardrails hutekeleza usalama, sera, na mabadiliko ya maudhui kwenye mpaka
-kati ya OmniRoute na watoa huduma wa upstream. Kila guardrail inaweza kukagua
+kati ya 67router na watoa huduma wa upstream. Kila guardrail inaweza kukagua
 (na kwa hiari kukataa, kubadilisha, au kutia maelezo) payloads za maombi
 (`preCall`) na majibu ya upstream (`postCall`).
 
@@ -111,7 +111,7 @@ Wakati ufunguo wa API wa mwitaji unazuia `allowedConnections`, makundi ya quota
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), daraja huchagua tu
 miodeli ya kuelekeza upya na ya kuelezea ambayo ufunguo unaweza kutumia, kwenye
 miunganisho ambayo ufunguo unaweza kutumia. Mwito wa kuelezea kisha hupitia
-kila mara kupitia kitanzi-cha-yenyewe cha OmniRoute na kichwa cha
+kila mara kupitia kitanzi-cha-yenyewe cha 67router na kichwa cha
 `x-omniroute-self-loop-key-id`, ili ombi la gumzo linalopokea liwezeshe tena
 sera ya muunganisho na ya modeli ya ufunguo huo. `enforceApiKeyPolicy()`
 hutii kichwa hicho tu pamoja na bearer ya kitanzi-cha-yenyewe, kwa hivyo
@@ -140,7 +140,7 @@ kuzuiliwa na ishara yoyote ya mteja. Sampuli ya kiwango cha chini hupunguza
 usahihi wa OCR kwa kazi halisi ya unakili wa maandishi ambayo kidokezo hiki
 kinaomba, kwa hivyo mwito wa kuelezea wenyewe daima huomba kiwango cha juu cha
 maelezo bila kujali kiwango gani cha maelezo ombi asili la kuingia lililotumia.
-Hii huathiri tu mwili wa ombi la ndani la kuelezea; haibadiliki jinsi OmniRoute
+Hii huathiri tu mwili wa ombi la ndani la kuelezea; haibadiliki jinsi 67router
 inavyosambaza `image_url.detail` ya mwitaji mwenyewe kwenye ombi kuu —
 chaguomsingi hilo hutumika tofauti, na tu kwa wateja wa OpenCode
 waliogunduliwa, katika `defaultImageDetail()`
@@ -270,7 +270,7 @@ kwa tabo zinazolingana za Modality Bridge bila kuondoa uwanja wa majaribio
 uliopo wa Speech-to-Text.
 
 **Kuruka kuingizwa kwa self-loop:** pale wito wa kueleza unapopitishwa kupitia
-self-loop ya `/v1` ya OmniRoute yenyewe (modeli ya mtoa huduma isiyo ya
+self-loop ya `/v1` ya 67router yenyewe (modeli ya mtoa huduma isiyo ya
 kawaida), ombi ndogo hutuma `x-omniroute-admission-bypass: internal` na
 huthibitishwa kwa utambulisho wa self-loop uliotatuliwa — sentinel ya ndani
 `sk_omniroute` katika hali ya ndani, au ufunguo wa env
@@ -408,7 +408,7 @@ Vichujio kukosekana, ushahidi ulioharibika/tupu, hitilafu ya kigunduzi, au muda 
 
 Kila fremu imewekewa kikomo cha 4 MiB, fremu zote ghafi kwa pamoja zimewekewa
 kikomo cha 23 MiB, na jibu la broker lililoserialishwa limewekewa kikomo cha 32 MiB.
-Saraka binafsi ya muda huondolewa katika `finally`. OmniRoute haijumuishi FFmpeg
+Saraka binafsi ya muda huondolewa katika `finally`. 67router haijumuishi FFmpeg
 na haikubali njia maalum ya faili tekelezi. Kabla ya kuweka maelezo, bridge hutekeleza
 hatua ya kihafidhina ya kuondoa nakala rudufu za mwonekano: kila JPEG hupunguzwa
 kuwa bafa ya kijivu ya 16×16 na hulinganishwa tu na fremu ya mwisho iliyohifadhiwa.
@@ -457,7 +457,7 @@ lazima kiwe na `text`, muda wenye mwisho wa `start`/`end` ulio ndani ya muda
 uliobainishwa wa video, na `source` iliyo kwenye orodha iliyoruhusiwa (`client`,
 `embedded`, au `audio-bridge`); thamani chaguo-msingi ya `confidence` ni `1` na
 lazima ibaki kati ya `0` na `1`. Vidokezo vinavyofanana kabisa huunganishwa.
-OmniRoute kamwe haianzi unukuzi kutoka kwenye metadata hii: vidokezo
+67router kamwe haianzi unukuzi kutoka kwenye metadata hii: vidokezo
 vilivyothibitishwa hunakiliwa kwenye matokeo yaliyoelezwa pamoja na chanzo,
 kiwango cha uhakika na kipindi, na huwasilishwa kama uchunguzi usioaminika
 pamoja na maelezo ya fremu. Maandishi batili, yaliyo nje ya kipindi, au yasiyo
@@ -1034,7 +1034,7 @@ promptfooconfig.yaml` na `INJECTION_GUARD_MODE=block`. Kila kesi ya
   mtindo wa DAN) inathibitisha kwamba jibu lina
   `error.code === "SECURITY_001"`, yaani kizuizi kimekataa ombi kwa kweli.
 - **`garak` (ya ushauri)** — huendesha garak `--probes
-promptinject,dan,leakreplay` dhidi ya nakala ya ndani ya OmniRoute
+promptinject,dan,leakreplay` dhidi ya nakala ya ndani ya 67router
   (`http://localhost:20128/v1`). Inadhibitiwa na siri ya mtoa huduma
   (`PROMPTFOO_PROVIDER_KEY`); huruka kwa utulivu na huongezewa kiambishi
   `|| true`, kwa hivyo huripoti bila kuifanya CI kushindwa.

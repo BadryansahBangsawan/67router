@@ -15,7 +15,7 @@
 5-часовни прозор, Kimi 1500 захтева/ч) између више API кључева који деле исту
 везу.
 
-**Проблем који решава:** OmniRoute прослеђује захтеве многих API кључева ка истом налогу
+**Проблем који решава:** 67router прослеђује захтеве многих API кључева ка истом налогу
 узводног добављача. Без логике дељења, нагли прилив захтева са кључа A може исцрпети
 квоту добављача за тај сат, остављајући кључеве B и C блокираним док се прозор не ресетује.
 Механизам ово спречава на следећи начин:
@@ -119,7 +119,7 @@ Redis драјвер: Lua EVAL скрипта за атомско увећање
 
 - Tabela: `quota_consumption` (pogledajte migraciju `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Najbolje za implementacije sa jednom instancom.
-- Svi trajni podaci čuvaju se u postojećoj OmniRoute SQLite bazi podataka (`DATA_DIR/storage.sqlite`).
+- Svi trajni podaci čuvaju se u postojećoj 67router SQLite bazi podataka (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opciono, za više instanci)
 

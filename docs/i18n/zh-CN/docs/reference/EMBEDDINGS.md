@@ -4,7 +4,7 @@
 
 ---
 
-当 OmniRoute 位于 Hindsight 0.9.1（仅文本的 `encode(list[str])`）和 Memorix 1.6.0（Jina 媒体门控）前端时，以下是针对 `POST /v1/embeddings` 的运维说明。已于 2026-08-17 针对位于 `https://omniroute.jaguar-fish.ts.net/v1` 的 OmniRoute 3.8.49 进行在线验证。下文不包含任何密钥。
+当 67router 位于 Hindsight 0.9.1（仅文本的 `encode(list[str])`）和 Memorix 1.6.0（Jina 媒体门控）前端时，以下是针对 `POST /v1/embeddings` 的运维说明。已于 2026-08-17 针对位于 `https://omniroute.jaguar-fish.ts.net/v1` 的 67router 3.8.49 进行在线验证。下文不包含任何密钥。
 
 ## 可用的模型 ID
 
@@ -70,7 +70,7 @@ curl -sS https://omniroute.example/v1/embeddings \
   -d '{"model":"openrouter/google/gemini-embedding-2","input":["alpha","beta"]}'
 ```
 
-仅靠 GitOps 无法使原生 `gemini-embedding-2` 成功运行。必须将 Google AI Studio 密钥添加为 `gemini` 提供者连接（通过控制面板，或将 `GEMINI_API_KEY` 导入 OmniRoute）。此仓库中不包含该密钥。
+仅靠 GitOps 无法使原生 `gemini-embedding-2` 成功运行。必须将 Google AI Studio 密钥添加为 `gemini` 提供者连接（通过控制面板，或将 `GEMINI_API_KEY` 导入 67router）。此仓库中不包含该密钥。
 
 ### Jina 多模态路径
 
@@ -91,7 +91,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 ### Jina / Memorix 图像对象
 
-OmniRoute 规范图像项（28×28 PNG，784 像素——Jina 会拒绝 1×1 图像）：
+67router 规范图像项（28×28 PNG，784 像素——Jina 会拒绝 1×1 图像）：
 
 ```json
 {
@@ -138,10 +138,10 @@ Memorix 1.6.0 / Jina 原生格式：
 
 ### Hindsight 0.9.1
 
-Hindsight 嵌入仅支持文本（`encode(list[str])`）。它不会发送图像对象。请将 Hindsight 的 OpenAI 兼容嵌入基础 URL 指向 OmniRoute `/v1`，并使用上表中的可用 ID（`jina-ai/jina-embeddings-v5-omni-small` 或 `openrouter/google/gemini-embedding-2`）。除非网关上存在 `gemini` API 密钥，否则不要将模型设置为裸 `gemini-embedding-2`。
+Hindsight 嵌入仅支持文本（`encode(list[str])`）。它不会发送图像对象。请将 Hindsight 的 OpenAI 兼容嵌入基础 URL 指向 67router `/v1`，并使用上表中的可用 ID（`jina-ai/jina-embeddings-v5-omni-small` 或 `openrouter/google/gemini-embedding-2`）。除非网关上存在 `gemini` API 密钥，否则不要将模型设置为裸 `gemini-embedding-2`。
 
 ### Memorix 1.6.0
 
-仅当 `baseUrl` 匹配 `/jina\.ai/i` 时，Memorix 才会将其视为原生媒体接口。即使模型是 Jina omni，OmniRoute URL 仍会使用纯文本路径。该门控是 Memorix 客户端的问题。除此之外，即使门控已开启，OmniRoute 仍会拒绝 Memorix 将发送的 Jina `{image: "data:..."}` 请求体，因此如果不使用规范的 `{type,source}` 模式，兼容 Jina 的客户端就无法通过 OmniRoute 嵌入图像。
+仅当 `baseUrl` 匹配 `/jina\.ai/i` 时，Memorix 才会将其视为原生媒体接口。即使模型是 Jina omni，67router URL 仍会使用纯文本路径。该门控是 Memorix 客户端的问题。除此之外，即使门控已开启，67router 仍会拒绝 Memorix 将发送的 Jina `{image: "data:..."}` 请求体，因此如果不使用规范的 `{type,source}` 模式，兼容 Jina 的客户端就无法通过 67router 嵌入图像。
 
-文本请使用 `jina-ai/jina-embeddings-v5-omni-small`。不要将 Memorix 的 `base_url` 指向 `https://api.jina.ai`——请将 OmniRoute 保持为唯一中转。
+文本请使用 `jina-ai/jina-embeddings-v5-omni-small`。不要将 Memorix 的 `base_url` 指向 `https://api.jina.ai`——请将 67router 保持为唯一中转。

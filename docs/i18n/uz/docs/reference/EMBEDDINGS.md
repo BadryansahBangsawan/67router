@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Hindsight 0.9.1 (faqat matnli `encode(list[str])`) va Memorix 1.6.0 (Jina media filtri) oldida turganida `POST /v1/embeddings` uchun operator qaydlari. 2026-08-17 kuni OmniRoute 3.8.49 bilan `https://omniroute.jaguar-fish.ts.net/v1` manzilida amalda tekshirilgan. Quyida hech qanday maxfiy maʼlumot yoʻq.
+67router Hindsight 0.9.1 (faqat matnli `encode(list[str])`) va Memorix 1.6.0 (Jina media filtri) oldida turganida `POST /v1/embeddings` uchun operator qaydlari. 2026-08-17 kuni 67router 3.8.49 bilan `https://omniroute.jaguar-fish.ts.net/v1` manzilida amalda tekshirilgan. Quyida hech qanday maxfiy maʼlumot yoʻq.
 
 ## Ishlaydigan model identifikatorlari
 
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Mahalliy `gemini-embedding-2` faqat GitOps orqali ishlay olmaydi. Google AI
 Studio kaliti `gemini` provayder ulanishi sifatida qoʻshilishi kerak (boshqaruv
-paneli orqali yoki `GEMINI_API_KEY` ni OmniRoute ichiga import qilish orqali).
+paneli orqali yoki `GEMINI_API_KEY` ni 67router ichiga import qilish orqali).
 Bu maxfiy maʼlumot ushbu repozitoriyda yoʻq.
 
 ### Jina multimodal yoʻli
@@ -101,7 +101,7 @@ Taxallus mavjud boʻlguncha `POST /v1/embeddings` dan foydalaning.
 
 ### Jina / Memorix rasm obyekti
 
-OmniRoute kanonik rasm elementi (28×28 PNG, 784 piksel — Jina 1×1 oʻlchamni
+67router kanonik rasm elementi (28×28 PNG, 784 piksel — Jina 1×1 oʻlchamni
 rad etadi):
 
 ```json
@@ -152,7 +152,7 @@ shu 400 javobiga olib keladi.
 
 Hindsight embeddinglari faqat matn uchun moʻljallangan (`encode(list[str])`).
 U rasm obyektlarini yubormaydi. Hindsight tizimidagi OpenAI bilan mos
-embeddinglar asosiy URL manzilini OmniRoute `/v1` ga yoʻnaltiring va yuqoridagi
+embeddinglar asosiy URL manzilini 67router `/v1` ga yoʻnaltiring va yuqoridagi
 jadvaldan ishlaydigan identifikatordan
 (`jina-ai/jina-embeddings-v5-omni-small` yoki
 `openrouter/google/gemini-embedding-2`) foydalaning. Shlyuzda `gemini` API
@@ -162,13 +162,13 @@ oʻrnatmang.
 ### Memorix 1.6.0
 
 Memorix faqat `/jina\.ai/i` ga mos keladigan `baseUrl` ni mahalliy media
-sifatida qabul qiladi. Model Jina omni boʻlsa ham, OmniRoute URL manzili faqat
+sifatida qabul qiladi. Model Jina omni boʻlsa ham, 67router URL manzili faqat
 matnli yoʻlda qoladi. Bu filtr Memorix mijozidagi muammodir. Bundan mustaqil
-ravishda, OmniRoute filtr ochilganida Memorix yuboradigan Jina
+ravishda, 67router filtr ochilganida Memorix yuboradigan Jina
 `{image: "data:..."}` soʻrov tanasini hamon rad etadi. Shu sababli Jina bilan
-mos mijozlar kanonik `{type,source}` sxemasisiz OmniRoute orqali rasmlar uchun
+mos mijozlar kanonik `{type,source}` sxemasisiz 67router orqali rasmlar uchun
 embedding yarata olmaydi.
 
 Matn uchun `jina-ai/jina-embeddings-v5-omni-small` dan foydalaning. Memorix
-`base_url` qiymatini `https://api.jina.ai` ga yoʻnaltirmang — OmniRoute yagona
+`base_url` qiymatini `https://api.jina.ai` ga yoʻnaltirmang — 67router yagona
 oraliq boʻlib qolsin.

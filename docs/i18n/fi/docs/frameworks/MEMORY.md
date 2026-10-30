@@ -7,7 +7,7 @@
 > **Totuuden lähde:** `src/lib/memory/` ja `src/app/api/memory/`
 > **Päivitetty viimeksi:** 2026-06-28 — v3.8.40 (oletusarvoisesti pois käytöstä + int8-kvantisoinnin päivitys)
 
-OmniRoute tarjoaa pysyvän keskustelumuistin, joka on sidottu API-avaimeen (ja
+67router tarjoaa pysyvän keskustelumuistin, joka on sidottu API-avaimeen (ja
 valinnaisesti istuntotunnukseen). Muistot poimitaan automaattisesti LLM-vastauksista
 kevyellä regex-hahmontunnistuksella ja lisätään takaisin myöhempiin
 pyyntöihin ensimmäisenä järjestelmäviestinä (tai ensimmäisenä käyttäjäviestinä
@@ -645,7 +645,7 @@ oletusarvoinen TTL 5 min).
 
 ## Upotuspalveluntarjoajan valinta (v3.8.16+)
 
-OmniRouten muistimoottori tukee **neljää upotuslähdettä** (`src/lib/memory/embedding/`). Jokaisella on erilaisia kompromisseja **viiveen, kustannusten, mallin laadun ja käyttöönoton monimutkaisuuden** suhteen.
+67routerin muistimoottori tukee **neljää upotuslähdettä** (`src/lib/memory/embedding/`). Jokaisella on erilaisia kompromisseja **viiveen, kustannusten, mallin laadun ja käyttöönoton monimutkaisuuden** suhteen.
 
 ### Upotuslähteet
 
@@ -1066,13 +1066,13 @@ Työprosessi kuuntelee vain takaisinkytkentäosoitetta, jonka `GenericMemoryBack
 Tämä sovitin ei lievennä kyseistä suojausta: isäntä on kiinteästi määritetty arvoon `127.0.0.1`, ja määritysskeema
 (`ClaudeMemBackendConfigSchema`, `.strict()`) hyväksyy vain:
 
-| Avain       | Tyyppi | Oletusarvo | Huomautukset                                                                                                                 |
-| ----------- | ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —          | Pakollinen, 1024–65535. claude-mem-työprosessin portti sen asetustiedostosta (oletus `37700 + uid % 100`).                   |
-| `project`   | string | —          | Käytettävä claude-mem-projekti. Jos ei asetettu → jokainen OmniRoute API -avain yhdistetään omaan projektiinsa (`apiKeyId`). |
-| `timeoutMs` | number | `5000`     | Pyyntökohtainen aikakatkaisu, 100–30000.                                                                                     |
+| Avain       | Tyyppi | Oletusarvo | Huomautukset                                                                                                                |
+| ----------- | ------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —          | Pakollinen, 1024–65535. claude-mem-työprosessin portti sen asetustiedostosta (oletus `37700 + uid % 100`).                  |
+| `project`   | string | —          | Käytettävä claude-mem-projekti. Jos ei asetettu → jokainen 67router API -avain yhdistetään omaan projektiinsa (`apiKeyId`). |
+| `timeoutMs` | number | `5000`     | Pyyntökohtainen aikakatkaisu, 100–30000.                                                                                    |
 
-Ota se käyttöön komennolla `PUT /api/settings/memory` ja käynnistä OmniRoute uudelleen (taustaosat rekisteröidään
+Ota se käyttöön komennolla `PUT /api/settings/memory` ja käynnistä 67router uudelleen (taustaosat rekisteröidään
 kerran funktiossa `initMemoryBackends()`):
 
 ```json
@@ -1089,7 +1089,7 @@ Yhdistäminen ja rajoitukset:
 
 - ID:t ovat muotoa `claude-mem:<observationId>`; `get`/`delete` ohittavat muiden taustaosien ID:t ilman
   verkkokutsua.
-- `create` → `POST /api/memory/save`; OmniRoute-kentät (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router-kentät (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) kulkevat claude-memin `metadata.omniroute`-kentässä ja säilyvät edestakaisessa muunnoksessa luettaessa.
 - `search` → `GET /api/search?format=json&type=observations`, rajattuna arvoon `maxTokens`
   (merkkejä / 4). `list` → työprosessin sivutettu havaintojen päätepiste (`total` on alaraja — työprosessi
@@ -1101,16 +1101,16 @@ Yhdistäminen ja rajoitukset:
 - Kehotesyöttö (`retrieval.ts`) ja `omniroute_memory_*`-MCP-työkalut lukevat edelleen SQLitea
   suoraan — ne eivät kulje `memoryManager`-komponentin kautta, joten tämä taustaosa ei syötä niille tietoja.
 
-**claude-memin omien LLM-kutsujen reititys OmniRouten kautta.** claude-mem pakkaa havaintoja
+**claude-memin omien LLM-kutsujen reititys 67routerin kautta.** claude-mem pakkaa havaintoja
 LLM:n avulla (oletus: Claude Agent SDK). Sen `openai-compatible`-palveluntarjoaja voidaan sen sijaan ohjata
-OmniRouteen, jolloin yhdistelmien varajärjestely ja kustannusseuranta tulevat käyttöön. Tiedostossa `~/.claude-mem/settings.json`:
+67routeriin, jolloin yhdistelmien varajärjestely ja kustannusseuranta tulevat käyttöön. Tiedostossa `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API -avain>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute-malli tai -yhdistelmä>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API -avain>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router-malli tai -yhdistelmä>"
 }
 ```
 

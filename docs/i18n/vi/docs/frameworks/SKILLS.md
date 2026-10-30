@@ -7,29 +7,29 @@
 > **Nguồn chuẩn:** `src/lib/skills/` và `src/app/api/skills/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute cung cấp một framework Skills có khả năng mở rộng, cho phép các mô hình ngôn ngữ (và người vận hành) kết hợp những năng lực có thể tái sử dụng — từ đọc hệ thống tệp và gửi yêu cầu HTTP đến thực thi mã trong sandbox và sử dụng các skill được tuyển chọn từ marketplace.
+67router cung cấp một framework Skills có khả năng mở rộng, cho phép các mô hình ngôn ngữ (và người vận hành) kết hợp những năng lực có thể tái sử dụng — từ đọc hệ thống tệp và gửi yêu cầu HTTP đến thực thi mã trong sandbox và sử dụng các skill được tuyển chọn từ marketplace.
 
-Một skill là một đơn vị công việc có phiên bản và được định nghĩa bằng schema. OmniRoute có thể chèn các skill dưới dạng định nghĩa công cụ vào những yêu cầu gửi đi, chặn các lệnh gọi công cụ được mô hình trả về, chạy handler tương ứng và đưa kết quả trở lại mô hình để cuộc hội thoại có thể tiếp tục. Mô hình không bao giờ thấy phần triển khai — chỉ thấy giao diện công cụ.
+Một skill là một đơn vị công việc có phiên bản và được định nghĩa bằng schema. 67router có thể chèn các skill dưới dạng định nghĩa công cụ vào những yêu cầu gửi đi, chặn các lệnh gọi công cụ được mô hình trả về, chạy handler tương ứng và đưa kết quả trở lại mô hình để cuộc hội thoại có thể tiếp tục. Mô hình không bao giờ thấy phần triển khai — chỉ thấy giao diện công cụ.
 
 ---
 
 ## Agent Skills và Omni Skills
 
-OmniRoute có hai hệ thống skill riêng biệt nhưng bổ trợ lẫn nhau:
+67router có hai hệ thống skill riêng biệt nhưng bổ trợ lẫn nhau:
 
 | Khía cạnh         | **Omni Skills** (tài liệu này)                                        | **Agent Skills**                                                                                  |
 | :---------------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
 | Mục đích          | Chèn công cụ LLM + thực thi trong sandbox                             | Danh mục SKILL.md để các agent bên ngoài khám phá và sử dụng                                      |
 | Nguồn chuẩn       | `src/lib/skills/` + marketplace                                       | `src/lib/agentSkills/` + thư mục `skills/`                                                        |
 | Chế độ runtime    | Được chèn vào các yêu cầu gửi đi, thực thi khi có sự kiện gọi công cụ | Danh mục markdown tĩnh + các endpoint khám phá REST/MCP/A2A                                       |
-| Đối tượng sử dụng | Chính OmniRoute (định tuyến kết hợp, các lệnh gọi LLM đến)            | Agent bên ngoài, client MCP, trình điều phối A2A                                                  |
+| Đối tượng sử dụng | Chính 67router (định tuyến kết hợp, các lệnh gọi LLM đến)             | Agent bên ngoài, client MCP, trình điều phối A2A                                                  |
 | Số lượng          | Thay đổi (do marketplace quyết định)                                  | 43 mục danh mục (22 API + 20 CLI + 1 cấu hình)                                                    |
 | Định dạng         | `SkillDefinition` với schema công cụ + handler                        | Frontmatter `SKILL.md` + nội dung markdown                                                        |
 | Khám phá          | REST `/api/skills/*` + các công cụ MCP `omniroute_skills_*`           | REST `/api/agent-skills/*` + các công cụ MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 
-**Omni Skills** là công cụ thực thi — chúng xác định OmniRoute _có thể làm gì_ khi một LLM gọi công cụ.
+**Omni Skills** là công cụ thực thi — chúng xác định 67router _có thể làm gì_ khi một LLM gọi công cụ.
 
-**Agent Skills** là danh mục tài liệu — chúng giải thích cho các agent bên ngoài _cách sử dụng_ REST API và CLI của OmniRoute, thông qua các tệp SKILL.md có cấu trúc có thể được đưa trực tiếp vào prompt của agent.
+**Agent Skills** là danh mục tài liệu — chúng giải thích cho các agent bên ngoài _cách sử dụng_ REST API và CLI của 67router, thông qua các tệp SKILL.md có cấu trúc có thể được đưa trực tiếp vào prompt của agent.
 
 Để tìm hiểu về danh mục Agent Skills, trình tạo, các công cụ MCP và skill A2A, hãy xem [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ OmniRoute có hai hệ thống skill riêng biệt nhưng bổ trợ lẫn nhau:
 
 Ba nguồn skill cùng tồn tại trong một registry:
 
-1. **Skill tích hợp sẵn** (`src/lib/skills/builtins.ts`) — được phân phối cùng OmniRoute. Bao quát các trường hợp phổ biến:
+1. **Skill tích hợp sẵn** (`src/lib/skills/builtins.ts`) — được phân phối cùng 67router. Bao quát các trường hợp phổ biến:
    - `file_read`, `file_write` — workspace sandbox theo từng khóa API tại `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP gửi ra ngoài thông qua `safeOutboundFetch` với `guard: "public-only"`
    - `web_search` — nhà cung cấp tìm kiếm có thể thay thế với cơ chế lưu cache (`executeWebSearch`)
    - `eval_code` — thực thi `node` hoặc `python` trong sandbox Docker
    - `execute_command` — lệnh shell trong sandbox Docker
    - `browser` — cấu trúc nền tảng dựa trên Playwright, bị tắt theo mặc định (`builtin/browser.ts`)
-2. **SkillsMP** (Marketplace của OmniRoute) — được tải từ `https://skillsmp.com/api/v1/skills/search`. Yêu cầu `skillsmpApiKey` trong phần Cài đặt.
+2. **SkillsMP** (Marketplace của 67router) — được tải từ `https://skillsmp.com/api/v1/skills/search`. Yêu cầu `skillsmpApiKey` trong phần Cài đặt.
 3. **SkillsSH** (danh mục cộng đồng `skills.sh`) — được tải từ `https://skills.sh/api/search`. Không cần xác thực; nội dung SKILL.md được lấy từ dữ liệu thô trên GitHub.
 
 Một "nhà cung cấp đang hoạt động" duy nhất kiểm soát dashboard sẽ cài đặt từ danh mục nào (`src/lib/skills/providerSettings.ts`). Chuyển đổi trong **Cài đặt → Bộ nhớ & Skill**. Mặc định: `skillsmp`.
@@ -442,7 +442,7 @@ tài liệu này; không có ngưỡng số thực kiểu `0.6` và không có v
 
 ## Danh mục skill tích hợp sẵn
 
-OmniRoute đi kèm một tập hợp skill tích hợp sẵn đã được tuyển chọn trong `src/lib/skills/builtin/`. Những skill phổ biến nhất:
+67router đi kèm một tập hợp skill tích hợp sẵn đã được tuyển chọn trong `src/lib/skills/builtin/`. Những skill phổ biến nhất:
 
 ### Skill tự động hóa trình duyệt
 

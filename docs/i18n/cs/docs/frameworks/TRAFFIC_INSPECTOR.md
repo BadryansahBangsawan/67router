@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector je integrovaný ladicí nástroj OmniRoute pro provoz HTTPS — nástroj podobný Charles Proxy / mitmweb / HTTP Toolkit, který **rozpoznává LLM** a **rozpoznává agenty**. Nachází se na adrese `/dashboard/tools/traffic-inspector` a přijímá živý provoz až z 5 souběžných zdrojů zachytávání.
+Traffic Inspector je integrovaný ladicí nástroj 67router pro provoz HTTPS — nástroj podobný Charles Proxy / mitmweb / HTTP Toolkit, který **rozpoznává LLM** a **rozpoznává agenty**. Nachází se na adrese `/dashboard/tools/traffic-inspector` a přijímá živý provoz až z 5 souběžných zdrojů zachytávání.
 
 **Umístění v dashboardu:** `/dashboard/tools/traffic-inspector`
 **Skupina v postranním panelu:** Nástroje (za AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector je integrovaný ladicí nástroj OmniRoute pro provoz HTTPS �
 
 ### V čem je Traffic Inspector jedinečný
 
-| Funkce                                                                          | mitmweb  | Charles | Fiddler  | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------- | :------: | :-----: | :------: | :-----------------------------: |
-| Webové rozhraní                                                                 |    ✓     |    ✗    |    ✗     |                ✓                |
-| Open source                                                                     |    ✓     |    ✗    | částečně |                ✓                |
-| **Rozpoznávání agentů** (ví, zda požadavek pochází z Antigravity/Copilot/atd.)  |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Rozpoznávání LLM** (analyzuje formát OpenAI/Anthropic/Gemini, tokeny, model)  |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Viditelné mapování modelů** (gemini-3-flash → claude-sonnet-4.7)              |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Rozdělení latence proxy/upstreamu**                                           | částečně |    ✗    |    ✗     |                ✓                |
-| **Integrace s OmniRoute** — směrování, fallback a náklady                       |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Ladění proxy v celém systému** (libovolná aplikace v počítači)                |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Zachytávání vlastních hostitelů** (přesměrování DNS pro jednotlivé hostitele) |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Režim proměnné prostředí HTTP_PROXY**                                         |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Zobrazení konverzace** (vícekolové bubliny, tool_use/tool_result)             |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Slučování streamů SSE** (rekonstrukce z delta událostí)                       |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Záznam relací** (pojmenované, exportovatelné jako .har/.jsonl)                |    ✗     |    ✓    |    ✓     |                ✓                |
+| Funkce                                                                          | mitmweb  | Charles | Fiddler  | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------- | :------: | :-----: | :------: | :----------------------------: |
+| Webové rozhraní                                                                 |    ✓     |    ✗    |    ✗     |               ✓                |
+| Open source                                                                     |    ✓     |    ✗    | částečně |               ✓                |
+| **Rozpoznávání agentů** (ví, zda požadavek pochází z Antigravity/Copilot/atd.)  |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Rozpoznávání LLM** (analyzuje formát OpenAI/Anthropic/Gemini, tokeny, model)  |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Viditelné mapování modelů** (gemini-3-flash → claude-sonnet-4.7)              |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Rozdělení latence proxy/upstreamu**                                           | částečně |    ✗    |    ✗     |               ✓                |
+| **Integrace s 67router** — směrování, fallback a náklady                        |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Ladění proxy v celém systému** (libovolná aplikace v počítači)                |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Zachytávání vlastních hostitelů** (přesměrování DNS pro jednotlivé hostitele) |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Režim proměnné prostředí HTTP_PROXY**                                         |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Zobrazení konverzace** (vícekolové bubliny, tool_use/tool_result)             |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Slučování streamů SSE** (rekonstrukce z delta událostí)                       |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Záznam relací** (pojmenované, exportovatelné jako .har/.jsonl)                |    ✗     |    ✓    |    ✓     |               ✓                |
 
 ### Architektura v jednom odstavci
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true, pokud jde o odpověď SSE
   mappedTo: string | null; // hlavička x-omniroute-mapped
-  costEstimateUsd: number | null; // odhadované náklady podle cen OmniRoute
+  costEstimateUsd: number | null; // odhadované náklady podle cen 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Systémový proxy server nebyl vrácen do původního stavu
 
-Pokud OmniRoute selže, zatímco je aktivní celosystémový režim proxy:
+Pokud 67router selže, zatímco je aktivní celosystémový režim proxy:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Základní cesta: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Seznam požadavků (lze filtrovat: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Podrobnosti jednoho požadavku                                                            |
 | DELETE | `/requests`                 | Vymazání vyrovnávací paměti v operační paměti                                            |
-| POST   | `/requests/{id}/replay`     | Opětovné provedení stejného požadavku prostřednictvím routeru OmniRoute                  |
+| POST   | `/requests/{id}/replay`     | Opětovné provedení stejného požadavku prostřednictvím routeru 67router                   |
 | PUT    | `/requests/{id}/annotation` | Uložení nebo aktualizace poznámky k požadavku                                            |
 
 ### WebSocket

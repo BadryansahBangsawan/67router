@@ -6,7 +6,7 @@
 
 ## Pregled
 
-Naredbe OmniRoute CLI-ja autentificiraju se na lokalnom API-ju za upravljanje s pomoću tokena
+Naredbe 67router CLI-ja autentificiraju se na lokalnom API-ju za upravljanje s pomoću tokena
 `HMAC-SHA256(machine-id, salt)` poslanog putem zaglavlja zahtjeva
 `x-omniroute-cli-token`.
 

@@ -6,7 +6,7 @@
 
 ## अवलोकन
 
-OmniRoute CLI आदेशहरूले `x-omniroute-cli-token` अनुरोध हेडरमार्फत पठाइने
+67router CLI आदेशहरूले `x-omniroute-cli-token` अनुरोध हेडरमार्फत पठाइने
 `HMAC-SHA256(machine-id, salt)` टोकन प्रयोग गरेर स्थानीय व्यवस्थापन API मा प्रमाणीकरण गर्छन्।
 
 यसले CLI उप-आदेशहरूलाई (`omniroute status`, `omniroute providers`, आदि)

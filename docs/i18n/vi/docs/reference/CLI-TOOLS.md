@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Tiếng Việt)
+# CLI Tools — 67router (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Cập nhật lần cuối: 2026-08-23
 
-OmniRoute tích hợp với ba loại công cụ CLI, được phân bổ trên ba trang bảng điều khiển chuyên biệt:
+67router tích hợp với ba loại công cụ CLI, được phân bổ trên ba trang bảng điều khiển chuyên biệt:
 
-| Trang          | Tuyến                   | Khái niệm                                                                                | Số lượng     |
-| -------------- | ----------------------- | ---------------------------------------------------------------------------------------- | ------------ |
-| **CLI Code's** | `/dashboard/cli-code`   | Các công cụ lập trình mà bạn trỏ đến OmniRoute (Client → CLI → OmniRoute → Nhà cung cấp) | 26           |
-| **CLI Agents** | `/dashboard/cli-agents` | Các tác nhân tự động mà bạn trỏ đến OmniRoute (cùng luồng, phạm vi rộng hơn)             | 10           |
-| **ACP Agents** | `/dashboard/acp-agents` | Các CLI được OmniRoute khởi chạy làm backend qua stdio/ACP (luồng ngược)                 | xem registry |
+| Trang          | Tuyến                   | Khái niệm                                                                              | Số lượng     |
+| -------------- | ----------------------- | -------------------------------------------------------------------------------------- | ------------ |
+| **CLI Code's** | `/dashboard/cli-code`   | Các công cụ lập trình mà bạn trỏ đến 67router (Client → CLI → 67router → Nhà cung cấp) | 26           |
+| **CLI Agents** | `/dashboard/cli-agents` | Các tác nhân tự động mà bạn trỏ đến 67router (cùng luồng, phạm vi rộng hơn)            | 10           |
+| **ACP Agents** | `/dashboard/acp-agents` | Các CLI được 67router khởi chạy làm backend qua stdio/ACP (luồng ngược)                | xem registry |
 
 Các tuyến cũ chuyển hướng bằng mã 308: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ Các tuyến cũ chuyển hướng bằng mã 308: `/dashboard/cli-tools` → `/
 CLI Code's / CLI Agents (luồng sử dụng):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (tất cả đều trỏ đến OmniRoute)
+           ▼  (tất cả đều trỏ đến 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute định tuyến đến đúng nhà cung cấp)
+           ▼  (67router định tuyến đến đúng nhà cung cấp)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (luồng khởi chạy ngược):
-    Yêu cầu từ client → OmniRoute → khởi chạy CLI qua stdio/ACP → phản hồi
+    Yêu cầu từ client → 67router → khởi chạy CLI qua stdio/ACP → phản hồi
 ```
 
 **Lợi ích:**
@@ -45,9 +45,9 @@ ACP Agents (luồng khởi chạy ngược):
 
 ## Tự động cấu hình với `setup-*`
 
-Bạn không cần phải viết thủ công cấu hình cho từng công cụ. OmniRoute cung cấp một lệnh `setup-*`
+Bạn không cần phải viết thủ công cấu hình cho từng công cụ. 67router cung cấp một lệnh `setup-*`
 cho mỗi CLI được hỗ trợ; lệnh này đọc danh mục mô hình **trực tiếp** từ một
-OmniRoute đang chạy (cục bộ hoặc từ xa) và ghi cấu hình riêng của công cụ đó trên máy của bạn:
+67router đang chạy (cục bộ hoặc từ xa) và ghi cấu hình riêng của công cụ đó trên máy của bạn:
 
 ```bash
 omniroute setup-codex        omniroute setup-claude       omniroute setup-opencode
@@ -58,7 +58,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Mỗi lệnh đều chấp nhận `--remote <url> --api-key <key>` (cấu hình một công cụ cục bộ để kết nối với
-OmniRoute từ xa), `--dry-run` (xem trước mà không ghi) và `--port`. Các công cụ
+67router từ xa), `--dry-run` (xem trước mà không ghi) và `--port`. Các công cụ
 không hỗ trợ tự động phát hiện mô hình (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) nhận
 `--model <id>` (và `--yes` cho các lần chạy không tương tác). `setup-5dive` là công thức duy nhất
 không ghi vào `$HOME`: nó cấu hình một cụm tác nhân 5dive bằng cách
@@ -77,9 +77,9 @@ nhưng không có công thức `setup-*`/`configure`.
 
 ### Chạy các lệnh này bên trong container
 
-Một lệnh `setup-*` được thực thi bên trong container OmniRoute sẽ ghi vào thư mục home
+Một lệnh `setup-*` được thực thi bên trong container 67router sẽ ghi vào thư mục home
 riêng của container, nơi không CLI nào trên máy chủ đọc được và sẽ biến mất cùng với
-container. OmniRoute phát hiện điều đó và thoát với mã `2`, kèm theo hướng dẫn thay vì
+container. 67router phát hiện điều đó và thoát với mã `2`, kèm theo hướng dẫn thay vì
 ghi dữ liệu. Có hai hướng xử lý được hỗ trợ — cài đặt CLI trên máy chủ và
 dùng `omniroute connect` để kết nối với container, hoặc bind-mount các thư mục cấu hình và đặt
 `CLI_CONFIG_HOME` (profile `host` của compose). Mọi lệnh `setup-*`, cùng với
@@ -203,7 +203,7 @@ Các agent tự trị xuất hiện trong `/dashboard/cli-agents`:
 
 ## 3. ACP Agent (/dashboard/acp-agents)
 
-Trang này (được đổi tên từ `/dashboard/agents`) hiển thị các CLI mà OmniRoute có thể **khởi chạy** làm công cụ thực thi backend thông qua giao thức stdio/ACP. Danh mục này được duy trì riêng trong `src/lib/acp/registry.ts` và **không** giống với `CLI_TOOLS`.
+Trang này (được đổi tên từ `/dashboard/agents`) hiển thị các CLI mà 67router có thể **khởi chạy** làm công cụ thực thi backend thông qua giao thức stdio/ACP. Danh mục này được duy trì riêng trong `src/lib/acp/registry.ts` và **không** giống với `CLI_TOOLS`.
 
 ---
 
@@ -330,7 +330,7 @@ Các namespace mới được thêm vào trong kế hoạch 14 F9:
 
 ## 9. Bắt đầu nhanh
 
-### Bước 1 — Lấy khóa API OmniRoute
+### Bước 1 — Lấy khóa API 67router
 
 1. Mở `/dashboard/api-manager` → **Tạo khóa API**
 2. Đặt tên cho khóa (ví dụ: `cli-tools`) và chọn tất cả quyền
@@ -394,7 +394,7 @@ cargo install smelt  # Dựa trên Rust
 ### Bước 4 — Thiết lập các biến môi trường toàn cục
 
 ```bash
-# Endpoint phổ quát của OmniRoute
+# Endpoint phổ quát của 67router
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -506,7 +506,7 @@ EOF
 **Chế độ VS Code:**
 Cài đặt tiện ích mở rộng Cline → Nhà cung cấp API: `OpenAI Compatible` → URL cơ sở: `http://localhost:20128/v1`
 
-Hoặc sử dụng bảng điều khiển OmniRoute → **Công cụ CLI → Cline → Áp dụng cấu hình**.
+Hoặc sử dụng bảng điều khiển 67router → **Công cụ CLI → Cline → Áp dụng cấu hình**.
 
 ---
 
@@ -527,7 +527,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Hoặc sử dụng bảng điều khiển OmniRoute → **Công cụ CLI → KiloCode → Áp dụng cấu hình**.
+Hoặc sử dụng bảng điều khiển 67router → **Công cụ CLI → KiloCode → Áp dụng cấu hình**.
 
 ---
 
@@ -551,14 +551,14 @@ Khởi động lại VS Code sau khi chỉnh sửa.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Sử dụng tùy chọn này khi VS Code Insiders được cấu hình cho các mô hình endpoint tùy chỉnh và bạn muốn OmniRoute hoạt động mà không cần trường header tùy chỉnh.
+Sử dụng tùy chọn này khi VS Code Insiders được cấu hình cho các mô hình endpoint tùy chỉnh và bạn muốn 67router hoạt động mà không cần trường header tùy chỉnh.
 
 **Vị trí được khuyến nghị:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Ví dụ sử dụng bí danh OmniRoute được mã hóa bằng token:**
+**Ví dụ sử dụng bí danh 67router được mã hóa bằng token:**
 
 ```json
 [
@@ -582,7 +582,7 @@ Sử dụng tùy chọn này khi VS Code Insiders được cấu hình cho các 
 
 **Lưu ý:**
 
-- Thay thế `sk-your-omniroute-key` bằng khóa API được tạo trong OmniRoute.
+- Thay thế `sk-your-omniroute-key` bằng khóa API được tạo trong 67router.
 - Trường `url` phải trỏ đến `/api/v1/vscode/{token}/chat/completions`.
 - Trường `modelsUrl` phải trỏ đến `/api/v1/vscode/{token}/models`.
 - Ưu tiên quy trình `/v1` thông thường kết hợp với header Bearer khi ứng dụng khách hỗ trợ header tùy chỉnh.
@@ -596,17 +596,17 @@ Sử dụng tùy chọn này khi VS Code Insiders được cấu hình cho các 
 # Đăng nhập vào tài khoản AWS/Kiro của bạn:
 kiro-cli login
 
-# CLI sử dụng cơ chế xác thực riêng — bản thân Kiro CLI không cần OmniRoute làm backend.
-# Sử dụng kiro-cli cùng với OmniRoute cho các công cụ khác.
+# CLI sử dụng cơ chế xác thực riêng — bản thân Kiro CLI không cần 67router làm backend.
+# Sử dụng kiro-cli cùng với 67router cho các công cụ khác.
 kiro-cli status
 ```
 
-Đối với ứng dụng máy tính **Kiro IDE**, hãy sử dụng endpoint MITM do OmniRoute cung cấp
+Đối với ứng dụng máy tính **Kiro IDE**, hãy sử dụng endpoint MITM do 67router cung cấp
 tại `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. CLI OmniRoute nội bộ
+## 10. CLI 67router nội bộ
 
 Tệp nhị phân `omniroute` cung cấp các lệnh để quản lý vòng đời máy chủ, thiết lập, chẩn đoán và quản lý nhà cung cấp. Điểm vào: `bin/omniroute.mjs`.
 
@@ -640,7 +640,7 @@ Các biến môi trường được nhận dạng cho thiết lập không tươ
 | Biến                | Mục đích                                                                               |
 | ------------------- | -------------------------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | Khóa API của nhà cung cấp (được liên kết với `--api-key` thông qua Commander `.env()`) |
-| `DATA_DIR`          | Ghi đè thư mục dữ liệu OmniRoute                                                       |
+| `DATA_DIR`          | Ghi đè thư mục dữ liệu 67router                                                        |
 
 Tất cả đầu vào không tương tác khác được truyền dưới dạng cờ, không phải biến môi trường:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -663,7 +663,7 @@ Lệnh doctor thực hiện các kiểm tra sau: `Cấu hình`, `Cơ sở dữ l
 ### Quản lý nhà cung cấp
 
 ```bash
-omniroute providers available                       # Danh mục nhà cung cấp OmniRoute
+omniroute providers available                       # Danh mục nhà cung cấp 67router
 omniroute providers available --search openai       # Lọc danh mục theo id/tên/bí danh/danh mục
 omniroute providers available --category api-key    # Lọc theo danh mục (api-key, oauth, free, ...)
 omniroute providers available --json                # JSON có thể đọc bằng máy
@@ -684,7 +684,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` ưu tiên API và do đó hoạt động với
 ngữ cảnh cục bộ hoặc từ xa đang hoạt động. Đầu vào thông tin xác thực nên sử dụng
 `--credential-stdin` hoặc `--credential-env`; `--dry-run --json` chỉ báo cáo
-sự hiện diện/hình dạng đã được che thông tin nhạy cảm. `providers available` đọc danh mục OmniRoute;
+sự hiện diện/hình dạng đã được che thông tin nhạy cảm. `providers available` đọc danh mục 67router;
 `providers list/test/test-all/validate` duy trì hành vi SQLite cục bộ và
 không yêu cầu máy chủ phải đang chạy.
 
@@ -727,7 +727,7 @@ cảnh báo luôn được in ra stderr trước khi bất kỳ văn bản thu�
 
 ### Các lệnh con khác
 
-Các lệnh này giả định máy chủ OmniRoute đang chạy, trừ khi có ghi chú khác:
+Các lệnh này giả định máy chủ 67router đang chạy, trừ khi có ghi chú khác:
 
 ```bash
 omniroute status                       # Trạng thái thời gian chạy toàn diện
@@ -735,7 +735,7 @@ omniroute logs                         # Truyền trực tiếp nhật ký yêu 
 omniroute config list                  # Hiển thị các công cụ CLI đã cấu hình
 
 omniroute provider list                # Liệt kê các nhà cung cấp khả dụng (bí danh của providers list)
-omniroute provider add                 # Đăng ký OmniRoute làm nhà cung cấp trên một công cụ
+omniroute provider add                 # Đăng ký 67router làm nhà cung cấp trên một công cụ
 omniroute keys add | list | remove     # Quản lý khóa API
 omniroute models [provider]            # Liệt kê các mô hình (--json, --search)
 omniroute combo list | switch | create | delete
@@ -785,7 +785,7 @@ omniroute completion                   # Tạo lệnh hoàn thành cho shell
 | `/v1/audio/speech`         | Chuyển văn bản thành giọng nói              | ElevenLabs, OpenAI TTS           |
 | `/v1/audio/transcriptions` | Chuyển giọng nói thành văn bản              | Deepgram, AssemblyAI             |
 
-Các ví dụ có thể dán để sử dụng ngay với URL OmniRoute đã được gắn token:
+Các ví dụ có thể dán để sử dụng ngay với URL 67router đã được gắn token:
 
 ```txt
 Ví dụ về token: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -804,7 +804,7 @@ Trò chuyện Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-6
 
 | Lỗi                                               | Nguyên nhân                               | Cách khắc phục                                         |
 | ------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------ |
-| `Connection refused`                              | OmniRoute không chạy                      | `omniroute serve`                                      |
+| `Connection refused`                              | 67router không chạy                       | `omniroute serve`                                      |
 | `401 Unauthorized`                                | API key không chính xác                   | Kiểm tra trong `/dashboard/api-manager`                |
 | `No combo configured`                             | Không có tổ hợp định tuyến đang hoạt động | Thiết lập trong `/dashboard/combos`                    |
 | CLI hiển thị "not installed"                      | Tệp nhị phân không có trong PATH          | Kiểm tra `which <command>`                             |
@@ -812,7 +812,7 @@ Trò chuyện Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-6
 | Liên kết cũ `/dashboard/cli-tools`                | Dấu trang trước v3.8.6                    | Tự động chuyển hướng đến `/dashboard/cli-code` (308)   |
 | Liên kết cũ `/dashboard/agents`                   | Dấu trang trước v3.8.6                    | Tự động chuyển hướng đến `/dashboard/acp-agents` (308) |
 
-## Quản lý chính sách inference-key bằng OmniRoute CLI
+## Quản lý chính sách inference-key bằng 67router CLI
 
 Sử dụng ngữ cảnh quản lý đã xác thực (xem [Chế độ từ xa](../guides/REMOTE-MODE.md))
 để kiểm tra hoặc cập nhật một inference key hiện có theo ID của key đó:

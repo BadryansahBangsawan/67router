@@ -25,7 +25,7 @@ Pirmā rinda, kuras pirmajā kolonnā ir burtiskais vārds `provider` (neatkarī
 Lejupielādējiet sākuma failu importēšanas modālajā logā (**Lejupielādēt CSV veidni**). Piemērs:
 
 ```csv
-# OmniRoute pakalpojumu sniedzēju importēšana (pozicionālās kolonnas)
+# 67router pakalpojumu sniedzēju importēšana (pozicionālās kolonnas)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

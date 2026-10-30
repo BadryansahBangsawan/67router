@@ -14,7 +14,7 @@ kóòdù executor, àwọn iye àkàyàn OAuth, àwọn header, tàbí ipò ày�
 Manifest kan náà tún wà lórí HTTP ní
 `GET /api/v1/provider-plugin-manifest` fún àwọn sidecar tí ń ṣiṣẹ́ níta process.
 
-OmniRoute ń polówó URL yẹn fún Bifrost àti CLIProxyAPI nípasẹ̀ header ìbéèrè
+67router ń polówó URL yẹn fún Bifrost àti CLIProxyAPI nípasẹ̀ header ìbéèrè
 `X-OmniRoute-Provider-Manifest-Url`. Ṣètò
 `OMNIROUTE_PROVIDER_MANIFEST_URL` nígbà tí sidecar bá nílò URL gbogbogbò tàbí URL
 nẹ́tíwọ́ọ̀kì container dípò orísun ìbéèrè agbègbè.
@@ -30,7 +30,7 @@ nínú cache, sidecar náà gbọ́dọ̀ ṣe ìbéèrè láìsí àídájú d�
 ## Ète
 
 Gbé metadata olùpèsè sún mọ́ àdéhùn plugin kí ipa-ọ̀nà ìbéèrè gbígbóná lè
-wá jẹ́ ohun tí sidecar alálọ́ra-kékeré ń ṣàkóso ní ọjọ́ iwájú, nígbà tí OmniRoute bá ń pa
+wá jẹ́ ohun tí sidecar alálọ́ra-kékeré ń ṣàkóso ní ọjọ́ iwájú, nígbà tí 67router bá ń pa
 route TypeScript mọ́ gẹ́gẹ́ bí ẹnubodè ìlànà àti àṣàyàn ìpadà. Manifest náà jẹ́ àfikún: kò
 yí ìtọ́sọ́nà ìbéèrè padà fúnra rẹ̀.
 
@@ -74,7 +74,7 @@ kí wọ́n tún ka àwọn source TypeScript.
 | `usage-fetch`        | Ní olùkójọ usage tàbí quota tí a ti so pọ̀ (`getUsageForProvider`).          |
 | `usage-supported`    | API usage gba olùpèsè yìí (`isSupportedUsageConnection`).                   |
 
-`usage-fetch` jẹ́ fún ìṣàwárí nìkan. Ó ń jẹ́rìí pé OmniRoute mọ bí a ṣe ń ka usage fún
+`usage-fetch` jẹ́ fún ìṣàwárí nìkan. Ó ń jẹ́rìí pé 67router mọ bí a ṣe ń ka usage fún
 olùpèsè náà; kò ṣiṣẹ́ ìkójọ, kò yí ìtumọ̀ quota padà, bẹ́ẹ̀ ni kò túmọ̀ sí pé
 widget quota Dashboard ti ṣiṣẹ́ fún olùpèsè náà — `USAGE_SUPPORTED_PROVIDERS` ló ń
 ṣàkóso widget yẹn lọ́tọ̀. Orisun òtítọ́ ni `USAGE_FETCHER_PROVIDERS` nínú

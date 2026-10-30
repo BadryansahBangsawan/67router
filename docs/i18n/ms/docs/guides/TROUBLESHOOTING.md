@@ -8,17 +8,17 @@
 
 🌐 **Bahasa:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Masalah lazim dan penyelesaian untuk OmniRoute.
+Masalah lazim dan penyelesaian untuk 67router.
 
 ---
 
 ## Rujukan Pantas
 
-**Baharu menggunakan OmniRoute?** Mulakan di sini — ini menyelesaikan 90% masalah:
+**Baharu menggunakan 67router?** Mulakan di sini — ini menyelesaikan 90% masalah:
 
 | Saya melihat ini                | Maksudnya                                           | Tindakan yang perlu dilakukan                                                                                          |
 | ------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| "Tidak dapat menyambung"        | OmniRoute tidak berjalan                            | Jalankan `omniroute` atau `docker restart omniroute`                                                                   |
+| "Tidak dapat menyambung"        | 67router tidak berjalan                             | Jalankan `omniroute` atau `docker restart omniroute`                                                                   |
 | "Kunci API tidak sah"           | Kunci anda salah atau telah tamat tempoh            | Salin semula kunci daripada laman web penyedia                                                                         |
 | "Had kadar telah dilampaui"     | Anda menghantar terlalu banyak permintaan           | Tunggu 1 minit, atau gunakan `model: "auto"` untuk sandaran automatik                                                  |
 | "Kuota telah dilampaui"         | Anda telah menggunakan semua kuota percuma/berbayar | Sambungkan lebih banyak penyedia, atau gunakan penyedia percuma (Kiro, Pollinations)                                   |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # had kemasukan eksplisit untuk pe
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # tingkatkan tempoh menunggu terhad melebihi nilai lalai RATE_LIMIT_MAX_WAIT_MS untuk huluan yang perlahan
 ```
 
-Tetapkan pemboleh ubah ini dalam persekitaran proses OmniRoute (demon tersebut, contohnya melalui plist LaunchAgent atau `systemctl edit`), kemudian mulakan semula OmniRoute. Bendera penggiliran ialah mekanisme tunggal yang memberikan impak terbesar: ia menukar kegagalan mutlak kepada percubaan semula telus melalui penyedia yang sihat dalam kumpulan.
+Tetapkan pemboleh ubah ini dalam persekitaran proses 67router (demon tersebut, contohnya melalui plist LaunchAgent atau `systemctl edit`), kemudian mulakan semula 67router. Bendera penggiliran ialah mekanisme tunggal yang memberikan impak terbesar: ia menukar kegagalan mutlak kepada percubaan semula telus melalui penyedia yang sihat dalam kumpulan.
 
 **Nota**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` mengehadkan bilangan permintaan berat — berkonteks panjang — yang dijalankan serentak; had tersebut ialah get kemasukan, bukannya pengehad kadar penyedia. **Kemas kini #503-fanout:** pemboleh ubah ini tidak lagi ditetapkan secara lalai (kini ia hanya berkuat kuasa apabila dikonfigurasikan secara eksplisit, seperti di atas) — sebaliknya, kemasukan permintaan berat dikawal oleh belanjawan bait terbitan automatik (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) yang menskalakan dirinya berdasarkan had memori sebenar hos, maka pelaksanaan baharu sepatutnya mengalami jauh lebih sedikit penolakan `503 chat_admission_busy` tanpa perlu menetapkan pemboleh ubah ini sama sekali; menetapkannya secara eksplisit di sini masih berfungsi tepat seperti yang didokumentasikan. Penggantian belanjawan bait secara eksplisit dihadkan kepada 8 MiB–2 GiB. `413 body_exceeds_budget` bukan bersifat sementara: tingkatkan belanjawan bait tersebut, kurangkan `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`, atau tingkatkan had memori proses. Pelepasan beban `inflight_bytes_budget` ialah persaingan sumber sementara dan masih boleh dicuba semula. Pengehadan kadar bagi setiap penyedia (`open-sse/services/rateLimitManager.ts`) dikawal secara berasingan oleh `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, dan `RATE_LIMIT_AUTO_ENABLE` — lihat `.env.example`.
 
 **Cara mengesahkan pembetulan berjaya**: jalankan ejen/cron anda dua kali dalam sela masa yang singkat dan sahkan kedua-duanya berjaya. Sebelum pembetulan, pelaksanaan kedua lazimnya menghasilkan `429`/`401`. Selepas pembetulan, kegagalan (jika ada) dicuba semula secara telus dan panggilan diselesaikan. Anda juga boleh menjalankan `curl /monitoring/health` dan memantau medan `rateLimitedUntil` pada sambungan penyedia serta `circuitBreakers.providerBreakers[].state` untuk penyedia yang terjejas — keadaan tersebut ialah salah satu daripada `CLOSED`, `DEGRADED`, `OPEN`, atau `HALF_OPEN` (lihat `src/shared/utils/circuitBreaker.ts`), dan penyedia yang terus gagal akan berubah daripada `CLOSED → DEGRADED → OPEN` sebelum tetingkap penetapan semula membenarkan prob melaluinya (`HALF_OPEN`).
 
-**Jika anda masih melihat 429**: akaun aktif bagi penyedia tersebut benar-benar telah menghabiskan _kuotanya_ (bukan sekadar kadar). Tambahkan akaun kedua untuk penyedia yang sama dalam papan pemuka OmniRoute → Providers → Accounts, atau sertakan penyedia percuma lain (contohnya `routeway`, `auggie`). Penggiliran hanya membantu bagi had kadar sementara/400/401; kehabisan kuota sepenuhnya memerlukan bukti kelayakan kedua atau penyedia lain.
+**Jika anda masih melihat 429**: akaun aktif bagi penyedia tersebut benar-benar telah menghabiskan _kuotanya_ (bukan sekadar kadar). Tambahkan akaun kedua untuk penyedia yang sama dalam papan pemuka 67router → Providers → Accounts, atau sertakan penyedia percuma lain (contohnya `routeway`, `auggie`). Penggiliran hanya membantu bagi had kadar sementara/400/401; kehabisan kuota sepenuhnya memerlukan bukti kelayakan kedua atau penyedia lain.
 
 **Jika anda melihat 403 pada model penglihatan (`auto/vision`, `bazaarlink/*`)**: akaun yang disambungkan tidak mempunyai pelan berbayar yang merangkumi penglihatan, atau kunci API tidak mempunyai kebenaran yang mencukupi. Sahkan dalam papan pemuka penyedia bahawa skop kunci merangkumi penglihatan/multimodal, atau sambungkan akaun peringkat berbayar dan kekalkannya sebagai sasaran penglihatan.
 
@@ -71,7 +71,7 @@ Tetapkan pemboleh ubah ini dalam persekitaran proses OmniRoute (demon tersebut, 
 
 Apabila anda menjalankan `npm install -g omniroute`, anda mungkin melihat banyak amaran seperti `npm warn ERESOLVE`, notis kebergantungan setara, dan mesej `deprecated`. **Semua ini dijangka dan tidak memudaratkan.** Pemasangan anda berjaya jika anda melihat `added <N> packages` dalam output.
 
-Untuk menyekat amaran penyelesaian kebergantungan setara, gunakan kaedah pemasangan yang disokong oleh OmniRoute:
+Untuk menyekat amaran penyelesaian kebergantungan setara, gunakan kaedah pemasangan yang disokong oleh 67router:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` hanya menyekat `ERESOLVE` dan notis kebergantungan setara. Notis penyahgunaan kekal kelihatan kerana ia berasal daripada pakej pihak ketiga transitif; notis tersebut tidak menunjukkan bahawa pemasangan gagal.
 
-Amaran tersebut berpunca daripada julat kebergantungan setara yang lapuk dalam pakej pihak ketiga yang tidak dikawal oleh OmniRoute:
+Amaran tersebut berpunca daripada julat kebergantungan setara yang lapuk dalam pakej pihak ketiga yang tidak dikawal oleh 67router:
 
 1. **`marked-terminal` memerlukan `marked >=1 <16`, tetapi `marked@18` ditemui** — ia berfungsi dengan baik dalam penggunaan sebenar; julat setara huluan itu cuma lapuk.
 2. **`deprecated prebuild-install@7.1.3`** — pembantu transitif untuk mendapatkan binari natif. Ia tidak
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### Bolehkah amaran ini diabaikan?
 
-**Sebahagiannya, tetapi menjalankan aplikasi tanpa skrip tidak disyorkan.** OmniRoute menyediakan mekanisme sandaran yang baik: jika pengikatan natif `better-sqlite3` tidak dapat dimuatkan daripada berkas kendiri, aplikasi akan beralih kepada pemacu alternatif seperti `node:sqlite` atau `sql.js` (lihat [Penyelesaian Masa Jalan SQLite](../ops/SQLITE_RUNTIME.md)). Pelayan masih akan dimulakan, tetapi penggunaan mekanisme sandaran WASM seperti `sql.js` akan menyahdayakan mod WAL (Write-Ahead Logging) SQLite serta meningkatkan penggunaan memori dan overhed penyegerakan cakera.
+**Sebahagiannya, tetapi menjalankan aplikasi tanpa skrip tidak disyorkan.** 67router menyediakan mekanisme sandaran yang baik: jika pengikatan natif `better-sqlite3` tidak dapat dimuatkan daripada berkas kendiri, aplikasi akan beralih kepada pemacu alternatif seperti `node:sqlite` atau `sql.js` (lihat [Penyelesaian Masa Jalan SQLite](../ops/SQLITE_RUNTIME.md)). Pelayan masih akan dimulakan, tetapi penggunaan mekanisme sandaran WASM seperti `sql.js` akan menyahdayakan mod WAL (Write-Ahead Logging) SQLite serta meningkatkan penggunaan memori dan overhed penyegerakan cakera.
 
 ### Skrip manakah yang sebenarnya diperlukan?
 
-Bukan semua skrip yang disekat penting untuk menjalankan OmniRoute:
+Bukan semua skrip yang disekat penting untuk menjalankan 67router:
 
-- **Penting (`omniroute`, `better-sqlite3`):** OmniRoute dijalankan daripada berkas aplikasi kendiri Next.js (`dist/`). Semasa pemasangan, npm memuat turun atau menyusun pemacu SQLite natif khusus hos dalam `node_modules/better-sqlite3/` peringkat teratas. Skrip `postinstall` OmniRoute (`scripts/build/postinstall.mjs`) kemudian mengesahkan dan menyalin perduaan khusus hos ini ke dalam `dist/node_modules/` supaya pelayan kendiri boleh mengaksesnya. Jika skrip postinstall `omniroute` disekat, langkah penyalinan ini akan dilangkau.
+- **Penting (`omniroute`, `better-sqlite3`):** 67router dijalankan daripada berkas aplikasi kendiri Next.js (`dist/`). Semasa pemasangan, npm memuat turun atau menyusun pemacu SQLite natif khusus hos dalam `node_modules/better-sqlite3/` peringkat teratas. Skrip `postinstall` 67router (`scripts/build/postinstall.mjs`) kemudian mengesahkan dan menyalin perduaan khusus hos ini ke dalam `dist/node_modules/` supaya pelayan kendiri boleh mengaksesnya. Jika skrip postinstall `omniroute` disekat, langkah penyalinan ini akan dilangkau.
 - **Pilihan/transitif (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Ini ialah pembantu binaan, alat pemantau atau utiliti rantai kunci sistem. Membenarkannya akan mengelakkan amaran binaan, tetapi pakej tersebut tidak diperlukan untuk fungsi penghalaan teras.
-- **Dikecualikan (`onnxruntime-node`):** Kebergantungan pilihan untuk pembenaman AI setempat dan **tidak** diperlukan untuk menjalankan OmniRoute. Skrip postinstall pakej ini memuat turun aset CUDA bersaiz ~300MB daripada NuGet; jangan masukkannya dalam senarai dibenarkan melainkan anda memang berhasrat untuk menggunakan pecutan ONNX setempat pada perkakasan yang disokong.
+- **Dikecualikan (`onnxruntime-node`):** Kebergantungan pilihan untuk pembenaman AI setempat dan **tidak** diperlukan untuk menjalankan 67router. Skrip postinstall pakej ini memuat turun aset CUDA bersaiz ~300MB daripada NuGet; jangan masukkannya dalam senarai dibenarkan melainkan anda memang berhasrat untuk menggunakan pecutan ONNX setempat pada perkakasan yang disokong.
 
 ### Penyelesaian yang disyorkan
 
-Untuk membenarkan skrip pemasangan yang diperlukan semasa pemasangan global dan menyenyapkan amaran, gunakan `--allow-scripts` untuk OmniRoute dan kebergantungan natifnya:
+Untuk membenarkan skrip pemasangan yang diperlukan semasa pemasangan global dan menyenyapkan amaran, gunakan `--allow-scripts` untuk 67router dan kebergantungan natifnya:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -147,15 +147,15 @@ Playwright sengaja mengasingkan muat turun pelayar daripada pemasangan pakej
 npm, jadi respons ini dijangka sehingga pelayar dipasang.
 
 Untuk pemasangan npm global, pasang Chromium daripada direktori pakej
-OmniRoute supaya cache pelayar dimiliki oleh pemasangan Playwright yang sama:
+67router supaya cache pelayar dimiliki oleh pemasangan Playwright yang sama:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Mulakan semula OmniRoute selepas pemasangan, kemudian cuba semula permintaan Gemini Web. Jika anda
-menjalankan OmniRoute daripada imej Docker, gunakan imej `-web` (atau sasaran binaan
+Mulakan semula 67router selepas pemasangan, kemudian cuba semula permintaan Gemini Web. Jika anda
+menjalankan 67router daripada imej Docker, gunakan imej `-web` (atau sasaran binaan
 `runner-web`), yang merangkumi Chromium dan kebergantungannya; imej asas tidak
 merangkuminya.
 
@@ -188,7 +188,7 @@ merangkuminya.
 **Ini ialah positif palsu. Tiada apa-apa yang dijangkiti dan tiada tindakan diperlukan.**
 
 Avast dan AVG menjalankan heuristik yang menandai fail teks biasa/Markdown yang mengandungi banyak
-pautan yang kelihatan seperti permintaan HTTP. `README.md` OmniRoute disertakan dalam pakej npm (ia
+pautan yang kelihatan seperti permintaan HTTP. `README.md` 67router disertakan dalam pakej npm (ia
 disenaraikan dalam `package.json` → `files`), maka ia ditempatkan di `node_modules/omniroute/README.md` semasa
 pemasangan global — dan ia mengandungi kira-kira 15 contoh `http://localhost:20128/...` (titik akhir
 HTTP/SSE MCP, URL `.well-known` A2A dan petikan `curl`). Kepadatan pautan tersebut
@@ -205,7 +205,7 @@ daripada kuarantin dengan selamat.
 
 1. **Hentikan pemberitahuan** — kecualikan direktori pemasangan dalam antivirus anda
    (Avast: Settings → Exceptions), dengan menambahkan laluan `node_modules` global anda dan/atau
-   direktori data OmniRoute (`~/.omniroute/`).
+   direktori data 67router (`~/.omniroute/`).
 2. **Laporkan positif palsu** — <https://www.avast.com/false-positive-file-form.php>,
    dengan melampirkan `README.md` yang dikuarantin. Inilah pembaikan yang membantu semua orang kerana
    heuristik vendor tersebut bertindak secara berlebihan terhadap fail teks.
@@ -265,7 +265,7 @@ sehingga ia dilaksanakan, keluaran baharu mungkin mengulangi perkara ini.
 
 ### Halaman log masuk ranap atau memaparkan ralat "Module self-registration"
 
-**Punca:** Anda menjalankan versi Node.js di luar tahap minimum persekitaran masa jalan selamat yang diluluskan oleh OmniRoute. Kes yang paling lazim ialah menjalankan tahap tampalan Node 22 atau 24 yang lebih lama dan berada di bawah tahap minimum keselamatan bertampal yang diperlukan oleh OmniRoute.
+**Punca:** Anda menjalankan versi Node.js di luar tahap minimum persekitaran masa jalan selamat yang diluluskan oleh 67router. Kes yang paling lazim ialah menjalankan tahap tampalan Node 22 atau 24 yang lebih lama dan berada di bawah tahap minimum keselamatan bertampal yang diperlukan oleh 67router.
 
 **Gejala:**
 
@@ -281,7 +281,7 @@ sehingga ia dilaksanakan, keluaran baharu mungkin mengulangi perkara ini.
    nvm use 24
    ```
 2. Sahkan versi anda: `node --version` sepatutnya memaparkan `v24.0.0` atau lebih baharu dalam siri 24.x LTS
-3. Pasang semula OmniRoute: `npm install -g omniroute`
+3. Pasang semula 67router: `npm install -g omniroute`
 4. Mulakan semula: `omniroute`
 
 > **Versi selamat yang disokong:** `>=22.22.2 <23` atau `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) dan Node.js 26 disokong sepenuhnya.
@@ -364,13 +364,13 @@ omniroute
 
 **Punca:** Pada Node.js 22, penghantar undici@8 tidak serasi dengan pelaksanaan `fetch()` terbina dalam Node.
 
-**Pembaikan (v3.5.5+):** OmniRoute kini menggunakan fungsi `fetch()` milik undici apabila penghantar proksi aktif, bagi memastikan tingkah laku yang konsisten. Kemas kini kepada v3.5.5+.
+**Pembaikan (v3.5.5+):** 67router kini menggunakan fungsi `fetch()` milik undici apabila penghantar proksi aktif, bagi memastikan tingkah laku yang konsisten. Kemas kini kepada v3.5.5+.
 
 ### Proksi MITM di bawah WSL: aplikasi desktop pada hos Windows tidak dipintas
 
-**Punca:** Proksi MITM dan sijil CAnya dipasang dalam persekitaran tempat OmniRoute dijalankan. Di bawah WSL, persekitaran tersebut ialah tetamu Linux, manakala aplikasi desktop AI (Kiro, Trae, Copilot, Zed, …) dijalankan pada hos Windows. Aplikasi hos tidak mempercayai stor sijil tetamu dan tidak dihalakan melalui proksi sistem tetamu, maka pemintasan desktop tidak berlaku di situ.
+**Punca:** Proksi MITM dan sijil CAnya dipasang dalam persekitaran tempat 67router dijalankan. Di bawah WSL, persekitaran tersebut ialah tetamu Linux, manakala aplikasi desktop AI (Kiro, Trae, Copilot, Zed, …) dijalankan pada hos Windows. Aplikasi hos tidak mempercayai stor sijil tetamu dan tidak dihalakan melalui proksi sistem tetamu, maka pemintasan desktop tidak berlaku di situ.
 
-**Cadangan:** Jalankan OmniRoute secara natif pada OS yang sama dengan aplikasi desktop yang ingin anda pintas (Windows untuk aplikasi Windows; begitu juga bagi macOS/Linux). Mengekalkan OmniRoute di dalam WSL sambil menyasarkan aplikasi hos memerlukan anda mempercayai sijil CA yang dijana secara manual pada hos Windows dan menghalakan tetapan rangkaian/proksi setiap aplikasi hos ke titik akhir proksi WSL — suatu persediaan yang tidak disokong dan rapuh.
+**Cadangan:** Jalankan 67router secara natif pada OS yang sama dengan aplikasi desktop yang ingin anda pintas (Windows untuk aplikasi Windows; begitu juga bagi macOS/Linux). Mengekalkan 67router di dalam WSL sambil menyasarkan aplikasi hos memerlukan anda mempercayai sijil CA yang dijana secara manual pada hos Windows dan menghalakan tetapan rangkaian/proksi setiap aplikasi hos ke titik akhir proksi WSL — suatu persediaan yang tidak disokong dan rapuh.
 
 ---
 
@@ -397,7 +397,7 @@ omniroute
 
 ### Token OAuth Tamat Tempoh
 
-OmniRoute menyegarkan token secara automatik. Jika isu berterusan:
+67router menyegarkan token secara automatik. Jika isu berterusan:
 
 1. Papan Pemuka → Penyedia → Sambung Semula
 2. Padam dan tambahkan semula sambungan penyedia
@@ -610,7 +610,7 @@ Profil penyedia menyokong tetapan berikut:
 
 ### Pencegahan thundering herd
 
-Apabila banyak permintaan serentak mencapai penyedia yang dikenakan had kadar, OmniRoute menggunakan mutex + pengehadan kadar automatik untuk menyusun permintaan secara bersiri dan mengelakkan kegagalan berantai. Ini berlaku secara automatik untuk penyedia kunci API.
+Apabila banyak permintaan serentak mencapai penyedia yang dikenakan had kadar, 67router menggunakan mutex + pengehadan kadar automatik untuk menyusun permintaan secara bersiri dan mengelakkan kegagalan berantai. Ini berlaku secara automatik untuk penyedia kunci API.
 
 ### Permintaan sembang gagal dengan 503 / chat_admission_busy
 
@@ -646,7 +646,7 @@ Pada ambang lalai, sesuatu permintaan dianggap berat dari segi struktur apabila 
 sekurang-kurangnya `64` alat atau sekurang-kurangnya `32,000` token anggaran, atau apabila anggaran struktur terbatas
 mencapai hadnya sebanyak `10,000` nod yang dilawati atau kedalaman `12`.
 
-**Punca:** Ini ialah pengurangan beban yang disengajakan dalam OmniRoute, bukannya kegagalan penyedia huluan.
+**Punca:** Ini ialah pengurangan beban yang disengajakan dalam 67router, bukannya kegagalan penyedia huluan.
 Setiap proses menggunakan pengawal setempat proses untuk menempah kapasiti beban berat yang terhad sebelum menyimpan
 dan menghuraikan isi permintaan yang besar. Pajakan beban berat kekal dipegang sepanjang hayat respons SSE.
 
@@ -690,7 +690,7 @@ untuk tetapan kemasukan yang berwibawa.
 
 ## Taksonomi kegagalan RAG / LLM pilihan (16 masalah)
 
-Sesetengah pengguna OmniRoute meletakkan get laluan di hadapan tindanan RAG atau ejen. Dalam persediaan tersebut, corak yang aneh sering dilihat: OmniRoute kelihatan sihat (penyedia aktif, profil penghalaan baik, tiada amaran had kadar), tetapi jawapan akhir masih salah.
+Sesetengah pengguna 67router meletakkan get laluan di hadapan tindanan RAG atau ejen. Dalam persediaan tersebut, corak yang aneh sering dilihat: 67router kelihatan sihat (penyedia aktif, profil penghalaan baik, tiada amaran had kadar), tetapi jawapan akhir masih salah.
 
 Dalam amalan, insiden ini biasanya berpunca daripada saluran RAG hiliran, bukannya daripada get laluan itu sendiri.
 
@@ -709,17 +709,17 @@ Ideanya mudah:
 
 1. Apabila anda menyiasat respons yang buruk, rekodkan:
    - tugas dan permintaan pengguna
-   - gabungan laluan atau penyedia dalam OmniRoute
+   - gabungan laluan atau penyedia dalam 67router
    - sebarang konteks RAG yang digunakan di hiliran (dokumen yang diperoleh, panggilan alat dan sebagainya)
 2. Petakan insiden kepada satu atau dua nombor WFGY ProblemMap (`No.1` … `No.16`).
-3. Simpan nombor tersebut dalam papan pemuka, buku panduan operasi atau penjejak insiden anda sendiri bersebelahan log OmniRoute.
+3. Simpan nombor tersebut dalam papan pemuka, buku panduan operasi atau penjejak insiden anda sendiri bersebelahan log 67router.
 4. Gunakan halaman WFGY yang sepadan untuk menentukan sama ada anda perlu mengubah tindanan RAG, pengambil maklumat atau strategi penghalaan anda.
 
 Teks penuh dan panduan praktikal tersedia di sini (lesen MIT, teks sahaja):
 
 [README WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Anda boleh mengabaikan bahagian ini jika anda tidak menjalankan saluran RAG atau ejen di belakang OmniRoute.
+Anda boleh mengabaikan bahagian ini jika anda tidak menjalankan saluran RAG atau ejen di belakang 67router.
 
 ---
 
@@ -743,7 +743,7 @@ Isu khusus untuk keluaran v3.8.0 dan penyelesaian sementara semasanya. Jika pemb
 
 1. Pasang Devin CLI untuk platform anda
 2. Tetapkan `CLI_DEVIN_BIN=/usr/local/bin/devin` (atau laluan sebenar) dalam `.env`
-3. Mulakan semula OmniRoute dan uji semula melalui **Papan Pemuka → Alat CLI**
+3. Mulakan semula 67router dan uji semula melalui **Papan Pemuka → Alat CLI**
 
 ### Tempoh bertenang model tersekat (tetapan semula manual)
 
@@ -798,7 +798,7 @@ Isu khusus untuk keluaran v3.8.0 dan penyelesaian sementara semasanya. Jika pemb
 
 1. Jana rahsia rawak: `openssl rand -hex 32`
 2. Tetapkan `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` dalam persekitaran pelayan pengeluaran (dan mana-mana klien yang berkomunikasi dengan jambatan)
-3. Mulakan semula OmniRoute
+3. Mulakan semula 67router
 
 ### Responses API: mod latar belakang diturunkan kepada segerak
 

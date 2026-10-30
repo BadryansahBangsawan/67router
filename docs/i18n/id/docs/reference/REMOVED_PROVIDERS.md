@@ -4,7 +4,7 @@
 
 ---
 
-Beberapa layanan pernah diintegrasikan ke OmniRoute lalu dihapus karena pengelolanya
+Beberapa layanan pernah diintegrasikan ke 67router lalu dihapus karena pengelolanya
 memintanya. Halaman ini merupakan catatan permanen mengenai penghapusan tersebut. Satu-satunya
 tujuannya adalah mencegah layanan itu kembali secara tidak sengaja: kontributor yang menemukan
 fork lama, tarball npm yang tersimpan dalam cache, isu yang diarsipkan, atau permintaan
@@ -18,11 +18,11 @@ entri.
 
 ## Kebijakan
 
-1. **Permintaan penghapusan dari operator layanan dipenuhi, bukan dinegosiasikan.** OmniRoute
+1. **Permintaan penghapusan dari operator layanan dipenuhi, bukan dinegosiasikan.** 67router
    tidak berafiliasi dengan layanan upstream mana pun. Ketika operator suatu layanan meminta
    agar integrasi dihapus, integrasi tersebut akan dihapus, baik integrasi itu menggunakan API
    resmi maupun tidak.
-2. **"Dihapus" berarti dari setiap bagian yang dikendalikan OmniRoute.** Executor, entri
+2. **"Dihapus" berarti dari setiap bagian yang dikendalikan 67router.** Executor, entri
    registry, id dan alias penyedia, daftar model, endpoint, variabel lingkungan, ikon, kartu
    dasbor, referensi penyedia yang dihasilkan, `FREE_TIERS.md`, referensi lingkungan, jumlah di
    README, mirror `llm.txt`, pengujian khusus dan golden snapshot, komentar kode, butir
@@ -34,7 +34,7 @@ entri.
 3. **Jangan pernah memperkenalkan kembali entri di halaman ini tanpa izin tertulis.** Ini
    termasuk menambahkan kembali id atau alias ke katalog penyedia mana pun, menambahkan domain
    ke executor, menerima PR kontributor yang "memulihkannya", menambahkannya ke katalog model
-   gratis, atau mendokumentasikan cara manual untuk mengaksesnya melalui OmniRoute. Tutup PR
+   gratis, atau mendokumentasikan cara manual untuk mengaksesnya melalui 67router. Tutup PR
    dan isu semacam itu dengan tautan ke halaman ini.
 4. **Pertahankan entri seminimal mungkin.** Catat hanya hal-hal yang diperlukan peninjau untuk
    mengenali pengenalan kembali: identifier, domain, tanggal, dan pull request yang melakukan
@@ -51,7 +51,7 @@ entri.
 | 2026-08-12   | `puter`           | `pu`     | `puter.com`                                                                         | Pemilik Puter (Nariman Jelveh)                                                                                                                                   | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Penyedia dengan kunci API. Migrasi `152_remove_puter_provider.sql` membersihkan konfigurasi yang tersimpan.                                                                                                                                                                                                                                                                                                                                   |
 | 2026-09-02   | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                             | Operator layanan (email dukungan)                                                                                                                                | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Penyedia tanpa kunci. Permintaan tertulis diterima pada 2026-08-30. Isu dan diskusi khusus dihapus, judul PR diubah.                                                                                                                                                                                                                                                                                                                          |
 | 2026-09-21   | `gemini-business` | `gembiz` | `business.gemini.google`                                                            | Keputusan pemilik proyek (isu [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                                  | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Penyedia web berbasis cookie. Google menghentikan endpoint `BardFrontendService/StreamGenerate` yang ditargetkan oleh eksekutor; penggantinya (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT yang di-bootstrap dari `__Secure-C_SES`/`csesidx`) tidak dapat dibuat atau divalidasi tanpa akun Gemini Enterprise/Workspace aktif, yang tidak dimiliki proyek ini. Dihentikan alih-alih ditulis ulang tanpa verifikasi. |
-| 2026-09-21   | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                    | Keputusan pemilik proyek (`#14224`)                                                                                                                              | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Penyedia autentikasi berbasis cookie, bukan penghapusan atas permintaan operator. `studio-api.suno.ai` ditangguhkan (503); host aktif memerlukan pertukaran Clerk JWT serta dependensi berbayar untuk memecahkan hCaptcha, yang diputuskan OmniRoute untuk tidak ditambahkan hanya demi satu penyedia musik. `kie/suno-v4.0` dan `kie/suno-v3.5` (di-host oleh kie.ai) tidak terdampak dan tetap didukung.                                    |
+| 2026-09-21   | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                    | Keputusan pemilik proyek (`#14224`)                                                                                                                              | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Penyedia autentikasi berbasis cookie, bukan penghapusan atas permintaan operator. `studio-api.suno.ai` ditangguhkan (503); host aktif memerlukan pertukaran Clerk JWT serta dependensi berbayar untuk memecahkan hCaptcha, yang diputuskan 67router untuk tidak ditambahkan hanya demi satu penyedia musik. `kie/suno-v4.0` dan `kie/suno-v3.5` (di-host oleh kie.ai) tidak terdampak dan tetap didukung.                                     |
 | 2026-10-10   | `opencode`        | `oc`     | `opencode.ai/zen/v1` (tingkat gratis; host digunakan bersama dengan `opencode-zen`) | Penghapusan preventif (keputusan pemilik proyek), untuk menghormati permintaan penghapusan publik dari operator OpenCode kepada proyek hulu 9router (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Hanya penyedia tanpa kunci "OpenCode Free" yang dihapus. `opencode-zen` dan `opencode-go` yang diautentikasi, semua model katalog Zen beserta kontrak permintaannya, integrasi klien OpenCode, dan `@omniroute/opencode-plugin*` tetap tersedia. Migrasi `207_remove_opencode_free_provider.sql` memindahkan koneksi lama yang memiliki kunci API ke Zen dan membersihkan konfigurasi tanpa kunci.                                            |
 
 ## Menambahkan entri
@@ -67,5 +67,5 @@ Ketika permintaan penghapusan baru diterima:
 3. Tambahkan satu baris ke tabel di atas dan identifier ke
    `tests/unit/removed-providers-blocklist.test.ts`, dalam PR yang sama.
 4. Balas operator setelah PR digabungkan, dengan mencantumkan apa saja yang telah dihapus dan
-   apa yang tidak dapat diubah oleh OmniRoute (versi npm dan Docker yang sudah diterbitkan,
+   apa yang tidak dapat diubah oleh 67router (versi npm dan Docker yang sudah diterbitkan,
    riwayat git, serta fork pihak ketiga).

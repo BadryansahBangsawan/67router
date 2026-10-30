@@ -13,7 +13,7 @@
 
 ## Šta je to
 
-OmniRoute se može povezati sa **Notion** radnim prostorom kao **izvor konteksta** — baza znanja za čitanje/pisanje kojoj agenti pristupaju putem ugrađenog MCP servera. Kada je Notion integracijski token konfigurisan, MCP alati omogućavaju LLM-u da pretražuje stranice i baze podataka, čita sadržaj stranica i stabla blokova, pretražuje baze podataka sa filterima/sortiranjem i dodaje nove blokove — sve to posredovano kroz OmniRoute (uz ponovni pokušaj, vremensko ograničenje i klasifikaciju grešaka) tako da model nikada ne pristupa Notion API-ju direktno.
+67router se može povezati sa **Notion** radnim prostorom kao **izvor konteksta** — baza znanja za čitanje/pisanje kojoj agenti pristupaju putem ugrađenog MCP servera. Kada je Notion integracijski token konfigurisan, MCP alati omogućavaju LLM-u da pretražuje stranice i baze podataka, čita sadržaj stranica i stabla blokova, pretražuje baze podataka sa filterima/sortiranjem i dodaje nove blokove — sve to posredovano kroz 67router (uz ponovni pokušaj, vremensko ograničenje i klasifikaciju grešaka) tako da model nikada ne pristupa Notion API-ju direktno.
 
 Integracija je tanak, ojačan omotač (wrapper) preko zvaničnog Notion REST API-ja
 (`https://api.notion.com/v1`, `Notion-Version: 2026-03-11`). Klijent
@@ -38,7 +38,7 @@ REST API-ja.
 > [!NOTE]
 > Token je **Notion internal integration token**. Kreirajte integraciju na
 > <https://www.notion.com/my-integrations>, zatim podijelite stranice/baze podataka
-> kojima želite da OmniRoute pristupi sa tom integracijom (Notion-ov model dozvola je
+> kojima želite da 67router pristupi sa tom integracijom (Notion-ov model dozvola je
 > zasnovan na dijeljenju, a ne na nivou cijelog radnog prostora).
 
 ### Konfiguracija putem REST-a
@@ -57,7 +57,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Sve tri metode zahtijevaju autentifikaciju kontrolne table (`isAuthenticated`).
-Prilikom `POST` zahtjeva, OmniRoute čuva token i odmah pokreće testnu pretragu sa 1
+Prilikom `POST` zahtjeva, 67router čuva token i odmah pokreće testnu pretragu sa 1
 rezultatom; ako Notion vrati objekat greške, token se briše i poziv ne uspijeva sa
 `400`.
 

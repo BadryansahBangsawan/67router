@@ -7,7 +7,7 @@
 > **Chanzo rasmi:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Ilisasishwa mara ya mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute inajumuisha safu ya uhamasishaji inayotanguliza uhifadhi wa ndani ambayo huwatuza watumiaji kwa
+67router inajumuisha safu ya uhamasishaji inayotanguliza uhifadhi wa ndani ambayo huwatuza watumiaji kwa
 kushirikiana na jukwaa — kutuma maombi, kubadilisha watoa huduma, kuunda
 michanganyiko, kushiriki tokeni, na kuchangia katika jumuiya. Hali yote huhifadhiwa katika
 SQLite; ushirikiano na seva za jumuiya ni wa hiari na unategemea utumaji wa data.
@@ -36,7 +36,7 @@ tokeni, zawadi za mialiko).
 | Bao za Wanaoongoza  | Upeo wa kimataifa, kila wiki, kila mwezi, ushiriki wa tokeni, na michango          |
 | Kushiriki Tokeni    | Hamisha salio kati ya watumiaji kupitia leja ya miingizo miwili                    |
 | Mwaliko na Ukombozi | Misimbo ya rufaa yenye hifadhi iliyohashiwa kwa SHA-256                            |
-| Seva za Jumuiya     | Shirikiana na mifumo ya nje ya OmniRoute                                           |
+| Seva za Jumuiya     | Shirikiana na mifumo ya nje ya 67router                                            |
 | Kuzuia Udanganyifu  | Uwekaji alama upande wa seva, uzuiaji wa kiwango, utambuzi wa hitilafu kwa z-score |
 
 ### Kanuni za Usanifu
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Majedwali ya Hifadhidata
 
-Majedwali yote yanapatikana katika hifadhidata kuu ya SQLite ya OmniRoute, iliyoundwa na uhamishaji
+Majedwali yote yanapatikana katika hifadhidata kuu ya SQLite ya 67router, iliyoundwa na uhamishaji
 `060_create_gamification.sql`. Uandishi wa jarida wa WAL unarithiwa kutoka kwa singleton
 `getDbInstance()` katika `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Majedwali yote yanapatikana katika hifadhidata kuu ya SQLite ya OmniRoute, iliyo
 
 ### Moduli ya Kikoa: `src/lib/db/gamification.ts`
 
-Inafuata muundo wa kawaida wa OmniRoute — huingiza `getDbInstance()` kutoka
+Inafuata muundo wa kawaida wa 67router — huingiza `getDbInstance()` kutoka
 `core.ts`, na kusafirisha vitendaji vya CRUD vilivyoainishwa aina. Hakuna SQL ghafi katika vishughulikiaji vya njia.
 
 Vitendaji muhimu:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Kitendo           | XP  | Maelezo                                                     |
 | ----------------- | --- | ----------------------------------------------------------- |
-| `request`         | 1   | Kwa kila ombi la API linaloelekezwa kupitia OmniRoute       |
+| `request`         | 1   | Kwa kila ombi la API linaloelekezwa kupitia 67router        |
 | `provider_switch` | 5   | Kubadilisha kwenda kwa mtoa huduma tofauti                  |
 | `model_switch`    | 3   | Kubadilisha kwenda kwa modeli tofauti                       |
 | `combo_create`    | 10  | Kuunda mchanganyiko mpya                                    |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (ya kipekee, imewekewa faharasa) |
 | `token_hash` | SHA-256(raw_token)                          |
 
-Tokeni ghafi hurudishwa kwa mtumiaji mara moja tu wakati wa uundaji. OmniRoute
+Tokeni ghafi hurudishwa kwa mtumiaji mara moja tu wakati wa uundaji. 67router
 haihifadhi wala kuionyesha tena — ni hashi pekee inayodumu.
 
 ### Kuzuia Kujirejelea Mwenyewe
@@ -703,7 +703,7 @@ Wasimamizi wanaweza kuuliza rekodi kamili ya ukaguzi kupitia `GET /api/gamificat
 
 ## Njia za API
 
-Njia zote hufuata muundo wa kawaida wa OmniRoute:
+Njia zote hufuata muundo wa kawaida wa 67router:
 
 ```
 Njia → Ukaguzi wa awali wa CORS → Uthibitishaji wa mwili (Zod) → Uthibitishaji (extractApiKey)

@@ -45,7 +45,7 @@ WS1.3 සහතිකය පවත්වා ගනිමින්, ව්යා�
 (කාන්දු වූ token එකකට තනිව publish කළ නොහැක — token එකක්ම නොමැත).
 
 **එක් වරක් පමණක් කරන සැකසුම (හිමිකරු):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). එය පවතින තුරු ස්වයංක්රීය පියවර `ENEEDAUTH` සමඟ අසාර්ථක වේ:
 `publish_mode=staged` (පහත) හෝ `direct` සමඟ නැවත dispatch කරන්න.
 

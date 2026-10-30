@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na buga kayan aikin npm + Docker. Waɗannan ƙofofin suna ba da tabbaci,
+67router na buga kayan aikin npm + Docker. Waɗannan ƙofofin suna ba da tabbaci,
 kayan aiki (SBOM) da kuma binciken CVE, duk OSS, an haɗa su cikin ayyukan saki.
 Matsayin **Advisory-first** — suna bayar da rahoto yanzu, suna haɓaka zuwa toshewa bayan
 sakin kore na farko.
@@ -61,7 +61,7 @@ Bisa ga reshen "babu gyara daga tushe" na maganin CVE Variance da ke sama, wanna
 - **Babu wani fitowar da aka gyara a ko'ina a cikin sarka.** `extract-zip@2.0.1` (wanda aka buga a 2020) shine fitowar ƙarshe na fakitin — ba a kula da shi. `@openai/codex-security`'s
   current npm-latest (`0.1.29`) har yanzu yana jawo `extract-zip@2.0.1`.
 - **Ba za a iya isa gare shi daga samarwa ba.** `promptfoo` devDependency-only ne (ba a taɓa lissafa shi a ƙarƙashin `dependencies` ba), kuma babu wani fayil a ƙarƙashin `src/`, `open-sse/`, ko `bin/` da ke shigo da fakitin npm na
-  `extract-zip` — OmniRoute's own `extractZip()` helper
+  `extract-zip` — 67router's own `extractZip()` helper
   (`src/lib/versionManager/binaryManager.ts:93`) yana amfani da `unzip`/`tar` na asali kuma ba shi da alaƙa. `@openai/codex-security` kuma yana jigilar nasa mai gadi na symlink-traversal a saman kiran baya na onEntry na extract-zip.
 - **Kada** a yi amfani da sunan `extract-zip` ta hanyar `package.json` `overrides` — kawai madadin da za a iya amfani da shi shine Electron-org-internal kuma API-incompatible ne da binciken onEntry/defaultDirMode/defaultFileMode na
   `@openai/codex-security`; maye gurbinsa zai karya binciken tsaro na wannan fakitin a hankali.

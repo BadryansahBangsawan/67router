@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute tem três mecanismos de resiliência distintos mas relacionados. Cada um tem um âmbito e um propósito diferentes. Mantenha-os separados ao depurar o comportamento de encaminhamento.
+O 67router tem três mecanismos de resiliência distintos mas relacionados. Cada um tem um âmbito e um propósito diferentes. Mantenha-os separados ao depurar o comportamento de encaminhamento.
 
 ![modelo de resiliência de 3 camadas](../diagrams/exported/resilience-3layers.svg)
 
@@ -220,7 +220,7 @@ Os três cabeçalhos de afinidade de sessão nunca são reencaminhados para upst
 
 ### Leases exclusivos de ligação de sessão gerida
 
-**Âmbito:** um cliente/sessão HTTP gerido ativo possui uma ligação OmniRoute elegível.
+**Âmbito:** um cliente/sessão HTTP gerido ativo possui uma ligação 67router elegível.
 
 **Objetivo:** proporcionar posse exclusiva e duradoura de ligações a clientes que precisam de uma
 barreira rígida de encaminhamento entre pedidos. Isto difere da afinidade de sessão, que é uma
@@ -244,7 +244,7 @@ o ID da ligação ativa. Os cabeçalhos de controlo de concessões são removido
 dos cabeçalhos do executor a montante.
 
 Se o encaminhamento normal tiver candidatos geridos elegíveis, mas todos os candidatos livres estiverem ocupados por uma
-concessão ativa externa, o OmniRoute devolve HTTP `429`, um código de capacidade de concessão indisponível, um
+concessão ativa externa, o 67router devolve HTTP `429`, um código de capacidade de concessão indisponível, um
 estado de espera por capacidade e um `Retry-After` limitado, derivado da expiração relevante mais próxima.
 A elegibilidade vazia normal não é contenção de concessões e mantém a semântica de erro de encaminhamento existente.
 
@@ -264,7 +264,7 @@ Os mecanismos relacionados permanecem separados:
 
 - `429` / `403` / `402` — um sinal de quota ou de direitos de acesso — bloqueia a **família de quota**: para o codex todo o âmbito `codex` / `spark` (todos os modelos `gpt-5*` da ligação), para outros fornecedores `getQuotaScopedModelForProvider()`.
 - `404` bloqueia apenas o modelo em si (`getModelLockKey()` restringe `not_found`).
-- Qualquer outro código de estado — falhas de transporte/servidor `5xx` e o próprio `502` sintetizado pelo OmniRoute a partir da validação de qualidade — bloqueia apenas o tuplo **exato** fornecedor/ligação/modelo. Um stream defeituoso num modelo não é evidência sobre a quota da conta; antes desta regra, uma única resposta vazia em `codex/gpt-5.6-luna` removia do encaminhamento todos os modelos `gpt-5*` dessa ligação durante 2–30 min (em escalada), embora a sua quota permanecesse intacta.
+- Qualquer outro código de estado — falhas de transporte/servidor `5xx` e o próprio `502` sintetizado pelo 67router a partir da validação de qualidade — bloqueia apenas o tuplo **exato** fornecedor/ligação/modelo. Um stream defeituoso num modelo não é evidência sobre a quota da conta; antes desta regra, uma única resposta vazia em `codex/gpt-5.6-luna` removia do encaminhamento todos os modelos `gpt-5*` dessa ligação durante 2–30 min (em escalada), embora a sua quota permanecesse intacta.
 - A opção `scope` explícita de quem chama prevalece sempre (o Antigravity passa `"exact"`).
 
 **Objetivo:** evitar desativar uma ligação inteira quando apenas um modelo está indisponível ou limitado por quota.
@@ -374,7 +374,7 @@ concorrência por modelo**, um `model=cap` por linha) ou através de
   pedidos concorrentes em números inteiros positivos.
 - **Fila local, sem deteção:** os pedidos excedentes aguardam em fila local com
   a semântica de fila/timeout existente (erros de admissão tipados
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). O OmniRoute não deteta nem
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). O 67router não deteta nem
   infere a política upstream — impõe exatamente os tetos que o operador
   configurou. Um gate de modelo saturado nunca desativa o fornecedor e nunca
   cria um bloqueio permanente do modelo; o comportamento upstream de
@@ -547,7 +547,7 @@ A própria verificação de admissão é uma função pura
 ### Rede de Segurança de Ativação Automática de Limite de Taxa e Proteção de Ligações (`rateLimitProtection`)
 
 **Rede de segurança de ativação automática** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, predefinição `true`):
-Por predefinição, o OmniRoute ativa automaticamente a proteção por fila de limite de taxa para todas as ligações ativas de fornecedores com chave API (`getProviderCategory(provider) === "apikey"`). Isto garante que os pedidos recebidos destinados a chaves API upstream sensíveis a limites de taxa são enfileirados e limitados através do Bottleneck, em vez de explodirem em erros 429 no upstream. A rede de segurança pode ser sobreposta através da variável de ambiente `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` desativa, `true`/`1`/`on` força a ativação), que tem precedência sobre a definição persistida no dashboard (**Definições → Resiliência** / `PATCH /api/resilience`).
+Por predefinição, o 67router ativa automaticamente a proteção por fila de limite de taxa para todas as ligações ativas de fornecedores com chave API (`getProviderCategory(provider) === "apikey"`). Isto garante que os pedidos recebidos destinados a chaves API upstream sensíveis a limites de taxa são enfileirados e limitados através do Bottleneck, em vez de explodirem em erros 429 no upstream. A rede de segurança pode ser sobreposta através da variável de ambiente `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` desativa, `true`/`1`/`on` força a ativação), que tem precedência sobre a definição persistida no dashboard (**Definições → Resiliência** / `PATCH /api/resilience`).
 
 **Semântica de `rateLimitProtection` por ligação:**
 A proteção de limite de taxa por ligação é controlada através do campo booleano `rateLimitProtection` nas ligações de fornecedores (persistido como `rate_limit_protection` no SQLite):
@@ -909,7 +909,7 @@ agrupado por IP é o mesmo sinal que uma quota esgotada. Limitações honestas:
 > do agente se mantenha abaixo do orçamento de contexto de 40k. É a visão condensada, dirigida
 > ao agente, das secções acima; as secções numeradas continuam a ser a referência completa.
 
-O OmniRoute tem três mecanismos de falha temporária relacionados mas distintos. Mantenha os seus
+O 67router tem três mecanismos de falha temporária relacionados mas distintos. Mantenha os seus
 âmbitos separados ao depurar o comportamento de encaminhamento. Consulte o
 [diagrama de resiliência de 3 camadas](../diagrams/exported/resilience-3layers.svg)
 (fonte: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

@@ -5,7 +5,7 @@
 ---
 
 > **Egysoros leírás minden könyvtárhoz és gyökérszintű fájlhoz.**
-> Utolsó frissítés: 2026-06-28 — OmniRoute v3.8.40
+> Utolsó frissítés: 2026-06-28 — 67router v3.8.40
 >
 > Ezzel a térképpel gyorsan eligazodhatsz a kódbázisban. A részletesebb ismertetőkért kövesd a kapcsolódó dokumentációra mutató hivatkozásokat.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Teljes kiadási folyamat (készségek, husky, conventional commits, telepítés)                               |
 | `COVERAGE_PLAN.md`          | Lefedettségi célok és jelenlegi állapot                                                                   |
 | `FREE_TIERS.md`             | Válogatott ingyenes csomagot kínáló szolgáltatók (48+ ingyenes + 11 OAuth)                                |
-| `CLI-TOOLS.md`              | Külső CLI-integrációk + belső OmniRoute CLI                                                               |
+| `CLI-TOOLS.md`              | Külső CLI-integrációk + belső 67router CLI                                                                |
 | `I18N.md`                   | i18n-architektúra, nyelv hozzáadása, 67 területi beállítás                                                |
 | `UNINSTALL.md`              | A tiszta eltávolítás lépései                                                                              |
 | `PROVIDER_REFERENCE.md`     | **Automatikusan generált** katalógus 375 szolgáltatóról (újragenerálás: `npm run gen:provider-reference`) |

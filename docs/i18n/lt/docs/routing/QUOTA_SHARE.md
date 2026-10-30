@@ -15,7 +15,7 @@ Kvotų bendrinimo variklis teisingai paskirsto paslaugų teikėjo laiku pagrįst
 5 valandų langą, Kimi 1500 užklausų/val.) keliems API raktams, naudojantiems tą patį
 ryšį.
 
-**Sprendžiama problema:** „OmniRoute“ per tą pačią išorinę paslaugų teikėjo paskyrą
+**Sprendžiama problema:** „67router“ per tą pačią išorinę paslaugų teikėjo paskyrą
 tarpininkauja daugelio API raktų užklausoms. Be bendrinimo logikos staigus A rakto užklausų
 srautas gali išnaudoti paslaugų teikėjo valandos kvotą, todėl B ir C raktai liktų užblokuoti,
 kol langas būtų nustatytas iš naujo. Variklis to išvengia:
@@ -119,7 +119,7 @@ Redis tvarkyklė: atomiškam didinimui naudojamas Lua EVAL scenarijus — jis vy
 
 - Lentelė: `quota_consumption` (žr. migracijas `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Geriausiai tinka diegimams su vienu egzemplioriumi.
-- Visi duomenys išsaugomi esamoje OmniRoute SQLite DB (`DATA_DIR/storage.sqlite`).
+- Visi duomenys išsaugomi esamoje 67router SQLite DB (`DATA_DIR/storage.sqlite`).
 
 ### Redis (pasirenkama, keliems egzemplioriams)
 

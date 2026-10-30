@@ -4,7 +4,7 @@
 
 ---
 
-Halaman ini menjelaskan perilaku `.env` lokal proyek dan cara menangani file lingkungan serta rahasia saat mengembangkan OmniRoute.
+Halaman ini menjelaskan perilaku `.env` lokal proyek dan cara menangani file lingkungan serta rahasia saat mengembangkan 67router.
 
 ## Perilaku postinstall .env
 

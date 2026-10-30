@@ -13,7 +13,7 @@
 ## Apakah ia
 
 Local Corpus membolehkan pengendali mendedahkan satu direktori fail teks yang diluluskan secara jelas kepada
-pelayan MCP OmniRoute. Fail kekal dalam direktori asalnya: OmniRoute hanya menyimpan
+pelayan MCP 67router. Fail kekal dalam direktori asalnya: 67router hanya menyimpan
 laluan akar kanonik dalam SQLite dan menyelenggarakan indeks carian dalam memori. Ia tidak
 menyalin kandungan korpus ke dalam repositori atau pangkalan data.
 

@@ -12,7 +12,7 @@
 
 ## Kaj je to
 
-Local Corpus omogoča skrbniku, da strežniku MCP sistema OmniRoute omogoči dostop do enega izrecno odobrenega imenika z besedilnimi datotekami. Datoteke ostanejo v izvornem imeniku: OmniRoute v SQLite shrani samo kanonično korensko pot in vzdržuje iskalni indeks v pomnilniku. Vsebine korpusa ne kopira v repozitorij ali podatkovno zbirko.
+Local Corpus omogoča skrbniku, da strežniku MCP sistema 67router omogoči dostop do enega izrecno odobrenega imenika z besedilnimi datotekami. Datoteke ostanejo v izvornem imeniku: 67router v SQLite shrani samo kanonično korensko pot in vzdržuje iskalni indeks v pomnilniku. Vsebine korpusa ne kopira v repozitorij ali podatkovno zbirko.
 
 Osveževanje indeksa je inkrementalno. Nespremenjene datoteke se ponovno uporabijo glede na velikost in čas spremembe, spremenjene datoteke se znova preberejo in zgostijo z algoritmom SHA-256, izbrisane datoteke pa se odstranijo. Iskanje osveži indeks, starejši od 30 sekund; klicatelji lahko zahtevajo tudi takojšnjo osvežitev.
 

@@ -342,7 +342,7 @@ export async function validateAutoUpdateRuntime(
     if (!(await isTriggerDirWritable(config.dataDir, triggerFile))) {
       return {
         supported: false,
-        reason: "The DOCKER_UPDATE_TRIGGER_FILE directory is not writable by OmniRoute.",
+        reason: "The DOCKER_UPDATE_TRIGGER_FILE directory is not writable by 67router.",
         composeCommand: null,
       };
     }
@@ -372,7 +372,7 @@ export async function validateAutoUpdateRuntime(
   if (!(await existsImpl("/var/run/docker.sock"))) {
     return {
       supported: false,
-      reason: "Docker socket is not mounted into the OmniRoute container.",
+      reason: "Docker socket is not mounted into the 67router container.",
       composeCommand: null,
     };
   }
@@ -382,7 +382,7 @@ export async function validateAutoUpdateRuntime(
   } catch {
     return {
       supported: false,
-      reason: "git is not available inside the OmniRoute container.",
+      reason: "git is not available inside the 67router container.",
       composeCommand: null,
     };
   }
@@ -392,7 +392,7 @@ export async function validateAutoUpdateRuntime(
     return {
       supported: false,
       reason:
-        "Neither docker compose nor docker-compose is available inside the OmniRoute container.",
+        "Neither docker compose nor docker-compose is available inside the 67router container.",
       composeCommand: null,
     };
   }

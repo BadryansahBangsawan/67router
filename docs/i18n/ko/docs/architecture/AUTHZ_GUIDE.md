@@ -7,7 +7,7 @@
 > **신뢰할 수 있는 출처:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **최종 업데이트:** 2026-09-22 — 스코프 네임스페이스는 MCP-SERVER.md를 가리킵니다.
 
-OmniRoute는 모든 API 요청을 제어하는 경로 인식 권한 부여 파이프라인을 가지고 있습니다. 분류는 **결정론적**이며 **실패 시 닫힘(fail-closed)**입니다. 분류할 수 없는 모든 것은 `MANAGEMENT`로 처리되어 세션 또는 관리 등급 토큰을 요구합니다. 이 페이지는 경로를 유지 관리하거나 새로운 엔드포인트를 설계하는 엔지니어를 위한 모델을 설명합니다.
+67router는 모든 API 요청을 제어하는 경로 인식 권한 부여 파이프라인을 가지고 있습니다. 분류는 **결정론적**이며 **실패 시 닫힘(fail-closed)**입니다. 분류할 수 없는 모든 것은 `MANAGEMENT`로 처리되어 세션 또는 관리 등급 토큰을 요구합니다. 이 페이지는 경로를 유지 관리하거나 새로운 엔드포인트를 설계하는 엔지니어를 위한 모델을 설명합니다.
 
 ![AuthZ 파이프라인 (3가지 경로 클래스 + 정책 평가)](../diagrams/exported/authz-pipeline.svg)
 

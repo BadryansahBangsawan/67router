@@ -11,11 +11,11 @@
 
 ## តើវាជាអ្វី
 
-OmniRoute អាចភ្ជាប់ទៅកាន់ workspace របស់ **Notion** ជា **ប្រភពបរិបទ** — មូលដ្ឋានចំណេះដឹង
+67router អាចភ្ជាប់ទៅកាន់ workspace របស់ **Notion** ជា **ប្រភពបរិបទ** — មូលដ្ឋានចំណេះដឹង
 ដែលអាចអាន/សរសេរបាន និងដែល agent អាចចូលប្រើតាមរយៈ MCP server ដែលភ្ជាប់មកជាមួយ។ នៅពេល
 Notion integration token ត្រូវបានកំណត់រចនាសម្ព័ន្ធ ឧបករណ៍ MCP អនុញ្ញាតឱ្យ LLM ស្វែងរកទំព័រ និង database,
 អានមាតិកាទំព័រ និងមែកធាង block, query database ដោយប្រើ filter/sort និងបន្ថែម
-block ថ្មី — ទាំងអស់នេះត្រូវបានបញ្ជូនបន្តតាម OmniRoute (ជាមួយការព្យាយាមឡើងវិញ, timeout និងការចាត់ថ្នាក់កំហុស)
+block ថ្មី — ទាំងអស់នេះត្រូវបានបញ្ជូនបន្តតាម 67router (ជាមួយការព្យាយាមឡើងវិញ, timeout និងការចាត់ថ្នាក់កំហុស)
 ដូច្នេះ model មិនដែលចូលប្រើ Notion API ដោយផ្ទាល់ឡើយ។
 
 Integration នេះគឺជា wrapper ស្តើង និងរឹងមាំលើ Notion REST API ផ្លូវការ
@@ -40,7 +40,7 @@ dashboard (`NotionSourceCard` ដែលនៅជាប់ `ObsidianSourceCard`) 
 > [!NOTE]
 > Token នេះគឺជា **Notion internal integration token**។ បង្កើត integration មួយនៅ
 > <https://www.notion.com/my-integrations> បន្ទាប់មក share ទំព័រ/database ដែលអ្នកចង់ឱ្យ
-> OmniRoute ចូលប្រើជាមួយ integration នោះ (គំរូសិទ្ធិរបស់ Notion ផ្អែកលើការចែករំលែក
+> 67router ចូលប្រើជាមួយ integration នោះ (គំរូសិទ្ធិរបស់ Notion ផ្អែកលើការចែករំលែក
 > មិនមែនទូទាំង workspace ទេ)។
 
 ### កំណត់រចនាសម្ព័ន្ធតាមរយៈ REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Method ទាំងបីតម្រូវឱ្យមានការផ្ទៀងផ្ទាត់ dashboard (`isAuthenticated`)។ នៅពេល `POST`,
-OmniRoute រក្សាទុក token ហើយដំណើរការការស្វែងរកសាកល្បងចំនួន 1 លទ្ធផលភ្លាមៗ; ប្រសិនបើ Notion
+67router រក្សាទុក token ហើយដំណើរការការស្វែងរកសាកល្បងចំនួន 1 លទ្ធផលភ្លាមៗ; ប្រសិនបើ Notion
 ត្រឡប់ error object វិញ token នឹងត្រូវបានសម្អាត ហើយ call នឹងបរាជ័យជាមួយ `400`។
 
 ## ឧបករណ៍ MCP (6)

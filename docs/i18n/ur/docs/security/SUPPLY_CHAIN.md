@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute npm + Docker آرٹفیکٹس شائع کرتا ہے۔ یہ گیٹس provenance، inventory (SBOM) اور CVE سکیننگ فراہم کرتے ہیں، یہ سب OSS ہیں، اور ریلیز ورک فلوز میں شامل ہیں۔ **مشاورتی-پہلے** کا رویہ — وہ ابھی رپورٹ کرتے ہیں، اور پہلی کامیاب ریلیز کے بعد بلاک کرنے کی سطح پر ترقی دیتے ہیں۔
+67router npm + Docker آرٹفیکٹس شائع کرتا ہے۔ یہ گیٹس provenance، inventory (SBOM) اور CVE سکیننگ فراہم کرتے ہیں، یہ سب OSS ہیں، اور ریلیز ورک فلوز میں شامل ہیں۔ **مشاورتی-پہلے** کا رویہ — وہ ابھی رپورٹ کرتے ہیں، اور پہلی کامیاب ریلیز کے بعد بلاک کرنے کی سطح پر ترقی دیتے ہیں۔
 
 | گیٹ                   | ٹول                                            | کہاں                          | بلاک کرتا ہے؟           | آؤٹ پٹ                                         |
 | --------------------- | ---------------------------------------------- | ----------------------------- | ----------------------- | ---------------------------------------------- |
@@ -39,7 +39,7 @@ osv اور Trivy deps کا موازنہ CVE ڈیٹا بیسز سے کرتے ہی
 
 - **چین (Chain):** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`۔ `package-lock.json` کے ذریعے تصدیق شدہ — پوری ڈیپینڈنسی ٹری (dependency tree) میں صرف ایک پیکیج (`@openai/codex-security`) `extract-zip` کا اعلان کرتا ہے، اور صرف ایک پیکیج (`promptfoo`) `@openai/codex-security` کا اعلان کرتا ہے۔
 - **چین میں کہیں بھی کوئی فکسڈ ریلیز موجود نہیں ہے۔** `extract-zip@2.0.1` (2020 میں شائع ہوا) پیکیج کی آخری ریلیز ہے — اسے برقرار نہیں رکھا جا رہا (unmaintained)۔ `@openai/codex-security` کا موجودہ npm-latest (`0.1.29`) اب بھی `extract-zip@2.0.1` کو کھینچتا (pulls) ہے۔
-- **پروڈکشن سے ناقابل رسائی۔** `promptfoo` صرف devDependency ہے (کبھی `dependencies` کے تحت درج نہیں ہوتا)، اور `src/`، `open-sse/`، یا `bin/` کے تحت کوئی بھی فائل `extract-zip` npm پیکیج کو امپورٹ (imports) نہیں کرتی — OmniRoute کا اپنا `extractZip()` ہیلپر (`src/lib/versionManager/binaryManager.ts:93`) مقامی `unzip`/`tar` کو شیل آؤٹ (shells out) کرتا ہے اور اس سے غیر متعلق ہے۔ `@openai/codex-security` بھی `extract-zip` کے onEntry کال بیک (callback) کے اوپر اپنا سم لنک ٹریورسل گارڈ (symlink-traversal guard) فراہم کرتا ہے۔
+- **پروڈکشن سے ناقابل رسائی۔** `promptfoo` صرف devDependency ہے (کبھی `dependencies` کے تحت درج نہیں ہوتا)، اور `src/`، `open-sse/`، یا `bin/` کے تحت کوئی بھی فائل `extract-zip` npm پیکیج کو امپورٹ (imports) نہیں کرتی — 67router کا اپنا `extractZip()` ہیلپر (`src/lib/versionManager/binaryManager.ts:93`) مقامی `unzip`/`tar` کو شیل آؤٹ (shells out) کرتا ہے اور اس سے غیر متعلق ہے۔ `@openai/codex-security` بھی `extract-zip` کے onEntry کال بیک (callback) کے اوپر اپنا سم لنک ٹریورسل گارڈ (symlink-traversal guard) فراہم کرتا ہے۔
 - `package.json` `overrides` کے ذریعے `extract-zip` کو عرفی نام (alias) **نہ دیں** — واحد قابل عمل ڈراپ اِن ریپلیسمنٹ (drop-in replacement) الیکٹران-آرگ-انٹرنل (Electron-org-internal) ہے اور یہ `@openai/codex-security` کے اپنے onEntry/defaultDirMode/defaultFileMode چیکس (checks) کے ساتھ API-incompatible ہے؛ اسے اوور رائیڈ (overriding) کرنے سے اس پیکیج کے سیکیورٹی چیکس خاموشی سے ٹوٹ جائیں گے۔
 - **بیس لائن (Baseline):** ماپا گیا osv `vulnCount` (3) پہلے ہی منجمد `config/quality/quality-baseline.json` بیس لائن (27) سے کافی کم ہے — کسی ریچیٹ (ratchet) تبدیلی کی ضرورت نہیں۔
 - **ریگریشن گارڈ (Regression guard):** `tests/unit/extract-zip-14482-exposure.test.ts` مذکورہ بالا چین اور نو-پروڈکشن-امپورٹ انویریئنٹ (no-production-import invariant) کی تصدیق کرتا ہے؛ اگر ان میں سے کوئی بھی کبھی ٹوٹتا ہے (مثلاً مستقبل کا کوئی PR `extract-zip` کو پروڈکشن سے قابل رسائی بناتا ہے) تو یہ CI کو ناکام کر دیتا ہے۔

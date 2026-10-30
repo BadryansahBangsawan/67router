@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute dispose de **quatre familles d'identifiants** qui peuvent autoriser les routes de gestion.
+67router dispose de **quatre familles d'identifiants** qui peuvent autoriser les routes de gestion.
 Elles ne sont pas interchangeables. Les clés API d'inférence (`sk-…`) ne gèrent **pas** le
 serveur, sauf si elles ont été explicitement autorisées avec la portée `manage` ou `admin`.
 

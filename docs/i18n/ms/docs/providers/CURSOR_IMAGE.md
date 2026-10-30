@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute mendedahkan **penjanaan imej** pelan Cursor pada `POST /v1/images/generations` melalui id penyedia yang sama seperti sembang: `cursor` (alias `cu`).
+67router mendedahkan **penjanaan imej** pelan Cursor pada `POST /v1/images/generations` melalui id penyedia yang sama seperti sembang: `cursor` (alias `cu`).
 
 | Medan                | Nilai                                                                                              |
 | -------------------- | -------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute mendedahkan **penjanaan imej** pelan Cursor pada `POST /v1/images/gene
 
 ## Mengapa Agent CLI
 
-Sembang Cursor dalam OmniRoute menggunakan `agent.v1.AgentService/Run` (protobuf). Laluan tersebut **menolak** alat klien terbina dalam (shell, tulis, …). Penjanaan imej ialah alat asli Cursor yang dilaksanakan oleh **CLI `agent`** menggunakan seat tersebut. Oleh itu, pengendali imej melancarkan `agent` dengan gesaan terkunci dan ruang kerja sementara bagi setiap permintaan (dengan struktur yang sama seperti jambatan seat komuniti), kemudian mengembalikan `b64_json` yang serasi dengan OpenAI.
+Sembang Cursor dalam 67router menggunakan `agent.v1.AgentService/Run` (protobuf). Laluan tersebut **menolak** alat klien terbina dalam (shell, tulis, …). Penjanaan imej ialah alat asli Cursor yang dilaksanakan oleh **CLI `agent`** menggunakan seat tersebut. Oleh itu, pengendali imej melancarkan `agent` dengan gesaan terkunci dan ruang kerja sementara bagi setiap permintaan (dengan struktur yang sama seperti jambatan seat komuniti), kemudian mengembalikan `b64_json` yang serasi dengan OpenAI.
 
 ## Sekatan akses (Peraturan Tegas #15 + #17)
 
@@ -23,12 +23,12 @@ Ini ialah satu-satunya format `IMAGE_PROVIDERS` yang melancarkan proses anak (bi
 
 ## Get konkurensi berada pada peringkat modul (pengehadan tika tunggal)
 
-`CURSOR_IMG_MAX_CONCURRENT` dikuatkuasakan oleh pembilang/baris gilir dalam memori yang diskop kepada tika modul Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Ia mengehadkan pelancaran `agent` serentak dengan betul dalam satu proses OmniRoute, tetapi **tidak** menyelaras merentas berbilang proses/tika yang berkongsi seat Cursor yang sama (contohnya, penggunaan berbilang replika) — setiap tika menguatkuasakan had bebasnya sendiri. Bagi penggunaan tika tunggal (lalai), had ini adalah tepat; penggunaan berskala mendatar hendaklah menetapkan `CURSOR_IMG_MAX_CONCURRENT` secara konservatif bagi setiap tika atau menghalakan trafik imej Cursor kepada satu tika sahaja.
+`CURSOR_IMG_MAX_CONCURRENT` dikuatkuasakan oleh pembilang/baris gilir dalam memori yang diskop kepada tika modul Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Ia mengehadkan pelancaran `agent` serentak dengan betul dalam satu proses 67router, tetapi **tidak** menyelaras merentas berbilang proses/tika yang berkongsi seat Cursor yang sama (contohnya, penggunaan berbilang replika) — setiap tika menguatkuasakan had bebasnya sendiri. Bagi penggunaan tika tunggal (lalai), had ini adalah tepat; penggunaan berskala mendatar hendaklah menetapkan `CURSOR_IMG_MAX_CONCURRENT` secara konservatif bagi setiap tika atau menghalakan trafik imej Cursor kepada satu tika sahaja.
 
 ## Keperluan
 
 1. Akaun Cursor yang disambungkan dalam papan pemuka (OAuth atau kunci API `crsr_…`).
-2. Binari Cursor Agent tersedia kepada proses OmniRoute:
+2. Binari Cursor Agent tersedia kepada proses 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, atau
    - `~/.local/bin/agent`, atau
    - `providerSpecificData.agentBin` pada sambungan Cursor.

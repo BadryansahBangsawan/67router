@@ -5,7 +5,7 @@
 ---
 
 > **すべてのディレクトリとルートファイルを1行で説明します。**
-> 最終更新日: 2026-06-28 — OmniRoute v3.8.40
+> 最終更新日: 2026-06-28 — 67router v3.8.40
 >
 > このマップを使用して、コードベース内をすばやく移動できます。詳細については、専用ドキュメントへのリンクを参照してください。
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | リリースフロー全体（スキル、husky、Conventional Commits、デプロイ）               |
 | `COVERAGE_PLAN.md`          | カバレッジ目標と現在の状況                                                        |
 | `FREE_TIERS.md`             | 厳選された無料枠プロバイダー（48以上の無料枠 + 11のOAuth）                        |
-| `CLI-TOOLS.md`              | 外部CLI統合 + 内部OmniRoute CLI                                                   |
+| `CLI-TOOLS.md`              | 外部CLI統合 + 内部67router CLI                                                    |
 | `I18N.md`                   | i18nアーキテクチャ、言語の追加方法、67ロケール                                    |
 | `UNINSTALL.md`              | クリーンアンインストール手順                                                      |
 | `PROVIDER_REFERENCE.md`     | 375プロバイダーの**自動生成**カタログ（再生成：`npm run gen:provider-reference`） |

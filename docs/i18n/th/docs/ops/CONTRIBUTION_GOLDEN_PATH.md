@@ -113,7 +113,7 @@ production build และชุดทดสอบที่ครอบคลุ
 - Catalog ของ CLI แยกอยู่ภายใต้ `bin/cli/locales/`
 - รักษา placeholder และ tag ของ ICU ให้เหมือนเดิมทุกประการ ห้ามแปลชื่อผลิตภัณฑ์/provider/model,
   ชื่อ protocol และ header, คำสั่ง, identifier ของ code/JSON, URL, environment variable หรือ
-  คำที่ได้รับการคุ้มครอง เช่น `OmniRoute`, `OAuth`, `MCP` และ `A2A` รายการต้นฉบับปัจจุบันคือ
+  คำที่ได้รับการคุ้มครอง เช่น `67router`, `OAuth`, `MCP` และ `A2A` รายการต้นฉบับปัจจุบันคือ
   `scripts/i18n/glossary/protected-terms.json`
 
 **วงจรแบบเจาะจง**
@@ -259,7 +259,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # ใช้ tarball ท�
 - **Rollback** `run` จะ validate slot ที่ promote แล้วอีกครั้ง และสลับ `current` กับ `previous` กลับคืนเมื่อ
   การตรวจสอบนั้นล้มเหลว candidate ที่ไม่ผ่าน validation ครั้งแรกจะไม่ถูก promote
 
-ทุกอย่างจะถูกเขียนไว้ภายใต้ `_artifacts/candidate/` ซึ่งถูก gitignore ไว้ การติดตั้ง OmniRoute
+ทุกอย่างจะถูกเขียนไว้ภายใต้ `_artifacts/candidate/` ซึ่งถูก gitignore ไว้ การติดตั้ง 67router
 ที่มีอยู่และ data directory ของการติดตั้งนั้นจะไม่ถูกแตะต้อง CLI ที่ promote แล้วอยู่ที่
 `_artifacts/candidate/current/prefix/bin/omniroute`; เมื่อใช้งาน ให้เริ่ม CLI นี้ด้วย `DATA_DIR` ของคุณเอง
 รหัสออกจากโปรแกรม: `0` หมายถึงสำเร็จ, `1` หมายถึง validation หรือ promotion ล้มเหลว, `2` หมายถึงข้อผิดพลาดในการใช้งานหรือไม่มี build

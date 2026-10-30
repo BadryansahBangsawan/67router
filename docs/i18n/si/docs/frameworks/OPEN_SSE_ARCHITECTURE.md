@@ -4,7 +4,7 @@
 
 ---
 
-> **කෙටියෙන්**: `open-sse/` යනු OmniRoute හි සෑම LLM ඉල්ලීමක්ම බලගන්වන මූලික streaming එන්ජිමයි. ඉල්ලීම් pipeline එක, executors, services, MCP server එක සහ translation layer එක ක්රියාත්මක කරන ගොනු ~1,400ක් එහි අඩංගු වේ. මෙම මාර්ගෝපදේශය එම කොටස් එකිනෙක සමඟ සම්බන්ධ වන ආකාරය පැහැදිලි කරයි.
+> **කෙටියෙන්**: `open-sse/` යනු 67router හි සෑම LLM ඉල්ලීමක්ම බලගන්වන මූලික streaming එන්ජිමයි. ඉල්ලීම් pipeline එක, executors, services, MCP server එක සහ translation layer එක ක්රියාත්මක කරන ගොනු ~1,400ක් එහි අඩංගු වේ. මෙම මාර්ගෝපදේශය එම කොටස් එකිනෙක සමඟ සම්බන්ධ වන ආකාරය පැහැදිලි කරයි.
 
 **මූලාශ්රය:** `open-sse/` (workspace package එකක්, test නොවන `.ts` ගොනු ~1,440ක්)
 
@@ -12,10 +12,10 @@
 
 ## වෙනම Workspace Package එකක් ඇයි?
 
-හේතු කිහිපයක් නිසා `open-sse/` යනු OmniRoute monorepo එක තුළ ඇති **ස්වාධීන workspace** එකකි:
+හේතු කිහිපයක් නිසා `open-sse/` යනු 67router monorepo එක තුළ ඇති **ස්වාධීන workspace** එකකි:
 
 1. **නැවත භාවිත කිරීමේ හැකියාව** — `open-sse`, npm හි `@omniroute/open-sse` ලෙස ප්රකාශයට පත් කර ඇති බැවින් වෙනත් ව්යාපෘතිවලට එය ස්වාධීනව භාවිත කළ හැක
-2. **පැහැදිලි සීමා** — streaming එන්ජිම OmniRoute-විශේෂිත UI/DB layer එකෙන් වෙන් කර ඇත
+2. **පැහැදිලි සීමා** — streaming එන්ජිම 67router-විශේෂිත UI/DB layer එකෙන් වෙන් කර ඇත
 3. **කාර්යසාධනය** — එන්ජිමට Next.js dependencies නොමැති බැවින් CLI/serverless සන්දර්භවල වේගවත් cold starts සක්රීය වේ
 4. **අනුවාදකරණය** — `open-sse` හට තමන්ගේම කාලසටහනකට අනුව releases නිකුත් කළ හැක
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### වෙනම පරිණාමකයක් අවශ්ය වන්නේ ඇයි?
 
-Responses API යනු **තත්ත්වය සහිත සංවාද** (`previous_response_id`) ඇතුළත් OpenAI හි නව ආකෘතියයි. සේවාලාභියෙකු Responses ඉල්ලීමක් යවන විට, OmniRoute:
+Responses API යනු **තත්ත්වය සහිත සංවාද** (`previous_response_id`) ඇතුළත් OpenAI හි නව ආකෘතියයි. සේවාලාභියෙකු Responses ඉල්ලීමක් යවන විට, 67router:
 
 1. අභ්යන්තරව Responses → Chat Completions බවට පරිවර්තනය කරයි
 2. සැපයුම්කරු වෙත යවයි (Chat Completions සඳහා සහාය දක්වන ඕනෑම සැපයුම්කරුවෙකු)

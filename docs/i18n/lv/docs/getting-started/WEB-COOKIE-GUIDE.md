@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookie nodrošinātāji ļauj OmniRoute izmantot MI pakalpojumu, lietojot jūsu esošo pārlūkprogrammas sesiju, nevis API atslēgu. Tie ir noderīgi, ja jums jau ir piekļuve pakalpojumam, izmantojot tā tīmekļa vietni, un vēlaties, lai OmniRoute izmantotu to pašu autentificēto sesiju.
+Web Cookie nodrošinātāji ļauj 67router izmantot MI pakalpojumu, lietojot jūsu esošo pārlūkprogrammas sesiju, nevis API atslēgu. Tie ir noderīgi, ja jums jau ir piekļuve pakalpojumam, izmantojot tā tīmekļa vietni, un vēlaties, lai 67router izmantotu to pašu autentificēto sesiju.
 
 Atšķirībā no API atslēgu nodrošinātājiem Web Cookie nodrošinātāji autentifikācijai izmanto akreditācijas datus, ko jūsu pārlūkprogramma nosūta tīmekļa vietnei.
 
@@ -49,7 +49,7 @@ Izstrādātāja rīki
 
 Pieprasījuma galvene `Cookie` satur precīzu autentifikācijas informāciju, ko jūsu pārlūkprogramma veiksmīgi izmantoja.
 
-Vairumam Web Cookie nodrošinātāju šī ir vērtība, kas jāielīmē OmniRoute.
+Vairumam Web Cookie nodrošinātāju šī ir vērtība, kas jāielīmē 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Iestatīšanas process lielākajai daļai Web Cookie nodrošinātāju ir vienād
 4. Atsvaidziniet lapu.
 5. Atveriet autentificētu tērzēšanas vai sarunas pieprasījumu.
 6. Nokopējiet nepieciešamos autentifikācijas akreditācijas datus.
-7. Atveriet OmniRoute.
+7. Atveriet 67router.
 8. Dodieties uz **Nodrošinātāji → Pievienot nodrošinātāju**.
 9. Atlasiet savu Web Cookie nodrošinātāju.
 10. Ielīmējiet akreditācijas datus.
@@ -92,17 +92,17 @@ Dažādas tīmekļa vietnes autentifikācijas datus glabā atšķirīgi. Dažām
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) ir bezmaksas patērētājiem paredzēta tērzēšanas platforma, kurai nav nepieciešama reģistrācija — sesija tiek izveidota anonīmi pirmajā apmeklējuma reizē un tiek saglabāta, izmantojot trīs sīkdatnes: `uid`, `si_usr_id` un `si_ses_id`. OmniRoute maršrutē to pašu `/api/dispatch` galapunktu, izmantojot vienu modeļa ID (`notrack-c`, aizstājvārds `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) ir bezmaksas patērētājiem paredzēta tērzēšanas platforma, kurai nav nepieciešama reģistrācija — sesija tiek izveidota anonīmi pirmajā apmeklējuma reizē un tiek saglabāta, izmantojot trīs sīkdatnes: `uid`, `si_usr_id` un `si_ses_id`. 67router maršrutē to pašu `/api/dispatch` galapunktu, izmantojot vienu modeļa ID (`notrack-c`, aizstājvārds `ntw`).
 
 ### Savienojuma izveides darbības
 
 1. Pārlūkprogrammā atveriet [notrack.ai](https://notrack.ai) un ļaujiet iestatīt anonīmās sesijas sīkdatni.
 2. Atveriet **DevTools → Network**, atsvaidziniet lapu un noklikšķiniet uz jebkura `/api` pieprasījuma.
 3. Sadaļā **Request Headers** nokopējiet pilnu `Cookie` galvenes vērtību.
-4. OmniRoute atveriet **Providers → Add Provider → NoTrack Web (Free)**.
+4. 67router atveriet **Providers → Add Provider → NoTrack Web (Free)**.
 5. Ielīmējiet sīkdatnes virkni laukā `apiKey` un noklikšķiniet uz **Save**.
 
-OmniRoute no ielīmētās virknes izgūst `uid`, `si_usr_id` un `si_ses_id` un izveido jaunu, tīru `Cookie` galveni tikai ar šiem pāriem, kā arī `nt_session` (`ntk_…` marķieri, kas tiek iestatīts kontiem, kuros lietotājs ir pieteicies), ja tas ir pieejams. Ja trūkst kāda no trim elementiem, neapstrādātā ielīmētā virkne tiek pārsūtīta nemainītā veidā, lai operatori varētu eksperimentēt ar alternatīvām struktūrām.
+67router no ielīmētās virknes izgūst `uid`, `si_usr_id` un `si_ses_id` un izveido jaunu, tīru `Cookie` galveni tikai ar šiem pāriem, kā arī `nt_session` (`ntk_…` marķieri, kas tiek iestatīts kontiem, kuros lietotājs ir pieteicies), ja tas ir pieejams. Ja trūkst kāda no trim elementiem, neapstrādātā ielīmētā virkne tiek pārsūtīta nemainītā veidā, lai operatori varētu eksperimentēt ar alternatīvām struktūrām.
 
 ### Modeļu ID
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Sīkfails darbojas pārlūkprogrammā, bet ne OmniRoute
+## Sīkfails darbojas pārlūkprogrammā, bet ne 67router
 
 Daži nodrošinātāji izmanto sīkfailus, kas tiek nosūtīti tikai autentificētu pieprasījumu laikā.
 

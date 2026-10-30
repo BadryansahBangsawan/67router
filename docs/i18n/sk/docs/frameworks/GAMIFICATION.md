@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Posledná aktualizácia:** 2026-06-28 — v3.8.40
 
-OmniRoute obsahuje gamifikačnú vrstvu s lokálnym prístupom, ktorá odmeňuje používateľov za
+67router obsahuje gamifikačnú vrstvu s lokálnym prístupom, ktorá odmeňuje používateľov za
 interakciu s platformou — vytváranie požiadaviek, prepínanie poskytovateľov, vytváranie
 kombinácií, zdieľanie tokenov a prispievanie do komunity. Všetky údaje sa uchovávajú v
 SQLite; federácia s komunitnými servermi je voliteľná a založená na odosielaní údajov.
@@ -36,7 +36,7 @@ tokenov, odmeny za pozvania).
 | Rebríčky                  | Globálny, týždenný, mesačný, podľa zdieľania tokenov a príspevkov                        |
 | Zdieľanie tokenov         | Prevod kreditov medzi používateľmi cez podvojné účtovníctvo                              |
 | Pozvanie a uplatnenie     | Referenčné kódy ukladané ako hashe SHA-256                                               |
-| Komunitné servery         | Federácia s externými inštanciami OmniRoute                                              |
+| Komunitné servery         | Federácia s externými inštanciami 67router                                               |
 | Ochrana proti podvádzaniu | Bodovanie na strane servera, obmedzovanie frekvencie a detekcia anomálií pomocou z-skóre |
 
 ### Princípy návrhu
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Databázové tabuľky
 
-Všetky tabuľky sa nachádzajú v hlavnej databáze SQLite systému OmniRoute, ktorú vytvára migrácia
+Všetky tabuľky sa nachádzajú v hlavnej databáze SQLite systému 67router, ktorú vytvára migrácia
 `060_create_gamification.sql`. Režim žurnálu WAL sa dedí zo singletonu
 `getDbInstance()` v súbore `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Všetky tabuľky sa nachádzajú v hlavnej databáze SQLite systému OmniRoute, 
 
 ### Doménový modul: `src/lib/db/gamification.ts`
 
-Dodržiava štandardný vzor OmniRoute — importuje `getDbInstance()` z
+Dodržiava štandardný vzor 67router — importuje `getDbInstance()` z
 `core.ts` a exportuje typované funkcie CRUD. V obslužných rutinách trás sa nenachádza žiadny priamy SQL kód.
 
 Kľúčové funkcie:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Akcia             | XP  | Popis                                                      |
 | ----------------- | --- | ---------------------------------------------------------- |
-| `request`         | 1   | Za každú požiadavku API smerovanú cez OmniRoute            |
+| `request`         | 1   | Za každú požiadavku API smerovanú cez 67router             |
 | `provider_switch` | 5   | Prepnutie na iného poskytovateľa                           |
 | `model_switch`    | 3   | Prepnutie na iný model                                     |
 | `combo_create`    | 10  | Vytvorenie nového komba                                    |
@@ -578,7 +578,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (jedinečný, indexovaný) |
 | `token_hash` | SHA-256(raw_token)                 |
 
-Nespracovaný token sa používateľovi vráti presne raz pri vytvorení. OmniRoute
+Nespracovaný token sa používateľovi vráti presne raz pri vytvorení. 67router
 ho už nikdy neuloží ani nezobrazí — uchováva sa iba hash.
 
 ### Zabránenie odporúčaniu seba samého
@@ -701,7 +701,7 @@ Správcovia môžu získať úplný auditný záznam prostredníctvom `GET /api/
 
 ## Trasy API
 
-Všetky trasy používajú štandardný vzor OmniRoute:
+Všetky trasy používajú štandardný vzor 67router:
 
 ```
 Trasa → predbežná požiadavka CORS → overenie tela (Zod) → autentifikácia (extractApiKey)

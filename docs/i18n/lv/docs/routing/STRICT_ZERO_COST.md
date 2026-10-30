@@ -31,7 +31,7 @@ Katram kopas kandidātam (`open-sse/services/autoCombo/virtualFactory.ts::buildP
 uzreiz pēc `filterPaidOnlyCandidates`):
 
 1. **Vispār nav iekļauts `FREE_MODEL_BUDGETS`** → tiek izslēgts. Tas attiecas uz modeļiem, kas patiešām ir maksas, un jebkuru
-   pakalpojumu sniedzēju/modeli, ko OmniRoute vēl nav klasificējis — jauni kandidāti sākotnēji tiek izslēgti, nevis iekļauti.
+   pakalpojumu sniedzēju/modeli, ko 67router vēl nav klasificējis — jauni kandidāti sākotnēji tiek izslēgti, nevis iekļauti.
 2. **`freeType: "keyless"`** → nekavējoties iztur pārbaudi, **taču tikai tad, ja kandidāts patiešām
    ir saņemts pa ceļu bez autentifikācijas** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Šim
@@ -86,7 +86,7 @@ nekad cits, nepārbaudīts tā paša kandidāta konts. Regresijas apliecinājumu
 (gadījumi A/B/C apiešanai bez atslēgas, vairāku kontu gadījumi 1–5).
 
 `discovered automatically`: rīt pievienots pakalpojumu sniedzējs/modelis ar pareizajiem metadatiem (atrodas
-katalogā, tam ir lietojuma adapteris un `hardStopGuaranteed: true`) ir izmantojams, tiklīdz OmniRoute par to
+katalogā, tam ir lietojuma adapteris un `hardStopGuaranteed: true`) ir izmantojams, tiklīdz 67router par to
 uzzina — nav nepieciešamas koda izmaiņas, ieraksts baltajā sarakstā vai jebkādi labojumi šajā modulī. No
 kataloga izņemts elements pazūd tādā pašā veidā. Regresijas apliecinājumu skatiet failā
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` (izmantojot

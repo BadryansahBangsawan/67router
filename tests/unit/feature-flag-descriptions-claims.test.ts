@@ -34,7 +34,7 @@ test("Allow Private dashboard description states what the flag turns off", () =>
 
 test("Allow Local dashboard description states the local-first default and the metadata block", () => {
   const d = byKey("OMNIROUTE_ALLOW_LOCAL_PROVIDER_URLS");
-  assert.match(d, /by default \(OmniRoute is local-first\)|On by default \(local-first\)/);
+  assert.match(d, /by default \(67router is local-first\)|On by default \(local-first\)/);
   assert.match(d, /all of 169\.254\.0\.0\/16/);
   assert.match(d, /private and loopback hosts are blocked too/);
   assert.doesNotMatch(d, /needed for local OpenAI-compatible models/);

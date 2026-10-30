@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute își determină driverul SQLite la pornire printr-un lanț de rezervă în 5 pași:
+67router își determină driverul SQLite la pornire printr-un lanț de rezervă în 5 pași:
 
 1. **`better-sqlite3` inclus** (prin `dependencies` din `package.json`)
    — cea mai rapidă opțiune, binar nativ, instalat de `npm install` atunci când sunt disponibile instrumentele de compilare.
@@ -27,14 +27,14 @@ OmniRoute își determină driverul SQLite la pornire printr-un lanț de rezerv�
   la rulare în `~/.omniroute/runtime/` ocolește memoria cache npm globală.
 - **Lipsa instrumentelor de compilare**: Unele medii (Windows în mediul corporativ fără VS Build
   Tools, imagini Docker minimale) nu pot compila `better-sqlite3`. Programul de instalare la rulare
-  obține un binar precompilat din registrul npm; driverele de rezervă asigură pornirea OmniRoute
+  obține un binar precompilat din registrul npm; driverele de rezervă asigură pornirea 67router
   chiar dacă această operațiune eșuează.
 - **Sisteme izolate de rețea**: Dacă registrul npm nu este accesibil, `node:sqlite`
   sau `sql.js` garantează funcționalitatea de bază.
 
 ## Validarea octeților magici
 
-Înainte de a încărca un fișier `.node` instalat la rulare, OmniRoute citește primii 8
+Înainte de a încărca un fișier `.node` instalat la rulare, 67router citește primii 8
 octeți și îi compară cu valorile magice cunoscute ale platformelor:
 
 | Platformă             | Octeți (hex)  | Etichetă    |
@@ -104,9 +104,9 @@ Implementare:
 ## Topologie cu un singur proces de scriere (HA nu este acceptată)
 
 Lanțul de rezervă pentru drivere descris mai sus rulează tot într-un **singur proces**. Configurația SQLite
-implicită din OmniRoute are **un singur proces de scriere**:
+implicită din 67router are **un singur proces de scriere**:
 
-- Nu conectați două replici OmniRoute la același fișier `storage.sqlite`.
+- Nu conectați două replici 67router la același fișier `storage.sqlite`.
 - O repornire a containerului, o implementare Recreate, o oprire OOM sau o repornire HEALTHCHECK întrerupe
   fiecare sesiune SSE în curs. Calea standard nu include golirea controlată a sesiunilor.
 - Verificarea liveness a orchestratorului care consideră un răspuns lent de la `/healthz` drept indisponibil va opri singura

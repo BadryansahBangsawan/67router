@@ -6,7 +6,7 @@
 
 ## Ịkọpụta Adịghị Ike
 
-Ọ bụrụ na ị chọpụta adịghị ike nchekwa na OmniRoute, biko kọọ ya n'ụzọ kwesịrị ekwesị:
+Ọ bụrụ na ị chọpụta adịghị ike nchekwa na 67router, biko kọọ ya n'ụzọ kwesịrị ekwesị:
 
 1. **EMEGHELA** okwu ọhaneze na GitHub
 2. Jiri [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ alaka `stable/v3` (lee [`ROADMAP.md`](ROADMAP.md) → "Nkeji 3 — v3.9.0 LTS").
 
 ## Nhazi Sọftụwia Nchekwa
 
-OmniRoute na-etinye usoro nchekwa nwere ọtụtụ ọkwa n'ọrụ:
+67router na-etinye usoro nchekwa nwere ọtụtụ ọkwa n'ọrụ:
 
 ```
 Arịrịọ → CORS → Usoro Authz (hazie → amụma → manye)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Framework Ihe Mgbochi Nchekwa
 
-OmniRoute nwere **ndekọ ihe mgbochi nchekwa** (`src/lib/guardrails/`) nke enwere ike ibugharị ọzọ ozugbo, yana ihe mgbochi nchekwa 3 arụnyere n'ime ya ndị e haziri dịka mkpa ha si dị:
+67router nwere **ndekọ ihe mgbochi nchekwa** (`src/lib/guardrails/`) nke enwere ike ibugharị ọzọ ozugbo, yana ihe mgbochi nchekwa 3 arụnyere n'ime ya ndị e haziri dịka mkpa ha si dị:
 
 | Ihe Mgbochi Nchekwa | Mkpa | Ebumnuche                                                                                         |
 | ------------------- | ---- | ------------------------------------------------------------------------------------------------- |

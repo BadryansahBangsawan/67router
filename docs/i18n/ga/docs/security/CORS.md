@@ -4,7 +4,7 @@
 
 ---
 
-Rialaíonn OmniRoute cé na **bunfhoinsí brabhsálaí** a fhéadfaidh freagraí trastionscnaimh a léamh
+Rialaíonn 67router cé na **bunfhoinsí brabhsálaí** a fhéadfaidh freagraí trastionscnaimh a léamh
 ó liosta ceadaithe lárnaithe amháin. Tá an tsamhail **dúnta i gcás teipe de réir réamhshocraithe**:
 ní cheadaítear aon bhunfhoinse go dtí go gceadaíonn tú go sainráite í. Déantar cur síos ar an leathanach seo ar an gcaoi a
 réitítear an liosta ceadaithe, ar a nochtann `CORS_ALLOW_ALL=true` i ndáiríre (agus, rud atá tábhachtach, ar an méid
@@ -45,13 +45,13 @@ san ord seo:
 ## Samhail bhagartha — an méid a nochtann `CORS_ALLOW_ALL=true` i ndáiríre
 
 Is fiú an rabhadh ginearálta ó OWASP ("CORS saoróige = is féidir le suíomh ar bith d’API a ghlaoch")
-a ghlacadh dáiríre, ach tá nochtadh OmniRoute **níos cúinge ná an cás ginearálta**,
+a ghlacadh dáiríre, ach tá nochtadh 67router **níos cúinge ná an cás ginearálta**,
 mar gheall ar fhíric nithiúil amháin faoin gcur chun feidhme:
 
 > **Ní astaíonn an `applyCorsHeaders()` lárnach
 > `Access-Control-Allow-Credentials` riamh.** Ní nochtfaidh brabhsálaí freagra trastionscnaimh
 > _a bhfuil dintiúir leis_ (a bhfuil fianán leis) mura seolann an freastalaí
-> `Access-Control-Allow-Credentials: true`. Ní dhéanann conair chomhroinnte CORS OmniRoute
+> `Access-Control-Allow-Credentials: true`. Ní dhéanann conair chomhroinnte CORS 67router
 > amhlaidh riamh.
 
 Seo a chiallaíonn sé sin do gach dromchla, fiú le `CORS_ALLOW_ALL=true`:
@@ -91,7 +91,7 @@ ar leithligh ón treoir CORS seo.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Má ritheann OmniRoute taobh thiar de sheachfhreastalaí droim ar ais / tollán (nginx, Caddy, Cloudflare
+- Má ritheann 67router taobh thiar de sheachfhreastalaí droim ar ais / tollán (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), ní hé CORS an t-aon rialú atá agat — cosnaíonn garda na mbealaí
   aisfhillteacha bealaí atá in ann próisis a sceitheadh fós (féach
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Ná brionnaigh
@@ -107,7 +107,7 @@ ar leithligh ón treoir CORS seo.
 Is annamh a bhíonn gá agat leis an saoróg fiú i bhforbairt. Ná ceadaigh ach na freastalaithe forbartha a úsáideann tú:
 
 ```bash
-# Freastalaithe forbartha Vite (5173) + Next.js (3000) ag glaoch ar OmniRoute áitiúil
+# Freastalaithe forbartha Vite (5173) + Next.js (3000) ag glaoch ar 67router áitiúil
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,12 +127,12 @@ atosú.
   bunúis bhainistíochta/deaise amach as aon chumraíocht cheadmhach; ní mór dóibh fanacht
   go hiomlán dúnta i gcás teipe.
 
-## Sampla: seachfhreastalaí droim ar ais os comhair OmniRoute
+## Sampla: seachfhreastalaí droim ar ais os comhair 67router
 
-Cuireann OmniRoute féin CORS i bhfeidhm, mar sin de ghnáth níor cheart don seachfhreastalaí ceanntásca `Access-Control-*` a chur leis ná a athscríobh (briseann ceanntásca dúbailte brabhsálaithe). Cuir deireadh le TLS agus cuir an trácht ar aghaidh — lig do OmniRoute an réamhiarratas a fhreagairt:
+Cuireann 67router féin CORS i bhfeidhm, mar sin de ghnáth níor cheart don seachfhreastalaí ceanntásca `Access-Control-*` a chur leis ná a athscríobh (briseann ceanntásca dúbailte brabhsálaithe). Cuir deireadh le TLS agus cuir an trácht ar aghaidh — lig do 67router an réamhiarratas a fhreagairt:
 
 ```nginx
-# nginx — cuir ar aghaidh chuig OmniRoute; NÁ hiontráil Access-Control-* anseo
+# nginx — cuir ar aghaidh chuig 67router; NÁ hiontráil Access-Control-* anseo
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -140,12 +140,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Coinnigh na ceanntásca curtha ar aghaidh: nascann seachfhreastalaí ar an óstríomhaire céanna ón gcomhéadan aisfhillte, agus is iadsan
-    # a insíonn do OmniRoute nach é an t-oibreoir áitiúil an glaoiteoir. Má chuireann seachfhreastalaí ceann ar bith díobh leis,
+    # a insíonn do 67router nach é an t-oibreoir áitiúil an glaoiteoir. Má chuireann seachfhreastalaí ceann ar bith díobh leis,
     # beidh cuma glaoiteora áitiúil ar gach glaoiteoir cianda. Ná socraigh X-Forwarded-For go 127.0.0.1 ach oiread.
 }
 ```
 
-Socraigh bunús ceadaithe na mbrabhsálaithe in OmniRoute (`CORS_ALLOWED_ORIGINS` nó an cluaisín Slándála), ní sa seachfhreastalaí.
+Socraigh bunús ceadaithe na mbrabhsálaithe in 67router (`CORS_ALLOWED_ORIGINS` nó an cluaisín Slándála), ní sa seachfhreastalaí.
 
 ## Comhaid fhoinseacha
 

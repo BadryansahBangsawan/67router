@@ -13,7 +13,7 @@
 
 ## Was es ist
 
-OmniRoute bindet einen **Obsidian**-Tresor als **Kontextquelle** ein — eine lokale
+67router bindet einen **Obsidian**-Tresor als **Kontextquelle** ein — eine lokale
 Markdown-Wissensdatenbank, die Agenten über den integrierten MCP-Server lesen und
 bearbeiten können. Die Integration kommuniziert mit dem Community-Plugin
 **Obsidian Local REST API**, das innerhalb der Desktop-App ausgeführt wird. Dadurch
@@ -84,7 +84,7 @@ der Local REST API.
 
 `src/app/api/settings/obsidian/webdav/route.ts` verwaltet eine optionale WebDAV-gestützte
 Vault-Synchronisierung (gesteuert durch `src/lib/obsidianSync.ts`). Bei ihrer Aktivierung
-wird OmniRoute auf ein lokales Vault-Verzeichnis verwiesen und ein zufälliges
+wird 67router auf ein lokales Vault-Verzeichnis verwiesen und ein zufälliges
 WebDAV-Paar aus Benutzername und Passwort erzeugt:
 
 ```bash
@@ -123,9 +123,9 @@ schlüsselspezifische Obsidian-Konfiguration behalten den globalen Fallback bei.
 ## MCP-Tools (22)
 
 Definiert in `open-sse/mcp-server/tools/obsidianTools.ts`. Token und Basis-URL werden
-für jeden Aufruf aufgelöst (zuerst pro API-Schlüssel, dann global). Tools, die auf den OmniRoute-**Sync-Server**
+für jeden Aufruf aufgelöst (zuerst pro API-Schlüssel, dann global). Tools, die auf den 67router-**Sync-Server**
 zugreifen (die vier `obsidian_sync_*`-Tools), benötigen zusätzlich das in den
-OmniRoute-Einstellungen konfigurierte Sync-Authentifizierungstoken.
+67router-Einstellungen konfigurierte Sync-Authentifizierungstoken.
 
 ### Lese-Tools (`read:obsidian`)
 
@@ -142,7 +142,7 @@ OmniRoute-Einstellungen konfigurierte Sync-Authentifizierungstoken.
 | `obsidian_get_periodic_note` | Ruft die tägliche/wöchentliche/monatliche periodische Notiz für ein Datum ab (heute, falls nicht angegeben).                 |
 | `obsidian_get_tags`          | Listet alle Vault-Tags mit ihrer Häufigkeit auf.                                                                             |
 | `obsidian_list_commands`     | Listet verfügbare Obsidian-Befehls-IDs auf (zur Verwendung mit `obsidian_execute_command`).                                  |
-| `obsidian_sync_status`       | Status des OmniRoute-Sync-Servers: Ausführung, Vault-Name, Port, Betriebszeit, letzte Synchronisierung.                      |
+| `obsidian_sync_status`       | Status des 67router-Sync-Servers: Ausführung, Vault-Name, Port, Betriebszeit, letzte Synchronisierung.                       |
 | `obsidian_sync_conflicts`    | Listet ungelöste Synchronisierungskonflikte auf (Pfad, Konfliktpfad, Erkennungszeitpunkt).                                   |
 
 ### Schreib-Tools (`write:obsidian`)

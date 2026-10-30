@@ -7,7 +7,7 @@ import i18nConfig from "../../config/i18n.json" with { type: "json" };
 const expectedEnglish = {
   cloudUploadDestination: "Cloud sync destination (not local backups):",
   cloudUploadWarning:
-    "Cloud sync is disabled by default on new installations. Enabling it uploads provider API keys, OAuth access/refresh tokens, OmniRoute API keys, and configuration to the destination above, now and during future syncs. This is separate from local Storage backups. Only enable it if you trust that server.",
+    "Cloud sync is disabled by default on new installations. Enabling it uploads provider API keys, OAuth access/refresh tokens, 67router API keys, and configuration to the destination above, now and during future syncs. This is separate from local Storage backups. Only enable it if you trust that server.",
   cloudUploadConsent: "I understand and authorize uploading my credentials to this destination.",
 };
 
@@ -54,7 +54,7 @@ for (const { code: locale } of i18nConfig.locales) {
       if (locale === "en") assert.equal(rendered[key], english);
       else assert.notEqual(rendered[key], english, `${locale}.${key}: untranslated English`);
     }
-    for (const term of ["API", "OAuth", "OmniRoute"]) {
+    for (const term of ["API", "OAuth", "67router"]) {
       assert.ok(rendered.cloudUploadWarning.includes(term), `${locale}: preserve ${term}`);
     }
   });

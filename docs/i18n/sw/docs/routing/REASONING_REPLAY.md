@@ -7,7 +7,7 @@
 > **Chanzo cha ukweli:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Ilisasishwa mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute hunasa `reasoning_content` ya msaidizi inayozalishwa na modeli za hali ya kufikiri na kuicheza tena kwa uwazi kwenye maombi yenye zamu nyingi wakati mtoa huduma wa upande wa juu anapohitaji hivyo. Hii huondoa hitilafu za HTTP 400 ambazo watoa huduma wenye masharti makali hutoa wakati historia ya mazungumzo ya mteja haina maudhui ya kufikiri ya zamu iliyotangulia.
+67router hunasa `reasoning_content` ya msaidizi inayozalishwa na modeli za hali ya kufikiri na kuicheza tena kwa uwazi kwenye maombi yenye zamu nyingi wakati mtoa huduma wa upande wa juu anapohitaji hivyo. Hii huondoa hitilafu za HTTP 400 ambazo watoa huduma wenye masharti makali hutoa wakati historia ya mazungumzo ya mteja haina maudhui ya kufikiri ya zamu iliyotangulia.
 
 ## Kwa Nini Hii Ipo
 
@@ -17,7 +17,7 @@ Watoa huduma kadhaa wa hali ya kufikiri hukataa zamu inayofuata isipokuwa **ujum
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-Lakini wateja wa kawaida (Cursor, Cline, Roo Code, OpenAI SDK) huondoa `reasoning_content` kwenye historia wanayoicheza tena. OmniRoute huirejesha kutoka kwenye akiba ya upande wa seva ili ombi linaloonekana na mfumo wa upande wa juu liwe thabiti. Suala #1628 lilianzisha uhifadhi mseto wa kumbukumbu/SQLite ili akiba idumu baada ya michakato kuanzishwa upya.
+Lakini wateja wa kawaida (Cursor, Cline, Roo Code, OpenAI SDK) huondoa `reasoning_content` kwenye historia wanayoicheza tena. 67router huirejesha kutoka kwenye akiba ya upande wa seva ili ombi linaloonekana na mfumo wa upande wa juu liwe thabiti. Suala #1628 lilianzisha uhifadhi mseto wa kumbukumbu/SQLite ili akiba idumu baada ya michakato kuanzishwa upya.
 
 ## Usanifu
 

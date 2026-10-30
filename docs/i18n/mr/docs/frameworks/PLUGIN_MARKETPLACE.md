@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **शेवटचे अद्यतन:** 2026-06-28 — v3.8.40
 
-OmniRoute मध्ये WordPress-शैलीची प्लगइन प्रणाली समाविष्ट आहे. प्लगइन म्हणजे स्वतंत्र
+67router मध्ये WordPress-शैलीची प्लगइन प्रणाली समाविष्ट आहे. प्लगइन म्हणजे स्वतंत्र
 डिरेक्टरी असतात — प्रत्येकामध्ये एक `plugin.json` मॅनिफेस्ट आणि एक एंट्री फाइल असते — ज्या
 विनंती पाइपलाइनमध्ये (`onRequest` / `onResponse` / `onError`) आणि
 जीवनचक्र इव्हेंटमध्ये (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)
@@ -152,7 +152,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### प्लगइन डिरेक्टरी
 
-प्लगइन्स OmniRoute डेटा डिरेक्टरीखाली असतात:
+प्लगइन्स 67router डेटा डिरेक्टरीखाली असतात:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

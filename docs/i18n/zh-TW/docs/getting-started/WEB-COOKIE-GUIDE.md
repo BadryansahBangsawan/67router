@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookie 提供者可讓 OmniRoute 透過您現有的瀏覽器工作階段使用 AI 服務，而不需使用 API 金鑰。當您已經可以透過某項服務的網站進行存取，並希望 OmniRoute 使用相同的已驗證工作階段時，這類提供者非常實用。
+Web Cookie 提供者可讓 67router 透過您現有的瀏覽器工作階段使用 AI 服務，而不需使用 API 金鑰。當您已經可以透過某項服務的網站進行存取，並希望 67router 使用相同的已驗證工作階段時，這類提供者非常實用。
 
 與 API 金鑰提供者不同，Web Cookie 提供者使用瀏覽器傳送給網站的憑證進行驗證。
 
@@ -49,7 +49,7 @@ DevTools
 
 `Cookie` 請求標頭包含瀏覽器成功使用的確切驗證資訊。
 
-對大多數 Web Cookie 提供者而言，這就是應貼到 OmniRoute 中的值。
+對大多數 Web Cookie 提供者而言，這就是應貼到 67router 中的值。
 
 ---
 
@@ -63,7 +63,7 @@ DevTools
 4. 重新整理頁面。
 5. 開啟已驗證的聊天或對話請求。
 6. 複製所需的驗證憑證。
-7. 開啟 OmniRoute。
+7. 開啟 67router。
 8. 前往 **Providers → Add Provider**。
 9. 選取您的 Web Cookie 提供者。
 10. 貼上憑證。
@@ -92,17 +92,17 @@ DevTools
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) 是一個免費的消費者聊天平台，無須註冊——首次造訪時會匿名建立工作階段，並透過三個 Cookie 持續保存：`uid`、`si_usr_id` 和 `si_ses_id`。OmniRoute 透過單一模型 ID（`notrack-c`，別名 `ntw`）代理相同的 `/api/dispatch` 端點。
+NoTrack ([notrack.ai](https://notrack.ai)) 是一個免費的消費者聊天平台，無須註冊——首次造訪時會匿名建立工作階段，並透過三個 Cookie 持續保存：`uid`、`si_usr_id` 和 `si_ses_id`。67router 透過單一模型 ID（`notrack-c`，別名 `ntw`）代理相同的 `/api/dispatch` 端點。
 
 ### 連線步驟
 
 1. 在瀏覽器中開啟 [notrack.ai](https://notrack.ai)，並讓網站設定匿名工作階段 Cookie。
 2. 開啟**開發人員工具 → 網路**，重新整理頁面，然後點選任何 `/api` 請求。
 3. 在**要求標頭**中，複製完整的 `Cookie` 標頭值。
-4. 在 OmniRoute 中，前往**提供者 → 新增提供者 → NoTrack Web（免費）**。
+4. 在 67router 中，前往**提供者 → 新增提供者 → NoTrack Web（免費）**。
 5. 將 Cookie 字串貼入 `apiKey` 欄位，然後按一下**儲存**。
 
-OmniRoute 會從貼上的字串中擷取 `uid`、`si_usr_id` 和 `si_ses_id`，並重新建立僅包含這些鍵值對的乾淨 `Cookie` 標頭；如果存在 `nt_session`（為已登入帳戶設定的 `ntk_…` 權杖），也會一併加入。若三者中有任何一個缺少，系統會原封不動地轉送所貼上的原始字串，讓操作人員可以嘗試其他格式。
+67router 會從貼上的字串中擷取 `uid`、`si_usr_id` 和 `si_ses_id`，並重新建立僅包含這些鍵值對的乾淨 `Cookie` 標頭；如果存在 `nt_session`（為已登入帳戶設定的 `ntk_…` 權杖），也會一併加入。若三者中有任何一個缺少，系統會原封不動地轉送所貼上的原始字串，讓操作人員可以嘗試其他格式。
 
 ### 模型 ID
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Cookie 可在瀏覽器中使用，但無法在 OmniRoute 中使用
+## Cookie 可在瀏覽器中使用，但無法在 67router 中使用
 
 部分提供者包含只會在已驗證的請求期間傳送的 Cookie。
 

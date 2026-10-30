@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Chyba: {message}",
-    "serverOffline": "Server OmniRoute je offline. Spustite: omniroute serve",
+    "serverOffline": "Server 67router je offline. Spustite: omniroute serve",
     "authRequired": "Vyžaduje sa overenie. Nastavte OMNIROUTE_API_KEY alebo spustite: omniroute setup",
     "rateLimited": "Prekročený limit požiadaviek. Skúste za {seconds}s.",
     "timeout": "Požiadavka vypršala po {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Preskočiť potvrdenie"
   },
   "setup": {
-    "title": "Nastavenie OmniRoute",
+    "title": "Nastavenie 67router",
     "passwordPrompt": "Heslo správcu",
     "providerPrompt": "Predvolený poskytovateľ (ak chcete preskočiť, nechajte prázdne)",
     "done": "Nastavenie dokončené",
@@ -30,7 +30,7 @@
     "opencode": "Nainštalovať a nakonfigurovať pribalený doplnok @omniroute/opencode-plugin pre OpenCode"
   },
   "doctor": {
-    "title": "Diagnostika OmniRoute",
+    "title": "Diagnostika 67router",
     "dbOk": "Databáza: OK ({path})",
     "dbMissing": "Databáza: nie je inicializovaná — spustite `omniroute setup`",
     "portOk": "Port {port}: dostupný",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtrovať podľa názvu poskytovateľa",
       "header": "ID         Poskytovateľ  Názov                    Stav platnosti  Stav testu  Pozastavené do",
       "noData": "Nie sú k dispozícii žiadne údaje o pripojeniach poskytovateľov.",
-      "requiresServer": "Príkaz providers status vyžaduje, aby bol server OmniRoute spustený."
+      "requiresServer": "Príkaz providers status vyžaduje, aby bol server 67router spustený."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Pridať alebo aktualizovať API kľúč pre poskytovateľa",
     "listDescription": "Zobraziť všetky nakonfigurované API kľúče",
     "removeDescription": "Odstrániť API kľúč poskytovateľa",
-    "regenerateDescription": "Opätovne vygenerovať API kľúč OmniRoute",
-    "revokeDescription": "Zrušiť API kľúč OmniRoute",
+    "regenerateDescription": "Opätovne vygenerovať API kľúč 67router",
+    "revokeDescription": "Zrušiť API kľúč 67router",
     "revealDescription": "Odkryť nezamaskovanú hodnotu API kľúča",
     "usageDescription": "Zobraziť nedávne použitie API kľúča",
     "usageLimitOpt": "Počet nedávnych požiadaviek",
@@ -225,7 +225,7 @@
     "noCombo": "Nenašla sa žiadna zodpovedajúca kombinácia. Nakonfigurujte ju pomocou: omniroute combo create"
   },
   "chat": {
-    "description": "Odoslať jednorazovú chatovú výzvu do OmniRoute",
+    "description": "Odoslať jednorazovú chatovú výzvu do 67router",
     "file": "Načítať výzvu zo súboru",
     "stdin": "Načítať výzvu zo štandardného vstupu",
     "system": "Systémová výzva",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Spustiť server OmniRoute (predvolená akcia)",
-    "starting": "Spúšťa sa server OmniRoute na porte {port}...",
+    "description": "Spustiť server 67router (predvolená akcia)",
+    "starting": "Spúšťa sa server 67router na porte {port}...",
     "ready": "Pripravené na http://localhost:{port}",
     "stopping": "Zastavuje sa server (PID {pid})...",
     "stopped": "Server bol zastavený.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Záloha",
-    "description": "Vytvoriť zálohu údajov OmniRoute",
+    "description": "Vytvoriť zálohu údajov 67router",
     "creating": "Vytvára sa záloha...",
     "done": "Záloha bola uložená do {path}",
     "noFiles": "Žiadne súbory na zálohovanie (databáza nebola inicializovaná)",
@@ -277,7 +277,7 @@
     "noBackups": "Nenašli sa žiadne zálohy.",
     "notFound": "Záloha sa nenašla: {name}",
     "confirmRestore": "Prepísať aktuálne údaje zálohou z {ts}?",
-    "createDescription": "Vytvoriť zálohu údajov OmniRoute",
+    "createDescription": "Vytvoriť zálohu údajov 67router",
     "nameOpt": "Vlastný názov zálohy",
     "cloudOpt": "Nahrať zálohu do cloudového úložiska",
     "encryptOpt": "Zašifrovať zálohu pomocou AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Vymazanie vyrovnávacej pamäte zlyhalo."
   },
   "redis": {
-    "description": "Spustiť miestny kontajner Redis jedným kliknutím (Podman alebo Docker) na ukladanie do vyrovnávacej pamäte a sledovanie kvót OmniRoute"
+    "description": "Spustiť miestny kontajner Redis jedným kliknutím (Podman alebo Docker) na ukladanie do vyrovnávacej pamäte a sledovanie kvót 67router"
   },
   "test": {
     "description": "Otestovať pripojenie k poskytovateľovi",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Spravovať autorizačné politiky OmniRoute",
+    "description": "Spravovať autorizačné politiky 67router",
     "list": {
       "description": "Zobraziť zoznam politík",
       "kind": "Filtrovať podľa typu (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurovať a kontrolovať kompresný proces OmniRoute",
+    "description": "Konfigurovať a kontrolovať kompresný proces 67router",
     "status": {
       "description": "Zobraziť aktuálny stav a nastavenia kompresie"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Zmeniť adresu URL tunela {type}? (vygeneruje sa nová adresa URL)"
   },
   "stop": {
-    "description": "Zastaviť server OmniRoute",
+    "description": "Zastaviť server 67router",
     "stopping": "Server sa zastavuje (PID {pid})...",
     "stopped": "Server bol zastavený.",
     "notRunning": "Nie je spustený žiadny server.",
     "portFallback": "Nenašiel sa žiadny súbor PID, skúša sa zastavenie podľa portu..."
   },
   "restart": {
-    "description": "Reštartovať server OmniRoute",
-    "restarting": "Server OmniRoute sa reštartuje..."
+    "description": "Reštartovať server 67router",
+    "restarting": "Server 67router sa reštartuje..."
   },
   "dashboard": {
-    "description": "Otvoriť ovládací panel OmniRoute v prehliadači",
+    "description": "Otvoriť ovládací panel 67router v prehliadači",
     "opening": "Otvára sa ovládací panel na adrese {url}",
     "urlOnly": "Vypísať adresu URL ovládacieho panela bez otvorenia prehliadača",
     "tui": "Otvoriť interaktívny ovládací panel TUI (terminálové používateľské rozhranie, 7 kariet)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Spravovať zručnosti OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Spravovať zručnosti 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Zobraziť zoznam nainštalovaných zručností",
       "type": "Filtrovať podľa typu (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Spravovať konverzačnú pamäť OmniRoute (FTS5 + vector)",
+    "description": "Spravovať konverzačnú pamäť 67router (FTS5 + vector)",
     "search": {
       "description": "Vyhľadávať záznamy v pamäti pomocou sémantického dopytu",
       "type": "Filtrovať podľa typu pamäte (user|feedback|project|reference)",
@@ -792,14 +792,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Inteligentný AI router s automatickým prepínaním",
+    "description": "67router — Inteligentný AI router s automatickým prepínaním",
     "version": "Vypísať verziu a skončiť",
     "output": "Formát výstupu (table, json, jsonl, csv)",
     "quiet": "Potlačiť nepodstatný výstup",
     "no_color": "Zakázať farebný výstup",
     "timeout": "Časový limit HTTP požiadaviek v milisekundách",
-    "api_key": "API kľúč pre server OmniRoute",
-    "base_url": "Základná URL servera OmniRoute",
+    "api_key": "API kľúč pre server 67router",
+    "base_url": "Základná URL servera 67router",
     "context": "Kontext/profil servera pre tento príkaz",
     "lang": "Nastaviť jazyk zobrazenia CLI (prepíše OMNIROUTE_LANG)"
   },
@@ -997,7 +997,7 @@
     }
   },
   "openapi": {
-    "description": "Prístup k špecifikácii OmniRoute OpenAPI a jej testovanie",
+    "description": "Prístup k špecifikácii 67router OpenAPI a jej testovanie",
     "dump": {
       "description": "Vypísať špecifikáciu OpenAPI na štandardný výstup alebo do súboru",
       "format": "Výstupný formát: yaml|json (predvolené: yaml)",
@@ -1040,7 +1040,7 @@
     }
   },
   "open": {
-    "description": "Otvoriť konkrétnu stránku ovládacieho panela OmniRoute v prehliadači",
+    "description": "Otvoriť konkrétnu stránku ovládacieho panela 67router v prehliadači",
     "url": "Vypísať iba URL, neotvárať prehliadač"
   },
   "telemetry": {
@@ -1057,7 +1057,7 @@
     }
   },
   "sync": {
-    "description": "Synchronizovať konfiguráciu medzi inštanciami OmniRoute",
+    "description": "Synchronizovať konfiguráciu medzi inštanciami 67router",
     "push": {
       "description": "Odoslať konfiguráciu do cloudu alebo vzdialenej inštancie"
     },
@@ -1116,7 +1116,7 @@
     "filter": "Filtrovať podľa úrovne (error,warn,info) — hodnoty oddelené čiarkami",
     "lines": "Počet riadkov na načítanie",
     "timeout": "Časový limit pripojenia v ms",
-    "baseUrl": "Základná URL adresa API OmniRoute",
+    "baseUrl": "Základná URL adresa API 67router",
     "requestId": "Filtrovať podľa ID požiadavky",
     "apiKey": "Filtrovať podľa kľúča API",
     "combo": "Filtrovať podľa názvu kombinácie",
@@ -1132,10 +1132,10 @@
     "description": "Ovládať ikonu v systémovej lište",
     "show": "Zobraziť ikonu v systémovej lište (ak je server spustený s --tray)",
     "hide": "Skryť ikonu v systémovej lište",
-    "quit": "Ukončiť OmniRoute prostredníctvom systémovej lišty"
+    "quit": "Ukončiť 67router prostredníctvom systémovej lišty"
   },
   "autostart": {
-    "description": "Spravovať automatické spustenie OmniRoute pri štarte systému (Linux: používateľská služba systemd)",
+    "description": "Spravovať automatické spustenie 67router pri štarte systému (Linux: používateľská služba systemd)",
     "enable": "Povoliť automatické spustenie pri štarte systému",
     "disable": "Zakázať automatické spustenie pri štarte systému",
     "toggle": "Prepnúť automatické spustenie pri štarte systému",
@@ -1167,19 +1167,19 @@
     "scaffold": "Vytvoriť základnú štruktúru nového doplnku"
   },
   "launch": {
-    "description": "Spustiť Claude Code nasmerovaný na OmniRoute (lokálne alebo vzdialene, s --profile)",
+    "description": "Spustiť Claude Code nasmerovaný na 67router (lokálne alebo vzdialene, s --profile)",
     "token": "Token, ktorý má klient Claude odosielať (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute nie je dostupný na porte {port}. Spustite ho pomocou príkazu 'omniroute serve'.",
+    "notRunning": "67router nie je dostupný na porte {port}. Spustite ho pomocou príkazu 'omniroute serve'.",
     "notFound": "CLI 'claude' sa nenašlo v PATH."
   },
   "run": {
-    "description": "Spustiť podporovaný cieľ CLI prostredníctvom OmniRoute"
+    "description": "Spustiť podporovaný cieľ CLI prostredníctvom 67router"
   },
   "setupClaude": {
-    "description": "Vygenerovať profily Claude Code v ~/.claude/profiles z katalógu modelov OmniRoute"
+    "description": "Vygenerovať profily Claude Code v ~/.claude/profiles z katalógu modelov 67router"
   },
   "connect": {
-    "description": "Pripojiť sa k vzdialenému serveru OmniRoute a prejsť do vzdialeného režimu"
+    "description": "Pripojiť sa k vzdialenému serveru 67router a prejsť do vzdialeného režimu"
   },
   "tokens": {
     "description": "Spravovať tokeny prístupu CLI s obmedzeným rozsahom (vzdialený režim)"
@@ -1188,10 +1188,10 @@
     "description": "Vybrať poskytovateľa a model z aktívneho servera a nakonfigurovať podporované lokálne CLI"
   },
   "launchCodex": {
-    "description": "Spustiť Codex CLI nasmerovaný na OmniRoute (lokálne alebo na vzdialenom VPS)"
+    "description": "Spustiť Codex CLI nasmerovaný na 67router (lokálne alebo na vzdialenom VPS)"
   },
   "setupCodex": {
-    "description": "Vygenerovať súbory profilov v ~/.codex zo živého katalógu modelov OmniRoute"
+    "description": "Vygenerovať súbory profilov v ~/.codex zo živého katalógu modelov 67router"
   },
   "packs": {
     "description": "Spravovať voliteľné balíky behového prostredia (ML / automatizácia prehliadača)",
@@ -1204,7 +1204,7 @@
     "errUnknown": "neznámy balík: {name}",
     "errNoIndex": "index balíkov sa nenašiel; zadajte --source <dir> odkazujúci na adresár s dátami balíka (balíky pre desktop ho obsahujú vedľa aplikácie)",
     "installed": "balík „{name}“ bol nainštalovaný a overený v adresári {dir}",
-    "restartHint": "reštartujte server OmniRoute (alebo desktopovú aplikáciu), aby modul runtime načítal balík",
+    "restartHint": "reštartujte server 67router (alebo desktopovú aplikáciu), aby modul runtime načítal balík",
     "removed": "balík „{name}“ bol odstránený",
     "notInstalled": "balík „{name}“ nebol nainštalovaný",
     "verifyOk": "všetky nainštalované balíky boli overené",

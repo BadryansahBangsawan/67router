@@ -12,7 +12,7 @@ User-Agent, `anthropic-beta` ફ્લૅગ્સ, Stainless SDK હેડર�
 
 ## ઝડપી શરૂઆત — નેટિવ `agentrouter` પ્રોવાઇડરનો ઉપયોગ કરો (ભલામણ કરેલ)
 
-મોટાભાગના વપરાશકર્તાઓ માટે, **કોઈ ખાસ સેટઅપ જરૂરી નથી**. OmniRoute સંપૂર્ણ Claude Code
+મોટાભાગના વપરાશકર્તાઓ માટે, **કોઈ ખાસ સેટઅપ જરૂરી નથી**. 67router સંપૂર્ણ Claude Code
 વાયર ઇમેજ પહેલેથી જ સમાવિષ્ટ હોય તેવા બિલ્ટ-ઇન `agentrouter` પ્રોવાઇડર સાથે આવે છે (`open-sse/config/providerRegistry.ts` → `agentrouter`
 જુઓ). તેનો ઉપયોગ કરવા માટે:
 
@@ -33,7 +33,7 @@ User-Agent, `anthropic-beta` ફ્લૅગ્સ, Stainless SDK હેડર�
 
 ## અદ્યતન: Claude Code સુસંગત પ્રોવાઇડર પ્રકાર દ્વારા કનેક્ટ કરવું
 
-OmniRoute, **Claude Code સુસંગત** પ્રોવાઇડર પ્રકાર (`anthropic-compatible-cc-*`) દ્વારા
+67router, **Claude Code સુસંગત** પ્રોવાઇડર પ્રકાર (`anthropic-compatible-cc-*`) દ્વારા
 AgentRouter (અને સમાન રિલે)ને પણ સપોર્ટ કરે છે, જે યોગ્ય વાયર ઇમેજ સાથે
 Anthropic Messages APIનો ઉપયોગ કરે છે. `https://agentrouter.org` તરફ નિર્દેશ કરતો સામાન્ય
 `openai-compatible-chat` પ્રોવાઇડર **કામ કરશે નહીં** — અપસ્ટ્રીમ WAF એવી રિક્વેસ્ટ્સને
@@ -45,13 +45,13 @@ Anthropic Messages APIનો ઉપયોગ કરે છે. `https://agentrou
 
 - AgentRouter એકાઉન્ટ અને API કી. નવા સાઇનઅપ્સને પ્રોજેક્ટના [README](../README.md)માંની
   એફિલિએટ લિંક દ્વારા મફત ક્રેડિટ્સ મળે છે.
-- `ENABLE_CC_COMPATIBLE_PROVIDER` ફીચર ફ્લૅગ સક્ષમ રાખીને ચાલતું OmniRoute
+- `ENABLE_CC_COMPATIBLE_PROVIDER` ફીચર ફ્લૅગ સક્ષમ રાખીને ચાલતું 67router
   (નીચે જુઓ).
 
 ## 1. CC-સુસંગત પ્રોવાઇડર પ્રકાર સક્ષમ કરો
 
 Claude Code સુસંગત પ્રોવાઇડર પ્રકારને ફીચર ફ્લૅગ પાછળ રાખવામાં આવ્યો છે, કારણ કે તે
-અધિકૃત Claude Code ક્લાયન્ટ સાથે અત્યંત મળતો ટ્રાફિક મોકલે છે. OmniRoute શરૂ કરતાં પહેલાં
+અધિકૃત Claude Code ક્લાયન્ટ સાથે અત્યંત મળતો ટ્રાફિક મોકલે છે. 67router શરૂ કરતાં પહેલાં
 એન્વાયર્નમેન્ટ વેરિએબલ સેટ કરીને તેને સક્ષમ કરો:
 
 ```bash

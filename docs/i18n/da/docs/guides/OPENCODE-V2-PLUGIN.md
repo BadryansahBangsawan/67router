@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` gør hele dit OmniRoute-katalog — modeller, kombinationer og
+`@omniroute/opencode-plugin-v2` gør hele dit 67router-katalog — modeller, kombinationer og
 automatiske kombinationer — tilgængeligt i OpenCode v2's modelvælger med visningsnavne, priser og
 budgetter for gratisniveauet.
 
@@ -15,7 +15,7 @@ deles mellem dem, så en opgradering af den ene aldrig fremtvinger en opgraderin
 ## Krav
 
 - OpenCode v2.
-- En tilgængelig OmniRoute-gateway (`http://localhost:20128` som standard).
+- En tilgængelig 67router-gateway (`http://localhost:20128` som standard).
 - Node.js 22 eller 24.
 
 ## Installation
@@ -128,7 +128,7 @@ Indstil `"geminiSanitization": false` for at slå det fra.
 
 | Symptom                                           | Årsag                                                                                                                          |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Modelvælgeren viser ingen OmniRoute-model         | Ingen nøgle blev fundet (kontrollér opstartsadvarslen), eller gatewayen kan ikke nås                                           |
+| Modelvælgeren viser ingen 67router-model          | Ingen nøgle blev fundet (kontrollér opstartsadvarslen), eller gatewayen kan ikke nås                                           |
 | Rå model-id'er, ingen kombinationer, ingen priser | Administrationsendepunkterne afviste tokenet — indstil `managementReadToken`                                                   |
 | Kort eller tomt `freeOnly`-katalog                | Intet administrationstoken eller et afvist token — læs oversigtslinjen for opdateringen (`unmatched-free`-antal) i værtsloggen |
 | En session fastgjort til `opencode-<id>/…`        | v1-pluginet publicerede `opencode-<id>`; v2 publicerer kun `<id>`, så vælg modellen igen under `<id>/…`                        |

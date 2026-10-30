@@ -25,7 +25,7 @@ Dashboard → Providers → **கோப்பிலிருந்து இற�
 இறக்குமதி மாதிரி சாளரத்திலிருந்து ஒரு தொடக்கக் கோப்பைப் பதிவிறக்கவும் (**CSV வார்ப்புருவைப் பதிவிறக்கு**). எடுத்துக்காட்டு:
 
 ```csv
-# OmniRoute provider இறக்குமதி (இடநிலை நெடுவரிசைகள்)
+# 67router provider இறக்குமதி (இடநிலை நெடுவரிசைகள்)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

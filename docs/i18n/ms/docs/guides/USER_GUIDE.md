@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Panduan lengkap untuk mengkonfigurasi penyedia, mencipta kombo, mengintegrasikan alat CLI dan menggunakan OmniRoute.
+Panduan lengkap untuk mengkonfigurasi penyedia, mencipta kombo, mengintegrasikan alat CLI dan menggunakan 67router.
 
 ---
 
@@ -137,11 +137,11 @@ Model:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Petua Pro:** Gunakan Opus untuk tugas kompleks dan Sonnet untuk kepantasan. OmniRoute menjejaki kuota bagi setiap model!
+**Petua Pro:** Gunakan Opus untuk tugas kompleks dan Sonnet untuk kepantasan. 67router menjejaki kuota bagi setiap model!
 
-Tiada pelayar pada hos OmniRoute? Jalankan `claude setup-token` di mana-mana sahaja Claude Code telah dilog masuk dan tampalkan token setahun itu ke dalam tab **Setup Token**. Lihat [Claude Code dengan token persediaan](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Tiada pelayar pada hos 67router? Jalankan `claude setup-token` di mana-mana sahaja Claude Code telah dilog masuk dan tampalkan token setahun itu ke dalam tab **Setup Token**. Lihat [Claude Code dengan token persediaan](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Laluan yang serasi dengan Claude dan Claude Code mengekalkan usaha pemikiran `max` untuk model Opus dan Sonnet. Model Haiku tidak menerima tahap usaha `max`, jadi OmniRoute menurunkan permintaan tersebut kepada belanjawan pemikiran tinggi sebelum menghantarnya kepada penyedia huluan.
+Laluan yang serasi dengan Claude dan Claude Code mengekalkan usaha pemikiran `max` untuk model Opus dan Sonnet. Model Haiku tidak menerima tahap usaha `max`, jadi 67router menurunkan permintaan tersebut kepada belanjawan pemikiran tinggi sebelum menghantarnya kepada penyedia huluan.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -260,7 +260,7 @@ Kos: kini disenaraikan sebagai $0; terma dan ketersediaan mungkin berubah
 
 ### Cursor IDE
 
-**Menggunakan Cursor sebagai klien OmniRoute** (halakan sembang Cursor melalui OmniRoute):
+**Menggunakan Cursor sebagai klien 67router** (halakan sembang Cursor melalui 67router):
 
 ```
 Tetapan → Model → Lanjutan:
@@ -269,7 +269,7 @@ Tetapan → Model → Lanjutan:
   Model: cc/claude-opus-4-7
 ```
 
-**Menggunakan OmniRoute sebagai penyedia Cursor** (OmniRoute memanggil Cursor huluan): utamakan
+**Menggunakan 67router sebagai penyedia Cursor** (67router memanggil Cursor huluan): utamakan
 **Papan Pemuka → Penyedia → Cursor → Log masuk dengan Cursor**. Dalam Docker, lihat
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -356,7 +356,7 @@ CLI memuatkan `.env` secara automatik daripada `~/.omniroute/.env` atau `./.env`
 
 ### Mod dulang
 
-Mulakan OmniRoute dalam dulang sistem:
+Mulakan 67router dalam dulang sistem:
 
 ```bash
 omniroute serve --tray
@@ -373,7 +373,7 @@ Gunakan menu dulang untuk tindakan berikut:
 - Buka papan pemuka.
 - Buka `/dashboard/logs`.
 - Ubah permulaan automatik.
-- Hentikan OmniRoute.
+- Hentikan 67router.
 
 Jangan gabungkan `--tray` dengan pilihan berikut:
 
@@ -399,14 +399,14 @@ omniroute autostart disable
 
 ### Menyahpasang
 
-Apabila anda tidak lagi memerlukan OmniRoute, kami menyediakan dua skrip pantas untuk penyingkiran yang bersih:
+Apabila anda tidak lagi memerlukan 67router, kami menyediakan dua skrip pantas untuk penyingkiran yang bersih:
 
 | Perintah                 | Tindakan                                                                                              |
 | ------------------------ | ----------------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Mengalih keluar aplikasi sistem tetapi **mengekalkan DB dan konfigurasi anda** dalam `~/.omniroute`.  |
 | `npm run uninstall:full` | Mengalih keluar aplikasi DAN **memadamkan semua konfigurasi, kunci dan pangkalan data secara kekal**. |
 
-> Nota: Untuk menjalankan perintah ini, pergi ke folder projek OmniRoute (jika anda mengklonkannya) dan jalankan perintah tersebut. Sebagai alternatif, jika dipasang secara global, anda hanya perlu menjalankan `npm uninstall -g omniroute`.
+> Nota: Untuk menjalankan perintah ini, pergi ke folder projek 67router (jika anda mengklonkannya) dan jalankan perintah tersebut. Sebagai alternatif, jika dipasang secara global, anda hanya perlu menjalankan `npm uninstall -g omniroute`.
 
 ### Pelaksanaan VPS
 
@@ -478,7 +478,7 @@ Untuk mod bersepadu dengan hos yang mempunyai binari CLI, lihat bahagian Docker 
 
 ### Void Linux (xbps-src)
 
-Pengguna Void Linux boleh membungkus dan memasang OmniRoute secara natif menggunakan rangka kerja kompilasi silang `xbps-src`. Ini mengautomatikkan binaan kendiri Node.js bersama pengikatan natif `better-sqlite3` yang diperlukan.
+Pengguna Void Linux boleh membungkus dan memasang 67router secara natif menggunakan rangka kerja kompilasi silang `xbps-src`. Ini mengautomatikkan binaan kendiri Node.js bersama pengikatan natif `better-sqlite3` yang diperlukan.
 
 <details>
 <summary><b>Lihat templat xbps-src</b></summary>
@@ -658,7 +658,7 @@ Untuk rujukan lengkap pemboleh ubah persekitaran, lihat [README](../README.md).
 
 **Penyedia serasi lain** (terpilih): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (melalui `aws-bedrock`), `azure-ai`, `openrouter` (katalog laluan terus), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Setiap penyedia menyelenggara senarai modelnya sendiri dalam `providerRegistry.ts` dan boleh disegerakkan secara automatik apabila penyedia menyediakan titik akhir `/models`.
 
-**Nota tentang ID model:** OmniRoute menggunakan ID natif penyedia (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Sesetengah ID mengandungi versi bertitik kerana itulah format yang dijangkakan oleh API huluan. Jika sesuatu model tidak disenaraikan di atas, jalankan `omniroute models --search <term>` atau akses `GET /api/models/catalog` untuk mengesahkan ketersediaannya.
+**Nota tentang ID model:** 67router menggunakan ID natif penyedia (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Sesetengah ID mengandungi versi bertitik kerana itulah format yang dijangkakan oleh API huluan. Jika sesuatu model tidak disenaraikan di atas, jalankan `omniroute models --search <term>` atau akses `GET /api/models/catalog` untuk mengesahkan ketersediaannya.
 
 </details>
 
@@ -724,9 +724,9 @@ ralat yang menamakan penyedia terbina dalam atau kelayakannya, semak sama ada aw
 adalah awalan simpanan: nod yang disimpan sebelum peraturan ini diperkenalkan masih tersimpan, tetapi awalannya dihalakan kepada
 penyedia terbina dalam. Edit nod tersebut dan berikan awalan baharu.
 
-### Merantaikan Rakan OmniRoute
+### Merantaikan Rakan 67router
 
-Get laluan OmniRoute yang lain boleh ditambahkan sebagai penyedia **Tersuai yang serasi dengan OpenAI**. Gunakan
+Get laluan 67router yang lain boleh ditambahkan sebagai penyedia **Tersuai yang serasi dengan OpenAI**. Gunakan
 URL asas `/v1` rakan tersebut dan kunci API khusus dengan keistimewaan minimum yang dikeluarkan oleh rakan itu.
 
 Untuk rantaian timbal balik atau berbilang lompatan, dayakan perlindungan gelung ikut serta pada setiap get laluan:
@@ -752,7 +752,7 @@ telah habis dengan HTTP `508 Loop Detected`; penyedia huluan biasa tidak menerim
 Perantaian rakan bukanlah replikasi pangkalan data atau failover hos. Setiap get laluan mengekalkan
 keadaan SQLite, cache, pembilang kadar dan sesi yang bebas. Gunakan proksi songsang dengan semakan kesihatan atau failover
 klien untuk ketersediaan aktif/pasif atau aktif/aktif, dan jangan sekali-kali lekapkan satu pangkalan data SQLite
-pada berbilang tika OmniRoute yang sedang berjalan.
+pada berbilang tika 67router yang sedang berjalan.
 
 ### Laluan Penyedia Khusus
 
@@ -803,7 +803,7 @@ Mengembalikan model yang dikumpulkan mengikut penyedia dengan jenis (`chat`, `em
 - Tersedia dalam **Papan Pemuka → Titik Akhir** untuk Docker dan penggunaan hos kendiri yang lain
 - Mencipta URL `https://*.trycloudflare.com` sementara yang memajukan permintaan ke titik akhir `/v1` serasi OpenAI semasa anda
 - Pengaktifan pertama memasang `cloudflared` hanya apabila diperlukan; mula semula berikutnya menggunakan semula binari terurus yang sama
-- Quick Tunnel tidak dipulihkan secara automatik selepas OmniRoute atau bekas dimulakan semula; aktifkannya semula daripada papan pemuka apabila diperlukan
+- Quick Tunnel tidak dipulihkan secara automatik selepas 67router atau bekas dimulakan semula; aktifkannya semula daripada papan pemuka apabila diperlukan
 - URL terowong adalah sementara dan berubah setiap kali anda menghentikan/memulakan terowong
 - Quick Tunnel terurus menggunakan pengangkutan HTTP/2 secara lalai untuk mengelakkan amaran hingar penimbal UDP QUIC dalam bekas yang mempunyai kekangan sumber
 - Tetapkan `CLOUDFLARED_PROTOCOL=quic` atau `auto` jika anda mahu mengatasi pilihan pengangkutan terurus
@@ -820,7 +820,7 @@ Mengembalikan model yang dikumpulkan mengikut penyedia dengan jenis (`chat`, `em
 
 ### Ruang Uji Penterjemah
 
-Akses melalui **Papan Pemuka → Penterjemah**. Nyahpepijat dan gambarkan cara OmniRoute menterjemahkan permintaan API antara penyedia.
+Akses melalui **Papan Pemuka → Penterjemah**. Nyahpepijat dan gambarkan cara 67router menterjemahkan permintaan API antara penyedia.
 
 | Mod                   | Tujuan                                                                                             |
 | --------------------- | -------------------------------------------------------------------------------------------------- |
@@ -873,7 +873,7 @@ Untuk perkaitan sesi luaran (contohnya, ejen Claude Code/Codex di belakang proks
 X-Session-Id: your-session-key
 ```
 
-OmniRoute juga menerima `x_session_id` dan mengembalikan kunci sesi berkuat kuasa dalam `X-OmniRoute-Session-Id`.
+67router juga menerima `x_session_id` dan mengembalikan kunci sesi berkuat kuasa dalam `X-OmniRoute-Session-Id`.
 
 Jika anda menggunakan Nginx dan menghantar pengepala dalam bentuk garis bawah, dayakan:
 
@@ -907,7 +907,7 @@ Rantaian: production-fallback
 
 ### Gabungan Penyedia & Corak Penghalaan Lazim
 
-Berikut ialah contoh corak untuk menggabungkan berbilang penyedia dan menghala antara penyedia tersebut dalam OmniRoute:
+Berikut ialah contoh corak untuk menggabungkan berbilang penyedia dan menghala antara penyedia tersebut dalam 67router:
 
 #### 1. Gabungan Ejen Pengekodan: Penaakulan Canggih dengan Sandaran Kos/Kelajuan
 
@@ -968,7 +968,7 @@ Menggandingkan model penglihatan khusus dengan penjanaan teks berkelajuan tinggi
 
 Konfigurasikan melalui **Papan Pemuka → Tetapan → Daya Tahan**.
 
-OmniRoute melaksanakan daya tahan pada peringkat penyedia dengan lima komponen:
+67router melaksanakan daya tahan pada peringkat penyedia dengan lima komponen:
 
 1. **Baris Gilir & Pengaturan Kadar Permintaan** — Pembentukan permintaan pada peringkat sistem:
    - **Permintaan Seminit (RPM)** — Bilangan maksimum permintaan seminit bagi setiap akaun
@@ -993,7 +993,7 @@ OmniRoute melaksanakan daya tahan pada peringkat penyedia dengan lima komponen:
 
    Keadaan masa jalan pemutus penyedia hanya dipaparkan pada **Papan Pemuka → Kesihatan**.
 
-4. **Tunggu Tempoh Bertenang** — Jika setiap sambungan calon sedang dalam tempoh bertenang, OmniRoute boleh menunggu tempoh bertenang yang paling awal tamat dan mencuba semula permintaan klien yang sama secara automatik.
+4. **Tunggu Tempoh Bertenang** — Jika setiap sambungan calon sedang dalam tempoh bertenang, 67router boleh menunggu tempoh bertenang yang paling awal tamat dan mencuba semula permintaan klien yang sama secara automatik.
 
 5. **Pengesanan Automatik Had Kadar** — Apabila penyedia huluan mengembalikan tempoh menunggu yang jelas, petunjuk tersebut mengatasi tempoh bertenang sambungan setempat apabila tetapan ini didayakan.
 
@@ -1027,7 +1027,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Kes Penggunaan:**
 
-- Pindahkan OmniRoute antara mesin
+- Pindahkan 67router antara mesin
 - Cipta sandaran luaran untuk pemulihan bencana
 - Kongsi konfigurasi antara ahli pasukan (eksport semua → kongsi arkib)
 
@@ -1079,7 +1079,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Transkripsi Audio
 
-OmniRoute menyokong transkripsi audio melalui titik akhir yang serasi dengan OpenAI:
+67router menyokong transkripsi audio melalui titik akhir yang serasi dengan OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1155,7 +1155,7 @@ Nyahdayakan **Penimbal token penaakulan** apabila penyedia huluan memerlukan had
 `max_tokens` / `maxOutputTokens` yang ketat. Apabila didayakan, penghalaan kombo hanya menambahkan ruang tambahan model penaakulan
 untuk model dengan had output yang diketahui dan membiarkan had token klien tidak berubah apabila
 nilai penimbal yang selamat akan melebihi had tersebut. Jika had klien sudah melebihi had yang diketahui,
-OmniRoute mengehadkannya kepada had tersebut sebelum menghantar permintaan huluan.
+67router mengehadkannya kepada had tersebut sebelum menghantar permintaan huluan.
 
 ---
 
@@ -1178,7 +1178,7 @@ Akses melalui **Papan Pemuka → Kesihatan**. Gambaran keseluruhan kesihatan sis
 
 ## 🤖 Penghalaan Automatik (Konfigurasi sifar)
 
-OmniRoute disertakan dengan **penghala automatik berasaskan skor** yang memilih model terbaik untuk setiap permintaan merentas semua penyedia yang disambungkan — tiada gabungan yang perlu diselenggarakan. Hanya hantar permintaan menggunakan salah satu awalan `auto/*` dan OmniRoute akan membentuk gabungan maya secara dinamik dengan memberikan skor kepada calon berdasarkan kependaman, kos, kadar kejayaan, kesesuaian konteks, kesesuaian model untuk tugasan, kegagalan terkini, kuota dan keadaan pemutus litar.
+67router disertakan dengan **penghala automatik berasaskan skor** yang memilih model terbaik untuk setiap permintaan merentas semua penyedia yang disambungkan — tiada gabungan yang perlu diselenggarakan. Hanya hantar permintaan menggunakan salah satu awalan `auto/*` dan 67router akan membentuk gabungan maya secara dinamik dengan memberikan skor kepada calon berdasarkan kependaman, kos, kadar kejayaan, kesesuaian konteks, kesesuaian model untuk tugasan, kegagalan terkini, kuota dan keadaan pemutus litar.
 
 | Awalan         | Dioptimumkan untuk                                                                                                    |
 | -------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -1209,7 +1209,7 @@ Penghala automatik diterangkan sepenuhnya dalam [AUTO-COMBO.md](../routing/AUTO-
 
 ## 🔌 Penyepaduan MCP & A2A
 
-OmniRoute ialah **pelayan MCP** (Protokol Konteks Model) dan juga **pelayan A2A** (JSON-RPC 2.0 Ejen-ke-Ejen). Mana-mana IDE atau hos ejen yang serasi dengan MCP boleh memanggil alat OmniRoute secara terus — tiada pembalut tambahan diperlukan.
+67router ialah **pelayan MCP** (Protokol Konteks Model) dan juga **pelayan A2A** (JSON-RPC 2.0 Ejen-ke-Ejen). Mana-mana IDE atau hos ejen yang serasi dengan MCP boleh memanggil alat 67router secara terus — tiada pembalut tambahan diperlukan.
 
 ### Pengangkutan MCP
 
@@ -1244,7 +1244,7 @@ MCP kini mentakrifkan 32 skop bernama. Setiap kunci Bearer boleh dihadkan kepada
 
 ## 🧠 Sistem Kemahiran
 
-OmniRoute menyediakan **rangka kerja kemahiran** yang boleh diperluas (`src/lib/skills/`) supaya ejen dan titik akhir A2A boleh menjalankan rutin khusus domain (contohnya `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router menyediakan **rangka kerja kemahiran** yang boleh diperluas (`src/lib/skills/`) supaya ejen dan titik akhir A2A boleh menjalankan rutin khusus domain (contohnya `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **UI Marketplace** — Semak imbas dan pasang kemahiran melalui **Papan Pemuka → Kemahiran**
 - **Skop setiap kunci** — Hadkan kemahiran yang boleh digunakan oleh setiap kunci API
@@ -1256,7 +1256,7 @@ Rujukan penuh: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Sistem Memori
 
-OmniRoute mengekalkan **memori perbualan jangka panjang** dengan pengambilan hibrid:
+67router mengekalkan **memori perbualan jangka panjang** dengan pengambilan hibrid:
 
 - **SQLite FTS5** untuk carian kata kunci merentas pertukaran perbualan terdahulu
 - **Storan vektor Qdrant** (pilihan) untuk ingatan semantik
@@ -1269,7 +1269,7 @@ Urus memori dalam **Papan Pemuka → Memori** (cari, edit, eksport, hapuskan). A
 
 ## 🔔 Webhook
 
-Langgan peristiwa OmniRoute untuk pemantauan dan automasi masa nyata.
+Langgan peristiwa 67router untuk pemantauan dan automasi masa nyata.
 
 - Cipta webhook dalam **Papan Pemuka → Webhook** dengan URL sasaran dan rahsia tandatangan HMAC
 - Peristiwa yang tersedia: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1282,11 +1282,11 @@ Skema penuh dalam [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ## ☁️ Ejen Awan
 
-OmniRoute bersepadu dengan ejen pengekodan awan (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) supaya anda boleh menghantar tugas yang berjalan lama daripada papan pemuka yang sama yang mengendalikan penghalaan setempat anda.
+67router bersepadu dengan ejen pengekodan awan (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) supaya anda boleh menghantar tugas yang berjalan lama daripada papan pemuka yang sama yang mengendalikan penghalaan setempat anda.
 
 - Cipta tugas dalam **Papan Pemuka → Ejen Awan** atau melalui `POST /api/v1/agents/tasks`
 - Jejaki status, log dan artifak bagi setiap tugas
-- Gunakan kunci API anda sendiri bagi setiap penyedia — bukti kelayakan tidak pernah meninggalkan tika OmniRoute
+- Gunakan kunci API anda sendiri bagi setiap penyedia — bukti kelayakan tidak pernah meninggalkan tika 67router
 
 Rujukan penuh: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1294,7 +1294,7 @@ Rujukan penuh: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Pengurusan Secara Pemprograman
 
-Anda boleh mengurus setiap sumber OmniRoute (penyedia, kombo, kunci, tetapan) melalui HTTP menggunakan **kunci Bearer dengan skop `manage`**.
+Anda boleh mengurus setiap sumber 67router (penyedia, kombo, kunci, tetapan) melalui HTTP menggunakan **kunci Bearer dengan skop `manage`**.
 
 Jana kunci dalam **Papan Pemuka → Kunci API → Kunci Baharu → Skop: manage**, kemudian:
 
@@ -1327,7 +1327,7 @@ Lihat [API_REFERENCE.md](../reference/API_REFERENCE.md) untuk katalog titik akhi
 
 ## 💻 CLI Dalaman
 
-OmniRoute menyediakan CLI dalaman (`omniroute …`) untuk persediaan, diagnostik dan kawalan masa jalan. Ini **berasingan daripada halaman "Alat CLI" dalam papan pemuka**, yang mengkonfigurasi CLI pihak ketiga (Claude Code, Cursor, Codex, Cline, …) supaya alat tersebut boleh berkomunikasi dengan OmniRoute.
+67router menyediakan CLI dalaman (`omniroute …`) untuk persediaan, diagnostik dan kawalan masa jalan. Ini **berasingan daripada halaman "Alat CLI" dalam papan pemuka**, yang mengkonfigurasi CLI pihak ketiga (Claude Code, Cursor, Codex, Cline, …) supaya alat tersebut boleh berkomunikasi dengan 67router.
 
 ```bash
 omniroute setup                    # Bestari interaktif (kata laluan, penyedia, gabungan)
@@ -1358,7 +1358,7 @@ Petua: gandingkan `omniroute doctor --json` dengan alat pemantauan anda untuk me
 
 ## 🖥️ Aplikasi Desktop (Electron)
 
-OmniRoute tersedia sebagai aplikasi desktop natif untuk Windows, macOS dan Linux.
+67router tersedia sebagai aplikasi desktop natif untuk Windows, macOS dan Linux.
 
 ### Pemasangan
 

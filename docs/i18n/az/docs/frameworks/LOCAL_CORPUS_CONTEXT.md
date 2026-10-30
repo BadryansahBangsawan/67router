@@ -13,8 +13,8 @@
 ## Bu nədir
 
 Local Corpus operatora mətn fayllarından ibarət, açıq şəkildə təsdiqlənmiş bir qovluğu
-OmniRoute-un MCP serverinə təqdim etməyə imkan verir. Fayllar ilkin qovluqlarında qalır:
-OmniRoute SQLite-da yalnız kanonik kök yolu saxlayır və yaddaşdaxili axtarış indeksini
+67router-un MCP serverinə təqdim etməyə imkan verir. Fayllar ilkin qovluqlarında qalır:
+67router SQLite-da yalnız kanonik kök yolu saxlayır və yaddaşdaxili axtarış indeksini
 idarə edir. O, korpus məzmununu repozitoriyaya və ya verilənlər bazasına köçürmür.
 
 İndeks artımlı şəkildə yenilənir. Dəyişdirilməmiş fayllar ölçüsünə və dəyişdirilmə

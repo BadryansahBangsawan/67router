@@ -113,7 +113,7 @@ or documented manual check appropriate to the change.
 - CLI catalogs live separately under `bin/cli/locales/`.
 - Preserve ICU placeholders and tags exactly. Do not translate product/provider/model names,
   protocol and header names, commands, code/JSON identifiers, URLs, environment variables, or
-  protected terms such as `OmniRoute`, `OAuth`, `MCP`, and `A2A`. The current source list is
+  protected terms such as `67router`, `OAuth`, `MCP`, and `A2A`. The current source list is
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Focused loop**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # reuse a tarball built 
 - **Roll back.** `run` validates the promoted slot again and swaps `current` and `previous` back when
   that check fails. A candidate that fails the first validation is never promoted.
 
-Everything is written under the gitignored `_artifacts/candidate/`; an existing OmniRoute
+Everything is written under the gitignored `_artifacts/candidate/`; an existing 67router
 installation and its data directory are never touched. The promoted CLI is
 `_artifacts/candidate/current/prefix/bin/omniroute`; start it with your own `DATA_DIR` when you use
 it. Exit codes: `0` success, `1` failed validation or promotion, `2` usage error or missing build.

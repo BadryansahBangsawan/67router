@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **সর্বশেষ হালনাগাদ:** 2026-06-28 — v3.8.40
 
-OmniRoute একটি WordPress-ধাঁচের প্লাগইন সিস্টেমসহ আসে। প্লাগইনগুলো স্বয়ংসম্পূর্ণ
+67router একটি WordPress-ধাঁচের প্লাগইন সিস্টেমসহ আসে। প্লাগইনগুলো স্বয়ংসম্পূর্ণ
 ডিরেক্টরি — প্রতিটিতে একটি `plugin.json` ম্যানিফেস্ট এবং একটি এন্ট্রি ফাইল থাকে — যা
 রিকোয়েস্ট পাইপলাইন (`onRequest` / `onResponse` / `onError`) এবং
 লাইফসাইকেল ইভেন্টগুলোতে (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)
@@ -154,7 +154,7 @@ field-গুলো অবশ্যই ঘোষিত `enum`-এর সঙ্গ
 
 ### Plugin directory
 
-Plugin-গুলো OmniRoute data directory-এর অধীনে থাকে:
+Plugin-গুলো 67router data directory-এর অধীনে থাকে:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

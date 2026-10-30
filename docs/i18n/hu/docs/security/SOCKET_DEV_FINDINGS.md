@@ -54,7 +54,7 @@ keresztül nyilvánosságra került JWT **nem** aktiválhatja ezt a kódútvonal
 | Linux+Firefox/Chromium | profilonkénti NSS-adatbázis-frissítés a `certutil -d sql:<profile>` használatával                                 |
 
 Ezek ugyanazok a parancsok, amelyeket a `mitmproxy`, a Charles Proxy, a Fiddler
-és a Caddy használ. Az, hogy ezek jelen vannak az OmniRoute-ban, a
+és a Caddy használ. Az, hogy ezek jelen vannak a 67router-ban, a
 `docs/security/STEALTH_GUIDE.md` fájlban van dokumentálva.
 
 **v3.8.6 kockázatcsökkentés**:
@@ -114,7 +114,7 @@ automatizálásukat. A v3.9 verzióban eltávolítjuk.
 **Miért tartjuk meg**: a Zedből történő importálás a legkényelmesebb kezdeti
 beállítási lehetőség azoknak a felhasználóknak, akik már használják a Zedet,
 és a szolgáltatói kulcsaikat újbóli beillesztés nélkül szeretnék átmásolni az
-OmniRoute-ba.
+67router-ba.
 
 ---
 
@@ -126,7 +126,7 @@ OmniRoute-ba.
 `execFileWithPassword`, a `runElevatedPowerShell`, valamint a közös
 `quotePowerShell` segédfüggvényt. A Socket.dev MI-osztályozója ezeket egy
 általános „gazdagépen történő végrehajtást és jogosultságszint-emelést végző
-eszközkészletként” érzékeli. Az OmniRoute-on belül ezeket kizárólag a MITM-
+eszközkészletként” érzékeli. A 67router-on belül ezeket kizárólag a MITM-
 tanúsítvány telepítési útvonala (§1), illetve az `execFileWithPassword` esetén
 a `sudo` parancsok végrehajtása használja.
 
@@ -182,7 +182,7 @@ használata szigorúan önkéntes.
 
 ---
 
-## §5 — OmniRoute Cloud Sync hitelesítő adatok visszaírása (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync hitelesítő adatok visszaírása (`api/keys/[id]/route.js`)
 
 **Forrásfájlok**:
 
@@ -215,7 +215,7 @@ rawBody)`). Ha a titkos kulcs be van állítva, az aláírás kötelező.
    `rateLimitedUntil`, `updatedAt`). Ez **visszafelé nem kompatibilis változás** azon felhasználók
    számára, akik távoli tokenszinkronizálásra támaszkodtak — nekik ezt kifejezetten engedélyezniük kell.
 
-**Miért tartjuk meg**: a Cloud Sync az egyetlen mód arra, hogy egy OmniRoute Cloud-bérlő
+**Miért tartjuk meg**: a Cloud Sync az egyetlen mód arra, hogy egy 67router Cloud-bérlő
 központilag kezelje a csapat hitelesítő adatait. A javítás egyértelművé teszi a fenyegetési modellt:
 „a kiszolgáló aláír, az ügyfél ellenőriz, az üzemeltető pedig engedélyezi.”
 

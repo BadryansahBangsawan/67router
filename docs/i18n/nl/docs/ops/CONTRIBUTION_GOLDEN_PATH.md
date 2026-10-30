@@ -113,7 +113,7 @@ of gedocumenteerde handmatige controle die bij de wijziging past.
 - CLI-catalogi staan afzonderlijk onder `bin/cli/locales/`.
 - Behoud ICU-placeholders en -tags exact. Vertaal geen product-/provider-/modelnamen,
   protocol- en headernamen, opdrachten, code-/JSON-identifiers, URL's, omgevingsvariabelen of
-  beschermde termen zoals `OmniRoute`, `OAuth`, `MCP` en `A2A`. De huidige bronlijst is
+  beschermde termen zoals `67router`, `OAuth`, `MCP` en `A2A`. De huidige bronlijst is
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Gerichte cyclus**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # een elders gebouwde ta
 - **Draai terug.** `run` valideert het gepromoveerde slot opnieuw en verwisselt `current` en `previous` weer wanneer
   die controle mislukt. Een kandidaat die niet door de eerste validatie komt, wordt nooit gepromoveerd.
 
-Alles wordt opgeslagen onder het door git genegeerde `_artifacts/candidate/`; een bestaande OmniRoute-installatie
+Alles wordt opgeslagen onder het door git genegeerde `_artifacts/candidate/`; een bestaande 67router-installatie
 en de bijbehorende datadirectory worden nooit gewijzigd. De gepromoveerde CLI is
 `_artifacts/candidate/current/prefix/bin/omniroute`; start deze met uw eigen `DATA_DIR` wanneer u deze gebruikt.
 Afsluitcodes: `0` geslaagd, `1` validatie of promotie mislukt, `2` gebruiksfout of ontbrekende build.

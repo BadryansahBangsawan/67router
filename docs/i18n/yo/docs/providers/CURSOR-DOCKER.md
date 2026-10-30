@@ -4,7 +4,7 @@
 
 ---
 
-Nígbà tí OmniRoute bá ń ṣiṣẹ́ nínú Docker, àwọn ọ̀nà àtijọ́ **Import from Cursor IDE** /
+Nígbà tí 67router bá ń ṣiṣẹ́ nínú Docker, àwọn ọ̀nà àtijọ́ **Import from Cursor IDE** /
 `cursor-agent` kì í ṣiṣẹ́ nítorí container kò lè rí fifi Cursor sori host náà.
 Lo **Login with Cursor** (deep-control PKCE) dípò rẹ̀.
 
@@ -14,7 +14,7 @@ Lo **Login with Cursor** (deep-control PKCE) dípò rẹ̀.
    `~/.config/Cursor/User/globalStorage/state.vscdb` _nínú_ container náà.
    Lórí Docker Desktop fún macOS, IDE DB ti host kì í jẹ́ mounted láìyípadà, àti
    pé OS container náà jẹ́ Linux kódà bí host náà bá jẹ́ Darwin.
-2. **Kò sí binary `cursor-agent`** — Àwọn image OmniRoute ìjọba kò ní
+2. **Kò sí binary `cursor-agent`** — Àwọn image 67router ìjọba kò ní
    `cursor-agent`. Available Models tẹ́lẹ̀ máa ń pe
    `cursor-agent --list-models` láti inú shell, ó sì máa ń padà sí catalog tó dúró ṣinṣin.
 3. **Binary tí kò tọ́** — Má ṣe bind-mount `cursor-agent` macOS sínú container
@@ -24,11 +24,11 @@ Lo **Login with Cursor** (deep-control PKCE) dípò rẹ̀.
 
 1. Ṣí **Dashboard → Providers → Cursor**.
 2. Yan tab **Login with Cursor**.
-3. Tẹ **Login with Cursor** — OmniRoute yóò ṣí
+3. Tẹ **Login with Cursor** — 67router yóò ṣí
    `https://cursor.com/loginDeepControl?…` nínú browser **host** rẹ.
-4. Fọwọ́sí ìwọlé náà nínú browser, lẹ́yìn náà padà sí dashboard. OmniRoute
+4. Fọwọ́sí ìwọlé náà nínú browser, lẹ́yìn náà padà sí dashboard. 67router
    máa ń ṣàyẹ̀wò `api2.cursor.sh/auth/poll` títí àwọn token yóò fi dé.
-5. OmniRoute máa ń tọ́jú àwọn token **access + refresh**, ó sì máa ń sọ wọ́n di tuntun nípasẹ̀
+5. 67router máa ń tọ́jú àwọn token **access + refresh**, ó sì máa ń sọ wọ́n di tuntun nípasẹ̀
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Ọ̀nà yìí kò nílò Cursor IDE tàbí `cursor-agent` nínú container.
@@ -37,10 +37,10 @@ Lo **Login with Cursor** (deep-control PKCE) dípò rẹ̀.
 
 Pẹ̀lú connection tí a ti wọlé sí, **Available Models / Auto-Sync** máa ń kọ́kọ́ yan catalog
 HTTP `AiService/AvailableModels` ti Cursor nípa lílo bearer token connection náà.
-Tí ìyẹn bá kùnà, OmniRoute ṣì máa gbìyànjú `cursor-agent` ti host (tí ó bá wà), lẹ́yìn náà
+Tí ìyẹn bá kùnà, 67router ṣì máa gbìyànjú `cursor-agent` ti host (tí ó bá wà), lẹ́yìn náà
 seed registry tó dúró ṣinṣin.
 
-OmniRoute máa ń fi **`auto`** hàn ní gbogbo ìgbà nínú catalog (ìfihàn “Auto”), pẹ̀lú
+67router máa ń fi **`auto`** hàn ní gbogbo ìgbà nínú catalog (ìfihàn “Auto”), pẹ̀lú
 àwọn mode router ti ara OpenCodex **`auto-cost`**, **`auto-balance`**, àti
 **`auto-intelligence`**. Lórí wire, àwọn wọ̀nyí máa ń map sí model `default` ti Cursor
 (pẹ̀lú `optimization` ModelParameter fún àwọn variant mẹ́tẹ̀ẹ̀ta). Yan
@@ -87,7 +87,7 @@ nìkan kò ṣe dandan mọ́).
 ## Àwọn turn ṣófo / usage ti tán
 
 Nígbà tí Cursor bá gba Run ṣùgbọ́n tí kò dá text assistant kankan padà (èyí wọ́pọ̀ nígbà tí
-usage premium bá ti tán), OmniRoute máa ń fi **429** tó lè ràn ọ́ lọ́wọ́ hàn (àwọn ìtọ́ka quota) tàbí
+usage premium bá ti tán), 67router máa ń fi **429** tó lè ràn ọ́ lọ́wọ́ hàn (àwọn ìtọ́ka quota) tàbí
 **502** pẹ̀lú ìtọ́sọ́nà — kì í ṣe “Provider returned empty content” lásán. Àwọn ìkùnà
 streaming bíi `not_found: AI Model Not Found` (window usage ti tán) ni a máa ń
 sọ̀rí sí **Cursor rate limit / usage exceeded**, wọ́n sì máa ń pa message yẹn mọ́
@@ -97,7 +97,7 @@ tí a ti fi hàn tẹ́lẹ̀). Ṣàyẹ̀wò Provider Limits, gbìyànjú mode
 
 ## Version client (headless)
 
-Láìsí fifi `cursor-agent` sori ẹrọ local, OmniRoute máa ń resolve
+Láìsí fifi `cursor-agent` sori ẹrọ local, 67router máa ń resolve
 `x-cursor-client-version` nípasẹ̀ env `CURSOR_AGENT_CLI_VERSION`, lẹ́yìn náà scrape
 script installer Cursor tí a cache sí disk, lẹ́yìn náà build id tí a pin. Override rẹ̀ pẹ̀lú
 `CURSOR_AGENT_CLI_VERSION` nígbà tó bá yẹ.

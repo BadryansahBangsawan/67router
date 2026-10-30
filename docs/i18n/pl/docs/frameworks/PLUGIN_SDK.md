@@ -1,10 +1,10 @@
 ---
-title: "OmniRoute Plugin SDK"
+title: "67router Plugin SDK"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# OmniRoute Plugin SDK
+# 67router Plugin SDK
 
 ## Szybki start
 

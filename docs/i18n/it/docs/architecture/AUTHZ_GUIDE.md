@@ -7,7 +7,7 @@
 > **Fonte di verità:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Ultimo aggiornamento:** 2026-09-22 — gli spazi dei nomi degli scope puntano a MCP-SERVER.md
 
-OmniRoute dispone di una pipeline di autorizzazione consapevole del percorso che filtra ogni richiesta API. La classificazione è **deterministica** e **fail-closed** — tutto ciò che non può essere classificato finisce come `MANAGEMENT` e richiede una sessione o un token di livello management. Questa pagina spiega il modello per gli ingegneri che mantengono i percorsi o progettano nuovi endpoint.
+67router dispone di una pipeline di autorizzazione consapevole del percorso che filtra ogni richiesta API. La classificazione è **deterministica** e **fail-closed** — tutto ciò che non può essere classificato finisce come `MANAGEMENT` e richiede una sessione o un token di livello management. Questa pagina spiega il modello per gli ingegneri che mantengono i percorsi o progettano nuovi endpoint.
 
 ![Pipeline AuthZ (3 classi di percorso + valutazione delle policy)](../diagrams/exported/authz-pipeline.svg)
 

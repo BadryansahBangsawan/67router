@@ -151,7 +151,7 @@ Các trường hợp phụ thuộc vào Playwright trong `tests/unit/claude-web-
 
 ### Thiết lập
 
-1. Khởi động OmniRoute bằng `npm run dev` hoặc từ một bản cài đặt đã được dựng.
+1. Khởi động 67router bằng `npm run dev` hoặc từ một bản cài đặt đã được dựng.
 2. Mở Dashboard → Providers → Add Provider.
 3. Chọn danh mục Web Cookie và Claude Web.
 4. Dán toàn bộ header Cookie được sao chép từ một yêu cầu `claude.ai` đã xác thực.

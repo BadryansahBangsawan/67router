@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Posledná aktualizácia:** 2026-06-28 — v3.8.40
 
-OmniRoute obsahuje systém pluginov v štýle WordPressu. Pluginy sú samostatné
+67router obsahuje systém pluginov v štýle WordPressu. Pluginy sú samostatné
 adresáre — každý so súborom manifestu `plugin.json` a vstupným súborom — ktoré sa
 pripájajú k spracovaniu požiadaviek (`onRequest` / `onResponse` / `onError`) a k
 udalostiam životného cyklu (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -154,7 +154,7 @@ nenachádzajú, sú povolené.
 
 ### Adresár pluginov
 
-Pluginy sa nachádzajú v dátovom adresári OmniRoute:
+Pluginy sa nachádzajú v dátovom adresári 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -4,7 +4,7 @@
 
 ---
 
-Baadhi ya huduma ziliunganishwa katika OmniRoute na baadaye zikaondolewa kwa sababu watu wanaoziendesha
+Baadhi ya huduma ziliunganishwa katika 67router na baadaye zikaondolewa kwa sababu watu wanaoziendesha
 waliomba hivyo. Ukurasa huu ni rekodi ya kudumu ya uondoaji huo. Kusudi lake pekee ni
 kuzuia huduma hizo zisirudi kimakosa: mchangiaji anayepata fork ya zamani, tarball ya npm
 iliyohifadhiwa kwenye akiba, issue iliyohifadhiwa kwenye kumbukumbu au ombi la "rejesha mtoa huduma X" anahitaji sehemu moja inayosema **usirejeshe**.
@@ -16,10 +16,10 @@ ombi, na kiungo cha ruhusa hiyo lazima kiongezwe kwenye kipengee husika.
 
 ## Sera
 
-1. **Ombi la kuondoa kutoka kwa mwendeshaji wa huduma linaheshimiwa, halijadiliwi.** OmniRoute
+1. **Ombi la kuondoa kutoka kwa mwendeshaji wa huduma linaheshimiwa, halijadiliwi.** 67router
    haihusiani na huduma yoyote ya nje. Mwendeshaji wa huduma anapoomba
    uunganishaji uondolewe, unaondolewa, iwe uunganishaji huo ulitumia API rasmi au la.
-2. **"Imeondolewa" inamaanisha kila sehemu inayodhibitiwa na OmniRoute.** Kitekelezaji, ingizo la sajili, id na jina mbadala la mtoa huduma,
+2. **"Imeondolewa" inamaanisha kila sehemu inayodhibitiwa na 67router.** Kitekelezaji, ingizo la sajili, id na jina mbadala la mtoa huduma,
    orodha ya modeli, endpoints, vigeu vya mazingira, ikoni, kadi za dashibodi,
    rejea ya mtoa huduma inayozalishwa, `FREE_TIERS.md`, rejea ya mazingira, hesabu za README,
    vioo vya `llm.txt`, majaribio mahususi na snapshots za msingi, maoni ya msimbo, vipengee vya CHANGELOG
@@ -30,7 +30,7 @@ ombi, na kiungo cha ruhusa hiyo lazima kiongezwe kwenye kipengee husika.
 3. **Usirejeshe kamwe kipengee kilicho kwenye ukurasa huu bila ruhusa iliyoandikwa.** Hii inajumuisha
    kuongeza tena id au jina mbadala kwenye katalogi yoyote ya watoa huduma, kuongeza domains kwenye kitekelezaji,
    kukubali PR ya mchangiaji ambayo "inakirejesha", kukiongeza kwenye katalogi ya modeli zisizolipishwa, au
-   kuandika njia ya kukifikia mwenyewe kupitia OmniRoute. Funga PR na issues kama hizo kwa
+   kuandika njia ya kukifikia mwenyewe kupitia 67router. Funga PR na issues kama hizo kwa
    kiungo cha ukurasa huu.
 4. **Weka ingizo kwa ufupi.** Rekodi tu kile ambacho mkaguzi anahitaji ili kutambua
    urejeshaji: vitambulishi, domains, tarehe na pull request iliyotekeleza uondoaji.
@@ -47,7 +47,7 @@ ombi, na kiungo cha ruhusa hiyo lazima kiongezwe kwenye kipengee husika.
 | 2026-08-12         | `puter`                      | `pu`         | `puter.com`                                                                           | Mmiliki wa Puter (Nariman Jelveh)                                                                                                                                                | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Mtoa huduma anayetumia ufunguo wa API. Uhamishaji `152_remove_puter_provider.sql` unasafisha usanidi uliohifadhiwa.                                                                                                                                                                                                                                                                                                                                 |
 | 2026-09-02         | `theoldllm`                  | `tllm`       | `theoldllm.com`, `theoldllm.vercel.app`                                               | Mwendeshaji wa huduma (barua pepe ya usaidizi)                                                                                                                                   | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Mtoa huduma asiyehitaji ufunguo. Ombi lililoandikwa lilipokelewa 2026-08-30. Masuala na mjadala mahususi yalifutwa, na vichwa vya PR vilibadilishwa.                                                                                                                                                                                                                                                                                                |
 | 2026-09-21         | `gemini-business`            | `gembiz`     | `business.gemini.google`                                                              | Uamuzi wa mmiliki wa mradi (suala [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                                              | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Mtoa huduma wa wavuti anayetumia vidakuzi. Google ilisitisha endpoint ya `BardFrontendService/StreamGenerate` iliyolengwa na kitekelezaji; mbadala wake (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT inayoanzishwa kutoka `__Secure-C_SES`/`csesidx`) hauwezi kuundwa au kuthibitishwa bila akaunti hai ya Gemini Enterprise/Workspace, ambayo mradi hauna. Ilisitishwa badala ya kuandikwa upya bila kuthibitishwa.      |
-| 2026-09-21         | `suno`                       | `suno`       | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                      | Uamuzi wa mmiliki wa mradi (`#14224`)                                                                                                                                            | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Mtoa huduma anayetumia uthibitishaji wa vidakuzi, si uondoaji ulioombwa na mwendeshaji. `studio-api.suno.ai` ilisimamishwa (503); seva pangishi inayotumika inahitaji ubadilishanaji wa Clerk JWT pamoja na kitegemezi cha kulipia cha kutatua hCaptcha ambacho OmniRoute iliamua kutokiongeza kwa ajili ya mtoa huduma mmoja wa muziki. `kie/suno-v4.0` na `kie/suno-v3.5` (zinazopangishwa na kie.ai) hazijaathiriwa na zinaendelea kutumika.     |
+| 2026-09-21         | `suno`                       | `suno`       | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                      | Uamuzi wa mmiliki wa mradi (`#14224`)                                                                                                                                            | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Mtoa huduma anayetumia uthibitishaji wa vidakuzi, si uondoaji ulioombwa na mwendeshaji. `studio-api.suno.ai` ilisimamishwa (503); seva pangishi inayotumika inahitaji ubadilishanaji wa Clerk JWT pamoja na kitegemezi cha kulipia cha kutatua hCaptcha ambacho 67router iliamua kutokiongeza kwa ajili ya mtoa huduma mmoja wa muziki. `kie/suno-v4.0` na `kie/suno-v3.5` (zinazopangishwa na kie.ai) hazijaathiriwa na zinaendelea kutumika.      |
 | 2026-10-10         | `opencode`                   | `oc`         | `opencode.ai/zen/v1` (kiwango cha bure; seva pangishi inashirikiwa na `opencode-zen`) | Uondoaji wa tahadhari (uamuzi wa mmiliki wa mradi), kwa kuheshimu ombi la hadharani la mwendeshaji wa OpenCode la kuondoa kutoka mradi wa 9router wa chanzo cha juu (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Ni mtoa huduma asiyehitaji ufunguo wa "OpenCode Free" pekee anayeondolewa. `opencode-zen` na `opencode-go` zilizo na uthibitishaji, miundo yote ya katalogi ya Zen na mikataba yake ya maombi, miunganisho ya kiteja cha OpenCode na `@omniroute/opencode-plugin*` zinaendelea kuwepo. Uhamishaji `207_remove_opencode_free_provider.sql` unahamisha miunganisho ya zamani yenye ufunguo wa API kwenda Zen na kusafisha usanidi usiohitaji ufunguo. |
 
 ## Kuongeza ingizo
@@ -62,5 +62,5 @@ Ombi jipya la kuondoa linapowasili:
    mtoa huduma wa API-key mwenye miunganisho iliyohifadhiwa (ongeza migration).
 3. Ongeza safu moja kwenye jedwali lililo hapo juu na vitambulishi kwenye
    `tests/unit/removed-providers-blocklist.test.ts`, katika PR ileile.
-4. Mjibu mwendeshaji baada ya PR kuunganishwa, ukiorodhesha kilichoondolewa na mambo ambayo OmniRoute
+4. Mjibu mwendeshaji baada ya PR kuunganishwa, ukiorodhesha kilichoondolewa na mambo ambayo 67router
    haiwezi kubadilisha (matoleo ya npm na Docker ambayo tayari yamechapishwa, historia ya git, forks za wahusika wengine).

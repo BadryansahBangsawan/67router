@@ -4,7 +4,7 @@
 
 ---
 
-Dit document is de gezaghebbende referentie voor alle CI-kwaliteitspoorten in OmniRoute.
+Dit document is de gezaghebbende referentie voor alle CI-kwaliteitspoorten in 67router.
 Het beschrijft elke poort, wat deze valideert, in welke CI-job deze wordt uitgevoerd, of deze
 een ratchet-basislijn of een slaag/zak-beleid gebruikt en of deze de build blokkeert of adviserend is.
 
@@ -271,14 +271,14 @@ Draait na `build`. Blokkeert de merge bij falen.
 
 Deze draaien op een cron-schema (en `workflow_dispatch`), nooit op PR's. Ze zijn allemaal adviserend.
 
-| Workflow               | Valideert                                                                                                                                                           | Blokkerend     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | fast-check property tests met een willekeurige seed + hoog aantal runs                                                                                              | **Adviserend** |
-| `nightly-resilience`   | heap-groei-gate, chaos fault-injection, k6 load/soak                                                                                                                | **Adviserend** |
-| `nightly-llm-security` | promptfoo injection guard (blokkeermodus) + garak-probes (overgeslagen zonder provider-secret)                                                                      | **Adviserend** |
-| `nightly-schemathesis` | OpenAPI-contractfuzzing (schemathesis) tegen een live OmniRoute met `docs/openapi.yaml` — brengt spec-schendingen / onafgehandelde 500's aan het licht (Fase 8 B.4) | **Adviserend** |
-| `nightly-mutation`     | Stryker-mutatietestscore over de snelle unit-lane — overlevende mutanten leggen zwakke asserts bloot                                                                | **Adviserend** |
-| `nightly-compat`       | Node-engine-compatibiliteitsmatrix over de ondersteunde `engines.node`-ranges                                                                                       | **Adviserend** |
+| Workflow               | Valideert                                                                                                                                                          | Blokkerend     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------- |
+| `nightly-property`     | fast-check property tests met een willekeurige seed + hoog aantal runs                                                                                             | **Adviserend** |
+| `nightly-resilience`   | heap-groei-gate, chaos fault-injection, k6 load/soak                                                                                                               | **Adviserend** |
+| `nightly-llm-security` | promptfoo injection guard (blokkeermodus) + garak-probes (overgeslagen zonder provider-secret)                                                                     | **Adviserend** |
+| `nightly-schemathesis` | OpenAPI-contractfuzzing (schemathesis) tegen een live 67router met `docs/openapi.yaml` — brengt spec-schendingen / onafgehandelde 500's aan het licht (Fase 8 B.4) | **Adviserend** |
+| `nightly-mutation`     | Stryker-mutatietestscore over de snelle unit-lane — overlevende mutanten leggen zwakke asserts bloot                                                               | **Adviserend** |
+| `nightly-compat`       | Node-engine-compatibiliteitsmatrix over de ondersteunde `engines.node`-ranges                                                                                      | **Adviserend** |
 
 Performance-baselines (heap, TTFB, buildtijd) worden vastgelegd, niet als gate gebruikt: zie [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -560,7 +560,7 @@ allowlist geeft een vals gevoel van kwaliteit.
 
 ## Agenttooling: LSP-in-the-loop (opt-in)
 
-Naast de CI-gates levert OmniRoute een **optioneel** `agent-lsp`-geraamte
+Naast de CI-gates levert 67router een **optioneel** `agent-lsp`-geraamte
 (een `.mcp.json` op projectniveau, Fase 7 Taak 15). Maak `.mcp.json` aan
 om een TypeScript-taalserver beschikbaar te stellen aan programmeeragents, zodat zij symbolen /
 diagnostiek oplossen **voordat** ze code schrijven — een compile-before-claim-aanvulling op

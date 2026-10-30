@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yana sarrafa waɗanne **asalan burauza** ne za su iya karanta amsoshin da suka fito daga wani asali
+67router yana sarrafa waɗanne **asalan burauza** ne za su iya karanta amsoshin da suka fito daga wani asali
 ta hanyar jerin izini guda ɗaya da aka tattara a wuri guda. Tsarin yana **ƙin ba da izini ta tsohuwa**:
 ba a yarda da kowane asali ba har sai kun ƙara shi da kanku. Wannan shafin yana bayyana yadda jerin izinin
 ke tantance asali, abin da `CORS_ALLOW_ALL=true` yake fallasawa a zahiri (da kuma, mafi muhimmanci, abin da
@@ -46,13 +46,13 @@ a wannan jeri:
 ## Samfurin barazana — abin da `CORS_ALLOW_ALL=true` yake fallasawa a zahiri
 
 Ya dace a ɗauki gargaɗin OWASP na gaba ɗaya ("wildcard CORS = kowane shafi zai iya kiran API ɗinka")
-da muhimmanci, amma abin da OmniRoute ke fallasawa ya **fi ƙuntata fiye da yanayin gama-gari**,
+da muhimmanci, amma abin da 67router ke fallasawa ya **fi ƙuntata fiye da yanayin gama-gari**,
 saboda wani takamaiman tsarin aiwatarwa:
 
 > **Babban `applyCorsHeaders()` ba ya taɓa fitar da
 > `Access-Control-Allow-Credentials`.** Burauza ba za ta nuna amsar da aka yi wa _tabbatar da shaida_
 > (mai ɗauke da cookie) daga wani asali ba sai uwar garken ta aika
-> `Access-Control-Allow-Credentials: true`. Hanyar CORS ta bai ɗaya ta OmniRoute ba ta taɓa
+> `Access-Control-Allow-Credentials: true`. Hanyar CORS ta bai ɗaya ta 67router ba ta taɓa
 > yin haka.
 
 Ga abin da wannan ke nufi a kowane surface, ko da `CORS_ALLOW_ALL=true`:
@@ -92,7 +92,7 @@ dabam da wannan jagorar CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Idan OmniRoute yana gudana a bayan reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Idan 67router yana gudana a bayan reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **ba** shi ne kawai tsarin kariyarka ba — kariyar hanyar
   loopback har yanzu tana kare hanyoyin da za su iya ƙaddamar da tsari (duba
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Kada ka ƙirƙiri
@@ -108,7 +108,7 @@ dabam da wannan jagorar CORS.
 Da wuya ka buƙaci wildcard ko da a yanayin haɓakawa. Ba da izini ga sabar haɓakawa da kake amfani da su kawai:
 
 ```bash
-# Sabar haɓakawa na Vite (5173) + Next.js (3000) suna kiran OmniRoute na gida
+# Sabar haɓakawa na Vite (5173) + Next.js (3000) suna kiran 67router na gida
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +128,14 @@ sake kunnawa ba.
   asalan gudanarwa/dashboard a cikin wani saitin sassauci; dole su ci gaba da kasancewa
   a rufe idan an gaza.
 
-## Misali: reverse proxy a gaban OmniRoute
+## Misali: reverse proxy a gaban 67router
 
-OmniRoute da kansa ne ke aiwatar da CORS, don haka gabaɗaya bai kamata proxy ya ƙara ko
+67router da kansa ne ke aiwatar da CORS, don haka gabaɗaya bai kamata proxy ya ƙara ko
 ya sake rubuta headers na `Access-Control-*` ba (headers biyu suna hana browsers aiki). Ƙare TLS
-sannan a tura — a bar OmniRoute ya amsa preflight:
+sannan a tura — a bar 67router ya amsa preflight:
 
 ```nginx
-# nginx — tura zuwa OmniRoute; KADA a saka Access-Control-* a nan
+# nginx — tura zuwa 67router; KADA a saka Access-Control-* a nan
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +143,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # A riƙe headers na turawa: proxy da ke kan host ɗaya yana haɗawa daga loopback, kuma su ne
-    # ke sanar da OmniRoute cewa mai kiran ba local operator ba ne. Proxy da bai ƙara ko ɗaya daga cikinsu ba
+    # ke sanar da 67router cewa mai kiran ba local operator ba ne. Proxy da bai ƙara ko ɗaya daga cikinsu ba
     # yana sa kowane mai kira daga nesa ya bayyana a matsayin na cikin gida. Haka kuma, kada a taɓa saita X-Forwarded-For zuwa 127.0.0.1.
 }
 ```
 
-Saita browser origins da aka yarda da su a cikin OmniRoute (`CORS_ALLOWED_ORIGINS` ko
+Saita browser origins da aka yarda da su a cikin 67router (`CORS_ALLOWED_ORIGINS` ko
 Security tab), ba a cikin proxy ba.
 
 ## Fayilolin tushe

@@ -25,7 +25,7 @@ Dashboard → Providers → **Import from file** 可從 CSV 或 JSON 清單建�
 可從匯入對話框下載起始檔案（**Download CSV template**）。範例：
 
 ```csv
-# OmniRoute 提供者匯入（按位置排列的欄位）
+# 67router 提供者匯入（按位置排列的欄位）
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

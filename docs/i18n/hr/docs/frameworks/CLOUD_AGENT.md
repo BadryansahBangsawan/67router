@@ -7,7 +7,7 @@
 > **Izvor istine:** `src/lib/cloudAgent/` i `src/app/api/v1/agents/tasks/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40 (osvježeni frontmatter; 4 agenta uključujući cursor-cloud)
 
-OmniRoute orkestrira agente za programiranje smještene u oblaku trećih strana (Codex Cloud, Cursor,
+67router orkestrira agente za programiranje smještene u oblaku trećih strana (Codex Cloud, Cursor,
 Devin, Jules) kao dugotrajne zadatke. Svaki je agent obuhvaćen jedinstvenim sučeljem kako bi
 klijenti mogli poslati upit + URL repozitorija i primiti rezultate bez bavljenja
 API-jima specifičnima za pojedinog pružatelja usluge.

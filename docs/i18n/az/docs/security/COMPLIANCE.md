@@ -7,7 +7,7 @@
 > **Həqiqət mənbəyi:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute inzibati əməliyyatları, autentifikasiya hadisələrini, provayder
+67router inzibati əməliyyatları, autentifikasiya hadisələrini, provayder
 etimadnamələrinin həyat dövrü dəyişikliklərini və MCP aləti çağırışlarını SQLite əsaslı audit
 cədvəllərinə qeyd edir. Bu səhifədə nələrin jurnala yazıldığı, onların harada saxlandığı, nə qədər müddət
 qorunduğu, API açarlarının bu qeydəalmadan necə imtina edə biləcəyi və verilənlərin necə sorğulana biləcəyi izah olunur.

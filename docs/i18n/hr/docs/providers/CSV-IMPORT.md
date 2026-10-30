@@ -25,7 +25,7 @@ Prvi redak čiji je prvi stupac doslovna riječ `provider` (neovisno o velikim i
 Preuzmite početnu datoteku iz modalnog prozora za uvoz (**Preuzmi CSV predložak**). Primjer:
 
 ```csv
-# Uvoz pružatelja usluga u OmniRoute (pozicijski stupci)
+# Uvoz pružatelja usluga u 67router (pozicijski stupci)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

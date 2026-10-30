@@ -10,7 +10,7 @@
 
 ## Ìpinnu
 
-| Ìdílé olùpèsè                                   | ID OmniRoute            | Ẹkùn àgbáyé | Ẹkùn Ṣáínà |
+| Ìdílé olùpèsè                                   | ID 67router             | Ẹkùn àgbáyé | Ẹkùn Ṣáínà |
 | ----------------------------------------------- | ----------------------- | ----------- | ---------- |
 | Alibaba Cloud Model Studio (san bí o ṣe ń lò ó) | `alibaba`               | Singapore   | Beijing    |
 | Alibaba Cloud Token Plan                        | `bailian-coding-plan`   | Singapore   | Beijing    |

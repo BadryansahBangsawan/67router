@@ -25,7 +25,7 @@ Uma primeira linha cuja primeira coluna seja a palavra literal `provider` (indep
 Transfira um ficheiro inicial a partir da janela modal de importação (**Download CSV template**). Exemplo:
 
 ```csv
-# Importação de fornecedores do OmniRoute (colunas posicionais)
+# Importação de fornecedores do 67router (colunas posicionais)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

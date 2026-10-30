@@ -15,7 +15,7 @@
 - [原生应用的 OAuth 2.0（PKCE）](https://developers.google.com/identity/protocols/oauth2/native-app) — 已安装应用的 OAuth client_id / client_secret 是公开的；实际安全性由 PKCE 提供。
 - [Firebase API 密钥](https://firebase.google.com/docs/projects/api-keys) — Web 客户端标识符在设计上就是公开的。
 
-OmniRoute 必须嵌入这些值，以便未配置 `.env` 的用户仍能直接获得可用的 OAuth 流程。如果没有嵌入式回退值，任何遵循“只需克隆并运行”路径的用户都将无法使用 Gemini / Antigravity 提供者。
+67router 必须嵌入这些值，以便未配置 `.env` 的用户仍能直接获得可用的 OAuth 流程。如果没有嵌入式回退值，任何遵循“只需克隆并运行”路径的用户都将无法使用 Gemini / Antigravity 提供者。
 
 但是，`AIzaSy…`、`GOCSPX-…`、`…apps.googleusercontent.com` 之类的字面值会被 **GitHub Secret Scanning**、**Semgrep** 以及类似的模式扫描器匹配。每次发布都会产生大量误报，推送保护会阻止合法提交，运维人员也会逐渐不再信任告警信息流。
 

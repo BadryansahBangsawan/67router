@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Português (Portugal))
+# 📖 Setup Guide — 67router (Português (Portugal))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Referência completa de configuração do OmniRoute. Para a versão rápida, consulte o [Início Rápido no README](../README.md#-quick-start).
+> Referência completa de configuração do 67router. Para a versão rápida, consulte o [Início Rápido no README](../README.md#-quick-start).
 
 ## Índice
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-O [pacote AUR](https://aur.archlinux.org/packages/omniroute-bin) instala o OmniRoute e disponibiliza um serviço systemd de utilizador.
+O [pacote AUR](https://aur.archlinux.org/packages/omniroute-bin) instala o 67router e disponibiliza um serviço systemd de utilizador.
 
 ### A Partir do Código-Fonte
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Nota para Windows:** por predefinição, o OmniRoute utiliza `%APPDATA%\omniroute` quando o diretório legado `%USERPROFILE%\.omniroute` não está presente. Defina `DATA_DIR` para escolher uma localização diferente para o diretório de dados.
+> **Nota para Windows:** por predefinição, o 67router utiliza `%APPDATA%\omniroute` quando o diretório legado `%USERPROFILE%\.omniroute` não está presente. Defina `DATA_DIR` para escolher uma localização diferente para o diretório de dados.
 
 > **Nota:** `npm install` gera automaticamente o `.env` a partir de `.env.example` na primeira execução. As instalações seguintes não substituem um `.env` existente, pelo que as personalizações são preservadas. Para voltar a gerar o ficheiro, elimine `.env` antes de executar novamente o comando.
 
@@ -64,7 +64,7 @@ Consulte o [Guia do Docker](./DOCKER_GUIDE.md) para obter a configuração compl
 
 ### Aplicação para Ambiente de Trabalho (Electron)
 
-O OmniRoute inclui um wrapper para ambiente de trabalho criado com Electron 41 + electron-builder 26.10. Scripts disponíveis (raiz do espaço de trabalho):
+O 67router inclui um wrapper para ambiente de trabalho criado com Electron 41 + electron-builder 26.10. Scripts disponíveis (raiz do espaço de trabalho):
 
 ```bash
 npm run electron:dev          # Executar a aplicação para ambiente de trabalho com recarregamento automático
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Em conjunto com variáveis de ambiente (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, etc.), isto permite iniciar uma instância do OmniRoute de forma totalmente programável.
+Em conjunto com variáveis de ambiente (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, etc.), isto permite iniciar uma instância do 67router de forma totalmente programável.
 
 ### Opções da CLI
 
@@ -99,7 +99,7 @@ Em conjunto com variáveis de ambiente (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE
 | `omniroute config`      | Configuração da ferramenta CLI — listar, obter, definir e validar configurações    |
 | `omniroute status`      | Painel de estado offline — versão, BD, ferramentas e configuração                  |
 | `omniroute logs`        | Transmitir registos de utilização a partir da API (suporta `--follow`)             |
-| `omniroute update`      | Procurar ou aplicar atualizações do OmniRoute                                      |
+| `omniroute update`      | Procurar ou aplicar atualizações do 67router                                       |
 | `omniroute provider`    | Gerir ligações a fornecedores — adicionar, listar, remover, testar e predefinir    |
 | `omniroute --port 3000` | Definir a porta canónica/da API como 3000                                          |
 | `omniroute --mcp`       | Iniciar o servidor MCP (transporte stdio)                                          |
@@ -165,7 +165,7 @@ Funciona com Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode e SDKs co
 
 #### Configurar automaticamente com `setup-*`
 
-Em vez de colar manualmente o URL base e a chave, permita que o OmniRoute escreva a configuração própria de cada ferramenta a partir do catálogo de modelos em tempo real. Um comando por ferramenta:
+Em vez de colar manualmente o URL base e a chave, permita que o 67router escreva a configuração própria de cada ferramenta a partir do catálogo de modelos em tempo real. Um comando por ferramenta:
 
 ```bash
 omniroute setup-codex        # perfis em ~/.codex/<name>.config.toml
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-Cada comando aceita `--remote <url> --api-key <key>` para configurar uma ferramenta local com um OmniRoute **remoto**, bem como `--dry-run` para pré-visualizar. Para iniciar uma CLI com as variáveis de ambiente corretas injetadas e sem escrever qualquer configuração, utilize o iniciador genérico `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); os iniciadores legados específicos de cada ferramenta `omniroute launch` (Claude Code) e `omniroute launch-codex` (Codex) continuam disponíveis.
+Cada comando aceita `--remote <url> --api-key <key>` para configurar uma ferramenta local com um 67router **remoto**, bem como `--dry-run` para pré-visualizar. Para iniciar uma CLI com as variáveis de ambiente corretas injetadas e sem escrever qualquer configuração, utilize o iniciador genérico `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); os iniciadores legados específicos de cada ferramenta `omniroute launch` (Claude Code) e `omniroute launch-codex` (Codex) continuam disponíveis.
 
 Para consultar a tabela completa (o que cada comando escreve, todas as opções, local vs. remoto e convenções de URL base com `/v1`), consulte **[Integrações CLI](./CLI-INTEGRATIONS.md)**.
 
@@ -270,15 +270,15 @@ Para a maioria das implementações, apenas necessita destas duas variáveis:
 | Variável                 | Predefinição                  | Finalidade                                                                                                                                                                                                         |
 | ------------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `REQUEST_TIMEOUT_MS`     | `600000`                      | Valor de referência partilhado para o tempo limite de início da resposta do serviço a montante, tempos limite ocultos do Undici, pedidos de impressão digital TLS e tempos limite de pedidos/proxy da ponte da API |
-| `STREAM_IDLE_TIMEOUT_MS` | herda de `REQUEST_TIMEOUT_MS` | Intervalo máximo entre blocos de transmissão antes de o OmniRoute interromper o fluxo SSE                                                                                                                          |
+| `STREAM_IDLE_TIMEOUT_MS` | herda de `REQUEST_TIMEOUT_MS` | Intervalo máximo entre blocos de transmissão antes de o 67router interromper o fluxo SSE                                                                                                                           |
 
 A retrocompatibilidade é preservada: as variáveis existentes `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` e outras variáveis de tempo limite por camada continuam a funcionar e substituem o valor de referência partilhado.
 
 ### Notas Específicas dos Fornecedores
 
-Para serviços a montante compatíveis com o Claude Code (`anthropic-compatible-cc-*`), o OmniRoute deriva o cabeçalho `X-Stainless-Timeout` de saída a partir do tempo limite de obtenção resolvido, para que os tempos limite de leitura do lado do fornecedor permaneçam alinhados com a configuração do seu ambiente.
+Para serviços a montante compatíveis com o Claude Code (`anthropic-compatible-cc-*`), o 67router deriva o cabeçalho `X-Stainless-Timeout` de saída a partir do tempo limite de obtenção resolvido, para que os tempos limite de leitura do lado do fornecedor permaneçam alinhados com a configuração do seu ambiente.
 
-Para proxies inversos de terceiros compatíveis com o Claude Code, o OmniRoute mantém o conjunto predefinido `anthropic-beta` conservador e, quando `Client Cache Control` permanece definido como `Auto`, apenas reencaminha os marcadores `cache_control` fornecidos pelo cliente. Ative a opção por ligação "Ativar a versão beta de redact-thinking" apenas quando o serviço a montante exigir especificamente fluxos de raciocínio ocultado do Claude.
+Para proxies inversos de terceiros compatíveis com o Claude Code, o 67router mantém o conjunto predefinido `anthropic-beta` conservador e, quando `Client Cache Control` permanece definido como `Auto`, apenas reencaminha os marcadores `cache_control` fornecidos pelo cliente. Ative a opção por ligação "Ativar a versão beta de redact-thinking" apenas quando o serviço a montante exigir especificamente fluxos de raciocínio ocultado do Claude.
 
 ### Substituições Avançadas de Tempos Limite
 
@@ -296,11 +296,11 @@ Para proxies inversos de terceiros compatíveis com o Claude Code, o OmniRoute m
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | Tempo limite de keep-alive no servidor da ponte da API                                                       |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | Tempo limite de inatividade do socket no servidor da ponte da API (`0` desativa-o)                           |
 
-> **Nota:** Para pedidos de transmissão, `FETCH_TIMEOUT_MS` abrange apenas o estabelecimento da ligação / a espera pela primeira resposta do serviço a montante. Quando o fluxo estiver ativo, o OmniRoute apenas o interromperá em caso de bloqueio efetivo (`STREAM_IDLE_TIMEOUT_MS`) ou de inatividade do corpo no Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Nota:** Para pedidos de transmissão, `FETCH_TIMEOUT_MS` abrange apenas o estabelecimento da ligação / a espera pela primeira resposta do serviço a montante. Quando o fluxo estiver ativo, o 67router apenas o interromperá em caso de bloqueio efetivo (`STREAM_IDLE_TIMEOUT_MS`) ou de inatividade do corpo no Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Compatibilidade com Proxies Inversos
 
-Se executar o OmniRoute através do Nginx, Caddy, Cloudflare ou de outro proxy inverso, certifique-se de que os tempos limite do proxy também são superiores aos tempos limite de transmissão/obtenção do OmniRoute.
+Se executar o 67router através do Nginx, Caddy, Cloudflare ou de outro proxy inverso, certifique-se de que os tempos limite do proxy também são superiores aos tempos limite de transmissão/obtenção do 67router.
 
 ---
 

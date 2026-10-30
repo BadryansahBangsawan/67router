@@ -4,7 +4,7 @@
 
 ---
 
-Dieses Dokument ist die verbindliche Referenz für alle CI-Qualitätsprüfungen in OmniRoute.
+Dieses Dokument ist die verbindliche Referenz für alle CI-Qualitätsprüfungen in 67router.
 Es beschreibt jede Prüfung, was sie validiert, in welchem CI-Job sie ausgeführt wird, ob sie
 eine Ratchet-Baseline oder eine Bestanden/Nicht-bestanden-Richtlinie verwendet und ob sie den Build blockiert oder nur informativen Charakter hat.
 
@@ -274,14 +274,14 @@ Läuft nach `build`. Blockiert den Merge bei Fehlschlag.
 
 Diese laufen nach einem Cron-Zeitplan (und `workflow_dispatch`), niemals bei PRs. Alle sind beratend.
 
-| Workflow               | Validiert                                                                                                                                                                          | Blockierend  |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `nightly-property`     | fast-check-Property-Tests mit zufälligem Seed + hoher Laufzahl                                                                                                                     | **Beratend** |
-| `nightly-resilience`   | Heap-Wachstums-Gate, Chaos-Fehlerinjektion, k6-Last-/Soak-Tests                                                                                                                    | **Beratend** |
-| `nightly-llm-security` | promptfoo-Injection-Guard (Block-Modus) + garak-Probes (übersprungen ohne Provider-Secret)                                                                                         | **Beratend** |
-| `nightly-schemathesis` | OpenAPI-Vertrags-Fuzzing (schemathesis) gegen eine laufende OmniRoute-Instanz unter Verwendung von `docs/openapi.yaml` — deckt Spec-Verstöße / unbehandelte 500er auf (Fase 8 B.4) | **Beratend** |
-| `nightly-mutation`     | Stryker-Mutation-Testing-Score über der schnellen Unit-Lane — überlebende Mutanten decken schwache Asserts auf                                                                     | **Beratend** |
-| `nightly-compat`       | Node-Engine-Kompatibilitätsmatrix über die unterstützten `engines.node`-Bereiche                                                                                                   | **Beratend** |
+| Workflow               | Validiert                                                                                                                                                                         | Blockierend  |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `nightly-property`     | fast-check-Property-Tests mit zufälligem Seed + hoher Laufzahl                                                                                                                    | **Beratend** |
+| `nightly-resilience`   | Heap-Wachstums-Gate, Chaos-Fehlerinjektion, k6-Last-/Soak-Tests                                                                                                                   | **Beratend** |
+| `nightly-llm-security` | promptfoo-Injection-Guard (Block-Modus) + garak-Probes (übersprungen ohne Provider-Secret)                                                                                        | **Beratend** |
+| `nightly-schemathesis` | OpenAPI-Vertrags-Fuzzing (schemathesis) gegen eine laufende 67router-Instanz unter Verwendung von `docs/openapi.yaml` — deckt Spec-Verstöße / unbehandelte 500er auf (Fase 8 B.4) | **Beratend** |
+| `nightly-mutation`     | Stryker-Mutation-Testing-Score über der schnellen Unit-Lane — überlebende Mutanten decken schwache Asserts auf                                                                    | **Beratend** |
+| `nightly-compat`       | Node-Engine-Kompatibilitätsmatrix über die unterstützten `engines.node`-Bereiche                                                                                                  | **Beratend** |
 
 Performance-Baselines (Heap, TTFB, Build-Zeit) werden aufgezeichnet, nicht gegatet: siehe [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -555,7 +555,7 @@ Positivliste vermittelt ein falsches Gefühl von Qualität.
 
 ## Agentenwerkzeuge: LSP-in-the-loop (optional)
 
-Zusätzlich zu den CI-Prüfschritten enthält OmniRoute ein **optionales** `agent-lsp`-Grundgerüst
+Zusätzlich zu den CI-Prüfschritten enthält 67router ein **optionales** `agent-lsp`-Grundgerüst
 (eine `.mcp.json` auf Projektebene, Phase 7, Aufgabe 15). Erstellen Sie `.mcp.json`,
 um Coding-Agenten einen TypeScript-Sprachserver bereitzustellen, sodass sie Symbole /
 Diagnosen **vor** dem Schreiben von Code auflösen — eine „Kompilieren vor dem Behaupten“-Ergänzung zu

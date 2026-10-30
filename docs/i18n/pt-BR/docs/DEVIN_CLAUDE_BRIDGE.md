@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` permite que o runtime real do Claude Code use o endpoint local de
-Messages da Anthropic do OmniRoute, enquanto a CLI oficial do Devin fornece respostas do
+Messages da Anthropic do 67router, enquanto a CLI oficial do Devin fornece respostas do
 modelo por ACP stdio. Ele não modifica os provedores existentes Anthropic, Claude OAuth,
 Claude Web ou `devin-cli`.
 
@@ -21,7 +21,7 @@ correspondente, para que o roteamento combinado que exige ferramentas o evite.
 > execução final em ambiente real comprovou turnos de `Read`, `Edit` e `Bash` controlados pelo
 > cliente, resultados bem-sucedidos de `npm test`, descoberta de comandos e skills do projeto,
 > roteamento exclusivo pelo Devin e nenhuma saída para o Claude. A versão fixada foi então
-> elevada para `2.1.258` (a geração da CLI que a identidade Claude do OmniRoute personifica e
+> elevada para `2.1.258` (a geração da CLI que a identidade Claude do 67router personifica e
 > a primeira versão que inclui nativamente o nível Fable 5.1). Na nova versão fixada, a camada
 > de instalação e `claude --version` foram verificadas na imagem base fixada, e a suíte
 > unitária da bridge, `compose config` e a prova estática de isolamento são aprovadas — mas o
@@ -55,11 +55,11 @@ O parser aceita um envelope independente `<tool>{...}</tool>` por turno do model
 verifica o nome em relação à lista de ferramentas da solicitação, valida os argumentos de
 acordo com o JSON Schema dessa ferramenta, rejeita narrativas misturadas com ações e permite
 uma tentativa limitada de correção. O Claude Code então executa localmente o `tool_use`
-resultante da Anthropic e envia o `tool_result` de volta pelo OmniRoute.
+resultante da Anthropic e envia o `tool_result` de volta pelo 67router.
 
 ## Roteamento automático
 
-O provedor é elegível nos pools de candidatos `auto/*` do OmniRoute quando não está
+O provedor é elegível nos pools de candidatos `auto/*` do 67router quando não está
 bloqueado. A elegibilidade do candidato não garante sua seleção: a estratégia de roteamento
 da combinação (por exemplo, o último provedor reconhecidamente funcional) pode preferir
 outro provedor. Use `dva/<model>` ou uma combinação que priorize o Devin quando precisar que
@@ -72,17 +72,17 @@ proibidas. Os serviços do Compose:
 
 - são executados como UID/GID `10001:10001`, com um sistema de arquivos raiz somente leitura, capacidades removidas e
   `no-new-privileges`;
-- usam um `/home/bridge` privado, um volume dedicado de configuração do Claude, dados isolados do OmniRoute
+- usam um `/home/bridge` privado, um volume dedicado de configuração do Claude, dados isolados do 67router
   e um volume `devin-auth` separado;
 - montam apenas espaços de trabalho/evidências descartáveis em `.sandbox`;
 - não montam o diretório pessoal do host, o Keychain, credenciais SSH, credenciais de nuvem nem o socket do Docker;
 - constroem ambientes explícitos e removem variáveis de API/OAuth/roteamento da Anthropic;
 - direcionam a inferência do Claude Code apenas para `http://omniroute:20128` com uma chave exclusivamente local.
 
-O perfil offline usa uma rede interna. No perfil live, o OmniRoute acessa os
+O perfil offline usa uma rede interna. No perfil live, o 67router acessa os
 endpoints oficiais do Devin apenas por meio do `network-guard`; destinos não relacionados são bloqueados.
 O Claude Code possui uma proteção de saída separada que bloqueia tudo e pode acessar apenas o serviço
-OmniRoute local por meio de `NO_PROXY`. Os arquivos de auditoria das proteções são montados apenas pelo respectivo
+67router local por meio de `NO_PROXY`. Os arquivos de auditoria das proteções são montados apenas pelo respectivo
 processo de proteção. Os scripts verificam a propriedade, o modo e a contagem de links dos arquivos, além de cada decisão, antes de exportar
 evidências sem tokens.
 

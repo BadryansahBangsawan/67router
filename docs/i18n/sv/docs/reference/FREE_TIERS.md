@@ -9,9 +9,9 @@
 > **Senast undersökt:** 2026-06-17 — webbresearch per leverantör (officiell dokumentation + nyheter från de senaste 7 dagarna, en genomgång med 50 agenter och kontradiktorisk verifiering) där varje kvot för kostnadsfria nivåer och alla tjänstevillkor uppdaterades. **Partiell förnyad granskning 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — se den daterade anmärkningen nedan).
 > **Sanningskälla (katalog):** `open-sse/config/freeModelCatalog.ts` (budgetar per MODELL, deduplicerade per pool). Siffrorna för tokenbudgetar nedan kommer från aktuell webbresearch och är en **uppskattning** — se [Metod och förbehåll](#methodology--caveats).
 
-## Kort sagt — hur mycket kostnadsfri inferens aggregerar OmniRoute egentligen?
+## Kort sagt — hur mycket kostnadsfri inferens aggregerar 67router egentligen?
 
-Dessa siffror beskriver separata konton hos tredje part och behörighetsvillkor i hela katalogen. OmniRoute tillhandahåller inte denna budget: du måste skaffa de nödvändiga kontona eller autentiseringsuppgifterna, ansluta berättigade leverantörer och följa deras begränsningar. Den faktiska användbara kapaciteten kan vara lägre, inklusive noll i en ny installation utan någon berättigad rutt. Leverantörer markerade med `tos: avoid` utesluts som standard från automatisk routning.
+Dessa siffror beskriver separata konton hos tredje part och behörighetsvillkor i hela katalogen. 67router tillhandahåller inte denna budget: du måste skaffa de nödvändiga kontona eller autentiseringsuppgifterna, ansluta berättigade leverantörer och följa deras begränsningar. Den faktiska användbara kapaciteten kan vara lägre, inklusive noll i en ny installation utan någon berättigad rutt. Leverantörer markerade med `tos: avoid` utesluts som standard från automatisk routning.
 
 **Kontrollerat 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) erbjuder en kampanjkredit på 5 USD som kan användas en gång, kräver en betalningsmetod och löper ut efter 30 dagar. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publicerar hastighetsgränser per projekt/modell/nivå; tjänsten ingår fortfarande inte i den kvantifierade månadssiffran i huvudbudskapet.
 
@@ -92,7 +92,7 @@ kostnadsfria krediter. Ändringarna för Nous beskrivs utförligt i leverantörs
 
 ## Två regimer — räkning kontra beslut
 
-OmniRoute besvarar frågan ”är det kostnadsfritt?” genom två regimer som avsiktligt läser
+67router besvarar frågan ”är det kostnadsfritt?” genom två regimer som avsiktligt läser
 olika källor:
 
 | Regim                 | Sanningskälla                                                                                                                                                                           | Användningsytor                                                                                                                            |
@@ -140,7 +140,7 @@ De flesta siffror för ”kostnadsfria token per månad” inom detta område ä
 
 ### ⚠️ Varning — klausuler om personligt bruk/proxyanvändning som är värda att kontrollera (16)
 
-> Deras kostnadsfria åtkomst är verklig och OmniRoute kan dirigera trafik till dem; klausulerna nedan är bara värda att känna till. De OAuth-/nyckellösa alternativen kan inte kvantifieras i token, så de ingår inte i rubriksiffran (inte för att de är oanvändbara).
+> Deras kostnadsfria åtkomst är verklig och 67router kan dirigera trafik till dem; klausulerna nedan är bara värda att känna till. De OAuth-/nyckellösa alternativen kan inte kvantifieras i token, så de ingår inte i rubriksiffran (inte för att de är oanvändbara).
 
 | Leverantör       | Anmärkning                                                                                                                                                                                          |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ De flesta siffror för ”kostnadsfria token per månad” inom detta område ä
 | `fireworks`      | ToS förbjuder uttryckligen användning som proxy/mellanhand, överföring av API-nycklar och underlicensiering (avsnitt 2.1 och 2.2(i)(j)); självhostade personliga proxyservrar är i…                 |
 | `friendliai`     | Avsnitt 8(e) och 8(f) i ToS förbjuder uttryckligen att använda FriendliAI som proxy eller att fristående ge tredje part åtkomst, samt förbjuder återförsäljning/…                                   |
 | `iflytek`        | Avsnitt 2.4(3) i iFlytek Spark LLM Service Agreement förbjuder uttryckligen ”användning av automatiserade eller programmatiska metoder för att extrahera data eller utdata…                         |
-| `kiro`           | Kiro FAQ förbjuder uttryckligen användning med ”OpenClaw och liknande verktyg som utnyttjar ramverk från tredje part” — en självhostad AI-proxy (som OmniRoute) som dir…                            |
+| `kiro`           | Kiro FAQ förbjuder uttryckligen användning med ”OpenClaw och liknande verktyg som utnyttjar ramverk från tredje part” — en självhostad AI-proxy (som 67router) som dir…                             |
 | `modal`          | Avsnitt 1.3 i ToS förbjuder uttryckligen att ”hyra ut, återförsälja eller på annat sätt ge tredje part direkt åtkomst till eller användning av tjänsten” — att bygga en självhostad…                |
 | `muse-spark-web` | Meta ToS förbjuder uttryckligen automatiserad åtkomst utan föregående tillstånd, reverse engineering utan skriftligt tillstånd samt kringgående av tekniska…                                        |
 | `nlpcloud`       | ToS förbjuder uttryckligen ”att konfigurera en proxy eller annan enhet som låter andra få åtkomst till tjänsten via den” och beviljar endast en icke-överlåtbar,…                                   |
@@ -316,7 +316,7 @@ De flesta siffror för ”kostnadsfria token per månad” inom detta område ä
 
 - **`360ai`** — Den medföljande freeNote-texten "Gratis Free 360 AI Brain-modeller" verkar vara inaktuell. Nuvarande åtkomst kräver en ansökan och är avgiftsbelagd. Kampanjtoken från lanseringsperioden 2023 (100M–250M som engångstilldelning) kan ha varit grunden för…
 - **`agentrouter`** — Vår medföljande freeNote säger "$200 i gratiskrediter vid registrering." I nuläget får vanliga registreringar (utan värvning) endast $100; registreringar via värvning kan få $200, men en kommentar från communityn från april 2026…
-- **`agy`** — Vår medföljande freeNote säger "(ingen)", vilket antyder att det inte finns någon kostnadsfri nivå, men Antigravity har en kostnadsfri OAuth-skyddad nivå. Användarvillkoren förbjuder dock uttryckligen att denna kostnadsfria nivå används via en proxy som OmniRoute …
+- **`agy`** — Vår medföljande freeNote säger "(ingen)", vilket antyder att det inte finns någon kostnadsfri nivå, men Antigravity har en kostnadsfri OAuth-skyddad nivå. Användarvillkoren förbjuder dock uttryckligen att denna kostnadsfria nivå används via en proxy som 67router …
 - **`ai21`** — Försämrad: provperioden har minskat från "3 månader" till 7 dagar. Kreditbeloppet på $10 är oförändrat, men giltighetstiden har minskat kraftigt från cirka 90 dagar till 7 dagar.
 - **`aimlapi`** — Har förändrats avsevärt. Den medföljande freeNote-texten marknadsförde "$0.025/dag i gratiskrediter — fler än 200 modeller", men den kostnadsfria nivån är nu pausad/avvecklad. Kredittilldelningen på $0.025/dag (50 000 krediter/dag, 10 förfrågningar/d…
 - **`amazon-q`** — Vår medföljande freeNote säger "(ingen)" — verkligheten är sämre: produkten har nu avvecklats för nya registreringar (15 maj 2026). Tidigare erbjöd den kostnadsfria nivån 50 agentbaserade förfrågningar/månad + obegränsad inline…

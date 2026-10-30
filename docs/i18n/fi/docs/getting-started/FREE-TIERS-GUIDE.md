@@ -4,7 +4,7 @@
 
 ---
 
-> **Lyhyesti**: Käytä omia ehdot täyttäviä palveluntarjoajatilejäsi. OmniRoute yhdistää määrittämäsi yhteydet; se ei tarjoa mainostettua yhteenlaskettua token-budjettia. Maksuton käyttö voi edellyttää rekisteröitymistä, API-avainta, hyväksyntää tai maksutapaa. Palveluntarjoajien rajoitukset, tietosuojakäytännöt ja käyttöehdot ovat edelleen voimassa.
+> **Lyhyesti**: Käytä omia ehdot täyttäviä palveluntarjoajatilejäsi. 67router yhdistää määrittämäsi yhteydet; se ei tarjoa mainostettua yhteenlaskettua token-budjettia. Maksuton käyttö voi edellyttää rekisteröitymistä, API-avainta, hyväksyntää tai maksutapaa. Palveluntarjoajien rajoitukset, tietosuojakäytännöt ja käyttöehdot ovat edelleen voimassa.
 
 ---
 
@@ -15,7 +15,7 @@ tarkoittaa tunnistautumista vaatimatonta päätepistettä, toistuvaa kiintiötä
 manuaalista hyväksyntää tai väliaikaista kampanjaa. Jotkin vaihtoehdot edellyttävät käyttäjätiliä, API-avainta,
 luottokorttia, KYC-tunnistautumista tai palveluntarjoajakohtaisten ehtojen hyväksymistä.
 
-OmniRoute **yhdistää** määritetyt yhteydet yhdeksi päätepisteeksi. Sinun on silti rekisteröidyttävä erikseen jokaiselle palveluntarjoajalle, joka edellyttää käyttäjätiliä. Yhdistä nämä tilit ja käytä asetusta `model: "auto"` reitittääksesi pyynnöt soveltuvien kohteiden välillä. Uudessa asennuksessa ei välttämättä ole yhtään soveltuvaa avaimetonta kohdetta; pelkkä OmniRouten asentaminen ei takaa onnistunutta chat-vastausta.
+67router **yhdistää** määritetyt yhteydet yhdeksi päätepisteeksi. Sinun on silti rekisteröidyttävä erikseen jokaiselle palveluntarjoajalle, joka edellyttää käyttäjätiliä. Yhdistä nämä tilit ja käytä asetusta `model: "auto"` reitittääksesi pyynnöt soveltuvien kohteiden välillä. Uudessa asennuksessa ei välttämättä ole yhtään soveltuvaa avaimetonta kohdetta; pelkkä 67routerin asentaminen ei takaa onnistunutta chat-vastausta.
 
 ---
 
@@ -60,7 +60,7 @@ Näillä tarjoajilla on **maksuttomia tasoja**, joihin sovelletaan tiettyjä raj
 
 ## Näin yhdistät ilmaistasoja
 
-OmniRouten teho perustuu **ilmaistasojen yhdistämiseen**. Sen sijaan, että turvautuisit yhteen palveluntarjoajaan, yhdistät useita ilmaisia palveluntarjoajia ja annat OmniRouten valita automaattisesti parhaan vaihtoehdon kuhunkin pyyntöön.
+67routerin teho perustuu **ilmaistasojen yhdistämiseen**. Sen sijaan, että turvautuisit yhteen palveluntarjoajaan, yhdistät useita ilmaisia palveluntarjoajia ja annat 67routerin valita automaattisesti parhaan vaihtoehdon kuhunkin pyyntöön.
 
 ### Esimerkki: Kattavampi ilmaistasojen hyödyntäminen
 
@@ -71,7 +71,7 @@ Yhdistä useita palveluntarjoajia vähentääksesi riippuvuutta yksittäisestä 
 3. **Pollinations** — avaimeton käyttö nopeusrajoituksella
 4. **LongCat** — rekisteröitymisen yhteydessä saatava kertaluonteinen etu (edellyttää KYC-tunnistautumista)
 
-Käytä sitten asetusta `model: "auto"`, jolloin OmniRoute:
+Käytä sitten asetusta `model: "auto"`, jolloin 67router:
 
 - Kokeilee ensin korkeimmalle sijoitettua kelvollista yhteyttä
 - Jos sen kiintiö on täynnä tai kuntotarkistus epäonnistuu → kokeilee seuraavaa määritettyä palveluntarjoajaa
@@ -104,7 +104,7 @@ rajoittamattoman tai ilman avainta toimivan käytön, rekisteröitymishyvitykset
 
 ### Vaihe 5: Napsauta Yhdistä
 
-`NOAUTH`-palveluntarjoajan tapauksessa OmniRoute ei pyydä ulkoisen palvelun tunnistetietoa. Tämä ei takaa, että ulkoinen palvelu hyväksyy kolmannen osapuolen asiakasohjelmat tai että sillä on vapaata kapasiteettia. OAuth- ja API-avainpohjaiset palveluntarjoajat on yhdistettävä niiden dokumentoidun tiliprosessin kautta. Asiakasohjelmasi käyttää edelleen kohdassa **Hallintapaneeli → Päätepisteet** näkyvää OmniRoute-API-avainta, kun reitittimen todennus on käytössä.
+`NOAUTH`-palveluntarjoajan tapauksessa 67router ei pyydä ulkoisen palvelun tunnistetietoa. Tämä ei takaa, että ulkoinen palvelu hyväksyy kolmannen osapuolen asiakasohjelmat tai että sillä on vapaata kapasiteettia. OAuth- ja API-avainpohjaiset palveluntarjoajat on yhdistettävä niiden dokumentoidun tiliprosessin kautta. Asiakasohjelmasi käyttää edelleen kohdassa **Hallintapaneeli → Päätepisteet** näkyvää 67router-API-avainta, kun reitittimen todennus on käytössä.
 
 ### Vaihe 6: Toista
 
@@ -114,7 +114,7 @@ Yhdistä useita palveluntarjoajia, joiden ehdot ja tietosuojamalli sopivat käyt
 
 ## Luettelon lukeminen oikein
 
-- `NOAUTH` tarkoittaa, että OmniRoute ei pyydä palveluntarjoajan tunnistetietoa; se ei
+- `NOAUTH` tarkoittaa, että 67router ei pyydä palveluntarjoajan tunnistetietoa; se ei
   takaa käytettävyyttä, tietosuojaa tai rajatonta kapasiteettia.
 - `hasFree` on hakumetatietoa. Se voi tarkoittaa toistuvaa kiintiötä, avaimetonta käyttöä,
   rekisteröitymishyvitystä, hyväksyntäohjelmaa tai kampanjaa.
@@ -127,15 +127,15 @@ Yhdistä useita palveluntarjoajia, joiden ehdot ja tietosuojamalli sopivat käyt
 
 ---
 
-## Näin OmniRoute tehostaa ilmaiskiintiöiden käyttöä
+## Näin 67router tehostaa ilmaiskiintiöiden käyttöä
 
 ### 1. Automaattinen varajärjestely
 
-Jos yksi ilmainen palveluntarjoaja on ruuhkautunut tai poissa käytöstä, OmniRoute kokeilee automaattisesti seuraavaa. Sinun ei tarvitse tehdä mitään.
+Jos yksi ilmainen palveluntarjoaja on ruuhkautunut tai poissa käytöstä, 67router kokeilee automaattisesti seuraavaa. Sinun ei tarvitse tehdä mitään.
 
 ### 2. Älykäs reititys
 
-OmniRoute valitsee **parhaan ilmaisen palveluntarjoajan** kuhunkin pyyntöön seuraavien perusteella:
+67router valitsee **parhaan ilmaisen palveluntarjoajan** kuhunkin pyyntöön seuraavien perusteella:
 
 - Nopeus — Mikä palveluntarjoaja on juuri nyt nopein?
 - Laatu — Mikä palveluntarjoaja sopii parhaiten tähän tehtävään?
@@ -143,13 +143,13 @@ OmniRoute valitsee **parhaan ilmaisen palveluntarjoajan** kuhunkin pyyntöön se
 
 ### 3. Tunnistesäästöt
 
-OmniRouten pakkausputki voi vähentää kelvollisten kehotteiden ja työkalutulosteiden tunnistemäärää. Todelliset
+67routerin pakkausputki voi vähentää kelvollisten kehotteiden ja työkalutulosteiden tunnistemäärää. Todelliset
 säästöt riippuvat sisällöstä, valituista moottoreista, palveluntarjoajan laskentatavasta ja uskollisuusasetuksista;
 pakkaus ei moninkertaista jokaisen palveluntarjoajan kiintiötä kiinteällä kertoimella.
 
 ### 4. Useiden tilien tuki
 
-Jos palveluntarjoajan ehdot sallivat useita tilejä tai tunnistetietoja, OmniRoute voi käsitellä kutakin
+Jos palveluntarjoajan ehdot sallivat useita tilejä tai tunnistetietoja, 67router voi käsitellä kutakin
 yhteyttä erillisenä reititysvaihtoehtona. Älä luo ylimääräisiä tilejä palveluntarjoajan
 kiintiön tai käyttöoikeuskäytännön kiertämiseksi.
 
@@ -164,7 +164,7 @@ Ajantasainen, resurssivarannot huomioiden deduplikoitu luettelo ilmoittaa täll�
 | Toistuva määrällinen kiintiö                     | **~1.62B tokenia/kuukausi** | Jaetut resurssivarannot lasketaan kerran; rajoittamattomat palveluntarjoajat jätetään summan ulkopuolelle |
 | Ensimmäinen kuukausi rekisteröitymiskrediiteillä |          **~2.22B tokenia** | Toistuva kokonaismäärä sekä kertaluonteiset ja toistuvat krediitit                                        |
 
-Nämä ovat koko luettelon kattavia arvioita erillisille kelvollisille tileille, eivät OmniRouten tarjoama kiintiö tai ennuste uudelle asennukselle. Käytettävissä oleva kapasiteettisi riippuu yhdistämistäsi palveluntarjoajista ja niiden kulloisistakin ehdoista. Arvot lasketaan tiedostosta `open-sse/config/freeModelCatalog.ts`; katso
+Nämä ovat koko luettelon kattavia arvioita erillisille kelvollisille tileille, eivät 67routerin tarjoama kiintiö tai ennuste uudelle asennukselle. Käytettävissä oleva kapasiteettisi riippuu yhdistämistäsi palveluntarjoajista ja niiden kulloisistakin ehdoista. Arvot lasketaan tiedostosta `open-sse/config/freeModelCatalog.ts`; katso
 [Ilmaistasojen viite](../reference/FREE_TIERS.md), jossa käsitellään resurssivarantojen deduplikointia, käyttöehtomerkintöjä,
 lopetettuja merkintöjä ja rekisteröitymiskrediittien laskentamenetelmää.
 
@@ -191,7 +191,7 @@ vaatimuksesi. Kriittisillä työkuormilla tulisi olla valvottu ja sopimuksellise
 
 Kompromisseja voivat olla tiukat rajoitukset, jonotuslistat, KYC-tunnistautuminen, luottokortin vahvistaminen, kehoteaineiston käyttö
 koulutukseen, heikompi tietosuoja, palvelutasosopimuksen puuttuminen, mallien vaihtuvuus, maantieteelliset rajoitukset, maksullinen ylikäyttö tai
-tilikäytäntöihin liittyvä riski. OmniRoute tuo saatavilla olevat metatiedot näkyviin; sinä päätät, mitä otat käyttöön.
+tilikäytäntöihin liittyvä riski. 67router tuo saatavilla olevat metatiedot näkyviin; sinä päätät, mitä otat käyttöön.
 
 ### "Miten saan lisää ilmaista kiintiötä?"
 
@@ -210,7 +210,7 @@ Ilmaisten palveluntarjoajien sijoitukset -sivua laadun mittarina ja tarkista, mi
 
 ## Mitä seuraavaksi?
 
-- **[Auto-Combo-opas](./AUTO-COMBO-GUIDE.md)** — Anna OmniRouten valita sinulle paras tekoäly
+- **[Auto-Combo-opas](./AUTO-COMBO-GUIDE.md)** — Anna 67routerin valita sinulle paras tekoäly
 - **[Palveluntarjoajien opas](./PROVIDERS-GUIDE.md)** — Yhdistä lisää palveluntarjoajia
 - **[Vianmääritys](../guides/TROUBLESHOOTING.md)** — Korjaa yleisiä ongelmia
 - **[Ilmaistasojen viite](../reference/FREE_TIERS.md)** — Täydellinen luettelo ilmaistasoista

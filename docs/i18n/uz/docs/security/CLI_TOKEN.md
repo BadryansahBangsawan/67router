@@ -6,7 +6,7 @@
 
 ## Umumiy ko‘rinish
 
-OmniRoute CLI buyruqlari mahalliy boshqaruv API’sida so‘rov sarlavhasi orqali
+67router CLI buyruqlari mahalliy boshqaruv API’sida so‘rov sarlavhasi orqali
 yuboriladigan `HMAC-SHA256(machine-id, salt)` tokenidan foydalanib
 `x-omniroute-cli-token` autentifikatsiyasidan o‘tadi.
 

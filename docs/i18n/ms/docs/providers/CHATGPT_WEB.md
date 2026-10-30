@@ -40,8 +40,8 @@ terowong dan penyambung dikonfigurasikan.
 
 1. Buka penyedia **ChatGPT Web (Codex)** dan tambahkan sambungan.
 2. Tampalkan pengepala Cookie ChatGPT yang lengkap, ID terowong, kunci masa jalan dan nama penyambung tersuai. Persediaan baharu yang menyokong alat mesti menggunakan penyambung yang baru dicipta dengan nama tepat `OmniRoute Codex v2`, dengan Authentication ditetapkan kepada None dan Permissions ditetapkan kepada Allow all actions.
-3. Jalankan pemeriksaan sambungan. OmniRoute membuka Temporary Chat berasaskan pelayar dan mengesan sama ada Sol dan Pro tersedia untuk akaun tersebut.
-4. Simpan sambungan. OmniRoute menggantikan kuki yang ditampal dengan keadaan storan Playwright yang telah disahkan dan menyimpannya bersama kunci masa jalan melalui abstraksi kelayakan yang disulitkan.
+3. Jalankan pemeriksaan sambungan. 67router membuka Temporary Chat berasaskan pelayar dan mengesan sama ada Sol dan Pro tersedia untuk akaun tersebut.
+4. Simpan sambungan. 67router menggantikan kuki yang ditampal dengan keadaan storan Playwright yang telah disahkan dan menyimpannya bersama kunci masa jalan melalui abstraksi kelayakan yang disulitkan.
 
 Kuki mentah tidak disimpan selepas penyimpanan berjaya. Apabila sesi tamat tempoh, buka sambungan, tampalkan pengepala Cookie lengkap yang baharu dan jalankan semula pemeriksaan. Status diagnostik dalam dialog suntingan melaporkan pelayar, keadaan storan, log masuk, Temporary Chat, terowong, penyambung dan perjalanan pergi balik alat secara berasingan. Untuk mengautomatikkan kemas kini kuki apabila sesi bertukar, lihat alat pelengkap dalam [Sambungan Penyegerakan Sesi Pelayar](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -86,11 +86,11 @@ memerlukan penyambung `OmniRoute Codex v2` yang baharu.
 
 ## VPS tanpa paparan dan Docker
 
-Untuk pemasangan npm, systemd dan PM2, OmniRoute mengesan laluan Chrome dan Chromium yang lazim. Sebagai alternatif, tetapkan `CHATGPT_WEB_CODEX_CHROME_PATH`. Giliran masa jalan sengaja menggunakan Chrome bermuka kerana ChatGPT menolak bentuk pelayar tanpa kepala sebenar. Oleh itu, hos tanpa paparan mesti menjalankan OmniRoute dengan paparan Xvfb persendirian; menetapkan laluan Chrome sahaja tidak menyediakannya.
+Untuk pemasangan npm, systemd dan PM2, 67router mengesan laluan Chrome dan Chromium yang lazim. Sebagai alternatif, tetapkan `CHATGPT_WEB_CODEX_CHROME_PATH`. Giliran masa jalan sengaja menggunakan Chrome bermuka kerana ChatGPT menolak bentuk pelayar tanpa kepala sebenar. Oleh itu, hos tanpa paparan mesti menjalankan 67router dengan paparan Xvfb persendirian; menetapkan laluan Chrome sahaja tidak menyediakannya.
 
-Profil `web` Docker memulakan `chatgpt-web-codex-browser` pada rangkaian Compose dalaman. Sidecar menjalankan Chrome bermuka di dalam Xvfb, jadi paparan fizikal tidak diperlukan. Port CDP-nya tidak diterbitkan pada hos. Volum profil pelayar yang dilindungi diasingkan daripada volum data OmniRoute, dan pelayar menerima memori kongsi yang mencukupi. Proksi CDP dalaman hanya mendengar pada port `9223` dalam rangkaian Compose; Chrome kekal terikat pada gelung balik dalam sidecar.
+Profil `web` Docker memulakan `chatgpt-web-codex-browser` pada rangkaian Compose dalaman. Sidecar menjalankan Chrome bermuka di dalam Xvfb, jadi paparan fizikal tidak diperlukan. Port CDP-nya tidak diterbitkan pada hos. Volum profil pelayar yang dilindungi diasingkan daripada volum data 67router, dan pelayar menerima memori kongsi yang mencukupi. Proksi CDP dalaman hanya mendengar pada port `9223` dalam rangkaian Compose; Chrome kekal terikat pada gelung balik dalam sidecar.
 
-Pajakan penyelia di bawah `DATA_DIR` menghalang berbilang proses OmniRoute daripada memiliki keadaan terowong dan broker yang sama. Konflik dilaporkan oleh doktor.
+Pajakan penyelia di bawah `DATA_DIR` menghalang berbilang proses 67router daripada memiliki keadaan terowong dan broker yang sama. Konflik dilaporkan oleh doktor.
 
 ## Pemulihan interaktif
 

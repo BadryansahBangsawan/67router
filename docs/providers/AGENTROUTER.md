@@ -14,7 +14,7 @@ User-Agent, `anthropic-beta` flags, Stainless SDK headers, etc.).
 
 ## Quick start — use the native `agentrouter` provider (recommended)
 
-For most users, **no special setup is required**. OmniRoute ships a built-in
+For most users, **no special setup is required**. 67router ships a built-in
 `agentrouter` provider with the full Claude Code wire image already baked in (see
 `open-sse/config/providerRegistry.ts` → `agentrouter`). To use it:
 
@@ -36,7 +36,7 @@ base URL, chat path, or header set.
 
 ## Advanced: connecting via the Claude Code compatible provider type
 
-OmniRoute also supports AgentRouter (and similar relays) through the **Claude Code
+67router also supports AgentRouter (and similar relays) through the **Claude Code
 compatible** provider type (`anthropic-compatible-cc-*`), which speaks the
 Anthropic Messages API with the correct wire image. A generic
 `openai-compatible-chat` provider pointing at `https://agentrouter.org` will
@@ -49,14 +49,14 @@ Code.
 
 - An AgentRouter account and API key. New signups get free credits via the affiliate
   link in the project [README](../README.md).
-- OmniRoute running with the `ENABLE_CC_COMPATIBLE_PROVIDER` feature flag enabled
+- 67router running with the `ENABLE_CC_COMPATIBLE_PROVIDER` feature flag enabled
   (see below).
 
 ## 1. Enable the CC-compatible provider type
 
 The Claude Code compatible provider type is gated behind a feature flag because it
 sends traffic that closely mirrors the official Claude Code client. Enable it by
-setting an environment variable before starting OmniRoute:
+setting an environment variable before starting 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

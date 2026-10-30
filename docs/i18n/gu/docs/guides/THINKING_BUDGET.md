@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **સ્રોત:** `open-sse/services/thinkingBudget.ts`
 
-Thinking Budget એ નિયંત્રિત કરે છે કે પ્રદાતાઓ સુધી પહોંચાડતી વખતે OmniRoute **ક્લાયન્ટના thinking/reasoning પરિમાણોને ફરીથી લખે છે કે નહીં**. તે compression, routing અથવા prompt cache ને ચાલુ કે બંધ કરતું **નથી**.
+Thinking Budget એ નિયંત્રિત કરે છે કે પ્રદાતાઓ સુધી પહોંચાડતી વખતે 67router **ક્લાયન્ટના thinking/reasoning પરિમાણોને ફરીથી લખે છે કે નહીં**. તે compression, routing અથવા prompt cache ને ચાલુ કે બંધ કરતું **નથી**.
 
 ## મોડ્સ
 
-| મોડ                         | OmniRoute શું કરે છે                                                                                                     | ક્યારે ઉપયોગ કરવો                                                                                                                                                                             |
+| મોડ                         | 67router શું કરે છે                                                                                                      | ક્યારે ઉપયોગ કરવો                                                                                                                                                                             |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (ડિફૉલ્ટ) | ક્લાયન્ટ ફીલ્ડ્સને યથાવત્ રાખે છે (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config`, વગેરે). | **Codex / Desktop / effort + reasoning summaries ને નિયંત્રિત કરવા જોઈએ તેવો કોઈપણ ક્લાયન્ટ.** ક્લાયન્ટ જ્યારે `reasoning.summary` ની વિનંતી કરે ત્યારે દૃશ્યમાન thinking panels માટે આવશ્યક. |
 | **`auto`**                  | upstream પહેલાં request body માંથી thinking/reasoning ના **તમામ ફીલ્ડ્સ દૂર કરે છે**.                                    | ફક્ત ત્યારે, જ્યારે તમે ઇરાદાપૂર્વક **પ્રદાતા** પાસે ડિફૉલ્ટ્સ નક્કી કરાવવા માંગતા હો અને તમને ક્લાયન્ટ-નિયંત્રિત thinking ની જરૂર ન હોય. આનો અર્થ “thinking આપમેળે બતાવો” **નથી**.           |
@@ -31,14 +31,14 @@ Thinking Budget એ નિયંત્રિત કરે છે કે પ્�
 
 ## આ શું **નથી**
 
-| સુવિધા                                     | સંબંધ                                                                                                                                 |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Compression** (Caveman, RTK, stacked, …) | અલગ pipeline. દરેક thinking-budget મોડ હેઠળ કાર્ય કરે છે.                                                                             |
-| **Prompt / semantic cache**                | અલગ છે. thinking-budget મોડથી અપ્રભાવિત.                                                                                              |
-| **Combo routing / fallbacks**              | અલગ છે. અપ્રભાવિત.                                                                                                                    |
-| **API-key token limits / cost budgets**    | અલગ છે. અપ્રભાવિત.                                                                                                                    |
-| **Reasoning replay cache**                 | કડક પ્રદાતાઓ (DeepSeek, Kimi, Qwen-thinking, …) માટે multi-turn re-inject. Desktop ના “show thinking” જેવું નથી.                      |
-| **`encrypted_content` ને decrypt કરવું**   | **અશક્ય.** OpenAI/Codex ના ખાનગી reasoning blobs અપારદર્શક હોય છે. OmniRoute તેમને ક્યારેય decrypt કરતું નથી (#7095 / #7176 / #7304). |
+| સુવિધા                                     | સંબંધ                                                                                                                                |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Compression** (Caveman, RTK, stacked, …) | અલગ pipeline. દરેક thinking-budget મોડ હેઠળ કાર્ય કરે છે.                                                                            |
+| **Prompt / semantic cache**                | અલગ છે. thinking-budget મોડથી અપ્રભાવિત.                                                                                             |
+| **Combo routing / fallbacks**              | અલગ છે. અપ્રભાવિત.                                                                                                                   |
+| **API-key token limits / cost budgets**    | અલગ છે. અપ્રભાવિત.                                                                                                                   |
+| **Reasoning replay cache**                 | કડક પ્રદાતાઓ (DeepSeek, Kimi, Qwen-thinking, …) માટે multi-turn re-inject. Desktop ના “show thinking” જેવું નથી.                     |
+| **`encrypted_content` ને decrypt કરવું**   | **અશક્ય.** OpenAI/Codex ના ખાનગી reasoning blobs અપારદર્શક હોય છે. 67router તેમને ક્યારેય decrypt કરતું નથી (#7095 / #7176 / #7304). |
 
 ## દૃશ્યમાન વિચાર-પ્રક્રિયા (Codex / Responses ક્લાયન્ટ્સ)
 
@@ -51,7 +51,7 @@ Thinking Budget એ નિયંત્રિત કરે છે કે પ્�
 જો તમને ફક્ત “એન્ક્રિપ્ટેડ ખાનગી વિચાર-પ્રક્રિયા” મળે, તો:
 
 - મોડ **`auto`** હતો (ક્લાયન્ટની વિનંતી દૂર કરવામાં આવી હતી), અથવા
-- અપસ્ટ્રીમે summary લખાણ વિના `encrypted_content` પરત કર્યું હતું (પ્રદાતાની મર્યાદા; OmniRoute ફક્ત પ્લેસહોલ્ડર દર્શાવી શકે છે, સાદું લખાણ નહીં).
+- અપસ્ટ્રીમે summary લખાણ વિના `encrypted_content` પરત કર્યું હતું (પ્રદાતાની મર્યાદા; 67router ફક્ત પ્લેસહોલ્ડર દર્શાવી શકે છે, સાદું લખાણ નહીં).
 
 ## API ઉદાહરણો
 
@@ -71,7 +71,7 @@ curl -sS -X PUT https://localhost:20128/api/settings/thinking-budget \
 
 ### સ્થાયી સંગ્રહ / પુનઃપ્રારંભ
 
-મૂલ્ય settings કી `thinkingBudget` હેઠળ સંગ્રહિત થાય છે અને પ્રોસેસ શરૂ થાય ત્યારે લોડ થાય છે (`hydrateThinkingBudgetConfig`). DB અથવા અમુક બિન-API પાથ દ્વારા ફેરફાર કર્યા પછી, **OmniRoute પ્રોસેસને પુનઃપ્રારંભ કરો**, જેથી ઇન-મેમરી singleton ડિસ્ક સાથે સુસંગત બને.
+મૂલ્ય settings કી `thinkingBudget` હેઠળ સંગ્રહિત થાય છે અને પ્રોસેસ શરૂ થાય ત્યારે લોડ થાય છે (`hydrateThinkingBudgetConfig`). DB અથવા અમુક બિન-API પાથ દ્વારા ફેરફાર કર્યા પછી, **67router પ્રોસેસને પુનઃપ્રારંભ કરો**, જેથી ઇન-મેમરી singleton ડિસ્ક સાથે સુસંગત બને.
 
 ## ઑપરેટર ચેકલિસ્ટ
 

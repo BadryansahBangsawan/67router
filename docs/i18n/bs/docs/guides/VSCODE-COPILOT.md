@@ -6,7 +6,7 @@
 
 # VS Code Copilot Chat — OmniCopilot ekstenzija
 
-**OmniCopilot** postavlja svaki model koji vaš OmniRoute nudi u _izvorni_ GitHub Copilot Chat birač modela. Nema druge bočne trake, nema zasebnog chat interfejsa — Copilotov agent mod, pozivanje alata, MCP serveri i prilagođene instrukcije nastavljaju raditi, samo pokrenuti na modelu koji odaberete.
+**OmniCopilot** postavlja svaki model koji vaš 67router nudi u _izvorni_ GitHub Copilot Chat birač modela. Nema druge bočne trake, nema zasebnog chat interfejsa — Copilotov agent mod, pozivanje alata, MCP serveri i prilagođene instrukcije nastavljaju raditi, samo pokrenuti na modelu koji odaberete.
 
 |                            |                                                                                                                                                 |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,11 +21,11 @@
 
 ## Postavljanje
 
-1. **Pokrenite OmniRoute** — `npm install -g omniroute && omniroute` (kontrolna ploča na `http://localhost:20128`).
+1. **Pokrenite 67router** — `npm install -g omniroute && omniroute` (kontrolna ploča na `http://localhost:20128`).
 2. **Instalirajte ekstenziju** — pretražite "OmniRoute" u prikazu ekstenzija.
 3. **Odaberite model** — Copilot Chat → birač modela → **Manage Models…** → **OmniRoute**, zatim označite ono što želite.
 
-Nema ništa za konfigurisanje kada OmniRoute radi na zadanom portu. Za udaljenu instancu, otvorite **OmniRoute ikonu u Activity Bar-u** (ili pokrenite `OmniRoute: Manage Connection`) i postavite:
+Nema ništa za konfigurisanje kada 67router radi na zadanom portu. Za udaljenu instancu, otvorite **OmniRoute ikonu u Activity Bar-u** (ili pokrenite `OmniRoute: Manage Connection`) i postavite:
 
 - **Server URL** — korijen servera, npr. `http://192.168.0.15:20128`. Sufiks `/v1` dodaje ekstenzija; nemojte ga uključivati.
 - **API ključ** — samo kada server postavi `REQUIRE_API_KEY`. Pohranjeno u OS keychain putem VS Code SecretStorage, nikada u `settings.json`.
@@ -58,7 +58,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 /v1/chat/completions. Use POST /v1/images/generations instead.
 ```
 
-pa se filtriraju prema njihovom `type` polju prije nego što stignu do birača. **Responses-API modeli su zadržani** — svaki Codex / GPT-5.x unos reklamira `supported_endpoints: ["responses"]`, a OmniRoute ih prevodi za `/v1/chat/completions`, tako da su savršeno upotrebljivi.
+pa se filtriraju prema njihovom `type` polju prije nego što stignu do birača. **Responses-API modeli su zadržani** — svaki Codex / GPT-5.x unos reklamira `supported_endpoints: ["responses"]`, a 67router ih prevodi za `/v1/chat/completions`, tako da su savršeno upotrebljivi.
 
 ### Provajderi koje nikada niste konfigurirali
 
@@ -68,7 +68,7 @@ Katalog navodi modele od provajdera s **aktivnom vezom** _plus_ svakog **noAuth*
 
 ## Kontrolna tabla unutar VS Code kartice
 
-`omnicopilot.dashboardOpen: "editor"` prikazuje OmniRoute kontrolnu tablu u kartici editora putem Simple Browser-a umjesto u eksternom pretraživaču. Ugrađivanje je **opciono na serveru** putem `DASHBOARD_ALLOW_EMBED=vscode`, što servira HTML stranice sa `frame-ancestors 'self' vscode-webview:` umjesto podrazumijevanog `frame-ancestors 'none'` + `X-Frame-Options: DENY`. API površina (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) zadržava stroga zaglavlja u svakom slučaju.
+`omnicopilot.dashboardOpen: "editor"` prikazuje 67router kontrolnu tablu u kartici editora putem Simple Browser-a umjesto u eksternom pretraživaču. Ugrađivanje je **opciono na serveru** putem `DASHBOARD_ALLOW_EMBED=vscode`, što servira HTML stranice sa `frame-ancestors 'self' vscode-webview:` umjesto podrazumijevanog `frame-ancestors 'none'` + `X-Frame-Options: DENY`. API površina (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) zadržava stroga zaglavlja u svakom slučaju.
 
 > ⚠️ **Ovo je flag za vrijeme izgradnje (build-time), a ne za vrijeme izvršavanja (runtime).** Next.js kompajlira `headers()` u manifest rute, tako da `next.config.mjs` čita varijablu dok se bundle gradi (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`). Exportovanje iste ispred već izgrađenog servera ne mijenja ništa — zaglavlja su fiksirana.
 
@@ -98,7 +98,7 @@ Bez build-a sa omogućenim ugrađivanjem, stranica odbija da se prikaže u okvir
 
 | Simptom                                                         | Uzrok / rješenje                                                                                                                                                                                                                                                               |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Nema OmniRoute modela u biraču                                  | Server nije dostupan. Tačka na statusnoj traci postaje siva; pokrenite `OmniRoute: Check Connection`. Otkrivanje je tiho po dizajnu i ne dodaje modele umjesto da vas upozori.                                                                                                 |
+| Nema 67router modela u biraču                                   | Server nije dostupan. Tačka na statusnoj traci postaje siva; pokrenite `OmniRoute: Check Connection`. Otkrivanje je tiho po dizajnu i ne dodaje modele umjesto da vas upozori.                                                                                                 |
 | Svaki model se pojavljuje dvaput                                | Koristite OmniCopilot stariji od 1.0.1 — ažurirajte. Ekstenzija sada zahtijeva `?prefix=alias`.                                                                                                                                                                                |
 | Model za sliku/audio je bio naveden, a sada ga nema             | Namjerno od 1.0.1 — nikada nije mogao odgovoriti na zahtjev za chat.                                                                                                                                                                                                           |
 | Panel nedostaje na traci aktivnosti (Activity Bar)              | VS Code pomjera dodatne kontejnere prikaza u "…" preliv (overflow) na dnu trake aktivnosti, a kontejner sakriven desnim klikom ostaje sakriven. Kliknite desnim tasterom miša na traku aktivnosti → označite **OmniRoute**, ili ga otvorite sa `OmniRoute: Manage Connection`. |
@@ -110,6 +110,6 @@ Bez build-a sa omogućenim ugrađivanjem, stranica odbija da se prikaže u okvir
 ## Vidi također
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — svi ostali alati za kodiranje
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — upravljanje udaljenim OmniRoute-om
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — upravljanje udaljenim 67router-om
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — ugovor za `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — vlastite bilješke kataloga ekstenzije

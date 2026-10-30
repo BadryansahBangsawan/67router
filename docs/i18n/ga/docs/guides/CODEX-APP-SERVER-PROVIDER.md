@@ -4,12 +4,12 @@
 
 ---
 
-Nochtann OmniRoute **dhá** bhealach chun OpenAI Codex a úsáid:
+Nochtann 67router **dhá** bhealach chun OpenAI Codex a úsáid:
 
 | Soláthraí              | Conas a dhéanann sé cumarsáid le OpenAI                                                                                                                                                                                               | Foráil úsáide                                                                        |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | **`codex`**            | Athsheinneann sé do chomhartha ChatGPT/OpenAI OAuth go díreach chuig Responses API                                                                                                                                                    | **Tá** — níl an seisiún oifigiúil údaraithe lena úsáid trí sheachfhreastalaí/ródaire |
-| **`codex-app-server`** | Tiomáineann sé **`codex app-server` de chuid Codex CLI féin** thar JSON-RPC/WebSocket; is leis an CLI a OAuth agus déanann sé é a athnuachan go huathoibríoch (`~/.codex/auth.json`) díreach cosúil le seisiún idirghníomhach `codex` | **Níl** — ní athsheinneann OmniRoute comhartha chuig an API riamh                    |
+| **`codex-app-server`** | Tiomáineann sé **`codex app-server` de chuid Codex CLI féin** thar JSON-RPC/WebSocket; is leis an CLI a OAuth agus déanann sé é a athnuachan go huathoibríoch (`~/.codex/auth.json`) díreach cosúil le seisiún idirghníomhach `codex` | **Níl** — ní athsheinneann 67router comhartha chuig an API riamh                     |
 
 Ós rud é nach n-athsheinneann `codex-app-server` comhartha riamh, ní bhaineann an
 fhoráil úsáide maidir le hathsheinm seisiúin leis. Éilíonn sé, áfach, go mbeidh
@@ -21,7 +21,7 @@ don CLI sin a bheith **sínithe isteach**.
 ## 1. Ailtireacht
 
 ```
-┌─ Aip OmniRoute ─────────────────┐        ┌─ Taobhcharr codex-app-server ────────┐
+┌─ Aip 67router ─────────────────┐        ┌─ Taobhcharr codex-app-server ────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ comhartha cumais)            │  JSON  │  --ws-auth capability-token         │
@@ -80,7 +80,7 @@ as dáta (déantar cóip chúltaca i gcónaí).
 - **Úsáideoir poiblí, gan codex suiteáilte go háitiúil** — ní bhaineann sé sin
   le hábhar: tá an CLI sa taobhcharr. Ní dhéanann an t-úsáideoir ach
   fíordheimhniú tríd an bpainéal.
-- **OmniRoute ar chrua-earraí lom (gan taobhcharr, codex ar an óstríomhaire)** —
+- **67router ar chrua-earraí lom (gan taobhcharr, codex ar an óstríomhaire)** —
   socraigh `OMNIROUTE_CODEX_APPSERVER_WS` chuig do `codex app-server` féin agus
   cinntigh go bhfuil codex an óstríomhaire sínithe isteach; taispeántar an leid
   "codex gan a bheith suiteáilte" má tá an dénártha ar iarraidh.

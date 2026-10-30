@@ -36,7 +36,7 @@ test("image handler blocks exact retired providers before any upstream fetch", a
 
       assert.equal(result.success, false, resolvedProvider);
       assert.equal(result.status, 410, resolvedProvider);
-      assert.equal(result.error, "Provider has been retired from OmniRoute runtime.");
+      assert.equal(result.error, "Provider has been retired from 67router runtime.");
     }
     assert.equal(fetchCalls, 0);
   } finally {

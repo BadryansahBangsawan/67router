@@ -4,7 +4,7 @@
 
 ---
 
-Noen tjenester ble integrert i OmniRoute og senere fjernet fordi de som driver dem, ba om det. Denne siden er den varige oversikten over disse fjerningene. Dens eneste formål er å hindre at de kommer tilbake ved et uhell: En bidragsyter som finner en gammel fork, en bufret npm-tarball, en arkivert sak eller en forespørsel om å «gjenopprette leverandør X», trenger ett sted som sier **ikke gjeninnfør**.
+Noen tjenester ble integrert i 67router og senere fjernet fordi de som driver dem, ba om det. Denne siden er den varige oversikten over disse fjerningene. Dens eneste formål er å hindre at de kommer tilbake ved et uhell: En bidragsyter som finner en gammel fork, en bufret npm-tarball, en arkivert sak eller en forespørsel om å «gjenopprette leverandør X», trenger ett sted som sier **ikke gjeninnfør**.
 
 Denne siden er **ikke** en liste over døde eller avviklede tjenester. Disse spores i
 [`FREE_TIERS.md`](FREE_TIERS.md) («Fjernet / ingen gratisnivå») og kan komme tilbake hvis tjenesten
@@ -13,10 +13,10 @@ forespørselen, og det må lenkes til denne tillatelsen fra oppføringen.
 
 ## Retningslinjer
 
-1. **En fjerningsforespørsel fra en tjenesteoperatør etterkommes og diskuteres ikke.** OmniRoute er
+1. **En fjerningsforespørsel fra en tjenesteoperatør etterkommes og diskuteres ikke.** 67router er
    ikke tilknyttet noen oppstrømstjeneste. Når operatøren av en tjeneste ber om at
    integrasjonen fjernes, blir den fjernet, uansett om integrasjonen brukte et offisielt API eller ikke.
-2. **«Fjernet» betyr fra alle flater OmniRoute kontrollerer.** Eksekveringskomponent, registeroppføring, leverandør-ID
+2. **«Fjernet» betyr fra alle flater 67router kontrollerer.** Eksekveringskomponent, registeroppføring, leverandør-ID
    og alias, modelliste, endepunkter, miljøvariabler, ikon, kontrollpanelkort, den
    genererte leverandørreferansen, `FREE_TIERS.md`, miljøreferansen, antall i README,
    `llm.txt`-speil, dedikerte tester og referansesnapshots, kodekommentarer, CHANGELOG-punkter
@@ -27,7 +27,7 @@ forespørselen, og det må lenkes til denne tillatelsen fra oppføringen.
 3. **Gjeninnfør aldri en oppføring på denne siden uten skriftlig tillatelse.** Dette omfatter
    å legge ID-en eller aliaset tilbake i en leverandørkatalog, legge domenene til i en eksekveringskomponent,
    godta en pull request fra en bidragsyter som «gjenoppretter» den, legge den til i katalogen over gratismodeller eller
-   dokumentere en manuell måte å nå den på gjennom OmniRoute. Lukk slike pull requests og saker med en
+   dokumentere en manuell måte å nå den på gjennom 67router. Lukk slike pull requests og saker med en
    lenke til denne siden.
 4. **Hold oppføringen minimal.** Registrer bare det en kontrollør trenger for å gjenkjenne en
    gjeninnføring: identifikatorer, domener, datoer og pull requesten som utførte fjerningen.
@@ -44,7 +44,7 @@ forespørselen, og det må lenkes til denne tillatelsen fra oppføringen.
 | 2026-08-12  | `puter`           | `pu`     | `puter.com`                                                     | Puters eier (Nariman Jelveh)                                                                                                                                                | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Leverandør med API-nøkkel. Migreringen `152_remove_puter_provider.sql` rydder opp i lagret konfigurasjon.                                                                                                                                                                                                                                                                                                                              |
 | 2026-09-02  | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                         | Tjenesteoperatøren (e-post til kundestøtte)                                                                                                                                 | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Leverandør uten nøkkel. Skriftlig forespørsel mottatt 2026-08-30. Tilknyttede saker og diskusjoner ble slettet, og PR-er fikk nye titler.                                                                                                                                                                                                                                                                                              |
 | 2026-09-21  | `gemini-business` | `gembiz` | `business.gemini.google`                                        | Beslutning fra prosjekteieren (sak [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                                        | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Nettleverandør basert på informasjonskapsler. Google avviklet endepunktet `BardFrontendService/StreamGenerate` som eksekutoren brukte. Erstatningen (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer-JWT initialisert fra `__Secure-C_SES`/`csesidx`) kan ikke bygges eller valideres uten en aktiv Gemini Enterprise-/Workspace-konto, noe prosjektet ikke har. Avviklet fremfor å bli omskrevet uten verifisering. |
-| 2026-09-21  | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                | Beslutning fra prosjekteieren (`#14224`)                                                                                                                                    | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Leverandør med informasjonskapselbasert autentisering, ikke en nedstenging fra operatøren. `studio-api.suno.ai` ble suspendert (503). Den aktive verten krever utveksling av en Clerk-JWT samt en betalt avhengighet for å løse hCaptcha, noe OmniRoute valgte å ikke legge til for én musikkleverandør. `kie/suno-v4.0` og `kie/suno-v3.5` (driftet av kie.ai) er upåvirket og støttes fortsatt.                                      |
+| 2026-09-21  | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                | Beslutning fra prosjekteieren (`#14224`)                                                                                                                                    | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Leverandør med informasjonskapselbasert autentisering, ikke en nedstenging fra operatøren. `studio-api.suno.ai` ble suspendert (503). Den aktive verten krever utveksling av en Clerk-JWT samt en betalt avhengighet for å løse hCaptcha, noe 67router valgte å ikke legge til for én musikkleverandør. `kie/suno-v4.0` og `kie/suno-v3.5` (driftet av kie.ai) er upåvirket og støttes fortsatt.                                       |
 | 2026-10-10  | `opencode`        | `oc`     | `opencode.ai/zen/v1` (gratisnivå; vert delt med `opencode-zen`) | Forebyggende fjerning (beslutning fra prosjekteieren), i tråd med OpenCode-operatørens offentlige forespørsel om fjerning til det oppstrøms 9router-prosjektet (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Bare den nøkkelløse leverandøren «OpenCode Free» fjernes. Autentiserte `opencode-zen` og `opencode-go`, alle modeller i Zen-katalogen og deres forespørselskontrakter, OpenCode-klientintegrasjonene og `@omniroute/opencode-plugin*` beholdes. Migreringen `207_remove_opencode_free_provider.sql` flytter eldre tilkoblinger som inneholder en API-nøkkel, til Zen og rydder opp i nøkkelløs konfigurasjon.                          |
 
 ## Legge til en oppføring
@@ -59,5 +59,5 @@ Når en ny fjerningsforespørsel mottas:
    API-nøkkelleverandør med lagrede tilkoblinger (legg til en migrering).
 3. Legg til én rad i tabellen ovenfor og identifikatorene i
    `tests/unit/removed-providers-blocklist.test.ts`, i samme pull request.
-4. Svar operatøren når pull requesten er slått sammen, med en liste over hva som ble fjernet og hva OmniRoute
+4. Svar operatøren når pull requesten er slått sammen, med en liste over hva som ble fjernet og hva 67router
    ikke kan endre (allerede publiserte npm- og Docker-versjoner, git-historikk og tredjepartsforker).

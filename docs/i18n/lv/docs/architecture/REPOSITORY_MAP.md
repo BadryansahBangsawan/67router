@@ -5,7 +5,7 @@
 ---
 
 > **Katram direktorijam un saknes failam — vienas rindas apraksts.**
-> Pēdējo reizi atjaunināts: 2026-06-28 — OmniRoute v3.8.40
+> Pēdējo reizi atjaunināts: 2026-06-28 — 67router v3.8.40
 >
 > Izmantojiet šo karti, lai ātri orientētos kodu bāzē. Lai izpētītu tēmas padziļināti, sekojiet saitēm uz attiecīgo dokumentāciju.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Pilna laidiena darbplūsma (prasmes, husky, konvencionālie komiti, izvietošana)                                       |
 | `COVERAGE_PLAN.md`          | Pārklājuma mērķi un pašreizējais stāvoklis                                                                           |
 | `FREE_TIERS.md`             | Atlasīti bezmaksas līmeņa pakalpojumu sniedzēji (48+ bezmaksas un 11 OAuth)                                          |
-| `CLI-TOOLS.md`              | Ārējās CLI integrācijas un iekšējais OmniRoute CLI                                                                   |
+| `CLI-TOOLS.md`              | Ārējās CLI integrācijas un iekšējais 67router CLI                                                                    |
 | `I18N.md`                   | i18n arhitektūra, valodas pievienošana, 67 lokalizācijas                                                             |
 | `UNINSTALL.md`              | Tīras atinstalēšanas darbības                                                                                        |
 | `PROVIDER_REFERENCE.md`     | **Automātiski ģenerēts** 375 pakalpojumu sniedzēju katalogs (atkārtota ģenerēšana: `npm run gen:provider-reference`) |

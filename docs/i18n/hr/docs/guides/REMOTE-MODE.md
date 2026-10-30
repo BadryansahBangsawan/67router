@@ -4,7 +4,7 @@
 
 ---
 
-Pokrenite CLI `omniroute` na svom prijenosnom računalu dok se sam OmniRoute izvršava negdje drugdje
+Pokrenite CLI `omniroute` na svom prijenosnom računalu dok se sam 67router izvršava negdje drugdje
 (na VPS-u, kućnom poslužitelju ili drugom računalu na vašem Tailnetu). Jednom se prijavite pomoću
 `omniroute connect`, a nakon toga **svaka** CLI naredba cilja taj udaljeni
 poslužitelj — iste naredbe, isti izlaz, samo se izvršavaju na udaljenom poslužitelju.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← zapisuje lokalni Codex profil iz 
 ## Kako funkcionira
 
 ```
-vaše prijenosno računalo                 udaljeni OmniRoute (VPS)
+vaše prijenosno računalo                 udaljeni 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (lozinka → token)          │
 │  kontekst: vps     │ ───────────────►  │ izdaje pristupni token         │
@@ -108,7 +108,7 @@ poslužitelju, a ne na vašem računalu, pa zaslon za pristanak **zauvijek ostaj
 nikad ne izdaje kod** — uobičajena zamjenska mogućnost „zalijepite URL povratnog poziva”
 nema što zalijepiti. (To je ograničenje na Googleovoj strani: isto se blokiranje događa
 u svakom proxyju koji koristi ugrađeni Antigravityjev klijent za stolna računala, a ne
-samo u OmniRouteu.)
+samo u 67routeru.)
 
 Nadzorna ploča to otkriva prije nego što zapnete: otvaranje stavke **Davatelji → Antigravity →
 Poveži** s adrese koja nije localhost zamjenjuje generičku obavijest „kopirajte URL povratnog poziva”
@@ -116,7 +116,7 @@ dvama rješenjima u nastavku, pri čemu su vaš host i port već uneseni.
 (Računa se i LAN adresa — `192.168.x.x` nije localhost kada je riječ o ovom povratnom
 pozivu.)
 
-Postoje dva podržana načina povezivanja Antigravityja s udaljenim OmniRouteom.
+Postoje dva podržana načina povezivanja Antigravityja s udaljenim 67routerom.
 
 ### Opcija A — lokalni pomoćnik za prijavu (preporučeno)
 
@@ -154,7 +154,7 @@ npx omniroute login antigravity --no-push
 
 Zatim na **udaljenoj** nadzornoj ploči otvorite **Davatelji → Antigravity → Poveži** i zalijepite
 blob `omniroute-cred-v1.…` u polje **Korak 2** (prihvaća ili URL povratnog
-poziva ili blob vjerodajnice). OmniRoute ga dekodira, izvršava uvođenje u Cloud Code
+poziva ili blob vjerodajnice). 67router ga dekodira, izvršava uvođenje u Cloud Code
 na strani poslužitelja i trajno pohranjuje vezu.
 
 > Blob sadrži token za osvježavanje — postupajte s njim kao sa zaporkom. Pri izravnom slanju
@@ -195,7 +195,7 @@ porta specifičnog za davatelja koji bi trebalo tunelirati.
 ## Povezivanje Codexa / Groka na udaljenoj instalaciji (pružatelji s fiksnom povratnom adresom sučelja petlje)
 
 Codex, xAI (`xai-oauth`) i Grok CLI (`grok-cli`) registriraju **fiksni** `redirect_uri`
-sučelja petlje u svojoj vanjskoj OAuth aplikaciji. OmniRoute ga ne može promijeniti —
+sučelja petlje u svojoj vanjskoj OAuth aplikaciji. 67router ga ne može promijeniti —
 pružatelj uvijek preusmjerava preglednik natrag na istu, unaprijed zadanu adresu:
 
 | Pružatelj   | Fiksna povratna adresa na koju pružatelj preusmjerava |
@@ -204,7 +204,7 @@ pružatelj uvijek preusmjerava preglednik natrag na istu, unaprijed zadanu adres
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                     |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                     |
 
-`localhost` ovdje znači **računalo na kojem je pokrenut preglednik**, dok OmniRouteov
+`localhost` ovdje znači **računalo na kojem je pokrenut preglednik**, dok 67routerov
 PKCE poslužitelj za povratni poziv sluša na sučelju petlje **poslužitelja**. Ako otvorite
 nadzornu ploču na LAN adresi poput `http://192.168.0.15:20128`, te se dvije strane
 nikada neće povezati: autorizacijski kôd isporučuje se na `localhost:1455` vašeg
@@ -225,7 +225,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Potrebna su dva prosljeđivanja, a prosljeđivanje samo jednog i dalje ne uspijeva:
 
 - **`20128`** (priključak nadzorne ploče) čini ishodište stvarnim lokalnim hostom,
-  zbog čega OmniRoute uopće pokreće PKCE poslužitelj za povratni poziv — LAN
+  zbog čega 67router uopće pokreće PKCE poslužitelj za povratni poziv — LAN
   ishodište nikada ne dolazi do te grane.
 - **`1455`** (fiksni priključak pružatelja za povratni poziv) mjesto je na koje se
   preglednik vraća; mora se tunelirati do sučelja petlje poslužitelja.
@@ -342,7 +342,7 @@ omniroute contexts current         # the active server, auth status, scope
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

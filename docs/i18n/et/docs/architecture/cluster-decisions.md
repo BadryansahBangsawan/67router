@@ -14,7 +14,7 @@ Kaks valikulist Compose'i profiili (`memory`, `bifrost`) olemasolevale 8 teenuse
 
 ## Miks see on konservatiivne
 
-OmniRoute'i olemasolev juurutuslahendus on juba ressursisäästlik ja end tõestanud:
+67router'i olemasolev juurutuslahendus on juba ressursisäästlik ja end tõestanud:
 
 - **`redis:7-alpine`** käitleb tootmiskeskkonna mastaabis päringusageduse piiramise ja vahemälu töökoormust.
 - **SQLite + sqlite-vec + FTS5** katavad kohaliku mälu, vektorotsingu ja tekstiotsingu (vt [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Need kaks profiili on **horisontaalse skaleerimise valikud juurutustele, mis jõ
 
 - Käitate ≥3 `omniroute` replikat ja soovite teenusepakkujate roteerimise tsentraliseerida ühte Go protsessi.
 - Soovite kõigi replikate üleselt ühtset auditi- ja logimisliidest ülesvoolu teenusepakkujatele saadetavate päringute jaoks.
-- Soovite 1. taseme marsruutimiskihi horisontaalset skaleerimist OmniRoute'i replikatest sõltumatult.
+- Soovite 1. taseme marsruutimiskihi horisontaalset skaleerimist 67router'i replikatest sõltumatult.
 
 **Mida see lisab:**
 

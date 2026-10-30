@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute durchsucht Fehlerantworten von Upstream-Anbietern nach Signalen, die darauf hinweisen, dass ein Anbieter-**Konto dauerhaft unbrauchbar ist** (gesperrt / deaktiviert / wegen Verstößen gegen die Nutzungsbedingungen gesperrt), und versetzt die entsprechende Verbindung bei einem Treffer in einen **terminalen Zustand `banned`**, sodass sie nicht mehr für Anfragen ausgewählt wird. Dies wird über die Einstellungskarte **Sicherheit → Gesperrte Schlüsselwörter** konfiguriert („Zusätzliche Schlüsselwörter, die die Erkennung dauerhaft gesperrter Konten auslösen. Integrierte Schlüsselwörter gelten immer.“).
+67router durchsucht Fehlerantworten von Upstream-Anbietern nach Signalen, die darauf hinweisen, dass ein Anbieter-**Konto dauerhaft unbrauchbar ist** (gesperrt / deaktiviert / wegen Verstößen gegen die Nutzungsbedingungen gesperrt), und versetzt die entsprechende Verbindung bei einem Treffer in einen **terminalen Zustand `banned`**, sodass sie nicht mehr für Anfragen ausgewählt wird. Dies wird über die Einstellungskarte **Sicherheit → Gesperrte Schlüsselwörter** konfiguriert („Zusätzliche Schlüsselwörter, die die Erkennung dauerhaft gesperrter Konten auslösen. Integrierte Schlüsselwörter gelten immer.“).
 
 Diese Seite dokumentiert die integrierte Liste, den Erkennungsablauf, seinen Geltungsbereich, das sichere Hinzufügen benutzerdefinierter Schlüsselwörter und die Wiederherstellung einer als gesperrt markierten Verbindung. Der terminale Zustand selbst ist Teil des Resilienzmodells — siehe
 [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) („Terminale Zustände“).

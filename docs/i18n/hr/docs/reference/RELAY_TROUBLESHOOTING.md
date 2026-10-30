@@ -5,9 +5,9 @@
 ---
 
 Releji (Vercel, Deno, Cloudflare) prekidaju uzvodnu vezu na
-backendu bez poslužitelja kako bi OmniRoute mogao slati izlazni promet iz stabilne regije, dok
+backendu bez poslužitelja kako bi 67router mogao slati izlazni promet iz stabilne regije, dok
 API ključ pružatelja ostaje na strani poslužitelja. Ovaj dokument obrađuje dva načina kvara
-s kojima se operateri susreću u produkciji i postupke oporavka koje OmniRoute nudi za
+s kojima se operateri susreću u produkciji i postupke oporavka koje 67router nudi za
 svaki od njih.
 
 ## Kako se pohranjuje autentifikacija releja
@@ -36,7 +36,7 @@ autentifikacijske podatke.
 1. Otvorite **Postavke → Skup proxyja**.
 2. Redci releja kojima nedostaje autentifikacija prikazuju žutu oznaku `auth missing` i
    gumb **Popravi**.
-3. Kliknite **Popravi**. OmniRoute poziva
+3. Kliknite **Popravi**. 67router poziva
    `POST /api/settings/proxies/[id]/repair-relay`, koji:
    - dešifrira `relayAuthEnc` pomoću **trenutačnog** ključa,
    - zapisuje nešifrirani `relayAuth` natrag u `notes`,
@@ -68,7 +68,7 @@ token ne može oporaviti, pa ga nikada ne morate ručno tražiti.
 **Simptom:** test proxyja (gumb `speed`) pokazuje da je relej aktivan, ali zahtjevi
 i dalje povremeno ne uspijevaju.
 
-Provjerite zaglavlja informacija o releju koja vraća OmniRouteova sonda za automatsko testiranje
+Provjerite zaglavlja informacija o releju koja vraća 67routerova sonda za automatsko testiranje
 (pogledajte **Postavke → Skup proxyja** i brojače `relayTested` / `relayAlive`):
 
 - `x-relay-url` — koji je backend releja odgovorio.

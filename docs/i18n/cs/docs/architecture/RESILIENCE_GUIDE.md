@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute má tři odlišné, ale vzájemně související mechanismy odolnosti. Každý má jiný rozsah a účel. Při ladění chování směrování je udržujte oddělené.
+67router má tři odlišné, ale vzájemně související mechanismy odolnosti. Každý má jiný rozsah a účel. Při ladění chování směrování je udržujte oddělené.
 
 ![Třívrstvý model odolnosti](../diagrams/exported/resilience-3layers.svg)
 
@@ -220,7 +220,7 @@ Tyto tři hlavičky afinity relace se nikdy nepředávají upstream — executor
 
 ### Exkluzivní lease spojení spravované relace
 
-**Rozsah:** jeden aktivní spravovaný HTTP klient/relace vlastní jedno vhodné spojení OmniRoute.
+**Rozsah:** jeden aktivní spravovaný HTTP klient/relace vlastní jedno vhodné spojení 67router.
 
 **Účel:** poskytnout trvalé exkluzivní vlastnictví spojení pro klienty, kteří potřebují pevnou
 směrovací hranici napříč požadavky. To se liší od afinity relace, což je měkká preference
@@ -242,7 +242,7 @@ aktivního připojení. Řídicí hlavičky lease se odstraňují z logů, uchov
 a hlaviček upstream executoru.
 
 Pokud má běžné směrování způsobilé řízené kandidáty, ale každý volný kandidát je obsazen cizím
-aktivním lease, OmniRoute vrátí HTTP `429`, kód lease-capacity-unavailable, stav
+aktivním lease, 67router vrátí HTTP `429`, kód lease-capacity-unavailable, stav
 waiting-for-capacity a omezenou hodnotu `Retry-After` odvozenou z nejdřívější relevantní expirace.
 Běžná prázdná způsobilost není konkurence o lease a zachovává svou stávající sémantiku chyb směrování.
 
@@ -266,7 +266,7 @@ Související mechanismy zůstávají oddělené:
   připojení), pro ostatní providery `getQuotaScopedModelForProvider()`.
 - `404` zablokuje pouhý model (`getModelLockKey()` zúží `not_found`).
 - Jakýkoli jiný stav — transportní/serverové chyby `5xx` a vlastní syntetizovaný
-  `502` z validace kvality v OmniRoute — zablokuje pouze **přesnou**
+  `502` z validace kvality v 67router — zablokuje pouze **přesnou**
   trojici provider/connection/model. Vadný stream na jednom modelu není důkazem
   o kvótě účtu; před tímto pravidlem jediná prázdná odpověď na
   `codex/gpt-5.6-luna` vyřadila z routingu všechny modely `gpt-5*` daného připojení
@@ -400,7 +400,7 @@ souběžnosti podle modelu**, jeden `model=cap` na řádek) nebo pomocí
   představují limity souběžných požadavků v podobě kladných celých čísel.
 - **Místní fronta, žádné zjišťování:** přebytečné požadavky čekají v místní
   frontě se stávající sémantikou fronty/timeoutu (typované chyby přijetí
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute nezjišťuje ani
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router nezjišťuje ani
   neodvozuje upstreamové zásady — vynucuje přesné limity, které operátor
   nakonfiguroval. Nasycená brána modelu nikdy nezakáže poskytovatele a nikdy
   nevytvoří trvalé zablokování modelu; upstreamové chování 429/cooldown/fallback
@@ -505,7 +505,7 @@ Samotná kontrola přijetí je čistá funkce
 ### Pojistka automatického zapnutí rate-limitu a ochrana připojení (`rateLimitProtection`)
 
 **Pojistka automatického zapnutí** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, výchozí `true`):
-Ve výchozím nastavení OmniRoute automaticky zapíná ochranu frontou rate-limitu pro všechna aktivní připojení poskytovatelů s API klíčem (`getProviderCategory(provider) === "apikey"`). To zajišťuje, že příchozí požadavky na upstream API klíče citlivé na omezování jsou řazeny do fronty a škrceny přes Bottleneck, místo aby nárazově narážely na upstream chyby 429. Pojistku lze přepsat proměnnou prostředí `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` vypíná, `true`/`1`/`on` vynutí zapnutí), která má přednost před trvale uloženým nastavením z dashboardu (**Nastavení → Odolnost** / `PATCH /api/resilience`).
+Ve výchozím nastavení 67router automaticky zapíná ochranu frontou rate-limitu pro všechna aktivní připojení poskytovatelů s API klíčem (`getProviderCategory(provider) === "apikey"`). To zajišťuje, že příchozí požadavky na upstream API klíče citlivé na omezování jsou řazeny do fronty a škrceny přes Bottleneck, místo aby nárazově narážely na upstream chyby 429. Pojistku lze přepsat proměnnou prostředí `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` vypíná, `true`/`1`/`on` vynutí zapnutí), která má přednost před trvale uloženým nastavením z dashboardu (**Nastavení → Odolnost** / `PATCH /api/resilience`).
 
 **Sémantika `rateLimitProtection` na úrovni připojení:**
 Ochrana rate-limitu na úrovni jednotlivých připojení je sledována pomocí booleovského pole `rateLimitProtection` na připojeních poskytovatelů (trvale uloženého jako `rate_limit_protection` v SQLite):
@@ -817,7 +817,7 @@ kvóta. Reálná omezení:
 > příručka pro agenta zůstala pod kontextovým limitem 40k. Jedná se o zhuštěný pohled
 > na výše uvedené sekce určený agentovi; číslované sekce zůstávají úplnou referencí.
 
-OmniRoute má tři příbuzné, ale odlišné mechanismy pro dočasná selhání. Při ladění
+67router má tři příbuzné, ale odlišné mechanismy pro dočasná selhání. Při ladění
 chování směrování udržujte jejich rozsah oddělený. Pro rychlý přehled viz
 [diagram 3vrstvé odolnosti](../diagrams/exported/resilience-3layers.svg)
 (zdroj: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd)).

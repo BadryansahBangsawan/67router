@@ -6,7 +6,7 @@
 
 ## İcmal
 
-OmniRoute CLI komandaları lokal idarəetmə API-sində autentifikasiya üçün `x-omniroute-cli-token` sorğu başlığı vasitəsilə göndərilən `HMAC-SHA256(machine-id, salt)` tokenindən istifadə edir.
+67router CLI komandaları lokal idarəetmə API-sində autentifikasiya üçün `x-omniroute-cli-token` sorğu başlığı vasitəsilə göndərilən `HMAC-SHA256(machine-id, salt)` tokenindən istifadə edir.
 
 Bu, CLI alt komandalarının (`omniroute status`, `omniroute providers` və s.) istifadəçidən hər çağırışda JWT və ya parol təqdim etməsini tələb etmədən idarəetmə son nöqtələrinə sorğu göndərməsinə imkan verir.
 

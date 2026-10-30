@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **ရင်းမြစ်:** `open-sse/services/thinkingBudget.ts`
 
-Thinking Budget သည် provider များထံ ပေးပို့နေစဉ် OmniRoute က **client ၏ thinking/reasoning parameter များကို ပြန်လည်ရေးသားခြင်း ရှိ၊ မရှိ** ကို ထိန်းချုပ်သည်။ ၎င်းသည် compression၊ routing သို့မဟုတ် prompt cache ကို ဖွင့်ခြင်း၊ ပိတ်ခြင်း **မပြုလုပ်ပါ**။
+Thinking Budget သည် provider များထံ ပေးပို့နေစဉ် 67router က **client ၏ thinking/reasoning parameter များကို ပြန်လည်ရေးသားခြင်း ရှိ၊ မရှိ** ကို ထိန်းချုပ်သည်။ ၎င်းသည် compression၊ routing သို့မဟုတ် prompt cache ကို ဖွင့်ခြင်း၊ ပိတ်ခြင်း **မပြုလုပ်ပါ**။
 
 ## မုဒ်များ
 
-| မုဒ်                               | OmniRoute လုပ်ဆောင်သည့်အရာ                                                                                                    | အသုံးပြုသင့်သည့်အချိန်                                                                                                                                                                              |
+| မုဒ်                               | 67router လုပ်ဆောင်သည့်အရာ                                                                                                     | အသုံးပြုသင့်သည့်အချိန်                                                                                                                                                                              |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (မူလသတ်မှတ်ချက်) | Client field များကို မပြောင်းလဲဘဲ ထားသည် (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` စသည်)။ | **Codex / Desktop / effort နှင့် reasoning summary များကို ထိန်းချုပ်သင့်သည့် မည်သည့် client မဆို။** Client က `reasoning.summary` ကို တောင်းဆိုသည့်အခါ မြင်ရသော thinking panel များအတွက် လိုအပ်သည်။ |
 | **`auto`**                         | Upstream သို့ မပို့မီ request body မှ thinking/reasoning field **အားလုံးကို ဖယ်ရှားသည်**။                                     | **Provider** က မူလတန်ဖိုးများကို ကိုယ်တိုင်သတ်မှတ်စေလိုပြီး client ထိန်းချုပ်သော thinking ကို မလိုအပ်သည့်အခါမှသာ အသုံးပြုပါ။ “thinking ကို အလိုအလျောက်ပြရန်” **မဟုတ်ပါ**။                           |
@@ -31,14 +31,14 @@ Client တစ်ခု (ဥပမာ Codex Desktop) က `reasoning: { effort: "u
 
 ## ဤအရာ **မဟုတ်သည့်အရာများ**
 
-| လုပ်ဆောင်ချက်                                 | ဆက်နွှယ်မှု                                                                                                                                                                            |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Compression** (Caveman, RTK, stacked, …)    | သီးခြား pipeline ဖြစ်သည်။ Thinking-budget မုဒ်တိုင်းအောက်တွင် အလုပ်လုပ်သည်။                                                                                                            |
-| **Prompt / semantic cache**                   | သီးခြားဖြစ်သည်။ Thinking-budget မုဒ်ကြောင့် သက်ရောက်မှုမရှိပါ။                                                                                                                         |
-| **Combo routing / fallbacks**                 | သီးခြားဖြစ်သည်။ သက်ရောက်မှုမရှိပါ။                                                                                                                                                     |
-| **API-key token limits / cost budgets**       | သီးခြားဖြစ်သည်။ သက်ရောက်မှုမရှိပါ။                                                                                                                                                     |
-| **Reasoning replay cache**                    | တင်းကျပ်သော provider များအတွက် multi-turn ပြန်လည်ထည့်သွင်းမှုဖြစ်သည် (DeepSeek, Kimi, Qwen-thinking, …)။ Desktop ၏ “thinking ပြရန်” နှင့် မတူပါ။                                       |
-| **`encrypted_content` ကို decrypt လုပ်ခြင်း** | **မဖြစ်နိုင်ပါ။** OpenAI/Codex ၏ private reasoning blob များသည် ဖတ်ရှု၍မရသော opaque data များဖြစ်သည်။ OmniRoute သည် ၎င်းတို့ကို မည်သည့်အခါမျှ decrypt မလုပ်ပါ (#7095 / #7176 / #7304)။ |
+| လုပ်ဆောင်ချက်                                 | ဆက်နွှယ်မှု                                                                                                                                                                           |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Compression** (Caveman, RTK, stacked, …)    | သီးခြား pipeline ဖြစ်သည်။ Thinking-budget မုဒ်တိုင်းအောက်တွင် အလုပ်လုပ်သည်။                                                                                                           |
+| **Prompt / semantic cache**                   | သီးခြားဖြစ်သည်။ Thinking-budget မုဒ်ကြောင့် သက်ရောက်မှုမရှိပါ။                                                                                                                        |
+| **Combo routing / fallbacks**                 | သီးခြားဖြစ်သည်။ သက်ရောက်မှုမရှိပါ။                                                                                                                                                    |
+| **API-key token limits / cost budgets**       | သီးခြားဖြစ်သည်။ သက်ရောက်မှုမရှိပါ။                                                                                                                                                    |
+| **Reasoning replay cache**                    | တင်းကျပ်သော provider များအတွက် multi-turn ပြန်လည်ထည့်သွင်းမှုဖြစ်သည် (DeepSeek, Kimi, Qwen-thinking, …)။ Desktop ၏ “thinking ပြရန်” နှင့် မတူပါ။                                      |
+| **`encrypted_content` ကို decrypt လုပ်ခြင်း** | **မဖြစ်နိုင်ပါ။** OpenAI/Codex ၏ private reasoning blob များသည် ဖတ်ရှု၍မရသော opaque data များဖြစ်သည်။ 67router သည် ၎င်းတို့ကို မည်သည့်အခါမျှ decrypt မလုပ်ပါ (#7095 / #7176 / #7304)။ |
 
 ## မြင်နိုင်သော စဉ်းစားမှု (Codex / Responses clients)
 
@@ -51,7 +51,7 @@ Client တစ်ခုတွင် စဉ်းစားမှုစာသား
 “encrypted private reasoning” ကိုသာ ရရှိပါက အောက်ပါအကြောင်းရင်းများထဲမှ တစ်ခု ဖြစ်နိုင်သည်-
 
 - mode သည် **`auto`** ဖြစ်နေခြင်း (client တောင်းဆိုမှုကို ဖယ်ရှားထားသည်)၊ သို့မဟုတ်
-- upstream က summary စာသားမပါဘဲ `encrypted_content` ကို ပြန်ပေးခြင်း (provider ၏ ကန့်သတ်ချက်ဖြစ်ပြီး OmniRoute သည် plaintext မဟုတ်ဘဲ placeholder တစ်ခုကိုသာ ဖော်ပြပေးနိုင်သည်)။
+- upstream က summary စာသားမပါဘဲ `encrypted_content` ကို ပြန်ပေးခြင်း (provider ၏ ကန့်သတ်ချက်ဖြစ်ပြီး 67router သည် plaintext မဟုတ်ဘဲ placeholder တစ်ခုကိုသာ ဖော်ပြပေးနိုင်သည်)။
 
 ## API နမူနာများ
 
@@ -71,7 +71,7 @@ Schema (`updateThinkingBudgetSchema`)- `mode` ∈ `passthrough|auto|custom|adapt
 
 ### အမြဲတမ်းသိမ်းဆည်းမှု / ပြန်လည်စတင်ခြင်း
 
-တန်ဖိုးကို settings key `thinkingBudget` အောက်တွင် သိမ်းဆည်းထားပြီး process စတင်ချိန်၌ (`hydrateThinkingBudgetConfig`) ဖြင့် ထည့်သွင်းအသုံးပြုသည်။ DB သို့မဟုတ် API မဟုတ်သော လမ်းကြောင်းအချို့မှတစ်ဆင့် ပြောင်းလဲပြီးနောက် memory ထဲရှိ singleton နှင့် disk ပေါ်ရှိတန်ဖိုး ကိုက်ညီစေရန် **OmniRoute process ကို ပြန်လည်စတင်ပါ**။
+တန်ဖိုးကို settings key `thinkingBudget` အောက်တွင် သိမ်းဆည်းထားပြီး process စတင်ချိန်၌ (`hydrateThinkingBudgetConfig`) ဖြင့် ထည့်သွင်းအသုံးပြုသည်။ DB သို့မဟုတ် API မဟုတ်သော လမ်းကြောင်းအချို့မှတစ်ဆင့် ပြောင်းလဲပြီးနောက် memory ထဲရှိ singleton နှင့် disk ပေါ်ရှိတန်ဖိုး ကိုက်ညီစေရန် **67router process ကို ပြန်လည်စတင်ပါ**။
 
 ## Operator စစ်ဆေးရန်စာရင်း
 

@@ -4,7 +4,7 @@
 
 ---
 
-E2E-validering i et reelt miljø af OmniRoute-deploymenten, der kører på homologerings-VPS'en
+E2E-validering i et reelt miljø af 67router-deploymenten, der kører på homologerings-VPS'en
 (`HOMOLOG_BASE_URL`, f.eks. `http://192.168.0.15:20128`). Én kommando erstatter den manuelle
 STOP #2-tjekliste for releases med en automatiseret kørsel, der producerer dokumentation.
 

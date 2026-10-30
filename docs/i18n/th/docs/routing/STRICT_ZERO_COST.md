@@ -33,7 +33,7 @@ STRICT_ZERO_COST เพิ่มการตรวจสอบสองประ
 โดยอยู่ถัดจาก `filterPaidOnlyCandidates`):
 
 1. **ไม่มีอยู่ใน `FREE_MODEL_BUDGETS` เลย** → ถูกตัดออก ซึ่งครอบคลุมทั้งโมเดลที่มีค่าใช้จ่ายจริง
-   และ provider/model ใดๆ ที่ OmniRoute ยังไม่ได้จัดประเภท — candidate ใหม่จะเริ่มต้นด้วยการ
+   และ provider/model ใดๆ ที่ 67router ยังไม่ได้จัดประเภท — candidate ใหม่จะเริ่มต้นด้วยการ
    ถูกตัดออก ไม่ใช่ถูกรวมไว้
 2. **`freeType: "keyless"`** → ผ่านทันที **แต่เฉพาะ candidate ที่มาจากเส้นทางแบบไม่ต้อง
    ยืนยันตัวตนจริงๆ เท่านั้น** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -91,7 +91,7 @@ STRICT_ZERO_COST ตรวจสอบสถานะการเข้าถึ
 (กรณี keyless-bypass A/B/C และกรณีหลายบัญชี 1-5)
 
 `ค้นพบโดยอัตโนมัติ`: ผู้ให้บริการ/โมเดลที่เปิดตัวในวันพรุ่งนี้และมี metadata ที่ถูกต้อง (อยู่ใน
-catalog มี usage adapter และ `hardStopGuaranteed: true`) จะใช้งานได้ทันทีที่ OmniRoute รับรู้
+catalog มี usage adapter และ `hardStopGuaranteed: true`) จะใช้งานได้ทันทีที่ 67router รับรู้
 ถึงรายการดังกล่าว — ไม่ต้องเปลี่ยนโค้ด ไม่ต้องเพิ่มรายการใน whitelist และไม่ต้องแก้ไขสิ่งใดในโมดูลนี้
 รายการที่ถูกนำออกจาก catalog ก็จะหายไปในลักษณะเดียวกัน โปรดดู
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` สำหรับหลักฐานการทดสอบการถดถอย (ผ่าน

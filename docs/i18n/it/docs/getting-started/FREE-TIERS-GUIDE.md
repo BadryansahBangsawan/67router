@@ -4,7 +4,7 @@
 
 ---
 
-> **In breve**: Usa i tuoi account idonei presso i provider. OmniRoute combina le connessioni che configuri; non fornisce il budget aggregato di token pubblicizzato. L'accesso gratuito può richiedere la registrazione, una chiave API, l'approvazione o un metodo di pagamento. Continuano ad applicarsi i limiti, le politiche sulla privacy e i termini dei provider.
+> **In breve**: Usa i tuoi account idonei presso i provider. 67router combina le connessioni che configuri; non fornisce il budget aggregato di token pubblicizzato. L'accesso gratuito può richiedere la registrazione, una chiave API, l'approvazione o un metodo di pagamento. Continuano ad applicarsi i limiti, le politiche sulla privacy e i termini dei provider.
 
 ---
 
@@ -15,7 +15,7 @@ significare un endpoint senza autenticazione, una quota ricorrente, un accesso s
 un'approvazione manuale o una promozione temporanea. Alcune opzioni richiedono un account, una chiave API,
 una carta di credito, la verifica KYC o l'accettazione di termini specifici del provider.
 
-OmniRoute **aggrega** le connessioni configurate in un unico endpoint. È comunque necessario registrarsi separatamente presso ciascun provider che richiede un account. Collega tali account e utilizza `model: "auto"` per instradare le richieste tra le destinazioni idonee. Una nuova installazione potrebbe non disporre di alcuna destinazione idonea senza chiave; la sola installazione di OmniRoute non garantisce una risposta corretta dalla chat.
+67router **aggrega** le connessioni configurate in un unico endpoint. È comunque necessario registrarsi separatamente presso ciascun provider che richiede un account. Collega tali account e utilizza `model: "auto"` per instradare le richieste tra le destinazioni idonee. Una nuova installazione potrebbe non disporre di alcuna destinazione idonea senza chiave; la sola installazione di 67router non garantisce una risposta corretta dalla chat.
 
 ---
 
@@ -60,7 +60,7 @@ Questi fornitori offrono **livelli gratuiti** con limiti specifici:
 
 ## Come combinare i piani gratuiti
 
-La caratteristica vincente di OmniRoute è la **combinazione dei piani gratuiti**. Invece di affidarti a un solo provider, puoi collegare più provider gratuiti e lasciare che OmniRoute scelga automaticamente quello migliore per ogni richiesta.
+La caratteristica vincente di 67router è la **combinazione dei piani gratuiti**. Invece di affidarti a un solo provider, puoi collegare più provider gratuiti e lasciare che 67router scelga automaticamente quello migliore per ogni richiesta.
 
 ### Esempio: maggiore copertura dei piani gratuiti
 
@@ -71,7 +71,7 @@ Collega diversi provider per ridurre la dipendenza da una singola quota:
 3. **Pollinations** — accesso senza chiave, soggetto a limiti di frequenza
 4. **LongCat** — credito una tantum alla registrazione (richiede KYC)
 
-Quindi usa `model: "auto"` e OmniRoute:
+Quindi usa `model: "auto"` e 67router:
 
 - Proverà per prima la connessione idonea con la priorità più alta
 - Se la quota è esaurita o il controllo di integrità non riesce → proverà il provider configurato successivo
@@ -105,7 +105,7 @@ accesso illimitato/senza chiave, crediti di registrazione, voci non più disponi
 
 ### Passaggio 5: Fai clic su Connetti
 
-Per un provider `NOAUTH`, OmniRoute non richiede credenziali per il servizio upstream. Ciò non garantisce che il servizio upstream accetti client di terze parti o disponga di capacità disponibile. I provider OAuth e con chiave API devono essere connessi tramite il flusso dell'account documentato. Il client continua a utilizzare la chiave API di OmniRoute mostrata in **Dashboard → Endpoint** quando l'autenticazione del router è abilitata.
+Per un provider `NOAUTH`, 67router non richiede credenziali per il servizio upstream. Ciò non garantisce che il servizio upstream accetti client di terze parti o disponga di capacità disponibile. I provider OAuth e con chiave API devono essere connessi tramite il flusso dell'account documentato. Il client continua a utilizzare la chiave API di 67router mostrata in **Dashboard → Endpoint** quando l'autenticazione del router è abilitata.
 
 ### Passaggio 6: Ripeti
 
@@ -115,7 +115,7 @@ Connetti diversi provider i cui termini e il cui modello di privacy siano adatti
 
 ## Interpretare correttamente il catalogo
 
-- `NOAUTH` significa che OmniRoute non richiede una credenziale del provider; non
+- `NOAUTH` significa che 67router non richiede una credenziale del provider; non
   garantisce disponibilità, privacy o capacità illimitata.
 - `hasFree` è un metadato di individuazione. Può rappresentare una quota ricorrente, accesso senza chiave,
   credito di registrazione, programma di approvazione o promozione.
@@ -128,15 +128,15 @@ Connetti diversi provider i cui termini e il cui modello di privacy siano adatti
 
 ---
 
-## Come OmniRoute migliora i livelli gratuiti
+## Come 67router migliora i livelli gratuiti
 
 ### 1. Fallback automatico
 
-Se un provider gratuito è occupato o non disponibile, OmniRoute prova automaticamente quello successivo. Non devi fare nulla.
+Se un provider gratuito è occupato o non disponibile, 67router prova automaticamente quello successivo. Non devi fare nulla.
 
 ### 2. Instradamento intelligente
 
-OmniRoute sceglie il **miglior provider gratuito** per ogni richiesta in base a:
+67router sceglie il **miglior provider gratuito** per ogni richiesta in base a:
 
 - Velocità — Qual è il provider più veloce in questo momento?
 - Qualità — Qual è il provider migliore per questa attività?
@@ -144,13 +144,13 @@ OmniRoute sceglie il **miglior provider gratuito** per ogni richiesta in base a:
 
 ### 3. Risparmio di token
 
-La pipeline di compressione di OmniRoute può ridurre i token idonei dei prompt e dell'output degli strumenti. Il
+La pipeline di compressione di 67router può ridurre i token idonei dei prompt e dell'output degli strumenti. Il
 risparmio effettivo dipende dal contenuto, dai motori selezionati, dalla contabilizzazione del provider e dalle impostazioni
 di fedeltà; la compressione non moltiplica ogni quota del provider per un valore fisso.
 
 ### 4. Supporto per più account
 
-Se i termini del provider consentono più account o credenziali, OmniRoute può trattare ogni
+Se i termini del provider consentono più account o credenziali, 67router può trattare ogni
 connessione come un candidato di instradamento distinto. Non creare account aggiuntivi per aggirare
 la quota o i criteri di accesso di un provider.
 
@@ -165,7 +165,7 @@ Il catalogo attivo, con deduplicazione dei pool, riporta attualmente:
 | Quota ricorrente quantificata           |     **~1.62B token/mese** | I pool condivisi vengono conteggiati una sola volta; i provider senza limiti non sono inclusi nella somma |
 | Primo mese con crediti di registrazione |          **~2.22B token** | Totale ricorrente più crediti una tantum e ricorrenti                                                     |
 
-Si tratta di stime relative all'intero catalogo, calcolate su account idonei distinti, non di una quota fornita da OmniRoute né di una previsione per una nuova installazione. La capacità utilizzabile dipende dai provider collegati e dalle loro condizioni attuali. I valori vengono calcolati a partire da `open-sse/config/freeModelCatalog.ts`; consulta il
+Si tratta di stime relative all'intero catalogo, calcolate su account idonei distinti, non di una quota fornita da 67router né di una previsione per una nuova installazione. La capacità utilizzabile dipende dai provider collegati e dalle loro condizioni attuali. I valori vengono calcolati a partire da `open-sse/config/freeModelCatalog.ts`; consulta il
 [Riferimento sui piani gratuiti](../reference/FREE_TIERS.md) per informazioni sulla deduplicazione dei pool, sulle segnalazioni relative ai ToS,
 sulle voci non più disponibili e sulla metodologia dei crediti di registrazione.
 
@@ -192,7 +192,7 @@ di produzione. I carichi di lavoro critici dovrebbero disporre di un fallback mo
 
 I compromessi possono includere limiti rigorosi, liste d'attesa, KYC, verifica tramite carta di credito, uso dei
 prompt per l'addestramento, privacy più debole, assenza di SLA, frequenti cambiamenti dei modelli, restrizioni geografiche, consumo eccedente a pagamento o
-rischi legati alle politiche dell'account. OmniRoute mostra i metadati disponibili; sei tu a scegliere cosa abilitare.
+rischi legati alle politiche dell'account. 67router mostra i metadati disponibili; sei tu a scegliere cosa abilitare.
 
 ### "Come posso ottenere una quota gratuita maggiore?"
 
@@ -211,7 +211,7 @@ della classifica dei provider gratuiti come indicatore di qualità e verifica il
 
 ## Prossimi passi
 
-- **[Guida ad Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lascia che OmniRoute scelga la migliore IA per te
+- **[Guida ad Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lascia che 67router scelga la migliore IA per te
 - **[Guida ai provider](./PROVIDERS-GUIDE.md)** — Collega altri provider
 - **[Risoluzione dei problemi](../guides/TROUBLESHOOTING.md)** — Risolvi i problemi comuni
 - **[Riferimento ai piani gratuiti](../reference/FREE_TIERS.md)** — Elenco completo dei piani gratuiti

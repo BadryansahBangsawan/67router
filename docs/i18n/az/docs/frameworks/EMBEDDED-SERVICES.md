@@ -8,9 +8,9 @@
 > **Son yenilənmə:** 2026-09-16
 > **Auditoriya:** Daxili xidmətləri (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua) əlavə edən, texniki xidmət göstərən və ya sazlayan mühəndislər.
 
-Daxili xidmətlər OmniRoute-un quraşdırdığı, nəzarət etdiyi və birinci dərəcəli marşrutlaşdırma hədəfləri kimi
+Daxili xidmətlər 67router-un quraşdırdığı, nəzarət etdiyi və birinci dərəcəli marşrutlaşdırma hədəfləri kimi
 təqdim etdiyi, lokal olaraq quraşdırılan köməkçi proses alətləridir. Xarici provayderlərdən (internet üzərindən
-API açarları vasitəsilə qoşulan) fərqli olaraq, daxili xidmətlər OmniRoute ilə eyni maşında işləyir və loopback üzərindən əlaqə qurur.
+API açarları vasitəsilə qoşulan) fərqli olaraq, daxili xidmətlər 67router ilə eyni maşında işləyir və loopback üzərindən əlaqə qurur.
 
 ---
 
@@ -35,7 +35,7 @@ Yeddi xidmət daxil edilib:
 
 | Xidmət          | npm paketi                           | Standart port | Məqsəd                                                                                                                                                                                                                                                                                                                                                          |
 | --------------- | ------------------------------------ | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                            |     20130     | OmniRoute-un alt-provayder kimi istifadə edə biləcəyi süni intellekt marşrutlaşdırıcısı. Modellər `9router/{sub}/{model}` şəklində təqdim olunur                                                                                                                                                                                                                |
+| **9Router**     | `9router`                            |     20130     | 67router-un alt-provayder kimi istifadə edə biləcəyi süni intellekt marşrutlaşdırıcısı. Modellər `9router/{sub}/{model}` şəklində təqdim olunur                                                                                                                                                                                                                 |
 | **CLIProxyAPI** | GitHub buraxılış binarı (`cliproxy`) |     8317      | Anthropic CLI autentifikasiya axınları üçün lokal proksi adapteri. OAuth tokenlərinin müddəti bitdikdə ehtiyat marşrutlaşdırma təmin edir                                                                                                                                                                                                                       |
 | **Mux**         | `mux` (başsız `mux server`)          |     8322      | Lokal agent orkestrasiya demonu (coder/mux). Yalnız həyat dövrü idarə olunur — marşrutlaşdırma hədəfi deyil (LLM proksiləşdirilməsi yoxdur).                                                                                                                                                                                                                    |
 | **Bifrost**     | `@maximhq/bifrost`                   |     8080      | Go əsaslı süni intellekt şlüzünün relay backend-i. İşlədiyi zaman relay marşrutu (`/v1/relay/`) tərəfindən avtomatik seçilir                                                                                                                                                                                                                                    |
@@ -45,21 +45,21 @@ Yeddi xidmət daxil edilib:
 
 Yeddi xidmətin hamısı eyni nəzarət modelinə əməl edir:
 
-- OmniRoute onları `DATA_DIR/services/{name}/` altında quraşdırır (OmniRoute-un öz `package.json` faylından təcrid olunmuş şəkildə)
-- OmniRoute onları alt proseslər kimi işə salır və izləyir
-- OmniRoute müvəqqəti API açarını alt prosesin mühitinə daxil edir və onu fasiləsiz şəkildə dəyişir (tətbiq olunduğu hallarda)
+- 67router onları `DATA_DIR/services/{name}/` altında quraşdırır (67router-un öz `package.json` faylından təcrid olunmuş şəkildə)
+- 67router onları alt proseslər kimi işə salır və izləyir
+- 67router müvəqqəti API açarını alt prosesin mühitinə daxil edir və onu fasiləsiz şəkildə dəyişir (tətbiq olunduğu hallarda)
 - Bütün idarəetmə marşrutları (`/api/services/*`) **LOCAL_ONLY**-dır — yalnız loopback üzərindən əlçatandır (sərt qayda #17)
 
 ### Əsas qərarlar (dizayn planından)
 
-| Qərar                                                | Dəyər                                                                                          |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| 9Router-un daxili UI-sinə idarəetmə panelindən giriş | `/dashboard/providers/services/9router/embed/*` ünvanında əks proksi                           |
-| Quraşdırma mexanizmi                                 | `execFile` vasitəsilə `npm install {package}` (shell interpolyasiyası olmadan)                 |
-| İstifadə rejimi                                      | Marşrutlaşdırma mühərrikində `9router/{sub}/{model}` kimi qeydiyyata alınmış provayder         |
-| API açarının idarə edilməsi                          | OmniRoute açarı yaradır, saxlanma zamanı şifrələyir (AES-256-GCM) və env vasitəsilə daxil edir |
-| İdarəetmə panelindəki yer                            | `/dashboard/providers/services` (üç tab)                                                       |
-| Avtomatik başlatma                                   | Hər xidmət üçün ayrıca keçid, standart olaraq SÖNDÜRÜLÜB                                       |
+| Qərar                                                | Dəyər                                                                                         |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| 9Router-un daxili UI-sinə idarəetmə panelindən giriş | `/dashboard/providers/services/9router/embed/*` ünvanında əks proksi                          |
+| Quraşdırma mexanizmi                                 | `execFile` vasitəsilə `npm install {package}` (shell interpolyasiyası olmadan)                |
+| İstifadə rejimi                                      | Marşrutlaşdırma mühərrikində `9router/{sub}/{model}` kimi qeydiyyata alınmış provayder        |
+| API açarının idarə edilməsi                          | 67router açarı yaradır, saxlanma zamanı şifrələyir (AES-256-GCM) və env vasitəsilə daxil edir |
+| İdarəetmə panelindəki yer                            | `/dashboard/providers/services` (üç tab)                                                      |
+| Avtomatik başlatma                                   | Hər xidmət üçün ayrıca keçid, standart olaraq SÖNDÜRÜLÜB                                      |
 
 ---
 
@@ -226,7 +226,7 @@ Loopback olmayan sorğular autentifikasiya tokenindən asılı olmayaraq `403 LO
 #### `POST /api/services/9router/install`
 
 9Router-i npm-dən quraşdırır. Öz `package.json` və `node_modules/` faylları ilə birlikdə
-`DATA_DIR/services/9router/` yaradır. OmniRoute-un öz asılılıqları ilə ziddiyyət yaratmır.
+`DATA_DIR/services/9router/` yaradır. 67router-un öz asılılıqları ilə ziddiyyət yaratmır.
 
 **Sorğu gövdəsi** (hamısı istəyə bağlıdır):
 
@@ -386,7 +386,7 @@ Versiya metadatası və API açarının önizləməsi daxil olmaqla canlı + DB 
 
 #### `POST /api/services/9router/auto-start`
 
-Avtomatik başlatma bayrağını dəyişir. `enabled: true` olduqda, OmniRoute növbəti dəfə
+Avtomatik başlatma bayrağını dəyişir. `enabled: true` olduqda, 67router növbəti dəfə
 işə düşərkən xidmət avtomatik başladılır (xidmət quraşdırılıbsa).
 
 **Sorğu gövdəsi:**
@@ -599,7 +599,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Bu proksi:
 
 - Sorğunu `http://127.0.0.1:{port}/{path}` ünvanına yönləndirir (yalnız geri döngə)
-- Daxil olan `cookie` və `authorization` başlıqlarını silir (OmniRoute sessiyasının sızmasının qarşısını alır)
+- Daxil olan `cookie` və `authorization` başlıqlarını silir (67router sessiyasının sızmasının qarşısını alır)
 - 9Router autentifikasiyası üçün `Authorization: Bearer {apiKey}` daxil edir
 - Cavabdan `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` başlıqlarını silir
 - `<base href>` daxil etmək və mütləq yolları normallaşdırmaq üçün HTML cavablarını yenidən yazır (`/foo` → `/dashboard/.../embed/foo`)
@@ -635,7 +635,7 @@ prosesin işə salınmasını başladmasının qarşısını alır. Tam səviyy�
 ### API açarının yeridilməsi
 
 9Router və Mux öz HTTP son nöqtələri üçün API açarı/bearer token tələb edir.
-OmniRoute:
+67router:
 
 1. Xidmətə xas prefikslə (`nr_` 9Router üçün, `mx_` Mux üçün)
    `crypto.randomBytes(32).toString("base64url")` vasitəsilə açar yaradır.
@@ -817,7 +817,7 @@ Daxili xidmət OpenAI ilə uyğun `/v1/chat/completions` son nöqtəsi təqdim e
 **Yoxlama siyahısı:**
 
 1. `GET /api/services/{name}/logs` sorğusunu yoxlayın (və ya idarəetmə panelindəki Logs panelini). `Error: ENOENT`, `address already in use` və ya `Cannot find module` kimi sətirləri axtarın.
-2. `npm`-in PATH-də olduğunu yoxlayın: OmniRoute-u işlədən eyni istifadəçi hesabından `which npm` əmrini icra edin.
+2. `npm`-in PATH-də olduğunu yoxlayın: 67router-u işlədən eyni istifadəçi hesabından `which npm` əmrini icra edin.
 3. Xidmətin quraşdırıldığını yoxlayın: `installedVersion` üçün `GET /api/services/{name}/status` sorğusunu yoxlayın. Əgər `null`-dırsa, əvvəlcə quraşdırmanı başladın.
 4. `DATA_DIR/services/{name}/node_modules/` qovluğunun mövcud və boş olmadığını yoxlayın.
 5. Təmizlənmiş çıxış səbəbi üçün status cavabındakı `lastError` sahəsini yoxlayın.
@@ -849,7 +849,7 @@ Daxili xidmət OpenAI ilə uyğun `/v1/chat/completions` son nöqtəsi təqdim e
 2. Toqquşmaya səbəb olan prosesi tapıb dayandırın: `lsof -ti :20130 | xargs kill -9`.
 3. Port hər xidmət üçün `bootstrap.ts` daxilindəki `port` sahəsi vasitəsilə konfiqurasiya edilə bilər.
 
-**Qeyd:** OmniRoute-un standart 20128 portu ilə toqquşmanın qarşısını almaq üçün 9Router xüsusi olaraq standart 20130 portundan istifadə edir.
+**Qeyd:** 67router-un standart 20128 portu ilə toqquşmanın qarşısını almaq üçün 9Router xüsusi olaraq standart 20130 portundan istifadə edir.
 
 ---
 
@@ -859,13 +859,13 @@ Daxili xidmət OpenAI ilə uyğun `/v1/chat/completions` son nöqtəsi təqdim e
 
 **Səbəblər:**
 
-- `DATA_DIR` və ya onun üst qovluğu OmniRoute prosesi tərəfindən yazıla bilən deyil.
+- `DATA_DIR` və ya onun üst qovluğu 67router prosesi tərəfindən yazıla bilən deyil.
 - Qoşulmuş disk bölməsinə yazma icazəsi olmadan köksüz Docker daxilində işlədilir.
 
 **Həll:**
 
 1. `DATA_DIR` qovluğunu yoxlayın (standart: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. OmniRoute prosesinin istifadəçisinin qovluğun sahibi olduğuna əmin olun: `chown -R $USER ~/.omniroute/`
+2. 67router prosesinin istifadəçisinin qovluğun sahibi olduğuna əmin olun: `chown -R $USER ~/.omniroute/`
 3. Docker-də disk bölməsi qoşulmasının konteyner istifadəçisi üçün düzgün icazələrə malik olduğuna əmin olun.
 
 ---
@@ -905,14 +905,14 @@ Xeyr. LOCAL_ONLY səviyyəsi məqsədli şəkildə tətbiq edilib (sərt qayda #
 
 **S: 9Router və CLIProxyAPI istehsal/bulud yerləşdirmələrində əlçatan olacaqmı?**
 
-Bəli. Hər iki xidmət OmniRoute-un özü ilə eyni, ilk növbədə lokal istifadə modelinə əməl edir. Onlar eyni maşında işləyir və loopback üzərindən əlaqə qurur. Burada «istehsal» uzaq bulud provayderini deyil, OmniRoute-un yerləşdirildiyi VPS-i və ya lokal serveri nəzərdə tutur.
+Bəli. Hər iki xidmət 67router-un özü ilə eyni, ilk növbədə lokal istifadə modelinə əməl edir. Onlar eyni maşında işləyir və loopback üzərindən əlaqə qurur. Burada «istehsal» uzaq bulud provayderini deyil, 67router-un yerləşdirildiyi VPS-i və ya lokal serveri nəzərdə tutur.
 
 ---
 
 **S: Supervisor-da sazlama işlərini necə apara bilərəm?**
 
 1. SSE jurnal axınını izləyin: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. OmniRoute-un pino çıxışındakı strukturlaşdırılmış jurnalları `service:supervisor` ad sahəsinə görə filtrləyərək yoxlayın.
+2. 67router-un pino çıxışındakı strukturlaşdırılmış jurnalları `service:supervisor` ad sahəsinə görə filtrləyərək yoxlayın.
 3. DB sətrini yoxlayın: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Cari canlı vəziyyəti, PID-ni, sağlamlıq durumunu və `lastError` dəyərini bir sorğuda görmək üçün `GET /api/services/9router/status` istifadə edin.
 

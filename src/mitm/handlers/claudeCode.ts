@@ -48,7 +48,7 @@ export class ClaudeCodeHandler extends MitmHandlerBase {
 
       if (!upstream.ok) {
         const errText = await upstream.text().catch(() => "");
-        throw new Error(`OmniRoute ${upstream.status}: ${errText}`);
+        throw new Error(`67router ${upstream.status}: ${errText}`);
       }
 
       const sink = createBoundedCollector();

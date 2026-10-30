@@ -4,9 +4,9 @@
 
 ---
 
-Operaattorin huomautukset `POST /v1/embeddings` -rajapinnasta, kun OmniRoute toimii
+Operaattorin huomautukset `POST /v1/embeddings` -rajapinnasta, kun 67router toimii
 Hindsight 0.9.1:n (vain tekstiä käsittelevä `encode(list[str])`) ja Memorix 1.6.0:n (Jina-median
-portti) edessä. Toiminta varmennettu tuotannossa 2026-08-17 OmniRoute 3.8.49:ää vasten osoitteessa
+portti) edessä. Toiminta varmennettu tuotannossa 2026-08-17 67router 3.8.49:ää vasten osoitteessa
 `https://omniroute.jaguar-fish.ts.net/v1`. Alla ei ole salaisuuksia.
 
 ## Toimivat mallitunnukset
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Natiivi `gemini-embedding-2` ei voi toimia pelkän GitOpsin avulla. Google AI
 Studio -avain on lisättävä `gemini`-palveluntarjoajan yhteydeksi (hallintapaneelin kautta tai
-tuomalla `GEMINI_API_KEY` OmniRouteen). Kyseinen salaisuus ei ole tässä repositoriossa.
+tuomalla `GEMINI_API_KEY` 67routeriin). Kyseinen salaisuus ei ole tässä repositoriossa.
 
 ### Jinan multimodaalinen polku
 
@@ -100,7 +100,7 @@ Käytä `POST /v1/embeddings` -rajapintaa, kunnes alias on olemassa.
 
 ### Jinan / Memorixin kuvaobjekti
 
-OmniRouten kanoninen kuva-alkio (28×28 PNG, 784 pikseliä — Jina hylkää 1×1-kuvan):
+67routerin kanoninen kuva-alkio (28×28 PNG, 784 pikseliä — Jina hylkää 1×1-kuvan):
 
 ```json
 {
@@ -149,7 +149,7 @@ Todellinen tulos: HTTP **400**
 
 Hindsightin upotukset ovat vain tekstille (`encode(list[str])`). Se ei lähetä
 kuvaobjekteja. Osoita Hindsightin OpenAI-yhteensopivien upotusten perus-URL
-OmniRouten `/v1`-polkuun ja käytä yllä olevasta taulukosta toimivaa tunnusta
+67routerin `/v1`-polkuun ja käytä yllä olevasta taulukosta toimivaa tunnusta
 (`jina-ai/jina-embeddings-v5-omni-small` tai
 `openrouter/google/gemini-embedding-2`). Älä aseta malliksi pelkkää
 `gemini-embedding-2`-tunnusta, ellei yhdyskäytävässä ole `gemini`-API-avainta.
@@ -157,11 +157,11 @@ OmniRouten `/v1`-polkuun ja käytä yllä olevasta taulukosta toimivaa tunnusta
 ### Memorix 1.6.0
 
 Memorix käsittelee natiivina mediana vain `baseUrl`-arvon, joka vastaa lauseketta `/jina\.ai/i`.
-OmniRoute-URL pysyy vain tekstiä käsittelevällä polulla, vaikka mallina olisi Jina omni.
-Tämä portti on Memorix-asiakassovelluksen ongelma. Tästä riippumatta OmniRoute hylkää edelleen
+67router-URL pysyy vain tekstiä käsittelevällä polulla, vaikka mallina olisi Jina omni.
+Tämä portti on Memorix-asiakassovelluksen ongelma. Tästä riippumatta 67router hylkää edelleen
 Jinan `{image: "data:..."}` -rungon, jonka Memorix lähettäisi, jos portti
-avautuisi. Siksi Jina-yhteensopivat asiakassovellukset eivät voi upottaa kuvia OmniRouten kautta
+avautuisi. Siksi Jina-yhteensopivat asiakassovellukset eivät voi upottaa kuvia 67routerin kautta
 ilman kanonista `{type,source}`-skeemaa.
 
 Käytä tekstille `jina-ai/jina-embeddings-v5-omni-small`-mallia. Älä osoita Memorixin
-`base_url`-arvoa osoitteeseen `https://api.jina.ai` — pidä OmniRoute ainoana välipisteenä.
+`base_url`-arvoa osoitteeseen `https://api.jina.ai` — pidä 67router ainoana välipisteenä.

@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute possui três mecanismos de resiliência distintos, porém relacionados. Cada um tem um escopo e um propósito diferentes. Mantenha-os separados ao depurar o comportamento de roteamento.
+O 67router possui três mecanismos de resiliência distintos, porém relacionados. Cada um tem um escopo e um propósito diferentes. Mantenha-os separados ao depurar o comportamento de roteamento.
 
 ![modelo de resiliência de 3 camadas](../diagrams/exported/resilience-3layers.svg)
 
@@ -223,7 +223,7 @@ Os três headers de afinidade de sessão nunca são encaminhados ao upstream —
 
 ### Leases de conexão exclusivos para sessões gerenciadas
 
-**Escopo:** um cliente/sessão HTTP gerenciado ativo é dono de uma conexão OmniRoute elegível.
+**Escopo:** um cliente/sessão HTTP gerenciado ativo é dono de uma conexão 67router elegível.
 
 **Propósito:** fornecer posse exclusiva e durável de conexão para clientes que precisam de uma
 barreira de roteamento rígida entre requisições. Isso difere da afinidade de sessão, que é uma
@@ -247,7 +247,7 @@ o ID da conexão ativa. Os cabeçalhos de controle de lease são removidos dos l
 dos cabeçalhos do executor upstream.
 
 Se o roteamento padrão tiver candidatos gerenciados elegíveis, mas todos os candidatos livres estiverem ocupados por um
-lease ativo alheio, o OmniRoute retorna HTTP `429`, código de capacidade de lease indisponível, um
+lease ativo alheio, o 67router retorna HTTP `429`, código de capacidade de lease indisponível, um
 estado de aguardando capacidade e um `Retry-After` limitado derivado da expiração relevante mais próxima.
 A elegibilidade vazia no roteamento padrão não é contenção de lease e mantém sua semântica de erro de roteamento existente.
 
@@ -271,7 +271,7 @@ Os mecanismos relacionados permanecem separados:
   conexão); para outros provedores, `getQuotaScopedModelForProvider()`.
 - `404` bloqueia apenas o modelo (`getModelLockKey()` restringe `not_found`).
 - Qualquer outro status — falhas de transporte/servidor `5xx` e o próprio `502`
-  sintetizado pelo OmniRoute a partir da validação de qualidade — bloqueia apenas a
+  sintetizado pelo 67router a partir da validação de qualidade — bloqueia apenas a
   tupla **exata** provedor/conexão/modelo. Um stream ruim em um modelo não é evidência
   sobre a cota da conta; antes dessa regra, uma única resposta vazia em
   `codex/gpt-5.6-luna` removia todos os modelos `gpt-5*` dessa conexão do
@@ -409,7 +409,7 @@ concorrência por modelo**, um `model=cap` por linha) ou via
   inteiros positivos de requisições simultâneas.
 - **Enfileiramento local, sem descoberta:** as requisições excedentes são
   enfileiradas localmente com a semântica de fila/timeout existente (erros de
-  admissão tipados `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). O OmniRoute
+  admissão tipados `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). O 67router
   não descobre nem infere a política upstream — ele impõe os tetos exatos que
   o operador configurou. Um gate de modelo saturado nunca desabilita o
   provedor e nunca cria um bloqueio permanente do modelo; o comportamento
@@ -583,7 +583,7 @@ pode ser testada unitariamente sem um limitador Bottleneck real.
 ### Rede de Segurança de Ativação Automática de Rate-Limit e Proteção de Conexão (`rateLimitProtection`)
 
 **Rede de segurança de ativação automática** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, padrão `true`):
-Por padrão, o OmniRoute ativa automaticamente a proteção de fila de rate-limit para todas as conexões ativas de provedores de chave de API (`getProviderCategory(provider) === "apikey"`). Isso garante que as requisições recebidas destinadas a chaves de API upstream sensíveis a limite de taxa sejam enfileiradas e limitadas pelo Bottleneck, em vez de estourarem em erros 429 no upstream. A rede de segurança pode ser sobrescrita pela variável de ambiente `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` desativa, `true`/`1`/`on` força a ativação), que tem precedência sobre a configuração persistida do painel (**Configurações → Resiliência** / `PATCH /api/resilience`).
+Por padrão, o 67router ativa automaticamente a proteção de fila de rate-limit para todas as conexões ativas de provedores de chave de API (`getProviderCategory(provider) === "apikey"`). Isso garante que as requisições recebidas destinadas a chaves de API upstream sensíveis a limite de taxa sejam enfileiradas e limitadas pelo Bottleneck, em vez de estourarem em erros 429 no upstream. A rede de segurança pode ser sobrescrita pela variável de ambiente `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` desativa, `true`/`1`/`on` força a ativação), que tem precedência sobre a configuração persistida do painel (**Configurações → Resiliência** / `PATCH /api/resilience`).
 
 **Semântica do `rateLimitProtection` por conexão:**
 A proteção de rate-limit por conexão é controlada pelo campo booleano `rateLimitProtection` nas conexões de provedor (persistido como `rate_limit_protection` no SQLite):
@@ -928,7 +928,7 @@ limitação de taxa com bucketing por IP é o mesmo sinal que uma quota esgotada
 > do agente permaneça dentro do orçamento de contexto de 40k. É a visão condensada, voltada
 > ao agente, das seções acima; as seções numeradas permanecem como a referência completa.
 
-A OmniRoute tem três mecanismos de falha temporária relacionados, porém distintos. Mantenha
+A 67router tem três mecanismos de falha temporária relacionados, porém distintos. Mantenha
 seus escopos separados ao depurar o comportamento de roteamento. Consulte o
 [diagrama de resiliência de 3 camadas](../diagrams/exported/resilience-3layers.svg)
 (fonte: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

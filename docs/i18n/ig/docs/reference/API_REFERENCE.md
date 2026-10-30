@@ -6,7 +6,7 @@
 
 🌐 **Asụsụ:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Ntụaka bụ isi maka OmniRoute API. Ọ na-ekpuchi akụkụ ọha `/v1` na njedebe njikwa ndị a na-ejikarị eme ihe; faịlụ nke igwe nwere ike ịgụ [`docs/openapi.yaml`](../openapi.yaml) na osisi ụzọ dị n'okpuru `src/app/api/` bụ isi mmalite zuru ezu.
+Ntụaka bụ isi maka 67router API. Ọ na-ekpuchi akụkụ ọha `/v1` na njedebe njikwa ndị a na-ejikarị eme ihe; faịlụ nke igwe nwere ike ịgụ [`docs/openapi.yaml`](../openapi.yaml) na osisi ụzọ dị n'okpuru `src/app/api/` bụ isi mmalite zuru ezu.
 
 Maka protocol dakọtara na OpenAI a gbadoro anya na matriks ikike onye na-eweta ọrụ, lee
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Nzaghachi | `HIT` ma ọ bụ `MISS` (na-enweghị mgbasa)                                                                                                                                                                                       |
 | `X-OmniRoute-Idempotent` | Nzaghachi | `true` ma ọ bụrụ na ewepụla oyiri                                                                                                                                                                                              |
 | `X-OmniRoute-Progress`   | Nzaghachi | `enabled` ma ọ bụrụ na agbanyere nsuso ọganihu                                                                                                                                                                                 |
-| `X-OmniRoute-Session-Id` | Nzaghachi | ID nnọkọ dị irè nke OmniRoute ji mee ihe                                                                                                                                                                                       |
+| `X-OmniRoute-Session-Id` | Nzaghachi | ID nnọkọ dị irè nke 67router ji mee ihe                                                                                                                                                                                        |
 | `X-OmniRoute-Request-Id` | Nzaghachi | ID njikọ arịrịọ (mgbe a maara ya)                                                                                                                                                                                              |
-| `X-OmniRoute-Version`    | Nzaghachi | Ụdị build OmniRoute (ọ na-adị mgbe niile)                                                                                                                                                                                      |
+| `X-OmniRoute-Version`    | Nzaghachi | Ụdị build 67router (ọ na-adị mgbe niile)                                                                                                                                                                                       |
 | `X-OmniRoute-Cost-Saved` | Nzaghachi | Ego USD cache gbochiri ịla n’iyi na `HIT` (naanị cache hit)                                                                                                                                                                    |
 | `X-OmniRoute-Decision`   | Nzaghachi | Ndekọ ụzọ e si zigara arịrịọ: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` bụ atụmatụ ngwakọta, ma ọ bụ `single` maka arịrịọ na-abụghị ngwakọta) — ọ na-adị mgbe niile na nzaghachi mmecha                    |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Ịkpọgide akaụntụ n’arịrịọ ọ bụla
 
-Mgbe onye na-eweta ọrụ nwere ọtụtụ njikọ (akaụntụ ma ọ bụ igodo), OmniRoute na-ahọrọkarị otu
+Mgbe onye na-eweta ọrụ nwere ọtụtụ njikọ (akaụntụ ma ọ bụ igodo), 67router na-ahọrọkarị otu
 site n’atụmatụ ya maka ịhọrọ akaụntụ. Kama nke ahụ, arịrịọ nwere ike ịkpọgide otu njikọ kpọmkwem
 site na nkụnye isi `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ maka project ọ bụla:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Isi mmalite: `src/sse/handlers/chat.ts` (ịgụ nkụnye isi), `src/sse/service
 ## Mgbazinye Nnọkọ A Na-achịkwa Pụrụ Iche
 
 Mgbazinye nnọkọ a na-achịkwa pụrụ iche bụ nkwekọrịta ntụgharị ụzọ nke a na-ahọrọ isonye na ya, nke na-adabereghị n'ụdị klayịnt: otu onye nwe nọ n'ọrụ
-na-ejide otu njikọ OmniRoute tozuru oke. Ọ naghị agbazinye model, achọ OAuth, mata otu
+na-ejide otu njikọ 67router tozuru oke. Ọ naghị agbazinye model, achọ OAuth, mata otu
 klayịnt kpọmkwem, ma ọ bụ chọọ otu provider kpọmkwem.
 
 API key na-eme nkwenye njirimara ga-enwerịrị scope `lease:exclusive` na ndepụta
@@ -190,7 +190,7 @@ Onye nwe lease nọ n'ọrụ nwere ike ịrịọ kpọmkwem metadata ngosipụ
 
 A na-echekwa action status a a na-ahọrọ isonye na ya site n'aka opaque owner, managed API key e ji mee nkwenye njirimara, na
 active generation ziri ezi n'ime otu database transaction. `displayName` bụ naanị aha njikọ ahaziri
-nke ewepụla oghere ndị dị na nsọtụ; ọ bụ `null` mgbe enweghị aha ahaziri echekwara nke dị. OmniRoute anaghị eji
+nke ewepụla oghere ndị dị na nsọtụ; ọ bụ `null` mgbe enweghị aha ahaziri echekwara nke dị. 67router anaghị eji
 email ma ọ bụ njirimara account emepụtara dochie ya. Uru provider bụ label ngosipụta na-enweghị data nzuzo, ọ bụghịkwa
 identifier compatible-provider emepụtara. A naghị etinye credentials, tokens, cookies, raw connection ma ọ bụ API
 key ids, owner hashes, fencing secrets, na data ntụgharị ụzọ dị n'ime.
@@ -231,7 +231,7 @@ Esemokwu nwa oge na-eweghachi HTTP `429` nwere `Retry-After` na:
 
 Nzaghachi a pụtara naanị na ordinary eligible set abụghị ihe efu nakwa na foreign active lease
 jidere candidate niile nwere ohere. Model/provider anaghị akwado, policy mismatch, cooldown, quota,
-health, na ọdịda eligibility nkịtị ndị ọzọ ka na-eji nzaghachi OmniRoute ha dịbu.
+health, na ọdịda eligibility nkịtị ndị ọzọ ka na-eji nzaghachi 67router ha dịbu.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request nke Jina n'onwe ya ma **na-ebuga ha n'enweghị mgbanwe** na
 ```
 
 Uru `{ image | audio | video | pdf }` nke usoro ahụ n'onwe ya nwere ike ịbụ URL HTTPS ọha, URI `data:`, ma ọ bụ
-base64 nkịtị. OmniRoute anaghị agbanwe ihe ndị ahụ ka ha bụrụ eriri ma ọ bụ budata URL onyonyo nke usoro ahụ — Jina na-eweghachite
+base64 nkịtị. 67router anaghị agbanwe ihe ndị ahụ ka ha bụrụ eriri ma ọ bụ budata URL onyonyo nke usoro ahụ — Jina na-eweghachite
 mgbasa ozi ọha n'onwe ya. A na-ebuga oghere Jina ndị ọzọ (`task`, `normalized`, `truncate`, `embedding_type`).
 SKU Jina nke bụ naanị ederede ka na-ajụ docs na-abụghị ederede.
 
@@ -454,7 +454,7 @@ onye kpọrọ ya, ya mere code client adịghị mkpa ijikwa onye na-eweta ọr
 
 ### Auth na mkpebi endpoint nke Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` na-eji otu nkwenye njirimara Vertex AI ahụ OmniRoute na-akwadorị maka
+`vertex-deepseek-ocr` na-eji otu nkwenye njirimara Vertex AI ahụ 67router na-akwadorị maka
 okporo ụzọ chat/onyonyo (`open-sse/executors/vertex.ts`): API key nke njikọ ahụ bụ ma
 credential Service Account JSON (nke a na-agbanwe ka ọ bụrụ token ohere OAuth dị mkpirikpi site na usoro JWT-bearer)
 ma ọ bụ token ohere OAuth emepụtarala nke a na-eji otu ọ dị. URL endpoint upstream bụ endpoint onye mmekọ
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Ọnụahịa ụdị (`pricing`)
 
-Ndenye nwere ihe `pricing` mgbe OmniRoute maara ọnụahịa ụdị ahụ. Ọnụahịa ahụ sitere
+Ndenye nwere ihe `pricing` mgbe 67router maara ọnụahịa ụdị ahụ. Ọnụahịa ahụ sitere
 na tebụl ọnụahịa nke ngụkọta mmefu na-eji: ndabara arụnyere n'ime sistemụ, ọnụahịa emekọrịtara, na
 mgbanwe edobere site na `/api/pricing`. Ndị a bụ ọnụahịa ndepụta, ya mere ndị na-eweta ọrụ ndenye aha na-egosikwa
 ọnụahịa kwa token.
@@ -632,8 +632,8 @@ Jiri endpoint a mgbe sidecar na-arụ ọrụ n’èzí usoro ma enweghị ike i
 
 ## Mmepụta ọdịyo ElevenLabs
 
-Hazie njikọ onye na-enye ọrụ `elevenlabs` na OmniRoute site na iji igodo API ElevenLabs gị.
-Ndị ahịa na-eji igodo **OmniRoute** ha eme nkwenye njirimara (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Hazie njikọ onye na-enye ọrụ `elevenlabs` na 67router site na iji igodo API ElevenLabs gị.
+Ndị ahịa na-eji igodo **67router** ha eme nkwenye njirimara (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 gateway ahụ na-enye igodo onye na-enye ọrụ echekwara dịka `xi-api-key`. Ezigala igodo ElevenLabs
 dịka token bearer nke gateway.
 
@@ -698,7 +698,7 @@ na-eweghachi koodu ọnọdụ na body njehie upstream n’agbanweghị ha, gụ
 atụmatụ na `429` maka oke quota. A na-edobe nkụnye isi `character-cost`, `song-id`, `request-id` na `retry-after`
 mgbe ha dị. Inwe kredit efu anaghị ekwe nkwa ịnweta model egwu, usoro mmepụta ma ọ bụ atụmatụ API
 niile: ElevenLabs na-ekpebi ikike maka arịrịọ ọ bụla.
-Endpoint jikọtara ọnụ na-edobe koodu ọnọdụ njehie n’ime envelope njehie OmniRoute ahaziri n’otu usoro.
+Endpoint jikọtara ọnụ na-edobe koodu ọnọdụ njehie n’ime envelope njehie 67router ahaziri n’otu usoro.
 
 Nkwekọrịta upstream: [mmetụta ụda](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [nhazi egwu](https://elevenlabs.io/docs/api-reference/music/compose) na
@@ -739,7 +739,7 @@ Nkwekọrịta upstream: [mmetụta ụda](https://elevenlabs.io/docs/api-refere
 
 Ụzọ POST niile na-agbaso otu nhazi: `Bearer your-api-key` + ahụ JSON nke Zod kwadoro (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, wdg., lee `src/shared/validation/schemas.ts`). A na-eweghachi 4xx ma nkwado schema daa.
 
-Maka ndị ahịa na-enweghị ike itinye `Authorization: Bearer ...`, OmniRoute na-anabatakwa igodo API n'ime URL site na ndakọrịta query-string (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ma ọ bụ ebe njedebe `/api/v1/vscode/{token}/...` ndị akọwara n'okpuru.
+Maka ndị ahịa na-enweghị ike itinye `Authorization: Bearer ...`, 67router na-anabatakwa igodo API n'ime URL site na ndakọrịta query-string (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ma ọ bụ ebe njedebe `/api/v1/vscode/{token}/...` ndị akọwara n'okpuru.
 
 ```bash
 # Hazigharịa ọkwa (onye na-eweta ndekọ igwe ojii, ma ọ bụ ọnụ onye na-eweta kwekọrọ na OpenAI dịka "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, otu API key ahụ nke Parallel Search na-eji) na-eweghachi naanị Markdown
 — `format` ọ bụla ọzọ ga-eweta `400` — ma na-amachi ọdịnaya na mkpụrụedemede 100,000. Mgbe
 enweghị ike iwepụta peeji a na-achọ n’onwe ya, upstream na-akọ ya n’ime HTTP 200;
-OmniRoute na-egosi nke ahụ dị ka `422` nwere ozi a kapịrị ọnụ.
+67router na-egosi nke ahụ dị ka `422` nwere ozi a kapịrị ọnụ.
 
 | Usoro | Ụzọ             | Nkọwa                                                    |
 | ----- | --------------- | -------------------------------------------------------- |
@@ -964,14 +964,14 @@ ga-abụrịrị entrypoint na-arụ ọrụ (ọ bụ ya, na ndabara, mgbe `app
 OpenAI **Codex CLI** na-enyocha aha model n’akụkụ client mgbe
 `supports_websockets = true` ma **na-ajụ ID nwere prefix provider** dịka
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Zipụ ID **nkịtị** (dịka `gpt-5.5`). Bridge OmniRoute bụ
+a ChatGPT account`). Zipụ ID **nkịtị** (dịka `gpt-5.5`). Bridge 67router bụ
 naanị maka codex, ya mere ọ na-ekpebigharị ID nkịtị dị ka model codex
 (`resolveCodexWsModelInfo`) tupu imepụta tunnel gaa upstream — ọ bụ ezie na ID nkịtị
 `gpt-5.5` ga-aga na provider ọzọ site na HTTP ma ọ bụghị ya.
 
 #### Ịhazi OpenAI Codex CLI
 
-Dụga Codex CLI na OmniRoute site n’itinye provider omenala nwere nkwado WebSocket
+Dụga Codex CLI na 67router site n’itinye provider omenala nwere nkwado WebSocket
 na `~/.codex/config.toml` (jiri `CODEX_HOME` dị iche iji zere imetụ
 nhazi dị ugbu a aka):
 
@@ -984,15 +984,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # enweghị slash n’azụ; a na-ewepụta URL WS site na ya (jiri https/wss na production)
 wire_api = "responses"                    # naanị value a na-akwado kemgbe Feb 2026
 supports_websockets = true                # na-eme ka transport Responses-over-WS rụọ ọrụ
-env_key = "OMNIROUTE_API_KEY"             # na-ejide API key OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # na-ejide API key 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # API key OmniRoute (key ọ bụla ma ọ bụrụ na REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # API key 67router (key ọ bụla ma ọ bụrụ na REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI na-akwalite `base_url + /responses` ka ọ bụrụ WebSocket, OmniRoute wee mepụta tunnel ya
+CLI na-akwalite `base_url + /responses` ka ọ bụrụ WebSocket, 67router wee mepụta tunnel ya
 gaa na njikọ OAuth codex ahọpụtara. A nwalere ya site na mbido ruo na njedebe megide sava
 local: ChatGPT na-eweghachi `codex.rate_limits` + `response.created` ma na-agbasa
 mmecha ahụ.
@@ -1076,7 +1076,7 @@ pasent ndị e gosiri na **mmepụta plain-text** na **mmepụta JSON** ahaziri 
 
 #### Usoro Mgbakọ Ndozi Cutoff
 
-OmniRoute na-akwado cutoff oke ojiji e mere tupu oge eruo iji gbochie ike agwụ n'akụkụ upstream (a na-ahazi ya site na
+67router na-akwado cutoff oke ojiji e mere tupu oge eruo iji gbochie ike agwụ n'akụkụ upstream (a na-ahazi ya site na
 `quotaWindowThresholds` nke connection, ndabara provider, ma ọ bụ ntọala resilience zuru ụwa ọnụ). Mgbe threshold cutoff
 (dịka ọmụmaatụ, `cutoff = 25%`) na-arụ ọrụ na window oke ojiji, onye na-emepụta ederede na-agbakọ ikike fọdụrụ otu a:
 
@@ -1622,7 +1622,7 @@ Ndetu:
 
 - Aha ndị ọzọ nwere token na-ejigharị otu ndị njikwa ahụ dị na `/v1/*` na `/api/tags`; ọdịdị nzaghachi na-anọgide otu.
 - Họrọ `Authorization: Bearer ...` mgbe ọ bụla onye ahịa na-akwado header ahaziri.
-- Token ndị dabere na URL nwere ike ịpụta na ndekọ reverse-proxy, akụkọ ihe nchọgharị, na telemetrị dị n'èzí OmniRoute. Were ha dịka nhọrọ ndakọrịta, ọ bụghị usoro nyocha njirimara ndabara.
+- Token ndị dabere na URL nwere ike ịpụta na ndekọ reverse-proxy, akụkọ ihe nchọgharị, na telemetrị dị n'èzí 67router. Were ha dịka nhọrọ ndakọrịta, ọ bụghị usoro nyocha njirimara ndabara.
 
 ---
 
@@ -1730,7 +1730,7 @@ A pụkwara ijikọ combo routing nke ọkwa dị elu (nke a chịkọtalarị n
 
 ## Webhook
 
-Ndebanye aha webhook ndị na-apụ apụ maka ihe omume OmniRoute (mmecha arịrịọ, mmebi oke ojiji, ntụgharị igodo, wdg.).
+Ndebanye aha webhook ndị na-apụ apụ maka ihe omume 67router (mmecha arịrịọ, mmebi oke ojiji, ntụgharị igodo, wdg.).
 
 | Method | Path                      | Description                                                           |
 | ------ | ------------------------- | --------------------------------------------------------------------- |
@@ -1763,7 +1763,7 @@ Usoro nta njikwa igodo akpaaka na-eji ya ewepụta ma tụgharịa igodo API sit
 
 ## Usoro Ndị Agent
 
-Ọrụ cloud agent (Claude Code, Codex Cloud, OpenHands, wdg.) ndị a na-arụ n’ebe dị anya n’aha ndị ọrụ OmniRoute.
+Ọrụ cloud agent (Claude Code, Codex Cloud, OpenHands, wdg.) ndị a na-arụ n’ebe dị anya n’aha ndị ọrụ 67router.
 
 | Method | Path                          | Description                                                                                                                                       |
 | ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1809,7 +1809,7 @@ Proxy HTTP(S)/SOCKS na-apụ apụ, nke enwere ike ikenye ndị provider, accoun
 
 ## Nkwụsi ike (gbasatụrụ)
 
-OmniRoute na-enye usoro atọ nọọrọ onwe ha maka ọdịda nwa oge; endpoint nchịkwa ndị dị n'okpuru na-enye ndị na-ahụ maka sistemụ ohere ịgụ ma gbanwee ha:
+67router na-enye usoro atọ nọọrọ onwe ha maka ọdịda nwa oge; endpoint nchịkwa ndị dị n'okpuru na-enye ndị na-ahụ maka sistemụ ohere ịgụ ma gbanwee ha:
 
 | Oke                 | Ebe nchekwa ọnọdụ                                    | Ịgụ                                       | Tọgharịa / hichapụ                                     |
 | ------------------- | ---------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------ |
@@ -1844,7 +1844,7 @@ Maka nkọwa echiche zuru ezu na ndabara ihe nkwụsị, lee [`CLAUDE.md`](../..
 
 ## Nkà
 
-Framework nkà maka iji handlers pụrụ iche a pụrụ ime ọsọ gbasaa OmniRoute, yana integrations marketplace.
+Framework nkà maka iji handlers pụrụ iche a pụrụ ime ọsọ gbasaa 67router, yana integrations marketplace.
 
 | Method | Path                              | Nkọwa                                                                                                                                |
 | ------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1881,7 +1881,7 @@ Ebe nchekwa mkparịta ụka/eziokwu na-adịgide adịgide, nke a na-ekewa dị
 
 ## Sava MCP
 
-OmniRoute na-abịa na sava Model Context Protocol agbakwunyere nke nwere ụzọ mbufe 3 (stdio, SSE, streamable-http) na ngwaọrụ nwere oke ikike. Endpoint dashboard ndị dị n'okpuru na-agụ data ọnọdụ/audit ma na-eme proxy maka ụzọ mbufe HTTP.
+67router na-abịa na sava Model Context Protocol agbakwunyere nke nwere ụzọ mbufe 3 (stdio, SSE, streamable-http) na ngwaọrụ nwere oke ikike. Endpoint dashboard ndị dị n'okpuru na-agụ data ọnọdụ/audit ma na-eme proxy maka ụzọ mbufe HTTP.
 
 | Usoro | Ụzọ | Nkọwa |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1903,7 +1903,7 @@ OmniRoute na-abịa na sava Model Context Protocol agbakwunyere nke nwere ụz�
 
 ## Sava A2A
 
-OmniRoute na-enye endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 yana ihe mkpuchi REST maka nyocha/ojiji dashboard.
+67router na-enye endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 yana ihe mkpuchi REST maka nyocha/ojiji dashboard.
 
 ### JSON-RPC
 
@@ -2132,7 +2132,7 @@ Endpoints ndị naanị admin nwere ike iji maka njikwa ọrụ.
 
 ## Njikwa Ngwaọrụ CLI
 
-Jikwaa ngwaọrụ CLI ndị na-ejikọta na OmniRoute (antigravity, commandCode,
+Jikwaa ngwaọrụ CLI ndị na-ejikọta na 67router (antigravity, commandCode,
 devin-cli, wdg.). Lee [Ntụaka Provider](./PROVIDER_REFERENCE.md) maka ndepụta zuru ezu.
 
 | Usoro | Ụzọ                                     | Nkọwa                                                                                                                                                                  |
@@ -2243,7 +2243,7 @@ Lee [Usoro Nkà](../frameworks/SKILLS.md) maka nkọwa zuru ezu.
 
 ## Plugins
 
-Jikwaa plugins OmniRoute (ndọtị ndị ọzọ mepụtara).
+Jikwaa plugins 67router (ndọtị ndị ọzọ mepụtara).
 
 | Usoro  | Ụzọ                                | Nkọwa                        |
 | ------ | ---------------------------------- | ---------------------------- |

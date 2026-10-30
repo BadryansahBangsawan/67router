@@ -4,7 +4,7 @@
 
 ---
 
-Kontinuerlig, trinvis eksport af OmniRoute-opkaldslogfiler til et eksternt analyselager.
+Kontinuerlig, trinvis eksport af 67router-opkaldslogfiler til et eksternt analyselager.
 
 Fanen Logs i dashboardet gemmer anmodningshistorikken i SQLite (`call_logs`), som er begrænset af
 rotation og opbevaring. Logeksport sender det samme datasæt ud efter en tidsplan, så det kan bevares

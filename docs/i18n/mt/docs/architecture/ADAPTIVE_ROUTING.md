@@ -5,7 +5,7 @@
 ---
 
 Dan id-dokument jiddeskrivi l-pedament tar-routing adattiv immexxi mill-feedback miżjud ma'
-OmniRoute. Huwa intenzjonalment żgħir: jintroduċi kanal ittajpjat għar-riżultati
+67router. Huwa intenzjonalment żgħir: jintroduċi kanal ittajpjat għar-riżultati
 tar-routing, sinjal ta' kwalità online li jalimenta l-iskorer auto-combo eżistenti,
 esportatur OpenTelemetry fakultattiv, u endpoint għall-ispjegabbiltà. Huwa **ma**
 jissostitwixxix l-infrastruttura eżistenti ta' reżiljenza (circuit breaker, connection cooldown,
@@ -13,7 +13,7 @@ model lockout, health matrix, autopilot) — iżda jikkomplementaha.
 
 ## 1. Kuntest arkitettoniku
 
-OmniRoute huwa data plane b'**mogħdija kritika tat-talbiet** u **control/intelligence
+67router huwa data plane b'**mogħdija kritika tat-talbiet** u **control/intelligence
 plane**. Il-mogħdija kritika trid tibqa' veloċi, effiċjenti fl-użu tal-memorja, asinkronika, reżiljenti u
 prevedibbli. L-evalwazzjoni, l-iskorar tal-kwalità, l-esperimenti u l-analiżi storika jagħmlu
 parti mill-control plane.
@@ -23,7 +23,7 @@ Aġent AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (veloċi, sinkroniku, fil-memorja)
+│    67router        │   data plane (veloċi, sinkroniku, fil-memorja)
 │  routing / failover │
 │  health / guardrail │
 │  cache / streaming  │
@@ -240,7 +240,7 @@ Fajls: `open-sse/services/routing/otel.ts`
 - L-ispans isegwu l-konvenzjonijiet semantiċi ta’ GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) flimkien mal-attributi tar-routing
-  ta’ OmniRoute (riżultat, status, ttft, tentattivi mill-ġdid, fallback).
+  ta’ 67router (riżultat, status, ttft, tentattivi mill-ġdid, fallback).
 - `record()` iżid biss ma’ buffer b’limitu (O(1)); tajmer fl-isfond
   jibgħat id-data permezz ta’ `POST {endpoint}/v1/traces` b’mod asinkronu. Meta jkun hemm tagħbija żejda,
   l-eqdem avvenimenti jitwarrbu (counter `dropped`) — qatt ma tiġi applikata backpressure fuq il-pjan
@@ -261,7 +261,7 @@ Fajls: `open-sse/services/routing/otel.ts`
 
 ## 6. Integrazzjoni tal-pjan tal-evalwazzjoni (prontezza għal Future AGI)
 
-OmniRoute jittratta lil Future AGI (jew kwalunkwe evalwatur) bħala **backend potenzjali
+67router jittratta lil Future AGI (jew kwalunkwe evalwatur) bħala **backend potenzjali
 tal-intelliġenza/evalwazzjoni, mhux bħala dipendenza**. Il-punti ta’ integrazzjoni:
 
 - `RoutingEventSink` jista’ jibgħat l-avvenimenti lil evalwatur b’mod asinkronu.

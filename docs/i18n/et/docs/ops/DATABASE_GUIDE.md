@@ -4,7 +4,7 @@
 
 ---
 
-> **Lühidalt**: OmniRoute kasutab oma peamise andmehoidlana **SQLite'i koos WAL-logimisega** ning tundlikud väljad on puhkeolekus kaitstud **AES-256-GCM**-krüpteeringuga. See juhend käsitleb skeemi, migratsioone, varundamist/taastamist ja operatiivseid tegevusjuhiseid.
+> **Lühidalt**: 67router kasutab oma peamise andmehoidlana **SQLite'i koos WAL-logimisega** ning tundlikud väljad on puhkeolekus kaitstud **AES-256-GCM**-krüpteeringuga. See juhend käsitleb skeemi, migratsioone, varundamist/taastamist ja operatiivseid tegevusjuhiseid.
 
 **Allikad:**
 
@@ -19,7 +19,7 @@
 
 ## Miks SQLite?
 
-OmniRoute valis PostgreSQL-i/MySQL-i asemel SQLite'i mitmel põhjusel:
+67router valis PostgreSQL-i/MySQL-i asemel SQLite'i mitmel põhjusel:
 
 | Tegur             | SQLite                                   | PostgreSQL                                           |
 | ----------------- | ---------------------------------------- | ---------------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute valis PostgreSQL-i/MySQL-i asemel SQLite'i mitmel põhjusel:
 | **Varundamine**   | Ühe faili kopeerimine                    | `pg_dump` või failisüsteemi hetktõmmis               |
 | **Kasutusjuht**   | Kasutajapõhine paigaldus, sisseehitatud  | Mitme rentnikuga SaaS                                |
 
-**Ühe kasutaja ja ühe eksemplariga** juurutuste puhul (OmniRoute'i peamine kasutusjuht) on SQLite lihtsam ja kiirem.
+**Ühe kasutaja ja ühe eksemplariga** juurutuste puhul (67router'i peamine kasutusjuht) on SQLite lihtsam ja kiirem.
 
 ### WAL-logimine
 
@@ -50,7 +50,7 @@ Vaikimisi vahemälu suurus on **65,536 KiB (64 MiB)**. SQLite tõlgendab negatii
 `cache_size` väärtust ligikaudse ülempiirina KiB-des ja eraldab lehti vastavalt vajadusele.
 **Seaded > Süsteem ja salvestusruum > Vahemälu suurus** aktsepteerib täisarve vahemikus **1 kuni
 1,000,000 KiB**; sätte salvestamisel rakendatakse see aktiivsele andmebaasiühendusele
-ning OmniRoute taastab püsivalt salvestatud väärtuse käivitamisel.
+ning 67router taastab püsivalt salvestatud väärtuse käivitamisel.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Domeenimoodulite arhitektuur
 
-OmniRoute'i andmebaasis on **110 ülataseme TypeScripti moodulit** kataloogis `src/lib/db/`. Iga domeenimoodul:
+67router'i andmebaasis on **110 ülataseme TypeScripti moodulit** kataloogis `src/lib/db/`. Iga domeenimoodul:
 
 - Haldab üht või mitut konkreetset tabelit
 - Ekspordib tüübitud CRUD-funktsioone
@@ -90,7 +90,7 @@ OmniRoute'i andmebaasis on **110 ülataseme TypeScripti moodulit** kataloogis `s
 
 ### 110 ülataseme andmebaasimoodulit
 
-OmniRoute'il on kataloogis `src/lib/db/` **110 ülataseme TypeScripti faili**. Allpool on valik põhimooduleid; täieliku loendi leiate kataloogi sisust:
+67router'il on kataloogis `src/lib/db/` **110 ülataseme TypeScripti faili**. Allpool on valik põhimooduleid; täieliku loendi leiate kataloogi sisust:
 
 | Moodul                  | Tabelid                                                        | Vastutus                                                                 |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -186,7 +186,7 @@ Ligikaudu 30+ tabeli täielik loend asub kataloogis `src/lib/db/migrations/`.
 
 ## Migratsioonid
 
-OmniRoute kasutab kaustas `src/lib/db/migrations/` **versioonitud ja idempotentseid migratsioone**. Iga migratsioon on eraldi SQL-fail nimega `NNN_description.sql`.
+67router kasutab kaustas `src/lib/db/migrations/` **versioonitud ja idempotentseid migratsioone**. Iga migratsioon on eraldi SQL-fail nimega `NNN_description.sql`.
 
 ### Migratsioonide nimetamine
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Tagasiühildumatud muudatused** (nt veergude eemaldamine) on keerulised. OmniRoute EI toeta varasemale versioonile üleminekut — kui migratsioon on rakendatud, on skeemimuudatus püsiv. Planeerige vastavalt.
+> **Tagasiühildumatud muudatused** (nt veergude eemaldamine) on keerulised. 67router EI toeta varasemale versioonile üleminekut — kui migratsioon on rakendatud, on skeemimuudatus püsiv. Planeerige vastavalt.
 
 ---
 
@@ -310,7 +310,7 @@ Jõudluse huvides salvestatakse järgmine teave avatekstina:
 
 ## Krüptimise eripärad (v3.8.16+)
 
-OmniRoute kasutab funktsiooni **`migrateLegacyEncryptedString()`**, et käsitleda läbipaistvalt kahte krüptimisskeemi:
+67router kasutab funktsiooni **`migrateLegacyEncryptedString()`**, et käsitleda läbipaistvalt kahte krüptimisskeemi:
 
 - **Pärandvorming** (enne versiooni v3.5.0): XOR-põhine „krüptimine” (pole tegelik krüptograafia)
 - **Praegune**: AES-256-GCM koos korrektse IV ja autentimismärgendiga
@@ -399,7 +399,7 @@ Töötava andmebaasi katkestusteta varundamiseks:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-See kasutab SQLite'i veebipõhist varundus-API-t, mistõttu on käsku ohutu käitada ka OmniRoute'i töötamise ajal.
+See kasutab SQLite'i veebipõhist varundus-API-t, mistõttu on käsku ohutu käitada ka 67router'i töötamise ajal.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256 MB
 
 ### Tihendamine
 
-Pikka aega töötavatele OmniRoute'i eksemplaridele tuleb kasuks aeg-ajalt käivitatav `VACUUM`:
+Pikka aega töötavatele 67router'i eksemplaridele tuleb kasuks aeg-ajalt käivitatav `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Kõigi andmete lähtestamine (kustutamine)
 
 ```bash
-# Esmalt peatage OmniRoute
+# Esmalt peatage 67router
 omniroute stop
 
 # Kustutage andmebaasifail
@@ -613,7 +613,7 @@ Teine protsess hoiab kirjutuslukku. Tehke üht järgmistest:
 
 - Oodake, kuni teine protsess lõpetab (kontrollige käsuga `lsof | grep storage.sqlite`)
 - Lõpetage teine protsess
-- Kui probleem püsib, taaskäivitage OmniRoute
+- Kui probleem püsib, taaskäivitage 67router
 
 ### „Välisvõtme piirangu kontroll ebaõnnestus“
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Migratsioon käivitati transaktsioonis, seega oleks see pidanud tagasi pöörduma. Kui seda ei juhtunud:
 
-1. **Peatage OmniRoute** (et vältida edasisi katseid)
+1. **Peatage 67router** (et vältida edasisi katseid)
 2. **Kontrollige andmebaasi olekut** tööriistaga `sqlite3`
 3. **Parandage osaline migratsioon** käsitsi
-4. **Käivitage OmniRoute uuesti** (migratsiooni proovitakse uuesti)
+4. **Käivitage 67router uuesti** (migratsiooni proovitakse uuesti)
 
 Selle vältimiseks testige migratsioone alati esmalt andmebaasi koopial.
 

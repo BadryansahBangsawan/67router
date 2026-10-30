@@ -4,15 +4,15 @@
 
 ---
 
-**Ṣíṣàtúnṣe Àyíká** tí a fi lé lọ́wọ́ jẹ́ ẹ̀ya ìṣàkóso àyíká tí ó wà fún Claude nìkan. Yàtọ̀ sí àwọn ẹ̀rọ ìkójọpọ̀ agbègbè ti OmniRoute (Caveman, RTK, LLMLingua, stacked pipelines) — tí ń tún ara ìbéèrè kọ _ṣáájú_ kí ó tó kúrò nínú proxy — Ṣíṣàtúnṣe Àyíká máa ń ní kí **olùpèsè** pa àwọn ìdípọ̀ tool-use / tool-result tí kò ṣe pàtàkì mọ́ kúrò nínú fèrèsé àyíká tí ó ń lò lọ́wọ́. OmniRoute kàn so paramita ara kan (`context_management.edits[]`) mọ́ ọn; Claude ló ń ṣe ìparẹ́ gangan ní ìbámu pẹ̀lú tokenizer tirẹ̀.
+**Ṣíṣàtúnṣe Àyíká** tí a fi lé lọ́wọ́ jẹ́ ẹ̀ya ìṣàkóso àyíká tí ó wà fún Claude nìkan. Yàtọ̀ sí àwọn ẹ̀rọ ìkójọpọ̀ agbègbè ti 67router (Caveman, RTK, LLMLingua, stacked pipelines) — tí ń tún ara ìbéèrè kọ _ṣáájú_ kí ó tó kúrò nínú proxy — Ṣíṣàtúnṣe Àyíká máa ń ní kí **olùpèsè** pa àwọn ìdípọ̀ tool-use / tool-result tí kò ṣe pàtàkì mọ́ kúrò nínú fèrèsé àyíká tí ó ń lò lọ́wọ́. 67router kàn so paramita ara kan (`context_management.edits[]`) mọ́ ọn; Claude ló ń ṣe ìparẹ́ gangan ní ìbámu pẹ̀lú tokenizer tirẹ̀.
 
-Nípa ìṣẹ̀dá rẹ̀, agbára tí a fi lé lọ́wọ́ ni èyí: àwọn olùpèsè mìíràn máa ń kọ paramita náà, nítorí náà OmniRoute fi ààlà rẹ̀ mọ́ Claude àti àwọn relay tí ó bá Claude-Code mu nìkan.
+Nípa ìṣẹ̀dá rẹ̀, agbára tí a fi lé lọ́wọ́ ni èyí: àwọn olùpèsè mìíràn máa ń kọ paramita náà, nítorí náà 67router fi ààlà rẹ̀ mọ́ Claude àti àwọn relay tí ó bá Claude-Code mu nìkan.
 
 Orísun òtítọ́: `open-sse/config/contextEditing.ts` (àwọn id ọ̀nà ìlànà, fífi sínú ara, àti yíyọ telemetry jáde), `open-sse/executors/base.ts` (ẹnubodè fífi sínú ara + ìpadà-ẹ̀yìn 400), àti `open-sse/services/compression/types.ts` (ìrísí àtòjọ ìṣètò + àìròtẹ́lẹ̀).
 
 ## Ohun tí `clear_tool_uses` ń ṣe
 
-OmniRoute máa ń fi àtúnṣe kan ṣoṣo sínú ara Anthropic Messages tí a ń rán jáde:
+67router máa ń fi àtúnṣe kan ṣoṣo sínú ara Anthropic Messages tí a ń rán jáde:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute máa ń fi àtúnṣe kan ṣoṣo sínú ara Anthropic Messages tí a
 - `trigger.value: 100000` — nígbà tí àwọn token àbáwọlé ìbéèrè bá kọjá ààlà yìí, Claude máa bẹ̀rẹ̀ sí í pa àwọn ìdípọ̀ tool-use/result àtijọ́ rẹ́ (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, àìròtẹ́lẹ̀ Anthropic).
 - `keep.value: 3` — àwọn ìdípọ̀ tool-use/result N tó ṣẹ̀ṣẹ̀ wá jù ni a ó fi sílẹ̀ láìfọwọ́kàn wọ́n (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-A máa ń polówó beta náà nípasẹ̀ header `anthropic-beta: context-management-2025-06-27`, èyí tí OmniRoute ti ń rán jáde tẹ́lẹ̀ lórí àwọn ìbéèrè Claude.
+A máa ń polówó beta náà nípasẹ̀ header `anthropic-beta: context-management-2025-06-27`, èyí tí 67router ti ń rán jáde tẹ́lẹ̀ lórí àwọn ìbéèrè Claude.
 
-`applyContextEditingToBody()` ló ń ṣe fífi sínú ara, ó sì jẹ́ **idempotent**: bí àtúnṣe `clear_tool_uses` bá ti wà nínú ara tẹ́lẹ̀ (tí ìpè ṣáájú fi kún un tàbí tí client pèsè), ara náà kò ní yí padà. Bí àtúnṣe `clear_thinking_20251015` bá tún wà, OmniRoute máa ń ṣe stable-sort fún àtúnṣe `clear_thinking` sí iwájú, nítorí Anthropic béèrè pé kí `clear_thinking` ṣáájú `clear_tool_uses` nínú array `edits[]`.
+`applyContextEditingToBody()` ló ń ṣe fífi sínú ara, ó sì jẹ́ **idempotent**: bí àtúnṣe `clear_tool_uses` bá ti wà nínú ara tẹ́lẹ̀ (tí ìpè ṣáájú fi kún un tàbí tí client pèsè), ara náà kò ní yí padà. Bí àtúnṣe `clear_thinking_20251015` bá tún wà, 67router máa ń ṣe stable-sort fún àtúnṣe `clear_thinking` sí iwájú, nítorí Anthropic béèrè pé kí `clear_thinking` ṣáájú `clear_tool_uses` nínú array `edits[]`.
 
 ## Toggle ìmúlò fún àkójọpọ̀ kọ̀ọ̀kan
 
@@ -127,7 +127,7 @@ Claude ojúlówó máa ń gbé beta náà sínú `ANTHROPIC_BETA_BASE`, kò sì 
 
 ## Telemetry `applied_edits`
 
-Lẹ́yìn response Claude kan, OmniRoute máa ń ṣàkọsílẹ̀ iye context tí provider náà pa rẹ́ ní ti gidi. Èyí
+Lẹ́yìn response Claude kan, 67router máa ń ṣàkọsílẹ̀ iye context tí provider náà pa rẹ́ ní ti gidi. Èyí
 **kì í ṣe** ohun tí a ń stream — a máa yọ ọ́ jáde láti inú body response tí kì í ṣe streaming, gẹ́gẹ́ bí ìsapá tó dára jù lọ, kò sì
 ní ipa lórí response láé (a máa gbójú fo àwọn ìkùnà telemetry).
 
@@ -157,14 +157,14 @@ Nítorí náà, pípaarẹ́ tí a fi lé provider lọ́wọ́ máa ń hàn ní
 
 | Abala               | Àwọn ẹ̀rọ agbègbè (Caveman / RTK / LLMLingua / stacked) | Ṣíṣe Àtúnṣe Àyíká Ọ̀rọ̀ Nípasẹ̀ Ìfọ̀rọ̀ránṣẹ́          |
 | ------------------- | ------------------------------------------------------ | ------------------------------------------------ |
-| Ibi tí ó ti ń ṣiṣẹ́  | Nínú OmniRoute, kí ìbéèrè tó jáde kúrò nínú proxy      | Nínú provider (Claude), ní ẹ̀gbẹ́ server           |
+| Ibi tí ó ti ń ṣiṣẹ́  | Nínú 67router, kí ìbéèrè tó jáde kúrò nínú proxy       | Nínú provider (Claude), ní ẹ̀gbẹ́ server           |
 | Ohun tí ó ń ṣàtúnṣe | Prompt / context / ọ̀rọ̀ àbájáde tool                    | Àwọn block tool-use / tool-result àtijọ́          |
 | Iwọn provider       | Gbogbo àwọn provider                                   | `claude` + `anthropic-compatible-cc-*` nìkan     |
 | Yíyàn ìṣiṣẹ́         | Àwọn ètò mode ìfúnpọ̀                                   | `contextEditing.enabled`                         |
 | Ìlànà ìkùnà         | Fail-open (ọ̀rọ̀ ìpilẹ̀ṣẹ̀)                                | 400-fallback: yọ param kúrò, tún gbìyànjú lẹ́ẹ̀kan |
 | Telemetry ìfipamọ́   | `engine: <engine id>`                                  | `engine: "context-editing"`                      |
 
-Àwọn méjèèjì ń ṣiṣẹ́ pọ̀ láti ṣàfikún ara wọn: àwọn ẹ̀rọ agbègbè ń fún àwọn byte tí OmniRoute ń fi ránṣẹ́ pọ̀; Ṣíṣe Àtúnṣe Àyíká Ọ̀rọ̀ sì ń jẹ́ kí
+Àwọn méjèèjì ń ṣiṣẹ́ pọ̀ láti ṣàfikún ara wọn: àwọn ẹ̀rọ agbègbè ń fún àwọn byte tí 67router ń fi ránṣẹ́ pọ̀; Ṣíṣe Àtúnṣe Àyíká Ọ̀rọ̀ sì ń jẹ́ kí
 Claude gé àyíká ọ̀rọ̀ tó ń lọ lọ́wọ́ kù láàárín àwọn turn. A lè mú àwọn méjèèjì ṣiṣẹ́ papọ̀.
 
 ## Tún Wo

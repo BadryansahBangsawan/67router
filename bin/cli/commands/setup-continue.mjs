@@ -120,7 +120,7 @@ export async function runSetupContinueCommand(opts = {}) {
   });
   if (guard !== 0) return guard;
 
-  printHeading("OmniRoute → Continue (config.yaml)");
+  printHeading("67router → Continue (config.yaml)");
   printInfo(`apiBase: ${apiBase}`);
 
   let ids;
@@ -128,7 +128,7 @@ export async function runSetupContinueCommand(opts = {}) {
     ids = await fetchModelIds(apiBase, apiKey);
   } catch (e) {
     printError(e.message);
-    printInfo("Make sure OmniRoute is running and --remote/--api-key are correct.");
+    printInfo("Make sure 67router is running and --remote/--api-key are correct.");
     return 1;
   }
   if (only) ids = ids.filter((id) => only.some((f) => id.includes(f)));
@@ -155,13 +155,13 @@ export async function runSetupContinueCommand(opts = {}) {
 
   if (dryRun) {
     console.log("\n" + (out.length > 3500 ? out.slice(0, 3500) + "\n… (truncated)" : out));
-    printInfo(`[dry-run] ${models.length} OmniRoute model(s) → ${configPath}`);
+    printInfo(`[dry-run] ${models.length} 67router model(s) → ${configPath}`);
     return 0;
   }
 
   mkdirSync(join(configPath, ".."), { recursive: true });
   writeFileSync(configPath, out, "utf8");
-  printSuccess(`Wrote ${configPath} (${models.length} OmniRoute models)`);
+  printSuccess(`Wrote ${configPath} (${models.length} 67router models)`);
   printInfo("\nProvide the key (config.yaml references it, not stores it):");
   printInfo("  cn CLI:  export OMNIROUTE_API_KEY=...   (read from your shell)");
   printInfo("  IDE:     echo 'OMNIROUTE_API_KEY=...' >> ~/.continue/.env");
@@ -173,11 +173,11 @@ export function registerSetupContinue(program) {
   program
     .command("setup-continue")
     .description(
-      "Generate ~/.continue/config.yaml (Continue / cn CLI) from the OmniRoute model catalog"
+      "Generate ~/.continue/config.yaml (Continue / cn CLI) from the 67router model catalog"
     )
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL, e.g. http://192.168.0.15:20128")
-    .option("--api-key <key>", "OmniRoute API key (defaults to OMNIROUTE_API_KEY env var)")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL, e.g. http://192.168.0.15:20128")
+    .option("--api-key <key>", "67router API key (defaults to OMNIROUTE_API_KEY env var)")
     .option("--only <patterns>", "Comma-separated substrings — keep only matching model IDs")
     .option("--config-path <path>", "config.yaml path (default: ~/.continue/config.yaml)")
     .option("--dry-run", "Print what would be written without touching the filesystem")

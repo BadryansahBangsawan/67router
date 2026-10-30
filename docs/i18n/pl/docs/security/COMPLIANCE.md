@@ -9,7 +9,7 @@ lastUpdated: 2026-06-28
 > **Source of truth:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Last updated:** 2026-06-28 — v3.8.40
 
-OmniRoute zapisuje akcje administracyjne, zdarzenia uwierzytelniania, zmiany
+67router zapisuje akcje administracyjne, zdarzenia uwierzytelniania, zmiany
 cyklu życia poświadczeń providerów oraz wywołania narzędzi MCP w tabelach
 audytu opartych o SQLite. Ta strona opisuje, co jest logowane, gdzie to
 mieszka, jak długo jest przechowywane, jak klucze API mogą się wypisać

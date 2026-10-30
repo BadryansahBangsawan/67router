@@ -125,7 +125,7 @@ documentata.
 - I cataloghi della CLI si trovano separatamente in `bin/cli/locales/`.
 - Mantieni invariati i placeholder e i tag ICU. Non tradurre nomi di prodotti/provider/modelli, nomi
   di protocolli e header, comandi, identificatori di codice/JSON, URL, variabili d'ambiente o termini
-  protetti come `OmniRoute`, `OAuth`, `MCP` e `A2A`. L'elenco sorgente attuale è
+  protetti come `67router`, `OAuth`, `MCP` e `A2A`. L'elenco sorgente attuale è
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Ciclo mirato**
@@ -280,7 +280,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # riutilizza un tarball 
   convalida non viene mai promosso.
 
 Tutto viene scritto nella directory ignorata da git `_artifacts/candidate/`; un'installazione
-OmniRoute esistente e la relativa directory dei dati non vengono mai modificate. La CLI promossa è
+67router esistente e la relativa directory dei dati non vengono mai modificate. La CLI promossa è
 `_artifacts/candidate/current/prefix/bin/omniroute`; avviarla con il proprio `DATA_DIR` quando la si
 utilizza. Codici di uscita: `0` operazione riuscita, `1` convalida o promozione non riuscita, `2`
 errore di utilizzo o build mancante.

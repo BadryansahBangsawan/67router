@@ -7,7 +7,7 @@
 > **Chanzo rasmi:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Ilisasishwa mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute hurekodi vitendo vya kiutawala, matukio ya uthibitishaji, mabadiliko ya mzunguko wa maisha wa vitambulisho vya watoa huduma, na miito ya zana za MCP kwenye majedwali ya ukaguzi yanayotegemea SQLite. Ukurasa huu unaeleza kinachowekwa kwenye kumbukumbu, mahali kinapohifadhiwa, muda wa kuhifadhiwa, jinsi funguo za API zinavyoweza kuchagua kutoshiriki, na jinsi ya kuhoji data hiyo.
+67router hurekodi vitendo vya kiutawala, matukio ya uthibitishaji, mabadiliko ya mzunguko wa maisha wa vitambulisho vya watoa huduma, na miito ya zana za MCP kwenye majedwali ya ukaguzi yanayotegemea SQLite. Ukurasa huu unaeleza kinachowekwa kwenye kumbukumbu, mahali kinapohifadhiwa, muda wa kuhifadhiwa, jinsi funguo za API zinavyoweza kuchagua kutoshiriki, na jinsi ya kuhoji data hiyo.
 
 Utekelezaji unapatikana katika `src/lib/compliance/index.ts` (T-43 — "Udhibiti wa Uzingatiaji") na `src/lib/compliance/providerAudit.ts`. Uandikaji wa ukaguzi hautoi hitilafu kamwe: ikitokea hitilafu yoyote, mwito huo hupuuzwa kimya kimya ili uwekaji wa kumbukumbu za ukaguzi usivuruge mtiririko mkuu wa ombi.
 

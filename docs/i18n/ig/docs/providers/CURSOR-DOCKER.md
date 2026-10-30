@@ -4,7 +4,7 @@
 
 ---
 
-Mgbe OmniRoute na-arụ ọrụ n'ime Docker, usoro ochie nke **Mbubata site na Cursor IDE** /
+Mgbe 67router na-arụ ọrụ n'ime Docker, usoro ochie nke **Mbubata site na Cursor IDE** /
 `cursor-agent` anaghị arụ ọrụ n’ihi na container ahụ enweghị ike ịhụ nrụnye Cursor dị na host.
 Jiri **Jiri Cursor Banye** (deep-control PKCE) kama nke ahụ.
 
@@ -14,7 +14,7 @@ Jiri **Jiri Cursor Banye** (deep-control PKCE) kama nke ahụ.
    `~/.config/Cursor/User/globalStorage/state.vscdb` _n'ime_ container ahụ.
    Na Docker Desktop maka macOS, anaghị etinye DB IDE nke host n’ime container na ndabara, ma
    OS nke container bụ Linux ọbụna mgbe host bụ Darwin.
-2. **Enweghị binary `cursor-agent`** — Image OmniRoute ndị gọọmentị anaghị ebute
+2. **Enweghị binary `cursor-agent`** — Image 67router ndị gọọmentị anaghị ebute
    `cursor-agent`. N’oge gara aga, Ụdị Dịnụ na-akpọ
    `cursor-agent --list-models` site na shell ma laghachi na katalọgụ static ma ọ bụrụ na nke ahụ ada.
 3. **Binary na-ezighi ezi** — **Etinyela** `cursor-agent` nke macOS n’ime container
@@ -24,11 +24,11 @@ Jiri **Jiri Cursor Banye** (deep-control PKCE) kama nke ahụ.
 
 1. Mepee **Dashboard → Providers → Cursor**.
 2. Họrọ taabụ **Jiri Cursor Banye**.
-3. Pịa **Jiri Cursor Banye** — OmniRoute ga-emepe
+3. Pịa **Jiri Cursor Banye** — 67router ga-emepe
    `https://cursor.com/loginDeepControl?…` na browser nke **host** gị.
-4. Kwado nbanye ahụ na browser, wee laghachi na dashboard. OmniRoute
+4. Kwado nbanye ahụ na browser, wee laghachi na dashboard. 67router
    na-enyocha `api2.cursor.sh/auth/poll` ugboro ugboro ruo mgbe token bịarutere.
-5. OmniRoute na-echekwa token **access + refresh** ma na-eme ka ha dị ọhụrụ site na
+5. 67router na-echekwa token **access + refresh** ma na-eme ka ha dị ọhụrụ site na
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Ụzọ a anaghị achọ Cursor IDE ma ọ bụ `cursor-agent` n'ime container ahụ.
@@ -37,10 +37,10 @@ Jiri **Jiri Cursor Banye** (deep-control PKCE) kama nke ahụ.
 
 Mgbe e nwere njikọ e ji banye, **Ụdị Dịnụ / Mmekọrịta Akpaka** na-ebu ụzọ họrọ katalọgụ
 HTTP `AiService/AvailableModels` nke Cursor site na iji bearer token nke njikọ ahụ.
-Ọ bụrụ na nke ahụ ada, OmniRoute ka ga-anwa `cursor-agent` nke host (mgbe ọ dị), wee
+Ọ bụrụ na nke ahụ ada, 67router ka ga-anwa `cursor-agent` nke host (mgbe ọ dị), wee
 jiri mkpụrụ registry static.
 
-OmniRoute na-egosi **`auto`** mgbe niile na katalọgụ (ngosi “Auto”), yana
+67router na-egosi **`auto`** mgbe niile na katalọgụ (ngosi “Auto”), yana
 usoro router ụdị OpenCodex ndị a: **`auto-cost`**, **`auto-balance`**, na
 **`auto-intelligence`**. N’elu wire, ndị a na-map gaa na model `default` nke Cursor
 (ya na `optimization` ModelParameter maka ụdị atọ ahụ). Ka mma iji
@@ -87,7 +87,7 @@ oke ndị ahụ dị ka ha tọgbọ chakoo, mee **Jiri Cursor Banye** ọzọ m
 ## Turn tọgbọ chakoo / ojiji agwụla
 
 Mgbe Cursor nabatara Run mana ọ naghị eweghachi ederede assistant ọ bụla (nke a na-emekarị
-mgbe ojiji premium gwụsịrị), OmniRoute na-egosi **429** bara uru (ihe ngosi quota) ma ọ bụ
+mgbe ojiji premium gwụsịrị), 67router na-egosi **429** bara uru (ihe ngosi quota) ma ọ bụ
 **502** nwere nduzi — ọ bụghị naanị “Provider weghachiri ọdịnaya tọgbọ chakoo”. A na-ekewa
 ọdịda streaming dịka `not_found: AI Model Not Found` (window ojiji agwụla) dịka
 **Oke ọsọ Cursor / ojiji agafeela**, ma ozi ahụ na-anọgide site na pipeline SSE
@@ -96,7 +96,7 @@ nwalee model **`auto`**, ma ọ bụ bulie oke plan Cursor.
 
 ## Ụdị client (headless)
 
-Mgbe enweghị nrụnye `cursor-agent` mpaghara, OmniRoute na-achọpụta
+Mgbe enweghị nrụnye `cursor-agent` mpaghara, 67router na-achọpụta
 `x-cursor-client-version` site na env `CURSOR_AGENT_CLI_VERSION`, mgbe ahụ site na
 scrape echekwara na disk nke script installer Cursor, emesịa site na build id akpọchiri.
 Jiri `CURSOR_AGENT_CLI_VERSION` dochie ya mgbe ọ dị mkpa.

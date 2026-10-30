@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tilbyr Cursor-planens **bildegenerering** på `POST /v1/images/generations` gjennom samme leverandør-ID som chat: `cursor` (alias `cu`).
+67router tilbyr Cursor-planens **bildegenerering** på `POST /v1/images/generations` gjennom samme leverandør-ID som chat: `cursor` (alias `cu`).
 
 | Felt                 | Verdi                                                                                   |
 | -------------------- | --------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute tilbyr Cursor-planens **bildegenerering** på `POST /v1/images/generat
 
 ## Hvorfor Agent CLI
 
-Cursor-chat i OmniRoute bruker `agent.v1.AgentService/Run` (protobuf). Denne metoden **avviser** innebygde klientverktøy (shell, write, …). Bildegenerering er et Cursor-integrert verktøy som kjøres av **`agent` CLI** mot lisensplassen. Bildebehandleren starter derfor `agent` med en låst ledetekst og et midlertidig arbeidsområde per forespørsel (samme oppsett som fellesskapsbaserte lisensplassbroer), og returnerer deretter OpenAI-kompatibel `b64_json`.
+Cursor-chat i 67router bruker `agent.v1.AgentService/Run` (protobuf). Denne metoden **avviser** innebygde klientverktøy (shell, write, …). Bildegenerering er et Cursor-integrert verktøy som kjøres av **`agent` CLI** mot lisensplassen. Bildebehandleren starter derfor `agent` med en låst ledetekst og et midlertidig arbeidsområde per forespørsel (samme oppsett som fellesskapsbaserte lisensplassbroer), og returnerer deretter OpenAI-kompatibel `b64_json`.
 
 ## Tilgangsbegrensning (ufravikelige regler nr. 15 og 17)
 
@@ -23,12 +23,12 @@ Dette er det eneste `IMAGE_PROVIDERS`-formatet som starter en underprosess (`age
 
 ## Samtidighetskontrollen er på modulnivå (begrensning for enkeltinstanser)
 
-`CURSOR_IMG_MAX_CONCURRENT` håndheves av en teller/kø i minnet som er avgrenset til Node-modulinstansen (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Den begrenser antallet samtidige `agent`-prosesser korrekt innenfor én OmniRoute-prosess, men koordinerer **ikke** mellom flere prosesser/instanser som deler samme Cursor-lisensplass (f.eks. en distribusjon med flere replikaer) — hver instans håndhever sin egen uavhengige grense. For en distribusjon med én instans (standarden) er dette nøyaktig. Horisontalt skalerte distribusjoner bør bruke en konservativ verdi for `CURSOR_IMG_MAX_CONCURRENT` per instans eller rute Cursor-bildetrafikk til én enkelt instans.
+`CURSOR_IMG_MAX_CONCURRENT` håndheves av en teller/kø i minnet som er avgrenset til Node-modulinstansen (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Den begrenser antallet samtidige `agent`-prosesser korrekt innenfor én 67router-prosess, men koordinerer **ikke** mellom flere prosesser/instanser som deler samme Cursor-lisensplass (f.eks. en distribusjon med flere replikaer) — hver instans håndhever sin egen uavhengige grense. For en distribusjon med én instans (standarden) er dette nøyaktig. Horisontalt skalerte distribusjoner bør bruke en konservativ verdi for `CURSOR_IMG_MAX_CONCURRENT` per instans eller rute Cursor-bildetrafikk til én enkelt instans.
 
 ## Krav
 
 1. En tilkoblet Cursor-konto i kontrollpanelet (OAuth eller API-nøkkel av typen `crsr_…`).
-2. Cursor Agent-binærfilen må være tilgjengelig for OmniRoute-prosessen:
+2. Cursor Agent-binærfilen må være tilgjengelig for 67router-prosessen:
    - miljøvariabelen `CURSOR_AGENT_BIN=/path/to/agent`, eller
    - `~/.local/bin/agent`, eller
    - `providerSpecificData.agentBin` på Cursor-tilkoblingen.

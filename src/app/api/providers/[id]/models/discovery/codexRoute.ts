@@ -88,9 +88,9 @@ export function buildCodexClientCompatibilityWarning(
   const summary = remaining > 0 ? `${modelIds}, and ${remaining} more` : modelIds;
   const warning =
     `Skipped ChatGPT/Codex models that require a newer HTTP client profile (${summary}). ` +
-    `OmniRoute reports ${clientVersion}; this catalog requires at least ${requiredVersion}. ` +
+    `67router reports ${clientVersion}; this catalog requires at least ${requiredVersion}. ` +
     `Refresh model discovery to update the client profile automatically (unless CODEX_CLIENT_VERSION is set). If it remains too old, ` +
-    `upgrade OmniRoute. If this release is otherwise protocol-compatible, temporarily set ` +
+    `upgrade 67router. If this release is otherwise protocol-compatible, temporarily set ` +
     `CODEX_CLIENT_VERSION=${requiredVersion} and restart. Installing Codex CLI is only relevant ` +
     `to the separate codex-app-server provider.`;
   return [fallbackWarning, warning].filter(Boolean).join(" ");

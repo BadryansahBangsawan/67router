@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute a Cursor-csomag **képgenerálási** funkcióját a `POST /v1/images/generations` végponton keresztül teszi elérhetővé, ugyanazzal a szolgáltatóazonosítóval, mint a csevegést: `cursor` (alias: `cu`).
+A 67router a Cursor-csomag **képgenerálási** funkcióját a `POST /v1/images/generations` végponton keresztül teszi elérhetővé, ugyanazzal a szolgáltatóazonosítóval, mint a csevegést: `cursor` (alias: `cu`).
 
 | Mező                        | Érték                                                                                                    |
 | --------------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ Az OmniRoute a Cursor-csomag **képgenerálási** funkcióját a `POST /v1/image
 
 ## Miért az Agent CLI?
 
-Az OmniRoute Cursor-csevegése az `agent.v1.AgentService/Run` (protobuf) szolgáltatást használja. Ez az útvonal **elutasítja** a beépített klienseszközöket (shell, write, …). A képgenerálás egy Cursor-natív eszköz, amelyet az **`agent` CLI** hajt végre a licenchez kapcsolódva. Ezért a képkezelő egy zárolt prompttal és kérésenként külön ideiglenes munkaterülettel indítja el az `agent` folyamatot (a közösségi licenchidakhoz hasonlóan), majd OpenAI-kompatibilis `b64_json`-választ ad vissza.
+A 67router Cursor-csevegése az `agent.v1.AgentService/Run` (protobuf) szolgáltatást használja. Ez az útvonal **elutasítja** a beépített klienseszközöket (shell, write, …). A képgenerálás egy Cursor-natív eszköz, amelyet az **`agent` CLI** hajt végre a licenchez kapcsolódva. Ezért a képkezelő egy zárolt prompttal és kérésenként külön ideiglenes munkaterülettel indítja el az `agent` folyamatot (a közösségi licenchidakhoz hasonlóan), majd OpenAI-kompatibilis `b64_json`-választ ad vissza.
 
 ## Hozzáférési korlátozás (Szigorú szabályok #15 + #17)
 
@@ -34,7 +34,7 @@ szabályzatért lásd: `src/server/authz/policies/management.ts`.
 
 A `CURSOR_IMG_MAX_CONCURRENT` korlátozást egy, a Node-modulpéldányhoz kötött
 memóriabeli számláló/várólista érvényesíti (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Ez megfelelően korlátozza az egy OmniRoute-folyamaton belüli párhuzamos `agent`-indításokat, de
+Ez megfelelően korlátozza az egy 67router-folyamaton belüli párhuzamos `agent`-indításokat, de
 **nem** hangolja össze az ugyanazt a Cursor-licencet használó több folyamatot/példányt
 (pl. több replikából álló telepítés esetén) — minden példány a saját, független korlátját érvényesíti.
 Egypéldányos telepítésnél (ez az alapértelmezés) a korlátozás pontos; a horizontálisan skálázott
@@ -44,7 +44,7 @@ Cursor-képforgalmat egyetlen példányhoz kell irányítani.
 ## Követelmények
 
 1. Egy csatlakoztatott Cursor-fiók az irányítópulton (OAuth vagy `crsr_…` API-kulcs).
-2. A Cursor Agent binárisnak elérhetőnek kell lennie az OmniRoute-folyamat számára:
+2. A Cursor Agent binárisnak elérhetőnek kell lennie a 67router-folyamat számára:
    - `CURSOR_AGENT_BIN=/path/to/agent` környezeti változóval, vagy
    - a `~/.local/bin/agent` útvonalon, vagy
    - a Cursor-kapcsolat `providerSpecificData.agentBin` mezőjében.

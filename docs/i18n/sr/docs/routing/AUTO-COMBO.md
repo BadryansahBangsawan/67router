@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Српски)
+# 67router Auto-Combo Engine (Српски)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # најјефтиније по токену
 
 **Шта се дешава:**
 
-1. OmniRoute открива префикс `auto/` у `src/sse/handlers/chat.ts`
+1. 67router открива префикс `auto/` у `src/sse/handlers/chat.ts`
 2. Из базе података преузима све **активне везе са провајдерима**
 3. Филтрира само оне са важећим акредитивима (API кључ или OAuth токен)
 4. Одређује модел за сваку везу (`connection.defaultModel` или први модел провајдера)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # најјефтиније по токену
 - блокада модела — `isModelLocked(provider, connectionId, model)`
 
 Сваки кандидат такође садржи ознаку `excluded` за овај API кључ. Изузеци се чувају
-по API кључу (табела `auto_candidate_overrides`, миграција `128`) — OmniRoute је
+по API кључу (табела `auto_candidate_overrides`, миграција `128`) — 67router је
 једнокориснички систем без табеле `users`, па је `apiKeyId` најближи стварни идентитет
 по позиваоцу — и примењују се на кључној тачки скупа кандидата у
 `open-sse/services/autoCombo/virtualFactory.ts` преко чисте, јединично тестиране функције
@@ -181,7 +181,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Dve česte zamke:
 
 - **`auto` ne koristi vaše kombinacije.** `auto`/`auto/*` izgrađuje sopstveni skup kandidata bez konfiguracije i konsultuje perzistentne kombinacije samo ako je kombinacija bukvalno nazvana `auto` (nije preporučeno). Da biste rutirali kroz kombinaciju, pošaljite njen tačan naziv — ne `auto`.
-- **`openrouter/auto` je stvarni plaćeni OpenRouter proizvod** ("Auto Best Available"), a ne OmniRoute alijas. To je jedini statički unos modela u OpenRouter registru (`open-sse/config/providers/registry/openrouter/index.ts`) i naplaćuje se posebno. Koristite Settings → Routing → Hide paid models da biste ga isključili iz `auto` skupova.
+- **`openrouter/auto` je stvarni plaćeni OpenRouter proizvod** ("Auto Best Available"), a ne 67router alijas. To je jedini statički unos modela u OpenRouter registru (`open-sse/config/providers/registry/openrouter/index.ts`) i naplaćuje se posebno. Koristite Settings → Routing → Hide paid models da biste ga isključili iz `auto` skupova.
 
 Pogledajte [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) i [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) za originalnu zabunu koju ovo dokumentuje.
 
@@ -281,7 +281,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## Све стратегије рутирања
 
-OmniRoute механизам за комбиновање подржава **20 стратегија рутирања** (декларисаних у `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Сам механизам Auto Combo доступан је под стратегијом `auto`; остале стратегије доступне су за сачуване комбинације.
+67router механизам за комбиновање подржава **20 стратегија рутирања** (декларисаних у `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Сам механизам Auto Combo доступан је под стратегијом `auto`; остале стратегије доступне су за сачуване комбинације.
 
 | Стратегија          | Опис                                                                                                                                                                                                                |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -332,7 +332,7 @@ OmniRoute механизам за комбиновање подржава **20 �
 
 Комбинација `pipeline` са најмање два модела може да омогући усмеравање између планера и извршиоца помоћу
 `config.agenticOrchestration.enabled`. Прво одредиште је задужено за планирање и коначне одговоре;
-друго одредиште емитује позиве алата у изворном формату клијента. OmniRoute открива наставке
+друго одредиште емитује позиве алата у изворном формату клијента. 67router открива наставке
 са резултатима алата на основу протокола захтева, пита планер да ли је потребан још један круг алата
 и динамички одређује да ли ће извршилац или планер бити завршни
 корак окренут ка клијенту.
@@ -859,11 +859,11 @@ Ovaj skup testova se izvršava u CI-u (posao `test:integration`) sa `--test-conc
 
 ### Ograničeni "live" smoke testovi (NISU u CI-u — pravi provajderi)
 
-| Komanda                                | Šta radi                                                                            |
-| :------------------------------------- | :---------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Rutiranje u realnom procesu sa `RUN_COMBO_LIVE=1`; pravi snimak žive OmniRoute baze |
-| `npm run test:combo:live:vps`          | HTTP pozivi prema živom OmniRoute serveru (postavite `COMBO_LIVE_BASE_URL`)         |
-| `npm run test:combo:live:vps:failover` | Isto, sa namernim scenarijima failover-a                                            |
+| Komanda                                | Šta radi                                                                           |
+| :------------------------------------- | :--------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Rutiranje u realnom procesu sa `RUN_COMBO_LIVE=1`; pravi snimak žive 67router baze |
+| `npm run test:combo:live:vps`          | HTTP pozivi prema živom 67router serveru (postavite `COMBO_LIVE_BASE_URL`)         |
+| `npm run test:combo:live:vps:failover` | Isto, sa namernim scenarijima failover-a                                           |
 
 Ovi smoke testovi koriste stvarnu putanju prenosa (combo → provajder → completion). Namerno
 su izostavljeni iz CI-a jer zahtevaju prave kredencijale i pristup VPS-u.

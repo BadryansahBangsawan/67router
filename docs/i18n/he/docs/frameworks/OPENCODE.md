@@ -5,11 +5,11 @@
 ---
 
 > **סטטוס:** זמין לכלל.
-> **קהל יעד:** מפעילים המחברים את OpenCode לפריסת OmniRoute.
+> **קהל יעד:** מפעילים המחברים את OpenCode לפריסת 67router.
 > **מקור האמת (סכמת תצורה):** `src/shared/services/opencodeConfig.ts`
 > **מקור האמת (חבילת npm):** `@omniroute/opencode-provider/` (מרחב עבודה הניתן לפרסום)
 
-[OpenCode](https://opencode.ai) הוא לקוח AI סוכני לממשק שורת הפקודה/לשולחן העבודה. הוא קורא את קטלוג הספקים שלו מתוך `~/.config/opencode/opencode.json` (או `opencode.jsonc`) ופועל לפי הסכמה שבכתובת `https://opencode.ai/config.json`. OmniRoute חושף את עצמו ל-OpenCode כאחד מהספקים האלה — כל בקשה עוברת דרך ממשק `/v1` הסטנדרטי ותואם-OpenAI של OmniRoute, כך ש-OpenCode נהנה אוטומטית מניתוב Auto-Combo, ממפסקי מעגל, ממדיניות מפתחות, מניטוריות וכו'.
+[OpenCode](https://opencode.ai) הוא לקוח AI סוכני לממשק שורת הפקודה/לשולחן העבודה. הוא קורא את קטלוג הספקים שלו מתוך `~/.config/opencode/opencode.json` (או `opencode.jsonc`) ופועל לפי הסכמה שבכתובת `https://opencode.ai/config.json`. 67router חושף את עצמו ל-OpenCode כאחד מהספקים האלה — כל בקשה עוברת דרך ממשק `/v1` הסטנדרטי ותואם-OpenAI של 67router, כך ש-OpenCode נהנה אוטומטית מניתוב Auto-Combo, ממפסקי מעגל, ממדיניות מפתחות, מניטוריות וכו'.
 
 ישנם **שני נתיבי שילוב נתמכים**. בחרו אחד מהם — שניהם יוצרים את אותה תצורה.
 
@@ -17,16 +17,16 @@
 
 ## נתיב 1 — מחולל CLI (ללא התקנת npm)
 
-מומלץ למשתמשי קצה. כלול ב-OmniRoute. כותב את `opencode.json` במקומו.
+מומלץ למשתמשי קצה. כלול ב-67router. כותב את `opencode.json` במקומו.
 
 ```bash
-# לאחר התקנת OmniRoute‏ (npm i -g @omniroute/cli או שיבוט מקומי)
+# לאחר התקנת 67router‏ (npm i -g @omniroute/cli או שיבוט מקומי)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-מאחורי הקלעים, ה-CLI קורא ל-`mergeOpenCodeConfigText()` ‏(`src/shared/services/opencodeConfig.ts:104`), כך שקובץ `opencode.json` קיים שומר על הספקים וההערות האחרים שלו. הרשומה של OmniRoute נוספת או מוחלפת באופן אטומי.
+מאחורי הקלעים, ה-CLI קורא ל-`mergeOpenCodeConfigText()` ‏(`src/shared/services/opencodeConfig.ts:104`), כך שקובץ `opencode.json` קיים שומר על הספקים וההערות האחרים שלו. הרשומה של 67router נוספת או מוחלפת באופן אטומי.
 
 הקובץ שנוצר (קטלוג המודלים המוגדר כברירת מחדל):
 
@@ -90,8 +90,8 @@ writeFileSync("opencode.json", JSON.stringify(config, null, 2));
 ```
 ממשק המשתמש/הסוכן של OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (ממשק OpenAI של OmniRoute)
-         → המטפל של OmniRoute עבור /v1/chat/completions     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (ממשק OpenAI של 67router)
+         → המטפל של 67router עבור /v1/chat/completions     (open-sse/handlers/chatCore.ts)
             → ניתוב משולב / Auto-Combo / מנגנון ביצוע
                → ספק במעלה הזרם
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ניתן לעקוף אותן באמצעות `models: [...]`. תוספות מומלצות:
 
-- `"auto"` — חושף את נתב [Auto-Combo](../routing/AUTO-COMBO.md) של OmniRoute, שאינו דורש הגדרות. מאפשר ל-OpenCode לבחור את "המודל הזמין הטוב ביותר" בלי לקבע את הקטלוג בקוד.
-- `"<combo-name>"` — כל שילוב שהגדרתם בלוח הבקרה; OmniRoute פותר אותו באופן שקוף.
+- `"auto"` — חושף את נתב [Auto-Combo](../routing/AUTO-COMBO.md) של 67router, שאינו דורש הגדרות. מאפשר ל-OpenCode לבחור את "המודל הזמין הטוב ביותר" בלי לקבע את הקטלוג בקוד.
+- `"<combo-name>"` — כל שילוב שהגדרתם בלוח הבקרה; 67router פותר אותו באופן שקוף.
 
 ---
 
@@ -135,29 +135,29 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ## מצבי אימות
 
-| הגדרת OmniRoute                              | ערך `apiKey` מומלץ                                |
+| הגדרת 67router                               | ערך `apiKey` מומלץ                                |
 | -------------------------------------------- | ------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (ברירת המחדל מקומית) | `sk_omniroute` (מציין מקום מילולי)                |
 | `REQUIRE_API_KEY=true`                       | מפתח API אמיתי לכל משתמש מלוח הבקרה ← מפתחות API. |
 
-עבור לקוחות בסגנון Anthropic ששולחים `x-api-key` יחד עם `anthropic-version`, גם `extractApiKey` של OmniRoute מכבד את המפתח מ-`x-api-key`. OpenCode משתמש בממשק OpenAI, ולכן הוא תמיד ישלח `Authorization: Bearer ${apiKey}` — המקרה המיוחד של Anthropic אינו חל כאן.
+עבור לקוחות בסגנון Anthropic ששולחים `x-api-key` יחד עם `anthropic-version`, גם `extractApiKey` של 67router מכבד את המפתח מ-`x-api-key`. OpenCode משתמש בממשק OpenAI, ולכן הוא תמיד ישלח `Authorization: Bearer ${apiKey}` — המקרה המיוחד של Anthropic אינו חל כאן.
 
 ---
 
 ## פתרון בעיות
 
-| תסמין                                                   | סיבה                                                               | פתרון                                                                                             |
-| ------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| `404` בכל בקשה עם כתובת URL שמכילה `/v1/v1/`            | תצורה מיושנת מתוסף שלפני v3.8 שהוסיף את הסיומת `/v1` פעמיים.       | צרו מחדש באמצעות נתיב 1 או 2.                                                                     |
-| `401 Invalid API key`                                   | ב-OmniRoute מוגדר `REQUIRE_API_KEY=true` והמפתח אינו מוכר.         | צרו את המפתח בלוח הבקרה, או הגדירו `REQUIRE_API_KEY=false` (מקומי בלבד) והשתמשו ב-`sk_omniroute`. |
-| רשימת המודלים ריקה בממשק המשתמש של OpenCode             | כל 4 מודלי ברירת המחדל מוסתרים בהגדרות הנראות של הספק ב-OmniRoute. | העבירו `models: ["auto", ...]` כדי לחשוף את אלה שהפעלתם.                                          |
-| שגיאת 500 ב-OpenCode עם `cannot read property 'models'` | גרסאות ישנות יותר של OpenCode (< 0.1.x) לא קיבלו `models` מוטבע.   | שדרגו את OpenCode לגרסה שתואמת לסכמת v1 (`opencode.ai/config.json`).                              |
+| תסמין                                                   | סיבה                                                              | פתרון                                                                                             |
+| ------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `404` בכל בקשה עם כתובת URL שמכילה `/v1/v1/`            | תצורה מיושנת מתוסף שלפני v3.8 שהוסיף את הסיומת `/v1` פעמיים.      | צרו מחדש באמצעות נתיב 1 או 2.                                                                     |
+| `401 Invalid API key`                                   | ב-67router מוגדר `REQUIRE_API_KEY=true` והמפתח אינו מוכר.         | צרו את המפתח בלוח הבקרה, או הגדירו `REQUIRE_API_KEY=false` (מקומי בלבד) והשתמשו ב-`sk_omniroute`. |
+| רשימת המודלים ריקה בממשק המשתמש של OpenCode             | כל 4 מודלי ברירת המחדל מוסתרים בהגדרות הנראות של הספק ב-67router. | העבירו `models: ["auto", ...]` כדי לחשוף את אלה שהפעלתם.                                          |
+| שגיאת 500 ב-OpenCode עם `cannot read property 'models'` | גרסאות ישנות יותר של OpenCode (< 0.1.x) לא קיבלו `models` מוטבע.  | שדרגו את OpenCode לגרסה שתואמת לסכמת v1 (`opencode.ai/config.json`).                              |
 
 ---
 
 ## ראו גם
 
-- [תיעוד ה-API](../reference/API_REFERENCE.md) — כל ממשק ה-REST של OmniRoute
+- [תיעוד ה-API](../reference/API_REFERENCE.md) — כל ממשק ה-REST של 67router
 - [Auto-Combo](../routing/AUTO-COMBO.md) — המשמעות של `model: "auto"`
 - [קובץ ה-README של `@omniroute/opencode-provider`](../../@omniroute/opencode-provider/README.md)
 - קוד מקור: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

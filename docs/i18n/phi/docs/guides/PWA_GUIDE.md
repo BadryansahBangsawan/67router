@@ -4,11 +4,11 @@
 
 ---
 
-Ang OmniRoute ay ibinibigay bilang isang ganap na mai-install na Progressive Web App. Kapag in-access mo ang dashboard mula sa anumang mobile browser — Android (Chrome) o iOS (Safari) — maaari mo itong **"Idagdag sa Home Screen"** at magkaroon ng karanasang tulad ng isang native app nang hindi nangangailangan ng app store.
+Ang 67router ay ibinibigay bilang isang ganap na mai-install na Progressive Web App. Kapag in-access mo ang dashboard mula sa anumang mobile browser — Android (Chrome) o iOS (Safari) — maaari mo itong **"Idagdag sa Home Screen"** at magkaroon ng karanasang tulad ng isang native app nang hindi nangangailangan ng app store.
 
 ## Ano ang PWA?
 
-Ginagawang parang isang native mobile app ng Progressive Web App ang web dashboard ng OmniRoute. Kapag na-install na, ito ay:
+Ginagawang parang isang native mobile app ng Progressive Web App ang web dashboard ng 67router. Kapag na-install na, ito ay:
 
 - Nailulunsad mula sa iyong home screen gamit ang sarili nitong icon
 - Nagbubukas nang fullscreen — walang address bar ng browser o tab UI
@@ -20,26 +20,26 @@ Ginagawang parang isang native mobile app ng Progressive Web App ang web dashboa
 
 ### Android (Chrome)
 
-1. Buksan ang dashboard ng OmniRoute sa Chrome: `http://YOUR_IP:20128`
-2. Awtomatikong ipapakita ng Chrome ang banner na **"Idagdag ang OmniRoute sa Home screen"**, o:
+1. Buksan ang dashboard ng 67router sa Chrome: `http://YOUR_IP:20128`
+2. Awtomatikong ipapakita ng Chrome ang banner na **"Idagdag ang 67router sa Home screen"**, o:
    - I-tap ang menu na **⋮** (tatlong tuldok) → **"Idagdag sa Home screen"** o **"I-install ang app"**
 3. Kumpirmahin ang prompt
-4. Lalabas ang OmniRoute sa iyong home screen bilang isang standalone app
+4. Lalabas ang 67router sa iyong home screen bilang isang standalone app
 
 ### iOS (Safari)
 
-1. Buksan ang dashboard ng OmniRoute sa Safari: `http://YOUR_IP:20128`
+1. Buksan ang dashboard ng 67router sa Safari: `http://YOUR_IP:20128`
 2. I-tap ang button na **Ibahagi** (kahon na may arrow)
 3. Mag-scroll pababa at i-tap ang **"Idagdag sa Home Screen"**
-4. Pangalanan ito (ang default ay "OmniRoute") at i-tap ang **Idagdag**
-5. Lalabas ang OmniRoute sa iyong home screen kasama ang icon ng app
+4. Pangalanan ito (ang default ay "67router") at i-tap ang **Idagdag**
+5. Lalabas ang 67router sa iyong home screen kasama ang icon ng app
 
 ### Desktop (Chrome / Edge)
 
-1. Buksan ang dashboard ng OmniRoute
-2. I-click ang **icon ng pag-install** sa address bar (o ⋮ → "I-install ang OmniRoute...")
+1. Buksan ang dashboard ng 67router
+2. I-click ang **icon ng pag-install** sa address bar (o ⋮ → "I-install ang 67router...")
 3. Kumpirmahin ang prompt
-4. Magbubukas ang OmniRoute bilang isang standalone na window — walang mga tab at walang address bar
+4. Magbubukas ang 67router bilang isang standalone na window — walang mga tab at walang address bar
 
 ## Mga Feature
 
@@ -49,7 +49,7 @@ Naka-configure ang manifest gamit ang `display: "fullscreen"`, na nangangahuluga
 
 ### Suporta sa Offline
 
-May kasamang service worker (`sw.js`) ang OmniRoute na nagbibigay ng matalinong pag-cache:
+May kasamang service worker (`sw.js`) ang 67router na nagbibigay ng matalinong pag-cache:
 
 | Uri ng Asset                                                    | Diskarte                               | Gawi                                                                                                                   |
 | --------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Kapag hindi available ang network at nag-navigate ang user sa isang bagong pahin
 
 ### Mga Icon ng App
 
-Nagbibigay ang OmniRoute ng mga icon na na-optimize para sa bawat platform:
+Nagbibigay ang 67router ng mga icon na na-optimize para sa bawat platform:
 
 | File                   | Laki             | Ginagamit Ng                                    |
 | ---------------------- | ---------------- | ----------------------------------------------- |
@@ -93,9 +93,9 @@ Binuo ng Next.js sa pamamagitan ng `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "Ang OmniRoute ay isang AI gateway para sa mga multi-provider na LLM. Isang endpoint para sa lahat ng iyong AI provider.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "Ang 67router ay isang AI gateway para sa mga multi-provider na LLM. Isang endpoint para sa lahat ng iyong AI provider.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Matatagpuan sa `src/shared/components/PwaRegister.tsx`, ang client component na 
 
 ## Paggamit Kasama ang Termux (Android)
 
-Kapag pinapatakbo ang OmniRoute sa Android sa pamamagitan ng Termux, gumagana nang maayos ang PWA:
+Kapag pinapatakbo ang 67router sa Android sa pamamagitan ng Termux, gumagana nang maayos ang PWA:
 
-1. Simulan ang OmniRoute sa Termux: `npx omniroute`
+1. Simulan ang 67router sa Termux: `npx omniroute`
 2. Buksan ang Chrome sa parehong telepono: `http://localhost:20128`
 3. I-install ang PWA sa pamamagitan ng "Idagdag sa Home Screen"
 4. Kumokonekta ang PWA sa lokal na Termux server — lahat ay tumatakbo mismo sa device
@@ -156,7 +156,7 @@ Nangangahulugan ang kombinasyong ito na ang iyong Android phone ay parehong **se
 
 ## Paggamit Mula sa Ibang Mga Device
 
-I-install ang PWA sa anumang device na may access sa pamamagitan ng browser sa iyong OmniRoute server:
+I-install ang PWA sa anumang device na may access sa pamamagitan ng browser sa iyong 67router server:
 
 - **Ibang telepono/tablet**: Pumunta sa `http://PHONE_IP:20128` at i-install ang PWA
 - **Laptop**: Buksan ang Chrome/Edge at i-install ito bilang desktop PWA

@@ -45,7 +45,7 @@ Nke ahụ bụ ụzọ ngafe npm kwadoro ugbu a ebe a na-akwụsị token ndị 
 nkwa WS1.3 (token gbapụtara enweghị ike ibipụta naanị ya — n'ihi na ọ dịghị token).
 
 **Nhazi otu ugboro (onye nwe ya):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). Ruo mgbe nke ahụ dị, nzọụkwụ akpaaka ahụ ga-ada na `ENEEDAUTH`:
 jiri `publish_mode=staged` (n'okpuru) ma ọ bụ `direct` ziga ya ọzọ.
 

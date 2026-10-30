@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute npm + Docker আর্টিফ্যাক্ট প্রকাশ করে। এই গেটগুলি প্রোভেনেন্স, ইনভেন্টরি (SBOM) এবং CVE স্ক্যানিং প্রদান করে, যা সবই OSS এবং রিলিজ ওয়ার্কফ্লোতে সংযুক্ত।
+67router npm + Docker আর্টিফ্যাক্ট প্রকাশ করে। এই গেটগুলি প্রোভেনেন্স, ইনভেন্টরি (SBOM) এবং CVE স্ক্যানিং প্রদান করে, যা সবই OSS এবং রিলিজ ওয়ার্কফ্লোতে সংযুক্ত।
 **উপদেশ-প্রথম** অবস্থান — তারা এখন রিপোর্ট করে, প্রথম সবুজ রিলিজের পরে ব্লকিংয়ে উন্নীত করে।
 
 | গেট                   | টুল                                            | কোথায়                        | ব্লক করে?                         | আউটপুট                                              |
@@ -40,7 +40,7 @@ osv এবং Trivy CVE ডেটাবেসের বিরুদ্ধে ন
 
 - **চেইন:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`। `package-lock.json` এর মাধ্যমে নিশ্চিত করা হয়েছে — পুরো ডিপেন্ডেন্সি ট্রিতে (`@openai/codex-security`) ঠিক একটি প্যাকেজ `extract-zip` ঘোষণা করে, এবং ঠিক একটি প্যাকেজ (`promptfoo`) `@openai/codex-security` ঘোষণা করে।
 - **চেইনের কোথাও কোনো ফিক্সড রিলিজ নেই।** `extract-zip@2.0.1` (২০২০ সালে প্রকাশিত) প্যাকেজটির চূড়ান্ত রিলিজ — এটি রক্ষণাবেক্ষণ করা হয় না। `@openai/codex-security`-এর বর্তমান npm-latest (`0.1.29`) এখনও `extract-zip@2.0.1` ব্যবহার করে।
-- **প্রোডাকশন থেকে অপ্রাপ্য।** `promptfoo` শুধুমাত্র devDependency (কখনোই `dependencies`-এর অধীনে তালিকাভুক্ত নয়), এবং `src/`, `open-sse/`, বা `bin/`-এর অধীনে কোনো ফাইল `extract-zip` npm প্যাকেজটি ইম্পোর্ট করে না — OmniRoute-এর নিজস্ব `extractZip()` হেল্পার (`src/lib/versionManager/binaryManager.ts:93`) নেটিভ `unzip`/`tar` ব্যবহার করে এবং এটি সম্পর্কহীন। `@openai/codex-security` তার নিজস্ব সিমলিঙ্ক-ট্র্যাভার্সাল গার্ডও `extract-zip`-এর `onEntry` কলব্যাকের উপরে সরবরাহ করে।
+- **প্রোডাকশন থেকে অপ্রাপ্য।** `promptfoo` শুধুমাত্র devDependency (কখনোই `dependencies`-এর অধীনে তালিকাভুক্ত নয়), এবং `src/`, `open-sse/`, বা `bin/`-এর অধীনে কোনো ফাইল `extract-zip` npm প্যাকেজটি ইম্পোর্ট করে না — 67router-এর নিজস্ব `extractZip()` হেল্পার (`src/lib/versionManager/binaryManager.ts:93`) নেটিভ `unzip`/`tar` ব্যবহার করে এবং এটি সম্পর্কহীন। `@openai/codex-security` তার নিজস্ব সিমলিঙ্ক-ট্র্যাভার্সাল গার্ডও `extract-zip`-এর `onEntry` কলব্যাকের উপরে সরবরাহ করে।
 - `package.json` `overrides`-এর মাধ্যমে `extract-zip` কে **উপনাম করবেন না** — একমাত্র কার্যকর ড্রপ-ইন প্রতিস্থাপনটি হল Electron-org-internal এবং `@openai/codex-security`-এর নিজস্ব `onEntry`/`defaultDirMode`/`defaultFileMode` চেকের সাথে API-অসামঞ্জস্যপূর্ণ; এটিকে ওভাররাইড করলে সেই প্যাকেজের নিরাপত্তা চেকগুলি নীরবে ভেঙে যাবে।
 - **বেসলাইন:** পরিমাপকৃত osv `vulnCount` (3) ইতিমধ্যেই হিমায়িত `config/quality/quality-baseline.json` বেসলাইনের (27) অনেক নিচে — কোনো র্যাচেট পরিবর্তনের প্রয়োজন নেই।
 - **রিগ্রেশন গার্ড:** `tests/unit/extract-zip-14482-exposure.test.ts` উপরের চেইন এবং নো-প্রোডাকশন-ইম্পোর্ট ইনভেরিয়েন্ট নিশ্চিত করে; যদি কোনোটি ভেঙে যায় (যেমন, ভবিষ্যতের একটি PR `extract-zip` কে প্রোডাকশন থেকে অ্যাক্সেসযোগ্য করে তোলে), তাহলে এটি CI ব্যর্থ করে।

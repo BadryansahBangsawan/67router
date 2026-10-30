@@ -39,7 +39,7 @@ Celoten URL ima naslednjo obliko:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. V OmniRoute pojdite na **Providers → Add Provider**, izberite **Microsoft 365 Copilot
+6. V 67router pojdite na **Providers → Add Provider**, izberite **Microsoft 365 Copilot
    (BizChat)** in prilepite poverilnico v naslednji obliki:
 
 ```
@@ -56,9 +56,9 @@ orodij DevTools:
 1. Odprite **DevTools → Network**.
 2. Začnite ali nadaljujte pogovor BizChat (s tem sprožite povezavo WebSocket).
 3. Z desno tipko miške kliknite na plošči Network in izberite **Save all as HAR with content**.
-4. V OmniRoute v pogovornem oknu povezave ponudnika uporabite gumb **Import .har file**.
+4. V 67router v pogovornem oknu povezave ponudnika uporabite gumb **Import .har file**.
 
-OmniRoute v datoteki HAR poišče URL WebSocket Chathub, izvleče
+67router v datoteki HAR poišče URL WebSocket Chathub, izvleče
 `access_token` in `chathubPath` ter samodejno izpolni polja poverilnic. Pri
 uvozu HAR se dekodira čas poteka JWT-ja in prikaže preostali čas veljavnosti žetona.
 
@@ -81,7 +81,7 @@ Da se izognete ročnemu ponovnemu pridobivanju, lahko Microsoftov žeton za osve
 | `tier`         | `individual` (privzeto), `edu` ali `enterprise`                             |
 
 Žeton za osvežitev pridobite z Microsoftovim tokom kode naprave ali avtorizacijske kode
-z obsegom `substrate.office.com/sydney`. Ko je nastavljen `refreshToken`, OmniRoute
+z obsegom `substrate.office.com/sydney`. Ko je nastavljen `refreshToken`, 67router
 pred vsako zahtevo vnaprej osveži `access_token`, zato vam poverilnice ni treba
 znova pridobiti po vsakem poteku veljavnosti po približno 75 minutah.
 

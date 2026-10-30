@@ -8,7 +8,7 @@
 > **Legutóbbi frissítés:** 2026-09-16
 > **Célközönség:** Beágyazott szolgáltatásokat (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua) hozzáadó, karbantartó vagy hibakereső mérnökök.
 
-A beágyazott szolgáltatások helyileg telepített, kísérőfolyamatként működő eszközök, amelyeket az OmniRoute telepít és felügyel, valamint teljes értékű útválasztási célpontként tesz elérhetővé. A külső szolgáltatókkal ellentétben (amelyek API-kulcsok használatával, az interneten keresztül érhetők el) a beágyazott szolgáltatások ugyanazon a gépen futnak, mint az OmniRoute, és a visszacsatolási hálózati interfészen keresztül kommunikálnak.
+A beágyazott szolgáltatások helyileg telepített, kísérőfolyamatként működő eszközök, amelyeket a 67router telepít és felügyel, valamint teljes értékű útválasztási célpontként tesz elérhetővé. A külső szolgáltatókkal ellentétben (amelyek API-kulcsok használatával, az interneten keresztül érhetők el) a beágyazott szolgáltatások ugyanazon a gépen futnak, mint a 67router, és a visszacsatolási hálózati interfészen keresztül kommunikálnak.
 
 ---
 
@@ -33,7 +33,7 @@ Hét szolgáltatás van beágyazva:
 
 | Szolgáltatás    | npm-csomag                                    | Alapértelmezett port | Cél                                                                                                                                                                                                                                                                                                                                                                                     |
 | --------------- | --------------------------------------------- | :------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                     |        20130         | AI-útválasztó, amelyet az OmniRoute alszolgáltatóként használhat. A modelleket `9router/{sub}/{model}` formátumban teszi elérhetővé                                                                                                                                                                                                                                                     |
+| **9Router**     | `9router`                                     |        20130         | AI-útválasztó, amelyet a 67router alszolgáltatóként használhat. A modelleket `9router/{sub}/{model}` formátumban teszi elérhetővé                                                                                                                                                                                                                                                       |
 | **CLIProxyAPI** | GitHub-kiadás binárisa (`cliproxy`)           |         8317         | Helyi proxyadapter az Anthropic CLI hitelesítési folyamataihoz. Tartalék útválasztást biztosít az OAuth-tokenek lejáratakor                                                                                                                                                                                                                                                             |
 | **Mux**         | `mux` (grafikus felület nélküli `mux server`) |         8322         | Helyi ügynök-orkesztrációs démon (coder/mux). Csak az életciklusa felügyelt — nem útválasztási cél (nincs LLM-proxyzás).                                                                                                                                                                                                                                                                |
 | **Bifrost**     | `@maximhq/bifrost`                            |         8080         | Go-alapú AI-átjáró relé-háttérrendszer. Futás közben a relé útvonala (`/v1/relay/`) automatikusan ezt választja                                                                                                                                                                                                                                                                         |
@@ -43,21 +43,21 @@ Hét szolgáltatás van beágyazva:
 
 Mind a hét ugyanazt a felügyeleti modellt követi:
 
-- Az OmniRoute a `DATA_DIR/services/{name}/` alatt telepíti őket (az OmniRoute saját `package.json` fájljától elkülönítve)
-- Az OmniRoute gyermekfolyamatként indítja és figyeli őket
-- Az OmniRoute ideiglenes API-kulcsot helyez el a gyermekfolyamat környezeti változói között, és azt leállás nélkül rotálja (ahol ez alkalmazható)
+- A 67router a `DATA_DIR/services/{name}/` alatt telepíti őket (a 67router saját `package.json` fájljától elkülönítve)
+- A 67router gyermekfolyamatként indítja és figyeli őket
+- A 67router ideiglenes API-kulcsot helyez el a gyermekfolyamat környezeti változói között, és azt leállás nélkül rotálja (ahol ez alkalmazható)
 - Minden felügyeleti útvonal (`/api/services/*`) **LOCAL_ONLY** — csak a loopback interfészről érhető el (17. szigorú szabály)
 
 ### Főbb döntések (a tervezési tervből)
 
-| Döntés                                                 | Érték                                                                                                 |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| A 9Router natív felületének elérése az irányítópultról | Fordított proxy a `/dashboard/providers/services/9router/embed/*` útvonalon                           |
-| Telepítési mechanizmus                                 | `npm install {package}` az `execFile` használatával (shell-interpoláció nélkül)                       |
-| Felhasználási mód                                      | A szolgáltató `9router/{sub}/{model}` formátumban van regisztrálva az útválasztási motorban           |
-| API-kulcsok kezelése                                   | Az OmniRoute generálja, tároláskor titkosítja (AES-256-GCM), és környezeti változón keresztül adja át |
-| Irányítópult helye                                     | `/dashboard/providers/services` (három lap)                                                           |
-| Automatikus indítás                                    | Szolgáltatásonként kapcsolható, alapértelmezetten KI                                                  |
+| Döntés                                                 | Érték                                                                                               |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| A 9Router natív felületének elérése az irányítópultról | Fordított proxy a `/dashboard/providers/services/9router/embed/*` útvonalon                         |
+| Telepítési mechanizmus                                 | `npm install {package}` az `execFile` használatával (shell-interpoláció nélkül)                     |
+| Felhasználási mód                                      | A szolgáltató `9router/{sub}/{model}` formátumban van regisztrálva az útválasztási motorban         |
+| API-kulcsok kezelése                                   | A 67router generálja, tároláskor titkosítja (AES-256-GCM), és környezeti változón keresztül adja át |
+| Irányítópult helye                                     | `/dashboard/providers/services` (három lap)                                                         |
+| Automatikus indítás                                    | Szolgáltatásonként kapcsolható, alapértelmezetten KI                                                |
 
 ---
 
@@ -221,7 +221,7 @@ A nem loopback kérések a hitelesítési tokentől függetlenül `403 LOCAL_ONL
 #### `POST /api/services/9router/install`
 
 Telepíti a 9Routert az npm rendszerből. Létrehozza a `DATA_DIR/services/9router/` könyvtárat saját
-`package.json` és `node_modules/` elemekkel. Nem ütközik az OmniRoute saját függőségeivel.
+`package.json` és `node_modules/` elemekkel. Nem ütközik a 67router saját függőségeivel.
 
 **Kérés törzse** (minden mező opcionális):
 
@@ -381,7 +381,7 @@ Visszaadja az egyesített élő és adatbázis-állapotot, beleértve a verzió 
 
 #### `POST /api/services/9router/auto-start`
 
-Átváltja az automatikus indítás jelzőjét. Ha `enabled: true`, a szolgáltatás az OmniRoute következő
+Átváltja az automatikus indítás jelzőjét. Ha `enabled: true`, a szolgáltatás a 67router következő
 indításakor automatikusan elindul (ha a szolgáltatás telepítve van).
 
 **Kérés törzse:**
@@ -593,7 +593,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Ez a proxy:
 
 - Továbbítja a kérést a `http://127.0.0.1:{port}/{path}` címre (csak visszacsatolási interfészen)
-- Eltávolítja a bejövő `cookie` és `authorization` fejléceket (az OmniRoute-munkamenet nem szivárog ki)
+- Eltávolítja a bejövő `cookie` és `authorization` fejléceket (a 67router-munkamenet nem szivárog ki)
 - Beilleszti az `Authorization: Bearer {apiKey}` fejlécet a 9Router-hitelesítéshez
 - Eltávolítja a válaszból a `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` fejléceket
 - Átírja a HTML-válaszokat egy `<base href>` elem beillesztéséhez és az abszolút útvonalak normalizálásához (`/foo` → `/dashboard/.../embed/foo`)
@@ -630,7 +630,7 @@ futtatását vagy folyamatindítást váltson ki. A teljes szintmátrixot lásd 
 ### API-kulcs injektálása
 
 A 9Router és a Mux saját HTTP-végpontjaihoz API-kulcsot/bearer tokent igényel.
-Az OmniRoute:
+A 67router:
 
 1. Kulcsot generál a `crypto.randomBytes(32).toString("base64url")` használatával,
    szolgáltatásspecifikus előtaggal (`nr_` a 9Router, `mx_` a Mux esetén).
@@ -815,7 +815,7 @@ Ha a beágyazott szolgáltatás OpenAI-kompatibilis `/v1/chat/completions` végp
 **Ellenőrzőlista:**
 
 1. Ellenőrizze a `GET /api/services/{name}/logs` végpontot (vagy az irányítópult Naplók paneljét). Keressen olyan sorokat, mint az `Error: ENOENT`, `address already in use` vagy `Cannot find module`.
-2. Ellenőrizze, hogy az `npm` szerepel-e a PATH-ban: futtassa a `which npm` parancsot ugyanabból a felhasználói fiókból, amely az OmniRoute-ot futtatja.
+2. Ellenőrizze, hogy az `npm` szerepel-e a PATH-ban: futtassa a `which npm` parancsot ugyanabból a felhasználói fiókból, amely a 67router-ot futtatja.
 3. Ellenőrizze, hogy a szolgáltatás telepítve van-e: keresse meg az `installedVersion` mezőt a `GET /api/services/{name}/status` válaszában. Ha az értéke `null`, először futtassa a telepítést.
 4. Ellenőrizze, hogy létezik-e és nem üres-e a `DATA_DIR/services/{name}/node_modules/` könyvtár.
 5. Ellenőrizze az állapotválasz `lastError` mezőjében a megtisztított kilépési okot.
@@ -847,7 +847,7 @@ Ha a beágyazott szolgáltatás OpenAI-kompatibilis `/v1/chat/completions` végp
 2. Keresse meg és állítsa le az ütközést okozó folyamatot: `lsof -ti :20130 | xargs kill -9`.
 3. A port szolgáltatásonként konfigurálható a `bootstrap.ts` fájl `port` mezőjével.
 
-**Megjegyzés:** A 9Router alapértelmezés szerint kifejezetten a 20130-as portot használja, hogy elkerülje az ütközést az OmniRoute alapértelmezett 20128-as portjával.
+**Megjegyzés:** A 9Router alapértelmezés szerint kifejezetten a 20130-as portot használja, hogy elkerülje az ütközést a 67router alapértelmezett 20128-as portjával.
 
 ---
 
@@ -857,13 +857,13 @@ Ha a beágyazott szolgáltatás OpenAI-kompatibilis `/v1/chat/completions` végp
 
 **Okok:**
 
-- A `DATA_DIR` vagy annak szülőkönyvtára nem írható az OmniRoute-folyamat számára.
+- A `DATA_DIR` vagy annak szülőkönyvtára nem írható a 67router-folyamat számára.
 - Root nélküli Docker-környezetben fut, és nincs írási hozzáférése a csatlakoztatott kötethez.
 
 **Javítás:**
 
 1. Ellenőrizze a `DATA_DIR` könyvtárat (alapértelmezett: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Győződjön meg arról, hogy a könyvtár az OmniRoute-folyamat felhasználójának tulajdonában van: `chown -R $USER ~/.omniroute/`
+2. Győződjön meg arról, hogy a könyvtár a 67router-folyamat felhasználójának tulajdonában van: `chown -R $USER ~/.omniroute/`
 3. Docker használata esetén győződjön meg arról, hogy a kötetcsatolás megfelelő jogosultságokkal rendelkezik a konténer felhasználója számára.
 
 ---
@@ -903,14 +903,14 @@ Nem. A LOCAL_ONLY szint szándékosan ilyen kialakítású (17. szigorú szabál
 
 **K: Elérhető lesz a 9Router és a CLIProxyAPI éles/felhőalapú telepítésekben?**
 
-Igen. Mindkét szolgáltatás ugyanazt a helyi működést előtérbe helyező modellt követi, mint maga az OmniRoute. Ugyanazon a gépen futnak, és loopback kapcsolaton keresztül kommunikálnak. Az „éles” itt azt a VPS-t vagy helyi kiszolgálót jelenti, amelyen az OmniRoute telepítve van, nem pedig egy távoli felhőszolgáltatót.
+Igen. Mindkét szolgáltatás ugyanazt a helyi működést előtérbe helyező modellt követi, mint maga a 67router. Ugyanazon a gépen futnak, és loopback kapcsolaton keresztül kommunikálnak. Az „éles” itt azt a VPS-t vagy helyi kiszolgálót jelenti, amelyen a 67router telepítve van, nem pedig egy távoli felhőszolgáltatót.
 
 ---
 
 **K: Hogyan végezhetem el a felügyelő hibakeresését?**
 
 1. Kövesse élőben az SSE-naplófolyamot: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Ellenőrizze az OmniRoute pino-kimenetében található strukturált naplókat a `service:supervisor` névtérre szűrve.
+2. Ellenőrizze a 67router pino-kimenetében található strukturált naplókat a `service:supervisor` névtérre szűrve.
 3. Vizsgálja meg az adatbázis sorát: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. A `GET /api/services/9router/status` használatával egyetlen hívással megtekintheti az aktuális élő állapotot, a PID-et, az állapotellenőrzés eredményét és a `lastError` értékét.
 

@@ -4,7 +4,7 @@
 
 ---
 
-Relays (Vercel, Deno, Cloudflare) මඟින් serverless backend එකකදී upstream සම්බන්ධතාව අවසන් කරනු ලබන අතර, එමඟින් provider API key එක server-side තබා ගනිමින් OmniRoute හට ස්ථාවර කලාපයකින් පිටතට සම්බන්ධ වීමට හැකි වේ. මෙය production පරිසරයේදී operators මුහුණ දෙන අසාර්ථක අවස්ථා දෙක සහ ඒ සෑම එකක් සඳහාම OmniRoute සපයන ප්රතිසාධන ක්රම විස්තර කරයි.
+Relays (Vercel, Deno, Cloudflare) මඟින් serverless backend එකකදී upstream සම්බන්ධතාව අවසන් කරනු ලබන අතර, එමඟින් provider API key එක server-side තබා ගනිමින් 67router හට ස්ථාවර කලාපයකින් පිටතට සම්බන්ධ වීමට හැකි වේ. මෙය production පරිසරයේදී operators මුහුණ දෙන අසාර්ථක අවස්ථා දෙක සහ ඒ සෑම එකක් සඳහාම 67router සපයන ප්රතිසාධන ක්රම විස්තර කරයි.
 
 ## relay සත්යාපන තොරතුරු ගබඩා කරන ආකාරය
 
@@ -31,7 +31,7 @@ restart කිරීම් අතරතුරදීත් relay එක ක්ර
 1. **Settings → Proxy Pool** විවෘත කරන්න.
 2. සත්යාපන තොරතුරු නොමැති relay පේළිවල කහ පැහැති `auth missing` badge එකක් සහ
    **Repair** button එකක් පෙන්වයි.
-3. **Repair** ක්ලික් කරන්න. OmniRoute විසින්
+3. **Repair** ක්ලික් කරන්න. 67router විසින්
    `POST /api/settings/proxies/[id]/repair-relay` අමතනු ලබන අතර, එය:
    - **වත්මන්** key එක භාවිතයෙන් `relayAuthEnc` විකේතනය කරයි,
    - සරල පෙළ `relayAuth` නැවත `notes` තුළට ලියයි,
@@ -63,7 +63,7 @@ UI එක තුළ, token එක ප්රතිසාධනය කළ නො�
 **ලක්ෂණය:** proxy පරීක්ෂණය (`speed` button එක) relay එක ක්රියාත්මක බව පෙන්වුවත් requests
 තවමත් වරින් වර අසාර්ථක වේ.
 
-OmniRoute හි ස්වයංක්රීය පරීක්ෂණ probe එකෙන් ආපසු ලබා දෙන relay දැනුවත් කිරීමේ headers
+67router හි ස්වයංක්රීය පරීක්ෂණ probe එකෙන් ආපසු ලබා දෙන relay දැනුවත් කිරීමේ headers
 පරීක්ෂා කරන්න (**Settings → Proxy Pool** සහ `relayTested` / `relayAlive` counters බලන්න):
 
 - `x-relay-url` — ප්රතිචාර දැක්වූ relay backend එක.

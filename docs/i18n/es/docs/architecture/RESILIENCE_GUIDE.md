@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tiene tres mecanismos de resiliencia distintos pero relacionados. Cada uno tiene un alcance y un propósito diferentes. Mantenlos separados al depurar el comportamiento de enrutamiento.
+67router tiene tres mecanismos de resiliencia distintos pero relacionados. Cada uno tiene un alcance y un propósito diferentes. Mantenlos separados al depurar el comportamiento de enrutamiento.
 
 ![modelo de resiliencia de 3 capas](../diagrams/exported/resilience-3layers.svg)
 
@@ -216,7 +216,7 @@ Los tres encabezados de afinidad de sesión nunca se reenvían al upstream — l
 
 ### Concesiones exclusivas de conexión en sesiones gestionadas
 
-**Ámbito:** un cliente/sesión HTTP gestionado activo posee una conexión OmniRoute elegible.
+**Ámbito:** un cliente/sesión HTTP gestionado activo posee una conexión 67router elegible.
 
 **Propósito:** proporcionar propiedad exclusiva y duradera de la conexión para clientes que
 necesitan una barrera de enrutamiento estricta entre solicitudes. Esto difiere de la afinidad
@@ -242,7 +242,7 @@ de control de leases se eliminan de los registros, de las instantáneas de solic
 los encabezados del ejecutor upstream.
 
 Si el enrutamiento ordinario tiene candidatos gestionados elegibles pero todos los candidatos libres
-están ocupados por un lease activo ajeno, OmniRoute devuelve HTTP `429`, un código de capacidad de
+están ocupados por un lease activo ajeno, 67router devuelve HTTP `429`, un código de capacidad de
 leases no disponible, un estado de espera de capacidad y un `Retry-After` acotado derivado de la
 expiración relevante más próxima. La elegibilidad vacía ordinaria no es contención de leases y
 mantiene su semántica de error de enrutamiento existente.
@@ -266,7 +266,7 @@ Los mecanismos relacionados permanecen separados:
   conexión); para otros proveedores, `getQuotaScopedModelForProvider()`.
 - `404` bloquea solo el modelo en cuestión (`getModelLockKey()` reduce el ámbito de `not_found`).
 - Cualquier otro estado — fallos de transporte/servidor `5xx` y el propio
-  `502` sintetizado por OmniRoute a partir de la validación de calidad — bloquea
+  `502` sintetizado por 67router a partir de la validación de calidad — bloquea
   únicamente la tupla **exacta** proveedor/conexión/modelo. Un flujo defectuoso
   en un modelo no es prueba de nada sobre la cuota de la cuenta; antes de esta
   regla, una única respuesta vacía en `codex/gpt-5.6-luna` sacaba del enrutamiento
@@ -407,7 +407,7 @@ concurrency caps**, un `model=cap` por línea) o mediante
   coincide con `glm-5`). Los valores son límites de solicitudes concurrentes en enteros positivos.
 - **Encolamiento local, sin descubrimiento:** las solicitudes en exceso se encolan localmente con
   la semántica existente de cola/tiempo de espera (errores de admisión tipados `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL`). OmniRoute no descubre ni
+  `SEMAPHORE_QUEUE_FULL`). 67router no descubre ni
   infiere la política upstream — aplica exactamente los límites que el operador
   configuró. Una compuerta de modelo saturada nunca deshabilita el proveedor ni
   crea un bloqueo permanente del modelo; el comportamiento upstream de 429/cooldown/fallback
@@ -511,7 +511,7 @@ La comprobación de admisión en sí es una función pura (`open-sse/services/ra
 ### Red de seguridad de activación automática de límite de tasa y protección de conexiones (`rateLimitProtection`)
 
 **Red de seguridad de activación automática** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, predeterminado `true`):
-De forma predeterminada, OmniRoute habilita automáticamente la protección de cola de límite de tasa para todas las conexiones activas de proveedores con clave API (`getProviderCategory(provider) === "apikey"`). Esto garantiza que las solicitudes entrantes hacia claves API ascendentes sensibles a límites de tasa se encolen y se regulen a través de Bottleneck en lugar de irrumpir en ráfagas que provocan errores 429 ascendentes. La red de seguridad puede anularse mediante la variable de entorno `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` la desactiva, `true`/`1`/`on` la fuerza a activarse), que tiene prioridad sobre la configuración persistida del panel (**Configuración → Resiliencia** / `PATCH /api/resilience`).
+De forma predeterminada, 67router habilita automáticamente la protección de cola de límite de tasa para todas las conexiones activas de proveedores con clave API (`getProviderCategory(provider) === "apikey"`). Esto garantiza que las solicitudes entrantes hacia claves API ascendentes sensibles a límites de tasa se encolen y se regulen a través de Bottleneck en lugar de irrumpir en ráfagas que provocan errores 429 ascendentes. La red de seguridad puede anularse mediante la variable de entorno `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` la desactiva, `true`/`1`/`on` la fuerza a activarse), que tiene prioridad sobre la configuración persistida del panel (**Configuración → Resiliencia** / `PATCH /api/resilience`).
 
 **Semántica de `rateLimitProtection` por conexión:**
 La protección de límite de tasa por conexión se registra mediante el campo booleano `rateLimitProtection` en las conexiones de proveedores (persistido como `rate_limit_protection` en SQLite):
@@ -830,7 +830,7 @@ IP es la misma señal que una cuota agotada. Limitaciones honestas:
 > orientada al agente, de las secciones anteriores; las secciones numeradas siguen siendo la
 > referencia completa.
 
-OmniRoute tiene tres mecanismos de fallo temporal relacionados pero distintos. Mantén su
+67router tiene tres mecanismos de fallo temporal relacionados pero distintos. Mantén su
 alcance separado al depurar el comportamiento de enrutamiento. Consulta el
 [diagrama de resiliencia de 3 capas](../diagrams/exported/resilience-3layers.svg)
 (fuente: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

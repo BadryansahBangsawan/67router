@@ -7,7 +7,7 @@
 > **Isi mmalite eziokwu:** `src/lib/memory/` na `src/app/api/memory/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40 (agbanyụrụ-na-ndabara + mmejuputa quantization int8)
 
-OmniRoute na-enye ebe nchekwa mkparịta ụka na-adịgide adịgide nke a na-eji API key
+67router na-enye ebe nchekwa mkparịta ụka na-adịgide adịgide nke a na-eji API key
 amata (yana session id ma ọ bụrụ na achọrọ). A na-ewepụta ncheta na-akpaghị aka site
 na nzaghachi LLM site n'iji regex dị mfe achọ ụkpụrụ, wee tinye ha ọzọ n'arịrịọ
 ndị na-esote dịka ozi system dị n'isi (ma ọ bụ ozi user mbụ maka ndị na-eweta ọrụ
@@ -628,7 +628,7 @@ TTL ndabara 5 min).
 
 ## Ịhọrọ Onye Na-enye Embedding (v3.8.16+)
 
-Injin ebe nchekwa OmniRoute na-akwado **isi mmalite embedding anọ** (`src/lib/memory/embedding/`). Nke ọ bụla nwere uru na ọghọm dị iche iche n'ihe gbasara **oge nzaghachi, ọnụ ahịa, ogo model, na mgbagwoju anya nhazi**.
+Injin ebe nchekwa 67router na-akwado **isi mmalite embedding anọ** (`src/lib/memory/embedding/`). Nke ọ bụla nwere uru na ọghọm dị iche iche n'ihe gbasara **oge nzaghachi, ọnụ ahịa, ogo model, na mgbagwoju anya nhazi**.
 
 ### Isi Mmalite Embedding Ndị Ahụ
 
@@ -1048,13 +1048,13 @@ Worker ahụ na-ejikọta naanị na loopback, nke nchedo SSRF nke `GenericMemor
 Ihe nkwụnye a anaghị ebelata nchedo ahụ: e tinyere host ahụ ozugbo ka ọ bụrụ `127.0.0.1`, ma schema
 nhazi (`ClaudeMemBackendConfigSchema`, `.strict()`) na-anabata naanị:
 
-| Igodo       | Ụdị    | Ndabara | Nkọwa                                                                                                                    |
-| ----------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `port`      | ọnụọgụ | —       | Achọrọ ya, 1024–65535. ọdụ ụgbọ mmiri nke onye ọrụ claude-mem sitere na faịlụ ntọala ya (ndabara `37700 + uid % 100`).   |
-| `project`   | eriri  | —       | Ọrụ ngo claude-mem a ga-eji. Ọ bụrụ na edoghị ya → igodo OmniRoute API ọ bụla ga-ejikọta na ọrụ ngo nke ya (`apiKeyId`). |
-| `timeoutMs` | ọnụọgụ | `5000`  | Oge njedebe maka arịrịọ ọ bụla, 100–30000.                                                                               |
+| Igodo       | Ụdị    | Ndabara | Nkọwa                                                                                                                   |
+| ----------- | ------ | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `port`      | ọnụọgụ | —       | Achọrọ ya, 1024–65535. ọdụ ụgbọ mmiri nke onye ọrụ claude-mem sitere na faịlụ ntọala ya (ndabara `37700 + uid % 100`).  |
+| `project`   | eriri  | —       | Ọrụ ngo claude-mem a ga-eji. Ọ bụrụ na edoghị ya → igodo 67router API ọ bụla ga-ejikọta na ọrụ ngo nke ya (`apiKeyId`). |
+| `timeoutMs` | ọnụọgụ | `5000`  | Oge njedebe maka arịrịọ ọ bụla, 100–30000.                                                                              |
 
-Mee ka ọ rụọ ọrụ site na `PUT /api/settings/memory` ma malitegharị OmniRoute (a na-edebanye azụọrụ
+Mee ka ọ rụọ ọrụ site na `PUT /api/settings/memory` ma malitegharị 67router (a na-edebanye azụọrụ
 naanị otu ugboro, n'ime `initMemoryBackends()`):
 
 ```json
@@ -1071,7 +1071,7 @@ Njikọ na oke:
 
 - ID bụ `claude-mem:<observationId>`; `get`/`delete` na-eleghara ID nke azụọrụ ndị ọzọ anya n'emeghị
   oku netwọkụ.
-- `create` → `POST /api/memory/save`; mpaghara OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; mpaghara 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) na-aga n'ime `metadata.omniroute` nke claude-mem ma laghachi dịka ha dị mgbe a gụrụ ha.
 - `search` → `GET /api/search?format=json&type=observations`, a na-ebelata ya ruo `maxTokens`
   (mkpụrụedemede / 4). `list` → endpoint nlele nke onye ọrụ nwere peeji (`total` bụ oke ala — onye ọrụ
@@ -1083,16 +1083,16 @@ Njikọ na oke:
 - Ntinye prompt (`retrieval.ts`) na ngwa MCP `omniroute_memory_*` ka na-agụ SQLite
   ozugbo — ha anaghị agafe `memoryManager`, ya mere azụọrụ a anaghị enye ha data.
 
-**Iduzi oku LLM nke claude-mem n'onwe ya site na OmniRoute.** claude-mem na-eji LLM abịakọrọ nlele
+**Iduzi oku LLM nke claude-mem n'onwe ya site na 67router.** claude-mem na-eji LLM abịakọrọ nlele
 (ndabara: Claude Agent SDK). Enwere ike iduzi provider `openai-compatible` ya gaa na
-OmniRoute kama, iji nweta ndabere combo na nsuso ụgwọ. N'ime `~/.claude-mem/settings.json`:
+67router kama, iji nweta ndabere combo na nsuso ụgwọ. N'ime `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<igodo OmniRoute API>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<model ma ọ bụ combo OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<igodo 67router API>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<model ma ọ bụ combo 67router>"
 }
 ```
 

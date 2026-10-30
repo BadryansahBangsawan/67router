@@ -10,7 +10,7 @@
 
 ## အခြေအနေအရပ်ရပ်
 
-လက်ရှိတွင် OmniRoute သည် `src/lib/db/` မှ domain-oriented persistence function များကို ဖော်ပြထားပြီး၊
+လက်ရှိတွင် 67router သည် `src/lib/db/` မှ domain-oriented persistence function များကို ဖော်ပြထားပြီး၊
 `src/lib/db/core.ts` မှ ပြန်ပေးသော မျှဝေသုံး connection သည် `src/lib/db/adapters/types.ts` ရှိ synchronous `SqliteAdapter`
 contract ကို အကောင်အထည်ဖော်ထားသည်။ ထို adapter သည် SQLite runtime အများအပြားကို ပံ့ပိုးသော်လည်း ၎င်း၏
 မျက်နှာပြင်မှာ SQLite ပုံစံအတိုင်း ဆက်လက်ရှိနေသည်- synchronous prepared statement များ၊ `pragma`၊ deferred နှင့် immediate

@@ -7,7 +7,7 @@
 > **Tiesos šaltinis:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-„OmniRoute“ pateikiama su bendrąja vertinimo sistema, kurią galite naudoti maršruto parinkimo konfigūracijoms, atskiriems teikėjams ar modeliams arba pridedamiems „auksinio rinkinio“ rinkiniams palyginti. Naudokite ją maršruto parinkimo pakeitimams patikrinti, naujiems teikėjams patvirtinti ir leidimams kontroliuoti prieš nukreipdami į juos produkcinį srautą.
+„67router“ pateikiama su bendrąja vertinimo sistema, kurią galite naudoti maršruto parinkimo konfigūracijoms, atskiriems teikėjams ar modeliams arba pridedamiems „auksinio rinkinio“ rinkiniams palyginti. Naudokite ją maršruto parinkimo pakeitimams patikrinti, naujiems teikėjams patvirtinti ir leidimams kontroliuoti prieš nukreipdami į juos produkcinį srautą.
 
 Sistemą sudaro:
 

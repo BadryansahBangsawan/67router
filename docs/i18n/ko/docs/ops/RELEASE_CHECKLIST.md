@@ -46,7 +46,7 @@ WS1.3 보장(유출된 토큰만으로는 게시할 수 없음 — 애초에 토
 프로젝트가 v3.8.48까지 사용하던 완전 자동화 흐름을 복원합니다.
 
 **일회성 설정(소유자):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). 이 설정이 존재하기 전에는 자동 단계가 `ENEEDAUTH`와 함께 실패합니다.
 아래의 `publish_mode=staged` 또는 `direct`로 다시 디스패치하세요.
 

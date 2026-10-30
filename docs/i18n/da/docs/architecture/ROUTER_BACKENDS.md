@@ -20,10 +20,10 @@ En motors rolle beskrives af **to uafhængige akser**, som er kodet samlet i
 registrets `RouterBackendDefinition`:
 
 1. **Livscyklus** (`RouterBackendLifecycle`) — _hvordan motoren kører_:
-   - `in-process` — kører inde i OmniRoutes Node-proces (den native TS-pipeline).
-   - `supervised` — en lokal underproces, som OmniRoute installerer/starter/stopper/sundhedstjekker
+   - `in-process` — kører inde i 67routers Node-proces (den native TS-pipeline).
+   - `supervised` — en lokal underproces, som 67router installerer/starter/stopper/sundhedstjekker
      via `ServiceSupervisor` og derefter bruger som en udbyderforbindelse.
-   - `external` — et HTTP-slutpunkt, som OmniRoute sender anmodninger til, men **ikke** administrerer
+   - `external` — et HTTP-slutpunkt, som 67router sender anmodninger til, men **ikke** administrerer
      (konfigureret via en basis-URL i en miljøvariabel).
    - `disabled` — registreret, men kan ikke vælges.
 2. **Valgakse** (relay-routingbackend) — _om relay-laget sender anmodninger til den_:

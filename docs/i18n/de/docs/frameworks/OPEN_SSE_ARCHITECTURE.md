@@ -4,7 +4,7 @@
 
 ---
 
-> **Kurz gesagt**: `open-sse/` ist die zentrale Streaming-Engine, die jede LLM-Anfrage in OmniRoute verarbeitet. Sie enthält etwa 1.400 Dateien, die die Anfrage-Pipeline, Executors, Services, den MCP-Server und die Übersetzungsschicht implementieren. Dieser Leitfaden erklärt, wie die einzelnen Komponenten zusammenwirken.
+> **Kurz gesagt**: `open-sse/` ist die zentrale Streaming-Engine, die jede LLM-Anfrage in 67router verarbeitet. Sie enthält etwa 1.400 Dateien, die die Anfrage-Pipeline, Executors, Services, den MCP-Server und die Übersetzungsschicht implementieren. Dieser Leitfaden erklärt, wie die einzelnen Komponenten zusammenwirken.
 
 **Quelle:** `open-sse/` (Workspace-Paket, etwa 1.440 `.ts`-Dateien ohne Tests)
 
@@ -12,10 +12,10 @@
 
 ## Warum ein separates Workspace-Paket?
 
-`open-sse/` ist aus mehreren Gründen ein **eigenständiger Workspace** im OmniRoute-Monorepo:
+`open-sse/` ist aus mehreren Gründen ein **eigenständiger Workspace** im 67router-Monorepo:
 
 1. **Wiederverwendbarkeit** — `open-sse` wird als `@omniroute/open-sse` auf npm veröffentlicht, sodass andere Projekte es unabhängig verwenden können
-2. **Klare Abgrenzung** — die Streaming-Engine ist von der OmniRoute-spezifischen UI-/DB-Schicht entkoppelt
+2. **Klare Abgrenzung** — die Streaming-Engine ist von der 67router-spezifischen UI-/DB-Schicht entkoppelt
 3. **Performance** — die Engine hat keine Next.js-Abhängigkeiten, wodurch schnellere Kaltstarts in CLI-/Serverless-Kontexten möglich sind
 4. **Versionierung** — `open-sse` kann nach einem eigenen Zeitplan veröffentlicht werden
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Warum ein separater Transformator?
 
-Die Responses API ist das neue Format von OpenAI mit **zustandsbehafteten Konversationen** (`previous_response_id`). Wenn ein Client eine Responses-Anfrage sendet, führt OmniRoute folgende Schritte aus:
+Die Responses API ist das neue Format von OpenAI mit **zustandsbehafteten Konversationen** (`previous_response_id`). Wenn ein Client eine Responses-Anfrage sendet, führt 67router folgende Schritte aus:
 
 1. Interne Konvertierung von Responses → Chat Completions
 2. Senden an den Anbieter (jeden Anbieter, der Chat Completions unterstützt)

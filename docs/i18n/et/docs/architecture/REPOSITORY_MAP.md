@@ -5,7 +5,7 @@
 ---
 
 > **Iga kataloogi ja juurfaili üherealine kirjeldus.**
-> Viimati uuendatud: 2026-06-28 — OmniRoute v3.8.40
+> Viimati uuendatud: 2026-06-28 — 67router v3.8.40
 >
 > Kasutage seda kaarti koodibaasis kiireks navigeerimiseks. Põhjalikuma teabe saamiseks järgige spetsiaalsete dokumentide linke.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Täielik väljalaskeprotsess (oskused, husky, standardsed commit'id, juurutamine)                                 |
 | `COVERAGE_PLAN.md`          | Testikatvuse eesmärgid ja praegune seis                                                                         |
 | `FREE_TIERS.md`             | Kureeritud tasuta tasemega teenusepakkujad (48+ tasuta + 11 OAuth)                                              |
-| `CLI-TOOLS.md`              | Välised CLI-integratsioonid + sisemine OmniRoute CLI                                                            |
+| `CLI-TOOLS.md`              | Välised CLI-integratsioonid + sisemine 67router CLI                                                             |
 | `I18N.md`                   | i18n-arhitektuur, keele lisamine, 67 lokaati                                                                    |
 | `UNINSTALL.md`              | Puhta desinstallimise juhised                                                                                   |
 | `PROVIDER_REFERENCE.md`     | **Automaatselt genereeritud** 375 teenusepakkuja kataloog (taasgenereerimine: `npm run gen:provider-reference`) |

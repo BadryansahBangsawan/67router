@@ -12,7 +12,7 @@
 
 ## Apa itu Local Corpus
 
-Local Corpus memungkinkan operator menyediakan satu direktori berisi file teks yang disetujui secara eksplisit untuk server MCP OmniRoute. File tetap berada di direktori asalnya: OmniRoute hanya menyimpan jalur root kanonis di SQLite dan memelihara indeks pencarian dalam memori. Local Corpus tidak menyalin konten korpus ke repositori atau basis data.
+Local Corpus memungkinkan operator menyediakan satu direktori berisi file teks yang disetujui secara eksplisit untuk server MCP 67router. File tetap berada di direktori asalnya: 67router hanya menyimpan jalur root kanonis di SQLite dan memelihara indeks pencarian dalam memori. Local Corpus tidak menyalin konten korpus ke repositori atau basis data.
 
 Penyegaran indeks dilakukan secara inkremental. File yang tidak berubah digunakan kembali berdasarkan ukuran dan waktu modifikasi, file yang berubah dibaca ulang dan di-hash dengan SHA-256, sedangkan file yang dihapus dikeluarkan dari indeks. Pencarian akan menyegarkan indeks yang berusia lebih dari 30 detik; pemanggil juga dapat meminta penyegaran langsung.
 

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **마지막 업데이트:** 2026-06-28 — v3.8.40
 
-OmniRoute는 WordPress 스타일의 플러그인 시스템을 제공합니다. 플러그인은 각각 `plugin.json` 매니페스트와 엔트리 파일을 포함하는 독립적인 디렉터리이며, 요청 파이프라인(`onRequest` / `onResponse` / `onError`)과 수명 주기 이벤트(`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)에 후킹됩니다.
+67router는 WordPress 스타일의 플러그인 시스템을 제공합니다. 플러그인은 각각 `plugin.json` 매니페스트와 엔트리 파일을 포함하는 독립적인 디렉터리이며, 요청 파이프라인(`onRequest` / `onResponse` / `onError`)과 수명 주기 이벤트(`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)에 후킹됩니다.
 
 **플러그인 마켓플레이스**는 이 시스템 위에 구축된 검색 계층입니다. 설치 가능한 플러그인을 탐색할 수 있는 카탈로그를 제공합니다. 기본적으로 카탈로그는 소규모 내장 시드 레지스트리를 사용합니다. 운영자는 사용자 지정 원격 레지스트리 URL을 지정할 수 있으며, 이 경우 DNS 확인 방식의 SSRF 보호 장치로 가져오기 작업을 강화합니다([보안](#security) 참조).
 
@@ -127,7 +127,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### 플러그인 디렉터리
 
-플러그인은 OmniRoute 데이터 디렉터리 아래에 있습니다.
+플러그인은 67router 데이터 디렉터리 아래에 있습니다.
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

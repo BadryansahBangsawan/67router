@@ -4,12 +4,12 @@
 
 ---
 
-Inilalantad ng OmniRoute ang **dalawang** paraan upang gamitin ang OpenAI Codex:
+Inilalantad ng 67router ang **dalawang** paraan upang gamitin ang OpenAI Codex:
 
 | Provider               | Paano ito nakikipag-ugnayan sa OpenAI                                                                                                                                                                                                             | Paalala sa paggamit                                                                   |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | **`codex`**            | Direktang nire-replay ang iyong ChatGPT/OpenAI OAuth token sa Responses API                                                                                                                                                                       | **Oo** — hindi awtorisado ang opisyal na session para sa paggamit bilang proxy/router |
-| **`codex-app-server`** | Pinapatakbo ang sariling **`codex app-server` ng Codex CLI** sa pamamagitan ng JSON-RPC/WebSocket; ang CLI ang namamahala at awtomatikong nagre-refresh ng OAuth nito (`~/.codex/auth.json`), tulad mismo ng isang interactive na `codex` session | **Wala** — hindi kailanman nire-replay ng OmniRoute ang token sa API                  |
+| **`codex-app-server`** | Pinapatakbo ang sariling **`codex app-server` ng Codex CLI** sa pamamagitan ng JSON-RPC/WebSocket; ang CLI ang namamahala at awtomatikong nagre-refresh ng OAuth nito (`~/.codex/auth.json`), tulad mismo ng isang interactive na `codex` session | **Wala** — hindi kailanman nire-replay ng 67router ang token sa API                   |
 
 Dahil hindi kailanman nire-replay ng `codex-app-server` ang token, hindi naaangkop
 dito ang paalala sa paggamit tungkol sa session replay. Kinakailangan nito ang
@@ -21,7 +21,7 @@ isang **Codex CLI na maaabot sa naka-configure na app-server URL**, at dapat
 ## 1. Arkitektura
 
 ```
-┌─ OmniRoute app ─────────────────┐        ┌─ codex-app-server sidecar ─────────┐
+┌─ 67router app ─────────────────┐        ┌─ codex-app-server sidecar ─────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ capability token)            │  JSON  │  --ws-auth capability-token         │
@@ -81,7 +81,7 @@ token nito (palaging gumagawa muna ng backup).
 - **Pampublikong user na walang lokal na naka-install na codex** — hindi ito
   mahalaga: nasa sidecar ang CLI. Sa dashboard lamang kailangang mag-authenticate
   ng user.
-- **Bare-metal OmniRoute (walang sidecar, host codex)** — ituro ang
+- **Bare-metal 67router (walang sidecar, host codex)** — ituro ang
   `OMNIROUTE_CODEX_APPSERVER_WS` sa sarili mong `codex app-server` at tiyaking
   naka-sign in ang host codex; lalabas ang pahiwatig na "hindi naka-install ang
   codex" kung nawawala ang binary.

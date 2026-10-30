@@ -4,7 +4,7 @@
 
 ---
 
-Kinokontrol ng OmniRoute kung aling mga **origin ng browser** ang maaaring bumasa ng mga cross-origin na tugon
+Kinokontrol ng 67router kung aling mga **origin ng browser** ang maaaring bumasa ng mga cross-origin na tugon
 mula sa iisang sentralisadong allowlist. Ang modelo ay **fail-closed bilang default**:
 walang origin na pinapayagan hangga't hindi mo ito tahasang isinasama. Idinodokumento ng pahinang ito kung paano
 nireresolba ang allowlist, kung ano talaga ang inilalantad ng `CORS_ALLOW_ALL=true` (at, mahalaga, kung ano ang
@@ -46,14 +46,14 @@ sa ganitong pagkakasunod-sunod:
 ## Modelo ng banta — kung ano talaga ang inilalantad ng `CORS_ALLOW_ALL=true`
 
 Mahalagang seryosohin ang pangkalahatang babala ng OWASP ("wildcard CORS = maaaring tawagin ng anumang site ang iyong API"),
-ngunit ang exposure ng OmniRoute ay **mas limitado kaysa sa pangkalahatang kaso**,
+ngunit ang exposure ng 67router ay **mas limitado kaysa sa pangkalahatang kaso**,
 dahil sa isang kongkretong katotohanan ng implementasyon:
 
 > **Hindi kailanman naglalabas ang sentral na `applyCorsHeaders()` ng
 > `Access-Control-Allow-Credentials`.** Hindi ilalantad ng browser ang isang _credentialed_
 > (may dalang cookie) na cross-origin na tugon maliban kung nagpapadala ang server ng
 > `Access-Control-Allow-Credentials: true`. Hindi ito kailanman ginagawa ng shared CORS path
-> ng OmniRoute.
+> ng 67router.
 
 Narito ang kahulugan nito sa bawat surface, kahit may `CORS_ALLOW_ALL=true`:
 
@@ -92,7 +92,7 @@ mula sa gabay na ito tungkol sa CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Kung tumatakbo ang OmniRoute sa likod ng reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Kung tumatakbo ang 67router sa likod ng reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), **hindi** lamang CORS ang iyong kontrol — pinoprotektahan pa rin ng
   loopback route guard ang mga route na maaaring mag-spawn (tingnan ang
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Huwag palsipikahin ang
@@ -108,7 +108,7 @@ mula sa gabay na ito tungkol sa CORS.
 Bihira mong kailanganin ang wildcard kahit sa dev. Payagan lamang ang mga dev server na ginagamit mo:
 
 ```bash
-# Mga dev server ng Vite (5173) + Next.js (3000) na tumatawag sa lokal na OmniRoute
+# Mga dev server ng Vite (5173) + Next.js (3000) na tumatawag sa lokal na 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +128,14 @@ ang trailing slash, kaya magkatumbas ang `http://localhost:3000` at
   origin ng management/dashboard sa anumang permissive na config; dapat manatiling ganap na
   fail-closed ang mga ito.
 
-## Halimbawa: reverse proxy sa harap ng OmniRoute
+## Halimbawa: reverse proxy sa harap ng 67router
 
-Ang CORS ay ipinapatupad mismo ng OmniRoute, kaya karaniwang **hindi** dapat magdagdag o
+Ang CORS ay ipinapatupad mismo ng 67router, kaya karaniwang **hindi** dapat magdagdag o
 magsulat muli ang proxy ng mga header na `Access-Control-*` (sinisira ng dobleng mga header ang mga browser). I-terminate ang TLS
-at i-forward ang trapiko — hayaang OmniRoute ang tumugon sa preflight:
+at i-forward ang trapiko — hayaang 67router ang tumugon sa preflight:
 
 ```nginx
-# nginx — i-forward sa OmniRoute; HUWAG magpasok ng Access-Control-* dito
+# nginx — i-forward sa 67router; HUWAG magpasok ng Access-Control-* dito
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +143,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Panatilihin ang mga forwarding header: ang proxy sa parehong host ay kumokonekta mula sa loopback, at ang mga ito
-    # ang nagsasabi sa OmniRoute na ang tumatawag ay hindi ang lokal na operator. Kapag walang idinagdag na ganitong header ang proxy,
+    # ang nagsasabi sa 67router na ang tumatawag ay hindi ang lokal na operator. Kapag walang idinagdag na ganitong header ang proxy,
     # magmumukhang lokal ang bawat malayuang tumatawag. Huwag ding itakda kailanman ang X-Forwarded-For sa 127.0.0.1.
 }
 ```
 
-Itakda sa OmniRoute (`CORS_ALLOWED_ORIGINS` o ang tab na
+Itakda sa 67router (`CORS_ALLOWED_ORIGINS` o ang tab na
 Security) ang mga pinapayagang origin ng browser, hindi sa proxy.
 
 ## Mga source file

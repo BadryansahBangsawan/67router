@@ -6,7 +6,7 @@
 
 ## Apžvalga
 
-Redis yra **pasirenkama, nebūtina priklausomybė** sistemoje „OmniRoute“ — kai Redis nepasiekiamas, programa toliau veikia naudodama atsarginius sprendimus atmintyje. Produkcinėje aplinkoje Redis optimizavimas sumažina keturių skirtingų darbo krūvių delsą:
+Redis yra **pasirenkama, nebūtina priklausomybė** sistemoje „67router“ — kai Redis nepasiekiamas, programa toliau veikia naudodama atsarginius sprendimus atmintyje. Produkcinėje aplinkoje Redis optimizavimas sumažina keturių skirtingų darbo krūvių delsą:
 
 | Darbo krūvis                                   | Tvarkyklė                     | Kliento kūrimo funkcija                                                       | Rakto šablonas                                                       |
 | ---------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ Redis yra **pasirenkama, nebūtina priklausomybė** sistemoje „OmniRoute“ �
 | Kvotų saugykla                                 | `redisQuotaStore.ts`          | Atskiras vienetinis `getRedisClient(url)` egzempliorius                       | `<prefix>quota:*`, konfigūruojamas kiekvienam egzemplioriui          |
 | Parengiamojo paleidimo grandinės pertraukiklis | `redisCircuitBreakerStore.ts` | Atskiras klientas faile `circuitBreakerFactory.ts`                            | `<prefix>warmup:cb:<connectionId>`                                   |
 
-Visiems keturiems darbo krūviams naudojamas vienas vardų srities priešdėlis, todėl „OmniRoute“ gali veikti kartu su kitomis programomis viename Redis egzemplioriuje (pvz., `127.0.0.1:6379`). Žr. [Raktų vardų sričių naudojimas](#key-namespacing).
+Visiems keturiems darbo krūviams naudojamas vienas vardų srities priešdėlis, todėl „67router“ gali veikti kartu su kitomis programomis viename Redis egzemplioriuje (pvz., `127.0.0.1:6379`). Žr. [Raktų vardų sričių naudojimas](#key-namespacing).
 
 ---
 
@@ -38,12 +38,12 @@ Visiems keturiems darbo krūviams naudojamas vienas vardų srities priešdėlis,
 
 ## Raktų vardų sričių naudojimas
 
-„OmniRoute“ naudoja bendrą Redis egzempliorių kartu su kitomis pagrindiniame kompiuteryje veikiančiomis sistemomis. Nenaudojant vardų srities, tokie raktai kaip `auth:api_key:<sha256>` arba `rl:*` gali sutapti su kitų tą patį Redis naudojančių programų raktais (šiame egzemplioriuje Redis veikia adresu `127.0.0.1:6379` kartu su kitomis paslaugomis).
+„67router“ naudoja bendrą Redis egzempliorių kartu su kitomis pagrindiniame kompiuteryje veikiančiomis sistemomis. Nenaudojant vardų srities, tokie raktai kaip `auth:api_key:<sha256>` arba `rl:*` gali sutapti su kitų tą patį Redis naudojančių programų raktais (šiame egzemplioriuje Redis veikia adresu `127.0.0.1:6379` kartu su kitomis paslaugomis).
 
-Nustatykite netuščią `REDIS_KEY_PREFIX` eilutę, kad prieš **kiekvieną** „OmniRoute“ raktą būtų pridedamas priešdėlis:
+Nustatykite netuščią `REDIS_KEY_PREFIX` eilutę, kad prieš **kiekvieną** „67router“ raktą būtų pridedamas priešdėlis:
 
 ```bash
-# .env — visi „OmniRoute“ raktai tampa omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — visi „67router“ raktai tampa omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -92,7 +92,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # palikti vietos OS puslapių podėliui
 maxmemory-policy allkeys-lru         # esant apkrovai pašalinti pasenusius autentifikavimo podėlio įrašus
 
-# Duomenų išsaugojimas (neprivaloma — OmniRoute saugi gedimo atveju ir be jo)
+# Duomenų išsaugojimas (neprivaloma — 67router saugi gedimo atveju ir be jo)
 save 300 1                           # kurti momentinę kopiją bent kas 5 min., jei pasikeitė ≥1 raktas
 appendonly no                        # AOF nereikalingas; duomenis galima atkurti
 appendfsync no                       # nėra fsync pridėtinių sąnaudų (RDB pakanka)

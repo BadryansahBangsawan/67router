@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute በ Docker ውስጥ ሲሠራ፣ መደበኛው "ከ Zed Keychain አስገባ" ሂደት አይሳካም፤
+67router በ Docker ውስጥ ሲሠራ፣ መደበኛው "ከ Zed Keychain አስገባ" ሂደት አይሳካም፤
 ምክንያቱም container-ው የhost OS keychain daemon-ን (በ Linux ላይ libsecret፣
 በ macOS ላይ Keychain፣ በ Windows ላይ Credential Manager) ማግኘት አይችልም፣ እንዲሁም በhost
 filesystem ላይ ያሉት የZed ውቅር directories በነባሪነት በcontainer-ው ውስጥ አይታዩም።
@@ -20,7 +20,7 @@ filesystem ላይ ያሉት የZed ውቅር directories በነባሪነት በc
    module ከOS keychain service ጋር በUnix socket ወይም በD-Bus session በኩል ይገናኛል።
    ከሁለቱም አንዳቸውም በነባሪነት ወደ container-ው bridged አይደረጉም፣ ስለዚህ credential ማንበብ ሁልጊዜ አይሳካም።
 
-OmniRoute የDocker environment-ን በሁለት heuristics ይለያል፦
+67router የDocker environment-ን በሁለት heuristics ይለያል፦
 
 - `/.dockerenv` መኖሩ (container-ው ሲጀምር በDocker daemon የሚጻፍ)።
 - `docker` የሚለው string በ`/proc/1/cgroup` ውስጥ መታየቱ (Linux cgroup v1)።
@@ -32,7 +32,7 @@ OmniRoute የDocker environment-ን በሁለት heuristics ይለያል፦
 
 1. **Dashboard → Providers → Zed**ን ይክፈቱ።
 2. የ**Manual Token Import** panel ከkeychain import card በታች ይታያል።
-   OmniRoute Dockerን ሲለይ፣ ይህ panel የመጀመሪያው keychain import ሙከራ ካልተሳካ በኋላ በራስ-ሰር ይስፋፋል።
+   67router Dockerን ሲለይ፣ ይህ panel የመጀመሪያው keychain import ሙከራ ካልተሳካ በኋላ በራስ-ሰር ይስፋፋል።
 3. ከdropdown-ው provider-ን ይምረጡ (OpenAI፣ Anthropic፣ Google፣ Mistral፣ xAI፣
    OpenRouter፣ ወይም DeepSeek)።
 4. API key-ውን በpassword field ውስጥ ይለጥፉ።

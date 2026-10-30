@@ -28,9 +28,9 @@
    이름을 붙여넣습니다. 도구를 사용할 수 있는 새로운 설정에서는 정확히
    `OmniRoute Codex v2`라는 이름으로 새로 생성한 커넥터를 사용하고, Authentication은 None으로, Permissions는 Allow all
    actions로 설정해야 합니다.
-3. 연결 검사를 실행합니다. OmniRoute는 브라우저 기반 Temporary Chat을 열고 해당
+3. 연결 검사를 실행합니다. 67router는 브라우저 기반 Temporary Chat을 열고 해당
    계정에서 Sol과 Pro를 사용할 수 있는지 감지합니다.
-4. 연결을 저장합니다. OmniRoute는 붙여넣은 쿠키를 검증된
+4. 연결을 저장합니다. 67router는 붙여넣은 쿠키를 검증된
    Playwright 스토리지 상태로 대체하고, 암호화된
    자격 증명 추상화 계층을 통해 런타임 키와 함께 저장합니다.
 
@@ -72,11 +72,11 @@ Free/Go 계정에서는 Luna 경로를 사용할 수 있습니다. Sol 지원 �
 
 ## 디스플레이 없는 VPS 및 Docker
 
-npm, systemd 및 PM2 설치의 경우 OmniRoute가 일반적인 Chrome 및 Chromium 경로를 감지합니다. 또는 `CHATGPT_WEB_CODEX_CHROME_PATH`를 설정할 수 있습니다. ChatGPT는 실제 헤드리스 브라우저 형태를 거부하므로 런타임 턴에서는 의도적으로 헤드 모드 Chrome을 사용합니다. 따라서 디스플레이가 없는 호스트에서는 비공개 Xvfb 디스플레이를 사용하여 OmniRoute를 실행해야 하며, Chrome 경로만 설정해서는 디스플레이가 제공되지 않습니다.
+npm, systemd 및 PM2 설치의 경우 67router가 일반적인 Chrome 및 Chromium 경로를 감지합니다. 또는 `CHATGPT_WEB_CODEX_CHROME_PATH`를 설정할 수 있습니다. ChatGPT는 실제 헤드리스 브라우저 형태를 거부하므로 런타임 턴에서는 의도적으로 헤드 모드 Chrome을 사용합니다. 따라서 디스플레이가 없는 호스트에서는 비공개 Xvfb 디스플레이를 사용하여 67router를 실행해야 하며, Chrome 경로만 설정해서는 디스플레이가 제공되지 않습니다.
 
-Docker `web` 프로필은 내부 Compose 네트워크에서 `chatgpt-web-codex-browser`를 시작합니다. 사이드카는 Xvfb 내부에서 헤드 모드 Chrome을 실행하므로 물리적 디스플레이가 필요하지 않습니다. CDP 포트는 호스트에 게시되지 않습니다. 보호된 브라우저 프로필 볼륨은 OmniRoute 데이터 볼륨과 분리되어 있으며, 브라우저에는 충분한 공유 메모리가 할당됩니다. 내부 CDP 프록시는 Compose 네트워크 내부의 포트 `9223`에서만 수신 대기하며, Chrome은 사이드카의 루프백에 계속 바인딩됩니다.
+Docker `web` 프로필은 내부 Compose 네트워크에서 `chatgpt-web-codex-browser`를 시작합니다. 사이드카는 Xvfb 내부에서 헤드 모드 Chrome을 실행하므로 물리적 디스플레이가 필요하지 않습니다. CDP 포트는 호스트에 게시되지 않습니다. 보호된 브라우저 프로필 볼륨은 67router 데이터 볼륨과 분리되어 있으며, 브라우저에는 충분한 공유 메모리가 할당됩니다. 내부 CDP 프록시는 Compose 네트워크 내부의 포트 `9223`에서만 수신 대기하며, Chrome은 사이드카의 루프백에 계속 바인딩됩니다.
 
-`DATA_DIR` 아래의 감독자 리스는 여러 OmniRoute 프로세스가 동일한 터널 및 브로커 상태를 소유하지 못하도록 방지합니다. 충돌은 doctor에서 보고됩니다.
+`DATA_DIR` 아래의 감독자 리스는 여러 67router 프로세스가 동일한 터널 및 브로커 상태를 소유하지 못하도록 방지합니다. 충돌은 doctor에서 보고됩니다.
 
 ## 대화형 복구
 

@@ -4,7 +4,7 @@
 
 ---
 
-RTK tihendus on OmniRoute'i käsuteadlik tihendusmootor terminali- ja tööriistaväljundi jaoks. See on
+RTK tihendus on 67router'i käsuteadlik tihendusmootor terminali- ja tööriistaväljundi jaoks. See on
 mõeldud kodeerimisagentide seanssidele, kus konteksti kasv tuleneb peamiselt testilogidest, järguväljundist,
 paketihaldurite mürast, shell'i transkriptidest, Dockeri väljundist, giti väljundist ja pinujälgedest.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 See järjestus tihendab esmalt mürarikka masinväljundi ning võimaldab seejärel Cavemanil ülejäänud proosat kokku võtta.
 
 RTK lähteprojekt teatab käsuväljundi `60-90%` säästust. Selle README näidisseanss väheneb
-`~118,000` standardselt tokenilt `~23,900` RTK tokenile, mis tähendab `79.7%` säästu (`~80%`). OmniRoute kasutab
+`~118,000` standardselt tokenilt `~23,900` RTK tokenile, mis tähendab `79.7%` säästu (`~80%`). 67router kasutab
 seda lähteprojekti keskmist Cavemani sisendtihendusega virnastatud säästu arvutamiseks:
 
 ```txt
@@ -54,7 +54,7 @@ RTK laadib filtrid järgmises järjekorras:
 2. Globaalsed filtrid failidest `DATA_DIR/rtk/filters.toml` ja `DATA_DIR/rtk/filters.json`.
 3. Sisseehitatud filtrid kataloogist `open-sse/services/compression/engines/rtk/filters/`.
 
-Samas skoobis on RTK TOML-i skeemi v1 filtritel eelis OmniRoute'i JSON-filtrite ees. TOML-i
+Samas skoobis on RTK TOML-i skeemi v1 filtritel eelis 67router'i JSON-filtrite ees. TOML-i
 `match_command` avaldisi kontrollitakse enne käsutüübi järgi sobitamist, et imporditud käsuspetsiifiline
 filter saaks selles skoobis üldisema filtri alistada. Projekti skoop on failivormingust olenemata endiselt
 globaalse skoobi ees prioriteetne.
@@ -84,7 +84,7 @@ jäetakse vahele ja neist teatatakse lõpp-punkti `/api/context/rtk/filters` dia
 
 ## RTK TOML-i skeemi v1 ühilduvus
 
-OmniRoute suudab RTK TOML-i skeemi v1 kasutavaid deklaratiivseid filtrifaile parsida, valideerida, testida ja installida.
+67router suudab RTK TOML-i skeemi v1 kasutavaid deklaratiivseid filtrifaile parsida, valideerida, testida ja installida.
 Toetatud väljad on `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` ja `[[tests.<filter>]]` tekstisisesed testid.
@@ -93,7 +93,7 @@ Tundmatute väljade, vigaste või ebaturvaliste regulaaravaldiste, samaaegsete e
 kontrollimiseks valideerida, kuid seda ei saa installida ega laadida. Kohandatud failide laadimistõrked jäävad
 avatud tõrkerežiimi: vigane fail jäetakse vahele ja ülejäänud filtrid jätkavad töötamist.
 
-OmniRoute saab tööriista väljundi pärast seda, kui klient on selle juba hõivanud, seega ei saa `filter_stderr = true`
+67router saab tööriista väljundi pärast seda, kui klient on selle juba hõivanud, seega ei saa `filter_stderr = true`
 protsessi väljundi hõivamist muuta. Väli aktsepteeritakse toiminguta sättena ja valideerimine tagastab hoiatuse.
 Seda kirjeldatakse teadlikult kui **RTK TOML-i skeemi v1 ühilduvust**, mitte täielikku ühilduvust
 RTK täitmisfaili, shellihaakide, Rusti käsuteostuste ega selle usaldushoidla struktuuriga.

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'un birbiriyle ilişkili ancak farklı üç dayanıklılık mekanizması vardır. Her birinin kapsamı ve amacı farklıdır. Yönlendirme davranışında hata ayıklarken bunları birbirinden ayrı tutun.
+67router'un birbiriyle ilişkili ancak farklı üç dayanıklılık mekanizması vardır. Her birinin kapsamı ve amacı farklıdır. Yönlendirme davranışında hata ayıklarken bunları birbirinden ayrı tutun.
 
 ![3 katmanlı dayanıklılık modeli](../diagrams/exported/resilience-3layers.svg)
 
@@ -167,7 +167,7 @@ Regresyon koruyucuları: `tests/unit/claude-low-priority-mode.test.ts`,
 
 ### Özel yönetilen oturum bağlantı kiralamaları
 
-**Kapsam:** bir etkin yönetilen HTTP istemcisi/oturumu, uygun bir OmniRoute bağlantısına sahip olur.
+**Kapsam:** bir etkin yönetilen HTTP istemcisi/oturumu, uygun bir 67router bağlantısına sahip olur.
 
 **Amaç:** istekler arasında katı bir yönlendirme çitine ihtiyaç duyan istemciler için kalıcı, özel bağlantı sahipliği sağlamak. Bu, yumuşak bir süreklilik tercihi olan oturum yakınlığından farklıdır: özel bir kiralama yaşam döngüsü durumunu SQLite'ta saklar, genel etkin-sahip ve etkin-bağlantı tekilliğini zorunlu kılar ve sağlayıcı gönderiminden önce bayat bir nesli reddeder.
 
@@ -175,7 +175,7 @@ Regresyon koruyucuları: `tests/unit/claude-low-priority-mode.test.ts`,
 
 Yaşam döngüsü, `acquire`, `renew` ve `release` JSON eylemleriyle `POST /api/v1/session-leases` üzerinden işler. Yönetilen çıkarım istekleri, opak `X-OmniRoute-Lease-Owner` değerini ve tam `X-OmniRoute-Lease-Generation` değerini sunar. Sahip değeri, `vlo_` öneki ve ardından gelen 43 base64url karakterinden oluşur; yalnızca SHA-256 özeti saklanır. Her nihai gönderim bariyeri ayrıca kimliği doğrulanmış API anahtarı kimliğini ve etkin bağlantı kimliğini de bağlar. Kira kontrol başlıkları; günlüklerden, saklanan istek anlık görüntülerinden ve yukarı akış yürütücü başlıklarından kaldırılır.
 
-Sıradan yönlendirmede uygun yönetilen adaylar bulunuyor ancak boştaki her aday yabancı bir etkin kira tarafından tutuluyorsa, OmniRoute HTTP `429`, kira kapasitesinin kullanılamadığını belirten bir kod, kapasite bekleme durumu ve ilgili en erken sona erme zamanından türetilen sınırlı bir `Retry-After` değeri döndürür. Sıradan boş uygunluk kira çekişmesi değildir ve mevcut yönlendirme hatası anlambilimini korur.
+Sıradan yönlendirmede uygun yönetilen adaylar bulunuyor ancak boştaki her aday yabancı bir etkin kira tarafından tutuluyorsa, 67router HTTP `429`, kira kapasitesinin kullanılamadığını belirten bir kod, kapasite bekleme durumu ve ilgili en erken sona erme zamanından türetilen sınırlı bir `Retry-After` değeri döndürür. Sıradan boş uygunluk kira çekişmesi değildir ve mevcut yönlendirme hatası anlambilimini korur.
 
 İlgili mekanizmalar ayrı kalır:
 
@@ -195,7 +195,7 @@ Sıradan yönlendirmede uygun yönetilen adaylar bulunuyor ancak boştaki her ad
   codex için tüm `codex` / `spark` kapsamı (bağlantının her `gpt-5*` modeli),
   diğer sağlayıcılar için `getQuotaScopedModelForProvider()`.
 - `404` yalnızca modelin kendisini kilitler (`getModelLockKey()`, `not_found` durumunu daraltır).
-- Diğer tüm durumlar — `5xx` taşıma/sunucu hataları ve OmniRoute'un kalite doğrulamasından kendisinin ürettiği `502` — yalnızca **tam** sağlayıcı/bağlantı/model üçlüsünü kilitler. Tek bir modeldeki bozuk bir akış, hesabın kotası hakkında kanıt değildir; bu kuraldan önce `codex/gpt-5.6-luna` üzerindeki tek bir boş yanıt, kotaya hiç dokunulmamışken o bağlantının tüm `gpt-5*` modellerini 2–30 dakika (kademeli artarak) yönlendirme dışına çıkarıyordu.
+- Diğer tüm durumlar — `5xx` taşıma/sunucu hataları ve 67router'un kalite doğrulamasından kendisinin ürettiği `502` — yalnızca **tam** sağlayıcı/bağlantı/model üçlüsünü kilitler. Tek bir modeldeki bozuk bir akış, hesabın kotası hakkında kanıt değildir; bu kuraldan önce `codex/gpt-5.6-luna` üzerindeki tek bir boş yanıt, kotaya hiç dokunulmamışken o bağlantının tüm `gpt-5*` modellerini 2–30 dakika (kademeli artarak) yönlendirme dışına çıkarıyordu.
 - Çağıranın açık `scope` seçeneği her zaman önceliklidir (Antigravity `"exact"` gönderir).
 
 **Amaç:** yalnızca tek bir model kullanılamaz veya kota sınırlı durumdayken tüm bağlantıyı devre dışı bırakmaktan kaçınmak.
@@ -297,7 +297,7 @@ eşzamanlılık sınırları**, her satıra bir `model=cap`) veya aynı JSON yap
   sınırlarıdır.
 - **Yerel kuyruklama, keşif yok:** fazla istekler, mevcut kuyruk/zaman aşımı
   anlambilimiyle yerel olarak kuyruğa alınır (tiplendirilmiş `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL` kabul hataları). OmniRoute, upstream politikasını keşfetmez
+  `SEMAPHORE_QUEUE_FULL` kabul hataları). 67router, upstream politikasını keşfetmez
   veya tahmin etmez — operatörün yapılandırdığı kesin üst sınırları uygular.
   Doymuş bir model kapısı sağlayıcıyı asla devre dışı bırakmaz ve kalıcı bir model
   kilidi oluşturmaz; upstream 429/cooldown/fallback davranışı hatalar için son
@@ -473,7 +473,7 @@ böylece gerçek bir Bottleneck sınırlayıcısı olmadan birim testi yapılabi
 ### Hız Sınırı Otomatik Etkinleştirme Güvenlik Ağı ve Bağlantı Koruması (`rateLimitProtection`)
 
 **Otomatik etkinleştirme güvenlik ağı** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, varsayılan `true`):
-OmniRoute, varsayılan olarak tüm aktif API anahtarı sağlayıcı bağlantıları için hız sınırı kuyruk korumasını otomatik olarak etkinleştirir (`getProviderCategory(provider) === "apikey"`). Bu, hıza duyarlı yukarı akış API anahtarlarına gelen isteklerin, yukarı akış 429 hatalarına ani bir patlamayla çarpmak yerine Bottleneck üzerinden kuyruğa alınmasını ve kısıtlanmasını sağlar. Güvenlik ağı, `RATE_LIMIT_AUTO_ENABLE` ortam değişkeni (`false`/`0`/`off` devre dışı bırakır, `true`/`1`/`on` zorla açar) aracılığıyla geçersiz kılınabilir; bu değişken, kalıcı pano ayarının (**Ayarlar → Dayanıklılık** / `PATCH /api/resilience`) önüne geçer.
+67router, varsayılan olarak tüm aktif API anahtarı sağlayıcı bağlantıları için hız sınırı kuyruk korumasını otomatik olarak etkinleştirir (`getProviderCategory(provider) === "apikey"`). Bu, hıza duyarlı yukarı akış API anahtarlarına gelen isteklerin, yukarı akış 429 hatalarına ani bir patlamayla çarpmak yerine Bottleneck üzerinden kuyruğa alınmasını ve kısıtlanmasını sağlar. Güvenlik ağı, `RATE_LIMIT_AUTO_ENABLE` ortam değişkeni (`false`/`0`/`off` devre dışı bırakır, `true`/`1`/`on` zorla açar) aracılığıyla geçersiz kılınabilir; bu değişken, kalıcı pano ayarının (**Ayarlar → Dayanıklılık** / `PATCH /api/resilience`) önüne geçer.
 
 **Bağlantı başına `rateLimitProtection` anlambilimi:**
 Bağlantı başına hız sınırı koruması, sağlayıcı bağlantılarındaki `rateLimitProtection` boolean alanı üzerinden izlenir (SQLite'ta `rate_limit_protection` olarak kalıcı hale getirilir):
@@ -832,7 +832,7 @@ bir kotayla aynı sinyaldir. Dürüst sınırlar:
 > ajanlara yönelik yoğunlaştırılmış görünümüdür; numaralı bölümler tam referans
 > olmaya devam eder.
 
-OmniRoute'ta birbiriyle ilişkili ancak farklı üç geçici hata mekanizması vardır.
+67router'ta birbiriyle ilişkili ancak farklı üç geçici hata mekanizması vardır.
 Yönlendirme davranışında hata ayıklarken kapsamlarını ayrı tutun. Bir bakışta
 harita için
 [3 katmanlı dayanıklılık diyagramına](../diagrams/exported/resilience-3layers.svg)

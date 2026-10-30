@@ -7,7 +7,7 @@
 > **Sors awtorevoli:** `src/lib/memory/` u `src/app/api/memory/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40 (diżattivat b’mod awtomatiku + aġġornament tal-kwantizzazzjoni int8)
 
-OmniRoute jipprovdi memorja persistenti tal-konverżazzjonijiet identifikata permezz tal-API key (u
+67router jipprovdi memorja persistenti tal-konverżazzjonijiet identifikata permezz tal-API key (u
 b’mod fakultattiv permezz tal-ID tas-sessjoni). Il-memorji jiġu estratti awtomatikament mit-tweġibiet tal-LLM
 permezz ta’ tqabbil ħafif ta’ mudelli regex u jerġgħu jiddaħħlu fit-talbiet
 sussegwenti bħala messaġġ tas-sistema fil-bidu (jew bħala l-ewwel messaġġ tal-utent għall-fornituri li
@@ -642,7 +642,7 @@ TTL predefinit ta' 5 min).
 
 ## Għażla ta' Fornitur tal-Embeddings (v3.8.16+)
 
-Il-magna tal-memorja ta' OmniRoute tappoġġja **erba' sorsi tal-embeddings** (`src/lib/memory/embedding/`). Kull wieħed għandu kompromessi differenti fil-**latenza, spiża, kwalità tal-mudell, u kumplessità tal-konfigurazzjoni**.
+Il-magna tal-memorja ta' 67router tappoġġja **erba' sorsi tal-embeddings** (`src/lib/memory/embedding/`). Kull wieħed għandu kompromessi differenti fil-**latenza, spiża, kwalità tal-mudell, u kumplessità tal-konfigurazzjoni**.
 
 ### Is-Sorsi tal-Embeddings
 
@@ -1064,13 +1064,13 @@ Il-worker jintrabat ma’ loopback biss, li l-protezzjoni SSRF ta’ `GenericMem
 Dan l-adapter ma jnaqqasx dik il-protezzjoni: il-host huwa ssettjat b’mod fiss għal `127.0.0.1` u l-iskema
 tal-konfigurazzjoni (`ClaudeMemBackendConfigSchema`, `.strict()`) taċċetta biss:
 
-| Ċavetta     | Tip    | Default | Noti                                                                                                                                                    |
-| ----------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | numru  | —       | Meħtieġ, 1024–65535. Il-port tal-worker claude-mem mill-fajl tas-settings tiegħu (default `37700 + uid % 100`).                                         |
-| `project`   | string | —       | Il-proġett claude-mem li għandu jintuża. Jekk mhux issettjat → kull ċavetta API ta’ OmniRoute tiġi mmappjata għall-proġett tagħha stess (l-`apiKeyId`). |
-| `timeoutMs` | numru  | `5000`  | Timeout għal kull talba, 100–30000.                                                                                                                     |
+| Ċavetta     | Tip    | Default | Noti                                                                                                                                                   |
+| ----------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `port`      | numru  | —       | Meħtieġ, 1024–65535. Il-port tal-worker claude-mem mill-fajl tas-settings tiegħu (default `37700 + uid % 100`).                                        |
+| `project`   | string | —       | Il-proġett claude-mem li għandu jintuża. Jekk mhux issettjat → kull ċavetta API ta’ 67router tiġi mmappjata għall-proġett tagħha stess (l-`apiKeyId`). |
+| `timeoutMs` | numru  | `5000`  | Timeout għal kull talba, 100–30000.                                                                                                                    |
 
-Attivah permezz ta’ `PUT /api/settings/memory` u erġa’ ibda OmniRoute (il-backends jiġu rreġistrati
+Attivah permezz ta’ `PUT /api/settings/memory` u erġa’ ibda 67router (il-backends jiġu rreġistrati
 darba biss, f’`initMemoryBackends()`):
 
 ```json
@@ -1087,7 +1087,7 @@ Immappjar u limiti:
 
 - L-IDs huma `claude-mem:<observationId>`; `get`/`delete` jinjoraw IDs ta’ backends oħra mingħajr
   sejħa tan-network.
-- `create` → `POST /api/memory/save`; l-oqsma ta’ OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; l-oqsma ta’ 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) jiġu inklużi f’`metadata.omniroute` ta’ claude-mem u jibqgħu l-istess meta jerġgħu jinqraw.
 - `search` → `GET /api/search?format=json&type=observations`, maqtugħ għal `maxTokens`
   (karattri / 4). `list` → l-endpoint tal-osservazzjonijiet paġinat tal-worker (`total` huwa limitu inferjuri — il-worker
@@ -1099,16 +1099,16 @@ Immappjar u limiti:
 - L-injezzjoni fil-prompt (`retrieval.ts`) u l-għodod MCP `omniroute_memory_*` xorta jaqraw SQLite
   direttament — ma jgħaddux minn `memoryManager`, għalhekk dan il-backend ma jipprovdilhomx data.
 
-**Direzzjonar tas-sejħiet LLM ta’ claude-mem stess permezz ta’ OmniRoute.** claude-mem jikkompressa l-osservazzjonijiet
+**Direzzjonar tas-sejħiet LLM ta’ claude-mem stess permezz ta’ 67router.** claude-mem jikkompressa l-osservazzjonijiet
 b’LLM (default: il-Claude Agent SDK). Il-provider `openai-compatible` tiegħu jista’ jiġi ppuntat lejn
-OmniRoute minflok, biex juża l-fallback tal-combo u t-traċċar tal-ispejjeż. F’`~/.claude-mem/settings.json`:
+67router minflok, biex juża l-fallback tal-combo u t-traċċar tal-ispejjeż. F’`~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API key>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model or combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API key>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model or combo>"
 }
 ```
 

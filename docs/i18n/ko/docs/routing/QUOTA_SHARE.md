@@ -14,7 +14,7 @@
 할당량 공유 엔진은 동일한 연결을 공유하는 여러 API 키에 공급자의 시간 기반 할당량(예: Codex
 5시간 윈도우, Kimi 1500 req/h)을 공정하게 분배합니다.
 
-**해결하는 문제:** OmniRoute는 동일한 업스트림 공급자 계정에 여러 API 키를 프록시합니다.
+**해결하는 문제:** 67router는 동일한 업스트림 공급자 계정에 여러 API 키를 프록시합니다.
 공유 로직이 없으면 키 A에서 발생한 요청 급증으로 해당 시간의 공급자 할당량이 소진되어,
 윈도우가 재설정될 때까지 키 B와 C가 차단될 수 있습니다.
 엔진은 다음과 같은 방식으로 이를 방지합니다.
@@ -117,7 +117,7 @@ Redis 드라이버: 원자적 증가를 위해 Lua EVAL 스크립트를 사용�
 
 - 테이블: `quota_consumption`(마이그레이션 `073_quota_pools.sql` / `074_quota_consumption.sql` 참조).
 - 단일 인스턴스 배포에 가장 적합합니다.
-- 모든 영구 데이터는 기존 OmniRoute SQLite DB(`DATA_DIR/storage.sqlite`)에 저장됩니다.
+- 모든 영구 데이터는 기존 67router SQLite DB(`DATA_DIR/storage.sqlite`)에 저장됩니다.
 
 ### Redis (선택 사항, 다중 인스턴스)
 

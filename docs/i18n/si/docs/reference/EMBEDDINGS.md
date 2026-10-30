@@ -5,8 +5,8 @@
 ---
 
 Hindsight 0.9.1 (පෙළ පමණක් වන `encode(list[str])`) සහ Memorix 1.6.0 (Jina මාධ්ය
-ගේට්ටුව) ඉදිරියෙන් OmniRoute පිහිටා ඇති විට `POST /v1/embeddings` සඳහා
-ක්රියාකරු සටහන්. `https://omniroute.jaguar-fish.ts.net/v1` හි OmniRoute 3.8.49
+ගේට්ටුව) ඉදිරියෙන් 67router පිහිටා ඇති විට `POST /v1/embeddings` සඳහා
+ක්රියාකරු සටහන්. `https://omniroute.jaguar-fish.ts.net/v1` හි 67router 3.8.49
 සමඟ 2026-08-17 දින සජීවීව සත්යාපනය කරන ලදී. පහත කිසිදු රහසක් නොමැත.
 
 ## ක්රියා කරන ආකෘති ids
@@ -80,7 +80,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 ස්වදේශීය `gemini-embedding-2` GitOps මඟින් පමණක් සාර්ථක කළ නොහැක. Google AI
 Studio යතුරක් `gemini` සපයන්නා සම්බන්ධතාවක් ලෙස එක් කළ යුතුය (උපකරණ පුවරුව
-හෝ OmniRoute වෙත ආයාත කළ `GEMINI_API_KEY`). එම රහස මෙම repo එකෙහි නොමැත.
+හෝ 67router වෙත ආයාත කළ `GEMINI_API_KEY`). එම රහස මෙම repo එකෙහි නොමැත.
 
 ### Jina බහුමාධ්ය මාර්ගය
 
@@ -101,7 +101,7 @@ Studio යතුරක් `gemini` සපයන්නා සම්බන්ධ�
 
 ### Jina / Memorix රූප වස්තුව
 
-OmniRoute සම්මත රූප අයිතමය (28×28 PNG, පික්සල 784 — Jina විසින් 1×1
+67router සම්මත රූප අයිතමය (28×28 PNG, පික්සල 784 — Jina විසින් 1×1
 ප්රතික්ෂේප කරයි):
 
 ```json
@@ -150,7 +150,7 @@ Memorix 1.6.0 / Jina ස්වදේශීය හැඩය:
 ### Hindsight 0.9.1
 
 Hindsight කාවැද්දීම් පෙළ පමණක් වේ (`encode(list[str])`). එය රූප වස්තු
-නොයවයි. Hindsight හි OpenAI-අනුකූල කාවැද්දීම් මූලික URL එක OmniRoute `/v1`
+නොයවයි. Hindsight හි OpenAI-අනුකූල කාවැද්දීම් මූලික URL එක 67router `/v1`
 වෙත යොමු කර, ඉහත වගුවෙන් ක්රියා කරන id එකක්
 (`jina-ai/jina-embeddings-v5-omni-small` හෝ
 `openrouter/google/gemini-embedding-2`) භාවිත කරන්න. ද්වාරයෙහි `gemini` API
@@ -159,12 +159,12 @@ Hindsight කාවැද්දීම් පෙළ පමණක් වේ (`enco
 ### Memorix 1.6.0
 
 Memorix විසින් `/jina\.ai/i` සමඟ ගැළපෙන `baseUrl` පමණක් ස්වදේශීය මාධ්ය ලෙස
-සලකයි. ආකෘතිය Jina omni වුවද, OmniRoute URL එකක් පෙළ-පමණක් මාර්ගයේම පවතී.
+සලකයි. ආකෘතිය Jina omni වුවද, 67router URL එකක් පෙළ-පමණක් මාර්ගයේම පවතී.
 එම ගේට්ටුව Memorix සේවාලාභී ගැටලුවකි. වෙනමම, ගේට්ටුව විවෘත වුවහොත්
-Memorix විසින් යවනු ලබන Jina `{image: "data:..."}` බඳ OmniRoute විසින් තවමත්
+Memorix විසින් යවනු ලබන Jina `{image: "data:..."}` බඳ 67router විසින් තවමත්
 ප්රතික්ෂේප කරන බැවින්, සම්මත `{type,source}` යෝජනා ක්රමය නොමැතිව
-Jina-අනුකූල සේවාලාභීන්ට OmniRoute හරහා රූප කාවැද්දිය නොහැක.
+Jina-අනුකූල සේවාලාභීන්ට 67router හරහා රූප කාවැද්දිය නොහැක.
 
 පෙළ සඳහා `jina-ai/jina-embeddings-v5-omni-small` භාවිත කරන්න. Memorix
 `base_url` එක `https://api.jina.ai` වෙත යොමු නොකරන්න — එකම අතරමැදි පියවර
-ලෙස OmniRoute තබා ගන්න.
+ලෙස 67router තබා ගන්න.

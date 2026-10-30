@@ -4,7 +4,7 @@
 
 ---
 
-Ekspor log panggilan OmniRoute secara kontinu dan inkremental ke penyimpanan analitik eksternal.
+Ekspor log panggilan 67router secara kontinu dan inkremental ke penyimpanan analitik eksternal.
 
 Tab dasbor Logs menyimpan riwayat permintaan di SQLite (`call_logs`), yang dibatasi oleh
 rotasi dan retensi. Ekspor log mengirimkan kumpulan catatan yang sama secara terjadwal agar dapat

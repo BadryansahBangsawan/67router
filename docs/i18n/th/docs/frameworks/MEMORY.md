@@ -7,7 +7,7 @@
 > **แหล่งข้อมูลอ้างอิงหลัก:** `src/lib/memory/` และ `src/app/api/memory/`
 > **อัปเดตล่าสุด:** 2026-06-28 — v3.8.40 (ปิดใช้งานโดยค่าเริ่มต้น + การรองรับ int8 quantization ให้สมบูรณ์)
 
-OmniRoute มีหน่วยความจำการสนทนาแบบถาวรซึ่งระบุด้วยคีย์ API (และ
+67router มีหน่วยความจำการสนทนาแบบถาวรซึ่งระบุด้วยคีย์ API (และ
 อาจระบุด้วย session id เพิ่มเติมได้) ระบบจะแยกข้อมูลความจำออกจากการตอบกลับของ LLM
 โดยอัตโนมัติผ่านการจับคู่รูปแบบ regex แบบน้ำหนักเบา และแทรกกลับเข้าไปใน
 คำขอครั้งถัดไปในรูปแบบข้อความ system ที่อยู่ลำดับแรก (หรือข้อความ user แรกสำหรับผู้ให้บริการที่
@@ -623,7 +623,7 @@ TTL เริ่มต้น 5 min)
 
 ## การเลือกผู้ให้บริการ Embedding (v3.8.16+)
 
-เอนจินหน่วยความจำของ OmniRoute รองรับ **แหล่ง embedding สี่แหล่ง** (`src/lib/memory/embedding/`) โดยแต่ละแหล่งมีข้อแลกเปลี่ยนแตกต่างกันในด้าน **เวลาแฝง ต้นทุน คุณภาพโมเดล และความซับซ้อนในการตั้งค่า**
+เอนจินหน่วยความจำของ 67router รองรับ **แหล่ง embedding สี่แหล่ง** (`src/lib/memory/embedding/`) โดยแต่ละแหล่งมีข้อแลกเปลี่ยนแตกต่างกันในด้าน **เวลาแฝง ต้นทุน คุณภาพโมเดล และความซับซ้อนในการตั้งค่า**
 
 ### แหล่ง Embedding
 
@@ -1046,10 +1046,10 @@ Claude Code / Codex / Cursor ซึ่งบันทึกเซสชันก
 | คีย์        | ชนิด   | ค่าเริ่มต้น | หมายเหตุ                                                                                                                |
 | ----------- | ------ | ----------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `port`      | number | —           | จำเป็นต้องระบุ โดยอยู่ในช่วง 1024–65535 พอร์ต worker ของ claude-mem จากไฟล์การตั้งค่า (ค่าเริ่มต้น `37700 + uid % 100`) |
-| `project`   | string | —           | โปรเจกต์ claude-mem ที่จะใช้ หากไม่ได้ตั้งค่า → คีย์ OmniRoute API แต่ละคีย์จะจับคู่กับโปรเจกต์ของตนเอง (`apiKeyId`)    |
+| `project`   | string | —           | โปรเจกต์ claude-mem ที่จะใช้ หากไม่ได้ตั้งค่า → คีย์ 67router API แต่ละคีย์จะจับคู่กับโปรเจกต์ของตนเอง (`apiKeyId`)     |
 | `timeoutMs` | number | `5000`      | ระยะหมดเวลาต่อคำขอ อยู่ในช่วง 100–30000                                                                                 |
 
-เปิดใช้งานผ่าน `PUT /api/settings/memory` แล้วรีสตาร์ต OmniRoute (แบ็กเอนด์จะถูกลงทะเบียน
+เปิดใช้งานผ่าน `PUT /api/settings/memory` แล้วรีสตาร์ต 67router (แบ็กเอนด์จะถูกลงทะเบียน
 เพียงครั้งเดียวใน `initMemoryBackends()`):
 
 ```json
@@ -1066,7 +1066,7 @@ Claude Code / Codex / Cursor ซึ่งบันทึกเซสชันก
 
 - ID อยู่ในรูปแบบ `claude-mem:<observationId>` โดย `get`/`delete` จะละเว้น ID ของแบ็กเอนด์อื่นโดยไม่
   เรียกใช้เครือข่าย
-- `create` → `POST /api/memory/save`; ฟิลด์ของ OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; ฟิลด์ของ 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) จะถูกส่งไปใน `metadata.omniroute` ของ claude-mem และคงค่าเดิมตลอดการเขียนและอ่านกลับ
 - `search` → `GET /api/search?format=json&type=observations` โดยตัดให้เหลือไม่เกิน `maxTokens`
   (จำนวนอักขระ / 4) `list` → endpoint รายการ observations แบบแบ่งหน้าของ worker (`total` เป็นขอบเขตล่าง — worker
@@ -1078,16 +1078,16 @@ Claude Code / Codex / Cursor ซึ่งบันทึกเซสชันก
 - การแทรกข้อมูลในพรอมต์ (`retrieval.ts`) และเครื่องมือ MCP `omniroute_memory_*` ยังคงอ่าน SQLite
   โดยตรง — ไม่ผ่าน `memoryManager` ดังนั้นแบ็กเอนด์นี้จึงไม่ส่งข้อมูลให้ส่วนเหล่านั้น
 
-**การกำหนดเส้นทางการเรียก LLM ของ claude-mem ผ่าน OmniRoute** claude-mem บีบอัด observations
+**การกำหนดเส้นทางการเรียก LLM ของ claude-mem ผ่าน 67router** claude-mem บีบอัด observations
 ด้วย LLM (ค่าเริ่มต้น: Claude Agent SDK) สามารถกำหนดให้ผู้ให้บริการ `openai-compatible` ชี้ไปยัง
-OmniRoute แทนได้ เพื่อใช้ประโยชน์จาก combo fallback และการติดตามค่าใช้จ่าย ใน `~/.claude-mem/settings.json`:
+67router แทนได้ เพื่อใช้ประโยชน์จาก combo fallback และการติดตามค่าใช้จ่าย ใน `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<คีย์ OmniRoute API>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<โมเดลหรือ combo ของ OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<คีย์ 67router API>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<โมเดลหรือ combo ของ 67router>"
 }
 ```
 

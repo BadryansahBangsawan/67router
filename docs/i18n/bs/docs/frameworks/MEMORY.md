@@ -9,7 +9,7 @@
 > **Izvor istine:** `src/lib/memory/` i `src/app/api/memory/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40 (isključeno po zadanim postavkama + int8 kvantizacija)
 
-OmniRoute pruža trajnu konverzacijsku memoriju ključiranu prema API ključu (i opcionalno ID-u sesije). Memorije se automatski izvlače iz LLM odgovora putem laganog regex podudaranja uzoraka i ubacuju nazad u naknadne zahtjeve kao vodeća sistemska poruka (ili prva korisnička poruka za pružatelje usluga koji odbijaju sistemsku ulogu).
+67router pruža trajnu konverzacijsku memoriju ključiranu prema API ključu (i opcionalno ID-u sesije). Memorije se automatski izvlače iz LLM odgovora putem laganog regex podudaranja uzoraka i ubacuju nazad u naknadne zahtjeve kao vodeća sistemska poruka (ili prva korisnička poruka za pružatelje usluga koji odbijaju sistemsku ulogu).
 
 > **Memorija je ISKLJUČENA po zadanim postavkama (v3.8.30+).** `DEFAULT_MEMORY_SETTINGS.enabled` je sada `false` (`src/lib/memory/settings.ts`). Omogućavanje memorije ubacuje do `maxTokens` (~2k) dohvaćenog konteksta u **svaki** zahtjev za chat, što se naplaćuje — iznenađujući trošak za nove instalacije i za klijente koji upravljaju vlastitim kontekstom. Uključite se eksplicitno pod **Settings → Memory** (kartica `MemorySkillsTab` prikazuje upozorenje o trošku tokena kada je memorija omogućena). Klijent može isključiti pojedinačni zahtjev pomoću `x-omniroute-no-memory` zaglavlja zahtjeva (`true`/`1`/`yes`) — pogledajte tabelu zaglavlja zahtjeva u [API_REFERENCE.md](../reference/API_REFERENCE.md). Zahtjev bez memorije postavlja `memoryOwnerId = null`, što onemogućava **i** memoriju **i** ubacivanje vještina za taj zahtjev (`open-sse/handlers/chatCore/headers.ts::isNoMemoryRequested`).
 
@@ -518,7 +518,7 @@ metodama koje koriste pozivaoci koji žele svoj vlastiti keš sa opsegom (LRU od
 
 ## Odabir embedding pružatelja (v3.8.16+)
 
-OmniRoute-ov memorijski mehanizam podržava **četiri embedding izvora** (`src/lib/memory/embedding/`). Svaki ima različite kompromise u **latenciji, cijeni, kvaliteti modela i složenosti postavljanja**.
+67router-ov memorijski mehanizam podržava **četiri embedding izvora** (`src/lib/memory/embedding/`). Svaki ima različite kompromise u **latenciji, cijeni, kvaliteti modela i složenosti postavljanja**.
 
 ### Izvori embeddinga
 
@@ -937,13 +937,13 @@ Radni proces se veže samo za loopback interfejs, što SSRF zaštita komponente 
 Ovaj adapter ne ublažava tu zaštitu: host je fiksno postavljen na `127.0.0.1`, a konfiguracijska
 shema (`ClaudeMemBackendConfigSchema`, `.strict()`) prihvata samo:
 
-| Ključ       | Tip    | Zadano | Napomene                                                                                                                              |
-| ----------- | ------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | broj   | —      | Obavezno, 1024–65535. Port claude-mem radnog procesa iz njegove datoteke postavki (zadano `37700 + uid % 100`).                       |
-| `project`   | string | —      | claude-mem projekt koji će se koristiti. Ako nije postavljeno → svaki OmniRoute API ključ mapira se na vlastiti projekt (`apiKeyId`). |
-| `timeoutMs` | broj   | `5000` | Vremensko ograničenje po zahtjevu, 100–30000.                                                                                         |
+| Ključ       | Tip    | Zadano | Napomene                                                                                                                             |
+| ----------- | ------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `port`      | broj   | —      | Obavezno, 1024–65535. Port claude-mem radnog procesa iz njegove datoteke postavki (zadano `37700 + uid % 100`).                      |
+| `project`   | string | —      | claude-mem projekt koji će se koristiti. Ako nije postavljeno → svaki 67router API ključ mapira se na vlastiti projekt (`apiKeyId`). |
+| `timeoutMs` | broj   | `5000` | Vremensko ograničenje po zahtjevu, 100–30000.                                                                                        |
 
-Omogućite ga putem `PUT /api/settings/memory` i ponovo pokrenite OmniRoute (pozadinski sistemi registruju se
+Omogućite ga putem `PUT /api/settings/memory` i ponovo pokrenite 67router (pozadinski sistemi registruju se
 jednom, u `initMemoryBackends()`):
 
 ```json
@@ -960,7 +960,7 @@ Mapiranje i ograničenja:
 
 - ID-ovi imaju oblik `claude-mem:<observationId>`; `get`/`delete` ignorišu ID-ove drugih pozadinskih sistema bez
   mrežnog poziva.
-- `create` → `POST /api/memory/save`; OmniRoute polja (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router polja (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) prenose se u claude-mem polju `metadata.omniroute` i vraćaju se pri čitanju.
 - `search` → `GET /api/search?format=json&type=observations`, skraćeno na `maxTokens`
   (broj znakova / 4). `list` → paginirani endpoint radnog procesa za zapažanja (`total` je donja granica — radni proces
@@ -972,16 +972,16 @@ Mapiranje i ograničenja:
 - Umetanje u prompt (`retrieval.ts`) i `omniroute_memory_*` MCP alati i dalje direktno čitaju SQLite
   — ne prolaze kroz `memoryManager`, tako da ih ovaj pozadinski sistem ne opskrbljuje podacima.
 
-**Usmjeravanje vlastitih LLM poziva claude-mem-a kroz OmniRoute.** claude-mem komprimira zapažanja
+**Usmjeravanje vlastitih LLM poziva claude-mem-a kroz 67router.** claude-mem komprimira zapažanja
 pomoću LLM-a (zadano: Claude Agent SDK). Njegov pružalac `openai-compatible` može se umjesto toga usmjeriti na
-OmniRoute, čime se omogućavaju kombinovani rezervni sistemi i praćenje troškova. U `~/.claude-mem/settings.json`:
+67router, čime se omogućavaju kombinovani rezervni sistemi i praćenje troškova. U `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API ključ>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model ili kombinacija>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API ključ>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model ili kombinacija>"
 }
 ```
 

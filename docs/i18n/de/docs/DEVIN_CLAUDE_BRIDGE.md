@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` ermöglicht es der echten Claude-Code-Laufzeit, den lokalen Anthropic-
-Messages-Endpunkt von OmniRoute zu verwenden, während die offizielle Devin CLI die Modellantworten
+Messages-Endpunkt von 67router zu verwenden, während die offizielle Devin CLI die Modellantworten
 über ACP-stdio bereitstellt. Die bestehenden Anbieter für Anthropic, Claude OAuth, Claude Web oder
 `devin-cli` werden dabei nicht verändert.
 
@@ -22,7 +22,7 @@ ihn vermeidet.
 > ausgeführte `Read`-, `Edit`- und `Bash`-Interaktionen, erfolgreiche `npm test`-Ergebnisse,
 > die Erkennung von Projektbefehlen und Skills, ausschließliches Routing über Devin sowie
 > keinerlei ausgehenden Datenverkehr zu Claude. Anschließend wurde die festgesetzte Version
-> auf `2.1.258` angehoben (die CLI-Generation, deren Claude-Identität OmniRoute imitiert, und
+> auf `2.1.258` angehoben (die CLI-Generation, deren Claude-Identität 67router imitiert, und
 > die erste Versionslinie, die die Stufe Fable 5.1 nativ bereitstellt). Mit der neuen
 > festgesetzten Version wurden die Installationsschicht und `claude --version` auf dem
 > festgesetzten Basis-Image überprüft. Außerdem bestehen die Unit-Test-Suite der Bridge,
@@ -57,11 +57,11 @@ Der Parser akzeptiert pro Modellinteraktion einen eigenständigen `<tool>{...}</
 Er gleicht den Namen mit der Tool-Liste der Anfrage ab, validiert die Argumente anhand des
 JSON-Schemas dieses Tools, lehnt Mischungen aus Erläuterungen und Aktionen ab und erlaubt
 einen begrenzten Reparaturversuch. Claude Code führt anschließend den resultierenden
-Anthropic-`tool_use` lokal aus und sendet das `tool_result` über OmniRoute zurück.
+Anthropic-`tool_use` lokal aus und sendet das `tool_result` über 67router zurück.
 
 ## Automatisches Routing
 
-Der Anbieter kann in den `auto/*`-Kandidatenpools von OmniRoute berücksichtigt werden, sofern
+Der Anbieter kann in den `auto/*`-Kandidatenpools von 67router berücksichtigt werden, sofern
 er nicht blockiert ist. Die Eignung als Kandidat garantiert keine Auswahl: Die Routing-Strategie
 der Combo (beispielsweise „last-known-good“) kann einen anderen Anbieter bevorzugen. Verwenden
 Sie `dva/<model>` oder eine Combo mit Devin-Priorität, wenn jede Anfrage über Devin geleitet
@@ -72,13 +72,13 @@ werden muss.
 Die Claude-Installation, das Konto und die Konfiguration des Hosts liegen außerhalb des Geltungsbereichs und werden als verboten behandelt. Die Compose-Dienste:
 
 - werden mit UID/GID `10001:10001`, einem schreibgeschützten Root-Dateisystem, verworfenen Berechtigungen und `no-new-privileges` ausgeführt;
-- verwenden ein privates `/home/bridge`, ein dediziertes Claude-Konfigurations-Volume, isolierte OmniRoute-Daten und ein separates `devin-auth`-Volume;
+- verwenden ein privates `/home/bridge`, ein dediziertes Claude-Konfigurations-Volume, isolierte 67router-Daten und ein separates `devin-auth`-Volume;
 - binden nur kurzlebige `.sandbox`-Arbeitsbereiche/-Nachweise ein;
 - binden weder das Home-Verzeichnis des Hosts noch Keychain, SSH-, Cloud-Anmeldedaten oder den Docker-Socket ein;
 - erstellen explizite Umgebungen und entfernen Anthropic-API-/OAuth-/Routing-Variablen;
 - leiten Claude-Code-Inferenz ausschließlich mit einem nur lokal gültigen Schlüssel an `http://omniroute:20128` weiter.
 
-Das Offline-Profil verwendet ein internes Netzwerk. Im Live-Profil erreicht OmniRoute die offiziellen Devin-Endpunkte ausschließlich über `network-guard`; nicht zugehörige Ziele werden verweigert. Claude Code verfügt über eine separate Egress-Sperre, die sämtlichen ausgehenden Datenverkehr verweigert, und kann nur über `NO_PROXY` auf den lokalen OmniRoute-Dienst zugreifen. Guard-Auditdateien werden ausschließlich in den jeweiligen Guard-Prozess eingebunden. Die Skripte überprüfen Dateieigentümer, Modus, Linkanzahl und jede Entscheidung, bevor sie tokenfreie Nachweise exportieren.
+Das Offline-Profil verwendet ein internes Netzwerk. Im Live-Profil erreicht 67router die offiziellen Devin-Endpunkte ausschließlich über `network-guard`; nicht zugehörige Ziele werden verweigert. Claude Code verfügt über eine separate Egress-Sperre, die sämtlichen ausgehenden Datenverkehr verweigert, und kann nur über `NO_PROXY` auf den lokalen 67router-Dienst zugreifen. Guard-Auditdateien werden ausschließlich in den jeweiligen Guard-Prozess eingebunden. Die Skripte überprüfen Dateieigentümer, Modus, Linkanzahl und jede Entscheidung, bevor sie tokenfreie Nachweise exportieren.
 
 Führen Sie den Isolationsnachweis unabhängig aus:
 

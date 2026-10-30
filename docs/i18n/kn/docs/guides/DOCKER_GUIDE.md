@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (ಕನ್ನಡ)
+# 🐳 Docker Guide — 67router (ಕನ್ನಡ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [ಪರಿಸರ ಫೈಲ್ನೊಂದಿಗೆ](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [ಲಭ್ಯವಿರುವ ಪ್ರೊಫೈಲ್ಗಳು](#available-profiles)
-- [OmniRoute Docker ನಲ್ಲಿ ಚಾಲನೆಯಲ್ಲಿರುವಾಗ ಹೋಸ್ಟ್ CLI ಪರಿಕರಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುವುದು](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [67router Docker ನಲ್ಲಿ ಚಾಲನೆಯಲ್ಲಿರುವಾಗ ಹೋಸ್ಟ್ CLI ಪರಿಕರಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುವುದು](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis ಸೈಡ್ಕಾರ್](#redis-sidecar)
 - [ಉತ್ಪಾದನಾ Compose](#production-compose)
 - [Dockerfile ಹಂತಗಳು](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## ಲಭ್ಯವಿರುವ ಪ್ರೊಫೈಲ್ಗಳು
 
-ಮುಖ್ಯ ನಿಯೋಜನಾ ವಿನ್ಯಾಸಗಳಿಗಾಗಿ OmniRoute Compose ಪ್ರೊಫೈಲ್ಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ನಿಮ್ಮ ಪರಿಸರಕ್ಕೆ ಹೊಂದುವಂತಹದನ್ನು ಆಯ್ಕೆಮಾಡಿ.
+ಮುಖ್ಯ ನಿಯೋಜನಾ ವಿನ್ಯಾಸಗಳಿಗಾಗಿ 67router Compose ಪ್ರೊಫೈಲ್ಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ನಿಮ್ಮ ಪರಿಸರಕ್ಕೆ ಹೊಂದುವಂತಹದನ್ನು ಆಯ್ಕೆಮಾಡಿ.
 
 | ಪ್ರೊಫೈಲ್          | ಸೇವೆ             | ಯಾವಾಗ ಬಳಸಬೇಕು                                                                                                                                                           | ಕಮಾಂಡ್                                       |
 | ----------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 > ಅನೇಕ ಪ್ರೊಫೈಲ್ಗಳನ್ನು ಸಂಯೋಜಿಸಬಹುದು: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## OmniRoute ಅನ್ನು Docker ನಲ್ಲಿ ಚಲಾಯಿಸುವಾಗ ಹೋಸ್ಟ್ CLI ಪರಿಕರಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುವುದು
+## 67router ಅನ್ನು Docker ನಲ್ಲಿ ಚಲಾಯಿಸುವಾಗ ಹೋಸ್ಟ್ CLI ಪರಿಕರಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುವುದು
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` ಮತ್ತು ಡ್ಯಾಶ್ಬೋರ್ಡ್ನ
 **ಕಾನ್ಫಿಗ್ ಉಳಿಸಿ** ಬಟನ್ ಇವೆಲ್ಲವೂ `~/.codex/*.config.toml` ರೀತಿಯ ಫೈಲ್ಗಳನ್ನು ಬರೆಯುತ್ತವೆ. ಆ ಪಥಗಳು
@@ -103,11 +103,11 @@ CLI ನಿಜವಾಗಿ ಚಲಿಸುವ ಯಂತ್ರದಲ್ಲಿ ಮ�
 ಇಮೇಜ್ `USER node` ಆಗಿ ಚಲಿಸುತ್ತದೆ) ಸೇರುತ್ತದೆ; ಯಾವುದೇ ಹೋಸ್ಟ್ CLI ಅದನ್ನು ಎಂದಿಗೂ ಓದುವುದಿಲ್ಲ ಮತ್ತು
 ಕಂಟೇನರ್ ಅನ್ನು ಮರುರಚಿಸಿದ ಕ್ಷಣವೇ ಅದು ಅಳಿಸಿಹೋಗುತ್ತದೆ.
 
-OmniRoute ಇದನ್ನು ಪತ್ತೆಹಚ್ಚಿ, ನೀವು ಬಳಸಲಾಗದ ಯಶಸ್ಸನ್ನು ವರದಿ ಮಾಡುವ ಬದಲು
+67router ಇದನ್ನು ಪತ್ತೆಹಚ್ಚಿ, ನೀವು ಬಳಸಲಾಗದ ಯಶಸ್ಸನ್ನು ವರದಿ ಮಾಡುವ ಬದಲು
 ಸೂಚನೆಗಳೊಂದಿಗೆ ಬರವಣಿಗೆಯನ್ನು ನಿರಾಕರಿಸುತ್ತದೆ: CLI `2` ನೊಂದಿಗೆ ನಿರ್ಗಮಿಸುತ್ತದೆ ಮತ್ತು API
 `containerEphemeralTarget: true` ಜೊತೆಗೆ `422` ಉತ್ತರಿಸುತ್ತದೆ.
 
-### ಶಿಫಾರಸು ಮಾಡಿರುವ ವಿಧಾನ: CLI ಅನ್ನು ಹೋಸ್ಟ್ನಲ್ಲಿ, OmniRoute ಅನ್ನು Docker ನಲ್ಲಿ ಚಲಾಯಿಸಿ
+### ಶಿಫಾರಸು ಮಾಡಿರುವ ವಿಧಾನ: CLI ಅನ್ನು ಹೋಸ್ಟ್ನಲ್ಲಿ, 67router ಅನ್ನು Docker ನಲ್ಲಿ ಚಲಾಯಿಸಿ
 
 ಕಂಟೇನರ್ API ಅನ್ನು ಒದಗಿಸುತ್ತದೆ; CLI ನಿಮ್ಮ ಹೋಸ್ಟ್ ಪರಿಕರಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುತ್ತದೆ.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-bind mount ಪಥವನ್ನು ವಿಶ್ವಾಸಾರ್ಹವಾಗಿಸುತ್ತದೆ: OmniRoute
+bind mount ಪಥವನ್ನು ವಿಶ್ವಾಸಾರ್ಹವಾಗಿಸುತ್ತದೆ: 67router
 `/proc/self/mountinfo` ಅನ್ನು ಓದುತ್ತದೆ ಮತ್ತು ಮೌಂಟ್ ಮಾಡಿದ ಪಥಗಳಿಗೆ (ಮತ್ತು ಮಕ್ಕಳಾಗಿ ಮೌಂಟ್ಗಳನ್ನು ಹೊಂದಿರುವ
 ಡೈರೆಕ್ಟರಿಗಳಿಗೆ — ಮೇಲಿನ `/host-home` ವಿನ್ಯಾಸವು ನಿಖರವಾಗಿ ಇದೇ ರೀತಿಯದು) ಬರೆಯಲು ಅನುಮತಿಸುತ್ತದೆ, ಹಾಗೆಯೇ
 ಮೌಂಟ್ ಮಾಡದ ಪಥಗಳನ್ನು ಇನ್ನೂ ನಿರಾಕರಿಸುತ್ತದೆ.
@@ -178,7 +178,7 @@ CLI ಗಳು ನಿಜವಾಗಿಯೂ ಕಂಟೇನರ್ನೊಳಗೇ �
 
 ## Redis ಸೈಡ್ಕಾರ್
 
-ವಿತರಿತ ದರ ಮಿತಿಕಾರಕ ಮತ್ತು ಹಂಚಿದ ಕ್ಯಾಶ್ಗೆ ಬೆಂಬಲ ನೀಡಲು OmniRoute, Redis ಅನ್ನು ಅವಲಂಬಿಸಿದೆ. `redis` ಸೇವೆಯನ್ನು `docker-compose.yml` ನಲ್ಲಿ **ಯಾವಾಗಲೂ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿರುತ್ತದೆ** (ಇದಕ್ಕೆ ಯಾವುದೇ ಪ್ರೊಫೈಲ್ ಗೇಟ್ ಇಲ್ಲ) ಮತ್ತು ಅದು ಇತರ ಯಾವುದೇ ಪ್ರೊಫೈಲ್ನೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ.
+ವಿತರಿತ ದರ ಮಿತಿಕಾರಕ ಮತ್ತು ಹಂಚಿದ ಕ್ಯಾಶ್ಗೆ ಬೆಂಬಲ ನೀಡಲು 67router, Redis ಅನ್ನು ಅವಲಂಬಿಸಿದೆ. `redis` ಸೇವೆಯನ್ನು `docker-compose.yml` ನಲ್ಲಿ **ಯಾವಾಗಲೂ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿರುತ್ತದೆ** (ಇದಕ್ಕೆ ಯಾವುದೇ ಪ್ರೊಫೈಲ್ ಗೇಟ್ ಇಲ್ಲ) ಮತ್ತು ಅದು ಇತರ ಯಾವುದೇ ಪ್ರೊಫೈಲ್ನೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ.
 
 | ವಿವರ                     | ಮೌಲ್ಯ                                        |
 | ------------------------ | -------------------------------------------- |
@@ -368,7 +368,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ## ಉಪಪಥದಲ್ಲಿ ರಿವರ್ಸ್ ಪ್ರಾಕ್ಸಿ (Traefik / nginx)
 
-Next.js `basePath` ಅನ್ನು ಸ್ಟ್ಯಾಂಡ್ಅಲೋನ್ ಬಂಡಲ್ನಲ್ಲಿ ಕಂಪೈಲ್ ಮಾಡಲಾಗುತ್ತದೆ. OmniRoute, ಆ್ಯಪ್ನ ರೂಟ್ನಲ್ಲಿರುವ ಸೆಂಟಿನಲ್ ಫೈಲ್ನಲ್ಲಿ ಬಿಲ್ಡ್ ಸಮಯದಲ್ಲಿ ಅಳವಡಿಸಲಾದ ಮೌಲ್ಯವನ್ನು ದಾಖಲಿಸುತ್ತದೆ (`npm run build` ಸಮಯದಲ್ಲಿ ಬರೆಯಲಾಗುತ್ತದೆ; `scripts/docker/ensure-docker-base-path.mjs` ಮೂಲಕ ಓದಲಾಗುತ್ತದೆ) ಮತ್ತು ಕಂಟೇನರ್ ಪ್ರಾರಂಭವಾದಾಗ ಅದನ್ನು `OMNIROUTE_BASE_PATH` ಜೊತೆಗೆ ಹೋಲಿಸುತ್ತದೆ. ಅವು ಭಿನ್ನವಾಗಿದ್ದು ಇಮೇಜ್ ಅನ್ನು ಡೊಮೇನ್ ರೂಟ್ಗಾಗಿ ಬಿಲ್ಡ್ ಮಾಡಿದ್ದರೆ, `node dev/run-standalone.mjs` ರನ್ ಆಗುವ ಮೊದಲು ಎಂಟ್ರಿಪಾಯಿಂಟ್ ಸ್ಟ್ಯಾಂಡ್ಅಲೋನ್ ಮ್ಯಾನಿಫೆಸ್ಟ್ಗಳು, ಎಂಬೆಡ್ ಮಾಡಲಾದ `basePath`/`assetPrefix` ಲಿಟರಲ್ಗಳು (Next 16, SSR ಅಸೆಟ್ URLಗಳನ್ನು `assetPrefix` ಒಂದರಿಂದಲೇ ರೆಂಡರ್ ಮಾಡುತ್ತದೆ — ಪ್ಯಾಚರ್ ಉಪಪಥವನ್ನು ಅದರಲ್ಲಿಯೂ ಪ್ರತಿರೂಪಿಸುತ್ತದೆ), ಬಿಲ್ಡ್ನಲ್ಲಿ ಅಳವಡಿಸಲಾದ `/_next/static` ಅಸೆಟ್ URLಗಳು (ಕ್ಲೈಂಟ್-ರೆಫರೆನ್ಸ್ ಮ್ಯಾನಿಫೆಸ್ಟ್ಗಳು, ಮೀಡಿಯಾ ಇಂಪೋರ್ಟ್ಗಳು, ಪೂರ್ವ-ರೆಂಡರ್ ಮಾಡಿದ ದೋಷ ಪುಟಗಳು) ಮತ್ತು ಕ್ಲೈಂಟ್ `process.env` ಶಿಮ್ ಅನ್ನು ಮರುಬರೆಯುತ್ತದೆ.
+Next.js `basePath` ಅನ್ನು ಸ್ಟ್ಯಾಂಡ್ಅಲೋನ್ ಬಂಡಲ್ನಲ್ಲಿ ಕಂಪೈಲ್ ಮಾಡಲಾಗುತ್ತದೆ. 67router, ಆ್ಯಪ್ನ ರೂಟ್ನಲ್ಲಿರುವ ಸೆಂಟಿನಲ್ ಫೈಲ್ನಲ್ಲಿ ಬಿಲ್ಡ್ ಸಮಯದಲ್ಲಿ ಅಳವಡಿಸಲಾದ ಮೌಲ್ಯವನ್ನು ದಾಖಲಿಸುತ್ತದೆ (`npm run build` ಸಮಯದಲ್ಲಿ ಬರೆಯಲಾಗುತ್ತದೆ; `scripts/docker/ensure-docker-base-path.mjs` ಮೂಲಕ ಓದಲಾಗುತ್ತದೆ) ಮತ್ತು ಕಂಟೇನರ್ ಪ್ರಾರಂಭವಾದಾಗ ಅದನ್ನು `OMNIROUTE_BASE_PATH` ಜೊತೆಗೆ ಹೋಲಿಸುತ್ತದೆ. ಅವು ಭಿನ್ನವಾಗಿದ್ದು ಇಮೇಜ್ ಅನ್ನು ಡೊಮೇನ್ ರೂಟ್ಗಾಗಿ ಬಿಲ್ಡ್ ಮಾಡಿದ್ದರೆ, `node dev/run-standalone.mjs` ರನ್ ಆಗುವ ಮೊದಲು ಎಂಟ್ರಿಪಾಯಿಂಟ್ ಸ್ಟ್ಯಾಂಡ್ಅಲೋನ್ ಮ್ಯಾನಿಫೆಸ್ಟ್ಗಳು, ಎಂಬೆಡ್ ಮಾಡಲಾದ `basePath`/`assetPrefix` ಲಿಟರಲ್ಗಳು (Next 16, SSR ಅಸೆಟ್ URLಗಳನ್ನು `assetPrefix` ಒಂದರಿಂದಲೇ ರೆಂಡರ್ ಮಾಡುತ್ತದೆ — ಪ್ಯಾಚರ್ ಉಪಪಥವನ್ನು ಅದರಲ್ಲಿಯೂ ಪ್ರತಿರೂಪಿಸುತ್ತದೆ), ಬಿಲ್ಡ್ನಲ್ಲಿ ಅಳವಡಿಸಲಾದ `/_next/static` ಅಸೆಟ್ URLಗಳು (ಕ್ಲೈಂಟ್-ರೆಫರೆನ್ಸ್ ಮ್ಯಾನಿಫೆಸ್ಟ್ಗಳು, ಮೀಡಿಯಾ ಇಂಪೋರ್ಟ್ಗಳು, ಪೂರ್ವ-ರೆಂಡರ್ ಮಾಡಿದ ದೋಷ ಪುಟಗಳು) ಮತ್ತು ಕ್ಲೈಂಟ್ `process.env` ಶಿಮ್ ಅನ್ನು ಮರುಬರೆಯುತ್ತದೆ.
 
 ### Compose ಬಿಲ್ಡ್ (ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ)
 
@@ -416,7 +416,7 @@ Docker ಹೆಲ್ತ್ಚೆಕ್, ಸಕ್ರಿಯ `OMNIROUTE_BASE_PATH` 
 
 ## Caddy ಜೊತೆಗೆ Docker Compose (HTTPS Auto-TLS)
 
-Caddy ಯ ಸ್ವಯಂಚಾಲಿತ SSL ಒದಗಿಸುವಿಕೆಯನ್ನು ಬಳಸಿಕೊಂಡು OmniRoute ಅನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಬಹಿರಂಗಪಡಿಸಬಹುದು. ನಿಮ್ಮ ಡೊಮೇನ್ನ DNS A ದಾಖಲೆಯು ನಿಮ್ಮ ಸರ್ವರ್ನ IP ವಿಳಾಸವನ್ನು ಸೂಚಿಸುತ್ತಿದೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.
+Caddy ಯ ಸ್ವಯಂಚಾಲಿತ SSL ಒದಗಿಸುವಿಕೆಯನ್ನು ಬಳಸಿಕೊಂಡು 67router ಅನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಬಹಿರಂಗಪಡಿಸಬಹುದು. ನಿಮ್ಮ ಡೊಮೇನ್ನ DNS A ದಾಖಲೆಯು ನಿಮ್ಮ ಸರ್ವರ್ನ IP ವಿಳಾಸವನ್ನು ಸೂಚಿಸುತ್ತಿದೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.
 
 ```yaml
 services:
@@ -448,10 +448,10 @@ volumes:
 ```
 
 Caddy ಅಪ್ಸ್ಟ್ರೀಮ್ ಕಂಟೇನರ್ಗಾಗಿ ಪ್ರಮಾಣಿತ ಫಾರ್ವರ್ಡಿಂಗ್ ಹೆಡರ್ಗಳನ್ನು ಹೊಂದಿಸುತ್ತದೆ. OAuth ಕಾಲ್ಬ್ಯಾಕ್ಗಳು ಮತ್ತು ರಚಿಸಲಾದ ಸಾರ್ವಜನಿಕ
-ಲಿಂಕ್ಗಳಿಗೆ OmniRoute `NEXT_PUBLIC_BASE_URL` ಅನ್ನು ಅಧಿಕೃತ ಸಾರ್ವಜನಿಕ ಮೂಲವಾಗಿ ಬಳಸುತ್ತದೆ;
+ಲಿಂಕ್ಗಳಿಗೆ 67router `NEXT_PUBLIC_BASE_URL` ಅನ್ನು ಅಧಿಕೃತ ಸಾರ್ವಜನಿಕ ಮೂಲವಾಗಿ ಬಳಸುತ್ತದೆ;
 ದೃಢೀಕೃತ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಬರಹಗಳು ಅದೇ-ಮೂಲದ ವಿನಂತಿಗಳ ಜೊತೆಗೆ ಸೆಷನ್ಗೆ ಬದ್ಧವಾದ CSRF
 ರಕ್ಷಣೆಯನ್ನು ಬಳಸುತ್ತವೆ. ಸ್ಪಷ್ಟವಾದ ಸಂರಚನೆಯ ಬದಲಿಗೆ ವಿಶ್ವಾಸಾರ್ಹ ಫಾರ್ವರ್ಡ್ ಹೆಡರ್ಗಳಿಂದ ಸಾರ್ವಜನಿಕ ಮೂಲವನ್ನು
-OmniRoute ಪಡೆದುಕೊಳ್ಳಬೇಕೆಂದು ನೀವು ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಬಯಸುವ ಸುಧಾರಿತ ನಿಯೋಜನೆಗಳಿಗೆ ಮಾತ್ರ `OMNIROUTE_TRUST_PROXY` ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.
+67router ಪಡೆದುಕೊಳ್ಳಬೇಕೆಂದು ನೀವು ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಬಯಸುವ ಸುಧಾರಿತ ನಿಯೋಜನೆಗಳಿಗೆ ಮಾತ್ರ `OMNIROUTE_TRUST_PROXY` ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.
 
 ## Cloudflare Quick Tunnel
 
@@ -462,11 +462,11 @@ Docker ನಿಯೋಜನೆಗಳಿಗಾಗಿ ಡ್ಯಾಶ್ಬೋರ್
 ### ಟನಲ್ ಟಿಪ್ಪಣಿಗಳು
 
 - Quick Tunnel URL ಗಳು ತಾತ್ಕಾಲಿಕವಾಗಿದ್ದು, ಪ್ರತಿ ಮರುಪ್ರಾರಂಭದ ನಂತರ ಬದಲಾಗುತ್ತವೆ.
-- OmniRoute ಅಥವಾ ಕಂಟೇನರ್ ಮರುಪ್ರಾರಂಭವಾದ ನಂತರ Quick Tunnels ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮರುಸ್ಥಾಪನೆಯಾಗುವುದಿಲ್ಲ. ಅಗತ್ಯವಿದ್ದಾಗ ಅವುಗಳನ್ನು ಡ್ಯಾಶ್ಬೋರ್ಡ್ನಿಂದ ಮರು-ಸಕ್ರಿಯಗೊಳಿಸಿ.
+- 67router ಅಥವಾ ಕಂಟೇನರ್ ಮರುಪ್ರಾರಂಭವಾದ ನಂತರ Quick Tunnels ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮರುಸ್ಥಾಪನೆಯಾಗುವುದಿಲ್ಲ. ಅಗತ್ಯವಿದ್ದಾಗ ಅವುಗಳನ್ನು ಡ್ಯಾಶ್ಬೋರ್ಡ್ನಿಂದ ಮರು-ಸಕ್ರಿಯಗೊಳಿಸಿ.
 - ನಿರ್ವಹಿತ ಸ್ಥಾಪನೆಯು ಪ್ರಸ್ತುತ `x64` / `arm64` ನಲ್ಲಿನ Linux, macOS ಮತ್ತು Windows ಅನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ.
 - ನಿರ್ಬಂಧಿತ ಕಂಟೇನರ್ ಪರಿಸರಗಳಲ್ಲಿ ಗದ್ದಲದ QUIC UDP ಬಫರ್ ಎಚ್ಚರಿಕೆಗಳನ್ನು ತಪ್ಪಿಸಲು ನಿರ್ವಹಿತ Quick Tunnels ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ HTTP/2 ಸಾರಿಗೆಯನ್ನು ಬಳಸುತ್ತವೆ. ನಿಮಗೆ ಬೇರೆ ಸಾರಿಗೆ ಬೇಕಿದ್ದರೆ `CLOUDFLARED_PROTOCOL=quic` ಅಥವಾ `auto` ಹೊಂದಿಸಿ.
 - Docker ಇಮೇಜ್ಗಳು ಸಿಸ್ಟಮ್ CA ರೂಟ್ಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತವೆ ಮತ್ತು ಅವುಗಳನ್ನು ನಿರ್ವಹಿತ `cloudflared` ಗೆ ರವಾನಿಸುತ್ತವೆ; ಇದರಿಂದ ಕಂಟೇನರ್ ಒಳಗೆ ಟನಲ್ ಬೂಟ್ಸ್ಟ್ರ್ಯಾಪ್ ಆಗುವಾಗ TLS ವಿಶ್ವಾಸ ವೈಫಲ್ಯಗಳು ತಪ್ಪುತ್ತವೆ.
-- OmniRoute ಡೌನ್ಲೋಡ್ ಮಾಡುವ ಬದಲು ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಬೈನರಿಯನ್ನು ಬಳಸಬೇಕೆಂದರೆ `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` ಹೊಂದಿಸಿ.
+- 67router ಡೌನ್ಲೋಡ್ ಮಾಡುವ ಬದಲು ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಬೈನರಿಯನ್ನು ಬಳಸಬೇಕೆಂದರೆ `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` ಹೊಂದಿಸಿ.
 
 ## ಇಮೇಜ್ ಟ್ಯಾಗ್ಗಳು
 
@@ -479,7 +479,7 @@ Docker ನಿಯೋಜನೆಗಳಿಗಾಗಿ ಡ್ಯಾಶ್ಬೋರ್
 
 ### ಬಿಡುಗಡೆ ಚಾನೆಲ್ಗಳು
 
-OmniRoute ಸ್ಥಿರ ಬಿಡುಗಡೆಗಳು, ಸಕ್ರಿಯ ಬಿಡುಗಡೆ-ಶಾಖೆಯ ಪರೀಕ್ಷೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ ಬಿಲ್ಡ್ಗಳಿಗಾಗಿ ಪ್ರತ್ಯೇಕ Docker ಚಾನೆಲ್ಗಳನ್ನು ಪ್ರಕಟಿಸುತ್ತದೆ.
+67router ಸ್ಥಿರ ಬಿಡುಗಡೆಗಳು, ಸಕ್ರಿಯ ಬಿಡುಗಡೆ-ಶಾಖೆಯ ಪರೀಕ್ಷೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ ಬಿಲ್ಡ್ಗಳಿಗಾಗಿ ಪ್ರತ್ಯೇಕ Docker ಚಾನೆಲ್ಗಳನ್ನು ಪ್ರಕಟಿಸುತ್ತದೆ.
 
 | ಚಾನೆಲ್                          | ಮೂಲ                                 | ಬದಲಾಯಿಸಬಹುದಾದ ಸ್ವರೂಪ                 | ಶಿಫಾರಸು ಮಾಡಲಾದ ಬಳಕೆ                                                                                                                 |
 | ------------------------------- | ----------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -532,7 +532,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-ಪರೀಕ್ಷಿಸುವ ಮೊದಲು, OmniRoute data volume ಅಥವಾ bind-mounted data directory ಅನ್ನು backup ಮಾಡಿ. ಹಿಂದಕ್ಕೆ ಮರಳಿಸಲು, ಹಿಂದೆ ಬಳಸಿದ ಸ್ಥಿರ version ಅಥವಾ digest ಅನ್ನು ಪುನಃಸ್ಥಾಪಿಸಿ ಮತ್ತು container ಅನ್ನು ಮರುರಚಿಸಿ:
+ಪರೀಕ್ಷಿಸುವ ಮೊದಲು, 67router data volume ಅಥವಾ bind-mounted data directory ಅನ್ನು backup ಮಾಡಿ. ಹಿಂದಕ್ಕೆ ಮರಳಿಸಲು, ಹಿಂದೆ ಬಳಸಿದ ಸ್ಥಿರ version ಅಥವಾ digest ಅನ್ನು ಪುನಃಸ್ಥಾಪಿಸಿ ಮತ್ತು container ಅನ್ನು ಮರುರಚಿಸಿ:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -552,7 +552,7 @@ release-branch build ಎಂದಿಗೂ `latest` ಅನ್ನು ಬದಲಾಯ
 
 ## Docker ನಲ್ಲಿ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಅಪ್ಡೇಟ್ಗಳು
 
-ಪ್ರಕಟಿತ-ಇಮೇಜ್ ಕಂಟೇನರ್ ತನ್ನನ್ನೇ ಬದಲಾಯಿಸಿಕೊಳ್ಳಲು ಸಾಧ್ಯವಿಲ್ಲ. OmniRoute ತಾನು ಕಂಟೇನರ್ನೊಳಗೆ
+ಪ್ರಕಟಿತ-ಇಮೇಜ್ ಕಂಟೇನರ್ ತನ್ನನ್ನೇ ಬದಲಾಯಿಸಿಕೊಳ್ಳಲು ಸಾಧ್ಯವಿಲ್ಲ. 67router ತಾನು ಕಂಟೇನರ್ನೊಳಗೆ
 ಚಾಲನೆಯಾಗುತ್ತಿರುವುದನ್ನು (`.git` checkout ಇಲ್ಲದೆ, npm ಸ್ಥಾಪನೆಯಾಗಿರದೆ) ಪತ್ತೆಹಚ್ಚಿದಾಗ, ಮುಖಪುಟ ಡ್ಯಾಶ್ಬೋರ್ಡ್ನ ಅಪ್ಡೇಟ್ ಬ್ಯಾನರ್
 npm/git ಸೂಚನೆಗಳ ಬದಲಿಗೆ ಹೋಸ್ಟ್ನಲ್ಲಿ ಚಲಾಯಿಸಬೇಕಾದ ಕಮಾಂಡ್ ಅನ್ನು ನಕಲಿಸುವ ಬಟನ್ನೊಂದಿಗೆ ತೋರಿಸುತ್ತದೆ:
 
@@ -567,7 +567,7 @@ docker compose pull omniroute && docker compose up -d --force-recreate omniroute
 ### ಹೋಸ್ಟ್ ಟ್ರಿಗರ್ ಫೈಲ್ನೊಂದಿಗೆ ಒಂದು-ಕ್ಲಿಕ್ ಅಪ್ಡೇಟ್ಗಳು
 
 `/var/run/docker.sock` ಅನ್ನು ಮೌಂಟ್ ಮಾಡದೆಯೇ **Update Now** ಕಾರ್ಯನಿರ್ವಹಿಸುವಂತೆ ಇರಿಸಲು (ಇದು ಕಂಟೇನರ್ಗೆ
-ಹೋಸ್ಟ್ನಲ್ಲಿ root ಪ್ರವೇಶವನ್ನು ನೀಡುತ್ತದೆ — ಮೇಲಿನ `cli` ಪ್ರೊಫೈಲ್ ಎಚ್ಚರಿಕೆಯನ್ನು ನೋಡಿ), OmniRoute ಸೇವೆಯಲ್ಲಿ `DOCKER_UPDATE_TRIGGER_FILE` ಅನ್ನು ಹೊಂದಿಸಿ ಮತ್ತು ಹೋಸ್ಟ್ನಲ್ಲಿ ವಾಚರ್ ಅನ್ನು ಚಲಾಯಿಸಿ:
+ಹೋಸ್ಟ್ನಲ್ಲಿ root ಪ್ರವೇಶವನ್ನು ನೀಡುತ್ತದೆ — ಮೇಲಿನ `cli` ಪ್ರೊಫೈಲ್ ಎಚ್ಚರಿಕೆಯನ್ನು ನೋಡಿ), 67router ಸೇವೆಯಲ್ಲಿ `DOCKER_UPDATE_TRIGGER_FILE` ಅನ್ನು ಹೊಂದಿಸಿ ಮತ್ತು ಹೋಸ್ಟ್ನಲ್ಲಿ ವಾಚರ್ ಅನ್ನು ಚಲಾಯಿಸಿ:
 
 ```yaml
 services:
@@ -581,7 +581,7 @@ services:
 ಪಥವು `DATA_DIR` ಒಳಗೇ ಇರಬೇಕು (ಸಾಪೇಕ್ಷ ಮೌಲ್ಯಗಳನ್ನು ಅದಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಪರಿಹರಿಸಲಾಗುತ್ತದೆ); ಬೇರೆ ಯಾವುದನ್ನಾದರೂ
 ತಿರಸ್ಕರಿಸಲಾಗುತ್ತದೆ. ನಂತರ **Update Now**, `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` ಅನ್ನು ಆ
 ಫೈಲ್ಗೆ ಬರೆಯುತ್ತದೆ, `202` ನೊಂದಿಗೆ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತದೆ ಮತ್ತು ಹೊಸ ಆವೃತ್ತಿ ಸಕ್ರಿಯವಾಗುವವರೆಗೆ ಡ್ಯಾಶ್ಬೋರ್ಡ್ `/api/system/version` ಅನ್ನು ಪೋಲ್ ಮಾಡಿ
-ಮರುಲೋಡ್ ಆಗುತ್ತದೆ. ಈ ಮೋಡ್ನಲ್ಲಿ OmniRoute ಎಂದಿಗೂ shell ಅಥವಾ Docker ಕಮಾಂಡ್ ಅನ್ನು ಚಲಾಯಿಸುವುದಿಲ್ಲ. ಪ್ರತಿಯೊಂದು ಅಪ್ಡೇಟ್
+ಮರುಲೋಡ್ ಆಗುತ್ತದೆ. ಈ ಮೋಡ್ನಲ್ಲಿ 67router ಎಂದಿಗೂ shell ಅಥವಾ Docker ಕಮಾಂಡ್ ಅನ್ನು ಚಲಾಯಿಸುವುದಿಲ್ಲ. ಪ್ರತಿಯೊಂದು ಅಪ್ಡೇಟ್
 ಕ್ರಿಯೆಯಂತೆಯೇ, ವಿನಂತಿಯನ್ನು loopback/LAN ಕ್ಲೈಂಟ್ಗಳಿಂದ ಮಾತ್ರ ಸ್ವೀಕರಿಸಲಾಗುತ್ತದೆ.
 
 ಬೈಂಡ್-ಮೌಂಟ್ ಮಾಡಿದ ಡೇಟಾ ಡೈರೆಕ್ಟರಿಯು ಹೋಸ್ಟ್ಗೆ ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲು ಸ್ಥಿರವಾದ ಪಥವನ್ನು ನೀಡುತ್ತದೆ. ಮಾದರಿ `systemd` ಯೂನಿಟ್ಗಳು
@@ -590,7 +590,7 @@ services:
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Watch for OmniRoute dashboard update requests
+Description=Watch for 67router dashboard update requests
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -602,7 +602,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Pull and recreate the OmniRoute container
+Description=Pull and recreate the 67router container
 
 [Service]
 Type=oneshot
@@ -622,13 +622,13 @@ sudo systemctl enable --now omniroute-update.path
 
 ## ಲಭ್ಯತೆ: ಡೀಫಾಲ್ಟ್ SQLite ಏಕ-ರೆಪ್ಲಿಕಾ ಆಗಿದೆ
 
-ಪ್ರಮಾಣಿತ Docker / Kubernetes OmniRoute ಎಂದರೆ **ಒಂದು Node ಪ್ರಕ್ರಿಯೆ + ಒಂದು SQLite ರೈಟರ್**. ಈ ಟೋಪಾಲಜಿಯಲ್ಲಿ ಹೆಚ್ಚಿನ ಲಭ್ಯತೆ **ಬೆಂಬಲಿತವಾಗಿಲ್ಲ**.
+ಪ್ರಮಾಣಿತ Docker / Kubernetes 67router ಎಂದರೆ **ಒಂದು Node ಪ್ರಕ್ರಿಯೆ + ಒಂದು SQLite ರೈಟರ್**. ಈ ಟೋಪಾಲಜಿಯಲ್ಲಿ ಹೆಚ್ಚಿನ ಲಭ್ಯತೆ **ಬೆಂಬಲಿತವಾಗಿಲ್ಲ**.
 
-| ನಿರ್ಬಂಧ                                   | ಪರಿಣಾಮ                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ಏಕ ರೈಟರ್                                  | ಒಂದೇ SQLite ಫೈಲ್ ವಿರುದ್ಧ ಬಹು ರೆಪ್ಲಿಕಾಗಳನ್ನು ಚಲಾಯಿಸ**ಬೇಡಿ**. ಅದು DB ಅನ್ನು ಹಾಳುಮಾಡುತ್ತದೆ.                                                                                                                                                                                                                                                                                            |
-| ಮರುಸೃಷ್ಟಿ / ಮರುಪ್ರಾರಂಭ / HEALTHCHECK kill | ಪ್ರಗತಿಯಲ್ಲಿರುವ SSE, ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಸೆಷನ್ಗಳು ಮತ್ತು ಇನ್-ಮೆಮೊರಿ ಸ್ಥಿತಿಗೆ **ಸಂಪೂರ್ಣ ಸ್ಥಗಿತ** ಉಂಟಾಗುತ್ತದೆ. ಸಂಪರ್ಕಗೊಂಡಿರುವ ಪ್ರತಿಯೊಂದು ಕ್ಲೈಂಟ್ನ ಸಂಪರ್ಕ ಕಡಿತಗೊಳ್ಳುತ್ತದೆ. ಎಂಡ್ಪಾಯಿಂಟ್ ಇಲ್ಲದಿರುವ ಅವಧಿಯಲ್ಲಿ ಹೊಸ ವಿನಂತಿಗಳು OmniRoute JSON ಬದಲಿಗೆ ರಿವರ್ಸ್-ಪ್ರಾಕ್ಸಿಯಿಂದ **`502 Bad Gateway: Unknown error`** ಪಡೆಯುತ್ತವೆ — ಕ್ಲೈಂಟ್ಗಳು ಇದನ್ನು ಪ್ರೊವೈಡರ್ ವೈಫಲ್ಯದಿಂದ ಪ್ರತ್ಯೇಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ (#11015). |
-| `/healthz` ನಂತೆಯೇ ಅದೇ event loop          | ಕಾರ್ಯನಿರತ catalog ಅಥವಾ compression tick ಪ್ರೋಬ್ಗಳನ್ನು ವಿಳಂಬಗೊಳಿಸಬಹುದು; ಆಗ ಕಡಿಮೆ timeout **ಏಕೈಕ** ರೆಪ್ಲಿಕಾವನ್ನು ಮರುಪ್ರಾರಂಭಿಸುತ್ತದೆ.                                                                                                                                                                                                                                                  |
+| ನಿರ್ಬಂಧ                                   | ಪರಿಣಾಮ                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ಏಕ ರೈಟರ್                                  | ಒಂದೇ SQLite ಫೈಲ್ ವಿರುದ್ಧ ಬಹು ರೆಪ್ಲಿಕಾಗಳನ್ನು ಚಲಾಯಿಸ**ಬೇಡಿ**. ಅದು DB ಅನ್ನು ಹಾಳುಮಾಡುತ್ತದೆ.                                                                                                                                                                                                                                                                                           |
+| ಮರುಸೃಷ್ಟಿ / ಮರುಪ್ರಾರಂಭ / HEALTHCHECK kill | ಪ್ರಗತಿಯಲ್ಲಿರುವ SSE, ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಸೆಷನ್ಗಳು ಮತ್ತು ಇನ್-ಮೆಮೊರಿ ಸ್ಥಿತಿಗೆ **ಸಂಪೂರ್ಣ ಸ್ಥಗಿತ** ಉಂಟಾಗುತ್ತದೆ. ಸಂಪರ್ಕಗೊಂಡಿರುವ ಪ್ರತಿಯೊಂದು ಕ್ಲೈಂಟ್ನ ಸಂಪರ್ಕ ಕಡಿತಗೊಳ್ಳುತ್ತದೆ. ಎಂಡ್ಪಾಯಿಂಟ್ ಇಲ್ಲದಿರುವ ಅವಧಿಯಲ್ಲಿ ಹೊಸ ವಿನಂತಿಗಳು 67router JSON ಬದಲಿಗೆ ರಿವರ್ಸ್-ಪ್ರಾಕ್ಸಿಯಿಂದ **`502 Bad Gateway: Unknown error`** ಪಡೆಯುತ್ತವೆ — ಕ್ಲೈಂಟ್ಗಳು ಇದನ್ನು ಪ್ರೊವೈಡರ್ ವೈಫಲ್ಯದಿಂದ ಪ್ರತ್ಯೇಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ (#11015). |
+| `/healthz` ನಂತೆಯೇ ಅದೇ event loop          | ಕಾರ್ಯನಿರತ catalog ಅಥವಾ compression tick ಪ್ರೋಬ್ಗಳನ್ನು ವಿಳಂಬಗೊಳಿಸಬಹುದು; ಆಗ ಕಡಿಮೆ timeout **ಏಕೈಕ** ರೆಪ್ಲಿಕಾವನ್ನು ಮರುಪ್ರಾರಂಭಿಸುತ್ತದೆ.                                                                                                                                                                                                                                                 |
 
 **ಪ್ರೋಬ್ ಮ್ಯಾಟ್ರಿಕ್ಸ್** ([Kubernetes ಪ್ರೋಬ್ ಶಿಫಾರಸುಗಳು](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations) ಅನ್ನೂ ನೋಡಿ):
 
@@ -731,7 +731,7 @@ IPv4/IPv6 ಸಂಪರ್ಕ, VPN ರೂಟಿಂಗ್ ಮತ್ತು ಕಾ�
 
 ### ಸಂಪರ್ಕ-ನಿರ್ದಿಷ್ಟ ಪ್ರಾಕ್ಸಿಗೆ ಆದ್ಯತೆ ನೀಡಿ
 
-ಬಾಧಿತ Gemini ಸಂಪರ್ಕಕ್ಕಾಗಿ OmniRouteನ [ಪ್ರತಿ-ಸಂಪರ್ಕದ ಪ್ರಾಕ್ಸಿ ಕಾನ್ಫಿಗರೇಶನ್](../ops/PROXY_GUIDE.md#4-level-proxy-system)
+ಬಾಧಿತ Gemini ಸಂಪರ್ಕಕ್ಕಾಗಿ 67routerನ [ಪ್ರತಿ-ಸಂಪರ್ಕದ ಪ್ರಾಕ್ಸಿ ಕಾನ್ಫಿಗರೇಶನ್](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 ಅನ್ನು ಬಳಸಿ, ನಂತರ ಅದೇ ಮಾದರಿಯೊಂದಿಗೆ **ಸಂಪರ್ಕವನ್ನು ಪರೀಕ್ಷಿಸಿ** ಮತ್ತು ಒಂದು ಸಣ್ಣ ವಿನಂತಿಯನ್ನು
 ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಇದರಿಂದ ರೂಟಿಂಗ್ ಬದಲಾವಣೆಯು ಆ ಸಂಪರ್ಕಕ್ಕೆ ಮಾತ್ರ ಸೀಮಿತವಾಗಿರುತ್ತದೆ. ಕಂಟೈನರ್ನಿಂದ
 ಪ್ರಾಕ್ಸಿಯನ್ನು ತಲುಪಬಹುದೇ ಮತ್ತು ಸಂಪರ್ಕವು ನಿಜವಾಗಿಯೂ ಅದನ್ನೇ ಆಯ್ಕೆಮಾಡುತ್ತದೆಯೇ ಎಂಬುದನ್ನು ಪರಿಶೀಲಿಸಿ.
@@ -802,7 +802,7 @@ connection selection ಕೂಡ ಮುಖ್ಯವಾಗುತ್ತವೆ. ವ�
 
 ## ಪ್ರಮುಖ ಟಿಪ್ಪಣಿಗಳು
 
-- **SQLite WAL ಮೋಡ್:** OmniRoute ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳನ್ನು `storage.sqlite` ಗೆ ಮರಳಿ checkpoint ಮಾಡಲು ಸಾಧ್ಯವಾಗುವಂತೆ `docker stop` ಪೂರ್ಣಗೊಳ್ಳಲು ಅವಕಾಶ ನೀಡಬೇಕು. ಜೊತೆಗೆ ಒದಗಿಸಲಾದ Compose ಫೈಲ್ಗಳಲ್ಲಿ ಈಗಾಗಲೇ 40s stop grace period ಹೊಂದಿಸಲಾಗಿದೆ. ನೀವು image ಅನ್ನು ನೇರವಾಗಿ ಚಲಾಯಿಸಿದರೆ, `--stop-timeout 40` ಅನ್ನು ಉಳಿಸಿಕೊಳ್ಳಿ.
+- **SQLite WAL ಮೋಡ್:** 67router ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳನ್ನು `storage.sqlite` ಗೆ ಮರಳಿ checkpoint ಮಾಡಲು ಸಾಧ್ಯವಾಗುವಂತೆ `docker stop` ಪೂರ್ಣಗೊಳ್ಳಲು ಅವಕಾಶ ನೀಡಬೇಕು. ಜೊತೆಗೆ ಒದಗಿಸಲಾದ Compose ಫೈಲ್ಗಳಲ್ಲಿ ಈಗಾಗಲೇ 40s stop grace period ಹೊಂದಿಸಲಾಗಿದೆ. ನೀವು image ಅನ್ನು ನೇರವಾಗಿ ಚಲಾಯಿಸಿದರೆ, `--stop-timeout 40` ಅನ್ನು ಉಳಿಸಿಕೊಳ್ಳಿ.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** ನಿಯಮಿತ/pre-write backupಗಳನ್ನು ಬಾಹ್ಯವಾಗಿ ನಿರ್ವಹಿಸುತ್ತಿದ್ದರೆ ಇದನ್ನು `true` ಗೆ ಹೊಂದಿಸಿ. ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ database migrationಗಳಿಗೆ ಇನ್ನೂ ತಮ್ಮದೇ ಆದ ಬಾಳಿಕೆ ಬರುವ ಸುರಕ್ಷತಾ snapshot ಮತ್ತು mass-migration guard ಅಗತ್ಯವಿರುತ್ತದೆ.
 - **ಡೇಟಾ ನಿರಂತರತೆ:** container ಮರುಪ್ರಾರಂಭಗಳಾದಾಗಲೂ ನಿಮ್ಮ database, keyಗಳು ಮತ್ತು configurationಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲು ಯಾವಾಗಲೂ `/app/data` ಗೆ volume ಅನ್ನು mount ಮಾಡಿ.
 - **ಪೋರ್ಟ್ ಸಂರಚನೆ:** ಡೀಫಾಲ್ಟ್ `20128` ಪೋರ್ಟ್ ಅನ್ನು ಬದಲಾಯಿಸಲು `PORT` environment variable ಅನ್ನು override ಮಾಡಿ.

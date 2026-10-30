@@ -15,7 +15,7 @@
 - [OAuth 2.0 natív alkalmazásokhoz (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — A telepített alkalmazások OAuth client_id / client_secret értékei nyilvánosak; a tényleges biztonságot a PKCE biztosítja.
 - [Firebase API-kulcsok](https://firebase.google.com/docs/projects/api-keys) — A webes kliensazonosítók kialakításuknál fogva nyilvánosak.
 
-Az OmniRoute-nak be kell ágyaznia ezeket az értékeket, hogy azok a felhasználók is azonnal működő OAuth-folyamatot kapjanak, akik nem konfigurálnak `.env` fájlt. Beágyazott tartalékérték nélkül a Gemini / Antigravity szolgáltatók nem működnek azoknál a felhasználóknál, akik az „egyszerűen klónozd és futtasd” eljárást követik.
+A 67router-nak be kell ágyaznia ezeket az értékeket, hogy azok a felhasználók is azonnal működő OAuth-folyamatot kapjanak, akik nem konfigurálnak `.env` fájlt. Beágyazott tartalékérték nélkül a Gemini / Antigravity szolgáltatók nem működnek azoknál a felhasználóknál, akik az „egyszerűen klónozd és futtasd” eljárást követik.
 
 Az olyan literális értékekre azonban, mint az `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com`, illeszkedik a **GitHub Secret Scanning**, a **Semgrep** és más hasonló mintaellenőrző eszközök keresése. Minden kiadás téves pozitív találatok zajos áradatává válik, a push-védelem blokkolja a szabályos véglegesítéseket, az üzemeltetők pedig nem bíznak többé a riasztási adatfolyamban.
 

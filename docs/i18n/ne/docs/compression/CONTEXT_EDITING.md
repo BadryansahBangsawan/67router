@@ -4,15 +4,15 @@
 
 ---
 
-प्रत्यायोजित **Context Editing** Claude-मात्र सन्दर्भ-व्यवस्थापन सुविधा हो। OmniRoute का स्थानीय
+प्रत्यायोजित **Context Editing** Claude-मात्र सन्दर्भ-व्यवस्थापन सुविधा हो। 67router का स्थानीय
 compression इन्जिनहरू (Caveman, RTK, LLMLingua, stacked pipelines) — जसले अनुरोध body लाई proxy बाट
 बाहिर जानुअघि नै पुनर्लेखन गर्छन् — भन्दा फरक रूपमा, Context Editing ले **provider** लाई त्यसको आफ्नै
-चलिरहेको context window बाट पुराना tool-use / tool-result block हरू हटाउन अनुरोध गर्छ। OmniRoute ले
+चलिरहेको context window बाट पुराना tool-use / tool-result block हरू हटाउन अनुरोध गर्छ। 67router ले
 body parameter (`context_management.edits[]`) मात्र संलग्न गर्छ; Claude ले आफ्नै tokenizer अनुसार
 वास्तविक रूपमा हटाउने काम गर्छ।
 
 यो प्रकृतिगत रूपमै प्रत्यायोजित क्षमता हो: अन्य provider हरूले उक्त parameter अस्वीकार गर्छन्, त्यसैले
-OmniRoute ले यसलाई Claude र Claude-Code-सङ्गत relay हरूमा मात्र कडाइका साथ सीमित गर्छ।
+67router ले यसलाई Claude र Claude-Code-सङ्गत relay हरूमा मात्र कडाइका साथ सीमित गर्छ।
 
 आधिकारिक स्रोत: `open-sse/config/contextEditing.ts` (strategy id हरू, body injection, telemetry
 extraction), `open-sse/executors/base.ts` (injection gate + 400-fallback), र
@@ -20,7 +20,7 @@ extraction), `open-sse/executors/base.ts` (injection gate + 400-fallback), र
 
 ## `clear_tool_uses` ले के गर्छ
 
-OmniRoute ले बाहिर पठाइने Anthropic Messages body मा एउटा मात्र edit inject गर्छ:
+67router ले बाहिर पठाइने Anthropic Messages body मा एउटा मात्र edit inject गर्छ:
 
 ```json
 {
@@ -43,11 +43,11 @@ OmniRoute ले बाहिर पठाइने Anthropic Messages body म�
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`)।
 
 beta लाई `anthropic-beta: context-management-2025-06-27` header मार्फत विज्ञापित गरिन्छ, जुन
-OmniRoute ले Claude अनुरोधहरूमा पहिलेदेखि नै पठाउँछ।
+67router ले Claude अनुरोधहरूमा पहिलेदेखि नै पठाउँछ।
 
 Injection `applyContextEditingToBody()` द्वारा गरिन्छ र यो **idempotent** छ: यदि body मा
 `clear_tool_uses` edit पहिल्यै छ (अघिल्लो call द्वारा थपिएको वा client द्वारा प्रदान गरिएको), body लाई
-जस्ताको तस्तै छोडिन्छ। यदि `clear_thinking_20251015` edit पनि छ भने, OmniRoute ले
+जस्ताको तस्तै छोडिन्छ। यदि `clear_thinking_20251015` edit पनि छ भने, 67router ले
 `clear_thinking` edit लाई स्थिर रूपमा क्रमबद्ध गरेर अगाडि राख्छ, किनभने Anthropic का अनुसार
 `edits[]` array मा `clear_thinking`, `clear_tool_uses` भन्दा अगाडि हुनुपर्छ।
 
@@ -145,7 +145,7 @@ if (
 
 ## `applied_edits` टेलिमेट्री
 
-Claude प्रतिक्रियापछि, OmniRoute ले प्रदायकले वास्तवमा कति सन्दर्भ हटायो भन्ने रेकर्ड गर्छ। यो
+Claude प्रतिक्रियापछि, 67router ले प्रदायकले वास्तवमा कति सन्दर्भ हटायो भन्ने रेकर्ड गर्छ। यो
 **स्ट्रिम हुँदैन** — यसलाई गैर-स्ट्रिमिङ प्रतिक्रिया बडीबाट सर्वोत्तम प्रयासका आधारमा निकालिन्छ र
 यसले प्रतिक्रियालाई कहिल्यै असर गर्दैन (टेलिमेट्री विफलताहरूलाई बेवास्ता गरिन्छ)।
 
@@ -175,14 +175,14 @@ Claude प्रतिक्रियापछि, OmniRoute ले प्रद
 
 | पक्ष            | स्थानीय इन्जिनहरू (Caveman / RTK / LLMLingua / stacked) | प्रत्यायोजित कन्टेक्स्ट सम्पादन                         |
 | --------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| कहाँ चल्छ       | अनुरोधले प्रोक्सी छोड्नुअघि, OmniRoute भित्र            | प्रदायक (Claude) मा, सर्भर-साइडमा                       |
+| कहाँ चल्छ       | अनुरोधले प्रोक्सी छोड्नुअघि, 67router भित्र             | प्रदायक (Claude) मा, सर्भर-साइडमा                       |
 | के सम्पादन गर्छ | प्रम्प्ट / कन्टेक्स्ट / टुल-रिजल्ट टेक्स्ट              | पुराना टुल-युज / टुल-रिजल्ट ब्लकहरू                     |
 | प्रदायकको दायरा | सबै प्रदायकहरू                                          | `claude` + `anthropic-compatible-cc-*` मात्र            |
 | टगल             | कम्प्रेसन मोडका सेटिङहरू                                | `contextEditing.enabled`                                |
 | विफलता मोड      | फेल-ओपन (मूल टेक्स्ट)                                   | 400-फल्ब्याक: प्यारामिटर हटाएर एक पटक पुनः प्रयास गर्ने |
 | बचत टेलिमेट्री  | `engine: <engine id>`                                   | `engine: "context-editing"`                             |
 
-यी दुई एक-अर्काका पूरक हुन्: स्थानीय इन्जिनहरूले OmniRoute ले पठाउने बाइटहरू कम्प्रेस गर्छन्; कन्टेक्स्ट सम्पादनले
+यी दुई एक-अर्काका पूरक हुन्: स्थानीय इन्जिनहरूले 67router ले पठाउने बाइटहरू कम्प्रेस गर्छन्; कन्टेक्स्ट सम्पादनले
 Claude लाई विभिन्न टर्नहरूमा चलिरहेको कन्टेक्स्टबाट अनावश्यक भाग हटाउन दिन्छ। यी दुवैलाई सँगै सक्षम गर्न सकिन्छ।
 
 ## यो पनि हेर्नुहोस्

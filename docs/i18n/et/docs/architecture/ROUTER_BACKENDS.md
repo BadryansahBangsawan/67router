@@ -20,10 +20,10 @@ Mootori rolli kirjeldavad **kaks sõltumatut telge**, mis on registri
 `RouterBackendDefinition`-is koos kodeeritud:
 
 1. **Elutsükkel** (`RouterBackendLifecycle`) — _kuidas mootor töötab_:
-   - `in-process` — töötab OmniRoute'i Node'i protsessis (natiivne TS-i konveier).
-   - `supervised` — kohalik alamprotsess, mille OmniRoute paigaldab/käivitab/peatab/mille tervist kontrollib
+   - `in-process` — töötab 67router'i Node'i protsessis (natiivne TS-i konveier).
+   - `supervised` — kohalik alamprotsess, mille 67router paigaldab/käivitab/peatab/mille tervist kontrollib
      `ServiceSupervisor`-i kaudu ning mida seejärel kasutatakse pakkuja ühendusena.
-   - `external` — HTTP-lõpp-punkt, kuhu OmniRoute päringuid suunab, kuid mida ta **ei** halda
+   - `external` — HTTP-lõpp-punkt, kuhu 67router päringuid suunab, kuid mida ta **ei** halda
      (seadistatakse keskkonnamuutuja baas-URL-iga).
    - `disabled` — registreeritud, kuid pole valitav.
 2. **Valikutelg** (relee marsruutimise taustaprogramm) — _kas relee suunab päringud sellele_:

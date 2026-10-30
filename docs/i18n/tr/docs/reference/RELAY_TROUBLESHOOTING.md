@@ -4,7 +4,7 @@
 
 ---
 
-Relay'ler (Vercel, Deno, Cloudflare), sunucusuz bir arka uçta üst akış bağlantısını sonlandırır; böylece OmniRoute, sağlayıcı API anahtarını sunucu tarafında tutarken kararlı bir bölgeden çıkış yapabilir. Bu belge, operatörlerin üretimde karşılaştığı iki hata modunu ve OmniRoute'un her biri için sunduğu kurtarma yollarını ele almaktadır.
+Relay'ler (Vercel, Deno, Cloudflare), sunucusuz bir arka uçta üst akış bağlantısını sonlandırır; böylece 67router, sağlayıcı API anahtarını sunucu tarafında tutarken kararlı bir bölgeden çıkış yapabilir. Bu belge, operatörlerin üretimde karşılaştığı iki hata modunu ve 67router'un her biri için sunduğu kurtarma yollarını ele almaktadır.
 
 ## Relay kimlik doğrulamasının saklanma biçimi
 
@@ -29,7 +29,7 @@ kimlik doğrulama bilgisi göndermez.
 1. **Settings → Proxy Pool** bölümünü açın.
 2. Kimlik doğrulama bilgisi eksik olan relay satırlarında sarı bir `auth missing` rozeti ve
    **Repair** düğmesi gösterilir.
-3. **Repair** düğmesine tıklayın. OmniRoute,
+3. **Repair** düğmesine tıklayın. 67router,
    `POST /api/settings/proxies/[id]/repair-relay` çağrısını yapar; bu çağrı:
    - `relayAuthEnc` verisinin şifresini **geçerli** anahtarla çözer,
    - düz metin `relayAuth` değerini yeniden `notes` içine yazar,
@@ -59,7 +59,7 @@ yeniden dağıtım iletişim kutusunu açar; böylece bu seçeneği elle araman�
 **Belirti:** proxy testi (`speed` düğmesi) relay'in çalışır durumda olduğunu gösterir ancak istekler
 yine de aralıklı olarak başarısız olur.
 
-OmniRoute'un otomatik test yoklaması tarafından döndürülen relay farkındalık üstbilgilerini
+67router'un otomatik test yoklaması tarafından döndürülen relay farkındalık üstbilgilerini
 kontrol edin (**Settings → Proxy Pool** bölümüne ve `relayTested` / `relayAlive` sayaçlarına bakın):
 
 - `x-relay-url` — hangi relay arka ucunun yanıt verdiği.

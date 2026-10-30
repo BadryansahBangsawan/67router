@@ -14,7 +14,7 @@ veya süreç ortamı durumunu içe aktarmadan manifesti kullanabilir.
 Aynı manifest, süreç dışında çalışan yan süreçler için HTTP üzerinden
 `GET /api/v1/provider-plugin-manifest` adresinde de kullanılabilir.
 
-OmniRoute, bu URL'yi Bifrost ve CLIProxyAPI'ye
+67router, bu URL'yi Bifrost ve CLIProxyAPI'ye
 `X-OmniRoute-Provider-Manifest-Url` istek başlığı aracılığıyla bildirir. Yan süreç,
 yerel istek kaynağı yerine genel veya konteyner ağına ait bir URL'ye ihtiyaç duyduğunda
 `OMNIROUTE_PROVIDER_MANIFEST_URL` değerini ayarlayın.
@@ -32,7 +32,7 @@ etmek yerine koşulsuz bir istek göndermelidir.
 
 Sağlayıcı meta verilerini bir eklenti sözleşmesine doğru taşıyarak yoğun istek yolunun
 ileride daha düşük gecikmeli bir yan süreç tarafından yönetilebilmesini sağlarken,
-OmniRoute'un TypeScript rotasını ilke kapısı ve geri dönüş mekanizması olarak
+67router'un TypeScript rotasını ilke kapısı ve geri dönüş mekanizması olarak
 korumasını sağlamak. Manifest eklemelidir: istek yönlendirmesini kendi başına
 değiştirmez.
 
@@ -76,7 +76,7 @@ sorusunun makine tarafından okunabilir yanıtı olarak ele almalıdır.
 | `usage-fetch`        | Yapılandırılmış bir kullanım veya kota getiricisine (`getUsageForProvider`) sahiptir. |
 | `usage-supported`    | Kullanım API'si bu sağlayıcıyı kabul eder (`isSupportedUsageConnection`).             |
 
-`usage-fetch` yalnızca keşif amaçlıdır. OmniRoute'un sağlayıcı için kullanımı nasıl okuyacağını
+`usage-fetch` yalnızca keşif amaçlıdır. 67router'un sağlayıcı için kullanımı nasıl okuyacağını
 bildiğini belirtir; getirmeyi etkinleştirmez, kota anlamlarını değiştirmez veya
 sağlayıcı için Dashboard kota bileşeninin etkin olduğunu ima etmez — bu bileşen ayrıca
 `USAGE_SUPPORTED_PROVIDERS` tarafından denetlenir. Doğruluk kaynağı,

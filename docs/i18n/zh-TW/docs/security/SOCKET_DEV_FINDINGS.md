@@ -42,7 +42,7 @@ JWT **無法**觸發此程式碼路徑。
 | Linux+Firefox/Chromium | 透過 `certutil -d sql:<profile>` 更新各設定檔的 NSS DB                                                             |
 
 這些命令與 `mitmproxy`、Charles Proxy、Fiddler 及
-Caddy 所使用的命令相同。OmniRoute 中存在這些命令的原因，已記載於
+Caddy 所使用的命令相同。67router 中存在這些命令的原因，已記載於
 `docs/security/STEALTH_GUIDE.md`。
 
 **v3.8.6 緩解措施**：
@@ -97,7 +97,7 @@ SQLite 儲存區。沒有逐帳戶確認、沒有指紋，只有「找到 N 個�
 `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` 環境變數旗標會為尚未更新其自動化流程的
 操作人員保留 v3.8.5 的行為。此旗標將於 v3.9 移除。
 
-**保留原因**：對於已使用 Zed，並希望將提供者金鑰鏡像至 OmniRoute、
+**保留原因**：對於已使用 Zed，並希望將提供者金鑰鏡像至 67router、
 而不必重新貼上的使用者而言，Zed 匯入是最便利的入門途徑。
 
 ---
@@ -108,7 +108,7 @@ SQLite 儲存區。沒有逐帳戶確認、沒有指紋，只有「找到 N 個�
 
 **被標記的原因**：此區塊會重新匯出 `execFileWithPassword`、
 `runElevatedPowerShell` 與共用的 `quotePowerShell` 輔助函式。Socket.dev 的
-AI 分類器將它們視為通用的「主機執行 + 權限提升工具組」。在 OmniRoute 中，
+AI 分類器將它們視為通用的「主機執行 + 權限提升工具組」。在 67router 中，
 它們僅由 MITM 憑證安裝路徑（§1）使用，以及由 `execFileWithPassword`
 用於執行 `sudo` 命令。
 
@@ -159,7 +159,7 @@ AI 分類器將它們視為通用的「主機執行 + 權限提升工具組」�
 
 ---
 
-## §5 — OmniRoute Cloud Sync 憑證回寫（`api/keys/[id]/route.js`）
+## §5 — 67router Cloud Sync 憑證回寫（`api/keys/[id]/route.js`）
 
 **原始檔案**：
 
@@ -185,7 +185,7 @@ rawBody)`）。若已設定密鑰，則必須提供簽章。若未設定（舊�
    `providerSpecificData`。預設模式僅同步非憑證中繼資料（`expiresAt`、`status`、`lastError*`、
    `rateLimitedUntil`、`updatedAt`）。對於依賴遠端權杖同步的使用者而言，這是一項**破壞性變更**——他們必須明確選擇加入。
 
-**保留此功能的原因**：Cloud Sync 是 OmniRoute Cloud 租戶集中管理團隊憑證的唯一方式。此修正使威脅模型清楚反映實際情況：
+**保留此功能的原因**：Cloud Sync 是 67router Cloud 租戶集中管理團隊憑證的唯一方式。此修正使威脅模型清楚反映實際情況：
 「伺服器簽署、用戶端驗證、操作人員選擇加入。」
 
 ---

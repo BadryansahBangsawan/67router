@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Hiba: {message}",
-    "serverOffline": "Az OmniRoute szerver offline. Indítsa el: omniroute serve",
+    "serverOffline": "A 67router szerver offline. Indítsa el: omniroute serve",
     "authRequired": "Hitelesítés szükséges. Állítsa be az OMNIROUTE_API_KEY-t vagy futtassa: omniroute setup",
     "rateLimited": "Kérési korlát túllépve. Próbálja újra {seconds}s múlva.",
     "timeout": "A kérés {ms}ms után lejárt.",
@@ -15,7 +15,7 @@
     "yesOpt": "Megerősítés kihagyása"
   },
   "setup": {
-    "title": "OmniRoute beállítása",
+    "title": "67router beállítása",
     "passwordPrompt": "Rendszergazdai jelszó",
     "providerPrompt": "Alapértelmezett szolgáltató (a kihagyáshoz hagyja üresen)",
     "done": "A beállítás befejeződött",
@@ -30,7 +30,7 @@
     "opencode": "Az OpenCode csomagban található @omniroute/opencode-plugin telepítése és konfigurálása"
   },
   "doctor": {
-    "title": "OmniRoute diagnosztika",
+    "title": "67router diagnosztika",
     "dbOk": "Adatbázis: rendben ({path})",
     "dbMissing": "Adatbázis: nincs inicializálva — futtassa az `omniroute setup` parancsot",
     "portOk": "{port} port: elérhető",
@@ -82,7 +82,7 @@
       "providerOpt": "Szűrés szolgáltatónév szerint",
       "header": "Azonosító Szolgáltató    Név                      Lejárati állapot Tesztállapot Várakozás vége",
       "noData": "Nem érhetők el szolgáltatói kapcsolati adatok.",
-      "requiresServer": "A providers status parancshoz futnia kell az OmniRoute szervernek."
+      "requiresServer": "A providers status parancshoz futnia kell a 67router szervernek."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "API-kulcs hozzáadása vagy frissítése egy szolgáltatóhoz",
     "listDescription": "Az összes konfigurált API-kulcs listázása",
     "removeDescription": "Egy szolgáltató API-kulcsának eltávolítása",
-    "regenerateDescription": "OmniRoute API-kulcs újragenerálása",
-    "revokeDescription": "OmniRoute API-kulcs visszavonása",
+    "regenerateDescription": "67router API-kulcs újragenerálása",
+    "revokeDescription": "67router API-kulcs visszavonása",
     "revealDescription": "A nem maszkolt API-kulcsérték megjelenítése",
     "usageDescription": "Egy API-kulcs legutóbbi használatának megjelenítése",
     "usageLimitOpt": "Legutóbbi kérések száma",
@@ -225,7 +225,7 @@
     "noCombo": "Nem található megfelelő kombináció. Hozzon létre egyet ezzel: omniroute combo create"
   },
   "chat": {
-    "description": "Egyszeri csevegési prompt küldése az OmniRoute-nak",
+    "description": "Egyszeri csevegési prompt küldése a 67router-nak",
     "file": "Prompt beolvasása fájlból",
     "stdin": "Prompt beolvasása a szabványos bemenetről",
     "system": "Rendszerprompt",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Az OmniRoute szerver elindítása (alapértelmezett művelet)",
-    "starting": "Az OmniRoute szerver indítása a(z) {port} porton...",
+    "description": "A 67router szerver elindítása (alapértelmezett művelet)",
+    "starting": "A 67router szerver indítása a(z) {port} porton...",
     "ready": "Elérhető itt: http://localhost:{port}",
     "stopping": "Szerver leállítása (PID: {pid})...",
     "stopped": "A szerver leállt.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Biztonsági mentés",
-    "description": "Biztonsági mentés készítése az OmniRoute adatairól",
+    "description": "Biztonsági mentés készítése a 67router adatairól",
     "creating": "Biztonsági mentés készítése...",
     "done": "A biztonsági mentés ide lett mentve: {path}",
     "noFiles": "Nincsenek mentendő fájlok (az adatbázis nincs inicializálva)",
@@ -277,7 +277,7 @@
     "noBackups": "Nem találhatók biztonsági mentések.",
     "notFound": "A biztonsági mentés nem található: {name}",
     "confirmRestore": "Felülírja a jelenlegi adatokat a(z) {ts} időpontból származó biztonsági mentéssel?",
-    "createDescription": "Biztonsági mentés készítése az OmniRoute adatairól",
+    "createDescription": "Biztonsági mentés készítése a 67router adatairól",
     "nameOpt": "Egyéni név a biztonsági mentéshez",
     "cloudOpt": "Biztonsági mentés feltöltése felhőtárhelyre",
     "encryptOpt": "Biztonsági mentés titkosítása AES-256-GCM használatával",
@@ -321,7 +321,7 @@
     "clearFailed": "A gyorsítótár törlése sikertelen."
   },
   "redis": {
-    "description": "Helyi Redis-tároló indítása egyetlen kattintással (Podman vagy Docker) az OmniRoute gyorsítótárazáshoz és kvótafigyeléshez"
+    "description": "Helyi Redis-tároló indítása egyetlen kattintással (Podman vagy Docker) a 67router gyorsítótárazáshoz és kvótafigyeléshez"
   },
   "test": {
     "description": "Szolgáltatói kapcsolat tesztelése",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Az OmniRoute engedélyezési szabályzatainak kezelése",
+    "description": "A 67router engedélyezési szabályzatainak kezelése",
     "list": {
       "description": "Szabályzatok listázása",
       "kind": "Szűrés típus szerint (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Az OmniRoute tömörítési folyamatának konfigurálása és vizsgálata",
+    "description": "A 67router tömörítési folyamatának konfigurálása és vizsgálata",
     "status": {
       "description": "A tömörítés aktuális állapotának és beállításainak megjelenítése"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Lecseréli a(z) {type} alagút URL-jét? (Új URL jön létre.)"
   },
   "stop": {
-    "description": "Az OmniRoute szerver leállítása",
+    "description": "A 67router szerver leállítása",
     "stopping": "A szerver leállítása (PID: {pid})...",
     "stopped": "A szerver leállítva.",
     "notRunning": "Nem fut szerver.",
     "portFallback": "Nem található PID-fájl, kísérlet port alapú leállításra..."
   },
   "restart": {
-    "description": "Az OmniRoute szerver újraindítása",
-    "restarting": "Az OmniRoute szerver újraindítása..."
+    "description": "A 67router szerver újraindítása",
+    "restarting": "A 67router szerver újraindítása..."
   },
   "dashboard": {
-    "description": "Az OmniRoute irányítópult megnyitása böngészőben",
+    "description": "A 67router irányítópult megnyitása böngészőben",
     "opening": "Az irányítópult megnyitása itt: {url}",
     "urlOnly": "Az irányítópult URL-jének kiírása a böngésző megnyitása nélkül",
     "tui": "Interaktív TUI irányítópult megnyitása (terminálos felhasználói felület, 7 lap)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "OmniRoute-készségek kezelése (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "67router-készségek kezelése (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Telepített készségek listázása",
       "type": "Szűrés típus szerint (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Az OmniRoute társalgási memóriájának kezelése (FTS5 + vector)",
+    "description": "A 67router társalgási memóriájának kezelése (FTS5 + vector)",
     "search": {
       "description": "Memóriabejegyzések keresése szemantikai lekérdezéssel",
       "type": "Szűrés memóriatípus szerint (user|feedback|project|reference)",
@@ -792,14 +792,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Intelligens AI útválasztó automatikus fallbackkel",
+    "description": "67router — Intelligens AI útválasztó automatikus fallbackkel",
     "version": "Verzió kiírása és kilépés",
     "output": "Kimeneti formátum (table, json, jsonl, csv)",
     "quiet": "Nem lényeges kimenet elnyomása",
     "no_color": "Színes kimenet letiltása",
     "timeout": "HTTP kérés időtúllépése ezredmásodpercben",
-    "api_key": "API kulcs az OmniRoute szerverhez",
-    "base_url": "Az OmniRoute szerver alap URL-je",
+    "api_key": "API kulcs a 67router szerverhez",
+    "base_url": "A 67router szerver alap URL-je",
     "context": "Szerverkontextus/profil ehhez a parancshoz",
     "lang": "CLI megjelenítési nyelv beállítása (felülírja az OMNIROUTE_LANG-ot)"
   },
@@ -997,7 +997,7 @@
     }
   },
   "openapi": {
-    "description": "Az OmniRoute OpenAPI-specifikáció elérése és tesztelése",
+    "description": "A 67router OpenAPI-specifikáció elérése és tesztelése",
     "dump": {
       "description": "Az OpenAPI-specifikáció kiírása stdout-ra vagy fájlba",
       "format": "Kimeneti formátum: yaml|json (alapértelmezett: yaml)",
@@ -1040,7 +1040,7 @@
     }
   },
   "open": {
-    "description": "Egy adott OmniRoute-irányítópultoldal megnyitása a böngészőben",
+    "description": "Egy adott 67router-irányítópultoldal megnyitása a böngészőben",
     "url": "Csak az URL kiírása, a böngésző megnyitása nélkül"
   },
   "telemetry": {
@@ -1057,7 +1057,7 @@
     }
   },
   "sync": {
-    "description": "Konfiguráció szinkronizálása OmniRoute-példányok között",
+    "description": "Konfiguráció szinkronizálása 67router-példányok között",
     "push": {
       "description": "Konfiguráció küldése a felhőbe vagy egy távoli példányra"
     },
@@ -1116,7 +1116,7 @@
     "filter": "Szűrés szint szerint (error,warn,info) — vesszővel elválasztva",
     "lines": "Lekérendő sorok száma",
     "timeout": "Kapcsolati időtúllépés ezredmásodpercben",
-    "baseUrl": "Az OmniRoute API alap-URL-je",
+    "baseUrl": "A 67router API alap-URL-je",
     "requestId": "Szűrés kérésazonosító szerint",
     "apiKey": "Szűrés API-kulcs szerint",
     "combo": "Szűrés kombinációnév szerint",
@@ -1132,10 +1132,10 @@
     "description": "A rendszertálcaikon vezérlése",
     "show": "A tálcaikon megjelenítése (ha a kiszolgáló a --tray kapcsolóval fut)",
     "hide": "A tálcaikon elrejtése",
-    "quit": "Kilépés az OmniRoute-ból a tálcaikonon keresztül"
+    "quit": "Kilépés a 67router-ból a tálcaikonon keresztül"
   },
   "autostart": {
-    "description": "Az OmniRoute rendszerindításkori automatikus indításának kezelése (Linux: systemd felhasználói szolgáltatás)",
+    "description": "A 67router rendszerindításkori automatikus indításának kezelése (Linux: systemd felhasználói szolgáltatás)",
     "enable": "Automatikus indítás engedélyezése rendszerindításkor",
     "disable": "Automatikus indítás letiltása rendszerindításkor",
     "toggle": "Automatikus indítás be- vagy kikapcsolása rendszerindításkor",
@@ -1167,19 +1167,19 @@
     "scaffold": "Új bővítmény sablonjának létrehozása"
   },
   "launch": {
-    "description": "A Claude Code indítása az OmniRoute használatával (helyileg vagy távolról, --profile kapcsolóval)",
+    "description": "A Claude Code indítása a 67router használatával (helyileg vagy távolról, --profile kapcsolóval)",
     "token": "A Claude kliens által küldendő token (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "Az OmniRoute nem érhető el ezen a porton: {port}. Indítsa el az 'omniroute serve' paranccsal.",
+    "notRunning": "A 67router nem érhető el ezen a porton: {port}. Indítsa el az 'omniroute serve' paranccsal.",
     "notFound": "A 'claude' CLI nem található a PATH-ban."
   },
   "run": {
-    "description": "Támogatott CLI-cél indítása az OmniRoute-on keresztül"
+    "description": "Támogatott CLI-cél indítása a 67router-on keresztül"
   },
   "setupClaude": {
-    "description": "Claude Code-profilok létrehozása a ~/.claude/profiles könyvtárban az OmniRoute modellkatalógusából"
+    "description": "Claude Code-profilok létrehozása a ~/.claude/profiles könyvtárban a 67router modellkatalógusából"
   },
   "connect": {
-    "description": "Kapcsolódás távoli OmniRoute-kiszolgálóhoz és belépés távoli módba"
+    "description": "Kapcsolódás távoli 67router-kiszolgálóhoz és belépés távoli módba"
   },
   "tokens": {
     "description": "Hatókörrel rendelkező CLI-hozzáférési tokenek kezelése (távoli mód)"
@@ -1188,10 +1188,10 @@
     "description": "Szolgáltató és modell kiválasztása az aktív kiszolgálóról, valamint egy támogatott helyi CLI konfigurálása"
   },
   "launchCodex": {
-    "description": "A Codex CLI indítása az OmniRoute használatával (helyi vagy távoli VPS)"
+    "description": "A Codex CLI indítása a 67router használatával (helyi vagy távoli VPS)"
   },
   "setupCodex": {
-    "description": "~/.codex-profilfájlok létrehozása az OmniRoute élő modellkatalógusából"
+    "description": "~/.codex-profilfájlok létrehozása a 67router élő modellkatalógusából"
   },
   "packs": {
     "description": "Opcionális futtatókörnyezeti csomagok kezelése (ML / böngészőautomatizálás)",
@@ -1204,7 +1204,7 @@
     "errUnknown": "ismeretlen csomag: {name}",
     "errNoIndex": "a csomagindex nem található; adja meg a csomag tartalmát tároló könyvtárat a --source <dir> kapcsolóval (az asztali alkalmazáscsomagok az alkalmazás mellett tartalmazzák)",
     "installed": "a(z) \"{name}\" csomag telepítve és ellenőrizve itt: {dir}",
-    "restartHint": "indítsa újra az OmniRoute szervert (vagy asztali alkalmazást), hogy a futtatókörnyezet betöltse a csomagot",
+    "restartHint": "indítsa újra a 67router szervert (vagy asztali alkalmazást), hogy a futtatókörnyezet betöltse a csomagot",
     "removed": "a(z) „{name}” csomag eltávolítva",
     "notInstalled": "a(z) „{name}” csomag nem volt telepítve",
     "verifyOk": "az összes telepített csomag ellenőrzése sikeres",

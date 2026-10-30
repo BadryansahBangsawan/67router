@@ -13,7 +13,7 @@
 
 Injin Raba Ƙayyadadden Amfani yana rarraba ƙayyadadden amfani na mai samarwa wanda ya danganci lokaci (misali, taga ta awa 5 ta Codex, buƙatu 1500/h na Kimi) cikin adalci tsakanin maɓallan API da yawa waɗanda ke amfani da haɗin guda.
 
-**Matsalar da yake warwarewa:** OmniRoute yana wakiltar maɓallan API da yawa zuwa asusun mai samarwa na sama ɗaya. Ba tare da tsarin rabawa ba, tarin buƙatu kwatsam daga maɓalli A zai iya cinye ƙayyadadden amfanin mai samarwa na wannan awa, ya bar maɓallan B da C a toshe har sai tagar ta sake farawa. Injin yana hana hakan ta hanyar:
+**Matsalar da yake warwarewa:** 67router yana wakiltar maɓallan API da yawa zuwa asusun mai samarwa na sama ɗaya. Ba tare da tsarin rabawa ba, tarin buƙatu kwatsam daga maɓalli A zai iya cinye ƙayyadadden amfanin mai samarwa na wannan awa, ya bar maɓallan B da C a toshe har sai tagar ta sake farawa. Injin yana hana hakan ta hanyar:
 
 1. Bibiyar yawan amfani mai motsi na kowane maɓalli bisa kowane ma'auni (%, buƙatu, token, $).
 2. Aiwatar da tsarin rabon adalci mai amfani da duk ƙarfin da ake da shi: maɓalli na iya aro daga rabon da ba a amfani da shi muddin jimillar tafkin ba ta kai cikar amfani ba.
@@ -106,7 +106,7 @@ Direban Redis: rubutun Lua EVAL don ƙari na atomik — yana gudana a matsayin u
 
 - Tebur: `quota_consumption` (duba ƙaura `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Ya fi dacewa da turawa mai instance guda.
-- Duk adanawar dindindin tana cikin OmniRoute SQLite DB da ake da shi (`DATA_DIR/storage.sqlite`).
+- Duk adanawar dindindin tana cikin 67router SQLite DB da ake da shi (`DATA_DIR/storage.sqlite`).
 
 ### Redis (na zaɓi, instances da yawa)
 

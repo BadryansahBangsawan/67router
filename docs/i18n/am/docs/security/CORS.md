@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute የትኞቹ **የአሳሽ origins** ከአንድ ማዕከላዊ የፈቃድ ዝርዝር ተሻጋሪ-origin ምላሾችን ማንበብ እንደሚችሉ ይቆጣጠራል። ሞዴሉ **በነባሪነት ዝግ-ውድቀት ያለው ነው**፦ በግልጽ እስካልፈቀዱት ድረስ ምንም origin አይፈቀድም። ይህ ገጽ የፈቃድ ዝርዝሩ እንዴት እንደሚፈታ፣ `CORS_ALLOW_ALL=true` በትክክል ምን እንደሚያጋልጥ (እና ከሁሉም በላይ ምን **እንደማያጋልጥ**)፣ የልማት እና የምርት አካባቢዎችን በደህንነት እንዴት ማዋቀር እንደሚቻል፣ እንዲሁም wildcard ንቁ ሲሆን ዳሽቦርዱ የሚያሳየውን የሩጫ-ጊዜ ማስጠንቀቂያ ይመዘግባል።
+67router የትኞቹ **የአሳሽ origins** ከአንድ ማዕከላዊ የፈቃድ ዝርዝር ተሻጋሪ-origin ምላሾችን ማንበብ እንደሚችሉ ይቆጣጠራል። ሞዴሉ **በነባሪነት ዝግ-ውድቀት ያለው ነው**፦ በግልጽ እስካልፈቀዱት ድረስ ምንም origin አይፈቀድም። ይህ ገጽ የፈቃድ ዝርዝሩ እንዴት እንደሚፈታ፣ `CORS_ALLOW_ALL=true` በትክክል ምን እንደሚያጋልጥ (እና ከሁሉም በላይ ምን **እንደማያጋልጥ**)፣ የልማት እና የምርት አካባቢዎችን በደህንነት እንዴት ማዋቀር እንደሚቻል፣ እንዲሁም wildcard ንቁ ሲሆን ዳሽቦርዱ የሚያሳየውን የሩጫ-ጊዜ ማስጠንቀቂያ ይመዘግባል።
 
 **የእውነት ምንጭ፦** `src/server/cors/origins.ts` (`resolveAllowedOrigin`,
 `applyCorsHeaders`, `getCorsStatus`)። የፈቃድ ዝርዝሩ አንድ ጊዜ ብቻ፣ በmiddleware
@@ -44,14 +44,14 @@ OmniRoute የትኞቹ **የአሳሽ origins** ከአንድ ማዕከላዊ የ
 
 አጠቃላዩን የOWASP ማስጠንቀቂያ ("wildcard CORS = ማንኛውም ጣቢያ APIዎን
 መጥራት ይችላል") በቁም ነገር መውሰድ ተገቢ ነው፣ ነገር ግን በአንድ ግልጽ
-የአተገባበር እውነታ ምክንያት የOmniRoute ተጋላጭነት **ከአጠቃላዩ ሁኔታ
+የአተገባበር እውነታ ምክንያት የ67router ተጋላጭነት **ከአጠቃላዩ ሁኔታ
 ይበልጥ የተገደበ ነው**፦
 
 > **ማዕከላዊው `applyCorsHeaders()` በፍጹም
 > `Access-Control-Allow-Credentials`ን አይልክም።** አገልጋዩ
 > `Access-Control-Allow-Credentials: true`ን ካልላከ በስተቀር አሳሽ
 > _ማረጋገጫ ያለው_ (cookie የያዘ) ተሻጋሪ-origin ምላሽን አያጋልጥም።
-> የOmniRoute የጋራ CORS መንገድ ይህን በፍጹም አያደርግም።
+> የ67router የጋራ CORS መንገድ ይህን በፍጹም አያደርግም።
 
 ይህ በእያንዳንዱ surface ላይ፣ `CORS_ALLOW_ALL=true` ቢሆንም፣ የሚከተለውን
 ማለት ነው፦
@@ -93,7 +93,7 @@ origin መልሶ ማንጸባረቅ እና credentials አብረው የሚኖሩ
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute ከreverse proxy / tunnel (nginx, Caddy, Cloudflare
+- 67router ከreverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) ጀርባ የሚሰራ ከሆነ፣ CORS **ብቸኛው** መቆጣጠሪያዎ አይደለም — የloopback route
   guard አሁንም spawn ማድረግ የሚችሉ routesን ይከላከላል ([ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)ን
   ይመልከቱ)። 403ን «ለማስተካከል»
@@ -109,7 +109,7 @@ origin መልሶ ማንጸባረቅ እና credentials አብረው የሚኖሩ
 በልማት አካባቢም እንኳ በአብዛኛው wildcard አያስፈልግዎትም። የሚጠቀሙባቸውን የdev servers ብቻ ይፍቀዱ፦
 
 ```bash
-# አካባቢያዊ OmniRouteን የሚጠሩ Vite (5173) + Next.js (3000) dev servers
+# አካባቢያዊ 67routerን የሚጠሩ Vite (5173) + Next.js (3000) dev servers
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -129,14 +129,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   የmanagement/dashboard መነሻዎችን ከማንኛውም permissive config ውጭ ያድርጉ፤ በትክክል
   fail-closed ሆነው መቆየት አለባቸው።
 
-## ምሳሌ፦ በOmniRoute ፊት ያለ reverse proxy
+## ምሳሌ፦ በ67router ፊት ያለ reverse proxy
 
-CORS በOmniRoute ራሱ የሚተገበር ስለሆነ፣ proxyው በአጠቃላይ
+CORS በ67router ራሱ የሚተገበር ስለሆነ፣ proxyው በአጠቃላይ
 የ`Access-Control-*` headers ማከል ወይም እንደገና መጻፍ **የለበትም** (ድርብ headers አሳሾችን ያበላሻሉ)። TLSን ያቋርጡ
-እና ወደፊት ያስተላልፉ — OmniRoute preflightን እንዲመልስ ይተዉት፦
+እና ወደፊት ያስተላልፉ — 67router preflightን እንዲመልስ ይተዉት፦
 
 ```nginx
-# nginx — ወደ OmniRoute ያስተላልፉ፤ Access-Control-*ን እዚህ አያስገቡ
+# nginx — ወደ 67router ያስተላልፉ፤ Access-Control-*ን እዚህ አያስገቡ
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -144,12 +144,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # የማስተላለፊያ headersን ያቆዩ፦ በተመሳሳይ host ላይ ያለ proxy ከloopback ይገናኛል፣ እና እነሱ
-    # ደዋዩ የአካባቢው operator እንዳልሆነ ለOmniRoute የሚገልጹ ናቸው። ከእነሱ ምንም የማይጨምር proxy
+    # ደዋዩ የአካባቢው operator እንዳልሆነ ለ67router የሚገልጹ ናቸው። ከእነሱ ምንም የማይጨምር proxy
     # እያንዳንዱን የርቀት ደዋይ የአካባቢ እንዲመስል ያደርጋል። X-Forwarded-Forን ወደ 127.0.0.1 በፍጹም አያዋቅሩ።
 }
 ```
 
-የተፈቀዱ የአሳሽ originsን በproxyው ሳይሆን በOmniRoute (`CORS_ALLOWED_ORIGINS` ወይም
+የተፈቀዱ የአሳሽ originsን በproxyው ሳይሆን በ67router (`CORS_ALLOWED_ORIGINS` ወይም
 በደህንነት ትር) ውስጥ ያዋቅሩ።
 
 ## የምንጭ ፋይሎች

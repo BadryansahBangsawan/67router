@@ -7,7 +7,7 @@
 > **Tõeallikas:** `electron/` tööruum
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute sisaldab platvormideülest töölauarakendust (Windows / macOS / Linux), mis põhineb
+67router sisaldab platvormideülest töölauarakendust (Windows / macOS / Linux), mis põhineb
 tehnoloogiatel **Electron 41** + **electron-builder 26.10**. Töölauarakendus käivitab Next.js-i
 eraldiseisva serveri alamprotsessina, suunab `BrowserWindow`-i sellele ning lisab
 süsteemisalve, automaatse uuendaja, IPC-silla ja nullkonfiguratsiooniga saladuste algseadistuse.
@@ -196,7 +196,7 @@ eelista `.env`-faili, seejärel sulge rakendus täielikult (süsteemisalves **V�
 - `BrowserWindow`: 1400×900 (min 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, akna juhtnupud asukohas `{ x: 16, y: 16 }`.
 - Windows/Linux: süsteemiomane tiitliriba.
-- Sulgemisnupp minimeerib rakenduse süsteemisalve; süsteemisalve menüüs on **Ava OmniRoute**, **Ava töölaud** (välises brauseris), alammenüü **Serveri port**, **Kontrolli värskendusi**, **Välju**.
+- Sulgemisnupp minimeerib rakenduse süsteemisalve; süsteemisalve menüüs on **Ava 67router**, **Ava töölaud** (välises brauseris), alammenüü **Serveri port**, **Kontrolli värskendusi**, **Välju**.
 
 ## Sisu turbepoliitika
 

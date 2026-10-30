@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute hutolewa kama Progressive Web App inayoweza kusakinishwa kikamilifu. Unapofungua dashibodi kutoka kwenye kivinjari chochote cha simu — Android (Chrome) au iOS (Safari) — unaweza kutumia chaguo la "Ongeza kwenye Skrini ya Mwanzo" na kupata matumizi yanayofanana na programu asilia bila kuhitaji duka la programu.
+67router hutolewa kama Progressive Web App inayoweza kusakinishwa kikamilifu. Unapofungua dashibodi kutoka kwenye kivinjari chochote cha simu — Android (Chrome) au iOS (Safari) — unaweza kutumia chaguo la "Ongeza kwenye Skrini ya Mwanzo" na kupata matumizi yanayofanana na programu asilia bila kuhitaji duka la programu.
 
 ## PWA Ni Nini?
 
-Progressive Web App hubadilisha dashibodi ya wavuti ya OmniRoute kuwa kitu kinachoonekana na kutenda kama programu asilia ya simu. Baada ya kusakinishwa, programu hiyo:
+Progressive Web App hubadilisha dashibodi ya wavuti ya 67router kuwa kitu kinachoonekana na kutenda kama programu asilia ya simu. Baada ya kusakinishwa, programu hiyo:
 
 - Huzinduliwa kutoka kwenye skrini yako ya mwanzo ikiwa na ikoni yake
 - Hufunguka katika hali ya skrini nzima — bila upau wa anwani wa kivinjari au kiolesura cha vichupo
@@ -20,26 +20,26 @@ Progressive Web App hubadilisha dashibodi ya wavuti ya OmniRoute kuwa kitu kinac
 
 ### Android (Chrome)
 
-1. Fungua dashibodi ya OmniRoute katika Chrome: `http://YOUR_IP:20128`
-2. Chrome itaonyesha bango la **"Ongeza OmniRoute kwenye Skrini ya mwanzo"** kiotomatiki, au:
+1. Fungua dashibodi ya 67router katika Chrome: `http://YOUR_IP:20128`
+2. Chrome itaonyesha bango la **"Ongeza 67router kwenye Skrini ya mwanzo"** kiotomatiki, au:
    - Gusa menyu ya **⋮** (nukta tatu) → **"Ongeza kwenye Skrini ya mwanzo"** au **"Sakinisha programu"**
 3. Thibitisha ombi
-4. OmniRoute itaonekana kwenye skrini yako ya mwanzo kama programu inayojitegemea
+4. 67router itaonekana kwenye skrini yako ya mwanzo kama programu inayojitegemea
 
 ### iOS (Safari)
 
-1. Fungua dashibodi ya OmniRoute katika Safari: `http://YOUR_IP:20128`
+1. Fungua dashibodi ya 67router katika Safari: `http://YOUR_IP:20128`
 2. Gusa kitufe cha **Shiriki** (kisanduku chenye mshale)
 3. Sogeza chini na uguse **"Ongeza kwenye Skrini ya Mwanzo"**
-4. Ipe jina (jina chaguomsingi ni "OmniRoute") na uguse **Ongeza**
-5. OmniRoute itaonekana kwenye skrini yako ya mwanzo ikiwa na ikoni ya programu
+4. Ipe jina (jina chaguomsingi ni "67router") na uguse **Ongeza**
+5. 67router itaonekana kwenye skrini yako ya mwanzo ikiwa na ikoni ya programu
 
 ### Kompyuta ya Mezani (Chrome / Edge)
 
-1. Fungua dashibodi ya OmniRoute
-2. Bofya **ikoni ya kusakinisha** katika upau wa anwani (au ⋮ → "Sakinisha OmniRoute...")
+1. Fungua dashibodi ya 67router
+2. Bofya **ikoni ya kusakinisha** katika upau wa anwani (au ⋮ → "Sakinisha 67router...")
 3. Thibitisha ombi
-4. OmniRoute itafunguka kama dirisha linalojitegemea — bila vichupo wala upau wa anwani
+4. 67router itafunguka kama dirisha linalojitegemea — bila vichupo wala upau wa anwani
 
 ## Vipengele
 
@@ -49,7 +49,7 @@ Manifest imesanidiwa kwa `display: "fullscreen"`, kumaanisha kuwa programu iliyo
 
 ### Usaidizi wa Hali Isiyo na Muunganisho
 
-OmniRoute inajumuisha service worker (`sw.js`) inayowezesha uhifadhi mahiri kwenye akiba:
+67router inajumuisha service worker (`sw.js`) inayowezesha uhifadhi mahiri kwenye akiba:
 
 | Aina ya Rasilimali                                          | Mkakati                                    | Tabia                                                                                                                             |
 | ----------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Wakati mtandao haupatikani na mtumiaji anapoelekea kwenye ukurasa mpya, service 
 
 ### Ikoni za Programu
 
-OmniRoute hutoa ikoni zilizoboreshwa kwa kila jukwaa:
+67router hutoa ikoni zilizoboreshwa kwa kila jukwaa:
 
 | Faili                  | Ukubwa          | Inatumiwa Na                                        |
 | ---------------------- | --------------- | --------------------------------------------------- |
@@ -93,9 +93,9 @@ Inazalishwa na Next.js kupitia `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Kikiwa katika `src/shared/components/PwaRegister.tsx`, kijenzi hiki cha mteja:
 
 ## Kutumia Pamoja na Termux (Android)
 
-Unapoendesha OmniRoute kwenye Android kupitia Termux, PWA hufanya kazi kwa urahisi:
+Unapoendesha 67router kwenye Android kupitia Termux, PWA hufanya kazi kwa urahisi:
 
-1. Anzisha OmniRoute katika Termux: `npx omniroute`
+1. Anzisha 67router katika Termux: `npx omniroute`
 2. Fungua Chrome kwenye simu hiyo hiyo: `http://localhost:20128`
 3. Sakinisha PWA kupitia "Ongeza kwenye Skrini ya Mwanzo"
 4. PWA huunganishwa na seva ya Termux ya ndani — kila kitu huendeshwa kwenye kifaa
@@ -156,7 +156,7 @@ Mchanganyiko huu unamaanisha kuwa simu yako ya Android ni **seva** (Termux) na p
 
 ## Kutumia Kutoka kwenye Vifaa Vingine
 
-Sakinisha PWA kwenye kifaa chochote chenye ufikiaji wa kivinjari kwenye seva yako ya OmniRoute:
+Sakinisha PWA kwenye kifaa chochote chenye ufikiaji wa kivinjari kwenye seva yako ya 67router:
 
 - **Simu/kompyuta kibao nyingine**: Nenda kwenye `http://PHONE_IP:20128` na usakinishe PWA
 - **Kompyuta mpakato**: Fungua Chrome/Edge na uisakinishe kama PWA ya eneo-kazi

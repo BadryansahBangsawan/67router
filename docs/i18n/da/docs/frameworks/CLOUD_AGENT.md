@@ -7,7 +7,7 @@
 > **Sandhedskilde:** `src/lib/cloudAgent/` og `src/app/api/v1/agents/tasks/`
 > **Senest opdateret:** 2026-06-28 — v3.8.40 (opdatering af frontmatter; 4 agenter inkl. cursor-cloud)
 
-OmniRoute orkestrerer tredjeparts-kodningsagenter, der hostes i skyen (Codex Cloud, Cursor,
+67router orkestrerer tredjeparts-kodningsagenter, der hostes i skyen (Codex Cloud, Cursor,
 Devin, Jules), som langvarige opgaver. Hver agent er indkapslet bag en ensartet grænseflade, så
 klienter kan indsende en prompt + repository-URL og modtage resultater uden at skulle håndtere
 udbyderspecifikke API'er.

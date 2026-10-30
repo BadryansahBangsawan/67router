@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot**, OmniRoute tarafından sunulan tüm modelleri _yerel_ GitHub Copilot Chat
+**OmniCopilot**, 67router tarafından sunulan tüm modelleri _yerel_ GitHub Copilot Chat
 model seçicisine ekler. İkinci bir kenar çubuğu veya ayrı bir sohbet arayüzü yoktur — Copilot'ın ajan modu, araç çağırma,
 MCP sunucuları ve özel talimatları çalışmaya devam eder; yalnızca seçtiğiniz model üzerinde çalışırlar.
 
@@ -23,13 +23,13 @@ MCP sunucuları ve özel talimatları çalışmaya devam eder; yalnızca seçti�
 
 ## Kurulum
 
-1. **OmniRoute'u çalıştırın** — `npm install -g omniroute && omniroute` (kontrol paneli: `http://localhost:20128`).
+1. **67router'u çalıştırın** — `npm install -g omniroute && omniroute` (kontrol paneli: `http://localhost:20128`).
 2. **Uzantıyı yükleyin** — Uzantılar görünümünde "OmniRoute" ifadesini arayın.
 3. **Bir model seçin** — Copilot Chat → model seçici → **Modelleri Yönet…** → **OmniRoute**, ardından
    istediğiniz modelleri işaretleyin.
 
-OmniRoute varsayılan portta çalıştığında yapılandırılacak hiçbir şey yoktur. Uzak bir örnek için
-**Etkinlik Çubuğu'ndaki OmniRoute simgesini** açın (veya `OmniRoute: Manage Connection` komutunu çalıştırın) ve şunları ayarlayın:
+67router varsayılan portta çalıştığında yapılandırılacak hiçbir şey yoktur. Uzak bir örnek için
+**Etkinlik Çubuğu'ndaki 67router simgesini** açın (veya `OmniRoute: Manage Connection` komutunu çalıştırın) ve şunları ayarlayın:
 
 - **Sunucu URL'si** — sunucu kökü; örneğin `http://192.168.0.15:20128`. `/v1` son eki
   uzantı tarafından eklenir; bunu dahil etmeyin.
@@ -74,7 +74,7 @@ HTTP 400 — '<id>' modeli bir görüntü oluşturma modelidir ve
 
 Bu nedenle seçiciye ulaşmadan önce `type` alanlarına göre filtrelenirler. **Responses-API
 modelleri korunur** — her Codex / GPT-5.x girdisi `supported_endpoints: ["responses"]` özelliğini tanıtır
-ve OmniRoute bunları `/v1/chat/completions` için dönüştürdüğünden tamamen kullanılabilirler.
+ve 67router bunları `/v1/chat/completions` için dönüştürdüğünden tamamen kullanılabilirler.
 
 ### Hiç yapılandırmadığınız sağlayıcılar
 
@@ -86,7 +86,7 @@ kontrol paneli ayarlarında `blockedProviders` alanına ekleyin; uzantıda hiçb
 
 ## Bir VS Code sekmesi içinde Dashboard
 
-`omnicopilot.dashboardOpen: "editor"`, OmniRoute Dashboard'u harici bir tarayıcı yerine Simple Browser aracılığıyla bir düzenleyici sekmesinde görüntüler. Gömme özelliği, HTML sayfalarını varsayılan `frame-ancestors 'none'` + `X-Frame-Options: DENY` yerine `frame-ancestors 'self' vscode-webview:` ile sunan `DASHBOARD_ALLOW_EMBED=vscode` aracılığıyla **sunucuda isteğe bağlı olarak etkinleştirilir**. API yüzeyi (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) her iki durumda da katı üstbilgileri korur.
+`omnicopilot.dashboardOpen: "editor"`, 67router Dashboard'u harici bir tarayıcı yerine Simple Browser aracılığıyla bir düzenleyici sekmesinde görüntüler. Gömme özelliği, HTML sayfalarını varsayılan `frame-ancestors 'none'` + `X-Frame-Options: DENY` yerine `frame-ancestors 'self' vscode-webview:` ile sunan `DASHBOARD_ALLOW_EMBED=vscode` aracılığıyla **sunucuda isteğe bağlı olarak etkinleştirilir**. API yüzeyi (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) her iki durumda da katı üstbilgileri korur.
 
 > ⚠️ **Bu bir çalışma zamanı değil, derleme zamanı bayrağıdır.** Next.js, `headers()` işlevini rota
 > manifestine derlediğinden `next.config.mjs`, paket derlenirken değişkeni okur
@@ -120,7 +120,7 @@ Gömme özelliği etkinleştirilmiş bir derleme olmadığında sayfa çerçeve 
 
 | Belirti                                                        | Neden / çözüm                                                                                                                                                                                                                                                             |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Seçicide OmniRoute modeli yok                                  | Sunucuya erişilemiyor. Durum çubuğu noktası griye döner; `OmniRoute: Check Connection` komutunu çalıştırın. Keşif, tasarım gereği sessizdir ve istem göstermek yerine hiçbir model sağlamaz.                                                                              |
+| Seçicide 67router modeli yok                                   | Sunucuya erişilemiyor. Durum çubuğu noktası griye döner; `OmniRoute: Check Connection` komutunu çalıştırın. Keşif, tasarım gereği sessizdir ve istem göstermek yerine hiçbir model sağlamaz.                                                                              |
 | Her model iki kez görünüyor                                    | 1.0.1 sürümünden eski bir OmniCopilot kullanıyorsunuz — güncelleyin. Uzantı artık `?prefix=alias` talep ediyor.                                                                                                                                                           |
 | Daha önce listelenen bir görüntü/ses modeli artık yok          | 1.0.1 sürümünden bu yana kasıtlıdır — bu model hiçbir zaman sohbet isteğine yanıt veremiyordu.                                                                                                                                                                            |
 | Etkinlik Çubuğu'nda panel eksik                                | VS Code, ek görünüm kapsayıcılarını Etkinlik Çubuğu'nun altındaki **"…"** taşma menüsüne taşır ve sağ tıklamayla gizlenen bir kapsayıcı gizli kalır. Etkinlik Çubuğu'na sağ tıklayın → **OmniRoute** seçeneğini işaretleyin veya `OmniRoute: Manage Connection` ile açın. |
@@ -132,6 +132,6 @@ Gömme özelliği etkinleştirilmiş bir derleme olmadığında sayfa çerçeve 
 ## Ayrıca bakınız
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — diğer tüm kodlama araçları
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — uzaktaki bir OmniRoute'u yönetme
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — uzaktaki bir 67router'u yönetme
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` sözleşmesi
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — uzantının kendi katalog notları

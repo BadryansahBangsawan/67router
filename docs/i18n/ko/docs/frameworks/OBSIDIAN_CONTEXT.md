@@ -13,7 +13,7 @@
 
 ## 개요
 
-OmniRoute는 **Obsidian** 볼트를 **컨텍스트 소스**로 연결합니다. 이는 에이전트가
+67router는 **Obsidian** 볼트를 **컨텍스트 소스**로 연결합니다. 이는 에이전트가
 내장 MCP 서버를 통해 읽고 쓸 수 있는 로컬 Markdown 지식 베이스입니다. 이 통합은
 데스크톱 앱 내에서 실행되는 **Obsidian Local REST API** 커뮤니티 플러그인과 통신하므로,
 에이전트가 노트를 검색하고, 파일을 읽고/쓰고/패치하고, 볼트의 내용을 나열하며,
@@ -76,7 +76,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 
 `src/app/api/settings/obsidian/webdav/route.ts`는 선택적 WebDAV 기반
 볼트 동기화(`src/lib/obsidianSync.ts`에 의해 구동)를 관리합니다. 이를 활성화하면
-OmniRoute가 로컬 볼트 디렉터리를 가리키도록 설정되고 임의의 WebDAV 사용자 이름/비밀번호
+67router가 로컬 볼트 디렉터리를 가리키도록 설정되고 임의의 WebDAV 사용자 이름/비밀번호
 쌍이 생성됩니다.
 
 ```bash
@@ -112,8 +112,8 @@ ID가 없는 호출자는 `Obsidian API token not configured`를 받으며, 볼�
 ## MCP 도구 (22개)
 
 `open-sse/mcp-server/tools/obsidianTools.ts`에 정의되어 있습니다. 토큰/base-URL은
-호출별로 확인됩니다(API 키별 설정을 먼저 확인한 다음 전역 설정 확인). OmniRoute **동기화 서버**에
-접근하는 도구(4개의 `obsidian_sync_*` 도구)는 OmniRoute 설정에 구성된 동기화 인증 토큰도
+호출별로 확인됩니다(API 키별 설정을 먼저 확인한 다음 전역 설정 확인). 67router **동기화 서버**에
+접근하는 도구(4개의 `obsidian_sync_*` 도구)는 67router 설정에 구성된 동기화 인증 토큰도
 추가로 필요합니다.
 
 ### 읽기 도구 (`read:obsidian`)
@@ -131,7 +131,7 @@ ID가 없는 호출자는 `Obsidian API token not configured`를 받으며, 볼�
 | `obsidian_get_periodic_note` | 특정 날짜의 일간/주간/월간 정기 노트를 가져옵니다(생략하면 오늘).                                |
 | `obsidian_get_tags`          | 모든 볼트 태그와 각 태그의 사용 빈도를 나열합니다.                                               |
 | `obsidian_list_commands`     | 사용 가능한 Obsidian 명령 ID를 나열합니다(`obsidian_execute_command`와 함께 사용).               |
-| `obsidian_sync_status`       | OmniRoute 동기화 서버 상태: 실행 여부, 볼트 이름, 포트, 가동 시간, 마지막 동기화.                |
+| `obsidian_sync_status`       | 67router 동기화 서버 상태: 실행 여부, 볼트 이름, 포트, 가동 시간, 마지막 동기화.                 |
 | `obsidian_sync_conflicts`    | 해결되지 않은 동기화 충돌을 나열합니다(경로, 충돌 경로, 감지 시각).                              |
 
 ### 쓰기 도구 (`write:obsidian`)

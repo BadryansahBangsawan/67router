@@ -7,7 +7,7 @@
 > **Sannhetskilde:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Sist oppdatert:** 2026-06-28 — v3.8.40
 
-OmniRoute kan eksponere sin lokale server (`http://localhost:20128`) på det offentlige
+67router kan eksponere sin lokale server (`http://localhost:20128`) på det offentlige
 internettet via tre tunnelbakender. Dette er nyttig for:
 
 - OAuth-tilbakekall fra skyleverandører (Antigravity, Gemini, Cursor) som trenger en
@@ -15,7 +15,7 @@ internettet via tre tunnelbakender. Dette er nyttig for:
 - Deling av den lokale instansen din med teammedlemmer uten å distribuere en VM.
 - Testing på mobil, eksternt eller på tvers av nettverk.
 
-Alle tre bakendene administreres i samme prosess — OmniRoute starter/stopper den underliggende
+Alle tre bakendene administreres i samme prosess — 67router starter/stopper den underliggende
 binærfilen eller SDK-en fra kontrollpanelet eller REST-API-et. Det kreves ikke oppsett av
 reversproxy eller systemd.
 
@@ -41,7 +41,7 @@ to moduser, valgt ut fra om en konfigurasjon for en navngitt tunnel er angitt:
 http://localhost:<apiPort>` og leser den tildelte `*.trycloudflare.com`-URL-en
   fra standard utdata. URL-ene er midlertidige og endres ved hver omstart.
 - **Navngitt tunnel (valgfritt).** Når `CLOUDFLARED_CONFIG` peker til en lokalt administrert
-  cloudflared-`config.yml`, kjører OmniRoute `cloudflared tunnel --no-autoupdate
+  cloudflared-`config.yml`, kjører 67router `cloudflared tunnel --no-autoupdate
 --config <path> run`, noe som gir deg et **stabilt, navngitt vertsnavn**. Konfigurasjonen
   angir tunnelens UUID, `credentials-file` og `ingress`-ruting, så ingen
   `--url` sendes, og det kreves ikke noe token fra Zero Trust-kontrollpanelet. `run` leser
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` og leser den tildelte `*.trycloudflare.com`-URL-en
 
 Viktig virkemåte:
 
-- **Automatisk installasjon.** Ved første bruk laster OmniRoute ned den nyeste `cloudflared`-
+- **Automatisk installasjon.** Ved første bruk laster 67router ned den nyeste `cloudflared`-
   binærfilen fra de offisielle GitHub-utgivelsene (den administrerte installasjonen ligger under
   `DATA_DIR/cloudflared/`). SHA256 for den nedlastede ressursen verifiseres mot
   utgivelsesmanifestet før kjøring.
@@ -67,7 +67,7 @@ Viktig virkemåte:
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. Opprett en `~/.cloudflared/config.yml` som ruter vertsnavnet ditt til OmniRoutes lokale
+2. Opprett en `~/.cloudflared/config.yml` som ruter vertsnavnet ditt til 67routers lokale
    API-port (standard er 20128):
 
    ```yaml
@@ -79,11 +79,11 @@ Viktig virkemåte:
      - service: http_status:404
    ```
 
-3. Pek OmniRoute til konfigurasjonen, og start tunnelen (på nytt):
+3. Pek 67router til konfigurasjonen, og start tunnelen (på nytt):
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # valgfritt — overstyrer vertsnavnet OmniRoute rapporterer; ellers leses det fra
+   # valgfritt — overstyrer vertsnavnet 67router rapporterer; ellers leses det fra
    # konfigurasjonens første ingress-regel:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -123,9 +123,9 @@ Eller via kontrollpanelet: **Innstillinger → Tunneler → Cloudflare**.
 
 | Variabel                                             | Formål                                                                                                                                                                                                    |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Overstyrer banen til binærfilen. Hvis den er angitt og gyldig, bruker OmniRoute den i stedet for å laste ned.                                                                                             |
+| `CLOUDFLARED_BIN`                                    | Overstyrer banen til binærfilen. Hvis den er angitt og gyldig, bruker 67router den i stedet for å laste ned.                                                                                              |
 | `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transportprotokoll (standard er `http2`; også `quic`, `auto`).                                                                                                                                            |
-| `CLOUDFLARED_CONFIG`                                 | Banen til en lokalt administrert cloudflared-`config.yml`. Når den er angitt, kjører OmniRoute en **navngitt/vedvarende** tunnel (`tunnel --config <path> run`) i stedet for en hurtigtunnel.             |
+| `CLOUDFLARED_CONFIG`                                 | Banen til en lokalt administrert cloudflared-`config.yml`. Når den er angitt, kjører 67router en **navngitt/vedvarende** tunnel (`tunnel --config <path> run`) i stedet for en hurtigtunnel.              |
 | `CLOUDFLARED_HOSTNAME`                               | Overstyrer det rapporterte offentlige vertsnavnet for den navngitte tunnelen (f.eks. `ai.example.com`). Når den ikke er angitt, leses vertsnavnet fra den første `ingress`-oppføringen i konfigurasjonen. |
 
 ## 2. ngrok
@@ -171,7 +171,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Responsen inkluderer den tildelte `publicUrl`-adressen (f.eks.
 `https://abcd-1234.ngrok-free.app`). Egendefinerte domener, regioner og policyregler
-må konfigureres i ngrok-kontrollpanelet — OmniRoute videresender bare den lokale
+må konfigureres i ngrok-kontrollpanelet — 67router videresender bare den lokale
 mål-URL-en til SDK-en.
 
 ## 3. Tailscale Funnel
@@ -185,14 +185,14 @@ offentlige URL-en har formen `https://<machine>.<tailnet>.ts.net/`.
 
 ### Forutsetninger
 
-1. Installer Tailscale (eller la OmniRoute gjøre det — se `install`-endepunktet nedenfor).
-2. Logg inn (`tailscale login` eller via OmniRoutes `login`-endepunkt).
+1. Installer Tailscale (eller la 67router gjøre det — se `install`-endepunktet nedenfor).
+2. Logg inn (`tailscale login` eller via 67routers `login`-endepunkt).
 3. Aktiver Funnel for tailnettet ditt i Tailscale-administrasjonskonsollen:
    <https://login.tailscale.com/admin/settings/features>.
 
 På Linux og macOS krever daemonen (`tailscaled`) `sudo` for å kunne styres.
 POST-endepunktene godtar et valgfritt `sudoPassword`-felt, som videresendes til
-OmniRoutes MITM-passordbuffer (`getCachedPassword` / `setCachedPassword`) under
+67routers MITM-passordbuffer (`getCachedPassword` / `setCachedPassword`) under
 kallets varighet. Windows bruker standard tjenesteinstallasjon i
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -253,7 +253,7 @@ uavhengig.
 
 ## Hensyn ved OAuth-tilbakekall
 
-Når du eksponerer OmniRoute gjennom en tunnel, må kontrollpanelet og OAuth-flytene
+Når du eksponerer 67router gjennom en tunnel, må kontrollpanelet og OAuth-flytene
 bygge tilbakekallings-URL-er basert på det **offentlige** vertsnavnet, ikke
 `localhost`. Ellers omdirigerer OAuth-leverandøren brukeren tilbake til en URL
 som serverne deres ikke kan nå, og håndtrykket mislykkes.
@@ -270,7 +270,7 @@ Angi:
 NEXT_PUBLIC_BASE_URL=https://<din-tunnelvert>
 ```
 
-og start OmniRoute på nytt før du starter OAuth. For midlertidige Cloudflare
+og start 67router på nytt før du starter OAuth. For midlertidige Cloudflare
 Quick Tunnels endres URL-en etter hver omstart, så bruk helst ngrok med et
 reservert domene eller Tailscale Funnel for OAuth i produksjon.
 
@@ -286,13 +286,13 @@ Kontrollpanelet viser tunnelstatus under **Innstillinger → Tunneler**:
 
 For programmatisk overvåking kan du regelmessig spørre de backend-spesifikke
 `GET`-endepunktene. Det er tillatt å kjøre mer enn én backend samtidig;
-OmniRoute sporer hver av dem uavhengig.
+67router sporer hver av dem uavhengig.
 
 ## Feilsøking
 
 ### "cloudflared binary not found"
 
-OmniRoute forsøker å installere automatisk ved første gangs bruk. Hvis
+67router forsøker å installere automatisk ved første gangs bruk. Hvis
 installasjonen blokkeres (begrenset nettverk, ingen tilgang til GitHub), laster
 du ned `cloudflared` manuelt fra
 <https://github.com/cloudflare/cloudflared/releases> og angir

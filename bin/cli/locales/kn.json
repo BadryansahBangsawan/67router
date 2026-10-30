@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "ದೋಷ: {message}",
-    "serverOffline": "OmniRoute ಸರ್ವರ್ ಆಫ್ಲೈನ್ನಲ್ಲಿದೆ. ಇದನ್ನು ಪ್ರಾರಂಭಿಸಲು: omniroute serve",
+    "serverOffline": "67router ಸರ್ವರ್ ಆಫ್ಲೈನ್ನಲ್ಲಿದೆ. ಇದನ್ನು ಪ್ರಾರಂಭಿಸಲು: omniroute serve",
     "authRequired": "ದೃಢೀಕರಣ ಅಗತ್ಯವಿದೆ. OMNIROUTE_API_KEY ಹೊಂದಿಸಿ ಅಥವಾ ಇದನ್ನು ಚಲಾಯಿಸಿ: omniroute setup",
     "rateLimited": "ದರ ಮಿತಿ ಮೀರಿದೆ. {seconds}s ನಂತರ ಮರುಪ್ರಯತ್ನಿಸಿ.",
     "timeout": "ವಿನಂತಿಯು {ms}ms ನಂತರ ಸಮಯ ಮೀರಿತು.",
@@ -15,7 +15,7 @@
     "yesOpt": "ದೃಢೀಕರಣ ಪ್ರಾಂಪ್ಟ್ ಅನ್ನು ಬಿಟ್ಟುಬಿಡಿ"
   },
   "setup": {
-    "title": "OmniRoute ಸೆಟಪ್",
+    "title": "67router ಸೆಟಪ್",
     "passwordPrompt": "ನಿರ್ವಾಹಕರ ಪಾಸ್ವರ್ಡ್",
     "providerPrompt": "ಡೀಫಾಲ್ಟ್ ಪೂರೈಕೆದಾರ (ಬಿಟ್ಟುಬಿಡಲು ಖಾಲಿ ಇರಿಸಿ)",
     "done": "ಸೆಟಪ್ ಪೂರ್ಣಗೊಂಡಿದೆ",
@@ -30,7 +30,7 @@
     "opencode": "OpenCode ಗಾಗಿ ಜೊತೆಯಾಗಿ ಒದಗಿಸಲಾದ @omniroute/opencode-plugin ಅನ್ನು ಸ್ಥಾಪಿಸಿ ಮತ್ತು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ"
   },
   "doctor": {
-    "title": "OmniRoute ಡಾಕ್ಟರ್",
+    "title": "67router ಡಾಕ್ಟರ್",
     "dbOk": "ಡೇಟಾಬೇಸ್: ಸರಿಯಾಗಿದೆ ({path})",
     "dbMissing": "ಡೇಟಾಬೇಸ್: ಪ್ರಾರಂಭಿಸಲಾಗಿಲ್ಲ — `omniroute setup` ಚಲಾಯಿಸಿ",
     "portOk": "ಪೋರ್ಟ್ {port}: ಲಭ್ಯವಿದೆ",
@@ -82,7 +82,7 @@
       "providerOpt": "ಪೂರೈಕೆದಾರರ ಹೆಸರಿನ ಮೂಲಕ ಫಿಲ್ಟರ್ ಮಾಡಿ",
       "header": "ID         ಪೂರೈಕೆದಾರ       ಹೆಸರು                     ಅವಧಿ ಮುಕ್ತಾಯ ಸ್ಥಿತಿ  ಪರೀಕ್ಷಾ ಸ್ಥಿತಿ  ಕೂಲ್ಡೌನ್ ಅಂತ್ಯದವರೆಗೆ",
       "noData": "ಯಾವುದೇ ಪೂರೈಕೆದಾರರ ಸಂಪರ್ಕದ ಡೇಟಾ ಲಭ್ಯವಿಲ್ಲ.",
-      "requiresServer": "providers status ಗೆ OmniRoute ಸರ್ವರ್ ಚಾಲನೆಯಲ್ಲಿರಬೇಕು."
+      "requiresServer": "providers status ಗೆ 67router ಸರ್ವರ್ ಚಾಲನೆಯಲ್ಲಿರಬೇಕು."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "ಪೂರೈಕೆದಾರರಿಗಾಗಿ API ಕೀಲಿಯನ್ನು ಸೇರಿಸಿ ಅಥವಾ ನವೀಕರಿಸಿ",
     "listDescription": "ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾದ ಎಲ್ಲಾ API ಕೀಲಿಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ",
     "removeDescription": "ಪೂರೈಕೆದಾರರ API ಕೀಲಿಯನ್ನು ತೆಗೆದುಹಾಕಿ",
-    "regenerateDescription": "OmniRoute API ಕೀಲಿಯನ್ನು ಮರುರಚಿಸಿ",
-    "revokeDescription": "OmniRoute API ಕೀಲಿಯನ್ನು ರದ್ದುಗೊಳಿಸಿ",
+    "regenerateDescription": "67router API ಕೀಲಿಯನ್ನು ಮರುರಚಿಸಿ",
+    "revokeDescription": "67router API ಕೀಲಿಯನ್ನು ರದ್ದುಗೊಳಿಸಿ",
     "revealDescription": "ಮರೆಮಾಚದ API ಕೀಲಿ ಮೌಲ್ಯವನ್ನು ಬಹಿರಂಗಪಡಿಸಿ",
     "usageDescription": "API ಕೀಲಿಯ ಇತ್ತೀಚಿನ ಬಳಕೆಯನ್ನು ತೋರಿಸಿ",
     "usageLimitOpt": "ಇತ್ತೀಚಿನ ವಿನಂತಿಗಳ ಸಂಖ್ಯೆ",
@@ -225,7 +225,7 @@
     "noCombo": "ಹೊಂದಿಕೆಯಾಗುವ ಯಾವುದೇ ಕಾಂಬೊ ಕಂಡುಬಂದಿಲ್ಲ. ಇದನ್ನು ಬಳಸಿ ಒಂದನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ: omniroute combo create"
   },
   "chat": {
-    "description": "OmniRoute ಗೆ ಒಂದೇ ಬಾರಿಯ ಚಾಟ್ ಪ್ರಾಂಪ್ಟ್ ಕಳುಹಿಸಿ",
+    "description": "67router ಗೆ ಒಂದೇ ಬಾರಿಯ ಚಾಟ್ ಪ್ರಾಂಪ್ಟ್ ಕಳುಹಿಸಿ",
     "file": "ಫೈಲ್ನಿಂದ ಪ್ರಾಂಪ್ಟ್ ಓದಿ",
     "stdin": "stdin ನಿಂದ ಪ್ರಾಂಪ್ಟ್ ಓದಿ",
     "system": "ಸಿಸ್ಟಂ ಪ್ರಾಂಪ್ಟ್",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "OmniRoute ಸರ್ವರ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ (ಡೀಫಾಲ್ಟ್ ಕ್ರಿಯೆ)",
-    "starting": "ಪೋರ್ಟ್ {port} ನಲ್ಲಿ OmniRoute ಸರ್ವರ್ ಪ್ರಾರಂಭವಾಗುತ್ತಿದೆ...",
+    "description": "67router ಸರ್ವರ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ (ಡೀಫಾಲ್ಟ್ ಕ್ರಿಯೆ)",
+    "starting": "ಪೋರ್ಟ್ {port} ನಲ್ಲಿ 67router ಸರ್ವರ್ ಪ್ರಾರಂಭವಾಗುತ್ತಿದೆ...",
     "ready": "http://localhost:{port} ನಲ್ಲಿ ಸಿದ್ಧವಾಗಿದೆ",
     "stopping": "ಸರ್ವರ್ ನಿಲ್ಲಿಸಲಾಗುತ್ತಿದೆ (PID {pid})...",
     "stopped": "ಸರ್ವರ್ ನಿಲ್ಲಿಸಲಾಗಿದೆ.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "ಬ್ಯಾಕಪ್",
-    "description": "OmniRoute ಡೇಟಾದ ಬ್ಯಾಕಪ್ ರಚಿಸಿ",
+    "description": "67router ಡೇಟಾದ ಬ್ಯಾಕಪ್ ರಚಿಸಿ",
     "creating": "ಬ್ಯಾಕಪ್ ರಚಿಸಲಾಗುತ್ತಿದೆ...",
     "done": "ಬ್ಯಾಕಪ್ ಅನ್ನು {path} ಗೆ ಉಳಿಸಲಾಗಿದೆ",
     "noFiles": "ಬ್ಯಾಕಪ್ ಮಾಡಲು ಯಾವುದೇ ಫೈಲ್ಗಳಿಲ್ಲ (ಡೇಟಾಬೇಸ್ ಪ್ರಾರಂಭಿಸಲಾಗಿಲ್ಲ)",
@@ -277,7 +277,7 @@
     "noBackups": "ಯಾವುದೇ ಬ್ಯಾಕಪ್ಗಳು ಕಂಡುಬಂದಿಲ್ಲ.",
     "notFound": "ಬ್ಯಾಕಪ್ ಕಂಡುಬಂದಿಲ್ಲ: {name}",
     "confirmRestore": "ಪ್ರಸ್ತುತ ಡೇಟಾವನ್ನು {ts} ಸಮಯದ ಬ್ಯಾಕಪ್ನಿಂದ ತಿದ್ದಿ ಬರೆಯಬೇಕೆ?",
-    "createDescription": "OmniRoute ಡೇಟಾದ ಬ್ಯಾಕಪ್ ರಚಿಸಿ",
+    "createDescription": "67router ಡೇಟಾದ ಬ್ಯಾಕಪ್ ರಚಿಸಿ",
     "nameOpt": "ಕಸ್ಟಮ್ ಬ್ಯಾಕಪ್ ಹೆಸರು",
     "cloudOpt": "ಬ್ಯಾಕಪ್ ಅನ್ನು ಕ್ಲೌಡ್ ಸಂಗ್ರಹಣೆಗೆ ಅಪ್ಲೋಡ್ ಮಾಡಿ",
     "encryptOpt": "AES-256-GCM ಬಳಸಿ ಬ್ಯಾಕಪ್ ಅನ್ನು ಎನ್ಕ್ರಿಪ್ಟ್ ಮಾಡಿ",
@@ -321,7 +321,7 @@
     "clearFailed": "ಕ್ಯಾಶ್ ತೆರವುಗೊಳಿಸಲು ವಿಫಲವಾಗಿದೆ."
   },
   "redis": {
-    "description": "OmniRoute ಕ್ಯಾಶಿಂಗ್ ಮತ್ತು ಕೋಟಾ ಟ್ರ್ಯಾಕಿಂಗ್ಗಾಗಿ 1-ಕ್ಲಿಕ್ ಸ್ಥಳೀಯ Redis ಕಂಟೇನರ್ (Podman ಅಥವಾ Docker) ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ"
+    "description": "67router ಕ್ಯಾಶಿಂಗ್ ಮತ್ತು ಕೋಟಾ ಟ್ರ್ಯಾಕಿಂಗ್ಗಾಗಿ 1-ಕ್ಲಿಕ್ ಸ್ಥಳೀಯ Redis ಕಂಟೇನರ್ (Podman ಅಥವಾ Docker) ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ"
   },
   "test": {
     "description": "ಸೇವಾಪೂರೈಕೆದಾರರ ಸಂಪರ್ಕವನ್ನು ಪರೀಕ್ಷಿಸಿ",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "OmniRoute ದೃಢೀಕರಣ ನೀತಿಗಳನ್ನು ನಿರ್ವಹಿಸಿ",
+    "description": "67router ದೃಢೀಕರಣ ನೀತಿಗಳನ್ನು ನಿರ್ವಹಿಸಿ",
     "list": {
       "description": "ನೀತಿಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ",
       "kind": "ಪ್ರಕಾರದ ಆಧಾರದ ಮೇಲೆ ಫಿಲ್ಟರ್ ಮಾಡಿ (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "OmniRoute ಸಂಕೋಚನ ಪೈಪ್ಲೈನ್ ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ ಮತ್ತು ಪರಿಶೀಲಿಸಿ",
+    "description": "67router ಸಂಕೋಚನ ಪೈಪ್ಲೈನ್ ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ ಮತ್ತು ಪರಿಶೀಲಿಸಿ",
     "status": {
       "description": "ಪ್ರಸ್ತುತ ಸಂಕೋಚನ ಸ್ಥಿತಿ ಮತ್ತು ಸೆಟ್ಟಿಂಗ್ಗಳನ್ನು ತೋರಿಸಿ"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "ಟನಲ್ {type} ಅನ್ನು ಬದಲಾಯಿಸುವುದೇ? (ಹೊಸ URL ಅನ್ನು ರಚಿಸಲಾಗುತ್ತದೆ)"
   },
   "stop": {
-    "description": "OmniRoute ಸರ್ವರ್ ಅನ್ನು ನಿಲ್ಲಿಸಿ",
+    "description": "67router ಸರ್ವರ್ ಅನ್ನು ನಿಲ್ಲಿಸಿ",
     "stopping": "ಸರ್ವರ್ ಅನ್ನು ನಿಲ್ಲಿಸಲಾಗುತ್ತಿದೆ (PID {pid})...",
     "stopped": "ಸರ್ವರ್ ನಿಲ್ಲಿಸಲಾಗಿದೆ.",
     "notRunning": "ಯಾವುದೇ ಸರ್ವರ್ ಚಾಲನೆಯಲ್ಲಿಲ್ಲ.",
     "portFallback": "ಯಾವುದೇ PID ಫೈಲ್ ಕಂಡುಬಂದಿಲ್ಲ, ಪೋರ್ಟ್ ಆಧಾರಿತ ನಿಲುಗಡೆಗೆ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿದೆ..."
   },
   "restart": {
-    "description": "OmniRoute ಸರ್ವರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ",
-    "restarting": "OmniRoute ಸರ್ವರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ..."
+    "description": "67router ಸರ್ವರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "restarting": "67router ಸರ್ವರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ..."
   },
   "dashboard": {
-    "description": "OmniRoute ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಅನ್ನು ಬ್ರೌಸರ್ನಲ್ಲಿ ತೆರೆಯಿರಿ",
+    "description": "67router ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಅನ್ನು ಬ್ರೌಸರ್ನಲ್ಲಿ ತೆರೆಯಿರಿ",
     "opening": "{url} ನಲ್ಲಿ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ",
     "urlOnly": "ಬ್ರೌಸರ್ ತೆರೆಯದೆ ಡ್ಯಾಶ್ಬೋರ್ಡ್ URL ಅನ್ನು ಮುದ್ರಿಸಿ",
     "tui": "ಸಂವಾದಾತ್ಮಕ TUI ಡ್ಯಾಶ್ಬೋರ್ಡ್ ತೆರೆಯಿರಿ (ಟರ್ಮಿನಲ್ UI, 7 ಟ್ಯಾಬ್ಗಳು)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "OmniRoute ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಿ (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "67router ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಿ (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "ಸ್ಥಾಪಿಸಲಾದ ಕೌಶಲ್ಯಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ",
       "type": "ಪ್ರಕಾರದ ಮೂಲಕ ಫಿಲ್ಟರ್ ಮಾಡಿ (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "OmniRoute ಸಂವಾದಾತ್ಮಕ ಮೆಮೊರಿಯನ್ನು ನಿರ್ವಹಿಸಿ (FTS5 + vector)",
+    "description": "67router ಸಂವಾದಾತ್ಮಕ ಮೆಮೊರಿಯನ್ನು ನಿರ್ವಹಿಸಿ (FTS5 + vector)",
     "search": {
       "description": "ಅರ್ಥಸಂಬಂಧಿ ಕ್ವೆರಿ ಮೂಲಕ ಮೆಮೊರಿ ನಮೂದುಗಳನ್ನು ಹುಡುಕಿ",
       "type": "ಮೆಮೊರಿ ಪ್ರಕಾರದ ಮೂಲಕ ಫಿಲ್ಟರ್ ಮಾಡಿ (user|feedback|project|reference)",
@@ -792,14 +792,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — ಸ್ವಯಂ ಫಾಲ್ಬ್ಯಾಕ್ ಹೊಂದಿರುವ ಸ್ಮಾರ್ಟ್ AI ರೂಟರ್",
+    "description": "67router — ಸ್ವಯಂ ಫಾಲ್ಬ್ಯಾಕ್ ಹೊಂದಿರುವ ಸ್ಮಾರ್ಟ್ AI ರೂಟರ್",
     "version": "ಆವೃತ್ತಿಯನ್ನು ಮುದ್ರಿಸಿ ಮತ್ತು ನಿರ್ಗಮಿಸಿ",
     "output": "ಔಟ್ಪುಟ್ ಸ್ವರೂಪ (table, json, jsonl, csv)",
     "quiet": "ಅಗತ್ಯವಲ್ಲದ ಔಟ್ಪುಟ್ ಅನ್ನು ತಡೆಹಿಡಿಯಿರಿ",
     "no_color": "ಬಣ್ಣದ ಔಟ್ಪುಟ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ",
     "timeout": "HTTP ವಿನಂತಿಯ ಕಾಲಾವಧಿ ಮಿತಿ ಮಿಲಿಸೆಕೆಂಡ್ಗಳಲ್ಲಿ",
-    "api_key": "OmniRoute ಸರ್ವರ್ಗಾಗಿ API ಕೀಲಿ",
-    "base_url": "OmniRoute ಸರ್ವರ್ನ ಮೂಲ URL",
+    "api_key": "67router ಸರ್ವರ್ಗಾಗಿ API ಕೀಲಿ",
+    "base_url": "67router ಸರ್ವರ್ನ ಮೂಲ URL",
     "context": "ಈ ಕಮಾಂಡ್ಗಾಗಿ ಬಳಸಬೇಕಾದ ಸರ್ವರ್ ಸಂದರ್ಭ/ಪ್ರೊಫೈಲ್",
     "lang": "CLI ಪ್ರದರ್ಶನ ಭಾಷೆಯನ್ನು ಹೊಂದಿಸಿ (OMNIROUTE_LANG ಅನ್ನು ಅತಿಕ್ರಮಿಸುತ್ತದೆ)"
   },
@@ -997,7 +997,7 @@
     }
   },
   "openapi": {
-    "description": "OmniRoute OpenAPI ಸ್ಪೆಕ್ ಅನ್ನು ಪ್ರವೇಶಿಸಿ ಮತ್ತು ಪರೀಕ್ಷಿಸಿ",
+    "description": "67router OpenAPI ಸ್ಪೆಕ್ ಅನ್ನು ಪ್ರವೇಶಿಸಿ ಮತ್ತು ಪರೀಕ್ಷಿಸಿ",
     "dump": {
       "description": "OpenAPI ಸ್ಪೆಕ್ ಅನ್ನು stdout ಅಥವಾ ಫೈಲ್ಗೆ ಡಂಪ್ ಮಾಡಿ",
       "format": "ಔಟ್ಪುಟ್ ಸ್ವರೂಪ: yaml|json (ಡೀಫಾಲ್ಟ್: yaml)",
@@ -1040,7 +1040,7 @@
     }
   },
   "open": {
-    "description": "ಬ್ರೌಸರ್ನಲ್ಲಿ ನಿರ್ದಿಷ್ಟ OmniRoute ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಪುಟವನ್ನು ತೆರೆಯಿರಿ",
+    "description": "ಬ್ರೌಸರ್ನಲ್ಲಿ ನಿರ್ದಿಷ್ಟ 67router ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಪುಟವನ್ನು ತೆರೆಯಿರಿ",
     "url": "URL ಅನ್ನು ಮಾತ್ರ ಮುದ್ರಿಸಿ, ಬ್ರೌಸರ್ ತೆರೆಯಬೇಡಿ"
   },
   "telemetry": {
@@ -1057,7 +1057,7 @@
     }
   },
   "sync": {
-    "description": "OmniRoute ಇನ್ಸ್ಟೆನ್ಸ್ಗಳ ನಡುವೆ ಸಂರಚನೆಯನ್ನು ಸಿಂಕ್ ಮಾಡಿ",
+    "description": "67router ಇನ್ಸ್ಟೆನ್ಸ್ಗಳ ನಡುವೆ ಸಂರಚನೆಯನ್ನು ಸಿಂಕ್ ಮಾಡಿ",
     "push": {
       "description": "ಸಂರಚನೆಯನ್ನು ಕ್ಲೌಡ್ ಅಥವಾ ರಿಮೋಟ್ ಇನ್ಸ್ಟೆನ್ಸ್ಗೆ ಪುಶ್ ಮಾಡಿ"
     },
@@ -1116,7 +1116,7 @@
     "filter": "ಮಟ್ಟದ ಪ್ರಕಾರ ಫಿಲ್ಟರ್ ಮಾಡಿ (error,warn,info) — ಅಲ್ಪವಿರಾಮದಿಂದ ಬೇರ್ಪಡಿಸಿದ",
     "lines": "ಪಡೆಯಬೇಕಾದ ಸಾಲುಗಳ ಸಂಖ್ಯೆ",
     "timeout": "ಸಂಪರ್ಕದ ಕಾಲಾವಧಿ ಮಿತಿ ms ನಲ್ಲಿ",
-    "baseUrl": "OmniRoute API ಮೂಲ URL",
+    "baseUrl": "67router API ಮೂಲ URL",
     "requestId": "ವಿನಂತಿ ID ಪ್ರಕಾರ ಫಿಲ್ಟರ್ ಮಾಡಿ",
     "apiKey": "API ಕೀ ಪ್ರಕಾರ ಫಿಲ್ಟರ್ ಮಾಡಿ",
     "combo": "ಕಾಂಬೊ ಹೆಸರಿನ ಪ್ರಕಾರ ಫಿಲ್ಟರ್ ಮಾಡಿ",
@@ -1132,10 +1132,10 @@
     "description": "ಸಿಸ್ಟಮ್ ಟ್ರೇ ಐಕಾನ್ ಅನ್ನು ನಿಯಂತ್ರಿಸಿ",
     "show": "ಟ್ರೇ ಐಕಾನ್ ತೋರಿಸಿ (ಸರ್ವರ್ --tray ಜೊತೆಗೆ ಚಾಲನೆಯಲ್ಲಿದ್ದರೆ)",
     "hide": "ಟ್ರೇ ಐಕಾನ್ ಮರೆಮಾಡಿ",
-    "quit": "ಟ್ರೇ ಮೂಲಕ OmniRoute ನಿಂದ ನಿರ್ಗಮಿಸಿ"
+    "quit": "ಟ್ರೇ ಮೂಲಕ 67router ನಿಂದ ನಿರ್ಗಮಿಸಿ"
   },
   "autostart": {
-    "description": "ಬೂಟ್ ಸಮಯದಲ್ಲಿ OmniRoute ಸ್ವಯಂಚಾಲಿತ ಪ್ರಾರಂಭವನ್ನು ನಿರ್ವಹಿಸಿ (Linux: systemd ಬಳಕೆದಾರ ಸೇವೆ)",
+    "description": "ಬೂಟ್ ಸಮಯದಲ್ಲಿ 67router ಸ್ವಯಂಚಾಲಿತ ಪ್ರಾರಂಭವನ್ನು ನಿರ್ವಹಿಸಿ (Linux: systemd ಬಳಕೆದಾರ ಸೇವೆ)",
     "enable": "ಬೂಟ್ ಸಮಯದಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತ ಪ್ರಾರಂಭವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
     "disable": "ಬೂಟ್ ಸಮಯದಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತ ಪ್ರಾರಂಭವನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ",
     "toggle": "ಬೂಟ್ ಸಮಯದ ಸ್ವಯಂಚಾಲಿತ ಪ್ರಾರಂಭವನ್ನು ಟಾಗಲ್ ಮಾಡಿ",
@@ -1167,19 +1167,19 @@
     "scaffold": "ಹೊಸ ಪ್ಲಗಿನ್ ಬಾಯ್ಲರ್ಪ್ಲೇಟ್ ರಚಿಸಿ"
   },
   "launch": {
-    "description": "OmniRoute ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಲಾದ Claude Code ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ (ಸ್ಥಳೀಯ ಅಥವಾ ದೂರಸ್ಥ, --profile ಜೊತೆಗೆ)",
+    "description": "67router ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಲಾದ Claude Code ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ (ಸ್ಥಳೀಯ ಅಥವಾ ದೂರಸ್ಥ, --profile ಜೊತೆಗೆ)",
     "token": "Claude ಕ್ಲೈಂಟ್ ಕಳುಹಿಸಬೇಕಾದ ಟೋಕನ್ (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "{port} ನಲ್ಲಿ OmniRoute ಅನ್ನು ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ. ಅದನ್ನು 'omniroute serve' ಮೂಲಕ ಪ್ರಾರಂಭಿಸಿ.",
+    "notRunning": "{port} ನಲ್ಲಿ 67router ಅನ್ನು ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ. ಅದನ್ನು 'omniroute serve' ಮೂಲಕ ಪ್ರಾರಂಭಿಸಿ.",
     "notFound": "PATH ನಲ್ಲಿ 'claude' CLI ಕಂಡುಬಂದಿಲ್ಲ."
   },
   "run": {
-    "description": "OmniRoute ಮೂಲಕ ಬೆಂಬಲಿತ CLI ಗುರಿಯನ್ನು ಪ್ರಾರಂಭಿಸಿ"
+    "description": "67router ಮೂಲಕ ಬೆಂಬಲಿತ CLI ಗುರಿಯನ್ನು ಪ್ರಾರಂಭಿಸಿ"
   },
   "setupClaude": {
-    "description": "OmniRoute ಮಾದರಿ ಕ್ಯಾಟಲಾಗ್ನಿಂದ ~/.claude/profiles Claude Code ಪ್ರೊಫೈಲ್ಗಳನ್ನು ರಚಿಸಿ"
+    "description": "67router ಮಾದರಿ ಕ್ಯಾಟಲಾಗ್ನಿಂದ ~/.claude/profiles Claude Code ಪ್ರೊಫೈಲ್ಗಳನ್ನು ರಚಿಸಿ"
   },
   "connect": {
-    "description": "ದೂರಸ್ಥ OmniRoute ಸರ್ವರ್ಗೆ ಸಂಪರ್ಕಿಸಿ ಮತ್ತು ದೂರಸ್ಥ ಮೋಡ್ಗೆ ಪ್ರವೇಶಿಸಿ"
+    "description": "ದೂರಸ್ಥ 67router ಸರ್ವರ್ಗೆ ಸಂಪರ್ಕಿಸಿ ಮತ್ತು ದೂರಸ್ಥ ಮೋಡ್ಗೆ ಪ್ರವೇಶಿಸಿ"
   },
   "tokens": {
     "description": "ವ್ಯಾಪ್ತಿ-ನಿರ್ದಿಷ್ಟ CLI ಪ್ರವೇಶ ಟೋಕನ್ಗಳನ್ನು ನಿರ್ವಹಿಸಿ (ದೂರಸ್ಥ ಮೋಡ್)"
@@ -1188,10 +1188,10 @@
     "description": "ಸಕ್ರಿಯ ಸರ್ವರ್ನಿಂದ ಒದಗಿಸುವವರು+ಮಾದರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ಬೆಂಬಲಿತ ಸ್ಥಳೀಯ CLI ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ"
   },
   "launchCodex": {
-    "description": "OmniRoute ಕಡೆಗೆ ಸೂಚಿಸಲಾದ Codex CLI ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ (ಸ್ಥಳೀಯ ಅಥವಾ ದೂರಸ್ಥ VPS)"
+    "description": "67router ಕಡೆಗೆ ಸೂಚಿಸಲಾದ Codex CLI ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ (ಸ್ಥಳೀಯ ಅಥವಾ ದೂರಸ್ಥ VPS)"
   },
   "setupCodex": {
-    "description": "OmniRoute ಲೈವ್ ಮಾದರಿ ಕ್ಯಾಟಲಾಗ್ನಿಂದ ~/.codex ಪ್ರೊಫೈಲ್ ಫೈಲ್ಗಳನ್ನು ರಚಿಸಿ"
+    "description": "67router ಲೈವ್ ಮಾದರಿ ಕ್ಯಾಟಲಾಗ್ನಿಂದ ~/.codex ಪ್ರೊಫೈಲ್ ಫೈಲ್ಗಳನ್ನು ರಚಿಸಿ"
   },
   "packs": {
     "description": "ಐಚ್ಛಿಕ ರನ್ಟೈಮ್ ಪ್ಯಾಕ್ಗಳನ್ನು ನಿರ್ವಹಿಸಿ (ML / ಬ್ರೌಸರ್ ಸ್ವಯಂಚಾಲನೆ)",
@@ -1204,7 +1204,7 @@
     "errUnknown": "ಅಜ್ಞಾತ ಪ್ಯಾಕ್: {name}",
     "errNoIndex": "ಪ್ಯಾಕ್ ಸೂಚ್ಯಂಕ ಕಂಡುಬಂದಿಲ್ಲ; ಪ್ಯಾಕ್ ಪೇಲೋಡ್ ಹೊಂದಿರುವ --source <dir> ಅನ್ನು ನೀಡಿ (ಡೆಸ್ಕ್ಟಾಪ್ ಬಂಡಲ್ಗಳಲ್ಲಿ ಇದು ಆ್ಯಪ್ನ ಪಕ್ಕದಲ್ಲಿರುತ್ತದೆ)",
     "installed": "\"{name}\" ಪ್ಯಾಕ್ ಅನ್ನು {dir} ನಲ್ಲಿ ಸ್ಥಾಪಿಸಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ",
-    "restartHint": "ರನ್ಟೈಮ್ ಪ್ಯಾಕ್ ಅನ್ನು ಗುರುತಿಸುವಂತೆ OmniRoute ಸರ್ವರ್ ಅನ್ನು (ಅಥವಾ ಡೆಸ್ಕ್ಟಾಪ್ ಆ್ಯಪ್ ಅನ್ನು) ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "restartHint": "ರನ್ಟೈಮ್ ಪ್ಯಾಕ್ ಅನ್ನು ಗುರುತಿಸುವಂತೆ 67router ಸರ್ವರ್ ಅನ್ನು (ಅಥವಾ ಡೆಸ್ಕ್ಟಾಪ್ ಆ್ಯಪ್ ಅನ್ನು) ಮರುಪ್ರಾರಂಭಿಸಿ",
     "removed": "\"{name}\" ಪ್ಯಾಕ್ ಅನ್ನು ತೆಗೆದುಹಾಕಲಾಗಿದೆ",
     "notInstalled": "\"{name}\" ಪ್ಯಾಕ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿರಲಿಲ್ಲ",
     "verifyOk": "ಸ್ಥಾಪಿಸಲಾದ ಎಲ್ಲ ಪ್ಯಾಕ್ಗಳನ್ನು ಪರಿಶೀಲಿಸಲಾಗಿದೆ",

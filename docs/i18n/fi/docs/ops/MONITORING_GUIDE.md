@@ -4,7 +4,7 @@
 
 ---
 
-> **Pähkinänkuoressa**: OmniRoute sisältää sisäänrakennetun kunnonvalvonnan, palveluntarjoajien autopilotin, kiintiöiden seurannan ja havainnoitavuuskytkennät. Tämä opas käsittelee hallintapaneelia, hälytyksiä ja vianmääritystä.
+> **Pähkinänkuoressa**: 67router sisältää sisäänrakennetun kunnonvalvonnan, palveluntarjoajien autopilotin, kiintiöiden seurannan ja havainnoitavuuskytkennät. Tämä opas käsittelee hallintapaneelia, hälytyksiä ja vianmääritystä.
 
 **Lähteet:**
 
@@ -20,7 +20,7 @@
 
 ## Hallintapaneelin sivut
 
-OmniRoutessa on **3 valvontakerrosta**:
+67routerissa on **3 valvontakerrosta**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Yhdistelmäkohtaisesti:
 
 ## Terveystarkistus-API
 
-OmniRoute tarjoaa **kaksi** HTTP-terveystarkistusrajapintaa. Niitä ei voi käyttää toistensa korvikkeina orkestrointijärjestelmissä.
+67router tarjoaa **kaksi** HTTP-terveystarkistusrajapintaa. Niitä ei voi käyttää toistensa korvikkeina orkestrointijärjestelmissä.
 
 | Polku                        | Tarkoitus                                                                       | Kuormitus                            | Käyttötarkoitus                                                                                |
 | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ päätepisteestä. Käytä `failed`- ja `failedConnections`-arvoja reaaliaikaisi
 
 ### Kubernetes-tarkistusten suositukset
 
-OmniRoute on **yksi Node-prosessi** (yksi tapahtumasilmukka). Dockerin oletusarvoinen `HEALTHCHECK` kohdistuu kevyeen `/healthz`-reittiin. `/api/monitoring/health` on **liian raskas** kubeletin liveness-tarkistusväleihin.
+67router on **yksi Node-prosessi** (yksi tapahtumasilmukka). Dockerin oletusarvoinen `HEALTHCHECK` kohdistuu kevyeen `/healthz`-reittiin. `/api/monitoring/health` on **liian raskas** kubeletin liveness-tarkistusväleihin.
 
 | Koetin                    | Suositeltu kohde                                                                             | Huomautukset                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Liittyvät: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (ko
 
 ### systemd-vahtikoira (jäätynyt tapahtumasilmukka)
 
-systemd-isännässä OmniRoute ilmoittaa palvelunhallinnalle, kun se on valmis, ja lähettää sille jatkuvasti sykäyksiä. Näin palvelin, jonka tapahtumasilmukka on jumissa, lopetetaan ja käynnistetään uudelleen sen sijaan, että se jäisi käyntiin mutta vastaamattomaksi. Sykäykset tulevat palvelimen omasta tapahtumasilmukasta: kun se estyy, sykäykset loppuvat ja systemd käynnistää palvelun uudelleen, kun `WatchdogSec` on kulunut ilman yhtäkään sykäystä.
+systemd-isännässä 67router ilmoittaa palvelunhallinnalle, kun se on valmis, ja lähettää sille jatkuvasti sykäyksiä. Näin palvelin, jonka tapahtumasilmukka on jumissa, lopetetaan ja käynnistetään uudelleen sen sijaan, että se jäisi käyntiin mutta vastaamattomaksi. Sykäykset tulevat palvelimen omasta tapahtumasilmukasta: kun se estyy, sykäykset loppuvat ja systemd käynnistää palvelun uudelleen, kun `WatchdogSec` on kulunut ilman yhtäkään sykäystä.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) kirjoittaa jo käyttäjäyksikön, jossa tämä on käytössä. Itse kirjoittamassasi yksikössä (oletuksena `Type=simple`) ei ole vahtikoiraa, joten lisää nämä rivit sen `[Service]`-osioon:
 
@@ -443,7 +443,7 @@ interface TokenHealth {
 
 ### Sisäänrakennetut kanavat
 
-OmniRoute tukee **kolmea hälytyskanavaa**:
+67router tukee **kolmea hälytyskanavaa**:
 
 | Kanava                   | Käyttöönotto  | Käyttötapaus                       |
 | ------------------------ | ------------- | ---------------------------------- |
@@ -559,7 +559,7 @@ Luo tiedosto `~/.omniroute/dashboard.json`:
 ### "Kiintiö näyttää olevan kunnossa, mutta saan 429-virheitä"
 
 - 429 tarkoittaa, että palveluntarjoajan mukaan olet käyttänyt kiintiösi
-- OmniRouten kiintiöseuranta voi olla **vanhentunut** — palveluntarjoajan ylävirran tieto on ratkaiseva
+- 67routerin kiintiöseuranta voi olla **vanhentunut** — palveluntarjoajan ylävirran tieto on ratkaiseva
 - Kiintiötiedot päivittyvät automaattisesti sisäisen kiintiövalvonnan kautta
 
 ### "Yhdistelmä epäonnistuu, vaikka kaikki kohteet näyttävät olevan kunnossa"
@@ -572,7 +572,7 @@ Luo tiedosto `~/.omniroute/dashboard.json`:
 
 - Suorita `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Jos tulos on "ok" — kyseessä on väärä hälytys, ja kuntotarkistus on liian tiukka
-- Jos tulos on jokin muu — **pysäytä OmniRoute** ja noudata [katastrofipalautusopasta](./DATABASE_GUIDE.md#disaster-recovery)
+- Jos tulos on jokin muu — **pysäytä 67router** ja noudata [katastrofipalautusopasta](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Muistikeon paine on kriittinen"
 

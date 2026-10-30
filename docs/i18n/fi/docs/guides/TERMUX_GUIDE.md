@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoutea voidaan käyttää Androidissa headless-palvelimena Termuxin kautta. Electron-työpöytäsovellusta ei tueta Termuxissa, mutta verkkohallintapaneeli ja OpenAI-yhteensopiva API toimivat paikallisessa selaimessa tai muilla samassa verkossa olevilla laitteilla.
+67routeria voidaan käyttää Androidissa headless-palvelimena Termuxin kautta. Electron-työpöytäsovellusta ei tueta Termuxissa, mutta verkkohallintapaneeli ja OpenAI-yhteensopiva API toimivat paikallisessa selaimessa tai muilla samassa verkossa olevilla laitteilla.
 
 ## Esivaatimukset
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js-versio:** OmniRoute vaatii Node-version `>=22.22.2 <23 || >=24.0.0 <27` (vastaa `engines`-määritystä tiedostoissa `package.json` / `SUPPORTED_NODE_RANGE`). Termuxin `nodejs-lts` sisältää yleensä Node 20 LTS:n, jota **ei enää tueta** — asenna sen sijaan nykyinen versio komennolla `pkg install nodejs` ja varmista komennolla `node --version`, että käytössä on 22.x/24.x tai uudempi versiolinja.
+> **Node.js-versio:** 67router vaatii Node-version `>=22.22.2 <23 || >=24.0.0 <27` (vastaa `engines`-määritystä tiedostoissa `package.json` / `SUPPORTED_NODE_RANGE`). Termuxin `nodejs-lts` sisältää yleensä Node 20 LTS:n, jota **ei enää tueta** — asenna sen sijaan nykyinen versio komennolla `pkg install nodejs` ja varmista komennolla `node --version`, että käytössä on 22.x/24.x tai uudempi versiolinja.
 
-Jos natiivin paketin kääntäminen epäonnistuu, suorita yllä oleva `pkg install` -komento uudelleen ja yritä sitten asentaa OmniRoute uudelleen.
+Jos natiivin paketin kääntäminen epäonnistuu, suorita yllä oleva `pkg install` -komento uudelleen ja yritä sitten asentaa 67router uudelleen.
 
 ## Asennus
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Suorittaminen
 
-Käynnistä OmniRoute headless-palvelintilassa:
+Käynnistä 67router headless-palvelintilassa:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Esimerkiksi:
 http://192.168.1.50:20128
 ```
 
-Pidä puhelin ja asiakaslaite samassa luotetussa verkossa. Jos asetat OmniRouten käytettäväksi puhelimen ulkopuolelta, ota API-avaimet ja hallintapaneelin todennus käyttöön.
+Pidä puhelin ja asiakaslaite samassa luotetussa verkossa. Jos asetat 67routerin käytettäväksi puhelimen ulkopuolelta, ota API-avaimet ja hallintapaneelin todennus käyttöön.
 
 ## Datahakemisto
 
-Oletusarvoisesti OmniRoute tallentaa datan Termuxin kotihakemistoon noudattaen samaa palvelinpuolen datapolkukäytäntöä kuin Linuxissa. Voit sijoittaa tietokannan erikseen määritettyyn hakemistoon näin:
+Oletusarvoisesti 67router tallentaa datan Termuxin kotihakemistoon noudattaen samaa palvelinpuolen datapolkukäytäntöä kuin Linuxissa. Voit sijoittaa tietokannan erikseen määritettyyn hakemistoon näin:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Ei-tuettu alusta: android (jokainen pyyntö palauttaa HTTP 500 -virheen)
 
-**Oire:** `omniroute` / `omniroute serve` tulostaa `✔ OmniRoute is running!`, mutta jokainen hallintapaneeli- tai API-pyyntö palauttaa pelkän `500 Internal Server Error` -virheen. Tiedosto `~/.omniroute/logs/application/app.log` pysyy tyhjänä, `APP_LOG_LEVEL=debug` ei tulosta mitään hyödyllistä ja vastauksen runko on pelkkää tekstiä (`Internal Server Error`) ilman JSON-lisätietoja.
+**Oire:** `omniroute` / `omniroute serve` tulostaa `✔ 67router is running!`, mutta jokainen hallintapaneeli- tai API-pyyntö palauttaa pelkän `500 Internal Server Error` -virheen. Tiedosto `~/.omniroute/logs/application/app.log` pysyy tyhjänä, `APP_LOG_LEVEL=debug` ei tulosta mitään hyödyllistä ja vastauksen runko on pelkkää tekstiä (`Internal Server Error`) ilman JSON-lisätietoja.
 
 **Syy:** Jotkin Termux-/Node-koontiversiot ilmoittavat arvon `process.platform === "android"`. Next.jsin `getCacheDirectory()` ei käsittele kyseistä alustaa: se edellyttää, että `~/.cache` (tai yleinen tilapäishakemisto) on _jo_ olemassa. Muussa tapauksessa instrumentointikoukun lataaminen epäonnistuu seuraavalla virheellä:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Koska koukkua ei koskaan ladata, lokitus ei käynnisty — 500-virhe näyttää täysin mahdottomalta diagnosoida. OmniRoute luo hakemiston `~/.cache` (ja asettaa muuttujan `XDG_CACHE_HOME`, jos sitä ei ole asetettu) CLI-käynnistyspisteessä ennen Next.jsin käynnistymistä, jotta tämä tarkistus onnistuu Androidissa/Termuxissa.
+Koska koukkua ei koskaan ladata, lokitus ei käynnisty — 500-virhe näyttää täysin mahdottomalta diagnosoida. 67router luo hakemiston `~/.cache` (ja asettaa muuttujan `XDG_CACHE_HOME`, jos sitä ei ole asetettu) CLI-käynnistyspisteessä ennen Next.jsin käynnistymistä, jotta tämä tarkistus onnistuu Androidissa/Termuxissa.
 
 **Tuettu ratkaisu (pakettia ei tarvitse muokata):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Nykyisissä OmniRoute-koontiversioissa CLI tekee tämän automaattisesti Androidissa/Termuxissa — uuden `npx -y omniroute@latest` -asennuksen tai globaalin asennuksen ei pitäisi edellyttää manuaalista vaihetta. Jos virhe esiintyy edelleen päivityksen jälkeen, luo `~/.cache` kerran yllä kuvatulla tavalla ja käynnistä palvelu uudelleen.
+Nykyisissä 67router-koontiversioissa CLI tekee tämän automaattisesti Androidissa/Termuxissa — uuden `npx -y omniroute@latest` -asennuksen tai globaalin asennuksen ei pitäisi edellyttää manuaalista vaihetta. Jos virhe esiintyy edelleen päivityksen jälkeen, luo `~/.cache` kerran yllä kuvatulla tavalla ja käynnistä palvelu uudelleen.
 
 **Älä** muokkaa tiedostoa `dist/server.js` pakottaaksesi arvoksi `process.platform = "linux"`. Tällainen pakettimuutos korvautuu jokaisen uudelleenasennuksen tai päivityksen yhteydessä ja on tarpeeton, kun välimuistihakemisto on olemassa.
 

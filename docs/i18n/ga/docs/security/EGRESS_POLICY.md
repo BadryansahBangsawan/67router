@@ -8,7 +8,7 @@
 
 > **Foinse na fírinne:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-Ligeann OmniRoute do gach seachfhreastalaí **treoir bhealaigh amach do theaghlach seoltaí** a iompar. De réir réamhshocraithe, roghnaíonn an córas oibriúcháin IPv4 nó IPv6 (dé-chruach, "Happy Eyeballs"). Nuair a shocraíonn tú an treoir mar `ipv4` nó `ipv6`, ceanglaíonn OmniRoute gach nasc tríd an seachfhreastalaí sin leis an teaghlach roghnaithe agus **teipeann sé go dúnta** seachas filleadh ar an teaghlach eile.
+Ligeann 67router do gach seachfhreastalaí **treoir bhealaigh amach do theaghlach seoltaí** a iompar. De réir réamhshocraithe, roghnaíonn an córas oibriúcháin IPv4 nó IPv6 (dé-chruach, "Happy Eyeballs"). Nuair a shocraíonn tú an treoir mar `ipv4` nó `ipv6`, ceanglaíonn 67router gach nasc tríd an seachfhreastalaí sin leis an teaghlach roghnaithe agus **teipeann sé go dúnta** seachas filleadh ar an teaghlach eile.
 
 Mínítear ar an leathanach seo cad é an treoir, cén fáth a bhfuil sí ann, cá gcumraítear í, agus conas a réitíonn an córas reatha í.
 
@@ -122,7 +122,7 @@ Maidir leis an gcuid eile den API CRUD/sannta seachfhreastalaí, féach [PROXY_G
 
 ## Conas a Réitíonn `auto`
 
-Nuair is é `auto` luach `family`, **ní** chuireann OmniRoute aon treoir leis — úsáidtear URL an tseachfhreastalaí mar atá agus cinntear an teaghlach ceangail go bunúsach.
+Nuair is é `auto` luach `family`, **ní** chuireann 67router aon treoir leis — úsáidtear URL an tseachfhreastalaí mar atá agus cinntear an teaghlach ceangail go bunúsach.
 
 Ag am tógála an URL (`proxyConfigToUrl` / `normalizeProxyUrl` in `open-sse/utils/proxyDispatcher.ts`), táirgeann seachfhreastalaí `auto` URL simplí gan marcóir:
 
@@ -158,7 +158,7 @@ Mar sin:
 
 Taistealaíonn treoir nach `auto` í mar mharcóir fiosraithe sintéiseach aonair — `?family=ipv4` nó `?family=ipv6` — a chuirtear uair amháin leis an URL seachfhreastalaí normalaithe. Cinntíonn `normalizeProxyUrl` go mbaintear an marcóir seo agus go gcuirtear leis arís é go díreach uair amháin, ionas nach ndéanfaidh sé parsáil an phoirt a thruailliú choíche.
 
-Nuair a thógtar an seoltóir, léitear an marcóir agus tiontaítear é ina theaghlach ceangail nithiúil. Más litiréal IP den teaghlach **contrártha** é an t-óstach, caitheann OmniRoute earráid (dúntar ar theip i gcás contrárthachta):
+Nuair a thógtar an seoltóir, léitear an marcóir agus tiontaítear é ina theaghlach ceangail nithiúil. Más litiréal IP den teaghlach **contrártha** é an t-óstach, caitheann 67router earráid (dúntar ar theip i gcás contrárthachta):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Déantar an teaghlach nithiúil a fheannadh den nascóir ansin:
 
 ## Comhoiriúnacht SOCKS5
 
-Oibríonn feannadh an teaghlaigh le seachfhreastalaithe SOCKS5, ach ní nochtann an leagan caighdeánach de `fetch-socks` na roghanna soicéid is gá chun teaghlach léim an tseachfhreastalaí a fheannadh. Soláthraíonn OmniRoute a nascóir féin chuige sin:
+Oibríonn feannadh an teaghlaigh le seachfhreastalaithe SOCKS5, ach ní nochtann an leagan caighdeánach de `fetch-socks` na roghanna soicéid is gá chun teaghlach léim an tseachfhreastalaí a fheannadh. Soláthraíonn 67router a nascóir féin chuige sin:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

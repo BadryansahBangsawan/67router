@@ -9,29 +9,29 @@
 > **Izvor istine:** `src/lib/skills/` i `src/app/api/skills/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40
 
-OmniRoute izlaže proširivi okvir vještina (Skills framework) koji omogućava jezičkim modelima (i operaterima) da sastavljaju višekratno upotrebljive mogućnosti — od čitanja datotečnog sistema i HTTP zahtjeva do izvršavanja koda u izolovanom okruženju (sandbox) i kuriranih vještina sa tržišta.
+67router izlaže proširivi okvir vještina (Skills framework) koji omogućava jezičkim modelima (i operaterima) da sastavljaju višekratno upotrebljive mogućnosti — od čitanja datotečnog sistema i HTTP zahtjeva do izvršavanja koda u izolovanom okruženju (sandbox) i kuriranih vještina sa tržišta.
 
-Vještina je verzionisana jedinica rada definisana šemom. OmniRoute može ubaciti vještine kao definicije alata u odlazne zahtjeve, presresti pozive alata koji se vraćaju iz modela, pokrenuti odgovarajući rukovalac (handler) i vratiti rezultat modelu kako bi se razgovor mogao nastaviti. Model nikada ne vidi implementaciju — samo interfejs alata.
+Vještina je verzionisana jedinica rada definisana šemom. 67router može ubaciti vještine kao definicije alata u odlazne zahtjeve, presresti pozive alata koji se vraćaju iz modela, pokrenuti odgovarajući rukovalac (handler) i vratiti rezultat modelu kako bi se razgovor mogao nastaviti. Model nikada ne vidi implementaciju — samo interfejs alata.
 
 ---
 
 ## Agent Skills vs Omni Skills
 
-OmniRoute ima dva različita, ali komplementarna sistema vještina:
+67router ima dva različita, ali komplementarna sistema vještina:
 
 | Dimenzija     | **Omni Skills** (ovaj dokument)                                   | **Agent Skills**                                                                            |
 | :------------ | :---------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
 | Svrha         | Ubrizgavanje LLM alata + izvršavanje u izolovanom okruženju       | SKILL.md katalog za vanjske agente radi otkrivanja i konzumiranja                           |
 | Izvor istine  | `src/lib/skills/` + tržište                                       | `src/lib/agentSkills/` + `skills/` direktorij                                               |
 | Runtime režim | Ubrizgano u odlazne zahtjeve, izvršeno na događajima poziva alata | Statički markdown katalog + REST/MCP/A2A krajnje tačke za otkrivanje                        |
-| Ko ga koristi | Sam OmniRoute (kombinovano rutiranje, dolazni LLM pozivi)         | Vanjski agenti, MCP klijenti, A2A orkestratori                                              |
+| Ko ga koristi | Sam 67router (kombinovano rutiranje, dolazni LLM pozivi)          | Vanjski agenti, MCP klijenti, A2A orkestratori                                              |
 | Broj          | Promjenjivo (vođeno tržištem)                                     | 43 unosa u katalogu (22 API + 20 CLI + 1 konfiguracija)                                     |
 | Format        | `SkillDefinition` sa šemom alata + rukovalac                      | `SKILL.md` frontmatter + markdown tijelo                                                    |
 | Otkrivanje    | `/api/skills/*` REST + `omniroute_skills_*` MCP alati             | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP alati + A2A `list-capabilities` |
 
-**Omni Skills** su mehanizam izvršavanja — one definišu šta OmniRoute _može učiniti_ kada LLM pozove alat.
+**Omni Skills** su mehanizam izvršavanja — one definišu šta 67router _može učiniti_ kada LLM pozove alat.
 
-**Agent Skills** su katalog dokumentacije — one objašnjavaju vanjskim agentima _kako koristiti_ OmniRoute REST API i CLI, sa strukturiranim SKILL.md datotekama koje se mogu direktno ubaciti u upite (prompts) agenata.
+**Agent Skills** su katalog dokumentacije — one objašnjavaju vanjskim agentima _kako koristiti_ 67router REST API i CLI, sa strukturiranim SKILL.md datotekama koje se mogu direktno ubaciti u upite (prompts) agenata.
 
 Za katalog Agent Skills, generator, MCP alate i A2A vještinu, pogledajte [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -43,14 +43,14 @@ Za katalog Agent Skills, generator, MCP alate i A2A vještinu, pogledajte [docs/
 
 Tri izvora vještina koegzistiraju u istom registru:
 
-1. **Ugrađene vještine** (`src/lib/skills/builtins.ts`) — isporučuju se uz OmniRoute. Pokrivaju uobičajene slučajeve:
+1. **Ugrađene vještine** (`src/lib/skills/builtins.ts`) — isporučuju se uz 67router. Pokrivaju uobičajene slučajeve:
    - `file_read`, `file_write` — sandbox radni prostor po API ključu ispod `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — odlazni HTTP kroz `safeOutboundFetch` sa `guard: "public-only"`
    - `web_search` — priključivi provajder pretrage sa keširanjem (`executeWebSearch`)
    - `eval_code` — izvršavanje `node` ili `python` koda u Docker izolovanom okruženju
    - `execute_command` — shell komanda u Docker izolovanom okruženju
    - `browser` — skela podržana Playwright-om, onemogućeno po zadanim postavkama (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute tržište) — preuzeto sa `https://skillsmp.com/api/v1/skills/search`. Zahtijeva `skillsmpApiKey` u Postavkama.
+2. **SkillsMP** (67router tržište) — preuzeto sa `https://skillsmp.com/api/v1/skills/search`. Zahtijeva `skillsmpApiKey` u Postavkama.
 3. **SkillsSH** (katalog zajednice `skills.sh`) — preuzeto sa `https://skills.sh/api/search`. Nije potrebna autentifikacija; SKILL.md sadržaj se povlači iz GitHub raw-a.
 
 Jedan "aktivni provajder" kontroliše iz kojeg kataloga kontrolna tabla vrši instalaciju (`src/lib/skills/providerSettings.ts`). Promijenite ga pod **Settings → Memory & Skills**. Zadano: `skillsmp`.
@@ -432,7 +432,7 @@ Kada je aktivan `AUTO` način rada, svaka kandidatska vještina se boduje u odno
 
 ## Katalog ugrađenih vještina
 
-OmniRoute dolazi sa odabranim skupom ugrađenih vještina u `src/lib/skills/builtin/`. Najčešće su:
+67router dolazi sa odabranim skupom ugrađenih vještina u `src/lib/skills/builtin/`. Najčešće su:
 
 ### Vještina automatizacije pretraživača
 

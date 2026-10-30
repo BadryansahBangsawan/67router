@@ -15,7 +15,7 @@ Kvotani taqsimlash mexanizmi provayderning vaqtga asoslangan kvotasini (masalan,
 uchun 5 soatlik oyna, Kimi uchun 1500 req/h) bir xil ulanishdan foydalanadigan bir nechta
 API kalitlari o‘rtasida adolatli taqsimlaydi.
 
-**U hal qiladigan muammo:** OmniRoute ko‘plab API kalitlarini bir xil yuqori oqimdagi
+**U hal qiladigan muammo:** 67router ko‘plab API kalitlarini bir xil yuqori oqimdagi
 provayder hisobiga proksi qiladi. Taqsimlash mantig‘isiz A kalitidan kelgan keskin yuklama
 provayderning bir soatlik kvotasini tugatib qo‘yishi mumkin, natijada B va C kalitlari oyna
 qayta tiklanguncha bloklanadi. Mexanizm buning oldini quyidagicha oladi:
@@ -121,7 +121,7 @@ Redis drayveri: atomar inkrement uchun Lua EVAL skripti — bitta Redis buyrug�
 
 - Jadval: `quota_consumption` (`073_quota_pools.sql` / `074_quota_consumption.sql` migratsiyasiga qarang).
 - Bitta nusxali joylashtirishlar uchun eng maqbul.
-- Barcha doimiy ma’lumotlar mavjud OmniRoute SQLite ma’lumotlar bazasida (`DATA_DIR/storage.sqlite`) saqlanadi.
+- Barcha doimiy ma’lumotlar mavjud 67router SQLite ma’lumotlar bazasida (`DATA_DIR/storage.sqlite`) saqlanadi.
 
 ### Redis (ixtiyoriy, ko‘p nusxali)
 

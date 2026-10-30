@@ -17,7 +17,7 @@
 - [OAuth 2.0 for native apps (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret za instalirane aplikacije su javni; PKCE pruža stvarnu sigurnost.
 - [Firebase API keys](https://firebase.google.com/docs/projects/api-keys) — Identifikatori web klijenata su javni po dizajnu.
 
-OmniRoute mora ugraditi ove vrijednosti tako da korisnici koji ne konfigurišu `.env` i dalje dobiju funkcionalan OAuth tok odmah nakon instalacije. Bez ugrađene rezervne opcije, Gemini / Antigravity provajderi prestaju raditi za svakog korisnika koji prati putanju „samo kloniraj i pokreni”.
+67router mora ugraditi ove vrijednosti tako da korisnici koji ne konfigurišu `.env` i dalje dobiju funkcionalan OAuth tok odmah nakon instalacije. Bez ugrađene rezervne opcije, Gemini / Antigravity provajderi prestaju raditi za svakog korisnika koji prati putanju „samo kloniraj i pokreni”.
 
 Međutim, literalne vrijednosti kao što su `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` bivaju prepoznate od strane **GitHub Secret Scanning**-a, **Semgrep**-a i sličnih skenera uzoraka. Svako izdanje postaje bučan niz lažnih pozitivnih rezultata, zaštita pri push-u blokira legitimne commit-e, a operateri prestaju vjerovati feed-u upozorenja.
 

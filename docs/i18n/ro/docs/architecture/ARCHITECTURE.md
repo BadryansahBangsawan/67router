@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Română)
+# 67router Architecture (Română)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Ultima actualizare: 2026-06-28_
 
 ## Rezumat executiv
 
-OmniRoute este un gateway local de rutare AI și un panou de control construit pe Next.js.
+67router este un gateway local de rutare AI și un panou de control construit pe Next.js.
 Acesta oferă un singur endpoint compatibil cu OpenAI (`/v1/*`) și direcționează traficul către mai mulți furnizori din amonte, cu traducere, mecanisme de rezervă, reîmprospătarea tokenurilor și monitorizarea utilizării.
 
 Capabilități principale:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Panou de control în browser]
     end
 
-    subgraph Router[Proces local OmniRoute]
+    subgraph Router[Proces local 67router]
         API[API de compatibilitate V1\n/v1/*]
         DASH[Panou de control + API de administrare\n/api/*]
         CORE[Nucleu SSE + traducere\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ Modulele furnizorilor OAuth (27 de fișiere individuale în `src/lib/oauth/provi
 
 ## 5) Servicii încorporate (v3.8.4)
 
-OmniRoute poate instala, supraveghea și direcționa către procese locale ale instrumentelor AI,
+67router poate instala, supraveghea și direcționa către procese locale ale instrumentelor AI,
 denumite **servicii încorporate**. Sunt incluse cinci: 9Router, CLIProxyAPI, Bifrost, Mux și Dario.
 
 Straturi arhitecturale:
@@ -438,7 +438,7 @@ fie nevoiți să compună singuri logica de blocare/buget/rezervă.
 - Cache pentru cote: `src/domain/quotaCache.ts`
 - Stare de degradare: `src/domain/degradation.ts`
 - Auditarea configurației: `src/domain/configAudit.ts`
-- Constructor de metadate pentru răspunsurile OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Constructor de metadate pentru răspunsurile 67router: `src/domain/omnirouteResponseMeta.ts`
 - Subsistem de evaluare: `src/domain/assessment/` — sarcini periodice de evaluare
 
 ### E. Pipeline de autorizare
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Browser pentru tabloul de bord]
     end
 
-    subgraph ContainerOrProcess[Mediu de execuție OmniRoute]
+    subgraph ContainerOrProcess[Mediu de execuție 67router]
         Next[Server Next.js\nPORT=20128]
         Core[Nucleu SSE + executori]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Toți ceilalți furnizori (inclusiv nodurile compatibile personalizate) utilizea
 ## Matrice de compatibilitate a furnizorilor
 
 > **Notă:** Matricea de mai jos reprezintă un eșantion reprezentativ al celor 351 de furnizori înregistrați în
-> OmniRoute v3.8.0. Pentru lista canonică și actualizată continuu, consultați
+> 67router v3.8.0. Pentru lista canonică și actualizată continuu, consultați
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (generată automat) sau sursa
 > oficială din `src/shared/constants/providers.ts` (validată cu Zod la încărcare).
 
@@ -1117,7 +1117,7 @@ Capturarea detaliată a sarcinilor utile ale solicitărilor stochează până la
 - solicitarea brută primită de la client
 - solicitarea tradusă trimisă efectiv în amonte
 - răspunsul furnizorului reconstruit ca JSON; răspunsurile transmise în flux sunt compactate la rezumatul final împreună cu metadatele fluxului
-- răspunsul final al clientului returnat de OmniRoute; răspunsurile transmise în flux sunt stocate în aceeași formă de rezumat compact
+- răspunsul final al clientului returnat de 67router; răspunsurile transmise în flux sunt stocate în aceeași formă de rezumat compact
 
 ## Limite sensibile din punct de vedere al securității
 

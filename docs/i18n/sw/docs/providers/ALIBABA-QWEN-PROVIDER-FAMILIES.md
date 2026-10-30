@@ -10,12 +10,12 @@ zinawakilishwa kama familia nne za watoa huduma. Eneo ni data ya muunganisho, si
 
 ## Uamuzi
 
-| Familia ya mtoa huduma                              | Kitambulisho cha OmniRoute | Eneo la kimataifa | Eneo la China |
-| --------------------------------------------------- | -------------------------- | ----------------- | ------------- |
-| Alibaba Cloud Model Studio (lipa kadri unavyotumia) | `alibaba`                  | Singapori         | Beijing       |
-| Alibaba Cloud Token Plan                            | `bailian-coding-plan`      | Singapori         | Beijing       |
-| Qwen Cloud (lipa kadri unavyotumia)                 | `qwen-cloud`               | Kimataifa         | Beijing       |
-| Qwen Cloud Token Plan                               | `qwen-cloud-token-plan`    | Singapori         | Beijing       |
+| Familia ya mtoa huduma                              | Kitambulisho cha 67router | Eneo la kimataifa | Eneo la China |
+| --------------------------------------------------- | ------------------------- | ----------------- | ------------- |
+| Alibaba Cloud Model Studio (lipa kadri unavyotumia) | `alibaba`                 | Singapori         | Beijing       |
+| Alibaba Cloud Token Plan                            | `bailian-coding-plan`     | Singapori         | Beijing       |
+| Qwen Cloud (lipa kadri unavyotumia)                 | `qwen-cloud`              | Kimataifa         | Beijing       |
+| Qwen Cloud Token Plan                               | `qwen-cloud-token-plan`   | Singapori         | Beijing       |
 
 Kitambulisho kilichopo cha `alibaba-cn` kinaendelea kuwa lakabu ya uoanifu wakati wa utekelezaji kwa miunganisho iliyohifadhiwa, njia za modeli,
 mikusanyiko, na matumizi ya kihistoria. Kadi yake ya dashibodi imejumuishwa ndani ya `alibaba`; hakuna haja ya

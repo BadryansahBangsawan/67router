@@ -5,7 +5,7 @@
 ---
 
 > **Mô tả một dòng cho mọi thư mục và tệp ở thư mục gốc.**
-> Cập nhật lần cuối: 2026-06-28 — OmniRoute v3.8.40
+> Cập nhật lần cuối: 2026-06-28 — 67router v3.8.40
 >
 > Sử dụng sơ đồ này để điều hướng nhanh trong cơ sở mã. Để tìm hiểu chuyên sâu, hãy truy cập các liên kết đến tài liệu chuyên biệt.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Quy trình phát hành đầy đủ (kỹ năng, husky, conventional commits, triển khai)                  |
 | `COVERAGE_PLAN.md`          | Mục tiêu độ bao phủ và trạng thái hiện tại                                                     |
 | `FREE_TIERS.md`             | Các nhà cung cấp gói miễn phí được tuyển chọn (hơn 48 miễn phí + 11 OAuth)                     |
-| `CLI-TOOLS.md`              | Tích hợp CLI bên ngoài + CLI OmniRoute nội bộ                                                  |
+| `CLI-TOOLS.md`              | Tích hợp CLI bên ngoài + CLI 67router nội bộ                                                   |
 | `I18N.md`                   | Kiến trúc i18n, cách thêm ngôn ngữ, 67 locale                                                  |
 | `UNINSTALL.md`              | Các bước gỡ cài đặt sạch                                                                       |
 | `PROVIDER_REFERENCE.md`     | Danh mục **được tạo tự động** gồm 375 nhà cung cấp (tạo lại: `npm run gen:provider-reference`) |

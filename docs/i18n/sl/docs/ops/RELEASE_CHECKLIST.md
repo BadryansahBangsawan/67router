@@ -45,7 +45,7 @@ obnovi popolnoma samodejen potek, ki ga je projekt uporabljal do v3.8.48, obenem
 zagotovilo WS1.3 (razkrit žeton sam ne more objavljati — ker žetona ni).
 
 **Enkratna nastavitev (lastnik):** npmjs.com → paket `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: lastnik `diegosouzapw`, repozitorij `OmniRoute`, potek dela `npm-publish.yml`
+Publisher_ → GitHub: lastnik `diegosouzapw`, repozitorij `67router`, potek dela `npm-publish.yml`
 (okolje: brez). Dokler to ni nastavljeno, samodejni korak ne uspe z napako `ENEEDAUTH`:
 znova ga sprožite z `publish_mode=staged` (spodaj) ali `direct`.
 

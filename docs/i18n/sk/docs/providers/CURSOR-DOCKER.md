@@ -4,7 +4,7 @@
 
 ---
 
-Keď OmniRoute beží v Dockeri, staršie postupy **Importovať z Cursor IDE** /
+Keď 67router beží v Dockeri, staršie postupy **Importovať z Cursor IDE** /
 `cursor-agent` zlyhajú, pretože kontajner nevidí hostiteľskú inštaláciu Cursoru.
 Namiesto toho použite **Prihlásiť sa cez Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ Namiesto toho použite **Prihlásiť sa cez Cursor** (deep-control PKCE).
    `~/.config/Cursor/User/globalStorage/state.vscdb`, _vo vnútri_ kontajnera.
    V Docker Desktop pre macOS nie je databáza IDE hostiteľa predvolene pripojená
    a operačným systémom kontajnera je Linux, aj keď hostiteľ používa Darwin.
-2. **Chýbajúci binárny súbor `cursor-agent`** — Oficiálne obrazy OmniRoute
+2. **Chýbajúci binárny súbor `cursor-agent`** — Oficiálne obrazy 67router
    neobsahujú `cursor-agent`. Funkcia Dostupné modely predtým spúšťala
    `cursor-agent --list-models` a pri zlyhaní použila statický katalóg.
 3. **Nesprávny binárny súbor** — **Nepripájajte** macOS verziu `cursor-agent`
@@ -24,11 +24,11 @@ Namiesto toho použite **Prihlásiť sa cez Cursor** (deep-control PKCE).
 
 1. Otvorte **Ovládací panel → Poskytovatelia → Cursor**.
 2. Vyberte kartu **Prihlásiť sa cez Cursor**.
-3. Kliknite na **Prihlásiť sa cez Cursor** — OmniRoute otvorí
+3. Kliknite na **Prihlásiť sa cez Cursor** — 67router otvorí
    `https://cursor.com/loginDeepControl?…` vo vašom **hostiteľskom** prehliadači.
-4. Schváľte prihlásenie v prehliadači a potom sa vráťte na ovládací panel. OmniRoute
+4. Schváľte prihlásenie v prehliadači a potom sa vráťte na ovládací panel. 67router
    sa opakovane dopytuje na `api2.cursor.sh/auth/poll`, kým nezíska tokeny.
-5. OmniRoute uloží **prístupový + obnovovací** token a obnovuje ich prostredníctvom
+5. 67router uloží **prístupový + obnovovací** token a obnovuje ich prostredníctvom
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Tento postup nevyžaduje Cursor IDE ani `cursor-agent` vo vnútri kontajnera.
@@ -37,10 +37,10 @@ Tento postup nevyžaduje Cursor IDE ani `cursor-agent` vo vnútri kontajnera.
 
 Pri prihlásenom pripojení funkcia **Dostupné modely / Automatická synchronizácia**
 uprednostňuje HTTP katalóg `AiService/AvailableModels` od Cursoru s použitím
-bearer tokenu pripojenia. Ak to zlyhá, OmniRoute sa stále pokúsi použiť hostiteľský
+bearer tokenu pripojenia. Ak to zlyhá, 67router sa stále pokúsi použiť hostiteľský
 `cursor-agent` (ak je prítomný) a následne statický základ registra.
 
-OmniRoute v katalógu vždy sprístupňuje **`auto`** (zobrazené ako „Auto“) spolu
+67router v katalógu vždy sprístupňuje **`auto`** (zobrazené ako „Auto“) spolu
 s režimami smerovača v štýle OpenCodex: **`auto-cost`**, **`auto-balance`** a
 **`auto-intelligence`**. Pri prenose sa mapujú na model Cursoru `default`
 (s parametrom `optimization` typu ModelParameter pre tri uvedené varianty).
@@ -90,7 +90,7 @@ opätovne importujte tokeny (samotný import z IDE už nie je potrebný).
 ## Prázdne odpovede / vyčerpané používanie
 
 Keď Cursor prijme požiadavku Run, ale nevráti žiadny text asistenta (čo je bežné
-pri vyčerpaní prémiového používania), OmniRoute zobrazí použiteľnú chybu **429**
+pri vyčerpaní prémiového používania), 67router zobrazí použiteľnú chybu **429**
 (indície týkajúce sa kvóty) alebo **502** s usmernením — nie iba holé hlásenie
 „Poskytovateľ vrátil prázdny obsah“. Zlyhania streamovania, ako napríklad
 `not_found: AI Model Not Found` (vyčerpané obdobie používania), sú klasifikované
@@ -101,7 +101,7 @@ už odoslanú chybu). Skontrolujte Limity poskytovateľa, vyskúšajte model
 
 ## Verzia klienta (bez grafického rozhrania)
 
-Bez lokálnej inštalácie `cursor-agent` OmniRoute určuje
+Bez lokálnej inštalácie `cursor-agent` 67router určuje
 `x-cursor-client-version` najprv z premennej prostredia `CURSOR_AGENT_CLI_VERSION`,
 potom z výsledku načítania inštalačného skriptu Cursoru uloženého vo vyrovnávacej
 pamäti na disku a nakoniec z pevne nastavenej identifikácie zostavy. V prípade

@@ -202,11 +202,11 @@ Reguli de sanitizare aplicate pentru `upstreamDetails`:
 3. Limită de adâncime: imbricarea dincolo de 4 niveluri este înlocuită cu șirul `"[truncated]"`.
 4. Matricele sunt limitate la 32 de elemente.
 
-Numai punctele de apel care au un corp de eroare analizat al furnizorului trebuie să transmită `upstreamDetails`. Erorile OmniRoute interne (eșecuri de analizare SSE, conținut gol, blocări de tip guardrail) nu trebuie să îl includă.
+Numai punctele de apel care au un corp de eroare analizat al furnizorului trebuie să transmită `upstreamDetails`. Erorile 67router interne (eșecuri de analizare SSE, conținut gol, blocări de tip guardrail) nu trebuie să îl includă.
 
 NU transmiteți valori brute `err.stack`, `err.message` sau niciun șir provenit dintr-o excepție de rulare către `upstreamDetails`. Acestea trebuie să treacă în continuare prin `errorResponse` / `buildErrorBody(code, msg)` fără un corp din amonte.
 
-Transmiterea selectivă a răspunsurilor 4xx din amonte păstrează forma JSON sigură și formularea furnizorului, necesare pentru recuperarea automată a clientului, dar nu reprezintă o transmitere octet cu octet: sanitizatorul recursiv rulează întotdeauna înainte de serializare. Corpurile ciclice, care conțin BigInt sau un `toJSON()` ostil, eșuează în mod sigur și nu sunt eligibile pentru transmitere. OCR și moderarea aplică aceeași regulă; corpurile din amonte care nu sunt JSON, sunt goale sau sunt etichetate incorect sunt convertite în învelișul JSON canonic de eroare OmniRoute.
+Transmiterea selectivă a răspunsurilor 4xx din amonte păstrează forma JSON sigură și formularea furnizorului, necesare pentru recuperarea automată a clientului, dar nu reprezintă o transmitere octet cu octet: sanitizatorul recursiv rulează întotdeauna înainte de serializare. Corpurile ciclice, care conțin BigInt sau un `toJSON()` ostil, eșuează în mod sigur și nu sunt eligibile pentru transmitere. OCR și moderarea aplică aceeași regulă; corpurile din amonte care nu sunt JSON, sunt goale sau sunt etichetate incorect sunt convertite în învelișul JSON canonic de eroare 67router.
 
 ## Limitare cunoscută a CodeQL: sanitizatoarele personalizate nu sunt recunoscute
 

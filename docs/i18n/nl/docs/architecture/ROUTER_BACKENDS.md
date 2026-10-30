@@ -20,10 +20,10 @@ De rol van een engine wordt beschreven door **twee onafhankelijke assen**, die s
 vastgelegd in de `RouterBackendDefinition` van het register:
 
 1. **Levenscyclus** (`RouterBackendLifecycle`) — _hoe de engine wordt uitgevoerd_:
-   - `in-process` — wordt uitgevoerd binnen het OmniRoute Node-proces (de native TS-pipeline).
-   - `supervised` — een lokaal childproces dat OmniRoute installeert/start/stopt/controleert
+   - `in-process` — wordt uitgevoerd binnen het 67router Node-proces (de native TS-pipeline).
+   - `supervised` — een lokaal childproces dat 67router installeert/start/stopt/controleert
      via `ServiceSupervisor` en vervolgens gebruikt als providerverbinding.
-   - `external` — een HTTP-endpoint waarnaar OmniRoute aanvragen doorstuurt, maar dat het **niet** beheert
+   - `external` — een HTTP-endpoint waarnaar 67router aanvragen doorstuurt, maar dat het **niet** beheert
      (geconfigureerd via een basis-URL in een omgevingsvariabele).
    - `disabled` — geregistreerd, maar niet selecteerbaar.
 2. **Selectie-as** (routeringsbackend voor de relay) — _of de relay aanvragen ernaar doorstuurt_:

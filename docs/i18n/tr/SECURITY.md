@@ -6,7 +6,7 @@
 
 ## Güvenlik Açıklarını Bildirme
 
-OmniRoute'ta bir güvenlik açığı keşfederseniz lütfen bunu sorumlu bir şekilde bildirin:
+67router'ta bir güvenlik açığı keşfederseniz lütfen bunu sorumlu bir şekilde bildirin:
 
 1. Herkese açık bir GitHub sorunu **AÇMAYIN**
 2. [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new) kullanın
@@ -53,7 +53,7 @@ OmniRoute'ta bir güvenlik açığı keşfederseniz lütfen bunu sorumlu bir şe
 
 ## Güvenlik Mimarisi
 
-OmniRoute çok katmanlı bir güvenlik modeli uygular:
+67router çok katmanlı bir güvenlik modeli uygular:
 
 ```
 İstek → CORS → Yetkilendirme işlem hattı (sınıflandır → politikalar → uygula)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Koruma Mekanizmaları Çerçevesi
 
-OmniRoute, önceliğe göre sıralanmış 3 yerleşik koruma mekanizmasına sahip, çalışırken yeniden yüklenebilen bir **koruma mekanizmaları kayıt defteri** (`src/lib/guardrails/`) sunar:
+67router, önceliğe göre sıralanmış 3 yerleşik koruma mekanizmasına sahip, çalışırken yeniden yüklenebilen bir **koruma mekanizmaları kayıt defteri** (`src/lib/guardrails/`) sunar:
 
 | Koruma Mekanizması | Öncelik | Amaç                                                                                                                     |
 | ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------ |

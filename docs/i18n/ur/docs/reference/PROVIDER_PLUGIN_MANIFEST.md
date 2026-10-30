@@ -14,7 +14,7 @@ OAuth defaults، headers، یا process environment state کو import کیے ب�
 یہی manifest HTTP پر بھی
 `GET /api/v1/provider-plugin-manifest` کے ذریعے ان sidecars کے لیے دستیاب ہے جو الگ process میں چلتے ہیں۔
 
-OmniRoute اس URL کو Bifrost اور CLIProxyAPI کے سامنے
+67router اس URL کو Bifrost اور CLIProxyAPI کے سامنے
 `X-OmniRoute-Provider-Manifest-Url` request header کے ذریعے ظاہر کرتا ہے۔ جب sidecar کو مقامی request origin کے بجائے کسی public یا container
 network URL کی ضرورت ہو تو
 `OMNIROUTE_PROVIDER_MANIFEST_URL` سیٹ کریں۔
@@ -30,7 +30,7 @@ sidecar اپنا cached manifest برقرار رکھتا ہے۔ اگر کوئی 
 ## مقصد
 
 provider metadata کو plugin contract کی سمت منتقل کرنا، تاکہ hot request path
-بالآخر کم latency والے sidecar کے زیرِ انتظام آ سکے، جبکہ OmniRoute
+بالآخر کم latency والے sidecar کے زیرِ انتظام آ سکے، جبکہ 67router
 TypeScript route کو policy gate اور fallback کے طور پر برقرار رکھے۔ manifest اضافی نوعیت کا ہے:
 یہ بذاتِ خود request routing کو تبدیل نہیں کرتا۔
 
@@ -74,7 +74,7 @@ machine-readable جواب کے طور پر استعمال کرنا چاہیے۔
 | `usage-fetch`        | منسلک usage یا quota fetcher (`getUsageForProvider`) رکھتا ہے۔                      |
 | `usage-supported`    | usage API اس provider کو قبول کرتی ہے (`isSupportedUsageConnection`)۔               |
 
-`usage-fetch` صرف دریافت کے لیے ہے۔ یہ بتاتا ہے کہ OmniRoute provider کے لیے usage پڑھنا
+`usage-fetch` صرف دریافت کے لیے ہے۔ یہ بتاتا ہے کہ 67router provider کے لیے usage پڑھنا
 جانتا ہے؛ یہ fetching کو فعال نہیں کرتا، quota semantics تبدیل نہیں کرتا، اور نہ ہی یہ ظاہر کرتا ہے کہ
 Dashboard quota widget اس provider کے لیے فعال ہے — اس widget کو الگ سے
 `USAGE_SUPPORTED_PROVIDERS` کے ذریعے محدود کیا جاتا ہے۔ حتمی ماخذ

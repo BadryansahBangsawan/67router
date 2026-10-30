@@ -14,7 +14,7 @@ Dva izbirna profila Compose (`memory`, `bifrost`) za obstoječo postavitev z 8 s
 
 ## Zakaj je ta pristop konservativen
 
-Obstoječa arhitektura postavitve OmniRoute je že vitka in preizkušena:
+Obstoječa arhitektura postavitve 67router je že vitka in preizkušena:
 
 - **`redis:7-alpine`** pri produkcijski obremenitvi skrbi za omejevanje hitrosti in predpomnjenje.
 - **SQLite + sqlite-vec + FTS5** pokrivajo lokalni pomnilnik, vektorsko iskanje in iskanje po besedilu (glejte [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Profila predstavljata **možnosti horizontalnega skaliranja za postavitve, ki do
 
 - Izvajate ≥3 replike `omniroute` in želite rotacijo ponudnikov centralizirati v enem procesu Go.
 - Želite enotno mesto za revizijo in beleženje zahtev do nadrejenih ponudnikov iz vseh replik.
-- Želite horizontalno skaliranje usmerjevalne plasti 1. ravni neodvisno od replik OmniRoute.
+- Želite horizontalno skaliranje usmerjevalne plasti 1. ravni neodvisno od replik 67router.
 
 **Kaj doda:**
 

@@ -11,7 +11,7 @@ lastUpdated: 2026-06-28
 
 # Przewodnik monitorowania i obserwowalności
 
-> **TL;DR**: OmniRoute dostarcza wbudowane monitorowanie kondycji, autopilota providerów, śledzenie limitów (quota) oraz haki obserwowalności. Ten przewodnik obejmuje dashboard, alerty i rozwiązywanie problemów.
+> **TL;DR**: 67router dostarcza wbudowane monitorowanie kondycji, autopilota providerów, śledzenie limitów (quota) oraz haki obserwowalności. Ten przewodnik obejmuje dashboard, alerty i rozwiązywanie problemów.
 
 **Źródła:**
 
@@ -27,7 +27,7 @@ lastUpdated: 2026-06-28
 
 ## Przegląd
 
-OmniRoute ma **3 warstwy monitorowania**:
+67router ma **3 warstwy monitorowania**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -108,7 +108,7 @@ Per combo:
 
 ## API kontroli kondycji
 
-OmniRoute udostępnia **dwa** punkty HTTP do kontroli kondycji. Nie można używać ich zamiennie w orkiestratorach.
+67router udostępnia **dwa** punkty HTTP do kontroli kondycji. Nie można używać ich zamiennie w orkiestratorach.
 
 | Ścieżka                      | Przeznaczenie                                                                   | Obciążenie                                | Zastosowanie                                                                     |
 | ---------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------- |
@@ -179,7 +179,7 @@ Podczas pobierania danych z tego punktu końcowego nie generuj alertów wyłącz
 
 ### Zalecenia dotyczące sond Kubernetes
 
-OmniRoute to **pojedynczy proces Node** (jedna pętla zdarzeń). Standardowy mechanizm `HEALTHCHECK` Dockera korzysta z lekkiego punktu `/healthz`. `/api/monitoring/health` jest **zbyt obciążający**, aby używać go w odstępach sondowania żywotności przez kubelet.
+67router to **pojedynczy proces Node** (jedna pętla zdarzeń). Standardowy mechanizm `HEALTHCHECK` Dockera korzysta z lekkiego punktu `/healthz`. `/api/monitoring/health` jest **zbyt obciążający**, aby używać go w odstępach sondowania żywotności przez kubelet.
 
 | Sonda                       | Zalecany cel                                                                                 | Uwagi                                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -226,7 +226,7 @@ Powiązane: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (so
 
 ### Watchdog systemd (zamrożona pętla zdarzeń)
 
-Na hoście z systemd OmniRoute informuje menedżera usług, kiedy jest gotowy, i regularnie wysyła do niego sygnały, dzięki czemu serwer z zablokowaną pętlą zdarzeń zostanie zakończony i uruchomiony ponownie, zamiast pozostawać aktywnym, ale bezczynnym. Sygnały są wysyłane przez własną pętlę zdarzeń serwera: gdy zostanie ona zablokowana, sygnały przestają być wysyłane, a systemd ponownie uruchamia usługę, gdy upłynie czas `WatchdogSec` bez odebrania żadnego z nich.
+Na hoście z systemd 67router informuje menedżera usług, kiedy jest gotowy, i regularnie wysyła do niego sygnały, dzięki czemu serwer z zablokowaną pętlą zdarzeń zostanie zakończony i uruchomiony ponownie, zamiast pozostawać aktywnym, ale bezczynnym. Sygnały są wysyłane przez własną pętlę zdarzeń serwera: gdy zostanie ona zablokowana, sygnały przestają być wysyłane, a systemd ponownie uruchamia usługę, gdy upłynie czas `WatchdogSec` bez odebrania żadnego z nich.
 
 Polecenie [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) już zapisuje jednostkę użytkownika z taką konfiguracją. Samodzielnie utworzona jednostka (domyślnie `Type=simple`) nie ma watchdoga, dlatego dodaj poniższe wiersze do jej sekcji `[Service]`:
 
@@ -442,7 +442,7 @@ Konfiguracja health check tokenów jest obsługiwana wewnętrznie przez `tokenHe
 
 ### Wbudowane kanały
 
-OmniRoute obsługuje **3 kanały alertów**:
+67router obsługuje **3 kanały alertów**:
 
 | Kanał            | Konfiguracja    | Przypadek użycia               |
 | ---------------- | --------------- | ------------------------------ |
@@ -558,7 +558,7 @@ Utwórz `~/.omniroute/dashboard.json`:
 ### „Quota pokazuje healthy, a ja widzę 429”
 
 - 429 oznacza, że provider twierdzi, iż wyczerpałeś limit
-- Śledzenie quota w OmniRoute może być **nieaktualne** — prawda providera jest upstream
+- Śledzenie quota w 67router może być **nieaktualne** — prawda providera jest upstream
 - Dane quota odświeżają się automatycznie przez wewnętrzny monitor quota
 
 ### „Combo pada, choć wszystkie targety wyglądają na healthy”
@@ -571,7 +571,7 @@ Utwórz `~/.omniroute/dashboard.json`:
 
 - Uruchom `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Jeśli "ok" — fałszywy alarm, health check jest zbyt rygorystyczny
-- Jeśli cokolwiek innego — **zatrzymaj OmniRoute** i postępuj według [przewodnika disaster recovery](./DATABASE_GUIDE.md#disaster-recovery)
+- Jeśli cokolwiek innego — **zatrzymaj 67router** i postępuj według [przewodnika disaster recovery](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### „Ciśnienie heapa pamięci jest krytyczne”
 

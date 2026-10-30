@@ -4,7 +4,7 @@
 
 ---
 
-> **Go hachomair**: Tabhair leat do chuntais soláthraithe incháilithe féin. Comhcheanglaíonn OmniRoute na naisc a chumraíonn tú; ní eisíonn sé an buiséad comhiomlán dearbhán fógraithe. D’fhéadfadh clárú, eochair API, faomhadh nó modh íocaíochta a bheith riachtanach chun rochtain saor in aisce a fháil. Tá teorainneacha, beartais phríobháideachais agus téarmaí na soláthraithe fós i bhfeidhm.
+> **Go hachomair**: Tabhair leat do chuntais soláthraithe incháilithe féin. Comhcheanglaíonn 67router na naisc a chumraíonn tú; ní eisíonn sé an buiséad comhiomlán dearbhán fógraithe. D’fhéadfadh clárú, eochair API, faomhadh nó modh íocaíochta a bheith riachtanach chun rochtain saor in aisce a fháil. Tá teorainneacha, beartais phríobháideachais agus téarmaí na soláthraithe fós i bhfeidhm.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Cuireann go leor soláthraithe IS cineál éigin **rochtana saor in aisce** ar fáil. Ag brath ar an soláthraí, d’fhéadfadh críochphointe gan fíordheimhniú, cuóta athfhillteach, rochtain gan teorainn ach faoi theorainn ráta, deontas clárúcháin, faomhadh de láimh, nó cur chun cinn sealadach a bheith i gceist leis sin. Éilíonn roinnt roghanna cuntas, eochair API, cárta creidmheasa, KYC, nó glacadh le téarmaí a bhaineann go sonrach leis an soláthraí.
 
-Déanann OmniRoute na naisc chumraithe a **chomhiomlánú** in aon chríochphointe amháin. Ní mór duit fós clárú ar leithligh le gach soláthraí a éilíonn cuntas. Ceangail na cuntais sin agus úsáid `model: "auto"` chun iarratais a ródú i measc spriocanna incháilithe. D’fhéadfadh sé nach mbeadh aon sprioc incháilithe gan eochair ar fáil i suiteáil úr; ní ráthaíonn suiteáil OmniRoute amháin go bhfaighfear freagra comhrá rathúil.
+Déanann 67router na naisc chumraithe a **chomhiomlánú** in aon chríochphointe amháin. Ní mór duit fós clárú ar leithligh le gach soláthraí a éilíonn cuntas. Ceangail na cuntais sin agus úsáid `model: "auto"` chun iarratais a ródú i measc spriocanna incháilithe. D’fhéadfadh sé nach mbeadh aon sprioc incháilithe gan eochair ar fáil i suiteáil úr; ní ráthaíonn suiteáil 67router amháin go bhfaighfear freagra comhrá rathúil.
 
 ---
 
@@ -57,7 +57,7 @@ Tá **sraitheanna saor in aisce** ag na soláthraithe seo le teorainneacha sonra
 
 ## Conas Sraitheanna Saor in Aisce a Chruachadh
 
-Is é draíocht OmniRoute ná **sraitheanna saor in aisce a chruachadh**. In ionad brath ar sholáthraí amháin, nascann tú roinnt soláthraithe saor in aisce agus ligeann tú do OmniRoute an ceann is fearr a roghnú go huathoibríoch do gach iarratas.
+Is é draíocht 67router ná **sraitheanna saor in aisce a chruachadh**. In ionad brath ar sholáthraí amháin, nascann tú roinnt soláthraithe saor in aisce agus ligeann tú do 67router an ceann is fearr a roghnú go huathoibríoch do gach iarratas.
 
 ### Sampla: Clúdach Níos Leithne ó Shraitheanna Saor in Aisce
 
@@ -68,7 +68,7 @@ Ceangail roinnt soláthraithe chun an spleáchas ar aon chuóta aonair a laghdú
 3. **Pollinations** — rochtain gan eochair, faoi theorainn ráta
 4. **LongCat** — deontas aonuaire clárúcháin (éilíonn KYC)
 
-Ansin úsáid `model: "auto"` agus déanfaidh OmniRoute an méid seo a leanas:
+Ansin úsáid `model: "auto"` agus déanfaidh 67router an méid seo a leanas:
 
 - Bainfidh sé triail ar dtús as an nasc incháilithe is airde rangú
 - Má theipeann ar a chuóta nó ar a sheiceáil sláinte → bainfidh sé triail as an gcéad soláthraí cumraithe eile
@@ -102,7 +102,7 @@ rochtain gan teorainn/gan eochair, creidmheasanna clárúcháin, iontrálacha sc
 
 ### Céim 5: Cliceáil Nasc
 
-I gcás soláthraí `NOAUTH`, ní iarrann OmniRoute dintiúr réamhtheachtach. Ní ráthaíonn sé seo go nglacann an tseirbhís réamhtheachtach le cliaint tríú páirtí ná go bhfuil acmhainn ar fáil aici. Ní mór soláthraithe OAuth agus eochrach API a nascadh trína sreabhadh cuntais doiciméadaithe. Úsáideann do chliant an eochair API OmniRoute a thaispeántar in **Deais → Críochphointí** nuair atá fíordheimhniú an ródaire cumasaithe.
+I gcás soláthraí `NOAUTH`, ní iarrann 67router dintiúr réamhtheachtach. Ní ráthaíonn sé seo go nglacann an tseirbhís réamhtheachtach le cliaint tríú páirtí ná go bhfuil acmhainn ar fáil aici. Ní mór soláthraithe OAuth agus eochrach API a nascadh trína sreabhadh cuntais doiciméadaithe. Úsáideann do chliant an eochair API 67router a thaispeántar in **Deais → Críochphointí** nuair atá fíordheimhniú an ródaire cumasaithe.
 
 ### Céim 6: Déan Arís É
 
@@ -112,7 +112,7 @@ Nasc roinnt soláthraithe a bhfuil a dtéarmaí agus a samhail phríobháideacha
 
 ## An Chatalóg a Léamh i gCeart
 
-- Ciallaíonn `NOAUTH` nach n-iarrann OmniRoute dintiúr soláthraí ort; ní thugann sé
+- Ciallaíonn `NOAUTH` nach n-iarrann 67router dintiúr soláthraí ort; ní thugann sé
   ráthaíocht maidir le ham oibriúcháin, príobháideachas ná acmhainn neamhtheoranta.
 - Is meiteashonraí fionnachtana é `hasFree`. Féadfaidh sé cuóta athfhillteach, rochtain gan eochair,
   creidmheas clárúcháin, clár formheasa nó cur chun cinn a léiriú.
@@ -125,15 +125,15 @@ Nasc roinnt soláthraithe a bhfuil a dtéarmaí agus a samhail phríobháideacha
 
 ---
 
-## Conas a Fheabhsaíonn OmniRoute Sraitheanna Saor in Aisce
+## Conas a Fheabhsaíonn 67router Sraitheanna Saor in Aisce
 
 ### 1. Cúltaca Uathoibríoch
 
-Má bhíonn soláthraí saor in aisce amháin gnóthach nó as feidhm, baineann OmniRoute triail as an gcéad cheann eile go huathoibríoch. Ní gá duit aon rud a dhéanamh.
+Má bhíonn soláthraí saor in aisce amháin gnóthach nó as feidhm, baineann 67router triail as an gcéad cheann eile go huathoibríoch. Ní gá duit aon rud a dhéanamh.
 
 ### 2. Ródú Cliste
 
-Roghnaíonn OmniRoute an **soláthraí saor in aisce is fearr** do gach iarratas bunaithe ar na nithe seo a leanas:
+Roghnaíonn 67router an **soláthraí saor in aisce is fearr** do gach iarratas bunaithe ar na nithe seo a leanas:
 
 - Luas — Cén soláthraí is tapúla faoi láthair?
 - Cáilíocht — Cén soláthraí is fearr don tasc seo?
@@ -141,13 +141,13 @@ Roghnaíonn OmniRoute an **soláthraí saor in aisce is fearr** do gach iarratas
 
 ### 3. Coigilteas Comharthaí
 
-Is féidir le píblíne chomhbhrúite OmniRoute líon na gcomharthaí incháilithe i leideanna agus in aschur uirlisí a laghdú. Braitheann an
+Is féidir le píblíne chomhbhrúite 67router líon na gcomharthaí incháilithe i leideanna agus in aschur uirlisí a laghdú. Braitheann an
 coigilteas iarbhír ar an ábhar, ar na hinnill roghnaithe, ar chuntasaíocht an tsoláthraí agus ar na socruithe
 dílseachta; ní iolraíonn comhbhrú gach cuóta soláthraí faoi mhéid seasta.
 
 ### 4. Tacaíocht d’Ilchuntais
 
-Má cheadaíonn téarmaí an tsoláthraí cuntais nó dintiúir iolracha, is féidir le OmniRoute gach
+Má cheadaíonn téarmaí an tsoláthraí cuntais nó dintiúir iolracha, is féidir le 67router gach
 nasc a láimhseáil mar iarrthóir ródaithe ar leith. Ná cruthaigh cuntais bhreise chun teacht timpeall ar
 chuóta nó ar bheartas rochtana soláthraí.
 
@@ -162,7 +162,7 @@ Tuairiscíonn an chatalóg bheo, ina ndéantar dí-dhúbailt ar chomhthiomsuithe
 | Deontas cainníochtaithe athfhillteach | **~1.62B comhartha/mí** | Ní áirítear comhthiomsuithe comhroinnte ach uair amháin; fágtar soláthraithe gan teorainn as an tsuim |
 | An chéad mhí le deontais chlárúcháin  |    **~2.22B comhartha** | An t-iomlán athfhillteach móide creidmheasanna aonuaire agus athfhillteacha                           |
 
-Is meastacháin iad seo don chatalóg iomlán thar chuntais incháilithe ar leith, agus ní liúntas iad a sholáthraíonn OmniRoute ná réamh-mheastachán do shuiteáil úr. Braitheann an acmhainn is féidir leat a úsáid ar na soláthraithe a nascann tú agus ar a gcoinníollacha reatha. Ríomhtar na luachanna ó `open-sse/config/freeModelCatalog.ts`; féach an
+Is meastacháin iad seo don chatalóg iomlán thar chuntais incháilithe ar leith, agus ní liúntas iad a sholáthraíonn 67router ná réamh-mheastachán do shuiteáil úr. Braitheann an acmhainn is féidir leat a úsáid ar na soláthraithe a nascann tú agus ar a gcoinníollacha reatha. Ríomhtar na luachanna ó `open-sse/config/freeModelCatalog.ts`; féach an
 [Tagairt do Shraitheanna Saor in Aisce](../reference/FREE_TIERS.md) le haghaidh dí-dhúbailt comhthiomsuithe, bratacha ToS,
 iontrálacha scortha, agus mhodheolaíocht na gcreidmheasanna clárúcháin.
 
@@ -189,7 +189,7 @@ táirgthe. Ba cheart cúltaca a bheith ag ualaí oibre criticiúla atá faoi mho
 
 D’fhéadfadh teorainneacha dochta, liostaí feithimh, KYC, fíorú cárta creidmheasa, oiliúint ar
 leideanna, príobháideachas níos laige, easpa SLA, athruithe rialta ar shamhlacha, srianta geografacha, ró-úsáid íoctha, nó
-riosca ó pholasaithe cuntais a bheith i gceist. Cuireann OmniRoute na meiteashonraí atá ar fáil os do chomhair; is tusa a roghnaíonn cad a chumasófar.
+riosca ó pholasaithe cuntais a bheith i gceist. Cuireann 67router na meiteashonraí atá ar fáil os do chomhair; is tusa a roghnaíonn cad a chumasófar.
 
 ### "Conas a gheobhaidh mé tuilleadh cuóta saor in aisce?"
 
@@ -208,7 +208,7 @@ leathanach Ranguithe Soláthraithe Saor in Aisce mar tháscaire cáilíochta agu
 
 ## Cad é an Chéad Chéim Eile?
 
-- **[Treoir Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lig do OmniRoute an AI is fearr a roghnú duit
+- **[Treoir Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lig do 67router an AI is fearr a roghnú duit
 - **[Treoir Soláthraithe](./PROVIDERS-GUIDE.md)** — Ceangail tuilleadh soláthraithe
 - **[Fabhtcheartú](../guides/TROUBLESHOOTING.md)** — Réitigh fadhbanna coitianta
 - **[Tagairt do Shraitheanna Saor in Aisce](../reference/FREE_TIERS.md)** — Liosta iomlán de na sraitheanna saor in aisce

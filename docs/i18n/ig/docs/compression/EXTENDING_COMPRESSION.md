@@ -4,7 +4,7 @@
 
 ---
 
-> **Na nkenke**: Igwe mkpakọ OmniRoute bụ nke **a pụrụ itinye mgbakwunye** — ị nwere ike ịdebanye igwe ahaziri iche, kesaa ngwugwu asụsụ maka asụsụ ọhụrụ, ma jikọta usoro nhazi ndị e dokọrọ n'usoro. Ntuziaka a na-egosi otu esi eme ya.
+> **Na nkenke**: Igwe mkpakọ 67router bụ nke **a pụrụ itinye mgbakwunye** — ị nwere ike ịdebanye igwe ahaziri iche, kesaa ngwugwu asụsụ maka asụsụ ọhụrụ, ma jikọta usoro nhazi ndị e dokọrọ n'usoro. Ntuziaka a na-egosi otu esi eme ya.
 
 **Ntuziaka ndị metụtara ya:**
 
@@ -233,7 +233,7 @@ na ihe nhọpụta atụmatụ site na `id` ya. Nwalee njikọta ya site n'ịg�
 
 ## Ịmepụta Ngwugwu Asụsụ
 
-Mkpakọ n'ụdị Caveman na-eji **ngwugwu iwu ndị akọwapụtara maka asụsụ** iji jikwaa okwu ndochi, okwu na-egosi enweghị nkwenye zuru oke, na usoro okwu toro ogologo n'asụsụ okike ọ bụla. OmniRoute na-abịa na **ngwugwu asụsụ 6**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Mkpakọ n'ụdị Caveman na-eji **ngwugwu iwu ndị akọwapụtara maka asụsụ** iji jikwaa okwu ndochi, okwu na-egosi enweghị nkwenye zuru oke, na usoro okwu toro ogologo n'asụsụ okike ọ bụla. 67router na-abịa na **ngwugwu asụsụ 6**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Nhazi Ngwugwu
 
@@ -389,7 +389,7 @@ Mmepụta injin N na-abụ ntinye injin N+1.
 
 ### Ụdị Mkpakọ
 
-OmniRoute na-ahọrọ **OTU ụdị maka arịrịọ ọ bụla** dabere na nhazi, oke ndị na-akpalite ọrụ na-akpaghị aka, na mgbanwe combo.
+67router na-ahọrọ **OTU ụdị maka arịrịọ ọ bụla** dabere na nhazi, oke ndị na-akpalite ọrụ na-akpaghị aka, na mgbanwe combo.
 A kọwara ụdị ndị dị na `open-sse/services/compression/types.ts` (ụdị `CompressionMode`):
 
 | Ụdị          | Injin                | Ebe eji ya                                                                                                                                                                                              |
@@ -509,10 +509,10 @@ Iji hazie ya site na config, tọọ `mode: "stacked"` ma tinye usoro nzọụkw
 
 ## Iwu Mmekọrịta Upstream
 
-Igwe mkpakọ nke OmniRoute na-enye ọtụtụ ọrụ upstream otuto na README
+Igwe mkpakọ nke 67router na-enye ọtụtụ ọrụ upstream otuto na README
 ("sitere n'ike mmụọ nsọ nke RTK, Caveman, LLMLingua-2, Troglodita"). Ajụjụ ndị
 ndị na-atụnye ụtụ na-ajụkarị bụ: **mgbe upstream RTK tinyere nzacha ngwa ọhụrụ ma ọ bụ Caveman tinye
-ngwugwu iwu, olee otu nke ahụ si erute OmniRoute?** Akụkụ a bụ azịza nwere ikike ikpeazụ.
+ngwugwu iwu, olee otu nke ahụ si erute 67router?** Akụkụ a bụ azịza nwere ikike ikpeazụ.
 
 ### Mbipụta e webatara n'ime repo na mmejuputa nọọrọ onwe ha
 
@@ -533,7 +533,7 @@ mbipụta upstream a ga-eji `git pull` dọpụta — nke a bụ kpọmkwem ihe 
 Enweghị **nsuso mwepụta upstream akpaghị aka, ọ nweghịkwa akara `compression-sync`
 ** — nke a bụ nhazi e kpachapụrụ anya mee. N'ihi na igwe ndị ahụ bụ mmejuputa e megharịrị, nzacha RTK
 ma ọ bụ ngwugwu iwu Caveman sitere na upstream anaghị ejikọta dịka koodu; kama, a na-**ekwupụta ya ọzọ dịka
-iwu/nzacha ọhụrụ n'ụdị nke OmniRoute n'onwe ya** (lee
+iwu/nzacha ọhụrụ n'ụdị nke 67router n'onwe ya** (lee
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) ma tinye ya n'oge ọ bụla site na
 PR nkịtị. Ebe mgbasawanye ndị dị n'elu (igwe ahaziri iche, ngwugwu asụsụ, nzacha RTK)
 bụ ụzọ akwadoro iji tụnye otu n'ime ha.
@@ -547,14 +547,14 @@ Ihe atụ ọhụrụ nke usoro a kpọmkwem:
 ### Headroom (proksi mkpakọ ntinye)
 
 Headroom bụ **nke ime kpamkpam** — snapshot kodek `gcf` e webatara n'ime repo ma kpọgide ya na ụdị
-a kapịrị ọnụ, tinyere oyi akwa `smartcrusher` / `toon` / `tabular` nke OmniRoute n'onwe ya. Enweghị
+a kapịrị ọnụ, tinyere oyi akwa `smartcrusher` / `toon` / `tabular` nke 67router n'onwe ya. Enweghị
 upstream na-arụ ọrụ ugbu a a ga-esochi ma e wezụga mbipụta ahụ e webatara n'ime repo; a na-eme ka mmelite `gcf`
 dị ọhụrụ n'aka mgbe kodek gbanwere, ma nyochaa ha ọzọ megide ọnụ ụzọ mmefu mkpakọ
 (`check:compression-budget`).
 
 ### Ịtụ aro nkwalite sitere n'ike mmụọ nsọ nke upstream
 
-1. **Ewebatala ya n'ime repo** — kwupụta iwu/nzacha upstream ahụ ọzọ n'ụdị nke OmniRoute.
+1. **Ewebatala ya n'ime repo** — kwupụta iwu/nzacha upstream ahụ ọzọ n'ụdị nke 67router.
 2. Tinye ya site n'ebe mgbasawanye dabara adaba dị n'okpuru (ngwugwu asụsụ, nzacha RTK, ma ọ bụ
    igwe ahaziri iche).
 3. Rụtụ aka n'ọrụ upstream ahụ na nkọwa PR (inye otuto), ọ bụghị site n'ịṅomi

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute एका केंद्रीकृत अनुमतीसूचीमधून कोणते **ब्राउझर origins** cross-origin प्रतिसाद वाचू शकतात हे नियंत्रित करते. हे मॉडेल **डीफॉल्टनुसार fail-closed** आहे:
+67router एका केंद्रीकृत अनुमतीसूचीमधून कोणते **ब्राउझर origins** cross-origin प्रतिसाद वाचू शकतात हे नियंत्रित करते. हे मॉडेल **डीफॉल्टनुसार fail-closed** आहे:
 तुम्ही एखाद्या origin ला स्पष्टपणे अनुमती देईपर्यंत कोणत्याही origin ला अनुमती नसते. अनुमतीसूचीचे निराकरण कसे होते, `CORS_ALLOW_ALL=true` प्रत्यक्षात काय उघड करते (आणि, महत्त्वाचे म्हणजे, काय **उघड करत नाही**), dev विरुद्ध production सुरक्षितपणे कसे कॉन्फिगर करावे आणि wildcard सक्रिय असताना dashboard कोणती runtime चेतावणी दाखवतो, याचे दस्तऐवजीकरण हे पृष्ठ करते.
 
 **अधिकृत स्रोत:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`,
@@ -34,12 +34,12 @@ OmniRoute एका केंद्रीकृत अनुमतीसूच�
 
 ## Threat model — `CORS_ALLOW_ALL=true` प्रत्यक्षात काय उघड करते
 
-OWASP ची सर्वसाधारण चेतावणी ("wildcard CORS = कोणतीही site तुमचा API call करू शकते") गांभीर्याने घेणे आवश्यक आहे, परंतु OmniRoute मधील exposure **सर्वसाधारण प्रकरणापेक्षा अधिक मर्यादित** आहे, कारण implementation मधील एक ठोस बाब:
+OWASP ची सर्वसाधारण चेतावणी ("wildcard CORS = कोणतीही site तुमचा API call करू शकते") गांभीर्याने घेणे आवश्यक आहे, परंतु 67router मधील exposure **सर्वसाधारण प्रकरणापेक्षा अधिक मर्यादित** आहे, कारण implementation मधील एक ठोस बाब:
 
 > **केंद्रीय `applyCorsHeaders()` कधीही
 > `Access-Control-Allow-Credentials` पाठवत नाही.** server ने
 > `Access-Control-Allow-Credentials: true` पाठवले नाही, तर browser एखादा _credentialed_
-> (cookie असलेला) cross-origin प्रतिसाद उपलब्ध करून देणार नाही. OmniRoute चा shared CORS path असे कधीही करत नाही.
+> (cookie असलेला) cross-origin प्रतिसाद उपलब्ध करून देणार नाही. 67router चा shared CORS path असे कधीही करत नाही.
 
 `CORS_ALLOW_ALL=true` असतानाही, प्रत्येक surface साठी याचा अर्थ:
 
@@ -70,7 +70,7 @@ Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) त�
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute एखाद्या रिव्हर्स प्रॉक्सी / टनेलच्या (nginx, Caddy, Cloudflare
+- 67router एखाद्या रिव्हर्स प्रॉक्सी / टनेलच्या (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) मागे चालत असल्यास, CORS हे तुमचे **एकमेव** नियंत्रण नाही —
   लूपबॅक रूट गार्ड अद्याप spawn-सक्षम रूटचे संरक्षण करतो (पाहा
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). 403 "दुरुस्त" करण्यासाठी
@@ -87,7 +87,7 @@ Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) त�
 डेव्ह सर्व्हरनाच परवानगी द्या:
 
 ```bash
-# स्थानिक OmniRoute ला कॉल करणारे Vite (5173) + Next.js (3000) डेव्ह सर्व्हर
+# स्थानिक 67router ला कॉल करणारे Vite (5173) + Next.js (3000) डेव्ह सर्व्हर
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -107,14 +107,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   कॉन्फिगमध्ये व्यवस्थापन/डॅशबोर्ड ओरिजिन समाविष्ट करू नका; ते पूर्णपणे
   फेल-क्लोज्डच राहिले पाहिजेत.
 
-## उदाहरण: OmniRoute च्या पुढे रिव्हर्स प्रॉक्सी
+## उदाहरण: 67router च्या पुढे रिव्हर्स प्रॉक्सी
 
-CORS ची अंमलबजावणी OmniRoute स्वतः करते, त्यामुळे प्रॉक्सीने सामान्यतः `Access-Control-*` हेडर्स जोडू किंवा
+CORS ची अंमलबजावणी 67router स्वतः करते, त्यामुळे प्रॉक्सीने सामान्यतः `Access-Control-*` हेडर्स जोडू किंवा
 पुन्हा लिहू **नयेत** (दुहेरी हेडर्समुळे ब्राउझर्समध्ये समस्या उद्भवतात). TLS समाप्त करून
-विनंती फॉरवर्ड करा — प्रीफ्लाइटला OmniRoute ला प्रतिसाद देऊ द्या:
+विनंती फॉरवर्ड करा — प्रीफ्लाइटला 67router ला प्रतिसाद देऊ द्या:
 
 ```nginx
-# nginx — OmniRoute कडे फॉरवर्ड करा; येथे Access-Control-* समाविष्ट करू नका
+# nginx — 67router कडे फॉरवर्ड करा; येथे Access-Control-* समाविष्ट करू नका
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -122,12 +122,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # फॉरवर्डिंग हेडर्स कायम ठेवा: त्याच होस्टवरील प्रॉक्सी लूपबॅकवरून कनेक्ट होते आणि हे हेडर्स
-    # OmniRoute ला सूचित करतात की कॉलर हा स्थानिक ऑपरेटर नाही. यांपैकी एकही हेडर न जोडणारी प्रॉक्सी
+    # 67router ला सूचित करतात की कॉलर हा स्थानिक ऑपरेटर नाही. यांपैकी एकही हेडर न जोडणारी प्रॉक्सी
     # प्रत्येक दूरस्थ कॉलरला स्थानिक असल्यासारखे दर्शवते. तसेच X-Forwarded-For कधीही 127.0.0.1 वर सेट करू नका.
 }
 ```
 
-ब्राउझरसाठी अनुमत ओरिजिन्स प्रॉक्सीमध्ये नव्हे, तर OmniRoute मध्ये (`CORS_ALLOWED_ORIGINS` किंवा
+ब्राउझरसाठी अनुमत ओरिजिन्स प्रॉक्सीमध्ये नव्हे, तर 67router मध्ये (`CORS_ALLOWED_ORIGINS` किंवा
 सुरक्षा टॅबमध्ये) सेट करा.
 
 ## स्रोत फाइल्स

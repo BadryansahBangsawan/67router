@@ -4,7 +4,7 @@
 
 ---
 
-Poskytovatelé Web Cookie umožňují OmniRoute používat službu AI prostřednictvím vaší stávající relace v prohlížeči namísto klíče API. Jsou užiteční, pokud již máte přístup ke službě přes její webové stránky a chcete, aby OmniRoute používal stejnou ověřenou relaci.
+Poskytovatelé Web Cookie umožňují 67router používat službu AI prostřednictvím vaší stávající relace v prohlížeči namísto klíče API. Jsou užiteční, pokud již máte přístup ke službě přes její webové stránky a chcete, aby 67router používal stejnou ověřenou relaci.
 
 Na rozdíl od poskytovatelů využívajících klíč API se poskytovatelé Web Cookie ověřují pomocí přihlašovacích údajů, které váš prohlížeč odesílá webovým stránkám.
 
@@ -49,7 +49,7 @@ DevTools
 
 Hlavička požadavku `Cookie` obsahuje přesné ověřovací údaje, které váš prohlížeč úspěšně použil.
 
-U většiny poskytovatelů Web Cookie se právě tato hodnota vkládá do OmniRoute.
+U většiny poskytovatelů Web Cookie se právě tato hodnota vkládá do 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Postup nastavení je u většiny poskytovatelů Web Cookie stejný.
 4. Obnovte stránku.
 5. Otevřete ověřený požadavek chatu nebo konverzace.
 6. Zkopírujte požadované ověřovací údaje.
-7. Otevřete OmniRoute.
+7. Otevřete 67router.
 8. Přejděte na **Providers → Add Provider**.
 9. Vyberte svého poskytovatele Web Cookie.
 10. Vložte přihlašovací údaje.
@@ -92,17 +92,17 @@ Různé webové stránky ukládají ověřovací údaje odlišně. Některé vy�
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) je bezplatná chatovací platforma pro spotřebitele, která nevyžaduje registraci — relace se vytvoří anonymně při první návštěvě a přetrvává prostřednictvím tří souborů cookie: `uid`, `si_usr_id` a `si_ses_id`. OmniRoute zprostředkovává stejný koncový bod `/api/dispatch` prostřednictvím jediného ID modelu (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) je bezplatná chatovací platforma pro spotřebitele, která nevyžaduje registraci — relace se vytvoří anonymně při první návštěvě a přetrvává prostřednictvím tří souborů cookie: `uid`, `si_usr_id` a `si_ses_id`. 67router zprostředkovává stejný koncový bod `/api/dispatch` prostřednictvím jediného ID modelu (`notrack-c`, alias `ntw`).
 
 ### Postup připojení
 
 1. Otevřete v prohlížeči stránku [notrack.ai](https://notrack.ai) a nechte nastavit soubor cookie anonymní relace.
 2. Otevřete **Vývojářské nástroje → Síť**, obnovte stránku a klikněte na libovolný požadavek `/api`.
 3. V části **Hlavičky požadavku** zkopírujte celou hodnotu hlavičky `Cookie`.
-4. V OmniRoute přejděte na **Poskytovatelé → Přidat poskytovatele → NoTrack Web (zdarma)**.
+4. V 67router přejděte na **Poskytovatelé → Přidat poskytovatele → NoTrack Web (zdarma)**.
 5. Vložte řetězec cookie do pole `apiKey` a klikněte na **Uložit**.
 
-OmniRoute z vloženého řetězce extrahuje `uid`, `si_usr_id` a `si_ses_id` a znovu sestaví čistou hlavičku `Cookie` obsahující pouze tyto dvojice — a také `nt_session` (token `ntk_…` nastavený pro přihlášené účty), pokud je přítomen. Pokud některá z těchto tří hodnot chybí, nezměněný vložený řetězec se předá dál, aby mohli provozovatelé experimentovat s alternativními formáty.
+67router z vloženého řetězce extrahuje `uid`, `si_usr_id` a `si_ses_id` a znovu sestaví čistou hlavičku `Cookie` obsahující pouze tyto dvojice — a také `nt_session` (token `ntk_…` nastavený pro přihlášené účty), pokud je přítomen. Pokud některá z těchto tří hodnot chybí, nezměněný vložený řetězec se předá dál, aby mohli provozovatelé experimentovat s alternativními formáty.
 
 ### ID modelů
 
@@ -198,7 +198,7 @@ Aplikace
 
 ---
 
-## Soubor cookie funguje v prohlížeči, ale ne v OmniRoute
+## Soubor cookie funguje v prohlížeči, ale ne v 67router
 
 Někteří poskytovatelé používají soubory cookie, které se odesílají pouze během ověřených požadavků.
 

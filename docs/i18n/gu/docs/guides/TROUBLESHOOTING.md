@@ -8,17 +8,17 @@
 
 🌐 **ભાષાઓ:** 🇺🇸 [અંગ્રેજી](./TROUBLESHOOTING.md) | 🇪🇹 [અમ્હારિક](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [અરબી](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [અઝરબૈજાની](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [બલ્ગેરિયન](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [બંગાળી](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [બોસ્નિયન](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [ચેક](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [ડેનિશ](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [જર્મન](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [ગ્રીક](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [સ્પેનિશ](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [એસ્ટોનિયન](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [ફારસી](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [ફિનિશ](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [ફ્રેન્ચ](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [આઇરિશ](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [હૌસા](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [હિબ્રૂ](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [હિન્દી](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [ક્રોએશિયન](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [હંગેરિયન](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [આર્મેનિયન](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [ઇન્ડોનેશિયન](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [ઇગ્બો](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [ઇટાલિયન](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [જાપાનીઝ](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [જ્યોર્જિયન](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ખ્મેર](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [કન્નડ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [કોરિયન](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [લિથુઆનિયન](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [લાતવિયન](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [મલયાલમ](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [મરાઠી](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [મલય](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [માલ્ટિઝ](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [બર્મીઝ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [નેપાળી](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [ડચ](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [નોર્વેજિયન](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ઓડિયા](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [પંજાબી](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [ફિલિપિનો](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [પોલિશ](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [પોર્ટુગીઝ (પોર્ટુગલ)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [પોર્ટુગીઝ (બ્રાઝિલ)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [રોમાનિયન](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [રશિયન](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [સિંહલા](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [સ્લોવાક](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [સ્લોવેનિયન](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [સર્બિયન](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [સ્વીડિશ](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [સ્વાહિલી](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [તમિલ](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [તેલુગુ](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [થાઈ](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [ટર્કિશ](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [યુક્રેનિયન](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [ઉર્દૂ](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [ઉઝબેક](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [વિયેતનામીઝ](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [યોરૂબા](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [ચાઇનીઝ (સરળીકૃત)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [ચાઇનીઝ (પરંપરાગત)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-OmniRoute માટેની સામાન્ય સમસ્યાઓ અને ઉકેલો.
+67router માટેની સામાન્ય સમસ્યાઓ અને ઉકેલો.
 
 ---
 
 ## ઝડપી સંદર્ભ
 
-**OmniRoute માટે નવા છો?** અહીંથી શરૂ કરો — આ 90% સમસ્યાઓ ઉકેલે છે:
+**67router માટે નવા છો?** અહીંથી શરૂ કરો — આ 90% સમસ્યાઓ ઉકેલે છે:
 
 | મને આ દેખાય છે          | તેનો અર્થ શું છે                              | શું કરવું                                                                                                 |
 | ----------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| "કનેક્ટ થઈ શકતું નથી"   | OmniRoute ચાલી રહ્યું નથી                     | `omniroute` ચલાવો અથવા `docker restart omniroute` ચલાવો                                                   |
+| "કનેક્ટ થઈ શકતું નથી"   | 67router ચાલી રહ્યું નથી                      | `omniroute` ચલાવો અથવા `docker restart omniroute` ચલાવો                                                   |
 | "અમાન્ય API કી"         | તમારી કી ખોટી છે અથવા તેની મુદત પૂરી થઈ ગઈ છે | પ્રદાતાની વેબસાઇટ પરથી કી ફરીથી કૉપિ કરો                                                                  |
 | "રેટ મર્યાદા વટાવી ગઈ"  | તમે ઘણા બધા અનુરોધ મોકલી રહ્યા છો             | 1 મિનિટ રાહ જુઓ, અથવા આપમેળે ફૉલબૅક માટે `model: "auto"` વાપરો                                            |
 | "ક્વોટા વટાવી ગયો"      | તમે તમારો મફત/ચૂકવેલ ક્વોટા વાપરી લીધો છે     | વધુ પ્રદાતાઓ કનેક્ટ કરો, અથવા મફત પ્રદાતાઓ (Kiro, Pollinations) વાપરો                                     |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # હેવીવેઇટ પ્�
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # ધીમા અપસ્ટ્રીમ માટે મર્યાદિત પ્રતીક્ષાને RATE_LIMIT_MAX_WAIT_MSના ડિફૉલ્ટથી આગળ વધારો
 ```
 
-આને OmniRoute પ્રોસેસ એન્વાયરમેન્ટમાં સેટ કરો (ડેમન, ઉદાહરણ તરીકે LaunchAgent plist અથવા `systemctl edit` દ્વારા), પછી OmniRouteને રીસ્ટાર્ટ કરો. રોટેશન ફ્લૅગ એકમાત્ર સૌથી વધુ અસરકારક વિકલ્પ છે: તે ગંભીર નિષ્ફળતાને પૂલમાંના સ્વસ્થ પ્રદાતા સામેના પારદર્શક પુનઃપ્રયાસમાં રૂપાંતરિત કરે છે.
+આને 67router પ્રોસેસ એન્વાયરમેન્ટમાં સેટ કરો (ડેમન, ઉદાહરણ તરીકે LaunchAgent plist અથવા `systemctl edit` દ્વારા), પછી 67routerને રીસ્ટાર્ટ કરો. રોટેશન ફ્લૅગ એકમાત્ર સૌથી વધુ અસરકારક વિકલ્પ છે: તે ગંભીર નિષ્ફળતાને પૂલમાંના સ્વસ્થ પ્રદાતા સામેના પારદર્શક પુનઃપ્રયાસમાં રૂપાંતરિત કરે છે.
 
 **નોંધ**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` એકસાથે કેટલી હેવીવેઇટ — લાંબા-કૉન્ટેક્સ્ટવાળી — વિનંતીઓ ચાલે છે તેને મર્યાદિત કરે છે; આ મર્યાદા પ્રવેશદ્વાર છે, પ્રદાતાની દર મર્યાદા નથી. **#503-fanout અપડેટ:** આ વેરિએબલ હવે ડિફૉલ્ટ રૂપે સેટ થતું નથી (હવે તે માત્ર ઉપર દર્શાવ્યા મુજબ સ્પષ્ટ રીતે ગોઠવવામાં આવે ત્યારે જ મર્યાદા લાગુ કરે છે) — તેના બદલે હેવીવેઇટ પ્રવેશ ઑટો-ડિરાઇવ્ડ બાઇટ બજેટ (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) દ્વારા નિયંત્રિત થાય છે, જે હોસ્ટની વાસ્તવિક મેમરી મર્યાદાના આધારે પોતાને માપાનુસાર ગોઠવે છે; તેથી નવી ડિપ્લોયમેન્ટમાં આ વેરિએબલ બિલકુલ સેટ કર્યા વિના ઘણા ઓછા `503 chat_admission_busy` અસ્વીકાર જોવા મળવા જોઈએ; અહીં તેને સ્પષ્ટ રીતે સેટ કરવું હજી પણ દસ્તાવેજીકરણમાં વર્ણવ્યા મુજબ જ કાર્ય કરે છે. સ્પષ્ટ બાઇટ-બજેટ ઓવરરાઇડ 8 MiB–2 GiB સુધી મર્યાદિત થાય છે. `413 body_exceeds_budget` ક્ષણિક નથી: તે બાઇટ બજેટ વધારો, `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` ઘટાડો, અથવા પ્રોસેસની મેમરી મર્યાદા વધારો. `inflight_bytes_budget` શેડ અસ્થાયી સંસાધન સંઘર્ષ છે અને તેનો પુનઃપ્રયાસ કરી શકાય છે. પ્રદાતા-દીઠ દર મર્યાદા (`open-sse/services/rateLimitManager.ts`) અલગથી `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, અને `RATE_LIMIT_AUTO_ENABLE` દ્વારા સંચાલિત થાય છે — `.env.example` જુઓ.
 
 **તે કાર્યરત થયું છે કે નહીં તે કેવી રીતે ચકાસવું**: તમારા agent/cronને ઝડપથી સતત બે વાર ચલાવો અને બંને સફળ થાય છે તેની ખાતરી કરો. ઉકેલ પહેલાં, બીજી રન સામાન્ય રીતે `429`/`401` આપે છે. ઉકેલ પછી, નિષ્ફળતાઓનો (જો કોઈ હોય તો) પારદર્શક રીતે પુનઃપ્રયાસ થાય છે અને કૉલ પૂર્ણ થાય છે. તમે `curl /monitoring/health` પણ ચલાવી શકો છો અને પ્રદાતાના કનેક્શન પરના `rateLimitedUntil` ફીલ્ડ તથા અસરગ્રસ્ત પ્રદાતાઓ માટે `circuitBreakers.providerBreakers[].state` પર નજર રાખી શકો છો — સ્થિતિ `CLOSED`, `DEGRADED`, `OPEN`, અથવા `HALF_OPEN`માંથી એક હોય છે (`src/shared/utils/circuitBreaker.ts` જુઓ), અને સતત નિષ્ફળ થતો પ્રદાતા રીસેટ સમયગાળો પ્રોબને પસાર થવા દે તે પહેલાં `CLOSED → DEGRADED → OPEN`માં ફેરવાશે (`HALF_OPEN`).
 
-**જો તમને હજી પણ 429 દેખાય**: તે પ્રદાતા માટેના સક્રિય એકાઉન્ટનો _ક્વોટા_ ખરેખર સમાપ્ત થઈ ગયો છે (માત્ર દર મર્યાદા નહીં). OmniRoute ડૅશબોર્ડ → Providers → Accountsમાં એ જ પ્રદાતા માટે બીજું એકાઉન્ટ ઉમેરો, અથવા અન્ય મફત પ્રદાતા (દા.ત. `routeway`, `auggie`) પણ સામેલ કરો. રોટેશન માત્ર ક્ષણિક દર/400/401માં મદદ કરે છે; ક્વોટા સંપૂર્ણ સમાપ્ત થાય ત્યારે બીજી ક્રેડેન્શિયલ અથવા અલગ પ્રદાતા જરૂરી છે.
+**જો તમને હજી પણ 429 દેખાય**: તે પ્રદાતા માટેના સક્રિય એકાઉન્ટનો _ક્વોટા_ ખરેખર સમાપ્ત થઈ ગયો છે (માત્ર દર મર્યાદા નહીં). 67router ડૅશબોર્ડ → Providers → Accountsમાં એ જ પ્રદાતા માટે બીજું એકાઉન્ટ ઉમેરો, અથવા અન્ય મફત પ્રદાતા (દા.ત. `routeway`, `auggie`) પણ સામેલ કરો. રોટેશન માત્ર ક્ષણિક દર/400/401માં મદદ કરે છે; ક્વોટા સંપૂર્ણ સમાપ્ત થાય ત્યારે બીજી ક્રેડેન્શિયલ અથવા અલગ પ્રદાતા જરૂરી છે.
 
 **જો તમને વિઝન મોડલ (`auto/vision`, `bazaarlink/*`) પર 403 દેખાય**: કનેક્ટ કરેલા એકાઉન્ટ પાસે વિઝન સમાવતી પેઇડ યોજના નથી, અથવા API key પાસે પૂરતી પરવાનગીઓ નથી. પ્રદાતાના ડૅશબોર્ડમાં ચકાસો કે key scopeમાં વિઝન/મલ્ટિમોડલ સામેલ છે, અથવા પેઇડ ટિઅર એકાઉન્ટ કનેક્ટ કરીને તેને વિઝન ટાર્ગેટ તરીકે રાખો.
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # ધીમા અપસ્ટ્
 
 જ્યારે તમે `npm install -g omniroute` ચલાવો છો, ત્યારે તમને `npm warn ERESOLVE`, peer-dependency સૂચનાઓ અને `deprecated` સંદેશાઓ જેવી ઘણી ચેતવણીઓ દેખાઈ શકે છે. **આ અપેક્ષિત અને હાનિરહિત છે.** જો આઉટપુટમાં `added <N> packages` દેખાય, તો તમારું ઇન્સ્ટોલેશન સફળ થયું છે.
 
-peer-dependency resolution ચેતવણીઓને દબાવવા માટે, OmniRouteનું સમર્થિત ઇન્સ્ટોલેશન સ્વરૂપ વાપરો:
+peer-dependency resolution ચેતવણીઓને દબાવવા માટે, 67routerનું સમર્થિત ઇન્સ્ટોલેશન સ્વરૂપ વાપરો:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` માત્ર `ERESOLVE` અને peer-dependency સૂચનાઓને દબાવે છે. Deprecation સૂચનાઓ દેખાતી રહે છે, કારણ કે તે transitive third-party packagesમાંથી આવે છે; તે ઇન્સ્ટોલેશન નિષ્ફળ ગયું હોવાનું સૂચવતી નથી.
 
-આ ચેતવણીઓ એવા third-party packagesમાં રહેલી જૂની peer-dependency rangesને કારણે આવે છે, જેને OmniRoute નિયંત્રિત કરતું નથી:
+આ ચેતવણીઓ એવા third-party packagesમાં રહેલી જૂની peer-dependency rangesને કારણે આવે છે, જેને 67router નિયંત્રિત કરતું નથી:
 
 1. **`marked-terminal`ને `marked >=1 <16` જોઈએ છે, પરંતુ `marked@18` મળ્યું** — વ્યવહારમાં યોગ્ય રીતે કાર્ય કરે છે; upstream peer range માત્ર જૂની છે.
 2. **`deprecated prebuild-install@7.1.3`** — transitive native-binary fetch helper. તેનો ઉપયોગ
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### શું આ ચેતવણીને અવગણી શકાય છે?
 
-**આંશિક રીતે, પરંતુ સ્ક્રિપ્ટ્સ વિના ચલાવવાની ભલામણ કરવામાં આવતી નથી.** OmniRoute માં સુગમ ફૉલબૅક્સ સામેલ છે: જો standalone bundle માંથી મૂળ `better-sqlite3` bindings લોડ ન થઈ શકે, તો ઍપ્લિકેશન `node:sqlite` અથવા `sql.js` જેવા વૈકલ્પિક drivers નો ઉપયોગ કરે છે (જુઓ [SQLite રનટાઇમ રિઝોલ્યુશન](../ops/SQLITE_RUNTIME.md)). સર્વર હજુ પણ શરૂ થશે, પરંતુ `sql.js` જેવા WASM ફૉલબૅક્સ પર ચલાવવાથી SQLite WAL (Write-Ahead Logging) મોડ અક્ષમ થાય છે અને મેમરી તથા disk-sync ઓવરહેડ વધે છે.
+**આંશિક રીતે, પરંતુ સ્ક્રિપ્ટ્સ વિના ચલાવવાની ભલામણ કરવામાં આવતી નથી.** 67router માં સુગમ ફૉલબૅક્સ સામેલ છે: જો standalone bundle માંથી મૂળ `better-sqlite3` bindings લોડ ન થઈ શકે, તો ઍપ્લિકેશન `node:sqlite` અથવા `sql.js` જેવા વૈકલ્પિક drivers નો ઉપયોગ કરે છે (જુઓ [SQLite રનટાઇમ રિઝોલ્યુશન](../ops/SQLITE_RUNTIME.md)). સર્વર હજુ પણ શરૂ થશે, પરંતુ `sql.js` જેવા WASM ફૉલબૅક્સ પર ચલાવવાથી SQLite WAL (Write-Ahead Logging) મોડ અક્ષમ થાય છે અને મેમરી તથા disk-sync ઓવરહેડ વધે છે.
 
 ### કઈ સ્ક્રિપ્ટ્સ ખરેખર જરૂરી છે?
 
-OmniRoute ચલાવવા માટે બધી અવરોધિત સ્ક્રિપ્ટ્સ આવશ્યક નથી:
+67router ચલાવવા માટે બધી અવરોધિત સ્ક્રિપ્ટ્સ આવશ્યક નથી:
 
-- **આવશ્યક (`omniroute`, `better-sqlite3`):** OmniRoute Next.js standalone application bundle (`dist/`) માંથી ચાલે છે. ઇન્સ્ટોલેશન દરમિયાન, npm ટોચના સ્તરના `node_modules/better-sqlite3/` માં હોસ્ટ-વિશિષ્ટ મૂળ SQLite driver ડાઉનલોડ અથવા કમ્પાઇલ કરે છે. ત્યારબાદ OmniRoute ની `postinstall` સ્ક્રિપ્ટ (`scripts/build/postinstall.mjs`) આ હોસ્ટ-વિશિષ્ટ binaries ને ચકાસે છે અને `dist/node_modules/` માં કૉપિ કરે છે, જેથી standalone server તેમને ઍક્સેસ કરી શકે. જો `omniroute` ની postinstall સ્ક્રિપ્ટ અવરોધિત હોય, તો આ કૉપિ પગલું છોડી દેવામાં આવે છે.
+- **આવશ્યક (`omniroute`, `better-sqlite3`):** 67router Next.js standalone application bundle (`dist/`) માંથી ચાલે છે. ઇન્સ્ટોલેશન દરમિયાન, npm ટોચના સ્તરના `node_modules/better-sqlite3/` માં હોસ્ટ-વિશિષ્ટ મૂળ SQLite driver ડાઉનલોડ અથવા કમ્પાઇલ કરે છે. ત્યારબાદ 67router ની `postinstall` સ્ક્રિપ્ટ (`scripts/build/postinstall.mjs`) આ હોસ્ટ-વિશિષ્ટ binaries ને ચકાસે છે અને `dist/node_modules/` માં કૉપિ કરે છે, જેથી standalone server તેમને ઍક્સેસ કરી શકે. જો `omniroute` ની postinstall સ્ક્રિપ્ટ અવરોધિત હોય, તો આ કૉપિ પગલું છોડી દેવામાં આવે છે.
 - **વૈકલ્પિક/પરોક્ષ (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** આ build helpers, watcher tools અથવા system keychain utilities છે. તેમને મંજૂરી આપવાથી build ચેતવણીઓ અટકે છે, પરંતુ core routing કાર્યક્ષમતા માટે તેઓ જરૂરી નથી.
-- **બાકાત (`onnxruntime-node`):** આ સ્થાનિક AI embeddings માટેની વૈકલ્પિક dependency છે અને OmniRoute ચલાવવા માટે **જરૂરી નથી**. તેની postinstall સ્ક્રિપ્ટ NuGet માંથી આશરે 300MB ની CUDA assets ડાઉનલોડ કરે છે; જ્યાં સુધી તમે સમર્થિત હાર્ડવેર પર સ્થાનિક ONNX acceleration નો સ્પષ્ટપણે ઉપયોગ કરવા ન ઇચ્છતા હો, ત્યાં સુધી તેને allow-list માં સામેલ કરશો નહીં.
+- **બાકાત (`onnxruntime-node`):** આ સ્થાનિક AI embeddings માટેની વૈકલ્પિક dependency છે અને 67router ચલાવવા માટે **જરૂરી નથી**. તેની postinstall સ્ક્રિપ્ટ NuGet માંથી આશરે 300MB ની CUDA assets ડાઉનલોડ કરે છે; જ્યાં સુધી તમે સમર્થિત હાર્ડવેર પર સ્થાનિક ONNX acceleration નો સ્પષ્ટપણે ઉપયોગ કરવા ન ઇચ્છતા હો, ત્યાં સુધી તેને allow-list માં સામેલ કરશો નહીં.
 
 ### ભલામણ કરેલો ઉકેલ
 
-વૈશ્વિક ઇન્સ્ટોલેશન દરમિયાન જરૂરી install scripts ને મંજૂરી આપવા અને ચેતવણીઓ બંધ કરવા માટે, OmniRoute અને તેની મૂળ dependencies માટે `--allow-scripts` પાસ કરો:
+વૈશ્વિક ઇન્સ્ટોલેશન દરમિયાન જરૂરી install scripts ને મંજૂરી આપવા અને ચેતવણીઓ બંધ કરવા માટે, 67router અને તેની મૂળ dependencies માટે `--allow-scripts` પાસ કરો:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ omniroute doctor
 Playwright ઇરાદાપૂર્વક બ્રાઉઝર ડાઉનલોડને npm પૅકેજના
 ઇન્સ્ટૉલેશનથી અલગ રાખે છે, તેથી બ્રાઉઝર ઇન્સ્ટૉલ ન થાય ત્યાં સુધી આ પ્રતિસાદ અપેક્ષિત છે.
 
-વૈશ્વિક npm ઇન્સ્ટૉલેશન માટે, OmniRoute પૅકેજની
+વૈશ્વિક npm ઇન્સ્ટૉલેશન માટે, 67router પૅકેજની
 ડિરેક્ટરીમાંથી Chromium ઇન્સ્ટૉલ કરો, જેથી બ્રાઉઝર કૅશ એ જ Playwright ઇન્સ્ટૉલેશન સાથે સંકળાયેલ રહે:
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-ઇન્સ્ટૉલેશન પછી OmniRoute પુનઃપ્રારંભ કરો, ત્યારબાદ Gemini Web વિનંતીનો ફરી પ્રયાસ કરો. જો તમે
-Docker ઇમેજમાંથી OmniRoute ચલાવતા હો, તો `-web` ઇમેજ (અથવા `runner-web`
+ઇન્સ્ટૉલેશન પછી 67router પુનઃપ્રારંભ કરો, ત્યારબાદ Gemini Web વિનંતીનો ફરી પ્રયાસ કરો. જો તમે
+Docker ઇમેજમાંથી 67router ચલાવતા હો, તો `-web` ઇમેજ (અથવા `runner-web`
 બિલ્ડ ટાર્ગેટ) વાપરો, જેમાં Chromium અને તેની નિર્ભરતાઓ સમાવિષ્ટ છે; બેઝ ઇમેજમાં
 તે સામેલ નથી.
 
@@ -188,7 +188,7 @@ Docker ઇમેજમાંથી OmniRoute ચલાવતા હો, તો `
 **આ ખોટો પોઝિટિવ છે. કંઈપણ સંક્રમિત નથી અને કોઈ કાર્યવાહી જરૂરી નથી.**
 
 Avast અને AVG એવી હ્યુરિસ્ટિક ચલાવે છે જે ઘણા HTTP વિનંતી જેવા દેખાતા લિંક્સ ધરાવતી
-પ્લેઇન-ટેક્સ્ટ/Markdown ફાઇલોને ફ્લૅગ કરે છે. OmniRoute નું `README.md` npm પૅકેજની અંદર આવે છે (તે
+પ્લેઇન-ટેક્સ્ટ/Markdown ફાઇલોને ફ્લૅગ કરે છે. 67router નું `README.md` npm પૅકેજની અંદર આવે છે (તે
 `package.json` → `files` માં સૂચિબદ્ધ છે), તેથી વૈશ્વિક ઇન્સ્ટોલેશન વખતે તે
 `node_modules/omniroute/README.md` પર પહોંચે છે — અને તેમાં ~15 `http://localhost:20128/...`
 ઉદાહરણો (MCP HTTP/SSE એન્ડપોઇન્ટ્સ, A2A `.well-known` URL અને `curl` સ્નિપેટ્સ) છે. લિંકની આટલી
@@ -205,7 +205,7 @@ Avast અને AVG એવી હ્યુરિસ્ટિક ચલાવે 
 
 1. **સૂચનાઓ બંધ કરો** — તમારા એન્ટિવાયરસમાં ઇન્સ્ટોલેશન ડિરેક્ટરીને બાકાત રાખો
    (Avast: Settings → Exceptions), અને તેમાં તમારો વૈશ્વિક `node_modules` પાથ અને/અથવા
-   OmniRoute ડેટા ડિર (`~/.omniroute/`) ઉમેરો.
+   67router ડેટા ડિર (`~/.omniroute/`) ઉમેરો.
 2. **ખોટા પોઝિટિવની જાણ કરો** — <https://www.avast.com/false-positive-file-form.php>,
    અને ક્વોરન્ટાઇન કરેલું `README.md` જોડો. આ એવો ઉપાય છે જે દરેકને મદદ કરે છે, કારણ કે અહીં
    વેન્ડરની હ્યુરિસ્ટિક ટેક્સ્ટ ફાઇલ પર અતિશય પ્રતિક્રિયા આપી રહી છે.
@@ -266,7 +266,7 @@ NSIS ઇન્સ્ટોલરની કોઈ પ્રતિષ્ઠા હ
 
 ### લૉગિન પેજ ક્રૅશ થાય છે અથવા "Module self-registration" ભૂલ દર્શાવે છે
 
-**કારણ:** તમે OmniRoute દ્વારા મંજૂર સુરક્ષિત રનટાઇમની લઘુતમ મર્યાદાની બહારનું Node.js વર્ઝન ચલાવી રહ્યા છો. સૌથી સામાન્ય કિસ્સો Node 22 અથવા 24નું એવું જૂનું પૅચ લેવલ ચલાવવાનો છે, જે OmniRoute માટે જરૂરી પૅચ કરેલી સુરક્ષા મર્યાદાથી નીચે હોય.
+**કારણ:** તમે 67router દ્વારા મંજૂર સુરક્ષિત રનટાઇમની લઘુતમ મર્યાદાની બહારનું Node.js વર્ઝન ચલાવી રહ્યા છો. સૌથી સામાન્ય કિસ્સો Node 22 અથવા 24નું એવું જૂનું પૅચ લેવલ ચલાવવાનો છે, જે 67router માટે જરૂરી પૅચ કરેલી સુરક્ષા મર્યાદાથી નીચે હોય.
 
 **લક્ષણો:**
 
@@ -282,7 +282,7 @@ NSIS ઇન્સ્ટોલરની કોઈ પ્રતિષ્ઠા હ
    nvm use 24
    ```
 2. તમારું વર્ઝન ચકાસો: `node --version` એ 24.x LTS શ્રેણીમાં `v24.0.0` અથવા તેનાથી નવું વર્ઝન દર્શાવવું જોઈએ
-3. OmniRoute ફરીથી ઇન્સ્ટૉલ કરો: `npm install -g omniroute`
+3. 67router ફરીથી ઇન્સ્ટૉલ કરો: `npm install -g omniroute`
 4. ફરી શરૂ કરો: `omniroute`
 
 > **સમર્થિત સુરક્ષિત વર્ઝન:** `>=22.22.2 <23` અથવા `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) અને Node.js 26 સંપૂર્ણપણે સમર્થિત છે.
@@ -365,13 +365,13 @@ omniroute
 
 **કારણ:** Node.js 22 પર undici@8 ડિસ્પેચર, Node ના બિલ્ટ-ઇન `fetch()` અમલીકરણ સાથે અસંગત છે.
 
-**ઉકેલ (v3.5.5+):** પ્રોક્સી ડિસ્પેચર સક્રિય હોય ત્યારે OmniRoute હવે undici ના પોતાના `fetch()` ફંક્શનનો ઉપયોગ કરે છે, જેથી સુસંગત વર્તન સુનિશ્ચિત થાય. v3.5.5+ પર અપડેટ કરો.
+**ઉકેલ (v3.5.5+):** પ્રોક્સી ડિસ્પેચર સક્રિય હોય ત્યારે 67router હવે undici ના પોતાના `fetch()` ફંક્શનનો ઉપયોગ કરે છે, જેથી સુસંગત વર્તન સુનિશ્ચિત થાય. v3.5.5+ પર અપડેટ કરો.
 
 ### WSL હેઠળ MITM પ્રોક્સી: Windows હોસ્ટ પરની ડેસ્કટોપ ઍપ્સ ઇન્ટરસેપ્ટ થતી નથી
 
-**કારણ:** MITM પ્રોક્સી અને તેનું CA સર્ટિફિકેટ OmniRoute જે પર્યાવરણમાં ચાલે છે તેમાં ઇન્સ્ટોલ થાય છે. WSL હેઠળ તે પર્યાવરણ Linux ગેસ્ટ છે, જ્યારે AI ડેસ્કટોપ ઍપ્સ (Kiro, Trae, Copilot, Zed, …) Windows હોસ્ટ પર ચાલે છે. હોસ્ટ ઍપ્સ ગેસ્ટના સર્ટિફિકેટ સ્ટોર પર વિશ્વાસ કરતી નથી અને ગેસ્ટના સિસ્ટમ પ્રોક્સી મારફતે રૂટ થતી નથી, તેથી ડેસ્કટોપ ઇન્ટરસેપ્શન ત્યાં સક્રિય થતું નથી.
+**કારણ:** MITM પ્રોક્સી અને તેનું CA સર્ટિફિકેટ 67router જે પર્યાવરણમાં ચાલે છે તેમાં ઇન્સ્ટોલ થાય છે. WSL હેઠળ તે પર્યાવરણ Linux ગેસ્ટ છે, જ્યારે AI ડેસ્કટોપ ઍપ્સ (Kiro, Trae, Copilot, Zed, …) Windows હોસ્ટ પર ચાલે છે. હોસ્ટ ઍપ્સ ગેસ્ટના સર્ટિફિકેટ સ્ટોર પર વિશ્વાસ કરતી નથી અને ગેસ્ટના સિસ્ટમ પ્રોક્સી મારફતે રૂટ થતી નથી, તેથી ડેસ્કટોપ ઇન્ટરસેપ્શન ત્યાં સક્રિય થતું નથી.
 
-**ભલામણ:** તમે જે ડેસ્કટોપ ઍપ્સને ઇન્ટરસેપ્ટ કરવા માંગો છો, તે જ OS પર OmniRoute ને નેટિવ રીતે ચલાવો (Windows ઍપ્સ માટે Windows; તેવી જ રીતે macOS/Linux). હોસ્ટ ઍપ્સને લક્ષ્ય બનાવતી વખતે OmniRoute ને WSL ની અંદર રાખવા માટે Windows હોસ્ટ પર જનરેટ થયેલ CA સર્ટિફિકેટને મૅન્યુઅલી વિશ્વસનીય બનાવવું અને દરેક હોસ્ટ ઍપના નેટવર્ક/પ્રોક્સી સેટિંગ્સને WSL પ્રોક્સી એન્ડપોઇન્ટ તરફ નિર્દેશિત કરવું જરૂરી છે — આ અસપોર્ટેડ અને અસ્થિર સેટઅપ છે.
+**ભલામણ:** તમે જે ડેસ્કટોપ ઍપ્સને ઇન્ટરસેપ્ટ કરવા માંગો છો, તે જ OS પર 67router ને નેટિવ રીતે ચલાવો (Windows ઍપ્સ માટે Windows; તેવી જ રીતે macOS/Linux). હોસ્ટ ઍપ્સને લક્ષ્ય બનાવતી વખતે 67router ને WSL ની અંદર રાખવા માટે Windows હોસ્ટ પર જનરેટ થયેલ CA સર્ટિફિકેટને મૅન્યુઅલી વિશ્વસનીય બનાવવું અને દરેક હોસ્ટ ઍપના નેટવર્ક/પ્રોક્સી સેટિંગ્સને WSL પ્રોક્સી એન્ડપોઇન્ટ તરફ નિર્દેશિત કરવું જરૂરી છે — આ અસપોર્ટેડ અને અસ્થિર સેટઅપ છે.
 
 ---
 
@@ -398,7 +398,7 @@ omniroute
 
 ### OAuth ટોકનની સમયમર્યાદા સમાપ્ત થઈ
 
-OmniRoute ટોકન્સને આપમેળે રિફ્રેશ કરે છે. જો સમસ્યાઓ યથાવત્ રહે:
+67router ટોકન્સને આપમેળે રિફ્રેશ કરે છે. જો સમસ્યાઓ યથાવત્ રહે:
 
 1. ડૅશબોર્ડ → પ્રોવાઇડર → ફરીથી કનેક્ટ કરો
 2. પ્રોવાઇડર કનેક્શન ડિલીટ કરીને ફરીથી ઉમેરો
@@ -608,7 +608,7 @@ curl http://localhost:20128/api/monitoring/health
 
 ### થન્ડરિંગ હર્ડ વિરોધી સુરક્ષા
 
-જ્યારે અનેક સમકાલીન વિનંતીઓ દર-મર્યાદિત પ્રદાતા સુધી પહોંચે છે, ત્યારે OmniRoute વિનંતીઓને ક્રમબદ્ધ કરવા અને શ્રેણીબદ્ધ નિષ્ફળતાઓ અટકાવવા માટે મ્યુટેક્સ + સ્વચાલિત દર-મર્યાદાનો ઉપયોગ કરે છે. API કી પ્રદાતાઓ માટે આ સ્વચાલિત છે.
+જ્યારે અનેક સમકાલીન વિનંતીઓ દર-મર્યાદિત પ્રદાતા સુધી પહોંચે છે, ત્યારે 67router વિનંતીઓને ક્રમબદ્ધ કરવા અને શ્રેણીબદ્ધ નિષ્ફળતાઓ અટકાવવા માટે મ્યુટેક્સ + સ્વચાલિત દર-મર્યાદાનો ઉપયોગ કરે છે. API કી પ્રદાતાઓ માટે આ સ્વચાલિત છે.
 
 ### ચેટ વિનંતીઓ 503 / chat_admission_busy સાથે નિષ્ફળ થાય છે
 
@@ -644,7 +644,7 @@ curl http://localhost:20128/api/monitoring/health
 ઓછામાં ઓછા `64` ટૂલ્સ અથવા ઓછામાં ઓછા `32,000` અંદાજિત ટોકન્સ હોય, અથવા મર્યાદિત સ્ટ્રક્ચર અંદાજ
 `10,000` મુલાકાત લેવાયેલા નોડ્સ અથવા `12` ઊંડાઈની મર્યાદા વટાવે, ત્યારે વિનંતી સ્ટ્રક્ચરલ રીતે ભારે ગણાય છે.
 
-**કારણ:** આ OmniRouteની અંદર ઇરાદાપૂર્વકનું લોડ શેડિંગ છે, અપસ્ટ્રીમ-પ્રદાતાની નિષ્ફળતા નહીં.
+**કારણ:** આ 67routerની અંદર ઇરાદાપૂર્વકનું લોડ શેડિંગ છે, અપસ્ટ્રીમ-પ્રદાતાની નિષ્ફળતા નહીં.
 દરેક પ્રોસેસ મોટા વિનંતી બોડીને જાળવી રાખવા અને પાર્સ કરતાં પહેલાં મર્યાદિત હેવીવેઇટ ક્ષમતા અનામત રાખવા માટે
 પ્રોસેસ-લોકલ ગાર્ડનો ઉપયોગ કરે છે. SSE
 પ્રતિસાદના સમગ્ર આયુષ્ય દરમિયાન હેવીવેઇટ લીઝ જાળવી રાખવામાં આવે છે.
@@ -689,7 +689,7 @@ false` અને ઉદાર `maxInflightBytes`નો અર્થ છે ક�
 
 ## વૈકલ્પિક RAG / LLM નિષ્ફળતા વર્ગીકરણ (16 સમસ્યાઓ)
 
-કેટલાક OmniRoute વપરાશકર્તાઓ ગેટવેને RAG અથવા એજન્ટ સ્ટૅક્સની આગળ મૂકે છે. આવા સેટઅપ્સમાં એક વિચિત્ર પેટર્ન સામાન્ય રીતે જોવા મળે છે: OmniRoute સ્વસ્થ દેખાય છે (પ્રદાતાઓ કાર્યરત છે, રૂટિંગ પ્રોફાઇલ્સ યોગ્ય છે, કોઈ રેટ લિમિટ ચેતવણીઓ નથી), પરંતુ અંતિમ જવાબ તેમ છતાં ખોટો હોય છે.
+કેટલાક 67router વપરાશકર્તાઓ ગેટવેને RAG અથવા એજન્ટ સ્ટૅક્સની આગળ મૂકે છે. આવા સેટઅપ્સમાં એક વિચિત્ર પેટર્ન સામાન્ય રીતે જોવા મળે છે: 67router સ્વસ્થ દેખાય છે (પ્રદાતાઓ કાર્યરત છે, રૂટિંગ પ્રોફાઇલ્સ યોગ્ય છે, કોઈ રેટ લિમિટ ચેતવણીઓ નથી), પરંતુ અંતિમ જવાબ તેમ છતાં ખોટો હોય છે.
 
 વ્યવહારમાં, આ ઘટનાઓ સામાન્ય રીતે ગેટવેમાંથી નહીં, પરંતુ ડાઉનસ્ટ્રીમ RAG પાઇપલાઇનમાંથી ઉદ્ભવે છે.
 
@@ -708,17 +708,17 @@ false` અને ઉદાર `maxInflightBytes`નો અર્થ છે ક�
 
 1. જ્યારે તમે ખરાબ પ્રતિસાદની તપાસ કરો, ત્યારે આ માહિતી કૅપ્ચર કરો:
    - વપરાશકર્તાનું કાર્ય અને વિનંતી
-   - OmniRoute માં રૂટ અથવા પ્રદાતા કોમ્બો
+   - 67router માં રૂટ અથવા પ્રદાતા કોમ્બો
    - ડાઉનસ્ટ્રીમમાં ઉપયોગમાં લેવાયેલ કોઈપણ RAG કોન્ટેક્સ્ટ (પ્રાપ્ત કરાયેલા દસ્તાવેજો, ટૂલ કૉલ્સ વગેરે)
 2. ઘટનાને એક અથવા બે WFGY ProblemMap નંબરો (`No.1` … `No.16`) સાથે મેપ કરો.
-3. OmniRoute લૉગ્સની બાજુમાં તમારા પોતાના ડૅશબોર્ડ, રનબુક અથવા ઇન્સિડન્ટ ટ્રૅકરમાં નંબર સંગ્રહિત કરો.
+3. 67router લૉગ્સની બાજુમાં તમારા પોતાના ડૅશબોર્ડ, રનબુક અથવા ઇન્સિડન્ટ ટ્રૅકરમાં નંબર સંગ્રહિત કરો.
 4. તમારે તમારા RAG સ્ટૅક, રિટ્રીવર અથવા રૂટિંગ વ્યૂહરચનામાં ફેરફાર કરવાની જરૂર છે કે નહીં તે નક્કી કરવા માટે સંબંધિત WFGY પેજનો ઉપયોગ કરો.
 
 સંપૂર્ણ ટેક્સ્ટ અને ચોક્કસ રીતો અહીં ઉપલબ્ધ છે (MIT લાઇસન્સ, માત્ર ટેક્સ્ટ):
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-જો તમે OmniRoute પાછળ RAG અથવા એજન્ટ પાઇપલાઇન્સ ચલાવતા ન હો, તો તમે આ વિભાગને અવગણી શકો છો.
+જો તમે 67router પાછળ RAG અથવા એજન્ટ પાઇપલાઇન્સ ચલાવતા ન હો, તો તમે આ વિભાગને અવગણી શકો છો.
 
 ---
 
@@ -742,7 +742,7 @@ v3.8.0 રિલીઝને લગતી વિશિષ્ટ સમસ્ય�
 
 1. તમારા પ્લેટફોર્મ માટે Devin CLI ઇન્સ્ટૉલ કરો
 2. `.env` માં `CLI_DEVIN_BIN=/usr/local/bin/devin` (અથવા વાસ્તવિક પાથ) સેટ કરો
-3. OmniRoute પુનઃપ્રારંભ કરો અને **ડૅશબોર્ડ → CLI ટૂલ્સ** માંથી ફરી પરીક્ષણ કરો
+3. 67router પુનઃપ્રારંભ કરો અને **ડૅશબોર્ડ → CLI ટૂલ્સ** માંથી ફરી પરીક્ષણ કરો
 
 ### મોડલ કૂલડાઉન અટવાયેલું છે (મૅન્યુઅલ રીસેટ)
 
@@ -797,7 +797,7 @@ v3.8.0 રિલીઝને લગતી વિશિષ્ટ સમસ્ય�
 
 1. રૅન્ડમ સિક્રેટ જનરેટ કરો: `openssl rand -hex 32`
 2. પ્રોડક્શન સર્વર એન્વાયર્નમેન્ટમાં (અને બ્રિજ સાથે સંચાર કરતા કોઈપણ ક્લાયન્ટમાં) `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` સેટ કરો
-3. OmniRoute પુનઃપ્રારંભ કરો
+3. 67router પુનઃપ્રારંભ કરો
 
 ### Responses API: બૅકગ્રાઉન્ડ મોડને સિંક્રોનસમાં ડિગ્રેડ કરવામાં આવ્યો છે
 

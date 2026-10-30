@@ -7,15 +7,15 @@
 > **Isi mmalite:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute na-enye ụzọ atọ dị iche iche metụtara ndị nnọchi anya. Ha yiri ibe ha na nlele mbụ, mana ha na-edozi nsogbu dị iche iche. Jiri ibe a họrọ nke kwesịrị ekwesị.
+67router na-enye ụzọ atọ dị iche iche metụtara ndị nnọchi anya. Ha yiri ibe ha na nlele mbụ, mana ha na-edozi nsogbu dị iche iche. Jiri ibe a họrọ nke kwesịrị ekwesị.
 
 ## Nchịkọta nkenke
 
 | Ụzọ                                             | Nke ọ kacha mma maka                                                                                                                                   | Ụzọ mbufe                    | Ụkpụrụ                            |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------- |
 | **A2A — Onye nnọchi anya nye Onye nnọchi anya** | Mmekọrịta gafee ndị nnọchi anya na ndị nnọchi anya ibe ha na-eji protocol A2A                                                                          | JSON-RPC 2.0 site na HTTP    | A2A v0.3 (nkọwapụta mepere emepe) |
-| **ACP — Ndebanye aha ndị nnọchi anya CLI**      | Ịchọpụta / idebanye aha / ịmalite ndị nnọchi anya CLI maka ide koodu arụnyere na kọmputa onye ọrụ (Cursor, Cline, Codex CLI, Claude Code, Aider, wdg.) | HTTP REST                    | Nke OmniRoute kpọmkwem            |
-| **Ndị nnọchi anya Cloud**                       | Izipụ ọrụ ide koodu na-ewe ogologo oge na ọrụ cloud mpụga (Codex Cloud, Devin, Jules, Cursor Cloud)                                                    | HTTP REST + ọrụ DB na-akwado | Nke OmniRoute kpọmkwem            |
+| **ACP — Ndebanye aha ndị nnọchi anya CLI**      | Ịchọpụta / idebanye aha / ịmalite ndị nnọchi anya CLI maka ide koodu arụnyere na kọmputa onye ọrụ (Cursor, Cline, Codex CLI, Claude Code, Aider, wdg.) | HTTP REST                    | Nke 67router kpọmkwem             |
+| **Ndị nnọchi anya Cloud**                       | Izipụ ọrụ ide koodu na-ewe ogologo oge na ọrụ cloud mpụga (Codex Cloud, Devin, Jules, Cursor Cloud)                                                    | HTTP REST + ọrụ DB na-akwado | Nke 67router kpọmkwem             |
 
 Ha atọ anaghị adabere n’otu ibe ha — họrọ ngwakọta ọ bụla.
 
@@ -38,14 +38,14 @@ Ha atọ anaghị adabere n’otu ibe ha — họrọ ngwakọta ọ bụla.
 ## 1. A2A — Onye nnọchi anya nye Onye nnọchi anya
 
 **Nkọwapụta:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
+**Endpoint 67router:** `POST /a2a` (JSON-RPC 2.0)
 **Kaadị Onye nnọchi anya:** `GET /.well-known/agent.json`
 
 ### Mgbe a ga-eji ya
 
-- Mgbe ị na-ewu sistemụ nwere ọtụtụ ndị nnọchi anya ebe OmniRoute bụ otu n’ime ndị otu ya
-- Mgbe ị na-enye ndị nnọchi anya nọ na framework dịka Google ADK ma ọ bụ netwọkụ ndị nnọchi anya izugbe ohere iji ọgụgụ isi ntụgharị ụzọ nke OmniRoute (smart-routing, quota-management, wdg.)
-- Mgbe ị na-etinye OmniRoute n’azụ ụzọ ọkọlọtọ maka nchọpụta + ịkpọ ọrụ
+- Mgbe ị na-ewu sistemụ nwere ọtụtụ ndị nnọchi anya ebe 67router bụ otu n’ime ndị otu ya
+- Mgbe ị na-enye ndị nnọchi anya nọ na framework dịka Google ADK ma ọ bụ netwọkụ ndị nnọchi anya izugbe ohere iji ọgụgụ isi ntụgharị ụzọ nke 67router (smart-routing, quota-management, wdg.)
+- Mgbe ị na-etinye 67router n’azụ ụzọ ọkọlọtọ maka nchọpụta + ịkpọ ọrụ
 
 ### Metọd
 
@@ -69,12 +69,12 @@ Lee [A2A-SERVER.md](./A2A-SERVER.md) maka nkọwa ụzọ mbufe, nhazi kaadị o
 
 ## 2. ACP — Ndebanye Aha Ndị Nnọchi Anya CLI
 
-**Ebe njedebe OmniRoute:** `GET /api/acp/agents`
+**Ebe njedebe 67router:** `GET /api/acp/agents`
 **Isi mmalite:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Ihe ọ bụ
 
-ACP bụ **ndepụta ndị nnọchi anya CLI dị na mpaghara** nke OmniRoute. Ọ na-achọpụta CLI ide koodu ndị arụnyere na kọmputa nnabata (Cursor, Cline, Claude Code, Codex CLI, Continue, wdg.), na-achọpụta ụdị ha, ma na-egosi ha na dashboard ka onye ọrụ nwee ike ịhazi CLI ọ bụla ka ọ na-arụtụ aka na OmniRoute.
+ACP bụ **ndepụta ndị nnọchi anya CLI dị na mpaghara** nke 67router. Ọ na-achọpụta CLI ide koodu ndị arụnyere na kọmputa nnabata (Cursor, Cline, Claude Code, Codex CLI, Continue, wdg.), na-achọpụta ụdị ha, ma na-egosi ha na dashboard ka onye ọrụ nwee ike ịhazi CLI ọ bụla ka ọ na-arụtụ aka na 67router.
 
 Akụkụ HTTP bụ ndepụta dị n'ime nke na-akwado UI "CLI Tools" na
 nsochi akara njirimara CLI (lee [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). N'akụkụ ọzọ,
@@ -114,8 +114,8 @@ Lee [ndebanye aha ACP na ndị mbido](./ACP.md) maka ọnọdụ na oke ndị ah
 
 ### Ojiji ndị a na-ahụkarị
 
-- Ibe "CLI Tools" nke dashboard na-edepụta ihe ndị arụnyere ma na-enyere gị aka ime ka nke ọ bụla rụtụ aka na OmniRoute
-- Ndị nnọchi anya omenala na-enye ndị ọrụ nwere nkà dị elu ohere idebanye CLI dị n'ime/nke nzuzo nke OmniRoute na-amaghị na ndabara
+- Ibe "CLI Tools" nke dashboard na-edepụta ihe ndị arụnyere ma na-enyere gị aka ime ka nke ọ bụla rụtụ aka na 67router
+- Ndị nnọchi anya omenala na-enye ndị ọrụ nwere nkà dị elu ohere idebanye CLI dị n'ime/nke nzuzo nke 67router na-amaghị na ndabara
 - Nsonaazụ nchọpụta na-enye matrix akara njirimara `cli-tools` data
 
 ### Mgbe a na-ekwesịghị iji ACP
@@ -127,12 +127,12 @@ Lee [ndebanye aha ACP na ndị mbido](./ACP.md) maka ọnọdụ na oke ndị ah
 
 ## 3. Ndị Ejenị Cloud
 
-**Ebe njedebe OmniRoute:** `/api/v1/agents/tasks/*` (usoro ndụ) + `/api/cloud/*` (njikọ teknụzụ)
+**Ebe njedebe 67router:** `/api/v1/agents/tasks/*` (usoro ndụ) + `/api/cloud/*` (njikọ teknụzụ)
 **Isi mmalite:** `src/lib/cloudAgent/`
 
 ### Ihe ọ bụ
 
-Interface jikọtara ọnụ maka ndị ejenị cloud nke ụlọ ọrụ ndị ọzọ ji ede koodu. Ị na-eziga prompt + URL repo, OmniRoute eziga ya n'aka ejenị cloud kwesịrị ekwesị, na-enyocha ọkwa ya ugboro ugboro, ma weghachite nsonaazụ.
+Interface jikọtara ọnụ maka ndị ejenị cloud nke ụlọ ọrụ ndị ọzọ ji ede koodu. Ị na-eziga prompt + URL repo, 67router eziga ya n'aka ejenị cloud kwesịrị ekwesị, na-enyocha ọkwa ya ugboro ugboro, ma weghachite nsonaazụ.
 
 ### Ndị ejenị akwadoro (4, a kwadoro ha niile na `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Ha abụọ nwere “ọrụ na-ewe ogologo oge” mana n'ọkwa dị iche iche:
 
 | Akụkụ                 | A2A                                                                                        | Cloud Agents                               |
 | --------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| Ọkọlọtọ               | Open A2A v0.3                                                                              | Nke OmniRoute kpọmkwem                     |
-| Ebe mgbakọ na-arụ ọrụ | N'ime OmniRoute (na-eji ngwakọta ahaziri)                                                  | N'èzí (sava Codex / Devin / Jules)         |
+| Ọkọlọtọ               | Open A2A v0.3                                                                              | Nke 67router kpọmkwem                      |
+| Ebe mgbakọ na-arụ ọrụ | N'ime 67router (na-eji ngwakọta ahaziri)                                                   | N'èzí (sava Codex / Devin / Jules)         |
 | Ogologo oge ọrụ       | TTL ndabara bụ nkeji 5 (enwere ike ịhazi ya na `TaskManager`)                              | Site na nkeji ruo ọtụtụ awa                |
 | Ọ na-aghọta repo      | Mba (ọ na-ebufe naanị ntụziaka)                                                            | Ee (URL repo + branch)                     |
 | Ihe eji ya eme        | Mmekọrịta n'etiti ndị agent, smart routing dị ka ọrụ                                       | Nyefee ọrụ “mepụta feature X n'ime repo Y” |
@@ -182,7 +182,7 @@ Ha abụọ nwere “ọrụ na-ewe ogologo oge” mana n'ọkwa dị iche iche:
 
 ## Ihe Nlereanya Njikọta
 
-### Chọpụta ikike A2A nke OmniRoute
+### Chọpụta ikike A2A nke 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Ọ na-eweghachi Agent Card nke nwere nkà 6 niile, ụzọ mbufe, na ụdị.
 
-### Kpọọ OmniRoute dị ka agent A2A
+### Kpọọ 67router dị ka agent A2A
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute Core    │
+                │   67router Core    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

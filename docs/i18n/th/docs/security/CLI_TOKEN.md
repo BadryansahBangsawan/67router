@@ -6,7 +6,7 @@
 
 ## ภาพรวม
 
-คำสั่ง OmniRoute CLI จะยืนยันตัวตนกับ API การจัดการภายในเครื่องโดยใช้โทเค็น
+คำสั่ง 67router CLI จะยืนยันตัวตนกับ API การจัดการภายในเครื่องโดยใช้โทเค็น
 `HMAC-SHA256(machine-id, salt)` ซึ่งส่งผ่านส่วนหัวคำขอ `x-omniroute-cli-token`
 
 วิธีนี้ช่วยให้คำสั่งย่อยของ CLI (`omniroute status`, `omniroute providers` เป็นต้น)

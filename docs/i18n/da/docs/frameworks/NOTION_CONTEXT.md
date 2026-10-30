@@ -11,11 +11,11 @@
 
 ## Hvad det er
 
-OmniRoute kan oprette forbindelse til et **Notion**-arbejdsområde som en **kontekstkilde** — en
+67router kan oprette forbindelse til et **Notion**-arbejdsområde som en **kontekstkilde** — en
 vidensbase med læse- og skriveadgang, som agenter tilgår via den indbyggede MCP-server. Når et
 Notion-integrationstoken er konfigureret, gør MCP-værktøjerne det muligt for en LLM at søge i sider
 og databaser, læse sideindhold og bloktræer, forespørge databaser med filtre/sorteringer og tilføje
-nye blokke — alt sammen videresendt gennem OmniRoute (med genforsøg, timeout og fejlklassificering),
+nye blokke — alt sammen videresendt gennem 67router (med genforsøg, timeout og fejlklassificering),
 så modellen aldrig tilgår Notion-API'en direkte.
 
 Integrationen er en enkel, robust wrapper omkring den officielle Notion REST API
@@ -40,7 +40,7 @@ dashboard (`ObsidianSourceCard`s søskende `NotionSourceCard`) eller via REST-AP
 > [!NOTE]
 > Tokenet er et **internt Notion-integrationstoken**. Opret en integration på
 > <https://www.notion.com/my-integrations>, og del derefter de sider/databaser, som
-> OmniRoute skal have adgang til, med denne integration (Notions tilladelsesmodel er baseret på deling,
+> 67router skal have adgang til, med denne integration (Notions tilladelsesmodel er baseret på deling,
 > ikke på adgang til hele arbejdsområdet).
 
 ### Konfigurer via REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Alle tre metoder kræver dashboard-godkendelse (`isAuthenticated`). Ved `POST`
-gemmer OmniRoute tokenet og udfører straks en testsøgning med 1 resultat. Hvis Notion
+gemmer 67router tokenet og udfører straks en testsøgning med 1 resultat. Hvis Notion
 returnerer et fejlobjekt, ryddes tokenet, og kaldet mislykkes med `400`.
 
 ## MCP-værktøjer (6)

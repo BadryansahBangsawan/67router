@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute 控制面板" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="67router 控制面板" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — 免费 AI 网关
+# 🚀 67router — 免费 AI 网关
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — 编程永不中断。每款 AI 工具 → 375 个提供者 — 150+ 个免费 — 只需一个端点。通过自动故障转移，将 Claude Code、Codex、Cursor、Cline、Copilot 和 Antigravity 接入免费的 Claude / GPT / Gemini。RTK + Caveman 堆叠压缩可节省 15–95% 的 token（平均约 89%）— 永不触及限额。375 个 AI 提供者 · 150+ 个免费套餐 · 每月约 16.2 亿个免费 token · 20 种路由策略 · $0 起步。"/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — 编程永不中断。每款 AI 工具 → 375 个提供者 — 150+ 个免费 — 只需一个端点。通过自动故障转移，将 Claude Code、Codex、Cursor、Cline、Copilot 和 Antigravity 接入免费的 Claude / GPT / Gemini。RTK + Caveman 堆叠压缩可节省 15–95% 的 token（平均约 89%）— 永不触及限额。375 个 AI 提供者 · 150+ 个免费套餐 · 每月约 16.2 亿个免费 token · 20 种路由策略 · $0 起步。"/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **使用您自己的服务商账户。** 这是对各个符合条件的第三方免费额度的汇总估算，并非 OmniRoute 提供的 Token 赠额。请注册账户、在需要时获取凭据，并连接您可以使用的服务商；每个服务商均自行控制其额度、可用性和条款。
+> **使用您自己的服务商账户。** 这是对各个符合条件的第三方免费额度的汇总估算，并非 67router 提供的 Token 赠额。请注册账户、在需要时获取凭据，并连接您可以使用的服务商；每个服务商均自行控制其额度、可用性和条款。
 >
-> 手动叠加免费额度非常麻烦——数十个 SDK、数十种速率限制，而且根本不知道自己实际拥有多少额度。OmniRoute 收录了**分布在 34 个周期性池键中的 471 个免费层级条目**，并根据**具有已公布正数月度预算的 17 个池，以及 Groq 的五个按模型计算的上限**计算 Token 总量，同时按共享池去重。只有完成区域身份验证后才能启用的额度（目前为 ModelScope）会单独显示，即通过区域身份验证后额外获得约 600 万 Token，并且绝不会计入标题中的总量。计算结果会持续显示在仪表板上（`/dashboard/free-tiers`）。
+> 手动叠加免费额度非常麻烦——数十个 SDK、数十种速率限制，而且根本不知道自己实际拥有多少额度。67router 收录了**分布在 34 个周期性池键中的 471 个免费层级条目**，并根据**具有已公布正数月度预算的 17 个池，以及 Groq 的五个按模型计算的上限**计算 Token 总量，同时按共享池去重。只有完成区域身份验证后才能启用的额度（目前为 ModelScope）会单独显示，即通过区域身份验证后额外获得约 600 万 Token，并且绝不会计入标题中的总量。计算结果会持续显示在仪表板上（`/dashboard/free-tiers`）。
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute 免费额度预算卡片：每月稳定提供约 16.2 亿个免费 Token，首月加上注册赠送额度后最高约 22.2 亿，来自 34 个有文档记录的周期性池键，涵盖通过一个端点访问的 471 个已收录免费层级条目。采用如实的池去重计算方式——每个共享池仅计算一次，包括 17 个具有已公布正数月度 Token 预算的周期性池，以及 Groq 的五个按模型计算的上限；条款风险目录中有 12 个服务商被标记为避免使用，由您自行决定。预算条包括 Mistral 10 亿、Nara 2.1 亿、LLM7 1.5 亿、xKiro 1.5 亿、Groq 3000 万（五个按模型计算的上限）以及其他较小的池；首月注册赠送额度和永久免费的无 Token 上限服务商会单独显示，因此绝不会虚增标题中的总量。可在 /dashboard/free-tiers 查看实时已用量和剩余额度。"/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="67router 免费额度预算卡片：每月稳定提供约 16.2 亿个免费 Token，首月加上注册赠送额度后最高约 22.2 亿，来自 34 个有文档记录的周期性池键，涵盖通过一个端点访问的 471 个已收录免费层级条目。采用如实的池去重计算方式——每个共享池仅计算一次，包括 17 个具有已公布正数月度 Token 预算的周期性池，以及 Groq 的五个按模型计算的上限；条款风险目录中有 12 个服务商被标记为避免使用，由您自行决定。预算条包括 Mistral 10 亿、Nara 2.1 亿、LLM7 1.5 亿、xKiro 1.5 亿、Groq 3000 万（五个按模型计算的上限）以及其他较小的池；首月注册赠送额度和永久免费的无 Token 上限服务商会单独显示，因此绝不会虚增标题中的总量。可在 /dashboard/free-tiers 查看实时已用量和剩余额度。"/>
 
 > 实时 `/dashboard/free-tiers` 页面的动画摘要。完整方法说明（池去重、赠送额度层级、服务商条款）：**[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**。
 >
@@ -106,8 +108,8 @@
   <tr>
     <td align="right"><b>💡 了解</b></td>
     <td align="center"><a href="#-the-promise">💥 承诺</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 为什么选择 OmniRoute</a></td>
-    <td align="center"><a href="#-what-sets-omniroute-apart">🏆 OmniRoute 的独特之处</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 为什么选择 67router</a></td>
+    <td align="center"><a href="#-what-sets-omniroute-apart">🏆 67router 的独特之处</a></td>
   </tr>
   <tr>
     <td align="right"><b>⚙️ 功能</b></td>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="三个步骤：安装并启动 OmniRoute，使用你自己的账户或 API 密钥连接一个符合条件的提供者，然后用 OmniRoute API 密钥和模型 auto 将你的工具指向 localhost:20128/v1。路由能否成功取决于可用的符合条件的连接以及提供者的限制。"/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="三个步骤：安装并启动 67router，使用你自己的账户或 API 密钥连接一个符合条件的提供者，然后用 67router API 密钥和模型 auto 将你的工具指向 localhost:20128/v1。路由能否成功取决于可用的符合条件的连接以及提供者的限制。"/>
 
 ```bash
-# 连接提供者后，从 Dashboard → Endpoints 复制你的 OmniRoute 密钥：
+# 连接提供者后，从 Dashboard → Endpoints 复制你的 67router 密钥：
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 为什么选择 OmniRoute？
+# 🤔 为什么选择 67router？
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="为什么选择 OmniRoute —— 不再疲于应付 10 个控制台、失效的 API 密钥和意外账单。十大日常痛点与对应解决方案：额度未使用就过期 → 最大化订阅价值；编码中途遭遇速率限制 → 4 层自动回退（订阅 → API → 低价 → 免费）；工具输出消耗 token → RTK + Caveman 压缩（15–95%）；昂贵的 API → 成本优化路由；每个工具各自单独配置 → 一个端点、一个控制台；AI 被封锁 → 3 级代理 + TLS 隐身；密钥失效 → 3 层韧性（熔断器、密钥冷却、模型锁定）；团队共用一个订阅 → 带公平配额分配的密钥池；提示词经过他人云端 → 本地优先，密钥采用 AES-256-GCM 加密；支出不可见 → 实时分析（用量、额度、节省、p95 延迟）。"/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="为什么选择 67router —— 不再疲于应付 10 个控制台、失效的 API 密钥和意外账单。十大日常痛点与对应解决方案：额度未使用就过期 → 最大化订阅价值；编码中途遭遇速率限制 → 4 层自动回退（订阅 → API → 低价 → 免费）；工具输出消耗 token → RTK + Caveman 压缩（15–95%）；昂贵的 API → 成本优化路由；每个工具各自单独配置 → 一个端点、一个控制台；AI 被封锁 → 3 级代理 + TLS 隐身；密钥失效 → 3 层韧性（熔断器、密钥冷却、模型锁定）；团队共用一个订阅 → 带公平配额分配的密钥池；提示词经过他人云端 → 本地优先，密钥采用 AES-256-GCM 加密；支出不可见 → 实时分析（用量、额度、节省、p95 延迟）。"/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute 请求流程：你的 IDE 或 CLI（Claude Code、Cursor、Cline……）调用一个本地端点（http://localhost:20128/v1）；OmniRoute 智能路由器（RTK + Caveman 压缩、20 种路由策略、熔断器、TLS 隐身、MCP、A2A、护栏）只要还存在符合条件的健康目标，就能跨 4 个提供者层级进行回退 —— 第 1 层订阅、第 2 层 API 密钥、第 3 层低价、第 4 层免费。"/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="67router 请求流程：你的 IDE 或 CLI（Claude Code、Cursor、Cline……）调用一个本地端点（http://localhost:20128/v1）；67router 智能路由器（RTK + Caveman 压缩、20 种路由策略、熔断器、TLS 隐身、MCP、A2A、护栏）只要还存在符合条件的健康目标，就能跨 4 个提供者层级进行回退 —— 第 1 层订阅、第 2 层 API 密钥、第 3 层低价、第 4 层免费。"/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **想加入成为开源朋友吗？** 这些公司支持开源并帮助 OmniRoute 持续发展 — 我们会公开说明他们提供的每一笔资金的去向。请联系：[diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **想加入成为开源朋友吗？** 这些公司支持开源并帮助 67router 持续发展 — 我们会公开说明他们提供的每一笔资金的去向。请联系：[diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Founding Open Source Friend"/>
     </td>
     <td>
-      感谢我们的创始开源朋友 <b>Kimi (月之暗面)</b> 对本项目的支持！Kimi 是开放权重 K2 和 K3 模型系列背后的 AI 实验室 — <b>Kimi K3</b> 提供 1M-token 上下文窗口、原生视觉和前沿水平的编码能力，价格仅为闭源模型的一小部分，并且与 Claude Code、Codex 以及 OmniRoute 支持的所有编码工具开箱即用。
+      感谢我们的创始开源朋友 <b>Kimi (月之暗面)</b> 对本项目的支持！Kimi 是开放权重 K2 和 K3 模型系列背后的 AI 实验室 — <b>Kimi K3</b> 提供 1M-token 上下文窗口、原生视觉和前沿水平的编码能力，价格仅为闭源模型的一小部分，并且与 Claude Code、Codex 以及 67router 支持的所有编码工具开箱即用。
       <br/><br/>
-      <b>Kimi 的支持所赋能的：</b> Kimi 的 API 积分支持 OmniRoute 的 AI 验证发布流程 — 即在每个拉取请求发布前进行审查的 *由 Kimi K3 提供支持的合并验证* 阶段 — 以及日常功能开发。一流的 Kimi 支持通过两种方式提供：直接的 <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) 和 <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code 编码计划</a> (OAuth 和 API 密钥)。OmniRoute 也是 Kimi 支持计划中首个巴西开源项目。<a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>获取 Kimi API 密钥，额外获得 15% 积分 →</b></a>
+      <b>Kimi 的支持所赋能的：</b> Kimi 的 API 积分支持 67router 的 AI 验证发布流程 — 即在每个拉取请求发布前进行审查的 *由 Kimi K3 提供支持的合并验证* 阶段 — 以及日常功能开发。一流的 Kimi 支持通过两种方式提供：直接的 <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) 和 <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code 编码计划</a> (OAuth 和 API 密钥)。67router 也是 Kimi 支持计划中首个巴西开源项目。<a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>获取 Kimi API 密钥，额外获得 15% 积分 →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Open Source Friend"/>
     </td>
     <td>
-      感谢 OmniRoute 的开源朋友 <b>Cheaper Inference</b> 对本项目的支持！Cheaper Inference 是一个按成本排名的网关，通过一个与 OpenAI 兼容的端点转售 42 个前沿模型 — Claude、GPT-5.x、Gemini、Kimi K3、GLM、DeepSeek、Grok 和 MiniMax — 将每个请求路由到最便宜的合格提供者，且绝不收取高于模型制造商标价的费用。
+      感谢 67router 的开源朋友 <b>Cheaper Inference</b> 对本项目的支持！Cheaper Inference 是一个按成本排名的网关，通过一个与 OpenAI 兼容的端点转售 42 个前沿模型 — Claude、GPT-5.x、Gemini、Kimi K3、GLM、DeepSeek、Grok 和 MiniMax — 将每个请求路由到最便宜的合格提供者，且绝不收取高于模型制造商标价的费用。
       <br/><br/>
-      <b>OmniRoute 中的一流支持：</b> 聊天补全、原生 <code>/v1/responses</code> 端点、视觉、工具调用和 3 个图像模型 (<code>grok-imagine</code>、<code>nano-banana-pro</code>、<code>nano-banana-2</code>，可作为 <code>cheaperinference/&lt;model&gt;</code> 访问)。<a href="https://cheaperinference.com/?utm_source=omniroute"><b>获取 API 密钥 →</b></a>
+      <b>67router 中的一流支持：</b> 聊天补全、原生 <code>/v1/responses</code> 端点、视觉、工具调用和 3 个图像模型 (<code>grok-imagine</code>、<code>nano-banana-pro</code>、<code>nano-banana-2</code>，可作为 <code>cheaperinference/&lt;model&gt;</code> 访问)。<a href="https://cheaperinference.com/?utm_source=omniroute"><b>获取 API 密钥 →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ 联盟推广</b> — 我们未赞助的提供者提供的免费注册优惠券（点击展开）</sub></summary>
 
-<sub><i>此部分仅用于推荐/优惠券代码。赞助合作关系位于上方的 **🤝 我们的开源朋友支持** 中。OmniRoute 与此处列出的提供者没有赞助或合作关系 — 这些是任何人都可以使用的公开优惠券。</i></sub>
+<sub><i>此部分仅用于推荐/优惠券代码。赞助合作关系位于上方的 **🤝 我们的开源朋友支持** 中。67router 与此处列出的提供者没有赞助或合作关系 — 这些是任何人都可以使用的公开优惠券。</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — 联盟注册 · 注册时<b>免费获得 $100 积分</b>（免费服务器，延迟可能较高 — 最适合测试，不适合生产）。自 <b>v3.8.50</b> 起在 OmniRoute 中提供一流支持：聊天补全、Anthropic 兼容的线格式和 OpenAI 兼容的路径。可用模型包括 <code>claude-opus-4-8</code>、<code>claude-opus-5</code>、<code>gpt-5.6-sol</code> 等。<b><a href="https://agentrouter.org/register?aff=70LM">立即获取您的 $100 →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — 联盟注册 · 注册时<b>免费获得 $100 积分</b>（免费服务器，延迟可能较高 — 最适合测试，不适合生产）。自 <b>v3.8.50</b> 起在 67router 中提供一流支持：聊天补全、Anthropic 兼容的线格式和 OpenAI 兼容的路径。可用模型包括 <code>claude-opus-4-8</code>、<code>claude-opus-5</code>、<code>gpt-5.6-sol</code> 等。<b><a href="https://agentrouter.org/register?aff=70LM">立即获取您的 $100 →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>联盟链接 — OmniRoute 与此提供者没有赞助或合作关系。</i></sub>
+      <sub>⚠️ <i>联盟链接 — 67router 与此提供者没有赞助或合作关系。</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>知道其他提供者有慷慨的免费注册优惠券，能惠及 OmniRoute 用户吗？请提交一个 issue，我们会将其添加到这里。</sub>
+<sub>知道其他提供者有慷慨的免费注册优惠券，能惠及 67router 用户吗？请提交一个 issue，我们会将其添加到这里。</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="20 种组合路由策略中 18 种的动态示例——每种策略对应一个图块：priority、fill-first、weighted、round-robin、p2c、least-used、random、strict-random、cost-optimized、headroom、reset-window、reset-aware、context-relay、context-optimized、lkgp、auto、fusion、pipeline。cache-optimized 和 quota-weighted 没有动画；下表介绍了全部 20 种策略。"/>
 
-> **组合**是一条由 OmniRoute **自动**跨模型路由的链。如果配额耗尽、提供者出现故障或成本激增，组合可以切换到下一个符合条件且运行正常的模型。🛡️
+> **组合**是一条由 67router **自动**跨模型路由的链。如果配额耗尽、提供者出现故障或成本激增，组合可以切换到下一个符合条件且运行正常的模型。🛡️
 
 ### ⚡ 零配置 — 只需使用 `auto`
 
-无需创建组合。将模型设置为 `auto`（或其变体），OmniRoute 就会基于你已连接的提供者构建虚拟组合，并进行实时评分：
+无需创建组合。将模型设置为 `auto`（或其变体），67router 就会基于你已连接的提供者构建虚拟组合，并进行实时评分：
 
 <table>
   <tr><th align="left">模型 ID</th><th align="left">优化目标</th></tr>
@@ -496,7 +498,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ### 🧱 内置韧性机制（3 个独立层级）
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="OmniRoute 韧性机制——3 个独立的自愈层级，针对不同故障采用恰当的层级。第 1 层：提供者断路器（整个提供者）：仅在出现 408/5xx 时触发，阈值为 OAuth 8 次/API 密钥 12 次/本地 2 次，并分别在 60s/30s/15s 后重置为 HALF-OPEN 探测状态，采用惰性恢复；处于 OPEN 状态时，组合会将请求重新路由至下一个提供者。第 2 层：连接冷却（单个密钥/账户）：OAuth 的基础冷却时间为 5s，API 密钥为 3s，采用指数 ×2 退避并提供防惊群保护；429 遵循 Retry-After，成功后清除所有错误状态；一个正在冷却的密钥会被跳过，而同组的其他密钥继续提供服务。第 3 层：模型锁定（单个模型）：单模型 429、本地 404 或模式拒绝只会锁定该模型——绝不会锁定整个连接。终止状态（被封禁、已过期、额度耗尽）需要由操作人员处理，而不是进入冷却。"/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="67router 韧性机制——3 个独立的自愈层级，针对不同故障采用恰当的层级。第 1 层：提供者断路器（整个提供者）：仅在出现 408/5xx 时触发，阈值为 OAuth 8 次/API 密钥 12 次/本地 2 次，并分别在 60s/30s/15s 后重置为 HALF-OPEN 探测状态，采用惰性恢复；处于 OPEN 状态时，组合会将请求重新路由至下一个提供者。第 2 层：连接冷却（单个密钥/账户）：OAuth 的基础冷却时间为 5s，API 密钥为 3s，采用指数 ×2 退避并提供防惊群保护；429 遵循 Retry-After，成功后清除所有错误状态；一个正在冷却的密钥会被跳过，而同组的其他密钥继续提供服务。第 3 层：模型锁定（单个模型）：单模型 429、本地 404 或模式拒绝只会锁定该模型——绝不会锁定整个连接。终止状态（被封禁、已过期、额度耗尽）需要由操作人员处理，而不是进入冷却。"/>
 
 <sub>📖 [Auto-Combo 引擎](docs/routing/AUTO-COMBO.md) · [韧性指南](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-## 🏆 OmniRoute 的独特之处
+## 🏆 67router 的独特之处
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="OmniRoute 的独特之处——与 9router、OpenRouter、CLIProxyAPI 和 LiteLLM 在 13 项能力上的特性快照对比（截至特定日期）。OmniRoute：375 个提供者、内置 150+ 个免费套餐、20 种路由策略、12 引擎令牌压缩、内置包含 110 个工具的 MCP 服务器、A2A 智能体协议、持久化记忆、护栏机制、云端智能体、TLS 指纹隐匿，以及 Desktop/Termux/PWA 和支持 67 种国际化 UI 语言区域。OmniRoute 采用 MIT 许可证，并支持自行托管。竞品能力和数量可能发生变化；请参阅链接中的方法论。"/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="67router 的独特之处——与 9router、OpenRouter、CLIProxyAPI 和 LiteLLM 在 13 项能力上的特性快照对比（截至特定日期）。67router：375 个提供者、内置 150+ 个免费套餐、20 种路由策略、12 引擎令牌压缩、内置包含 110 个工具的 MCP 服务器、A2A 智能体协议、持久化记忆、护栏机制、云端智能体、TLS 指纹隐匿，以及 Desktop/Termux/PWA 和支持 67 种国际化 UI 语言区域。67router 采用 MIT 许可证，并支持自行托管。竞品能力和数量可能发生变化；请参阅链接中的方法论。"/>
 
 <sub>📊 完整方法论及与 9router、OpenRouter、CLIProxyAPI 和 LiteLLM 的逐项特性对比详情 → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 支持 OmniRoute
+## 💚 支持 67router
 
-OmniRoute 采用 MIT 许可证，并以开放方式维护。如果它为你节省了时间或金钱，可以通过以下方式帮助其保持独立——选择适合你的即可。赞助绝不会影响路由优先级；它购买的是曝光度，而不是排名。
+67router 采用 MIT 许可证，并以开放方式维护。如果它为你节省了时间或金钱，可以通过以下方式帮助其保持独立——选择适合你的即可。赞助绝不会影响路由优先级；它购买的是曝光度，而不是排名。
 
 <table>
-  <tr><td nowrap>⭐ <b>为仓库加星</b></td><td>免费——确实有助于提升曝光度</td><td><a href="https://github.com/diegosouzapw/OmniRoute">为 OmniRoute 加星</a></td></tr>
+  <tr><td nowrap>⭐ <b>为仓库加星</b></td><td>免费——确实有助于提升曝光度</td><td><a href="https://github.com/diegosouzapw/OmniRoute">为 67router 加星</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>一次性或每月赞助 · 平台零手续费</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>快速的一次性打赏，捐助者无需注册</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>小额、非正式的支持</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute 采用 MIT 许可证，并以开放方式维护。如果它为你节�
 
 **🇧🇷 PIX** — 即时到账、免手续费（巴西）
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="OmniRoute PIX 二维码"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="67router PIX 二维码"/>
 
 密钥（随机）：`5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ Pix 复制粘贴代码：
 
 <p><strong>开发者说明：</strong>为方便开发者，本项目可能会在 npm install/postinstall 期间生成本地 <code>.env</code> 文件。该文件已通过 <code>.gitignore</code>（参见 <code>.gitignore</code>）被有意忽略，绝不能提交——如果意外提交，请轮换所有可能已泄露的密钥，并从历史记录中删除该文件。有关管理本地环境文件和密钥的指南，请参阅 <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a>。</p>
 
-## 📡 OmniRoute Radar
+## 📡 67router Radar
 
-上述文档中经资源池去重后的目录，其免费套餐的主要亮点仍是**每月约 1.62B tokens**。临时的提供者注册赠送额度可另外将首月额度提升至**约 2.22B**。Radar 是一个可选的、带签名的目录覆盖层，适合希望在 OmniRoute 各版本发布间隔期间获取更新免费模型可用性信息的用户；社区目录和所有现有免费功能仍将保持免费。
+上述文档中经资源池去重后的目录，其免费套餐的主要亮点仍是**每月约 1.62B tokens**。临时的提供者注册赠送额度可另外将首月额度提升至**约 2.22B**。Radar 是一个可选的、带签名的目录覆盖层，适合希望在 67router 各版本发布间隔期间获取更新免费模型可用性信息的用户；社区目录和所有现有免费功能仍将保持免费。
 
 支持者可以获得实时目录以及更多提供者机会。其独立且可变的上限**最高约为每月 3B tokens**，具体取决于提供者的可用性。该上限并非保证：提供者可随时更改配额、资格要求、模型或地区。
 
-Radar 需主动选择启用，且仅使用 GET 请求。OmniRoute 客户端不会上传提示词、流量、提供者配置、使用情况遥测数据或本地公告忽略状态。有关资格要求和当前目录的信息，请访问 **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**。
+Radar 需主动选择启用，且仅使用 GET 请求。67router 客户端不会上传提示词、流量、提供者配置、使用情况遥测数据或本地公告忽略状态。有关资格要求和当前目录的信息，请访问 **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**。
 
 <br/>
 
@@ -593,7 +595,7 @@ Radar 需主动选择启用，且仅使用 GET 请求。OmniRoute 客户端不�
 - **💸 诚实的固定费率成本** — 订阅 / 编程套餐类提供者在成本分析中显示为 **$0**；预算、配额与路由仍会继续估算。→ [API 参考](docs/reference/API_REFERENCE.md)
 - **⚖️ Quota-Share 路由** — 在池化的密钥之间公平分配共享账户的配额，采用工作守恒机制，空闲份额会被出借。→ [弹性指南](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 一条命令完成 CLI/代理设置** — 15 个已注册的 `setup-*` 命令；`omniroute run` 可启动 7 种 CLI（Claude Code、Codex、Aider、Goose、OpenCode、Qwen Code、Gemini CLI）；`omniroute configure` 支持 11 个目标，并带有交互式提供者+模型选择器和按上下文保存的收藏。→ [CLI 集成](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ 远程模式** — 使用作用域令牌（`connect` / `contexts` / `tokens`）驱动远程 OmniRoute，并提供用于 VPS 安装的 `antigravity` OAuth 辅助工具。→ [远程模式](docs/guides/REMOTE-MODE.md)
+- **🛰️ 远程模式** — 使用作用域令牌（`connect` / `contexts` / `tokens`）驱动远程 67router，并提供用于 VPS 安装的 `antigravity` OAuth 辅助工具。→ [远程模式](docs/guides/REMOTE-MODE.md)
 - **🧭 更智能的自动路由** — `auto/<category>:<tier>` 组合、**Fusion**（模型面板 + 评审）、任务感知路由，以及按请求覆盖模型 / 模式 / 美元预算。→ [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ 可插拔压缩** — 12 个可组合引擎 + Compression Studios：LLMLingua-2、两级 Ultra、omniglyph、逐步保真度门控、GCF v3.2、拖拽重排编辑器。→ [压缩](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ 透明 MITM 解密（TPROXY）** — 捕获忽略代理环境变量的 CLI，并提供按 SNI 的 CA + 信任存储安装器。→ [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -663,7 +665,7 @@ Radar 需主动选择启用，且仅使用 GET 请求。OmniRoute 客户端不�
 
 <br/>
 
-**只需一条命令，即可通过 OmniRoute 启动任何受支持的 CLI** — 不写入配置文件，
+**只需一条命令，即可通过 67router 启动任何受支持的 CLI** — 不写入配置文件，
 凭据按进程注入，并为 Qwen/Gemini 使用一次性的隔离主目录：
 
 ```bash
@@ -756,7 +758,7 @@ omniroute configure codex          # 还支持：claude opencode qwen aider goos
 
 <div align="center">
 
-## 🖥️ OmniRoute 可在何处运行 — 任何地方
+## 🖥️ 67router 可在何处运行 — 任何地方
 
 </div>
 
@@ -772,7 +774,7 @@ omniroute configure codex          # 还支持：claude opencode qwen aider goos
   <tr><td align="left" nowrap>📱 <b>Android（Termux）</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">全天候运行在<b>你的手机上</b>，无需 root</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>“添加到主屏幕”</td><td align="left">全屏、离线，可从浏览器安装</td></tr>
   <tr><td align="left" nowrap>🧩 <b>OpenCode 插件</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">原生 OpenCode 集成</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>安装 <b>OmniCopilot</b> 扩展</td><td align="left">原生 Copilot Chat 选择器中提供所有 OmniRoute 模型 — 稳定版和 Insiders 版</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>安装 <b>OmniCopilot</b> 扩展</td><td align="left">原生 Copilot Chat 选择器中提供所有 67router 模型 — 稳定版和 Insiders 版</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>从源代码运行</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">自行修改并参与贡献</td></tr>
 </table>
 
@@ -782,17 +784,17 @@ omniroute configure codex          # 还支持：claude opencode qwen aider goos
 
 <div align="center">
 
-### 🧩 新功能：在 VS Code 原生 Copilot Chat 中使用 OmniRoute
+### 🧩 新功能：在 VS Code 原生 Copilot Chat 中使用 67router
 
 </div>
 
-> 无需新侧边栏，也无需新聊天界面 — OmniRoute 提供的每个模型都会直接显示在你已经使用的
+> 无需新侧边栏，也无需新聊天界面 — 67router 提供的每个模型都会直接显示在你已经使用的
 > **Copilot Chat 模型选择器中**。自 VS Code 1.122 起，无需登录 GitHub 或订阅 Copilot，
 > 即可使用提供者模型 — 免费使用代理模式、工具调用和视觉功能。
 
 安装 **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)** 扩展，将其指向
-你的 OmniRoute 服务器（默认为 `localhost:20128`），然后打开 Copilot Chat → 模型选择器
-→ **管理模型…** → **OmniRoute**。
+你的 67router 服务器（默认为 `localhost:20128`），然后打开 Copilot Chat → 模型选择器
+→ **管理模型…** → **67router**。
 
 <table>
   <tr><th align="left">商店</th><th align="left">链接</th><th align="left">兼容平台</th></tr>
@@ -800,7 +802,7 @@ omniroute configure codex          # 还支持：claude opencode qwen aider goos
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">安装 →</a></td><td align="left">Cursor、Windsurf、VSCodium、Theia、code-server、Gitpod、Antigravity、Kiro…</td></tr>
 </table>
 
-在编辑器内：打开**扩展**视图，搜索 **“OmniRoute”**，点击**安装**
+在编辑器内：打开**扩展**视图，搜索 **“67router”**，点击**安装**
 — 在两个商店中的使用方式相同。源代码、问题跟踪和发布运行手册位于
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)。
 
@@ -820,9 +822,9 @@ omniroute configure codex          # 还支持：claude opencode qwen aider goos
 > 保持终端窗口打开，也无需操心 `npm install -g omniroute`。**
 
 它使用 [Tauri v2](https://v2.tauri.app/) 构建（Rust 核心小到几乎可以忽略不计），
-自带已签名的 Node 24 运行时，并管理应用专属的 OmniRoute 安装，因此绝不会与你的
+自带已签名的 Node 24 运行时，并管理应用专属的 67router 安装，因此绝不会与你的
 全局 `node`/`bun` 冲突。它会**共享你现有的 `~/.omniroute/` 配置和数据库** — 所以它就是
-你已在运行的同一个 OmniRoute，只是戴上了一顶帽子。🎩
+你已在运行的同一个 67router，只是戴上了一顶帽子。🎩
 
 <table>
   <tr><th align="left">功能</th><th align="left">实现方式</th></tr>
@@ -840,7 +842,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>更喜欢下载使用？请从
 <a href="https://github.com/zoispag/omniroute-tray/releases">Releases</a> 获取最新的 <code>.dmg</code>。源代码、问题和构建
 文档位于 <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>。
-<br/>💛 这是由 <a href="https://github.com/zoispag">@zoispag</a> 发起的社区项目，并非 OmniRoute 官方版本。</sub>
+<br/>💛 这是由 <a href="https://github.com/zoispag">@zoispag</a> 发起的社区项目，并非 67router 官方版本。</sub>
 
 <br/>
 
@@ -850,7 +852,7 @@ brew install --cask zoispag/tap/omniroute-tray
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="私有且本地优先——OmniRoute 的网关和控制平面均在您的机器上运行。提示词会发送给为每个请求选择的上游提供者；OmniRoute 不会增加任何托管的提示词处理中转环节，并且默认禁用遥测。凭据使用 AES-256-GCM 进行静态加密；安全控制包括 API 密钥作用域、IP 过滤、速率限制、提示词注入防护、上游标头清理、可选的 PII 脱敏、经过净化的错误信息，以及本地 SQLite 审计跟踪。OmniRoute 采用 MIT 许可证，并支持自行托管。"/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="私有且本地优先——67router 的网关和控制平面均在您的机器上运行。提示词会发送给为每个请求选择的上游提供者；67router 不会增加任何托管的提示词处理中转环节，并且默认禁用遥测。凭据使用 AES-256-GCM 进行静态加密；安全控制包括 API 密钥作用域、IP 过滤、速率限制、提示词注入防护、上游标头清理、可选的 PII 脱敏、经过净化的错误信息，以及本地 SQLite 审计跟踪。67router 采用 MIT 许可证，并支持自行托管。"/>
 
 <sub>📖 [授权](docs/architecture/AUTHZ_GUIDE.md) · [防护机制](docs/security/GUARDRAILS.md) · [合规性](docs/security/COMPLIANCE.md)</sub>
 
@@ -862,7 +864,7 @@ brew install --cask zoispag/tap/omniroute-tray
 
 </div>
 
-> 除了服务器之外，OmniRoute 还是一个拥有 **80 多条命令的完整命令行控制中心**，并支持开放的智能体协议，让 AI 智能体能够**自主**操作它。
+> 除了服务器之外，67router 还是一个拥有 **80 多条命令的完整命令行控制中心**，并支持开放的智能体协议，让 AI 智能体能够**自主**操作它。
 
 ### ⌨️ 真正的 CLI（不只是 `start`）
 
@@ -873,9 +875,9 @@ omniroute setup         # 首次运行引导向导
 omniroute doctor        # 诊断提供者、端口和原生依赖项
 ```
 
-### 🛰️ 远程模式 — 在本地运行 CLI，在 VPS 上运行 OmniRoute
+### 🛰️ 远程模式 — 在本地运行 CLI，在 VPS 上运行 67router
 
-在服务器上运行 OmniRoute？使用**同一个 CLI**，即可从笔记本电脑操控它。使用具有作用域的访问令牌登录一次，
+在服务器上运行 67router？使用**同一个 CLI**，即可从笔记本电脑操控它。使用具有作用域的访问令牌登录一次，
 之后每条命令都会以远程服务器为目标。
 
 ```bash
@@ -891,13 +893,13 @@ omniroute contexts use default            # ← 切换回本地服务器
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="OmniRoute CLI 动画终端演示 — omniroute providers list、omniroute combo list 和 omniroute health — 循环展示包含 89 条命令的顶层功能：providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="67router CLI 动画终端演示 — omniroute providers list、omniroute combo list 和 omniroute health — 循环展示包含 89 条命令的顶层功能：providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 连接智能体 — 让它自行控制 OmniRoute
+### 🤝 连接智能体 — 让它自行控制 67router
 
-通过 **MCP**、**A2A**、**REST API**、**webhooks** 或**远程 CLI** 开放 OmniRoute — 任何具备相应能力的智能体（或你自己的代码）都能自主掌控整个网关，包括路由、提供者、组合、缓存、压缩和记忆。以下 HTTP 端点均位于 `http://localhost:20128` 下。
+通过 **MCP**、**A2A**、**REST API**、**webhooks** 或**远程 CLI** 开放 67router — 任何具备相应能力的智能体（或你自己的代码）都能自主掌控整个网关，包括路由、提供者、组合、缓存、压缩和记忆。以下 HTTP 端点均位于 `http://localhost:20128` 下。
 
 <table>
   <tr><th align="left">接口</th><th align="left">端点 / 命令</th><th align="left">用途</th></tr>
@@ -911,7 +913,7 @@ omniroute contexts use default            # ← 切换回本地服务器
 </table>
 
 ```bash
-# 通过 MCP 为 Claude Code 提供完整的 OmniRoute 工具集：
+# 通过 MCP 为 Claude Code 提供完整的 67router 工具集：
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
@@ -927,7 +929,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 工作原理 —— 流水线、架构与节省计算
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute 压缩流水线：一个示意性的 10,000 token 客户端请求依次经过 12 个可组合引擎 —— Session-Dedup、CCR、Lite、RTK、Responses Tool Output、Headroom、Relevance、Caveman、Aggressive、LLMLingua-2、Ultra 和 OmniGlyph —— 在文档给出的叠加示例中，最终到达提供者时约为 1,080 token。结构化内容受保留保护机制和逐步保真度门控保护；显式的有损或实验模式可能会转换符合条件的内容。"/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="67router 压缩流水线：一个示意性的 10,000 token 客户端请求依次经过 12 个可组合引擎 —— Session-Dedup、CCR、Lite、RTK、Responses Tool Output、Headroom、Relevance、Caveman、Aggressive、LLMLingua-2、Ultra 和 OmniGlyph —— 在文档给出的叠加示例中，最终到达提供者时约为 1,080 token。结构化内容受保留保护机制和逐步保真度门控保护；显式的有损或实验模式可能会转换符合条件的内容。"/>
 
 默认叠加组合按 `RTK → Caveman` 运行。当两者同时作用于同一工具/上下文载荷时，节省效果会叠加：
 
@@ -939,7 +941,7 @@ range    = 78.4 – 94.6%
 
 代码块、URL、JSON 和结构化数据**始终受到**保留引擎的保护。
 
-> **能少用 token 时，为何要用很多 token？** 每个请求都会**透明地**经过 OmniRoute 的压缩流水线 —— 客户端无需任何改动。它现在是一个由 **12 个可组合引擎组成的栈**，按顺序运行，并可根据路由组合进行混搭 —— 其理念建立在 [RTK](https://github.com/rtk-ai/rtk)、[Caveman](https://github.com/JuliusBrussee/caveman)（⭐ 90K+）、[LLMLingua-2](https://github.com/microsoft/LLMLingua) 和 [Troglodita](https://github.com/leninejunior/troglodita)（PT-BR）之上。
+> **能少用 token 时，为何要用很多 token？** 每个请求都会**透明地**经过 67router 的压缩流水线 —— 客户端无需任何改动。它现在是一个由 **12 个可组合引擎组成的栈**，按顺序运行，并可根据路由组合进行混搭 —— 其理念建立在 [RTK](https://github.com/rtk-ai/rtk)、[Caveman](https://github.com/JuliusBrussee/caveman)（⭐ 90K+）、[LLMLingua-2](https://github.com/microsoft/LLMLingua) 和 [Troglodita](https://github.com/leninejunior/troglodita)（PT-BR）之上。
 
 ### 🧱 12 引擎栈
 
@@ -1024,7 +1026,7 @@ omniroute
 ```
 
 > 💡 看到 `npm warn ERESOLVE` 或 peer 依赖警告？[它们是无害的](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated)。
-> **用的是 npm 11 或更高版本？** 除非被允许，npm 可能会阻止包的生命周期脚本执行。OmniRoute 的 `postinstall`（`node scripts/build/postinstall.mjs`）是准备其原生运行时文件所必需的。全局安装时，请允许 npm 警告中列出的那些包。就 OmniRoute 3.8.53 报告的包集合而言：
+> **用的是 npm 11 或更高版本？** 除非被允许，npm 可能会阻止包的生命周期脚本执行。67router 的 `postinstall`（`node scripts/build/postinstall.mjs`）是准备其原生运行时文件所必需的。全局安装时，请允许 npm 警告中列出的那些包。就 67router 3.8.53 报告的包集合而言：
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1060,9 +1062,9 @@ Model:    auto            （在符合条件的连接之间路由 —— 或直�
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-你应该能看到已连接的模型列表。🎉 就这样 —— 开始写代码吧，OmniRoute 会为你自动路由并在必要时回退。
+你应该能看到已连接的模型列表。🎉 就这样 —— 开始写代码吧，67router 会为你自动路由并在必要时回退。
 
-如果你的客户端无法发送自定义请求头，OmniRoute 还提供了带 token 的兼容别名：
+如果你的客户端无法发送自定义请求头，67router 还提供了带 token 的兼容别名：
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1112,7 +1114,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 通过 Bun 运行时检测，支持标准的 `bun install` 和全局安装（`bun install -g omniroute`）：
 
-- **内置 `bun:sqlite`**：在 Bun 下运行时，OmniRoute 使用 Bun 内置的 `bun:sqlite` 驱动程序；在 Node.js 下则回退到 `better-sqlite3` 或 `sql.js`。
+- **内置 `bun:sqlite`**：在 Bun 下运行时，67router 使用 Bun 内置的 `bun:sqlite` 驱动程序；在 Node.js 下则回退到 `better-sqlite3` 或 `sql.js`。
 - **开发环境中自动选择 Webpack 打包器**：开发模式（`bun run dev`）会自动检测 Bun，并禁用 Turbopack、改用 Webpack，以避免原生 V8 绑定不兼容。生产构建（`bun run build`）与 Node 上一样，严格遵循 `OMNIROUTE_USE_TURBOPACK`：默认使用 Turbopack；设置 `OMNIROUTE_USE_TURBOPACK=0` 时使用 Webpack 构建（`Dockerfile.bun` 将其公开为 `--build-arg`）。
 - **专用 Bun Dockerfile**：提供多阶段 `Dockerfile.bun`，用于原生 Bun 生产部署（`docker build -f Dockerfile.bun -t omniroute:bun .`）。
 
@@ -1196,7 +1198,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
 
 <div align="center">
 
-# 🎬 OmniRoute 实际演示
+# 🎬 67router 实际演示
 
 </div>
 
@@ -1260,7 +1262,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
 
 截至 2026-10-18 的规范指标：**1.976 个独立视频** · **20.220.289 次已知观看**（`v > 0`）· **1.210 个各平台频道/账号**。原始面板包含 1.976 行（YouTube 1.352 = 740 个长视频 + 612 个 Shorts · TikTok 334 · Instagram 290）；按规范 URL 标准化后未留下任何重复项，并为每个视频保留最高观看次数。YouTube 数据采集冻结于 2026-10-13（API 配额在 14 至 18/10 期间耗尽），TikTok/Instagram 数据采集自 2026-09-02 起冻结（无采集额度）；仍有 76 个视频没有观看次数数据。
 
-> 🎬 **制作了关于 OmniRoute 的视频？** 请提交一个 [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) 或发起一项 [discussion](https://github.com/diegosouzapw/OmniRoute/discussions)，并附上链接——我们会在这里推荐它。
+> 🎬 **制作了关于 67router 的视频？** 请提交一个 [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) 或发起一项 [discussion](https://github.com/diegosouzapw/OmniRoute/discussions)，并附上链接——我们会在这里推荐它。
 
 <br/>
 
@@ -1279,7 +1281,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
 | 🟢 **WhatsApp — 🌍 全球**                | [加入群组](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                      |
 | 🟢 **WhatsApp — 🇧🇷 巴西**                | [加入群组](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                      |
 | 🌍 **网站**                              | [omniroute.online](https://omniroute.online)                                                                     |
-| 🌍 **🌍StHub OmniRoute 社区（免费）**    | [StHub 门户](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)              |
+| 🌍 **🌍StHub 67router 社区（免费）**     | [StHub 门户](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)              |
 | 📦 **源代码**                            | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                   |
 | 🐛 **报告错误**                          | [提交问题](https://github.com/diegosouzapw/OmniRoute/issues) — 请附上 `npm run system-info` 的输出               |
 | 🤝 **参与贡献**                          | [CONTRIBUTING.md](CONTRIBUTING.md) · [分支与发布模型](docs/ops/BRANCHING_MODEL.md) · 选择一个 `good first issue` |
@@ -1332,8 +1334,8 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">用户指南</a></b></td><td>提供者、组合、CLI 集成、部署</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">设置指南</a></b></td><td>完整安装方法、CLI 工具配置、协议设置、超时调优</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">CLI 工具指南</a></b></td><td>Claude Code、Codex、Cursor、Cline、OpenClaw、Kilo、Copilot 的逐工具设置</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">远程模式</a></b></td><td>通过限定范围的访问令牌，从笔记本电脑上的 CLI 控制远程 OmniRoute（VPS）</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code 配置</a></b></td><td>使用 <code>launch</code> 和各模型配置文件将 Claude Code 指向 OmniRoute（本地/远程）</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">远程模式</a></b></td><td>通过限定范围的访问令牌，从笔记本电脑上的 CLI 控制远程 67router（VPS）</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code 配置</a></b></td><td>使用 <code>launch</code> 和各模型配置文件将 Claude Code 指向 67router（本地/远程）</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">快速入门</a></b></td><td>3 步完成安装 → 连接 → 配置</td></tr>
 </table>
 
@@ -1345,7 +1347,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
   <tr><td nowrap><b><a href="contrib/podman/README.md">Podman 指南</a></b></td><td>Quadlet systemd 集成、podman-compose、SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">虚拟机部署</a></b></td><td>完整指南：虚拟机 + nginx + Cloudflare 设置</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Fly.io 部署</a></b></td><td>使用持久化存储部署到 Fly.io</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux 指南</a></b></td><td>通过 Termux 在 Android 上运行 OmniRoute</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux 指南</a></b></td><td>通过 Termux 在 Android 上运行 67router</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">PWA 指南</a></b></td><td>渐进式 Web 应用安装、缓存、架构</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">卸载指南</a></b></td><td>适用于所有安装方法的彻底移除步骤</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">环境配置</a></b></td><td>完整的 <code>.env</code> 变量与参考说明</td></tr>
@@ -1400,7 +1402,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
 
 # ⭐ 主要贡献者
 
-> OmniRoute 由充满热情的开源社区共同塑造。以下贡献者做出了卓越贡献，直接提升了项目的质量、稳定性和影响范围。**感谢你们。**
+> 67router 由充满热情的开源社区共同塑造。以下贡献者做出了卓越贡献，直接提升了项目的质量、稳定性和影响范围。**感谢你们。**
 
 ### 按已合并拉取请求数统计的外部贡献者
 
@@ -1518,7 +1520,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
 
 <sub>重新检查于 2026-10-18 14:44:45 UTC：由仓库 Contributors API 针对默认分支 <code>release/v3.8.52</code> 报告的归属于 GitHub 用户的提交。该 API 返回了 849 个身份（429 名用户、2 个机器人、418 个匿名身份）；此表排除了维护者、机器人和匿名身份，并保留并列名次。它与上方的已合并 PR 排名和下方的 Git 元数据统计均不同。</sub>
 
-> 🙏 这些贡献者提供的功能、错误修复和基础设施改进，是 OmniRoute 得以可靠且功能丰富的**核心组成部分**。每个拉取请求、每个测试用例以及每个 i18n 翻译文件都至关重要。开源正是由他们这样的人共同构建的。
+> 🙏 这些贡献者提供的功能、错误修复和基础设施改进，是 67router 得以可靠且功能丰富的**核心组成部分**。每个拉取请求、每个测试用例以及每个 i18n 翻译文件都至关重要。开源正是由他们这样的人共同构建的。
 
 </div>
 
@@ -1530,7 +1532,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
 
 <div align="center">
 
-衷心感谢那些自掏腰包资助 OmniRoute 的人——每一份贡献都让该项目保持免费、独立并持续发展。
+衷心感谢那些自掏腰包资助 67router 的人——每一份贡献都让该项目保持免费、独立并持续发展。
 
 <table>
   <tr>
@@ -1620,7 +1622,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
 
 <sub>已于 2026-10-18 通过 GitHub Sponsors GraphQL API 重新验证公开的 GitHub 赞助者：总计 14 项赞助中有 11 项公开赞助（6 项当前有效，5 项已结束）。GitHub 的 <code>isActive</code> 状态决定了上方的当前有效标签；过往公开的一次性支持者仍列于感谢名单中，私人赞助者则保持匿名。Ko-fi、Buy Me a Coffee、Liberapay、PIX 和加密货币捐赠因没有公开的赞助记录而未列出。</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 成为赞助者 →</a></b> — 每一美元都能帮助 OmniRoute 保持免费和独立。
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 成为赞助者 →</a></b> — 每一美元都能帮助 67router 保持免费和独立。
 
 </div>
 
@@ -1692,14 +1694,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute 站在巨人的肩膀上。它最初是 **[9router](https://github.com/decolua/9router)** 的一个分支，也是 Go 项目 **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** 的 TypeScript 移植版本——在此基础上，下面的每个子系统都受到某个率先实现相关功能的开源项目启发。每个项目都塑造了 OmniRoute 的某个具体部分。谨以此向它们一一致谢。🙏
+67router 站在巨人的肩膀上。它最初是 **[9router](https://github.com/decolua/9router)** 的一个分支，也是 Go 项目 **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** 的 TypeScript 移植版本——在此基础上，下面的每个子系统都受到某个率先实现相关功能的开源项目启发。每个项目都塑造了 67router 的某个具体部分。谨以此向它们一一致谢。🙏
 
 > ⭐ 星标数已于 2026 年 10 月 18 日通过 GitHub REST API 核实——请为这些项目点亮星标。这里的数量是特定日期的精确快照，自然会随时间变化。
 
 ### 🧬 项目传承与网关
 
 <table>
-  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 OmniRoute</th></tr>
+  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>本分支所基于的原始项目——在此基础上扩展了多模态 API，并使用 TypeScript 进行了完整重写。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>启发了此 JavaScript / TypeScript 移植版本的 Go 实现。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>这个 AI 网关的公开定价数据集为我们的成本跟踪同步功能提供数据，其提供者标准化模型也为我们的路由设计提供了参考。</td></tr>
@@ -1707,19 +1709,19 @@ OmniRoute 站在巨人的肩膀上。它最初是 **[9router](https://github.com
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>其模式被移植到流恢复、无思考别名、后备网络搜索、滑动窗口限制、日志脱敏和强化的启动器流程中。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>将 Cursor Composer 的工具选择、输出约束和工具提交模式改编到原生 Cursor 执行器中。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>将全新登录和刷新令牌轮换模式移植到 Codex OAuth 重新认证中。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>将 Claude Code 兼容的转换默认值和计费请求头行为泛化到 OmniRoute 的配置驱动型桥接器中。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>其 Grok 模型映射、伪 TypeError Statsig 生成器、请求和设备默认值以及 NDJSON 响应处理器均被实质性地改编到 OmniRoute 的 Grok Web 执行器中。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>将 Claude Code 兼容的转换默认值和计费请求头行为泛化到 67router 的配置驱动型桥接器中。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>其 Grok 模型映射、伪 TypeError Statsig 生成器、请求和设备默认值以及 NDJSON 响应处理器均被实质性地改编到 67router 的 Grok Web 执行器中。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>grok2api-merged 背后的主要传递性代码来源；其模型、请求头、负载、Statsig 和处理器实现均保留在 Grok Web 的项目传承中。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>这是 Grok 负载和设备默认值、Statsig 生成器，以及经由 TQZHR 和 grok2api-merged 传承下来的 <code>result.response</code> 处理器的底层 MIT 源代码。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>grok2api-merged 为其代理池层注明的一个传递性来源；OmniRoute 保留了该传承声明，但并不声称在其范围受限的 Grok Web 执行器中移植了代理池。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>其基于 Cookie 认证的 Grok 代理和 <code>result.response.token</code> 流式传输模式为 OmniRoute 的 Grok Web 传输层提供了参考。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>grok2api-merged 为其代理池层注明的一个传递性来源；67router 保留了该传承声明，但并不声称在其范围受限的 Grok Web 执行器中移植了代理池。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>其基于 Cookie 认证的 Grok 代理和 <code>result.response.token</code> 流式传输模式为 67router 的 Grok Web 传输层提供了参考。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>最初的 Grok Web 实现参考了其 HTTP/浏览器上游设计；由于其直接 HTTP 路径源自 GrokProxy，因此不主张存在独立的代码移植。</td></tr>
 </table>
 
 ### 🗜️ 上下文与令牌压缩——引擎
 
 <table>
-  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 OmniRoute</th></tr>
+  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>爆火的“能用少量 token 搞定，为什么还要用很多 token”项目——其穴居人式表达理念为我们的标准压缩模式以及 30 多条赘词删除/内容精简规则提供了基础。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>高性能命令输出压缩——启发了我们的 RTK 引擎、JSON 过滤器 DSL、原始输出恢复机制，以及串联式 RTK → Caveman 流水线。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>可逆上下文压缩（SmartCrusher）——启发了我们的 <code>headroom</code> 引擎和 <code>ccr</code> 检索标记模式。</td></tr>
@@ -1727,15 +1729,15 @@ OmniRoute 站在巨人的肩膀上。它最初是 **[9router](https://github.com
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>JS/ONNX 移植版（MobileBERT / XLM-RoBERTa），用作我们 LLMLingua 引擎的工作线程后端。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>巴西葡萄牙语 token 压缩——为我们的 pt-BR 语言包提供支持：针对巴西葡萄牙语语法调优的赘述精简和填充词删除。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>爆火的“懒惰高级开发者”YAGNI 编码技能——启发了我们的 <b>less-code</b> 输出风格：引导生成最小可用改动，减少_生成的_代码（与 Caveman 的简洁表达相对应的输出维度策略）。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>其行动优先、对 ADHD 友好的响应风格被改造为 OmniRoute 支持五种语言的简洁输出风格。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>其行动优先、对 ADHD 友好的响应风格被改造为 67router 支持五种语言的简洁输出风格。</td></tr>
 </table>
 
 ### 🧩 紧凑格式、token 研究与代码感知工具
 
 <table>
-  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 OmniRoute</th></tr>
+  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>面向 token 的对象表示法——其列式、“表头加数据行”模型塑造了我们的表格压缩阶段。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>其紧凑图格式和通用配置设计为 OmniRoute 的表格压缩及 Headroom 编解码格式提供了参考。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>其紧凑图格式和通用配置设计为 67router 的表格压缩及 Headroom 编解码格式提供了参考。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>该 MIT TypeScript 实现被直接内置并扩展为 Headroom 通用配置编解码器。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Brotli/SQLite 缓存 + 按会话计算上下文增量——启发了我们的 <code>session-dedup</code> 引擎。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Bash 输出压缩 + MCP 配置——启发了我们的压缩退出原则和 MCP 工具清单精简机制。</td></tr>
@@ -1752,7 +1754,7 @@ OmniRoute 站在巨人的肩膀上。它最初是 **[9router](https://github.com
 ### 🧠 记忆与 RAG
 
 <table>
-  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 OmniRoute</th></tr>
+  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>通用记忆层——其以代理作为写入/读取边界的模型塑造了我们的记忆架构。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>采用分层记忆的有状态智能体——启发了我们的上下文控制与恢复（CCR）分层模型。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>ProblemMap 对 16 种常见 RAG/LLM 故障模式的分类体系——构成了我们故障排除指南中的共享术语。</td></tr>
@@ -1761,15 +1763,15 @@ OmniRoute 站在巨人的肩膀上。它最初是 **[9router](https://github.com
 ### 🛰️ 流量检查、MITM 与透明代理
 
 <table>
-  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 OmniRoute</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>对编码助手 ↔ LLM 流量的 MITM 拦截/分析为早期的流量检查器需求提供了参考。此前派生的四个模块——SSE 合并、对话规范化、敏感信息遮蔽和请求头清理——均已由基于公开协议标准、独立洁净室实现的版本取代。两个主机直通接口（<code>passthrough.ts</code> 和 <code>_internal/bypass.cjs</code>）仍为独立归类的 OmniRoute 内部实现；它们不属于此次替换重写的范围。</td></tr>
+  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 67router</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>对编码助手 ↔ LLM 流量的 MITM 拦截/分析为早期的流量检查器需求提供了参考。此前派生的四个模块——SSE 合并、对话规范化、敏感信息遮蔽和请求头清理——均已由基于公开协议标准、独立洁净室实现的版本取代。两个主机直通接口（<code>passthrough.ts</code> 和 <code>_internal/bypass.cjs</code>）仍为独立归类的 67router 内部实现；它们不属于此次替换重写的范围。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>透明的按进程代理路由——启发了我们可防崩溃的 MITM 清理机制、套接字空闲超时、<code>/proc</code> 进程归属识别和 TPROXY 捕获。</td></tr>
 </table>
 
 ### 📚 模型数据、可观测性与 UI
 
 <table>
-  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 OmniRoute</th></tr>
+  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>开放的 AI 模型规格、定价与能力数据库——以原生方式同步至我们的模型目录。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>为我们的实时压缩工作室和组合/路由工作室提供支持的节点式图形库。</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>LangGraph Studio 的实时工作流图可视化启发了我们各工作室的实时级联视图。</td></tr>
@@ -1782,19 +1784,19 @@ OmniRoute 站在巨人的肩膀上。它最初是 **[9router](https://github.com
 ### 🛡️ 安全
 
 <table>
-  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 OmniRoute</th></tr>
+  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>一份精心整理的默认安全库列表，为我们的安全方案选择提供指导（Helmet.js、DOMPurify、ssrf-req-filter、safe-regex、Google Tink）。</td></tr>
 </table>
 
 ### 🧭 互补工具
 
 <table>
-  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 OmniRoute</th></tr>
+  <tr><th align="left">项目</th><th align="center">⭐</th><th align="left">它如何启发 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>启发了请求去重、紧急零成本回退、可插拔 Auto-Combo 策略和多语言意图分类。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>其账户感知的模型重映射、可执行文件路径验证和套餐标签行为为 OmniRoute 的 Antigravity 运行时提供了参考。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>其紧凑的配额重置倒计时格式启发了 OmniRoute 中相应的提供者限额显示。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>其 ACP 集成启发了 OmniRoute 对已安装 CLI 智能体的自动检测。</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>发现了 Grok Build 配额接口；随后 OmniRoute 独立验证并修正了实际使用的线级格式。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>其账户感知的模型重映射、可执行文件路径验证和套餐标签行为为 67router 的 Antigravity 运行时提供了参考。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>其紧凑的配额重置倒计时格式启发了 67router 中相应的提供者限额显示。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>其 ACP 集成启发了 67router 对已安装 CLI 智能体的自动检测。</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>发现了 Grok Build 配额接口；随后 67router 独立验证并修正了实际使用的线级格式。</td></tr>
 </table>
 
 ## 📄 许可证
@@ -1807,7 +1809,7 @@ MIT 许可证——详情请参阅 [LICENSE](LICENSE)。
 
 **[⬆ 返回顶部](#-omniroute)** · 为开源 AI 社区用 ❤️ 构建。
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT 许可证 · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · MIT 许可证 · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- 已启用 GitHub Discussions，供社区问答使用 -->

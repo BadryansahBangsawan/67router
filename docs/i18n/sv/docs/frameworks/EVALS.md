@@ -7,7 +7,7 @@
 > **Sanningskälla:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40
 
-OmniRoute levereras med ett generiskt utvärderingsramverk som du kan använda för att prestandatesta routningskonfigurationer, enskilda leverantörer/modeller eller de medföljande sviterna med referenstestfall ("golden set").
+67router levereras med ett generiskt utvärderingsramverk som du kan använda för att prestandatesta routningskonfigurationer, enskilda leverantörer/modeller eller de medföljande sviterna med referenstestfall ("golden set").
 Använd det för att verifiera routningsändringar, validera nya leverantörer och införa kvalitetsgrindar för versioner innan de lanseras i produktionstrafiken.
 
 Ramverket är implementerat som:

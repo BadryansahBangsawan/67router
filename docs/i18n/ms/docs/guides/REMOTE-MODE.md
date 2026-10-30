@@ -4,7 +4,7 @@
 
 ---
 
-Jalankan CLI `omniroute` pada komputer riba anda sementara OmniRoute itu sendiri berjalan di tempat lain
+Jalankan CLI `omniroute` pada komputer riba anda sementara 67router itu sendiri berjalan di tempat lain
 (VPS, pelayan rumah, mesin lain dalam Tailnet anda). Anda log masuk sekali dengan
 `omniroute connect`, dan selepas itu **setiap** perintah CLI menyasarkan pelayan
 jauh tersebut — perintah yang sama, output yang sama, cuma dilaksanakan terhadap pelayan jauh.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← menulis profil Codex setempat dar
 ## Cara ia berfungsi
 
 ```
-komputer riba anda                       OmniRoute jauh (VPS)
+komputer riba anda                       67router jauh (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (kata laluan → token)     │
 │  konteks: vps      │ ───────────────►  │ menghasilkan token akses      │
@@ -108,14 +108,14 @@ pelayan, bukan pada mesin anda, maka skrin persetujuan **tergantung selama-laman
 tidak pernah mengeluarkan kod** — kaedah sandaran biasa "tampal URL panggil balik" tidak
 mempunyai apa-apa untuk ditampal. (Ini ialah kekangan daripada pihak Google: keadaan
 tergantung yang sama berlaku dalam mana-mana proksi yang menggunakan klien desktop
-Antigravity terbina dalam, bukan OmniRoute sahaja.)
+Antigravity terbina dalam, bukan 67router sahaja.)
 
 Papan pemuka mengesan perkara ini sebelum anda tersekat: membuka **Providers → Antigravity →
 Connect** daripada alamat bukan localhost akan menggantikan notis umum "salin URL panggil balik"
 dengan dua penyelesaian di bawah, masing-masing dengan hos dan port anda yang telah diisi.
 (Alamat LAN turut dikira — `192.168.x.x` bukan localhost bagi tujuan panggil balik ini.)
 
-Terdapat dua cara yang disokong untuk menyambungkan Antigravity kepada OmniRoute jauh.
+Terdapat dua cara yang disokong untuk menyambungkan Antigravity kepada 67router jauh.
 
 ### Pilihan A — pembantu log masuk setempat (disyorkan)
 
@@ -153,7 +153,7 @@ npx omniroute login antigravity --no-push
 
 Kemudian, dalam papan pemuka **jauh**: **Providers → Antigravity → Connect**, dan tampal
 blob `omniroute-cred-v1.…` ke dalam medan **Step 2** (ia menerima sama ada URL panggil
-balik atau blob bukti kelayakan). OmniRoute menyahkodnya, menjalankan proses permulaan
+balik atau blob bukti kelayakan). 67router menyahkodnya, menjalankan proses permulaan
 Cloud Code pada pelayan, dan menyimpan sambungan secara berterusan.
 
 > Blob tersebut mengandungi token segar semula — perlakukannya seperti kata laluan. Melalui
@@ -197,7 +197,7 @@ khusus penyedia yang perlu diterowongkan.
 ## Menyambungkan Codex / Grok pada pemasangan jauh (penyedia gelung balik tetap)
 
 Codex, xAI (`xai-oauth`) dan Grok CLI (`grok-cli`) mendaftarkan `redirect_uri`
-gelung balik yang **tetap** dengan aplikasi OAuth huluan mereka. OmniRoute tidak
+gelung balik yang **tetap** dengan aplikasi OAuth huluan mereka. 67router tidak
 boleh mengubahnya — penyedia sentiasa menghantar pelayar kembali ke alamat yang
 dikod keraskan yang sama:
 
@@ -208,7 +208,7 @@ dikod keraskan yang sama:
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                             |
 
 `localhost` di situ bermaksud **mesin yang menjalankan pelayar**, manakala pelayan
-panggil balik PKCE OmniRoute mendengar pada gelung balik **pelayan**. Buka papan
+panggil balik PKCE 67router mendengar pada gelung balik **pelayan**. Buka papan
 pemuka pada alamat LAN seperti `http://192.168.0.15:20128` dan kedua-duanya tidak
 akan bertemu: kod kebenaran dihantar ke `localhost:1455` komputer riba anda
 sendiri, tempat tiada apa-apa yang mendengar, lalu penyedia menggagalkan proses
@@ -229,7 +229,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Dua pemajuan diperlukan dan memajukan hanya satu masih akan gagal:
 
 - **`20128`** (port papan pemuka) menjadikan asal sebagai localhost sebenar,
-  yang membolehkan OmniRoute memulakan pelayan panggil balik PKCE — asal LAN
+  yang membolehkan 67router memulakan pelayan panggil balik PKCE — asal LAN
   tidak sekali-kali mencapai cabang tersebut.
 - **`1455`** (port panggil balik tetap penyedia) ialah tempat pelayar dihantar
   kembali; port tersebut perlu diterowongkan ke gelung balik pelayan.
@@ -349,7 +349,7 @@ omniroute contexts current         # pelayan aktif, status pengesahan, skop
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

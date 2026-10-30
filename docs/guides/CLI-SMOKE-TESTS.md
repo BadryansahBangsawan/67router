@@ -21,7 +21,7 @@ it exit with code 2. All targets must PASS for exit code 0.
 
 Each target runs through `omniroute run` against a disposable HTTP server bound to
 `127.0.0.1`, using a fixed, non-secret sentinel credential. HOME, XDG directories,
-CLI configuration homes, and the OmniRoute data directory are temporary. Provider
+CLI configuration homes, and the 67router data directory are temporary. Provider
 credentials, proxy variables, runtime-loader flags, and existing configurations
 are not inherited. No real upstream credentials are required or accepted.
 

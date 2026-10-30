@@ -1,14 +1,14 @@
 ---
-title: "🌐 OmniRoute Proxy Guide"
+title: "🌐 67router Proxy Guide"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# 🌐 OmniRoute Proxy Guide
+# 🌐 67router Proxy Guide
 
 > **Bypass geographic blocks, protect your identity, and route AI traffic through any proxy — with zero configuration complexity.**
 
-OmniRoute includes a full-featured proxy management system that lets you route upstream AI provider traffic through HTTP, HTTPS, or SOCKS5 proxies. Whether you're in a blocked region, need IP rotation, or want stealth fingerprinting — this guide covers everything.
+67router includes a full-featured proxy management system that lets you route upstream AI provider traffic through HTTP, HTTPS, or SOCKS5 proxies. Whether you're in a blocked region, need IP rotation, or want stealth fingerprinting — this guide covers everything.
 
 ---
 
@@ -52,7 +52,7 @@ Even outside blocked regions, proxies are useful for:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute Server                        │
+│                       67router Server                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Proxy       │    │ Proxy        │    │ Proxy            │  │
@@ -82,7 +82,7 @@ Even outside blocked regions, proxies are useful for:
 
 ## 4-Level Proxy System
 
-OmniRoute supports proxy configuration at **four independent scopes**, resolved in priority order:
+67router supports proxy configuration at **four independent scopes**, resolved in priority order:
 
 ```
 Priority Resolution Order (highest → lowest):
@@ -95,7 +95,7 @@ Priority Resolution Order (highest → lowest):
 
 ### How Resolution Works
 
-When OmniRoute sends a request to an upstream provider, it calls `resolveProxyForConnectionFromRegistry()` which checks each level in order:
+When 67router sends a request to an upstream provider, it calls `resolveProxyForConnectionFromRegistry()` which checks each level in order:
 
 1. **Account-level** — Is there a proxy assigned to this specific connection ID?
 2. **Provider-level** — Is there a proxy assigned to this provider (e.g., `openai`)?
@@ -237,7 +237,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Import/Export
 
-Proxies are included in the **Backup/Restore** system. When you export your OmniRoute configuration:
+Proxies are included in the **Backup/Restore** system. When you export your 67router configuration:
 
 1. Go to **Dashboard → Settings → Backup**
 2. Click **Export** — proxy registry and assignments are included
@@ -247,7 +247,7 @@ The proxy registry also supports **upsert by host+port** — if you import a pro
 
 ### Legacy Migration
 
-If you configured proxies in an older version (pre-registry), OmniRoute automatically migrates them:
+If you configured proxies in an older version (pre-registry), 67router automatically migrates them:
 
 ```
 Legacy key_value store → proxy_registry + proxy_assignments
@@ -259,7 +259,7 @@ This happens once on first startup after upgrade. Use `migrateLegacyProxyConfigT
 
 ## Anti-Detection & Stealth
 
-OmniRoute doesn't just route traffic through a proxy — it makes the traffic look legitimate:
+67router doesn't just route traffic through a proxy — it makes the traffic look legitimate:
 
 ### TLS Fingerprint Spoofing
 
@@ -293,13 +293,13 @@ The badge also shows the resolved proxy IP for verification.
 
 ## Upstream Proxy Modes
 
-For providers that use the CLIProxyAPI pattern, OmniRoute supports three upstream proxy modes:
+For providers that use the CLIProxyAPI pattern, 67router supports three upstream proxy modes:
 
-| Mode          | Description                                        |
-| ------------- | -------------------------------------------------- |
-| `native`      | OmniRoute handles proxy routing directly (default) |
-| `cliproxyapi` | Delegates to an external CLIProxyAPI instance      |
-| `fallback`    | Tries native first, falls back to CLIProxyAPI      |
+| Mode          | Description                                       |
+| ------------- | ------------------------------------------------- |
+| `native`      | 67router handles proxy routing directly (default) |
+| `cliproxyapi` | Delegates to an external CLIProxyAPI instance     |
+| `fallback`    | Tries native first, falls back to CLIProxyAPI     |
 
 Configure per-provider:
 
@@ -353,7 +353,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tunnels API
 
-For exposing your OmniRoute instance to the public internet (Cloudflare/ngrok/Tailscale) instead of routing outbound through a proxy, see [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). The tunnel REST API lives under `/api/tunnels/{cloudflared,ngrok,tailscale}/*` and is orthogonal to the outbound proxy chain documented above.
+For exposing your 67router instance to the public internet (Cloudflare/ngrok/Tailscale) instead of routing outbound through a proxy, see [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). The tunnel REST API lives under `/api/tunnels/{cloudflared,ngrok,tailscale}/*` and is orthogonal to the outbound proxy chain documented above.
 
 ### Upstream Proxy API
 
@@ -381,7 +381,7 @@ Set `ENABLE_SOCKS5_PROXY=true` in your `.env` file and restart.
 
 ### "socket hang up" errors through proxy
 
-This is normal with cheap proxies that drop idle connections. OmniRoute already handles this by:
+This is normal with cheap proxies that drop idle connections. 67router already handles this by:
 
 - Disabling keep-alive on proxy connections (`keepAliveTimeout: 1`)
 - Disabling pipelining (`pipelining: 0`)
@@ -391,7 +391,7 @@ If it persists, try a different proxy.
 
 ### "unsupported_country_region_territory" during OAuth
 
-Make sure the proxy is configured **before** starting the OAuth flow. OmniRoute routes OAuth token exchange through the configured proxy. Set a global or provider-level proxy first, then connect.
+Make sure the proxy is configured **before** starting the OAuth flow. 67router routes OAuth token exchange through the configured proxy. Set a global or provider-level proxy first, then connect.
 
 ### Proxy not being used
 
@@ -449,7 +449,7 @@ CREATE TABLE proxy_assignments (
 
 ## Proxy Health Checking (v3.8.16+)
 
-OmniRoute's **proxy fast-fail** mechanism (`src/lib/proxyHealth.ts`) detects dead proxies in <2s via a quick TCP connection check, then **caches the result** to avoid per-request overhead.
+67router's **proxy fast-fail** mechanism (`src/lib/proxyHealth.ts`) detects dead proxies in <2s via a quick TCP connection check, then **caches the result** to avoid per-request overhead.
 
 ### How It Works
 
@@ -514,11 +514,11 @@ Custom ports in the URL (`http://host:9999`) always take precedence over the sch
 
 ## Proxy Analytics & Observability
 
-OmniRoute tracks per-proxy usage to help operators diagnose routing patterns, latency spikes, and recurring failures.
+67router tracks per-proxy usage to help operators diagnose routing patterns, latency spikes, and recurring failures.
 
 ### What's Tracked
 
-For every request through a configured proxy, OmniRoute records:
+For every request through a configured proxy, 67router records:
 
 | Metric       | Description                                     |
 | ------------ | ----------------------------------------------- |
@@ -580,7 +580,7 @@ ORDER BY latency_ms DESC;
 
 ## Rotation Strategy Decision Tree
 
-When multiple proxies are assigned to a scope, OmniRoute uses a **rotation strategy** to pick which one to use for each request. The strategy is configured at the scope level (global, per-provider, per-account, per-combo).
+When multiple proxies are assigned to a scope, 67router uses a **rotation strategy** to pick which one to use for each request. The strategy is configured at the scope level (global, per-provider, per-account, per-combo).
 
 ### Available Strategies
 

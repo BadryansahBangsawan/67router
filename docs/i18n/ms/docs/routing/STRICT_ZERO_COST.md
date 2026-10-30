@@ -31,7 +31,7 @@ Bagi setiap calon dalam kumpulan (`open-sse/services/autoCombo/virtualFactory.ts
 sejurus selepas `filterPaidOnlyCandidates`):
 
 1. **Tidak terdapat langsung dalam `FREE_MODEL_BUDGETS`** → dikecualikan. Ini merangkumi model yang sememangnya berbayar dan mana-mana
-   penyedia/model yang belum dikelaskan oleh OmniRoute — calon baharu bermula sebagai dikecualikan, bukannya disertakan.
+   penyedia/model yang belum dikelaskan oleh 67router — calon baharu bermula sebagai dikecualikan, bukannya disertakan.
 2. **`freeType: "keyless"`** → lulus serta-merta, **tetapi hanya untuk calon yang benar-benar
    tiba melalui laluan tanpa pengesahan** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Tiada bukti kelayakan wujud untuk
@@ -86,7 +86,7 @@ disahkan sendiri oleh penapis ini — bukan akaun lain yang belum disahkan pada 
 (kes pintasan tanpa kunci A/B/C, kes berbilang akaun 1-5).
 
 `ditemui secara automatik`: penyedia/model yang dikeluarkan esok dengan metadata yang betul (dalam
-katalog, dengan penyesuai penggunaan, `hardStopGuaranteed: true`) boleh digunakan sebaik sahaja OmniRoute
+katalog, dengan penyesuai penggunaan, `hardStopGuaranteed: true`) boleh digunakan sebaik sahaja 67router
 mengetahuinya — tanpa perubahan kod, tanpa entri senarai putih dan tanpa apa-apa yang perlu diedit dalam modul ini.
 Penyedia/model yang dialih keluar daripada katalog akan hilang dengan cara yang sama. Lihat
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` untuk bukti regresi (melalui

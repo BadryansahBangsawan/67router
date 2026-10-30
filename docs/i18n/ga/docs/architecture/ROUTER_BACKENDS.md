@@ -15,9 +15,9 @@ Leagann an ADR seo síos go beacht an gaol atá idir `ts` (dúchasach), `bifrost
 Déantar cur síos ar ról innill trí **dhá ais neamhspleácha**, atá ionchódaithe le chéile i `RouterBackendDefinition` na clárlainne:
 
 1. **Saolré** (`RouterBackendLifecycle`) — _conas a ritheann an t-inneall_:
-   - `in-process` — ritheann sé laistigh de phróiseas Node OmniRoute (an phíblíne dhúchasach TS).
-   - `supervised` — próiseas logánta linbh a shuiteálann/a thosaíonn/a stopann/a sheiceálann OmniRoute ó thaobh sláinte de trí `ServiceSupervisor`, agus a úsáideann sé ansin mar nasc soláthraí.
-   - `external` — críochphointe HTTP a seolann OmniRoute iarratais chuige ach nach ndéanann sé **é** a bhainistiú (cumraithe le bun-URL timpeallachta).
+   - `in-process` — ritheann sé laistigh de phróiseas Node 67router (an phíblíne dhúchasach TS).
+   - `supervised` — próiseas logánta linbh a shuiteálann/a thosaíonn/a stopann/a sheiceálann 67router ó thaobh sláinte de trí `ServiceSupervisor`, agus a úsáideann sé ansin mar nasc soláthraí.
+   - `external` — críochphointe HTTP a seolann 67router iarratais chuige ach nach ndéanann sé **é** a bhainistiú (cumraithe le bun-URL timpeallachta).
    - `disabled` — cláraithe ach ní féidir é a roghnú.
 2. **Ais roghnúcháin** (inneall ródaithe an athsheachadáin) — _an seolann an t-athsheachadán iarratais chuige_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` in

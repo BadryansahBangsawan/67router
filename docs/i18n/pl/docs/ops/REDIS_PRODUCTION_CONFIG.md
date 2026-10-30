@@ -6,7 +6,7 @@
 
 ## Omówienie
 
-Redis jest **opcjonalną, miękką zależnością** w OmniRoute — gdy Redis jest niedostępny, aplikacja
+Redis jest **opcjonalną, miękką zależnością** w 67router — gdy Redis jest niedostępny, aplikacja
 łagodnie przełącza się na rozwiązania zastępcze w pamięci. W środowisku produkcyjnym dostrojenie Redis zmniejsza opóźnienia dla czterech odrębnych
 obciążeń:
 
@@ -17,7 +17,7 @@ obciążeń:
 | Magazyn limitów                     | `redisQuotaStore.ts`          | Osobny singleton `getRedisClient(url)`             | `<prefix>quota:*` konfigurowalny dla każdej instancji |
 | Wyłącznik automatyczny rozgrzewania | `redisCircuitBreakerStore.ts` | Osobny klient w `circuitBreakerFactory.ts`         | `<prefix>warmup:cb:<connectionId>`                    |
 
-Wszystkie cztery obciążenia korzystają ze wspólnego prefiksu przestrzeni nazw, dzięki czemu OmniRoute może współistnieć z innymi aplikacjami w
+Wszystkie cztery obciążenia korzystają ze wspólnego prefiksu przestrzeni nazw, dzięki czemu 67router może współistnieć z innymi aplikacjami w
 pojedynczej instancji Redis (np. `127.0.0.1:6379`). Zobacz [Przestrzeń nazw kluczy](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ pojedynczej instancji Redis (np. `127.0.0.1:6379`). Zobacz [Przestrzeń nazw klu
 
 ## Przestrzeń nazw kluczy
 
-OmniRoute współdzieli instancję Redis ze wszystkimi innymi usługami działającymi na hoście. Bez przestrzeni nazw
+67router współdzieli instancję Redis ze wszystkimi innymi usługami działającymi na hoście. Bez przestrzeni nazw
 klucze takie jak `auth:api_key:<sha256>` lub `rl:*` mogłyby kolidować z kluczami innych aplikacji
 korzystających z tego samego Redis (ta instancja uruchamia Redis pod adresem `127.0.0.1:6379` razem z innymi usługami).
 
-Ustaw `REDIS_KEY_PREFIX` na niepusty ciąg znaków, aby dodać prefiks do **każdego** klucza OmniRoute:
+Ustaw `REDIS_KEY_PREFIX` na niepusty ciąg znaków, aby dodać prefiks do **każdego** klucza 67router:
 
 ```bash
-# .env — wszystkie klucze OmniRoute przyjmują postać omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — wszystkie klucze 67router przyjmują postać omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # pozostaw miejsce na pamięć podręczną stron systemu operacyjnego
 maxmemory-policy allkeys-lru         # usuwaj nieaktualne wpisy pamięci podręcznej uwierzytelniania przy dużym obciążeniu pamięci
 
-# Trwałość (opcjonalna — OmniRoute jest odporny na awarie bez niej)
+# Trwałość (opcjonalna — 67router jest odporny na awarie bez niej)
 save 300 1                           # twórz migawkę co najmniej co 5 min, jeśli zmienił się ≥1 klucz
 appendonly no                        # AOF nie jest potrzebny; dane można odtworzyć
 appendfsync no                       # brak narzutu fsync (RDB jest wystarczające)

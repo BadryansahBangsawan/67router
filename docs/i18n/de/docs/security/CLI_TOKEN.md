@@ -6,7 +6,7 @@
 
 ## Überblick
 
-OmniRoute-CLI-Befehle authentifizieren sich gegenüber der lokalen Verwaltungs-API mit einem
+67router-CLI-Befehle authentifizieren sich gegenüber der lokalen Verwaltungs-API mit einem
 `HMAC-SHA256(machine-id, salt)`-Token, das über den Anfrage-Header
 `x-omniroute-cli-token` gesendet wird.
 

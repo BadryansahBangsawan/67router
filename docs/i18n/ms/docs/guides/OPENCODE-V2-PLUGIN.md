@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` memasukkan keseluruhan katalog OmniRoute anda — model, kombo dan
+`@omniroute/opencode-plugin-v2` memasukkan keseluruhan katalog 67router anda — model, kombo dan
 kombo automatik — ke dalam pemilih model OpenCode v2, lengkap dengan nama paparan, harga dan bajet
 peringkat percuma.
 
@@ -15,7 +15,7 @@ dikongsi antara kedua-duanya, jadi menaik taraf satu pakej tidak akan memaksa pa
 ## Keperluan
 
 - OpenCode v2.
-- Gerbang OmniRoute yang boleh dicapai (`http://localhost:20128` secara lalai).
+- Gerbang 67router yang boleh dicapai (`http://localhost:20128` secara lalai).
 - Node.js 22 atau 24.
 
 ## Pemasangan
@@ -128,7 +128,7 @@ Tetapkan `"geminiSanitization": false` untuk mematikannya.
 
 | Gejala                                       | Punca                                                                                                                    |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Pemilih tidak memaparkan model OmniRoute     | Tiada kunci yang berjaya dikenal pasti (semak amaran permulaan), atau get laluan tidak dapat dicapai                     |
+| Pemilih tidak memaparkan model 67router      | Tiada kunci yang berjaya dikenal pasti (semak amaran permulaan), atau get laluan tidak dapat dicapai                     |
 | ID model mentah, tiada gabungan, tiada harga | Titik akhir pengurusan menolak token — tetapkan `managementReadToken`                                                    |
 | Katalog `freeOnly` pendek atau kosong        | Tiada token pengurusan atau token ditolak — baca baris ringkasan muat semula (kiraan `unmatched-free`) dalam log hos     |
 | Sesi disematkan pada `opencode-<id>/…`       | Pemalam v1 menerbitkan `opencode-<id>`; v2 menerbitkan `<id>` secara langsung, jadi pilih semula model di bawah `<id>/…` |

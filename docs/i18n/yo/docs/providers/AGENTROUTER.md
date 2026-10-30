@@ -12,7 +12,7 @@ kan pàtó, àwọn àsíá `anthropic-beta`, àwọn header Stainless SDK, àti
 
 ## Ìbẹ̀rẹ̀ kíákíá — lo provider `agentrouter` ìbílẹ̀ (a dábàá rẹ̀)
 
-Fún ọ̀pọ̀lọpọ̀ àwọn olùlò, **kò sí ìṣètò pàtàkì tí a nílò**. OmniRoute ní provider
+Fún ọ̀pọ̀lọpọ̀ àwọn olùlò, **kò sí ìṣètò pàtàkì tí a nílò**. 67router ní provider
 `agentrouter` tí a kọ sínú rẹ̀, pẹ̀lú gbogbo wire image Claude Code tí a ti fi sínú rẹ̀ tẹ́lẹ̀ (wo
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Láti lò ó:
 
@@ -34,7 +34,7 @@ base URL, chat path, tàbí àkójọpọ̀ header padà.
 
 ## Ìlọsíwájú: sísopọ̀ nípasẹ̀ irú provider tó bá Claude Code mu
 
-OmniRoute tún ṣe àtìlẹ́yìn fún AgentRouter (àti àwọn relay tó jọ ọ́) nípasẹ̀ irú provider
+67router tún ṣe àtìlẹ́yìn fún AgentRouter (àti àwọn relay tó jọ ọ́) nípasẹ̀ irú provider
 **Claude Code compatible** (`anthropic-compatible-cc-*`), èyí tó ń lo
 Anthropic Messages API pẹ̀lú wire image tó tọ́. Provider
 `openai-compatible-chat` gbogbogbò tó ń tọ́ka sí `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code ló rán wọn.
 
 - Account AgentRouter àti API key. Àwọn tó ṣẹ̀ṣẹ̀ forúkọsílẹ̀ máa ń gba credit ọ̀fẹ́ nípasẹ̀ affiliate
   link tó wà nínú [README](../README.md) project náà.
-- OmniRoute tó ń ṣiṣẹ́ pẹ̀lú feature flag `ENABLE_CC_COMPATIBLE_PROVIDER` tí a ti mú ṣiṣẹ́
+- 67router tó ń ṣiṣẹ́ pẹ̀lú feature flag `ENABLE_CC_COMPATIBLE_PROVIDER` tí a ti mú ṣiṣẹ́
   (wo ìsàlẹ̀).
 
 ## 1. Mú irú provider tó bá CC mu ṣiṣẹ́
 
 A fi irú provider tó bá Claude Code mu sí ẹ̀yìn feature flag nítorí pé ó
 ń rán traffic tó jọ client Claude Code ọ̀fíṣíà gan-an. Mú un ṣiṣẹ́ nípa
-ṣíṣètò environment variable kan kí o tó bẹ̀rẹ̀ OmniRoute:
+ṣíṣètò environment variable kan kí o tó bẹ̀rẹ̀ 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

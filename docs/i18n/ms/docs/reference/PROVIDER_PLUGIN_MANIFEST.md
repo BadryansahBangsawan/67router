@@ -9,7 +9,7 @@
 Manifes yang sama tersedia melalui HTTP di
 `GET /api/v1/provider-plugin-manifest` untuk sidecar yang berjalan di luar proses.
 
-OmniRoute mengiklankan URL tersebut kepada Bifrost dan CLIProxyAPI melalui pengepala permintaan
+67router mengiklankan URL tersebut kepada Bifrost dan CLIProxyAPI melalui pengepala permintaan
 `X-OmniRoute-Provider-Manifest-Url`. Tetapkan
 `OMNIROUTE_PROVIDER_MANIFEST_URL` apabila sidecar memerlukan URL rangkaian awam atau kontena dan bukannya asal permintaan setempat.
 
@@ -24,7 +24,7 @@ sidecar mesti membuat permintaan tanpa syarat dan bukannya menerima `304`.
 ## Matlamat
 
 Mengalihkan metadata penyedia ke arah kontrak pemalam supaya laluan permintaan aktif
-akhirnya boleh dikendalikan oleh sidecar dengan kependaman lebih rendah, sementara OmniRoute mengekalkan
+akhirnya boleh dikendalikan oleh sidecar dengan kependaman lebih rendah, sementara 67router mengekalkan
 laluan TypeScript sebagai pintu dasar dan sandaran. Manifes ini bersifat tambahan: ia
 tidak mengubah penghalaan permintaan dengan sendirinya.
 
@@ -68,7 +68,7 @@ membaca semula sumber TypeScript.
 | `usage-fetch`        | Mempunyai pengambil penggunaan atau kuota yang telah disambungkan (`getUsageForProvider`). |
 | `usage-supported`    | API penggunaan menerima penyedia ini (`isSupportedUsageConnection`).                       |
 
-`usage-fetch` adalah untuk penemuan sahaja. Ia melaporkan bahawa OmniRoute tahu cara membaca penggunaan bagi
+`usage-fetch` adalah untuk penemuan sahaja. Ia melaporkan bahawa 67router tahu cara membaca penggunaan bagi
 penyedia tersebut; ia tidak mengaktifkan pengambilan, mengubah semantik kuota, atau membayangkan bahawa
 widget kuota Dashboard didayakan untuk penyedia tersebut — widget itu dikawal secara berasingan oleh
 `USAGE_SUPPORTED_PROVIDERS`. Sumber kebenaran ialah `USAGE_FETCHER_PROVIDERS` dalam

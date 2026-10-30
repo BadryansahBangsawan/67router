@@ -11,12 +11,12 @@
 
 ## Ohun tí ó jẹ́
 
-OmniRoute lè sopọ̀ mọ́ workspace **Notion** gẹ́gẹ́ bí **orísun àyíká-ọ̀rọ̀** — ibi ìpamọ́
+67router lè sopọ̀ mọ́ workspace **Notion** gẹ́gẹ́ bí **orísun àyíká-ọ̀rọ̀** — ibi ìpamọ́
 ìmọ̀ tí a lè kà sí àti kọ sí, tí àwọn agent ń ráyè sí nípasẹ̀ olupin MCP tí a kọ sínú rẹ̀.
 Ní kété tí a bá ṣètò token integration Notion, àwọn irinṣẹ́ MCP yóò jẹ́ kí LLM lè ṣàwárí
 àwọn page àti database, ka àkóónú page àti àwọn igi block, ṣe query sí àwọn database
 pẹ̀lú filter/sort, kí ó sì fi àwọn block tuntun kún un — gbogbo rẹ̀ ni a ń ṣe nípasẹ̀
-OmniRoute (pẹ̀lú ìgbìyànjú padà, timeout, àti ìsọ̀rí error), kí model má bàa ní ìfarakanra
+67router (pẹ̀lú ìgbìyànjú padà, timeout, àti ìsọ̀rí error), kí model má bàa ní ìfarakanra
 taara pẹ̀lú API Notion.
 
 Integration náà jẹ́ wrapper kékeré tí a ti mú lágbára lórí API REST Notion ọ̀fíṣialì
@@ -41,7 +41,7 @@ Kò sí **environment variable** fún token Notion — a ń tọ́jú rẹ̀ sí
 > [!NOTE]
 > Token náà jẹ́ **token integration inú Notion**. Ṣẹ̀dá integration ní
 > <https://www.notion.com/my-integrations>, lẹ́yìn náà pín àwọn page/database tí o fẹ́
-> kí OmniRoute ráyè sí pẹ̀lú integration náà (àwòṣe ìyọ̀ǹda Notion dá lórí pípín,
+> kí 67router ráyè sí pẹ̀lú integration náà (àwòṣe ìyọ̀ǹda Notion dá lórí pípín,
 > kì í ṣe gbogbo workspace).
 
 ### Ṣètò nípasẹ̀ REST
@@ -60,7 +60,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Gbogbo method mẹ́tẹ̀ẹ̀ta nílò ìfàṣẹsí dashboard (`isAuthenticated`). Lórí `POST`,
-OmniRoute yóò fi token náà pamọ́, yóò sì ṣe ìṣàwárí ìdánwò ol èsì kan lẹ́sẹ̀kẹsẹ̀; bí Notion
+67router yóò fi token náà pamọ́, yóò sì ṣe ìṣàwárí ìdánwò ol èsì kan lẹ́sẹ̀kẹsẹ̀; bí Notion
 bá dá object error padà, a ó pa token náà rẹ́, call náà yóò sì kùnà pẹ̀lú `400`.
 
 ## Àwọn irinṣẹ́ MCP (6)

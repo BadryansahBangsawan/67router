@@ -4,7 +4,7 @@
 
 ---
 
-ይህ ሰነድ በOmniRoute ውስጥ ላሉ ሁሉም የCI ጥራት መግቢያዎች ዋና ማጣቀሻ ነው።
+ይህ ሰነድ በ67router ውስጥ ላሉ ሁሉም የCI ጥራት መግቢያዎች ዋና ማጣቀሻ ነው።
 እያንዳንዱን መግቢያ፣ ምን እንደሚያረጋግጥ፣ በየትኛው የCI ሥራ ውስጥ እንደሚሠራ፣
 የratchet መነሻ መስመር ወይም የማለፍ/የመውደቅ ፖሊሲ ይጠቀም እንደሆነ፣ እንዲሁም ግንባታውን የሚያግድ ወይም የምክር ብቻ እንደሆነ ይገልጻል።
 
@@ -229,14 +229,14 @@ BASE_REF=origin/release/vX.Y.Z npm run i18n:check-value-drift
 
 እነዚህ በcron መርሃግብር (እና `workflow_dispatch`) ይሠራሉ፣ በPRs ላይ ፈጽሞ አይሠሩም። ሁሉም ምክረ ሀሳብ ናቸው።
 
-| ወርክፍሎ                  | የሚያረጋግጠው                                                                                                                             | አግዷል        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| `nightly-property`     | በዘፈቀደ seed እና ከፍተኛ የrun ብዛት ያላቸው fast-check property ሙከራዎች                                                                           | **ምክረ ሀሳብ** |
-| `nightly-resilience`   | የheap-እድገት በር፣ chaos fault-injection፣ k6 load/soak                                                                                   | **ምክረ ሀሳብ** |
-| `nightly-llm-security` | promptfoo injection መከላከያ (block ሁነታ) + garak probes (የአቅራቢ ምስጢር ሳይኖር ይዘለላል)                                                         | **ምክረ ሀሳብ** |
-| `nightly-schemathesis` | `docs/openapi.yaml` በመጠቀም በሕያው OmniRoute ላይ OpenAPI contract fuzzing (schemathesis) — የspec ጥሰቶችን / ያልተተናነቡ 500ዎችን ያሳያል (Fase 8 B.4) | **ምክረ ሀሳብ** |
-| `nightly-mutation`     | በፈጣኑ የunit መስመር ላይ Stryker mutation-ፈተና ውጤት — የተረፉ mutants ደካማ assertዎችን ያሳያሉ                                                        | **ምክረ ሀሳብ** |
-| `nightly-compat`       | በሚደገፉት `engines.node` ክልሎች ላይ የNode ሞተር ተኳሃኝነት ማትሪክስ                                                                                 | **ምክረ ሀሳብ** |
+| ወርክፍሎ                  | የሚያረጋግጠው                                                                                                                            | አግዷል        |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `nightly-property`     | በዘፈቀደ seed እና ከፍተኛ የrun ብዛት ያላቸው fast-check property ሙከራዎች                                                                          | **ምክረ ሀሳብ** |
+| `nightly-resilience`   | የheap-እድገት በር፣ chaos fault-injection፣ k6 load/soak                                                                                  | **ምክረ ሀሳብ** |
+| `nightly-llm-security` | promptfoo injection መከላከያ (block ሁነታ) + garak probes (የአቅራቢ ምስጢር ሳይኖር ይዘለላል)                                                        | **ምክረ ሀሳብ** |
+| `nightly-schemathesis` | `docs/openapi.yaml` በመጠቀም በሕያው 67router ላይ OpenAPI contract fuzzing (schemathesis) — የspec ጥሰቶችን / ያልተተናነቡ 500ዎችን ያሳያል (Fase 8 B.4) | **ምክረ ሀሳብ** |
+| `nightly-mutation`     | በፈጣኑ የunit መስመር ላይ Stryker mutation-ፈተና ውጤት — የተረፉ mutants ደካማ assertዎችን ያሳያሉ                                                       | **ምክረ ሀሳብ** |
+| `nightly-compat`       | በሚደገፉት `engines.node` ክልሎች ላይ የNode ሞተር ተኳሃኝነት ማትሪክስ                                                                                | **ምክረ ሀሳብ** |
 
 የአፈጻጸም መሠረቶች (heap፣ TTFB፣ የግንባታ ጊዜ) ይመዘገባሉ እንጂ አያግዱም፦ [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md)ን ይመልከቱ (`npm run perf:lts-baseline`)።
 
@@ -501,7 +501,7 @@ jobው ወደ `release/*` በፍጹም push አያደርግም — PRን የሚ�
 
 ## የAgent መሣሪያዎች፦ LSP-in-the-loop (opt-in)
 
-ከCI gates በተጨማሪ፣ OmniRoute **opt-in** የሆነ `agent-lsp` scaffold
+ከCI gates በተጨማሪ፣ 67router **opt-in** የሆነ `agent-lsp` scaffold
 (በፕሮጀክት ደረጃ ያለ `.mcp.json`፣ Fase 7 Task 15) ይዞ ይመጣል። TypeScript language serverን ለcoding agents ለማጋለጥ `.mcp.json`ን
 ይፍጠሩ፤ ይህም ኮድ ከመጻፋቸው **በፊት** symbols /
 diagnosticsን እንዲፈቱ ያደርጋል — የ"የተፈጠረ symbol" ስህተቶችን ከመነሻቸው የሚቀንስ፣

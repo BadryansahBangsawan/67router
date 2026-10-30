@@ -6,7 +6,7 @@
 
 ## Pregled
 
-Ukazi OmniRoute CLI se overjajo pri lokalnem upravljalnem API-ju z uporabo žetona
+Ukazi 67router CLI se overjajo pri lokalnem upravljalnem API-ju z uporabo žetona
 `HMAC-SHA256(machine-id, salt)`, poslanega prek glave zahteve
 `x-omniroute-cli-token`.
 

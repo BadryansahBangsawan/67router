@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yana raba **gano CLI**, **Agent Client Protocol na asali**, da
+67router yana raba **gano CLI**, **Agent Client Protocol na asali**, da
 **adaftocin stdio na gado**. Gano binary da aka girka ba ya tabbatar da
 ingancin tantancewarsa, dacewarsa da samfuri, ko shirinsa na sarrafa prompt.
 

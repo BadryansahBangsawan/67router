@@ -6,7 +6,7 @@
 
 ## Àyẹ̀wò Gbogbogbò
 
-Redis jẹ́ **ìgbẹ́kẹ̀lé àṣàyàn tí kò fi dandan múlẹ̀** nínú OmniRoute — ohun èlò náà ń tẹ̀síwájú láìsí ìṣòro tó pọ̀ (nípa lílo àwọn
+Redis jẹ́ **ìgbẹ́kẹ̀lé àṣàyàn tí kò fi dandan múlẹ̀** nínú 67router — ohun èlò náà ń tẹ̀síwájú láìsí ìṣòro tó pọ̀ (nípa lílo àwọn
 àṣàyàn ìpadàsí inú ìrántí) nígbà tí Redis kò bá sí. Nínú production, ṣíṣe àtúnṣe Redis máa ń dín ìdádúró kù fún àwọn
 ẹrù iṣẹ́ mẹ́rin ọ̀tọ̀ọ̀tọ̀:
 
@@ -17,7 +17,7 @@ Redis jẹ́ **ìgbẹ́kẹ̀lé àṣàyàn tí kò fi dandan múlẹ̀** nín
 | Ibi ìpamọ́ quota        | `redisQuotaStore.ts`          | Singleton `getRedisClient(url)` ọ̀tọ̀                                            | `<prefix>quota:*` tí a lè ṣètò fún instance kọ̀ọ̀kan  |
 | Circuit breaker warmup | `redisCircuitBreakerStore.ts` | Client ọ̀tọ̀ nínú `circuitBreakerFactory.ts`                                     | `<prefix>warmup:cb:<connectionId>`                  |
 
-Gbogbo ẹrù iṣẹ́ mẹ́rẹ̀ẹ̀rin ń pín prefix namespace kan náà kí OmniRoute lè ṣiṣẹ́ pọ̀ pẹ̀lú àwọn app mìíràn lórí
+Gbogbo ẹrù iṣẹ́ mẹ́rẹ̀ẹ̀rin ń pín prefix namespace kan náà kí 67router lè ṣiṣẹ́ pọ̀ pẹ̀lú àwọn app mìíràn lórí
 instance Redis kan ṣoṣo (fún àpẹẹrẹ `127.0.0.1:6379`). Wo [Ṣíṣe Namespace fún Àwọn Key](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ instance Redis kan ṣoṣo (fún àpẹẹrẹ `127.0.0.1:6379`). Wo [Ṣíṣe
 
 ## Ṣíṣe Namespace fún Àwọn Key
 
-OmniRoute ń pín instance Redis kan pẹ̀lú ohunkóhun mìíràn tó ń ṣiṣẹ́ lórí host náà. Láìsí namespace,
+67router ń pín instance Redis kan pẹ̀lú ohunkóhun mìíràn tó ń ṣiṣẹ́ lórí host náà. Láìsí namespace,
 àwọn key bíi `auth:api_key:<sha256>` tàbí `rl:*` lè bá àwọn key láti inú àwọn ohun èlò mìíràn
 tó ń lo Redis kan náà kọlu ara wọn (instance yìí ń ṣiṣẹ́ Redis lórí `127.0.0.1:6379` lẹ́gbẹ̀ẹ́ àwọn iṣẹ́ mìíràn).
 
-Ṣètò `REDIS_KEY_PREFIX` sí ọ̀rọ̀ tí kò ṣófo láti fi prefix sí **gbogbo** key OmniRoute:
+Ṣètò `REDIS_KEY_PREFIX` sí ọ̀rọ̀ tí kò ṣófo láti fi prefix sí **gbogbo** key 67router:
 
 ```bash
-# .env — gbogbo key OmniRoute di omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — gbogbo key 67router di omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # fi àyè sílẹ̀ fún cache ojú-ìwé OS
 maxmemory-policy allkeys-lru         # lé àwọn àkọsílẹ̀ cache auth tí ó ti pé jáde lábẹ́ ìfúnpọ̀
 
-# Ìtọ́jú data (kò pọn dandan — OmniRoute lè yè ìkọlù láìsí i)
+# Ìtọ́jú data (kò pọn dandan — 67router lè yè ìkọlù láìsí i)
 save 300 1                           # ya snapshot ó kéré tán ní gbogbo 5 min bí ≥1 key bá yípadà
 appendonly no                        # AOF kò ṣe pàtàkì; a lè tún data náà ṣe
 appendfsync no                       # kò sí overhead fsync (RDB ti tó)

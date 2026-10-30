@@ -7,7 +7,7 @@
 > **Tushen ingantaccen bayani:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Sabuntawa na ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute ya ƙunshi tsarin mayar da amfani ya zama wasa wanda ke fifita bayanan cikin na’ura, yana ba masu amfani lada saboda
+67router ya ƙunshi tsarin mayar da amfani ya zama wasa wanda ke fifita bayanan cikin na’ura, yana ba masu amfani lada saboda
 mu’amala da dandamali — yin buƙatu, sauya masu samarwa, ƙirƙirar
 haɗe-haɗe, raba token, da ba da gudummawa ga al’umma. Duk bayanan yanayi suna cikin
 SQLite; haɗa kai da sabar al’umma zaɓi ne kuma yana gudana ne ta hanyar turawa.
@@ -36,7 +36,7 @@ token, ladan gayyata).
 | Allunan Jagoranci | Iyakokin duniya baki ɗaya, na mako-mako, na wata-wata, raba token, da gudummawa         |
 | Raba Token        | Tura credits tsakanin masu amfani ta kundin lissafin shigarwa-biyu                      |
 | Gayyata & Karɓa   | Lambobin tura aboki tare da ma’ajiyar da aka yi wa hash na SHA-256                      |
-| Sabar Al’umma     | Haɗa kai da wasu instances na OmniRoute na waje                                         |
+| Sabar Al’umma     | Haɗa kai da wasu instances na 67router na waje                                          |
 | Yaƙi da Maguɗi    | Ƙididdigar ɓangaren saba, iyakance yawan buƙatu, gano abubuwan da suka kauce ta z-score |
 
 ### Ƙa’idojin Tsarawa
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Jadawalin Rumbun Bayanai
 
-Dukkan jadawalan suna cikin babban rumbun bayanan SQLite na OmniRoute, wanda migration
+Dukkan jadawalan suna cikin babban rumbun bayanan SQLite na 67router, wanda migration
 `060_create_gamification.sql` ya ƙirƙira. Ana gādon rajistar WAL daga singleton
 `getDbInstance()` da ke cikin `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Dukkan jadawalan suna cikin babban rumbun bayanan SQLite na OmniRoute, wanda mig
 
 ### Modulin Yanki: `src/lib/db/gamification.ts`
 
-Yana bin daidaitaccen tsarin OmniRoute — yana shigo da `getDbInstance()` daga
+Yana bin daidaitaccen tsarin 67router — yana shigo da `getDbInstance()` daga
 `core.ts`, sannan yana fitar da ayyukan CRUD masu nau'i. Babu ɗanyen SQL a cikin masu sarrafa route.
 
 Muhimman ayyuka:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Aiki              | XP  | Bayani                                               |
 | ----------------- | --- | ---------------------------------------------------- |
-| `request`         | 1   | Ga kowace buƙatar API da aka bi da ita ta OmniRoute  |
+| `request`         | 1   | Ga kowace buƙatar API da aka bi da ita ta 67router   |
 | `provider_switch` | 5   | Sauyawa zuwa wani mai samarwa na daban               |
 | `model_switch`    | 3   | Sauyawa zuwa wani samfurin daban                     |
 | `combo_create`    | 10  | Ƙirƙirar sabon haɗin aiki                            |
@@ -579,7 +579,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (na musamman, mai fihirisa) |
 | `token_hash` | SHA-256(raw_token)                     |
 
-Ana mayar da ɗanyen token ga mai amfani sau ɗaya tak a lokacin ƙirƙirawa. OmniRoute
+Ana mayar da ɗanyen token ga mai amfani sau ɗaya tak a lokacin ƙirƙirawa. 67router
 ba ya sake adanawa ko nuna shi — hash ɗin kawai ne yake wanzuwa.
 
 ### Hana Gayyatar Kai
@@ -702,7 +702,7 @@ Masu gudanarwa za su iya tambayar cikakken tarihin bincike ta hanyar `GET /api/g
 
 ## Hanyoyin API
 
-Duk hanyoyi suna bin daidaitaccen tsarin OmniRoute:
+Duk hanyoyi suna bin daidaitaccen tsarin 67router:
 
 ```
 Hanya → Binciken farko na CORS → Tabbatar da jiki (Zod) → Tantancewa (extractApiKey)

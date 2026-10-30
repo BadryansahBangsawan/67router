@@ -4,7 +4,7 @@
 
 ---
 
-Tällä sivulla selitetään projektin paikallisen `.env`-tiedoston toiminta sekä ympäristötiedostojen ja salaisuuksien käsittely OmniRoutea kehitettäessä.
+Tällä sivulla selitetään projektin paikallisen `.env`-tiedoston toiminta sekä ympäristötiedostojen ja salaisuuksien käsittely 67routeria kehitettäessä.
 
 ## .env-tiedoston toiminta postinstall-vaiheessa
 

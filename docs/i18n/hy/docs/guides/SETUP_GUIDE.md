@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Հայերեն)
+# 📖 Setup Guide — 67router (Հայերեն)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute-ի ամբողջական կարգավորման տեղեկատու։ Արագ տարբերակի համար տե՛ս [README-ի արագ մեկնարկը](../README.md#-quick-start)։
+> 67router-ի ամբողջական կարգավորման տեղեկատու։ Արագ տարբերակի համար տե՛ս [README-ի արագ մեկնարկը](../README.md#-quick-start)։
 
 ## Բովանդակություն
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR փաթեթը](https://aur.archlinux.org/packages/omniroute-bin) տեղադրում է OmniRoute-ը և տրամադրում systemd-ի օգտատիրոջ ծառայություն։
+[AUR փաթեթը](https://aur.archlinux.org/packages/omniroute-bin) տեղադրում է 67router-ը և տրամադրում systemd-ի օգտատիրոջ ծառայություն։
 
 ### Սկզբնաղբյուրից
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Նշում Windows-ի համար․** Լռելյայնորեն OmniRoute-ն օգտագործում է `%APPDATA%\omniroute`-ը, եթե հին `%USERPROFILE%\.omniroute` գրացուցակը բացակայում է։ Տվյալների գրացուցակի այլ տեղադրություն ընտրելու համար սահմանեք `DATA_DIR`-ը։
+> **Նշում Windows-ի համար․** Լռելյայնորեն 67router-ն օգտագործում է `%APPDATA%\omniroute`-ը, եթե հին `%USERPROFILE%\.omniroute` գրացուցակը բացակայում է։ Տվյալների գրացուցակի այլ տեղադրություն ընտրելու համար սահմանեք `DATA_DIR`-ը։
 
 > **Նշում․** Առաջին գործարկման ժամանակ `npm install`-ը `.env.example`-ից ինքնաշխատ ստեղծում է `.env`։ Հետագա տեղադրումները չեն վերագրի գոյություն ունեցող `.env`-ը, ուստի անհատական կարգավորումները կպահպանվեն։ Այն կրկին սկզբնական արժեքներով ստեղծելու համար ջնջեք `.env`-ը՝ նախքան կրկին գործարկելը։
 
@@ -64,7 +64,7 @@ Docker-ի ամբողջական կարգավորման, ներառյալ Compose 
 
 ### Սեղանադիր հավելված (Electron)
 
-OmniRoute-ը տրամադրվում է Electron 41 + electron-builder 26.10-ի հիման վրա ստեղծված սեղանադիր պատյանով։ Հասանելի սկրիպտները (աշխատատարածքի արմատում)՝
+67router-ը տրամադրվում է Electron 41 + electron-builder 26.10-ի հիման վրա ստեղծված սեղանադիր պատյանով։ Հասանելի սկրիպտները (աշխատատարածքի արմատում)՝
 
 ```bash
 npm run electron:dev          # Գործարկել սեղանադիր հավելվածը՝ թարմ փոփոխությունների ինքնաշխատ վերաբեռնմամբ
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Միջավայրի փոփոխականների (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` և այլն) հետ համատեղ սա թույլ է տալիս գործարկել OmniRoute-ի ամբողջովին սկրիպտավորվող օրինակ։
+Միջավայրի փոփոխականների (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` և այլն) հետ համատեղ սա թույլ է տալիս գործարկել 67router-ի ամբողջովին սկրիպտավորվող օրինակ։
 
 ### CLI-ի ընտրանքներ
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | CLI գործիքի կարգավորում՝ թվարկել, ստանալ, սահմանել և վավերացնել կարգավորումները           |
 | `omniroute status`      | Անցանց կարգավիճակի վահանակ՝ տարբերակ, DB, գործիքներ, կարգավորում                          |
 | `omniroute logs`        | API-ից հոսքային եղանակով ստանալ օգտագործման մատյանները (աջակցում է `--follow`)            |
-| `omniroute update`      | Ստուգել կամ կիրառել OmniRoute-ի թարմացումները                                             |
+| `omniroute update`      | Ստուգել կամ կիրառել 67router-ի թարմացումները                                              |
 | `omniroute provider`    | Կառավարել մատակարարների կապերը՝ ավելացնել, թվարկել, հեռացնել, փորձարկել, ընտրել լռելյայնը |
 | `omniroute --port 3000` | Սահմանել հիմնական/API պորտը որպես 3000                                                    |
 | `omniroute --mcp`       | Գործարկել MCP սերվերը (stdio փոխադրում)                                                   |
@@ -165,7 +165,7 @@ Ollama Tags URL: http://localhost:20128/api/v1/vscode/YOUR_KEY/api/tags
 
 #### Ինքնաշխատ կազմաձևում `setup-*`-ի միջոցով
 
-Հիմնական URL-ն և բանալին ձեռքով տեղադրելու փոխարեն թույլ տվեք OmniRoute-ին ընթացիկ մոդելների կատալոգից ստեղծել յուրաքանչյուր գործիքի սեփական կազմաձևը։ Յուրաքանչյուր գործիքի համար՝ մեկ հրաման․
+Հիմնական URL-ն և բանալին ձեռքով տեղադրելու փոխարեն թույլ տվեք 67router-ին ընթացիկ մոդելների կատալոգից ստեղծել յուրաքանչյուր գործիքի սեփական կազմաձևը։ Յուրաքանչյուր գործիքի համար՝ մեկ հրաման․
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml պրոֆիլներ
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-Յուրաքանչյուրն ընդունում է `--remote <url> --api-key <key>`՝ տեղական գործիքը **հեռակա** OmniRoute-ի հետ աշխատելու համար կազմաձևելու նպատակով, ինչպես նաև `--dry-run`՝ նախադիտման համար։ CLI-ն ճիշտ ներդրված միջավայրի փոփոխականներով և առանց որևէ կազմաձև գրելու գործարկելու համար օգտագործեք ընդհանուր գործարկիչը՝ `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini)։ Նախկին՝ առանձին գործիքների գործարկիչները՝ `omniroute launch` (Claude Code) և `omniroute launch-codex` (Codex), շարունակում են հասանելի մնալ։
+Յուրաքանչյուրն ընդունում է `--remote <url> --api-key <key>`՝ տեղական գործիքը **հեռակա** 67router-ի հետ աշխատելու համար կազմաձևելու նպատակով, ինչպես նաև `--dry-run`՝ նախադիտման համար։ CLI-ն ճիշտ ներդրված միջավայրի փոփոխականներով և առանց որևէ կազմաձև գրելու գործարկելու համար օգտագործեք ընդհանուր գործարկիչը՝ `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini)։ Նախկին՝ առանձին գործիքների գործարկիչները՝ `omniroute launch` (Claude Code) և `omniroute launch-codex` (Codex), շարունակում են հասանելի մնալ։
 
 Ամբողջական աղյուսակի համար (ինչ է գրում յուրաքանչյուր հրաման, բոլոր դրոշակները, տեղական և հեռակա տարբերակները, հիմնական URL-ի `/v1` կանոնները) տե՛ս **[CLI ինտեգրումներ](./CLI-INTEGRATIONS.md)**։
 
@@ -270,15 +270,15 @@ curl -X POST http://localhost:20128/a2a \
 | Փոփոխական                | Լռելյայն արժեք                      | Նպատակ                                                                                                                                                                                           |
 | ------------------------ | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `REQUEST_TIMEOUT_MS`     | `600000`                            | Ընդհանուր ելակետ՝ վերին հոսքի պատասխանի մեկնարկի սպասման ժամանակի, Undici-ի թաքնված սպասման ժամանակների, TLS մատնահետքի հարցումների և API կամրջակի հարցումների/պրոքսիի սպասման ժամանակների համար |
-| `STREAM_IDLE_TIMEOUT_MS` | ժառանգում է `REQUEST_TIMEOUT_MS`-ից | Հոսքային տվյալների հատվածների միջև առավելագույն ընդմիջումը, որից հետո OmniRoute-ը դադարեցնում է SSE հոսքը                                                                                        |
+| `STREAM_IDLE_TIMEOUT_MS` | ժառանգում է `REQUEST_TIMEOUT_MS`-ից | Հոսքային տվյալների հատվածների միջև առավելագույն ընդմիջումը, որից հետո 67router-ը դադարեցնում է SSE հոսքը                                                                                         |
 
 Հետադարձ համատեղելիությունը պահպանվում է. գոյություն ունեցող `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` և յուրաքանչյուր շերտի համար նախատեսված սպասման ժամանակի այլ փոփոխականները շարունակում են գործել և գերակայում են ընդհանուր ելակետին։
 
 ### Մատակարարին հատուկ նշումներ
 
-Claude Code-ի հետ համատեղելի վերին հոսքերի (`anthropic-compatible-cc-*`) համար OmniRoute-ը ելքային `X-Stainless-Timeout` վերնագիրը ձևավորում է որոշված հարցման սպասման ժամանակի հիման վրա, որպեսզի մատակարարի կողմի ընթերցման սպասման ժամանակները համապատասխանեն ձեր միջավայրի կազմաձևմանը։
+Claude Code-ի հետ համատեղելի վերին հոսքերի (`anthropic-compatible-cc-*`) համար 67router-ը ելքային `X-Stainless-Timeout` վերնագիրը ձևավորում է որոշված հարցման սպասման ժամանակի հիման վրա, որպեսզի մատակարարի կողմի ընթերցման սպասման ժամանակները համապատասխանեն ձեր միջավայրի կազմաձևմանը։
 
-Claude Code-ի հետ համատեղելի երրորդ կողմի հակադարձ պրոքսիների համար OmniRoute-ը պահպանում է լռելյայն `anthropic-beta` հավաքածուի պահպանողական կազմաձևումը և, երբ `Client Cache Control`-ը թողնված է `Auto` արժեքով, փոխանցում է միայն հաճախորդի տրամադրած `cache_control` նշիչները։ Յուրաքանչյուր կապի համար նախատեսված «Միացնել redact-thinking beta-ն» փոխարկիչը միացրեք միայն այն դեպքում, երբ վերին հոսքը հստակ պահանջում է Claude-ի խմբագրված մտածողության հոսքեր։
+Claude Code-ի հետ համատեղելի երրորդ կողմի հակադարձ պրոքսիների համար 67router-ը պահպանում է լռելյայն `anthropic-beta` հավաքածուի պահպանողական կազմաձևումը և, երբ `Client Cache Control`-ը թողնված է `Auto` արժեքով, փոխանցում է միայն հաճախորդի տրամադրած `cache_control` նշիչները։ Յուրաքանչյուր կապի համար նախատեսված «Միացնել redact-thinking beta-ն» փոխարկիչը միացրեք միայն այն դեպքում, երբ վերին հոսքը հստակ պահանջում է Claude-ի խմբագրված մտածողության հոսքեր։
 
 ### Սպասման ժամանակի ընդլայնված վերասահմանումներ
 
@@ -296,11 +296,11 @@ Claude Code-ի հետ համատեղելի երրորդ կողմի հակադա�
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                           | API կամրջակի սերվերում keep-alive-ի սպասման ժամանակը                                       |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                              | API կամրջակի սերվերում սոկետի անգործության սպասման ժամանակը (`0`-ն անջատում է այն)         |
 
-> **Նշում.** Հոսքային հարցումների դեպքում `FETCH_TIMEOUT_MS`-ն ընդգրկում է միայն կապի հաստատումը / վերին հոսքից առաջին պատասխանին սպասելը։ Հոսքն ակտիվանալուց հետո OmniRoute-ը կդադարեցնի այն միայն փաստացի կանգի (`STREAM_IDLE_TIMEOUT_MS`) կամ Undici-ի մարմնի անգործության (`FETCH_BODY_TIMEOUT_MS`) դեպքում։
+> **Նշում.** Հոսքային հարցումների դեպքում `FETCH_TIMEOUT_MS`-ն ընդգրկում է միայն կապի հաստատումը / վերին հոսքից առաջին պատասխանին սպասելը։ Հոսքն ակտիվանալուց հետո 67router-ը կդադարեցնի այն միայն փաստացի կանգի (`STREAM_IDLE_TIMEOUT_MS`) կամ Undici-ի մարմնի անգործության (`FETCH_BODY_TIMEOUT_MS`) դեպքում։
 
 ### Հակադարձ պրոքսիի հետ համատեղելիություն
 
-Եթե OmniRoute-ն աշխատեցնում եք Nginx-ի, Caddy-ի, Cloudflare-ի կամ մեկ այլ հակադարձ պրոքսիի հետևում, համոզվեք, որ պրոքսիի սպասման ժամանակները նույնպես ավելի մեծ են, քան OmniRoute-ի հոսքի/հարցման սպասման ժամանակները։
+Եթե 67router-ն աշխատեցնում եք Nginx-ի, Caddy-ի, Cloudflare-ի կամ մեկ այլ հակադարձ պրոքսիի հետևում, համոզվեք, որ պրոքսիի սպասման ժամանակները նույնպես ավելի մեծ են, քան 67router-ի հոսքի/հարցման սպասման ժամանակները։
 
 ---
 

@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (العربية)
+# Providers Guide: Connect AI Models to 67router (العربية)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **باختصار**: المزوّد هو اتصال بخدمة ذكاء اصطناعي (مثل OpenAI أو Anthropic أو Google). تحتاج إلى مزوّد واحد على الأقل لاستخدام OmniRoute.
+> **باختصار**: المزوّد هو اتصال بخدمة ذكاء اصطناعي (مثل OpenAI أو Anthropic أو Google). تحتاج إلى مزوّد واحد على الأقل لاستخدام 67router.
 
 ---
 
 ## ما هو المزوّد؟
 
-فكّر في المزوّد باعتباره **شركة اتصالات**. فكما تحتاج إلى شركة اتصالات لإجراء المكالمات، تحتاج إلى مزوّد ذكاء اصطناعي لاستخدام نماذج الذكاء الاصطناعي. يشبه OmniRoute هاتفًا يعمل مع **جميع شركات الاتصالات** — ويمكنك التبديل بينها تلقائيًا.
+فكّر في المزوّد باعتباره **شركة اتصالات**. فكما تحتاج إلى شركة اتصالات لإجراء المكالمات، تحتاج إلى مزوّد ذكاء اصطناعي لاستخدام نماذج الذكاء الاصطناعي. يشبه 67router هاتفًا يعمل مع **جميع شركات الاتصالات** — ويمكنك التبديل بينها تلقائيًا.
 
 ### أنواع المزوّدين
 
@@ -31,8 +31,8 @@
 ### إعداد اختياري لمزوّدي الخدمات المجانية عند التشغيل الأول
 
 يوفّر معالج التشغيل الأول بطاقة صريحة بعنوان **إعداد المزوّدين المجانيين**. ويستخرج القائمة الحالية
-للمزوّدين المؤهلين من سجل مزوّدي OmniRoute الذين لا يتطلبون مصادقة، ثم يتيح لك مراجعة كل
-مزوّد وإلغاء تحديده قبل التأكيد. يعرض OmniRoute تنبيه الحذر الخاص بالمزوّد ورابطًا إلى موقعه
+للمزوّدين المؤهلين من سجل مزوّدي 67router الذين لا يتطلبون مصادقة، ثم يتيح لك مراجعة كل
+مزوّد وإلغاء تحديده قبل التأكيد. يعرض 67router تنبيه الحذر الخاص بالمزوّد ورابطًا إلى موقعه
 حتى تتمكن أولًا من مراجعة شروط الجهة الخارجية وخصوصيتها ومدى توفّرها وحدود معدّل الاستخدام.
 
 هذا الإجراء اختياري: لا يؤدي إكمال المعالج مطلقًا إلى إنشاء اتصالات بالمزوّدين المجانيين دون علمك.
@@ -80,7 +80,7 @@
 
 ### الخيار D: نماذج MLX المحلية (Apple Silicon)
 
-بالنسبة إلى أجهزة Mac المزودة بمعالجات Apple Silicon وذاكرة موحّدة، يدعم OmniRoute الاتصال بنماذج MLX المحلية التي تعمل عبر `mlx-lm.server` باعتبارها مزوّدين محليين عاديين متوافقين مع OpenAI.
+بالنسبة إلى أجهزة Mac المزودة بمعالجات Apple Silicon وذاكرة موحّدة، يدعم 67router الاتصال بنماذج MLX المحلية التي تعمل عبر `mlx-lm.server` باعتبارها مزوّدين محليين عاديين متوافقين مع OpenAI.
 
 #### المتطلبات الأساسية
 
@@ -110,14 +110,14 @@
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **اتصل من لوحة معلومات OmniRoute**:
+3. **اتصل من لوحة معلومات 67router**:
    - انتقل إلى **المزوّدون** → **إضافة مزوّد**
    - حدّد **MLX Gemma 26B** أو **MLX Qwen 3.8 27B**
    - انقر على **اتصال** (لا يلزم مفتاح API)
 
 4. **استخدمه مع OpenCode**:
    ```bash
-   # اضبط OpenCode لاستخدام OmniRoute
+   # اضبط OpenCode لاستخدام 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@
 - شغّلهما على جهازين منفصلين، أو
 - أوقف أحدهما قبل تشغيل الآخر
 
-لا يدير OmniRoute عمليات خادم MLX تلقائيًا — بل يوجّه الطلبات فقط إلى نقاط النهاية المتوافقة مع OpenAI التي تضبطها.
+لا يدير 67router عمليات خادم MLX تلقائيًا — بل يوجّه الطلبات فقط إلى نقاط النهاية المتوافقة مع OpenAI التي تضبطها.
 
 #### دعم استدعاء الأدوات
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | نفاد الذاكرة        | تأكد من تشغيل نموذج واحد فقط؛ وأغلق التطبيقات الأخرى؛ وتحقق من Activity Monitor      |
 | تم رفض الاتصال      | تأكد من أن الخادم يعمل على المنفذ الصحيح (11435/11436)                               |
 | الاستجابات بطيئة    | يحمّل الطلب الأول النموذج إلى الذاكرة (نحو 30-60 ثانية)؛ وتكون الطلبات اللاحقة سريعة |
-| فشل استدعاء الأدوات | تأكد من أن النموذج يدعم الأدوات؛ وتحقق من سجلات OmniRoute بحثًا عن أخطاء الترجمة     |
+| فشل استدعاء الأدوات | تأكد من أن النموذج يدعم الأدوات؛ وتحقق من سجلات 67router بحثًا عن أخطاء الترجمة      |
 
 ---
 
@@ -236,12 +236,12 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## استخدام مزوّدين متعددين
 
-يعمل OmniRoute بأفضل صورة مع **مزوّدين متعددين**. يوفّر لك ذلك:
+يعمل 67router بأفضل صورة مع **مزوّدين متعددين**. يوفّر لك ذلك:
 
-- **التبديل التلقائي** — إذا فشل أحد المزوّدين، يجرّب OmniRoute المزوّد التالي
-- **تحسين التكلفة** — يختار OmniRoute المزوّد الأقل تكلفة لكل طلب
-- **تحسين السرعة** — يختار OmniRoute المزوّد الأسرع لكل طلب
-- **تحسين الجودة** — يختار OmniRoute أفضل مزوّد لكل مهمة
+- **التبديل التلقائي** — إذا فشل أحد المزوّدين، يجرّب 67router المزوّد التالي
+- **تحسين التكلفة** — يختار 67router المزوّد الأقل تكلفة لكل طلب
+- **تحسين السرعة** — يختار 67router المزوّد الأسرع لكل طلب
+- **تحسين الجودة** — يختار 67router أفضل مزوّد لكل مهمة
 
 ### الإعداد الموصى به
 
@@ -251,7 +251,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 2. **مزوّد سريع واحد** (Groq، Cerebras) — للحصول على استجابات سريعة
 3. **مزوّد عالي الجودة واحد** (OpenAI، Anthropic، Google) — للمهام المعقدة
 
-بعد ذلك، استخدم `model: "auto"`، وسيختار OmniRoute تلقائيًا أفضل مزوّد لكل طلب.
+بعد ذلك، استخدم `model: "auto"`، وسيختار 67router تلقائيًا أفضل مزوّد لكل طلب.
 
 ---
 
@@ -260,25 +260,25 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 ### OpenAI
 
 1. احصل على مفتاح API: https://platform.openai.com/api-keys
-2. في OmniRoute: المزوّدون → إضافة مزوّد → OpenAI
+2. في 67router: المزوّدون → إضافة مزوّد → OpenAI
 3. الصق مفتاح API → اتصال
 
 ### Anthropic
 
 1. احصل على مفتاح API: https://console.anthropic.com/
-2. في OmniRoute: المزوّدون → إضافة مزوّد → Anthropic
+2. في 67router: المزوّدون → إضافة مزوّد → Anthropic
 3. الصق مفتاح API → اتصال
 
 ### Google (Gemini)
 
 1. احصل على مفتاح API: https://aistudio.google.com/apikey
-2. في OmniRoute: المزوّدون → إضافة مزوّد → Gemini
+2. في 67router: المزوّدون → إضافة مزوّد → Gemini
 3. الصق مفتاح API → اتصال
 
 ### DeepSeek
 
 1. احصل على مفتاح API: https://platform.deepseek.com/
-2. في OmniRoute: المزوّدون → إضافة مزوّد → DeepSeek
+2. في 67router: المزوّدون → إضافة مزوّد → DeepSeek
 3. الصق مفتاح API → اتصال
 
 ### Qoder: اختيار وسيلة نقل بيانات الاعتماد
@@ -286,12 +286,12 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 يتطلب Qoder بيانات اعتماد. وتتميز وسيلتا النقل الخاصتان به بقدرات مختلفة؛ فلا يكفي اسم النموذج
 وحده لتحديد ما يمكن لاتصال معين فعله.
 
-| بيانات الاعتماد               | وسيلة النقل في OmniRoute                       | استدعاء الأدوات من جهة المستدعي                 | البث                                                        |
+| بيانات الاعتماد               | وسيلة النقل في 67router                        | استدعاء الأدوات من جهة المستدعي                 | البث                                                        |
 | ----------------------------- | ---------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
-| PAT يبدأ بـ `pt-`             | عملية `qodercli` محلية على مضيف OmniRoute      | غير مدعوم                                       | مخزّن مؤقتًا: لا يُرسل SSE إلا بعد أن تُرجع CLI الرد الكامل |
+| PAT يبدأ بـ `pt-`             | عملية `qodercli` محلية على مضيف 67router       | غير مدعوم                                       | مخزّن مؤقتًا: لا يُرسل SSE إلا بعد أن تُرجع CLI الرد الكامل |
 | رمز وصول غير PAT أو مفتاح API | نقطة نهاية HTTP متوافقة مع OpenAI في DashScope | يُمرر كما هو، وفقًا للنموذج/المفتاح لدى المزوّد | مسار HTTP/SSE لدى المزوّد                                   |
 
-بالنسبة إلى PAT، ثبّت Qoder CLI على المضيف أو الحاوية نفسها التي يعمل عليها OmniRoute. يجب أن يكون الملف التنفيذي
+بالنسبة إلى PAT، ثبّت Qoder CLI على المضيف أو الحاوية نفسها التي يعمل عليها 67router. يجب أن يكون الملف التنفيذي
 قابلاً للاكتشاف باسم `qodercli`، أو اضبط `CLI_QODER_BIN` على مسار الملف التنفيذي الخاص به. إن تثبيت CLI
 على مضيف Docker فقط لا يجعله متاحًا تلقائيًا داخل الحاوية. يؤدي فقدان
 الملفات التنفيذية إلى ظهور خطأ صريح يوجّهك إلى التثبيت أو إعداد المسار.
@@ -324,16 +324,16 @@ CLI بنفسها. لا يضمن مفتاح HTTP أن كل نموذج يدعم ا
 ### Groq
 
 1. احصل على مفتاح API: https://console.groq.com/
-2. في OmniRoute: المزوّدون → إضافة مزوّد → Groq
+2. في 67router: المزوّدون → إضافة مزوّد → Groq
 3. الصق مفتاح API → اتصال
 
 ---
 
 ## الأسئلة الشائعة
 
-### "هل أحتاج إلى الدفع لاستخدام OmniRoute؟"
+### "هل أحتاج إلى الدفع لاستخدام 67router؟"
 
-**لا!** OmniRoute مجاني ومفتوح المصدر. يمكنك استخدام مزوّدين مجانيين (Kiro وPollinations) دون دفع أي شيء. لن تدفع إلا إذا اخترت استخدام مزوّدين مدفوعي الأجر.
+**لا!** 67router مجاني ومفتوح المصدر. يمكنك استخدام مزوّدين مجانيين (Kiro وPollinations) دون دفع أي شيء. لن تدفع إلا إذا اخترت استخدام مزوّدين مدفوعي الأجر.
 
 ### "بأي مزوّد ينبغي أن أبدأ؟"
 
@@ -341,11 +341,11 @@ CLI بنفسها. لا يضمن مفتاح HTTP أن كل نموذج يدعم ا
 
 ### "هل يمكنني استخدام عدة مزوّدين في الوقت نفسه؟"
 
-**نعم!** هذه هي الفكرة الأساسية من OmniRoute. اربط عدة مزوّدين واستخدم `model: "auto"` للسماح لـ OmniRoute باختيار الأفضل لكل طلب.
+**نعم!** هذه هي الفكرة الأساسية من 67router. اربط عدة مزوّدين واستخدم `model: "auto"` للسماح لـ 67router باختيار الأفضل لكل طلب.
 
 ### "ماذا يحدث إذا تعطل أحد المزوّدين؟"
 
-يتخطى OmniRoute تلقائيًا المزوّدين الذين فشلوا ويحاول استخدام المزوّد التالي. لا تحتاج إلى فعل أي شيء.
+يتخطى 67router تلقائيًا المزوّدين الذين فشلوا ويحاول استخدام المزوّد التالي. لا تحتاج إلى فعل أي شيء.
 
 ### "كيف أفصل مزوّدًا؟"
 
@@ -353,13 +353,13 @@ CLI بنفسها. لا يضمن مفتاح HTTP أن كل نموذج يدعم ا
 
 ### "هل يمكنني استخدام مفاتيح API الحالية لديّ؟"
 
-**نعم!** إذا كانت لديك بالفعل مفاتيح API لخدمات OpenAI وAnthropic وGoogle وغيرها، فيمكنك استخدامها في OmniRoute. ما عليك سوى لصقها عند ربط المزوّد.
+**نعم!** إذا كانت لديك بالفعل مفاتيح API لخدمات OpenAI وAnthropic وGoogle وغيرها، فيمكنك استخدامها في 67router. ما عليك سوى لصقها عند ربط المزوّد.
 
 ---
 
 ## ما التالي؟
 
-- **[دليل Auto-Combo](./AUTO-COMBO-GUIDE.md)** — دع OmniRoute يختار أفضل ذكاء اصطناعي لك
+- **[دليل Auto-Combo](./AUTO-COMBO-GUIDE.md)** — دع 67router يختار أفضل ذكاء اصطناعي لك
 - **[دليل الخطط المجانية](./FREE-TIERS-GUIDE.md)** — احصل على ذكاء اصطناعي مجاني دون بطاقة ائتمان
 - **[استكشاف الأخطاء وإصلاحها](../guides/TROUBLESHOOTING.md)** — أصلح المشكلات الشائعة
 - **[مرجع المزوّدين](../reference/PROVIDER_REFERENCE.md)** — القائمة الكاملة التي تضم 226 مزوّدًا

@@ -17,9 +17,9 @@ VibeProxy 相容引擎之間的關係，避免貢獻者繼續混淆兩個在架�
 `RouterBackendDefinition` 中：
 
 1. **生命週期**（`RouterBackendLifecycle`）——_引擎如何執行_：
-   - `in-process`——在 OmniRoute Node 行程內執行（原生 TS 管線）。
-   - `supervised`——由 OmniRoute 透過 `ServiceSupervisor` 安裝／啟動／停止／健康檢查的本機子行程，之後作為提供者連線使用。
-   - `external`——OmniRoute 會向其分派請求、但**不會**管理的 HTTP 端點
+   - `in-process`——在 67router Node 行程內執行（原生 TS 管線）。
+   - `supervised`——由 67router 透過 `ServiceSupervisor` 安裝／啟動／停止／健康檢查的本機子行程，之後作為提供者連線使用。
+   - `external`——67router 會向其分派請求、但**不會**管理的 HTTP 端點
      （透過環境變數中的基底 URL 設定）。
    - `disabled`——已登錄，但不可選取。
 2. **選擇軸**（中繼路由後端）——_中繼是否將請求分派給它_：

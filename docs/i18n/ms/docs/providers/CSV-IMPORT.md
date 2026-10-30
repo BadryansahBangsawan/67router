@@ -25,7 +25,7 @@ Baris pertama yang lajur pertamanya ialah perkataan literal `provider` (tanpa me
 Muat turun fail permulaan daripada modal import (**Muat turun templat CSV**). Contoh:
 
 ```csv
-# Import penyedia OmniRoute (lajur berdasarkan kedudukan)
+# Import penyedia 67router (lajur berdasarkan kedudukan)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

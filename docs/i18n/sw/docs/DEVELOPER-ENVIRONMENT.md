@@ -4,7 +4,7 @@
 
 ---
 
-Ukurasa huu unaeleza tabia ya faili ya ndani ya mradi ya `.env` na jinsi ya kushughulikia faili za mazingira na siri wakati wa kutengeneza OmniRoute.
+Ukurasa huu unaeleza tabia ya faili ya ndani ya mradi ya `.env` na jinsi ya kushughulikia faili za mazingira na siri wakati wa kutengeneza 67router.
 
 ## Tabia ya .env wakati wa postinstall
 

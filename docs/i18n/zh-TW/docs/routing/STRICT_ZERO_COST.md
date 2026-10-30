@@ -31,7 +31,7 @@
 緊接在 `filterPaidOnlyCandidates` 之後）：
 
 1. **完全不在 `FREE_MODEL_BUDGETS` 中** → 排除。這涵蓋真正的付費模型，以及
-   OmniRoute 尚未分類的任何提供者／模型——新的候選項目預設為排除，而非納入。
+   67router 尚未分類的任何提供者／模型——新的候選項目預設為排除，而非納入。
 2. **`freeType: "keyless"`** → 立即通過，**但僅限於確實
    經由免驗證路徑進入的候選項目**（`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`，
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`）。該候選項目沒有任何憑證，
@@ -84,7 +84,7 @@ STRICT_ZERO_COST 會**逐一**驗證該允許清單中每個連線的免費存�
 （無金鑰繞過案例 A/B/C、多帳戶案例 1-5）。
 
 `自動探索`：若明天發布的提供者／模型具備正確的中繼資料（存在於
-目錄中、具有用量配接器，且 `hardStopGuaranteed: true`），則 OmniRoute 一得知它就能立即使用——
+目錄中、具有用量配接器，且 `hardStopGuaranteed: true`），則 67router 一得知它就能立即使用——
 無須修改程式碼、無須新增允許清單項目，也無須編輯此模組。從目錄移除的項目也會以相同方式消失。迴歸證明請參閱
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts`（透過
 可注入的固定測試資料，而非修改實際目錄）。

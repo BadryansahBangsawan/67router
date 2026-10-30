@@ -5,9 +5,9 @@
 ---
 
 Ir-relays (Vercel, Deno, Cloudflare) itemmu l-konnessjoni upstream fuq backend
-serverless sabiex OmniRoute jkun jista’ joħroġ minn reġjun stabbli filwaqt li
+serverless sabiex 67router jkun jista’ joħroġ minn reġjun stabbli filwaqt li
 jżomm il-kjavi API tal-fornitur fuq in-naħa tas-server. Dan id-dokument ikopri ż-żewġ modi ta’
-falliment li l-operaturi jiltaqgħu magħhom fil-produzzjoni u l-modi ta’ rkupru li OmniRoute jipprovdi għal
+falliment li l-operaturi jiltaqgħu magħhom fil-produzzjoni u l-modi ta’ rkupru li 67router jipprovdi għal
 kull wieħed.
 
 ## Kif tinħażen l-awtentikazzjoni tar-relay
@@ -35,7 +35,7 @@ l-ebda awtentikazzjoni.
 1. Iftaħ **Settings → Proxy Pool**.
 2. Ir-ringieli tar-relay li l-awtentikazzjoni tagħhom hija nieqsa juru badge safra `auth missing` u
    buttuna **Repair**.
-3. Ikklikkja **Repair**. OmniRoute jsejjaħ
+3. Ikklikkja **Repair**. 67router jsejjaħ
    `POST /api/settings/proxies/[id]/repair-relay`, li:
    - jiddekripta `relayAuthEnc` bil-kjavi **attwali**,
    - jerġa’ jikteb it-test sempliċi `relayAuth` f’`notes`,
@@ -67,7 +67,7 @@ token ma jkunx jista’ jiġi rkuprat, għalhekk qatt ma jkollok għalfejn tfitt
 **Sintomu:** it-test tal-proxy (il-buttuna `speed`) juri li r-relay huwa attiv iżda t-talbiet
 xorta jfallu b’mod intermittenti.
 
-Iċċekkja l-headers ta’ għarfien tar-relay irritornati mis-sonda tat-test awtomatiku ta’ OmniRoute
+Iċċekkja l-headers ta’ għarfien tar-relay irritornati mis-sonda tat-test awtomatiku ta’ 67router
 (ara **Settings → Proxy Pool** u l-counters `relayTested` / `relayAlive`):
 
 - `x-relay-url` — liema backend tar-relay wieġeb.

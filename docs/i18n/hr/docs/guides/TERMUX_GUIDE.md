@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute može raditi kao poslužitelj bez grafičkog sučelja na Androidu putem Termuxa. Electron aplikacija za stolna računala nije podržana u Termuxu, ali web-nadzorna ploča i API kompatibilan s OpenAI-jem rade u lokalnom pregledniku ili na drugim uređajima na istoj mreži.
+67router može raditi kao poslužitelj bez grafičkog sučelja na Androidu putem Termuxa. Electron aplikacija za stolna računala nije podržana u Termuxu, ali web-nadzorna ploča i API kompatibilan s OpenAI-jem rade u lokalnom pregledniku ili na drugim uređajima na istoj mreži.
 
 ## Preduvjeti
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Verzija Node.js-a:** OmniRoute zahtijeva Node `>=22.22.2 <23 || >=24.0.0 <27` (odgovara vrijednostima `engines` u `package.json` / `SUPPORTED_NODE_RANGE`). Termuxov `nodejs-lts` obično isporučuje Node 20 LTS, koji **više nije podržan** — umjesto toga instalirajte `pkg install nodejs` (trenutačna verzija) i provjerite prikazuje li `node --version` verziju iz linije 22.x/24.x+.
+> **Verzija Node.js-a:** 67router zahtijeva Node `>=22.22.2 <23 || >=24.0.0 <27` (odgovara vrijednostima `engines` u `package.json` / `SUPPORTED_NODE_RANGE`). Termuxov `nodejs-lts` obično isporučuje Node 20 LTS, koji **više nije podržan** — umjesto toga instalirajte `pkg install nodejs` (trenutačna verzija) i provjerite prikazuje li `node --version` verziju iz linije 22.x/24.x+.
 
-Ako kompiliranje izvornih paketa ne uspije, ponovno pokrenite prethodno navedenu naredbu `pkg install`, a zatim ponovno pokušajte instalirati OmniRoute.
+Ako kompiliranje izvornih paketa ne uspije, ponovno pokrenite prethodno navedenu naredbu `pkg install`, a zatim ponovno pokušajte instalirati 67router.
 
 ## Instalacija
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Pokretanje
 
-Pokrenite OmniRoute u načinu rada poslužitelja bez grafičkog sučelja:
+Pokrenite 67router u načinu rada poslužitelja bez grafičkog sučelja:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Na primjer:
 http://192.168.1.50:20128
 ```
 
-Telefon i klijent držite na istoj pouzdanoj mreži. Ako OmniRoute učinite dostupnim izvan telefona, omogućite API ključeve i provjeru autentičnosti nadzorne ploče.
+Telefon i klijent držite na istoj pouzdanoj mreži. Ako 67router učinite dostupnim izvan telefona, omogućite API ključeve i provjeru autentičnosti nadzorne ploče.
 
 ## Direktorij podataka
 
-OmniRoute prema zadanim postavkama pohranjuje podatke u Termuxovu početnom direktoriju, slijedeći isto ponašanje putanje podataka na strani poslužitelja koje se upotrebljava na Linuxu. Da biste bazu podataka smjestili na izričito određeno mjesto:
+67router prema zadanim postavkama pohranjuje podatke u Termuxovu početnom direktoriju, slijedeći isto ponašanje putanje podataka na strani poslužitelja koje se upotrebljava na Linuxu. Da biste bazu podataka smjestili na izričito određeno mjesto:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Nepodržana platforma: android (svaki zahtjev vraća HTTP 500)
 
-**Simptom:** `omniroute` / `omniroute serve` ispisuje `✔ OmniRoute is running!`, ali svaki zahtjev nadzorne ploče ili API-ja vraća samo `500 Internal Server Error`. `~/.omniroute/logs/application/app.log` ostaje prazan, `APP_LOG_LEVEL=debug` ne ispisuje ništa korisno, a tijelo odgovora običan je tekst (`Internal Server Error`) bez pojedinosti u JSON-u.
+**Simptom:** `omniroute` / `omniroute serve` ispisuje `✔ 67router is running!`, ali svaki zahtjev nadzorne ploče ili API-ja vraća samo `500 Internal Server Error`. `~/.omniroute/logs/application/app.log` ostaje prazan, `APP_LOG_LEVEL=debug` ne ispisuje ništa korisno, a tijelo odgovora običan je tekst (`Internal Server Error`) bez pojedinosti u JSON-u.
 
 **Uzrok:** Neke verzije Termuxa/Nodea prijavljuju `process.platform === "android"`. Next.js `getCacheDirectory()` ne podržava tu platformu: zahtijeva da `~/.cache` (ili generički privremeni direktorij) _već_ postoji, inače učitavanje kuke za instrumentaciju ne uspijeva uz poruku:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Budući da se kuka nikad ne učita, bilježenje zapisnika nikad se ne pokreće — pogreška 500 izgleda kao da ju je potpuno nemoguće dijagnosticirati. OmniRoute stvara `~/.cache` (i postavlja `XDG_CACHE_HOME` ako nije postavljen) u ulaznoj točki CLI-ja prije pokretanja Next.js-a kako bi ova provjera uspjela na Androidu/Termuxu.
+Budući da se kuka nikad ne učita, bilježenje zapisnika nikad se ne pokreće — pogreška 500 izgleda kao da ju je potpuno nemoguće dijagnosticirati. 67router stvara `~/.cache` (i postavlja `XDG_CACHE_HOME` ako nije postavljen) u ulaznoj točki CLI-ja prije pokretanja Next.js-a kako bi ova provjera uspjela na Androidu/Termuxu.
 
 **Podržano rješenje (bez izmjene paketa):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-U trenutačnim verzijama OmniRoutea CLI to automatski radi na Androidu/Termuxu — nakon svježeg pokretanja `npx -y omniroute@latest` / globalne instalacije ovaj ručni korak ne bi trebao biti potreban. Ako i nakon nadogradnje i dalje vidite pogrešku, jednom izradite `~/.cache` kao što je prethodno prikazano i ponovno pokrenite aplikaciju.
+U trenutačnim verzijama 67routera CLI to automatski radi na Androidu/Termuxu — nakon svježeg pokretanja `npx -y omniroute@latest` / globalne instalacije ovaj ručni korak ne bi trebao biti potreban. Ako i nakon nadogradnje i dalje vidite pogrešku, jednom izradite `~/.cache` kao što je prethodno prikazano i ponovno pokrenite aplikaciju.
 
 **Nemojte** mijenjati `dist/server.js` kako biste prisilno postavili `process.platform = "linux"`. Takva se izmjena paketa prepisuje pri svakoj ponovnoj instalaciji/nadogradnji i nepotrebna je nakon što direktorij predmemorije postoji.
 

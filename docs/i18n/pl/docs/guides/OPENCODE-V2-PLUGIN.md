@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` udostępnia cały katalog OmniRoute — modele, kombinacje i
+`@omniroute/opencode-plugin-v2` udostępnia cały katalog 67router — modele, kombinacje i
 automatyczne kombinacje — w selektorze modeli OpenCode v2 wraz z nazwami wyświetlanymi, cenami
 i limitami bezpłatnych warstw.
 
@@ -15,7 +15,7 @@ nie współdzielą one żadnych elementów, więc aktualizacja jednego nigdy nie
 ## Wymagania
 
 - OpenCode v2.
-- Osiągalna brama OmniRoute (domyślnie `http://localhost:20128`).
+- Osiągalna brama 67router (domyślnie `http://localhost:20128`).
 - Node.js 22 lub 24.
 
 ## Instalacja
@@ -128,7 +128,7 @@ Ustaw `"geminiSanitization": false`, aby to wyłączyć.
 
 | Objaw                                               | Przyczyna                                                                                                                                  |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Selektor nie wyświetla żadnego modelu OmniRoute     | Nie znaleziono klucza (sprawdź ostrzeżenie podczas uruchamiania) albo brama jest nieosiągalna                                              |
+| Selektor nie wyświetla żadnego modelu 67router      | Nie znaleziono klucza (sprawdź ostrzeżenie podczas uruchamiania) albo brama jest nieosiągalna                                              |
 | Surowe identyfikatory modeli, brak kombinacji i cen | Punkty końcowe zarządzania odrzuciły token — ustaw `managementReadToken`                                                                   |
 | Krótki lub pusty katalog `freeOnly`                 | Brak tokenu zarządzania albo token został odrzucony — sprawdź w dzienniku hosta wiersz podsumowania odświeżania (licznik `unmatched-free`) |
 | Sesja przypięta do `opencode-<id>/…`                | Wtyczka v1 publikowała `opencode-<id>`; v2 publikuje samo `<id>`, więc ponownie wybierz model w sekcji `<id>/…`                            |

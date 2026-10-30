@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (မြန်မာ)
+# 67router A2A Server Documentation (မြန်မာ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — အသိဉာဏ်ရှိသော လမ်းကြောင်းရွေးချယ်ရေး agent အဖြစ် OmniRoute
+> Agent-to-Agent Protocol v0.3 — အသိဉာဏ်ရှိသော လမ်းကြောင်းရွေးချယ်ရေး agent အဖြစ် 67router
 
 A2A မျက်နှာပြင်တွင် ပုံစံနှစ်မျိုးရှိသည်-
 
@@ -19,7 +19,7 @@ Task များကို `A2ATaskManager` (`src/lib/a2a/taskManager.ts`၊ မ
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute ၏ လုပ်ဆောင်နိုင်စွမ်းများ၊ စွမ်းရည်များနှင့် စစ်မှန်ကြောင်းအတည်ပြုမှု လိုအပ်ချက်များကို ဖော်ပြထားသည့် Agent Card ကို ပြန်ပေးသည်။
+67router ၏ လုပ်ဆောင်နိုင်စွမ်းများ၊ စွမ်းရည်များနှင့် စစ်မှန်ကြောင်းအတည်ပြုမှု လိုအပ်ချက်များကို ဖော်ပြထားသည့် Agent Card ကို ပြန်ပေးသည်။
 
 Agent Card ၏ `version` အကွက်ကို `process.env.npm_package_version` မှ ရယူသည် (`src/app/.well-known/agent.json/route.ts:13` ကို ကြည့်ပါ)။ ထို့ကြောင့် ထုတ်ဝေမှုတိုင်းတွင် `package.json` နှင့် အလိုအလျောက် တစ်ပြေးညီဖြစ်နေသည်။
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## ရရှိနိုင်သော Skill များ
 
-OmniRoute သည် `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` တွင် ချိတ်ဆက်ထားသော A2A skill 6 ခုကို ထုတ်ဖော်ပေးထားသည်။ Skill module တစ်ခုချင်းစီသည် `src/lib/a2a/skills/` အတွင်းတွင် တည်ရှိသည်။
+67router သည် `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` တွင် ချိတ်ဆက်ထားသော A2A skill 6 ခုကို ထုတ်ဖော်ပေးထားသည်။ Skill module တစ်ခုချင်းစီသည် `src/lib/a2a/skills/` အတွင်းတွင် တည်ရှိသည်။
 
 | Skill              | ID                   | ဖော်ပြချက်                                                                                                                                                       | Tag များ                   | ဥပမာများ                                             |
 | :----------------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :--------------------------------------------------- |
-| Smart Routing      | `smart-routing`      | OmniRoute ၏ combo engine + scoring ကို အသုံးပြု၍ prompt တစ်ခုကို အကောင်းဆုံး provider/combo မှတဆင့် လမ်းချိတ်ဆက်ပေးသည်                                           | routing, providers         | "ဤ prompt ကို အကောင်းဆုံး model မှတဆင့် route ပေးပါ" |
+| Smart Routing      | `smart-routing`      | 67router ၏ combo engine + scoring ကို အသုံးပြု၍ prompt တစ်ခုကို အကောင်းဆုံး provider/combo မှတဆင့် လမ်းချိတ်ဆက်ပေးသည်                                            | routing, providers         | "ဤ prompt ကို အကောင်းဆုံး model မှတဆင့် route ပေးပါ" |
 | Quota Management   | `quota-management`   | provider တစ်ခုချင်းစီ၏ quota အခြေအနေကို အစီရင်ခံပြီး၊ callers များအား throttle/switch လုပ်ရမည့်အချိန်ကို ဆုံးဖြတ်နိုင်ရန် ကူညီပေးသည်                             | quota, providers           | "anthropic အတွက် quota ကို စစ်ဆေးပါ"                 |
 | Provider Discovery | `provider-discovery` | install လုပ်ထားသော provider များကို capabilities, free-tier flags, OAuth status တို့နှင့်အတူ စာရင်းပြုစုပေးသည်                                                   | providers, discovery       | "မည်သည့် provider များ ရရှိနိုင်သနည်း?"              |
 | Cost Analysis      | `cost-analysis`      | catalog + မကြာသေးခင်က usage ကို အခြေခံ၍ request/conversation တစ်ခု၏ ကုန်ကျစရိတ်ကို ခန့်မှန်းပေးသည်                                                               | cost, usage                | "ဤ conversation အတွက် ကုန်ကျစရိတ်ကို ခန့်မှန်းပါ"    |
 | Health Report      | `health-report`      | provider တစ်ခုချင်းစီအတွက် circuit breaker, cooldown, lockout အခြေအနေများကို စုစည်းပေးသည်                                                                        | health, resilience         | "provider အားလုံး၏ health status ကို ပြပါ"           |
-| List Capabilities  | `list-capabilities`  | context injection အတွက် raw SKILL.md URLs များပါရှိသော markdown table အဖြစ် Agent Skills catalog 45 ခုစလုံး (API 23 ခု + CLI 21 ခု + config 1 ခု) ကို ပြန်ပေးသည် | catalog, discovery, skills | "OmniRoute capabilities အားလုံးကို စာရင်းပြုစုပါ"    |
+| List Capabilities  | `list-capabilities`  | context injection အတွက် raw SKILL.md URLs များပါရှိသော markdown table အဖြစ် Agent Skills catalog 45 ခုစလုံး (API 23 ခု + CLI 21 ခု + config 1 ခု) ကို ပြန်ပေးသည် | catalog, discovery, skills | "67router capabilities အားလုံးကို စာရင်းပြုစုပါ"     |
 
 > Agent Card ကို provider 375 ခုပါ နောက်ဆုံးပေါ် catalog နှင့် ကိုက်ညီစွာ ထိန်းသိမ်းထားသင့်သည်။ provider အရေအတွက်နှင့် free/no-auth metadata များကို runtime registry မှ ရယူထားခြင်း ဖြစ်သည်။
 
 ### `list-capabilities` Skill အသေးစိတ်
 
-`list-capabilities` skill သည် API calls များ မပို့ခင် OmniRoute မှ ထုတ်ဖော်ပေးထားသည်များကို ရှာဖွေတွေ့ရှိလိုသော ပြင်ပ agents များအတွက် အထူးအသုံးဝင်သည်။ ၎င်းသည် ဖွဲ့စည်းပုံရှိသော markdown table artifact ကို ပြန်ပေးသည်—
+`list-capabilities` skill သည် API calls များ မပို့ခင် 67router မှ ထုတ်ဖော်ပေးထားသည်များကို ရှာဖွေတွေ့ရှိလိုသော ပြင်ပ agents များအတွက် အထူးအသုံးဝင်သည်။ ၎င်းသည် ဖွဲ့စည်းပုံရှိသော markdown table artifact ကို ပြန်ပေးသည်—
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ JSON-RPC endpoint `/a2a` သည် ပင်မ A2A ဝင်ပေါက်ဖ�
 | `/.well-known/agent.json`    | GET    | Agent Card (A2A ရှာဖွေဖော်ထုတ်မှု)                           | (အများသုံး၊ 3600s ကြာ cache လုပ်ထားသည်)         |
 | `/api/a2a/tasks`             | POST   | OmniConductor fleet သို့ အဝင် delegation (Conductor PRD RF5) | Bearer နှင့် `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**အဝင် Conductor delegation (`POST /api/a2a/tasks`):** ပြင်ပ A2A agent များသည် OmniRoute မှတစ်ဆင့် coding အလုပ်များကို OmniConductor fleet သို့ လွှဲအပ်သည်။ Body: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — Conductor fleet skill များ (Agent Card တွင် ကြေညာထားသည့် skill များ) ကိုသာ လွှဲအပ်နိုင်သည်။ `metadata.conductor.repo.url` ကို မဖြစ်မနေ ထည့်သွင်းရမည် (fleet သည် git repo များပေါ်တွင် အလုပ်လုပ်သည်)။ Route သည် ဆာဗာဘက်ရှိ `CONDUCTOR_ORCHESTRATOR_TOKEN` (`CONDUCTOR_HUB_TOKEN` ကို အရန်အဖြစ် အသုံးပြုသည်) ကို အသုံးပြု၍ hub ၏ `POST /v1/tasks` သို့ ပြောင်းလဲပေးပြီး `201 { conductor_task_id, state: "submitted" }` ကို ပြန်ပေးသည်။ task အခြေအနေများသည် SSE→A2A mirror (RF1) မှတစ်ဆင့် ပြန်လည်စီးဆင်းလာပြီး `GET /api/a2a/tasks?skill=conductor` မှတစ်ဆင့် ကြည့်ရှုနိုင်သည်။
+**အဝင် Conductor delegation (`POST /api/a2a/tasks`):** ပြင်ပ A2A agent များသည် 67router မှတစ်ဆင့် coding အလုပ်များကို OmniConductor fleet သို့ လွှဲအပ်သည်။ Body: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — Conductor fleet skill များ (Agent Card တွင် ကြေညာထားသည့် skill များ) ကိုသာ လွှဲအပ်နိုင်သည်။ `metadata.conductor.repo.url` ကို မဖြစ်မနေ ထည့်သွင်းရမည် (fleet သည် git repo များပေါ်တွင် အလုပ်လုပ်သည်)။ Route သည် ဆာဗာဘက်ရှိ `CONDUCTOR_ORCHESTRATOR_TOKEN` (`CONDUCTOR_HUB_TOKEN` ကို အရန်အဖြစ် အသုံးပြုသည်) ကို အသုံးပြု၍ hub ၏ `POST /v1/tasks` သို့ ပြောင်းလဲပေးပြီး `201 { conductor_task_id, state: "submitted" }` ကို ပြန်ပေးသည်။ task အခြေအနေများသည် SSE→A2A mirror (RF1) မှတစ်ဆင့် ပြန်လည်စီးဆင်းလာပြီး `GET /api/a2a/tasks?skill=conductor` မှတစ်ဆင့် ကြည့်ရှုနိုင်သည်။
 
 ---
 

@@ -13,7 +13,7 @@ CLIProxyAPI או נתב Go/Rust עתידי. מרשם ה-TypeScript נשאר
 אותו מניפסט זמין גם דרך HTTP בכתובת
 `GET /api/v1/provider-plugin-manifest` עבור תהליכי sidecar שרצים מחוץ לתהליך.
 
-OmniRoute מפרסם את כתובת ה-URL הזו ל-Bifrost ול-CLIProxyAPI באמצעות כותרת הבקשה
+67router מפרסם את כתובת ה-URL הזו ל-Bifrost ול-CLIProxyAPI באמצעות כותרת הבקשה
 `X-OmniRoute-Provider-Manifest-Url`. הגדירו את
 `OMNIROUTE_PROVIDER_MANIFEST_URL` כאשר תהליך ה-sidecar זקוק לכתובת URL ציבורית או לכתובת ברשת
 של קונטיינרים במקום מקור הבקשה המקומי.
@@ -29,7 +29,7 @@ OmniRoute מפרסם את כתובת ה-URL הזו ל-Bifrost ול-CLIProxyAPI �
 ## מטרה
 
 להעביר את המטא-נתונים של הספקים לכיוון של חוזה תוספים, כך שבסופו של דבר תהליך sidecar בעל
-זמן השהיה נמוך יותר יוכל להיות אחראי על נתיב הבקשות החם, בעוד OmniRoute משאיר את
+זמן השהיה נמוך יותר יוכל להיות אחראי על נתיב הבקשות החם, בעוד 67router משאיר את
 נתיב ה-TypeScript כשער המדיניות וכמנגנון גיבוי. המניפסט הוא תוספתי: הוא
 אינו משנה את ניתוב הבקשות בפני עצמו.
 
@@ -73,7 +73,7 @@ OmniRoute מפרסם את כתובת ה-URL הזו ל-Bifrost ול-CLIProxyAPI �
 | `usage-fetch`        | מחובר אליו קורא נתוני שימוש או מכסה (`getUsageForProvider`).    |
 | `usage-supported`    | API השימוש מקבל ספק זה (`isSupportedUsageConnection`).          |
 
-`usage-fetch` מיועד לגילוי בלבד. הוא מציין ש-OmniRoute יודע כיצד לקרוא את נתוני השימוש של
+`usage-fetch` מיועד לגילוי בלבד. הוא מציין ש-67router יודע כיצד לקרוא את נתוני השימוש של
 הספק; הוא אינו מפעיל אחזור, משנה את סמנטיקת המכסה או מרמז שווידג'ט המכסה
 ב-Dashboard מופעל עבור הספק — ווידג'ט זה נשלט בנפרד על ידי
 `USAGE_SUPPORTED_PROVIDERS`. מקור האמת הוא `USAGE_FETCHER_PROVIDERS` בקובץ

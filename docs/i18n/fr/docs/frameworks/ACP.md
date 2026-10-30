@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute distingue la **détection des CLI**, le **protocole natif Agent Client Protocol** et
+67router distingue la **détection des CLI**, le **protocole natif Agent Client Protocol** et
 les **adaptateurs stdio hérités**. La détection d’un binaire installé ne garantit ni son
 authentification, ni la compatibilité de ses modèles, ni sa capacité à traiter une requête.
 

@@ -7,7 +7,7 @@
 > **Chanzo rasmi:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Ilisasishwa mara ya mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute inakuja na mfumo wa jumla wa tathmini unaoweza kutumia kupima utendaji wa usanidi wa uelekezaji, watoa huduma/miundo mahususi, au vifurushi vilivyojumuishwa vya "golden set".
+67router inakuja na mfumo wa jumla wa tathmini unaoweza kutumia kupima utendaji wa usanidi wa uelekezaji, watoa huduma/miundo mahususi, au vifurushi vilivyojumuishwa vya "golden set".
 Utumie kuthibitisha mabadiliko ya uelekezaji, kuhalalisha watoa huduma wapya, na kuweka masharti ya matoleo kabla ya kuyaelekeza kwenye trafiki ya uzalishaji.
 
 Mfumo huu umetekelezwa kama:

@@ -4,7 +4,7 @@
 
 ---
 
-> **Özet**: OmniRoute, **ücretsiz** sağlayıcılarını model kalitesine göre **Arena AI
+> **Özet**: 67router, **ücretsiz** sağlayıcılarını model kalitesine göre **Arena AI
 > (LMArena tarzı) ELO puanlarını** kullanarak sıralar. Göreviniz için en güçlü modelleri
 > sunan ücretsiz sağlayıcıları görmek üzere kontrol panelindeki **Ücretsiz Sağlayıcı
 > Sıralamaları** sayfasını açın — genel sıralamayı görüntüleyebilir veya kategoriye
@@ -14,7 +14,7 @@
 
 ## Nedir
 
-OmniRoute 375 sağlayıcı kaydeder; bunların 155'i **ücretsiz/kimlik-doğrulamasız**
+67router 375 sağlayıcı kaydeder; bunların 155'i **ücretsiz/kimlik-doğrulamasız**
 olarak işaretlenmiş katalog girdisidir
 (kimlik-doğrulamasız, ücretsiz katman OAuth veya ücretsiz katman API anahtarı — bkz.
 [Ücretsiz Katmanlar Kılavuzu](../getting-started/FREE-TIERS-GUIDE.md) ve tam
@@ -136,9 +136,9 @@ Arena ELO senkronizasyon motoru (`src/lib/arenaEloSync.ts`), Arena AI liderlik t
 ve `code` — alır. Her liderlik tablosu girdisi bir model adı, sağlayıcı, ELO `score` değeri,
 güven aralığı ve oy sayısı içerir.
 
-Liderlik tablosu kategorileri, OmniRoute görev kategorileriyle şu şekilde eşleştirilir:
+Liderlik tablosu kategorileri, 67router görev kategorileriyle şu şekilde eşleştirilir:
 
-| Arena liderlik tablosu | OmniRoute görev kategorileri                      |
+| Arena liderlik tablosu | 67router görev kategorileri                       |
 | ---------------------- | ------------------------------------------------- |
 | `text`                 | `default`, `review`, `documentation`, `debugging` |
 | `code`                 | `coding`                                          |
@@ -176,7 +176,7 @@ Senkronizasyon **varsayılan olarak etkindir**:
 - Sunucu başlatıldığında bir kez, ardından periyodik bir zamanlayıcıyla çalışır
   (`src/lib/arenaEloSync.ts`, `src/instrumentation-node.ts` üzerinden bağlanır).
 - **Engelleyici değildir ve hiçbir zaman kritik hataya yol açmaz** — üst kaynaktan veri alma
-  işlemi başarısız olursa OmniRoute çalışmaya devam eder ve sıralamalar yalnızca son başarılı
+  işlemi başarısız olursa 67router çalışmaya devam eder ve sıralamalar yalnızca son başarılı
   verileri (veya boş durumu) gösterir.
 
 İki ortam değişkeni tarafından kontrol edilir
@@ -211,7 +211,7 @@ esnek eşleştirme kullanır (`src/lib/freeProviderRankings.ts` içindeki `findM
 3. Ön ek eşleşmesi (bir liderlik tablosu model adı, kayıt kimliğinin ön ekidir).
 
 Senkronizasyon tarafında bilinen sağlayıcı ön ekleri (`anthropic/`, `openai/`, `google/`, …)
-kaldırılır ve küçük bir diğer ad haritası, standart adları OmniRoute'un dahili olarak
+kaldırılır ve küçük bir diğer ad haritası, standart adları 67router'un dahili olarak
 kullandığı varyantlara genişletir; böylece modeller herhangi bir adla bulunabilir durumda kalır.
 
 ### Bir sağlayıcı nasıl sıralanır

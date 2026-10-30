@@ -7,29 +7,29 @@
 > **સત્યનો સ્રોત:** `src/lib/skills/` અને `src/app/api/skills/`
 > **છેલ્લે અપડેટ કરેલું:** 2026-06-28 — v3.8.40
 
-OmniRoute એક વિસ્તારી શકાય તેવું Skills ફ્રેમવર્ક પ્રદાન કરે છે, જે ભાષા મોડલ્સને (અને ઑપરેટર્સને) ફરીથી ઉપયોગ કરી શકાય તેવી ક્ષમતાઓ સંયોજિત કરવાની સુવિધા આપે છે — ફાઇલસિસ્ટમ વાંચન અને HTTP વિનંતીઓથી લઈને sandboxed કોડ એક્ઝિક્યુશન અને કાળજીપૂર્વક પસંદ કરેલી marketplace skills સુધી.
+67router એક વિસ્તારી શકાય તેવું Skills ફ્રેમવર્ક પ્રદાન કરે છે, જે ભાષા મોડલ્સને (અને ઑપરેટર્સને) ફરીથી ઉપયોગ કરી શકાય તેવી ક્ષમતાઓ સંયોજિત કરવાની સુવિધા આપે છે — ફાઇલસિસ્ટમ વાંચન અને HTTP વિનંતીઓથી લઈને sandboxed કોડ એક્ઝિક્યુશન અને કાળજીપૂર્વક પસંદ કરેલી marketplace skills સુધી.
 
-Skill એ વર્ઝન ધરાવતું, schema દ્વારા વ્યાખ્યાયિત કાર્યનું એકમ છે. OmniRoute આઉટબાઉન્ડ વિનંતીઓમાં skills ને tool definitions તરીકે દાખલ કરી શકે છે, મોડલ તરફથી પાછા આવતા tool calls ને અટકાવી શકે છે, મેળ ખાતું handler ચલાવી શકે છે અને પરિણામને ફરીથી મોડલને આપી શકે છે જેથી વાર્તાલાપ ચાલુ રહી શકે. મોડલ ક્યારેય અમલીકરણ જોતું નથી — માત્ર tool interface જુએ છે.
+Skill એ વર્ઝન ધરાવતું, schema દ્વારા વ્યાખ્યાયિત કાર્યનું એકમ છે. 67router આઉટબાઉન્ડ વિનંતીઓમાં skills ને tool definitions તરીકે દાખલ કરી શકે છે, મોડલ તરફથી પાછા આવતા tool calls ને અટકાવી શકે છે, મેળ ખાતું handler ચલાવી શકે છે અને પરિણામને ફરીથી મોડલને આપી શકે છે જેથી વાર્તાલાપ ચાલુ રહી શકે. મોડલ ક્યારેય અમલીકરણ જોતું નથી — માત્ર tool interface જુએ છે.
 
 ---
 
 ## Agent Skills વિરુદ્ધ Omni Skills
 
-OmniRoute પાસે બે અલગ પરંતુ પરસ્પર પૂરક skill systems છે:
+67router પાસે બે અલગ પરંતુ પરસ્પર પૂરક skill systems છે:
 
 | પરિમાણ                | **Omni Skills** (આ દસ્તાવેજ)                                    | **Agent Skills**                                                                            |
 | :-------------------- | :-------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
 | હેતુ                  | LLM tool injection + sandboxed એક્ઝિક્યુશન                      | બાહ્ય agents શોધી અને ઉપયોગ કરી શકે તે માટેનો SKILL.md catalog                              |
 | સત્યનો સ્રોત          | `src/lib/skills/` + marketplace                                 | `src/lib/agentSkills/` + `skills/` directory                                                |
 | Runtime mode          | આઉટબાઉન્ડ વિનંતીઓમાં દાખલ થાય છે, tool-call events પર ચલાવાય છે | Static markdown catalog + REST/MCP/A2A discovery endpoints                                  |
-| તેનો ઉપયોગ કોણ કરે છે | OmniRoute પોતે (combo routing, inbound LLM calls)               | બાહ્ય agents, MCP clients, A2A orchestrators                                                |
+| તેનો ઉપયોગ કોણ કરે છે | 67router પોતે (combo routing, inbound LLM calls)                | બાહ્ય agents, MCP clients, A2A orchestrators                                                |
 | સંખ્યા                | પરિવર્તનશીલ (marketplace દ્વારા સંચાલિત)                        | 43 catalog entries (22 API + 20 CLI + 1 config)                                             |
 | ફોર્મેટ               | tool schema + handler સાથેનું `SkillDefinition`                 | `SKILL.md` frontmatter + markdown body                                                      |
 | શોધ                   | `/api/skills/*` REST + `omniroute_skills_*` MCP tools           | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP tools + A2A `list-capabilities` |
 
-**Omni Skills** એક્ઝિક્યુશન એન્જિન છે — જ્યારે LLM કોઈ tool ને invoke કરે ત્યારે OmniRoute _શું કરી શકે છે_ તે તેઓ વ્યાખ્યાયિત કરે છે.
+**Omni Skills** એક્ઝિક્યુશન એન્જિન છે — જ્યારે LLM કોઈ tool ને invoke કરે ત્યારે 67router _શું કરી શકે છે_ તે તેઓ વ્યાખ્યાયિત કરે છે.
 
-**Agent Skills** દસ્તાવેજીકરણ catalog છે — તેઓ બાહ્ય agents ને OmniRoute ના REST API અને CLI નો _ઉપયોગ કેવી રીતે કરવો_ તે સમજાવે છે, અને તેમની રચનાબદ્ધ SKILL.md files સીધી agent prompts માં આપી શકાય છે.
+**Agent Skills** દસ્તાવેજીકરણ catalog છે — તેઓ બાહ્ય agents ને 67router ના REST API અને CLI નો _ઉપયોગ કેવી રીતે કરવો_ તે સમજાવે છે, અને તેમની રચનાબદ્ધ SKILL.md files સીધી agent prompts માં આપી શકાય છે.
 
 Agent Skills catalog, generator, MCP tools અને A2A skill માટે [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md) જુઓ.
 
@@ -41,14 +41,14 @@ Agent Skills catalog, generator, MCP tools અને A2A skill માટે [doc
 
 Skills ના ત્રણ સ્રોતો એક જ registry માં સહઅસ્તિત્વ ધરાવે છે:
 
-1. **Built-in skills** (`src/lib/skills/builtins.ts`) — OmniRoute સાથે આપવામાં આવે છે. તેઓ સામાન્ય ઉપયોગના કિસ્સાઓ આવરી લે છે:
+1. **Built-in skills** (`src/lib/skills/builtins.ts`) — 67router સાથે આપવામાં આવે છે. તેઓ સામાન્ય ઉપયોગના કિસ્સાઓ આવરી લે છે:
    - `file_read`, `file_write` — `<DATA_DIR>/skills/workspaces/<hashed-key>/` હેઠળ પ્રતિ-API-key sandbox workspace
    - `http_request` — `guard: "public-only"` સાથે `safeOutboundFetch` મારફતે આઉટબાઉન્ડ HTTP
    - `web_search` — caching (`executeWebSearch`) સાથે બદલી શકાય તેવો search provider
    - `eval_code` — Docker-sandboxed `node` અથવા `python` એક્ઝિક્યુશન
    - `execute_command` — Docker-sandboxed shell command
    - `browser` — Playwright-આધારિત scaffolding, ડિફૉલ્ટ રૂપે અક્ષમ (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute Marketplace) — `https://skillsmp.com/api/v1/skills/search` પરથી મેળવવામાં આવે છે. Settings માં `skillsmpApiKey` જરૂરી છે.
+2. **SkillsMP** (67router Marketplace) — `https://skillsmp.com/api/v1/skills/search` પરથી મેળવવામાં આવે છે. Settings માં `skillsmpApiKey` જરૂરી છે.
 3. **SkillsSH** (`skills.sh` community catalog) — `https://skills.sh/api/search` પરથી મેળવવામાં આવે છે. કોઈ authentication જરૂરી નથી; SKILL.md સામગ્રી GitHub raw પરથી મેળવવામાં આવે છે.
 
 એકમાત્ર "active provider" નક્કી કરે છે કે dashboard કયા catalog માંથી install કરે છે (`src/lib/skills/providerSettings.ts`). તેને **Settings → Memory & Skills** હેઠળ બદલો. ડિફૉલ્ટ: `skillsmp`.
@@ -442,7 +442,7 @@ enum SkillMode {
 
 ## બિલ્ટ-ઇન કૌશલ્યોની સૂચિ
 
-OmniRoute માં `src/lib/skills/builtin/` હેઠળ બિલ્ટ-ઇન કૌશલ્યોનો પસંદગીપૂર્વક તૈયાર કરાયેલ સમૂહ સામેલ છે. સૌથી સામાન્ય કૌશલ્યો:
+67router માં `src/lib/skills/builtin/` હેઠળ બિલ્ટ-ઇન કૌશલ્યોનો પસંદગીપૂર્વક તૈયાર કરાયેલ સમૂહ સામેલ છે. સૌથી સામાન્ય કૌશલ્યો:
 
 ### બ્રાઉઝર ઓટોમેશન કૌશલ્ય
 

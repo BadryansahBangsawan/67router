@@ -4,7 +4,7 @@
 
 ---
 
-E2E-Validierung der auf dem Homologations-VPS laufenden OmniRoute-Bereitstellung in einer realen Umgebung
+E2E-Validierung der auf dem Homologations-VPS laufenden 67router-Bereitstellung in einer realen Umgebung
 (`HOMOLOG_BASE_URL`, z. B. `http://192.168.0.15:20128`). Ein einziger Befehl ersetzt die manuelle
 Release-STOP-#2-Checkliste durch einen automatisierten Lauf, der Nachweise erzeugt.
 

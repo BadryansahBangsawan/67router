@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Čeština)
+# 🐳 Docker Guide — 67router (Čeština)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Se souborem prostředí](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Dostupné profily](#available-profiles)
-- [Konfigurace hostitelských nástrojů CLI při běhu OmniRoute v Dockeru](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Konfigurace hostitelských nástrojů CLI při běhu 67router v Dockeru](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis jako sidecar](#redis-sidecar)
 - [Produkční konfigurace Compose](#production-compose)
 - [Fáze Dockerfile](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Dostupné profily
 
-OmniRoute poskytuje profily Compose pro hlavní způsoby nasazení. Vyberte ten, který odpovídá vašemu prostředí.
+67router poskytuje profily Compose pro hlavní způsoby nasazení. Vyberte ten, který odpovídá vašemu prostředí.
 
 | Profil           | Služba           | Kdy použít                                                                                                                                               | Příkaz                                       |
 | ---------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute poskytuje profily Compose pro hlavní způsoby nasazení. Vyberte ten,
 
 > Lze kombinovat více profilů: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Konfigurace nástrojů CLI na hostiteli, když OmniRoute běží v Dockeru
+## Konfigurace nástrojů CLI na hostiteli, když 67router běží v Dockeru
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` a tlačítko
 **Uložit konfiguraci** na ovládacím panelu zapisují soubory jako `~/.codex/*.config.toml`. Tyto cesty
@@ -103,11 +103,11 @@ kontejneru, zápis skončí ve vlastním domovském adresáři kontejneru (`/hom
 image běží s nastavením `USER node`), odkud jej žádné CLI na hostiteli nikdy nepřečte a kde bude
 zahozen v okamžiku, kdy bude kontejner znovu vytvořen.
 
-OmniRoute tuto situaci rozpozná a namísto ohlášení úspěchu, které nemůžete využít,
+67router tuto situaci rozpozná a namísto ohlášení úspěchu, které nemůžete využít,
 zápis odmítne a zobrazí pokyny: CLI skončí s kódem `2` a API odpoví stavem `422`
 s `containerEphemeralTarget: true`.
 
-### Doporučeno: spusťte CLI na hostiteli a OmniRoute v Dockeru
+### Doporučeno: spusťte CLI na hostiteli a 67router v Dockeru
 
 Kontejner poskytuje API; CLI konfiguruje vaše nástroje na hostiteli.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Důvěryhodnost cesty zajišťuje právě bind mount: OmniRoute čte
+Důvěryhodnost cesty zajišťuje právě bind mount: 67router čte
 `/proc/self/mountinfo` a povoluje zápisy do připojených cest (a do adresářů,
 jejichž podadresáře jsou přípojnými body, což přesně odpovídá výše uvedené struktuře `/host-home`),
 zatímco zápisy do nepřipojených cest nadále odmítá.
@@ -178,7 +178,7 @@ s upozorněním, že nepřežije odstranění kontejneru.
 
 ## Doprovodný kontejner Redis
 
-OmniRoute využívá Redis jako úložiště pro distribuované omezování frekvence požadavků a sdílenou mezipaměť. Služba `redis` je v souboru `docker-compose.yml` definována **vždy** (není omezena žádným profilem) a spouští se společně s libovolným jiným profilem.
+67router využívá Redis jako úložiště pro distribuované omezování frekvence požadavků a sdílenou mezipaměť. Služba `redis` je v souboru `docker-compose.yml` definována **vždy** (není omezena žádným profilem) a spouští se společně s libovolným jiným profilem.
 
 | Podrobnost                    | Hodnota                                 |
 | ----------------------------- | --------------------------------------- |
@@ -366,7 +366,7 @@ Kromě výchozích hodnot zdokumentovaných v [ENVIRONMENT.md](../reference/ENVI
 
 ## Reverzní proxy na podcestě (Traefik / nginx)
 
-Hodnota `basePath` systému Next.js je zkompilována do samostatného balíčku. OmniRoute ukládá vloženou
+Hodnota `basePath` systému Next.js je zkompilována do samostatného balíčku. 67router ukládá vloženou
 hodnotu do kontrolního souboru v kořenovém adresáři aplikace (zapsaného během `npm run build`; načítaného
 skriptem `scripts/docker/ensure-docker-base-path.mjs`) a při spuštění kontejneru ji porovnává
 s proměnnou `OMNIROUTE_BASE_PATH`. Pokud se hodnoty liší a obraz byl sestaven
@@ -438,7 +438,7 @@ výpočetně náročné zpracování katalogu nebo komprese je mohou zpozdit —
 
 ## Docker Compose s Caddy (automatické TLS pro HTTPS)
 
-OmniRoute lze bezpečně zpřístupnit pomocí automatického zajišťování certifikátů SSL v Caddy. Ujistěte se, že DNS záznam typu A vaší domény odkazuje na IP adresu vašeho serveru.
+67router lze bezpečně zpřístupnit pomocí automatického zajišťování certifikátů SSL v Caddy. Ujistěte se, že DNS záznam typu A vaší domény odkazuje na IP adresu vašeho serveru.
 
 ```yaml
 services:
@@ -469,11 +469,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy nastavuje standardní hlavičky pro předávání požadavků upstream kontejneru. OmniRoute používá
+Caddy nastavuje standardní hlavičky pro předávání požadavků upstream kontejneru. 67router používá
 `NEXT_PUBLIC_BASE_URL` jako kanonický veřejný origin pro zpětná volání OAuth a generované veřejné
 odkazy; ověřené zápisy z řídicího panelu používají požadavky se stejným originem spolu s ochranou CSRF
 vázanou na relaci. `OMNIROUTE_TRUST_PROXY` povolte pouze pro pokročilá nasazení, ve kterých záměrně
-chcete, aby OmniRoute odvozoval veřejný origin z důvěryhodných předávaných hlaviček namísto explicitní
+chcete, aby 67router odvozoval veřejný origin z důvěryhodných předávaných hlaviček namísto explicitní
 konfigurace.
 
 ## Rychlý tunel Cloudflare
@@ -485,11 +485,11 @@ Panely tunelů endpointů (Cloudflare, Tailscale, ngrok) lze zobrazit nebo skrý
 ### Poznámky k tunelům
 
 - Adresy URL rychlých tunelů jsou dočasné a po každém restartu se změní.
-- Rychlé tunely se po restartování OmniRoute nebo kontejneru automaticky neobnovují. V případě potřeby je znovu povolte z řídicího panelu.
+- Rychlé tunely se po restartování 67router nebo kontejneru automaticky neobnovují. V případě potřeby je znovu povolte z řídicího panelu.
 - Spravovaná instalace aktuálně podporuje Linux, macOS a Windows na `x64` / `arm64`.
 - Spravované rychlé tunely ve výchozím nastavení používají přenos HTTP/2, aby se předešlo rušivým varováním o vyrovnávací paměti QUIC UDP v omezených kontejnerových prostředích. Pokud chcete použít jiný přenos, nastavte `CLOUDFLARED_PROTOCOL=quic` nebo `auto`.
 - Obrazy Dockeru obsahují systémové kořenové certifikáty CA a předávají je spravovanému nástroji `cloudflared`, čímž se předejde selháním důvěryhodnosti TLS při inicializaci tunelu uvnitř kontejneru.
-- Pokud chcete, aby OmniRoute namísto stažení použil existující binární soubor, nastavte `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`.
+- Pokud chcete, aby 67router namísto stažení použil existující binární soubor, nastavte `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`.
 
 ## Značky obrazů
 
@@ -502,7 +502,7 @@ Multiplatformní manifest: nativní `linux/amd64` + `linux/arm64` (Apple Silicon
 
 ### Kanály vydání
 
-OmniRoute publikuje samostatné kanály Dockeru pro stabilní vydání, testování aktivní větve vydání a vývojová sestavení.
+67router publikuje samostatné kanály Dockeru pro stabilní vydání, testování aktivní větve vydání a vývojová sestavení.
 
 | Kanál                           | Zdroj                                          | Proměnlivost                  | Doporučené použití                                                                                               |
 | ------------------------------- | ---------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -555,7 +555,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Před testováním zálohujte datový svazek OmniRoute nebo připojený datový adresář. Chcete-li se vrátit k předchozí verzi, obnovte dříve používanou stabilní verzi nebo digest a znovu vytvořte kontejner:
+Před testováním zálohujte datový svazek 67router nebo připojený datový adresář. Chcete-li se vrátit k předchozí verzi, obnovte dříve používanou stabilní verzi nebo digest a znovu vytvořte kontejner:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -575,7 +575,7 @@ Sestavení z větve vydání nikdy nemůže změnit `latest`; stabilní ukazatel
 
 ## Aktualizace řídicího panelu v Dockeru
 
-Kontejner z publikovaného image nemůže nahradit sám sebe. Když OmniRoute zjistí, že běží uvnitř
+Kontejner z publikovaného image nemůže nahradit sám sebe. Když 67router zjistí, že běží uvnitř
 kontejneru (bez checkoutu `.git` a nejde o instalaci přes npm), banner s aktualizací na domovském řídicím panelu zobrazí
 místo pokynů pro npm/git příkaz, který je třeba spustit na hostiteli, včetně tlačítka pro zkopírování:
 
@@ -591,7 +591,7 @@ tagu `:X.Y.Z` nejprve upravte tag.
 
 Chcete-li zachovat funkčnost tlačítka **Aktualizovat nyní** bez připojení `/var/run/docker.sock` (které kontejneru
 poskytuje root přístup k hostiteli — viz výše uvedené varování k profilu `cli`), nastavte pro službu
-OmniRoute proměnnou `DOCKER_UPDATE_TRIGGER_FILE` a na hostiteli spusťte sledovací proces:
+67router proměnnou `DOCKER_UPDATE_TRIGGER_FILE` a na hostiteli spusťte sledovací proces:
 
 ```yaml
 services:
@@ -605,7 +605,7 @@ services:
 Cesta musí být uvnitř `DATA_DIR` (relativní hodnoty se vyhodnocují vůči tomuto adresáři); vše ostatní je
 odmítnuto. Tlačítko **Aktualizovat nyní** poté zapíše do tohoto souboru `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }`,
 vrátí odpověď `202` a řídicí panel se dotazuje `/api/system/version`, dokud není nová verze aktivní,
-a poté se znovu načte. OmniRoute v tomto režimu nikdy nespouští shell ani příkaz Dockeru. Stejně jako u každé
+a poté se znovu načte. 67router v tomto režimu nikdy nespouští shell ani příkaz Dockeru. Stejně jako u každé
 aktualizační akce je požadavek přijat pouze od klientů na loopbacku nebo v síti LAN.
 
 Datový adresář připojený pomocí bind mountu poskytuje hostiteli stabilní cestu ke sledování. Vzorové jednotky `systemd`
@@ -614,7 +614,7 @@ Datový adresář připojený pomocí bind mountu poskytuje hostiteli stabilní 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Sledování požadavků na aktualizaci z řídicího panelu OmniRoute
+Description=Sledování požadavků na aktualizaci z řídicího panelu 67router
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -626,7 +626,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Stažení a opětovné vytvoření kontejneru OmniRoute
+Description=Stažení a opětovné vytvoření kontejneru 67router
 
 [Service]
 Type=oneshot
@@ -646,13 +646,13 @@ Služba před stažením odstraní soubor požadavku, aby se neúspěšné spuš
 
 ## Dostupnost: výchozí SQLite podporuje jedinou repliku
 
-Standardní nasazení OmniRoute v Dockeru / Kubernetes tvoří **jeden proces Node + jeden zapisující proces SQLite**. Vysoká dostupnost v této topologii **není podporována**.
+Standardní nasazení 67router v Dockeru / Kubernetes tvoří **jeden proces Node + jeden zapisující proces SQLite**. Vysoká dostupnost v této topologii **není podporována**.
 
-| Omezení                                                    | Důsledek                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jediný zapisující proces                                   | **Nespouštějte** více replik nad stejným souborem SQLite. Došlo by k poškození databáze.                                                                                                                                                                                                                                                    |
-| Opětovné vytvoření / restart / ukončení pomocí HEALTHCHECK | **Úplný výpadek** probíhajících SSE, relací řídicího panelu a stavu v paměti. Připojení všech klientů se přeruší. Nové požadavky během intervalu bez dostupného koncového bodu obdrží od reverzní proxy chybu **`502 Bad Gateway: Unknown error`**, nikoli JSON z OmniRoute — klienti ji nemohou odlišit od selhání poskytovatele (#11015). |
-| Stejná smyčka událostí jako `/healthz`                     | Vytížená aktualizace katalogu nebo komprese může zpozdit sondy; krátký časový limit pak restartuje **jedinou** repliku.                                                                                                                                                                                                                     |
+| Omezení                                                    | Důsledek                                                                                                                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Jediný zapisující proces                                   | **Nespouštějte** více replik nad stejným souborem SQLite. Došlo by k poškození databáze.                                                                                                                                                                                                                                                   |
+| Opětovné vytvoření / restart / ukončení pomocí HEALTHCHECK | **Úplný výpadek** probíhajících SSE, relací řídicího panelu a stavu v paměti. Připojení všech klientů se přeruší. Nové požadavky během intervalu bez dostupného koncového bodu obdrží od reverzní proxy chybu **`502 Bad Gateway: Unknown error`**, nikoli JSON z 67router — klienti ji nemohou odlišit od selhání poskytovatele (#11015). |
+| Stejná smyčka událostí jako `/healthz`                     | Vytížená aktualizace katalogu nebo komprese může zpozdit sondy; krátký časový limit pak restartuje **jedinou** repliku.                                                                                                                                                                                                                    |
 
 **Matice sond** (viz také [doporučení pro sondy Kubernetes](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -756,7 +756,7 @@ i skutečnou trasu připojení; tato chyba sama o sobě neznamená, že je klí�
 ### Upřednostněte proxy specifickou pro připojení
 
 Pro dotčené připojení Gemini použijte [konfiguraci proxy pro jednotlivá připojení](../ops/PROXY_GUIDE.md#4-level-proxy-system)
-v OmniRoute a poté zopakujte **Test Connection** a malý požadavek
+v 67router a poté zopakujte **Test Connection** a malý požadavek
 se stejným modelem. Tím zůstane změna směrování omezená na dané připojení. Ověřte,
 že je proxy z kontejneru dostupná a že ji připojení skutečně vybere.
 Změna trasy nezaručuje regionální způsobilost u poskytovatele.
@@ -825,7 +825,7 @@ může přerušit provoz ostatních kontejnerů, které jsou k ní připojené; 
 
 ## Důležité poznámky
 
-- **Režim WAL databáze SQLite:** Příkazu `docker stop` by mělo být umožněno dokončení, aby OmniRoute mohl zapsat nejnovější změny zpět do souboru `storage.sqlite` prostřednictvím kontrolního bodu. Přibalené soubory Compose již nastavují 40sekundovou odkladnou lhůtu pro zastavení. Pokud spouštíte image přímo, zachovejte `--stop-timeout 40`.
+- **Režim WAL databáze SQLite:** Příkazu `docker stop` by mělo být umožněno dokončení, aby 67router mohl zapsat nejnovější změny zpět do souboru `storage.sqlite` prostřednictvím kontrolního bodu. Přibalené soubory Compose již nastavují 40sekundovou odkladnou lhůtu pro zastavení. Pokud spouštíte image přímo, zachovejte `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Nastavte na `true`, pokud jsou pravidelné zálohy a zálohy před zápisem spravovány externě. Migrace existující databáze stále vyžadují vlastní trvalý bezpečnostní snímek a ochranu před hromadnou migrací.
 - **Trvalé uložení dat:** Vždy připojte svazek k `/app/data`, aby vaše databáze, klíče a konfigurace zůstaly zachovány i po restartování kontejneru.
 - **Konfigurace portu:** Chcete-li změnit výchozí port `20128`, přepište proměnnou prostředí `PORT`.

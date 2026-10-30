@@ -25,7 +25,7 @@
 یک فایل اولیه را از پنجره مودال درونریزی دانلود کنید (**دانلود الگوی CSV**). مثال:
 
 ```csv
-# درونریزی ارائهدهنده OmniRoute (ستونهای موقعیتی)
+# درونریزی ارائهدهنده 67router (ستونهای موقعیتی)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

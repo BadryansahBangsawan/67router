@@ -5,7 +5,7 @@
 ---
 
 Ọdọ runner a na-akwado n'onwe ya na-arụ ọrụ na igbe **.113** (`tomni-proxmox-113`). Kemgbe 2026-10-18, runner
-OmniRoute ọ bụla nwere **otu ọrụ**, otu label, na oke memory/CPU a haziri dịka ihe ibu ọrụ ya
+67router ọ bụla nwere **otu ọrụ**, otu label, na oke memory/CPU a haziri dịka ihe ibu ọrụ ya
 gosiri na ọ na-eji. Oghere Turbopack na-enweta ihe build chọrọ; a haziri oghere ndị ọzọ dịka
 ọnụ ọgụgụ kachasị elu a tụrụ. Igbe ahụ na-eme overcommit naanị mgbe build Turbopack dakọtara na build
 webpack Release-Green na ọrụ lint; swap host (16 GB) na-anabata nke ahụ, ebe ọ bụkwa na Builds nke pull-request
@@ -27,7 +27,7 @@ Ihe a tụrụ na 2026-10-18:
 | swap      | 16 GB                      | `omniroute-113-5` na-agba ebe agbanyụrụ swap (`MemorySwapMax=0`) ka e wee kwụsị build gbapụrụ n'ike n'ókè ya kama ime ka igbe ahụ jiri swap                                                                                                                                                                                                                                                          |
 | `/tmp`    | **12 GB tmpfs = RAM**      | ihe ọ bụla echekwara ebe ahụ bụ memory; a na-ekpochapụ ihe fọdụrụ mgbe awa 3 gachara                                                                                                                                                                                                                                                                                                                 |
 | CPU       | a hụrụ load 60 na cores 32 | tupu e tinye quotas ndị ahụ, otu build Turbopack (~1166 % CPU) tinyere coverage suite n'otu igbe ahụ mere ka heartbeats nke listeners ndị ọzọ ghara inweta akụrụngwa zuru oke (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                  |
-| runners   | **listeners 6**            | OmniRoute 4 + OmniHeuris + OmniMind; agbanyụrụ `omniroute-113-3/-4/-7/-8` (`systemctl enable --now` na-eweghachite otu n'ọrụ)                                                                                                                                                                                                                                                                        |
+| runners   | **listeners 6**            | 67router 4 + OmniHeuris + OmniMind; agbanyụrụ `omniroute-113-3/-4/-7/-8` (`systemctl enable --now` na-eweghachite otu n'ọrụ)                                                                                                                                                                                                                                                                         |
 
 Oke ndị ahụ dị na `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` nke unit ọ bụla
 (e debere uru ndị gara aga dịka `override.conf.bak-20261018`) ma tinye ha ozugbo site na
@@ -75,7 +75,7 @@ worker ahụ na-akọ na a kagbuola job ahụ, listener ahụ wee laghachi onlin
 `KillMode=process` ndabara nke runner na-ahapụ
 `Runner.Worker → npm → next-build` ka ha na-agba mgbe a kwụsịrị ma ọ bụ malitegharịa
 unit — build ghọrọ orphan na-aga n'ihu iri RAM na CPU n'enweghị job jikọrọ ya.
-Unit OmniRoute ọ bụla nwere drop-in
+Unit 67router ọ bụla nwere drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 nwere `KillMode=mixed`: SIGTERM na-aga listener ahụ na mbụ, SIGKILL agakwuru cgroup
 niile na `TimeoutStop`. Ọ na-amalite ịrụ ọrụ mgbe a malitegharịrị unit ahụ ọzọ —
@@ -119,7 +119,7 @@ nlele na ọ naghị arụ ọrụ na restart n'otu command ahụ.
   `next build` nke backend naanị (~5–6 GB; webpack) na `quality.yml` `lint-guard`. `omniroute-113`
   nwere `MemoryHigh=4G` ruo 2026-10-18 — build promptfoo ji nkeji 54 na-enwetaghachi memory ka ọ na-aga
   n'ebe ahụ; 8 GB na-ewepụ throttling ahụ.
-- **E kpachapụrụ anya belata listeners.** A gbanyụrụ unit OmniRoute anọ na 2026-08-29 — listener
+- **E kpachapụrụ anya belata listeners.** A gbanyụrụ unit 67router anọ na 2026-08-29 — listener
   ọ bụla agbakwunyere bụ tenant ọzọ na memory budget dị n'elu. Oke janitor bụ 6 (`MAX_ACTIVE_RUNNERS=6` na cron): ọ na-agụta
   `Runner.Listener` ọ bụla dị na igwe ahụ, OmniHeuris + OmniMind na-agbakwunyekwa abụọ na anọ anyị.
 - **Ejila aka hichaa `/tmp` ma ọ bụ `_work` mgbe runner ọ bụla ka na-arụ ọrụ.** Usoro

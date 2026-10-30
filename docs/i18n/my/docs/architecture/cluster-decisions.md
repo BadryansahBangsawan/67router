@@ -14,7 +14,7 @@
 
 ## ဤအဆိုပြုချက်သည် အဘယ်ကြောင့် သတိထားချဉ်းကပ်ထားသနည်း
 
-OmniRoute ၏ လက်ရှိ deployment ပုံစံသည် ရိုးရှင်းကျစ်လျစ်ပြီး လက်တွေ့စမ်းသပ်အတည်ပြုပြီးသား ဖြစ်သည်-
+67router ၏ လက်ရှိ deployment ပုံစံသည် ရိုးရှင်းကျစ်လျစ်ပြီး လက်တွေ့စမ်းသပ်အတည်ပြုပြီးသား ဖြစ်သည်-
 
 - **`redis:7-alpine`** သည် ထုတ်လုပ်မှုပမာဏတွင် rate-limit/cache workload ကို ကိုင်တွယ်သည်။
 - **SQLite + sqlite-vec + FTS5** သည် local memory + vector + စာသားရှာဖွေမှုတို့ကို ပံ့ပိုးပေးသည် ([`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts) ကို ကြည့်ပါ)။
@@ -49,7 +49,7 @@ OmniRoute ၏ လက်ရှိ deployment ပုံစံသည် ရို�
 
 - `omniroute` replica ≥3 ခု အသုံးပြုနေပြီး provider rotation ကို Go process တစ်ခုတည်းတွင် ဗဟိုမှ စီမံလိုသည့်အခါ။
 - Replica အားလုံးမှ upstream-provider request များအတွက် တစ်နေရာတည်းတွင် audit/logging ပြုလုပ်နိုင်လိုသည့်အခါ။
-- OmniRoute replica များနှင့် သီးခြားလွတ်လပ်စွာ Tier-1 routing layer ကို horizontal scaling ပြုလုပ်လိုသည့်အခါ။
+- 67router replica များနှင့် သီးခြားလွတ်လပ်စွာ Tier-1 routing layer ကို horizontal scaling ပြုလုပ်လိုသည့်အခါ။
 
 **ထည့်သွင်းပေးသည့်အရာ-**
 

@@ -6,7 +6,7 @@
 
 ## Ievainojamību ziņošana
 
-Ja atklājat drošības ievainojamību OmniRoute, lūdzu, ziņojiet par to atbildīgi:
+Ja atklājat drošības ievainojamību 67router, lūdzu, ziņojiet par to atbildīgi:
 
 1. **NEVEIDOJIET** publisku GitHub problēmas pieteikumu
 2. Izmantojiet [GitHub drošības ieteikumus](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Pēc 3.8.59 nākamā versija ir **3.9.0**, ar kuru zarā
 
 ## Drošības arhitektūra
 
-OmniRoute īsteno daudzslāņu drošības modeli:
+67router īsteno daudzslāņu drošības modeli:
 
 ```
 Pieprasījums → CORS → Authz konveijers (klasificēt → politikas → ieviest)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Aizsargmehānismu ietvars
 
-OmniRoute ietver karsti pārlādējamu **aizsargmehānismu reģistru** (`src/lib/guardrails/`) ar 3 iebūvētiem aizsargmehānismiem, kas sakārtoti pēc prioritātes:
+67router ietver karsti pārlādējamu **aizsargmehānismu reģistru** (`src/lib/guardrails/`) ar 3 iebūvētiem aizsargmehānismiem, kas sakārtoti pēc prioritātes:
 
 | Aizsargmehānisms   | Prioritāte | Mērķis                                                                                                     |
 | ------------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |

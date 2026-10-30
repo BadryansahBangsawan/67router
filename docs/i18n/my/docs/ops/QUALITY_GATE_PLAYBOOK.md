@@ -4,7 +4,7 @@
 
 ---
 
-> **ဤစာတမ်းက ဘာလဲ။** OmniRoute ၏ quality-gate စနစ်ကို လုပ်ငန်းနယ်ပယ်၏ အကောင်းဆုံးလုပ်ထုံးလုပ်နည်းများနှင့်
+> **ဤစာတမ်းက ဘာလဲ။** 67router ၏ quality-gate စနစ်ကို လုပ်ငန်းနယ်ပယ်၏ အကောင်းဆုံးလုပ်ထုံးလုပ်နည်းများနှင့်
 > နှိုင်းယှဉ်ထားသော အကဲဖြတ်သုံးသပ်ချက်တစ်ခုဖြစ်ပြီး၊ **ထို့အပြင်** quality checkpoint အားလုံး၏ ပြည့်စုံသော
 > စာရင်းနှင့် တူညီသောစနစ်ကို မည်သည့် project တွင်မဆို အသုံးချနိုင်ရန် **tool နှင့်မသက်ဆိုင်သော ပုံတူပွားအစီအစဉ်**
 > တစ်ခုလည်း ပါဝင်သည်။ မှတ်ဉာဏ်အပေါ် အခြေခံထားခြင်းမဟုတ်ဘဲ အမှန်တကယ် repository အခြေအနေမှ 2026-06-16 တွင် ထုတ်လုပ်ထားသည်။
@@ -100,62 +100,62 @@
 
 ### 1. စတိုင်နှင့် ဖော်မတ်ချခြင်း (တစ်သမတ်တည်း ရလဒ်ထွက်ပြီး မြန်ဆန်သော)
 
-- **OmniRoute:** lint-staged မှတစ်ဆင့် Prettier + ESLint (pre-commit)၊ 2-spaces/double-quotes/100col။
+- **67router:** lint-staged မှတစ်ဆင့် Prettier + ESLint (pre-commit)၊ 2-spaces/double-quotes/100col။
 - **ယေဘုယျ:** အလိုအလျောက်ပြင်ဆင်နိုင်သော formatter တစ်ခု + linter တစ်ခုကို staged files များအတွက် pre-commit တွင် လည်ပတ်စေခြင်း။
 
 ### 2. အမျိုးအစားများ
 
-- **OmniRoute:** `typecheck:core` (မအောင်မြင်ပါက တားဆီးခြင်း) + `typecheck:noimplicit:core` (အကြံပြုချက်အဖြစ်) + `type-coverage` ratchet 92.17% + ဖိုင်တစ်ခုချင်းစီအလိုက် any-budget။
+- **67router:** `typecheck:core` (မအောင်မြင်ပါက တားဆီးခြင်း) + `typecheck:noimplicit:core` (အကြံပြုချက်အဖြစ်) + `type-coverage` ratchet 92.17% + ဖိုင်တစ်ခုချင်းစီအလိုက် any-budget။
 - **ယေဘုယျ:** CI တွင် တင်းကျပ်သော typecheck + နောက်ပြန်မဆုတ်စေရန် သတ်မှတ်ထားသော type-coverage မက်ထရစ် + ဖိုင်တစ်ခုချင်းစီအလိုက် `any`/escape-hatch ဘတ်ဂျက်။
 
 ### 3. စမ်းသပ်မှုများ (ပြင်းအား)
 
-- **OmniRoute:** ထပ်မနေသော runner 2 ခု (Node native + vitest)၊ shard 8 ခု၊ global coverage 60/60/60/60 + ratchet ~76% + **အရေးကြီး module များအတွက် module တစ်ခုချင်းစီအလိုက် အနိမ့်ဆုံးသတ်မှတ်ချက် 8 ခု** + ညစဉ် property tests + ညစဉ် **mutation testing**။
+- **67router:** ထပ်မနေသော runner 2 ခု (Node native + vitest)၊ shard 8 ခု၊ global coverage 60/60/60/60 + ratchet ~76% + **အရေးကြီး module များအတွက် module တစ်ခုချင်းစီအလိုက် အနိမ့်ဆုံးသတ်မှတ်ချက် 8 ခု** + ညစဉ် property tests + ညစဉ် **mutation testing**။
 - **ယေဘုယျ:** test runner များ + **အတိအကျသတ်မှတ်ထားသော** coverage အနိမ့်ဆုံးတန်ဖိုး (သုညဖြစ်ခြင်းကို ကာကွယ်ရန်) + coverage **ratchet** (နောက်ပြန်ဆုတ်ခြင်းကို ကာကွယ်ရန်) + **အန္တရာယ်မြင့် code အတွက် module တစ်ခုချင်းစီအလိုက် အနိမ့်ဆုံးသတ်မှတ်ချက်များ** (Goodhart ပြဿနာကို ကာကွယ်ရန်) + pure logic အတွက် property-based စမ်းသပ်မှု + စမ်းသပ်မှုအရည်အသွေး၏ အမှန်တကယ်တိုင်းတာချက်အဖြစ် ညစဉ် **mutation testing**။
 
 ### 4. စမ်းသပ်မှု မူဝါဒ (စနစ်ကို လှည့်စားခြင်းမှ ကာကွယ်ရန်)
 
-- **OmniRoute:** `pr-test-policy` (production code တွင် test တစ်ခု လိုအပ်သည်)၊ `check-test-masking` (အားပျော့အောင်လုပ်ထားသော assert များကို ပိတ်ပင်သည်)၊ `pr-evidence` (အောင်မြင်ကြောင်း အခိုင်အမာဆိုပါက အထောက်အထား block လိုအပ်သည်)၊ `test-discovery` (test တိုင်းကို runner တစ်ခုက စုဆောင်းထားကြောင်း သေချာစေသည်)။
+- **67router:** `pr-test-policy` (production code တွင် test တစ်ခု လိုအပ်သည်)၊ `check-test-masking` (အားပျော့အောင်လုပ်ထားသော assert များကို ပိတ်ပင်သည်)၊ `pr-evidence` (အောင်မြင်ကြောင်း အခိုင်အမာဆိုပါက အထောက်အထား block လိုအပ်သည်)၊ `test-discovery` (test တိုင်းကို runner တစ်ခုက စုဆောင်းထားကြောင်း သေချာစေသည်)။
 - **ယေဘုယျ:** "code အသစ် ⇒ test အသစ်" gate + ဖယ်ရှားထားသော assert/အမြဲမှန်နေသော စစ်ဆေးချက် detector + အထောက်အထားလိုအပ်ချက် (TDD သို့မဟုတ် လက်ရှိအခြေအနေကို ထင်ဟပ်သည့် test) + မည်သည့် test မျှ glob များ၏ ပြင်ပတွင် ကျန်ရစ်မနေကြောင်း အာမခံချက်။
 
 ### 5. ရှုပ်ထွေးမှုနှင့် code ကျန်းမာရေး (ratchet များ)
 
-- **OmniRoute:** ESLint-warnings (3769↓)၊ jscpd duplication (5.72%↓)၊ cyclomatic+max-lines complexity (1800↓)၊ cognitive complexity sonarjs (753↓)၊ dead-code/unused-exports knip (339↓)၊ ဖိုင်တစ်ခုချင်းစီအလိုက် file-size (လက်ရှိတန်ဖိုးတွင် ထိန်းထားပြီး လျှော့ချမှုသာ ခွင့်ပြုသည်)၊ circular-deps (စိတ်ကြိုက် Tarjan၊ မအောင်မြင်ပါက တားဆီးခြင်း)။
+- **67router:** ESLint-warnings (3769↓)၊ jscpd duplication (5.72%↓)၊ cyclomatic+max-lines complexity (1800↓)၊ cognitive complexity sonarjs (753↓)၊ dead-code/unused-exports knip (339↓)၊ ဖိုင်တစ်ခုချင်းစီအလိုက် file-size (လက်ရှိတန်ဖိုးတွင် ထိန်းထားပြီး လျှော့ချမှုသာ ခွင့်ပြုသည်)၊ circular-deps (စိတ်ကြိုက် Tarjan၊ မအောင်မြင်ပါက တားဆီးခြင်း)။
 - **ယေဘုယျ:** ကျန်းမာရေးမက်ထရစ်တိုင်းကို ratchet ပြုလုပ်ခြင်း (warnings၊ duplication၊ cyclomatic **နှင့်** cognitive complexity၊ dead code၊ file size၊ import cycles)။ ဦးတည်ချက်သည် အမြဲတမ်း "နောက်ပြန်မဆုတ်ရန်" ဖြစ်သည်။
 
 ### 6. Static security (SAST + secrets)
 
-- **OmniRoute:** CodeQL (ratchet alerts = 0)၊ gitleaks (`[extend] useDefault=true` — အလွန်အရေးကြီးသည်!)၊ SonarQube၊ စိတ်ကြိုက် security rules (public-creds၊ error-helper၊ route-guard-membership၊ route-validation)။
+- **67router:** CodeQL (ratchet alerts = 0)၊ gitleaks (`[extend] useDefault=true` — အလွန်အရေးကြီးသည်!)၊ SonarQube၊ စိတ်ကြိုက် security rules (public-creds၊ error-helper၊ route-guard-membership၊ route-validation)။
 - **ယေဘုယျ:** alert ratchet ပါသော SAST (CodeQL/Sonar/semgrep) + **မူလ ruleset ကို အမွေဆက်ခံအသုံးပြုသည့်** secrets scanner (မူလသတ်မှတ်ချက်ကို override လုပ်သော စိတ်ကြိုက် config သည် စစ်ဆေးမှုကွက်လပ် ဖြစ်စေသည်) + project အလိုက် သီးခြား Hard Rule security gates။
 
 ### 7. Supply-chain (dependencies)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA)၊ license-checker (SPDX allowlist)၊ lockfile-lint (HTTPS+sha512+registry)၊ `check-deps` anti-slopsquatting (allowlist + age ≥72h)။
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA)၊ license-checker (SPDX allowlist)၊ lockfile-lint (HTTPS+sha512+registry)၊ `check-deps` anti-slopsquatting (allowlist + age ≥72h)။
 - **ယေဘုယျ:** ရင်းမြစ်မျိုးစုံမှ SCA + license allowlist + lockfile integrity စစ်ဆေးမှု + အသက်နှင့် typosquatting စစ်ဆေးမှုပါသော dependency allowlist + update များကို အုပ်စုဖွဲ့ဆောင်ရွက်သည့် bot။
 
 ### 8. Supply-chain (build နှင့် release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft)၊ SLSA provenance (`--provenance`)၊ OpenSSF Scorecard (အပတ်စဉ်)၊ workflow hardening (zizmor: artipacked→`persist-credentials:false`၊ cache-poisoning၊ token-permissions)။
+- **67router:** SBOM (CycloneDX + syft)၊ SLSA provenance (`--provenance`)၊ OpenSSF Scorecard (အပတ်စဉ်)၊ workflow hardening (zizmor: artipacked→`persist-credentials:false`၊ cache-poisoning၊ token-permissions)။
 - **ယေဘုယျ:** publish လုပ်သည့်အခါ SBOM ထုတ်လုပ်ခြင်း + လက်မှတ်ထိုးထားသော provenance (SLSA L2+) + အချိန်ဇယားဖြင့် လည်ပတ်သော Scorecard + workflow အားလုံးကို လုံခြုံအောင် တင်းကျပ်ခြင်း (အနည်းဆုံးလိုအပ်သည့် အခွင့်အရေးသာရှိသော token များ၊ push မလုပ်မည့် checkout တွင် credentials များကို မသိမ်းဆည်းခြင်း၊ actions များကို SHA ဖြင့် pin လုပ်ခြင်း)။
 
 ### 9. Contracts နှင့် API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI)၊ schemathesis (ညစဉ် contract fuzz)၊ openapi-coverage (မှတ်တမ်းတင်ထားသော route ရာခိုင်နှုန်း၊ ratchet 38.3%)၊ openapi-security-tiers (spec နှင့် route-guard နှိုင်းယှဉ်မှု)။
+- **67router:** oasdiff (breaking-change OpenAPI)၊ schemathesis (ညစဉ် contract fuzz)၊ openapi-coverage (မှတ်တမ်းတင်ထားသော route ရာခိုင်နှုန်း၊ ratchet 38.3%)၊ openapi-security-tiers (spec နှင့် route-guard နှိုင်းယှဉ်မှု)။
 - **ယေဘုယျ:** breaking-change contract diff (oasdiff/buf) + spec ကို အခြေခံသော property-based fuzz (schemathesis) + နောက်ပြန်မဆုတ်စေရန် သတ်မှတ်ထားသော documentation coverage + spec↔code တစ်သမတ်တည်းဖြစ်မှု။
 
 ### 10. Docs နှင့် i18n (ဆွေးမြေ့ပျက်စီးမှုမှ ကာကွယ်ရန်)
 
-- **OmniRoute:** docs-sync (ပုံတူထားသော version များ)၊ docs-counts-sync (docs နှင့် code ရှိ ကိန်းဂဏန်းများ)၊ env-doc-sync၊ doc-links၊ fabricated-docs၊ cli-i18n၊ i18n-ui-coverage (`--threshold=65` + ratchet 80.1%)။
+- **67router:** docs-sync (ပုံတူထားသော version များ)၊ docs-counts-sync (docs နှင့် code ရှိ ကိန်းဂဏန်းများ)၊ env-doc-sync၊ doc-links၊ fabricated-docs၊ cli-i18n၊ i18n-ui-coverage (`--threshold=65` + ratchet 80.1%)။
 - **ယေဘုယျ:** docs နှင့် code အကြား version/count/env-vars များကို တစ်ပြေးညီဖြစ်အောင် sync လုပ်ခြင်း (ယုံကြည်ရုံမဟုတ်ဘဲ gate ဖြင့် စစ်ဆေးခြင်း) + internal links များကို အတည်ပြုစစ်ဆေးခြင်း + နောက်ပြန်မဆုတ်စေရန် သတ်မှတ်ထားသော i18n coverage။
 
 ### 11. ဖန်တီးထင်ယောင်မှုကို ကာကွယ်ခြင်း / တစ်သမတ်တည်းဖြစ်မှု (တွေ့ရခဲသော အမျိုးအစား)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ အမှန်တကယ်တည်ရှိသော symbol)၊ provider-consistency၊ fetch-targets (client fetch ⇒ အမှန်တကယ်တည်ရှိသော route)၊ docs-symbols၊ db-rules (Hard Rules #2/#5)၊ migration-numbering။
+- **67router:** known-symbols (string dispatch ⇒ အမှန်တကယ်တည်ရှိသော symbol)၊ provider-consistency၊ fetch-targets (client fetch ⇒ အမှန်တကယ်တည်ရှိသော route)၊ docs-symbols၊ db-rules (Hard Rules #2/#5)၊ migration-numbering။
 - **ယေဘုယျ:** "ပုံတူဖြစ်နေသော source of truth" တိုင်းအတွက် (registry၊ string dispatch၊ layer များအကြား အပြန်အလှန်ရည်ညွှန်းချက်များ) နှစ်ဖက်လုံး ကိုက်ညီကြောင်း သက်သေပြသည့် gate တစ်ခု ထားရှိခြင်း။ ၎င်းသည် typecheck/test တို့ မဖမ်းမိသော ဆွေးမြေ့ပျက်စီးမှုများကို ဖမ်းယူနိုင်သည်။
 
 ### 12. ကြံ့ခိုင်ခံနိုင်ရည်နှင့် domain (product အလိုက် သီးခြား)
 
-- **OmniRoute:** chaos (fault-injection)၊ heap-growth (leak)၊ k6 (soak)၊ promptfoo+garak (LLM red-team OWASP LLM Top 10)၊ resilience law 3 ခု (circuit-breaker/cooldown/lockout)။
+- **67router:** chaos (fault-injection)၊ heap-growth (leak)၊ k6 (soak)၊ promptfoo+garak (LLM red-team OWASP LLM Top 10)၊ resilience law 3 ခု (circuit-breaker/cooldown/lockout)။
 - **ယေဘုယျ:** **သင့်** domain ၏ ပျက်ကွက်နိုင်သည့် ပုံစံများကို ဖော်ထုတ်ပြီး တစ်ခုချင်းစီအတွက် gate တစ်ခု (ညစဉ်သာ လည်ပတ်သည်ဖြစ်စေ) ထားရှိပါ။ AI app များအတွက် injection red-team ပြုလုပ်ပါ။ Distributed system များအတွက် chaos + leak + soak ပြုလုပ်ပါ။
 
 ---

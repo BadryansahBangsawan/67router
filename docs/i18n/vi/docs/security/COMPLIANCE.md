@@ -7,7 +7,7 @@
 > **Nguồn chính xác:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute ghi lại các thao tác quản trị, sự kiện xác thực, thay đổi trong vòng đời thông tin xác thực của nhà cung cấp và các lần gọi công cụ MCP vào các bảng kiểm toán được SQLite hỗ trợ. Trang này trình bày những nội dung được ghi nhật ký, nơi lưu trữ, thời gian lưu giữ, cách các khóa API có thể chọn không tham gia và cách truy vấn dữ liệu.
+67router ghi lại các thao tác quản trị, sự kiện xác thực, thay đổi trong vòng đời thông tin xác thực của nhà cung cấp và các lần gọi công cụ MCP vào các bảng kiểm toán được SQLite hỗ trợ. Trang này trình bày những nội dung được ghi nhật ký, nơi lưu trữ, thời gian lưu giữ, cách các khóa API có thể chọn không tham gia và cách truy vấn dữ liệu.
 
 Phần triển khai nằm trong `src/lib/compliance/index.ts` (T-43 — "Kiểm soát tuân thủ") và `src/lib/compliance/providerAudit.ts`. Các thao tác ghi kiểm toán không bao giờ ném ngoại lệ: khi xảy ra bất kỳ lỗi nào, lệnh gọi sẽ bị bỏ qua một cách âm thầm để việc ghi nhật ký kiểm toán không làm gián đoạn luồng yêu cầu chính.
 

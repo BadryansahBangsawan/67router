@@ -4,7 +4,7 @@
 
 ---
 
-> **Pe scurt**: motorul de compresie OmniRoute este **extensibil** — puteți înregistra motoare personalizate, distribui pachete lingvistice pentru limbi noi și compune fluxuri de procesare suprapuse. Acest ghid vă arată cum.
+> **Pe scurt**: motorul de compresie 67router este **extensibil** — puteți înregistra motoare personalizate, distribui pachete lingvistice pentru limbi noi și compune fluxuri de procesare suprapuse. Acest ghid vă arată cum.
 
 **Ghiduri conexe:**
 
@@ -232,7 +232,7 @@ export default definePlugin({
 
 ## Crearea pachetelor lingvistice
 
-Compresia în stil Caveman folosește **pachete de reguli specifice limbii** pentru a gestiona cuvintele de umplutură, exprimările ezitante și tiparele prolixe din fiecare limbă naturală. OmniRoute este livrat cu **6 pachete lingvistice**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Compresia în stil Caveman folosește **pachete de reguli specifice limbii** pentru a gestiona cuvintele de umplutură, exprimările ezitante și tiparele prolixe din fiecare limbă naturală. 67router este livrat cu **6 pachete lingvistice**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Structura pachetului
 
@@ -391,7 +391,7 @@ Ieșirea motorului N devine intrarea motorului N+1.
 
 ### Moduri de comprimare
 
-OmniRoute selectează **UN SINGUR mod pentru fiecare cerere**, pe baza configurației, a pragurilor de declanșare automată și a suprascrierilor combinațiilor.
+67router selectează **UN SINGUR mod pentru fiecare cerere**, pe baza configurației, a pragurilor de declanșare automată și a suprascrierilor combinațiilor.
 Modurile disponibile sunt definite în `open-sse/services/compression/types.ts` (tipul `CompressionMode`):
 
 | Mod          | Motoare               | Caz de utilizare                                                                                                                                                                                        |
@@ -511,11 +511,11 @@ Pentru a-l controla din configurație, setați `mode: "stacked"` și furnizați 
 
 ## Politica de sincronizare cu proiectele upstream
 
-Motoarele de compresie OmniRoute menționează mai multe proiecte upstream în README
+Motoarele de compresie 67router menționează mai multe proiecte upstream în README
 („inspirat de RTK, Caveman, LLMLingua-2, Troglodita”). O întrebare frecventă din
 partea contribuitorilor este: **atunci când RTK adaugă upstream un filtru nou pentru
 un instrument sau Caveman adaugă un pachet de reguli, cum ajunge acesta în
-OmniRoute?** Această secțiune oferă răspunsul oficial.
+67router?** Această secțiune oferă răspunsul oficial.
 
 ### Copii incluse în sursă vs. implementări independente
 
@@ -537,7 +537,7 @@ Nu există **nicio urmărire automatizată a versiunilor upstream și nicio etic
 `compression-sync`** — în mod intenționat. Deoarece motoarele sunt reimplementări,
 un filtru RTK sau un pachet de reguli Caveman din upstream nu este integrat sub
 formă de cod; acesta este **reexprimat ca o regulă/un filtru nou în formatul propriu
-OmniRoute** (consultați
+67router** (consultați
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) și este adăugat ad-hoc
 printr-un PR obișnuit. Punctele de extensie de mai sus (motor personalizat, pachet
 lingvistic, filtru RTK) reprezintă modalitățile aprobate de a contribui cu unul.
@@ -551,7 +551,7 @@ Exemple recente ale acestui flux exact:
 ### Headroom (proxy pentru compresia intrărilor)
 
 Headroom este **complet intern** — un instantaneu fixat al codecului `gcf`, inclus
-în sursă, plus straturile proprii OmniRoute `smartcrusher` / `toon` / `tabular`.
+în sursă, plus straturile proprii 67router `smartcrusher` / `toon` / `tabular`.
 Nu există niciun proiect upstream activ de urmărit în afara copiei incluse în
 sursă; actualizările pentru `gcf` sunt preluate manual atunci când codecul se
 modifică și sunt revalidate în raport cu poarta pentru bugetul de compresie
@@ -560,7 +560,7 @@ modifică și sunt revalidate în raport cu poarta pentru bugetul de compresie
 ### Propunerea unei îmbunătățiri inspirate de upstream
 
 1. **Nu includeți codul upstream în sursă** — reexprimați regula/filtrul upstream
-   în formatul OmniRoute.
+   în formatul 67router.
 2. Adăugați-l prin punctul de extensie corespunzător de mai jos (pachet lingvistic,
    filtru RTK sau motor personalizat).
 3. Menționați proiectul upstream în descrierea PR-ului (atribuire), fără a copia

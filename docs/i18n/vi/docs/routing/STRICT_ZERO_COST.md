@@ -31,7 +31,7 @@ chính xác hai bước kiểm tra này, được đánh giá theo từng ứng 
 ngay sau `filterPaidOnlyCandidates`):
 
 1. **Hoàn toàn không có trong `FREE_MODEL_BUDGETS`** → bị loại. Điều này bao gồm các mô hình thực sự
-   có tính phí và mọi nhà cung cấp/mô hình mà OmniRoute chưa phân loại — các ứng viên mới mặc định
+   có tính phí và mọi nhà cung cấp/mô hình mà 67router chưa phân loại — các ứng viên mới mặc định
    bị loại, không được đưa vào.
 2. **`freeType: "keyless"`** → được chấp nhận ngay lập tức, **nhưng chỉ đối với ứng viên thực sự
    đến từ luồng không xác thực** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -89,7 +89,7 @@ không bao giờ là một tài khoản khác, chưa được xác minh, trên c
 (các trường hợp bỏ qua không dùng khóa A/B/C, các trường hợp nhiều tài khoản 1-5).
 
 `được tự động phát hiện`: một nhà cung cấp/mô hình được phát hành vào ngày mai với siêu dữ liệu phù hợp (có trong
-danh mục, có bộ điều hợp mức sử dụng, `hardStopGuaranteed: true`) sẽ có thể sử dụng ngay khi OmniRoute biết
+danh mục, có bộ điều hợp mức sử dụng, `hardStopGuaranteed: true`) sẽ có thể sử dụng ngay khi 67router biết
 đến nó — không cần thay đổi mã, không cần mục nhập trong danh sách trắng, không cần chỉnh sửa gì trong mô-đun này. Một mục bị xóa khỏi
 danh mục cũng sẽ biến mất theo cách tương tự. Xem
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` để biết bằng chứng hồi quy (thông qua

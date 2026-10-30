@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Последње ажурирање:** 2026-06-28 — v3.8.40
 
-OmniRoute се испоручује са системом додатака налик WordPress-овом. Додаци су
+67router се испоручује са системом додатака налик WordPress-овом. Додаци су
 самостални директоријуми — сваки са манифестом `plugin.json` и улазном датотеком —
 који се повезују са током обраде захтева (`onRequest` / `onResponse` / `onError`)
 и догађајима животног циклуса (`onInstall` / `onActivate` / `onDeactivate` /
@@ -154,7 +154,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Директоријум додатака
 
-Додаци се налазе у OmniRoute директоријуму података:
+Додаци се налазе у 67router директоријуму података:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -216,7 +216,7 @@ Objektile `upstreamDetails` rakendatavad puhastusreeglid:
 3. Sügavuse piirang: üle nelja taseme ulatuv pesastus asendatakse stringiga `"[truncated]"`.
 4. Massiivid on piiratud 32 elemendiga.
 
-Ainult parsitud teenusepakkuja veavastuse kehaga väljakutsed peaksid edastama argumendi `upstreamDetails`. OmniRoute'i
+Ainult parsitud teenusepakkuja veavastuse kehaga väljakutsed peaksid edastama argumendi `upstreamDetails`. 67router'i
 sisemised vead (SSE parsingu nurjumised, tühi sisu, kaitsemehhanismi blokeeringud) ei tohi seda sisaldada.
 
 ÄRGE edastage töötlemata väärtust `err.stack`, `err.message` ega ühtegi käitusaegse erandi stringi argumendile
@@ -227,7 +227,7 @@ Valikuline ülesvoolu 4xx-vastuste edastamine säilitab teenusepakkuja turvalise
 kliendi automaatne taastumine vajab, kuid see pole bait-baidilt edastamine: rekursiivne puhastaja käivitatakse alati
 enne serialiseerimist. Tsüklilised, BigInt-väärtusi sisaldavad või vaenuliku `toJSON()`-iga vastusekehad tõrjutakse
 turvaliselt ega sobi edastamiseks. OCR ja modereerimine rakendavad sama reeglit; mitte-JSON-vormingus, tühjad või
-valesti märgistatud ülesvoolu vastusekehad teisendatakse OmniRoute'i kanooniliseks JSON-veaümbriseks.
+valesti märgistatud ülesvoolu vastusekehad teisendatakse 67router'i kanooniliseks JSON-veaümbriseks.
 
 ## Teadaolev CodeQL-i piirang: kohandatud puhastusfunktsioone ei tuvastata
 

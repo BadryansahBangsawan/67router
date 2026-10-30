@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute tömörítése motorkontraktusokra épül. Egy mód futtathat közvetlenül egy motort
+A 67router tömörítése motorkontraktusokra épül. Egy mód futtathat közvetlenül egy motort
 (`caveman` vagy `rtk`), illetve egy determinisztikus, egymásra épülő feldolgozási folyamatot, amely több motort hajt végre sorrendben.
 
 ## Módok
@@ -44,9 +44,9 @@ maximumra emeli, és a rendszert, az eszközsémákat és az eszközeredményeke
 legbiztonságosabb profil helyett.
 
 A csomag a saját modell hatókörét és profilját a környezeti konfigurációjából oldja fel.
-Az OmniRoute soha nem delegálja a döntést: az adapter a modellkaput a csomag legszigorúbb
+A 67router soha nem delegálja a döntést: az adapter a modellkaput a csomag legszigorúbb
 hatóköréhez rögzíti, így a gazdakörnyezet beállításai csak szűkíthetik az engedélyezési
-listát, soha nem szélesíthetik azt az OmniRoute által mért nyugtákon túl.
+listát, soha nem szélesíthetik azt a 67router által mért nyugtákon túl.
 
 ## Motorregiszter
 
@@ -111,7 +111,7 @@ A Caveman mód a normál próza szemantikai tömörítésére összpontosít:
 A vezérlőpult felülete: `Dashboard -> Context & Cache -> Caveman`.
 
 A Caveman upstream jelentése szerint a kimeneti tokenek száma `~75%`-kal alacsonyabb, a benchmarkokban az átlagos kimeneti megtakarítás `65%`,
-`22-87%` közötti tartománnyal, a bemenettömörítés pedig `~46%`. Az OmniRoute a Caveman bemeneti
+`22-87%` közötti tartománnyal, a bemenettömörítés pedig `~46%`. A 67router a Caveman bemeneti
 értékét használja a halmozott prompt-/kontextusmegtakarítások dokumentálásakor; a Caveman kimeneti mód továbbra is különálló,
 a válasz viselkedését befolyásoló funkció.
 

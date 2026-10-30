@@ -4,7 +4,7 @@
 
 ---
 
-Ntuziaka a na-akọwa otu esi etinye akaụntụ Kiro (onye enyemaka ide koodu AI nke AWS na-akwado) na OmniRoute,
+Ntuziaka a na-akọwa otu esi etinye akaụntụ Kiro (onye enyemaka ide koodu AI nke AWS na-akwado) na 67router,
 na-elekwasị anya n’iji ọtụtụ akaụntụ n’otu oge na-enweghị esemokwu nnọkọ.
 
 ---
@@ -22,10 +22,10 @@ akaụntụ mbụ.
 
 ---
 
-## Otu OmniRoute Si Edozi Nke A (v3.8.0+)
+## Otu 67router Si Edozi Nke A (v3.8.0+)
 
-Malite na v3.8.0, OmniRoute na-akpọ `registerClient()` (AWS SSO OIDC) n’oge mbubata
-njikọ Kiro ọ bụla. Nke a na-enye njikọ OmniRoute ọ bụla ndebanye OIDC
+Malite na v3.8.0, 67router na-akpọ `registerClient()` (AWS SSO OIDC) n’oge mbubata
+njikọ Kiro ọ bụla. Nke a na-enye njikọ 67router ọ bụla ndebanye OIDC
 client nke ya. Ebe ndebanye client ọ bụla nọọrọ onwe ya, imegharị ma ọ bụ
 ime nkwenye njirimara ọzọ n’otu akaụntụ anaghị emetụta refresh token nke akaụntụ ọzọ.
 
@@ -59,7 +59,7 @@ enweta ndebanye client nke ha na-akpaghị aka.
 
 ### Ihe Ndị Dị Mkpa Tupu Amalite
 
-- OmniRoute v3.8.0 ma ọ bụ nke ka ọhụrụ.
+- 67router v3.8.0 ma ọ bụ nke ka ọhụrụ.
 - Akaụntụ Kiro na-arụ ọrụ (email + okwuntughe, Google, ma ọ bụ nbanye GitHub).
 - Akaụntụ Kiro nke abụọ ma ọ bụrụ na ịchọrọ.
 
@@ -70,7 +70,7 @@ enweta ndebanye client nke ha na-akpaghị aka.
    - **Import Token** — mado refresh token nke na-amalite na `aorAAAAAG`.
    - **API Key** — mado API key Kiro / CodeWhisperer na-adịte aka.
    - **Nbanye Google / GitHub** — mezue usoro OAuth na ihe nchọgharị.
-   - **Auto-Import** — pịa bọtịnụ ahụ; OmniRoute ga-agụ nzere site na
+   - **Auto-Import** — pịa bọtịnụ ahụ; 67router ga-agụ nzere site na
      nchekwa data kiro-cli dị na mpaghara ma ọ bụ `~/.aws/sso/cache`.
 3. A na-echekwa njikọ ahụ. Usoro refresh-token na-edebanye OIDC
    client pụrụ iche na-akpaghị aka. Usoro API-key na-eji AWS enyocha igodo ahụ ma ha anaghị echekwa refresh token.
@@ -127,7 +127,7 @@ eji OAuth refresh, ya mere ọ na-ezere imebi nnọkọ OIDC ndị a na-ekekọr
 2. Họrọ **API Key**.
 3. Tapawa igodo API ahụ ma họrọ mpaghara AWS: **Auto-detect** (ndabara), **US East
    (N. Virginia)** ma ọ bụ **Europe (Frankfurt)**.
-4. OmniRoute na-enyocha igodo ahụ ma chekwaa njikọ ahụ ka ọ dabere n'ógbè ebe
+4. 67router na-enyocha igodo ahụ ma chekwaa njikọ ahụ ka ọ dabere n'ógbè ebe
    igodo ahụ na-arụ ọrụ.
 
 ### API
@@ -177,7 +177,7 @@ na `https://q.<region>.amazonaws.com/generateAssistantResponse` — tinyere `us-
 ## Mmebi Oge nke OIDC Client
 
 Ndị client ọha nke AWS SSO OIDC na-emebikarị mgbe ụbọchị 90 gachara
-(`clientSecretExpiresAt`). OmniRoute na-echekwa timestamp a na `providerSpecificData`
+(`clientSecretExpiresAt`). 67router na-echekwa timestamp a na `providerSpecificData`
 maka nlekọta. Ọ bụrụ na njikọ akwụsị imelite mgbe ihe dị ka ụbọchị 90 gachara, bubata
 njikọ ahụ ọzọ iji nweta ndebanye OIDC client ọhụrụ. A na-edekọ ndebanye ọhụrụ akpaka
 mgbe oge gwụsịrị dịka mmelite a ga-eme n'ọdịnihu.
@@ -198,7 +198,7 @@ site na AWS SSO OIDC.
 ### Mbubata dara na "Nnyocha token dara"
 
 - Gbaa mbọ hụ na refresh token ahụ na-amalite na `aorAAAAAG`.
-- Gbaa mbọ hụ na OmniRoute nwere ike iru `https://oidc.us-east-1.amazonaws.com` (ma ọ bụ mpaghara
+- Gbaa mbọ hụ na 67router nwere ike iru `https://oidc.us-east-1.amazonaws.com` (ma ọ bụ mpaghara
   ahaziri). Ọ bụrụ na ị nọ n'azụ proxy ụlọ ọrụ, tọọ proxy ọkwa provider na
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ site na AWS SSO OIDC.
 
 - Gosi na key ahụ bụ API key Kiro / CodeWhisperer, ọ bụghị refresh token.
 - Gosi na mpaghara AWS dabara na key/akaụntụ ahụ. `us-east-1` bụ ndabara.
-- Key ahụ ga-enwerịrị ike ịkpọ `ListAvailableProfiles`; ma ọ bụghị ya, OmniRoute agaghị enwe ike
+- Key ahụ ga-enwerịrị ike ịkpọ `ListAvailableProfiles`; ma ọ bụghị ya, 67router agaghị enwe ike
   ịchọpụta `profileArn` achọrọ.
 
 Maka nsogbu ndị ọzọ, lee [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) bụ isi.

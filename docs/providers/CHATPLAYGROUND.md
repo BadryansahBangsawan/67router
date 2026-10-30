@@ -6,20 +6,20 @@ lastUpdated: 2026-10-11
 
 # ChatPlayground Provider Integration
 
-OmniRoute supports **ChatPlayground** (`chatplayground`, alias `cpl`), allowing access to diverse model endpoints (Azure, LMSYS, and Perplexity) routed through ChatPlayground with automated Clerk session JWT minting and model discovery.
+67router supports **ChatPlayground** (`chatplayground`, alias `cpl`), allowing access to diverse model endpoints (Azure, LMSYS, and Perplexity) routed through ChatPlayground with automated Clerk session JWT minting and model discovery.
 
 ---
 
 ## Authentication & Cookie Setup
 
-ChatPlayground requires short-lived Clerk session JWTs (`Authorization: Bearer <jwt>`) for all API requests. OmniRoute handles the entire token lifecycle automatically via browserless auto-minting.
+ChatPlayground requires short-lived Clerk session JWTs (`Authorization: Bearer <jwt>`) for all API requests. 67router handles the entire token lifecycle automatically via browserless auto-minting.
 
 ### Required Cookies
 
 To configure a ChatPlayground connection, you only need **two cookies**, both obtainable directly from **`web.chatplayground.ai`** (you do **not** need to inspect `clerk.chatplayground.ai` separately):
 
 1. **`__client`**: Long-lived Clerk client authorization token.
-2. **`__session`**: A Clerk JWT (`eyJhbGciOi...`). OmniRoute automatically decodes its payload to extract your active session ID (`sid: "sess_..."`).
+2. **`__session`**: A Clerk JWT (`eyJhbGciOi...`). 67router automatically decodes its payload to extract your active session ID (`sid: "sess_..."`).
 
 ### How to Capture Your Cookies
 
@@ -33,13 +33,13 @@ To configure a ChatPlayground connection, you only need **two cookies**, both ob
 - Refresh the page or click any action (e.g. model picker or settings).
 - Click on any request sent to `web.chatplayground.ai` or `app.chatplayground.ai` (such as `models` or `user`).
 - In the right-hand panel, go to **Headers** → **Request Headers**.
-- Copy the entire value of the **`Cookie:`** header and paste it into OmniRoute's connection credential field. OmniRoute automatically extracts `__client` and `__session`.
+- Copy the entire value of the **`Cookie:`** header and paste it into 67router's connection credential field. 67router automatically extracts `__client` and `__session`.
 
 #### Method B (Application Tab)
 
 - In DevTools, go to **Application** (Chrome/Edge) or **Storage** (Firefox) → **Cookies** → `https://web.chatplayground.ai`.
 - Copy the values for `__client` and `__session`.
-- Paste them into OmniRoute formatted as:
+- Paste them into 67router formatted as:
   ```text
   __client=<value>; __session=<value>
   ```
@@ -49,17 +49,17 @@ To configure a ChatPlayground connection, you only need **two cookies**, both ob
 ## Token Minting & Rotation Lifecycle
 
 1. **Auto-Minting**:
-   - OmniRoute extracts `sid` from `__session` and posts to Clerk's token mint endpoint (`https://clerk.chatplayground.ai/v1/client/sessions/{sid}/tokens`) using `__client`.
+   - 67router extracts `sid` from `__session` and posts to Clerk's token mint endpoint (`https://clerk.chatplayground.ai/v1/client/sessions/{sid}/tokens`) using `__client`.
    - The returned short-lived Bearer JWT is cached in memory.
-   - OmniRoute decodes the JWT's `exp` claim and automatically mints a fresh token ~15 seconds before expiration.
+   - 67router decodes the JWT's `exp` claim and automatically mints a fresh token ~15 seconds before expiration.
 
 2. **Direct Bearer JWT**:
    - Alternatively, you can paste an active Clerk Bearer JWT directly.
 
-3. **Multi-Account Management (Native OmniRoute)**:
-   - To use multiple ChatPlayground accounts, add them as separate provider connections in the OmniRoute dashboard (e.g. `ChatPlayground 1`, `ChatPlayground 2`).
-   - OmniRoute's native Combo Router (`round-robin`, `priority`, `least-used`, `headroom`, `reset-aware`) automatically distributes queries across accounts.
-   - If an account encounters rate limits (429) or quota limits, OmniRoute's automated account fallback system (`open-sse/services/accountFallback.ts`) switches to the next healthy account transparently.
+3. **Multi-Account Management (Native 67router)**:
+   - To use multiple ChatPlayground accounts, add them as separate provider connections in the 67router dashboard (e.g. `ChatPlayground 1`, `ChatPlayground 2`).
+   - 67router's native Combo Router (`round-robin`, `priority`, `least-used`, `headroom`, `reset-aware`) automatically distributes queries across accounts.
+   - If an account encounters rate limits (429) or quota limits, 67router's automated account fallback system (`open-sse/services/accountFallback.ts`) switches to the next healthy account transparently.
    - Each connection independently monitors its own usage, plan, and daily/monthly allowances on the dashboard Limits page.
 
 ---
@@ -136,7 +136,7 @@ While ChatPlayground's public marketing organizes models into "Basic" vs "Advanc
 
 ## Quota & Limits Dashboard
 
-OmniRoute automatically connects ChatPlayground to its Limits & Quotas dashboard:
+67router automatically connects ChatPlayground to its Limits & Quotas dashboard:
 
 - **Endpoint**: `GET https://app.chatplayground.ai/api/user` (authenticated via minted Clerk Bearer JWT).
 - **Unlimited Plan (Lifetime / Monthly $25)**: Tracked at **300 credits daily** under fair-use. Displays daily used queries (`user.dailyQueriesCount`), remaining allowance, percentage, and daily midnight UTC resets.
@@ -152,9 +152,9 @@ ChatPlayground enforces a strict server-side boundary of **15,000 characters per
 
 - If an individual message's `content` exceeds 15,000 characters (15,001+ characters), ChatPlayground's upstream API rejects the turn with `HTTP 400: "Message cannot exceed 15,000 characters"`.
 - This limit is evaluated per message turn in the conversation array, not as a total request payload size.
-- **Pre-Validation**: OmniRoute's `ChatPlaygroundExecutor` validates message character lengths before dispatch and surfaces an actionable error if any turn exceeds 15,000 characters.
+- **Pre-Validation**: 67router's `ChatPlaygroundExecutor` validates message character lengths before dispatch and surfaces an actionable error if any turn exceeds 15,000 characters.
 - **Mitigation Strategies**:
-  - Enable OmniRoute's prompt compression (e.g. `RTK` or `lite` mode) to condense large contexts, system instructions, and tool outputs.
+  - Enable 67router's prompt compression (e.g. `RTK` or `lite` mode) to condense large contexts, system instructions, and tool outputs.
   - Chunk or split large codebases, files, or multi-turn histories across separate prompts.
 
 ---
@@ -162,9 +162,9 @@ ChatPlayground enforces a strict server-side boundary of **15,000 characters per
 ## Streaming & Protocol Details
 
 - ChatPlayground streams chunks appending or containing sentinel tokens in the form of `CHAT_ID:[a-zA-Z0-9_-]+`.
-- OmniRoute's `ChatPlaygroundExecutor` strips these sentinel tokens on the fly and translates the output into OpenAI-standard Server-Sent Events (`data: {"choices":[{"delta":{"content":"..."}}]}\n\n`) terminating with `data: [DONE]\n\n`.
+- 67router's `ChatPlaygroundExecutor` strips these sentinel tokens on the fly and translates the output into OpenAI-standard Server-Sent Events (`data: {"choices":[{"delta":{"content":"..."}}]}\n\n`) terminating with `data: [DONE]\n\n`.
 - For non-streaming requests, a standard `chat.completion` response envelope is returned.
-- Upstream returns a complete response for Perplexity queries rather than incremental SSE chunks; when `stream: true` is requested on Perplexity queries, OmniRoute synthesizes standard SSE chunks so streaming OpenAI clients remain fully compatible.
+- Upstream returns a complete response for Perplexity queries rather than incremental SSE chunks; when `stream: true` is requested on Perplexity queries, 67router synthesizes standard SSE chunks so streaming OpenAI clients remain fully compatible.
 
 ---
 
@@ -173,7 +173,7 @@ ChatPlayground enforces a strict server-side boundary of **15,000 characters per
 ### 1. Tool Functions (Not Supported Upstream)
 
 - **Ignored by Upstream**: ChatPlayground's web backend does not support native function calling or tool execution. When an OpenAI-format `tools` parameter is passed, the upstream API returns HTTP 200, but models **ignore the tool definitions** and produce standard conversational text without generating structured `tool_calls`.
-- **Emulated Support**: Classified with `toolCalling: "emulated"` in `src/shared/constants/providers/web-cookie.ts`. If tool calling is required by an agentic client, OmniRoute handles it via prompt-based tool emulation.
+- **Emulated Support**: Classified with `toolCalling: "emulated"` in `src/shared/constants/providers/web-cookie.ts`. If tool calling is required by an agentic client, 67router handles it via prompt-based tool emulation.
 
 ### 2. Thinking & Reasoning Content
 
@@ -189,9 +189,9 @@ ChatPlayground (operated by Yaseen AI) includes specific restrictions in its Ter
 - **Section 11 (Excessive / Exploitative Usage)**: Strictly prohibits _"sharing of accounts among multiple individuals or bots"_ and _"running scripts to exploit the AI on Yaseen AI"_. Accounts violating these provisions may be suspended immediately without refund.
 - **Section 12 (Right to Terminate Usage Temporarily)**: Daily usage that exceeds **$10 in internal costs** triggers temporary suspension for that day, and usage exceeding **$80 in monthly internal costs** triggers termination for the remainder of the month.
 
-### OmniRoute Posture & Safety Recommendations
+### 67router Posture & Safety Recommendations
 
-- **Categorization**: ChatPlayground is explicitly classified as a web-session provider with `subscriptionRisk: true` and `riskNoticeVariant: "webCookie"`. The OmniRoute dashboard presents a risk notice modal upon setup.
+- **Categorization**: ChatPlayground is explicitly classified as a web-session provider with `subscriptionRisk: true` and `riskNoticeVariant: "webCookie"`. The 67router dashboard presents a risk notice modal upon setup.
 - **Single-User Workflows**: Do not share a single ChatPlayground session cookie across a public proxy or multi-user team. Use it for personal assistant/coding sessions.
 - **Stay Under Daily Budget**: Do not flood the provider with high-volume benchmarks or batch automation. The 300 queries/day fair-use cap helps stay safely below the internal $10/day cost threshold.
-- **Browser-Identical Headers**: OmniRoute automatically attaches standard desktop browser User-Agents, origins, and referrers (`https://web.chatplayground.ai/`) and removes internal `CHAT_ID` tokens to avoid unnecessary anomalies.
+- **Browser-Identical Headers**: 67router automatically attaches standard desktop browser User-Agents, origins, and referrers (`https://web.chatplayground.ai/`) and removes internal `CHAT_ID` tokens to avoid unnecessary anomalies.

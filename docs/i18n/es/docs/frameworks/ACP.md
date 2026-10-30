@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute separa el **descubrimiento de CLI**, el **Agent Client Protocol nativo** y
+67router separa el **descubrimiento de CLI**, el **Agent Client Protocol nativo** y
 los **adaptadores stdio heredados**. Encontrar un binario instalado no demuestra su
 autenticación, compatibilidad con el modelo ni disponibilidad para gestionar un prompt.
 

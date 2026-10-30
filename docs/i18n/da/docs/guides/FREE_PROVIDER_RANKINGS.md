@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: OmniRoute rangerer sine **gratis** udbydere efter modelkvalitet ved hjælp af **Arena AI
+> **Kort fortalt**: 67router rangerer sine **gratis** udbydere efter modelkvalitet ved hjælp af **Arena AI
 > (LMArena-lignende) ELO-scorer**. Åbn siden **Rangering af gratis udbydere** i
 > kontrolpanelet for at se, hvilke gratis udbydere der tilbyder de stærkeste modeller til din opgave —
 > samlet eller filtreret efter kategori (kodning, gennemgang, dokumentation, fejlfinding).
@@ -13,7 +13,7 @@
 
 ## Hvad det er
 
-OmniRoute registrerer 375 udbydere, herunder 155 katalogposter markeret som **gratis/uden-godkendelse**
+67router registrerer 375 udbydere, herunder 155 katalogposter markeret som **gratis/uden-godkendelse**
 (uden-godkendelse,
 OAuth på gratisniveau eller API-nøgle på gratisniveau — se
 [guiden til gratisniveauer](../getting-started/FREE-TIERS-GUIDE.md) og den fulde
@@ -129,9 +129,9 @@ og `code` — fra API'et til Arena AI-ranglisten
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Hver post på ranglisten
 indeholder et modelnavn, en leverandør, en ELO-`score`, et konfidensinterval og et antal stemmer.
 
-Ranglistekategorier knyttes til OmniRoute-opgavekategorier:
+Ranglistekategorier knyttes til 67router-opgavekategorier:
 
-| Arena-rangliste | OmniRoute-opgavekategorier                        |
+| Arena-rangliste | 67router-opgavekategorier                         |
 | --------------- | ------------------------------------------------- |
 | `text`          | `default`, `review`, `documentation`, `debugging` |
 | `code`          | `coding`                                          |
@@ -168,7 +168,7 @@ Synkroniseringen kører **som standard**:
 
 - Den kører én gang ved serverens opstart og derefter via en periodisk timer
   (`src/lib/arenaEloSync.ts`, forbundet fra `src/instrumentation-node.ts`).
-- Den er **ikke-blokerende og aldrig fatal** — hvis hentningen fra den eksterne tjeneste mislykkes, fortsætter OmniRoute
+- Den er **ikke-blokerende og aldrig fatal** — hvis hentningen fra den eksterne tjeneste mislykkes, fortsætter 67router
   med at køre, og ranglisterne viser blot de seneste gyldige data (eller en tom tilstand).
 
 To miljøvariabler styrer den (dokumenteret i
@@ -203,7 +203,7 @@ fleksibel matchning (`findMatchingIntelligence` i `src/lib/freeProviderRankings.
 3. Præfiksmatch (et modelnavn på ranglisten er et præfiks for register-id'et).
 
 På synkroniseringssiden fjernes kendte leverandørpræfikser (`anthropic/`, `openai/`, `google/`, …),
-og en lille aliasoversigt udvider kanoniske navne til de varianter, OmniRoute bruger
+og en lille aliasoversigt udvider kanoniske navne til de varianter, 67router bruger
 internt, så modeller fortsat kan findes under ethvert navn.
 
 ### Sådan rangeres en leverandør

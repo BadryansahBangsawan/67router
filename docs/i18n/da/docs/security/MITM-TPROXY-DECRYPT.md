@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY transparent dekryptering er OmniRoutes **5. capture-tilstand** til
+TPROXY transparent dekryptering er 67routers **5. capture-tilstand** til
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM-stak. Den opsnapper og **dekrypterer** lokal udgående HTTPS-trafik på Linux
 ved hjælp af kerne-TPROXY + policy-routing — **uden** at spoofe `/etc/hosts` og
@@ -54,7 +54,7 @@ Brug den, når du vil registrere og dekryptere trafik fra en proces, der:
 - du ikke ønsker at forstyrre med en systemdækkende proxyændring.
 
 Da opsnapningen sker i kernen, kræver den oprindelige proces **ingen
-konfigurationsændring** — men processen skal have tillid til den dynamiske CA, som OmniRoute
+konfigurationsændring** — men processen skal have tillid til den dynamiske CA, som 67router
 installerer (se [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -73,7 +73,7 @@ addon ikke bygget), returnerer addon-indlæseren (`src/mitm/tproxy/transparentSo
 `null` i stedet for at udløse en fejl. Status for capture-tilstanden rapporterer derefter
 `available: false`, dashboardets til/fra-knap er **deaktiveret** med værktøjstippet
 "TPROXY-dekryptering kræver Linux + root + det native addon", og resten af
-OmniRoute fortsætter med at fungere.
+67router fortsætter med at fungere.
 
 ---
 
@@ -264,7 +264,7 @@ Videresendelsesstien beskytter mod dette med en bypass-socketmarkering (**SO_MAR
 | **Fejlsanitering**                      | Rutens fejlsvar behandles af `sanitizeErrorMessage()` (ufravigelig regel nr. 12).                                                                                                                                                                                                                                                                                                                |
 
 **MITM-CA'en er en effektiv funktion med vidtrækkende beføjelser.** En CA, som operativsystemet har tillid til, og som kan signere enhver
-vært, betyder, at alt, hvad OmniRoute opfanger, kan dekrypteres. Den er beskyttet bag den
+vært, betyder, at alt, hvad 67router opfanger, kan dekrypteres. Den er beskyttet bag den
 eksplicitte TPROXY-opfangningstilstand, som kun er lokal og som standard er deaktiveret, og posten i
 tillidslageret fjernes, når du stopper tilstanden.
 
@@ -374,7 +374,7 @@ returnerer `available: false`, når addon'et mangler.
 ### Forældede firewallregler efter et nedbrud
 
 `revertTproxy()` er den præcise omvendte handling af anvendelsen og er idempotent. Når
-tilstanden stoppes, tilbageføres reglerne. Hvis OmniRoute blev afsluttet midt i en session,
+tilstanden stoppes, tilbageføres reglerne. Hvis 67router blev afsluttet midt i en session,
 skal du bruge AgentBridge-handlingen **Repair** (`POST /api/tools/agent-bridge/repair`) til
 at fortryde efterladt systemtilstand (DNS-spoofing, root-CA, systemproxy). TPROXY-reglerne
 for `mangle` og ruten ryddes også automatisk ved genstart.

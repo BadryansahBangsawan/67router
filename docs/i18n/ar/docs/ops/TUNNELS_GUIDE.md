@@ -7,7 +7,7 @@
 > **مصدر الحقيقة:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`، و`src/app/api/tunnels/`
 > **آخر تحديث:** 2026-06-28 — v3.8.40
 
-يمكن لـ OmniRoute إتاحة خادمه المحلي (`http://localhost:20128`) على شبكة
+يمكن لـ 67router إتاحة خادمه المحلي (`http://localhost:20128`) على شبكة
 الإنترنت العامة عبر ثلاث خلفيات للأنفاق. يفيد ذلك في:
 
 - استدعاءات OAuth من موفّري الخدمات السحابية (Antigravity وGemini وCursor) التي تحتاج إلى
@@ -15,7 +15,7 @@
 - مشاركة مثيلك المحلي مع زملائك في الفريق دون نشر آلة افتراضية.
 - الاختبار عبر الأجهزة المحمولة أو عن بُعد أو بين شبكات مختلفة.
 
-تُدار الخلفيات الثلاث جميعها داخل العملية — إذ يبدأ OmniRoute البرنامج الثنائي
+تُدار الخلفيات الثلاث جميعها داخل العملية — إذ يبدأ 67router البرنامج الثنائي
 أو SDK الأساسي ويوقفه من لوحة المعلومات أو REST API. ولا يلزم إعداد وكيل عكسي أو
 systemd.
 
@@ -41,7 +41,7 @@ systemd.
 http://localhost:<apiPort>` ويستخرج عنوان URL المعيّن بالنمط `*.trycloudflare.com`
   من stdout. تكون عناوين URL مؤقتة وتتغير عند كل إعادة تشغيل.
 - **النفق المسمّى (اختياري).** عندما يشير `CLOUDFLARED_CONFIG` إلى ملف
-  `config.yml` خاص بـ cloudflared وتتم إدارته محليًا، يشغّل OmniRoute الأمر `cloudflared tunnel --no-autoupdate
+  `config.yml` خاص بـ cloudflared وتتم إدارته محليًا، يشغّل 67router الأمر `cloudflared tunnel --no-autoupdate
 --config <path> run`، ما يمنحك **اسم مضيف ثابتًا ومسمّى**. يوفّر ملف الإعداد
   معرّف UUID للنفق و`credentials-file` وتوجيه `ingress`، ولذلك لا يتم تمرير
   `--url` ولا يلزم رمز من لوحة معلومات Zero Trust. يقرأ `run`
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` ويستخرج عنوان URL المعيّن بال�
 
 السلوكيات الرئيسية:
 
-- **التثبيت التلقائي.** عند الاستخدام لأول مرة، ينزّل OmniRoute أحدث برنامج ثنائي من `cloudflared`
+- **التثبيت التلقائي.** عند الاستخدام لأول مرة، ينزّل 67router أحدث برنامج ثنائي من `cloudflared`
   من إصدارات GitHub الرسمية (يوجد التثبيت المُدار ضمن
   `DATA_DIR/cloudflared/`). ويجري التحقق من SHA256 للأصل المنزّل مقابل
   بيان الإصدار قبل التنفيذ.
@@ -68,7 +68,7 @@ http://localhost:<apiPort>` ويستخرج عنوان URL المعيّن بال�
    ```
 
 2. أنشئ ملف `~/.cloudflared/config.yml` يوجّه اسم مضيفك إلى منفذ API المحلي
-   الخاص بـ OmniRoute (الافتراضي 20128):
+   الخاص بـ 67router (الافتراضي 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ http://localhost:<apiPort>` ويستخرج عنوان URL المعيّن بال�
      - service: http_status:404
    ```
 
-3. وجّه OmniRoute إلى ملف الإعداد ثم أعد تشغيل النفق أو شغّله:
+3. وجّه 67router إلى ملف الإعداد ثم أعد تشغيل النفق أو شغّله:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # اختياري — يتجاوز اسم المضيف الذي يعرضه OmniRoute؛ وإلا فستُقرأ القيمة من
+   # اختياري — يتجاوز اسم المضيف الذي يعرضه 67router؛ وإلا فستُقرأ القيمة من
    # أول قاعدة ingress في ملف الإعداد:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### متغيرات البيئة الاختيارية
 
-| المتغير                                              | الغرض                                                                                                                                                            |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | تجاوز مسار الملف التنفيذي. إذا كان معيّنًا وصالحًا، فسيستخدمه OmniRoute بدلًا من تنزيله.                                                                         |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | بروتوكول النقل (الافتراضي `http2`؛ ويتوفر أيضًا `quic` و`auto`).                                                                                                 |
-| `CLOUDFLARED_CONFIG`                                 | مسار ملف `config.yml` الخاص بـ cloudflared والمدار محليًا. عند تعيينه، يشغّل OmniRoute نفقًا **مُسمّى/دائمًا** (`tunnel --config <path> run`) بدلًا من نفق سريع. |
-| `CLOUDFLARED_HOSTNAME`                               | يتجاوز اسم المضيف العام المُبلّغ عنه للنفق المُسمّى (مثل `ai.example.com`). وعند عدم تعيينه، يُقرأ من أول اسم مضيف ضمن `ingress` في ملف الإعداد.                 |
+| المتغير                                              | الغرض                                                                                                                                                           |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | تجاوز مسار الملف التنفيذي. إذا كان معيّنًا وصالحًا، فسيستخدمه 67router بدلًا من تنزيله.                                                                         |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | بروتوكول النقل (الافتراضي `http2`؛ ويتوفر أيضًا `quic` و`auto`).                                                                                                |
+| `CLOUDFLARED_CONFIG`                                 | مسار ملف `config.yml` الخاص بـ cloudflared والمدار محليًا. عند تعيينه، يشغّل 67router نفقًا **مُسمّى/دائمًا** (`tunnel --config <path> run`) بدلًا من نفق سريع. |
+| `CLOUDFLARED_HOSTNAME`                               | يتجاوز اسم المضيف العام المُبلّغ عنه للنفق المُسمّى (مثل `ai.example.com`). وعند عدم تعيينه، يُقرأ من أول اسم مضيف ضمن `ingress` في ملف الإعداد.                |
 
 ## 2. ngrok
 
@@ -170,7 +170,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 تتضمن الاستجابة `publicUrl` المُعيَّن (مثل
 `https://abcd-1234.ngrok-free.app`). يجب تهيئة النطاقات المخصصة والمناطق وقواعد السياسات
-في لوحة تحكم ngrok — لا يقوم OmniRoute نفسه سوى بتمرير عنوان URL للهدف المحلي
+في لوحة تحكم ngrok — لا يقوم 67router نفسه سوى بتمرير عنوان URL للهدف المحلي
 إلى حزمة SDK.
 
 ## 3. Tailscale Funnel
@@ -184,14 +184,14 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 ### المتطلبات الأساسية
 
-1. ثبّت Tailscale (أو دع OmniRoute يتولى ذلك — راجع نقطة نهاية `install` أدناه).
-2. سجّل الدخول (`tailscale login` أو عبر نقطة نهاية `login` الخاصة بـ OmniRoute).
+1. ثبّت Tailscale (أو دع 67router يتولى ذلك — راجع نقطة نهاية `install` أدناه).
+2. سجّل الدخول (`tailscale login` أو عبر نقطة نهاية `login` الخاصة بـ 67router).
 3. فعّل Funnel لشبكة tailnet الخاصة بك في وحدة تحكم إدارة Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
 على Linux وmacOS، يتطلب البرنامج الخفي (`tailscaled`) استخدام `sudo` للتحكم به. تقبل
 نقاط نهاية POST حقلًا اختياريًا باسم `sudoPassword`، ويُمرَّر إلى
-ذاكرة التخزين المؤقت لكلمة مرور MITM في OmniRoute ‏(`getCachedPassword` / `setCachedPassword`) طوال
+ذاكرة التخزين المؤقت لكلمة مرور MITM في 67router ‏(`getCachedPassword` / `setCachedPassword`) طوال
 مدة الاستدعاء. يستخدم Windows تثبيت الخدمة الافتراضي في
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -252,7 +252,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 
 ## اعتبارات رد نداء OAuth
 
-عند إتاحة OmniRoute عبر نفق، يجب أن تنشئ لوحة المعلومات وتدفقات OAuth
+عند إتاحة 67router عبر نفق، يجب أن تنشئ لوحة المعلومات وتدفقات OAuth
 عناوين URL لرد النداء باستخدام اسم المضيف **العام**، وليس `localhost`. وإلا
 فسيعيد موفر OAuth توجيه المستخدم إلى عنوان URL لا تستطيع خوادمه الوصول إليه،
 وستفشل المصافحة.
@@ -268,7 +268,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-وأعد تشغيل OmniRoute قبل بدء OAuth. يتغير عنوان URL في Cloudflare Quick
+وأعد تشغيل 67router قبل بدء OAuth. يتغير عنوان URL في Cloudflare Quick
 Tunnels المؤقتة بعد كل إعادة تشغيل، لذا يُفضَّل استخدام ngrok مع نطاق محجوز
 أو Tailscale Funnel عند استخدام OAuth في بيئة الإنتاج.
 
@@ -283,14 +283,14 @@ Tunnels المؤقتة بعد كل إعادة تشغيل، لذا يُفضَّل
 - آخر رسالة خطأ، إن وُجدت.
 
 للمراقبة البرمجية، استطلع نقاط نهاية `GET` الخاصة بكل واجهة خلفية. يُسمح بتشغيل أكثر
-من واجهة خلفية واحدة في الوقت نفسه؛ وسيتتبع OmniRoute كلًا منها
+من واجهة خلفية واحدة في الوقت نفسه؛ وسيتتبع 67router كلًا منها
 بشكل مستقل.
 
 ## استكشاف الأخطاء وإصلاحها
 
 ### "لم يُعثر على الملف الثنائي cloudflared"
 
-يحاول OmniRoute إجراء التثبيت تلقائيًا عند الاستخدام الأول. إذا كان التثبيت محظورًا
+يحاول 67router إجراء التثبيت تلقائيًا عند الاستخدام الأول. إذا كان التثبيت محظورًا
 (بسبب شبكة مقيّدة أو عدم توفر الوصول إلى GitHub)، فنزّل `cloudflared` يدويًا من
 <https://github.com/cloudflare/cloudflared/releases> وعيّن
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

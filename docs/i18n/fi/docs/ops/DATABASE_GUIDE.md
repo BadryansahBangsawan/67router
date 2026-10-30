@@ -4,7 +4,7 @@
 
 ---
 
-> **Lyhyesti**: OmniRoute käyttää ensisijaisena tietovarastonaan **SQLitea WAL-lokikirjauksella** ja arkaluonteisten kenttien levossa olevan tiedon salaukseen **AES-256-GCM**-salausta. Tässä oppaassa käsitellään skeemaa, migraatioita, varmuuskopiointia ja palautusta sekä operatiivisia toimintaohjeita.
+> **Lyhyesti**: 67router käyttää ensisijaisena tietovarastonaan **SQLitea WAL-lokikirjauksella** ja arkaluonteisten kenttien levossa olevan tiedon salaukseen **AES-256-GCM**-salausta. Tässä oppaassa käsitellään skeemaa, migraatioita, varmuuskopiointia ja palautusta sekä operatiivisia toimintaohjeita.
 
 **Lähteet:**
 
@@ -19,7 +19,7 @@
 
 ## Miksi SQLite?
 
-OmniRoute valitsi SQLiten PostgreSQL:n/MySQL:n sijaan useista syistä:
+67router valitsi SQLiten PostgreSQL:n/MySQL:n sijaan useista syistä:
 
 | Tekijä               | SQLite                                          | PostgreSQL                                                   |
 | -------------------- | ----------------------------------------------- | ------------------------------------------------------------ |
@@ -30,7 +30,7 @@ OmniRoute valitsi SQLiten PostgreSQL:n/MySQL:n sijaan useista syistä:
 | **Varmuuskopiointi** | Yhden tiedoston kopio                           | `pg_dump` tai tiedostojärjestelmän tilannevedos              |
 | **Käyttötapaus**     | Käyttäjäkohtainen asennus, upotettu             | Monen vuokralaisen SaaS                                      |
 
-**Yhden käyttäjän yhden instanssin** käyttöönotossa (OmniRouten ensisijainen käyttötapaus) SQLite on yksinkertaisempi ja nopeampi.
+**Yhden käyttäjän yhden instanssin** käyttöönotossa (67routerin ensisijainen käyttötapaus) SQLite on yksinkertaisempi ja nopeampi.
 
 ### WAL-lokikirjaus
 
@@ -50,7 +50,7 @@ Välimuistin oletuskoko on **65 536 KiB (64 MiB)**. SQLite tulkitsee negatiivise
 `cache_size`-arvon likimääräiseksi ylärajaksi kibitavuina ja varaa sivuja tarpeen mukaan.
 **Asetukset > Järjestelmä ja tallennustila > Välimuistin koko** hyväksyy kokonaislukuarvot väliltä **1–
 1 000 000 KiB**; asetuksen tallentaminen ottaa sen käyttöön aktiivisessa tietokantayhteydessä,
-ja OmniRoute palauttaa pysyvästi tallennetun arvon käynnistyksen yhteydessä.
+ja 67router palauttaa pysyvästi tallennetun arvon käynnistyksen yhteydessä.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Toimialuemoduulien arkkitehtuuri
 
-OmniRouten tietokannassa on **110 ylimmän tason TypeScript-moduulia** hakemistossa `src/lib/db/`. Jokainen toimialuemoduuli:
+67routerin tietokannassa on **110 ylimmän tason TypeScript-moduulia** hakemistossa `src/lib/db/`. Jokainen toimialuemoduuli:
 
 - Omistaa yhden tai useamman tietyn taulun
 - Vie tyypitettyjä CRUD-funktioita
@@ -90,7 +90,7 @@ OmniRouten tietokannassa on **110 ylimmän tason TypeScript-moduulia** hakemisto
 
 ### 110 ylimmän tason tietokantamoduulia
 
-OmniRoutessa on **110 ylimmän tason TypeScript-tiedostoa** hakemistossa `src/lib/db/`. Alla on otos keskeisistä moduuleista; täydellinen luettelo löytyy hakemiston tiedostolistauksesta:
+67routerissa on **110 ylimmän tason TypeScript-tiedostoa** hakemistossa `src/lib/db/`. Alla on otos keskeisistä moduuleista; täydellinen luettelo löytyy hakemiston tiedostolistauksesta:
 
 | Moduuli                 | Taulut                                                         | Vastuu                                                                      |
 | ----------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Täydellinen luettelo yli 30 taulusta sijaitsee hakemistossa `src/lib/db/migrati
 
 ## Migraatiot
 
-OmniRoute käyttää **versioituja, idempotentteja migraatioita** hakemistossa `src/lib/db/migrations/`. Kukin migraatio on yksi SQL-tiedosto, jonka nimi on muotoa `NNN_description.sql`.
+67router käyttää **versioituja, idempotentteja migraatioita** hakemistossa `src/lib/db/migrations/`. Kukin migraatio on yksi SQL-tiedosto, jonka nimi on muotoa `NNN_description.sql`.
 
 ### Migraatioiden nimeäminen
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Taaksepäin yhteensopimattomat muutokset** (esimerkiksi sarakkeiden poistaminen) ovat hankalia. OmniRoute EI tue palaamista aiempaan versioon — kun migraatio on suoritettu, skeemamuutos on pysyvä. Suunnittele sen mukaisesti.
+> **Taaksepäin yhteensopimattomat muutokset** (esimerkiksi sarakkeiden poistaminen) ovat hankalia. 67router EI tue palaamista aiempaan versioon — kun migraatio on suoritettu, skeemamuutos on pysyvä. Suunnittele sen mukaisesti.
 
 ---
 
@@ -310,7 +310,7 @@ Suorituskykysyistä seuraavat tiedot tallennetaan selväkielisinä:
 
 ## Salauksen huomioitavat seikat (v3.8.16+)
 
-OmniRoute käsittelee kahta salausmenetelmää läpinäkyvästi **`migrateLegacyEncryptedString()`**-funktion avulla:
+67router käsittelee kahta salausmenetelmää läpinäkyvästi **`migrateLegacyEncryptedString()`**-funktion avulla:
 
 - **Vanha** (ennen versiota v3.5.0): XOR-pohjainen ”salaus” (ei oikeaa kryptografiaa)
 - **Nykyinen**: AES-256-GCM asianmukaisella alustusvektorilla (IV) ja todennustunnisteella
@@ -399,7 +399,7 @@ Käynnissä olevan tietokannan varmuuskopiointi ilman käyttökatkoa:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Tämä käyttää SQLiten verkossa toimivaa varmuuskopiointirajapintaa — komento voidaan suorittaa turvallisesti OmniRouten ollessa käynnissä.
+Tämä käyttää SQLiten verkossa toimivaa varmuuskopiointirajapintaa — komento voidaan suorittaa turvallisesti 67routerin ollessa käynnissä.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256 Mt
 
 ### Tiivistäminen
 
-Pitkään käynnissä olevat OmniRoute-instanssit hyötyvät ajoittaisesta `VACUUM`-komennon suorittamisesta:
+Pitkään käynnissä olevat 67router-instanssit hyötyvät ajoittaisesta `VACUUM`-komennon suorittamisesta:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Kaikkien tietojen nollaaminen (poistaminen)
 
 ```bash
-# Pysäytä ensin OmniRoute
+# Pysäytä ensin 67router
 omniroute stop
 
 # Poista tietokantatiedosto
@@ -613,7 +613,7 @@ Toinen prosessi pitää kirjoituslukkoa. Voit joko:
 
 - Odottaa toisen prosessin valmistumista (tarkista komennolla `lsof | grep storage.sqlite`)
 - Lopettaa toisen prosessin
-- Käynnistää OmniRouten uudelleen, jos ongelma jatkuu
+- Käynnistää 67routerin uudelleen, jos ongelma jatkuu
 
 ### "Viiteavainrajoite epäonnistui"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Migraatio suoritettiin transaktiossa, joten sen olisi pitänyt palautua alkuperäiseen tilaan. Jos näin ei tapahtunut:
 
-1. **Pysäytä OmniRoute** (estä uudet yritykset)
+1. **Pysäytä 67router** (estä uudet yritykset)
 2. **Tarkista tietokannan tila** komennolla `sqlite3`
 3. **Korjaa osittainen migraatio manuaalisesti**
-4. **Käynnistä OmniRoute uudelleen** (migraatiota yritetään uudelleen)
+4. **Käynnistä 67router uudelleen** (migraatiota yritetään uudelleen)
 
 Voit estää tämän testaamalla migraatiot aina ensin kopiolla.
 

@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Hausa)
+# 67router A2A Server Documentation (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — OmniRoute a matsayin wakilin sarrafa hanya mai basira
+> Agent-to-Agent Protocol v0.3 — 67router a matsayin wakilin sarrafa hanya mai basira
 
 Mahadar A2A tana da fuskoki biyu:
 
@@ -19,7 +19,7 @@ Ana bibiyar ayyuka ta hanyar `A2ATaskManager` (`src/lib/a2a/taskManager.ts`, tso
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Yana dawo da Katin Wakili wanda ke bayyana iyawa, ƙwarewa, da buƙatun tantancewa na OmniRoute.
+Yana dawo da Katin Wakili wanda ke bayyana iyawa, ƙwarewa, da buƙatun tantancewa na 67router.
 
 Ana samo filin `version` na Katin Wakili daga `process.env.npm_package_version` (duba `src/app/.well-known/agent.json/route.ts:13`), don haka yana ci gaba da daidaituwa ta atomatik da `package.json` a kowace fitarwa.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Ƙwarewa da Ke Akwai
 
-OmniRoute yana bayyana ƙwarewa 6 na A2A da aka haɗa a `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Kowane module na ƙwarewa yana cikin `src/lib/a2a/skills/`.
+67router yana bayyana ƙwarewa 6 na A2A da aka haɗa a `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Kowane module na ƙwarewa yana cikin `src/lib/a2a/skills/`.
 
 | Ƙwarewa            | ID                   | Bayani                                                                                                                                                                          | Alamomi                    | Misalai                                   |
 | :----------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------- | :---------------------------------------- |
-| Smart Routing      | `smart-routing`      | Yana tura prompt ta mafi kyawun provider/combo ta amfani da injin combo na OmniRoute + scoring                                                                                  | routing, providers         | "Tura wannan prompt ta mafi kyawun model" |
+| Smart Routing      | `smart-routing`      | Yana tura prompt ta mafi kyawun provider/combo ta amfani da injin combo na 67router + scoring                                                                                   | routing, providers         | "Tura wannan prompt ta mafi kyawun model" |
 | Quota Management   | `quota-management`   | Yana ba da rahoton yanayin quota na kowane provider, yana taimaka wa masu kira su yanke shawarar yaushe za su rage ko su canza                                                  | quota, providers           | "Duba quota na anthropic"                 |
 | Provider Discovery | `provider-discovery` | Yana lissafa providers da aka shigar tare da ƙwararrunsu, alamomin free-tier, da matsayin OAuth                                                                                 | providers, discovery       | "Wadanne providers ake da su?"            |
 | Cost Analysis      | `cost-analysis`      | Yana ƙididdige kudin request ko tattaunawa bisa ga catalog + amfani na kwanan nan                                                                                               | cost, usage                | "Ƙididdige kudin wannan tattaunawa"       |
 | Health Report      | `health-report`      | Yana haɗa yanayin circuit breaker, cooldown, da lockout na kowane provider                                                                                                      | health, resilience         | "Nuna matsayin lafiyar duk providers"     |
-| List Capabilities  | `list-capabilities`  | Yana mayar da cikakken catalog na Agent Skills mai ɗauke da abubuwa 43 (22 API + 20 CLI + 1 config) a matsayin teburin markdown tare da raw SKILL.md URLs don shigar da context | catalog, discovery, skills | "Lissafa duk ƙwararrun OmniRoute"         |
+| List Capabilities  | `list-capabilities`  | Yana mayar da cikakken catalog na Agent Skills mai ɗauke da abubuwa 43 (22 API + 20 CLI + 1 config) a matsayin teburin markdown tare da raw SKILL.md URLs don shigar da context | catalog, discovery, skills | "Lissafa duk ƙwararrun 67router"          |
 
 > Ya kamata a ci gaba da daidaita Agent Card da catalog na providers 375 na rayuwa; adadin providers da metadata na free/no-auth ana samun su daga registry na runtime.
 
 ### Cikakken Bayanin Ƙwarewar `list-capabilities`
 
-Ƙwarewar `list-capabilities` tana da matuƙar amfani ga agents na waje da suke buƙatar gano abin da OmniRoute ke bayyana kafin su aika kiran API. Tana mayar da artifact na teburin markdown da aka tsara:
+Ƙwarewar `list-capabilities` tana da matuƙar amfani ga agents na waje da suke buƙatar gano abin da 67router ke bayyana kafin su aika kiran API. Tana mayar da artifact na teburin markdown da aka tsara:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ Matsayar JSON-RPC ta `/a2a` ita ce babbar mashigar A2A. Matsayoyin REST da ke ƙ
 | `/.well-known/agent.json`    | GET   | Katin Wakili (gano A2A)                                               | (na jama'a, an adana na 3600s)               |
 | `/api/a2a/tasks`             | POST  | Miƙa aiki mai shigowa zuwa rundunar OmniConductor (Conductor PRD RF5) | Bearer da `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Miƙa aiki mai shigowa na Conductor (`POST /api/a2a/tasks`):** wakilan A2A na waje suna miƙa aikin rubuta lamba ga rundunar OmniConductor ta hanyar OmniRoute. Jiki: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ƙwarewar rundunar Conductor kaɗai (waɗanda aka sanar a Katin Wakili) ake iya miƙa wa aiki; ana buƙatar `metadata.conductor.repo.url` (rundunar tana aiki a kan ma'ajin git). Hanyar tana fassara buƙatar zuwa `POST /v1/tasks` na hub ta amfani da `CONDUCTOR_ORCHESTRATOR_TOKEN` na gefen sabar (madadinsa `CONDUCTOR_HUB_TOKEN`) sannan ta mayar da `201 { conductor_task_id, state: "submitted" }`; matsayin ayyuka yana komawa ta madubin SSE→A2A (RF1), kuma ana iya ganinsa ta `GET /api/a2a/tasks?skill=conductor`.
+**Miƙa aiki mai shigowa na Conductor (`POST /api/a2a/tasks`):** wakilan A2A na waje suna miƙa aikin rubuta lamba ga rundunar OmniConductor ta hanyar 67router. Jiki: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ƙwarewar rundunar Conductor kaɗai (waɗanda aka sanar a Katin Wakili) ake iya miƙa wa aiki; ana buƙatar `metadata.conductor.repo.url` (rundunar tana aiki a kan ma'ajin git). Hanyar tana fassara buƙatar zuwa `POST /v1/tasks` na hub ta amfani da `CONDUCTOR_ORCHESTRATOR_TOKEN` na gefen sabar (madadinsa `CONDUCTOR_HUB_TOKEN`) sannan ta mayar da `201 { conductor_task_id, state: "submitted" }`; matsayin ayyuka yana komawa ta madubin SSE→A2A (RF1), kuma ana iya ganinsa ta `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

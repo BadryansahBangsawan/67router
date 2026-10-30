@@ -7,29 +7,29 @@
 > **事实来源：** `src/lib/skills/` 和 `src/app/api/skills/`
 > **最后更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 提供了一个可扩展的 Skills 框架，使语言模型（以及操作员）能够组合可复用的能力——从读取文件系统和发送 HTTP 请求，到沙箱化代码执行和精选的市场技能。
+67router 提供了一个可扩展的 Skills 框架，使语言模型（以及操作员）能够组合可复用的能力——从读取文件系统和发送 HTTP 请求，到沙箱化代码执行和精选的市场技能。
 
-技能是一个有版本且由模式定义的工作单元。OmniRoute 可以将技能作为工具定义注入出站请求，拦截模型返回的工具调用，运行匹配的处理程序，并将结果反馈给模型，以便对话继续进行。模型永远不会看到具体实现，只会看到工具接口。
+技能是一个有版本且由模式定义的工作单元。67router 可以将技能作为工具定义注入出站请求，拦截模型返回的工具调用，运行匹配的处理程序，并将结果反馈给模型，以便对话继续进行。模型永远不会看到具体实现，只会看到工具接口。
 
 ---
 
 ## Agent Skills 与 Omni Skills
 
-OmniRoute 提供两套不同但互补的技能系统：
+67router 提供两套不同但互补的技能系统：
 
 | 维度       | **Omni Skills**（本文档）                            | **Agent Skills**                                                                           |
 | :--------- | :--------------------------------------------------- | :----------------------------------------------------------------------------------------- |
 | 用途       | LLM 工具注入 + 沙箱化执行                            | 供外部智能体发现和使用的 SKILL.md 目录                                                     |
 | 事实来源   | `src/lib/skills/` + 市场                             | `src/lib/agentSkills/` + `skills/` 目录                                                    |
 | 运行时模式 | 注入出站请求，并在工具调用事件发生时执行             | 静态 Markdown 目录 + REST/MCP/A2A 发现端点                                                 |
-| 使用者     | OmniRoute 本身（组合路由、入站 LLM 调用）            | 外部智能体、MCP 客户端、A2A 编排器                                                         |
+| 使用者     | 67router 本身（组合路由、入站 LLM 调用）             | 外部智能体、MCP 客户端、A2A 编排器                                                         |
 | 数量       | 可变（由市场驱动）                                   | 45 个目录条目（23 个 API + 21 个 CLI + 1 个配置）                                          |
 | 格式       | 包含工具模式和处理程序的 `SkillDefinition`           | `SKILL.md` 前置元数据 + Markdown 正文                                                      |
 | 发现方式   | `/api/skills/*` REST + `omniroute_skills_*` MCP 工具 | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP 工具 + A2A `list-capabilities` |
 
-**Omni Skills** 是执行引擎——它们定义了当 LLM 调用工具时 OmniRoute _能够执行的操作_。
+**Omni Skills** 是执行引擎——它们定义了当 LLM 调用工具时 67router _能够执行的操作_。
 
-**Agent Skills** 是文档目录——它们通过结构化的 SKILL.md 文件向外部智能体说明 _如何使用_ OmniRoute 的 REST API 和 CLI，这些文件可以直接添加到智能体提示词中。
+**Agent Skills** 是文档目录——它们通过结构化的 SKILL.md 文件向外部智能体说明 _如何使用_ 67router 的 REST API 和 CLI，这些文件可以直接添加到智能体提示词中。
 
 有关 Agent Skills 目录、生成器、MCP 工具和 A2A 技能的信息，请参阅 [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md)。
 
@@ -41,14 +41,14 @@ OmniRoute 提供两套不同但互补的技能系统：
 
 来自三个来源的技能共存于同一个注册表中：
 
-1. **内置技能**（`src/lib/skills/builtins.ts`）——随 OmniRoute 一同提供，涵盖常见用例：
+1. **内置技能**（`src/lib/skills/builtins.ts`）——随 67router 一同提供，涵盖常见用例：
    - `file_read`、`file_write`——位于 `<DATA_DIR>/skills/workspaces/<hashed-key>/` 下、按 API 密钥隔离的沙箱工作区
    - `http_request`——通过 `safeOutboundFetch` 发送出站 HTTP 请求，并使用 `guard: "public-only"`
    - `web_search`——支持缓存的可插拔搜索提供者（`executeWebSearch`）
    - `eval_code`——使用 Docker 沙箱执行 `node` 或 `python`
    - `execute_command`——使用 Docker 沙箱执行 shell 命令
    - `browser`——由 Playwright 支持的脚手架，默认禁用（`builtin/browser.ts`）
-2. **SkillsMP**（OmniRoute 市场）——从 `https://skillsmp.com/api/v1/skills/search` 获取。需要在设置中配置 `skillsmpApiKey`。
+2. **SkillsMP**（67router 市场）——从 `https://skillsmp.com/api/v1/skills/search` 获取。需要在设置中配置 `skillsmpApiKey`。
 3. **SkillsSH**（`skills.sh` 社区目录）——从 `https://skills.sh/api/search` 获取。无需身份验证；SKILL.md 内容从 GitHub raw 拉取。
 
 由单个“活动提供者”控制仪表板从哪个目录安装技能（`src/lib/skills/providerSettings.ts`）。可以在 **设置 → 记忆与技能** 下切换。默认值：`skillsmp`。
@@ -436,7 +436,7 @@ enum SkillMode {
 
 ## 内置技能目录
 
-OmniRoute 在 `src/lib/skills/builtin/` 中提供了一组精心筛选的内置技能。最常用的包括：
+67router 在 `src/lib/skills/builtin/` 中提供了一组精心筛选的内置技能。最常用的包括：
 
 ### 浏览器自动化技能
 

@@ -41,7 +41,7 @@ au muunganisho wa nje unapatikana kwa sasa.
 | Ofa za wafadhili                                | Zimetekelezwa kama mlisho tofauti uliotiwa saini, wa moja kwa moja pekee, pamoja na ukurasa wa dashibodi. Kiteja huthibitisha upya skima funge ya manufaa, huhifadhi akiba nzuri ya mwisho, huchuja maingizo yaliyoisha muda, na huweka lebo wazi kwenye ofa za washirika.                                     |
 | Taarifa za uchanganuzi na utambuzi wa wafadhili | Zimetekelezwa kama mlisho madhubuti uliotiwa saini, wa moja kwa moja pekee, wenye ELO inayomilikiwa na Radar, taarifa za kweli kuhusu usasishaji/mwelekeo wa katalogi, beji ya ndani ya mfadhili iliyothibitishwa, ukurasa wa dashibodi, na amri za hali/ulandanishi za CLI zinazotumika ndani ya mfumo pekee. |
 | Malipo na barua pepe za miamala                 | Hayajatekelezwa katika kiteja cha OSS. Ununuzi, mchango, ukaguzi wa risiti, urejeshaji, na uwasilishaji wa barua ni majukumu ya huduma ya faragha; upatikanaji wa huduma inayopangishwa bado unategemea upelekaji wake unaosimamiwa na usanidi wa mtoa huduma.                                                 |
-| Mkondo wa kazi wa ajenti wa utafiti             | Si sehemu ya toleo hili la kiteja. Maudhui ya mlisho yaliyohakikiwa yanasalia kuwa data ya upande wa seva; hakuna ajenti huru ya utafiti inayoendeshwa katika usakinishaji wa OmniRoute.                                                                                                                       |
+| Mkondo wa kazi wa ajenti wa utafiti             | Si sehemu ya toleo hili la kiteja. Maudhui ya mlisho yaliyohakikiwa yanasalia kuwa data ya upande wa seva; hakuna ajenti huru ya utafiti inayoendeshwa katika usakinishaji wa 67router.                                                                                                                        |
 
 ---
 
@@ -119,7 +119,7 @@ Wakati zote mbili zimewashwa, njia ya ulandanishi ni:
    ya IP kwa ajili ya ukaguzi wa matumizi mabaya unaofanywa na binadamu; majedwali hayo hayahifadhi ufunguo wala IP katika muundo ghafi.
    Kumbukumbu za ufikiaji wa miundombinu na kisanduku toezi cha uwasilishaji kilichosimbwa kwa njia fiche ni mipaka tofauti ya
    uendeshaji.
-3. OmniRoute haitumi kamwe vidokezo, majibu, mazungumzo, vitambulisho vya watoa huduma, trafiki ya modeli,
+3. 67router haitumi kamwe vidokezo, majibu, mazungumzo, vitambulisho vya watoa huduma, trafiki ya modeli,
    muda wa upatikanaji, ukawiaji, wala usanidi wa ndani wa mtoa huduma kwenda kwenye huduma ya Radar.
 4. Jibu huthibitishwa, huhakikiwa, na kuhifadhiwa ndani kwenye akiba (tazama
    [Muundo wa usalama](#security-model)). Radar ina njia nne kamili za mtandao upande wa seva:
@@ -243,11 +243,11 @@ ambaye tayari anao huuwasha.
 ### Uanzishaji wa mwanzo hadi mwisho na usanidi unaoongozwa
 
 Huduma binafsi ya mlisho na mteja huyu wa OSS zina mpaka finyu uliowekwa kimakusudi: huduma
-hutoa na kuthibitisha ufunguo wa msaidizi, huku usakinishaji wa ndani wa OmniRoute ukisimba ufunguo kwa njia fiche,
+hutoa na kuthibitisha ufunguo wa msaidizi, huku usakinishaji wa ndani wa 67router ukisimba ufunguo kwa njia fiche,
 ukilandanisha vielelezo vilivyotiwa sahihi upande wa seva, na kuongoza usanidi wa mtoa huduma. Mpangilio wa uthibitishaji unaosaidiwa ni:
 
 1. Pata ufunguo mpya uliotolewa au uliorejeshwa kutoka kwenye dai la mchangiaji, plans/checkout, mchakato wa urejeshaji, au mwendeshaji aliyeidhinishwa wa seva binafsi. Usibandike ufunguo halisi kwenye kumbukumbu, picha za skrini, maoni ya hoja, au hoja za mstari wa amri.
-2. Washa alama ya kipengele `RADAR_ENABLED` kwenye usakinishaji wa ndani wa OmniRoute. Hii hufanya UI ipatikane, lakini hubaki bila shughuli za mtandao hadi idhini tofauti ihifadhiwe.
+2. Washa alama ya kipengele `RADAR_ENABLED` kwenye usakinishaji wa ndani wa 67router. Hii hufanya UI ipatikane, lakini hubaki bila shughuli za mtandao hadi idhini tofauti ihifadhiwe.
 3. Fungua `/dashboard/radar`, bandika ufunguo, kisha uwashe. Kivinjari hutuma ombi moja la ndani la `POST /api/radar/settings` lenye `{ optIn: true, supporterKey }`; ufunguo husimbwa kwa njia fiche ndani ya mfumo na jibu huwa na `omr_****<last4>` pekee.
 4. Ruhusu skrini ya uanzishaji iendeshe ulandanishaji wa katalogi, au uchague **Landanisha sasa**. Thibitisha kwamba ukurasa unaonyesha `live`, toleo la mlisho, na muda wa uletaji. Kwa uchunguzi wa ndani uliothibitishwa, `GET /api/radar/status` huripoti idhini/uwepo wa ufunguo na hali nne za akiba bila kurudisha ufunguo. `POST /api/radar/sync-all` inaweza kuonyesha upya katalogi, marejeleo, ofa, na Intel moja kwa moja.
 5. Fungua `/dashboard/radar/setup?provider=<provider>`. Fuata URL ya kitambulisho inayomilikiwa na mtoa huduma, chagua **Ongeza ufunguo wa API**, hifadhi kupitia fomu halisi ya mtoa huduma, rudi kwenye mwongozo, kisha uendeshe **Jaribu muunganisho**. Mwongozo hutumia njia za kawaida za `/api/providers` na `/api/providers/<connection-id>/test`; hauundi kitambulisho sambamba cha Radar.
@@ -287,7 +287,7 @@ ilandanishwe upya.
 ### Ubatilishaji kwa env unaofaa kwa fork
 
 Vigeu viwili vya env huruhusu fork na wanaojiendeshea huduma waelekeze mteja kwenye mpasho wao wenyewe badala ya
-huduma chaguomsingi ya OmniRoute — tazama
+huduma chaguomsingi ya 67router — tazama
 [Jinsi ya kujiendeshea mpasho](#how-to-self-host-a-feed) hapa chini:
 
 | Kigeu               | Kusudi                                                                                                                           |
@@ -441,7 +441,7 @@ ya ndani iliyopitwa na wakati, huweka ingizo lililounganishwa likiwa limezimwa, 
 Machapisho ya katalogi hutumia `schemaVersion: 2`. `contextWindow` na kila moja ya `tools`, `vision`, na
 `thinking` hujitegemea kama `number | null` / `boolean | null`: `null` humaanisha haijulikani, huku
 `false` ikimaanisha chanzo rasmi cha mtoa huduma kilichothibitishwa na D16 kinasema kwa uwazi kuwa uwezo huo haupo.
-Bendera za ndani za sajili/vibainisho vya modeli za OmniRoute hazipandishwi kamwe moja kwa moja kuwa taarifa za mlisho. Kiteja
+Bendera za ndani za sajili/vibainisho vya modeli za 67router hazipandishwi kamwe moja kwa moja kuwa taarifa za mlisho. Kiteja
 bado kinakubali vijipicha vya v1; kwa sababu kiundaji cha zamani kilitumia `false` kama kishikilia nafasi cha kutokuwepo, `false` ya v1
 husawazishwa kuwa haijulikani huku `true` ya v1 ikibaki kuwa taarifa halisi. Matoleo ya muundo yasiyojulikana hukataliwa kwa usalama na
 kache halali ya mwisho hubaki kupatikana. Kila modeli ya v2 yenye muktadha/uwezo usio null lazima iwe na
@@ -502,7 +502,7 @@ Familia za njia za ndani za Radar zilizo hapa chini zinaendesha UI iliyo chini y
 | `/api/radar/local-model-state` | DELETE | Huondoa sehemu za ubatilishaji zinazoweza kuhaririwa huku ikihifadhi tombstone yoyote.                                                    |
 
 **Kanuni kali: njia hizi kamwe hazitumiki kama proksi ya huduma ya mlisho.** Kivinjari huwasiliana tu
-na seva ya ndani ya OmniRoute. Moduli nne zinazowasiliana na huduma ya Radar ni
+na seva ya ndani ya 67router. Moduli nne zinazowasiliana na huduma ya Radar ni
 `src/lib/radar/sync.ts` (katalogi), `src/lib/radar/referralsSync.ts` (rufaa), na
 `src/lib/radar/offersSync.ts` (ofa) pamoja na `src/lib/radar/intelSync.ts` (Intel); zote huendeshwa
 upande wa seva, kamwe si upande wa mteja. Hii huweka
@@ -544,7 +544,7 @@ Taarifa ni artefakti iliyotiwa saini inayopatikana katika `GET /v1/intel/latest`
 
 `syncRadarIntel()` hutumia Bearer ileile ya upande wa seva, muda wa mwisho wa sekunde 30, kikomo cha mtiririko cha MiB 10, uthibitishaji wa Ed25519 wa baiti halisi, schema kali, sharti la `live` katika mwili/kichwa, kiwango cha chini cha toleo, na uhifadhi wa kache ya mwisho iliyo sahihi kama ilivyo kwa ofa. Baada ya muhtasari uliothibitishwa wa moja kwa moja kuhifadhiwa, kiteja hutengeneza `radar:<sha256(supporter key)>`, huhifadhi tu utambulisho huo wa mwelekeo mmoja, na hutoa tukio maalumu la utambuzi la `radar_supporter`. Beji yake ya `radar-supporter` ni idempotenti na hutoa XP sifuri; kamwe haisasishi bao za wanaoongoza wala kutumia tena `token_share`. `/dashboard/radar/intel` huonyesha beji kutokana tu na metadata iliyothibitishwa ya kache ya ndani.
 
-CLI hutoa `omniroute radar status` na `omniroute radar sync`. Zote huwasiliana na API ya ndani ya OmniRoute pekee. `status` hutekeleza `GET /api/radar/status` ya kusoma pekee; `sync` hutuma `POST /api/radar/sync-all` moja na kuchapisha matokeo kwa kila mlisho. Hakuna amri inayosoma, kukubali, au kuchapisha ufunguo wa mwungaji mkono, na hakuna inayowasiliana moja kwa moja na huduma ya Radar.
+CLI hutoa `omniroute radar status` na `omniroute radar sync`. Zote huwasiliana na API ya ndani ya 67router pekee. `status` hutekeleza `GET /api/radar/status` ya kusoma pekee; `sync` hutuma `POST /api/radar/sync-all` moja na kuchapisha matokeo kwa kila mlisho. Hakuna amri inayosoma, kukubali, au kuchapisha ufunguo wa mwungaji mkono, na hakuna inayowasiliana moja kwa moja na huduma ya Radar.
 
 ---
 

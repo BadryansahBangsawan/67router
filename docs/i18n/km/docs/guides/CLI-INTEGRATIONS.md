@@ -6,10 +6,10 @@
 
 សម្រាប់ manifest នៃ executable រួម, environment កូនដែលបានដាក់កម្រិត និងការរៀបចំ Gemini អចិន្ត្រៃយ៍ សូមមើល [កិច្ចសន្យាចាប់ផ្ដើម CLI](./CLI-LAUNCH-CONTRACTS.md)។
 
-OmniRoute ភ្ជាប់មកជាមួយក្រុម command `setup-*` ដែលកំណត់រចនាសម្ព័ន្ធ coding
-CLI (Codex, Claude Code, OpenCode, Cline, …) ឱ្យប្រើ OmniRoute ជា backend របស់វា — ដូច្នេះ
-ឧបករណ៍នេះទាក់ទងទៅ endpoint **តែមួយ** ហើយ OmniRoute បញ្ជូនសំណើទៅ provider ដែលត្រឹមត្រូវ ព្រមទាំង
-មាន auto-fallback។ Command នីមួយៗអានកាតាឡុក model **ដែលកំពុងដំណើរការ** ពី OmniRoute
+67router ភ្ជាប់មកជាមួយក្រុម command `setup-*` ដែលកំណត់រចនាសម្ព័ន្ធ coding
+CLI (Codex, Claude Code, OpenCode, Cline, …) ឱ្យប្រើ 67router ជា backend របស់វា — ដូច្នេះ
+ឧបករណ៍នេះទាក់ទងទៅ endpoint **តែមួយ** ហើយ 67router បញ្ជូនសំណើទៅ provider ដែលត្រឹមត្រូវ ព្រមទាំង
+មាន auto-fallback។ Command នីមួយៗអានកាតាឡុក model **ដែលកំពុងដំណើរការ** ពី 67router
 ដែលកំពុងដំណើរការ (local ឬ remote) ហើយសរសេរឯកសារ config ផ្ទាល់ខ្លួនរបស់ឧបករណ៍នៅលើម៉ាស៊ីន
 **របស់អ្នក**។ API key ត្រូវបានយោងតាមរយៈ environment variable នៅគ្រប់ទីកន្លែងដែលឧបករណ៍
 គាំទ្រវា។ Command ដែលរក្សាទុកឯកសារ environment ក្នុងឧបករណ៍ត្រូវបានកត់សម្គាល់ខាងក្រោម។
@@ -52,7 +52,7 @@ management endpoint, context ឬព័ត៌មានសម្ងាត់សម
 
 - [ការកំណត់រចនាសម្ព័ន្ធ Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [ការកំណត់រចនាសម្ព័ន្ធ Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Remote Mode](./REMOTE-MODE.md) — បញ្ជា OmniRoute ពីចម្ងាយ (VPS / Tailnet) ពី laptop របស់អ្នក
+- [Remote Mode](./REMOTE-MODE.md) — បញ្ជា 67router ពីចម្ងាយ (VPS / Tailnet) ពី laptop របស់អ្នក
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — extension OmniCopilot; វាក៏អាចដំណើរការ
   command `setup-*` ទាំងនេះឱ្យអ្នកពីខាងក្នុង editor បានផងដែរ
 
@@ -87,7 +87,7 @@ management endpoint, context ឬព័ត៌មានសម្ងាត់សម
 
 ចំណាំអំពី flag (បានផ្ទៀងផ្ទាត់ក្នុង source របស់ command)៖
 
-- `--remote <url>` — ទាញយក catalog ពី OmniRoute ពីចម្ងាយ (ដាក់ជំនួស `--port`
+- `--remote <url>` — ទាញយក catalog ពី 67router ពីចម្ងាយ (ដាក់ជំនួស `--port`
   និង context ដែលកំពុងសកម្ម)។ `--api-key <key>` ផ្ដល់ credential សម្រាប់
   server នោះ (លំនាំដើមប្រើ env var `OMNIROUTE_API_KEY` ឬ token របស់ context ដែលកំពុងសកម្ម)។
 - `--only <patterns>` — substring ដែលបំបែកដោយសញ្ញាក្បៀស; រក្សាទុកតែ model ID ដែលត្រូវគ្នា
@@ -108,7 +108,7 @@ management endpoint, context ឬព័ត៌មានសម្ងាត់សម
   **codex** តាមរយៈ args `-c model_providers.omniroute.*`។ **Qwen គឺជា target តែមួយគត់របស់ run
   ដែលទាមទារ `--model` ជាដាច់ខាត** — `omniroute run qwen` ដោយគ្មានវានឹងបញ្ចប់
   ដោយមាន code `2` និង error ច្បាស់លាស់។
-- `--port <port>` — port របស់ OmniRoute មូលដ្ឋាន (លំនាំដើម `20128`, មិនត្រូវបានប្រើនៅពេលកំណត់ `--remote`
+- `--port <port>` — port របស់ 67router មូលដ្ឋាន (លំនាំដើម `20128`, មិនត្រូវបានប្រើនៅពេលកំណត់ `--remote`
   )។ មាននៅលើ `setup-*` ទាំងអស់ និង launcher ទាំងពីរ។
 - exit code របស់ `omniroute run`៖ exit code ផ្ទាល់របស់ CLI កូនត្រូវបានបញ្ជូនបន្ត
   ដូចដើម; `2` = argument មិនត្រឹមត្រូវ (target មិនគាំទ្រ, ខ្វះ
@@ -153,7 +153,7 @@ MITM និងសម្រាប់តែមគ្គុទ្ទេសក៍ �
 
 ## ការប្រើប្រាស់ក្នុងមូលដ្ឋាន
 
-នៅពេល OmniRoute កំពុងដំណើរការនៅលើ `localhost:20128` គ្រាន់តែដំណើរការពាក្យបញ្ជាដំឡើងសម្រាប់ឧបករណ៍របស់អ្នក។ កាតាឡុកត្រូវបានទាញយកពីម៉ាស៊ីនមេក្នុងមូលដ្ឋាន។
+នៅពេល 67router កំពុងដំណើរការនៅលើ `localhost:20128` គ្រាន់តែដំណើរការពាក្យបញ្ជាដំឡើងសម្រាប់ឧបករណ៍របស់អ្នក។ កាតាឡុកត្រូវបានទាញយកពីម៉ាស៊ីនមេក្នុងមូលដ្ឋាន។
 
 ```bash
 # Codex៖ សរសេរប្រូហ្វាល់មួយសម្រាប់ម៉ូដែលដែលត្រូវគ្នានីមួយៗទៅក្នុង ~/.codex/
@@ -180,8 +180,8 @@ omniroute setup-continue --dry-run
 បើកដំណើរការដោយមិនសរសេរការកំណត់រចនាសម្ព័ន្ធណាមួយឡើយ (បញ្ចូលតែ environment ប៉ុណ្ណោះ)៖
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute ក្នុងមូលដ្ឋាន
-omniroute launch-codex           # Codex CLI → OmniRoute ក្នុងមូលដ្ឋាន
+omniroute launch                 # Claude Code → 67router ក្នុងមូលដ្ឋាន
+omniroute launch-codex           # Codex CLI → 67router ក្នុងមូលដ្ឋាន
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -199,7 +199,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## ការប្រើប្រាស់ពីចម្ងាយ
 
-តម្រង់ពាក្យបញ្ជាដំឡើងណាមួយទៅកាន់ OmniRoute ពីចម្ងាយដោយប្រើ `--remote` + `--api-key`។ កាតាឡុកត្រូវបានទាញយកពីម៉ាស៊ីនពីចម្ងាយ ហើយការកំណត់រចនាសម្ព័ន្ធត្រូវបានសរសេរនៅលើម៉ាស៊ីនក្នុងមូលដ្ឋានរបស់អ្នក។
+តម្រង់ពាក្យបញ្ជាដំឡើងណាមួយទៅកាន់ 67router ពីចម្ងាយដោយប្រើ `--remote` + `--api-key`។ កាតាឡុកត្រូវបានទាញយកពីម៉ាស៊ីនពីចម្ងាយ ហើយការកំណត់រចនាសម្ព័ន្ធត្រូវបានសរសេរនៅលើម៉ាស៊ីនក្នុងមូលដ្ឋានរបស់អ្នក។
 
 ```bash
 # OpenCode ជាមួយ VPS ពីចម្ងាយ ដោយរក្សាទុកតែម៉ូដែល glm/kimi
@@ -237,7 +237,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-ទម្រង់ទាំងពីរសរសេរ **ប្រូហ្វាល់ផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវ** មួយរបស់ 5dive ហើយ seat `claude` ទាំងអស់ដែលបានភ្ជាប់ជាមួយប្រូហ្វាល់នោះ នឹងទាក់ទងទៅ OmniRoute។ មានបីចំណុចដែលជាក់លាក់ចំពោះ target នេះ៖
+ទម្រង់ទាំងពីរសរសេរ **ប្រូហ្វាល់ផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវ** មួយរបស់ 5dive ហើយ seat `claude` ទាំងអស់ដែលបានភ្ជាប់ជាមួយប្រូហ្វាល់នោះ នឹងទាក់ទងទៅ 67router។ មានបីចំណុចដែលជាក់លាក់ចំពោះ target នេះ៖
 
 - **វាដំណើរការនៅលើម៉ាស៊ីន fleet ក្នុងនាមជា root។** verb របស់ 5dive ធ្វើប្រតិបត្តិការលើ unit របស់ systemd ក្នុងមូលដ្ឋាន និងថត state ដែលគ្រប់គ្រងដោយ root ហើយមិនមានរបៀបពីចម្ងាយទេ។ recipe នឹងប្រតិបត្តិខ្លួនវាឡើងវិញតាមរយៈ `sudo` នៅពេលវាមិនទាន់ជា root (`--no-sudo` បិទសកម្មភាពនោះ ហើយបោះពុម្ពពាក្យបញ្ជាជំនួសវិញ)។
 - **endpoint ត្រូវតែជា `https://` លុះត្រាតែវាជា loopback។** API key របស់ agent ត្រូវបានផ្ញើតាម URL នោះជាមួយគ្រប់សំណើ ហើយ 5dive បដិសេធ endpoint នៅក្រៅម៉ាស៊ីនដែលប្រើ plaintext។ អាសយដ្ឋាន LAN ឯកជនក៏មិនមែនជាករណីលើកលែងដែរ។
@@ -245,14 +245,14 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API key ត្រូវបានបញ្ជូនទៅ 5dive តាម **stdin** (`--api-key=-`) ដូច្នេះវាមិនដែលបង្ហាញក្នុងលទ្ធផលរបស់ `ps` ឡើយ។
 
-ការតម្រង់ប្រូហ្វាល់ទៅកាន់ **combo** របស់ OmniRoute ជំនួសឱ្យម៉ូដែលតែមួយ គឺជាអ្វីដែលផ្តល់ failover របស់ provider ដល់ fleet៖ នៅពេល endpoint ចម្បងដាច់ទាំងស្រុងនៅពាក់កណ្តាល turn ក្នុងការដំណើរការដែលបានកត់ត្រានៅ
+ការតម្រង់ប្រូហ្វាល់ទៅកាន់ **combo** របស់ 67router ជំនួសឱ្យម៉ូដែលតែមួយ គឺជាអ្វីដែលផ្តល់ failover របស់ provider ដល់ fleet៖ នៅពេល endpoint ចម្បងដាច់ទាំងស្រុងនៅពាក់កណ្តាល turn ក្នុងការដំណើរការដែលបានកត់ត្រានៅ
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) agent បានបញ្ចប់ជំហានដែលនៅសល់របស់វាលើ fallback ហើយមិនបានបង្ហាញការដាច់សេវានោះឡើយ។
 
 ---
 
 ## អនុសញ្ញា Base URL (ឧបករណ៍ណាខ្លះត្រូវការ `/v1`)
 
-OmniRoute ផ្តល់ចំណុចប្រទាក់ OpenAI នៅ `/v1` ចំណុចប្រទាក់ Anthropic នៅ root
+67router ផ្តល់ចំណុចប្រទាក់ OpenAI នៅ `/v1` ចំណុចប្រទាក់ Anthropic នៅ root
 និងចំណុចប្រទាក់ Gemini ដើមនៅ `/v1beta`។ ការរួមបញ្ចូលនីមួយៗត្រូវបានកំណត់ឱ្យប្រើទម្រង់ដែល
 ឧបករណ៍របស់វារំពឹងទុក (បានផ្ទៀងផ្ទាត់នៅក្នុងប្រភពកូដរបស់ command)៖
 
@@ -273,7 +273,7 @@ OmniRoute ផ្តល់ចំណុចប្រទាក់ OpenAI នៅ `/v1
 
 ## ការរក្សា native deps នៅពេលអាប់ដេត៖ `--include=optional`
 
-នៅពេលអ្នកអាប់ដេតដោយប្រើ `omniroute update` (បន្ទាប់ពីបញ្ជាក់ ឬដោយប្រើ `--apply`) OmniRoute ដំណើរការការដំឡើងដោយបញ្ចូល `--include=optional` ជាស្រេច៖
+នៅពេលអ្នកអាប់ដេតដោយប្រើ `omniroute update` (បន្ទាប់ពីបញ្ជាក់ ឬដោយប្រើ `--apply`) 67router ដំណើរការការដំឡើងដោយបញ្ចូល `--include=optional` ជាស្រេច៖
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -292,11 +292,11 @@ flag ផ្សេងទៀតរបស់ `omniroute update` (បានផ្ទ
 
 ## Google Gemini CLI តាមរយៈ `omniroute run gemini`
 
-កិច្ចសន្យាត្រូវបានផ្ទៀងផ្ទាត់ជាមួយ `@google/gemini-cli` 0.50.0៖ CLI គោរពតាម `GOOGLE_GEMINI_BASE_URL` ហើយផ្ញើ `POST /v1beta/models/<model>:generateContent` (និង `:streamGenerateContent?alt=sse`) ទៅកាន់វា — ត្រូវគ្នាយ៉ាងពិតប្រាកដនឹងផ្ទៃ Gemini ដើមរបស់ OmniRoute (`/v1beta`)។ `omniroute run gemini` កំណត់តភ្ជាប់វាដោយស្វ័យប្រវត្តិ៖
+កិច្ចសន្យាត្រូវបានផ្ទៀងផ្ទាត់ជាមួយ `@google/gemini-cli` 0.50.0៖ CLI គោរពតាម `GOOGLE_GEMINI_BASE_URL` ហើយផ្ញើ `POST /v1beta/models/<model>:generateContent` (និង `:streamGenerateContent?alt=sse`) ទៅកាន់វា — ត្រូវគ្នាយ៉ាងពិតប្រាកដនឹងផ្ទៃ Gemini ដើមរបស់ 67router (`/v1beta`)។ `omniroute run gemini` កំណត់តភ្ជាប់វាដោយស្វ័យប្រវត្តិ៖
 
-- `GOOGLE_GEMINI_BASE_URL` → OmniRoute base URL ដែលកំពុងសកម្ម (root ដោយគ្មាន `/v1`);
-- `GEMINI_API_KEY` → ព័ត៌មានសម្ងាត់ OmniRoute ដែលបានដោះស្រាយ (ជម្រើស/env/context);
-- **`GEMINI_CLI_HOME` ដាច់ដោយឡែកជាបណ្ដោះអាសន្ន** ដែល `.gemini/settings.json` របស់វាជ្រើសរើសការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ `gemini-api-key` ដូច្នេះ session Google OAuth ដែលបានរក្សាទុក (Code Assist) នឹងមិនអាចជំនួសការបើកដំណើរការដែលតម្រង់ទៅ OmniRoute បានទេ — វាត្រូវបានលុបបន្ទាប់ពីចាកចេញ;
+- `GOOGLE_GEMINI_BASE_URL` → 67router base URL ដែលកំពុងសកម្ម (root ដោយគ្មាន `/v1`);
+- `GEMINI_API_KEY` → ព័ត៌មានសម្ងាត់ 67router ដែលបានដោះស្រាយ (ជម្រើស/env/context);
+- **`GEMINI_CLI_HOME` ដាច់ដោយឡែកជាបណ្ដោះអាសន្ន** ដែល `.gemini/settings.json` របស់វាជ្រើសរើសការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ `gemini-api-key` ដូច្នេះ session Google OAuth ដែលបានរក្សាទុក (Code Assist) នឹងមិនអាចជំនួសការបើកដំណើរការដែលតម្រង់ទៅ 67router បានទេ — វាត្រូវបានលុបបន្ទាប់ពីចាកចេញ;
 - **អនាម័យ env**៖ env របស់ child ត្រូវបានសម្អាតដោយដក `GOOGLE_API_KEY`, `GOOGLE_GENAI_USE_VERTEXAI` និង `GOOGLE_GENAI_USE_GCA` ចេញ (ដែលអាចបង្វែរការផ្ទៀងផ្ទាត់អត្តសញ្ញាណទៅ Vertex/Code Assist) ហើយ `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key` ត្រូវបានកំណត់ជាជម្រើសការពារបន្ថែម — គោលដៅ `run` ផ្សេងទៀតទទួលបានការដោះស្រាយដូចគ្នាសម្រាប់អថេរដែលមានភាពផ្ទុយគ្នារបស់ពួកវា;
 - ការបញ្ចូល `--model <id>` ពី `--provider`/`--model`។
 
@@ -311,7 +311,7 @@ omniroute run gemini --model glm/glm-5.2 -- --skip-trust -p "hello"
 ## ការត្រួតពិនិត្យ smoke ពិតប្រាកដ (ត្រូវជ្រើសចូលប្រើ)
 
 ការធ្វើតេស្តតំរែតំរង់នៃផែនការចាប់ផ្ដើមដែលអាចកំណត់លទ្ធផលឡើងវិញបាន ដំណើរការនៅក្នុង CI (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`)។ ដើម្បីផ្ទៀងផ្ទាត់ binary ពិតប្រាកដជាមួយម៉ាស៊ីនមេ OmniRoute ពិតប្រាកដ មាន harness ដែលត្រូវជ្រើសចូលប្រើនៅ
+`tests/unit/cli/run-execution.test.ts`)។ ដើម្បីផ្ទៀងផ្ទាត់ binary ពិតប្រាកដជាមួយម៉ាស៊ីនមេ 67router ពិតប្រាកដ មាន harness ដែលត្រូវជ្រើសចូលប្រើនៅ
 `tests/integration/upstream-cli-smoke.int.test.ts`។ វាមិនដែលដំណើរការដោយស្វ័យប្រវត្តិទេ
 (រាល់តេស្តរងទាំងអស់ត្រូវបានរំលង លុះត្រាតែ `RUN_CLI_SMOKE=1`) ហើយបញ្ជូនព័ត៌មានសម្ងាត់តាមរយៈឈ្មោះ env-var
 (មិនដែលបញ្ជូនតាមតម្លៃទេ) លាក់បាំងខ្សែអក្សរដែលមានទម្រង់ដូច key ពី output ណាមួយដែលបានកត់ត្រា រំលង

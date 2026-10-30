@@ -12,7 +12,7 @@ alama za `anthropic-beta`, vichwa vya Stainless SDK, n.k.).
 
 ## Mwanzo wa haraka — tumia mtoa huduma asilia wa `agentrouter` (inapendekezwa)
 
-Kwa watumiaji wengi, **hakuna usanidi maalum unaohitajika**. OmniRoute huja na
+Kwa watumiaji wengi, **hakuna usanidi maalum unaohitajika**. 67router huja na
 mtoa huduma wa `agentrouter` aliyejengewa ndani, ambaye tayari ana muundo kamili wa mawasiliano wa Claude Code (angalia
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Ili kuutumia:
 
@@ -34,7 +34,7 @@ URL ya msingi, njia ya gumzo, au seti ya vichwa.
 
 ## Kwa kina: kuunganisha kupitia aina ya mtoa huduma inayooana na Claude Code
 
-OmniRoute pia inasaidia AgentRouter (na huduma zinazofanana za upitishaji) kupitia aina ya mtoa huduma
+67router pia inasaidia AgentRouter (na huduma zinazofanana za upitishaji) kupitia aina ya mtoa huduma
 **inayooana na Claude Code** (`anthropic-compatible-cc-*`), ambayo hutumia
 Anthropic Messages API ikiwa na muundo sahihi wa mawasiliano. Mtoa huduma wa kawaida wa
 `openai-compatible-chat` unaoelekezwa kwenye `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Akaunti ya AgentRouter na ufunguo wa API. Watumiaji wapya wanaojisajili hupata salio la bila malipo kupitia kiungo cha ushirika
   kwenye [README](../README.md) ya mradi.
-- OmniRoute inayoendeshwa huku alama ya kipengele ya `ENABLE_CC_COMPATIBLE_PROVIDER` ikiwa imewashwa
+- 67router inayoendeshwa huku alama ya kipengele ya `ENABLE_CC_COMPATIBLE_PROVIDER` ikiwa imewashwa
   (angalia hapa chini).
 
 ## 1. Washa aina ya mtoa huduma inayooana na CC
 
 Aina ya mtoa huduma inayooana na Claude Code imewekewa kikomo kwa kutumia alama ya kipengele kwa sababu
 hutuma trafiki inayofanana sana na kiteja rasmi cha Claude Code. Iwashe kwa
-kuweka kigeu cha mazingira kabla ya kuanzisha OmniRoute:
+kuweka kigeu cha mazingira kabla ya kuanzisha 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

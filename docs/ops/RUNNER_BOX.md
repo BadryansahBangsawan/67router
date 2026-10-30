@@ -5,7 +5,7 @@ title: Self-Hosted Runner Box Operations
 # Self-Hosted Runner Box Operations (.113 pool)
 
 The self-hosted pool runs on the **.113** box (`tomni-proxmox-113`). Since 2026-10-18 each
-OmniRoute runner has **one role**, one label, and a memory/CPU budget sized to what its workload
+67router runner has **one role**, one label, and a memory/CPU budget sized to what its workload
 measured. The Turbopack slot gets what the build needs; the other slots are sized to their
 measured peaks. The box only overcommits when a Turbopack build coincides with a Release-Green
 webpack build and a lint job; host swap (16 GB) absorbs that, and because pull-request Builds run
@@ -27,7 +27,7 @@ Measured 2026-10-18:
 | swap      | 16 GB                        | `omniroute-113-5` runs with swap off (`MemorySwapMax=0`) so a runaway build is cut at its cap instead of swapping the box                                                                                                                                                                                                                             |
 | `/tmp`    | **12 GB tmpfs = RAM**        | anything parked there is memory; leftovers are swept after 3 h                                                                                                                                                                                                                                                                                        |
 | CPU       | load 60 on 32 cores observed | before the quotas, one Turbopack build (~1166 % CPU) plus a coverage suite on the same box starved the other listeners' heartbeats (`The self-hosted runner lost communication`, #16853)                                                                                                                                                              |
-| runners   | **6 listeners**              | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` are disabled (`systemctl enable --now` brings one back)                                                                                                                                                                                                                               |
+| runners   | **6 listeners**              | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` are disabled (`systemctl enable --now` brings one back)                                                                                                                                                                                                                                |
 
 The limits live in each unit's `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 (previous values kept as `override.conf.bak-20261018`) and were applied live with
@@ -72,7 +72,7 @@ worker reports the job as cancelled and the listener goes back online by itself.
 
 The runner's default `KillMode=process` leaves `Runner.Worker → npm → next-build`
 alive when a unit is stopped or restarted — an orphan build keeps eating RAM and
-CPU with no job attached. Every OmniRoute unit carries a drop-in
+CPU with no job attached. Every 67router unit carries a drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 with `KillMode=mixed`: SIGTERM to the listener first, SIGKILL to the whole cgroup at
 `TimeoutStop`. It takes effect on the unit's next restart — restart **one runner at
@@ -115,7 +115,7 @@ a time, only when idle**, with the idle check and the restart in the same comman
   a backend-only `next build` (~5–6 GB; webpack) and `quality.yml` `lint-guard`. `omniroute-113`
   had `MemoryHigh=4G` until 2026-10-18 — the promptfoo build reclaimed its way through 54 minutes
   there; 8 GB removes the throttling.
-- **Fewer listeners on purpose.** Four OmniRoute units were disabled on 2026-08-29 — each extra
+- **Fewer listeners on purpose.** Four 67router units were disabled on 2026-08-29 — each extra
   listener is another tenant for the memory budget above. The janitor ceiling is 6 (`MAX_ACTIVE_RUNNERS=6` in cron): it counts
   every `Runner.Listener` on the box, and OmniHeuris + OmniMind add two to our four.
 - **Never clean `/tmp` or `_work` by hand while any runner is busy.** A

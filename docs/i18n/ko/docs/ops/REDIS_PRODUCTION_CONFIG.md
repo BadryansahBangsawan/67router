@@ -6,7 +6,7 @@
 
 ## 개요
 
-Redis는 OmniRoute의 **선택적인 소프트 종속성**입니다. Redis를 사용할 수 없는 경우에도 애플리케이션은 정상적으로 성능을 낮춰 동작합니다(인메모리 대체 수단 사용). 프로덕션 환경에서는 Redis를 튜닝하여 다음 네 가지 개별 워크로드의 지연 시간을 줄일 수 있습니다.
+Redis는 67router의 **선택적인 소프트 종속성**입니다. Redis를 사용할 수 없는 경우에도 애플리케이션은 정상적으로 성능을 낮춰 동작합니다(인메모리 대체 수단 사용). 프로덕션 환경에서는 Redis를 튜닝하여 다음 네 가지 개별 워크로드의 지연 시간을 줄일 수 있습니다.
 
 | 워크로드           | 드라이버                      | 클라이언트 팩토리                                   | 키 패턴                                      |
 | ------------------ | ----------------------------- | --------------------------------------------------- | -------------------------------------------- |
@@ -15,7 +15,7 @@ Redis는 OmniRoute의 **선택적인 소프트 종속성**입니다. Redis를 �
 | 할당량 저장소      | `redisQuotaStore.ts`          | 별도의 `getRedisClient(url)` 싱글턴                 | 인스턴스별로 구성 가능한 `<prefix>quota:*`   |
 | 워밍업 회로 차단기 | `redisCircuitBreakerStore.ts` | `circuitBreakerFactory.ts`의 별도 클라이언트        | `<prefix>warmup:cb:<connectionId>`           |
 
-OmniRoute가 단일 Redis 인스턴스(예: `127.0.0.1:6379`)에서 다른 앱과 공존할 수 있도록 네 워크로드 모두 하나의 네임스페이스 접두사를 공유합니다. [키 네임스페이스](#key-namespacing)를 참조하세요.
+67router가 단일 Redis 인스턴스(예: `127.0.0.1:6379`)에서 다른 앱과 공존할 수 있도록 네 워크로드 모두 하나의 네임스페이스 접두사를 공유합니다. [키 네임스페이스](#key-namespacing)를 참조하세요.
 
 ---
 
@@ -38,12 +38,12 @@ OmniRoute가 단일 Redis 인스턴스(예: `127.0.0.1:6379`)에서 다른 앱�
 
 ## 키 네임스페이스
 
-OmniRoute는 호스트에서 실행되는 다른 서비스와 Redis 인스턴스를 공유합니다. 네임스페이스가 없으면 `auth:api_key:<sha256>` 또는 `rl:*` 같은 키가 동일한 Redis를 사용하는 다른 애플리케이션의 키와 충돌할 수 있습니다(이 인스턴스는 다른 서비스와 함께 `127.0.0.1:6379`에서 Redis를 실행합니다).
+67router는 호스트에서 실행되는 다른 서비스와 Redis 인스턴스를 공유합니다. 네임스페이스가 없으면 `auth:api_key:<sha256>` 또는 `rl:*` 같은 키가 동일한 Redis를 사용하는 다른 애플리케이션의 키와 충돌할 수 있습니다(이 인스턴스는 다른 서비스와 함께 `127.0.0.1:6379`에서 Redis를 실행합니다).
 
-**모든** OmniRoute 키에 접두사를 추가하려면 `REDIS_KEY_PREFIX`를 비어 있지 않은 문자열로 설정하세요.
+**모든** 67router 키에 접두사를 추가하려면 `REDIS_KEY_PREFIX`를 비어 있지 않은 문자열로 설정하세요.
 
 ```bash
-# .env — 모든 OmniRoute 키가 omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* 형식이 됩니다.
+# .env — 모든 67router 키가 omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* 형식이 됩니다.
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -92,7 +92,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # OS 페이지 캐시를 위한 공간 확보
 maxmemory-policy allkeys-lru         # 메모리 부족 시 오래된 인증 캐시 항목 제거
 
-# 영속성(선택 사항 — OmniRoute는 영속성 없이도 충돌로부터 안전함)
+# 영속성(선택 사항 — 67router는 영속성 없이도 충돌로부터 안전함)
 save 300 1                           # 키가 1개 이상 변경된 경우 최소 5분마다 스냅샷 생성
 appendonly no                        # AOF는 불필요함. 데이터는 재생성 가능
 appendfsync no                       # fsync 오버헤드 없음(RDB로 충분함)

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-achọpụta draịva SQLite ya n'oge mmalite site n'usoro ndabere nwere nzọụkwụ 5:
+67router na-achọpụta draịva SQLite ya n'oge mmalite site n'usoro ndabere nwere nzọụkwụ 5:
 
 1. **`better-sqlite3` agụnyere** (site na `dependencies` dị na `package.json`)
    — nke kachasị ọsọ, faịlụ binary nke sistemụ, nke `npm install` na-etinye mgbe ngwa ọrụ build dị.
@@ -28,13 +28,13 @@ OmniRoute na-achọpụta draịva SQLite ya n'oge mmalite site n'usoro ndabere 
 - **Enweghị ngwa ọrụ build**: Ụfọdụ gburugburu (Windows ụlọ ọrụ na-enweghị VS Build
   Tools, oyiyi Docker pere mpe) enweghị ike ịchịkọta `better-sqlite3`. Onye ntinye runtime
   na-enweta faịlụ binary e wuru tupu oge eruo site na ndekọ npm; draịva
-  ndabere na-ahụ na OmniRoute ka nwere ike ịmalite ọbụlagodi ma nke ahụ daa.
+  ndabere na-ahụ na 67router ka nwere ike ịmalite ọbụlagodi ma nke ahụ daa.
 - **Sistemụ ndị na-enweghị njikọ netwọkụ mpụga**: Ọ bụrụ na enweghị ike iru ndekọ npm, `node:sqlite`
   ma ọ bụ `sql.js` na-ekwe nkwa na arụmọrụ bụ isi ga-adị.
 
 ## Nnyocha magic-byte
 
-Tupu ebugo faịlụ `.node` etinyere n'oge runtime, OmniRoute na-agụ baitị 8
+Tupu ebugo faịlụ `.node` etinyere n'oge runtime, 67router na-agụ baitị 8
 mbụ ma tụnyere ha na magic ndị amaara nke ikpo okwu:
 
 | Ikpo okwu             | Baitị (hex)   | Akara       |
@@ -104,9 +104,9 @@ Mmejuputa:
 ## Topology otu onye na-ede (anaghị akwado HA)
 
 Usoro ndabere draịva dị n'elu ka na-agba n'ime **otu process**. SQLite ndabara
-nke OmniRoute nwere **otu onye na-ede**:
+nke 67router nwere **otu onye na-ede**:
 
-- Ejikọla replicas OmniRoute abụọ na otu faịlụ `storage.sqlite`.
+- Ejikọla replicas 67router abụọ na otu faịlụ `storage.sqlite`.
 - Mmalitegharị container, deploy Recreate, OOM kill, ma ọ bụ mmalitegharị HEALTHCHECK na-akwụsị
   session SSE niile ka na-arụ ọrụ. Enweghị session drain n'ụzọ ndabara.
 - Liveness nke orchestrator nke na-ewere `/healthz` ji nwayọ dị ka ihe nwụrụ anwụ ga-akwụsị naanị

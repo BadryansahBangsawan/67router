@@ -15,7 +15,7 @@
 - [OAuth 2.0 untuk aplikasi native (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret untuk aplikasi terinstal bersifat publik; PKCE menyediakan keamanan yang sebenarnya.
 - [Firebase API keys](https://firebase.google.com/docs/projects/api-keys) — Pengidentifikasi klien Web bersifat publik secara desain.
 
-OmniRoute harus menyematkan nilai-nilai ini agar pengguna yang tidak mengonfigurasi `.env` tetap mendapatkan alur OAuth yang langsung berfungsi. Tanpa fallback yang disematkan, penyedia Gemini / Antigravity berhenti berfungsi bagi setiap pengguna yang mengikuti alur "cukup clone dan jalankan".
+67router harus menyematkan nilai-nilai ini agar pengguna yang tidak mengonfigurasi `.env` tetap mendapatkan alur OAuth yang langsung berfungsi. Tanpa fallback yang disematkan, penyedia Gemini / Antigravity berhenti berfungsi bagi setiap pengguna yang mengikuti alur "cukup clone dan jalankan".
 
 Namun, nilai literal seperti `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` terdeteksi oleh **GitHub Secret Scanning**, **Semgrep**, dan pemindai pola serupa. Setiap rilis menjadi rentetan false positive yang mengganggu, push protection memblokir commit yang sah, dan operator berhenti memercayai feed peringatan.
 

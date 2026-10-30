@@ -4,7 +4,7 @@
 
 ---
 
-Ang RTK compression ay ang command-aware compression engine ng OmniRoute para sa output ng terminal at tool. Dinisenyo ito para sa mga session ng coding-agent kung saan ang karamihan ng paglaki ng context ay nagmumula sa mga test log, build output, ingay ng package manager, shell transcript, Docker output, git output, at stack trace.
+Ang RTK compression ay ang command-aware compression engine ng 67router para sa output ng terminal at tool. Dinisenyo ito para sa mga session ng coding-agent kung saan ang karamihan ng paglaki ng context ay nagmumula sa mga test log, build output, ingay ng package manager, shell transcript, Docker output, git output, at stack trace.
 
 Maaaring direktang patakbuhin ang RTK gamit ang `defaultMode: "rtk"` o bilang unang hakbang sa isang stacked pipeline, karaniwan ay:
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 Sa pagkakasunod-sunod na iyon, kino-compress muna ang maingay na machine output, pagkatapos ay hinahayaan ang Caveman na paikliin ang natitirang prose.
 
-Iniulat ng upstream RTK ang `60-90%` na pagtitipid sa command output. Ang sample session sa README nito ay bumaba mula sa `~118,000` karaniwang token patungong `~23,900` RTK token, na katumbas ng `79.7%` na natipid (`~80%`). Ginagamit ng OmniRoute ang upstream average na iyon para sa pagkalkula ng stacked savings kasama ang Caveman input compression:
+Iniulat ng upstream RTK ang `60-90%` na pagtitipid sa command output. Ang sample session sa README nito ay bumaba mula sa `~118,000` karaniwang token patungong `~23,900` RTK token, na katumbas ng `79.7%` na natipid (`~80%`). Ginagamit ng 67router ang upstream average na iyon para sa pagkalkula ng stacked savings kasama ang Caveman input compression:
 
 ```txt
 Average ng RTK:  80% ang natipid
@@ -48,7 +48,7 @@ Nilo-load ng RTK ang mga filter sa ganitong pagkakasunod-sunod:
 2. Mga global filter mula sa `DATA_DIR/rtk/filters.toml` at `DATA_DIR/rtk/filters.json`.
 3. Mga built-in na filter mula sa `open-sse/services/compression/engines/rtk/filters/`.
 
-Sa loob ng parehong scope, mas inuuna ang mga RTK TOML schema v1 filter kaysa sa mga OmniRoute JSON filter. Sinusuri ang mga TOML `match_command` expression bago ang command-type matching upang ma-override ng isang na-import na command-specific filter ang mas malawak na filter sa scope na iyon. Mas inuuna pa rin ang project scope kaysa sa global scope, anuman ang format ng file.
+Sa loob ng parehong scope, mas inuuna ang mga RTK TOML schema v1 filter kaysa sa mga 67router JSON filter. Sinusuri ang mga TOML `match_command` expression bago ang command-type matching upang ma-override ng isang na-import na command-specific filter ang mas malawak na filter sa scope na iyon. Mas inuuna pa rin ang project scope kaysa sa global scope, anuman ang format ng file.
 
 Sadyang nililimitahan ng trust gate ang mga project filter dahil maaaring baguhin ng mga regex filter kung paano ipinapakita sa mga agent ang tool output. Tinatanggap ang isang project filter file kapag totoo ang isa sa mga sumusunod:
 
@@ -71,7 +71,7 @@ Ang mga custom filter ay maaaring isang filter object o isang array ng mga filte
 
 ## Pagiging tugma sa RTK TOML schema v1
 
-Maaaring i-parse, i-validate, i-test, at i-install ng OmniRoute ang mga deklaratibong filter file gamit ang RTK TOML schema v1.
+Maaaring i-parse, i-validate, i-test, at i-install ng 67router ang mga deklaratibong filter file gamit ang RTK TOML schema v1.
 Ang mga sinusuportahang field ay `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, at mga inline test na `[[tests.<filter>]]`.
@@ -80,7 +80,7 @@ Tinatanggihan ang mga hindi kilalang field, mga hindi wasto o hindi ligtas na re
 ngunit hindi ito maaaring i-install o i-load. Nananatiling
 fail-open ang mga pagkabigo sa pag-load ng custom na file: nilalaktawan ang hindi wastong file at patuloy na gumagana ang mga natitirang filter.
 
-Natatanggap ng OmniRoute ang output ng tool pagkatapos na itong makuha ng client, kaya hindi mababago ng `filter_stderr = true`
+Natatanggap ng 67router ang output ng tool pagkatapos na itong makuha ng client, kaya hindi mababago ng `filter_stderr = true`
 ang pagkuha sa proseso. Tinatanggap ang field bilang isang no-op at nagbabalik ng babala ang validation.
 Sadyang inilalarawan ito bilang **pagiging tugma sa RTK TOML schema v1**, hindi ganap na pagiging tugma
 sa RTK executable, mga shell hook, mga implementasyon ng command sa Rust, o sa layout ng trust store nito.

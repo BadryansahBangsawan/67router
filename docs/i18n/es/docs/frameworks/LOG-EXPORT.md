@@ -4,7 +4,7 @@
 
 ---
 
-Exportación continua e incremental de los registros de llamadas de OmniRoute a un almacén de analítica externo.
+Exportación continua e incremental de los registros de llamadas de 67router a un almacén de analítica externo.
 
 La pestaña Logs del panel conserva el historial de solicitudes en SQLite (`call_logs`), cuyo tamaño está limitado por la rotación y la retención. La exportación de registros envía el mismo conjunto de registros de forma programada para que pueda conservarse más allá de la base de datos local y combinarse con otros datos. BigQuery es el primer destino; la canalización funciona como un registro, por lo que se pueden añadir más destinos.
 

@@ -6,7 +6,7 @@
 
 ## Melden von Sicherheitslücken
 
-Wenn Sie eine Sicherheitslücke in OmniRoute entdecken, melden Sie diese bitte verantwortungsvoll:
+Wenn Sie eine Sicherheitslücke in 67router entdecken, melden Sie diese bitte verantwortungsvoll:
 
 1. **ERSTELLEN SIE KEIN** öffentliches GitHub-Issue
 2. Verwenden Sie [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Branch `stable/v3` eröffnet wird (siehe [`ROADMAP.md`](ROADMAP.md) → „Phase
 
 ## Sicherheitsarchitektur
 
-OmniRoute implementiert ein mehrschichtiges Sicherheitsmodell:
+67router implementiert ein mehrschichtiges Sicherheitsmodell:
 
 ```
 Anfrage → CORS → Autorisierungs-Pipeline (klassifizieren → Richtlinien → durchsetzen)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Guardrails-Framework
 
-OmniRoute enthält eine im laufenden Betrieb neu ladbare **Guardrails-Registry** (`src/lib/guardrails/`) mit 3 integrierten Guardrails, die nach Priorität geordnet sind:
+67router enthält eine im laufenden Betrieb neu ladbare **Guardrails-Registry** (`src/lib/guardrails/`) mit 3 integrierten Guardrails, die nach Priorität geordnet sind:
 
 | Guardrail          | Priorität | Zweck                                                                                               |
 | ------------------ | --------- | --------------------------------------------------------------------------------------------------- |

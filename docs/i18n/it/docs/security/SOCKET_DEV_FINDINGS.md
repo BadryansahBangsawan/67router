@@ -48,7 +48,7 @@ tramite un tunnel **non può** attivare questo percorso di codice.
 | Linux+Firefox/Chromium | aggiornamento del DB NSS per profilo tramite `certutil -d sql:<profile>`                                          |
 
 Si tratta degli stessi comandi utilizzati da `mitmproxy`, Charles Proxy, Fiddler e
-Caddy. La loro presenza in OmniRoute è documentata in
+Caddy. La loro presenza in 67router è documentata in
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mitigazione della v3.8.6**:
@@ -110,7 +110,7 @@ propria automazione. Verrà rimosso nella v3.9.
 
 **Perché lo manteniamo**: l'importazione da Zed è il percorso di onboarding più
 semplice per gli utenti che utilizzano già Zed e desiderano replicare le chiavi
-dei propri provider in OmniRoute senza doverle incollare nuovamente.
+dei propri provider in 67router senza doverle incollare nuovamente.
 
 ---
 
@@ -121,7 +121,7 @@ dei propri provider in OmniRoute senza doverle incollare nuovamente.
 **Motivo della segnalazione**: il chunk riesporta `execFileWithPassword`,
 `runElevatedPowerShell` e l'helper condiviso `quotePowerShell`. Il classificatore
 IA di Socket.dev li identifica come un generico "toolkit per l'esecuzione
-sull'host e l'elevazione dei privilegi". All'interno di OmniRoute vengono usati
+sull'host e l'elevazione dei privilegi". All'interno di 67router vengono usati
 esclusivamente dal percorso di installazione del certificato MITM (§1) e da
 `execFileWithPassword` per l'esecuzione di comandi `sudo`.
 
@@ -176,7 +176,7 @@ attivabile solo su esplicita richiesta.
 
 ---
 
-## §5 — Scrittura delle credenziali tramite OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Scrittura delle credenziali tramite 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **File sorgente**:
 
@@ -209,7 +209,7 @@ rawBody)`) prima di analizzare il JSON. Se il segreto è impostato, la firma è
    `rateLimitedUntil`, `updatedAt`). Si tratta di una **modifica incompatibile** per gli utenti
    che facevano affidamento sulla sincronizzazione remota dei token — devono abilitarla esplicitamente.
 
-**Perché la manteniamo**: Cloud Sync è l'unico modo per consentire a un tenant OmniRoute Cloud
+**Perché la manteniamo**: Cloud Sync è l'unico modo per consentire a un tenant 67router Cloud
 di centralizzare le credenziali del team. La correzione rende esplicito il modello di minaccia:
 "il server firma, il client verifica, l'operatore acconsente."
 

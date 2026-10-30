@@ -7,15 +7,15 @@
 > **Mənbə:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute agentlərlə əlaqəli üç fərqli interfeys təqdim edir. İlk baxışda oxşar görünsələr də, fərqli problemləri həll edirlər. Uyğun olanı seçmək üçün bu səhifədən istifadə edin.
+67router agentlərlə əlaqəli üç fərqli interfeys təqdim edir. İlk baxışda oxşar görünsələr də, fərqli problemləri həll edirlər. Uyğun olanı seçmək üçün bu səhifədən istifadə edin.
 
 ## Qısa xülasə
 
 | İnterfeys                        | Ən uyğun istifadə sahəsi                                                                                                                                                   | Nəqliyyat                                               | Standart                      |
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------- |
 | **A2A — Agentdən agentə**        | A2A protokolundan istifadə edən həmkar agentlərlə agentlərarası əməkdaşlıq                                                                                                 | HTTP üzərindən JSON-RPC 2.0                             | A2A v0.3 (açıq spesifikasiya) |
-| **ACP — CLI Agentləri Reyestri** | İstifadəçinin cihazında quraşdırılmış CLI proqramlaşdırma agentlərini (Cursor, Cline, Codex CLI, Claude Code, Aider və s.) aşkarlamaq / qeydiyyatdan keçirmək / işə salmaq | HTTP REST                                               | OmniRoute-a məxsus            |
-| **Bulud Agentləri**              | Uzunmüddətli proqramlaşdırma tapşırıqlarını xarici bulud xidmətlərinə (Codex Cloud, Devin, Jules, Cursor Cloud) göndərmək                                                  | HTTP REST + verilənlər bazasında saxlanılan tapşırıqlar | OmniRoute-a məxsus            |
+| **ACP — CLI Agentləri Reyestri** | İstifadəçinin cihazında quraşdırılmış CLI proqramlaşdırma agentlərini (Cursor, Cline, Codex CLI, Claude Code, Aider və s.) aşkarlamaq / qeydiyyatdan keçirmək / işə salmaq | HTTP REST                                               | 67router-a məxsus             |
+| **Bulud Agentləri**              | Uzunmüddətli proqramlaşdırma tapşırıqlarını xarici bulud xidmətlərinə (Codex Cloud, Devin, Jules, Cursor Cloud) göndərmək                                                  | HTTP REST + verilənlər bazasında saxlanılan tapşırıqlar | 67router-a məxsus             |
 
 Bu üçü bir-birindən müstəqildir — istənilən alt çoxluğu seçə bilərsiniz.
 
@@ -38,14 +38,14 @@ Bu cihazdan kənarda işi görmək üçün bulud xidmətinə (Codex Cloud / Curs
 ## 1. A2A — Agentdən agentə
 
 **Spesifikasiya:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute son nöqtəsi:** `POST /a2a` (JSON-RPC 2.0)
+**67router son nöqtəsi:** `POST /a2a` (JSON-RPC 2.0)
 **Agent Kartı:** `GET /.well-known/agent.json`
 
 ### Nə zaman istifadə etməli
 
-- OmniRoute-un həmkarlardan biri olduğu çoxagentli sistem qurarkən
-- OmniRoute-un marşrutlaşdırma imkanlarını (ağıllı marşrutlaşdırma, kvota idarəetməsi və s.) Google ADK kimi freymvorklardakı agentlərə və ya ümumi agent şəbəkələrinə təqdim edərkən
-- OmniRoute-u standart aşkarlama + çağırış interfeysi ilə əhatə edərkən
+- 67router-un həmkarlardan biri olduğu çoxagentli sistem qurarkən
+- 67router-un marşrutlaşdırma imkanlarını (ağıllı marşrutlaşdırma, kvota idarəetməsi və s.) Google ADK kimi freymvorklardakı agentlərə və ya ümumi agent şəbəkələrinə təqdim edərkən
+- 67router-u standart aşkarlama + çağırış interfeysi ilə əhatə edərkən
 
 ### Metodlar
 
@@ -69,12 +69,12 @@ Nəqliyyat təfərrüatları, agent kartının strukturu, tapşırıq TTL konfiq
 
 ## 2. ACP — CLI Agentləri Reyestri
 
-**OmniRoute endpoint-i:** `GET /api/acp/agents`
+**67router endpoint-i:** `GET /api/acp/agents`
 **Mənbə:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Bu nədir
 
-ACP OmniRoute-un **lokal CLI agentləri inventarıdır**. O, host sistemdə hansı proqramlaşdırma CLI-lərinin quraşdırıldığını (Cursor, Cline, Claude Code, Codex CLI, Continue və s.) müəyyən edir, onların versiyalarını aşkarlayır və istifadəçinin hər bir CLI-ni OmniRoute-a yönləndirə bilməsi üçün onları idarəetmə panelində göstərir.
+ACP 67router-un **lokal CLI agentləri inventarıdır**. O, host sistemdə hansı proqramlaşdırma CLI-lərinin quraşdırıldığını (Cursor, Cline, Claude Code, Codex CLI, Continue və s.) müəyyən edir, onların versiyalarını aşkarlayır və istifadəçinin hər bir CLI-ni 67router-a yönləndirə bilməsi üçün onları idarəetmə panelində göstərir.
 
 HTTP interfeysi "CLI Tools" istifadəçi interfeysini və CLI barmaq izi izlənməsini təmin edən daxili inventardır (baxın: [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Bundan əlavə, daxili proses meneceri qeydiyyatdan keçirilmiş Gemini başladıcısı üçün yerli Agent Client Protocol-u, digər müqavilələr üçün isə köhnə stdio adapterlərini dəstəkləyir.
 Bu fərqli rejimlər və məhdudiyyətlər üçün [ACP reyestri və başladıcıları](./ACP.md) bölməsinə baxın.
@@ -111,8 +111,8 @@ POST üçün sorğu gövdəsinin strukturu (`src/app/api/acp/agents/route.ts` da
 
 ### İstifadə halları
 
-- İdarəetmə panelindəki "CLI Tools" səhifəsi quraşdırılmış alətləri sadalayır və hər birini OmniRoute-a yönləndirməyə kömək edir
-- Xüsusi agentlər təcrübəli istifadəçilərə OmniRoute-un standart olaraq tanımadığı daxili/mülkiyyətçi CLI-ləri qeydiyyatdan keçirməyə imkan verir
+- İdarəetmə panelindəki "CLI Tools" səhifəsi quraşdırılmış alətləri sadalayır və hər birini 67router-a yönləndirməyə kömək edir
+- Xüsusi agentlər təcrübəli istifadəçilərə 67router-un standart olaraq tanımadığı daxili/mülkiyyətçi CLI-ləri qeydiyyatdan keçirməyə imkan verir
 - Aşkarlama nəticəsi `cli-tools` barmaq izi matrisini təmin edir
 
 ### ACP-dən nə zaman istifadə ETMƏMƏLİ
@@ -121,12 +121,12 @@ POST üçün sorğu gövdəsinin strukturu (`src/app/api/acp/agents/route.ts` da
 
 ## 3. Bulud Agentləri
 
-**OmniRoute son nöqtələri:** `/api/v1/agents/tasks/*` (həyat dövrü) + `/api/cloud/*` (infrastruktur)
+**67router son nöqtələri:** `/api/v1/agents/tasks/*` (həyat dövrü) + `/api/cloud/*` (infrastruktur)
 **Mənbə:** `src/lib/cloudAgent/`
 
 ### Bu nədir
 
-Üçüncü tərəf bulud proqramlaşdırma agentləri üzərində vahid interfeysdir. Siz sorğu mətni + repozitoriya URL-i göndərirsiniz, OmniRoute onu uyğun bulud agentinə yönləndirir, statusu mütəmadi yoxlayır və nəticələri qaytarır.
+Üçüncü tərəf bulud proqramlaşdırma agentləri üzərində vahid interfeysdir. Siz sorğu mətni + repozitoriya URL-i göndərirsiniz, 67router onu uyğun bulud agentinə yönləndirir, statusu mütəmadi yoxlayır və nəticələri qaytarır.
 
 ### Dəstəklənən agentlər (4, hamısı `src/lib/cloudAgent/agents/` daxilində təsdiqlənib)
 
@@ -167,8 +167,8 @@ Hər ikisində "uzunmüddətli tapşırıqlar" var, lakin fərqli səviyyələrd
 
 | Aspekt                   | A2A                                                                                        | Bulud Agentləri                                                  |
 | ------------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| Standart                 | Açıq A2A v0.3                                                                              | OmniRoute-a xas                                                  |
-| Hesablamanın icra yeri   | OmniRoute daxilində (konfiqurasiya edilmiş kombinasiyalardan istifadə edir)                | Xarici (Codex / Devin / Jules serverləri)                        |
+| Standart                 | Açıq A2A v0.3                                                                              | 67router-a xas                                                   |
+| Hesablamanın icra yeri   | 67router daxilində (konfiqurasiya edilmiş kombinasiyalardan istifadə edir)                 | Xarici (Codex / Devin / Jules serverləri)                        |
 | Tapşırığın müddəti       | Standart TTL 5 dəqiqə (`TaskManager` daxilində konfiqurasiya edilə bilər)                  | Dəqiqələrdən saatlara qədər                                      |
 | Repozitoriyadan xəbərdar | Xeyr (yalnız sorğuları ötürür)                                                             | Bəli (repo URL-si + budaq)                                       |
 | İstifadə ssenarisi       | Agentlərarası əməkdaşlıq, xidmət kimi ağıllı marşrutlaşdırma                               | "Y reposunda X funksiyasını reallaşdır" tapşırığını həvalə etmək |
@@ -176,7 +176,7 @@ Hər ikisində "uzunmüddətli tapşırıqlar" var, lakin fərqli səviyyələrd
 
 ## İnteqrasiya Nümunələri
 
-### OmniRoute-un A2A imkanlarını kəşf edin
+### 67router-un A2A imkanlarını kəşf edin
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -184,7 +184,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Bütün 6 bacarıq, nəqliyyat və versiya məlumatları ilə Agent Kartını qaytarır.
 
-### OmniRoute-u A2A agenti kimi çağırın
+### 67router-u A2A agenti kimi çağırın
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -258,7 +258,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute nüvəsi  │
+                │   67router nüvəsi  │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

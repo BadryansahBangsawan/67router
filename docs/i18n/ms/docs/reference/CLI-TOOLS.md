@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Bahasa Melayu)
+# CLI Tools — 67router (Bahasa Melayu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Kemas kini terakhir: 2026-08-23
 
-OmniRoute berintegrasi dengan tiga kategori alat CLI yang merangkumi tiga halaman papan pemuka khusus:
+67router berintegrasi dengan tiga kategori alat CLI yang merangkumi tiga halaman papan pemuka khusus:
 
-| Halaman        | Laluan                  | Konsep                                                                                   | Bilangan     |
-| -------------- | ----------------------- | ---------------------------------------------------------------------------------------- | ------------ |
-| **CLI Code's** | `/dashboard/cli-code`   | Alat pengekodan yang anda arahkan ke OmniRoute (Klien → CLI → OmniRoute → Penyedia)      | 26           |
-| **CLI Agents** | `/dashboard/cli-agents` | Ejen berautonomi yang anda arahkan ke OmniRoute (aliran sama, skop lebih luas)           | 10           |
-| **ACP Agents** | `/dashboard/acp-agents` | CLI yang OmniRoute mulakan sebagai bahagian belakang melalui stdio/ACP (aliran terbalik) | lihat daftar |
+| Halaman        | Laluan                  | Konsep                                                                                  | Bilangan     |
+| -------------- | ----------------------- | --------------------------------------------------------------------------------------- | ------------ |
+| **CLI Code's** | `/dashboard/cli-code`   | Alat pengekodan yang anda arahkan ke 67router (Klien → CLI → 67router → Penyedia)       | 26           |
+| **CLI Agents** | `/dashboard/cli-agents` | Ejen berautonomi yang anda arahkan ke 67router (aliran sama, skop lebih luas)           | 10           |
+| **ACP Agents** | `/dashboard/acp-agents` | CLI yang 67router mulakan sebagai bahagian belakang melalui stdio/ACP (aliran terbalik) | lihat daftar |
 
 Laluan legasi diubah hala melalui 308: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ Laluan legasi diubah hala melalui 308: `/dashboard/cli-tools` → `/dashboard/cl
 CLI Code's / CLI Agents (aliran penggunaan):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (semuanya menghala ke OmniRoute)
+           ▼  (semuanya menghala ke 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute menghalakan permintaan kepada penyedia yang betul)
+           ▼  (67router menghalakan permintaan kepada penyedia yang betul)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (aliran permulaan terbalik):
-    Permintaan klien → OmniRoute → memulakan CLI melalui stdio/ACP → respons
+    Permintaan klien → 67router → memulakan CLI melalui stdio/ACP → respons
 ```
 
 **Manfaat:**
@@ -45,8 +45,8 @@ ACP Agents (aliran permulaan terbalik):
 
 ## Konfigurasi automatik dengan `setup-*`
 
-Anda tidak perlu menulis konfigurasi setiap alat secara manual. OmniRoute menyediakan satu arahan `setup-*`
-bagi setiap CLI yang disokong, yang membaca katalog model **langsung** daripada OmniRoute yang sedang berjalan
+Anda tidak perlu menulis konfigurasi setiap alat secara manual. 67router menyediakan satu arahan `setup-*`
+bagi setiap CLI yang disokong, yang membaca katalog model **langsung** daripada 67router yang sedang berjalan
 (setempat atau jauh) dan menulis konfigurasi alat tersebut pada mesin anda:
 
 ```bash
@@ -58,7 +58,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Setiap arahan menerima `--remote <url> --api-key <key>` (konfigurasikan alat setempat untuk menggunakan
-OmniRoute jauh), `--dry-run` (pratonton tanpa menulis), dan `--port`. Alat
+67router jauh), `--dry-run` (pratonton tanpa menulis), dan `--port`. Alat
 tanpa penemuan automatik model (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) menerima
 `--model <id>` (dan `--yes` untuk pelaksanaan tidak interaktif). `setup-5dive` ialah satu-satunya
 resipi yang tidak menulis di bawah `$HOME`: ia mengkonfigurasi sekumpulan ejen 5dive dengan
@@ -77,9 +77,9 @@ tetapi tidak mempunyai resipi `setup-*`/`configure`.
 
 ### Menjalankan arahan ini di dalam bekas
 
-Arahan `setup-*` yang dilaksanakan di dalam bekas OmniRoute menulis ke dalam direktori utama
+Arahan `setup-*` yang dilaksanakan di dalam bekas 67router menulis ke dalam direktori utama
 bekas itu sendiri, yang tidak dibaca oleh mana-mana CLI hos dan akan hilang bersama
-bekas tersebut. OmniRoute mengesan keadaan itu dan keluar dengan kod `2` berserta arahan, bukannya
+bekas tersebut. 67router mengesan keadaan itu dan keluar dengan kod `2` berserta arahan, bukannya
 menulis. Terdapat dua cara yang disokong untuk meneruskan — pasang CLI pada hos dan
 gunakan `omniroute connect` untuk menyambung ke bekas, atau lekap-ikat direktori konfigurasi dan tetapkan
 `CLI_CONFIG_HOME` (profil compose `host`). Setiap arahan `setup-*`, termasuk
@@ -203,7 +203,7 @@ Ejen autonomi yang dipaparkan dalam `/dashboard/cli-agents`:
 
 ## 3. Ejen ACP (/dashboard/acp-agents)
 
-Halaman ini (dinamakan semula daripada `/dashboard/agents`) menunjukkan CLI yang boleh **dimulakan** oleh OmniRoute sebagai enjin pelaksanaan bahagian belakang melalui protokol stdio/ACP. Katalog ini diselenggarakan secara berasingan dalam `src/lib/acp/registry.ts` dan **tidak** sama dengan `CLI_TOOLS`.
+Halaman ini (dinamakan semula daripada `/dashboard/agents`) menunjukkan CLI yang boleh **dimulakan** oleh 67router sebagai enjin pelaksanaan bahagian belakang melalui protokol stdio/ACP. Katalog ini diselenggarakan secara berasingan dalam `src/lib/acp/registry.ts` dan **tidak** sama dengan `CLI_TOOLS`.
 
 ---
 
@@ -330,7 +330,7 @@ Terjemahan penuh PT-BR dan EN disediakan. 39 lokal lain kembali kepada EN secara
 
 ## 9. Mula Pantas
 
-### Langkah 1 — Dapatkan Kunci API OmniRoute
+### Langkah 1 — Dapatkan Kunci API 67router
 
 1. Buka `/dashboard/api-manager` → **Cipta Kunci API**
 2. Berikannya nama (cth. `cli-tools`) dan pilih semua kebenaran
@@ -394,7 +394,7 @@ cargo install smelt  # Berasaskan Rust
 ### Langkah 4 — Tetapkan Pemboleh Ubah Persekitaran Global
 
 ```bash
-# Titik Akhir Universal OmniRoute
+# Titik Akhir Universal 67router
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -506,7 +506,7 @@ EOF
 **Mod VS Code:**
 Tetapan sambungan Cline → Penyedia API: `OpenAI Compatible` → URL Asas: `http://localhost:20128/v1`
 
-Atau gunakan papan pemuka OmniRoute → **Alat CLI → Cline → Gunakan Konfigurasi**.
+Atau gunakan papan pemuka 67router → **Alat CLI → Cline → Gunakan Konfigurasi**.
 
 ---
 
@@ -527,7 +527,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Atau gunakan papan pemuka OmniRoute → **Alat CLI → KiloCode → Gunakan Konfigurasi**.
+Atau gunakan papan pemuka 67router → **Alat CLI → KiloCode → Gunakan Konfigurasi**.
 
 ---
 
@@ -551,14 +551,14 @@ Mulakan semula VS Code selepas mengedit.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Gunakan ini apabila VS Code Insiders dikonfigurasikan untuk model titik akhir tersuai dan anda mahu OmniRoute berfungsi tanpa medan pengepala tersuai.
+Gunakan ini apabila VS Code Insiders dikonfigurasikan untuk model titik akhir tersuai dan anda mahu 67router berfungsi tanpa medan pengepala tersuai.
 
 **Lokasi yang disyorkan:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Contoh menggunakan alias OmniRoute bertoken:**
+**Contoh menggunakan alias 67router bertoken:**
 
 ```json
 [
@@ -582,7 +582,7 @@ Gunakan ini apabila VS Code Insiders dikonfigurasikan untuk model titik akhir te
 
 **Nota:**
 
-- Gantikan `sk-your-omniroute-key` dengan kunci API yang dicipta dalam OmniRoute.
+- Gantikan `sk-your-omniroute-key` dengan kunci API yang dicipta dalam 67router.
 - Medan `url` hendaklah menghala ke `/api/v1/vscode/{token}/chat/completions`.
 - Medan `modelsUrl` hendaklah menghala ke `/api/v1/vscode/{token}/models`.
 - Utamakan aliran biasa `/v1` + pengepala Bearer apabila klien menyokong pengepala tersuai.
@@ -596,17 +596,17 @@ Gunakan ini apabila VS Code Insiders dikonfigurasikan untuk model titik akhir te
 # Log masuk ke akaun AWS/Kiro anda:
 kiro-cli login
 
-# CLI menggunakan pengesahannya sendiri — OmniRoute tidak diperlukan sebagai bahagian belakang untuk Kiro CLI itu sendiri.
-# Gunakan kiro-cli bersama OmniRoute untuk alatan lain.
+# CLI menggunakan pengesahannya sendiri — 67router tidak diperlukan sebagai bahagian belakang untuk Kiro CLI itu sendiri.
+# Gunakan kiro-cli bersama 67router untuk alatan lain.
 kiro-cli status
 ```
 
-Untuk aplikasi desktop **Kiro IDE**, gunakan titik akhir MITM yang didedahkan oleh OmniRoute
+Untuk aplikasi desktop **Kiro IDE**, gunakan titik akhir MITM yang didedahkan oleh 67router
 di bawah `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. CLI OmniRoute Dalaman
+## 10. CLI 67router Dalaman
 
 Binari `omniroute` menyediakan perintah untuk kitaran hayat pelayan, persediaan, diagnostik dan pengurusan penyedia. Titik masuk: `bin/omniroute.mjs`.
 
@@ -640,7 +640,7 @@ Pemboleh ubah persekitaran yang dikenali untuk persediaan bukan interaktif:
 | Pemboleh ubah       | Tujuan                                                                   |
 | ------------------- | ------------------------------------------------------------------------ |
 | `OMNIROUTE_API_KEY` | Kunci API penyedia (terikat pada `--api-key` melalui `.env()` Commander) |
-| `DATA_DIR`          | Gantikan direktori data OmniRoute                                        |
+| `DATA_DIR`          | Gantikan direktori data 67router                                         |
 
 Semua input bukan interaktif lain dihantar sebagai bendera, bukan pemboleh ubah persekitaran:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -663,7 +663,7 @@ Doctor menjalankan pemeriksaan berikut: `Config`, `Database`, `Storage/encryptio
 ### Pengurusan Penyedia
 
 ```bash
-omniroute providers available                       # Katalog penyedia OmniRoute
+omniroute providers available                       # Katalog penyedia 67router
 omniroute providers available --search openai       # Tapis katalog mengikut id/nama/alias/kategori
 omniroute providers available --category api-key    # Tapis mengikut kategori (api-key, oauth, free, ...)
 omniroute providers available --json                # JSON yang boleh dibaca mesin
@@ -684,7 +684,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` mengutamakan API dan oleh itu berfungsi dengan
 konteks setempat atau jauh yang aktif. Input kelayakan hendaklah menggunakan
 `--credential-stdin` atau `--credential-env`; `--dry-run --json` hanya melaporkan
-kehadiran/bentuk yang disunting. `providers available` membaca katalog OmniRoute;
+kehadiran/bentuk yang disunting. `providers available` membaca katalog 67router;
 `providers list/test/test-all/validate` mengekalkan tingkah laku SQLite setempat dan
 tidak memerlukan pelayan untuk berjalan.
 
@@ -727,7 +727,7 @@ ditetapkan. Medan yang gagal dinyahsulitkan (kunci lapuk, teks sifer rosak) dila
 
 ### Subperintah lain
 
-Ini mengandaikan pelayan OmniRoute sedang berjalan, melainkan dinyatakan sebaliknya:
+Ini mengandaikan pelayan 67router sedang berjalan, melainkan dinyatakan sebaliknya:
 
 ```bash
 omniroute status                       # Status masa jalan yang menyeluruh
@@ -735,7 +735,7 @@ omniroute logs                         # Strim log permintaan (--json, --search,
 omniroute config list                  # Paparkan alat CLI yang dikonfigurasikan
 
 omniroute provider list                # Senaraikan penyedia yang tersedia (alias bagi providers list)
-omniroute provider add                 # Daftarkan OmniRoute sebagai penyedia pada sesuatu alat
+omniroute provider add                 # Daftarkan 67router sebagai penyedia pada sesuatu alat
 omniroute keys add | list | remove     # Urus kunci API
 omniroute models [provider]            # Senaraikan model (--json, --search)
 omniroute combo list | switch | create | delete
@@ -785,7 +785,7 @@ omniroute completion                   # Jana pelengkapan shell
 | `/v1/audio/speech`         | Teks kepada pertuturan            | ElevenLabs, OpenAI TTS               |
 | `/v1/audio/transcriptions` | Pertuturan kepada teks            | Deepgram, AssemblyAI                 |
 
-Contoh sedia untuk ditampal dengan URL OmniRoute bertoken:
+Contoh sedia untuk ditampal dengan URL 67router bertoken:
 
 ```txt
 Contoh token: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -804,7 +804,7 @@ Sembang Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-
 
 | Ralat                                                     | Punca                        | Penyelesaian                                                       |
 | --------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------ |
-| `Connection refused`                                      | OmniRoute tidak berjalan     | `omniroute serve`                                                  |
+| `Connection refused`                                      | 67router tidak berjalan      | `omniroute serve`                                                  |
 | `401 Unauthorized`                                        | Kunci API salah              | Semak dalam `/dashboard/api-manager`                               |
 | `No combo configured`                                     | Tiada kombo penghalaan aktif | Sediakan dalam `/dashboard/combos`                                 |
 | CLI memaparkan "not installed"                            | Binari tiada dalam PATH      | Semak `which <command>`                                            |
@@ -812,7 +812,7 @@ Sembang Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-
 | Pautan lama `/dashboard/cli-tools`                        | Penanda buku sebelum v3.8.6  | Dihalakan semula secara automatik ke `/dashboard/cli-code` (308)   |
 | Pautan lama `/dashboard/agents`                           | Penanda buku sebelum v3.8.6  | Dihalakan semula secara automatik ke `/dashboard/acp-agents` (308) |
 
-## Urus dasar kunci inferens dengan CLI OmniRoute
+## Urus dasar kunci inferens dengan CLI 67router
 
 Gunakan konteks pengurusan yang disahkan (lihat [Mod Jauh](../guides/REMOTE-MODE.md))
 untuk memeriksa atau mengemas kini kunci inferens sedia ada berdasarkan ID-nya:

@@ -11,12 +11,12 @@
 
 ## Qué es
 
-OmniRoute puede conectarse a un espacio de trabajo de **Notion** como **fuente de contexto**:
+67router puede conectarse a un espacio de trabajo de **Notion** como **fuente de contexto**:
 una base de conocimiento de lectura/escritura a la que los agentes acceden mediante el servidor
 MCP integrado. Una vez configurado un token de integración de Notion, las herramientas MCP
 permiten que un LLM busque páginas y bases de datos, lea el contenido de las páginas y los árboles
 de bloques, consulte bases de datos con filtros y criterios de ordenación, y añada nuevos bloques;
-todo ello a través de OmniRoute (con reintentos, tiempo de espera y clasificación de errores),
+todo ello a través de 67router (con reintentos, tiempo de espera y clasificación de errores),
 de modo que el modelo nunca acceda directamente a la API de Notion.
 
 La integración es un contenedor ligero y robusto sobre la API REST oficial de Notion
@@ -41,7 +41,7 @@ Endpoint (`NotionSourceCard`, componente hermano de `ObsidianSourceCard`) o medi
 > [!NOTE]
 > El token es un **token de integración interna de Notion**. Crea una integración en
 > <https://www.notion.com/my-integrations> y, a continuación, comparte con esa integración
-> las páginas/bases de datos a las que quieras que OmniRoute acceda (el modelo de permisos
+> las páginas/bases de datos a las que quieras que 67router acceda (el modelo de permisos
 > de Notion se basa en recursos compartidos, no en todo el espacio de trabajo).
 
 ### Configuración mediante REST
@@ -60,7 +60,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Los tres métodos requieren autenticación en el panel (`isAuthenticated`). Al realizar un `POST`,
-OmniRoute guarda el token y ejecuta de inmediato una búsqueda de prueba limitada a 1 resultado;
+67router guarda el token y ejecuta de inmediato una búsqueda de prueba limitada a 1 resultado;
 si Notion devuelve un objeto de error, el token se elimina y la llamada falla con `400`.
 
 ## Herramientas MCP (6)

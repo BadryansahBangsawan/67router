@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Source:** `open-sse/services/thinkingBudget.ts`
 
-Kasafin Tunani yana sarrafa ko OmniRoute zai **sake rubuta sigogin tunani/nazari na abokin ciniki** yayin aika buƙata zuwa masu samarwa. Ba ya kunna ko kashe matse bayanai, zaɓin hanya, ko ma’ajiyar wucin-gadi ta prompt.
+Kasafin Tunani yana sarrafa ko 67router zai **sake rubuta sigogin tunani/nazari na abokin ciniki** yayin aika buƙata zuwa masu samarwa. Ba ya kunna ko kashe matse bayanai, zaɓin hanya, ko ma’ajiyar wucin-gadi ta prompt.
 
 ## Yanaye
 
-| Yanayi                    | Abin da OmniRoute yake yi                                                                                                                | Lokacin amfani                                                                                                                                                                                    |
+| Yanayi                    | Abin da 67router yake yi                                                                                                                 | Lokacin amfani                                                                                                                                                                                    |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (tsoho) | Yana barin filayen abokin ciniki yadda suke (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config`, da sauransu). | **Codex / Desktop / duk wani abokin ciniki da ya kamata ya sarrafa ƙoƙari + taƙaitattun bayanan nazari.** Wajibi ne don ganin sassan tunani lokacin da abokin ciniki ya nemi `reasoning.summary`. |
 | **`auto`**                | Yana **cire dukkan** filayen tunani/nazari daga jikin buƙatar kafin aikawa zuwa upstream.                                                | Sai idan da gangan kake son **mai samarwa** ya ƙirƙiri saitunan tsoho kuma ba ka buƙatar tunanin da abokin ciniki ke sarrafawa. **Ba** yana nufin “nuna tunani ta atomatik” ba.                   |
@@ -38,7 +38,7 @@ Idan abokin ciniki (misali Codex Desktop) ya aika `reasoning: { effort: "ultra",
 | **Combo routing / fallbacks**                | Daban ne. Ba ya shafarsu.                                                                                                                                                               |
 | **Iyakokin token na API-key / kasafin kuɗi** | Daban ne. Ba ya shafarsu.                                                                                                                                                               |
 | **Ma’ajiyar sake kunna nazari**              | Sake shigar da bayanai tsakanin tattaunawa masu zagaye da yawa ga masu samarwa masu tsauraran ƙa’idoji (DeepSeek, Kimi, Qwen-thinking, …). Ba ɗaya yake da “nuna tunani” na Desktop ba. |
-| **Warware `encrypted_content`**              | **Ba zai yiwu ba.** Keɓantattun blobs na nazari na OpenAI/Codex ba sa bayyana abin da ke cikinsu. OmniRoute ba ya taɓa warware su (#7095 / #7176 / #7304).                              |
+| **Warware `encrypted_content`**              | **Ba zai yiwu ba.** Keɓantattun blobs na nazari na OpenAI/Codex ba sa bayyana abin da ke cikinsu. 67router ba ya taɓa warware su (#7095 / #7176 / #7304).                               |
 
 ## Bayyanannen tunani (abokan hulɗar Codex / Responses)
 
@@ -51,7 +51,7 @@ Domin abokin hulɗa ya nuna rubutun tunani, kana buƙatar **dukkan** waɗannan:
 Idan kana samun “encrypted private reasoning” kawai, to ko dai:
 
 - yanayin ya kasance **`auto`** (an cire buƙatar abokin hulɗa), ko
-- upstream ya dawo da `encrypted_content` ba tare da rubutun taƙaitawa ba (ƙuntatawar mai samarwa ce; OmniRoute zai iya nuna alamar madadi kawai, ba bayyanannen rubutu ba).
+- upstream ya dawo da `encrypted_content` ba tare da rubutun taƙaitawa ba (ƙuntatawar mai samarwa ce; 67router zai iya nuna alamar madadi kawai, ba bayyanannen rubutu ba).
 
 ## Misalan API
 
@@ -71,7 +71,7 @@ Tsari (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Dorewa / sake farawa
 
-Ana adana ƙimar ƙarƙashin maɓallin saituna `thinkingBudget`, sannan a loda ta lokacin fara aikin tsari (`hydrateThinkingBudgetConfig`). Bayan canzawa ta DB ko wasu hanyoyin da ba na API ba, **sake fara tsarin OmniRoute** domin singleton da ke cikin ƙwaƙwalwa ya yi daidai da abin da ke kan faifai.
+Ana adana ƙimar ƙarƙashin maɓallin saituna `thinkingBudget`, sannan a loda ta lokacin fara aikin tsari (`hydrateThinkingBudgetConfig`). Bayan canzawa ta DB ko wasu hanyoyin da ba na API ba, **sake fara tsarin 67router** domin singleton da ke cikin ƙwaƙwalwa ya yi daidai da abin da ke kan faifai.
 
 ## Jerin dubawar mai gudanarwa
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Ang `open-sse/` ang pangunahing streaming engine na nagpapatakbo sa bawat kahilingan sa LLM sa OmniRoute. Naglalaman ito ng ~1,400 file na nagpapatupad sa pipeline ng kahilingan, mga executor, serbisyo, MCP server, at translation layer. Ipinapaliwanag ng gabay na ito kung paano nagtutugma ang mga bahagi.
+> **TL;DR**: Ang `open-sse/` ang pangunahing streaming engine na nagpapatakbo sa bawat kahilingan sa LLM sa 67router. Naglalaman ito ng ~1,400 file na nagpapatupad sa pipeline ng kahilingan, mga executor, serbisyo, MCP server, at translation layer. Ipinapaliwanag ng gabay na ito kung paano nagtutugma ang mga bahagi.
 
 **Pinagmulan:** `open-sse/` (workspace package, ~1,440 non-test na `.ts` file)
 
@@ -12,10 +12,10 @@
 
 ## Bakit Hiwalay na Workspace Package?
 
-Ang `open-sse/` ay isang **standalone workspace** sa OmniRoute monorepo dahil sa ilang kadahilanan:
+Ang `open-sse/` ay isang **standalone workspace** sa 67router monorepo dahil sa ilang kadahilanan:
 
 1. **Muling paggamit** — inilalathala ang `open-sse` bilang `@omniroute/open-sse` sa npm, kaya maaari itong gamitin nang hiwalay ng ibang mga proyekto
-2. **Malinaw na mga hangganan** — nakahiwalay ang streaming engine mula sa UI/DB layer na partikular sa OmniRoute
+2. **Malinaw na mga hangganan** — nakahiwalay ang streaming engine mula sa UI/DB layer na partikular sa 67router
 3. **Pagganap** — walang dependency sa Next.js ang engine, kaya mas mabilis ang mga cold start sa mga kontekstong CLI/serverless
 4. **Pagbe-version** — maaaring maglabas ng release ang `open-sse` ayon sa sarili nitong iskedyul
 
@@ -460,7 +460,7 @@ Kino-convert ng `open-sse/transformer/` ang mga format sa pagitan ng **Chat Comp
 
 ### Bakit May Hiwalay na Transformer?
 
-Ang Responses API ang bagong format ng OpenAI na may **mga stateful na pag-uusap** (`previous_response_id`). Kapag nagpapadala ang isang client ng kahilingan sa Responses, ginagawa ng OmniRoute ang sumusunod:
+Ang Responses API ang bagong format ng OpenAI na may **mga stateful na pag-uusap** (`previous_response_id`). Kapag nagpapadala ang isang client ng kahilingan sa Responses, ginagawa ng 67router ang sumusunod:
 
 1. Kino-convert ang Responses → Chat Completions sa loob ng system
 2. Ipinapadala sa provider (anumang provider na sumusuporta sa Chat Completions)

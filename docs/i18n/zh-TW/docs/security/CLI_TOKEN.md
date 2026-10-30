@@ -6,7 +6,7 @@
 
 ## 概述
 
-OmniRoute CLI 命令會使用透過 `x-omniroute-cli-token` 請求標頭傳送的
+67router CLI 命令會使用透過 `x-omniroute-cli-token` 請求標頭傳送的
 `HMAC-SHA256(machine-id, salt)` 權杖，向本機管理 API 進行驗證。
 
 這可讓 CLI 子命令（`omniroute status`、`omniroute providers` 等）

@@ -7,7 +7,7 @@
 > **Source de vérité :** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Dernière mise à jour :** 2026-06-28 — v3.8.40
 
-OmniRoute comprend une couche de gamification privilégiant le stockage local, qui récompense les utilisateurs lorsqu’ils interagissent avec la plateforme — en effectuant des requêtes, en changeant de fournisseurs, en créant des combinaisons, en partageant des jetons et en contribuant à la communauté. L’intégralité de l’état est stockée dans SQLite ; la fédération avec les serveurs communautaires est facultative et repose sur l’envoi de données.
+67router comprend une couche de gamification privilégiant le stockage local, qui récompense les utilisateurs lorsqu’ils interagissent avec la plateforme — en effectuant des requêtes, en changeant de fournisseurs, en créant des combinaisons, en partageant des jetons et en contribuant à la communauté. L’intégralité de l’état est stockée dans SQLite ; la fédération avec les serveurs communautaires est facultative et repose sur l’envoi de données.
 
 Le système est conçu pour n’ajouter **aucune latence au chemin critique** — les événements de gamification sont distribués sans attente depuis le pipeline de requêtes et ne bloquent jamais une réponse du LLM.
 
@@ -29,7 +29,7 @@ Accroître l’engagement et la fidélisation des utilisateurs en offrant une pr
 | Classements                 | Classements globaux, hebdomadaires, mensuels, par partage de jetons et par contribution    |
 | Partage de jetons           | Transférer des crédits entre utilisateurs au moyen d’un registre en partie double          |
 | Invitation et utilisation   | Codes de parrainage stockés sous forme de hachages SHA-256                                 |
-| Serveurs communautaires     | Se fédérer avec des instances OmniRoute externes                                           |
+| Serveurs communautaires     | Se fédérer avec des instances 67router externes                                            |
 | Protection contre la triche | Calcul des scores côté serveur, limitation du débit et détection des anomalies par score z |
 
 ### Principes de conception
@@ -101,7 +101,7 @@ src/app/api/gamification/
 
 ### Tables de la base de données
 
-Toutes les tables se trouvent dans la base de données SQLite principale d’OmniRoute, créée par la migration
+Toutes les tables se trouvent dans la base de données SQLite principale de 67router, créée par la migration
 `060_create_gamification.sql`. La journalisation WAL est héritée du singleton
 `getDbInstance()` dans `src/lib/db/core.ts`.
 
@@ -160,7 +160,7 @@ Toutes les tables se trouvent dans la base de données SQLite principale d’Omn
 
 ### Module de domaine : `src/lib/db/gamification.ts`
 
-Suit le modèle standard d’OmniRoute — importe `getDbInstance()` depuis
+Suit le modèle standard de 67router — importe `getDbInstance()` depuis
 `core.ts` et exporte des fonctions CRUD typées. Aucun SQL brut dans les gestionnaires de routes.
 
 Fonctions principales :
@@ -223,7 +223,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Action            | XP  | Description                                                          |
 | ----------------- | --- | -------------------------------------------------------------------- |
-| `request`         | 1   | Par requête API acheminée via OmniRoute                              |
+| `request`         | 1   | Par requête API acheminée via 67router                               |
 | `provider_switch` | 5   | Passage à un autre fournisseur                                       |
 | `model_switch`    | 3   | Passage à un autre modèle                                            |
 | `combo_create`    | 10  | Création d’un nouveau combo                                          |
@@ -567,7 +567,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unique, indexé) |
 | `token_hash` | SHA-256(raw_token)          |
 
-Le jeton brut est renvoyé à l’utilisateur une seule fois, lors de sa création. OmniRoute
+Le jeton brut est renvoyé à l’utilisateur une seule fois, lors de sa création. 67router
 ne le stocke ni ne l’affiche plus jamais — seul le hachage est conservé.
 
 ### Prévention de l’auto-parrainage
@@ -690,7 +690,7 @@ Les administrateurs peuvent interroger l’intégralité de la piste d’audit v
 
 ## Routes d’API
 
-Toutes les routes suivent le modèle OmniRoute standard :
+Toutes les routes suivent le modèle 67router standard :
 
 ```
 Route → Pré-vérification CORS → Validation du corps (Zod) → Authentification (extractApiKey)

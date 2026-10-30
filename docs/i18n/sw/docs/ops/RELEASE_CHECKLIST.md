@@ -45,7 +45,7 @@ unarejesha mtiririko wa kiotomatiki kikamilifu ambao mradi ulikuwa nao hadi v3.8
 hakikisho la WS1.3 (tokeni iliyovuja haiwezi kuchapisha peke yake — hakuna tokeni).
 
 **Usanidi wa mara moja (mmiliki):** npmjs.com → kifurushi `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: mmiliki `diegosouzapw`, hazina `OmniRoute`, mtiririko wa kazi `npm-publish.yml`
+Publisher_ → GitHub: mmiliki `diegosouzapw`, hazina `67router`, mtiririko wa kazi `npm-publish.yml`
 (mazingira: hakuna). Hadi hapo pawepo, hatua ya kiotomatiki hushindwa kwa `ENEEDAUTH`:
 ianzishwe tena kwa `publish_mode=staged` (hapa chini) au `direct`.
 

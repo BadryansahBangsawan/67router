@@ -15,7 +15,7 @@
 - [OAuth 2.0 para aplicativos nativos (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret para aplicativos instalados são públicos; o PKCE fornece a segurança efetiva.
 - [Chaves de API do Firebase](https://firebase.google.com/docs/projects/api-keys) — Os identificadores de clientes Web são públicos por definição.
 
-O OmniRoute precisa incorporar esses valores para que usuários que não configuram o `.env` ainda tenham um fluxo OAuth funcional imediatamente. Sem um fallback incorporado, os provedores Gemini / Antigravity deixam de funcionar para qualquer usuário que siga o caminho de "apenas clonar e executar".
+O 67router precisa incorporar esses valores para que usuários que não configuram o `.env` ainda tenham um fluxo OAuth funcional imediatamente. Sem um fallback incorporado, os provedores Gemini / Antigravity deixam de funcionar para qualquer usuário que siga o caminho de "apenas clonar e executar".
 
 No entanto, valores literais como `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` são identificados pelo **GitHub Secret Scanning**, pelo **Semgrep** e por scanners de padrões semelhantes. Cada versão se torna um fluxo ruidoso de falsos positivos, a proteção contra push bloqueia commits legítimos e os operadores deixam de confiar no feed de alertas.
 

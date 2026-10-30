@@ -125,7 +125,7 @@ Případy závislé na Playwright v `tests/unit/claude-web-auto-refresh.test.ts`
 
 ### Nastavení
 
-1. Spusťte OmniRoute pomocí `npm run dev` nebo zkompilované instalace.
+1. Spusťte 67router pomocí `npm run dev` nebo zkompilované instalace.
 2. Otevřete Dashboard → Providers → Add Provider.
 3. Vyberte kategorii Web Cookie a Claude Web.
 4. Vložte celou hlavičku Cookie zkopírovanou z autentizovaného požadavku na `claude.ai`.

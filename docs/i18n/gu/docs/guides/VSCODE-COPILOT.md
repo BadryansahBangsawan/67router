@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** તમારા OmniRoute દ્વારા ઉપલબ્ધ કરાવવામાં આવતા દરેક મોડેલને _મૂળ_ GitHub Copilot Chat
+**OmniCopilot** તમારા 67router દ્વારા ઉપલબ્ધ કરાવવામાં આવતા દરેક મોડેલને _મૂળ_ GitHub Copilot Chat
 મોડેલ પિકરમાં મૂકે છે. બીજી સાઇડબાર કે અલગ ચેટ UI નથી — Copilotનું એજન્ટ મોડ, ટૂલ કૉલિંગ,
 MCP સર્વર્સ અને કસ્ટમ સૂચનાઓ બધું જ કાર્યરત રહે છે, ફક્ત તમે પસંદ કરેલા મોડેલ પર ચાલે છે.
 
@@ -23,13 +23,13 @@ MCP સર્વર્સ અને કસ્ટમ સૂચનાઓ બધુ
 
 ## સેટઅપ
 
-1. **OmniRoute ચલાવો** — `npm install -g omniroute && omniroute` (`http://localhost:20128` પર ડેશબોર્ડ).
+1. **67router ચલાવો** — `npm install -g omniroute && omniroute` (`http://localhost:20128` પર ડેશબોર્ડ).
 2. **એક્સ્ટેન્શન ઇન્સ્ટોલ કરો** — Extensions વ્યૂમાં "OmniRoute" શોધો.
 3. **મોડેલ પસંદ કરો** — Copilot Chat → મોડેલ પિકર → **Manage Models…** → **OmniRoute**, પછી
    તમને જે જોઈએ તેના પર ટિક કરો.
 
-જ્યારે OmniRoute ડિફૉલ્ટ પોર્ટ પર ચાલે ત્યારે કંઈપણ કૉન્ફિગર કરવાની જરૂર નથી. રિમોટ ઇન્સ્ટન્સ માટે,
-**Activity Barમાં OmniRoute આઇકન** ખોલો (અથવા `OmniRoute: Manage Connection` ચલાવો) અને આ સેટ કરો:
+જ્યારે 67router ડિફૉલ્ટ પોર્ટ પર ચાલે ત્યારે કંઈપણ કૉન્ફિગર કરવાની જરૂર નથી. રિમોટ ઇન્સ્ટન્સ માટે,
+**Activity Barમાં 67router આઇકન** ખોલો (અથવા `OmniRoute: Manage Connection` ચલાવો) અને આ સેટ કરો:
 
 - **Server URL** — સર્વર રૂટ, દા.ત. `http://192.168.0.15:20128`. `/v1` સફિક્સ
   એક્સ્ટેન્શન દ્વારા ઉમેરવામાં આવે છે; તેને સામેલ કરશો નહીં.
@@ -75,7 +75,7 @@ HTTP 400 — મોડેલ '<id>' એક ઇમેજ-જનરેશન મ�
 
 તેથી પિકર સુધી પહોંચતાં પહેલાં તેમને તેમના `type` ફીલ્ડના આધારે ફિલ્ટર કરવામાં આવે છે. **Responses-API
 મોડેલ્સ રાખવામાં આવે છે** — દરેક Codex / GPT-5.x એન્ટ્રી `supported_endpoints: ["responses"]`
-જાહેર કરે છે, અને OmniRoute તેમને `/v1/chat/completions` માટે રૂપાંતરિત કરે છે, તેથી તેઓ સંપૂર્ણપણે ઉપયોગી છે.
+જાહેર કરે છે, અને 67router તેમને `/v1/chat/completions` માટે રૂપાંતરિત કરે છે, તેથી તેઓ સંપૂર્ણપણે ઉપયોગી છે.
 
 ### તમે ક્યારેય કૉન્ફિગર ન કરેલા પ્રોવાઇડર્સ
 
@@ -88,7 +88,7 @@ HTTP 400 — મોડેલ '<id>' એક ઇમેજ-જનરેશન મ�
 
 ## VS Code ટૅબની અંદર Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` બાહ્ય બ્રાઉઝરને બદલે Simple Browser દ્વારા OmniRoute dashboardને editor ટૅબમાં રેન્ડર કરે છે. એમ્બેડિંગ સર્વર પર `DASHBOARD_ALLOW_EMBED=vscode` દ્વારા **opt-in** છે, જે ડિફૉલ્ટ `frame-ancestors 'none'` +
+`omnicopilot.dashboardOpen: "editor"` બાહ્ય બ્રાઉઝરને બદલે Simple Browser દ્વારા 67router dashboardને editor ટૅબમાં રેન્ડર કરે છે. એમ્બેડિંગ સર્વર પર `DASHBOARD_ALLOW_EMBED=vscode` દ્વારા **opt-in** છે, જે ડિફૉલ્ટ `frame-ancestors 'none'` +
 `X-Frame-Options: DENY`ને બદલે `frame-ancestors 'self' vscode-webview:` સાથે HTML પેજો સર્વ કરે છે. API સપાટી (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) બંને સ્થિતિમાં કડક headers જાળવી રાખે છે.
 
 > ⚠️ **આ build-time flag છે, runtime flag નહીં.** Next.js `headers()`ને route
@@ -125,7 +125,7 @@ embed-enabled build વિના પેજ frame થવાનો ઇનકાર
 
 | લક્ષણ                                                | કારણ / ઉકેલ                                                                                                                                                                                                                                                            |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| pickerમાં કોઈ OmniRoute models નથી                   | સર્વર સુધી પહોંચી શકાતું નથી. status-bar dot રાખોડી થઈ જાય છે; `OmniRoute: Check Connection` ચલાવો. Discovery ઇરાદાપૂર્વક મૌન રહે છે અને prompt બતાવવાને બદલે કોઈ models ઉમેરતું નથી.                                                                                  |
+| pickerમાં કોઈ 67router models નથી                    | સર્વર સુધી પહોંચી શકાતું નથી. status-bar dot રાખોડી થઈ જાય છે; `OmniRoute: Check Connection` ચલાવો. Discovery ઇરાદાપૂર્વક મૌન રહે છે અને prompt બતાવવાને બદલે કોઈ models ઉમેરતું નથી.                                                                                  |
 | દરેક model બે વાર દેખાય છે                           | તમે 1.0.1 કરતાં જૂના OmniCopilot પર છો — update કરો. extension હવે `?prefix=alias`ની request કરે છે.                                                                                                                                                                   |
 | અગાઉ સૂચિબદ્ધ image/audio model હવે ગાયબ છે          | 1.0.1થી આ ઇરાદાપૂર્વક છે — તે ક્યારેય chat requestનો જવાબ આપી શકતું નહોતું.                                                                                                                                                                                            |
 | Activity Barમાંથી panel ગાયબ છે                      | VS Code વધારાના view containersને Activity Barના તળિયે આવેલા **"…"** overflowમાં ખસેડે છે અને right-click દ્વારા છુપાવેલું container છુપાયેલું જ રહે છે. Activity Bar પર right-click કરો → **OmniRoute**ને tick કરો અથવા `OmniRoute: Manage Connection` વડે તેને ખોલો. |
@@ -137,6 +137,6 @@ embed-enabled build વિના પેજ frame થવાનો ઇનકાર
 ## આ પણ જુઓ
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — અન્ય તમામ કોડિંગ ટૂલ્સ
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — રિમોટ OmniRouteનું સંચાલન
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — રિમોટ 67routerનું સંચાલન
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` કરાર
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — એક્સ્ટેન્શનની પોતાની કેટલોગ નોંધો

@@ -4,7 +4,7 @@
 
 ---
 
-کچھ سروسز کو OmniRoute میں ضم کیا گیا تھا اور بعد میں انہیں چلانے والے افراد کی درخواست پر
+کچھ سروسز کو 67router میں ضم کیا گیا تھا اور بعد میں انہیں چلانے والے افراد کی درخواست پر
 ہٹا دیا گیا۔ یہ صفحہ ان ہٹائے جانے کا مستقل ریکارڈ ہے۔ اس کا واحد مقصد یہ یقینی بنانا ہے کہ
 وہ غلطی سے دوبارہ شامل نہ ہو جائیں: کسی پرانے fork، cache شدہ npm
 tarball، محفوظ شدہ issue یا "پرووائیڈر X بحال کریں" کی درخواست ملنے پر معاونین کے لیے ایک ایسی جگہ ہونی چاہیے جہاں واضح طور پر لکھا ہو کہ **اسے
@@ -17,10 +17,10 @@ tarball، محفوظ شدہ issue یا "پرووائیڈر X بحال کریں" 
 
 ## پالیسی
 
-1. **سروس آپریٹر کی جانب سے ہٹانے کی درخواست تسلیم کی جاتی ہے، اس پر گفت و شنید نہیں کی جاتی۔** OmniRoute
+1. **سروس آپریٹر کی جانب سے ہٹانے کی درخواست تسلیم کی جاتی ہے، اس پر گفت و شنید نہیں کی جاتی۔** 67router
    کسی بھی upstream سروس سے وابستہ نہیں ہے۔ جب کسی سروس کا آپریٹر
    integration ہٹانے کو کہے تو اسے ہٹا دیا جاتا ہے، خواہ integration نے سرکاری API استعمال کیا ہو یا نہ کیا ہو۔
-2. **"ہٹانے" سے مراد OmniRoute کے زیرِ اختیار ہر سطح سے ہٹانا ہے۔** Executor، registry کا اندراج، provider
+2. **"ہٹانے" سے مراد 67router کے زیرِ اختیار ہر سطح سے ہٹانا ہے۔** Executor، registry کا اندراج، provider
    id اور alias، model list، endpoints، environment variables، icon، dashboard cards،
    خودکار طور پر تیار کردہ provider reference، `FREE_TIERS.md`، environment reference، README counts،
    `llm.txt` mirrors، مخصوص tests اور golden snapshots، code comments، CHANGELOG bullets
@@ -31,7 +31,7 @@ tarball، محفوظ شدہ issue یا "پرووائیڈر X بحال کریں" 
 3. **تحریری اجازت کے بغیر اس صفحے کا کوئی اندراج کبھی دوبارہ شامل نہ کریں۔** اس میں
    id یا alias کو کسی بھی provider catalog میں واپس شامل کرنا، domains کو executor میں شامل کرنا،
    اسے "بحال" کرنے والی کسی contributor PR کو قبول کرنا، اسے free-model catalog میں شامل کرنا، یا
-   OmniRoute کے ذریعے اس تک دستی طور پر رسائی حاصل کرنے کا طریقہ دستاویزی بنانا شامل ہے۔ ایسی PRs اور issues کو اس
+   67router کے ذریعے اس تک دستی طور پر رسائی حاصل کرنے کا طریقہ دستاویزی بنانا شامل ہے۔ ایسی PRs اور issues کو اس
    صفحے کے لنک کے ساتھ بند کریں۔
 4. **اندراج مختصر رکھیں۔** صرف وہ معلومات درج کریں جن کی کسی reviewer کو دوبارہ
    شمولیت پہچاننے کے لیے ضرورت ہو: identifiers، domains، dates اور ہٹانے والی pull request۔
@@ -48,7 +48,7 @@ tarball، محفوظ شدہ issue یا "پرووائیڈر X بحال کریں" 
 | 2026-08-12     | `puter`           | `pu`     | `puter.com`                                                           | Puter کا مالک (Nariman Jelveh)                                                                                                                              | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | API کلید والا فراہم کنندہ۔ مائیگریشن `152_remove_puter_provider.sql` محفوظ شدہ کنفیگریشن صاف کرتی ہے۔                                                                                                                                                                                                                                                                                                                                                                         |
 | 2026-09-02     | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                               | سروس آپریٹر (سپورٹ ای میل)                                                                                                                                  | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | کلید کے بغیر فراہم کنندہ۔ تحریری درخواست 2026-08-30 کو موصول ہوئی۔ مختص مسائل اور بحث حذف کر دیے گئے، جبکہ PRs کے عنوانات تبدیل کر دیے گئے۔                                                                                                                                                                                                                                                                                                                                   |
 | 2026-09-21     | `gemini-business` | `gembiz` | `business.gemini.google`                                              | پروجیکٹ کے مالک کا فیصلہ (مسئلہ [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                           | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | کوکی پر مبنی ویب فراہم کنندہ۔ Google نے `BardFrontendService/StreamGenerate` اینڈ پوائنٹ، جسے ایگزیکیوٹر ہدف بناتا تھا، ریٹائر کر دیا؛ اس کا متبادل (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`، Bearer JWT جسے `__Secure-C_SES`/`csesidx` سے بوٹسٹریپ کیا جاتا ہے) فعال Gemini Enterprise/Workspace اکاؤنٹ کے بغیر بنایا یا توثیق نہیں کیا جا سکتا، اور پروجیکٹ کے پاس ایسا اکاؤنٹ نہیں ہے۔ غیر تصدیق شدہ طور پر دوبارہ لکھنے کے بجائے اسے ریٹائر کر دیا گیا۔ |
-| 2026-09-21     | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                      | پروجیکٹ کے مالک کا فیصلہ (`#14224`)                                                                                                                         | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | کوکی سے تصدیق والا فراہم کنندہ، آپریٹر کی جانب سے ہٹانے کی کارروائی نہیں۔ `studio-api.suno.ai` معطل تھا (503)؛ فعال ہوسٹ کے لیے Clerk JWT تبادلہ اور hCaptcha حل کرنے کا بامعاوضہ انحصار درکار ہے، جسے OmniRoute نے صرف ایک موسیقی فراہم کنندہ کے لیے شامل نہ کرنے کا فیصلہ کیا۔ `kie/suno-v4.0` اور `kie/suno-v3.5` (kie.ai پر ہوسٹ کردہ) متاثر نہیں ہوئے اور بدستور معاونت یافتہ ہیں۔                                                                                       |
+| 2026-09-21     | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                      | پروجیکٹ کے مالک کا فیصلہ (`#14224`)                                                                                                                         | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | کوکی سے تصدیق والا فراہم کنندہ، آپریٹر کی جانب سے ہٹانے کی کارروائی نہیں۔ `studio-api.suno.ai` معطل تھا (503)؛ فعال ہوسٹ کے لیے Clerk JWT تبادلہ اور hCaptcha حل کرنے کا بامعاوضہ انحصار درکار ہے، جسے 67router نے صرف ایک موسیقی فراہم کنندہ کے لیے شامل نہ کرنے کا فیصلہ کیا۔ `kie/suno-v4.0` اور `kie/suno-v3.5` (kie.ai پر ہوسٹ کردہ) متاثر نہیں ہوئے اور بدستور معاونت یافتہ ہیں۔                                                                                        |
 | 2026-10-10     | `opencode`        | `oc`     | `opencode.ai/zen/v1` (مفت درجہ؛ ہوسٹ `opencode-zen` کے ساتھ مشترک ہے) | احتیاطی طور پر ہٹایا گیا (پروجیکٹ کے مالک کا فیصلہ)، upstream 9router پروجیکٹ سے ہٹانے کی OpenCode آپریٹر کی عوامی درخواست (2026-09-19) کا احترام کرتے ہوئے | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | صرف کلید کے بغیر "OpenCode Free" فراہم کنندہ ہٹایا گیا ہے۔ تصدیق شدہ `opencode-zen` اور `opencode-go`، Zen کیٹلاگ کے تمام ماڈلز اور ان کے درخواست معاہدے، OpenCode کلائنٹ انٹیگریشنز اور `@omniroute/opencode-plugin*` برقرار ہیں۔ مائیگریشن `207_remove_opencode_free_provider.sql` API کلید رکھنے والے پرانے کنکشنز کو Zen میں منتقل کرتی اور کلید کے بغیر کنفیگریشن صاف کرتی ہے۔                                                                                           |
 
 ## اندراج شامل کرنا
@@ -63,5 +63,5 @@ tarball، محفوظ شدہ issue یا "پرووائیڈر X بحال کریں" 
    حوالہ بنائیں (ایک migration شامل کریں)۔
 3. اسی PR میں اوپر دی گئی table میں ایک سطر اور identifiers کو
    `tests/unit/removed-providers-blocklist.test.ts` میں شامل کریں۔
-4. PR merge ہونے کے بعد آپریٹر کو جواب دیں، جس میں یہ درج ہو کہ کیا ہٹایا گیا اور OmniRoute
+4. PR merge ہونے کے بعد آپریٹر کو جواب دیں، جس میں یہ درج ہو کہ کیا ہٹایا گیا اور 67router
    کیا تبدیل نہیں کر سکتا (پہلے سے شائع شدہ npm اور Docker versions، git history، third-party forks)۔

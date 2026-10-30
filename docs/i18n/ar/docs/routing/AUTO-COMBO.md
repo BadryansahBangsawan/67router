@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (العربية)
+# 67router Auto-Combo Engine (العربية)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # الأرخص لكل رمز
 
 **ما الذي يحدث:**
 
-1. يكتشف OmniRoute البادئة `auto/` في `src/sse/handlers/chat.ts`
+1. يكتشف 67router البادئة `auto/` في `src/sse/handlers/chat.ts`
 2. يستعلم عن جميع **اتصالات المزوّدين النشطة** من قاعدة البيانات
 3. يرشّح الاتصالات التي تحتوي على بيانات اعتماد صالحة (مفتاح API أو رمز OAuth)
 4. يحدّد النموذج لكل اتصال (`connection.defaultModel` أو النموذج الأول لدى المزوّد)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # الأرخص لكل رمز
 - حظر النموذج — `isModelLocked(provider, connectionId, model)`
 
 يحمل كل مرشح أيضًا علامة `excluded` الخاصة بمفتاح API هذا. تُخزّن الاستبعادات
-لكل مفتاح API (`auto_candidate_overrides` table، migration `128`) — يعمل OmniRoute
+لكل مفتاح API (`auto_candidate_overrides` table، migration `128`) — يعمل 67router
 لمستأجر واحد ولا يحتوي على جدول `users`، ولذلك فإن `apiKeyId` هو أقرب هوية فعلية
 لكل مستدعٍ — وتُفرض عند نقطة الاختناق الخاصة بمجموعة المرشحين في
 `open-sse/services/autoCombo/virtualFactory.ts` عبر
@@ -181,7 +181,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 مشكلتان شائعتان:
 
 - **لا يستخدم `auto` مجموعاتك.** يبني `auto`/`auto/*` مجموعة المرشحين الخاصة به من دون إعداد، ولا يرجع إلى المجموعات المحفوظة إلا إذا كانت هناك مجموعة اسمها حرفيًا `auto` (وهذا غير مستحسن). للتوجيه عبر مجموعة، أرسل اسمها المطابق تمامًا — وليس `auto`.
-- **يُعد `openrouter/auto` منتجًا حقيقيًا مدفوعًا من OpenRouter** ("أفضل خيار متاح تلقائيًا")، وليس اسمًا مستعارًا في OmniRoute. وهو إدخال النموذج الثابت الوحيد في سجل OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`)، وتُحتسب تكلفته بصورة منفصلة. استخدم الإعدادات ← التوجيه ← إخفاء النماذج المدفوعة لاستبعاده من مجموعات `auto`.
+- **يُعد `openrouter/auto` منتجًا حقيقيًا مدفوعًا من OpenRouter** ("أفضل خيار متاح تلقائيًا")، وليس اسمًا مستعارًا في 67router. وهو إدخال النموذج الثابت الوحيد في سجل OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`)، وتُحتسب تكلفته بصورة منفصلة. استخدم الإعدادات ← التوجيه ← إخفاء النماذج المدفوعة لاستبعاده من مجموعات `auto`.
 
 راجع [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) و[#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) للاطلاع على الالتباس الأصلي الذي توضحه هذه الوثائق.
 
@@ -281,7 +281,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## جميع استراتيجيات التوجيه
 
-يدعم محرّك التركيبات في OmniRoute **20 استراتيجية توجيه** (مُعلنة في `src/shared/constants/routingStrategies.ts` ← `ROUTING_STRATEGY_VALUES`). يتوفر محرّك Auto Combo نفسه ضمن استراتيجية `auto`، بينما تتوفر الاستراتيجيات الأخرى للتركيبات المحفوظة.
+يدعم محرّك التركيبات في 67router **20 استراتيجية توجيه** (مُعلنة في `src/shared/constants/routingStrategies.ts` ← `ROUTING_STRATEGY_VALUES`). يتوفر محرّك Auto Combo نفسه ضمن استراتيجية `auto`، بينما تتوفر الاستراتيجيات الأخرى للتركيبات المحفوظة.
 
 | الاستراتيجية        | الوصف                                                                                                                                                                                                                    |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -332,7 +332,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 يمكن لتركيبة `pipeline` تحتوي على نموذجين على الأقل تفعيل التوجيه بين المخطِّط والمنفِّذ باستخدام
 `config.agenticOrchestration.enabled`. تتولى الوجهة الأولى التخطيط والإجابات النهائية؛
-بينما تُصدر الوجهة الثانية استدعاءات أدوات بالتنسيق الأصلي للعميل. يكتشف OmniRoute متابعات
+بينما تُصدر الوجهة الثانية استدعاءات أدوات بالتنسيق الأصلي للعميل. يكتشف 67router متابعات
 نتائج الأدوات من بروتوكول الطلب، ويسأل المخطِّط عما إذا كانت هناك حاجة إلى جولة أدوات أخرى،
 ويجعل إما المنفِّذ أو المخطِّط، بصورة ديناميكية، الخطوة النهائية الموجّهة إلى العميل.
 
@@ -858,11 +858,11 @@ offline-friendly) فهي مدرجة في جدول "ملفات تعريف الأ�
 
 ### اختبارات دخانية حية مشروطة (ليست ضمن CI — مزوّدون حقيقيون)
 
-| الأمر                                  | ما يفعله                                                                                     |
-| :------------------------------------- | :------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | توجيه حقيقي داخل العملية باستخدام `RUN_COMBO_LIVE=1`؛ يلتقط لقطة لقاعدة بيانات OmniRoute حية |
-| `npm run test:combo:live:vps`          | استدعاءات HTTP إلى خادم OmniRoute حي (اضبط `COMBO_LIVE_BASE_URL`)                            |
-| `npm run test:combo:live:vps:failover` | الأمر نفسه، مع سيناريوهات تجاوز فشل متعمدة                                                   |
+| الأمر                                  | ما يفعله                                                                                    |
+| :------------------------------------- | :------------------------------------------------------------------------------------------ |
+| `npm run test:combo:live`              | توجيه حقيقي داخل العملية باستخدام `RUN_COMBO_LIVE=1`؛ يلتقط لقطة لقاعدة بيانات 67router حية |
+| `npm run test:combo:live:vps`          | استدعاءات HTTP إلى خادم 67router حي (اضبط `COMBO_LIVE_BASE_URL`)                            |
+| `npm run test:combo:live:vps:failover` | الأمر نفسه، مع سيناريوهات تجاوز فشل متعمدة                                                  |
 
 تختبر هذه الاختبارات الدخانية مسار الاتصال الحقيقي (المجموعة ← المزوّد ← الإكمال). وهي
 مستبعدة عمدًا من CI لأنها تتطلب بيانات اعتماد حية وإمكانية الوصول إلى VPS.

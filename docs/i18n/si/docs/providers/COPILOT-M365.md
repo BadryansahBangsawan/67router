@@ -34,7 +34,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute තුළ **Providers → Add Provider** වෙත ගොස්, **Microsoft 365 Copilot
+6. 67router තුළ **Providers → Add Provider** වෙත ගොස්, **Microsoft 365 Copilot
    (BizChat)** තෝරා, පහත ආකෘතියෙන් අක්තපත්රය අලවන්න:
 
 ```
@@ -50,9 +50,9 @@ WebSocket URL එකෙන් අගයන් අතින් පිටපත්
 1. **DevTools → Network** විවෘත කරන්න.
 2. BizChat සංවාදයක් ආරම්භ කරන්න හෝ දිගටම කරගෙන යන්න (මෙය WebSocket සම්බන්ධතාව සක්රිය කරයි).
 3. Network පැනලය තුළ දකුණු-ක්ලික් කර **Save all as HAR with content** තෝරන්න.
-4. OmniRoute තුළ, සපයන්නාගේ සම්බන්ධතා සංවාද කොටුවේ ඇති **Import .har file** බොත්තම භාවිත කරන්න.
+4. 67router තුළ, සපයන්නාගේ සම්බන්ධතා සංවාද කොටුවේ ඇති **Import .har file** බොත්තම භාවිත කරන්න.
 
-OmniRoute විසින් Chathub WebSocket URL එක සඳහා HAR පරිලෝකනය කර, `access_token` සහ `chathubPath` උපුටාගෙන, අක්තපත්ර ක්ෂේත්ර ස්වයංක්රීයව පුරවයි. HAR ආයාතය JWT කල් ඉකුත්වීම විකේතනය කර ඉතිරි ටෝකන් ආයු කාලය පෙන්වයි.
+67router විසින් Chathub WebSocket URL එක සඳහා HAR පරිලෝකනය කර, `access_token` සහ `chathubPath` උපුටාගෙන, අක්තපත්ර ක්ෂේත්ර ස්වයංක්රීයව පුරවයි. HAR ආයාතය JWT කල් ඉකුත්වීම විකේතනය කර ඉතිරි ටෝකන් ආයු කාලය පෙන්වයි.
 
 > **සැබෑ HAR නිර්යාතයක්, ප්රවේශ ටෝකනයක් හෝ නැවුම් කිරීමේ ටෝකනයක් කිසිවිටෙක commit නොකරන්න.** පරීක්ෂණ සහ ප්රලේඛන අගයන් සැමවිටම ස්ථානධාරක විය යුතුය.
 
@@ -69,7 +69,7 @@ OmniRoute විසින් Chathub WebSocket URL එක සඳහා HAR ප�
 | `refreshToken` | `substrate.office.com/sydney` විෂය පථය සඳහා Microsoft OAuth නැවුම් කිරීමේ ටෝකනය |
 | `tier`         | `individual` (පෙරනිමි), `edu`, හෝ `enterprise`                                  |
 
-`substrate.office.com/sydney` වෙත විෂය පථගත කළ Microsoft උපාංග-කේත හෝ අවසර-කේත ප්රවාහයකින් නැවුම් කිරීමේ ටෝකනය ලබා ගන්න. `refreshToken` සකසා ඇති විට, OmniRoute සෑම ඉල්ලීමකටම පෙර `access_token` පූර්ව-නැවුම් කරන බැවින්, සෑම ~මිනිත්තු 75ක කල් ඉකුත්වීමකටම පසුව නැවත ග්රහණය කිරීමට අවශ්ය නොවේ.
+`substrate.office.com/sydney` වෙත විෂය පථගත කළ Microsoft උපාංග-කේත හෝ අවසර-කේත ප්රවාහයකින් නැවුම් කිරීමේ ටෝකනය ලබා ගන්න. `refreshToken` සකසා ඇති විට, 67router සෑම ඉල්ලීමකටම පෙර `access_token` පූර්ව-නැවුම් කරන බැවින්, සෑම ~මිනිත්තු 75ක කල් ඉකුත්වීමකටම පසුව නැවත ග්රහණය කිරීමට අවශ්ය නොවේ.
 
 `refreshToken` සකසා නොමැති නම්, එක් එක් කල් ඉකුත්වීමෙන් පසුව ඔබ WebSocket අක්තපත්රය අතින් නැවත ග්රහණය කළ යුතුය.
 

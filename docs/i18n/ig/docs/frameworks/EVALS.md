@@ -7,7 +7,7 @@
 > **Isi iyi nke eziokwu:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Mmelite ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute na-abịa na usoro nlele izugbe ị nwere ike iji tụọ arụmọrụ nhazi
+67router na-abịa na usoro nlele izugbe ị nwere ike iji tụọ arụmọrụ nhazi
 ụzọ ntụgharị, otu ndị na-enye ọrụ/ụdị, ma ọ bụ nchịkọta ule "golden set" ndị e jikọtara.
 Jiri ya nyochaa mgbanwe ụzọ ntụgharị, kwado ndị na-enye ọrụ ọhụrụ, ma gbochie mwepụta
 tupu ebufee ha gaa na okporo ụzọ mmepụta.

@@ -7,29 +7,29 @@
 > **የእውነት ምንጭ:** `src/lib/skills/` እና `src/app/api/skills/`
 > **ለመጨረሻ ጊዜ የተዘመነው:** 2026-06-28 — v3.8.40
 
-OmniRoute የቋንቋ ሞዴሎች (እና ኦፕሬተሮች) እንደገና ጥቅም ላይ የሚውሉ ችሎታዎችን — ከፋይል ስርዓት ንባብ እና HTTP ጥያቄዎች እስከ በsandbox የተገደበ የኮድ አፈጻጸም እና በጥንቃቄ የተመረጡ የገበያ ቦታ ክህሎቶች — እንዲያቀናብሩ የሚያስችል ሊስፋፋ የሚችል የSkills ማዕቀፍ ያቀርባል።
+67router የቋንቋ ሞዴሎች (እና ኦፕሬተሮች) እንደገና ጥቅም ላይ የሚውሉ ችሎታዎችን — ከፋይል ስርዓት ንባብ እና HTTP ጥያቄዎች እስከ በsandbox የተገደበ የኮድ አፈጻጸም እና በጥንቃቄ የተመረጡ የገበያ ቦታ ክህሎቶች — እንዲያቀናብሩ የሚያስችል ሊስፋፋ የሚችል የSkills ማዕቀፍ ያቀርባል።
 
-አንድ skill በስሪት የሚተዳደር፣ በschema የተገለጸ የሥራ አሃድ ነው። OmniRoute በወጪ ጥያቄዎች ውስጥ skillsን እንደ tool definitions ሊያስገባ፣ ከሞዴሉ ተመልሰው የሚመጡ tool callsን ሊያቋርጥ፣ ተዛማጁን handler ሊያስኬድ እና ውይይቱ እንዲቀጥል ውጤቱን መልሶ ለሞዴሉ ሊያቀርብ ይችላል። ሞዴሉ implementationን ፈጽሞ አያይም — የtool interfaceን ብቻ ነው የሚያየው።
+አንድ skill በስሪት የሚተዳደር፣ በschema የተገለጸ የሥራ አሃድ ነው። 67router በወጪ ጥያቄዎች ውስጥ skillsን እንደ tool definitions ሊያስገባ፣ ከሞዴሉ ተመልሰው የሚመጡ tool callsን ሊያቋርጥ፣ ተዛማጁን handler ሊያስኬድ እና ውይይቱ እንዲቀጥል ውጤቱን መልሶ ለሞዴሉ ሊያቀርብ ይችላል። ሞዴሉ implementationን ፈጽሞ አያይም — የtool interfaceን ብቻ ነው የሚያየው።
 
 ---
 
 ## Agent Skills ከ Omni Skills ጋር ሲነጻጸሩ
 
-OmniRoute ሁለት የተለያዩ ግን እርስ በርስ የሚደጋገፉ የskill ስርዓቶች አሉት፦
+67router ሁለት የተለያዩ ግን እርስ በርስ የሚደጋገፉ የskill ስርዓቶች አሉት፦
 
 | መለኪያ         | **Omni Skills** (ይህ ሰነድ)                              | **Agent Skills**                                                                            |
 | :----------- | :---------------------------------------------------- | :------------------------------------------------------------------------------------------ |
 | ዓላማ          | የLLM tool ማስገባት + በsandbox የተገደበ አፈጻጸም                | ውጫዊ agents እንዲያገኙትና እንዲጠቀሙበት የSKILL.md ካታሎግ                                                 |
 | የእውነት ምንጭ    | `src/lib/skills/` + የገበያ ቦታ                           | `src/lib/agentSkills/` + `skills/` ማውጫ                                                      |
 | የruntime ሁነታ | ወደ ውጪ በሚላኩ ጥያቄዎች ውስጥ ይገባል፣ በtool-call events ላይ ይፈጸማል | የማይለወጥ markdown ካታሎግ + REST/MCP/A2A የማግኛ endpoints                                          |
-| ማን ይጠቀምበታል   | OmniRoute ራሱ (combo routing፣ ገቢ LLM calls)            | ውጫዊ agents፣ MCP clients፣ A2A orchestrators                                                  |
+| ማን ይጠቀምበታል   | 67router ራሱ (combo routing፣ ገቢ LLM calls)             | ውጫዊ agents፣ MCP clients፣ A2A orchestrators                                                  |
 | ብዛት          | ተለዋዋጭ (በገበያ ቦታ የሚመራ)                                  | 43 የካታሎግ ግቤቶች (22 API + 20 CLI + 1 config)                                                  |
 | ቅርጸት         | `SkillDefinition` ከtool schema + handler ጋር           | `SKILL.md` frontmatter + markdown body                                                      |
 | ማግኘት         | `/api/skills/*` REST + `omniroute_skills_*` MCP tools | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP tools + A2A `list-capabilities` |
 
-**Omni Skills** የአፈጻጸም ሞተር ናቸው — አንድ LLM toolን ሲጠራ OmniRoute _ምን ማድረግ እንደሚችል_ ይገልጻሉ።
+**Omni Skills** የአፈጻጸም ሞተር ናቸው — አንድ LLM toolን ሲጠራ 67router _ምን ማድረግ እንደሚችል_ ይገልጻሉ።
 
-**Agent Skills** የሰነድ ካታሎግ ናቸው — በቀጥታ ወደ agent prompts ሊገቡ በሚችሉ የተዋቀሩ SKILL.md ፋይሎች አማካኝነት፣ ውጫዊ agents የOmniRouteን REST API እና CLI _እንዴት መጠቀም እንዳለባቸው_ ያብራራሉ።
+**Agent Skills** የሰነድ ካታሎግ ናቸው — በቀጥታ ወደ agent prompts ሊገቡ በሚችሉ የተዋቀሩ SKILL.md ፋይሎች አማካኝነት፣ ውጫዊ agents የ67routerን REST API እና CLI _እንዴት መጠቀም እንዳለባቸው_ ያብራራሉ።
 
 ስለ Agent Skills ካታሎግ፣ generator፣ MCP tools እና A2A skill፣ [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md)ን ይመልከቱ።
 
@@ -41,14 +41,14 @@ OmniRoute ሁለት የተለያዩ ግን እርስ በርስ የሚደጋገ�
 
 ሦስት የskills ምንጮች በአንድ registry ውስጥ አብረው ይኖራሉ፦
 
-1. **አብሮገነብ skills** (`src/lib/skills/builtins.ts`) — ከOmniRoute ጋር ይቀርባሉ። የተለመዱ አጠቃቀሞችን ይሸፍናሉ፦
+1. **አብሮገነብ skills** (`src/lib/skills/builtins.ts`) — ከ67router ጋር ይቀርባሉ። የተለመዱ አጠቃቀሞችን ይሸፍናሉ፦
    - `file_read`, `file_write` — በእያንዳንዱ API key የተለየ sandbox workspace በ`<DATA_DIR>/skills/workspaces/<hashed-key>/` ስር
    - `http_request` — በ`safeOutboundFetch` በኩል ወደ ውጪ የሚላክ HTTP፣ ከ`guard: "public-only"` ጋር
    - `web_search` — ከcaching (`executeWebSearch`) ጋር ሊቀየር የሚችል search provider
    - `eval_code` — በDocker sandbox የተገደበ `node` ወይም `python` አፈጻጸም
    - `execute_command` — በDocker sandbox የተገደበ የshell command
    - `browser` — በPlaywright የሚደገፍ scaffolding፣ በነባሪ የተሰናከለ (`builtin/browser.ts`)
-2. **SkillsMP** (የOmniRoute የገበያ ቦታ) — ከ`https://skillsmp.com/api/v1/skills/search` ይመጣል። በSettings ውስጥ `skillsmpApiKey` ያስፈልጋል።
+2. **SkillsMP** (የ67router የገበያ ቦታ) — ከ`https://skillsmp.com/api/v1/skills/search` ይመጣል። በSettings ውስጥ `skillsmpApiKey` ያስፈልጋል።
 3. **SkillsSH** (`skills.sh` የማህበረሰብ ካታሎግ) — ከ`https://skills.sh/api/search` ይመጣል። ማረጋገጫ አያስፈልግም፤ የSKILL.md ይዘት ከGitHub raw ይወሰዳል።
 
 አንድ "active provider" dashboardው ከየትኛው ካታሎግ እንደሚጭን ይቆጣጠራል (`src/lib/skills/providerSettings.ts`)። በ**Settings → Memory & Skills** ስር ይቀይሩት። ነባሪ፦ `skillsmp`።
@@ -442,7 +442,7 @@ enum SkillMode {
 
 ## አብረው የተካተቱ ክህሎቶች ካታሎግ
 
-OmniRoute በ`src/lib/skills/builtin/` ውስጥ በጥንቃቄ የተመረጡ አብረው የተካተቱ ክህሎቶችን ይዞ ይመጣል። በጣም የተለመዱት፦
+67router በ`src/lib/skills/builtin/` ውስጥ በጥንቃቄ የተመረጡ አብረው የተካተቱ ክህሎቶችን ይዞ ይመጣል። በጣም የተለመዱት፦
 
 ### የአሳሽ ራስ-ሰር ማስኬጃ ክህሎት
 

@@ -15,7 +15,7 @@ De engine voor quotumdeling verdeelt het tijdsgebonden quotum van een provider (
 5-uursvenster van Codex, Kimi 1500 req/h) eerlijk over meerdere API-sleutels die
 dezelfde verbinding delen.
 
-**Probleem dat hiermee wordt opgelost:** OmniRoute gebruikt veel API-sleutels via hetzelfde upstream
+**Probleem dat hiermee wordt opgelost:** 67router gebruikt veel API-sleutels via hetzelfde upstream
 provideraccount. Zonder logica voor quotumdeling kan een piek van sleutel A het
 providerquotum voor dat uur uitputten, waardoor sleutels B en C worden geblokkeerd totdat het venster wordt gereset.
 De engine voorkomt dit door:
@@ -119,7 +119,7 @@ Redis-driver: Lua EVAL-script voor atomair ophogen — wordt uitgevoerd als éé
 
 - Tabel: `quota_consumption` (zie migratie `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Het meest geschikt voor implementaties met één instantie.
-- Alle persistentie vindt plaats in de bestaande OmniRoute SQLite-database (`DATA_DIR/storage.sqlite`).
+- Alle persistentie vindt plaats in de bestaande 67router SQLite-database (`DATA_DIR/storage.sqlite`).
 
 ### Redis (optioneel, meerdere instanties)
 

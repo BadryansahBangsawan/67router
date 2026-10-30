@@ -13,7 +13,7 @@
 
 ## Céard atá ann
 
-Nascann OmniRoute le taisce **Obsidian** mar **fhoinse comhthéacs** — bunachar eolais
+Nascann 67router le taisce **Obsidian** mar **fhoinse comhthéacs** — bunachar eolais
 Markdown áitiúil a léann agus a scríobhann gníomhairí tríd an bhfreastalaí MCP ionsuite.
 Déanann an comhtháthú cumarsáid leis an mbreiseán pobail **Obsidian Local REST API** atá
 ag rith laistigh den aip deisce, ionas gur féidir le gníomhairí nótaí a chuardach,
@@ -80,7 +80,7 @@ agus bailíochtaíonn sé an ceadchomhartha trí chríochphointe stádais an Loc
 ### Sioncronú taisceadáin WebDAV
 
 Bainistíonn `src/app/api/settings/obsidian/webdav/route.ts` sioncronú roghnach taisceadáin
-le tacaíocht WebDAV (arna thiomáint ag `src/lib/obsidianSync.ts`). Nuair a chumasaítear é, dírítear OmniRoute ar
+le tacaíocht WebDAV (arna thiomáint ag `src/lib/obsidianSync.ts`). Nuair a chumasaítear é, dírítear 67router ar
 eolaire taisceadáin áitiúil agus gintear péire randamach ainm úsáideora/focal faire WebDAV:
 
 ```bash
@@ -116,26 +116,26 @@ Coinníonn na ceithre uirlis `obsidian_sync_*` a n-iompar ceadchomhartha sioncro
 
 Sainmhínítear iad in `open-sse/mcp-server/tools/obsidianTools.ts`. Réitítear an comhartha/an bun-URL
 do gach glao (de réir na heochrach API ar dtús, ansin go domhanda). Éilíonn uirlisí a dhéanann teagmháil le **freastalaí sioncronaithe**
-OmniRoute (na ceithre uirlis `obsidian_sync_*`) an comhartha fíordheimhnithe sioncronaithe atá cumraithe
-i socruithe OmniRoute freisin.
+67router (na ceithre uirlis `obsidian_sync_*`) an comhartha fíordheimhnithe sioncronaithe atá cumraithe
+i socruithe 67router freisin.
 
 ### Uirlisí léite (`read:obsidian`)
 
-| Uirlis                       | Cur síos                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `obsidian_check_status`      | Seiceáil an bhfuil an Local REST API insroichte agus fíordheimhnithe.                                              |
-| `obsidian_search_simple`     | Cuardach lántéacs ar inneachar nótaí; tugtar blúirí le conairí comhad ar ais.                                      |
-| `obsidian_search_structured` | Cuardaigh le slonn JSON Logic (scagairí and/or/regex/path).                                                        |
-| `obsidian_read_note`         | Léigh nóta de réir conair atá coibhneasta leis an taisclann; ceannteideal/bloc/frontmatter ar leith de rogha.      |
-| `obsidian_list_vault`        | Liostaigh comhaid agus eolairí sa taisclann (crann iontrálacha).                                                   |
-| `obsidian_get_document_map`  | Faigh struchtúr ceannteideal an nóta mar mhapa de cheannteidil → uimhreacha línte.                                 |
-| `obsidian_get_note_metadata` | Faigh frontmatter, clibeanna, naisc, líon carachtar/focal gan an t-inneachar iomlán.                               |
-| `obsidian_get_active_file`   | Faigh conair + inneachar an chomhaid atá gníomhach in Obsidian faoi láthair.                                       |
-| `obsidian_get_periodic_note` | Faigh an nóta tréimhsiúil laethúil/seachtainiúil/míosúil do dháta (inniu má fhágtar ar lár é).                     |
-| `obsidian_get_tags`          | Liostaigh clibeanna uile na taisclainne lena minicíochtaí.                                                         |
-| `obsidian_list_commands`     | Liostaigh aitheantais orduithe Obsidian atá ar fáil (úsáid le `obsidian_execute_command`).                         |
-| `obsidian_sync_status`       | Stádas fhreastalaí sioncronaithe OmniRoute: ag rith, ainm na taisclainne, port, aga fónaimh, sioncronú deireanach. |
-| `obsidian_sync_conflicts`    | Liostaigh coinbhleachtaí sioncronaithe gan réiteach (conair, conair choinbhleachta, am braite).                    |
+| Uirlis                       | Cur síos                                                                                                          |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Seiceáil an bhfuil an Local REST API insroichte agus fíordheimhnithe.                                             |
+| `obsidian_search_simple`     | Cuardach lántéacs ar inneachar nótaí; tugtar blúirí le conairí comhad ar ais.                                     |
+| `obsidian_search_structured` | Cuardaigh le slonn JSON Logic (scagairí and/or/regex/path).                                                       |
+| `obsidian_read_note`         | Léigh nóta de réir conair atá coibhneasta leis an taisclann; ceannteideal/bloc/frontmatter ar leith de rogha.     |
+| `obsidian_list_vault`        | Liostaigh comhaid agus eolairí sa taisclann (crann iontrálacha).                                                  |
+| `obsidian_get_document_map`  | Faigh struchtúr ceannteideal an nóta mar mhapa de cheannteidil → uimhreacha línte.                                |
+| `obsidian_get_note_metadata` | Faigh frontmatter, clibeanna, naisc, líon carachtar/focal gan an t-inneachar iomlán.                              |
+| `obsidian_get_active_file`   | Faigh conair + inneachar an chomhaid atá gníomhach in Obsidian faoi láthair.                                      |
+| `obsidian_get_periodic_note` | Faigh an nóta tréimhsiúil laethúil/seachtainiúil/míosúil do dháta (inniu má fhágtar ar lár é).                    |
+| `obsidian_get_tags`          | Liostaigh clibeanna uile na taisclainne lena minicíochtaí.                                                        |
+| `obsidian_list_commands`     | Liostaigh aitheantais orduithe Obsidian atá ar fáil (úsáid le `obsidian_execute_command`).                        |
+| `obsidian_sync_status`       | Stádas fhreastalaí sioncronaithe 67router: ag rith, ainm na taisclainne, port, aga fónaimh, sioncronú deireanach. |
+| `obsidian_sync_conflicts`    | Liostaigh coinbhleachtaí sioncronaithe gan réiteach (conair, conair choinbhleachta, am braite).                   |
 
 ### Uirlisí scríofa (`write:obsidian`)
 

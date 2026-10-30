@@ -42,7 +42,7 @@ export function buildContainerWriteRefusal(
   const subject = toolLabel ? `${toolLabel} config` : "CLI tool config";
 
   return [
-    `${REFUSAL_PREFIX} ${subject} to ${targetPath} — OmniRoute is running in a container ` +
+    `${REFUSAL_PREFIX} ${subject} to ${targetPath} — 67router is running in a container ` +
       `and that path is not mounted from the host, so the file would be discarded when the ` +
       `container is recreated and your host CLI would never read it.`,
     "",

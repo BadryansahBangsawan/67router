@@ -7,7 +7,7 @@
 > **Sumber rujukan utama:** `src/lib/cloudAgent/` dan `src/app/api/v1/agents/tasks/`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40 (penyegaran frontmatter; 4 ejen termasuk cursor-cloud)
 
-OmniRoute mengatur ejen pengekodan pihak ketiga yang dihoskan di awan (Codex Cloud, Cursor,
+67router mengatur ejen pengekodan pihak ketiga yang dihoskan di awan (Codex Cloud, Cursor,
 Devin, Jules) sebagai tugasan jangka panjang. Setiap ejen dibalut di sebalik antara muka seragam supaya
 klien boleh menghantar gesaan + URL repositori dan menerima hasil tanpa perlu berurusan dengan
 API khusus penyedia.

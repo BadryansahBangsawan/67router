@@ -40,8 +40,8 @@ samme rundenære lokale verktøyfunksjonaliteten når tunnelen og tilkoblingen e
 
 1. Åpne leverandøren **ChatGPT Web (Codex)** og legg til en tilkobling.
 2. Lim inn hele ChatGPT Cookie-headeren, tunnel-ID-en, kjøretidsnøkkelen og navnet på den egendefinerte koblingen. Nye oppsett med verktøystøtte må bruke en nyopprettet kobling med navnet nøyaktig `OmniRoute Codex v2`, med Authentication satt til None og Permissions satt til Allow all actions.
-3. Kjør tilkoblingskontrollen. OmniRoute åpner en nettleserbasert midlertidig chat og registrerer om Sol og Pro er tilgjengelige for kontoen.
-4. Lagre tilkoblingen. OmniRoute erstatter den innlimte informasjonskapselen med den verifiserte Playwright-lagringstilstanden og lagrer den sammen med kjøretidsnøkkelen via den krypterte abstraksjonen for påloggingsopplysninger.
+3. Kjør tilkoblingskontrollen. 67router åpner en nettleserbasert midlertidig chat og registrerer om Sol og Pro er tilgjengelige for kontoen.
+4. Lagre tilkoblingen. 67router erstatter den innlimte informasjonskapselen med den verifiserte Playwright-lagringstilstanden og lagrer den sammen med kjøretidsnøkkelen via den krypterte abstraksjonen for påloggingsopplysninger.
 
 Den ubehandlede informasjonskapselen beholdes ikke etter en vellykket lagring. Når økten utløper, åpner du tilkoblingen, limer inn en ny, fullstendig Cookie-header og kjører kontrollen på nytt. Doctor-statusen i redigeringsdialogen rapporterer nettleser, lagringstilstand, pålogging, midlertidig chat, tunnel, kobling og verktøyets rundturskontroll separat. Hvis du vil automatisere oppdateringer av informasjonskapsler når økter roteres, kan du se det tilhørende verktøyet i [Utvidelse for synkronisering av nettleserøkter](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -91,19 +91,19 @@ en ny `OmniRoute Codex v2`-tilkobling.
 
 ## VPS uten skjerm og Docker
 
-For installasjoner med npm, systemd og PM2 oppdager OmniRoute vanlige Chrome- og Chromium-baner.
+For installasjoner med npm, systemd og PM2 oppdager 67router vanlige Chrome- og Chromium-baner.
 Alternativt kan du angi `CHATGPT_WEB_CODEX_CHROME_PATH`. Kjøretidsturer bruker bevisst Chrome
 med grafisk grensesnitt fordi ChatGPT avviser nettleserkonfigurasjonen ved ekte hodeløs kjøring. En vert uten skjerm må derfor
-kjøre OmniRoute med en privat Xvfb-skjerm; å angi Chrome-banen alene oppretter ikke en slik skjerm.
+kjøre 67router med en privat Xvfb-skjerm; å angi Chrome-banen alene oppretter ikke en slik skjerm.
 
 Docker-profilen `web` starter `chatgpt-web-codex-browser` på det interne Compose-
 nettverket. Sidevognen kjører Chrome med grafisk grensesnitt i Xvfb, så ingen fysisk skjerm er nødvendig. CDP-
 porten publiseres ikke på verten. Volumet for den beskyttede nettleserprofilen er separat fra
-OmniRoute-datavolumet, og nettleseren får nok delt minne. Den interne CDP-proxyen
+67router-datavolumet, og nettleseren får nok delt minne. Den interne CDP-proxyen
 lytter bare på port `9223` i Compose-nettverket; Chrome forblir bundet til loopback i
 sidevognen.
 
-En overvåkerleie under `DATA_DIR` hindrer flere OmniRoute-prosesser i å eie
+En overvåkerleie under `DATA_DIR` hindrer flere 67router-prosesser i å eie
 samme tunnel- og meglertilstand. En konflikt rapporteres av doctor.
 
 ## Interaktiv gjenoppretting

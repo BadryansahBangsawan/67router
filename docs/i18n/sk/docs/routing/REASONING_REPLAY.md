@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Posledná aktualizácia:** 2026-06-28 — v3.8.40
 
-OmniRoute zachytáva `reasoning_content` asistenta vytvorený modelmi v režime premýšľania a transparentne ho prehráva pri viacťahových požiadavkách, keď to nadradený poskytovateľ vyžaduje. Tým sa eliminujú chyby HTTP 400, ktoré striktní poskytovatelia vracajú, keď v histórii konverzácie klienta chýba uvažovanie z predchádzajúceho ťahu.
+67router zachytáva `reasoning_content` asistenta vytvorený modelmi v režime premýšľania a transparentne ho prehráva pri viacťahových požiadavkách, keď to nadradený poskytovateľ vyžaduje. Tým sa eliminujú chyby HTTP 400, ktoré striktní poskytovatelia vracajú, keď v histórii konverzácie klienta chýba uvažovanie z predchádzajúceho ťahu.
 
 ## Prečo to existuje
 
@@ -17,7 +17,7 @@ Niekoľko poskytovateľov s režimom premýšľania odmietne nadväzujúci ťah,
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-Typickí klienti (Cursor, Cline, Roo Code, OpenAI SDK) však odstraňujú `reasoning_content` z histórie, ktorú opätovne odosielajú. OmniRoute ho obnovuje z vyrovnávacej pamäte na strane servera, aby bola požiadavka, ktorú nadradená služba prijme, konzistentná. Issue #1628 zaviedlo hybridnú perzistenciu v pamäti/SQLite, vďaka ktorej vyrovnávacia pamäť pretrvá aj po reštartovaní procesu.
+Typickí klienti (Cursor, Cline, Roo Code, OpenAI SDK) však odstraňujú `reasoning_content` z histórie, ktorú opätovne odosielajú. 67router ho obnovuje z vyrovnávacej pamäte na strane servera, aby bola požiadavka, ktorú nadradená služba prijme, konzistentná. Issue #1628 zaviedlo hybridnú perzistenciu v pamäti/SQLite, vďaka ktorej vyrovnávacia pamäť pretrvá aj po reštartovaní procesu.
 
 ## Architektúra
 

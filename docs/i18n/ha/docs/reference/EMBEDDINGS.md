@@ -4,9 +4,9 @@
 
 ---
 
-Bayanan mai gudanarwa na `POST /v1/embeddings` lokacin da OmniRoute yake a gaban
+Bayanan mai gudanarwa na `POST /v1/embeddings` lokacin da 67router yake a gaban
 Hindsight 0.9.1 (`encode(list[str])` na rubutu kawai) da Memorix 1.6.0 (ƙofar kafofin
-watsa labarai ta Jina). An tabbatar kai tsaye a 2026-08-17 da OmniRoute 3.8.49 a
+watsa labarai ta Jina). An tabbatar kai tsaye a 2026-08-17 da 67router 3.8.49 a
 `https://omniroute.jaguar-fish.ts.net/v1`. Babu sirri a ƙasa.
 
 ## ID ɗin samfura masu aiki
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` na asali ba zai iya yin nasara ta GitOps kaɗai ba. Dole ne a
 ƙara maɓallin Google AI Studio a matsayin haɗin mai samarwar `gemini` (dashboard ko
-`GEMINI_API_KEY` da aka shigo da shi cikin OmniRoute). Wannan sirrin ba ya cikin wannan repo.
+`GEMINI_API_KEY` da aka shigo da shi cikin 67router). Wannan sirrin ba ya cikin wannan repo.
 
 ### Hanyar multimodal ta Jina
 
@@ -100,7 +100,7 @@ Yi amfani da `POST /v1/embeddings` har sai an samar da wani laƙabi.
 
 ### Object na hoto na Jina / Memorix
 
-Item ɗin hoto na ƙa'idar OmniRoute (28×28 PNG, pixels 784 — Jina tana ƙin 1×1):
+Item ɗin hoto na ƙa'idar 67router (28×28 PNG, pixels 784 — Jina tana ƙin 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Haɗa `{ "text": "..." }` da `{ "image": "data:..." }` yana haifar da 400 iri ɗ
 
 Embeddings na Hindsight na rubutu kawai ne (`encode(list[str])`). Ba ya aika
 objects na hoto. Saita URL na tushe na embeddings masu dacewa da OpenAI na Hindsight zuwa
-OmniRoute `/v1`, sannan a yi amfani da ID mai aiki daga teburin da ke sama
+67router `/v1`, sannan a yi amfani da ID mai aiki daga teburin da ke sama
 (`jina-ai/jina-embeddings-v5-omni-small` ko
 `openrouter/google/gemini-embedding-2`). Kada a saita samfurin zuwa
 `gemini-embedding-2` marar prefix sai idan akwai maɓallin API na `gemini` a gateway.
@@ -157,12 +157,12 @@ OmniRoute `/v1`, sannan a yi amfani da ID mai aiki daga teburin da ke sama
 ### Memorix 1.6.0
 
 Memorix yana ɗaukar `baseUrl` da ya dace da `/jina\.ai/i` kawai a matsayin kafofin
-watsa labarai na asali. URL na OmniRoute zai ci gaba da amfani da hanyar rubutu kawai ko da
+watsa labarai na asali. URL na 67router zai ci gaba da amfani da hanyar rubutu kawai ko da
 samfurin Jina omni ne. Wannan ƙofar matsala ce ta abokin hulɗar Memorix. Ba tare da la'akari
-da haka ba, OmniRoute har yanzu yana ƙin body na Jina mai `{image: "data:..."}` wanda
+da haka ba, 67router har yanzu yana ƙin body na Jina mai `{image: "data:..."}` wanda
 Memorix zai aika idan ƙofar ta buɗe, saboda haka abokan hulɗa masu dacewa da Jina ba za su
-iya yin embedding na hotuna ta OmniRoute ba sai da schema na ƙa'ida
+iya yin embedding na hotuna ta 67router ba sai da schema na ƙa'ida
 `{type,source}`.
 
 Yi amfani da `jina-ai/jina-embeddings-v5-omni-small` don rubutu. Kada a karkatar da
-`base_url` na Memorix zuwa `https://api.jina.ai` — a bar OmniRoute a matsayin hop guda tilo.
+`base_url` na Memorix zuwa `https://api.jina.ai` — a bar 67router a matsayin hop guda tilo.

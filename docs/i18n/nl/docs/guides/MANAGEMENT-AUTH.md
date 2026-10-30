@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute heeft **vier credential families** die managementroutes kunnen autoriseren.
+67router heeft **vier credential families** die managementroutes kunnen autoriseren.
 Ze zijn niet uitwisselbaar. Inference API-sleutels (`sk-…`) beheren de
 server **niet** tenzij ze expliciet `manage` of `admin` scope hebben gekregen.
 

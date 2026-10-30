@@ -4,7 +4,7 @@
 
 ---
 
-> **Tentang dokumen ini.** Penilaian kritis terhadap sistem gerbang kualitas OmniRoute,
+> **Tentang dokumen ini.** Penilaian kritis terhadap sistem gerbang kualitas 67router,
 > dibandingkan dengan praktik terbaik industri, **ditambah** katalog lengkap seluruh titik
 > pemeriksaan kualitas dan **rencana replikasi yang tidak bergantung pada alat tertentu** untuk menerapkan sistem yang sama pada
 > proyek apa pun. Dibuat pada 2026-06-16 berdasarkan kondisi repositori yang sebenarnya (bukan berdasarkan ingatan).
@@ -108,62 +108,62 @@ untuk direplikasi pada stack apa pun.
 
 ### 1. Gaya & pemformatan (deterministik, cepat)
 
-- **OmniRoute:** Prettier + ESLint melalui lint-staged (pre-commit), 2 spasi/tanda kutip ganda/100 kolom.
+- **67router:** Prettier + ESLint melalui lint-staged (pre-commit), 2 spasi/tanda kutip ganda/100 kolom.
 - **Generik:** satu pemformat yang dapat memperbaiki secara otomatis + satu linter, dijalankan saat pre-commit pada file yang telah di-stage.
 
 ### 2. Tipe
 
-- **OmniRoute:** `typecheck:core` (memblokir) + `typecheck:noimplicit:core` (bersifat saran) + ratchet `type-coverage` 92.17% + anggaran any per file.
+- **67router:** `typecheck:core` (memblokir) + `typecheck:noimplicit:core` (bersifat saran) + ratchet `type-coverage` 92.17% + anggaran any per file.
 - **Generik:** pemeriksaan tipe ketat di CI + metrik cakupan tipe yang menggunakan ratchet + anggaran `any`/jalan keluar per file.
 
 ### 3. Pengujian (intensitas)
 
-- **OmniRoute:** 2 runner yang tidak tumpang tindih (Node native + vitest), 8 shard, cakupan global 60/60/60/60 + ratchet ~76% + **8 batas minimum per modul untuk modul kritis** + pengujian properti setiap malam + **pengujian mutasi** setiap malam.
+- **67router:** 2 runner yang tidak tumpang tindih (Node native + vitest), 8 shard, cakupan global 60/60/60/60 + ratchet ~76% + **8 batas minimum per modul untuk modul kritis** + pengujian properti setiap malam + **pengujian mutasi** setiap malam.
 - **Generik:** runner pengujian + batas minimum cakupan **absolut** (anti-nol) + **ratchet** cakupan (anti-regresi) + **batas minimum per modul untuk kode berisiko tinggi** (anti-Goodhart) + pengujian berbasis properti untuk logika murni + **pengujian mutasi** setiap malam sebagai ukuran nyata kualitas pengujian.
 
 ### 4. Kebijakan pengujian (anti-manipulasi)
 
-- **OmniRoute:** `pr-test-policy` (kode produksi memerlukan pengujian), `check-test-masking` (memblokir pelemahan assertion), `pr-evidence` (klaim keberhasilan memerlukan blok bukti), `test-discovery` (setiap pengujian dikumpulkan oleh runner).
+- **67router:** `pr-test-policy` (kode produksi memerlukan pengujian), `check-test-masking` (memblokir pelemahan assertion), `pr-evidence` (klaim keberhasilan memerlukan blok bukti), `test-discovery` (setiap pengujian dikumpulkan oleh runner).
 - **Generik:** gerbang "kode baru ⇒ pengujian baru" + detektor assertion yang dihapus/tautologi + persyaratan bukti (TDD atau pengujian aktif) + jaminan bahwa tidak ada pengujian yang terlantar di luar glob.
 
 ### 5. Kompleksitas & kesehatan kode (ratchet)
 
-- **OmniRoute:** peringatan ESLint (3769↓), duplikasi jscpd (5.72%↓), kompleksitas siklomatik+jumlah maksimum baris (1800↓), kompleksitas kognitif sonarjs (753↓), kode mati/ekspor yang tidak digunakan knip (339↓), ukuran file per file (dibekukan, hanya boleh menyusut), dependensi melingkar (Tarjan kustom, memblokir).
+- **67router:** peringatan ESLint (3769↓), duplikasi jscpd (5.72%↓), kompleksitas siklomatik+jumlah maksimum baris (1800↓), kompleksitas kognitif sonarjs (753↓), kode mati/ekspor yang tidak digunakan knip (339↓), ukuran file per file (dibekukan, hanya boleh menyusut), dependensi melingkar (Tarjan kustom, memblokir).
 - **Generik:** terapkan ratchet pada setiap metrik kesehatan (peringatan, duplikasi, kompleksitas siklomatik **dan** kognitif, kode mati, ukuran file, siklus impor). Arahnya selalu "jangan mengalami regresi".
 
 ### 6. Keamanan statis (SAST + rahasia)
 
-- **OmniRoute:** CodeQL (ratchet peringatan = 0), gitleaks (`[extend] useDefault=true` — sangat penting!), SonarQube, aturan keamanan kustom (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ratchet peringatan = 0), gitleaks (`[extend] useDefault=true` — sangat penting!), SonarQube, aturan keamanan kustom (public-creds, error-helper, route-guard-membership, route-validation).
 - **Generik:** SAST (CodeQL/Sonar/semgrep) dengan ratchet peringatan + pemindai rahasia dengan **ruleset default yang diwarisi** (konfigurasi kustom yang menggantikan default = titik buta) + gerbang keamanan Aturan Keras khusus proyek.
 
 ### 7. Rantai pasok (dependensi)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (daftar izin SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (daftar izin + usia ≥72 jam).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (daftar izin SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (daftar izin + usia ≥72 jam).
 - **Generik:** SCA multisumber + daftar izin lisensi + pemeriksaan integritas lockfile + daftar izin dependensi dengan pemeriksaan usia/typosquatting + bot pembaruan yang dikelompokkan.
 
 ### 8. Rantai pasok (build & rilis)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), provenance SLSA (`--provenance`), OpenSSF Scorecard (mingguan), penguatan workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), provenance SLSA (`--provenance`), OpenSSF Scorecard (mingguan), penguatan workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Generik:** hasilkan SBOM saat publikasi + provenance bertanda tangan (SLSA L2+) + Scorecard terjadwal + perkuat semua workflow (token dengan hak istimewa minimum, tanpa kredensial yang dipertahankan pada checkout non-pusher, action disematkan berdasarkan SHA).
 
 ### 9. Kontrak & API
 
-- **OmniRoute:** oasdiff (perubahan yang merusak kompatibilitas OpenAPI), schemathesis (fuzz kontrak setiap malam), openapi-coverage (% route terdokumentasi, ratchet 38.3%), openapi-security-tiers (spesifikasi vs route-guard).
+- **67router:** oasdiff (perubahan yang merusak kompatibilitas OpenAPI), schemathesis (fuzz kontrak setiap malam), openapi-coverage (% route terdokumentasi, ratchet 38.3%), openapi-security-tiers (spesifikasi vs route-guard).
 - **Generik:** diff kontrak untuk perubahan yang merusak kompatibilitas (oasdiff/buf) + fuzz berbasis properti terhadap spesifikasi (schemathesis) + cakupan dokumentasi dengan ratchet + konsistensi spesifikasi↔kode.
 
 ### 10. Dokumentasi & i18n (anti-pelapukan)
 
-- **OmniRoute:** docs-sync (versi yang dicerminkan), docs-counts-sync (angka dalam dokumentasi vs kode), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (versi yang dicerminkan), docs-counts-sync (angka dalam dokumentasi vs kode), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **Generik:** sinkronkan versi/jumlah/variabel lingkungan antara dokumentasi dan kode (gerbang, bukan kepercayaan) + validasi tautan internal + cakupan i18n dengan ratchet.
 
 ### 11. Anti-halusinasi / konsistensi (kategori langka)
 
-- **OmniRoute:** known-symbols (dispatch string ⇒ simbol aktif), provider-consistency, fetch-targets (fetch klien ⇒ route nyata), docs-symbols, db-rules (Aturan Keras #2/#5), migration-numbering.
+- **67router:** known-symbols (dispatch string ⇒ simbol aktif), provider-consistency, fetch-targets (fetch klien ⇒ route nyata), docs-symbols, db-rules (Aturan Keras #2/#5), migration-numbering.
 - **Generik:** untuk setiap "sumber kebenaran yang terduplikasi" (registry, dispatch string, referensi lintas lapisan), buat gerbang yang membuktikan bahwa kedua sisi cocok. Menangkap pelapukan yang tidak terdeteksi oleh pemeriksaan tipe/pengujian.
 
 ### 12. Ketahanan & domain (khusus produk)
 
-- **OmniRoute:** chaos (injeksi kegagalan), heap-growth (kebocoran), k6 (soak), promptfoo+garak (red-team LLM terhadap OWASP LLM Top 10), 3 hukum ketahanan (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (injeksi kegagalan), heap-growth (kebocoran), k6 (soak), promptfoo+garak (red-team LLM terhadap OWASP LLM Top 10), 3 hukum ketahanan (circuit-breaker/cooldown/lockout).
 - **Generik:** identifikasi mode kegagalan dalam domain **Anda** dan miliki gerbang (meskipun hanya dijalankan setiap malam) untuk masing-masing mode. Untuk aplikasi AI: red-team injeksi. Untuk sistem terdistribusi: chaos + kebocoran + soak.
 
 ---

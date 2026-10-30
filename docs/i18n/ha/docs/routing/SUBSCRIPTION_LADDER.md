@@ -10,7 +10,7 @@
 
 ## Dalilin samuwar wannan
 
-OmniRoute ya riga ya amsa tambayoyi biyu game da farashi, amma babu ɗayansu da yake amsa tambayar da yawancin masu gudanarwa suke yi.
+67router ya riga ya amsa tambayoyi biyu game da farashi, amma babu ɗayansu da yake amsa tambayar da yawancin masu gudanarwa suke yi.
 
 | Tsarin da yake akwai                                     | Abin da yake amsawa                               |
 | -------------------------------------------------------- | ------------------------------------------------- |

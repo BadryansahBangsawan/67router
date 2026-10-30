@@ -4,7 +4,7 @@
 
 ---
 
-Den här sidan förklarar projektets lokala beteende för `.env` och hur miljöfiler och hemligheter ska hanteras vid utveckling av OmniRoute.
+Den här sidan förklarar projektets lokala beteende för `.env` och hur miljöfiler och hemligheter ska hanteras vid utveckling av 67router.
 
 ## .env-beteende vid postinstall
 

@@ -4,7 +4,7 @@
 
 ---
 
-Nuair a ritheann OmniRoute taobh istigh de Docker, teipeann ar an ngnáthshreabhadh "Iompórtáil ó Shlabhra Eochracha Zed"
+Nuair a ritheann 67router taobh istigh de Docker, teipeann ar an ngnáthshreabhadh "Iompórtáil ó Shlabhra Eochracha Zed"
 toisc nach féidir leis an gcoimeádán deamhan shlabhra eochracha an óstchórais a bhaint amach (`libsecret` ar Linux,
 Keychain ar macOS, Credential Manager ar Windows) agus nach mbíonn eolairí cumraíochta Zed ar
 chóras comhad an óstaigh infheicthe taobh istigh den choimeádán de réir réamhshocraithe.
@@ -20,7 +20,7 @@ Tarlaíonn dhá fhadhb bhlocála taobh istigh de choimeádán:
    `keytar` cumarsáid le seirbhís shlabhra eochracha an chórais oibriúcháin thar shoicéad Unix nó seisiún D-Bus.
    Ní dhroichtear ceachtar acu isteach sa choimeádán de réir réamhshocraithe, mar sin teipeann ar léamh dintiúr i gcónaí.
 
-Braitheann OmniRoute timpeallacht Docker trí dhá heorastac:
+Braitheann 67router timpeallacht Docker trí dhá heorastac:
 
 - Láithreacht `/.dockerenv` (a scríobhann deamhan Docker nuair a thosaíonn an coimeádán).
 - An teaghrán `docker` a bheith le feiceáil in `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Nuair a spreagann ceachtar heorastac, cuireann an bealach iompórtála HTTP 422 
 
 1. Oscail **Deais → Soláthraithe → Zed**.
 2. Taispeántar an painéal **Iompórtáil Chomhartha de Láimh** faoi chárta iompórtála an tslabhra eochracha. Nuair a
-   bhraitheann OmniRoute Docker, leathnaíonn an painéal seo go huathoibríoch tar éis na chéad iarrachta teipthe
+   bhraitheann 67router Docker, leathnaíonn an painéal seo go huathoibríoch tar éis na chéad iarrachta teipthe
    ar iompórtáil ón slabhra eochracha.
 3. Roghnaigh an soláthraí ón roghchlár anuas (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, nó DeepSeek).

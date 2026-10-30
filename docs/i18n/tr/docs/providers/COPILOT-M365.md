@@ -41,7 +41,7 @@ Tam URL şu biçimdedir:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute'ta **Providers → Add Provider** bölümüne gidin, **Microsoft 365 Copilot
+6. 67router'ta **Providers → Add Provider** bölümüne gidin, **Microsoft 365 Copilot
    (BizChat)** seçeneğini belirleyin ve kimlik bilgisini şu biçimde yapıştırın:
 
 ```
@@ -58,9 +58,9 @@ aktarabilirsiniz:
 1. **DevTools → Network** bölümünü açın.
 2. Bir BizChat konuşması başlatın veya mevcut konuşmayı sürdürün (bu işlem WebSocket bağlantısını tetikler).
 3. Network panelinde sağ tıklayın ve **Save all as HAR with content** seçeneğini belirleyin.
-4. OmniRoute'taki sağlayıcı bağlantısı iletişim kutusunda **Import .har file** düğmesini kullanın.
+4. 67router'taki sağlayıcı bağlantısı iletişim kutusunda **Import .har file** düğmesini kullanın.
 
-OmniRoute, HAR dosyasında Chathub WebSocket URL'sini tarar, `access_token` ve
+67router, HAR dosyasında Chathub WebSocket URL'sini tarar, `access_token` ve
 `chathubPath` değerlerini çıkarır ve kimlik bilgisi alanlarını otomatik olarak doldurur.
 HAR içe aktarma işlemi, JWT sona erme zamanını çözümler ve belirtecin kalan kullanım
 süresini gösterir.
@@ -85,7 +85,7 @@ Elle yeniden alma gereksinimini önlemek için Microsoft yenileme belirtecini ba
 
 Yenileme belirtecini, `substrate.office.com/sydney` kapsamına sahip bir Microsoft
 cihaz kodu veya yetkilendirme kodu akışından edinin. `refreshToken` ayarlandığında
-OmniRoute, her istekten önce `access_token` değerini önceden yeniler; böylece her
+67router, her istekten önce `access_token` değerini önceden yeniler; böylece her
 ~75 dakikalık süre dolumundan sonra kimlik bilgisini yeniden almanız gerekmez.
 
 `refreshToken` ayarlanmamışsa her süre dolumundan sonra WebSocket kimlik bilgisini

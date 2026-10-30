@@ -113,7 +113,7 @@ ko rubutaccen binciken hannu da ya dace da canjin.
 - Katalog na CLI suna zama daban a ƙarƙashin `bin/cli/locales/`.
 - Kiyaye ICU placeholders da tags daidai. Kada a fassara sunayen samfur/mai samarwa/model,
   sunayen protocol da header, umarni, masu ganowa na code/JSON, URLs, environment variables, ko
-  keɓaɓɓun kalmomi kamar `OmniRoute`, `OAuth`, `MCP`, da `A2A`. Jerin tushen na yanzu yana
+  keɓaɓɓun kalmomi kamar `67router`, `OAuth`, `MCP`, da `A2A`. Jerin tushen na yanzu yana
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Takamaiman zagaye**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # sake amfani da tarball
 - **Mayar baya.** `run` yana sake tantance slot ɗin da aka ciyar gaba sannan ya sake musanya `current` da `previous` idan
   wannan dubawar ta gaza. Ba a taɓa ciyar da candidate da ya gaza tantancewar farko gaba ba.
 
-Ana rubuta komai ƙarƙashin `_artifacts/candidate/` da git ke yin watsi da shi; ba a taɓa shigarwar OmniRoute
+Ana rubuta komai ƙarƙashin `_artifacts/candidate/` da git ke yin watsi da shi; ba a taɓa shigarwar 67router
 da ke akwai da data directory ɗinta ba. CLI da aka ciyar gaba shi ne
 `_artifacts/candidate/current/prefix/bin/omniroute`; fara shi da `DATA_DIR` naka lokacin da kake amfani
 da shi. Exit codes: `0` nasara, `1` tantancewa ko ciyarwa gaba ta gaza, `2` kuskuren amfani ko build ya ɓace.

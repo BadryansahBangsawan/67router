@@ -14,7 +14,7 @@ Kaksi vapaaehtoista Compose-profiilia (`memory`, `bifrost`) olemassa olevaan kah
 
 ## Miksi tämä on varovainen lähestymistapa
 
-OmniRouten nykyinen käyttöönottoarkkitehtuuri on jo kevyt ja hyväksi todettu:
+67routerin nykyinen käyttöönottoarkkitehtuuri on jo kevyt ja hyväksi todettu:
 
 - **`redis:7-alpine`** käsittelee tuotantomittakaavan nopeusrajoitus- ja välimuistikuorman.
 - **SQLite + sqlite-vec + FTS5** kattavat paikallisen muistin sekä vektori- ja tekstihaun (katso [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Nämä kaksi profiilia ovat **skaalausvaihtoehtoja käyttöönotoille, jotka saa
 
 - Käytössäsi on vähintään 3 `omniroute`-replikaa ja haluat keskittää palveluntarjoajien kierron yhteen Go-prosessiin.
 - Haluat yhden yhteisen auditointi- ja lokitusrajapinnan kaikkien replikoiden palveluntarjoajapyynnöille.
-- Haluat skaalata ensisijaisen tason reitityskerrosta vaakasuunnassa OmniRoute-replikoista riippumatta.
+- Haluat skaalata ensisijaisen tason reitityskerrosta vaakasuunnassa 67router-replikoista riippumatta.
 
 **Mitä se lisää:**
 

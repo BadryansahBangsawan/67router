@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` yana ba ainihin muhallin tafiyar da Claude Code damar amfani da maƙurar
-Anthropic Messages ta gida ta OmniRoute, yayin da Devin CLI na hukuma ke samar da amsoshin samfuri ta ACP stdio. Ba ya
+Anthropic Messages ta gida ta 67router, yayin da Devin CLI na hukuma ke samar da amsoshin samfuri ta ACP stdio. Ba ya
 gyara masu samarwa na Anthropic, Claude OAuth, Claude Web, ko `devin-cli` da suke akwai.
 
 Don kiran kayan aiki mallakar abokin ciniki, bi ta `devin-cli-agentic` (laƙabi `dva`), wato
@@ -18,7 +18,7 @@ metadata na samfurinsa alama daidai da haka domin sarrafa haɗin da ke buƙatar 
 > `3000.2.17` da samfurin `swe-1-7-lightning`; wannan gwajin kai-tsaye na ƙarshe ya tabbatar da zagayen `Read`,
 > `Edit`, da `Bash` mallakar abokin ciniki, sakamakon `npm test` mai nasara, gano umarnin aikin da ƙwarewa,
 > sarrafawa ta Devin kawai, da rashin fitar bayanai zuwa Claude kwata-kwata. Daga nan aka ɗaga ƙayyadadden zuwa `2.1.258`
-> (ƙarni na CLI da asalin Claude na OmniRoute ke kwaikwaya, kuma layi na farko da ya zo
+> (ƙarni na CLI da asalin Claude na 67router ke kwaikwaya, kuma layi na farko da ya zo
 > da matakin Fable 5.1 kai-tsaye). A sabon ƙayyadadden, an tabbatar da shimfiɗar girkawa da `claude --version`
 > a kan base image ɗin da aka ƙayyade, kuma jerin gwaje-gwajen unit na gada, `compose config`, da
 > tabbataccen gwajin warewa na tsaye sun yi nasara — amma har yanzu ba a sake gudanar da yanayin kwaikwayo na offline da
@@ -51,11 +51,11 @@ Parser yana karɓar envelope guda ɗaya mai zaman kansa na `<tool>{...}</tool>` 
 sunan da jerin kayan aikin buƙatar, yana tabbatar da arguments bisa JSON Schema na wannan kayan aikin,
 yana ƙin haɗa bayani da ayyuka, kuma yana ba da damar gyara guda ɗaya mai iyaka. Daga nan Claude Code
 zai aiwatar da sakamakon Anthropic `tool_use` a cikin gida kuma ya aika da `tool_result` ɗin baya ta
-OmniRoute.
+67router.
 
 ## Sarrafawa ta atomatik
 
-Mai samarwar ya cancanci shiga rukunin ’yan takara na `auto/*` na OmniRoute idan ba a toshe shi ba.
+Mai samarwar ya cancanci shiga rukunin ’yan takara na `auto/*` na 67router idan ba a toshe shi ba.
 Cancantar zama ɗan takara ba ta tabbatar da zaɓinsa ba: dabarar sarrafa hanyar haɗin (misali,
 na ƙarshe da aka san yana aiki) na iya fifita wani mai samarwa. Yi amfani da `dva/<model>` ko haɗi mai ba
 Devin fifiko idan kana buƙatar kowace buƙata ta bi ta Devin.
@@ -67,16 +67,16 @@ Shigarwar Claude ta na'urar mai masaukin baki, asusunta, da saitunanta ba sa cik
 
 - suna gudana da UID/GID `10001:10001`, tare da tsarin fayil na tushe mai karatu-kawai, an cire damar musamman, kuma
   da `no-new-privileges`;
-- suna amfani da `/home/bridge` mai zaman kansa, keɓaɓɓen volume na saitunan Claude, bayanan OmniRoute da aka keɓe,
+- suna amfani da `/home/bridge` mai zaman kansa, keɓaɓɓen volume na saitunan Claude, bayanan 67router da aka keɓe,
   da kuma wani volume na `devin-auth` daban;
 - suna mount ne kawai wuraren aiki/hujjojin `.sandbox` waɗanda za a iya yarwa;
 - ba sa mount kundin gida na na'urar mai masaukin baki, Keychain, SSH, bayanan shaidar cloud, ko Docker socket;
 - suna gina muhallai a sarari kuma suna cire masu sauyin API/OAuth/routing na Anthropic;
 - suna tura inference na Claude Code zuwa `http://omniroute:20128` kawai tare da maɓalli na cikin gida kawai.
 
-Furofayil na offline yana amfani da hanyar sadarwa ta ciki. A furofayil na live, OmniRoute yana isa
+Furofayil na offline yana amfani da hanyar sadarwa ta ciki. A furofayil na live, 67router yana isa
 endpoints na Devin na hukuma ne kawai ta hanyar `network-guard`; ana hana wuraren da ba su da alaƙa.
-Claude Code yana da keɓaɓɓen kariyar egress mai hana komai kuma yana iya isa sabis na OmniRoute
+Claude Code yana da keɓaɓɓen kariyar egress mai hana komai kuma yana iya isa sabis na 67router
 na cikin gida kawai ta hanyar `NO_PROXY`. Fayilolin binciken guard ana mount ɗinsu ne kawai ga tsarin guard ɗin da ya dace.
 Scripts ɗin suna tabbatar da mallakar fayil, mode, adadin link, da kowace shawara kafin su fitar da
 hujjar da ba ta ƙunshi token ba.

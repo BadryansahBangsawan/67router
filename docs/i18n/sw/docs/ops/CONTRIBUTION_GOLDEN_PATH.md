@@ -113,7 +113,7 @@ au ukaguzi wa mwenyewe uliorekodiwa unaofaa kwa badiliko hilo.
 - Katalogi za CLI ziko kando chini ya `bin/cli/locales/`.
 - Hifadhi placeholders na tags za ICU bila mabadiliko yoyote. Usitafsiri majina ya bidhaa/mtoa huduma/modeli,
   majina ya protocol na header, amri, vitambulishi vya msimbo/JSON, URLs, environment variables, au
-  istilahi zinazolindwa kama vile `OmniRoute`, `OAuth`, `MCP`, na `A2A`. Orodha ya sasa ya chanzo ni
+  istilahi zinazolindwa kama vile `67router`, `OAuth`, `MCP`, na `A2A`. Orodha ya sasa ya chanzo ni
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Mzunguko mahususi**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # tumia tena tarball ili
 - **Rudisha nyuma.** `run` huthibitisha tena nafasi iliyopandishwa na hubadilishana `current` na `previous` kurudi katika hali ya awali wakati
   ukaguzi huo unapofeli. Toleo teule linalofeli uthibitishaji wa kwanza halipandishwi kamwe.
 
-Kila kitu huandikwa chini ya `_artifacts/candidate/` iliyopuuzwa na git; usakinishaji uliopo wa OmniRoute
+Kila kitu huandikwa chini ya `_artifacts/candidate/` iliyopuuzwa na git; usakinishaji uliopo wa 67router
 na saraka yake ya data haziguswi kamwe. CLI iliyopandishwa ni
 `_artifacts/candidate/current/prefix/bin/omniroute`; ianzishe kwa kutumia `DATA_DIR` yako mwenyewe unapoitumia.
 Misimbo ya kutoka: `0` mafanikio, `1` uthibitishaji au upandishaji umefeli, `2` hitilafu ya matumizi au build haipo.

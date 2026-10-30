@@ -9,9 +9,9 @@
 > **Son araşdırma tarixi:** 2026-06-17 — hər provayder üzrə veb araşdırması (rəsmi sənədlər + son 7 günün xəbərləri, ziddiyyətli yoxlama ilə 50 agentlik keçid); bütün pulsuz səviyyə kvotaları və ToS yenilənib. **Qismən təkrar audit: 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — aşağıdakı tarixli qeydə baxın).
 > **Əsas mənbə (kataloq):** `open-sse/config/freeModelCatalog.ts` (hər model üzrə büdcələr, hovuzlar üzrə təkrarlar çıxarılıb). Aşağıdakı token büdcəsi rəqəmləri canlı veb araşdırmasından əldə edilib və **təxminidir** — [Metodologiya və məhdudiyyətlərə](#methodology--caveats) baxın.
 
-## Qısa xülasə — OmniRoute əslində nə qədər pulsuz inferensiyanı birləşdirir?
+## Qısa xülasə — 67router əslində nə qədər pulsuz inferensiyanı birləşdirir?
 
-Bu rəqəmlər kataloqdakı ayrı-ayrı üçüncü tərəf hesablarını və uyğunluq şərtlərini təsvir edir. OmniRoute bu büdcəni təqdim etmir: tələb olunan hesabları və ya giriş məlumatlarını əldə etməli, uyğun provayderləri qoşmalı və onların limitlərinə riayət etməlisiniz. Faktiki istifadə edilə bilən tutum daha aşağı, o cümlədən uyğun marşrutu olmayan yeni quraşdırmada sıfır ola bilər. `tos: avoid` ilə işarələnmiş provayderlər standart olaraq avtomatik marşrutlaşdırmadan xaric edilir.
+Bu rəqəmlər kataloqdakı ayrı-ayrı üçüncü tərəf hesablarını və uyğunluq şərtlərini təsvir edir. 67router bu büdcəni təqdim etmir: tələb olunan hesabları və ya giriş məlumatlarını əldə etməli, uyğun provayderləri qoşmalı və onların limitlərinə riayət etməlisiniz. Faktiki istifadə edilə bilən tutum daha aşağı, o cümlədən uyğun marşrutu olmayan yeni quraşdırmada sıfır ola bilər. `tos: avoid` ilə işarələnmiş provayderlər standart olaraq avtomatik marşrutlaşdırmadan xaric edilir.
 
 **2026-10-08 tarixində yoxlanılıb:** [Cerebras](https://www.cerebras.ai/pricing) ödəniş üsulu tələb edən və 30 gündən sonra etibarlılığını itirən birdəfəlik $5 promosyon krediti təqdim edir. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) layihə/model/səviyyə üzrə sürət limitlərini dərc edir; o, aylıq əsas kəmiyyət göstəricisinə daxil edilmir.
 
@@ -92,7 +92,7 @@ kreditlərin sıfır olması demək deyil. Nous dəyişiklikləri aşağıdakı 
 
 ## İki rejim — sayma və qərarvermə
 
-OmniRoute "bu pulsuzdurmu?" sualını qəsdən fərqli
+67router "bu pulsuzdurmu?" sualını qəsdən fərqli
 mənbələri oxuyan iki rejim vasitəsilə cavablandırır:
 
 | Rejim                | Həqiqət mənbəyi                                                                                                                                                                        | Tətbiq sahələri                                                                                                                                   |
@@ -140,7 +140,7 @@ Bu sahədəki əksər "aylıq pulsuz token" göstəriciləri model üzrə etiket
 
 ### ⚠️ Diqqət — yoxlanmağa dəyər şəxsi istifadə / proksi bəndləri (16)
 
-> Onların pulsuz girişi realdır və OmniRoute sorğuları onlara marşrutlaşdıra bilər; aşağıdakı bəndləri sadəcə bilmək faydalıdır. OAuth/açarsız olanların həcmini tokenlə ölçmək mümkün deyil, buna görə onlar əsas göstəriciyə daxil edilməyib (istifadəyə yararsız olduqları üçün deyil).
+> Onların pulsuz girişi realdır və 67router sorğuları onlara marşrutlaşdıra bilər; aşağıdakı bəndləri sadəcə bilmək faydalıdır. OAuth/açarsız olanların həcmini tokenlə ölçmək mümkün deyil, buna görə onlar əsas göstəriciyə daxil edilməyib (istifadəyə yararsız olduqları üçün deyil).
 
 | Provayder        | Qeyd                                                                                                                                                                                                           |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ Bu sahədəki əksər "aylıq pulsuz token" göstəriciləri model üzrə etiket
 | `fireworks`      | ToS proksi/vasitəçi istifadəsini, API açarlarının ötürülməsini və sublisenziyalaşdırmanı açıq şəkildə qadağan edir (Bölmələr 2.1 və 2.2(i)(j)); öz hostinqində işləyən şəxsi proksilər …                       |
 | `friendliai`     | ToS Bölmə 8(e) və 8(f) FriendliAI-dan proksi kimi istifadə etməyi və ya ayrıca əsasda üçüncü tərəf girişinə icazə verməyi açıq şəkildə qadağan edir, həmçinin yenidən satışı qadağan edir/…                    |
 | `iflytek`        | iFlytek Spark LLM Service Agreement sənədinin 2.4(3) bölməsi "məlumatları və ya çıxış nəticələrini əldə etmək üçün hər hansı avtomatlaşdırılmış və ya proqramlaşdırılmış üsuldan istifadə etməyi…              |
-| `kiro`           | Kiro FAQ "üçüncü tərəf mexanizmlərindən istifadə edən OpenClaw və oxşar alətlərlə" istifadəni açıq şəkildə qadağan edir — sorğuları marşrutlaşdıran öz hostinqində işləyən AI proksisi (OmniRoute kimi)…       |
+| `kiro`           | Kiro FAQ "üçüncü tərəf mexanizmlərindən istifadə edən OpenClaw və oxşar alətlərlə" istifadəni açıq şəkildə qadağan edir — sorğuları marşrutlaşdıran öz hostinqində işləyən AI proksisi (67router kimi)…        |
 | `modal`          | ToS Bölmə 1.3 "icarəyə vermək, yenidən satmaq və ya hər hansı üçüncü tərəfə Xidmətə birbaşa giriş və ya ondan istifadə imkanı yaratmağı" açıq şəkildə qadağan edir — öz hostinqində işləyən…                   |
 | `muse-spark-web` | Meta ToS əvvəlcədən icazə olmadan avtomatlaşdırılmış girişi, yazılı icazə olmadan əks mühəndisliyi və texnoloji vasitələrin aşılmasını açıq şəkildə qadağan edir…                                              |
 | `nlpcloud`       | ToS "başqalarının onun vasitəsilə Xidmətə daxil olmasına imkan verən proksi və ya başqa cihaz qurmağı" açıq şəkildə qadağan edir və yalnız ötürülə bilməyən,…                                                  |
@@ -316,7 +316,7 @@ Bu sahədəki əksər "aylıq pulsuz token" göstəriciləri model üzrə etiket
 
 - **`360ai`** — Buraxılışla təqdim edilən freeNote-dakı "Pulsuz 360 AI Brain modelləri" ifadəsi köhnəlib. Hazırda giriş müraciət əsasında verilir və ödənişlidir. 2023-cü ildə istifadəyə verilmə dövründə təqdim olunan birdəfəlik promo tokenləri (100M–250M) bunun əsası olmuş ola bilər…
 - **`agentrouter`** — Buraxılışla təqdim edilən freeNote-da "Qeydiyyat zamanı $200 pulsuz kredit" deyilir. Hazırda standart (referalsız) qeydiyyatlar yalnız $100 əldə edir; referal vasitəsilə qeydiyyatdan keçənlər $200 ala bilər, lakin 2026-cı ilin aprelindən olan icma şərhi…
-- **`agy`** — Buraxılışla təqdim edilən freeNote-da pulsuz səviyyənin olmadığını bildirən "(yoxdur)" yazılıb, lakin Antigravity-nin OAuth ilə məhdudlaşdırılan pulsuz səviyyəsi var. Bununla belə, Xidmət Şərtləri bu pulsuz səviyyədən OmniRoute kimi proksi vasitəsilə istifadəni açıq şəkildə qadağan edir …
+- **`agy`** — Buraxılışla təqdim edilən freeNote-da pulsuz səviyyənin olmadığını bildirən "(yoxdur)" yazılıb, lakin Antigravity-nin OAuth ilə məhdudlaşdırılan pulsuz səviyyəsi var. Bununla belə, Xidmət Şərtləri bu pulsuz səviyyədən 67router kimi proksi vasitəsilə istifadəni açıq şəkildə qadağan edir …
 - **`ai21`** — Şərtlər sərtləşdirilib: sınaq müddəti "3 ay"dan 7 günə endirilib. $10 kredit məbləği dəyişməz qalsa da, etibarlılıq müddəti təxminən 90 gündən 7 günə kəskin şəkildə azalıb.
 - **`aimlapi`** — Əhəmiyyətli dərəcədə dəyişib. Buraxılışla təqdim edilən freeNote-da "Gündə $0.025 pulsuz kredit — 200+ model" reklam edilirdi, lakin pulsuz səviyyə indi dayandırılıb/ləğv edilib. Gündəlik $0.025 kredit ayırması (gündə 50,000 kredit, 10 sorğu/g…
 - **`amazon-q`** — Buraxılışla təqdim edilən freeNote-da "(yoxdur)" deyilir — reallıq isə daha pisdir: məhsul artıq yeni qeydiyyatlar üçün dayandırılıb (15 may 2026). Əvvəllər pulsuz səviyyə ayda 50 agent sorğusu + limitsiz sətirdaxili…

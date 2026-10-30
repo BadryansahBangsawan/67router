@@ -52,7 +52,7 @@ inatividade. Esse é o mesmo limitador de taxa vinculado ao IP e à chave que ca
 erros intermitentes `400 content-blocked` quando o Claude Code ou o Codex CLI
 faz várias chamadas de uso de ferramenta/envio de mensagem em rápida sucessão.
 
-## Mitigações já aplicadas no OmniRoute
+## Mitigações já aplicadas no 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — proteção contra rajadas que impõe um
    intervalo mínimo de 500 ms entre requisições de saída para qualquer URL

@@ -7,7 +7,7 @@
 > **Chanzo cha ukweli:** `src/lib/memory/` na `src/app/api/memory/`
 > **Ilisasishwa mwisho:** 2026-06-28 — v3.8.40 (imezimwa kwa chaguo-msingi + ulandanishaji wa ukadiriaji wa int8)
 
-OmniRoute hutoa kumbukumbu endelevu ya mazungumzo inayotambulishwa kwa ufunguo wa API (na
+67router hutoa kumbukumbu endelevu ya mazungumzo inayotambulishwa kwa ufunguo wa API (na
 kwa hiari kitambulisho cha kipindi). Kumbukumbu hutolewa kiotomatiki kutoka kwenye majibu ya LLM
 kupitia ulinganishaji mwepesi wa ruwaza za regex na kuingizwa tena katika
 maombi yanayofuata kama ujumbe wa mfumo unaotangulia (au ujumbe wa kwanza wa mtumiaji kwa watoa huduma
@@ -637,7 +637,7 @@ TTL chaguomsingi ya dakika 5).
 
 ## Kuchagua Mtoa Huduma wa Upachikaji (v3.8.16+)
 
-Injini ya kumbukumbu ya OmniRoute inatumia **vyanzo vinne vya upachikaji** (`src/lib/memory/embedding/`). Kila kimoja kina uwiano tofauti katika **ukawiaji, gharama, ubora wa modeli, na utata wa usanidi**.
+Injini ya kumbukumbu ya 67router inatumia **vyanzo vinne vya upachikaji** (`src/lib/memory/embedding/`). Kila kimoja kina uwiano tofauti katika **ukawiaji, gharama, ubora wa modeli, na utata wa usanidi**.
 
 ### Vyanzo vya Upachikaji
 
@@ -1058,13 +1058,13 @@ Worker husikiliza loopback pekee, ambayo ulinzi wa SSRF wa `GenericMemoryBackend
 Adapta hii hailegezi ulinzi huo: host imewekwa moja kwa moja kuwa `127.0.0.1` na schema ya
 usanidi (`ClaudeMemBackendConfigSchema`, `.strict()`) hukubali tu:
 
-| Ufunguo     | Aina   | Chaguo-msingi | Maelezo                                                                                                                             |
-| ----------- | ------ | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —             | Inahitajika, 1024–65535. porti ya worker ya claude-mem kutoka kwenye faili yake ya mipangilio (chaguo-msingi `37700 + uid % 100`).  |
-| `project`   | string | —             | Mradi wa claude-mem wa kutumia. Ikiwa haijawekwa → kila ufunguo wa API wa OmniRoute unahusishwa na mradi wake wenyewe (`apiKeyId`). |
-| `timeoutMs` | number | `5000`        | Muda wa kusubiri kwa kila ombi, 100–30000.                                                                                          |
+| Ufunguo     | Aina   | Chaguo-msingi | Maelezo                                                                                                                            |
+| ----------- | ------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —             | Inahitajika, 1024–65535. porti ya worker ya claude-mem kutoka kwenye faili yake ya mipangilio (chaguo-msingi `37700 + uid % 100`). |
+| `project`   | string | —             | Mradi wa claude-mem wa kutumia. Ikiwa haijawekwa → kila ufunguo wa API wa 67router unahusishwa na mradi wake wenyewe (`apiKeyId`). |
+| `timeoutMs` | number | `5000`        | Muda wa kusubiri kwa kila ombi, 100–30000.                                                                                         |
 
-Iwashe kupitia `PUT /api/settings/memory` na uanzishe upya OmniRoute (backends husajiliwa
+Iwashe kupitia `PUT /api/settings/memory` na uanzishe upya 67router (backends husajiliwa
 mara moja, katika `initMemoryBackends()`):
 
 ```json
@@ -1081,7 +1081,7 @@ Uhusishaji na vikomo:
 
 - Vitambulisho ni `claude-mem:<observationId>`; `get`/`delete` hupuuza vitambulisho vya backends nyingine bila
   kufanya ombi la mtandao.
-- `create` → `POST /api/memory/save`; sehemu za OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; sehemu za 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) huwekwa katika `metadata.omniroute` ya claude-mem na kurejeshwa zinaposomwa.
 - `search` → `GET /api/search?format=json&type=observations`, ikipunguzwa hadi `maxTokens`
   (herufi / 4). `list` → endpoint ya observations yenye ugawaji wa kurasa ya worker (`total` ni kikomo cha chini — worker
@@ -1093,16 +1093,16 @@ Uhusishaji na vikomo:
 - Uingizaji kwenye prompt (`retrieval.ts`) na zana za MCP za `omniroute_memory_*` bado husoma SQLite
   moja kwa moja — hazipiti kwenye `memoryManager`, kwa hivyo backend hii haizipatii data.
 
-**Kuelekeza miito ya LLM ya claude-mem kupitia OmniRoute.** claude-mem hubana observations
+**Kuelekeza miito ya LLM ya claude-mem kupitia 67router.** claude-mem hubana observations
 kwa kutumia LLM (chaguo-msingi: Claude Agent SDK). Provider yake ya `openai-compatible` inaweza kuelekezwa
-kwa OmniRoute badala yake, huku ikitumia combo fallback na ufuatiliaji wa gharama. Katika `~/.claude-mem/settings.json`:
+kwa 67router badala yake, huku ikitumia combo fallback na ufuatiliaji wa gharama. Katika `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<ufunguo wa API wa OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<modeli au combo ya OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<ufunguo wa API wa 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<modeli au combo ya 67router>"
 }
 ```
 

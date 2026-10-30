@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute melacak penggunaan token dari setiap permintaan, menghitung biaya, menerapkan kuota per kunci API, dan menampilkan analitik di dasbor. Panduan ini menjelaskan cara kerja semuanya.
+> **TL;DR**: 67router melacak penggunaan token dari setiap permintaan, menghitung biaya, menerapkan kuota per kunci API, dan menampilkan analitik di dasbor. Panduan ini menjelaskan cara kerja semuanya.
 
 **Sumber:**
 
@@ -17,7 +17,7 @@
 
 ## Gambaran Umum
 
-Setiap permintaan yang mengalir melalui OmniRoute menghasilkan **catatan penggunaan** yang mencakup:
+Setiap permintaan yang mengalir melalui 67router menghasilkan **catatan penggunaan** yang mencakup:
 
 - **Identitas**: kunci API, penyedia, model, dan combo yang digunakan
 - **Token**: token prompt, token penyelesaian, token yang di-cache, total
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Untuk penyedia yang tidak mengembalikan penggunaan (beberapa penyedia berbasis cookie web), OmniRoute **memperkirakan** token menggunakan heuristik `~4 karakter per token` (lihat `open-sse/services/autoCombo/pipelineRouter.ts`).
+Untuk penyedia yang tidak mengembalikan penggunaan (beberapa penyedia berbasis cookie web), 67router **memperkirakan** token menggunakan heuristik `~4 karakter per token` (lihat `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Token yang Di-cache
 
-OmniRoute melacak `cached_tokens` secara terpisah dari `prompt_tokens` karena:
+67router melacak `cached_tokens` secara terpisah dari `prompt_tokens` karena:
 
 - Caching prompt Anthropic mengenakan tarif lebih rendah untuk token yang di-cache (10% dari tarif normal)
 - Beberapa penyedia mengembalikan `cache_read_input_tokens` yang harus diberi harga berbeda
@@ -117,7 +117,7 @@ Data harga disinkronkan secara otomatis dari LiteLLM melalui endpoint `/api/pric
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Untuk model yang tidak memiliki data harga, OmniRoute akan **memperkirakan biaya** menggunakan tarif rata-rata internal (bersumber dari data harga LiteLLM).
+Untuk model yang tidak memiliki data harga, 67router akan **memperkirakan biaya** menggunakan tarif rata-rata internal (bersumber dari data harga LiteLLM).
 
 ---
 

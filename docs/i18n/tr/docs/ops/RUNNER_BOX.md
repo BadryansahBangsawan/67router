@@ -5,7 +5,7 @@
 ---
 
 Şirket içinde barındırılan havuz **.113** makinesinde (`tomni-proxmox-113`) çalışır. 2026-10-18 tarihinden bu yana her
-OmniRoute runner'ının **tek bir rolü**, tek bir etiketi ve iş yükünün ölçülen gereksinimlerine göre
+67router runner'ının **tek bir rolü**, tek bir etiketi ve iş yükünün ölçülen gereksinimlerine göre
 boyutlandırılmış bir bellek/CPU bütçesi vardır. Turbopack yuvası, derlemenin ihtiyaç duyduğu kaynakları alır;
 diğer yuvalar ise ölçülen tepe değerlerine göre boyutlandırılmıştır. Makine yalnızca bir Turbopack derlemesi,
 bir Release-Green webpack derlemesi ve bir lint işiyle aynı zamana denk geldiğinde kapasitesinin üzerinde
@@ -28,7 +28,7 @@ runner'larda çalıştığı için Turbopack yuvası çoğu zaman boştadır:
 | swap       | 16 GB                            | `omniroute-113-5`, swap kapalıyken (`MemorySwapMax=0`) çalışır; böylece kontrolden çıkan bir derleme, makineyi swap kullanmaya zorlamak yerine üst sınırında sonlandırılır                                                                                                                                                                                                                                                     |
 | `/tmp`     | **12 GB tmpfs = RAM**            | burada tutulan her şey bellek kullanır; kalan dosyalar 3 saat sonra temizlenir                                                                                                                                                                                                                                                                                                                                                 |
 | CPU        | 32 çekirdekte 60 yük gözlemlendi | kotalardan önce, bir Turbopack derlemesi (~1166 % CPU) ile aynı makinedeki bir coverage paketi, diğer listener'ların heartbeat sinyallerini kaynak yetersizliğine uğrattı (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                |
-| runner'lar | **6 listener**                   | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` devre dışıdır (`systemctl enable --now` bunlardan birini yeniden etkinleştirir)                                                                                                                                                                                                                                                                                |
+| runner'lar | **6 listener**                   | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` devre dışıdır (`systemctl enable --now` bunlardan birini yeniden etkinleştirir)                                                                                                                                                                                                                                                                                 |
 
 Sınırlar, her unit'in `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` dosyasında
 bulunur (önceki değerler `override.conf.bak-20261018` olarak saklanmıştır) ve
@@ -78,7 +78,7 @@ iptal edilmiş olarak bildirir ve dinleyici kendiliğinden yeniden çevrimiçi o
 Runner'ın varsayılan `KillMode=process` ayarı, bir birim durdurulduğunda veya
 yeniden başlatıldığında `Runner.Worker → npm → next-build` süreçlerini çalışır
 durumda bırakır — yetim bir derleme, bağlı bir iş olmadan RAM ve CPU tüketmeye
-devam eder. Her OmniRoute birimi, `KillMode=mixed` ayarını içeren bir ek
+devam eder. Her 67router birimi, `KillMode=mixed` ayarını içeren bir ek
 yapılandırmaya
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 sahiptir: önce dinleyiciye SIGTERM, `TimeoutStop` anında ise tüm cgroup'a SIGKILL
@@ -130,7 +130,7 @@ boşta olma denetimiyle yeniden başlatmayı aynı komutta gerçekleştirerek,
   `lint-guard` işini çalıştırır. `omniroute-113`, 2026-10-18'e kadar `MemoryHigh=4G` ayarına
   sahipti — promptfoo derlemesi burada 54 dakika boyunca bellek geri kazanımıyla ilerlemeye
   çalıştı; 8 GB, kısıtlamayı ortadan kaldırır.
-- **Bilerek daha az dinleyici kullanılır.** Dört OmniRoute birimi 2026-08-29 tarihinde devre
+- **Bilerek daha az dinleyici kullanılır.** Dört 67router birimi 2026-08-29 tarihinde devre
   dışı bırakıldı — her ek dinleyici, yukarıdaki bellek bütçesini paylaşan başka bir kiracıdır.
   Temizlik görevlisinin üst sınırı 6'dır (cron içindeki `MAX_ACTIVE_RUNNERS=6`): makinedeki her
   `Runner.Listener` sürecini sayar; OmniHeuris ve OmniMind, bizim dört sürecimize iki tane daha

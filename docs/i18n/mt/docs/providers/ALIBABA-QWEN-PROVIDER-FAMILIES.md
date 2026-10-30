@@ -10,7 +10,7 @@ rrappreżentati bħala erba’ familji ta’ fornituri. Ir-reġjun huwa data tal
 
 ## Deċiżjoni
 
-| Familja tal-fornitur                            | ID ta’ OmniRoute        | Reġjun globali | Reġjun taċ-Ċina |
+| Familja tal-fornitur                            | ID ta’ 67router         | Reġjun globali | Reġjun taċ-Ċina |
 | ----------------------------------------------- | ----------------------- | -------------- | --------------- |
 | Alibaba Cloud Model Studio (ħallas skont l-użu) | `alibaba`               | Singapore      | Beijing         |
 | Alibaba Cloud Token Plan                        | `bailian-coding-plan`   | Singapore      | Beijing         |

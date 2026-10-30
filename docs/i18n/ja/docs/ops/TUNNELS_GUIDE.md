@@ -7,13 +7,13 @@
 > **信頼できる情報源:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`、`src/app/api/tunnels/`
 > **最終更新:** 2026-06-28 — v3.8.40
 
-OmniRoute は、3 種類のトンネルバックエンドを介してローカルサーバー（`http://localhost:20128`）を公開インターネットに公開できます。これは次の用途に役立ちます。
+67router は、3 種類のトンネルバックエンドを介してローカルサーバー（`http://localhost:20128`）を公開インターネットに公開できます。これは次の用途に役立ちます。
 
 - 公開アクセス可能なリダイレクト URL を必要とするクラウドプロバイダー（Antigravity、Gemini、Cursor）からの OAuth コールバック。
 - VM をデプロイせずにローカルインスタンスをチームメンバーと共有。
 - モバイル、リモート、または異なるネットワーク間でのテスト。
 
-3 つのバックエンドはすべてプロセス内で管理されます。OmniRoute は、ダッシュボードまたは REST API から基盤となるバイナリや SDK を起動／停止します。リバースプロキシや systemd の設定は不要です。
+3 つのバックエンドはすべてプロセス内で管理されます。67router は、ダッシュボードまたは REST API から基盤となるバイナリや SDK を起動／停止します。リバースプロキシや systemd の設定は不要です。
 
 ## バックエンドの概要
 
@@ -33,7 +33,7 @@ OmniRoute は、3 種類のトンネルバックエンドを介してローカ�
 http://localhost:<apiPort>` を実行し、割り当てられた `*.trycloudflare.com` URL
   を標準出力から解析します。URL は一時的で、再起動のたびに変わります。
 - **Named tunnel（オプトイン）。** `CLOUDFLARED_CONFIG` がローカル管理の
-  cloudflared `config.yml` を指している場合、OmniRoute は `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml` を指している場合、67router は `cloudflared tunnel --no-autoupdate
 --config <path> run` を実行し、**固定された名前付きホスト名**を提供します。設定ファイルがトンネル UUID、`credentials-file`、`ingress` ルーティングを提供するため、
   `--url` は渡されず、Zero Trust ダッシュボードのトークンも必要ありません。`run` は
   設定内の絶対 `credentials-file` パスから認証情報を読み取ります。`cert.pem`
@@ -41,7 +41,7 @@ http://localhost:<apiPort>` を実行し、割り当てられた `*.trycloudflar
 
 主な動作:
 
-- **自動インストール。** 初回使用時に、OmniRoute は公式 GitHub リリースから最新の `cloudflared`
+- **自動インストール。** 初回使用時に、67router は公式 GitHub リリースから最新の `cloudflared`
   バイナリをダウンロードします（管理対象のインストール先は
   `DATA_DIR/cloudflared/`）。実行前に、ダウンロードしたアセットの SHA256 が
   リリースマニフェストに照らして検証されます。
@@ -58,7 +58,7 @@ http://localhost:<apiPort>` を実行し、割り当てられた `*.trycloudflar
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. ホスト名を OmniRoute のローカル API ポート（デフォルトは 20128）へルーティングする
+2. ホスト名を 67router のローカル API ポート（デフォルトは 20128）へルーティングする
    `~/.cloudflared/config.yml` を作成します。
 
    ```yaml
@@ -70,11 +70,11 @@ http://localhost:<apiPort>` を実行し、割り当てられた `*.trycloudflar
      - service: http_status:404
    ```
 
-3. OmniRoute に設定ファイルを指定し、トンネルを（再）起動します。
+3. 67router に設定ファイルを指定し、トンネルを（再）起動します。
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # 任意 — OmniRoute が報告するホスト名を上書きします。指定しない場合は
+   # 任意 — 67router が報告するホスト名を上書きします。指定しない場合は
    # 設定の最初の ingress ルールから読み取られます。
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -107,12 +107,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### 任意の環境変数
 
-| 変数                                                 | 用途                                                                                                                                                                                          |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | バイナリのパスを上書きします。設定されており有効な場合、OmniRoute はダウンロードする代わりにそのバイナリを使用します。                                                                        |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | トランスポートプロトコル（デフォルトは `http2`。`quic`、`auto` も指定可能）。                                                                                                                 |
-| `CLOUDFLARED_CONFIG`                                 | ローカルで管理されている cloudflared の `config.yml` へのパス。設定すると、OmniRoute はクイックトンネルではなく、**名前付き／永続的な**トンネル（`tunnel --config <path> run`）を実行します。 |
-| `CLOUDFLARED_HOSTNAME`                               | 名前付きトンネルで報告される公開ホスト名（例：`ai.example.com`）を上書きします。未設定の場合は、設定内の最初の `ingress` ホスト名から読み取ります。                                           |
+| 変数                                                 | 用途                                                                                                                                                                                         |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | バイナリのパスを上書きします。設定されており有効な場合、67router はダウンロードする代わりにそのバイナリを使用します。                                                                        |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | トランスポートプロトコル（デフォルトは `http2`。`quic`、`auto` も指定可能）。                                                                                                                |
+| `CLOUDFLARED_CONFIG`                                 | ローカルで管理されている cloudflared の `config.yml` へのパス。設定すると、67router はクイックトンネルではなく、**名前付き／永続的な**トンネル（`tunnel --config <path> run`）を実行します。 |
+| `CLOUDFLARED_HOSTNAME`                               | 名前付きトンネルで報告される公開ホスト名（例：`ai.example.com`）を上書きします。未設定の場合は、設定内の最初の `ingress` ホスト名から読み取ります。                                          |
 
 ## 2. ngrok
 
@@ -156,7 +156,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 レスポンスには、割り当てられた `publicUrl`（例:
-`https://abcd-1234.ngrok-free.app`）が含まれます。カスタムドメイン、リージョン、およびポリシールールは ngrok ダッシュボードで設定する必要があります。OmniRoute 自体はローカルのターゲット URL を SDK に転送するだけです。
+`https://abcd-1234.ngrok-free.app`）が含まれます。カスタムドメイン、リージョン、およびポリシールールは ngrok ダッシュボードで設定する必要があります。67router 自体はローカルのターゲット URL を SDK に転送するだけです。
 
 ## 3. Tailscale Funnel
 
@@ -166,12 +166,12 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 ### 前提条件
 
-1. Tailscale をインストールします（または OmniRoute にインストールさせます。下記の `install` エンドポイントを参照してください）。
-2. サインインします（`tailscale login`、または OmniRoute の `login` エンドポイントを使用します）。
+1. Tailscale をインストールします（または 67router にインストールさせます。下記の `install` エンドポイントを参照してください）。
+2. サインインします（`tailscale login`、または 67router の `login` エンドポイントを使用します）。
 3. Tailscale 管理コンソールで tailnet の Funnel を有効にします:
    <https://login.tailscale.com/admin/settings/features>。
 
-Linux および macOS では、デーモン（`tailscaled`）を制御するために `sudo` が必要です。POST エンドポイントはオプションの `sudoPassword` フィールドを受け付けます。このフィールドは、呼び出し中に OmniRoute の MITM パスワードキャッシュ（`getCachedPassword` / `setCachedPassword`）へ転送されます。Windows では、`C:\Program Files\Tailscale\tailscale.exe` にあるデフォルトのサービスインストールが使用されます。
+Linux および macOS では、デーモン（`tailscaled`）を制御するために `sudo` が必要です。POST エンドポイントはオプションの `sudoPassword` フィールドを受け付けます。このフィールドは、呼び出し中に 67router の MITM パスワードキャッシュ（`getCachedPassword` / `setCachedPassword`）へ転送されます。Windows では、`C:\Program Files\Tailscale\tailscale.exe` にあるデフォルトのサービスインストールが使用されます。
 
 ### REST エンドポイント
 
@@ -228,7 +228,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 
 ## OAuth コールバックに関する考慮事項
 
-トンネル経由で OmniRoute を公開する場合、ダッシュボードおよび OAuth フローでは、
+トンネル経由で 67router を公開する場合、ダッシュボードおよび OAuth フローでは、
 `localhost` ではなく**公開**ホスト名を基準にコールバック URL を構築する必要があります。
 そうしないと、OAuth プロバイダーは、そのサーバーから到達できない URL にユーザーを
 リダイレクトするため、ハンドシェイクが失敗します。
@@ -245,7 +245,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-OAuth を開始する前に OmniRoute を再起動してください。一時的な Cloudflare Quick
+OAuth を開始する前に 67router を再起動してください。一時的な Cloudflare Quick
 Tunnel では再起動のたびに URL が変わるため、本番環境で OAuth を使用する場合は、
 予約済みドメインを使用する ngrok または Tailscale Funnel を推奨します。
 
@@ -261,13 +261,13 @@ Tunnel では再起動のたびに URL が変わるため、本番環境で OAut
 
 プログラムから監視する場合は、バックエンドごとの `GET` エンドポイントを
 ポーリングしてください。複数のバックエンドを同時に実行することも可能で、
-OmniRoute はそれぞれを個別に追跡します。
+67router はそれぞれを個別に追跡します。
 
 ## トラブルシューティング
 
 ### 「cloudflared バイナリが見つかりません」
 
-OmniRoute は初回使用時に自動インストールを試みます。インストールがブロックされる場合
+67router は初回使用時に自動インストールを試みます。インストールがブロックされる場合
 （ネットワークが制限されている、GitHub にアクセスできないなど）は、
 <https://github.com/cloudflare/cloudflared/releases> から `cloudflared` を
 手動でダウンロードし、`CLOUDFLARED_BIN=/path/to/cloudflared` を設定してください。

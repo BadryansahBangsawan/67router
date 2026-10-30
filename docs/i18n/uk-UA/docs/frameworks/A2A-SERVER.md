@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Українська)
+# 67router A2A Server Documentation (Українська)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Протокол Agent-to-Agent v0.3 — OmniRoute як інтелектуальний агент маршрутизації
+> Протокол Agent-to-Agent v0.3 — 67router як інтелектуальний агент маршрутизації
 
 Інтерфейс A2A має дві форми:
 
@@ -19,7 +19,7 @@
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Повертає картку агента, яка описує можливості, навички та вимоги до автентифікації OmniRoute.
+Повертає картку агента, яка описує можливості, навички та вимоги до автентифікації 67router.
 
 Поле `version` картки агента отримується з `process.env.npm_package_version` (див. `src/app/.well-known/agent.json/route.ts:13`), тому воно автоматично синхронізується з `package.json` під час кожного випуску.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Доступні навички
 
-OmniRoute надає 6 навичок A2A, підключених у `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Кожен модуль навички розташований у `src/lib/a2a/skills/`.
+67router надає 6 навичок A2A, підключених у `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Кожен модуль навички розташований у `src/lib/a2a/skills/`.
 
 | Навичка            | ID                   | Опис                                                                                                                                                          | Теги                       | Приклади                                   |
 | :----------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------- | :----------------------------------------- |
-| Smart Routing      | `smart-routing`      | Спрямовує промпт через оптимального провайдера/комбо, використовуючи рушій комбо OmniRoute + оцінювання                                                       | routing, providers         | "Спрямуй цей промпт через найкращу модель" |
+| Smart Routing      | `smart-routing`      | Спрямовує промпт через оптимального провайдера/комбо, використовуючи рушій комбо 67router + оцінювання                                                        | routing, providers         | "Спрямуй цей промпт через найкращу модель" |
 | Quota Management   | `quota-management`   | Звітує про стан квот за кожним провайдером, допомагає викликачам вирішувати, коли обмежувати/перемикатися                                                     | quota, providers           | "Перевір квоту для anthropic"              |
 | Provider Discovery | `provider-discovery` | Перелічує встановлених провайдерів із можливостями, прапорцями free-tier, статусом OAuth                                                                      | providers, discovery       | "Які провайдери доступні?"                 |
 | Cost Analysis      | `cost-analysis`      | Оцінює вартість запиту/розмови на основі каталогу + недавнього використання                                                                                   | cost, usage                | "Оціни вартість цієї розмови"              |
 | Health Report      | `health-report`      | Агрегує стан circuit breaker, cooldown та lockout для кожного провайдера                                                                                      | health, resilience         | "Покажи стан здоров'я всіх провайдерів"    |
-| List Capabilities  | `list-capabilities`  | Повертає повний каталог Agent Skills із 43 записів (22 API + 20 CLI + 1 config) у вигляді markdown-таблиці з raw-URL-адресами SKILL.md для ін'єкції контексту | catalog, discovery, skills | "Перелічи всі можливості OmniRoute"        |
+| List Capabilities  | `list-capabilities`  | Повертає повний каталог Agent Skills із 43 записів (22 API + 20 CLI + 1 config) у вигляді markdown-таблиці з raw-URL-адресами SKILL.md для ін'єкції контексту | catalog, discovery, skills | "Перелічи всі можливості 67router"         |
 
 > Картку агента слід підтримувати узгодженою з актуальним каталогом із 375 провайдерів; кількість провайдерів та метадані free/no-auth беруться з реєстру середовища виконання.
 
 ### Деталі навички `list-capabilities`
 
-Навичка `list-capabilities` особливо корисна для зовнішніх агентів, яким потрібно виявити, що надає OmniRoute, перед надсиланням API-викликів. Вона повертає артефакт у вигляді структурованої markdown-таблиці:
+Навичка `list-capabilities` особливо корисна для зовнішніх агентів, яким потрібно виявити, що надає 67router, перед надсиланням API-викликів. Вона повертає артефакт у вигляді структурованої markdown-таблиці:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ OmniRoute надає 6 навичок A2A, підключених у `src/lib/a2
 | `/.well-known/agent.json`    | GET   | Картка агента (виявлення A2A)                              | (публічна, кешується 3600 с)                       |
 | `/api/a2a/tasks`             | POST  | Вхідне делегування флоту OmniConductor (Conductor PRD RF5) | Bearer відносно `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Вхідне делегування Conductor (`POST /api/a2a/tasks`):** зовнішні агенти A2A делегують роботу з кодом флоту OmniConductor через OmniRoute. Тіло: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — делегувати можна лише навички флоту Conductor (оголошені в картці агента); `metadata.conductor.repo.url` є обов’язковим (флот працює з git-репозиторіями). Маршрут перетворюється на `POST /v1/tasks` хаба з використанням серверного `CONDUCTOR_ORCHESTRATOR_TOKEN` (резервний варіант — `CONDUCTOR_HUB_TOKEN`) і повертає `201 { conductor_task_id, state: "submitted" }`; стани завдань передаються назад через дзеркало SSE→A2A (RF1) і доступні через `GET /api/a2a/tasks?skill=conductor`.
+**Вхідне делегування Conductor (`POST /api/a2a/tasks`):** зовнішні агенти A2A делегують роботу з кодом флоту OmniConductor через 67router. Тіло: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — делегувати можна лише навички флоту Conductor (оголошені в картці агента); `metadata.conductor.repo.url` є обов’язковим (флот працює з git-репозиторіями). Маршрут перетворюється на `POST /v1/tasks` хаба з використанням серверного `CONDUCTOR_ORCHESTRATOR_TOKEN` (резервний варіант — `CONDUCTOR_HUB_TOKEN`) і повертає `201 { conductor_task_id, state: "submitted" }`; стани завдань передаються назад через дзеркало SSE→A2A (RF1) і доступні через `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

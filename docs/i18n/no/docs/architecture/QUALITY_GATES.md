@@ -4,7 +4,7 @@
 
 ---
 
-Dette dokumentet er den autoritative referansen for alle CI-kvalitetsporter i OmniRoute.
+Dette dokumentet er den autoritative referansen for alle CI-kvalitetsporter i 67router.
 Det beskriver hver port, hva den validerer, hvilken CI-jobb den kjører i, om den bruker
 en ratchet-baseline eller en bestått/ikke bestått-policy, og om den blokkerer bygget eller kun er rådgivende.
 
@@ -272,14 +272,14 @@ Kjører etter `build`. Blokkerer merge ved feil.
 
 Disse kjører etter en cron-plan (og `workflow_dispatch`), aldri på PR-er. Alle er rådgivende.
 
-| Arbeidsflyt            | Validerer                                                                                                                                                        | Blokkerende    |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | fast-check-egenskapstester med tilfeldig seed + høyt antall kjøringer                                                                                            | **Rådgivende** |
-| `nightly-resilience`   | heap-vekst-port, kaosbasert feilinjeksjon, k6-belastning/soak                                                                                                    | **Rådgivende** |
-| `nightly-llm-security` | promptfoo-injeksjonsbeskyttelse (blokkeringsmodus) + garak-sonder (hoppes over uten en leverandørhemmelighet)                                                    | **Rådgivende** |
-| `nightly-schemathesis` | OpenAPI-kontraktfuzzing (schemathesis) mot en kjørende OmniRoute med `docs/openapi.yaml` — avdekker brudd på spesifikasjonen / ubehandlede 500-feil (Fase 8 B.4) | **Rådgivende** |
-| `nightly-mutation`     | Stryker-mutasjonstestscore over det raske enhetstestsporet — overlevende mutanter avdekker svake asserts                                                         | **Rådgivende** |
-| `nightly-compat`       | Node-motorkompatibilitetsmatrise over de støttede `engines.node`-områdene                                                                                        | **Rådgivende** |
+| Arbeidsflyt            | Validerer                                                                                                                                                       | Blokkerende    |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `nightly-property`     | fast-check-egenskapstester med tilfeldig seed + høyt antall kjøringer                                                                                           | **Rådgivende** |
+| `nightly-resilience`   | heap-vekst-port, kaosbasert feilinjeksjon, k6-belastning/soak                                                                                                   | **Rådgivende** |
+| `nightly-llm-security` | promptfoo-injeksjonsbeskyttelse (blokkeringsmodus) + garak-sonder (hoppes over uten en leverandørhemmelighet)                                                   | **Rådgivende** |
+| `nightly-schemathesis` | OpenAPI-kontraktfuzzing (schemathesis) mot en kjørende 67router med `docs/openapi.yaml` — avdekker brudd på spesifikasjonen / ubehandlede 500-feil (Fase 8 B.4) | **Rådgivende** |
+| `nightly-mutation`     | Stryker-mutasjonstestscore over det raske enhetstestsporet — overlevende mutanter avdekker svake asserts                                                        | **Rådgivende** |
+| `nightly-compat`       | Node-motorkompatibilitetsmatrise over de støttede `engines.node`-områdene                                                                                       | **Rådgivende** |
 
 Ytelsesbaseliner (heap, TTFB, byggetid) registreres og brukes ikke som sperre: se [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -550,7 +550,7 @@ tillatelsesliste gir en falsk trygghet om kvaliteten.
 
 ## Agentverktøy: LSP-in-the-loop (valgfritt)
 
-I tillegg til CI-portene leveres OmniRoute med et **valgfritt** `agent-lsp`-rammeverk
+I tillegg til CI-portene leveres 67router med et **valgfritt** `agent-lsp`-rammeverk
 (en `.mcp.json` på prosjektnivå, fase 7, oppgave 15). Opprett `.mcp.json`
 for å eksponere en TypeScript-språkserver for kodeagenter, slik at de løser symboler /
 diagnostikk **før** de skriver kode — et «kompiler før du hevder»-supplement til

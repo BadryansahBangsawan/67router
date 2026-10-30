@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute kasutab **paralleeltsükli** väljalaskemudelit: aktiivse tsükli jaoks on eraldi haru `release/vX.Y.Z`, avaldatud versioonirea jaoks `main` ning tsükli väljalaskmisel muutumatu märgend `vX.Y.Z`. On ootuspärane, et commit'id jõuavad nii harudesse `release/*` _kui ka_ harusse `main` — see ei ole eksitus.
+67router kasutab **paralleeltsükli** väljalaskemudelit: aktiivse tsükli jaoks on eraldi haru `release/vX.Y.Z`, avaldatud versioonirea jaoks `main` ning tsükli väljalaskmisel muutumatu märgend `vX.Y.Z`. On ootuspärane, et commit'id jõuavad nii harudesse `release/*` _kui ka_ harusse `main` — see ei ole eksitus.
 
 Haldajatele mõeldud üksikasjad asuvad failis `CLAUDE.md` (range reegel nr 21) ja dokumendis [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md). See leht on avalik kaastöötajatele mõeldud kokkuvõte.
 

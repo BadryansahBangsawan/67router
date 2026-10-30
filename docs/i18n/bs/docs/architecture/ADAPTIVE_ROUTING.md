@@ -6,18 +6,18 @@
 
 # Prilagodljivo usmjeravanje: Događaji usmjeravanja, povratne informacije o kvaliteti i objašnjivost
 
-Ovaj dokument opisuje temelj prilagodljivog usmjeravanja vođenog povratnim informacijama koji je dodan u OmniRoute. Namjerno je malen: uvodi tipizirani kanal ishoda usmjeravanja, signal kvalitete na mreži (online) koji napaja postojeći auto-combo scorer, opcionalni OpenTelemetry izvoznik i krajnju točku za objašnjivost. On **ne** zamjenjuje postojeći skup otpornosti (circuit breaker, connection cooldown, model lockout, health matrix, autopilot) — on ga nadopunjuje.
+Ovaj dokument opisuje temelj prilagodljivog usmjeravanja vođenog povratnim informacijama koji je dodan u 67router. Namjerno je malen: uvodi tipizirani kanal ishoda usmjeravanja, signal kvalitete na mreži (online) koji napaja postojeći auto-combo scorer, opcionalni OpenTelemetry izvoznik i krajnju točku za objašnjivost. On **ne** zamjenjuje postojeći skup otpornosti (circuit breaker, connection cooldown, model lockout, health matrix, autopilot) — on ga nadopunjuje.
 
 ## 1. Arhitektonski kontekst
 
-OmniRoute je podatkovna ravnina (data plane) s **vrućom putanjom zahtjeva** (request hot path) i **kontrolnom/obavještajnom ravninom** (control/intelligence plane). Vruća putanja mora ostati brza, memorijski učinkovita, asinkrona, otporna i predvidljiva. Evaluacija, bodovanje kvalitete, eksperimenti i povijesna analiza pripadaju kontrolnoj ravnini.
+67router je podatkovna ravnina (data plane) s **vrućom putanjom zahtjeva** (request hot path) i **kontrolnom/obavještajnom ravninom** (control/intelligence plane). Vruća putanja mora ostati brza, memorijski učinkovita, asinkrona, otporna i predvidljiva. Evaluacija, bodovanje kvalitete, eksperimenti i povijesna analiza pripadaju kontrolnoj ravnini.
 
 ```
 AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   podatkovna ravnina (brza, sinkrona, u memoriji)
+│    67router        │   podatkovna ravnina (brza, sinkrona, u memoriji)
 │  usmjeravanje / failover │
 │  zdravlje / guardrail │
 │  predmemorija / streaming  │
@@ -212,7 +212,7 @@ TTFT/ITL/prekidi teku u `RoutingEvent` (`ttftMs`, `itlMs`) i izvoze se kao GenAI
 Datoteke: `open-sse/services/routing/otel.ts`
 
 - OTLP/HTTP JSON izvoznik bez zavisnosti (koristi globalni `fetch`, bez `@opentelemetry/*` SDK).
-- Spanovi prate GenAI semantičke konvencije (`gen_ai.provider.name`, `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`, `gen_ai.completion.finish_reason`, `gen_ai.system`) plus OmniRoute atributi rutiranja (outcome, status, ttft, retries, fallback).
+- Spanovi prate GenAI semantičke konvencije (`gen_ai.provider.name`, `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`, `gen_ai.completion.finish_reason`, `gen_ai.system`) plus 67router atributi rutiranja (outcome, status, ttft, retries, fallback).
 - `record()` samo stavlja u red u ograničeni bafer (O(1)); pozadinski tajmer vrši flush putem `POST {endpoint}/v1/traces` asinhrono. Pod preopterećenjem, najstariji događaji se odbacuju (`dropped` brojač) — nikada ne vršite povratni pritisak (backpressure) na ravan podataka (data plane).
 - **Onemogućeno osim ako nije konfigurisano.** `OMNIROUTE_OTEL_ENDPOINT` (ili `OTEL_EXPORTER_OTLP_ENDPOINT`) mora biti postavljen; u suprotnom, sink nije registrovan i nula OTel koda se izvršava.
 
@@ -225,7 +225,7 @@ Datoteke: `open-sse/services/routing/otel.ts`
 
 ## 6. Integracija ravni evaluacije (Spremnost za budući AGI)
 
-OmniRoute tretira Future AGI (ili bilo koji evaluator) kao **potencijalni backend za inteligenciju/evaluaciju, a ne kao zavisnost**. Spojevi:
+67router tretira Future AGI (ili bilo koji evaluator) kao **potencijalni backend za inteligenciju/evaluaciju, a ne kao zavisnost**. Spojevi:
 
 - `RoutingEventSink` može proslijediti događaje evaluatoru asinhrono.
 - `MemoryRoutingEventStore` + snimak kvaliteta daju evaluatoru sirovi tok odluka.

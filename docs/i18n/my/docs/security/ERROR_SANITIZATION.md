@@ -214,7 +214,7 @@ builder ပြီးနောက် ပြင်ဆင်ခြင်းသည�
 3. Depth cap- အဆင့် 4 ထက်ကျော်လွန်သော nesting ကို string `"[truncated]"` ဖြင့် အစားထိုးသည်။
 4. Array များကို element 32 ခုအထိ ကန့်သတ်သည်။
 
-parse လုပ်ပြီးသား provider error body ရှိသော call site များသာ `upstreamDetails` ကို ပေးပို့သင့်သည်။ အတွင်းပိုင်း OmniRoute
+parse လုပ်ပြီးသား provider error body ရှိသော call site များသာ `upstreamDetails` ကို ပေးပို့သင့်သည်။ အတွင်းပိုင်း 67router
 error များ (SSE parse failure များ၊ content အလွတ်များ၊ guardrail block များ) တွင် ၎င်းကို မထည့်သွင်းရပါ။
 
 raw `err.stack`, `err.message` သို့မဟုတ် runtime exception တစ်ခုမှ မည်သည့် string ကိုမျှ
@@ -225,7 +225,7 @@ raw `err.stack`, `err.message` သို့မဟုတ် runtime exception တ
 provider ၏ ဘေးကင်းသော JSON ပုံသဏ္ဌာန်နှင့် စာသားအသုံးအနှုန်းကို ထိန်းသိမ်းထားသော်လည်း byte-for-byte passthrough မဟုတ်ပါ။ serialization မပြုမီ
 recursive sanitizer ကို အမြဲလုပ်ဆောင်သည်။ Cyclic ဖြစ်သော၊ BigInt ပါဝင်သော သို့မဟုတ် အန္တရာယ်ရှိသော `toJSON()` body များသည် ဘေးကင်းစွာ ငြင်းပယ်ခံရပြီး
 passthrough အတွက် အကျုံးမဝင်ပါ။ OCR နှင့် moderation တို့တွင်လည်း တူညီသောစည်းမျဉ်းကို အသုံးပြုသည်။ JSON မဟုတ်သော၊ အလွတ်ဖြစ်သော သို့မဟုတ်
-အမျိုးအစားမှား သတ်မှတ်ထားသော upstream body များကို စံသတ်မှတ်ထားသည့် OmniRoute JSON error envelope အဖြစ် ပြောင်းလဲသည်။
+အမျိုးအစားမှား သတ်မှတ်ထားသော upstream body များကို စံသတ်မှတ်ထားသည့် 67router JSON error envelope အဖြစ် ပြောင်းလဲသည်။
 
 ## သိရှိထားသော CodeQL ကန့်သတ်ချက်: စိတ်ကြိုက် sanitizer များကို မမှတ်မိခြင်း
 

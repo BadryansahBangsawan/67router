@@ -10,7 +10,7 @@
 > blokování injekcí jako povinná hranice (#16413) a co vidí odpověď před post-call)
 
 Guardrails vynucují bezpečnost, zásady a transformace obsahu na hranici
-mezi OmniRoute a upstream poskytovateli. Každý guardrail může kontrolovat
+mezi 67router a upstream poskytovateli. Každý guardrail může kontrolovat
 (a volitelně zamítat, transformovat nebo anotovat) datové části požadavků
 (`preCall`) a odpovědi upstreamu (`postCall`).
 
@@ -112,7 +112,7 @@ Když API klíč volajícího omezuje `allowedConnections`, fondy kvót
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), most vybírá pro
 reroute a describe pouze modely, které smí klíč používat, a to na připojeních,
 která smí klíč používat. Volání describe pak vždy prochází self-loopem
-OmniRoute s hlavičkou `x-omniroute-self-loop-key-id`, takže přijímající
+67router s hlavičkou `x-omniroute-self-loop-key-id`, takže přijímající
 požadavek chatu znovu vynucuje politiku připojení a modelů daného klíče.
 `enforceApiKeyPolicy()` respektuje tuto hlavičku pouze společně s bearer
 tokenem self-loopu, takže může přístup pouze zúžit, a id, které nelze
@@ -143,7 +143,7 @@ poskytovatele, bez vazby na jakýkoli signál klienta. Vzorkování s nízkou
 tento prompt žádá, takže samotné volání describe vždy žádá o vysoký detail bez
 ohledu na to, jakou úroveň detailu použil původní příchozí požadavek. To
 ovlivňuje pouze tělo interního požadavku describe; nemění to způsob, jakým
-OmniRoute přeposílá vlastní `image_url.detail` volajícího v primárním
+67router přeposílá vlastní `image_url.detail` volajícího v primárním
 požadavku — tato výchozí hodnota se aplikuje samostatně, a pouze u detekovaných
 klientů OpenCode, v `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`). Větev self-loopu describe ve
@@ -265,7 +265,7 @@ odkazuje workflow Image-to-Text a Speech-to-Text na odpovídající záložky
 Modality Bridge, aniž by odebíralo stávající Speech-to-Text playground.
 
 **Obejití admission pro self-loop:** když describe call prochází přes vlastní
-self-loop `/v1` OmniRoute (nestandardní model poskytovatele), dílčí požadavek
+self-loop `/v1` 67router (nestandardní model poskytovatele), dílčí požadavek
 odesílá `x-omniroute-admission-bypass: internal` a je autentizován vyhodnoceným
 self-loop credential — lokálním sentinelem `sk_omniroute` v lokálním režimu, nebo
 operátorem nakonfigurovaným env klíčem `OMNIROUTE_API_KEY` / `ROUTER_API_KEY`
@@ -333,7 +333,7 @@ Chybějící filtry, poškozená/prázdná evidence, chyba detektoru nebo ohrani
 
 Každý snímek je omezen na 4 MiB, všechny nezpracované snímky dohromady na 23 MiB a
 serializovaná odpověď brokeru na 32 MiB. Soukromý dočasný adresář je odstraněn
-v bloku `finally`. OmniRoute neobsahuje FFmpeg a neumožňuje zadat vlastní
+v bloku `finally`. 67router neobsahuje FFmpeg a neumožňuje zadat vlastní
 cestu ke spustitelnému souboru. Před vytvořením popisků provede bridge konzervativní
 vizuální deduplikaci: každý JPEG je zmenšen na 16×16 odstínů šedi a
 porovnán pouze s posledním zachovaným snímkem. Je-li požadovaný limit popisků
@@ -375,7 +375,7 @@ pokud již mají k dispozici zarovnaný text. Každý úsek musí obsahovat `tex
 konečný interval `start`/`end` v rámci zjištěné délky a povolený
 `source` (`client`, `embedded` nebo `audio-bridge`); výchozí hodnota `confidence` je
 `1` a musí zůstat mezi `0` a `1`. Přesně duplicitní úseky jsou sloučeny.
-OmniRoute na základě těchto metadat nikdy nespouští přepis: ověřené úseky jsou
+67router na základě těchto metadat nikdy nespouští přepis: ověřené úseky jsou
 zkopírovány do výsledku popisu společně se zdrojem, mírou jistoty a intervalem a
 zobrazeny jako nedůvěryhodná pozorování vedle popisků snímků. Neplatný text,
 text mimo rozsah nebo text bez uvedeného původu je odmítnut, místo aby byl přimíchán do
@@ -948,7 +948,7 @@ spuštění) má dva joby:
   předchozí instrukce…", jailbreaky ve stylu DAN) ověřuje, že odpověď obsahuje
   `error.code === "SECURITY_001"`, tj. že guard skutečně požadavek zamítl.
 - **`garak` (poradní)** — spouští garak `--probes promptinject,dan,leakreplay`
-  proti lokální instanci OmniRoute (`http://localhost:20128/v1`). Je podmíněn
+  proti lokální instanci 67router (`http://localhost:20128/v1`). Je podmíněn
   provider secretem (`PROMPTFOO_PROVIDER_KEY`); bez něj se hladce přeskočí a je
   zakončen `|| true`, takže reportuje bez selhání CI.
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute gebruikt een **parallel-cyclus**-releasemodel: een speciale `release/vX.Y.Z`-branch
+67router gebruikt een **parallel-cyclus**-releasemodel: een speciale `release/vX.Y.Z`-branch
 voor de actieve cyclus, `main` voor de gepubliceerde lijn en een onveranderlijke
 `vX.Y.Z`-tag wanneer die cyclus wordt uitgebracht. Het is normaal dat commits zowel op `release/*` _als_ op
 `main` terechtkomen — dit is geen vergissing.

@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute je na voljo kot povsem namestljiva progresivna spletna aplikacija. Ko do nadzorne plošče dostopate iz katerega koli mobilnega brskalnika — Chrome v sistemu Android ali Safari v sistemu iOS — jo lahko »dodate na začetni zaslon« in pridobite izkušnjo, podobno izvorni aplikaciji, brez uporabe trgovine z aplikacijami.
+67router je na voljo kot povsem namestljiva progresivna spletna aplikacija. Ko do nadzorne plošče dostopate iz katerega koli mobilnega brskalnika — Chrome v sistemu Android ali Safari v sistemu iOS — jo lahko »dodate na začetni zaslon« in pridobite izkušnjo, podobno izvorni aplikaciji, brez uporabe trgovine z aplikacijami.
 
 ## Kaj je PWA?
 
-Progresivna spletna aplikacija spremeni spletno nadzorno ploščo OmniRoute v nekaj, kar je videti in deluje kot izvorna mobilna aplikacija. Ko jo namestite:
+Progresivna spletna aplikacija spremeni spletno nadzorno ploščo 67router v nekaj, kar je videti in deluje kot izvorna mobilna aplikacija. Ko jo namestite:
 
 - Zažene se z začetnega zaslona prek lastne ikone
 - Odpre se v celozaslonskem načinu — brez naslovne vrstice brskalnika ali uporabniškega vmesnika z zavihki
@@ -20,26 +20,26 @@ Progresivna spletna aplikacija spremeni spletno nadzorno ploščo OmniRoute v ne
 
 ### Android (Chrome)
 
-1. Odprite nadzorno ploščo OmniRoute v brskalniku Chrome: `http://YOUR_IP:20128`
-2. Chrome bo samodejno prikazal pasico **»Dodaj OmniRoute na začetni zaslon«**, lahko pa tudi:
+1. Odprite nadzorno ploščo 67router v brskalniku Chrome: `http://YOUR_IP:20128`
+2. Chrome bo samodejno prikazal pasico **»Dodaj 67router na začetni zaslon«**, lahko pa tudi:
    - Dotaknite se menija **⋮** (tri pike) → **»Dodaj na začetni zaslon«** ali **»Namesti aplikacijo«**
 3. Potrdite poziv
-4. OmniRoute se prikaže na začetnem zaslonu kot samostojna aplikacija
+4. 67router se prikaže na začetnem zaslonu kot samostojna aplikacija
 
 ### iOS (Safari)
 
-1. Odprite nadzorno ploščo OmniRoute v brskalniku Safari: `http://YOUR_IP:20128`
+1. Odprite nadzorno ploščo 67router v brskalniku Safari: `http://YOUR_IP:20128`
 2. Dotaknite se gumba **Deli** (polje s puščico)
 3. Pomaknite se navzdol in se dotaknite možnosti **»Dodaj na začetni zaslon«**
-4. Poimenujte jo (privzeto »OmniRoute«) in se dotaknite možnosti **Dodaj**
-5. OmniRoute se prikaže na začetnem zaslonu z ikono aplikacije
+4. Poimenujte jo (privzeto »67router«) in se dotaknite možnosti **Dodaj**
+5. 67router se prikaže na začetnem zaslonu z ikono aplikacije
 
 ### Namizni računalnik (Chrome / Edge)
 
-1. Odprite nadzorno ploščo OmniRoute
-2. Kliknite **ikono za namestitev** v naslovni vrstici (ali ⋮ → »Namesti OmniRoute ...«)
+1. Odprite nadzorno ploščo 67router
+2. Kliknite **ikono za namestitev** v naslovni vrstici (ali ⋮ → »Namesti 67router ...«)
 3. Potrdite poziv
-4. OmniRoute se odpre kot samostojno okno — brez zavihkov in naslovne vrstice
+4. 67router se odpre kot samostojno okno — brez zavihkov in naslovne vrstice
 
 ## Funkcije
 
@@ -49,7 +49,7 @@ Manifest je konfiguriran z nastavitvijo `display: "fullscreen"`, kar pomeni, da 
 
 ### Podpora za delovanje brez povezave
 
-OmniRoute vključuje storitvenega delavca (`sw.js`), ki zagotavlja inteligentno predpomnjenje:
+67router vključuje storitvenega delavca (`sw.js`), ki zagotavlja inteligentno predpomnjenje:
 
 | Vrsta sredstva                                                  | Strategija                                     | Delovanje                                                                                                         |
 | --------------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Ko omrežje ni na voljo in uporabnik odpre novo stran, storitveni delavec prika�
 
 ### Ikone aplikacije
 
-OmniRoute zagotavlja ikone, optimizirane za posamezne platforme:
+67router zagotavlja ikone, optimizirane za posamezne platforme:
 
 | Datoteka               | Velikost            | Uporablja se za                                         |
 | ---------------------- | ------------------- | ------------------------------------------------------- |
@@ -93,9 +93,9 @@ Ustvari ga Next.js prek datoteke `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Ta odjemalska komponenta, ki se nahaja v `src/shared/components/PwaRegister.tsx`
 
 ## Uporaba s Termuxom (Android)
 
-Ko OmniRoute izvajate v sistemu Android prek Termuxa, PWA deluje brezhibno:
+Ko 67router izvajate v sistemu Android prek Termuxa, PWA deluje brezhibno:
 
-1. Zaženite OmniRoute v Termuxu: `npx omniroute`
+1. Zaženite 67router v Termuxu: `npx omniroute`
 2. V istem telefonu odprite Chrome: `http://localhost:20128`
 3. Namestite PWA prek možnosti »Dodaj na začetni zaslon«
 4. PWA se poveže z lokalnim strežnikom Termux — vse se izvaja v napravi
@@ -156,7 +156,7 @@ Ta kombinacija pomeni, da je vaš telefon Android hkrati **strežnik** (Termux) 
 
 ## Uporaba iz drugih naprav
 
-Namestite PWA v katero koli napravo, ki ima prek brskalnika dostop do vašega strežnika OmniRoute:
+Namestite PWA v katero koli napravo, ki ima prek brskalnika dostop do vašega strežnika 67router:
 
 - **Drug telefon/tablični računalnik**: Obiščite `http://PHONE_IP:20128` in namestite PWA
 - **Prenosni računalnik**: Odprite Chrome/Edge in ga namestite kot namizno PWA

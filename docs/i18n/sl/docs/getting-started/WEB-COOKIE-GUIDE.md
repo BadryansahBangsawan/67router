@@ -4,7 +4,7 @@
 
 ---
 
-Ponudniki Web Cookie omogočajo, da OmniRoute uporablja storitev umetne inteligence prek vaše obstoječe seje brskalnika namesto ključa API. Uporabni so, kadar že imate dostop do storitve prek njenega spletnega mesta in želite, da OmniRoute uporablja isto overjeno sejo.
+Ponudniki Web Cookie omogočajo, da 67router uporablja storitev umetne inteligence prek vaše obstoječe seje brskalnika namesto ključa API. Uporabni so, kadar že imate dostop do storitve prek njenega spletnega mesta in želite, da 67router uporablja isto overjeno sejo.
 
 Za razliko od ponudnikov s ključem API se ponudniki Web Cookie overjajo s poverilnicami, ki jih vaš brskalnik pošilja spletnemu mestu.
 
@@ -49,7 +49,7 @@ DevTools
 
 Glava zahteve `Cookie` vsebuje natančne podatke za overjanje, ki jih je vaš brskalnik uspešno uporabil.
 
-Pri večini ponudnikov Web Cookie je to vrednost, ki jo morate prilepiti v OmniRoute.
+Pri večini ponudnikov Web Cookie je to vrednost, ki jo morate prilepiti v 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Postopek nastavitve je enak za večino ponudnikov Web Cookie.
 4. Osvežite stran.
 5. Odprite overjeno zahtevo za klepet ali pogovor.
 6. Kopirajte zahtevane poverilnice za overjanje.
-7. Odprite OmniRoute.
+7. Odprite 67router.
 8. Pojdite na **Providers → Add Provider**.
 9. Izberite svojega ponudnika Web Cookie.
 10. Prilepite poverilnice.
@@ -92,17 +92,17 @@ Različna spletna mesta podatke za overjanje shranjujejo na različne načine. N
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) je brezplačna platforma za klepet za končne uporabnike, ki ne zahteva registracije — seja se ob prvem obisku ustvari anonimno in se ohranja s tremi piškotki: `uid`, `si_usr_id` in `si_ses_id`. OmniRoute posreduje isti končni naslov `/api/dispatch` prek enega ID-ja modela (`notrack-c`, vzdevek `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) je brezplačna platforma za klepet za končne uporabnike, ki ne zahteva registracije — seja se ob prvem obisku ustvari anonimno in se ohranja s tremi piškotki: `uid`, `si_usr_id` in `si_ses_id`. 67router posreduje isti končni naslov `/api/dispatch` prek enega ID-ja modela (`notrack-c`, vzdevek `ntw`).
 
 ### Koraki za povezavo
 
 1. V brskalniku odprite [notrack.ai](https://notrack.ai) in počakajte, da se nastavi piškotek anonimne seje.
 2. Odprite **Orodja za razvijalce → Omrežje**, osvežite stran in kliknite katero koli zahtevo `/api`.
 3. V razdelku **Glave zahteve** kopirajte celotno vrednost glave `Cookie`.
-4. V OmniRoute pojdite na **Ponudniki → Dodaj ponudnika → NoTrack Web (brezplačno)**.
+4. V 67router pojdite na **Ponudniki → Dodaj ponudnika → NoTrack Web (brezplačno)**.
 5. Niz piškotkov prilepite v polje `apiKey` in kliknite **Shrani**.
 
-OmniRoute iz prilepljenega niza izlušči `uid`, `si_usr_id` in `si_ses_id` ter znova sestavi čisto glavo `Cookie`, ki vsebuje samo te pare — in tudi `nt_session` (žeton `ntk_…`, nastavljen za prijavljene račune), kadar je prisoten. Če kateri koli od teh treh manjka, se neobdelani prilepljeni niz posreduje nespremenjen, da lahko upravljavci preizkušajo druge oblike.
+67router iz prilepljenega niza izlušči `uid`, `si_usr_id` in `si_ses_id` ter znova sestavi čisto glavo `Cookie`, ki vsebuje samo te pare — in tudi `nt_session` (žeton `ntk_…`, nastavljen za prijavljene račune), kadar je prisoten. Če kateri koli od teh treh manjka, se neobdelani prilepljeni niz posreduje nespremenjen, da lahko upravljavci preizkušajo druge oblike.
 
 ### ID-ji modelov
 
@@ -198,7 +198,7 @@ Aplikacija
 
 ---
 
-## Piškotek deluje v brskalniku, vendar ne v OmniRoute
+## Piškotek deluje v brskalniku, vendar ne v 67router
 
 Nekateri ponudniki vključujejo piškotke, ki se pošljejo samo med zahtevami s preverjeno pristnostjo.
 

@@ -6,7 +6,7 @@
 
 ## Hlásenie zraniteľností
 
-Ak objavíte bezpečnostnú zraniteľnosť v OmniRoute, nahláste ju zodpovedným spôsobom:
+Ak objavíte bezpečnostnú zraniteľnosť v 67router, nahláste ju zodpovedným spôsobom:
 
 1. **NEOTVÁRAJTE** verejný problém na GitHube
 2. Použite [bezpečnostné upozornenia GitHubu](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -54,7 +54,7 @@ vetve `stable/v3` (pozri [`ROADMAP.md`](ROADMAP.md) → „Fáza 3 — v3.9.0 LT
 
 ## Bezpečnostná architektúra
 
-OmniRoute implementuje viacvrstvový bezpečnostný model:
+67router implementuje viacvrstvový bezpečnostný model:
 
 ```
 Požiadavka → CORS → Autorizačný kanál (klasifikácia → zásady → vynútenie)
@@ -91,7 +91,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Framework ochranných mechanizmov
 
-OmniRoute obsahuje **register ochranných mechanizmov** s podporou opätovného načítania za chodu (`src/lib/guardrails/`) a 3 vstavanými ochrannými mechanizmami zoradenými podľa priority:
+67router obsahuje **register ochranných mechanizmov** s podporou opätovného načítania za chodu (`src/lib/guardrails/`) a 3 vstavanými ochrannými mechanizmami zoradenými podľa priority:
 
 | Ochranný mechanizmus | Priorita | Účel                                                                                                                  |
 | -------------------- | -------- | --------------------------------------------------------------------------------------------------------------------- |

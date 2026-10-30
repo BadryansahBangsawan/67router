@@ -14,7 +14,7 @@ process environment state import न करता manifest वापरू श�
 हाच manifest स्वतंत्र process मध्ये चालणाऱ्या sidecars साठी HTTP वर
 `GET /api/v1/provider-plugin-manifest` येथे उपलब्ध आहे.
 
-OmniRoute त्या URL ची माहिती Bifrost आणि CLIProxyAPI ला
+67router त्या URL ची माहिती Bifrost आणि CLIProxyAPI ला
 `X-OmniRoute-Provider-Manifest-Url` request header द्वारे देते. sidecar ला स्थानिक request
 origin ऐवजी सार्वजनिक किंवा container network URL आवश्यक असल्यास
 `OMNIROUTE_PROVIDER_MANIFEST_URL` सेट करा.
@@ -30,7 +30,7 @@ sidecar ने `304` स्वीकारण्याऐवजी unconditional
 ## उद्दिष्ट
 
 provider metadata ला plugin contract च्या दिशेने नेणे, जेणेकरून भविष्यात कमी latency असलेला
-sidecar सक्रिय request path हाताळू शकेल, तर OmniRoute कडे TypeScript route हा
+sidecar सक्रिय request path हाताळू शकेल, तर 67router कडे TypeScript route हा
 policy gate आणि fallback म्हणून कायम राहील. manifest हा अतिरिक्त आहे: तो स्वतःहून
 request routing बदलत नाही.
 
@@ -74,7 +74,7 @@ machine-readable उत्तर म्हणून तिचा वापर �
 | `usage-fetch`        | वापर किंवा quota fetcher (`getUsageForProvider`) जोडलेला आहे.                     |
 | `usage-supported`    | usage API हा provider स्वीकारते (`isSupportedUsageConnection`).                   |
 
-`usage-fetch` हे केवळ discovery साठी आहे. ते सूचित करते की OmniRoute ला त्या
+`usage-fetch` हे केवळ discovery साठी आहे. ते सूचित करते की 67router ला त्या
 provider चा usage कसा वाचायचा हे माहीत आहे; ते fetching सक्रिय करत नाही, quota semantics
 बदलत नाही किंवा त्या provider साठी Dashboard quota widget सक्षम आहे असे सूचित करत नाही —
 त्या widget वर स्वतंत्रपणे `USAGE_SUPPORTED_PROVIDERS` द्वारे नियंत्रण ठेवले जाते. सत्याचा

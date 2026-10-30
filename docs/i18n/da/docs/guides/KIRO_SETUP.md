@@ -4,7 +4,7 @@
 
 ---
 
-Denne vejledning beskriver, hvordan du føjer Kiro-konti (en AWS-hostet AI-kodeassistent) til OmniRoute,
+Denne vejledning beskriver, hvordan du føjer Kiro-konti (en AWS-hostet AI-kodeassistent) til 67router,
 med fokus på at køre flere konti samtidigt uden sessionskonflikter.
 
 ---
@@ -22,10 +22,10 @@ den første kontos token.
 
 ---
 
-## Sådan løser OmniRoute dette (v3.8.0+)
+## Sådan løser 67router dette (v3.8.0+)
 
-Fra og med v3.8.0 kalder OmniRoute `registerClient()` (AWS SSO OIDC) under hver
-import af en Kiro-forbindelse. Dette giver hver OmniRoute-forbindelse sin egen dedikerede
+Fra og med v3.8.0 kalder 67router `registerClient()` (AWS SSO OIDC) under hver
+import af en Kiro-forbindelse. Dette giver hver 67router-forbindelse sin egen dedikerede
 OIDC-klientregistrering. Da hver klientregistrering er uafhængig, påvirker opdatering eller
 genautentificering af én konto ikke andre kontis opdateringstokens.
 
@@ -59,7 +59,7 @@ får automatisk deres egen klientregistrering.
 
 ### Forudsætninger
 
-- OmniRoute v3.8.0 eller nyere.
+- 67router v3.8.0 eller nyere.
 - En fungerende Kiro-konto (e-mail + adgangskode eller login med Google eller GitHub).
 - Eventuelt en anden Kiro-konto.
 
@@ -70,7 +70,7 @@ får automatisk deres egen klientregistrering.
    - **Importér token** — indsæt et opdateringstoken, der starter med `aorAAAAAG`.
    - **API-nøgle** — indsæt en langtidsholdbar Kiro-/CodeWhisperer-API-nøgle.
    - **Login med Google/GitHub** — gennemfør OAuth-flowet i browseren.
-   - **Automatisk import** — klik på knappen; OmniRoute læser legitimationsoplysninger fra den
+   - **Automatisk import** — klik på knappen; 67router læser legitimationsoplysninger fra den
      lokale kiro-cli-database eller `~/.aws/sso/cache`.
 3. Forbindelsen gemmes. Flows med opdateringstokens registrerer automatisk en dedikeret
    OIDC-klient. Flows med API-nøgler validerer nøglen hos AWS og gemmer ikke et opdateringstoken.
@@ -127,7 +127,7 @@ bruger ikke OAuth-opdatering og undgår derfor ugyldiggørelse af delte OIDC-ses
 2. Vælg **API-nøgle**.
 3. Indsæt API-nøglen, og vælg AWS-regionen: **Registrer automatisk** (standard), **Det østlige USA
    (N. Virginia)** eller **Europa (Frankfurt)**.
-4. OmniRoute validerer nøglen og gemmer forbindelsen fastgjort til den region, hvor
+4. 67router validerer nøglen og gemmer forbindelsen fastgjort til den region, hvor
    nøglen fungerer.
 
 ### API
@@ -177,7 +177,7 @@ til `https://q.<region>.amazonaws.com/generateAssistantResponse` — inklusive `
 ## Udløb af OIDC-klient
 
 Offentlige AWS SSO OIDC-klienter udløber typisk efter 90 dage
-(`clientSecretExpiresAt`). OmniRoute gemmer dette tidsstempel i `providerSpecificData`
+(`clientSecretExpiresAt`). 67router gemmer dette tidsstempel i `providerSpecificData`
 for at sikre observerbarhed. Hvis en forbindelse holder op med at blive opdateret efter ca. 90 dage, skal du importere
 forbindelsen igen for at få en ny OIDC-klientregistrering. Automatisk genregistrering ved
 udløb er registreret som en fremtidig forbedring.
@@ -198,7 +198,7 @@ via AWS SSO OIDC.
 ### Import mislykkes med "Token validation failed"
 
 - Sørg for, at opdateringstokenet begynder med `aorAAAAAG`.
-- Sørg for, at OmniRoute kan oprette forbindelse til `https://oidc.us-east-1.amazonaws.com` (eller den konfigurerede
+- Sørg for, at 67router kan oprette forbindelse til `https://oidc.us-east-1.amazonaws.com` (eller den konfigurerede
   region). Hvis du er bag en virksomhedsproxy, skal du angive en proxy på providerniveau under
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ via AWS SSO OIDC.
 
 - Bekræft, at nøglen er en Kiro-/CodeWhisperer-API-nøgle og ikke et opdateringstoken.
 - Bekræft, at AWS-regionen matcher nøglen/kontoen. `us-east-1` er standardværdien.
-- Nøglen skal kunne kalde `ListAvailableProfiles`; ellers kan OmniRoute ikke
+- Nøglen skal kunne kalde `ListAvailableProfiles`; ellers kan 67router ikke
   finde det påkrævede `profileArn`.
 
 Se [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for andre problemer.

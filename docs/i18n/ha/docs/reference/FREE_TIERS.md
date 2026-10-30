@@ -9,9 +9,9 @@
 > **Bincike na ƙarshe:** 2026-06-17 — binciken yanar gizo na kowane mai samarwa (takardun hukuma + labaran kwanaki 7 na ƙarshe, zagayen wakilai 50 tare da tantancewar adawa) wanda ya sabunta kowace ƙimar amfani ta matakin kyauta + ToS. **Sake-bincike na ɓangare 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — duba bayanin mai kwanan wata a ƙasa).
 > **Madogarar gaskiya (kundin):** `open-sse/config/freeModelCatalog.ts` (kasafin kuɗi na kowane MODEL, an cire maimaitawa bisa tafki). Lambobin kasafin token da ke ƙasa sun fito ne daga binciken yanar gizo kai tsaye kuma **kimantawa** ne — duba [Hanyar bincike da abubuwan lura](#methodology--caveats).
 
-## TL;DR — a zahiri, nawa ne jimillar inference kyauta da OmniRoute ke tattarawa?
+## TL;DR — a zahiri, nawa ne jimillar inference kyauta da 67router ke tattarawa?
 
-Waɗannan alkaluma suna bayyana asusun ɓangarori na uku daban-daban da sharuɗɗan cancanta a duk faɗin kundin. OmniRoute ba ya ba ku wannan kasafi: dole ne ku sami asusu ko bayanan shaida da ake buƙata, ku haɗa masu samarwa da suka cancanta, sannan ku mutunta iyakokinsu. Ainihin ƙarfin da za a iya amfani da shi zai iya zama ƙasa, har ma ya zama sifili a sabon shigarwa wanda ba shi da wata hanya da ta cancanta. Masu samarwa da aka yiwa alamar `tos: avoid` ba a haɗa su cikin zaɓin hanya ta atomatik ta asali.
+Waɗannan alkaluma suna bayyana asusun ɓangarori na uku daban-daban da sharuɗɗan cancanta a duk faɗin kundin. 67router ba ya ba ku wannan kasafi: dole ne ku sami asusu ko bayanan shaida da ake buƙata, ku haɗa masu samarwa da suka cancanta, sannan ku mutunta iyakokinsu. Ainihin ƙarfin da za a iya amfani da shi zai iya zama ƙasa, har ma ya zama sifili a sabon shigarwa wanda ba shi da wata hanya da ta cancanta. Masu samarwa da aka yiwa alamar `tos: avoid` ba a haɗa su cikin zaɓin hanya ta atomatik ta asali.
 
 **An duba 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) yana bayar da kiredit na talla na $5 sau ɗaya wanda ke buƙatar hanyar biyan kuɗi, kuma zai ƙare bayan kwanaki 30. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) yana wallafa iyakokin ƙimar amfani bisa project/model/tier; har yanzu ba ya cikin babban adadin wata-wata da aka ƙididdige.
 
@@ -92,7 +92,7 @@ kiredit na kyauta ba. An yi cikakken bayani game da sauye-sauyen Nous a bayanin 
 
 ## Tsaruka biyu — ƙidayawa da yanke shawara
 
-OmniRoute yana amsa tambayar "kyauta ne?" ta hanyar tsaruka biyu waɗanda da gangan suke karanta
+67router yana amsa tambayar "kyauta ne?" ta hanyar tsaruka biyu waɗanda da gangan suke karanta
 mabambantan tushe:
 
 | Tsari                 | Tushen gaskiya                                                                                                                                                                                            | Wuraren da ya shafa                                                                                                            |
@@ -140,7 +140,7 @@ Yawancin alkaluman "free tokens per month" a wannan fanni jimillar lambobin da a
 
 ### ⚠️ A yi hattara — tanade-tanaden personal-use / proxy da ya dace a bincika (16)
 
-> Samunsu na kyauta na gaske ne kuma OmniRoute na iya yin routing zuwa gare su; tanade-tanaden da ke ƙasa abubuwa ne kawai da ya dace a sani. Waɗanda ke amfani da OAuth/keyless ba za a iya ƙididdige su da tokens ba, don haka ba sa cikin adadin babban taken (ba wai don ba za a iya amfani da su ba).
+> Samunsu na kyauta na gaske ne kuma 67router na iya yin routing zuwa gare su; tanade-tanaden da ke ƙasa abubuwa ne kawai da ya dace a sani. Waɗanda ke amfani da OAuth/keyless ba za a iya ƙididdige su da tokens ba, don haka ba sa cikin adadin babban taken (ba wai don ba za a iya amfani da su ba).
 
 | Provider         | Bayani                                                                                                                                                                 |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ Yawancin alkaluman "free tokens per month" a wannan fanni jimillar lambobin da a
 | `fireworks`      | ToS ya haramta proxy/intermediary use, API key transfers, da sublicensing a sarari (Sections 2.1 da 2.2(i)(j)); self-hosted personal proxies ba sa…                    |
 | `friendliai`     | ToS Section 8(e) da 8(f) sun haramta amfani da FriendliAI a matsayin proxy ko ba ɓangarori na uku access kai tsaye a sarari, sannan sun hana reselling/…               |
 | `iflytek`        | Section 2.4(3) na iFlytek Spark LLM Service Agreement ya haramta "using any automated or programmatic methods to extract data or output…                               |
-| `kiro`           | Kiro FAQ ya haramta amfani da "OpenClaw and similar tools that leverage third-party harnesses" a sarari — self-hosted AI proxy (kamar OmniRoute) mai yin rou…          |
+| `kiro`           | Kiro FAQ ya haramta amfani da "OpenClaw and similar tools that leverage third-party harnesses" a sarari — self-hosted AI proxy (kamar 67router) mai yin rou…           |
 | `modal`          | ToS Section 1.3 ya haramta "rent, resell or otherwise allow any third party direct access to or use of the Service" a sarari — gina self-hoste…                        |
 | `muse-spark-web` | ToS na Meta ya haramta automated access ba tare da izini na farko ba, reverse engineering ba tare da rubutaccen izini ba, da kauce wa fasahohin…                       |
 | `nlpcloud`       | ToS ya haramta "setting up a proxy or other device that allows others to access the Service through it" a sarari kuma yana bayar da haƙƙin da ba za a iya canjawa ba,… |
@@ -316,7 +316,7 @@ Yawancin alkaluman "free tokens per month" a wannan fanni jimillar lambobin da a
 
 - **`360ai`** — Bayanin freeNote da aka fitar, "Free 360 AI Brain models", ya zama tsoho. Samun dama a yanzu sai an gabatar da buƙata kuma ana biya. Token ɗin talla na lokacin ƙaddamarwa a 2023 (100M–250M na sau ɗaya) wataƙila su ne tushen…
 - **`agentrouter`** — freeNote ɗin da muka fitar ya ce "$200 free credits on signup." Haƙiƙanin halin yanzu ya nuna cewa yin rajista na yau da kullum (ba ta hanyar referral ba) yana samun $100 kawai; masu rajista ta referral na iya samun $200, amma wani sharhin al'umma daga Afrilu 2026…
-- **`agy`** — freeNote ɗin da muka fitar ya ce "(none)", yana nuna babu matakin kyauta, amma Antigravity yana da matakin kyauta da sai an shiga ta OAuth. Sai dai, ToS ya hana amfani da wannan matakin kyauta ta hanyar proxy kamar OmniRoute …
+- **`agy`** — freeNote ɗin da muka fitar ya ce "(none)", yana nuna babu matakin kyauta, amma Antigravity yana da matakin kyauta da sai an shiga ta OAuth. Sai dai, ToS ya hana amfani da wannan matakin kyauta ta hanyar proxy kamar 67router …
 - **`ai21`** — An tsaurara: an rage lokacin gwaji daga "3 months" zuwa kwanaki 7. Adadin kiredit na $10 bai canza ba, amma tsawon ingancinsa ya ragu sosai daga kusan kwanaki 90 zuwa kwanaki 7.
 - **`aimlapi`** — Ya canza sosai. freeNote ɗin da aka fitar ya tallata "$0.025/day free credits — 200+ models", amma yanzu an dakatar ko an soke matakin kyauta. Rabon kiredit na $0.025/rana (kiredit 50,000/rana, buƙatu 10/r…
 - **`amazon-q`** — freeNote ɗin da muka fitar ya ce "(none)" — haƙiƙanin lamarin ma ya fi muni: yanzu an dakatar da samfurin ga sabbin masu rajista (15 ga Mayu, 2026). A baya matakin kyauta yana bayar da buƙatun wakili 50/wata + marasa iyaka a cikin lay…

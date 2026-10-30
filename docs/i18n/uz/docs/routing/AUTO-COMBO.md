@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Oʻzbekcha)
+# 67router Auto-Combo Engine (Oʻzbekcha)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # har bir token uchun eng arzoni
 
 **Nima sodir boʻladi:**
 
-1. OmniRoute `src/sse/handlers/chat.ts` ichida `auto/` prefiksini aniqlaydi
+1. 67router `src/sse/handlers/chat.ts` ichida `auto/` prefiksini aniqlaydi
 2. Maʼlumotlar bazasidan barcha **faol provayder ulanishlarini** soʻraydi
 3. Yaroqli hisob maʼlumotlariga (API kaliti yoki OAuth tokeni) ega boʻlganlarini filtrlaydi
 4. Har bir ulanish uchun modelni aniqlaydi (`connection.defaultModel` yoki provayderning birinchi modeli)
@@ -88,7 +88,7 @@ bardoshlilik oʻqishlaridan qayta foydalanadigan (avtomatik uzgichning xom `stat
 - model bloklanishi — `isModelLocked(provider, connectionId, model)`
 
 Har bir nomzod ushbu API kalitining `excluded` bayrogʻini ham oʻz ichiga oladi. Istisnolar
-har bir API kaliti uchun (`auto_candidate_overrides` jadvali, `128` migratsiyasi) saqlanadi — OmniRoute
+har bir API kaliti uchun (`auto_candidate_overrides` jadvali, `128` migratsiyasi) saqlanadi — 67router
 `users` jadvalisiz bitta ijarachili tizimdir, shu sababli `apiKeyId` har bir chaqiruvchi uchun
 mavjud eng yaqin haqiqiy identifikatordir — va ular
 `open-sse/services/autoCombo/virtualFactory.ts` ichidagi nomzodlar toʻplamining nazorat nuqtasida sof, birlik testlaridan oʻtgan
@@ -189,7 +189,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Ikkita keng tarqalgan xato:
 
 - **`auto` sizning combolaringizdan foydalanmaydi.** `auto`/`auto/*` o‘zining nol sozlamali nomzodlar jamlanmasini yaratadi va faqat combo aynan `auto` deb nomlangan bo‘lsa, saqlangan combolarni ko‘rib chiqadi (tavsiya etilmaydi). Combo orqali yo‘naltirish uchun `auto` emas, uning aniq nomini yuboring.
-- **`openrouter/auto` haqiqiy pulli OpenRouter mahsulotidir** ("Auto Best Available"), OmniRoute taxallusi emas. U OpenRouter reyestrining yagona statik model yozuvidir (`open-sse/config/providers/registry/openrouter/index.ts`) va alohida hisob-kitob qilinadi. Uni `auto` jamlanmalaridan chiqarib tashlash uchun Settings → Routing → Hide paid models parametridan foydalaning.
+- **`openrouter/auto` haqiqiy pulli OpenRouter mahsulotidir** ("Auto Best Available"), 67router taxallusi emas. U OpenRouter reyestrining yagona statik model yozuvidir (`open-sse/config/providers/registry/openrouter/index.ts`) va alohida hisob-kitob qilinadi. Uni `auto` jamlanmalaridan chiqarib tashlash uchun Settings → Routing → Hide paid models parametridan foydalaning.
 
 Bu yerda hujjatlashtirilgan dastlabki chalkashlik haqida [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) va [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) ga qarang.
 
@@ -286,7 +286,7 @@ aniqlangan qiymatlar mexanizmning mavjud `config.modePack` / `config.budgetCap` 
 
 ## Barcha marshrutlash strategiyalari
 
-OmniRoute'ning kombinatsiya mexanizmi **20 ta marshrutlash strategiyasini** qoʻllab-quvvatlaydi (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` ichida eʼlon qilingan). Auto Combo mexanizmining oʻzi `auto` strategiyasi orqali taqdim etiladi; qolganlari saqlangan kombinatsiyalar uchun mavjud.
+67router'ning kombinatsiya mexanizmi **20 ta marshrutlash strategiyasini** qoʻllab-quvvatlaydi (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` ichida eʼlon qilingan). Auto Combo mexanizmining oʻzi `auto` strategiyasi orqali taqdim etiladi; qolganlari saqlangan kombinatsiyalar uchun mavjud.
 
 | Strategiya          | Tavsif                                                                                                                                                                                                                                                  |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -338,7 +338,7 @@ emas, statistik muvozanatni taʼminlaydi.
 Kamida ikkita modelga ega `pipeline` kombinatsiyasi
 `config.agenticOrchestration.enabled` orqali rejalashtiruvchi/bajaruvchi marshrutlashini
 yoqishi mumkin. Birinchi maqsad rejalashtirish va yakuniy javoblar uchun javob beradi;
-ikkinchi maqsad mijozga xos vosita chaqiruvlarini chiqaradi. OmniRoute soʻrov
+ikkinchi maqsad mijozga xos vosita chaqiruvlarini chiqaradi. 67router soʻrov
 protokolidan vosita natijasi davomlarini aniqlaydi, rejalashtiruvchidan yana bir vosita
 bosqichi kerak yoki kerak emasligini soʻraydi va mijozga koʻrinadigan yakuniy bosqich
 sifatida bajaruvchi yoki rejalashtiruvchini dinamik tarzda tanlaydi.
@@ -874,11 +874,11 @@ Ushbu sinovlar toʻplami CI ichida (`test:integration` vazifasi) `--test-concurr
 
 ### Shartli jonli tezkor sinovlar (CI ichida EMAS — haqiqiy provayderlar)
 
-| Buyruq                                 | Nima qiladi                                                                                        |
-| :------------------------------------- | :------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` bilan jarayon ichidagi haqiqiy marshrutlash; jonli OmniRoute DB nusxasini oladi |
-| `npm run test:combo:live:vps`          | Jonli OmniRoute serveriga HTTP chaqiruvlari (`COMBO_LIVE_BASE_URL`ni sozlang)                      |
-| `npm run test:combo:live:vps:failover` | Xuddi shu, ataylab yaratilgan uzilishdan tiklanish ssenariylari bilan                              |
+| Buyruq                                 | Nima qiladi                                                                                       |
+| :------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` bilan jarayon ichidagi haqiqiy marshrutlash; jonli 67router DB nusxasini oladi |
+| `npm run test:combo:live:vps`          | Jonli 67router serveriga HTTP chaqiruvlari (`COMBO_LIVE_BASE_URL`ni sozlang)                      |
+| `npm run test:combo:live:vps:failover` | Xuddi shu, ataylab yaratilgan uzilishdan tiklanish ssenariylari bilan                             |
 
 Ushbu tezkor sinovlar haqiqiy uzatish yoʻlini (kombinatsiya → provayder → yakunlash) tekshiradi. Ular amaldagi hisob maʼlumotlari va VPS kirishini talab qilgani sababli CI tarkibidan ataylab chiqarib tashlangan.
 

@@ -7,7 +7,7 @@
 > **事实来源：** `src/lib/memory/` 和 `src/app/api/memory/`
 > **最后更新：** 2026-06-28 — v3.8.40（默认关闭 + int8 量化补齐）
 
-OmniRoute 提供以 API 密钥为键（也可以选择使用会话 ID）的持久化对话记忆。系统通过轻量级正则表达式模式匹配，自动从 LLM 响应中提取记忆，并将其作为开头的系统消息注入后续请求（对于拒绝 system 角色的提供者，则作为第一条用户消息注入）。
+67router 提供以 API 密钥为键（也可以选择使用会话 ID）的持久化对话记忆。系统通过轻量级正则表达式模式匹配，自动从 LLM 响应中提取记忆，并将其作为开头的系统消息注入后续请求（对于拒绝 system 角色的提供者，则作为第一条用户消息注入）。
 
 > **记忆功能默认关闭（v3.8.30+）。** `DEFAULT_MEMORY_SETTINGS.enabled`
 > 现在为 `false`（`src/lib/memory/settings.ts`）。启用记忆后，最多会将
@@ -544,7 +544,7 @@ metadata?}` → 封装 `createMemory()`。仅接受 4 种规范类型：
 
 ## 选择嵌入提供者 (v3.8.16+)
 
-OmniRoute 的记忆引擎支持**四种嵌入来源**（`src/lib/memory/embedding/`）。每种来源在**延迟、成本、模型质量和设置复杂度**方面各有取舍。
+67router 的记忆引擎支持**四种嵌入来源**（`src/lib/memory/embedding/`）。每种来源在**延迟、成本、模型质量和设置复杂度**方面各有取舍。
 
 ### 嵌入来源
 
@@ -956,13 +956,13 @@ memoryManager.register(sqliteBackend);
 
 该工作进程仅绑定到环回地址，而 `GenericMemoryBackend` 的 SSRF 防护机制会有意拒绝该地址。此适配器不会放宽该防护机制：主机被硬编码为 `127.0.0.1`，且配置架构（`ClaudeMemBackendConfigSchema`、`.strict()`）仅接受：
 
-| 键          | 类型   | 默认值 | 说明                                                                                            |
-| ----------- | ------ | ------ | ----------------------------------------------------------------------------------------------- |
-| `port`      | number | —      | 必填，1024–65535。claude-mem worker 在其设置文件中配置的端口（默认为 `37700 + uid % 100`）。    |
-| `project`   | string | —      | 要使用的 claude-mem 项目。未设置 → 每个 OmniRoute API 密钥映射到其自己的项目（即 `apiKeyId`）。 |
-| `timeoutMs` | number | `5000` | 单次请求超时时间，100–30000。                                                                   |
+| 键          | 类型   | 默认值 | 说明                                                                                           |
+| ----------- | ------ | ------ | ---------------------------------------------------------------------------------------------- |
+| `port`      | number | —      | 必填，1024–65535。claude-mem worker 在其设置文件中配置的端口（默认为 `37700 + uid % 100`）。   |
+| `project`   | string | —      | 要使用的 claude-mem 项目。未设置 → 每个 67router API 密钥映射到其自己的项目（即 `apiKeyId`）。 |
+| `timeoutMs` | number | `5000` | 单次请求超时时间，100–30000。                                                                  |
 
-通过 `PUT /api/settings/memory` 启用它并重启 OmniRoute（后端仅在
+通过 `PUT /api/settings/memory` 启用它并重启 67router（后端仅在
 `initMemoryBackends()` 中注册一次）：
 
 ```json
@@ -979,7 +979,7 @@ memoryManager.register(sqliteBackend);
 
 - ID 格式为 `claude-mem:<observationId>`；`get`/`delete` 会忽略其他后端的 ID，且不会发起
   网络调用。
-- `create` → `POST /api/memory/save`；OmniRoute 字段（`apiKeyId`、`sessionId`、`type`、
+- `create` → `POST /api/memory/save`；67router 字段（`apiKeyId`、`sessionId`、`type`、
   `key`、`metadata`）存放在 claude-mem 的 `metadata.omniroute` 中，并在读取时完整还原。
 - `search` → `GET /api/search?format=json&type=observations`，结果会截断至 `maxTokens`
   （字符数 / 4）。`list` → worker 的分页观测记录端点（`total` 是下限——worker
@@ -991,16 +991,16 @@ memoryManager.register(sqliteBackend);
 - 提示词注入（`retrieval.ts`）和 `omniroute_memory_*` MCP 工具仍会直接读取 SQLite
   ——它们不经过 `memoryManager`，因此此后端不会向它们提供数据。
 
-**通过 OmniRoute 路由 claude-mem 自身的 LLM 调用。** claude-mem 使用 LLM 压缩观测记录
+**通过 67router 路由 claude-mem 自身的 LLM 调用。** claude-mem 使用 LLM 压缩观测记录
 （默认使用 Claude Agent SDK）。可将其 `openai-compatible` 提供者指向
-OmniRoute，从而获得组合回退和成本跟踪功能。在 `~/.claude-mem/settings.json` 中配置：
+67router，从而获得组合回退和成本跟踪功能。在 `~/.claude-mem/settings.json` 中配置：
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API 密钥>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute 模型或组合>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API 密钥>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router 模型或组合>"
 }
 ```
 

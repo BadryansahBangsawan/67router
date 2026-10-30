@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Svenska)
+# 67router Architecture (Svenska)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Senast uppdaterad: 2026-06-28_
 
 ## Sammanfattning
 
-OmniRoute är en lokal AI-routinggateway och kontrollpanel byggd med Next.js.
+67router är en lokal AI-routinggateway och kontrollpanel byggd med Next.js.
 Den tillhandahåller en enda OpenAI-kompatibel endpoint (`/v1/*`) och dirigerar trafik mellan flera uppströmsleverantörer med översättning, reservlösningar, tokenförnyelse och användningsspårning.
 
 Centrala funktioner:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Webbläsarpanel]
     end
 
-    subgraph Router[OmniRoute lokal process]
+    subgraph Router[67router lokal process]
         API[V1-kompatibilitets-API\n/v1/*]
         DASH[Kontrollpanel + hanterings-API\n/api/*]
         CORE[SSE + översättningskärna\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth-leverantörsmoduler (27 enskilda filer under `src/lib/oauth/providers/`):
 
 ## 5) Inbäddade tjänster (v3.8.4)
 
-OmniRoute kan installera, övervaka och dirigera till lokalt körda AI-verktygsprocesser
+67router kan installera, övervaka och dirigera till lokalt körda AI-verktygsprocesser
 som kallas **inbäddade tjänster**. Fem medföljer: 9Router, CLIProxyAPI, Bifrost, Mux och Dario.
 
 Arkitekturlager:
@@ -438,7 +438,7 @@ själva behöver sammanställa logik för spärrar, budgetar och reservvägar.
 - Kvotcache: `src/domain/quotaCache.ts`
 - Degraderingstillstånd: `src/domain/degradation.ts`
 - Konfigurationsgranskning: `src/domain/configAudit.ts`
-- Byggare för OmniRoute-svarsmetadata: `src/domain/omnirouteResponseMeta.ts`
+- Byggare för 67router-svarsmetadata: `src/domain/omnirouteResponseMeta.ts`
 - Bedömningsdelsystem: `src/domain/assessment/` — periodiska utvärderingsjobb
 
 ### E. Auktoriseringspipeline
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Webbläsare för instrumentpanelen]
     end
 
-    subgraph ContainerOrProcess[OmniRoute-körmiljö]
+    subgraph ContainerOrProcess[67router-körmiljö]
         Next[Next.js-server\nPORT=20128]
         Core[SSE-kärna + exekverare]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Alla andra leverantörer (inklusive anpassade kompatibla noder) använder `Defau
 ## Kompatibilitetsmatris för leverantörer
 
 > **Obs!** Matrisen nedan är ett representativt urval av de 351 registrerade leverantörerna i
-> OmniRoute v3.8.0. Den kanoniska och kontinuerligt uppdaterade listan finns i
+> 67router v3.8.0. Den kanoniska och kontinuerligt uppdaterade listan finns i
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (autogenererad) eller i den
 > auktoritativa källan `src/shared/constants/providers.ts` (Zod-validerad vid inläsning).
 
@@ -1117,7 +1117,7 @@ Detaljerad insamling av förfrågningsnyttolaster lagrar upp till fyra JSON-nytt
 - rå förfrågan som tas emot från klienten
 - översatt förfrågan som faktiskt skickas uppströms
 - leverantörssvar rekonstruerat som JSON; strömmade svar komprimeras till den slutliga sammanfattningen tillsammans med strömmetadata
-- slutligt klientsvar som returneras av OmniRoute; strömmade svar lagras i samma komprimerade sammanfattningsformat
+- slutligt klientsvar som returneras av 67router; strömmade svar lagras i samma komprimerade sammanfattningsformat
 
 ## Säkerhetskritiska gränser
 

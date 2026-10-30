@@ -5,7 +5,7 @@
 ---
 
 Bwawa linalojiendesha lenyewe linaendeshwa kwenye seva ya **.113** (`tomni-proxmox-113`). Tangu 2026-10-18 kila
-runner ya OmniRoute ina **jukumu moja**, lebo moja, na bajeti ya kumbukumbu/CPU iliyowekwa kulingana na vipimo vya mzigo wake
+runner ya 67router ina **jukumu moja**, lebo moja, na bajeti ya kumbukumbu/CPU iliyowekwa kulingana na vipimo vya mzigo wake
 wa kazi. Nafasi ya Turbopack hupata rasilimali zinazohitajika na build; nafasi nyingine zimewekewa rasilimali kulingana na
 viwango vyao vya juu vilivyopimwa. Seva huzidisha mgao wa rasilimali pale tu ambapo build ya Turbopack inatokea wakati mmoja na build ya webpack ya Release-Green
 pamoja na kazi ya lint; swap ya seva mwenyeji (16 GB) hufidia hali hiyo, na kwa sababu Builds za pull-request zinaendeshwa
@@ -27,7 +27,7 @@ Vipimo vya 2026-10-18:
 | swap       | 16 GB                                  | `omniroute-113-5` inaendeshwa bila swap (`MemorySwapMax=0`) ili build inayotumia rasilimali kupita kiasi ikatishwe inapofikia kikomo chake badala ya kusababisha seva kutumia swap                                                                                                                                                                                                                                                                  |
 | `/tmp`     | **12 GB tmpfs = RAM**                  | chochote kinachowekwa hapo hutumia kumbukumbu; masalio huondolewa baada ya saa 3                                                                                                                                                                                                                                                                                                                                                                    |
 | CPU        | mzigo wa 60 kwenye cores 32 ulionekana | kabla ya quota, build moja ya Turbopack (~1166 % CPU) pamoja na mkusanyiko wa majaribio ya coverage kwenye seva hiyo hiyo ilinyima heartbeat za visikilizi vingine rasilimali (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                                 |
-| runners    | **visikilizi 6**                       | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` zimezimwa (`systemctl enable --now` hurejesha kimoja)                                                                                                                                                                                                                                                                                                                               |
+| runners    | **visikilizi 6**                       | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` zimezimwa (`systemctl enable --now` hurejesha kimoja)                                                                                                                                                                                                                                                                                                                                |
 
 Vikomo vipo katika `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` ya kila unit
 (thamani za awali zimehifadhiwa kama `override.conf.bak-20261018`) na vilitumika papo hapo kwa
@@ -72,7 +72,7 @@ huripoti job kuwa imeghairiwa na listener hurudi mtandaoni yenyewe.
 
 `KillMode=process` chaguo-msingi ya runner huacha `Runner.Worker → npm → next-build`
 zikiendelea kutekelezwa wakati unit inaposimamishwa au kuanzishwa upya — build yatima huendelea kutumia RAM na
-CPU bila job iliyoambatishwa. Kila unit ya OmniRoute ina faili ya nyongeza
+CPU bila job iliyoambatishwa. Kila unit ya 67router ina faili ya nyongeza
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 yenye `KillMode=mixed`: SIGTERM hutumwa kwa listener kwanza, kisha SIGKILL kwa cgroup nzima wakati wa
 `TimeoutStop`. Huanza kutumika unit itakapoanzishwa upya mara inayofuata — anzisha upya **runner moja kwa
@@ -120,7 +120,7 @@ wakati mmoja, wakati tu haitumiki**, huku ukaguzi wa kutotumika na uanzishaji up
   zinazohitaji `next build` ya backend pekee (~GB 5–6; webpack) na `quality.yml` `lint-guard`.
   `omniroute-113` ilikuwa na `MemoryHigh=4G` hadi 2026-10-18 — build ya promptfoo ilijikokota kwa
   kurejesha kumbukumbu kwa dakika 54 humo; GB 8 huondoa ubanaji huo.
-- **Listener chache kwa makusudi.** Unit nne za OmniRoute zilizimwa mnamo 2026-08-29 — kila listener
+- **Listener chache kwa makusudi.** Unit nne za 67router zilizimwa mnamo 2026-08-29 — kila listener
   ya ziada ni mtumiaji mwingine wa bajeti ya kumbukumbu iliyo hapo juu. Kikomo cha janitor ni 6
   (`MAX_ACTIVE_RUNNERS=6` katika cron): huhesabu kila `Runner.Listener` kwenye mashine, na OmniHeuris
   - OmniMind huongeza mbili kwenye nne zetu.

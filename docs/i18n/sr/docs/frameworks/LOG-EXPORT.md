@@ -4,7 +4,7 @@
 
 ---
 
-Kontinuirani, inkrementalni izvoz OmniRoute evidencije poziva u eksterno skladište analitičkih podataka.
+Kontinuirani, inkrementalni izvoz 67router evidencije poziva u eksterno skladište analitičkih podataka.
 
 Kartica Logs na kontrolnoj tabli čuva istoriju zahteva u SQLite bazi (`call_logs`), koja je ograničena
 rotacijom i periodom čuvanja. Izvoz evidencije šalje isti skup zapisa prema rasporedu kako bi oni

@@ -1,6 +1,6 @@
 # Devin Claude Bridge
 
-`devin-cli-agentic` lets the real Claude Code runtime use OmniRoute's local Anthropic
+`devin-cli-agentic` lets the real Claude Code runtime use 67router's local Anthropic
 Messages endpoint while the official Devin CLI supplies model responses over ACP stdio. It
 does not modify the existing Anthropic, Claude OAuth, Claude Web, or `devin-cli` providers.
 
@@ -14,7 +14,7 @@ metadata is marked accordingly so tool-required combo routing will avoid it.
 > `3000.2.17` and model `swe-1-7-lightning`; that final live run proved client-owned `Read`,
 > `Edit`, and `Bash` turns, successful `npm test` results, project command and skill
 > discovery, Devin-only routing, and zero Claude egress. The pin was then raised to `2.1.258`
-> (the CLI generation OmniRoute's Claude identity impersonates, and the first line that ships
+> (the CLI generation 67router's Claude identity impersonates, and the first line that ships
 > the Fable 5.1 tier natively). On the new pin the install layer and `claude --version` were
 > verified on the pinned base image, and the bridge unit suite, `compose config` and the
 > static isolation proof pass — but the offline mock scenario and the live three-scenario
@@ -47,11 +47,11 @@ The parser accepts one standalone `<tool>{...}</tool>` envelope per model turn. 
 the name against the request's tool list, validates arguments against that tool's JSON
 Schema, rejects mixed narrative/actions, and permits one bounded repair. Claude Code then
 executes the resulting Anthropic `tool_use` locally and sends the `tool_result` back through
-OmniRoute.
+67router.
 
 ## Auto-routing
 
-The provider is eligible in OmniRoute's `auto/*` candidate pools when it is not blocked.
+The provider is eligible in 67router's `auto/*` candidate pools when it is not blocked.
 Candidate eligibility does not guarantee selection: the combo's routing strategy (for example,
 last-known-good) may prefer another provider. Use `dva/<model>` or a Devin-first combo when
 you require every request to go through Devin.
@@ -63,16 +63,16 @@ forbidden. The Compose services:
 
 - run as UID/GID `10001:10001`, with a read-only root filesystem, dropped capabilities, and
   `no-new-privileges`;
-- use a private `/home/bridge`, a dedicated Claude config volume, isolated OmniRoute data,
+- use a private `/home/bridge`, a dedicated Claude config volume, isolated 67router data,
   and a separate `devin-auth` volume;
 - mount only disposable `.sandbox` workspaces/evidence;
 - do not mount the host home, Keychain, SSH, cloud credentials, or Docker socket;
 - construct explicit environments and remove Anthropic API/OAuth/routing variables;
 - direct Claude Code inference only to `http://omniroute:20128` with a local-only key.
 
-The offline profile uses an internal network. In the live profile, OmniRoute reaches the
+The offline profile uses an internal network. In the live profile, 67router reaches the
 official Devin endpoints only through `network-guard`; unrelated destinations are denied.
-Claude Code has a separate deny-all egress guard and can reach only the local OmniRoute
+Claude Code has a separate deny-all egress guard and can reach only the local 67router
 service through `NO_PROXY`. Guard audit files are mounted only by their guard process. The
 scripts verify file ownership, mode, link count, and every decision before exporting
 token-free evidence.

@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (한국어)
+# 🌐 67router Proxy Guide (한국어)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **지리적 차단을 우회하고, 신원을 보호하며, 구성의 복잡성 없이 모든 프록시를 통해 AI 트래픽을 라우팅하세요.**
 
-OmniRoute에는 업스트림 AI 제공업체 트래픽을 HTTP, HTTPS 또는 SOCKS5 프록시를 통해 라우팅할 수 있는 완전한 기능의 프록시 관리 시스템이 포함되어 있습니다. 차단된 지역에 있거나, IP 순환이 필요하거나, 은밀한 핑거프린팅을 원하는 경우 등 이 가이드에서 모든 내용을 다룹니다.
+67router에는 업스트림 AI 제공업체 트래픽을 HTTP, HTTPS 또는 SOCKS5 프록시를 통해 라우팅할 수 있는 완전한 기능의 프록시 관리 시스템이 포함되어 있습니다. 차단된 지역에 있거나, IP 순환이 필요하거나, 은밀한 핑거프린팅을 원하는 경우 등 이 가이드에서 모든 내용을 다룹니다.
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute 서버                          │
+│                       67router 서버                          │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ 프록시      │    │ 프록시       │    │ 프록시           │  │
@@ -82,7 +82,7 @@ unsupported_country_region_territory
 
 ## 4단계 프록시 시스템
 
-OmniRoute는 **서로 독립적인 네 가지 범위**에서 프록시 구성을 지원하며, 우선순위에 따라 결정됩니다.
+67router는 **서로 독립적인 네 가지 범위**에서 프록시 구성을 지원하며, 우선순위에 따라 결정됩니다.
 
 ```
 우선순위 결정 순서(높음 → 낮음):
@@ -95,7 +95,7 @@ OmniRoute는 **서로 독립적인 네 가지 범위**에서 프록시 구성을
 
 ### 결정 방식
 
-OmniRoute가 업스트림 제공자에 요청을 보낼 때 `resolveProxyForConnectionFromRegistry()`를 호출하여 각 단계를 순서대로 확인합니다.
+67router가 업스트림 제공자에 요청을 보낼 때 `resolveProxyForConnectionFromRegistry()`를 호출하여 각 단계를 순서대로 확인합니다.
 
 1. **계정 수준** — 이 특정 연결 ID에 할당된 프록시가 있는가?
 2. **제공자 수준** — 이 제공자(예: `openai`)에 할당된 프록시가 있는가?
@@ -237,7 +237,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### 가져오기/내보내기
 
-프록시는 **백업/복원** 시스템에 포함됩니다. OmniRoute 구성을 내보낼 때는 다음 단계를 따릅니다.
+프록시는 **백업/복원** 시스템에 포함됩니다. 67router 구성을 내보낼 때는 다음 단계를 따릅니다.
 
 1. **대시보드 → 설정 → 백업**으로 이동합니다.
 2. **내보내기**를 클릭합니다. 프록시 레지스트리와 할당이 포함됩니다.
@@ -247,7 +247,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### 레거시 마이그레이션
 
-이전 버전(레지스트리 도입 전)에서 프록시를 구성한 경우 OmniRoute가 해당 프록시를 자동으로 마이그레이션합니다.
+이전 버전(레지스트리 도입 전)에서 프록시를 구성한 경우 67router가 해당 프록시를 자동으로 마이그레이션합니다.
 
 ```
 레거시 key_value 저장소 → proxy_registry + proxy_assignments
@@ -261,7 +261,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 > 🆕 **[@oyi77](https://github.com/oyi77) 기여** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (이슈 [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute는 **[1proxy](https://1proxy-api.aitradepulse.com)** 커뮤니티 플랫폼과 통합되어 전 세계의 **검증된 무료 프록시 수백 개**에 대한 액세스를 제공합니다. 자체 프록시 인프라가 없는 사용자에게 적합합니다.
+67router는 **[1proxy](https://1proxy-api.aitradepulse.com)** 커뮤니티 플랫폼과 통합되어 전 세계의 **검증된 무료 프록시 수백 개**에 대한 액세스를 제공합니다. 자체 프록시 인프라가 없는 사용자에게 적합합니다.
 
 ### 작동 방식
 
@@ -272,7 +272,7 @@ OmniRoute는 **[1proxy](https://1proxy-api.aitradepulse.com)** 커뮤니티 플�
 └─────────────┘    프록시      └─────────────────┘               └──────────┘
 ```
 
-1. **동기화** — OmniRoute가 1proxy API에서 검증된 프록시를 가져옵니다
+1. **동기화** — 67router가 1proxy API에서 검증된 프록시를 가져옵니다
 2. **저장** — 프록시는 동일한 `proxy_registry` 테이블에 `source = 'oneproxy'`로 저장됩니다
 3. **필터링** — 프로토콜, 국가, 품질 점수별로 필터링합니다
 4. **순환** — 품질, 무작위 또는 순차 전략을 사용하여 최적의 프록시를 선택합니다
@@ -372,7 +372,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## 탐지 방지 및 스텔스
 
-OmniRoute는 단순히 프록시를 통해 트래픽을 라우팅하는 데 그치지 않고, 트래픽이 정상적인 요청처럼 보이도록 만듭니다.
+67router는 단순히 프록시를 통해 트래픽을 라우팅하는 데 그치지 않고, 트래픽이 정상적인 요청처럼 보이도록 만듭니다.
 
 ### TLS 핑거프린트 스푸핑
 
@@ -406,11 +406,11 @@ OmniRoute는 단순히 프록시를 통해 트래픽을 라우팅하는 데 그�
 
 ## 업스트림 프록시 모드
 
-CLIProxyAPI 패턴을 사용하는 제공자에 대해 OmniRoute는 세 가지 업스트림 프록시 모드를 지원합니다.
+CLIProxyAPI 패턴을 사용하는 제공자에 대해 67router는 세 가지 업스트림 프록시 모드를 지원합니다.
 
 | 모드          | 설명                                                |
 | ------------- | --------------------------------------------------- |
-| `native`      | OmniRoute가 프록시 라우팅을 직접 처리함(기본값)     |
+| `native`      | 67router가 프록시 라우팅을 직접 처리함(기본값)      |
 | `cliproxyapi` | 외부 CLIProxyAPI 인스턴스에 처리를 위임함           |
 | `fallback`    | 먼저 네이티브 방식을 시도한 후 CLIProxyAPI로 대체함 |
 
@@ -475,7 +475,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### 터널 API
 
-프록시를 통해 아웃바운드 트래픽을 라우팅하는 대신 OmniRoute 인스턴스를 공용 인터넷에 노출하려면(Cloudflare/ngrok/Tailscale) [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md)를 참조하세요. 터널 REST API는 `/api/tunnels/{cloudflared,ngrok,tailscale}/*` 아래에 있으며, 위에서 설명한 아웃바운드 프록시 체인과는 별개입니다.
+프록시를 통해 아웃바운드 트래픽을 라우팅하는 대신 67router 인스턴스를 공용 인터넷에 노출하려면(Cloudflare/ngrok/Tailscale) [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md)를 참조하세요. 터널 REST API는 `/api/tunnels/{cloudflared,ngrok,tailscale}/*` 아래에 있으며, 위에서 설명한 아웃바운드 프록시 체인과는 별개입니다.
 
 ### 1proxy API
 
@@ -515,7 +515,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### 프록시를 통한 "socket hang up" 오류
 
-유휴 연결을 끊는 저가형 프록시에서는 정상적으로 발생할 수 있습니다. OmniRoute는 이미 다음과 같은 방식으로 이를 처리합니다.
+유휴 연결을 끊는 저가형 프록시에서는 정상적으로 발생할 수 있습니다. 67router는 이미 다음과 같은 방식으로 이를 처리합니다.
 
 - 프록시 연결에서 keep-alive 비활성화(`keepAliveTimeout: 1`)
 - 파이프라이닝 비활성화(`pipelining: 0`)
@@ -525,7 +525,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### OAuth 중 "unsupported_country_region_territory"
 
-OAuth 흐름을 시작하기 **전에** 프록시가 구성되어 있는지 확인하세요. OmniRoute는 구성된 프록시를 통해 OAuth 토큰 교환을 라우팅합니다. 먼저 전역 또는 공급자 수준 프록시를 설정한 다음 연결하세요.
+OAuth 흐름을 시작하기 **전에** 프록시가 구성되어 있는지 확인하세요. 67router는 구성된 프록시를 통해 OAuth 토큰 교환을 라우팅합니다. 먼저 전역 또는 공급자 수준 프록시를 설정한 다음 연결하세요.
 
 ### 프록시가 사용되지 않음
 
@@ -593,7 +593,7 @@ CREATE TABLE proxy_assignments (
 
 ## 프록시 상태 확인(v3.8.16+)
 
-OmniRoute의 **프록시 빠른 실패** 메커니즘(`src/lib/proxyHealth.ts`)은 빠른 TCP 연결 검사를 통해 2초 이내에 작동하지 않는 프록시를 감지한 다음, 요청별 오버헤드를 방지하기 위해 **결과를 캐싱**합니다.
+67router의 **프록시 빠른 실패** 메커니즘(`src/lib/proxyHealth.ts`)은 빠른 TCP 연결 검사를 통해 2초 이내에 작동하지 않는 프록시를 감지한 다음, 요청별 오버헤드를 방지하기 위해 **결과를 캐싱**합니다.
 
 ### 작동 방식
 
@@ -658,11 +658,11 @@ URL의 사용자 지정 포트(`http://host:9999`)는 항상 스킴 기본값보
 
 ## 프록시 분석 및 관측성
 
-OmniRoute는 운영자가 라우팅 패턴, 지연 시간 급증 및 반복되는 장애를 진단할 수 있도록 프록시별 사용량을 추적합니다.
+67router는 운영자가 라우팅 패턴, 지연 시간 급증 및 반복되는 장애를 진단할 수 있도록 프록시별 사용량을 추적합니다.
 
 ### 추적되는 항목
 
-설정된 프록시를 통과하는 모든 요청에 대해 OmniRoute는 다음을 기록합니다.
+설정된 프록시를 통과하는 모든 요청에 대해 67router는 다음을 기록합니다.
 
 | 메트릭       | 설명                                       |
 | ------------ | ------------------------------------------ |
@@ -724,7 +724,7 @@ ORDER BY latency_ms DESC;
 
 ## 로테이션 전략 의사 결정 트리
 
-여러 프록시가 하나의 범위에 할당되면 OmniRoute는 각 요청에 사용할 프록시를 선택하기 위해 **로테이션 전략**을 사용합니다. 전략은 범위 수준(전역, 제공자별, 계정별, 조합별)에서 설정됩니다.
+여러 프록시가 하나의 범위에 할당되면 67router는 각 요청에 사용할 프록시를 선택하기 위해 **로테이션 전략**을 사용합니다. 전략은 범위 수준(전역, 제공자별, 계정별, 조합별)에서 설정됩니다.
 
 ### 사용 가능한 전략
 

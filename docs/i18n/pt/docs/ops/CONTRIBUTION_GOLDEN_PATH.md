@@ -118,7 +118,7 @@ um componente específico, um teste Playwright ou uma verificação manual docum
 - Os catálogos da CLI encontram-se separadamente em `bin/cli/locales/`.
 - Preserve exatamente os marcadores de posição e as tags ICU. Não traduza nomes de produtos/fornecedores/modelos,
   nomes de protocolos e cabeçalhos, comandos, identificadores de código/JSON, URLs, variáveis de ambiente ou
-  termos protegidos como `OmniRoute`, `OAuth`, `MCP` e `A2A`. A lista de origem atual encontra-se em
+  termos protegidos como `67router`, `OAuth`, `MCP` e `A2A`. A lista de origem atual encontra-se em
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Ciclo específico**
@@ -269,7 +269,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # reutiliza um tarball c
 - **Reverta.** `run` volta a validar o slot promovido e troca novamente `current` e `previous` quando
   essa verificação falha. Um candidato que falhe a primeira validação nunca é promovido.
 
-Tudo é escrito em `_artifacts/candidate/`, ignorado pelo git; uma instalação existente do OmniRoute
+Tudo é escrito em `_artifacts/candidate/`, ignorado pelo git; uma instalação existente do 67router
 e o respetivo diretório de dados nunca são alterados. A CLI promovida é
 `_artifacts/candidate/current/prefix/bin/omniroute`; inicie-a com o seu próprio `DATA_DIR` quando a
 utilizar. Códigos de saída: `0` sucesso, `1` falha na validação ou promoção, `2` erro de utilização

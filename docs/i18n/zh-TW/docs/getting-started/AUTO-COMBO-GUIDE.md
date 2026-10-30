@@ -1,16 +1,16 @@
-# Auto-Combo: Let OmniRoute Pick the Best AI for You (中文 (繁體))
+# Auto-Combo: Let 67router Pick the Best AI for You (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/AUTO-COMBO-GUIDE.md)
 
 ---
 
-> **TL;DR**：將模型設定為 `auto`，OmniRoute 就會自動為每個請求選擇最佳的 AI 提供者。不需要任何設定。
+> **TL;DR**：將模型設定為 `auto`，67router 就會自動為每個請求選擇最佳的 AI 提供者。不需要任何設定。
 
 ---
 
 ## 功能說明
 
-您不必選擇特定的 AI 模型（例如 GPT-4o 或 Claude），而是可以讓 OmniRoute 為每個請求**自動選擇最佳模型**。它會考量：
+您不必選擇特定的 AI 模型（例如 GPT-4o 或 Claude），而是可以讓 67router 為每個請求**自動選擇最佳模型**。它會考量：
 
 - **健康狀態** — 提供者目前是否正常運作？
 - **速度** — 回應速度有多快？
@@ -18,7 +18,7 @@
 - **品質** — 是否擅長處理這類工作？
 - **容量** — 是否還有剩餘配額？
 
-OmniRoute 會為您連線的所有提供者評分，並選擇最佳提供者。如果該提供者失敗，它會自動嘗試下一個。
+67router 會為您連線的所有提供者評分，並選擇最佳提供者。如果該提供者失敗，它會自動嘗試下一個。
 
 ---
 
@@ -30,7 +30,7 @@ OmniRoute 會為您連線的所有提供者評分，並選擇最佳提供者。�
 model: "auto"
 ```
 
-**步驟 2**：就這樣！其餘工作交給 OmniRoute 處理。
+**步驟 2**：就這樣！其餘工作交給 67router 處理。
 
 **步驟 3**（選用）：針對特定工作使用變體：
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## 運作方式（簡易版）
 
-當您傳送使用 `model: "auto"` 的請求時，OmniRoute 會：
+當您傳送使用 `model: "auto"` 的請求時，67router 會：
 
 1. **查看您連線的所有提供者** — 您已新增的每個提供者（OpenAI、Anthropic、Google 等）
 2. **為每個提供者評分**，考量因素包括：
@@ -86,7 +86,7 @@ curl http://localhost:20128/v1/chat/completions \
    - 速度有多快？（速度）
    - 是否擅長這項工作？（品質）
 3. **選擇最佳提供者** — 得分最高的提供者會收到您的請求
-4. **自動復原** — 如果失敗，OmniRoute 會自動嘗試下一個提供者
+4. **自動復原** — 如果失敗，67router 會自動嘗試下一個提供者
 
 ### 評分系統
 
@@ -120,11 +120,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## 如何處理故障
 
-OmniRoute 提供**三層保護機制**：
+67router 提供**三層保護機制**：
 
 ### 1. 自動備援
 
-如果最佳提供者發生故障，OmniRoute 會自動嘗試下一個提供者。您不需要執行任何操作。
+如果最佳提供者發生故障，67router 會自動嘗試下一個提供者。您不需要執行任何操作。
 
 ### 2. 自我修復
 
@@ -136,13 +136,13 @@ OmniRoute 提供**三層保護機制**：
 
 ### 3. 緊急備援
 
-如果所有提供者都發生故障，OmniRoute 會將請求路由至穩定的免費提供者（例如 Kiro 或 Qoder），作為最後的備援方案。
+如果所有提供者都發生故障，67router 會將請求路由至穩定的免費提供者（例如 Kiro 或 Qoder），作為最後的備援方案。
 
 ---
 
 ## 多帳戶支援
 
-如果您在同一個提供者擁有多個帳戶（例如兩個 OpenAI 金鑰），OmniRoute 會將每個帳戶視為**獨立候選項目**。這表示：
+如果您在同一個提供者擁有多個帳戶（例如兩個 OpenAI 金鑰），67router 會將每個帳戶視為**獨立候選項目**。這表示：
 
 - 帳戶 A 仍有剩餘配額 → 使用它
 - 帳戶 B 受到速率限制 → 略過它
@@ -154,13 +154,13 @@ OmniRoute 提供**三層保護機制**：
 
 ## 多臂吃角子機探索
 
-OmniRoute 偶爾會**探索**新的提供者，以找出更好的選項：
+67router 偶爾會**探索**新的提供者，以找出更好的選項：
 
 - **預設**：5% 的請求會傳送至隨機提供者
 - **Auto/smart**：探索率為 10%
 - 當超過 50% 的提供者處於不健康狀態時，將**停用**探索
 
-這有助於 OmniRoute 瞭解哪些提供者最適合您的使用模式。
+這有助於 67router 瞭解哪些提供者最適合您的使用模式。
 
 ---
 
@@ -172,11 +172,11 @@ OmniRoute 偶爾會**探索**新的提供者，以找出更好的選項：
 
 ### 「如果提供者停止運作，該怎麼辦？」
 
-OmniRoute 會自動略過該提供者，並嘗試下一個。如果某個提供者持續發生故障，系統會暫時將其排除（5 至 30 分鐘）。您不需要執行任何操作。
+67router 會自動略過該提供者，並嘗試下一個。如果某個提供者持續發生故障，系統會暫時將其排除（5 至 30 分鐘）。您不需要執行任何操作。
 
 ### 「我可以查看使用了哪個提供者嗎？」
 
-請查看回應標頭——OmniRoute 會在每個回應中包含所使用的提供者與模型。
+請查看回應標頭——67router 會在每個回應中包含所使用的提供者與模型。
 
 ### 「它會從我的使用情況中學習嗎？」
 

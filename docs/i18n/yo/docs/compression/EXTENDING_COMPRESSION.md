@@ -4,7 +4,7 @@
 
 ---
 
-> **Ní ṣókí**: Ẹ̀rọ ìfúnpọ̀ OmniRoute jẹ́ **èyí tí a lè fi àfikún sí** — o lè forúkọsílẹ̀ àwọn ẹ̀rọ àkànṣe, pèsè àwọn àkójọpọ̀ èdè fún àwọn èdè tuntun, kí o sì ṣàkójọpọ̀ àwọn ìlànà iṣẹ́ alápele. Ìtọ́sọ́nà yìí ṣàlàyé bí a ṣe ń ṣe é.
+> **Ní ṣókí**: Ẹ̀rọ ìfúnpọ̀ 67router jẹ́ **èyí tí a lè fi àfikún sí** — o lè forúkọsílẹ̀ àwọn ẹ̀rọ àkànṣe, pèsè àwọn àkójọpọ̀ èdè fún àwọn èdè tuntun, kí o sì ṣàkójọpọ̀ àwọn ìlànà iṣẹ́ alápele. Ìtọ́sọ́nà yìí ṣàlàyé bí a ṣe ń ṣe é.
 
 **Àwọn ìtọ́sọ́nà tó jọmọ́:**
 
@@ -233,7 +233,7 @@ nínú olùyan ọgbọ́n nípasẹ̀ `id` rẹ̀. Dán ìsopọ̀ rẹ̀ wò n
 
 ## Ṣíṣẹ̀dá Àwọn Àkójọpọ̀ Èdè
 
-Ìpọ́pọ̀ ara Caveman ń lo **àwọn àkójọpọ̀ òfin tó jẹ́ ti èdè kọ̀ọ̀kan** láti bójú tó àwọn ọ̀rọ̀ àfikún, ọ̀rọ̀ àìdánilójú, àti àwọn àpẹẹrẹ ọ̀rọ̀ gígùn nínú èdè àdánidá kọ̀ọ̀kan. OmniRoute wá pẹ̀lú **àwọn àkójọpọ̀ èdè 6**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Ìpọ́pọ̀ ara Caveman ń lo **àwọn àkójọpọ̀ òfin tó jẹ́ ti èdè kọ̀ọ̀kan** láti bójú tó àwọn ọ̀rọ̀ àfikún, ọ̀rọ̀ àìdánilójú, àti àwọn àpẹẹrẹ ọ̀rọ̀ gígùn nínú èdè àdánidá kọ̀ọ̀kan. 67router wá pẹ̀lú **àwọn àkójọpọ̀ èdè 6**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Ìgbékalẹ̀ Àkójọpọ̀
 
@@ -392,7 +392,7 @@ Nígbà tí a bá yan `mode: "stacked"`, àwọn ẹ̀rọ yóò ṣiṣẹ́ n�
 
 ### Àwọn Ìpo Ìfúnpọ̀
 
-OmniRoute ń yan **ÌPO KAN fún ìbéèrè kọ̀ọ̀kan** ní ìbámu pẹ̀lú àtúnṣe, àwọn ààlà ìmúṣiṣẹ́ aládàáṣe, àti àwọn ìkọlélórí combo.
+67router ń yan **ÌPO KAN fún ìbéèrè kọ̀ọ̀kan** ní ìbámu pẹ̀lú àtúnṣe, àwọn ààlà ìmúṣiṣẹ́ aládàáṣe, àti àwọn ìkọlélórí combo.
 Àwọn ìpo tó wà ni a ṣàlàyé nínú `open-sse/services/compression/types.ts` (irú `CompressionMode`):
 
 | Ìpo          | Àwọn ẹ̀rọ             | Ibi ìlò                                                                                                                                                                                                                                        |
@@ -512,10 +512,10 @@ Láti darí rẹ̀ láti inú ìṣètò, ṣètò `mode: "stacked"` kí o sì p
 
 ## Ìlànà Ìṣiṣẹ́pọ̀ Pẹ̀lú Upstream
 
-Àwọn ẹ̀rọ ìfúnpọ̀ OmniRoute fi ọlá fún ọ̀pọ̀lọpọ̀ iṣẹ́ upstream nínú README
+Àwọn ẹ̀rọ ìfúnpọ̀ 67router fi ọlá fún ọ̀pọ̀lọpọ̀ iṣẹ́ upstream nínú README
 ("inspired by RTK, Caveman, LLMLingua-2, Troglodita"). Ìbéèrè tí àwọn olùdásí
 máa ń béèrè ni: **nígbà tí upstream RTK bá ṣàfikún àsẹ irinṣẹ́ tuntun tàbí tí Caveman bá ṣàfikún
-àkójọpọ̀ òfin kan, báwo ni ìyẹn ṣe dé inú OmniRoute?** Abala yìí ni ìdáhùn aláṣẹ.
+àkójọpọ̀ òfin kan, báwo ni ìyẹn ṣe dé inú 67router?** Abala yìí ni ìdáhùn aláṣẹ.
 
 ### Àwọn ẹ̀dà tí a fi sínú iṣẹ́ náà àti àwọn ìmúṣẹ olómìnira
 
@@ -536,7 +536,7 @@ tí ó dá lórí àwọn _èrò_ wọn (àwọn òfin àsẹ, àkójọpọ̀ �
 **Kò sí ìtọ́pasẹ̀ ìtújáde upstream aládàáṣiṣẹ́, bẹ́ẹ̀ ni kò sí ààmì `compression-sync`
 kankan** — èyí jẹ́ àfipamọ́ ìlànà. Nítorí pé àwọn ẹ̀rọ náà jẹ́ àtúnmúṣẹ, àsẹ RTK
 tàbí àkójọpọ̀ òfin Caveman láti upstream kì í ṣe àkópọ̀ bí kóòdù; dípò bẹ́ẹ̀, a máa **tún un
-ṣàlàyé gẹ́gẹ́ bí òfin/àsẹ tuntun nínú fọ́ọ̀mù OmniRoute fúnra rẹ̀** (wo
+ṣàlàyé gẹ́gẹ́ bí òfin/àsẹ tuntun nínú fọ́ọ̀mù 67router fúnra rẹ̀** (wo
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)), ó sì máa ń wọlé lẹ́ẹ̀kọ̀ọ̀kan nípasẹ̀
 PR àrà ọ̀tọ̀. Àwọn ibi ìmúgbòòrò tó wà lókè (ẹ̀rọ àkànṣe, àkójọpọ̀ èdè, àsẹ RTK)
 ni ọ̀nà tí a fọwọ́ sí láti fi ọ̀kan kún un.
@@ -550,14 +550,14 @@ ni ọ̀nà tí a fọwọ́ sí láti fi ọ̀kan kún un.
 ### Headroom (aṣojú ìfúnpọ̀ ìwọlé)
 
 Headroom jẹ́ **ti inú iṣẹ́ náà pátápátá** — àwòrán codec `gcf` tí a ti fi sínú iṣẹ́ náà tí a sì dì mọ́ ẹ̀yà kan, pẹ̀lú
-àwọn ipele `smartcrusher` / `toon` / `tabular` ti OmniRoute fúnra rẹ̀. Kò sí
+àwọn ipele `smartcrusher` / `toon` / `tabular` ti 67router fúnra rẹ̀. Kò sí
 upstream alààyè láti tọ́pa yàtọ̀ sí ẹ̀dà tí a fi sínú iṣẹ́ náà; a máa ń ṣe ìmúdójúìwọ̀n `gcf`
 pẹ̀lú ọwọ́ nígbà tí codec bá yí padà, a sì tún máa ń fìdí rẹ̀ múlẹ̀ nípasẹ̀ ẹnu-ọ̀nà ààlà ìfúnpọ̀
 (`check:compression-budget`).
 
 ### Ṣíṣe àbá ìmúdára tí upstream fún ní ìmísí
 
-1. **Má ṣe fi orísun náà sínú iṣẹ́** — tún òfin/àsẹ upstream náà ṣàlàyé nínú fọ́ọ̀mù OmniRoute.
+1. **Má ṣe fi orísun náà sínú iṣẹ́** — tún òfin/àsẹ upstream náà ṣàlàyé nínú fọ́ọ̀mù 67router.
 2. Fi í kún un nípasẹ̀ ibi ìmúgbòòrò tó bá a mu nísàlẹ̀ (àkójọpọ̀ èdè, àsẹ RTK, tàbí
    ẹ̀rọ àkànṣe).
 3. Tọ́ka sí iṣẹ́ upstream náà nínú àpèjúwe PR (fífúnni ní ẹ̀tọ́), kì í ṣe nípa

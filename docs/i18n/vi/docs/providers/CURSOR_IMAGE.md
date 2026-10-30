@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute cung cấp tính năng **tạo hình ảnh** của gói Cursor tại `POST /v1/images/generations` thông qua cùng id nhà cung cấp như chat: `cursor` (bí danh `cu`).
+67router cung cấp tính năng **tạo hình ảnh** của gói Cursor tại `POST /v1/images/generations` thông qua cùng id nhà cung cấp như chat: `cursor` (bí danh `cu`).
 
 | Trường               | Giá trị                                                                            |
 | -------------------- | ---------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute cung cấp tính năng **tạo hình ảnh** của gói Cursor tại `
 
 ## Tại sao sử dụng Agent CLI
 
-Chat Cursor trong OmniRoute sử dụng `agent.v1.AgentService/Run` (protobuf). Luồng này **từ chối** các công cụ máy khách tích hợp sẵn (shell, write, …). Tạo hình ảnh là một công cụ gốc của Cursor, được **`agent` CLI** thực thi trên seat. Do đó, trình xử lý hình ảnh khởi chạy `agent` với một prompt cố định và một không gian làm việc tạm thời riêng cho từng yêu cầu (cùng cấu trúc với các bridge seat của cộng đồng), sau đó trả về `b64_json` tương thích với OpenAI.
+Chat Cursor trong 67router sử dụng `agent.v1.AgentService/Run` (protobuf). Luồng này **từ chối** các công cụ máy khách tích hợp sẵn (shell, write, …). Tạo hình ảnh là một công cụ gốc của Cursor, được **`agent` CLI** thực thi trên seat. Do đó, trình xử lý hình ảnh khởi chạy `agent` với một prompt cố định và một không gian làm việc tạm thời riêng cho từng yêu cầu (cùng cấu trúc với các bridge seat của cộng đồng), sau đó trả về `b64_json` tương thích với OpenAI.
 
 ## Hạn chế truy cập (Quy tắc cứng #15 + #17)
 
@@ -23,12 +23,12 @@ Chat Cursor trong OmniRoute sử dụng `agent.v1.AgentService/Run` (protobuf). 
 
 ## Cổng đồng thời ở cấp mô-đun (giới hạn đơn phiên bản)
 
-`CURSOR_IMG_MAX_CONCURRENT` được thực thi bằng một bộ đếm/hàng đợi trong bộ nhớ, có phạm vi thuộc phiên bản mô-đun Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Cơ chế này giới hạn chính xác số tiến trình `agent` đồng thời trong một tiến trình OmniRoute, nhưng **không** điều phối giữa nhiều tiến trình/phiên bản cùng dùng chung một seat Cursor (ví dụ: triển khai nhiều replica) — mỗi phiên bản thực thi giới hạn độc lập của riêng mình. Với triển khai đơn phiên bản (mặc định), giới hạn này là chính xác; các triển khai mở rộng theo chiều ngang nên đặt `CURSOR_IMG_MAX_CONCURRENT` ở mức thận trọng cho mỗi phiên bản hoặc định tuyến lưu lượng hình ảnh Cursor đến một phiên bản duy nhất.
+`CURSOR_IMG_MAX_CONCURRENT` được thực thi bằng một bộ đếm/hàng đợi trong bộ nhớ, có phạm vi thuộc phiên bản mô-đun Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Cơ chế này giới hạn chính xác số tiến trình `agent` đồng thời trong một tiến trình 67router, nhưng **không** điều phối giữa nhiều tiến trình/phiên bản cùng dùng chung một seat Cursor (ví dụ: triển khai nhiều replica) — mỗi phiên bản thực thi giới hạn độc lập của riêng mình. Với triển khai đơn phiên bản (mặc định), giới hạn này là chính xác; các triển khai mở rộng theo chiều ngang nên đặt `CURSOR_IMG_MAX_CONCURRENT` ở mức thận trọng cho mỗi phiên bản hoặc định tuyến lưu lượng hình ảnh Cursor đến một phiên bản duy nhất.
 
 ## Yêu cầu
 
 1. Một tài khoản Cursor đã được kết nối trong bảng điều khiển (OAuth hoặc API key `crsr_…`).
-2. Tệp nhị phân Cursor Agent khả dụng cho tiến trình OmniRoute:
+2. Tệp nhị phân Cursor Agent khả dụng cho tiến trình 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, hoặc
    - `~/.local/bin/agent`, hoặc
    - `providerSpecificData.agentBin` trên kết nối Cursor.

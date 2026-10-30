@@ -5,7 +5,7 @@
 ---
 
 Nhóm runner tự lưu trữ chạy trên máy **.113** (`tomni-proxmox-113`). Kể từ 2026-10-18, mỗi
-runner OmniRoute có **một vai trò**, một nhãn và ngân sách bộ nhớ/CPU được định cỡ theo mức tải
+runner 67router có **một vai trò**, một nhãn và ngân sách bộ nhớ/CPU được định cỡ theo mức tải
 đã đo được. Slot Turbopack nhận tài nguyên theo nhu cầu của quá trình build; các slot còn lại được định cỡ theo
 mức đỉnh đã đo được. Máy chỉ cấp phát vượt mức khi một bản build Turbopack trùng thời điểm với một bản build webpack
 Release-Green và một job lint; swap của host (16 GB) sẽ hấp thụ phần vượt mức đó, và vì các bản Build của pull request chạy
@@ -27,7 +27,7 @@ trên runner được lưu trữ, slot Turbopack hầu như luôn ở trạng th
 | swap       | 16 GB                               | `omniroute-113-5` chạy với swap bị tắt (`MemorySwapMax=0`), vì vậy một bản build mất kiểm soát sẽ bị dừng tại giới hạn thay vì khiến cả máy phải dùng swap                                                                                                                                                                                                                                                                                             |
 | `/tmp`     | **tmpfs 12 GB = RAM**               | mọi thứ được lưu ở đó đều chiếm bộ nhớ; dữ liệu còn sót lại được dọn sau 3 giờ                                                                                                                                                                                                                                                                                                                                                                         |
 | CPU        | đã quan sát thấy tải 60 trên 32 lõi | trước khi áp dụng hạn ngạch, một bản build Turbopack (~1166 % CPU) cộng với một bộ kiểm thử coverage trên cùng máy đã làm gián đoạn heartbeat của các listener khác (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                                              |
-| runner     | **6 listener**                      | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` bị vô hiệu hóa (`systemctl enable --now` sẽ kích hoạt lại một runner)                                                                                                                                                                                                                                                                                                                  |
+| runner     | **6 listener**                      | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` bị vô hiệu hóa (`systemctl enable --now` sẽ kích hoạt lại một runner)                                                                                                                                                                                                                                                                                                                   |
 
 Các giới hạn nằm trong `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` của từng unit
 (các giá trị trước đó được giữ lại dưới tên `override.conf.bak-20261018`) và đã được áp dụng trực tiếp bằng
@@ -53,7 +53,7 @@ Quy tắc 75 phút không phát hiện được một build mà GitHub đã từ
 
 ## Các unit của runner: KillMode
 
-`KillMode=process` mặc định của runner khiến `Runner.Worker → npm → next-build` vẫn chạy khi một unit bị dừng hoặc khởi động lại — một build mồ côi tiếp tục tiêu tốn RAM và CPU mà không gắn với job nào. Mỗi unit OmniRoute đều có một drop-in (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) với `KillMode=mixed`: trước tiên gửi SIGTERM đến listener, sau đó gửi SIGKILL đến toàn bộ cgroup tại `TimeoutStop`. Thiết lập này có hiệu lực trong lần khởi động lại tiếp theo của unit — chỉ khởi động lại **từng runner một, khi runner đang rảnh**, với thao tác kiểm tra trạng thái rảnh và khởi động lại nằm trong cùng một lệnh.
+`KillMode=process` mặc định của runner khiến `Runner.Worker → npm → next-build` vẫn chạy khi một unit bị dừng hoặc khởi động lại — một build mồ côi tiếp tục tiêu tốn RAM và CPU mà không gắn với job nào. Mỗi unit 67router đều có một drop-in (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) với `KillMode=mixed`: trước tiên gửi SIGTERM đến listener, sau đó gửi SIGKILL đến toàn bộ cgroup tại `TimeoutStop`. Thiết lập này có hiệu lực trong lần khởi động lại tiếp theo của unit — chỉ khởi động lại **từng runner một, khi runner đang rảnh**, với thao tác kiểm tra trạng thái rảnh và khởi động lại nằm trong cùng một lệnh.
 
 ## Quy tắc vận hành
 
@@ -95,7 +95,7 @@ Quy tắc 75 phút không phát hiện được một build mà GitHub đã từ
   một lệnh `next build` chỉ dành cho backend (~5–6 GB; webpack) và `lint-guard` của `quality.yml`.
   `omniroute-113` có `MemoryHigh=4G` cho đến 2026-10-18 — bản dựng promptfoo phải liên tục thu hồi
   bộ nhớ suốt 54 phút tại đó; 8 GB loại bỏ tình trạng điều tiết.
-- **Chủ đích sử dụng ít listener hơn.** Bốn unit OmniRoute đã bị vô hiệu hóa vào 2026-08-29 — mỗi
+- **Chủ đích sử dụng ít listener hơn.** Bốn unit 67router đã bị vô hiệu hóa vào 2026-08-29 — mỗi
   listener bổ sung là một tenant khác dùng chung ngân sách bộ nhớ nêu trên. Giới hạn tối đa của
   janitor là 6 (`MAX_ACTIVE_RUNNERS=6` trong cron): nó đếm mọi `Runner.Listener` trên máy, còn
   OmniHeuris + OmniMind bổ sung hai listener vào bốn listener của chúng ta.

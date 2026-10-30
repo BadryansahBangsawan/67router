@@ -4,7 +4,7 @@
 
 ---
 
-Die transparente TPROXY-Entschlüsselung ist der **5. Erfassungsmodus** von OmniRoute für den
+Die transparente TPROXY-Entschlüsselung ist der **5. Erfassungsmodus** von 67router für den
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md)-/[AgentBridge](../frameworks/AGENTBRIDGE.md)-
 MITM-Stack. Sie fängt lokalen ausgehenden HTTPS-Datenverkehr unter Linux mithilfe
 von Kernel-TPROXY und richtlinienbasiertem Routing ab und **entschlüsselt** ihn — **ohne**
@@ -57,7 +57,7 @@ Verwenden Sie diesen Modus, wenn Sie Datenverkehr eines Prozesses erfassen und e
 
 Da das Abfangen im Kernel erfolgt, benötigt der ursprüngliche Prozess **keine
 Konfigurationsänderung** — der Prozess muss jedoch der dynamischen CA vertrauen,
-die OmniRoute installiert (siehe [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
+die 67router installiert (siehe [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
 
@@ -75,7 +75,7 @@ Add-on nicht erstellt), gibt der Add-on-Loader (`src/mitm/tproxy/transparentSock
 `null` zurück, anstatt eine Ausnahme auszulösen. Der Status des Erfassungsmodus meldet dann
 `available: false`, der Umschalter im Dashboard ist **deaktiviert** und zeigt den Tooltip
 „TPROXY-Entschlüsselung erfordert Linux + root + das native Add-on“ an, während der Rest von
-OmniRoute weiterhin funktioniert.
+67router weiterhin funktioniert.
 
 ---
 
@@ -285,7 +285,7 @@ Bypass-Socket-Markierung (**SO_MARK**):
 
 **Die MITM-CA ist eine äußerst mächtige Funktion.** Eine vom Betriebssystem als vertrauenswürdig
 eingestufte CA, die Zertifikate für jeden beliebigen Host signieren kann, bedeutet, dass alles,
-was OmniRoute abfängt, entschlüsselt werden kann. Sie ist durch den expliziten, ausschließlich
+was 67router abfängt, entschlüsselt werden kann. Sie ist durch den expliziten, ausschließlich
 lokalen TPROXY-Erfassungsmodus geschützt, standardmäßig deaktiviert, und der Eintrag im
 Vertrauensspeicher wird entfernt, wenn Sie den Modus beenden.
 
@@ -395,7 +395,7 @@ gibt `available: false` zurück, wenn das Add-on fehlt.
 ### Veraltete Firewall-Regeln nach einem Absturz
 
 `revertTproxy()` ist die exakte Umkehrung der Anwendung und idempotent. Beim Beenden des
-Modus werden die Regeln rückgängig gemacht. Falls OmniRoute während einer Sitzung beendet wurde, verwenden Sie die
+Modus werden die Regeln rückgängig gemacht. Falls 67router während einer Sitzung beendet wurde, verwenden Sie die
 AgentBridge-Aktion **Repair** (`POST /api/tools/agent-bridge/repair`), um verwaiste Systemzustände
 (DNS-Spoofing, Root-CA, System-Proxy) rückgängig zu machen. Die TPROXY-`mangle`-Regeln und die Route werden außerdem
 bei einem Neustart automatisch entfernt.

@@ -8,7 +8,7 @@
 
 > **Pinagmumulan ng katotohanan:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-Hinahayaan ng OmniRoute na magkaroon ang bawat proxy ng **direktiba sa address-family egress**. Bilang default, ang OS ang pumipili ng IPv4 o IPv6 (dual-stack, "Happy Eyeballs"). Kapag itinakda mo ang direktiba sa `ipv4` o `ipv6`, ipi-pin ng OmniRoute ang bawat koneksyon sa pamamagitan ng proxy na iyon sa napiling family at **nabibigong sarado** sa halip na bumalik sa kabilang family.
+Hinahayaan ng 67router na magkaroon ang bawat proxy ng **direktiba sa address-family egress**. Bilang default, ang OS ang pumipili ng IPv4 o IPv6 (dual-stack, "Happy Eyeballs"). Kapag itinakda mo ang direktiba sa `ipv4` o `ipv6`, ipi-pin ng 67router ang bawat koneksyon sa pamamagitan ng proxy na iyon sa napiling family at **nabibigong sarado** sa halip na bumalik sa kabilang family.
 
 Itinatala sa pahinang ito kung ano ang direktiba, bakit ito umiiral, saan ito kino-configure, at paano ito nire-resolve ng runtime.
 
@@ -122,7 +122,7 @@ Para sa iba pang bahagi ng proxy CRUD/assignment API, tingnan ang [PROXY_GUIDE.m
 
 ## Paano Nire-resolve ang `auto`
 
-Kapag `auto` ang `family`, **hindi** nagdaragdag ang OmniRoute ng anumang directive — ginagamit ang proxy URL nang walang pagbabago at likas na tinutukoy ang connect family.
+Kapag `auto` ang `family`, **hindi** nagdaragdag ang 67router ng anumang directive — ginagamit ang proxy URL nang walang pagbabago at likas na tinutukoy ang connect family.
 
 Sa oras ng pagbuo ng URL (`proxyConfigToUrl` / `normalizeProxyUrl` sa `open-sse/utils/proxyDispatcher.ts`), nagreresulta ang isang `auto` proxy sa plain URL na walang marker:
 
@@ -158,7 +158,7 @@ Kaya:
 
 Ang isang direktibang hindi `auto` ay ipinapasa bilang iisang sintetikong query marker — `?family=ipv4` o `?family=ipv6` — na minsang idinaragdag sa na-normalize na proxy URL. Maingat na inaalis at muling idinaragdag ng `normalizeProxyUrl` ang marker na ito nang eksaktong isang beses upang hindi nito masira ang pag-parse ng port.
 
-Kapag binuo ang dispatcher, binabasa ang marker at kino-convert sa isang tiyak na connect family. Kung ang host ay isang IP literal ng **kabaligtarang** family, nagti-throw ang OmniRoute (fail-closed ang kontradiksyon):
+Kapag binuo ang dispatcher, binabasa ang marker at kino-convert sa isang tiyak na connect family. Kung ang host ay isang IP literal ng **kabaligtarang** family, nagti-throw ang 67router (fail-closed ang kontradiksyon):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Pagkatapos, ipinipin ang tiyak na family sa connector:
 
 ## Compatibility ng SOCKS5
 
-Gumagana ang pag-pin ng family sa mga SOCKS5 proxy, ngunit hindi inilalantad ng karaniwang `fetch-socks` ang mga socket option na kinakailangan upang i-pin ang family ng proxy hop. May sariling connector ang OmniRoute para rito:
+Gumagana ang pag-pin ng family sa mga SOCKS5 proxy, ngunit hindi inilalantad ng karaniwang `fetch-socks` ang mga socket option na kinakailangan upang i-pin ang family ng proxy hop. May sariling connector ang 67router para rito:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

@@ -4,7 +4,7 @@
 
 ---
 
-Ìwé yìí ni ìtọ́kasí aláṣẹ fún gbogbo àwọn ibodè dídánwò dídára CI nínú OmniRoute.
+Ìwé yìí ni ìtọ́kasí aláṣẹ fún gbogbo àwọn ibodè dídánwò dídára CI nínú 67router.
 Ó ṣàpèjúwe ibodè kọ̀ọ̀kan, ohun tí ó ń fìdí rẹ̀ múlẹ̀, iṣẹ́ CI tí ó ti ń ṣiṣẹ́, bóyá ó ń lo
 ìpìlẹ̀ ratchet tàbí ìlànà kọjá/kùnà, àti bóyá ó ń dí ìkọ́lé dúró tàbí ó jẹ́ ìmọ̀ràn.
 
@@ -248,14 +248,14 @@ Gbogbo ìṣẹ́ ìfọwọ́wẹ́ i18n (iṣẹ́ kan fún locale kọ̀ọ̀
 
 Àwọn wọ̀nyí ń ṣiṣẹ́ lórí àkójọ àsìkò cron (àti `workflow_dispatch`), kì í ṣe lórí PR rárá. Gbogbo wọn jẹ́ ìmọ̀ràn.
 
-| Ìṣiṣẹ́                  | Ṣe ìfọwọ́wẹ́                                                                                                                                                       | Dídí       |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `nightly-property`     | Àwọn ìdánwò ohun-ini fast-check pẹ̀lú irugbin àrídàrú + iye ìṣiṣẹ́ tó ga                                                                                           | **Ìmọ̀ràn** |
-| `nightly-resilience`   | Àwòdíjì ìdàgbàsókè heap, ìfàsẹ́yìn àìṣẹ̀lẹ̀ chaos, ìdánwò load/soak k6                                                                                              | **Ìmọ̀ràn** |
-| `nightly-llm-security` | Ààbò ìfàsẹ́yìn promptfoo (ìwọ́n dídí) + àwọn ìwádìí garak (wọ́n á fò rẹ̀ láìsí àṣírí olùpèsè)                                                                        | **Ìmọ̀ràn** |
-| `nightly-schemathesis` | Fuzzing ìlànà OpenAPI (schemathesis) lórí OmniRoute tó ń ṣiṣẹ́ nípa lílò `docs/openapi.yaml` — ó fi àwọn ìrúfẹ́ ìlànà / àwọn 500 tí wọn kò ṣàkóso hàn (Fase 8 B.4) | **Ìmọ̀ràn** |
-| `nightly-mutation`     | Àmì ìdánwò ìyípadà Stryker lórí ọ̀nà ẹ̀yà yíyara — àwọn ìyípadà tó gbẹ́yìn fi àwọn assert aláìdára hàn                                                              | **Ìmọ̀ràn** |
-| `nightly-compat`       | Ìṣẹ́lẹ̀ ìbáṣepọ̀ ẹ̀rọ Node káàkiri àwọn ìbá `engines.node` tí wọ́n ṣe àtìlẹ́yìn fún                                                                                    | **Ìmọ̀ràn** |
+| Ìṣiṣẹ́                  | Ṣe ìfọwọ́wẹ́                                                                                                                                                      | Dídí       |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `nightly-property`     | Àwọn ìdánwò ohun-ini fast-check pẹ̀lú irugbin àrídàrú + iye ìṣiṣẹ́ tó ga                                                                                          | **Ìmọ̀ràn** |
+| `nightly-resilience`   | Àwòdíjì ìdàgbàsókè heap, ìfàsẹ́yìn àìṣẹ̀lẹ̀ chaos, ìdánwò load/soak k6                                                                                             | **Ìmọ̀ràn** |
+| `nightly-llm-security` | Ààbò ìfàsẹ́yìn promptfoo (ìwọ́n dídí) + àwọn ìwádìí garak (wọ́n á fò rẹ̀ láìsí àṣírí olùpèsè)                                                                       | **Ìmọ̀ràn** |
+| `nightly-schemathesis` | Fuzzing ìlànà OpenAPI (schemathesis) lórí 67router tó ń ṣiṣẹ́ nípa lílò `docs/openapi.yaml` — ó fi àwọn ìrúfẹ́ ìlànà / àwọn 500 tí wọn kò ṣàkóso hàn (Fase 8 B.4) | **Ìmọ̀ràn** |
+| `nightly-mutation`     | Àmì ìdánwò ìyípadà Stryker lórí ọ̀nà ẹ̀yà yíyara — àwọn ìyípadà tó gbẹ́yìn fi àwọn assert aláìdára hàn                                                             | **Ìmọ̀ràn** |
+| `nightly-compat`       | Ìṣẹ́lẹ̀ ìbáṣepọ̀ ẹ̀rọ Node káàkiri àwọn ìbá `engines.node` tí wọ́n ṣe àtìlẹ́yìn fún                                                                                   | **Ìmọ̀ràn** |
 
 Àwọn baseline ìṣe (heap, TTFB, àkókò kíkọ) ni wọ́n ń gbé kalẹ̀, kì í ṣe dídí wọ́n: wo [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -525,7 +525,7 @@ Nígbà tí o bá ń ṣàfikún àkọsílẹ̀ sí àtòjọ ìyọ̀ǹda:
 
 ## Irinṣẹ́ aṣojú: LSP-in-the-loop (àyàn-kíkópa)
 
-Ní àfikún sí àwọn ẹnu-ọ̀nà àyẹ̀wò CI, OmniRoute ní àgbékalẹ̀ ìpilẹ̀ `agent-lsp` **àyàn-kíkópa**
+Ní àfikún sí àwọn ẹnu-ọ̀nà àyẹ̀wò CI, 67router ní àgbékalẹ̀ ìpilẹ̀ `agent-lsp` **àyàn-kíkópa**
 (`.mcp.json` ti ìpele iṣẹ́-àkànṣe, Fase 7 Task 15). Ṣẹ̀dá `.mcp.json`
 láti jẹ́ kí olupin èdè TypeScript wà fún àwọn aṣojú tó ń kọ kóòdù, kí wọ́n lè yanjú àwọn àmì /
 àwọn àbájáde àyẹ̀wò **ṣáájú** kí wọ́n tó kọ kóòdù — alábàáṣiṣẹ́ compile-before-claim fún

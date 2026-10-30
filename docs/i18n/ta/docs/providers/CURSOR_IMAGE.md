@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, அரட்டைக்கு பயன்படுத்தப்படும் அதே provider id ஆன `cursor` (மாற்றுப்பெயர் `cu`) மூலம் `POST /v1/images/generations` இல் Cursor திட்டத்தின் **பட உருவாக்கத்தை** வழங்குகிறது.
+67router, அரட்டைக்கு பயன்படுத்தப்படும் அதே provider id ஆன `cursor` (மாற்றுப்பெயர் `cu`) மூலம் `POST /v1/images/generations` இல் Cursor திட்டத்தின் **பட உருவாக்கத்தை** வழங்குகிறது.
 
 | புலம்                | மதிப்பு                                                                              |
 | -------------------- | ------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ OmniRoute, அரட்டைக்கு பயன்படுத்தப்�
 
 ## ஏன் Agent CLI
 
-OmniRoute இல் உள்ள Cursor அரட்டை `agent.v1.AgentService/Run` (protobuf) ஐப் பயன்படுத்துகிறது. அந்தப் பாதை உள்ளமைக்கப்பட்ட கிளையன்ட் கருவிகளை (shell, write, …) **நிராகரிக்கிறது**. பட உருவாக்கம் என்பது seat-க்கு எதிராக **`agent` CLI** மூலம் இயக்கப்படும் Cursor-இன் சொந்தக் கருவியாகும். எனவே படக் கையாளுநர், பூட்டப்பட்ட prompt மற்றும் ஒவ்வொரு கோரிக்கைக்கும் தனித்தற்காலிக workspace உடன் `agent` ஐத் தொடங்குகிறது (சமூக seat bridge-களின் அதே அமைப்பு), பின்னர் OpenAI-இணக்கமான `b64_json` ஐ வழங்குகிறது.
+67router இல் உள்ள Cursor அரட்டை `agent.v1.AgentService/Run` (protobuf) ஐப் பயன்படுத்துகிறது. அந்தப் பாதை உள்ளமைக்கப்பட்ட கிளையன்ட் கருவிகளை (shell, write, …) **நிராகரிக்கிறது**. பட உருவாக்கம் என்பது seat-க்கு எதிராக **`agent` CLI** மூலம் இயக்கப்படும் Cursor-இன் சொந்தக் கருவியாகும். எனவே படக் கையாளுநர், பூட்டப்பட்ட prompt மற்றும் ஒவ்வொரு கோரிக்கைக்கும் தனித்தற்காலிக workspace உடன் `agent` ஐத் தொடங்குகிறது (சமூக seat bridge-களின் அதே அமைப்பு), பின்னர் OpenAI-இணக்கமான `b64_json` ஐ வழங்குகிறது.
 
 ## அணுகல் கட்டுப்பாடு (கடுமையான விதிகள் #15 + #17)
 
@@ -34,7 +34,7 @@ process தொடக்கமோ நிகழ்வதற்கு முன்�
 
 `CURSOR_IMG_MAX_CONCURRENT`, Node module instance-க்கு உட்பட்ட in-memory counter/queue மூலம் அமல்படுத்தப்படுகிறது
 (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-இது ஒரு OmniRoute process-க்குள் ஒரே நேரத்தில் நடைபெறும் `agent` தொடக்கங்களைச் சரியாகக் கட்டுப்படுத்துகிறது, ஆனால்
+இது ஒரு 67router process-க்குள் ஒரே நேரத்தில் நடைபெறும் `agent` தொடக்கங்களைச் சரியாகக் கட்டுப்படுத்துகிறது, ஆனால்
 ஒரே Cursor seat-ஐப் பகிரும் பல process/instance-களுக்கு இடையே
 (எ.கா. multi-replica deployment) ஒருங்கிணைக்காது — ஒவ்வொரு instance-உம் அதன் சொந்தத் தனித்தனி வரம்பை அமல்படுத்துகிறது.
 ஒற்றை-instance deployment-க்கு (இயல்புநிலை) இது துல்லியமானது; கிடைமட்டமாக அளவிடப்பட்ட
@@ -44,7 +44,7 @@ Cursor படப் போக்குவரத்தை ஒரே instance-க�
 ## தேவைகள்
 
 1. dashboard-இல் இணைக்கப்பட்ட Cursor கணக்கு (OAuth அல்லது `crsr_…` API key).
-2. OmniRoute process-க்கு Cursor Agent binary கிடைக்க வேண்டும்:
+2. 67router process-க்கு Cursor Agent binary கிடைக்க வேண்டும்:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, அல்லது
    - `~/.local/bin/agent`, அல்லது
    - Cursor இணைப்பில் `providerSpecificData.agentBin`.

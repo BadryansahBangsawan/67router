@@ -4,7 +4,7 @@
 
 ---
 
-Akwụkwọ a bụ ntụaka kachasị ikike maka ọnụ ụzọ ogo CI niile dị na OmniRoute.
+Akwụkwọ a bụ ntụaka kachasị ikike maka ọnụ ụzọ ogo CI niile dị na 67router.
 Ọ na-akọwa ọnụ ụzọ ọ bụla, ihe ọ na-enyocha, ọrụ CI ọ na-arụ n'ime ya, ma ọ na-eji
 ntọala ratchet ma ọ bụ iwu ngafe/ọdịda, yana ma ọ na-egbochi build ka ọ bụ naanị ndụmọdụ.
 
@@ -264,14 +264,14 @@ Matrix nkwenye i18n zuru oke (otu ọrụ maka locale ọ bụla). Ọrụ ahụ
 
 Ndị a na-agba na usoro oge cron (na `workflow_dispatch`), ọ bụghị na PR. Ha niile bụ ndụmọdụ.
 
-| Usoro ọrụ              | Na-ekwenye                                                                                                                                                              | Na-egbochi  |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `nightly-property`     | Ule property fast-check na seed random + ọnụ ọgụgụ agba ọsọ dị elu                                                                                                      | **Ndụmọdụ** |
-| `nightly-resilience`   | Gate uto heap, ịtinye mmejọ chaos, ule ibu/soak k6                                                                                                                      | **Ndụmọdụ** |
-| `nightly-llm-security` | Nchebe injection nke promptfoo (usoro block) + nyocha garak (a na-agafe ya ma ọ bụrụ na enweghị nzuzo onye na-enye ọrụ)                                                 | **Ndụmọdụ** |
-| `nightly-schemathesis` | Fuzzing nkwekọrịta OpenAPI (schemathesis) megide OmniRoute na-arụ ọrụ ndụ site na iji `docs/openapi.yaml` — na-ekpughe mmebi spec / 500 ndị a naghị ejikwa (Fase 8 B.4) | **Ndụmọdụ** |
-| `nightly-mutation`     | Akara ule mutation Stryker n'elu ụzọ unit ngwa ngwa — mutants ndị lanarịrị na-ekpughe assert ndị na-adịghị ike                                                          | **Ndụmọdụ** |
-| `nightly-compat`       | Matrix nkwekọrịta engine Node n'ofe oke `engines.node` a kwadoro                                                                                                        | **Ndụmọdụ** |
+| Usoro ọrụ              | Na-ekwenye                                                                                                                                                             | Na-egbochi  |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `nightly-property`     | Ule property fast-check na seed random + ọnụ ọgụgụ agba ọsọ dị elu                                                                                                     | **Ndụmọdụ** |
+| `nightly-resilience`   | Gate uto heap, ịtinye mmejọ chaos, ule ibu/soak k6                                                                                                                     | **Ndụmọdụ** |
+| `nightly-llm-security` | Nchebe injection nke promptfoo (usoro block) + nyocha garak (a na-agafe ya ma ọ bụrụ na enweghị nzuzo onye na-enye ọrụ)                                                | **Ndụmọdụ** |
+| `nightly-schemathesis` | Fuzzing nkwekọrịta OpenAPI (schemathesis) megide 67router na-arụ ọrụ ndụ site na iji `docs/openapi.yaml` — na-ekpughe mmebi spec / 500 ndị a naghị ejikwa (Fase 8 B.4) | **Ndụmọdụ** |
+| `nightly-mutation`     | Akara ule mutation Stryker n'elu ụzọ unit ngwa ngwa — mutants ndị lanarịrị na-ekpughe assert ndị na-adịghị ike                                                         | **Ndụmọdụ** |
+| `nightly-compat`       | Matrix nkwekọrịta engine Node n'ofe oke `engines.node` a kwadoro                                                                                                       | **Ndụmọdụ** |
 
 A na-edekọ baselines arụmọrụ (heap, TTFB, oge iwulite), a naghị eji gate chịkwaa ha: lee [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -550,7 +550,7 @@ ndepụta ikike na-aga n’ihu na-eto eto na-enye echiche ụgha banyere ịdị
 
 ## Ngwaọrụ ndị nnọchiteanya: LSP-in-the-loop (ịhọrọ isonye)
 
-Na mgbakwunye na ọnụ ụzọ nyocha CI, OmniRoute na-ebunye ntọala `agent-lsp` nke **ịhọrọ isonye**
+Na mgbakwunye na ọnụ ụzọ nyocha CI, 67router na-ebunye ntọala `agent-lsp` nke **ịhọrọ isonye**
 (`.mcp.json` n’ogo ọrụ ngo, Fase 7 Task 15). Mepụta `.mcp.json`
 iji kpughee sava asụsụ TypeScript nye ndị nnọchiteanya na-ede koodu, ka ha nwee ike ịchọta akara /
 nchọpụta nsogbu **tupu** ha edee koodu — onye enyemaka na-achịkọta tupu ikwu na ihe agwụla maka

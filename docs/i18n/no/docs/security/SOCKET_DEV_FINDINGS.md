@@ -48,7 +48,7 @@ JWT eksponert via en tunnel **kan ikke** utløse denne kodebanen.
 | Linux+Firefox/Chromium | oppdatering av NSS-databasen per profil via `certutil -d sql:<profile>`                                           |
 
 Dette er de samme kommandoene som brukes av `mitmproxy`, Charles Proxy, Fiddler og
-Caddy. Det at de finnes i OmniRoute, er dokumentert i
+Caddy. Det at de finnes i 67router, er dokumentert i
 `docs/security/STEALTH_GUIDE.md`.
 
 **Risikoredusering i v3.8.6**:
@@ -110,7 +110,7 @@ vil bli fjernet i v3.9.
 
 **Hvorfor vi beholder dette**: Zed-import er den enkleste introduksjonsveien
 for brukere som allerede bruker Zed og ønsker å speile leverandørnøklene sine
-til OmniRoute uten å lime dem inn på nytt.
+til 67router uten å lime dem inn på nytt.
 
 ---
 
@@ -121,7 +121,7 @@ til OmniRoute uten å lime dem inn på nytt.
 **Hvorfor dette ble markert**: Delen eksporterer `execFileWithPassword`,
 `runElevatedPowerShell` og den delte hjelpefunksjonen `quotePowerShell` på
 nytt. AI-klassifiseringen til Socket.dev oppfatter dem som et generisk
-«verktøysett for kjøring på verten og heving av privilegier». I OmniRoute
+«verktøysett for kjøring på verten og heving av privilegier». I 67router
 brukes de bare av installasjonsflyten for MITM-sertifikatet (§1) og av
 `execFileWithPassword` for kjøring av `sudo`-kommandoer.
 
@@ -175,7 +175,7 @@ strengt aktivt samtykke.
 
 ---
 
-## §5 — Tilbakeskriving av OmniRoute Cloud Sync-legitimasjon (`api/keys/[id]/route.js`)
+## §5 — Tilbakeskriving av 67router Cloud Sync-legitimasjon (`api/keys/[id]/route.js`)
 
 **Kildefiler**:
 
@@ -208,7 +208,7 @@ rawBody)`) før JSON-dataene parses. Hvis hemmeligheten er angitt, er signaturen
    `rateLimitedUntil`, `updatedAt`). Dette er en **inkompatibel endring** for brukere
    som var avhengige av ekstern tokensynkronisering — de må aktivere dette eksplisitt.
 
-**Hvorfor vi beholder den**: Cloud Sync er den eneste måten en OmniRoute Cloud-leietaker
+**Hvorfor vi beholder den**: Cloud Sync er den eneste måten en 67router Cloud-leietaker
 kan sentralisere teamets legitimasjon på. Rettelsen gjør trusselmodellen tydelig:
 «Serveren signerer, klienten verifiserer, operatøren aktiverer.»
 

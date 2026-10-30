@@ -7,7 +7,7 @@
 > **Tushen gaskiya:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Sabuntawa na ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute na iya buɗe sabar gida (`http://localhost:20128`) ga intanet na
+67router na iya buɗe sabar gida (`http://localhost:20128`) ga intanet na
 jama'a ta hanyoyin tunnel guda uku. Wannan yana da amfani wajen:
 
 - Karɓar OAuth callbacks daga masu samar da cloud (Antigravity, Gemini, Cursor) waɗanda ke buƙatar
@@ -15,7 +15,7 @@ jama'a ta hanyoyin tunnel guda uku. Wannan yana da amfani wajen:
 - Raba instance ɗin gida tare da abokan aiki ba tare da tura VM ba.
 - Gwaji ta wayar hannu, daga nesa, ko tsakanin hanyoyin sadarwa daban-daban.
 
-Ana sarrafa dukkan backends ukun a cikin process ɗin — OmniRoute yana fara/tsayar da binary
+Ana sarrafa dukkan backends ukun a cikin process ɗin — 67router yana fara/tsayar da binary
 ko SDK daga dashboard ko REST API. Ba a buƙatar saitin reverse-proxy ko systemd.
 
 ## Taƙaitaccen bayani kan backends
@@ -40,7 +40,7 @@ modes guda biyu, waɗanda ake zaɓa bisa ko an samar da named-tunnel config:
 http://localhost:<apiPort>` sannan ya fitar da URL ɗin `*.trycloudflare.com` da aka ware
   daga stdout. URLs ɗin na wucin gadi ne kuma suna canzawa duk lokacin sake farawa.
 - **Named tunnel (na zaɓi).** Lokacin da `CLOUDFLARED_CONFIG` yake nuna locally-managed
-  cloudflared `config.yml`, OmniRoute yana gudanar da `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml`, 67router yana gudanar da `cloudflared tunnel --no-autoupdate
 --config <path> run`, wanda ke ba ka **hostname mai tsayayyen suna**. Config ɗin
   yana samar da tunnel UUID, `credentials-file`, da `ingress` routing, don haka ba a
   tura `--url` kuma ba a buƙatar token na Zero Trust dashboard. `run` yana karanta
@@ -49,7 +49,7 @@ http://localhost:<apiPort>` sannan ya fitar da URL ɗin `*.trycloudflare.com` da
 
 Muhimman halaye:
 
-- **Shigarwa ta atomatik.** A amfani na farko, OmniRoute yana sauke sabon binary na `cloudflared`
+- **Shigarwa ta atomatik.** A amfani na farko, 67router yana sauke sabon binary na `cloudflared`
   daga releases na hukuma na GitHub (managed install yana ƙarƙashin
   `DATA_DIR/cloudflared/`). Ana tabbatar da SHA256 na asset ɗin da aka sauke ta hanyar kwatanta shi da
   release manifest kafin a gudanar da shi.
@@ -67,7 +67,7 @@ Muhimman halaye:
    ```
 
 2. Rubuta `~/.cloudflared/config.yml` da zai tura hostname ɗinka zuwa port na API na gida
-   na OmniRoute (na asali 20128):
+   na 67router (na asali 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -78,11 +78,11 @@ Muhimman halaye:
      - service: http_status:404
    ```
 
-3. Nuna wa OmniRoute config ɗin sannan ka (sake) fara tunnel:
+3. Nuna wa 67router config ɗin sannan ka (sake) fara tunnel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # na zaɓi — yana maye gurbin hostname da OmniRoute ke bayarwa; in ba haka ba ana karanta shi daga
+   # na zaɓi — yana maye gurbin hostname da 67router ke bayarwa; in ba haka ba ana karanta shi daga
    # ingress rule na farko na config:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -121,9 +121,9 @@ Ko ta dashboard: **Settings → Tunnels → Cloudflare**.
 
 | Sauyi                                                | Manufa                                                                                                                                                                                              |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Maye gurbin hanyar fayil ɗin binary. Idan an saita ta kuma tana aiki, OmniRoute zai yi amfani da ita maimakon sauke wani.                                                                           |
+| `CLOUDFLARED_BIN`                                    | Maye gurbin hanyar fayil ɗin binary. Idan an saita ta kuma tana aiki, 67router zai yi amfani da ita maimakon sauke wani.                                                                            |
 | `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Ka'idar sufuri (tsohuwa ita ce `http2`; akwai kuma `quic`, `auto`).                                                                                                                                 |
-| `CLOUDFLARED_CONFIG`                                 | Hanyar zuwa `config.yml` na cloudflared da ake sarrafawa a cikin gida. Idan an saita, OmniRoute zai gudanar da rami **mai suna/dindindin** (`tunnel --config <path> run`) maimakon rami na gaggawa. |
+| `CLOUDFLARED_CONFIG`                                 | Hanyar zuwa `config.yml` na cloudflared da ake sarrafawa a cikin gida. Idan an saita, 67router zai gudanar da rami **mai suna/dindindin** (`tunnel --config <path> run`) maimakon rami na gaggawa.  |
 | `CLOUDFLARED_HOSTNAME`                               | Yana maye gurbin sunan mai masaukin jama'a da rami mai suna yake bayarwa (misali `ai.example.com`). Idan ba a saita ba, za a karanta shi daga sunan mai masaukin `ingress` na farko a cikin saitin. |
 
 ## 2. ngrok
@@ -168,7 +168,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 Amsar tana ƙunshe da `publicUrl` da aka ware (misali,
-`https://abcd-1234.ngrok-free.app`). Dole ne a saita domains na musamman, yankuna, da ƙa’idojin manufofi a dashboard na ngrok — OmniRoute da kansa yana tura local target URL kawai zuwa SDK.
+`https://abcd-1234.ngrok-free.app`). Dole ne a saita domains na musamman, yankuna, da ƙa’idojin manufofi a dashboard na ngrok — 67router da kansa yana tura local target URL kawai zuwa SDK.
 
 ## 3. Tailscale Funnel
 
@@ -178,12 +178,12 @@ Aiwatarwar tana kiran `tailscale funnel --bg <port>` (yanayin aiki a bango). Pub
 
 ### Abubuwan da ake buƙata
 
-1. Girka Tailscale (ko ka bar OmniRoute ya yi hakan — duba endpoint na `install` da ke ƙasa).
-2. Shiga (`tailscale login` ko ta endpoint na `login` na OmniRoute).
+1. Girka Tailscale (ko ka bar 67router ya yi hakan — duba endpoint na `install` da ke ƙasa).
+2. Shiga (`tailscale login` ko ta endpoint na `login` na 67router).
 3. Kunna Funnel ga tailnet ɗinka a admin console na Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
-A Linux da macOS, daemon (`tailscaled`) yana buƙatar `sudo` domin sarrafa shi. Endpoints na POST suna karɓar filin `sudoPassword` na zaɓi, wanda ake tura shi zuwa ma'ajiyar kalmar sirri ta MITM ta OmniRoute (`getCachedPassword` / `setCachedPassword`) na tsawon lokacin kiran. Windows yana amfani da default service install a `C:\Program Files\Tailscale\tailscale.exe`.
+A Linux da macOS, daemon (`tailscaled`) yana buƙatar `sudo` domin sarrafa shi. Endpoints na POST suna karɓar filin `sudoPassword` na zaɓi, wanda ake tura shi zuwa ma'ajiyar kalmar sirri ta MITM ta 67router (`getCachedPassword` / `setCachedPassword`) na tsawon lokacin kiran. Windows yana amfani da default service install a `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### Endpoints na REST
 
@@ -240,7 +240,7 @@ da kansa.
 
 ## Abubuwan la'akari game da callback na OAuth
 
-Lokacin da ka fitar da OmniRoute ta hanyar tunnel, dashboard da tsarin OAuth dole
+Lokacin da ka fitar da 67router ta hanyar tunnel, dashboard da tsarin OAuth dole
 su gina URLs na callback bisa sunan host na **jama'a**, ba `localhost` ba. In ba
 haka ba, mai samar da OAuth zai mayar da mai amfani zuwa URL da sabobinsa ba za
 su iya isa gare shi ba, kuma haɗin tantancewar zai gaza.
@@ -257,7 +257,7 @@ Saita:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-sannan ka sake kunna OmniRoute kafin fara OAuth. Ga Cloudflare Quick Tunnels na
+sannan ka sake kunna 67router kafin fara OAuth. Ga Cloudflare Quick Tunnels na
 wucin gadi, URL yana canzawa bayan kowace sake kunnawa, saboda haka a fi son ngrok
 mai domain da aka tanada ko Tailscale Funnel don amfani da OAuth a samarwa.
 
@@ -272,14 +272,14 @@ Dashboard yana nuna halin tunnel a ƙarƙashin **Settings → Tunnels**:
 - Saƙon kuskure na ƙarshe, idan akwai.
 
 Don sa ido ta hanyar shirye-shirye, yi polling na endpoints na `GET` na kowane
-backend. An yarda a tafiyar da backend fiye da ɗaya a lokaci guda; OmniRoute zai
+backend. An yarda a tafiyar da backend fiye da ɗaya a lokaci guda; 67router zai
 bibiyi kowannensu da kansa.
 
 ## Warware matsaloli
 
 ### "Ba a sami binary na cloudflared ba"
 
-OmniRoute yana ƙoƙarin girka shi kai tsaye lokacin amfani na farko. Idan an hana
+67router yana ƙoƙarin girka shi kai tsaye lokacin amfani na farko. Idan an hana
 girkawar (ƙuntatacciyar hanyar sadarwa, babu damar shiga GitHub), sauke
 `cloudflared` da hannu daga
 <https://github.com/cloudflare/cloudflared/releases> sannan saita

@@ -14,7 +14,7 @@
 কোটা শেয়ারিং ইঞ্জিন একই সংযোগ ব্যবহারকারী একাধিক API key-এর মধ্যে কোনো provider-এর সময়ভিত্তিক কোটা (যেমন Codex-এর
 5-ঘণ্টার উইন্ডো, Kimi-এর 1500 req/h) ন্যায্যভাবে বণ্টন করে।
 
-**এটি যে সমস্যার সমাধান করে:** OmniRoute একই upstream provider account-এর বিপরীতে অনেক API key-এর অনুরোধ প্রক্সি করে।
+**এটি যে সমস্যার সমাধান করে:** 67router একই upstream provider account-এর বিপরীতে অনেক API key-এর অনুরোধ প্রক্সি করে।
 শেয়ারিং লজিক না থাকলে, key A থেকে আসা হঠাৎ অনুরোধের ঢল ঘণ্টাটির জন্য
 provider quota শেষ করে দিতে পারে, ফলে উইন্ডো রিসেট না হওয়া পর্যন্ত key B এবং C ব্লক হয়ে থাকে।
 ইঞ্জিনটি নিম্নোক্ত উপায়ে এটি প্রতিরোধ করে:
@@ -118,7 +118,7 @@ Redis driver: atomic increment-এর জন্য Lua EVAL script — একট
 
 - টেবিল: `quota_consumption` (মাইগ্রেশন `073_quota_pools.sql` / `074_quota_consumption.sql` দেখুন)।
 - একক-ইনস্ট্যান্স ডিপ্লয়মেন্টের জন্য সর্বোত্তম।
-- সমস্ত পার্সিস্টেন্স বিদ্যমান OmniRoute SQLite DB-তে (`DATA_DIR/storage.sqlite`) থাকে।
+- সমস্ত পার্সিস্টেন্স বিদ্যমান 67router SQLite DB-তে (`DATA_DIR/storage.sqlite`) থাকে।
 
 ### Redis (ঐচ্ছিক, মাল্টি-ইনস্ট্যান্স)
 

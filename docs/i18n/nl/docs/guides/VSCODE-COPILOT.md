@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** plaatst elk model dat je OmniRoute aanbiedt in de _native_ modelkiezer van GitHub Copilot Chat.
+**OmniCopilot** plaatst elk model dat je 67router aanbiedt in de _native_ modelkiezer van GitHub Copilot Chat.
 Geen tweede zijbalk, geen afzonderlijke chatinterface — Copilots agentmodus, het aanroepen van tools,
 MCP-servers en aangepaste instructies blijven allemaal werken, maar dan op het model dat je kiest.
 
@@ -23,12 +23,12 @@ MCP-servers en aangepaste instructies blijven allemaal werken, maar dan op het m
 
 ## Installatie
 
-1. **Start OmniRoute** — `npm install -g omniroute && omniroute` (dashboard op `http://localhost:20128`).
+1. **Start 67router** — `npm install -g omniroute && omniroute` (dashboard op `http://localhost:20128`).
 2. **Installeer de extensie** — zoek naar "OmniRoute" in de extensieweergave.
 3. **Kies een model** — Copilot Chat → modelkiezer → **Modellen beheren…** → **OmniRoute** en vink vervolgens
    aan wat je wilt.
 
-Je hoeft niets te configureren wanneer OmniRoute op de standaardpoort draait. Open voor een externe instantie het
+Je hoeft niets te configureren wanneer 67router op de standaardpoort draait. Open voor een externe instantie het
 **OmniRoute-pictogram in de activiteitenbalk** (of voer `OmniRoute: Manage Connection` uit) en stel het volgende in:
 
 - **Server-URL** — de hoofd-URL van de server, bijvoorbeeld `http://192.168.0.15:20128`. Het achtervoegsel `/v1` wordt
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' is een model voor het genereren van afbeeldingen en ka
 
 Daarom worden ze op basis van hun veld `type` uitgefilterd voordat ze de modelkiezer bereiken. **Responses-API-
 modellen blijven behouden** — elke Codex- of GPT-5.x-vermelding vermeldt `supported_endpoints: ["responses"]`,
-en OmniRoute vertaalt deze voor `/v1/chat/completions`, zodat ze zonder problemen kunnen worden gebruikt.
+en 67router vertaalt deze voor `/v1/chat/completions`, zodat ze zonder problemen kunnen worden gebruikt.
 
 ### Providers die je nooit hebt geconfigureerd
 
@@ -88,7 +88,7 @@ extensie verandert er niets.
 
 ## Dashboard in een VS Code-tabblad
 
-`omnicopilot.dashboardOpen: "editor"` geeft het OmniRoute-dashboard via de
+`omnicopilot.dashboardOpen: "editor"` geeft het 67router-dashboard via de
 Simple Browser weer in een editortabblad in plaats van in een externe browser. Insluiten moet **expliciet op de server worden ingeschakeld** via
 `DASHBOARD_ALLOW_EMBED=vscode`, waardoor de HTML-pagina's worden aangeboden met
 `frame-ancestors 'self' vscode-webview:` in plaats van de standaardinstelling `frame-ancestors 'none'` +
@@ -133,7 +133,7 @@ omgevingsvariabele `OMNIROUTE_API_KEY` aan de CLI doorgegeven, nooit via de opdr
 
 | Symptoom                                                 | Oorzaak / oplossing                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Geen OmniRoute-modellen in de kiezer                     | De server is niet bereikbaar. De stip in de statusbalk wordt grijs; voer `OmniRoute: Check Connection` uit. Detectie verloopt bewust stil en levert geen modellen op in plaats van een melding te tonen.                                                                                            |
+| Geen 67router-modellen in de kiezer                      | De server is niet bereikbaar. De stip in de statusbalk wordt grijs; voer `OmniRoute: Check Connection` uit. Detectie verloopt bewust stil en levert geen modellen op in plaats van een melding te tonen.                                                                                            |
 | Elk model wordt tweemaal weergegeven                     | Je gebruikt een versie van OmniCopilot ouder dan 1.0.1 — werk deze bij. De extensie vraagt nu `?prefix=alias` op.                                                                                                                                                                                   |
 | Een eerder vermeld beeld-/audiomodel is verdwenen        | Dit is sinds 1.0.1 opzettelijk — het kon nooit een chatverzoek beantwoorden.                                                                                                                                                                                                                        |
 | Paneel ontbreekt in de Activity Bar                      | VS Code verplaatst extra weergavecontainers naar het overloopmenu **"…"** onderaan de Activity Bar, en een container die via rechtsklikken is verborgen, blijft verborgen. Klik met de rechtermuisknop op de Activity Bar → vink **OmniRoute** aan, of open het met `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ omgevingsvariabele `OMNIROUTE_API_KEY` aan de CLI doorgegeven, nooit via de opdr
 ## Zie ook
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — alle andere programmeertools
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — een externe OmniRoute aansturen
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — een externe 67router aansturen
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — het `/v1/models`-contract
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — de eigen catalogusnotities van de extensie

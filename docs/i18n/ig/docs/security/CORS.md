@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-achịkwa **isi mmalite ihe nchọgharị** ndị nwere ike ịgụ nzaghachi sitere n’isi mmalite ọzọ site na otu ndepụta ikike etiti. Ụdị a bụ **imechi ma ọ bụrụ na e nyeghị ikike na ndabara**:
+67router na-achịkwa **isi mmalite ihe nchọgharị** ndị nwere ike ịgụ nzaghachi sitere n’isi mmalite ọzọ site na otu ndepụta ikike etiti. Ụdị a bụ **imechi ma ọ bụrụ na e nyeghị ikike na ndabara**:
 anaghị ekwe isi mmalite ọ bụla ruo mgbe i tinyere ya n’ime ndị e nyere ikike. Ibe a na-akọwa etu e si ekpebi ndepụta ikike ahụ,
 ihe `CORS_ALLOW_ALL=true` na-eme ka ọ pụta ìhè n’ezie (na, nke dị mkpa, ihe ọ
 **na-adịghị** eme ka ọ pụta ìhè), etu e si ahazi gburugburu mmepe na mmepụta n’enweghị nsogbu, yana ịdọ aka ná ntị n’oge ọsọ
@@ -45,13 +45,13 @@ n’usoro a:
 ## Ụdị iyi egwu — ihe `CORS_ALLOW_ALL=true` na-eme ka ọ pụta ìhè n’ezie
 
 Ịdọ aka ná ntị OWASP izugbe ("wildcard CORS = saịtị ọ bụla nwere ike ịkpọ API gị") kwesịrị
-ka e were ya nke ọma, mana ihe OmniRoute na-eme ka ọ pụta ìhè **pere mpe karịa ọnọdụ izugbe**,
+ka e were ya nke ọma, mana ihe 67router na-eme ka ọ pụta ìhè **pere mpe karịa ọnọdụ izugbe**,
 n’ihi otu eziokwu doro anya gbasara mmejuputa ya:
 
 > **`applyCorsHeaders()` etiti anaghị ewepụta
 > `Access-Control-Allow-Credentials` ma ọlị.** Ihe nchọgharị agaghị eme ka nzaghachi sitere n’isi mmalite ọzọ nke _nwere nzere_
 > (nke nwere cookie) dị maka ịgụ ma ọ bụrụ na sava ezipụghị
-> `Access-Control-Allow-Credentials: true`. Ụzọ CORS nkịtị nke OmniRoute anaghị
+> `Access-Control-Allow-Credentials: true`. Ụzọ CORS nkịtị nke 67router anaghị
 > eme nke ahụ.
 
 Ihe nke ahụ pụtara n’elu interface ọ bụla, ọbụna mgbe `CORS_ALLOW_ALL=true`:
@@ -91,7 +91,7 @@ iche na ntuziaka CORS a.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Ọ bụrụ na OmniRoute na-arụ ọrụ n’azụ reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Ọ bụrụ na 67router na-arụ ọrụ n’azụ reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **abụghị** naanị njikwa nche gị — ihe nchebe loopback route
   ka na-echebe route ndị nwere ike ịmalite usoro (lee
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Emepụtala
@@ -107,7 +107,7 @@ iche na ntuziaka CORS a.
 Ọbụna na dev, wildcard anaghị adịkarị mkpa. Kwe naanị dev server ndị ị na-eji:
 
 ```bash
-# Dev server Vite (5173) + Next.js (3000) na-akpọ OmniRoute local
+# Dev server Vite (5173) + Next.js (3000) na-akpọ 67router local
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +127,14 @@ restart.
   origin management/dashboard na config ọ bụla na-enye ohere sara mbara; ha ga-anọrịrị kpọmkwem
   n’ọnọdụ fail-closed.
 
-## Ọmụmaatụ: reverse proxy n'ihu OmniRoute
+## Ọmụmaatụ: reverse proxy n'ihu 67router
 
-OmniRoute n'onwe ya na-amanye CORS, ya mere proxy ekwesịghị **ịgbakwunye** ma ọ bụ
+67router n'onwe ya na-amanye CORS, ya mere proxy ekwesịghị **ịgbakwunye** ma ọ bụ
 idegharị headers `Access-Control-*` (headers abụọ na-eme ka ihe nchọgharị ghara ịrụ ọrụ). Kwụsị TLS
-ma zipụ arịrịọ ahụ n'ihu — hapụ OmniRoute ka ọ zaa preflight:
+ma zipụ arịrịọ ahụ n'ihu — hapụ 67router ka ọ zaa preflight:
 
 ```nginx
-# nginx — zipụ n'ihu na OmniRoute; etinyekwala Access-Control-* ebe a
+# nginx — zipụ n'ihu na 67router; etinyekwala Access-Control-* ebe a
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +142,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Debe headers ndị a na-eji eziga arịrịọ n'ihu: proxy dị n'otu host na-ejikọ site na loopback, ma ọ bụ
-    # ha na-agwa OmniRoute na onye na-akpọ ya abụghị onye nchịkwa mpaghara. Proxy na-adịghị etinye nke ọ bụla n'ime ha
+    # ha na-agwa 67router na onye na-akpọ ya abụghị onye nchịkwa mpaghara. Proxy na-adịghị etinye nke ọ bụla n'ime ha
     # na-eme ka onye ọ bụla na-akpọ site n'ebe dị anya yie onye mpaghara. Etinyekwala X-Forwarded-For ka ọ bụrụ 127.0.0.1.
 }
 ```
 
-Tọọ origins ihe nchọgharị ndị a na-ekwe ka ha rụọ ọrụ n'ime OmniRoute (`CORS_ALLOWED_ORIGINS` ma ọ bụ
+Tọọ origins ihe nchọgharị ndị a na-ekwe ka ha rụọ ọrụ n'ime 67router (`CORS_ALLOWED_ORIGINS` ma ọ bụ
 taabụ Security), ọ bụghị n'ime proxy.
 
 ## Faịlụ source

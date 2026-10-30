@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** lisab kõik OmniRoute’i pakutavad mudelid GitHub Copilot Chati _natiivsesse_
+**OmniCopilot** lisab kõik 67router’i pakutavad mudelid GitHub Copilot Chati _natiivsesse_
 mudelivalikusse. Ei mingit teist külgriba ega eraldi vestlusliidest — Copiloti agendirežiim,
 tööriistakutsed, MCP-serverid ja kohandatud juhised töötavad edasi, kuid kasutavad teie valitud mudelit.
 
@@ -23,12 +23,12 @@ tööriistakutsed, MCP-serverid ja kohandatud juhised töötavad edasi, kuid kas
 
 ## Seadistamine
 
-1. **Käivitage OmniRoute** — `npm install -g omniroute && omniroute` (juhtpaneel aadressil `http://localhost:20128`).
-2. **Installige laiendus** — otsige laienduste vaates fraasi „OmniRoute“.
+1. **Käivitage 67router** — `npm install -g omniroute && omniroute` (juhtpaneel aadressil `http://localhost:20128`).
+2. **Installige laiendus** — otsige laienduste vaates fraasi „67router“.
 3. **Valige mudel** — Copilot Chat → mudelivalik → **Halda mudeleid…** → **OmniRoute**, seejärel märkige
    soovitud mudelid.
 
-Kui OmniRoute töötab vaikepordil, pole midagi vaja seadistada. Kaugserveri korral avage
+Kui 67router töötab vaikepordil, pole midagi vaja seadistada. Kaugserveri korral avage
 **OmniRoute’i ikoon tegevusribal** (või käivitage `OmniRoute: Manage Connection`) ja määrake:
 
 - **Serveri URL** — serveri juuraadress, nt `http://192.168.0.15:20128`. Järelliite `/v1` lisab
@@ -75,7 +75,7 @@ HTTP 400 — Mudel '<id>' on pildiloome mudel ja seda ei saa kasutada lõpp-punk
 
 seega filtreeritakse need välja välja `type` alusel enne mudelivalikusse jõudmist. **Responses-API
 mudelid säilitatakse** — iga Codexi / GPT-5.x kirje avaldab `supported_endpoints: ["responses"]`
-ning OmniRoute teisendab need `/v1/chat/completions` jaoks, mistõttu on need täielikult kasutatavad.
+ning 67router teisendab need `/v1/chat/completions` jaoks, mistõttu on need täielikult kasutatavad.
 
 ### Pakkujad, mida te pole seadistanud
 
@@ -88,7 +88,7 @@ midagi.
 
 ## Juhtpaneel VS Code'i vahekaardil
 
-`omnicopilot.dashboardOpen: "editor"` kuvab OmniRoute'i juhtpaneeli välise brauseri asemel redaktori vahekaardil Simple Browseri kaudu. Manustamine tuleb **serveris eraldi lubada** muutujaga `DASHBOARD_ALLOW_EMBED=vscode`, mille korral edastatakse HTML-lehed päisega `frame-ancestors 'self' vscode-webview:` vaikeväärtuste `frame-ancestors 'none'` + `X-Frame-Options: DENY` asemel. API-pind (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) säilitab mõlemal juhul ranged päised.
+`omnicopilot.dashboardOpen: "editor"` kuvab 67router'i juhtpaneeli välise brauseri asemel redaktori vahekaardil Simple Browseri kaudu. Manustamine tuleb **serveris eraldi lubada** muutujaga `DASHBOARD_ALLOW_EMBED=vscode`, mille korral edastatakse HTML-lehed päisega `frame-ancestors 'self' vscode-webview:` vaikeväärtuste `frame-ancestors 'none'` + `X-Frame-Options: DENY` asemel. API-pind (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) säilitab mõlemal juhul ranged päised.
 
 > ⚠️ **See on kompileerimisaegne, mitte käitusaegne lipp.** Next.js kompileerib `headers()` marsruutide manifesti, mistõttu loeb `next.config.mjs` muutujat paketi kompileerimise ajal
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).
@@ -123,7 +123,7 @@ Vaadake faili [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) ja probleemi
 
 | Sümptom                                                  | Põhjus / lahendus                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mudelivalijas pole OmniRoute'i mudeleid                  | Server pole kättesaadav. Olekuriba punkt muutub halliks; käivitage `OmniRoute: Check Connection`. Tuvastamine on taotluslikult vaikne ja viiba kuvamise asemel ei lisa ühtegi mudelit.                                                                            |
+| Mudelivalijas pole 67router'i mudeleid                   | Server pole kättesaadav. Olekuriba punkt muutub halliks; käivitage `OmniRoute: Check Connection`. Tuvastamine on taotluslikult vaikne ja viiba kuvamise asemel ei lisa ühtegi mudelit.                                                                            |
 | Iga mudel kuvatakse kaks korda                           | Kasutate OmniCopiloti versiooni, mis on vanem kui 1.0.1 — värskendage seda. Laiendus saadab nüüd päringu `?prefix=alias`.                                                                                                                                         |
 | Varem kuvatud pildi-/helimudel on kadunud                | Alates versioonist 1.0.1 on see taotluslik — selline mudel ei saanud vestluspäringule kunagi vastata.                                                                                                                                                             |
 | Paan puudub tegevusribalt                                | VS Code teisaldab täiendavad vaatekonteinerid tegevusriba allosas asuvasse **„…“** ületäitemenüüsse ning paremklõpsuga peidetud konteiner jääb peidetuks. Paremklõpsake tegevusribal → märkige **OmniRoute** või avage see käsuga `OmniRoute: Manage Connection`. |
@@ -135,6 +135,6 @@ Vaadake faili [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) ja probleemi
 ## Vaata ka
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — kõik muud programmeerimistööriistad
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — OmniRoute'i kaugjuhtimine
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — 67router'i kaugjuhtimine
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models`-i leping
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — laienduse enda kataloogimärkmed

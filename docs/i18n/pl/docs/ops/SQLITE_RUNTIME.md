@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute rozpoznaje sterownik SQLite podczas uruchamiania za pomocą 5-etapowego łańcucha mechanizmów rezerwowych:
+67router rozpoznaje sterownik SQLite podczas uruchamiania za pomocą 5-etapowego łańcucha mechanizmów rezerwowych:
 
 1. **Dołączony `better-sqlite3`** (za pośrednictwem `dependencies` w `package.json`)
    — najszybszy, natywny plik binarny, instalowany przez `npm install`, gdy dostępne są narzędzia do kompilacji.
@@ -28,13 +28,13 @@ OmniRoute rozpoznaje sterownik SQLite podczas uruchamiania za pomocą 5-etapoweg
 - **Brak narzędzi do kompilacji**: Niektóre środowiska (firmowy system Windows bez VS Build
   Tools, minimalne obrazy Docker) nie mogą skompilować `better-sqlite3`. Instalator uruchomieniowy
   pobiera wstępnie skompilowany plik binarny z rejestru npm; sterowniki rezerwowe zapewniają,
-  że OmniRoute uruchomi się nawet wtedy, gdy to się nie powiedzie.
+  że 67router uruchomi się nawet wtedy, gdy to się nie powiedzie.
 - **Systemy odizolowane od sieci**: Jeśli rejestr npm jest niedostępny, `node:sqlite`
   lub `sql.js` gwarantują podstawową funkcjonalność.
 
 ## Sprawdzanie bajtów magicznych
 
-Przed załadowaniem zainstalowanego w czasie działania pliku `.node` OmniRoute odczytuje pierwsze 8
+Przed załadowaniem zainstalowanego w czasie działania pliku `.node` 67router odczytuje pierwsze 8
 bajtów i porównuje je ze znanymi bajtami magicznymi platform:
 
 | Platforma               | Bajty (hex)   | Etykieta    |
@@ -106,9 +106,9 @@ Implementacja:
 ## Topologia z jednym procesem zapisującym (HA nie jest obsługiwane)
 
 Powyższy łańcuch sterowników rezerwowych nadal działa w **jednym procesie**. Domyślna konfiguracja
-SQLite w OmniRoute obsługuje **jeden proces zapisujący**:
+SQLite w 67router obsługuje **jeden proces zapisujący**:
 
-- Nie podłączaj dwóch replik OmniRoute do tego samego pliku `storage.sqlite`.
+- Nie podłączaj dwóch replik 67router do tego samego pliku `storage.sqlite`.
 - Ponowne uruchomienie kontenera, wdrożenie typu Recreate, zakończenie procesu z powodu OOM lub
   ponowne uruchomienie przez HEALTHCHECK przerywa każdą trwającą sesję SSE. Standardowa ścieżka
   nie obsługuje kontrolowanego wygaszania sesji.

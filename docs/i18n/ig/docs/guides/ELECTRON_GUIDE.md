@@ -7,7 +7,7 @@
 > **Isi iyi nke eziokwu:** oghere ọrụ `electron/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute na-eweta ngwa desktọpụ na-arụ ọrụ n'elu ikpo okwu dị iche iche (Windows / macOS / Linux) nke e ji
+67router na-eweta ngwa desktọpụ na-arụ ọrụ n'elu ikpo okwu dị iche iche (Windows / macOS / Linux) nke e ji
 **Electron 41** + **electron-builder 26.10** wuo. Ngwa desktọpụ ahụ na-ebido sava Next.js
 standalone dị ka usoro nwa, na-atụ `BrowserWindow` aka na ya, ma na-agbakwụnye
 tray sistemụ, ihe mmelite akpaaka, àkwà IPC, na nhazi nzuzo na-achọghị nhazi ọ bụla.
@@ -196,7 +196,7 @@ dị ka `CONTEXT_LENGTH_<PROVIDER>` (lee
 - `BrowserWindow`: 1400×900 (opekata mpe 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, bọtịnụ ọkụ-okporoụzọ dị na `{ x: 16, y: 16 }`.
 - Windows/Linux: ogwe aha nke sistemụ.
-- Bọtịnụ mmechi na-eweda ngwa ahụ na tray; menu tray nwere **Mepee OmniRoute**, **Mepee Dashboard** (ihe nchọgharị mpụga), submenu **Ọdụ Ụzọ Sava**, **Lelee Mmelite**, **Kwụsị**.
+- Bọtịnụ mmechi na-eweda ngwa ahụ na tray; menu tray nwere **Mepee 67router**, **Mepee Dashboard** (ihe nchọgharị mpụga), submenu **Ọdụ Ụzọ Sava**, **Lelee Mmelite**, **Kwụsị**.
 
 ## Iwu Nchekwa Ọdịnaya
 

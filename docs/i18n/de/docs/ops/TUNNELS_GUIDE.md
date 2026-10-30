@@ -7,7 +7,7 @@
 > **Maßgebliche Quelle:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Zuletzt aktualisiert:** 2026-06-28 — v3.8.40
 
-OmniRoute kann seinen lokalen Server (`http://localhost:20128`) über drei
+67router kann seinen lokalen Server (`http://localhost:20128`) über drei
 Tunnel-Backends im öffentlichen Internet verfügbar machen. Dies ist nützlich für:
 
 - OAuth-Callbacks von Cloud-Anbietern (Antigravity, Gemini, Cursor), die eine
@@ -15,7 +15,7 @@ Tunnel-Backends im öffentlichen Internet verfügbar machen. Dies ist nützlich 
 - Das Teilen Ihrer lokalen Instanz mit Teammitgliedern, ohne eine VM bereitzustellen.
 - Tests auf Mobilgeräten, aus der Ferne oder über Netzwerkgrenzen hinweg.
 
-Alle drei Backends werden prozessintern verwaltet — OmniRoute startet/stoppt die
+Alle drei Backends werden prozessintern verwaltet — 67router startet/stoppt die
 zugrunde liegende Binärdatei oder das SDK über das Dashboard oder die REST-API.
 Es ist keine Einrichtung eines Reverse-Proxys oder von systemd erforderlich.
 
@@ -43,7 +43,7 @@ bereitgestellt wird:
 http://localhost:<apiPort>` aus und liest die zugewiesene `*.trycloudflare.com`-URL
   aus stdout aus. URLs sind temporär und ändern sich bei jedem Neustart.
 - **Named Tunnel (optional).** Wenn `CLOUDFLARED_CONFIG` auf eine lokal verwaltete
-  cloudflared-`config.yml` verweist, führt OmniRoute `cloudflared tunnel --no-autoupdate
+  cloudflared-`config.yml` verweist, führt 67router `cloudflared tunnel --no-autoupdate
 --config <path> run` aus, wodurch Sie einen **stabilen, benannten Hostnamen**
   erhalten. Die Konfiguration stellt die Tunnel-UUID, `credentials-file` und das
   `ingress`-Routing bereit, sodass kein `--url` übergeben wird und kein Token des
@@ -53,7 +53,7 @@ http://localhost:<apiPort>` aus und liest die zugewiesene `*.trycloudflare.com`-
 
 Wichtige Verhaltensweisen:
 
-- **Automatische Installation.** Bei der ersten Verwendung lädt OmniRoute die neueste
+- **Automatische Installation.** Bei der ersten Verwendung lädt 67router die neueste
   `cloudflared`-Binärdatei aus den offiziellen GitHub-Releases herunter (die verwaltete
   Installation befindet sich unter `DATA_DIR/cloudflared/`). Der SHA256-Wert des
   heruntergeladenen Artefakts wird vor der Ausführung anhand des Release-Manifests
@@ -73,7 +73,7 @@ Wichtige Verhaltensweisen:
    ```
 
 2. Erstellen Sie eine `~/.cloudflared/config.yml`, die Ihren Hostnamen an den lokalen
-   API-Port von OmniRoute weiterleitet (standardmäßig 20128):
+   API-Port von 67router weiterleitet (standardmäßig 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -84,11 +84,11 @@ Wichtige Verhaltensweisen:
      - service: http_status:404
    ```
 
-3. Verweisen Sie OmniRoute auf die Konfiguration und starten Sie den Tunnel (neu):
+3. Verweisen Sie 67router auf die Konfiguration und starten Sie den Tunnel (neu):
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # optional — überschreibt den von OmniRoute gemeldeten Hostnamen; andernfalls wird er aus der
+   # optional — überschreibt den von 67router gemeldeten Hostnamen; andernfalls wird er aus der
    # ersten ingress-Regel der Konfiguration gelesen:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -127,12 +127,12 @@ Oder über das Dashboard: **Einstellungen → Tunnel → Cloudflare**.
 
 ### Optionale Umgebungsvariablen
 
-| Variable                                             | Zweck                                                                                                                                                                                         |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Überschreibt den Pfad zur Binärdatei. Wenn der Pfad gesetzt und gültig ist, verwendet OmniRoute diese Binärdatei, anstatt sie herunterzuladen.                                                |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transportprotokoll (Standard: `http2`; außerdem `quic`, `auto`).                                                                                                                              |
-| `CLOUDFLARED_CONFIG`                                 | Pfad zu einer lokal verwalteten cloudflared-`config.yml`. Wenn gesetzt, führt OmniRoute einen **benannten/persistenten** Tunnel (`tunnel --config <path> run`) statt eines Quick Tunnels aus. |
-| `CLOUDFLARED_HOSTNAME`                               | Überschreibt den gemeldeten öffentlichen Hostnamen des benannten Tunnels (z. B. `ai.example.com`). Wenn nicht gesetzt, wird er aus dem ersten `ingress`-Hostnamen der Konfiguration gelesen.  |
+| Variable                                             | Zweck                                                                                                                                                                                        |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Überschreibt den Pfad zur Binärdatei. Wenn der Pfad gesetzt und gültig ist, verwendet 67router diese Binärdatei, anstatt sie herunterzuladen.                                                |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transportprotokoll (Standard: `http2`; außerdem `quic`, `auto`).                                                                                                                             |
+| `CLOUDFLARED_CONFIG`                                 | Pfad zu einer lokal verwalteten cloudflared-`config.yml`. Wenn gesetzt, führt 67router einen **benannten/persistenten** Tunnel (`tunnel --config <path> run`) statt eines Quick Tunnels aus. |
+| `CLOUDFLARED_HOSTNAME`                               | Überschreibt den gemeldeten öffentlichen Hostnamen des benannten Tunnels (z. B. `ai.example.com`). Wenn nicht gesetzt, wird er aus dem ersten `ingress`-Hostnamen der Konfiguration gelesen. |
 
 ## 2. ngrok
 
@@ -175,7 +175,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
   -d '{"action":"disable"}'
 ```
 
-Die Antwort enthält die zugewiesene `publicUrl` (z. B. `https://abcd-1234.ngrok-free.app`). Benutzerdefinierte Domains, Regionen und Richtlinienregeln müssen im ngrok-Dashboard konfiguriert werden — OmniRoute selbst leitet lediglich die lokale Ziel-URL an das SDK weiter.
+Die Antwort enthält die zugewiesene `publicUrl` (z. B. `https://abcd-1234.ngrok-free.app`). Benutzerdefinierte Domains, Regionen und Richtlinienregeln müssen im ngrok-Dashboard konfiguriert werden — 67router selbst leitet lediglich die lokale Ziel-URL an das SDK weiter.
 
 ## 3. Tailscale Funnel
 
@@ -185,12 +185,12 @@ Die Implementierung ruft `tailscale funnel --bg <port>` auf (Hintergrundmodus). 
 
 ### Voraussetzungen
 
-1. Installieren Sie Tailscale (oder lassen Sie OmniRoute dies erledigen — siehe den nachfolgenden `install`-Endpunkt).
-2. Melden Sie sich an (`tailscale login` oder über den `login`-Endpunkt von OmniRoute).
+1. Installieren Sie Tailscale (oder lassen Sie 67router dies erledigen — siehe den nachfolgenden `install`-Endpunkt).
+2. Melden Sie sich an (`tailscale login` oder über den `login`-Endpunkt von 67router).
 3. Aktivieren Sie Funnel für Ihr Tailnet in der Tailscale-Administrationskonsole:
    <https://login.tailscale.com/admin/settings/features>.
 
-Unter Linux und macOS benötigt der Daemon (`tailscaled`) `sudo` zur Steuerung. Die POST-Endpunkte akzeptieren ein optionales Feld `sudoPassword`, das für die Dauer des Aufrufs an den MITM-Passwort-Cache von OmniRoute (`getCachedPassword` / `setCachedPassword`) weitergeleitet wird. Windows verwendet die standardmäßige Dienstinstallation unter `C:\Program Files\Tailscale\tailscale.exe`.
+Unter Linux und macOS benötigt der Daemon (`tailscaled`) `sudo` zur Steuerung. Die POST-Endpunkte akzeptieren ein optionales Feld `sudoPassword`, das für die Dauer des Aufrufs an den MITM-Passwort-Cache von 67router (`getCachedPassword` / `setCachedPassword`) weitergeleitet wird. Windows verwendet die standardmäßige Dienstinstallation unter `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### REST-Endpunkte
 
@@ -246,7 +246,7 @@ unabhängig.
 
 ## Hinweise zum OAuth-Callback
 
-Wenn Sie OmniRoute über einen Tunnel verfügbar machen, müssen das Dashboard und
+Wenn Sie 67router über einen Tunnel verfügbar machen, müssen das Dashboard und
 die OAuth-Abläufe Callback-URLs unter Verwendung des **öffentlichen**
 Hostnamens und nicht von `localhost` erstellen. Andernfalls leitet der
 OAuth-Anbieter den Benutzer an eine URL zurück, die von seinen Servern nicht
@@ -265,7 +265,7 @@ Legen Sie Folgendes fest:
 NEXT_PUBLIC_BASE_URL=https://<Ihr-Tunnel-Host>
 ```
 
-und starten Sie OmniRoute neu, bevor Sie OAuth initiieren. Bei kurzlebigen
+und starten Sie 67router neu, bevor Sie OAuth initiieren. Bei kurzlebigen
 Cloudflare Quick Tunnels ändert sich die URL nach jedem Neustart. Bevorzugen Sie
 daher für den produktiven OAuth-Einsatz ngrok mit einer reservierten Domain oder
 Tailscale Funnel.
@@ -283,13 +283,13 @@ Das Dashboard zeigt den Tunnelstatus unter **Einstellungen → Tunnel** an:
 
 Fragen Sie zur programmatischen Überwachung regelmäßig die backend-spezifischen
 `GET`-Endpunkte ab. Der gleichzeitige Betrieb mehrerer Backends ist zulässig;
-OmniRoute verfolgt jedes davon unabhängig.
+67router verfolgt jedes davon unabhängig.
 
 ## Fehlerbehebung
 
 ### „cloudflared-Binärdatei nicht gefunden“
 
-OmniRoute versucht bei der ersten Verwendung eine automatische Installation.
+67router versucht bei der ersten Verwendung eine automatische Installation.
 Falls die Installation blockiert wird (eingeschränktes Netzwerk, kein Zugriff
 auf GitHub), laden Sie `cloudflared` manuell von
 <https://github.com/cloudflare/cloudflared/releases> herunter und legen Sie

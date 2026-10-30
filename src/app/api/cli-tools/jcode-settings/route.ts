@@ -189,7 +189,7 @@ export async function POST(request: Request) {
         {
           error: {
             message:
-              "existing ~/.jcode/config.toml is not valid TOML; fix it before applying OmniRoute settings",
+              "existing ~/.jcode/config.toml is not valid TOML; fix it before applying 67router settings",
           },
         },
         { status: 409 }
@@ -261,7 +261,7 @@ export async function DELETE(request: Request) {
       /* non-critical */
     }
 
-    return NextResponse.json({ success: true, message: "jcode OmniRoute settings removed" });
+    return NextResponse.json({ success: true, message: "jcode 67router settings removed" });
   } catch (err) {
     return NextResponse.json({ error: { message: sanitizeErrorMessage(err) } }, { status: 500 });
   }

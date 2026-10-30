@@ -6,10 +6,10 @@
 
 بالنسبة إلى بيان الملفات التنفيذية المشترك، وبيئات العمليات الفرعية المقيّدة، وإعداد Gemini الدائم، راجع [عقود تشغيل CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-توفّر OmniRoute مجموعة من أوامر `setup-*` التي تهيّئ واجهة سطر أوامر للبرمجة
-(Codex وClaude Code وOpenCode وCline وغيرها) لاستخدام OmniRoute كواجهة خلفية — بحيث
-تتصل الأداة بنقطة نهاية **واحدة**، وتتولى OmniRoute التوجيه إلى المزوّد المناسب مع
-التبديل الاحتياطي التلقائي. يقرأ كل أمر كتالوج النماذج **المباشر** من نسخة OmniRoute قيد التشغيل
+توفّر 67router مجموعة من أوامر `setup-*` التي تهيّئ واجهة سطر أوامر للبرمجة
+(Codex وClaude Code وOpenCode وCline وغيرها) لاستخدام 67router كواجهة خلفية — بحيث
+تتصل الأداة بنقطة نهاية **واحدة**، وتتولى 67router التوجيه إلى المزوّد المناسب مع
+التبديل الاحتياطي التلقائي. يقرأ كل أمر كتالوج النماذج **المباشر** من نسخة 67router قيد التشغيل
 (محلية أو بعيدة)، ويكتب ملف إعداد الأداة نفسه على جهازك **أنت**.
 تتم الإشارة إلى مفتاح API بواسطة متغير بيئة حيثما تدعم الأداة ذلك.
 وترد أدناه ملاحظات بشأن الأوامر التي تحفظ ملف بيئة محليًا خاصًا بالأداة.
@@ -51,7 +51,7 @@ omniroute providers remove <connection-id> --yes
 
 - [إعداد Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [إعداد Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [الوضع البعيد](./REMOTE-MODE.md) — تحكّم في نسخة OmniRoute بعيدة (VPS / Tailnet) من حاسوبك المحمول
+- [الوضع البعيد](./REMOTE-MODE.md) — تحكّم في نسخة 67router بعيدة (VPS / Tailnet) من حاسوبك المحمول
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — إضافة OmniCopilot؛ ويمكنها أيضًا تشغيل أوامر
   `setup-*` هذه نيابةً عنك من داخل المحرر
 
@@ -87,7 +87,7 @@ omniroute providers remove <connection-id> --yes
 
 ملاحظات حول الأعلام (تم التحقق منها في مصدر الأمر):
 
-- `--remote <url>` — يجلب الكتالوج من OmniRoute بعيد (ويتجاوز `--port`
+- `--remote <url>` — يجلب الكتالوج من 67router بعيد (ويتجاوز `--port`
   والسياق النشط). يوفّر `--api-key <key>` بيانات الاعتماد لذلك
   الخادم (القيمة الافتراضية هي متغير البيئة `OMNIROUTE_API_KEY`، أو رمز السياق النشط).
 - `--only <patterns>` — سلاسل فرعية مفصولة بفواصل؛ يحتفظ فقط بمعرّفات النماذج المطابقة
@@ -108,7 +108,7 @@ omniroute providers remove <connection-id> --yes
   و**codex** عبر وسائط `-c model_providers.omniroute.*`. **Qwen هو هدف التشغيل الوحيد
   الذي يفرض وجود `--model`** — يؤدي تشغيل `omniroute run qwen` من دونه إلى الخروج
   بالرمز `2` مع خطأ صريح.
-- `--port <port>` — منفذ OmniRoute المحلي (القيمة الافتراضية `20128`، ويُتجاهل عند تعيين `--remote`).
+- `--port <port>` — منفذ 67router المحلي (القيمة الافتراضية `20128`، ويُتجاهل عند تعيين `--remote`).
   موجود في جميع أوامر `setup-*` وكلا مشغّلي التشغيل.
 - رموز خروج `omniroute run`: يُمرَّر رمز خروج CLI الابن نفسه
   كما هو؛ `2` = وسائط غير صالحة (هدف غير مدعوم، أو غياب `--model`
@@ -153,7 +153,7 @@ omniroute configure qwen --model qwen/qwen3.8-max-preview --yes
 
 ## الاستخدام المحلي
 
-مع تشغيل OmniRoute على `localhost:20128`، ما عليك سوى تشغيل أمر الإعداد الخاص
+مع تشغيل 67router على `localhost:20128`، ما عليك سوى تشغيل أمر الإعداد الخاص
 بأداتك. يُجلب الكتالوج من الخادم المحلي.
 
 ```bash
@@ -181,8 +181,8 @@ omniroute setup-continue --dry-run
 شغّل دون كتابة أي إعدادات على الإطلاق (حقن متغيرات البيئة فقط):
 
 ```bash
-omniroute launch                 # Claude Code ← OmniRoute المحلي
-omniroute launch-codex           # Codex CLI ← OmniRoute المحلي
+omniroute launch                 # Claude Code ← 67router المحلي
+omniroute launch-codex           # Codex CLI ← 67router المحلي
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -200,7 +200,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## الاستخدام البعيد
 
-وجّه أي أمر إعداد إلى OmniRoute بعيد باستخدام `--remote` + `--api-key`. يُجلب
+وجّه أي أمر إعداد إلى 67router بعيد باستخدام `--remote` + `--api-key`. يُجلب
 الكتالوج من الخادم البعيد، وتُكتب الإعدادات على جهازك المحلي.
 
 ```bash
@@ -243,7 +243,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 يكتب كلا الشكلين **ملف تعريف مصادقة** واحدًا لـ 5dive، وبعد ذلك يتصل كل مقعد
-`claude` مرتبط بذلك الملف التعريفي بـ OmniRoute. توجد ثلاثة أمور خاصة بهذا الهدف:
+`claude` مرتبط بذلك الملف التعريفي بـ 67router. توجد ثلاثة أمور خاصة بهذا الهدف:
 
 - **يعمل على مضيف الأسطول بصلاحيات root.** تعمل أوامر 5dive على وحدات systemd المحلية
   ودليل حالة مملوك لـ root؛ ولا يوجد وضع بعيد. تعيد الوصفة تنفيذ نفسها عبر
@@ -261,7 +261,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 يُمرَّر مفتاح API إلى 5dive عبر **stdin** (`--api-key=-`)، ولذلك لا يظهر مطلقًا في
 مخرجات `ps`.
 
-إن توجيه الملف التعريفي إلى **combo** في OmniRoute بدلًا من نموذج واحد هو ما
+إن توجيه الملف التعريفي إلى **combo** في 67router بدلًا من نموذج واحد هو ما
 يوفّر للأسطول تبديل المزوّد عند الفشل: فعندما تعطلت نقطة النهاية الأساسية تمامًا
 في منتصف التفاعل أثناء التشغيل المسجّل في
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578)، أكمل الوكيل
@@ -271,7 +271,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 ## اصطلاحات عنوان URL الأساسي (الأدوات التي تتطلب `/v1`)
 
-يُوفّر OmniRoute واجهة OpenAI عند `/v1`، وواجهة Anthropic عند الجذر،
+يُوفّر 67router واجهة OpenAI عند `/v1`، وواجهة Anthropic عند الجذر،
 وواجهة Gemini أصلية عند `/v1beta`. جرى ربط كل تكامل بالصيغة التي
 تتوقعها أداته (تم التحقق من ذلك في مصدر الأمر):
 
@@ -293,7 +293,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ## الاحتفاظ بالتبعيات الأصلية عند التحديث: `--include=optional`
 
 عند التحديث باستخدام `omniroute update` (بعد التأكيد، أو باستخدام `--apply`)،
-تشغّل OmniRoute عملية التثبيت مع تضمين `--include=optional` تلقائيًا:
+تشغّل 67router عملية التثبيت مع تضمين `--include=optional` تلقائيًا:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -320,14 +320,14 @@ omniroute update --dry-run
 
 تم التحقق من العقد مقابل `@google/gemini-cli` 0.50.0: تراعي واجهة سطر الأوامر
 `GOOGLE_GEMINI_BASE_URL` وترسل `POST /v1beta/models/<model>:generateContent`
-(وكذلك `:streamGenerateContent?alt=sse`) إليه — وهي واجهة Gemini الأصلية في OmniRoute
+(وكذلك `:streamGenerateContent?alt=sse`) إليه — وهي واجهة Gemini الأصلية في 67router
 (`/v1beta`) تمامًا. يضبط `omniroute run gemini` ذلك تلقائيًا:
 
-- `GOOGLE_GEMINI_BASE_URL` ← عنوان URL الأساسي النشط لـ OmniRoute (الجذر، دون `/v1`)؛
-- `GEMINI_API_KEY` ← بيانات اعتماد OmniRoute التي تم تحديدها (الخيار/البيئة/السياق)؛
+- `GOOGLE_GEMINI_BASE_URL` ← عنوان URL الأساسي النشط لـ 67router (الجذر، دون `/v1`)؛
+- `GEMINI_API_KEY` ← بيانات اعتماد 67router التي تم تحديدها (الخيار/البيئة/السياق)؛
 - **`GEMINI_CLI_HOME` مؤقت ومعزول** يحدد ملف `.gemini/settings.json` الخاص به
   مصادقة `gemini-api-key`، بحيث لا تتجاوز جلسة Google OAuth مخزنة (Code Assist)
-  أبدًا عملية التشغيل الموجّهة إلى OmniRoute — ويُحذف بعد الخروج؛
+  أبدًا عملية التشغيل الموجّهة إلى 67router — ويُحذف بعد الخروج؛
 - **تنقية البيئة**: تُزال من بيئة العملية الفرعية المتغيرات `GOOGLE_API_KEY`،
   و`GOOGLE_GENAI_USE_VERTEXAI`، و`GOOGLE_GENAI_USE_GCA` (التي كانت ستعيد توجيه
   المصادقة إلى Vertex/Code Assist)، ويُضبط `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -351,7 +351,7 @@ omniroute run gemini --model glm/glm-5.2 -- --skip-trust -p "hello"
 
 تُنفَّذ اختبارات الانحدار الحتمية لخطة التشغيل ضمن CI (`tests/unit/cli/run-command.test.ts`،
 `tests/unit/cli/run-execution.test.ts`). للتحقق من الملفات التنفيذية الحقيقية مقابل خادم
-OmniRoute حقيقي، تتوفر أداة اختبار اختيارية في
+67router حقيقي، تتوفر أداة اختبار اختيارية في
 `tests/integration/upstream-cli-smoke.int.test.ts`. ولا تعمل تلقائيًا مطلقًا
 (يُتخطى كل اختبار فرعي ما لم تكن `RUN_CLI_SMOKE=1`)، كما تمرر بيانات الاعتماد عبر NAME
 متغير البيئة (وليس عبر القيمة مطلقًا)، وتحجب السلاسل النصية التي تبدو كمفاتيح من أي مخرجات مسجلة، وتتخطى

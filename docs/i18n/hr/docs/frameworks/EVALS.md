@@ -7,7 +7,7 @@
 > **Izvor istine:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40
 
-OmniRoute isporučuje generički okvir za evaluaciju koji možete koristiti za usporedno mjerenje konfiguracija usmjeravanja, pojedinačnih pružatelja/modela ili uključenih paketa „golden set”.
+67router isporučuje generički okvir za evaluaciju koji možete koristiti za usporedno mjerenje konfiguracija usmjeravanja, pojedinačnih pružatelja/modela ili uključenih paketa „golden set”.
 Upotrijebite ga za provjeru promjena u usmjeravanju, validaciju novih pružatelja i kontrolu izdanja prije njihova puštanja u produkcijski promet.
 
 Okvir je implementiran kao:

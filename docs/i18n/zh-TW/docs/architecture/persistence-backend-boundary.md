@@ -10,7 +10,7 @@
 
 ## 背景
 
-OmniRoute 目前從 `src/lib/db/` 提供以領域為導向的持久化函式，而由 `src/lib/db/core.ts` 傳回的共用連線，則實作了 `src/lib/db/adapters/types.ts` 中的同步 `SqliteAdapter` 契約。該適配器支援數種 SQLite 執行階段，但其介面仍採用 SQLite 的設計形態：同步預備陳述式、`pragma`、延遲與立即交易、原生／檔案複製備份、檢查點，以及本機資料庫控制代碼。
+67router 目前從 `src/lib/db/` 提供以領域為導向的持久化函式，而由 `src/lib/db/core.ts` 傳回的共用連線，則實作了 `src/lib/db/adapters/types.ts` 中的同步 `SqliteAdapter` 契約。該適配器支援數種 SQLite 執行階段，但其介面仍採用 SQLite 的設計形態：同步預備陳述式、`pragma`、延遲與立即交易、原生／檔案複製備份、檢查點，以及本機資料庫控制代碼。
 
 目前的啟動與復原路徑也負責管理 SQLite 檔案生命週期。`src/lib/db/core.ts` 解析 `storage.sqlite`、維護單一行程全域適配器、為 WAL 建立檢查點、在復原期間保留指定資料表，並在重建資料庫時移除 SQLite 伴隨檔案。`src/lib/db/adapters/driverFactory.ts` 中的驅動程式選擇邏輯會在支援的 SQLite 執行階段之間進行選擇；它並非外部後端的抽象層。
 

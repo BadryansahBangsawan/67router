@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** మీ OmniRoute అందించే ప్రతి మోడల్ను _స్థానిక_ GitHub Copilot Chat
+**OmniCopilot** మీ 67router అందించే ప్రతి మోడల్ను _స్థానిక_ GitHub Copilot Chat
 మోడల్ పికర్లో ఉంచుతుంది. రెండవ సైడ్బార్ లేదు, ప్రత్యేక చాట్ UI లేదు — Copilot యొక్క ఏజెంట్ మోడ్, టూల్ కాలింగ్,
 MCP సర్వర్లు మరియు అనుకూల సూచనలు అన్నీ పనిచేస్తూనే ఉంటాయి; మీరు ఎంచుకున్న మోడల్పై మాత్రమే రన్ అవుతాయి.
 
@@ -23,13 +23,13 @@ MCP సర్వర్లు మరియు అనుకూల సూచనల�
 
 ## సెటప్
 
-1. **OmniRouteను రన్ చేయండి** — `npm install -g omniroute && omniroute` (`http://localhost:20128`లో డాష్బోర్డ్).
+1. **67routerను రన్ చేయండి** — `npm install -g omniroute && omniroute` (`http://localhost:20128`లో డాష్బోర్డ్).
 2. **ఎక్స్టెన్షన్ను ఇన్స్టాల్ చేయండి** — Extensions వీక్షణలో "OmniRoute" కోసం శోధించండి.
 3. **మోడల్ను ఎంచుకోండి** — Copilot Chat → మోడల్ పికర్ → **మోడల్లను నిర్వహించండి…** → **OmniRoute**, ఆపై
    మీకు కావాల్సిన వాటిని టిక్ చేయండి.
 
-OmniRoute డిఫాల్ట్ పోర్ట్లో రన్ అవుతున్నప్పుడు ఏదీ కాన్ఫిగర్ చేయాల్సిన అవసరం లేదు. రిమోట్ ఇన్స్టాన్స్ కోసం,
-**Activity Barలోని OmniRoute చిహ్నాన్ని** తెరవండి (లేదా `OmniRoute: Manage Connection`ను రన్ చేయండి) మరియు వీటిని సెట్ చేయండి:
+67router డిఫాల్ట్ పోర్ట్లో రన్ అవుతున్నప్పుడు ఏదీ కాన్ఫిగర్ చేయాల్సిన అవసరం లేదు. రిమోట్ ఇన్స్టాన్స్ కోసం,
+**Activity Barలోని 67router చిహ్నాన్ని** తెరవండి (లేదా `OmniRoute: Manage Connection`ను రన్ చేయండి) మరియు వీటిని సెట్ చేయండి:
 
 - **సర్వర్ URL** — సర్వర్ రూట్, ఉదా. `http://192.168.0.15:20128`. `/v1` సఫిక్స్ను
   ఎక్స్టెన్షన్ జోడిస్తుంది; దాన్ని చేర్చవద్దు.
@@ -74,7 +74,7 @@ HTTP 400 — మోడల్ '<id>' ఒక ఇమేజ్-జనరేషన్
 
 కాబట్టి అవి పికర్కు చేరకముందే వాటి `type` ఫీల్డ్ ఆధారంగా ఫిల్టర్ చేయబడతాయి. **Responses-API
 మోడల్లు ఉంచబడతాయి** — ప్రతి Codex / GPT-5.x ఎంట్రీ `supported_endpoints: ["responses"]`ను ప్రకటిస్తుంది,
-మరియు OmniRoute వాటిని `/v1/chat/completions` కోసం అనువదిస్తుంది, కాబట్టి అవి పూర్తిగా ఉపయోగించదగినవి.
+మరియు 67router వాటిని `/v1/chat/completions` కోసం అనువదిస్తుంది, కాబట్టి అవి పూర్తిగా ఉపయోగించదగినవి.
 
 ### మీరు ఎప్పుడూ కాన్ఫిగర్ చేయని ప్రొవైడర్లు
 
@@ -87,7 +87,7 @@ HTTP 400 — మోడల్ '<id>' ఒక ఇమేజ్-జనరేషన్
 
 ## VS Code ట్యాబ్లోని Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` బాహ్య బ్రౌజర్కు బదులుగా Simple Browser ద్వారా OmniRoute dashboardను editor ట్యాబ్లో రెండర్ చేస్తుంది. ఎంబెడింగ్ను **సర్వర్లో ప్రత్యేకంగా ప్రారంభించాలి**; ఇందుకు `DASHBOARD_ALLOW_EMBED=vscode` ఉపయోగించాలి. ఇది HTML పేజీలను డిఫాల్ట్ `frame-ancestors 'none'` + `X-Frame-Options: DENY`కు బదులుగా `frame-ancestors 'self' vscode-webview:`తో అందిస్తుంది. ఏ విధానాన్ని ఉపయోగించినా API ఉపరితలం (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) కఠినమైన హెడర్లను అలాగే ఉంచుతుంది.
+`omnicopilot.dashboardOpen: "editor"` బాహ్య బ్రౌజర్కు బదులుగా Simple Browser ద్వారా 67router dashboardను editor ట్యాబ్లో రెండర్ చేస్తుంది. ఎంబెడింగ్ను **సర్వర్లో ప్రత్యేకంగా ప్రారంభించాలి**; ఇందుకు `DASHBOARD_ALLOW_EMBED=vscode` ఉపయోగించాలి. ఇది HTML పేజీలను డిఫాల్ట్ `frame-ancestors 'none'` + `X-Frame-Options: DENY`కు బదులుగా `frame-ancestors 'self' vscode-webview:`తో అందిస్తుంది. ఏ విధానాన్ని ఉపయోగించినా API ఉపరితలం (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) కఠినమైన హెడర్లను అలాగే ఉంచుతుంది.
 
 > ⚠️ **ఇది build-time ఫ్లాగ్, runtime ఫ్లాగ్ కాదు.** Next.js `headers()`ను route manifestలో కంపైల్ చేస్తుంది, కాబట్టి bundleను build చేస్తున్నప్పుడు `next.config.mjs` ఈ వేరియబుల్ను చదువుతుంది
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).
@@ -122,7 +122,7 @@ npm start
 
 | లక్షణం                                                            | కారణం / పరిష్కారం                                                                                                                                                                                                                                                                 |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| pickerలో OmniRoute models కనిపించడం లేదు                          | సర్వర్ను చేరుకోలేకపోతున్నారు. status-barలోని చుక్క బూడిద రంగులోకి మారుతుంది; `OmniRoute: Check Connection` అమలు చేయండి. Discovery ఉద్దేశపూర్వకంగానే ఎలాంటి సందేశం చూపకుండా పనిచేస్తుంది; prompt చూపించడానికి బదులుగా ఎలాంటి modelsను జోడించదు.                                    |
+| pickerలో 67router models కనిపించడం లేదు                           | సర్వర్ను చేరుకోలేకపోతున్నారు. status-barలోని చుక్క బూడిద రంగులోకి మారుతుంది; `OmniRoute: Check Connection` అమలు చేయండి. Discovery ఉద్దేశపూర్వకంగానే ఎలాంటి సందేశం చూపకుండా పనిచేస్తుంది; prompt చూపించడానికి బదులుగా ఎలాంటి modelsను జోడించదు.                                    |
 | ప్రతి model రెండుసార్లు కనిపిస్తోంది                              | మీరు 1.0.1 కంటే పాత OmniCopilotను ఉపయోగిస్తున్నారు — update చేయండి. extension ఇప్పుడు `?prefix=alias`ను అభ్యర్థిస్తుంది.                                                                                                                                                          |
 | గతంలో జాబితాలో కనిపించిన image/audio model ఇప్పుడు కనిపించడం లేదు | 1.0.1 నుండి ఇది ఉద్దేశపూర్వక మార్పు — అది chat requestకు ఎప్పటికీ సమాధానం ఇవ్వలేకపోయేది.                                                                                                                                                                                          |
 | Activity Barలో panel కనిపించడం లేదు                               | VS Code అదనపు view containersను Activity Bar దిగువన ఉన్న **"…"** overflowలోకి తరలిస్తుంది; అలాగే right-click ద్వారా దాచిన container దాచబడినట్లుగానే ఉంటుంది. Activity Barపై right-click చేయండి → **OmniRoute**ను ఎంచుకోండి, లేదా `OmniRoute: Manage Connection`తో దాన్ని తెరవండి. |
@@ -134,6 +134,6 @@ npm start
 ## ఇవి కూడా చూడండి
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — ఇతర అన్ని కోడింగ్ సాధనాలు
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — రిమోట్ OmniRouteను నిర్వహించడం
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — రిమోట్ 67routerను నిర్వహించడం
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` ఒప్పందం
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — ఎక్స్టెన్షన్కు సంబంధించిన స్వంత కేటలాగ్ గమనికలు

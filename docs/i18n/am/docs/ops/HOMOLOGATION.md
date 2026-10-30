@@ -4,7 +4,7 @@
 
 ---
 
-በ homologation VPS ላይ የሚሰራውን OmniRoute deploy በእውነተኛ አካባቢ የሚያረጋግጥ E2E ማረጋገጫ
+በ homologation VPS ላይ የሚሰራውን 67router deploy በእውነተኛ አካባቢ የሚያረጋግጥ E2E ማረጋገጫ
 (`HOMOLOG_BASE_URL`፣ ለምሳሌ `http://192.168.0.15:20128`)። አንድ ትዕዛዝ የrelease STOP #2 በእጅ የሚከናወን የማረጋገጫ ዝርዝርን በራስ-ሰር በሚከናወንና ማስረጃ በሚያመነጭ ሂደት ይተካል።
 
 ## የሚሸፍነው

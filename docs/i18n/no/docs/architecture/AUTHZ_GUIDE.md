@@ -7,7 +7,7 @@
 > **Sannhetskilde:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Sist oppdatert:** 2026-09-22 — omfangsnavnerom peker til MCP-SERVER.md
 
-OmniRoute har en rutebevisst autorisasjons-pipeline som kontrollerer hver API-forespørsel. Klassifiseringen er **deterministisk** og **fail-closed** – alt som ikke kan klassifiseres ender opp som `MANAGEMENT` og krever en sesjon eller et token av administrasjonsgrad. Denne siden forklarer modellen for ingeniører som vedlikeholder ruter eller designer nye endepunkter.
+67router har en rutebevisst autorisasjons-pipeline som kontrollerer hver API-forespørsel. Klassifiseringen er **deterministisk** og **fail-closed** – alt som ikke kan klassifiseres ender opp som `MANAGEMENT` og krever en sesjon eller et token av administrasjonsgrad. Denne siden forklarer modellen for ingeniører som vedlikeholder ruter eller designer nye endepunkter.
 
 ![AuthZ-pipeline (3 ruteklasser + policyevaluering)](../diagrams/exported/authz-pipeline.svg)
 

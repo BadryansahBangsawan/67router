@@ -4,15 +4,15 @@
 
 ---
 
-Delegirano **urejanje konteksta** je funkcija za upravljanje konteksta, ki je na voljo samo za Claude. Za razliko od lokalnih mehanizmov stiskanja v OmniRoute (Caveman, RTK, LLMLingua, sestavljeni cevovodi) — ki prepišejo telo zahteve, _preden_ ta zapusti posredniški strežnik — urejanje konteksta od **ponudnika** zahteva, da iz lastnega trenutnega kontekstnega okna odstrani zastarele bloke uporabe orodij/rezultatov orodij. OmniRoute zgolj doda parameter telesa (`context_management.edits[]`); dejansko odstranjevanje glede na lasten razčlenjevalnik žetonov opravi Claude.
+Delegirano **urejanje konteksta** je funkcija za upravljanje konteksta, ki je na voljo samo za Claude. Za razliko od lokalnih mehanizmov stiskanja v 67router (Caveman, RTK, LLMLingua, sestavljeni cevovodi) — ki prepišejo telo zahteve, _preden_ ta zapusti posredniški strežnik — urejanje konteksta od **ponudnika** zahteva, da iz lastnega trenutnega kontekstnega okna odstrani zastarele bloke uporabe orodij/rezultatov orodij. 67router zgolj doda parameter telesa (`context_management.edits[]`); dejansko odstranjevanje glede na lasten razčlenjevalnik žetonov opravi Claude.
 
-To je po naravi delegirana zmožnost: drugi ponudniki ta parameter zavrnejo, zato ga OmniRoute strogo omejuje na Claude in posredniške storitve, združljive s Claude Code.
+To je po naravi delegirana zmožnost: drugi ponudniki ta parameter zavrnejo, zato ga 67router strogo omejuje na Claude in posredniške storitve, združljive s Claude Code.
 
 Viri resnice: `open-sse/config/contextEditing.ts` (ID-ji strategij, vstavljanje v telo, pridobivanje telemetrije), `open-sse/executors/base.ts` (pogoj za vstavljanje + nadomestno ravnanje pri napaki 400) in `open-sse/services/compression/types.ts` (oblika konfiguracije + privzeta vrednost).
 
 ## Kaj počne `clear_tool_uses`
 
-OmniRoute v odhodno telo Anthropic Messages vstavi eno urejanje:
+67router v odhodno telo Anthropic Messages vstavi eno urejanje:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute v odhodno telo Anthropic Messages vstavi eno urejanje:
 - `trigger.value: 100000` — ko število vhodnih žetonov zahteve preseže ta prag, začne Claude odstranjevati stare pare uporabe orodij/rezultatov (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, privzeta vrednost Anthropic).
 - `keep.value: 3` — N najnovejših parov uporabe orodij/rezultatov ostane nespremenjenih (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Beta je najavljena z glavo `anthropic-beta: context-management-2025-06-27`, ki jo OmniRoute že pošilja pri zahtevah za Claude.
+Beta je najavljena z glavo `anthropic-beta: context-management-2025-06-27`, ki jo 67router že pošilja pri zahtevah za Claude.
 
-Vstavljanje izvede `applyContextEditingToBody()` in je **idempotentno**: če urejanje `clear_tool_uses` v telesu že obstaja (dodano pri prejšnjem klicu ali posredovano s strani odjemalca), telo ostane nespremenjeno. Če je prisotno tudi urejanje `clear_thinking_20251015`, OmniRoute s stabilnim razvrščanjem premakne urejanje `clear_thinking` na začetek, saj Anthropic zahteva, da je `clear_thinking` v polju `edits[]` pred `clear_tool_uses`.
+Vstavljanje izvede `applyContextEditingToBody()` in je **idempotentno**: če urejanje `clear_tool_uses` v telesu že obstaja (dodano pri prejšnjem klicu ali posredovano s strani odjemalca), telo ostane nespremenjeno. Če je prisotno tudi urejanje `clear_thinking_20251015`, 67router s stabilnim razvrščanjem premakne urejanje `clear_thinking` na začetek, saj Anthropic zahteva, da je `clear_thinking` v polju `edits[]` pred `clear_tool_uses`.
 
 ## Stikalo za omogočanje za posamezno kombinacijo
 
@@ -125,7 +125,7 @@ Pristni Claude vključuje različico beta v `ANTHROPIC_BETA_BASE` in ne uporabi 
 
 ## Telemetrija `applied_edits`
 
-Po odzivu Claude OmniRoute zabeleži, koliko konteksta je ponudnik dejansko počistil. To se
+Po odzivu Claude 67router zabeleži, koliko konteksta je ponudnik dejansko počistil. To se
 **ne** pretaka — podatki se po najboljših močeh izvlečejo iz telesa odziva brez pretakanja in nikoli
 ne vplivajo na odziv (napake telemetrije se prezrejo).
 
@@ -154,16 +154,16 @@ Tako se delegirano čiščenje prikaže v analitiki stiskanja skupaj z lokalnimi
 
 ## Razmerje do lokalnih mehanizmov stiskanja
 
-| Vidik                  | Lokalni mehanizmi (Caveman / RTK / LLMLingua / stacked)  | Delegirano urejanje konteksta                            |
-| ---------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| Kje se izvaja          | V OmniRoute, preden zahteva zapusti posredniški strežnik | Pri ponudniku (Claude), na strani strežnika              |
-| Kaj ureja              | Besedilo poziva / konteksta / rezultata orodja           | Stare bloke uporabe orodij / rezultatov orodij           |
-| Obseg ponudnikov       | Vsi ponudniki                                            | Samo `claude` + `anthropic-compatible-cc-*`              |
-| Preklop                | Nastavitve načina stiskanja                              | `contextEditing.enabled`                                 |
-| Način obravnave napak  | Odprto ob napaki (izvirno besedilo)                      | Rezervni odziv ob 400: odstrani parameter, ponovi enkrat |
-| Telemetrija prihrankov | `engine: <engine id>`                                    | `engine: "context-editing"`                              |
+| Vidik                  | Lokalni mehanizmi (Caveman / RTK / LLMLingua / stacked) | Delegirano urejanje konteksta                            |
+| ---------------------- | ------------------------------------------------------- | -------------------------------------------------------- |
+| Kje se izvaja          | V 67router, preden zahteva zapusti posredniški strežnik | Pri ponudniku (Claude), na strani strežnika              |
+| Kaj ureja              | Besedilo poziva / konteksta / rezultata orodja          | Stare bloke uporabe orodij / rezultatov orodij           |
+| Obseg ponudnikov       | Vsi ponudniki                                           | Samo `claude` + `anthropic-compatible-cc-*`              |
+| Preklop                | Nastavitve načina stiskanja                             | `contextEditing.enabled`                                 |
+| Način obravnave napak  | Odprto ob napaki (izvirno besedilo)                     | Rezervni odziv ob 400: odstrani parameter, ponovi enkrat |
+| Telemetrija prihrankov | `engine: <engine id>`                                   | `engine: "context-editing"`                              |
 
-Oba pristopa se dopolnjujeta: lokalni mehanizmi stisnejo bajte, ki jih pošlje OmniRoute; urejanje konteksta pa omogoča,
+Oba pristopa se dopolnjujeta: lokalni mehanizmi stisnejo bajte, ki jih pošlje 67router; urejanje konteksta pa omogoča,
 da Claude med posameznimi koraki skrajšuje tekoči kontekst. Omogočena sta lahko hkrati.
 
 ## Glejte tudi

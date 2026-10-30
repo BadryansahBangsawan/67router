@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, **CLI keşfini**, **yerel Agent Client Protocol'ünü** ve
+67router, **CLI keşfini**, **yerel Agent Client Protocol'ünü** ve
 **eski stdio adaptörlerini** birbirinden ayırır. Yüklü bir ikili dosyanın bulunması;
 kimlik doğrulamasının, model uyumluluğunun veya bir istemi işlemeye hazır olduğunun
 kanıtı değildir.

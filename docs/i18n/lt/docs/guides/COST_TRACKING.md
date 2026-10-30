@@ -4,7 +4,7 @@
 
 ---
 
-Kaip „OmniRoute“ apskaičiuoja, registruoja ir pateikia kiekvienos užklausos kainą — ir kodėl
+Kaip „67router“ apskaičiuoja, registruoja ir pateikia kiekvienos užklausos kainą — ir kodėl
 valdymo skydelio skaičius yra **sutaupymo stebėjimo rodiklis**, o ne sąskaita.
 
 Taip pat žr.: [Naudotojo vadovas](./USER_GUIDE.md) · [Funkcijų galerija](./FEATURES.md)
@@ -13,11 +13,11 @@ Taip pat žr.: [Naudotojo vadovas](./USER_GUIDE.md) · [Funkcijų galerija](./FE
 
 ## Kas tai yra (ir kas tai nėra)
 
-„OmniRoute“ kiekvienam užbaigimui priskiria užklausos kainą USD, padaugindama žetonų
+„67router“ kiekvienam užbaigimui priskiria užklausos kainą USD, padaugindama žetonų
 skaičių iš modelio kainų tarifų. Šie skaičiai naudojami **Išlaidų** valdymo skydelyje,
 `omniroute cost` / `omniroute usage` CLI, CSV/JSON eksportuose ir kiekvieno API rakto biudžetuose.
 
-> **Valdymo skydelio „kaina“ yra sutaupymo stebėjimo rodiklis, o ne sąskaita.** „OmniRoute“ niekada
+> **Valdymo skydelio „kaina“ yra sutaupymo stebėjimo rodiklis, o ne sąskaita.** „67router“ niekada
 > neima iš jūsų mokesčio — ji nukreipia jūsų užklausas pas tiekėjus, kuriuos jau esate prijungę (jūsų pačių
 > prenumeratas, nemokamus planus ir API raktus). „Bendra $290 kaina“, susidariusi naudojant vien nemokamus
 > modelius, reiškia, kad maždaug **$290 jūs _nesumokėjote_** mokamai API. Šis skaičius yra _įvertis_,
@@ -29,7 +29,7 @@ skaičių iš modelio kainų tarifų. Šie skaičiai naudojami **Išlaidų** val
 
 Kadangi šis skaičius yra įvertis:
 
-- Jis priklauso nuo kiekvienam modeliui „OmniRoute“ turimos kainų lentelės. Modelis, kuriam nėra kainos
+- Jis priklauso nuo kiekvienam modeliui „67router“ turimos kainų lentelės. Modelis, kuriam nėra kainos
   įrašo, prisideda `0` kaina (naršyklėje jis rodomas kaip eilutė „Pasenęs / nemokamas“).
 - Naudojant nemokamus planus ir prenumeratas vis tiek kaupiasi _apskaičiuota_ kaina — tai yra
   jūsų sutaupoma, o ne mokėtina suma.
@@ -47,7 +47,7 @@ Kainos gaunamos iš kainų lentelės, parenkamos pagal šią pirmumo tvarką
 2. **Sinchronizuota išorinė kainodara** — gaunama iš viešo „LiteLLM“
    `model_prices_and_context_window.json`, kai sinchronizavimas įjungtas (saugoma atskiroje
    `pricing_synced` vardų srityje, todėl niekada neperrašo jūsų pakeitimų).
-3. **Kode įrašytos numatytosios reikšmės** — pateikiamos kartu su „OmniRoute“.
+3. **Kode įrašytos numatytosios reikšmės** — pateikiamos kartu su „67router“.
 
 Išorinės kainodaros sinchronizavimas yra **pasirenkamas** ir pagal numatytuosius nustatymus išjungtas. Susiję aplinkos kintamieji
 (žr. [`.env.example`](../../.env.example)):
@@ -192,7 +192,7 @@ nurodyta kitaip.
 
 ## CLI
 
-„OmniRoute“ CLI suteikia prieigą prie išlaidų, naudojimo ir kainodaros komandų (užregistruotų
+„67router“ CLI suteikia prieigą prie išlaidų, naudojimo ir kainodaros komandų (užregistruotų
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

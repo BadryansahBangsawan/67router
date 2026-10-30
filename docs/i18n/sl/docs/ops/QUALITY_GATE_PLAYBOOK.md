@@ -4,7 +4,7 @@
 
 ---
 
-> **Kaj je ta dokument.** Kritična ocena sistema kontrol kakovosti OmniRoute,
+> **Kaj je ta dokument.** Kritična ocena sistema kontrol kakovosti 67router,
 > primerjana z najboljšimi praksami v panogi, **ter** celovit katalog vseh kontrolnih
 > točk kakovosti in **od orodij neodvisen načrt replikacije** za uporabo istega sistema
 > pri katerem koli projektu. Ustvarjeno 2026-06-16 na podlagi dejanskega stanja repozitorija (ne po spominu).
@@ -108,62 +108,62 @@ za uvedbo v katerem koli tehnološkem skladu.
 
 ### 1. Slog in oblikovanje (deterministično, hitro)
 
-- **OmniRoute:** Prettier + ESLint prek lint-staged (pred potrditvijo), 2 presledka/dvojni narekovaji/100 stolpcev.
+- **67router:** Prettier + ESLint prek lint-staged (pred potrditvijo), 2 presledka/dvojni narekovaji/100 stolpcev.
 - **Splošno:** en samodejno popravljiv oblikovalnik + en pregledovalnik kode, ki se pred potrditvijo izvajata nad pripravljenimi datotekami.
 
 ### 2. Tipi
 
-- **OmniRoute:** `typecheck:core` (blokirajoče) + `typecheck:noimplicit:core` (svetovalno) + prag z enosmernim izboljševanjem `type-coverage` 92.17% + proračun uporabe `any` za posamezno datoteko.
+- **67router:** `typecheck:core` (blokirajoče) + `typecheck:noimplicit:core` (svetovalno) + prag z enosmernim izboljševanjem `type-coverage` 92.17% + proračun uporabe `any` za posamezno datoteko.
 - **Splošno:** strogo preverjanje tipov v CI + metrika pokritosti s tipi s pragom enosmernega izboljševanja + proračun za `any`/obvode za posamezno datoteko.
 
 ### 3. Testi (intenzivnost)
 
-- **OmniRoute:** 2 neprekrivajoča se izvajalnika (izvorni Node + vitest), 8 segmentov, globalna pokritost 60/60/60/60 + prag z enosmernim izboljševanjem ~76% + **8 pragov za posamezne kritične module** + nočni testi lastnosti + nočno **mutacijsko testiranje**.
+- **67router:** 2 neprekrivajoča se izvajalnika (izvorni Node + vitest), 8 segmentov, globalna pokritost 60/60/60/60 + prag z enosmernim izboljševanjem ~76% + **8 pragov za posamezne kritične module** + nočni testi lastnosti + nočno **mutacijsko testiranje**.
 - **Splošno:** izvajalnik(-i) testov + **absolutni** prag pokritosti (preprečuje ničelno pokritost) + **prag enosmernega izboljševanja** pokritosti (preprečuje nazadovanje) + **pragovi za posamezne visokotvegane module** (preprečujejo Goodhartov učinek) + testi na podlagi lastnosti za čisto logiko + nočno **mutacijsko testiranje** kot dejansko merilo kakovosti testov.
 
 ### 4. Pravilnik testiranja (proti izigravanju)
 
-- **OmniRoute:** `pr-test-policy` (produkcijska koda zahteva test), `check-test-masking` (blokira oslabljene trditve), `pr-evidence` (trditev o uspehu zahteva sklop dokazov), `test-discovery` (vsak test zajame eden od izvajalnikov).
+- **67router:** `pr-test-policy` (produkcijska koda zahteva test), `check-test-masking` (blokira oslabljene trditve), `pr-evidence` (trditev o uspehu zahteva sklop dokazov), `test-discovery` (vsak test zajame eden od izvajalnikov).
 - **Splošno:** varovalo »nova koda ⇒ nov test« + zaznavanje odstranjenih trditev/tavtologij + zahteva po dokazih (TDD ali aktivni test) + jamstvo, da noben test ne ostane osirotel zunaj vzorcev glob.
 
 ### 5. Kompleksnost in zdravje kode (pragovi enosmernega izboljševanja)
 
-- **OmniRoute:** opozorila ESLint (3769↓), podvajanje jscpd (5.72%↓), ciklomatska kompleksnost + največje število vrstic (1800↓), kognitivna kompleksnost sonarjs (753↓), mrtva koda/neuporabljeni izvozi knip (339↓), velikost posamezne datoteke (zamrznjena, dovoljeno le zmanjševanje), krožne odvisnosti (prilagojeni Tarjanov algoritem, blokirajoče).
+- **67router:** opozorila ESLint (3769↓), podvajanje jscpd (5.72%↓), ciklomatska kompleksnost + največje število vrstic (1800↓), kognitivna kompleksnost sonarjs (753↓), mrtva koda/neuporabljeni izvozi knip (339↓), velikost posamezne datoteke (zamrznjena, dovoljeno le zmanjševanje), krožne odvisnosti (prilagojeni Tarjanov algoritem, blokirajoče).
 - **Splošno:** za vsako metriko zdravja kode uporabite prag enosmernega izboljševanja (opozorila, podvajanje, ciklomatska **in** kognitivna kompleksnost, mrtva koda, velikost datotek, uvozni cikli). Smer je vedno »brez nazadovanja«.
 
 ### 6. Statična varnost (SAST + skrivnosti)
 
-- **OmniRoute:** CodeQL (prag opozoril z enosmernim izboljševanjem = 0), gitleaks (`[extend] useDefault=true` — ključno!), SonarQube, prilagojena varnostna pravila (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (prag opozoril z enosmernim izboljševanjem = 0), gitleaks (`[extend] useDefault=true` — ključno!), SonarQube, prilagojena varnostna pravila (public-creds, error-helper, route-guard-membership, route-validation).
 - **Splošno:** SAST (CodeQL/Sonar/semgrep) s pragom opozoril z enosmernim izboljševanjem + pregledovalnik skrivnosti s **podedovanim privzetim naborom pravil** (prilagojena konfiguracija, ki prepiše privzeto, pomeni slepo pego) + projektno specifična varnostna varovala na podlagi strogih pravil.
 
 ### 7. Dobavna veriga (odvisnosti)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (seznam dovoljenih licenc SPDX), lockfile-lint (HTTPS+sha512+register), `check-deps` proti slopsquattingu (seznam dovoljenih + starost ≥72 h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (seznam dovoljenih licenc SPDX), lockfile-lint (HTTPS+sha512+register), `check-deps` proti slopsquattingu (seznam dovoljenih + starost ≥72 h).
 - **Splošno:** večvhodni SCA + seznam dovoljenih licenc + preverjanje celovitosti datoteke zaklepa + seznam dovoljenih odvisnosti s preverjanjem starosti/tipografskega zavajanja + bot za združene posodobitve.
 
 ### 8. Dobavna veriga (gradnja in izdaja)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), poreklo SLSA (`--provenance`), OpenSSF Scorecard (tedensko), utrjevanje delovnih tokov (zizmor: artipacked→`persist-credentials:false`, zastrupljanje predpomnilnika, dovoljenja žetonov).
+- **67router:** SBOM (CycloneDX + syft), poreklo SLSA (`--provenance`), OpenSSF Scorecard (tedensko), utrjevanje delovnih tokov (zizmor: artipacked→`persist-credentials:false`, zastrupljanje predpomnilnika, dovoljenja žetonov).
 - **Splošno:** ob objavi ustvarite SBOM + podpisano poreklo (SLSA L2+) + načrtovano izvajanje Scorecard + utrditev vseh delovnih tokov (žetoni z najmanjšimi potrebnimi pravicami, brez trajno shranjenih poverilnic pri prevzemu kode, ki ne potiska sprememb, dejanja pripeta s SHA).
 
 ### 9. Pogodbe in API
 
-- **OmniRoute:** oasdiff (prelomne spremembe OpenAPI), schemathesis (nočno mehko testiranje pogodbe), openapi-coverage (% dokumentiranih poti, prag z enosmernim izboljševanjem 38.3%), openapi-security-tiers (specifikacija v primerjavi z varovalom poti).
+- **67router:** oasdiff (prelomne spremembe OpenAPI), schemathesis (nočno mehko testiranje pogodbe), openapi-coverage (% dokumentiranih poti, prag z enosmernim izboljševanjem 38.3%), openapi-security-tiers (specifikacija v primerjavi z varovalom poti).
 - **Splošno:** primerjava pogodb za prelomne spremembe (oasdiff/buf) + mehko testiranje na podlagi lastnosti glede na specifikacijo (schemathesis) + pokritost dokumentacije s pragom enosmernega izboljševanja + skladnost specifikacije s kodo.
 
 ### 10. Dokumentacija in i18n (proti zastaranju)
 
-- **OmniRoute:** docs-sync (zrcaljene različice), docs-counts-sync (številke v dokumentaciji v primerjavi s kodo), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + prag z enosmernim izboljševanjem 80.1%).
+- **67router:** docs-sync (zrcaljene različice), docs-counts-sync (številke v dokumentaciji v primerjavi s kodo), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + prag z enosmernim izboljševanjem 80.1%).
 - **Splošno:** usklajevanje različic/števil/spremenljivk okolja med dokumentacijo in kodo (varovalo, ne zaupanje) + preverjanje notranjih povezav + pokritost i18n s pragom enosmernega izboljševanja.
 
 ### 11. Preprečevanje halucinacij/skladnost (redka kategorija)
 
-- **OmniRoute:** known-symbols (posredovanje prek niza ⇒ obstoječi simbol), provider-consistency, fetch-targets (odjemalski fetch ⇒ dejanska pot), docs-symbols, db-rules (strogi pravili št. 2/5), migration-numbering.
+- **67router:** known-symbols (posredovanje prek niza ⇒ obstoječi simbol), provider-consistency, fetch-targets (odjemalski fetch ⇒ dejanska pot), docs-symbols, db-rules (strogi pravili št. 2/5), migration-numbering.
 - **Splošno:** za vsak »podvojeni vir resnice« (register, posredovanje prek nizov, sklici med plastmi) uvedite varovalo, ki dokazuje ujemanje obeh strani. To odkrije propadanje, ki ga preverjanje tipov/testiranje ne zazna.
 
 ### 12. Odpornost in domena (specifično za izdelek)
 
-- **OmniRoute:** kaos (vbrizgavanje napak), rast kopice (uhajanje pomnilnika), k6 (dolgotrajno obremenitveno testiranje), promptfoo+garak (napadalno testiranje LLM glede na OWASP LLM Top 10), trije zakoni odpornosti (odklopnik/čas ohlajanja/zaklep).
+- **67router:** kaos (vbrizgavanje napak), rast kopice (uhajanje pomnilnika), k6 (dolgotrajno obremenitveno testiranje), promptfoo+garak (napadalno testiranje LLM glede na OWASP LLM Top 10), trije zakoni odpornosti (odklopnik/čas ohlajanja/zaklep).
 - **Splošno:** določite načine odpovedi v **svoji** domeni in za vsakega uvedite varovalo (četudi se izvaja ponoči). Za aplikacije umetne inteligence: napadalno testiranje z vbrizgavanjem. Za porazdeljene sisteme: kaos + uhajanje pomnilnika + dolgotrajna obremenitev.
 
 ---

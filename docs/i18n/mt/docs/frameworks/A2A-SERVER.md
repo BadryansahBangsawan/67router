@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Malti)
+# 67router A2A Server Documentation (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Protokoll Bejn Aġent u Aġent v0.3 — OmniRoute bħala aġent intelliġenti tar-rotot
+> Protokoll Bejn Aġent u Aġent v0.3 — 67router bħala aġent intelliġenti tar-rotot
 
 L-interfaċċa A2A għandha żewġ aspetti:
 
@@ -19,7 +19,7 @@ Il-kompiti jiġu ssorveljati minn `A2ATaskManager` (`src/lib/a2a/taskManager.ts`
 curl http://localhost:20128/.unknown/agent.json
 ```
 
-Jirritorna l-Kard tal-Aġent li tiddeskrivi l-kapaċitajiet, l-għarfien, u r-rekwiżiti tal-awtentikazzjoni tal-OmniRoute.
+Jirritorna l-Kard tal-Aġent li tiddeskrivi l-kapaċitajiet, l-għarfien, u r-rekwiżiti tal-awtentikazzjoni tal-67router.
 
 Il-qasam `version` tal-Kard tal-Aġent jiġi mill- `process.env.npm_package_version` (ara `src/app/.well-known/agent.json/route.ts:13`), għalhekk jibqa' jiġi sinkronizzat awtomatikament mal-`package.json` f'kull rilaxx.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Ħiliet Disponibbli
 
-OmniRoute jesponi 6 ħiliet A2A konnessi f'`src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Kull modulu ta' ħila jinsab f'`src/lib/a2a/skills/`.
+67router jesponi 6 ħiliet A2A konnessi f'`src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Kull modulu ta' ħila jinsab f'`src/lib/a2a/skills/`.
 
 | Ħila               | ID                   | Deskrizzjoni                                                                                                                                                            | Tikketti                   | Eżempji                                        |
 | :----------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :--------------------------------------------- |
-| Smart Routing      | `smart-routing`      | Irotta prompt permezz tal-provider/combo ottimali billi juża l-magna tal-combo ta' OmniRoute flimkien mal-iskorjar                                                      | routing, providers         | "Irotta dan il-prompt l-aħjar mudell"          |
+| Smart Routing      | `smart-routing`      | Irotta prompt permezz tal-provider/combo ottimali billi juża l-magna tal-combo ta' 67router flimkien mal-iskorjar                                                       | routing, providers         | "Irotta dan il-prompt l-aħjar mudell"          |
 | Quota Management   | `quota-management`   | Jirrapporta l-istat tal-kwota għal kull provider, jgħin lill-sejħa jiddeċiedu meta jnaqqsu r-rata jew jibdlu                                                            | quota, providers           | "Iċċekkja l-kwota għal anthropic"              |
 | Provider Discovery | `provider-discovery` | Jelenka l-providers installati bil-kapaċitajiet, il-bandieri tal-free-tier, u l-istatus tal-OAuth                                                                       | providers, discovery       | "Liema providers huma disponibbli?"            |
 | Cost Analysis      | `cost-analysis`      | Jistima l-ispiża ta' talba/konversazzjoni abbażi tal-katalgu u l-użu reċenti                                                                                            | cost, usage                | "Istima l-ispiża ta' din il-konversazzjoni"    |
 | Health Report      | `health-report`      | Jaggrèga l-istat ta' circuit breaker, cooldown, u lockout għal kull provider                                                                                            | health, resilience         | "Uri l-istatus tas-saħħa tal-providers kollha" |
-| List Capabilities  | `list-capabilities`  | Jirritorna l-katalgu sħiħ ta' 43-il dħul tal-Agent Skills (22 API + 20 CLI + 1 config) bħala tabella markdown bil-URLs grezzi tas-SKILL.md għall-injezzjoni tal-kuntest | catalog, discovery, skills | "Elenka l-kapaċitajiet kollha ta' OmniRoute"   |
+| List Capabilities  | `list-capabilities`  | Jirritorna l-katalgu sħiħ ta' 43-il dħul tal-Agent Skills (22 API + 20 CLI + 1 config) bħala tabella markdown bil-URLs grezzi tas-SKILL.md għall-injezzjoni tal-kuntest | catalog, discovery, skills | "Elenka l-kapaċitajiet kollha ta' 67router"    |
 
 > L-Agent Card għandu jinżamm allinjat mal-katalgu ħaj ta' 375 provider; il-għadd tal-providers u l-metadata ta' b'xejn/bla avtentikazzjoni jittieħdu mir-reġistru tal-runtime.
 
 ### Dettall tal-Ħila `list-capabilities`
 
-Il-ħila `list-capabilities` hija partikolarment utli għal aġenti esterni li jeħtieġilhom jiskopru x'jesponi OmniRoute qabel ma jibagħtu sejħiet API. Tirritorna artefatt b'tabella markdown strutturata:
+Il-ħila `list-capabilities` hija partikolarment utli għal aġenti esterni li jeħtieġilhom jiskopru x'jesponi 67router qabel ma jibagħtu sejħiet API. Tirritorna artefatt b'tabella markdown strutturata:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ Il-punt ta' dħul JSON-RPC `/a2a` huwa l-punt A2A kanoniku. L-estremitajiet REST
 | `/.well-known/agent.json`    | GET    | Kard tal-Aġent (scoperta A2A)                                         | (pubbliku, cached 3600s)                     |
 | `/api/a2a/tasks`             | POST   | Deleġazzjoni inbound lejn il-frotta OmniConductor (Conductor PRD RF5) | Bearer vs `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Deleġazzjoni inbound Conductor (`POST /api/a2a/tasks`):** aġenti A2A esterni jiddelegaw xogħol tal-kodifikazzjoni lill-frotta OmniConductor permezz ta' OmniRoute. Korpus: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — biss il-ħiliet tal-frotta Conductor (dawk imħabbar fil-Kard tal-Aġent) huma delegabbli; `metadata.conductor.repo.url` meħtieġa (il-frotta taħdem fuq repos git). It-traduzzjoni ssir lejn il-`POST /v1/tasks` tal-hub billi juża l-`CONDUCTOR_ORCHESTRATOR_TOKEN` tal-server (fallback `CONDUCTOR_HUB_TOKEN`) u jirritorna `201 { conductor_task_id, state: "submitted" }`; l-istati tal-impjieġ jiġbru lura permezz tal-mirja SSE→A2A (RF1) u huma viżibbli permezz ta' `GET /api/a2a/tasks?skill=conductor`.
+**Deleġazzjoni inbound Conductor (`POST /api/a2a/tasks`):** aġenti A2A esterni jiddelegaw xogħol tal-kodifikazzjoni lill-frotta OmniConductor permezz ta' 67router. Korpus: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — biss il-ħiliet tal-frotta Conductor (dawk imħabbar fil-Kard tal-Aġent) huma delegabbli; `metadata.conductor.repo.url` meħtieġa (il-frotta taħdem fuq repos git). It-traduzzjoni ssir lejn il-`POST /v1/tasks` tal-hub billi juża l-`CONDUCTOR_ORCHESTRATOR_TOKEN` tal-server (fallback `CONDUCTOR_HUB_TOKEN`) u jirritorna `201 { conductor_task_id, state: "submitted" }`; l-istati tal-impjieġ jiġbru lura permezz tal-mirja SSE→A2A (RF1) u huma viżibbli permezz ta' `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute résout son pilote SQLite au démarrage au moyen d’une chaîne de repli en 5 étapes :
+67router résout son pilote SQLite au démarrage au moyen d’une chaîne de repli en 5 étapes :
 
 1. **`better-sqlite3` fourni** (via `dependencies` dans `package.json`)
    — le plus rapide, binaire natif, installé par `npm install` lorsque les outils de compilation sont présents.
@@ -28,13 +28,13 @@ OmniRoute résout son pilote SQLite au démarrage au moyen d’une chaîne de re
 - **Absence d’outils de compilation** : certains environnements (Windows d’entreprise sans VS Build
   Tools, images Docker minimales) ne peuvent pas compiler `better-sqlite3`. Le programme d’installation
   à l’exécution récupère un binaire précompilé depuis le registre npm ; les pilotes de repli
-  garantissent qu’OmniRoute démarre quand même en cas d’échec.
+  garantissent que 67router démarre quand même en cas d’échec.
 - **Systèmes isolés du réseau** : si le registre npm est inaccessible, `node:sqlite`
   ou `sql.js` garantit un fonctionnement de base.
 
 ## Validation des octets magiques
 
-Avant de charger un fichier `.node` installé à l’exécution, OmniRoute lit les 8 premiers
+Avant de charger un fichier `.node` installé à l’exécution, 67router lit les 8 premiers
 octets et les compare aux signatures connues des plateformes :
 
 | Plateforme            | Octets (hex)  | Libellé     |
@@ -104,9 +104,9 @@ Implémentation :
 ## Topologie à processus d’écriture unique (HA non prise en charge)
 
 La chaîne de repli des pilotes ci-dessus s’exécute toujours dans **un seul processus**. Par défaut, SQLite
-dans OmniRoute n’autorise qu’**un seul processus d’écriture** :
+dans 67router n’autorise qu’**un seul processus d’écriture** :
 
-- Ne connectez pas deux répliques OmniRoute au même fichier `storage.sqlite`.
+- Ne connectez pas deux répliques 67router au même fichier `storage.sqlite`.
 - Un redémarrage de conteneur, un déploiement Recreate, un arrêt pour dépassement de mémoire ou un redémarrage HEALTHCHECK interrompt
   toutes les sessions SSE en cours. Aucun drainage des sessions n’est prévu dans le chemin standard.
 - Un contrôle de vivacité de l’orchestrateur qui considère un `/healthz` lent comme indisponible arrêtera l’unique

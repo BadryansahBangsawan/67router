@@ -5,7 +5,7 @@
 ---
 
 セルフホストプールは **.113** マシン（`tomni-proxmox-113`）で稼働しています。2026-10-18 以降、各
-OmniRoute ランナーには **1 つの役割** と 1 つのラベルが割り当てられ、メモリ/CPU 予算は測定されたワークロードに
+67router ランナーには **1 つの役割** と 1 つのラベルが割り当てられ、メモリ/CPU 予算は測定されたワークロードに
 合わせて設定されています。Turbopack スロットにはビルドに必要なリソースを割り当て、その他のスロットは
 測定されたピーク値に合わせてサイジングされています。マシンがオーバーコミット状態になるのは、Turbopack ビルド、
 Release-Green webpack ビルド、lint ジョブが同時に実行された場合のみです。その場合はホストのスワップ（16 GB）が
@@ -28,7 +28,7 @@ Release-Green webpack ビルド、lint ジョブが同時に実行された場�
 | スワップ  | 16 GB                    | `omniroute-113-5` はスワップを無効にして実行されるため（`MemorySwapMax=0`）、暴走したビルドはマシンをスワップ状態に陥らせる代わりに、設定された上限で強制終了されます                                                                                                                                                                                                                                        |
 | `/tmp`    | **12 GB tmpfs = RAM**    | ここに置かれたものはすべてメモリを消費します。残存ファイルは 3 時間後に削除されます                                                                                                                                                                                                                                                                                                                          |
 | CPU       | 32 コアで load 60 を観測 | クォータ導入前は、1 件の Turbopack ビルド（CPU 約 1166 %）とカバレッジスイートを同じマシンで実行すると、他のリスナーのハートビートがリソース不足に陥っていました（`The self-hosted runner lost communication`、#16853）                                                                                                                                                                                      |
-| ランナー  | **6 リスナー**           | OmniRoute 4 台 + OmniHeuris + OmniMind。`omniroute-113-3/-4/-7/-8` は無効化されています（`systemctl enable --now` で 1 台を復帰できます）                                                                                                                                                                                                                                                                    |
+| ランナー  | **6 リスナー**           | 67router 4 台 + OmniHeuris + OmniMind。`omniroute-113-3/-4/-7/-8` は無効化されています（`systemctl enable --now` で 1 台を復帰できます）                                                                                                                                                                                                                                                                     |
 
 制限値は各ユニットの `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 に保存されています（以前の値は `override.conf.bak-20261018` として保持）。これらは
@@ -67,7 +67,7 @@ worker がジョブを cancelled として報告し、listener は自動的に�
 
 runner のデフォルトである `KillMode=process` では、ユニットを停止または再起動しても
 `Runner.Worker → npm → next-build` が動作し続けます。孤立した build が、ジョブが紐付いていないまま RAM と
-CPU を消費し続けます。すべての OmniRoute ユニットには、
+CPU を消費し続けます。すべての 67router ユニットには、
 `KillMode=mixed` を設定する drop-in
 （`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`）
 があります。まず listener に SIGTERM を送り、`TimeoutStop` の時点で cgroup 全体に
@@ -110,7 +110,7 @@ SIGKILL を送ります。この設定は、ユニットの次回再起動時に
   バックエンド専用の `next build`（約 5～6 GB、webpack）が必要な nightly と、`quality.yml` の `lint-guard` を実行します。`omniroute-113`
   では 2026-10-18 まで `MemoryHigh=4G` でした。そのため、promptfoo ビルドは 54 分間、メモリを回収しながら
   何とか処理を進めていました。8 GB にすることでスロットリングが解消されます。
-- **リスナー数を意図的に削減。** 2026-08-29 に 4 つの OmniRoute ユニットを無効化しました。追加の
+- **リスナー数を意図的に削減。** 2026-08-29 に 4 つの 67router ユニットを無効化しました。追加の
   リスナーはそれぞれ、上記のメモリ予算を消費する新たなテナントになります。janitor の上限は 6 です（cron の `MAX_ACTIVE_RUNNERS=6`）。これは
   マシン上のすべての `Runner.Listener` をカウントし、OmniHeuris と OmniMind が、こちらの 4 つに加えて 2 つを使用します。
 - **いずれかのランナーが稼働中の場合、`/tmp` または `_work` を手動でクリーンアップしてはなりません。**

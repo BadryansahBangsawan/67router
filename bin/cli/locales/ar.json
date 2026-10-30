@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "خطأ: {message}",
-    "serverOffline": "خادم OmniRoute غير متصل. ابدأ بالأمر: omniroute serve",
+    "serverOffline": "خادم 67router غير متصل. ابدأ بالأمر: omniroute serve",
     "authRequired": "المصادقة مطلوبة. عيّن OMNIROUTE_API_KEY أو شغّل: omniroute setup",
     "rateLimited": "تم تجاوز حد الطلبات. أعد المحاولة بعد {seconds} ثانية.",
     "timeout": "انتهت مهلة الطلب بعد {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "تخطي رسالة التأكيد"
   },
   "setup": {
-    "title": "إعداد OmniRoute",
+    "title": "إعداد 67router",
     "passwordPrompt": "كلمة مرور المسؤول",
     "providerPrompt": "المزوّد الافتراضي (اتركه فارغًا للتخطي)",
     "done": "اكتمل الإعداد",
@@ -30,7 +30,7 @@
     "opencode": "ثبّت وعيّن إعدادات @omniroute/opencode-plugin المضمّنة لـ OpenCode"
   },
   "doctor": {
-    "title": "أداة تشخيص OmniRoute",
+    "title": "أداة تشخيص 67router",
     "dbOk": "قاعدة البيانات: سليمة ({path})",
     "dbMissing": "قاعدة البيانات: غير مهيأة — شغّل `omniroute setup`",
     "portOk": "المنفذ {port}: متاح",
@@ -82,7 +82,7 @@
       "providerOpt": "التصفية حسب اسم موفّر الخدمة",
       "header": "المعرّف     موفّر الخدمة   الاسم                     حالة الانتهاء  حالة الاختبار  انتهاء فترة الانتظار",
       "noData": "لا تتوفر بيانات لاتصالات موفّري الخدمة.",
-      "requiresServer": "يتطلب providers status أن يكون خادم OmniRoute قيد التشغيل."
+      "requiresServer": "يتطلب providers status أن يكون خادم 67router قيد التشغيل."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "إضافة مفتاح API لموفّر خدمة أو تحديثه",
     "listDescription": "عرض جميع مفاتيح API المهيّأة",
     "removeDescription": "إزالة مفتاح API لموفّر خدمة",
-    "regenerateDescription": "إعادة إنشاء مفتاح API خاص بـ OmniRoute",
-    "revokeDescription": "إلغاء مفتاح API خاص بـ OmniRoute",
+    "regenerateDescription": "إعادة إنشاء مفتاح API خاص بـ 67router",
+    "revokeDescription": "إلغاء مفتاح API خاص بـ 67router",
     "revealDescription": "إظهار قيمة مفتاح API غير المحجوبة",
     "usageDescription": "عرض الاستخدام الأخير لمفتاح API",
     "usageLimitOpt": "عدد الطلبات الأخيرة",
@@ -225,7 +225,7 @@
     "noCombo": "لم يتم العثور على تركيبة مطابقة. اضبط واحدة باستخدام: omniroute combo create"
   },
   "chat": {
-    "description": "أرسل مطالبة دردشة لمرة واحدة إلى OmniRoute",
+    "description": "أرسل مطالبة دردشة لمرة واحدة إلى 67router",
     "file": "اقرأ المطالبة من ملف",
     "stdin": "اقرأ المطالبة من stdin",
     "system": "مطالبة النظام",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "بدء تشغيل خادم OmniRoute (الإجراء الافتراضي)",
-    "starting": "جارٍ بدء تشغيل خادم OmniRoute على المنفذ {port}...",
+    "description": "بدء تشغيل خادم 67router (الإجراء الافتراضي)",
+    "starting": "جارٍ بدء تشغيل خادم 67router على المنفذ {port}...",
     "ready": "جاهز على http://localhost:{port}",
     "stopping": "جارٍ إيقاف الخادم (PID {pid})...",
     "stopped": "تم إيقاف الخادم.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "نسخة احتياطية",
-    "description": "إنشاء نسخة احتياطية من بيانات OmniRoute",
+    "description": "إنشاء نسخة احتياطية من بيانات 67router",
     "creating": "جارٍ إنشاء النسخة الاحتياطية...",
     "done": "حُفظت النسخة الاحتياطية في {path}",
     "noFiles": "لا توجد ملفات لنسخها احتياطيًا (لم تتم تهيئة قاعدة البيانات)",
@@ -277,7 +277,7 @@
     "noBackups": "لم يتم العثور على نسخ احتياطية.",
     "notFound": "لم يتم العثور على النسخة الاحتياطية: {name}",
     "confirmRestore": "هل تريد استبدال البيانات الحالية بالنسخة الاحتياطية المنشأة في {ts}؟",
-    "createDescription": "إنشاء نسخة احتياطية من بيانات OmniRoute",
+    "createDescription": "إنشاء نسخة احتياطية من بيانات 67router",
     "nameOpt": "اسم مخصص للنسخة الاحتياطية",
     "cloudOpt": "رفع النسخة الاحتياطية إلى التخزين السحابي",
     "encryptOpt": "تشفير النسخة الاحتياطية باستخدام AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "فشل مسح ذاكرة التخزين المؤقت."
   },
   "redis": {
-    "description": "تشغيل حاوية Redis محلية بضغطة واحدة (Podman أو Docker) لتخزين التخزين المؤقت وتتبع الحصة في OmniRoute"
+    "description": "تشغيل حاوية Redis محلية بضغطة واحدة (Podman أو Docker) لتخزين التخزين المؤقت وتتبع الحصة في 67router"
   },
   "test": {
     "description": "اختبار الاتصال بمزود الخدمة",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "إدارة سياسات التخويل في OmniRoute",
+    "description": "إدارة سياسات التخويل في 67router",
     "list": {
       "description": "عرض السياسات",
       "kind": "التصفية حسب النوع (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "تهيئة مسار الضغط في OmniRoute وفحصه",
+    "description": "تهيئة مسار الضغط في 67router وفحصه",
     "status": {
       "description": "عرض حالة الضغط وإعداداته الحالية"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "هل تريد تبديل عنوان URL للنفق {type}؟ (سيتم إنشاء عنوان URL جديد)"
   },
   "stop": {
-    "description": "إيقاف خادم OmniRoute",
+    "description": "إيقاف خادم 67router",
     "stopping": "جارٍ إيقاف الخادم (PID {pid})...",
     "stopped": "تم إيقاف الخادم.",
     "notRunning": "لا يوجد خادم قيد التشغيل.",
     "portFallback": "لم يتم العثور على ملف PID، جارٍ محاولة الإيقاف استنادًا إلى المنفذ..."
   },
   "restart": {
-    "description": "إعادة تشغيل خادم OmniRoute",
-    "restarting": "جارٍ إعادة تشغيل خادم OmniRoute..."
+    "description": "إعادة تشغيل خادم 67router",
+    "restarting": "جارٍ إعادة تشغيل خادم 67router..."
   },
   "dashboard": {
-    "description": "فتح لوحة معلومات OmniRoute في متصفح",
+    "description": "فتح لوحة معلومات 67router في متصفح",
     "opening": "جارٍ فتح لوحة المعلومات على {url}",
     "urlOnly": "طباعة عنوان URL للوحة المعلومات دون فتح المتصفح",
     "tui": "فتح لوحة معلومات TUI التفاعلية (واجهة طرفية، 7 علامات تبويب)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "إدارة مهارات OmniRoute (sandbox، builtin، custom، hybrid، skillssh)",
+    "description": "إدارة مهارات 67router (sandbox، builtin، custom، hybrid، skillssh)",
     "list": {
       "description": "عرض قائمة المهارات المثبّتة",
       "type": "التصفية حسب النوع (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "إدارة الذاكرة الحوارية في OmniRoute ‏(FTS5 + vector)",
+    "description": "إدارة الذاكرة الحوارية في 67router ‏(FTS5 + vector)",
     "search": {
       "description": "البحث في إدخالات الذاكرة باستخدام استعلام دلالي",
       "type": "تصفية حسب نوع الذاكرة (user|feedback|project|reference)",
@@ -792,14 +792,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — جهاز توجيه الذكاء الاصطناعي مع التبديل التلقائي",
+    "description": "67router — جهاز توجيه الذكاء الاصطناعي مع التبديل التلقائي",
     "version": "عرض الإصدار والخروج",
     "output": "تنسيق الإخراج (table, json, jsonl, csv)",
     "quiet": "إخفاء المخرجات غير الأساسية",
     "no_color": "تعطيل الإخراج الملوّن",
     "timeout": "مهلة طلب HTTP بالميلي ثانية",
-    "api_key": "مفتاح API لخادم OmniRoute",
-    "base_url": "عنوان URL الأساسي لخادم OmniRoute",
+    "api_key": "مفتاح API لخادم 67router",
+    "base_url": "عنوان URL الأساسي لخادم 67router",
     "context": "سياق/ملف تعريف الخادم المستخدم في هذا الأمر",
     "lang": "تعيين لغة عرض CLI (يتجاوز OMNIROUTE_LANG)"
   },
@@ -997,7 +997,7 @@
     }
   },
   "openapi": {
-    "description": "الوصول إلى مواصفات OmniRoute OpenAPI واختبارها",
+    "description": "الوصول إلى مواصفات 67router OpenAPI واختبارها",
     "dump": {
       "description": "تفريغ مواصفات OpenAPI إلى stdout أو ملف",
       "format": "تنسيق الإخراج: yaml|json (الافتراضي: yaml)",
@@ -1040,7 +1040,7 @@
     }
   },
   "open": {
-    "description": "فتح صفحة محددة من لوحة معلومات OmniRoute في المتصفح",
+    "description": "فتح صفحة محددة من لوحة معلومات 67router في المتصفح",
     "url": "طباعة عنوان URL فقط، دون فتح المتصفح"
   },
   "telemetry": {
@@ -1057,7 +1057,7 @@
     }
   },
   "sync": {
-    "description": "مزامنة الإعدادات بين مثيلات OmniRoute",
+    "description": "مزامنة الإعدادات بين مثيلات 67router",
     "push": {
       "description": "دفع الإعدادات إلى السحابة أو إلى مثيل بعيد"
     },
@@ -1116,7 +1116,7 @@
     "filter": "التصفية حسب المستوى (error,warn,info) — مفصولة بفواصل",
     "lines": "عدد الأسطر المطلوب جلبها",
     "timeout": "مهلة الاتصال بالمللي ثانية",
-    "baseUrl": "عنوان URL الأساسي لواجهة OmniRoute API",
+    "baseUrl": "عنوان URL الأساسي لواجهة 67router API",
     "requestId": "التصفية حسب معرّف الطلب",
     "apiKey": "التصفية حسب مفتاح API",
     "combo": "التصفية حسب اسم التركيبة",
@@ -1132,10 +1132,10 @@
     "description": "التحكم في أيقونة علبة النظام",
     "show": "إظهار أيقونة علبة النظام (إذا كان الخادم يعمل مع --tray)",
     "hide": "إخفاء أيقونة علبة النظام",
-    "quit": "إنهاء OmniRoute عبر علبة النظام"
+    "quit": "إنهاء 67router عبر علبة النظام"
   },
   "autostart": {
-    "description": "إدارة التشغيل التلقائي لـ OmniRoute عند الإقلاع (Linux: خدمة مستخدم systemd)",
+    "description": "إدارة التشغيل التلقائي لـ 67router عند الإقلاع (Linux: خدمة مستخدم systemd)",
     "enable": "تمكين التشغيل التلقائي عند الإقلاع",
     "disable": "تعطيل التشغيل التلقائي عند الإقلاع",
     "toggle": "تبديل حالة التشغيل التلقائي عند الإقلاع",
@@ -1167,19 +1167,19 @@
     "scaffold": "إنشاء هيكل أولي لإضافة جديدة"
   },
   "launch": {
-    "description": "تشغيل Claude Code موجّهًا إلى OmniRoute (محليًا أو عن بُعد، باستخدام --profile)",
+    "description": "تشغيل Claude Code موجّهًا إلى 67router (محليًا أو عن بُعد، باستخدام --profile)",
     "token": "الرمز المميز الذي يجب أن يرسله عميل Claude ‏(ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "يتعذر الوصول إلى OmniRoute على {port}. شغّله باستخدام 'omniroute serve'.",
+    "notRunning": "يتعذر الوصول إلى 67router على {port}. شغّله باستخدام 'omniroute serve'.",
     "notFound": "لم يتم العثور على واجهة CLI المسماة 'claude' في PATH."
   },
   "run": {
-    "description": "تشغيل هدف CLI مدعوم عبر OmniRoute"
+    "description": "تشغيل هدف CLI مدعوم عبر 67router"
   },
   "setupClaude": {
-    "description": "إنشاء ملفات تعريف Claude Code في ~/.claude/profiles من كتالوج نماذج OmniRoute"
+    "description": "إنشاء ملفات تعريف Claude Code في ~/.claude/profiles من كتالوج نماذج 67router"
   },
   "connect": {
-    "description": "الاتصال بخادم OmniRoute بعيد والدخول إلى الوضع البعيد"
+    "description": "الاتصال بخادم 67router بعيد والدخول إلى الوضع البعيد"
   },
   "tokens": {
     "description": "إدارة رموز وصول CLI محددة النطاق (الوضع البعيد)"
@@ -1188,10 +1188,10 @@
     "description": "اختيار موفّر ونموذج من الخادم النشط وتهيئة CLI محلية مدعومة"
   },
   "launchCodex": {
-    "description": "تشغيل Codex CLI موجّهًا إلى OmniRoute (محليًا أو على VPS بعيد)"
+    "description": "تشغيل Codex CLI موجّهًا إلى 67router (محليًا أو على VPS بعيد)"
   },
   "setupCodex": {
-    "description": "إنشاء ملفات تعريف في ~/.codex من كتالوج نماذج OmniRoute المباشر"
+    "description": "إنشاء ملفات تعريف في ~/.codex من كتالوج نماذج 67router المباشر"
   },
   "packs": {
     "description": "إدارة حزم وقت التشغيل الاختيارية (ML / أتمتة المتصفح)",
@@ -1204,7 +1204,7 @@
     "errUnknown": "حزمة غير معروفة: {name}",
     "errNoIndex": "لم يتم العثور على فهرس الحزم؛ مرّر --source <dir> الذي يحتوي على محتويات الحزمة (تتضمنه حزم سطح المكتب بجوار التطبيق)",
     "installed": "تم تثبيت الحزمة \"{name}\" والتحقق منها في {dir}",
-    "restartHint": "أعد تشغيل خادم OmniRoute (أو تطبيق سطح المكتب) ليتمكن وقت التشغيل من التعرّف على الحزمة",
+    "restartHint": "أعد تشغيل خادم 67router (أو تطبيق سطح المكتب) ليتمكن وقت التشغيل من التعرّف على الحزمة",
     "removed": "تمت إزالة الحزمة \"{name}\"",
     "notInstalled": "لم تكن الحزمة \"{name}\" مثبّتة",
     "verifyOk": "تم التحقق من جميع الحزم المثبّتة",

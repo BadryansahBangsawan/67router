@@ -5,7 +5,7 @@
 ---
 
 Déanann an cháipéis seo cur síos ar an mbunús ródúcháin oiriúnaithigh faoi stiúir aiseolais a cuireadh le
-OmniRoute. Tá sé beag d’aon ghnó: tugann sé isteach cainéal clóscríofa do thoradh
+67router. Tá sé beag d’aon ghnó: tugann sé isteach cainéal clóscríofa do thoradh
 ródúcháin, comhartha cáilíochta ar líne a chuireann leis an scórálaí auto-combo atá ann cheana, easpórtálaí
 roghnach OpenTelemetry, agus críochphointe inmhínitheachta. **Ní thagann sé**
 in ionad na sraithe athléimneachta atá ann cheana (scoradán ciorcaid, tréimhse shuaimhnithe naisc,
@@ -13,7 +13,7 @@ frithdhúnadh samhla, maitrís sláinte, uathphíolóta) — comhlánaíonn sé 
 
 ## 1. Comhthéacs ailtireachta
 
-Is plána sonraí é OmniRoute ina bhfuil **conair the iarratais** agus **plána rialaithe/intleachta**.
+Is plána sonraí é 67router ina bhfuil **conair the iarratais** agus **plána rialaithe/intleachta**.
 Ní mór don chonair the fanacht tapa, éifeachtúil ó thaobh cuimhne de, aisioncrónach, athléimneach agus
 intuartha. Is leis an bplána rialaithe a bhaineann meastóireacht, scóráil cáilíochta, turgnaimh agus anailís stairiúil.
 
@@ -22,7 +22,7 @@ Gníomhaire AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   plána sonraí (tapa, sioncrónach, sa chuimhne)
+│    67router        │   plána sonraí (tapa, sioncrónach, sa chuimhne)
 │  ródú / teipaistriú │
 │  sláinte / ráille cosanta │
 │  taisce / sruthú    │
@@ -236,7 +236,7 @@ Comhaid: `open-sse/services/routing/otel.ts`
 - Leanann réisí coinbhinsiúin shéimeantacha GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) mar aon le tréithe ródúcháin
-  OmniRoute (toradh, stádas, ttft, atrialacha, cúlteagmhas).
+  67router (toradh, stádas, ttft, atrialacha, cúlteagmhas).
 - Ní chuireann `record()` ach míreanna i scuaine i maolán teoranta (O(1)); déanann amadóir cúlra
   folmhú go neamhshioncrónach trí `POST {endpoint}/v1/traces`. Faoi ró-ualach,
   caitear amach na teagmhais is sine (áiritheoir `dropped`) — ní chuirtear frithbhrú ar an
@@ -257,7 +257,7 @@ Comhaid: `open-sse/services/routing/otel.ts`
 
 ## 6. Comhtháthú an phlána meastóireachta (ullmhacht do Future AGI)
 
-Caitheann OmniRoute le Future AGI (nó le haon mheastóir) mar **inneall
+Caitheann 67router le Future AGI (nó le haon mheastóir) mar **inneall
 faisnéise/meastóireachta féideartha, ní mar spleáchas**. Seo iad na pointí comhtháthaithe:
 
 - Is féidir le `RoutingEventSink` teagmhais a chur ar aghaidh chuig meastóir go neamhshioncrónach.

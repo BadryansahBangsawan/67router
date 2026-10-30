@@ -48,7 +48,7 @@ JWT wystawiony przez tunel **nie może** uruchomić tej ścieżki kodu.
 | Linux+Firefox/Chromium | per-profile NSS DB update via `certutil -d sql:<profile>`                                                         |
 
 To te same komendy, których używają `mitmproxy`, Charles Proxy, Fiddler i
-Caddy. Fakt, że istnieją w OmniRoute, jest udokumentowany w
+Caddy. Fakt, że istnieją w 67router, jest udokumentowany w
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mitigacja v3.8.6**:
@@ -108,7 +108,7 @@ dla operatorów, którzy jeszcze nie zaktualizowali automatyzacji. Zostanie
 usunięta w v3.9.
 
 **Dlaczego to zostawiamy**: import Zed to najprzyjaźniejsza ścieżka onboardingu dla użytkowników,
-którzy już używają Zed i chcą odzwierciedlić klucze providerów w OmniRoute
+którzy już używają Zed i chcą odzwierciedlić klucze providerów w 67router
 bez ponownego wklejania.
 
 ---
@@ -120,7 +120,7 @@ bez ponownego wklejania.
 **Dlaczego oznaczono**: chunk re-eksportuje `execFileWithPassword`,
 `runElevatedPowerShell` oraz współdzielony helper `quotePowerShell`. Klasyfikator AI
 Socket.dev widzi je jako generyczny „toolkit wykonania na hoście + podnoszenia
-uprawnień”. W OmniRoute są używane wyłącznie przez ścieżkę instalacji certyfikatu MITM
+uprawnień”. W 67router są używane wyłącznie przez ścieżkę instalacji certyfikatu MITM
 (§1) oraz przez `execFileWithPassword` do wykonywania komend `sudo`.
 
 **Mitigacja v3.8.6**:
@@ -170,7 +170,7 @@ towarzyszący (pomyśl: plugin w stylu WordPress) — ścisły opt-in.
 
 ---
 
-## §5 — Zapis zwrotny credentiali OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Zapis zwrotny credentiali 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Pliki źródłowe**:
 
@@ -203,7 +203,7 @@ rawBody)`) przed parsowaniem JSON. Jeśli secret jest ustawiony, podpis jest
    `rateLimitedUntil`, `updatedAt`). To **breaking change** dla użytkowników,
    którzy polegali na zdalnej synchronizacji tokenów — muszą jawnie opt-in.
 
-**Dlaczego to zostawiamy**: Cloud Sync to jedyny sposób, by tenant OmniRoute Cloud
+**Dlaczego to zostawiamy**: Cloud Sync to jedyny sposób, by tenant 67router Cloud
 centralizował credentials zespołu. Poprawka czyni model zagrożeń uczciwym:
 „serwer podpisuje, klient weryfikuje, operator opt-in”.
 

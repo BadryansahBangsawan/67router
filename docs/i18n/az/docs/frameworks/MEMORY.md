@@ -7,7 +7,7 @@
 > **Əsas mənbə:** `src/lib/memory/` və `src/app/api/memory/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40 (standart olaraq deaktiv + int8 kvantlaşdırma uyğunlaşdırması)
 
-OmniRoute API açarına (və istəyə bağlı olaraq sessiya identifikatoruna) əsaslanan davamlı söhbət yaddaşı təmin edir. Yaddaş qeydləri yüngül regex nümunə uyğunlaşdırması vasitəsilə LLM cavablarından avtomatik çıxarılır və sonrakı sorğulara başlanğıc sistem mesajı kimi (və ya sistem rolunu qəbul etməyən provayderlər üçün ilk istifadəçi mesajı kimi) yenidən əlavə edilir.
+67router API açarına (və istəyə bağlı olaraq sessiya identifikatoruna) əsaslanan davamlı söhbət yaddaşı təmin edir. Yaddaş qeydləri yüngül regex nümunə uyğunlaşdırması vasitəsilə LLM cavablarından avtomatik çıxarılır və sonrakı sorğulara başlanğıc sistem mesajı kimi (və ya sistem rolunu qəbul etməyən provayderlər üçün ilk istifadəçi mesajı kimi) yenidən əlavə edilir.
 
 > **Yaddaş standart olaraq DEAKTİVDİR (v3.8.30+).** `DEFAULT_MEMORY_SETTINGS.enabled`
 > artıq `false` dəyərindədir (`src/lib/memory/settings.ts`). Yaddaşın aktivləşdirilməsi
@@ -593,7 +593,7 @@ yerləşir.
 
 ## Vektorlaşdırma Təminatçısının Seçilməsi (v3.8.16+)
 
-OmniRoute-un yaddaş mühərriki **dörd vektorlaşdırma mənbəyini** (`src/lib/memory/embedding/`) dəstəkləyir. Onların hər biri **gecikmə, xərc, model keyfiyyəti və quraşdırma mürəkkəbliyi** baxımından fərqli kompromislərə malikdir.
+67router-un yaddaş mühərriki **dörd vektorlaşdırma mənbəyini** (`src/lib/memory/embedding/`) dəstəkləyir. Onların hər biri **gecikmə, xərc, model keyfiyyəti və quraşdırma mürəkkəbliyi** baxımından fərqli kompromislərə malikdir.
 
 ### Vektorlaşdırma Mənbələri
 
@@ -1007,13 +1007,13 @@ Lokal [claude-mem](https://github.com/thedotmack/claude-mem) worker-i üçün ad
 
 Worker yalnız loopback interfeysinə bağlanır və `GenericMemoryBackend`-in SSRF qoruması bunu məqsədli şəkildə rədd edir. Bu adapter həmin qorumanı zəiflətmir: host sərt şəkildə `127.0.0.1` olaraq təyin edilib və konfiqurasiya sxemi (`ClaudeMemBackendConfigSchema`, `.strict()`) yalnız aşağıdakıları qəbul edir:
 
-| Açar        | Növ   | İlkin dəyər | Qeydlər                                                                                                                      |
-| ----------- | ----- | ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | ədəd  | —           | Məcburidir, 1024–65535. Parametrlər faylındakı claude-mem worker portu (ilkin dəyər `37700 + uid % 100`).                    |
-| `project`   | sətir | —           | İstifadə ediləcək claude-mem layihəsi. Təyin edilməyib → hər OmniRoute API açarı öz layihəsinə (`apiKeyId`) uyğunlaşdırılır. |
-| `timeoutMs` | ədəd  | `5000`      | Hər sorğu üçün taymaut, 100–30000.                                                                                           |
+| Açar        | Növ   | İlkin dəyər | Qeydlər                                                                                                                     |
+| ----------- | ----- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | ədəd  | —           | Məcburidir, 1024–65535. Parametrlər faylındakı claude-mem worker portu (ilkin dəyər `37700 + uid % 100`).                   |
+| `project`   | sətir | —           | İstifadə ediləcək claude-mem layihəsi. Təyin edilməyib → hər 67router API açarı öz layihəsinə (`apiKeyId`) uyğunlaşdırılır. |
+| `timeoutMs` | ədəd  | `5000`      | Hər sorğu üçün taymaut, 100–30000.                                                                                          |
 
-Onu `PUT /api/settings/memory` vasitəsilə aktivləşdirin və OmniRoute-u yenidən başladın (backend-lər
+Onu `PUT /api/settings/memory` vasitəsilə aktivləşdirin və 67router-u yenidən başladın (backend-lər
 `initMemoryBackends()` daxilində yalnız bir dəfə qeydiyyatdan keçirilir):
 
 ```json
@@ -1031,7 +1031,7 @@ Uyğunlaşdırma və məhdudiyyətlər:
 
 - ID-lər `claude-mem:<observationId>` formatındadır; `get`/`delete` şəbəkə çağırışı etmədən digər
   backend-lərin ID-lərini nəzərə almır.
-- `create` → `POST /api/memory/save`; OmniRoute sahələri (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router sahələri (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) claude-mem-in `metadata.omniroute` sahəsində daşınır və oxunarkən itkisiz geri qaytarılır.
 - `search` → `GET /api/search?format=json&type=observations`, `maxTokens` həddinə qədər
   qısaldılır (simvol sayı / 4). `list` → worker-in səhifələnmiş müşahidələr endpoint-i (`total` aşağı sərhəddir —
@@ -1043,16 +1043,16 @@ Uyğunlaşdırma və məhdudiyyətlər:
 - Prompt inyeksiyası (`retrieval.ts`) və `omniroute_memory_*` MCP alətləri hələ də SQLite-dan
   birbaşa oxuyur — onlar `memoryManager` vasitəsilə işləmir, buna görə bu backend onları məlumatla təmin etmir.
 
-**claude-mem-in öz LLM çağırışlarının OmniRoute vasitəsilə yönləndirilməsi.** claude-mem müşahidələri
-LLM ilə sıxışdırır (ilkin seçim: Claude Agent SDK). Onun `openai-compatible` provayderi OmniRoute-a
+**claude-mem-in öz LLM çağırışlarının 67router vasitəsilə yönləndirilməsi.** claude-mem müşahidələri
+LLM ilə sıxışdırır (ilkin seçim: Claude Agent SDK). Onun `openai-compatible` provayderi 67router-a
 yönləndirilə və bununla combo fallback və xərc izləməsindən istifadə edə bilər. `~/.claude-mem/settings.json` daxilində:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API açarı>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute modeli və ya combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API açarı>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router modeli və ya combo>"
 }
 ```
 

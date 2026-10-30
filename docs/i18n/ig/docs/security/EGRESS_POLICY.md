@@ -8,7 +8,7 @@
 
 > **Isi mmalite nke eziokwu:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute na-enye proxy ọ bụla ohere ịnwe **ntụziaka ezinụlọ adreesị maka egress**. Na ndabara, OS na-ahọrọ IPv4 ma ọ bụ IPv6 (dual-stack, "Happy Eyeballs"). Mgbe ị debere ntụziaka ahụ ka ọ bụrụ `ipv4` ma ọ bụ `ipv6`, OmniRoute na-akụchi njikọ ọ bụla na-agafe na proxy ahụ n'ezinụlọ ahọrọ ma **jụ njikọ kpamkpam** kama ịlaghachi n'ezinụlọ nke ọzọ.
+67router na-enye proxy ọ bụla ohere ịnwe **ntụziaka ezinụlọ adreesị maka egress**. Na ndabara, OS na-ahọrọ IPv4 ma ọ bụ IPv6 (dual-stack, "Happy Eyeballs"). Mgbe ị debere ntụziaka ahụ ka ọ bụrụ `ipv4` ma ọ bụ `ipv6`, 67router na-akụchi njikọ ọ bụla na-agafe na proxy ahụ n'ezinụlọ ahọrọ ma **jụ njikọ kpamkpam** kama ịlaghachi n'ezinụlọ nke ọzọ.
 
 Ibe a na-akọwa ihe ntụziaka ahụ bụ, ihe mere o ji dị, ebe ị ga-ahazi ya, na otu runtime si ekpebi ya.
 
@@ -122,7 +122,7 @@ Maka akụkụ ndị ọzọ nke API CRUD/assignment nke proxy, lee [PROXY_GUIDE
 
 ## Otu `auto` Si Ekpebi Ụdị IP
 
-Mgbe `family` bụ `auto`, OmniRoute **anaghị** agbakwunye directive ọ bụla — a na-eji URL proxy ahụ otu ọ dị, a na-ekpebikwa ụdị IP njikọ ahụ n'onwe ya.
+Mgbe `family` bụ `auto`, 67router **anaghị** agbakwunye directive ọ bụla — a na-eji URL proxy ahụ otu ọ dị, a na-ekpebikwa ụdị IP njikọ ahụ n'onwe ya.
 
 N'oge a na-ewu URL (`proxyConfigToUrl` / `normalizeProxyUrl` na `open-sse/utils/proxyDispatcher.ts`), proxy `auto` na-ewepụta URL nkịtị na-enweghị marker:
 
@@ -158,7 +158,7 @@ Ya mere:
 
 Ntụziaka na-abụghị `auto` na-aga dị ka otu akara ajụjụ arụpụtara — `?family=ipv4` ma ọ bụ `?family=ipv6` — nke a na-agbakwunye naanị otu ugboro na URL proxy ahaziri nke ọma. `normalizeProxyUrl` na-akpachapụ anya iwepụ ma tinyeghachi akara a naanị otu ugboro ka ọ ghara imebi nyocha port ma ọlị.
 
-Mgbe a na-ewu dispatcher, a na-agụ akara ahụ ma gbanwee ya ka ọ bụrụ connect family doro anya. Ọ bụrụ na host ahụ bụ IP literal nke family **na-abụghị** nke ahọpụtara, OmniRoute na-atụpụ njehie (mgbe enwere esemokwu, ọ na-emechi kpamkpam):
+Mgbe a na-ewu dispatcher, a na-agụ akara ahụ ma gbanwee ya ka ọ bụrụ connect family doro anya. Ọ bụrụ na host ahụ bụ IP literal nke family **na-abụghị** nke ahọpụtara, 67router na-atụpụ njehie (mgbe enwere esemokwu, ọ na-emechi kpamkpam):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ A na-akpọgidezi family ahụ doro anya na connector:
 
 ## Ndakọrịta SOCKS5
 
-Ịkpọgide family na-arụ ọrụ na proxy SOCKS5, mana `fetch-socks` nkịtị anaghị ewepụta nhọrọ socket ndị achọrọ iji kpọgide family nke proxy hop. OmniRoute na-eweta connector nke ya maka nke ahụ:
+Ịkpọgide family na-arụ ọrụ na proxy SOCKS5, mana `fetch-socks` nkịtị anaghị ewepụta nhọrọ socket ndị achọrọ iji kpọgide family nke proxy hop. 67router na-eweta connector nke ya maka nke ahụ:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

@@ -25,7 +25,7 @@ Za a tsallake layin farko a matsayin kan jeri idan ginshiƙinsa na farko shi ne 
 Sauke fayil na farawa daga modal ɗin shigo da bayanai (**Sauke samfurin CSV**). Misali:
 
 ```csv
-# Shigo da provider na OmniRoute (ginshiƙai bisa matsayi)
+# Shigo da provider na 67router (ginshiƙai bisa matsayi)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

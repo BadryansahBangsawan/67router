@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Erreur : {message}",
-    "serverOffline": "Le serveur OmniRoute est hors ligne. Démarrez avec : omniroute serve",
+    "serverOffline": "Le serveur 67router est hors ligne. Démarrez avec : omniroute serve",
     "authRequired": "Authentification requise. Définissez OMNIROUTE_API_KEY ou exécutez : omniroute setup",
     "rateLimited": "Limite de requêtes atteinte. Réessayez dans {seconds}s.",
     "timeout": "La requête a expiré après {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Ignorer la confirmation"
   },
   "setup": {
-    "title": "Configuration d’OmniRoute",
+    "title": "Configuration d’67router",
     "passwordPrompt": "Mot de passe administrateur",
     "providerPrompt": "Fournisseur par défaut (laisser vide pour ignorer)",
     "done": "Configuration terminée",
@@ -30,7 +30,7 @@
     "opencode": "Installer et configurer le module @omniroute/opencode-plugin inclus pour OpenCode"
   },
   "doctor": {
-    "title": "Diagnostic OmniRoute",
+    "title": "Diagnostic 67router",
     "dbOk": "Base de données : OK ({path})",
     "dbMissing": "Base de données : non initialisée — exécutez `omniroute setup`",
     "portOk": "Port {port} : disponible",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtrer par nom de fournisseur",
       "header": "ID         Fournisseur    Nom                      Expiration État  État du test  Récupération jusqu’au",
       "noData": "Aucune donnée de connexion aux fournisseurs disponible.",
-      "requiresServer": "providers status nécessite que le serveur OmniRoute soit en cours d’exécution."
+      "requiresServer": "providers status nécessite que le serveur 67router soit en cours d’exécution."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Ajouter ou mettre à jour une clé API pour un fournisseur",
     "listDescription": "Répertorier toutes les clés API configurées",
     "removeDescription": "Supprimer la clé API d’un fournisseur",
-    "regenerateDescription": "Régénérer une clé API OmniRoute",
-    "revokeDescription": "Révoquer une clé API OmniRoute",
+    "regenerateDescription": "Régénérer une clé API 67router",
+    "revokeDescription": "Révoquer une clé API 67router",
     "revealDescription": "Révéler la valeur non masquée de la clé API",
     "usageDescription": "Afficher l’utilisation récente d’une clé API",
     "usageLimitOpt": "Nombre de requêtes récentes",
@@ -225,7 +225,7 @@
     "noCombo": "Aucune combinaison correspondante trouvée. Configurez-en une avec : omniroute combo create"
   },
   "chat": {
-    "description": "Envoyer une invite de chat unique à OmniRoute",
+    "description": "Envoyer une invite de chat unique à 67router",
     "file": "Lire l’invite depuis un fichier",
     "stdin": "Lire l’invite depuis stdin",
     "system": "Invite système",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Démarrer le serveur OmniRoute (action par défaut)",
-    "starting": "Démarrage du serveur OmniRoute sur le port {port}...",
+    "description": "Démarrer le serveur 67router (action par défaut)",
+    "starting": "Démarrage du serveur 67router sur le port {port}...",
     "ready": "Disponible à l’adresse http://localhost:{port}",
     "stopping": "Arrêt du serveur (PID {pid})...",
     "stopped": "Serveur arrêté.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Sauvegarde",
-    "description": "Créer une sauvegarde des données d’OmniRoute",
+    "description": "Créer une sauvegarde des données d’67router",
     "creating": "Création de la sauvegarde...",
     "done": "Sauvegarde enregistrée dans {path}",
     "noFiles": "Aucun fichier à sauvegarder (base de données non initialisée)",
@@ -277,7 +277,7 @@
     "noBackups": "Aucune sauvegarde trouvée.",
     "notFound": "Sauvegarde introuvable : {name}",
     "confirmRestore": "Écraser les données actuelles avec la sauvegarde du {ts} ?",
-    "createDescription": "Créer une sauvegarde des données d’OmniRoute",
+    "createDescription": "Créer une sauvegarde des données d’67router",
     "nameOpt": "Nom personnalisé de la sauvegarde",
     "cloudOpt": "Téléverser la sauvegarde vers un stockage cloud",
     "encryptOpt": "Chiffrer la sauvegarde avec AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Échec du vidage du cache."
   },
   "redis": {
-    "description": "Lancer un conteneur Redis local en un clic (Podman ou Docker) pour la mise en cache et le suivi des quotas OmniRoute"
+    "description": "Lancer un conteneur Redis local en un clic (Podman ou Docker) pour la mise en cache et le suivi des quotas 67router"
   },
   "test": {
     "description": "Tester la connexion à un fournisseur",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Gérer les politiques d’autorisation d’OmniRoute",
+    "description": "Gérer les politiques d’autorisation d’67router",
     "list": {
       "description": "Répertorier les politiques",
       "kind": "Filtrer par type (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Configurer et inspecter le pipeline de compression d’OmniRoute",
+    "description": "Configurer et inspecter le pipeline de compression d’67router",
     "status": {
       "description": "Afficher l’état et les paramètres actuels de la compression"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Renouveler l’URL du tunnel {type} ? (une nouvelle URL sera générée)"
   },
   "stop": {
-    "description": "Arrêter le serveur OmniRoute",
+    "description": "Arrêter le serveur 67router",
     "stopping": "Arrêt du serveur (PID {pid})...",
     "stopped": "Serveur arrêté.",
     "notRunning": "Aucun serveur n’est en cours d’exécution.",
     "portFallback": "Aucun fichier PID trouvé, tentative d’arrêt via le port..."
   },
   "restart": {
-    "description": "Redémarrer le serveur OmniRoute",
-    "restarting": "Redémarrage du serveur OmniRoute..."
+    "description": "Redémarrer le serveur 67router",
+    "restarting": "Redémarrage du serveur 67router..."
   },
   "dashboard": {
-    "description": "Ouvrir le tableau de bord OmniRoute dans un navigateur",
+    "description": "Ouvrir le tableau de bord 67router dans un navigateur",
     "opening": "Ouverture du tableau de bord à l’adresse {url}",
     "urlOnly": "Afficher l’URL du tableau de bord sans ouvrir le navigateur",
     "tui": "Ouvrir le tableau de bord TUI interactif (interface de terminal, 7 onglets)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Gérer les compétences OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Gérer les compétences 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Répertorier les compétences installées",
       "type": "Filtrer par type (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Gérer la mémoire conversationnelle d’OmniRoute (FTS5 + vector)",
+    "description": "Gérer la mémoire conversationnelle d’67router (FTS5 + vector)",
     "search": {
       "description": "Rechercher des entrées de mémoire par requête sémantique",
       "type": "Filtrer par type de mémoire (user|feedback|project|reference)",
@@ -792,14 +792,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Routeur IA intelligent avec basculement automatique",
+    "description": "67router — Routeur IA intelligent avec basculement automatique",
     "version": "Afficher la version et quitter",
     "output": "Format de sortie (table, json, jsonl, csv)",
     "quiet": "Supprimer les sorties non essentielles",
     "no_color": "Désactiver la sortie en couleur",
     "timeout": "Délai d'expiration des requêtes HTTP en millisecondes",
-    "api_key": "Clé API pour le serveur OmniRoute",
-    "base_url": "URL de base du serveur OmniRoute",
+    "api_key": "Clé API pour le serveur 67router",
+    "base_url": "URL de base du serveur 67router",
     "context": "Contexte/profil du serveur pour cette commande",
     "lang": "Définir la langue d'affichage du CLI (remplace OMNIROUTE_LANG)"
   },
@@ -997,7 +997,7 @@
     }
   },
   "openapi": {
-    "description": "Accéder à la spécification OpenAPI d’OmniRoute et la tester",
+    "description": "Accéder à la spécification OpenAPI d’67router et la tester",
     "dump": {
       "description": "Afficher la spécification OpenAPI dans stdout ou l’enregistrer dans un fichier",
       "format": "Format de sortie : yaml|json (par défaut : yaml)",
@@ -1040,7 +1040,7 @@
     }
   },
   "open": {
-    "description": "Ouvrir une page spécifique du tableau de bord OmniRoute dans le navigateur",
+    "description": "Ouvrir une page spécifique du tableau de bord 67router dans le navigateur",
     "url": "Afficher uniquement l’URL, sans ouvrir le navigateur"
   },
   "telemetry": {
@@ -1057,7 +1057,7 @@
     }
   },
   "sync": {
-    "description": "Synchroniser la configuration entre les instances OmniRoute",
+    "description": "Synchroniser la configuration entre les instances 67router",
     "push": {
       "description": "Envoyer la configuration vers le cloud ou une instance distante"
     },
@@ -1116,7 +1116,7 @@
     "filter": "Filtrer par niveau (error,warn,info) — valeurs séparées par des virgules",
     "lines": "Nombre de lignes à récupérer",
     "timeout": "Délai d’expiration de la connexion en ms",
-    "baseUrl": "URL de base de l’API OmniRoute",
+    "baseUrl": "URL de base de l’API 67router",
     "requestId": "Filtrer par ID de requête",
     "apiKey": "Filtrer par clé API",
     "combo": "Filtrer par nom de combinaison",
@@ -1132,10 +1132,10 @@
     "description": "Contrôler l’icône de la zone de notification",
     "show": "Afficher l’icône de la zone de notification (si le serveur s’exécute avec --tray)",
     "hide": "Masquer l’icône de la zone de notification",
-    "quit": "Quitter OmniRoute depuis la zone de notification"
+    "quit": "Quitter 67router depuis la zone de notification"
   },
   "autostart": {
-    "description": "Gérer le démarrage automatique d’OmniRoute au démarrage du système (Linux : service utilisateur systemd)",
+    "description": "Gérer le démarrage automatique d’67router au démarrage du système (Linux : service utilisateur systemd)",
     "enable": "Activer le démarrage automatique au démarrage du système",
     "disable": "Désactiver le démarrage automatique au démarrage du système",
     "toggle": "Activer ou désactiver le démarrage automatique au démarrage du système",
@@ -1167,19 +1167,19 @@
     "scaffold": "Générer la structure de base d’un nouveau plugin"
   },
   "launch": {
-    "description": "Lancer Claude Code en le connectant à OmniRoute (local ou distant, avec --profile)",
+    "description": "Lancer Claude Code en le connectant à 67router (local ou distant, avec --profile)",
     "token": "Jeton que le client Claude doit envoyer (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute n’est pas accessible sur {port}. Démarrez-le avec 'omniroute serve'.",
+    "notRunning": "67router n’est pas accessible sur {port}. Démarrez-le avec 'omniroute serve'.",
     "notFound": "La CLI 'claude' est introuvable dans PATH."
   },
   "run": {
-    "description": "Lancer une cible CLI prise en charge via OmniRoute"
+    "description": "Lancer une cible CLI prise en charge via 67router"
   },
   "setupClaude": {
-    "description": "Générer des profils Claude Code dans ~/.claude/profiles à partir du catalogue de modèles OmniRoute"
+    "description": "Générer des profils Claude Code dans ~/.claude/profiles à partir du catalogue de modèles 67router"
   },
   "connect": {
-    "description": "Se connecter à un serveur OmniRoute distant et passer en mode distant"
+    "description": "Se connecter à un serveur 67router distant et passer en mode distant"
   },
   "tokens": {
     "description": "Gérer les jetons d’accès CLI à portée limitée (mode distant)"
@@ -1188,10 +1188,10 @@
     "description": "Choisir un fournisseur et un modèle sur le serveur actif, puis configurer une CLI locale prise en charge"
   },
   "launchCodex": {
-    "description": "Lancer Codex CLI en le connectant à OmniRoute (VPS local ou distant)"
+    "description": "Lancer Codex CLI en le connectant à 67router (VPS local ou distant)"
   },
   "setupCodex": {
-    "description": "Générer des fichiers de profil dans ~/.codex à partir du catalogue de modèles OmniRoute en direct"
+    "description": "Générer des fichiers de profil dans ~/.codex à partir du catalogue de modèles 67router en direct"
   },
   "packs": {
     "description": "Gérer les packs d’exécution facultatifs (ML / automatisation du navigateur)",
@@ -1204,7 +1204,7 @@
     "errUnknown": "pack inconnu : {name}",
     "errNoIndex": "index des packs introuvable ; utilisez --source <dir> en indiquant le répertoire contenant la charge utile du pack (les bundles de bureau le placent à côté de l’application)",
     "installed": "pack « {name} » installé et vérifié dans {dir}",
-    "restartHint": "redémarrez le serveur OmniRoute (ou l’application de bureau) afin que l’environnement d’exécution prenne en compte le pack",
+    "restartHint": "redémarrez le serveur 67router (ou l’application de bureau) afin que l’environnement d’exécution prenne en compte le pack",
     "removed": "pack « {name} » supprimé",
     "notInstalled": "le pack « {name} » n’était pas installé",
     "verifyOk": "tous les packs installés ont été vérifiés",

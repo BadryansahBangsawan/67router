@@ -8,7 +8,7 @@
 > **Nuashonrú deireanach:** 2026-09-16
 > **Lucht léitheoireachta:** Innealtóirí a chuireann seirbhísí leabaithe leis, a chothaíonn iad, nó a dhéanann dífhabhtú orthu (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Is uirlisí taobhdathach próisis atá suiteáilte go háitiúil iad seirbhísí leabaithe, a shuiteálann agus a mhaoirsíonn OmniRoute agus a nochtann sé mar spriocanna ródúcháin den chéad scoth. Murab ionann agus soláthraithe seachtracha (a mbaintear amach iad thar an idirlíon trí eochracha API), ritheann seirbhísí leabaithe ar an meaisín céanna le OmniRoute agus déanann siad cumarsáid thar lúb-ais.
+Is uirlisí taobhdathach próisis atá suiteáilte go háitiúil iad seirbhísí leabaithe, a shuiteálann agus a mhaoirsíonn 67router agus a nochtann sé mar spriocanna ródúcháin den chéad scoth. Murab ionann agus soláthraithe seachtracha (a mbaintear amach iad thar an idirlíon trí eochracha API), ritheann seirbhísí leabaithe ar an meaisín céanna le 67router agus déanann siad cumarsáid thar lúb-ais.
 
 ---
 
@@ -33,7 +33,7 @@ Tá seacht seirbhís leabaithe:
 
 | Seirbhís        | Pacáiste npm                         | Port réamhshocraithe | Cuspóir                                                                                                                                                                                                                                                                                                                                                                         |
 | --------------- | ------------------------------------ | :------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                            |        20130         | Ródaire AI is féidir le OmniRoute a úsáid mar fho-sholáthraí. Nochtar samhlacha mar `9router/{sub}/{model}`                                                                                                                                                                                                                                                                     |
+| **9Router**     | `9router`                            |        20130         | Ródaire AI is féidir le 67router a úsáid mar fho-sholáthraí. Nochtar samhlacha mar `9router/{sub}/{model}`                                                                                                                                                                                                                                                                      |
 | **CLIProxyAPI** | Dénártha eisiúna GitHub (`cliproxy`) |         8317         | Cuibheoir seachfhreastalaí áitiúil do shreabha fíordheimhnithe Anthropic CLI. Soláthraíonn sé ródú cúltaca nuair a théann comharthaí OAuth in éag                                                                                                                                                                                                                               |
 | **Mux**         | `mux` (`mux server` gan chomhéadan)  |         8322         | Deamhan áitiúil um cheolfhoireannú gníomhairí (coder/mux). Ní dhéantar ach a shaolré a bhainistiú — ní sprioc ródaithe é (gan seachfhreastal LLM).                                                                                                                                                                                                                              |
 | **Bifrost**     | `@maximhq/bifrost`                   |         8080         | Inneall sealaíochta tairsí AI in Go. Nuair a bhíonn sé ag rith, roghnaíonn an bealach sealaíochta (`/v1/relay/`) é go huathoibríoch                                                                                                                                                                                                                                             |
@@ -43,21 +43,21 @@ Tá seacht seirbhís leabaithe:
 
 Leanann na seacht gcinn an tsamhail mhaoirseachta chéanna:
 
-- Suiteálann OmniRoute iad faoi `DATA_DIR/services/{name}/` (scoite amach ó `package.json` OmniRoute féin)
-- Tosaíonn OmniRoute iad mar phróisis mhac agus déanann sé monatóireacht orthu
-- Insteallann OmniRoute eochair API ghearrshaolach isteach i dtimpeallacht an phróisis mhic agus rothlaíonn sé í gan aga neamhfhónaimh (nuair is infheidhme)
+- Suiteálann 67router iad faoi `DATA_DIR/services/{name}/` (scoite amach ó `package.json` 67router féin)
+- Tosaíonn 67router iad mar phróisis mhac agus déanann sé monatóireacht orthu
+- Insteallann 67router eochair API ghearrshaolach isteach i dtimpeallacht an phróisis mhic agus rothlaíonn sé í gan aga neamhfhónaimh (nuair is infheidhme)
 - Tá gach bealach bainistíochta (`/api/services/*`) **LOCAL_ONLY** — ní féidir rochtain orthu ach ón gcomhéadan lúb-ais (riail dhocht #17)
 
 ### Príomhchinntí (ón bplean dearaidh)
 
-| Cinneadh                                          | Luach                                                                                                     |
-| ------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Rochtain an deais ar chomhéadan dúchasach 9Router | Seachfhreastalaí droim ar ais ag `/dashboard/providers/services/9router/embed/*`                          |
-| Meicníocht suiteála                               | `npm install {package}` trí `execFile` (gan idirshuíomh blaoisce)                                         |
-| Mód úsáide                                        | Soláthraí cláraithe mar `9router/{sub}/{model}` san inneall ródaithe                                      |
-| Bainistíocht eochracha API                        | Gineann OmniRoute iad, criptíonn sé iad agus iad á stóráil (AES-256-GCM), agus insteallann sé iad trí env |
-| Suíomh na deaise                                  | `/dashboard/providers/services` (trí chluaisín)                                                           |
-| Uath-thosú                                        | Scorán do gach seirbhís, MÚCHTA de réir réamhshocraithe                                                   |
+| Cinneadh                                          | Luach                                                                                                    |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Rochtain an deais ar chomhéadan dúchasach 9Router | Seachfhreastalaí droim ar ais ag `/dashboard/providers/services/9router/embed/*`                         |
+| Meicníocht suiteála                               | `npm install {package}` trí `execFile` (gan idirshuíomh blaoisce)                                        |
+| Mód úsáide                                        | Soláthraí cláraithe mar `9router/{sub}/{model}` san inneall ródaithe                                     |
+| Bainistíocht eochracha API                        | Gineann 67router iad, criptíonn sé iad agus iad á stóráil (AES-256-GCM), agus insteallann sé iad trí env |
+| Suíomh na deaise                                  | `/dashboard/providers/services` (trí chluaisín)                                                          |
+| Uath-thosú                                        | Scorán do gach seirbhís, MÚCHTA de réir réamhshocraithe                                                  |
 
 ---
 
@@ -221,7 +221,7 @@ Faigheann iarratais nach ón aisch lúibe iad `403 LOCAL_ONLY` beag beann ar an 
 #### `POST /api/services/9router/install`
 
 Suiteáil 9Router ó npm. Cruthaítear `DATA_DIR/services/9router/` lena
-`package.json` agus `node_modules/` féin. Ní thagann sé salach ar spleáchais OmniRoute féin.
+`package.json` agus `node_modules/` féin. Ní thagann sé salach ar spleáchais 67router féin.
 
 **Corp an iarratais** (iad uile roghnach):
 
@@ -382,7 +382,7 @@ Seoltar stádas beo + stádas DB le chéile, lena n-áirítear meiteashonraí le
 #### `POST /api/services/9router/auto-start`
 
 Scoránaigh an bhratach uath-thosaithe. Nuair atá `enabled: true`, tosaíonn an tseirbhís go huathoibríoch
-an chéad uair eile a thosaíonn OmniRoute (má tá an tseirbhís suiteáilte).
+an chéad uair eile a thosaíonn 67router (má tá an tseirbhís suiteáilte).
 
 **Corp an iarratais:**
 
@@ -592,7 +592,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Déanann an seachfhreastalaí seo na nithe seo a leanas:
 
 - Cuireann sé an t-iarratas ar aghaidh chuig `http://127.0.0.1:{port}/{path}` (aischúrsáil amháin)
-- Baineann sé na ceanntásca `cookie` agus `authorization` atá ag teacht isteach (ní sceitear seisiún OmniRoute)
+- Baineann sé na ceanntásca `cookie` agus `authorization` atá ag teacht isteach (ní sceitear seisiún 67router)
 - Insteallann sé `Authorization: Bearer {apiKey}` le haghaidh fhíordheimhniú 9Router
 - Baineann sé `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` den fhreagra
 - Athscríobhann sé freagraí HTML chun `<base href>` a instealladh agus conairí absalóideacha a normalú (`/foo` → `/dashboard/.../embed/foo`)
@@ -629,7 +629,7 @@ mhaitrís iomlán sraitheanna.
 ### Instealladh eochrach API
 
 Teastaíonn eochair API/comhartha iompróra ó 9Router agus Mux dá gcríochphointí HTTP féin.
-Déanann OmniRoute an méid seo a leanas:
+Déanann 67router an méid seo a leanas:
 
 1. Gineann sé eochair trí `crypto.randomBytes(32).toString("base64url")` le
    réimír a bhaineann go sonrach leis an tseirbhís (`nr_` do 9Router, `mx_` do Mux).
@@ -809,7 +809,7 @@ Má nochtann an tseirbhís leabaithe críochphointe `/v1/chat/completions` atá 
 
 1. Seiceáil `GET /api/services/{name}/logs` (nó painéal na Logaí sa deais). Cuardaigh
    línte amhail `Error: ENOENT`, `address already in use`, nó `Cannot find module`.
-2. Deimhnigh go bhfuil `npm` in PATH: `which npm` ón gcuntas úsáideora céanna a ritheann OmniRoute.
+2. Deimhnigh go bhfuil `npm` in PATH: `which npm` ón gcuntas úsáideora céanna a ritheann 67router.
 3. Deimhnigh go bhfuil an tseirbhís suiteáilte: seiceáil `GET /api/services/{name}/status` le haghaidh
    `installedVersion`. Más `null` atá ann, rith an tsuiteáil ar dtús.
 4. Seiceáil go bhfuil `DATA_DIR/services/{name}/node_modules/` ann agus nach bhfuil sé folamh.
@@ -847,7 +847,7 @@ tosaithe níos faide acu, méadaigh `healthIntervalMs` go 5000 agus `stopTimeout
 3. Is féidir an port a chumrú do gach seirbhís in `bootstrap.ts` tríd an réimse `port`.
 
 **Nóta:** Úsáideann 9Router port 20130 de réir réamhshocraithe go sonrach chun imbhualadh le
-port réamhshocraithe OmniRoute, 20128, a sheachaint.
+port réamhshocraithe 67router, 20128, a sheachaint.
 
 ---
 
@@ -857,13 +857,13 @@ port réamhshocraithe OmniRoute, 20128, a sheachaint.
 
 **Cúiseanna:**
 
-- Níl `DATA_DIR` ná a mháthairchomhadlann inscríofa ag próiseas OmniRoute.
+- Níl `DATA_DIR` ná a mháthairchomhadlann inscríofa ag próiseas 67router.
 - Tá sé á rith laistigh de Docker gan phribhléidí fréimhe agus gan rochtain scríofa ar an imleabhar mapáilte.
 
 **Réiteach:**
 
 1. Seiceáil `DATA_DIR` (réamhshocrú: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Cinntigh gur le húsáideoir phróiseas OmniRoute an chomhadlann: `chown -R $USER ~/.omniroute/`
+2. Cinntigh gur le húsáideoir phróiseas 67router an chomhadlann: `chown -R $USER ~/.omniroute/`
 3. In Docker, cinntigh go bhfuil na ceadanna cearta don úsáideoir coimeádáin ag gléasadh an imleabhair.
 
 ---
@@ -911,16 +911,16 @@ Féach `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **C: An mbeidh 9Router agus CLIProxyAPI ar fáil in imscaradh táirgthe/scamaill?**
 
-Beidh. Leanann an dá sheirbhís an tsamhail chéanna atá áitiúil ar dtús agus a leanann OmniRoute féin. Ritheann siad
+Beidh. Leanann an dá sheirbhís an tsamhail chéanna atá áitiúil ar dtús agus a leanann 67router féin. Ritheann siad
 ar an meaisín céanna agus déanann siad cumarsáid thar loopback. Ciallaíonn "táirgeadh" anseo an VPS
-nó an freastalaí áitiúil ar a bhfuil OmniRoute imscartha, seachas soláthraí cianda néalríomhaireachta.
+nó an freastalaí áitiúil ar a bhfuil 67router imscartha, seachas soláthraí cianda néalríomhaireachta.
 
 ---
 
 **C: Conas a dhéanaim dífhabhtú ar an maoirseoir?**
 
 1. Lean sruth loga SSE: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Seiceáil na logaí struchtúrtha in aschur pino OmniRoute agus iad scagtha de réir
+2. Seiceáil na logaí struchtúrtha in aschur pino 67router agus iad scagtha de réir
    an ainmspáis `service:supervisor`.
 3. Scrúdaigh an ró sa bhunachar sonraí: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Úsáid `GET /api/services/9router/status` chun an staid bheo reatha, PID, sláinte,

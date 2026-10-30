@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute xuất bản các artifact npm + Docker. Các cổng này cung cấp bằng chứng nguồn gốc (provenance), kiểm kê (SBOM) và quét CVE, tất cả đều là mã nguồn mở (OSS), được tích hợp vào quy trình phát hành. Thái độ **ưu tiên cảnh báo** — chúng báo cáo ngay lập tức, và sẽ chuyển sang trạng thái chặn sau lần phát hành xanh đầu tiên.
+67router xuất bản các artifact npm + Docker. Các cổng này cung cấp bằng chứng nguồn gốc (provenance), kiểm kê (SBOM) và quét CVE, tất cả đều là mã nguồn mở (OSS), được tích hợp vào quy trình phát hành. Thái độ **ưu tiên cảnh báo** — chúng báo cáo ngay lập tức, và sẽ chuyển sang trạng thái chặn sau lần phát hành xanh đầu tiên.
 
 | Cổng                  | Công cụ                                        | Nơi                           | Chặn?                     | Đầu ra                                      |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :------------------------ | :------------------------------------------ |
@@ -47,7 +47,7 @@ Theo nhánh "không có bản vá upstream" của giải pháp CVE Variance ở 
   npm-latest hiện tại (`0.1.29`) vẫn kéo `extract-zip@2.0.1`.
 - **Không thể truy cập từ môi trường sản xuất.** `promptfoo` chỉ là devDependency (không bao giờ được liệt kê
   trong `dependencies`), và không có tệp nào trong `src/`, `open-sse/`, hoặc `bin/` nhập gói
-  npm `extract-zip` — trợ giúp `extractZip()` của OmniRoute
+  npm `extract-zip` — trợ giúp `extractZip()` của 67router
   (`src/lib/versionManager/binaryManager.ts:93`) sử dụng `unzip`/`tar` gốc
   và không liên quan. `@openai/codex-security` cũng tích hợp bộ bảo vệ symlink-traversal của riêng mình
   trên callback onEntry của extract-zip.

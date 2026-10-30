@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Nduzi zuru ezu maka ịhazi ndị na-enye ọrụ, imepụta combo, ijikọ ngwa CLI, na ibunye OmniRoute.
+Nduzi zuru ezu maka ịhazi ndị na-enye ọrụ, imepụta combo, ijikọ ngwa CLI, na ibunye 67router.
 
 ---
 
@@ -137,11 +137,11 @@ Dashboard → Providers → Jikọọ Claude Code
   cc/claude-haiku-4-5-20251001
 ```
 
-**Ndụmọdụ Ọkachamara:** Jiri Opus maka ọrụ ndị dị mgbagwoju anya, jiri Sonnet maka ọsọ. OmniRoute na-esochi oke maka ụdị ọ bụla!
+**Ndụmọdụ Ọkachamara:** Jiri Opus maka ọrụ ndị dị mgbagwoju anya, jiri Sonnet maka ọsọ. 67router na-esochi oke maka ụdị ọ bụla!
 
-Ọ dịghị ihe nchọgharị na host OmniRoute? Gbaa `claude setup-token` n'ebe ọ bụla e banyere na Claude Code, ma mado token otu afọ ahụ na taabụ **Setup Token**. Lee [Claude Code nwere setup token](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Ọ dịghị ihe nchọgharị na host 67router? Gbaa `claude setup-token` n'ebe ọ bụla e banyere na Claude Code, ma mado token otu afọ ahụ na taabụ **Setup Token**. Lee [Claude Code nwere setup token](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Ụzọ Claude na ndị dakọtara na Claude Code na-edobe ike iche echiche `max` maka ụdị Opus na Sonnet. Ụdị Haiku anaghị anabata ọkwa ike `max`, ya mere OmniRoute na-ewedata arịrịọ ahụ gaa na mmefu iche echiche dị elu tupu o zipụ ya n'elu usoro.
+Ụzọ Claude na ndị dakọtara na Claude Code na-edobe ike iche echiche `max` maka ụdị Opus na Sonnet. Ụdị Haiku anaghị anabata ọkwa ike `max`, ya mere 67router na-ewedata arịrịọ ahụ gaa na mmefu iche echiche dị elu tupu o zipụ ya n'elu usoro.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -262,7 +262,7 @@ Aha: free-combo
 
 ### Cursor IDE
 
-**Iji Cursor dịka onye ahịa OmniRoute** (zipụ nkata Cursor site na OmniRoute):
+**Iji Cursor dịka onye ahịa 67router** (zipụ nkata Cursor site na 67router):
 
 ```
 Ntọala → Ụdị → Nke Di Elu:
@@ -271,7 +271,7 @@ Ntọala → Ụdị → Nke Di Elu:
   Ụdị: cc/claude-opus-4-7
 ```
 
-**Iji OmniRoute dịka onye na-eweta Cursor** (OmniRoute na-akpọ Cursor upstream): họrọ
+**Iji 67router dịka onye na-eweta Cursor** (67router na-akpọ Cursor upstream): họrọ
 **Dashboard → Providers → Cursor → Login with Cursor**. Na Docker, lee
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -358,7 +358,7 @@ CLI na-ebunye `.env` na-akpaghị aka site na `~/.omniroute/.env` ma ọ bụ `.
 
 ### Ọnọdụ tray
 
-Bido OmniRoute na tray sistemụ:
+Bido 67router na tray sistemụ:
 
 ```bash
 omniroute serve --tray
@@ -375,7 +375,7 @@ Jiri menu tray maka omume ndị a:
 - Mepee dashboard.
 - Mepee `/dashboard/logs`.
 - Gbanwee mbido akpaka.
-- Kwụsị OmniRoute.
+- Kwụsị 67router.
 
 Ejikọla `--tray` na nhọrọ ndị a:
 
@@ -401,14 +401,14 @@ omniroute autostart disable
 
 ### Iwepụ Nwụnye
 
-Mgbe ị chọghịzi OmniRoute, anyị na-enye script abụọ ngwa ngwa maka iwepụ ya nke ọma:
+Mgbe ị chọghịzi 67router, anyị na-enye script abụọ ngwa ngwa maka iwepụ ya nke ọma:
 
 | Iwu                      | Omume                                                                                    |
 | ------------------------ | ---------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Na-ewepụ ngwa sistemụ ahụ mana **na-edobe DB na nhazi gị** na `~/.omniroute`.            |
 | `npm run uninstall:full` | Na-ewepụ ngwa ahụ MA na-adịgide adịgide **na-ehichapụ nhazi, igodo, na database niile**. |
 
-> Rịba ama: Iji mee iwu ndị a, gaa na folda ọrụ OmniRoute (ọ bụrụ na i mere clone ya) wee mee ha. N’ụzọ ọzọ, ọ bụrụ na arụnyere ya n’ụwa niile, ị nwere ike naanị ime `npm uninstall -g omniroute`.
+> Rịba ama: Iji mee iwu ndị a, gaa na folda ọrụ 67router (ọ bụrụ na i mere clone ya) wee mee ha. N’ụzọ ọzọ, ọ bụrụ na arụnyere ya n’ụwa niile, ị nwere ike naanị ime `npm uninstall -g omniroute`.
 
 ### Mbugharị VPS
 
@@ -480,7 +480,7 @@ Maka ọnọdụ ejikọtara na host nke nwere binary CLI, lee ngalaba Docker na
 
 ### Void Linux (xbps-src)
 
-Ndị ọrụ Void Linux nwere ike ịkwakọba ma wụnye OmniRoute n'ụzọ sistemụ site n’iji usoro cross-compilation `xbps-src`. Nke a na-eme ka owuwu standalone nke Node.js yana native bindings `better-sqlite3` ndị achọrọ rụọ ọrụ na-akpaghị aka.
+Ndị ọrụ Void Linux nwere ike ịkwakọba ma wụnye 67router n'ụzọ sistemụ site n’iji usoro cross-compilation `xbps-src`. Nke a na-eme ka owuwu standalone nke Node.js yana native bindings `better-sqlite3` ndị achọrọ rụọ ọrụ na-akpaghị aka.
 
 <details>
 <summary><b>Lee template xbps-src</b></summary>
@@ -660,7 +660,7 @@ Maka ntụaka zuru ezu gbasara mgbanwe gburugburu, lee [README](../README.md).
 
 **Ndị ọzọ na-eweta ọrụ dakọtara** (ndị ahọpụtara): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (site na `aws-bedrock`), `azure-ai`, `openrouter` (katalọgụ a na-ebufe ozugbo), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Onye ọ bụla na-edobe ndepụta ụdịdị nke ya na `providerRegistry.ts`, a pụkwara ịmekọrịta ya n'ụzọ akpaaka mgbe onye na-eweta ọrụ gosipụtara njedebe `/models`.
 
-**Nkọwa gbasara ID ụdịdị:** OmniRoute na-eji ID ndị sitere n'aka onye na-eweta ọrụ (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Ụfọdụ ID nwere ụdị mbipụta nwere ntụpọ n'ihi na ọ bụ otu API nke isi mmalite si atụ anya ha. Ọ bụrụ na edepụtaghị otu ụdịdị n'elu, gbaa `omniroute models --search <term>` ma ọ bụ kpọọ `GET /api/models/catalog` iji kwado na ọ dịnụ.
+**Nkọwa gbasara ID ụdịdị:** 67router na-eji ID ndị sitere n'aka onye na-eweta ọrụ (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Ụfọdụ ID nwere ụdị mbipụta nwere ntụpọ n'ihi na ọ bụ otu API nke isi mmalite si atụ anya ha. Ọ bụrụ na edepụtaghị otu ụdịdị n'elu, gbaa `omniroute models --search <term>` ma ọ bụ kpọọ `GET /api/models/catalog` iji kwado na ọ dịnụ.
 
 </details>
 
@@ -726,9 +726,9 @@ njehie na-akpọ aha onye na-eweta ọrụ arụnyere n’ime sistemụ ma ọ b
 edobere iche: node ndị echekwara tupu iwu a adị ka echekwara, mana prefix ha na-aga na
 onye na-eweta ọrụ arụnyere n’ime sistemụ. Dezie node ahụ ma nye ya prefix ọhụrụ.
 
-### Ijikọta Ndị Ọgbọ OmniRoute n’Agbụ
+### Ijikọta Ndị Ọgbọ 67router n’Agbụ
 
-Enwere ike ịgbakwunye gateway OmniRoute ọzọ dịka onye na-eweta ọrụ **Custom OpenAI-compatible**. Jiri
+Enwere ike ịgbakwunye gateway 67router ọzọ dịka onye na-eweta ọrụ **Custom OpenAI-compatible**. Jiri
 base URL `/v1` nke onye ọgbọ ahụ na igodo API pụrụ iche nwere ikike kacha nta nke onye ọgbọ ahụ nyere.
 
 Maka agbụ na-alaghachi azụ ma ọ bụ nke nwere ọtụtụ nzọụkwụ, gbanye ihe mgbochi loop a na-ahọrọ iji na gateway ọ bụla:
@@ -754,7 +754,7 @@ gwụchara site na HTTP `508 Loop Detected`; ndị na-eweta ọrụ upstream nk�
 Ijikọta ndị ọgbọ abụghị mmegharị database ma ọ bụ failover host. Gateway ọ bụla na-edobe
 ọnọdụ SQLite, cache, ọnụego mgbakọ, na session nke ya. Jiri reverse proxy nwere nyocha ahụike ma ọ bụ failover
 onye ahịa maka nnweta active/passive ma ọ bụ active/active, e tinyekwala otu database SQLite
-n’ime ọtụtụ instance OmniRoute na-agba ọsọ.
+n’ime ọtụtụ instance 67router na-agba ọsọ.
 
 ### Ụzọ Ndị Na-eweta Ọrụ Pụrụ Iche
 
@@ -805,7 +805,7 @@ Na-eweghachi model ndị e kewara dịka onye na-eweta ọrụ si dị yana ụd
 - Dị na **Dashboard → Endpoints** maka Docker na nrụnye ndị ọzọ ị na-akwado n'onwe gị
 - Na-emepụta URL `https://*.trycloudflare.com` nwa oge nke na-ebuga arịrịọ na endpoint `/v1` gị ugbu a nke dakọtara na OpenAI
 - Mgbe mbụ enyere ya aka, ọ na-etinye `cloudflared` naanị mgbe achọrọ ya; mmalitegharị ndị na-esote na-ejikwa otu binary ahụ a na-achịkwa
-- A naghị eweghachite Quick Tunnels na-akpaghị aka mgbe OmniRoute ma ọ bụ container malitegharịrị; mee ka ha rụọ ọrụ ọzọ site na dashboard mgbe achọrọ
+- A naghị eweghachite Quick Tunnels na-akpaghị aka mgbe 67router ma ọ bụ container malitegharịrị; mee ka ha rụọ ọrụ ọzọ site na dashboard mgbe achọrọ
 - URL nke tunnel bụ nke nwa oge ma na-agbanwe oge ọ bụla ị kwụsịrị/malite tunnel ahụ
 - Quick Tunnels ndị a na-achịkwa na-eji HTTP/2 transport na ndabara iji zere ịdọ aka ná ntị QUIC UDP buffer na-eme mkpọtụ n'ime container ndị nwere oke akụrụngwa
 - Tọọ `CLOUDFLARED_PROTOCOL=quic` ma ọ bụ `auto` ma ọ bụrụ na ịchọrọ ịgbanwe nhọrọ transport a na-achịkwa
@@ -822,7 +822,7 @@ Na-eweghachi model ndị e kewara dịka onye na-eweta ọrụ si dị yana ụd
 
 ### Ebe Nnwale Translator
 
-Nweta ya site na **Dashboard → Translator**. Chọpụta ma gosipụta n'anya otú OmniRoute si atụgharị arịrịọ API n'etiti ndị na-eweta ọrụ.
+Nweta ya site na **Dashboard → Translator**. Chọpụta ma gosipụta n'anya otú 67router si atụgharị arịrịọ API n'etiti ndị na-eweta ọrụ.
 
 | Ọnọdụ            | Ebumnuche                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------ |
@@ -875,7 +875,7 @@ Maka external session affinity (dịka ọmụmaatụ, agents Claude Code/Codex 
 X-Session-Id: your-session-key
 ```
 
-OmniRoute na-anabatakwa `x_session_id` ma na-eweghachi session key a na-eji eme ihe na `X-OmniRoute-Session-Id`.
+67router na-anabatakwa `x_session_id` ma na-eweghachi session key a na-eji eme ihe na `X-OmniRoute-Session-Id`.
 
 Ọ bụrụ na ị na-eji Nginx ma na-ezipụ header ndị nwere underscore, mee ka nke a rụọ ọrụ:
 
@@ -909,7 +909,7 @@ Chain: production-fallback
 
 ### Ngwakọta Provider na Usoro Routing Ndị A Na-ahụkarị
 
-Ndị a bụ ihe atụ nke usoro eji agwakọta ọtụtụ providers ma na-eme routing n'etiti ha na OmniRoute:
+Ndị a bụ ihe atụ nke usoro eji agwakọta ọtụtụ providers ma na-eme routing n'etiti ha na 67router:
 
 #### 1. Coding Agent Combo: Reasoning Dị Elu nke Nwere Fallback Maka Ọnụ Ahịa/Ọsọ
 
@@ -970,7 +970,7 @@ Ijikọ ụdị ndị pụrụ iche maka ọhụụ na mmepụta ederede dị ok
 
 Hazie ya site na **Dashboard → Settings → Resilience**.
 
-OmniRoute na-eji ihe ise mejuputa nkwụsi ike n'ọkwa onye na-eweta ọrụ:
+67router na-eji ihe ise mejuputa nkwụsi ike n'ọkwa onye na-eweta ọrụ:
 
 1. **Ahịrị Arịrịọ na Nhazi Ọsọ** — Ịkpụzi arịrịọ n'ọkwa sistemụ:
    - **Arịrịọ Kwa Nkeji (RPM)** — Ọnụọgụ arịrịọ kachasị kwa nkeji maka akaụntụ ọ bụla
@@ -995,7 +995,7 @@ OmniRoute na-eji ihe ise mejuputa nkwụsi ike n'ọkwa onye na-eweta ọrụ:
 
    A na-egosi ọnọdụ onye na-akwụsị sekit nke onye na-eweta ọrụ mgbe ọ na-arụ ọrụ naanị na **Dashboard → Health**.
 
-4. **Chere Ka Oge Ntụrụndụ Gafee** — Ọ bụrụ na njikọ niile enwere ike ịhọrọ abanyelarị n'oge ntụrụndụ, OmniRoute nwere ike ichere ruo mgbe nke mbụ gwụsịrị ma nwalee otu arịrịọ onye ahịa ahụ ọzọ na-akpaghị aka.
+4. **Chere Ka Oge Ntụrụndụ Gafee** — Ọ bụrụ na njikọ niile enwere ike ịhọrọ abanyelarị n'oge ntụrụndụ, 67router nwere ike ichere ruo mgbe nke mbụ gwụsịrị ma nwalee otu arịrịọ onye ahịa ahụ ọzọ na-akpaghị aka.
 
 5. **Nchọpụta Akpaaka nke Oke Ọsọ** — Mgbe ndị na-eweta ọrụ dị n'elu weghachiri oge nchere doro anya, ndụmọdụ ndị ahụ na-anọchi oge ntụrụndụ njikọ mpaghara mgbe agbanyere ntọala ahụ.
 
@@ -1029,7 +1029,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Ọnọdụ Ojiji:**
 
-- Bugharịa OmniRoute n'etiti kọmputa
+- Bugharịa 67router n'etiti kọmputa
 - Mepụta nkwado ndabere mpụga maka mgbake mgbe ọdachi mere
 - Kesaa nhazi n'etiti ndị otu (bupụ ha niile → kesaa ngwugwu)
 
@@ -1081,7 +1081,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Ntụgharị Ọdịyo Ka Ọ Bụrụ Ederede
 
-OmniRoute na-akwado ntụgharị ọdịyo ka ọ bụrụ ederede site na endpoint dakọtara na OpenAI:
+67router na-akwado ntụgharị ọdịyo ka ọ bụrụ ederede site na endpoint dakọtara na OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1153,7 +1153,7 @@ TTFT, ma ọ bụ ịpịkọta arịrịọ fallback; ịgbanye ya na-enye oher
 n’amụma, na mkpakọ fallback nke na-arụ ọrụ tupu oge iji gbanwere izi ezi routing/arịrịọ maka
 latency ọdụ dị ala.
 
-Gbanyụọ **Reasoning token buffer** mgbe ndị na-eweta ọrụ upstream chọrọ ka e debe oke `max_tokens` / `maxOutputTokens` nke ọma. Mgbe enyere ya ikike, combo routing na-agbakwụnye naanị ohere mgbakwunye maka reasoning-model n'ụdị model ndị nwere oke mmepụta amaara, ma na-ahapụ oke token nke client ka ọ ghara ịgbanwe mgbe uru nchekwa e tinyere buffer ga-agafe oke ahụ. Ọ bụrụ na oke client adịlarị elu karịa oke amaara, OmniRoute na-ewedata ya ruo n'oke ahụ tupu o ziga arịrịọ upstream.
+Gbanyụọ **Reasoning token buffer** mgbe ndị na-eweta ọrụ upstream chọrọ ka e debe oke `max_tokens` / `maxOutputTokens` nke ọma. Mgbe enyere ya ikike, combo routing na-agbakwụnye naanị ohere mgbakwunye maka reasoning-model n'ụdị model ndị nwere oke mmepụta amaara, ma na-ahapụ oke token nke client ka ọ ghara ịgbanwe mgbe uru nchekwa e tinyere buffer ga-agafe oke ahụ. Ọ bụrụ na oke client adịlarị elu karịa oke amaara, 67router na-ewedata ya ruo n'oke ahụ tupu o ziga arịrịọ upstream.
 
 ---
 
@@ -1176,7 +1176,7 @@ Nweta ya site na **Dashboard → Health**. Nchịkọta ahụike sistemụ ozugb
 
 ## 🤖 Auto-Routing (Nhazi ụzọ akpaaka na-enweghị nhazi ọ bụla)
 
-OmniRoute nwere **auto-router nke akara na-achịkwa** nke na-ahọrọ model kacha mma maka arịrịọ ọ bụla n'ofe provider niile ejikọrọ — enweghị combo ị ga na-elekọta. Naanị jiri otu n'ime prefix `auto/*` zipụ arịrịọ ahụ, OmniRoute ga-emepụta virtual combo ozugbo, na-enye ndị a na-atụle akara dabere na latency, ọnụahịa, ọnụego ihe ịga nke ọma, ndakọrịta context, ịdị mma model maka ọrụ ahụ, ọdịda ndị mere na nso nso a, quota, na ọnọdụ circuit-breaker.
+67router nwere **auto-router nke akara na-achịkwa** nke na-ahọrọ model kacha mma maka arịrịọ ọ bụla n'ofe provider niile ejikọrọ — enweghị combo ị ga na-elekọta. Naanị jiri otu n'ime prefix `auto/*` zipụ arịrịọ ahụ, 67router ga-emepụta virtual combo ozugbo, na-enye ndị a na-atụle akara dabere na latency, ọnụahịa, ọnụego ihe ịga nke ọma, ndakọrịta context, ịdị mma model maka ọrụ ahụ, ọdịda ndị mere na nso nso a, quota, na ọnọdụ circuit-breaker.
 
 | Prefix         | Ihe ọ na-ebuli ka mma                                                                                         |
 | -------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -1207,7 +1207,7 @@ A kọwara auto-router n'ụzọ zuru ezu na [AUTO-COMBO.md](../routing/AUTO-COM
 
 ## 🔌 Njikọ MCP & A2A
 
-OmniRoute bụ ma **MCP server** (Model Context Protocol) ma **A2A server** (Agent-to-Agent JSON-RPC 2.0). IDE ọ bụla kwekọrọ na MCP ma ọ bụ host agent nwere ike ịkpọ ngwaọrụ OmniRoute ozugbo — achọghị wrapper ọzọ.
+67router bụ ma **MCP server** (Model Context Protocol) ma **A2A server** (Agent-to-Agent JSON-RPC 2.0). IDE ọ bụla kwekọrọ na MCP ma ọ bụ host agent nwere ike ịkpọ ngwaọrụ 67router ozugbo — achọghị wrapper ọzọ.
 
 ### Ụzọ mbufe MCP
 
@@ -1242,7 +1242,7 @@ MCP na-akọwapụta scopes 32 nwere aha ugbu a. Enwere ike ịmachi igodo Beare
 
 ## 🧠 Usoro Nkà
 
-OmniRoute na-enye **usoro nkà** (`src/lib/skills/`) enwere ike ịgbatị ka ndị nnọchiteanya na endpoint A2A nwee ike ịrụ usoro ọrụ ndị metụtara ngalaba kpọmkwem (dịka `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router na-enye **usoro nkà** (`src/lib/skills/`) enwere ike ịgbatị ka ndị nnọchiteanya na endpoint A2A nwee ike ịrụ usoro ọrụ ndị metụtara ngalaba kpọmkwem (dịka `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **UI Ahịa** — Chọgharịa ma wụnye nkà site na **Dashboard → Skills**
 - **Oke ikike n'otu igodo** — Machibido nkà ndị igodo API ọ bụla nwere ike ịkpọ
@@ -1254,7 +1254,7 @@ Ntụaka zuru ezu: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Usoro Ncheta
 
-OmniRoute na-echekwa **ncheta mkparịta ụka ogologo oge** site na iji iweghachite ngwakọta:
+67router na-echekwa **ncheta mkparịta ụka ogologo oge** site na iji iweghachite ngwakọta:
 
 - **SQLite FTS5** maka ịchọ mkpụrụokwu n'ime mkparịta ụka ndị gara aga
 - **Qdrant vector store** (nhọrọ) maka icheta ihe dabere na nghọta
@@ -1267,7 +1267,7 @@ Jikwaa ncheta na **Dashboard → Memory** (chọọ, dezie, bupụ, hichapụ). 
 
 ## 🔔 Webhooks
 
-Debanye aha maka mmemme OmniRoute iji mee nlekota na akpaaka ozugbo.
+Debanye aha maka mmemme 67router iji mee nlekota na akpaaka ozugbo.
 
 - Mepụta webhook na **Dashboard → Webhooks** site na iji URL ebumnuche na ihe nzuzo mbinye aka HMAC
 - Mmemme ndị dị: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1280,11 +1280,11 @@ Schema zuru ezu dị na [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ## ☁️ Ndị Nnọchiteanya Cloud
 
-OmniRoute na-ejikọta na ndị nnọchiteanya cloud maka ide koodu (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ka ị nwee ike iziga ọrụ ndị na-ewe ogologo oge site n'otu dashboard ahụ nke na-ahụ maka routing mpaghara gị.
+67router na-ejikọta na ndị nnọchiteanya cloud maka ide koodu (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ka ị nwee ike iziga ọrụ ndị na-ewe ogologo oge site n'otu dashboard ahụ nke na-ahụ maka routing mpaghara gị.
 
 - Mepụta ọrụ na **Dashboard → Cloud Agents** ma ọ bụ site na `POST /api/v1/agents/tasks`
 - Soro ọnọdụ, ndekọ, na artifacts nke ọrụ ọ bụla
-- Weta igodo API nke gị maka provider ọ bụla — ozi nzere anaghị apụ n'ime instance OmniRoute
+- Weta igodo API nke gị maka provider ọ bụla — ozi nzere anaghị apụ n'ime instance 67router
 
 Ntụaka zuru ezu: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1292,7 +1292,7 @@ Ntụaka zuru ezu: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Njikwa Site na Mmemme
 
-Ị nwere ike ijikwa akụrụngwa OmniRoute niile (providers, combos, keys, settings) site na HTTP, site n'iji **igodo Bearer nwere scope `manage`**.
+Ị nwere ike ijikwa akụrụngwa 67router niile (providers, combos, keys, settings) site na HTTP, site n'iji **igodo Bearer nwere scope `manage`**.
 
 Mepụta igodo ahụ na **Dashboard → API Keys → New Key → Scope: manage**, emesịa:
 
@@ -1325,7 +1325,7 @@ Lee [API_REFERENCE.md](../reference/API_REFERENCE.md) maka katalọgụ endpoint
 
 ## 💻 CLI Dị N'ime
 
-OmniRoute na-abịa na CLI dị n'ime (`omniroute …`) maka nhazi, nchọpụta nsogbu, na njikwa oge ọ na-arụ ọrụ. Nke a **dị iche na ibe "CLI Tools" dị na dashboard**, nke na-ahazi CLI nke ndị ọzọ (Claude Code, Cursor, Codex, Cline, …) ka ha nwee ike ịkparịta ụka na OmniRoute.
+67router na-abịa na CLI dị n'ime (`omniroute …`) maka nhazi, nchọpụta nsogbu, na njikwa oge ọ na-arụ ọrụ. Nke a **dị iche na ibe "CLI Tools" dị na dashboard**, nke na-ahazi CLI nke ndị ọzọ (Claude Code, Cursor, Codex, Cline, …) ka ha nwee ike ịkparịta ụka na 67router.
 
 ```bash
 omniroute setup                    # Ọkachamara nhazi mmekọrịta (paswọọdụ, ndị na-eweta ọrụ, ngwakọta)
@@ -1356,7 +1356,7 @@ Ndụmọdụ: jikọta `omniroute doctor --json` na ngwa nlekota gị iji nye �
 
 ## 🖥️ Ngwa Desktọpụ (Electron)
 
-OmniRoute dị ka ngwa desktọpụ nke e wuru kpọmkwem maka Windows, macOS, na Linux.
+67router dị ka ngwa desktọpụ nke e wuru kpọmkwem maka Windows, macOS, na Linux.
 
 ### Nwụnye
 

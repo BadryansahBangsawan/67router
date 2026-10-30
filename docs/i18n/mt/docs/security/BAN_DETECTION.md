@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute jiskennja t-tweġibiet ta’ żball upstream għal sinjali li jindikaw li **kont ta’ fornitur huwa mejjet b’mod permanenti** (sospiż / diżattivat / ipprojbit minħabba t-ToS) u, meta tinstab taqbila, imexxi dik il-konnessjoni għal **stat terminali `banned`** sabiex ma tibqax tintgħażel għat-talbiet. Dan huwa dak li tikkonfigura l-kard tas-settings **Security → Banned Keywords** ("Kliem ewlieni addizzjonali li jattiva s-sejbien ta’ projbizzjoni permanenti tal-kont. Il-kliem ewlieni integrat japplika dejjem.").
+67router jiskennja t-tweġibiet ta’ żball upstream għal sinjali li jindikaw li **kont ta’ fornitur huwa mejjet b’mod permanenti** (sospiż / diżattivat / ipprojbit minħabba t-ToS) u, meta tinstab taqbila, imexxi dik il-konnessjoni għal **stat terminali `banned`** sabiex ma tibqax tintgħażel għat-talbiet. Dan huwa dak li tikkonfigura l-kard tas-settings **Security → Banned Keywords** ("Kliem ewlieni addizzjonali li jattiva s-sejbien ta’ projbizzjoni permanenti tal-kont. Il-kliem ewlieni integrat japplika dejjem.").
 
 Din il-paġna tiddokumenta l-lista integrata, il-fluss tas-sejbien, l-ambitu tiegħu, kif iżżid kliem ewlieni personalizzat b’mod sikur, u kif tirkupra konnessjoni mmarkata. L-istat terminali nnifsu huwa parti mill-mudell ta’ reżiljenza — ara
 [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) ("Stati terminali").

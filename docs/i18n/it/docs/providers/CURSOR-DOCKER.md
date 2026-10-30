@@ -4,7 +4,7 @@
 
 ---
 
-Quando OmniRoute viene eseguito all’interno di Docker, i flussi legacy **Importa da Cursor IDE** /
+Quando 67router viene eseguito all’interno di Docker, i flussi legacy **Importa da Cursor IDE** /
 `cursor-agent` non funzionano perché il container non può accedere all’installazione di Cursor
 presente sull’host. Usa invece **Accedi con Cursor** (PKCE deep-control).
 
@@ -14,7 +14,7 @@ presente sull’host. Usa invece **Accedi con Cursor** (PKCE deep-control).
    `~/.config/Cursor/User/globalStorage/state.vscdb` _all’interno_ del container.
    In Docker Desktop per macOS, il DB dell’IDE sull’host non viene montato per impostazione predefinita e
    il sistema operativo del container è Linux anche quando l’host è Darwin.
-2. **Nessun binario `cursor-agent`** — Le immagini ufficiali di OmniRoute non includono
+2. **Nessun binario `cursor-agent`** — Le immagini ufficiali di 67router non includono
    `cursor-agent`. In precedenza, Modelli disponibili eseguiva
    `cursor-agent --list-models` e, in caso di errore, utilizzava un catalogo statico.
 3. **Binario errato** — **Non** montare tramite bind un `cursor-agent` per macOS in un
@@ -24,11 +24,11 @@ presente sull’host. Usa invece **Accedi con Cursor** (PKCE deep-control).
 
 1. Apri **Dashboard → Provider → Cursor**.
 2. Seleziona la scheda **Accedi con Cursor**.
-3. Fai clic su **Accedi con Cursor** — OmniRoute apre
+3. Fai clic su **Accedi con Cursor** — 67router apre
    `https://cursor.com/loginDeepControl?…` nel browser del tuo **host**.
-4. Approva l’accesso nel browser, quindi torna alla dashboard. OmniRoute
+4. Approva l’accesso nel browser, quindi torna alla dashboard. 67router
    interroga periodicamente `api2.cursor.sh/auth/poll` finché non riceve i token.
-5. OmniRoute memorizza i token di **accesso + aggiornamento** e li aggiorna tramite
+5. 67router memorizza i token di **accesso + aggiornamento** e li aggiorna tramite
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Questo metodo non richiede Cursor IDE o `cursor-agent` all’interno del container.
@@ -37,10 +37,10 @@ Questo metodo non richiede Cursor IDE o `cursor-agent` all’interno del contain
 
 Con una connessione autenticata, **Modelli disponibili / Sincronizzazione automatica** preferisce il catalogo HTTP
 `AiService/AvailableModels` di Cursor, utilizzando il bearer token della connessione.
-Se l’operazione non riesce, OmniRoute prova comunque a usare `cursor-agent` sull’host (quando presente), quindi
+Se l’operazione non riesce, 67router prova comunque a usare `cursor-agent` sull’host (quando presente), quindi
 il catalogo statico iniziale.
 
-OmniRoute espone sempre **`auto`** nel catalogo (visualizzato come “Auto”), oltre alle
+67router espone sempre **`auto`** nel catalogo (visualizzato come “Auto”), oltre alle
 modalità router in stile OpenCodex **`auto-cost`**, **`auto-balance`** e
 **`auto-intelligence`**. Nelle comunicazioni, queste corrispondono al modello `default` di Cursor
 (con un `optimization` ModelParameter per le tre varianti). Preferisci
@@ -87,7 +87,7 @@ dall’IDE non è più necessaria).
 ## Turni vuoti / utilizzo esaurito
 
 Quando Cursor accetta un’esecuzione ma non restituisce testo dell’assistente (un caso comune quando
-l’utilizzo premium è esaurito), OmniRoute restituisce un errore **429** utilizzabile (con indicazioni sulla quota) oppure
+l’utilizzo premium è esaurito), 67router restituisce un errore **429** utilizzabile (con indicazioni sulla quota) oppure
 **502** con istruzioni, non un semplice “Il provider ha restituito contenuto vuoto”. Gli errori
 di streaming come `not_found: AI Model Not Found` (finestra di utilizzo esaurita) vengono
 classificati come **limite di frequenza Cursor / utilizzo superato** e mantengono tale messaggio
@@ -97,7 +97,7 @@ i limiti del piano Cursor.
 
 ## Versione del client (headless)
 
-Senza un’installazione locale di `cursor-agent`, OmniRoute determina
+Senza un’installazione locale di `cursor-agent`, 67router determina
 `x-cursor-client-version` prima tramite la variabile di ambiente `CURSOR_AGENT_CLI_VERSION`, quindi tramite uno scraping
 memorizzato su disco dello script di installazione di Cursor e infine tramite un ID build fissato. Esegui l’override con
 `CURSOR_AGENT_CLI_VERSION` quando necessario.

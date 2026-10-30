@@ -12,7 +12,7 @@ sonrach, bratacha `anthropic-beta`, ceanntásca Stainless SDK, srl.).
 
 ## Tús tapa — úsáid an soláthraí dúchais `agentrouter` (molta)
 
-I gcás fhormhór na n-úsáideoirí, **níl aon chumraíocht speisialta ag teastáil**. Tagann OmniRoute le soláthraí ionsuite
+I gcás fhormhór na n-úsáideoirí, **níl aon chumraíocht speisialta ag teastáil**. Tagann 67router le soláthraí ionsuite
 `agentrouter` a bhfuil lorg sreinge iomlán Claude Code ionsuite ann cheana féin (féach
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Chun é a úsáid:
 
@@ -34,7 +34,7 @@ an chonair chomhrá, nó an tacar ceanntásca á sárú agat.
 
 ## Ardleibhéal: nascadh tríd an gcineál soláthraí atá comhoiriúnach le Claude Code
 
-Tacaíonn OmniRoute freisin le AgentRouter (agus athsheachadáin chomhchosúla) tríd an gcineál soláthraí
+Tacaíonn 67router freisin le AgentRouter (agus athsheachadáin chomhchosúla) tríd an gcineál soláthraí
 **comhoiriúnach le Claude Code** (`anthropic-compatible-cc-*`), a úsáideann
 Anthropic Messages API leis an lorg sreinge ceart. Ní oibreoidh soláthraí cineálach
 `openai-compatible-chat` atá dírithe ar `https://agentrouter.org` —
@@ -46,14 +46,14 @@ diúltaíonn an WAF réamhtheachtach d'iarratais nach bhfuil cuma Claude Code or
 
 - Cuntas AgentRouter agus eochair API. Faigheann úsáideoirí nua creidmheasanna saor in aisce tríd an nasc cleamhnaithe
   i [README](../README.md) an tionscadail.
-- OmniRoute ag rith agus an bhratach gné `ENABLE_CC_COMPATIBLE_PROVIDER` cumasaithe
+- 67router ag rith agus an bhratach gné `ENABLE_CC_COMPATIBLE_PROVIDER` cumasaithe
   (féach thíos).
 
 ## 1. Cumasaigh an cineál soláthraí atá comhoiriúnach le CC
 
 Tá an cineál soláthraí atá comhoiriúnach le Claude Code faoi rialú brataí gné toisc go
 seolann sé trácht a dhéanann aithris dhlúth ar an gcliant oifigiúil Claude Code. Cumasaigh é trí
-athróg timpeallachta a shocrú sula dtosaíonn tú OmniRoute:
+athróg timpeallachta a shocrú sula dtosaíonn tú 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

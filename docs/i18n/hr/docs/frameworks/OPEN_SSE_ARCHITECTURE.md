@@ -4,7 +4,7 @@
 
 ---
 
-> **Ukratko**: `open-sse/` je temeljni mehanizam za strujanje koji pokreće svaki LLM zahtjev u OmniRouteu. Sadrži oko 1.400 datoteka koje implementiraju tijek obrade zahtjeva, izvršitelje, usluge, MCP poslužitelj i sloj za prevođenje formata. Ovaj vodič objašnjava kako se svi dijelovi međusobno povezuju.
+> **Ukratko**: `open-sse/` je temeljni mehanizam za strujanje koji pokreće svaki LLM zahtjev u 67routeru. Sadrži oko 1.400 datoteka koje implementiraju tijek obrade zahtjeva, izvršitelje, usluge, MCP poslužitelj i sloj za prevođenje formata. Ovaj vodič objašnjava kako se svi dijelovi međusobno povezuju.
 
 **Izvor:** `open-sse/` (paket radnog prostora, oko 1.440 `.ts` datoteka koje nisu testne)
 
@@ -12,10 +12,10 @@
 
 ## Zašto zaseban paket radnog prostora?
 
-`open-sse/` je **samostalan radni prostor** u OmniRoute monorepozitoriju iz nekoliko razloga:
+`open-sse/` je **samostalan radni prostor** u 67router monorepozitoriju iz nekoliko razloga:
 
 1. **Ponovna upotrebljivost** — `open-sse` se objavljuje kao `@omniroute/open-sse` na npm-u, pa ga drugi projekti mogu koristiti neovisno
-2. **Jasne granice** — mehanizam za strujanje odvojen je od sloja korisničkog sučelja i baze podataka specifičnog za OmniRoute
+2. **Jasne granice** — mehanizam za strujanje odvojen je od sloja korisničkog sučelja i baze podataka specifičnog za 67router
 3. **Performanse** — mehanizam nema ovisnosti o Next.js-u, što omogućuje brže hladno pokretanje u CLI i serverless okruženjima
 4. **Verzioniranje** — `open-sse` može objavljivati izdanja vlastitim tempom
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Zašto zaseban transformator?
 
-Responses API novi je OpenAI-jev format s **razgovorima koji čuvaju stanje** (`previous_response_id`). Kada klijent pošalje Responses zahtjev, OmniRoute:
+Responses API novi je OpenAI-jev format s **razgovorima koji čuvaju stanje** (`previous_response_id`). Kada klijent pošalje Responses zahtjev, 67router:
 
 1. Interno pretvara Responses → Chat Completions
 2. Šalje pružatelju (bilo kojem pružatelju koji podržava Chat Completions)

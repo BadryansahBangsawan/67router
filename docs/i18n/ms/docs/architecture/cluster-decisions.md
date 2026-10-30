@@ -14,7 +14,7 @@ Dua profil compose pilihan (`memory`, `bifrost`) untuk penggunaan 8 perkhidmatan
 
 ## Mengapa pendekatan ini konservatif
 
-Struktur penggunaan OmniRoute yang sedia ada sememangnya ringkas dan telah terbukti:
+Struktur penggunaan 67router yang sedia ada sememangnya ringkas dan telah terbukti:
 
 - **`redis:7-alpine`** mengendalikan beban kerja had kadar/cache pada skala pengeluaran.
 - **SQLite + sqlite-vec + FTS5** merangkumi memori setempat + vektor + carian teks (lihat [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Kedua-dua profil ini ialah **pilihan peluasan skala untuk penggunaan yang mencap
 
 - Anda menjalankan ≥3 replika `omniroute` dan mahu memusatkan penggiliran penyedia dalam satu proses Go.
 - Anda mahukan satu titik audit/pengelogan untuk permintaan kepada penyedia huluan merentas semua replika.
-- Anda mahu penskalaan mendatar bagi lapisan penghalaan Tahap 1 secara bebas daripada replika OmniRoute.
+- Anda mahu penskalaan mendatar bagi lapisan penghalaan Tahap 1 secara bebas daripada replika 67router.
 
 **Perkara yang ditambahkan:**
 

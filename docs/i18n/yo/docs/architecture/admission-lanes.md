@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ní àwọn ètò lane abẹ́lé-process **méjì** tí ìwọ̀n iṣẹ́ wọn yàtọ̀. Wọ́n ń ṣiṣẹ́ pọ̀ láti mú ara wọn pé; ó yẹ kí àwọn olùṣàkóso mọ èyí tí wọ́n ń wò.
+67router ní àwọn ètò lane abẹ́lé-process **méjì** tí ìwọ̀n iṣẹ́ wọn yàtọ̀. Wọ́n ń ṣiṣẹ́ pọ̀ láti mú ara wọn pé; ó yẹ kí àwọn olùṣàkóso mọ èyí tí wọ́n ń wò.
 
 ## 1. Ìgbàwọlé jálẹ̀ gbogbo process ní ìpele byte (`chatBodyAdmission.ts`)
 

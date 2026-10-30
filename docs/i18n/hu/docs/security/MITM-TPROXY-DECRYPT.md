@@ -4,7 +4,7 @@
 
 ---
 
-A TPROXY transzparens visszafejtés az OmniRoute **5. forgalomrögzítési módja** a
+A TPROXY transzparens visszafejtés a 67router **5. forgalomrögzítési módja** a
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM-veremhez. Linuxon a kernel TPROXY funkciója és szabályalapú útválasztás segítségével
 elfogja és **visszafejti** a helyi kimenő HTTPS-forgalmat — az `/etc/hosts` meghamisítása
@@ -59,7 +59,7 @@ Akkor használja, ha olyan folyamat forgalmát szeretné rögzíteni és visszaf
 
 Mivel az elfogás a kernelben történik, a kezdeményező folyamat **semmilyen
 konfigurációmódosítást** nem igényel — ugyanakkor a folyamatnak megbízhatónak
-kell tekintenie az OmniRoute által telepített dinamikus hitelesítésszolgáltatót
+kell tekintenie a 67router által telepített dinamikus hitelesítésszolgáltatót
 (lásd: [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -79,7 +79,7 @@ kivétel dobása helyett `null` értéket ad vissza. A rögzítési mód állapo
 `available: false` értéket jelez, az irányítópult kapcsolója **letiltott** lesz,
 és a következő elemleírás jelenik meg:
 „A TPROXY-visszafejtéshez Linux + root + a natív kiegészítő szükséges”, miközben
-az OmniRoute többi része továbbra is működik.
+a 67router többi része továbbra is működik.
 
 ---
 
@@ -280,7 +280,7 @@ végtelen hurkot eredményezne. A továbbítási útvonal ezt egy megkerülési 
 | **Hibák biztonságossá tétele**                  | Az útvonal hibaválaszai a `sanitizeErrorMessage()` függvényen mennek keresztül (12. szigorú szabály).                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 **A MITM CA jelentős jogosultságot biztosít.** Egy, az operációs rendszer által megbízhatónak tekintett CA, amely bármely
-gazdagéphez aláírhat tanúsítványt, azt jelenti, hogy minden, amit az OmniRoute elfog, visszafejthető. Ez csak a
+gazdagéphez aláírhat tanúsítványt, azt jelenti, hogy minden, amit a 67router elfog, visszafejthető. Ez csak a
 kifejezetten engedélyezett, kizárólag helyi TPROXY-rögzítési módban érhető el, alapértelmezés szerint ki van kapcsolva, és a megbízhatósági tár
 bejegyzése a mód leállításakor eltávolításra kerül.
 
@@ -399,7 +399,7 @@ a kiegészítőt (`npm run build:native:tproxy`), és a folyamat képes betölte
 ### Egy összeomlás után megmaradt tűzfalszabályok
 
 A `revertTproxy()` az alkalmazási művelet pontos inverze, és idempotens. A mód
-leállítása visszavonja a szabályokat; ha az OmniRoute leállítása egy munkamenet
+leállítása visszavonja a szabályokat; ha a 67router leállítása egy munkamenet
 közben történt, használja az AgentBridge **Javítás** műveletét
 (`POST /api/tools/agent-bridge/repair`) a gazdátlan rendszerállapot
 (DNS-hamisítás, legfelső szintű hitelesítésszolgáltató, rendszerproxy)

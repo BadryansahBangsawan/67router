@@ -7,11 +7,11 @@
 Informāciju par koplietojamo izpildāmo failu manifestu, ierobežotām bērnprocesu vidēm un pastāvīgo
 Gemini iestatīšanu skatiet sadaļā [CLI palaišanas līgumi](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute nodrošina `setup-*` komandu saimi, kas konfigurē programmēšanas
-CLI (Codex, Claude Code, OpenCode, Cline, …), lai tas izmantotu OmniRoute kā savu aizmugursistēmu — tādējādi
-rīks sazinās ar **vienu** galapunktu, bet OmniRoute novirza pieprasījumus pareizajam pakalpojumu sniedzējam ar
+67router nodrošina `setup-*` komandu saimi, kas konfigurē programmēšanas
+CLI (Codex, Claude Code, OpenCode, Cline, …), lai tas izmantotu 67router kā savu aizmugursistēmu — tādējādi
+rīks sazinās ar **vienu** galapunktu, bet 67router novirza pieprasījumus pareizajam pakalpojumu sniedzējam ar
 automātisku rezerves varianta izmantošanu. Katra komanda nolasa **aktuālo** modeļu katalogu no palaistas
-OmniRoute instances (lokālas vai attālas) un ieraksta paša rīka konfigurācijas failu **jūsu**
+67router instances (lokālas vai attālas) un ieraksta paša rīka konfigurācijas failu **jūsu**
 datorā. API atslēge tiek norādīta, izmantojot vides mainīgo, ja vien rīks
 to atbalsta. Komandas, kas saglabā rīka lokālo vides failu, ir norādītas tālāk.
 
@@ -53,7 +53,7 @@ katram rīkam veltītajos detalizētajos aprakstos:
 
 - [Claude Code konfigurācija](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI konfigurācija](./CODEX-CLI-CONFIGURATION.md)
-- [Attālais režīms](./REMOTE-MODE.md) — pārvaldiet attālu OmniRoute instanci (VPS / Tailnet) no sava klēpjdatora
+- [Attālais režīms](./REMOTE-MODE.md) — pārvaldiet attālu 67router instanci (VPS / Tailnet) no sava klēpjdatora
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot paplašinājums; tas var arī izpildīt šīs
   `setup-*` komandas jūsu vietā tieši redaktorā
 
@@ -89,7 +89,7 @@ servera, un konfigurācija tiek saglabāta lokāli.
 
 Piezīmes par karodziņiem (pārbaudīts komandu pirmkodā):
 
-- `--remote <url>` — iegūst katalogu no attāla OmniRoute (ignorē `--port`
+- `--remote <url>` — iegūst katalogu no attāla 67router (ignorē `--port`
   un aktīvo kontekstu). `--api-key <key>` norāda šī servera akreditācijas datus
   (pēc noklusējuma izmanto vides mainīgo `OMNIROUTE_API_KEY` vai aktīvā konteksta pilnvaru).
 - `--only <patterns>` — ar komatiem atdalītas apakšvirknes; patur tikai atbilstošos
@@ -110,7 +110,7 @@ Piezīmes par karodziņiem (pārbaudīts komandu pirmkodā):
   **codex** ar `-c model_providers.omniroute.*` argumentiem. **Qwen ir vienīgais
   palaišanas mērķis, kam `--model` ir obligāts** — `omniroute run qwen` bez tā beidz
   darbu ar kodu `2` un nepārprotamu kļūdas ziņojumu.
-- `--port <port>` — lokālais OmniRoute ports (pēc noklusējuma `20128`; tiek ignorēts, ja
+- `--port <port>` — lokālais 67router ports (pēc noklusējuma `20128`; tiek ignorēts, ja
   ir iestatīts `--remote`). Pieejams visām `setup-*` komandām un abām palaišanas komandām.
 - `omniroute run` izejas kodi: pakārtotā CLI izejas kods tiek nodots
   nemainītā veidā; `2` = nederīgi argumenti (neatbalstīts mērķis, trūkst obligātā
@@ -155,7 +155,7 @@ netiek piedāvāti kā palaižami mērķi.
 
 ## Lokāla lietošana
 
-Kamēr OmniRoute darbojas vietnē `localhost:20128`, vienkārši palaidiet savai
+Kamēr 67router darbojas vietnē `localhost:20128`, vienkārši palaidiet savai
 lietotnei paredzēto iestatīšanas komandu. Katalogs tiek iegūts no lokālā servera.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 Palaidiet, vispār neierakstot konfigurāciju (tikai vides mainīgo ievade):
 
 ```bash
-omniroute launch                 # Claude Code → lokālais OmniRoute
-omniroute launch-codex           # Codex CLI → lokālais OmniRoute
+omniroute launch                 # Claude Code → lokālais 67router
+omniroute launch-codex           # Codex CLI → lokālais 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Attālināta lietošana
 
-Norādiet jebkurai iestatīšanas komandai attālinātu OmniRoute, izmantojot `--remote`
+Norādiet jebkurai iestatīšanas komandai attālinātu 67router, izmantojot `--remote`
 un `--api-key`. Katalogs tiek iegūts no attālinātā servera, bet konfigurācija tiek
 ierakstīta jūsu lokālajā datorā.
 
@@ -248,7 +248,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Abas formas ieraksta vienu 5dive **autentifikācijas profilu**, un katra šim
-profilam piesaistītā `claude` vieta pēc tam sazinās ar OmniRoute. Šim mērķim ir
+profilam piesaistītā `claude` vieta pēc tam sazinās ar 67router. Šim mērķim ir
 raksturīgas trīs lietas:
 
 - **Tas darbojas flotes resursdatorā kā root.** 5dive darbības vārdi darbojas ar
@@ -269,7 +269,7 @@ raksturīgas trīs lietas:
 API atslēga tiek nodota 5dive, izmantojot **stdin** (`--api-key=-`), tāpēc tā
 nekad neparādās `ps` izvadē.
 
-Tieši norādot profilā OmniRoute **kombināciju**, nevis vienu modeli, flotes
+Tieši norādot profilā 67router **kombināciju**, nevis vienu modeli, flotes
 nodrošinātājs iegūst kļūmjpārlēci: kad primārais gala punkts pārtraukumā
 pilnībā nedarbojās izpildes laikā, kas aprakstīts
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), aģents pabeidza
@@ -280,7 +280,7 @@ parādīts lietotājam.
 
 ## Bāzes URL konvencijas (kuriem rīkiem nepieciešams `/v1`)
 
-OmniRoute nodrošina OpenAI saskarni ceļā `/v1`, Anthropic saskarni saknes ceļā
+67router nodrošina OpenAI saskarni ceļā `/v1`, Anthropic saskarni saknes ceļā
 un vietējo Gemini saskarni ceļā `/v1beta`. Katra integrācija ir konfigurēta atbilstoši formai, ko
 sagaida tās rīks (pārbaudīts komandas pirmkodā):
 
@@ -302,7 +302,7 @@ sagaida tās rīks (pārbaudīts komandas pirmkodā):
 ## Vietējo atkarību saglabāšana atjaunināšanas laikā: `--include=optional`
 
 Kad atjaunināt ar `omniroute update` (pēc apstiprināšanas vai ar `--apply`),
-OmniRoute instalēšanu palaiž ar iebūvētu `--include=optional`:
+67router instalēšanu palaiž ar iebūvētu `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -329,14 +329,14 @@ pieejams jaunāks izdevums), `--apply` (instalē bez uzvednes), `--changelog`, `
 
 Līgums pārbaudīts pret `@google/gemini-cli` 0.50.0: CLI ievēro
 `GOOGLE_GEMINI_BASE_URL` un nosūta `POST /v1beta/models/<model>:generateContent`
-(un `:streamGenerateContent?alt=sse`) pieprasījumus uz šo adresi — tieši uz OmniRoute vietējo
+(un `:streamGenerateContent?alt=sse`) pieprasījumus uz šo adresi — tieši uz 67router vietējo
 Gemini saskarni (`/v1beta`). `omniroute run gemini` to automātiski konfigurē:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktīvais OmniRoute bāzes URL (sakne, bez `/v1`);
-- `GEMINI_API_KEY` → atrastie OmniRoute akreditācijas dati (opcija/vides mainīgais/konteksts);
+- `GOOGLE_GEMINI_BASE_URL` → aktīvais 67router bāzes URL (sakne, bez `/v1`);
+- `GEMINI_API_KEY` → atrastie 67router akreditācijas dati (opcija/vides mainīgais/konteksts);
 - **pagaidu izolēts `GEMINI_CLI_HOME`**, kura `.gemini/settings.json`
   atlasa `gemini-api-key` autentifikāciju, tādējādi saglabāta Google OAuth sesija (Code Assist)
-  nekad nepārraksta OmniRoute novirzīto palaišanu — pēc iziešanas tā tiek noņemta;
+  nekad nepārraksta 67router novirzīto palaišanu — pēc iziešanas tā tiek noņemta;
 - **vides mainīgo tīrīšana**: bērnprocesa vide tiek attīrīta no `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` un `GOOGLE_GENAI_USE_GCA` (kas novirzītu
   autentifikāciju uz Vertex/Code Assist), un `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -360,7 +360,7 @@ to apzināti neapej. Šis palaidējs atšķiras no **ACP reģistrācijas**
 
 Deterministiskas palaišanas plāna regresijas pārbaudes CI vidē (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Lai validētu REĀLOS bināros failus pret REĀLU
-OmniRoute serveri, ir pieejams izvēles režīma palaidējs
+67router serveri, ir pieejams izvēles režīma palaidējs
 `tests/integration/upstream-cli-smoke.int.test.ts`. Tas nekad netiek palaists automātiski
 (ikviens apakštests tiek izlaists, ja vien nav iestatīts `RUN_CLI_SMOKE=1`), nodod
 akreditācijas datus ar vides mainīgā NOSAUKUMU (nekad ne tā vērtību), noņem atslēgām

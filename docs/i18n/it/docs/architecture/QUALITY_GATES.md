@@ -4,7 +4,7 @@
 
 ---
 
-Questo documento è il riferimento autorevole per tutti i controlli di qualità CI in OmniRoute.
+Questo documento è il riferimento autorevole per tutti i controlli di qualità CI in 67router.
 Descrive ciascun controllo, ciò che convalida, il job CI in cui viene eseguito, se utilizza
 una baseline ratchet o una politica superato/non superato e se blocca la build o è solo consultivo.
 
@@ -271,14 +271,14 @@ Viene eseguito dopo `build`. Blocca il merge in caso di fallimento.
 
 Vengono eseguiti secondo una pianificazione cron (e `workflow_dispatch`), mai sulle PR. Tutti sono consultivi.
 
-| Workflow               | Convalida                                                                                                                                                                         | Bloccante      |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | Property test fast-check con seed casuale + numero elevato di esecuzioni                                                                                                          | **Consultivo** |
-| `nightly-resilience`   | Gate di crescita dell'heap, fault-injection chaos, carico/soak k6                                                                                                                 | **Consultivo** |
-| `nightly-llm-security` | Guardia anti-injection promptfoo (modalità block) + sonde garak (saltate senza un secret del provider)                                                                            | **Consultivo** |
-| `nightly-schemathesis` | Fuzzing del contratto OpenAPI (schemathesis) contro un OmniRoute attivo usando `docs/openapi.yaml` — fa emergere violazioni della specifica / errori 500 non gestiti (Fase 8 B.4) | **Consultivo** |
-| `nightly-mutation`     | Punteggio di mutation-testing Stryker sulla lane unitaria veloce — i mutanti sopravvissuti fanno emergere assert deboli                                                           | **Consultivo** |
-| `nightly-compat`       | Matrice di compatibilità del motore Node attraverso gli intervalli `engines.node` supportati                                                                                      | **Consultivo** |
+| Workflow               | Convalida                                                                                                                                                                        | Bloccante      |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `nightly-property`     | Property test fast-check con seed casuale + numero elevato di esecuzioni                                                                                                         | **Consultivo** |
+| `nightly-resilience`   | Gate di crescita dell'heap, fault-injection chaos, carico/soak k6                                                                                                                | **Consultivo** |
+| `nightly-llm-security` | Guardia anti-injection promptfoo (modalità block) + sonde garak (saltate senza un secret del provider)                                                                           | **Consultivo** |
+| `nightly-schemathesis` | Fuzzing del contratto OpenAPI (schemathesis) contro un 67router attivo usando `docs/openapi.yaml` — fa emergere violazioni della specifica / errori 500 non gestiti (Fase 8 B.4) | **Consultivo** |
+| `nightly-mutation`     | Punteggio di mutation-testing Stryker sulla lane unitaria veloce — i mutanti sopravvissuti fanno emergere assert deboli                                                          | **Consultivo** |
+| `nightly-compat`       | Matrice di compatibilità del motore Node attraverso gli intervalli `engines.node` supportati                                                                                     | **Consultivo** |
 
 Le baseline di prestazioni (heap, TTFB, tempo di build) vengono registrate, non sottoposte a gate: vedi [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -553,7 +553,7 @@ allowlist in crescita crea un falso senso di qualità.
 
 ## Strumenti per gli agenti: LSP-in-the-loop (facoltativo)
 
-Oltre ai gate della CI, OmniRoute include uno scaffold `agent-lsp` **facoltativo**
+Oltre ai gate della CI, 67router include uno scaffold `agent-lsp` **facoltativo**
 (un `.mcp.json` a livello di progetto, Fase 7 Attività 15). Creare `.mcp.json`
 per esporre un server del linguaggio TypeScript agli agenti di programmazione, affinché risolvano simboli /
 diagnostica **prima** di scrivere codice: un complemento a `typecheck:core` basato sulla compilazione prima delle asserzioni,

@@ -4,7 +4,7 @@
 
 ---
 
-Quando o OmniRoute é executado dentro do Docker, o fluxo padrão "Importar do Chaveiro do Zed" falha
+Quando o 67router é executado dentro do Docker, o fluxo padrão "Importar do Chaveiro do Zed" falha
 porque o contêiner não consegue acessar o daemon do chaveiro do sistema operacional host (`libsecret` no Linux,
 Keychain no macOS, Credential Manager no Windows), e os diretórios de configuração do Zed no
 sistema de arquivos do host não ficam visíveis dentro do contêiner por padrão.
@@ -20,7 +20,7 @@ Dois problemas impeditivos ocorrem dentro de um contêiner:
    `keytar` se comunica com o serviço de chaveiro do sistema operacional por meio de um soquete Unix ou de uma sessão D-Bus.
    Nenhum deles é conectado ao contêiner por padrão, portanto as leituras de credenciais sempre falham.
 
-O OmniRoute detecta o ambiente Docker por meio de duas heurísticas:
+O 67router detecta o ambiente Docker por meio de duas heurísticas:
 
 - Presença de `/.dockerenv` (gravado pelo daemon do Docker na inicialização do contêiner).
 - A string `docker` presente em `/proc/1/cgroup` (cgroup v1 do Linux).
@@ -32,7 +32,7 @@ Quando qualquer uma das heurísticas é acionada, a rota de importação retorna
 
 1. Abra **Painel → Provedores → Zed**.
 2. O painel **Importação Manual de Token** aparece abaixo do cartão de importação do chaveiro. Quando
-   o OmniRoute detecta o Docker, esse painel é expandido automaticamente após a primeira tentativa
+   o 67router detecta o Docker, esse painel é expandido automaticamente após a primeira tentativa
    malsucedida de importação do chaveiro.
 3. Selecione o provedor no menu suspenso (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter ou DeepSeek).

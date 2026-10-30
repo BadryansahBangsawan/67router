@@ -7,29 +7,29 @@
 > **Fonte canónica:** `src/lib/skills/` e `src/app/api/skills/`
 > **Última atualização:** 2026-06-28 — v3.8.40
 
-O OmniRoute disponibiliza uma framework extensível de Skills que permite aos modelos de linguagem (e aos operadores) compor capacidades reutilizáveis — desde leituras do sistema de ficheiros e pedidos HTTP até à execução de código em sandbox e Skills selecionadas do marketplace.
+O 67router disponibiliza uma framework extensível de Skills que permite aos modelos de linguagem (e aos operadores) compor capacidades reutilizáveis — desde leituras do sistema de ficheiros e pedidos HTTP até à execução de código em sandbox e Skills selecionadas do marketplace.
 
-Uma Skill é uma unidade de trabalho com controlo de versão e definida por um esquema. O OmniRoute pode injetar Skills como definições de ferramentas em pedidos enviados, intercetar chamadas de ferramentas devolvidas pelo modelo, executar o handler correspondente e enviar o resultado de volta ao modelo para que a conversa possa continuar. O modelo nunca vê a implementação — apenas a interface da ferramenta.
+Uma Skill é uma unidade de trabalho com controlo de versão e definida por um esquema. O 67router pode injetar Skills como definições de ferramentas em pedidos enviados, intercetar chamadas de ferramentas devolvidas pelo modelo, executar o handler correspondente e enviar o resultado de volta ao modelo para que a conversa possa continuar. O modelo nunca vê a implementação — apenas a interface da ferramenta.
 
 ---
 
 ## Agent Skills vs Omni Skills
 
-O OmniRoute tem dois sistemas de Skills distintos, mas complementares:
+O 67router tem dois sistemas de Skills distintos, mas complementares:
 
 | Dimensão         | **Omni Skills** (este documento)                                              | **Agent Skills**                                                                                  |
 | :--------------- | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
 | Finalidade       | Injeção de ferramentas no LLM + execução em sandbox                           | Catálogo SKILL.md para agentes externos descobrirem e utilizarem                                  |
 | Fonte canónica   | `src/lib/skills/` + marketplace                                               | `src/lib/agentSkills/` + diretório `skills/`                                                      |
 | Modo de execução | Injetadas em pedidos enviados, executadas em eventos de chamada de ferramenta | Catálogo markdown estático + endpoints de descoberta REST/MCP/A2A                                 |
-| Quem as utiliza  | O próprio OmniRoute (encaminhamento combinado, chamadas LLM recebidas)        | Agentes externos, clientes MCP, orquestradores A2A                                                |
+| Quem as utiliza  | O próprio 67router (encaminhamento combinado, chamadas LLM recebidas)         | Agentes externos, clientes MCP, orquestradores A2A                                                |
 | Quantidade       | Variável (determinada pelo marketplace)                                       | 43 entradas no catálogo (22 API + 20 CLI + 1 configuração)                                        |
 | Formato          | `SkillDefinition` com esquema da ferramenta + handler                         | Frontmatter de `SKILL.md` + corpo em markdown                                                     |
 | Descoberta       | REST `/api/skills/*` + ferramentas MCP `omniroute_skills_*`                   | REST `/api/agent-skills/*` + ferramentas MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 
-As **Omni Skills** são o motor de execução — definem o que o OmniRoute _pode fazer_ quando um LLM invoca uma ferramenta.
+As **Omni Skills** são o motor de execução — definem o que o 67router _pode fazer_ quando um LLM invoca uma ferramenta.
 
-As **Agent Skills** são o catálogo de documentação — explicam a agentes externos _como utilizar_ a API REST e a CLI do OmniRoute, através de ficheiros SKILL.md estruturados que podem ser fornecidos diretamente aos prompts dos agentes.
+As **Agent Skills** são o catálogo de documentação — explicam a agentes externos _como utilizar_ a API REST e a CLI do 67router, através de ficheiros SKILL.md estruturados que podem ser fornecidos diretamente aos prompts dos agentes.
 
 Para obter informações sobre o catálogo de Agent Skills, o gerador, as ferramentas MCP e a Skill A2A, consulte [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Para obter informações sobre o catálogo de Agent Skills, o gerador, as ferram
 
 Três fontes de Skills coexistem no mesmo registo:
 
-1. **Skills integradas** (`src/lib/skills/builtins.ts`) — incluídas no OmniRoute. Abrangem os casos comuns:
+1. **Skills integradas** (`src/lib/skills/builtins.ts`) — incluídas no 67router. Abrangem os casos comuns:
    - `file_read`, `file_write` — espaço de trabalho em sandbox por chave de API em `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP enviado através de `safeOutboundFetch` com `guard: "public-only"`
    - `web_search` — fornecedor de pesquisa substituível com cache (`executeWebSearch`)
    - `eval_code` — execução de `node` ou `python` numa sandbox Docker
    - `execute_command` — comando de shell executado numa sandbox Docker
    - `browser` — estrutura baseada no Playwright, desativada por predefinição (`builtin/browser.ts`)
-2. **SkillsMP** (o Marketplace do OmniRoute) — obtidas a partir de `https://skillsmp.com/api/v1/skills/search`. Requer `skillsmpApiKey` nas Definições.
+2. **SkillsMP** (o Marketplace do 67router) — obtidas a partir de `https://skillsmp.com/api/v1/skills/search`. Requer `skillsmpApiKey` nas Definições.
 3. **SkillsSH** (catálogo da comunidade `skills.sh`) — obtidas a partir de `https://skills.sh/api/search`. Não requer autenticação; o conteúdo de SKILL.md é obtido diretamente dos ficheiros raw do GitHub.
 
 Um único "fornecedor ativo" controla o catálogo a partir do qual o painel instala Skills (`src/lib/skills/providerSettings.ts`). Altere-o em **Definições → Memória e Skills**. Predefinição: `skillsmp`.
@@ -444,7 +444,7 @@ ao estilo de `0.6`, nem pontuação em `registry.ts`.
 
 ## Catálogo de Skills Incorporadas
 
-O OmniRoute inclui um conjunto selecionado de skills incorporadas em `src/lib/skills/builtin/`. As mais comuns são:
+O 67router inclui um conjunto selecionado de skills incorporadas em `src/lib/skills/builtin/`. As mais comuns são:
 
 ### Skill de Automatização do Navegador
 

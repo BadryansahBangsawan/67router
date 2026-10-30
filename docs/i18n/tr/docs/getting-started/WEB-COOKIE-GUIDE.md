@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookie sağlayıcıları, OmniRoute'un bir API anahtarı yerine mevcut tarayıcı oturumunuz üzerinden bir yapay zekâ hizmetini kullanmasına olanak tanır. Bir hizmete web sitesi üzerinden zaten erişiminiz varsa ve OmniRoute'un aynı kimliği doğrulanmış oturumu kullanmasını istiyorsanız kullanışlıdır.
+Web Cookie sağlayıcıları, 67router'un bir API anahtarı yerine mevcut tarayıcı oturumunuz üzerinden bir yapay zekâ hizmetini kullanmasına olanak tanır. Bir hizmete web sitesi üzerinden zaten erişiminiz varsa ve 67router'un aynı kimliği doğrulanmış oturumu kullanmasını istiyorsanız kullanışlıdır.
 
 API anahtarı sağlayıcılarının aksine Web Cookie sağlayıcıları, tarayıcınızın web sitesine gönderdiği kimlik bilgilerini kullanarak kimlik doğrulaması yapar.
 
@@ -49,7 +49,7 @@ DevTools
 
 `Cookie` istek başlığı, tarayıcınızın başarıyla kullandığı kimlik doğrulama bilgilerini tam olarak içerir.
 
-Çoğu Web Cookie sağlayıcısı için OmniRoute'a yapıştırılması gereken değer budur.
+Çoğu Web Cookie sağlayıcısı için 67router'a yapıştırılması gereken değer budur.
 
 ---
 
@@ -63,7 +63,7 @@ Kurulum süreci çoğu Web Cookie sağlayıcısı için aynıdır.
 4. Sayfayı yenileyin.
 5. Kimliği doğrulanmış bir sohbet veya konuşma isteğini açın.
 6. Gerekli kimlik doğrulama bilgilerini kopyalayın.
-7. OmniRoute'u açın.
+7. 67router'u açın.
 8. **Providers → Add Provider** bölümüne gidin.
 9. Web Cookie sağlayıcınızı seçin.
 10. Kimlik bilgilerini yapıştırın.
@@ -92,17 +92,17 @@ Farklı web siteleri kimlik doğrulama bilgilerini farklı şekillerde saklar. B
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)), kayıt gerektirmeyen ücretsiz bir tüketici sohbet platformudur — oturum, ilk ziyarette anonim olarak oluşturulur ve üç çerez aracılığıyla kalıcı hâle gelir: `uid`, `si_usr_id` ve `si_ses_id`. OmniRoute, aynı `/api/dispatch` uç noktasını tek bir model kimliği (`notrack-c`, diğer adıyla `ntw`) üzerinden proxy'ler.
+NoTrack ([notrack.ai](https://notrack.ai)), kayıt gerektirmeyen ücretsiz bir tüketici sohbet platformudur — oturum, ilk ziyarette anonim olarak oluşturulur ve üç çerez aracılığıyla kalıcı hâle gelir: `uid`, `si_usr_id` ve `si_ses_id`. 67router, aynı `/api/dispatch` uç noktasını tek bir model kimliği (`notrack-c`, diğer adıyla `ntw`) üzerinden proxy'ler.
 
 ### Bağlanma adımları
 
 1. Tarayıcınızda [notrack.ai](https://notrack.ai) adresini açın ve anonim oturum çerezinin ayarlanmasını bekleyin.
 2. **Geliştirici Araçları → Ağ** bölümünü açın, sayfayı yenileyin ve herhangi bir `/api` isteğine tıklayın.
 3. **İstek Üstbilgileri** bölümünde, `Cookie` üstbilgisinin tam değerini kopyalayın.
-4. OmniRoute'ta **Sağlayıcılar → Sağlayıcı Ekle → NoTrack Web (Ücretsiz)** bölümüne gidin.
+4. 67router'ta **Sağlayıcılar → Sağlayıcı Ekle → NoTrack Web (Ücretsiz)** bölümüne gidin.
 5. Çerez dizesini `apiKey` alanına yapıştırın ve **Kaydedin**.
 
-OmniRoute, yapıştırılan dizeden `uid`, `si_usr_id` ve `si_ses_id` değerlerini çıkarır ve yalnızca bu çiftleri içeren temiz bir `Cookie` üstbilgisini yeniden oluşturur — mevcut olduğunda buna `nt_session` (oturum açmış hesaplar için ayarlanan `ntk_…` belirteci) da eklenir. Üç değerden herhangi biri eksikse operatörlerin alternatif biçimleri deneyebilmesi için yapıştırılan ham dize değiştirilmeden iletilir.
+67router, yapıştırılan dizeden `uid`, `si_usr_id` ve `si_ses_id` değerlerini çıkarır ve yalnızca bu çiftleri içeren temiz bir `Cookie` üstbilgisini yeniden oluşturur — mevcut olduğunda buna `nt_session` (oturum açmış hesaplar için ayarlanan `ntk_…` belirteci) da eklenir. Üç değerden herhangi biri eksikse operatörlerin alternatif biçimleri deneyebilmesi için yapıştırılan ham dize değiştirilmeden iletilir.
 
 ### Model kimlikleri
 
@@ -198,7 +198,7 @@ Uygulama
 
 ---
 
-## Çerez Tarayıcıda Çalışıyor ancak OmniRoute'ta Çalışmıyor
+## Çerez Tarayıcıda Çalışıyor ancak 67router'ta Çalışmıyor
 
 Bazı sağlayıcılar, yalnızca kimliği doğrulanmış istekler sırasında gönderilen çerezler içerir.
 

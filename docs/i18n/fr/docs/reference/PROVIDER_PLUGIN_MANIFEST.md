@@ -16,7 +16,7 @@ Le même manifeste est disponible via HTTP à l’adresse
 `GET /api/v1/provider-plugin-manifest` pour les sidecars qui s’exécutent hors
 processus.
 
-OmniRoute communique cette URL à Bifrost et CLIProxyAPI via l’en-tête de requête
+67router communique cette URL à Bifrost et CLIProxyAPI via l’en-tête de requête
 `X-OmniRoute-Provider-Manifest-Url`. Définissez
 `OMNIROUTE_PROVIDER_MANIFEST_URL` lorsque le sidecar nécessite une URL publique
 ou une URL du réseau de conteneurs plutôt que l’origine de la requête locale.
@@ -34,7 +34,7 @@ doit émettre une requête sans condition au lieu d’accepter une réponse `304
 
 Faire évoluer les métadonnées des fournisseurs vers un contrat de plugin afin
 que le chemin critique des requêtes puisse à terme être pris en charge par un
-sidecar à plus faible latence, tandis qu’OmniRoute conserve la route TypeScript
+sidecar à plus faible latence, tandis que 67router conserve la route TypeScript
 comme point d’application des politiques et solution de repli. Le manifeste est
 additif : il ne modifie pas à lui seul le routage des requêtes.
 
@@ -81,7 +81,7 @@ intégrateurs doivent le considérer comme la réponse lisible par machine à la
 | `usage-fetch`        | Dispose d’un récupérateur d’utilisation ou de quota configuré (`getUsageForProvider`).          |
 | `usage-supported`    | L’API d’utilisation accepte ce fournisseur (`isSupportedUsageConnection`).                      |
 
-`usage-fetch` sert uniquement à la découverte. Cette balise indique qu’OmniRoute sait
+`usage-fetch` sert uniquement à la découverte. Cette balise indique que 67router sait
 comment lire l’utilisation du fournisseur ; elle n’active pas la récupération, ne modifie
 pas la sémantique des quotas et n’implique pas que le widget de quota du Dashboard soit
 activé pour le fournisseur — ce widget est contrôlé séparément par

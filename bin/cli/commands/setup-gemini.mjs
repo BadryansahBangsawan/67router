@@ -138,7 +138,7 @@ export async function runSetupGeminiCommand(opts = {}) {
     opts.settingsPath ?? opts["settings-path"] ?? path.join(userHome, ".gemini", "settings.json");
   const envPath = opts.envPath ?? opts["env-path"] ?? path.join(path.dirname(settingsPath), ".env");
 
-  printHeading("OmniRoute → Google Gemini CLI (native Gemini API)");
+  printHeading("67router → Google Gemini CLI (native Gemini API)");
   printInfo(`GOOGLE_GEMINI_BASE_URL: ${baseUrl}`);
 
   for (const target of [settingsPath, envPath]) {
@@ -191,11 +191,11 @@ export async function runSetupGeminiCommand(opts = {}) {
 export function registerSetupGemini(program) {
   program
     .command("setup-gemini")
-    .description("Configure Google Gemini CLI's native endpoint for OmniRoute")
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL")
+    .description("Configure Google Gemini CLI's native endpoint for 67router")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL")
     .option("--context <name>", "Named local/remote context")
-    .option("--api-key <key>", "OmniRoute API key")
+    .option("--api-key <key>", "67router API key")
     .option("--model <id>", "Default model id for Gemini CLI")
     .option("--gemini-home <dir>", "Gemini CLI home root (default: GEMINI_CLI_HOME or ~)")
     .option("--settings-path <path>", "Gemini CLI settings.json path")

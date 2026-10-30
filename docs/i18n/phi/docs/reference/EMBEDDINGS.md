@@ -4,9 +4,9 @@
 
 ---
 
-Mga tala para sa operator tungkol sa `POST /v1/embeddings` kapag nasa harap ang OmniRoute ng
+Mga tala para sa operator tungkol sa `POST /v1/embeddings` kapag nasa harap ang 67router ng
 Hindsight 0.9.1 (text-only na `encode(list[str])`) at Memorix 1.6.0 (Jina media
-gate). Live na napatunayan noong 2026-08-17 gamit ang OmniRoute 3.8.49 sa
+gate). Live na napatunayan noong 2026-08-17 gamit ang 67router 3.8.49 sa
 `https://omniroute.jaguar-fish.ts.net/v1`. Walang mga secret sa ibaba.
 
 ## Mga gumaganang model id
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Hindi gagana ang native na `gemini-embedding-2` mula sa GitOps lamang. Dapat
 magdagdag ng Google AI Studio key bilang isang `gemini` provider connection (dashboard o
-`GEMINI_API_KEY` na in-import sa OmniRoute). Wala sa repo na ito ang secret na iyon.
+`GEMINI_API_KEY` na in-import sa 67router). Wala sa repo na ito ang secret na iyon.
 
 ### Jina multimodal path
 
@@ -100,7 +100,7 @@ Gamitin ang `POST /v1/embeddings` hanggang magkaroon ng alias.
 
 ### Jina / Memorix image object
 
-Canonical na image item ng OmniRoute (28×28 PNG, 784 pixel — tinatanggihan ng Jina ang 1×1):
+Canonical na image item ng 67router (28×28 PNG, 784 pixel — tinatanggihan ng Jina ang 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Ang `{ "text": "..." }` na hinaluan ng `{ "image": "data:..." }` ay nagreresulta
 
 Text-only ang mga embedding ng Hindsight (`encode(list[str])`). Hindi ito nagpapadala ng
 mga image object. Ituro ang OpenAI-compatible embeddings base URL ng Hindsight sa
-OmniRoute `/v1` at gumamit ng gumaganang id mula sa talahanayan sa itaas
+67router `/v1` at gumamit ng gumaganang id mula sa talahanayan sa itaas
 (`jina-ai/jina-embeddings-v5-omni-small` o
 `openrouter/google/gemini-embedding-2`). Huwag itakda ang model sa bare na
 `gemini-embedding-2` maliban kung may `gemini` API key sa gateway.
@@ -157,11 +157,11 @@ OmniRoute `/v1` at gumamit ng gumaganang id mula sa talahanayan sa itaas
 ### Memorix 1.6.0
 
 Itinuturing lamang ng Memorix bilang native media ang `baseUrl` na tumutugma sa `/jina\.ai/i`. Ang
-isang OmniRoute URL ay nananatili sa text-only na path kahit Jina omni ang model.
-Isyu sa Memorix client ang gate na iyon. Bukod pa rito, tinatanggihan pa rin ng OmniRoute
+isang 67router URL ay nananatili sa text-only na path kahit Jina omni ang model.
+Isyu sa Memorix client ang gate na iyon. Bukod pa rito, tinatanggihan pa rin ng 67router
 ang Jina body na `{image: "data:..."}` na ipapadala sana ng Memorix kung
-bukas ang gate, kaya hindi makakapag-embed ng mga image ang mga Jina-compatible na client sa pamamagitan ng OmniRoute
+bukas ang gate, kaya hindi makakapag-embed ng mga image ang mga Jina-compatible na client sa pamamagitan ng 67router
 nang hindi ginagamit ang canonical na `{type,source}` schema.
 
 Gamitin ang `jina-ai/jina-embeddings-v5-omni-small` para sa text. Huwag ituro ang
-`base_url` ng Memorix sa `https://api.jina.ai` — panatilihin ang OmniRoute bilang nag-iisang hop.
+`base_url` ng Memorix sa `https://api.jina.ai` — panatilihin ang 67router bilang nag-iisang hop.

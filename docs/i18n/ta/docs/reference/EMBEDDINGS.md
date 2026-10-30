@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, Hindsight 0.9.1 (உரை மட்டும் ஆதரிக்கும் `encode(list[str])`) மற்றும் Memorix 1.6.0 (Jina ஊடக நுழைவாயில்) ஆகியவற்றுக்கு முன்னால் இருக்கும்போது `POST /v1/embeddings`-க்கான இயக்குநர் குறிப்புகள். OmniRoute 3.8.49-க்கு எதிராக `https://omniroute.jaguar-fish.ts.net/v1` முகவரியில் 2026-08-17 அன்று நேரடியாகச் சரிபார்க்கப்பட்டது. கீழே இரகசியங்கள் எதுவும் இல்லை.
+67router, Hindsight 0.9.1 (உரை மட்டும் ஆதரிக்கும் `encode(list[str])`) மற்றும் Memorix 1.6.0 (Jina ஊடக நுழைவாயில்) ஆகியவற்றுக்கு முன்னால் இருக்கும்போது `POST /v1/embeddings`-க்கான இயக்குநர் குறிப்புகள். 67router 3.8.49-க்கு எதிராக `https://omniroute.jaguar-fish.ts.net/v1` முகவரியில் 2026-08-17 அன்று நேரடியாகச் சரிபார்க்கப்பட்டது. கீழே இரகசியங்கள் எதுவும் இல்லை.
 
 ## செயல்படும் மாதிரி id-கள்
 
@@ -70,7 +70,7 @@ curl -sS https://omniroute.example/v1/embeddings \
   -d '{"model":"openrouter/google/gemini-embedding-2","input":["alpha","beta"]}'
 ```
 
-சொந்த `gemini-embedding-2`, GitOps மூலமாக மட்டும் வெற்றிபெற முடியாது. Google AI Studio key ஒன்று `gemini` வழங்குநர் இணைப்பாகச் சேர்க்கப்பட வேண்டும் (முகப்புப்பலகை அல்லது OmniRoute-க்குள் இறக்குமதி செய்யப்பட்ட `GEMINI_API_KEY`). அந்த இரகசியம் இந்த repo-வில் இல்லை.
+சொந்த `gemini-embedding-2`, GitOps மூலமாக மட்டும் வெற்றிபெற முடியாது. Google AI Studio key ஒன்று `gemini` வழங்குநர் இணைப்பாகச் சேர்க்கப்பட வேண்டும் (முகப்புப்பலகை அல்லது 67router-க்குள் இறக்குமதி செய்யப்பட்ட `GEMINI_API_KEY`). அந்த இரகசியம் இந்த repo-வில் இல்லை.
 
 ### Jina பன்மாதிரி பாதை
 
@@ -91,7 +91,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 ### Jina / Memorix படப் பொருள்
 
-OmniRoute-இன் அதிகாரப்பூர்வ பட உருப்படி (28×28 PNG, 784 பிக்சல்கள் — 1×1 படத்தை Jina நிராகரிக்கிறது):
+67router-இன் அதிகாரப்பூர்வ பட உருப்படி (28×28 PNG, 784 பிக்சல்கள் — 1×1 படத்தை Jina நிராகரிக்கிறது):
 
 ```json
 {
@@ -138,10 +138,10 @@ Memorix 1.6.0 / Jina சொந்த வடிவம்:
 
 ### Hindsight 0.9.1
 
-Hindsight embeddings உரையை மட்டுமே ஆதரிக்கின்றன (`encode(list[str])`). அது படப் பொருட்களை அனுப்புவதில்லை. Hindsight-இன் OpenAI-இணக்க embeddings அடிப்படை URL-ஐ OmniRoute `/v1`-க்கு அமைத்து, மேலுள்ள அட்டவணையிலிருந்து செயல்படும் ஓர் id-ஐப் பயன்படுத்தவும் (`jina-ai/jina-embeddings-v5-omni-small` அல்லது `openrouter/google/gemini-embedding-2`). நுழைவாயிலில் `gemini` API key இல்லாவிட்டால், மாதிரியை முன்னொட்டில்லாத `gemini-embedding-2` ஆக அமைக்க வேண்டாம்.
+Hindsight embeddings உரையை மட்டுமே ஆதரிக்கின்றன (`encode(list[str])`). அது படப் பொருட்களை அனுப்புவதில்லை. Hindsight-இன் OpenAI-இணக்க embeddings அடிப்படை URL-ஐ 67router `/v1`-க்கு அமைத்து, மேலுள்ள அட்டவணையிலிருந்து செயல்படும் ஓர் id-ஐப் பயன்படுத்தவும் (`jina-ai/jina-embeddings-v5-omni-small` அல்லது `openrouter/google/gemini-embedding-2`). நுழைவாயிலில் `gemini` API key இல்லாவிட்டால், மாதிரியை முன்னொட்டில்லாத `gemini-embedding-2` ஆக அமைக்க வேண்டாம்.
 
 ### Memorix 1.6.0
 
-`baseUrl`, `/jina\.ai/i` உடன் பொருந்தினால் மட்டுமே Memorix அதைச் சொந்த ஊடகமாகக் கருதுகிறது. மாதிரி Jina omni ஆக இருந்தாலும், OmniRoute URL உரை-மட்டும் பாதையிலேயே தொடர்கிறது. அந்த நுழைவாயில் ஒரு Memorix கிளையன்ட் சிக்கல். தனியாகப் பார்க்கும்போது, நுழைவாயில் திறந்தால் Memorix அனுப்பக்கூடிய Jina `{image: "data:..."}` உடற்பகுதியை OmniRoute இன்னமும் நிராகரிக்கிறது. எனவே அதிகாரப்பூர்வ `{type,source}` திட்டவடிவம் இல்லாமல், Jina-இணக்க கிளையன்ட்களால் OmniRoute வழியாகப் படங்களை embed செய்ய முடியாது.
+`baseUrl`, `/jina\.ai/i` உடன் பொருந்தினால் மட்டுமே Memorix அதைச் சொந்த ஊடகமாகக் கருதுகிறது. மாதிரி Jina omni ஆக இருந்தாலும், 67router URL உரை-மட்டும் பாதையிலேயே தொடர்கிறது. அந்த நுழைவாயில் ஒரு Memorix கிளையன்ட் சிக்கல். தனியாகப் பார்க்கும்போது, நுழைவாயில் திறந்தால் Memorix அனுப்பக்கூடிய Jina `{image: "data:..."}` உடற்பகுதியை 67router இன்னமும் நிராகரிக்கிறது. எனவே அதிகாரப்பூர்வ `{type,source}` திட்டவடிவம் இல்லாமல், Jina-இணக்க கிளையன்ட்களால் 67router வழியாகப் படங்களை embed செய்ய முடியாது.
 
-உரைக்கு `jina-ai/jina-embeddings-v5-omni-small`-ஐப் பயன்படுத்தவும். Memorix `base_url`-ஐ `https://api.jina.ai`-க்கு அமைக்க வேண்டாம் — OmniRoute-ஐ மட்டுமே ஒரே இடைநிலையாக வைத்திருக்கவும்.
+உரைக்கு `jina-ai/jina-embeddings-v5-omni-small`-ஐப் பயன்படுத்தவும். Memorix `base_url`-ஐ `https://api.jina.ai`-க்கு அமைக்க வேண்டாம் — 67router-ஐ மட்டுமே ஒரே இடைநிலையாக வைத்திருக்கவும்.

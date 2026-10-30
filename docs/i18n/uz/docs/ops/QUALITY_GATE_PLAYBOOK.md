@@ -4,7 +4,7 @@
 
 ---
 
-> **Bu hujjat nima haqida.** OmniRoute sifat nazorati tizimining soha ilgʻor amaliyotlari bilan
+> **Bu hujjat nima haqida.** 67router sifat nazorati tizimining soha ilgʻor amaliyotlari bilan
 > taqqoslangan tanqidiy bahosi, **shuningdek**, barcha sifat nazorati nuqtalarining toʻliq
 > katalogi va ayni tizimni istalgan loyihaga tatbiq etish uchun **vositaga bogʻliq boʻlmagan takrorlash rejasi**.
 > 2026-06-16 sanasida repozitoriyning haqiqiy holati asosida yaratilgan (xotiraga asoslanmagan).
@@ -100,62 +100,62 @@ keltirilgan.
 
 ### 1. Uslub va formatlash (deterministik, tezkor)
 
-- **OmniRoute:** lint-staged orqali Prettier + ESLint (pre-commit), 2 ta boʻsh joy/qoʻsh tirnoqlar/100 ta ustun.
+- **67router:** lint-staged orqali Prettier + ESLint (pre-commit), 2 ta boʻsh joy/qoʻsh tirnoqlar/100 ta ustun.
 - **Umumiy:** avtomatik tuzatish imkoniga ega bitta formatlovchi + bitta linter; ular pre-commit bosqichida staged fayllarda ishga tushadi.
 
 ### 2. Turlar
 
-- **OmniRoute:** `typecheck:core` (bloklovchi) + `typecheck:noimplicit:core` (tavsiyaviy) + `type-coverage` uchun 92.17% ratchet + har bir fayl uchun any-byudjet.
+- **67router:** `typecheck:core` (bloklovchi) + `typecheck:noimplicit:core` (tavsiyaviy) + `type-coverage` uchun 92.17% ratchet + har bir fayl uchun any-byudjet.
 - **Umumiy:** CI ichida qatʼiy tur tekshiruvi + ratchet bilan boshqariladigan type-coverage koʻrsatkichi + har bir fayl uchun `any`/istisno yoʻli byudjeti.
 
 ### 3. Testlar (intensivlik)
 
-- **OmniRoute:** bir-birini takrorlamaydigan 2 ta runner (Node native + vitest), 8 ta shard, umumiy qamrov 60/60/60/60 + ratchet ~76% + **muhim modullar uchun 8 ta modulga xos quyi chegara** + tungi property testlar + tungi **mutation testing**.
+- **67router:** bir-birini takrorlamaydigan 2 ta runner (Node native + vitest), 8 ta shard, umumiy qamrov 60/60/60/60 + ratchet ~76% + **muhim modullar uchun 8 ta modulga xos quyi chegara** + tungi property testlar + tungi **mutation testing**.
 - **Umumiy:** test runner(lar)i + **mutlaq** qamrovning quyi chegarasi (nolga tushishdan himoya) + qamrov **ratchet**i (regressiyadan himoya) + **yuqori xavfli kod uchun modulga xos quyi chegaralar** (Goodhart taʼsiridan himoya) + sof mantiq uchun property-based testlar + test sifatining haqiqiy oʻlchovi sifatida tungi **mutation testing**.
 
 ### 4. Test siyosati (tizimni aldashga qarshi)
 
-- **OmniRoute:** `pr-test-policy` (ishlab chiqarish kodi testni talab qiladi), `check-test-masking` (zaiflashtirilgan assertlarni bloklaydi), `pr-evidence` (muvaffaqiyat daʼvosi dalillar blokini talab qiladi), `test-discovery` (har bir test runner tomonidan aniqlanadi).
+- **67router:** `pr-test-policy` (ishlab chiqarish kodi testni talab qiladi), `check-test-masking` (zaiflashtirilgan assertlarni bloklaydi), `pr-evidence` (muvaffaqiyat daʼvosi dalillar blokini talab qiladi), `test-discovery` (har bir test runner tomonidan aniqlanadi).
 - **Umumiy:** «yangi kod ⇒ yangi test» nazorat nuqtasi + olib tashlangan assert/tautologiya detektori + dalil talabi (TDD yoki amaldagi test) + hech bir test globlardan tashqarida yetim qolmasligi kafolati.
 
 ### 5. Murakkablik va kod salomatligi (ratchetlar)
 
-- **OmniRoute:** ESLint ogohlantirishlari (3769↓), jscpd takrorlanishi (5.72%↓), siklomatik murakkablik+max-lines (1800↓), sonarjs kognitiv murakkabligi (753↓), knip orqali oʻlik kod/foydalanilmagan eksportlar (339↓), har bir faylning hajmi (muzlatilgan, faqat qisqarishi mumkin), siklik bogʻliqliklar (maxsus Tarjan, bloklovchi).
+- **67router:** ESLint ogohlantirishlari (3769↓), jscpd takrorlanishi (5.72%↓), siklomatik murakkablik+max-lines (1800↓), sonarjs kognitiv murakkabligi (753↓), knip orqali oʻlik kod/foydalanilmagan eksportlar (339↓), har bir faylning hajmi (muzlatilgan, faqat qisqarishi mumkin), siklik bogʻliqliklar (maxsus Tarjan, bloklovchi).
 - **Umumiy:** har bir salomatlik koʻrsatkichini ratchet bilan boshqarish (ogohlantirishlar, takrorlanish, siklomatik **va** kognitiv murakkablik, oʻlik kod, fayl hajmi, import sikllari). Yoʻnalish doimo «regressiyaga yoʻl qoʻymang».
 
 ### 6. Statik xavfsizlik (SAST + sirlar)
 
-- **OmniRoute:** CodeQL (ogohlantirishlar ratcheti = 0), gitleaks (`[extend] useDefault=true` — juda muhim!), SonarQube, maxsus xavfsizlik qoidalari (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ogohlantirishlar ratcheti = 0), gitleaks (`[extend] useDefault=true` — juda muhim!), SonarQube, maxsus xavfsizlik qoidalari (public-creds, error-helper, route-guard-membership, route-validation).
 - **Umumiy:** ogohlantirishlar ratchetiga ega SAST (CodeQL/Sonar/semgrep) + **meros qilib olingan standart qoidalar toʻplami**ga ega sirlar skaneri (standart sozlamani almashtirib yuboradigan maxsus konfiguratsiya = koʻr zona) + loyihaga xos Hard Rule xavfsizlik nazorat nuqtalari.
 
 ### 7. Taʼminot zanjiri (bogʻliqliklar)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX ruxsat roʻyxati), lockfile-lint (HTTPS+sha512+registry), slopsquattingga qarshi `check-deps` (ruxsat roʻyxati + yoshi ≥72 soat).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX ruxsat roʻyxati), lockfile-lint (HTTPS+sha512+registry), slopsquattingga qarshi `check-deps` (ruxsat roʻyxati + yoshi ≥72 soat).
 - **Umumiy:** bir nechta manbaga asoslangan SCA + litsenziyalar ruxsat roʻyxati + lockfile yaxlitligini tekshirish + yosh/typosquatting tekshiruviga ega bogʻliqliklar ruxsat roʻyxati + yangilanishlarni guruhlovchi bot.
 
 ### 8. Taʼminot zanjiri (yigʻish va reliz)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA kelib chiqish maʼlumotlari (`--provenance`), OpenSSF Scorecard (har hafta), workflowlarni mustahkamlash (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA kelib chiqish maʼlumotlari (`--provenance`), OpenSSF Scorecard (har hafta), workflowlarni mustahkamlash (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Umumiy:** chop etishda SBOM yaratish + imzolangan kelib chiqish maʼlumotlari (SLSA L2+) + jadval asosida Scorecard + barcha workflowlarni mustahkamlash (minimal imtiyozli tokenlar, push qilmaydigan checkoutda saqlanib qoluvchi hisob maʼlumotlari boʻlmasligi, actionlar SHA orqali mahkamlanishi).
 
 ### 9. Shartnomalar va API
 
-- **OmniRoute:** oasdiff (OpenAPIdagi moslikni buzuvchi oʻzgarishlar), schemathesis (tungi shartnoma fuzz-testi), openapi-coverage (hujjatlashtirilgan routelar foizi, ratchet 38.3%), openapi-security-tiers (spetsifikatsiya va route-guard).
+- **67router:** oasdiff (OpenAPIdagi moslikni buzuvchi oʻzgarishlar), schemathesis (tungi shartnoma fuzz-testi), openapi-coverage (hujjatlashtirilgan routelar foizi, ratchet 38.3%), openapi-security-tiers (spetsifikatsiya va route-guard).
 - **Umumiy:** moslikni buzuvchi oʻzgarishlar uchun shartnoma diffi (oasdiff/buf) + spetsifikatsiyaga qarshi property-based fuzz-test (schemathesis) + ratchet bilan boshqariladigan hujjatlashtirish qamrovi + spetsifikatsiya↔kod muvofiqligi.
 
 ### 10. Hujjatlar va i18n (eskirishga qarshi)
 
-- **OmniRoute:** docs-sync (aks ettirilgan versiyalar), docs-counts-sync (hujjatlardagi sonlar va koddagi sonlar), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (aks ettirilgan versiyalar), docs-counts-sync (hujjatlardagi sonlar va koddagi sonlar), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **Umumiy:** hujjatlar va kod oʻrtasida versiyalar/sonlar/muhit oʻzgaruvchilarini sinxronlash (ishonch emas, nazorat nuqtasi) + ichki havolalarni tekshirish + ratchet bilan boshqariladigan i18n qamrovi.
 
 ### 11. Gallyutsinatsiyaga qarshi kurash / izchillik (noyob toifa)
 
-- **OmniRoute:** known-symbols (satr orqali dispatch ⇒ amaldagi belgi), provider-consistency, fetch-targets (mijoz fetch soʻrovi ⇒ haqiqiy route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (satr orqali dispatch ⇒ amaldagi belgi), provider-consistency, fetch-targets (mijoz fetch soʻrovi ⇒ haqiqiy route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Umumiy:** har bir «takrorlangan yagona haqiqat manbasi» (registr, satr orqali dispatch, qatlamlararo havolalar) uchun ikkala tomonning mosligini isbotlaydigan nazorat nuqtasi. Typecheck/test aniqlay olmaydigan eskirishni tutadi.
 
 ### 12. Barqarorlik va predmet sohasi (mahsulotga xos)
 
-- **OmniRoute:** chaos (nosozlik kiritish), heap-growth (sizib chiqish), k6 (uzoq muddatli yuklama), promptfoo+garak (LLM red-team OWASP LLM Top 10), barqarorlikning 3 ta qonuni (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (nosozlik kiritish), heap-growth (sizib chiqish), k6 (uzoq muddatli yuklama), promptfoo+garak (LLM red-team OWASP LLM Top 10), barqarorlikning 3 ta qonuni (circuit-breaker/cooldown/lockout).
 - **Umumiy:** **oʻz** predmet sohangizdagi nosozlik rejimlarini aniqlang va har biri uchun nazorat nuqtasiga ega boʻling (hatto u faqat tunda ishlasa ham). AI ilovalari uchun: inyeksiyaga qarshi red-team. Taqsimlangan tizimlar uchun: chaos + sizib chiqish + uzoq muddatli yuklama.
 
 ---

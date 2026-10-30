@@ -6,7 +6,7 @@
 
 ## Oversigt
 
-Alle OmniRoute-management-API-ruter er klassificeret i ét af tre
+Alle 67router-management-API-ruter er klassificeret i ét af tre
 beskyttelsesniveauer. Klassificeringen er statisk, defineret i `src/server/authz/routeGuard.ts`,
 og evalueres, før nogen anden godkendelsesgren køres.
 
@@ -28,9 +28,9 @@ processtart — en kendt CVE-klasse
 **Hvad GHSA-fhh6-4qxv-rpqj er (angrebsklassen):** En administrations-/agentserver
 eksponerer et endpoint, der starter en underproces (`npm install`, `node`, en browser,
 en proxy, `git`, `tar`, …). Hvis dette endpoint kan nås fra en ekstern vært — fordi
-operatøren placerede OmniRoute bag en nginx/Cloudflare/Tailscale-tunnel, og en JWT
+operatøren placerede 67router bag en nginx/Cloudflare/Tailscale-tunnel, og en JWT
 blev lækket, eller godkendelsen var fejlkonfigureret — forvandler angriberen "kald
-et API" til "kør en kommando på værten" (fjernudførelse af kode). OmniRoute
+et API" til "kør en kommando på værten" (fjernudførelse af kode). 67router
 forhindrer dette ved **ubetinget at håndhæve en kontrol af loopback-værten før
 enhver godkendelseskontrol** på alle ruter, der kan starte processer: En lækket
 token via en tunnel kan stadig ikke nå processtarten.
@@ -122,7 +122,7 @@ behov for bred administrationsadgang.
 
 #### Vejledning til operatører og revision
 
-Hvis du kører OmniRoute bag en reverse proxy eller tunnel (nginx, Caddy,
+Hvis du kører 67router bag en reverse proxy eller tunnel (nginx, Caddy,
 Cloudflare Tunnel, Tailscale, Ngrok), beskytter loopback-kontrollen stadig de
 ovenstående ruter, der kan starte processer — en anmodning, hvis klientadresse
 ikke er loopback, afvises med `403 LOCAL_ONLY` **før godkendelsen køres**, så
@@ -163,7 +163,7 @@ ansvarsområder for operatøren:
   med en klientadresse, der ikke er loopback. Ethvert sådant hit, der returnerede
   `200` i stedet for `403 LOCAL_ONLY`, betyder, at proxyen skjuler klientens
   faktiske IP-adresse — ret proxyen.
-- En `403 LOCAL_ONLY` i OmniRoutes log for en af disse stier betyder, at
+- En `403 LOCAL_ONLY` i 67routers log for en af disse stier betyder, at
   beskyttelsen fungerer efter hensigten, og er ikke en fejl, der skal undertrykkes.
 
 #### Eksternt tilgængelige ruter med en kontrol ved kaldsstedet

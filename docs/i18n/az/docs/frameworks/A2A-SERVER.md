@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Azərbaycan dili)
+# 67router A2A Server Documentation (Azərbaycan dili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agentlərarası Protokol v0.3 — ağıllı marşrutlaşdırma agenti kimi OmniRoute
+> Agentlərarası Protokol v0.3 — ağıllı marşrutlaşdırma agenti kimi 67router
 
 A2A interfeysinin iki üzü var:
 
@@ -19,7 +19,7 @@ Tapşırıqlar `A2ATaskManager` tərəfindən izlənilir (`src/lib/a2a/taskManag
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute-un imkanlarını, bacarıqlarını və autentifikasiya tələblərini təsvir edən Agent Kartını qaytarır.
+67router-un imkanlarını, bacarıqlarını və autentifikasiya tələblərini təsvir edən Agent Kartını qaytarır.
 
 Agent Kartının `version` sahəsi `process.env.npm_package_version` dəyişənindən alınır (`src/app/.well-known/agent.json/route.ts:13` bölməsinə baxın), buna görə də hər buraxılışda `package.json` ilə avtomatik sinxronlaşdırılır.
 
@@ -145,22 +145,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Mövcud Bacarıqlar
 
-OmniRoute `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` daxilində bağlanmış 6 A2A bacarığını təqdim edir. Hər bacarıq modulu `src/lib/a2a/skills/` qovluğunda yerləşir.
+67router `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` daxilində bağlanmış 6 A2A bacarığını təqdim edir. Hər bacarıq modulu `src/lib/a2a/skills/` qovluğunda yerləşir.
 
 | Bacarıq             | ID                   | Təsvir                                                                                                                                                                    | Teqlər                     | Nümunələr                                         |
 | :------------------ | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------- | :------------------------------------------------ |
-| Ağıllı Yönləndirmə  | `smart-routing`      | OmniRoute-un kombo mühərriki + qiymətləndirmə sistemindən istifadə edərək promptu optimal provayder/kombo üzərindən yönləndirir                                           | routing, providers         | "Bu promptu ən yaxşı model üzərindən yönləndir"   |
+| Ağıllı Yönləndirmə  | `smart-routing`      | 67router-un kombo mühərriki + qiymətləndirmə sistemindən istifadə edərək promptu optimal provayder/kombo üzərindən yönləndirir                                            | routing, providers         | "Bu promptu ən yaxşı model üzərindən yönləndir"   |
 | Kvota İdarəetməsi   | `quota-management`   | Hər provayder üzrə kvota vəziyyətini bildirir, çağıranlara nə vaxt məhdudlaşdırma/provayder dəyişmə qərarı verməkdə kömək edir                                            | quota, providers           | "anthropic üçün kvotanı yoxla"                    |
 | Provayder Kəşfi     | `provider-discovery` | Quraşdırılmış provayderləri imkanlar, pulsuz səviyyə bayraqları, OAuth statusu ilə siyahıya alır                                                                          | providers, discovery       | "Hansı provayderlər mövcuddur?"                   |
 | Xərc Təhlili        | `cost-analysis`      | Kataloq + son istifadə məlumatları əsasında sorğu/söhbətin dəyərini təxmin edir                                                                                           | cost, usage                | "Bu söhbətin xərcini təxmin et"                   |
 | Sağlamlıq Hesabatı  | `health-report`      | Hər provayder üzrə circuit breaker, cooldown, lockout vəziyyətini aqreqasiya edir                                                                                         | health, resilience         | "Bütün provayderlərin sağlamlıq statusunu göstər" |
-| İmkanların Siyahısı | `list-capabilities`  | Kontekst inyeksiyası üçün xam SKILL.md URL-ləri ilə birlikdə 43 elementlik tam Agent Skills kataloqunu (22 API + 20 CLI + 1 konfiqurasiya) markdown cədvəli kimi qaytarır | catalog, discovery, skills | "Bütün OmniRoute imkanlarını siyahıya al"         |
+| İmkanların Siyahısı | `list-capabilities`  | Kontekst inyeksiyası üçün xam SKILL.md URL-ləri ilə birlikdə 43 elementlik tam Agent Skills kataloqunu (22 API + 20 CLI + 1 konfiqurasiya) markdown cədvəli kimi qaytarır | catalog, discovery, skills | "Bütün 67router imkanlarını siyahıya al"          |
 
 > Agent Card canlı 375 provayderli kataloqla uyğun saxlanılmalıdır; provayder sayları və pulsuz/autentifikasiyasız metadata runtime reyestrindən götürülür.
 
 ### `list-capabilities` Bacarıq Təfərrüatları
 
-`list-capabilities` bacarığı API çağırışları göndərməzdən əvvəl OmniRoute-un nəyi təqdim etdiyini kəşf etməli olan xarici agentlər üçün xüsusilə faydalıdır. O, strukturlaşdırılmış markdown cədvəl artefaktı qaytarır:
+`list-capabilities` bacarığı API çağırışları göndərməzdən əvvəl 67router-un nəyi təqdim etdiyini kəşf etməli olan xarici agentlər üçün xüsusilə faydalıdır. O, strukturlaşdırılmış markdown cədvəl artefaktı qaytarır:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -186,7 +186,7 @@ JSON-RPC son nöqtəsi `/a2a` əsas A2A giriş nöqtəsidir. Aşağıdakı REST 
 | `/.well-known/agent.json`    | GET   | Agent Kartı (A2A aşkarlanması)                                      | (ictimai, 3600s keşlənir)                    |
 | `/api/a2a/tasks`             | POST  | OmniConductor donanmasına daxil olan delegasiya (Conductor PRD RF5) | Bearer və `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Daxil olan Conductor delegasiyası (`POST /api/a2a/tasks`):** xarici A2A agentləri kodlaşdırma işlərini OmniRoute vasitəsilə OmniConductor donanmasına həvalə edir. Gövdə: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — yalnız Conductor donanmasının bacarıqları (Agent Kartında elan edilənlər) həvalə edilə bilər; `metadata.conductor.repo.url` tələb olunur (donanma git repozitoriyalarında işləyir). Marşrut server tərəfindəki `CONDUCTOR_ORCHESTRATOR_TOKEN`-dan (ehtiyat variant kimi `CONDUCTOR_HUB_TOKEN`) istifadə edərək mərkəzin `POST /v1/tasks` sorğusuna çevrilir və `201 { conductor_task_id, state: "submitted" }` qaytarır; tapşırıq vəziyyətləri SSE→A2A güzgüsü (RF1) vasitəsilə geri ötürülür və `GET /api/a2a/tasks?skill=conductor` vasitəsilə görünür.
+**Daxil olan Conductor delegasiyası (`POST /api/a2a/tasks`):** xarici A2A agentləri kodlaşdırma işlərini 67router vasitəsilə OmniConductor donanmasına həvalə edir. Gövdə: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — yalnız Conductor donanmasının bacarıqları (Agent Kartında elan edilənlər) həvalə edilə bilər; `metadata.conductor.repo.url` tələb olunur (donanma git repozitoriyalarında işləyir). Marşrut server tərəfindəki `CONDUCTOR_ORCHESTRATOR_TOKEN`-dan (ehtiyat variant kimi `CONDUCTOR_HUB_TOKEN`) istifadə edərək mərkəzin `POST /v1/tasks` sorğusuna çevrilir və `201 { conductor_task_id, state: "submitted" }` qaytarır; tapşırıq vəziyyətləri SSE→A2A güzgüsü (RF1) vasitəsilə geri ötürülür və `GET /api/a2a/tasks?skill=conductor` vasitəsilə görünür.
 
 ---
 

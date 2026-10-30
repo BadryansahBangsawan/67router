@@ -4,7 +4,7 @@
 
 ---
 
-Pružatelji Web Cookie omogućuju OmniRouteu upotrebu AI usluge putem postojeće sesije preglednika umjesto API ključa. Korisni su kada već imate pristup usluzi putem njezine web-stranice i želite da OmniRoute koristi istu autentificiranu sesiju.
+Pružatelji Web Cookie omogućuju 67routeru upotrebu AI usluge putem postojeće sesije preglednika umjesto API ključa. Korisni su kada već imate pristup usluzi putem njezine web-stranice i želite da 67router koristi istu autentificiranu sesiju.
 
 Za razliku od pružatelja koji upotrebljavaju API ključeve, pružatelji Web Cookie autentificiraju se vjerodajnicama koje vaš preglednik šalje web-stranici.
 
@@ -49,7 +49,7 @@ DevTools
 
 Zaglavlje zahtjeva `Cookie` sadržava točne autentifikacijske podatke koje je vaš preglednik uspješno upotrijebio.
 
-Za većinu pružatelja Web Cookie to je vrijednost koju treba zalijepiti u OmniRoute.
+Za većinu pružatelja Web Cookie to je vrijednost koju treba zalijepiti u 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Postupak postavljanja isti je za većinu pružatelja Web Cookie.
 4. Osvježite stranicu.
 5. Otvorite autentificirani zahtjev za čavrljanje ili razgovor.
 6. Kopirajte potrebne autentifikacijske vjerodajnice.
-7. Otvorite OmniRoute.
+7. Otvorite 67router.
 8. Idite na **Providers → Add Provider**.
 9. Odaberite svojeg pružatelja Web Cookie.
 10. Zalijepite vjerodajnice.
@@ -92,17 +92,17 @@ Različite web-stranice pohranjuju autentifikacijske podatke na različite nači
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) besplatna je platforma za razgovor namijenjena korisnicima koja ne zahtijeva registraciju — sesija se anonimno stvara pri prvom posjetu i održava se putem triju kolačića: `uid`, `si_usr_id` i `si_ses_id`. OmniRoute prosljeđuje isti krajnji endpoint `/api/dispatch` putem jednog ID-a modela (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) besplatna je platforma za razgovor namijenjena korisnicima koja ne zahtijeva registraciju — sesija se anonimno stvara pri prvom posjetu i održava se putem triju kolačića: `uid`, `si_usr_id` i `si_ses_id`. 67router prosljeđuje isti krajnji endpoint `/api/dispatch` putem jednog ID-a modela (`notrack-c`, alias `ntw`).
 
 ### Koraci za povezivanje
 
 1. Otvorite [notrack.ai](https://notrack.ai) u pregledniku i pričekajte da se postavi kolačić anonimne sesije.
 2. Otvorite **DevTools → Network**, osvježite stranicu i kliknite bilo koji zahtjev `/api`.
 3. U odjeljku **Request Headers** kopirajte cijelu vrijednost zaglavlja `Cookie`.
-4. U OmniRouteu idite na **Providers → Add Provider → NoTrack Web (Free)**.
+4. U 67routeru idite na **Providers → Add Provider → NoTrack Web (Free)**.
 5. Zalijepite niz kolačića u polje `apiKey` i kliknite **Save**.
 
-OmniRoute iz zalijepljenog niza izdvaja `uid`, `si_usr_id` i `si_ses_id` te ponovno sastavlja čisto zaglavlje `Cookie` koje sadrži samo te parove — uz `nt_session` (token `ntk_…` postavljen za prijavljene račune), ako je prisutan. Ako bilo koja od tih triju vrijednosti nedostaje, neobrađeni zalijepljeni niz prosljeđuje se neizmijenjen kako bi operatori mogli eksperimentirati s alternativnim formatima.
+67router iz zalijepljenog niza izdvaja `uid`, `si_usr_id` i `si_ses_id` te ponovno sastavlja čisto zaglavlje `Cookie` koje sadrži samo te parove — uz `nt_session` (token `ntk_…` postavljen za prijavljene račune), ako je prisutan. Ako bilo koja od tih triju vrijednosti nedostaje, neobrađeni zalijepljeni niz prosljeđuje se neizmijenjen kako bi operatori mogli eksperimentirati s alternativnim formatima.
 
 ### ID-ovi modela
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Kolačić radi u pregledniku, ali ne i u OmniRouteu
+## Kolačić radi u pregledniku, ali ne i u 67routeru
 
 Neki pružatelji uključuju kolačiće koji se šalju samo tijekom autentificiranih zahtjeva.
 

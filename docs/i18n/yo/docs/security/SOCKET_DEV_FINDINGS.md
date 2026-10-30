@@ -48,7 +48,7 @@ nípasẹ̀ tunnel **kò lè** mú ipa-ọ̀nà kóòdù yìí ṣiṣẹ́.
 | Linux+Firefox/Chromium | ìmúdójúìwọ̀n NSS DB fún profile kọ̀ọ̀kan nípasẹ̀ `certutil -d sql:<profile>`                                          |
 
 Àwọn wọ̀nyí jẹ́ àwọn àṣẹ kan náà tí `mitmproxy`, Charles Proxy, Fiddler, àti
-Caddy ń lò. Òtítọ́ pé wọ́n wà nínú OmniRoute ni a ṣe àkọsílẹ̀ rẹ̀ ní
+Caddy ń lò. Òtítọ́ pé wọ́n wà nínú 67router ni a ṣe àkọsílẹ̀ rẹ̀ ní
 `docs/security/STEALTH_GUIDE.md`.
 
 **Ìgbésẹ̀ ìdènà v3.8.6**:
@@ -102,7 +102,7 @@ fún àwọn olùṣàkóso tí kò tíì ṣe ìmúdójúìwọ̀n àìfọwọ
 ní v3.9.
 
 **Ìdí tí a fi pa á mọ́**: Gbígbé wọlé láti Zed ni ọ̀nà ìbẹ̀rẹ̀ tó rọrùn jù lọ fún àwọn aṣàmúlò
-tí wọ́n ti ń lo Zed tẹ́lẹ̀, tí wọ́n sì fẹ́ da àwọn kọ́kọ́rọ́ olùpèsè wọn sínú OmniRoute
+tí wọ́n ti ń lo Zed tẹ́lẹ̀, tí wọ́n sì fẹ́ da àwọn kọ́kọ́rọ́ olùpèsè wọn sínú 67router
 láì tún wọn lẹ̀ mọ́.
 
 ---
@@ -114,7 +114,7 @@ láì tún wọn lẹ̀ mọ́.
 **Ìdí tí a fi sàmì sí i**: chunk náà tún ń kó `execFileWithPassword`,
 `runElevatedPowerShell`, àti olùrànlọ́wọ́ `quotePowerShell` tí wọ́n jọ ń lò jáde. Ẹ̀rọ ìsọ̀rí AI ti Socket.dev
 rí wọn bíi “àkójọpọ̀ irinṣẹ́ gbogbogbò fún mímú nǹkan ṣiṣẹ́ lórí host + gbígbé àṣẹ ga.”
-Nínú OmniRoute, ọ̀nà fífi cert MITM sí ẹ̀rọ (§1) àti `execFileWithPassword`
+Nínú 67router, ọ̀nà fífi cert MITM sí ẹ̀rọ (§1) àti `execFileWithPassword`
 fún mímú àṣẹ `sudo` ṣiṣẹ́ nìkan ló ń lò wọ́n.
 
 **Ìdínkù ewu v3.8.6**:
@@ -164,7 +164,7 @@ kí a yọ àwọn ọ̀nà aláṣẹ-gíga náà kúrò nínú bundle ní ti a
 
 ---
 
-## §5 — Ìkọ-padà àwọn ìjẹ́rìí Cloud Sync OmniRoute (`api/keys/[id]/route.js`)
+## §5 — Ìkọ-padà àwọn ìjẹ́rìí Cloud Sync 67router (`api/keys/[id]/route.js`)
 
 **Àwọn fáìlì orísun**:
 
@@ -197,7 +197,7 @@ rawBody)`) wò kí ó tó ṣe ìtúpalẹ̀ JSON. Tí a bá ṣètò secret ná
    `rateLimitedUntil`, `updatedAt`). Èyí jẹ́ **ìyípadà tó ń já ìbámu** fún àwọn aṣàmúlò
    tí wọ́n gbẹ́kẹ̀ lé ìmúdójúìwọ̀n token láti ọ̀nà jíjìn — wọ́n gbọ́dọ̀ yan láti gbà á ní tààrà.
 
-**Ìdí tí a fi pa á mọ́**: Cloud Sync ni ọ̀nà kan ṣoṣo fún ayálégbé OmniRoute Cloud
+**Ìdí tí a fi pa á mọ́**: Cloud Sync ni ọ̀nà kan ṣoṣo fún ayálégbé 67router Cloud
 láti ṣe àkójọpọ̀ àwọn ìjẹ́rìí ẹgbẹ́ sí ibi kan. Àtúnṣe náà mú kí àwòṣe ewu náà ṣe kedere:
 "server ń fọwọ́ sí i, client ń jẹ́rìí rẹ̀, operator sì ń yan láti gbà á."
 

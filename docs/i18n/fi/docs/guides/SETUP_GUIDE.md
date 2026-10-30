@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Suomi)
+# 📖 Setup Guide — 67router (Suomi)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Täydellinen OmniRouten asennusopas. Lyhyt versio löytyy [README-tiedoston pikaoppaasta](../README.md#-quick-start).
+> Täydellinen 67routerin asennusopas. Lyhyt versio löytyy [README-tiedoston pikaoppaasta](../README.md#-quick-start).
 
 ## Sisällysluettelo
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR-paketti](https://aur.archlinux.org/packages/omniroute-bin) asentaa OmniRouten ja tarjoaa systemd-käyttäjäpalvelun.
+[AUR-paketti](https://aur.archlinux.org/packages/omniroute-bin) asentaa 67routerin ja tarjoaa systemd-käyttäjäpalvelun.
 
 ### Lähdekoodista
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows-huomautus:** OmniRoute käyttää oletusarvoisesti `%APPDATA%\omniroute`-hakemistoa, jos vanhaa `%USERPROFILE%\.omniroute`-hakemistoa ei ole olemassa. Valitse toinen datahakemiston sijainti asettamalla `DATA_DIR`.
+> **Windows-huomautus:** 67router käyttää oletusarvoisesti `%APPDATA%\omniroute`-hakemistoa, jos vanhaa `%USERPROFILE%\.omniroute`-hakemistoa ei ole olemassa. Valitse toinen datahakemiston sijainti asettamalla `DATA_DIR`.
 
 > **Huomautus:** `npm install` luo `.env`-tiedoston automaattisesti `.env.example`-tiedostosta ensimmäisellä suorituskerralla. Myöhemmät asennukset eivät korvaa olemassa olevaa `.env`-tiedostoa, joten mukautukset säilyvät. Luo tiedosto uudelleen poistamalla `.env` ennen komennon suorittamista uudelleen.
 
@@ -64,7 +64,7 @@ Katso täydelliset Docker-asennusohjeet, mukaan lukien Compose-profiilit ja Cadd
 
 ### Työpöytäsovellus (Electron)
 
-OmniRoute sisältää Electron 41:n ja electron-builder 26.10:n avulla rakennetun työpöytäkääreen. Käytettävissä olevat komentosarjat (työtilan juuressa):
+67router sisältää Electron 41:n ja electron-builder 26.10:n avulla rakennetun työpöytäkääreen. Käytettävissä olevat komentosarjat (työtilan juuressa):
 
 ```bash
 npm run electron:dev          # Suorita työpöytäsovellus automaattisella uudelleenlatauksella
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Yhdessä ympäristömuuttujien (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` jne.) kanssa tämä mahdollistaa täysin komentosarjoilla hallittavan OmniRoute-instanssin käynnistämisen.
+Yhdessä ympäristömuuttujien (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` jne.) kanssa tämä mahdollistaa täysin komentosarjoilla hallittavan 67router-instanssin käynnistämisen.
 
 ### CLI-valinnat
 
@@ -99,7 +99,7 @@ Yhdessä ympäristömuuttujien (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`
 | `omniroute config`      | CLI-työkalun määritys — luettele, nouda, aseta ja validoi määrityksiä                |
 | `omniroute status`      | Offline-tilapaneeli — versio, tietokanta, työkalut ja määritykset                    |
 | `omniroute logs`        | Suoratoista käyttölokeja API:sta (tukee `--follow`-lippua)                           |
-| `omniroute update`      | Tarkista tai asenna OmniRoute-päivityksiä                                            |
+| `omniroute update`      | Tarkista tai asenna 67router-päivityksiä                                             |
 | `omniroute provider`    | Hallitse palveluntarjoajayhteyksiä — lisää, luettele, poista, testaa ja aseta oletus |
 | `omniroute --port 3000` | Aseta ensisijaiseksi/API-portiksi 3000                                               |
 | `omniroute --mcp`       | Käynnistä MCP-palvelin (stdio-siirtotapa)                                            |
@@ -165,7 +165,7 @@ Toimii Claude Coden, Codex CLI:n, Cursorin, Clinen, OpenClawn, OpenCoden ja Open
 
 #### Automaattinen määritys `setup-*`-komennoilla
 
-Sen sijaan, että liittäisit perus-URL-osoitteen ja avaimen käsin, anna OmniRouten kirjoittaa kunkin työkalun
+Sen sijaan, että liittäisit perus-URL-osoitteen ja avaimen käsin, anna 67routerin kirjoittaa kunkin työkalun
 oma määritys reaaliaikaisesta malliluettelosta. Yksi komento työkalua kohden:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Kukin hyväksyy valinnat `--remote <url> --api-key <key>`, joilla paikallinen työkalu määritetään käyttämään
-**etäpalvelimella** olevaa OmniRoutea, sekä valinnan `--dry-run` esikatselua varten. Jos haluat käynnistää CLI:n oikeat
+**etäpalvelimella** olevaa 67routeria, sekä valinnan `--dry-run` esikatselua varten. Jos haluat käynnistää CLI:n oikeat
 ympäristömuuttujat asetettuina kirjoittamatta mitään määrityksiä, käytä yleiskäynnistintä
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 vanhat työkalukohtaiset käynnistimet `omniroute launch` (Claude Code) ja
@@ -277,15 +277,15 @@ Useimmissa käyttöönotoissa tarvitset vain nämä kaksi muuttujaa:
 | Muuttuja                 | Oletusarvo                                   | Tarkoitus                                                                                                                                                                           |
 | ------------------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                                     | Jaettu perustaso ylätason vastauksen alkamisen aikakatkaisulle, piilotetuille Undici-aikakatkaisuille, TLS-sormenjälkipyynnöille sekä API-sillan pyyntö- ja välitysaikakatkaisuille |
-| `STREAM_IDLE_TIMEOUT_MS` | perii arvon muuttujalta `REQUEST_TIMEOUT_MS` | Suurin sallittu väli suoratoistettavien osien välillä, ennen kuin OmniRoute keskeyttää SSE-virran                                                                                   |
+| `STREAM_IDLE_TIMEOUT_MS` | perii arvon muuttujalta `REQUEST_TIMEOUT_MS` | Suurin sallittu väli suoratoistettavien osien välillä, ennen kuin 67router keskeyttää SSE-virran                                                                                    |
 
 Taaksepäin yhteensopivuus säilyy: nykyiset `FETCH_TIMEOUT_MS`-, `API_BRIDGE_PROXY_TIMEOUT_MS`- ja muut kerroskohtaiset aikakatkaisumuuttujat toimivat edelleen ja ohittavat jaetun perustason.
 
 ### Palveluntarjoajakohtaiset huomautukset
 
-Claude Code -yhteensopiville ylätason palveluille (`anthropic-compatible-cc-*`) OmniRoute johtaa lähtevän `X-Stainless-Timeout`-otsakkeen ratkaistusta hakuaikakatkaisusta, jotta palveluntarjoajan lukuaikakatkaisut pysyvät ympäristömääritystesi mukaisina.
+Claude Code -yhteensopiville ylätason palveluille (`anthropic-compatible-cc-*`) 67router johtaa lähtevän `X-Stainless-Timeout`-otsakkeen ratkaistusta hakuaikakatkaisusta, jotta palveluntarjoajan lukuaikakatkaisut pysyvät ympäristömääritystesi mukaisina.
 
-Kolmannen osapuolen Claude Code -yhteensopivien käänteisten välityspalvelinten tapauksessa OmniRoute pitää oletusarvoisen `anthropic-beta`-joukon maltillisena ja välittää vain asiakkaan antamat `cache_control`-merkinnät, kun `Client Cache Control` -asetuksena on `Auto`. Ota yhteyskohtainen "Ota redact-thinking-beta käyttöön" -valitsin käyttöön vain, kun ylätason palvelu nimenomaisesti edellyttää sensuroituja Claude-ajatteluvirtoja.
+Kolmannen osapuolen Claude Code -yhteensopivien käänteisten välityspalvelinten tapauksessa 67router pitää oletusarvoisen `anthropic-beta`-joukon maltillisena ja välittää vain asiakkaan antamat `cache_control`-merkinnät, kun `Client Cache Control` -asetuksena on `Auto`. Ota yhteyskohtainen "Ota redact-thinking-beta käyttöön" -valitsin käyttöön vain, kun ylätason palvelu nimenomaisesti edellyttää sensuroituja Claude-ajatteluvirtoja.
 
 ### Aikakatkaisujen lisäohitukset
 
@@ -303,11 +303,11 @@ Kolmannen osapuolen Claude Code -yhteensopivien käänteisten välityspalvelinte
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                                    | Keep-alive-aikakatkaisu API-siltapalvelimella                                                  |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                       | Vastakkeen toimettomuuden aikakatkaisu API-siltapalvelimella (`0` poistaa sen käytöstä)        |
 
-> **Huomautus:** Suoratoistopyynnöissä `FETCH_TIMEOUT_MS` kattaa vain yhteyden muodostamisen ja ensimmäisen ylätason vastauksen odottamisen. Kun virta on aktiivinen, OmniRoute keskeyttää sen vain todellisen pysähdyksen (`STREAM_IDLE_TIMEOUT_MS`) tai Undicin vastausrungon toimettomuuden (`FETCH_BODY_TIMEOUT_MS`) vuoksi.
+> **Huomautus:** Suoratoistopyynnöissä `FETCH_TIMEOUT_MS` kattaa vain yhteyden muodostamisen ja ensimmäisen ylätason vastauksen odottamisen. Kun virta on aktiivinen, 67router keskeyttää sen vain todellisen pysähdyksen (`STREAM_IDLE_TIMEOUT_MS`) tai Undicin vastausrungon toimettomuuden (`FETCH_BODY_TIMEOUT_MS`) vuoksi.
 
 ### Yhteensopivuus käänteisten välityspalvelinten kanssa
 
-Jos käytät OmniRoutea Nginxin, Caddyn, Cloudflaren tai muun käänteisen välityspalvelimen takana, varmista, että myös välityspalvelimen aikakatkaisut ovat OmniRouten suoratoisto- ja hakuaikakatkaisuja pidempiä.
+Jos käytät 67routeria Nginxin, Caddyn, Cloudflaren tai muun käänteisen välityspalvelimen takana, varmista, että myös välityspalvelimen aikakatkaisut ovat 67routerin suoratoisto- ja hakuaikakatkaisuja pidempiä.
 
 ---
 

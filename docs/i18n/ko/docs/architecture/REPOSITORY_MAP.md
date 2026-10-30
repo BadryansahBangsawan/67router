@@ -5,7 +5,7 @@
 ---
 
 > **모든 디렉터리와 루트 파일에 대한 한 줄 설명.**
-> 최종 업데이트: 2026-06-28 — OmniRoute v3.8.40
+> 최종 업데이트: 2026-06-28 — 67router v3.8.40
 >
 > 이 맵을 사용하여 코드베이스를 빠르게 탐색하세요. 자세한 내용을 살펴보려면 전용 문서 링크를 따라가세요.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | 전체 릴리스 절차(스킬, husky, conventional commits, 배포)                         |
 | `COVERAGE_PLAN.md`          | 커버리지 목표 및 현재 상태                                                        |
 | `FREE_TIERS.md`             | 엄선된 무료 티어 제공자(무료 48개 이상 + OAuth 11개)                              |
-| `CLI-TOOLS.md`              | 외부 CLI 통합 + 내부 OmniRoute CLI                                                |
+| `CLI-TOOLS.md`              | 외부 CLI 통합 + 내부 67router CLI                                                 |
 | `I18N.md`                   | i18n 아키텍처, 언어 추가 방법, 67개 로케일                                        |
 | `UNINSTALL.md`              | 완전한 제거 단계                                                                  |
 | `PROVIDER_REFERENCE.md`     | 375개 제공자의 **자동 생성된** 카탈로그(재생성: `npm run gen:provider-reference`) |

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, yönetim rotalarını yetkilendirebilen **dört kimlik bilgisi ailesine** sahiptir.
+67router, yönetim rotalarını yetkilendirebilen **dört kimlik bilgisi ailesine** sahiptir.
 Bunlar birbirinin yerine kullanılamaz. Çıkarım API anahtarları (`sk-…`), açıkça `manage` veya `admin` kapsamı verilmedikçe sunucuyu yönetmez.
 
 Kanonsal uygulama: `src/lib/api/requireManagementAuth.ts`.

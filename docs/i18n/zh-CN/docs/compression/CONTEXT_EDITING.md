@@ -4,13 +4,13 @@
 
 ---
 
-委托式 **上下文编辑** 是一项仅适用于 Claude 的上下文管理功能。与 OmniRoute 的本地
+委托式 **上下文编辑** 是一项仅适用于 Claude 的上下文管理功能。与 67router 的本地
 压缩引擎（Caveman、RTK、LLMLingua、堆叠管线）不同——这些引擎会在请求正文离开代理
 _之前_ 重写它——上下文编辑会要求**提供者**从其自身正在使用的上下文窗口中清除过时的
-工具使用 / 工具结果块。OmniRoute 仅附加一个正文参数
+工具使用 / 工具结果块。67router 仅附加一个正文参数
 （`context_management.edits[]`）；Claude 会根据自己的分词器执行实际清理。
 
-从本质上讲，这是一项委托式能力：其他提供者会拒绝该参数，因此 OmniRoute 将其严格限定
+从本质上讲，这是一项委托式能力：其他提供者会拒绝该参数，因此 67router 将其严格限定
 为仅用于 Claude 和与 Claude Code 兼容的中继。
 
 事实依据：`open-sse/config/contextEditing.ts`（策略 ID、正文注入、遥测数据
@@ -19,7 +19,7 @@ _之前_ 重写它——上下文编辑会要求**提供者**从其自身正在�
 
 ## `clear_tool_uses` 的作用
 
-OmniRoute 会向出站的 Anthropic Messages 正文中注入单个编辑项：
+67router 会向出站的 Anthropic Messages 正文中注入单个编辑项：
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute 会向出站的 Anthropic Messages 正文中注入单个编辑项：
   （`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`）。
 
 该测试版功能通过 `anthropic-beta: context-management-2025-06-27` 标头声明，
-OmniRoute 已经会在 Claude 请求中发送该标头。
+67router 已经会在 Claude 请求中发送该标头。
 
 注入由 `applyContextEditingToBody()` 执行，并且具有**幂等性**：如果正文中已经存在
 `clear_tool_uses` 编辑项（由之前的调用添加或由客户端提供），则正文会保持不变。如果还存在
-`clear_thinking_20251015` 编辑项，OmniRoute 会通过稳定排序将 `clear_thinking` 编辑项
+`clear_thinking_20251015` 编辑项，67router 会通过稳定排序将 `clear_thinking` 编辑项
 移到最前面，因为 Anthropic 要求 `clear_thinking` 在 `edits[]` 数组中位于
 `clear_tool_uses` 之前。
 
@@ -130,7 +130,7 @@ if (
 
 ## `applied_edits` 遥测
 
-收到 Claude 响应后，OmniRoute 会记录提供者实际清除了多少上下文。此数据**不会**通过流式响应传输，而是以尽力而为的方式从非流式响应体中提取，并且永远不会影响响应（遥测失败会被忽略）。
+收到 Claude 响应后，67router 会记录提供者实际清除了多少上下文。此数据**不会**通过流式响应传输，而是以尽力而为的方式从非流式响应体中提取，并且永远不会影响响应（遥测失败会被忽略）。
 
 - 提取：`open-sse/config/contextEditing.ts` 中的 `extractContextEditingTelemetry(responseBody)`。它会在三个位置探测 `applied_edits`（用于防御性地适配不同响应结构）：
   - `context_management.applied_edits`
@@ -152,14 +152,14 @@ if (
 
 | 方面       | 本地引擎（Caveman / RTK / LLMLingua / stacked） | 委托式上下文编辑                            |
 | ---------- | ----------------------------------------------- | ------------------------------------------- |
-| 运行位置   | 在 OmniRoute 中，请求离开代理之前               | 在提供者（Claude）中，服务端执行            |
+| 运行位置   | 在 67router 中，请求离开代理之前                | 在提供者（Claude）中，服务端执行            |
 | 编辑内容   | 提示词 / 上下文 / 工具结果文本                  | 旧的工具使用 / 工具结果块                   |
 | 提供者范围 | 所有提供者                                      | 仅限 `claude` + `anthropic-compatible-cc-*` |
 | 开关       | 压缩模式设置                                    | `contextEditing.enabled`                    |
 | 失败模式   | 失败时开放（使用原始文本）                      | 400 回退：移除参数，重试一次                |
 | 节省量遥测 | `engine: <engine id>`                           | `engine: "context-editing"`                 |
 
-两者相辅相成：本地引擎压缩 OmniRoute 发送的字节；上下文编辑则让
+两者相辅相成：本地引擎压缩 67router 发送的字节；上下文编辑则让
 Claude 能够跨轮次修剪持续累积的上下文。两者可以同时启用。
 
 ## 另请参阅

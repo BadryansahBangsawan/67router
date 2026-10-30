@@ -41,7 +41,7 @@ hoặc một tích hợp bên ngoài hiện đang khả dụng.
 | Ưu đãi dành cho người ủng hộ       | Được triển khai dưới dạng nguồn cấp trực tiếp riêng biệt có chữ ký và trang bảng điều khiển. Máy khách xác thực lại lược đồ quyền lợi đóng, bảo toàn bộ nhớ đệm hợp lệ gần nhất, lọc các mục hết hạn và gắn nhãn rõ ràng cho ưu đãi đối tác.                                           |
 | Thông tin và ghi nhận người ủng hộ | Được triển khai dưới dạng nguồn cấp nghiêm ngặt, có chữ ký và chỉ hoạt động trực tiếp, với ELO do Radar sở hữu, thông tin thực tế về độ mới/xu hướng của danh mục, huy hiệu người ủng hộ cục bộ đã xác minh, trang bảng điều khiển và các lệnh trạng thái/đồng bộ CLI chỉ chạy cục bộ. |
 | Thanh toán và email giao dịch      | Chưa được triển khai trong máy khách OSS. Việc mua hàng, quyên góp, xem xét biên nhận, khôi phục và gửi thư thuộc về dịch vụ riêng tư; khả năng cung cấp dịch vụ lưu trữ vẫn phụ thuộc vào việc triển khai có giám sát và cấu hình nhà cung cấp của dịch vụ đó.                        |
-| Luồng công việc tác tử nghiên cứu  | Không thuộc bản phát hành máy khách này. Nội dung nguồn cấp được tuyển chọn vẫn là dữ liệu phía máy chủ; không có tác tử nghiên cứu tự động nào chạy trong một bản cài đặt OmniRoute.                                                                                                  |
+| Luồng công việc tác tử nghiên cứu  | Không thuộc bản phát hành máy khách này. Nội dung nguồn cấp được tuyển chọn vẫn là dữ liệu phía máy chủ; không có tác tử nghiên cứu tự động nào chạy trong một bản cài đặt 67router.                                                                                                   |
 
 ---
 
@@ -119,7 +119,7 @@ Khi cả hai đều được bật, luồng đồng bộ là:
    của IP để phục vụ việc xem xét lạm dụng thủ công; các bảng đó không lưu key hay IP ở dạng thô.
    Nhật ký truy cập cơ sở hạ tầng và hộp thư đi phân phối được mã hóa là các ranh giới vận hành
    riêng biệt.
-3. OmniRoute không bao giờ gửi prompt, phản hồi, cuộc trò chuyện, thông tin xác thực của nhà cung cấp, lưu lượng mô hình,
+3. 67router không bao giờ gửi prompt, phản hồi, cuộc trò chuyện, thông tin xác thực của nhà cung cấp, lưu lượng mô hình,
    thời gian hoạt động, độ trễ hoặc cấu hình nhà cung cấp cục bộ tới dịch vụ Radar.
 4. Phản hồi được xác minh, kiểm tra tính hợp lệ và lưu vào bộ nhớ đệm cục bộ (xem
    [Mô hình bảo mật](#security-model)). Radar có đúng bốn đường dẫn mạng phía máy chủ:
@@ -243,13 +243,13 @@ vẫn là cách để _nhận_ khóa ngay từ đầu; ô nhập này là nơi n
 ### Kích hoạt đầu cuối và thiết lập có hướng dẫn
 
 Dịch vụ feed riêng tư và máy khách OSS này có một ranh giới được chủ ý giới hạn chặt chẽ: dịch vụ
-phát hành và xác thực khóa người ủng hộ, trong khi bản cài đặt OmniRoute cục bộ mã hóa khóa,
+phát hành và xác thực khóa người ủng hộ, trong khi bản cài đặt 67router cục bộ mã hóa khóa,
 đồng bộ các tạo tác đã ký ở phía máy chủ và hướng dẫn thiết lập nhà cung cấp. Thứ tự xác thực có hỗ trợ là:
 
 1. Lấy khóa mới được cấp hoặc đã khôi phục từ quy trình xác nhận dành cho người đóng góp, plans/checkout, quy trình
    khôi phục, hoặc từ một đơn vị vận hành máy chủ riêng được ủy quyền. Không dán khóa thô vào nhật ký,
    ảnh chụp màn hình, bình luận trong issue hoặc đối số dòng lệnh.
-2. Bật cờ tính năng `RADAR_ENABLED` trên bản cài đặt OmniRoute cục bộ. Thao tác này hiển thị giao diện người dùng
+2. Bật cờ tính năng `RADAR_ENABLED` trên bản cài đặt 67router cục bộ. Thao tác này hiển thị giao diện người dùng
    nhưng vẫn không hoạt động trên mạng cho đến khi tùy chọn đồng ý riêng biệt được lưu.
 3. Mở `/dashboard/radar`, dán khóa và kích hoạt. Trình duyệt gửi một yêu cầu cục bộ
    `POST /api/radar/settings` với `{ optIn: true, supporterKey }`; khóa được mã hóa cục bộ và
@@ -314,7 +314,7 @@ luân chuyển, trong khi các feed cũ trong bộ nhớ đệm được ký b�
 ### Ghi đè bằng biến môi trường, thân thiện với các bản fork
 
 Hai biến môi trường cho phép các bản fork và bên tự lưu trữ trỏ máy khách đến feed riêng thay vì
-dịch vụ OmniRoute mặc định — xem
+dịch vụ 67router mặc định — xem
 [Cách tự lưu trữ feed](#how-to-self-host-a-feed) bên dưới:
 
 | Biến                | Mục đích                                                                                                              |
@@ -470,7 +470,7 @@ Giá trị `enabled: false` từ feed vẫn là ngoại lệ an toàn: nó đư�
 Các bản phát hành danh mục sử dụng `schemaVersion: 2`. `contextWindow` và từng trường `tools`, `vision` và
 `thinking` độc lập có kiểu `number | null` / `boolean | null`: `null` nghĩa là không xác định, trong khi
 `false` nghĩa là một nguồn chính thức của provider đã được D16 xác nhận nêu rõ rằng khả năng đó không tồn tại.
-Các cờ model-spec/registry nội bộ của OmniRoute không bao giờ được trực tiếp nâng thành dữ kiện của feed. Client
+Các cờ model-spec/registry nội bộ của 67router không bao giờ được trực tiếp nâng thành dữ kiện của feed. Client
 vẫn chấp nhận các snapshot v1; vì builder cũ dùng `false` làm giá trị giữ chỗ cho sự vắng mặt, `false` trong v1 được
 chuẩn hóa thành không xác định, còn `true` trong v1 vẫn là dữ kiện. Các phiên bản lược đồ không xác định sẽ bị từ chối
 theo nguyên tắc đóng an toàn và bộ nhớ đệm hợp lệ gần nhất vẫn khả dụng. Mọi model v2 có context/khả năng không phải null
@@ -531,7 +531,7 @@ Các nhóm route Radar cục bộ dưới đây hỗ trợ UI trong `src/app/api
 | `/api/radar/local-model-state` | DELETE      | Xóa các trường ghi đè có thể chỉnh sửa trong khi vẫn giữ nguyên mọi tombstone.                                                        |
 
 **Quy tắc bắt buộc: các route này tuyệt đối không làm proxy cho dịch vụ feed.** Trình duyệt chỉ giao tiếp
-với máy chủ OmniRoute cục bộ. Bốn mô-đun có tương tác với dịch vụ Radar là
+với máy chủ 67router cục bộ. Bốn mô-đun có tương tác với dịch vụ Radar là
 `src/lib/radar/sync.ts` (catalog), `src/lib/radar/referralsSync.ts` (giới thiệu), và
 `src/lib/radar/offersSync.ts` (ưu đãi) cùng với `src/lib/radar/intelSync.ts` (Intel); tất cả đều chạy
 ở phía máy chủ, tuyệt đối không chạy ở phía máy khách. Điều này đảm bảo
@@ -573,7 +573,7 @@ Intel là một artifact có chữ ký tại `GET /v1/intel/latest`. `RadarIntel
 
 `syncRadarIntel()` áp dụng cùng cơ chế Bearer phía máy chủ, thời gian chờ 30 giây, giới hạn luồng dữ liệu 10 MiB, xác minh Ed25519 trên chính xác các byte, schema nghiêm ngặt, yêu cầu nội dung/header là `live`, mức sàn phiên bản và cơ chế giữ nguyên bộ nhớ đệm hợp lệ gần nhất như đối với các ưu đãi. Sau khi ảnh chụp nhanh trực tiếp đã xác minh được lưu trữ, máy khách tạo `radar:<sha256(supporter key)>`, chỉ lưu danh tính một chiều đó và phát sự kiện ghi nhận chuyên biệt `radar_supporter`. Huy hiệu `radar-supporter` có tính lũy đẳng và trao 0 XP; huy hiệu này không bao giờ cập nhật bảng xếp hạng hoặc tái sử dụng `token_share`. `/dashboard/radar/intel` chỉ kết xuất huy hiệu từ metadata bộ nhớ đệm cục bộ đã xác minh.
 
-CLI cung cấp `omniroute radar status` và `omniroute radar sync`. Cả hai chỉ giao tiếp với API OmniRoute cục bộ. `status` thực hiện yêu cầu chỉ đọc `GET /api/radar/status`; `sync` gửi một yêu cầu `POST /api/radar/sync-all` và in kết quả cho từng nguồn cấp dữ liệu. Không lệnh nào đọc, chấp nhận hoặc in khóa dành cho người ủng hộ, và cũng không lệnh nào liên hệ trực tiếp với dịch vụ Radar.
+CLI cung cấp `omniroute radar status` và `omniroute radar sync`. Cả hai chỉ giao tiếp với API 67router cục bộ. `status` thực hiện yêu cầu chỉ đọc `GET /api/radar/status`; `sync` gửi một yêu cầu `POST /api/radar/sync-all` và in kết quả cho từng nguồn cấp dữ liệu. Không lệnh nào đọc, chấp nhận hoặc in khóa dành cho người ủng hộ, và cũng không lệnh nào liên hệ trực tiếp với dịch vụ Radar.
 
 ---
 

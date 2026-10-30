@@ -6,7 +6,7 @@
 
 ## Pregled
 
-OmniRoute CLI komande autentificiraju se prema lokalnom API-ju za upravljanje pomoću
+67router CLI komande autentificiraju se prema lokalnom API-ju za upravljanje pomoću
 `HMAC-SHA256(machine-id, salt)` tokena poslanog putem zaglavlja zahtjeva
 `x-omniroute-cli-token`.
 

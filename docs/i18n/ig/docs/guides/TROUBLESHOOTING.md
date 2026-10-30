@@ -8,17 +8,17 @@
 
 🌐 **Asụsụ:** 🇺🇸 [Bekee](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Nsogbu ndị a na-ahụkarị na ihe ngwọta ha maka OmniRoute.
+Nsogbu ndị a na-ahụkarị na ihe ngwọta ha maka 67router.
 
 ---
 
 ## Ntụaka Ngwa Ngwa
 
-**Ị bụ onye ọhụrụ na OmniRoute?** Malite ebe a — ihe ndị a na-edozi 90% nke nsogbu:
+**Ị bụ onye ọhụrụ na 67router?** Malite ebe a — ihe ndị a na-edozi 90% nke nsogbu:
 
 | Ihe m na-ahụ                            | Ihe ọ pụtara                                   | Ihe ị ga-eme                                                                                                               |
 | --------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| "Enweghị ike ijikọ"                     | OmniRoute anaghị arụ ọrụ                       | Gbaa `omniroute` ma ọ bụ `docker restart omniroute`                                                                        |
+| "Enweghị ike ijikọ"                     | 67router anaghị arụ ọrụ                        | Gbaa `omniroute` ma ọ bụ `docker restart omniroute`                                                                        |
 | "Igodo API ezighi ezi"                  | Igodo gị ezighi ezi ma ọ bụ kubiela            | Detuo igodo ahụ ọzọ site na webụsaịtị onye na-eweta ọrụ                                                                    |
 | "Agafeela oke ọnụego"                   | Ị na-eziga arịrịọ karịrị akarị                 | Chere nkeji 1, ma ọ bụ jiri `model: "auto"` maka ịgbanwe na nhọrọ ndabere na-akpaghị aka                                   |
 | "Agafeela oke okeọrụ"                   | I jirila okeọrụ efu/akwụnyere ụgwọ gị niile    | Jikọọ ndị na-eweta ọrụ ọzọ, ma ọ bụ jiri ndị na-eweta ọrụ efu (Kiro, Pollinations)                                         |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # oke nnabata doro anya maka arị
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # bulie oge nchere a kpaara oke ka ọ gafee ndabara RATE_LIMIT_MAX_WAIT_MS maka upstream ndị dị nwayọ
 ```
 
-Debe ndị a na process environment nke OmniRoute (daemon ahụ, dịka site na LaunchAgent plist ma ọ bụ `systemctl edit`), wee malitegharịa OmniRoute. Rotation flag bụ ihe otu kachasị nwee mmetụta: ọ na-agbanwe ọdịda siri ike ka ọ bụrụ nnwale ọzọ a na-adịghị ahụ anya megide onye na-enye ọrụ dị mma n'ime ọdọ ahụ.
+Debe ndị a na process environment nke 67router (daemon ahụ, dịka site na LaunchAgent plist ma ọ bụ `systemctl edit`), wee malitegharịa 67router. Rotation flag bụ ihe otu kachasị nwee mmetụta: ọ na-agbanwe ọdịda siri ike ka ọ bụrụ nnwale ọzọ a na-adịghị ahụ anya megide onye na-enye ọrụ dị mma n'ime ọdọ ahụ.
 
 **Ndetu**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` na-amachi ọnụọgụ arịrịọ dị arọ — ndị nwere context ogologo — nwere ike ịrụ ọrụ n'otu oge; oke ahụ bụ ọnụ ụzọ nnabata, ọ bụghị ihe mmachi ọsọ nke onye na-enye ọrụ. **Mmelite #503-fanout:** anaghịzi edobe var a na ndabara (ugbu a ọ na-amachi naanị mgbe ahaziri ya kpọmkwem, dịka e mere n'elu) — kama, a na-achịkwa nnabata arịrịọ dị arọ site na byte budget ewepụtara na-akpaghị aka (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) nke na-agbanwe onwe ya dabere na oke memory n'ezie nke host, ya mere deployment ọhụrụ kwesịrị ịhụ `503 chat_admission_busy` rejects pere mpe nke ukwuu n'ebughị ụzọ hazie var a ma ọlị; ịhazi ya kpọmkwem ebe a ka na-arụ ọrụ dịka e si dee ya. A na-amachi explicit byte-budget overrides n'etiti 8 MiB–2 GiB. `413 body_exceeds_budget` abụghị ihe na-adịru nwa oge: bulie byte budget ahụ, wedata `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`, ma ọ bụ bulie oke memory nke process. Mwepụ `inflight_bytes_budget` bụ esemokwu nwa oge, a ka nwekwara ike ịnwale ya ọzọ. A na-achịkwa mmachi ọsọ nke onye na-enye ọrụ ọ bụla (`open-sse/services/rateLimitManager.ts`) iche site na `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, na `RATE_LIMIT_AUTO_ENABLE` — lee `.env.example`.
 
 **Otu esi enyocha na ọ rụrụ ọrụ**: mee ka agent/cron gị gbaa ọsọ ugboro abụọ n'otu ntabi anya ma gosi na ha abụọ gara nke ọma. Tupu ndozi ahụ, agba nke abụọ na-ewepụtakarị `429`/`401`. Mgbe ndozi ahụ gasịrị, a na-anwale ọdịda (ọ bụrụ na ọ dị) ọzọ n'ụzọ a na-adịghị ahụ anya, oku ahụ emechaa. Ị nwekwara ike iji `curl /monitoring/health` wee lelee field `rateLimitedUntil` na njikọ ndị na-enye ọrụ yana `circuitBreakers.providerBreakers[].state` maka ndị na-enye ọrụ emetụtara — state ahụ bụ otu n'ime `CLOSED`, `DEGRADED`, `OPEN`, ma ọ bụ `HALF_OPEN` (lee `src/shared/utils/circuitBreaker.ts`), onye na-enye ọrụ nke na-aga n'ihu na-ada ga-agbanwe `CLOSED → DEGRADED → OPEN` tupu windo nrụgharị ekwe ka probe gafee (`HALF_OPEN`).
 
-**Ọ bụrụ na ị ka na-ahụ 429**: account na-arụ ọrụ maka onye na-enye ọrụ ahụ emechala _quota_ ya n'ezie (ọ bụghị naanị mmachi ọsọ). Tinye account nke abụọ maka otu onye na-enye ọrụ ahụ na dashboard OmniRoute → Providers → Accounts, ma ọ bụ tinye onye na-enye ọrụ efughị ụgwọ ọzọ na ngwakọta ahụ (dịka `routeway`, `auggie`). Rotation na-enyere naanị na mmachi ọsọ/400/401 nwa oge; mmecha quota kpamkpam chọrọ credential nke abụọ ma ọ bụ onye na-enye ọrụ ọzọ.
+**Ọ bụrụ na ị ka na-ahụ 429**: account na-arụ ọrụ maka onye na-enye ọrụ ahụ emechala _quota_ ya n'ezie (ọ bụghị naanị mmachi ọsọ). Tinye account nke abụọ maka otu onye na-enye ọrụ ahụ na dashboard 67router → Providers → Accounts, ma ọ bụ tinye onye na-enye ọrụ efughị ụgwọ ọzọ na ngwakọta ahụ (dịka `routeway`, `auggie`). Rotation na-enyere naanị na mmachi ọsọ/400/401 nwa oge; mmecha quota kpamkpam chọrọ credential nke abụọ ma ọ bụ onye na-enye ọrụ ọzọ.
 
 **Ọ bụrụ na ị na-ahụ 403 na model vision (`auto/vision`, `bazaarlink/*`)**: account ejikọrọ enweghị plan akwụ ụgwọ nke gụnyere vision, ma ọ bụ API key enweghị permissions zuru ezu. Nyochaa na dashboard onye na-enye ọrụ na scope nke key ahụ gụnyere vision/multimodal, ma ọ bụ jikọọ account ọkwa akwụ ụgwọ ma debe ya dị ka vision target.
 
@@ -71,7 +71,7 @@ Debe ndị a na process environment nke OmniRoute (daemon ahụ, dịka site na 
 
 Mgbe ị na-agba `npm install -g omniroute`, ị nwere ike ịhụ ọtụtụ ịdọ aka ná ntị dịka `npm warn ERESOLVE`, ọkwa gbasara peer-dependency, na ozi `deprecated`. **A na-atụ anya ha, ha adịghịkwa emerụ ihe ọ bụla.** Nrụnye gị gara nke ọma ma ọ bụrụ na ị hụ `added <N> packages` na mmepụta ahụ.
 
-Iji gbochie ịdọ aka ná ntị gbasara idozi peer-dependency, jiri usoro nrụnye OmniRoute na-akwado:
+Iji gbochie ịdọ aka ná ntị gbasara idozi peer-dependency, jiri usoro nrụnye 67router na-akwado:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` na-egbochi naanị `ERESOLVE` na ọkwa peer-dependency. Ọkwa deprecation ka ga-apụta n'ihi na ha sitere na ngwugwu ndị ọzọ nke nrụnye ahụ dabere na ha; ha anaghị egosi na nrụnye ahụ dara.
 
-Ịdọ aka ná ntị ndị ahụ sitere na oke peer-dependency merela ochie dị na ngwugwu ndị ọzọ OmniRoute anaghị achịkwa:
+Ịdọ aka ná ntị ndị ahụ sitere na oke peer-dependency merela ochie dị na ngwugwu ndị ọzọ 67router anaghị achịkwa:
 
 1. **`marked-terminal` chọrọ `marked >=1 <16`, ma achọtara `marked@18`** — ọ na-arụ ọrụ nke ọma n'eziokwu; naanị ihe bụ na oke peer nke upstream emela ochie.
 2. **`deprecated prebuild-install@7.1.3`** — ngwa enyemaka nke dependency ọzọ na-eji ebudata faịlụ binary native. A naghị
@@ -104,19 +104,19 @@ npm warn install-scripts E gbochiri skript nrụnye nke ngwugwu 7 n'ihi na allow
 
 ### Enwere ike ileghara ịdọ aka ná ntị a anya?
 
-**N'akụkụ ụfọdụ, mana a naghị akwado ịgba ya na-enweghị skript.** OmniRoute nwere usoro ndabere na-arụ ọrụ nke ọma: ọ bụrụ na enweghị ike ibunye njikọ `better-sqlite3` nke sistemụ site na ngwugwu standalone ahụ, ngwa ahụ ga-eji draịva ndị ọzọ dịka `node:sqlite` ma ọ bụ `sql.js` dị ka usoro ndabere (lee [Mkpebi SQLite Runtime](../ops/SQLITE_RUNTIME.md)). Sava ahụ ka ga-amalite, mana iji usoro ndabere WASM dịka `sql.js` na-eme ka ọnọdụ SQLite WAL (Write-Ahead Logging) ghara ịrụ ọrụ ma na-abawanye ojiji ebe nchekwa na ibu ọrụ mmekọrịta diski.
+**N'akụkụ ụfọdụ, mana a naghị akwado ịgba ya na-enweghị skript.** 67router nwere usoro ndabere na-arụ ọrụ nke ọma: ọ bụrụ na enweghị ike ibunye njikọ `better-sqlite3` nke sistemụ site na ngwugwu standalone ahụ, ngwa ahụ ga-eji draịva ndị ọzọ dịka `node:sqlite` ma ọ bụ `sql.js` dị ka usoro ndabere (lee [Mkpebi SQLite Runtime](../ops/SQLITE_RUNTIME.md)). Sava ahụ ka ga-amalite, mana iji usoro ndabere WASM dịka `sql.js` na-eme ka ọnọdụ SQLite WAL (Write-Ahead Logging) ghara ịrụ ọrụ ma na-abawanye ojiji ebe nchekwa na ibu ọrụ mmekọrịta diski.
 
 ### Olee skript ndị a chọrọ n'ezie?
 
-Ọ bụghị skript niile egbochiri ka dị mkpa maka ịgba OmniRoute:
+Ọ bụghị skript niile egbochiri ka dị mkpa maka ịgba 67router:
 
-- **Ndị dị mkpa (`omniroute`, `better-sqlite3`):** OmniRoute na-arụ ọrụ site na ngwugwu ngwa Next.js standalone (`dist/`). N'oge nrụnye, npm na-ebudata ma ọ bụ na-achịkọta draịva SQLite nke sistemụ nke kwekọrọ na host n'ime `node_modules/better-sqlite3/` nke dị n'ọkwa kachasị elu. Skript `postinstall` nke OmniRoute (`scripts/build/postinstall.mjs`) na-enyocha ma na-edepụtaghachi faịlụ binary ndị a kwekọrọ na host n'ime `dist/node_modules/` ka sava standalone nwee ike ịnweta ha. Ọ bụrụ na egbochie skript postinstall nke `omniroute`, a ga-amafere usoro idetuo a.
+- **Ndị dị mkpa (`omniroute`, `better-sqlite3`):** 67router na-arụ ọrụ site na ngwugwu ngwa Next.js standalone (`dist/`). N'oge nrụnye, npm na-ebudata ma ọ bụ na-achịkọta draịva SQLite nke sistemụ nke kwekọrọ na host n'ime `node_modules/better-sqlite3/` nke dị n'ọkwa kachasị elu. Skript `postinstall` nke 67router (`scripts/build/postinstall.mjs`) na-enyocha ma na-edepụtaghachi faịlụ binary ndị a kwekọrọ na host n'ime `dist/node_modules/` ka sava standalone nwee ike ịnweta ha. Ọ bụrụ na egbochie skript postinstall nke `omniroute`, a ga-amafere usoro idetuo a.
 - **Ndị nhọrọ/ndabere sitere n'ụzọ ọzọ (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Ndị a bụ ngwa enyemaka maka build, ngwa nlekota, ma ọ bụ ngwa keychain nke sistemụ. Ikwe ka ha rụọ ọrụ na-egbochi ịdọ aka ná ntị build, mana a chọghị ha maka ọrụ bụ isi nke routing.
-- **Nke ewepụrụ (`onnxruntime-node`):** Nke a bụ dependency nhọrọ maka embeddings AI nke mpaghara ma **ọ bụghị** ihe achọrọ iji mee ka OmniRoute rụọ ọrụ. Skript postinstall ya na-ebudata ihe CUDA ruru ~300MB site na NuGet; etinyela ya na allow-list ma ọ bụrụ na i bughị n'obi kpọmkwem iji ngwangwa ONNX nke mpaghara na hardware akwadoro.
+- **Nke ewepụrụ (`onnxruntime-node`):** Nke a bụ dependency nhọrọ maka embeddings AI nke mpaghara ma **ọ bụghị** ihe achọrọ iji mee ka 67router rụọ ọrụ. Skript postinstall ya na-ebudata ihe CUDA ruru ~300MB site na NuGet; etinyela ya na allow-list ma ọ bụrụ na i bughị n'obi kpọmkwem iji ngwangwa ONNX nke mpaghara na hardware akwadoro.
 
 ### Ndozi akwadoro
 
-Iji kwe ka skript nrụnye ndị achọrọ rụọ ọrụ n'oge nrụnye zuru ụwa ọnụ ma kwụsị ịdọ aka ná ntị, tinye `--allow-scripts` maka OmniRoute na dependencies sistemụ ya:
+Iji kwe ka skript nrụnye ndị achọrọ rụọ ọrụ n'oge nrụnye zuru ụwa ọnụ ma kwụsị ịdọ aka ná ntị, tinye `--allow-scripts` maka 67router na dependencies sistemụ ya:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -143,14 +143,14 @@ omniroute doctor
 
 Ọ bụrụ na arịrịọ Gemini Web eweghachite `503` yana ozi na awụnyebeghị Playwright Chromium, ngwugwu npm ahụ dị, mana faịlụ binary nke ihe nchọgharị ahụ adịghị. Playwright kpachapụrụ anya kewapụ nbudata ihe nchọgharị na nrụnye ngwugwu npm, ya mere a na-atụ anya nzaghachi a ruo mgbe awụnyere ihe nchọgharị ahụ.
 
-Maka nrụnye npm zuru ụwa ọnụ, wụnye Chromium site na ndekọ ngwugwu OmniRoute ka cache ihe nchọgharị ahụ bụrụ nke otu nrụnye Playwright ahụ:
+Maka nrụnye npm zuru ụwa ọnụ, wụnye Chromium site na ndekọ ngwugwu 67router ka cache ihe nchọgharị ahụ bụrụ nke otu nrụnye Playwright ahụ:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Malitegharịa OmniRoute mgbe nrụnye ahụ gasịrị, wee nwalee arịrịọ Gemini Web ahụ ọzọ. Ọ bụrụ na ị na-eme OmniRoute site na image Docker, jiri image `-web` (ma ọ bụ build target `runner-web`), nke nwere Chromium na dependencies ya n'ime ya; image ntọala enweghị ha.
+Malitegharịa 67router mgbe nrụnye ahụ gasịrị, wee nwalee arịrịọ Gemini Web ahụ ọzọ. Ọ bụrụ na ị na-eme 67router site na image Docker, jiri image `-web` (ma ọ bụ build target `runner-web`), nke nwere Chromium na dependencies ya n'ime ya; image ntọala enweghị ha.
 
 ---
 
@@ -181,7 +181,7 @@ Malitegharịa OmniRoute mgbe nrụnye ahụ gasịrị, wee nwalee arịrịọ
 **Nke a bụ nchọpụta ụgha. Ọ dịghị ihe butere nje, ọ dịghịkwa ihe a chọrọ ka eme.**
 
 Avast na AVG na-eji usoro heuristic nke na-akanye faịlụ ederede nkịtị/Markdown nwere ọtụtụ
-njikọ ndị yiri arịrịọ HTTP. `README.md` nke OmniRoute so n'ime ngwugwu npm (e depụtara ya
+njikọ ndị yiri arịrịọ HTTP. `README.md` nke 67router so n'ime ngwugwu npm (e depụtara ya
 na `package.json` → `files`), ya mere, mgbe echichi zuru ụwa ọnụ gasịrị, ọ na-adị na
 `node_modules/omniroute/README.md` — ọ nwekwara ihe atụ `http://localhost:20128/...` ruru ~15
 (ebe njedebe MCP HTTP/SSE, URL A2A `.well-known`, na iberibe `curl`). Ọnụọgụ njikọ ndị ahụ
@@ -198,7 +198,7 @@ Faịlụ ahụ bụ naanị akwụkwọ nkọwa na-adịghị arụ ọrụ, na
 
 1. **Kwụsị ọkwa ndị ahụ** — wepụ ndekọ echichi ahụ n'ihe antivirus gị na-enyocha
    (Avast: Settings → Exceptions), site n'ịgbakwunye ụzọ `node_modules` zuru ụwa ọnụ gị
-   na/ma ọ bụ ndekọ data OmniRoute (`~/.omniroute/`).
+   na/ma ọ bụ ndekọ data 67router (`~/.omniroute/`).
 2. **Kọọrọ ha nchọpụta ụgha ahụ** — <https://www.avast.com/false-positive-file-form.php>,
    ma tinye `README.md` e debere na kwarantaini. Nke a bụ ndozi ga-enyere mmadụ niile aka,
    ebe ọ bụ heuristic nke onye nrụpụta ahụ na-emeghachi omume gabiga ókè nye faịlụ ederede.
@@ -260,7 +260,7 @@ ime ka nke a mee ọzọ.
 
 ### Ihu nbanye na-akwụsị ịrụ ọrụ ma ọ bụ na-egosi njehie "Module self-registration"
 
-**Ihe kpatara ya:** Ị na-eji ụdị Node.js nke na-anọghị n’ogo runtime echedoro OmniRoute kwadoro. Ihe na-emekarị bụ iji ụdị patch Node 22 ma ọ bụ 24 ochie nke dị n’okpuru ogo nchekwa emezigharịrị OmniRoute chọrọ.
+**Ihe kpatara ya:** Ị na-eji ụdị Node.js nke na-anọghị n’ogo runtime echedoro 67router kwadoro. Ihe na-emekarị bụ iji ụdị patch Node 22 ma ọ bụ 24 ochie nke dị n’okpuru ogo nchekwa emezigharịrị 67router chọrọ.
 
 **Ihe mgbaàmà:**
 
@@ -276,7 +276,7 @@ ime ka nke a mee ọzọ.
    nvm use 24
    ```
 2. Nyochaa ụdị gị: `node --version` kwesịrị igosi `v24.0.0` ma ọ bụ nke ka ọhụrụ n’ahịrị 24.x LTS
-3. Wụnye OmniRoute ọzọ: `npm install -g omniroute`
+3. Wụnye 67router ọzọ: `npm install -g omniroute`
 4. Malitegharịa: `omniroute`
 
 > **Ụdị echedoro akwadoro:** `>=22.22.2 <23` ma ọ bụ `>=24.0.0 <27`. A na-akwado Node.js 24.x LTS (Krypton) na Node.js 26 n’uju.
@@ -359,13 +359,13 @@ omniroute
 
 **Ihe kpatara ya:** Na Node.js 22, dispatcher nke undici@8 adabaghị na mmejuputa `fetch()` arụnyere n'ime Node.
 
-**Ndozi (v3.5.5+):** OmniRoute na-ejizi ọrụ `fetch()` nke undici n'onwe ya mgbe dispatcher proxy na-arụ ọrụ, iji hụ na omume ya na-adị otu. Melite gaa na v3.5.5+.
+**Ndozi (v3.5.5+):** 67router na-ejizi ọrụ `fetch()` nke undici n'onwe ya mgbe dispatcher proxy na-arụ ọrụ, iji hụ na omume ya na-adị otu. Melite gaa na v3.5.5+.
 
 ### Proxy MITM n'okpuru WSL: a naghị ejide ngwa desktọpụ dị na Windows host
 
-**Ihe kpatara ya:** A na-etinye proxy MITM na asambodo CA ya n'ime gburugburu ebe OmniRoute na-arụ ọrụ. N'okpuru WSL, gburugburu ahụ bụ Linux guest, ebe ngwa desktọpụ AI (Kiro, Trae, Copilot, Zed, …) na-arụ ọrụ na Windows host. Ngwa ndị dị na host anaghị atụkwasị ebe nchekwa asambodo nke guest obi, ha anaghịkwa agafe na proxy sistemụ nke guest, ya mere njide okporo ụzọ desktọpụ anaghị arụ ọrụ ebe ahụ.
+**Ihe kpatara ya:** A na-etinye proxy MITM na asambodo CA ya n'ime gburugburu ebe 67router na-arụ ọrụ. N'okpuru WSL, gburugburu ahụ bụ Linux guest, ebe ngwa desktọpụ AI (Kiro, Trae, Copilot, Zed, …) na-arụ ọrụ na Windows host. Ngwa ndị dị na host anaghị atụkwasị ebe nchekwa asambodo nke guest obi, ha anaghịkwa agafe na proxy sistemụ nke guest, ya mere njide okporo ụzọ desktọpụ anaghị arụ ọrụ ebe ahụ.
 
-**Nkwado:** Gbaa OmniRoute ọsọ ozugbo n'otu OS ahụ ngwa desktọpụ ịchọrọ ijide na-arụ ọrụ na ya (Windows maka ngwa Windows; otu a kwa maka macOS/Linux). Idobe OmniRoute n'ime WSL mgbe ị na-elekwasị anya na ngwa host chọrọ ka i jiri aka mee ka Windows host tụkwasị asambodo CA emepụtara obi, ma tụọ ntọala netwọk/proxy nke ngwa host ọ bụla gaa na ebe njedebe proxy WSL — nhazi a anaghị enweta nkwado ma dịkwa mfe imebi.
+**Nkwado:** Gbaa 67router ọsọ ozugbo n'otu OS ahụ ngwa desktọpụ ịchọrọ ijide na-arụ ọrụ na ya (Windows maka ngwa Windows; otu a kwa maka macOS/Linux). Idobe 67router n'ime WSL mgbe ị na-elekwasị anya na ngwa host chọrọ ka i jiri aka mee ka Windows host tụkwasị asambodo CA emepụtara obi, ma tụọ ntọala netwọk/proxy nke ngwa host ọ bụla gaa na ebe njedebe proxy WSL — nhazi a anaghị enweta nkwado ma dịkwa mfe imebi.
 
 ---
 
@@ -392,7 +392,7 @@ omniroute
 
 ### Token OAuth Emeela Ochie
 
-OmniRoute na-emelite token na-akpaghị aka. Ọ bụrụ na nsogbu ahụ adịgide:
+67router na-emelite token na-akpaghị aka. Ọ bụrụ na nsogbu ahụ adịgide:
 
 1. Dashboard → Onye Na-eweta Ọrụ → Jikọọ Ọzọ
 2. Hichapụ njikọ onye na-eweta ọrụ ma tinye ya ọzọ
@@ -605,7 +605,7 @@ Profaịlụ ndị na-eweta ọrụ na-akwado ntọala ndị a:
 
 ### Mgbochi ìgwè na-ebili n'otu oge
 
-Mgbe ọtụtụ arịrịọ ndị na-aga n'otu oge rutere onye na-eweta ọrụ nwere mmachi ọsọ, OmniRoute na-eji mutex + mmachi ọsọ akpaaka ahazi arịrịọ n'usoro ma gbochie ọdịda na-agbasawanye. Nke a na-eme na-akpaghị aka maka ndị na-eweta ọrụ ji igodo API.
+Mgbe ọtụtụ arịrịọ ndị na-aga n'otu oge rutere onye na-eweta ọrụ nwere mmachi ọsọ, 67router na-eji mutex + mmachi ọsọ akpaaka ahazi arịrịọ n'usoro ma gbochie ọdịda na-agbasawanye. Nke a na-eme na-akpaghị aka maka ndị na-eweta ọrụ ji igodo API.
 
 ### Arịrịọ nkata na-ada na 503 / chat_admission_busy
 
@@ -641,7 +641,7 @@ Na oke ndabara, arịrịọ na-adị arọ n'ụzọ nhazi mgbe ọ nwere opeka
 opekata mpe ngwaọrụ `64`, ma ọ bụ opekata mpe token `32,000` e mere atụmatụ, ma ọ bụ mgbe atụmatụ nhazi nwere oke
 gwụsịrị oke ya nke ọnụ e letara `10,000` ma ọ bụ omimi `12`.
 
-**Ihe kpatara ya:** Nke a bụ mbelata ibu e mere ụma n'ime OmniRoute, ọ bụghị ọdịda sitere n'aka onye na-eweta ọrụ dị n'elu.
+**Ihe kpatara ya:** Nke a bụ mbelata ibu e mere ụma n'ime 67router, ọ bụghị ọdịda sitere n'aka onye na-eweta ọrụ dị n'elu.
 Usoro ọ bụla na-eji ihe nche mpaghara-usoro idowe ikike dị arọ nwere oke tupu ijigide
 ma tụgharịa ahụ arịrịọ buru ibu. A na-ejide mgbazinye dị arọ n'oge ndụ niile nke nzaghachi SSE.
 
@@ -685,7 +685,7 @@ maka ntọala nnabata ndị bụ isi.
 
 ## Nhazi nsogbu ọdịda RAG / LLM a na-ahọrọ iji (nsogbu 16)
 
-Ụfọdụ ndị ọrụ OmniRoute na-etinye gateway ahụ n'ihu ngwugwu RAG ma ọ bụ agent. N'ime nhazi ndị ahụ, a na-ahụkarị usoro dị ịtụnanya: OmniRoute yiri ka ọ dị mma (ndị provider na-arụ ọrụ, profaịlụ routing dị mma, enweghị ọkwa ịdọ aka ná ntị maka oke arịrịọ), mana azịza ikpeazụ ka na-ezighi ezi.
+Ụfọdụ ndị ọrụ 67router na-etinye gateway ahụ n'ihu ngwugwu RAG ma ọ bụ agent. N'ime nhazi ndị ahụ, a na-ahụkarị usoro dị ịtụnanya: 67router yiri ka ọ dị mma (ndị provider na-arụ ọrụ, profaịlụ routing dị mma, enweghị ọkwa ịdọ aka ná ntị maka oke arịrịọ), mana azịza ikpeazụ ka na-ezighi ezi.
 
 N'omume, nsogbu ndị a na-esikarị na pipeline RAG dị n'okpuru pụta, ọ bụghị na gateway n'onwe ya.
 
@@ -704,17 +704,17 @@ Echiche ya dị mfe:
 
 1. Mgbe ị na-enyocha azịza ọjọọ, dekọọ:
    - ọrụ na arịrịọ onye ọrụ
-   - njikọta route ma ọ bụ provider dị na OmniRoute
+   - njikọta route ma ọ bụ provider dị na 67router
    - context RAG ọ bụla ejiri n'okpuru (akwụkwọ ewepụtara, oku tool, wdg.)
 2. Tinye nsogbu ahụ n'okpuru otu ma ọ bụ nọmba WFGY ProblemMap abụọ (`No.1` … `No.16`).
-3. Chekwaa nọmba ahụ na dashboard, runbook, ma ọ bụ incident tracker nke gị n'akụkụ ndekọ OmniRoute.
+3. Chekwaa nọmba ahụ na dashboard, runbook, ma ọ bụ incident tracker nke gị n'akụkụ ndekọ 67router.
 4. Jiri ibe WFGY kwekọrọ ekwekọ kpebie ma ị kwesịrị ịgbanwe ngwugwu RAG, retriever, ma ọ bụ atụmatụ routing gị.
 
 Ederede zuru ezu na usoro omume doro anya dị ebe a (ikike MIT, naanị ederede):
 
 [README WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Ị nwere ike ileghara ngalaba a anya ma ọ bụrụ na ị naghị arụ pipeline RAG ma ọ bụ agent n'azụ OmniRoute.
+Ị nwere ike ileghara ngalaba a anya ma ọ bụrụ na ị naghị arụ pipeline RAG ma ọ bụ agent n'azụ 67router.
 
 ---
 
@@ -738,7 +738,7 @@ Nsogbu ndị metụtara kpọmkwem mwepụta v3.8.0 na ụzọ ngafe ha dị ugb
 
 1. Wụnye Devin CLI maka platform gị
 2. Tọọ `CLI_DEVIN_BIN=/usr/local/bin/devin` (ma ọ bụ path ziri ezi) na `.env`
-3. Malitegharịa OmniRoute ma nwalee ọzọ site na **Dashboard → Ngwaọrụ CLI**
+3. Malitegharịa 67router ma nwalee ọzọ site na **Dashboard → Ngwaọrụ CLI**
 
 ### Cooldown model rapaara (nrụpụta ọhụrụ aka)
 
@@ -793,7 +793,7 @@ Nsogbu ndị metụtara kpọmkwem mwepụta v3.8.0 na ụzọ ngafe ha dị ugb
 
 1. Mepụta secret enweghị usoro: `openssl rand -hex 32`
 2. Tọọ `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` na env sava production (nakwa na client ọ bụla na-ekwurịta okwu na bridge ahụ)
-3. Malitegharịa OmniRoute
+3. Malitegharịa 67router
 
 ### Responses API: e wedatara background mode ka ọ bụrụ synchronous
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ကို Docker အတွင်း လုပ်ဆောင်သည့်အခါ ပုံမှန် "Import from Zed Keychain" လုပ်ငန်းစဉ်သည် မအောင်မြင်ပါ။
+67router ကို Docker အတွင်း လုပ်ဆောင်သည့်အခါ ပုံမှန် "Import from Zed Keychain" လုပ်ငန်းစဉ်သည် မအောင်မြင်ပါ။
 အကြောင်းမှာ container သည် host OS ၏ keychain daemon (Linux တွင် libsecret၊
 macOS တွင် Keychain၊ Windows တွင် Credential Manager) ကို ဆက်သွယ်၍မရသည့်အပြင်
 host filesystem ပေါ်ရှိ Zed config directory များကိုလည်း ပုံမှန်အားဖြင့် container အတွင်းမှ မမြင်နိုင်သောကြောင့်ဖြစ်သည်။
@@ -20,7 +20,7 @@ Container တစ်ခုအတွင်း ပိတ်ဆို့မှုပ
    module သည် Unix socket သို့မဟုတ် D-Bus session မှတစ်ဆင့် OS keychain service နှင့် ဆက်သွယ်သည်။
    ပုံမှန်အားဖြင့် မည်သည့်အရာကိုမျှ container အတွင်းသို့ ချိတ်ဆက်ပေးမထားသောကြောင့် credential ဖတ်ယူမှုသည် အမြဲတမ်း မအောင်မြင်ပါ။
 
-OmniRoute သည် Docker environment ကို heuristic နှစ်မျိုးဖြင့် ရှာဖွေသတ်မှတ်သည်-
+67router သည် Docker environment ကို heuristic နှစ်မျိုးဖြင့် ရှာဖွေသတ်မှတ်သည်-
 
 - `/.dockerenv` ရှိနေခြင်း (container စတင်ချိန်တွင် Docker daemon က ရေးသားပေးသည်)။
 - `/proc/1/cgroup` ထဲတွင် `docker` စာသား ပါဝင်နေခြင်း (Linux cgroup v1)။
@@ -31,7 +31,7 @@ OmniRoute သည် Docker environment ကို heuristic နှစ်မျိ
 ## Manual Token Import Tab ကို အသုံးပြုခြင်း
 
 1. **Dashboard → Providers → Zed** ကို ဖွင့်ပါ။
-2. **Manual Token Import** panel သည် keychain import card အောက်တွင် ပေါ်လာသည်။ OmniRoute က
+2. **Manual Token Import** panel သည် keychain import card အောက်တွင် ပေါ်လာသည်။ 67router က
    Docker ကို ရှာဖွေတွေ့ရှိသည့်အခါ ပထမဆုံး keychain import ကြိုးပမ်းမှု မအောင်မြင်ပြီးနောက် ဤ panel သည်
    အလိုအလျောက် ဖြန့်ဖွင့်လာသည်။
 3. Dropdown မှ provider ကို ရွေးချယ်ပါ (OpenAI၊ Anthropic၊ Google၊ Mistral၊ xAI၊

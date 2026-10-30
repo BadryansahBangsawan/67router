@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute este livrată ca o aplicație web progresivă complet instalabilă. Când accesați panoul de control din orice browser mobil — Android (Chrome) sau iOS (Safari) — puteți selecta „Adăugați pe ecranul principal” și beneficia de o experiență similară unei aplicații native, fără a fi necesar un magazin de aplicații.
+67router este livrată ca o aplicație web progresivă complet instalabilă. Când accesați panoul de control din orice browser mobil — Android (Chrome) sau iOS (Safari) — puteți selecta „Adăugați pe ecranul principal” și beneficia de o experiență similară unei aplicații native, fără a fi necesar un magazin de aplicații.
 
 ## Ce este o PWA?
 
-O aplicație web progresivă transformă panoul de control web OmniRoute într-o aplicație care arată și se comportă ca o aplicație mobilă nativă. După instalare, aceasta:
+O aplicație web progresivă transformă panoul de control web 67router într-o aplicație care arată și se comportă ca o aplicație mobilă nativă. După instalare, aceasta:
 
 - Pornește de pe ecranul principal cu propria pictogramă
 - Se deschide pe tot ecranul — fără bara de adrese sau interfața cu file a browserului
@@ -20,26 +20,26 @@ O aplicație web progresivă transformă panoul de control web OmniRoute într-o
 
 ### Android (Chrome)
 
-1. Deschideți panoul de control OmniRoute în Chrome: `http://YOUR_IP:20128`
-2. Chrome va afișa automat bannerul **„Adăugați OmniRoute pe ecranul principal”** sau:
+1. Deschideți panoul de control 67router în Chrome: `http://YOUR_IP:20128`
+2. Chrome va afișa automat bannerul **„Adăugați 67router pe ecranul principal”** sau:
    - Atingeți meniul **⋮** (trei puncte) → **„Adăugați pe ecranul principal”** sau **„Instalați aplicația”**
 3. Confirmați solicitarea
-4. OmniRoute apare pe ecranul principal ca aplicație autonomă
+4. 67router apare pe ecranul principal ca aplicație autonomă
 
 ### iOS (Safari)
 
-1. Deschideți panoul de control OmniRoute în Safari: `http://YOUR_IP:20128`
+1. Deschideți panoul de control 67router în Safari: `http://YOUR_IP:20128`
 2. Atingeți butonul **Partajare** (caseta cu săgeată)
 3. Derulați în jos și atingeți **„Adăugați pe ecranul principal”**
-4. Alegeți un nume (implicit este „OmniRoute”) și atingeți **Adăugați**
-5. OmniRoute apare pe ecranul principal cu pictograma aplicației
+4. Alegeți un nume (implicit este „67router”) și atingeți **Adăugați**
+5. 67router apare pe ecranul principal cu pictograma aplicației
 
 ### Desktop (Chrome / Edge)
 
-1. Deschideți panoul de control OmniRoute
-2. Faceți clic pe **pictograma de instalare** din bara de adrese (sau ⋮ → „Instalați OmniRoute...”)
+1. Deschideți panoul de control 67router
+2. Faceți clic pe **pictograma de instalare** din bara de adrese (sau ⋮ → „Instalați 67router...”)
 3. Confirmați solicitarea
-4. OmniRoute se deschide într-o fereastră autonomă — fără file și fără bară de adrese
+4. 67router se deschide într-o fereastră autonomă — fără file și fără bară de adrese
 
 ## Funcționalități
 
@@ -49,7 +49,7 @@ Manifestul este configurat cu `display: "fullscreen"`, ceea ce înseamnă că ap
 
 ### Compatibilitate offline
 
-OmniRoute include un service worker (`sw.js`) care asigură stocarea inteligentă în cache:
+67router include un service worker (`sw.js`) care asigură stocarea inteligentă în cache:
 
 | Tip de resursă                                                         | Strategie                                     | Comportament                                                                                                                |
 | ---------------------------------------------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Când rețeaua nu este disponibilă și un utilizator navighează la o pagină n
 
 ### Pictogramele aplicației
 
-OmniRoute oferă pictograme optimizate pentru fiecare platformă:
+67router oferă pictograme optimizate pentru fiecare platformă:
 
 | Fișier                 | Dimensiune           | Utilizat de                                          |
 | ---------------------- | -------------------- | ---------------------------------------------------- |
@@ -93,9 +93,9 @@ Generat de Next.js prin `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Aflată în `src/shared/components/PwaRegister.tsx`, această componentă client
 
 ## Utilizarea cu Termux (Android)
 
-Când OmniRoute rulează pe Android prin Termux, PWA-ul funcționează fără probleme:
+Când 67router rulează pe Android prin Termux, PWA-ul funcționează fără probleme:
 
-1. Porniți OmniRoute în Termux: `npx omniroute`
+1. Porniți 67router în Termux: `npx omniroute`
 2. Deschideți Chrome pe același telefon: `http://localhost:20128`
 3. Instalați PWA-ul prin „Adăugați pe ecranul de pornire”
 4. PWA-ul se conectează la serverul Termux local — totul rulează pe dispozitiv
@@ -156,7 +156,7 @@ Această combinație înseamnă că telefonul Android este atât **serverul** (T
 
 ## Utilizarea de pe alte dispozitive
 
-Instalați PWA-ul pe orice dispozitiv care are acces prin browser la serverul OmniRoute:
+Instalați PWA-ul pe orice dispozitiv care are acces prin browser la serverul 67router:
 
 - **Alt telefon/altă tabletă**: Accesați `http://PHONE_IP:20128` și instalați PWA-ul
 - **Laptop**: Deschideți Chrome/Edge și instalați-l ca PWA pentru desktop

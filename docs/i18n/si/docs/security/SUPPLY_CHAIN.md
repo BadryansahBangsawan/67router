@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute මඟින් npm + Docker artifacts ප්රකාශයට පත් කරයි. මෙම ගේට්ටු මඟින් provenance, inventory (SBOM) සහ CVE ස්කෑන් කිරීම සපයයි, මේ සියල්ල OSS වන අතර, නිකුත් කිරීමේ වැඩ ප්රවාහයන්ට සම්බන්ධ කර ඇත. **උපදේශාත්මක-ප්රථම** ස්ථාවරය — ඒවා දැන් වාර්තා කරන අතර, පළමු සාර්ථක නිකුතුවෙන් පසු අවහිර කිරීමේ තත්ත්වයට උසස් කරයි.
+67router මඟින් npm + Docker artifacts ප්රකාශයට පත් කරයි. මෙම ගේට්ටු මඟින් provenance, inventory (SBOM) සහ CVE ස්කෑන් කිරීම සපයයි, මේ සියල්ල OSS වන අතර, නිකුත් කිරීමේ වැඩ ප්රවාහයන්ට සම්බන්ධ කර ඇත. **උපදේශාත්මක-ප්රථම** ස්ථාවරය — ඒවා දැන් වාර්තා කරන අතර, පළමු සාර්ථක නිකුතුවෙන් පසු අවහිර කිරීමේ තත්ත්වයට උසස් කරයි.
 
 | ගේට්ටුව               | මෙවලම                                          | කොහේද                         | අවහිර කරයිද?                  | ප්රතිදානය                                       |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :---------------------------- | :---------------------------------------------- |
@@ -40,7 +40,7 @@ osv සහ Trivy මඟින් deps, **නිරන්තරයෙන් ව�
 
 - **දාමය:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`. `package-lock.json` හරහා තහවුරු කර ඇත — සමස්ත dependency tree එකේ (`@openai/codex-security`) `extract-zip` ප්රකාශ කරන එක් පැකේජයක් පමණක් ඇති අතර, `promptfoo` ප්රකාශ කරන එක් පැකේජයක් පමණක් `@openai/codex-security` ප්රකාශ කරයි.
 - **දාමයේ කිසිදු තැනක ස්ථාවර නිකුතුවක් නොමැත.** `extract-zip@2.0.1` (2020 දී ප්රකාශයට පත් කරන ලදී) යනු පැකේජයේ අවසාන නිකුතුවයි — එය නඩත්තු නොකෙරේ. `@openai/codex-security` හි වත්මන් npm-latest (`0.1.29`) තවමත් `extract-zip@2.0.1` භාවිතා කරයි.
-- **නිෂ්පාදනයෙන් ළඟා විය නොහැක.** `promptfoo` යනු devDependency-only (කිසි විටෙක `dependencies` යටතේ ලැයිස්තුගත කර නැත), සහ `src/`, `open-sse/`, හෝ `bin/` යටතේ ඇති කිසිදු ගොනුවක් `extract-zip` npm පැකේජය ආයාත නොකරයි — OmniRoute හිම `extractZip()` helper (`src/lib/versionManager/binaryManager.ts:93`) දේශීය `unzip`/`tar` වෙත යොමු වන අතර එය අදාළ නොවේ. `@openai/codex-security` ද extract-zip හි onEntry callback මත තමන්ගේම symlink-traversal ආරක්ෂාවක් සපයයි.
+- **නිෂ්පාදනයෙන් ළඟා විය නොහැක.** `promptfoo` යනු devDependency-only (කිසි විටෙක `dependencies` යටතේ ලැයිස්තුගත කර නැත), සහ `src/`, `open-sse/`, හෝ `bin/` යටතේ ඇති කිසිදු ගොනුවක් `extract-zip` npm පැකේජය ආයාත නොකරයි — 67router හිම `extractZip()` helper (`src/lib/versionManager/binaryManager.ts:93`) දේශීය `unzip`/`tar` වෙත යොමු වන අතර එය අදාළ නොවේ. `@openai/codex-security` ද extract-zip හි onEntry callback මත තමන්ගේම symlink-traversal ආරක්ෂාවක් සපයයි.
 - **`package.json` `overrides` හරහා `extract-zip` අන්වර්ථ නාම නොකරන්න** — එකම ශක්ය ආදේශකය වන්නේ Electron-org-internal වන අතර `@openai/codex-security` හිම onEntry/defaultDirMode/defaultFileMode පරීක්ෂාවන් සමඟ API-අනුකූල නොවේ; එය අභිබවා යාමෙන් එම පැකේජයේ ආරක්ෂක පරීක්ෂාවන් නිහඬව බිඳ වැටෙනු ඇත.
 - **මූලික මට්ටම:** මනින ලද osv `vulnCount` (3) දැනටමත් ශීත කළ `config/quality/quality-baseline.json` මූලික මට්ටමට (27) වඩා බෙහෙවින් අඩුය — ratchet වෙනසක් අවශ්ය නොවේ.
 - **ප්රතිගාමී ආරක්ෂාව:** `tests/unit/extract-zip-14482-exposure.test.ts` ඉහත දාමය සහ නිෂ්පාදන-ආයාත නොවන invariant තහවුරු කරයි; එය කිසියම් අවස්ථාවක බිඳ වැටුණහොත් (උදා: අනාගත PR එකක් `extract-zip` නිෂ්පාදනයෙන් ළඟා විය හැකි නම්) CI අසාර්ථක වේ.

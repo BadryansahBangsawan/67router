@@ -6,7 +6,7 @@
 
 ## Àkópò
 
-Àwọn àṣẹ OmniRoute CLI ń ṣe ìfàṣẹsí sí API ìṣàkóso abẹ́lé nípa lílo àmì
+Àwọn àṣẹ 67router CLI ń ṣe ìfàṣẹsí sí API ìṣàkóso abẹ́lé nípa lílo àmì
 `HMAC-SHA256(machine-id, salt)` tí a fi ránṣẹ́ nípasẹ̀ àkọlé ìbéèrè
 `x-omniroute-cli-token`.
 

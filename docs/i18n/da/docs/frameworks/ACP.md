@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute adskiller **CLI-registrering**, **oprindelig Agent Client Protocol** og
+67router adskiller **CLI-registrering**, **oprindelig Agent Client Protocol** og
 **ældre stdio-adaptere**. At finde en installeret binær fil beviser ikke dens
 godkendelse, modelkompatibilitet eller parathed til at håndtere en prompt.
 

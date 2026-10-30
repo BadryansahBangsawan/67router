@@ -7,7 +7,7 @@
 > **Vir resnice:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Nazadnje posodobljeno:** 2026-06-28 — v3.8.40
 
-OmniRoute vključuje splošno ogrodje za vrednotenje, ki ga lahko uporabite za primerjalno preizkušanje konfiguracij usmerjanja, posameznih ponudnikov/modelov ali priloženih zbirk »golden set«.
+67router vključuje splošno ogrodje za vrednotenje, ki ga lahko uporabite za primerjalno preizkušanje konfiguracij usmerjanja, posameznih ponudnikov/modelov ali priloženih zbirk »golden set«.
 Uporabite ga za preverjanje sprememb usmerjanja, potrjevanje novih ponudnikov in nadzor izdaj, preden jih uvedete v produkcijski promet.
 
 Ogrodje sestavljajo:

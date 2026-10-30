@@ -4,7 +4,7 @@
 
 ---
 
-Kai „OmniRoute“ veikia „Docker“ konteineryje, standartinis procesas „Importuoti iš Zed raktinės“ nepavyksta,
+Kai „67router“ veikia „Docker“ konteineryje, standartinis procesas „Importuoti iš Zed raktinės“ nepavyksta,
 nes konteineris negali pasiekti pagrindinės OS raktinės tarnybos (`libsecret` sistemoje „Linux“,
 „Keychain“ sistemoje „macOS“, „Credential Manager“ sistemoje „Windows“), o pagrindinio kompiuterio
 failų sistemoje esantys „Zed“ konfigūracijos katalogai pagal numatytuosius nustatymus konteineryje nematomi.
@@ -20,7 +20,7 @@ Konteineryje kyla dvi esminės problemos:
    modulis palaiko ryšį su OS raktinės tarnyba per „Unix“ lizdą arba D-Bus seansą.
    Pagal numatytuosius nustatymus nė vienas iš jų nėra susietas su konteineriu, todėl prisijungimo duomenų nuskaitymas visada nepavyksta.
 
-„OmniRoute“ aptinka „Docker“ aplinką naudodama dvi euristikas:
+„67router“ aptinka „Docker“ aplinką naudodama dvi euristikas:
 
 - Yra failas `/.dockerenv` (jį „Docker“ tarnyba sukuria paleisdama konteinerį).
 - Eilutė `docker` yra faile `/proc/1/cgroup` („Linux“ cgroup v1).
@@ -32,7 +32,7 @@ Kai suveikia kuri nors euristika, importavimo maršrutas grąžina HTTP 422 su
 
 1. Atidarykite **Valdymo skydas → Teikėjai → Zed**.
 2. Po raktinės importavimo kortele rodomas skydelis **Rankinis prieigos rakto importavimas**. Kai
-   „OmniRoute“ aptinka „Docker“, šis skydelis automatiškai išskleidžiamas po pirmojo nesėkmingo
+   „67router“ aptinka „Docker“, šis skydelis automatiškai išskleidžiamas po pirmojo nesėkmingo
    bandymo importuoti iš raktinės.
 3. Išskleidžiamajame sąraše pasirinkite teikėją („OpenAI“, „Anthropic“, „Google“, „Mistral“, „xAI“,
    „OpenRouter“ arba „DeepSeek“).

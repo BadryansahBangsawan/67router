@@ -7,7 +7,7 @@
 > **信頼できる情報源:** `src/lib/cloudAgent/` および `src/app/api/v1/agents/tasks/`
 > **最終更新:** 2026-06-28 — v3.8.40（frontmatter の更新、cursor-cloud を含む4つのエージェント）
 
-OmniRoute は、サードパーティーのクラウドホスト型コーディングエージェント（Codex Cloud、Cursor、
+67router は、サードパーティーのクラウドホスト型コーディングエージェント（Codex Cloud、Cursor、
 Devin、Jules）を長時間実行タスクとしてオーケストレーションします。各エージェントは統一されたインターフェースでラップされているため、
 クライアントはプロバイダー固有の API を扱うことなく、プロンプトとリポジトリ URL を送信して結果を受け取ることができます。
 

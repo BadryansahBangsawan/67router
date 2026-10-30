@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute clasifica sus proveedores **gratuitos** según la calidad de sus modelos mediante **puntuaciones ELO de Arena AI
+> **TL;DR**: 67router clasifica sus proveedores **gratuitos** según la calidad de sus modelos mediante **puntuaciones ELO de Arena AI
 > (al estilo de LMArena)**. Abra la página **Clasificación de proveedores gratuitos** en el
 > panel para consultar qué proveedores gratuitos ofrecen los modelos más potentes para su tarea,
 > ya sea de forma general o filtrados por categoría (programación, revisión, documentación, depuración).
@@ -13,7 +13,7 @@
 
 ## Qué es
 
-OmniRoute registra 375 proveedores, incluidas 155 entradas del catálogo marcadas como **free/no-auth** (sin autenticación, OAuth de nivel gratuito o clave de API de nivel gratuito — consulta la [Guía de niveles gratuitos](../getting-started/FREE-TIERS-GUIDE.md) y el [directorio completo de niveles gratuitos](../reference/FREE_TIERS.md)). El problema: los proveedores gratuitos varían enormemente en la calidad de sus modelos. Un proveedor sin autenticación que ofrece un modelo de vanguardia es mucho más útil que uno que ofrece un modelo antiguo y pequeño.
+67router registra 375 proveedores, incluidas 155 entradas del catálogo marcadas como **free/no-auth** (sin autenticación, OAuth de nivel gratuito o clave de API de nivel gratuito — consulta la [Guía de niveles gratuitos](../getting-started/FREE-TIERS-GUIDE.md) y el [directorio completo de niveles gratuitos](../reference/FREE_TIERS.md)). El problema: los proveedores gratuitos varían enormemente en la calidad de sus modelos. Un proveedor sin autenticación que ofrece un modelo de vanguardia es mucho más útil que uno que ofrece un modelo antiguo y pequeño.
 
 **Clasificación de proveedores gratuitos** responde a la pregunta «**¿qué proveedor gratuito me ofrece el mejor modelo?**» combinando el catálogo de cada proveedor gratuito con **puntuaciones de calidad colaborativas** procedentes de la **clasificación Arena AI** (ELO basado en preferencias humanas, la misma idea detrás de la arena de chatbots LMArena). Los proveedores se clasifican según la potencia de su **mejor modelo gratuito**.
 
@@ -121,9 +121,9 @@ y `code`— de la API de clasificación de Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Cada entrada de la clasificación
 incluye un nombre de modelo, proveedor, `score` ELO, intervalo de confianza y número de votos.
 
-Las categorías de la clasificación se asignan a las categorías de tareas de OmniRoute:
+Las categorías de la clasificación se asignan a las categorías de tareas de 67router:
 
-| Clasificación de Arena | Categorías de tareas de OmniRoute                 |
+| Clasificación de Arena | Categorías de tareas de 67router                  |
 | ---------------------- | ------------------------------------------------- |
 | `text`                 | `default`, `review`, `documentation`, `debugging` |
 | `code`                 | `coding`                                          |
@@ -160,7 +160,7 @@ La sincronización se ejecuta **de forma predeterminada**:
 
 - Se ejecuta una vez al iniciar el servidor y, posteriormente, mediante un temporizador periódico
   (`src/lib/arenaEloSync.ts`, conectado desde `src/instrumentation-node.ts`).
-- Es **no bloqueante y nunca provoca un error fatal**: si falla la obtención de datos del servicio ascendente, OmniRoute sigue
+- Es **no bloqueante y nunca provoca un error fatal**: si falla la obtención de datos del servicio ascendente, 67router sigue
   ejecutándose y las clasificaciones simplemente muestran los últimos datos válidos (o un estado vacío).
 
 Dos variables de entorno la controlan (documentadas en
@@ -195,7 +195,7 @@ una correspondencia flexible (`findMatchingIntelligence` en `src/lib/freeProvide
 3. Coincidencia por prefijo (el nombre de un modelo de la clasificación es un prefijo del ID del registro).
 
 En la sincronización, se eliminan los prefijos de proveedores conocidos (`anthropic/`, `openai/`, `google/`, …)
-y un pequeño mapa de alias amplía los nombres canónicos a las variantes que OmniRoute utiliza
+y un pequeño mapa de alias amplía los nombres canónicos a las variantes que 67router utiliza
 internamente, de modo que los modelos puedan encontrarse con cualquier nombre.
 
 ### Cómo se clasifica un proveedor

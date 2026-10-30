@@ -4,7 +4,7 @@
 
 ---
 
-> **Hva dette dokumentet er.** En kritisk vurdering av OmniRoutes kvalitetsportsystem,
+> **Hva dette dokumentet er.** En kritisk vurdering av 67routers kvalitetsportsystem,
 > sammenlignet med beste praksis i bransjen, **pluss** en omfattende katalog over alle
 > kvalitetskontroller og en **verktøyuavhengig replikeringsplan** for å bruke det samme systemet i
 > ethvert prosjekt. Generert 2026-06-16 fra den faktiske tilstanden i repositoriet (ikke fra hukommelsen).
@@ -101,62 +101,62 @@ som kan gjenskapes med enhver teknologistakk.
 
 ### 1. Stil og formatering (deterministisk, raskt)
 
-- **OmniRoute:** Prettier + ESLint via lint-staged (pre-commit), 2 mellomrom/doble anførselstegn/100 kolonner.
+- **67router:** Prettier + ESLint via lint-staged (pre-commit), 2 mellomrom/doble anførselstegn/100 kolonner.
 - **Generisk:** ett formateringsverktøy med automatisk retting + ett lint-verktøy, kjørt i pre-commit på klargjorte filer.
 
 ### 2. Typer
 
-- **OmniRoute:** `typecheck:core` (blokkerende) + `typecheck:noimplicit:core` (rådgivende) + `type-coverage`-skralle på 92.17% + `any`-budsjett per fil.
+- **67router:** `typecheck:core` (blokkerende) + `typecheck:noimplicit:core` (rådgivende) + `type-coverage`-skralle på 92.17% + `any`-budsjett per fil.
 - **Generisk:** streng typekontroll i CI + skrallebasert måling av typedekning + budsjett per fil for `any`/nødutveier.
 
 ### 3. Tester (intensitet)
 
-- **OmniRoute:** 2 ikke-overlappende kjørere (Node native + vitest), 8 delkjøringer, global dekning på 60/60/60/60 + skralle på ~76% + **8 minimumskrav per modul for kritiske moduler** + nattlige egenskapstester + nattlig **mutasjonstesting**.
+- **67router:** 2 ikke-overlappende kjørere (Node native + vitest), 8 delkjøringer, global dekning på 60/60/60/60 + skralle på ~76% + **8 minimumskrav per modul for kritiske moduler** + nattlige egenskapstester + nattlig **mutasjonstesting**.
 - **Generisk:** testkjører(e) + **absolutt** minimumskrav til dekning (forhindrer null) + **skralle** for dekning (forhindrer regresjon) + **minimumskrav per modul for høyrisikokode** (motvirker Goodharts lov) + egenskapsbasert testing for ren logikk + nattlig **mutasjonstesting** som det reelle målet på testkvalitet.
 
 ### 4. Testpolicy (mot manipulering)
 
-- **OmniRoute:** `pr-test-policy` (produksjonskode krever en test), `check-test-masking` (blokkerer svekkede forventninger), `pr-evidence` (påstand om suksess krever en evidensblokk), `test-discovery` (hver test samles inn av en kjører).
+- **67router:** `pr-test-policy` (produksjonskode krever en test), `check-test-masking` (blokkerer svekkede forventninger), `pr-evidence` (påstand om suksess krever en evidensblokk), `test-discovery` (hver test samles inn av en kjører).
 - **Generisk:** kontrollport for «ny kode ⇒ ny test» + detektor for fjernede forventninger/tautologier + krav om evidens (TDD eller levende test) + garanti for at ingen tester blir liggende foreldreløse utenfor glob-mønstrene.
 
 ### 5. Kompleksitet og kodehelse (skrallemekanismer)
 
-- **OmniRoute:** ESLint-advarsler (3769↓), jscpd-duplisering (5.72%↓), syklomatisk kompleksitet + maksimalt antall linjer (1800↓), kognitiv kompleksitet med sonarjs (753↓), død kode/ubrukte eksporter med knip (339↓), filstørrelse per fil (frosset, kan bare reduseres), sirkulære avhengigheter (egendefinert Tarjan, blokkerende).
+- **67router:** ESLint-advarsler (3769↓), jscpd-duplisering (5.72%↓), syklomatisk kompleksitet + maksimalt antall linjer (1800↓), kognitiv kompleksitet med sonarjs (753↓), død kode/ubrukte eksporter med knip (339↓), filstørrelse per fil (frosset, kan bare reduseres), sirkulære avhengigheter (egendefinert Tarjan, blokkerende).
 - **Generisk:** bruk skrallemekanisme for alle helsemålinger (advarsler, duplisering, syklomatisk **og** kognitiv kompleksitet, død kode, filstørrelse, importsykluser). Retningen er alltid «ingen regresjon».
 
 ### 6. Statisk sikkerhet (SAST + hemmeligheter)
 
-- **OmniRoute:** CodeQL (skralle for varsler = 0), gitleaks (`[extend] useDefault=true` — kritisk!), SonarQube, egendefinerte sikkerhetsregler (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (skralle for varsler = 0), gitleaks (`[extend] useDefault=true` — kritisk!), SonarQube, egendefinerte sikkerhetsregler (public-creds, error-helper, route-guard-membership, route-validation).
 - **Generisk:** SAST (CodeQL/Sonar/semgrep) med varselsskralle + skanner for hemmeligheter med **arvet standardregelsett** (egendefinert konfigurasjon som overstyrer standarden = blindsone) + prosjektspesifikke sikkerhetsporter basert på harde regler.
 
 ### 7. Forsyningskjede (avhengigheter)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-tillatelsesliste), lockfile-lint (HTTPS+sha512+register), `check-deps` mot slopsquatting (tillatelsesliste + alder ≥72 t).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-tillatelsesliste), lockfile-lint (HTTPS+sha512+register), `check-deps` mot slopsquatting (tillatelsesliste + alder ≥72 t).
 - **Generisk:** SCA fra flere kilder + tillatelsesliste for lisenser + integritetskontroll av låsefil + tillatelsesliste for avhengigheter med kontroll av alder/typosquatting + oppdateringsrobot med grupperte oppdateringer.
 
 ### 8. Forsyningskjede (bygging og utgivelse)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA-opprinnelsesbevis (`--provenance`), OpenSSF Scorecard (ukentlig), herding av arbeidsflyter (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA-opprinnelsesbevis (`--provenance`), OpenSSF Scorecard (ukentlig), herding av arbeidsflyter (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Generisk:** generer SBOM ved publisering + signert opprinnelsesbevis (SLSA L2+) + planlagt Scorecard + herd alle arbeidsflyter (tokener med minste privilegium, ingen lagrede påloggingsopplysninger ved checkout som ikke skal pushe, actions festet til SHA).
 
 ### 9. Kontrakter og API
 
-- **OmniRoute:** oasdiff (bakoverinkompatible OpenAPI-endringer), schemathesis (nattlig fuzzing av kontrakter), openapi-coverage (% dokumenterte ruter, skralle på 38.3%), openapi-security-tiers (spesifikasjon kontra rutevakt).
+- **67router:** oasdiff (bakoverinkompatible OpenAPI-endringer), schemathesis (nattlig fuzzing av kontrakter), openapi-coverage (% dokumenterte ruter, skralle på 38.3%), openapi-security-tiers (spesifikasjon kontra rutevakt).
 - **Generisk:** kontraktsdiff for bakoverinkompatible endringer (oasdiff/buf) + egenskapsbasert fuzzing mot spesifikasjonen (schemathesis) + skrallebasert dokumentasjonsdekning + konsistens mellom spesifikasjon og kode.
 
 ### 10. Dokumentasjon og i18n (mot forvitring)
 
-- **OmniRoute:** docs-sync (speilede versjoner), docs-counts-sync (tall i dokumentasjon kontra kode), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + skralle på 80.1%).
+- **67router:** docs-sync (speilede versjoner), docs-counts-sync (tall i dokumentasjon kontra kode), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + skralle på 80.1%).
 - **Generisk:** synkroniser versjoner/antall/miljøvariabler mellom dokumentasjon og kode (kontrollport, ikke tillit) + valider interne lenker + skrallebasert i18n-dekning.
 
 ### 11. Anti-hallusinasjon / konsistens (den sjeldne kategorien)
 
-- **OmniRoute:** known-symbols (strengbasert dispatch ⇒ levende symbol), provider-consistency, fetch-targets (klientens fetch ⇒ reell rute), docs-symbols, db-rules (harde regler nr. 2/5), migration-numbering.
+- **67router:** known-symbols (strengbasert dispatch ⇒ levende symbol), provider-consistency, fetch-targets (klientens fetch ⇒ reell rute), docs-symbols, db-rules (harde regler nr. 2/5), migration-numbering.
 - **Generisk:** For hver «dupliserte sannhetskilde» (register, strengbasert dispatch, referanser på tvers av lag) skal det finnes en kontrollport som beviser at begge sider samsvarer. Fanger opp forvitringen som typekontroll og tester ikke oppdager.
 
 ### 12. Robusthet og domene (produktspesifikt)
 
-- **OmniRoute:** chaos (feilinjeksjon), heap-growth (lekkasje), k6 (langtidstest), promptfoo+garak (LLM-red teaming mot OWASP LLM Top 10), de 3 robusthetslovene (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (feilinjeksjon), heap-growth (lekkasje), k6 (langtidstest), promptfoo+garak (LLM-red teaming mot OWASP LLM Top 10), de 3 robusthetslovene (circuit-breaker/cooldown/lockout).
 - **Generisk:** identifiser feilmodusene i **ditt** domene, og ha en kontrollport (selv om den bare kjøres nattlig) for hver av dem. For KI-apper: red teaming mot injeksjon. For distribuerte systemer: kaos + lekkasje + langtidstest.
 
 ---

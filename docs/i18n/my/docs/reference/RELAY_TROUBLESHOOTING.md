@@ -4,7 +4,7 @@
 
 ---
 
-Relay များ (Vercel, Deno, Cloudflare) သည် serverless backend တစ်ခုပေါ်တွင် upstream ချိတ်ဆက်မှုကို အဆုံးသတ်ပေးသဖြင့် OmniRoute သည် provider API key ကို server-side တွင် ထိန်းသိမ်းထားရင်း တည်ငြိမ်သော region တစ်ခုမှ egress ပြုလုပ်နိုင်သည်။ ဤစာတမ်းတွင် production ပတ်ဝန်းကျင်၌ operator များ ကြုံတွေ့ရလေ့ရှိသော failure mode နှစ်မျိုးနှင့် တစ်မျိုးစီအတွက် OmniRoute တွင် ပါဝင်သည့် ပြန်လည်ထူထောင်ရေးနည်းလမ်းများကို ဖော်ပြထားသည်။
+Relay များ (Vercel, Deno, Cloudflare) သည် serverless backend တစ်ခုပေါ်တွင် upstream ချိတ်ဆက်မှုကို အဆုံးသတ်ပေးသဖြင့် 67router သည် provider API key ကို server-side တွင် ထိန်းသိမ်းထားရင်း တည်ငြိမ်သော region တစ်ခုမှ egress ပြုလုပ်နိုင်သည်။ ဤစာတမ်းတွင် production ပတ်ဝန်းကျင်၌ operator များ ကြုံတွေ့ရလေ့ရှိသော failure mode နှစ်မျိုးနှင့် တစ်မျိုးစီအတွက် 67router တွင် ပါဝင်သည့် ပြန်လည်ထူထောင်ရေးနည်းလမ်းများကို ဖော်ပြထားသည်။
 
 ## Relay auth ကို သိမ်းဆည်းပုံ
 
@@ -25,7 +25,7 @@ Request ပြုလုပ်ချိန်တွင် `extractRelayAuth(notes
 1. **Settings → Proxy Pool** ကို ဖွင့်ပါ။
 2. Auth ပျောက်ဆုံးနေသော relay row များတွင် အဝါရောင် `auth missing` badge နှင့်
    **Repair** ခလုတ်ကို ပြသထားသည်။
-3. **Repair** ကို နှိပ်ပါ။ OmniRoute သည်
+3. **Repair** ကို နှိပ်ပါ။ 67router သည်
    `POST /api/settings/proxies/[id]/repair-relay` ကို ခေါ်ဆိုပြီး အောက်ပါတို့ကို လုပ်ဆောင်သည်-
    - **လက်ရှိ** key ဖြင့် `relayAuthEnc` ကို ကုဒ်ဖြည်သည်၊
    - plaintext `relayAuth` ကို `notes` ထဲသို့ ပြန်ရေးသည်၊
@@ -50,7 +50,7 @@ Token ကို ပြန်လည်ရယူ၍မရနိုင်သည့�
 
 **လက္ခဏာ:** Proxy test (`speed` ခလုတ်) တွင် relay အလုပ်လုပ်နေကြောင်း ပြသသော်လည်း request များသည် ရံဖန်ရံခါ မအောင်မြင်သေးပါ။
 
-OmniRoute ၏ auto-test probe က ပြန်ပေးသော relay awareness header များကို စစ်ဆေးပါ
+67router ၏ auto-test probe က ပြန်ပေးသော relay awareness header များကို စစ်ဆေးပါ
 (**Settings → Proxy Pool** နှင့် `relayTested` / `relayAlive` counter များကို ကြည့်ပါ)-
 
 - `x-relay-url` — မည်သည့် relay backend က တုံ့ပြန်ခဲ့သည်။

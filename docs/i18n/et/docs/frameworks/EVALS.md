@@ -7,7 +7,7 @@
 > **Tõeallikas:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute sisaldab üldotstarbelist hindamisraamistikku, mida saate kasutada marsruutimiskonfiguratsioonide, üksikute pakkujate/mudelite või kaasasolevate „golden set“ komplektide võrdlemiseks.
+67router sisaldab üldotstarbelist hindamisraamistikku, mida saate kasutada marsruutimiskonfiguratsioonide, üksikute pakkujate/mudelite või kaasasolevate „golden set“ komplektide võrdlemiseks.
 Kasutage seda marsruutimismuudatuste kontrollimiseks, uute pakkujate valideerimiseks ja väljalasete tõkestamiseks
 enne nende suunamist tootmisliiklusesse.
 

@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Lähde:** `open-sse/services/thinkingBudget.ts`
 
-Ajattelubudjetti määrittää, **kirjoittaako OmniRoute uudelleen asiakkaan ajattelu-/päättelyparametrit** matkalla palveluntarjoajille. Se **ei** ota pakkausta, reititystä tai kehotteiden välimuistia käyttöön tai poista niitä käytöstä.
+Ajattelubudjetti määrittää, **kirjoittaako 67router uudelleen asiakkaan ajattelu-/päättelyparametrit** matkalla palveluntarjoajille. Se **ei** ota pakkausta, reititystä tai kehotteiden välimuistia käyttöön tai poista niitä käytöstä.
 
 ## Tilat
 
-| Tila                       | Mitä OmniRoute tekee                                                                                                     | Milloin käyttää                                                                                                                                                                                            |
+| Tila                       | Mitä 67router tekee                                                                                                      | Milloin käyttää                                                                                                                                                                                            |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (oletus) | Jättää asiakkaan kentät ennalleen (`reasoning`, `reasoning_effort`, Clauden `thinking`, Geminin `thinking_config` jne.). | **Codex / Desktop / mikä tahansa asiakas, jonka tulee hallita päättelyn vaativuustasoa ja päättely-yhteenvetoja.** Vaaditaan näkyviin ajattelupaneeleihin, kun asiakas pyytää `reasoning.summary`-kenttää. |
 | **`auto`**                 | **Poistaa kaikki** ajattelu-/päättelykentät pyynnön rungosta ennen sen lähettämistä ylävirtaan.                          | Vain, kun haluat tarkoituksella **palveluntarjoajan** muodostavan oletusarvot etkä tarvitse asiakkaan hallitsemaa ajattelua. **Ei** tarkoita ”näytä ajattelu automaattisesti”.                             |
@@ -31,14 +31,14 @@ Jos asiakas (esim. Codex Desktop) lähetti `reasoning: { effort: "ultra", summar
 
 ## Mitä tämä **ei ole**
 
-| Ominaisuus                                            | Suhde                                                                                                                                              |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Pakkaus** (Caveman, RTK, pinottu, …)                | Erillinen käsittelyketju. Toimii kaikissa ajattelubudjetin tiloissa.                                                                               |
-| **Kehote-/semanttinen välimuisti**                    | Erillinen. Ajattelubudjetin tila ei vaikuta siihen.                                                                                                |
-| **Yhdistelmäreititys / varareitit**                   | Erillinen. Ei vaikutusta.                                                                                                                          |
-| **API-avaimen tunnisterajat / kustannusbudjetit**     | Erillinen. Ei vaikutusta.                                                                                                                          |
-| **Päättelyn uudelleentoiston välimuisti**             | Usean vuoron uudelleensyöttö tiukoille palveluntarjoajille (DeepSeek, Kimi, Qwen-thinking, …). Ei sama asia kuin Desktopin ”näytä ajattelu”.       |
-| **`encrypted_content`-sisällön salauksen purkaminen** | **Mahdotonta.** OpenAI/Codexin yksityiset päättelyblobit ovat läpinäkymättömiä. OmniRoute ei koskaan pura niiden salausta (#7095 / #7176 / #7304). |
+| Ominaisuus                                            | Suhde                                                                                                                                             |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pakkaus** (Caveman, RTK, pinottu, …)                | Erillinen käsittelyketju. Toimii kaikissa ajattelubudjetin tiloissa.                                                                              |
+| **Kehote-/semanttinen välimuisti**                    | Erillinen. Ajattelubudjetin tila ei vaikuta siihen.                                                                                               |
+| **Yhdistelmäreititys / varareitit**                   | Erillinen. Ei vaikutusta.                                                                                                                         |
+| **API-avaimen tunnisterajat / kustannusbudjetit**     | Erillinen. Ei vaikutusta.                                                                                                                         |
+| **Päättelyn uudelleentoiston välimuisti**             | Usean vuoron uudelleensyöttö tiukoille palveluntarjoajille (DeepSeek, Kimi, Qwen-thinking, …). Ei sama asia kuin Desktopin ”näytä ajattelu”.      |
+| **`encrypted_content`-sisällön salauksen purkaminen** | **Mahdotonta.** OpenAI/Codexin yksityiset päättelyblobit ovat läpinäkymättömiä. 67router ei koskaan pura niiden salausta (#7095 / #7176 / #7304). |
 
 ## Näkyvä päättely (Codex / Responses-asiakasohjelmat)
 
@@ -51,7 +51,7 @@ Jotta asiakasohjelma voi näyttää päättelytekstin, **kaikkien** seuraavien e
 Jos saat vain ”salattua yksityistä päättelyä”, syynä on jompikumpi seuraavista:
 
 - tila oli **`auto`** (asiakasohjelman pyyntö poistettiin), tai
-- ylävirta palautti `encrypted_content`-sisällön ilman yhteenvetotekstiä (palveluntarjoajan rajoitus; OmniRoute voi näyttää vain paikkamerkin, ei selväkielistä tekstiä).
+- ylävirta palautti `encrypted_content`-sisällön ilman yhteenvetotekstiä (palveluntarjoajan rajoitus; 67router voi näyttää vain paikkamerkin, ei selväkielistä tekstiä).
 
 ## API-esimerkit
 
@@ -71,7 +71,7 @@ Skeema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapt
 
 ### Pysyvyys / uudelleenkäynnistys
 
-Arvo tallennetaan asetusten `thinkingBudget`-avaimen alle ja ladataan prosessin käynnistyessä (`hydrateThinkingBudgetConfig`). Kun arvoa on muutettu tietokannan tai joidenkin muiden kuin API-reittien kautta, **käynnistä OmniRoute-prosessi uudelleen**, jotta muistissa oleva singleton vastaa levylle tallennettua arvoa.
+Arvo tallennetaan asetusten `thinkingBudget`-avaimen alle ja ladataan prosessin käynnistyessä (`hydrateThinkingBudgetConfig`). Kun arvoa on muutettu tietokannan tai joidenkin muiden kuin API-reittien kautta, **käynnistä 67router-prosessi uudelleen**, jotta muistissa oleva singleton vastaa levylle tallennettua arvoa.
 
 ## Ylläpitäjän tarkistuslista
 

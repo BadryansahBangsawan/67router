@@ -6,7 +6,7 @@
 
 ## Yleiskatsaus
 
-OmniRoute CLI -komennot todentautuvat paikalliselle hallinta-API:lle käyttämällä
+67router CLI -komennot todentautuvat paikalliselle hallinta-API:lle käyttämällä
 `HMAC-SHA256(machine-id, salt)`-tunnistetta, joka lähetetään
 `x-omniroute-cli-token`-pyyntöotsakkeessa.
 

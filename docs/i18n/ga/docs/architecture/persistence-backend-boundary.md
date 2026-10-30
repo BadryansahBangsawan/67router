@@ -10,7 +10,7 @@
 
 ## Comhthéacs
 
-Cuireann OmniRoute feidhmeanna buanـseasmhachta atá dírithe ar an bhfearann ar fáil faoi láthair ó `src/lib/db/`, agus cuireann an nasc comhroinnte a fhilleann `src/lib/db/core.ts` an conradh sioncronach `SqliteAdapter` in `src/lib/db/adapters/types.ts` i bhfeidhm. Tacaíonn an cuibheoir sin le roinnt timpeallachtaí ama rite SQLite, ach tá cruth SQLite ar a dhromchla fós: ráitis ullmhaithe shioncronacha, `pragma`, idirbhearta iarchurtha agus láithreacha, cúltaca dúchasach/trí chóipeáil comhaid, seicphointe, agus hanla áitiúil bunachair sonraí.
+Cuireann 67router feidhmeanna buanـseasmhachta atá dírithe ar an bhfearann ar fáil faoi láthair ó `src/lib/db/`, agus cuireann an nasc comhroinnte a fhilleann `src/lib/db/core.ts` an conradh sioncronach `SqliteAdapter` in `src/lib/db/adapters/types.ts` i bhfeidhm. Tacaíonn an cuibheoir sin le roinnt timpeallachtaí ama rite SQLite, ach tá cruth SQLite ar a dhromchla fós: ráitis ullmhaithe shioncronacha, `pragma`, idirbhearta iarchurtha agus láithreacha, cúltaca dúchasach/trí chóipeáil comhaid, seicphointe, agus hanla áitiúil bunachair sonraí.
 
 Is leis an gcosán tosaithe agus athshlánaithe reatha saolré an chomhaid SQLite freisin. Réitíonn `src/lib/db/core.ts` `storage.sqlite`, coinníonn sé cuibheoir amháin atá comhroinnte ar fud an phróisis, socraíonn sé seicphointí WAL, caomhnaíonn sé táblaí roghnaithe le linn athshlánaithe, agus baineann sé comhaid chompánaigh SQLite nuair a atógtar bunachar sonraí. Roghnaíonn an tiománaí in `src/lib/db/adapters/driverFactory.ts` idir na timpeallachtaí ama rite SQLite a dtacaítear leo; ní astarraingt é do chúl-inneall seachtrach.
 

@@ -14,7 +14,7 @@
 
 ## Bu yanaşma niyə konservativdir
 
-OmniRoute-un mövcud yerləşdirmə quruluşu artıq yığcam və özünü doğrultmuşdur:
+67router-un mövcud yerləşdirmə quruluşu artıq yığcam və özünü doğrultmuşdur:
 
 - **`redis:7-alpine`** istehsal miqyasında sorğu tezliyi məhdudiyyəti/keş iş yükünü idarə edir.
 - **SQLite + sqlite-vec + FTS5** lokal yaddaş + vektor + mətn axtarışını təmin edir (bax: [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Buradakı iki profil **SQLite limitinə çatan yerləşdirmələr üçün miqyas
 
 - ≥3 `omniroute` replikası işlədirsinizsə və provayder rotasiyasını vahid Go prosesində mərkəzləşdirmək istəyirsinizsə.
 - Bütün replikalardakı yuxarı axın provayder sorğuları üçün vahid audit/jurnallaşdırma səthi istəyirsinizsə.
-- Tier-1 yönləndirmə qatını OmniRoute replikalarından asılı olmayaraq üfüqi şəkildə miqyaslandırmaq istəyirsinizsə.
+- Tier-1 yönləndirmə qatını 67router replikalarından asılı olmayaraq üfüqi şəkildə miqyaslandırmaq istəyirsinizsə.
 
 **Nə əlavə edir:**
 

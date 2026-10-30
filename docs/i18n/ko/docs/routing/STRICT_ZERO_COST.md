@@ -31,7 +31,7 @@
 풀의 모든 후보에 대해(`open-sse/services/autoCombo/virtualFactory.ts::buildPreparedPool`,
 `filterPaidOnlyCandidates` 직후) 다음을 적용합니다.
 
-1. **`FREE_MODEL_BUDGETS`에 전혀 없음** → 제외됩니다. 여기에는 실제 유료 모델과 OmniRoute가
+1. **`FREE_MODEL_BUDGETS`에 전혀 없음** → 제외됩니다. 여기에는 실제 유료 모델과 67router가
    아직 분류하지 않은 모든 제공업체/모델이 포함됩니다. 즉, 새 후보는 포함된 상태가 아니라 제외된 상태로 시작합니다.
 2. **`freeType: "keyless"`** → 즉시 통과하지만, **실제로 인증 없는 경로를 통해 들어온
    후보에만** 적용됩니다(`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -87,7 +87,7 @@ STRICT_ZERO_COST는 해당 허용 목록에 있는 **각 연결의 무료 액세
 `tests/unit/autoCombo/strict-zero-cost-connection-safety.test.ts`를 참조하세요.
 
 `자동 검색됨`: 올바른 메타데이터를 갖춘 제공자/모델(카탈로그에 있으며, 사용량 어댑터가
-있고, `hardStopGuaranteed: true`임)이 내일 출시되더라도 OmniRoute가 이를 인식하는 즉시
+있고, `hardStopGuaranteed: true`임)이 내일 출시되더라도 67router가 이를 인식하는 즉시
 사용할 수 있습니다. 코드 변경, 허용 목록 항목 추가, 이 모듈의 편집이 전혀 필요하지
 않습니다. 카탈로그에서 제거된 항목도 같은 방식으로 사라집니다. 회귀 검증은
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts`를 참조하세요

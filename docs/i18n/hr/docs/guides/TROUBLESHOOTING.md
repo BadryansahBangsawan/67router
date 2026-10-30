@@ -8,17 +8,17 @@
 
 🌐 **Jezici:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Uobičajeni problemi i rješenja za OmniRoute.
+Uobičajeni problemi i rješenja za 67router.
 
 ---
 
 ## Brzi pregled
 
-**Novi ste u OmniRouteu?** Počnite ovdje — ovo rješava 90 % problema:
+**Novi ste u 67routeru?** Počnite ovdje — ovo rješava 90 % problema:
 
 | Vidim ovo                             | Što to znači                                    | Što učiniti                                                                                         |
 | ------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| "Nije moguće povezivanje"             | OmniRoute nije pokrenut                         | Pokrenite `omniroute` ili `docker restart omniroute`                                                |
+| "Nije moguće povezivanje"             | 67router nije pokrenut                          | Pokrenite `omniroute` ili `docker restart omniroute`                                                |
 | "Nevažeći API ključ"                  | Vaš je ključ pogrešan ili je istekao            | Ponovno kopirajte ključ s web-mjesta pružatelja                                                     |
 | "Prekoračeno ograničenje brzine"      | Šaljete previše zahtjeva                        | Pričekajte 1 minutu ili upotrijebite `model: "auto"` za automatski prelazak na zamjensku opciju     |
 | "Prekoračena kvota"                   | Iskoristili ste svoju besplatnu/plaćenu kvotu   | Povežite više pružatelja ili upotrijebite besplatne pružatelje (Kiro, Pollinations)                 |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # izričito ograničenje prihvata 
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # povećaj ograničeno čekanje iznad zadane vrijednosti RATE_LIMIT_MAX_WAIT_MS za spore nadređene servise
 ```
 
-Postavite ih u okruženju procesa OmniRoute (demona, npr. putem LaunchAgent plist datoteke ili naredbe `systemctl edit`), a zatim ponovno pokrenite OmniRoute. Zastavica rotacije pojedinačna je poluga s najvećim učinkom: pretvara potpuni neuspjeh u transparentan ponovni pokušaj kod ispravnog pružatelja iz skupa.
+Postavite ih u okruženju procesa 67router (demona, npr. putem LaunchAgent plist datoteke ili naredbe `systemctl edit`), a zatim ponovno pokrenite 67router. Zastavica rotacije pojedinačna je poluga s najvećim učinkom: pretvara potpuni neuspjeh u transparentan ponovni pokušaj kod ispravnog pružatelja iz skupa.
 
 **Napomena**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` ograničava koliko se zahtjevnih zahtjeva — onih s dugim kontekstom — izvršava istodobno; ograničenje je kontrola prihvata, a ne ograničivač brzine pružatelja. **Ažuriranje za #503-fanout:** ova se varijabla više ne postavlja prema zadanim postavkama (sada se primjenjuje samo kada je izričito konfigurirana, kao iznad) — prihvat zahtjevnih zahtjeva umjesto toga kontrolira automatski izveden proračun bajtova (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) koji se prilagođava stvarnom memorijskom ograničenju glavnog računala, pa bi svježa implementacija trebala imati znatno manje odbijanja `503 chat_admission_busy` bez ikakvog postavljanja ove varijable; njezino izričito postavljanje ovdje i dalje funkcionira točno kako je dokumentirano. Izričita nadjačavanja proračuna bajtova ograničavaju se na raspon od 8 MiB do 2 GiB. Pogreška `413 body_exceeds_budget` nije prolazna: povećajte taj proračun bajtova, smanjite `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` ili povećajte memorijsko ograničenje procesa. Odbacivanje `inflight_bytes_budget` posljedica je privremenog zagušenja i zahtjev se i dalje može ponoviti. Ograničavanjem brzine po pružatelju (`open-sse/services/rateLimitManager.ts`) zasebno upravljaju `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH` i `RATE_LIMIT_AUTO_ENABLE` — pogledajte `.env.example`.
 
 **Kako provjeriti je li uspjelo**: pokrenite agenta/cron dvaput u kratkom razmaku i potvrdite da oba pokretanja uspijevaju. Prije primjene rješenja drugo pokretanje obično vraća `429`/`401`. Nakon primjene rješenja neuspjeli zahtjevi (ako ih bude) transparentno se ponavljaju i poziv se dovršava. Također možete izvršiti `curl /monitoring/health` te pratiti polje `rateLimitedUntil` na vezama s pružateljima i `circuitBreakers.providerBreakers[].state` za pogođene pružatelje — stanje može biti `CLOSED`, `DEGRADED`, `OPEN` ili `HALF_OPEN` (pogledajte `src/shared/utils/circuitBreaker.ts`), a pružatelj koji nastavlja prijavljivati pogreške prijeći će iz stanja `CLOSED → DEGRADED → OPEN` prije nego što prozor za poništavanje omogući prolazak probnog zahtjeva (`HALF_OPEN`).
 
-**Ako i dalje dobivate 429**: aktivni račun za tog pružatelja doista je iscrpio svoju _kvotu_ (nije riječ samo o ograničenju brzine). Dodajte drugi račun za istog pružatelja na nadzornoj ploči OmniRoute → Providers → Accounts ili uključite drugog besplatnog pružatelja (npr. `routeway`, `auggie`). Rotacija pomaže samo kod prolaznih ograničenja brzine i pogrešaka 400/401; potpuno iscrpljivanje kvote zahtijeva druge vjerodajnice ili drugog pružatelja.
+**Ako i dalje dobivate 429**: aktivni račun za tog pružatelja doista je iscrpio svoju _kvotu_ (nije riječ samo o ograničenju brzine). Dodajte drugi račun za istog pružatelja na nadzornoj ploči 67router → Providers → Accounts ili uključite drugog besplatnog pružatelja (npr. `routeway`, `auggie`). Rotacija pomaže samo kod prolaznih ograničenja brzine i pogrešaka 400/401; potpuno iscrpljivanje kvote zahtijeva druge vjerodajnice ili drugog pružatelja.
 
 **Ako dobivate 403 na modelima za obradu slika (`auto/vision`, `bazaarlink/*`)**: povezani račun nema plaćeni plan koji uključuje obradu slika ili API ključ nema dostatne ovlasti. Na nadzornoj ploči pružatelja provjerite obuhvaća li opseg ključa obradu slika/multimodalne mogućnosti ili povežite račun s plaćenom razinom i zadržite ga kao cilj za obradu slika.
 
@@ -71,7 +71,7 @@ Postavite ih u okruženju procesa OmniRoute (demona, npr. putem LaunchAgent plis
 
 Kada pokrenete `npm install -g omniroute`, možete vidjeti velik broj upozorenja kao što su `npm warn ERESOLVE`, obavijesti o peer ovisnostima i poruke `deprecated`. **To je očekivano i bezopasno.** Instalacija je uspjela ako u izlazu vidite `added <N> packages`.
 
-Kako biste potisnuli upozorenja o razrješavanju peer ovisnosti, upotrijebite podržani oblik instalacije za OmniRoute:
+Kako biste potisnuli upozorenja o razrješavanju peer ovisnosti, upotrijebite podržani oblik instalacije za 67router:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` potiskuje samo `ERESOLVE` i obavijesti o peer ovisnostima. Obavijesti o zastarjelosti ostaju vidljive jer dolaze iz prijelaznih paketa trećih strana; one ne znače da instalacija nije uspjela.
 
-Upozorenja proizlaze iz zastarjelih raspona peer ovisnosti u paketima trećih strana koje OmniRoute ne kontrolira:
+Upozorenja proizlaze iz zastarjelih raspona peer ovisnosti u paketima trećih strana koje 67router ne kontrolira:
 
 1. **`marked-terminal` zahtijeva `marked >=1 <16`, pronađen je `marked@18`** — u praksi radi bez problema; raspon peer ovisnosti u izvornom paketu jednostavno je zastario.
 2. **`deprecated prebuild-install@7.1.3`** — prijelazni pomoćni alat za dohvaćanje nativnih binarnih datoteka. Ne
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### Može li se ovo upozorenje zanemariti?
 
-**Djelomično, ali pokretanje bez skripti nije preporučljivo.** OmniRoute uključuje pouzdane zamjenske opcije: ako se nativna povezivanja za `better-sqlite3` ne mogu učitati iz samostalnog paketa, aplikacija prelazi na alternativne upravljačke programe kao što su `node:sqlite` ili `sql.js` (pogledajte [Odabir SQLite izvođenja](../ops/SQLITE_RUNTIME.md)). Poslužitelj će se i dalje pokrenuti, ali upotreba zamjenskih WASM rješenja kao što je `sql.js` onemogućuje SQLite WAL način rada (zapisivanje unaprijed, engl. Write-Ahead Logging) te povećava opterećenje memorije i sinkronizacije diska.
+**Djelomično, ali pokretanje bez skripti nije preporučljivo.** 67router uključuje pouzdane zamjenske opcije: ako se nativna povezivanja za `better-sqlite3` ne mogu učitati iz samostalnog paketa, aplikacija prelazi na alternativne upravljačke programe kao što su `node:sqlite` ili `sql.js` (pogledajte [Odabir SQLite izvođenja](../ops/SQLITE_RUNTIME.md)). Poslužitelj će se i dalje pokrenuti, ali upotreba zamjenskih WASM rješenja kao što je `sql.js` onemogućuje SQLite WAL način rada (zapisivanje unaprijed, engl. Write-Ahead Logging) te povećava opterećenje memorije i sinkronizacije diska.
 
 ### Koje su skripte zapravo potrebne?
 
-Nisu sve blokirane skripte nužne za pokretanje OmniRoutea:
+Nisu sve blokirane skripte nužne za pokretanje 67routera:
 
-- **Nužne (`omniroute`, `better-sqlite3`):** OmniRoute se pokreće iz samostalnog aplikacijskog paketa Next.js (`dist/`). Tijekom instalacije npm preuzima ili kompilira nativni SQLite upravljački program specifičan za glavno računalo u vršnom direktoriju `node_modules/better-sqlite3/`. OmniRouteova skripta `postinstall` (`scripts/build/postinstall.mjs`) zatim provjerava i kopira te binarne datoteke specifične za glavno računalo u `dist/node_modules/` kako bi im samostalni poslužitelj mogao pristupiti. Ako je OmniRouteova skripta `postinstall` blokirana, ovaj se korak kopiranja preskače.
+- **Nužne (`omniroute`, `better-sqlite3`):** 67router se pokreće iz samostalnog aplikacijskog paketa Next.js (`dist/`). Tijekom instalacije npm preuzima ili kompilira nativni SQLite upravljački program specifičan za glavno računalo u vršnom direktoriju `node_modules/better-sqlite3/`. 67routerova skripta `postinstall` (`scripts/build/postinstall.mjs`) zatim provjerava i kopira te binarne datoteke specifične za glavno računalo u `dist/node_modules/` kako bi im samostalni poslužitelj mogao pristupiti. Ako je 67routerova skripta `postinstall` blokirana, ovaj se korak kopiranja preskače.
 - **Neobavezne/tranzitivne (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** To su pomoćni alati za izgradnju, alati za nadzor ili uslužni programi za sistemski privjesak ključeva. Njihovo dopuštanje sprječava upozorenja pri izgradnji, ali nisu potrebni za osnovnu funkcionalnost usmjeravanja.
-- **Isključena (`onnxruntime-node`):** Neobavezna ovisnost za lokalna ugrađivanja umjetne inteligencije koja **nije** potrebna za rad OmniRoutea. Njezina skripta `postinstall` preuzima približno 300 MB CUDA resursa s NuGeta; nemojte je uključivati u popis dopuštenih osim ako izričito namjeravate upotrebljavati lokalno ONNX ubrzanje na podržanom hardveru.
+- **Isključena (`onnxruntime-node`):** Neobavezna ovisnost za lokalna ugrađivanja umjetne inteligencije koja **nije** potrebna za rad 67routera. Njezina skripta `postinstall` preuzima približno 300 MB CUDA resursa s NuGeta; nemojte je uključivati u popis dopuštenih osim ako izričito namjeravate upotrebljavati lokalno ONNX ubrzanje na podržanom hardveru.
 
 ### Preporučeno rješenje
 
-Kako biste tijekom globalne instalacije dopustili potrebne instalacijske skripte i uklonili upozorenja, proslijedite `--allow-scripts` za OmniRoute i njegove nativne ovisnosti:
+Kako biste tijekom globalne instalacije dopustili potrebne instalacijske skripte i uklonili upozorenja, proslijedite `--allow-scripts` za 67router i njegove nativne ovisnosti:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ nije instaliran, npm paket je prisutan, ali nedostaje binarna datoteka pregledni
 Playwright namjerno drži preuzimanja preglednika odvojena od instalacije
 npm paketa, stoga je ovaj odgovor očekivan dok se preglednik ne instalira.
 
-Za globalnu npm instalaciju instalirajte Chromium iz direktorija OmniRoute paketa
+Za globalnu npm instalaciju instalirajte Chromium iz direktorija 67router paketa
 kako bi predmemorija preglednika pripadala istoj Playwright instalaciji:
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Nakon instalacije ponovno pokrenite OmniRoute, a zatim ponovite Gemini Web zahtjev. Ako
-pokrećete OmniRoute iz Docker slike, upotrijebite `-web` sliku (ili cilj izgradnje
+Nakon instalacije ponovno pokrenite 67router, a zatim ponovite Gemini Web zahtjev. Ako
+pokrećete 67router iz Docker slike, upotrijebite `-web` sliku (ili cilj izgradnje
 `runner-web`), koja uključuje Chromium i njegove ovisnosti; osnovna slika ih
 ne uključuje.
 
@@ -188,7 +188,7 @@ ne uključuje.
 **Ovo je lažno pozitivan rezultat. Ništa nije zaraženo i nije potrebno ništa poduzimati.**
 
 Avast i AVG pokreću heuristiku koja označava obične tekstualne/Markdown datoteke koje sadrže mnogo
-poveznica nalik HTTP zahtjevima. OmniRouteov `README.md` isporučuje se unutar npm paketa (naveden je
+poveznica nalik HTTP zahtjevima. 67routerov `README.md` isporučuje se unutar npm paketa (naveden je
 u `package.json` → `files`), pa se pri globalnoj instalaciji nalazi na `node_modules/omniroute/README.md`
 — a sadrži oko 15 primjera `http://localhost:20128/...` (MCP HTTP/SSE krajnje točke, A2A URL
 `.well-known` i isječke s naredbom `curl`). Ta je gustoća poveznica dovoljna za aktiviranje
@@ -205,7 +205,7 @@ iz karantene.
 
 1. **Zaustavite obavijesti** — izuzmite instalacijski direktorij u svojem antivirusnom programu
    (Avast: Postavke → Iznimke), tako da dodate svoju globalnu putanju `node_modules` i/ili
-   OmniRouteov podatkovni direktorij (`~/.omniroute/`).
+   67routerov podatkovni direktorij (`~/.omniroute/`).
 2. **Prijavite lažno pozitivan rezultat** — <https://www.avast.com/false-positive-file-form.php>,
    uz prilaganje datoteke `README.md` iz karantene. To je rješenje koje pomaže svima jer
    dobavljačeva heuristika pretjerano reagira na tekstualnu datoteku.
@@ -268,7 +268,7 @@ planirano; dok se ne uvede, problem se može ponavljati s novim izdanjima.
 
 ### Stranica za prijavu ruši se ili prikazuje pogrešku "Module self-registration"
 
-**Uzrok:** Koristite verziju Node.js-a koja nije unutar OmniRouteova odobrenog sigurnog raspona izvršnog okruženja. Najčešći je slučaj korištenje starije razine zakrpe za Node 22 ili 24 koja je ispod minimalne sigurnosne razine sa zakrpama koju OmniRoute zahtijeva.
+**Uzrok:** Koristite verziju Node.js-a koja nije unutar 67routerova odobrenog sigurnog raspona izvršnog okruženja. Najčešći je slučaj korištenje starije razine zakrpe za Node 22 ili 24 koja je ispod minimalne sigurnosne razine sa zakrpama koju 67router zahtijeva.
 
 **Simptomi:**
 
@@ -284,7 +284,7 @@ planirano; dok se ne uvede, problem se može ponavljati s novim izdanjima.
    nvm use 24
    ```
 2. Provjerite svoju verziju: `node --version` treba prikazati `v24.0.0` ili noviju verziju iz LTS grane 24.x
-3. Ponovno instalirajte OmniRoute: `npm install -g omniroute`
+3. Ponovno instalirajte 67router: `npm install -g omniroute`
 4. Ponovno pokrenite: `omniroute`
 
 > **Podržane sigurne verzije:** `>=22.22.2 <23` ili `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) i Node.js 26 u potpunosti su podržani.
@@ -367,13 +367,13 @@ omniroute
 
 **Uzrok:** U Node.js 22, dispečer undici@8 nije kompatibilan s ugrađenom implementacijom funkcije `fetch()` u Nodeu.
 
-**Rješenje (v3.5.5+):** OmniRoute sada koristi vlastitu funkciju `fetch()` paketa undici kada je aktivan proxy dispečer, čime se osigurava dosljedno ponašanje. Ažurirajte na v3.5.5+.
+**Rješenje (v3.5.5+):** 67router sada koristi vlastitu funkciju `fetch()` paketa undici kada je aktivan proxy dispečer, čime se osigurava dosljedno ponašanje. Ažurirajte na v3.5.5+.
 
 ### MITM proxy u WSL-u: aplikacije za stolna računala na Windows glavnom sustavu nisu presretnute
 
-**Uzrok:** MITM proxy i njegov CA certifikat instaliraju se u okruženje u kojem je pokrenut OmniRoute. U WSL-u to je gostujući Linux sustav, dok se AI aplikacije za stolna računala (Kiro, Trae, Copilot, Zed, …) izvode na Windows glavnom sustavu. Aplikacije na glavnom sustavu ne vjeruju spremištu certifikata gostujućeg sustava i ne usmjeravaju promet putem sistemskog proxyja gostujućeg sustava, pa presretanje aplikacija za stolna računala ondje nije aktivno.
+**Uzrok:** MITM proxy i njegov CA certifikat instaliraju se u okruženje u kojem je pokrenut 67router. U WSL-u to je gostujući Linux sustav, dok se AI aplikacije za stolna računala (Kiro, Trae, Copilot, Zed, …) izvode na Windows glavnom sustavu. Aplikacije na glavnom sustavu ne vjeruju spremištu certifikata gostujućeg sustava i ne usmjeravaju promet putem sistemskog proxyja gostujućeg sustava, pa presretanje aplikacija za stolna računala ondje nije aktivno.
 
-**Preporuka:** Pokrenite OmniRoute izravno na istom operacijskom sustavu kao i aplikacije za stolna računala koje želite presretati (Windows za Windows aplikacije; isto vrijedi za macOS/Linux). Zadržavanje OmniRoutea unutar WSL-a uz ciljanje aplikacija na glavnom sustavu zahtijeva ručno postavljanje generiranog CA certifikata kao pouzdanog na Windows glavnom sustavu i usmjeravanje mrežnih/proxy postavki svake aplikacije na krajnju točku WSL proxyja — to je nepodržana i nepouzdana konfiguracija.
+**Preporuka:** Pokrenite 67router izravno na istom operacijskom sustavu kao i aplikacije za stolna računala koje želite presretati (Windows za Windows aplikacije; isto vrijedi za macOS/Linux). Zadržavanje 67routera unutar WSL-a uz ciljanje aplikacija na glavnom sustavu zahtijeva ručno postavljanje generiranog CA certifikata kao pouzdanog na Windows glavnom sustavu i usmjeravanje mrežnih/proxy postavki svake aplikacije na krajnju točku WSL proxyja — to je nepodržana i nepouzdana konfiguracija.
 
 ---
 
@@ -400,7 +400,7 @@ omniroute
 
 ### OAuth token je istekao
 
-OmniRoute automatski osvježava tokene. Ako se problemi nastave:
+67router automatski osvježava tokene. Ako se problemi nastave:
 
 1. Nadzorna ploča → Pružatelj → Ponovno poveži
 2. Izbrišite vezu s pružateljem i ponovno je dodajte
@@ -613,7 +613,7 @@ Profili pružatelja podržavaju sljedeće postavke:
 
 ### Sprječavanje stampeda zahtjeva
 
-Kada velik broj istodobnih zahtjeva pristupi pružatelju s ograničenom učestalošću zahtjeva, OmniRoute upotrebljava mutex i automatsko ograničavanje učestalosti kako bi serijalizirao zahtjeve i spriječio lančane neuspjehe. To se automatski primjenjuje na pružatelje s API ključem.
+Kada velik broj istodobnih zahtjeva pristupi pružatelju s ograničenom učestalošću zahtjeva, 67router upotrebljava mutex i automatsko ograničavanje učestalosti kako bi serijalizirao zahtjeve i spriječio lančane neuspjehe. To se automatski primjenjuje na pružatelje s API ključem.
 
 ### Zahtjevi za razgovor ne uspijevaju uz 503 / chat_admission_busy
 
@@ -649,7 +649,7 @@ Uz zadane pragove zahtjev je strukturno zahtjevan kada sadrži najmanje `200` po
 najmanje `64` alata ili najmanje `32,000` procijenjenih tokena, ili kada ograničena procjena strukture
 dosegne svoje granice od `10,000` posjećenih čvorova ili dubinu `12`.
 
-**Uzrok:** Riječ je o namjernom rasterećenju unutar sustava OmniRoute, a ne o neuspjehu nadređenog pružatelja.
+**Uzrok:** Riječ je o namjernom rasterećenju unutar sustava 67router, a ne o neuspjehu nadređenog pružatelja.
 Svaki proces upotrebljava lokalnu zaštitu kako bi rezervirao ograničeni kapacitet za zahtjevne zahtjeve prije zadržavanja
 i raščlanjivanja velikog tijela zahtjeva. Zahtjevan najam ostaje aktivan tijekom cijelog životnog vijeka SSE
 odgovora.
@@ -693,7 +693,7 @@ Mjerodavne postavke prihvata zahtjeva potražite u [referenci varijabli okružen
 
 ## Neobavezna taksonomija kvarova RAG-a / LLM-a (16 problema)
 
-Neki korisnici OmniRoutea postavljaju pristupnik ispred RAG sustava ili agentskih skupova. U takvim je konfiguracijama uobičajeno vidjeti neobičan obrazac: OmniRoute izgleda ispravno (pružatelji su dostupni, profili usmjeravanja su ispravni, nema upozorenja o ograničenju učestalosti), ali je konačni odgovor ipak pogrešan.
+Neki korisnici 67routera postavljaju pristupnik ispred RAG sustava ili agentskih skupova. U takvim je konfiguracijama uobičajeno vidjeti neobičan obrazac: 67router izgleda ispravno (pružatelji su dostupni, profili usmjeravanja su ispravni, nema upozorenja o ograničenju učestalosti), ali je konačni odgovor ipak pogrešan.
 
 U praksi ti incidenti obično potječu iz nizvodnog RAG cjevovoda, a ne iz samog pristupnika.
 
@@ -712,17 +712,17 @@ Ideja je jednostavna:
 
 1. Kada istražujete loš odgovor, zabilježite:
    - korisnički zadatak i zahtjev
-   - kombinaciju rute ili pružatelja u OmniRouteu
+   - kombinaciju rute ili pružatelja u 67routeru
    - sav RAG kontekst korišten nizvodno (dohvaćene dokumente, pozive alata itd.)
 2. Povežite incident s jednim ili dvama brojevima iz WFGY ProblemMapa (`No.1` … `No.16`).
-3. Spremite broj na vlastitu nadzornu ploču, u operativni priručnik ili sustav za praćenje incidenata, uz zapisnike OmniRoutea.
+3. Spremite broj na vlastitu nadzornu ploču, u operativni priručnik ili sustav za praćenje incidenata, uz zapisnike 67routera.
 4. Upotrijebite odgovarajuću WFGY stranicu kako biste odlučili trebate li promijeniti svoj RAG sustav, mehanizam za dohvaćanje ili strategiju usmjeravanja.
 
 Cijeli tekst i konkretni recepti dostupni su ovdje (MIT licenca, samo tekst):
 
 [README za WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Ovaj odjeljak možete zanemariti ako iza OmniRoutea ne pokrećete RAG ili agentske cjevovode.
+Ovaj odjeljak možete zanemariti ako iza 67routera ne pokrećete RAG ili agentske cjevovode.
 
 ---
 
@@ -746,7 +746,7 @@ Problemi specifični za izdanje v3.8.0 i njihova trenutačna zaobilazna rješenj
 
 1. Instalirajte Devin CLI za svoju platformu
 2. Postavite `CLI_DEVIN_BIN=/usr/local/bin/devin` (ili stvarnu putanju) u `.env`
-3. Ponovno pokrenite OmniRoute i ponovno testirajte putem **Nadzorna ploča → CLI alati**
+3. Ponovno pokrenite 67router i ponovno testirajte putem **Nadzorna ploča → CLI alati**
 
 ### Model je zaglavljen u razdoblju mirovanja (ručno ponovno postavljanje)
 
@@ -801,7 +801,7 @@ Problemi specifični za izdanje v3.8.0 i njihova trenutačna zaobilazna rješenj
 
 1. Generirajte nasumičnu tajnu: `openssl rand -hex 32`
 2. Postavite `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` u okruženju produkcijskog poslužitelja (i na svakom klijentu koji komunicira s mostom)
-3. Ponovno pokrenite OmniRoute
+3. Ponovno pokrenite 67router
 
 ### Responses API: pozadinski način rada degradiran je na sinkroni
 

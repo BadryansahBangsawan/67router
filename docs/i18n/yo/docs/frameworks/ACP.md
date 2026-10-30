@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ya **ìṣàwárí CLI**, **Agent Client Protocol abinibi**, àti
+67router ya **ìṣàwárí CLI**, **Agent Client Protocol abinibi**, àti
 **àwọn ohun amúlò ìbámu stdio àtijọ́** sọ́tọ̀. Rírí fáìlì aláṣẹ kan tí a ti fi sílẹ̀ kò jẹ́ ẹ̀rí pé
 ìfàṣẹsí rẹ̀, ìbámu awoṣe rẹ̀, tàbí ìmúrasílẹ̀ rẹ̀ tó láti bójú tó ìbéèrè kan.
 

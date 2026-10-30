@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute tem **dois** sistemas de vias locais ao processo com âmbitos diferentes. São
+O 67router tem **dois** sistemas de vias locais ao processo com âmbitos diferentes. São
 complementares; os operadores devem saber qual deles estão a observar.
 
 ## 1. Admissão ao nível dos bytes em todo o processo (`chatBodyAdmission.ts`)

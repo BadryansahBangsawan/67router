@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Jiri akaụntụ ndị na-eweta ọrụ tozuru etozu nke gị. OmniRoute na-ejikọta njikọ ndị ị haziri; ọ naghị enye mkpokọta oke token a kpọsara. Ịnweta ya n’efu nwere ike ịchọ ndebanye aha, API key, nkwado, ma ọ bụ usoro ịkwụ ụgwọ. Oke ndị na-eweta ọrụ, iwu nzuzo, na usoro ojiji ka na-emetụta.
+> **TL;DR**: Jiri akaụntụ ndị na-eweta ọrụ tozuru etozu nke gị. 67router na-ejikọta njikọ ndị ị haziri; ọ naghị enye mkpokọta oke token a kpọsara. Ịnweta ya n’efu nwere ike ịchọ ndebanye aha, API key, nkwado, ma ọ bụ usoro ịkwụ ụgwọ. Oke ndị na-eweta ọrụ, iwu nzuzo, na usoro ojiji ka na-emetụta.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Ọtụtụ ndị na-eweta AI na-enye ụdị ụfọdụ nke **nnweta n’efu**. Dabere na onye na-eweta ya, nke ahụ nwere ike ịpụta endpoint na-achọghị nkwenye njirimara, oke ojiji a na-emegharị kwa oge, nnweta na-enweghị oke nke a na-amachibido ọsọ ya, onyinye e nyere mgbe e debanyere aha, nkwado mmadụ ji aka enye, ma ọ bụ nkwalite nwa oge. Ụfọdụ nhọrọ chọrọ akaụntụ, API key, kaadị kredit, KYC, ma ọ bụ ịnakwere usoro ndị akọwapụtara maka onye na-eweta ahụ.
 
-OmniRoute na-**achịkọta** njikọ ndị ahaziri ka ha bụrụ otu endpoint. Ị ka ga-edebanye aha iche iche n’aka onye na-eweta ọ bụla chọrọ akaụntụ. Jikọọ akaụntụ ndị ahụ ma jiri `model: "auto"` duzie arịrịọ n’etiti ebe ndị tozuru etozu. Nwụnye ọhụrụ nwere ike ghara inwe ebe ọ bụla tozuru etozu nke na-achọghị key; naanị ịwụnye OmniRoute anaghị ekwe nkwa na a ga-enweta nzaghachi nkata nke ọma.
+67router na-**achịkọta** njikọ ndị ahaziri ka ha bụrụ otu endpoint. Ị ka ga-edebanye aha iche iche n’aka onye na-eweta ọ bụla chọrọ akaụntụ. Jikọọ akaụntụ ndị ahụ ma jiri `model: "auto"` duzie arịrịọ n’etiti ebe ndị tozuru etozu. Nwụnye ọhụrụ nwere ike ghara inwe ebe ọ bụla tozuru etozu nke na-achọghị key; naanị ịwụnye 67router anaghị ekwe nkwa na a ga-enweta nzaghachi nkata nke ọma.
 
 ---
 
@@ -57,7 +57,7 @@ Ndị na-enye ọrụ ndị a nwere **ọkwa n'efu** nwere oke ndị akọwapụ
 
 ## Otu E Si Ejikọta Ọkwa Ojiji Efụ
 
-Ihe anwansi dị na OmniRoute bụ **ijikọta ọkwa ojiji efụ ọnụ**. Kama ịdabere n’otu onye na-enye ọrụ, ị na-ejikọta ọtụtụ ndị na-enye ọrụ efụ ma kwe ka OmniRoute họrọ nke kacha mma na-akpaghị aka maka arịrịọ ọ bụla.
+Ihe anwansi dị na 67router bụ **ijikọta ọkwa ojiji efụ ọnụ**. Kama ịdabere n’otu onye na-enye ọrụ, ị na-ejikọta ọtụtụ ndị na-enye ọrụ efụ ma kwe ka 67router họrọ nke kacha mma na-akpaghị aka maka arịrịọ ọ bụla.
 
 ### Ọmụmaatụ: Mkpuchi Ọkwa Ojiji Efụ Sara Mbara
 
@@ -68,7 +68,7 @@ Jikọọ ọtụtụ ndị na-enye ọrụ iji belata ịdabere na oke ojiji nk
 3. **Pollinations** — nnweta na-enweghị igodo, nke nwere mmachi n’ọnụọgụ arịrịọ
 4. **LongCat** — onyinye ndebanye aha a na-enye otu ugboro (chọrọ KYC)
 
-Mgbe ahụ, jiri `model: "auto"` mee ihe, OmniRoute ga-eme ihe ndị a:
+Mgbe ahụ, jiri `model: "auto"` mee ihe, 67router ga-eme ihe ndị a:
 
 - Buru ụzọ nwaa njikọ tozuru etozu nke nwere ọkwa kachasị elu
 - Ọ bụrụ na oke ojiji ya agwụla ma ọ bụ nyocha ọnọdụ ya ada → nwaa onye na-enye ọrụ ọzọ ahaziri
@@ -102,7 +102,7 @@ ohere ojiji na-enweghị oke/na-enweghị igodo, kredit ndebanye aha, ndenye nd�
 
 ### Nzọụkwụ 5: Pịa Jikọọ
 
-Maka onye na-enye ọrụ `NOAUTH`, OmniRoute anaghị arịọ nzere nnweta nke ọrụ dị n’elu. Nke a anaghị ekwe nkwa na ọrụ dị n’elu ga-anabata ndị ahịa sitere n’aka ndị ọzọ ma ọ bụ nwee ikike dịnụ. A ga-ejikọta ndị na-enye ọrụ OAuth na API-key site n’usoro akaụntụ ha depụtara. Ngwa ahịa gị ka na-eji igodo API OmniRoute egosiri na **Dashboard → Endpoints** mgbe agbanyere njirimara rawụta.
+Maka onye na-enye ọrụ `NOAUTH`, 67router anaghị arịọ nzere nnweta nke ọrụ dị n’elu. Nke a anaghị ekwe nkwa na ọrụ dị n’elu ga-anabata ndị ahịa sitere n’aka ndị ọzọ ma ọ bụ nwee ikike dịnụ. A ga-ejikọta ndị na-enye ọrụ OAuth na API-key site n’usoro akaụntụ ha depụtara. Ngwa ahịa gị ka na-eji igodo API 67router egosiri na **Dashboard → Endpoints** mgbe agbanyere njirimara rawụta.
 
 ### Nzọụkwụ 6: Tinyegharịa
 
@@ -110,7 +110,7 @@ Jikọọ ọtụtụ ndị na-enye ọrụ ndị usoro ojiji na ụdị nzuzo h
 
 ## Ịgụ Katalọgụ ahụ nke Ọma
 
-- `NOAUTH` pụtara na OmniRoute anaghị arịọ gị maka nzere onye na-eweta ọrụ; nke a anaghị
+- `NOAUTH` pụtara na 67router anaghị arịọ gị maka nzere onye na-eweta ọrụ; nke a anaghị
   ekwe nkwa na ọrụ ga-adị mgbe niile, na nzuzo ga-adị, ma ọ bụ na ikike agaghị enwe oke.
 - `hasFree` bụ metadata maka nchọpụta. Ọ nwere ike ịnọchite anya oke ojiji na-emegharị ugboro ugboro, nnweta na-enweghị igodo,
   kredit ndebanye aha, mmemme nkwado, ma ọ bụ nkwalite.
@@ -123,15 +123,15 @@ Jikọọ ọtụtụ ndị na-enye ọrụ ndị usoro ojiji na ụdị nzuzo h
 
 ---
 
-## Otu OmniRoute Si Eme Ka Ọkwa N'efu Ka Mma
+## Otu 67router Si Eme Ka Ọkwa N'efu Ka Mma
 
 ### 1. Ntugharị Nkwado Na-akpaghị Aka
 
-Ọ bụrụ na otu onye na-eweta ọrụ n'efu ji ọrụ n'aka ma ọ bụ daa, OmniRoute ga-anwale onye na-esote na-akpaghị aka. Ọ dịghị ihe ị ga-eme.
+Ọ bụrụ na otu onye na-eweta ọrụ n'efu ji ọrụ n'aka ma ọ bụ daa, 67router ga-anwale onye na-esote na-akpaghị aka. Ọ dịghị ihe ị ga-eme.
 
 ### 2. Nhọrọ Ụzọ Nwere Ọgụgụ Isi
 
-OmniRoute na-ahọrọ **onye na-eweta ọrụ n'efu kachasị mma** maka arịrịọ ọ bụla dabere na:
+67router na-ahọrọ **onye na-eweta ọrụ n'efu kachasị mma** maka arịrịọ ọ bụla dabere na:
 
 - Ọsọ — Kedu onye na-eweta ọrụ kachasị ọsọ ugbu a?
 - Ogo — Kedu onye na-eweta ọrụ kachasị mma maka ọrụ a?
@@ -139,13 +139,13 @@ OmniRoute na-ahọrọ **onye na-eweta ọrụ n'efu kachasị mma** maka arịr
 
 ### 3. Ịchekwa Token
 
-Usoro mkpakọ OmniRoute nwere ike ibelata token ndị tozuru etozu dị na ntụziaka na nsonaazụ ngwaọrụ. Ọnụ ọgụgụ
+Usoro mkpakọ 67router nwere ike ibelata token ndị tozuru etozu dị na ntụziaka na nsonaazụ ngwaọrụ. Ọnụ ọgụgụ
 e chekwara n'ezie dabere na ọdịnaya, engine ndị ahọrọ, usoro mgbakọ onye na-eweta ọrụ, na ntọala
 izi ezi; mkpakọ anaghị eji ọnụọgụ a kapịrị ọnụ mụbaa oke ojiji onye na-eweta ọrụ ọ bụla.
 
 ### 4. Nkwado Maka Ọtụtụ Akaụntụ
 
-Ọ bụrụ na usoro onye na-eweta ọrụ kwere ka e nwee ọtụtụ akaụntụ ma ọ bụ ihe nzere, OmniRoute nwere ike ile
+Ọ bụrụ na usoro onye na-eweta ọrụ kwere ka e nwee ọtụtụ akaụntụ ma ọ bụ ihe nzere, 67router nwere ike ile
 njikọ ọ bụla anya dị ka nhọrọ ụzọ dị iche. Emepụtala akaụntụ ndị ọzọ iji zere
 oke ojiji ma ọ bụ iwu nnweta nke onye na-eweta ọrụ.
 
@@ -160,7 +160,7 @@ Katalọgụ dị ndụ, nke e wepụrụ ihe ndị megharịrị n’otu ọd�
 | Onyinye a tụrụ ọnụ nke na-emegharị ugboro ugboro | **~1.62B token/ọnwa** | A gụrụ ọdọ mmiri ndị a na-ekekọrịta naanị otu ugboro; ewepụrụ ndị na-eweta ọrụ na-enweghị oke na mkpokọta ahụ |
 | Ọnwa mbụ nwere onyinye ndebanye aha              |      **~2.22B token** | Mkpokọta na-emegharị ugboro ugboro tinyere kredit otu oge na kredit ndị na-emegharị ugboro ugboro             |
 
-Ndị a bụ atụmatụ metụtara katalọgụ niile n’ofe akaụntụ dị iche iche tozuru oke, ọ bụghị oke ojiji OmniRoute nyere ma ọ bụ amụma maka nrụnye ọhụrụ. Ikike ị nwere ike iji dabere na ndị na-eweta ọrụ ị jikọtara na ọnọdụ ha dị ugbu a. A na-agbakọ uru ndị a site na `open-sse/config/freeModelCatalog.ts`; lee
+Ndị a bụ atụmatụ metụtara katalọgụ niile n’ofe akaụntụ dị iche iche tozuru oke, ọ bụghị oke ojiji 67router nyere ma ọ bụ amụma maka nrụnye ọhụrụ. Ikike ị nwere ike iji dabere na ndị na-eweta ọrụ ị jikọtara na ọnọdụ ha dị ugbu a. A na-agbakọ uru ndị a site na `open-sse/config/freeModelCatalog.ts`; lee
 [Ntụaka Ọkwa N’efu](../reference/FREE_TIERS.md) maka iwepụ mmegharị n’ọdọ mmiri, ọkọlọtọ ToS,
 ndekọ ndị a kwụsịrị, na usoro mgbakọ kredit ndebanye aha.
 
@@ -187,7 +187,7 @@ mmepụta gị chọrọ. Ọrụ dị oke mkpa kwesịrị inwe ụzọ ndabere
 
 Mgbanwe a na-anabata nwere ike ịgụnye oke siri ike, ndepụta nchere, KYC, nkwenye kaadị kredit, iji
 prompt zụọ ụdị, nzuzo na-esighị ike, enweghị SLA, mgbanwe ụdị ugboro ugboro, mgbochi mpaghara, ụgwọ maka ojiji gafere oke, ma ọ bụ
-ihe ize ndụ sitere na amụma akaụntụ. OmniRoute na-egosi metadata dịnụ; ọ bụ gị na-ahọrọ ihe ị ga-eme ka ọ rụọ ọrụ.
+ihe ize ndụ sitere na amụma akaụntụ. 67router na-egosi metadata dịnụ; ọ bụ gị na-ahọrọ ihe ị ga-eme ka ọ rụọ ọrụ.
 
 ### "Kedu ka m ga-esi nweta oke efu ọzọ?"
 
@@ -206,7 +206,7 @@ ibe Nhazi Ọkwa Ndị Na-eweta Ọrụ Efuru dị ka akara ogo ma nyochaa ụd�
 
 ## Gịnị Na-esote?
 
-- **[Ntuziaka Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Kwe ka OmniRoute họpụtara gị AI kacha mma
+- **[Ntuziaka Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Kwe ka 67router họpụtara gị AI kacha mma
 - **[Ntuziaka Ndị Na-eweta Ọrụ](./PROVIDERS-GUIDE.md)** — Jikọọ ndị ọzọ na-eweta ọrụ
 - **[Nchọpụta na Ndozi Nsogbu](../guides/TROUBLESHOOTING.md)** — Dozie nsogbu ndị a na-ahụkarị
 - **[Ntụaka Ọkwa Ojiji N'efu](../reference/FREE_TIERS.md)** — Ndepụta zuru ezu nke ọkwa ojiji n'efu

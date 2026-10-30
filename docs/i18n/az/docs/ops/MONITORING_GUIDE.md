@@ -4,7 +4,7 @@
 
 ---
 
-> **Qısa xülasə**: OmniRoute daxili sağlamlıq monitorinqi, provayder avtopilotu, kvota izləmə və müşahidə ediləbilənlik inteqrasiya nöqtələri ilə təchiz edilir. Bu təlimatda idarəetmə paneli, xəbərdarlıqlar və problemlərin aradan qaldırılması əhatə olunur.
+> **Qısa xülasə**: 67router daxili sağlamlıq monitorinqi, provayder avtopilotu, kvota izləmə və müşahidə ediləbilənlik inteqrasiya nöqtələri ilə təchiz edilir. Bu təlimatda idarəetmə paneli, xəbərdarlıqlar və problemlərin aradan qaldırılması əhatə olunur.
 
 **Mənbələr:**
 
@@ -20,7 +20,7 @@
 
 ## İcmal
 
-OmniRoute **3 monitorinq səviyyəsinə** malikdir:
+67router **3 monitorinq səviyyəsinə** malikdir:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Hər kombinasiya üzrə:
 
 ## Sağlamlıq Yoxlaması API-si
 
-OmniRoute **iki** HTTP sağlamlıq səthi təqdim edir. Orkestratorlar üçün onlar bir-birini əvəz etmir.
+67router **iki** HTTP sağlamlıq səthi təqdim edir. Orkestratorlar üçün onlar bir-birini əvəz etmir.
 
 | Yol                          | Məqsəd                                                           | Yük                                | İstifadə sahəsi                                                                   |
 | ---------------------------- | ---------------------------------------------------------------- | ---------------------------------- | --------------------------------------------------------------------------------- |
@@ -181,7 +181,7 @@ Bu son nöqtədən məlumat toplayarkən yalnız `provider_connections.test_stat
 
 ### Kubernetes yoxlaması üçün tövsiyələr
 
-OmniRoute **vahid Node prosesidir** (bir hadisə dövrəsi). Standart Docker `HEALTHCHECK` yüngül `/healthz` marşrutunu hədəfləyir. `/api/monitoring/health` kubelet canlılıq intervalları üçün **həddindən artıq ağırdır**.
+67router **vahid Node prosesidir** (bir hadisə dövrəsi). Standart Docker `HEALTHCHECK` yüngül `/healthz` marşrutunu hədəfləyir. `/api/monitoring/health` kubelet canlılıq intervalları üçün **həddindən artıq ağırdır**.
 
 | Yoxlama             | Tövsiyə olunan hədəf                                                            | Qeydlər                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -228,7 +228,7 @@ kubelet **canlılıq** yoxlamasını `/api/monitoring/health` ünvanına **yön�
 
 ### systemd nəzarətçisi (donmuş hadisə dövrəsi)
 
-systemd hostunda OmniRoute hazır olduqda bunu xidmət menecerinə bildirir və ona müntəzəm siqnallar göndərir; beləliklə, hadisə dövrəsi ilişib qalmış server işlək və səssiz qalmaq əvəzinə dayandırılıb yenidən başladılır. Siqnallar serverin öz hadisə dövrəsindən gəlir: dövrə bloklandıqda siqnallar dayanır və `WatchdogSec` müddəti ərzində heç bir siqnal alınmazsa, systemd xidməti yenidən başladır.
+systemd hostunda 67router hazır olduqda bunu xidmət menecerinə bildirir və ona müntəzəm siqnallar göndərir; beləliklə, hadisə dövrəsi ilişib qalmış server işlək və səssiz qalmaq əvəzinə dayandırılıb yenidən başladılır. Siqnallar serverin öz hadisə dövrəsindən gəlir: dövrə bloklandıqda siqnallar dayanır və `WatchdogSec` müddəti ərzində heç bir siqnal alınmazsa, systemd xidməti yenidən başladır.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) artıq bu parametrlərlə istifadəçi vahidi yaradır. Özünüz yaratdığınız vahiddə (standart `Type=simple`) nəzarətçi olmur, buna görə onun `[Service]` bölməsinə bu sətirləri əlavə edin:
 
@@ -444,7 +444,7 @@ Token sağlamlığı yoxlamasının konfiqurasiyası `tokenHealthCheck.ts` tər�
 
 ### Daxili Kanallar
 
-OmniRoute **3 xəbərdarlıq kanalını** dəstəkləyir:
+67router **3 xəbərdarlıq kanalını** dəstəkləyir:
 
 | Kanal                    | Quraşdırma               | İstifadə halı                   |
 | ------------------------ | ------------------------ | ------------------------------- |
@@ -560,7 +560,7 @@ Hələlik, istənilən HTTP əsaslı monitorinq sistemi (Prometheus blackbox exp
 ### "Kvota sağlam görünür, lakin 429 xətaları alıram"
 
 - 429 təchizatçının kvotanızı istifadə edib bitirdiyinizi bildirməsi deməkdir
-- OmniRoute-un kvota izləməsi **köhnəlmiş** ola bilər — əsas həqiqət təchizatçının yuxarı axınındadır
+- 67router-un kvota izləməsi **köhnəlmiş** ola bilər — əsas həqiqət təchizatçının yuxarı axınındadır
 - Kvota məlumatları daxili kvota monitoru vasitəsilə avtomatik yenilənir
 
 ### "Kombinasiya uğursuz olur, lakin bütün hədəflər sağlam görünür"
@@ -573,7 +573,7 @@ Hələlik, istənilən HTTP əsaslı monitorinq sistemi (Prometheus blackbox exp
 
 - `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"` əmrini işə salın
 - Nəticə "ok" olarsa — bu, yanlış həyəcan siqnalıdır, sağlamlıq yoxlaması həddindən artıq sərtdir
-- Başqa nəticə olarsa — **OmniRoute-u dayandırın** və [fəlakətdən sonra bərpa təlimatına](./DATABASE_GUIDE.md#disaster-recovery) əməl edin
+- Başqa nəticə olarsa — **67router-u dayandırın** və [fəlakətdən sonra bərpa təlimatına](./DATABASE_GUIDE.md#disaster-recovery) əməl edin
 
 ### "Yaddaş yığınına düşən yük kritikdir"
 

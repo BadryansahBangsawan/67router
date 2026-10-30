@@ -4,7 +4,7 @@
 
 ---
 
-> **Ringkasnya**: Mesin kompresi OmniRoute bersifat **pluggable** — Anda dapat mendaftarkan mesin kustom, menyediakan paket bahasa untuk bahasa baru, dan menyusun pipeline bertumpuk. Panduan ini menunjukkan caranya.
+> **Ringkasnya**: Mesin kompresi 67router bersifat **pluggable** — Anda dapat mendaftarkan mesin kustom, menyediakan paket bahasa untuk bahasa baru, dan menyusun pipeline bertumpuk. Panduan ini menunjukkan caranya.
 
 **Panduan terkait:**
 
@@ -232,7 +232,7 @@ di pemilih strategi melalui `id`-nya. Uji integrasi dengan menyusunnya dalam pip
 
 ## Membuat Paket Bahasa
 
-Kompresi bergaya manusia gua menggunakan **paket aturan khusus bahasa** untuk menangani kata pengisi, ungkapan keraguan, dan pola bertele-tele dalam setiap bahasa alami. OmniRoute dilengkapi dengan **6 paket bahasa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Kompresi bergaya manusia gua menggunakan **paket aturan khusus bahasa** untuk menangani kata pengisi, ungkapan keraguan, dan pola bertele-tele dalam setiap bahasa alami. 67router dilengkapi dengan **6 paket bahasa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Struktur Paket
 
@@ -391,7 +391,7 @@ Keluaran mesin N menjadi masukan mesin N+1.
 
 ### Mode Kompresi
 
-OmniRoute memilih **SATU mode per permintaan** berdasarkan konfigurasi, ambang batas pemicu otomatis, dan penggantian combo.
+67router memilih **SATU mode per permintaan** berdasarkan konfigurasi, ambang batas pemicu otomatis, dan penggantian combo.
 Mode yang tersedia didefinisikan dalam `open-sse/services/compression/types.ts` (tipe `CompressionMode`):
 
 | Mode         | Mesin                | Kasus penggunaan                                                                                                                                                                                         |
@@ -511,10 +511,10 @@ Untuk mengaturnya melalui konfigurasi, tetapkan `mode: "stacked"` dan sediakan a
 
 ## Kebijakan Sinkronisasi Upstream
 
-Mesin kompresi OmniRoute mencantumkan beberapa proyek upstream di README
+Mesin kompresi 67router mencantumkan beberapa proyek upstream di README
 ("terinspirasi oleh RTK, Caveman, LLMLingua-2, Troglodita"). Pertanyaan umum dari
 kontributor adalah: **ketika upstream RTK menambahkan filter alat baru atau Caveman
-menambahkan paket aturan, bagaimana pembaruan tersebut masuk ke OmniRoute?** Bagian ini
+menambahkan paket aturan, bagaimana pembaruan tersebut masuk ke 67router?** Bagian ini
 merupakan jawaban otoritatif.
 
 ### Salinan yang di-vendor vs. implementasi independen
@@ -537,7 +537,7 @@ README menggunakan istilah "terinspirasi oleh", bukan "dibundel".
 `compression-sync`** — sesuai desain. Karena mesin-mesin tersebut merupakan
 implementasi ulang, filter RTK atau paket aturan Caveman dari upstream tidak
 digabungkan sebagai kode; peningkatan tersebut **dinyatakan ulang sebagai aturan/filter
-baru dalam format milik OmniRoute sendiri** (lihat
+baru dalam format milik 67router sendiri** (lihat
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) dan ditambahkan secara
 ad-hoc melalui PR biasa. Titik ekstensi di atas (mesin kustom, paket bahasa, filter RTK)
 merupakan cara resmi untuk menyumbangkannya.
@@ -551,14 +551,14 @@ Contoh terbaru dari alur ini:
 ### Headroom (proksi kompresi input)
 
 Headroom **sepenuhnya internal** — snapshot codec `gcf` yang di-vendor dan disematkan,
-ditambah lapisan `smartcrusher` / `toon` / `tabular` milik OmniRoute sendiri. Tidak ada
+ditambah lapisan `smartcrusher` / `toon` / `tabular` milik 67router sendiri. Tidak ada
 upstream aktif yang perlu dilacak selain salinan yang di-vendor; pembaruan untuk `gcf`
 disegarkan secara manual ketika codec berubah dan divalidasi ulang terhadap gerbang
 anggaran kompresi (`check:compression-budget`).
 
 ### Mengusulkan peningkatan yang terinspirasi dari upstream
 
-1. **Jangan melakukan vendor** — nyatakan ulang aturan/filter upstream dalam format OmniRoute.
+1. **Jangan melakukan vendor** — nyatakan ulang aturan/filter upstream dalam format 67router.
 2. Tambahkan melalui titik ekstensi yang sesuai di bawah ini (paket bahasa, filter RTK, atau
    mesin kustom).
 3. Cantumkan proyek upstream dalam deskripsi PR (atribusi), bukan dengan

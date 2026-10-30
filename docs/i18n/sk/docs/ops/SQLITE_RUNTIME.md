@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute vyhľadáva svoj ovládač SQLite pri spustení prostredníctvom 5-krokového reťazca záložných možností:
+67router vyhľadáva svoj ovládač SQLite pri spustení prostredníctvom 5-krokového reťazca záložných možností:
 
 1. **Pribalený `better-sqlite3`** (prostredníctvom `dependencies` v `package.json`)
    — najrýchlejší, natívny binárny súbor, nainštalovaný príkazom `npm install`, keď sú k dispozícii nástroje na zostavenie.
@@ -28,13 +28,13 @@ OmniRoute vyhľadáva svoj ovládač SQLite pri spustení prostredníctvom 5-kro
 - **Chýbajúce nástroje na zostavenie**: Niektoré prostredia (firemný Windows bez VS Build
   Tools, minimalistické obrazy Docker) nedokážu skompilovať `better-sqlite3`. Inštalátor
   za behu získa vopred zostavený binárny súbor z registra npm; záložné
-  ovládače zabezpečia, že sa OmniRoute spustí aj v prípade, že tento postup zlyhá.
+  ovládače zabezpečia, že sa 67router spustí aj v prípade, že tento postup zlyhá.
 - **Izolované systémy bez prístupu k sieti**: Ak register npm nie je dostupný, `node:sqlite`
   alebo `sql.js` zaručia základnú funkčnosť.
 
 ## Overovanie magických bajtov
 
-Pred načítaním súboru `.node` nainštalovaného za behu načíta OmniRoute prvých 8
+Pred načítaním súboru `.node` nainštalovaného za behu načíta 67router prvých 8
 bajtov a porovná ich so známymi magickými hodnotami platforiem:
 
 | Platforma               | Bajty (hex)   | Označenie   |
@@ -106,9 +106,9 @@ Implementácia:
 ## Topológia s jediným zapisujúcim procesom (HA nie je podporovaná)
 
 Vyššie uvedený reťazec záložných ovládačov stále beží v **jednom procese**. Predvolená
-konfigurácia SQLite v OmniRoute má **jediný zapisujúci proces**:
+konfigurácia SQLite v 67router má **jediný zapisujúci proces**:
 
-- Nepripájajte dve repliky OmniRoute k rovnakému súboru `storage.sqlite`.
+- Nepripájajte dve repliky 67router k rovnakému súboru `storage.sqlite`.
 - Reštart kontajnera, nasadenie typu Recreate, ukončenie z dôvodu OOM alebo reštart
   prostredníctvom HEALTHCHECK ukončí každú prebiehajúcu reláciu SSE. Štandardný postup
   neposkytuje riadené ukončenie relácií.

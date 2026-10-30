@@ -4,7 +4,7 @@
 
 ---
 
-Hati hii ndiyo rejeleo rasmi la vizuizi vyote vya ubora vya CI katika OmniRoute.
+Hati hii ndiyo rejeleo rasmi la vizuizi vyote vya ubora vya CI katika 67router.
 Inaeleza kila kizuizi, kile kinachothibitisha, kazi ya CI ambamo kinaendeshwa, iwapo kinatumia
 msingi wa ratchet au sera ya kufaulu/kufeli, na iwapo kinazuia uundaji au ni cha ushauri.
 
@@ -271,14 +271,14 @@ Huendeshwa baada ya `build`. Huzuia merge ikishindwa.
 
 Hizi huendeshwa kwa ratiba ya cron (na `workflow_dispatch`), kamwe si kwenye PR. Zote ni za ushauri.
 
-| Mtiririko wa kazi      | Huthibitisha                                                                                                                                                                                | Inazuia     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `nightly-property`     | Majaribio ya property ya fast-check yenye mbegu ya nasibu + idadi kubwa ya uendeshaji                                                                                                       | **Ushauri** |
-| `nightly-resilience`   | Lango la ukuaji wa heap, sindano ya hitilafu ya chaos, k6 load/soak                                                                                                                         | **Ushauri** |
-| `nightly-llm-security` | Mlinzi wa sindano wa promptfoo (hali ya kuzuia) + uchunguzi wa garak (hurukwa bila siri ya mtoa huduma)                                                                                     | **Ushauri** |
-| `nightly-schemathesis` | Fuzzing ya mkataba wa OpenAPI (schemathesis) dhidi ya OmniRoute inayoendesha moja kwa moja kwa kutumia `docs/openapi.yaml` — hufunua ukiukaji wa spec / 500 zisizoshughulikiwa (Fase 8 B.4) | **Ushauri** |
-| `nightly-mutation`     | Alama ya majaribio ya mutation ya Stryker juu ya njia ya haraka ya unit — mutant zinazoishi hufunua assert dhaifu                                                                           | **Ushauri** |
-| `nightly-compat`       | Matriksi ya utangamano wa injini ya Node katika masafa yanayoungwa mkono ya `engines.node`                                                                                                  | **Ushauri** |
+| Mtiririko wa kazi      | Huthibitisha                                                                                                                                                                               | Inazuia     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `nightly-property`     | Majaribio ya property ya fast-check yenye mbegu ya nasibu + idadi kubwa ya uendeshaji                                                                                                      | **Ushauri** |
+| `nightly-resilience`   | Lango la ukuaji wa heap, sindano ya hitilafu ya chaos, k6 load/soak                                                                                                                        | **Ushauri** |
+| `nightly-llm-security` | Mlinzi wa sindano wa promptfoo (hali ya kuzuia) + uchunguzi wa garak (hurukwa bila siri ya mtoa huduma)                                                                                    | **Ushauri** |
+| `nightly-schemathesis` | Fuzzing ya mkataba wa OpenAPI (schemathesis) dhidi ya 67router inayoendesha moja kwa moja kwa kutumia `docs/openapi.yaml` — hufunua ukiukaji wa spec / 500 zisizoshughulikiwa (Fase 8 B.4) | **Ushauri** |
+| `nightly-mutation`     | Alama ya majaribio ya mutation ya Stryker juu ya njia ya haraka ya unit — mutant zinazoishi hufunua assert dhaifu                                                                          | **Ushauri** |
+| `nightly-compat`       | Matriksi ya utangamano wa injini ya Node katika masafa yanayoungwa mkono ya `engines.node`                                                                                                 | **Ushauri** |
 
 Misingi ya utendaji (heap, TTFB, muda wa kujenga) hurekodiwa, haifungiwi lango: tazama [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -549,7 +549,7 @@ orodha ya ruhusa ikiongezeka hutoa hisia potofu ya ubora.
 
 ## Zana za wakala: LSP-in-the-loop (hiari)
 
-Zaidi ya malango ya CI, OmniRoute huja na kiunzi cha **hiari** cha `agent-lsp`
+Zaidi ya malango ya CI, 67router huja na kiunzi cha **hiari** cha `agent-lsp`
 (`.mcp.json` ya kiwango cha mradi, Awamu ya 7 Jukumu la 15). Unda `.mcp.json`
 ili kutoa seva ya lugha ya TypeScript kwa mawakala wa uandishi wa msimbo, ili watambue alama /
 uchunguzi **kabla** ya kuandika msimbo — nyenzo ya kukamilisha `typecheck:core` inayotekeleza ukusanyaji kabla ya madai

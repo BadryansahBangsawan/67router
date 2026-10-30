@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute använder en **parallell cykelmodell** för releaser: en särskild `release/vX.Y.Z`-gren
+67router använder en **parallell cykelmodell** för releaser: en särskild `release/vX.Y.Z`-gren
 för den aktiva cykeln, `main` för den publicerade linjen och en oföränderlig
 `vX.Y.Z`-tagg när cykeln släpps. Det är förväntat att se commits hamna både på `release/*` _och_ på
 `main` — det är inte ett misstag.

@@ -206,13 +206,13 @@ Op `upstreamDetails` toegepaste saneringsregels:
 3. Dieptelimiet: nesting dieper dan 4 niveaus wordt vervangen door de string `"[truncated]"`.
 4. Arrays worden beperkt tot 32 elementen.
 
-Alleen aanroeplocaties met een geparste foutbody van de provider mogen `upstreamDetails` doorgeven. Interne OmniRoute-fouten (SSE-parsefouten, lege inhoud, guardrailblokkeringen) mogen dit niet bevatten.
+Alleen aanroeplocaties met een geparste foutbody van de provider mogen `upstreamDetails` doorgeven. Interne 67router-fouten (SSE-parsefouten, lege inhoud, guardrailblokkeringen) mogen dit niet bevatten.
 
 Geef onbewerkte `err.stack`, `err.message` of enige andere string uit een runtime-exceptie NIET door aan
 `upstreamDetails`. Deze moeten nog steeds via `errorResponse` / `buildErrorBody(code, msg)`
 zonder upstreambody worden verwerkt.
 
-Selectieve doorgifte van upstream-4xx-responsen behoudt de veilige JSON-structuur en formulering van de provider die vereist zijn voor automatisch herstel aan clientzijde, maar is geen byte-voor-byte-doorgifte: de recursieve sanitizer wordt altijd vóór serialisatie uitgevoerd. Cyclische bodies, bodies met BigInt-waarden of bodies met een kwaadaardige `toJSON()` worden standaard geweigerd en komen niet in aanmerking voor doorgifte. Voor OCR en moderatie geldt dezelfde regel; niet-JSON-, lege of onjuist gelabelde upstreambodies worden omgezet naar de canonieke OmniRoute-JSON-foutenvelop.
+Selectieve doorgifte van upstream-4xx-responsen behoudt de veilige JSON-structuur en formulering van de provider die vereist zijn voor automatisch herstel aan clientzijde, maar is geen byte-voor-byte-doorgifte: de recursieve sanitizer wordt altijd vóór serialisatie uitgevoerd. Cyclische bodies, bodies met BigInt-waarden of bodies met een kwaadaardige `toJSON()` worden standaard geweigerd en komen niet in aanmerking voor doorgifte. Voor OCR en moderatie geldt dezelfde regel; niet-JSON-, lege of onjuist gelabelde upstreambodies worden omgezet naar de canonieke 67router-JSON-foutenvelop.
 
 ## Bekende CodeQL-beperking: aangepaste sanitizers worden niet herkend
 

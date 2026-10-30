@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` gjør hele OmniRoute-katalogen din — modeller, kombinasjoner og
+`@omniroute/opencode-plugin-v2` gjør hele 67router-katalogen din — modeller, kombinasjoner og
 automatiske kombinasjoner — tilgjengelig i modellvelgeren til OpenCode v2, med visningsnavn, priser og
 budsjetter for gratisnivået.
 
@@ -15,7 +15,7 @@ deles mellom dem, så en oppgradering av den ene fremtvinger aldri en oppgraderi
 ## Krav
 
 - OpenCode v2.
-- En tilgjengelig OmniRoute-gateway (`http://localhost:20128` som standard).
+- En tilgjengelig 67router-gateway (`http://localhost:20128` som standard).
 - Node.js 22 eller 24.
 
 ## Installasjon
@@ -128,7 +128,7 @@ Angi `"geminiSanitization": false` for å slå det av.
 
 | Symptom                                                     | Årsak                                                                                                                                      |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Velgeren viser ingen OmniRoute-modell                       | Ingen nøkkel ble funnet (kontroller oppstartsadvarselen), eller gatewayen er utilgjengelig                                                 |
+| Velgeren viser ingen 67router-modell                        | Ingen nøkkel ble funnet (kontroller oppstartsadvarselen), eller gatewayen er utilgjengelig                                                 |
 | Ubehandlede modell-ID-er, ingen kombinasjoner, ingen priser | Administrasjonsendepunktene avviste tokenet — angi `managementReadToken`                                                                   |
 | Kort eller tom `freeOnly`-katalog                           | Manglende administrasjonstoken eller et avvist token — les oppsummeringslinjen for oppdateringen (`unmatched-free`-antallet) i vertsloggen |
 | En økt festet til `opencode-<id>/…`                         | v1-programtillegget publiserte `opencode-<id>`; v2 publiserer kun `<id>`, så velg modellen på nytt under `<id>/…`                          |

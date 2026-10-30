@@ -1,4 +1,4 @@
-# OmniRoute Architecture (ਪੰਜਾਬੀ)
+# 67router Architecture (ਪੰਜਾਬੀ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _ਆਖਰੀ ਵਾਰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ: 2026-06-28_
 
 ## ਕਾਰਜਕਾਰੀ ਸਾਰ
 
-OmniRoute, Next.js ਉੱਤੇ ਬਣਿਆ ਇੱਕ ਸਥਾਨਕ AI ਰੂਟਿੰਗ ਗੇਟਵੇ ਅਤੇ ਡੈਸ਼ਬੋਰਡ ਹੈ।
+67router, Next.js ਉੱਤੇ ਬਣਿਆ ਇੱਕ ਸਥਾਨਕ AI ਰੂਟਿੰਗ ਗੇਟਵੇ ਅਤੇ ਡੈਸ਼ਬੋਰਡ ਹੈ।
 ਇਹ ਇੱਕੋ OpenAI-ਅਨੁਕੂਲ ਐਂਡਪੌਇੰਟ (`/v1/*`) ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ ਅਤੇ ਅਨੁਵਾਦ, ਫਾਲਬੈਕ, ਟੋਕਨ ਰਿਫ੍ਰੈਸ਼ ਅਤੇ ਵਰਤੋਂ ਟ੍ਰੈਕਿੰਗ ਦੇ ਨਾਲ ਕਈ ਅੱਪਸਟ੍ਰੀਮ ਪ੍ਰਦਾਤਾਵਾਂ ਵਿੱਚ ਟ੍ਰੈਫਿਕ ਰੂਟ ਕਰਦਾ ਹੈ।
 
 ਮੁੱਖ ਸਮਰੱਥਾਵਾਂ:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[ਬ੍ਰਾਊਜ਼ਰ ਡੈਸ਼ਬੋਰਡ]
     end
 
-    subgraph Router[OmniRoute ਸਥਾਨਕ ਪ੍ਰਕਿਰਿਆ]
+    subgraph Router[67router ਸਥਾਨਕ ਪ੍ਰਕਿਰਿਆ]
         API[V1 ਅਨੁਕੂਲਤਾ API\n/v1/*]
         DASH[ਡੈਸ਼ਬੋਰਡ + ਪ੍ਰਬੰਧਨ API\n/api/*]
         CORE[SSE + ਅਨੁਵਾਦ ਕੋਰ\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth ਪ੍ਰਦਾਤਾ ਮੋਡੀਊਲ (`src/lib/oauth/providers/` ਅ�
 
 ## 5) ਐਂਬੈਡਿਡ ਸੇਵਾਵਾਂ (v3.8.4)
 
-OmniRoute ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਚੱਲ ਰਹੀਆਂ AI ਟੂਲ ਪ੍ਰਕਿਰਿਆਵਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕਰ ਸਕਦਾ ਹੈ, ਉਨ੍ਹਾਂ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦਾ ਹੈ ਅਤੇ ਉਨ੍ਹਾਂ ਵੱਲ ਰੂਟ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਨ੍ਹਾਂ ਨੂੰ **ਐਂਬੈਡਿਡ ਸੇਵਾਵਾਂ** ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਪੰਜ ਸੇਵਾਵਾਂ ਨਾਲ ਹੀ ਦਿੱਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ: 9Router, CLIProxyAPI, Bifrost, Mux ਅਤੇ Dario।
+67router ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਚੱਲ ਰਹੀਆਂ AI ਟੂਲ ਪ੍ਰਕਿਰਿਆਵਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕਰ ਸਕਦਾ ਹੈ, ਉਨ੍ਹਾਂ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦਾ ਹੈ ਅਤੇ ਉਨ੍ਹਾਂ ਵੱਲ ਰੂਟ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਨ੍ਹਾਂ ਨੂੰ **ਐਂਬੈਡਿਡ ਸੇਵਾਵਾਂ** ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਪੰਜ ਸੇਵਾਵਾਂ ਨਾਲ ਹੀ ਦਿੱਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ: 9Router, CLIProxyAPI, Bifrost, Mux ਅਤੇ Dario।
 
 ਆਰਕੀਟੈਕਚਰ ਪਰਤਾਂ:
 
@@ -436,7 +436,7 @@ Jules) ਨੂੰ ਇੱਕਸਾਰ DB-ਸਮਰਥਿਤ ਕਾਰਜ ਜੀਵ
 - ਕੋਟਾ ਕੈਸ਼: `src/domain/quotaCache.ts`
 - ਡਿਗਰੇਡੇਸ਼ਨ ਸਥਿਤੀ: `src/domain/degradation.ts`
 - ਸੰਰਚਨਾ ਆਡਿਟ: `src/domain/configAudit.ts`
-- OmniRoute ਜਵਾਬ ਮੈਟਾਡੇਟਾ ਬਿਲਡਰ: `src/domain/omnirouteResponseMeta.ts`
+- 67router ਜਵਾਬ ਮੈਟਾਡੇਟਾ ਬਿਲਡਰ: `src/domain/omnirouteResponseMeta.ts`
 - ਮੁਲਾਂਕਣ ਉਪ-ਪ੍ਰਣਾਲੀ: `src/domain/assessment/` — ਆਵਰਤੀ ਮੁਲਾਂਕਣ ਜੌਬਾਂ
 
 ### E. ਅਧਿਕਾਰ-ਪ੍ਰਦਾਨ ਪਾਈਪਲਾਈਨ
@@ -808,7 +808,7 @@ flowchart LR
         Browser[ਡੈਸ਼ਬੋਰਡ ਬ੍ਰਾਊਜ਼ਰ]
     end
 
-    subgraph ContainerOrProcess[OmniRoute ਰਨਟਾਈਮ]
+    subgraph ContainerOrProcess[67router ਰਨਟਾਈਮ]
         Next[Next.js ਸਰਵਰ\nPORT=20128]
         Core[SSE ਕੋਰ + ਐਗਜ਼ੀਕਿਊਟਰ]
         MainDB[(storage.sqlite)]
@@ -926,7 +926,7 @@ flowchart LR
 
 ## ਪ੍ਰੋਵਾਈਡਰ ਅਨੁਕੂਲਤਾ ਮੈਟ੍ਰਿਕਸ
 
-> **ਨੋਟ:** ਹੇਠਾਂ ਦਿੱਤਾ ਮੈਟ੍ਰਿਕਸ OmniRoute v3.8.0 ਵਿੱਚ ਰਜਿਸਟਰ ਕੀਤੇ 351 ਪ੍ਰੋਵਾਈਡਰਾਂ ਦਾ ਇੱਕ ਪ੍ਰਤੀਨਿਧੀ ਨਮੂਨਾ ਹੈ।
+> **ਨੋਟ:** ਹੇਠਾਂ ਦਿੱਤਾ ਮੈਟ੍ਰਿਕਸ 67router v3.8.0 ਵਿੱਚ ਰਜਿਸਟਰ ਕੀਤੇ 351 ਪ੍ਰੋਵਾਈਡਰਾਂ ਦਾ ਇੱਕ ਪ੍ਰਤੀਨਿਧੀ ਨਮੂਨਾ ਹੈ।
 > ਪ੍ਰਮਾਣਿਕ ਅਤੇ ਲਗਾਤਾਰ ਅੱਪਡੇਟ ਕੀਤੀ ਜਾਣ ਵਾਲੀ ਸੂਚੀ ਲਈ,
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (ਆਪਣੇ-ਆਪ ਤਿਆਰ ਕੀਤੀ) ਵੇਖੋ ਜਾਂ
 > `src/shared/constants/providers.ts` ਵਿੱਚ ਮੌਜੂਦ ਪ੍ਰਮਾਣਿਕ ਸਰੋਤ ਵੇਖੋ (ਲੋਡ ਕਰਨ ਵੇਲੇ Zod ਦੁਆਰਾ ਪ੍ਰਮਾਣਿਤ)।
@@ -1109,7 +1109,7 @@ flowchart LR
 - ਕਲਾਇੰਟ ਤੋਂ ਪ੍ਰਾਪਤ ਹੋਈ ਕੱਚੀ ਬੇਨਤੀ
 - ਅਸਲ ਵਿੱਚ ਅੱਪਸਟ੍ਰੀਮ ਭੇਜੀ ਗਈ ਅਨੁਵਾਦਿਤ ਬੇਨਤੀ
 - JSON ਵਜੋਂ ਮੁੜ-ਨਿਰਮਿਤ ਪ੍ਰਦਾਤਾ ਜਵਾਬ; ਸਟ੍ਰੀਮ ਕੀਤੇ ਜਵਾਬਾਂ ਨੂੰ ਅੰਤਿਮ ਸਾਰ ਅਤੇ ਸਟ੍ਰੀਮ ਮੈਟਾਡਾਟਾ ਤੱਕ ਸੰਖੇਪ ਕੀਤਾ ਜਾਂਦਾ ਹੈ
-- OmniRoute ਵੱਲੋਂ ਵਾਪਸ ਕੀਤਾ ਗਿਆ ਅੰਤਿਮ ਕਲਾਇੰਟ ਜਵਾਬ; ਸਟ੍ਰੀਮ ਕੀਤੇ ਜਵਾਬ ਉਸੇ ਸੰਖੇਪ ਸਾਰ ਰੂਪ ਵਿੱਚ ਸਟੋਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ
+- 67router ਵੱਲੋਂ ਵਾਪਸ ਕੀਤਾ ਗਿਆ ਅੰਤਿਮ ਕਲਾਇੰਟ ਜਵਾਬ; ਸਟ੍ਰੀਮ ਕੀਤੇ ਜਵਾਬ ਉਸੇ ਸੰਖੇਪ ਸਾਰ ਰੂਪ ਵਿੱਚ ਸਟੋਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ
 
 ## ਸੁਰੱਖਿਆ-ਸੰਵੇਦਨਸ਼ੀਲ ਸੀਮਾਵਾਂ
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **Čo je tento dokument.** Kritické posúdenie systému kontrol kvality OmniRoute
+> **Čo je tento dokument.** Kritické posúdenie systému kontrol kvality 67router
 > v porovnaní s osvedčenými postupmi v odvetví **spolu s** komplexným katalógom všetkých
 > kontrolných bodov kvality a **plánom replikácie nezávislým od nástrojov**, ktorý umožňuje
 > použiť rovnaký systém v ľubovoľnom projekte. Vygenerované 2026-06-16 zo skutočného stavu repozitára (nie spamäti).
@@ -101,62 +101,62 @@ ktorý možno replikovať v ľubovoľnom technologickom stacku.
 
 ### 1. Štýl a formátovanie (deterministické, rýchle)
 
-- **OmniRoute:** Prettier + ESLint prostredníctvom lint-staged (pre-commit), 2 medzery/dvojité úvodzovky/100 stĺpcov.
+- **67router:** Prettier + ESLint prostredníctvom lint-staged (pre-commit), 2 medzery/dvojité úvodzovky/100 stĺpcov.
 - **Všeobecne:** jeden formátovač s automatickými opravami + jeden linter, spúšťané v pre-commit nad súbormi v stagingu.
 
 ### 2. Typy
 
-- **OmniRoute:** `typecheck:core` (blokujúci) + `typecheck:noimplicit:core` (informatívny) + sprísňovaná hranica `type-coverage` 92.17 % + limit použitia `any` pre jednotlivé súbory.
+- **67router:** `typecheck:core` (blokujúci) + `typecheck:noimplicit:core` (informatívny) + sprísňovaná hranica `type-coverage` 92.17 % + limit použitia `any` pre jednotlivé súbory.
 - **Všeobecne:** striktná kontrola typov v CI + sprísňovaná metrika pokrytia typmi + limit použitia `any`/únikových mechanizmov pre jednotlivé súbory.
 
 ### 3. Testy (intenzita)
 
-- **OmniRoute:** 2 neprekrývajúce sa testovacie nástroje (natívny Node + vitest), 8 shardov, globálne pokrytie 60/60/60/60 + sprísňovaná hranica ~76 % + **8 minimálnych hraníc pre kritické moduly** + nočné property-based testy + nočné **mutačné testovanie**.
+- **67router:** 2 neprekrývajúce sa testovacie nástroje (natívny Node + vitest), 8 shardov, globálne pokrytie 60/60/60/60 + sprísňovaná hranica ~76 % + **8 minimálnych hraníc pre kritické moduly** + nočné property-based testy + nočné **mutačné testovanie**.
 - **Všeobecne:** testovací nástroj alebo nástroje + **absolútna** minimálna hranica pokrytia (ochrana pred nulovým pokrytím) + **sprísňovaná hranica** pokrytia (ochrana pred regresiou) + **minimálne hranice pre vysokorizikové moduly** (ochrana pred Goodhartovým zákonom) + property-based testovanie čistej logiky + nočné **mutačné testovanie** ako skutočné meradlo kvality testov.
 
 ### 4. Pravidlá testovania (ochrana pred obchádzaním)
 
-- **OmniRoute:** `pr-test-policy` (produkčný kód vyžaduje test), `check-test-masking` (blokuje oslabené asercie), `pr-evidence` (tvrdenie o úspechu vyžaduje blok s dôkazmi), `test-discovery` (každý test je zozbieraný testovacím nástrojom).
+- **67router:** `pr-test-policy` (produkčný kód vyžaduje test), `check-test-masking` (blokuje oslabené asercie), `pr-evidence` (tvrdenie o úspechu vyžaduje blok s dôkazmi), `test-discovery` (každý test je zozbieraný testovacím nástrojom).
 - **Všeobecne:** kontrola „nový kód ⇒ nový test“ + detektor odstránených asercií/tautológií + požiadavka na dôkaz (TDD alebo existujúci aktívny test) + záruka, že žiadny test nezostane mimo glob vzorov.
 
 ### 5. Zložitosť a zdravie kódu (sprísňované hranice)
 
-- **OmniRoute:** upozornenia ESLint (3769↓), duplicity jscpd (5.72 %↓), cyklomatická zložitosť + maximálny počet riadkov (1800↓), kognitívna zložitosť sonarjs (753↓), mŕtvy kód/nepoužívané exporty knip (339↓), veľkosť jednotlivých súborov (zmrazená, iba znižovanie), cyklické závislosti (vlastná implementácia Tarjanovho algoritmu, blokujúca).
+- **67router:** upozornenia ESLint (3769↓), duplicity jscpd (5.72 %↓), cyklomatická zložitosť + maximálny počet riadkov (1800↓), kognitívna zložitosť sonarjs (753↓), mŕtvy kód/nepoužívané exporty knip (339↓), veľkosť jednotlivých súborov (zmrazená, iba znižovanie), cyklické závislosti (vlastná implementácia Tarjanovho algoritmu, blokujúca).
 - **Všeobecne:** sprísňovať hranicu každej metriky zdravia (upozornenia, duplicity, cyklomatická **aj** kognitívna zložitosť, mŕtvy kód, veľkosť súborov, importné cykly). Smer je vždy „žiadne zhoršenie“.
 
 ### 6. Statická bezpečnosť (SAST + tajné údaje)
 
-- **OmniRoute:** CodeQL (sprísňovaná hranica upozornení = 0), gitleaks (`[extend] useDefault=true` — kritické!), SonarQube, vlastné bezpečnostné pravidlá (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (sprísňovaná hranica upozornení = 0), gitleaks (`[extend] useDefault=true` — kritické!), SonarQube, vlastné bezpečnostné pravidlá (public-creds, error-helper, route-guard-membership, route-validation).
 - **Všeobecne:** SAST (CodeQL/Sonar/semgrep) so sprísňovanou hranicou upozornení + skener tajných údajov so **zdedenou predvolenou súpravou pravidiel** (vlastná konfigurácia, ktorá prepíše predvolenú, vytvára slepé miesto) + bezpečnostné kontroly špecifických Hard Rules projektu.
 
 ### 7. Dodávateľský reťazec (závislosti)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (zoznam povolených licencií SPDX), lockfile-lint (HTTPS+sha512+register), `check-deps` proti slopsquattingu (zoznam povolených závislostí + vek ≥72 h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (zoznam povolených licencií SPDX), lockfile-lint (HTTPS+sha512+register), `check-deps` proti slopsquattingu (zoznam povolených závislostí + vek ≥72 h).
 - **Všeobecne:** SCA z viacerých zdrojov + zoznam povolených licencií + kontrola integrity lockfile + zoznam povolených závislostí s kontrolou veku/typosquattingu + bot na skupinové aktualizácie.
 
 ### 8. Dodávateľský reťazec (zostavenie a vydanie)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), proveniencia SLSA (`--provenance`), OpenSSF Scorecard (týždenne), posilnenie workflowov (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), proveniencia SLSA (`--provenance`), OpenSSF Scorecard (týždenne), posilnenie workflowov (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Všeobecne:** generovať SBOM pri publikovaní + podpísaná proveniencia (SLSA L2+) + pravidelne plánovaný Scorecard + zabezpečenie všetkých workflowov (tokeny s minimálnymi oprávneniami, žiadne uchovávané prihlasovacie údaje pri checkoutoch bez pushovania, akcie pripnuté pomocou SHA).
 
 ### 9. Kontrakty a API
 
-- **OmniRoute:** oasdiff (nekompatibilné zmeny OpenAPI), schemathesis (nočný fuzzing kontraktov), openapi-coverage (% zdokumentovaných trás, sprísňovaná hranica 38.3 %), openapi-security-tiers (špecifikácia verzus ochrana trasy).
+- **67router:** oasdiff (nekompatibilné zmeny OpenAPI), schemathesis (nočný fuzzing kontraktov), openapi-coverage (% zdokumentovaných trás, sprísňovaná hranica 38.3 %), openapi-security-tiers (špecifikácia verzus ochrana trasy).
 - **Všeobecne:** porovnanie kontraktov na odhalenie nekompatibilných zmien (oasdiff/buf) + property-based fuzzing voči špecifikácii (schemathesis) + sprísňovaná hranica pokrytia dokumentáciou + konzistentnosť špecifikácie↔kódu.
 
 ### 10. Dokumentácia a i18n (ochrana pred zastaraním)
 
-- **OmniRoute:** docs-sync (zrkadlené verzie), docs-counts-sync (čísla v dokumentácii oproti kódu), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + sprísňovaná hranica 80.1 %).
+- **67router:** docs-sync (zrkadlené verzie), docs-counts-sync (čísla v dokumentácii oproti kódu), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + sprísňovaná hranica 80.1 %).
 - **Všeobecne:** synchronizácia verzií/počtov/premenných prostredia medzi dokumentáciou a kódom (kontrola, nie dôvera) + overovanie interných odkazov + sprísňovaná hranica pokrytia i18n.
 
 ### 11. Ochrana pred halucináciami/konzistentnosť (zriedkavá kategória)
 
-- **OmniRoute:** known-symbols (textové smerovanie ⇒ existujúci symbol), provider-consistency, fetch-targets (načítanie klientom ⇒ skutočná trasa), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (textové smerovanie ⇒ existujúci symbol), provider-consistency, fetch-targets (načítanie klientom ⇒ skutočná trasa), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Všeobecne:** pre každý „duplicitný zdroj pravdy“ (register, textové smerovanie, odkazy medzi vrstvami) kontrola, ktorá dokazuje zhodu oboch strán. Zachytáva degradáciu, ktorú kontrola typov ani testy neodhalia.
 
 ### 12. Odolnosť a doména (špecifické pre produkt)
 
-- **OmniRoute:** chaos (vkladanie porúch), heap-growth (úniky), k6 (dlhodobá záťaž), promptfoo+garak (LLM red-team podľa OWASP LLM Top 10), 3 zákony odolnosti (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (vkladanie porúch), heap-growth (úniky), k6 (dlhodobá záťaž), promptfoo+garak (LLM red-team podľa OWASP LLM Top 10), 3 zákony odolnosti (circuit-breaker/cooldown/lockout).
 - **Všeobecne:** identifikujte režimy zlyhania **vašej** domény a pre každý zaveďte kontrolu (hoci aj nočnú). Pre aplikácie AI: red-team testovanie injekcií. Pre distribuované systémy: chaos + úniky + dlhodobá záťaž.
 
 ---

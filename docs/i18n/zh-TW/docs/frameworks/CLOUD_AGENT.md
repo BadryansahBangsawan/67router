@@ -7,7 +7,7 @@
 > **真實來源：** `src/lib/cloudAgent/` 與 `src/app/api/v1/agents/tasks/`
 > **最後更新：** 2026-06-28 — v3.8.40（更新 frontmatter；共 4 個代理，包括 cursor-cloud）
 
-OmniRoute 將第三方雲端託管的程式設計代理（Codex Cloud、Cursor、
+67router 將第三方雲端託管的程式設計代理（Codex Cloud、Cursor、
 Devin、Jules）協調為長時間執行的任務。每個代理都封裝於統一介面之後，
 讓用戶端可以提交提示詞 + 儲存庫 URL 並接收結果，而不必處理
 提供者特定的 API。

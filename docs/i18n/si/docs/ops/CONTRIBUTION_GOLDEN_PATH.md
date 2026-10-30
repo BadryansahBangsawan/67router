@@ -86,7 +86,7 @@ npm run lint
 
 - `src/i18n/messages/en.json` යනු UI මූලාශ්රයයි; `config/i18n.json` යනු locale මූලාශ්රයයි.
 - CLI catalogs වෙනම `bin/cli/locales/` යටතේ පවතී.
-- ICU placeholders සහ tags නිවැරදිව එලෙසම සුරකින්න. product/provider/model නම්, protocol සහ header නම්, commands, code/JSON identifiers, URLs, environment variables, හෝ `OmniRoute`, `OAuth`, `MCP`, සහ `A2A` වැනි ආරක්ෂිත යෙදුම් පරිවර්තනය නොකරන්න. වත්මන් මූලාශ්ර ලැයිස්තුව `scripts/i18n/glossary/protected-terms.json` වේ.
+- ICU placeholders සහ tags නිවැරදිව එලෙසම සුරකින්න. product/provider/model නම්, protocol සහ header නම්, commands, code/JSON identifiers, URLs, environment variables, හෝ `67router`, `OAuth`, `MCP`, සහ `A2A` වැනි ආරක්ෂිත යෙදුම් පරිවර්තනය නොකරන්න. වත්මන් මූලාශ්ර ලැයිස්තුව `scripts/i18n/glossary/protected-terms.json` වේ.
 
 **ඉලක්කගත චක්රය**
 
@@ -196,7 +196,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # වෙනත් තැ
 - **එම artifact එකම ප්රවර්ධනය කරන්න.** වත්මන් tarball hash එක සඳහා සාර්ථක validation එකක් නොමැති candidate එකක් `promote` විසින් ප්රතික්ෂේප කරයි. පෙරනිමි සක්රිය slot එක `_artifacts/candidate/current` වේ; `--target <dir>` මඟින් එම filesystem එකේ වෙනත් directory එකක් තෝරන අතර, එහි පෙර slot එක `<dir>.previous` වේ. සෑම rename එකක්ම atomic වන අතර, අතරමඟදී අසාර්ථක වුවහොත් දැනටමත් සිදු කළ rename ආපසු හරවයි.
 - **ආපසු හරවන්න.** `run`, ප්රවර්ධනය කළ slot එක නැවත වලංගු කරන අතර එම පරීක්ෂාව අසාර්ථක වූ විට `current` සහ `previous` නැවත හුවමාරු කරයි. පළමු validation එක අසාර්ථක වන candidate එකක් කිසිවිටෙක ප්රවර්ධනය නොකෙරේ.
 
-සෑම දෙයක්ම gitignore කර ඇති `_artifacts/candidate/` යටතේ ලියනු ලැබේ; පවතින OmniRoute ස්ථාපනයක් සහ එහි data directory එක කිසිවිටෙක වෙනස් නොකෙරේ. ප්රවර්ධනය කළ CLI එක `_artifacts/candidate/current/prefix/bin/omniroute` වේ; එය භාවිත කරන විට ඔබේම `DATA_DIR` සමඟ ආරම්භ කරන්න. පිටවීමේ කේත: සාර්ථකත්වය සඳහා `0`, අසාර්ථක validation හෝ promotion සඳහා `1`, usage error එකක් හෝ build එක නොමැති වීම සඳහා `2`.
+සෑම දෙයක්ම gitignore කර ඇති `_artifacts/candidate/` යටතේ ලියනු ලැබේ; පවතින 67router ස්ථාපනයක් සහ එහි data directory එක කිසිවිටෙක වෙනස් නොකෙරේ. ප්රවර්ධනය කළ CLI එක `_artifacts/candidate/current/prefix/bin/omniroute` වේ; එය භාවිත කරන විට ඔබේම `DATA_DIR` සමඟ ආරම්භ කරන්න. පිටවීමේ කේත: සාර්ථකත්වය සඳහා `0`, අසාර්ථක validation හෝ promotion සඳහා `1`, usage error එකක් හෝ build එක නොමැති වීම සඳහා `2`.
 
 ## දේශීය ලූපය සහ CI අතර වෙනස
 

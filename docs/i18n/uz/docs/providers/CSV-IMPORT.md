@@ -25,7 +25,7 @@ Birinchi ustuni aynan `provider` soʻzidan iborat boʻlgan birinchi qator (harf 
 Boshlangʻich faylni import modal oynasidan yuklab oling (**CSV shablonini yuklab olish**). Misol:
 
 ```csv
-# OmniRoute provayderlarini import qilish (pozitsion ustunlar)
+# 67router provayderlarini import qilish (pozitsion ustunlar)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

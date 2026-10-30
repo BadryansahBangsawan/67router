@@ -206,11 +206,11 @@ Regras de sanitização aplicadas a `upstreamDetails`:
 3. Limite de profundidade: o aninhamento para além de 4 níveis é substituído pela cadeia de carateres `"[truncated]"`.
 4. Os arrays são limitados a 32 elementos.
 
-Apenas os locais de chamada com um corpo de erro analisado do fornecedor devem passar `upstreamDetails`. Os erros internos do OmniRoute (falhas de análise de SSE, conteúdo vazio, bloqueios por barreiras de proteção) não o devem incluir.
+Apenas os locais de chamada com um corpo de erro analisado do fornecedor devem passar `upstreamDetails`. Os erros internos do 67router (falhas de análise de SSE, conteúdo vazio, bloqueios por barreiras de proteção) não o devem incluir.
 
 NÃO passe `err.stack`, `err.message` em bruto, nem qualquer cadeia de carateres proveniente de uma exceção em tempo de execução para `upstreamDetails`. Estes valores têm ainda de passar por `errorResponse` / `buildErrorBody(code, msg)` sem um corpo upstream.
 
-A passagem seletiva de respostas upstream 4xx preserva a estrutura JSON segura e a redação do fornecedor necessárias para a recuperação automática do cliente, mas não é uma passagem byte a byte: o sanitizador recursivo é sempre executado antes da serialização. Corpos cíclicos, que contenham BigInt ou com `toJSON()` hostil falham de forma segura e não são elegíveis para passagem. O OCR e a moderação aplicam a mesma regra; corpos upstream que não sejam JSON, estejam em branco ou tenham uma identificação incorreta são convertidos para o envelope de erro JSON canónico do OmniRoute.
+A passagem seletiva de respostas upstream 4xx preserva a estrutura JSON segura e a redação do fornecedor necessárias para a recuperação automática do cliente, mas não é uma passagem byte a byte: o sanitizador recursivo é sempre executado antes da serialização. Corpos cíclicos, que contenham BigInt ou com `toJSON()` hostil falham de forma segura e não são elegíveis para passagem. O OCR e a moderação aplicam a mesma regra; corpos upstream que não sejam JSON, estejam em branco ou tenham uma identificação incorreta são convertidos para o envelope de erro JSON canónico do 67router.
 
 ## Limitação conhecida do CodeQL: sanitizadores personalizados não reconhecidos
 

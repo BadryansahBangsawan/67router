@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` ਤੁਹਾਡੇ ਪੂਰੇ OmniRoute ਕੈਟਾਲਾਗ — ਮਾਡਲਾਂ, ਕੌਂਬੋਆਂ ਅਤੇ
+`@omniroute/opencode-plugin-v2` ਤੁਹਾਡੇ ਪੂਰੇ 67router ਕੈਟਾਲਾਗ — ਮਾਡਲਾਂ, ਕੌਂਬੋਆਂ ਅਤੇ
 ਆਟੋ-ਕੌਂਬੋਆਂ — ਨੂੰ ਡਿਸਪਲੇ ਨਾਮਾਂ, ਕੀਮਤਾਂ ਅਤੇ ਮੁਫ਼ਤ-ਟੀਅਰ
 ਬਜਟਾਂ ਸਮੇਤ OpenCode v2 ਦੇ ਮਾਡਲ ਚੋਣਕਾਰ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ।
 
@@ -15,7 +15,7 @@
 ## ਲੋੜਾਂ
 
 - OpenCode v2।
-- ਪਹੁੰਚਯੋਗ OmniRoute ਗੇਟਵੇ (ਮੂਲ ਰੂਪ ਵਿੱਚ `http://localhost:20128`)।
+- ਪਹੁੰਚਯੋਗ 67router ਗੇਟਵੇ (ਮੂਲ ਰੂਪ ਵਿੱਚ `http://localhost:20128`)।
 - Node.js 22 ਜਾਂ 24।
 
 ## ਇੰਸਟਾਲੇਸ਼ਨ
@@ -116,7 +116,7 @@ Gemini ਉਸ ਪੂਰੀ ਬੇਨਤੀ ਨੂੰ ਅਸਵੀਕਾਰ ਕ�
 
 | ਲੱਛਣ                                             | ਕਾਰਨ                                                                                                                            |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Picker ਵਿੱਚ ਕੋਈ OmniRoute ਮਾਡਲ ਨਹੀਂ ਦਿਖਾਈ ਦਿੰਦਾ  | ਕੋਈ key resolve ਨਹੀਂ ਹੋਈ (startup ਚੇਤਾਵਨੀ ਦੀ ਜਾਂਚ ਕਰੋ), ਜਾਂ gateway ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੋ ਰਹੀ                                       |
+| Picker ਵਿੱਚ ਕੋਈ 67router ਮਾਡਲ ਨਹੀਂ ਦਿਖਾਈ ਦਿੰਦਾ   | ਕੋਈ key resolve ਨਹੀਂ ਹੋਈ (startup ਚੇਤਾਵਨੀ ਦੀ ਜਾਂਚ ਕਰੋ), ਜਾਂ gateway ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੋ ਰਹੀ                                       |
 | Raw model ids, ਕੋਈ combos ਨਹੀਂ, ਕੋਈ pricing ਨਹੀਂ | management endpoints ਨੇ token ਅਸਵੀਕਾਰ ਕਰ ਦਿੱਤਾ — `managementReadToken` ਸੈੱਟ ਕਰੋ                                                 |
 | ਛੋਟਾ ਜਾਂ ਖਾਲੀ `freeOnly` catalog                 | ਕੋਈ management token ਨਹੀਂ ਹੈ ਜਾਂ token ਅਸਵੀਕਾਰ ਹੋਇਆ ਹੈ — host log ਵਿੱਚ refresh summary ਲਾਈਨ (`unmatched-free` ਗਿਣਤੀ) ਪੜ੍ਹੋ      |
 | `opencode-<id>/…` ਨਾਲ pin ਕੀਤਾ session           | v1 plugin ਨੇ `opencode-<id>` publish ਕੀਤਾ ਸੀ; v2 `<id>` ਨੂੰ ਸਿੱਧੇ ਤੌਰ 'ਤੇ publish ਕਰਦਾ ਹੈ, ਇਸ ਲਈ `<id>/…` ਹੇਠ ਮਾਡਲ ਨੂੰ ਮੁੜ ਚੁਣੋ |

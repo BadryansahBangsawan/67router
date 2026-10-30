@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute posiada **cztery rodziny poświadczeń**, które mogą autoryzować trasy zarządzania.
+67router posiada **cztery rodziny poświadczeń**, które mogą autoryzować trasy zarządzania.
 Nie są one wzajemnie wymienne. Klucze API do wnioskowania (`sk-…`) **nie** zarządzają
 serwerem, chyba że wyraźnie nadano im zakres `manage` lub `admin`.
 

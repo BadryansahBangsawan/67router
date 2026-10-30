@@ -4,7 +4,7 @@
 
 ---
 
-Tuloy-tuloy at inkremental na pag-export ng mga call log ng OmniRoute patungo sa isang panlabas na analytics store.
+Tuloy-tuloy at inkremental na pag-export ng mga call log ng 67router patungo sa isang panlabas na analytics store.
 
 Pinapanatili ng tab na Logs dashboard ang kasaysayan ng request sa SQLite (`call_logs`), na nililimitahan ng
 rotation at retention. Ipinapadala ng log export ang parehong hanay ng mga record ayon sa iskedyul upang manatili

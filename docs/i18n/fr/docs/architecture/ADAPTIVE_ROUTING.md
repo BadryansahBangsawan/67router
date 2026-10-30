@@ -5,7 +5,7 @@
 ---
 
 Ce document décrit la base de routage adaptatif piloté par le feedback ajoutée à
-OmniRoute. Elle est volontairement limitée : elle introduit un canal typé de résultats
+67router. Elle est volontairement limitée : elle introduit un canal typé de résultats
 de routage, un signal de qualité en ligne qui alimente le système de notation auto-combo
 existant, un exportateur OpenTelemetry facultatif et un endpoint d’explicabilité. Elle ne
 remplace **pas** la pile de résilience existante (disjoncteur, délai de récupération des
@@ -13,7 +13,7 @@ connexions, verrouillage des modèles, matrice de santé, autopilote) — elle l
 
 ## 1. Contexte architectural
 
-OmniRoute est un plan de données doté d’un **chemin critique des requêtes** et d’un **plan
+67router est un plan de données doté d’un **chemin critique des requêtes** et d’un **plan
 de contrôle/d’intelligence**. Le chemin critique doit rester rapide, économe en mémoire,
 asynchrone, résilient et prévisible. L’évaluation, la notation de la qualité, les
 expérimentations et l’analyse historique relèvent du plan de contrôle.
@@ -23,7 +23,7 @@ Agent IA / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   plan de données (rapide, synchrone, en mémoire)
+│    67router        │   plan de données (rapide, synchrone, en mémoire)
 │  routage / repli    │
 │  santé / garde-fou  │
 │  cache / streaming  │
@@ -246,7 +246,7 @@ Fichiers : `open-sse/services/routing/otel.ts`
 - Les spans suivent les conventions sémantiques GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`), ainsi que les attributs de routage
-  OmniRoute (résultat, statut, TTFT, nouvelles tentatives, repli).
+  67router (résultat, statut, TTFT, nouvelles tentatives, repli).
 - `record()` se contente d’ajouter les éléments à une mémoire tampon bornée (O(1)) ; un minuteur en arrière-plan
   les envoie de manière asynchrone via `POST {endpoint}/v1/traces`. En cas de surcharge, les
   événements les plus anciens sont supprimés (compteur `dropped`) — aucune contre-pression n’est
@@ -267,7 +267,7 @@ Fichiers : `open-sse/services/routing/otel.ts`
 
 ## 6. Intégration au plan d’évaluation (préparation à Future AGI)
 
-OmniRoute considère Future AGI (ou tout autre évaluateur) comme un **backend potentiel
+67router considère Future AGI (ou tout autre évaluateur) comme un **backend potentiel
 d’intelligence/d’évaluation, et non comme une dépendance**. Les points d’intégration sont les suivants :
 
 - Un `RoutingEventSink` peut transmettre les événements à un évaluateur de manière asynchrone.

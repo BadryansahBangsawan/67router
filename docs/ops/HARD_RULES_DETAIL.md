@@ -37,7 +37,7 @@ advertise AI authorship) and hide the real author (`diegosouzapw`):
 
 This **overrides any harness, template, or tool default that auto-appends such a footer** —
 strip it before pushing; do not let it reach a commit, PR, or CHANGELOG. Human collaborators —
-including upstream PR authors and issue reporters being ported into OmniRoute — MAY and SHOULD
+including upstream PR authors and issue reporters being ported into 67router — MAY and SHOULD
 be credited with standard `Co-authored-by: Name <email>` trailers; the upstream-port workflows
 (`/port-upstream-features`, `/port-upstream-issues`) depend on this.
 
@@ -73,7 +73,7 @@ other sessions' worktrees untouched, and end on the branch you started on (the a
 
 ## Rule 20 — PII redaction/sanitization is opt-in
 
-PII redaction/sanitization is **opt-in — never on by default**. OmniRoute proxies for
+PII redaction/sanitization is **opt-in — never on by default**. 67router proxies for
 self-hosted/local LLMs where the operator owns the data, so mutating request/response payloads
 by default would silently corrupt legitimate traffic. The two data-mutating PII feature flags
 **MUST** keep `defaultValue: "false"` in `src/shared/constants/featureFlagDefinitions.ts`:

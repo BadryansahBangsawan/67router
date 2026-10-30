@@ -5,11 +5,11 @@
 ---
 
 > **Matsayi:** Akwai don amfanin kowa.
-> **Masu karatu:** Masu gudanarwa da ke haɗa OpenCode da turawar OmniRoute.
+> **Masu karatu:** Masu gudanarwa da ke haɗa OpenCode da turawar 67router.
 > **Tushen gaskiya (tsarin daidaitawa):** `src/shared/services/opencodeConfig.ts`
 > **Tushen gaskiya (kunshin npm):** `@omniroute/opencode-provider/` (workspace da za a iya wallafawa)
 
-[OpenCode](https://opencode.ai) abokin ciniki ne na AI mai wakilci wanda ke aiki ta CLI/desktop. Yana karanta kundin masu samar da sabis daga `~/.config/opencode/opencode.json` (ko `opencode.jsonc`) kuma yana bin tsarin da ke `https://opencode.ai/config.json`. OmniRoute yana gabatar da kansa ga OpenCode a matsayin ɗaya daga cikin waɗannan masu samar da sabis — kowace buƙata tana bi ta daidaitacciyar fuskar OmniRoute mai dacewa da OpenAI ta `/v1`, don haka OpenCode yana cin gajiyar turawar Auto-Combo, circuit breakers, manufofin maɓalli, sa ido, da sauransu ta atomatik.
+[OpenCode](https://opencode.ai) abokin ciniki ne na AI mai wakilci wanda ke aiki ta CLI/desktop. Yana karanta kundin masu samar da sabis daga `~/.config/opencode/opencode.json` (ko `opencode.jsonc`) kuma yana bin tsarin da ke `https://opencode.ai/config.json`. 67router yana gabatar da kansa ga OpenCode a matsayin ɗaya daga cikin waɗannan masu samar da sabis — kowace buƙata tana bi ta daidaitacciyar fuskar 67router mai dacewa da OpenAI ta `/v1`, don haka OpenCode yana cin gajiyar turawar Auto-Combo, circuit breakers, manufofin maɓalli, sa ido, da sauransu ta atomatik.
 
 Akwai **hanyoyin haɗawa guda biyu da ake tallafawa**. Zaɓi ɗaya — dukansu suna samar da daidaitawa iri ɗaya.
 
@@ -17,16 +17,16 @@ Akwai **hanyoyin haɗawa guda biyu da ake tallafawa**. Zaɓi ɗaya — dukansu s
 
 ## Hanya ta 1 — Mai samarwa ta CLI (ba sai an shigar da npm ba)
 
-An ba da shawarar wannan ga masu amfani na ƙarshe. Yana zuwa tare da OmniRoute. Yana rubuta `opencode.json` kai tsaye a wurinsa.
+An ba da shawarar wannan ga masu amfani na ƙarshe. Yana zuwa tare da 67router. Yana rubuta `opencode.json` kai tsaye a wurinsa.
 
 ```bash
-# Bayan shigar da OmniRoute (npm i -g @omniroute/cli ko kwafin gida)
+# Bayan shigar da 67router (npm i -g @omniroute/cli ko kwafin gida)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-A bayan fage, CLI yana kiran `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), don haka `opencode.json` da ya riga ya kasance zai riƙe sauran masu samar da sabis da sharhinsa. Ana ƙara ko maye gurbin shigarwar OmniRoute ta hanya mai atomic.
+A bayan fage, CLI yana kiran `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), don haka `opencode.json` da ya riga ya kasance zai riƙe sauran masu samar da sabis da sharhinsa. Ana ƙara ko maye gurbin shigarwar 67router ta hanya mai atomic.
 
 Fayil ɗin da aka samar (tsohon kundin samfura):
 
@@ -90,8 +90,8 @@ Duk hanyoyin biyu suna samar da `provider.omniroute.npm: "@ai-sdk/openai-compati
 ```
 Fuskar OpenCode/wakili
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (Fuskar OmniRoute ta OpenAI)
-         → Mai sarrafa OmniRoute /v1/chat/completions (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (Fuskar 67router ta OpenAI)
+         → Mai sarrafa 67router /v1/chat/completions (open-sse/handlers/chatCore.ts)
             → turawar combo / Auto-Combo / executor
                → mai samar da sabis na sama
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Za ka iya sauya su ta hanyar `models: [...]`. Ƙarin da ake ba da shawara:
 
-- `"auto"` — yana bayyana na'ura mai ba da hanya ta [Auto-Combo](../routing/AUTO-COMBO.md) ta OmniRoute wadda ba ta buƙatar saiti. Yana ba OpenCode damar zaɓar "mafi kyawun samfurin da ake da shi" ba tare da ka ƙayyade katalogin kai tsaye a lamba ba.
-- `"<combo-name>"` — duk wani combo da ka ayyana a dashboard; OmniRoute yana warware shi ba tare da wani ƙarin aiki daga gare ka ba.
+- `"auto"` — yana bayyana na'ura mai ba da hanya ta [Auto-Combo](../routing/AUTO-COMBO.md) ta 67router wadda ba ta buƙatar saiti. Yana ba OpenCode damar zaɓar "mafi kyawun samfurin da ake da shi" ba tare da ka ƙayyade katalogin kai tsaye a lamba ba.
+- `"<combo-name>"` — duk wani combo da ka ayyana a dashboard; 67router yana warware shi ba tare da wani ƙarin aiki daga gare ka ba.
 
 ---
 
@@ -135,29 +135,29 @@ Wannan cire maimaitawar ita ce **matsalar da aka fi gani** a tsofaffin saituna. 
 
 ## Hanyoyin tantancewa
 
-| Saitin OmniRoute                            | Ƙimar `apiKey` da ake ba da shawara                                    |
+| Saitin 67router                             | Ƙimar `apiKey` da ake ba da shawara                                    |
 | ------------------------------------------- | ---------------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (tsoho don na gida) | `sk_omniroute` (madadin rubutu na zahiri)                              |
 | `REQUIRE_API_KEY=true`                      | Maɓallin API na ainihi na kowane mai amfani daga Dashboard → API Keys. |
 
-Ga clients masu salon Anthropic waɗanda ke aika `x-api-key` + `anthropic-version`, `extractApiKey` na OmniRoute yana kuma karɓar maɓallin daga `x-api-key`. OpenCode yana amfani da fuskar OpenAI, saboda haka koyaushe zai aika `Authorization: Bearer ${apiKey}` — babu wani keɓantaccen yanayin Anthropic da ya shafi wannan.
+Ga clients masu salon Anthropic waɗanda ke aika `x-api-key` + `anthropic-version`, `extractApiKey` na 67router yana kuma karɓar maɓallin daga `x-api-key`. OpenCode yana amfani da fuskar OpenAI, saboda haka koyaushe zai aika `Authorization: Bearer ${apiKey}` — babu wani keɓantaccen yanayin Anthropic da ya shafi wannan.
 
 ---
 
 ## Warware matsaloli
 
-| Alama                                                | Dalili                                                              | Gyara                                                                                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `404` kan kowace buƙata mai URL ɗauke da `/v1/v1/`   | Tsohon saiti daga plugin na kafin v3.8 wanda ya ninka ƙarin `/v1`.  | Sake ƙirƙira ta Hanya ta 1 ko ta 2.                                                                                   |
-| `401 Invalid API key`                                | OmniRoute yana da `REQUIRE_API_KEY=true` kuma ba a san maɓallin ba. | Ƙirƙiri maɓallin a dashboard, ko saita `REQUIRE_API_KEY=false` (na gida kawai) sannan ka yi amfani da `sk_omniroute`. |
-| Jerin samfura babu komai a UI na OpenCode            | An ɓoye duk tsoffin samfura 4 a ganuwar provider ta OmniRoute.      | Wuce `models: ["auto", ...]` don bayyana waɗanda ka kunna.                                                            |
-| OpenCode 500 tare da `cannot read property 'models'` | Tsohon OpenCode (< 0.1.x) bai karɓi `models` na cikin layi ba.      | Sabunta OpenCode zuwa sigar da ke bin tsarin v1 (`opencode.ai/config.json`).                                          |
+| Alama                                                | Dalili                                                             | Gyara                                                                                                                 |
+| ---------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| `404` kan kowace buƙata mai URL ɗauke da `/v1/v1/`   | Tsohon saiti daga plugin na kafin v3.8 wanda ya ninka ƙarin `/v1`. | Sake ƙirƙira ta Hanya ta 1 ko ta 2.                                                                                   |
+| `401 Invalid API key`                                | 67router yana da `REQUIRE_API_KEY=true` kuma ba a san maɓallin ba. | Ƙirƙiri maɓallin a dashboard, ko saita `REQUIRE_API_KEY=false` (na gida kawai) sannan ka yi amfani da `sk_omniroute`. |
+| Jerin samfura babu komai a UI na OpenCode            | An ɓoye duk tsoffin samfura 4 a ganuwar provider ta 67router.      | Wuce `models: ["auto", ...]` don bayyana waɗanda ka kunna.                                                            |
+| OpenCode 500 tare da `cannot read property 'models'` | Tsohon OpenCode (< 0.1.x) bai karɓi `models` na cikin layi ba.     | Sabunta OpenCode zuwa sigar da ke bin tsarin v1 (`opencode.ai/config.json`).                                          |
 
 ---
 
 ## Duba kuma
 
-- [Manazartar API](../reference/API_REFERENCE.md) — cikakken tsarin OmniRoute REST
+- [Manazartar API](../reference/API_REFERENCE.md) — cikakken tsarin 67router REST
 - [Auto-Combo](../routing/AUTO-COMBO.md) — abin da `model: "auto"` ke nufi
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Tushen lamba: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

@@ -13,7 +13,7 @@
 
 ## Apakah ini
 
-OmniRoute bersambung kepada bilik kebal **Obsidian** sebagai **sumber konteks** — pangkalan
+67router bersambung kepada bilik kebal **Obsidian** sebagai **sumber konteks** — pangkalan
 pengetahuan Markdown setempat yang dibaca dan ditulis oleh ejen melalui pelayan MCP terbina
 dalam. Integrasi ini berkomunikasi dengan pemalam komuniti **Obsidian Local REST API** yang
 berjalan dalam aplikasi desktop, supaya ejen boleh mencari nota, membaca/menulis/menampal
@@ -79,7 +79,7 @@ menyimpannya.
 
 `src/app/api/settings/obsidian/webdav/route.ts` mengurus penyegerakan peti simpanan
 pilihan yang disokong WebDAV (dikendalikan oleh `src/lib/obsidianSync.ts`).
-Mendayakannya menghalakan OmniRoute ke direktori peti simpanan setempat dan menjana
+Mendayakannya menghalakan 67router ke direktori peti simpanan setempat dan menjana
 pasangan nama pengguna/kata laluan WebDAV secara rawak:
 
 ```bash
@@ -118,26 +118,26 @@ token penyegerakan yang berasingan.
 
 Ditakrifkan dalam `open-sse/mcp-server/tools/obsidianTools.ts`. Token/URL asas ditentukan
 bagi setiap panggilan (kunci per-API didahulukan, kemudian global). Alat yang mengakses **pelayan penyegerakan**
-OmniRoute (empat alat `obsidian_sync_*`) juga memerlukan token pengesahan penyegerakan yang dikonfigurasikan
-dalam tetapan OmniRoute.
+67router (empat alat `obsidian_sync_*`) juga memerlukan token pengesahan penyegerakan yang dikonfigurasikan
+dalam tetapan 67router.
 
 ### Alat baca (`read:obsidian`)
 
-| Alat                         | Penerangan                                                                                                  |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Semak sama ada Local REST API boleh dicapai dan telah disahkan.                                             |
-| `obsidian_search_simple`     | Carian teks penuh bagi kandungan nota; mengembalikan petikan berserta laluan fail.                          |
-| `obsidian_search_structured` | Cari menggunakan ungkapan JSON Logic (penapis and/or/regex/path).                                           |
-| `obsidian_read_note`         | Baca nota mengikut laluan relatif peti besi; secara pilihan, tajuk/blok/frontmatter tertentu.               |
-| `obsidian_list_vault`        | Senaraikan fail dan direktori dalam peti besi (pepohon entri).                                              |
-| `obsidian_get_document_map`  | Dapatkan struktur tajuk nota sebagai peta tajuk → nombor baris.                                             |
-| `obsidian_get_note_metadata` | Dapatkan frontmatter, tag, pautan, kiraan aksara/perkataan tanpa kandungan penuh.                           |
-| `obsidian_get_active_file`   | Dapatkan laluan + kandungan fail yang sedang aktif dalam Obsidian.                                          |
-| `obsidian_get_periodic_note` | Dapatkan nota berkala harian/mingguan/bulanan untuk sesuatu tarikh (hari ini jika tidak dinyatakan).        |
-| `obsidian_get_tags`          | Senaraikan semua tag peti besi berserta kekerapannya.                                                       |
-| `obsidian_list_commands`     | Senaraikan ID perintah Obsidian yang tersedia (gunakan dengan `obsidian_execute_command`).                  |
-| `obsidian_sync_status`       | Status pelayan penyegerakan OmniRoute: berjalan, nama peti besi, port, masa operasi, penyegerakan terakhir. |
-| `obsidian_sync_conflicts`    | Senaraikan konflik penyegerakan yang belum diselesaikan (laluan, laluan konflik, masa dikesan).             |
+| Alat                         | Penerangan                                                                                                 |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Semak sama ada Local REST API boleh dicapai dan telah disahkan.                                            |
+| `obsidian_search_simple`     | Carian teks penuh bagi kandungan nota; mengembalikan petikan berserta laluan fail.                         |
+| `obsidian_search_structured` | Cari menggunakan ungkapan JSON Logic (penapis and/or/regex/path).                                          |
+| `obsidian_read_note`         | Baca nota mengikut laluan relatif peti besi; secara pilihan, tajuk/blok/frontmatter tertentu.              |
+| `obsidian_list_vault`        | Senaraikan fail dan direktori dalam peti besi (pepohon entri).                                             |
+| `obsidian_get_document_map`  | Dapatkan struktur tajuk nota sebagai peta tajuk → nombor baris.                                            |
+| `obsidian_get_note_metadata` | Dapatkan frontmatter, tag, pautan, kiraan aksara/perkataan tanpa kandungan penuh.                          |
+| `obsidian_get_active_file`   | Dapatkan laluan + kandungan fail yang sedang aktif dalam Obsidian.                                         |
+| `obsidian_get_periodic_note` | Dapatkan nota berkala harian/mingguan/bulanan untuk sesuatu tarikh (hari ini jika tidak dinyatakan).       |
+| `obsidian_get_tags`          | Senaraikan semua tag peti besi berserta kekerapannya.                                                      |
+| `obsidian_list_commands`     | Senaraikan ID perintah Obsidian yang tersedia (gunakan dengan `obsidian_execute_command`).                 |
+| `obsidian_sync_status`       | Status pelayan penyegerakan 67router: berjalan, nama peti besi, port, masa operasi, penyegerakan terakhir. |
+| `obsidian_sync_conflicts`    | Senaraikan konflik penyegerakan yang belum diselesaikan (laluan, laluan konflik, masa dikesan).            |
 
 ### Alat tulis (`write:obsidian`)
 

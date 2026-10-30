@@ -4,7 +4,7 @@
 
 ---
 
-> **Resumindo**: `open-sse/` é o mecanismo central de streaming que processa todas as solicitações a LLMs no OmniRoute. Ele contém cerca de 1.400 arquivos que implementam o pipeline de solicitações, executores, serviços, servidor MCP e camada de tradução. Este guia explica como essas partes se encaixam.
+> **Resumindo**: `open-sse/` é o mecanismo central de streaming que processa todas as solicitações a LLMs no 67router. Ele contém cerca de 1.400 arquivos que implementam o pipeline de solicitações, executores, serviços, servidor MCP e camada de tradução. Este guia explica como essas partes se encaixam.
 
 **Fonte:** `open-sse/` (pacote do workspace, cerca de 1.440 arquivos `.ts` que não são de teste)
 
@@ -12,10 +12,10 @@
 
 ## Por que um pacote de workspace separado?
 
-`open-sse/` é um **workspace independente** no monorepo do OmniRoute por vários motivos:
+`open-sse/` é um **workspace independente** no monorepo do 67router por vários motivos:
 
 1. **Reutilização** — `open-sse` é publicado como `@omniroute/open-sse` no npm, permitindo que outros projetos o utilizem de forma independente
-2. **Limites bem definidos** — o mecanismo de streaming é desacoplado da camada de interface/BD específica do OmniRoute
+2. **Limites bem definidos** — o mecanismo de streaming é desacoplado da camada de interface/BD específica do 67router
 3. **Desempenho** — o mecanismo não possui dependências do Next.js, permitindo inicializações a frio mais rápidas em contextos de CLI/serverless
 4. **Versionamento** — `open-sse` pode lançar versões em seu próprio ritmo
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Por que um transformador separado?
 
-A Responses API é o novo formato da OpenAI com **conversas com estado** (`previous_response_id`). Quando um cliente envia uma solicitação de Responses, o OmniRoute:
+A Responses API é o novo formato da OpenAI com **conversas com estado** (`previous_response_id`). Quando um cliente envia uma solicitação de Responses, o 67router:
 
 1. Converte Responses → Chat Completions internamente
 2. Envia ao provedor (qualquer provedor compatível com Chat Completions)

@@ -7,7 +7,7 @@
 > **Source de vérité :** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Dernière mise à jour :** 2026-06-28 — v3.8.40
 
-OmniRoute capture le `reasoning_content` de l’assistant produit par les modèles en mode réflexion et le réinjecte de manière transparente dans les requêtes à plusieurs tours lorsque le fournisseur en amont l’exige. Cela élimine les erreurs HTTP 400 que les fournisseurs stricts renvoient lorsque l’historique de conversation d’un client ne contient pas le raisonnement du tour précédent.
+67router capture le `reasoning_content` de l’assistant produit par les modèles en mode réflexion et le réinjecte de manière transparente dans les requêtes à plusieurs tours lorsque le fournisseur en amont l’exige. Cela élimine les erreurs HTTP 400 que les fournisseurs stricts renvoient lorsque l’historique de conversation d’un client ne contient pas le raisonnement du tour précédent.
 
 ## Pourquoi ce mécanisme existe
 
@@ -17,7 +17,7 @@ Plusieurs fournisseurs proposant un mode réflexion rejettent un tour de suivi s
 Paramètre incorrect : le reasoning_content du mode réflexion doit être renvoyé à l’API.
 ```
 
-Cependant, les clients habituels (Cursor, Cline, Roo Code, OpenAI SDK) suppriment le `reasoning_content` de l’historique qu’ils renvoient. OmniRoute le restaure à partir d’un cache côté serveur afin que la requête reçue par le fournisseur en amont soit cohérente. Le ticket #1628 a introduit la persistance hybride en mémoire/SQLite afin que le cache survive aux redémarrages du processus.
+Cependant, les clients habituels (Cursor, Cline, Roo Code, OpenAI SDK) suppriment le `reasoning_content` de l’historique qu’ils renvoient. 67router le restaure à partir d’un cache côté serveur afin que la requête reçue par le fournisseur en amont soit cohérente. Le ticket #1628 a introduit la persistance hybride en mémoire/SQLite afin que le cache survive aux redémarrages du processus.
 
 ## Architecture
 

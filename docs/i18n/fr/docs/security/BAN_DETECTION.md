@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute analyse les réponses d’erreur en amont afin d’y détecter des signaux indiquant qu’un
+67router analyse les réponses d’erreur en amont afin d’y détecter des signaux indiquant qu’un
 **compte fournisseur est définitivement inutilisable** (suspendu / désactivé / banni pour violation des conditions d’utilisation) et, lorsqu’une
 correspondance est trouvée, place cette connexion dans un **état terminal `banned`** afin qu’elle ne soit
 plus sélectionnée pour les requêtes. C’est ce que configure la carte de paramètres **Sécurité → Mots-clés de bannissement**

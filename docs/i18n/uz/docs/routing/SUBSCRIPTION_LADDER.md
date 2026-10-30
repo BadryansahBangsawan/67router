@@ -10,7 +10,7 @@
 
 ## Bu nima uchun mavjud
 
-OmniRoute allaqachon xarajatga oid ikkita savolga javob beradi, ammo ularning hech biri aksariyat operatorlar soʻraydigan savol emas.
+67router allaqachon xarajatga oid ikkita savolga javob beradi, ammo ularning hech biri aksariyat operatorlar soʻraydigan savol emas.
 
 | Mavjud mexanizm                                          | Javob beradigan savol                                |
 | -------------------------------------------------------- | ---------------------------------------------------- |

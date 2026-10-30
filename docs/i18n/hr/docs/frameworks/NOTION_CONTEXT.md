@@ -11,11 +11,11 @@
 
 ## Što je to
 
-OmniRoute se može povezati s radnim prostorom **Notion** kao **izvorom konteksta** — bazom
+67router se može povezati s radnim prostorom **Notion** kao **izvorom konteksta** — bazom
 znanja za čitanje i pisanje kojoj agenti pristupaju putem ugrađenog MCP poslužitelja. Nakon
 konfiguriranja tokena integracije Notion, MCP alati omogućuju LLM-u pretraživanje stranica i
 baza podataka, čitanje sadržaja stranica i stabala blokova, slanje upita bazama podataka uz
-filtre/sortiranje te dodavanje novih blokova — sve posredstvom OmniRoutea (uz ponovne pokušaje,
+filtre/sortiranje te dodavanje novih blokova — sve posredstvom 67routera (uz ponovne pokušaje,
 vremensko ograničenje i klasifikaciju pogrešaka), tako da model nikada izravno ne pristupa
 Notion API-ju.
 
@@ -42,7 +42,7 @@ putem REST API-ja za postavke.
 > [!NOTE]
 > Token je **token interne integracije Notion**. Izradite integraciju na
 > <https://www.notion.com/my-integrations>, a zatim s tom integracijom podijelite stranice/baze
-> podataka kojima želite omogućiti pristup OmniRouteu (Notionov model dopuštenja temelji se na
+> podataka kojima želite omogućiti pristup 67routeru (Notionov model dopuštenja temelji se na
 > dijeljenju, a ne na pristupu cijelom radnom prostoru).
 
 ### Konfiguriranje putem REST-a
@@ -61,7 +61,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Sve tri metode zahtijevaju autentifikaciju nadzorne ploče (`isAuthenticated`). Pri zahtjevu
-`POST` OmniRoute sprema token i odmah pokreće probno pretraživanje s jednim rezultatom; ako
+`POST` 67router sprema token i odmah pokreće probno pretraživanje s jednim rezultatom; ako
 Notion vrati objekt pogreške, token se briše, a poziv ne uspijeva uz status `400`.
 
 ## MCP alati (6)

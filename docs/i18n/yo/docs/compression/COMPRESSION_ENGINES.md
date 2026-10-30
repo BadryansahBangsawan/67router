@@ -4,7 +4,7 @@
 
 ---
 
-Ìfúnpọ̀ OmniRoute dá lórí àwọn àdéhùn engine. Mode kan lè ṣiṣẹ́ engine kan ní tààràtà
+Ìfúnpọ̀ 67router dá lórí àwọn àdéhùn engine. Mode kan lè ṣiṣẹ́ engine kan ní tààràtà
 (`caveman` tàbí `rtk`) tàbí pipeline aláìyípadà tí a tò ní ìpele, èyí tí ń ṣiṣẹ́ ọ̀pọ̀ engine ní tẹ̀lé-tẹ̀lé.
 
 ## Àwọn Ọ̀nà
@@ -35,7 +35,7 @@
 
 Tí a wọ̀n lórí àkójọ koodu yìí: `coding-safe` àti `balanced` mú `minCompressChars` lọ sí òkè jù lọ, wọ́n sì ń pa ètò, àwọn àtòjọ irinṣẹ́ àti àbájáde irinṣẹ́ mọ́ gẹ́gẹ́ bí ó ti wà, nítorí náà ìjíròrò tí kò tíì kó ìtàn jọ dúró ní `below_min_chars` àti pé ẹ́ńjìnnì náà kò yí ohunkóhun padà. Ìdí nìyẹn tí àṣàyàn fi jẹ́ `aggressive` dípò àtòjọ tí ó dára jù lọ.
 
-Pátákì náà ń yanjú àyíká àwòrán àti àtòjọ tirẹ̀ láti inú ìṣètò àyíká rẹ̀. OmniRoute kì í fi ìpinnu lé ẹlòmíràn lọ́wọ́: olùyípadà náà ń so ẹnu-ọ̀nà àwòrán mọ́ àyíká tí ó múnádòjú jù lọ ti pátákì náà, nítorí náà àwọn ètò àyíká agbalejo lè dín àtòjọ àyè kù nìkan, kì í lè fẹ̀ ẹ́ kọjá àwọn ìwé-ìdánilójú tí OmniRoute ti wọ̀n.
+Pátákì náà ń yanjú àyíká àwòrán àti àtòjọ tirẹ̀ láti inú ìṣètò àyíká rẹ̀. 67router kì í fi ìpinnu lé ẹlòmíràn lọ́wọ́: olùyípadà náà ń so ẹnu-ọ̀nà àwòrán mọ́ àyíká tí ó múnádòjú jù lọ ti pátákì náà, nítorí náà àwọn ètò àyíká agbalejo lè dín àtòjọ àyè kù nìkan, kì í lè fẹ̀ ẹ́ kọjá àwọn ìwé-ìdánilójú tí 67router ti wọ̀n.
 
 ## Ìforúkọsílẹ̀ Engine
 
@@ -98,7 +98,7 @@ kọ̀ọ̀kan.
 Apá rẹ̀ lórí dashboard ni `Dashboard -> Context & Cache -> Caveman`.
 
 Caveman upstream ròyìn pé àwọn token àbájáde dín kù ní `~75%`, ìfipamọ́ àbájáde àárín jẹ́ `65%` nínú àwọn ìdánwò
-pẹ̀lú ààlà `22-87%`, àti irinṣẹ́ ìfúnpọ̀ àwọlé `~46%`. OmniRoute ń lo iye Caveman ti ẹ̀gbẹ́ àwọlé
+pẹ̀lú ààlà `22-87%`, àti irinṣẹ́ ìfúnpọ̀ àwọlé `~46%`. 67router ń lo iye Caveman ti ẹ̀gbẹ́ àwọlé
 nígbà tó ń ṣàkọsílẹ̀ ìfipamọ́ prompt/context tí a tò pọ̀; ìpo àbájáde Caveman ṣì jẹ́ ẹ̀ya
 ìhùwàsí ìdáhùn ọ̀tọ̀.
 

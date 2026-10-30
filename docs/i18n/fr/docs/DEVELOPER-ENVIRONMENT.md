@@ -4,7 +4,7 @@
 
 ---
 
-Cette page explique le comportement local du fichier `.env` du projet ainsi que la manière de gérer les fichiers d’environnement et les secrets lors du développement d’OmniRoute.
+Cette page explique le comportement local du fichier `.env` du projet ainsi que la manière de gérer les fichiers d’environnement et les secrets lors du développement de 67router.
 
 ## Comportement de `.env` lors de postinstall
 

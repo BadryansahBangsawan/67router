@@ -9,7 +9,7 @@
 Sama manifesti on saatavilla HTTP:n kautta osoitteessa
 `GET /api/v1/provider-plugin-manifest` prosessin ulkopuolella suoritettavia sivuprosesseja varten.
 
-OmniRoute ilmoittaa kyseisen URL-osoitteen Bifrostille ja CLIProxyAPI:lle
+67router ilmoittaa kyseisen URL-osoitteen Bifrostille ja CLIProxyAPI:lle
 `X-OmniRoute-Provider-Manifest-Url`-pyyntöotsakkeella. Aseta
 `OMNIROUTE_PROVIDER_MANIFEST_URL`, kun sivuprosessi tarvitsee paikallisen pyynnön alkuperän sijaan julkisen tai konttiverkon URL-osoitteen.
 
@@ -24,7 +24,7 @@ sivuprosessin on tehtävä ehdoton pyyntö sen sijaan, että se hyväksyisi `304
 ## Tavoite
 
 Siirtää palveluntarjoajien metatietoja kohti lisäosasopimusta, jotta pyyntöjen suorituspolku voidaan
-lopulta siirtää pienemmän viiveen sivuprosessin vastuulle samalla, kun OmniRoute säilyttää
+lopulta siirtää pienemmän viiveen sivuprosessin vastuulle samalla, kun 67router säilyttää
 TypeScript-reitin käytäntöporttina ja vararatkaisuna. Manifesti on täydentävä: se
 ei itsessään muuta pyyntöjen reititystä.
 
@@ -68,7 +68,7 @@ että TypeScript-lähteitä luettaisiin uudelleen.
 | `usage-fetch`        | Käyttö- tai kiintiöhakija on kytketty (`getUsageForProvider`).                             |
 | `usage-supported`    | Käyttö-API hyväksyy tämän palveluntarjoajan (`isSupportedUsageConnection`).                |
 
-`usage-fetch` on tarkoitettu vain tunnistamiseen. Se ilmaisee, että OmniRoute osaa lukea palveluntarjoajan
+`usage-fetch` on tarkoitettu vain tunnistamiseen. Se ilmaisee, että 67router osaa lukea palveluntarjoajan
 käyttötiedot; se ei aktivoi hakua, muuta kiintiöiden semantiikkaa eikä tarkoita, että
 Dashboardin kiintiöwidget olisi käytössä palveluntarjoajalle — kyseistä widgetiä ohjataan erikseen
 `USAGE_SUPPORTED_PROVIDERS`-arvolla. Ensisijainen tietolähde on `USAGE_FETCHER_PROVIDERS` tiedostossa

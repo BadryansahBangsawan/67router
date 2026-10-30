@@ -11,7 +11,7 @@
 
 ## 功能简介
 
-OmniRoute 可以连接到 **Notion** 工作区，将其用作**上下文源**——一个可由智能体通过内置 MCP 服务器访问的读写知识库。配置 Notion 集成令牌后，MCP 工具可让 LLM 搜索页面和数据库、读取页面内容和区块树、使用筛选条件/排序查询数据库，以及追加新区块——所有操作都通过 OmniRoute 代理（支持重试、超时和错误分类），
+67router 可以连接到 **Notion** 工作区，将其用作**上下文源**——一个可由智能体通过内置 MCP 服务器访问的读写知识库。配置 Notion 集成令牌后，MCP 工具可让 LLM 搜索页面和数据库、读取页面内容和区块树、使用筛选条件/排序查询数据库，以及追加新区块——所有操作都通过 67router 代理（支持重试、超时和错误分类），
 因此模型绝不会直接访问 Notion API。
 
 该集成是官方 Notion REST API
@@ -35,7 +35,7 @@ Notion 令牌**没有对应的环境变量**——它通过
 > [!NOTE]
 > 此令牌是 **Notion 内部集成令牌**。请在
 > <https://www.notion.com/my-integrations> 创建集成，然后将希望
-> OmniRoute 访问的页面/数据库共享给该集成（Notion 的权限模型基于共享，
+> 67router 访问的页面/数据库共享给该集成（Notion 的权限模型基于共享，
 > 而非整个工作区）。
 
 ### 通过 REST 配置
@@ -54,7 +54,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 这三种方法均需要通过控制面板身份验证（`isAuthenticated`）。执行 `POST` 时，
-OmniRoute 会保存令牌并立即运行一次仅返回 1 条结果的测试搜索；如果 Notion
+67router 会保存令牌并立即运行一次仅返回 1 条结果的测试搜索；如果 Notion
 返回错误对象，则会清除令牌，并使该调用以 `400` 失败。
 
 ## MCP 工具（6 个）

@@ -5,11 +5,11 @@
 ---
 
 > **Status:** Općenito dostupno.
-> **Publika:** Operateri koji povezuju OpenCode s OmniRoute implementacijom.
+> **Publika:** Operateri koji povezuju OpenCode s 67router implementacijom.
 > **Izvor istine (konfiguracijska shema):** `src/shared/services/opencodeConfig.ts`
 > **Izvor istine (npm paket):** `@omniroute/opencode-provider/` (radni prostor koji se može objaviti)
 
-[OpenCode](https://opencode.ai) je agentski CLI/stolni AI klijent. Svoj katalog pružatelja čita iz `~/.config/opencode/opencode.json` (ili `opencode.jsonc`) i slijedi shemu na adresi `https://opencode.ai/config.json`. OmniRoute se OpenCodeu predstavlja kao jedan od tih pružatelja — svaki zahtjev prolazi kroz standardno OpenAI-kompatibilno `/v1` sučelje OmniRoutea, pa OpenCode automatski koristi prednosti Auto-Combo usmjeravanja, prekidača strujnog kruga, pravila za ključeve, opservabilnosti itd.
+[OpenCode](https://opencode.ai) je agentski CLI/stolni AI klijent. Svoj katalog pružatelja čita iz `~/.config/opencode/opencode.json` (ili `opencode.jsonc`) i slijedi shemu na adresi `https://opencode.ai/config.json`. 67router se OpenCodeu predstavlja kao jedan od tih pružatelja — svaki zahtjev prolazi kroz standardno OpenAI-kompatibilno `/v1` sučelje 67routera, pa OpenCode automatski koristi prednosti Auto-Combo usmjeravanja, prekidača strujnog kruga, pravila za ključeve, opservabilnosti itd.
 
 Postoje **dva podržana načina integracije**. Odaberite jedan — oba generiraju istu konfiguraciju.
 
@@ -17,16 +17,16 @@ Postoje **dva podržana načina integracije**. Odaberite jedan — oba generiraj
 
 ## 1. način — CLI generator (bez npm instalacije)
 
-Preporučuje se krajnjim korisnicima. Isporučuje se s OmniRouteom. Izravno zapisuje `opencode.json`.
+Preporučuje se krajnjim korisnicima. Isporučuje se s 67routerom. Izravno zapisuje `opencode.json`.
 
 ```bash
-# Nakon instaliranja OmniRoutea (npm i -g @omniroute/cli ili lokalni klon)
+# Nakon instaliranja 67routera (npm i -g @omniroute/cli ili lokalni klon)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-CLI u pozadini poziva `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), pa postojeći `opencode.json` zadržava ostale pružatelje i komentare. Unos za OmniRoute dodaje se ili zamjenjuje atomski.
+CLI u pozadini poziva `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), pa postojeći `opencode.json` zadržava ostale pružatelje i komentare. Unos za 67router dodaje se ili zamjenjuje atomski.
 
 Rezultirajuća datoteka (zadani katalog modela):
 
@@ -90,8 +90,8 @@ Oba načina proizvode isti `provider.omniroute.npm: "@ai-sdk/openai-compatible"`
 ```
 OpenCode korisničko sučelje/agent
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OpenAI sučelje OmniRoutea)
-         → OmniRoute rukovatelj /v1/chat/completions  (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (OpenAI sučelje 67routera)
+         → 67router rukovatelj /v1/chat/completions  (open-sse/handlers/chatCore.ts)
             → kombinirano usmjeravanje / Auto-Combo / izvršitelj
                → nadređeni pružatelj
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Možete ih nadjačati putem `models: [...]`. Preporučeni dodaci:
 
-- `"auto"` — omogućuje OmniRouteov [Auto-Combo](../routing/AUTO-COMBO.md) usmjerivač bez potrebe za konfiguracijom. Omogućuje OpenCodeu da odabere „najbolji dostupni model” bez ručnog definiranja kataloga.
-- `"<combo-name>"` — bilo koja kombinacija koju ste definirali na nadzornoj ploči; OmniRoute je razrješava transparentno.
+- `"auto"` — omogućuje 67routerov [Auto-Combo](../routing/AUTO-COMBO.md) usmjerivač bez potrebe za konfiguracijom. Omogućuje OpenCodeu da odabere „najbolji dostupni model” bez ručnog definiranja kataloga.
+- `"<combo-name>"` — bilo koja kombinacija koju ste definirali na nadzornoj ploči; 67router je razrješava transparentno.
 
 ---
 
@@ -135,29 +135,29 @@ Ova deduplikacija je **najčešći uzrok neispravnosti** u starijim konfiguracij
 
 ## Načini autentifikacije
 
-| Postavka OmniRoutea                         | Preporučena vrijednost za `apiKey`                                         |
+| Postavka 67routera                          | Preporučena vrijednost za `apiKey`                                         |
 | ------------------------------------------- | -------------------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (zadano za lokalno) | `sk_omniroute` (doslovna zamjenska vrijednost)                             |
 | `REQUIRE_API_KEY=true`                      | Stvarni API ključ za pojedinog korisnika iz Nadzorna ploča → API ključevi. |
 
-Za klijente u stilu Anthropica koji šalju `x-api-key` + `anthropic-version`, OmniRouteov `extractApiKey` također prihvaća ključ iz `x-api-key`. OpenCode koristi OpenAI sučelje, pa će uvijek slati `Authorization: Bearer ${apiKey}` — ovdje se ne primjenjuje poseban slučaj za Anthropic.
+Za klijente u stilu Anthropica koji šalju `x-api-key` + `anthropic-version`, 67routerov `extractApiKey` također prihvaća ključ iz `x-api-key`. OpenCode koristi OpenAI sučelje, pa će uvijek slati `Authorization: Bearer ${apiKey}` — ovdje se ne primjenjuje poseban slučaj za Anthropic.
 
 ---
 
 ## Otklanjanje poteškoća
 
-| Simptom                                                 | Uzrok                                                                           | Rješenje                                                                                                           |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `404` na svakom zahtjevu s URL-om koji sadrži `/v1/v1/` | Zastarjela konfiguracija dodatka prije v3.8 koja je dvaput dodavala `/v1`.      | Ponovno je generirajte putem 1. ili 2. načina.                                                                     |
-| `401 Invalid API key`                                   | OmniRoute ima `REQUIRE_API_KEY=true`, a ključ nije poznat.                      | Izradite ključ na nadzornoj ploči ili postavite `REQUIRE_API_KEY=false` (samo lokalno) i koristite `sk_omniroute`. |
-| Popis modela prazan je u korisničkom sučelju OpenCodea  | Sva 4 zadana modela skrivena su u postavkama vidljivosti pružatelja OmniRoutea. | Proslijedite `models: ["auto", ...]` kako bi se prikazali oni koje ste omogućili.                                  |
-| OpenCode vraća 500 uz `cannot read property 'models'`   | Starije verzije OpenCodea (< 0.1.x) nisu prihvaćale ugrađeni `models`.          | Nadogradite OpenCode na verziju koja slijedi v1 shemu (`opencode.ai/config.json`).                                 |
+| Simptom                                                 | Uzrok                                                                          | Rješenje                                                                                                           |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `404` na svakom zahtjevu s URL-om koji sadrži `/v1/v1/` | Zastarjela konfiguracija dodatka prije v3.8 koja je dvaput dodavala `/v1`.     | Ponovno je generirajte putem 1. ili 2. načina.                                                                     |
+| `401 Invalid API key`                                   | 67router ima `REQUIRE_API_KEY=true`, a ključ nije poznat.                      | Izradite ključ na nadzornoj ploči ili postavite `REQUIRE_API_KEY=false` (samo lokalno) i koristite `sk_omniroute`. |
+| Popis modela prazan je u korisničkom sučelju OpenCodea  | Sva 4 zadana modela skrivena su u postavkama vidljivosti pružatelja 67routera. | Proslijedite `models: ["auto", ...]` kako bi se prikazali oni koje ste omogućili.                                  |
+| OpenCode vraća 500 uz `cannot read property 'models'`   | Starije verzije OpenCodea (< 0.1.x) nisu prihvaćale ugrađeni `models`.         | Nadogradite OpenCode na verziju koja slijedi v1 shemu (`opencode.ai/config.json`).                                 |
 
 ---
 
 ## Vidi također
 
-- [Referenca API-ja](../reference/API_REFERENCE.md) — cjelovit pregled OmniRoute REST sučelja
+- [Referenca API-ja](../reference/API_REFERENCE.md) — cjelovit pregled 67router REST sučelja
 - [Auto-Combo](../routing/AUTO-COMBO.md) — što znači `model: "auto"`
 - [README za `@omniroute/opencode-provider`](../../@omniroute/opencode-provider/README.md)
 - Izvor: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

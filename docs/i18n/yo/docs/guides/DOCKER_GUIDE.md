@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Yorùbá)
+# 🐳 Docker Guide — 67router (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Pẹ̀lú Fáìlì Àyíká](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Àwọn Profile Tó Wà](#available-profiles)
-- [Ṣíṣètò àwọn irinṣẹ́ CLI ti host nígbà tí OmniRoute bá ń ṣiṣẹ́ nínú Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Ṣíṣètò àwọn irinṣẹ́ CLI ti host nígbà tí 67router bá ń ṣiṣẹ́ nínú Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [Compose Fún Production](#production-compose)
 - [Àwọn Ìpele Dockerfile](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Àwọn Profile Tó Wà
 
-OmniRoute ní àwọn profile Compose fún àwọn ìrísí ìmúṣiṣẹ́ pàtàkì. Yan èyí tó bá àyíká rẹ mu.
+67router ní àwọn profile Compose fún àwọn ìrísí ìmúṣiṣẹ́ pàtàkì. Yan èyí tó bá àyíká rẹ mu.
 
 | Profile           | Service          | Ìgbà tí o yẹ kí o lò ó                                                                                                                                        | Àṣẹ                                          |
 | ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute ní àwọn profile Compose fún àwọn ìrísí ìmúṣiṣẹ́ p�
 
 > A lè darapọ̀ ọ̀pọ̀ profile: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Ṣíṣètò àwọn irinṣẹ́ CLI ti host nígbà tí OmniRoute bá ń ṣiṣẹ́ nínú Docker
+## Ṣíṣètò àwọn irinṣẹ́ CLI ti host nígbà tí 67router bá ń ṣiṣẹ́ nínú Docker
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` àti bọ́tìnì
 **Fi àtòjọ-ẹ̀rọ pamọ́** ti dashboard, gbogbo wọn ni wọ́n ń kọ fáìlì bíi `~/.codex/*.config.toml`. Àwọn path wọ̀nyẹn
@@ -103,11 +103,11 @@ container, ohun tí a kọ yóò lọ sínú home ti container náà fúnra rẹ
 image náà ń ṣiṣẹ́ pẹ̀lú `USER node`), níbi tí CLI host kankan kò ti ní kà á láéláé, tí a ó sì
 pa á rẹ́ ní kété tí a bá tún container náà ṣẹ̀dá.
 
-OmniRoute máa ń ṣàwárí èyí, yóò sì kọ̀ láti kọ ọ́, nípa fífún ọ ní ìtọ́nisọ́nà dípò
+67router máa ń ṣàwárí èyí, yóò sì kọ̀ láti kọ ọ́, nípa fífún ọ ní ìtọ́nisọ́nà dípò
 jíjàbọ̀ àṣeyọrí tí o kò lè lò: CLI náà yóò jáde pẹ̀lú `2`, API náà yóò sì dáhùn `422`
 pẹ̀lú `containerEphemeralTarget: true`.
 
-### Ohun tí a dámọ̀ràn: ṣiṣẹ́ CLI lórí host, kí OmniRoute sì ṣiṣẹ́ nínú Docker
+### Ohun tí a dámọ̀ràn: ṣiṣẹ́ CLI lórí host, kí 67router sì ṣiṣẹ́ nínú Docker
 
 Container náà ń pèsè API; CLI náà ń ṣètò àwọn irinṣẹ́ host rẹ.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Bind mount ni ó mú kí path náà ṣeé fọkàn tán: OmniRoute máa ń ka
+Bind mount ni ó mú kí path náà ṣeé fọkàn tán: 67router máa ń ka
 `/proc/self/mountinfo`, yóò sì gba kí a kọ sí àwọn path tí a mount (àti sí àwọn directory
 tí àwọn ọmọ wọn jẹ́ mount, èyí tí ó bá ìrísí `/host-home` lókè mu gan-an), nígbà tí
 ó ṣì ń kọ̀ láti kọ sí àwọn tí a kò mount.
@@ -178,7 +178,7 @@ pẹ̀lú ìkìlọ̀ pé kò ní wà lẹ́yìn tí container náà bá parí.
 
 ## Redis Sidecar
 
-OmniRoute gbára lé Redis láti ṣe àtìlẹ́yìn fún olùdínwọ̀n ìwọ̀n lílò tí a pín káàkiri àti cache tí a pín. A máa ń ṣàlàyé iṣẹ́ `redis` **ní gbogbo ìgbà** nínú `docker-compose.yml` (kò ní ìdènà profile kankan), ó sì máa ń bẹ̀rẹ̀ pẹ̀lú profile èyíkéyìí mìíràn.
+67router gbára lé Redis láti ṣe àtìlẹ́yìn fún olùdínwọ̀n ìwọ̀n lílò tí a pín káàkiri àti cache tí a pín. A máa ń ṣàlàyé iṣẹ́ `redis` **ní gbogbo ìgbà** nínú `docker-compose.yml` (kò ní ìdènà profile kankan), ó sì máa ń bẹ̀rẹ̀ pẹ̀lú profile èyíkéyìí mìíràn.
 
 | Àlàyé               | Iye                                         |
 | ------------------- | ------------------------------------------- |
@@ -366,7 +366,7 @@ Ní àfikún sí àwọn iye àìyípadà tí a ṣàkọsílẹ̀ sínú [ENVIR
 
 ## Aṣojú Ìyípadà lórí Ọ̀nà Abẹ́ (Traefik / nginx)
 
-Next.js `basePath` jẹ́ ohun tí a kó sínú àkójọpọ̀ standalone. OmniRoute máa ń ṣàkọsílẹ̀ iye tí a ti kó sínú rẹ̀
+Next.js `basePath` jẹ́ ohun tí a kó sínú àkójọpọ̀ standalone. 67router máa ń ṣàkọsílẹ̀ iye tí a ti kó sínú rẹ̀
 nínú fáìlì sentinel kan ní gbòǹgbò app náà (tí a kọ nígbà `npm run build`; tí
 `scripts/docker/ensure-docker-base-path.mjs` sì ń kà) ó sì máa ń fi wé
 `OMNIROUTE_BASE_PATH` nígbà tí container bá bẹ̀rẹ̀. Nígbà tí wọ́n bá yàtọ̀ tí image náà sì jẹ́
@@ -439,7 +439,7 @@ liveness bí àwọn probe HTTP bá ń timeout. Ìtọ́sọ́nà probe kíkún:
 
 ## Docker Compose pẹ̀lú Caddy (HTTPS Auto-TLS)
 
-A lè ṣí OmniRoute síta láìléwu nípa lílo ìpèsè SSL aládàáṣiṣẹ́ ti Caddy. Rí i dájú pé àkọsílẹ̀ DNS A ti domain rẹ ń tọ́ka sí àdírẹ́sì IP olupèsè rẹ.
+A lè ṣí 67router síta láìléwu nípa lílo ìpèsè SSL aládàáṣiṣẹ́ ti Caddy. Rí i dájú pé àkọsílẹ̀ DNS A ti domain rẹ ń tọ́ka sí àdírẹ́sì IP olupèsè rẹ.
 
 ```yaml
 services:
@@ -470,11 +470,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy ń ṣètò àwọn àkọlé ìfiranṣẹ́-àtẹ̀jáde boṣewa fún container òkè-odò náà. OmniRoute ń lo
+Caddy ń ṣètò àwọn àkọlé ìfiranṣẹ́-àtẹ̀jáde boṣewa fún container òkè-odò náà. 67router ń lo
 `NEXT_PUBLIC_BASE_URL` gẹ́gẹ́ bí orísun gbogbogbò àṣẹ fún àwọn ìpè-padà OAuth àti àwọn ìjápọ̀
 gbogbogbò tí a ṣẹ̀dá; àwọn ìkọ̀wé dashboard tí a ti fìdí ìdánimọ̀ múlẹ̀ ń lo àwọn ìbéèrè orísun-kan-náà pẹ̀lú ààbò CSRF
 tí a so mọ́ session. Ṣe `OMNIROUTE_TRUST_PROXY` ṣiṣẹ́ fún àwọn ìmúṣiṣẹ́ onípele-gíga nìkan, níbi tí o ti mọ̀ọ́mọ̀
-fẹ́ kí OmniRoute pinnu orísun gbogbogbò láti inú àwọn àkọlé ìfiranṣẹ́-àtẹ̀jáde tí a fọkàn tán dípò
+fẹ́ kí 67router pinnu orísun gbogbogbò láti inú àwọn àkọlé ìfiranṣẹ́-àtẹ̀jáde tí a fọkàn tán dípò
 àtúnṣe tó ṣe kedere.
 
 ## Cloudflare Quick Tunnel
@@ -486,11 +486,11 @@ A lè fi àwọn paneli tunnel endpoint (Cloudflare, Tailscale, ngrok) hàn tàb
 ### Àwọn Àkíyèsí Tunnel
 
 - Àwọn URL Quick Tunnel jẹ́ ti ìgbà díẹ̀, wọ́n sì máa ń yí padà lẹ́yìn gbogbo ìbẹ̀rẹ̀ tuntun.
-- A kì í dá àwọn Quick Tunnel padà láìfọwọ́yí lẹ́yìn ìbẹ̀rẹ̀ tuntun OmniRoute tàbí container. Ṣe wọ́n ṣiṣẹ́ lẹ́ẹ̀kan sí i láti dashboard nígbà tí a bá nílò wọn.
+- A kì í dá àwọn Quick Tunnel padà láìfọwọ́yí lẹ́yìn ìbẹ̀rẹ̀ tuntun 67router tàbí container. Ṣe wọ́n ṣiṣẹ́ lẹ́ẹ̀kan sí i láti dashboard nígbà tí a bá nílò wọn.
 - Ìfisórí tí a ń ṣàkóso ń ṣe àtìlẹ́yìn fún Linux, macOS, àti Windows lórí `x64` / `arm64` lọ́wọ́lọ́wọ́.
 - Àwọn Quick Tunnel tí a ń ṣàkóso máa ń lo ìgbékalẹ̀ HTTP/2 gẹ́gẹ́ bí àtúnṣe àkọ́kọ́ láti yẹra fún àwọn ìkìlọ̀ buffer QUIC UDP aláriwo nínú àwọn àyíká container tí a ní ààlà. Ṣètò `CLOUDFLARED_PROTOCOL=quic` tàbí `auto` bí o bá fẹ́ ìgbékalẹ̀ mìíràn.
 - Àwọn image Docker ní àwọn gbòǹgbò CA ètò nínú, wọ́n sì ń fi wọ́n ránṣẹ́ sí `cloudflared` tí a ń ṣàkóso, èyí tó ń dènà ìkùnà ìgbẹ́kẹ̀lé TLS nígbà tí tunnel bá ń bẹ̀rẹ̀ nínú container.
-- Ṣètò `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` bí o bá fẹ́ kí OmniRoute lo binary tó ti wà tẹ́lẹ̀ dípò ṣíṣe ìgbàsílẹ̀ tuntun.
+- Ṣètò `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` bí o bá fẹ́ kí 67router lo binary tó ti wà tẹ́lẹ̀ dípò ṣíṣe ìgbàsílẹ̀ tuntun.
 
 ## Àwọn Tag Image
 
@@ -503,7 +503,7 @@ Manifest oní-platform-púpọ̀: `linux/amd64` + `linux/arm64` abínibí (Apple
 
 ### Àwọn Channel Ìtẹ̀jáde
 
-OmniRoute ń tẹ̀jáde àwọn channel Docker ọ̀tọ̀ọ̀tọ̀ fún àwọn ìtẹ̀jáde adúróṣinṣin, ìdánwò ẹ̀ka-ìtẹ̀jáde tó ń ṣiṣẹ́, àti àwọn build ìdàgbàsókè.
+67router ń tẹ̀jáde àwọn channel Docker ọ̀tọ̀ọ̀tọ̀ fún àwọn ìtẹ̀jáde adúróṣinṣin, ìdánwò ẹ̀ka-ìtẹ̀jáde tó ń ṣiṣẹ́, àti àwọn build ìdàgbàsókè.
 
 | Channel                         | Orísun                                         | Ṣíṣeé-yípadà                       | Ìlò tí a dámọ̀ràn                                                                                                                     |
 | ------------------------------- | ---------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -556,7 +556,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Kí o tó bẹ̀rẹ̀ ìdánwò, ṣe àdàkọ afẹ́yinti volume data OmniRoute tàbí directory data tí a fi bind mount. Láti padà sẹ́yìn, dá stable version tàbí digest tí a lò tẹ́lẹ̀ padà, kí o sì tún container náà ṣẹ̀dá:
+Kí o tó bẹ̀rẹ̀ ìdánwò, ṣe àdàkọ afẹ́yinti volume data 67router tàbí directory data tí a fi bind mount. Láti padà sẹ́yìn, dá stable version tàbí digest tí a lò tẹ́lẹ̀ padà, kí o sì tún container náà ṣẹ̀dá:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -576,7 +576,7 @@ Build láti ẹ̀ka release kò lè yí `latest` padà láé; stable semantic ve
 
 ## Àwọn ìmúdójúìwọ̀n Dashboard nínú Docker
 
-Container àwòrán tí a ti tẹ̀jáde kò lè rọ́pò ara rẹ̀. Nígbà tí OmniRoute bá ṣàwárí pé òun ń ṣiṣẹ́ nínú
+Container àwòrán tí a ti tẹ̀jáde kò lè rọ́pò ara rẹ̀. Nígbà tí 67router bá ṣàwárí pé òun ń ṣiṣẹ́ nínú
 container kan (kò sí checkout `.git`, kì í ṣe ìfisórí npm), àsìá ìmúdójúìwọ̀n dashboard ojúlé yóò fi
 àṣẹ host tí a ó ṣiṣẹ́ hàn dípò àwọn ìtọ́ni npm/git, pẹ̀lú bọ́tìnì ìṣàdàkọ:
 
@@ -592,7 +592,7 @@ Orúkọ service náà wá láti `AUTO_UPDATE_SERVICE` (àkọ́kọ́bẹ̀rẹ
 
 Láti jẹ́ kí **Ṣe Ìmúdójúìwọ̀n Báyìí** máa ṣiṣẹ́ láì gbe `/var/run/docker.sock` sókè (èyí tó ń fún container
 ní àṣẹ root lórí host — wo ìkìlọ̀ profile `cli` lókè), ṣètò `DOCKER_UPDATE_TRIGGER_FILE` lórí
-service OmniRoute kí o sì ṣiṣẹ́ olùṣọ́ kan lórí host:
+service 67router kí o sì ṣiṣẹ́ olùṣọ́ kan lórí host:
 
 ```yaml
 services:
@@ -606,7 +606,7 @@ services:
 Ọ̀nà náà gbọ́dọ̀ wà nínú `DATA_DIR` (àwọn iye ìbátan máa ń yanjú ní ìbámu pẹ̀lú rẹ̀); ohunkóhun mìíràn ni a
 ó kọ̀. **Ṣe Ìmúdójúìwọ̀n Báyìí** yóò kọ `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` sínú
 fáìlì náà, dáhùn pẹ̀lú `202`, dashboard náà yóò sì máa ṣàyẹ̀wò `/api/system/version` títí ẹ̀yà tuntun
-yóò fi bẹ̀rẹ̀ sí í ṣiṣẹ́, lẹ́yìn náà yóò tún kojú. OmniRoute kì í ṣiṣẹ́ shell tàbí àṣẹ Docker rárá ní ipò yìí. Gẹ́gẹ́ bí gbogbo
+yóò fi bẹ̀rẹ̀ sí í ṣiṣẹ́, lẹ́yìn náà yóò tún kojú. 67router kì í ṣiṣẹ́ shell tàbí àṣẹ Docker rárá ní ipò yìí. Gẹ́gẹ́ bí gbogbo
 ìgbésẹ̀ ìmúdójúìwọ̀n, àwọn client loopback/LAN nìkan ni a ti ń gba ìbéèrè náà lọ́wọ́ wọn.
 
 Ìtọ́kasí data tí a so mọ́ bind ń fún host ní ọ̀nà tó dúró ṣinṣin láti máa ṣọ́. Àwọn unit `systemd` àpẹẹrẹ
@@ -615,7 +615,7 @@ yóò fi bẹ̀rẹ̀ sí í ṣiṣẹ́, lẹ́yìn náà yóò tún kojú. Om
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Ṣọ́ àwọn ìbéèrè ìmúdójúìwọ̀n dashboard OmniRoute
+Description=Ṣọ́ àwọn ìbéèrè ìmúdójúìwọ̀n dashboard 67router
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -627,7 +627,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Fa container OmniRoute kalẹ̀ kí o sì tún un ṣẹ̀dá
+Description=Fa container 67router kalẹ̀ kí o sì tún un ṣẹ̀dá
 
 [Service]
 Type=oneshot
@@ -647,13 +647,13 @@ Service náà máa ń yọ ìbéèrè náà kúrò kí ó tó fa àwòrán náà
 
 ## Wíwà-nílẹ̀: SQLite àkọ́kọ́bẹ̀rẹ̀ jẹ́ replica kan ṣoṣo
 
-OmniRoute Docker / Kubernetes àkọ́kọ́ ní **process Node kan + writer SQLite kan**. Wíwà-nílẹ̀ gíga **kò ní àtìlẹ́yìn** lórí topology yẹn.
+67router Docker / Kubernetes àkọ́kọ́ ní **process Node kan + writer SQLite kan**. Wíwà-nílẹ̀ gíga **kò ní àtìlẹ́yìn** lórí topology yẹn.
 
-| Ìdíwọ́                                  | Àbájáde                                                                                                                                                                                                                                                                                                                            |
-| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Writer kan ṣoṣo                        | **Má ṣe** ṣiṣẹ́ ọ̀pọ̀ replica lórí fáìlì SQLite kan náà. Èyí máa ba DB náà jẹ́.                                                                                                                                                                                                                                                        |
-| Ìtúnṣẹ̀dá / ìtúnṣiṣẹ́ / pípa HEALTHCHECK | **Ìdádúró pátápátá** fún SSE tó ń lọ lọ́wọ́, àwọn session dashboard, àti state inú memory. Gbogbo client tó sopọ̀ yóò já. Àwọn ìbéèrè tuntun ní àkókò tí endpoint ṣófo yóò gba **`502 Bad Gateway: Unknown error`** láti ọ̀dọ̀ reverse-proxy, kì í ṣe JSON OmniRoute — àwọn client kò lè yà èyí sọ́tọ̀ kúrò nínú ìkùnà provider (#11015). |
-| Event loop kan náà bí `/healthz`       | Catalog tó dí tàbí tick compression lè mú kí àwọn probe pẹ́; timeout kúkúrú yóò sì tún replica **kan ṣoṣo** náà bẹ̀rẹ̀.                                                                                                                                                                                                               |
+| Ìdíwọ́                                  | Àbájáde                                                                                                                                                                                                                                                                                                                           |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Writer kan ṣoṣo                        | **Má ṣe** ṣiṣẹ́ ọ̀pọ̀ replica lórí fáìlì SQLite kan náà. Èyí máa ba DB náà jẹ́.                                                                                                                                                                                                                                                       |
+| Ìtúnṣẹ̀dá / ìtúnṣiṣẹ́ / pípa HEALTHCHECK | **Ìdádúró pátápátá** fún SSE tó ń lọ lọ́wọ́, àwọn session dashboard, àti state inú memory. Gbogbo client tó sopọ̀ yóò já. Àwọn ìbéèrè tuntun ní àkókò tí endpoint ṣófo yóò gba **`502 Bad Gateway: Unknown error`** láti ọ̀dọ̀ reverse-proxy, kì í ṣe JSON 67router — àwọn client kò lè yà èyí sọ́tọ̀ kúrò nínú ìkùnà provider (#11015). |
+| Event loop kan náà bí `/healthz`       | Catalog tó dí tàbí tick compression lè mú kí àwọn probe pẹ́; timeout kúkúrú yóò sì tún replica **kan ṣoṣo** náà bẹ̀rẹ̀.                                                                                                                                                                                                              |
 
 **Matrix probe** (tún wo [àwọn àbá probe Kubernetes](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -756,7 +756,7 @@ pẹ̀lú ipa-ọ̀nà àsopọ̀ gangan; àṣìṣe yìí nìkan kò fi hàn p
 
 ### Yan proxy kan pàtó fún àsopọ̀
 
-Lo [ètò proxy fún àsopọ̀ kọ̀ọ̀kan](../ops/PROXY_GUIDE.md#4-level-proxy-system) ti OmniRoute
+Lo [ètò proxy fún àsopọ̀ kọ̀ọ̀kan](../ops/PROXY_GUIDE.md#4-level-proxy-system) ti 67router
 fún àsopọ̀ Gemini tí ọ̀ràn náà kàn, lẹ́yìn náà tún **Test Connection** àti ìbéèrè kékeré kan ṣe
 pẹ̀lú model kan náà. Èyí ń mú kí àyípadà ìtọ́sọ́nà náà mọ sí àsopọ̀ yẹn nìkan. Ṣàrídájú
 pé container lè dé ọ̀dọ̀ proxy náà, àti pé àsopọ̀ náà yan án ní ti gidi.
@@ -826,7 +826,7 @@ lè dá iṣẹ́ àwọn container mìíràn tí a so mọ́ ọn dúró; má �
 
 ## Àwọn Àkíyèsí Pàtàkì
 
-- **Ipo WAL SQLite:** Ó yẹ kí a jẹ́ kí `docker stop` parí kí OmniRoute lè ṣe checkpoint àwọn ìyípadà tuntun padà sínú `storage.sqlite`. Àwọn fáìlì Compose tí a ṣàkójọpọ̀ mọ́ ọn ti ṣètò àkókò ìdádúró-ọ̀fẹ́ sí 40s tẹ́lẹ̀. Tí o bá ń ṣiṣẹ́ image náà ní tààrà, fi `--stop-timeout 40` sílẹ̀.
+- **Ipo WAL SQLite:** Ó yẹ kí a jẹ́ kí `docker stop` parí kí 67router lè ṣe checkpoint àwọn ìyípadà tuntun padà sínú `storage.sqlite`. Àwọn fáìlì Compose tí a ṣàkójọpọ̀ mọ́ ọn ti ṣètò àkókò ìdádúró-ọ̀fẹ́ sí 40s tẹ́lẹ̀. Tí o bá ń ṣiṣẹ́ image náà ní tààrà, fi `--stop-timeout 40` sílẹ̀.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Ṣètò rẹ̀ sí `true` tí a bá ń ṣàkóso àwọn backup àkókò-dé-àkókò/kíkọ-ṣáájú níta. Àwọn migration fún database tó ti wà ṣì nílò snapshot ààbò tó lágbára tiwọn àti guard fún mass-migration.
 - **Ìtọ́jú Data:** Máa mount volume sí `/app/data` nígbà gbogbo láti tọ́jú database, àwọn key, àti àwọn configuration rẹ ní gbogbo ìgbà tí container bá tún bẹ̀rẹ̀.
 - **Ìṣètò Port:** Ṣàtúnṣe environment variable `PORT` láti yí port àiyipada `20128` padà.

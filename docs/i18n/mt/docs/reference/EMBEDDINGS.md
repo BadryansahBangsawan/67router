@@ -4,9 +4,9 @@
 
 ---
 
-Noti għall-operaturi dwar `POST /v1/embeddings` meta OmniRoute jkun quddiem
+Noti għall-operaturi dwar `POST /v1/embeddings` meta 67router jkun quddiem
 Hindsight 0.9.1 (`encode(list[str])` għal test biss) u Memorix 1.6.0 (il-gate
-tal-midja ta’ Jina). Ivverifikat live fl-2026-08-17 ma’ OmniRoute 3.8.49 fuq
+tal-midja ta’ Jina). Ivverifikat live fl-2026-08-17 ma’ 67router 3.8.49 fuq
 `https://omniroute.jaguar-fish.ts.net/v1`. M’hemm l-ebda sigriet hawn taħt.
 
 ## IDs tal-mudelli li jaħdmu
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Il-`gemini-embedding-2` nattiv ma jistax jirnexxi permezz ta’ GitOps biss.
 Ċavetta ta’ Google AI Studio trid tiġi miżjuda bħala konnessjoni mal-fornitur
-`gemini` (mid-dashboard jew billi `GEMINI_API_KEY` tiġi importata f’OmniRoute).
+`gemini` (mid-dashboard jew billi `GEMINI_API_KEY` tiġi importata f’67router).
 Dak is-sigriet mhuwiex f’dan ir-repo.
 
 ### Rotta multimodali ta’ Jina
@@ -101,7 +101,7 @@ Uża `POST /v1/embeddings` sakemm ikun jeżisti alias.
 
 ### Oġġett tal-immaġni ta’ Jina / Memorix
 
-Element kanoniku tal-immaġni ta’ OmniRoute (PNG ta’ 28×28, 784 pixel — Jina
+Element kanoniku tal-immaġni ta’ 67router (PNG ta’ 28×28, 784 pixel — Jina
 tirrifjuta 1×1):
 
 ```json
@@ -151,7 +151,7 @@ Riżultat attwali: HTTP **400**
 
 L-embeddings ta’ Hindsight huma għal test biss (`encode(list[str])`). Ma
 jibgħatx oġġetti tal-immaġni. Ipponta l-URL bażi tal-embeddings kompatibbli
-ma’ OpenAI ta’ Hindsight lejn OmniRoute `/v1` u uża ID li jaħdem mit-tabella
+ma’ OpenAI ta’ Hindsight lejn 67router `/v1` u uża ID li jaħdem mit-tabella
 ta’ hawn fuq (`jina-ai/jina-embeddings-v5-omni-small` jew
 `openrouter/google/gemini-embedding-2`). Tissettjax il-mudell għal
 `gemini-embedding-2` waħdu sakemm ma tkunx teżisti ċavetta tal-API `gemini`
@@ -160,12 +160,12 @@ fuq il-gateway.
 ### Memorix 1.6.0
 
 Memorix jittratta bħala midja nattiva biss `baseUrl` li jaqbel ma’
-`/jina\.ai/i`. URL ta’ OmniRoute jibqa’ fuq ir-rotta għal test biss anki meta
+`/jina\.ai/i`. URL ta’ 67router jibqa’ fuq ir-rotta għal test biss anki meta
 l-mudell ikun Jina omni. Dak il-gate huwa problema tal-klijent Memorix.
-Indipendentement minn dan, OmniRoute xorta jirrifjuta l-body ta’ Jina
+Indipendentement minn dan, 67router xorta jirrifjuta l-body ta’ Jina
 `{image: "data:..."}` li Memorix kien jibgħat kieku l-gate nfetaħ, għalhekk
 klijenti kompatibbli ma’ Jina ma jistgħux joħolqu embeddings tal-immaġnijiet
-permezz ta’ OmniRoute mingħajr l-iskema kanonika `{type,source}`.
+permezz ta’ 67router mingħajr l-iskema kanonika `{type,source}`.
 
 Uża `jina-ai/jina-embeddings-v5-omni-small` għat-test. Tippontax il-`base_url`
-ta’ Memorix lejn `https://api.jina.ai` — żomm OmniRoute bħala l-uniku hop.
+ta’ Memorix lejn `https://api.jina.ai` — żomm 67router bħala l-uniku hop.

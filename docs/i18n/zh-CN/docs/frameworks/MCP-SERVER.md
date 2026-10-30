@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (中文 (简体))
+# 67router MCP Server Documentation (中文 (简体))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## 安装
 
-OmniRoute MCP 已内置。使用以下命令启动：
+67router MCP 已内置。使用以下命令启动：
 
 ```bash
 omniroute --mcp
@@ -82,7 +82,7 @@ curl -i \
 | `omniroute_switch_combo`        | `write:combos`        | 激活或停用组合                                                                             |
 | `omniroute_create_combo`        | `write:combos`        | 通过现有组合 API 创建经过验证的组合                                                        |
 | `omniroute_check_quota`         | `read:quota`          | 已用/总配额、剩余百分比、重置时间、令牌健康状况                                            |
-| `omniroute_route_request`       | `execute:completions` | 通过 OmniRoute 路由发送聊天补全请求                                                        |
+| `omniroute_route_request`       | `execute:completions` | 通过 67router 路由发送聊天补全请求                                                         |
 | `omniroute_cost_report`         | `read:usage`          | 按周期（会话/天/周/月）生成成本报告                                                        |
 | `omniroute_list_models_catalog` | `read:models`         | 完整的模型目录，包含功能、状态和定价                                                       |
 | `omniroute_radar_catalog`       | `read:radar`          | 本地签名的 Radar 目录；支持可选的提供者/系列筛选条件                                       |
@@ -142,7 +142,7 @@ CCR 条目仅存于内存中，并会在重启后消失。每个块限制为 2 M
 
 ### MCP 无障碍树过滤器 (v3.8.0)
 
-除上述压缩工具外，OmniRoute 还包含一个执行后过滤器，用于在将 MCP 浏览器/无障碍工具的**工具结果**返回给代理之前对其进行压缩。此过滤器本身并非工具，而是以透明方式处理任何包含冗长无障碍树或浏览器快照文本（≥2000 个字符）的工具结果。
+除上述压缩工具外，67router 还包含一个执行后过滤器，用于在将 MCP 浏览器/无障碍工具的**工具结果**返回给代理之前对其进行压缩。此过滤器本身并非工具，而是以透明方式处理任何包含冗长无障碍树或浏览器快照文本（≥2000 个字符）的工具结果。
 
 主要行为：
 
@@ -232,7 +232,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 
 ### 云端代理
 
-云端代理是进程外 AI 编码代理（codex-cloud、cursor-cloud、devin、jules），通过与 LLM 提供者相同的连接模型接入 OmniRoute。它们通过各自的 REST 接口 (`/api/v1/agents/*`) 公开，**不**属于 MCP 工具目录的一部分
+云端代理是进程外 AI 编码代理（codex-cloud、cursor-cloud、devin、jules），通过与 LLM 提供者相同的连接模型接入 67router。它们通过各自的 REST 接口 (`/api/v1/agents/*`) 公开，**不**属于 MCP 工具目录的一部分
 — 调用云端代理不会消耗 MCP 作用域。
 
 - 实现：`src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)。
@@ -432,7 +432,7 @@ API 密钥上的 `manage`、MCP 工具上的 `read:compression`，以及 `oma_li
 
 | 变量                                    | 默认值                        | 用途                                                                                                                                                                                                                                                                                                                                                                                               |
 | :-------------------------------------- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`      | MCP 服务器调用 OmniRoute 内部 API 时使用的基础 URL                                                                                                                                                                                                                                                                                                                                                 |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`      | MCP 服务器调用 67router 内部 API 时使用的基础 URL                                                                                                                                                                                                                                                                                                                                                  |
 | `OMNIROUTE_API_KEY`                     | （空）                        | 转发给内部 API 调用的 API 密钥，格式为 `Authorization: Bearer`                                                                                                                                                                                                                                                                                                                                     |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false`（仅 `"true"` 会启用） | 启用后，缺少作用域将拒绝工具调用，并在审计日志中记录 `scope_denied:<reason>`。此外，无论此标志为何值，对于通过每个密钥的 Authorization 标头解析出的任何 HTTP/SSE 调用方（`source === "authInfo"`），如果其不具备完整的 `manage`/`admin` 作用域，也会强制执行此策略——例如，仅持有权限较窄的 `mcp:connect` 绕过作用域的密钥——因此，此默认值仅适用于本地/stdio 单操作员流程，绝不适用于远程非环回访问 |
 | `OMNIROUTE_MCP_SCOPES`                  | （空）                        | 默认视为“可用”的作用域白名单，以逗号分隔（当调用方未提供自己的作用域时使用）                                                                                                                                                                                                                                                                                                                       |

@@ -4,7 +4,7 @@
 
 ---
 
-Tämä opas käsittelee Kiro-tilien (AWS:n ylläpitämä tekoälypohjainen koodausavustaja) lisäämistä OmniRouteen. Painopisteenä on useiden tilien käyttäminen samanaikaisesti ilman istuntoristiriitoja.
+Tämä opas käsittelee Kiro-tilien (AWS:n ylläpitämä tekoälypohjainen koodausavustaja) lisäämistä 67routeriin. Painopisteenä on useiden tilien käyttäminen samanaikaisesti ilman istuntoristiriitoja.
 
 ---
 
@@ -16,9 +16,9 @@ Sama mekanismi aiheuttaa ongelmia, kun `kiro-cli login` suoritetaan koneella, jo
 
 ---
 
-## Miten OmniRoute ratkaisee tämän (v3.8.0+)
+## Miten 67router ratkaisee tämän (v3.8.0+)
 
-Versiosta v3.8.0 alkaen OmniRoute kutsuu `registerClient()`-toimintoa (AWS SSO OIDC) jokaisen Kiro-yhteyden tuonnin aikana. Näin jokainen OmniRoute-yhteys saa oman OIDC-asiakasrekisteröintinsä. Koska jokainen asiakasrekisteröinti on itsenäinen, yhden tilin päivittäminen tai uudelleentodentaminen ei vaikuta minkään muun tilin päivitystunnukseen.
+Versiosta v3.8.0 alkaen 67router kutsuu `registerClient()`-toimintoa (AWS SSO OIDC) jokaisen Kiro-yhteyden tuonnin aikana. Näin jokainen 67router-yhteys saa oman OIDC-asiakasrekisteröintinsä. Koska jokainen asiakasrekisteröinti on itsenäinen, yhden tilin päivittäminen tai uudelleentodentaminen ei vaikuta minkään muun tilin päivitystunnukseen.
 
 Eristys koskee päivitystunnusta käyttäviä tuontimenetelmiä, ja API-avaintodennus välttää OIDC-päivitysistunnot kokonaan:
 
@@ -44,7 +44,7 @@ Ennen versiota v3.8.0 tuoduilla yhteyksillä ei ole erillistä OIDC-asiakasrekis
 
 ### Edellytykset
 
-- OmniRoute v3.8.0 tai uudempi.
+- 67router v3.8.0 tai uudempi.
 - Toimiva Kiro-tili (sähköposti ja salasana tai Google-/GitHub-kirjautuminen).
 - Valinnaisesti toinen Kiro-tili.
 
@@ -55,7 +55,7 @@ Ennen versiota v3.8.0 tuoduilla yhteyksillä ei ole erillistä OIDC-asiakasrekis
    - **Tuo tunnus** — liitä merkkijonolla `aorAAAAAG` alkava päivitystunnus.
    - **API-avain** — liitä pitkäikäinen Kiro-/CodeWhisperer-API-avain.
    - **Google-/GitHub-kirjautuminen** — suorita OAuth-menettely loppuun selaimessa.
-   - **Automaattinen tuonti** — napsauta painiketta; OmniRoute lukee tunnistetiedot paikallisesta kiro-cli-tietokannasta tai polusta `~/.aws/sso/cache`.
+   - **Automaattinen tuonti** — napsauta painiketta; 67router lukee tunnistetiedot paikallisesta kiro-cli-tietokannasta tai polusta `~/.aws/sso/cache`.
 3. Yhteys tallennetaan. Päivitystunnusta käyttävät menettelyt rekisteröivät automaattisesti erillisen OIDC-asiakkaan. API-avainta käyttävät menettelyt vahvistavat avaimen AWS:n avulla eivätkä tallenna päivitystunnusta.
 
 ### Vaihe 2: Tuo toinen tili
@@ -109,7 +109,7 @@ käytä OAuth-päivitystä, joten sillä vältetään jaetun OIDC-istunnon mitä
 2. Valitse **API-avain**.
 3. Liitä API-avain ja valitse AWS-alue: **Automaattinen tunnistus** (oletus), **Yhdysvaltain itäinen
    alue (Pohjois-Virginia)** tai **Eurooppa (Frankfurt)**.
-4. OmniRoute vahvistaa avaimen ja tallentaa yhteyden sidottuna alueeseen, jolla
+4. 67router vahvistaa avaimen ja tallentaa yhteyden sidottuna alueeseen, jolla
    avain toimii.
 
 ### API
@@ -159,7 +159,7 @@ osoitteeseen `https://q.<region>.amazonaws.com/generateAssistantResponse` — mu
 ## OIDC-asiakasohjelman vanheneminen
 
 AWS SSO OIDC:n julkiset asiakasohjelmat vanhenevat yleensä 90 päivän kuluttua
-(`clientSecretExpiresAt`). OmniRoute tallentaa tämän aikaleiman `providerSpecificData`-tietoihin
+(`clientSecretExpiresAt`). 67router tallentaa tämän aikaleiman `providerSpecificData`-tietoihin
 havaittavuutta varten. Jos yhteyden päivittäminen lakkaa toimimasta noin 90 päivän kuluttua, tuo
 yhteys uudelleen saadaksesi uuden OIDC-asiakasohjelman rekisteröinnin. Automaattinen uudelleenrekisteröinti
 vanhenemisen yhteydessä on kirjattu tulevaksi parannukseksi.
@@ -180,7 +180,7 @@ AWS SSO OIDC:n kautta.
 ### Tuonti epäonnistuu virheellä "Tunnuksen vahvistaminen epäonnistui"
 
 - Varmista, että päivitystunnus alkaa merkkijonolla `aorAAAAAG`.
-- Varmista, että OmniRoute saa yhteyden osoitteeseen `https://oidc.us-east-1.amazonaws.com` (tai määritettyyn
+- Varmista, että 67router saa yhteyden osoitteeseen `https://oidc.us-east-1.amazonaws.com` (tai määritettyyn
   alueeseen). Jos käytät yrityksen välityspalvelinta, määritä palveluntarjoajakohtainen välityspalvelin kohdassa
   **Hallintapaneeli → Asetukset → Välityspalvelimet**.
 
@@ -188,7 +188,7 @@ AWS SSO OIDC:n kautta.
 
 - Varmista, että avain on Kiro- / CodeWhisperer-API-avain eikä päivitystunnus.
 - Varmista, että AWS-alue vastaa avainta/tiliä. Oletusarvo on `us-east-1`.
-- Avaimella on voitava kutsua `ListAvailableProfiles`-toimintoa, sillä muuten OmniRoute ei pysty
+- Avaimella on voitava kutsua `ListAvailableProfiles`-toimintoa, sillä muuten 67router ei pysty
   selvittämään vaadittua `profileArn`-arvoa.
 
 Katso muut ongelmat pääasiallisesta [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)-tiedostosta.

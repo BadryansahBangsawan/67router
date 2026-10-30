@@ -7,7 +7,7 @@
 > **Patiesības avots:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute reģistrē administratīvās darbības, autentifikācijas notikumus, pakalpojumu
+67router reģistrē administratīvās darbības, autentifikācijas notikumus, pakalpojumu
 sniedzēju akreditācijas datu dzīves cikla izmaiņas un MCP rīku izsaukumus SQLite
 audita tabulās. Šajā lapā ir aprakstīts, kas tiek reģistrēts, kur dati atrodas, cik ilgi tie
 tiek glabāti, kā API atslēgām var atteikties no reģistrēšanas un kā veikt datu vaicājumus.

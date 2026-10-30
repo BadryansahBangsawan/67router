@@ -41,7 +41,7 @@ The full URL has the form:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. In OmniRoute, go to **Providers → Add Provider**, select **Microsoft 365 Copilot
+6. In 67router, go to **Providers → Add Provider**, select **Microsoft 365 Copilot
    (BizChat)**, and paste the credential in the format:
 
 ```
@@ -58,9 +58,9 @@ file:
 1. Open **DevTools → Network**.
 2. Start or continue a BizChat conversation (this triggers the WebSocket connection).
 3. Right-click in the Network panel and select **Save all as HAR with content**.
-4. In OmniRoute, use the **Import .har file** button on the provider connection dialog.
+4. In 67router, use the **Import .har file** button on the provider connection dialog.
 
-OmniRoute scans the HAR for the Chathub WebSocket URL, extracts the
+67router scans the HAR for the Chathub WebSocket URL, extracts the
 `access_token` and `chathubPath`, and populates the credential fields automatically. The
 HAR import decodes the JWT expiry and shows the remaining token lifetime.
 
@@ -77,13 +77,13 @@ reports a connection error and you must re-capture the credential.
 To avoid manual re-capture, you can store a Microsoft refresh token in the connection's
 **Advanced Settings → providerSpecificData**:
 
-| Field          | Description                                                                |
-| -------------- | -------------------------------------------------------------------------- |
-| `refreshToken` | Microsoft OAuth refresh token for `substrate.office.com/sydney` scope      |
-| `tier`         | `individual` (default), `edu`, or `enterprise`                             |
+| Field          | Description                                                           |
+| -------------- | --------------------------------------------------------------------- |
+| `refreshToken` | Microsoft OAuth refresh token for `substrate.office.com/sydney` scope |
+| `tier`         | `individual` (default), `edu`, or `enterprise`                        |
 
 Obtain the refresh token from a Microsoft device-code or authorization-code flow
-scoped to `substrate.office.com/sydney`. With `refreshToken` set, OmniRoute
+scoped to `substrate.office.com/sydney`. With `refreshToken` set, 67router
 pre-flight-refreshes the `access_token` before each request, so you do not need to
 re-capture after every ~75-minute expiry.
 
@@ -92,11 +92,11 @@ after each expiry.
 
 ### Tier selection
 
-| Tier          | Alias        | Surface                         |
-| ------------- | ------------ | ------------------------------- |
-| `individual`  | _(default)_  | Consumer M365 Copilot           |
-| `edu`         | `included`   | Education M365 Copilot          |
-| `enterprise`  | `work`       | M365 Copilot for Work           |
+| Tier         | Alias       | Surface                |
+| ------------ | ----------- | ---------------------- |
+| `individual` | _(default)_ | Consumer M365 Copilot  |
+| `edu`        | `included`  | Education M365 Copilot |
+| `enterprise` | `work`      | M365 Copilot for Work  |
 
 Set the tier in **Advanced Settings → providerSpecificData → tier**. The tier affects
 the BizChat routing and model access.

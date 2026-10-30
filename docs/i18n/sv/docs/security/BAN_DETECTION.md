@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute söker igenom felresponser från uppströmsleverantörer efter signaler som indikerar att ett leverantörs-**konto är permanent obrukbart** (avstängt / inaktiverat / blockerat på grund av brott mot användarvillkoren) och försätter, när en matchning hittas, anslutningen i ett **terminalt `banned`-tillstånd** så att den inte längre väljs för förfrågningar. Detta är vad inställningskortet **Säkerhet → Förbjudna nyckelord** konfigurerar ("Ytterligare nyckelord som utlöser identifiering av permanenta kontoavstängningar. Inbyggda nyckelord tillämpas alltid.").
+67router söker igenom felresponser från uppströmsleverantörer efter signaler som indikerar att ett leverantörs-**konto är permanent obrukbart** (avstängt / inaktiverat / blockerat på grund av brott mot användarvillkoren) och försätter, när en matchning hittas, anslutningen i ett **terminalt `banned`-tillstånd** så att den inte längre väljs för förfrågningar. Detta är vad inställningskortet **Säkerhet → Förbjudna nyckelord** konfigurerar ("Ytterligare nyckelord som utlöser identifiering av permanenta kontoavstängningar. Inbyggda nyckelord tillämpas alltid.").
 
 Den här sidan dokumenterar den inbyggda listan, identifieringsflödet, dess omfattning, hur du lägger till anpassade nyckelord på ett säkert sätt och hur du återställer en flaggad anslutning. Själva det terminala tillståndet är en del av resiliensmodellen – se
 [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) ("Terminala tillstånd").

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-da üç fərqli, lakin bir-biri ilə əlaqəli dayanıqlılıq (resilience) mexanizmi var. Hər birinin fərqli əhatə dairəsi və məqsədi var. Marşrutlaşdırma davranışını sazlayarkən (debug) onları bir-birindən ayırın.
+67router-da üç fərqli, lakin bir-biri ilə əlaqəli dayanıqlılıq (resilience) mexanizmi var. Hər birinin fərqli əhatə dairəsi və məqsədi var. Marşrutlaşdırma davranışını sazlayarkən (debug) onları bir-birindən ayırın.
 
 ![3-qatlı dayanıqlılıq modeli](../diagrams/exported/resilience-3layers.svg)
 
@@ -204,7 +204,7 @@ korrelyasiya identifikatoru olaraq qalır.
 
 ### Eksklüziv idarə olunan sessiya bağlantısı icarələri
 
-**Əhatə dairəsi:** bir aktiv idarə olunan HTTP müştərisi/sessiyası bir uyğun OmniRoute
+**Əhatə dairəsi:** bir aktiv idarə olunan HTTP müştərisi/sessiyası bir uyğun 67router
 bağlantısına sahib olur.
 
 **Məqsəd:** sorğular arasında sərt marşrutlaşdırma sərhədinə ehtiyacı olan müştərilər üçün
@@ -224,7 +224,7 @@ bilər.
 
 Həyat dövrü `POST /api/v1/session-leases` endpointi üzərində JSON `acquire`, `renew` və `release` əməliyyatları ilə idarə olunur. İdarə olunan inferens sorğuları qeyri-şəffaf `X-OmniRoute-Lease-Owner` dəyərini və dəqiq `X-OmniRoute-Lease-Generation` dəyərini təqdim edir. Sahib `vlo_` ilə başlayır və ardınca 43 base64url simvolu gəlir; yalnız onun SHA-256 heşi saxlanılır. Hər yekun göndərmə baryeri həmçinin autentifikasiya olunmuş API açarı ID-sini və aktiv bağlantı ID-sini əlaqələndirir. Lizinq idarəetmə başlıqları loqlardan, saxlanılan sorğu anlıq görüntülərindən və yuxarı axın icraçı başlıqlarından çıxarılır.
 
-Adi marşrutlaşdırmada uyğun idarə olunan namizədlər varsa, lakin hər boş namizəd yad aktiv lizinq tərəfindən tutulubsa, OmniRoute HTTP `429`, lease-capacity-unavailable kodu, waiting-for-capacity vəziyyəti və ən erkən müvafiq bitmə vaxtından hesablanmış məhdud `Retry-After` qaytarır. Adi halda uyğun namizədlərin olmaması lizinq rəqabəti sayılmır və mövcud marşrutlaşdırma xətası semantikasını saxlayır.
+Adi marşrutlaşdırmada uyğun idarə olunan namizədlər varsa, lakin hər boş namizəd yad aktiv lizinq tərəfindən tutulubsa, 67router HTTP `429`, lease-capacity-unavailable kodu, waiting-for-capacity vəziyyəti və ən erkən müvafiq bitmə vaxtından hesablanmış məhdud `Retry-After` qaytarır. Adi halda uyğun namizədlərin olmaması lizinq rəqabəti sayılmır və mövcud marşrutlaşdırma xətası semantikasını saxlayır.
 
 Əlaqəli mexanizmlər ayrı qalır:
 
@@ -245,7 +245,7 @@ Adi marşrutlaşdırmada uyğun idarə olunan namizədlər varsa, lakin hər bo�
   codex üçün bütün `codex` / `spark` əhatəsi (bağlantının hər bir `gpt-5*` modeli),
   digər provayderlər üçün `getQuotaScopedModelForProvider()`.
 - `404` modelin özünü kilidləyir (`getModelLockKey()` `not_found` halını daraldır).
-- İstənilən digər status — `5xx` transport/server xətaları və OmniRoute-un keyfiyyət
+- İstənilən digər status — `5xx` transport/server xətaları və 67router-un keyfiyyət
   yoxlamasından özünün sintez etdiyi `502` — yalnız **dəqiq**
   provayder/bağlantı/model üçlüyünü kilidləyir. Bir modeldəki pis stream hesabın
   kvotası haqqında dəlil deyil; bu qaydadan əvvəl `codex/gpt-5.6-luna` üzərində bir
@@ -380,7 +380,7 @@ paralellik limitləri**, hər sətirdə bir `model=cap`) və ya eyni JSON formas
   hüdudlardır.
 - **Lokal növbələmə, kəşf yoxdur:** artıq sorğular mövcud növbə/timeout
   semantikası ilə lokal olaraq növbəyə yerləşir (tipli `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL` qəbul xətaları). OmniRoute upstream siyasətini kəşf
+  `SEMAPHORE_QUEUE_FULL` qəbul xətaları). 67router upstream siyasətini kəşf
   etmir və ya nəticə çıxarmır — operatorun konfiqurasiya etdiyi dəqiq
   hüdudları icra edir. Doymuş model qapısı heç vaxt provayderi deaktiv etmir
   və daimi model kilidlənməsi yaratmır; upstream 429/cooldown/fallback
@@ -551,7 +551,7 @@ real Bottleneck limiteri olmadan vahid-test oluna bilər.
 ### Rate-Limit avtomatik aktivləşdirmə təhlükəsizlik şəbəkəsi və bağlantı qorunması (`rateLimitProtection`)
 
 **Avtomatik aktivləşdirmə təhlükəsizlik şəbəkəsi** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, standart `true`):
-Standart olaraq, OmniRoute bütün aktiv API-açar provayder bağlantıları üçün rate-limit növbə qorunmasını avtomatik aktivləşdirir (`getProviderCategory(provider) === "apikey"`). Bu, sürət məhdudiyyətinə həssas upstream API açarlarına gələn sorğuların upstream 429 xətalarına partlamaq əvəzinə Bottleneck vasitəsilə növbəyə alınmasını və boğulmasını təmin edir. Təhlükəsizlik şəbəkəsi `RATE_LIMIT_AUTO_ENABLE` mühit dəyişəni ilə üstələnə bilər (`false`/`0`/`off` söndürür, `true`/`1`/`on` məcburi aktivləşdirir) və bu, saxlanılmış dashboard parametrlərindən (**Parametrlər → Dayanıqlılıq** / `PATCH /api/resilience`) üstünlük təşkil edir.
+Standart olaraq, 67router bütün aktiv API-açar provayder bağlantıları üçün rate-limit növbə qorunmasını avtomatik aktivləşdirir (`getProviderCategory(provider) === "apikey"`). Bu, sürət məhdudiyyətinə həssas upstream API açarlarına gələn sorğuların upstream 429 xətalarına partlamaq əvəzinə Bottleneck vasitəsilə növbəyə alınmasını və boğulmasını təmin edir. Təhlükəsizlik şəbəkəsi `RATE_LIMIT_AUTO_ENABLE` mühit dəyişəni ilə üstələnə bilər (`false`/`0`/`off` söndürür, `true`/`1`/`on` məcburi aktivləşdirir) və bu, saxlanılmış dashboard parametrlərindən (**Parametrlər → Dayanıqlılıq** / `PATCH /api/resilience`) üstünlük təşkil edir.
 
 **Bağlantı səviyyəsində `rateLimitProtection`-ın semantikası:**
 Bağlantı səviyyəsində rate-limit qorunması provayder bağlantılarındakı `rateLimitProtection` boolean sahəsi ilə izlənilir (SQLite-də `rate_limit_protection` kimi saxlanılır):
@@ -805,7 +805,7 @@ tükənmiş kvota ilə eyni siqnaldır. Dürüst məhdudiyyətlər:
 > agent bələdçisi 40k kontekst büdcəsi daxilində qalsın. Bu, yuxarıdakı bölmələrin
 > sıxılmış, agentə yönəlmiş görünüşüdür; nömrələnmiş bölmələr tam arayış olaraq qalır.
 
-OmniRoute-da əlaqəli, lakin fərqli üç müvəqqəti uğursuzluq mexanizmi var.
+67router-da əlaqəli, lakin fərqli üç müvəqqəti uğursuzluq mexanizmi var.
 Marşrutlaşdırma davranışını sazlayarkən onların əhatə dairələrini ayrı saxlayın.
 Bir baxışda xəritə üçün [3 qatlı dayanıqlılıq diaqramına](../diagrams/exported/resilience-3layers.svg)
 (mənbə: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

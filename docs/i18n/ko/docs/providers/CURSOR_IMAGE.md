@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute는 채팅과 동일한 제공자 ID인 `cursor`(별칭 `cu`)를 통해 `POST /v1/images/generations`에서 Cursor 플랜의 **이미지 생성** 기능을 제공합니다.
+67router는 채팅과 동일한 제공자 ID인 `cursor`(별칭 `cu`)를 통해 `POST /v1/images/generations`에서 Cursor 플랜의 **이미지 생성** 기능을 제공합니다.
 
 | 필드                 | 값                                                                          |
 | -------------------- | --------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute는 채팅과 동일한 제공자 ID인 `cursor`(별칭 `cu`)를 통해
 
 ## Agent CLI를 사용하는 이유
 
-OmniRoute의 Cursor 채팅은 `agent.v1.AgentService/Run`(protobuf)을 사용합니다. 이 경로는 기본 제공 클라이언트 도구(shell, write, …)를 **거부합니다**. 이미지 생성은 해당 시트에 대해 **`agent` CLI**가 실행하는 Cursor 네이티브 도구입니다. 따라서 이미지 핸들러는 잠긴 프롬프트와 요청별 임시 작업 공간(커뮤니티 시트 브리지와 동일한 형태)을 사용하여 `agent`를 실행한 다음, OpenAI 호환 `b64_json`을 반환합니다.
+67router의 Cursor 채팅은 `agent.v1.AgentService/Run`(protobuf)을 사용합니다. 이 경로는 기본 제공 클라이언트 도구(shell, write, …)를 **거부합니다**. 이미지 생성은 해당 시트에 대해 **`agent` CLI**가 실행하는 Cursor 네이티브 도구입니다. 따라서 이미지 핸들러는 잠긴 프롬프트와 요청별 임시 작업 공간(커뮤니티 시트 브리지와 동일한 형태)을 사용하여 `agent`를 실행한 다음, OpenAI 호환 `b64_json`을 반환합니다.
 
 ## 접근 제한(Hard Rules #15 + #17)
 
@@ -23,12 +23,12 @@ OmniRoute의 Cursor 채팅은 `agent.v1.AgentService/Run`(protobuf)을 사용합
 
 ## 동시성 게이트는 모듈 수준임(단일 인스턴스 제한)
 
-`CURSOR_IMG_MAX_CONCURRENT`는 Node 모듈 인스턴스(`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) 범위의 인메모리 카운터/큐로 적용됩니다. 하나의 OmniRoute 프로세스 내에서는 동시 `agent` 실행 수를 올바르게 제한하지만, 동일한 Cursor 시트를 공유하는 여러 프로세스/인스턴스(예: 다중 복제본 배포) 간에는 조정되지 **않습니다**. 각 인스턴스가 자체적인 독립 제한을 적용합니다. 단일 인스턴스 배포(기본값)에서는 정확하게 적용됩니다. 수평 확장된 배포에서는 인스턴스별 `CURSOR_IMG_MAX_CONCURRENT`를 보수적으로 설정하거나 Cursor 이미지 트래픽을 단일 인스턴스로 라우팅해야 합니다.
+`CURSOR_IMG_MAX_CONCURRENT`는 Node 모듈 인스턴스(`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) 범위의 인메모리 카운터/큐로 적용됩니다. 하나의 67router 프로세스 내에서는 동시 `agent` 실행 수를 올바르게 제한하지만, 동일한 Cursor 시트를 공유하는 여러 프로세스/인스턴스(예: 다중 복제본 배포) 간에는 조정되지 **않습니다**. 각 인스턴스가 자체적인 독립 제한을 적용합니다. 단일 인스턴스 배포(기본값)에서는 정확하게 적용됩니다. 수평 확장된 배포에서는 인스턴스별 `CURSOR_IMG_MAX_CONCURRENT`를 보수적으로 설정하거나 Cursor 이미지 트래픽을 단일 인스턴스로 라우팅해야 합니다.
 
 ## 요구 사항
 
 1. 대시보드에 연결된 Cursor 계정(OAuth 또는 `crsr_…` API 키).
-2. OmniRoute 프로세스에서 사용할 수 있는 Cursor Agent 바이너리:
+2. 67router 프로세스에서 사용할 수 있는 Cursor Agent 바이너리:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, 또는
    - `~/.local/bin/agent`, 또는
    - Cursor 연결의 `providerSpecificData.agentBin`.

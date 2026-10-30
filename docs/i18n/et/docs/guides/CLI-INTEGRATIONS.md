@@ -7,10 +7,10 @@
 Jagatud käivitatava faili manifesti, piiratud alaprotsessikeskkondade ja püsiva
 Gemini seadistuse kohta vaadake jaotist [CLI käivituslepingud](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute sisaldab `setup-*` käskude perekonda, mis seadistab programmeerimise
-CLI (Codex, Claude Code, OpenCode, Cline, …) kasutama taustateenusena OmniRoute’i —
-nii suhtleb tööriist **ühe** lõpp-punktiga ning OmniRoute suunab päringu õigele
-pakkujale, kasutades automaatset varuvarianti. Iga käsk loeb töötavast OmniRoute’ist
+67router sisaldab `setup-*` käskude perekonda, mis seadistab programmeerimise
+CLI (Codex, Claude Code, OpenCode, Cline, …) kasutama taustateenusena 67router’i —
+nii suhtleb tööriist **ühe** lõpp-punktiga ning 67router suunab päringu õigele
+pakkujale, kasutades automaatset varuvarianti. Iga käsk loeb töötavast 67router’ist
 (kohalikust või kaugserveris asuvast) **aktiivse** mudelikataloogi ja kirjutab
 tööriista enda konfiguratsioonifaili **teie** masinas. Kõikjal, kus tööriist seda
 toetab, viidatakse API võtmele keskkonnamuutuja kaudu. Käsud, mis salvestavad
@@ -55,7 +55,7 @@ vaadake tööriistapõhiseid põhjalikke juhendeid:
 
 - [Claude Code’i konfiguratsioon](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI konfiguratsioon](./CODEX-CLI-CONFIGURATION.md)
-- [Kaugrežiim](./REMOTE-MODE.md) — juhtige oma sülearvutist kaugserveris asuvat OmniRoute’i (VPS / Tailnet)
+- [Kaugrežiim](./REMOTE-MODE.md) — juhtige oma sülearvutist kaugserveris asuvat 67router’i (VPS / Tailnet)
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopiloti laiendus; see saab neid
   `setup-*` käske teie eest käivitada ka redaktori seest
 
@@ -91,7 +91,7 @@ serverist ja konfiguratsioon kirjutatakse kohalikult.
 
 Märkused lippude kohta (kontrollitud käsu lähtekoodist):
 
-- `--remote <url>` — hangib kataloogi OmniRoute'i kaugserverist (alistab `--port`
+- `--remote <url>` — hangib kataloogi 67router'i kaugserverist (alistab `--port`
   ja aktiivse konteksti). `--api-key <key>` annab selle serveri pääsuteabe
   (vaikimisi keskkonnamuutujast `OMNIROUTE_API_KEY` või aktiivse konteksti loast).
 - `--only <patterns>` — komadega eraldatud alamstringid; säilitab ainult sobivad
@@ -114,7 +114,7 @@ Märkused lippude kohta (kontrollitud käsu lähtekoodist):
   kaudu. **Qwen on ainus käivitussihtmärk, mis nõuab alati lippu `--model`** —
   ilma selleta lõpetab `omniroute run qwen` töö väljumiskoodiga `2` ja annab
   selgesõnalise veateate.
-- `--port <port>` — kohalik OmniRoute'i port (vaikimisi `20128`, eiratakse, kui
+- `--port <port>` — kohalik 67router'i port (vaikimisi `20128`, eiratakse, kui
   `--remote` on määratud). Olemas kõigil käskudel `setup-*` ja mõlemal käivitajal.
 - Käsu `omniroute run` väljumiskoodid: alamprotsessi CLI enda väljumiskood
   edastatakse muutmata kujul; `2` = vigased argumendid (toetamata sihtmärk, nõutava
@@ -159,7 +159,7 @@ ning neid ei esitata käivitatavate sihtmärkidena.
 
 ## Kohalik kasutus
 
-Kui OmniRoute töötab aadressil `localhost:20128`, käivitage lihtsalt oma tööriista
+Kui 67router töötab aadressil `localhost:20128`, käivitage lihtsalt oma tööriista
 seadistuskäsk. Kataloog hangitakse kohalikust serverist.
 
 ```bash
@@ -187,8 +187,8 @@ omniroute setup-continue --dry-run
 Käivitage ilma ühtegi konfiguratsiooni kirjutamata (ainult keskkonnamuutujate sisestamine):
 
 ```bash
-omniroute launch                 # Claude Code → kohalik OmniRoute
-omniroute launch-codex           # Codex CLI → kohalik OmniRoute
+omniroute launch                 # Claude Code → kohalik 67router
+omniroute launch-codex           # Codex CLI → kohalik 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -206,7 +206,7 @@ omniroute run claude -- --print-system-prompt "vaata see diff üle"
 
 ## Kaugkasutus
 
-Suunake mis tahes seadistuskäsk kaugesse OmniRoute'i, kasutades `--remote` + `--api-key`.
+Suunake mis tahes seadistuskäsk kaugesse 67router'i, kasutades `--remote` + `--api-key`.
 Kataloog hangitakse kaugserverist ja konfiguratsioon kirjutatakse teie kohalikku masinasse.
 
 ```bash
@@ -250,7 +250,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Mõlemad vormid kirjutavad ühe 5dive'i **autentimisprofiili** ning iga selle profiiliga
-seotud `claude`-koht suhtleb seejärel OmniRoute'iga. Sellel sihtmärgil on kolm eripära:
+seotud `claude`-koht suhtleb seejärel 67router'iga. Sellel sihtmärgil on kolm eripära:
 
 - **See töötab pargi hostis juurkasutajana.** 5dive'i toimingud mõjutavad kohalikke
   systemd üksusi ja juurkasutajale kuuluvat olekukataloogi; kaugrežiimi pole. Retsept
@@ -269,7 +269,7 @@ seotud `claude`-koht suhtleb seejärel OmniRoute'iga. Sellel sihtmärgil on kolm
 API-võti antakse 5dive'ile **standardsisendi** kaudu (`--api-key=-`), mistõttu ei ilmu
 see kunagi `ps` väljundisse.
 
-Profiili suunamine ühe mudeli asemel OmniRoute'i **kombole** annab pargile pakkujate
+Profiili suunamine ühe mudeli asemel 67router'i **kombole** annab pargile pakkujate
 tõrkesiirde: kui esmane lõpp-punkt katkes
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) juures salvestatud
 käituse ajal keset toimingut täielikult, lõpetas agent ülejäänud sammud varuvariandi
@@ -279,7 +279,7 @@ abil ega toonud katkestust kunagi kasutajani.
 
 ## Baas-URL-i kokkulepped (millised tööriistad vajavad `/v1`)
 
-OmniRoute pakub OpenAI liidest aadressil `/v1`, Anthropicu liidest juuraadressil
+67router pakub OpenAI liidest aadressil `/v1`, Anthropicu liidest juuraadressil
 ja Gemini omaliidest aadressil `/v1beta`. Iga integratsioon on seadistatud vormingule,
 mida vastav tööriist eeldab (kontrollitud käsu lähtekoodist):
 
@@ -301,7 +301,7 @@ mida vastav tööriist eeldab (kontrollitud käsu lähtekoodist):
 ## Natiivsete sõltuvuste säilitamine värskendamisel: `--include=optional`
 
 Kui värskendate käsuga `omniroute update` (pärast kinnitamist või lipuga `--apply`),
-käivitab OmniRoute paigalduse alati koos lipuga `--include=optional`:
+käivitab 67router paigalduse alati koos lipuga `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -328,14 +328,14 @@ kui versioon on aegunud), `--apply` (paigalda kinnitust küsimata), `--changelog
 
 Leping on kontrollitud paketiga `@google/gemini-cli` 0.50.0: CLI arvestab muutujaga
 `GOOGLE_GEMINI_BASE_URL` ja saadab selle aadressile päringu `POST /v1beta/models/<model>:generateContent`
-(ning `:streamGenerateContent?alt=sse`) — täpselt OmniRoute'i natiivsele
+(ning `:streamGenerateContent?alt=sse`) — täpselt 67router'i natiivsele
 Gemini liidesele (`/v1beta`). `omniroute run gemini` seadistab selle automaatselt:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktiivne OmniRoute'i baas-URL (juuraadress, ilma `/v1`-ta);
-- `GEMINI_API_KEY` → lahendatud OmniRoute'i pääsutunnus (suvand/keskkond/kontekst);
+- `GOOGLE_GEMINI_BASE_URL` → aktiivne 67router'i baas-URL (juuraadress, ilma `/v1`-ta);
+- `GEMINI_API_KEY` → lahendatud 67router'i pääsutunnus (suvand/keskkond/kontekst);
 - **ajutine isoleeritud `GEMINI_CLI_HOME`**, mille `.gemini/settings.json`
   valib autentimiseks `gemini-api-key`, et salvestatud Google OAuthi seanss (Code Assist)
-  ei alistaks kunagi OmniRoute'ile suunatud käivitust — eemaldatakse pärast väljumist;
+  ei alistaks kunagi 67router'ile suunatud käivitust — eemaldatakse pärast väljumist;
 - **keskkonnahügieen**: alamprotsessi keskkonnast eemaldatakse `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` ja `GOOGLE_GENAI_USE_GCA` (mis suunaksid
   autentimise ümber Vertexile/Code Assistile) ning täiendava turvameetmena määratakse
@@ -359,7 +359,7 @@ agendiprotokolli integratsiooniks lehel `/dashboard/acp-agents`.
 
 Deterministlikud käivitusplaani regressioonitestid töötavad CI-s (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). TEGELIKE binaarfailide valideerimiseks TEGELIKU
-OmniRoute'i serveri vastu on saadaval valikuline testiraamistik failis
+67router'i serveri vastu on saadaval valikuline testiraamistik failis
 `tests/integration/upstream-cli-smoke.int.test.ts`. Seda ei käivitata kunagi automaatselt
 (kõik alamtestid jäetakse vahele, kui `RUN_CLI_SMOKE=1` pole määratud), autentimisandmed edastatakse keskkonnamuutuja
 NIME kaudu (mitte kunagi väärtusena), võtmekujulised stringid eemaldatakse kogu salvestatud väljundist,

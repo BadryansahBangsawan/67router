@@ -4,7 +4,7 @@
 
 ---
 
-> **Īsumā**: OmniRoute sarindo savus **bezmaksas** pakalpojumu sniedzējus pēc modeļu kvalitātes, izmantojot **Arena AI
+> **Īsumā**: 67router sarindo savus **bezmaksas** pakalpojumu sniedzējus pēc modeļu kvalitātes, izmantojot **Arena AI
 > (LMArena stila) ELO vērtējumus**. Informācijas panelī atveriet lapu **Bezmaksas pakalpojumu sniedzēju reitings**, lai uzzinātu, kuri bezmaksas pakalpojumu sniedzēji piedāvā jūsu uzdevumam vislabākos modeļus —
 > kopumā vai filtrējot pēc kategorijas (programmēšana, pārskatīšana, dokumentācija, atkļūdošana).
 
@@ -12,7 +12,7 @@
 
 ## Kas tas ir
 
-OmniRoute reģistrē 375 pakalpojumu sniedzējus, tostarp 155 kataloga ierakstus, kas atzīmēti kā **free/no-auth**
+67router reģistrē 375 pakalpojumu sniedzējus, tostarp 155 kataloga ierakstus, kas atzīmēti kā **free/no-auth**
 (bez autentifikācijas,
 bezmaksas līmeņa OAuth vai bezmaksas līmeņa API atslēga — skatiet
 [Bezmaksas līmeņu ceļvedi](../getting-started/FREE-TIERS-GUIDE.md) un pilno
@@ -129,9 +129,9 @@ un `code` — no Arena AI līderu tabulas API
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Katrā līderu tabulas ierakstā
 ir modeļa nosaukums, piegādātājs, ELO `score`, ticamības intervāls un balsu skaits.
 
-Līderu tabulas kategorijas atbilst OmniRoute uzdevumu kategorijām:
+Līderu tabulas kategorijas atbilst 67router uzdevumu kategorijām:
 
-| Arena līderu tabula | OmniRoute uzdevumu kategorijas                    |
+| Arena līderu tabula | 67router uzdevumu kategorijas                     |
 | ------------------- | ------------------------------------------------- |
 | `text`              | `default`, `review`, `documentation`, `debugging` |
 | `code`              | `coding`                                          |
@@ -168,7 +168,7 @@ Sinhronizācija ir **ieslēgta pēc noklusējuma**:
 
 - Tā tiek izpildīta vienreiz servera palaišanas laikā un pēc tam periodiski pēc taimera
   (`src/lib/arenaEloSync.ts`, piesaistīta no `src/instrumentation-node.ts`).
-- Tā ir **nebloķējoša un nekad neizraisa fatālu kļūdu** — ja datu iegūšana no ārējā avota neizdodas, OmniRoute turpina
+- Tā ir **nebloķējoša un nekad neizraisa fatālu kļūdu** — ja datu iegūšana no ārējā avota neizdodas, 67router turpina
   darboties, un rangos tiek rādīti pēdējie veiksmīgi iegūtie dati (vai tukšs stāvoklis).
 
 To kontrolē divi vides mainīgie (dokumentēti
@@ -203,7 +203,7 @@ elastīga atbilstības noteikšana (`findMatchingIntelligence` failā `src/lib/f
 3. Prefiksa atbilstība (līderu tabulas modeļa nosaukums ir reģistra ID prefikss).
 
 Sinhronizācijas pusē zināmie piegādātāju prefiksi (`anthropic/`, `openai/`, `google/`, …) tiek
-noņemti, un neliela aizstājvārdu karte izvērš kanoniskos nosaukumus par variantiem, kurus OmniRoute izmanto
+noņemti, un neliela aizstājvārdu karte izvērš kanoniskos nosaukumus par variantiem, kurus 67router izmanto
 iekšēji, lai modeļus varētu atrast ar jebkuru nosaukumu.
 
 ### Kā tiek noteikts piegādātāja rangs

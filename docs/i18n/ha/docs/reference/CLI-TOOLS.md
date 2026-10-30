@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Hausa)
+# CLI Tools — 67router (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 An sabunta na ƙarshe: 2026-08-23
 
-OmniRoute yana haɗuwa da rukuni uku na kayan aikin CLI waɗanda aka rarraba a shafuka uku na dashboard da aka keɓe:
+67router yana haɗuwa da rukuni uku na kayan aikin CLI waɗanda aka rarraba a shafuka uku na dashboard da aka keɓe:
 
-| Shafi          | Route                   | Ma’ana                                                                                    | Adadi         |
-| -------------- | ----------------------- | ----------------------------------------------------------------------------------------- | ------------- |
-| **CLI Code's** | `/dashboard/cli-code`   | Kayan aikin coding da kake haɗawa da OmniRoute (Client → CLI → OmniRoute → Provider)      | 26            |
-| **CLI Agents** | `/dashboard/cli-agents` | Wakilai masu cin gashin kansu da kake haɗawa da OmniRoute (tsari iri ɗaya, faɗaɗɗen aiki) | 10            |
-| **ACP Agents** | `/dashboard/acp-agents` | CLIs da OmniRoute ke ƙaddamarwa a matsayin backend ta stdio/ACP (tsarin baya)             | duba registry |
+| Shafi          | Route                   | Ma’ana                                                                                   | Adadi         |
+| -------------- | ----------------------- | ---------------------------------------------------------------------------------------- | ------------- |
+| **CLI Code's** | `/dashboard/cli-code`   | Kayan aikin coding da kake haɗawa da 67router (Client → CLI → 67router → Provider)       | 26            |
+| **CLI Agents** | `/dashboard/cli-agents` | Wakilai masu cin gashin kansu da kake haɗawa da 67router (tsari iri ɗaya, faɗaɗɗen aiki) | 10            |
+| **ACP Agents** | `/dashboard/acp-agents` | CLIs da 67router ke ƙaddamarwa a matsayin backend ta stdio/ACP (tsarin baya)             | duba registry |
 
 Tsofaffin routes suna karkatarwa ta 308: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ Tsofaffin routes suna karkatarwa ta 308: `/dashboard/cli-tools` → `/dashboard/
 CLI Code's / CLI Agents (tsarin amfani):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (duk suna nuni zuwa OmniRoute)
+           ▼  (duk suna nuni zuwa 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute yana tura buƙata zuwa provider da ya dace)
+           ▼  (67router yana tura buƙata zuwa provider da ya dace)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (tsarin ƙaddamarwa na baya):
-    Buƙatar client → OmniRoute → yana ƙaddamar da CLI ta stdio/ACP → amsa
+    Buƙatar client → 67router → yana ƙaddamar da CLI ta stdio/ACP → amsa
 ```
 
 **Fa’idodi:**
@@ -45,8 +45,8 @@ ACP Agents (tsarin ƙaddamarwa na baya):
 
 ## Saita ta atomatik da `setup-*`
 
-Ba sai ka rubuta tsarin saitin kowace kayan aiki da hannu ba. OmniRoute na zuwa da umarnin `setup-*`
-ga kowace CLI da ake tallafawa, wanda ke karanta kundin samfurori na **kai-tsaye** daga OmniRoute
+Ba sai ka rubuta tsarin saitin kowace kayan aiki da hannu ba. 67router na zuwa da umarnin `setup-*`
+ga kowace CLI da ake tallafawa, wanda ke karanta kundin samfurori na **kai-tsaye** daga 67router
 da ke gudana (na gida ko na nesa), sannan ya rubuta tsarin saitin kayan aikin a na'urarka:
 
 ```bash
@@ -58,7 +58,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Kowannensu yana karɓar `--remote <url> --api-key <key>` (don saita kayan aiki na gida ya yi aiki da
-OmniRoute na nesa), `--dry-run` (don duba abin da zai faru ba tare da rubutawa ba), da `--port`. Kayan aikin
+67router na nesa), `--dry-run` (don duba abin da zai faru ba tare da rubutawa ba), da `--port`. Kayan aikin
 da ba su da gano samfurori ta atomatik (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) suna karɓar
 `--model <id>` (da kuma `--yes` don gudanarwa ba tare da mu'amala ba). `setup-5dive` shi ne tsarin
 saiti guda ɗaya da ba ya yin rubutu ƙarƙashin `$HOME`: yana saita rundunar wakilan 5dive ta hanyar
@@ -77,9 +77,9 @@ amma ba ta da tsarin `setup-*`/`configure`.
 
 ### Gudanar da waɗannan a cikin container
 
-Umarnin `setup-*` da aka aiwatar a cikin container na OmniRoute yana yin rubutu a cikin
+Umarnin `setup-*` da aka aiwatar a cikin container na 67router yana yin rubutu a cikin
 home na container ɗin kansa, wanda babu CLI na host da ke karantawa kuma wanda zai ɓace tare da
-container ɗin. OmniRoute yana gano hakan ya fita da `2` tare da umarni maimakon
+container ɗin. 67router yana gano hakan ya fita da `2` tare da umarni maimakon
 yin rubutu. Akwai hanyoyi biyu da ake tallafawa — shigar da CLI a kan host sannan a yi
 `omniroute connect` zuwa container ɗin, ko a yi bind-mount na kundin tsarin saiti sannan a saita
 `CLI_CONFIG_HOME` (bayanin compose na `host`). Kowane umarnin `setup-*`, tare da
@@ -203,7 +203,7 @@ Wakilai masu cin gashin kansu waɗanda suke bayyana a `/dashboard/cli-agents`:
 
 ## 3. Wakilan ACP (/dashboard/acp-agents)
 
-Wannan shafin (wanda aka sake masa suna daga `/dashboard/agents`) yana nuna CLI da OmniRoute zai iya **ƙaddamarwa** a matsayin injunan aiwatarwa na backend ta hanyar ƙa'idar stdio/ACP. Ana kula da kundin daban a cikin `src/lib/acp/registry.ts`, kuma **ba** ɗaya yake da `CLI_TOOLS` ba.
+Wannan shafin (wanda aka sake masa suna daga `/dashboard/agents`) yana nuna CLI da 67router zai iya **ƙaddamarwa** a matsayin injunan aiwatarwa na backend ta hanyar ƙa'idar stdio/ACP. Ana kula da kundin daban a cikin `src/lib/acp/registry.ts`, kuma **ba** ɗaya yake da `CLI_TOOLS` ba.
 
 ---
 
@@ -330,7 +330,7 @@ An samar da cikakkun fassarorin PT-BR da EN. Sauran locales 39 suna komawa zuwa 
 
 ## 9. Farawa Cikin Sauri
 
-### Mataki na 1 — Sami OmniRoute API Key
+### Mataki na 1 — Sami 67router API Key
 
 1. Buɗe `/dashboard/api-manager` → **Ƙirƙiri API Key**
 2. Ba shi suna (misali `cli-tools`) sannan zaɓi dukkan izini
@@ -394,7 +394,7 @@ cargo install smelt  # Wanda aka gina da Rust
 ### Mataki na 4 — Saita Global Environment Variables
 
 ```bash
-# OmniRoute Universal Endpoint
+# 67router Universal Endpoint
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -506,7 +506,7 @@ EOF
 **Yanayin VS Code:**
 Saitunan extension na Cline → API Provider: `OpenAI Compatible` → Base URL: `http://localhost:20128/v1`
 
-Ko yi amfani da dashboard na OmniRoute → **Kayan Aikin CLI → Cline → Aiwatar da Saiti**.
+Ko yi amfani da dashboard na 67router → **Kayan Aikin CLI → Cline → Aiwatar da Saiti**.
 
 ---
 
@@ -527,7 +527,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Ko yi amfani da dashboard na OmniRoute → **Kayan Aikin CLI → KiloCode → Aiwatar da Saiti**.
+Ko yi amfani da dashboard na 67router → **Kayan Aikin CLI → KiloCode → Aiwatar da Saiti**.
 
 ---
 
@@ -551,14 +551,14 @@ Sake kunna VS Code bayan gyarawa.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Yi amfani da wannan lokacin da aka saita VS Code Insiders don custom endpoint models kuma kana son OmniRoute ya yi aiki ba tare da custom header field ba.
+Yi amfani da wannan lokacin da aka saita VS Code Insiders don custom endpoint models kuma kana son 67router ya yi aiki ba tare da custom header field ba.
 
 **Wurin da ake ba da shawara:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Misali ta amfani da sunan laƙabi na OmniRoute mai token:**
+**Misali ta amfani da sunan laƙabi na 67router mai token:**
 
 ```json
 [
@@ -582,7 +582,7 @@ Yi amfani da wannan lokacin da aka saita VS Code Insiders don custom endpoint mo
 
 **Bayanan kula:**
 
-- Sauya `sk-your-omniroute-key` da maɓallin API da aka ƙirƙira a OmniRoute.
+- Sauya `sk-your-omniroute-key` da maɓallin API da aka ƙirƙira a 67router.
 - Ya kamata filin `url` ya nuna zuwa `/api/v1/vscode/{token}/chat/completions`.
 - Ya kamata filin `modelsUrl` ya nuna zuwa `/api/v1/vscode/{token}/models`.
 - Fi son tsarin `/v1` na yau da kullum tare da taken Bearer idan manhajar abokin ciniki tana goyon bayan takamaiman takardu.
@@ -596,17 +596,17 @@ Yi amfani da wannan lokacin da aka saita VS Code Insiders don custom endpoint mo
 # Shiga cikin asusun AWS/Kiro naka:
 kiro-cli login
 
-# CLI yana amfani da nasa tsarin tantancewa — ba a buƙatar OmniRoute a matsayin backend na Kiro CLI kansa.
-# Yi amfani da kiro-cli tare da OmniRoute don sauran kayan aiki.
+# CLI yana amfani da nasa tsarin tantancewa — ba a buƙatar 67router a matsayin backend na Kiro CLI kansa.
+# Yi amfani da kiro-cli tare da 67router don sauran kayan aiki.
 kiro-cli status
 ```
 
-Don manhajar tebur ta **Kiro IDE**, yi amfani da endpoint na MITM da OmniRoute ya samar
+Don manhajar tebur ta **Kiro IDE**, yi amfani da endpoint na MITM da 67router ya samar
 a ƙarƙashin `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. CLI na Cikin Gida na OmniRoute
+## 10. CLI na Cikin Gida na 67router
 
 Fayil ɗin binary na `omniroute` yana samar da umarni don zagayen rayuwar sabar, saitawa, binciken matsaloli, da sarrafa masu samarwa. Wurin farawa: `bin/omniroute.mjs`.
 
@@ -640,7 +640,7 @@ Sauye-sauyen muhalli da ake gane su don saitawa marar mu'amala:
 | Var                 | Manufa                                                                          |
 | ------------------- | ------------------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | Maɓallin API na mai samarwa (an ɗaure shi da `--api-key` ta Commander `.env()`) |
-| `DATA_DIR`          | Sauya kundin bayanan OmniRoute                                                  |
+| `DATA_DIR`          | Sauya kundin bayanan 67router                                                   |
 
 Ana miƙa duk sauran bayanan shigarwa marasa mu'amala a matsayin flags, ba sauye-sauyen muhalli ba:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -663,7 +663,7 @@ omniroute doctor --liveness-url <url>  # Sauya cikakken URL na endpoint ɗin laf
 ### Sarrafa Masu Samarwa
 
 ```bash
-omniroute providers available                       # Kasidar masu samarwa ta OmniRoute
+omniroute providers available                       # Kasidar masu samarwa ta 67router
 omniroute providers available --search openai       # Tace kasida ta id/suna/alias/rukuni
 omniroute providers available --category api-key    # Tace ta rukuni (api-key, oauth, free, ...)
 omniroute providers available --json                # JSON da na'ura za ta iya karantawa
@@ -684,7 +684,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` suna fifita API, saboda haka suna aiki da
 mahallin gida ko na nesa da ke aiki. Ya kamata shigar da bayanan shaida ya yi amfani da
 `--credential-stdin` ko `--credential-env`; `--dry-run --json` yana bayar da rahoto ne kawai
-kan kasancewa/siffa da aka ɓoye. `providers available` yana karanta kasidar OmniRoute;
+kan kasancewa/siffa da aka ɓoye. `providers available` yana karanta kasidar 67router;
 `providers list/test/test-all/validate` suna ci gaba da halayensu na SQLite na cikin gida kuma
 ba sa buƙatar sabar ta kasance tana aiki.
 
@@ -727,7 +727,7 @@ Filin da ba a iya warware ɓoyewarsa ba (tsohuwar maɓalli, gurɓataccen ciphert
 
 ### Sauran ƙananan umarni
 
-Waɗannan suna ɗauka cewa sabar OmniRoute tana aiki, sai dai idan an bayyana akasin haka:
+Waɗannan suna ɗauka cewa sabar 67router tana aiki, sai dai idan an bayyana akasin haka:
 
 ```bash
 omniroute status                       # Cikakken matsayin lokacin aiki
@@ -735,7 +735,7 @@ omniroute logs                         # Nuna rajistocin buƙatu kai tsaye (--js
 omniroute config list                  # Nuna kayan aikin CLI da aka saita
 
 omniroute provider list                # Jera masu bayarwa da ke akwai (wani suna na providers list)
-omniroute provider add                 # Yi rajistar OmniRoute a matsayin mai bayarwa a kan wani kayan aiki
+omniroute provider add                 # Yi rajistar 67router a matsayin mai bayarwa a kan wani kayan aiki
 omniroute keys add | list | remove     # Sarrafa maɓallan API
 omniroute models [provider]            # Jera samfura (--json, --search)
 omniroute combo list | switch | create | delete
@@ -785,7 +785,7 @@ omniroute completion                   # Ƙirƙiri shell completion
 | `/v1/audio/speech`         | Canza rubutu zuwa magana               | ElevenLabs, OpenAI TTS                        |
 | `/v1/audio/transcriptions` | Canza magana zuwa rubutu               | Deepgram, AssemblyAI                          |
 
-Misalan da aka shirya don liƙawa tare da URL na OmniRoute mai token:
+Misalan da aka shirya don liƙawa tare da URL na 67router mai token:
 
 ```txt
 Misalin token: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -804,7 +804,7 @@ Hirar Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-07
 
 | Kuskure                                          | Dalili                            | Gyara                                                   |
 | ------------------------------------------------ | --------------------------------- | ------------------------------------------------------- |
-| `Connection refused`                             | OmniRoute ba ya aiki              | `omniroute serve`                                       |
+| `Connection refused`                             | 67router ba ya aiki               | `omniroute serve`                                       |
 | `401 Unauthorized`                               | Maɓallin API ba daidai ba         | Duba a `/dashboard/api-manager`                         |
 | `No combo configured`                            | Babu haɗin turawa mai aiki        | Saita a `/dashboard/combos`                             |
 | CLI yana nuna "not installed"                    | Fayil ɗin binary ba ya cikin PATH | Duba `which <command>`                                  |
@@ -812,7 +812,7 @@ Hirar Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-07
 | Tsohuwar mahaɗa `/dashboard/cli-tools`           | Alamar shafi ta kafin v3.8.6      | Ana turawa kai tsaye zuwa `/dashboard/cli-code` (308)   |
 | Tsohuwar mahaɗa `/dashboard/agents`              | Alamar shafi ta kafin v3.8.6      | Ana turawa kai tsaye zuwa `/dashboard/acp-agents` (308) |
 
-## Sarrafa manufofin inference-key da OmniRoute CLI
+## Sarrafa manufofin inference-key da 67router CLI
 
 Yi amfani da mahallin gudanarwa mai tantancewa (duba [Yanayin Nesa](../guides/REMOTE-MODE.md))
 don bincika ko sabunta inference key da ke akwai ta amfani da ID ɗinsa:

@@ -45,7 +45,7 @@ WAF kontroluje pouze `messages[].content`. **Nekontroluje**:
 
 Po přibližně 5 rychlých požadavcích v krátkém časovém úseku začne WAF blokovat obsah, který by za normálních okolností prošel. Bucket se uvolní přibližně po 5–10 sekundách nečinnosti. Jde o stejný omezovač rychlosti vázaný na IP adresu a klíč, který způsobuje občasné chyby `400 content-blocked`, když Claude Code nebo Codex CLI provede několik volání použití nástroje / odeslání zprávy v rychlém sledu.
 
-## Opatření již použitá v OmniRoute
+## Opatření již použitá v 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — ochrana proti dávkám, která vynucuje minimální rozestup 500 ms mezi odchozími požadavky na libovolnou adresu URL odpovídající `agentrouter:*`. Tento rozestup je hluboko pod hranicí, kdy by člověk vnímal zpoždění, a zabraňuje aktivaci WAF při běžném provozu.
 

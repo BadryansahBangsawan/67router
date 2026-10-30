@@ -4,7 +4,7 @@
 
 ---
 
-> **En bref** : OmniRoute classe ses fournisseurs **gratuits** selon la qualité des modèles à l’aide des **scores ELO
+> **En bref** : 67router classe ses fournisseurs **gratuits** selon la qualité des modèles à l’aide des **scores ELO
 > d’Arena AI (de type LMArena)**. Ouvrez la page **Classement des fournisseurs gratuits** dans le
 > tableau de bord pour découvrir quels fournisseurs gratuits proposent les modèles les plus performants pour votre tâche —
 > globalement ou avec un filtrage par catégorie (codage, révision, documentation, débogage).
@@ -13,7 +13,7 @@
 
 ## Ce que c'est
 
-OmniRoute répertorie 375 fournisseurs, dont 155 entrées de catalogue marquées **free/no-auth**
+67router répertorie 375 fournisseurs, dont 155 entrées de catalogue marquées **free/no-auth**
 (sans authentification, OAuth avec niveau gratuit ou clé API avec niveau gratuit — voir le
 [Guide des niveaux gratuits](../getting-started/FREE-TIERS-GUIDE.md) et le
 [répertoire complet des niveaux gratuits](../reference/FREE_TIERS.md)). Le hic : la qualité
@@ -131,9 +131,9 @@ et `code` — depuis l’API du classement Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Chaque entrée du classement
 comprend un nom de modèle, un fournisseur, un `score` ELO, un intervalle de confiance et un nombre de votes.
 
-Les catégories du classement correspondent aux catégories de tâches OmniRoute :
+Les catégories du classement correspondent aux catégories de tâches 67router :
 
-| Classement Arena | Catégories de tâches OmniRoute                    |
+| Classement Arena | Catégories de tâches 67router                     |
 | ---------------- | ------------------------------------------------- |
 | `text`           | `default`, `review`, `documentation`, `debugging` |
 | `code`           | `coding`                                          |
@@ -170,7 +170,7 @@ La synchronisation est **activée par défaut** :
 
 - Elle s’exécute une fois au démarrage du serveur, puis selon une minuterie périodique
   (`src/lib/arenaEloSync.ts`, configurée depuis `src/instrumentation-node.ts`).
-- Elle est **non bloquante et jamais fatale** : si la récupération en amont échoue, OmniRoute continue
+- Elle est **non bloquante et jamais fatale** : si la récupération en amont échoue, 67router continue
   de fonctionner et les classements affichent simplement les dernières données valides (ou un état vide).
 
 Deux variables d’environnement permettent de la contrôler (documentées dans
@@ -205,7 +205,7 @@ une correspondance flexible (`findMatchingIntelligence` dans `src/lib/freeProvid
 3. Correspondance par préfixe (un nom de modèle du classement est un préfixe de l’identifiant du registre).
 
 Côté synchronisation, les préfixes de fournisseurs connus (`anthropic/`, `openai/`, `google/`, …) sont
-supprimés et une petite table d’alias développe les noms canoniques en variantes utilisées par OmniRoute
+supprimés et une petite table d’alias développe les noms canoniques en variantes utilisées par 67router
 en interne, afin que les modèles restent accessibles sous n’importe quel nom.
 
 ### Classement d’un fournisseur

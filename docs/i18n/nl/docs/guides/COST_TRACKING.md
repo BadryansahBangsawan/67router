@@ -4,7 +4,7 @@
 
 ---
 
-Hoe OmniRoute de kosten van elk verzoek schat, registreert en rapporteert — en waarom het
+Hoe 67router de kosten van elk verzoek schat, registreert en rapporteert — en waarom het
 getal op het dashboard een **besparingstracker** is en geen factuur.
 
 Zie ook: [Gebruikershandleiding](./USER_GUIDE.md) · [Functieoverzicht](./FEATURES.md)
@@ -13,12 +13,12 @@ Zie ook: [Gebruikershandleiding](./USER_GUIDE.md) · [Functieoverzicht](./FEATUR
 
 ## Wat het is (en wat het niet is)
 
-OmniRoute kent aan elke voltooiing kosten per verzoek in USD toe door de aantallen tokens
+67router kent aan elke voltooiing kosten per verzoek in USD toe door de aantallen tokens
 te vermenigvuldigen met de tarieven van een model. Deze cijfers vormen de basis voor het
 dashboard **Kosten**, de CLI-opdrachten `omniroute cost` / `omniroute usage`, CSV-/JSON-exports
 en budgetten per API-sleutel.
 
-> **De 'kosten' op het dashboard zijn een besparingstracker, geen factuur.** OmniRoute brengt
+> **De 'kosten' op het dashboard zijn een besparingstracker, geen factuur.** 67router brengt
 > je nooit kosten in rekening — het routeert je verzoeken naar providers die je al hebt
 > gekoppeld (je eigen abonnementen, gratis niveaus en API-sleutels). Als er uitsluitend via
 > gratis modellen "$290 totale kosten" zijn opgebouwd, betekent dit dat je ongeveer **$290
@@ -32,7 +32,7 @@ Deze duiding wordt rechtstreeks vermeld in de [README](../../README.md) van het 
 
 Omdat het bedrag een schatting is:
 
-- Het hangt af van de prijstabel die OmniRoute voor elk model heeft. Een model zonder
+- Het hangt af van de prijstabel die 67router voor elk model heeft. Een model zonder
   prijsvermelding draagt `0` aan de kosten bij (het wordt in de verkenner weergegeven als
   een rij "Verouderd / Gratis").
 - Verkeer via gratis niveaus en abonnementen bouwt nog steeds _geschatte_ kosten op — dat
@@ -52,7 +52,7 @@ Kosten zijn afkomstig uit een prijstabel die in deze volgorde van prioriteit wor
    `model_prices_and_context_window.json` wanneer synchronisatie is ingeschakeld (opgeslagen
    in een afzonderlijke `pricing_synced`-naamruimte, zodat je overschrijvingen nooit worden
    overschreven).
-3. **Hardgecodeerde standaardwaarden** — meegeleverd met OmniRoute.
+3. **Hardgecodeerde standaardwaarden** — meegeleverd met 67router.
 
 Externe prijssynchronisatie is **optioneel** en standaard uitgeschakeld. Relevante
 omgevingsvariabelen (zie [`.env.example`](../../.env.example)):
@@ -201,7 +201,7 @@ anders vermeld.
 
 ## CLI
 
-De CLI van OmniRoute biedt opdrachten voor kosten, gebruik en prijzen (geregistreerd in
+De CLI van 67router biedt opdrachten voor kosten, gebruik en prijzen (geregistreerd in
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

@@ -309,7 +309,7 @@ export async function runSetupOpenCodeCommand(opts = {}) {
   const wantsAuth = Boolean(opts.auth);
   const nonInteractive = Boolean(opts.nonInteractive);
 
-  printHeading("OmniRoute → OpenCode Plugin Setup");
+  printHeading("67router → OpenCode Plugin Setup");
 
   const resolvedDirs = resolveOpenCodeDirs();
   const opencodeConfigDir = opts.configDir || resolvedDirs.configDir;
@@ -415,11 +415,11 @@ export function registerSetupOpenCode(setupCommand) {
     )
     .option(
       "--base-url <url>",
-      "OmniRoute base URL the plugin should talk to (default: active context or http://localhost:20128)"
+      "67router base URL the plugin should talk to (default: active context or http://localhost:20128)"
     )
     .option(
       "--remote <url>",
-      "Remote OmniRoute URL, e.g. http://192.168.0.15:20128 (overrides --base-url and the context)"
+      "Remote 67router URL, e.g. http://192.168.0.15:20128 (overrides --base-url and the context)"
     )
     .option("--display-name <name>", "Display name in the OpenCode UI (optional)")
     .option(

@@ -7,7 +7,7 @@
 > **Bron van waarheid:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
-OmniRoute registreert beheeracties, authenticatiegebeurtenissen, wijzigingen in de levenscyclus van providerreferenties en aanroepen van MCP-tools in door SQLite ondersteunde audittabellen. Deze pagina beschrijft wat er wordt gelogd, waar de gegevens worden opgeslagen, hoe lang ze worden bewaard, hoe API-sleutels zich kunnen afmelden en hoe u de gegevens kunt opvragen.
+67router registreert beheeracties, authenticatiegebeurtenissen, wijzigingen in de levenscyclus van providerreferenties en aanroepen van MCP-tools in door SQLite ondersteunde audittabellen. Deze pagina beschrijft wat er wordt gelogd, waar de gegevens worden opgeslagen, hoe lang ze worden bewaard, hoe API-sleutels zich kunnen afmelden en hoe u de gegevens kunt opvragen.
 
 De implementatie bevindt zich in `src/lib/compliance/index.ts` (T-43 — "Compliancecontroles") en `src/lib/compliance/providerAudit.ts`. Audit-schrijfbewerkingen genereren nooit een fout: bij elke fout wordt de aanroep stilzwijgend genegeerd, zodat auditlogging de verwerking van het hoofdverzoek niet kan verstoren.
 

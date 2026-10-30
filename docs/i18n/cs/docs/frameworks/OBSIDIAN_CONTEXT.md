@@ -13,7 +13,7 @@
 
 ## Co to je
 
-OmniRoute se připojuje k trezoru **Obsidian** jako ke **zdroji kontextu** — místní
+67router se připojuje k trezoru **Obsidian** jako ke **zdroji kontextu** — místní
 znalostní bázi v Markdownu, kterou agenti čtou a zapisují prostřednictvím vestavěného
 serveru MCP. Integrace komunikuje s komunitním pluginem **Obsidian Local REST API**
 spuštěným v desktopové aplikaci, takže agenti mohou vyhledávat poznámky, číst/zapisovat/upravovat
@@ -76,7 +76,7 @@ a před uložením ověří token voláním stavového koncového bodu Local RES
 ### Synchronizace trezoru přes WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` spravuje volitelnou synchronizaci trezoru
-využívající WebDAV (řízenou souborem `src/lib/obsidianSync.ts`). Jejím povolením se OmniRoute
+využívající WebDAV (řízenou souborem `src/lib/obsidianSync.ts`). Jejím povolením se 67router
 nasměruje na místní adresář trezoru a vygeneruje náhodnou dvojici uživatelského jména a hesla WebDAV:
 
 ```bash
@@ -114,26 +114,26 @@ chování pro synchronizační tokeny.
 
 Definovány v `open-sse/mcp-server/tools/obsidianTools.ts`. Token a základní URL se určují
 pro každé volání (nejprve podle API klíče, poté globálně). Nástroje, které komunikují se **synchronizačním serverem**
-OmniRoute (čtyři nástroje `obsidian_sync_*`), navíc vyžadují ověřovací token synchronizace nakonfigurovaný
-v nastavení OmniRoute.
+67router (čtyři nástroje `obsidian_sync_*`), navíc vyžadují ověřovací token synchronizace nakonfigurovaný
+v nastavení 67router.
 
 ### Nástroje pro čtení (`read:obsidian`)
 
-| Nástroj                      | Popis                                                                                                        |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `obsidian_check_status`      | Ověří, zda je místní REST API dostupné a ověřené.                                                            |
-| `obsidian_search_simple`     | Fulltextové vyhledávání v obsahu poznámek; vrací úryvky s cestami k souborům.                                |
-| `obsidian_search_structured` | Vyhledávání pomocí výrazu JSON Logic (filtry and/or/regex/path).                                             |
-| `obsidian_read_note`         | Načte poznámku podle cesty relativní k trezoru; volitelně konkrétní nadpis/blok/frontmatter.                 |
-| `obsidian_list_vault`        | Vypíše soubory a adresáře v trezoru (strom položek).                                                         |
-| `obsidian_get_document_map`  | Získá strukturu nadpisů poznámky jako mapu nadpisů → čísel řádků.                                            |
-| `obsidian_get_note_metadata` | Získá frontmatter, značky, odkazy a počet znaků/slov bez úplného obsahu.                                     |
-| `obsidian_get_active_file`   | Získá cestu a obsah souboru, který je právě aktivní v Obsidianu.                                             |
-| `obsidian_get_periodic_note` | Získá denní/týdenní/měsíční periodickou poznámku pro dané datum (při vynechání pro dnešek).                  |
-| `obsidian_get_tags`          | Vypíše všechny značky v trezoru s četností jejich výskytu.                                                   |
-| `obsidian_list_commands`     | Vypíše dostupná ID příkazů Obsidianu (pro použití s `obsidian_execute_command`).                             |
-| `obsidian_sync_status`       | Stav synchronizačního serveru OmniRoute: spuštěn, název trezoru, port, doba provozu, poslední synchronizace. |
-| `obsidian_sync_conflicts`    | Vypíše nevyřešené konflikty synchronizace (cesta, cesta ke konfliktu, čas zjištění).                         |
+| Nástroj                      | Popis                                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Ověří, zda je místní REST API dostupné a ověřené.                                                           |
+| `obsidian_search_simple`     | Fulltextové vyhledávání v obsahu poznámek; vrací úryvky s cestami k souborům.                               |
+| `obsidian_search_structured` | Vyhledávání pomocí výrazu JSON Logic (filtry and/or/regex/path).                                            |
+| `obsidian_read_note`         | Načte poznámku podle cesty relativní k trezoru; volitelně konkrétní nadpis/blok/frontmatter.                |
+| `obsidian_list_vault`        | Vypíše soubory a adresáře v trezoru (strom položek).                                                        |
+| `obsidian_get_document_map`  | Získá strukturu nadpisů poznámky jako mapu nadpisů → čísel řádků.                                           |
+| `obsidian_get_note_metadata` | Získá frontmatter, značky, odkazy a počet znaků/slov bez úplného obsahu.                                    |
+| `obsidian_get_active_file`   | Získá cestu a obsah souboru, který je právě aktivní v Obsidianu.                                            |
+| `obsidian_get_periodic_note` | Získá denní/týdenní/měsíční periodickou poznámku pro dané datum (při vynechání pro dnešek).                 |
+| `obsidian_get_tags`          | Vypíše všechny značky v trezoru s četností jejich výskytu.                                                  |
+| `obsidian_list_commands`     | Vypíše dostupná ID příkazů Obsidianu (pro použití s `obsidian_execute_command`).                            |
+| `obsidian_sync_status`       | Stav synchronizačního serveru 67router: spuštěn, název trezoru, port, doba provozu, poslední synchronizace. |
+| `obsidian_sync_conflicts`    | Vypíše nevyřešené konflikty synchronizace (cesta, cesta ke konfliktu, čas zjištění).                        |
 
 ### Nástroje pro zápis (`write:obsidian`)
 

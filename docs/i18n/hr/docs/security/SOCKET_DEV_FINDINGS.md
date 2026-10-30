@@ -48,7 +48,7 @@ izložen putem tunela **ne može** pokrenuti ovu putanju koda.
 | Linux+Firefox/Chromium | ažuriranje NSS baze podataka po profilu putem `certutil -d sql:<profile>`                                         |
 
 To su iste naredbe koje koriste `mitmproxy`, Charles Proxy, Fiddler i
-Caddy. Činjenica da postoje u OmniRouteu dokumentirana je u
+Caddy. Činjenica da postoje u 67routeru dokumentirana je u
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mjere ublažavanja u v3.8.6**:
@@ -110,7 +110,7 @@ Bit će uklonjena u v3.9.
 
 **Zašto to zadržavamo**: uvoz iz Zeda najjednostavniji je način početnog
 postavljanja za korisnike koji već upotrebljavaju Zed i žele preslikati ključeve
-svojih pružatelja usluga u OmniRoute bez ponovnog lijepljenja.
+svojih pružatelja usluga u 67router bez ponovnog lijepljenja.
 
 ---
 
@@ -121,7 +121,7 @@ svojih pružatelja usluga u OmniRoute bez ponovnog lijepljenja.
 **Zašto je označeno**: segment ponovno izvozi `execFileWithPassword`,
 `runElevatedPowerShell` i zajedničku pomoćnu funkciju `quotePowerShell`.
 AI klasifikator servisa Socket.dev prepoznaje ih kao generički „komplet alata
-za izvršavanje na glavnom računalu + podizanje ovlasti.” Unutar OmniRoutea
+za izvršavanje na glavnom računalu + podizanje ovlasti.” Unutar 67routera
 upotrebljavaju se samo u putanji za instalaciju MITM certifikata (§1) te u
 `execFileWithPassword` za izvršavanje naredbi putem `sudo`.
 
@@ -178,7 +178,7 @@ pristanak.
 
 ---
 
-## §5 — Povratni zapis vjerodajnica za OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Povratni zapis vjerodajnica za 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Izvorne datoteke**:
 
@@ -211,7 +211,7 @@ rawBody)`) prije raščlambe JSON-a. Ako je tajna postavljena, potpis je
    `rateLimitedUntil`, `updatedAt`). Ovo je **nekompatibilna promjena** za korisnike
    koji su se oslanjali na udaljenu sinkronizaciju tokena — moraju je izričito uključiti.
 
-**Zašto to zadržavamo**: Cloud Sync jedini je način da korisnik usluge OmniRoute Cloud
+**Zašto to zadržavamo**: Cloud Sync jedini je način da korisnik usluge 67router Cloud
 centralizira vjerodajnice tima. Ispravak čini model prijetnji jasnim:
 „poslužitelj potpisuje, klijent provjerava, operator izričito uključuje.”
 

@@ -5,12 +5,12 @@
 ---
 
 위임형 **컨텍스트 편집(Context Editing)**은 Claude 전용 컨텍스트 관리 기능입니다. 요청 본문이 프록시를
-떠나기 _전에_ 다시 작성하는 OmniRoute의 로컬 압축 엔진(Caveman, RTK, LLMLingua, 스택형 파이프라인)과 달리,
+떠나기 _전에_ 다시 작성하는 67router의 로컬 압축 엔진(Caveman, RTK, LLMLingua, 스택형 파이프라인)과 달리,
 컨텍스트 편집은 **제공자**에게 자체 실행 컨텍스트 창에서 오래된 도구 사용 / 도구 결과 블록을 삭제하도록
-요청합니다. OmniRoute는 본문 매개변수(`context_management.edits[]`)만 추가하며, 실제 삭제는 Claude가 자체
+요청합니다. 67router는 본문 매개변수(`context_management.edits[]`)만 추가하며, 실제 삭제는 Claude가 자체
 토크나이저를 기준으로 수행합니다.
 
-이는 본질적으로 위임형 기능입니다. 다른 제공자는 이 매개변수를 거부하므로 OmniRoute는 이 기능을
+이는 본질적으로 위임형 기능입니다. 다른 제공자는 이 매개변수를 거부하므로 67router는 이 기능을
 Claude 및 Claude-Code 호환 릴레이로 엄격하게 제한합니다.
 
 진실 공급원: `open-sse/config/contextEditing.ts`(전략 ID, 본문 삽입, 텔레메트리
@@ -19,7 +19,7 @@ Claude 및 Claude-Code 호환 릴레이로 엄격하게 제한합니다.
 
 ## `clear_tool_uses`의 기능
 
-OmniRoute는 송신 Anthropic Messages 본문에 단일 편집 항목을 삽입합니다.
+67router는 송신 Anthropic Messages 본문에 단일 편집 항목을 삽입합니다.
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute는 송신 Anthropic Messages 본문에 단일 편집 항목을 삽입�
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 베타 기능은 `anthropic-beta: context-management-2025-06-27` 헤더를 통해 표시되며,
-OmniRoute는 이미 Claude 요청에 이 헤더를 전송합니다.
+67router는 이미 Claude 요청에 이 헤더를 전송합니다.
 
 삽입은 `applyContextEditingToBody()`가 수행하며 **멱등성**을 갖습니다. 본문에 `clear_tool_uses`
 편집 항목이 이미 존재하면(이전 호출에서 추가되었거나 클라이언트가 제공한 경우) 본문을
-그대로 둡니다. `clear_thinking_20251015` 편집 항목도 존재하는 경우 OmniRoute는
+그대로 둡니다. `clear_thinking_20251015` 편집 항목도 존재하는 경우 67router는
 `clear_thinking` 편집 항목이 앞으로 오도록 안정 정렬합니다. Anthropic은 `edits[]` 배열에서
 `clear_thinking`이 `clear_tool_uses`보다 앞에 와야 한다고 요구하기 때문입니다.
 
@@ -133,7 +133,7 @@ if (
 
 ## `applied_edits` 텔레메트리
 
-Claude 응답 후 OmniRoute는 provider가 실제로 제거한 컨텍스트의 양을 기록합니다. 이는 **스트리밍되지 않으며**, 비스트리밍 응답 본문에서 최선의 방식으로 추출되고 응답에 영향을 주지 않습니다(텔레메트리 오류는 무시됩니다).
+Claude 응답 후 67router는 provider가 실제로 제거한 컨텍스트의 양을 기록합니다. 이는 **스트리밍되지 않으며**, 비스트리밍 응답 본문에서 최선의 방식으로 추출되고 응답에 영향을 주지 않습니다(텔레메트리 오류는 무시됩니다).
 
 - 추출: `open-sse/config/contextEditing.ts`의 `extractContextEditingTelemetry(responseBody)`.
   응답 형식 차이에 방어적으로 대응하기 위해 다음 세 위치에서 `applied_edits`를 확인합니다.
@@ -158,14 +158,14 @@ Claude 응답 후 OmniRoute는 provider가 실제로 제거한 컨텍스트의 �
 
 | 측면              | 로컬 엔진(Caveman / RTK / LLMLingua / stacked) | 위임된 컨텍스트 편집                       |
 | ----------------- | ---------------------------------------------- | ------------------------------------------ |
-| 실행 위치         | 요청이 프록시를 떠나기 전 OmniRoute 내부       | 제공자(Claude)의 서버 측                   |
+| 실행 위치         | 요청이 프록시를 떠나기 전 67router 내부        | 제공자(Claude)의 서버 측                   |
 | 편집 대상         | 프롬프트 / 컨텍스트 / 도구 결과 텍스트         | 이전 도구 사용 / 도구 결과 블록            |
 | 제공자 범위       | 모든 제공자                                    | `claude` + `anthropic-compatible-cc-*`만   |
 | 설정 전환         | 압축 모드 설정                                 | `contextEditing.enabled`                   |
 | 실패 모드         | 실패 시 원본 사용(원본 텍스트)                 | 400 폴백: 매개변수를 제거하고 한 번 재시도 |
 | 절감량 텔레메트리 | `engine: <engine id>`                          | `engine: "context-editing"`                |
 
-두 방식은 상호 보완적입니다. 로컬 엔진은 OmniRoute가 전송하는 바이트를 압축하고, 컨텍스트 편집을 사용하면
+두 방식은 상호 보완적입니다. 로컬 엔진은 67router가 전송하는 바이트를 압축하고, 컨텍스트 편집을 사용하면
 Claude가 여러 턴에 걸쳐 누적된 컨텍스트를 정리할 수 있습니다. 두 기능을 함께 활성화할 수 있습니다.
 
 ## 참고 항목

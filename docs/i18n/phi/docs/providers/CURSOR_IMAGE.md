@@ -4,7 +4,7 @@
 
 ---
 
-Inilalantad ng OmniRoute ang **pagbuo ng larawan** ng Cursor plan sa `POST /v1/images/generations` gamit ang parehong provider id gaya ng chat: `cursor` (alias na `cu`).
+Inilalantad ng 67router ang **pagbuo ng larawan** ng Cursor plan sa `POST /v1/images/generations` gamit ang parehong provider id gaya ng chat: `cursor` (alias na `cu`).
 
 | Field                | Value                                                                                           |
 | -------------------- | ----------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ Inilalantad ng OmniRoute ang **pagbuo ng larawan** ng Cursor plan sa `POST /v1/i
 
 ## Bakit ang Agent CLI
 
-Ginagamit ng Cursor chat sa OmniRoute ang `agent.v1.AgentService/Run` (protobuf). **Tinatanggihan** ng path na iyon ang mga built-in na client tool (shell, write, …). Ang pagbuo ng larawan ay isang Cursor-native na tool na isinasagawa ng **`agent` CLI** gamit ang seat. Samakatuwid, pinapatakbo ng image handler ang `agent` gamit ang isang naka-lock na prompt at pansamantalang workspace para sa bawat request (kaparehong anyo ng mga community seat bridge), at pagkatapos ay nagbabalik ng OpenAI-compatible na `b64_json`.
+Ginagamit ng Cursor chat sa 67router ang `agent.v1.AgentService/Run` (protobuf). **Tinatanggihan** ng path na iyon ang mga built-in na client tool (shell, write, …). Ang pagbuo ng larawan ay isang Cursor-native na tool na isinasagawa ng **`agent` CLI** gamit ang seat. Samakatuwid, pinapatakbo ng image handler ang `agent` gamit ang isang naka-lock na prompt at pansamantalang workspace para sa bawat request (kaparehong anyo ng mga community seat bridge), at pagkatapos ay nagbabalik ng OpenAI-compatible na `b64_json`.
 
 ## Paghihigpit sa access (Hard Rules #15 + #17)
 
@@ -38,7 +38,7 @@ Ang `CURSOR_IMG_MAX_CONCURRENT` ay ipinapatupad ng isang in-memory na counter/qu
 nakatalaga sa instance ng Node module
 (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
 Wasto nitong nililimitahan ang magkakasabay na pag-spawn ng `agent` sa loob ng iisang
-proseso ng OmniRoute, ngunit **hindi** ito nakikipag-coordinate sa maraming
+proseso ng 67router, ngunit **hindi** ito nakikipag-coordinate sa maraming
 proseso/instance na gumagamit ng parehong Cursor seat (hal. isang multi-replica na
 deployment) — ipinapatupad ng bawat instance ang sarili nitong hiwalay na limitasyon.
 Para sa single-instance na deployment (ang default), eksakto ito; sa mga horizontally
@@ -49,7 +49,7 @@ iisang instance.
 ## Mga kinakailangan
 
 1. Isang nakakonektang Cursor account sa dashboard (OAuth o `crsr_…` API key).
-2. Ang Cursor Agent binary na available sa proseso ng OmniRoute:
+2. Ang Cursor Agent binary na available sa proseso ng 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, o
    - `~/.local/bin/agent`, o
    - `providerSpecificData.agentBin` sa koneksyon ng Cursor.

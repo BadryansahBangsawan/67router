@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute מציעה **שתי** דרכים להשתמש ב-OpenAI Codex:
+67router מציעה **שתי** דרכים להשתמש ב-OpenAI Codex:
 
 | ספק                    | כיצד הוא מתקשר עם OpenAI                                                                                                                                                          | הסתייגות בנוגע לשימוש                                      |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | **`codex`**            | מעביר מחדש את אסימון ה-OAuth של ChatGPT/OpenAI ישירות אל Responses API                                                                                                            | **כן** — ההפעלה הרשמית אינה מורשית לשימוש דרך proxy/router |
-| **`codex-app-server`** | מפעיל את **`codex app-server` של Codex CLI עצמו** באמצעות JSON-RPC/WebSocket; ה-CLI מנהל ומרענן בעצמו את ה-OAuth שלו (`~/.codex/auth.json`), בדיוק כמו הפעלת `codex` אינטראקטיבית | **לא** — OmniRoute לעולם אינה מעבירה מחדש אסימון אל ה-API  |
+| **`codex-app-server`** | מפעיל את **`codex app-server` של Codex CLI עצמו** באמצעות JSON-RPC/WebSocket; ה-CLI מנהל ומרענן בעצמו את ה-OAuth שלו (`~/.codex/auth.json`), בדיוק כמו הפעלת `codex` אינטראקטיבית | **לא** — 67router לעולם אינה מעבירה מחדש אסימון אל ה-API   |
 
 מכיוון ש-`codex-app-server` לעולם אינו מעביר מחדש אסימון, הסתייגת השימוש
 הנוגעת להעברה מחדש של הפעלה אינה חלה עליו. הוא כן דורש **Codex CLI נגיש בכתובת
@@ -20,7 +20,7 @@ OmniRoute מציעה **שתי** דרכים להשתמש ב-OpenAI Codex:
 ## 1. ארכיטקטורה
 
 ```
-┌─ אפליקציית OmniRoute ────────────┐        ┌─ שירות צד codex-app-server ─────────┐
+┌─ אפליקציית 67router ────────────┐        ┌─ שירות צד codex-app-server ─────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ אסימון יכולת)                │  JSON  │  --ws-auth capability-token         │
@@ -73,7 +73,7 @@ docker compose --profile base --profile codex-app-server up -d
   אל שירות הצד (`codex-appserver-home`) ודלגו על שלב הכניסה לחשבון.
 - **משתמש ציבורי ללא התקנה מקומית של codex** — לא רלוונטי: שירות הצד כולל את
   ה-CLI. המשתמש מבצע אימות רק דרך ה-dashboard.
-- **OmniRoute על bare-metal (ללא שירות צד, עם codex במארח)** — הגדירו את
+- **67router על bare-metal (ללא שירות צד, עם codex במארח)** — הגדירו את
   `OMNIROUTE_CODEX_APPSERVER_WS` כך שיצביע אל `codex app-server` משלכם, וודאו
   שה-codex במארח מחובר לחשבון; הרמז "codex אינו מותקן" מופיע אם קובץ ההרצה
   חסר.

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute가 Docker 내부에서 실행되는 경우, 컨테이너가 호스트 OS의 키체인 데몬(Linux의 libsecret, macOS의 Keychain, Windows의 Credential Manager)에 접근할 수 없고 호스트 파일 시스템의 Zed 설정 디렉터리가 기본적으로 컨테이너 내부에 표시되지 않기 때문에 표준 "Zed Keychain에서 가져오기" 절차가 실패합니다.
+67router가 Docker 내부에서 실행되는 경우, 컨테이너가 호스트 OS의 키체인 데몬(Linux의 libsecret, macOS의 Keychain, Windows의 Credential Manager)에 접근할 수 없고 호스트 파일 시스템의 Zed 설정 디렉터리가 기본적으로 컨테이너 내부에 표시되지 않기 때문에 표준 "Zed Keychain에서 가져오기" 절차가 실패합니다.
 
 ## Docker에서 키체인 가져오기가 실패하는 이유
 
@@ -17,7 +17,7 @@ OmniRoute가 Docker 내부에서 실행되는 경우, 컨테이너가 호스트 
    모듈은 Unix 소켓 또는 D-Bus 세션을 통해 OS 키체인 서비스와 통신합니다.
    어느 쪽도 기본적으로 컨테이너에 연결되지 않으므로 자격 증명 읽기는 항상 실패합니다.
 
-OmniRoute는 다음 두 가지 휴리스틱을 통해 Docker 환경을 감지합니다.
+67router는 다음 두 가지 휴리스틱을 통해 Docker 환경을 감지합니다.
 
 - `/.dockerenv` 존재 여부(Docker 데몬이 컨테이너 시작 시 작성).
 - `/proc/1/cgroup`에 `docker` 문자열이 포함되어 있는지 여부(Linux cgroup v1).
@@ -29,7 +29,7 @@ OmniRoute는 다음 두 가지 휴리스틱을 통해 Docker 환경을 감지합
 
 1. **대시보드 → 공급자 → Zed**를 엽니다.
 2. **수동 토큰 가져오기** 패널이 키체인 가져오기 카드 아래에 표시됩니다.
-   OmniRoute가 Docker를 감지하면 키체인 가져오기가 처음 실패한 후 이 패널이 자동으로 펼쳐집니다.
+   67router가 Docker를 감지하면 키체인 가져오기가 처음 실패한 후 이 패널이 자동으로 펼쳐집니다.
 3. 드롭다운에서 공급자를 선택합니다(OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter 또는 DeepSeek).
 4. 비밀번호 필드에 API 키를 붙여넣습니다.

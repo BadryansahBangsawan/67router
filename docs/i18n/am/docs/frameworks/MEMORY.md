@@ -7,7 +7,7 @@
 > **የእውነት ምንጭ፦** `src/lib/memory/` እና `src/app/api/memory/`
 > **ለመጨረሻ ጊዜ የዘመነው፦** 2026-06-28 — v3.8.40 (በነባሪ የተሰናከለ + የ int8 quantization ማሟያ)
 
-OmniRoute በAPI ቁልፍ (እና እንደ አማራጭ በክፍለ-ጊዜ መታወቂያ) የሚለይ ቋሚ የውይይት ማህደረ ትውስታ ያቀርባል።
+67router በAPI ቁልፍ (እና እንደ አማራጭ በክፍለ-ጊዜ መታወቂያ) የሚለይ ቋሚ የውይይት ማህደረ ትውስታ ያቀርባል።
 ትውስታዎች ቀላል የregex ስርዓተ-ጥለት ማዛመድን በመጠቀም ከLLM ምላሾች
 በራስ-ሰር ይወጣሉ፣ ከዚያም የመጀመሪያ የስርዓት መልዕክት ሆነው ወደ ቀጣይ
 ጥያቄዎች ይካተታሉ (ወይም የስርዓት ሚናን ለማይቀበሉ አቅራቢዎች
@@ -584,7 +584,7 @@ metadata?}` → `createMemory()`ን ይጠቀልላል። 4ቱን መደበኛ �
 
 ## የኢምቤዲንግ አቅራቢን መምረጥ (v3.8.16+)
 
-የOmniRoute ማህደረ ትውስታ ሞተር **አራት የኢምቤዲንግ ምንጮችን** (`src/lib/memory/embedding/`) ይደግፋል። እያንዳንዳቸው በ**መዘግየት፣ ወጪ፣ የሞዴል ጥራት እና የማዋቀር ውስብስብነት** ረገድ የተለያዩ ሚዛናዊ ምርጫዎች አሏቸው።
+የ67router ማህደረ ትውስታ ሞተር **አራት የኢምቤዲንግ ምንጮችን** (`src/lib/memory/embedding/`) ይደግፋል። እያንዳንዳቸው በ**መዘግየት፣ ወጪ፣ የሞዴል ጥራት እና የማዋቀር ውስብስብነት** ረገድ የተለያዩ ሚዛናዊ ምርጫዎች አሏቸው።
 
 ### የኢምቤዲንግ ምንጮች
 
@@ -1004,13 +1004,13 @@ worker ወደ loopback ብቻ ይገናኛል፣ ይህንንም የ`GenericMemo
 ይህ አስማሚ ያንን መከላከያ አያላላውም፦ host ወደ `127.0.0.1` በቋሚነት ተዋቅሯል፣ እና የውቅር
 schema (`ClaudeMemBackendConfigSchema`, `.strict()`) የሚከተሉትን ብቻ ይቀበላል፦
 
-| ቁልፍ         | ዓይነት   | ነባሪ    | ማስታወሻዎች                                                                                              |
-| ----------- | ------ | ------ | ---------------------------------------------------------------------------------------------------- |
-| `port`      | ቁጥር    | —      | አስፈላጊ፣ 1024–65535። ከቅንብሮች ፋይሉ የሚገኘው የ claude-mem worker ወደብ (ነባሪ `37700 + uid % 100`)።               |
-| `project`   | ሕብረቁምፊ | —      | ጥቅም ላይ የሚውል የ claude-mem ፕሮጀክት። ካልተዋቀረ → እያንዳንዱ የ OmniRoute API ቁልፍ ወደ የራሱ ፕሮጀክት (`apiKeyId`) ይመደባል። |
-| `timeoutMs` | ቁጥር    | `5000` | ለእያንዳንዱ ጥያቄ የጊዜ ገደብ፣ 100–30000።                                                                      |
+| ቁልፍ         | ዓይነት   | ነባሪ    | ማስታወሻዎች                                                                                             |
+| ----------- | ------ | ------ | --------------------------------------------------------------------------------------------------- |
+| `port`      | ቁጥር    | —      | አስፈላጊ፣ 1024–65535። ከቅንብሮች ፋይሉ የሚገኘው የ claude-mem worker ወደብ (ነባሪ `37700 + uid % 100`)።              |
+| `project`   | ሕብረቁምፊ | —      | ጥቅም ላይ የሚውል የ claude-mem ፕሮጀክት። ካልተዋቀረ → እያንዳንዱ የ 67router API ቁልፍ ወደ የራሱ ፕሮጀክት (`apiKeyId`) ይመደባል። |
+| `timeoutMs` | ቁጥር    | `5000` | ለእያንዳንዱ ጥያቄ የጊዜ ገደብ፣ 100–30000።                                                                     |
 
-በ`PUT /api/settings/memory` በኩል ያንቁት እና OmniRouteን እንደገና ያስጀምሩ (backends አንድ ጊዜ
+በ`PUT /api/settings/memory` በኩል ያንቁት እና 67routerን እንደገና ያስጀምሩ (backends አንድ ጊዜ
 ብቻ በ`initMemoryBackends()` ውስጥ ይመዘገባሉ)፦
 
 ```json
@@ -1027,7 +1027,7 @@ schema (`ClaudeMemBackendConfigSchema`, `.strict()`) የሚከተሉትን ብ�
 
 - IDs `claude-mem:<observationId>` ናቸው፤ `get`/`delete` የሌሎች backends IDsን ያለ
   የአውታረ መረብ ጥሪ ችላ ይላሉ።
-- `create` → `POST /api/memory/save`፤ የ OmniRoute መስኮች (`apiKeyId`፣ `sessionId`፣ `type`፣
+- `create` → `POST /api/memory/save`፤ የ 67router መስኮች (`apiKeyId`፣ `sessionId`፣ `type`፣
   `key`፣ `metadata`) በ claude-mem `metadata.omniroute` ውስጥ ይተላለፋሉ እና ሲነበቡ ያለምንም ለውጥ ይመለሳሉ።
 - `search` → `GET /api/search?format=json&type=observations`፣ እስከ `maxTokens`
   (ቁምፊዎች / 4) ይቆረጣል። `list` → የ worker በገጽ የተከፋፈለ observations endpoint (`total` ዝቅተኛ ገደብ ነው — worker
@@ -1039,16 +1039,16 @@ schema (`ClaudeMemBackendConfigSchema`, `.strict()`) የሚከተሉትን ብ�
 - Prompt injection (`retrieval.ts`) እና የ`omniroute_memory_*` MCP መሣሪያዎች አሁንም SQLiteን
   በቀጥታ ያነባሉ — በ`memoryManager` በኩል አያልፉም፣ ስለዚህ ይህ backend ውሂብ አያቀርብላቸውም።
 
-**የ claude-mem የራሱን LLM ጥሪዎች በ OmniRoute በኩል ማስተላለፍ።** claude-mem observationsን
+**የ claude-mem የራሱን LLM ጥሪዎች በ 67router በኩል ማስተላለፍ።** claude-mem observationsን
 በ LLM ያጠቃልላል (ነባሪ፦ Claude Agent SDK)። የእሱ `openai-compatible` provider ወደ
-OmniRoute እንዲያመለክት በማድረግ combo fallback እና የወጪ ክትትልን መጠቀም ይችላል። በ`~/.claude-mem/settings.json` ውስጥ፦
+67router እንዲያመለክት በማድረግ combo fallback እና የወጪ ክትትልን መጠቀም ይችላል። በ`~/.claude-mem/settings.json` ውስጥ፦
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API ቁልፍ>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute ሞዴል ወይም combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API ቁልፍ>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router ሞዴል ወይም combo>"
 }
 ```
 

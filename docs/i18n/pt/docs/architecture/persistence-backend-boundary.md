@@ -10,7 +10,7 @@
 
 ## Contexto
 
-Atualmente, o OmniRoute apresenta funções de persistência orientadas ao domínio a partir de `src/lib/db/`, enquanto a ligação partilhada devolvida por `src/lib/db/core.ts` implementa o contrato síncrono `SqliteAdapter` em `src/lib/db/adapters/types.ts`. Esse adaptador suporta vários runtimes de SQLite, mas a sua interface continua a seguir o modelo do SQLite: instruções preparadas síncronas, `pragma`, transações diferidas e imediatas, cópias de segurança nativas/por cópia de ficheiros, checkpoint e um identificador local da base de dados.
+Atualmente, o 67router apresenta funções de persistência orientadas ao domínio a partir de `src/lib/db/`, enquanto a ligação partilhada devolvida por `src/lib/db/core.ts` implementa o contrato síncrono `SqliteAdapter` em `src/lib/db/adapters/types.ts`. Esse adaptador suporta vários runtimes de SQLite, mas a sua interface continua a seguir o modelo do SQLite: instruções preparadas síncronas, `pragma`, transações diferidas e imediatas, cópias de segurança nativas/por cópia de ficheiros, checkpoint e um identificador local da base de dados.
 
 O atual percurso de inicialização e recuperação também gere o ciclo de vida do ficheiro SQLite. `src/lib/db/core.ts` resolve `storage.sqlite`, mantém um adaptador global por processo, cria checkpoints da WAL, preserva tabelas selecionadas durante a recuperação e remove os ficheiros auxiliares do SQLite ao reconstruir uma base de dados. A seleção do driver em `src/lib/db/adapters/driverFactory.ts` escolhe entre os runtimes de SQLite suportados; não constitui uma abstração de backend externo.
 

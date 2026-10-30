@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Magyar)
+# 67router Architecture (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Utolsó frissítés: 2026-06-28_
 
 ## Vezetői összefoglaló
 
-Az OmniRoute egy Next.js alapú, helyi AI-útválasztó átjáró és irányítópult.
+A 67router egy Next.js alapú, helyi AI-útválasztó átjáró és irányítópult.
 Egyetlen, OpenAI-kompatibilis végpontot (`/v1/*`) biztosít, és fordítással, tartalék útvonalakkal, tokenfrissítéssel, valamint használatkövetéssel irányítja a forgalmat több felsőbb szintű szolgáltató között.
 
 Fő képességek:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Böngészőalapú irányítópult]
     end
 
-    subgraph Router[OmniRoute helyi folyamat]
+    subgraph Router[67router helyi folyamat]
         API[V1 kompatibilitási API\n/v1/*]
         DASH[Irányítópult + felügyeleti API\n/api/*]
         CORE[SSE + fordítási mag\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth-szolgáltatói modulok (27 különálló fájl a `src/lib/oauth/providers/
 
 ## 5) Beágyazott szolgáltatások (v3.8.4)
 
-Az OmniRoute képes telepíteni, felügyelni és útválasztási célként használni a helyben futó, **beágyazott szolgáltatásoknak** nevezett AI-eszközfolyamatokat. Öt ilyen szolgáltatást tartalmaz: 9Router, CLIProxyAPI, Bifrost, Mux és Dario.
+A 67router képes telepíteni, felügyelni és útválasztási célként használni a helyben futó, **beágyazott szolgáltatásoknak** nevezett AI-eszközfolyamatokat. Öt ilyen szolgáltatást tartalmaz: 9Router, CLIProxyAPI, Bifrost, Mux és Dario.
 
 Architekturális rétegek:
 
@@ -436,7 +436,7 @@ saját maguknak összeállítaniuk a kizárási, költségkeret- és tartaléklo
 - Kvótagyorsítótár: `src/domain/quotaCache.ts`
 - Degradációs állapot: `src/domain/degradation.ts`
 - Konfiguráció-ellenőrzés: `src/domain/configAudit.ts`
-- OmniRoute-válaszmetaadatok összeállítója: `src/domain/omnirouteResponseMeta.ts`
+- 67router-válaszmetaadatok összeállítója: `src/domain/omnirouteResponseMeta.ts`
 - Kiértékelési alrendszer: `src/domain/assessment/` — időszakos kiértékelési feladatok
 
 ### E. Engedélyezési folyamatlánc
@@ -803,7 +803,7 @@ flowchart LR
         Browser[Vezérlőpult böngészője]
     end
 
-    subgraph ContainerOrProcess[OmniRoute futtatókörnyezet]
+    subgraph ContainerOrProcess[67router futtatókörnyezet]
         Next[Next.js-kiszolgáló\nPORT=20128]
         Core[SSE-mag + végrehajtók]
         MainDB[(storage.sqlite)]
@@ -921,7 +921,7 @@ Minden más szolgáltató (beleértve az egyéni kompatibilis csomópontokat is)
 
 ## Szolgáltatói kompatibilitási mátrix
 
-> **Megjegyzés:** Az alábbi mátrix az OmniRoute v3.8.0 rendszerben regisztrált 351 szolgáltató reprezentatív mintája.
+> **Megjegyzés:** Az alábbi mátrix a 67router v3.8.0 rendszerben regisztrált 351 szolgáltató reprezentatív mintája.
 > A hiteles és folyamatosan frissített listát lásd az
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (automatikusan generált) fájlban, vagy a mérvadó
 > `src/shared/constants/providers.ts` forrásban (betöltéskor Zod által validálva).
@@ -1103,7 +1103,7 @@ A részletes kérés-adattartalom rögzítése irányított hívásonként legfe
 - a klienstől fogadott nyers kérés
 - a ténylegesen a felsőbb szintre küldött, átalakított kérés
 - a szolgáltató JSON-ként rekonstruált válasza; az adatfolyamban továbbított válaszok a végső összefoglalóra és az adatfolyam metaadataira tömörítve kerülnek tárolásra
-- az OmniRoute által visszaadott végső kliensválasz; az adatfolyamban továbbított válaszok ugyanebben a tömörített összefoglaló-formában kerülnek tárolásra
+- a 67router által visszaadott végső kliensválasz; az adatfolyamban továbbított válaszok ugyanebben a tömörített összefoglaló-formában kerülnek tárolásra
 
 ## Biztonsági szempontból érzékeny határok
 

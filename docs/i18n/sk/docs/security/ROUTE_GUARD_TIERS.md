@@ -6,7 +6,7 @@
 
 ## Prehľad
 
-Všetky trasy správcovského API OmniRoute sú zaradené do jednej z troch úrovní
+Všetky trasy správcovského API 67router sú zaradené do jednej z troch úrovní
 ochrany. Klasifikácia je statická, definovaná v `src/server/authz/routeGuard.ts`
 a vyhodnocuje sa pred spustením akejkoľvek inej vetvy autentifikácie.
 
@@ -28,10 +28,10 @@ ide o známu triedu CVE
 **Čo je GHSA-fhh6-4qxv-rpqj (trieda útoku):** server na správu/agenta
 sprístupňuje koncový bod, ktorý spúšťa podproces (`npm install`, `node`, prehliadač,
 proxy, `git`, `tar`, …). Ak je tento koncový bod dostupný mimo hostiteľa — pretože
-prevádzkovateľ umiestnil OmniRoute za tunel nginx/Cloudflare/Tailscale a došlo
+prevádzkovateľ umiestnil 67router za tunel nginx/Cloudflare/Tailscale a došlo
 k úniku JWT alebo bolo overovanie totožnosti nesprávne nakonfigurované — útočník
 premení „volanie API“ na „spustenie príkazu na hostiteľovi“ (vzdialené spustenie
-kódu). OmniRoute tomu zabraňuje **bezpodmienečným vynútením kontroly hostiteľa
+kódu). 67router tomu zabraňuje **bezpodmienečným vynútením kontroly hostiteľa
 spätnej slučky pred akoukoľvek kontrolou overenia totožnosti** na každej trase
 schopnej spúšťať procesy: uniknutý token použitý cez tunel sa k spusteniu stále
 nedostane.
@@ -122,7 +122,7 @@ pre vzdialených volajúcich používajúcich iba MCP, ktorí by nemali potrebov
 
 #### Pokyny pre prevádzkovateľov a auditovanie
 
-Ak prevádzkujete OmniRoute za reverzným proxy serverom alebo tunelom (nginx, Caddy, Cloudflare
+Ak prevádzkujete 67router za reverzným proxy serverom alebo tunelom (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), kontrola spätnej slučky stále chráni vyššie uvedené trasy
 schopné spúšťať procesy — požiadavka, ktorej adresa klienta nie je adresou spätnej slučky, je odmietnutá s
 `403 LOCAL_ONLY` **pred spustením overovania**, takže ani uniknutý JWT nemôže spustiť proces. Zostávajú dve
@@ -162,7 +162,7 @@ povinnosti prevádzkovateľa:
   s adresou klienta, ktorá nie je typu loopback. Akákoľvek taká požiadavka, ktorá vrátila
   `200` namiesto `403 LOCAL_ONLY`, znamená, že proxy maskuje skutočnú IP adresu klienta —
   opravte proxy.
-- Záznam `403 LOCAL_ONLY` v denníkoch OmniRoute pre jednu z týchto ciest znamená, že ochrana
+- Záznam `403 LOCAL_ONLY` v denníkoch 67router pre jednu z týchto ciest znamená, že ochrana
   funguje podľa očakávania; nejde o chybu, ktorú treba potlačiť.
 
 #### Vzdialene dostupné trasy s kontrolou sondy v mieste volania

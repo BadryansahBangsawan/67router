@@ -4,15 +4,15 @@
 
 ---
 
-Delegeeritud **konteksti redigeerimine** on ainult Claude'ile mõeldud kontekstihalduse funktsioon. Erinevalt OmniRoute'i kohalikest tihendusmootoritest (Caveman, RTK, LLMLingua, virnastatud konveierid) — mis kirjutavad päringu keha ümber _enne_, kui see puhverserverist väljub — palub konteksti redigeerimine **teenusepakkujal** eemaldada oma aktiivsest kontekstiaknast aegunud tööriistakasutuse / tööriistatulemuse plokid. OmniRoute lisab ainult keha parameetri (`context_management.edits[]`); tegeliku eemaldamise teeb Claude oma tokenisaatori alusel.
+Delegeeritud **konteksti redigeerimine** on ainult Claude'ile mõeldud kontekstihalduse funktsioon. Erinevalt 67router'i kohalikest tihendusmootoritest (Caveman, RTK, LLMLingua, virnastatud konveierid) — mis kirjutavad päringu keha ümber _enne_, kui see puhverserverist väljub — palub konteksti redigeerimine **teenusepakkujal** eemaldada oma aktiivsest kontekstiaknast aegunud tööriistakasutuse / tööriistatulemuse plokid. 67router lisab ainult keha parameetri (`context_management.edits[]`); tegeliku eemaldamise teeb Claude oma tokenisaatori alusel.
 
-Olemuselt on see delegeeritud võimekus: teised teenusepakkujad lükkavad selle parameetri tagasi, mistõttu piirab OmniRoute selle kasutamise rangelt Claude'i ja Claude Code'iga ühilduvate vahendajatega.
+Olemuselt on see delegeeritud võimekus: teised teenusepakkujad lükkavad selle parameetri tagasi, mistõttu piirab 67router selle kasutamise rangelt Claude'i ja Claude Code'iga ühilduvate vahendajatega.
 
 Tõeallikas: `open-sse/config/contextEditing.ts` (strateegia ID-d, keha täiendamine, telemeetria eraldamine), `open-sse/executors/base.ts` (täiendamise kontroll + 400-tagavaramehhanism) ja `open-sse/services/compression/types.ts` (konfiguratsiooni struktuur + vaikeväärtus).
 
 ## Mida `clear_tool_uses` teeb
 
-OmniRoute lisab väljamineva Anthropic Messagesi päringu kehasse ühe redigeerimiskirje:
+67router lisab väljamineva Anthropic Messagesi päringu kehasse ühe redigeerimiskirje:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute lisab väljamineva Anthropic Messagesi päringu kehasse ühe redigeeri
 - `trigger.value: 100000` — kui päringu sisendtokenite arv ületab selle lävendi, hakkab Claude vanu tööriistakasutuse/tulemuse paare eemaldama (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, Anthropicu vaikeväärtus).
 - `keep.value: 3` — N kõige hiljutisemat tööriistakasutuse/tulemuse paari jäetakse puutumata (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Beetafunktsioonist antakse teada päise `anthropic-beta: context-management-2025-06-27` kaudu, mille OmniRoute juba Claude'i päringutele lisab.
+Beetafunktsioonist antakse teada päise `anthropic-beta: context-management-2025-06-27` kaudu, mille 67router juba Claude'i päringutele lisab.
 
-Täiendamise teeb `applyContextEditingToBody()` ja see on **idempotentne**: kui kehas on `clear_tool_uses` redigeerimiskirje juba olemas (lisatud eelmise kutsega või kliendi poolt), jäetakse keha muutmata. Kui olemas on ka `clear_thinking_20251015` redigeerimiskirje, sordib OmniRoute stabiilselt `clear_thinking` redigeerimiskirje ettepoole, sest Anthropic nõuab, et `clear_thinking` eelneks massiivis `edits[]` kirjele `clear_tool_uses`.
+Täiendamise teeb `applyContextEditingToBody()` ja see on **idempotentne**: kui kehas on `clear_tool_uses` redigeerimiskirje juba olemas (lisatud eelmise kutsega või kliendi poolt), jäetakse keha muutmata. Kui olemas on ka `clear_thinking_20251015` redigeerimiskirje, sordib 67router stabiilselt `clear_thinking` redigeerimiskirje ettepoole, sest Anthropic nõuab, et `clear_thinking` eelneks massiivis `edits[]` kirjele `clear_tool_uses`.
 
 ## Kombinatsioonipõhine lubamislüliti
 
@@ -123,7 +123,7 @@ Ehtsa Claude'i puhul sisaldub beetafunktsioon muutujas `ANTHROPIC_BETA_BASE` ja 
 
 ## `applied_edits` telemeetria
 
-Pärast Claude'i vastust salvestab OmniRoute, kui palju konteksti pakkuja tegelikult eemaldas. Seda
+Pärast Claude'i vastust salvestab 67router, kui palju konteksti pakkuja tegelikult eemaldas. Seda
 **ei** voogedastata — see eraldatakse võimaluste piires mittevoogedastatava vastuse kehast ega mõjuta
 kunagi vastust (telemeetriavead jäetakse tähelepanuta).
 
@@ -155,14 +155,14 @@ Seega kuvatakse delegeeritud eemaldamine tihendusanalüütikas koos kohalike moo
 
 | Aspekt                  | Kohalikud mootorid (Caveman / RTK / LLMLingua / stacked) | Delegeeritud konteksti redigeerimine                         |
 | ----------------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
-| Kus see töötab          | OmniRoute'is enne, kui päring puhverserverist väljub     | Teenusepakkuja juures (Claude), serveripoolel                |
+| Kus see töötab          | 67router'is enne, kui päring puhverserverist väljub      | Teenusepakkuja juures (Claude), serveripoolel                |
 | Mida see redigeerib     | Viiba / konteksti / tööriista tulemuse tekst             | Vanad tööriistakasutuse / tööriista tulemuse plokid          |
 | Teenusepakkujate ulatus | Kõik teenusepakkujad                                     | Ainult `claude` + `anthropic-compatible-cc-*`                |
 | Lüliti                  | Tihendusrežiimi sätted                                   | `contextEditing.enabled`                                     |
 | Tõrkerežiim             | Tõrke korral jätkatakse algtekstiga                      | 400-varulahendus: eemalda parameeter, proovi üks kord uuesti |
 | Säästu telemeetria      | `engine: <engine id>`                                    | `engine: "context-editing"`                                  |
 
-Need kaks täiendavad teineteist: kohalikud mootorid tihendavad baite, mida OmniRoute saadab; konteksti redigeerimine võimaldab
+Need kaks täiendavad teineteist: kohalikud mootorid tihendavad baite, mida 67router saadab; konteksti redigeerimine võimaldab
 Claude'il voorude jooksul jooksvat konteksti kärpida. Neid saab koos lubada.
 
 ## Vaata ka

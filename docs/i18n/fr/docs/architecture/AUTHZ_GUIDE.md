@@ -7,7 +7,7 @@
 > **Source de vérité :** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Dernière mise à jour :** 2026-09-22 — les espaces de noms de portée pointent vers MCP-SERVER.md
 
-OmniRoute dispose d'un pipeline d'autorisation sensible aux routes qui filtre chaque requête API. La classification est **déterministe** et **fermée par défaut** — tout ce qui ne peut pas être classifié est considéré comme `MANAGEMENT` et exige une session ou un jeton de niveau gestion. Cette page explique le modèle aux ingénieurs qui maintiennent des routes ou conçoivent de nouveaux points de terminaison.
+67router dispose d'un pipeline d'autorisation sensible aux routes qui filtre chaque requête API. La classification est **déterministe** et **fermée par défaut** — tout ce qui ne peut pas être classifié est considéré comme `MANAGEMENT` et exige une session ou un jeton de niveau gestion. Cette page explique le modèle aux ingénieurs qui maintiennent des routes ou conçoivent de nouveaux points de terminaison.
 
 ![Pipeline d'autorisation (3 classes de routes + évaluation des politiques)](../diagrams/exported/authz-pipeline.svg)
 

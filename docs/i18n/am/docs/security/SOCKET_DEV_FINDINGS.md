@@ -48,7 +48,7 @@ JWT ይህን የኮድ ዱካ **ማስነሳት አይችልም**።
 | Linux+Firefox/Chromium | ለእያንዳንዱ profile የNSS DB ዝማኔ በ`certutil -d sql:<profile>` በኩል                                                      |
 
 እነዚህ `mitmproxy`፣ Charles Proxy፣ Fiddler እና
-Caddy የሚጠቀሙባቸው ተመሳሳይ ትዕዛዞች ናቸው። በOmniRoute ውስጥ መኖራቸው በ
+Caddy የሚጠቀሙባቸው ተመሳሳይ ትዕዛዞች ናቸው። በ67router ውስጥ መኖራቸው በ
 `docs/security/STEALTH_GUIDE.md` ተመዝግቧል።
 
 **የv3.8.6 የመከላከያ ማሻሻያ**፦
@@ -94,7 +94,7 @@ Caddy የሚጠቀሙባቸው ተመሳሳይ ትዕዛዞች ናቸው። በO
 
 የ`OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` env ጠቋሚ አውቶሜሽናቸውን ገና ላላዘመኑ ኦፕሬተሮች የv3.8.5 ባህሪን ያቆያል። በv3.9 ይወገዳል።
 
-**የምናቆየው ለምንድን ነው**: Zedን አስቀድመው ለሚጠቀሙ እና የአቅራቢ ቁልፎቻቸውን እንደገና ሳይለጥፉ ወደ OmniRoute ማንጸባረቅ ለሚፈልጉ ተጠቃሚዎች፣ የZed ማስመጣት እጅግ ቀላሉ የመጀመሪያ ማዋቀሪያ መንገድ ነው።
+**የምናቆየው ለምንድን ነው**: Zedን አስቀድመው ለሚጠቀሙ እና የአቅራቢ ቁልፎቻቸውን እንደገና ሳይለጥፉ ወደ 67router ማንጸባረቅ ለሚፈልጉ ተጠቃሚዎች፣ የZed ማስመጣት እጅግ ቀላሉ የመጀመሪያ ማዋቀሪያ መንገድ ነው።
 
 ---
 
@@ -102,7 +102,7 @@ Caddy የሚጠቀሙባቸው ተመሳሳይ ትዕዛዞች ናቸው። በO
 
 **የምንጭ ፋይሎች**: `src/mitm/systemCommands.ts`።
 
-**ምልክት የተደረገበት ምክንያት**: chunkው `execFileWithPassword`ን፣ `runElevatedPowerShell`ን እና የጋራውን `quotePowerShell` አጋዥ በድጋሚ ወደ ውጭ ይልካል። የSocket.dev AI መድብ እነዚህን እንደ አጠቃላይ "የhost አፈጻጸም + የፈቃድ ደረጃ ማሳደጊያ መሣሪያ ስብስብ" ያያቸዋል። በOmniRoute ውስጥ ግን በMITM cert መጫኛ መንገድ (§1) እና ለ`sudo` ትዕዛዝ አፈጻጸም በ`execFileWithPassword` ብቻ ጥቅም ላይ ይውላሉ።
+**ምልክት የተደረገበት ምክንያት**: chunkው `execFileWithPassword`ን፣ `runElevatedPowerShell`ን እና የጋራውን `quotePowerShell` አጋዥ በድጋሚ ወደ ውጭ ይልካል። የSocket.dev AI መድብ እነዚህን እንደ አጠቃላይ "የhost አፈጻጸም + የፈቃድ ደረጃ ማሳደጊያ መሣሪያ ስብስብ" ያያቸዋል። በ67router ውስጥ ግን በMITM cert መጫኛ መንገድ (§1) እና ለ`sudo` ትዕዛዝ አፈጻጸም በ`execFileWithPassword` ብቻ ጥቅም ላይ ይውላሉ።
 
 **የv3.8.6 ማሻሻያ**:
 
@@ -139,7 +139,7 @@ Caddy የሚጠቀሙባቸው ተመሳሳይ ትዕዛዞች ናቸው። በO
 
 ---
 
-## §5 — የOmniRoute Cloud Sync ማረጋገጫ መረጃ መልሶ መጻፍ (`api/keys/[id]/route.js`)
+## §5 — የ67router Cloud Sync ማረጋገጫ መረጃ መልሶ መጻፍ (`api/keys/[id]/route.js`)
 
 **የምንጭ ፋይሎች**:
 
@@ -172,7 +172,7 @@ rawBody)`) ይፈትሻል። ሚስጥሩ ከተዋቀረ፣ ፊርማው ያ�
    ይህ በርቀት ቶከን ማመሳሰል ላይ ለተመሰረቱ ተጠቃሚዎች **ተኳሃኝነትን የሚያፈርስ ለውጥ** ነው
    — በግልጽ በፈቃዳቸው መምረጥ አለባቸው።
 
-**የምንጠብቀው ለምንድን ነው**: Cloud Sync የOmniRoute Cloud ተከራይ
+**የምንጠብቀው ለምንድን ነው**: Cloud Sync የ67router Cloud ተከራይ
 የቡድን ማረጋገጫ መረጃዎችን ማዕከላዊ ለማድረግ ያለው ብቸኛ መንገድ ነው። ማስተካከያው የስጋት ሞዴሉን
 ግልጽ ያደርገዋል፦ "ሰርቨሩ ይፈርማል፣ ደንበኛው ያረጋግጣል፣ ኦፕሬተሩ በፈቃዱ ይመርጣል።"
 

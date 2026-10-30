@@ -8,11 +8,11 @@
 > **Oxirgi yangilanish:** 2026-09-02 — v3.8.51
 > **Auditoriya:** Provayderga xos yashirin integratsiyalarni qoʻllab-quvvatlovchi muhandislar.
 
-OmniRoute rasmiy boʻlmagan mijozlarning raqamli izlarini faol ravishda aniqlaydigan provayderlar bilan integratsiyalashadi (TLS JA3/JA4, sarlavhalar tartibi, JSON tanasi shakli, yaxlitlik tokenlari). Ushbu sahifada OmniRoute taqdim etadigan yashirinlik mexanizmlari va ularning qayerda amalga oshirilgani hujjatlashtiriladi.
+67router rasmiy boʻlmagan mijozlarning raqamli izlarini faol ravishda aniqlaydigan provayderlar bilan integratsiyalashadi (TLS JA3/JA4, sarlavhalar tartibi, JSON tanasi shakli, yaxlitlik tokenlari). Ushbu sahifada 67router taqdim etadigan yashirinlik mexanizmlari va ularning qayerda amalga oshirilgani hujjatlashtiriladi.
 
 ## Huquqiy va axloqiy eslatma
 
-Yashirinlik funksiyalari OmniRoute foydalanuvchiga tegishli rasmiy hisoblar (Claude Code CLI, Codex, Antigravity, Cursor va boshqalar) bilan OmniRoute’ning yagona API interfeysi oʻrtasida moslik qatlami sifatida ishlashi uchun mavjud. Ular firibgarlikni aniqlash mexanizmlarini chetlab oʻtish, hisob maʼlumotlarini ulashish yoki provayderning Xizmat koʻrsatish shartlarini buzish uchun **moʻljallanmagan**. Qoʻllab-quvvatlovchilar operatorlardan hisob yaratish vaqtida qabul qilgan yuqori oqimdagi ToS talablariga rioya qilishlarini kutadi.
+Yashirinlik funksiyalari 67router foydalanuvchiga tegishli rasmiy hisoblar (Claude Code CLI, Codex, Antigravity, Cursor va boshqalar) bilan 67router’ning yagona API interfeysi oʻrtasida moslik qatlami sifatida ishlashi uchun mavjud. Ular firibgarlikni aniqlash mexanizmlarini chetlab oʻtish, hisob maʼlumotlarini ulashish yoki provayderning Xizmat koʻrsatish shartlarini buzish uchun **moʻljallanmagan**. Qoʻllab-quvvatlovchilar operatorlardan hisob yaratish vaqtida qabul qilgan yuqori oqimdagi ToS talablariga rioya qilishlarini kutadi.
 
 ---
 
@@ -55,7 +55,7 @@ Profillar mahkamlangan paket tomonidan qoʻllab-quvvatlanadi, biroq haqiqiy WAF 
 
 ## Claude Code yashirinlik toʻplami
 
-`cliCompatMode` yoqilganida, OmniRoute chiquvchi Claude soʻrovlarini `claude-cli` trafigidan ajratib boʻlmaydigan tarzda qayta shakllantiradi. Uchta modul birgalikda ishlaydi:
+`cliCompatMode` yoqilganida, 67router chiquvchi Claude soʻrovlarini `claude-cli` trafigidan ajratib boʻlmaydigan tarzda qayta shakllantiradi. Uchta modul birgalikda ishlaydi:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -71,7 +71,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Mijoz kontenti xeshi)
 
-Rasmiy Claude Code CLI Bun/Zig orqali hisoblaydigan server tomonidagi yaxlitlik tekshiruvi. OmniRoute uni `xxhash-wasm` yordamida qayta amalga oshiradi:
+Rasmiy Claude Code CLI Bun/Zig orqali hisoblaydigan server tomonidagi yaxlitlik tekshiruvi. 67router uni `xxhash-wasm` yordamida qayta amalga oshiradi:
 
 1. Asosiy qismni `cch=00000;` toʻldiruvchisi bilan serializatsiya qilish
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -117,7 +117,7 @@ Shu toʻplamdagi yordamchi modullar:
 
 ## Antigravity yashirinligi
 
-Antigravity soʻrovlari chaqiruvchi matnini baytma-bayt saqlaydi. OmniRoute IDE mijoziga taqlid qilish uchun promptlarga nol kenglikdagi belgilarni kiritmaydi yoki vositalarni qayta nomlamaydi/kiritmaydi.
+Antigravity soʻrovlari chaqiruvchi matnini baytma-bayt saqlaydi. 67router IDE mijoziga taqlid qilish uchun promptlarga nol kenglikdagi belgilarni kiritmaydi yoki vositalarni qayta nomlamaydi/kiritmaydi.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -127,13 +127,13 @@ Yoʻnaltirishdan oldin Stainless SDK belgilarini (`x-stainless-lang`, `x-stainle
 
 `ANTIGRAVITY_CREDITS=always` (`open-sse/executors/antigravity.ts` tomonidan ishlatiladi) Google’ning bepul tarif kvotasi soʻrovlarni cheklashiga yoʻl qoʻyish oʻrniga **har bir** soʻrovni Antigravity AI Credit Overages (Google’ning pulli kreditlari) orqali yoʻnaltiradi. Bu imkoniyat sifatida hujjatlashtirilgan, ammo u **biz koʻradigan Xizmat koʻrsatish shartlari buzilishi haqidagi xabarlarning eng keng tarqalgan yagona sababidir** — bir nechta Google Ultra hisobi `=always` bilan bir necha soat ishlaganidan soʻng `403 / "service disabled for ToS violation" / insufficient_quota` xatosi bilan bloklangan.
 
-Yuqori oqimdagi nazorat **Google tomonida** amalga oshiriladi va OmniRoute buning oldini ola olmaydi. Muhit oʻzgaruvchisining nomi va mavjud hujjatlar uni yoqish xavfsizdek koʻrsatadi; aslida esa bunday emas.
+Yuqori oqimdagi nazorat **Google tomonida** amalga oshiriladi va 67router buning oldini ola olmaydi. Muhit oʻzgaruvchisining nomi va mavjud hujjatlar uni yoqish xavfsizdek koʻrsatadi; aslida esa bunday emas.
 
 **Nega bu faqat bepul tarifdan foydalanishga qaraganda suiisteʼmolni aniqlash tizimlarini faolroq ishga tushiradi:**
 
 - Bitta Google hisobidan davomli avtomatlashtirilgan xarajat bepul tarifning kvotaga yetib, toʻxtab qolishidan boshqacha belgilanishiga sabab boʻladi.
 - Ortiqcha kreditlar uchun tezlik chegarasi yoʻq, shu sababli notoʻgʻri sozlangan mijoz bir necha daqiqada bir necha yuz USD sarflashi va API kalitlarini qayta sotish yoki bot trafigiga oʻxshab koʻrinishi mumkin.
-- Bir xil tashqi IP manzildan parallel ravishda ortiqcha kreditlardan foydalanayotgan bir nechta OmniRoute foydalanuvchisi signalni kuchaytiradi.
+- Bir xil tashqi IP manzildan parallel ravishda ortiqcha kreditlardan foydalanayotgan bir nechta 67router foydalanuvchisi signalni kuchaytiradi.
 
 **Tavsiya etiladigan yondashuv:**
 
@@ -172,7 +172,7 @@ Har bir provayder uchun env orqali yoqing yoki oʻchiring (quyiga qarang). Oʻch
 
 ## MITM proksi (Antigravity, Linux/macOS/Windows)
 
-Binar fayllarini `OPENAI_BASE_URL` orqali qayta yoʻnaltirib boʻlmaydigan CLI’lar uchun OmniRoute TLS’ni yakunlovchi mahalliy proksini ishga tushiradi. Endpointlar `src/app/api/cli-tools/antigravity-mitm/` ichida joylashgan.
+Binar fayllarini `OPENAI_BASE_URL` orqali qayta yoʻnaltirib boʻlmaydigan CLI’lar uchun 67router TLS’ni yakunlovchi mahalliy proksini ishga tushiradi. Endpointlar `src/app/api/cli-tools/antigravity-mitm/` ichida joylashgan.
 
 | Metod  | Endpoint                                | Maqsad                                                             |
 | ------ | --------------------------------------- | ------------------------------------------------------------------ |
@@ -253,7 +253,7 @@ Provayder IP manzili **har doim saqlanadi** — almashtirgich faqat soʻrovning 
 
 ## Kiruvchi sarlavhalarni tozalash
 
-OmniRoute soʻrovlarni yoʻnaltirishdan oldin kiruvchi mijoz sarlavhalarini tozalaydi, shunda Cursorʼdan kelgan soʻrov Claude yuqori oqimiga `User-Agent: Cursor/X.Y.Z` qiymatini oshkor qilmaydi. Zod sxemalari va birlik testlari bilan hamohang saqlanadigan taqiqlar roʻyxati uchun `src/shared/constants/upstreamHeaders.ts` fayliga qarang.
+67router soʻrovlarni yoʻnaltirishdan oldin kiruvchi mijoz sarlavhalarini tozalaydi, shunda Cursorʼdan kelgan soʻrov Claude yuqori oqimiga `User-Agent: Cursor/X.Y.Z` qiymatini oshkor qilmaydi. Zod sxemalari va birlik testlari bilan hamohang saqlanadigan taqiqlar roʻyxati uchun `src/shared/constants/upstreamHeaders.ts` fayliga qarang.
 
 ---
 

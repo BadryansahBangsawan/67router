@@ -10,7 +10,7 @@ pateikiami kaip keturios teikėjų šeimos. Regionas yra ryšio duomenų dalis, 
 
 ## Sprendimas
 
-| Teikėjų šeima                                    | OmniRoute ID            | Visuotinis regionas | Kinijos regionas |
+| Teikėjų šeima                                    | 67router ID             | Visuotinis regionas | Kinijos regionas |
 | ------------------------------------------------ | ----------------------- | ------------------- | ---------------- |
 | Alibaba Cloud Model Studio (mokama už naudojimą) | `alibaba`               | Singapūras          | Pekinas          |
 | Alibaba Cloud Token Plan                         | `bailian-coding-plan`   | Singapūras          | Pekinas          |

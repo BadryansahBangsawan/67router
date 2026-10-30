@@ -4,7 +4,7 @@
 
 ---
 
-I provider Web Cookie consentono a OmniRoute di utilizzare un servizio di IA tramite la sessione esistente del browser, anziché tramite una chiave API. Sono utili quando si dispone già dell'accesso a un servizio attraverso il relativo sito web e si desidera che OmniRoute utilizzi la stessa sessione autenticata.
+I provider Web Cookie consentono a 67router di utilizzare un servizio di IA tramite la sessione esistente del browser, anziché tramite una chiave API. Sono utili quando si dispone già dell'accesso a un servizio attraverso il relativo sito web e si desidera che 67router utilizzi la stessa sessione autenticata.
 
 A differenza dei provider con chiave API, i provider Web Cookie eseguono l'autenticazione utilizzando le credenziali inviate dal browser al sito web.
 
@@ -49,7 +49,7 @@ DevTools
 
 L'header di richiesta `Cookie` contiene le informazioni di autenticazione esatte utilizzate correttamente dal browser.
 
-Per la maggior parte dei provider Web Cookie, questo è il valore da incollare in OmniRoute.
+Per la maggior parte dei provider Web Cookie, questo è il valore da incollare in 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Il processo di configurazione è lo stesso per la maggior parte dei provider Web
 4. Aggiornare la pagina.
 5. Aprire una richiesta autenticata di chat o conversazione.
 6. Copiare le credenziali di autenticazione richieste.
-7. Aprire OmniRoute.
+7. Aprire 67router.
 8. Andare su **Providers → Add Provider**.
 9. Selezionare il provider Web Cookie.
 10. Incollare le credenziali.
@@ -92,17 +92,17 @@ I diversi siti web memorizzano l'autenticazione in modi diversi. Alcuni richiedo
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) è una piattaforma di chat gratuita per utenti, che non richiede registrazione: la sessione viene creata in forma anonima alla prima visita e viene mantenuta tramite tre cookie: `uid`, `si_usr_id` e `si_ses_id`. OmniRoute inoltra tramite proxy lo stesso endpoint `/api/dispatch` usando un unico ID modello (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) è una piattaforma di chat gratuita per utenti, che non richiede registrazione: la sessione viene creata in forma anonima alla prima visita e viene mantenuta tramite tre cookie: `uid`, `si_usr_id` e `si_ses_id`. 67router inoltra tramite proxy lo stesso endpoint `/api/dispatch` usando un unico ID modello (`notrack-c`, alias `ntw`).
 
 ### Passaggi per la connessione
 
 1. Apri [notrack.ai](https://notrack.ai) nel browser e attendi che venga impostato il cookie della sessione anonima.
 2. Apri **Strumenti per sviluppatori → Rete**, aggiorna la pagina e fai clic su una qualsiasi richiesta `/api`.
 3. In **Intestazioni della richiesta**, copia il valore completo dell'intestazione `Cookie`.
-4. In OmniRoute, vai a **Provider → Aggiungi provider → NoTrack Web (gratuito)**.
+4. In 67router, vai a **Provider → Aggiungi provider → NoTrack Web (gratuito)**.
 5. Incolla la stringa dei cookie nel campo `apiKey` e fai clic su **Salva**.
 
-OmniRoute estrae `uid`, `si_usr_id` e `si_ses_id` dalla stringa incollata e ricostruisce un'intestazione `Cookie` pulita contenente solo tali coppie, più `nt_session` (il token `ntk_…` impostato per gli account autenticati), se presente. Se manca uno dei tre valori, la stringa originale incollata viene inoltrata senza modifiche, in modo che gli operatori possano sperimentare formati alternativi.
+67router estrae `uid`, `si_usr_id` e `si_ses_id` dalla stringa incollata e ricostruisce un'intestazione `Cookie` pulita contenente solo tali coppie, più `nt_session` (il token `ntk_…` impostato per gli account autenticati), se presente. Se manca uno dei tre valori, la stringa originale incollata viene inoltrata senza modifiche, in modo che gli operatori possano sperimentare formati alternativi.
 
 ### ID modello
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Il cookie funziona nel browser ma non in OmniRoute
+## Il cookie funziona nel browser ma non in 67router
 
 Alcuni provider includono cookie che vengono inviati soltanto durante le richieste autenticate.
 

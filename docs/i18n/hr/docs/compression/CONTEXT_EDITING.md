@@ -4,13 +4,13 @@
 
 ---
 
-Delegirano **uređivanje konteksta** značajka je upravljanja kontekstom dostupna samo za Claude. Za razliku od OmniRouteovih lokalnih
+Delegirano **uređivanje konteksta** značajka je upravljanja kontekstom dostupna samo za Claude. Za razliku od 67routerovih lokalnih
 mehanizama kompresije (Caveman, RTK, LLMLingua, složeni cjevovodi) — koji preoblikuju tijelo zahtjeva
 _prije_ nego što napusti proxy — uređivanje konteksta traži od **pružatelja usluge** da iz vlastitog aktivnog kontekstnog prozora ukloni zastarjele
-blokove upotrebe alata / rezultata alata. OmniRoute samo prilaže parametar tijela
+blokove upotrebe alata / rezultata alata. 67router samo prilaže parametar tijela
 (`context_management.edits[]`); Claude obavlja stvarno uklanjanje na temelju vlastitog tokenizatora.
 
-To je po svojoj prirodi delegirana mogućnost: drugi pružatelji usluge odbijaju taj parametar, stoga ga OmniRoute
+To je po svojoj prirodi delegirana mogućnost: drugi pružatelji usluge odbijaju taj parametar, stoga ga 67router
 strogo ograničava na Claude i releje kompatibilne s Claude Codeom.
 
 Izvor istine: `open-sse/config/contextEditing.ts` (ID-jevi strategija, umetanje u tijelo, izdvajanje
@@ -19,7 +19,7 @@ telemetrije), `open-sse/executors/base.ts` (uvjet umetanja + rezervno ponašanje
 
 ## Što radi `clear_tool_uses`
 
-OmniRoute umeće jednu izmjenu u odlazno tijelo Anthropic Messages zahtjeva:
+67router umeće jednu izmjenu u odlazno tijelo Anthropic Messages zahtjeva:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute umeće jednu izmjenu u odlazno tijelo Anthropic Messages zahtjeva:
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Beta-verzija oglašava se putem zaglavlja `anthropic-beta: context-management-2025-06-27`, koje
-OmniRoute već šalje u Claude zahtjevima.
+67router već šalje u Claude zahtjevima.
 
 Umetanje obavlja `applyContextEditingToBody()` i ono je **idempotentno**: ako izmjena `clear_tool_uses`
 već postoji u tijelu (dodana prethodnim pozivom ili ju je poslao klijent), tijelo
-ostaje neizmijenjeno. Ako je prisutna i izmjena `clear_thinking_20251015`, OmniRoute stabilnim sortiranjem premješta izmjenu
+ostaje neizmijenjeno. Ako je prisutna i izmjena `clear_thinking_20251015`, 67router stabilnim sortiranjem premješta izmjenu
 `clear_thinking` na početak jer Anthropic zahtijeva da `clear_thinking` prethodi
 `clear_tool_uses` u polju `edits[]`.
 
@@ -147,7 +147,7 @@ Izvorni Claude uključuje beta-značajku u `ANTHROPIC_BETA_BASE` i ne ulazi u ov
 
 ## Telemetrija `applied_edits`
 
-Nakon Claudeova odgovora OmniRoute bilježi koliko je konteksta pružatelj doista očistio. To se
+Nakon Claudeova odgovora 67router bilježi koliko je konteksta pružatelj doista očistio. To se
 **ne** prenosi strujanjem — podaci se izdvajaju iz tijela odgovora koji se ne prenosi strujanjem,
 prema načelu najboljeg pokušaja, i nikada ne utječu na odgovor (pogreške telemetrije se zanemaruju).
 
@@ -179,14 +179,14 @@ LLMLingue.
 
 | Aspekt                 | Lokalni mehanizmi (Caveman / RTK / LLMLingua / stacked) | Delegirano uređivanje konteksta                                 |
 | ---------------------- | ------------------------------------------------------- | --------------------------------------------------------------- |
-| Gdje se izvršava       | U OmniRouteu, prije nego što zahtjev napusti proxy      | Kod pružatelja (Claude), na strani poslužitelja                 |
+| Gdje se izvršava       | U 67routeru, prije nego što zahtjev napusti proxy       | Kod pružatelja (Claude), na strani poslužitelja                 |
 | Što uređuje            | Tekst upita / konteksta / rezultata alata               | Stare blokove uporabe alata / rezultata alata                   |
 | Opseg pružatelja       | Svi pružatelji                                          | Samo `claude` + `anthropic-compatible-cc-*`                     |
 | Prekidač               | Postavke načina kompresije                              | `contextEditing.enabled`                                        |
 | Ponašanje pri pogrešci | Nastavak bez kompresije (izvorni tekst)                 | Rezervni postupak za 400: ukloni parametar i pokušaj još jednom |
 | Telemetrija uštede     | `engine: <engine id>`                                   | `engine: "context-editing"`                                     |
 
-Ta se dva pristupa međusobno nadopunjuju: lokalni mehanizmi komprimiraju bajtove koje OmniRoute šalje; uređivanje konteksta omogućuje Claudeu da sažima tekući kontekst kroz više interakcija. Mogu se omogućiti istodobno.
+Ta se dva pristupa međusobno nadopunjuju: lokalni mehanizmi komprimiraju bajtove koje 67router šalje; uređivanje konteksta omogućuje Claudeu da sažima tekući kontekst kroz više interakcija. Mogu se omogućiti istodobno.
 
 ## Vidi također
 

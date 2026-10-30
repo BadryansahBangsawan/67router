@@ -6,7 +6,7 @@ lastUpdated: 2026-09-22
 
 # Management Authentication
 
-OmniRoute has **four credential families** that can authorize management routes.
+67router has **four credential families** that can authorize management routes.
 They are not interchangeable. Inference API keys (`sk-…`) do **not** manage the
 server unless they were explicitly granted `manage` or `admin` scope.
 

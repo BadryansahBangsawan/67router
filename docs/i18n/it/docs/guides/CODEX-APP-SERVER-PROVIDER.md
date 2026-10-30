@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute offre **due** modi per utilizzare OpenAI Codex:
+67router offre **due** modi per utilizzare OpenAI Codex:
 
 | Provider               | Come comunica con OpenAI                                                                                                                                                                                              | Avvertenza sull'utilizzo                                                        |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | **`codex`**            | Inoltra direttamente il token OAuth di ChatGPT/OpenAI alla Responses API                                                                                                                                              | **Sì** — la sessione ufficiale non è autorizzata per l'uso tramite proxy/router |
-| **`codex-app-server`** | Controlla il **`codex app-server` della Codex CLI** tramite JSON-RPC/WebSocket; la CLI gestisce e aggiorna automaticamente il proprio OAuth (`~/.codex/auth.json`), esattamente come una sessione `codex` interattiva | **No** — OmniRoute non inoltra mai un token all'API                             |
+| **`codex-app-server`** | Controlla il **`codex app-server` della Codex CLI** tramite JSON-RPC/WebSocket; la CLI gestisce e aggiorna automaticamente il proprio OAuth (`~/.codex/auth.json`), esattamente come una sessione `codex` interattiva | **No** — 67router non inoltra mai un token all'API                              |
 
 Poiché `codex-app-server` non inoltra mai un token, non presenta
 l'avvertenza sull'utilizzo relativa all'inoltro della sessione. Richiede però una
@@ -21,7 +21,7 @@ aver **effettuato l'accesso**.
 ## 1. Architettura
 
 ```
-┌─ App OmniRoute ─────────────────┐        ┌─ Sidecar codex-app-server ──────────┐
+┌─ App 67router ─────────────────┐        ┌─ Sidecar codex-app-server ──────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token di funzionalità)       │  JSON  │  --ws-auth capability-token         │
@@ -81,7 +81,7 @@ sempre creata una copia di backup).
 - **Utente pubblico, senza codex installato localmente** — irrilevante: il
   sidecar include la CLI. L'utente deve autenticarsi soltanto tramite la
   dashboard.
-- **OmniRoute bare metal (senza sidecar, codex sull'host)** — configura
+- **67router bare metal (senza sidecar, codex sull'host)** — configura
   `OMNIROUTE_CODEX_APPSERVER_WS` in modo che punti al tuo `codex app-server` e
   assicurati che codex sull'host abbia effettuato l'accesso; se il binario non è
   presente, viene visualizzato il suggerimento "codex non installato".

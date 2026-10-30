@@ -11,12 +11,12 @@
 
 ## Cad atá ann
 
-Is féidir le OmniRoute nascadh le spás oibre **Notion** mar **fhoinse comhthéacs** — bunachar
+Is féidir le 67router nascadh le spás oibre **Notion** mar **fhoinse comhthéacs** — bunachar
 eolais inléite/inscríofa a mbaineann gníomhairí amach tríd an bhfreastalaí MCP ionsuite. Nuair
 a bheidh comhartha comhtháthaithe Notion cumraithe, ligeann na huirlisí MCP do LLM leathanaigh
 agus bunachair sonraí a chuardach, inneachar leathanaigh agus crainn bloc a léamh, bunachair
 sonraí a cheistiú le scagairí/sórtálacha, agus bloic nua a chur i gceangal — iad uile seachfhreastáilte
-trí OmniRoute (le hatriail, teorainn ama, agus aicmiú earráidí), ionas nach dteagmhaíonn an tsamhail
+trí 67router (le hatriail, teorainn ama, agus aicmiú earráidí), ionas nach dteagmhaíonn an tsamhail
 leis an Notion API go díreach riamh.
 
 Is fillteán tanaí, treisithe é an comhtháthú timpeall ar an Notion REST API oifigiúil
@@ -41,7 +41,7 @@ SQLite `key_value` (ainmspás `notion`, eochair `integration_token`) trí
 > [!NOTE]
 > Is **comhartha comhtháthaithe inmheánach Notion** é an comhartha. Cruthaigh comhtháthú ag
 > <https://www.notion.com/my-integrations>, ansin comhroinn na leathanaigh/bunachair sonraí ar mian
-> leat go mbeadh rochtain ag OmniRoute orthu leis an gcomhtháthú sin (tá samhail ceadanna Notion
+> leat go mbeadh rochtain ag 67router orthu leis an gcomhtháthú sin (tá samhail ceadanna Notion
 > bunaithe ar chomhroinnt, ní ar an spás oibre ina iomláine).
 
 ### Cumrú trí REST
@@ -60,7 +60,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Éilíonn na trí mhodh fíordheimhniú deaise (`isAuthenticated`). Ar `POST`,
-sábhálann OmniRoute an comhartha agus ritheann sé cuardach tástála 1 toradh láithreach; má
+sábhálann 67router an comhartha agus ritheann sé cuardach tástála 1 toradh láithreach; má
 fhilleann Notion oibiacht earráide, glantar an comhartha agus teipeann ar an nglao le `400`.
 
 ## Uirlisí MCP (6)

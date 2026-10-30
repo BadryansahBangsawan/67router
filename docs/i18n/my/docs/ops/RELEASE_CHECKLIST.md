@@ -40,7 +40,7 @@ npm run test:e2e           # မဖြစ်မနေမဟုတ်သော်
 2FA ကို ကျော်လွှားနိုင်သည့် token များကို ရပ်ဆိုင်းနေပြီဖြစ်သောကြောင့် ယခုနည်းလမ်းသည် npm က ခွင့်ပြုထားသည့် bypass ဖြစ်ပါသည်။ ၎င်းသည် WS1.3 အာမခံချက်ကို ဆက်လက်ထိန်းသိမ်းရင်း project တွင် v3.8.48 အထိ ရှိခဲ့သည့် အပြည့်အဝ အလိုအလျောက် flow ကို ပြန်လည်ရရှိစေပါသည် (token ပေါက်ကြားမှုတစ်ခုတည်းဖြင့် publish မလုပ်နိုင်ပါ — အဘယ်ကြောင့်ဆိုသော် token လုံးဝမရှိသောကြောင့် ဖြစ်သည်)။
 
 **တစ်ကြိမ်သာ setup လုပ်ရန် (owner):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none)။ ၎င်းမရှိသေးမီအထိ အလိုအလျောက်အဆင့်သည် `ENEEDAUTH` ဖြင့် ကျရှုံးမည်ဖြစ်ပြီး `publish_mode=staged` (အောက်တွင်ကြည့်ပါ) သို့မဟုတ် `direct` ဖြင့် ပြန်လည် dispatch လုပ်ပါ။
 
 ### Staged publishing (တောင်းဆိုမှုရှိပါက — `publish_mode=staged`)

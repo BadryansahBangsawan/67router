@@ -47,7 +47,7 @@ WAF provjerava samo `messages[].content`. On **ne** provjerava:
 
 Nakon ~5 brzih zahtjeva u kratkom vremenskom prozoru, WAF počinje blokirati sadržaj koji bi inače prošao. "Kanta" (bucket) se opušta nakon ~5–10 sekundi neaktivnosti. Ovo je isti ograničavač brzine (rate limiter) vezan za IP i ključ koji uzrokuje povremene `400 content-blocked` greške kada Claude Code ili Codex CLI upućuju više poziva za korištenje alata / slanje poruka u brzom nizu.
 
-## Ublažavanja (mitigations) već primijenjena u OmniRoute
+## Ublažavanja (mitigations) već primijenjena u 67router
 
 1. `open-sse/services/wafRateLimit.ts` — zaštita od naleta (burst guard) koja nameće minimalni razmak od 500 ms između odlaznih zahtjeva prema bilo kojem `agentrouter:*` URL-u. Razmak je znatno ispod ljudske percepcije latencije i sprječava aktivaciju WAF-a pri normalnom prometu.
 

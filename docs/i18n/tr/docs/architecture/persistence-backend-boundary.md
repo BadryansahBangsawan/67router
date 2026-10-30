@@ -10,7 +10,7 @@
 
 ## Bağlam
 
-OmniRoute şu anda etki alanı odaklı kalıcılık işlevlerini `src/lib/db/` üzerinden sunarken,
+67router şu anda etki alanı odaklı kalıcılık işlevlerini `src/lib/db/` üzerinden sunarken,
 `src/lib/db/core.ts` tarafından döndürülen paylaşılan bağlantı, `src/lib/db/adapters/types.ts`
 içindeki eşzamanlı `SqliteAdapter` sözleşmesini uygular. Bu adaptör çeşitli SQLite çalışma zamanı
 ortamlarını destekler, ancak sunduğu arayüz SQLite biçiminde kalır: eşzamanlı hazırlanmış ifadeler,

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute gør Cursor-abonnementets **billedgenerering** tilgængelig på `POST /v1/images/generations` via samme udbyder-id som chat: `cursor` (alias `cu`).
+67router gør Cursor-abonnementets **billedgenerering** tilgængelig på `POST /v1/images/generations` via samme udbyder-id som chat: `cursor` (alias `cu`).
 
 | Felt                 | Værdi                                                                                   |
 | -------------------- | --------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute gør Cursor-abonnementets **billedgenerering** tilgængelig på `POST 
 
 ## Hvorfor Agent CLI
 
-Cursor-chat i OmniRoute bruger `agent.v1.AgentService/Run` (protobuf). Denne sti **afviser** indbyggede klientværktøjer (shell, write, …). Billedgenerering er et Cursor-specifikt værktøj, der køres af **`agent` CLI** mod licensen. Billedhåndteringen starter derfor `agent` med en låst prompt og et midlertidigt arbejdsområde pr. anmodning (samme struktur som community-baserede licensbroer) og returnerer derefter OpenAI-kompatibel `b64_json`.
+Cursor-chat i 67router bruger `agent.v1.AgentService/Run` (protobuf). Denne sti **afviser** indbyggede klientværktøjer (shell, write, …). Billedgenerering er et Cursor-specifikt værktøj, der køres af **`agent` CLI** mod licensen. Billedhåndteringen starter derfor `agent` med en låst prompt og et midlertidigt arbejdsområde pr. anmodning (samme struktur som community-baserede licensbroer) og returnerer derefter OpenAI-kompatibel `b64_json`.
 
 ## Adgangsbegrænsning (ufravigelige regler nr. 15 + 17)
 
@@ -36,7 +36,7 @@ af `LOCAL_ONLY`-niveauet.
 
 `CURSOR_IMG_MAX_CONCURRENT` håndhæves af en tæller/kø i hukommelsen, som er afgrænset
 til Node-modulinstansen (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Den begrænser korrekt samtidige starter af `agent` inden for én OmniRoute-proces, men
+Den begrænser korrekt samtidige starter af `agent` inden for én 67router-proces, men
 koordinerer **ikke** på tværs af flere processer/instanser, der deler den samme
 Cursor-licens (f.eks. en installation med flere replikaer) — hver instans håndhæver
 sin egen uafhængige grænse. For en installation med én instans (standarden) er dette
@@ -47,7 +47,7 @@ enkelt instans.
 ## Krav
 
 1. En tilsluttet Cursor-konto i kontrolpanelet (OAuth eller `crsr_…`-API-nøgle).
-2. Binærfilen Cursor Agent skal være tilgængelig for OmniRoute-processen:
+2. Binærfilen Cursor Agent skal være tilgængelig for 67router-processen:
    - miljøvariablen `CURSOR_AGENT_BIN=/path/to/agent`, eller
    - `~/.local/bin/agent`, eller
    - `providerSpecificData.agentBin` på Cursor-forbindelsen.

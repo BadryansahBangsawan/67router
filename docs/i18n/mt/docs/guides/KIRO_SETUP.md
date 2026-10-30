@@ -4,7 +4,7 @@
 
 ---
 
-Din il-gwida tkopri kif iżżid kontijiet ta’ Kiro (assistent tal-ipprogrammar bl-IA ospitat minn AWS) ma’ OmniRoute,
+Din il-gwida tkopri kif iżżid kontijiet ta’ Kiro (assistent tal-ipprogrammar bl-IA ospitat minn AWS) ma’ 67router,
 b’enfasi fuq it-tħaddim ta’ diversi kontijiet fl-istess ħin mingħajr kunflitti bejn is-sessjonijiet.
 
 ---
@@ -22,10 +22,10 @@ tal-ewwel kont.
 
 ---
 
-## Kif OmniRoute Jsolvi Dan (v3.8.0+)
+## Kif 67router Jsolvi Dan (v3.8.0+)
 
-Minn v3.8.0 ’il quddiem, OmniRoute jsejjaħ `registerClient()` (AWS SSO OIDC) matul kull
-importazzjoni ta’ konnessjoni ta’ Kiro. Dan jagħti lil kull konnessjoni ta’ OmniRoute
+Minn v3.8.0 ’il quddiem, 67router jsejjaħ `registerClient()` (AWS SSO OIDC) matul kull
+importazzjoni ta’ konnessjoni ta’ Kiro. Dan jagħti lil kull konnessjoni ta’ 67router
 reġistrazzjoni ddedikata tagħha stess ta’ klijent OIDC. Minħabba li kull reġistrazzjoni
 ta’ klijent hija indipendenti, l-aġġornament jew l-awtentikazzjoni mill-ġdid ta’ kont
 wieħed ma jaffettwawx it-token ta’ aġġornament ta’ xi kont ieħor.
@@ -60,7 +60,7 @@ kollha maħluqa mill-ġdid jirċievu awtomatikament ir-reġistrazzjoni tagħhom 
 
 ### Prerekwiżiti
 
-- OmniRoute v3.8.0 jew aktar riċenti.
+- 67router v3.8.0 jew aktar riċenti.
 - Kont ta’ Kiro li jaħdem (email + password, jew login b’Google jew GitHub).
 - B’mod fakultattiv, kont ieħor ta’ Kiro.
 
@@ -71,7 +71,7 @@ kollha maħluqa mill-ġdid jirċievu awtomatikament ir-reġistrazzjoni tagħhom 
    - **Import Token** — waħħal token ta’ aġġornament li jibda b’`aorAAAAAG`.
    - **API Key** — waħħal API key ta’ Kiro / CodeWhisperer b’tul ta’ ħajja twil.
    - **Login b’Google / GitHub** — lesti l-fluss OAuth fil-brawżer.
-   - **Auto-Import** — ikklikkja l-buttuna; OmniRoute jaqra l-kredenzjali mid-database
+   - **Auto-Import** — ikklikkja l-buttuna; 67router jaqra l-kredenzjali mid-database
      lokali ta’ kiro-cli jew minn `~/.aws/sso/cache`.
 3. Il-konnessjoni tiġi ssejvjata. Il-flussi bit-token ta’ aġġornament jirreġistraw
    awtomatikament klijent OIDC iddedikat. Il-flussi b’API key jivvalidaw iċ-ċavetta
@@ -128,7 +128,7 @@ L-awtentikazzjoni bl-API key hija għal kredenzjali bearer ta’ Kiro / AWS Code
 2. Agħżel **API Key**.
 3. Waħħal l-API key u agħżel ir-reġjun AWS: **Sejbien awtomatiku** (default), **Lvant tal-Istati Uniti
    (N. Virginia)** jew **Ewropa (Frankfurt)**.
-4. OmniRoute jivvalida l-key u jsalva l-konnessjoni marbuta mar-reġjun fejn taħdem il-key.
+4. 67router jivvalida l-key u jsalva l-konnessjoni marbuta mar-reġjun fejn taħdem il-key.
 
 ### API
 
@@ -165,7 +165,7 @@ Waqt l-eżekuzzjoni, `KiroExecutor.buildHeaders()` jibgħat il-key bħala `Autho
 ## Skadenza tal-Klijent OIDC
 
 Il-klijenti pubbliċi tal-AWS SSO OIDC tipikament jiskadu wara 90 jum
-(`clientSecretExpiresAt`). OmniRoute jaħżen dan it-timestamp f’`providerSpecificData`
+(`clientSecretExpiresAt`). 67router jaħżen dan it-timestamp f’`providerSpecificData`
 għall-osservabbiltà. Jekk konnessjoni tieqaf tiġġedded wara madwar 90 jum, erġa’ importa
 l-konnessjoni sabiex tikseb reġistrazzjoni ġdida tal-klijent OIDC. Ir-reġistrazzjoni mill-ġdid
 awtomatika mal-iskadenza hija ppjanata bħala titjib futur.
@@ -186,7 +186,7 @@ permezz tal-AWS SSO OIDC.
 ### L-importazzjoni tfalli bi "Il-validazzjoni tat-token falliet"
 
 - Kun żgur li r-refresh token jibda b’`aorAAAAAG`.
-- Kun żgur li OmniRoute jista’ jaċċessa `https://oidc.us-east-1.amazonaws.com` (jew ir-reġjun
+- Kun żgur li 67router jista’ jaċċessa `https://oidc.us-east-1.amazonaws.com` (jew ir-reġjun
   ikkonfigurat). Jekk tinsab wara proxy korporattiv, issettja proxy fil-livell tal-fornitur f’
   **Dashboard → Settings → Proxies**.
 
@@ -194,7 +194,7 @@ permezz tal-AWS SSO OIDC.
 
 - Ikkonferma li l-key hija API key ta’ Kiro / CodeWhisperer, mhux refresh token.
 - Ikkonferma li r-reġjun AWS jaqbel mal-key/kont. `us-east-1` huwa l-valur predefinit.
-- Il-key trid tkun tista’ ssejjaħ `ListAvailableProfiles`; inkella OmniRoute ma jistax
+- Il-key trid tkun tista’ ssejjaħ `ListAvailableProfiles`; inkella 67router ma jistax
   jiddetermina l-`profileArn` meħtieġ.
 
 Għal problemi oħra, ara l-[TROUBLESHOOTING.md](./TROUBLESHOOTING.md) prinċipali.

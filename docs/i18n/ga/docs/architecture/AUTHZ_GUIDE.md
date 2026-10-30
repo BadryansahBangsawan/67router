@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Nuashonraithe go deireanach:** 2026-09-22 — dírithe ar MCP-SERVER.md
 
-Tá píblíne údaraithe atá feasach ar bhealaí ag OmniRoute a chuireann bac ar gach iarratas API. Tá an aicmiú **cinntitheach** agus **teip-dúnta** — críochnaíonn aon rud nach féidir a aicmiú mar `MANAGEMENT` agus éilíonn sé seisiún nó comhartha grád bainistíochta. Míníonn an leathanach seo an tsamhail d'innealtóirí a chothabhálann bealaí nó a dhearann críochphointí nua.
+Tá píblíne údaraithe atá feasach ar bhealaí ag 67router a chuireann bac ar gach iarratas API. Tá an aicmiú **cinntitheach** agus **teip-dúnta** — críochnaíonn aon rud nach féidir a aicmiú mar `MANAGEMENT` agus éilíonn sé seisiún nó comhartha grád bainistíochta. Míníonn an leathanach seo an tsamhail d'innealtóirí a chothabhálann bealaí nó a dhearann críochphointí nua.
 
 ![Píblíne AuthZ (3 aicme bealaigh + meastóireacht beartais)](../diagrams/exported/authz-pipeline.svg)
 

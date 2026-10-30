@@ -41,7 +41,7 @@ või väline integratsioon on praegu saadaval.
 | Toetajapakkumised                       | Teostatud eraldi allkirjastatud, ainult reaalajas voona ja töölaualehena. Klient valideerib suletud hüveskeemi uuesti, säilitab viimase korrektse vahemälu, filtreerib aegunud kirjed ja märgistab partneripakkumised selgelt.                             |
 | Analüüsiteave ja toetajate tunnustamine | Teostatud range allkirjastatud, ainult reaalajas voona koos Radari hallatava ELO, faktilise kataloogi värskuse ja trendi, kontrollitud kohaliku toetajamärgi, töölaualehe ning ainult kohalike CLI oleku- ja sünkroonimiskäskudega.                        |
 | Maksed ja tehingulised e-kirjad         | OSS-i kliendis teostamata. Ostu, annetuse, kviitungi kontrollimise, taastamise ja e-kirjade saatmise eest vastutab privaatne teenus; majutatud teenuse kättesaadavus sõltub endiselt selle järelevalvega juurutusest ja teenusepakkuja konfiguratsioonist. |
-| Uurimisagendi töösuund                  | Ei kuulu selle kliendiväljalaske koosseisu. Kureeritud voo sisu jääb serveripoolseteks andmeteks; OmniRoute'i paigaldises ei tööta autonoomset uurimisagenti.                                                                                              |
+| Uurimisagendi töösuund                  | Ei kuulu selle kliendiväljalaske koosseisu. Kureeritud voo sisu jääb serveripoolseteks andmeteks; 67router'i paigaldises ei tööta autonoomset uurimisagenti.                                                                                               |
 
 ---
 
@@ -118,7 +118,7 @@ Kui mõlemad on sisse lülitatud, on sünkroonimise käik järgmine:
    kasutab voopäringute arvestus võtmeräse, koondkasutust ja IP-aadressi iga päev vahetuvat kärbitud HMAC-i
    käsitsi tehtavaks väärkasutuse kontrolliks; need tabelid ei talleta võtit ega IP-aadressi töötlemata kujul.
    Taristu juurdepääsulogid ja krüpteeritud väljastuse väljundkast on eraldiseisvad käituspiirid.
-3. OmniRoute ei saada Radari teenusele kunagi viipu, vastuseid, vestlusi, teenusepakkuja autentimisandmeid, mudeliliiklust,
+3. 67router ei saada Radari teenusele kunagi viipu, vastuseid, vestlusi, teenusepakkuja autentimisandmeid, mudeliliiklust,
    tööaega, latentsust ega kohaliku teenusepakkuja konfiguratsiooni.
 4. Vastus kontrollitakse, valideeritakse ja puhverdatakse kohapeal (vt
    [Turbemudel](#security-model)). Radaril on täpselt neli serveripoolset võrguteed:
@@ -242,11 +242,11 @@ operaator, kellel võti juba olemas on.
 ### Täielik aktiveerimine ja juhendatud seadistamine
 
 Privaatse voo teenuse ja selle OSS-kliendi vahel on teadlikult kitsas piir: teenus
-väljastab ja valideerib toetajavõtme, samal ajal kui kohalik OmniRoute'i installatsioon krüptib võtme,
+väljastab ja valideerib toetajavõtme, samal ajal kui kohalik 67router'i installatsioon krüptib võtme,
 sünkroonib allkirjastatud artefaktid serveri poolel ning juhendab pakkuja seadistamist. Abistatud valideerimise järjekord on:
 
 1. Hankige äsja väljastatud või taastatud võti toetaja taotlusest, paketi/ostu vormist, taastamisprotsessist või volitatud privaatserveri operaatorilt. Ärge kleepige töötlemata võtit logidesse, kuvatõmmistele, probleemide kommentaaridesse ega käsurea argumentidesse.
-2. Lubage kohalikus OmniRoute’i installis funktsioonilipp `RADAR_ENABLED`. See muudab kasutajaliidese nähtavaks, kuid võrguühendusi ei looda enne, kui eraldi nõusolek on salvestatud.
+2. Lubage kohalikus 67router’i installis funktsioonilipp `RADAR_ENABLED`. See muudab kasutajaliidese nähtavaks, kuid võrguühendusi ei looda enne, kui eraldi nõusolek on salvestatud.
 3. Avage `/dashboard/radar`, kleepige võti ja aktiveerige. Brauser saadab ühe kohaliku päringu `POST /api/radar/settings` sisuga `{ optIn: true, supporterKey }`; võti krüptitakse kohapeal ja vastus sisaldab ainult väärtust `omr_****<last4>`.
 4. Laske aktiveerimiskuval kataloog sünkroonida või valige **Sünkrooni kohe**. Veenduge, et lehel kuvatakse `live`, voo versioon ja toomise aeg. Autenditud kohalikuks diagnostikaks väljastab `GET /api/radar/status` nõusoleku/võtme olemasolu ning nelja vahemälu olekud, kuid ei tagasta võtit. Päringuga `POST /api/radar/sync-all` saab kataloogi, soovitused, pakkumised ja Inteli andmed selgesõnaliselt värskendada.
 5. Avage `/dashboard/radar/setup?provider=<provider>`. Minge teenusepakkuja hallatavale identimisteabe URL-ile, valige **Lisa API-võti**, salvestage tegeliku teenusepakkuja vormi kaudu, naaske juhendisse ja käivitage **Testi ühendust**. Juhend kasutab tavapäraseid marsruute `/api/providers` ja `/api/providers/<connection-id>/test`; see ei loo eraldi Radari identimisteavet.
@@ -287,7 +287,7 @@ sünkroonimiseni.
 ### Harusid toetavad keskkonnamuutujate alistused
 
 Kaks keskkonnamuutujat võimaldavad harudel ja ise majutatud installidel suunata
-kliendi OmniRoute'i vaiketeenuse asemel oma voole — vt allpool
+kliendi 67router'i vaiketeenuse asemel oma voole — vt allpool
 [Omamajutatud voo seadistamine](#how-to-self-host-a-feed):
 
 | Muutuja             | Otstarve                                                                                                         |
@@ -444,7 +444,7 @@ Voo `enabled: false` jääb ohutuserandiks: see on aegunud kohaliku
 Kataloogi väljaanded kasutavad `schemaVersion: 2`. `contextWindow` ning väljad `tools`, `vision` ja
 `thinking` on üksteisest sõltumatult `number | null` / `boolean | null`: `null` tähendab teadmata väärtust,
 samas kui `false` tähendab, et D16-kinnitatud ametlik teenusepakkuja allikas ütleb sõnaselgelt, et võimekus puudub.
-OmniRoute'i sisemise registri või mudelispetsifikatsiooni lippe ei muudeta kunagi otse voo faktideks. Klient
+67router'i sisemise registri või mudelispetsifikatsiooni lippe ei muudeta kunagi otse voo faktideks. Klient
 aktsepteerib endiselt v1 hetktõmmiseid; kuna vana koostaja kasutas puudumise kohatäitena väärtust `false`, normaliseeritakse
 v1 `false` teadmata väärtuseks, samas kui v1 `true` jääb faktiks. Tundmatute skeemiversioonide korral tõrjutakse andmed
 turvaliselt ja viimane kehtiv puhver jääb kättesaadavaks. Igal v2 mudelil, millel on nullist erinev konteksti- või
@@ -505,7 +505,7 @@ Allolevad kohalikud Radari marsruudipered toetavad kasutajaliidest kataloogis `s
 | `/api/radar/local-model-state` | DELETE | Eemaldab redigeeritavad alistusväljad, säilitades kõik hauakivid.                                                                |
 
 **Range reegel: need marsruudid ei vahenda kunagi vooteenust puhverserverina.** Brauser suhtleb ainult
-kohaliku OmniRoute'i serveriga. Neli Radari teenusega suhtlevat moodulit on
+kohaliku 67router'i serveriga. Neli Radari teenusega suhtlevat moodulit on
 `src/lib/radar/sync.ts` (kataloog), `src/lib/radar/referralsSync.ts` (soovitused) ja
 `src/lib/radar/offersSync.ts` (pakkumised) ning `src/lib/radar/intelSync.ts` (Intel); need kõik töötavad
 serveri poolel, mitte kunagi kliendi poolel. See hoiab
@@ -575,7 +575,7 @@ see ei uuenda kunagi edetabeleid ega taaskasuta `token_share` sündmust. `/dashb
 ainult kontrollitud kohaliku vahemälu metaandmete põhjal.
 
 CLI pakub käske `omniroute radar status` ja `omniroute radar sync`. Mõlemad suhtlevad ainult
-kohaliku OmniRoute API-ga. `status` teeb kirjutuskaitstud päringu `GET /api/radar/status`; `sync` saadab ühe
+kohaliku 67router API-ga. `status` teeb kirjutuskaitstud päringu `GET /api/radar/status`; `sync` saadab ühe
 `POST /api/radar/sync-all` päringu ja väljastab iga voo kohta tulemuse. Kumbki käsk ei loe, aktsepteeri ega väljasta
 toetaja võtit ning kumbki ei võta Radari teenusega otse ühendust.
 

@@ -45,7 +45,7 @@ see taastab täielikult automaatse voo, mis projektil oli kuni versioonini v3.8.
 WS1.3 garantii (lekkinud token ei saa üksi avaldada — tokenit polegi).
 
 **Ühekordne seadistus (omanik):** npmjs.com → pakett `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: omanik `diegosouzapw`, hoidla `OmniRoute`, töövoog `npm-publish.yml`
+Publisher_ → GitHub: omanik `diegosouzapw`, hoidla `67router`, töövoog `npm-publish.yml`
 (keskkond: puudub). Kuni seda pole loodud, nurjub automaatne samm veaga `ENEEDAUTH`:
 käivitage uuesti parameetriga `publish_mode=staged` (allpool) või `direct`.
 

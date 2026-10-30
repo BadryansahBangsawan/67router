@@ -42,7 +42,7 @@ available ang isang partikular na naka-host na deployment o panlabas na integras
 | Mga alok para sa supporter            | Ipinatupad bilang isang hiwalay, nilagdaan, at live-only na feed at dashboard page. Muling bine-verify ng client ang saradong benefit schema, pinapanatili ang huling maayos na cache, sinasala ang mga nag-expire na entry, at tahasang nilalagyan ng label ang mga alok ng partner. |
 | Intel at pagkilala sa supporter       | Ipinatupad bilang isang mahigpit na nilagdaan at live-only na feed na may ELO na pag-aari ng Radar, makatotohanang freshness/trend ng katalogo, na-verify na lokal na supporter badge, dashboard page, at mga local-only na CLI command para sa status/sync.                          |
 | Mga pagbabayad at transactional email | Hindi ipinatupad sa OSS client. Ang pagbili, donasyon, pagsusuri ng resibo, recovery, at paghahatid ng mail ay saklaw ng pribadong serbisyo; nakadepende pa rin ang availability ng naka-host na serbisyo sa pinangangasiwaang deploy at configuration ng provider nito.              |
-| Workstream ng research agent          | Hindi bahagi ng client release na ito. Nananatiling server-side data ang mga nilalaman ng kuratang feed; walang autonomous research agent na tumatakbo sa isang installation ng OmniRoute.                                                                                            |
+| Workstream ng research agent          | Hindi bahagi ng client release na ito. Nananatiling server-side data ang mga nilalaman ng kuratang feed; walang autonomous research agent na tumatakbo sa isang installation ng 67router.                                                                                             |
 
 ---
 
@@ -119,7 +119,7 @@ Kapag parehong naka-on ang mga ito, ganito ang daloy ng sync:
    gumagamit ang accounting ng mga feed request ng mga hash ng key, pinagsama-samang paggamit, at isang pinaikling HMAC
    ng IP na umiikot araw-araw para sa manu-manong pagsusuri ng pang-aabuso; hindi pinapanatili ng mga table na iyon ang key o IP sa raw na anyo.
    Hiwalay na mga hangganang operational ang mga access log ng infrastructure at ang naka-encrypt na delivery outbox.
-3. Hindi kailanman ipinapadala ng OmniRoute sa serbisyo ng Radar ang mga prompt, response, conversation, credential ng provider, traffic ng modelo,
+3. Hindi kailanman ipinapadala ng 67router sa serbisyo ng Radar ang mga prompt, response, conversation, credential ng provider, traffic ng modelo,
    uptime, latency, o lokal na configuration ng provider.
 4. Bine-verify, bina-validate, at lokal na kina-cache ang response (tingnan ang
    [Modelo ng seguridad](#security-model)). May eksaktong apat na server-side network path ang Radar:
@@ -243,13 +243,13 @@ na mayroon na nito.
 ### End-to-end na activation at ginabayang setup
 
 May sadyang makitid na boundary ang pribadong feed service at ang OSS client na ito: ang serbisyo
-ang nagbibigay at nagva-validate sa supporter key, habang ine-encrypt ng lokal na OmniRoute installation ang key,
+ang nagbibigay at nagva-validate sa supporter key, habang ine-encrypt ng lokal na 67router installation ang key,
 sini-sync ang mga nilagdaang artifact sa server-side, at ginagabayan ang provider setup. Ang pagkakasunod-sunod ng assisted validation ay:
 
 1. Kumuha ng bagong ibinigay o na-recover na key mula sa contributor claim, plans/checkout, proseso ng
    recovery, o isang awtorisadong operator ng pribadong server. Huwag i-paste ang raw key sa mga log,
    screenshot, komento sa issue, o command-line argument.
-2. I-enable ang feature flag na `RADAR_ENABLED` sa lokal na installation ng OmniRoute. Ilalantad nito ang UI
+2. I-enable ang feature flag na `RADAR_ENABLED` sa lokal na installation ng 67router. Ilalantad nito ang UI
    ngunit mananatili itong hindi aktibo sa network hanggang sa ma-save ang hiwalay na pag-opt in.
 3. Buksan ang `/dashboard/radar`, i-paste ang key, at i-activate. Magpapadala ang browser ng isang lokal na
    `POST /api/radar/settings` na may `{ optIn: true, supporterKey }`; lokal na ie-encrypt ang key at
@@ -313,7 +313,7 @@ muling ma-sync ang mga ito.
 ### Mga env override na angkop sa mga fork
 
 Dalawang env var ang nagbibigay-daan sa mga fork at self-hoster na ituro ang client sa sarili nilang feed sa halip na
-sa default na serbisyo ng OmniRoute — tingnan ang
+sa default na serbisyo ng 67router — tingnan ang
 [Paano mag-self-host ng feed](#how-to-self-host-a-feed) sa ibaba:
 
 | Var                 | Layunin                                                                                                                      |
@@ -467,7 +467,7 @@ Nananatiling safety exception ang `enabled: false` ng feed: nananaig ito sa luma
 Gumagamit ang mga publication ng catalog ng `schemaVersion: 2`. Ang `contextWindow` at bawat isa sa `tools`, `vision`, at
 `thinking` ay hiwa-hiwalay na `number | null` / `boolean | null`: ang `null` ay nangangahulugang hindi alam, samantalang
 ang `false` ay nangangahulugang tahasang sinasabi ng opisyal na source ng provider na nakumpirma ng D16 na wala ang capability.
-Hindi kailanman direktang ginagawang feed facts ang mga internal na flag ng OmniRoute registry/model-spec. Tumatanggap pa rin
+Hindi kailanman direktang ginagawang feed facts ang mga internal na flag ng 67router registry/model-spec. Tumatanggap pa rin
 ang client ng mga v1 snapshot; dahil gumamit ang lumang builder ng `false` bilang placeholder para sa kawalan, ang v1 `false` ay
 ino-normalize bilang hindi alam habang nananatiling factual ang v1 `true`. Nagfa-fail closed ang mga hindi kilalang schema version at
 nananatiling available ang huling valid na cache. Ang bawat v2 model na may non-null na context/capability ay dapat may
@@ -528,7 +528,7 @@ Sinusuportahan ng mga lokal na pamilya ng route ng Radar sa ibaba ang UI sa ilal
 | `/api/radar/local-model-state` | DELETE | Nililinis ang mga nae-edit na override field habang pinapanatili ang anumang tombstone.                                                      |
 
 **Mahigpit na tuntunin: hindi kailanman nagsisilbing proxy ng feed service ang mga route na ito.** Nakikipag-ugnayan lamang ang browser
-sa lokal na OmniRoute server. Ang apat na module na nakikipag-ugnayan sa Radar service ay
+sa lokal na 67router server. Ang apat na module na nakikipag-ugnayan sa Radar service ay
 `src/lib/radar/sync.ts` (catalog), `src/lib/radar/referralsSync.ts` (mga referral), at
 `src/lib/radar/offersSync.ts` (mga offer), kasama ang `src/lib/radar/intelSync.ts` (Intel); lahat ay tumatakbo
 sa server-side, hindi kailanman sa client-side. Dahil dito, ganap na hindi naisasama
@@ -570,7 +570,7 @@ Ang Intel ay isang nilagdaang artifact sa `GET /v1/intel/latest`. Tinatanggap la
 
 Inilalapat ng `syncRadarIntel()` ang parehong server-side Bearer, 30-segundong timeout, 10 MiB na limitasyon sa stream, pag-verify ng Ed25519 sa eksaktong bytes, mahigpit na schema, kinakailangang `live` na body/header, minimum na bersyon, at pagpapanatili ng huling mahusay na cache gaya ng sa mga alok. Pagkatapos ma-persist ang isang na-verify na live snapshot, hinahango ng client ang `radar:<sha256(supporter key)>`, iniimbak lamang ang one-way na identity na iyon, at naglalabas ng nakalaang `radar_supporter` recognition event. Idempotent ang `radar-supporter` badge nito at nagbibigay ng zero XP; hindi nito kailanman ina-update ang mga leaderboard o muling ginagamit ang `token_share`. Nagre-render lamang ang `/dashboard/radar/intel` ng badge mula sa na-verify na metadata ng lokal na cache.
 
-Inilalantad ng CLI ang `omniroute radar status` at `omniroute radar sync`. Parehong nakikipag-ugnayan lamang ang mga ito sa lokal na OmniRoute API. Nagsasagawa ang `status` ng read-only na `GET /api/radar/status`; nagpapadala ang `sync` ng isang `POST /api/radar/sync-all` at nagpi-print ng resulta para sa bawat feed. Hindi binabasa, tinatanggap, o pini-print ng alinmang command ang supporter key, at hindi rin direktang kumokonekta ang mga ito sa serbisyo ng Radar.
+Inilalantad ng CLI ang `omniroute radar status` at `omniroute radar sync`. Parehong nakikipag-ugnayan lamang ang mga ito sa lokal na 67router API. Nagsasagawa ang `status` ng read-only na `GET /api/radar/status`; nagpapadala ang `sync` ng isang `POST /api/radar/sync-all` at nagpi-print ng resulta para sa bawat feed. Hindi binabasa, tinatanggap, o pini-print ng alinmang command ang supporter key, at hindi rin direktang kumokonekta ang mga ito sa serbisyo ng Radar.
 
 ---
 

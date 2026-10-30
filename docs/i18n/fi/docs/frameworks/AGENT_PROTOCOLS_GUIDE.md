@@ -7,15 +7,15 @@
 > **Lähde:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Viimeksi päivitetty:** 2026-06-28 — v3.8.40
 
-OmniRoute tarjoaa kolme erilaista agentteihin liittyvää rajapintaa. Ne näyttävät ensi silmäyksellä samankaltaisilta, mutta ratkaisevat eri ongelmia. Tämän sivun avulla voit valita oikean vaihtoehdon.
+67router tarjoaa kolme erilaista agentteihin liittyvää rajapintaa. Ne näyttävät ensi silmäyksellä samankaltaisilta, mutta ratkaisevat eri ongelmia. Tämän sivun avulla voit valita oikean vaihtoehdon.
 
 ## Lyhyesti
 
 | Rajapinta                     | Soveltuu parhaiten                                                                                                                                          | Siirtotapa                                    | Standardi                 |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ------------------------- |
 | **A2A — Agent-to-Agent**      | Agenttien väliseen yhteistyöhön A2A-protokollaa käyttävien vertaisagenttien kanssa                                                                          | JSON-RPC 2.0 HTTP:n kautta                    | A2A v0.3 (avoin määritys) |
-| **ACP — CLI Agents Registry** | Käyttäjän koneelle asennettujen CLI-koodausagenttien tunnistamiseen, rekisteröintiin ja käynnistämiseen (Cursor, Cline, Codex CLI, Claude Code, Aider jne.) | HTTP REST                                     | OmniRoute-kohtainen       |
-| **Cloud Agents**              | Pitkäkestoisten koodaustehtävien lähettämiseen ulkoisiin pilvipalveluihin (Codex Cloud, Devin, Jules, Cursor Cloud)                                         | HTTP REST + tietokantaan tallennetut tehtävät | OmniRoute-kohtainen       |
+| **ACP — CLI Agents Registry** | Käyttäjän koneelle asennettujen CLI-koodausagenttien tunnistamiseen, rekisteröintiin ja käynnistämiseen (Cursor, Cline, Codex CLI, Claude Code, Aider jne.) | HTTP REST                                     | 67router-kohtainen        |
+| **Cloud Agents**              | Pitkäkestoisten koodaustehtävien lähettämiseen ulkoisiin pilvipalveluihin (Codex Cloud, Devin, Jules, Cursor Cloud)                                         | HTTP REST + tietokantaan tallennetut tehtävät | 67router-kohtainen        |
 
 Nämä kolme ovat toisistaan riippumattomia — voit valita niistä minkä tahansa yhdistelmän.
 
@@ -38,14 +38,14 @@ Tarvitsetko pilvipalvelua tekemään työtä tämän koneen ulkopuolella (Codex 
 ## 1. A2A — Agent-to-Agent
 
 **Määritys:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute-päätepiste:** `POST /a2a` (JSON-RPC 2.0)
+**67router-päätepiste:** `POST /a2a` (JSON-RPC 2.0)
 **Agenttikortti:** `GET /.well-known/agent.json`
 
 ### Milloin käyttää
 
-- Kun rakennat moniagenttijärjestelmää, jossa OmniRoute on yksi vertaisosapuolista
-- Kun haluat tarjota OmniRouten reititysälykkyyden (`smart-routing`, `quota-management` jne.) esimerkiksi Google ADK:ta käyttävien kehysten tai yleisten agenttiverkkojen käyttöön
-- Kun haluat kääriä OmniRouten standardinmukaisen löytämis- ja kutsurajapinnan taakse
+- Kun rakennat moniagenttijärjestelmää, jossa 67router on yksi vertaisosapuolista
+- Kun haluat tarjota 67routerin reititysälykkyyden (`smart-routing`, `quota-management` jne.) esimerkiksi Google ADK:ta käyttävien kehysten tai yleisten agenttiverkkojen käyttöön
+- Kun haluat kääriä 67routerin standardinmukaisen löytämis- ja kutsurajapinnan taakse
 
 ### Menetelmät
 
@@ -69,12 +69,12 @@ Katso siirtotavan yksityiskohdat, agenttikortin rakenne, tehtävien TTL-määrit
 
 ## 2. ACP — CLI-agenttirekisteri
 
-**OmniRoute-päätepiste:** `GET /api/acp/agents`
+**67router-päätepiste:** `GET /api/acp/agents`
 **Lähde:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Mikä se on
 
-ACP on OmniRouten **paikallinen CLI-agenttivarasto**. Se tunnistaa, mitkä ohjelmointiin tarkoitetut CLI-työkalut on asennettu isäntäkoneelle (Cursor, Cline, Claude Code, Codex CLI, Continue jne.), selvittää niiden versiot ja tuo ne hallintapaneeliin, jotta käyttäjä voi määrittää kunkin CLI:n osoittamaan OmniRouteen.
+ACP on 67routerin **paikallinen CLI-agenttivarasto**. Se tunnistaa, mitkä ohjelmointiin tarkoitetut CLI-työkalut on asennettu isäntäkoneelle (Cursor, Cline, Claude Code, Codex CLI, Continue jne.), selvittää niiden versiot ja tuo ne hallintapaneeliin, jotta käyttäjä voi määrittää kunkin CLI:n osoittamaan 67routeriin.
 
 HTTP-rajapinta on sisäinen inventaario, joka toimii "CLI Tools" -käyttöliittymän ja CLI-sormenjälkien seurannan taustalla (katso [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Erikseen sisäinen prosessinhallinta tukee natiivia Agent Client Protocol -protokollaa rekisteröidylle Gemini-käynnistimelle sekä vanhoja stdio-sovittimia muille sopimuksille. Katso näiden erillisten tilojen ja rajoitusten tiedot kohdasta [ACP-rekisteri ja käynnistimet](./ACP.md).
 
@@ -110,8 +110,8 @@ POST-pyynnön rungon muoto (`customAgentBodySchema` tiedostossa `src/app/api/acp
 
 ### Käyttötapaukset
 
-- Hallintapaneelin "CLI Tools" -sivu näyttää asennetut työkalut ja auttaa määrittämään kunkin niistä osoittamaan OmniRouteen
-- Mukautettujen agenttien avulla tehokäyttäjät voivat rekisteröidä sisäisiä tai omisteisia CLI-työkaluja, joita OmniRoute ei oletusarvoisesti tunne
+- Hallintapaneelin "CLI Tools" -sivu näyttää asennetut työkalut ja auttaa määrittämään kunkin niistä osoittamaan 67routeriin
+- Mukautettujen agenttien avulla tehokäyttäjät voivat rekisteröidä sisäisiä tai omisteisia CLI-työkaluja, joita 67router ei oletusarvoisesti tunne
 - Tunnistustulos tuottaa tiedot `cli-tools`-sormenjälkimatriisiin
 
 ### Milloin ACP:tä EI pidä käyttää
@@ -120,12 +120,12 @@ POST-pyynnön rungon muoto (`customAgentBodySchema` tiedostossa `src/app/api/acp
 
 ## 3. Pilviagentit
 
-**OmniRoute-päätepisteet:** `/api/v1/agents/tasks/*` (elinkaari) + `/api/cloud/*` (taustatoiminnot)
+**67router-päätepisteet:** `/api/v1/agents/tasks/*` (elinkaari) + `/api/cloud/*` (taustatoiminnot)
 **Lähde:** `src/lib/cloudAgent/`
 
 ### Mikä se on
 
-Yhtenäinen rajapinta kolmansien osapuolten pilvipohjaisiin ohjelmointiagentteihin. Lähetät kehotteen + tietovaraston URL-osoitteen, minkä jälkeen OmniRoute välittää tehtävän oikealle pilviagentille, kyselee tehtävän tilaa ja palauttaa tulokset.
+Yhtenäinen rajapinta kolmansien osapuolten pilvipohjaisiin ohjelmointiagentteihin. Lähetät kehotteen + tietovaraston URL-osoitteen, minkä jälkeen 67router välittää tehtävän oikealle pilviagentille, kyselee tehtävän tilaa ja palauttaa tulokset.
 
 ### Tuetut agentit (3, kaikki vahvistettu hakemistossa `src/lib/cloudAgent/agents/`)
 
@@ -166,8 +166,8 @@ Molemmissa on "pitkäkestoisia tehtäviä", mutta eri tasoilla:
 
 | Ominaisuus              | A2A                                                                                                 | Pilviagentit                                  |
 | ----------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| Standardi               | Avoin A2A v0.3                                                                                      | OmniRoute-kohtainen                           |
-| Missä laskenta tapahtuu | OmniRouten sisällä (käyttää määritettyjä yhdistelmiä)                                               | Ulkoisesti (Codex-/Devin-/Jules-palvelimilla) |
+| Standardi               | Avoin A2A v0.3                                                                                      | 67router-kohtainen                            |
+| Missä laskenta tapahtuu | 67routerin sisällä (käyttää määritettyjä yhdistelmiä)                                               | Ulkoisesti (Codex-/Devin-/Jules-palvelimilla) |
 | Tehtävän kesto          | Oletusarvoinen TTL 5 min (määritettävissä `TaskManager`-luokassa)                                   | Minuuteista tunteihin                         |
 | Repositoriotietoinen    | Ei (välittää vain kehotteet)                                                                        | Kyllä (repositorion URL + haara)              |
 | Käyttötapaus            | Agenttien välinen yhteistyö, älykäs reititys palveluna                                              | Delegoi "toteuta ominaisuus X repossa Y"      |
@@ -175,7 +175,7 @@ Molemmissa on "pitkäkestoisia tehtäviä", mutta eri tasoilla:
 
 ## Integrointiesimerkkejä
 
-### Tutustu OmniRouten A2A-ominaisuuksiin
+### Tutustu 67routerin A2A-ominaisuuksiin
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -183,7 +183,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Palauttaa agenttikortin, joka sisältää kaikki 6 taitoa, siirtotavat ja version.
 
-### Kutsu OmniRoutea A2A-agenttina
+### Kutsu 67routeria A2A-agenttina
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -257,7 +257,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute-ydin    │
+                │   67router-ydin    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

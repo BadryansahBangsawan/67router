@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute は、Termux を介して Android 上でヘッドレスサーバーとして実行できます。Electron デスクトップアプリは Termux ではサポートされていませんが、Web ダッシュボードと OpenAI 互換 API は、ローカルブラウザまたは同じネットワーク上の他のデバイスから利用できます。
+67router は、Termux を介して Android 上でヘッドレスサーバーとして実行できます。Electron デスクトップアプリは Termux ではサポートされていませんが、Web ダッシュボードと OpenAI 互換 API は、ローカルブラウザまたは同じネットワーク上の他のデバイスから利用できます。
 
 ## 前提条件
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js のバージョン:** OmniRoute には Node `>=22.22.2 <23 || >=24.0.0 <27` が必要です（`package.json` の `engines` / `SUPPORTED_NODE_RANGE` と一致）。Termux の `nodejs-lts` には通常 Node 20 LTS が含まれていますが、これは**現在サポートされていません**。代わりに `pkg install nodejs`（最新版）を実行し、`node --version` が 22.x/24.x 以上のバージョンを表示することを確認してください。
+> **Node.js のバージョン:** 67router には Node `>=22.22.2 <23 || >=24.0.0 <27` が必要です（`package.json` の `engines` / `SUPPORTED_NODE_RANGE` と一致）。Termux の `nodejs-lts` には通常 Node 20 LTS が含まれていますが、これは**現在サポートされていません**。代わりに `pkg install nodejs`（最新版）を実行し、`node --version` が 22.x/24.x 以上のバージョンを表示することを確認してください。
 
-ネイティブパッケージのコンパイルに失敗した場合は、上記の `pkg install` コマンドを再実行してから、OmniRoute のインストールを再試行してください。
+ネイティブパッケージのコンパイルに失敗した場合は、上記の `pkg install` コマンドを再実行してから、67router のインストールを再試行してください。
 
 ## インストール
 
@@ -37,7 +37,7 @@ omniroute
 
 ## 実行
 
-OmniRoute をヘッドレスサーバーモードで起動します。
+67router をヘッドレスサーバーモードで起動します。
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ http://PHONE_IP:20128
 http://192.168.1.50:20128
 ```
 
-スマートフォンとクライアントを、同じ信頼できるネットワークに接続してください。OmniRoute をスマートフォンの外部に公開する場合は、API キーとダッシュボード認証を有効にしてください。
+スマートフォンとクライアントを、同じ信頼できるネットワークに接続してください。67router をスマートフォンの外部に公開する場合は、API キーとダッシュボード認証を有効にしてください。
 
 ## データディレクトリ
 
-デフォルトでは、OmniRoute は Linux で使用されるものと同じサーバー側データパスの動作に従い、Termux のホームディレクトリ配下にデータを保存します。データベースを明示的な場所に配置するには：
+デフォルトでは、67router は Linux で使用されるものと同じサーバー側データパスの動作に従い、Termux のホームディレクトリ配下にデータを保存します。データベースを明示的な場所に配置するには：
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### サポートされていないプラットフォーム: android（すべてのリクエストが HTTP 500 を返す）
 
-**症状:** `omniroute` / `omniroute serve` は `✔ OmniRoute is running!` と表示しますが、ダッシュボードまたは API へのすべてのリクエストが、単純な `500 Internal Server Error` を返します。`~/.omniroute/logs/application/app.log` は空のままで、`APP_LOG_LEVEL=debug` を指定しても有用な情報は何も表示されず、レスポンス本文は JSON の詳細情報がないプレーンテキスト（`Internal Server Error`）です。
+**症状:** `omniroute` / `omniroute serve` は `✔ 67router is running!` と表示しますが、ダッシュボードまたは API へのすべてのリクエストが、単純な `500 Internal Server Error` を返します。`~/.omniroute/logs/application/app.log` は空のままで、`APP_LOG_LEVEL=debug` を指定しても有用な情報は何も表示されず、レスポンス本文は JSON の詳細情報がないプレーンテキスト（`Internal Server Error`）です。
 
 **原因:** 一部の Termux/Node ビルドでは、`process.platform === "android"` と報告されます。Next.js の `getCacheDirectory()` はこのプラットフォームを処理できません。`~/.cache`（または汎用の一時ディレクトリ）が事前に存在している必要があり、存在しない場合は instrumentation hook の読み込み中に次のエラーで失敗します。
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-hook が読み込まれないため、ログ記録も開始されません。その結果、この 500 エラーは原因をまったく診断できないように見えます。OmniRoute は Android/Termux 上でこの検出が成功するように、Next.js の起動前に CLI エントリポイントで `~/.cache` を作成し、未設定の場合は `XDG_CACHE_HOME` を設定します。
+hook が読み込まれないため、ログ記録も開始されません。その結果、この 500 エラーは原因をまったく診断できないように見えます。67router は Android/Termux 上でこの検出が成功するように、Next.js の起動前に CLI エントリポイントで `~/.cache` を作成し、未設定の場合は `XDG_CACHE_HOME` を設定します。
 
 **サポートされている解決方法（パッケージのパッチ適用は不要）:**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-現在の OmniRoute ビルドでは、CLI が Android/Termux 上でこれを自動的に実行するため、新規の `npx -y omniroute@latest` / グローバルインストールでは手動での作業は不要です。アップグレード後もこのエラーが表示される場合は、上記のように `~/.cache` を一度作成してから再起動してください。
+現在の 67router ビルドでは、CLI が Android/Termux 上でこれを自動的に実行するため、新規の `npx -y omniroute@latest` / グローバルインストールでは手動での作業は不要です。アップグレード後もこのエラーが表示される場合は、上記のように `~/.cache` を一度作成してから再起動してください。
 
 `process.platform = "linux"` を強制するために `dist/server.js` をパッチしないでください。この種のパッケージへのパッチは再インストールやアップグレードのたびに上書きされ、キャッシュディレクトリが存在すれば不要です。
 

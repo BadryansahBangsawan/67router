@@ -4,7 +4,7 @@
 
 ---
 
-> **இந்த ஆவணம் என்ன.** தொழில்துறையின் சிறந்த நடைமுறைகளுடன் ஒப்பிடப்பட்ட OmniRoute-இன்
+> **இந்த ஆவணம் என்ன.** தொழில்துறையின் சிறந்த நடைமுறைகளுடன் ஒப்பிடப்பட்ட 67router-இன்
 > தரக் கட்டுப்பாட்டு அமைப்பைப் பற்றிய விமர்சன மதிப்பீடு, **அத்துடன்** அனைத்து தரச்
 > சோதனைச் சாவடிகளின் விரிவான பட்டியல் மற்றும் இதே அமைப்பை எந்தத் திட்டத்திலும்
 > பயன்படுத்துவதற்கான **கருவி-சார்பற்ற மறுஉருவாக்கத் திட்டம்**. நினைவிலிருந்து அல்லாமல்,
@@ -114,62 +114,62 @@
 
 ### 1. பாணி & வடிவமைப்பு (தீர்மானகரமானது, வேகமானது)
 
-- **OmniRoute:** lint-staged வழியாக Prettier + ESLint (pre-commit), 2-இடைவெளிகள்/இரட்டை மேற்கோள்கள்/100 நெடுவரிசைகள்.
+- **67router:** lint-staged வழியாக Prettier + ESLint (pre-commit), 2-இடைவெளிகள்/இரட்டை மேற்கோள்கள்/100 நெடுவரிசைகள்.
 - **பொதுவானது:** தானாகத் திருத்தக்கூடிய ஒரு formatter + ஒரு linter; staged கோப்புகளில் pre-commit நேரத்தில் இயங்குதல்.
 
 ### 2. வகைகள்
 
-- **OmniRoute:** `typecheck:core` (தடுக்கும்) + `typecheck:noimplicit:core` (ஆலோசனை வழங்கும்) + `type-coverage` ratchet 92.17% + ஒவ்வொரு கோப்பிற்குமான any-budget.
+- **67router:** `typecheck:core` (தடுக்கும்) + `typecheck:noimplicit:core` (ஆலோசனை வழங்கும்) + `type-coverage` ratchet 92.17% + ஒவ்வொரு கோப்பிற்குமான any-budget.
 - **பொதுவானது:** CI-இல் கடுமையான typecheck + ratchet செய்யப்பட்ட type-coverage அளவீடு + ஒவ்வொரு கோப்பிற்குமான `any`/தப்புவழி வரம்பு.
 
 ### 3. சோதனைகள் (தீவிரம்)
 
-- **OmniRoute:** ஒன்றுடன் ஒன்று மேற்பொருந்தாத 2 runners (Node native + vitest), 8 shards, ஒட்டுமொத்த coverage 60/60/60/60 + ratchet ~76% + **முக்கியமான modules-க்கு 8 தனித்தனி குறைந்தபட்ச வரம்புகள்** + இரவுநேர property tests + இரவுநேர **mutation testing**.
+- **67router:** ஒன்றுடன் ஒன்று மேற்பொருந்தாத 2 runners (Node native + vitest), 8 shards, ஒட்டுமொத்த coverage 60/60/60/60 + ratchet ~76% + **முக்கியமான modules-க்கு 8 தனித்தனி குறைந்தபட்ச வரம்புகள்** + இரவுநேர property tests + இரவுநேர **mutation testing**.
 - **பொதுவானது:** test runner(கள்) + **முழுமையான** coverage குறைந்தபட்ச வரம்பு (பூஜ்ஜியத்தைத் தடுக்க) + coverage **ratchet** (பின்னடைவைத் தடுக்க) + **அதிக ஆபத்துள்ள code-க்கு தனித்தனி module குறைந்தபட்ச வரம்புகள்** (Goodhart விளைவைத் தடுக்க) + தூய logic-க்கான property-based சோதனைகள் + சோதனைத் தரத்தின் உண்மையான அளவீடாக இரவுநேர **mutation testing**.
 
 ### 4. சோதனைக் கொள்கை (முறைகேட்டைத் தடுக்க)
 
-- **OmniRoute:** `pr-test-policy` (production code-க்கு ஒரு test தேவை), `check-test-masking` (பலவீனப்படுத்தப்பட்ட asserts-ஐத் தடுக்கிறது), `pr-evidence` (வெற்றிக் கூற்றுக்கு ஆதாரத் தொகுதி தேவை), `test-discovery` (ஒவ்வொரு test-உம் ஒரு runner-ஆல் சேகரிக்கப்படுகிறது).
+- **67router:** `pr-test-policy` (production code-க்கு ஒரு test தேவை), `check-test-masking` (பலவீனப்படுத்தப்பட்ட asserts-ஐத் தடுக்கிறது), `pr-evidence` (வெற்றிக் கூற்றுக்கு ஆதாரத் தொகுதி தேவை), `test-discovery` (ஒவ்வொரு test-உம் ஒரு runner-ஆல் சேகரிக்கப்படுகிறது).
 - **பொதுவானது:** "புதிய code ⇒ புதிய test" வாயில் + நீக்கப்பட்ட assert/எப்போதும் உண்மையாகும் கூற்றைக் கண்டறியும் கருவி + ஆதாரத் தேவை (TDD அல்லது தொடர்ந்து செயல்படும் test) + globs-க்கு வெளியே எந்த test-உம் தனித்துவிடப்படவில்லை என்பதற்கான உத்தரவாதம்.
 
 ### 5. சிக்கல்தன்மை & code ஆரோக்கியம் (ratchets)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ஒவ்வொரு கோப்பிற்குமான file-size (உறையவைக்கப்பட்டு, குறைக்க மட்டுமே அனுமதி), circular-deps (தனிப்பயன் Tarjan, தடுக்கும்).
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ஒவ்வொரு கோப்பிற்குமான file-size (உறையவைக்கப்பட்டு, குறைக்க மட்டுமே அனுமதி), circular-deps (தனிப்பயன் Tarjan, தடுக்கும்).
 - **பொதுவானது:** ஒவ்வொரு ஆரோக்கிய அளவீட்டையும் ratchet செய்யவும் (எச்சரிக்கைகள், நகலாக்கம், cyclomatic **மற்றும்** cognitive complexity, dead code, கோப்பு அளவு, import சுழற்சிகள்). திசை எப்போதும் "பின்னடைவு ஏற்படக்கூடாது".
 
 ### 6. நிலையான பாதுகாப்பு (SAST + ரகசியங்கள்)
 
-- **OmniRoute:** CodeQL (ratchet எச்சரிக்கைகள் = 0), gitleaks (`[extend] useDefault=true` — மிக முக்கியம்!), SonarQube, தனிப்பயன் பாதுகாப்பு விதிகள் (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ratchet எச்சரிக்கைகள் = 0), gitleaks (`[extend] useDefault=true` — மிக முக்கியம்!), SonarQube, தனிப்பயன் பாதுகாப்பு விதிகள் (public-creds, error-helper, route-guard-membership, route-validation).
 - **பொதுவானது:** எச்சரிக்கை ratchet கொண்ட SAST (CodeQL/Sonar/semgrep) + **மரபுரிமையாகப் பெறப்பட்ட இயல்புநிலை விதித்தொகுப்பைக்** கொண்ட secrets scanner (இயல்புநிலையை மேலெழுதும் தனிப்பயன் config = கண்மூடித்தனம்) + திட்டத்திற்கே உரிய கடுமையான பாதுகாப்பு விதிகளுக்கான வாயில்கள்.
 
 ### 7. விநியோகச் சங்கிலி (சார்புகள்)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX அனுமதிப்பட்டியல்), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (அனுமதிப்பட்டியல் + வயது ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX அனுமதிப்பட்டியல்), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (அனுமதிப்பட்டியல் + வயது ≥72h).
 - **பொதுவானது:** பல-மூல SCA + உரிம அனுமதிப்பட்டியல் + lockfile ஒருமைப்பாட்டுச் சோதனை + வயது/typosquatting சோதனையுடன் கூடிய சார்பு அனுமதிப்பட்டியல் + தொகுப்பாக்கப்பட்ட update bot.
 
 ### 8. விநியோகச் சங்கிலி (build & release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (வாரந்தோறும்), workflow வலுப்படுத்தல் (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (வாரந்தோறும்), workflow வலுப்படுத்தல் (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **பொதுவானது:** publish செய்யும்போது SBOM உருவாக்கவும் + கையொப்பமிடப்பட்ட provenance (SLSA L2+) + திட்டமிடப்பட்ட Scorecard + அனைத்து workflows-ஐயும் வலுப்படுத்தவும் (குறைந்தபட்சச் சலுகையுள்ள tokens, push செய்யாதவரின் checkout-இல் credentials-ஐச் சேமிக்காமை, SHA மூலம் நிலைநிறுத்தப்பட்ட actions).
 
 ### 9. ஒப்பந்தங்கள் & API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (இரவுநேர contract fuzz), openapi-coverage (% ஆவணப்படுத்தப்பட்ட routes, ratchet 38.3%), openapi-security-tiers (spec மற்றும் route-guard ஒப்பீடு).
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (இரவுநேர contract fuzz), openapi-coverage (% ஆவணப்படுத்தப்பட்ட routes, ratchet 38.3%), openapi-security-tiers (spec மற்றும் route-guard ஒப்பீடு).
 - **பொதுவானது:** breaking-change contract diff (oasdiff/buf) + spec-க்கு எதிரான property-based fuzz சோதனை (schemathesis) + ratchet செய்யப்பட்ட ஆவண coverage + spec↔code நிலைத்தன்மை.
 
 ### 10. ஆவணங்கள் & i18n (தேக்கத்தைத் தடுக்க)
 
-- **OmniRoute:** docs-sync (பிரதிபலிக்கப்பட்ட versions), docs-counts-sync (ஆவணங்கள் மற்றும் code-இல் உள்ள எண்கள்), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (பிரதிபலிக்கப்பட்ட versions), docs-counts-sync (ஆவணங்கள் மற்றும் code-இல் உள்ள எண்கள்), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **பொதுவானது:** ஆவணங்களுக்கும் code-க்கும் இடையே versions/counts/env-vars-ஐ ஒத்திசைக்கவும் (நம்பிக்கை அல்ல, வாயில்) + உள் இணைப்புகளைச் சரிபார்க்கவும் + ratchet செய்யப்பட்ட i18n coverage.
 
 ### 11. புனைவைத் தடுப்பது / நிலைத்தன்மை (அரிதான வகை)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ செயல்பாட்டிலுள்ள symbol), provider-consistency, fetch-targets (client fetch ⇒ உண்மையான route), docs-symbols, db-rules (கடுமையான விதிகள் #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ செயல்பாட்டிலுள்ள symbol), provider-consistency, fetch-targets (client fetch ⇒ உண்மையான route), docs-symbols, db-rules (கடுமையான விதிகள் #2/#5), migration-numbering.
 - **பொதுவானது:** ஒவ்வொரு "நகலாக்கப்பட்ட உண்மை மூலத்திற்கும்" (registry, string dispatch, அடுக்குகளுக்கிடையேயான references), இரு பக்கங்களும் பொருந்துகின்றன என்பதை நிரூபிக்கும் ஒரு வாயில். typecheck/test கண்டறியாத தேக்கத்தை இது கண்டறிகிறது.
 
 ### 12. மீள்திறன் & துறை (தயாரிப்புக்கே உரியது)
 
-- **OmniRoute:** chaos (தவறு-உட்செலுத்தல்), heap-growth (கசிவு), k6 (நீடித்த சுமை), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 மீள்திறன் விதிகள் (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (தவறு-உட்செலுத்தல்), heap-growth (கசிவு), k6 (நீடித்த சுமை), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 மீள்திறன் விதிகள் (circuit-breaker/cooldown/lockout).
 - **பொதுவானது:** **உங்கள்** துறையின் தோல்வி முறைகளைக் கண்டறிந்து, ஒவ்வொன்றுக்கும் ஒரு வாயிலை வைத்திருக்கவும் (அது இரவில் மட்டும் இயங்கினாலும் கூட). AI apps-க்கு: injection red-team. Distributed systems-க்கு: chaos + leak + soak.
 
 ---

@@ -5,12 +5,12 @@
 ---
 
 A **Edição de Contexto** delegada é um recurso de gerenciamento de contexto exclusivo do Claude. Diferentemente dos mecanismos locais de
-compactação do OmniRoute (Caveman, RTK, LLMLingua, pipelines empilhados) — que reescrevem o corpo da solicitação
+compactação do 67router (Caveman, RTK, LLMLingua, pipelines empilhados) — que reescrevem o corpo da solicitação
 _antes_ que ele saia do proxy —, a Edição de Contexto solicita ao **provedor** que remova blocos obsoletos
-de uso/resultado de ferramentas de sua própria janela de contexto em execução. O OmniRoute apenas anexa um
+de uso/resultado de ferramentas de sua própria janela de contexto em execução. O 67router apenas anexa um
 parâmetro ao corpo (`context_management.edits[]`); o Claude realiza a remoção efetiva usando seu próprio tokenizador.
 
-Por natureza, esse é um recurso delegado: outros provedores rejeitam o parâmetro, portanto o OmniRoute o restringe
+Por natureza, esse é um recurso delegado: outros provedores rejeitam o parâmetro, portanto o 67router o restringe
 rigorosamente ao Claude e a retransmissores compatíveis com o Claude Code.
 
 Fonte oficial: `open-sse/config/contextEditing.ts` (IDs de estratégia, injeção no corpo, extração de
@@ -19,7 +19,7 @@ telemetria), `open-sse/executors/base.ts` (condição de injeção + fallback pa
 
 ## O que `clear_tool_uses` faz
 
-O OmniRoute injeta uma única edição no corpo de saída do Anthropic Messages:
+O 67router injeta uma única edição no corpo de saída do Anthropic Messages:
 
 ```json
 {
@@ -42,11 +42,11 @@ O OmniRoute injeta uma única edição no corpo de saída do Anthropic Messages:
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 A versão beta é anunciada por meio do cabeçalho `anthropic-beta: context-management-2025-06-27`, que
-o OmniRoute já envia nas solicitações ao Claude.
+o 67router já envia nas solicitações ao Claude.
 
 A injeção é realizada por `applyContextEditingToBody()` e é **idempotente**: se uma edição `clear_tool_uses`
 já existir no corpo (adicionada por uma chamada anterior ou fornecida pelo cliente), o corpo será
-mantido como está. Se uma edição `clear_thinking_20251015` também estiver presente, o OmniRoute ordenará de forma estável a
+mantido como está. Se uma edição `clear_thinking_20251015` também estiver presente, o 67router ordenará de forma estável a
 edição `clear_thinking` para o início, pois a Anthropic exige que `clear_thinking` venha antes de
 `clear_tool_uses` no array `edits[]`.
 
@@ -145,7 +145,7 @@ O Claude genuíno inclui o beta em `ANTHROPIC_BETA_BASE` e não entra nesse cami
 
 ## Telemetria de `applied_edits`
 
-Após uma resposta do Claude, o OmniRoute registra quanto contexto o provedor realmente removeu. Isso
+Após uma resposta do Claude, o 67router registra quanto contexto o provedor realmente removeu. Isso
 **não** é transmitido por streaming — os dados são extraídos do corpo da resposta sem streaming, por melhor esforço, e nunca
 afetam a resposta (falhas de telemetria são ignoradas).
 
@@ -175,14 +175,14 @@ Assim, a remoção delegada aparece nas análises de compressão junto aos mecan
 
 | Aspecto                | Mecanismos locais (Caveman / RTK / LLMLingua / empilhados) | Edição de Contexto Delegada                                           |
 | ---------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------- |
-| Onde é executado       | No OmniRoute, antes de a solicitação sair do proxy         | No provedor (Claude), no lado do servidor                             |
+| Onde é executado       | No 67router, antes de a solicitação sair do proxy          | No provedor (Claude), no lado do servidor                             |
 | O que é editado        | Texto de prompt / contexto / resultado de ferramenta       | Blocos antigos de uso / resultado de ferramenta                       |
 | Escopo de provedores   | Todos os provedores                                        | Apenas `claude` + `anthropic-compatible-cc-*`                         |
 | Alternância            | Configurações do modo de compressão                        | `contextEditing.enabled`                                              |
 | Modo de falha          | Falha aberta (texto original)                              | Fallback em caso de 400: remove o parâmetro e tenta novamente uma vez |
 | Telemetria de economia | `engine: <engine id>`                                      | `engine: "context-editing"`                                           |
 
-Os dois são complementares: os mecanismos locais comprimem os bytes enviados pelo OmniRoute; a Edição de Contexto permite que
+Os dois são complementares: os mecanismos locais comprimem os bytes enviados pelo 67router; a Edição de Contexto permite que
 o Claude remova partes do contexto acumulado entre turnos. Eles podem ser habilitados simultaneamente.
 
 ## Veja também

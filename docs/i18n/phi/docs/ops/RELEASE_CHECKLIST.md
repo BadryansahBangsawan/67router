@@ -45,7 +45,7 @@ ibinabalik nito ang ganap na awtomatikong daloy na mayroon ang proyekto hanggang
 garantiya ng WS1.3 (hindi makakapag-publish nang mag-isa ang isang na-leak na token — walang token).
 
 **Isahang pag-set up (may-ari):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: wala). Hangga't hindi pa ito umiiral, mabibigo ang awtomatikong hakbang nang may `ENEEDAUTH`:
 muling i-dispatch gamit ang `publish_mode=staged` (sa ibaba) o `direct`.
 

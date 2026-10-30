@@ -6,7 +6,7 @@
 
 ## 概述
 
-OmniRoute CLI 命令通过本地管理 API 进行身份验证，使用通过
+67router CLI 命令通过本地管理 API 进行身份验证，使用通过
 `x-omniroute-cli-token` 请求标头发送的
 `HMAC-SHA256(machine-id, salt)` 令牌。
 

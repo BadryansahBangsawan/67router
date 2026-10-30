@@ -31,7 +31,7 @@ Untuk setiap kandidat dalam kumpulan (`open-sse/services/autoCombo/virtualFactor
 tepat setelah `filterPaidOnlyCandidates`):
 
 1. **Sama sekali tidak ada di `FREE_MODEL_BUDGETS`** → dikecualikan. Ini mencakup model yang benar-benar berbayar
-   dan setiap penyedia/model yang belum diklasifikasikan oleh OmniRoute — kandidat baru pada awalnya dikecualikan,
+   dan setiap penyedia/model yang belum diklasifikasikan oleh 67router — kandidat baru pada awalnya dikecualikan,
    bukan disertakan.
 2. **`freeType: "keyless"`** → langsung lolos, **tetapi hanya untuk kandidat yang benar-benar
    berasal dari jalur tanpa autentikasi** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -87,7 +87,7 @@ sendiri oleh filter ini — tidak pernah akun lain yang belum diverifikasi pada 
 (kasus bypass tanpa kunci A/B/C, kasus multiakun 1-5).
 
 `ditemukan secara otomatis`: penyedia/model yang dirilis besok dengan metadata yang tepat (dalam
-katalog, dengan adapter penggunaan, `hardStopGuaranteed: true`) dapat digunakan begitu OmniRoute mengetahuinya
+katalog, dengan adapter penggunaan, `hardStopGuaranteed: true`) dapat digunakan begitu 67router mengetahuinya
 — tanpa perubahan kode, tanpa entri whitelist, tanpa perlu mengedit apa pun dalam modul ini. Penyedia/model yang dihapus dari
 katalog akan menghilang dengan cara yang sama. Lihat
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` untuk bukti regresinya (melalui

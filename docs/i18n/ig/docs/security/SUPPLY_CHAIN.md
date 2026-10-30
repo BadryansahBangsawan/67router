@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-ebipụta npm + Docker artifacts. Ọnụ ụzọ ndị a na-enye akaebe (provenance), ndepụta ihe (SBOM) na nyocha CVE, ha niile bụ OSS, ejikọta ya na usoro mwepụta. Ọnọdụ **ndụmọdụ-mbụ** — ha na-akọ ugbu a, na-ebuli elu ka ọ bụrụ ihe mgbochi mgbe mwepụta mbụ na-aga nke ọma gasịrị.
+67router na-ebipụta npm + Docker artifacts. Ọnụ ụzọ ndị a na-enye akaebe (provenance), ndepụta ihe (SBOM) na nyocha CVE, ha niile bụ OSS, ejikọta ya na usoro mwepụta. Ọnọdụ **ndụmọdụ-mbụ** — ha na-akọ ugbu a, na-ebuli elu ka ọ bụrụ ihe mgbochi mgbe mwepụta mbụ na-aga nke ọma gasịrị.
 
 | Ọnụ Ụzọ               | Ngwa Ọrụ                                       | Ebe                           | Ọ Na-egbochi?                     | Nsonaazụ                                     |
 | --------------------- | ---------------------------------------------- | ----------------------------- | --------------------------------- | -------------------------------------------- |
@@ -45,7 +45,7 @@ Dị ka ngalaba "enweghị ndozi n'elu" nke ngwọta CVE Variance dị n'elu si 
 - **Enweghị mwepụta edoziri dị ebe ọ bụla na njikọ ahụ.** `extract-zip@2.0.1` (ewepụtara na 2020) bụ mwepụta ikpeazụ nke ngwugwu ahụ — anaghị elekọta ya. `@openai/codex-security`'s
   npm-latest ugbu a (`0.1.29`) ka na-adọta `extract-zip@2.0.1`.
 - **Enweghị ike iru ya site na mmepụta.** `promptfoo` bụ naanị devDependency (anaghị edepụta ya
-  n'okpuru `dependencies`), ma ọ nweghị faịlụ dị n'okpuru `src/`, `open-sse/`, ma ọ bụ `bin/` na-ebubata ngwugwu npm `extract-zip` — onye enyemaka `extractZip()` nke OmniRoute
+  n'okpuru `dependencies`), ma ọ nweghị faịlụ dị n'okpuru `src/`, `open-sse/`, ma ọ bụ `bin/` na-ebubata ngwugwu npm `extract-zip` — onye enyemaka `extractZip()` nke 67router
   (`src/lib/versionManager/binaryManager.ts:93`) na-eji `unzip`/`tar` nke ala ma ọ nweghị njikọ. `@openai/codex-security` na-ebukwa nchedo symlink-traversal nke ya n'elu onEntry callback nke extract-zip.
 - **Emelela** `extract-zip` site na `package.json` `overrides` — naanị ihe nnọchi anya kwesịrị ekwesị bụ Electron-org-internal ma ọ dakọghị na API na nyocha onEntry/defaultDirMode/defaultFileMode nke
   `@openai/codex-security`; ịkwụsị ya ga-emebi nyocha nchekwa nke ngwugwu ahụ n'ụzọ dị jụụ.

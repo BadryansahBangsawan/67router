@@ -1,4 +1,4 @@
-# OmniRoute — Dashboard Features Gallery (Bahasa Indonesia)
+# 67router — Dashboard Features Gallery (Bahasa Indonesia)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇭🇺 [hu](../../../hu/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇳🇬 [ig](../../../ig/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇳🇬 [yo](../../../yo/docs/guides/FEATURES.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/FEATURES.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/FEATURES.md)
 
@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇭🇺 [hu](../../../hu/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇳🇬 [ig](../../../ig/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇳🇬 [yo](../../../yo/docs/guides/FEATURES.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/FEATURES.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/FEATURES.md)
 
-Panduan visual untuk setiap bagian dasbor OmniRoute.
+Panduan visual untuk setiap bagian dasbor 67router.
 
 > 📅 **Terakhir diperbarui:** 2026-06-28 — **v3.8.40**
 
@@ -51,7 +51,7 @@ Siklus v3.7.x → v3.8.0 menghadirkan perutean otomatis tanpa konfigurasi, penye
 
 Kelola koneksi penyedia AI: penyedia OAuth (Claude Code, Codex), penyedia kunci API (Groq, DeepSeek, OpenRouter), dan penyedia gratis (Qoder, Kiro). Akun Kiro mencakup pelacakan saldo kredit — sisa kredit, total alokasi, dan tanggal perpanjangan dapat dilihat di Dasbor → Penggunaan.
 
-Koneksi OpenRouter dapat menyimpan `preset` per koneksi di Pengaturan Lanjutan. Jika ditetapkan, OmniRoute akan mengirimkannya sebagai bidang permintaan tingkat teratas OpenRouter, misalnya `"preset": "email-copywriter"`, kecuali permintaan klien telah menyediakan `preset` sendiri.
+Koneksi OpenRouter dapat menyimpan `preset` per koneksi di Pengaturan Lanjutan. Jika ditetapkan, 67router akan mengirimkannya sebagai bidang permintaan tingkat teratas OpenRouter, misalnya `"preset": "email-copywriter"`, kecuali permintaan klien telah menyediakan `preset` sendiri.
 
 ![Dasbor Penyedia](../screenshots/01-providers.png)
 
@@ -157,7 +157,7 @@ Dasbor untuk menemukan dan mengelola agen CLI. Menampilkan kisi berisi 16 agen b
 
 ## 🔗 Relay Konteks _(v3.5.5+)_
 
-Strategi kombo yang mempertahankan kesinambungan sesi ketika rotasi akun terjadi di tengah percakapan. Sebelum akun aktif kehabisan kuota, OmniRoute menghasilkan ringkasan serah terima terstruktur di latar belakang. Setelah permintaan berikutnya dialihkan ke akun lain, ringkasan tersebut disisipkan sebagai pesan sistem agar akun baru dapat melanjutkan dengan konteks lengkap.
+Strategi kombo yang mempertahankan kesinambungan sesi ketika rotasi akun terjadi di tengah percakapan. Sebelum akun aktif kehabisan kuota, 67router menghasilkan ringkasan serah terima terstruktur di latar belakang. Setelah permintaan berikutnya dialihkan ke akun lain, ringkasan tersebut disisipkan sebagai pesan sistem agar akun baru dapat melanjutkan dengan konteks lengkap.
 
 Dapat dikonfigurasi melalui pengaturan tingkat kombo atau global:
 
@@ -267,7 +267,7 @@ Pelacakan tindakan administratif dengan pemfilteran berdasarkan jenis tindakan, 
 
 ## 🖥️ Aplikasi Desktop
 
-Aplikasi desktop Electron native untuk Windows, macOS, dan Linux. Jalankan OmniRoute sebagai aplikasi mandiri dengan integrasi baki sistem, dukungan offline, pembaruan otomatis, dan instalasi sekali klik.
+Aplikasi desktop Electron native untuk Windows, macOS, dan Linux. Jalankan 67router sebagai aplikasi mandiri dengan integrasi baki sistem, dukungan offline, pembaruan otomatis, dan instalasi sekali klik.
 
 Fitur utama:
 
@@ -286,7 +286,7 @@ Fitur utama:
 
 ## 🌐 Jembatan WebSocket V1 _(v3.6.6+)_
 
-OmniRoute kini mendukung **klien WebSocket yang kompatibel dengan OpenAI** melalui endpoint peningkatan `/v1/ws`. Server `scripts/dev/v1-ws-bridge.mjs` khusus membungkus Next.js dan meningkatkan koneksi WS menjadi sesi streaming dua arah penuh. Autentikasi menggunakan kunci API atau cookie sesi yang sama seperti permintaan HTTP.
+67router kini mendukung **klien WebSocket yang kompatibel dengan OpenAI** melalui endpoint peningkatan `/v1/ws`. Server `scripts/dev/v1-ws-bridge.mjs` khusus membungkus Next.js dan meningkatkan koneksi WS menjadi sesi streaming dua arah penuh. Autentikasi menggunakan kunci API atau cookie sesi yang sama seperti permintaan HTTP.
 
 Perilaku utama:
 
@@ -312,7 +312,7 @@ Bundel konfigurasi dibuat oleh `src/lib/sync/bundle.ts`. Konsumen membandingkan 
 
 **GLM Thinking (`glmt`)** kini merupakan penyedia utama yang terdaftar: maksimal 65 536 token keluaran, anggaran berpikir 24 576, batas waktu default 900 dtk, format API yang kompatibel dengan Claude, dan sinkronisasi penggunaan bersama keluarga GLM.
 
-**Penghitungan token hibrida** juga hadir di v3.6.6: ketika penyedia yang kompatibel dengan Claude menyediakan `/messages/count_tokens`, OmniRoute memanggilnya sebelum permintaan besar, dengan fallback estimasi yang mulus.
+**Penghitungan token hibrida** juga hadir di v3.6.6: ketika penyedia yang kompatibel dengan Claude menyediakan `/messages/count_tokens`, 67router memanggilnya sebelum permintaan besar, dengan fallback estimasi yang mulus.
 
 ---
 

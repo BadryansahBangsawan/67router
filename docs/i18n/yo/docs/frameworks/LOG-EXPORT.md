@@ -4,7 +4,7 @@
 
 ---
 
-Ìkójáde àkọsílẹ̀ àwọn ìpè OmniRoute lọ́wọ́lọ́wọ́, ní ìpele-kékeré, sí ibi ìpamọ́ ìtúpalẹ̀ òde.
+Ìkójáde àkọsílẹ̀ àwọn ìpè 67router lọ́wọ́lọ́wọ́, ní ìpele-kékeré, sí ibi ìpamọ́ ìtúpalẹ̀ òde.
 
 Taabu dasibodu Logs ń tọ́jú ìtàn àwọn ìbéèrè sínú SQLite (`call_logs`), èyí tí
 yíyípo àti ìlànà ìdádúró ń fi ààlà sí. Ìkójáde àkọsílẹ̀ ń fi àkójọpọ̀ àkọsílẹ̀ kan náà ránṣẹ́ ní ìbámu pẹ̀lú àkókò tí a ṣètò, kí ó lè

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute avaldab npm + Docker artefakte. Need väravad pakuvad päritolu, varude (SBOM) ja CVE skaneerimist, kõik OSS, integreeritud väljalaskevoo protsessidesse. **Nõuandepõhine** lähenemine — nad annavad aru kohe, kuid muudavad blokeerivaks pärast esimest edukat väljalaset.
+67router avaldab npm + Docker artefakte. Need väravad pakuvad päritolu, varude (SBOM) ja CVE skaneerimist, kõik OSS, integreeritud väljalaskevoo protsessidesse. **Nõuandepõhine** lähenemine — nad annavad aru kohe, kuid muudavad blokeerivaks pärast esimest edukat väljalaset.
 
 | Värav                 | Tööriist                                       | Kus                           | Blokeerib?                           | Väljund                                   |
 | --------------------- | ---------------------------------------------- | ----------------------------- | ------------------------------------ | ----------------------------------------- |
@@ -46,7 +46,7 @@ Vastavalt ülaltoodud CVE variandi lahenduse "ülesvoolu parandust pole" harule 
   praegune npm-latest (`0.1.29`) tõmbab endiselt `extract-zip@2.0.1`.
 - **Tootmises kättesaamatu.** `promptfoo` on ainult arendussõltuvus (pole kunagi loetletud
   `dependencies` all), ja ükski fail `src/`, `open-sse/` või `bin/` all ei impordi
-  `extract-zip` npm paketti — OmniRoute'i enda `extractZip()` abifunktsioon
+  `extract-zip` npm paketti — 67router'i enda `extractZip()` abifunktsioon
   (`src/lib/versionManager/binaryManager.ts:93`) kasutab natiivseid `unzip`/`tar`
   käske ja on seega mitteseotud. `@openai/codex-security` sisaldab ka oma sümlingi-läbimise
   kaitset lisaks extract-zip'i onEntry tagasihelistamisele.

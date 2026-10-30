@@ -4,10 +4,10 @@
 
 ---
 
-Cursor’ni IDE sessiyasisiz OmniRoute ortiga joylashtirishning ikki usuli:
+Cursor’ni IDE sessiyasisiz 67router ortiga joylashtirishning ikki usuli:
 
-1. **`cursor-api` provayderi** (`Cursor API` kartasi, `cua` taxallusi): Cursor foydalanuvchi API kalitini (`crsr_…`, `https://cursor.com/dashboard/api` manzilida yaratiladi) saqlovchi API-kalit provayderi. Shundan so‘ng istalgan OmniRoute mijozi odatiy kvota, zaxira va jurnallash qatlamlari bilan `/v1/chat/completions` orqali Cursor modellariga `cursor-api/<model>` yoki `cua/<model>` sifatida murojaat qiladi. IDE provayderi (`cursor`, OAuth/IDE sessiyasi) o‘zgarmaydi.
-2. **Cursor CLI orqali o‘tkazish**: Cursor CLI’ni (`agent`) OmniRoute’ga yo‘naltiring, shunda CLI amalga oshiradigan har bir RPC OmniRoute API kaliti bilan autentifikatsiya qilinadi, `cursor-api` ulanishining hisob ma’lumotlari bilan Cursor’ga uzatiladi va Logs sahifasida qayd etiladi.
+1. **`cursor-api` provayderi** (`Cursor API` kartasi, `cua` taxallusi): Cursor foydalanuvchi API kalitini (`crsr_…`, `https://cursor.com/dashboard/api` manzilida yaratiladi) saqlovchi API-kalit provayderi. Shundan so‘ng istalgan 67router mijozi odatiy kvota, zaxira va jurnallash qatlamlari bilan `/v1/chat/completions` orqali Cursor modellariga `cursor-api/<model>` yoki `cua/<model>` sifatida murojaat qiladi. IDE provayderi (`cursor`, OAuth/IDE sessiyasi) o‘zgarmaydi.
+2. **Cursor CLI orqali o‘tkazish**: Cursor CLI’ni (`agent`) 67router’ga yo‘naltiring, shunda CLI amalga oshiradigan har bir RPC 67router API kaliti bilan autentifikatsiya qilinadi, `cursor-api` ulanishining hisob ma’lumotlari bilan Cursor’ga uzatiladi va Logs sahifasida qayd etiladi.
 
 ## Kalit nima uchun almashtiriladi
 
@@ -43,12 +43,12 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 Izohlar:
 
-- `cursor-api` uchun modellar ro‘yxati statik Cursor reyestridan olinadi (IDE provayderi zaxira sifatida foydalanadigan o‘sha ro‘yxat); OmniRoute hostida `cursor-agent` o‘rnatilishi shart emas.
+- `cursor-api` uchun modellar ro‘yxati statik Cursor reyestridan olinadi (IDE provayderi zaxira sifatida foydalanadigan o‘sha ro‘yxat); 67router hostida `cursor-agent` o‘rnatilishi shart emas.
 - `POST /api/providers/{id}/refresh-cursor` faqat `cursor` IDE provayderi uchun mo‘ljallangan; `cursor-api` ulanishlarida yangilanadigan IDE sessiyasi yo‘q.
 
 ## Mahalliy model ID’lari va effort
 
-`cursor` / `cu` va `cursor-api` / `cua` uchun umumiy Claude-effort normallashtiruvchisi so‘ralgan model ID’sini o‘z holicha qoldiradi. Cursor `-low` kabi suffiksni OmniRoute effort taxallusi sifatida emas, balki haqiqiy model ID’sining bir qismi sifatida e’lon qilishi mumkin. Cursor ijrochisi faol katalogdagi aniq moslikni saqlab qoladi; moslik bo‘lmasa, uning mavjud model aniqlagichi suffiksni parametrga aylantirish uchun zaxira mexanizmini boshqaradi.
+`cursor` / `cu` va `cursor-api` / `cua` uchun umumiy Claude-effort normallashtiruvchisi so‘ralgan model ID’sini o‘z holicha qoldiradi. Cursor `-low` kabi suffiksni 67router effort taxallusi sifatida emas, balki haqiqiy model ID’sining bir qismi sifatida e’lon qilishi mumkin. Cursor ijrochisi faol katalogdagi aniq moslikni saqlab qoladi; moslik bo‘lmasa, uning mavjud model aniqlagichi suffiksni parametrga aylantirish uchun zaxira mexanizmini boshqaradi.
 
 Bu to‘g‘ridan-to‘g‘ri Claude, Claude-mos yoki Vertex yo‘nalishlari uchun effort normallashtirilishini o‘zgartirmaydi. Mavjudlik hali ham tanlangan Cursor hisobining katalogi va huquqlariga bog‘liq.
 
@@ -59,18 +59,18 @@ Yoʻnalish: `src/app/api/cursor-cli/[...path]/route.ts` →
 `src/shared/constants/publicApiRoutes.ts` faylida roʻyxatdan oʻtkazilgan, chunki ishlov beruvchi
 autentifikatsiyani oʻzi amalga oshiradi:
 
-| Yoʻl                                                                                                                              | CLI’dan kutiladigan autentifikatsiya | OmniRoute nima qiladi                                                                                                                                                                          |
+| Yoʻl                                                                                                                              | CLI’dan kutiladigan autentifikatsiya | 67router nima qiladi                                                                                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                                | `Bearer <OmniRoute API kaliti>`      | Kalitni tekshiradi, 1 soatlik HS256 JWT yaratadi (`JWT_SECRET` bilan imzolangan) va uni qaytaradi                                                                                              |
+| `POST /auth/exchange_user_api_key`                                                                                                | `Bearer <67router API kaliti>`       | Kalitni tekshiradi, 1 soatlik HS256 JWT yaratadi (`JWT_SECRET` bilan imzolangan) va uni qaytaradi                                                                                              |
 | barcha boshqa yoʻllar (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <oʻsha JWT>`                 | Emitent/auditoriya/amal qilish muddatini tekshiradi, faol `cursor-api` ulanishini tanlaydi, Authorization sarlavhasini almashtirilgan Cursor tokeniga almashtiradi va javobni oqimda qaytaradi |
 
 CLI qabul qilgan har qanday tokendan `exp` qiymatini dekodlaydi, shuning uchun unga shaffof boʻlmagan
 token berilsa, deyarli har bir soʻrovdan oldin uni qayta almashtiradi; yaratilgan JWT
-buning oldini oladi. OmniRoute’dan kelgan 401 javobi CLI’ni qayta almashishga majbur qiladi.
+buning oldini oladi. 67router’dan kelgan 401 javobi CLI’ni qayta almashishga majbur qiladi.
 
 ### Sozlash
 
-1. OmniRoute API kalitini (Boshqaruv paneli → API kalitlari) va `cursor-api`
+1. 67router API kalitini (Boshqaruv paneli → API kalitlari) va `cursor-api`
    ulanishini yarating.
 2. CLI’ga agent oqimi uchun HTTP/1.1’dan foydalanishni koʻrsating.
    `~/.cursor/cli-config.json` faylida:
@@ -83,7 +83,7 @@ buning oldini oladi. OmniRoute’dan kelgan 401 javobi CLI’ni qayta almashishg
    sozlangan agent xostiga ochadi va faqat boshqaruv tekisligi RPC’lari
    endpoint orqali oʻtadi.
 
-3. CLI’ni OmniRoute orqali ishga tushiring:
+3. CLI’ni 67router orqali ishga tushiring:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -92,18 +92,18 @@ buning oldini oladi. OmniRoute’dan kelgan 401 javobi CLI’ni qayta almashishg
    ```
 
 Har bir oʻtish Jurnallarda `cursor-api` provayderi, `cursor-cli` soʻrov turi va
-`/api/cursor-cli/<rpc>` yoʻli bilan qayd etiladi hamda OmniRoute API kaliti va
+`/api/cursor-cli/<rpc>` yoʻli bilan qayd etiladi hamda 67router API kaliti va
 unga xizmat koʻrsatgan ulanishga bogʻlanadi.
 
 ### Nosozlik holatlari
 
-| Holat                                                  | CLI’ga javob                                        |
-| ------------------------------------------------------ | --------------------------------------------------- |
-| Noma’lum OmniRoute kaliti va `REQUIRE_API_KEY=true`    | Almashish vaqtida 401 `unauthenticated`             |
-| `REQUIRE_API_KEY=false`                                | anonim seans (`/v1/*` xatti-harakatiga mos)         |
-| Muddati tugagan / begona / oʻzgartirilgan seans JWT’i  | 401, CLI qayta almashadi                            |
-| OmniRoute API kaliti almashishdan keyin bekor qilingan | Keyingi RPC’da 401                                  |
-| Faol `cursor-api` ulanishi yoʻq                        | 503 `unavailable`                                   |
-| Cursor ulanish kalitini rad etadi                      | 401 `unauthenticated`, keshlangan seans oʻchiriladi |
-| Yuqori oqimga ulanib boʻlmaydi                         | 502 `unavailable` (tozalangan xabar)                |
-| `JWT_SECRET` sozlanmagan                               | Almashish vaqtida 503                               |
+| Holat                                                 | CLI’ga javob                                        |
+| ----------------------------------------------------- | --------------------------------------------------- |
+| Noma’lum 67router kaliti va `REQUIRE_API_KEY=true`    | Almashish vaqtida 401 `unauthenticated`             |
+| `REQUIRE_API_KEY=false`                               | anonim seans (`/v1/*` xatti-harakatiga mos)         |
+| Muddati tugagan / begona / oʻzgartirilgan seans JWT’i | 401, CLI qayta almashadi                            |
+| 67router API kaliti almashishdan keyin bekor qilingan | Keyingi RPC’da 401                                  |
+| Faol `cursor-api` ulanishi yoʻq                       | 503 `unavailable`                                   |
+| Cursor ulanish kalitini rad etadi                     | 401 `unauthenticated`, keshlangan seans oʻchiriladi |
+| Yuqori oqimga ulanib boʻlmaydi                        | 502 `unavailable` (tozalangan xabar)                |
+| `JWT_SECRET` sozlanmagan                              | Almashish vaqtida 503                               |

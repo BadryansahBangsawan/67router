@@ -13,7 +13,7 @@
 
 ## Mis see on
 
-OmniRoute ühendub **Obsidiani** hoidlaga kui **kontekstiallikaga** — kohaliku Markdowni
+67router ühendub **Obsidiani** hoidlaga kui **kontekstiallikaga** — kohaliku Markdowni
 teadmusbaasiga, mida agendid loevad ja kirjutavad sisseehitatud MCP-serveri kaudu.
 Integratsioon suhtleb töölauarakenduses töötava kogukonna lisandmooduli
 **Obsidian Local REST API** kaudu, võimaldades agentidel otsida märkmeid, lugeda,
@@ -82,7 +82,7 @@ olekulõpp-punkti.
 
 `src/app/api/settings/obsidian/webdav/route.ts` haldab valikulist WebDAV-il põhinevat
 hoidla sünkroonimist (mida juhib `src/lib/obsidianSync.ts`). Selle lubamisel suunatakse
-OmniRoute kohaliku hoidla kataloogi ning luuakse juhuslik WebDAV-i kasutajanime ja parooli
+67router kohaliku hoidla kataloogi ning luuakse juhuslik WebDAV-i kasutajanime ja parooli
 paar:
 
 ```bash
@@ -120,8 +120,8 @@ sünkroonimistokeni käitumise.
 ## MCP tööriistad (22)
 
 Määratletud failis `open-sse/mcp-server/tools/obsidianTools.ts`. Luba/baas-URL määratakse
-iga kutse jaoks (esmalt API-võtme põhine, seejärel globaalne). Tööriistad, mis kasutavad OmniRoute'i **sünkroonimisserverit**
-(neli tööriista `obsidian_sync_*`), nõuavad lisaks OmniRoute'i seadetes konfigureeritud sünkroonimise autentimisluba.
+iga kutse jaoks (esmalt API-võtme põhine, seejärel globaalne). Tööriistad, mis kasutavad 67router'i **sünkroonimisserverit**
+(neli tööriista `obsidian_sync_*`), nõuavad lisaks 67router'i seadetes konfigureeritud sünkroonimise autentimisluba.
 
 ### Lugemistööriistad (`read:obsidian`)
 
@@ -138,7 +138,7 @@ iga kutse jaoks (esmalt API-võtme põhine, seejärel globaalne). Tööriistad, 
 | `obsidian_get_periodic_note` | Hangib kuupäeva päeva-, nädala- või kuumärkme (vaikimisi tänase).                                   |
 | `obsidian_get_tags`          | Loetleb kõik hoidla sildid koos nende esinemissagedustega.                                          |
 | `obsidian_list_commands`     | Loetleb saadaolevad Obsidiani käskude ID-d (kasutamiseks koos käsuga `obsidian_execute_command`).   |
-| `obsidian_sync_status`       | OmniRoute'i sünkroonimisserveri olek: töötamine, hoidla nimi, port, tööaeg, viimane sünkroonimine.  |
+| `obsidian_sync_status`       | 67router'i sünkroonimisserveri olek: töötamine, hoidla nimi, port, tööaeg, viimane sünkroonimine.   |
 | `obsidian_sync_conflicts`    | Loetleb lahendamata sünkroonimiskonfliktid (tee, konfliktse faili tee, tuvastamise aeg).            |
 
 ### Kirjutamistööriistad (`write:obsidian`)

@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="Papan Pemuka OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="Papan Pemuka 67router" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — Gerbang AI Percuma
+# 🚀 67router — Gerbang AI Percuma
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Jangan berhenti mengekod. Setiap alat AI → 375 penyedia — 150+ percuma — melalui satu titik akhir. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity kepada Claude / GPT / Gemini PERCUMA dengan sandaran automatik. Pemampatan bertindan RTK + Caveman menjimatkan 15–95% token (~89% secara purata) — tidak akan mencapai had. 375 penyedia AI · 150+ peringkat percuma · ~1.62B token percuma/bulan · 20 strategi penghalaan · $0 untuk bermula."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Jangan berhenti mengekod. Setiap alat AI → 375 penyedia — 150+ percuma — melalui satu titik akhir. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity kepada Claude / GPT / Gemini PERCUMA dengan sandaran automatik. Pemampatan bertindan RTK + Caveman menjimatkan 15–95% token (~89% secara purata) — tidak akan mencapai had. 375 penyedia AI · 150+ peringkat percuma · ~1.62B token percuma/bulan · 20 strategi penghalaan · $0 untuk bermula."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **Gunakan akaun penyedia anda sendiri.** Ini ialah anggaran agregat merentasi peringkat percuma pihak ketiga yang layak secara berasingan, bukannya pemberian token daripada OmniRoute. Daftar, dapatkan bukti kelayakan jika diperlukan dan sambungkan penyedia yang boleh anda gunakan; setiap penyedia mengawal had, ketersediaan dan terma mereka sendiri.
+> **Gunakan akaun penyedia anda sendiri.** Ini ialah anggaran agregat merentasi peringkat percuma pihak ketiga yang layak secara berasingan, bukannya pemberian token daripada 67router. Daftar, dapatkan bukti kelayakan jika diperlukan dan sambungkan penyedia yang boleh anda gunakan; setiap penyedia mengawal had, ketersediaan dan terma mereka sendiri.
 >
-> Menggabungkan peringkat percuma secara manual memang menyusahkan — berpuluh-puluh SDK, berpuluh-puluh had kadar dan tiada gambaran tentang jumlah sebenar yang anda miliki. OmniRoute mengkatalogkan **471 entri peringkat percuma merentasi 34 kunci kumpulan berulang** dan mengira angka token utama daripada **17 kumpulan dengan belanjawan bulanan positif yang diterbitkan serta lima had Groq bagi setiap model**, dinyahduplikasi mengikut kumpulan dikongsi. Kuota yang hanya tersedia selepas semakan identiti serantau (pada masa ini: ModelScope) dipaparkan secara berasingan, +~6M di sebalik pengesahan identiti serantau, dan tidak pernah dimasukkan ke dalam jumlah angka utama. Hasilnya kekal dipaparkan pada papan pemuka (`/dashboard/free-tiers`).
+> Menggabungkan peringkat percuma secara manual memang menyusahkan — berpuluh-puluh SDK, berpuluh-puluh had kadar dan tiada gambaran tentang jumlah sebenar yang anda miliki. 67router mengkatalogkan **471 entri peringkat percuma merentasi 34 kunci kumpulan berulang** dan mengira angka token utama daripada **17 kumpulan dengan belanjawan bulanan positif yang diterbitkan serta lima had Groq bagi setiap model**, dinyahduplikasi mengikut kumpulan dikongsi. Kuota yang hanya tersedia selepas semakan identiti serantau (pada masa ini: ModelScope) dipaparkan secara berasingan, +~6M di sebalik pengesahan identiti serantau, dan tidak pernah dimasukkan ke dalam jumlah angka utama. Hasilnya kekal dipaparkan pada papan pemuka (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kad belanjawan peringkat percuma OmniRoute: ~1.62B token percuma sebulan secara berterusan, sehingga ~2.22B pada bulan pertama dengan kredit pendaftaran, daripada 34 kunci kumpulan berulang yang didokumenkan, meliputi 471 entri peringkat percuma yang dikatalogkan di sebalik satu titik akhir. Pengiraan telus yang dinyahduplikasi mengikut kumpulan — setiap kumpulan dikongsi dikira sekali, termasuk 17 kumpulan berulang dengan belanjawan token bulanan positif yang diterbitkan serta lima had Groq bagi setiap model; 12 penyedia ditandai sebagai perlu dielakkan dalam katalog risiko terma supaya anda boleh membuat keputusan. Bar belanjawan merangkumi Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (lima had bagi setiap model) dan kumpulan yang lebih kecil, serta kredit pendaftaran bulan pertama dan penyedia percuma secara kekal tanpa had token yang dipaparkan secara berasingan supaya tidak menaikkan angka utama. Penggunaan/baki secara langsung pada /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kad belanjawan peringkat percuma 67router: ~1.62B token percuma sebulan secara berterusan, sehingga ~2.22B pada bulan pertama dengan kredit pendaftaran, daripada 34 kunci kumpulan berulang yang didokumenkan, meliputi 471 entri peringkat percuma yang dikatalogkan di sebalik satu titik akhir. Pengiraan telus yang dinyahduplikasi mengikut kumpulan — setiap kumpulan dikongsi dikira sekali, termasuk 17 kumpulan berulang dengan belanjawan token bulanan positif yang diterbitkan serta lima had Groq bagi setiap model; 12 penyedia ditandai sebagai perlu dielakkan dalam katalog risiko terma supaya anda boleh membuat keputusan. Bar belanjawan merangkumi Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (lima had bagi setiap model) dan kumpulan yang lebih kecil, serta kredit pendaftaran bulan pertama dan penyedia percuma secara kekal tanpa had token yang dipaparkan secara berasingan supaya tidak menaikkan angka utama. Penggunaan/baki secara langsung pada /dashboard/free-tiers."/>
 
 > Ringkasan beranimasi bagi halaman langsung `/dashboard/free-tiers`. Metodologi penuh (penyahduplikasian kumpulan, peringkat kredit, terma penyedia): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 Pelajari</b></td>
     <td align="center"><a href="#-the-promise">💥 Janji</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Mengapa OmniRoute</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Mengapa 67router</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Keistimewaannya</a></td>
   </tr>
   <tr>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Tiga langkah: pasang dan mulakan OmniRoute, sambungkan penyedia yang layak menggunakan akaun atau kunci API anda sendiri, kemudian halakan alat anda ke localhost:20128/v1 menggunakan kunci API OmniRoute dan model auto. Penghalaan bergantung pada sambungan layak yang tersedia dan had penyedia."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Tiga langkah: pasang dan mulakan 67router, sambungkan penyedia yang layak menggunakan akaun atau kunci API anda sendiri, kemudian halakan alat anda ke localhost:20128/v1 menggunakan kunci API 67router dan model auto. Penghalaan bergantung pada sambungan layak yang tersedia dan had penyedia."/>
 
 ```bash
-# Selepas menyambungkan penyedia, salin kunci OmniRoute anda daripada Dashboard → Endpoints:
+# Selepas menyambungkan penyedia, salin kunci 67router anda daripada Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 Mengapa OmniRoute?
+# 🤔 Mengapa 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Mengapa OmniRoute — berhenti mengurus 10 papan pemuka, kunci API yang tidak berfungsi dan bil yang mengejutkan. Sepuluh masalah harian berbanding penyelesaian: kuota tamat tanpa digunakan → maksimumkan langganan; had kadar ketika menulis kod → sandaran automatik 4 peringkat (Langganan → API → Murah → Percuma); output alat menghabiskan token → pemampatan RTK + Caveman (15–95%); API mahal → penghalaan yang dioptimumkan untuk kos; setiap alat memerlukan persediaannya sendiri → satu titik akhir, satu papan pemuka; AI disekat → proksi 3 tahap + penyamaran TLS; kunci tidak berfungsi → daya tahan 3 lapisan (pemutus litar, tempoh bertenang kunci, penguncian model); pasukan berkongsi satu langganan → kumpulan kunci dengan kuota perkongsian adil; gesaan melalui awan milik pihak lain → mengutamakan setempat dengan kunci disulitkan AES-256-GCM; tiada keterlihatan perbelanjaan → analitik langsung (penggunaan, kuota, penjimatan, kependaman p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Mengapa 67router — berhenti mengurus 10 papan pemuka, kunci API yang tidak berfungsi dan bil yang mengejutkan. Sepuluh masalah harian berbanding penyelesaian: kuota tamat tanpa digunakan → maksimumkan langganan; had kadar ketika menulis kod → sandaran automatik 4 peringkat (Langganan → API → Murah → Percuma); output alat menghabiskan token → pemampatan RTK + Caveman (15–95%); API mahal → penghalaan yang dioptimumkan untuk kos; setiap alat memerlukan persediaannya sendiri → satu titik akhir, satu papan pemuka; AI disekat → proksi 3 tahap + penyamaran TLS; kunci tidak berfungsi → daya tahan 3 lapisan (pemutus litar, tempoh bertenang kunci, penguncian model); pasukan berkongsi satu langganan → kumpulan kunci dengan kuota perkongsian adil; gesaan melalui awan milik pihak lain → mengutamakan setempat dengan kunci disulitkan AES-256-GCM; tiada keterlihatan perbelanjaan → analitik langsung (penggunaan, kuota, penjimatan, kependaman p95)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Aliran permintaan OmniRoute: IDE atau CLI anda (Claude Code, Cursor, Cline…) memanggil satu titik akhir setempat (http://localhost:20128/v1); Penghala Pintar OmniRoute (pemampatan RTK + Caveman, 20 strategi penghalaan, pemutus litar, penyamaran TLS, MCP, A2A, pagar keselamatan) boleh beralih kepada sandaran merentasi 4 peringkat penyedia selagi sasaran sihat yang layak masih tersedia — Peringkat 1 Langganan, Peringkat 2 Kunci API, Peringkat 3 Murah dan Peringkat 4 Percuma."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Aliran permintaan 67router: IDE atau CLI anda (Claude Code, Cursor, Cline…) memanggil satu titik akhir setempat (http://localhost:20128/v1); Penghala Pintar 67router (pemampatan RTK + Caveman, 20 strategi penghalaan, pemutus litar, penyamaran TLS, MCP, A2A, pagar keselamatan) boleh beralih kepada sandaran merentasi 4 peringkat penyedia selagi sasaran sihat yang layak masih tersedia — Peringkat 1 Langganan, Peringkat 2 Kunci API, Peringkat 3 Murah dan Peringkat 4 Percuma."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Ingin menyertai sebagai Rakan Sumber Terbuka?** Ini adalah syarikat-syarikat yang menyokong sumber terbuka dan membantu OmniRoute terus bergerak — dan kami menyatakan secara terbuka ke mana setiap token yang mereka berikan kepada kami pergi. Hubungi: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Ingin menyertai sebagai Rakan Sumber Terbuka?** Ini adalah syarikat-syarikat yang menyokong sumber terbuka dan membantu 67router terus bergerak — dan kami menyatakan secara terbuka ke mana setiap token yang mereka berikan kepada kami pergi. Hubungi: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Rakan Pengasas Sumber Terbuka"/>
     </td>
     <td>
-      Terima kasih kepada <b>Kimi (Moonshot AI)</b>, Rakan Sumber Terbuka pengasas kami, kerana menyokong projek ini! Kimi adalah makmal AI di sebalik keluarga model K2 dan K3 dengan berat terbuka — <b>Kimi K3</b> menawarkan tetingkap konteks 1M-token, penglihatan asli dan pengekodan peringkat sempadan pada sebahagian kecil daripada harga model tertutup, dan berfungsi dengan baik dengan Claude Code, Codex dan setiap alat pengekodan yang disediakan oleh OmniRoute.
+      Terima kasih kepada <b>Kimi (Moonshot AI)</b>, Rakan Sumber Terbuka pengasas kami, kerana menyokong projek ini! Kimi adalah makmal AI di sebalik keluarga model K2 dan K3 dengan berat terbuka — <b>Kimi K3</b> menawarkan tetingkap konteks 1M-token, penglihatan asli dan pengekodan peringkat sempadan pada sebahagian kecil daripada harga model tertutup, dan berfungsi dengan baik dengan Claude Code, Codex dan setiap alat pengekodan yang disediakan oleh 67router.
       <br/><br/>
-      <b>Apa yang disokong oleh Kimi:</b> Kredit API Kimi menggerakkan saluran keluaran yang disahkan AI OmniRoute — peringkat <i>pengesahan gabungan yang dikuasakan oleh Kimi K3</i> yang menyemak setiap permintaan tarik sebelum ia dihantar — serta pembangunan ciri harian. Sokongan Kimi kelas pertama dihantar pada kedua-dua rel: <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">API Kimi</a> langsung (<code>kimi-k3</code>) dan <a href="https://www.kimi.ai/code?aff=omniroute">pelan pengekodan Kimi Code</a> (OAuth dan kunci API). OmniRoute juga merupakan projek sumber terbuka Brazil pertama dalam program sokongan Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Dapatkan kunci API Kimi dengan 15% kredit tambahan →</b></a>
+      <b>Apa yang disokong oleh Kimi:</b> Kredit API Kimi menggerakkan saluran keluaran yang disahkan AI 67router — peringkat <i>pengesahan gabungan yang dikuasakan oleh Kimi K3</i> yang menyemak setiap permintaan tarik sebelum ia dihantar — serta pembangunan ciri harian. Sokongan Kimi kelas pertama dihantar pada kedua-dua rel: <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">API Kimi</a> langsung (<code>kimi-k3</code>) dan <a href="https://www.kimi.ai/code?aff=omniroute">pelan pengekodan Kimi Code</a> (OAuth dan kunci API). 67router juga merupakan projek sumber terbuka Brazil pertama dalam program sokongan Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Dapatkan kunci API Kimi dengan 15% kredit tambahan →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Rakan Sumber Terbuka"/>
     </td>
     <td>
-      Terima kasih kepada <b>Cheaper Inference</b>, Rakan Sumber Terbuka OmniRoute, kerana menyokong projek ini! Cheaper Inference adalah gerbang yang dinilai kos yang menjual semula 42 model sempadan — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok dan MiniMax — di sebalik satu titik akhir yang serasi dengan OpenAI, menghantar setiap permintaan kepada penyedia yang paling murah tanpa pernah mengenakan bayaran melebihi harga senarai pembuat model.
+      Terima kasih kepada <b>Cheaper Inference</b>, Rakan Sumber Terbuka 67router, kerana menyokong projek ini! Cheaper Inference adalah gerbang yang dinilai kos yang menjual semula 42 model sempadan — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok dan MiniMax — di sebalik satu titik akhir yang serasi dengan OpenAI, menghantar setiap permintaan kepada penyedia yang paling murah tanpa pernah mengenakan bayaran melebihi harga senarai pembuat model.
       <br/><br/>
-      <b>Sokongan kelas pertama dalam OmniRoute:</b> Chat Completions, titik akhir <code>/v1/responses</code> asli, penglihatan, panggilan alat dan 3 model imej (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, boleh dicapai sebagai <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Dapatkan kunci API →</b></a>
+      <b>Sokongan kelas pertama dalam 67router:</b> Chat Completions, titik akhir <code>/v1/responses</code> asli, penglihatan, panggilan alat dan 3 model imej (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, boleh dicapai sebagai <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Dapatkan kunci API →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Promosi Afiliasi</b> — kupon pendaftaran percuma daripada penyedia yang tidak kami taja (klik untuk kembangkan)</sub></summary>
 
-<sub><i>Bahagian ini adalah untuk kod rujukan/kupon sahaja. Perkongsian yang ditaja terdapat dalam <b>🤝 Disokong oleh Rakan Sumber Terbuka Kami</b> di atas. OmniRoute tidak mempunyai penajaan atau perkongsian dengan penyedia yang disenaraikan di sini — ini adalah kupon awam yang boleh digunakan oleh sesiapa sahaja.</i></sub>
+<sub><i>Bahagian ini adalah untuk kod rujukan/kupon sahaja. Perkongsian yang ditaja terdapat dalam <b>🤝 Disokong oleh Rakan Sumber Terbuka Kami</b> di atas. 67router tidak mempunyai penajaan atau perkongsian dengan penyedia yang disenaraikan di sini — ini adalah kupon awam yang boleh digunakan oleh sesiapa sahaja.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — pendaftaran afiliasi · <b>$100 kredit percuma</b> semasa pendaftaran (pelayan percuma, jangkakan kependaman yang lebih tinggi — terbaik untuk ujian, bukan pengeluaran). Sokongan kelas pertama dalam OmniRoute sejak <b>v3.8.50</b>: Chat Completions, format wayar yang serasi dengan Anthropic dan laluan yang serasi dengan OpenAI. Model yang tersedia termasuk <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> dan banyak lagi. <b><a href="https://agentrouter.org/register?aff=70LM">Dapatkan $100 anda →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — pendaftaran afiliasi · <b>$100 kredit percuma</b> semasa pendaftaran (pelayan percuma, jangkakan kependaman yang lebih tinggi — terbaik untuk ujian, bukan pengeluaran). Sokongan kelas pertama dalam 67router sejak <b>v3.8.50</b>: Chat Completions, format wayar yang serasi dengan Anthropic dan laluan yang serasi dengan OpenAI. Model yang tersedia termasuk <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> dan banyak lagi. <b><a href="https://agentrouter.org/register?aff=70LM">Dapatkan $100 anda →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Pautan afiliasi — OmniRoute tidak mempunyai penajaan atau perkongsian dengan penyedia ini.</i></sub>
+      <sub>⚠️ <i>Pautan afiliasi — 67router tidak mempunyai penajaan atau perkongsian dengan penyedia ini.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>Tahu penyedia lain dengan kupon pendaftaran percuma yang murah hati yang memberi manfaat kepada pengguna OmniRoute? Buka isu dan kami akan menambahnya di sini.</sub>
+<sub>Tahu penyedia lain dengan kupon pendaftaran percuma yang murah hati yang memberi manfaat kepada pengguna 67router? Buka isu dan kami akan menambahnya di sini.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Contoh animasi bagi 18 daripada 20 strategi penghalaan kombo — satu petak bagi setiap strategi: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized dan quota-weighted tidak dianimasikan; jadual di bawah menerangkan kesemua 20 strategi."/>
 
-> **Kombo** ialah rantaian model yang OmniRoute halakan secara **automatik**. Jika kuota habis, penyedia gagal, atau kos melonjak, kombo boleh beralih kepada model sihat seterusnya yang layak. 🛡️
+> **Kombo** ialah rantaian model yang 67router halakan secara **automatik**. Jika kuota habis, penyedia gagal, atau kos melonjak, kombo boleh beralih kepada model sihat seterusnya yang layak. 🛡️
 
 ### ⚡ Konfigurasi sifar — hanya gunakan `auto`
 
-Tiada kombo yang perlu dicipta. Tetapkan model anda kepada `auto` (atau variannya) dan OmniRoute membina kombo maya daripada penyedia anda yang telah disambungkan, dengan pemarkahan masa nyata:
+Tiada kombo yang perlu dicipta. Tetapkan model anda kepada `auto` (atau variannya) dan 67router membina kombo maya daripada penyedia anda yang telah disambungkan, dengan pemarkahan masa nyata:
 
 <table>
   <tr><th align="left">ID Model</th><th align="left">Perkara yang dioptimumkan</th></tr>
@@ -496,7 +498,7 @@ Kesemua **20** strategi — campur & padankan bagi setiap langkah kombo:
 
 ### 🧱 Daya tahan terbina dalam (3 lapisan bebas)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Daya tahan OmniRoute — 3 lapisan pemulihan kendiri yang bebas, lapisan yang tepat untuk kegagalan yang tepat. Lapisan 1 pemutus litar penyedia (seluruh penyedia): dicetuskan hanya pada 408/5xx, ambang OAuth 8× / kunci API 12× / setempat 2×, ditetapkan semula selepas 60s/30s/15s kepada siasatan HALF-OPEN, pemulihan malas; semasa OPEN, kombo mengubah hala ke penyedia seterusnya. Lapisan 2 tempoh bertenang sambungan (satu kunci/akaun): asas 5s OAuth / 3s kunci API, undur eksponen ×2 dengan perlindungan anti-thundering-herd, 429 mematuhi Retry-After, kejayaan mengosongkan semua keadaan ralat; satu kunci yang sedang dalam tempoh bertenang dilangkau sementara kunci setara terus berkhidmat. Lapisan 3 sekatan model (satu model): 429 bagi setiap model, 404 setempat atau penolakan mod menyekat model itu sahaja — bukan keseluruhan sambungan. Keadaan terminal (diharamkan, tamat tempoh, kredit habis) adalah untuk pengendali, bukan tempoh bertenang."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Daya tahan 67router — 3 lapisan pemulihan kendiri yang bebas, lapisan yang tepat untuk kegagalan yang tepat. Lapisan 1 pemutus litar penyedia (seluruh penyedia): dicetuskan hanya pada 408/5xx, ambang OAuth 8× / kunci API 12× / setempat 2×, ditetapkan semula selepas 60s/30s/15s kepada siasatan HALF-OPEN, pemulihan malas; semasa OPEN, kombo mengubah hala ke penyedia seterusnya. Lapisan 2 tempoh bertenang sambungan (satu kunci/akaun): asas 5s OAuth / 3s kunci API, undur eksponen ×2 dengan perlindungan anti-thundering-herd, 429 mematuhi Retry-After, kejayaan mengosongkan semua keadaan ralat; satu kunci yang sedang dalam tempoh bertenang dilangkau sementara kunci setara terus berkhidmat. Lapisan 3 sekatan model (satu model): 429 bagi setiap model, 404 setempat atau penolakan mod menyekat model itu sahaja — bukan keseluruhan sambungan. Keadaan terminal (diharamkan, tamat tempoh, kredit habis) adalah untuk pengendali, bukan tempoh bertenang."/>
 
 <sub>📖 [Enjin Auto-Combo](docs/routing/AUTO-COMBO.md) · [Panduan Daya Tahan](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ Kesemua **20** strategi — campur & padankan bagi setiap langkah kombo:
 
 <div align="center">
 
-## 🏆 Keistimewaan OmniRoute
+## 🏆 Keistimewaan 67router
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Keistimewaan OmniRoute — gambaran ciri bertarikh berbanding 9router, OpenRouter, CLIProxyAPI dan LiteLLM merentas 13 keupayaan. OmniRoute: 375 penyedia, 150+ peringkat percuma terbina dalam, 20 strategi penghalaan, pemampatan token 12 enjin, pelayan MCP terbina dalam dengan 110 alat, protokol ejen A2A, memori berterusan, pagar keselamatan, ejen awan, penyamaran cap jari TLS, Desktop/Termux/PWA dan 67 penempatan UI i18n. OmniRoute berlesen MIT dan boleh dihoskan sendiri. Keupayaan serta bilangan pesaing mungkin berubah; lihat metodologi yang dipautkan."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Keistimewaan 67router — gambaran ciri bertarikh berbanding 9router, OpenRouter, CLIProxyAPI dan LiteLLM merentas 13 keupayaan. 67router: 375 penyedia, 150+ peringkat percuma terbina dalam, 20 strategi penghalaan, pemampatan token 12 enjin, pelayan MCP terbina dalam dengan 110 alat, protokol ejen A2A, memori berterusan, pagar keselamatan, ejen awan, penyamaran cap jari TLS, Desktop/Termux/PWA dan 67 penempatan UI i18n. 67router berlesen MIT dan boleh dihoskan sendiri. Keupayaan serta bilangan pesaing mungkin berubah; lihat metodologi yang dipautkan."/>
 
 <sub>📊 Metodologi penuh &amp; butiran setiap ciri berbanding 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Sokong OmniRoute
+## 💚 Sokong 67router
 
-OmniRoute dilesenkan di bawah MIT dan diselenggara secara terbuka. Jika ia menjimatkan masa atau wang anda, berikut ialah cara untuk membantu mengekalkannya bebas — pilih apa sahaja yang sesuai untuk anda. Penajaan tidak pernah mempengaruhi keutamaan penghalaan; ia memberikan keterlihatan, bukan kedudukan.
+67router dilesenkan di bawah MIT dan diselenggara secara terbuka. Jika ia menjimatkan masa atau wang anda, berikut ialah cara untuk membantu mengekalkannya bebas — pilih apa sahaja yang sesuai untuk anda. Penajaan tidak pernah mempengaruhi keutamaan penghalaan; ia memberikan keterlihatan, bukan kedudukan.
 
 <table>
-  <tr><td nowrap>⭐ <b>Bintangkan repositori</b></td><td>Percuma — benar-benar membantu keterlihatan</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Bintangkan OmniRoute</a></td></tr>
+  <tr><td nowrap>⭐ <b>Bintangkan repositori</b></td><td>Percuma — benar-benar membantu keterlihatan</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Bintangkan 67router</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Sekali bayar atau bulanan · tiada yuran platform</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Sumbangan sekali bayar yang pantas, penderma tidak perlu mendaftar</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Sumbangan kecil dan tidak formal</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute dilesenkan di bawah MIT dan diselenggara secara terbuka. Jika ia menji
 
 **🇧🇷 PIX** — serta-merta, tanpa yuran (Brazil)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Kod QR PIX OmniRoute"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Kod QR PIX 67router"/>
 
 Kunci (rawak): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ Salin dan tampal Pix:
 
 <p><strong>Nota pembangun:</strong> Projek ini mungkin menjana fail <code>.env</code> setempat semasa npm install/postinstall untuk kemudahan pembangun. Fail ini sengaja diabaikan melalui <code>.gitignore</code> (lihat <code>.gitignore</code>) dan tidak boleh dikomit sama sekali — jika terkomit secara tidak sengaja, tukar semua rahsia yang terdedah dan alih keluar fail tersebut daripada sejarah. Lihat <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> untuk panduan mengurus fail persekitaran setempat dan rahsia.</p>
 
-## 📡 Radar OmniRoute
+## 📡 Radar 67router
 
-Sorotan utama peringkat percuma kekal pada **~1.62B token/bulan** daripada katalog yang didokumenkan dan dinyahpendua berdasarkan kumpulan di atas. Kredit pendaftaran penyedia sementara boleh meningkatkan jumlah bulan pertama secara berasingan kepada **~2.22B**. Radar ialah lapisan tindanan katalog bertandatangan yang bersifat pilihan untuk mereka yang mahukan ketersediaan model percuma yang lebih terkini antara keluaran OmniRoute; katalog komuniti dan setiap ciri percuma sedia ada kekal percuma.
+Sorotan utama peringkat percuma kekal pada **~1.62B token/bulan** daripada katalog yang didokumenkan dan dinyahpendua berdasarkan kumpulan di atas. Kredit pendaftaran penyedia sementara boleh meningkatkan jumlah bulan pertama secara berasingan kepada **~2.22B**. Radar ialah lapisan tindanan katalog bertandatangan yang bersifat pilihan untuk mereka yang mahukan ketersediaan model percuma yang lebih terkini antara keluaran 67router; katalog komuniti dan setiap ciri percuma sedia ada kekal percuma.
 
 Penyokong boleh menerima katalog langsung dan peluang penyedia tambahan. Had maksimumnya yang berasingan dan boleh berubah ialah **kira-kira 3B token/bulan paling banyak**, bergantung pada ketersediaan penyedia. Had maksimum tersebut bukan jaminan: penyedia boleh mengubah kuota, kelayakan, model atau rantau pada bila-bila masa.
 
-Radar adalah secara ikut serta dan GET sahaja. Klien OmniRoute tidak memuat naik gesaan, trafik, konfigurasi penyedia, telemetri penggunaan atau keadaan setempat bagi pengumuman yang telah ditutup. Ketahui tentang kelayakan dan katalog semasa di **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
+Radar adalah secara ikut serta dan GET sahaja. Klien 67router tidak memuat naik gesaan, trafik, konfigurasi penyedia, telemetri penggunaan atau keadaan setempat bagi pengumuman yang telah ditutup. Ketahui tentang kelayakan dan katalog semasa di **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
 <br/>
 
@@ -593,7 +595,7 @@ Radar adalah secara ikut serta dan GET sahaja. Klien OmniRoute tidak memuat naik
 - **💸 Kos kadar rata yang jujur** — penyedia langganan / pelan pengekodan dipaparkan sebagai **$0** dalam analitik kos; belanjawan, kuota & penghalaan terus menganggar. → [Rujukan API](docs/reference/API_REFERENCE.md)
 - **⚖️ Penghalaan Quota-Share** — bahagikan kuota akaun kongsi secara adil merentas kunci terkumpul, bersifat memelihara kerja supaya hirisan terbiar dipinjamkan. → [Panduan Ketahanan](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 Persediaan CLI/ejen satu arahan** — 15 arahan `setup-*` berdaftar; `omniroute run` melancarkan 7 CLI (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` menyokong 11 sasaran dengan pemilih penyedia+model interaktif dan kegemaran mengikut konteks. → [Integrasi CLI](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Mod jauh** — kendalikan OmniRoute jauh dengan token berskop (`connect` / `contexts` / `tokens`) + pembantu OAuth `antigravity` untuk pemasangan VPS. → [Mod Jauh](docs/guides/REMOTE-MODE.md)
+- **🛰️ Mod jauh** — kendalikan 67router jauh dengan token berskop (`connect` / `contexts` / `tokens`) + pembantu OAuth `antigravity` untuk pemasangan VPS. → [Mod Jauh](docs/guides/REMOTE-MODE.md)
 - **🧭 Penghalaan auto lebih pintar** — kombo `auto/<category>:<tier>`, **Fusion** (panel model + hakim), penghalaan sedar tugas, pengatasan model / mod / belanjawan USD mengikut permintaan. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ Pemampatan boleh pasang** — 12 enjin boleh kompos + Compression Studios: LLMLingua-2, Ultra dua peringkat, omniglyph, get kesetiaan setiap langkah, GCF v3.2, editor susun semula seret. → [Pemampatan](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Nyahsulit MITM telus (TPROXY)** — tangkap CLI yang mengabaikan pemboleh ubah persekitaran proksi, dengan CA per-SNI + pemasang stor kepercayaan. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -663,7 +665,7 @@ Radar adalah secara ikut serta dan GET sahaja. Klien OmniRoute tidak memuat naik
 
 <br/>
 
-**Lancarkan mana-mana CLI yang disokong melalui OmniRoute dengan satu perintah** — tiada fail konfigurasi ditulis,
+**Lancarkan mana-mana CLI yang disokong melalui 67router dengan satu perintah** — tiada fail konfigurasi ditulis,
 kelayakan disuntik bagi setiap proses, Qwen/Gemini mendapat direktori utama terpencil sementara:
 
 ```bash
@@ -756,7 +758,7 @@ disimpan dalam sejarah shell anda. → [Integrasi CLI](docs/guides/CLI-INTEGRATI
 
 <div align="center">
 
-## 🖥️ Tempat OmniRoute Berjalan — Di Mana-mana Sahaja
+## 🖥️ Tempat 67router Berjalan — Di Mana-mana Sahaja
 
 </div>
 
@@ -772,7 +774,7 @@ disimpan dalam sejarah shell anda. → [Integrasi CLI](docs/guides/CLI-INTEGRATI
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">Berjalan <b>pada telefon anda</b>, 24/7, tanpa root</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"Tambah ke Skrin Utama"</td><td align="left">Skrin penuh, luar talian, boleh dipasang daripada pelayar</td></tr>
   <tr><td align="left" nowrap>🧩 <b>Pemalam OpenCode</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">Penyepaduan OpenCode natif</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>pasang sambungan <b>OmniCopilot</b></td><td align="left">Setiap model OmniRoute dalam pemilih Copilot Chat natif — stabil &amp; Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>pasang sambungan <b>OmniCopilot</b></td><td align="left">Setiap model 67router dalam pemilih Copilot Chat natif — stabil &amp; Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>Daripada sumber</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">Ubah suai, beri sumbangan</td></tr>
 </table>
 
@@ -782,18 +784,18 @@ disimpan dalam sejarah shell anda. → [Integrasi CLI](docs/guides/CLI-INTEGRATI
 
 <div align="center">
 
-### 🧩 Baharu: OmniRoute dalam Copilot Chat natif VS Code
+### 🧩 Baharu: 67router dalam Copilot Chat natif VS Code
 
 </div>
 
-> Tiada bar sisi baharu, tiada UI sembang baharu — setiap model yang disediakan oleh OmniRoute muncul terus dalam
+> Tiada bar sisi baharu, tiada UI sembang baharu — setiap model yang disediakan oleh 67router muncul terus dalam
 > **pemilih model Copilot Chat yang telah anda gunakan**. Sejak VS Code 1.122, model penyedia berfungsi
 > tanpa log masuk GitHub atau langganan Copilot — mod ejen, panggilan alat dan penglihatan, secara
 > percuma.
 
 Pasang sambungan **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)**, halakannya
-ke pelayan OmniRoute anda (lalai kepada `localhost:20128`), kemudian buka Copilot Chat → pemilih model
-→ **Urus Model…** → **OmniRoute**.
+ke pelayan 67router anda (lalai kepada `localhost:20128`), kemudian buka Copilot Chat → pemilih model
+→ **Urus Model…** → **67router**.
 
 <table>
   <tr><th align="left">Gedung</th><th align="left">Pautan</th><th align="left">Berfungsi dengan</th></tr>
@@ -801,7 +803,7 @@ ke pelayan OmniRoute anda (lalai kepada `localhost:20128`), kemudian buka Copilo
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">Pasang →</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-Dari dalam editor: buka paparan **Sambungan**, cari **"OmniRoute"**, klik **Pasang**
+Dari dalam editor: buka paparan **Sambungan**, cari **"67router"**, klik **Pasang**
 — berfungsi dengan cara yang sama pada kedua-dua gedung. Kod sumber, isu dan panduan penerbitan tersedia di
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -821,9 +823,9 @@ Dari dalam editor: buka paparan **Sambungan**, cari **"OmniRoute"**, klik **Pasa
 > membiarkan tetingkap terminal terbuka, tanpa perlu menjaga `npm install -g omniroute`.**
 
 Dibina dengan [Tauri v2](https://v2.tauri.app/) (teras Rust yang sangat kecil), ia disertakan
-dengan masa jalan Node 24 bertandatangan sendiri dan mengurus pemasangan OmniRoute milik aplikasi, jadi ia tidak akan berkonflik dengan
+dengan masa jalan Node 24 bertandatangan sendiri dan mengurus pemasangan 67router milik aplikasi, jadi ia tidak akan berkonflik dengan
 `node`/`bun` global anda. Ia **berkongsi konfigurasi dan pangkalan data `~/.omniroute/` sedia ada anda** — jadi ia ialah
-OmniRoute yang sama yang telah anda jalankan, cuma kini memakai topi. 🎩
+67router yang sama yang telah anda jalankan, cuma kini memakai topi. 🎩
 
 <table>
   <tr><th align="left">Fungsinya</th><th align="left">Caranya</th></tr>
@@ -841,7 +843,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>Lebih suka memuat turun? Dapatkan <code>.dmg</code> terkini daripada
 <a href="https://github.com/zoispag/omniroute-tray/releases">Keluaran</a>. Kod sumber, isu dan dokumentasi binaan
 tersedia di <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 Projek komuniti oleh <a href="https://github.com/zoispag">@zoispag</a> — bukan keluaran rasmi OmniRoute.</sub>
+<br/>💛 Projek komuniti oleh <a href="https://github.com/zoispag">@zoispag</a> — bukan keluaran rasmi 67router.</sub>
 
 <br/>
 
@@ -851,7 +853,7 @@ tersedia di <a href="https://github.com/zoispag/omniroute-tray">zoispag/omnirout
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Peribadi dan mengutamakan setempat — get laluan dan satah kawalan OmniRoute berjalan pada mesin anda. Prom dihantar kepada penyedia huluan yang dipilih bagi setiap permintaan; OmniRoute tidak menambah sebarang perantara pemprosesan prom yang dihoskan dan telemetri dilumpuhkan secara lalai. Bukti kelayakan disulitkan ketika disimpan dengan AES-256-GCM; kawalan termasuk penskopan kunci API, penapisan IP, had kadar, perlindungan daripada suntikan prom, pembersihan pengepala huluan, penyuntingan PII secara pilihan, ralat yang dinyahpekakan dan jejak audit SQLite setempat. OmniRoute dilesenkan di bawah MIT dan boleh dihoskan sendiri."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Peribadi dan mengutamakan setempat — get laluan dan satah kawalan 67router berjalan pada mesin anda. Prom dihantar kepada penyedia huluan yang dipilih bagi setiap permintaan; 67router tidak menambah sebarang perantara pemprosesan prom yang dihoskan dan telemetri dilumpuhkan secara lalai. Bukti kelayakan disulitkan ketika disimpan dengan AES-256-GCM; kawalan termasuk penskopan kunci API, penapisan IP, had kadar, perlindungan daripada suntikan prom, pembersihan pengepala huluan, penyuntingan PII secara pilihan, ralat yang dinyahpekakan dan jejak audit SQLite setempat. 67router dilesenkan di bawah MIT dan boleh dihoskan sendiri."/>
 
 <sub>📖 [Keizinan](docs/architecture/AUTHZ_GUIDE.md) · [Perlindungan](docs/security/GUARDRAILS.md) · [Pematuhan](docs/security/COMPLIANCE.md)</sub>
 
@@ -863,7 +865,7 @@ tersedia di <a href="https://github.com/zoispag/omniroute-tray">zoispag/omnirout
 
 </div>
 
-> Selain pelayan, OmniRoute ialah **kokpit baris perintah lengkap** dengan **80+ perintah**, serta protokol ejen terbuka supaya ejen AI boleh mengendalikannya **secara kendiri**.
+> Selain pelayan, 67router ialah **kokpit baris perintah lengkap** dengan **80+ perintah**, serta protokol ejen terbuka supaya ejen AI boleh mengendalikannya **secara kendiri**.
 
 ### ⌨️ CLI sebenar (bukan sekadar `start`)
 
@@ -874,9 +876,9 @@ omniroute setup         # bestari penggunaan kali pertama berpandu
 omniroute doctor        # diagnosis penyedia, port, kebergantungan natif
 ```
 
-### 🛰️ Mod jauh — jalankan CLI di sini, OmniRoute pada VPS
+### 🛰️ Mod jauh — jalankan CLI di sini, 67router pada VPS
 
-OmniRoute berada pada pelayan? Kendalikannya daripada komputer riba anda menggunakan **CLI yang sama**. Log masuk sekali
+67router berada pada pelayan? Kendalikannya daripada komputer riba anda menggunakan **CLI yang sama**. Log masuk sekali
 dengan token akses berskop; selepas itu, setiap perintah akan menyasarkan pelayan jauh.
 
 ```bash
@@ -892,13 +894,13 @@ Token mempunyai skop `read` / `write` / `admin`; laluan yang mencetuskan proses 
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Terminal animasi yang menunjukkan CLI OmniRoute — omniroute providers list, omniroute combo list dan omniroute health — berputar melalui permukaan peringkat teratas dengan 89 perintah: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Terminal animasi yang menunjukkan CLI 67router — omniroute providers list, omniroute combo list dan omniroute health — berputar melalui permukaan peringkat teratas dengan 89 perintah: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Sambungkan ejen — dan ia mengawal OmniRoute sendiri
+### 🤝 Sambungkan ejen — dan ia mengawal 67router sendiri
 
-Dedahkan OmniRoute melalui **MCP**, **A2A**, **REST API**, **webhooks** atau **CLI jauh** — mana-mana ejen yang berkeupayaan (atau kod anda sendiri) memperoleh akses kepada keseluruhan get laluan: penghalaan, penyedia, gabungan, cache, pemampatan, memori — secara autonomi. Titik akhir HTTP di bawah disediakan melalui `http://localhost:20128`.
+Dedahkan 67router melalui **MCP**, **A2A**, **REST API**, **webhooks** atau **CLI jauh** — mana-mana ejen yang berkeupayaan (atau kod anda sendiri) memperoleh akses kepada keseluruhan get laluan: penghalaan, penyedia, gabungan, cache, pemampatan, memori — secara autonomi. Titik akhir HTTP di bawah disediakan melalui `http://localhost:20128`.
 
 <table>
   <tr><th align="left">Antara muka</th><th align="left">Titik akhir / perintah</th><th align="left">Gunakannya untuk</th></tr>
@@ -912,7 +914,7 @@ Dedahkan OmniRoute melalui **MCP**, **A2A**, **REST API**, **webhooks** atau **C
 </table>
 
 ```bash
-# Berikan Claude Code set alat OmniRoute lengkap melalui MCP:
+# Berikan Claude Code set alat 67router lengkap melalui MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
@@ -928,7 +930,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 Cara ia berfungsi — pipeline, seni bina & matematik penjimatan
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline mampatan OmniRoute: contoh permintaan klien 10,000 token melalui 12 enjin boleh kompos — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra dan OmniGlyph — dan boleh sampai ke penyedia pada kira-kira 1,080 token dalam contoh bertindan yang didokumenkan. Kandungan berstruktur dilindungi oleh pengawal pemeliharaan dan get kesetiaan setiap langkah; mod lossy atau eksperimen yang eksplisit boleh mengubah kandungan yang layak."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline mampatan 67router: contoh permintaan klien 10,000 token melalui 12 enjin boleh kompos — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra dan OmniGlyph — dan boleh sampai ke penyedia pada kira-kira 1,080 token dalam contoh bertindan yang didokumenkan. Kandungan berstruktur dilindungi oleh pengawal pemeliharaan dan get kesetiaan setiap langkah; mod lossy atau eksperimen yang eksplisit boleh mengubah kandungan yang layak."/>
 
 Kombo bertindan lalai menjalankan `RTK → Caveman`. Apabila kedua-duanya bertindak ke atas muatan alat/konteks yang sama, penjimatan berganda:
 
@@ -940,7 +942,7 @@ range    = 78.4 – 94.6%
 
 Blok kod, URL, JSON dan data berstruktur **sentiasa dilindungi** oleh enjin pemeliharaan.
 
-> **Mengapa guna banyak token sedangkan sedikit token sudah memadai?** Setiap permintaan melalui pipeline mampatan OmniRoute **secara telus** — tanpa perubahan pada klien. Kini ia merupakan **timbunan 12 enjin boleh kompos** yang berjalan mengikut urutan dan boleh dicampur & dipadankan mengikut kombo penghalaan — dibina atas idea daripada [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), dan [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Mengapa guna banyak token sedangkan sedikit token sudah memadai?** Setiap permintaan melalui pipeline mampatan 67router **secara telus** — tanpa perubahan pada klien. Kini ia merupakan **timbunan 12 enjin boleh kompos** yang berjalan mengikut urutan dan boleh dicampur & dipadankan mengikut kombo penghalaan — dibina atas idea daripada [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), dan [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 Timbunan 12 enjin
 
@@ -1025,7 +1027,7 @@ omniroute
 ```
 
 > 💡 Nampak `npm warn ERESOLVE` atau amaran peer-dep? [Ia tidak berbahaya](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Guna npm 11 atau lebih baharu?** npm mungkin menyekat skrip kitaran hayat pakej melainkan dibenarkan. `postinstall` OmniRoute (`node scripts/build/postinstall.mjs`) diperlukan untuk menyediakan fail masa jalan aslinya. Benarkan pakej yang dinamakan dalam amaran npm semasa memasang secara global. Untuk set pakej yang dilaporkan oleh OmniRoute 3.8.53:
+> **Guna npm 11 atau lebih baharu?** npm mungkin menyekat skrip kitaran hayat pakej melainkan dibenarkan. `postinstall` 67router (`node scripts/build/postinstall.mjs`) diperlukan untuk menyediakan fail masa jalan aslinya. Benarkan pakej yang dinamakan dalam amaran npm semasa memasang secara global. Untuk set pakej yang dilaporkan oleh 67router 3.8.53:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1061,9 +1063,9 @@ Model:    auto            (routes among eligible connections — or choose provi
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Anda sepatutnya melihat model yang disambungkan tersenarai. 🎉 Itu sahaja — mula mengekod, dan OmniRoute menghalakan secara automatik & membuat sandaran untuk anda.
+Anda sepatutnya melihat model yang disambungkan tersenarai. 🎉 Itu sahaja — mula mengekod, dan 67router menghalakan secara automatik & membuat sandaran untuk anda.
 
-Jika klien anda tidak dapat menghantar pengepala tersuai, OmniRoute juga menyediakan alias keserasian bertoken:
+Jika klien anda tidak dapat menghantar pengepala tersuai, 67router juga menyediakan alias keserasian bertoken:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1113,7 +1115,7 @@ Jadual penuh: [Panduan Docker — RAM masa jalan](docs/guides/DOCKER_GUIDE.md#ru
 
 `bun install` standard dan pemasangan global (`bun install -g omniroute`) disokong melalui pengesanan masa jalan Bun:
 
-- **`bun:sqlite` terbina dalam**: OmniRoute menggunakan pemacu `bun:sqlite` terbina dalam Bun apabila dijalankan di bawah Bun, dengan kembali menggunakan `better-sqlite3` pada Node.js atau `sql.js`.
+- **`bun:sqlite` terbina dalam**: 67router menggunakan pemacu `bun:sqlite` terbina dalam Bun apabila dijalankan di bawah Bun, dengan kembali menggunakan `better-sqlite3` pada Node.js atau `sql.js`.
 - **Pemilihan pembundel Webpack secara automatik dalam pembangunan**: Pembangunan (`bun run dev`) mengesan Bun secara automatik dan menyahdayakan Turbopack untuk menggunakan Webpack bagi mengelakkan ketidakserasian pengikatan V8 natif. Binaan produksi (`bun run build`) mengikuti `OMNIROUTE_USE_TURBOPACK` sama seperti pada Node: Turbopack secara lalai, `OMNIROUTE_USE_TURBOPACK=0` untuk membina dengan Webpack (`Dockerfile.bun` menyediakannya sebagai `--build-arg`).
 - **Dockerfile Bun khusus**: `Dockerfile.bun` berbilang peringkat untuk pelaksanaan produksi Bun natif (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1197,7 +1199,7 @@ proses yang sama pada satu port, jadi buat masa ini tiada pakej CLI sahaja yang 
 
 <div align="center">
 
-# 🎬 OmniRoute Sedang Beraksi
+# 🎬 67router Sedang Beraksi
 
 </div>
 
@@ -1261,7 +1263,7 @@ proses yang sama pada satu port, jadi buat masa ini tiada pakej CLI sahaja yang 
 
 Metrik kanonik pada 2026-10-18: **1.976 video unik** · **20.220.289 tontonan yang diketahui** (`v > 0`) · **1.210 saluran/profil mengikut rangkaian**. Panel mentah mengandungi 1.976 baris (YouTube 1.352 = 740 video panjang + 612 Shorts · TikTok 334 · Instagram 290); tiada pendua yang tinggal selepas penormalan berdasarkan URL kanonik, yang mengekalkan jumlah tertinggi bagi setiap video. Pengumpulan data YouTube dibekukan pada 2026-10-13 (kuota API habis dari 14 hingga 18/10), manakala TikTok/Instagram sejak 2026-09-02 (tiada kredit pengumpulan data); 76 video masih belum mempunyai jumlah tontonan.
 
-> 🎬 **Menghasilkan video tentang OmniRoute?** Buka [isu](https://github.com/diegosouzapw/OmniRoute/issues/new) atau [perbincangan](https://github.com/diegosouzapw/OmniRoute/discussions) dengan pautan tersebut — kami akan menampilkannya di sini.
+> 🎬 **Menghasilkan video tentang 67router?** Buka [isu](https://github.com/diegosouzapw/OmniRoute/issues/new) atau [perbincangan](https://github.com/diegosouzapw/OmniRoute/discussions) dengan pautan tersebut — kami akan menampilkannya di sini.
 
 <br/>
 
@@ -1280,7 +1282,7 @@ Metrik kanonik pada 2026-10-18: **1.976 video unik** · **20.220.289 tontonan ya
 | 🟢 **WhatsApp — 🌍 Global**                  | [sertai kumpulan](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                          |
 | 🟢 **WhatsApp — 🇧🇷 Brazil**                  | [sertai kumpulan](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                          |
 | 🌍 **Laman web**                             | [omniroute.online](https://omniroute.online)                                                                                |
-| 🌍 **🌍Komuniti StHub OmniRoute (percuma)**  | [portal StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                       |
+| 🌍 **🌍Komuniti StHub 67router (percuma)**   | [portal StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                       |
 | 📦 **Kod sumber**                            | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                              |
 | 🐛 **Laporkan pepijat**                      | [buka isu](https://github.com/diegosouzapw/OmniRoute/issues) — lampirkan output `npm run system-info`                       |
 | 🤝 **Sumbang**                               | [CONTRIBUTING.md](CONTRIBUTING.md) · [Model Percabangan & Keluaran](docs/ops/BRANCHING_MODEL.md) · pilih `good first issue` |
@@ -1333,8 +1335,8 @@ Metrik kanonik pada 2026-10-18: **1.976 video unik** · **20.220.289 tontonan ya
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">Panduan Pengguna</a></b></td><td>Penyedia, gabungan, penyepaduan CLI, penggunaan</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Panduan Persediaan</a></b></td><td>Kaedah pemasangan lengkap, konfigurasi alat CLI, persediaan protokol, penalaan tamat masa</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">Panduan Alat CLI</a></b></td><td>Persediaan khusus bagi setiap alat untuk Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo, Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Mod Jauh</a></b></td><td>Kawal OmniRoute jauh (VPS) daripada CLI komputer riba anda melalui token akses berskop</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Konfigurasi Claude Code</a></b></td><td>Halakan Claude Code ke OmniRoute (setempat/jauh) dengan <code>launch</code> + profil bagi setiap model</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Mod Jauh</a></b></td><td>Kawal 67router jauh (VPS) daripada CLI komputer riba anda melalui token akses berskop</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Konfigurasi Claude Code</a></b></td><td>Halakan Claude Code ke 67router (setempat/jauh) dengan <code>launch</code> + profil bagi setiap model</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Mula Pantas</a></b></td><td>Pemasangan 3 langkah → sambungkan → konfigurasikan</td></tr>
 </table>
 
@@ -1346,7 +1348,7 @@ Metrik kanonik pada 2026-10-18: **1.976 video unik** · **20.220.289 tontonan ya
   <tr><td nowrap><b><a href="contrib/podman/README.md">Panduan Podman</a></b></td><td>Penyepaduan Quadlet systemd, podman-compose, SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">Penggunaan VM</a></b></td><td>Panduan lengkap: persediaan VM + nginx + Cloudflare</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Penggunaan Fly.io</a></b></td><td>Gunakan pada Fly.io dengan storan berterusan</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Panduan Termux</a></b></td><td>Jalankan OmniRoute pada Android melalui Termux</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Panduan Termux</a></b></td><td>Jalankan 67router pada Android melalui Termux</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">Panduan PWA</a></b></td><td>Pemasangan Aplikasi Web Progresif, cache, seni bina</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Panduan Nyahpasang</a></b></td><td>Penyingkiran bersih untuk semua kaedah pemasangan</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Konfigurasi Persekitaran</a></b></td><td>Pemboleh ubah dan rujukan <code>.env</code> yang lengkap</td></tr>
@@ -1401,7 +1403,7 @@ Metrik kanonik pada 2026-10-18: **1.976 video unik** · **20.220.289 tontonan ya
 
 # ⭐ Penyumbang Teratas
 
-> OmniRoute dibentuk oleh komuniti sumber terbuka yang bersemangat. Individu-individu ini telah memberikan sumbangan luar biasa yang memberi kesan langsung terhadap kualiti, kestabilan dan jangkauan projek. **Terima kasih.**
+> 67router dibentuk oleh komuniti sumber terbuka yang bersemangat. Individu-individu ini telah memberikan sumbangan luar biasa yang memberi kesan langsung terhadap kualiti, kestabilan dan jangkauan projek. **Terima kasih.**
 
 ### Penyumbang luar mengikut permintaan tarik yang digabungkan
 
@@ -1519,7 +1521,7 @@ Metrik kanonik pada 2026-10-18: **1.976 video unik** · **20.220.289 tontonan ya
 
 <sub>Disemak semula pada 2026-10-18 14:44:45 UTC: Komit yang dikaitkan dengan GitHub seperti yang dilaporkan oleh API Penyumbang repositori untuk cabang lalai <code>release/v3.8.52</code>. API tersebut mengembalikan 849 identiti (429 pengguna, 2 bot, 418 tanpa nama); jadual ini mengecualikan penyelenggara, bot dan identiti tanpa nama serta mengekalkan kedudukan seri. Jadual ini berbeza daripada kedua-dua kedudukan PR tergabung di atas dan bancian metadata Git di bawah.</sub>
 
-> 🙏 Ciri, pembetulan pepijat dan penambahbaikan infrastruktur daripada para penyumbang ini merupakan **bahagian teras** yang menjadikan OmniRoute andal dan kaya dengan ciri. Setiap permintaan tarik, setiap kes ujian dan setiap fail terjemahan i18n adalah penting. Sumber terbuka dibangunkan oleh insan seperti mereka.
+> 🙏 Ciri, pembetulan pepijat dan penambahbaikan infrastruktur daripada para penyumbang ini merupakan **bahagian teras** yang menjadikan 67router andal dan kaya dengan ciri. Setiap permintaan tarik, setiap kes ujian dan setiap fail terjemahan i18n adalah penting. Sumber terbuka dibangunkan oleh insan seperti mereka.
 
 </div>
 
@@ -1531,7 +1533,7 @@ Metrik kanonik pada 2026-10-18: **1.976 video unik** · **20.220.289 tontonan ya
 
 <div align="center">
 
-Setinggi-tinggi penghargaan kepada mereka yang membiayai OmniRoute daripada poket sendiri — setiap sumbangan memastikan projek ini kekal percuma, bebas dan terus berkembang.
+Setinggi-tinggi penghargaan kepada mereka yang membiayai 67router daripada poket sendiri — setiap sumbangan memastikan projek ini kekal percuma, bebas dan terus berkembang.
 
 <table>
   <tr>
@@ -1621,7 +1623,7 @@ Setinggi-tinggi penghargaan kepada mereka yang membiayai OmniRoute daripada poke
 
 <sub>Penaja GitHub awam disahkan semula pada 2026-10-18 melalui API GraphQL GitHub Sponsors: 11 tajaan awam (6 aktif, 5 terdahulu) daripada jumlah keseluruhan 14. Status <code>isActive</code> GitHub menentukan label aktif di atas; penyokong sekali bayar awam terdahulu terus diberikan penghargaan, manakala penaja persendirian kekal tanpa nama. Sumbangan melalui Ko-fi, Buy Me a Coffee, Liberapay, PIX dan mata wang kripto tidak disenaraikan kerana tiada rekod penaja awam.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Jadi penaja →</a></b> — setiap dolar memastikan OmniRoute kekal percuma dan bebas.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Jadi penaja →</a></b> — setiap dolar memastikan 67router kekal percuma dan bebas.
 
 </div>
 
@@ -1693,14 +1695,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute dibangunkan berasaskan hasil usaha gergasi terdahulu. Ia bermula sebagai cabang daripada **[9router](https://github.com/decolua/9router)** dan port TypeScript bagi projek Go **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — dan seterusnya, setiap subsistem di bawah diilhamkan oleh projek sumber terbuka yang terlebih dahulu menerokai bidang tersebut. Setiap satunya membentuk bahagian nyata dalam OmniRoute. Inilah tanda penghargaan kami kepada mereka semua. 🙏
+67router dibangunkan berasaskan hasil usaha gergasi terdahulu. Ia bermula sebagai cabang daripada **[9router](https://github.com/decolua/9router)** dan port TypeScript bagi projek Go **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — dan seterusnya, setiap subsistem di bawah diilhamkan oleh projek sumber terbuka yang terlebih dahulu menerokai bidang tersebut. Setiap satunya membentuk bahagian nyata dalam 67router. Inilah tanda penghargaan kami kepada mereka semua. 🙏
 
 > ⭐ bilangan bintang disahkan melalui REST API GitHub pada 18 Oktober 2026 — berikan bintang kepada projek-projek ini. Bilangan tersebut ialah gambaran tepat pada tarikh berkenaan dan semestinya akan berubah.
 
 ### 🧬 Asal-usul & get laluan
 
 <table>
-  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan OmniRoute</th></tr>
+  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>Projek asal yang menjadi asas cabang ini — diperluas di sini dengan API berbilang modal dan penulisan semula sepenuhnya menggunakan TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>Pelaksanaan Go yang mengilhamkan port JavaScript / TypeScript ini.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>Get laluan AI yang set data harga awamnya membekalkan penyegerakan penjejakan kos kami dan model penormalan penyedianya menjadi rujukan bagi penghalaan kami.</td></tr>
@@ -1708,19 +1710,19 @@ OmniRoute dibangunkan berasaskan hasil usaha gergasi terdahulu. Ia bermula sebag
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>Corak yang diport ke dalam pemulihan strim, alias tanpa penaakulan, carian web sandaran, had tetingkap gelongsor, penyuntingan log dan aliran pelancar yang diperkukuh.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>Corak pemilihan alat, kekangan output dan komit alat Cursor Composer yang disesuaikan ke dalam pelaksana Cursor natif.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>Corak log masuk baharu dan putaran token muat semula yang diport ke dalam pengesahan semula Codex OAuth.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Tetapan lalai transformasi yang serasi dengan Claude Code dan tingkah laku pengepala pengebilan yang digeneralisasikan ke dalam jambatan berpacukan konfigurasi OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Pemetaan model Grok, penjana Statsig TypeError palsu, tetapan lalai permintaan dan peranti, serta pemproses respons NDJSON miliknya telah disesuaikan secara ketara ke dalam pelaksana Grok Web OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Tetapan lalai transformasi yang serasi dengan Claude Code dan tingkah laku pengepala pengebilan yang digeneralisasikan ke dalam jambatan berpacukan konfigurasi 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Pemetaan model Grok, penjana Statsig TypeError palsu, tetapan lalai permintaan dan peranti, serta pemproses respons NDJSON miliknya telah disesuaikan secara ketara ke dalam pelaksana Grok Web 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>Sumber kod transitif utama di sebalik grok2api-merged; pelaksanaan model, pengepala, muatan, Statsig dan pemprosesnya dikekalkan dalam asal-usul Grok Web.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>Sumber MIT asas bagi muatan Grok dan tetapan lalai peranti, penjana Statsig serta pemproses <code>result.response</code> yang diwarisi melalui TQZHR dan grok2api-merged.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Sumber transitif yang diiktiraf oleh grok2api-merged bagi lapisan himpunan proksinya; OmniRoute mengekalkan notis asal-usul tersebut tetapi tidak mendakwa adanya port himpunan proksi dalam pelaksana Grok Web yang dibataskan.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Proksi Grok yang disahkan menggunakan kuki dan corak penstriman <code>result.response.token</code> miliknya menjadi rujukan bagi pengangkutan Grok Web OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Sumber transitif yang diiktiraf oleh grok2api-merged bagi lapisan himpunan proksinya; 67router mengekalkan notis asal-usul tersebut tetapi tidak mendakwa adanya port himpunan proksi dalam pelaksana Grok Web yang dibataskan.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Proksi Grok yang disahkan menggunakan kuki dan corak penstriman <code>result.response.token</code> miliknya menjadi rujukan bagi pengangkutan Grok Web 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>Pelaksanaan asal Grok Web merujuk reka bentuk huluan HTTP/pelayarnya; laluan HTTP langsungnya berasal daripada GrokProxy, maka tiada dakwaan dibuat tentang port kod yang berasingan.</td></tr>
 </table>
 
 ### 🗜️ Pemampatan konteks & token — enjin
 
 <table>
-  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia menginspirasikan OmniRoute</th></tr>
+  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia menginspirasikan 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>Projek tular "mengapa guna banyak token apabila sedikit token sudah memadai" — falsafah bahasa manusia guanya menjadi asas mod pemampatan standard kami serta lebih 30 peraturan pembuangan pengisi/pemadatan.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Pemampatan output perintah berprestasi tinggi — menginspirasikan enjin RTK kami, DSL penapis JSON, pemulihan output mentah dan saluran bertindan RTK → Caveman.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Pemampatan konteks boleh balik (SmartCrusher) — menginspirasikan enjin <code>headroom</code> kami dan corak penanda pengambilan semula <code>ccr</code>.</td></tr>
@@ -1728,15 +1730,15 @@ OmniRoute dibangunkan berasaskan hasil usaha gergasi terdahulu. Ia bermula sebag
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>Port JS/ONNX (MobileBERT / XLM-RoBERTa) yang digunakan sebagai bahagian belakang utas pekerja untuk enjin LLMLingua kami.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>Pemampatan token PT-BR — menjadi asas pek bahasa pt-BR kami: pengurangan pleonasme dan pembuangan pengisi yang ditala untuk tatabahasa Portugis Brazil.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>Kemahiran pengekod YAGNI "pembangun kanan yang malas" yang tular — menginspirasikan Gaya Output <b>less-code</b> kami: panduan perubahan terkecil yang berfungsi untuk mengurangkan kod yang _dijana_ (saudara pada paksi output kepada prosa ringkas Caveman).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Gaya respons yang mengutamakan tindakan dan mesra ADHD telah disesuaikan menjadi gaya output ringkas OmniRoute dalam lima bahasa.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Gaya respons yang mengutamakan tindakan dan mesra ADHD telah disesuaikan menjadi gaya output ringkas 67router dalam lima bahasa.</td></tr>
 </table>
 
 ### 🧩 Format padat, penyelidikan token & peralatan peka kod
 
 <table>
-  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia menginspirasikan OmniRoute</th></tr>
+  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia menginspirasikan 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Notasi Objek Berorientasikan Token — model berkolum dengan pengepala diikuti barisnya membentuk peringkat pemadatan berjadual kami.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Format graf padat dan reka bentuk profil generiknya memaklumkan pemadatan berjadual OmniRoute serta format kodek Headroom.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Format graf padat dan reka bentuk profil generiknya memaklumkan pemadatan berjadual 67router serta format kodek Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>Pelaksanaan TypeScript berlesen MIT yang dibenamkan secara langsung dan diperluas sebagai kodek profil generik Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Cache Brotli/SQLite + delta konteks setiap sesi — menginspirasikan enjin <code>session-dedup</code> kami.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Pemadatan output Bash + profil MCP — menginspirasikan disiplin pembatalan pemampatan dan pengurangan manifes alat MCP kami.</td></tr>
@@ -1753,7 +1755,7 @@ OmniRoute dibangunkan berasaskan hasil usaha gergasi terdahulu. Ia bermula sebag
 ### 🧠 Memori & RAG
 
 <table>
-  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan OmniRoute</th></tr>
+  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Lapisan memori universal — model proksinya sebagai sempadan tulis/baca membentuk seni bina memori kami.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Ejen berkeadaan dengan memori berperingkat — mengilhamkan model berperingkat Kawalan & Pemulihan Konteks (CCR) kami.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>Taksonomi ProblemMap yang merangkumi 16 mod kegagalan RAG/LLM berulang — perbendaharaan kata bersama dalam panduan penyelesaian masalah kami.</td></tr>
@@ -1762,15 +1764,15 @@ OmniRoute dibangunkan berasaskan hasil usaha gergasi terdahulu. Ia bermula sebag
 ### 🛰️ Pemeriksaan trafik, MITM & proksi telus
 
 <table>
-  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan OmniRoute</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Pemintasan/analisis MITM terhadap trafik pembantu pengekodan ↔ LLM menjadi asas kepada keperluan awal Pemeriksa Trafik. Empat modul yang diperoleh sebelum ini — penggabungan SSE, penormalan perbualan, penyamaran rahsia dan sanitasi pengepala — telah digantikan dengan pelaksanaan bilik bersih yang bebas berdasarkan piawaian protokol awam. Dua permukaan laluan terus hos (<code>passthrough.ts</code> dan <code>_internal/bypass.cjs</code>) kekal sebagai pelaksanaan dalaman OmniRoute yang dikelaskan secara berasingan; kedua-duanya tidak ditulis semula sebagai sebahagian daripada penggantian tersebut.</td></tr>
+  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan 67router</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Pemintasan/analisis MITM terhadap trafik pembantu pengekodan ↔ LLM menjadi asas kepada keperluan awal Pemeriksa Trafik. Empat modul yang diperoleh sebelum ini — penggabungan SSE, penormalan perbualan, penyamaran rahsia dan sanitasi pengepala — telah digantikan dengan pelaksanaan bilik bersih yang bebas berdasarkan piawaian protokol awam. Dua permukaan laluan terus hos (<code>passthrough.ts</code> dan <code>_internal/bypass.cjs</code>) kekal sebagai pelaksanaan dalaman 67router yang dikelaskan secara berasingan; kedua-duanya tidak ditulis semula sebagai sebahagian daripada penggantian tersebut.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Penghalaan proksi telus bagi setiap proses — mengilhamkan penamatan MITM kami yang selamat ketika ranap, tamat masa melahu soket, atribusi proses <code>/proc</code> dan tangkapan TPROXY.</td></tr>
 </table>
 
 ### 📚 Data model, kebolehcerapan & UI
 
 <table>
-  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan OmniRoute</th></tr>
+  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>Pangkalan data terbuka bagi spesifikasi, harga dan keupayaan model AI — disegerakkan secara natif ke dalam katalog model kami.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>Pustaka graf berasaskan nod yang menggerakkan Studio Pemampatan dan Studio Kombo/Penghalaan masa nyata kami.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>Visualisasi graf aliran kerja langsung LangGraph Studio mengilhamkan paparan lata masa nyata dalam Studio kami.</td></tr>
@@ -1783,19 +1785,19 @@ OmniRoute dibangunkan berasaskan hasil usaha gergasi terdahulu. Ia bermula sebag
 ### 🛡️ Keselamatan
 
 <table>
-  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan OmniRoute</th></tr>
+  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>Senarai pustaka selamat secara lalai yang disusun rapi dan menjadi panduan kepada pilihan keselamatan kami (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Alat pelengkap
 
 <table>
-  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan OmniRoute</th></tr>
+  <tr><th align="left">Projek</th><th align="center">⭐</th><th align="left">Cara ia mengilhamkan 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Mengilhamkan penyahduplikasian permintaan, sandaran kecemasan tanpa kos, strategi Auto-Combo boleh pasang dan pengelasan niat berbilang bahasa.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Pemetaan semula modelnya yang mengambil kira akaun, pengesahan laluan boleh laku dan gelagat label pelan menjadi asas kepada masa jalan Antigravity OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Format kira detik tetapan semula kuotanya yang padat mengilhamkan paparan had penyedia yang sepadan dalam OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Penyepaduan ACP-nya mengilhamkan pengesanan automatik OmniRoute terhadap ejen CLI yang dipasang.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Mengenal pasti permukaan kuota Grok Build; OmniRoute kemudiannya mengesahkan dan membetulkan format wayar langsung secara bebas.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Pemetaan semula modelnya yang mengambil kira akaun, pengesahan laluan boleh laku dan gelagat label pelan menjadi asas kepada masa jalan Antigravity 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Format kira detik tetapan semula kuotanya yang padat mengilhamkan paparan had penyedia yang sepadan dalam 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Penyepaduan ACP-nya mengilhamkan pengesanan automatik 67router terhadap ejen CLI yang dipasang.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Mengenal pasti permukaan kuota Grok Build; 67router kemudiannya mengesahkan dan membetulkan format wayar langsung secara bebas.</td></tr>
 </table>
 
 ## 📄 Lesen
@@ -1808,7 +1810,7 @@ Lesen MIT - lihat [LICENSE](LICENSE) untuk butiran.
 
 **[⬆ Kembali ke atas](#-omniroute)** · Dibina dengan ❤️ untuk komuniti AI sumber terbuka.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Lesen MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · Lesen MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions didayakan untuk soal jawab komuniti -->

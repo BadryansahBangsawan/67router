@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ခေါ်ဆိုမှုမှတ်တမ်းများကို ပြင်ပ analytics store တစ်ခုသို့ စဉ်ဆက်မပြတ်၊ တိုးပွားပုံစံဖြင့် export လုပ်ခြင်း။
+67router ခေါ်ဆိုမှုမှတ်တမ်းများကို ပြင်ပ analytics store တစ်ခုသို့ စဉ်ဆက်မပြတ်၊ တိုးပွားပုံစံဖြင့် export လုပ်ခြင်း။
 
 Logs dashboard tab သည် request history ကို SQLite (`call_logs`) တွင် သိမ်းဆည်းထားပြီး၊ ၎င်းကို
 rotation နှင့် retention တို့ဖြင့် ကန့်သတ်ထားသည်။ Log export သည် တူညီသော record အစုကို သတ်မှတ်ထားသည့် အချိန်ဇယားအတိုင်း

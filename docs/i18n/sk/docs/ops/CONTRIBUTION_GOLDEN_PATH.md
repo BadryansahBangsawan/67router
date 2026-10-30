@@ -113,7 +113,7 @@ alebo zdokumentovanú manuálnu kontrolu primeranú danej zmene.
 - Katalógy CLI sa nachádzajú samostatne v `bin/cli/locales/`.
 - Zástupné symboly a značky ICU zachovajte presne. Neprekladajte názvy produktov/poskytovateľov/modelov,
   názvy protokolov a hlavičiek, príkazy, identifikátory kódu/JSON, adresy URL, premenné prostredia ani
-  chránené výrazy, ako sú `OmniRoute`, `OAuth`, `MCP` a `A2A`. Aktuálny zdrojový zoznam je
+  chránené výrazy, ako sú `67router`, `OAuth`, `MCP` a `A2A`. Aktuálny zdrojový zoznam je
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Cielený cyklus**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # opätovné použitie t
 - **Vrátenie späť.** `run` znova overí nasadený slot a pri zlyhaní
   tejto kontroly znovu vymení `current` a `previous`. Kandidát, ktorý neprejde prvým overením, sa nikdy nenasadí.
 
-Všetko sa zapisuje do adresára `_artifacts/candidate/`, ktorý git ignoruje; existujúca inštalácia OmniRoute
+Všetko sa zapisuje do adresára `_artifacts/candidate/`, ktorý git ignoruje; existujúca inštalácia 67router
 ani jej dátový adresár sa nikdy nemenia. Nasadené CLI sa nachádza v
 `_artifacts/candidate/current/prefix/bin/omniroute`; pri jeho použití ho spustite s vlastným `DATA_DIR`.
 Návratové kódy: `0` úspech, `1` neúspešné overenie alebo nasadenie, `2` chyba použitia alebo chýbajúce zostavenie.

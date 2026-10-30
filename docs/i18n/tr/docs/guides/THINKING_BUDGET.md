@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Kaynak:** `open-sse/services/thinkingBudget.ts`
 
-Düşünme Bütçesi, OmniRoute'un sağlayıcılara giden istemci düşünme/akıl yürütme parametrelerini **yeniden yazıp yazmayacağını** kontrol eder. Sıkıştırmayı, yönlendirmeyi veya istem önbelleğini açıp kapatmaz.
+Düşünme Bütçesi, 67router'un sağlayıcılara giden istemci düşünme/akıl yürütme parametrelerini **yeniden yazıp yazmayacağını** kontrol eder. Sıkıştırmayı, yönlendirmeyi veya istem önbelleğini açıp kapatmaz.
 
 ## Modlar
 
-| Mod                            | OmniRoute'un yaptığı                                                                                                       | Ne zaman kullanılmalı                                                                                                                                                                                  |
+| Mod                            | 67router'un yaptığı                                                                                                        | Ne zaman kullanılmalı                                                                                                                                                                                  |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **`passthrough`** (varsayılan) | İstemci alanlarını olduğu gibi bırakır (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` vb.). | **Codex / Desktop / çaba düzeyini ve akıl yürütme özetlerini kontrol etmesi gereken herhangi bir istemci.** İstemci `reasoning.summary` istediğinde görünür düşünme panelleri için gereklidir.         |
 | **`auto`**                     | Yukarı akışa göndermeden önce istek gövdesindeki tüm düşünme/akıl yürütme alanlarını **kaldırır**.                         | Yalnızca varsayılanları **sağlayıcının** belirlemesini özellikle istediğiniz ve istemci kontrollü düşünmeye ihtiyaç duymadığınız durumlarda kullanın. “Düşünmeyi otomatik göster” anlamına **gelmez**. |
@@ -38,7 +38,7 @@ Bir istemci (ör. Codex Desktop) `reasoning: { effort: "ultra", summary: "detail
 | **Birleşik yönlendirme / geri dönüşler**             | Ayrıdır. Etkilenmez.                                                                                                                                          |
 | **API anahtarı token sınırları / maliyet bütçeleri** | Ayrıdır. Etkilenmez.                                                                                                                                          |
 | **Akıl yürütme yeniden oynatma önbelleği**           | Katı sağlayıcılar (DeepSeek, Kimi, Qwen-thinking, …) için çok turlu yeniden ekleme mekanizmasıdır. Desktop'taki “düşünmeyi göster” özelliğiyle aynı değildir. |
-| **`encrypted_content` şifresini çözme**              | **İmkânsızdır.** OpenAI/Codex özel akıl yürütme blob'ları opaktır. OmniRoute bunların şifresini asla çözmez (#7095 / #7176 / #7304).                          |
+| **`encrypted_content` şifresini çözme**              | **İmkânsızdır.** OpenAI/Codex özel akıl yürütme blob'ları opaktır. 67router bunların şifresini asla çözmez (#7095 / #7176 / #7304).                           |
 
 ## Görünür düşünme (Codex / Responses istemcileri)
 
@@ -51,7 +51,7 @@ Bir istemcinin düşünme metnini göstermesi için aşağıdakilerin **tümün�
 Yalnızca “şifrelenmiş özel akıl yürütme” alıyorsanız:
 
 - mod **`auto`** idi (istemci isteği kaldırıldı) veya
-- üst sağlayıcı özet metni olmadan `encrypted_content` döndürdü (sağlayıcı kısıtlaması; OmniRoute yalnızca bir yer tutucu gösterebilir, düz metni gösteremez).
+- üst sağlayıcı özet metni olmadan `encrypted_content` döndürdü (sağlayıcı kısıtlaması; 67router yalnızca bir yer tutucu gösterebilir, düz metni gösteremez).
 
 ## API örnekleri
 
@@ -71,7 +71,7 @@ curl -sS -X PUT https://localhost:20128/api/settings/thinking-budget \
 
 ### Kalıcılık / yeniden başlatma
 
-Değer, `thinkingBudget` ayarlar anahtarı altında saklanır ve işlem başlangıcında yüklenir (`hydrateThinkingBudgetConfig`). DB veya API dışındaki bazı yollar üzerinden değişiklik yaptıktan sonra, bellekteki singleton'ın diskle eşleşmesi için **OmniRoute işlemini yeniden başlatın**.
+Değer, `thinkingBudget` ayarlar anahtarı altında saklanır ve işlem başlangıcında yüklenir (`hydrateThinkingBudgetConfig`). DB veya API dışındaki bazı yollar üzerinden değişiklik yaptıktan sonra, bellekteki singleton'ın diskle eşleşmesi için **67router işlemini yeniden başlatın**.
 
 ## Operatör kontrol listesi
 

@@ -4,13 +4,13 @@
 
 ---
 
-**Uhariri wa Muktadha** Uliokabidhiwa ni kipengele cha usimamizi wa muktadha kinachopatikana kwa Claude pekee. Tofauti na injini za ndani za OmniRoute za
+**Uhariri wa Muktadha** Uliokabidhiwa ni kipengele cha usimamizi wa muktadha kinachopatikana kwa Claude pekee. Tofauti na injini za ndani za 67router za
 mbano (Caveman, RTK, LLMLingua, mifumo iliyopangwa kwa safu) — ambazo huandika upya sehemu ya ombi
 _kabla_ halijaondoka kwenye proksi — Uhariri wa Muktadha huiomba **provider** kuondoa vizuizi vya zamani vya
-matumizi ya zana / matokeo ya zana kutoka kwenye dirisha lake la muktadha linaloendelea. OmniRoute huambatisha tu kigezo cha mwili
+matumizi ya zana / matokeo ya zana kutoka kwenye dirisha lake la muktadha linaloendelea. 67router huambatisha tu kigezo cha mwili
 (`context_management.edits[]`); Claude hufanya uondoaji halisi kwa kutumia tokenizer yake mwenyewe.
 
-Huu kwa asili ni uwezo uliokabidhiwa: watoa huduma wengine hukataa kigezo hicho, kwa hivyo OmniRoute huuwekea upeo
+Huu kwa asili ni uwezo uliokabidhiwa: watoa huduma wengine hukataa kigezo hicho, kwa hivyo 67router huuwekea upeo
 madhubuti kwa Claude na relays zinazooana na Claude Code.
 
 Chanzo cha ukweli: `open-sse/config/contextEditing.ts` (vitambulisho vya mikakati, uingizaji kwenye mwili, uchukuaji wa
@@ -19,7 +19,7 @@ telemetria), `open-sse/executors/base.ts` (kizuizi cha uingizaji + mbinu mbadala
 
 ## Kile ambacho `clear_tool_uses` hufanya
 
-OmniRoute huingiza uhariri mmoja kwenye mwili wa Anthropic Messages unaotumwa:
+67router huingiza uhariri mmoja kwenye mwili wa Anthropic Messages unaotumwa:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute huingiza uhariri mmoja kwenye mwili wa Anthropic Messages unaotumwa:
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Beta hutangazwa kupitia kichwa cha `anthropic-beta: context-management-2025-06-27`, ambacho
-OmniRoute tayari hutuma kwenye maombi ya Claude.
+67router tayari hutuma kwenye maombi ya Claude.
 
 Uingizaji hufanywa na `applyContextEditingToBody()` na ni **idempotent**: ikiwa uhariri wa `clear_tool_uses`
 tayari upo kwenye mwili (umeongezwa na mwito wa awali au umetolewa na mteja), mwili
-huachwa jinsi ulivyo. Ikiwa uhariri wa `clear_thinking_20251015` pia upo, OmniRoute hupanga kwa uthabiti uhariri wa
+huachwa jinsi ulivyo. Ikiwa uhariri wa `clear_thinking_20251015` pia upo, 67router hupanga kwa uthabiti uhariri wa
 `clear_thinking` uwe mwanzo, kwa sababu Anthropic inahitaji `clear_thinking` itangulie
 `clear_tool_uses` katika safu ya `edits[]`.
 
@@ -145,7 +145,7 @@ Claude halisi hubeba beta katika `ANTHROPIC_BETA_BASE` na haiingii kwenye njia h
 
 ## Telemetria ya `applied_edits`
 
-Baada ya response ya Claude, OmniRoute hurekodi kiasi cha muktadha ambacho mtoa huduma aliondoa. Hii
+Baada ya response ya Claude, 67router hurekodi kiasi cha muktadha ambacho mtoa huduma aliondoa. Hii
 **haitiririshwi** — hutolewa kutoka kwenye body ya response isiyotiririshwa, kwa kadiri inavyowezekana, na kamwe
 haiathiri response (hitilafu za telemetria hupuuzwa).
 
@@ -173,16 +173,16 @@ lebo ya injini ya `context-editing`, na unaweza kutofautishwa na akiba za RTK/Ca
 
 ## Uhusiano na injini za ndani za ukandamizaji
 
-| Kipengele             | Injini za ndani (Caveman / RTK / LLMLingua / stacked)     | Uhariri wa Muktadha Uliokabidhiwa                          |
-| --------------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
-| Mahali inapoendeshwa  | Ndani ya OmniRoute, kabla ombi halijaondoka kwenye proksi | Ndani ya mtoa huduma (Claude), upande wa seva              |
-| Inachohariri          | Maandishi ya kidokezo / muktadha / matokeo ya zana        | Bloku za zamani za matumizi ya zana / matokeo ya zana      |
-| Wigo wa watoa huduma  | Watoa huduma wote                                         | `claude` + `anthropic-compatible-cc-*` pekee               |
-| Kigeuzi               | Mipangilio ya hali ya ukandamizaji                        | `contextEditing.enabled`                                   |
-| Hali ya hitilafu      | Endelea inaposhindikana (maandishi asili)                 | Njia mbadala ya 400: ondoa parameta, jaribu tena mara moja |
-| Telemetria ya uokoaji | `engine: <engine id>`                                     | `engine: "context-editing"`                                |
+| Kipengele             | Injini za ndani (Caveman / RTK / LLMLingua / stacked)    | Uhariri wa Muktadha Uliokabidhiwa                          |
+| --------------------- | -------------------------------------------------------- | ---------------------------------------------------------- |
+| Mahali inapoendeshwa  | Ndani ya 67router, kabla ombi halijaondoka kwenye proksi | Ndani ya mtoa huduma (Claude), upande wa seva              |
+| Inachohariri          | Maandishi ya kidokezo / muktadha / matokeo ya zana       | Bloku za zamani za matumizi ya zana / matokeo ya zana      |
+| Wigo wa watoa huduma  | Watoa huduma wote                                        | `claude` + `anthropic-compatible-cc-*` pekee               |
+| Kigeuzi               | Mipangilio ya hali ya ukandamizaji                       | `contextEditing.enabled`                                   |
+| Hali ya hitilafu      | Endelea inaposhindikana (maandishi asili)                | Njia mbadala ya 400: ondoa parameta, jaribu tena mara moja |
+| Telemetria ya uokoaji | `engine: <engine id>`                                    | `engine: "context-editing"`                                |
 
-Mbinu hizi mbili zinakamilishana: injini za ndani hukandamiza baiti ambazo OmniRoute hutuma; Uhariri wa Muktadha humruhusu
+Mbinu hizi mbili zinakamilishana: injini za ndani hukandamiza baiti ambazo 67router hutuma; Uhariri wa Muktadha humruhusu
 Claude kupunguza muktadha unaoendelea katika zamu mbalimbali. Zinaweza kuwezeshwa pamoja.
 
 ## Angalia Pia

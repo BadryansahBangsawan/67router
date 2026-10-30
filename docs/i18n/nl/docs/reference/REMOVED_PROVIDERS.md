@@ -4,7 +4,7 @@
 
 ---
 
-Sommige diensten werden in OmniRoute geïntegreerd en later verwijderd omdat de mensen die ze
+Sommige diensten werden in 67router geïntegreerd en later verwijderd omdat de mensen die ze
 beheren daarom vroegen. Deze pagina is het permanente register van die verwijderingen. Het enige
 doel ervan is te voorkomen dat ze per ongeluk terugkeren: een bijdrager die een oude fork, een
 gecachete npm-tarball, een gearchiveerd issue of een verzoek om "provider X te herstellen" vindt,
@@ -19,10 +19,10 @@ toestemming worden gelinkt.
 ## Beleid
 
 1. **Een verwijderingsverzoek van een dienstbeheerder wordt gehonoreerd, niet bediscussieerd.**
-   OmniRoute is niet gelieerd aan enige bovenliggende dienst. Wanneer de beheerder van een dienst
+   67router is niet gelieerd aan enige bovenliggende dienst. Wanneer de beheerder van een dienst
    vraagt om de integratie te verwijderen, wordt deze verwijderd, ongeacht of de integratie een
    officiële API gebruikte.
-2. **"Verwijderd" betekent van elk oppervlak dat OmniRoute beheert.** Executor, registervermelding,
+2. **"Verwijderd" betekent van elk oppervlak dat 67router beheert.** Executor, registervermelding,
    provider-id en -alias, modellenlijst, endpoints, omgevingsvariabelen, pictogram, dashboardkaarten,
    de gegenereerde providerreferentie, `FREE_TIERS.md`, de omgevingsreferentie, aantallen in de
    README, `llm.txt`-spiegels, specifieke tests en golden snapshots, codecommentaar, CHANGELOG-punten
@@ -35,7 +35,7 @@ toestemming worden gelinkt.
    Dat omvat het opnieuw toevoegen van de id of alias aan een providercatalogus, het toevoegen van
    de domeinen aan een executor, het accepteren van een PR van een bijdrager die deze "herstelt", het
    toevoegen ervan aan de catalogus met gratis modellen of het documenteren van een handmatige manier
-   om deze via OmniRoute te bereiken. Sluit zulke PR's en issues met een link naar deze pagina.
+   om deze via 67router te bereiken. Sluit zulke PR's en issues met een link naar deze pagina.
 4. **Houd de vermelding minimaal.** Leg alleen vast wat een reviewer nodig heeft om een
    herintroductie te herkennen: identifiers, domeinen, datums en de pull request waarmee de
    verwijdering werd uitgevoerd. Beschrijf niet hoe de integratie werkte.
@@ -51,7 +51,7 @@ toestemming worden gelinkt.
 | 2026-08-12    | `puter`           | `pu`     | `puter.com`                                                           | Eigenaar van Puter (Nariman Jelveh)                                                                                                                                                       | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Provider met API-sleutel. Migratie `152_remove_puter_provider.sql` ruimt opgeslagen configuratie op.                                                                                                                                                                                                                                                                                                                                                                                                |
 | 2026-09-02    | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                               | De beheerder van de dienst (e-mail aan ondersteuning)                                                                                                                                     | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Provider zonder sleutel. Schriftelijk verzoek ontvangen op 2026-08-30. Specifieke issues en discussie verwijderd, titels van PR's gewijzigd.                                                                                                                                                                                                                                                                                                                                                        |
 | 2026-09-21    | `gemini-business` | `gembiz` | `business.gemini.google`                                              | Besluit van de projecteigenaar (issue [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                                                   | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Webprovider op basis van cookies. Google heeft het endpoint `BardFrontendService/StreamGenerate` waarop de executor was gericht buiten gebruik gesteld; de vervanging (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT opgestart vanuit `__Secure-C_SES`/`csesidx`) kan niet worden gebouwd of gevalideerd zonder een actief Gemini Enterprise/Workspace-account, waarover het project niet beschikt. Buiten gebruik gesteld in plaats van onbevestigd te worden herschreven. |
-| 2026-09-21    | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                      | Besluit van de projecteigenaar (`#14224`)                                                                                                                                                 | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Provider met cookie-authenticatie, geen verwijdering op verzoek van de beheerder. `studio-api.suno.ai` was opgeschort (503); de actieve host vereist een Clerk JWT-uitwisseling plus een betaalde afhankelijkheid voor het oplossen van hCaptcha, die OmniRoute niet wilde toevoegen voor één muziekprovider. `kie/suno-v4.0` en `kie/suno-v3.5` (gehost door kie.ai) worden niet beïnvloed en blijven ondersteund.                                                                                 |
+| 2026-09-21    | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                      | Besluit van de projecteigenaar (`#14224`)                                                                                                                                                 | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Provider met cookie-authenticatie, geen verwijdering op verzoek van de beheerder. `studio-api.suno.ai` was opgeschort (503); de actieve host vereist een Clerk JWT-uitwisseling plus een betaalde afhankelijkheid voor het oplossen van hCaptcha, die 67router niet wilde toevoegen voor één muziekprovider. `kie/suno-v4.0` en `kie/suno-v3.5` (gehost door kie.ai) worden niet beïnvloed en blijven ondersteund.                                                                                  |
 | 2026-10-10    | `opencode`        | `oc`     | `opencode.ai/zen/v1` (gratis niveau; host gedeeld met `opencode-zen`) | Preventieve verwijdering (besluit van de projecteigenaar), ter eerbiediging van het openbare verwijderingsverzoek van de OpenCode-beheerder aan het upstream 9router-project (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Alleen de sleutelloze provider "OpenCode Free" is verwijderd. Geauthenticeerde `opencode-zen` en `opencode-go`, alle Zen-catalogusmodellen en hun aanvraagcontracten, de OpenCode-clientintegraties en `@omniroute/opencode-plugin*` blijven behouden. Migratie `207_remove_opencode_free_provider.sql` verplaatst verouderde verbindingen met een API-sleutel naar Zen en ruimt sleutelloze configuratie op.                                                                                       |
 
 ## Een vermelding toevoegen
@@ -66,5 +66,5 @@ Wanneer er een nieuw verwijderingsverzoek binnenkomt:
    API-sleutelprovider met opgeslagen verbindingen (voeg een migratie toe).
 3. Voeg in dezelfde PR één rij toe aan de bovenstaande tabel en voeg de identificatiecodes toe aan
    `tests/unit/removed-providers-blocklist.test.ts`.
-4. Antwoord de exploitant zodra de PR is samengevoegd en vermeld wat er is verwijderd en wat OmniRoute
+4. Antwoord de exploitant zodra de PR is samengevoegd en vermeld wat er is verwijderd en wat 67router
    niet kan wijzigen (reeds gepubliceerde npm- en Docker-versies, git-geschiedenis en forks van derden).

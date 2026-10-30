@@ -9,7 +9,7 @@
 > liema rotot u mogħdijiet ta' rispons jilħqu l-hooks, il-headers magħquda tad-diżattivazzjoni (#16412), il-modalità block tal-injezzjoni bħala limitu obbligatorju (#16413), u x'jara rispons qabel il-post-call)
 
 Il-guardrails jinfurzaw trasformazzjonijiet ta' sigurtà, politika u kontenut fil-limitu
-bejn OmniRoute u l-fornituri upstream. Kull guardrail jista' jispezzjona (u
+bejn 67router u l-fornituri upstream. Kull guardrail jista' jispezzjona (u
 b'mod opzjonali jirrifjuta, jittrasforma, jew jannota) il-payloads tat-talbiet
 (`preCall`) u r-risponsi upstream (`postCall`).
 
@@ -114,7 +114,7 @@ Meta ċ-ċavetta tal-API ta' min jagħmel it-talba tirrestrinġi `allowedConnect
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), il-bridge jagħżel biss
 mudelli għar-ridirezzjonar u għad-deskrizzjoni li ċ-ċavetta tista' tuża, fuq konnessjonijiet li ċ-ċavetta tista'
 tuża. It-talba għad-deskrizzjoni mbagħad dejjem tgħaddi mill-awto-linja ta'
-OmniRoute bl-header `x-omniroute-self-loop-key-id`, sabiex it-talba taċ-chat riċeventi
+67router bl-header `x-omniroute-self-loop-key-id`, sabiex it-talba taċ-chat riċeventi
 terġa' tinforza l-politika ta' dik iċ-ċavetta għall-konnessjonijiet u l-mudelli. `enforceApiKeyPolicy()`
 jirrispetta dak l-header biss flimkien mal-bearer tal-awto-linja, għalhekk jista' biss
 jirrestrinġi l-aċċess, u id li ma jiġix solvut jiġi rrifjutat.
@@ -142,7 +142,7 @@ It-teħid ta' kampjuni b'dettall baxx inaqqas il-preċiżjoni tal-OCR eżattamen
 tat-test li jitlob dan il-prompt, għalhekk it-talba tad-deskrizzjoni stess dejjem titlob livell għoli ta'
 dettall irrispettivament mil-livell ta' dettall li ntuża fit-talba oriġinali deħlin. Dan
 jaffettwa biss il-body intern tat-talba tad-deskrizzjoni; ma jbiddilx kif
-OmniRoute jgħaddi `image_url.detail` tal-utent fit-talba primarja —
+67router jgħaddi `image_url.detail` tal-utent fit-talba primarja —
 dak il-valur predefinit jiġi applikat separatament, u biss għal klijenti OpenCode identifikati, f'
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`). Il-fergħa
 tal-format ta' trażmissjoni Anthropic tal-awto-linja tad-deskrizzjoni ma għandhiex field `detail`
@@ -203,7 +203,7 @@ Il-paġna dedikata tad-dashboard hija `/dashboard/settings/modality-bridge`. It-
 
 Il-card Vision Bridge ta' qabel taħt is-settings tal-AI hija link ta' kompatibilità lejn il-paġna l-ġdida; m'għadhiex tagħmel kopja sekondarja tal-formola. Media Providers jirrelata wkoll il-workflows Image-to-Text u Speech-to-Text mat-tabs korrispondenti ta' Modality Bridge mingħajr ma tneħħi l-playground Speech-to-Text eżistenti.
 
-**Bypass tal-ammissjoni self-loop:** meta s-sejħa describe tgħaddi mis-self-loop `/v1` ta' OmniRoute nnifsu (mudell ta' provider mhux standard), is-sub-rikjesta tibgħat `x-omniroute-admission-bypass: internal` u tkun awtentikata bil-kredenzjal self-loop riżolt — is-sentinel lokali `sk_omniroute` fil-modalità lokali, jew iċ-ċavetta env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` konfigurata mill-operatur (#1350) sabiex deployments b'`REQUIRE_API_KEY=true` xorta jistgħu jimxu s-sejħa describe. Il-bypass jiġi unurrat biss għal dawk il-kredenzjali eżatti, sabiex klijenti esterni ma jistgħux jużaw il-header biex jaqbeżu l-ammissjoni.
+**Bypass tal-ammissjoni self-loop:** meta s-sejħa describe tgħaddi mis-self-loop `/v1` ta' 67router nnifsu (mudell ta' provider mhux standard), is-sub-rikjesta tibgħat `x-omniroute-admission-bypass: internal` u tkun awtentikata bil-kredenzjal self-loop riżolt — is-sentinel lokali `sk_omniroute` fil-modalità lokali, jew iċ-ċavetta env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` konfigurata mill-operatur (#1350) sabiex deployments b'`REQUIRE_API_KEY=true` xorta jistgħu jimxu s-sejħa describe. Il-bypass jiġi unurrat biss għal dawk il-kredenzjali eżatti, sabiex klijenti esterni ma jistgħux jużaw il-header biex jaqbeżu l-ammissjoni.
 
 Id-defaults leġġatarji jinsabu f'`src/shared/constants/visionBridgeDefaults.ts`; id-defaults ġodda tal-modalità/task-aware/cache u r-resolver tas-settings jinsabu f'`src/shared/constants/modalityBridgeDefaults.ts`. Il-guardrail jesponi għażla tal-kostruttur `deps` sabiex it-tests jistgħu jinġettaw implementazzjonijiet foloz ta' `getSettings` u `callVisionModel`.
 
@@ -335,7 +335,7 @@ minn dawn ir-riżultati.
 
 Kull frame huwa limitat għal 4 MiB, il-frames mhux ipproċessati kollha flimkien għal 23 MiB, u
 r-rispons serjalizzat tal-broker għal 32 MiB. Direttorju temporanju privat jitneħħa
-f’`finally`. OmniRoute ma jinkludix FFmpeg u ma jaċċettax mogħdija personalizzata
+f’`finally`. 67router ma jinkludix FFmpeg u ma jaċċettax mogħdija personalizzata
 għall-eżekutibbli. Qabel ma jiġġenera l-captions, il-pont japplika pass konservattiv
 ta’ deduplikazzjoni viżiva: kull JPEG jitnaqqas għal buffer grayscale ta’ 16×16 u
 jitqabbel biss mal-aħħar frame miżmum. Għal baġit mitlub ta’ captions
@@ -377,7 +377,7 @@ appoġġjata meta diġà jkollu test allinjat. Kull cue għandu jinkludi `text`,
 finit `start`/`end` fi ħdan id-durata mistħarrġa, u `source` minn lista permessa
 (`client`, `embedded`, jew `audio-bridge`); `confidence` għandu valur predefinit ta’
 `1` u għandu jibqa’ bejn `0` u `1`. Cues duplikati eżattament jingħaqdu f’wieħed.
-OmniRoute qatt ma jibda traskrizzjoni minn din il-metadata: cues validati jiġu
+67router qatt ma jibda traskrizzjoni minn din il-metadata: cues validati jiġu
 kkupjati fir-riżultat deskritt bis-sors, il-kunfidenza, u l-intervall tagħhom, u
 jiġu rrappreżentati bħala osservazzjonijiet mhux fdati flimkien mal-captions tal-frames. Test invalidu,
 barra mill-medda, jew mingħajr provenjenza jiġi rrifjutat minflok ma jitħallat fil-
@@ -908,7 +908,7 @@ manwali) għandu żewġ jobs:
   preċedenti kollha…", jailbreaks stil DAN) jasserixxi li r-rispons għandu
   `error.code === "SECURITY_001"`, jiġifieri l-guard verament irrifjuta t-talba.
 - **`garak` (konsultattiv)** — imexxi garak `--probes promptinject,dan,leakreplay`
-  kontra istanza lokali ta' OmniRoute (`http://localhost:20128/v1`). Kondizzjonat fuq
+  kontra istanza lokali ta' 67router (`http://localhost:20128/v1`). Kondizzjonat fuq
   secret tal-provider (`PROMPTFOO_PROVIDER_KEY`); jaqbeż b'mod nadif u għandu s-suffiss
   `|| true`, għalhekk jirrapporta mingħajr ma jfallixxi l-CI.
 

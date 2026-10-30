@@ -4,17 +4,17 @@
 
 ---
 
-Zwei Möglichkeiten, Cursor ohne IDE-Sitzung hinter OmniRoute zu verwenden:
+Zwei Möglichkeiten, Cursor ohne IDE-Sitzung hinter 67router zu verwenden:
 
 1. **`cursor-api`-Provider** (Karte „Cursor API“, Alias `cua`): ein API-Schlüssel-
    Provider, der einen Cursor-Benutzer-API-Schlüssel enthält (`crsr_…`, generiert unter
-   `https://cursor.com/dashboard/api`). Jeder OmniRoute-Client kann dann
+   `https://cursor.com/dashboard/api`). Jeder 67router-Client kann dann
    über `/v1/chat/completions` als `cursor-api/<model>` oder
    `cua/<model>` auf Cursor-Modelle zugreifen, einschließlich der üblichen Kontingent-,
    Fallback- und Protokollierungsebenen. Der IDE-Provider
    (`cursor`, OAuth-/IDE-Sitzung) bleibt unverändert.
-2. **Cursor-CLI-Passthrough**: Richten Sie die Cursor-CLI (`agent`) auf OmniRoute,
-   sodass jeder RPC-Aufruf der CLI mit einem OmniRoute-API-Schlüssel authentifiziert,
+2. **Cursor-CLI-Passthrough**: Richten Sie die Cursor-CLI (`agent`) auf 67router,
+   sodass jeder RPC-Aufruf der CLI mit einem 67router-API-Schlüssel authentifiziert,
    mit den Anmeldedaten einer `cursor-api`-Verbindung an Cursor weitergeleitet und auf
    der Protokollseite aufgezeichnet wird.
 
@@ -60,7 +60,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 Hinweise:
 
 - Die Modellauflistung für `cursor-api` stammt aus der statischen Cursor-Registry (derselben
-  Liste, auf die der IDE-Provider als Fallback zurückgreift); auf dem OmniRoute-Host muss
+  Liste, auf die der IDE-Provider als Fallback zurückgreift); auf dem 67router-Host muss
   kein `cursor-agent` installiert sein.
 - `POST /api/providers/{id}/refresh-cursor` ist ausschließlich für den `cursor`-IDE-Provider
   vorgesehen; `cursor-api`-Verbindungen verfügen über keine zu erneuernde IDE-Sitzung.
@@ -69,7 +69,7 @@ Hinweise:
 
 Für `cursor` / `cu` und `cursor-api` / `cua` lässt der gemeinsam verwendete Claude-Aufwandsnormalisierer
 die angeforderte Modell-ID unverändert. Cursor kann ein Suffix wie
-`-low` als Teil einer tatsächlichen Modell-ID veröffentlichen, statt als OmniRoute-Aufwandsalias.
+`-low` als Teil einer tatsächlichen Modell-ID veröffentlichen, statt als 67router-Aufwandsalias.
 Der Cursor-Executor behält eine exakte Übereinstimmung mit dem Live-Katalog bei; wenn keine
 Übereinstimmung vorliegt, übernimmt sein bestehender Modell-Resolver den Fallback vom Suffix
 zum Parameter.
@@ -85,19 +85,19 @@ Route: `src/app/api/cursor-cli/[...path]/route.ts` →
 `src/shared/constants/publicApiRoutes.ts` registriert, da der Handler seine
 eigene Authentifizierung durchsetzt:
 
-| Pfad                                                                                                                          | Von der CLI erwartete Authentifizierung | Verhalten von OmniRoute                                                                                                                                                                              |
+| Pfad                                                                                                                          | Von der CLI erwartete Authentifizierung | Verhalten von 67router                                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <OmniRoute-API-Schlüssel>`      | Validiert den Schlüssel, stellt ein 1 Stunde gültiges HS256-JWT aus (signiert mit `JWT_SECRET`) und gibt es zurück                                                                                   |
+| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <67router-API-Schlüssel>`       | Validiert den Schlüssel, stellt ein 1 Stunde gültiges HS256-JWT aus (signiert mit `JWT_SECRET`) und gibt es zurück                                                                                   |
 | jeder andere Pfad (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <dieses JWT>`                   | Überprüft Aussteller, Zielgruppe und Ablaufzeit, wählt eine aktive `cursor-api`-Verbindung aus, ersetzt den Authorization-Header durch das ausgetauschte Cursor-Token und streamt die Antwort zurück |
 
 Die CLI dekodiert `exp` aus jedem empfangenen Token. Wird ihr ein opakes
 Token übergeben, führt sie daher vor fast jeder Anfrage einen erneuten Austausch
 durch; das ausgestellte JWT verhindert dies. Bei einer 401-Antwort von
-OmniRoute führt die CLI den Austausch erneut durch.
+67router führt die CLI den Austausch erneut durch.
 
 ### Einrichtung
 
-1. Erstellen Sie einen OmniRoute-API-Schlüssel (Dashboard → API-Schlüssel) und
+1. Erstellen Sie einen 67router-API-Schlüssel (Dashboard → API-Schlüssel) und
    eine `cursor-api`-Verbindung.
 2. Konfigurieren Sie die CLI so, dass sie HTTP/1.1 für den Agenten-Stream
    verwendet. In `~/.cursor/cli-config.json`:
@@ -110,7 +110,7 @@ OmniRoute führt die CLI den Austausch erneut durch.
    einem separat konfigurierten Agentenhost, und nur die RPCs der
    Steuerungsebene werden über den Endpunkt geleitet.
 
-3. Führen Sie die CLI gegen OmniRoute aus:
+3. Führen Sie die CLI gegen 67router aus:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -120,18 +120,18 @@ OmniRoute führt die CLI den Austausch erneut durch.
 
 Jeder Hop erscheint in den Protokollen mit dem Anbieter `cursor-api`, dem
 Anfragetyp `cursor-cli` und dem Pfad `/api/cursor-cli/<rpc>` und wird dem
-OmniRoute-API-Schlüssel sowie der Verbindung zugeordnet, die ihn verarbeitet
+67router-API-Schlüssel sowie der Verbindung zugeordnet, die ihn verarbeitet
 hat.
 
 ### Fehlerszenarien
 
-| Situation                                                  | Antwort an die CLI                                                 |
-| ---------------------------------------------------------- | ------------------------------------------------------------------ |
-| Unbekannter OmniRoute-Schlüssel und `REQUIRE_API_KEY=true` | 401 `unauthenticated` beim Austausch                               |
-| `REQUIRE_API_KEY=false`                                    | anonyme Sitzung (entspricht dem Verhalten von `/v1/*`)             |
-| Abgelaufenes / fremdes / manipuliertes Sitzungs-JWT        | 401, die CLI führt den Austausch erneut durch                      |
-| OmniRoute-API-Schlüssel nach dem Austausch widerrufen      | 401 beim nächsten RPC                                              |
-| Keine aktive `cursor-api`-Verbindung                       | 503 `unavailable`                                                  |
-| Cursor lehnt den Schlüssel der Verbindung ab               | 401 `unauthenticated`, zwischengespeicherte Sitzung wird verworfen |
-| Upstream nicht erreichbar                                  | 502 `unavailable` (bereinigte Meldung)                             |
-| `JWT_SECRET` nicht gesetzt                                 | 503 beim Austausch                                                 |
+| Situation                                                 | Antwort an die CLI                                                 |
+| --------------------------------------------------------- | ------------------------------------------------------------------ |
+| Unbekannter 67router-Schlüssel und `REQUIRE_API_KEY=true` | 401 `unauthenticated` beim Austausch                               |
+| `REQUIRE_API_KEY=false`                                   | anonyme Sitzung (entspricht dem Verhalten von `/v1/*`)             |
+| Abgelaufenes / fremdes / manipuliertes Sitzungs-JWT       | 401, die CLI führt den Austausch erneut durch                      |
+| 67router-API-Schlüssel nach dem Austausch widerrufen      | 401 beim nächsten RPC                                              |
+| Keine aktive `cursor-api`-Verbindung                      | 503 `unavailable`                                                  |
+| Cursor lehnt den Schlüssel der Verbindung ab              | 401 `unauthenticated`, zwischengespeicherte Sitzung wird verworfen |
+| Upstream nicht erreichbar                                 | 502 `unavailable` (bereinigte Meldung)                             |
+| `JWT_SECRET` nicht gesetzt                                | 503 beim Austausch                                                 |

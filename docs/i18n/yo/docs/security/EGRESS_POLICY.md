@@ -8,7 +8,7 @@
 
 > **Orísun òtítọ́:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute ń jẹ́ kí proxy kọ̀ọ̀kan ní **àṣẹ egress ẹbí àdírẹ́sì**. Ní àìyípadà, OS ló máa yan IPv4 tàbí IPv6 (dual-stack, "Happy Eyeballs"). Nígbà tí o bá ṣètò àṣẹ náà sí `ipv4` tàbí `ipv6`, OmniRoute máa so gbogbo ìsopọ̀ tó gba inú proxy yẹn kọjá mọ́ ẹbí tí a yàn, yóò sì **kọ̀ láìlọ sí ọ̀nà mìíràn** dípò kó padà sí ẹbí kejì.
+67router ń jẹ́ kí proxy kọ̀ọ̀kan ní **àṣẹ egress ẹbí àdírẹ́sì**. Ní àìyípadà, OS ló máa yan IPv4 tàbí IPv6 (dual-stack, "Happy Eyeballs"). Nígbà tí o bá ṣètò àṣẹ náà sí `ipv4` tàbí `ipv6`, 67router máa so gbogbo ìsopọ̀ tó gba inú proxy yẹn kọjá mọ́ ẹbí tí a yàn, yóò sì **kọ̀ láìlọ sí ọ̀nà mìíràn** dípò kó padà sí ẹbí kejì.
 
 Ojú-ìwé yìí ṣàkọsílẹ̀ ohun tí àṣẹ náà jẹ́, ìdí tí ó fi wà, ibi tí o ti lè ṣètò rẹ̀, àti bí runtime ṣe ń yanjú rẹ̀.
 
@@ -122,7 +122,7 @@ Fún ìyókù API CRUD/assignment proxy, wo [PROXY_GUIDE.md](../ops/PROXY_GUIDE.
 
 ## Bí `auto` Ṣe Ń Yanjú
 
-Nígbà tí `family` bá jẹ́ `auto`, OmniRoute **kì í** fi directive kankan kún un — URL proxy náà ni a máa lò bí ó ṣe rí, family ìsopọ̀ náà sì ni a máa pinnu lọ́nà àbínibí.
+Nígbà tí `family` bá jẹ́ `auto`, 67router **kì í** fi directive kankan kún un — URL proxy náà ni a máa lò bí ó ṣe rí, family ìsopọ̀ náà sì ni a máa pinnu lọ́nà àbínibí.
 
 Ní àkókò ṣíṣe URL (`proxyConfigToUrl` / `normalizeProxyUrl` nínú `open-sse/utils/proxyDispatcher.ts`), proxy `auto` máa ń mú URL lasan jáde láìsí marker:
 
@@ -158,7 +158,7 @@ Nítorí náà:
 
 Ìtọ́sọ́nà tí kì í ṣe `auto` máa ń rìn gẹ́gẹ́ bí àmì ìbéèrè àtọwọ́dá kan ṣoṣo — `?family=ipv4` tàbí `?family=ipv6` — tí a ṣàfikún lẹ́ẹ̀kan ṣoṣo sí URL aṣojú tí a ti mú wà ní ìlànà kan náà. `normalizeProxyUrl` máa ń ṣọ́ra láti yọ àmì yìí kúrò kí ó sì tún un ṣàfikún lẹ́ẹ̀kan ṣoṣo gan-an, kí ó má bàa ba ìtúpalẹ̀ port jẹ́ láéláé.
 
-Nígbà tí a bá ń kọ́ dispatcher náà, a máa ka àmì náà, a sì máa yí i padà sí family ìsopọ̀ pàtó kan. Bí host náà bá jẹ́ IP literal ti family **òdì kejì**, OmniRoute yóò ju àṣìṣe jáde (ìtakora máa ń fa ìkọ̀sílẹ̀ láìsí ààyè fún ìpadà-sẹ́yìn):
+Nígbà tí a bá ń kọ́ dispatcher náà, a máa ka àmì náà, a sì máa yí i padà sí family ìsopọ̀ pàtó kan. Bí host náà bá jẹ́ IP literal ti family **òdì kejì**, 67router yóò ju àṣìṣe jáde (ìtakora máa ń fa ìkọ̀sílẹ̀ láìsí ààyè fún ìpadà-sẹ́yìn):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Lẹ́yìn náà, a máa so family pàtó náà mọ́ connector:
 
 ## Ìbámu SOCKS5
 
-Ìsopọ̀ family náà ń ṣiṣẹ́ pẹ̀lú àwọn aṣojú SOCKS5, ṣùgbọ́n `fetch-socks` àkójọpọ̀ kò ṣí àwọn àṣàyàn socket tí a nílò láti so family ti ìgbésẹ̀ aṣojú náà mọ́. OmniRoute ní connector tirẹ̀ fún ìdí yìí:
+Ìsopọ̀ family náà ń ṣiṣẹ́ pẹ̀lú àwọn aṣojú SOCKS5, ṣùgbọ́n `fetch-socks` àkójọpọ̀ kò ṣí àwọn àṣàyàn socket tí a nílò láti so family ti ìgbésẹ̀ aṣojú náà mọ́. 67router ní connector tirẹ̀ fún ìdí yìí:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

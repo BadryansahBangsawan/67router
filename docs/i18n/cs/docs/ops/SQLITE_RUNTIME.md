@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute při spuštění vyhledává svůj ovladač SQLite pomocí 5krokového záložního řetězce:
+67router při spuštění vyhledává svůj ovladač SQLite pomocí 5krokového záložního řetězce:
 
 1. **Přibalený `better-sqlite3`** (prostřednictvím `dependencies` v `package.json`)
    — nejrychlejší varianta, nativní binární soubor, instalovaný příkazem `npm install`, pokud jsou k dispozici nástroje pro sestavení.
@@ -28,13 +28,13 @@ OmniRoute při spuštění vyhledává svůj ovladač SQLite pomocí 5krokového
 - **Chybějící nástroje pro sestavení**: Některá prostředí (firemní Windows bez VS Build
   Tools, minimální obrazy Dockeru) nemohou `better-sqlite3` zkompilovat. Běhový
   instalátor získá předem sestavený binární soubor z registru npm; záložní
-  ovladače zajistí, že se OmniRoute spustí, i když tento postup selže.
+  ovladače zajistí, že se 67router spustí, i když tento postup selže.
 - **Systémy bez přístupu k síti**: Pokud registr npm není dostupný, `node:sqlite`
   nebo `sql.js` zaručí základní funkčnost.
 
 ## Ověření magických bajtů
 
-Před načtením běhově instalovaného souboru `.node` přečte OmniRoute prvních 8
+Před načtením běhově instalovaného souboru `.node` přečte 67router prvních 8
 bajtů a porovná je se známými signaturami platforem:
 
 | Platforma               | Bajty (hex)   | Označení    |
@@ -107,9 +107,9 @@ Implementace:
 ## Topologie s jediným zapisujícím procesem (HA není podporována)
 
 Výše uvedený záložní řetězec ovladačů stále běží v **jednom procesu**. Výchozí
-SQLite v OmniRoute podporuje **jediný zapisující proces**:
+SQLite v 67router podporuje **jediný zapisující proces**:
 
-- Nepřipojujte dvě repliky OmniRoute ke stejnému souboru `storage.sqlite`.
+- Nepřipojujte dvě repliky 67router ke stejnému souboru `storage.sqlite`.
 - Restart kontejneru, nasazení typu Recreate, ukončení kvůli OOM nebo restart
   prostřednictvím HEALTHCHECK ukončí všechny právě probíhající relace SSE. Standardní
   mechanismus nezajišťuje řízené ukončení relací.

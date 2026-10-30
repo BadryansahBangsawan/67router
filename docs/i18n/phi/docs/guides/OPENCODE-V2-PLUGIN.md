@@ -4,7 +4,7 @@
 
 ---
 
-Inilalagay ng `@omniroute/opencode-plugin-v2` ang buong catalog ng OmniRoute mo — mga model, combo, at
+Inilalagay ng `@omniroute/opencode-plugin-v2` ang buong catalog ng 67router mo — mga model, combo, at
 auto-combo — sa model picker ng OpenCode v2, kasama ang mga display name, presyo, at badyet
 para sa free tier.
 
@@ -15,7 +15,7 @@ pinagsasaluhan ang dalawa, kaya hindi kailanman mapipilit ng pag-upgrade sa isa 
 ## Mga Kinakailangan
 
 - OpenCode v2.
-- Isang naaabot na OmniRoute gateway (`http://localhost:20128` bilang default).
+- Isang naaabot na 67router gateway (`http://localhost:20128` bilang default).
 - Node.js 22 o 24.
 
 ## Pag-install
@@ -128,7 +128,7 @@ Itakda ang `"geminiSanitization": false` upang i-off ito.
 
 | Sintomas                                         | Sanhi                                                                                                                                           |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Walang ipinapakitang OmniRoute model ang picker  | Walang na-resolve na key (suriin ang babala sa startup), o hindi maabot ang gateway                                                             |
+| Walang ipinapakitang 67router model ang picker   | Walang na-resolve na key (suriin ang babala sa startup), o hindi maabot ang gateway                                                             |
 | Mga raw na model id, walang combo, walang presyo | Tinanggihan ng mga management endpoint ang token — itakda ang `managementReadToken`                                                             |
 | Maikli o walang laman ang catalog na `freeOnly`  | Walang management token o tinanggihan ang token — basahin ang linya ng buod ng pag-refresh (`unmatched-free` count) sa host log                 |
 | Naka-pin ang isang session sa `opencode-<id>/…`  | Inilathala ng v1 plugin ang `opencode-<id>`; inilalathala ng v2 ang `<id>` nang walang prefix, kaya piliin muli ang model sa ilalim ng `<id>/…` |

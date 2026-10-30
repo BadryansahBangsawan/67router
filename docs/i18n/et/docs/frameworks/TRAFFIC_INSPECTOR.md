@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector on OmniRoute’i sisseehitatud HTTPS-liikluse silur — Charles Proxy / mitmweb / HTTP Toolkit-laadne tööriist, mis on **LLM-teadlik** ja **agenditeadlik**. See asub aadressil `/dashboard/tools/traffic-inspector` ja võtab vastu reaalajas liiklust kuni viiest samaaegsest hõiveallikast.
+Traffic Inspector on 67router’i sisseehitatud HTTPS-liikluse silur — Charles Proxy / mitmweb / HTTP Toolkit-laadne tööriist, mis on **LLM-teadlik** ja **agenditeadlik**. See asub aadressil `/dashboard/tools/traffic-inspector` ja võtab vastu reaalajas liiklust kuni viiest samaaegsest hõiveallikast.
 
 **Asukoht töölaual:** `/dashboard/tools/traffic-inspector`
 **Külgriba rühm:** Tööriistad (pärast AgentBridge’i)
@@ -16,21 +16,21 @@ Traffic Inspector on OmniRoute’i sisseehitatud HTTPS-liikluse silur — Charle
 
 ### Mis teeb Traffic Inspectori ainulaadseks
 
-| Funktsioon                                                                           |  mitmweb  | Charles |  Fiddler  | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------------ | :-------: | :-----: | :-------: | :-----------------------------: |
-| Veebipõhine                                                                          |     ✓     |    ✗    |     ✗     |                ✓                |
-| Avatud lähtekoodiga                                                                  |     ✓     |    ✗    | osaliselt |                ✓                |
-| **Agenditeadlik** (teab, kas päring pärineb Antigravityst/Copilotist/jne)            |     ✗     |    ✗    |     ✗     |                ✓                |
-| **LLM-teadlik** (sõelub OpenAI/Anthropicu/Gemini struktuuri, sõneühikuid ja mudelit) |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Mudelite vastendus on nähtav** (gemini-3-flash → claude-sonnet-4.7)                |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Puhverserveri/ülesvoolu latentsuse eristus**                                       | osaliselt |    ✗    |     ✗     |                ✓                |
-| **Integreeritud OmniRoute’i** marsruutimise, varuvariandi ja kuludega                |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Süsteemiülene puhverserveri silumine** (iga rakendus seadmes)                      |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Kohandatud hosti hõive** (hostipõhine DNS-i ümbersuunamine)                        |     ✓     |    ✓    |     ✓     |                ✓                |
-| **HTTP_PROXY keskkonnarežiim**                                                       |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Vestlusvaade** (mitme vooru mullid, tool_use/tool_result)                          |     ✗     |    ✗    |     ✗     |                ✓                |
-| **SSE-voogude ühendaja** (taastab delta-sündmustest)                                 |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Seansi salvestamine** (nimeline, eksporditav .har/.jsonl-vormingus)                |     ✗     |    ✓    |     ✓     |                ✓                |
+| Funktsioon                                                                           |  mitmweb  | Charles |  Fiddler  | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------------ | :-------: | :-----: | :-------: | :----------------------------: |
+| Veebipõhine                                                                          |     ✓     |    ✗    |     ✗     |               ✓                |
+| Avatud lähtekoodiga                                                                  |     ✓     |    ✗    | osaliselt |               ✓                |
+| **Agenditeadlik** (teab, kas päring pärineb Antigravityst/Copilotist/jne)            |     ✗     |    ✗    |     ✗     |               ✓                |
+| **LLM-teadlik** (sõelub OpenAI/Anthropicu/Gemini struktuuri, sõneühikuid ja mudelit) |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Mudelite vastendus on nähtav** (gemini-3-flash → claude-sonnet-4.7)                |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Puhverserveri/ülesvoolu latentsuse eristus**                                       | osaliselt |    ✗    |     ✗     |               ✓                |
+| **Integreeritud 67router’i** marsruutimise, varuvariandi ja kuludega                 |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Süsteemiülene puhverserveri silumine** (iga rakendus seadmes)                      |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Kohandatud hosti hõive** (hostipõhine DNS-i ümbersuunamine)                        |     ✓     |    ✓    |     ✓     |               ✓                |
+| **HTTP_PROXY keskkonnarežiim**                                                       |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Vestlusvaade** (mitme vooru mullid, tool_use/tool_result)                          |     ✗     |    ✗    |     ✗     |               ✓                |
+| **SSE-voogude ühendaja** (taastab delta-sündmustest)                                 |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Seansi salvestamine** (nimeline, eksporditav .har/.jsonl-vormingus)                |     ✗     |    ✓    |     ✓     |               ✓                |
 
 ### Arhitektuur ühes lõigus
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true, kui vastus on SSE
   mappedTo: string | null; // päis x-omniroute-mapped
-  costEstimateUsd: number | null; // OmniRoute'i hinnastuse põhjal arvutatud hinnanguline maksumus
+  costEstimateUsd: number | null; // 67router'i hinnastuse põhjal arvutatud hinnanguline maksumus
 }
 ```
 
@@ -394,7 +394,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Süsteemiproksit ei ennistatud
 
-Kui OmniRoute jookseb kokku ajal, mil süsteemiülene proksirežiim on aktiivne:
+Kui 67router jookseb kokku ajal, mil süsteemiülene proksirežiim on aktiivne:
 
 **macOS:**
 
@@ -439,7 +439,7 @@ Baastee: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Päringute loend (filtreeritav: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Üksiku päringu üksikasjad                                                              |
 | DELETE | `/requests`                 | Tühjenda mälupuhver                                                                    |
-| POST   | `/requests/{id}/replay`     | Käivita sama päring OmniRoute'i ruuteri kaudu uuesti                                   |
+| POST   | `/requests/{id}/replay`     | Käivita sama päring 67router'i ruuteri kaudu uuesti                                    |
 | PUT    | `/requests/{id}/annotation` | Salvesta või uuenda päringu märkust                                                    |
 
 ### WebSocket

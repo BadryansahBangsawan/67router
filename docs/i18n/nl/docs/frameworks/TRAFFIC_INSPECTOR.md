@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector is de ingebouwde debugger voor HTTPS-verkeer van OmniRoute — een tool vergelijkbaar met Charles Proxy / mitmweb / HTTP Toolkit die **LLM-bewust** en **agent-bewust** is. De tool bevindt zich op `/dashboard/tools/traffic-inspector` en ontvangt live verkeer van maximaal 5 gelijktijdige opnamebronnen.
+Traffic Inspector is de ingebouwde debugger voor HTTPS-verkeer van 67router — een tool vergelijkbaar met Charles Proxy / mitmweb / HTTP Toolkit die **LLM-bewust** en **agent-bewust** is. De tool bevindt zich op `/dashboard/tools/traffic-inspector` en ontvangt live verkeer van maximaal 5 gelijktijdige opnamebronnen.
 
 **Dashboardlocatie:** `/dashboard/tools/traffic-inspector`
 **Zijbalkgroep:** Tools (na AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector is de ingebouwde debugger voor HTTPS-verkeer van OmniRoute —
 
 ### Wat Traffic Inspector uniek maakt
 
-| Functie                                                                          |   mitmweb    | Charles |   Fiddler    | **OmniRoute Traffic Inspector** |
-| -------------------------------------------------------------------------------- | :----------: | :-----: | :----------: | :-----------------------------: |
-| Webgebaseerd                                                                     |      ✓       |    ✗    |      ✗       |                ✓                |
-| Opensource                                                                       |      ✓       |    ✗    | gedeeltelijk |                ✓                |
-| **Agent-bewust** (weet of een verzoek afkomstig is van Antigravity/Copilot/etc.) |      ✗       |    ✗    |      ✗       |                ✓                |
-| **LLM-bewust** (parseert OpenAI-/Anthropic-/Gemini-structuur, tokens en model)   |      ✗       |    ✗    |      ✗       |                ✓                |
-| **Modeltoewijzing zichtbaar** (gemini-3-flash → claude-sonnet-4.7)               |      ✗       |    ✗    |      ✗       |                ✓                |
-| **Afzonderlijke proxy-/upstreamlatentie**                                        | gedeeltelijk |    ✗    |      ✗       |                ✓                |
-| **Geïntegreerd met OmniRoute**-routering, fallback en kosten                     |      ✗       |    ✗    |      ✗       |                ✓                |
-| **Systeembrede proxydebugging** (elke app op de machine)                         |      ✓       |    ✓    |      ✓       |                ✓                |
-| **Opname van aangepaste hosts** (DNS-omleiding per host)                         |      ✓       |    ✓    |      ✓       |                ✓                |
-| **HTTP_PROXY-omgevingsmodus**                                                    |      ✓       |    ✓    |      ✓       |                ✓                |
-| **Gespreksweergave** (bubbels voor meerdere beurten, tool_use/tool_result)       |      ✗       |    ✗    |      ✗       |                ✓                |
-| **SSE-streamsamenvoeging** (reconstructie uit delta-events)                      |      ✗       |    ✗    |      ✗       |                ✓                |
-| **Sessieregistratie** (benoembaar, exporteerbaar als .har/.jsonl)                |      ✗       |    ✓    |      ✓       |                ✓                |
+| Functie                                                                          |   mitmweb    | Charles |   Fiddler    | **67router Traffic Inspector** |
+| -------------------------------------------------------------------------------- | :----------: | :-----: | :----------: | :----------------------------: |
+| Webgebaseerd                                                                     |      ✓       |    ✗    |      ✗       |               ✓                |
+| Opensource                                                                       |      ✓       |    ✗    | gedeeltelijk |               ✓                |
+| **Agent-bewust** (weet of een verzoek afkomstig is van Antigravity/Copilot/etc.) |      ✗       |    ✗    |      ✗       |               ✓                |
+| **LLM-bewust** (parseert OpenAI-/Anthropic-/Gemini-structuur, tokens en model)   |      ✗       |    ✗    |      ✗       |               ✓                |
+| **Modeltoewijzing zichtbaar** (gemini-3-flash → claude-sonnet-4.7)               |      ✗       |    ✗    |      ✗       |               ✓                |
+| **Afzonderlijke proxy-/upstreamlatentie**                                        | gedeeltelijk |    ✗    |      ✗       |               ✓                |
+| **Geïntegreerd met 67router**-routering, fallback en kosten                      |      ✗       |    ✗    |      ✗       |               ✓                |
+| **Systeembrede proxydebugging** (elke app op de machine)                         |      ✓       |    ✓    |      ✓       |               ✓                |
+| **Opname van aangepaste hosts** (DNS-omleiding per host)                         |      ✓       |    ✓    |      ✓       |               ✓                |
+| **HTTP_PROXY-omgevingsmodus**                                                    |      ✓       |    ✓    |      ✓       |               ✓                |
+| **Gespreksweergave** (bubbels voor meerdere beurten, tool_use/tool_result)       |      ✗       |    ✗    |      ✗       |               ✓                |
+| **SSE-streamsamenvoeging** (reconstructie uit delta-events)                      |      ✗       |    ✗    |      ✗       |               ✓                |
+| **Sessieregistratie** (benoembaar, exporteerbaar als .har/.jsonl)                |      ✗       |    ✓    |      ✓       |               ✓                |
 
 ### Architectuur in één alinea
 
@@ -265,7 +265,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true bij een SSE-respons
   mappedTo: string | null; // x-omniroute-mapped-header
-  costEstimateUsd: number | null; // geschatte kosten op basis van OmniRoute-prijzen
+  costEstimateUsd: number | null; // geschatte kosten op basis van 67router-prijzen
 }
 ```
 
@@ -396,7 +396,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Systeemproxy niet teruggezet
 
-Als OmniRoute crasht terwijl de systeembrede proxymodus actief is:
+Als 67router crasht terwijl de systeembrede proxymodus actief is:
 
 **macOS:**
 
@@ -441,7 +441,7 @@ Basispad: `/api/tools/traffic-inspector/`
 | GET     | `/requests`                 | Aanvragen weergeven (filterbaar: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET     | `/requests/{id}`            | Details van één aanvraag                                                                 |
 | DELETE  | `/requests`                 | De buffer in het geheugen wissen                                                         |
-| POST    | `/requests/{id}/replay`     | Dezelfde aanvraag opnieuw uitvoeren via de OmniRoute-router                              |
+| POST    | `/requests/{id}/replay`     | Dezelfde aanvraag opnieuw uitvoeren via de 67router-router                               |
 | PUT     | `/requests/{id}/annotation` | Een notitie bij een aanvraag opslaan of bijwerken                                        |
 
 ### WebSocket

@@ -4,7 +4,7 @@
 
 ---
 
-Validare E2E în mediu real a implementării OmniRoute care rulează pe VPS-ul de omologare
+Validare E2E în mediu real a implementării 67router care rulează pe VPS-ul de omologare
 (`HOMOLOG_BASE_URL`, de ex. `http://192.168.0.15:20128`). O singură comandă înlocuiește lista de verificare manuală
 STOP #2 pentru lansare cu o rulare automatizată care produce dovezi.
 

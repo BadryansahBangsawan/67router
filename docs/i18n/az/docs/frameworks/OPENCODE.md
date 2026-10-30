@@ -5,11 +5,11 @@
 ---
 
 > **Status:** Ümumi istifadəyə açıqdır.
-> **Auditoriya:** OpenCode-u OmniRoute yerləşdirməsinə qoşan operatorlar.
+> **Auditoriya:** OpenCode-u 67router yerləşdirməsinə qoşan operatorlar.
 > **Həqiqət mənbəyi (konfiqurasiya sxemi):** `src/shared/services/opencodeConfig.ts`
 > **Həqiqət mənbəyi (npm paketi):** `@omniroute/opencode-provider/` (dərc edilə bilən iş sahəsi)
 
-[OpenCode](https://opencode.ai) agent əsaslı CLI/masaüstü süni intellekt müştərisidir. O, provayder kataloqunu `~/.config/opencode/opencode.json` (və ya `opencode.jsonc`) faylından oxuyur və `https://opencode.ai/config.json` ünvanındakı sxemə uyğun işləyir. OmniRoute özünü OpenCode-a həmin provayderlərdən biri kimi təqdim edir — hər sorğu OmniRoute-un standart OpenAI-uyğun `/v1` interfeysindən keçir, buna görə OpenCode avtomatik olaraq Auto-Combo marşrutlaşdırması, dövrə kəsiciləri, açar siyasətləri, müşahidəolunma və digər imkanlardan faydalanır.
+[OpenCode](https://opencode.ai) agent əsaslı CLI/masaüstü süni intellekt müştərisidir. O, provayder kataloqunu `~/.config/opencode/opencode.json` (və ya `opencode.jsonc`) faylından oxuyur və `https://opencode.ai/config.json` ünvanındakı sxemə uyğun işləyir. 67router özünü OpenCode-a həmin provayderlərdən biri kimi təqdim edir — hər sorğu 67router-un standart OpenAI-uyğun `/v1` interfeysindən keçir, buna görə OpenCode avtomatik olaraq Auto-Combo marşrutlaşdırması, dövrə kəsiciləri, açar siyasətləri, müşahidəolunma və digər imkanlardan faydalanır.
 
 **İki dəstəklənən inteqrasiya yolu** mövcuddur. Onlardan birini seçin — hər ikisi eyni konfiqurasiyanı yaradır.
 
@@ -17,16 +17,16 @@
 
 ## Yol 1 — CLI generatoru (npm quraşdırılması tələb olunmur)
 
-Son istifadəçilər üçün tövsiyə olunur. OmniRoute ilə birlikdə təqdim edilir. `opencode.json` faylını olduğu yerdə yeniləyir.
+Son istifadəçilər üçün tövsiyə olunur. 67router ilə birlikdə təqdim edilir. `opencode.json` faylını olduğu yerdə yeniləyir.
 
 ```bash
-# OmniRoute quraşdırıldıqdan sonra (npm i -g @omniroute/cli və ya lokal klon)
+# 67router quraşdırıldıqdan sonra (npm i -g @omniroute/cli və ya lokal klon)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Arxa planda CLI `mergeOpenCodeConfigText()` funksiyasını (`src/shared/services/opencodeConfig.ts:104`) çağırır, beləliklə mövcud `opencode.json` digər provayderlərini və şərhlərini qoruyur. OmniRoute qeydi atomik şəkildə əlavə edilir və ya əvəzlənir.
+Arxa planda CLI `mergeOpenCodeConfigText()` funksiyasını (`src/shared/services/opencodeConfig.ts:104`) çağırır, beləliklə mövcud `opencode.json` digər provayderlərini və şərhlərini qoruyur. 67router qeydi atomik şəkildə əlavə edilir və ya əvəzlənir.
 
 Nəticədə yaranan fayl (standart model kataloqu):
 
@@ -90,8 +90,8 @@ Hər iki yol eyni `provider.omniroute.npm: "@ai-sdk/openai-compatible"` dəyəri
 ```
 OpenCode istifadəçi interfeysi/agenti
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OmniRoute OpenAI interfeysi)
-         → OmniRoute /v1/chat/completions emalçısı    (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (67router OpenAI interfeysi)
+         → 67router /v1/chat/completions emalçısı    (open-sse/handlers/chatCore.ts)
             → kombinasiya marşrutlaşdırması / Auto-Combo / icraçı
                → yuxarı axın provayderi
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Bunu `models: [...]` vasitəsilə əvəz edə bilərsiniz. Tövsiyə olunan əlavələr:
 
-- `"auto"` — OmniRoute-un sıfır konfiqurasiyalı [Auto-Combo](../routing/AUTO-COMBO.md) yönləndiricisini əlçatan edir. Kataloqu sərt şəkildə kodlaşdırmadan OpenCode-a «mövcud olan ən yaxşı modeli» seçməyə imkan verir.
-- `"<combo-name>"` — idarəetmə panelində müəyyən etdiyiniz istənilən kombinasiya; OmniRoute onu şəffaf şəkildə müəyyənləşdirir.
+- `"auto"` — 67router-un sıfır konfiqurasiyalı [Auto-Combo](../routing/AUTO-COMBO.md) yönləndiricisini əlçatan edir. Kataloqu sərt şəkildə kodlaşdırmadan OpenCode-a «mövcud olan ən yaxşı modeli» seçməyə imkan verir.
+- `"<combo-name>"` — idarəetmə panelində müəyyən etdiyiniz istənilən kombinasiya; 67router onu şəffaf şəkildə müəyyənləşdirir.
 
 ---
 
@@ -135,12 +135,12 @@ Bu təkrarlanmanın aradan qaldırılması köhnə konfiqurasiyalarda rast gəli
 
 ## Autentifikasiya rejimləri
 
-| OmniRoute ayarı                               | Tövsiyə olunan `apiKey` dəyəri                                 |
+| 67router ayarı                                | Tövsiyə olunan `apiKey` dəyəri                                 |
 | --------------------------------------------- | -------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (lokal üçün standart) | `sk_omniroute` (hərfi mənada yer tutucu)                       |
 | `REQUIRE_API_KEY=true`                        | İdarəetmə paneli → API Keys bölməsindən real istifadəçi açarı. |
 
-`x-api-key` + `anthropic-version` göndərən Anthropic üslublu klientlər üçün OmniRoute-un `extractApiKey` funksiyası `x-api-key` daxilindəki açarı da nəzərə alır. OpenCode, OpenAI interfeysindən istifadə etdiyinə görə həmişə `Authorization: Bearer ${apiKey}` göndərəcək — burada Anthropic-ə xas xüsusi hal tətbiq edilmir.
+`x-api-key` + `anthropic-version` göndərən Anthropic üslublu klientlər üçün 67router-un `extractApiKey` funksiyası `x-api-key` daxilindəki açarı da nəzərə alır. OpenCode, OpenAI interfeysindən istifadə etdiyinə görə həmişə `Authorization: Bearer ${apiKey}` göndərəcək — burada Anthropic-ə xas xüsusi hal tətbiq edilmir.
 
 ---
 
@@ -149,15 +149,15 @@ Bu təkrarlanmanın aradan qaldırılması köhnə konfiqurasiyalarda rast gəli
 | Əlamət                                          | Səbəb                                                                                | Həll                                                                                                                           |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | URL-də `/v1/v1/` olan hər sorğuda `404`         | `/v1` sonluğunu iki dəfə əlavə edən v3.8-dən əvvəlki plaqindən qalmış konfiqurasiya. | 1-ci və ya 2-ci üsul vasitəsilə yenidən yaradın.                                                                               |
-| `401 Invalid API key`                           | OmniRoute-da `REQUIRE_API_KEY=true` təyin edilib və açar tanınmır.                   | Açarı idarəetmə panelində yaradın və ya `REQUIRE_API_KEY=false` təyin edib (yalnız lokal olaraq) `sk_omniroute` istifadə edin. |
-| OpenCode interfeysində model siyahısı boşdur    | 4 standart modelin hamısı OmniRoute-un provayder görünüşündə gizlədilib.             | Aktivləşdirdiyiniz modelləri göstərmək üçün `models: ["auto", ...]` ötürün.                                                    |
+| `401 Invalid API key`                           | 67router-da `REQUIRE_API_KEY=true` təyin edilib və açar tanınmır.                    | Açarı idarəetmə panelində yaradın və ya `REQUIRE_API_KEY=false` təyin edib (yalnız lokal olaraq) `sk_omniroute` istifadə edin. |
+| OpenCode interfeysində model siyahısı boşdur    | 4 standart modelin hamısı 67router-un provayder görünüşündə gizlədilib.              | Aktivləşdirdiyiniz modelləri göstərmək üçün `models: ["auto", ...]` ötürün.                                                    |
 | OpenCode 500 və `cannot read property 'models'` | Köhnə OpenCode (< 0.1.x) daxili `models` parametrini qəbul etmirdi.                  | OpenCode-u v1 sxeminə (`opencode.ai/config.json`) uyğun versiyaya təkmilləşdirin.                                              |
 
 ---
 
 ## Həmçinin baxın
 
-- [API arayışı](../reference/API_REFERENCE.md) — OmniRoute REST interfeysinin tam təsviri
+- [API arayışı](../reference/API_REFERENCE.md) — 67router REST interfeysinin tam təsviri
 - [Auto-Combo](../routing/AUTO-COMBO.md) — `model: "auto"` ifadəsinin mənası
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Mənbə: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

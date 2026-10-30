@@ -9,7 +9,7 @@
 Manifes yang sama tersedia melalui HTTP di
 `GET /api/v1/provider-plugin-manifest` untuk sidecar yang berjalan di luar proses.
 
-OmniRoute menginformasikan URL tersebut kepada Bifrost dan CLIProxyAPI melalui header permintaan `X-OmniRoute-Provider-Manifest-Url`. Atur `OMNIROUTE_PROVIDER_MANIFEST_URL` ketika sidecar memerlukan URL publik atau URL jaringan kontainer, bukan origin permintaan lokal.
+67router menginformasikan URL tersebut kepada Bifrost dan CLIProxyAPI melalui header permintaan `X-OmniRoute-Provider-Manifest-Url`. Atur `OMNIROUTE_PROVIDER_MANIFEST_URL` ketika sidecar memerlukan URL publik atau URL jaringan kontainer, bukan origin permintaan lokal.
 
 ## Memperbarui Manifes
 
@@ -17,7 +17,7 @@ Endpoint HTTP mengembalikan `Cache-Control: public, max-age=60` dan `ETag` yang 
 
 ## Tujuan
 
-Mengalihkan metadata penyedia menuju kontrak plugin agar jalur permintaan utama pada akhirnya dapat dikelola oleh sidecar dengan latensi lebih rendah, sementara OmniRoute mempertahankan rute TypeScript sebagai gerbang kebijakan dan fallback. Manifes ini bersifat aditif: manifes tidak mengubah perutean permintaan dengan sendirinya.
+Mengalihkan metadata penyedia menuju kontrak plugin agar jalur permintaan utama pada akhirnya dapat dikelola oleh sidecar dengan latensi lebih rendah, sementara 67router mempertahankan rute TypeScript sebagai gerbang kebijakan dan fallback. Manifes ini bersifat aditif: manifes tidak mengubah perutean permintaan dengan sendirinya.
 
 ## Kontrak
 
@@ -56,7 +56,7 @@ Manifes sengaja tidak menyertakan:
 | `usage-fetch`        | Memiliki pengambil data penggunaan atau kuota yang telah dikonfigurasi (`getUsageForProvider`). |
 | `usage-supported`    | API penggunaan menerima penyedia ini (`isSupportedUsageConnection`).                            |
 
-`usage-fetch` hanya untuk penemuan. Tag ini melaporkan bahwa OmniRoute mengetahui cara membaca penggunaan untuk penyedia tersebut; tag ini tidak mengaktifkan pengambilan data, mengubah semantik kuota, atau menyiratkan bahwa widget kuota Dashboard diaktifkan untuk penyedia tersebut — widget itu dikendalikan secara terpisah oleh `USAGE_SUPPORTED_PROVIDERS`. Sumber kebenarannya adalah `USAGE_FETCHER_PROVIDERS` di `open-sse/services/usage/fetcherProviders.ts`.
+`usage-fetch` hanya untuk penemuan. Tag ini melaporkan bahwa 67router mengetahui cara membaca penggunaan untuk penyedia tersebut; tag ini tidak mengaktifkan pengambilan data, mengubah semantik kuota, atau menyiratkan bahwa widget kuota Dashboard diaktifkan untuk penyedia tersebut — widget itu dikendalikan secara terpisah oleh `USAGE_SUPPORTED_PROVIDERS`. Sumber kebenarannya adalah `USAGE_FETCHER_PROVIDERS` di `open-sse/services/usage/fetcherProviders.ts`.
 
 Daftar tersebut menggunakan string yang diterima oleh dispatcher penggunaan sebagai kunci, sehingga mencampurkan ID kanonis dengan alias dan sedikit lebih panjang daripada jumlah penyedia yang diberi tag: entri yang bukan penyedia chat dalam registri manifes (misalnya penyedia pencarian `firecrawl` dan penyedia ACP `amazon-q`) tidak memiliki entri manifes yang dapat diberi tag.
 

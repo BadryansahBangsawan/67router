@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'i homologatsioon-VPS-is töötava juurutuse valideerimine reaalses keskkonnas E2E-testidega
+67router'i homologatsioon-VPS-is töötava juurutuse valideerimine reaalses keskkonnas E2E-testidega
 (`HOMOLOG_BASE_URL`, nt `http://192.168.0.15:20128`). Üks käsk asendab väljalaske käsitsi tehtava
 STOP #2 kontrollnimekirja automatiseeritud käitusega, mis loob kontrollitavad tõendid.
 

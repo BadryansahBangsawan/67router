@@ -9,7 +9,7 @@
 > hooks ළඟා වන routes සහ response paths, ඒකාබද්ධ කළ අක්රිය කිරීමේ headers (#16412), අනිවාර්ය
 > මායිමක් ලෙස injection අවහිර කිරීමේ මාදිලිය (#16413), සහ post-call ට පෙර ප්රතිචාරයක් දකින්නේ කුමක් ද යන්න)
 
-Guardrails විසින් OmniRoute සහ upstream providers අතර මායිමේදී ආරක්ෂාව, ප්රතිපත්ති සහ අන්තර්ගත පරිවර්තනයන් බලාත්මක කරයි. සෑම guardrail එකක්ම request payloads (`preCall`) සහ upstream responses (`postCall`) පරීක්ෂා කළ හැක (සහ අවශ්යයෙන් ප්රතික්ෂේප කළ හැක, පරිවර්තනය කළ හැක, හෝ සටහන් කළ හැක).
+Guardrails විසින් 67router සහ upstream providers අතර මායිමේදී ආරක්ෂාව, ප්රතිපත්ති සහ අන්තර්ගත පරිවර්තනයන් බලාත්මක කරයි. සෑම guardrail එකක්ම request payloads (`preCall`) සහ upstream responses (`postCall`) පරීක්ෂා කළ හැක (සහ අවශ්යයෙන් ප්රතික්ෂේප කළ හැක, පරිවර්තනය කළ හැක, හෝ සටහන් කළ හැක).
 
 මෙම පද්ධතිය **fail-open** වේ: guardrail එකක් ක්රියාත්මක වන අතරතුර දෝෂයක් විසි කළහොත්, registry එක request එක අසාර්ථක කරනවා වෙනුවට දෝෂය සටහන් කර ඊළඟ guardrail එක සමඟ ඉදිරියට යයි. අවහිර කිරීම පැහැදිලි තීරණයකි (`block: true`), කිසිවිටෙක අහම්බයක් නොවේ. එකම ව්යතිරේකය අත්හිටුවන ලද request එකකි: අමතන්නාගේ `signal` අත්හිටුවන විට, දෝෂයක් විසි කරන guardrail එකක් මඟහරිනු වෙනුවට hook ධාවනය ප්රතික්ෂේප කරයි.
 
@@ -63,7 +63,7 @@ pre-PR-1 guardrail එකට බයිට්-අනුව සමාන වේ.
 `modelAccessMode: "restricted"` / `disableNonPublicModels`) සීමා කරන විට, bridge එක
 යතුරට භාවිත කළ හැකි reroute සහ describe ආකෘති පමණක්, යතුරට භාවිත කළ හැකි
 සම්බන්ධතා මත තෝරයි. describe ඇමතුම පසුව සෑම විටම
-`x-omniroute-self-loop-key-id` ශීර්ෂකය සමඟ OmniRoute self-loop හරහා යන නිසා, ලැබෙන
+`x-omniroute-self-loop-key-id` ශීර්ෂකය සමඟ 67router self-loop හරහා යන නිසා, ලැබෙන
 chat ඉල්ලීම එම යතුරේ සම්බන්ධතා සහ ආකෘති ප්රතිපත්තිය නැවත බලාත්මක කරයි. `enforceApiKeyPolicy()`
 එම ශීර්ෂකය self-loop bearer එක සමඟ පමණක් ගෞරව කරයි, එබැවින් එයට ප්රවේශය
 පටු කළ හැකි පමණක් වන අතර, resolve නොවන id එකක් ප්රතික්ෂේප වේ.
@@ -89,7 +89,7 @@ describe self-loop එකේම OpenAI-ගැළපෙන ඉල්ලීම (`v
 අඩු-විස්තර sampling මෙම prompt එක ඉල්ලා සිටින පෙළ-පිටපත්
 කාර්යය සඳහාම OCR නිරවද්යතාවය අඩු කරන නිසා, මුල් inbound ඉල්ලීම භාවිත කළ
 විස්තර මට්ටම කුමක් වුවත් describe ඇමතුම සෑම විටම ඉහළ විස්තර ඉල්ලයි. මෙය
-බලපාන්නේ අභ්යන්තර describe ඉල්ලීමේ body එකට පමණි; OmniRoute මුල් ඉල්ලීමේ
+බලපාන්නේ අභ්යන්තර describe ඉල්ලීමේ body එකට පමණි; 67router මුල් ඉල්ලීමේ
 ඇමතුම්කරුගේම `image_url.detail` යොමු කරන ආකාරය එය වෙනස් නොකරයි —
 එම පෙරනිමිය වෙනම, සහ හඳුනාගත් OpenCode clients සඳහා පමණක්,
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`) හි යොදනු ලැබේ.
@@ -214,7 +214,7 @@ Providers ද Image-to-Text සහ Speech-to-Text වැඩප්රවාහ �
 Bridge ටැබ වලට සම්බන්ධ කරයි, පවතින Speech-to-Text ක්රීඩාංගනය
 ඉවත් නොකර.
 
-**Self-loop admission මඟහැරීම:** describe ඇමතුම OmniRoute හි තම `/v1`
+**Self-loop admission මඟහැරීම:** describe ඇමතුම 67router හි තම `/v1`
 self-loop (සම්මත-නොවන provider ආකෘතිය) හරහා යොමු වන විට, උප-ඉල්ලීම
 `x-omniroute-admission-bypass: internal` යවන අතර විසඳන ලද self-loop
 අක්තපත්රයෙන් සත්යාපනය වේ — local ආකාරයේදී දේශීය `sk_omniroute`
@@ -402,7 +402,7 @@ body කියවන්නා ස්වාධීනව 50 MiB බ්රෝකර
 මූල්යමය ඉතිරි කිරීම් ද `HOLD` ලෙස පවතී; ස්ක්රිප්ටය කිසිවිටෙක එම ප්රතිඵල දෙකෙන් එකක්වත්
 කෘත්රිමව නිර්මාණය නොකරයි.
 
-සෑම ෆ්රේම් එකක්ම 4 MiB දක්වා සීමා කර ඇති අතර, සියලුම අමු ෆ්රේම් එකතුව 23 MiB දක්වාත්, serialized බ්රෝකර් ප්රතිචාරය 32 MiB දක්වාත් සීමා කර ඇත. පුද්ගලික තාවකාලික නාමාවලියක් `finally` තුළ ඉවත් කරනු ලැබේ. OmniRoute විසින් FFmpeg ඇසුරුම් කර නොමැති අතර අභිරුචි executable path එකක් පිළිගන්නේ නැත. කැප්ෂනිං වලට පෙර, බ්රිජ් එක කොන්දොස්තරාත්මක දෘශ්ය අනුපිටපත්-ඉවත්කිරීමේ පාස් එකක් යොදයි: සෑම JPEG එකක්ම 16×16 අළුපැහැ buffer එකකට අඩු කරනු ලබන අතර අවසන් වරට රඳවාගත් ෆ්රේම් එක සමඟ පමණක් සංසන්දනය කරනු ලැබේ. එක් ෆ්රේම් එකකට වඩා ඉහළ ඉල්ලා ඇති කැප්ෂන් අයවැය සඳහා, extraction එක එම අයවැයේ දෙගුණයක් දක්වා සහ කිසිවිටෙක ෆ්රේම් 16 කට වඩා නොවන සීමිත candidate pool එකක් සපයයි. ඉල්ලා ඇති සීමාව අනුපිටපත් ඉවත්කිරීමෙන් පසුව පමණක් යොදනු ලැබේ; අයවැය අවම වශයෙන් දෙකක් වූ විට අවසාන thinning එක අතරතුර පළමු සහ අවසාන තෝරාගත් candidates ආරක්ෂා කරනු ලැබේ. අනුවාදිත
+සෑම ෆ්රේම් එකක්ම 4 MiB දක්වා සීමා කර ඇති අතර, සියලුම අමු ෆ්රේම් එකතුව 23 MiB දක්වාත්, serialized බ්රෝකර් ප්රතිචාරය 32 MiB දක්වාත් සීමා කර ඇත. පුද්ගලික තාවකාලික නාමාවලියක් `finally` තුළ ඉවත් කරනු ලැබේ. 67router විසින් FFmpeg ඇසුරුම් කර නොමැති අතර අභිරුචි executable path එකක් පිළිගන්නේ නැත. කැප්ෂනිං වලට පෙර, බ්රිජ් එක කොන්දොස්තරාත්මක දෘශ්ය අනුපිටපත්-ඉවත්කිරීමේ පාස් එකක් යොදයි: සෑම JPEG එකක්ම 16×16 අළුපැහැ buffer එකකට අඩු කරනු ලබන අතර අවසන් වරට රඳවාගත් ෆ්රේම් එක සමඟ පමණක් සංසන්දනය කරනු ලැබේ. එක් ෆ්රේම් එකකට වඩා ඉහළ ඉල්ලා ඇති කැප්ෂන් අයවැය සඳහා, extraction එක එම අයවැයේ දෙගුණයක් දක්වා සහ කිසිවිටෙක ෆ්රේම් 16 කට වඩා නොවන සීමිත candidate pool එකක් සපයයි. ඉල්ලා ඇති සීමාව අනුපිටපත් ඉවත්කිරීමෙන් පසුව පමණක් යොදනු ලැබේ; අයවැය අවම වශයෙන් දෙකක් වූ විට අවසාන thinning එක අතරතුර පළමු සහ අවසාන තෝරාගත් candidates ආරක්ෂා කරනු ලැබේ. අනුවාදිත
 `grayscale-16x16-mean-cells-v2` ප්රතිපත්තිය mean luma delta සහ normalized delta අගය අවම වශයෙන් 0.05 වන thumbnail cells වල අනුපාතයෙන් විශාලතම එක භාවිතා කරයි. අනුපිටපත් සීමාව නියතය 0.04 වන අතර, runtime සැකසුමක් ලෙස නිරාවරණය කිරීම වෙනුවට පුරෝකථනය කළ හැකි බව සඳහා තෝරාගෙන ඇත. මෙම ද්විතීයික
 ඉහළ-විරෝධී සංකේතය mean-පමණක් සංසන්දනයකට සැඟවිය හැකි කුඩා චලනයන් සහ දෘශ්යමාන-පෙළ වෙනස්කම් ආරක්ෂා කරයි. Comparator හෝ decoder දෝෂ fail-open ලෙස හැසිරී ආවරණය රඳවා තබයි. ප්රතිදාන මෙටාඩේටා විසින් උපුටාගත් candidates, සාර්ථකව භාවිතා කළ ෆ්රේම් සහ අතහැර දැමූ දෘශ්ය අනුපිටපත් වෙනම වෙන් කරයි.
 
@@ -411,7 +411,7 @@ body කියවන්නා ස්වාධීනව 50 MiB බ්රෝකර
 Promotion සාක්ෂි අභිප්රේරිතවම synthetic composition microbenchmark එකෙන් වෙන් කර ඇත.
 `scripts/perf/video-bridge-contact-sheet-eval.ts` සැබෑ OpenAI-අනුකූල vision models සඳහා schema-අනුවාදිත A/B harness එකක් නිර්වචනය කරයි. එය provider-වාර්තාකළ ටෝකන, end-to-end wall ප්රමාදය (sheet composition ඇතුළුව), model-call ගණන සහ manifest-නිර්වචිත fact retention මනියි. අමු model ප්රතිචාර වාර්තාවට ලියනු නොලැබේ; SHA-256 digests සහ ගැලපෙන fact IDs පමණක් රඳවා තබාගැනේ. `--execute-real` යැවූ විට සහ `--model`, `OMNIROUTE_BASE_URL`, සහ `OMNIROUTE_API_KEY` configure කර ඇති විට මිසක් harness එක network හෝ ගෙවන ලද model call නොකරයි. එම පැහැදිලි සැබෑ run එක නොමැතිව, එහි යන්ත්ර-කියවිය හැකි නිගමනය `HOLD` ලෙස පවතී; synthetic payload/call-count මිනුම් පමණක් promotion සාක්ෂි නොවේ.
 
-Callers හට දැනටමත් පෙළගැස්වූ පෙළ ඇති විට සහාය දක්වන video part එකකට විකල්ප `transcript.cues` array එකක් අමුණා යොදිය හැක. සෑම cue එකක්ම `text`, probe කළ කාලසීමාව තුළ සීමිත `start`/`end` කාල පරාසයක්, සහ whitelisted `source` එකක් (`client`, `embedded`, හෝ `audio-bridge`) රැගෙන යා යුතුය; `confidence` පෙරනිමි ලෙස `1` වන අතර `0` සහ `1` අතරම තිබිය යුතුය. හරියටම අනුපිටපත් cues හකුළා දමනු ලැබේ. OmniRoute කිසිවිටෙක මෙම මෙටාඩේටා වලින් transcription ආරම්භ නොකරයි: වලංගු කළ cues, source, confidence සහ interval සමඟ විස්තර කළ ප්රතිඵලයට පිටපත් කරනු ලබන අතර ෆ්රේම් කැප්ෂන් සමඟින් අවිශ්වාසදායක නිරීක්ෂණ ලෙස render කරනු ලැබේ. අවලංගු, පරාසයෙන් පිටත, හෝ මූලෝත්පත්තියක් නැති පෙළ කැප්ෂන් ප්රවාහයට මිශ්ර කිරීම වෙනුවට ප්රතික්ෂේප කරනු ලැබේ. request-body transcript නාලිකා දෙකම සැපයූ මූලෝත්පත්තිය `client` වෙත normalize කරයි, ස්වයං-ඉදිරිපත්කළ `embedded` හෝ `audio-bridge` labels ද ඇතුළුව. server-හිමි adapter එකකට පමණක් code-පමණක් `trustedSource` argument එක හරහා එම විශ්වාසදායක labels පැවරිය හැක; request JSON field එකකට එම argument එකට ළඟා විය නොහැක. Transcript පෙළ, එහි මූලෝත්පත්තිය නොසලකා, අවිශ්වාසදායක media-ව්යුත්පන්න අන්තර්ගතය ලෙස පවතින අතර කිසිවිටෙක බලයලත්කම තීරණය නොකළ යුතුය.
+Callers හට දැනටමත් පෙළගැස්වූ පෙළ ඇති විට සහාය දක්වන video part එකකට විකල්ප `transcript.cues` array එකක් අමුණා යොදිය හැක. සෑම cue එකක්ම `text`, probe කළ කාලසීමාව තුළ සීමිත `start`/`end` කාල පරාසයක්, සහ whitelisted `source` එකක් (`client`, `embedded`, හෝ `audio-bridge`) රැගෙන යා යුතුය; `confidence` පෙරනිමි ලෙස `1` වන අතර `0` සහ `1` අතරම තිබිය යුතුය. හරියටම අනුපිටපත් cues හකුළා දමනු ලැබේ. 67router කිසිවිටෙක මෙම මෙටාඩේටා වලින් transcription ආරම්භ නොකරයි: වලංගු කළ cues, source, confidence සහ interval සමඟ විස්තර කළ ප්රතිඵලයට පිටපත් කරනු ලබන අතර ෆ්රේම් කැප්ෂන් සමඟින් අවිශ්වාසදායක නිරීක්ෂණ ලෙස render කරනු ලැබේ. අවලංගු, පරාසයෙන් පිටත, හෝ මූලෝත්පත්තියක් නැති පෙළ කැප්ෂන් ප්රවාහයට මිශ්ර කිරීම වෙනුවට ප්රතික්ෂේප කරනු ලැබේ. request-body transcript නාලිකා දෙකම සැපයූ මූලෝත්පත්තිය `client` වෙත normalize කරයි, ස්වයං-ඉදිරිපත්කළ `embedded` හෝ `audio-bridge` labels ද ඇතුළුව. server-හිමි adapter එකකට පමණක් code-පමණක් `trustedSource` argument එක හරහා එම විශ්වාසදායක labels පැවරිය හැක; request JSON field එකකට එම argument එකට ළඟා විය නොහැක. Transcript පෙළ, එහි මූලෝත්පත්තිය නොසලකා, අවිශ්වාසදායක media-ව්යුත්පන්න අන්තර්ගතය ලෙස පවතින අතර කිසිවිටෙක බලයලත්කම තීරණය නොකළ යුතුය.
 
 උසස් caller කෙනෙකුට එම video එක සඳහා `audioTranscript` track එකක් සැපයිය හැක; එය client-සැපයූ පෙළ ලෙස සලකනු ලබන අතර server transcription එකේ සාක්ෂියක් නොවේ. fusion seam එක එක් deadline සහ abort signal එකක් යටතේ දෘශ්ය සහ ශ්රව්ය නිරීක්ෂණ ක්රියාත්මක කර, පොදු timeline එකක පිළිවෙළකට සකසා, හරියටම අනුපිටපත් හකුළා දමා, එක් පැත්තක් පමණක් සාර්ථක වූ විට partial ප්රතිඵලයක් වාර්තා කරයි. අවලංගු `audioTranscript` එකක් සම්පූර්ණ video එක අසාර්ථක කිරීම වෙනුවට එම partial ප්රතිඵලයට පහත වැටේ — දෘශ්ය විස්තරය රඳවා තබාගෙන audio ශාඛාව sanitized failure code එකක් සටහන් කරයි. ශාඛා-එකකට ලබාගත හැකිබව, partial flag එක සහ sanitized failure codes විස්තර කළ ප්රතිඵලයේ, guardrail මෙටාඩේටා (`audioFusionRuns`/`audioFusionPartials`/
 `audioFusionFailureCodes`), result-cache මෙටාඩේටා සහ බ්රිජ් fusion counters හි ආරක්ෂා කර ඇත. පෙරනිමි Video Bridge path එක speech-to-text නොකැඳවන අතර දෙවන media පිටපතක් download නොකරයි; එම පැහැදිලි track එක නොමැතිව, එය video-පමණක් ලෙස පවතී.
@@ -869,7 +869,7 @@ dispatch) කාර්යයන් දෙකක් ඇත:
   (උදා. "ignore all previous instructions…", DAN-ශෛලීය jailbreaks) ප්රතිචාරයේ
   `error.code === "SECURITY_001"` අඩංගු බව තහවුරු කරයි, එනම් guard එක
   සැබවින්ම ඉල්ලීම ප්රතික්ෂේප කළ බව.
-- **`garak` (උපදේශාත්මක)** — දේශීය OmniRoute සිද්ධියක් (`http://localhost:20128/v1`)
+- **`garak` (උපදේශාත්මක)** — දේශීය 67router සිද්ධියක් (`http://localhost:20128/v1`)
   ඉලක්ක කර garak `--probes promptinject,dan,leakreplay` ධාවනය කරයි. provider
   secret එකකින් (`PROMPTFOO_PROVIDER_KEY`) gated වේ; සුමටව මඟ හරිනු ලබන අතර
   `|| true` ලෙස අවසන් වන නිසා, CI අසාර්ථක නොකර වාර්තා කරයි.

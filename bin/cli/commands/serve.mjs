@@ -163,7 +163,7 @@ export async function runServe(opts = {}) {
       tlsCert,
       tlsKey,
     });
-    console.log(`\x1b[32m✔ OmniRoute tray started in background\x1b[0m`);
+    console.log(`\x1b[32m✔ 67router tray started in background\x1b[0m`);
     console.log(`  \x1b[1mDashboard:\x1b[0m  ${urlScheme}://localhost:${port}`);
     return result;
   }
@@ -406,7 +406,7 @@ export function reportPortInUse(port, pids = []) {
         : `PIDs ${known.join(", ")}`;
   console.error(`\n\x1b[31m✖ Port ${port} is already in use by ${owner}.\x1b[0m`);
   console.error(
-    `  Another OmniRoute is most likely already serving there, so open` +
+    `  Another 67router is most likely already serving there, so open` +
       ` ${urlScheme}://localhost:${port} before starting a second one.`
   );
   console.error(`  To replace it:    \x1b[36momniroute stop\x1b[0m, then start again`);
@@ -433,7 +433,7 @@ function runDaemon(serverJs, env, memoryLimit, dashboardPort, apiPort) {
   );
   writePidFile("server", server.pid);
   server.unref();
-  console.log(`\x1b[32m✔ OmniRoute started in background (PID: ${server.pid})\x1b[0m`);
+  console.log(`\x1b[32m✔ 67router started in background (PID: ${server.pid})\x1b[0m`);
   console.log(
     `  \x1b[1mDashboard:\x1b[0m  ${serveHeadless ? "disabled (headless)" : `${urlScheme}://localhost:${dashboardPort}`}`
   );
@@ -494,7 +494,7 @@ function runWithoutRecovery(serverJs, env, memoryLimit, dashboardPort, apiPort, 
   });
 
   const shutdown = () => {
-    console.log("\n\x1b[33m⏹ Shutting down OmniRoute...\x1b[0m");
+    console.log("\n\x1b[33m⏹ Shutting down 67router...\x1b[0m");
     cleanupPidFile("server");
     server.kill("SIGTERM");
     setTimeout(() => {
@@ -693,7 +693,7 @@ async function onReady(dashboardPort, apiPort, noOpen, startedAt) {
       : "0.0";
 
   console.log(`
-  \x1b[32m✔ OmniRoute is running!\x1b[0m \x1b[2m(started in ${elapsed}s)\x1b[0m
+  \x1b[32m✔ 67router is running!\x1b[0m \x1b[2m(started in ${elapsed}s)\x1b[0m
 
   \x1b[1m  Dashboard:\x1b[0m  ${serveHeadless ? "disabled (headless)" : dashboardUrl}
   \x1b[1m  API Base:\x1b[0m   ${apiUrl}/v1

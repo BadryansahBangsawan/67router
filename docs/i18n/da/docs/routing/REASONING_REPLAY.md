@@ -7,7 +7,7 @@
 > **Sandhedskilde:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Senest opdateret:** 2026-06-28 — v3.8.40
 
-OmniRoute registrerer `reasoning_content`, som assistenten producerer via modeller i tænkningstilstand, og afspiller det transparent i flertrinsanmodninger, når upstream-udbyderen kræver det. Dette eliminerer de HTTP 400-fejl, som strikse udbydere returnerer, når en klients samtalehistorik mangler ræsonnementet fra den foregående tur.
+67router registrerer `reasoning_content`, som assistenten producerer via modeller i tænkningstilstand, og afspiller det transparent i flertrinsanmodninger, når upstream-udbyderen kræver det. Dette eliminerer de HTTP 400-fejl, som strikse udbydere returnerer, når en klients samtalehistorik mangler ræsonnementet fra den foregående tur.
 
 ## Hvorfor dette findes
 
@@ -17,7 +17,7 @@ Flere udbydere med tænkningstilstand afviser en opfølgende tur, medmindre den 
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-Men typiske klienter (Cursor, Cline, Roo Code, OpenAI SDK) fjerner `reasoning_content` fra den historik, de afspiller. OmniRoute gendanner det fra en cache på serversiden, så den anmodning, upstream-tjenesten modtager, er konsistent. Problem #1628 introducerede den hybride persistens i hukommelse/SQLite, så cachen overlever procesgenstarter.
+Men typiske klienter (Cursor, Cline, Roo Code, OpenAI SDK) fjerner `reasoning_content` fra den historik, de afspiller. 67router gendanner det fra en cache på serversiden, så den anmodning, upstream-tjenesten modtager, er konsistent. Problem #1628 introducerede den hybride persistens i hukommelse/SQLite, så cachen overlever procesgenstarter.
 
 ## Arkitektur
 

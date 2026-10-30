@@ -4,7 +4,7 @@
 
 ---
 
-Ritheann an linn féinóstáilte ar an meaisín **.113** (`tomni-proxmox-113`). Ó 2026-10-18 i leith, tá **ról amháin**, lipéad amháin, agus buiséad cuimhne/CPU atá meánaithe de réir ualach oibre gach reathaí OmniRoute. Faigheann sliotán Turbopack na hacmhainní a theastaíonn ón tógáil; tá na sliotáin eile meánaithe de réir na mbuaicluachanna tomhaiste acu. Ní bhíonn róthiomnú ar an meaisín ach amháin nuair a tharlaíonn tógáil Turbopack ag an am céanna le tógáil webpack Release-Green agus jab lint; ionsúnn babhtáil an óstríomhaire (16 GB) é sin, agus ós rud é go ritheann tógálacha iarrataí tarraingthe ar reathaithe óstáilte, bíonn sliotán Turbopack díomhaoin an chuid is mó den am:
+Ritheann an linn féinóstáilte ar an meaisín **.113** (`tomni-proxmox-113`). Ó 2026-10-18 i leith, tá **ról amháin**, lipéad amháin, agus buiséad cuimhne/CPU atá meánaithe de réir ualach oibre gach reathaí 67router. Faigheann sliotán Turbopack na hacmhainní a theastaíonn ón tógáil; tá na sliotáin eile meánaithe de réir na mbuaicluachanna tomhaiste acu. Ní bhíonn róthiomnú ar an meaisín ach amháin nuair a tharlaíonn tógáil Turbopack ag an am céanna le tógáil webpack Release-Green agus jab lint; ionsúnn babhtáil an óstríomhaire (16 GB) é sin, agus ós rud é go ritheann tógálacha iarrataí tarraingthe ar reathaithe óstáilte, bíonn sliotán Turbopack díomhaoin an chuid is mó den am:
 
 | reathaí              | lipéad         | ról                                                                                                                                                   | `MemoryHigh` / `MemoryMax`    | `CPUQuota`     |
 | -------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | -------------- |
@@ -22,7 +22,7 @@ Tomhaiste 2026-10-18:
 | babhtáil   | 16 GB                                  | ritheann `omniroute-113-5` agus babhtáil díchumasaithe (`MemorySwapMax=0`), ionas go stoptar tógáil as smacht ag a huasteorainn seachas an meaisín a chur ag babhtáil                                                                                                                                                                                                                                              |
 | `/tmp`     | **12 GB tmpfs = RAM**                  | is cuimhne é aon rud a fhágtar ansin; glantar fuílleach tar éis 3 h                                                                                                                                                                                                                                                                                                                                                |
 | CPU        | ualach 60 ar 32 croí tugtha faoi deara | roimh na cuótaí, d'fhág tógáil Turbopack amháin (~1166 % CPU) móide sraith cumhdaigh ar an meaisín céanna na héisteoirí eile gan acmhainní dá gcomharthaí croí (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                               |
-| reathaithe | **6 éisteoir**                         | 4 OmniRoute + OmniHeuris + OmniMind; tá `omniroute-113-3/-4/-7/-8` díchumasaithe (tugann `systemctl enable --now` ceann ar ais)                                                                                                                                                                                                                                                                                    |
+| reathaithe | **6 éisteoir**                         | 4 67router + OmniHeuris + OmniMind; tá `omniroute-113-3/-4/-7/-8` díchumasaithe (tugann `systemctl enable --now` ceann ar ais)                                                                                                                                                                                                                                                                                     |
 
 Tá na teorainneacha i `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` gach aonaid
 (coimeádtar na luachanna roimhe seo mar `override.conf.bak-20261018`) agus cuireadh i bhfeidhm beo iad le
@@ -67,7 +67,7 @@ próiseas oibre go bhfuil an jab curtha ar ceal agus téann an t-éisteoir ar l�
 
 Fágann `KillMode=process` réamhshocraithe an reathaí `Runner.Worker → npm → next-build`
 beo nuair a stoptar nó a atosaítear aonad — leanann tógáil dhílleachta uirthi ag ídiú RAM agus
-CPU gan aon jab ceangailte léi. Tá forlíontán ag gach aonad OmniRoute
+CPU gan aon jab ceangailte léi. Tá forlíontán ag gach aonad 67router
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 ina bhfuil `KillMode=mixed`: SIGTERM chuig an éisteoir ar dtús, SIGKILL chuig an cgroup iomlán ag
 `TimeoutStop`. Tagann sé i bhfeidhm an chéad uair eile a atosaítear an t-aonad — atosaigh **reathaí amháin ag
@@ -115,7 +115,7 @@ an am, agus é díomhaoin amháin**, agus an tseiceáil díomhaointis agus an t-
   `quality.yml`. Bhí `MemoryHigh=4G` ag `omniroute-113` go dtí 2026-10-18 — chaith tógáil promptfoo
   54 nóiméad ag athéileamh cuimhne chun dul ar aghaidh ann; cuireann 8 GB deireadh leis an
   scóigireacht.
-- **Níos lú éisteoirí d'aon ghnó.** Díchumasaíodh ceithre aonad OmniRoute ar 2026-08-29 — is tionónta
+- **Níos lú éisteoirí d'aon ghnó.** Díchumasaíodh ceithre aonad 67router ar 2026-08-29 — is tionónta
   eile é gach éisteoir breise don bhuiséad cuimhne thuas. Is é 6 uasteorainn an ghlantóra
   (`MAX_ACTIVE_RUNNERS=6` in cron): comhaireann sé gach `Runner.Listener` ar an meaisín, agus cuireann
   OmniHeuris + OmniMind dhá cheann eile lenár gceithre cinn.

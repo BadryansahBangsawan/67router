@@ -40,9 +40,9 @@ capabilitate locală pentru instrumente, asociată interacțiunii, atunci când 
    conectorului personalizat. Configurările noi cu suport pentru instrumente trebuie să utilizeze
    un conector nou creat, denumit exact `OmniRoute Codex v2`, cu Autentificare setată la Niciuna
    și Permisiuni setate la Permite toate acțiunile.
-3. Rulați verificarea conexiunii. OmniRoute deschide un Chat temporar susținut de un browser și
+3. Rulați verificarea conexiunii. 67router deschide un Chat temporar susținut de un browser și
    detectează dacă Sol și Pro sunt disponibile pentru cont.
-4. Salvați conexiunea. OmniRoute înlocuiește cookie-ul lipit cu starea de stocare Playwright
+4. Salvați conexiunea. 67router înlocuiește cookie-ul lipit cu starea de stocare Playwright
    verificată și o stochează împreună cu cheia de execuție prin intermediul abstractizării
    criptate a acreditărilor.
 
@@ -94,13 +94,13 @@ un conector nou `OmniRoute Codex v2`.
 
 ## VPS fără afișaj și Docker
 
-Pentru instalările npm, systemd și PM2, OmniRoute detectează căile uzuale pentru Chrome și Chromium.
-Alternativ, setați `CHATGPT_WEB_CODEX_CHROME_PATH`. Turele de execuție utilizează în mod deliberat Chrome cu interfață grafică, deoarece ChatGPT respinge configurația unui browser complet headless. Prin urmare, o gazdă fără afișaj trebuie să ruleze OmniRoute cu un afișaj Xvfb privat; simpla setare a căii către Chrome nu furnizează unul.
+Pentru instalările npm, systemd și PM2, 67router detectează căile uzuale pentru Chrome și Chromium.
+Alternativ, setați `CHATGPT_WEB_CODEX_CHROME_PATH`. Turele de execuție utilizează în mod deliberat Chrome cu interfață grafică, deoarece ChatGPT respinge configurația unui browser complet headless. Prin urmare, o gazdă fără afișaj trebuie să ruleze 67router cu un afișaj Xvfb privat; simpla setare a căii către Chrome nu furnizează unul.
 
 Profilul Docker `web` pornește `chatgpt-web-codex-browser` în rețeaua Compose internă.
-Serviciul sidecar rulează Chrome cu interfață grafică în Xvfb, astfel încât nu este necesar un afișaj fizic. Portul său CDP nu este publicat pe gazdă. Volumul protejat al profilului browserului este separat de volumul de date OmniRoute, iar browserul primește suficientă memorie partajată. Proxy-ul CDP intern ascultă numai pe portul `9223` în cadrul rețelei Compose; Chrome rămâne legat la interfața loopback în serviciul sidecar.
+Serviciul sidecar rulează Chrome cu interfață grafică în Xvfb, astfel încât nu este necesar un afișaj fizic. Portul său CDP nu este publicat pe gazdă. Volumul protejat al profilului browserului este separat de volumul de date 67router, iar browserul primește suficientă memorie partajată. Proxy-ul CDP intern ascultă numai pe portul `9223` în cadrul rețelei Compose; Chrome rămâne legat la interfața loopback în serviciul sidecar.
 
-Un contract de închiriere al supervizorului din `DATA_DIR` împiedică mai multe procese OmniRoute să dețină aceeași stare a tunelului și a brokerului. Un conflict este raportat de instrumentul de diagnosticare.
+Un contract de închiriere al supervizorului din `DATA_DIR` împiedică mai multe procese 67router să dețină aceeași stare a tunelului și a brokerului. Un conflict este raportat de instrumentul de diagnosticare.
 
 ## Recuperare interactivă
 

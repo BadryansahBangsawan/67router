@@ -45,7 +45,7 @@ WAF 僅檢查 `messages[].content`。它**不會**檢查：
 
 在短時間內快速發出約 5 個請求後，WAF 會開始封鎖通常能夠通過的內容。閒置約 5–10 秒後，流量桶限制會逐漸放寬。這與 Claude Code 或 Codex CLI 快速連續進行多次工具使用／訊息傳送呼叫時，造成間歇性 `400 content-blocked` 錯誤的是同一個綁定 IP 與金鑰的速率限制器。
 
-## OmniRoute 中已套用的緩解措施
+## 67router 中已套用的緩解措施
 
 1. **`open-sse/services/wafRateLimit.ts`** — 突發流量防護機制，強制對任何 `agentrouter:*` URL 的外送請求保持至少 500 ms 的間隔。此間隔遠低於人類對延遲的感知程度，並能防止 WAF 在正常流量下啟動。
 

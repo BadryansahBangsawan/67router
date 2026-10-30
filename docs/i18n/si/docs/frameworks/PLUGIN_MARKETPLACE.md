@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **අවසන් වරට යාවත්කාලීන කළේ:** 2026-06-28 — v3.8.40
 
-OmniRoute සමඟ WordPress-ආකාරයේ ප්ලගින පද්ධතියක් සපයනු ලැබේ. ප්ලගින යනු ස්වයං-අන්තර්ගත
+67router සමඟ WordPress-ආකාරයේ ප්ලගින පද්ධතියක් සපයනු ලැබේ. ප්ලගින යනු ස්වයං-අන්තර්ගත
 නාමාවලි වේ — සෑම එකකම `plugin.json` මැනිෆෙස්ටයක් සහ ප්රවේශ ගොනුවක් ඇත — ඒවා
 ඉල්ලීම් නළ මාර්ගයට (`onRequest` / `onResponse` / `onError`) සහ
 ජීවන චක්ර සිදුවීම්වලට (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)
@@ -153,7 +153,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Plugin නාමාවලිය
 
-Plugins OmniRoute data නාමාවලිය යටතේ පවතී:
+Plugins 67router data නාමාවලිය යටතේ පවතී:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

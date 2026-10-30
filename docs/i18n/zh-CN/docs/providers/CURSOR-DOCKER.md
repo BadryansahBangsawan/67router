@@ -4,7 +4,7 @@
 
 ---
 
-当 OmniRoute 在 Docker 内运行时，旧版 **从 Cursor IDE 导入** /
+当 67router 在 Docker 内运行时，旧版 **从 Cursor IDE 导入** /
 `cursor-agent` 流程会失败，因为容器无法访问主机上的 Cursor
 安装。请改用 **使用 Cursor 登录**（deep-control PKCE）。
 
@@ -14,7 +14,7 @@
    `~/.config/Cursor/User/globalStorage/state.vscdb`。
    在 macOS 版 Docker Desktop 上，默认不会挂载主机 IDE 数据库，而且
    即使主机是 Darwin，容器操作系统仍然是 Linux。
-2. **没有 `cursor-agent` 二进制文件** — 官方 OmniRoute 镜像不包含
+2. **没有 `cursor-agent` 二进制文件** — 官方 67router 镜像不包含
    `cursor-agent`。Available Models 之前会在 shell 中执行
    `cursor-agent --list-models`，失败时回退到静态目录。
 3. **二进制文件错误** — **不要**将 macOS 的 `cursor-agent` 绑定挂载到 Linux
@@ -24,11 +24,11 @@
 
 1. 打开 **Dashboard → Providers → Cursor**。
 2. 选择 **Login with Cursor** 选项卡。
-3. 点击 **Login with Cursor** — OmniRoute 会在你的**主机**浏览器中打开
+3. 点击 **Login with Cursor** — 67router 会在你的**主机**浏览器中打开
    `https://cursor.com/loginDeepControl?…`。
-4. 在浏览器中批准登录，然后返回仪表板。OmniRoute 会轮询
+4. 在浏览器中批准登录，然后返回仪表板。67router 会轮询
    `api2.cursor.sh/auth/poll`，直到收到令牌。
-5. OmniRoute 会存储**访问令牌和刷新令牌**，并通过
+5. 67router 会存储**访问令牌和刷新令牌**，并通过
    `https://api2.cursor.sh/auth/exchange_user_api_key` 刷新它们。
 
 此方式不要求容器内安装 Cursor IDE 或 `cursor-agent`。
@@ -37,10 +37,10 @@
 
 使用已登录的连接时，**Available Models / Auto-Sync** 会优先使用连接的
 Bearer 令牌获取 Cursor 的 HTTP `AiService/AvailableModels` 目录。
-如果失败，OmniRoute 仍会尝试使用主机上的 `cursor-agent`（如果存在），然后
+如果失败，67router 仍会尝试使用主机上的 `cursor-agent`（如果存在），然后
 回退到静态注册表种子。
 
-OmniRoute 始终会在目录中公开 **`auto`**（显示为“Auto”），以及
+67router 始终会在目录中公开 **`auto`**（显示为“Auto”），以及
 OpenCodex 风格的路由模式 **`auto-cost`**、**`auto-balance`** 和
 **`auto-intelligence`**。在线路传输时，它们会映射到 Cursor 的 `default` 模型
 （三个变体会附带一个 `optimization` ModelParameter）。当高级模型的使用额度耗尽时，
@@ -86,7 +86,7 @@ Cursor 的 **Usage → Provider Limits** 会在 PKCE 或令牌导入后，使用
 ## 空响应轮次/用量耗尽
 
 当 Cursor 接受 Run 但未返回任何助手文本时（高级用量耗尽时很常见），
-OmniRoute 会返回可操作的 **429**（包含配额提示）或带有指导信息的 **502**，
+67router 会返回可操作的 **429**（包含配额提示）或带有指导信息的 **502**，
 而不是简单的“Provider returned empty content”。诸如
 `not_found: AI Model Not Found`（用量窗口已耗尽）之类的流式传输失败会被归类为
 **Cursor 速率限制/用量超出**，并在整个 SSE 管道中保留该消息（共享的空流保护逻辑
@@ -95,7 +95,7 @@ OmniRoute 会返回可操作的 **429**（包含配额提示）或带有指导�
 
 ## 客户端版本（无头模式）
 
-如果本地未安装 `cursor-agent`，OmniRoute 会依次通过环境变量
+如果本地未安装 `cursor-agent`，67router 会依次通过环境变量
 `CURSOR_AGENT_CLI_VERSION`、磁盘缓存的 Cursor 安装程序脚本抓取结果，
 最后是固定的构建 id，来解析 `x-cursor-client-version`。需要时可使用
 `CURSOR_AGENT_CLI_VERSION` 覆盖。

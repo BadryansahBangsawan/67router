@@ -4,7 +4,7 @@
 
 ---
 
-> **Kısa Özet**: OmniRoute, her isteğin token kullanımını izler, maliyeti hesaplar, API anahtarı başına kotayı uygular ve analizleri kontrol panelinde gösterir. Bu kılavuz, tüm bunların nasıl çalıştığını açıklar.
+> **Kısa Özet**: 67router, her isteğin token kullanımını izler, maliyeti hesaplar, API anahtarı başına kotayı uygular ve analizleri kontrol panelinde gösterir. Bu kılavuz, tüm bunların nasıl çalıştığını açıklar.
 
 **Kaynaklar:**
 
@@ -17,7 +17,7 @@
 
 ## Genel Bakış
 
-OmniRoute üzerinden geçen her istek, aşağıdakileri içeren bir **kullanım kaydı** oluşturur:
+67router üzerinden geçen her istek, aşağıdakileri içeren bir **kullanım kaydı** oluşturur:
 
 - **Kimlik**: hangi API anahtarı, sağlayıcı, model ve kombinasyon
 - **Token'lar**: istem token'ları, tamamlama token'ları, önbelleğe alınmış token'lar ve toplam
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Kullanım bilgisi döndürmeyen sağlayıcılarda (bazı web çerezi sağlayıcıları) OmniRoute, `token başına ~4 karakter` sezgisel yöntemini kullanarak token sayısını **tahmin eder** (bkz. `open-sse/services/autoCombo/pipelineRouter.ts`).
+Kullanım bilgisi döndürmeyen sağlayıcılarda (bazı web çerezi sağlayıcıları) 67router, `token başına ~4 karakter` sezgisel yöntemini kullanarak token sayısını **tahmin eder** (bkz. `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Önbelleğe Alınmış Token'lar
 
-OmniRoute, `cached_tokens` değerini `prompt_tokens` değerinden ayrı olarak izler; çünkü:
+67router, `cached_tokens` değerini `prompt_tokens` değerinden ayrı olarak izler; çünkü:
 
 - Anthropic istem önbellekleme, önbelleğe alınmış token'lar için daha düşük bir ücret uygular (normal ücretin %10'u)
 - Bazı sağlayıcılar, farklı şekilde fiyatlandırılması gereken `cache_read_input_tokens` değerini döndürür
@@ -117,7 +117,7 @@ Fiyatlandırma verileri, LiteLLM'den `/api/pricing/sync` uç noktası aracılı�
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Fiyatlandırma verisi bulunmayan modeller için OmniRoute, dahili ortalama oranları (LiteLLM'in fiyatlandırma verilerinden alınır) kullanarak **maliyeti tahmin etme** yöntemine başvurur.
+Fiyatlandırma verisi bulunmayan modeller için 67router, dahili ortalama oranları (LiteLLM'in fiyatlandırma verilerinden alınır) kullanarak **maliyeti tahmin etme** yöntemine başvurur.
 
 ---
 

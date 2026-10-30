@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Gaeilge)
+# 67router A2A Server Documentation (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Prótacal Gníomhaire le Gníomhaire v0.3 — OmniRoute mar ghníomhaire ródaithe cliste
+> Prótacal Gníomhaire le Gníomhaire v0.3 — 67router mar ghníomhaire ródaithe cliste
 
 Tá dhá aghaidh ar dhromchla A2A:
 
@@ -19,7 +19,7 @@ Déanann `A2ATaskManager` (`src/lib/a2a/taskManager.ts`, TTL réamhshocraithe 5 
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Tugtar ar ais an Cárta Gníomhaire ina ndéantar cur síos ar chumais, scileanna agus riachtanais fíordheimhnithe OmniRoute.
+Tugtar ar ais an Cárta Gníomhaire ina ndéantar cur síos ar chumais, scileanna agus riachtanais fíordheimhnithe 67router.
 
 Faightear réimse `version` an Chárta Gníomhaire ó `process.env.npm_package_version` (féach `src/app/.well-known/agent.json/route.ts:13`), mar sin fanann sé sioncronaithe go huathoibríoch le `package.json` le gach eisiúint.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Scileanna atá ar Fáil
 
-Nochtann OmniRoute 6 scil A2A atá nasctha in `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Tá gach modúl scile lonnaithe in `src/lib/a2a/skills/`.
+Nochtann 67router 6 scil A2A atá nasctha in `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Tá gach modúl scile lonnaithe in `src/lib/a2a/skills/`.
 
 | Scil                      | ID                   | Cur Síos                                                                                                                                                          | Clibeanna                  | Samplaí                                            |
 | :------------------------ | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------------------------- |
-| Rutáil Chliste            | `smart-routing`      | Rutáiltear leid tríd an soláthraí/teaglaim optamach ag úsáid inneall teaglaim + scórála OmniRoute                                                                 | routing, providers         | "Rutáil an leid seo tríd an tsamhail is fearr"     |
+| Rutáil Chliste            | `smart-routing`      | Rutáiltear leid tríd an soláthraí/teaglaim optamach ag úsáid inneall teaglaim + scórála 67router                                                                  | routing, providers         | "Rutáil an leid seo tríd an tsamhail is fearr"     |
 | Bainistíocht Cuóta        | `quota-management`   | Tuairiscítear stádas cuóta in aghaidh an tsoláthraí, cabhraítear le glaóirí cinneadh cathain is ceart srianú/aistriú                                              | quota, providers           | "Seiceáil an cuóta le haghaidh anthropic"          |
 | Fionnachtain Soláthraithe | `provider-discovery` | Liostaítear soláthraithe suiteáilte le cumais, bratacha saorsraice, stádas OAuth                                                                                  | providers, discovery       | "Cad iad na soláthraithe atá ar fáil?"             |
 | Anailís Costais           | `cost-analysis`      | Meastar costas iarratais/comhrá bunaithe ar an gcatalóg + úsáid le déanaí                                                                                         | cost, usage                | "Déan meastachán ar chostas an chomhrá seo"        |
 | Tuairisc Sláinte          | `health-report`      | Comhshlonnaítear stádas circuit breaker, cooldown agus lockout in aghaidh an tsoláthraí                                                                           | health, resilience         | "Taispeáin stádas sláinte na soláthraithe go léir" |
-| Liostú Cumas              | `list-capabilities`  | Tugtar an catalóg iomlán Agent Skills le 43 iontráil (22 API + 20 CLI + 1 config) mar thábla markdown le URLanna amha SKILL.md le haghaidh instealladh comhthéacs | catalog, discovery, skills | "Liostaigh cumais OmniRoute go léir"               |
+| Liostú Cumas              | `list-capabilities`  | Tugtar an catalóg iomlán Agent Skills le 43 iontráil (22 API + 20 CLI + 1 config) mar thábla markdown le URLanna amha SKILL.md le haghaidh instealladh comhthéacs | catalog, discovery, skills | "Liostaigh cumais 67router go léir"                |
 
 > Ba cheart an Agent Card a choinneáil ailínithe leis an gcatalóg beo de 375 soláthraí; faightear líonmhaireachtaí soláthraithe agus meiteashonraí saor/gan údarú ón gclárlann rith-ama.
 
 ### Sonraí na Scile `list-capabilities`
 
-Tá an scil `list-capabilities` fíor-úsáideach do ghníomhairí seachtracha a theastaíonn uathu a fháil amach cad a nochtann OmniRoute sula seolann siad glaonna API. Tugann sí déantús tábla markdown struchtúrtha ar ais:
+Tá an scil `list-capabilities` fíor-úsáideach do ghníomhairí seachtracha a theastaíonn uathu a fháil amach cad a nochtann 67router sula seolann siad glaonna API. Tugann sí déantús tábla markdown struchtúrtha ar ais:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ Is é críochphointe JSON-RPC `/a2a` an pointe iontrála canónta A2A. Soláthra
 | `/.well-known/agent.json`    | GET  | Cárta Gníomhaire (fionnachtain A2A)                             | (poiblí, i dtaisce ar feadh 3600s)                  |
 | `/api/a2a/tasks`             | POST | Tarmligean isteach chuig flít OmniConductor (Conductor PRD RF5) | Bearer i gcoinne `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Tarmligean isteach Conductor (`POST /api/a2a/tasks`):** tarmligeann gníomhairí seachtracha A2A obair chódúcháin chuig flít OmniConductor trí OmniRoute. Corp: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ní féidir ach scileanna fhlít Conductor (na cinn a fhógraítear ar an gCárta Gníomhaire) a tharmligean; tá `metadata.conductor.repo.url` riachtanach (oibríonn an flít ar stórtha git). Aistrítear an bealach go `POST /v1/tasks` an mhoil agus úsáid á baint as `CONDUCTOR_ORCHESTRATOR_TOKEN` ar thaobh an fhreastalaí (`CONDUCTOR_HUB_TOKEN` mar chúltaca), agus seoltar `201 { conductor_task_id, state: "submitted" }` ar ais; sreabhann staideanna tascanna ar ais tríd an scáthán SSE→A2A (RF1) agus tá siad infheicthe trí `GET /api/a2a/tasks?skill=conductor`.
+**Tarmligean isteach Conductor (`POST /api/a2a/tasks`):** tarmligeann gníomhairí seachtracha A2A obair chódúcháin chuig flít OmniConductor trí 67router. Corp: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ní féidir ach scileanna fhlít Conductor (na cinn a fhógraítear ar an gCárta Gníomhaire) a tharmligean; tá `metadata.conductor.repo.url` riachtanach (oibríonn an flít ar stórtha git). Aistrítear an bealach go `POST /v1/tasks` an mhoil agus úsáid á baint as `CONDUCTOR_ORCHESTRATOR_TOKEN` ar thaobh an fhreastalaí (`CONDUCTOR_HUB_TOKEN` mar chúltaca), agus seoltar `201 { conductor_task_id, state: "submitted" }` ar ais; sreabhann staideanna tascanna ar ais tríd an scáthán SSE→A2A (RF1) agus tá siad infheicthe trí `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

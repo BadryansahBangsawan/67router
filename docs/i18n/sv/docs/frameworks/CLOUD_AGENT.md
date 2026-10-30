@@ -7,7 +7,7 @@
 > **Sanningskälla:** `src/lib/cloudAgent/` och `src/app/api/v1/agents/tasks/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40 (uppdatering av frontmatter; 4 agenter inkl. cursor-cloud)
 
-OmniRoute orkestrerar molnbaserade kodningsagenter från tredje part (Codex Cloud, Cursor,
+67router orkestrerar molnbaserade kodningsagenter från tredje part (Codex Cloud, Cursor,
 Devin, Jules) som långvariga uppgifter. Varje agent kapslas in bakom ett enhetligt gränssnitt så att
 klienter kan skicka en prompt + URL till ett kodarkiv och ta emot resultat utan att behöva hantera
 leverantörsspecifika API:er.

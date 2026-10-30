@@ -25,7 +25,7 @@ Má tá an focal litriúil `provider` (i gcás ar bith) sa chéad cholún den ch
 Íoslódáil comhad tosaithe ón módalfhuinneog iompórtála (**Íoslódáil teimpléad CSV**). Sampla:
 
 ```csv
-# Iompórtáil soláthraithe OmniRoute (colúin de réir suímh)
+# Iompórtáil soláthraithe 67router (colúin de réir suímh)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

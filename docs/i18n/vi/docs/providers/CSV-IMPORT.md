@@ -25,7 +25,7 @@ Dòng đầu tiên có cột đầu tiên là từ `provider` theo đúng nghĩa
 Tải xuống tệp khởi đầu từ cửa sổ nhập (**Download CSV template**). Ví dụ:
 
 ```csv
-# Nhập nhà cung cấp OmniRoute (các cột theo vị trí)
+# Nhập nhà cung cấp 67router (các cột theo vị trí)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

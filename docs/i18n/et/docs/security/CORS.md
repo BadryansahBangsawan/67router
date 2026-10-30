@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute määrab ühe tsentraliseeritud lubatud loendi abil, millised **brauseri päritolud** võivad lugeda päritoluüleste päringute vastuseid. Mudel on **vaikimisi suletud**:
+67router määrab ühe tsentraliseeritud lubatud loendi abil, millised **brauseri päritolud** võivad lugeda päritoluüleste päringute vastuseid. Mudel on **vaikimisi suletud**:
 ühtegi päritolu ei lubata enne, kui te selle selgesõnaliselt lubate. Sellel lehel kirjeldatakse, kuidas lubatud loend
 lahendatakse, mida `CORS_ALLOW_ALL=true` tegelikult avalikustab (ja mis veelgi olulisem, mida see
 **ei avalikusta**), kuidas arendus- ja tootmiskeskkonda turvaliselt seadistada ning käitusaegset hoiatust,
@@ -45,13 +45,13 @@ järgmises järjekorras:
 ## Ohumudel — mida `CORS_ALLOW_ALL=true` tegelikult avalikustab
 
 Üldist OWASP-i hoiatust („metamärgiga CORS = iga sait saab teie API-t kutsuda”) tasub
-tõsiselt võtta, kuid OmniRoute'i kokkupuutepind on **üldisest olukorrast kitsam**,
+tõsiselt võtta, kuid 67router'i kokkupuutepind on **üldisest olukorrast kitsam**,
 sest rakendusel on üks konkreetne omadus:
 
 > **Keskne `applyCorsHeaders()` ei väljasta kunagi päist
 > `Access-Control-Allow-Credentials`.** Brauser ei tee _autenditud_
 > (küpsist sisaldavat) päritoluülest vastust loetavaks, kui server ei saada päist
-> `Access-Control-Allow-Credentials: true`. OmniRoute'i ühine CORS-i tee ei tee
+> `Access-Control-Allow-Credentials: true`. 67router'i ühine CORS-i tee ei tee
 > seda kunagi.
 
 See tähendab iga pinna kohta järgmist, isegi kui `CORS_ALLOW_ALL=true`:
@@ -91,7 +91,7 @@ sellest CORS-i juhendist eraldi.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Kui OmniRoute töötab pöördproksi / tunneli (nginx, Caddy, Cloudflare
+- Kui 67router töötab pöördproksi / tunneli (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) taga, **ei ole** CORS teie ainus kaitsemeede — loopback-marsruudi
   kaitse turvab endiselt protsesside käivitamist võimaldavaid marsruute (vt
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Ärge võltsige päist
@@ -107,7 +107,7 @@ sellest CORS-i juhendist eraldi.
 Isegi arenduskeskkonnas vajate metamärki harva. Lubage ainult kasutatavad arendusserverid:
 
 ```bash
-# Vite'i (5173) + Next.js-i (3000) arendusserverid, mis kutsuvad kohalikku OmniRoute'i
+# Vite'i (5173) + Next.js-i (3000) arendusserverid, mis kutsuvad kohalikku 67router'i
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +127,14 @@ taaskäivitamiseta.
   haldusliidese ega juhtpaneeli päritoluallikaid ühelegi liberaalsele seadistusele; nende puhul peab
   vaikimisi ligipääs olema alati rangelt keelatud.
 
-## Näide: pöördproksi OmniRoute'i ees
+## Näide: pöördproksi 67router'i ees
 
-CORS-i jõustab OmniRoute ise, seega ei tohiks proksi üldjuhul `Access-Control-*`
+CORS-i jõustab 67router ise, seega ei tohiks proksi üldjuhul `Access-Control-*`
 päiseid lisada ega ümber kirjutada (topeltpäised põhjustavad brauserites tõrkeid). Lõpeta TLS
-ja edasta päring edasi — lase OmniRoute'il eelpäringule vastata:
+ja edasta päring edasi — lase 67router'il eelpäringule vastata:
 
 ```nginx
-# nginx — edasta OmniRoute'ile; ÄRA sisesta siia Access-Control-* päiseid
+# nginx — edasta 67router'ile; ÄRA sisesta siia Access-Control-* päiseid
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +142,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Säilita edastuspäised: samas hostis asuv proksi loob ühenduse tagasisideaadressilt ja just
-    # need annavad OmniRoute'ile teada, et helistaja ei ole kohalik operaator. Proksi, mis ei lisa neist ühtegi,
+    # need annavad 67router'ile teada, et helistaja ei ole kohalik operaator. Proksi, mis ei lisa neist ühtegi,
     # jätab mulje, et iga kaughelistaja on kohalik. Ära määra ka X-Forwarded-For väärtuseks 127.0.0.1.
 }
 ```
 
-Määra brauseri lubatud päritolud OmniRoute'is (`CORS_ALLOWED_ORIGINS` või
+Määra brauseri lubatud päritolud 67router'is (`CORS_ALLOWED_ORIGINS` või
 vahekaardil Security), mitte proksis.
 
 ## Lähtefailid

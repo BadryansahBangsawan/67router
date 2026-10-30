@@ -7,7 +7,7 @@
 > **Patiesais avots:** `src/lib/memory/` un `src/app/api/memory/`
 > **Pēdējo reizi atjaunināts:** 2026-06-28 — v3.8.40 (pēc noklusējuma izslēgta + int8 kvantizācijas izlīdzināšana)
 
-OmniRoute nodrošina pastāvīgu sarunu atmiņu, kas piesaistīta API atslēgai (un
+67router nodrošina pastāvīgu sarunu atmiņu, kas piesaistīta API atslēgai (un
 pēc izvēles sesijas ID). Atmiņas tiek automātiski iegūtas no LLM atbildēm,
 izmantojot vienkāršu regulāro izteiksmju paraugu meklēšanu, un atkārtoti
 ievietotas turpmākajos pieprasījumos kā sākotnējais sistēmas ziņojums (vai
@@ -639,7 +639,7 @@ noklusējuma TTL — 5 min).
 
 ## Iegulšanas nodrošinātāja izvēle (v3.8.16+)
 
-OmniRoute atmiņas dzinis atbalsta **četrus iegulšanas avotus** (`src/lib/memory/embedding/`). Katram ir atšķirīgi kompromisi attiecībā uz **latentumu, izmaksām, modeļa kvalitāti un iestatīšanas sarežģītību**.
+67router atmiņas dzinis atbalsta **četrus iegulšanas avotus** (`src/lib/memory/embedding/`). Katram ir atšķirīgi kompromisi attiecībā uz **latentumu, izmaksām, modeļa kvalitāti un iestatīšanas sarežģītību**.
 
 ### Iegulšanas avoti
 
@@ -1056,13 +1056,13 @@ Adapteris lokālam [claude-mem](https://github.com/thedotmack/claude-mem) darbin
 
 Darbinātājs piesaistās tikai atgriezeniskās cilpas saskarnei, ko `GenericMemoryBackend` SSRF aizsardzība apzināti noraida. Šis adapteris šo aizsardzību nemīkstina: resursdators ir fiksēti iestatīts uz `127.0.0.1`, un konfigurācijas shēma (`ClaudeMemBackendConfigSchema`, `.strict()`) pieņem tikai:
 
-| Atslēga     | Tips   | Noklusējums | Piezīmes                                                                                                                         |
-| ----------- | ------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —           | Obligāts, 1024–65535. claude-mem darbinieka ports no tā iestatījumu faila (noklusējums `37700 + uid % 100`).                     |
-| `project`   | string | —           | Izmantojamais claude-mem projekts. Ja nav iestatīts → katra OmniRoute API atslēga tiek piesaistīta savam projektam (`apiKeyId`). |
-| `timeoutMs` | number | `5000`      | Katra pieprasījuma taimauts, 100–30000.                                                                                          |
+| Atslēga     | Tips   | Noklusējums | Piezīmes                                                                                                                        |
+| ----------- | ------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —           | Obligāts, 1024–65535. claude-mem darbinieka ports no tā iestatījumu faila (noklusējums `37700 + uid % 100`).                    |
+| `project`   | string | —           | Izmantojamais claude-mem projekts. Ja nav iestatīts → katra 67router API atslēga tiek piesaistīta savam projektam (`apiKeyId`). |
+| `timeoutMs` | number | `5000`      | Katra pieprasījuma taimauts, 100–30000.                                                                                         |
 
-Iespējojiet to, izmantojot `PUT /api/settings/memory`, un restartējiet OmniRoute (aizmugursistēmas tiek reģistrētas
+Iespējojiet to, izmantojot `PUT /api/settings/memory`, un restartējiet 67router (aizmugursistēmas tiek reģistrētas
 vienreiz funkcijā `initMemoryBackends()`):
 
 ```json
@@ -1079,7 +1079,7 @@ Kartēšana un ierobežojumi:
 
 - ID ir `claude-mem:<observationId>`; `get`/`delete` ignorē citu aizmugursistēmu ID, neveicot
   tīkla izsaukumu.
-- `create` → `POST /api/memory/save`; OmniRoute lauki (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router lauki (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) tiek pārsūtīti claude-mem laukā `metadata.omniroute` un lasīšanas laikā atjaunoti.
 - `search` → `GET /api/search?format=json&type=observations`, saīsināts atbilstoši `maxTokens`
   (rakstzīmes / 4). `list` → darbinieka lapotais novērojumu galapunkts (`total` ir apakšējā robeža — darbinieks
@@ -1091,16 +1091,16 @@ Kartēšana un ierobežojumi:
 - Uzvednes ievadīšana (`retrieval.ts`) un `omniroute_memory_*` MCP rīki joprojām lasa SQLite
   tieši — tie neizmanto `memoryManager`, tādēļ šī aizmugursistēma tos neapgādā ar datiem.
 
-**claude-mem paša LLM izsaukumu maršrutēšana caur OmniRoute.** claude-mem saspiež novērojumus,
+**claude-mem paša LLM izsaukumu maršrutēšana caur 67router.** claude-mem saspiež novērojumus,
 izmantojot LLM (noklusējums: Claude Agent SDK). Tā `openai-compatible` nodrošinātāju var novirzīt uz
-OmniRoute, tādējādi izmantojot kombināciju atkāpšanās mehānismu un izmaksu uzskaiti. Failā `~/.claude-mem/settings.json`:
+67router, tādējādi izmantojot kombināciju atkāpšanās mehānismu un izmaksu uzskaiti. Failā `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API atslēga>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute modelis vai kombinācija>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API atslēga>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router modelis vai kombinācija>"
 }
 ```
 

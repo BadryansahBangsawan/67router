@@ -4,7 +4,7 @@
 
 ---
 
-La compression d’OmniRoute repose sur des contrats de moteur. Un mode peut exécuter directement un moteur
+La compression de 67router repose sur des contrats de moteur. Un mode peut exécuter directement un moteur
 (`caveman` ou `rtk`) ou un pipeline empilé déterministe qui exécute plusieurs moteurs dans l’ordre.
 
 ## Modes
@@ -43,8 +43,8 @@ encore accumulé d'historique s'arrête à `below_min_chars` et le moteur ne tra
 pourquoi la valeur par défaut est `aggressive` plutôt que le profil le plus sûr.
 
 Le package résout sa propre portée de modèle et son profil à partir de sa configuration d'environnement.
-OmniRoute ne délègue jamais la décision : l'adaptateur épingle la porte du modèle à la portée la plus restrictive du package,
-de sorte que les paramètres de l'environnement hôte ne peuvent que restreindre la liste blanche, jamais l'élargir au-delà des reçus mesurés par OmniRoute.
+67router ne délègue jamais la décision : l'adaptateur épingle la porte du modèle à la portée la plus restrictive du package,
+de sorte que les paramètres de l'environnement hôte ne peuvent que restreindre la liste blanche, jamais l'élargir au-delà des reçus mesurés par 67router.
 
 ## Registre des moteurs
 
@@ -107,7 +107,7 @@ Le mode Caveman se concentre sur la condensation sémantique du texte courant :
 
 L’interface correspondante dans le tableau de bord est `Dashboard -> Context & Cache -> Caveman`.
 
-Le projet Caveman en amont annonce une réduction de `~75%` des jetons de sortie, une économie moyenne de `65%` sur les sorties dans les benchmarks, avec une plage de `22-87%`, ainsi qu’un outil offrant une compression des entrées de `~46%`. OmniRoute utilise le chiffre de Caveman relatif aux entrées lorsqu’il documente les économies cumulées sur les invites et le contexte ; le mode de sortie de Caveman reste une fonctionnalité distincte concernant le comportement des réponses.
+Le projet Caveman en amont annonce une réduction de `~75%` des jetons de sortie, une économie moyenne de `65%` sur les sorties dans les benchmarks, avec une plage de `22-87%`, ainsi qu’un outil offrant une compression des entrées de `~46%`. 67router utilise le chiffre de Caveman relatif aux entrées lorsqu’il documente les économies cumulées sur les invites et le contexte ; le mode de sortie de Caveman reste une fonctionnalité distincte concernant le comportement des réponses.
 
 ## RTK
 

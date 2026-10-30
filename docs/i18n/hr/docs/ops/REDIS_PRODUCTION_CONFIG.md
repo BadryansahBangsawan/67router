@@ -6,7 +6,7 @@
 
 ## Pregled
 
-Redis je **neobavezna, slaba ovisnost** u aplikaciji OmniRoute — kada Redis nije dostupan, aplikacija nastavlja raditi uz smanjene mogućnosti (pričuvna rješenja u memoriji). U produkciji podešavanje Redisa smanjuje latenciju za četiri različita radna opterećenja:
+Redis je **neobavezna, slaba ovisnost** u aplikaciji 67router — kada Redis nije dostupan, aplikacija nastavlja raditi uz smanjene mogućnosti (pričuvna rješenja u memoriji). U produkciji podešavanje Redisa smanjuje latenciju za četiri različita radna opterećenja:
 
 | Radno opterećenje           | Pokretač                      | Tvornica klijenta                                               | Uzorak ključa                                                        |
 | --------------------------- | ----------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ Redis je **neobavezna, slaba ovisnost** u aplikaciji OmniRoute — kada Redis ni
 | Spremište kvota             | `redisQuotaStore.ts`          | Zaseban singleton `getRedisClient(url)`                         | `<prefix>quota:*`, podesivo po instanci                              |
 | Prekidač kruga zagrijavanja | `redisCircuitBreakerStore.ts` | Zaseban klijent u `circuitBreakerFactory.ts`                    | `<prefix>warmup:cb:<connectionId>`                                   |
 
-Sva četiri radna opterećenja dijele jedan prefiks prostora naziva kako bi OmniRoute mogao istodobno raditi s drugim aplikacijama na jednoj instanci Redisa (npr. `127.0.0.1:6379`). Pogledajte [Prostor naziva ključeva](#key-namespacing).
+Sva četiri radna opterećenja dijele jedan prefiks prostora naziva kako bi 67router mogao istodobno raditi s drugim aplikacijama na jednoj instanci Redisa (npr. `127.0.0.1:6379`). Pogledajte [Prostor naziva ključeva](#key-namespacing).
 
 ---
 
@@ -38,12 +38,12 @@ Sva četiri radna opterećenja dijele jedan prefiks prostora naziva kako bi Omni
 
 ## Prostor naziva ključeva
 
-OmniRoute dijeli instancu Redisa sa svim ostalim što se izvršava na poslužitelju. Bez prostora naziva ključevi poput `auth:api_key:<sha256>` ili `rl:*` mogli bi se preklapati s ključevima drugih aplikacija koje upotrebljavaju isti Redis (ova instanca pokreće Redis na `127.0.0.1:6379` zajedno s drugim servisima).
+67router dijeli instancu Redisa sa svim ostalim što se izvršava na poslužitelju. Bez prostora naziva ključevi poput `auth:api_key:<sha256>` ili `rl:*` mogli bi se preklapati s ključevima drugih aplikacija koje upotrebljavaju isti Redis (ova instanca pokreće Redis na `127.0.0.1:6379` zajedno s drugim servisima).
 
-Postavite `REDIS_KEY_PREFIX` na neprazan niz kako biste dodali prefiks **svakom** ključu aplikacije OmniRoute:
+Postavite `REDIS_KEY_PREFIX` na neprazan niz kako biste dodali prefiks **svakom** ključu aplikacije 67router:
 
 ```bash
-# .env — svi OmniRoute ključevi postaju omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — svi 67router ključevi postaju omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -98,7 +98,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # ostavi prostor za predmemoriju stranica OS-a
 maxmemory-policy allkeys-lru         # ukloni zastarjele unose predmemorije autentifikacije pod opterećenjem
 
-# Trajnost (neobavezno — OmniRoute je otporan na padove i bez nje)
+# Trajnost (neobavezno — 67router je otporan na padove i bez nje)
 save 300 1                           # snimi snimku najmanje svakih 5 min ako se promijenio ≥1 ključ
 appendonly no                        # AOF nije potreban; podatke je moguće ponovno generirati
 appendfsync no                       # bez dodatnog opterećenja zbog fsync-a (RDB je dovoljan)

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
-OmniRoute, WordPress tarzı bir eklenti sistemiyle birlikte gelir. Eklentiler;
+67router, WordPress tarzı bir eklenti sistemiyle birlikte gelir. Eklentiler;
 her biri bir `plugin.json` manifesti ve bir giriş dosyası içeren, kendi kendine
 yeterli dizinlerdir. İstek işlem hattına (`onRequest` / `onResponse` / `onError`)
 ve yaşam döngüsü olaylarına (`onInstall` / `onActivate` / `onDeactivate` /
@@ -158,7 +158,7 @@ anahtarlara izin verilir.
 
 ### Eklenti dizini
 
-Eklentiler OmniRoute veri dizini altında bulunur:
+Eklentiler 67router veri dizini altında bulunur:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

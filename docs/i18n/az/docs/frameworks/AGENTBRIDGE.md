@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge, IDE süni intellekt agentlərindən gələn HTTPS trafikini ələ keçirərək OmniRoute-un vahid marşrutlaşdırma mühərriki vasitəsilə yönləndirən MITM (Man-in-the-Middle) proksisidir. O, **10 IDE agentini** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code və Trae (araşdırılır) — dəstəkləyir və bununla da OmniRoute-u bazarda süni intellekt kodlaşdırma köməkçiləri üçün ən geniş əhatə dairəsinə malik MITM proksisinə çevirir.
+AgentBridge, IDE süni intellekt agentlərindən gələn HTTPS trafikini ələ keçirərək 67router-un vahid marşrutlaşdırma mühərriki vasitəsilə yönləndirən MITM (Man-in-the-Middle) proksisidir. O, **10 IDE agentini** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code və Trae (araşdırılır) — dəstəkləyir və bununla da 67router-u bazarda süni intellekt kodlaşdırma köməkçiləri üçün ən geniş əhatə dairəsinə malik MITM proksisinə çevirir.
 
 **İdarə panelindəki yeri:** `/dashboard/tools/agent-bridge`
 **Yan panel qrupu:** Alətlər (Cloud Agents-dən sonra)
@@ -16,34 +16,34 @@ AgentBridge, IDE süni intellekt agentlərindən gələn HTTPS trafikini ələ k
 
 ### AgentBridge nədir?
 
-IDE agenti (məsələn, GitHub Copilot, Cursor, Claude Code) API çağırışı etdikdə, o, birbaşa yuxarı axın AI provayderinə (OpenAI, Anthropic və s.) qoşulur. AgentBridge həmin bağlantını TLS səviyyəsində şəffaf şəkildə ələ keçirir — heç bir agent konfiqurasiyası dəyişikliyi tələb etmədən — və sorğunu OmniRoute vasitəsilə yenidən yazır.
+IDE agenti (məsələn, GitHub Copilot, Cursor, Claude Code) API çağırışı etdikdə, o, birbaşa yuxarı axın AI provayderinə (OpenAI, Anthropic və s.) qoşulur. AgentBridge həmin bağlantını TLS səviyyəsində şəffaf şəkildə ələ keçirir — heç bir agent konfiqurasiyası dəyişikliyi tələb etmədən — və sorğunu 67router vasitəsilə yenidən yazır.
 
 Bu o deməkdir ki, siz:
 
-- **İstənilən agenti istənilən provayderə yönləndirə bilərsiniz**: Copilot OpenAI ilə danışır? Onu Anthropic Claude, Gemini və ya OmniRoute-un 375 provayderindən istənilən birinə yönləndirin.
+- **İstənilən agenti istənilən provayderə yönləndirə bilərsiniz**: Copilot OpenAI ilə danışır? Onu Anthropic Claude, Gemini və ya 67router-un 375 provayderindən istənilən birinə yönləndirin.
 - **Model uyğunlaşdırmaları tətbiq edin**: `gemini-3-flash` → `claude-sonnet-4.7` handler səviyyəsində şəffaf şəkildə.
 - **Bütün agent trafikini izləyin**: hər bir ələ keçirilmiş sorğu [Trafik İnspektoruna](./TRAFFIC_INSPECTOR.md) dərc olunur.
-- **OmniRoute dayanıqlılığını tətbiq edin**: kombo marşrutlaşdırma, circuit breaker-lər, fallback-lər və xərc izləmə IDE agent trafiki üçün də işləyir.
+- **67router dayanıqlılığını tətbiq edin**: kombo marşrutlaşdırma, circuit breaker-lər, fallback-lər və xərc izləmə IDE agent trafiki üçün də işləyir.
 
 ### Bazara nisbətdə mövqelənmə
 
-| Xüsusiyyət                | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity               |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot            |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex              |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries            |    —    |    ✓     |        —        |             ✓             |
-| Claude Code               |    —    |    —     |        ✓        |             ✓             |
-| Open Code                 |    —    |    —     |        ✓        |             ✓             |
-| Trae                      |    —    |    —     |        —        |      🔍 Araşdırılır       |
-| İdarə paneli UI           |    ✓    |    ✗     |        ✗        |             ✓             |
-| Trafik İnspektoru         |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute marşrutlaşdırma |    ✗    |    ✗     |        ✗        |             ✓             |
-| Model uyğunlaşdırma UI    |    ✗    |    ✗     |        ✗        |             ✓             |
-| Bypass siyahısı           |    ✗    |    ✗     |        ✓        |             ✓             |
-| Upstream CA sertifikatı   |    ✗    |    ✗     |        ✓        |             ✓             |
+| Xüsusiyyət               | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ------------------------ | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity              |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot           |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)               |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex             |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE               |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries           |    —    |    ✓     |        —        |            ✓             |
+| Claude Code              |    —    |    —     |        ✓        |            ✓             |
+| Open Code                |    —    |    —     |        ✓        |            ✓             |
+| Trae                     |    —    |    —     |        —        |      🔍 Araşdırılır      |
+| İdarə paneli UI          |    ✓    |    ✗     |        ✗        |            ✓             |
+| Trafik İnspektoru        |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router marşrutlaşdırma |    ✗    |    ✗     |        ✗        |            ✓             |
+| Model uyğunlaşdırma UI   |    ✗    |    ✗     |        ✗        |            ✓             |
+| Bypass siyahısı          |    ✗    |    ✗     |        ✓        |            ✓             |
+| Upstream CA sertifikatı  |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, CJS törəmə prosesi)
     │  hədəfi Host başlığının SNI dəyərinə əsasən müəyyən edir
     │  AgentBridge CA tərəfindən imzalanmış hər SNI üçün TLS sertifikatı yaradır
     ├── Yan keçmə siyahısına uyğundur? → TCP tranziti (şifrələmə açılmır)
-    ├── Hədəfə uyğundur? → fetch → OmniRoute marşrutlayıcısı (port 20128)
+    ├── Hədəfə uyğundur? → fetch → 67router marşrutlayıcısı (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── sorğu gövdəsində/başlıqlarında maskSecrets()
     │               ├── TrafficBuffer.push() — Traffic Inspector-a yayımlayır
@@ -206,7 +206,7 @@ IDE-lərin MITM bağlantısını qəbul etməsi üçün AgentBridge CA sertifika
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -263,10 +263,10 @@ GitHub Copilot üçün nümunə `/etc/hosts` qeydləri:
 
 Mənbə → hədəf uyğunlaşdırmalarını müəyyən etmək üçün hər agent kartındakı Model Uyğunlaşdırma Cədvəlindən istifadə edin:
 
-| Mənbə model (agentə məxsus) | Hədəf model (OmniRoute) |
-| --------------------------- | ----------------------- |
-| `gpt-4o`                    | `claude-sonnet-4.7`     |
-| `*` (əvəzedici simvol)      | `claude-haiku-4.7`      |
+| Mənbə model (agentə məxsus) | Hədəf model (67router) |
+| --------------------------- | ---------------------- |
+| `gpt-4o`                    | `claude-sonnet-4.7`    |
+| `*` (əvəzedici simvol)      | `claude-haiku-4.7`     |
 
 `*` əvəzedici simvolu tanınmayan istənilən modeli göstərilən hədəfə uyğunlaşdırır. `agent_bridge_mappings` cədvəlində saxlanılır.
 
@@ -279,7 +279,7 @@ Mənbə → hədəf uyğunlaşdırmalarını müəyyən etmək üçün hər agen
 
 ### 3.5 Risk bildirişi
 
-AgentBridge, IDE-nin yuxarı axın provayderlərində autentifikasiya üçün istifadə etdiyi giriş məlumatlarını (OAuth tokenləri, API açarları) tutur. Bunlar **jurnala yazılmazdan əvvəl maskalanır** (§2.7-yə baxın), lakin OmniRoute-un MITM qatı üçün görünür. Hər agent ilk dəfə aktivləşdirildikdə bağlana bilən risk bildirişi modalı göstərilir.
+AgentBridge, IDE-nin yuxarı axın provayderlərində autentifikasiya üçün istifadə etdiyi giriş məlumatlarını (OAuth tokenləri, API açarları) tutur. Bunlar **jurnala yazılmazdan əvvəl maskalanır** (§2.7-yə baxın), lakin 67router-un MITM qatı üçün görünür. Hər agent ilk dəfə aktivləşdirildikdə bağlana bilən risk bildirişi modalı göstərilir.
 
 ### 3.6 Texniki xidmət və diaqnostika
 
@@ -399,7 +399,7 @@ Aşkarlama əməliyyat sisteminə xas yollardan və binar yoxlamalardan istifad�
 
 ### Həssas hostlar üçün yan keçmə siyahısı
 
-Yan keçmə siyahısı maliyyə təşkilatlarının, OAuth/SSO provayderlərinin və digər həssas hostların **heç vaxt deşifrə edilməməsini** təmin edir. Onların TLS trafiki şəffaf TCP tuneli vasitəsilə ötürülür — OmniRoute açıq mətni heç vaxt görmür.
+Yan keçmə siyahısı maliyyə təşkilatlarının, OAuth/SSO provayderlərinin və digər həssas hostların **heç vaxt deşifrə edilməməsini** təmin edir. Onların TLS trafiki şəffaf TCP tuneli vasitəsilə ötürülür — 67router açıq mətni heç vaxt görmür.
 
 Defolt yan keçmə nümunələrinə daxildir:
 
@@ -450,7 +450,7 @@ Alternativ olaraq, AgentBridge parametrlərində imtiyaz tələb etməyən port 
 
 AgentBridge işə salındıqdan sonra IDE TLS xətaları göstərirsə:
 
-1. Sertifikatın quraşdırıldığını yoxlayın: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) və ya `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Sertifikatın quraşdırıldığını yoxlayın: `security find-certificate -c "OmniRoute MITM CA"` (macOS) və ya `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Bəzi tətbiqlər öz etibar anbarını saxlayır (Firefox, Linux-da Chrome). "Trust Cert" əməliyyatını yenidən başladın və NSS/Firefox-a məxsus sertifikat anbarını yoxlayın.
 3. Etibar verdikdən sonra IDE-ni yenidən başladın — davam edən TLS sessiyaları köhnə etibar vəziyyətindən istifadə edir.
 
@@ -493,7 +493,7 @@ Avtomatik aşkarlama standart quraşdırma yollarından istifadə edir. Aşkarla
 AgentBridge sorğuları ələ keçirir, lakin bütün sorğular uğursuz olursa:
 
 1. `/dashboard/providers` ünvanında ən azı bir provayderin qoşulduğunu yoxlayın
-2. OmniRoute server jurnallarını yoxlayın: `.env` daxilində `APP_LOG_LEVEL=debug`
+2. 67router server jurnallarını yoxlayın: `.env` daxilində `APP_LOG_LEVEL=debug`
 3. `OMNIROUTE_BASE_URL` dəyişəninin düzgün router son nöqtəsinə yönəldiyini yoxlayın (standart: `http://127.0.0.1:20128`)
 
 ---

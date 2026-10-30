@@ -15,7 +15,7 @@
 - [OAuth 2.0 ለአገር በቀል መተግበሪያዎች (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — ለተጫኑ መተግበሪያዎች የOAuth client_id / client_secret ይፋዊ ናቸው፤ ትክክለኛውን ደህንነት PKCE ያቀርባል።
 - [Firebase API ቁልፎች](https://firebase.google.com/docs/projects/api-keys) — Web ደንበኛ መለያዎች በንድፍ ይፋዊ ናቸው።
 
-`.env` ያላዋቀሩ ተጠቃሚዎችም ያለተጨማሪ ውቅር የሚሠራ OAuth ፍሰት እንዲያገኙ OmniRoute እነዚህን እሴቶች በውስጡ ማካተት አለበት። በውስጡ የተካተተ ተተኪ እሴት ከሌለ፣ “clone ብቻ አድርገው ያስኪዱ” የሚለውን መንገድ ለሚከተሉ ተጠቃሚዎች ሁሉ Gemini / Antigravity አቅራቢዎች መሥራት ያቆማሉ።
+`.env` ያላዋቀሩ ተጠቃሚዎችም ያለተጨማሪ ውቅር የሚሠራ OAuth ፍሰት እንዲያገኙ 67router እነዚህን እሴቶች በውስጡ ማካተት አለበት። በውስጡ የተካተተ ተተኪ እሴት ከሌለ፣ “clone ብቻ አድርገው ያስኪዱ” የሚለውን መንገድ ለሚከተሉ ተጠቃሚዎች ሁሉ Gemini / Antigravity አቅራቢዎች መሥራት ያቆማሉ።
 
 ሆኖም፣ እንደ `AIzaSy…`፣ `GOCSPX-…`፣ `…apps.googleusercontent.com` ያሉ ቀጥተኛ እሴቶች በ**GitHub Secret Scanning**፣ **Semgrep** እና ተመሳሳይ የስርዓተ ጥለት ስካነሮች ይዛመዳሉ። እያንዳንዱ ልቀት ብዙ የሐሰት አዎንታዊ ማንቂያዎች ያሉበት የሚያውክ ፍሰት ይሆናል፣ push protection ሕጋዊ commitsን ያግዳል፣ እና ኦፕሬተሮች የማንቂያ ፍሰቱን ማመን ያቆማሉ።
 

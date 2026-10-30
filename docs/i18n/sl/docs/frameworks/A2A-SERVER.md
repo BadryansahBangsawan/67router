@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Slovenščina)
+# 67router A2A Server Documentation (Slovenščina)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Protokol Agent-to-Agent v0.3 — OmniRoute kot inteligentni usmerjevalni agent
+> Protokol Agent-to-Agent v0.3 — 67router kot inteligentni usmerjevalni agent
 
 Vmesnik A2A ima dve podobi:
 
@@ -19,7 +19,7 @@ Opravilom sledi `A2ATaskManager` (`src/lib/a2a/taskManager.ts`, privzeti TTL je 
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Vrne kartico agenta, ki opisuje zmožnosti, veščine in zahteve za preverjanje pristnosti sistema OmniRoute.
+Vrne kartico agenta, ki opisuje zmožnosti, veščine in zahteve za preverjanje pristnosti sistema 67router.
 
 Polje `version` v kartici agenta se pridobi iz `process.env.npm_package_version` (glejte `src/app/.well-known/agent.json/route.ts:13`), zato se ob vsaki izdaji samodejno sinhronizira z datoteko `package.json`.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Razpoložljive veščine
 
-OmniRoute razkriva 6 veščin A2A, povezanih v `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Vsak modul veščine se nahaja v `src/lib/a2a/skills/`.
+67router razkriva 6 veščin A2A, povezanih v `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Vsak modul veščine se nahaja v `src/lib/a2a/skills/`.
 
 | Veščina            | ID                   | Opis                                                                                                                                                | Oznake                     | Primeri                                   |
 | :----------------- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :---------------------------------------- |
-| Smart Routing      | `smart-routing`      | Usmeri poziv prek optimalnega ponudnika/kombinacije z uporabo mehanizma za kombinacije in točkovanja OmniRoute                                      | routing, providers         | "Usmeri ta poziv prek najboljšega modela" |
+| Smart Routing      | `smart-routing`      | Usmeri poziv prek optimalnega ponudnika/kombinacije z uporabo mehanizma za kombinacije in točkovanja 67router                                       | routing, providers         | "Usmeri ta poziv prek najboljšega modela" |
 | Quota Management   | `quota-management`   | Poroča o stanju kvot po posameznih ponudnikih in klicateljem pomaga pri odločitvi, kdaj omejiti hitrost/preklopiti                                  | quota, providers           | "Preveri kvoto za anthropic"              |
 | Provider Discovery | `provider-discovery` | Navede nameščene ponudnike z zmogljivostmi, zastavicami brezplačnega nivoja in stanjem OAuth                                                        | providers, discovery       | "Kateri ponudniki so na voljo?"           |
 | Cost Analysis      | `cost-analysis`      | Oceni strošek zahtevka/pogovora glede na katalog + nedavno uporabo                                                                                  | cost, usage                | "Oceni strošek tega pogovora"             |
 | Health Report      | `health-report`      | Združi stanja odklopnika (circuit breaker), ohlajanja in zaklepa po posameznih ponudnikih                                                           | health, resilience         | "Prikaži stanje zdravja vseh ponudnikov"  |
-| List Capabilities  | `list-capabilities`  | Vrne celoten katalog veščin agenta s 43 vnosi (22 API + 20 CLI + 1 config) kot tabelo markdown s surovimi URL-ji SKILL.md za vbrizgavanje konteksta | catalog, discovery, skills | "Navedi vse zmogljivosti OmniRoute"       |
+| List Capabilities  | `list-capabilities`  | Vrne celoten katalog veščin agenta s 43 vnosi (22 API + 20 CLI + 1 config) kot tabelo markdown s surovimi URL-ji SKILL.md za vbrizgavanje konteksta | catalog, discovery, skills | "Navedi vse zmogljivosti 67router"        |
 
 > Kartico agenta (Agent Card) je treba ohranjati usklajeno z živim katalogom 375 ponudnikov; števila ponudnikov ter metapodatki o brezplačnih možnostih in možnostih brez avtentikacije izvirajo iz izvajalnega registra.
 
 ### Podrobnosti veščine `list-capabilities`
 
-Veščina `list-capabilities` je še posebej uporabna za zunanje agente, ki morajo pred pošiljanjem klicev API odkriti, kaj OmniRoute razkriva. Vrne strukturiran artefakt tabele markdown:
+Veščina `list-capabilities` je še posebej uporabna za zunanje agente, ki morajo pred pošiljanjem klicev API odkriti, kaj 67router razkriva. Vrne strukturiran artefakt tabele markdown:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ Končna točka JSON-RPC `/a2a` je kanonična vstopna točka A2A. Spodnje končne
 | `/.well-known/agent.json`    | GET    | Kartica agenta (odkrivanje A2A)                            | (javno, predpomnjeno 3600 s)                       |
 | `/api/a2a/tasks`             | POST   | Vhodno delegiranje floti OmniConductor (Conductor PRD RF5) | Bearer glede na `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Vhodno delegiranje Conductor (`POST /api/a2a/tasks`):** zunanji agenti A2A prek OmniRoute delegirajo programsko delo floti OmniConductor. Telo: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — delegirati je mogoče samo veščine flote Conductor (tiste, ki so objavljene na kartici agenta); `metadata.conductor.repo.url` je obvezen (flota dela z repozitoriji git). Pot se prevede v `POST /v1/tasks` vozlišča z uporabo strežniškega žetona `CONDUCTOR_ORCHESTRATOR_TOKEN` (nadomestno `CONDUCTOR_HUB_TOKEN`) in vrne `201 { conductor_task_id, state: "submitted" }`; stanja opravil se prenašajo nazaj prek zrcaljenja SSE→A2A (RF1) in so vidna prek `GET /api/a2a/tasks?skill=conductor`.
+**Vhodno delegiranje Conductor (`POST /api/a2a/tasks`):** zunanji agenti A2A prek 67router delegirajo programsko delo floti OmniConductor. Telo: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — delegirati je mogoče samo veščine flote Conductor (tiste, ki so objavljene na kartici agenta); `metadata.conductor.repo.url` je obvezen (flota dela z repozitoriji git). Pot se prevede v `POST /v1/tasks` vozlišča z uporabo strežniškega žetona `CONDUCTOR_ORCHESTRATOR_TOKEN` (nadomestno `CONDUCTOR_HUB_TOKEN`) in vrne `201 { conductor_task_id, state: "submitted" }`; stanja opravil se prenašajo nazaj prek zrcaljenja SSE→A2A (RF1) in so vidna prek `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

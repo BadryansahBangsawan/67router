@@ -6,18 +6,18 @@ lastUpdated: 2026-07-23
 
 # Cursor Image Generation
 
-OmniRoute exposes Cursor plan **image generation** on `POST /v1/images/generations` through the same provider id as chat: `cursor` (alias `cu`).
+67router exposes Cursor plan **image generation** on `POST /v1/images/generations` through the same provider id as chat: `cursor` (alias `cu`).
 
-| Field | Value |
-|-------|--------|
-| `IMAGE_PROVIDERS` id | `cursor` |
-| Format | `cursor-agent-image` |
-| Auth | Same OAuth / API-key connection as chat (`provider_connections.provider = "cursor"`) |
-| Models | `cursor/auto`, `cursor/composer-2`, `cursor/composer-2.5` |
+| Field                | Value                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| `IMAGE_PROVIDERS` id | `cursor`                                                                             |
+| Format               | `cursor-agent-image`                                                                 |
+| Auth                 | Same OAuth / API-key connection as chat (`provider_connections.provider = "cursor"`) |
+| Models               | `cursor/auto`, `cursor/composer-2`, `cursor/composer-2.5`                            |
 
 ## Why the Agent CLI
 
-Cursor chat in OmniRoute uses `agent.v1.AgentService/Run` (protobuf). That path **rejects** built-in client tools (shell, write, …). Image generation is a Cursor-native tool executed by the **`agent` CLI** against the seat. The image handler therefore spawns `agent` with a locked prompt and a per-request temp workspace (same shape as community seat bridges), then returns OpenAI-compatible `b64_json`.
+Cursor chat in 67router uses `agent.v1.AgentService/Run` (protobuf). That path **rejects** built-in client tools (shell, write, …). Image generation is a Cursor-native tool executed by the **`agent` CLI** against the seat. The image handler therefore spawns `agent` with a locked prompt and a per-request temp workspace (same shape as community seat bridges), then returns OpenAI-compatible `b64_json`.
 
 ## Access restriction (Hard Rules #15 + #17)
 
@@ -36,7 +36,7 @@ policy applied to the rest of the `LOCAL_ONLY` tier.
 
 `CURSOR_IMG_MAX_CONCURRENT` is enforced by an in-memory counter/queue scoped to the
 Node module instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-It correctly limits concurrent `agent` spawns within one OmniRoute process, but does
+It correctly limits concurrent `agent` spawns within one 67router process, but does
 **not** coordinate across multiple processes/instances sharing the same Cursor seat
 (e.g. a multi-replica deployment) — each instance enforces its own independent limit.
 For a single-instance deployment (the default) this is exact; horizontally scaled
@@ -46,18 +46,18 @@ Cursor image traffic to a single instance.
 ## Requirements
 
 1. A connected Cursor account in the dashboard (OAuth or `crsr_…` API key).
-2. The Cursor Agent binary available to the OmniRoute process:
+2. The Cursor Agent binary available to the 67router process:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, or
    - `~/.local/bin/agent`, or
    - `providerSpecificData.agentBin` on the Cursor connection.
 
 Optional tuning:
 
-| Env | Default | Meaning |
-|-----|---------|---------|
-| `CURSOR_IMG_TIMEOUT_MS` | `210000` | Per-image wall clock |
-| `CURSOR_IMG_MAX_CONCURRENT` | `2` | Shared-seat concurrency gate |
-| `CURSOR_IMG_MODEL` | (request model / `auto`) | Override CLI `--model` |
+| Env                         | Default                  | Meaning                      |
+| --------------------------- | ------------------------ | ---------------------------- |
+| `CURSOR_IMG_TIMEOUT_MS`     | `210000`                 | Per-image wall clock         |
+| `CURSOR_IMG_MAX_CONCURRENT` | `2`                      | Shared-seat concurrency gate |
+| `CURSOR_IMG_MODEL`          | (request model / `auto`) | Override CLI `--model`       |
 
 ## Example
 

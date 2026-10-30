@@ -5,7 +5,7 @@
 ---
 
 > **Cur síos aonlíne ar gach comhadlann agus fréamhchomhad.**
-> Nuashonraithe go deireanach: 2026-06-28 — OmniRoute v3.8.40
+> Nuashonraithe go deireanach: 2026-06-28 — 67router v3.8.40
 >
 > Úsáid an léarscáil seo chun an cód-bhonn a nascleanúint go tapa. Chun mionscrúdú a dhéanamh, lean naisc chuig cáipéisíocht thiomnaithe.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Sreabhadh iomlán eisiúna (scileanna, husky, conventional commits, imscaradh)              |
 | `COVERAGE_PLAN.md`          | Spriocanna cumhdaigh agus an staid reatha                                                 |
 | `FREE_TIERS.md`             | Soláthraithe roghnaithe le sraitheanna saor in aisce (48+ saor in aisce + 11 OAuth)       |
-| `CLI-TOOLS.md`              | Comhtháthuithe CLI seachtracha + CLI inmheánach OmniRoute                                 |
+| `CLI-TOOLS.md`              | Comhtháthuithe CLI seachtracha + CLI inmheánach 67router                                  |
 | `I18N.md`                   | Ailtireacht i18n, teanga a chur leis, 67 logchaighdeán                                    |
 | `UNINSTALL.md`              | Céimeanna díshuiteála glaine                                                              |
 | `PROVIDER_REFERENCE.md`     | Catalóg **uathghinte** de 375 sholáthraí (athghiniúint: `npm run gen:provider-reference`) |

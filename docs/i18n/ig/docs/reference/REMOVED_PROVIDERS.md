@@ -4,7 +4,7 @@
 
 ---
 
-E tinyere ụfọdụ ọrụ na OmniRoute ma mesịa wepụ ha n’ihi na ndị na-ahụ maka
+E tinyere ụfọdụ ọrụ na 67router ma mesịa wepụ ha n’ihi na ndị na-ahụ maka
 ha rịọrọ ka e mee otú ahụ. Ibe a bụ ndekọ na-adịgide adịgide nke mwepụ ndị ahụ. Naanị ebumnuche ya bụ
 igbochi ka eweghachite ha na mberede: onye nyere aka nke hụrụ fork ochie, tarball npm echekwara
 na cache, issue e debere n’ụlọ nchekwa, ma ọ bụ arịrịọ “weghachite onye na-eweta ọrụ X” chọrọ otu ebe na-ekwu **e
@@ -17,10 +17,10 @@ arịrịọ ahụ, a ga-etinyekwa njikọ ikike ahụ n’ihe ndekọ ahụ.
 
 ## Iwu
 
-1. **A na-asọpụrụ arịrịọ mwepụ sitere n’aka onye na-ahụ maka ọrụ; a naghị akparịta ya ụka.** OmniRoute
+1. **A na-asọpụrụ arịrịọ mwepụ sitere n’aka onye na-ahụ maka ọrụ; a naghị akparịta ya ụka.** 67router
    enweghị mmekọrịta pụrụ iche na ọrụ ọ bụla dị n’elu ya. Mgbe onye na-ahụ maka otu ọrụ rịọrọ ka e wepụ
    njikọ ahụ, a na-ewepụ ya, ma njikọ ahụ jiri API gọọmenti kwadoro ma ọ bụ na o jighị ya.
-2. **“E wepụrụ” pụtara n’ebe niile OmniRoute na-achịkwa.** Executor, ndebanye registry, id na alias nke onye na-eweta ọrụ,
+2. **“E wepụrụ” pụtara n’ebe niile 67router na-achịkwa.** Executor, ndebanye registry, id na alias nke onye na-eweta ọrụ,
    ndepụta model, endpoints, environment variables, akara ngosi, kaadị dashboard, akwụkwọ ntụaka onye na-eweta ọrụ
    emepụtara, `FREE_TIERS.md`, akwụkwọ ntụaka environment, ọnụọgụ dị na README,
    oyiri `llm.txt`, ule pụrụ iche na golden snapshots, nkọwa dị na code, ihe edepụtara na CHANGELOG
@@ -31,7 +31,7 @@ arịrịọ ahụ, a ga-etinyekwa njikọ ikike ahụ n’ihe ndekọ ahụ.
 3. **Ewebatala ihe ọ bụla dị n’ibe a ọzọ na-enweghị ikike e dere ede.** Nke a gụnyere
    ịtinye id ma ọ bụ alias ahụ ọzọ na catalog onye na-eweta ọrụ ọ bụla, ịtinye domains ahụ na executor,
    ịnakwere PR onye nyere aka nke “na-eweghachi” ya, ịtinye ya na catalog model efu, ma ọ bụ
-   idekọ ụzọ aka iji nweta ya site na OmniRoute. Mechie PRs na issues ndị dị otú ahụ ma tinye
+   idekọ ụzọ aka iji nweta ya site na 67router. Mechie PRs na issues ndị dị otú ahụ ma tinye
    njikọ gaa n’ibe a.
 4. **Debe ihe ndekọ ahụ ka ọ dị nkenke.** Dekọọ naanị ihe onye nyocha chọrọ iji mata
    mweghachi: identifiers, domains, ụbọchị na pull request mere mwepụ ahụ.
@@ -48,7 +48,7 @@ arịrịọ ahụ, a ga-etinyekwa njikọ ikike ahụ n’ihe ndekọ ahụ.
 | 2026-08-12     | `puter`           | `pu`     | `puter.com`                                                               | Onye nwe Puter (Nariman Jelveh)                                                                                                             | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Onye na-eweta ọrụ na-eji API key. Mbugharị `152_remove_puter_provider.sql` na-ehichapụ nhazi echekwara.                                                                                                                                                                                                                                                                                                                                                  |
 | 2026-09-02     | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                   | Onye na-arụ ọrụ ahụ (ozi-e nkwado)                                                                                                          | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Onye na-eweta ọrụ na-enweghị key. Anatara arịrịọ e dere ede na 2026-08-30. E hichapụrụ issue na mkparịta ụka ndị e debere maka ya, gbanweekwa aha PR ndị ahụ.                                                                                                                                                                                                                                                                                            |
 | 2026-09-21     | `gemini-business` | `gembiz` | `business.gemini.google`                                                  | Mkpebi onye nwe ọrụ ngo (issue [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                            | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Onye na-eweta ọrụ webụ dabere na cookie. Google kwụsịrị endpoint `BardFrontendService/StreamGenerate` nke executor ahụ na-eji; enweghị ike iwulite ma ọ bụ nwalee nke nọchiri ya (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT nke e si na `__Secure-C_SES`/`csesidx` malite) ma ọ bụrụ na enweghị akaụntụ Gemini Enterprise/Workspace na-arụ ọrụ, nke ọrụ ngo ahụ na-enweghị. E wepụrụ ya kama idegharị ihe a na-enyochabeghị. |
-| 2026-09-21     | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                          | Mkpebi onye nwe ọrụ ngo (`#14224`)                                                                                                          | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Onye na-eweta ọrụ na-eji cookie maka njirimara, ọ bụghị mwepụ onye ọrụ ahụ rịọrọ. A kwụsịtụrụ `studio-api.suno.ai` (503); host na-arụ ọrụ chọrọ mgbanwe Clerk JWT tinyere dependency a na-akwụ ụgwọ maka idozi hCaptcha, nke OmniRoute kpebiri ịghara ịgbakwunye maka naanị otu onye na-eweta egwu. Nke a emetụtaghị `kie/suno-v4.0` na `kie/suno-v3.5` (nke kie.ai na-akwado), a ka na-akwadokwa ha.                                                    |
+| 2026-09-21     | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                          | Mkpebi onye nwe ọrụ ngo (`#14224`)                                                                                                          | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Onye na-eweta ọrụ na-eji cookie maka njirimara, ọ bụghị mwepụ onye ọrụ ahụ rịọrọ. A kwụsịtụrụ `studio-api.suno.ai` (503); host na-arụ ọrụ chọrọ mgbanwe Clerk JWT tinyere dependency a na-akwụ ụgwọ maka idozi hCaptcha, nke 67router kpebiri ịghara ịgbakwunye maka naanị otu onye na-eweta egwu. Nke a emetụtaghị `kie/suno-v4.0` na `kie/suno-v3.5` (nke kie.ai na-akwado), a ka na-akwadokwa ha.                                                     |
 | 2026-10-10     | `opencode`        | `oc`     | `opencode.ai/zen/v1` (ọkwa efu; a na-ekekọrịta host ya na `opencode-zen`) | Mwepụ mgbochi (mkpebi onye nwe ọrụ ngo), iji sọpụrụ arịrịọ ọha onye ọrụ OpenCode nyere ka e wepụ ya n'ọrụ ngo 9router dị n'elu (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Naanị onye na-eweta ọrụ na-enweghị key, "OpenCode Free", ka e wepụrụ. `opencode-zen` na `opencode-go` ndị nwere njirimara, ụdịdị niile dị na katalọgụ Zen na nkwekọrịta arịrịọ ha, njikọ OpenCode client na `@omniroute/opencode-plugin*` ka dị. Mbugharị `207_remove_opencode_free_provider.sql` na-ebuga njikọ ochie nwere API key gaa na Zen ma na-ehichapụ nhazi na-enweghị key.                                                                     |
 
 ## Ịgbakwunye ihe ndekọ
@@ -63,5 +63,5 @@ Mgbe arịrịọ mwepụ ọhụrụ bịara:
    onye na-eweta ọrụ na-eji API key nke nwere njikọ echekwara (tinye migration).
 3. Tinye otu ahịrị na table dị n’elu na identifiers ndị ahụ na
    `tests/unit/removed-providers-blocklist.test.ts`, n’otu PR ahụ.
-4. Zaghachi onye na-ahụ maka ọrụ ahụ ozugbo e jikọtara PR ahụ, depụta ihe ndị e wepụrụ na ihe OmniRoute
+4. Zaghachi onye na-ahụ maka ọrụ ahụ ozugbo e jikọtara PR ahụ, depụta ihe ndị e wepụrụ na ihe 67router
    enweghị ike ịgbanwe (ụdị npm na Docker ndị e bipụtalarị, akụkọ git, forks nke ndị ọzọ).

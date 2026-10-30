@@ -4,7 +4,7 @@
 
 ---
 
-Quando OmniRoute viene eseguito all'interno di Docker, il normale flusso "Importa dal portachiavi di Zed" non riesce
+Quando 67router viene eseguito all'interno di Docker, il normale flusso "Importa dal portachiavi di Zed" non riesce
 perché il container non può raggiungere il daemon del portachiavi del sistema operativo host (libsecret su Linux,
 Portachiavi su macOS, Gestione credenziali su Windows) e le directory di configurazione di Zed nel
 file system host non sono visibili all'interno del container per impostazione predefinita.
@@ -20,7 +20,7 @@ All'interno di un container si verificano due problemi bloccanti:
    `keytar` comunica con il servizio del portachiavi del sistema operativo tramite un socket Unix o una sessione D-Bus.
    Nessuno dei due viene collegato al container per impostazione predefinita, quindi la lettura delle credenziali non riesce mai.
 
-OmniRoute rileva l'ambiente Docker tramite due euristiche:
+67router rileva l'ambiente Docker tramite due euristiche:
 
 - Presenza di `/.dockerenv` (scritto dal daemon Docker all'avvio del container).
 - Presenza della stringa `docker` in `/proc/1/cgroup` (cgroup v1 di Linux).
@@ -32,7 +32,7 @@ Quando una delle due euristiche viene attivata, la route di importazione restitu
 
 1. Apri **Dashboard → Provider → Zed**.
 2. Il pannello **Importazione manuale del token** viene visualizzato sotto la scheda di importazione dal portachiavi. Quando
-   OmniRoute rileva Docker, questo pannello si espande automaticamente dopo il primo tentativo non riuscito
+   67router rileva Docker, questo pannello si espande automaticamente dopo il primo tentativo non riuscito
    di importazione dal portachiavi.
 3. Seleziona il provider dal menu a discesa (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter o DeepSeek).

@@ -4,16 +4,16 @@
 
 ---
 
-Kaksi tapaa asettaa Cursor OmniRouten taakse ilman IDE-istuntoa:
+Kaksi tapaa asettaa Cursor 67routerin taakse ilman IDE-istuntoa:
 
 1. **`cursor-api`-palveluntarjoaja** (kortti "Cursor API", alias `cua`): API-avainpohjainen
    palveluntarjoaja, joka säilyttää Cursor-käyttäjän API-avaimen (`crsr_…`, luodaan
-   osoitteessa `https://cursor.com/dashboard/api`). Mikä tahansa OmniRoute-asiakas voi
+   osoitteessa `https://cursor.com/dashboard/api`). Mikä tahansa 67router-asiakas voi
    tällöin käyttää Cursor-malleja `/v1/chat/completions`-päätepisteen kautta nimellä
    `cursor-api/<model>` tai `cua/<model>` sekä hyödyntää tavanomaisia kiintiö-, vara-
    ja lokituskerroksia. IDE-palveluntarjoaja (`cursor`, OAuth/IDE-istunto) säilyy ennallaan.
-2. **Cursor CLI -läpivienti**: määritä Cursor CLI (`agent`) käyttämään OmniRoutea, jotta
-   jokainen CLI:n tekemä RPC-pyyntö todennetaan OmniRoute-API-avaimella, välitetään
+2. **Cursor CLI -läpivienti**: määritä Cursor CLI (`agent`) käyttämään 67routeria, jotta
+   jokainen CLI:n tekemä RPC-pyyntö todennetaan 67router-API-avaimella, välitetään
    Cursorille `cursor-api`-yhteyden tunnistetiedolla ja tallennetaan Logs-sivulle.
 
 ## Miksi avain vaihdetaan
@@ -59,7 +59,7 @@ Huomautukset:
 
 - `cursor-api`-malliluettelo tulee staattisesta Cursor-rekisteristä (samasta
   luettelosta, jota IDE-palveluntarjoaja käyttää varavaihtoehtona); `cursor-agent`-asennusta
-  ei tarvita OmniRoute-isäntäkoneessa.
+  ei tarvita 67router-isäntäkoneessa.
 - `POST /api/providers/{id}/refresh-cursor` on tarkoitettu vain `cursor`-IDE-palveluntarjoajalle;
   `cursor-api`-yhteyksillä ei ole uusittavaa IDE-istuntoa.
 
@@ -67,7 +67,7 @@ Huomautukset:
 
 Reiteillä `cursor` / `cu` ja `cursor-api` / `cua` yhteinen Clauden effort-normalisoija
 säilyttää pyydetyn mallitunnuksen muuttumattomana. Cursor voi ilmoittaa päätteen, kuten
-`-low`, osana todellista mallitunnusta eikä OmniRouten effort-aliaksena.
+`-low`, osana todellista mallitunnusta eikä 67routerin effort-aliaksena.
 Cursor-suoritin säilyttää tarkan vastaavuuden aktiiviseen luetteloon; jos vastaavuutta
 ei löydy, sen nykyinen mallinratkaisija huolehtii päätteen muuntamisesta parametriksi.
 
@@ -82,18 +82,18 @@ Reitti: `src/app/api/cursor-cli/[...path]/route.ts` →
 rekisteröity tiedostossa `src/shared/constants/publicApiRoutes.ts`, koska käsittelijä
 huolehtii omasta todennuksestaan:
 
-| Polku                                                                                                                         | CLI:n odottama todennus      | Mitä OmniRoute tekee                                                                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <OmniRoute API key>` | Vahvistaa avaimen, luo yhden tunnin voimassa olevan HS256 JWT:n (allekirjoitettuna `JWT_SECRET`-salaisuudella) ja palauttaa sen                                                                    |
-| kaikki muut polut (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`          | Tarkistaa myöntäjän, kohdeyleisön ja vanhenemisajan, valitsee aktiivisen `cursor-api`-yhteyden, korvaa Authorization-otsakkeen vaihdetulla Cursor-tunnisteella ja suoratoistaa vastauksen takaisin |
+| Polku                                                                                                                         | CLI:n odottama todennus     | Mitä 67router tekee                                                                                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <67router API key>` | Vahvistaa avaimen, luo yhden tunnin voimassa olevan HS256 JWT:n (allekirjoitettuna `JWT_SECRET`-salaisuudella) ja palauttaa sen                                                                    |
+| kaikki muut polut (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`         | Tarkistaa myöntäjän, kohdeyleisön ja vanhenemisajan, valitsee aktiivisen `cursor-api`-yhteyden, korvaa Authorization-otsakkeen vaihdetulla Cursor-tunnisteella ja suoratoistaa vastauksen takaisin |
 
 CLI purkaa `exp`-arvon saamastaan tunnisteesta, joten läpinäkymättömän
 tunnisteen antaminen saa sen tekemään vaihdon uudelleen ennen lähes jokaista pyyntöä;
-luotu JWT estää tämän. OmniRouten palauttama 401 saa CLI:n tekemään vaihdon uudelleen.
+luotu JWT estää tämän. 67routerin palauttama 401 saa CLI:n tekemään vaihdon uudelleen.
 
 ### Määritys
 
-1. Luo OmniRoute API -avain (Hallintapaneeli → API-avaimet) ja `cursor-api`-
+1. Luo 67router API -avain (Hallintapaneeli → API-avaimet) ja `cursor-api`-
    yhteys.
 2. Määritä CLI käyttämään HTTP/1.1-protokollaa agentin suoratoistoon. Tiedostossa
    `~/.cursor/cli-config.json`:
@@ -106,7 +106,7 @@ luotu JWT estää tämän. OmniRouten palauttama 401 saa CLI:n tekemään vaihdo
    määritettyyn agenttipalvelimeen, ja vain ohjaustason RPC-kutsut kulkevat
    päätepisteen kautta.
 
-3. Suorita CLI OmniRoutea vasten:
+3. Suorita CLI 67routeria vasten:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -115,18 +115,18 @@ luotu JWT estää tämän. OmniRouten palauttama 401 saa CLI:n tekemään vaihdo
    ```
 
 Jokainen välitysvaihe kirjautuu lokeihin palveluntarjoajana `cursor-api`, pyyntötyyppinä
-`cursor-cli` ja polkuna `/api/cursor-cli/<rpc>`, ja se kohdistetaan OmniRoute API -avaimeen sekä
+`cursor-cli` ja polkuna `/api/cursor-cli/<rpc>`, ja se kohdistetaan 67router API -avaimeen sekä
 pyynnön käsitelleeseen yhteyteen.
 
 ### Virhetilanteet
 
-| Tilanne                                              | Vastaus CLI:lle                                               |
-| ---------------------------------------------------- | ------------------------------------------------------------- |
-| Tuntematon OmniRoute-avain ja `REQUIRE_API_KEY=true` | 401 `unauthenticated` vaihdon yhteydessä                      |
-| `REQUIRE_API_KEY=false`                              | anonyymi istunto (vastaa `/v1/*`-toimintaa)                   |
-| Vanhentunut / vieras / peukaloitu istunnon JWT       | 401, CLI tekee vaihdon uudelleen                              |
-| OmniRoute API -avain kumottu vaihdon jälkeen         | 401 seuraavan RPC-kutsun yhteydessä                           |
-| Ei aktiivista `cursor-api`-yhteyttä                  | 503 `unavailable`                                             |
-| Cursor hylkää yhteyden avaimen                       | 401 `unauthenticated`, välimuistissa oleva istunto poistetaan |
-| Ylävirran palvelua ei tavoiteta                      | 502 `unavailable` (puhdistettu viesti)                        |
-| `JWT_SECRET` ei ole asetettu                         | 503 vaihdon yhteydessä                                        |
+| Tilanne                                             | Vastaus CLI:lle                                               |
+| --------------------------------------------------- | ------------------------------------------------------------- |
+| Tuntematon 67router-avain ja `REQUIRE_API_KEY=true` | 401 `unauthenticated` vaihdon yhteydessä                      |
+| `REQUIRE_API_KEY=false`                             | anonyymi istunto (vastaa `/v1/*`-toimintaa)                   |
+| Vanhentunut / vieras / peukaloitu istunnon JWT      | 401, CLI tekee vaihdon uudelleen                              |
+| 67router API -avain kumottu vaihdon jälkeen         | 401 seuraavan RPC-kutsun yhteydessä                           |
+| Ei aktiivista `cursor-api`-yhteyttä                 | 503 `unavailable`                                             |
+| Cursor hylkää yhteyden avaimen                      | 401 `unauthenticated`, välimuistissa oleva istunto poistetaan |
+| Ylävirran palvelua ei tavoiteta                     | 502 `unavailable` (puhdistettu viesti)                        |
+| `JWT_SECRET` ei ole asetettu                        | 503 vaihdon yhteydessä                                        |

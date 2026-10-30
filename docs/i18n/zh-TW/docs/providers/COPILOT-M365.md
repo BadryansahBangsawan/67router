@@ -35,7 +35,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. 在 OmniRoute 中，前往 **Providers → Add Provider**，選取 **Microsoft 365 Copilot
+6. 在 67router 中，前往 **Providers → Add Provider**，選取 **Microsoft 365 Copilot
    (BizChat)**，然後以下列格式貼上憑證：
 
 ```
@@ -51,9 +51,9 @@ access_token=<jwt>; chathubPath=<oid>@<tenant>
 1. 開啟 **DevTools → Network**。
 2. 開始或繼續 BizChat 對話（這會觸發 WebSocket 連線）。
 3. 在 Network 面板中按一下滑鼠右鍵，然後選取 **Save all as HAR with content**。
-4. 在 OmniRoute 中，使用提供者連線對話方塊上的 **Import .har file** 按鈕。
+4. 在 67router 中，使用提供者連線對話方塊上的 **Import .har file** 按鈕。
 
-OmniRoute 會掃描 HAR 以尋找 Chathub WebSocket URL、擷取 `access_token` 和 `chathubPath`，並自動填入憑證欄位。匯入 HAR 時會解碼 JWT 到期時間，並顯示權杖的剩餘有效時間。
+67router 會掃描 HAR 以尋找 Chathub WebSocket URL、擷取 `access_token` 和 `chathubPath`，並自動填入憑證欄位。匯入 HAR 時會解碼 JWT 到期時間，並顯示權杖的剩餘有效時間。
 
 > **切勿提交真實的 HAR 匯出檔、存取權杖或重新整理權杖。** 測試和文件中的值一律必須使用預留位置。
 
@@ -70,7 +70,7 @@ OmniRoute 會掃描 HAR 以尋找 Chathub WebSocket URL、擷取 `access_token` 
 | `refreshToken` | 適用於 `substrate.office.com/sydney` 範圍的 Microsoft OAuth 重新整理權杖 |
 | `tier`         | `individual`（預設）、`edu` 或 `enterprise`                              |
 
-透過範圍設定為 `substrate.office.com/sydney` 的 Microsoft 裝置代碼或授權代碼流程取得重新整理權杖。設定 `refreshToken` 後，OmniRoute 會在每次請求前預先重新整理 `access_token`，因此無須在每次約 75 分鐘的有效期屆滿後重新擷取。
+透過範圍設定為 `substrate.office.com/sydney` 的 Microsoft 裝置代碼或授權代碼流程取得重新整理權杖。設定 `refreshToken` 後，67router 會在每次請求前預先重新整理 `access_token`，因此無須在每次約 75 分鐘的有效期屆滿後重新擷取。
 
 如果未設定 `refreshToken`，則每次到期後都必須手動重新擷取 WebSocket 憑證。
 

@@ -4,7 +4,7 @@
 
 ---
 
-አንዳንድ አገልግሎቶች ወደ OmniRoute ከተዋሃዱ በኋላ አስተዳዳሪዎቻቸው
+አንዳንድ አገልግሎቶች ወደ 67router ከተዋሃዱ በኋላ አስተዳዳሪዎቻቸው
 እንዲወገዱ በመጠየቃቸው ተወግደዋል። ይህ ገጽ የእነዚያ ማስወገዶች ቋሚ መዝገብ ነው። ብቸኛ ዓላማው
 በአጋጣሚ እንደገና እንዳይመለሱ ማድረግ ነው፦ አሮጌ fork፣ በcache የተቀመጠ npm
 tarball፣ በማህደር የተቀመጠ issue ወይም "አቅራቢ Xን መልስ" የሚል ጥያቄ ያገኘ አስተዋጽዖ አድራጊ **እንደገና
@@ -17,10 +17,10 @@ tarball፣ በማህደር የተቀመጠ issue ወይም "አቅራቢ Xን �
 
 ## ፖሊሲ
 
-1. **ከአገልግሎት አስተዳዳሪ የሚመጣ የማስወገድ ጥያቄ ይከበራል እንጂ ለድርድር አይቀርብም።** OmniRoute
+1. **ከአገልግሎት አስተዳዳሪ የሚመጣ የማስወገድ ጥያቄ ይከበራል እንጂ ለድርድር አይቀርብም።** 67router
    ከማንኛውም upstream አገልግሎት ጋር ግንኙነት የለውም። የአገልግሎቱ አስተዳዳሪ ውህደቱ
    እንዲወገድ ሲጠይቅ፣ ውህደቱ ይወገዳል፤ ይፋዊ APIን ይጠቀም የነበረ ይሁን አይሁን።
-2. **"የተወገደ" ማለት OmniRoute የሚቆጣጠራቸው ሁሉም ክፍሎች ማለት ነው።** አስፈጻሚ፣ የመዝገብ ግቤት፣ የአቅራቢ
+2. **"የተወገደ" ማለት 67router የሚቆጣጠራቸው ሁሉም ክፍሎች ማለት ነው።** አስፈጻሚ፣ የመዝገብ ግቤት፣ የአቅራቢ
    id እና ተለዋጭ ስም፣ የሞዴል ዝርዝር፣ endpoints፣ የአካባቢ ተለዋዋጮች፣ አዶ፣ የdashboard ካርዶች፣
    የመነጨው የአቅራቢ ማጣቀሻ፣ `FREE_TIERS.md`፣ የአካባቢ ማጣቀሻ፣ የREADME ቆጠራዎች፣
    `llm.txt` ቅጂዎች፣ ለእሱ ብቻ የተዘጋጁ ፈተናዎችና golden snapshots፣ የኮድ አስተያየቶች፣ የCHANGELOG ነጥቦች
@@ -31,7 +31,7 @@ tarball፣ በማህደር የተቀመጠ issue ወይም "አቅራቢ Xን �
 3. **የጽሑፍ ፈቃድ ሳይኖር በዚህ ገጽ ላይ ያለን ግቤት በፍጹም እንደገና አታስገቡ።** ይህም
    idውን ወይም ተለዋጭ ስሙን ወደ ማንኛውም የአቅራቢ ካታሎግ መመለስ፣ domainsን ወደ አስፈጻሚ ማከል፣
    "እንደገና የሚመልሰውን" የአስተዋጽዖ አድራጊ PR መቀበል፣ ወደ ነጻ-ሞዴል ካታሎግ ማከል ወይም
-   በOmniRoute በኩል በእጅ ሊደረስበት የሚችልበትን መንገድ መመዝገብን ያካትታል። እንዲህ ያሉ PRs እና issuesን ወደዚህ
+   በ67router በኩል በእጅ ሊደረስበት የሚችልበትን መንገድ መመዝገብን ያካትታል። እንዲህ ያሉ PRs እና issuesን ወደዚህ
    ገጽ በሚያመለክት አገናኝ ዝጉ።
 4. **ግቤቱን አጭር አድርጉት።** ገምጋሚው እንደገና መግባቱን ለመለየት የሚያስፈልገውን
    ብቻ ይመዝግቡ፦ identifiers፣ domains፣ ቀናት እና ማስወገዱን ያከናወነው pull request።
@@ -48,7 +48,7 @@ tarball፣ በማህደር የተቀመጠ issue ወይም "አቅራቢ Xን �
 | 2026-08-12 | `puter`           | `pu`     | `puter.com`                                                     | የPuter ባለቤት (Nariman Jelveh)                                                                                         | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | የAPI ቁልፍ አቅራቢ። ፍልሰት `152_remove_puter_provider.sql` የተከማቸውን ውቅር ያጸዳል።                                                                                                                                                                                                                                                                       |
 | 2026-09-02 | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                         | የአገልግሎቱ አስተዳዳሪ (የድጋፍ ኢሜይል)                                                                                           | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | ቁልፍ የማይፈልግ አቅራቢ። የጽሑፍ ጥያቄው በ2026-08-30 ደርሷል። የተወሰኑ ጉዳዮችና ውይይቶች ተሰርዘዋል፣ የPR ርዕሶችም ተቀይረዋል።                                                                                                                                                                                                                                                    |
 | 2026-09-21 | `gemini-business` | `gembiz` | `business.gemini.google`                                        | የፕሮጀክቱ ባለቤት ውሳኔ (ጉዳይ [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                               | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | በኩኪ ላይ የተመሠረተ የድር አቅራቢ። Google አስፈጻሚው ያነጣጠረበትን `BardFrontendService/StreamGenerate` የመጨረሻ ነጥብ ከአገልግሎት አውጥቷል፤ ምትኩ (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`፣ ከ`__Secure-C_SES`/`csesidx` የሚጀመር Bearer JWT) ፕሮጀክቱ የሌለውን ንቁ የGemini Enterprise/Workspace መለያ ሳይኖር ሊገነባ ወይም ሊረጋገጥ አይችልም። ሳይረጋገጥ እንደገና ከመጻፍ ይልቅ ከአገልግሎት ውጭ ሆኗል። |
-| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                | የፕሮጀክቱ ባለቤት ውሳኔ (`#14224`)                                                                                           | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | በኩኪ የሚረጋገጥ አቅራቢ እንጂ በአስተዳዳሪው የተጠየቀ ማስወገድ አይደለም። `studio-api.suno.ai` ታግዶ ነበር (503)፤ ንቁው አስተናጋጅ የClerk JWT ልውውጥን እና የሚከፈልበት የhCaptcha መፍቻ ጥገኝነትን ይፈልጋል፤ OmniRoute ለአንድ የሙዚቃ አቅራቢ ብቻ ይህን ላለመጨመር መርጧል። `kie/suno-v4.0` እና `kie/suno-v3.5` (በkie.ai የሚስተናገዱ) አልተነኩም እና ድጋፋቸው ቀጥሏል።                                                              |
+| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                | የፕሮጀክቱ ባለቤት ውሳኔ (`#14224`)                                                                                           | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | በኩኪ የሚረጋገጥ አቅራቢ እንጂ በአስተዳዳሪው የተጠየቀ ማስወገድ አይደለም። `studio-api.suno.ai` ታግዶ ነበር (503)፤ ንቁው አስተናጋጅ የClerk JWT ልውውጥን እና የሚከፈልበት የhCaptcha መፍቻ ጥገኝነትን ይፈልጋል፤ 67router ለአንድ የሙዚቃ አቅራቢ ብቻ ይህን ላለመጨመር መርጧል። `kie/suno-v4.0` እና `kie/suno-v3.5` (በkie.ai የሚስተናገዱ) አልተነኩም እና ድጋፋቸው ቀጥሏል።                                                               |
 | 2026-10-10 | `opencode`        | `oc`     | `opencode.ai/zen/v1` (ነጻ ደረጃ፤ አስተናጋጁ ከ`opencode-zen` ጋር የጋራ ነው) | የOpenCode አስተዳዳሪ ከዋናው 9router ፕሮጀክት እንዲወገድ በይፋ ያቀረበውን ጥያቄ (2026-09-19) በማክበር የተደረገ የቅድመ ጥንቃቄ ማስወገድ (የፕሮጀክቱ ባለቤት ውሳኔ) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | የተወገደው ቁልፍ የማይፈልገው "OpenCode Free" አቅራቢ ብቻ ነው። ማረጋገጫ የሚፈልጉት `opencode-zen` እና `opencode-go`፣ ሁሉም የZen ካታሎግ ሞዴሎችና የጥያቄ ውላቸው፣ የOpenCode ደንበኛ ውህደቶች እና `@omniroute/opencode-plugin*` እንዳሉ ይቆያሉ። ፍልሰት `207_remove_opencode_free_provider.sql` API ቁልፍ ያላቸውን የቆዩ ግንኙነቶች ወደ Zen ያንቀሳቅሳል እና ቁልፍ የሌለውን ውቅር ያጸዳል።                                    |
 
 ## ግቤት ማከል
@@ -63,5 +63,5 @@ tarball፣ በማህደር የተቀመጠ issue ወይም "አቅራቢ Xን �
    (migration ያክሉ)።
 3. በአንድ PR ውስጥ ከላይ ባለው ሰንጠረዥ ላይ አንድ ረድፍ፣ እንዲሁም identifiersን
    ወደ `tests/unit/removed-providers-blocklist.test.ts` ያክሉ።
-4. PRው ከተዋሃደ በኋላ ለአስተዳዳሪው ምላሽ ይስጡ፤ የተወገዱትን እና OmniRoute
+4. PRው ከተዋሃደ በኋላ ለአስተዳዳሪው ምላሽ ይስጡ፤ የተወገዱትን እና 67router
    ሊቀይራቸው የማይችላቸውን (ቀድሞ የታተሙ npm እና Docker versions፣ የgit ታሪክ፣ የሶስተኛ ወገን forks) ይዘርዝሩ።

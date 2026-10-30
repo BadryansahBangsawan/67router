@@ -13,7 +13,7 @@
 
 ## Nedir?
 
-OmniRoute, yerleşik MCP sunucusu aracılığıyla ajanların okuyup yazdığı yerel bir Markdown
+67router, yerleşik MCP sunucusu aracılığıyla ajanların okuyup yazdığı yerel bir Markdown
 bilgi tabanı olan **Obsidian** kasasına bir **bağlam kaynağı** olarak bağlanır.
 Entegrasyon, masaüstü uygulamasında çalışan **Obsidian Local REST API** topluluk eklentisiyle
 iletişim kurar; böylece ajanlar notlarda arama yapabilir, dosyaları okuyabilir/yazabilir/yamalayabilir,
@@ -78,7 +78,7 @@ tüm URL'leri reddeder ve kalıcı olarak kaydetmeden önce Local REST API durum
 
 `src/app/api/settings/obsidian/webdav/route.ts`, isteğe bağlı WebDAV destekli bir
 kasa senkronizasyonunu yönetir (`src/lib/obsidianSync.ts` tarafından yürütülür).
-Bu özellik etkinleştirildiğinde OmniRoute yerel bir kasa dizinine yönlendirilir ve
+Bu özellik etkinleştirildiğinde 67router yerel bir kasa dizinine yönlendirilir ve
 rastgele bir WebDAV kullanıcı adı/parola çifti oluşturulur:
 
 ```bash
@@ -116,25 +116,25 @@ davranışını korur.
 
 ## MCP araçları (22)
 
-`open-sse/mcp-server/tools/obsidianTools.ts` dosyasında tanımlanmıştır. Token/base-URL her çağrı için çözümlenir (önce API anahtarına özel olan, ardından genel olan). OmniRoute **senkronizasyon sunucusuna** erişen araçlar (dört `obsidian_sync_*` aracı) ayrıca OmniRoute ayarlarında yapılandırılmış senkronizasyon kimlik doğrulama token'ını gerektirir.
+`open-sse/mcp-server/tools/obsidianTools.ts` dosyasında tanımlanmıştır. Token/base-URL her çağrı için çözümlenir (önce API anahtarına özel olan, ardından genel olan). 67router **senkronizasyon sunucusuna** erişen araçlar (dört `obsidian_sync_*` aracı) ayrıca 67router ayarlarında yapılandırılmış senkronizasyon kimlik doğrulama token'ını gerektirir.
 
 ### Okuma araçları (`read:obsidian`)
 
-| Araç                         | Açıklama                                                                                                             |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Local REST API'nin erişilebilir ve kimliği doğrulanmış olup olmadığını kontrol eder.                                 |
-| `obsidian_search_simple`     | Not içeriğinde tam metin araması yapar; dosya yollarıyla birlikte metin parçacıkları döndürür.                       |
-| `obsidian_search_structured` | Bir JSON Logic ifadesi (and/or/regex/path filtreleri) kullanarak arama yapar.                                        |
-| `obsidian_read_note`         | Bir notu kasa köküne göreli yoluyla okur; isteğe bağlı olarak belirli bir başlığı/bloğu/frontmatter alanını okur.    |
-| `obsidian_list_vault`        | Kasadaki dosya ve dizinleri listeler (girdi ağacı).                                                                  |
-| `obsidian_get_document_map`  | Notun başlık yapısını, başlıklar → satır numaraları eşlemesi olarak alır.                                            |
-| `obsidian_get_note_metadata` | Tam içerik olmadan frontmatter, etiketler, bağlantılar ve karakter/kelime sayısını alır.                             |
-| `obsidian_get_active_file`   | Obsidian'da o anda etkin olan dosyanın yolunu ve içeriğini alır.                                                     |
-| `obsidian_get_periodic_note` | Bir tarih için günlük/haftalık/aylık dönemsel notu alır (belirtilmezse bugün).                                       |
-| `obsidian_get_tags`          | Tüm kasa etiketlerini kullanım sıklıklarıyla birlikte listeler.                                                      |
-| `obsidian_list_commands`     | Kullanılabilir Obsidian komut kimliklerini listeler (`obsidian_execute_command` ile kullanılır).                     |
-| `obsidian_sync_status`       | OmniRoute senkronizasyon sunucusu durumu: çalışıyor olma durumu, kasa adı, port, çalışma süresi, son senkronizasyon. |
-| `obsidian_sync_conflicts`    | Çözülmemiş senkronizasyon çakışmalarını listeler (yol, çakışma yolu, algılanma zamanı).                              |
+| Araç                         | Açıklama                                                                                                            |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Local REST API'nin erişilebilir ve kimliği doğrulanmış olup olmadığını kontrol eder.                                |
+| `obsidian_search_simple`     | Not içeriğinde tam metin araması yapar; dosya yollarıyla birlikte metin parçacıkları döndürür.                      |
+| `obsidian_search_structured` | Bir JSON Logic ifadesi (and/or/regex/path filtreleri) kullanarak arama yapar.                                       |
+| `obsidian_read_note`         | Bir notu kasa köküne göreli yoluyla okur; isteğe bağlı olarak belirli bir başlığı/bloğu/frontmatter alanını okur.   |
+| `obsidian_list_vault`        | Kasadaki dosya ve dizinleri listeler (girdi ağacı).                                                                 |
+| `obsidian_get_document_map`  | Notun başlık yapısını, başlıklar → satır numaraları eşlemesi olarak alır.                                           |
+| `obsidian_get_note_metadata` | Tam içerik olmadan frontmatter, etiketler, bağlantılar ve karakter/kelime sayısını alır.                            |
+| `obsidian_get_active_file`   | Obsidian'da o anda etkin olan dosyanın yolunu ve içeriğini alır.                                                    |
+| `obsidian_get_periodic_note` | Bir tarih için günlük/haftalık/aylık dönemsel notu alır (belirtilmezse bugün).                                      |
+| `obsidian_get_tags`          | Tüm kasa etiketlerini kullanım sıklıklarıyla birlikte listeler.                                                     |
+| `obsidian_list_commands`     | Kullanılabilir Obsidian komut kimliklerini listeler (`obsidian_execute_command` ile kullanılır).                    |
+| `obsidian_sync_status`       | 67router senkronizasyon sunucusu durumu: çalışıyor olma durumu, kasa adı, port, çalışma süresi, son senkronizasyon. |
+| `obsidian_sync_conflicts`    | Çözülmemiş senkronizasyon çakışmalarını listeler (yol, çakışma yolu, algılanma zamanı).                             |
 
 ### Yazma araçları (`write:obsidian`)
 

@@ -13,7 +13,7 @@
 
 ## Kas tas ir
 
-OmniRoute izveido savienojumu ar **Obsidian** krātuvi kā **konteksta avotu** — lokālu Markdown
+67router izveido savienojumu ar **Obsidian** krātuvi kā **konteksta avotu** — lokālu Markdown
 zināšanu bāzi, kuru aģenti lasa un raksta, izmantojot iebūvēto MCP serveri. Integrācija
 sazinās ar kopienas spraudni **Obsidian Local REST API**, kas darbojas darbvirsmas
 lietotnē, tādēļ aģenti var meklēt piezīmes, lasīt/rakstīt/labot failus, uzskaitīt krātuves
@@ -76,7 +76,7 @@ un pirms saglabāšanas validē pilnvaru, izsaucot Local REST API statusa galapu
 ### WebDAV glabātuves sinhronizācija
 
 `src/app/api/settings/obsidian/webdav/route.ts` pārvalda neobligātu, uz WebDAV balstītu
-glabātuves sinhronizāciju (ko darbina `src/lib/obsidianSync.ts`). To iespējojot, OmniRoute tiek norādīts
+glabātuves sinhronizāciju (ko darbina `src/lib/obsidianSync.ts`). To iespējojot, 67router tiek norādīts
 lokāls glabātuves direktorijs un tiek ģenerēts nejaušs WebDAV lietotājvārda/paroles pāris:
 
 ```bash
@@ -111,27 +111,27 @@ Autentificētām atslēgām bez katrai atslēgai specifiskas Obsidian konfigurā
 ## MCP rīki (22)
 
 Definēti failā `open-sse/mcp-server/tools/obsidianTools.ts`. Pilnvara/pamata URL tiek noteikti
-katram izsaukumam (vispirms katrai API atslēgai, pēc tam globāli). Rīkiem, kas piekļūst OmniRoute **sinhronizācijas serverim**
-(četriem `obsidian_sync_*` rīkiem), papildus ir nepieciešama OmniRoute iestatījumos konfigurētā
+katram izsaukumam (vispirms katrai API atslēgai, pēc tam globāli). Rīkiem, kas piekļūst 67router **sinhronizācijas serverim**
+(četriem `obsidian_sync_*` rīkiem), papildus ir nepieciešama 67router iestatījumos konfigurētā
 sinhronizācijas autentifikācijas pilnvara.
 
 ### Lasīšanas rīki (`read:obsidian`)
 
-| Rīks                         | Apraksts                                                                                                                 |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `obsidian_check_status`      | Pārbaudīt, vai lokālā REST API ir sasniedzama un autentificēta.                                                          |
-| `obsidian_search_simple`     | Pilnteksta meklēšana piezīmju saturā; atgriež fragmentus ar failu ceļiem.                                                |
-| `obsidian_search_structured` | Meklēšana, izmantojot JSON Logic izteiksmi (and/or/regex/path filtrus).                                                  |
-| `obsidian_read_note`         | Lasīt piezīmi pēc ceļa attiecībā pret glabātuvi; pēc izvēles — konkrētu virsrakstu/bloku/priekšmetadatus.                |
-| `obsidian_list_vault`        | Uzskaitīt glabātuvē esošos failus un direktorijus (ierakstu koku).                                                       |
-| `obsidian_get_document_map`  | Iegūt piezīmes virsrakstu struktūru kā virsrakstu → rindu numuru karti.                                                  |
-| `obsidian_get_note_metadata` | Iegūt priekšmetadatus, tagus, saites un rakstzīmju/vārdu skaitu bez pilna satura.                                        |
-| `obsidian_get_active_file`   | Iegūt Obsidian pašlaik aktīvā faila ceļu un saturu.                                                                      |
-| `obsidian_get_periodic_note` | Iegūt dienas/nedēļas/mēneša periodisko piezīmi konkrētam datumam (ja nav norādīts — šodienai).                           |
-| `obsidian_get_tags`          | Uzskaitīt visus glabātuves tagus un to biežumu.                                                                          |
-| `obsidian_list_commands`     | Uzskaitīt pieejamos Obsidian komandu ID (izmantošanai ar `obsidian_execute_command`).                                    |
-| `obsidian_sync_status`       | OmniRoute sinhronizācijas servera statuss: darbība, glabātuves nosaukums, ports, darbības ilgums, pēdējā sinhronizācija. |
-| `obsidian_sync_conflicts`    | Uzskaitīt neatrisinātos sinhronizācijas konfliktus (ceļš, konflikta ceļš, noteikšanas laiks).                            |
+| Rīks                         | Apraksts                                                                                                                |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Pārbaudīt, vai lokālā REST API ir sasniedzama un autentificēta.                                                         |
+| `obsidian_search_simple`     | Pilnteksta meklēšana piezīmju saturā; atgriež fragmentus ar failu ceļiem.                                               |
+| `obsidian_search_structured` | Meklēšana, izmantojot JSON Logic izteiksmi (and/or/regex/path filtrus).                                                 |
+| `obsidian_read_note`         | Lasīt piezīmi pēc ceļa attiecībā pret glabātuvi; pēc izvēles — konkrētu virsrakstu/bloku/priekšmetadatus.               |
+| `obsidian_list_vault`        | Uzskaitīt glabātuvē esošos failus un direktorijus (ierakstu koku).                                                      |
+| `obsidian_get_document_map`  | Iegūt piezīmes virsrakstu struktūru kā virsrakstu → rindu numuru karti.                                                 |
+| `obsidian_get_note_metadata` | Iegūt priekšmetadatus, tagus, saites un rakstzīmju/vārdu skaitu bez pilna satura.                                       |
+| `obsidian_get_active_file`   | Iegūt Obsidian pašlaik aktīvā faila ceļu un saturu.                                                                     |
+| `obsidian_get_periodic_note` | Iegūt dienas/nedēļas/mēneša periodisko piezīmi konkrētam datumam (ja nav norādīts — šodienai).                          |
+| `obsidian_get_tags`          | Uzskaitīt visus glabātuves tagus un to biežumu.                                                                         |
+| `obsidian_list_commands`     | Uzskaitīt pieejamos Obsidian komandu ID (izmantošanai ar `obsidian_execute_command`).                                   |
+| `obsidian_sync_status`       | 67router sinhronizācijas servera statuss: darbība, glabātuves nosaukums, ports, darbības ilgums, pēdējā sinhronizācija. |
+| `obsidian_sync_conflicts`    | Uzskaitīt neatrisinātos sinhronizācijas konfliktus (ceļš, konflikta ceļš, noteikšanas laiks).                           |
 
 ### Rakstīšanas rīki (`write:obsidian`)
 

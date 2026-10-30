@@ -4,7 +4,7 @@
 
 ---
 
-Comhtháthaíodh roinnt seirbhísí in OmniRoute agus baineadh iad níos déanaí toisc gur iarr na daoine a
+Comhtháthaíodh roinnt seirbhísí in 67router agus baineadh iad níos déanaí toisc gur iarr na daoine a
 reáchtálann iad é sin. Is é an leathanach seo taifead buan na mbaintí sin. Is é an t-aon chuspóir atá leis
 ná cosc a chur orthu teacht ar ais de thaisme: teastaíonn áit amháin ó ranníocóir a aimsíonn seanfhorc, tarball npm
 i dtaisce, saincheist chartlannaithe nó iarratas chun "soláthraí X a athchóiriú", áit a ndeirtear **ná
@@ -17,10 +17,10 @@ iarratas, agus ní mór nasc leis an gcead sin a chur san iontráil.
 
 ## Beartas
 
-1. **Déantar de réir iarratas bainte ó oibreoir seirbhíse; ní dhéantar idirbheartaíocht faoi.** Níl OmniRoute
+1. **Déantar de réir iarratas bainte ó oibreoir seirbhíse; ní dhéantar idirbheartaíocht faoi.** Níl 67router
    cleamhnaithe le haon seirbhís réamhtheachtach. Nuair a iarrann oibreoir seirbhíse go mbainfí an
    comhtháthú, baintear é, cibé acu a d'úsáid an comhtháthú API oifigiúil nó nár úsáid.
-2. **Ciallaíonn "Bainte" gach dromchla atá faoi rialú OmniRoute.** An riteoir, iontráil sa chlárlann, aitheantas
+2. **Ciallaíonn "Bainte" gach dromchla atá faoi rialú 67router.** An riteoir, iontráil sa chlárlann, aitheantas
    agus ailias an tsoláthraí, liosta na samhlacha, críochphointí, athróga timpeallachta, deilbhín, cártaí an
    deais, an tagairt soláthraí ghinte, `FREE_TIERS.md`, an tagairt timpeallachta, comhairimh README,
    scátháin `llm.txt`, tástálacha tiomnaithe agus seatanna tagartha órga, nótaí tráchta sa chód, pointí
@@ -31,7 +31,7 @@ iarratas, agus ní mór nasc leis an gcead sin a chur san iontráil.
 3. **Ná tabhair iontráil ar an leathanach seo isteach arís choíche gan cead i scríbhinn.** Áirítear leis sin
    an t-aitheantas nó an t-ailias a chur ar ais in aon chatalóg soláthraithe, na fearainn a chur le riteoir,
    glacadh le PR ó ranníocóir a dhéanann í a "athchóiriú", í a chur le catalóg na samhlacha saor in aisce, nó
-   bealach láimhe a dhoiciméadú chun í a rochtain trí OmniRoute. Dún PRanna agus saincheisteanna den sórt sin le
+   bealach láimhe a dhoiciméadú chun í a rochtain trí 67router. Dún PRanna agus saincheisteanna den sórt sin le
    nasc chuig an leathanach seo.
 4. **Coinnigh an iontráil chomh beag agus is féidir.** Ná taifead ach an méid a theastaíonn ó athbhreithneoir chun
    tabhairt isteach arís a aithint: aitheantóirí, fearainn, dátaí agus an t-iarratas tarraingthe a rinne an bhaint.
@@ -48,7 +48,7 @@ iarratas, agus ní mór nasc leis an gcead sin a chur san iontráil.
 | 2026-08-12  | `puter`              | `pu`     | `puter.com`                                                                       | Úinéir Puter (Nariman Jelveh)                                                                                                                                           | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Soláthraí eochrach API. Glanann an t-aistriú `152_remove_puter_provider.sql` an chumraíocht stóráilte.                                                                                                                                                                                                                                                                                                                                                         |
 | 2026-09-02  | `theoldllm`          | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                           | Oibritheoir na seirbhíse (ríomhphost tacaíochta)                                                                                                                        | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Soláthraí gan eochair. Fuarthas iarratas i scríbhinn ar 2026-08-30. Scriosadh na heisiúintí agus an plé tiomnaithe, agus athraíodh teidil na PRanna.                                                                                                                                                                                                                                                                                                           |
 | 2026-09-21  | `gemini-business`    | `gembiz` | `business.gemini.google`                                                          | Cinneadh úinéir an tionscadail (eisiúint [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                              | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Soláthraí gréasáin bunaithe ar fhianáin. Chuir Google deireadh leis an gcríochphointe `BardFrontendService/StreamGenerate` ar dhírigh an seiceadóir air; ní féidir an ceann ionaid (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT tosaithe ó `__Secure-C_SES`/`csesidx`) a thógáil ná a bhailíochtú gan cuntas beo Gemini Enterprise/Workspace, nach bhfuil ag an tionscadal. Cuireadh deireadh leis seachas é a athscríobh gan fíorú. |
-| 2026-09-21  | `suno`               | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                  | Cinneadh úinéir an tionscadail (`#14224`)                                                                                                                               | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Soláthraí fíordheimhnithe le fianáin, ní baint anuas arna hiarraidh ag oibritheoir. Cuireadh `studio-api.suno.ai` ar fionraí (503); éilíonn an t-óstach beo malartú Clerk JWT chomh maith le spleáchas íoctha chun hCaptcha a réiteach, rud ar roghnaigh OmniRoute gan é a chur leis ar mhaithe le soláthraí ceoil amháin. Níl aon tionchar ar `kie/suno-v4.0` ná `kie/suno-v3.5` (arna n-óstáil ag kie.ai), agus tá tacaíocht acu fós.                        |
+| 2026-09-21  | `suno`               | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                  | Cinneadh úinéir an tionscadail (`#14224`)                                                                                                                               | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Soláthraí fíordheimhnithe le fianáin, ní baint anuas arna hiarraidh ag oibritheoir. Cuireadh `studio-api.suno.ai` ar fionraí (503); éilíonn an t-óstach beo malartú Clerk JWT chomh maith le spleáchas íoctha chun hCaptcha a réiteach, rud ar roghnaigh 67router gan é a chur leis ar mhaithe le soláthraí ceoil amháin. Níl aon tionchar ar `kie/suno-v4.0` ná `kie/suno-v3.5` (arna n-óstáil ag kie.ai), agus tá tacaíocht acu fós.                         |
 | 2026-10-10  | `opencode`           | `oc`     | `opencode.ai/zen/v1` (sraith saor in aisce; óstach comhroinnte le `opencode-zen`) | Baint choisctheach (cinneadh úinéir an tionscadail), ag urramú iarratas poiblí oibritheoir OpenCode chun é a bhaint den tionscadal réamhtheachtach 9router (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Ní bhaintear ach an soláthraí gan eochair "OpenCode Free". Fanann `opencode-zen` agus `opencode-go` fíordheimhnithe, samhlacha uile chatalóg Zen agus a gconarthaí iarratais, comhtháthuithe cliaint OpenCode agus `@omniroute/opencode-plugin*`. Bogann an t-aistriú `207_remove_opencode_free_provider.sql` naisc oidhreachta a bhfuil eochair API acu go Zen agus glanann sé cumraíocht gan eochair.                                                        |
 
 ## Iontráil a chur leis
@@ -63,5 +63,5 @@ Nuair a thagann iarratas bainte nua:
    sholáthraí le heochair API agus naisc stóráilte (cuir aistriú leis).
 3. Cuir ró amháin leis an tábla thuas agus cuir na haitheantóirí le
    `tests/unit/removed-providers-blocklist.test.ts`, sa PR céanna.
-4. Freagair an t-oibreoir a luaithe a chumascfar an PR, agus liostaigh an méid a baineadh agus an méid nach féidir le OmniRoute
+4. Freagair an t-oibreoir a luaithe a chumascfar an PR, agus liostaigh an méid a baineadh agus an méid nach féidir le 67router
    a athrú (leaganacha npm agus Docker atá foilsithe cheana, stair git, forcanna tríú páirtí).

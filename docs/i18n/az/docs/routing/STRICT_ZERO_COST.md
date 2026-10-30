@@ -35,7 +35,7 @@ Hovuzdakı hər bir namizəd üçün (`open-sse/services/autoCombo/virtualFactor
 `filterPaidOnlyCandidates`-dən dərhal sonra):
 
 1. **Ümumiyyətlə `FREE_MODEL_BUDGETS` daxilində deyil** → xaric edilir. Buraya həqiqətən ödənişli
-   modellər və OmniRoute-un hələ təsnif etmədiyi istənilən provayder/model daxildir — yeni
+   modellər və 67router-un hələ təsnif etmədiyi istənilən provayder/model daxildir — yeni
    namizədlər əvvəlcədən daxil deyil, xaric edilmiş vəziyyətdə başlayır.
 2. **`freeType: "keyless"`** → dərhal keçir, **lakin yalnız həqiqətən autentifikasiyasız yol ilə
    daxil olmuş namizəd üçün** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -96,7 +96,7 @@ istifadə edilmir. Reqressiya sübutu üçün
 (açarsız keçid halları A/B/C, çoxhesablı hallar 1-5).
 
 `avtomatik aşkarlanır`: sabah təqdim edilən və düzgün metadata-ya malik provayder/model
-(kataloqda olan, istifadə adapterinə malik, `hardStopGuaranteed: true`) OmniRoute onu tanıdığı
+(kataloqda olan, istifadə adapterinə malik, `hardStopGuaranteed: true`) 67router onu tanıdığı
 andan istifadə edilə bilər — heç bir kod dəyişikliyi, icazə siyahısı qeydi və bu modulda heç bir
 redaktə tələb olunmur. Kataloqdan çıxarılan provayder/model də eyni şəkildə yox olur. Reqressiya
 sübutu üçün `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` faylına baxın

@@ -52,7 +52,7 @@ inactivitate. Acesta este același limitator de rată asociat adresei IP și che
 erori intermitente `400 content-blocked` atunci când Claude Code sau Codex CLI
 efectuează în succesiune rapidă mai multe apeluri de utilizare a instrumentelor / trimitere a mesajelor.
 
-## Atenuări deja aplicate în OmniRoute
+## Atenuări deja aplicate în 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — mecanism de protecție împotriva rafalelor care impune un
    interval minim de 500 ms între solicitările de ieșire către orice URL

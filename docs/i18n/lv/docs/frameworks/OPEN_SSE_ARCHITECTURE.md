@@ -4,7 +4,7 @@
 
 ---
 
-> **ĪSUMĀ**: `open-sse/` ir galvenais straumēšanas dzinējs, kas apkalpo katru LLM pieprasījumu OmniRoute sistēmā. Tajā ir aptuveni 1 400 failu, kuros īstenota pieprasījumu apstrādes ķēde, izpildītāji, servisi, MCP serveris un tulkošanas slānis. Šajā ceļvedī izskaidrots, kā šīs daļas darbojas kopā.
+> **ĪSUMĀ**: `open-sse/` ir galvenais straumēšanas dzinējs, kas apkalpo katru LLM pieprasījumu 67router sistēmā. Tajā ir aptuveni 1 400 failu, kuros īstenota pieprasījumu apstrādes ķēde, izpildītāji, servisi, MCP serveris un tulkošanas slānis. Šajā ceļvedī izskaidrots, kā šīs daļas darbojas kopā.
 
 **Avots:** `open-sse/` (darbvietas pakotne, aptuveni 1 440 ar testiem nesaistītu `.ts` failu)
 
@@ -12,10 +12,10 @@
 
 ## Kāpēc atsevišķa darbvietas pakotne?
 
-`open-sse/` ir **patstāvīga darbvieta** OmniRoute monorepozitorijā vairāku iemeslu dēļ:
+`open-sse/` ir **patstāvīga darbvieta** 67router monorepozitorijā vairāku iemeslu dēļ:
 
 1. **Atkārtota izmantojamība** — `open-sse` tiek publicēts npm kā `@omniroute/open-sse`, tādēļ citi projekti to var izmantot neatkarīgi
-2. **Skaidras robežas** — straumēšanas dzinējs ir nodalīts no OmniRoute specifiskā lietotāja saskarnes/DB slāņa
+2. **Skaidras robežas** — straumēšanas dzinējs ir nodalīts no 67router specifiskā lietotāja saskarnes/DB slāņa
 3. **Veiktspēja** — dzinējam nav Next.js atkarību, tādēļ CLI/serverless kontekstos tiek nodrošināta ātrāka aukstā palaišana
 4. **Versiju pārvaldība** — `open-sse` var izlaist jaunās versijas pēc sava grafika
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Kāpēc nepieciešams atsevišķs transformators?
 
-Responses API ir OpenAI jaunais formāts ar **sarunām, kas saglabā stāvokli** (`previous_response_id`). Kad klients nosūta Responses pieprasījumu, OmniRoute:
+Responses API ir OpenAI jaunais formāts ar **sarunām, kas saglabā stāvokli** (`previous_response_id`). Kad klients nosūta Responses pieprasījumu, 67router:
 
 1. Iekšēji pārveido Responses → Chat Completions
 2. Nosūta to pakalpojumu sniedzējam (jebkuram pakalpojumu sniedzējam, kas atbalsta Chat Completions)

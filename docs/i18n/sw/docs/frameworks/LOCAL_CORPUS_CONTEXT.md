@@ -12,7 +12,7 @@
 
 ## Ni nini
 
-Local Corpus humwezesha mwendeshaji kuruhusu seva ya MCP ya OmniRoute kufikia saraka moja ya faili za maandishi iliyoidhinishwa waziwazi. Faili hubaki katika saraka yake ya awali: OmniRoute huhifadhi tu njia sanifu ya mzizi katika SQLite na kudumisha faharasa ya utafutaji katika kumbukumbu. Hainakili maudhui ya corpus kwenye hazina au kanzidata.
+Local Corpus humwezesha mwendeshaji kuruhusu seva ya MCP ya 67router kufikia saraka moja ya faili za maandishi iliyoidhinishwa waziwazi. Faili hubaki katika saraka yake ya awali: 67router huhifadhi tu njia sanifu ya mzizi katika SQLite na kudumisha faharasa ya utafutaji katika kumbukumbu. Hainakili maudhui ya corpus kwenye hazina au kanzidata.
 
 Uonyeshaji upya wa faharasa hufanyika kwa nyongeza. Faili ambazo hazijabadilika hutumiwa tena kulingana na ukubwa na muda wa kurekebishwa, faili zilizobadilika husomwa upya na kuwekewa heshi kwa SHA-256, na faili zilizofutwa huondolewa. Utafutaji huonyesha upya faharasa yenye umri wa zaidi ya sekunde 30; waitaji wanaweza pia kuomba uonyeshaji upya wa mara moja.
 

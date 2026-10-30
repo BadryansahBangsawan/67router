@@ -4,7 +4,7 @@
 
 ---
 
-Wannan shafin yana bayyana yadda `.env` na cikin gida ke aiki a aikin da kuma yadda za a kula da fayilolin muhalli da sirrika yayin haɓaka OmniRoute.
+Wannan shafin yana bayyana yadda `.env` na cikin gida ke aiki a aikin da kuma yadda za a kula da fayilolin muhalli da sirrika yayin haɓaka 67router.
 
 ## Halayyar .env ta postinstall
 

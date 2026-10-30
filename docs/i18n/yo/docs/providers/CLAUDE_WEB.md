@@ -154,7 +154,7 @@ lọ́wọ́lọ́wọ́, nítorí náà àwọn case tí a fo kọjá yẹn kì
 
 ### Ìṣètò
 
-1. Bẹ̀rẹ̀ OmniRoute pẹ̀lú `npm run dev` tàbí installation tí a ti build.
+1. Bẹ̀rẹ̀ 67router pẹ̀lú `npm run dev` tàbí installation tí a ti build.
 2. Ṣí Dashboard → Providers → Add Provider.
 3. Yan ẹ̀ka Web Cookie àti Claude Web.
 4. Lẹ Cookie header kíkún tí a daakọ láti request `claude.ai` tí a ti jẹ́rìí sí.

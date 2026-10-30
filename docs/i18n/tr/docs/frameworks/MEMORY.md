@@ -7,7 +7,7 @@
 > **Doğruluk kaynağı:** `src/lib/memory/` ve `src/app/api/memory/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40 (varsayılan olarak kapalı + int8 niceleme telafisi)
 
-OmniRoute, API anahtarına (ve isteğe bağlı olarak oturum kimliğine) göre belirlenen kalıcı konuşma belleği sağlar. Anılar, hafif regex kalıp eşleştirmesi aracılığıyla LLM yanıtlarından otomatik olarak çıkarılır ve sonraki isteklere başta yer alan bir sistem mesajı olarak (veya sistem rolünü reddeden sağlayıcılarda ilk kullanıcı mesajı olarak) yeniden eklenir.
+67router, API anahtarına (ve isteğe bağlı olarak oturum kimliğine) göre belirlenen kalıcı konuşma belleği sağlar. Anılar, hafif regex kalıp eşleştirmesi aracılığıyla LLM yanıtlarından otomatik olarak çıkarılır ve sonraki isteklere başta yer alan bir sistem mesajı olarak (veya sistem rolünü reddeden sağlayıcılarda ilk kullanıcı mesajı olarak) yeniden eklenir.
 
 > **Bellek varsayılan olarak KAPALIDIR (v3.8.30+).** `DEFAULT_MEMORY_SETTINGS.enabled`
 > artık `false` değerindedir (`src/lib/memory/settings.ts`). Belleğin etkinleştirilmesi,
@@ -620,7 +620,7 @@ tutar (1.000 girdili LRU, varsayılan TTL 5 dk).
 
 ## Gömme Sağlayıcısı Seçme (v3.8.16+)
 
-OmniRoute'un bellek motoru **dört gömme kaynağını** (`src/lib/memory/embedding/`) destekler. Her biri **gecikme, maliyet, model kalitesi ve kurulum karmaşıklığı** açısından farklı avantaj ve dezavantajlara sahiptir.
+67router'un bellek motoru **dört gömme kaynağını** (`src/lib/memory/embedding/`) destekler. Her biri **gecikme, maliyet, model kalitesi ve kurulum karmaşıklığı** açısından farklı avantaj ve dezavantajlara sahiptir.
 
 ### Gömme Kaynakları
 
@@ -1036,13 +1036,13 @@ Kaydedildiğinde `/api/memory` REST rotaları ve A2A bellek araması, claude-mem
 Bu adaptör söz konusu korumayı gevşetmez: ana makine `127.0.0.1` olarak sabit kodlanmıştır ve yapılandırma
 şeması (`ClaudeMemBackendConfigSchema`, `.strict()`) yalnızca şunları kabul eder:
 
-| Anahtar     | Tür    | Varsayılan | Notlar                                                                                                            |
-| ----------- | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —          | Zorunlu, 1024–65535. Ayarlar dosyasındaki claude-mem worker portu (varsayılan `37700 + uid % 100`).               |
-| `project`   | string | —          | Kullanılacak claude-mem projesi. Ayarlanmazsa → her OmniRoute API anahtarı kendi projesiyle (`apiKeyId`) eşleşir. |
-| `timeoutMs` | number | `5000`     | İstek başına zaman aşımı, 100–30000.                                                                              |
+| Anahtar     | Tür    | Varsayılan | Notlar                                                                                                           |
+| ----------- | ------ | ---------- | ---------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —          | Zorunlu, 1024–65535. Ayarlar dosyasındaki claude-mem worker portu (varsayılan `37700 + uid % 100`).              |
+| `project`   | string | —          | Kullanılacak claude-mem projesi. Ayarlanmazsa → her 67router API anahtarı kendi projesiyle (`apiKeyId`) eşleşir. |
+| `timeoutMs` | number | `5000`     | İstek başına zaman aşımı, 100–30000.                                                                             |
 
-Bunu `PUT /api/settings/memory` üzerinden etkinleştirin ve OmniRoute'u yeniden başlatın (arka uçlar
+Bunu `PUT /api/settings/memory` üzerinden etkinleştirin ve 67router'u yeniden başlatın (arka uçlar
 `initMemoryBackends()` içinde yalnızca bir kez kaydedilir):
 
 ```json
@@ -1059,7 +1059,7 @@ Eşleme ve sınırlar:
 
 - Kimlikler `claude-mem:<observationId>` biçimindedir; `get`/`delete`, diğer arka uçların kimliklerini
   ağ çağrısı yapmadan yok sayar.
-- `create` → `POST /api/memory/save`; OmniRoute alanları (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router alanları (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) claude-mem'in `metadata.omniroute` alanında taşınır ve okuma sırasında aynen geri alınır.
 - `search` → `GET /api/search?format=json&type=observations`, `maxTokens` değerine
   (karakter / 4) göre kırpılır. `list` → worker'ın sayfalandırılmış gözlemler uç noktası (`total` bir alt sınırdır — worker
@@ -1071,16 +1071,16 @@ Eşleme ve sınırlar:
 - İstem enjeksiyonu (`retrieval.ts`) ve `omniroute_memory_*` MCP araçları SQLite'ı hâlâ
   doğrudan okur — `memoryManager` üzerinden geçmezler, dolayısıyla bu arka uç onları beslemez.
 
-**claude-mem'in kendi LLM çağrılarını OmniRoute üzerinden yönlendirme.** claude-mem, gözlemleri
+**claude-mem'in kendi LLM çağrılarını 67router üzerinden yönlendirme.** claude-mem, gözlemleri
 bir LLM ile sıkıştırır (varsayılan: Claude Agent SDK). `openai-compatible` sağlayıcısı bunun yerine
-OmniRoute'u işaret ederek birleşik geri dönüş ve maliyet takibinden yararlanabilir. `~/.claude-mem/settings.json` içinde:
+67router'u işaret ederek birleşik geri dönüş ve maliyet takibinden yararlanabilir. `~/.claude-mem/settings.json` içinde:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API anahtarı>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute modeli veya birleşimi>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API anahtarı>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router modeli veya birleşimi>"
 }
 ```
 

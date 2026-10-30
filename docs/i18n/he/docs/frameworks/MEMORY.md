@@ -7,7 +7,7 @@
 > **מקור האמת:** `src/lib/memory/` ו-`src/app/api/memory/`
 > **עדכון אחרון:** 2026-06-28 — v3.8.40 (כבוי כברירת מחדל + השלמת קוונטיזציית int8)
 
-OmniRoute מספק זיכרון שיחה מתמשך לפי מפתח API (ולפי מזהה הפעלה,
+67router מספק זיכרון שיחה מתמשך לפי מפתח API (ולפי מזהה הפעלה,
 באופן אופציונלי). זיכרונות מחולצים אוטומטית מתשובות LLM
 באמצעות התאמת תבניות regex קלילה ומוזרקים בחזרה לבקשות הבאות
 כהודעת מערכת ראשונה (או כהודעת המשתמש הראשונה עבור ספקים
@@ -627,7 +627,7 @@ TTL ברירת מחדל של 5 דקות).
 
 ## בחירת ספק הטמעות (v3.8.16+)
 
-מנוע הזיכרון של OmniRoute תומך ב-**ארבעה מקורות הטמעה** (`src/lib/memory/embedding/`). לכל אחד מהם יש פשרות שונות בנושאי **השהיה, עלות, איכות המודל ומורכבות ההגדרה**.
+מנוע הזיכרון של 67router תומך ב-**ארבעה מקורות הטמעה** (`src/lib/memory/embedding/`). לכל אחד מהם יש פשרות שונות בנושאי **השהיה, עלות, איכות המודל ומורכבות ההגדרה**.
 
 ### מקורות ההטמעה
 
@@ -1047,13 +1047,13 @@ Claude Code / Codex / Cursor, שמתעד הפעלות תכנות בתור "תצ�
 מתאם זה אינו מקל את ההגנה הזו: המארח מקודד באופן קשיח בתור `127.0.0.1`, וסכמת ההגדרה
 (`ClaudeMemBackendConfigSchema`, `.strict()`) מקבלת רק:
 
-| מפתח        | סוג    | ברירת מחדל | הערות                                                                                                      |
-| ----------- | ------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —          | חובה, 1024–65535. פורט ה-worker של claude-mem מקובץ ההגדרות שלו (ברירת מחדל: `37700 + uid % 100`).         |
-| `project`   | string | —          | פרויקט claude-mem שבו יש להשתמש. אם לא הוגדר → כל מפתח API של OmniRoute ממופה לפרויקט משלו (ה-`apiKeyId`). |
-| `timeoutMs` | number | `5000`     | זמן קצוב לכל בקשה, 100–30000.                                                                              |
+| מפתח        | סוג    | ברירת מחדל | הערות                                                                                                     |
+| ----------- | ------ | ---------- | --------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —          | חובה, 1024–65535. פורט ה-worker של claude-mem מקובץ ההגדרות שלו (ברירת מחדל: `37700 + uid % 100`).        |
+| `project`   | string | —          | פרויקט claude-mem שבו יש להשתמש. אם לא הוגדר → כל מפתח API של 67router ממופה לפרויקט משלו (ה-`apiKeyId`). |
+| `timeoutMs` | number | `5000`     | זמן קצוב לכל בקשה, 100–30000.                                                                             |
 
-הפעילו אותו באמצעות `PUT /api/settings/memory` והפעילו מחדש את OmniRoute (רכיבי backend נרשמים
+הפעילו אותו באמצעות `PUT /api/settings/memory` והפעילו מחדש את 67router (רכיבי backend נרשמים
 פעם אחת, בתוך `initMemoryBackends()`):
 
 ```json
@@ -1070,7 +1070,7 @@ Claude Code / Codex / Cursor, שמתעד הפעלות תכנות בתור "תצ�
 
 - מזהים הם בתבנית `claude-mem:<observationId>`; הפעולות `get`/`delete` מתעלמות ממזהים של רכיבי backend אחרים ללא
   קריאת רשת.
-- `create` → `POST /api/memory/save`; השדות של OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; השדות של 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) מועברים בתוך `metadata.omniroute` של claude-mem ומשוחזרים בקריאה.
 - `search` → `GET /api/search?format=json&type=observations`, עם קיצוץ לפי `maxTokens`
   (מספר תווים / 4). `list` → נקודת הקצה המדופדפת של ה-worker לתצפיות (`total` הוא חסם תחתון — ה-worker
@@ -1082,16 +1082,16 @@ Claude Code / Codex / Cursor, שמתעד הפעלות תכנות בתור "תצ�
 - הזרקת prompt (`retrieval.ts`) וכלי ה-MCP מסוג `omniroute_memory_*` עדיין קוראים ישירות מ-SQLite
   — הם אינם עוברים דרך `memoryManager`, ולכן backend זה אינו מזין אותם.
 
-**ניתוב קריאות ה-LLM של claude-mem עצמו דרך OmniRoute.**‏ claude-mem דוחס תצפיות
+**ניתוב קריאות ה-LLM של claude-mem עצמו דרך 67router.**‏ claude-mem דוחס תצפיות
 באמצעות LLM (ברירת מחדל: Claude Agent SDK). ניתן להפנות במקום זאת את ספק ה-`openai-compatible` שלו
-אל OmniRoute, וכך ליהנות מ-combo fallback וממעקב עלויות. בתוך `~/.claude-mem/settings.json`:
+אל 67router, וכך ליהנות מ-combo fallback וממעקב עלויות. בתוך `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<מפתח API של OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<מודל או combo של OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<מפתח API של 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<מודל או combo של 67router>"
 }
 ```
 

@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Malti)
+# Providers Guide: Connect AI Models to 67router (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Fil-qosor**: Fornitur huwa konnessjoni ma’ servizz tal-IA (bħal OpenAI, Anthropic, Google). Għandek bżonn mill-inqas fornitur wieħed biex tuża OmniRoute.
+> **Fil-qosor**: Fornitur huwa konnessjoni ma’ servizz tal-IA (bħal OpenAI, Anthropic, Google). Għandek bżonn mill-inqas fornitur wieħed biex tuża 67router.
 
 ---
 
 ## X'Inhu Fornitur?
 
-Aħseb f'fornitur bħal **operatur tat-telefonija**. Bħalma għandek bżonn operatur tat-telefonija biex tagħmel telefonati, għandek bżonn fornitur tal-IA biex tuża mudelli tal-IA. OmniRoute huwa bħal telefon li jaħdem mal-**operaturi kollha** — tista' taqleb bejniethom awtomatikament.
+Aħseb f'fornitur bħal **operatur tat-telefonija**. Bħalma għandek bżonn operatur tat-telefonija biex tagħmel telefonati, għandek bżonn fornitur tal-IA biex tuża mudelli tal-IA. 67router huwa bħal telefon li jaħdem mal-**operaturi kollha** — tista' taqleb bejniethom awtomatikament.
 
 ### Tipi ta' Fornituri
 
@@ -31,8 +31,8 @@ Ara **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** għal struzzjonijiet ġener
 ### Konfigurazzjoni fakultattiva tal-ewwel tħaddim għal fornituri bla ħlas
 
 Il-wizard tal-ewwel tħaddim joffri kard espliċita **Ikkonfigura fornituri bla ħlas**. Dan joħloq il-lista
-attwali ta’ fornituri eliġibbli mir-reġistru ta’ fornituri mingħajr awtentikazzjoni ta’ OmniRoute, imbagħad iħallik tirrieżamina u tneħħi l-għażla ta’ kull
-fornitur qabel tikkonferma. OmniRoute juri l-avviż ta’ prekawzjoni tal-fornitur u link għas-sit tiegħu
+attwali ta’ fornituri eliġibbli mir-reġistru ta’ fornituri mingħajr awtentikazzjoni ta’ 67router, imbagħad iħallik tirrieżamina u tneħħi l-għażla ta’ kull
+fornitur qabel tikkonferma. 67router juri l-avviż ta’ prekawzjoni tal-fornitur u link għas-sit tiegħu
 sabiex l-ewwel tkun tista’ tirrieżamina t-termini, il-privatezza, id-disponibbiltà u l-limiti tar-rata tal-parti terza.
 
 Din l-azzjoni hija fakultattiva: it-tlestija tal-wizard qatt ma toħloq konnessjonijiet ma’ fornituri bla ħlas b’mod sieket.
@@ -80,7 +80,7 @@ terġa’ tipprova b’mod sikur dawk biss li fallew.
 
 ### Għażla D: Mudelli MLX Lokali (Apple Silicon)
 
-Għal Macs b’Apple Silicon u memorja unifikata, OmniRoute jappoġġja l-konnessjoni ma’ mudelli MLX lokali li jaħdmu permezz ta’ `mlx-lm.server` bħala fornituri lokali regolari kompatibbli ma’ OpenAI.
+Għal Macs b’Apple Silicon u memorja unifikata, 67router jappoġġja l-konnessjoni ma’ mudelli MLX lokali li jaħdmu permezz ta’ `mlx-lm.server` bħala fornituri lokali regolari kompatibbli ma’ OpenAI.
 
 #### Prerekwiżiti
 
@@ -110,14 +110,14 @@ Għal Macs b’Apple Silicon u memorja unifikata, OmniRoute jappoġġja l-konnes
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Qabbad fid-Dashboard ta’ OmniRoute**:
+3. **Qabbad fid-Dashboard ta’ 67router**:
    - Mur f’**Fornituri** → **Żid Fornitur**
    - Agħżel **MLX Gemma 26B** jew **MLX Qwen 3.8 27B**
    - Ikklikkja **Qabbad** (ma teħtieġ l-ebda ċavetta tal-API)
 
 4. **Uża ma’ OpenCode**:
    ```bash
-   # Ikkonfigura OpenCode biex juża OmniRoute
+   # Ikkonfigura OpenCode biex juża 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Trid timmaniġġja dan manwalment:
 - Ħaddem it-tnejn fuq magni separati, jew
 - Waqqaf wieħed qabel tibda l-ieħor
 
-OmniRoute ma jimmaniġġjax awtomatikament il-proċessi tas-server MLX — huwa jidderieġi biss it-talbiet lejn l-endpoints kompatibbli ma’ OpenAI li tikkonfigura.
+67router ma jimmaniġġjax awtomatikament il-proċessi tas-server MLX — huwa jidderieġi biss it-talbiet lejn l-endpoints kompatibbli ma’ OpenAI li tikkonfigura.
 
 #### Appoġġ għas-Sejħiet tal-Għodod
 
@@ -158,13 +158,13 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 #### Soluzzjoni tal-Problemi
 
-| Problema                        | Soluzzjoni                                                                                         |
-| ------------------------------- | -------------------------------------------------------------------------------------------------- |
-| Is-server ma jibdiex            | Iċċekkja `uv run mlx_lm.server --help` u vverifika l-IDs tal-mudelli                               |
-| Memorja insuffiċjenti           | Kun żgur li jkun qed jaħdem mudell wieħed biss; agħlaq apps oħra; iċċekkja Activity Monitor        |
-| Il-konnessjoni ġiet irrifjutata | Ivverifika li s-server qed jaħdem fuq il-port korrett (11435/11436)                                |
-| Risposti bil-mod                | L-ewwel talba ttella’ l-mudell fil-memorja (~30-60s); it-talbiet sussegwenti jkunu veloċi          |
-| Is-sejħiet tal-għodod ifallu    | Kun żgur li l-mudell jappoġġja l-għodod; iċċekkja l-logs ta’ OmniRoute għal żbalji fit-traduzzjoni |
+| Problema                        | Soluzzjoni                                                                                        |
+| ------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Is-server ma jibdiex            | Iċċekkja `uv run mlx_lm.server --help` u vverifika l-IDs tal-mudelli                              |
+| Memorja insuffiċjenti           | Kun żgur li jkun qed jaħdem mudell wieħed biss; agħlaq apps oħra; iċċekkja Activity Monitor       |
+| Il-konnessjoni ġiet irrifjutata | Ivverifika li s-server qed jaħdem fuq il-port korrett (11435/11436)                               |
+| Risposti bil-mod                | L-ewwel talba ttella’ l-mudell fil-memorja (~30-60s); it-talbiet sussegwenti jkunu veloċi         |
+| Is-sejħiet tal-għodod ifallu    | Kun żgur li l-mudell jappoġġja l-għodod; iċċekkja l-logs ta’ 67router għal żbalji fit-traduzzjoni |
 
 ---
 
@@ -236,12 +236,12 @@ Il-fornitur tiegħek issa huwa kkonnettjat. Tista’ tużah b’`model: "auto"` 
 
 ## L-Użu ta’ Fornituri Multipli
 
-OmniRoute jaħdem l-aħjar b’**diversi fornituri**. Dan jagħtik:
+67router jaħdem l-aħjar b’**diversi fornituri**. Dan jagħtik:
 
-- **Alternattiva awtomatika** — Jekk fornitur wieħed ifalli, OmniRoute jipprova lil dak li jmiss
-- **Ottimizzazzjoni tal-ispejjeż** — OmniRoute jagħżel l-orħos fornitur għal kull talba
-- **Ottimizzazzjoni tal-veloċità** — OmniRoute jagħżel l-aktar fornitur veloċi għal kull talba
-- **Ottimizzazzjoni tal-kwalità** — OmniRoute jagħżel l-aħjar fornitur għal kull kompitu
+- **Alternattiva awtomatika** — Jekk fornitur wieħed ifalli, 67router jipprova lil dak li jmiss
+- **Ottimizzazzjoni tal-ispejjeż** — 67router jagħżel l-orħos fornitur għal kull talba
+- **Ottimizzazzjoni tal-veloċità** — 67router jagħżel l-aktar fornitur veloċi għal kull talba
+- **Ottimizzazzjoni tal-kwalità** — 67router jagħżel l-aħjar fornitur għal kull kompitu
 
 ### Konfigurazzjoni Rakkomandata
 
@@ -251,7 +251,7 @@ Qabbad mill-inqas **3 fornituri** għall-aħjar esperjenza:
 2. **Fornitur wieħed veloċi** (Groq, Cerebras) — Għal tweġibiet malajr
 3. **Fornitur wieħed ta’ kwalità** (OpenAI, Anthropic, Google) — Għal kompiti kumplessi
 
-Imbagħad uża `model: "auto"` u OmniRoute jagħżel awtomatikament l-aħjar wieħed għal kull talba.
+Imbagħad uża `model: "auto"` u 67router jagħżel awtomatikament l-aħjar wieħed għal kull talba.
 
 ---
 
@@ -260,25 +260,25 @@ Imbagħad uża `model: "auto"` u OmniRoute jagħżel awtomatikament l-aħjar wie
 ### OpenAI
 
 1. Ikseb ċavetta API: https://platform.openai.com/api-keys
-2. F'OmniRoute: Fornituri → Żid Fornitur → OpenAI
+2. F'67router: Fornituri → Żid Fornitur → OpenAI
 3. Waħħal iċ-ċavetta API → Qabbad
 
 ### Anthropic
 
 1. Ikseb ċavetta API: https://console.anthropic.com/
-2. F'OmniRoute: Fornituri → Żid Fornitur → Anthropic
+2. F'67router: Fornituri → Żid Fornitur → Anthropic
 3. Waħħal iċ-ċavetta API → Qabbad
 
 ### Google (Gemini)
 
 1. Ikseb ċavetta API: https://aistudio.google.com/apikey
-2. F'OmniRoute: Fornituri → Żid Fornitur → Gemini
+2. F'67router: Fornituri → Żid Fornitur → Gemini
 3. Waħħal iċ-ċavetta API → Qabbad
 
 ### DeepSeek
 
 1. Ikseb ċavetta API: https://platform.deepseek.com/
-2. F'OmniRoute: Fornituri → Żid Fornitur → DeepSeek
+2. F'67router: Fornituri → Żid Fornitur → DeepSeek
 3. Waħħal iċ-ċavetta API → Qabbad
 
 ### Qoder: agħżel it-trasport tal-kredenzjali
@@ -286,12 +286,12 @@ Imbagħad uża `model: "auto"` u OmniRoute jagħżel awtomatikament l-aħjar wie
 Qoder jeħtieġ kredenzjali. Iż-żewġ trasporti tiegħu għandhom kapaċitajiet differenti; isem ta' mudell
 waħdu ma jidentifikax x'tista' tagħmel konnessjoni partikolari.
 
-| Kredenzjali                               | Trasport ta' OmniRoute                              | Sejħiet għall-għodod mill-klijent                              | Streaming                                                                |
-| ----------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| PAT li jibda b'`pt-`                      | Proċess lokali `qodercli` fuq il-host ta' OmniRoute | Mhux appoġġjat                                                 | Ibbaferjat: SSE jintbagħat biss wara li s-CLI jirritorna t-tweġiba sħiħa |
-| Token ta' aċċess mhux PAT jew ċavetta API | Endpoint HTTP ta' DashScope kompatibbli ma' OpenAI  | Jgħaddi mingħajr tibdil, soġġett għall-mudell/ċavetta upstream | Mogħdija HTTP/SSE upstream                                               |
+| Kredenzjali                               | Trasport ta' 67router                              | Sejħiet għall-għodod mill-klijent                              | Streaming                                                                |
+| ----------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| PAT li jibda b'`pt-`                      | Proċess lokali `qodercli` fuq il-host ta' 67router | Mhux appoġġjat                                                 | Ibbaferjat: SSE jintbagħat biss wara li s-CLI jirritorna t-tweġiba sħiħa |
+| Token ta' aċċess mhux PAT jew ċavetta API | Endpoint HTTP ta' DashScope kompatibbli ma' OpenAI | Jgħaddi mingħajr tibdil, soġġett għall-mudell/ċavetta upstream | Mogħdija HTTP/SSE upstream                                               |
 
-Għal PAT, installa l-Qoder CLI fuq l-istess host jew container bħal OmniRoute. L-eżegwibbli
+Għal PAT, installa l-Qoder CLI fuq l-istess host jew container bħal 67router. L-eżegwibbli
 jrid ikun jista' jinstab bħala `qodercli`, jew issettja `CLI_QODER_BIN` għall-path tal-eżegwibbli tiegħu. CLI
 installat biss fuq il-host ta' Docker ma jkunx awtomatikament preżenti fil-container. Binarji
 neqsin jipproduċu żball espliċitu li jidderiġik lejn l-installazzjoni jew l-issettjar tal-path.
@@ -324,16 +324,16 @@ u timeout konfigurabbli huma titjibiet separati; din l-imġiba ma twegħedhomx.
 ### Groq
 
 1. Ikseb ċavetta API: https://console.groq.com/
-2. F'OmniRoute: Fornituri → Żid Fornitur → Groq
+2. F'67router: Fornituri → Żid Fornitur → Groq
 3. Waħħal iċ-ċavetta API → Qabbad
 
 ---
 
 ## Mistoqsijiet Komuni
 
-### "Għandi bżonn inħallas biex nuża OmniRoute?"
+### "Għandi bżonn inħallas biex nuża 67router?"
 
-**Le!** OmniRoute huwa bla ħlas u open-source. Tista' tuża fornituri bla ħlas (Kiro, Pollinations) mingħajr ma tħallas xejn. Tħallas biss jekk tagħżel li tuża fornituri bi ħlas.
+**Le!** 67router huwa bla ħlas u open-source. Tista' tuża fornituri bla ħlas (Kiro, Pollinations) mingħajr ma tħallas xejn. Tħallas biss jekk tagħżel li tuża fornituri bi ħlas.
 
 ### "B'liema fornitur għandi nibda?"
 
@@ -341,11 +341,11 @@ Ibda b'**Kiro AI** — huwa bla ħlas, ma jeħtieġ l-ebda API key, u jagħtik a
 
 ### "Nista' nuża diversi fornituri fl-istess ħin?"
 
-**Iva!** Dak hu l-iskop ewlieni ta' OmniRoute. Qabbad diversi fornituri u uża `model: "auto"` biex tħalli lil OmniRoute jagħżel l-aħjar wieħed għal kull talba.
+**Iva!** Dak hu l-iskop ewlieni ta' 67router. Qabbad diversi fornituri u uża `model: "auto"` biex tħalli lil 67router jagħżel l-aħjar wieħed għal kull talba.
 
 ### "X'jiġri jekk fornitur jieqaf jaħdem?"
 
-OmniRoute awtomatikament jaqbeż lill-fornituri li ma jkunux qed jaħdmu u jipprova lil dak li jkun imiss. M'għandek bżonn tagħmel xejn.
+67router awtomatikament jaqbeż lill-fornituri li ma jkunux qed jaħdmu u jipprova lil dak li jkun imiss. M'għandek bżonn tagħmel xejn.
 
 ### "Kif niskonnettja fornitur?"
 
@@ -353,13 +353,13 @@ Mur f'Providers → ikklikkja fuq il-fornitur → ikklikkja **Disconnect**.
 
 ### "Nista' nuża l-API keys eżistenti tiegħi?"
 
-**Iva!** Jekk diġà għandek API keys għal OpenAI, Anthropic, Google, eċċ., tista' tużahom f'OmniRoute. Sempliċiment waħħalhom meta tqabbad il-fornitur.
+**Iva!** Jekk diġà għandek API keys għal OpenAI, Anthropic, Google, eċċ., tista' tużahom f'67router. Sempliċiment waħħalhom meta tqabbad il-fornitur.
 
 ---
 
 ## X'Jmiss?
 
-- **[Gwida għall-Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Ħalli lil OmniRoute jagħżel l-aħjar AI għalik
+- **[Gwida għall-Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Ħalli lil 67router jagħżel l-aħjar AI għalik
 - **[Gwida għall-Pjanijiet Bla Ħlas](./FREE-TIERS-GUIDE.md)** — Ikseb AI b'xejn mingħajr karta ta' kreditu
 - **[Soluzzjoni tal-Problemi](../guides/TROUBLESHOOTING.md)** — Irranġa problemi komuni
 - **[Referenza tal-Fornituri](../reference/PROVIDER_REFERENCE.md)** — Lista sħiħa ta' 226 fornitur

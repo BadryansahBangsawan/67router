@@ -25,7 +25,7 @@ Dashboard → Providers → **ఫైల్ నుండి దిగుమతి
 దిగుమతి మోడల్లోని (**CSV టెంప్లేట్ను డౌన్లోడ్ చేయండి**) ఎంపిక ద్వారా ప్రారంభ ఫైల్ను డౌన్లోడ్ చేయండి. ఉదాహరణ:
 
 ```csv
-# OmniRoute ప్రొవైడర్ దిగుమతి (స్థాన ఆధారిత కాలమ్లు)
+# 67router ప్రొవైడర్ దిగుమతి (స్థాన ఆధారిత కాలమ్లు)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

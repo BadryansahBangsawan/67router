@@ -4,7 +4,7 @@
 
 ---
 
-Homologasyon VPS'sinde çalışan OmniRoute dağıtımının gerçek ortam E2E doğrulaması
+Homologasyon VPS'sinde çalışan 67router dağıtımının gerçek ortam E2E doğrulaması
 (`HOMOLOG_BASE_URL`, ör. `http://192.168.0.15:20128`). Tek bir komut, manuel
 sürüm STOP #2 kontrol listesinin yerini otomatik ve kanıt üreten bir çalıştırmayla alır.
 

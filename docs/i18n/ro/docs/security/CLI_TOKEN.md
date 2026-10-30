@@ -6,7 +6,7 @@
 
 ## Prezentare generală
 
-Comenzile OmniRoute CLI se autentifică la API-ul local de administrare folosind un
+Comenzile 67router CLI se autentifică la API-ul local de administrare folosind un
 token `HMAC-SHA256(machine-id, salt)` trimis prin antetul de cerere
 `x-omniroute-cli-token`.
 

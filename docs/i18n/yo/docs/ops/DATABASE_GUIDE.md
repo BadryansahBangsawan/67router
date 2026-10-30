@@ -4,7 +4,7 @@
 
 ---
 
-> **Ní ṣókí**: OmniRoute ń lo **SQLite pẹ̀lú ìkọ̀wé àkọsílẹ̀ WAL** gẹ́gẹ́ bí ibi ìpamọ́ àkọ́kọ́ rẹ̀, pẹ̀lú ìfipamọ́ **AES-256-GCM** fún àwọn ààyè ìsọfúnni tó ṣe pàtàkì nígbà tí wọ́n wà ní ìpamọ́. Ìtọ́sọ́nà yìí ṣàlàyé ètò schema, àwọn ìṣíkiri, àfẹ́yìntì/ìmúpadàbọ̀sípò, àti àwọn ìtọ́sọ́nà iṣẹ́.
+> **Ní ṣókí**: 67router ń lo **SQLite pẹ̀lú ìkọ̀wé àkọsílẹ̀ WAL** gẹ́gẹ́ bí ibi ìpamọ́ àkọ́kọ́ rẹ̀, pẹ̀lú ìfipamọ́ **AES-256-GCM** fún àwọn ààyè ìsọfúnni tó ṣe pàtàkì nígbà tí wọ́n wà ní ìpamọ́. Ìtọ́sọ́nà yìí ṣàlàyé ètò schema, àwọn ìṣíkiri, àfẹ́yìntì/ìmúpadàbọ̀sípò, àti àwọn ìtọ́sọ́nà iṣẹ́.
 
 **Àwọn orísun:**
 
@@ -19,7 +19,7 @@
 
 ## Kí nìdí tí a fi yan SQLite?
 
-OmniRoute yan SQLite dípò PostgreSQL/MySQL fún ọ̀pọ̀ ìdí:
+67router yan SQLite dípò PostgreSQL/MySQL fún ọ̀pọ̀ ìdí:
 
 | Kókó         | SQLite                              | PostgreSQL                            |
 | ------------ | ----------------------------------- | ------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute yan SQLite dípò PostgreSQL/MySQL fún ọ̀pọ̀ ìdí:
 | **Àfẹ́yìntì** | Ìdàkọ fáìlì kan ṣoṣo                | `pg_dump` tàbí àwòrán-ìpamọ́ ètò fáìlì |
 | **Ìlò**      | Fífìdí rẹ̀ múlẹ̀ fún aṣàmúlò kọ̀ọ̀kan   | SaaS olùgbé-ọ̀pọ̀                       |
 
-Fún àwọn ìmúṣiṣẹ́ **aṣàmúlò kan, instance kan** (èyí tí ó jẹ́ ìlò pàtàkì OmniRoute), SQLite rọrùn sí i, ó sì yára sí i.
+Fún àwọn ìmúṣiṣẹ́ **aṣàmúlò kan, instance kan** (èyí tí ó jẹ́ ìlò pàtàkì 67router), SQLite rọrùn sí i, ó sì yára sí i.
 
 ### Ìkọ̀wé Àkọsílẹ̀ WAL
 
@@ -50,7 +50,7 @@ WAL ń gba **kíkà lẹ́ẹ̀kan náà** láàyè nígbà ìkọ̀wé — èy�
 `cache_size` tí ó jẹ́ òdì gẹ́gẹ́ bí ààlà òkè ìsúnmọ́ ní KiB, ó sì ń pín àwọn ojú-ewé bí a ṣe nílò wọn.
 **Ètò > Ètò àti Ìpamọ́ > Ìwọ̀n Cache** ń gba àwọn iye odidi láti **1 sí
 1,000,000 KiB**; fífi ètò náà pamọ́ máa lò ó fún ìsopọ̀ ibi ìpamọ́ dátà tó ń ṣiṣẹ́,
-OmniRoute sì máa mú iye tí a ti fi pamọ́ padà nígbà ìbẹ̀rẹ̀.
+67router sì máa mú iye tí a ti fi pamọ́ padà nígbà ìbẹ̀rẹ̀.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Àgbékalẹ̀ Modulu Ìkápá
 
-Básì dátà OmniRoute ní **àwọn modulu TypeScript ipele-òkè 110** nínú `src/lib/db/`. Modulu ìkápá kọ̀ọ̀kan:
+Básì dátà 67router ní **àwọn modulu TypeScript ipele-òkè 110** nínú `src/lib/db/`. Modulu ìkápá kọ̀ọ̀kan:
 
 - Ní tábìlì pàtó kan tàbí jù bẹ́ẹ̀ lọ
 - Ṣe àgbéjáde àwọn iṣẹ́ CRUD tí a ti sọ irú wọn
@@ -90,7 +90,7 @@ Básì dátà OmniRoute ní **àwọn modulu TypeScript ipele-òkè 110** nínú
 
 ### Àwọn Modulu DB Ipele-Òkè 110 Náà
 
-OmniRoute ní **àwọn fáìlì TypeScript ipele-òkè 110** nínú `src/lib/db/`. Ní ìsàlẹ̀ ni àpẹẹrẹ díẹ̀ lára àwọn modulu pàtàkì; wo àkójọ àpótí-fáìlì fún àkójọ pípé:
+67router ní **àwọn fáìlì TypeScript ipele-òkè 110** nínú `src/lib/db/`. Ní ìsàlẹ̀ ni àpẹẹrẹ díẹ̀ lára àwọn modulu pàtàkì; wo àkójọ àpótí-fáìlì fún àkójọ pípé:
 
 | Modulu                  | Àwọn Tábìlì                                                    | Ojúṣe                                                                                |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -186,7 +186,7 @@ const providers = await listProviders();
 
 ## Àwọn Ìṣíkiri
 
-OmniRoute ń lo **àwọn ìṣíkiri aláwọ̀n-ẹ̀yà, tí ó sì lè ṣiṣẹ́ léraléra láìsí àbájáde àfikún** nínú `src/lib/db/migrations/`. Ìṣíkiri kọ̀ọ̀kan jẹ́ fáìlì SQL kan ṣoṣo tí a sọ lórúkọ ní ìlànà `NNN_description.sql`.
+67router ń lo **àwọn ìṣíkiri aláwọ̀n-ẹ̀yà, tí ó sì lè ṣiṣẹ́ léraléra láìsí àbájáde àfikún** nínú `src/lib/db/migrations/`. Ìṣíkiri kọ̀ọ̀kan jẹ́ fáìlì SQL kan ṣoṣo tí a sọ lórúkọ ní ìlànà `NNN_description.sql`.
 
 ### Bí A Ṣe Ń Sọ Àwọn Ìṣíkiri Lórúkọ
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Àwọn ìyípadà tí kò bá ẹ̀yà àtijọ́ mu** (fún àpẹẹrẹ, yíyọ àwọn column kúrò) nira. OmniRoute KÒ ṣe àtìlẹ́yìn fún downgrade — ní kété tí a bá lo ìṣíkiri kan, ìyípadà schema náà máa dúró títí láé. Ṣètò ní ìbámu pẹ̀lú èyí.
+> **Àwọn ìyípadà tí kò bá ẹ̀yà àtijọ́ mu** (fún àpẹẹrẹ, yíyọ àwọn column kúrò) nira. 67router KÒ ṣe àtìlẹ́yìn fún downgrade — ní kété tí a bá lo ìṣíkiri kan, ìyípadà schema náà máa dúró títí láé. Ṣètò ní ìbámu pẹ̀lú èyí.
 
 ---
 
@@ -310,7 +310,7 @@ Nítorí ìṣiṣẹ́ kíákíá, àwọn wọ̀nyí ni a ń fi pamọ́ gẹ�
 
 ## Àwọn Ìkìlọ̀ Nípa Ìfipamọ́ Pẹ̀lú Ìṣàkọ́lé (v3.8.16+)
 
-OmniRoute ń lo **`migrateLegacyEncryptedString()`** láti bójú tó àwọn ọ̀nà ìṣàkọ́lé méjì láìsí ìdíwọ́:
+67router ń lo **`migrateLegacyEncryptedString()`** láti bójú tó àwọn ọ̀nà ìṣàkọ́lé méjì láìsí ìdíwọ́:
 
 - **Ti àtijọ́** (ṣáájú v3.5.0): “ìṣàkọ́lé” tó dá lórí XOR (kì í ṣe ìṣàkọ́lé gidi)
 - **Tìsinsìnyí**: AES-256-GCM pẹ̀lú IV àti àmì ìfàṣẹ̀sí tó péye
@@ -399,7 +399,7 @@ Fún ìṣàfipamọ́ DB tó ń ṣiṣẹ́ láìsí ìdádúró iṣẹ́:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Èyí ń lo API ìṣàfipamọ́ orí ayélujára ti SQLite — ó ní ààbò láti ṣiṣẹ́ nígbà tí OmniRoute ń ṣiṣẹ́.
+Èyí ń lo API ìṣàfipamọ́ orí ayélujára ti SQLite — ó ní ààbò láti ṣiṣẹ́ nígbà tí 67router ń ṣiṣẹ́.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Ìfúnpọ̀
 
-Àwọn instance OmniRoute tí ń ṣiṣẹ́ fún ìgbà pípẹ́ máa ń jèrè láti `VACUUM` lẹ́ẹ̀kọ̀ọ̀kan:
+Àwọn instance 67router tí ń ṣiṣẹ́ fún ìgbà pípẹ́ máa ń jèrè láti `VACUUM` lẹ́ẹ̀kọ̀ọ̀kan:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Tún Gbogbo Dátà Ṣètò (Pa Wọ́n Rẹ́)
 
 ```bash
-# Kọ́kọ́ dá OmniRoute dúró
+# Kọ́kọ́ dá 67router dúró
 omniroute stop
 
 # Pa fáìlì DB rẹ́
@@ -613,7 +613,7 @@ EOF
 
 - Dúró kí ìlànà kejì parí (ṣàyẹ̀wò `lsof | grep storage.sqlite`)
 - Dá ìlànà kejì náà dúró
-- Tí ìṣòro náà bá ń bá a lọ, tún OmniRoute bẹ̀rẹ̀
+- Tí ìṣòro náà bá ń bá a lọ, tún 67router bẹ̀rẹ̀
 
 ### "Foreign key constraint failed"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Ìṣíkiri náà ṣiṣẹ́ nínú ìdúnàdúrà, nítorí náà ó yẹ kí ó ti yí àwọn àyípadà padà. Tí kò bá ṣe bẹ́ẹ̀:
 
-1. **Dá OmniRoute dúró** (láti dènà àwọn ìgbìyànjú míì)
+1. **Dá 67router dúró** (láti dènà àwọn ìgbìyànjú míì)
 2. **Ṣàyẹ̀wò ipò DB** pẹ̀lú `sqlite3`
 3. **Ṣàtúnṣe ìṣíkiri aláìpé náà pẹ̀lú ọwọ́**
-4. **Tún OmniRoute ṣiṣẹ́** (a ó tún gbìyànjú ìṣíkiri náà)
+4. **Tún 67router ṣiṣẹ́** (a ó tún gbìyànjú ìṣíkiri náà)
 
 Láti dènà èyí, máa kọ́kọ́ dán àwọn ìṣíkiri wò lórí ẹ̀dà kan ní gbogbo ìgbà.
 

@@ -14,7 +14,7 @@ Dois perfis opcionais do Compose (`memory`, `bifrost`) para a implantação exis
 
 ## Por que esta abordagem é conservadora
 
-A estrutura de implantação existente do OmniRoute já é enxuta e comprovada:
+A estrutura de implantação existente do 67router já é enxuta e comprovada:
 
 - **`redis:7-alpine`** processa a carga de trabalho de limitação de taxa/cache em escala de produção.
 - **SQLite + sqlite-vec + FTS5** atendem às necessidades locais de memória + vetores + pesquisa de texto (consulte [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Os dois perfis apresentados aqui são **opções de expansão para implantaçõe
 
 - Você executa ≥3 réplicas do `omniroute` e deseja centralizar a rotação de provedores em um único processo Go.
 - Você deseja uma única interface de auditoria/logs para solicitações a provedores upstream em todas as réplicas.
-- Você deseja dimensionar horizontalmente a camada de roteamento de Nível 1, independentemente das réplicas do OmniRoute.
+- Você deseja dimensionar horizontalmente a camada de roteamento de Nível 1, independentemente das réplicas do 67router.
 
 **O que ele adiciona:**
 

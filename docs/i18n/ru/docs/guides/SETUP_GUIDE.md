@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Русский)
+# 📖 Setup Guide — 67router (Русский)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Полное справочное руководство по настройке OmniRoute. Краткую версию см. в разделе [Быстрый старт в README](../README.md#-quick-start).
+> Полное справочное руководство по настройке 67router. Краткую версию см. в разделе [Быстрый старт в README](../README.md#-quick-start).
 
 ## Содержание
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Пакет AUR](https://aur.archlinux.org/packages/omniroute-bin) устанавливает OmniRoute и предоставляет пользовательскую службу systemd.
+[Пакет AUR](https://aur.archlinux.org/packages/omniroute-bin) устанавливает 67router и предоставляет пользовательскую службу systemd.
 
 ### Установка из исходного кода
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Примечание для Windows:** по умолчанию OmniRoute использует `%APPDATA%\omniroute`, если устаревший каталог `%USERPROFILE%\.omniroute` отсутствует. Задайте `DATA_DIR`, чтобы выбрать другое расположение каталога данных.
+> **Примечание для Windows:** по умолчанию 67router использует `%APPDATA%\omniroute`, если устаревший каталог `%USERPROFILE%\.omniroute` отсутствует. Задайте `DATA_DIR`, чтобы выбрать другое расположение каталога данных.
 
 > **Примечание:** при первом запуске `npm install` автоматически создаёт `.env` на основе `.env.example`. Последующие установки не перезаписывают существующий `.env`, поэтому пользовательские настройки сохраняются. Чтобы создать файл заново, удалите `.env` перед повторным запуском.
 
@@ -64,7 +64,7 @@ PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm 
 
 ### Настольное приложение (Electron)
 
-OmniRoute поставляется с настольной оболочкой, созданной на основе Electron 41 + electron-builder 26.10. Доступные сценарии (из корня рабочего пространства):
+67router поставляется с настольной оболочкой, созданной на основе Electron 41 + electron-builder 26.10. Доступные сценарии (из корня рабочего пространства):
 
 ```bash
 npm run electron:dev          # Запустить настольное приложение с горячей перезагрузкой
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-В сочетании с переменными окружения (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` и т. д.) это позволяет развёртывать экземпляр OmniRoute полностью программным способом.
+В сочетании с переменными окружения (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` и т. д.) это позволяет развёртывать экземпляр 67router полностью программным способом.
 
 ### Параметры CLI
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | Настройка инструментов CLI — вывод, получение, изменение и проверка конфигураций                        |
 | `omniroute status`      | Автономная панель состояния — версия, БД, инструменты, конфигурация                                     |
 | `omniroute logs`        | Потоковый вывод журналов использования из API (поддерживает `--follow`)                                 |
-| `omniroute update`      | Проверить наличие обновлений OmniRoute или применить их                                                 |
+| `omniroute update`      | Проверить наличие обновлений 67router или применить их                                                  |
 | `omniroute provider`    | Управлять подключениями провайдеров — добавлять, выводить, удалять, тестировать, назначать по умолчанию |
 | `omniroute --port 3000` | Установить основной порт/порт API равным 3000                                                           |
 | `omniroute --mcp`       | Запустить сервер MCP (транспорт stdio)                                                                  |
@@ -165,7 +165,7 @@ URL тегов Ollama:   http://localhost:20128/api/v1/vscode/YOUR_KEY/api/tags
 
 #### Автоматическая настройка с помощью `setup-*`
 
-Вместо ручного ввода базового URL и ключа позвольте OmniRoute записать собственную конфигурацию каждого инструмента на основе актуального каталога моделей. По одной команде для каждого инструмента:
+Вместо ручного ввода базового URL и ключа позвольте 67router записать собственную конфигурацию каждого инструмента на основе актуального каталога моделей. По одной команде для каждого инструмента:
 
 ```bash
 omniroute setup-codex        # профили ~/.codex/<name>.config.toml
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-Каждая команда поддерживает `--remote <url> --api-key <key>` для настройки локального инструмента для работы с **удалённым** OmniRoute, а также `--dry-run` для предварительного просмотра. Чтобы запустить CLI с необходимыми переменными окружения без записи конфигурации, используйте универсальную команду запуска `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); устаревшие команды запуска для отдельных инструментов `omniroute launch` (Claude Code) и `omniroute launch-codex` (Codex) по-прежнему доступны.
+Каждая команда поддерживает `--remote <url> --api-key <key>` для настройки локального инструмента для работы с **удалённым** 67router, а также `--dry-run` для предварительного просмотра. Чтобы запустить CLI с необходимыми переменными окружения без записи конфигурации, используйте универсальную команду запуска `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); устаревшие команды запуска для отдельных инструментов `omniroute launch` (Claude Code) и `omniroute launch-codex` (Codex) по-прежнему доступны.
 
 Полную таблицу (что записывает каждая команда, все флаги, локальный и удалённый режимы, соглашения для базового URL с `/v1`) см. в разделе **[Интеграции CLI](./CLI-INTEGRATIONS.md)**.
 
@@ -270,15 +270,15 @@ curl -X POST http://localhost:20128/a2a \
 | Переменная               | Значение по умолчанию          | Назначение                                                                                                                                                                  |
 | ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                       | Общая базовая величина для тайм-аута начала ответа вышестоящего сервера, скрытых тайм-аутов Undici, запросов цифрового отпечатка TLS и тайм-аутов запросов/прокси API-моста |
-| `STREAM_IDLE_TIMEOUT_MS` | наследует `REQUEST_TIMEOUT_MS` | Максимальный интервал между фрагментами потоковых данных, после которого OmniRoute прерывает SSE-поток                                                                      |
+| `STREAM_IDLE_TIMEOUT_MS` | наследует `REQUEST_TIMEOUT_MS` | Максимальный интервал между фрагментами потоковых данных, после которого 67router прерывает SSE-поток                                                                       |
 
 Обратная совместимость сохранена: существующие переменные `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` и другие переменные тайм-аутов отдельных уровней по-прежнему работают и переопределяют общую базовую величину.
 
 ### Примечания для отдельных провайдеров
 
-Для вышестоящих серверов, совместимых с Claude Code (`anthropic-compatible-cc-*`), OmniRoute формирует исходящий заголовок `X-Stainless-Timeout` на основе итогового тайм-аута получения данных, чтобы тайм-ауты чтения на стороне провайдера соответствовали вашей конфигурации переменных окружения.
+Для вышестоящих серверов, совместимых с Claude Code (`anthropic-compatible-cc-*`), 67router формирует исходящий заголовок `X-Stainless-Timeout` на основе итогового тайм-аута получения данных, чтобы тайм-ауты чтения на стороне провайдера соответствовали вашей конфигурации переменных окружения.
 
-Для сторонних обратных прокси, совместимых с Claude Code, OmniRoute сохраняет консервативный набор `anthropic-beta` по умолчанию и, если для `Client Cache Control` оставлено значение `Auto`, передает только предоставленные клиентом маркеры `cache_control`. Включайте переключатель «Enable redact-thinking beta» для отдельного подключения, только если вышестоящий сервер явно требует потоки рассуждений Claude с отредактированными фрагментами.
+Для сторонних обратных прокси, совместимых с Claude Code, 67router сохраняет консервативный набор `anthropic-beta` по умолчанию и, если для `Client Cache Control` оставлено значение `Auto`, передает только предоставленные клиентом маркеры `cache_control`. Включайте переключатель «Enable redact-thinking beta» для отдельного подключения, только если вышестоящий сервер явно требует потоки рассуждений Claude с отредактированными фрагментами.
 
 ### Расширенные переопределения тайм-аутов
 
@@ -296,11 +296,11 @@ curl -X POST http://localhost:20128/a2a \
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                      | Тайм-аут keep-alive на сервере API-моста                                                    |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                         | Тайм-аут бездействия сокета на сервере API-моста (`0` отключает его)                        |
 
-> **Примечание:** Для потоковых запросов `FETCH_TIMEOUT_MS` охватывает только установку соединения и ожидание первого ответа от вышестоящего сервера. После активации потока OmniRoute прерывает его только при фактической остановке передачи (`STREAM_IDLE_TIMEOUT_MS`) или бездействии тела ответа Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Примечание:** Для потоковых запросов `FETCH_TIMEOUT_MS` охватывает только установку соединения и ожидание первого ответа от вышестоящего сервера. После активации потока 67router прерывает его только при фактической остановке передачи (`STREAM_IDLE_TIMEOUT_MS`) или бездействии тела ответа Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Совместимость с обратными прокси
 
-Если OmniRoute работает за Nginx, Caddy, Cloudflare или другим обратным прокси, убедитесь, что тайм-ауты прокси также превышают тайм-ауты потоковой передачи и получения данных OmniRoute.
+Если 67router работает за Nginx, Caddy, Cloudflare или другим обратным прокси, убедитесь, что тайм-ауты прокси также превышают тайм-ауты потоковой передачи и получения данных 67router.
 
 ---
 

@@ -261,8 +261,8 @@ export async function fetchUpstreamVersions() {
 
 export async function runVersionStatusCommand() {
   const cache = await fetchUpstreamVersions();
-  console.log("\n=== OmniRoute × FCC dual-upstream version status ===\n");
-  console.log(`OmniRoute running: ${cache.omniRoute.running || "unreachable"}`);
+  console.log("\n=== 67router × FCC dual-upstream version status ===\n");
+  console.log(`67router running: ${cache.omniRoute.running || "unreachable"}`);
   console.log(`FCC latest: ${cache.fcc.latestRelease || "unreachable"}`);
   console.log();
 }
@@ -302,7 +302,7 @@ export async function runFccClaude(opts = {}, claudeArgs = []) {
     if (!res.ok) throw new Error(`status ${res.status}`);
   } catch {
     console.error(
-      (t("launch.notRunning") || "OmniRoute is not reachable at {url}.").replace("{url}", baseUrl)
+      (t("launch.notRunning") || "67router is not reachable at {url}.").replace("{url}", baseUrl)
     );
     return 1;
   }
@@ -351,8 +351,8 @@ export function registerFccClaude(program) {
     .description(
       "FCC-style launcher: Claude Code with built-in fallback chain and dual-upstream version tracking"
     )
-    .option("--port <port>", "OmniRoute port (default: 20128)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL (e.g. https://omni.paibao.ai)")
+    .option("--port <port>", "67router port (default: 20128)", "20128")
+    .option("--remote <url>", "Remote 67router URL (e.g. https://omni.paibao.ai)")
     .option("--token <token>", "Auth token (ANTHROPIC_AUTH_TOKEN)")
     .option("--api-key <key>", "Alias for --token")
     .option(

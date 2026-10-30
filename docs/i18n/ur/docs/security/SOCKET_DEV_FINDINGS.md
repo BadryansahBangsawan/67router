@@ -49,7 +49,7 @@
 | Linux+Firefox/Chromium | `certutil -d sql:<profile>` کے ذریعے ہر پروفائل کی NSS DB اپ ڈیٹ                                                  |
 
 یہ وہی کمانڈز ہیں جو `mitmproxy`، Charles Proxy، Fiddler، اور
-Caddy استعمال کرتے ہیں۔ OmniRoute میں ان کی موجودگی
+Caddy استعمال کرتے ہیں۔ 67router میں ان کی موجودگی
 `docs/security/STEALTH_GUIDE.md` میں دستاویز کی گئی ہے۔
 
 **v3.8.6 کی تخفیف**:
@@ -104,7 +104,7 @@ Caddy استعمال کرتے ہیں۔ OmniRoute میں ان کی موجودگی
 v3.9 میں ہٹا دیا جائے گا۔
 
 **ہم اسے کیوں برقرار رکھتے ہیں**: Zed import ان صارفین کے لیے سب سے آسان onboarding راستہ ہے
-جو پہلے ہی Zed استعمال کرتے ہیں اور دوبارہ paste کیے بغیر اپنی provider keys کو OmniRoute
+جو پہلے ہی Zed استعمال کرتے ہیں اور دوبارہ paste کیے بغیر اپنی provider keys کو 67router
 میں mirror کرنا چاہتے ہیں۔
 
 ---
@@ -116,7 +116,7 @@ v3.9 میں ہٹا دیا جائے گا۔
 **نشان زد کیے جانے کی وجہ**: یہ chunk `execFileWithPassword`،
 `runElevatedPowerShell`، اور مشترکہ `quotePowerShell` helper کو دوبارہ export کرتا ہے۔ Socket.dev کا
 AI classifier انہیں ایک عمومی "host execution + privilege elevation
-toolkit" کے طور پر دیکھتا ہے۔ OmniRoute کے اندر یہ صرف MITM cert installation path
+toolkit" کے طور پر دیکھتا ہے۔ 67router کے اندر یہ صرف MITM cert installation path
 (§1) اور `sudo` command execution کے لیے `execFileWithPassword` میں استعمال ہوتے ہیں۔
 
 **v3.8.6 میں تخفیف**:
@@ -166,7 +166,7 @@ service ہے (یعنی: WordPress طرز کا plugin) — سخت opt-in۔
 
 ---
 
-## §5 — OmniRoute Cloud Sync اسناد کی رائٹ بیک (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync اسناد کی رائٹ بیک (`api/keys/[id]/route.js`)
 
 **ماخذ فائلیں**:
 
@@ -188,7 +188,7 @@ service ہے (یعنی: WordPress طرز کا plugin) — سخت opt-in۔
    `OMNIROUTE_CLOUD_SYNC_SECRETS=true` ہو۔ ڈیفالٹ موڈ صرف غیر اسنادی میٹا ڈیٹا (`expiresAt`، `status`، `lastError*`،
    `rateLimitedUntil`، `updatedAt`) سنک کرتا ہے۔ یہ ان صارفین کے لیے ایک **عدم مطابقت پیدا کرنے والی تبدیلی** ہے جو ریموٹ ٹوکن سنک پر انحصار کرتے تھے — انہیں واضح طور پر آپٹ اِن کرنا ہوگا۔
 
-**ہم اسے کیوں برقرار رکھتے ہیں**: Cloud Sync ہی وہ واحد طریقہ ہے جس سے کوئی OmniRoute Cloud ٹیننٹ ٹیم کے اسناد کو مرکزی طور پر منظم کر سکتا ہے۔ یہ اصلاح تھریٹ ماڈل کو دیانت دار بناتی ہے:
+**ہم اسے کیوں برقرار رکھتے ہیں**: Cloud Sync ہی وہ واحد طریقہ ہے جس سے کوئی 67router Cloud ٹیننٹ ٹیم کے اسناد کو مرکزی طور پر منظم کر سکتا ہے۔ یہ اصلاح تھریٹ ماڈل کو دیانت دار بناتی ہے:
 "سرور دستخط کرتا ہے، کلائنٹ تصدیق کرتا ہے، آپریٹر آپٹ اِن کرتا ہے۔"
 
 ---

@@ -6,7 +6,7 @@
 
 ## Bayani Gabaɗaya
 
-Redis wani **zaɓi ne, kuma dogaro ne mai sassauci** a cikin OmniRoute — manhajar tana ci gaba da aiki yadda ya kamata (ta amfani da
+Redis wani **zaɓi ne, kuma dogaro ne mai sassauci** a cikin 67router — manhajar tana ci gaba da aiki yadda ya kamata (ta amfani da
 madadin ajiyar cikin ƙwaƙwalwa) idan Redis ba ya samuwa. A yanayin samarwa, daidaita Redis yana rage jinkiri ga nau'ikan
 ayyuka huɗu:
 
@@ -17,7 +17,7 @@ ayyuka huɗu:
 | Ma'ajiyar ƙayyadadden kaso | `redisQuotaStore.ts`          | Singleton na `getRedisClient(url)` na daban                     | `<prefix>quota:*` mai iya daidaitawa ga kowane instance                      |
 | Circuit breaker na warmup  | `redisCircuitBreakerStore.ts` | Kliyanta na daban a cikin `circuitBreakerFactory.ts`            | `<prefix>warmup:cb:<connectionId>`                                           |
 
-Dukkan nau'ikan ayyukan huɗu suna amfani da prefix na namespace guda ɗaya domin OmniRoute ya iya kasancewa tare da sauran manhajoji a kan
+Dukkan nau'ikan ayyukan huɗu suna amfani da prefix na namespace guda ɗaya domin 67router ya iya kasancewa tare da sauran manhajoji a kan
 instance ɗin Redis guda ɗaya (misali, `127.0.0.1:6379`). Duba [Rarraba Sunayen Maɓalli](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ instance ɗin Redis guda ɗaya (misali, `127.0.0.1:6379`). Duba [Rarraba Sunayen
 
 ## Rarraba Sunayen Maɓalli
 
-OmniRoute yana amfani da instance ɗin Redis tare da duk wani abu da ke gudana a kan host ɗin. Ba tare da namespace ba,
+67router yana amfani da instance ɗin Redis tare da duk wani abu da ke gudana a kan host ɗin. Ba tare da namespace ba,
 maɓallai kamar `auth:api_key:<sha256>` ko `rl:*` za su iya karo da maɓallan wasu manhajoji
 masu amfani da Redis ɗin guda ɗaya (wannan instance ɗin yana gudanar da Redis a `127.0.0.1:6379` tare da sauran ayyuka).
 
-Saita `REDIS_KEY_PREFIX` zuwa wani rubutu marar fanko domin saka prefix ga **kowane** maɓallin OmniRoute:
+Saita `REDIS_KEY_PREFIX` zuwa wani rubutu marar fanko domin saka prefix ga **kowane** maɓallin 67router:
 
 ```bash
-# .env — duk maɓallan OmniRoute za su zama omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — duk maɓallan 67router za su zama omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -98,7 +98,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # bar sarari ga ma'ajiyar shafukan OS
 maxmemory-policy allkeys-lru         # cire tsofaffin bayanan auth cache idan ƙwaƙwalwa ta yi ƙasa
 
-# Adana bayanai (na zaɓi — OmniRoute yana da kariya daga rushewa ba tare da shi ba)
+# Adana bayanai (na zaɓi — 67router yana da kariya daga rushewa ba tare da shi ba)
 save 300 1                           # ɗauki snapshot aƙalla kowane minti 5 idan maɓalli ≥1 ya canza
 appendonly no                        # ba a buƙatar AOF; ana iya sake samar da bayanan
 appendfsync no                       # babu nauyin fsync (RDB ya isa)

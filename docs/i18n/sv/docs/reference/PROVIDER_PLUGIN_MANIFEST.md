@@ -14,7 +14,7 @@ exekveringskod, OAuth-standardvärden, headers eller processtillstånd från mil
 Samma manifest är tillgängligt via HTTP på
 `GET /api/v1/provider-plugin-manifest` för sidoprocesser som körs utanför processen.
 
-OmniRoute annonserar denna URL till Bifrost och CLIProxyAPI via
+67router annonserar denna URL till Bifrost och CLIProxyAPI via
 request-headern `X-OmniRoute-Provider-Manifest-Url`. Ange
 `OMNIROUTE_PROVIDER_MANIFEST_URL` när sidoprocessen behöver en publik URL eller
 containernätverks-URL i stället för den lokala requestens ursprung.
@@ -30,7 +30,7 @@ måste sidoprocessen skicka en ovillkorlig request i stället för att acceptera
 ## Mål
 
 Flytta leverantörsmetadata mot ett pluginkontrakt så att den kritiska requestvägen
-så småningom kan hanteras av en sidoprocess med lägre latens, samtidigt som OmniRoute behåller
+så småningom kan hanteras av en sidoprocess med lägre latens, samtidigt som 67router behåller
 TypeScript-routen som policygrind och reservlösning. Manifestet är additivt: det
 ändrar inte requestdirigeringen i sig.
 
@@ -74,7 +74,7 @@ att läsa TypeScript-källorna på nytt.
 | `usage-fetch`        | Har en ansluten hämtare för användning eller kvot (`getUsageForProvider`).      |
 | `usage-supported`    | Användnings-API:et accepterar denna leverantör (`isSupportedUsageConnection`).  |
 
-`usage-fetch` är endast till för identifiering. Den anger att OmniRoute vet hur användning ska
+`usage-fetch` är endast till för identifiering. Den anger att 67router vet hur användning ska
 läsas för leverantören; den aktiverar inte hämtning, ändrar inte kvotsemantiken och innebär inte att
 Dashboard-widgeten för kvoter är aktiverad för leverantören — den widgeten styrs separat av
 `USAGE_SUPPORTED_PROVIDERS`. Sanningskällan är `USAGE_FETCHER_PROVIDERS` i

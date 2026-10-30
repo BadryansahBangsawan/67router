@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (ਪੰਜਾਬੀ)
+# Providers Guide: Connect AI Models to 67router (ਪੰਜਾਬੀ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **ਸੰਖੇਪ ਵਿੱਚ**: ਪ੍ਰਦਾਤਾ ਕਿਸੇ AI ਸੇਵਾ (ਜਿਵੇਂ OpenAI, Anthropic, Google) ਨਾਲ ਇੱਕ ਕਨੈਕਸ਼ਨ ਹੁੰਦਾ ਹੈ। OmniRoute ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਪ੍ਰਦਾਤਾ ਦੀ ਲੋੜ ਹੈ।
+> **ਸੰਖੇਪ ਵਿੱਚ**: ਪ੍ਰਦਾਤਾ ਕਿਸੇ AI ਸੇਵਾ (ਜਿਵੇਂ OpenAI, Anthropic, Google) ਨਾਲ ਇੱਕ ਕਨੈਕਸ਼ਨ ਹੁੰਦਾ ਹੈ। 67router ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਪ੍ਰਦਾਤਾ ਦੀ ਲੋੜ ਹੈ।
 
 ---
 
 ## ਪ੍ਰਦਾਤਾ ਕੀ ਹੁੰਦਾ ਹੈ?
 
-ਪ੍ਰਦਾਤਾ ਨੂੰ ਇੱਕ **ਫ਼ੋਨ ਕੈਰੀਅਰ** ਵਾਂਗ ਸਮਝੋ। ਜਿਵੇਂ ਕਾਲਾਂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਫ਼ੋਨ ਕੈਰੀਅਰ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ AI ਮਾਡਲ ਵਰਤਣ ਲਈ ਤੁਹਾਨੂੰ ਇੱਕ AI ਪ੍ਰਦਾਤਾ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ। OmniRoute ਇੱਕ ਅਜਿਹੇ ਫ਼ੋਨ ਵਾਂਗ ਹੈ ਜੋ **ਸਾਰੇ ਕੈਰੀਅਰਾਂ** ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ — ਤੁਸੀਂ ਆਪਣੇ-ਆਪ ਉਨ੍ਹਾਂ ਵਿਚਕਾਰ ਬਦਲ ਸਕਦੇ ਹੋ।
+ਪ੍ਰਦਾਤਾ ਨੂੰ ਇੱਕ **ਫ਼ੋਨ ਕੈਰੀਅਰ** ਵਾਂਗ ਸਮਝੋ। ਜਿਵੇਂ ਕਾਲਾਂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਫ਼ੋਨ ਕੈਰੀਅਰ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ AI ਮਾਡਲ ਵਰਤਣ ਲਈ ਤੁਹਾਨੂੰ ਇੱਕ AI ਪ੍ਰਦਾਤਾ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ। 67router ਇੱਕ ਅਜਿਹੇ ਫ਼ੋਨ ਵਾਂਗ ਹੈ ਜੋ **ਸਾਰੇ ਕੈਰੀਅਰਾਂ** ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ — ਤੁਸੀਂ ਆਪਣੇ-ਆਪ ਉਨ੍ਹਾਂ ਵਿਚਕਾਰ ਬਦਲ ਸਕਦੇ ਹੋ।
 
 ### ਪ੍ਰਦਾਤਾਵਾਂ ਦੀਆਂ ਕਿਸਮਾਂ
 
@@ -30,9 +30,9 @@
 
 ### ਪਹਿਲੀ ਵਾਰ ਚਲਾਉਣ ਸਮੇਂ ਮੁਫ਼ਤ-ਪ੍ਰਦਾਤਾ ਦਾ ਵਿਕਲਪਿਕ ਸੈੱਟਅੱਪ
 
-ਪਹਿਲੀ ਵਾਰ ਚੱਲਣ ਵਾਲਾ ਵਿਜ਼ਾਰਡ ਇੱਕ ਸਪਸ਼ਟ **ਮੁਫ਼ਤ ਪ੍ਰਦਾਤਾ ਸੈੱਟ ਅੱਪ ਕਰੋ** ਕਾਰਡ ਪੇਸ਼ ਕਰਦਾ ਹੈ। ਇਹ OmniRoute ਦੀ ਬਿਨਾਂ-ਪ੍ਰਮਾਣੀਕਰਨ ਵਾਲੀ ਪ੍ਰਦਾਤਾ ਰਜਿਸਟਰੀ ਤੋਂ ਮੌਜੂਦਾ
+ਪਹਿਲੀ ਵਾਰ ਚੱਲਣ ਵਾਲਾ ਵਿਜ਼ਾਰਡ ਇੱਕ ਸਪਸ਼ਟ **ਮੁਫ਼ਤ ਪ੍ਰਦਾਤਾ ਸੈੱਟ ਅੱਪ ਕਰੋ** ਕਾਰਡ ਪੇਸ਼ ਕਰਦਾ ਹੈ। ਇਹ 67router ਦੀ ਬਿਨਾਂ-ਪ੍ਰਮਾਣੀਕਰਨ ਵਾਲੀ ਪ੍ਰਦਾਤਾ ਰਜਿਸਟਰੀ ਤੋਂ ਮੌਜੂਦਾ
 ਯੋਗ ਸੂਚੀ ਤਿਆਰ ਕਰਦਾ ਹੈ, ਫਿਰ ਪੁਸ਼ਟੀ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਨੂੰ ਹਰੇਕ
-ਪ੍ਰਦਾਤਾ ਦੀ ਸਮੀਖਿਆ ਕਰਨ ਅਤੇ ਉਸਦੀ ਚੋਣ ਹਟਾਉਣ ਦੀ ਸਹੂਲਤ ਦਿੰਦਾ ਹੈ। OmniRoute ਪ੍ਰਦਾਤਾ ਦੀ ਸਾਵਧਾਨੀ ਸੂਚਨਾ ਅਤੇ ਉਸਦੀ ਸਾਈਟ ਦਾ ਲਿੰਕ ਦਿਖਾਉਂਦਾ ਹੈ
+ਪ੍ਰਦਾਤਾ ਦੀ ਸਮੀਖਿਆ ਕਰਨ ਅਤੇ ਉਸਦੀ ਚੋਣ ਹਟਾਉਣ ਦੀ ਸਹੂਲਤ ਦਿੰਦਾ ਹੈ। 67router ਪ੍ਰਦਾਤਾ ਦੀ ਸਾਵਧਾਨੀ ਸੂਚਨਾ ਅਤੇ ਉਸਦੀ ਸਾਈਟ ਦਾ ਲਿੰਕ ਦਿਖਾਉਂਦਾ ਹੈ
 ਤਾਂ ਜੋ ਤੁਸੀਂ ਪਹਿਲਾਂ ਤੀਜੀ-ਧਿਰ ਦੀਆਂ ਸ਼ਰਤਾਂ, ਪਰਦੇਦਾਰੀ, ਉਪਲਬਧਤਾ ਅਤੇ ਦਰ ਸੀਮਾਵਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰ ਸਕੋ।
 
 ਇਹ ਕਾਰਵਾਈ ਵਿਕਲਪਿਕ ਹੈ: ਵਿਜ਼ਾਰਡ ਨੂੰ ਪੂਰਾ ਕਰਨ ਨਾਲ ਕਦੇ ਵੀ ਮੁਫ਼ਤ-ਪ੍ਰਦਾਤਾ ਕਨੈਕਸ਼ਨ ਗੁਪਤ ਤੌਰ 'ਤੇ ਨਹੀਂ ਬਣਦੇ।
@@ -80,7 +80,7 @@
 
 ### ਵਿਕਲਪ D: ਸਥਾਨਕ MLX ਮਾਡਲ (Apple Silicon)
 
-ਯੂਨੀਫਾਈਡ ਮੈਮੋਰੀ ਵਾਲੇ Apple Silicon Macs ਲਈ, OmniRoute `mlx-lm.server` ਰਾਹੀਂ ਚੱਲ ਰਹੇ ਸਥਾਨਕ MLX ਮਾਡਲਾਂ ਨੂੰ ਨਿਯਮਤ OpenAI-ਅਨੁਕੂਲ ਸਥਾਨਕ ਪ੍ਰਦਾਤਾਵਾਂ ਵਜੋਂ ਕਨੈਕਟ ਕਰਨ ਦਾ ਸਮਰਥਨ ਕਰਦਾ ਹੈ।
+ਯੂਨੀਫਾਈਡ ਮੈਮੋਰੀ ਵਾਲੇ Apple Silicon Macs ਲਈ, 67router `mlx-lm.server` ਰਾਹੀਂ ਚੱਲ ਰਹੇ ਸਥਾਨਕ MLX ਮਾਡਲਾਂ ਨੂੰ ਨਿਯਮਤ OpenAI-ਅਨੁਕੂਲ ਸਥਾਨਕ ਪ੍ਰਦਾਤਾਵਾਂ ਵਜੋਂ ਕਨੈਕਟ ਕਰਨ ਦਾ ਸਮਰਥਨ ਕਰਦਾ ਹੈ।
 
 #### ਪੂਰਵ-ਲੋੜਾਂ
 
@@ -110,14 +110,14 @@
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **OmniRoute ਡੈਸ਼ਬੋਰਡ ਵਿੱਚ ਕਨੈਕਟ ਕਰੋ**:
+3. **67router ਡੈਸ਼ਬੋਰਡ ਵਿੱਚ ਕਨੈਕਟ ਕਰੋ**:
    - **ਪ੍ਰਦਾਤਾ** → **ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ** 'ਤੇ ਜਾਓ
    - **MLX Gemma 26B** ਜਾਂ **MLX Qwen 3.8 27B** ਚੁਣੋ
    - **ਕਨੈਕਟ ਕਰੋ** 'ਤੇ ਕਲਿੱਕ ਕਰੋ (API ਕੁੰਜੀ ਦੀ ਲੋੜ ਨਹੀਂ)
 
 4. **OpenCode ਨਾਲ ਵਰਤੋ**:
    ```bash
-   # OmniRoute ਵਰਤਣ ਲਈ OpenCode ਨੂੰ ਸੰਰਚਿਤ ਕਰੋ
+   # 67router ਵਰਤਣ ਲਈ OpenCode ਨੂੰ ਸੰਰਚਿਤ ਕਰੋ
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@
 - ਦੋਵਾਂ ਨੂੰ ਵੱਖ-ਵੱਖ ਮਸ਼ੀਨਾਂ 'ਤੇ ਚਲਾਓ, ਜਾਂ
 - ਦੂਜੇ ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਇੱਕ ਨੂੰ ਬੰਦ ਕਰੋ
 
-OmniRoute ਆਪਣੇ ਆਪ MLX ਸਰਵਰ ਪ੍ਰਕਿਰਿਆਵਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਨਹੀਂ ਕਰਦਾ — ਇਹ ਸਿਰਫ਼ ਬੇਨਤੀਆਂ ਨੂੰ ਤੁਹਾਡੇ ਦੁਆਰਾ ਸੰਰਚਿਤ OpenAI-ਅਨੁਕੂਲ ਐਂਡਪੌਇੰਟਾਂ ਵੱਲ ਭੇਜਦਾ ਹੈ।
+67router ਆਪਣੇ ਆਪ MLX ਸਰਵਰ ਪ੍ਰਕਿਰਿਆਵਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਨਹੀਂ ਕਰਦਾ — ਇਹ ਸਿਰਫ਼ ਬੇਨਤੀਆਂ ਨੂੰ ਤੁਹਾਡੇ ਦੁਆਰਾ ਸੰਰਚਿਤ OpenAI-ਅਨੁਕੂਲ ਐਂਡਪੌਇੰਟਾਂ ਵੱਲ ਭੇਜਦਾ ਹੈ।
 
 #### ਟੂਲ ਕਾਲਿੰਗ ਸਮਰਥਨ
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | ਮੈਮੋਰੀ ਖ਼ਤਮ              | ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਸਿਰਫ਼ ਇੱਕ ਮਾਡਲ ਚੱਲ ਰਿਹਾ ਹੈ; ਹੋਰ ਐਪਾਂ ਬੰਦ ਕਰੋ; Activity Monitor ਦੀ ਜਾਂਚ ਕਰੋ  |
 | ਕਨੈਕਸ਼ਨ ਅਸਵੀਕਾਰਿਆ ਗਿਆ    | ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਸਰਵਰ ਸਹੀ ਪੋਰਟ (11435/11436) 'ਤੇ ਚੱਲ ਰਿਹਾ ਹੈ                                 |
 | ਹੌਲੇ ਜਵਾਬ                | ਪਹਿਲੀ ਬੇਨਤੀ ਮਾਡਲ ਨੂੰ ਮੈਮੋਰੀ ਵਿੱਚ ਲੋਡ ਕਰਦੀ ਹੈ (~30-60s); ਬਾਅਦ ਦੀਆਂ ਬੇਨਤੀਆਂ ਤੇਜ਼ ਹੁੰਦੀਆਂ ਹਨ |
-| ਟੂਲ ਕਾਲਿੰਗ ਅਸਫਲ ਹੁੰਦੀ ਹੈ | ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਮਾਡਲ ਟੂਲਾਂ ਦਾ ਸਮਰਥਨ ਕਰਦਾ ਹੈ; ਅਨੁਵਾਦ ਤਰੁੱਟੀਆਂ ਲਈ OmniRoute ਲੌਗਾਂ ਦੀ ਜਾਂਚ ਕਰੋ |
+| ਟੂਲ ਕਾਲਿੰਗ ਅਸਫਲ ਹੁੰਦੀ ਹੈ | ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਮਾਡਲ ਟੂਲਾਂ ਦਾ ਸਮਰਥਨ ਕਰਦਾ ਹੈ; ਅਨੁਵਾਦ ਤਰੁੱਟੀਆਂ ਲਈ 67router ਲੌਗਾਂ ਦੀ ਜਾਂਚ ਕਰੋ  |
 
 ---
 
@@ -236,12 +236,12 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ ਦੀ ਵਰਤੋਂ
 
-OmniRoute **ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ** ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦਾ ਹੈ। ਇਸ ਨਾਲ ਤੁਹਾਨੂੰ ਇਹ ਲਾਭ ਮਿਲਦੇ ਹਨ:
+67router **ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ** ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦਾ ਹੈ। ਇਸ ਨਾਲ ਤੁਹਾਨੂੰ ਇਹ ਲਾਭ ਮਿਲਦੇ ਹਨ:
 
-- **ਆਟੋਮੈਟਿਕ ਵਿਕਲਪ** — ਜੇ ਇੱਕ ਪ੍ਰਦਾਤਾ ਅਸਫਲ ਹੋ ਜਾਂਦਾ ਹੈ, ਤਾਂ OmniRoute ਅਗਲੇ ਨੂੰ ਅਜ਼ਮਾਉਂਦਾ ਹੈ
-- **ਲਾਗਤ ਅਨੁਕੂਲਨ** — OmniRoute ਹਰ ਬੇਨਤੀ ਲਈ ਸਭ ਤੋਂ ਸਸਤਾ ਪ੍ਰਦਾਤਾ ਚੁਣਦਾ ਹੈ
-- **ਗਤੀ ਅਨੁਕੂਲਨ** — OmniRoute ਹਰ ਬੇਨਤੀ ਲਈ ਸਭ ਤੋਂ ਤੇਜ਼ ਪ੍ਰਦਾਤਾ ਚੁਣਦਾ ਹੈ
-- **ਗੁਣਵੱਤਾ ਅਨੁਕੂਲਨ** — OmniRoute ਹਰ ਕੰਮ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਪ੍ਰਦਾਤਾ ਚੁਣਦਾ ਹੈ
+- **ਆਟੋਮੈਟਿਕ ਵਿਕਲਪ** — ਜੇ ਇੱਕ ਪ੍ਰਦਾਤਾ ਅਸਫਲ ਹੋ ਜਾਂਦਾ ਹੈ, ਤਾਂ 67router ਅਗਲੇ ਨੂੰ ਅਜ਼ਮਾਉਂਦਾ ਹੈ
+- **ਲਾਗਤ ਅਨੁਕੂਲਨ** — 67router ਹਰ ਬੇਨਤੀ ਲਈ ਸਭ ਤੋਂ ਸਸਤਾ ਪ੍ਰਦਾਤਾ ਚੁਣਦਾ ਹੈ
+- **ਗਤੀ ਅਨੁਕੂਲਨ** — 67router ਹਰ ਬੇਨਤੀ ਲਈ ਸਭ ਤੋਂ ਤੇਜ਼ ਪ੍ਰਦਾਤਾ ਚੁਣਦਾ ਹੈ
+- **ਗੁਣਵੱਤਾ ਅਨੁਕੂਲਨ** — 67router ਹਰ ਕੰਮ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਪ੍ਰਦਾਤਾ ਚੁਣਦਾ ਹੈ
 
 ### ਸਿਫ਼ਾਰਸ਼ੀ ਸੈੱਟਅੱਪ
 
@@ -251,7 +251,7 @@ OmniRoute **ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ** ਨਾਲ ਸਭ ਤੋਂ �
 2. **ਇੱਕ ਤੇਜ਼ ਪ੍ਰਦਾਤਾ** (Groq, Cerebras) — ਤੁਰੰਤ ਜਵਾਬਾਂ ਲਈ
 3. **ਇੱਕ ਉੱਚ-ਗੁਣਵੱਤਾ ਵਾਲਾ ਪ੍ਰਦਾਤਾ** (OpenAI, Anthropic, Google) — ਜਟਿਲ ਕੰਮਾਂ ਲਈ
 
-ਫਿਰ `model: "auto"` ਦੀ ਵਰਤੋਂ ਕਰੋ ਅਤੇ OmniRoute ਹਰ ਬੇਨਤੀ ਲਈ ਆਪਣੇ-ਆਪ ਸਭ ਤੋਂ ਵਧੀਆ ਪ੍ਰਦਾਤਾ ਚੁਣ ਲਵੇਗਾ।
+ਫਿਰ `model: "auto"` ਦੀ ਵਰਤੋਂ ਕਰੋ ਅਤੇ 67router ਹਰ ਬੇਨਤੀ ਲਈ ਆਪਣੇ-ਆਪ ਸਭ ਤੋਂ ਵਧੀਆ ਪ੍ਰਦਾਤਾ ਚੁਣ ਲਵੇਗਾ।
 
 ---
 
@@ -260,25 +260,25 @@ OmniRoute **ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ** ਨਾਲ ਸਭ ਤੋਂ �
 ### OpenAI
 
 1. API ਕੁੰਜੀ ਪ੍ਰਾਪਤ ਕਰੋ: https://platform.openai.com/api-keys
-2. OmniRoute ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → OpenAI
+2. 67router ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → OpenAI
 3. API ਕੁੰਜੀ ਪੇਸਟ ਕਰੋ → ਕਨੈਕਟ ਕਰੋ
 
 ### Anthropic
 
 1. API ਕੁੰਜੀ ਪ੍ਰਾਪਤ ਕਰੋ: https://console.anthropic.com/
-2. OmniRoute ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → Anthropic
+2. 67router ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → Anthropic
 3. API ਕੁੰਜੀ ਪੇਸਟ ਕਰੋ → ਕਨੈਕਟ ਕਰੋ
 
 ### Google (Gemini)
 
 1. API ਕੁੰਜੀ ਪ੍ਰਾਪਤ ਕਰੋ: https://aistudio.google.com/apikey
-2. OmniRoute ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → Gemini
+2. 67router ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → Gemini
 3. API ਕੁੰਜੀ ਪੇਸਟ ਕਰੋ → ਕਨੈਕਟ ਕਰੋ
 
 ### DeepSeek
 
 1. API ਕੁੰਜੀ ਪ੍ਰਾਪਤ ਕਰੋ: https://platform.deepseek.com/
-2. OmniRoute ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → DeepSeek
+2. 67router ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → DeepSeek
 3. API ਕੁੰਜੀ ਪੇਸਟ ਕਰੋ → ਕਨੈਕਟ ਕਰੋ
 
 ### Qoder: ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ ਟ੍ਰਾਂਸਪੋਰਟ ਚੁਣੋ
@@ -286,12 +286,12 @@ OmniRoute **ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ** ਨਾਲ ਸਭ ਤੋਂ �
 Qoder ਲਈ ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ ਲੋੜੀਂਦੇ ਹਨ। ਇਸਦੇ ਦੋ ਟ੍ਰਾਂਸਪੋਰਟਾਂ ਦੀਆਂ ਸਮਰੱਥਾਵਾਂ ਵੱਖਰੀਆਂ ਹਨ; ਸਿਰਫ਼ ਇੱਕ ਮਾਡਲ ਨਾਮ
 ਇਹ ਨਹੀਂ ਦਰਸਾਉਂਦਾ ਕਿ ਕੋਈ ਖ਼ਾਸ ਕਨੈਕਸ਼ਨ ਕੀ ਕਰ ਸਕਦਾ ਹੈ।
 
-| ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ                      | OmniRoute ਟ੍ਰਾਂਸਪੋਰਟ                          | ਕਾਲਰ ਟੂਲ ਕਾਲਿੰਗ                                   | ਸਟ੍ਰੀਮਿੰਗ                                                          |
-| --------------------------------- | --------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------ |
-| `pt-` ਨਾਲ ਸ਼ੁਰੂ ਹੋਣ ਵਾਲਾ PAT      | OmniRoute ਹੋਸਟ ਉੱਤੇ ਸਥਾਨਕ `qodercli` ਪ੍ਰਕਿਰਿਆ | ਸਮਰਥਿਤ ਨਹੀਂ                                       | ਬਫ਼ਰਡ: CLI ਵੱਲੋਂ ਪੂਰਾ ਜਵਾਬ ਵਾਪਸ ਕਰਨ ਤੋਂ ਬਾਅਦ ਹੀ SSE ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ |
-| ਗੈਰ-PAT ਐਕਸੈੱਸ ਟੋਕਨ ਜਾਂ API ਕੁੰਜੀ | DashScope OpenAI-ਅਨੁਕੂਲ HTTP ਐਂਡਪੁਆਇੰਟ        | ਅੱਪਸਟ੍ਰੀਮ ਮਾਡਲ/ਕੁੰਜੀ ਦੇ ਅਧੀਨ, ਅੱਗੇ ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ | ਅੱਪਸਟ੍ਰੀਮ HTTP/SSE ਪਾਥ                                             |
+| ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ                      | 67router ਟ੍ਰਾਂਸਪੋਰਟ                          | ਕਾਲਰ ਟੂਲ ਕਾਲਿੰਗ                                   | ਸਟ੍ਰੀਮਿੰਗ                                                          |
+| --------------------------------- | -------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------ |
+| `pt-` ਨਾਲ ਸ਼ੁਰੂ ਹੋਣ ਵਾਲਾ PAT      | 67router ਹੋਸਟ ਉੱਤੇ ਸਥਾਨਕ `qodercli` ਪ੍ਰਕਿਰਿਆ | ਸਮਰਥਿਤ ਨਹੀਂ                                       | ਬਫ਼ਰਡ: CLI ਵੱਲੋਂ ਪੂਰਾ ਜਵਾਬ ਵਾਪਸ ਕਰਨ ਤੋਂ ਬਾਅਦ ਹੀ SSE ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ |
+| ਗੈਰ-PAT ਐਕਸੈੱਸ ਟੋਕਨ ਜਾਂ API ਕੁੰਜੀ | DashScope OpenAI-ਅਨੁਕੂਲ HTTP ਐਂਡਪੁਆਇੰਟ       | ਅੱਪਸਟ੍ਰੀਮ ਮਾਡਲ/ਕੁੰਜੀ ਦੇ ਅਧੀਨ, ਅੱਗੇ ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ | ਅੱਪਸਟ੍ਰੀਮ HTTP/SSE ਪਾਥ                                             |
 
-PAT ਲਈ, Qoder CLI ਨੂੰ OmniRoute ਵਾਲੇ ਉਸੇ ਹੋਸਟ ਜਾਂ ਕੰਟੇਨਰ ਉੱਤੇ ਇੰਸਟਾਲ ਕਰੋ। ਐਗਜ਼ੀਕਿਊਟੇਬਲ
+PAT ਲਈ, Qoder CLI ਨੂੰ 67router ਵਾਲੇ ਉਸੇ ਹੋਸਟ ਜਾਂ ਕੰਟੇਨਰ ਉੱਤੇ ਇੰਸਟਾਲ ਕਰੋ। ਐਗਜ਼ੀਕਿਊਟੇਬਲ
 `qodercli` ਵਜੋਂ ਖੋਜਣਯੋਗ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ, ਜਾਂ `CLI_QODER_BIN` ਨੂੰ ਇਸਦੇ ਐਗਜ਼ੀਕਿਊਟੇਬਲ ਪਾਥ ਉੱਤੇ ਸੈੱਟ ਕਰੋ। ਸਿਰਫ਼
 Docker ਹੋਸਟ ਉੱਤੇ ਇੰਸਟਾਲ ਕੀਤਾ CLI ਕੰਟੇਨਰ ਵਿੱਚ ਆਪਣੇ-ਆਪ ਮੌਜੂਦ ਨਹੀਂ ਹੁੰਦਾ। ਬਾਈਨਰੀਆਂ ਨਾ ਮਿਲਣ ਦੀ ਸਥਿਤੀ ਵਿੱਚ
 ਇੱਕ ਸਪਸ਼ਟ ਗਲਤੀ ਦਿਖਾਈ ਜਾਂਦੀ ਹੈ ਜੋ ਤੁਹਾਨੂੰ ਇੰਸਟਾਲੇਸ਼ਨ ਜਾਂ ਪਾਥ ਸੈਟਿੰਗ ਵੱਲ ਨਿਰਦੇਸ਼ਿਤ ਕਰਦੀ ਹੈ।
@@ -324,16 +324,16 @@ CLI ਖੁਦ ਵਰਤ ਸਕਦਾ ਹੈ। ਇੱਕ HTTP ਕੁੰਜੀ �
 ### Groq
 
 1. API ਕੁੰਜੀ ਪ੍ਰਾਪਤ ਕਰੋ: https://console.groq.com/
-2. OmniRoute ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → Groq
+2. 67router ਵਿੱਚ: ਪ੍ਰਦਾਤਾ → ਪ੍ਰਦਾਤਾ ਸ਼ਾਮਲ ਕਰੋ → Groq
 3. API ਕੁੰਜੀ ਪੇਸਟ ਕਰੋ → ਕਨੈਕਟ ਕਰੋ
 
 ---
 
 ## ਆਮ ਸਵਾਲ
 
-### "ਕੀ OmniRoute ਵਰਤਣ ਲਈ ਮੈਨੂੰ ਭੁਗਤਾਨ ਕਰਨ ਦੀ ਲੋੜ ਹੈ?"
+### "ਕੀ 67router ਵਰਤਣ ਲਈ ਮੈਨੂੰ ਭੁਗਤਾਨ ਕਰਨ ਦੀ ਲੋੜ ਹੈ?"
 
-**ਨਹੀਂ!** OmniRoute ਮੁਫ਼ਤ ਅਤੇ ਓਪਨ-ਸੋਰਸ ਹੈ। ਤੁਸੀਂ ਬਿਨਾਂ ਕੋਈ ਭੁਗਤਾਨ ਕੀਤੇ ਮੁਫ਼ਤ ਪ੍ਰਦਾਤਾਵਾਂ (Kiro, Pollinations) ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ। ਤੁਹਾਨੂੰ ਸਿਰਫ਼ ਉਦੋਂ ਭੁਗਤਾਨ ਕਰਨਾ ਪੈਂਦਾ ਹੈ ਜਦੋਂ ਤੁਸੀਂ ਭੁਗਤਾਨ-ਯੋਗ ਪ੍ਰਦਾਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨਾ ਚੁਣਦੇ ਹੋ।
+**ਨਹੀਂ!** 67router ਮੁਫ਼ਤ ਅਤੇ ਓਪਨ-ਸੋਰਸ ਹੈ। ਤੁਸੀਂ ਬਿਨਾਂ ਕੋਈ ਭੁਗਤਾਨ ਕੀਤੇ ਮੁਫ਼ਤ ਪ੍ਰਦਾਤਾਵਾਂ (Kiro, Pollinations) ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ। ਤੁਹਾਨੂੰ ਸਿਰਫ਼ ਉਦੋਂ ਭੁਗਤਾਨ ਕਰਨਾ ਪੈਂਦਾ ਹੈ ਜਦੋਂ ਤੁਸੀਂ ਭੁਗਤਾਨ-ਯੋਗ ਪ੍ਰਦਾਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨਾ ਚੁਣਦੇ ਹੋ।
 
 ### "ਮੈਨੂੰ ਕਿਹੜੇ ਪ੍ਰਦਾਤਾ ਨਾਲ ਸ਼ੁਰੂਆਤ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ?"
 
@@ -341,11 +341,11 @@ CLI ਖੁਦ ਵਰਤ ਸਕਦਾ ਹੈ। ਇੱਕ HTTP ਕੁੰਜੀ �
 
 ### "ਕੀ ਮੈਂ ਇੱਕੋ ਸਮੇਂ ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹਾਂ?"
 
-**ਹਾਂ!** OmniRoute ਦਾ ਪੂਰਾ ਮਕਸਦ ਹੀ ਇਹ ਹੈ। ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ ਨੂੰ ਕਨੈਕਟ ਕਰੋ ਅਤੇ OmniRoute ਨੂੰ ਹਰ ਬੇਨਤੀ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਪ੍ਰਦਾਤਾ ਚੁਣਨ ਦੇਣ ਵਾਸਤੇ `model: "auto"` ਦੀ ਵਰਤੋਂ ਕਰੋ।
+**ਹਾਂ!** 67router ਦਾ ਪੂਰਾ ਮਕਸਦ ਹੀ ਇਹ ਹੈ। ਕਈ ਪ੍ਰਦਾਤਾਵਾਂ ਨੂੰ ਕਨੈਕਟ ਕਰੋ ਅਤੇ 67router ਨੂੰ ਹਰ ਬੇਨਤੀ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਪ੍ਰਦਾਤਾ ਚੁਣਨ ਦੇਣ ਵਾਸਤੇ `model: "auto"` ਦੀ ਵਰਤੋਂ ਕਰੋ।
 
 ### "ਜੇ ਕੋਈ ਪ੍ਰਦਾਤਾ ਬੰਦ ਹੋ ਜਾਵੇ ਤਾਂ ਕੀ ਹੋਵੇਗਾ?"
 
-OmniRoute ਅਸਫਲ ਹੋਏ ਪ੍ਰਦਾਤਾਵਾਂ ਨੂੰ ਆਪਣੇ-ਆਪ ਛੱਡ ਦਿੰਦਾ ਹੈ ਅਤੇ ਅਗਲੇ ਪ੍ਰਦਾਤਾ ਨੂੰ ਅਜ਼ਮਾਉਂਦਾ ਹੈ। ਤੁਹਾਨੂੰ ਕੁਝ ਵੀ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ।
+67router ਅਸਫਲ ਹੋਏ ਪ੍ਰਦਾਤਾਵਾਂ ਨੂੰ ਆਪਣੇ-ਆਪ ਛੱਡ ਦਿੰਦਾ ਹੈ ਅਤੇ ਅਗਲੇ ਪ੍ਰਦਾਤਾ ਨੂੰ ਅਜ਼ਮਾਉਂਦਾ ਹੈ। ਤੁਹਾਨੂੰ ਕੁਝ ਵੀ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ।
 
 ### "ਮੈਂ ਕਿਸੇ ਪ੍ਰਦਾਤਾ ਨੂੰ ਡਿਸਕਨੈਕਟ ਕਿਵੇਂ ਕਰਾਂ?"
 
@@ -353,13 +353,13 @@ Providers 'ਤੇ ਜਾਓ → ਪ੍ਰਦਾਤਾ 'ਤੇ ਕਲਿੱਕ �
 
 ### "ਕੀ ਮੈਂ ਆਪਣੀਆਂ ਮੌਜੂਦਾ API keys ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹਾਂ?"
 
-**ਹਾਂ!** ਜੇ ਤੁਹਾਡੇ ਕੋਲ OpenAI, Anthropic, Google ਆਦਿ ਲਈ ਪਹਿਲਾਂ ਹੀ API keys ਹਨ, ਤਾਂ ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ OmniRoute ਵਿੱਚ ਵਰਤ ਸਕਦੇ ਹੋ। ਪ੍ਰਦਾਤਾ ਨੂੰ ਕਨੈਕਟ ਕਰਦੇ ਸਮੇਂ ਸਿਰਫ਼ ਉਹਨਾਂ ਨੂੰ ਪੇਸਟ ਕਰੋ।
+**ਹਾਂ!** ਜੇ ਤੁਹਾਡੇ ਕੋਲ OpenAI, Anthropic, Google ਆਦਿ ਲਈ ਪਹਿਲਾਂ ਹੀ API keys ਹਨ, ਤਾਂ ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ 67router ਵਿੱਚ ਵਰਤ ਸਕਦੇ ਹੋ। ਪ੍ਰਦਾਤਾ ਨੂੰ ਕਨੈਕਟ ਕਰਦੇ ਸਮੇਂ ਸਿਰਫ਼ ਉਹਨਾਂ ਨੂੰ ਪੇਸਟ ਕਰੋ।
 
 ---
 
 ## ਅੱਗੇ ਕੀ ਹੈ?
 
-- **[ਆਟੋ-ਕੌਂਬੋ ਗਾਈਡ](./AUTO-COMBO-GUIDE.md)** — OmniRoute ਨੂੰ ਤੁਹਾਡੇ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ AI ਚੁਣਨ ਦਿਓ
+- **[ਆਟੋ-ਕੌਂਬੋ ਗਾਈਡ](./AUTO-COMBO-GUIDE.md)** — 67router ਨੂੰ ਤੁਹਾਡੇ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ AI ਚੁਣਨ ਦਿਓ
 - **[ਮੁਫ਼ਤ ਟੀਅਰ ਗਾਈਡ](./FREE-TIERS-GUIDE.md)** — ਬਿਨਾਂ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਦੇ ਮੁਫ਼ਤ AI ਪ੍ਰਾਪਤ ਕਰੋ
 - **[ਸਮੱਸਿਆ-ਨਿਪਟਾਰਾ](../guides/TROUBLESHOOTING.md)** — ਆਮ ਸਮੱਸਿਆਵਾਂ ਨੂੰ ਠੀਕ ਕਰੋ
 - **[ਪ੍ਰਦਾਤਾ ਹਵਾਲਾ](../reference/PROVIDER_REFERENCE.md)** — 226 ਪ੍ਰਦਾਤਾਵਾਂ ਦੀ ਪੂਰੀ ਸੂਚੀ

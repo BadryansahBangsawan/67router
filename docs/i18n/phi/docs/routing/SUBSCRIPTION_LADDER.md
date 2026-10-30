@@ -10,7 +10,7 @@
 
 ## Bakit ito umiiral
 
-Sinasagot na ng OmniRoute ang dalawang tanong tungkol sa gastos, ngunit wala sa mga ito ang karaniwang itinatanong ng karamihan sa mga operator.
+Sinasagot na ng 67router ang dalawang tanong tungkol sa gastos, ngunit wala sa mga ito ang karaniwang itinatanong ng karamihan sa mga operator.
 
 | Kasalukuyang mekanismo                                   | Sinasagot                                            |
 | -------------------------------------------------------- | ---------------------------------------------------- |

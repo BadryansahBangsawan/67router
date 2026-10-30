@@ -7,7 +7,7 @@
 > **Sursa adevărului:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute capturează `reasoning_content` al asistentului, produs de modelele care folosesc modul de gândire, și îl redă în mod transparent în solicitările cu mai multe ture atunci când furnizorul din amonte îl impune. Astfel sunt eliminate erorile HTTP 400 pe care furnizorii stricți le returnează atunci când istoricul conversației unui client nu conține raționamentul din tura anterioară.
+67router capturează `reasoning_content` al asistentului, produs de modelele care folosesc modul de gândire, și îl redă în mod transparent în solicitările cu mai multe ture atunci când furnizorul din amonte îl impune. Astfel sunt eliminate erorile HTTP 400 pe care furnizorii stricți le returnează atunci când istoricul conversației unui client nu conține raționamentul din tura anterioară.
 
 ## De ce există această funcționalitate
 
@@ -17,7 +17,7 @@ Mai mulți furnizori care folosesc modul de gândire resping o tură ulterioară
 Parametru incorect: reasoning_content din modul de gândire trebuie retransmis către API.
 ```
 
-Însă clienții obișnuiți (Cursor, Cline, Roo Code, OpenAI SDK) elimină `reasoning_content` din istoricul pe care îl retrimit. OmniRoute îl restaurează dintr-un cache de pe server, astfel încât solicitarea văzută de serviciul din amonte să fie consecventă. Problema #1628 a introdus persistența hibridă în memorie/SQLite, astfel încât conținutul cache-ului să supraviețuiască repornirilor procesului.
+Însă clienții obișnuiți (Cursor, Cline, Roo Code, OpenAI SDK) elimină `reasoning_content` din istoricul pe care îl retrimit. 67router îl restaurează dintr-un cache de pe server, astfel încât solicitarea văzută de serviciul din amonte să fie consecventă. Problema #1628 a introdus persistența hibridă în memorie/SQLite, astfel încât conținutul cache-ului să supraviețuiască repornirilor procesului.
 
 ## Arhitectură
 

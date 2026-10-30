@@ -6,7 +6,7 @@
 
 ## Yleiskatsaus
 
-Kaikki OmniRouten hallinta-API:n reitit luokitellaan johonkin kolmesta suojaustasosta. Luokitus on staattinen, se määritellään tiedostossa `src/server/authz/routeGuard.ts`, ja se arvioidaan ennen minkään muun todennushaaran suorittamista.
+Kaikki 67routerin hallinta-API:n reitit luokitellaan johonkin kolmesta suojaustasosta. Luokitus on staattinen, se määritellään tiedostossa `src/server/authz/routeGuard.ts`, ja se arvioidaan ennen minkään muun todennushaaran suorittamista.
 
 ## Tasot
 
@@ -26,9 +26,9 @@ käynnistää prosesseja — kyseessä on tunnettu CVE-luokka
 **Mikä GHSA-fhh6-4qxv-rpqj on (hyökkäysluokka):** hallinta-/agenttipalvelin
 tarjoaa päätepisteen, joka käynnistää aliprosessin (`npm install`, `node`, selain,
 välityspalvelin, `git`, `tar`, …). Jos kyseinen päätepiste on käytettävissä isäntäkoneen
-ulkopuolelta — koska ylläpitäjä asetti OmniRouten nginx-/Cloudflare-/Tailscale-tunnelin
+ulkopuolelta — koska ylläpitäjä asetti 67routerin nginx-/Cloudflare-/Tailscale-tunnelin
 taakse ja JWT vuoti tai todennus oli määritetty väärin — hyökkääjä muuttaa
-API-kutsun isäntäkoneessa suoritettavaksi komennoksi (koodin etäsuoritus). OmniRoute
+API-kutsun isäntäkoneessa suoritettavaksi komennoksi (koodin etäsuoritus). 67router
 estää tämän pakottamalla **takaisinkytkentäisännän tarkistuksen ehdoitta ennen mitään
 todennustarkistusta** jokaisella reitillä, joka voi käynnistää prosesseja: tunnelin
 kautta vuotanut tunniste ei edelleenkään pääse käynnistystoimintoon.
@@ -119,7 +119,7 @@ MCP:tä käyttäville etäkutsujille, joiden ei pitäisi tarvita laajoja hallint
 
 #### Ohjeita ylläpitäjille ja auditointi
 
-Jos käytät OmniRoutea käänteisen välityspalvelimen tai tunnelin (nginx, Caddy, Cloudflare
+Jos käytät 67routeria käänteisen välityspalvelimen tai tunnelin (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) takana, loopback-tarkistus suojaa edelleen edellä mainittuja
 käynnistystoimintoja mahdollistavia reittejä — pyyntö, jonka asiakasosoite ei ole loopback-osoite, hylätään
 vastauksella `403 LOCAL_ONLY` **ennen todennuksen suorittamista**, joten vuotanut JWT ei voi käynnistää
@@ -157,7 +157,7 @@ prosessia. Ylläpitäjälle jää kaksi vastuuta:
 - Hae reverse proxy -palvelimen / käyttölokeista yllä olevia etuliitteitä yhdessä muun kuin
   loopback-asiakasosoitteen kanssa. Jos tällainen osuma palautti arvon `200` arvon
   `403 LOCAL_ONLY` sijaan, välityspalvelin peittää asiakkaan todellisen IP-osoitteen — korjaa välityspalvelin.
-- OmniRouten lokeissa näkyvä `403 LOCAL_ONLY` jollekin näistä poluista tarkoittaa, että suojaus
+- 67routerin lokeissa näkyvä `403 LOCAL_ONLY` jollekin näistä poluista tarkoittaa, että suojaus
   toimii tarkoitetulla tavalla, eikä kyse ole piilotettavasta virheestä.
 
 #### Etäkäytettävät reitit, joissa kutsukohdekohtainen tarkistusportti

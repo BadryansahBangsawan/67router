@@ -20,10 +20,10 @@ Peranan sesuatu enjin diterangkan oleh **dua paksi bebas**, yang dikodkan bersam
 `RouterBackendDefinition` daftar tersebut:
 
 1. **Kitar hayat** (`RouterBackendLifecycle`) — _cara enjin dijalankan_:
-   - `in-process` — berjalan dalam proses Node OmniRoute (saluran paip TS asli).
+   - `in-process` — berjalan dalam proses Node 67router (saluran paip TS asli).
    - `supervised` — proses anak setempat yang dipasang/dimulakan/dihentikan/diperiksa tahap kesihatannya
-     oleh OmniRoute melalui `ServiceSupervisor`, kemudian digunakan sebagai sambungan penyedia.
-   - `external` — titik akhir HTTP yang menerima penghantaran daripada OmniRoute tetapi **tidak** diuruskan
+     oleh 67router melalui `ServiceSupervisor`, kemudian digunakan sebagai sambungan penyedia.
+   - `external` — titik akhir HTTP yang menerima penghantaran daripada 67router tetapi **tidak** diuruskan
      olehnya (dikonfigurasikan melalui URL asas persekitaran).
    - `disabled` — didaftarkan tetapi tidak boleh dipilih.
 2. **Paksi pemilihan** (bahagian belakang penghalaan geganti) — _sama ada geganti membuat penghantaran kepadanya_:

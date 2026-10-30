@@ -29,22 +29,22 @@ The WAF inspects `messages[].content` only. It does **not** inspect:
 
 ## Always-blocked patterns (case-insensitive)
 
-| Pattern                       | Notes                                  |
-|-------------------------------|----------------------------------------|
-| Any `Lorem ipsum` variant     | Full Latin lorem vocabulary is blocked |
-| `language model` (alone)      | "the language model" and "large language model" pass |
-| `virtual assistant`           | "AI assistant" passes                   |
-| `I'm here to help`            | "here to help" alone also blocks        |
-| `Claude, made by Anthropic`   | Full phrase only                        |
+| Pattern                     | Notes                                                |
+| --------------------------- | ---------------------------------------------------- |
+| Any `Lorem ipsum` variant   | Full Latin lorem vocabulary is blocked               |
+| `language model` (alone)    | "the language model" and "large language model" pass |
+| `virtual assistant`         | "AI assistant" passes                                |
+| `I'm here to help`          | "here to help" alone also blocks                     |
+| `Claude, made by Anthropic` | Full phrase only                                     |
 
 ## Almost-always-blocked patterns
 
-| Pattern           | Notes                                                   |
-|-------------------|---------------------------------------------------------|
-| `placeholder`     | When it stands alone (not as a parameter name, etc.)  |
-| `dummy data`      | Common seed phrase for fixtures                        |
-| `foo bar baz`     | Canonical placeholder phrase                           |
-| Repeated short tokens (`AAA BBB CCC`, `test test test`) | Detector for keyword stuffing |
+| Pattern                                                 | Notes                                                |
+| ------------------------------------------------------- | ---------------------------------------------------- |
+| `placeholder`                                           | When it stands alone (not as a parameter name, etc.) |
+| `dummy data`                                            | Common seed phrase for fixtures                      |
+| `foo bar baz`                                           | Canonical placeholder phrase                         |
+| Repeated short tokens (`AAA BBB CCC`, `test test test`) | Detector for keyword stuffing                        |
 
 ## Behavior under load
 
@@ -54,7 +54,7 @@ time. This is the same IP-and-key-bound rate limiter that causes
 intermittent `400 content-blocked` errors when Claude Code or Codex CLI
 makes multiple tool-use / message-send calls in quick succession.
 
-## Mitigations already applied in OmniRoute
+## Mitigations already applied in 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — burst guard that enforces a
    500 ms minimum gap between outbound requests to any `agentrouter:*`

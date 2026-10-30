@@ -139,7 +139,7 @@ preskočené. Toto úložisko momentálne nedefinuje skript živého testu Claud
 
 ### Nastavenie
 
-1. Spustite OmniRoute pomocou `npm run dev` alebo z vytvorenej inštalácie.
+1. Spustite 67router pomocou `npm run dev` alebo z vytvorenej inštalácie.
 2. Otvorte Dashboard → Providers → Add Provider.
 3. Vyberte kategóriu Web Cookie a Claude Web.
 4. Vložte celú hlavičku Cookie skopírovanú z autentifikovanej požiadavky na `claude.ai`.

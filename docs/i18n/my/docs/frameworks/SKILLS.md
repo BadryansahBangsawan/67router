@@ -7,29 +7,29 @@
 > **အမှန်တရားအတွက် အဓိကရင်းမြစ်:** `src/lib/skills/` နှင့် `src/app/api/skills/`
 > **နောက်ဆုံးအပ်ဒိတ်လုပ်ထားသည့်ရက်:** 2026-06-28 — v3.8.40
 
-OmniRoute သည် language model များ (နှင့် operator များ) က ပြန်လည်အသုံးပြုနိုင်သော စွမ်းဆောင်ရည်များကို ပေါင်းစပ်ဖွဲ့စည်းနိုင်စေသည့် တိုးချဲ့နိုင်သော Skills framework တစ်ခုကို ဖော်ထုတ်ပေးထားသည် — filesystem ဖတ်ရှုခြင်းနှင့် HTTP request များမှစ၍ sandbox အတွင်း code လုပ်ဆောင်ခြင်းနှင့် စိစစ်ရွေးချယ်ထားသော marketplace skill များအထိ ပါဝင်သည်။
+67router သည် language model များ (နှင့် operator များ) က ပြန်လည်အသုံးပြုနိုင်သော စွမ်းဆောင်ရည်များကို ပေါင်းစပ်ဖွဲ့စည်းနိုင်စေသည့် တိုးချဲ့နိုင်သော Skills framework တစ်ခုကို ဖော်ထုတ်ပေးထားသည် — filesystem ဖတ်ရှုခြင်းနှင့် HTTP request များမှစ၍ sandbox အတွင်း code လုပ်ဆောင်ခြင်းနှင့် စိစစ်ရွေးချယ်ထားသော marketplace skill များအထိ ပါဝင်သည်။
 
-Skill တစ်ခုသည် version သတ်မှတ်ထားပြီး schema ဖြင့် သတ်မှတ်ထားသော အလုပ်ယူနစ်တစ်ခုဖြစ်သည်။ OmniRoute သည် အပြင်သို့ပို့မည့် request များတွင် skill များကို tool definition များအဖြစ် ထည့်သွင်းနိုင်သည်၊ model ထံမှ ပြန်လာသည့် tool call များကို ကြားဖြတ်ဖမ်းယူနိုင်သည်၊ ကိုက်ညီသော handler ကို လုပ်ဆောင်နိုင်ပြီး စကားဝိုင်း ဆက်လက်လုပ်ဆောင်နိုင်ရန် result ကို model ထံ ပြန်လည်ပေးပို့နိုင်သည်။ Model သည် implementation ကို လုံးဝမမြင်ရဘဲ tool interface ကိုသာ မြင်ရသည်။
+Skill တစ်ခုသည် version သတ်မှတ်ထားပြီး schema ဖြင့် သတ်မှတ်ထားသော အလုပ်ယူနစ်တစ်ခုဖြစ်သည်။ 67router သည် အပြင်သို့ပို့မည့် request များတွင် skill များကို tool definition များအဖြစ် ထည့်သွင်းနိုင်သည်၊ model ထံမှ ပြန်လာသည့် tool call များကို ကြားဖြတ်ဖမ်းယူနိုင်သည်၊ ကိုက်ညီသော handler ကို လုပ်ဆောင်နိုင်ပြီး စကားဝိုင်း ဆက်လက်လုပ်ဆောင်နိုင်ရန် result ကို model ထံ ပြန်လည်ပေးပို့နိုင်သည်။ Model သည် implementation ကို လုံးဝမမြင်ရဘဲ tool interface ကိုသာ မြင်ရသည်။
 
 ---
 
 ## Agent Skills နှင့် Omni Skills
 
-OmniRoute တွင် ကွဲပြားသော်လည်း အပြန်အလှန်ဖြည့်ဆည်းပေးသော skill system နှစ်မျိုးရှိသည်-
+67router တွင် ကွဲပြားသော်လည်း အပြန်အလှန်ဖြည့်ဆည်းပေးသော skill system နှစ်မျိုးရှိသည်-
 
 | ရှုထောင့်                   | **Omni Skills** (ဤစာတမ်း)                                                              | **Agent Skills**                                                                                |
 | :-------------------------- | :------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
 | ရည်ရွယ်ချက်                 | LLM tool ထည့်သွင်းခြင်း + sandbox အတွင်း လုပ်ဆောင်ခြင်း                                | ပြင်ပ agent များ ရှာဖွေတွေ့ရှိပြီး အသုံးပြုနိုင်ရန် SKILL.md catalog                            |
 | အမှန်တရားအတွက် အဓိကရင်းမြစ် | `src/lib/skills/` + marketplace                                                        | `src/lib/agentSkills/` + `skills/` directory                                                    |
 | Runtime mode                | အပြင်သို့ပို့သည့် request များတွင် ထည့်သွင်းပြီး tool-call event များတွင် လုပ်ဆောင်သည် | Static markdown catalog + REST/MCP/A2A ရှာဖွေတွေ့ရှိရေး endpoint များ                           |
-| အသုံးပြုသူ                  | OmniRoute ကိုယ်တိုင် (combo routing၊ ဝင်လာသော LLM call များ)                           | ပြင်ပ agent များ၊ MCP client များ၊ A2A orchestrator များ                                        |
+| အသုံးပြုသူ                  | 67router ကိုယ်တိုင် (combo routing၊ ဝင်လာသော LLM call များ)                            | ပြင်ပ agent များ၊ MCP client များ၊ A2A orchestrator များ                                        |
 | အရေအတွက်                    | ပြောင်းလဲနိုင်သည် (marketplace ပေါ်မူတည်သည်)                                           | catalog entry 45 ခု (API 23 ခု + CLI 21 ခု + config 1 ခု)                                       |
 | Format                      | tool schema + handler ပါဝင်သော `SkillDefinition`                                       | `SKILL.md` frontmatter + markdown body                                                          |
 | ရှာဖွေတွေ့ရှိခြင်း          | `/api/skills/*` REST + `omniroute_skills_*` MCP tool များ                              | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP tool များ + A2A `list-capabilities` |
 
-**Omni Skills** သည် execution engine ဖြစ်သည် — LLM တစ်ခုက tool တစ်ခုကို ခေါ်ယူသောအခါ OmniRoute က _ဘာလုပ်နိုင်သည်_ ကို ၎င်းတို့က သတ်မှတ်သည်။
+**Omni Skills** သည် execution engine ဖြစ်သည် — LLM တစ်ခုက tool တစ်ခုကို ခေါ်ယူသောအခါ 67router က _ဘာလုပ်နိုင်သည်_ ကို ၎င်းတို့က သတ်မှတ်သည်။
 
-**Agent Skills** သည် documentation catalog ဖြစ်သည် — agent prompt များထဲသို့ တိုက်ရိုက်ထည့်သွင်းနိုင်သော ဖွဲ့စည်းတည်ဆောက်ထားသည့် SKILL.md file များဖြင့် OmniRoute ၏ REST API နှင့် CLI ကို _မည်သို့အသုံးပြုရမည်_ ကို ပြင်ပ agent များအား ရှင်းပြသည်။
+**Agent Skills** သည် documentation catalog ဖြစ်သည် — agent prompt များထဲသို့ တိုက်ရိုက်ထည့်သွင်းနိုင်သော ဖွဲ့စည်းတည်ဆောက်ထားသည့် SKILL.md file များဖြင့် 67router ၏ REST API နှင့် CLI ကို _မည်သို့အသုံးပြုရမည်_ ကို ပြင်ပ agent များအား ရှင်းပြသည်။
 
 Agent Skills catalog၊ generator၊ MCP tool များနှင့် A2A skill အတွက် [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md) ကို ကြည့်ပါ။
 
@@ -41,14 +41,14 @@ Agent Skills catalog၊ generator၊ MCP tool များနှင့် A2A sk
 
 Skill ရင်းမြစ်သုံးမျိုးသည် registry တစ်ခုတည်းတွင် အတူတကွ တည်ရှိသည်-
 
-1. **Built-in skill များ** (`src/lib/skills/builtins.ts`) — OmniRoute နှင့်အတူ ထည့်သွင်းပေးထားသည်။ အသုံးများသော အခြေအနေများကို ဖြည့်ဆည်းပေးသည်-
+1. **Built-in skill များ** (`src/lib/skills/builtins.ts`) — 67router နှင့်အတူ ထည့်သွင်းပေးထားသည်။ အသုံးများသော အခြေအနေများကို ဖြည့်ဆည်းပေးသည်-
    - `file_read`, `file_write` — `<DATA_DIR>/skills/workspaces/<hashed-key>/` အောက်ရှိ API key တစ်ခုစီအတွက် sandbox workspace
    - `http_request` — `guard: "public-only"` ပါရှိသော `safeOutboundFetch` မှတစ်ဆင့် အပြင်သို့ပို့သည့် HTTP
    - `web_search` — caching ပါဝင်သော အစားထိုးတပ်ဆင်နိုင်သည့် search provider (`executeWebSearch`)
    - `eval_code` — Docker sandbox အတွင်း `node` သို့မဟုတ် `python` လုပ်ဆောင်ခြင်း
    - `execute_command` — Docker sandbox အတွင်း shell command
    - `browser` — Playwright အခြေပြု scaffolding ဖြစ်ပြီး ပုံမှန်အားဖြင့် ပိတ်ထားသည် (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute Marketplace) — `https://skillsmp.com/api/v1/skills/search` မှ ရယူသည်။ Settings တွင် `skillsmpApiKey` လိုအပ်သည်။
+2. **SkillsMP** (67router Marketplace) — `https://skillsmp.com/api/v1/skills/search` မှ ရယူသည်။ Settings တွင် `skillsmpApiKey` လိုအပ်သည်။
 3. **SkillsSH** (`skills.sh` community catalog) — `https://skills.sh/api/search` မှ ရယူသည်။ အထောက်အထားစိစစ်မှု မလိုအပ်ပါ။ SKILL.md အကြောင်းအရာကို GitHub raw မှ ရယူသည်။
 
 "active provider" တစ်ခုတည်းက dashboard သည် မည်သည့် catalog မှ install လုပ်မည်ကို ထိန်းချုပ်သည် (`src/lib/skills/providerSettings.ts`)။ **Settings → Memory & Skills** အောက်တွင် ၎င်းကို ပြောင်းလဲပါ။ မူလသတ်မှတ်ချက်- `skillsmp`။
@@ -443,7 +443,7 @@ enum SkillMode {
 
 ## Built-in Skills စာရင်း
 
-OmniRoute တွင် `src/lib/skills/builtin/` အတွင်း စိစစ်ရွေးချယ်ထားသော built-in skill အစုတစ်ခု ပါရှိသည်။ အသုံးအများဆုံးများမှာ-
+67router တွင် `src/lib/skills/builtin/` အတွင်း စိစစ်ရွေးချယ်ထားသော built-in skill အစုတစ်ခု ပါရှိသည်။ အသုံးအများဆုံးများမှာ-
 
 ### Browser အလိုအလျောက်လုပ်ဆောင်မှု Skill
 

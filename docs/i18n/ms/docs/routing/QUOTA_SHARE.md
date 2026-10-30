@@ -15,7 +15,7 @@ Enjin Perkongsian Kuota mengagihkan kuota berasaskan masa penyedia (contohnya, t
 5 jam Codex, 1500 permintaan/j Kimi) secara adil merentasi berbilang kunci API yang berkongsi
 sambungan yang sama.
 
-**Masalah yang diselesaikannya:** OmniRoute memproksikan banyak kunci API kepada akaun
+**Masalah yang diselesaikannya:** 67router memproksikan banyak kunci API kepada akaun
 penyedia huluan yang sama. Tanpa logik perkongsian, lonjakan daripada kunci A boleh menghabiskan
 kuota penyedia untuk jam tersebut, menyebabkan kunci B dan C disekat sehingga tetingkap ditetapkan semula.
 Enjin ini mencegah perkara tersebut dengan:
@@ -119,7 +119,7 @@ Pemacu Redis: skrip Lua EVAL untuk penambahan atomik — dijalankan sebagai satu
 
 - Jadual: `quota_consumption` (lihat migrasi `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Paling sesuai untuk penggunaan tika tunggal.
-- Semua pengekalan data berada dalam DB SQLite OmniRoute sedia ada (`DATA_DIR/storage.sqlite`).
+- Semua pengekalan data berada dalam DB SQLite 67router sedia ada (`DATA_DIR/storage.sqlite`).
 
 ### Redis (pilihan, berbilang tika)
 

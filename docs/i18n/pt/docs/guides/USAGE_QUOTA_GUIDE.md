@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: O OmniRoute monitoriza a utilização de tokens de cada pedido, calcula o custo, aplica a quota por chave de API e apresenta análises no painel. Este guia explica como tudo funciona.
+> **TL;DR**: O 67router monitoriza a utilização de tokens de cada pedido, calcula o custo, aplica a quota por chave de API e apresenta análises no painel. Este guia explica como tudo funciona.
 
 **Fontes:**
 
@@ -17,7 +17,7 @@
 
 ## Visão geral
 
-Cada pedido que passa pelo OmniRoute gera um **registo de utilização** que inclui:
+Cada pedido que passa pelo 67router gera um **registo de utilização** que inclui:
 
 - **Identidade**: qual a chave de API, fornecedor, modelo e combinação
 - **Tokens**: tokens de prompt, tokens de conclusão, tokens em cache e total
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Para fornecedores que não devolvem dados de utilização (alguns fornecedores baseados em cookies Web), o OmniRoute **estima** os tokens utilizando uma heurística de `~4 caracteres por token` (consulte `open-sse/services/autoCombo/pipelineRouter.ts`).
+Para fornecedores que não devolvem dados de utilização (alguns fornecedores baseados em cookies Web), o 67router **estima** os tokens utilizando uma heurística de `~4 caracteres por token` (consulte `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Tokens em cache
 
-O OmniRoute monitoriza `cached_tokens` separadamente de `prompt_tokens` porque:
+O 67router monitoriza `cached_tokens` separadamente de `prompt_tokens` porque:
 
 - O cache de prompts da Anthropic cobra uma taxa reduzida pelos tokens em cache (10% da taxa normal)
 - Alguns fornecedores devolvem `cache_read_input_tokens`, que devem ter um preço diferente
@@ -117,7 +117,7 @@ Os dados de preços são sincronizados automaticamente com o LiteLLM através do
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Para modelos sem dados de preços, o OmniRoute recorre à **estimativa do custo** utilizando tarifas médias internas (obtidas a partir dos dados de preços do LiteLLM).
+Para modelos sem dados de preços, o 67router recorre à **estimativa do custo** utilizando tarifas médias internas (obtidas a partir dos dados de preços do LiteLLM).
 
 ---
 

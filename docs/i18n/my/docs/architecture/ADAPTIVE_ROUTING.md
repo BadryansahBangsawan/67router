@@ -4,11 +4,11 @@
 
 ---
 
-ဤစာတမ်းသည် OmniRoute တွင် ထည့်သွင်းထားသော တုံ့ပြန်ချက်အခြေပြု လိုက်လျောညီထွေဖြစ်သည့် လမ်းကြောင်းရွေးချယ်မှု အခြေခံအုတ်မြစ်ကို ဖော်ပြထားသည်။ ၎င်းကို ရည်ရွယ်ချက်ရှိရှိ အတိုချုံးထားသည်—type သတ်မှတ်ထားသော routing-outcome channel တစ်ခု၊ လက်ရှိ auto-combo scorer သို့ ထည့်သွင်းပေးသည့် အွန်လိုင်း အရည်အသွေး signal တစ်ခု၊ ရွေးချယ်အသုံးပြုနိုင်သော OpenTelemetry exporter တစ်ခုနှင့် ရှင်းလင်းဖော်ပြနိုင်မှု endpoint တစ်ခုတို့ကို မိတ်ဆက်ပေးထားသည်။ ၎င်းသည် လက်ရှိ resilience stack (circuit breaker၊ connection cooldown၊ model lockout၊ health matrix၊ autopilot) ကို **အစားမထိုးပါ**—ယင်းကို ဖြည့်စွက်ပေးခြင်းသာ ဖြစ်သည်။
+ဤစာတမ်းသည် 67router တွင် ထည့်သွင်းထားသော တုံ့ပြန်ချက်အခြေပြု လိုက်လျောညီထွေဖြစ်သည့် လမ်းကြောင်းရွေးချယ်မှု အခြေခံအုတ်မြစ်ကို ဖော်ပြထားသည်။ ၎င်းကို ရည်ရွယ်ချက်ရှိရှိ အတိုချုံးထားသည်—type သတ်မှတ်ထားသော routing-outcome channel တစ်ခု၊ လက်ရှိ auto-combo scorer သို့ ထည့်သွင်းပေးသည့် အွန်လိုင်း အရည်အသွေး signal တစ်ခု၊ ရွေးချယ်အသုံးပြုနိုင်သော OpenTelemetry exporter တစ်ခုနှင့် ရှင်းလင်းဖော်ပြနိုင်မှု endpoint တစ်ခုတို့ကို မိတ်ဆက်ပေးထားသည်။ ၎င်းသည် လက်ရှိ resilience stack (circuit breaker၊ connection cooldown၊ model lockout၊ health matrix၊ autopilot) ကို **အစားမထိုးပါ**—ယင်းကို ဖြည့်စွက်ပေးခြင်းသာ ဖြစ်သည်။
 
 ## 1. ဗိသုကာဆိုင်ရာ အခြေအနေ
 
-OmniRoute သည် **request hot path** နှင့် **control/intelligence
+67router သည် **request hot path** နှင့် **control/intelligence
 plane** ပါဝင်သော data plane တစ်ခုဖြစ်သည်။ hot path သည် မြန်ဆန်မှု၊ memory အသုံးချမှု ထိရောက်မှု၊ asynchronous ဖြစ်မှု၊ ချို့ယွင်းမှုခံနိုင်ရည်ရှိမှုနှင့် ကြိုတင်ခန့်မှန်းနိုင်မှုတို့ကို ဆက်လက်ထိန်းသိမ်းထားရမည်။ အကဲဖြတ်မှု၊ အရည်အသွေး အမှတ်ပေးခြင်း၊ စမ်းသပ်မှုများနှင့် သမိုင်းဆိုင်ရာ ဆန်းစစ်လေ့လာမှုတို့သည် control plane နှင့် သက်ဆိုင်သည်။
 
 ```
@@ -16,7 +16,7 @@ AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (မြန်ဆန်၊ sync၊ in-memory)
+│    67router        │   data plane (မြန်ဆန်၊ sync၊ in-memory)
 │  routing / failover │
 │  health / guardrail │
 │  cache / streaming  │
@@ -216,7 +216,7 @@ OTel sink က GenAI/OmniRoute span attribute များအဖြစ် export 
   global `fetch` ကို အသုံးပြုသည်)။
 - Span များသည် GenAI semantic convention များ (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) နှင့် OmniRoute routing
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) နှင့် 67router routing
   attribute များ (outcome, status, ttft, retries, fallback) ကို လိုက်နာသည်။
 - `record()` သည် bounded buffer တစ်ခုထဲသို့သာ enqueue လုပ်သည် (O(1)); နောက်ခံ timer
   တစ်ခုက `POST {endpoint}/v1/traces` မှတစ်ဆင့် asynchronous ပုံစံဖြင့် flush လုပ်သည်။ ဝန်ပိုနေချိန်တွင်
@@ -239,7 +239,7 @@ OTel sink က GenAI/OmniRoute span attribute များအဖြစ် export 
 
 ## 6. Evaluation-plane ပေါင်းစည်းမှု (အနာဂတ် AGI အဆင်သင့်ဖြစ်မှု)
 
-OmniRoute သည် Future AGI (သို့မဟုတ် မည်သည့် evaluator ကိုမဆို) **ဖြစ်နိုင်ခြေရှိသော
+67router သည် Future AGI (သို့မဟုတ် မည်သည့် evaluator ကိုမဆို) **ဖြစ်နိုင်ခြေရှိသော
 intelligence/evaluation backend အဖြစ်သာ သတ်မှတ်ပြီး dependency အဖြစ် မသတ်မှတ်ပါ**။ ချိတ်ဆက်မှတ်များမှာ-
 
 - `RoutingEventSink` တစ်ခုက event များကို evaluator ထံ asynchronous ပုံစံဖြင့် ပို့ဆောင်နိုင်သည်။

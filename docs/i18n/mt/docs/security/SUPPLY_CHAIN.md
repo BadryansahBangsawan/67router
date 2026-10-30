@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tippubblika artifacts npm + Docker. Dawn il-gates jipprovdu provenjenza, inventarju (SBOM) u skannjar tal-CVE, kollha OSS, integrati fil-workflows tar-rilaxx. Pożizzjoni **Advisory-first** — jirrappurtaw issa, jippromwovu għal imblukkar wara l-ewwel rilaxx aħdar.
+67router tippubblika artifacts npm + Docker. Dawn il-gates jipprovdu provenjenza, inventarju (SBOM) u skannjar tal-CVE, kollha OSS, integrati fil-workflows tar-rilaxx. Pożizzjoni **Advisory-first** — jirrappurtaw issa, jippromwovu għal imblukkar wara l-ewwel rilaxx aħdar.
 
 | Gate                  | Għodda                                         | Fejn                          | Jimblokka?                         | Output                                               |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :--------------------------------- | :--------------------------------------------------- |
@@ -47,7 +47,7 @@ Skont il-fergħa "l-ebda soluzzjoni upstream" tar-rimedju tal-CVE Variance hawn 
   npm-latest kurrenti (`0.1.29`) għadu jiġbed `extract-zip@2.0.1`.
 - **Ma jistax jintlaħaq mill-produzzjoni.** `promptfoo` huwa devDependency-only (qatt ma elenkat
   taħt `dependencies`), u l-ebda fajl taħt `src/`, `open-sse/`, jew `bin/` ma jimporta l-
-  pakkett npm `extract-zip` — il-helper `extractZip()` ta' OmniRoute stess
+  pakkett npm `extract-zip` — il-helper `extractZip()` ta' 67router stess
   (`src/lib/versionManager/binaryManager.ts:93`) juża `unzip`/`tar` nattiv
   u mhuwiex relatat. `@openai/codex-security` jinkludi wkoll il-gwardja tiegħu stess ta' symlink-traversal
   fuq il-callback onEntry ta' extract-zip.

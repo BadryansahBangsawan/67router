@@ -4,7 +4,7 @@
 
 ---
 
-Is é Traffic Inspector dífhabhtóir tráchta HTTPS ionsuite OmniRoute — uirlis ar nós Charles Proxy / mitmweb / HTTP Toolkit atá **feasach ar LLManna** agus **feasach ar ghníomhairí**. Tá sé lonnaithe ag `/dashboard/tools/traffic-inspector` agus faigheann sé trácht beo ó suas le 5 fhoinse gabhála chomhuaineacha.
+Is é Traffic Inspector dífhabhtóir tráchta HTTPS ionsuite 67router — uirlis ar nós Charles Proxy / mitmweb / HTTP Toolkit atá **feasach ar LLManna** agus **feasach ar ghníomhairí**. Tá sé lonnaithe ag `/dashboard/tools/traffic-inspector` agus faigheann sé trácht beo ó suas le 5 fhoinse gabhála chomhuaineacha.
 
 **Suíomh ar an deais:** `/dashboard/tools/traffic-inspector`
 **Grúpa sa bharra taoibh:** Uirlisí (i ndiaidh AgentBridge)
@@ -16,21 +16,21 @@ Is é Traffic Inspector dífhabhtóir tráchta HTTPS ionsuite OmniRoute — uirl
 
 ### Cad a dhéanann Traffic Inspector uathúil
 
-| Gné                                                                                              |  mitmweb  | Charles |  Fiddler  | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------------------------ | :-------: | :-----: | :-------: | :-----------------------------: |
-| Gréasánbhunaithe                                                                                 |     ✓     |    ✗    |     ✗     |                ✓                |
-| Foinse oscailte                                                                                  |     ✓     |    ✗    | páirteach |                ✓                |
-| **Feasach ar ghníomhairí** (aithníonn sé más ó Antigravity/Copilot/etc. a thagann an t-iarratas) |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Feasach ar LLManna** (parsálann sé struchtúr, comharthaí agus samhail OpenAI/Anthropic/Gemini) |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Mapáil samhlacha infheicthe** (gemini-3-flash → claude-sonnet-4.7)                             |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Deighilt aga folaigh idir seachfhreastalaí agus réamhtheachta**                                | páirteach |    ✗    |     ✗     |                ✓                |
-| **Comhtháite le OmniRoute** maidir le ródú, cúltaca agus costas                                  |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Dífhabhtú seachfhreastalaí ar fud an chórais** (aon aip ar an meaisín)                         |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Gabháil óstach saincheaptha** (atreorú DNS de réir óstaigh)                                    |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Mód timpeallachta HTTP_PROXY**                                                                 |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Amharc comhrá** (bolgáin il-seala, tool_use/tool_result)                                       |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Cumascóir srutha SSE** (athchruthaíonn sé ó theagmhais deilte)                                 |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Taifeadadh seisiúin** (ainmnithe, ineaspórtáilte mar .har/.jsonl)                              |     ✗     |    ✓    |     ✓     |                ✓                |
+| Gné                                                                                              |  mitmweb  | Charles |  Fiddler  | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------------------------ | :-------: | :-----: | :-------: | :----------------------------: |
+| Gréasánbhunaithe                                                                                 |     ✓     |    ✗    |     ✗     |               ✓                |
+| Foinse oscailte                                                                                  |     ✓     |    ✗    | páirteach |               ✓                |
+| **Feasach ar ghníomhairí** (aithníonn sé más ó Antigravity/Copilot/etc. a thagann an t-iarratas) |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Feasach ar LLManna** (parsálann sé struchtúr, comharthaí agus samhail OpenAI/Anthropic/Gemini) |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Mapáil samhlacha infheicthe** (gemini-3-flash → claude-sonnet-4.7)                             |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Deighilt aga folaigh idir seachfhreastalaí agus réamhtheachta**                                | páirteach |    ✗    |     ✗     |               ✓                |
+| **Comhtháite le 67router** maidir le ródú, cúltaca agus costas                                   |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Dífhabhtú seachfhreastalaí ar fud an chórais** (aon aip ar an meaisín)                         |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Gabháil óstach saincheaptha** (atreorú DNS de réir óstaigh)                                    |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Mód timpeallachta HTTP_PROXY**                                                                 |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Amharc comhrá** (bolgáin il-seala, tool_use/tool_result)                                       |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Cumascóir srutha SSE** (athchruthaíonn sé ó theagmhais deilte)                                 |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Taifeadadh seisiúin** (ainmnithe, ineaspórtáilte mar .har/.jsonl)                              |     ✗     |    ✓    |     ✓     |               ✓                |
 
 ### An ailtireacht in aon alt amháin
 
@@ -264,7 +264,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true más freagra SSE é
   mappedTo: string | null; // ceanntásc x-omniroute-mapped
-  costEstimateUsd: number | null; // costas measta bunaithe ar phraghsáil OmniRoute
+  costEstimateUsd: number | null; // costas measta bunaithe ar phraghsáil 67router
 }
 ```
 
@@ -395,7 +395,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Seachfhreastalaí an chórais gan filleadh ar an seansocrú
 
-Má thuairteálann OmniRoute agus mód seachfhreastalaí uile-chórais gníomhach:
+Má thuairteálann 67router agus mód seachfhreastalaí uile-chórais gníomhach:
 
 **macOS:**
 
@@ -440,7 +440,7 @@ Bunchonair: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Liostaigh iarratais (in-scagtha: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Sonraí iarratais aonair                                                                  |
 | DELETE | `/requests`                 | Glan an maolán cuimhne                                                                   |
-| POST   | `/requests/{id}/replay`     | Athfheidhmigh an t-iarratas céanna trí ródaire OmniRoute                                 |
+| POST   | `/requests/{id}/replay`     | Athfheidhmigh an t-iarratas céanna trí ródaire 67router                                  |
 | PUT    | `/requests/{id}/annotation` | Sábháil nó nuashonraigh nóta ar iarratas                                                 |
 
 ### WebSocket

@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Gaeilge)
+# Providers Guide: Connect AI Models to 67router (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Go hachomair**: Is éard is soláthraí ann ná ceangal le seirbhís IS (amhail OpenAI, Anthropic, Google). Teastaíonn soláthraí amháin ar a laghad uait chun OmniRoute a úsáid.
+> **Go hachomair**: Is éard is soláthraí ann ná ceangal le seirbhís IS (amhail OpenAI, Anthropic, Google). Teastaíonn soláthraí amháin ar a laghad uait chun 67router a úsáid.
 
 ---
 
 ## Cad is Soláthraí ann?
 
-Samhlaigh soláthraí mar **oibreoir fón póca**. Díreach mar a theastaíonn oibreoir fón póca uait chun glaonna a dhéanamh, teastaíonn soláthraí IS uait chun samhlacha IS a úsáid. Tá OmniRoute cosúil le fón a oibríonn le **gach oibreoir** — is féidir leat aistriú eatarthu go huathoibríoch.
+Samhlaigh soláthraí mar **oibreoir fón póca**. Díreach mar a theastaíonn oibreoir fón póca uait chun glaonna a dhéanamh, teastaíonn soláthraí IS uait chun samhlacha IS a úsáid. Tá 67router cosúil le fón a oibríonn le **gach oibreoir** — is féidir leat aistriú eatarthu go huathoibríoch.
 
 ### Cineálacha Soláthraithe
 
@@ -31,8 +31,8 @@ Féach **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** le haghaidh treoracha gi
 ### Socrú roghnach soláthraithe saor in aisce ar an gcéad rith
 
 Cuireann an draoi céadrite cárta follasach **Socraigh soláthraithe saor in aisce** ar fáil. Díorthaíonn sé an liosta
-incháilithe reatha ó chlárlann soláthraithe OmniRoute nach dteastaíonn fíordheimhniú uathu, agus ansin ligeann sé duit gach
-soláthraí a athbhreithniú agus a dhíroghnú sula ndeimhníonn tú. Taispeánann OmniRoute fógra rabhaidh an tsoláthraí agus nasc chuig a shuíomh
+incháilithe reatha ó chlárlann soláthraithe 67router nach dteastaíonn fíordheimhniú uathu, agus ansin ligeann sé duit gach
+soláthraí a athbhreithniú agus a dhíroghnú sula ndeimhníonn tú. Taispeánann 67router fógra rabhaidh an tsoláthraí agus nasc chuig a shuíomh
 ionas gur féidir leat téarmaí, príobháideachas, infhaighteacht agus teorainneacha ráta an tríú páirtí a athbhreithniú ar dtús.
 
 Tá an gníomh seo roghnach: ní chruthaítear naisc le soláthraithe saor in aisce go ciúin riamh nuair a chríochnaítear an draoi.
@@ -80,7 +80,7 @@ triail eile a bhaint go sábháilte as na cinn ar theip orthu amháin tar éis t
 
 ### Rogha D: Samhlacha Áitiúla MLX (Apple Silicon)
 
-I gcás Macanna Apple Silicon a bhfuil cuimhne aontaithe acu, tacaíonn OmniRoute le ceangal le samhlacha áitiúla MLX atá ag rith trí `mlx-lm.server` mar ghnáthsholáthraithe áitiúla atá comhoiriúnach le OpenAI.
+I gcás Macanna Apple Silicon a bhfuil cuimhne aontaithe acu, tacaíonn 67router le ceangal le samhlacha áitiúla MLX atá ag rith trí `mlx-lm.server` mar ghnáthsholáthraithe áitiúla atá comhoiriúnach le OpenAI.
 
 #### Réamhriachtanais
 
@@ -110,14 +110,14 @@ I gcás Macanna Apple Silicon a bhfuil cuimhne aontaithe acu, tacaíonn OmniRout
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Ceangail i bPainéal OmniRoute**:
+3. **Ceangail i bPainéal 67router**:
    - Téigh chuig **Soláthraithe** → **Cuir Soláthraí Leis**
    - Roghnaigh **MLX Gemma 26B** nó **MLX Qwen 3.8 27B**
    - Cliceáil **Ceangail** (níl eochair API ag teastáil)
 
 4. **Úsáid le OpenCode**:
    ```bash
-   # Cumraigh OpenCode chun OmniRoute a úsáid
+   # Cumraigh OpenCode chun 67router a úsáid
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <d'eochair-api-omniroute>
 
@@ -139,7 +139,7 @@ Ní mór duit é seo a bhainistiú de láimh:
 - Rith an dá cheann ar mheaisíní ar leith, nó
 - Stop ceann amháin sula dtosaíonn tú an ceann eile
 
-Ní bhainistíonn OmniRoute próisis freastalaí MLX go huathoibríoch — ní dhéanann sé ach iarratais a ródú chuig na críochphointí atá comhoiriúnach le OpenAI a chumraíonn tú.
+Ní bhainistíonn 67router próisis freastalaí MLX go huathoibríoch — ní dhéanann sé ach iarratais a ródú chuig na críochphointí atá comhoiriúnach le OpenAI a chumraíonn tú.
 
 #### Tacaíocht do Ghlaonna Uirlisí
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Cuimhne ídithe              | Cinntigh nach bhfuil ach samhail amháin ag rith; dún aipeanna eile; seiceáil Activity Monitor              |
 | Diúltaíodh don cheangal     | Deimhnigh go bhfuil an freastalaí ag rith ar an bport ceart (11435/11436)                                  |
 | Freagraí malla              | Lódálann an chéad iarratas an tsamhail isteach sa chuimhne (~30-60s); bíonn iarratais ina dhiaidh sin tapa |
-| Teipeann ar ghlaoch uirlisí | Cinntigh go dtacaíonn an tsamhail le huirlisí; seiceáil logaí OmniRoute le haghaidh earráidí aistriúcháin  |
+| Teipeann ar ghlaoch uirlisí | Cinntigh go dtacaíonn an tsamhail le huirlisí; seiceáil logaí 67router le haghaidh earráidí aistriúcháin   |
 
 ---
 
@@ -236,12 +236,12 @@ Tá do sholáthraí ceangailte anois. Is féidir leat é a úsáid le `model: "a
 
 ## Soláthraithe Iolracha a Úsáid
 
-Is fearr a oibríonn OmniRoute le **soláthraithe iolracha**. Tugann sé seo na buntáistí seo duit:
+Is fearr a oibríonn 67router le **soláthraithe iolracha**. Tugann sé seo na buntáistí seo duit:
 
-- **Cúltaca uathoibríoch** — Má theipeann ar sholáthraí amháin, baineann OmniRoute triail as an gcéad cheann eile
-- **Barrfheabhsú costais** — Roghnaíonn OmniRoute an soláthraí is saoire do gach iarratas
-- **Barrfheabhsú luais** — Roghnaíonn OmniRoute an soláthraí is tapúla do gach iarratas
-- **Barrfheabhsú cáilíochta** — Roghnaíonn OmniRoute an soláthraí is fearr do gach tasc
+- **Cúltaca uathoibríoch** — Má theipeann ar sholáthraí amháin, baineann 67router triail as an gcéad cheann eile
+- **Barrfheabhsú costais** — Roghnaíonn 67router an soláthraí is saoire do gach iarratas
+- **Barrfheabhsú luais** — Roghnaíonn 67router an soláthraí is tapúla do gach iarratas
+- **Barrfheabhsú cáilíochta** — Roghnaíonn 67router an soláthraí is fearr do gach tasc
 
 ### Socrú Molta
 
@@ -251,7 +251,7 @@ Ceangail **3 sholáthraí** ar a laghad chun an t-eispéireas is fearr a fháil:
 2. **Soláthraí tapa amháin** (Groq, Cerebras) — Le haghaidh freagraí gasta
 3. **Soláthraí ardchaighdeáin amháin** (OpenAI, Anthropic, Google) — Le haghaidh tascanna casta
 
-Ansin úsáid `model: "auto"` agus roghnóidh OmniRoute an soláthraí is fearr go huathoibríoch do gach iarratas.
+Ansin úsáid `model: "auto"` agus roghnóidh 67router an soláthraí is fearr go huathoibríoch do gach iarratas.
 
 ---
 
@@ -260,25 +260,25 @@ Ansin úsáid `model: "auto"` agus roghnóidh OmniRoute an soláthraí is fearr 
 ### OpenAI
 
 1. Faigh eochair API: https://platform.openai.com/api-keys
-2. In OmniRoute: Soláthraithe → Cuir Soláthraí Leis → OpenAI
+2. In 67router: Soláthraithe → Cuir Soláthraí Leis → OpenAI
 3. Greamaigh an eochair API → Ceangail
 
 ### Anthropic
 
 1. Faigh eochair API: https://console.anthropic.com/
-2. In OmniRoute: Soláthraithe → Cuir Soláthraí Leis → Anthropic
+2. In 67router: Soláthraithe → Cuir Soláthraí Leis → Anthropic
 3. Greamaigh an eochair API → Ceangail
 
 ### Google (Gemini)
 
 1. Faigh eochair API: https://aistudio.google.com/apikey
-2. In OmniRoute: Soláthraithe → Cuir Soláthraí Leis → Gemini
+2. In 67router: Soláthraithe → Cuir Soláthraí Leis → Gemini
 3. Greamaigh an eochair API → Ceangail
 
 ### DeepSeek
 
 1. Faigh eochair API: https://platform.deepseek.com/
-2. In OmniRoute: Soláthraithe → Cuir Soláthraí Leis → DeepSeek
+2. In 67router: Soláthraithe → Cuir Soláthraí Leis → DeepSeek
 3. Greamaigh an eochair API → Ceangail
 
 ### Qoder: roghnaigh iompar na ndintiúr
@@ -286,12 +286,12 @@ Ansin úsáid `model: "auto"` agus roghnóidh OmniRoute an soláthraí is fearr 
 Éilíonn Qoder dintiúir. Tá cumais éagsúla ag an dá iompar atá aige; ní leor ainm samhla
 leis féin chun a aithint cad is féidir le ceangal ar leith a dhéanamh.
 
-| Dintiúr                                      | Iompar OmniRoute                                         | Glaoch uirlisí ag an nglaoiteoir                                       | Sruthú                                                                          |
+| Dintiúr                                      | Iompar 67router                                          | Glaoch uirlisí ag an nglaoiteoir                                       | Sruthú                                                                          |
 | -------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| PAT a thosaíonn le `pt-`                     | Próiseas áitiúil `qodercli` ar óstach OmniRoute          | Ní thacaítear leis                                                     | Maolánaithe: ní astaítear SSE go dtí go dtugann an CLI an freagra iomlán ar ais |
+| PAT a thosaíonn le `pt-`                     | Próiseas áitiúil `qodercli` ar óstach 67router           | Ní thacaítear leis                                                     | Maolánaithe: ní astaítear SSE go dtí go dtugann an CLI an freagra iomlán ar ais |
 | Comhartha rochtana nach PAT é nó eochair API | Críochphointe HTTP DashScope atá comhoiriúnach le OpenAI | Cuirtear ar aghaidh é, faoi réir na samhla/na heochrach réamhtheachtaí | Conair réamhtheachtach HTTP/SSE                                                 |
 
-I gcás PAT, suiteáil Qoder CLI ar an óstach nó sa choimeádán céanna le OmniRoute. Ní mór an comhad inrite
+I gcás PAT, suiteáil Qoder CLI ar an óstach nó sa choimeádán céanna le 67router. Ní mór an comhad inrite
 a bheith in-aimsithe mar `qodercli`, nó socraigh `CLI_QODER_BIN` chuig conair an chomhaid inrite. Ní bhíonn CLI
 atá suiteáilte ar óstach Docker amháin i láthair go huathoibríoch sa choimeádán. Cruthaíonn
 comhaid dhénártha atá ar iarraidh earráid shainráite a threoraíonn tú chuig an tsuiteáil nó chuig socrú na conaire.
@@ -324,16 +324,16 @@ agus teorainn ama inchumraithe; ní ghealltar iad leis an iompar seo.
 ### Groq
 
 1. Faigh eochair API: https://console.groq.com/
-2. In OmniRoute: Soláthraithe → Cuir Soláthraí Leis → Groq
+2. In 67router: Soláthraithe → Cuir Soláthraí Leis → Groq
 3. Greamaigh an eochair API → Ceangail
 
 ---
 
 ## Ceisteanna Coitianta
 
-### "An gá dom íoc chun OmniRoute a úsáid?"
+### "An gá dom íoc chun 67router a úsáid?"
 
-**Ní gá!** Tá OmniRoute saor in aisce agus foinse oscailte. Is féidir leat soláthraithe saor in aisce (Kiro, Pollinations) a úsáid gan aon íocaíocht a dhéanamh. Ní íocann tú ach amháin má roghnaíonn tú soláthraithe íoctha a úsáid.
+**Ní gá!** Tá 67router saor in aisce agus foinse oscailte. Is féidir leat soláthraithe saor in aisce (Kiro, Pollinations) a úsáid gan aon íocaíocht a dhéanamh. Ní íocann tú ach amháin má roghnaíonn tú soláthraithe íoctha a úsáid.
 
 ### "Cén soláthraí ar cheart dom tosú leis?"
 
@@ -341,11 +341,11 @@ Tosaigh le **Kiro AI** — tá sé saor in aisce, ní theastaíonn eochair API u
 
 ### "An féidir liom níos mó ná soláthraí amháin a úsáid ag an am céanna?"
 
-**Is féidir!** Sin é bunchuspóir OmniRoute. Ceangail níos mó ná soláthraí amháin agus úsáid `model: "auto"` chun ligean do OmniRoute an ceann is fearr a roghnú do gach iarratas.
+**Is féidir!** Sin é bunchuspóir 67router. Ceangail níos mó ná soláthraí amháin agus úsáid `model: "auto"` chun ligean do 67router an ceann is fearr a roghnú do gach iarratas.
 
 ### "Cad a tharlaíonn má chliseann ar sholáthraí?"
 
-Scipeálann OmniRoute soláthraithe ar theip orthu go huathoibríoch agus baineann sé triail as an gcéad cheann eile. Ní gá duit aon rud a dhéanamh.
+Scipeálann 67router soláthraithe ar theip orthu go huathoibríoch agus baineann sé triail as an gcéad cheann eile. Ní gá duit aon rud a dhéanamh.
 
 ### "Conas a dhícheanglaím soláthraí?"
 
@@ -353,13 +353,13 @@ Téigh chuig Soláthraithe → cliceáil ar an soláthraí → cliceáil **Dích
 
 ### "An féidir liom na heochracha API atá agam cheana féin a úsáid?"
 
-**Is féidir!** Má tá eochracha API agat cheana féin le haghaidh OpenAI, Anthropic, Google, etc., is féidir leat iad a úsáid in OmniRoute. Níl le déanamh ach iad a ghreamú agus an soláthraí á cheangal agat.
+**Is féidir!** Má tá eochracha API agat cheana féin le haghaidh OpenAI, Anthropic, Google, etc., is féidir leat iad a úsáid in 67router. Níl le déanamh ach iad a ghreamú agus an soláthraí á cheangal agat.
 
 ---
 
 ## Cad atá Romhainn?
 
-- **[Treoir Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lig do OmniRoute an AI is fearr a roghnú duit
+- **[Treoir Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lig do 67router an AI is fearr a roghnú duit
 - **[Treoir maidir le Sraitheanna Saor in Aisce](./FREE-TIERS-GUIDE.md)** — Faigh AI saor in aisce gan chárta creidmheasa
 - **[Fabhtcheartú](../guides/TROUBLESHOOTING.md)** — Réitigh fadhbanna coitianta
 - **[Tagairt Soláthraithe](../reference/PROVIDER_REFERENCE.md)** — Liosta iomlán de 226 soláthraí

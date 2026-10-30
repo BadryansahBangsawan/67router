@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Magyar)
+# CLI Tools — 67router (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Utolsó frissítés: 2026-08-23
 
-Az OmniRoute a CLI-eszközök három kategóriájával integrálódik, amelyek három külön erre a célra szolgáló irányítópult-oldalon találhatók:
+A 67router a CLI-eszközök három kategóriájával integrálódik, amelyek három külön erre a célra szolgáló irányítópult-oldalon találhatók:
 
-| Oldal          | Útvonal                 | Koncepció                                                                                              | Darabszám             |
-| -------------- | ----------------------- | ------------------------------------------------------------------------------------------------------ | --------------------- |
-| **CLI Code's** | `/dashboard/cli-code`   | Az OmniRoute-ra irányított kódolási eszközök (Kliens → CLI → OmniRoute → Szolgáltató)                  | 26                    |
-| **CLI Agents** | `/dashboard/cli-agents` | Az OmniRoute-ra irányított autonóm ügynökök (azonos folyamat, tágabb hatókör)                          | 10                    |
-| **ACP Agents** | `/dashboard/acp-agents` | CLI-k, amelyeket az OmniRoute háttérrendszerként indít el stdio/ACP használatával (fordított folyamat) | lásd a nyilvántartást |
+| Oldal          | Útvonal                 | Koncepció                                                                                            | Darabszám             |
+| -------------- | ----------------------- | ---------------------------------------------------------------------------------------------------- | --------------------- |
+| **CLI Code's** | `/dashboard/cli-code`   | A 67router-ra irányított kódolási eszközök (Kliens → CLI → 67router → Szolgáltató)                   | 26                    |
+| **CLI Agents** | `/dashboard/cli-agents` | A 67router-ra irányított autonóm ügynökök (azonos folyamat, tágabb hatókör)                          | 10                    |
+| **ACP Agents** | `/dashboard/acp-agents` | CLI-k, amelyeket a 67router háttérrendszerként indít el stdio/ACP használatával (fordított folyamat) | lásd a nyilvántartást |
 
 A régi útvonalak 308-as átirányítást használnak: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ A régi útvonalak 308-as átirányítást használnak: `/dashboard/cli-tools` �
 CLI Code's / CLI Agents (felhasználási folyamat):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (mindegyik az OmniRoute-ra mutat)
+           ▼  (mindegyik a 67router-ra mutat)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (az OmniRoute a megfelelő szolgáltatóhoz irányít)
+           ▼  (a 67router a megfelelő szolgáltatóhoz irányít)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (fordított indítási folyamat):
-    Klienskérés → OmniRoute → elindítja a CLI-t stdio/ACP használatával → válasz
+    Klienskérés → 67router → elindítja a CLI-t stdio/ACP használatával → válasz
 ```
 
 **Előnyök:**
@@ -45,9 +45,9 @@ ACP Agents (fordított indítási folyamat):
 
 ## Automatikus konfigurálás a `setup-*` használatával
 
-Nem kell kézzel megírnia az egyes eszközök konfigurációját. Az OmniRoute minden támogatott CLI-hez biztosít egy `setup-*`
+Nem kell kézzel megírnia az egyes eszközök konfigurációját. A 67router minden támogatott CLI-hez biztosít egy `setup-*`
 parancsot, amely beolvassa az **aktuális** modellkatalógust egy futó
-OmniRoute-példányból (helyiből vagy távoliból), és létrehozza az eszköz saját konfigurációját a gépén:
+67router-példányból (helyiből vagy távoliból), és létrehozza az eszköz saját konfigurációját a gépén:
 
 ```bash
 omniroute setup-codex        omniroute setup-claude       omniroute setup-opencode
@@ -58,7 +58,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Mindegyik elfogadja a `--remote <url> --api-key <key>` kapcsolókat (egy helyi eszköz konfigurálása egy
-távoli OmniRoute használatára), a `--dry-run` kapcsolót (előnézet írás nélkül), valamint a `--port` kapcsolót. Azok az eszközök,
+távoli 67router használatára), a `--dry-run` kapcsolót (előnézet írás nélkül), valamint a `--port` kapcsolót. Azok az eszközök,
 amelyek nem támogatják a modellek automatikus felderítését (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive), elfogadják
 a `--model <id>` kapcsolót (nem interaktív futtatáshoz pedig a `--yes` kapcsolót is). A `setup-5dive` az egyetlen olyan
 konfigurációs eljárás, amely nem a `$HOME` alatt végez írást: egy 5dive-ügynökflottát konfigurál úgy, hogy
@@ -77,9 +77,9 @@ egyik célja, de nem rendelkezik `setup-*`/`configure` konfigurációs eljárás
 
 ### Futtatás konténeren belül
 
-Az OmniRoute-konténeren belül végrehajtott `setup-*` parancs a
+A 67router-konténeren belül végrehajtott `setup-*` parancs a
 konténer saját könyvtárába ír, amelyet egyetlen gazdagépen futó CLI sem olvas, és amely a
-konténerrel együtt eltűnik. Az OmniRoute ezt felismeri, és írás helyett utasításokkal együtt a `2` kilépési kóddal
+konténerrel együtt eltűnik. A 67router ezt felismeri, és írás helyett utasításokkal együtt a `2` kilépési kóddal
 leáll. Két támogatott továbblépési lehetőség van — telepítse a CLI-t a gazdagépre, és
 az `omniroute connect` segítségével csatlakoztassa a konténerhez, vagy csatolja be a konfigurációs könyvtárakat, és állítsa be a
 `CLI_CONFIG_HOME` változót (a compose `host` profilját). Minden `setup-*` parancs, továbbá az
@@ -203,7 +203,7 @@ A `/dashboard/cli-agents` oldalon megjelenő autonóm ügynökök:
 
 ## 3. ACP-ügynökök (/dashboard/acp-agents)
 
-Ez az oldal (korábban `/dashboard/agents`) azokat a CLI-ket jeleníti meg, amelyeket az OmniRoute háttérbeli végrehajtómotorként képes **elindítani** a stdio/ACP protokollon keresztül. A katalógust külön, a `src/lib/acp/registry.ts` fájlban tartják karban, és az **nem** azonos a `CLI_TOOLS` katalógussal.
+Ez az oldal (korábban `/dashboard/agents`) azokat a CLI-ket jeleníti meg, amelyeket a 67router háttérbeli végrehajtómotorként képes **elindítani** a stdio/ACP protokollon keresztül. A katalógust külön, a `src/lib/acp/registry.ts` fájlban tartják karban, és az **nem** azonos a `CLI_TOOLS` katalógussal.
 
 ---
 
@@ -330,7 +330,7 @@ A teljes PT-BR és EN fordítás biztosított. A további 39 területi beállít
 
 ## 9. Gyors kezdés
 
-### 1. lépés — OmniRoute API-kulcs beszerzése
+### 1. lépés — 67router API-kulcs beszerzése
 
 1. Nyissa meg a `/dashboard/api-manager` oldalt → **API-kulcs létrehozása**
 2. Adjon neki nevet (pl. `cli-tools`), és válassza ki az összes jogosultságot
@@ -394,7 +394,7 @@ cargo install smelt  # Rust-alapú
 ### 4. lépés — Globális környezeti változók beállítása
 
 ```bash
-# OmniRoute univerzális végpont
+# 67router univerzális végpont
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -506,7 +506,7 @@ EOF
 **VS Code-mód:**
 Cline-bővítmény beállításai → API-szolgáltató: `OpenAI Compatible` → Alap URL: `http://localhost:20128/v1`
 
-Vagy használja az OmniRoute irányítópultját → **CLI-eszközök → Cline → Konfiguráció alkalmazása**.
+Vagy használja a 67router irányítópultját → **CLI-eszközök → Cline → Konfiguráció alkalmazása**.
 
 ---
 
@@ -527,7 +527,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Vagy használja az OmniRoute irányítópultját → **CLI-eszközök → KiloCode → Konfiguráció alkalmazása**.
+Vagy használja a 67router irányítópultját → **CLI-eszközök → KiloCode → Konfiguráció alkalmazása**.
 
 ---
 
@@ -551,14 +551,14 @@ A szerkesztés után indítsa újra a VS Code-ot.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Akkor használja ezt, ha a VS Code Insiders egyéni végpontmodellekhez van konfigurálva, és azt szeretné, hogy az OmniRoute egyéni fejlécmező nélkül működjön.
+Akkor használja ezt, ha a VS Code Insiders egyéni végpontmodellekhez van konfigurálva, és azt szeretné, hogy a 67router egyéni fejlécmező nélkül működjön.
 
 **Ajánlott hely:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Példa a tokenizált OmniRoute-alias használatára:**
+**Példa a tokenizált 67router-alias használatára:**
 
 ```json
 [
@@ -582,7 +582,7 @@ Akkor használja ezt, ha a VS Code Insiders egyéni végpontmodellekhez van konf
 
 **Megjegyzések:**
 
-- Cserélje le az `sk-your-omniroute-key` értéket egy, az OmniRoute-ban létrehozott API-kulcsra.
+- Cserélje le az `sk-your-omniroute-key` értéket egy, a 67router-ban létrehozott API-kulcsra.
 - A `url` mezőnek az `/api/v1/vscode/{token}/chat/completions` végpontra kell mutatnia.
 - A `modelsUrl` mezőnek az `/api/v1/vscode/{token}/models` végpontra kell mutatnia.
 - Ha a kliens támogatja az egyéni fejléceket, részesítse előnyben a szokásos `/v1` + Bearer fejléc használatát.
@@ -596,17 +596,17 @@ Akkor használja ezt, ha a VS Code Insiders egyéni végpontmodellekhez van konf
 # Jelentkezzen be az AWS-/Kiro-fiókjába:
 kiro-cli login
 
-# A CLI saját hitelesítést használ — magának a Kiro CLI-nek nincs szüksége az OmniRoute-ra háttérrendszerként.
-# Más eszközök esetében használja a kiro-cli-t az OmniRoute mellett.
+# A CLI saját hitelesítést használ — magának a Kiro CLI-nek nincs szüksége a 67router-ra háttérrendszerként.
+# Más eszközök esetében használja a kiro-cli-t a 67router mellett.
 kiro-cli status
 ```
 
-A **Kiro IDE** asztali alkalmazás esetében használja az OmniRoute által elérhetővé tett MITM-végpontot
+A **Kiro IDE** asztali alkalmazás esetében használja a 67router által elérhetővé tett MITM-végpontot
 a `/dashboard/cli-tools → Kiro` alatt.
 
 ---
 
-## 10. Belső OmniRoute CLI
+## 10. Belső 67router CLI
 
 Az `omniroute` bináris parancsokat biztosít a kiszolgáló életciklusának kezeléséhez, a beállításhoz, a diagnosztikához és a szolgáltatók kezeléséhez. Belépési pont: `bin/omniroute.mjs`.
 
@@ -640,7 +640,7 @@ A nem interaktív beállítás során felismert környezeti változók:
 | Változó             | Rendeltetés                                                                                |
 | ------------------- | ------------------------------------------------------------------------------------------ |
 | `OMNIROUTE_API_KEY` | Szolgáltatói API-kulcs (a Commander `.env()` segítségével a `--api-key` kapcsolóhoz kötve) |
-| `DATA_DIR`          | Az OmniRoute adatkönyvtárának felülbírálása                                                |
+| `DATA_DIR`          | A 67router adatkönyvtárának felülbírálása                                                  |
 
 Minden más nem interaktív bemenet kapcsolóként, nem pedig környezeti változóként adandó át:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -663,7 +663,7 @@ A doctor a következő ellenőrzéseket futtatja: `Config`, `Database`, `Storage
 ### Szolgáltatók kezelése
 
 ```bash
-omniroute providers available                       # OmniRoute szolgáltatói katalógus
+omniroute providers available                       # 67router szolgáltatói katalógus
 omniroute providers available --search openai       # Katalógus szűrése azonosító/név/álnév/kategória alapján
 omniroute providers available --category api-key    # Szűrés kategória szerint (api-key, oauth, free, ...)
 omniroute providers available --json                # Géppel olvasható JSON
@@ -685,7 +685,7 @@ A `providers add/import/auth/edit/remove` parancsok elsősorban API-alapúak, ez
 az aktív helyi vagy távoli környezeten működnek. A hitelesítő adatokat a
 `--credential-stdin` vagy a `--credential-env` használatával kell megadni; a `--dry-run --json`
 csak kitakart jelenléti és szerkezeti információkat jelent. A `providers available`
-az OmniRoute katalógusát olvassa; a `providers list/test/test-all/validate` megtartja
+a 67router katalógusát olvassa; a `providers list/test/test-all/validate` megtartja
 helyi SQLite-működését, és nem igényli a kiszolgáló futását.
 
 Egyedi OpenAI-kompatibilis vagy Anthropic-kompatibilis csomópont esetén társítsa a hitelesítő adatokat
@@ -727,7 +727,7 @@ a rendszer `<field>DecryptFailed: true` értékkel jelzi azt ahelyett, hogy megs
 
 ### Egyéb alparancsok
 
-Ezek futó OmniRoute-kiszolgálót feltételeznek, hacsak nincs másként jelezve:
+Ezek futó 67router-kiszolgálót feltételeznek, hacsak nincs másként jelezve:
 
 ```bash
 omniroute status                       # Átfogó futásidejű állapot
@@ -735,7 +735,7 @@ omniroute logs                         # Kérésnaplók streamelése (--json, --
 omniroute config list                  # Konfigurált CLI-eszközök megjelenítése
 
 omniroute provider list                # Elérhető szolgáltatók listázása (a providers list aliasa)
-omniroute provider add                 # Az OmniRoute regisztrálása szolgáltatóként egy eszközön
+omniroute provider add                 # A 67router regisztrálása szolgáltatóként egy eszközön
 omniroute keys add | list | remove     # API-kulcsok kezelése
 omniroute models [provider]            # Modellek listázása (--json, --search)
 omniroute combo list | switch | create | delete
@@ -785,7 +785,7 @@ omniroute completion                   # Parancsértelmező-kiegészítés gener
 | `/v1/audio/speech`         | Szövegfelolvasás                         | ElevenLabs, OpenAI TTS                     |
 | `/v1/audio/transcriptions` | Beszéd szöveggé alakítása                | Deepgram, AssemblyAI                       |
 
-Beillesztésre kész példák tokennel ellátott OmniRoute URL-lel:
+Beillesztésre kész példák tokennel ellátott 67router URL-lel:
 
 ```txt
 Tokenpélda: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -804,7 +804,7 @@ Ollama-csevegés: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a
 
 | Hiba                                                         | Ok                                  | Javítás                                                      |
 | ------------------------------------------------------------ | ----------------------------------- | ------------------------------------------------------------ |
-| `Connection refused`                                         | Az OmniRoute nem fut                | `omniroute serve`                                            |
+| `Connection refused`                                         | A 67router nem fut                  | `omniroute serve`                                            |
 | `401 Unauthorized`                                           | Hibás API-kulcs                     | Ellenőrizze itt: `/dashboard/api-manager`                    |
 | `No combo configured`                                        | Nincs aktív útválasztási kombináció | Állítsa be itt: `/dashboard/combos`                          |
 | A CLI szerint „nincs telepítve”                              | A bináris fájl nincs a PATH-ban     | Ellenőrizze: `which <command>`                               |
@@ -812,7 +812,7 @@ Ollama-csevegés: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a
 | Régi hivatkozás: `/dashboard/cli-tools`                      | v3.8.6 előtti könyvjelző            | Automatikusan átirányítva ide: `/dashboard/cli-code` (308)   |
 | Régi hivatkozás: `/dashboard/agents`                         | v3.8.6 előtti könyvjelző            | Automatikusan átirányítva ide: `/dashboard/acp-agents` (308) |
 
-## A következtetési kulcs szabályzatának kezelése az OmniRoute CLI-vel
+## A következtetési kulcs szabályzatának kezelése a 67router CLI-vel
 
 Használjon hitelesített kezelési környezetet (lásd: [Távoli mód](../guides/REMOTE-MODE.md))
 egy meglévő következtetési kulcs azonosító alapján történő megtekintéséhez vagy frissítéséhez:

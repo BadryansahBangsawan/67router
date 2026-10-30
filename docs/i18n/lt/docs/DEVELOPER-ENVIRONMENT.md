@@ -4,7 +4,7 @@
 
 ---
 
-Šiame puslapyje paaiškinama, kaip projekte lokaliai veikia `.env` ir kaip tvarkyti aplinkos failus bei paslaptis kuriant „OmniRoute“.
+Šiame puslapyje paaiškinama, kaip projekte lokaliai veikia `.env` ir kaip tvarkyti aplinkos failus bei paslaptis kuriant „67router“.
 
 ## .env veikimas po diegimo
 

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **最後更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 隨附一套 WordPress 風格的外掛系統。外掛是自包含的目錄——每個目錄都有一份 `plugin.json` 資訊清單與一個進入點檔案——可掛接至請求管線（`onRequest` / `onResponse` / `onError`）及生命週期事件（`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`）。
+67router 隨附一套 WordPress 風格的外掛系統。外掛是自包含的目錄——每個目錄都有一份 `plugin.json` 資訊清單與一個進入點檔案——可掛接至請求管線（`onRequest` / `onResponse` / `onError`）及生命週期事件（`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`）。
 
 **外掛市集**是建構於該系統之上的探索層。它提供可供瀏覽的可安裝外掛目錄。預設情況下，該目錄使用一個小型的內建種子登錄檔；操作人員可以將其指向自訂的遠端登錄檔 URL，在此情況下，擷取作業會受到具備 DNS 解析功能的 SSRF 防護機制保護（請參閱[安全性](#security)）。
 
@@ -124,7 +124,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### 外掛程式目錄
 
-外掛程式位於 OmniRoute 資料目錄下：
+外掛程式位於 67router 資料目錄下：
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

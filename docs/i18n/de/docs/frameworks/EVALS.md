@@ -7,7 +7,7 @@
 > **Maßgebliche Quelle:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Zuletzt aktualisiert:** 2026-06-28 — v3.8.40
 
-OmniRoute enthält ein generisches Evaluierungsframework, mit dem Sie Routing-
+67router enthält ein generisches Evaluierungsframework, mit dem Sie Routing-
 Konfigurationen, einzelne Anbieter/Modelle oder die enthaltenen „Golden Set“-Suiten
 benchmarken können. Verwenden Sie es, um Routing-Änderungen zu überprüfen, neue
 Anbieter zu validieren und Releases abzusichern, bevor sie für den

@@ -15,7 +15,7 @@
 - [નેટિવ એપ્સ માટે OAuth 2.0 (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — ઇન્સ્ટોલ કરેલી એપ્સ માટે OAuth client_id / client_secret જાહેર હોય છે; વાસ્તવિક સુરક્ષા PKCE પૂરી પાડે છે.
 - [Firebase API keys](https://firebase.google.com/docs/projects/api-keys) — Web client identifiers ડિઝાઇન મુજબ જાહેર હોય છે.
 
-OmniRouteએ આ મૂલ્યો એમ્બેડ કરવા જરૂરી છે, જેથી `.env` કૉન્ફિગર ન કરતા વપરાશકર્તાઓને પણ કોઈ વધારાના સેટઅપ વિના કાર્યરત OAuth flow મળે. એમ્બેડેડ fallback વિના, "માત્ર clone કરો અને ચલાવો" માર્ગ અનુસરતા કોઈપણ વપરાશકર્તા માટે Gemini / Antigravity providers કામ કરવાનું બંધ કરે છે.
+67routerએ આ મૂલ્યો એમ્બેડ કરવા જરૂરી છે, જેથી `.env` કૉન્ફિગર ન કરતા વપરાશકર્તાઓને પણ કોઈ વધારાના સેટઅપ વિના કાર્યરત OAuth flow મળે. એમ્બેડેડ fallback વિના, "માત્ર clone કરો અને ચલાવો" માર્ગ અનુસરતા કોઈપણ વપરાશકર્તા માટે Gemini / Antigravity providers કામ કરવાનું બંધ કરે છે.
 
 જોકે, `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` જેવા literal મૂલ્યો **GitHub Secret Scanning**, **Semgrep** અને સમાન pattern scanners દ્વારા શોધાઈ જાય છે. દરેક release ખોટા positivesનો ઘોંઘાટભર્યો પ્રવાહ બની જાય છે, push protection માન્ય commitsને અવરોધે છે અને operators alert feed પર વિશ્વાસ કરવાનું બંધ કરે છે.
 

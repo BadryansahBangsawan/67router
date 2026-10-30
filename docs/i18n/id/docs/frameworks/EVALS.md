@@ -7,7 +7,7 @@
 > **Sumber acuan utama:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute menyediakan kerangka kerja evaluasi generik yang dapat Anda gunakan untuk melakukan benchmark terhadap konfigurasi routing, penyedia/model tunggal, atau rangkaian "golden set" bawaan. Gunakan kerangka kerja ini untuk memverifikasi perubahan routing, memvalidasi penyedia baru, dan membatasi rilis sebelum mempromosikannya ke lalu lintas produksi.
+67router menyediakan kerangka kerja evaluasi generik yang dapat Anda gunakan untuk melakukan benchmark terhadap konfigurasi routing, penyedia/model tunggal, atau rangkaian "golden set" bawaan. Gunakan kerangka kerja ini untuk memverifikasi perubahan routing, memvalidasi penyedia baru, dan membatasi rilis sebelum mempromosikannya ke lalu lintas produksi.
 
 Kerangka kerja ini diimplementasikan sebagai:
 

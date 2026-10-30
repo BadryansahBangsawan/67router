@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
-OmniRoute WordPress uslubidagi plagin tizimi bilan birga taqdim etiladi. Plaginlar
+67router WordPress uslubidagi plagin tizimi bilan birga taqdim etiladi. Plaginlar
 mustaqil kataloglardir — har birida `plugin.json` manifesti va kirish fayli mavjud —
 ular soʻrovlarni qayta ishlash jarayoniga (`onRequest` / `onResponse` / `onError`)
 hamda hayotiy sikl hodisalariga (`onInstall` / `onActivate` / `onDeactivate` /
@@ -159,7 +159,7 @@ ruxsat beriladi.
 
 ### Plagin katalogi
 
-Plaginlar OmniRoute maʼlumotlar katalogida joylashadi:
+Plaginlar 67router maʼlumotlar katalogida joylashadi:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

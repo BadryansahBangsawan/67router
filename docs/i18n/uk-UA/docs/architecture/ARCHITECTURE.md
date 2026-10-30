@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Українська)
+# 67router Architecture (Українська)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Останнє оновлення: 2026-06-28_
 
 ## Резюме
 
-OmniRoute — це локальний шлюз маршрутизації ШІ та інформаційна панель, створені на базі Next.js.
+67router — це локальний шлюз маршрутизації ШІ та інформаційна панель, створені на базі Next.js.
 Він надає єдину кінцеву точку, сумісну з OpenAI (`/v1/*`), і маршрутизує трафік між кількома зовнішніми провайдерами з перетворенням форматів, резервним перемиканням, оновленням токенів і відстеженням використання.
 
 Основні можливості:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Панель керування у браузері]
     end
 
-    subgraph Router[Локальний процес OmniRoute]
+    subgraph Router[Локальний процес 67router]
         API[API сумісності V1\n/v1/*]
         DASH[Панель керування + API керування\n/api/*]
         CORE[Ядро SSE + перетворення\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ flowchart LR
 
 ## 5) Вбудовані сервіси (v3.8.4)
 
-OmniRoute може встановлювати, контролювати та маршрутизувати запити до локально запущених процесів інструментів ШІ, які називаються **вбудованими сервісами**. Постачаються п’ять таких сервісів: 9Router, CLIProxyAPI, Bifrost, Mux і Dario.
+67router може встановлювати, контролювати та маршрутизувати запити до локально запущених процесів інструментів ШІ, які називаються **вбудованими сервісами**. Постачаються п’ять таких сервісів: 9Router, CLIProxyAPI, Bifrost, Mux і Dario.
 
 Архітектурні рівні:
 
@@ -428,7 +428,7 @@ Jules) зі збереженням життєвого циклу завдань 
 - Кеш квот: `src/domain/quotaCache.ts`
 - Стан деградації: `src/domain/degradation.ts`
 - Аудит конфігурації: `src/domain/configAudit.ts`
-- Побудовник метаданих відповіді OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Побудовник метаданих відповіді 67router: `src/domain/omnirouteResponseMeta.ts`
 - Підсистема оцінювання: `src/domain/assessment/` — періодичні завдання оцінювання
 
 ### E. Конвеєр авторизації
@@ -806,7 +806,7 @@ flowchart LR
         Browser[Браузер панелі керування]
     end
 
-    subgraph ContainerOrProcess[Середовище виконання OmniRoute]
+    subgraph ContainerOrProcess[Середовище виконання 67router]
         Next[Сервер Next.js\nPORT=20128]
         Core[Ядро SSE + виконавці]
         MainDB[(storage.sqlite)]
@@ -925,7 +925,7 @@ flowchart LR
 ## Матриця сумісності провайдерів
 
 > **Примітка:** Наведена нижче матриця є репрезентативною вибіркою з 351 зареєстрованого провайдера в
-> OmniRoute v3.8.0. Актуальний список, що постійно оновлюється, див.
+> 67router v3.8.0. Актуальний список, що постійно оновлюється, див.
 > у [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (згенеровано автоматично) або в джерелі
 > істини за адресою `src/shared/constants/providers.ts` (перевіряється за допомогою Zod під час завантаження).
 
@@ -1107,7 +1107,7 @@ flowchart LR
 - необроблений запит, отриманий від клієнта
 - перетворений запит, фактично надісланий провайдеру
 - відповідь провайдера, відновлена у форматі JSON; потокові відповіді стискаються до фінального підсумку разом із метаданими потоку
-- остаточна відповідь клієнту, повернута OmniRoute; потокові відповіді зберігаються в тій самій стислій формі підсумку
+- остаточна відповідь клієнту, повернута 67router; потокові відповіді зберігаються в тій самій стислій формі підсумку
 
 ## Межі, критичні для безпеки
 

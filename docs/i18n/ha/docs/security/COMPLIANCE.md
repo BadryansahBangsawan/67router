@@ -7,7 +7,7 @@
 > **Tushen gaskiya:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute yana rubuta ayyukan gudanarwa, abubuwan da suka faru na tantancewa, sauye-sauyen zagayowar rayuwar bayanan shaidar masu samarwa, da kiran kayan aikin MCP a cikin jadawalin binciken da SQLite ke tallafawa. Wannan shafin ya ƙunshi abin da ake rubutawa, inda ake adana shi, tsawon lokacin da ake riƙe shi, yadda maɓallan API za su iya zaɓar kin shiga, da yadda ake gudanar da tambaya kan bayanan.
+67router yana rubuta ayyukan gudanarwa, abubuwan da suka faru na tantancewa, sauye-sauyen zagayowar rayuwar bayanan shaidar masu samarwa, da kiran kayan aikin MCP a cikin jadawalin binciken da SQLite ke tallafawa. Wannan shafin ya ƙunshi abin da ake rubutawa, inda ake adana shi, tsawon lokacin da ake riƙe shi, yadda maɓallan API za su iya zaɓar kin shiga, da yadda ake gudanar da tambaya kan bayanan.
 
 Aiwatarwar tana cikin `src/lib/compliance/index.ts` (T-43 — "Sarrafawar Bin Ka'ida") da `src/lib/compliance/providerAudit.ts`. Rubuce-rubucen bincike ba sa jefa kuskure: idan aka samu kowace irin gazawa, ana yin watsi da kiran a ɓoye domin rubutun bincike kada ya katse babban tsarin buƙatar.
 

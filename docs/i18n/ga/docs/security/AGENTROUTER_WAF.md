@@ -52,7 +52,7 @@ ghníomhaíocht. Is é seo an teorantóir ráta céanna, atá ceangailte leis an
 hearráidí eatramhacha `400 content-blocked` nuair a dhéanann Claude Code nó Codex CLI
 glaonna iomadúla úsáide uirlise / seolta teachtaireachta go tapa as a chéile.
 
-## Maoluithe atá curtha i bhfeidhm cheana féin in OmniRoute
+## Maoluithe atá curtha i bhfeidhm cheana féin in 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — cosaint ar ráigeanna a fhorfheidhmíonn
    bearna íosta 500 ms idir iarrataí amach chuig aon URL `agentrouter:*`.

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **ბოლო განახლება:** 2026-06-28 — v3.8.40
 
-OmniRoute-ს მოჰყვება WordPress-ის სტილის პლაგინების სისტემა. პლაგინები თვითკმარი
+67router-ს მოჰყვება WordPress-ის სტილის პლაგინების სისტემა. პლაგინები თვითკმარი
 დირექტორიებია — თითოეულს აქვს `plugin.json` მანიფესტი და შესასვლელი ფაილი — რომლებიც
 ერთვებიან მოთხოვნების დამუშავების კონვეიერში (`onRequest` / `onResponse` / `onError`) და
 სასიცოცხლო ციკლის მოვლენებში (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### პლაგინების დირექტორია
 
-პლაგინები ინახება OmniRoute-ის მონაცემთა დირექტორიაში:
+პლაგინები ინახება 67router-ის მონაცემთა დირექტორიაში:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

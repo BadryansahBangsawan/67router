@@ -8,17 +8,17 @@
 
 🌐 **භාෂා:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-OmniRoute සඳහා පොදු ගැටලු සහ විසඳුම්.
+67router සඳහා පොදු ගැටලු සහ විසඳුම්.
 
 ---
 
 ## ඉක්මන් යොමුව
 
-**OmniRoute සඳහා අලුත්ද?** මෙතැනින් පටන් ගන්න — මේවා ගැටලුවලින් 90%ක් විසඳයි:
+**67router සඳහා අලුත්ද?** මෙතැනින් පටන් ගන්න — මේවා ගැටලුවලින් 90%ක් විසඳයි:
 
 | මට මෙය පෙනේ                  | එහි අර්ථය                                         | කළ යුතු දේ                                                                                               |
 | ---------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| "සම්බන්ධ විය නොහැක"          | OmniRoute ක්රියාත්මක නොවේ                         | `omniroute` ධාවනය කරන්න හෝ `docker restart omniroute` ක්රියාත්මක කරන්න                                   |
+| "සම්බන්ධ විය නොහැක"          | 67router ක්රියාත්මක නොවේ                          | `omniroute` ධාවනය කරන්න හෝ `docker restart omniroute` ක්රියාත්මක කරන්න                                   |
 | "වලංගු නොවන API යතුරක්"      | ඔබේ යතුර වැරදියි හෝ කල් ඉකුත් වී ඇත               | සැපයුම්කරුගේ වෙබ් අඩවියෙන් යතුර නැවත පිටපත් කරන්න                                                        |
 | "වේග සීමාව ඉක්මවා ඇත"        | ඔබ ඉල්ලීම් අධික ප්රමාණයක් යවමින් සිටී             | මිනිත්තු 1ක් රැඳී සිටින්න, නැතහොත් ස්වයංක්රීය පසුබැසීම සඳහා `model: "auto"` භාවිත කරන්න                  |
 | "කෝටාව ඉක්මවා ඇත"            | ඔබ ඔබේ නොමිලේ/ගෙවූ කෝටාව සම්පූර්ණයෙන් භාවිත කර ඇත | තවත් සැපයුම්කරුවන් සම්බන්ධ කරන්න, නැතහොත් නොමිලේ සැපයුම්කරුවන් (Kiro, Pollinations) භාවිත කරන්න          |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # බර වැඩි ඉල්ල
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # මන්දගාමී උඩුගං සේවා සඳහා සීමිත පොරොත්තු කාලය RATE_LIMIT_MAX_WAIT_MS පෙරනිමිය ඉක්මවා වැඩි කරන්න
 ```
 
-මේවා OmniRoute ක්රියාවලියේ පරිසරය තුළ සකසන්න (daemon ක්රියාවලිය තුළ, උදා. LaunchAgent plist හෝ `systemctl edit` හරහා), ඉන්පසු OmniRoute නැවත ආරම්භ කරන්න. ආකෘති මාරු කිරීමේ ධජය ඉහළම බලපෑමක් ඇති තනි පාලකයයි: එය දැඩි අසාර්ථකත්වයක්, සංචිතයේ ඇති සෞඛ්ය සම්පන්න සපයන්නෙකුට විනිවිද පෙනෙන ලෙස නැවත උත්සාහ කිරීමක් බවට පරිවර්තනය කරයි.
+මේවා 67router ක්රියාවලියේ පරිසරය තුළ සකසන්න (daemon ක්රියාවලිය තුළ, උදා. LaunchAgent plist හෝ `systemctl edit` හරහා), ඉන්පසු 67router නැවත ආරම්භ කරන්න. ආකෘති මාරු කිරීමේ ධජය ඉහළම බලපෑමක් ඇති තනි පාලකයයි: එය දැඩි අසාර්ථකත්වයක්, සංචිතයේ ඇති සෞඛ්ය සම්පන්න සපයන්නෙකුට විනිවිද පෙනෙන ලෙස නැවත උත්සාහ කිරීමක් බවට පරිවර්තනය කරයි.
 
 **සටහන**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` මඟින් එකවර ක්රියාත්මක වන බර වැඩි — දිගු-සන්දර්භ — ඉල්ලීම් ගණන සීමා කරයි; මෙම සීමාව ඇතුළත් කරගැනීමේ ද්වාරයක් මිස සපයන්නාගේ ඉල්ලීම් අනුපාත සීමාකාරකයක් නොවේ. **#503-fanout යාවත්කාලීනය:** මෙම විචල්යය තවදුරටත් පෙරනිමියෙන් සකසා නැත (දැන් එය ඉහත පරිදි පැහැදිලිව වින්යාස කළ විට පමණක් බලපැවැත්වේ) — ඒ වෙනුවට බර වැඩි ඉල්ලීම් ඇතුළත් කරගැනීම, සත්කාරකයේ සැබෑ මතක සීමාව අනුව ස්වයංක්රීයව පරිමාණය වන ස්වයං-ව්යුත්පන්න බයිට් අයවැයක් (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) මඟින් පාලනය වේ. එබැවින්, මෙම විචල්යය කිසිසේත් නොසකසා තිබුණත් නව යෙදවුමකදී `503 chat_admission_busy` ප්රතික්ෂේප කිරීම් බෙහෙවින් අඩුවෙන් දැකිය යුතුය; මෙහි එය පැහැදිලිව සැකසීම තවමත් ලේඛනගත කර ඇති ආකාරයටම ක්රියා කරයි. පැහැදිලි බයිට්-අයවැය අතික්රමණ 8 MiB–2 GiB අතරට සීමා කෙරේ. `413 body_exceeds_budget` තාවකාලික නොවේ: එම බයිට් අයවැය වැඩි කරන්න, `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` අඩු කරන්න, හෝ ක්රියාවලියේ මතක සීමාව වැඩි කරන්න. `inflight_bytes_budget` හේතුවෙන් භාරය අත්හැරීම තාවකාලික සම්පත් තරගයක් වන අතර නැවත උත්සාහ කළ හැක. එක් එක් සපයන්නා සඳහා වන ඉල්ලීම් අනුපාත සීමා කිරීම (`open-sse/services/rateLimitManager.ts`) `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, සහ `RATE_LIMIT_AUTO_ENABLE` මඟින් වෙනම පාලනය වේ — `.env.example` බලන්න.
 
 **එය ක්රියා කළේදැයි තහවුරු කරන ආකාරය**: ඔබේ නියෝජිතයා/cron එක ඉක්මන් අනුක්රමයකින් දෙවරක් ක්රියාත්මක කර, දෙකම සාර්ථක වන බව තහවුරු කරන්න. විසඳුමට පෙර, දෙවන ක්රියාත්මක කිරීමේදී සාමාන්යයෙන් `429`/`401` දෝෂයක් ඇති වේ. විසඳුමෙන් පසු, අසාර්ථකත්වයන් (තිබේ නම්) විනිවිද පෙනෙන ලෙස නැවත උත්සාහ කෙරෙන අතර ඇමතුම සම්පූර්ණ වේ. ඔබට `curl /monitoring/health` ද ක්රියාත්මක කර, සපයන්නාගේ සම්බන්ධතා මත ඇති `rateLimitedUntil` ක්ෂේත්රය සහ බලපෑමට ලක් වූ සපයන්නන් සඳහා `circuitBreakers.providerBreakers[].state` නිරීක්ෂණය කළ හැක — තත්ත්වය `CLOSED`, `DEGRADED`, `OPEN`, හෝ `HALF_OPEN` යන ඒවායින් එකකි (`src/shared/utils/circuitBreaker.ts` බලන්න), සහ දිගින් දිගටම අසාර්ථක වන සපයන්නෙකු, යළි සැකසුම් කාල කවුළුව පරීක්ෂණ ඉල්ලීමකට ඉඩ දීමට (`HALF_OPEN`) පෙර `CLOSED → DEGRADED → OPEN` ලෙස මාරු වේ.
 
-**ඔබ තවමත් 429 දකින්නේ නම්**: එම සපයන්නාගේ සක්රිය ගිණුම එහි _කෝටාව_ සැබවින්ම අවසන් කර ඇත (ඉල්ලීම් අනුපාතය පමණක් නොවේ). OmniRoute උපකරණ පුවරුව → Providers → Accounts තුළ එම සපයන්නා සඳහා දෙවන ගිණුමක් එක් කරන්න, නැතහොත් වෙනත් නොමිලේ සපයන්නෙකු (උදා. `routeway`, `auggie`) මිශ්ර කරන්න. ආකෘති මාරු කිරීම උපකාරී වන්නේ තාවකාලික අනුපාත/400/401 දෝෂ සඳහා පමණි; දැඩි කෝටා අවසන් වීමකට දෙවන අක්තපත්රයක් හෝ වෙනත් සපයන්නෙකු අවශ්ය වේ.
+**ඔබ තවමත් 429 දකින්නේ නම්**: එම සපයන්නාගේ සක්රිය ගිණුම එහි _කෝටාව_ සැබවින්ම අවසන් කර ඇත (ඉල්ලීම් අනුපාතය පමණක් නොවේ). 67router උපකරණ පුවරුව → Providers → Accounts තුළ එම සපයන්නා සඳහා දෙවන ගිණුමක් එක් කරන්න, නැතහොත් වෙනත් නොමිලේ සපයන්නෙකු (උදා. `routeway`, `auggie`) මිශ්ර කරන්න. ආකෘති මාරු කිරීම උපකාරී වන්නේ තාවකාලික අනුපාත/400/401 දෝෂ සඳහා පමණි; දැඩි කෝටා අවසන් වීමකට දෙවන අක්තපත්රයක් හෝ වෙනත් සපයන්නෙකු අවශ්ය වේ.
 
 **දෘශ්ය ආකෘතිවල (`auto/vision`, `bazaarlink/*`) 403 දකින්නේ නම්**: සම්බන්ධිත ගිණුමට දෘශ්ය හැකියාව ඇතුළත් ගෙවූ සැලැස්මක් නොමැති අතර, නැතහොත් API යතුරට ප්රමාණවත් අවසර නොමැත. යතුරේ විෂය පථයට දෘශ්ය/බහුමාධ්ය හැකියාව ඇතුළත් බව සපයන්නාගේ උපකරණ පුවරුව තුළ තහවුරු කරන්න, නැතහොත් ගෙවූ මට්ටමේ ගිණුමක් සම්බන්ධ කර එය දෘශ්ය ඉලක්කය ලෙස තබාගන්න.
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # මන්දගාමී උඩ
 
 ඔබ `npm install -g omniroute` ධාවනය කරන විට, `npm warn ERESOLVE`, peer dependency දැනුම්දීම් සහ `deprecated` පණිවිඩ වැනි අනතුරු ඇඟවීම් රාශියක් දැකිය හැක. **මේවා බලාපොරොත්තු විය හැකි අතර හානිකර නොවේ.** ප්රතිදානයේ `added <N> packages` දැක්වෙන්නේ නම්, ඔබේ ස්ථාපනය සාර්ථක වී ඇත.
 
-peer dependency නිරාකරණ අනතුරු ඇඟවීම් යටපත් කිරීමට, OmniRoute සහාය දක්වන ස්ථාපන ආකාරය භාවිත කරන්න:
+peer dependency නිරාකරණ අනතුරු ඇඟවීම් යටපත් කිරීමට, 67router සහාය දක්වන ස්ථාපන ආකාරය භාවිත කරන්න:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` යටපත් කරන්නේ `ERESOLVE` සහ peer dependency දැනුම්දීම් පමණි. අනුක්රමික තෙවන පාර්ශ්ව පැකේජවලින් ඒවා පැමිණෙන බැවින් අත්හැර දැමීමේ දැනුම්දීම් තවදුරටත් දෘශ්යමාන වේ; ඒවා ස්ථාපනය අසාර්ථක වූ බවක් නොපෙන්වයි.
 
-මෙම අනතුරු ඇඟවීම් පැමිණෙන්නේ OmniRoute විසින් පාලනය නොකරන තෙවන පාර්ශ්ව පැකේජවල යල් පැනගිය peer dependency පරාසවලිනි:
+මෙම අනතුරු ඇඟවීම් පැමිණෙන්නේ 67router විසින් පාලනය නොකරන තෙවන පාර්ශ්ව පැකේජවල යල් පැනගිය peer dependency පරාසවලිනි:
 
 1. **`marked-terminal` හට `marked >=1 <16` අවශ්ය නමුත් `marked@18` හමු විය** — ප්රායෝගිකව නිසි ලෙස ක්රියා කරයි; upstream peer පරාසය යල් පැනගොස් ඇත.
 2. **`deprecated prebuild-install@7.1.3`** — අනුක්රමික native binary ලබාගැනීමේ උපකාරකයකි. එය pin කර ඇති `wreq-js` ප්රවාහන binding එක ස්ථාපනය කිරීමට
@@ -104,19 +104,19 @@ npm warn install-scripts allowScripts මඟින් ආවරණය නොව�
 
 ### මෙම අනතුරු ඇඟවීම නොසලකා හැරිය හැකිද?
 
-**අර්ධ වශයෙන් හැකි නමුත්, ස්ක්රිප්ට් නොමැතිව ධාවනය කිරීම නිර්දේශ නොකෙරේ.** OmniRoute සතුව දෝෂයකදී විකල්පයකට සුමටව මාරු වීමේ හැකියාව ඇත: ස්වාධීන බණ්ඩලයෙන් ස්වදේශීය `better-sqlite3` බැඳීම් පූරණය කළ නොහැකි නම්, යෙදුම `node:sqlite` හෝ `sql.js` වැනි විකල්ප ධාවක වෙත මාරු වේ ([SQLite ධාවනකාල විසඳුම](../ops/SQLITE_RUNTIME.md) බලන්න). සේවාදායකය එසේ වුවද ආරම්භ වන නමුත්, `sql.js` වැනි WASM විකල්ප මත ධාවනය කිරීමෙන් SQLite WAL (Write-Ahead Logging) ප්රකාරය අක්රිය වන අතර මතක සහ තැටි සමමුහුර්ත කිරීමේ අතිරේක වියදම වැඩි වේ.
+**අර්ධ වශයෙන් හැකි නමුත්, ස්ක්රිප්ට් නොමැතිව ධාවනය කිරීම නිර්දේශ නොකෙරේ.** 67router සතුව දෝෂයකදී විකල්පයකට සුමටව මාරු වීමේ හැකියාව ඇත: ස්වාධීන බණ්ඩලයෙන් ස්වදේශීය `better-sqlite3` බැඳීම් පූරණය කළ නොහැකි නම්, යෙදුම `node:sqlite` හෝ `sql.js` වැනි විකල්ප ධාවක වෙත මාරු වේ ([SQLite ධාවනකාල විසඳුම](../ops/SQLITE_RUNTIME.md) බලන්න). සේවාදායකය එසේ වුවද ආරම්භ වන නමුත්, `sql.js` වැනි WASM විකල්ප මත ධාවනය කිරීමෙන් SQLite WAL (Write-Ahead Logging) ප්රකාරය අක්රිය වන අතර මතක සහ තැටි සමමුහුර්ත කිරීමේ අතිරේක වියදම වැඩි වේ.
 
 ### සැබවින්ම අවශ්ය වන්නේ කුමන ස්ක්රිප්ට්ද?
 
-අවහිර කරන ලද සියලුම ස්ක්රිප්ට් OmniRoute ධාවනය කිරීමට අත්යවශ්ය නොවේ:
+අවහිර කරන ලද සියලුම ස්ක්රිප්ට් 67router ධාවනය කිරීමට අත්යවශ්ය නොවේ:
 
-- **අත්යවශ්ය (`omniroute`, `better-sqlite3`):** OmniRoute ධාවනය වන්නේ Next.js ස්වාධීන යෙදුම් බණ්ඩලයකින් (`dist/`) ය. ස්ථාපනය අතරතුර, npm ඉහළ මට්ටමේ `node_modules/better-sqlite3/` තුළ සත්කාරක පද්ධතියට විශේෂිත ස්වදේශීය SQLite ධාවකය බාගත කිරීම හෝ සම්පාදනය කිරීම සිදු කරයි. අනතුරුව OmniRoute හි `postinstall` ස්ක්රිප්ට් එක (`scripts/build/postinstall.mjs`) මෙම සත්කාරක පද්ධතියට විශේෂිත ද්විමය ගොනු සත්යාපනය කර, ස්වාධීන සේවාදායකයට ඒවා වෙත ප්රවේශ විය හැකි වන පරිදි `dist/node_modules/` වෙත පිටපත් කරයි. `omniroute` හි postinstall ස්ක්රිප්ට් එක අවහිර කර ඇත්නම්, මෙම පිටපත් කිරීමේ පියවර මඟ හැරේ.
+- **අත්යවශ්ය (`omniroute`, `better-sqlite3`):** 67router ධාවනය වන්නේ Next.js ස්වාධීන යෙදුම් බණ්ඩලයකින් (`dist/`) ය. ස්ථාපනය අතරතුර, npm ඉහළ මට්ටමේ `node_modules/better-sqlite3/` තුළ සත්කාරක පද්ධතියට විශේෂිත ස්වදේශීය SQLite ධාවකය බාගත කිරීම හෝ සම්පාදනය කිරීම සිදු කරයි. අනතුරුව 67router හි `postinstall` ස්ක්රිප්ට් එක (`scripts/build/postinstall.mjs`) මෙම සත්කාරක පද්ධතියට විශේෂිත ද්විමය ගොනු සත්යාපනය කර, ස්වාධීන සේවාදායකයට ඒවා වෙත ප්රවේශ විය හැකි වන පරිදි `dist/node_modules/` වෙත පිටපත් කරයි. `omniroute` හි postinstall ස්ක්රිප්ට් එක අවහිර කර ඇත්නම්, මෙම පිටපත් කිරීමේ පියවර මඟ හැරේ.
 - **විකල්ප/පරායත්ත (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** මේවා ගොඩනැගීමේ සහායක, නිරීක්ෂණ මෙවලම් හෝ පද්ධති යතුරු දාම උපයෝගිතා වේ. ඒවාට ඉඩ දීමෙන් ගොඩනැගීමේ අනතුරු ඇඟවීම් වළක්වන නමුත්, මූලික මාර්ගගත කිරීමේ ක්රියාකාරීත්වය සඳහා ඒවා අවශ්ය නොවේ.
-- **බැහැර කළ (`onnxruntime-node`):** දේශීය AI embeddings සඳහා වන විකල්ප පරායත්තතාවක් වන අතර OmniRoute ධාවනය කිරීමට එය **අවශ්ය නොවේ**. එහි postinstall ස්ක්රිප්ට් එක NuGet වෙතින් ~300MBක CUDA සම්පත් බාගත කරයි; සහාය දක්වන දෘඩාංග මත දේශීය ONNX ත්වරණය භාවිත කිරීමට ඔබ පැහැදිලිවම අදහස් කරන්නේ නම් මිස එය අවසර ලැයිස්තුවට ඇතුළත් නොකරන්න.
+- **බැහැර කළ (`onnxruntime-node`):** දේශීය AI embeddings සඳහා වන විකල්ප පරායත්තතාවක් වන අතර 67router ධාවනය කිරීමට එය **අවශ්ය නොවේ**. එහි postinstall ස්ක්රිප්ට් එක NuGet වෙතින් ~300MBක CUDA සම්පත් බාගත කරයි; සහාය දක්වන දෘඩාංග මත දේශීය ONNX ත්වරණය භාවිත කිරීමට ඔබ පැහැදිලිවම අදහස් කරන්නේ නම් මිස එය අවසර ලැයිස්තුවට ඇතුළත් නොකරන්න.
 
 ### නිර්දේශිත විසඳුම
 
-ගෝලීය ස්ථාපනයකදී අවශ්ය ස්ථාපන ස්ක්රිප්ට්වලට ඉඩ දී අනතුරු ඇඟවීම් නිහඬ කිරීමට, OmniRoute සහ එහි ස්වදේශීය පරායත්තතා සඳහා `--allow-scripts` යොදන්න:
+ගෝලීය ස්ථාපනයකදී අවශ්ය ස්ථාපන ස්ක්රිප්ට්වලට ඉඩ දී අනතුරු ඇඟවීම් නිහඬ කිරීමට, 67router සහ එහි ස්වදේශීය පරායත්තතා සඳහා `--allow-scripts` යොදන්න:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -143,14 +143,14 @@ omniroute doctor
 
 Gemini Web ඉල්ලීමක් Playwright Chromium ස්ථාපනය කර නොමැති බව සඳහන් පණිවිඩයක් සමඟ `503` ප්රතිචාරයක් ලබා දෙන්නේ නම්, npm පැකේජය පවතින නමුත් බ්රවුසර ද්විමය ගොනුව නොමැත. Playwright හිතාමතාම බ්රවුසර බාගැනීම් npm පැකේජ ස්ථාපනයෙන් වෙන්ව තබන බැවින්, බ්රවුසරය ස්ථාපනය කරන තෙක් මෙම ප්රතිචාරය බලාපොරොත්තු විය හැක.
 
-ගෝලීය npm ස්ථාපනයක් සඳහා, බ්රවුසර හැඹිලිය එම Playwright ස්ථාපනයටම අයත් වන පරිදි OmniRoute පැකේජයේ නාමාවලියෙන් Chromium ස්ථාපනය කරන්න:
+ගෝලීය npm ස්ථාපනයක් සඳහා, බ්රවුසර හැඹිලිය එම Playwright ස්ථාපනයටම අයත් වන පරිදි 67router පැකේජයේ නාමාවලියෙන් Chromium ස්ථාපනය කරන්න:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-ස්ථාපනයෙන් පසු OmniRoute නැවත ආරම්භ කර, ඉන්පසු Gemini Web ඉල්ලීම නැවත උත්සාහ කරන්න. ඔබ Docker අනුරුවකින් OmniRoute ධාවනය කරන්නේ නම්, Chromium සහ එහි පරායත්තතා ඇතුළත් `-web` අනුරුව (හෝ `runner-web` ගොඩනැගීමේ ඉලක්කය) භාවිත කරන්න; මූලික අනුරුවේ ඒවා ඇතුළත් නොවේ.
+ස්ථාපනයෙන් පසු 67router නැවත ආරම්භ කර, ඉන්පසු Gemini Web ඉල්ලීම නැවත උත්සාහ කරන්න. ඔබ Docker අනුරුවකින් 67router ධාවනය කරන්නේ නම්, Chromium සහ එහි පරායත්තතා ඇතුළත් `-web` අනුරුව (හෝ `runner-web` ගොඩනැගීමේ ඉලක්කය) භාවිත කරන්න; මූලික අනුරුවේ ඒවා ඇතුළත් නොවේ.
 
 ---
 
@@ -181,7 +181,7 @@ npx playwright install chromium
 **මෙය ව්යාජ ධනාත්මක හඳුනාගැනීමකි. කිසිවක් ආසාදනය වී නොමැති අතර, කිසිදු ක්රියාමාර්ගයක් අවශ්ය නොවේ.**
 
 HTTP ඉල්ලීම් මෙන් පෙනෙන සබැඳි බොහොමයක් අඩංගු සාමාන්ය පෙළ/Markdown ගොනු සලකුණු කරන
-හියුරිස්ටික් ක්රමයක් Avast සහ AVG ධාවනය කරයි. OmniRoute හි `README.md`, npm පැකේජය
+හියුරිස්ටික් ක්රමයක් Avast සහ AVG ධාවනය කරයි. 67router හි `README.md`, npm පැකේජය
 තුළම බෙදාහැරේ (එය `package.json` → `files` යටතේ ලැයිස්තුගත කර ඇත), එබැවින් ගෝලීය
 ස්ථාපනයකදී එය `node_modules/omniroute/README.md` වෙත පැමිණේ — තවද එහි
 `http://localhost:20128/...` උදාහරණ ~15ක් පමණ ඇත (MCP HTTP/SSE අන්ත ලක්ෂ්ය, A2A
@@ -199,7 +199,7 @@ HTTP ඉල්ලීම් මෙන් පෙනෙන සබැඳි බො�
 
 1. **දැනුම්දීම් නවත්වන්න** — ඔබේ ප්රතිවෛරස මෘදුකාංගය තුළ ස්ථාපන නාමාවලිය බැහැර කරන්න
    (Avast: Settings → Exceptions), ඔබේ ගෝලීය `node_modules` මාර්ගය සහ/හෝ
-   OmniRoute දත්ත නාමාවලිය (`~/.omniroute/`) එක් කරන්න.
+   67router දත්ත නාමාවලිය (`~/.omniroute/`) එක් කරන්න.
 2. **ව්යාජ ධනාත්මක හඳුනාගැනීම වාර්තා කරන්න** — <https://www.avast.com/false-positive-file-form.php>,
    නිරෝධායනය කළ `README.md` අමුණන්න. පෙළ ගොනුවකට සැපයුම්කරුගේ හියුරිස්ටික් ක්රමය
    අධික ලෙස ප්රතිචාර දැක්වීම නිසා, සැමට උපකාර වන නිවැරදි කිරීම මෙයයි.
@@ -263,7 +263,7 @@ Kaspersky හි `PDM:` උපසර්ගය යනු, දන්නා අන�
 
 ### පිවිසුම් පිටුව බිඳ වැටීම හෝ "Module self-registration" දෝෂයක් පෙන්වීම
 
-**හේතුව:** ඔබ ධාවනය කරන්නේ OmniRoute විසින් අනුමත කළ ආරක්ෂිත ධාවන පරිසරයේ අවම සීමාවෙන් පිටත Node.js අනුවාදයකි. වඩාත් පොදු අවස්ථාව වන්නේ OmniRoute හට අවශ්ය යාවත්කාලීන කළ ආරක්ෂිත අවම සීමාවට වඩා පහළ පැරණි Node 22 හෝ 24 පැච් මට්ටමක් ධාවනය කිරීමයි.
+**හේතුව:** ඔබ ධාවනය කරන්නේ 67router විසින් අනුමත කළ ආරක්ෂිත ධාවන පරිසරයේ අවම සීමාවෙන් පිටත Node.js අනුවාදයකි. වඩාත් පොදු අවස්ථාව වන්නේ 67router හට අවශ්ය යාවත්කාලීන කළ ආරක්ෂිත අවම සීමාවට වඩා පහළ පැරණි Node 22 හෝ 24 පැච් මට්ටමක් ධාවනය කිරීමයි.
 
 **ලක්ෂණ:**
 
@@ -279,7 +279,7 @@ Kaspersky හි `PDM:` උපසර්ගය යනු, දන්නා අන�
    nvm use 24
    ```
 2. ඔබගේ අනුවාදය සත්යාපනය කරන්න: `node --version` මඟින් 24.x LTS පෙළෙහි `v24.0.0` හෝ ඊට නව අනුවාදයක් පෙන්විය යුතුය
-3. OmniRoute නැවත ස්ථාපනය කරන්න: `npm install -g omniroute`
+3. 67router නැවත ස්ථාපනය කරන්න: `npm install -g omniroute`
 4. නැවත ආරම්භ කරන්න: `omniroute`
 
 > **සහාය දක්වන ආරක්ෂිත අනුවාද:** `>=22.22.2 <23` හෝ `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) සහ Node.js 26 සඳහා පූර්ණ සහාය ඇත.
@@ -362,13 +362,13 @@ omniroute
 
 **හේතුව:** Node.js 22 මත, undici@8 ඩිස්පැචරය Node හි අන්තර්ගත `fetch()` ක්රියාත්මක කිරීම සමඟ නොගැළපේ.
 
-**විසඳුම (v3.5.5+):** ප්රොක්සි ඩිස්පැචරයක් සක්රියව පවතින විට OmniRoute දැන් undici හිම `fetch()` ශ්රිතය භාවිත කරමින් ස්ථාවර හැසිරීමක් සහතික කරයි. v3.5.5+ වෙත යාවත්කාලීන කරන්න.
+**විසඳුම (v3.5.5+):** ප්රොක්සි ඩිස්පැචරයක් සක්රියව පවතින විට 67router දැන් undici හිම `fetch()` ශ්රිතය භාවිත කරමින් ස්ථාවර හැසිරීමක් සහතික කරයි. v3.5.5+ වෙත යාවත්කාලීන කරන්න.
 
 ### WSL යටතේ MITM ප්රොක්සිය: Windows ධාරකයේ ඩෙස්ක්ටොප් යෙදුම් ග්රහණය නොවේ
 
-**හේතුව:** MITM ප්රොක්සිය සහ එහි CA සහතිකය OmniRoute ක්රියාත්මක වන පරිසරය තුළ ස්ථාපනය වේ. WSL යටතේ එම පරිසරය Linux අමුත්තා වන අතර, AI ඩෙස්ක්ටොප් යෙදුම් (Kiro, Trae, Copilot, Zed, …) Windows ධාරකයේ ක්රියාත්මක වේ. ධාරක යෙදුම් අමුත්තාගේ සහතික ගබඩාව විශ්වාස නොකරන අතර අමුත්තාගේ පද්ධති ප්රොක්සිය හරහා යොමු නොවන නිසා, ඩෙස්ක්ටොප් ග්රහණය එහි සක්රිය නොවේ.
+**හේතුව:** MITM ප්රොක්සිය සහ එහි CA සහතිකය 67router ක්රියාත්මක වන පරිසරය තුළ ස්ථාපනය වේ. WSL යටතේ එම පරිසරය Linux අමුත්තා වන අතර, AI ඩෙස්ක්ටොප් යෙදුම් (Kiro, Trae, Copilot, Zed, …) Windows ධාරකයේ ක්රියාත්මක වේ. ධාරක යෙදුම් අමුත්තාගේ සහතික ගබඩාව විශ්වාස නොකරන අතර අමුත්තාගේ පද්ධති ප්රොක්සිය හරහා යොමු නොවන නිසා, ඩෙස්ක්ටොප් ග්රහණය එහි සක්රිය නොවේ.
 
-**නිර්දේශය:** ඔබට ග්රහණය කිරීමට අවශ්ය ඩෙස්ක්ටොප් යෙදුම් ක්රියාත්මක වන OS එකේම OmniRoute ස්වදේශීයව ක්රියාත්මක කරන්න (Windows යෙදුම් සඳහා Windows; macOS/Linux සඳහාද එලෙසම). ධාරක යෙදුම් ඉලක්ක කරමින් OmniRoute WSL තුළ තබා ගැනීමට නම්, ජනනය කළ CA සහතිකය Windows ධාරකයේ අතින් විශ්වාසදායක කිරීමත්, එක් එක් ධාරක යෙදුමේ ජාල/ප්රොක්සි සැකසුම් WSL ප්රොක්සි අන්ත ලක්ෂ්යය වෙත යොමු කිරීමත් අවශ්ය වේ — මෙය සහය නොදක්වන, පහසුවෙන් බිඳ වැටිය හැකි සැකසුමකි.
+**නිර්දේශය:** ඔබට ග්රහණය කිරීමට අවශ්ය ඩෙස්ක්ටොප් යෙදුම් ක්රියාත්මක වන OS එකේම 67router ස්වදේශීයව ක්රියාත්මක කරන්න (Windows යෙදුම් සඳහා Windows; macOS/Linux සඳහාද එලෙසම). ධාරක යෙදුම් ඉලක්ක කරමින් 67router WSL තුළ තබා ගැනීමට නම්, ජනනය කළ CA සහතිකය Windows ධාරකයේ අතින් විශ්වාසදායක කිරීමත්, එක් එක් ධාරක යෙදුමේ ජාල/ප්රොක්සි සැකසුම් WSL ප්රොක්සි අන්ත ලක්ෂ්යය වෙත යොමු කිරීමත් අවශ්ය වේ — මෙය සහය නොදක්වන, පහසුවෙන් බිඳ වැටිය හැකි සැකසුමකි.
 
 ---
 
@@ -395,7 +395,7 @@ omniroute
 
 ### OAuth ටෝකනය කල් ඉකුත් වී ඇත
 
-OmniRoute ස්වයංක්රීයව ටෝකන නැවුම් කරයි. ගැටලු දිගටම පවතී නම්:
+67router ස්වයංක්රීයව ටෝකන නැවුම් කරයි. ගැටලු දිගටම පවතී නම්:
 
 1. උපකරණ පුවරුව → සපයන්නා → නැවත සම්බන්ධ කරන්න
 2. සපයන්නාගේ සම්බන්ධතාව මකා නැවත එක් කරන්න
@@ -606,7 +606,7 @@ Request Logs පිටුවේ **ඉතිහාසය පිරිසිදු
 
 ### තදබද රැල්ල වැළැක්වීම
 
-සමකාලීන ඉල්ලීම් බොහොමයක් අනුපාත-සීමා කළ සපයන්නෙකු වෙත ළඟා වන විට, ඉල්ලීම් අනුක්රමික කිරීමට සහ අනුක්රමික අසාර්ථක වීම් වැළැක්වීමට OmniRoute විසින් mutex + ස්වයංක්රීය අනුපාත සීමා කිරීම භාවිත කරයි. API යතුරු සපයන්නන් සඳහා මෙය ස්වයංක්රීය වේ.
+සමකාලීන ඉල්ලීම් බොහොමයක් අනුපාත-සීමා කළ සපයන්නෙකු වෙත ළඟා වන විට, ඉල්ලීම් අනුක්රමික කිරීමට සහ අනුක්රමික අසාර්ථක වීම් වැළැක්වීමට 67router විසින් mutex + ස්වයංක්රීය අනුපාත සීමා කිරීම භාවිත කරයි. API යතුරු සපයන්නන් සඳහා මෙය ස්වයංක්රීය වේ.
 
 ### කතාබස් ඉල්ලීම් 503 / chat_admission_busy සමඟ අසාර්ථක වේ
 
@@ -641,7 +641,7 @@ Request Logs පිටුවේ **ඉතිහාසය පිරිසිදු
 හෝ අවම වශයෙන් ඇස්තමේන්තුගත ටෝකන `32,000`ක් ඇති විට, නැතහොත් සීමා කළ ව්යුහ ඇස්තමේන්තුකරණය
 පිවිසි නෝඩ් `10,000`ක හෝ ගැඹුර `12`ක සීමා අවසන් කරන විට, එය ව්යුහාත්මකව බරපතළ වේ.
 
-**හේතුව:** මෙය උඩුගං සපයන්නාගේ අසාර්ථක වීමක් නොව, OmniRoute තුළ හිතාමතා සිදු කරන භාර අඩු කිරීමකි.
+**හේතුව:** මෙය උඩුගං සපයන්නාගේ අසාර්ථක වීමක් නොව, 67router තුළ හිතාමතා සිදු කරන භාර අඩු කිරීමකි.
 විශාල ඉල්ලීම් අන්තර්ගතයක් රඳවාගෙන විග්රහ කිරීමට පෙර සීමිත බරපතළ ධාරිතාවක් වෙන් කර ගැනීමට
 සෑම ක්රියාවලියක්ම ක්රියාවලියට-දේශීය ආරක්ෂකයක් භාවිත කරයි. SSE ප්රතිචාරයක ජීවිත කාලය පුරාම
 බරපතළ ලීස් එකක් රඳවා තබාගනී.
@@ -687,7 +687,7 @@ false` සහ ප්රමාණවත් `maxInflightBytes` අගයක් ය
 
 ## විකල්ප RAG / LLM අසාර්ථකතා වර්ගීකරණය (ගැටලු 16ක්)
 
-සමහර OmniRoute පරිශීලකයෝ RAG හෝ agent stacks ඉදිරිපස gateway එක ස්ථානගත කරති. එවැනි සැකසුම්වල අමුතු රටාවක් බහුලව දැකිය හැක: OmniRoute නිරෝගී ලෙස පෙනේ (providers ක්රියාත්මකයි, routing profiles නිවැරදියි, rate limit ඇඟවීම් නැත), නමුත් අවසාන පිළිතුර තවමත් වැරදියි.
+සමහර 67router පරිශීලකයෝ RAG හෝ agent stacks ඉදිරිපස gateway එක ස්ථානගත කරති. එවැනි සැකසුම්වල අමුතු රටාවක් බහුලව දැකිය හැක: 67router නිරෝගී ලෙස පෙනේ (providers ක්රියාත්මකයි, routing profiles නිවැරදියි, rate limit ඇඟවීම් නැත), නමුත් අවසාන පිළිතුර තවමත් වැරදියි.
 
 ප්රායෝගිකව, මෙම සිදුවීම් සාමාන්යයෙන් gateway එකෙන් නොව, පහළින් ඇති RAG pipeline එකෙන් හටගනී.
 
@@ -706,17 +706,17 @@ false` සහ ප්රමාණවත් `maxInflightBytes` අගයක් ය
 
 1. වැරදි ප්රතිචාරයක් විමර්ශනය කරන විට, පහත දෑ සටහන් කරගන්න:
    - පරිශීලක කාර්යය සහ ඉල්ලීම
-   - OmniRoute තුළ route එක හෝ provider සංයෝජනය
+   - 67router තුළ route එක හෝ provider සංයෝජනය
    - පහළ ප්රවාහයේ භාවිත කළ ඕනෑම RAG context එකක් (ලබාගත් ලේඛන, tool calls ආදිය)
 2. සිදුවීම WFGY ProblemMap අංක එකකට හෝ දෙකකට (`No.1` … `No.16`) සිතියම්ගත කරන්න.
-3. OmniRoute logs අසල ඔබේම dashboard, runbook, හෝ incident tracker එකේ එම අංකය ගබඩා කරන්න.
+3. 67router logs අසල ඔබේම dashboard, runbook, හෝ incident tracker එකේ එම අංකය ගබඩා කරන්න.
 4. ඔබේ RAG stack, retriever, හෝ routing strategy වෙනස් කළ යුතුදැයි තීරණය කිරීමට අදාළ WFGY පිටුව භාවිත කරන්න.
 
 සම්පූර්ණ පාඨය සහ නිශ්චිත ක්රියාපටිපාටි මෙහි ඇත (MIT බලපත්රය, පාඨය පමණි):
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-ඔබ OmniRoute පසුපස RAG හෝ agent pipelines ධාවනය නොකරන්නේ නම්, මෙම කොටස නොසලකා හැරිය හැක.
+ඔබ 67router පසුපස RAG හෝ agent pipelines ධාවනය නොකරන්නේ නම්, මෙම කොටස නොසලකා හැරිය හැක.
 
 ---
 
@@ -740,7 +740,7 @@ v3.8.0 නිකුතුවට විශේෂිත ගැටලු සහ ඒ
 
 1. ඔබේ platform එක සඳහා Devin CLI ස්ථාපනය කරන්න
 2. `.env` තුළ `CLI_DEVIN_BIN=/usr/local/bin/devin` (හෝ සැබෑ path එක) සකසන්න
-3. OmniRoute නැවත ආරම්භ කර **Dashboard → CLI Tools** වෙතින් නැවත පරීක්ෂා කරන්න
+3. 67router නැවත ආරම්භ කර **Dashboard → CLI Tools** වෙතින් නැවත පරීක්ෂා කරන්න
 
 ### Model cooldown එක සිරවීම (අතින් නැවත සැකසීම)
 
@@ -795,7 +795,7 @@ v3.8.0 නිකුතුවට විශේෂිත ගැටලු සහ ඒ
 
 1. අහඹු secret එකක් ජනනය කරන්න: `openssl rand -hex 32`
 2. production server env එකේ (සහ bridge එක සමඟ සන්නිවේදනය කරන ඕනෑම client එකක) `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` සකසන්න
-3. OmniRoute නැවත ආරම්භ කරන්න
+3. 67router නැවත ආරම්භ කරන්න
 
 ### Responses API: background mode එක synchronous ක්රියාකාරීත්වයට පහත හෙළීම
 

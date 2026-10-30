@@ -4,7 +4,7 @@
 
 ---
 
-> **Lühidalt**: OmniRoute'i tihendusmootor on **laiendatav** — saate registreerida kohandatud mootoreid, tarnida uute keelte keelepakette ja koostada mitmest etapist koosnevaid konveiereid. See juhend näitab, kuidas seda teha.
+> **Lühidalt**: 67router'i tihendusmootor on **laiendatav** — saate registreerida kohandatud mootoreid, tarnida uute keelte keelepakette ja koostada mitmest etapist koosnevaid konveiereid. See juhend näitab, kuidas seda teha.
 
 **Seotud juhendid:**
 
@@ -232,7 +232,7 @@ strateegia valijas selle `id` kaudu saadaval. Testi integratsiooni, kombineeride
 
 ## Keelepakettide loomine
 
-Caveman-stiilis tihendamine kasutab **keelespetsiifilisi reeglipakette**, et käsitleda iga loomuliku keele täitesõnu, ebakindlust väljendavaid fraase ja paljusõnalisi mustreid. OmniRoute sisaldab **6 keelepaketti**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Caveman-stiilis tihendamine kasutab **keelespetsiifilisi reeglipakette**, et käsitleda iga loomuliku keele täitesõnu, ebakindlust väljendavaid fraase ja paljusõnalisi mustreid. 67router sisaldab **6 keelepaketti**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Paketi struktuur
 
@@ -388,7 +388,7 @@ Mootori N väljundist saab mootori N+1 sisend.
 
 ### Tihendusrežiimid
 
-OmniRoute valib konfiguratsiooni, automaatse käivitamise lävendite ja kombinatsioonide alistuste põhjal **IGA PÄRINGU KOHTA ÜHE režiimi**.
+67router valib konfiguratsiooni, automaatse käivitamise lävendite ja kombinatsioonide alistuste põhjal **IGA PÄRINGU KOHTA ÜHE režiimi**.
 Saadaolevad režiimid on määratletud failis `open-sse/services/compression/types.ts` (tüüp `CompressionMode`):
 
 | Režiim       | Mootorid             | Kasutusjuht                                                                                                                                                                                                       |
@@ -505,10 +505,10 @@ Selle seadistuse kaudu juhtimiseks määrake `mode: "stacked"` ja lisage sammude
 
 ## Upstream-projektidega sünkroonimise põhimõtted
 
-OmniRoute'i tihendusmootorite README-s on tunnustatud mitut upstream-projekti
+67router'i tihendusmootorite README-s on tunnustatud mitut upstream-projekti
 („inspireeritud projektidest RTK, Caveman, LLMLingua-2, Troglodita“). Kaastöötajate
 levinud küsimus on: **kui upstream-projekt RTK lisab uue tööriistafiltri või Caveman lisab
-reeglipaketi, kuidas jõuab see OmniRoute'i?** See jaotis annab autoriteetse vastuse.
+reeglipaketi, kuidas jõuab see 67router'i?** See jaotis annab autoriteetse vastuse.
 
 ### Kaasatud koopiad vs. sõltumatud teostused
 
@@ -528,7 +528,7 @@ upstream-koopia, millest saaks teha `git pull` — just seepärast ütleb README
 
 **Upstream-väljalasete automaatne jälgimine puudub ja silti `compression-sync`
 ei ole** — see on taotluslik. Kuna mootorid on uusteostused, ei liideta upstream-projekti RTK
-filtrit või Cavemani reeglipaketti koodina; see **väljendatakse uuesti OmniRoute'i
+filtrit või Cavemani reeglipaketti koodina; see **väljendatakse uuesti 67router'i
 enda vormingus uue reegli/filtrina** (vt
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) ja lisatakse vajaduspõhiselt
 tavalise PR-i kaudu. Eespool kirjeldatud laienduspunktid (kohandatud mootor, keelepakett, RTK filter)
@@ -543,14 +543,14 @@ Selle töövoo hiljutised näited:
 ### Headroom (sisendi tihendamise puhverserver)
 
 Headroom on **täielikult sisemine** — fikseeritud versiooniga kaasatud `gcf`-koodeki hetktõmmis koos
-OmniRoute'i enda kihtidega `smartcrusher` / `toon` / `tabular`. Peale kaasatud koopia
+67router'i enda kihtidega `smartcrusher` / `toon` / `tabular`. Peale kaasatud koopia
 pole ühtegi aktiivset upstream-projekti, mida jälgida; `gcf`-i värskendatakse koodeki muutumisel
 käsitsi ja valideeritakse uuesti tihenduseelarve kontrolli
 (`check:compression-budget`) suhtes.
 
 ### Upstream-projektist inspireeritud täiustuse pakkumine
 
-1. **Ärge kaasake koopiat** — väljendage upstream-projekti reegel/filter uuesti OmniRoute'i vormingus.
+1. **Ärge kaasake koopiat** — väljendage upstream-projekti reegel/filter uuesti 67router'i vormingus.
 2. Lisage see allpool oleva sobiva laienduspunkti kaudu (keelepakett, RTK filter või
    kohandatud mootor).
 3. Viidake PR-i kirjelduses upstream-projektile (allika tunnustamiseks), selle asemel et

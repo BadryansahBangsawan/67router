@@ -16,7 +16,7 @@ Dva opciona compose profila (`memory`, `bifrost`) za postojeću implementaciju o
 
 ## Zašto je ovo konzervativan pristup
 
-Postojeća struktura implementacije OmniRoute-a je već lagana i provjerena:
+Postojeća struktura implementacije 67router-a je već lagana i provjerena:
 
 - **`redis:7-alpine`** upravlja radnim opterećenjem ograničenja brzine/keširanja (rate-limit/cache) na produkcijskom nivou.
 - **SQLite + sqlite-vec + FTS5** pokrivaju lokalnu memoriju + vektor + pretragu teksta (pogledajte [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -51,7 +51,7 @@ Dva profila ovdje su **opcije za horizontalno skaliranje za implementacije koje 
 
 - Pokrećete ≥3 `omniroute` replike i želite centralizovanu rotaciju provajdera u jednom Go procesu.
 - Želite jedinstvenu površinu za reviziju/logovanje za zahtjeve prema upstream provajderima kroz sve replike.
-- Želite horizontalno skaliranje Tier-1 sloja rutiranja nezavisno od OmniRoute replika.
+- Želite horizontalno skaliranje Tier-1 sloja rutiranja nezavisno od 67router replika.
 
 **Šta dodaje:**
 

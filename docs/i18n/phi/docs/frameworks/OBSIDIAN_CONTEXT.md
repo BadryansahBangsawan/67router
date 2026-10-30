@@ -13,7 +13,7 @@
 
 ## Ano ito
 
-Kumokonekta ang OmniRoute sa isang **Obsidian** vault bilang **pinagmumulan ng konteksto** — isang lokal na
+Kumokonekta ang 67router sa isang **Obsidian** vault bilang **pinagmumulan ng konteksto** — isang lokal na
 Markdown knowledge base na binabasa at sinusulatan ng mga agent sa pamamagitan ng built-in na MCP server. Ang
 integration ay nakikipag-ugnayan sa **Obsidian Local REST API** community plugin na tumatakbo sa loob ng
 desktop app, kaya maaaring maghanap ang mga agent sa mga note, magbasa/magsulat/mag-patch ng mga file, ilista ang vault, gumawa
@@ -75,7 +75,7 @@ at bina-validate ang token sa pamamagitan ng pagtawag sa Local REST API status e
 ### WebDAV vault sync
 
 Pinamamahalaan ng `src/app/api/settings/obsidian/webdav/route.ts` ang opsyonal na WebDAV-backed
-vault sync (na pinapatakbo ng `src/lib/obsidianSync.ts`). Kapag na-enable ito, itinuturo nito ang OmniRoute sa isang
+vault sync (na pinapatakbo ng `src/lib/obsidianSync.ts`). Kapag na-enable ito, itinuturo nito ang 67router sa isang
 local vault directory at bumubuo ng random na pares ng WebDAV username/password:
 
 ```bash
@@ -111,8 +111,8 @@ Pinananatili ng apat na `obsidian_sync_*` tool ang kanilang hiwalay na gawi para
 
 Tinukoy sa `open-sse/mcp-server/tools/obsidianTools.ts`. Nireresolba ang token/base-URL
 sa bawat tawag (API key muna, pagkatapos ay global). Ang mga tool na kumokonekta sa **sync server**
-ng OmniRoute (ang apat na `obsidian_sync_*` tool) ay nangangailangan din ng sync auth token na naka-configure
-sa mga setting ng OmniRoute.
+ng 67router (ang apat na `obsidian_sync_*` tool) ay nangangailangan din ng sync auth token na naka-configure
+sa mga setting ng 67router.
 
 ### Mga tool sa pagbasa (`read:obsidian`)
 
@@ -129,7 +129,7 @@ sa mga setting ng OmniRoute.
 | `obsidian_get_periodic_note` | Kunin ang pang-araw-araw/panlingguhan/buwanang periodic note para sa isang petsa (ngayon kung hindi tinukoy).  |
 | `obsidian_get_tags`          | Ilista ang lahat ng tag sa vault kasama ang dalas ng paglitaw ng mga ito.                                      |
 | `obsidian_list_commands`     | Ilista ang mga available na Obsidian command ID (gamitin kasama ng `obsidian_execute_command`).                |
-| `obsidian_sync_status`       | Status ng sync server ng OmniRoute: gumagana, pangalan ng vault, port, uptime, huling sync.                    |
+| `obsidian_sync_status`       | Status ng sync server ng 67router: gumagana, pangalan ng vault, port, uptime, huling sync.                     |
 | `obsidian_sync_conflicts`    | Ilista ang mga hindi pa nareresolbang sync conflict (path, conflict path, oras ng pagkakatukoy).               |
 
 ### Mga tool sa pagsusulat (`write:obsidian`)

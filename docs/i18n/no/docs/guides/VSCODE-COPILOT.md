@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** plasserer alle modellene som OmniRoute tilbyr, i den _innebygde_ modellvelgeren i GitHub Copilot Chat.
+**OmniCopilot** plasserer alle modellene som 67router tilbyr, i den _innebygde_ modellvelgeren i GitHub Copilot Chat.
 Ingen ekstra sidelinje, ikke noe separat chatgrensesnitt — Copilots agentmodus, verktøykall,
 MCP-servere og egendefinerte instruksjoner fortsetter å fungere, bare med modellen du velger.
 
@@ -23,12 +23,12 @@ MCP-servere og egendefinerte instruksjoner fortsetter å fungere, bare med model
 
 ## Oppsett
 
-1. **Kjør OmniRoute** — `npm install -g omniroute && omniroute` (kontrollpanel på `http://localhost:20128`).
+1. **Kjør 67router** — `npm install -g omniroute && omniroute` (kontrollpanel på `http://localhost:20128`).
 2. **Installer utvidelsen** — søk etter «OmniRoute» i utvidelsesvisningen.
 3. **Velg en modell** — Copilot Chat → modellvelger → **Administrer modeller…** → **OmniRoute**, og merk deretter
    det du ønsker.
 
-Ingenting må konfigureres når OmniRoute kjører på standardporten. For en ekstern instans åpner du
+Ingenting må konfigureres når 67router kjører på standardporten. For en ekstern instans åpner du
 **OmniRoute-ikonet i aktivitetslinjen** (eller kjører `OmniRoute: Manage Connection`) og angir:
 
 - **Server-URL** — serverroten, f.eks. `http://192.168.0.15:20128`. Suffikset `/v1`
@@ -75,7 +75,7 @@ HTTP 400 — Modellen '<id>' er en bildegenereringsmodell og kan ikke brukes på
 
 Derfor filtreres de bort basert på `type`-feltet før de når modellvelgeren. **Responses-API-
 modeller beholdes** — hver Codex- / GPT-5.x-oppføring annonserer `supported_endpoints: ["responses"]`,
-og OmniRoute oversetter disse for `/v1/chat/completions`, slik at de kan brukes uten problemer.
+og 67router oversetter disse for `/v1/chat/completions`, slik at de kan brukes uten problemer.
 
 ### Tilbydere du aldri har konfigurert
 
@@ -88,7 +88,7 @@ utvidelsen.
 
 ## Kontrollpanel i en VS Code-fane
 
-`omnicopilot.dashboardOpen: "editor"` viser OmniRoute-kontrollpanelet i en redigeringsfane via
+`omnicopilot.dashboardOpen: "editor"` viser 67router-kontrollpanelet i en redigeringsfane via
 Simple Browser i stedet for en ekstern nettleser. Innebygging er **valgfritt på serveren** gjennom
 `DASHBOARD_ALLOW_EMBED=vscode`, som leverer HTML-sidene med
 `frame-ancestors 'self' vscode-webview:` i stedet for standardinnstillingen `frame-ancestors 'none'` +
@@ -133,7 +133,7 @@ miljøvariabelen `OMNIROUTE_API_KEY`, aldri på kommandolinjen.
 
 | Symptom                                                          | Årsak/løsning                                                                                                                                                                                                                                                                |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ingen OmniRoute-modeller i velgeren                              | Serveren kan ikke nås. Prikken på statuslinjen blir grå. Kjør `OmniRoute: Check Connection`. Oppdagelsen er bevisst lydløs og legger ikke til noen modeller i stedet for å vise en melding.                                                                                  |
+| Ingen 67router-modeller i velgeren                               | Serveren kan ikke nås. Prikken på statuslinjen blir grå. Kjør `OmniRoute: Check Connection`. Oppdagelsen er bevisst lydløs og legger ikke til noen modeller i stedet for å vise en melding.                                                                                  |
 | Hver modell vises to ganger                                      | Du bruker en OmniCopilot-versjon eldre enn 1.0.1 – oppdater. Utvidelsen ber nå om `?prefix=alias`.                                                                                                                                                                           |
 | En bilde-/lydmodell som var oppført, er borte                    | Tilsiktet siden 1.0.1 – den kunne aldri svare på en chatforespørsel.                                                                                                                                                                                                         |
 | Panelet mangler fra aktivitetslinjen                             | VS Code flytter ekstra visningsbeholdere til **"…"**-overløpsmenyen nederst på aktivitetslinjen, og en beholder som er skjult via høyreklikk, forblir skjult. Høyreklikk på aktivitetslinjen → merk av for **OmniRoute**, eller åpne den med `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ miljøvariabelen `OMNIROUTE_API_KEY`, aldri på kommandolinjen.
 ## Se også
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — alle andre kodeverktøy
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — styring av en ekstern OmniRoute
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — styring av en ekstern 67router
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — kontrakten for `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — utvidelsens egne katalognotater

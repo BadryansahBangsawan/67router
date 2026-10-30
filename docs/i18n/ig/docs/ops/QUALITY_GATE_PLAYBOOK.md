@@ -4,7 +4,7 @@
 
 ---
 
-> **Ihe akwụkwọ a bụ.** Ntụle siri ike nke sistemụ quality-gate nke OmniRoute,
+> **Ihe akwụkwọ a bụ.** Ntụle siri ike nke sistemụ quality-gate nke 67router,
 > e jiri ya tụnyere omume kacha mma n’ụlọ ọrụ, **tinyere** katalọgụ zuru ezu nke ebe nyocha
 > ogo niile na **atụmatụ mmegharị na-adabereghị na ngwá ọrụ ọ bụla** iji tinye otu sistemụ ahụ n’ọrụ na
 > ọrụ ngo ọ bụla. E mepụtara ya na 2026-06-16 site n’ọnọdụ repository ahụ n’ezie (ọ bụghị site na ncheta).
@@ -101,62 +101,62 @@ iji megharịa ya na stack ọ bụla.
 
 ### 1. Ụdị & nhazi (a kapịrị ọnụ, ngwa ngwa)
 
-- **OmniRoute:** Prettier + ESLint site na lint-staged (pre-commit), oghere 2/akara nhota abụọ/100col.
+- **67router:** Prettier + ESLint site na lint-staged (pre-commit), oghere 2/akara nhota abụọ/100col.
 - **Izugbe:** otu formatter nwere ike idozi ihe na-akpaghị aka + otu linter, na-arụ ọrụ na pre-commit n'elu faịlụ ndị e tinyere na staged.
 
 ### 2. Ụdị data
 
-- **OmniRoute:** `typecheck:core` (na-egbochi) + `typecheck:noimplicit:core` (ndụmọdụ) + ratchet `type-coverage` 92.17% + oke any nke faịlụ ọ bụla.
+- **67router:** `typecheck:core` (na-egbochi) + `typecheck:noimplicit:core` (ndụmọdụ) + ratchet `type-coverage` 92.17% + oke any nke faịlụ ọ bụla.
 - **Izugbe:** typecheck siri ike na CI + metrik type-coverage nwere ratchet + oke `any`/ụzọ mgbapụ nke faịlụ ọ bụla.
 
 ### 3. Nnwale (ike)
 
-- **OmniRoute:** runners 2 ndị na-adịghị ekpuchi ibe ha (Node native + vitest), shards 8, coverage zuru ụwa ọnụ 60/60/60/60 + ratchet ~76% + **oke ala 8 n'otu modul maka modul ndị dị oke mkpa** + nnwale property kwa abalị + **nnwale mutation** kwa abalị.
+- **67router:** runners 2 ndị na-adịghị ekpuchi ibe ha (Node native + vitest), shards 8, coverage zuru ụwa ọnụ 60/60/60/60 + ratchet ~76% + **oke ala 8 n'otu modul maka modul ndị dị oke mkpa** + nnwale property kwa abalị + **nnwale mutation** kwa abalị.
 - **Izugbe:** test runner(s) + oke ala coverage **zuru oke** (mgbochi efu) + **ratchet** coverage (mgbochi nlọghachi azụ) + **oke ala n'otu modul maka koodu nwere nnukwu ihe ize ndụ** (mgbochi Goodhart) + nnwale dabere na property maka mgbagha dị ọcha + **nnwale mutation** kwa abalị dịka ezigbo ihe atụ ogo nnwale.
 
 ### 4. Iwu nnwale (mgbochi aghụghọ)
 
-- **OmniRoute:** `pr-test-policy` (koodu prod chọrọ nnwale), `check-test-masking` (na-egbochi asserts ndị e mere ka ha ghara isi ike), `pr-evidence` (nkwupụta ihe ịga nke ọma chọrọ blọk ihe akaebe), `test-discovery` (runner na-anakọta nnwale ọ bụla).
+- **67router:** `pr-test-policy` (koodu prod chọrọ nnwale), `check-test-masking` (na-egbochi asserts ndị e mere ka ha ghara isi ike), `pr-evidence` (nkwupụta ihe ịga nke ọma chọrọ blọk ihe akaebe), `test-discovery` (runner na-anakọta nnwale ọ bụla).
 - **Izugbe:** ọnụ ụzọ "koodu ọhụrụ ⇒ nnwale ọhụrụ" + onye nchọpụta assert e wepụrụ/tautology + ihe achọrọ maka ihe akaebe (TDD ma ọ bụ nnwale dị ndụ) + nkwa na ọ dịghị nnwale a hapụrụ n'èzí globs.
 
 ### 5. Mgbagwoju anya & ahụike koodu (ratchets)
 
-- **OmniRoute:** ịdọ aka ná ntị ESLint (3769↓), mmegharị jscpd (5.72%↓), mgbagwoju anya cyclomatic+max-lines (1800↓), mgbagwoju anya cognitive sonarjs (753↓), koodu nwụrụ anwụ/exports anaghị eji knip (339↓), nha faịlụ n'otu faịlụ (akpọchiri, naanị ibelata), circular-deps (Tarjan omenala, na-egbochi).
+- **67router:** ịdọ aka ná ntị ESLint (3769↓), mmegharị jscpd (5.72%↓), mgbagwoju anya cyclomatic+max-lines (1800↓), mgbagwoju anya cognitive sonarjs (753↓), koodu nwụrụ anwụ/exports anaghị eji knip (339↓), nha faịlụ n'otu faịlụ (akpọchiri, naanị ibelata), circular-deps (Tarjan omenala, na-egbochi).
 - **Izugbe:** tinye ratchet na metrik ahụike ọ bụla (ịdọ aka ná ntị, mmegharị, mgbagwoju anya cyclomatic **na** cognitive, koodu nwụrụ anwụ, nha faịlụ, okirikiri import). Ntuziaka bụ mgbe niile "ekwela ka ọ laghachi azụ".
 
 ### 6. Nche static (SAST + ihe nzuzo)
 
-- **OmniRoute:** CodeQL (ọkwa ọkwa ratchet = 0), gitleaks (`[extend] useDefault=true` — dị oke mkpa!), SonarQube, iwu nche omenala (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ọkwa ọkwa ratchet = 0), gitleaks (`[extend] useDefault=true` — dị oke mkpa!), SonarQube, iwu nche omenala (public-creds, error-helper, route-guard-membership, route-validation).
 - **Izugbe:** SAST (CodeQL/Sonar/semgrep) nwere ratchet ọkwa ọkwa + ihe nyocha ihe nzuzo nwere **ruleset ndabara e ketara** (nhazi omenala nke na-anọchi ndabara = ikpu ìsì) + ọnụ ụzọ nche Hard Rule nke metụtara kpọmkwem ọrụ ahụ.
 
 ### 7. Agbụ ọkọnọ (dependencies)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` mgbochi slopsquatting (allowlist + afọ ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` mgbochi slopsquatting (allowlist + afọ ≥72h).
 - **Izugbe:** SCA sitere n'ọtụtụ ebe + allowlist ikike + nyocha iguzosi ike n'ezi ihe lockfile + allowlist dependency nwere nyocha afọ/typosquatting + bot mmelite e kekọtara n'ìgwè.
 
 ### 8. Agbụ ọkọnọ (build & release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), provenance SLSA (`--provenance`), OpenSSF Scorecard (kwa izu), ime ka workflow sie ike (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), provenance SLSA (`--provenance`), OpenSSF Scorecard (kwa izu), ime ka workflow sie ike (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Izugbe:** mepụta SBOM mgbe a na-ebipụta + provenance e binyere aka (SLSA L2+) + Scorecard a haziri oge ya + mee ka workflow niile sie ike (token nwere ikike kacha nta, enweghị credentials echekwara na checkout nke onye na-abụghị pusher, actions e ji SHA kpọchie).
 
 ### 9. Nkwekọrịta & API
 
-- **OmniRoute:** oasdiff (mgbanwe OpenAPI na-emebi ihe), schemathesis (contract fuzz kwa abalị), openapi-coverage (% nke routes e dere akwụkwọ maka ha, ratchet 38.3%), openapi-security-tiers (spec megide route-guard).
+- **67router:** oasdiff (mgbanwe OpenAPI na-emebi ihe), schemathesis (contract fuzz kwa abalị), openapi-coverage (% nke routes e dere akwụkwọ maka ha, ratchet 38.3%), openapi-security-tiers (spec megide route-guard).
 - **Izugbe:** contract diff nke mgbanwe na-emebi ihe (oasdiff/buf) + fuzz dabere na property megide spec (schemathesis) + coverage akwụkwọ nwere ratchet + nkwekọrịta spec↔code.
 
 ### 10. Akwụkwọ & i18n (mgbochi ire ere)
 
-- **OmniRoute:** docs-sync (ụdị e mere ka ha yiri ibe ha), docs-counts-sync (ọnụọgụ dị na docs megide koodu), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (ụdị e mere ka ha yiri ibe ha), docs-counts-sync (ọnụọgụ dị na docs megide koodu), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **Izugbe:** mekọrịta ụdị/ọnụọgụ/env-vars n'etiti docs na koodu (ọnụ ụzọ, ọ bụghị ntụkwasị obi) + nyochaa njikọ ime + coverage i18n nwere ratchet.
 
 ### 11. Mgbochi hallucination / nkwekọrịta (ụdị a na-adịghị ahụkarị)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ symbol dị ndụ), provider-consistency, fetch-targets (client fetch ⇒ route dị adị), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ symbol dị ndụ), provider-consistency, fetch-targets (client fetch ⇒ route dị adị), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Izugbe:** maka "isi mmalite eziokwu e megharịrị" ọ bụla (registry, string dispatch, ntụaka gafere layer), ọnụ ụzọ na-egosi na akụkụ abụọ ahụ kwekọrọ. Ọ na-ejide ire ere nke typecheck/nnwale anaghị ejide.
 
 ### 12. Nkwụsi ike & ngalaba (kpọmkwem maka ngwaahịa)
 
-- **OmniRoute:** chaos (ịtinye mmejọ), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), iwu nkwụsi ike 3 (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (ịtinye mmejọ), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), iwu nkwụsi ike 3 (circuit-breaker/cooldown/lockout).
 - **Izugbe:** chọpụta ụzọ ọdịda nke ngalaba **gị** ma nwee ọnụ ụzọ (ọbụlagodi ma ọ bụrụ kwa abalị) maka nke ọ bụla. Maka ngwa AI: red-team injection. Maka distributed systems: chaos + leak + soak.
 
 ---

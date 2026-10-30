@@ -114,7 +114,7 @@ lub udokumentowanej kontroli ręcznej odpowiedniej dla danej zmiany.
 - Katalogi CLI znajdują się oddzielnie w `bin/cli/locales/`.
 - Zachowaj symbole zastępcze i znaczniki ICU w niezmienionej postaci. Nie tłumacz nazw produktów/dostawców/modeli,
   nazw protokołów i nagłówków, poleceń, identyfikatorów kodu/JSON, adresów URL, zmiennych środowiskowych ani
-  chronionych terminów, takich jak `OmniRoute`, `OAuth`, `MCP` i `A2A`. Bieżąca lista źródłowa znajduje się w
+  chronionych terminów, takich jak `67router`, `OAuth`, `MCP` i `A2A`. Bieżąca lista źródłowa znajduje się w
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Ukierunkowana pętla**
@@ -253,7 +253,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # użyj ponownie archiwu
 - **Wycofaj.** `run` ponownie weryfikuje promowany slot i zamienia z powrotem `current` oraz `previous`, gdy
   ta kontrola zakończy się niepowodzeniem. Kandydat, który nie przejdzie pierwszej walidacji, nigdy nie zostaje wypromowany.
 
-Wszystko jest zapisywane w ignorowanym przez git katalogu `_artifacts/candidate/`; istniejąca instalacja OmniRoute
+Wszystko jest zapisywane w ignorowanym przez git katalogu `_artifacts/candidate/`; istniejąca instalacja 67router
 ani jej katalog danych nigdy nie są modyfikowane. Wypromowany interfejs CLI znajduje się w
 `_artifacts/candidate/current/prefix/bin/omniroute`; podczas korzystania z niego uruchom go z własnym `DATA_DIR`.
 Kody zakończenia: `0` — powodzenie, `1` — nieudana walidacja lub promocja, `2` — błąd użycia albo brak kompilacji.

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute는 npm + Docker 아티팩트를 게시합니다. 이러한 게이트는 오픈 소스(OSS) 기반으로, 릴리스 워크플로에 통합되어 출처(provenance), 인벤토리(SBOM) 및 CVE 스캐닝을 제공합니다. **권고 우선(Advisory-first)** 접근 방식 — 현재는 보고만 하며, 첫 번째 성공적인 릴리스 이후 차단으로 전환됩니다.
+67router는 npm + Docker 아티팩트를 게시합니다. 이러한 게이트는 오픈 소스(OSS) 기반으로, 릴리스 워크플로에 통합되어 출처(provenance), 인벤토리(SBOM) 및 CVE 스캐닝을 제공합니다. **권고 우선(Advisory-first)** 접근 방식 — 현재는 보고만 하며, 첫 번째 성공적인 릴리스 이후 차단으로 전환됩니다.
 
 | 게이트                | 도구                                           | 위치                          | 차단 여부?       | 출력                                         |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :--------------- | :------------------------------------------- |
@@ -42,7 +42,7 @@ osv와 Trivy는 **지속적으로 증가하는** CVE 데이터베이스와 종�
 - **체인:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`.
   `package-lock.json`을 통해 확인되었습니다 — 전체 의존성 트리에서 정확히 하나의 패키지(`@openai/codex-security`)가 `extract-zip`을 선언하고, 정확히 하나의 패키지(`promptfoo`)가 `@openai/codex-security`를 선언합니다.
 - **체인 내 어디에도 수정된 릴리스가 존재하지 않습니다.** `extract-zip@2.0.1` (2020년 발행)은 해당 패키지의 최종 릴리스이며, 더 이상 유지보수되지 않습니다. `@openai/codex-security`의 현재 npm-latest (`0.1.29`)는 여전히 `extract-zip@2.0.1`을 사용합니다.
-- **프로덕션에서 접근 불가능.** `promptfoo`는 devDependency 전용이며 (`dependencies`에 절대 나열되지 않음), `src/`, `open-sse/`, `bin/` 아래의 어떤 파일도 `extract-zip` npm 패키지를 임포트하지 않습니다 — OmniRoute 자체의 `extractZip()` 헬퍼 (`src/lib/versionManager/binaryManager.ts:93`)는 네이티브 `unzip`/`tar`를 호출하며 관련이 없습니다. `@openai/codex-security` 또한 extract-zip의 `onEntry` 콜백 위에 자체 심볼릭 링크 트래버설 가드를 제공합니다.
+- **프로덕션에서 접근 불가능.** `promptfoo`는 devDependency 전용이며 (`dependencies`에 절대 나열되지 않음), `src/`, `open-sse/`, `bin/` 아래의 어떤 파일도 `extract-zip` npm 패키지를 임포트하지 않습니다 — 67router 자체의 `extractZip()` 헬퍼 (`src/lib/versionManager/binaryManager.ts:93`)는 네이티브 `unzip`/`tar`를 호출하며 관련이 없습니다. `@openai/codex-security` 또한 extract-zip의 `onEntry` 콜백 위에 자체 심볼릭 링크 트래버설 가드를 제공합니다.
 - `package.json` `overrides`를 통해 `extract-zip`을 별칭으로 지정**하지 마십시오** — 유일하게 실행 가능한 드롭인 대체품은 Electron-org-internal이며 `@openai/codex-security` 자체의 `onEntry`/`defaultDirMode`/`defaultFileMode` 검사와 API 호환되지 않습니다. 이를 오버라이드하면 해당 패키지의 보안 검사가 조용히 중단될 것입니다.
 - **기준선:** 측정된 osv `vulnCount` (3)는 이미 고정된 `config/quality/quality-baseline.json` 기준선 (27)보다 훨씬 낮습니다 — 래칫 변경이 필요하지 않습니다.
 - **회귀 방지:** `tests/unit/extract-zip-14482-exposure.test.ts`는 위에서 언급한 체인과 프로덕션 임포트 불가 불변성을 단언합니다. 만약 둘 중 하나라도 깨지면 (예: 향후 PR이 `extract-zip`을 프로덕션에서 접근 가능하게 만들면) CI가 실패합니다.

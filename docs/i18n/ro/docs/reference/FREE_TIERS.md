@@ -9,9 +9,9 @@
 > **Ultima documentare:** 2026-06-17 — cercetare web pentru fiecare furnizor (documentație oficială + știri din ultimele 7 zile, analiză cu 50 de agenți și verificare contradictorie), actualizând fiecare cotă gratuită + ToS. **Reauditare parțială 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — consultați nota datată de mai jos).
 > **Sursa canonică (catalog):** `open-sse/config/freeModelCatalog.ts` (bugete per MODEL, cu deduplicare la nivel de pool). Valorile bugetelor de tokenuri de mai jos provin din cercetări web în timp real și reprezintă o **aproximare** — consultați [Metodologie și precizări](#methodology--caveats).
 
-## TL;DR — câtă inferență gratuită agregă de fapt OmniRoute?
+## TL;DR — câtă inferență gratuită agregă de fapt 67router?
 
-Aceste valori descriu conturi terțe și condiții de eligibilitate distincte din întregul catalog. OmniRoute nu vă acordă acest buget: trebuie să obțineți conturile sau acreditările necesare, să conectați furnizorii eligibili și să le respectați limitele. Capacitatea utilizabilă efectivă poate fi mai mică, inclusiv zero pentru o instalare nouă fără nicio rută eligibilă. Furnizorii marcați cu `tos: avoid` sunt excluși implicit din rutarea automată.
+Aceste valori descriu conturi terțe și condiții de eligibilitate distincte din întregul catalog. 67router nu vă acordă acest buget: trebuie să obțineți conturile sau acreditările necesare, să conectați furnizorii eligibili și să le respectați limitele. Capacitatea utilizabilă efectivă poate fi mai mică, inclusiv zero pentru o instalare nouă fără nicio rută eligibilă. Furnizorii marcați cu `tos: avoid` sunt excluși implicit din rutarea automată.
 
 **Verificat la 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) oferă un credit promoțional unic de $5, care necesită o metodă de plată și expiră după 30 de zile. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publică limite de rată per proiect/model/nivel; acesta rămâne în afara totalului lunar cuantificat prezentat ca valoare principală.
 
@@ -82,7 +82,7 @@ detaliate în nota despre furnizor de mai jos.
 
 ## Două regimuri — contabilizare vs. decizie
 
-OmniRoute răspunde la întrebarea „este gratuit?” prin două regimuri care citesc
+67router răspunde la întrebarea „este gratuit?” prin două regimuri care citesc
 în mod intenționat surse diferite:
 
 | Regim                       | Sursa adevărului                                                                                                                                                          | Zone de utilizare                                                                                                                              |
@@ -130,7 +130,7 @@ Majoritatea cifrelor privind „tokenurile gratuite pe lună” din acest domeni
 
 ### ⚠️ Atenție — clauze privind utilizarea personală/proxy-urile care merită verificate (16)
 
-> Accesul lor gratuit este real, iar OmniRoute poate direcționa cereri către aceștia; clauzele de mai jos merită doar cunoscute. Cele care folosesc OAuth/fără cheie nu pot fi cuantificate în tokenuri, așadar nu sunt incluse în cifra principală (nu pentru că ar fi inutilizabile).
+> Accesul lor gratuit este real, iar 67router poate direcționa cereri către aceștia; clauzele de mai jos merită doar cunoscute. Cele care folosesc OAuth/fără cheie nu pot fi cuantificate în tokenuri, așadar nu sunt incluse în cifra principală (nu pentru că ar fi inutilizabile).
 
 | Furnizor         | Notă                                                                                                                                                                                                                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -144,7 +144,7 @@ Majoritatea cifrelor privind „tokenurile gratuite pe lună” din acest domeni
 | `fireworks`      | ToS interzice explicit utilizarea ca proxy/intermediar, transferurile cheilor API și sublicențierea (Secțiunile 2.1 și 2.2(i)(j)); proxy-urile personale găzduite pe infrastructura proprie nu sunt…                               |
 | `friendliai`     | Secțiunile 8(e) și 8(f) din ToS interzic explicit utilizarea FriendliAI ca proxy sau permiterea accesului terților în mod independent și interzic revânzarea/…                                                                     |
 | `iflytek`        | Secțiunea 2.4(3) din iFlytek Spark LLM Service Agreement interzice explicit „utilizarea oricăror metode automatizate sau programatice pentru extragerea datelor sau rezultatelor…                                                  |
-| `kiro`           | Întrebările frecvente Kiro interzic explicit utilizarea cu „OpenClaw și instrumente similare care folosesc mecanisme terțe” — un proxy AI găzduit pe infrastructura proprie (precum OmniRoute) care direcționează…                 |
+| `kiro`           | Întrebările frecvente Kiro interzic explicit utilizarea cu „OpenClaw și instrumente similare care folosesc mecanisme terțe” — un proxy AI găzduit pe infrastructura proprie (precum 67router) care direcționează…                  |
 | `modal`          | Secțiunea 1.3 din ToS interzice explicit „închirierea, revânzarea sau permiterea în orice alt mod a accesului direct ori a utilizării Serviciului de către orice terț” — construirea unui proxy găzduit pe infrastructura proprie… |
 | `muse-spark-web` | ToS-ul Meta interzice explicit accesul automatizat fără permisiune prealabilă, ingineria inversă fără permisiune scrisă și eludarea măsurilor tehnologice…                                                                         |
 | `nlpcloud`       | ToS interzice explicit „configurarea unui proxy sau a altui dispozitiv care le permite altora să acceseze Serviciul prin intermediul său” și acordă doar un drept netransferabil,…                                                 |
@@ -306,7 +306,7 @@ Majoritatea cifrelor privind „tokenurile gratuite pe lună” din acest domeni
 
 - **`360ai`** — Nota freeNote livrată, „Modele gratuite Free 360 AI Brain”, pare învechită. Accesul actual necesită depunerea unei cereri și este contra cost. Tokenurile promoționale oferite la lansarea din 2023 (100M–250M, o singură dată) ar fi putut sta la baza…
 - **`agentrouter`** — Nota freeNote livrată spune „Credite gratuite în valoare de $200 la înregistrare”. În realitate, înregistrările standard (fără recomandare) primesc în prezent doar $100; înregistrările prin recomandare pot primi $200, dar un comentariu al comunității din aprilie 2026…
-- **`agy`** — Nota freeNote livrată spune „(niciunul)”, sugerând că nu există un nivel gratuit, însă Antigravity are un nivel gratuit condiționat de OAuth. Totuși, ToS interzice explicit utilizarea acestui nivel gratuit printr-un proxy precum OmniRoute …
+- **`agy`** — Nota freeNote livrată spune „(niciunul)”, sugerând că nu există un nivel gratuit, însă Antigravity are un nivel gratuit condiționat de OAuth. Totuși, ToS interzice explicit utilizarea acestui nivel gratuit printr-un proxy precum 67router …
 - **`ai21`** — Condiții înăsprite: perioada de încercare s-a redus de la „3 luni” la 7 zile. Valoarea creditului, de $10, a rămas aceeași, dar valabilitatea a scăzut drastic de la aproximativ 90 de zile la 7 zile.
 - **`aimlapi`** — S-a schimbat semnificativ. Nota freeNote livrată promova „credite gratuite de $0.025/zi — peste 200 de modele”, însă nivelul gratuit este acum suspendat/întrerupt. Alocarea de credite de $0.025/zi (50.000 de credite/zi, 10 cereri/z…
 - **`amazon-q`** — Nota freeNote livrată spune „(niciunul)” — realitatea este și mai nefavorabilă: produsul nu mai este disponibil pentru înregistrări noi (15 mai 2026). Anterior, nivelul gratuit oferea 50 de cereri agentice/lună + completări în linie nelimit…

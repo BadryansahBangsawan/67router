@@ -9,7 +9,7 @@
 
 ## 决策
 
-| 提供商系列                             | OmniRoute ID            | 全球区域 | 中国区域 |
+| 提供商系列                             | 67router ID             | 全球区域 | 中国区域 |
 | -------------------------------------- | ----------------------- | -------- | -------- |
 | Alibaba Cloud Model Studio（按量付费） | `alibaba`               | 新加坡   | 北京     |
 | Alibaba Cloud Token Plan               | `bailian-coding-plan`   | 新加坡   | 北京     |

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-enyocha nzaghachi njehie sitere n’aka ndị na-enye ọrụ maka ihe mgbaàmà na-egosi na
+67router na-enyocha nzaghachi njehie sitere n’aka ndị na-enye ọrụ maka ihe mgbaàmà na-egosi na
 **akaụntụ anwụọla kpamkpam** (a kwụsịtụrụ ya / gbanyụọ ya / machibido ya n’ihi ToS), ma, mgbe
 ọ dabara, ọ na-ebuga njikọ ahụ n’ime **ọnọdụ njedebe `banned`** ka a ghara
 ịhọrọzi ya maka arịrịọ. Nke a bụ ihe kaadị ntọala **Nchekwa → Okwu Ndị A Machibidoro**

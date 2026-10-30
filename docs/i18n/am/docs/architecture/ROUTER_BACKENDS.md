@@ -17,9 +17,9 @@
 የአንድ ሞተር ሚና በመዝገቡ `RouterBackendDefinition` ውስጥ አብረው በተቀመጡ **ሁለት ነጻ ዘንጎች** ይገለጻል፦
 
 1. **የሕይወት ዑደት** (`RouterBackendLifecycle`) — _ሞተሩ እንዴት እንደሚሠራ_፦
-   - `in-process` — በOmniRoute Node ሂደት ውስጥ ይሠራል (ቤተኛው TS የማቀናበሪያ መስመር)።
-   - `supervised` — OmniRoute በ`ServiceSupervisor` በኩል የሚጭነው/የሚጀምረው/የሚያቆመው/ጤንነቱን የሚፈትሸው፣ ከዚያም እንደ አቅራቢ ግንኙነት የሚጠቀምበት አካባቢያዊ ልጅ ሂደት።
-   - `external` — OmniRoute ጥያቄዎችን የሚልክለት ነገር ግን **የማያስተዳድረው**
+   - `in-process` — በ67router Node ሂደት ውስጥ ይሠራል (ቤተኛው TS የማቀናበሪያ መስመር)።
+   - `supervised` — 67router በ`ServiceSupervisor` በኩል የሚጭነው/የሚጀምረው/የሚያቆመው/ጤንነቱን የሚፈትሸው፣ ከዚያም እንደ አቅራቢ ግንኙነት የሚጠቀምበት አካባቢያዊ ልጅ ሂደት።
+   - `external` — 67router ጥያቄዎችን የሚልክለት ነገር ግን **የማያስተዳድረው**
      የHTTP መዳረሻ (በenv መሠረታዊ URL የሚዋቀር)።
    - `disabled` — የተመዘገበ ነገር ግን ሊመረጥ የማይችል።
 2. **የምርጫ ዘንግ** (የrelay ማዞሪያ backend) — _relay ጥያቄዎችን ወደ እሱ ይልክ እንደሆነ_፦

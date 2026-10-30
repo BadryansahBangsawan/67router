@@ -7,7 +7,7 @@
 > **Haqiqat manbasi:** `src/lib/memory/` va `src/app/api/memory/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40 (sukut bo‘yicha o‘chirilgan + int8 kvantlashni yetkazib olish)
 
-OmniRoute API kaliti (va ixtiyoriy ravishda sessiya identifikatori) bo‘yicha bog‘langan doimiy suhbat xotirasini taqdim etadi. Xotiralar LLM javoblaridan yengil regex andozalarini moslashtirish orqali avtomatik ravishda ajratib olinadi va yetakchi tizim xabari sifatida (yoki tizim rolini rad etadigan provayderlar uchun birinchi foydalanuvchi xabari sifatida) keyingi so‘rovlarga qayta kiritiladi.
+67router API kaliti (va ixtiyoriy ravishda sessiya identifikatori) bo‘yicha bog‘langan doimiy suhbat xotirasini taqdim etadi. Xotiralar LLM javoblaridan yengil regex andozalarini moslashtirish orqali avtomatik ravishda ajratib olinadi va yetakchi tizim xabari sifatida (yoki tizim rolini rad etadigan provayderlar uchun birinchi foydalanuvchi xabari sifatida) keyingi so‘rovlarga qayta kiritiladi.
 
 > **Xotira sukut bo‘yicha O‘CHIRILGAN (v3.8.30+).** `DEFAULT_MEMORY_SETTINGS.enabled`
 > endi `false` (`src/lib/memory/settings.ts`). Xotirani yoqish olinadigan kontekstning
@@ -591,7 +591,7 @@ standart TTL 5 min).
 
 ## Embedding provayderini tanlash (v3.8.16+)
 
-OmniRoute xotira mexanizmi **to‘rtta embedding manbasini** (`src/lib/memory/embedding/`) qo‘llab-quvvatlaydi. Ularning har biri **kechikish, xarajat, model sifati va sozlash murakkabligi** bo‘yicha turli murosalarni taklif qiladi.
+67router xotira mexanizmi **to‘rtta embedding manbasini** (`src/lib/memory/embedding/`) qo‘llab-quvvatlaydi. Ularning har biri **kechikish, xarajat, model sifati va sozlash murakkabligi** bo‘yicha turli murosalarni taklif qiladi.
 
 ### Embedding manbalari
 
@@ -1000,13 +1000,13 @@ U roʻyxatdan oʻtkazilgach, `/api/memory` REST marshrutlari va A2A xotira qidir
 Worker faqat loopback interfeysiga bogʻlanadi, `GenericMemoryBackend` SSRF himoyasi esa buni ataylab rad etadi.
 Ushbu adapter bu himoyani zaiflashtirmaydi: host `127.0.0.1` qiymatiga qatʼiy belgilangan va konfiguratsiya sxemasi (`ClaudeMemBackendConfigSchema`, `.strict()`) faqat quyidagilarni qabul qiladi:
 
-| Kalit       | Tur    | Standart qiymat | Izohlar                                                                                                                          |
-| ----------- | ------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —               | Majburiy, 1024–65535. Sozlamalar faylidagi claude-mem worker porti (standart: `37700 + uid % 100`).                              |
-| `project`   | string | —               | Foydalaniladigan claude-mem loyihasi. Belgilanmagan bo‘lsa → har bir OmniRoute API kaliti o‘z loyihasiga moslanadi (`apiKeyId`). |
-| `timeoutMs` | number | `5000`          | Har bir so‘rov uchun kutish vaqti, 100–30000.                                                                                    |
+| Kalit       | Tur    | Standart qiymat | Izohlar                                                                                                                         |
+| ----------- | ------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —               | Majburiy, 1024–65535. Sozlamalar faylidagi claude-mem worker porti (standart: `37700 + uid % 100`).                             |
+| `project`   | string | —               | Foydalaniladigan claude-mem loyihasi. Belgilanmagan bo‘lsa → har bir 67router API kaliti o‘z loyihasiga moslanadi (`apiKeyId`). |
+| `timeoutMs` | number | `5000`          | Har bir so‘rov uchun kutish vaqti, 100–30000.                                                                                   |
 
-Uni `PUT /api/settings/memory` orqali yoqing va OmniRoute’ni qayta ishga tushiring (backend’lar
+Uni `PUT /api/settings/memory` orqali yoqing va 67router’ni qayta ishga tushiring (backend’lar
 `initMemoryBackends()` ichida bir marta ro‘yxatdan o‘tkaziladi):
 
 ```json
@@ -1023,7 +1023,7 @@ Moslashtirish va cheklovlar:
 
 - ID’lar `claude-mem:<observationId>` ko‘rinishida bo‘ladi; `get`/`delete` boshqa backend’larning ID’larini
   tarmoq chaqiruvisiz e’tiborsiz qoldiradi.
-- `create` → `POST /api/memory/save`; OmniRoute maydonlari (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router maydonlari (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) claude-mem’ning `metadata.omniroute` maydonida uzatiladi va o‘qishda o‘zgarmagan holda qaytariladi.
 - `search` → `GET /api/search?format=json&type=observations`, `maxTokens` gacha qisqartiriladi
   (belgilar / 4). `list` → worker’ning sahifalangan kuzatuvlar endpoint’i (`total` quyi chegara hisoblanadi — worker
@@ -1035,16 +1035,16 @@ Moslashtirish va cheklovlar:
 - Prompt kiritish (`retrieval.ts`) va `omniroute_memory_*` MCP vositalari hali ham SQLite’dan
   to‘g‘ridan-to‘g‘ri o‘qiydi — ular `memoryManager` orqali o‘tmaydi, shuning uchun bu backend ularni ma’lumot bilan ta’minlamaydi.
 
-**claude-mem’ning o‘z LLM chaqiruvlarini OmniRoute orqali yo‘naltirish.** claude-mem kuzatuvlarni
+**claude-mem’ning o‘z LLM chaqiruvlarini 67router orqali yo‘naltirish.** claude-mem kuzatuvlarni
 LLM yordamida siqadi (standart: Claude Agent SDK). Uning `openai-compatible` provayderini
-OmniRoute’ga yo‘naltirish mumkin, bunda kombinatsiyalangan zaxira mexanizmi va xarajatlarni kuzatish qo‘llaniladi. `~/.claude-mem/settings.json` ichida:
+67router’ga yo‘naltirish mumkin, bunda kombinatsiyalangan zaxira mexanizmi va xarajatlarni kuzatish qo‘llaniladi. `~/.claude-mem/settings.json` ichida:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API kaliti>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute modeli yoki kombinatsiyasi>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API kaliti>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router modeli yoki kombinatsiyasi>"
 }
 ```
 

@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute hutoa njia **mbili** za kutumia OpenAI Codex:
+67router hutoa njia **mbili** za kutumia OpenAI Codex:
 
 | Mtoa huduma            | Jinsi inavyowasiliana na OpenAI                                                                                                                                                          | Tahadhari ya matumizi                                                           |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | **`codex`**            | Hutuma tena tokeni yako ya ChatGPT/OpenAI OAuth moja kwa moja kwenye Responses API                                                                                                       | **Ndiyo** — kipindi rasmi hakijaidhinishwa kutumiwa kupitia proksi/kipanga njia |
-| **`codex-app-server`** | Huendesha **`codex app-server` ya Codex CLI yenyewe** kupitia JSON-RPC/WebSocket; CLI inamiliki na kujisasishia OAuth yake (`~/.codex/auth.json`) kama tu kipindi shirikishi cha `codex` | **Hapana** — OmniRoute haitumi tena tokeni kwenye API                           |
+| **`codex-app-server`** | Huendesha **`codex app-server` ya Codex CLI yenyewe** kupitia JSON-RPC/WebSocket; CLI inamiliki na kujisasishia OAuth yake (`~/.codex/auth.json`) kama tu kipindi shirikishi cha `codex` | **Hapana** — 67router haitumi tena tokeni kwenye API                            |
 
 Kwa sababu `codex-app-server` haitumi tena tokeni, haina tahadhari ya matumizi
 inayohusiana na kutuma tena kipindi. Hata hivyo, inahitaji **Codex CLI inayofikika
@@ -21,7 +21,7 @@ akaunti**.
 ## 1. Usanifu
 
 ```
-┌─ Programu ya OmniRoute ──────────┐        ┌─ Huduma saidizi ya codex-app-server ┐
+┌─ Programu ya 67router ──────────┐        ┌─ Huduma saidizi ya codex-app-server ┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ tokeni ya uwezo)             │  JSON  │  --ws-auth capability-token         │
@@ -81,7 +81,7 @@ huundwa kila wakati).
   (`codex-appserver-home`) na uruke hatua ya kuingia katika akaunti.
 - **Mtumiaji wa umma, bila codex iliyosakinishwa ndani ya mashine yake** — hili
   si tatizo: huduma saidizi ina CLI. Mtumiaji huthibitisha tu kupitia dashibodi.
-- **OmniRoute ya moja kwa moja kwenye mashine halisi (bila huduma saidizi, codex
+- **67router ya moja kwa moja kwenye mashine halisi (bila huduma saidizi, codex
   ya seva mwenyeji)** — elekeza `OMNIROUTE_CODEX_APPSERVER_WS` kwenye
   `codex app-server` yako mwenyewe na uhakikishe codex ya seva mwenyeji imeingia
   katika akaunti; kidokezo cha "codex haijasakinishwa" huonekana ikiwa faili

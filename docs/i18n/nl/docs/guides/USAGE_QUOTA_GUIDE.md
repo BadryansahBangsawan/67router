@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute houdt het tokengebruik van elk verzoek bij, berekent de kosten, handhaaft quota per API-sleutel en toont analyses in het dashboard. Deze handleiding legt uit hoe dit allemaal werkt.
+> **TL;DR**: 67router houdt het tokengebruik van elk verzoek bij, berekent de kosten, handhaaft quota per API-sleutel en toont analyses in het dashboard. Deze handleiding legt uit hoe dit allemaal werkt.
 
 **Bronnen:**
 
@@ -17,7 +17,7 @@
 
 ## Overzicht
 
-Elk verzoek dat via OmniRoute wordt verwerkt, genereert een **gebruiksrecord** waarin het volgende wordt vastgelegd:
+Elk verzoek dat via 67router wordt verwerkt, genereert een **gebruiksrecord** waarin het volgende wordt vastgelegd:
 
 - **Identiteit**: welke API-sleutel, provider, model en combinatie
 - **Tokens**: prompttokens, voltooiingstokens, gecachete tokens en totaal
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Voor providers die geen gebruiksgegevens retourneren (sommige webcookieproviders), **schat** OmniRoute het aantal tokens met behulp van een heuristiek van `~4 tekens per token` (zie `open-sse/services/autoCombo/pipelineRouter.ts`).
+Voor providers die geen gebruiksgegevens retourneren (sommige webcookieproviders), **schat** 67router het aantal tokens met behulp van een heuristiek van `~4 tekens per token` (zie `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Gecachete tokens
 
-OmniRoute houdt `cached_tokens` apart van `prompt_tokens` bij, omdat:
+67router houdt `cached_tokens` apart van `prompt_tokens` bij, omdat:
 
 - Anthropic-promptcaching een lager tarief rekent voor gecachete tokens (10% van het normale tarief)
 - Sommige providers `cache_read_input_tokens` retourneren, waarvoor een ander tarief moet worden berekend
@@ -117,7 +117,7 @@ Prijsgegevens worden automatisch vanuit LiteLLM gesynchroniseerd via het eindpun
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Voor modellen zonder prijsgegevens valt OmniRoute terug op het **schatten van de kosten** aan de hand van interne gemiddelde tarieven (afkomstig uit de prijsgegevens van LiteLLM).
+Voor modellen zonder prijsgegevens valt 67router terug op het **schatten van de kosten** aan de hand van interne gemiddelde tarieven (afkomstig uit de prijsgegevens van LiteLLM).
 
 ---
 

@@ -6,7 +6,7 @@ lastUpdated: 2026-08-17
 
 # Cursor Provider in Docker Environments
 
-When OmniRoute runs inside Docker, the legacy **Import from Cursor IDE** /
+When 67router runs inside Docker, the legacy **Import from Cursor IDE** /
 `cursor-agent` flows fail because the container cannot see the host Cursor
 install. Use **Login with Cursor** (deep-control PKCE) instead.
 
@@ -16,7 +16,7 @@ install. Use **Login with Cursor** (deep-control PKCE) instead.
    `~/.config/Cursor/User/globalStorage/state.vscdb` _inside_ the container.
    On Docker Desktop for macOS the host IDE DB is not mounted by default, and
    the container OS is Linux even when the host is Darwin.
-2. **No `cursor-agent` binary** — Official OmniRoute images do not ship
+2. **No `cursor-agent` binary** — Official 67router images do not ship
    `cursor-agent`. Available Models previously shelled out to
    `cursor-agent --list-models` and fell back to a static catalog.
 3. **Wrong binary** — Do **not** bind-mount a macOS `cursor-agent` into a Linux
@@ -26,11 +26,11 @@ install. Use **Login with Cursor** (deep-control PKCE) instead.
 
 1. Open **Dashboard → Providers → Cursor**.
 2. Choose the **Login with Cursor** tab.
-3. Click **Login with Cursor** — OmniRoute opens
+3. Click **Login with Cursor** — 67router opens
    `https://cursor.com/loginDeepControl?…` in your **host** browser.
-4. Approve the login in the browser, then return to the dashboard. OmniRoute
+4. Approve the login in the browser, then return to the dashboard. 67router
    polls `api2.cursor.sh/auth/poll` until tokens arrive.
-5. OmniRoute stores **access + refresh** tokens and refreshes them via
+5. 67router stores **access + refresh** tokens and refreshes them via
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 This path does not require Cursor IDE or `cursor-agent` inside the container.
@@ -39,10 +39,10 @@ This path does not require Cursor IDE or `cursor-agent` inside the container.
 
 With a logged-in connection, **Available Models / Auto-Sync** prefers Cursor’s
 HTTP `AiService/AvailableModels` catalog using the connection bearer token.
-If that fails, OmniRoute still tries host `cursor-agent` (when present), then
+If that fails, 67router still tries host `cursor-agent` (when present), then
 the static registry seed.
 
-OmniRoute always exposes **`auto`** in the catalog (display “Auto”), plus
+67router always exposes **`auto`** in the catalog (display “Auto”), plus
 OpenCodex-style router modes **`auto-cost`**, **`auto-balance`**, and
 **`auto-intelligence`**. On the wire these map to Cursor’s `default` model
 (with an `optimization` ModelParameter for the three variants). Prefer
@@ -89,7 +89,7 @@ alone is no longer required).
 ## Empty turns / out of usage
 
 When Cursor accepts a Run but returns no assistant text (common when premium
-usage is exhausted), OmniRoute surfaces an actionable **429** (quota cues) or
+usage is exhausted), 67router surfaces an actionable **429** (quota cues) or
 **502** with guidance — not a bare “Provider returned empty content”. Streaming
 failures such as `not_found: AI Model Not Found` (usage window exhausted) are
 classified as **Cursor rate limit / usage exceeded** and keep that message
@@ -99,7 +99,7 @@ Cursor plan limits.
 
 ## Client version (headless)
 
-Without a local `cursor-agent` install, OmniRoute resolves
+Without a local `cursor-agent` install, 67router resolves
 `x-cursor-client-version` via env `CURSOR_AGENT_CLI_VERSION`, then a disk-cached
 scrape of the Cursor installer script, then a pinned build id. Override with
 `CURSOR_AGENT_CLI_VERSION` when needed.

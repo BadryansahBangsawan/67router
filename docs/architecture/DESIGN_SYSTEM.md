@@ -3,7 +3,7 @@ title: "Design System & Visual Identity"
 lastUpdated: 2026-10-22
 ---
 
-# OmniRoute — Design System & Visual Identity
+# 67router — Design System & Visual Identity
 
 > **Status:** the dashboard is built on the **Keak CI UI Kit** (`@keak/cheaper-inference-ui-kit`), vendored
 > as the workspace `packages/ui-kit` (`@omniroute/ui-kit`; the upstream snapshot is pinned in
@@ -26,7 +26,7 @@ lastUpdated: 2026-10-22
   into each importer. The kit stylesheet enters through `src/app/globals.css`
   (`@import "../../packages/ui-kit/src/ci-ui.css"`).
 - **Tokens.** `packages/ui-kit/src/ci-tokens.css` declares the `--ci-*` tokens; `src/app/globals.css`
-  bridges them to the legacy OmniRoute names (`--color-*`, `--radius-*`, `--font-sans`/`--font-mono`,
+  bridges them to the legacy 67router names (`--color-*`, `--radius-*`, `--font-sans`/`--font-mono`,
   `--table-*`, `--orch-status-*`, `--color-fd-*`), so the existing `var(--color-*)` reads and Tailwind
   utilities keep working. New code uses the Tailwind utilities (`bg-surface`, `text-text-muted`,
   `border-border`, `text-success`, `bg-success-bg`, `bg-chart-1`…) or kit classes — never a hex value
@@ -40,10 +40,10 @@ lastUpdated: 2026-10-22
   `src/store/themeStore.ts` (mirrored by the inline bootstrap script in `src/app/layout.tsx`, which runs
   before hydration) sets `data-theme="dark"|"light"` and toggles the `.dark` class on `<html>` together.
   The kit's dark token set is keyed on `data-theme="dark"` (`packages/ui-kit/src/ci-tokens.css`);
-  OmniRoute's own dark overrides (the `.dark` block in `globals.css`) and the legacy Tailwind `dark:`
+  67router's own dark overrides (the `.dark` block in `globals.css`) and the legacy Tailwind `dark:`
   utilities key on the `.dark` class. There are no accent color presets: the accent always comes from the
   kit, and a persisted preset from an older build is dropped when the store loads.
-- **Components (adapters).** `src/shared/components/index.tsx` keeps the OmniRoute component API (same
+- **Components (adapters).** `src/shared/components/index.tsx` keeps the 67router component API (same
   names, default exports and props), and the primitives behind it are adapters over the kit: forms
   (`Button`, `Input`, `Textarea`, `Checkbox`, `Select`, `Toggle`, `Badge`, `Card`), overlays and feedback
   (`Modal`/`ConfirmModal`, `Tooltip`/`InfoTooltip`, `NotificationToast`, `EmptyState`, `Loading`),
@@ -53,11 +53,11 @@ lastUpdated: 2026-10-22
   kit `default` button (`--ci-button-primary-*`: the inverse surface in light, the accent with its
   `--ci-color-accent-foreground` ink in dark), `danger` is `destructive`, and `warning` is `outline` plus
   the `.ci-button--warning` extension. The `.ci-button--warning` and `.ci-badge[data-tone]` rules at the
-  end of `globals.css` (`@layer components`) are OmniRoute extensions on top of the kit classes.
+  end of `globals.css` (`@layer components`) are 67router extensions on top of the kit classes.
   `tests/unit/ui/adapters/*.test.tsx` pin each adapter.
 - **Shell.** `src/app/(dashboard)/layout.tsx` renders `DashboardLayout`, which renders
   `src/shared/components/layouts/DashboardShell.tsx`: the kit `SidebarProvider` / `Sidebar` /
-  `SidebarInset` (`packages/ui-kit/src/sidebar.tsx`), with OmniRoute's navigation logic in
+  `SidebarInset` (`packages/ui-kit/src/sidebar.tsx`), with 67router's navigation logic in
   `src/shared/components/Sidebar.tsx`. A "skip to content" link to `#main-content` is the first focusable
   element. `src/shared/components/Header.tsx` holds the kit `SidebarTrigger` (the shell's only sidebar
   toggle), the Keak `ProductSwitcher` and the command-palette opener; it shows the route title only while
@@ -149,7 +149,7 @@ open the PR with the upstream changelog.
 
 ## 6. Reference index
 
-- `src/app/globals.css` — token bridge, `.dark` overrides, OmniRoute `@layer components` extensions
+- `src/app/globals.css` — token bridge, `.dark` overrides, 67router `@layer components` extensions
 - `packages/ui-kit/UPSTREAM.md` — pinned upstream commit and license authorization; `packages/ui-kit/PATCHES.md`
 - `packages/ui-kit/src/ci-tokens.css`, `packages/ui-kit/src/ci-ui.css`, `packages/ui-kit/src/keak-brand.tsx`
 - `src/shared/components/index.tsx` and the adapters next to it; `src/shared/components/layouts/DashboardShell.tsx`,

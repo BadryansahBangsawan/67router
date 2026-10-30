@@ -7,29 +7,29 @@
 > **Hiteles forrás:** `src/lib/skills/` és `src/app/api/skills/`
 > **Legutóbbi frissítés:** 2026-06-28 — v3.8.40
 
-Az OmniRoute egy bővíthető Skills keretrendszert biztosít, amely lehetővé teszi a nyelvi modellek (és az operátorok) számára, hogy újrafelhasználható képességeket állítsanak össze — a fájlrendszer olvasásától és a HTTP-kérésektől kezdve az izolált kódfuttatáson át a válogatott piactéri skillekig.
+A 67router egy bővíthető Skills keretrendszert biztosít, amely lehetővé teszi a nyelvi modellek (és az operátorok) számára, hogy újrafelhasználható képességeket állítsanak össze — a fájlrendszer olvasásától és a HTTP-kérésektől kezdve az izolált kódfuttatáson át a válogatott piactéri skillekig.
 
-Egy skill egy verziózott, séma által definiált munkaegység. Az OmniRoute eszközdefiníciókként illesztheti be a skilleket a kimenő kérésekbe, elfoghatja a modelltől visszaérkező eszközhívásokat, futtathatja a megfelelő kezelőt, majd visszaadhatja az eredményt a modellnek, hogy a beszélgetés folytatódhasson. A modell soha nem látja a megvalósítást — csak az eszköz interfészét.
+Egy skill egy verziózott, séma által definiált munkaegység. A 67router eszközdefiníciókként illesztheti be a skilleket a kimenő kérésekbe, elfoghatja a modelltől visszaérkező eszközhívásokat, futtathatja a megfelelő kezelőt, majd visszaadhatja az eredményt a modellnek, hogy a beszélgetés folytatódhasson. A modell soha nem látja a megvalósítást — csak az eszköz interfészét.
 
 ---
 
 ## Agent Skills és Omni Skills
 
-Az OmniRoute két különálló, de egymást kiegészítő skillrendszerrel rendelkezik:
+A 67router két különálló, de egymást kiegészítő skillrendszerrel rendelkezik:
 
 | Dimenzió       | **Omni Skills** (ez a dokumentum)                                 | **Agent Skills**                                                                               |
 | :------------- | :---------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | Cél            | LLM-eszközök beillesztése + izolált végrehajtás                   | SKILL.md-katalógus külső ügynökök számára, felderítéshez és használathoz                       |
 | Hiteles forrás | `src/lib/skills/` + piactér                                       | `src/lib/agentSkills/` + `skills/` könyvtár                                                    |
 | Futásidejű mód | Kimenő kérésekbe illesztve, eszközhívási eseményeknél végrehajtva | Statikus markdownkatalógus + REST/MCP/A2A felderítési végpontok                                |
-| Ki használja   | Maga az OmniRoute (kombinált útválasztás, bejövő LLM-hívások)     | Külső ügynökök, MCP-kliensek, A2A-orchestrátorok                                               |
+| Ki használja   | Maga az 67router (kombinált útválasztás, bejövő LLM-hívások)      | Külső ügynökök, MCP-kliensek, A2A-orchestrátorok                                               |
 | Darabszám      | Változó (piactérvezérelt)                                         | 43 katalógusbejegyzés (22 API + 20 CLI + 1 konfiguráció)                                       |
 | Formátum       | `SkillDefinition` eszközsémával + kezelővel                       | `SKILL.md` frontmatter + markdown-törzs                                                        |
 | Felderítés     | `/api/skills/*` REST + `omniroute_skills_*` MCP-eszközök          | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-eszközök + A2A `list-capabilities` |
 
-Az **Omni Skills** a végrehajtási motor — azt határozza meg, hogy az OmniRoute _mit képes megtenni_, amikor egy LLM meghív egy eszközt.
+Az **Omni Skills** a végrehajtási motor — azt határozza meg, hogy a 67router _mit képes megtenni_, amikor egy LLM meghív egy eszközt.
 
-Az **Agent Skills** a dokumentációs katalógus — strukturált SKILL.md-fájlokkal ismerteti a külső ügynökökkel, _hogyan használják_ az OmniRoute REST API-ját és CLI-jét; ezek a fájlok közvetlenül beilleszthetők az ügynökök promptjaiba.
+Az **Agent Skills** a dokumentációs katalógus — strukturált SKILL.md-fájlokkal ismerteti a külső ügynökökkel, _hogyan használják_ a 67router REST API-ját és CLI-jét; ezek a fájlok közvetlenül beilleszthetők az ügynökök promptjaiba.
 
 Az Agent Skills katalógusáról, generátoráról, MCP-eszközeiről és A2A-skilljéről lásd: [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Az Agent Skills katalógusáról, generátoráról, MCP-eszközeiről és A2A-sk
 
 Három skillforrás létezik egymás mellett ugyanabban a regisztrációs tárban:
 
-1. **Beépített skillek** (`src/lib/skills/builtins.ts`) — az OmniRoute részeként érkeznek. A gyakori eseteket fedik le:
+1. **Beépített skillek** (`src/lib/skills/builtins.ts`) — a 67router részeként érkeznek. A gyakori eseteket fedik le:
    - `file_read`, `file_write` — API-kulcsonkénti izolált munkaterület a `<DATA_DIR>/skills/workspaces/<hashed-key>/` alatt
    - `http_request` — kimenő HTTP a `safeOutboundFetch` használatával, `guard: "public-only"` beállítással
    - `web_search` — cserélhető keresési szolgáltató gyorsítótárazással (`executeWebSearch`)
    - `eval_code` — Dockerben izolált `node`- vagy `python`-kódfuttatás
    - `execute_command` — Dockerben izolált shellparancs
    - `browser` — Playwright-alapú váz, alapértelmezés szerint letiltva (`builtin/browser.ts`)
-2. **SkillsMP** (az OmniRoute piactere) — lekérés a `https://skillsmp.com/api/v1/skills/search` címről. A Settings felületén megadott `skillsmpApiKey` szükséges hozzá.
+2. **SkillsMP** (a 67router piactere) — lekérés a `https://skillsmp.com/api/v1/skills/search` címről. A Settings felületén megadott `skillsmpApiKey` szükséges hozzá.
 3. **SkillsSH** (`skills.sh` közösségi katalógus) — lekérés a `https://skills.sh/api/search` címről. Nincs szükség hitelesítésre; a SKILL.md tartalma közvetlenül a GitHubról érkezik.
 
 Egyetlen „aktív szolgáltató” szabályozza, hogy az irányítópult melyik katalógusból telepítsen (`src/lib/skills/providerSettings.ts`). A **Settings → Memory & Skills** alatt váltható. Alapértelmezés: `skillsmp`.
@@ -444,7 +444,7 @@ majd a név dönt. A teljes ponttáblázatot lásd a dokumentum korábbi
 
 ## Beépített készségek katalógusa
 
-Az OmniRoute válogatott beépített készségeket tartalmaz a `src/lib/skills/builtin/` könyvtárban. A leggyakoribbak:
+A 67router válogatott beépített készségeket tartalmaz a `src/lib/skills/builtin/` könyvtárban. A leggyakoribbak:
 
 ### Böngészőautomatizálási készség
 

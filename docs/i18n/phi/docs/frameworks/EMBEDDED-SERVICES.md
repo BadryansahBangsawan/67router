@@ -9,8 +9,8 @@
 > **Mambabasa:** Mga engineer na nagdaragdag, nagpapanatili, o nagde-debug ng mga naka-embed na serbisyo (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
 Ang mga naka-embed na serbisyo ay mga lokal na naka-install na sidecar tool ng proseso na ini-install, pinangangasiwaan, at
-inilalantad ng OmniRoute bilang mga pangunahing target sa pagruruta. Hindi tulad ng mga panlabas na provider (na ina-access sa internet
-gamit ang mga API key), tumatakbo ang mga naka-embed na serbisyo sa parehong machine kung saan tumatakbo ang OmniRoute at nakikipag-ugnayan sa pamamagitan ng loopback.
+inilalantad ng 67router bilang mga pangunahing target sa pagruruta. Hindi tulad ng mga panlabas na provider (na ina-access sa internet
+gamit ang mga API key), tumatakbo ang mga naka-embed na serbisyo sa parehong machine kung saan tumatakbo ang 67router at nakikipag-ugnayan sa pamamagitan ng loopback.
 
 ---
 
@@ -35,7 +35,7 @@ Pitong serbisyo ang naka-embed:
 
 | Serbisyo        | npm package                                | Default na port | Layunin                                                                                                                                                                                                                                                                                                                                                                         |
 | --------------- | ------------------------------------------ | :-------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                  |      20130      | AI router na maaaring gamitin ng OmniRoute bilang sub-provider. Inilalantad ang mga modelo bilang `9router/{sub}/{model}`                                                                                                                                                                                                                                                       |
+| **9Router**     | `9router`                                  |      20130      | AI router na maaaring gamitin ng 67router bilang sub-provider. Inilalantad ang mga modelo bilang `9router/{sub}/{model}`                                                                                                                                                                                                                                                        |
 | **CLIProxyAPI** | Binary mula sa GitHub release (`cliproxy`) |      8317       | Lokal na proxy adapter para sa mga daloy ng Anthropic CLI auth. Nagbibigay ng fallback routing kapag nag-expire ang mga OAuth token                                                                                                                                                                                                                                             |
 | **Mux**         | `mux` (headless `mux server`)              |      8322       | Lokal na daemon para sa agent orchestration (coder/mux). Lifecycle-managed lamang — hindi routing target (walang LLM proxying).                                                                                                                                                                                                                                                 |
 | **Bifrost**     | `@maximhq/bifrost`                         |      8080       | Go AI-gateway relay backend. Kapag tumatakbo, awtomatikong pinipili ng relay route (`/v1/relay/`)                                                                                                                                                                                                                                                                               |
@@ -45,21 +45,21 @@ Pitong serbisyo ang naka-embed:
 
 Iisa ang supervisory model na sinusunod ng lahat ng pitong serbisyo:
 
-- Ini-install sila ng OmniRoute sa ilalim ng `DATA_DIR/services/{name}/` (nakahiwalay sa sariling `package.json` ng OmniRoute)
-- Sinisimulan at mino-monitor sila ng OmniRoute bilang mga child process
-- Nag-i-inject ang OmniRoute ng panandaliang API key sa environment ng child at iniikot ito nang walang downtime (kung naaangkop)
+- Ini-install sila ng 67router sa ilalim ng `DATA_DIR/services/{name}/` (nakahiwalay sa sariling `package.json` ng 67router)
+- Sinisimulan at mino-monitor sila ng 67router bilang mga child process
+- Nag-i-inject ang 67router ng panandaliang API key sa environment ng child at iniikot ito nang walang downtime (kung naaangkop)
 - Ang lahat ng management route (`/api/services/*`) ay **LOCAL_ONLY** — maa-access lamang mula sa loopback (mahigpit na panuntunan #17)
 
 ### Mga pangunahing pasya (mula sa plano ng disenyo)
 
-| Pasya                                       | Halaga                                                                                                     |
-| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Access ng dashboard sa native UI ng 9Router | Reverse proxy sa `/dashboard/providers/services/9router/embed/*`                                           |
-| Mekanismo ng pag-install                    | `npm install {package}` sa pamamagitan ng `execFile` (walang shell interpolation)                          |
-| Mode ng paggamit                            | Provider na nakarehistro bilang `9router/{sub}/{model}` sa routing engine                                  |
-| Pamamahala ng API key                       | Bumubuo ang OmniRoute, nag-e-encrypt habang nakaimbak (AES-256-GCM), at nag-i-inject sa pamamagitan ng env |
-| Lokasyon ng dashboard                       | `/dashboard/providers/services` (tatlong tab)                                                              |
-| Awtomatikong pagsisimula                    | Toggle para sa bawat serbisyo, default na OFF                                                              |
+| Pasya                                       | Halaga                                                                                                    |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Access ng dashboard sa native UI ng 9Router | Reverse proxy sa `/dashboard/providers/services/9router/embed/*`                                          |
+| Mekanismo ng pag-install                    | `npm install {package}` sa pamamagitan ng `execFile` (walang shell interpolation)                         |
+| Mode ng paggamit                            | Provider na nakarehistro bilang `9router/{sub}/{model}` sa routing engine                                 |
+| Pamamahala ng API key                       | Bumubuo ang 67router, nag-e-encrypt habang nakaimbak (AES-256-GCM), at nag-i-inject sa pamamagitan ng env |
+| Lokasyon ng dashboard                       | `/dashboard/providers/services` (tatlong tab)                                                             |
+| Awtomatikong pagsisimula                    | Toggle para sa bawat serbisyo, default na OFF                                                             |
 
 ---
 
@@ -221,7 +221,7 @@ Ang mga kahilingang hindi loopback ay makakatanggap ng `403 LOCAL_ONLY` anuman a
 #### `POST /api/services/9router/install`
 
 I-install ang 9Router mula sa npm. Gumagawa ito ng `DATA_DIR/services/9router/` na may sarili nitong
-`package.json` at `node_modules/`. Hindi ito sumasalungat sa mga dependency ng OmniRoute.
+`package.json` at `node_modules/`. Hindi ito sumasalungat sa mga dependency ng 67router.
 
 **Body ng kahilingan** (opsyonal ang lahat):
 
@@ -382,7 +382,7 @@ Ibinabalik ang pinagsamang live + DB status, kabilang ang metadata ng bersyon at
 #### `POST /api/services/9router/auto-start`
 
 I-toggle ang auto-start flag. Kapag `enabled: true`, awtomatikong magsisimula ang serbisyo
-sa susunod na pag-boot ng OmniRoute (kung naka-install ang serbisyo).
+sa susunod na pag-boot ng 67router (kung naka-install ang serbisyo).
 
 **Body ng kahilingan:**
 
@@ -591,7 +591,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Ang proxy na ito ay:
 
 - Nagpapasa ng request sa `http://127.0.0.1:{port}/{path}` (loopback lamang)
-- Nag-aalis ng mga papasok na `cookie` at `authorization` header (walang pagtagas ng session ng OmniRoute)
+- Nag-aalis ng mga papasok na `cookie` at `authorization` header (walang pagtagas ng session ng 67router)
 - Nag-i-inject ng `Authorization: Bearer {apiKey}` para sa authentication ng 9Router
 - Nag-aalis ng `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` mula sa response
 - Muling isinusulat ang mga HTML response upang i-inject ang `<base href>` at gawing pare-pareho ang mga absolute path (`/foo` → `/dashboard/.../embed/foo`)
@@ -627,7 +627,7 @@ matrix.
 ### Pag-inject ng API key
 
 Nangangailangan ang 9Router at Mux ng API key/bearer token para sa sarili nilang mga HTTP endpoint.
-Ang OmniRoute ay:
+Ang 67router ay:
 
 1. Gumagawa ng key sa pamamagitan ng `crypto.randomBytes(32).toString("base64url")` na may
    prefix na partikular sa serbisyo (`nr_` para sa 9Router, `mx_` para sa Mux).
@@ -806,7 +806,7 @@ Kung naglalantad ang naka-embed na serbisyo ng OpenAI-compatible na `/v1/chat/co
 
 1. Suriin ang `GET /api/services/{name}/logs` (o ang Logs panel sa dashboard). Hanapin
    ang mga linyang gaya ng `Error: ENOENT`, `address already in use`, o `Cannot find module`.
-2. Tiyaking nasa PATH ang `npm`: patakbuhin ang `which npm` mula sa parehong user account na nagpapatakbo sa OmniRoute.
+2. Tiyaking nasa PATH ang `npm`: patakbuhin ang `which npm` mula sa parehong user account na nagpapatakbo sa 67router.
 3. Tiyaking naka-install ang serbisyo: suriin ang `GET /api/services/{name}/status` para sa
    `installedVersion`. Kung `null`, patakbuhin muna ang pag-install.
 4. Tiyaking umiiral at hindi walang laman ang `DATA_DIR/services/{name}/node_modules/`.
@@ -844,7 +844,7 @@ magsimula, itaas ang `healthIntervalMs` sa 5000 at ang `stopTimeoutMs` sa 30 000
 3. Maaaring i-configure ang port para sa bawat serbisyo sa `bootstrap.ts` sa pamamagitan ng field na `port`.
 
 **Tandaan:** Gumagamit ang 9Router ng port 20130 bilang default upang maiwasan ang pagsalungat sa
-default na port 20128 ng OmniRoute.
+default na port 20128 ng 67router.
 
 ---
 
@@ -854,13 +854,13 @@ default na port 20128 ng OmniRoute.
 
 **Mga sanhi:**
 
-- Hindi masusulatan ng proseso ng OmniRoute ang `DATA_DIR` o ang parent directory nito.
+- Hindi masusulatan ng proseso ng 67router ang `DATA_DIR` o ang parent directory nito.
 - Tumatakbo sa loob ng rootless Docker nang walang pahintulot na magsulat sa naka-map na volume.
 
 **Solusyon:**
 
 1. Suriin ang `DATA_DIR` (default: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Tiyaking pagmamay-ari ng user ng proseso ng OmniRoute ang directory: `chown -R $USER ~/.omniroute/`
+2. Tiyaking pagmamay-ari ng user ng proseso ng 67router ang directory: `chown -R $USER ~/.omniroute/`
 3. Sa Docker, tiyaking may tamang mga pahintulot ang volume mount para sa user ng container.
 
 ---
@@ -908,16 +908,16 @@ Tingnan ang `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **T: Magiging available ba ang 9Router at CLIProxyAPI sa mga production/cloud deployment?**
 
-Oo. Parehong sinusunod ng dalawang serbisyo ang local-first na modelo ng OmniRoute mismo. Tumatakbo ang mga ito
+Oo. Parehong sinusunod ng dalawang serbisyo ang local-first na modelo ng 67router mismo. Tumatakbo ang mga ito
 sa parehong machine at nakikipag-ugnayan sa pamamagitan ng loopback. Ang ibig sabihin ng "Production" dito ay ang VPS
-o lokal na server kung saan naka-deploy ang OmniRoute, hindi isang remote na cloud provider.
+o lokal na server kung saan naka-deploy ang 67router, hindi isang remote na cloud provider.
 
 ---
 
 **T: Paano ko ide-debug ang supervisor?**
 
 1. Subaybayan ang SSE log stream: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Suriin ang mga structured log sa pino output ng OmniRoute na na-filter ayon sa
+2. Suriin ang mga structured log sa pino output ng 67router na na-filter ayon sa
    namespace na `service:supervisor`.
 3. Siyasatin ang row sa DB: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Gamitin ang `GET /api/services/9router/status` upang makita sa iisang call ang kasalukuyang live state, PID, health,

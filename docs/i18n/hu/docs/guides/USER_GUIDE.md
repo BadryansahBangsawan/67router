@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Teljes körű útmutató a szolgáltatók konfigurálásához, a kombinációk létrehozásához, a CLI-eszközök integrálásához és az OmniRoute üzembe helyezéséhez.
+Teljes körű útmutató a szolgáltatók konfigurálásához, a kombinációk létrehozásához, a CLI-eszközök integrálásához és a 67router üzembe helyezéséhez.
 
 ---
 
@@ -137,12 +137,12 @@ Modellek:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Profi tipp:** Összetett feladatokhoz használja az Opust, a gyorsasághoz pedig a Sonnetet. Az OmniRoute modellenként követi a kvótát!
+**Profi tipp:** Összetett feladatokhoz használja az Opust, a gyorsasághoz pedig a Sonnetet. A 67router modellenként követi a kvótát!
 
-Nincs böngésző az OmniRoute-gazdagépen? Futtassa a `claude setup-token` parancsot bárhol, ahol be van jelentkezve a Claude Code-ba, majd illessze be az egy évig érvényes tokent a **Beállítási token** lapon. Lásd: [A Claude Code használata beállítási tokennel](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Nincs böngésző a 67router-gazdagépen? Futtassa a `claude setup-token` parancsot bárhol, ahol be van jelentkezve a Claude Code-ba, majd illessze be az egy évig érvényes tokent a **Beállítási token** lapon. Lásd: [A Claude Code használata beállítási tokennel](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
 A Claude- és Claude Code-kompatibilis útvonalak megőrzik a `max` gondolkodási erőfeszítési szintet az Opus és Sonnet
-modelleknél. A Haiku modellek nem fogadják el a `max` erőfeszítési szintet, ezért az OmniRoute
+modelleknél. A Haiku modellek nem fogadják el a `max` erőfeszítési szintet, ezért a 67router
 a kérés továbbítása előtt magas gondolkodási keretre csökkenti azt.
 
 #### OpenAI Codex (Plus/Pro)
@@ -264,16 +264,16 @@ Költség: jelenleg $0-ként van feltüntetve; a feltételek és az elérhetős�
 
 ### Cursor IDE
 
-**A Cursor használata OmniRoute-kliensként** (a Cursor csevegésének átirányítása az OmniRoute-on keresztül):
+**A Cursor használata 67router-kliensként** (a Cursor csevegésének átirányítása a 67router-on keresztül):
 
 ```
 Beállítások → Modellek → Speciális:
   OpenAI API alap-URL: http://localhost:20128/v1
-  OpenAI API-kulcs: [az OmniRoute irányítópultjáról]
+  OpenAI API-kulcs: [a 67router irányítópultjáról]
   Modell: cc/claude-opus-4-7
 ```
 
-**Az OmniRoute használata Cursor-szolgáltatóként** (az OmniRoute a Cursor felsőbb szintű szolgáltatását hívja): részesítsd előnyben az
+**A 67router használata Cursor-szolgáltatóként** (a 67router a Cursor felsőbb szintű szolgáltatását hívja): részesítsd előnyben az
 **Irányítópult → Szolgáltatók → Cursor → Bejelentkezés Cursorral** lehetőséget. Dockerben lásd:
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -360,7 +360,7 @@ A CLI automatikusan betölti a `.env` fájlt a `~/.omniroute/.env` vagy a `./.en
 
 ### Tálcamód
 
-Indítsd el az OmniRoute-ot a rendszertálcán:
+Indítsd el a 67router-ot a rendszertálcán:
 
 ```bash
 omniroute serve --tray
@@ -377,7 +377,7 @@ A következő műveletekhez használd a tálcamenüt:
 - Az irányítópult megnyitása.
 - A `/dashboard/logs` megnyitása.
 - Az automatikus indítás módosítása.
-- Az OmniRoute leállítása.
+- A 67router leállítása.
 
 Ne használd a `--tray` kapcsolót a következő beállításokkal együtt:
 
@@ -403,14 +403,14 @@ omniroute autostart disable
 
 ### Eltávolítás
 
-Ha már nincs szükséged az OmniRoute-ra, két gyors parancsfájlt biztosítunk a tiszta eltávolításhoz:
+Ha már nincs szükséged a 67router-ra, két gyors parancsfájlt biztosítunk a tiszta eltávolításhoz:
 
 | Parancs                  | Művelet                                                                                                              |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Eltávolítja a rendszeralkalmazást, de **megtartja az adatbázist és a konfigurációkat** a `~/.omniroute` könyvtárban. |
 | `npm run uninstall:full` | Eltávolítja az alkalmazást, ÉS véglegesen **törli az összes konfigurációt, kulcsot és adatbázist**.                  |
 
-> Megjegyzés: A parancsok futtatásához lépj az OmniRoute projektmappájába (ha klónoztad), majd futtasd őket. Ha globálisan telepítetted, egyszerűen futtathatod az `npm uninstall -g omniroute` parancsot.
+> Megjegyzés: A parancsok futtatásához lépj a 67router projektmappájába (ha klónoztad), majd futtasd őket. Ha globálisan telepítetted, egyszerűen futtathatod az `npm uninstall -g omniroute` parancsot.
 
 ### VPS-telepítés
 
@@ -482,7 +482,7 @@ A CLI-binárisokkal működő, gazdarendszerbe integrált módhoz lásd a fő do
 
 ### Void Linux (xbps-src)
 
-A Void Linux felhasználói az `xbps-src` keresztfordítási keretrendszer használatával natív módon csomagolhatják és telepíthetik az OmniRoute-ot. Ez automatizálja az önálló Node.js-buildet, valamint a szükséges natív `better-sqlite3`-kötések létrehozását.
+A Void Linux felhasználói az `xbps-src` keresztfordítási keretrendszer használatával natív módon csomagolhatják és telepíthetik a 67router-ot. Ez automatizálja az önálló Node.js-buildet, valamint a szükséges natív `better-sqlite3`-kötések létrehozását.
 
 <details>
 <summary><b>Az xbps-src-sablon megtekintése</b></summary>
@@ -662,7 +662,7 @@ A környezeti változók teljes referenciáját lásd a [README](../README.md) f
 
 **Egyéb kompatibilis szolgáltatók** (válogatás): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (az `aws-bedrock` közvetítésével), `azure-ai`, `openrouter` (átengedett katalógus), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Mindegyik a saját modelllistáját tartja karban a `providerRegistry.ts` fájlban, és automatikusan szinkronizálható, ha a szolgáltató biztosít `/models` végpontot.
 
-**Megjegyzés a modellazonosítókról:** Az OmniRoute a szolgáltatónál natív azonosítókat használja (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Egyes azonosítók ponttal tagolt verziókat tartalmaznak, mert a külső API ilyen formában várja őket. Ha egy modell nem szerepel fent, futtassa az `omniroute models --search <term>` parancsot, vagy hívja meg a `GET /api/models/catalog` végpontot az elérhetőség megerősítéséhez.
+**Megjegyzés a modellazonosítókról:** A 67router a szolgáltatónál natív azonosítókat használja (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Egyes azonosítók ponttal tagolt verziókat tartalmaznak, mert a külső API ilyen formában várja őket. Ha egy modell nem szerepel fent, futtassa az `omniroute models --search <term>` parancsot, vagy hívja meg a `GET /api/models/catalog` végpontot az elérhetőség megerősítéséhez.
 
 </details>
 
@@ -728,9 +728,9 @@ hibával hiúsulnak meg, amely egy beépített szolgáltatót vagy annak hiteles
 fenntartott-e: a szabály bevezetése előtt mentett csomópontok továbbra is tárolva maradnak, de az előtagjuk a
 beépített szolgáltatóhoz irányít. Szerkessze a csomópontot, és adjon neki új előtagot.
 
-### OmniRoute-partnerek láncolása
+### 67router-partnerek láncolása
 
-Egy másik OmniRoute-átjáró hozzáadható **egyéni OpenAI-kompatibilis** szolgáltatóként. Használja a
+Egy másik 67router-átjáró hozzáadható **egyéni OpenAI-kompatibilis** szolgáltatóként. Használja a
 partner `/v1` alap-URL-jét és az adott partner által kibocsátott, dedikált, legkisebb jogosultságú API-kulcsot.
 
 Kölcsönös vagy több ugrásból álló láncok esetén engedélyezze az opcionális hurokvédelmet minden átjárón:
@@ -756,7 +756,7 @@ keretet HTTP `508 Loop Detected` válasszal utasítja el; a szokásos upstream s
 A partnerek láncolása nem jelent adatbázis-replikációt vagy gazdagépi feladatátvételt. Minden átjáró különálló
 SQLite-állapotot, gyorsítótárakat, sebességkorlátozási számlálókat és munkameneteket tart fenn. Aktív/passzív vagy aktív/aktív rendelkezésre álláshoz
 használjon állapotfelügyelt fordított proxyt vagy kliensoldali feladatátvételt, és soha ne csatoljon egyetlen SQLite-adatbázist
-több futó OmniRoute-példányhoz.
+több futó 67router-példányhoz.
 
 ### Dedikált szolgáltatói útvonalak
 
@@ -807,7 +807,7 @@ A modelleket szolgáltatók szerint csoportosítva adja vissza, típusokkal (`ch
 - Elérhető a **Vezérlőpult → Végpontok** menüpontban Docker- és más saját üzemeltetésű telepítések esetén
 - Létrehoz egy ideiglenes `https://*.trycloudflare.com` URL-t, amely az aktuális, OpenAI-kompatibilis `/v1` végpontra továbbít
 - Az első engedélyezés csak szükség esetén telepíti a `cloudflared` alkalmazást; a későbbi újraindítások ugyanazt a felügyelt bináris fájlt használják
-- A Quick Tunnel alagutak nem állnak automatikusan helyre az OmniRoute vagy a konténer újraindítása után; szükség esetén engedélyezze őket újra a vezérlőpulton
+- A Quick Tunnel alagutak nem állnak automatikusan helyre a 67router vagy a konténer újraindítása után; szükség esetén engedélyezze őket újra a vezérlőpulton
 - Az alagút-URL-ek ideiglenesek, és az alagút minden leállításakor és elindításakor megváltoznak
 - A felügyelt Quick Tunnel alagutak alapértelmezés szerint HTTP/2 átvitelt használnak, hogy korlátozott erőforrású konténerekben elkerüljék a zajos QUIC UDP-pufferfigyelmeztetéseket
 - Állítsa a `CLOUDFLARED_PROTOCOL` értékét `quic` vagy `auto` értékre, ha felül szeretné bírálni a felügyelt átviteli mód kiválasztását
@@ -824,7 +824,7 @@ A modelleket szolgáltatók szerint csoportosítva adja vissza, típusokkal (`ch
 
 ### Fordítói tesztkörnyezet
 
-A **Vezérlőpult → Fordító** menüpontban érhető el. Hibakereséssel és vizuálisan is megvizsgálhatja, hogyan fordítja át az OmniRoute az API-kéréseket a szolgáltatók között.
+A **Vezérlőpult → Fordító** menüpontban érhető el. Hibakereséssel és vizuálisan is megvizsgálhatja, hogyan fordítja át a 67router az API-kéréseket a szolgáltatók között.
 
 | Mód                  | Cél                                                                                                   |
 | -------------------- | ----------------------------------------------------------------------------------------------------- |
@@ -877,7 +877,7 @@ Külső munkamenet-affinitáshoz (például fordított proxyk mögött működő
 X-Session-Id: your-session-key
 ```
 
-Az OmniRoute az `x_session_id` értéket is elfogadja, és a tényleges munkamenetkulcsot az `X-OmniRoute-Session-Id` fejlécben adja vissza.
+A 67router az `x_session_id` értéket is elfogadja, és a tényleges munkamenetkulcsot az `X-OmniRoute-Session-Id` fejlécben adja vissza.
 
 Ha Nginxet használ, és aláhúzásjeles fejléceket küld, engedélyezze a következőt:
 
@@ -911,7 +911,7 @@ Lánc: production-fallback
 
 ### Gyakori szolgáltatókombinációk és útválasztási minták
 
-Az alábbiak példákat mutatnak több szolgáltató kombinálására és a közöttük történő útválasztásra az OmniRoute-ban:
+Az alábbiak példákat mutatnak több szolgáltató kombinálására és a közöttük történő útválasztásra a 67router-ban:
 
 #### 1. Kódolóügynök-kombináció: fejlett következtetés költség-/sebességalapú tartalékokkal
 
@@ -972,7 +972,7 @@ Specializált képfeldolgozó modellek párosítása nagy sebességű szöveggen
 
 A **Vezérlőpult → Beállítások → Hibatűrés** útvonalon konfigurálható.
 
-Az OmniRoute öt összetevővel valósítja meg a szolgáltatói szintű hibatűrést:
+A 67router öt összetevővel valósítja meg a szolgáltatói szintű hibatűrést:
 
 1. **Kérésvárólista és ütemezés** — Rendszerszintű kérésszabályozás:
    - **Kérések percenként (RPM)** — A fiókonként és percenként engedélyezett kérések maximális száma
@@ -997,7 +997,7 @@ Az OmniRoute öt összetevővel valósítja meg a szolgáltatói szintű hibatű
 
    A szolgáltatói megszakító futásidejű állapota kizárólag a **Vezérlőpult → Állapot** oldalon jelenik meg.
 
-4. **Várakozás a várakozási idő lejártára** — Ha minden lehetséges kapcsolat már várakozási állapotban van, az OmniRoute megvárhatja a legkorábbi várakozási idő lejártát, majd automatikusan újrapróbálhatja ugyanazt az ügyfélkérést.
+4. **Várakozás a várakozási idő lejártára** — Ha minden lehetséges kapcsolat már várakozási állapotban van, a 67router megvárhatja a legkorábbi várakozási idő lejártát, majd automatikusan újrapróbálhatja ugyanazt az ügyfélkérést.
 
 5. **Sebességkorlát automatikus észlelése** — Ha a külső szolgáltatók explicit várakozási időszakot adnak vissza, és ez a beállítás engedélyezve van, ezek az adatok felülírják a kapcsolat helyi várakozási idejét.
 
@@ -1031,7 +1031,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Felhasználási esetek:**
 
-- Az OmniRoute áttelepítése gépek között
+- A 67router áttelepítése gépek között
 - Külső biztonsági mentések létrehozása katasztrófa utáni helyreállításhoz
 - Konfigurációk megosztása a csapattagok között (minden exportálása → archívum megosztása)
 
@@ -1083,7 +1083,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Hangátírás
 
-Az OmniRoute az OpenAI-kompatibilis végponton keresztül támogatja a hanganyagok átírását:
+A 67router az OpenAI-kompatibilis végponton keresztül támogatja a hanganyagok átírását:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1157,7 +1157,7 @@ előzmények alapján, és ne tömörítsék a tartalék kéréseket; az engedé
 Tiltsa le a **gondolkodási tokenpuffert**, ha a felsőbb szintű szolgáltatók szigorú
 `max_tokens` / `maxOutputTokens` korlátokat írnak elő. Ha engedélyezve van, a kombinált útválasztás csak az ismert kimeneti korláttal rendelkező gondolkodási modellekhez ad
 további tartalékot, és változatlanul hagyja az ügyfél tokenkorlátját, ha a biztonságos pufferelt érték meghaladná ezt a korlátot. Ha az ügyfél korlátja már eleve meghalad egy ismert korlátot,
-az OmniRoute erre a korlátra csökkenti azt, mielőtt elküldené a kérést a felsőbb szintű szolgáltatónak.
+a 67router erre a korlátra csökkenti azt, mielőtt elküldené a kérést a felsőbb szintű szolgáltatónak.
 
 ---
 
@@ -1180,7 +1180,7 @@ Elérés: **Irányítópult → Állapot**. A rendszer állapotának valós idej
 
 ## 🤖 Automatikus útválasztás (konfiguráció nélkül)
 
-Az OmniRoute egy **pontszámvezérelt automatikus útválasztót** tartalmaz, amely minden csatlakoztatott szolgáltató közül kiválasztja az egyes kérésekhez legmegfelelőbb modellt — nincs szükség karbantartandó kombinációkra. Egyszerűen küldje el a kérést az `auto/*` előtagok egyikével, és az OmniRoute menet közben összeállít egy virtuális kombinációt, a jelölteket pedig a késleltetés, a költség, a sikerességi arány, a kontextushoz való illeszkedés, a modell feladatra való alkalmassága, a közelmúltbeli hibák, a kvóta és a megszakító állapota alapján pontozza.
+A 67router egy **pontszámvezérelt automatikus útválasztót** tartalmaz, amely minden csatlakoztatott szolgáltató közül kiválasztja az egyes kérésekhez legmegfelelőbb modellt — nincs szükség karbantartandó kombinációkra. Egyszerűen küldje el a kérést az `auto/*` előtagok egyikével, és a 67router menet közben összeállít egy virtuális kombinációt, a jelölteket pedig a késleltetés, a költség, a sikerességi arány, a kontextushoz való illeszkedés, a modell feladatra való alkalmassága, a közelmúltbeli hibák, a kvóta és a megszakító állapota alapján pontozza.
 
 | Előtag         | Optimalizálás célja                                                                                                            |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -1211,7 +1211,7 @@ Az automatikus útválasztó teljes leírása az [AUTO-COMBO.md](../routing/AUTO
 
 ## 🔌 MCP- és A2A-integráció
 
-Az OmniRoute egyszerre **MCP-kiszolgáló** (Model Context Protocol) és **A2A-kiszolgáló** (Agent-to-Agent JSON-RPC 2.0). Bármely MCP-kompatibilis IDE vagy ügynökkörnyezet közvetlenül meghívhatja az OmniRoute eszközeit — nincs szükség további burkolórétegre.
+A 67router egyszerre **MCP-kiszolgáló** (Model Context Protocol) és **A2A-kiszolgáló** (Agent-to-Agent JSON-RPC 2.0). Bármely MCP-kompatibilis IDE vagy ügynökkörnyezet közvetlenül meghívhatja a 67router eszközeit — nincs szükség további burkolórétegre.
 
 ### MCP-átvitel
 
@@ -1246,7 +1246,7 @@ Az MCP jelenleg 32 elnevezett hatókört definiál. Minden Bearer-kulcs meghatá
 
 ## 🧠 Készségrendszer
 
-Az OmniRoute egy bővíthető **készség-keretrendszert** (`src/lib/skills/`) biztosít, amely lehetővé teszi, hogy az ügynökök és az A2A-végpont tartományspecifikus rutinokat futtassanak (például `code-review`, `summarize`, `extract-facts`, `web-research`).
+A 67router egy bővíthető **készség-keretrendszert** (`src/lib/skills/`) biztosít, amely lehetővé teszi, hogy az ügynökök és az A2A-végpont tartományspecifikus rutinokat futtassanak (például `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Piactér felhasználói felület** — Készségek böngészése és telepítése a **Vezérlőpult → Készségek** menüpontban
 - **Kulcsonkénti hatókörök** — Korlátozhatja, hogy mely API-kulcsok mely készségeket hívhatják meg
@@ -1258,7 +1258,7 @@ A teljes referencia: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Memóriarendszer
 
-Az OmniRoute **hosszú távú társalgási memóriát** tárol hibrid visszakereséssel:
+A 67router **hosszú távú társalgási memóriát** tárol hibrid visszakereséssel:
 
 - **SQLite FTS5** a korábbi beszélgetési fordulókban végzett kulcsszavas kereséshez
 - **Qdrant vektortár** (opcionális) a szemantikai felidézéshez
@@ -1271,7 +1271,7 @@ A memóriák a **Vezérlőpult → Memória** menüpontban kezelhetők (keresés
 
 ## 🔔 Webhookok
 
-Iratkozzon fel az OmniRoute eseményeire valós idejű monitorozáshoz és automatizáláshoz.
+Iratkozzon fel a 67router eseményeire valós idejű monitorozáshoz és automatizáláshoz.
 
 - Hozzon létre egy webhookot a **Vezérlőpult → Webhookok** menüpontban, megadva a cél-URL-t és a HMAC-aláírási titkot
 - Elérhető események: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1284,11 +1284,11 @@ A teljes séma itt található: [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ## ☁️ Felhőalapú ügynökök
 
-Az OmniRoute integrálható felhőalapú kódolóügynökökkel (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), így hosszú ideig futó feladatokat indíthat ugyanarról a vezérlőpultról, amely a helyi útválasztást is kezeli.
+A 67router integrálható felhőalapú kódolóügynökökkel (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), így hosszú ideig futó feladatokat indíthat ugyanarról a vezérlőpultról, amely a helyi útválasztást is kezeli.
 
 - Hozzon létre feladatokat a **Vezérlőpult → Felhőalapú ügynökök** menüpontban vagy a `POST /api/v1/agents/tasks` végponton keresztül
 - Kövesse nyomon az egyes feladatok állapotát, naplóit és műtermékeit
-- Minden szolgáltatóhoz saját API-kulcsot használhat — a hitelesítő adatok soha nem hagyják el az OmniRoute-példányt
+- Minden szolgáltatóhoz saját API-kulcsot használhat — a hitelesítő adatok soha nem hagyják el a 67router-példányt
 
 A teljes referencia: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1296,7 +1296,7 @@ A teljes referencia: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Programozott kezelés
 
-Minden OmniRoute-erőforrást (szolgáltatókat, kombinációkat, kulcsokat, beállításokat) kezelhet HTTP-n keresztül egy **`manage` hatókörrel rendelkező Bearer-kulcs** használatával.
+Minden 67router-erőforrást (szolgáltatókat, kombinációkat, kulcsokat, beállításokat) kezelhet HTTP-n keresztül egy **`manage` hatókörrel rendelkező Bearer-kulcs** használatával.
 
 Hozza létre a kulcsot a **Vezérlőpult → API-kulcsok → Új kulcs → Hatókör: manage** menüpontban, majd:
 
@@ -1329,7 +1329,7 @@ A végpontok teljes katalógusát és a kérés-/válaszsémákat lásd az [API_
 
 ## 💻 Belső CLI
 
-Az OmniRoute egy belső CLI-t (`omniroute …`) biztosít a beállításhoz, a diagnosztikához és a futásidejű vezérléshez. Ez **nem azonos az irányítópult „CLI-eszközök” oldalával**, amely külső fejlesztésű CLI-ket (Claude Code, Cursor, Codex, Cline, …) konfigurál, hogy kommunikálhassanak az OmniRoute-tal.
+A 67router egy belső CLI-t (`omniroute …`) biztosít a beállításhoz, a diagnosztikához és a futásidejű vezérléshez. Ez **nem azonos az irányítópult „CLI-eszközök” oldalával**, amely külső fejlesztésű CLI-ket (Claude Code, Cursor, Codex, Cline, …) konfigurál, hogy kommunikálhassanak a 67router-tal.
 
 ```bash
 omniroute setup                    # Interaktív varázsló (jelszó, szolgáltatók, kombinációk)
@@ -1360,7 +1360,7 @@ Tipp: párosítsa az `omniroute doctor --json` parancsot a megfigyelőeszközév
 
 ## 🖥️ Asztali alkalmazás (Electron)
 
-Az OmniRoute natív asztali alkalmazásként érhető el Windows, macOS és Linux rendszerekhez.
+A 67router natív asztali alkalmazásként érhető el Windows, macOS és Linux rendszerekhez.
 
 ### Telepítés
 

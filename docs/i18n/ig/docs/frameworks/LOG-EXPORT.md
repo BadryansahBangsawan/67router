@@ -4,7 +4,7 @@
 
 ---
 
-Mbupụ ndekọ oku OmniRoute na-aga n’ihu, nke nta nke nta, gaa n’ebe nchekwa nyocha data dị na mpụga.
+Mbupụ ndekọ oku 67router na-aga n’ihu, nke nta nke nta, gaa n’ebe nchekwa nyocha data dị na mpụga.
 
 Taabụ dashboard Logs na-edobe akụkọ arịrịọ na SQLite (`call_logs`), nke
 ntụgharị na oge njigide na-amachi. Mbupụ ndekọ na-ezipụ otu nchịkọta ndekọ ahụ n’usoro oge ka o nwee ike ịdịgide

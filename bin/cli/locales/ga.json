@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Earráid: {message}",
-    "serverOffline": "Tá freastalaí OmniRoute as líne. Tosaigh le: omniroute serve",
+    "serverOffline": "Tá freastalaí 67router as líne. Tosaigh le: omniroute serve",
     "authRequired": "Fíordheimhniú ag teastáil. Socraigh OMNIROUTE_API_KEY nó rith: omniroute setup",
     "rateLimited": "Teorainn ráta sáraithe. Athbheochan i ndiaidh {seconds}s.",
     "timeout": "Am istigh tar éis {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Scipeáil an契ordheimhniú"
   },
   "setup": {
-    "title": "Socrú OmniRoute",
+    "title": "Socrú 67router",
     "passwordPrompt": "Pasfhocal riaracháin",
     "providerPrompt": "Soláthraí réamhshocraithe (fág bán le scipeáil)",
     "done": "Socrú críochnaithe",
@@ -30,7 +30,7 @@
     "opencode": "Suiteáil agus coinníollach an @omniroute/opencode-plugin comhtháite le haghaidh OpenCode"
   },
   "doctor": {
-    "title": "Doiciméadóir OmniRoute",
+    "title": "Doiciméadóir 67router",
     "dbOk": "Bunachar sonraí: ceart go leor ({path})",
     "dbMissing": "Bunachar sonraí: gan túsú — rith `omniroute setup`",
     "portOk": "Port {port}: ar fáil",
@@ -82,7 +82,7 @@
       "providerOpt": "Scag de réir ainm soláthraí",
       "header": "ID         Soláthraí       Ainm                     Stádas dul in éag  Stádas tástála  Fuarú go dtí",
       "noData": "Níl aon sonraí ceangail soláthraí ar fáil.",
-      "requiresServer": "Éilíonn stádas soláthraithe go mbeadh an freastalaí OmniRoute ag rith."
+      "requiresServer": "Éilíonn stádas soláthraithe go mbeadh an freastalaí 67router ag rith."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Cuir leis nó nuashonraigh eochair API do sholáthraí",
     "listDescription": "Liostaigh gach eochair API cumraithe",
     "removeDescription": "Bain eochair API do sholáthraí",
-    "regenerateDescription": "Athghine eochair API OmniRoute",
-    "revokeDescription": "Cealaigh eochair API OmniRoute",
+    "regenerateDescription": "Athghine eochair API 67router",
+    "revokeDescription": "Cealaigh eochair API 67router",
     "revealDescription": "Nocht luach na heochrach API gan masc",
     "usageDescription": "Taispeáin úsáid le déanaí do eochair API",
     "usageLimitOpt": "Líon na n-iarratas le déanaí",
@@ -225,7 +225,7 @@
     "noCombo": "Níor aimsíodh comhoibriú comhoiriúnach. Cumraigh ceann le: omniroute combo create"
   },
   "chat": {
-    "description": "Seol teachtaireacht comhrá aon-uair go OmniRoute",
+    "description": "Seol teachtaireacht comhrá aon-uair go 67router",
     "file": "Léigh an t-impulse ó chomhad",
     "stdin": "Léigh an t-impulse ó stdin",
     "system": "Impulse córais",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Tosaigh freastalaí OmniRoute (gníomh réamhshocraithe)",
-    "starting": "Ag tosú freastalaí OmniRoute ar port {port}...",
+    "description": "Tosaigh freastalaí 67router (gníomh réamhshocraithe)",
+    "starting": "Ag tosú freastalaí 67router ar port {port}...",
     "ready": "Réidh ag http://localhost:{port}",
     "stopping": "Ag stopadh freastalaí (PID {pid})...",
     "stopped": "Tá an freastalaí stoptha.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Cúltaca",
-    "description": "Cruthaigh cúltaca de shonraí OmniRoute",
+    "description": "Cruthaigh cúltaca de shonraí 67router",
     "creating": "Ag cruthú cúltaca...",
     "done": "Cúltaca shábháilte go {path}",
     "noFiles": "Níl aon chomhaid le cúltaca (níl an bunachar sonraí cumasaithe)",
@@ -277,7 +277,7 @@
     "noBackups": "Níl aon chúltacaí aimsithe.",
     "notFound": "Cúltaca gan aimsiú: {name}",
     "confirmRestore": "Forscríobh sonraí reatha le cúltaca ó {ts}?",
-    "createDescription": "Cruthaigh cúltaca de shonraí OmniRoute",
+    "createDescription": "Cruthaigh cúltaca de shonraí 67router",
     "nameOpt": "Ainm saincheaptha cúltaca",
     "cloudOpt": "Uaslódáil cúltaca go stóráil scamall",
     "encryptOpt": "Criptigh cúltaca le AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Theip ar ghlanadh na taisce."
   },
   "redis": {
-    "description": "Seol coimeádán Redis áitiúil le cliceáil amháin (Podman nó Docker) le haghaidh taisce agus rianú cion le haghaidh OmniRoute"
+    "description": "Seol coimeádán Redis áitiúil le cliceáil amháin (Podman nó Docker) le haghaidh taisce agus rianú cion le haghaidh 67router"
   },
   "test": {
     "description": "Tástáil ceangal soláthraí",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Bainistigh polasaithe údarúcháin OmniRoute",
+    "description": "Bainistigh polasaithe údarúcháin 67router",
     "list": {
       "description": "Liostaigh polasaithe",
       "kind": "Scag de réir cineáil (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Cumraigh agus déan iniúchadh ar phipelines comhbhrúite OmniRoute",
+    "description": "Cumraigh agus déan iniúchadh ar phipelines comhbhrúite 67router",
     "status": {
       "description": "Taispeáin stádas comhbhrúite reatha agus socruithe"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Rothlaigh túinéal {type}? (ginefar URL nua)"
   },
   "stop": {
-    "description": "Stop freastalaí OmniRoute",
+    "description": "Stop freastalaí 67router",
     "stopping": "Ag stopadh freastalaí (PID {pid})...",
     "stopped": "Freastalaí stoptha.",
     "notRunning": "Níl freastalaí ag rith.",
     "portFallback": "Comhad PID gan aimsiú, ag triail stop bunaithe ar phort..."
   },
   "restart": {
-    "description": "Atosaigh freastalaí OmniRoute",
-    "restarting": "Ag atosú freastalaí OmniRoute..."
+    "description": "Atosaigh freastalaí 67router",
+    "restarting": "Ag atosú freastalaí 67router..."
   },
   "dashboard": {
-    "description": "Oscail painéal riaracháin OmniRoute i mbrabhsálaí",
+    "description": "Oscail painéal riaracháin 67router i mbrabhsálaí",
     "opening": "Ag oscailt an phainéil ag {url}",
     "urlOnly": "Priontáil URL an phainéil gan oscailt an bhrabhsálaí",
     "tui": "Oscail painéal idirghníomhach TUI (éadáil teirminéil, 7 cluaisín)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Bainistigh scileanna OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Bainistigh scileanna 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Liostaigh scileanna suiteáilte",
       "type": "Scag de réir cineáil (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Bainistigh cuimhne comhrá OmniRoute (FTS5 + veicteoir)",
+    "description": "Bainistigh cuimhne comhrá 67router (FTS5 + veicteoir)",
     "search": {
       "description": "Cuardaigh iontrálacha cuimhne le ceist shéimeantach",
       "type": "Scag de réir cineál cuimhne (úsáideoir|aiseolas|tionscadal|tagairt)",
@@ -792,14 +792,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Ródaí AI Cliste le Filleadh Uathoibríoch",
+    "description": "67router — Ródaí AI Cliste le Filleadh Uathoibríoch",
     "version": "Priontáil leagan agus scoir",
     "output": "Formáid aschuir (bord, json, jsonl, csv)",
     "quiet": "Bac aschur neamhriachtanach",
     "no_color": "Díchumasaigh aschur daite",
     "timeout": "Am ama iarratais HTTP i soicindí milliúmana",
-    "api_key": "Eochair API do fhreastalaí OmniRoute",
-    "base_url": "Bun-URL freastalaí OmniRoute",
+    "api_key": "Eochair API do fhreastalaí 67router",
+    "base_url": "Bun-URL freastalaí 67router",
     "context": "Comhthéacs/próifíl freastalaí le húsáid don ordú seo",
     "lang": "Socraigh teanga taispeáinte CLI (forbronnar OMNIROUTE_LANG)"
   },
@@ -997,7 +997,7 @@
     }
   },
   "openapi": {
-    "description": "Rochtain agus tástáil an spec OpenAPI OmniRoute",
+    "description": "Rochtain agus tástáil an spec OpenAPI 67router",
     "dump": {
       "description": "Dumpáil an spec OpenAPI go stdout nó comhad",
       "format": "Formáid aschur: yaml|json (réamhshocrú: yaml)",
@@ -1040,7 +1040,7 @@
     }
   },
   "open": {
-    "description": "Oscail leathanach painéil rialaithe OmniRoute sonrach sa bhrabhsálaí",
+    "description": "Oscail leathanach painéil rialaithe 67router sonrach sa bhrabhsálaí",
     "url": "Priontáil URL amháin, ná oscail an brabhsálaí"
   },
   "telemetry": {
@@ -1057,7 +1057,7 @@
     }
   },
   "sync": {
-    "description": "Sioncronaigh cumraíocht idir imthaispíní OmniRoute",
+    "description": "Sioncronaigh cumraíocht idir imthaispíní 67router",
     "push": {
       "description": "Brúigh cumraíocht go scamall nó imthaispín iargúlta"
     },
@@ -1116,7 +1116,7 @@
     "filter": "Scag de réir leibhéal (earráid, rabhadh, eolas) — le cultacha leithliseach",
     "lines": "Líon na línte le fáil",
     "timeout": "Am feithimh ceangail i ms",
-    "baseUrl": "URL bonn API OmniRoute",
+    "baseUrl": "URL bonn API 67router",
     "requestId": "Scag de réir ID iarratais",
     "apiKey": "Scag de réir eochair API",
     "combo": "Scag de réir ainm an chomhá",
@@ -1132,10 +1132,10 @@
     "description": "Rialaigh an t-ícon trála córais",
     "show": "Taispeáin an t-ícon trála (má tá an tseirbhís ag rith le --tray)",
     "hide": "Folaigh an t-ícon trála",
-    "quit": "Scoir OmniRoute tríd an trála"
+    "quit": "Scoir 67router tríd an trála"
   },
   "autostart": {
-    "description": "Bainistigh tús-uathoibriú OmniRoute ag tosú (Linux: seirbhís úsáideora systemd)",
+    "description": "Bainistigh tús-uathoibriú 67router ag tosú (Linux: seirbhís úsáideora systemd)",
     "enable": "Cumasaigh tús-uathoibriú ag tosú",
     "disable": "Díchumasaigh tús-uathoibriú ag tosú",
     "toggle": "Scoránaigh tús-uathoibriú ag tosú",
@@ -1167,19 +1167,19 @@
     "scaffold": "Creadum i mbunchaighde breiseáin nua"
   },
   "launch": {
-    "description": "Seol Claude Code dírithe ar OmniRoute (logánta nó cianda, le --profile)",
+    "description": "Seol Claude Code dírithe ar 67router (logánta nó cianda, le --profile)",
     "token": "Comhartha a sheolfaidh an cliant Claude (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "Níl OmniRoute inrochtana ag {port}. Tosaigh é le 'omniroute serve'.",
+    "notRunning": "Níl 67router inrochtana ag {port}. Tosaigh é le 'omniroute serve'.",
     "notFound": "Níor aimsíodh an CLI 'claude' i PATH."
   },
   "run": {
-    "description": "Seol sprioc CLI a thacaítear trí OmniRoute"
+    "description": "Seol sprioc CLI a thacaítear trí 67router"
   },
   "setupClaude": {
-    "description": "Gineadh próifílí ~/.claude/profiles Claude Code ó chatalóg samhlacha OmniRoute"
+    "description": "Gineadh próifílí ~/.claude/profiles Claude Code ó chatalóg samhlacha 67router"
   },
   "connect": {
-    "description": "Ceangail le freastalaí cianda OmniRoute agus téigh isteach i mód cianda"
+    "description": "Ceangail le freastalaí cianda 67router agus téigh isteach i mód cianda"
   },
   "tokens": {
     "description": "Bainistigh comharthacha rochtana CLI scópáilte (mód cianda)"
@@ -1188,10 +1188,10 @@
     "description": "Roghnaigh soláthraí+samhail ón bhfreastalaí gníomhach agus cumraigh CLI áitiúil a thacaítear"
   },
   "launchCodex": {
-    "description": "Seol Codex CLI dírithe ar OmniRoute (áitiúil nó VPS cianda)"
+    "description": "Seol Codex CLI dírithe ar 67router (áitiúil nó VPS cianda)"
   },
   "setupCodex": {
-    "description": "Gineadh comhaid próifíle ~/.codex ó chatalóg beo samhlacha OmniRoute"
+    "description": "Gineadh comhaid próifíle ~/.codex ó chatalóg beo samhlacha 67router"
   },
   "packs": {
     "description": "Bainistigh paicéid rithaithe roghnach (ML / uathoibriú brabhsálaí)",
@@ -1204,7 +1204,7 @@
     "errUnknown": "paicéad anaithnid: {name}",
     "errNoIndex": "innéacs paicéad gan aimsiú; seol --source <dir> a shealbhaíonn ualach an phaicéid (seoltar é i mbraisle deisce in aice an aip)",
     "installed": "paicéad \"{name}\" suiteáilte agus deimhnithe ag {dir}",
-    "restartHint": "atosaigh freastalaí OmniRoute (nó an aip deisce) ionas go bhfaigheann an rith an paicéad suas",
+    "restartHint": "atosaigh freastalaí 67router (nó an aip deisce) ionas go bhfaigheann an rith an paicéad suas",
     "removed": "paicéad \"{name}\" bainte",
     "notInstalled": "paicéad \"{name}\" ní raibh suiteáilte",
     "verifyOk": "gach paicéad suiteáilte deimhnithe",

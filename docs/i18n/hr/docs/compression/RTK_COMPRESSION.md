@@ -4,7 +4,7 @@
 
 ---
 
-RTK kompresija OmniRouteov je mehanizam za kompresiju izlaza terminala i alata koji prepoznaje naredbe. Namijenjen je sesijama agenata za programiranje, u kojima većina rasta konteksta proizlazi iz zapisnika testova, izlaza izgradnje, suvišnog izlaza upravitelja paketima, transkripata ljuske, Dockerova izlaza, git izlaza i tragova stoga.
+RTK kompresija 67routerov je mehanizam za kompresiju izlaza terminala i alata koji prepoznaje naredbe. Namijenjen je sesijama agenata za programiranje, u kojima većina rasta konteksta proizlazi iz zapisnika testova, izlaza izgradnje, suvišnog izlaza upravitelja paketima, transkripata ljuske, Dockerova izlaza, git izlaza i tragova stoga.
 
 RTK se može pokretati izravno uz `defaultMode: "rtk"` ili kao prvi korak u ulančanom cjevovodu, obično:
 
@@ -15,7 +15,7 @@ rtk -> caveman
 Tim se redoslijedom najprije komprimira bučan strojni izlaz, nakon čega Caveman sažima preostali tekst.
 
 Izvorni RTK navodi uštedu od `60-90%` za izlaz naredbi. Primjer sesije iz njegova README-a smanjuje se s
-`~118,000` standardnih tokena na `~23,900` RTK tokena, što predstavlja uštedu od `79.7%` (`~80%`). OmniRoute koristi taj izvorni prosjek za izračun ulančane uštede s Caveman kompresijom ulaza:
+`~118,000` standardnih tokena na `~23,900` RTK tokena, što predstavlja uštedu od `79.7%` (`~80%`). 67router koristi taj izvorni prosjek za izračun ulančane uštede s Caveman kompresijom ulaza:
 
 ```txt
 RTK prosjek:    80% uštede
@@ -50,7 +50,7 @@ RTK učitava filtre sljedećim redoslijedom:
 2. Globalni filtri iz `DATA_DIR/rtk/filters.toml` i `DATA_DIR/rtk/filters.json`.
 3. Ugrađeni filtri iz `open-sse/services/compression/engines/rtk/filters/`.
 
-Unutar istog opsega filtri TOML sheme v1 za RTK imaju prednost pred OmniRoute JSON filtrima. TOML
+Unutar istog opsega filtri TOML sheme v1 za RTK imaju prednost pred 67router JSON filtrima. TOML
 izrazi `match_command` provjeravaju se prije podudaranja prema vrsti naredbe kako bi uvezeni filtar specifičan za naredbu mogao nadjačati širi filtar u tom opsegu. Projektni opseg i dalje ima prednost pred globalnim opsegom, neovisno o formatu datoteke.
 
 Projektni filtri namjerno zahtijevaju potvrdu pouzdanosti jer filtri s regularnim izrazima mogu promijeniti način na koji se izlaz alata prikazuje agentima. Datoteka projektnog filtra prihvaća se kada vrijedi jedan od sljedećih uvjeta:
@@ -75,7 +75,7 @@ Prilagođeni filtri mogu biti jedan objekt filtra ili polje objekata filtara. Ne
 
 ## Kompatibilnost s RTK TOML shemom v1
 
-OmniRoute može raščlaniti, validirati, testirati i instalirati deklarativne datoteke filtara koje koriste RTK TOML shemu v1.
+67router može raščlaniti, validirati, testirati i instalirati deklarativne datoteke filtara koje koriste RTK TOML shemu v1.
 Podržana su polja `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` i umetnuti testovi `[[tests.<filter>]]`.
@@ -84,7 +84,7 @@ Nepoznata polja, neispravni ili nesigurni regularni izrazi, istodobna pravila uk
 validirati radi pregleda, ali se ne može instalirati ni učitati. Neuspjesi učitavanja prilagođenih datoteka i dalje
 se obrađuju u načinu fail-open: neispravna datoteka preskače se, a preostali filtri nastavljaju raditi.
 
-OmniRoute prima izlaz alata nakon što ga je klijent već zabilježio, pa `filter_stderr = true`
+67router prima izlaz alata nakon što ga je klijent već zabilježio, pa `filter_stderr = true`
 ne može promijeniti način bilježenja procesa. Polje se prihvaća bez učinka, a validacija vraća upozorenje.
 To je namjerno opisano kao **kompatibilnost s RTK TOML shemom v1**, a ne kao potpuna kompatibilnost
 s izvršnom datotekom RTK, shell hookovima, implementacijama naredbi u Rustu ili njegovom strukturom spremišta pouzdanih stavki.

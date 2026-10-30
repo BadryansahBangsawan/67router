@@ -5,7 +5,7 @@
 ---
 
 > **Isang linyang paglalarawan para sa bawat direktoryo at file sa root.**
-> Huling na-update: 2026-06-28 — OmniRoute v3.8.40
+> Huling na-update: 2026-06-28 — 67router v3.8.40
 >
 > Gamitin ang mapang ito upang mabilis na mag-navigate sa codebase. Para sa mas malalim na pagtalakay, sundan ang mga link patungo sa nakalaang dokumentasyon.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Kumpletong daloy ng release (mga skill, husky, conventional commit, pag-deploy)                     |
 | `COVERAGE_PLAN.md`          | Mga layunin sa coverage at kasalukuyang estado                                                      |
 | `FREE_TIERS.md`             | Piniling mga provider na may libreng tier (48+ libre + 11 OAuth)                                    |
-| `CLI-TOOLS.md`              | Mga external na integrasyon ng CLI + Internal OmniRoute CLI                                         |
+| `CLI-TOOLS.md`              | Mga external na integrasyon ng CLI + Internal 67router CLI                                          |
 | `I18N.md`                   | Arkitektura ng i18n, pagdaragdag ng wika, 67 locale                                                 |
 | `UNINSTALL.md`              | Mga hakbang para sa malinis na pag-uninstall                                                        |
 | `PROVIDER_REFERENCE.md`     | **Awtomatikong binuo** na katalogo ng 375 provider (muling buuin: `npm run gen:provider-reference`) |

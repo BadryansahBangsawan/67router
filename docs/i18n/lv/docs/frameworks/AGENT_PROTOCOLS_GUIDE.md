@@ -7,15 +7,15 @@
 > **Avots:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Pēdējo reizi atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute nodrošina trīs dažādas ar aģentiem saistītas saskarnes. Sākotnēji tās šķiet līdzīgas, taču risina atšķirīgas problēmas. Izmantojiet šo lapu, lai izvēlētos piemērotāko.
+67router nodrošina trīs dažādas ar aģentiem saistītas saskarnes. Sākotnēji tās šķiet līdzīgas, taču risina atšķirīgas problēmas. Izmantojiet šo lapu, lai izvēlētos piemērotāko.
 
 ## Īsumā
 
 | Saskarne                      | Vispiemērotākā                                                                                                                                    | Transports                      | Standarts                        |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | -------------------------------- |
 | **A2A — Agent-to-Agent**      | Sadarbībai starp aģentiem ar citiem aģentiem, kuri izmanto A2A protokolu                                                                          | JSON-RPC 2.0, izmantojot HTTP   | A2A v0.3 (atvērta specifikācija) |
-| **ACP — CLI aģentu reģistrs** | Lietotāja datorā instalētu CLI programmēšanas aģentu noteikšanai, reģistrēšanai un palaišanai (Cursor, Cline, Codex CLI, Claude Code, Aider u.c.) | HTTP REST                       | OmniRoute specifisks             |
-| **Mākoņa aģenti**             | Ilgstošu programmēšanas uzdevumu iesniegšanai ārējiem mākoņpakalpojumiem (Codex Cloud, Devin, Jules, Cursor Cloud)                                | HTTP REST + DB glabāti uzdevumi | OmniRoute specifisks             |
+| **ACP — CLI aģentu reģistrs** | Lietotāja datorā instalētu CLI programmēšanas aģentu noteikšanai, reģistrēšanai un palaišanai (Cursor, Cline, Codex CLI, Claude Code, Aider u.c.) | HTTP REST                       | 67router specifisks              |
+| **Mākoņa aģenti**             | Ilgstošu programmēšanas uzdevumu iesniegšanai ārējiem mākoņpakalpojumiem (Codex Cloud, Devin, Jules, Cursor Cloud)                                | HTTP REST + DB glabāti uzdevumi | 67router specifisks              |
 
 Visas trīs saskarnes ir neatkarīgas — izvēlieties jebkuru to kombināciju.
 
@@ -38,14 +38,14 @@ Vai jums ir nepieciešams mākoņpakalpojums, kas veic darbu ārpus šī datora 
 ## 1. A2A — Agent-to-Agent
 
 **Specifikācija:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute galapunkts:** `POST /a2a` (JSON-RPC 2.0)
+**67router galapunkts:** `POST /a2a` (JSON-RPC 2.0)
 **Aģenta karte:** `GET /.well-known/agent.json`
 
 ### Kad izmantot
 
-- Veidojot vairāku aģentu sistēmu, kurā OmniRoute ir viens no sadarbības dalībniekiem
-- Nodrošinot OmniRoute maršrutēšanas iespējas (`smart-routing`, `quota-management` u.c.) aģentiem tādos ietvaros kā Google ADK vai vispārīgos aģentu tīklos
-- Ietverot OmniRoute standarta atklāšanas un izsaukšanas saskarnē
+- Veidojot vairāku aģentu sistēmu, kurā 67router ir viens no sadarbības dalībniekiem
+- Nodrošinot 67router maršrutēšanas iespējas (`smart-routing`, `quota-management` u.c.) aģentiem tādos ietvaros kā Google ADK vai vispārīgos aģentu tīklos
+- Ietverot 67router standarta atklāšanas un izsaukšanas saskarnē
 
 ### Metodes
 
@@ -69,12 +69,12 @@ Transporta informāciju, aģenta kartes struktūru, uzdevumu TTL konfigurāciju 
 
 ## 2. ACP — CLI aģentu reģistrs
 
-**OmniRoute galapunkts:** `GET /api/acp/agents`
+**67router galapunkts:** `GET /api/acp/agents`
 **Avots:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Kas tas ir
 
-ACP ir OmniRoute **lokālais CLI aģentu inventārs**. Tas nosaka, kuri programmēšanas CLI ir instalēti resursdatorā (Cursor, Cline, Claude Code, Codex CLI, Continue u.c.), nosaka to versijas un parāda tos informācijas panelī, lai lietotājs varētu konfigurēt katru CLI savienojumam ar OmniRoute.
+ACP ir 67router **lokālais CLI aģentu inventārs**. Tas nosaka, kuri programmēšanas CLI ir instalēti resursdatorā (Cursor, Cline, Claude Code, Codex CLI, Continue u.c.), nosaka to versijas un parāda tos informācijas panelī, lai lietotājs varētu konfigurēt katru CLI savienojumam ar 67router.
 
 HTTP saskarne ir iekšējs inventārs, kas nodrošina „CLI Tools” lietotāja saskarnes un
 CLI kontrolsignatūru izsekošanas darbību (skatiet [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Atsevišķi
@@ -114,8 +114,8 @@ POST pieprasījuma pamatteksta struktūra (`customAgentBodySchema` failā `src/a
 
 ### Lietošanas gadījumi
 
-- Informācijas paneļa lapa „CLI Tools” uzskaita instalētos rīkus un palīdz katru no tiem konfigurēt savienojumam ar OmniRoute
-- Pielāgotie aģenti ļauj pieredzējušiem lietotājiem reģistrēt iekšējus/patentētus CLI, kurus OmniRoute pēc noklusējuma neatpazīst
+- Informācijas paneļa lapa „CLI Tools” uzskaita instalētos rīkus un palīdz katru no tiem konfigurēt savienojumam ar 67router
+- Pielāgotie aģenti ļauj pieredzējušiem lietotājiem reģistrēt iekšējus/patentētus CLI, kurus 67router pēc noklusējuma neatpazīst
 - Noteikšanas rezultāts nodrošina `cli-tools` kontrolsignatūru matricu
 
 ### Kad ACP NAV jāizmanto
@@ -127,12 +127,12 @@ POST pieprasījuma pamatteksta struktūra (`customAgentBodySchema` failā `src/a
 
 ## 3. Mākoņa aģenti
 
-**OmniRoute galapunkti:** `/api/v1/agents/tasks/*` (dzīves cikls) + `/api/cloud/*` (infrastruktūra)
+**67router galapunkti:** `/api/v1/agents/tasks/*` (dzīves cikls) + `/api/cloud/*` (infrastruktūra)
 **Avots:** `src/lib/cloudAgent/`
 
 ### Kas tas ir
 
-Vienota saskarne darbam ar trešo pušu mākoņa programmēšanas aģentiem. Jūs iesniedzat uzvedni un repozitorija URL, OmniRoute nosūta pieprasījumu pareizajam mākoņa aģentam, periodiski pārbauda statusu un atgriež rezultātus.
+Vienota saskarne darbam ar trešo pušu mākoņa programmēšanas aģentiem. Jūs iesniedzat uzvedni un repozitorija URL, 67router nosūta pieprasījumu pareizajam mākoņa aģentam, periodiski pārbauda statusu un atgriež rezultātus.
 
 ### Atbalstītie aģenti (3, visi apstiprināti mapē `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Abiem ir „ilgstoši uzdevumi”, taču dažādos līmeņos:
 
 | Aspekts                  | A2A                                                                                                    | Mākoņa aģenti                               |
 | ------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------- |
-| Standarts                | Atvērtais A2A v0.3                                                                                     | Specifisks OmniRoute                        |
-| Kur notiek izpilde       | OmniRoute iekšienē (izmanto konfigurētās kombinācijas)                                                 | Ārēji (Codex / Devin / Jules serveros)      |
+| Standarts                | Atvērtais A2A v0.3                                                                                     | Specifisks 67router                         |
+| Kur notiek izpilde       | 67router iekšienē (izmanto konfigurētās kombinācijas)                                                  | Ārēji (Codex / Devin / Jules serveros)      |
 | Uzdevuma ilgums          | Noklusējuma TTL — 5 min (konfigurējams sadaļā `TaskManager`)                                           | No minūtēm līdz stundām                     |
 | Repozitorija pārzināšana | Nē (nodod tikai uzvednes)                                                                              | Jā (repozitorija URL + zars)                |
 | Lietošanas gadījums      | Aģentu savstarpēja sadarbība, viedā maršrutēšana kā pakalpojums                                        | Deleģēt „ieviest funkciju X repozitorijā Y” |
@@ -182,7 +182,7 @@ Abiem ir „ilgstoši uzdevumi”, taču dažādos līmeņos:
 
 ## Integrācijas piemēri
 
-### OmniRoute A2A iespēju atklāšana
+### 67router A2A iespēju atklāšana
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Atgriež aģenta karti ar visām 6 prasmēm, transportiem un versiju.
 
-### OmniRoute izsaukšana kā A2A aģentam
+### 67router izsaukšana kā A2A aģentam
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │  OmniRoute kodols   │
+                │  67router kodols   │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

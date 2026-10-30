@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (한국어)
+# 🐳 Docker Guide — 67router (한국어)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [환경 파일 사용](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [사용 가능한 프로필](#available-profiles)
-- [OmniRoute가 Docker에서 실행될 때 호스트 CLI 도구 구성](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [67router가 Docker에서 실행될 때 호스트 CLI 도구 구성](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis 사이드카](#redis-sidecar)
 - [프로덕션 Compose](#production-compose)
 - [Dockerfile 스테이지](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## 사용 가능한 프로필
 
-OmniRoute는 주요 배포 형태를 위한 Compose 프로필을 제공합니다. 환경에 적합한 프로필을 선택하세요.
+67router는 주요 배포 형태를 위한 Compose 프로필을 제공합니다. 환경에 적합한 프로필을 선택하세요.
 
 | 프로필         | 서비스           | 사용 시점                                                                                                                                   | 명령                                         |
 | -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute는 주요 배포 형태를 위한 Compose 프로필을 제공합니다
 
 > 여러 프로필을 조합할 수 있습니다: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## OmniRoute가 Docker에서 실행될 때 호스트 CLI 도구 구성하기
+## 67router가 Docker에서 실행될 때 호스트 CLI 도구 구성하기
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` 및 대시보드의
 **구성 저장** 버튼은 모두 `~/.codex/*.config.toml`과 같은 파일을 작성합니다. 이러한 경로는
@@ -103,11 +103,11 @@ CLI가 실제로 실행되는 머신에서만 의미가 있습니다. 컨테이�
 작성됩니다. 호스트 CLI는 이 파일을 읽지 않으며, 컨테이너가 다시 생성되는 즉시
 삭제됩니다.
 
-OmniRoute는 이를 감지하며, 사용할 수 없는 성공 결과를 보고하는 대신
+67router는 이를 감지하며, 사용할 수 없는 성공 결과를 보고하는 대신
 쓰기 작업을 거부하고 안내를 제공합니다. CLI는 `2`로 종료되고 API는
 `containerEphemeralTarget: true`와 함께 `422`로 응답합니다.
 
-### 권장: CLI는 호스트에서, OmniRoute는 Docker에서 실행
+### 권장: CLI는 호스트에서, 67router는 Docker에서 실행
 
 컨테이너는 API를 제공하고, CLI는 호스트 도구를 구성합니다.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-경로를 신뢰할 수 있게 만드는 것은 바인드 마운트입니다. OmniRoute는
+경로를 신뢰할 수 있게 만드는 것은 바인드 마운트입니다. 67router는
 `/proc/self/mountinfo`를 읽고 마운트된 경로에 대한 쓰기를 허용합니다. 또한 하위 항목이
 마운트된 디렉터리에 대한 쓰기도 허용하는데, 위의 `/host-home` 구조가 바로 이에
 해당합니다. 마운트되지 않은 경로에 대한 쓰기는 계속 거부됩니다.
@@ -178,7 +178,7 @@ CLI가 실제로 컨테이너 내부에 존재하는 경우(`cli` 프로필)에�
 
 ## Redis 사이드카
 
-OmniRoute는 분산 속도 제한기와 공유 캐시를 지원하기 위해 Redis를 사용합니다. `redis` 서비스는 `docker-compose.yml`에 **항상 정의되어 있으며**(프로필 제한이 없음), 다른 모든 프로필과 함께 시작됩니다.
+67router는 분산 속도 제한기와 공유 캐시를 지원하기 위해 Redis를 사용합니다. `redis` 서비스는 `docker-compose.yml`에 **항상 정의되어 있으며**(프로필 제한이 없음), 다른 모든 프로필과 함께 시작됩니다.
 
 | 세부 정보             | 값                                      |
 | --------------------- | --------------------------------------- |
@@ -365,7 +365,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ## 하위 경로에서의 리버스 프록시 (Traefik / nginx)
 
-Next.js `basePath`는 standalone 번들에 컴파일됩니다. OmniRoute는 앱 루트의 센티널 파일에 빌드 시점의
+Next.js `basePath`는 standalone 번들에 컴파일됩니다. 67router는 앱 루트의 센티널 파일에 빌드 시점의
 값을 기록하고(`npm run build` 중에 작성되고
 `scripts/docker/ensure-docker-base-path.mjs`에서 읽음), 컨테이너가 시작될 때
 `OMNIROUTE_BASE_PATH`와 비교합니다. 값이 서로 다르고 이미지가 도메인 루트용으로
@@ -439,7 +439,7 @@ Docker 헬스 체크는 활성 `OMNIROUTE_BASE_PATH`가 접두사로 붙은 경�
 
 ## Caddy를 사용한 Docker Compose (HTTPS Auto-TLS)
 
-Caddy의 자동 SSL 프로비저닝을 사용하여 OmniRoute를 안전하게 외부에 공개할 수 있습니다. 도메인의 DNS A 레코드가 서버의 IP를 가리키는지 확인하세요.
+Caddy의 자동 SSL 프로비저닝을 사용하여 67router를 안전하게 외부에 공개할 수 있습니다. 도메인의 DNS A 레코드가 서버의 IP를 가리키는지 확인하세요.
 
 ```yaml
 services:
@@ -470,11 +470,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy는 업스트림 컨테이너에 표준 전달 헤더를 설정합니다. OmniRoute는
+Caddy는 업스트림 컨테이너에 표준 전달 헤더를 설정합니다. 67router는
 OAuth 콜백 및 생성된 공개 링크의 정식 공개 오리진으로 `NEXT_PUBLIC_BASE_URL`을
 사용하며, 인증된 대시보드 쓰기 작업에는 동일 오리진 요청과 세션 기반 CSRF
 보호를 사용합니다. 명시적 구성 대신 신뢰할 수 있는 전달 헤더에서 공개 오리진을
-파생하도록 OmniRoute를 의도적으로 설정하는 고급 배포에서만 `OMNIROUTE_TRUST_PROXY`를 활성화하세요.
+파생하도록 67router를 의도적으로 설정하는 고급 배포에서만 `OMNIROUTE_TRUST_PROXY`를 활성화하세요.
 
 ## Cloudflare Quick Tunnel
 
@@ -485,11 +485,11 @@ Docker 배포용 대시보드는 `Dashboard → Endpoints`에서 한 번의 클�
 ### 터널 참고 사항
 
 - Quick Tunnel URL은 임시로 제공되며 재시작할 때마다 변경됩니다.
-- OmniRoute 또는 컨테이너를 재시작한 후에는 Quick Tunnel이 자동으로 복원되지 않습니다. 필요할 때 대시보드에서 다시 활성화하세요.
+- 67router 또는 컨테이너를 재시작한 후에는 Quick Tunnel이 자동으로 복원되지 않습니다. 필요할 때 대시보드에서 다시 활성화하세요.
 - 관리형 설치는 현재 `x64` / `arm64` 기반 Linux, macOS 및 Windows를 지원합니다.
 - 관리형 Quick Tunnel은 리소스가 제한된 컨테이너 환경에서 불필요하게 많은 QUIC UDP 버퍼 경고가 발생하는 것을 방지하기 위해 기본적으로 HTTP/2 전송을 사용합니다. 다른 전송 방식을 사용하려면 `CLOUDFLARED_PROTOCOL=quic` 또는 `auto`로 설정하세요.
 - Docker 이미지에는 시스템 CA 루트가 포함되어 있으며 관리형 `cloudflared`에 전달됩니다. 이를 통해 컨테이너 내부에서 터널을 부트스트랩할 때 발생하는 TLS 신뢰 오류를 방지합니다.
-- OmniRoute가 바이너리를 다운로드하는 대신 기존 바이너리를 사용하도록 하려면 `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`로 설정하세요.
+- 67router가 바이너리를 다운로드하는 대신 기존 바이너리를 사용하도록 하려면 `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`로 설정하세요.
 
 ## 이미지 태그
 
@@ -502,7 +502,7 @@ Docker 배포용 대시보드는 `Dashboard → Endpoints`에서 한 번의 클�
 
 ### 릴리스 채널
 
-OmniRoute는 안정 릴리스, 활성 릴리스 브랜치 테스트 및 개발 빌드를 위해 별도의 Docker 채널을 게시합니다.
+67router는 안정 릴리스, 활성 릴리스 브랜치 테스트 및 개발 빌드를 위해 별도의 Docker 채널을 게시합니다.
 
 | 채널                            | 소스                             | 변경 가능 여부                 | 권장 용도                                                                                                      |
 | ------------------------------- | -------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------- |
@@ -555,7 +555,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-테스트하기 전에 OmniRoute 데이터 볼륨이나 바인드 마운트된 데이터 디렉터리를 백업하세요. 롤백하려면 이전에 사용하던 안정 버전 또는 다이제스트를 복원하고 컨테이너를 다시 생성합니다.
+테스트하기 전에 67router 데이터 볼륨이나 바인드 마운트된 데이터 디렉터리를 백업하세요. 롤백하려면 이전에 사용하던 안정 버전 또는 다이제스트를 복원하고 컨테이너를 다시 생성합니다.
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -575,7 +575,7 @@ docker compose up -d
 
 ## Docker의 대시보드 업데이트
 
-게시된 이미지의 컨테이너는 스스로를 교체할 수 없습니다. OmniRoute는 컨테이너 내부에서 실행 중임을 감지하면(`.git` 체크아웃이 아니고 npm 설치도 아닌 경우), 홈 대시보드의 업데이트 배너에 npm/git 지침 대신 호스트에서 실행할 명령과 복사 버튼을 표시합니다.
+게시된 이미지의 컨테이너는 스스로를 교체할 수 없습니다. 67router는 컨테이너 내부에서 실행 중임을 감지하면(`.git` 체크아웃이 아니고 npm 설치도 아닌 경우), 홈 대시보드의 업데이트 배너에 npm/git 지침 대신 호스트에서 실행할 명령과 복사 버튼을 표시합니다.
 
 ```bash
 docker compose pull omniroute && docker compose up -d --force-recreate omniroute
@@ -585,7 +585,7 @@ docker compose pull omniroute && docker compose up -d --force-recreate omniroute
 
 ### 호스트 트리거 파일을 사용한 원클릭 업데이트
 
-컨테이너에 호스트의 root 권한을 부여하는 `/var/run/docker.sock`을 마운트하지 않고도 **지금 업데이트**가 작동하도록 하려면(위의 `cli` 프로필 경고 참조), OmniRoute 서비스에 `DOCKER_UPDATE_TRIGGER_FILE`을 설정하고 호스트에서 감시 프로그램을 실행하십시오.
+컨테이너에 호스트의 root 권한을 부여하는 `/var/run/docker.sock`을 마운트하지 않고도 **지금 업데이트**가 작동하도록 하려면(위의 `cli` 프로필 경고 참조), 67router 서비스에 `DOCKER_UPDATE_TRIGGER_FILE`을 설정하고 호스트에서 감시 프로그램을 실행하십시오.
 
 ```yaml
 services:
@@ -596,14 +596,14 @@ services:
       - ./data:/app/data
 ```
 
-경로는 `DATA_DIR` 내부에 있어야 하며(상대 값은 이를 기준으로 해석됨), 그 외의 경로는 거부됩니다. 그러면 **지금 업데이트**는 `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }`를 해당 파일에 쓰고 `202`로 응답합니다. 이후 대시보드는 새 버전이 실행될 때까지 `/api/system/version`을 폴링한 다음 다시 로드합니다. 이 모드에서 OmniRoute는 셸이나 Docker 명령을 실행하지 않습니다. 모든 업데이트 작업과 마찬가지로 요청은 루프백/LAN 클라이언트에서 온 경우에만 수락됩니다.
+경로는 `DATA_DIR` 내부에 있어야 하며(상대 값은 이를 기준으로 해석됨), 그 외의 경로는 거부됩니다. 그러면 **지금 업데이트**는 `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }`를 해당 파일에 쓰고 `202`로 응답합니다. 이후 대시보드는 새 버전이 실행될 때까지 `/api/system/version`을 폴링한 다음 다시 로드합니다. 이 모드에서 67router는 셸이나 Docker 명령을 실행하지 않습니다. 모든 업데이트 작업과 마찬가지로 요청은 루프백/LAN 클라이언트에서 온 경우에만 수락됩니다.
 
 바인드 마운트된 데이터 디렉터리를 사용하면 호스트에서 감시할 수 있는 안정적인 경로가 제공됩니다. `systemd` 유닛 예시(`/srv/omniroute`를 compose 파일과 `data/`가 있는 디렉터리로 조정):
 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=OmniRoute 대시보드 업데이트 요청 감시
+Description=67router 대시보드 업데이트 요청 감시
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -615,7 +615,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=OmniRoute 컨테이너를 가져와 다시 생성
+Description=67router 컨테이너를 가져와 다시 생성
 
 [Service]
 Type=oneshot
@@ -634,13 +634,13 @@ sudo systemctl enable --now omniroute-update.path
 
 ## 가용성: 기본 SQLite는 단일 복제본 구성
 
-기본 Docker / Kubernetes OmniRoute는 **하나의 Node 프로세스 + 하나의 SQLite 작성자**로 구성됩니다. 이 토폴로지에서는 고가용성이 **지원되지 않습니다**.
+기본 Docker / Kubernetes 67router는 **하나의 Node 프로세스 + 하나의 SQLite 작성자**로 구성됩니다. 이 토폴로지에서는 고가용성이 **지원되지 않습니다**.
 
-| 제약 조건                          | 결과                                                                                                                                                                                                                                                                                                                  |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 단일 작성자                        | 동일한 SQLite 파일에 대해 여러 복제본을 실행하지 **마십시오**. 그러면 DB가 손상됩니다.                                                                                                                                                                                                                                |
-| 재생성 / 재시작 / HEALTHCHECK 종료 | 진행 중인 SSE, 대시보드 세션 및 메모리 내 상태가 **완전히 중단**됩니다. 연결된 모든 클라이언트의 연결이 끊어집니다. 엔드포인트가 비어 있는 동안의 새 요청은 OmniRoute JSON이 아닌 리버스 프록시의 **`502 Bad Gateway: Unknown error`**를 받습니다. 따라서 클라이언트는 이를 제공자 장애와 구분할 수 없습니다(#11015). |
-| `/healthz`와 동일한 이벤트 루프    | 사용량이 많은 카탈로그 또는 압축 틱으로 인해 프로브가 지연될 수 있으며, 이때 짧은 제한 시간은 **유일한** 복제본을 재시작하게 만듭니다.                                                                                                                                                                                |
+| 제약 조건                          | 결과                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 단일 작성자                        | 동일한 SQLite 파일에 대해 여러 복제본을 실행하지 **마십시오**. 그러면 DB가 손상됩니다.                                                                                                                                                                                                                               |
+| 재생성 / 재시작 / HEALTHCHECK 종료 | 진행 중인 SSE, 대시보드 세션 및 메모리 내 상태가 **완전히 중단**됩니다. 연결된 모든 클라이언트의 연결이 끊어집니다. 엔드포인트가 비어 있는 동안의 새 요청은 67router JSON이 아닌 리버스 프록시의 **`502 Bad Gateway: Unknown error`**를 받습니다. 따라서 클라이언트는 이를 제공자 장애와 구분할 수 없습니다(#11015). |
+| `/healthz`와 동일한 이벤트 루프    | 사용량이 많은 카탈로그 또는 압축 틱으로 인해 프로브가 지연될 수 있으며, 이때 짧은 제한 시간은 **유일한** 복제본을 재시작하게 만듭니다.                                                                                                                                                                               |
 
 **프로브 매트릭스**([Kubernetes 프로브 권장 사항](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)도 참조):
 
@@ -743,7 +743,7 @@ IPv4/IPv6 연결, VPN 라우팅 및 구성된 프록시는 서로 다를 수 있
 
 ### 연결별 프록시 우선 사용
 
-문제가 발생한 Gemini 연결에 OmniRoute의 [연결별 프록시 구성](../ops/PROXY_GUIDE.md#4-level-proxy-system)을
+문제가 발생한 Gemini 연결에 67router의 [연결별 프록시 구성](../ops/PROXY_GUIDE.md#4-level-proxy-system)을
 사용한 다음, 동일한 모델로 **연결 테스트**와 간단한 요청을 다시 실행하세요.
 이렇게 하면 라우팅 변경의 범위가 해당 연결로 제한됩니다. 컨테이너에서 프록시에
 접근할 수 있는지, 그리고 연결이 실제로 해당 프록시를 선택하는지 확인하세요.
@@ -820,7 +820,7 @@ Node의 DNS 순서와 연결 선택도 영향을 미칩니다. 특히
 
 ## 중요 참고 사항
 
-- **SQLite WAL 모드:** OmniRoute가 최신 변경 사항을 `storage.sqlite`에 체크포인트할 수 있도록 `docker stop`이 완료될 때까지 기다려야 합니다. 번들로 제공되는 Compose 파일에는 이미 40초의 종료 유예 기간이 설정되어 있습니다. 이미지를 직접 실행하는 경우 `--stop-timeout 40`을 유지하세요.
+- **SQLite WAL 모드:** 67router가 최신 변경 사항을 `storage.sqlite`에 체크포인트할 수 있도록 `docker stop`이 완료될 때까지 기다려야 합니다. 번들로 제공되는 Compose 파일에는 이미 40초의 종료 유예 기간이 설정되어 있습니다. 이미지를 직접 실행하는 경우 `--stop-timeout 40`을 유지하세요.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** 정기/쓰기 전 백업을 외부에서 관리하는 경우 `true`로 설정하세요. 기존 데이터베이스 마이그레이션에는 여전히 별도의 내구성 있는 안전 스냅샷과 대규모 마이그레이션 보호 장치가 필요합니다.
 - **데이터 영속성:** 컨테이너를 재시작해도 데이터베이스, 키 및 설정이 유지되도록 항상 `/app/data`에 볼륨을 마운트하세요.
 - **포트 설정:** 기본 포트 `20128`을 변경하려면 `PORT` 환경 변수를 재정의하세요.

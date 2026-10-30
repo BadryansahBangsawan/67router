@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (తెలుగు)
+# 📖 Setup Guide — 67router (తెలుగు)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute కోసం పూర్తి సెటప్ సూచన. సంక్షిప్త వెర్షన్ కోసం, [READMEలోని త్వరిత ప్రారంభం](../README.md#-quick-start) చూడండి.
+> 67router కోసం పూర్తి సెటప్ సూచన. సంక్షిప్త వెర్షన్ కోసం, [READMEలోని త్వరిత ప్రారంభం](../README.md#-quick-start) చూడండి.
 
 ## విషయ సూచిక
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR ప్యాకేజీ](https://aur.archlinux.org/packages/omniroute-bin) OmniRouteను ఇన్స్టాల్ చేసి, systemd వినియోగదారు సేవను అందిస్తుంది.
+[AUR ప్యాకేజీ](https://aur.archlinux.org/packages/omniroute-bin) 67routerను ఇన్స్టాల్ చేసి, systemd వినియోగదారు సేవను అందిస్తుంది.
 
 ### సోర్స్ నుండి
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows గమనిక:** లెగసీ `%USERPROFILE%\.omniroute` డైరెక్టరీ లేకపోతే, డిఫాల్ట్గా OmniRoute `%APPDATA%\omniroute`ను ఉపయోగిస్తుంది. వేరొక డేటా-డైరెక్టరీ స్థానాన్ని ఎంచుకోవడానికి `DATA_DIR`ను సెట్ చేయండి.
+> **Windows గమనిక:** లెగసీ `%USERPROFILE%\.omniroute` డైరెక్టరీ లేకపోతే, డిఫాల్ట్గా 67router `%APPDATA%\omniroute`ను ఉపయోగిస్తుంది. వేరొక డేటా-డైరెక్టరీ స్థానాన్ని ఎంచుకోవడానికి `DATA_DIR`ను సెట్ చేయండి.
 
 > **గమనిక:** మొదటిసారి అమలు చేసినప్పుడు `npm install`, `.env.example` నుండి `.env`ను స్వయంచాలకంగా రూపొందిస్తుంది. తరువాతి ఇన్స్టాలేషన్లు ఇప్పటికే ఉన్న `.env`ను ఓవర్రైట్ చేయవు, కాబట్టి అనుకూలీకరణలు భద్రపరచబడతాయి. మళ్లీ రూపొందించడానికి, తిరిగి అమలు చేసే ముందు `.env`ను తొలగించండి.
 
@@ -64,7 +64,7 @@ Compose ప్రొఫైల్లు మరియు Caddy HTTPSతో సహ�
 
 ### డెస్క్టాప్ యాప్ (Electron)
 
-OmniRoute, Electron 41 + electron-builder 26.10పై నిర్మించిన డెస్క్టాప్ ర్యాపర్తో వస్తుంది. అందుబాటులో ఉన్న స్క్రిప్ట్లు (వర్క్స్పేస్ రూట్):
+67router, Electron 41 + electron-builder 26.10పై నిర్మించిన డెస్క్టాప్ ర్యాపర్తో వస్తుంది. అందుబాటులో ఉన్న స్క్రిప్ట్లు (వర్క్స్పేస్ రూట్):
 
 ```bash
 npm run electron:dev          # హాట్-రీలోడ్తో డెస్క్టాప్ను అమలు చేయండి
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-env varsతో (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, మొదలైనవి) కలిపి ఉపయోగించడం ద్వారా, పూర్తిగా స్క్రిప్ట్ చేయగల OmniRoute ఇన్స్టాన్స్ను ప్రారంభించవచ్చు.
+env varsతో (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, మొదలైనవి) కలిపి ఉపయోగించడం ద్వారా, పూర్తిగా స్క్రిప్ట్ చేయగల 67router ఇన్స్టాన్స్ను ప్రారంభించవచ్చు.
 
 ### CLI ఎంపికలు
 
@@ -99,7 +99,7 @@ env varsతో (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, మొదల�
 | `omniroute config`      | CLI సాధనం కాన్ఫిగరేషన్ — కాన్ఫిగ్లను జాబితా చేయండి, పొందండి, సెట్ చేయండి, ధ్రువీకరించండి                        |
 | `omniroute status`      | ఆఫ్లైన్ స్థితి డాష్బోర్డ్ — వెర్షన్, DB, సాధనాలు, కాన్ఫిగ్                                                      |
 | `omniroute logs`        | API నుండి వినియోగ లాగ్లను స్ట్రీమ్ చేయండి (`--follow`కు మద్దతు ఉంది)                                            |
-| `omniroute update`      | OmniRoute అప్డేట్ల కోసం తనిఖీ చేయండి లేదా వాటిని వర్తింపజేయండి                                                  |
+| `omniroute update`      | 67router అప్డేట్ల కోసం తనిఖీ చేయండి లేదా వాటిని వర్తింపజేయండి                                                   |
 | `omniroute provider`    | ప్రొవైడర్ కనెక్షన్లను నిర్వహించండి — జోడించండి, జాబితా చేయండి, తొలగించండి, పరీక్షించండి, డిఫాల్ట్గా సెట్ చేయండి |
 | `omniroute --port 3000` | ప్రామాణిక/API పోర్ట్ను 3000కు సెట్ చేయండి                                                                       |
 | `omniroute --mcp`       | MCP సర్వర్ను ప్రారంభించండి (stdio ట్రాన్స్పోర్ట్)                                                               |
@@ -166,7 +166,7 @@ Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode మరియు OpenAI
 #### `setup-*`తో ఆటోమేటిక్గా కాన్ఫిగర్ చేయండి
 
 బేస్ URL మరియు కీని చేతితో పేస్ట్ చేయడానికి బదులుగా, లైవ్ మోడల్ కేటలాగ్ నుండి ప్రతి టూల్కు
-సంబంధించిన స్వంత కాన్ఫిగ్ను OmniRoute రాయనివ్వండి. ప్రతి టూల్కు ఒక కమాండ్:
+సంబంధించిన స్వంత కాన్ఫిగ్ను 67router రాయనివ్వండి. ప్రతి టూల్కు ఒక కమాండ్:
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml ప్రొఫైళ్లు
@@ -184,7 +184,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-**రిమోట్** OmniRouteతో ఉపయోగించేందుకు లోకల్ టూల్ను కాన్ఫిగర్ చేయడానికి ప్రతి కమాండ్
+**రిమోట్** 67routerతో ఉపయోగించేందుకు లోకల్ టూల్ను కాన్ఫిగర్ చేయడానికి ప్రతి కమాండ్
 `--remote <url> --api-key <key>`ను, ప్రివ్యూ కోసం `--dry-run`ను అంగీకరిస్తుంది. సరైన
 envను ఇంజెక్ట్ చేసి, ఎలాంటి కాన్ఫిగ్ను రాయకుండానే CLIని ప్రారంభించడానికి సాధారణ లాంచర్
 `omniroute run <target>`ను (claude, codex, aider, goose, opencode, qwen, gemini) ఉపయోగించండి;
@@ -277,15 +277,15 @@ curl -X POST http://localhost:20128/a2a \
 | వేరియబుల్                | డిఫాల్ట్                                  | ఉద్దేశ్యం                                                                                                                                                                     |
 | ------------------------ | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                                  | అప్స్ట్రీమ్ రెస్పాన్స్ ప్రారంభ టైమ్అవుట్, అంతర్గత Undici టైమ్అవుట్లు, TLS ఫింగర్ప్రింట్ అభ్యర్థనలు మరియు API బ్రిడ్జ్ అభ్యర్థన/ప్రాక్సీ టైమ్అవుట్ల కోసం ఉమ్మడి ప్రాథమిక విలువ |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` నుంచి స్వీకరిస్తుంది | OmniRoute SSE స్ట్రీమ్ను నిలిపివేయడానికి ముందు స్ట్రీమింగ్ చంక్ల మధ్య అనుమతించే గరిష్ఠ విరామం                                                                                 |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` నుంచి స్వీకరిస్తుంది | 67router SSE స్ట్రీమ్ను నిలిపివేయడానికి ముందు స్ట్రీమింగ్ చంక్ల మధ్య అనుమతించే గరిష్ఠ విరామం                                                                                  |
 
 వెనుకబడిన అనుకూలత కొనసాగించబడుతుంది: ఇప్పటికే ఉన్న `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` మరియు ఇతర ప్రతి-లేయర్ టైమ్అవుట్ వేరియబుల్స్ ఇప్పటికీ పని చేస్తాయి మరియు ఉమ్మడి ప్రాథమిక విలువను ఓవర్రైడ్ చేస్తాయి.
 
 ### ప్రొవైడర్-నిర్దిష్ట గమనికలు
 
-Claude Code-అనుకూల అప్స్ట్రీమ్ల (`anthropic-compatible-cc-*`) కోసం, ప్రొవైడర్ వైపు రీడ్ టైమ్అవుట్లు మీ env కాన్ఫిగరేషన్తో సమలేఖనంగా ఉండేలా, పరిష్కరించబడిన ఫెచ్ టైమ్అవుట్ నుంచి అవుట్బౌండ్ `X-Stainless-Timeout` హెడర్ను OmniRoute ఉత్పన్నం చేస్తుంది.
+Claude Code-అనుకూల అప్స్ట్రీమ్ల (`anthropic-compatible-cc-*`) కోసం, ప్రొవైడర్ వైపు రీడ్ టైమ్అవుట్లు మీ env కాన్ఫిగరేషన్తో సమలేఖనంగా ఉండేలా, పరిష్కరించబడిన ఫెచ్ టైమ్అవుట్ నుంచి అవుట్బౌండ్ `X-Stainless-Timeout` హెడర్ను 67router ఉత్పన్నం చేస్తుంది.
 
-థర్డ్-పార్టీ Claude Code-అనుకూల రివర్స్ ప్రాక్సీల కోసం, OmniRoute డిఫాల్ట్ `anthropic-beta` సెట్ను పరిమితంగా ఉంచుతుంది మరియు `Client Cache Control`ను `Auto`లో ఉంచినప్పుడు, క్లయింట్ అందించిన `cache_control` మార్కర్లను మాత్రమే ఫార్వర్డ్ చేస్తుంది. అప్స్ట్రీమ్కు ప్రత్యేకంగా రిడాక్ట్ చేయబడిన Claude థింకింగ్ స్ట్రీమ్లు అవసరమైనప్పుడు మాత్రమే, ప్రతి కనెక్షన్కు సంబంధించిన "Enable redact-thinking beta" టాగుల్ను ప్రారంభించండి.
+థర్డ్-పార్టీ Claude Code-అనుకూల రివర్స్ ప్రాక్సీల కోసం, 67router డిఫాల్ట్ `anthropic-beta` సెట్ను పరిమితంగా ఉంచుతుంది మరియు `Client Cache Control`ను `Auto`లో ఉంచినప్పుడు, క్లయింట్ అందించిన `cache_control` మార్కర్లను మాత్రమే ఫార్వర్డ్ చేస్తుంది. అప్స్ట్రీమ్కు ప్రత్యేకంగా రిడాక్ట్ చేయబడిన Claude థింకింగ్ స్ట్రీమ్లు అవసరమైనప్పుడు మాత్రమే, ప్రతి కనెక్షన్కు సంబంధించిన "Enable redact-thinking beta" టాగుల్ను ప్రారంభించండి.
 
 ### అధునాతన టైమ్అవుట్ ఓవర్రైడ్లు
 
@@ -303,11 +303,11 @@ Claude Code-అనుకూల అప్స్ట్రీమ్ల (`anthropic-
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                                  | API బ్రిడ్జ్ సర్వర్పై keep-alive టైమ్అవుట్                                         |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                     | API బ్రిడ్జ్ సర్వర్పై సాకెట్ నిష్క్రియ టైమ్అవుట్ (`0` దీన్ని నిలిపివేస్తుంది)      |
 
-> **గమనిక:** స్ట్రీమింగ్ అభ్యర్థనల కోసం, `FETCH_TIMEOUT_MS` కనెక్షన్ సెటప్ / మొదటి అప్స్ట్రీమ్ రెస్పాన్స్ కోసం వేచి ఉండడాన్ని మాత్రమే కవర్ చేస్తుంది. స్ట్రీమ్ సక్రియమైన తర్వాత, వాస్తవంగా నిలిచిపోవడం (`STREAM_IDLE_TIMEOUT_MS`) లేదా Undici బాడీ నిష్క్రియత (`FETCH_BODY_TIMEOUT_MS`) సంభవించినప్పుడు మాత్రమే OmniRoute దాన్ని నిలిపివేస్తుంది.
+> **గమనిక:** స్ట్రీమింగ్ అభ్యర్థనల కోసం, `FETCH_TIMEOUT_MS` కనెక్షన్ సెటప్ / మొదటి అప్స్ట్రీమ్ రెస్పాన్స్ కోసం వేచి ఉండడాన్ని మాత్రమే కవర్ చేస్తుంది. స్ట్రీమ్ సక్రియమైన తర్వాత, వాస్తవంగా నిలిచిపోవడం (`STREAM_IDLE_TIMEOUT_MS`) లేదా Undici బాడీ నిష్క్రియత (`FETCH_BODY_TIMEOUT_MS`) సంభవించినప్పుడు మాత్రమే 67router దాన్ని నిలిపివేస్తుంది.
 
 ### రివర్స్ ప్రాక్సీ అనుకూలత
 
-మీరు Nginx, Caddy, Cloudflare లేదా మరొక రివర్స్ ప్రాక్సీ వెనుక OmniRouteను అమలు చేస్తే, ప్రాక్సీ టైమ్అవుట్లు కూడా మీ OmniRoute స్ట్రీమ్/ఫెచ్ టైమ్అవుట్ల కంటే ఎక్కువగా ఉండేలా చూసుకోండి.
+మీరు Nginx, Caddy, Cloudflare లేదా మరొక రివర్స్ ప్రాక్సీ వెనుక 67routerను అమలు చేస్తే, ప్రాక్సీ టైమ్అవుట్లు కూడా మీ 67router స్ట్రీమ్/ఫెచ్ టైమ్అవుట్ల కంటే ఎక్కువగా ఉండేలా చూసుకోండి.
 
 ---
 

@@ -7,29 +7,29 @@
 > **Zdroj pravdy:** `src/lib/skills/` a `src/app/api/skills/`
 > **Poslední aktualizace:** 2026-06-28 — v3.8.40
 
-OmniRoute poskytuje rozšiřitelný framework Skills, který umožňuje jazykovým modelům (a operátorům) skládat opakovaně použitelné schopnosti — od čtení souborového systému a HTTP požadavků až po spouštění kódu v sandboxu a pečlivě vybrané dovednosti z tržiště.
+67router poskytuje rozšiřitelný framework Skills, který umožňuje jazykovým modelům (a operátorům) skládat opakovaně použitelné schopnosti — od čtení souborového systému a HTTP požadavků až po spouštění kódu v sandboxu a pečlivě vybrané dovednosti z tržiště.
 
-Dovednost je verzovaná jednotka práce definovaná schématem. OmniRoute může vložit dovednosti jako definice nástrojů do odchozích požadavků, zachytit volání nástrojů vracející se z modelu, spustit odpovídající obslužnou rutinu a předat výsledek zpět modelu, aby konverzace mohla pokračovat. Model nikdy nevidí implementaci — pouze rozhraní nástroje.
+Dovednost je verzovaná jednotka práce definovaná schématem. 67router může vložit dovednosti jako definice nástrojů do odchozích požadavků, zachytit volání nástrojů vracející se z modelu, spustit odpovídající obslužnou rutinu a předat výsledek zpět modelu, aby konverzace mohla pokračovat. Model nikdy nevidí implementaci — pouze rozhraní nástroje.
 
 ---
 
 ## Agent Skills vs Omni Skills
 
-OmniRoute obsahuje dva odlišné, ale vzájemně se doplňující systémy dovedností:
+67router obsahuje dva odlišné, ale vzájemně se doplňující systémy dovedností:
 
 | Oblast         | **Omni Skills** (tento dokument)                                          | **Agent Skills**                                                                               |
 | :------------- | :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------- |
 | Účel           | Vkládání nástrojů pro LLM + spouštění v sandboxu                          | Katalog SKILL.md určený k objevování a používání externími agenty                              |
 | Zdroj pravdy   | `src/lib/skills/` + tržiště                                               | `src/lib/agentSkills/` + adresář `skills/`                                                     |
 | Režim běhu     | Vkládány do odchozích požadavků, spouštěny při událostech volání nástrojů | Statický katalog v markdownu + koncové body REST/MCP/A2A pro objevování                        |
-| Kdo je používá | Samotný OmniRoute (kombinované směrování, příchozí volání LLM)            | Externí agenti, klienti MCP, orchestrátory A2A                                                 |
+| Kdo je používá | Samotný 67router (kombinované směrování, příchozí volání LLM)             | Externí agenti, klienti MCP, orchestrátory A2A                                                 |
 | Počet          | Proměnlivý (řízený tržištěm)                                              | 43 položek katalogu (22 API + 20 CLI + 1 konfigurace)                                          |
 | Formát         | `SkillDefinition` se schématem nástroje + obslužnou rutinou               | Frontmatter `SKILL.md` + tělo v markdownu                                                      |
 | Objevování     | REST `/api/skills/*` + nástroje MCP `omniroute_skills_*`                  | REST `/api/agent-skills/*` + nástroje MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 
-**Omni Skills** představují výkonné jádro — definují, co OmniRoute _dokáže udělat_, když LLM vyvolá nástroj.
+**Omni Skills** představují výkonné jádro — definují, co 67router _dokáže udělat_, když LLM vyvolá nástroj.
 
-**Agent Skills** představují katalog dokumentace — vysvětlují externím agentům, _jak používat_ REST API a CLI systému OmniRoute, prostřednictvím strukturovaných souborů SKILL.md, které lze přímo vložit do promptů agentů.
+**Agent Skills** představují katalog dokumentace — vysvětlují externím agentům, _jak používat_ REST API a CLI systému 67router, prostřednictvím strukturovaných souborů SKILL.md, které lze přímo vložit do promptů agentů.
 
 Informace o katalogu Agent Skills, generátoru, nástrojích MCP a dovednosti A2A naleznete v dokumentu [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Informace o katalogu Agent Skills, generátoru, nástrojích MCP a dovednosti A2
 
 Ve stejném registru společně existují tři zdroje dovedností:
 
-1. **Vestavěné dovednosti** (`src/lib/skills/builtins.ts`) — dodávají se s OmniRoute. Pokrývají běžné případy:
+1. **Vestavěné dovednosti** (`src/lib/skills/builtins.ts`) — dodávají se s 67router. Pokrývají běžné případy:
    - `file_read`, `file_write` — pracovní prostor sandboxu pro jednotlivé API klíče v umístění `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — odchozí HTTP prostřednictvím `safeOutboundFetch` s nastavením `guard: "public-only"`
    - `web_search` — zaměnitelný poskytovatel vyhledávání s ukládáním do mezipaměti (`executeWebSearch`)
    - `eval_code` — spouštění `node` nebo `python` v sandboxu Dockeru
    - `execute_command` — spouštění příkazů shellu v sandboxu Dockeru
    - `browser` — základní infrastruktura využívající Playwright, ve výchozím nastavení vypnutá (`builtin/browser.ts`)
-2. **SkillsMP** (tržiště OmniRoute) — načítá se z `https://skillsmp.com/api/v1/skills/search`. Vyžaduje `skillsmpApiKey` v Nastavení.
+2. **SkillsMP** (tržiště 67router) — načítá se z `https://skillsmp.com/api/v1/skills/search`. Vyžaduje `skillsmpApiKey` v Nastavení.
 3. **SkillsSH** (komunitní katalog `skills.sh`) — načítá se z `https://skills.sh/api/search`. Nevyžaduje ověření; obsah SKILL.md se stahuje přímo z GitHubu ve formátu raw.
 
 Jeden „aktivní poskytovatel“ určuje, ze kterého katalogu bude ovládací panel instalovat (`src/lib/skills/providerSettings.ts`). Změnit jej můžete v části **Nastavení → Paměť a dovednosti**. Výchozí hodnota: `skillsmp`.
@@ -442,7 +442,7 @@ neexistuje žádná prahová hodnota ve stylu desetinného čísla `0.6` ani ž�
 
 ## Katalog vestavěných dovedností
 
-OmniRoute se dodává s pečlivě vybranou sadou vestavěných dovedností v `src/lib/skills/builtin/`. Nejběžnější z nich:
+67router se dodává s pečlivě vybranou sadou vestavěných dovedností v `src/lib/skills/builtin/`. Nejběžnější z nich:
 
 ### Dovednost automatizace prohlížeče
 

@@ -5,7 +5,7 @@
 ---
 
 Savarankiškai talpinamas telkinys veikia **.113** serveryje (`tomni-proxmox-113`). Nuo 2026-10-18 kiekviena
-OmniRoute vykdyklė turi **vieną vaidmenį**, vieną žymą ir atminties / CPU biudžetą, parinktą pagal
+67router vykdyklė turi **vieną vaidmenį**, vieną žymą ir atminties / CPU biudžetą, parinktą pagal
 išmatuotus jos darbo krūvio poreikius. Turbopack vietai skiriama tiek išteklių, kiek reikia komponavimui;
 kitų vietų ištekliai parinkti pagal išmatuotas didžiausias apkrovas. Serverio ištekliai viršijami tik tada,
 kai Turbopack komponavimas sutampa su Release-Green webpack komponavimu ir lint užduotimi; tai
@@ -28,7 +28,7 @@ Išmatuota 2026-10-18:
 | sukeitimas | 16 GB                               | `omniroute-113-5` veikia be sukeitimo (`MemorySwapMax=0`), todėl nevaldomas komponavimo procesas nutraukiamas pasiekęs ribą, užuot privertęs visą serverį naudoti sukeitimo sritį                                                                                                                                                                                                                  |
 | `/tmp`     | **12 GB tmpfs = RAM**               | viskas, kas ten laikoma, naudoja atmintį; likučiai pašalinami po 3 val.                                                                                                                                                                                                                                                                                                                            |
 | CPU        | 32 branduoliuose stebėta 60 apkrova | prieš nustatant kvotas vienas Turbopack komponavimas (~1166 % CPU) kartu su aprėpties testų rinkiniu tame pačiame serveryje neleido kitų klausytojų gyvybingumo signalams laiku pasiekti serverio (`The self-hosted runner lost communication`, #16853)                                                                                                                                            |
-| vykdyklės  | **6 klausytojai**                   | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` yra išjungtos (`systemctl enable --now` vėl įjungia vieną iš jų)                                                                                                                                                                                                                                                                   |
+| vykdyklės  | **6 klausytojai**                   | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` yra išjungtos (`systemctl enable --now` vėl įjungia vieną iš jų)                                                                                                                                                                                                                                                                    |
 
 Ribos saugomos kiekvieno vieneto faile `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 (ankstesnės reikšmės išsaugotos kaip `override.conf.bak-20261018`) ir buvo pritaikytos veikiančioje
@@ -81,7 +81,7 @@ užduotis atšaukta, o klausytojas pats vėl prisijungia.
 Numatytasis vykdyklės `KillMode=process` palieka
 `Runner.Worker → npm → next-build` veikti, kai vienetas sustabdomas arba
 paleidžiamas iš naujo — našlaičiu likęs komponavimo procesas toliau naudoja RAM ir
-CPU, nors su juo nesusieta jokia užduotis. Kiekvienas OmniRoute vienetas turi
+CPU, nors su juo nesusieta jokia užduotis. Kiekvienas 67router vienetas turi
 papildomą konfigūraciją
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 su `KillMode=mixed`: pirmiausia klausytojui siunčiamas SIGTERM, o pasiekus
@@ -127,7 +127,7 @@ komanda.
   tik galinės sistemos `next build` (~5–6 GB; webpack), ir `quality.yml` `lint-guard`. `omniroute-113`
   iki 2026-10-18 turėjo `MemoryHigh=4G` — promptfoo komponavimas ten 54 minutes sunkiai atlaisvindavo atmintį;
   8 GB pašalina šį ribojimą.
-- **Klausymosi procesų sąmoningai mažiau.** Keturi OmniRoute vienetai buvo išjungti 2026-08-29 — kiekvienas papildomas
+- **Klausymosi procesų sąmoningai mažiau.** Keturi 67router vienetai buvo išjungti 2026-08-29 — kiekvienas papildomas
   klausymosi procesas yra dar vienas pirmiau nurodyto atminties biudžeto naudotojas. Valymo užduoties viršutinė riba yra 6 (`MAX_ACTIVE_RUNNERS=6` cron užduotyje): ji skaičiuoja
   kiekvieną serveryje veikiantį `Runner.Listener`, o OmniHeuris ir OmniMind prie mūsų keturių prideda dar du.
 - **Niekada nevalykite `/tmp` ar `_work` rankiniu būdu, kol bent vienas vykdytojas užimtas.**

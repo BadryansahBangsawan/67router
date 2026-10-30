@@ -14,7 +14,7 @@ process environment තත්ත්වය import නොකර sidecar වලට 
 process එකෙන් පිටත ක්රියාත්මක වන sidecar සඳහා එම manifest එකම HTTP හරහා
 `GET /api/v1/provider-plugin-manifest` හිදී ලබාගත හැක.
 
-OmniRoute විසින් එම URL එක Bifrost සහ CLIProxyAPI වෙත
+67router විසින් එම URL එක Bifrost සහ CLIProxyAPI වෙත
 `X-OmniRoute-Provider-Manifest-Url` request header එක හරහා දැනුම් දෙයි. sidecar එකට
 local request origin එක වෙනුවට පොදු හෝ container network URL එකක් අවශ්ය වන විට
 `OMNIROUTE_PROVIDER_MANIFEST_URL` සකසන්න.
@@ -32,7 +32,7 @@ HTTP endpoint එක `Cache-Control: public, max-age=60` සහ ශක්ති�
 
 ඉහළ ප්රමාදයක් ඇති නොකරන hot request path එක අවසානයේ sidecar එකක් මඟින්
 පාලනය කළ හැකි වන පරිදි provider metadata plugin ගිවිසුමක් දෙසට ගෙන යන අතර,
-OmniRoute විසින් TypeScript route එක policy gate සහ fallback ලෙස තබා ගනී.
+67router විසින් TypeScript route එක policy gate සහ fallback ලෙස තබා ගනී.
 manifest එක අතිරේකයකි: එය තනිවම request routing වෙනස් නොකරයි.
 
 ## ගිවිසුම
@@ -74,7 +74,7 @@ machine-readable පිළිතුර ලෙස එය සැලකිය ය�
 | `usage-fetch`        | සම්බන්ධ කළ usage හෝ quota fetcher එකක් (`getUsageForProvider`) ඇත.             |
 | `usage-supported`    | usage API එක මෙම provider එක පිළිගනී (`isSupportedUsageConnection`).           |
 
-`usage-fetch` යනු සොයාගැනීම සඳහා පමණි. provider එක සඳහා usage කියවන්නේ කෙසේදැයි OmniRoute
+`usage-fetch` යනු සොයාගැනීම සඳහා පමණි. provider එක සඳහා usage කියවන්නේ කෙසේදැයි 67router
 දන්නා බව එය වාර්තා කරයි; එය fetching සක්රිය නොකරයි, quota semantics වෙනස් නොකරයි, හෝ
 provider එක සඳහා Dashboard quota widget එක සක්රිය බව අඟවන්නේ නැත — එම widget එක
 `USAGE_SUPPORTED_PROVIDERS` මඟින් වෙනම gate කර ඇත. සත්යයේ මූලාශ්රය වන්නේ

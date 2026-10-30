@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute একটি একক, কেন্দ্রীভূত অনুমোদন-তালিকা থেকে নিয়ন্ত্রণ করে কোন **ব্রাউজার origin** ক্রস-origin প্রতিক্রিয়া পড়তে পারবে। মডেলটি **ডিফল্টভাবে fail-closed**:
+67router একটি একক, কেন্দ্রীভূত অনুমোদন-তালিকা থেকে নিয়ন্ত্রণ করে কোন **ব্রাউজার origin** ক্রস-origin প্রতিক্রিয়া পড়তে পারবে। মডেলটি **ডিফল্টভাবে fail-closed**:
 আপনি স্পষ্টভাবে কোনো origin-কে অনুমতি না দেওয়া পর্যন্ত কোনো origin-ই অনুমোদিত নয়। এই পৃষ্ঠায় অনুমোদন-তালিকা কীভাবে
 নির্ধারিত হয়, `CORS_ALLOW_ALL=true` আসলে কী উন্মুক্ত করে (এবং, গুরুত্বপূর্ণভাবে, কী
 করে **না**), dev বনাম production কীভাবে নিরাপদে কনফিগার করতে হয় এবং wildcard সক্রিয় থাকলে
@@ -45,13 +45,13 @@ OmniRoute একটি একক, কেন্দ্রীভূত অনুম
 ## হুমকি মডেল — `CORS_ALLOW_ALL=true` আসলে কী উন্মুক্ত করে
 
 সাধারণ OWASP সতর্কতাটি ("wildcard CORS = যেকোনো site আপনার API call করতে পারে")
-গুরুত্বসহকারে নেওয়া উচিত, তবে OmniRoute-এর exposure **সাধারণ পরিস্থিতির তুলনায় সীমিত**,
+গুরুত্বসহকারে নেওয়া উচিত, তবে 67router-এর exposure **সাধারণ পরিস্থিতির তুলনায় সীমিত**,
 একটি নির্দিষ্ট implementation fact-এর কারণে:
 
 > **কেন্দ্রীয় `applyCorsHeaders()` কখনো
 > `Access-Control-Allow-Credentials` পাঠায় না।** server
 > `Access-Control-Allow-Credentials: true` না পাঠালে browser কোনো _credentialed_
-> (cookie-বহনকারী) cross-origin response উন্মুক্ত করবে না। OmniRoute-এর shared CORS path কখনোই
+> (cookie-বহনকারী) cross-origin response উন্মুক্ত করবে না। 67router-এর shared CORS path কখনোই
 > তা করে না।
 
 `CORS_ALLOW_ALL=true` থাকলেও প্রতিটি surface-এর ক্ষেত্রে এর অর্থ:
@@ -91,7 +91,7 @@ origin-echo এবং credential একসঙ্গে থাকে, এবং �
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute যদি কোনো reverse proxy / tunnel-এর (nginx, Caddy, Cloudflare
+- 67router যদি কোনো reverse proxy / tunnel-এর (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) পেছনে চলে, তাহলে CORS আপনার একমাত্র নিয়ন্ত্রণ **নয়**—loopback route
   guard তখনও spawn-সক্ষম রুটগুলো সুরক্ষিত রাখে (দেখুন
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md))। 403 "ঠিক" করার জন্য
@@ -107,7 +107,7 @@ origin-echo এবং credential একসঙ্গে থাকে, এবং �
 এমনকি dev পরিবেশেও wildcard খুব কমই প্রয়োজন হয়। শুধু আপনার ব্যবহৃত dev server-গুলো অনুমোদন করুন:
 
 ```bash
-# একটি লোকাল OmniRoute-কে কল করা Vite (5173) + Next.js (3000) dev server
+# একটি লোকাল 67router-কে কল করা Vite (5173) + Next.js (3000) dev server
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -126,14 +126,14 @@ restart ছাড়াই runtime-এ **Dashboard → Security → CORS Allowed
   permissive config থেকে management/dashboard অরিজিনগুলো বাদ রাখুন; এগুলোকে অবশ্যই সম্পূর্ণভাবে
   fail-closed থাকতে হবে।
 
-## উদাহরণ: OmniRoute-এর সামনে রিভার্স প্রক্সি
+## উদাহরণ: 67router-এর সামনে রিভার্স প্রক্সি
 
-CORS, OmniRoute নিজেই প্রয়োগ করে, তাই প্রক্সির সাধারণত `Access-Control-*`
+CORS, 67router নিজেই প্রয়োগ করে, তাই প্রক্সির সাধারণত `Access-Control-*`
 হেডার যোগ বা পুনর্লিখন করা **উচিত নয়** (একই হেডার দুবার থাকলে ব্রাউজারে সমস্যা হয়)। TLS
-সমাপ্ত করে ফরওয়ার্ড করুন — প্রিফ্লাইটের উত্তর OmniRoute-কে দিতে দিন:
+সমাপ্ত করে ফরওয়ার্ড করুন — প্রিফ্লাইটের উত্তর 67router-কে দিতে দিন:
 
 ```nginx
-# nginx — OmniRoute-এ ফরওয়ার্ড করুন; এখানে Access-Control-* যোগ করবেন না
+# nginx — 67router-এ ফরওয়ার্ড করুন; এখানে Access-Control-* যোগ করবেন না
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -141,12 +141,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # ফরওয়ার্ডিং হেডারগুলো রাখুন: একই হোস্টে থাকা একটি প্রক্সি লুপব্যাক থেকে সংযোগ করে, এবং এগুলোই
-    # OmniRoute-কে জানায় যে কলকারী স্থানীয় অপারেটর নয়। যে প্রক্সি এগুলোর একটিও যোগ করে না,
+    # 67router-কে জানায় যে কলকারী স্থানীয় অপারেটর নয়। যে প্রক্সি এগুলোর একটিও যোগ করে না,
     # সেটি প্রত্যেক দূরবর্তী কলকারীকে স্থানীয় বলে প্রতীয়মান করে। X-Forwarded-For কখনোই 127.0.0.1-এ সেট করবেন না।
 }
 ```
 
-অনুমোদিত ব্রাউজার অরিজিনগুলো প্রক্সিতে নয়, OmniRoute-এ (`CORS_ALLOWED_ORIGINS` অথবা
+অনুমোদিত ব্রাউজার অরিজিনগুলো প্রক্সিতে নয়, 67router-এ (`CORS_ALLOWED_ORIGINS` অথবা
 Security ট্যাবে) সেট করুন।
 
 ## সোর্স ফাইল

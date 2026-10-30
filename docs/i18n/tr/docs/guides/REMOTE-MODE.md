@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'un kendisi başka bir yerde (bir VPS, ev sunucusu veya Tailnet'inizdeki başka bir makine) çalışırken `omniroute` CLI'ını dizüstü bilgisayarınızda çalıştırın.
+67router'un kendisi başka bir yerde (bir VPS, ev sunucusu veya Tailnet'inizdeki başka bir makine) çalışırken `omniroute` CLI'ını dizüstü bilgisayarınızda çalıştırın.
 `omniroute connect` ile bir kez oturum açarsınız ve bundan sonra **her** CLI komutu
 o uzak sunucuyu hedefler — aynı komutlar, aynı çıktı; yalnızca uzak sunucu üzerinde yürütülür.
 
@@ -23,7 +23,7 @@ omniroute configure codex                # ← uzak katalogdan yerel bir Codex p
 ## Nasıl çalışır?
 
 ```
-dizüstü bilgisayarınız                   uzak OmniRoute (VPS)
+dizüstü bilgisayarınız                   uzak 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (parola → token)           │
 │  bağlam: vps       │ ───────────────►  │ kapsamlandırılmış erişim       │
@@ -106,7 +106,7 @@ erişilebildiğinde** sağlar. Uzak bir VPS kurulumunda bu geri döngü sizin
 makinenizde değil sunucuda bulunur; dolayısıyla izin ekranı **sonsuza kadar takılır
 ve hiçbir zaman kod üretmez** — normal "geri çağırma URL'sini yapıştırın" yedeğinde
 yapıştırılacak hiçbir şey olmaz. (Bu, Google taraflı bir kısıtlamadır: aynı takılma,
-yalnızca OmniRoute'ta değil, paketlenmiş Antigravity masaüstü istemcisini kullanan
+yalnızca 67router'ta değil, paketlenmiş Antigravity masaüstü istemcisini kullanan
 tüm proxy'lerde gerçekleşir.)
 
 Pano, takılıp kalmanızdan önce bunu algılar: localhost dışındaki bir adresten
@@ -115,7 +115,7 @@ URL'sini kopyalayın" bildiriminin yerine aşağıdaki iki çözüm gösterilir 
 birinde ana makineniz ile bağlantı noktanız önceden doldurulmuş olur. (LAN adresleri
 de buna dahildir — bu geri çağırma açısından `192.168.x.x`, localhost değildir.)
 
-Antigravity'yi uzak bir OmniRoute'a bağlamanın desteklenen iki yolu vardır.
+Antigravity'yi uzak bir 67router'a bağlamanın desteklenen iki yolu vardır.
 
 ### Seçenek A — yerel oturum açma yardımcısı (önerilen)
 
@@ -154,7 +154,7 @@ npx omniroute login antigravity --no-push
 
 Ardından **uzak** panoda **Providers → Antigravity → Connect** bölümüne gidin ve
 `omniroute-cred-v1.…` blob'unu **Step 2** alanına yapıştırın (geri çağırma URL'si
-veya kimlik bilgisi blob'u kabul eder). OmniRoute bunun kodunu çözer, Cloud Code
+veya kimlik bilgisi blob'u kabul eder). 67router bunun kodunu çözer, Cloud Code
 ilk katılım işlemini sunucu tarafında çalıştırır ve bağlantıyı kalıcı olarak
 kaydeder.
 
@@ -199,7 +199,7 @@ kullandığından tünellenecek, sağlayıcıya özgü ikinci bir bağlantı nok
 ## Uzak bir kurulumda Codex / Grok bağlantısı kurma (sabit geri döngü sağlayıcıları)
 
 Codex, xAI (`xai-oauth`) ve Grok CLI (`grok-cli`), üst OAuth uygulamalarında **sabit** bir geri döngü
-`redirect_uri` kaydeder. OmniRoute bunu değiştiremez — sağlayıcı, tarayıcıyı her zaman
+`redirect_uri` kaydeder. 67router bunu değiştiremez — sağlayıcı, tarayıcıyı her zaman
 aynı sabit kodlanmış adrese geri gönderir:
 
 | Sağlayıcı   | Sağlayıcının yönlendirdiği sabit geri çağırma adresi |
@@ -208,7 +208,7 @@ aynı sabit kodlanmış adrese geri gönderir:
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                    |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                    |
 
-Buradaki `localhost`, **tarayıcının çalıştığı makine** anlamına gelirken OmniRoute'un PKCE
+Buradaki `localhost`, **tarayıcının çalıştığı makine** anlamına gelirken 67router'un PKCE
 geri çağırma sunucusu **sunucunun** geri döngü arayüzünde dinler. Panoyu
 `http://192.168.0.15:20128` gibi bir LAN adresinden açtığınızda ikisi asla buluşmaz: yetkilendirme
 kodu kendi dizüstü bilgisayarınızın `localhost:1455` adresine teslim edilir; burada hiçbir şey dinlemediği
@@ -227,7 +227,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 
 İki yönlendirme gereklidir ve yalnızca birini yönlendirmek yine başarısız olur:
 
-- **`20128`** (pano portu), kaynağı gerçekten localhost yapar; OmniRoute'un PKCE
+- **`20128`** (pano portu), kaynağı gerçekten localhost yapar; 67router'un PKCE
   geri çağırma sunucusunu başlatmasını sağlayan budur — bir LAN kaynağı bu
   dala hiçbir zaman ulaşmaz.
 - **`1455`** (sağlayıcının sabit geri çağırma portu), tarayıcının geri gönderildiği
@@ -345,7 +345,7 @@ omniroute contexts current         # etkin sunucu, kimlik doğrulama durumu, kap
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

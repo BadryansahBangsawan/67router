@@ -4,7 +4,7 @@
 
 ---
 
-La compresión de OmniRoute se basa en contratos de motores. Un modo puede ejecutar directamente un motor
+La compresión de 67router se basa en contratos de motores. Un modo puede ejecutar directamente un motor
 (`caveman` o `rtk`) o una canalización apilada determinista que ejecuta varios motores en orden.
 
 ## Modos
@@ -43,9 +43,9 @@ acumulado historial se detiene en `below_min_chars` y el motor no transforma nad
 el valor predeterminado es `aggressive` en lugar del perfil más seguro.
 
 El paquete determina el ámbito de su propio modelo y el perfil a partir de la configuración de su entorno.
-OmniRoute nunca delega la decisión: el adaptador fija la puerta de acceso del modelo al ámbito más restrictivo
+67router nunca delega la decisión: el adaptador fija la puerta de acceso del modelo al ámbito más restrictivo
 del paquete, por lo que la configuración del entorno del host solo puede reducir la lista de permitidos, nunca
-ampliarla más allá de los recibos medidos de OmniRoute.
+ampliarla más allá de los recibos medidos de 67router.
 
 ## Registro de motores
 
@@ -108,7 +108,7 @@ El modo Caveman se centra en la condensación semántica de texto normal:
 
 La sección correspondiente del panel es `Dashboard -> Context & Cache -> Caveman`.
 
-El proyecto original de Caveman informa de `~75%` menos tokens de salida y un ahorro medio de salida del `65%` en pruebas comparativas, con un intervalo del `22-87%`, además de una herramienta de compresión de entrada de `~46%`. OmniRoute utiliza la cifra de entrada de Caveman al documentar el ahorro combinado de prompts/contexto; el modo de salida de Caveman sigue siendo una función independiente del comportamiento de las respuestas.
+El proyecto original de Caveman informa de `~75%` menos tokens de salida y un ahorro medio de salida del `65%` en pruebas comparativas, con un intervalo del `22-87%`, además de una herramienta de compresión de entrada de `~46%`. 67router utiliza la cifra de entrada de Caveman al documentar el ahorro combinado de prompts/contexto; el modo de salida de Caveman sigue siendo una función independiente del comportamiento de las respuestas.
 
 ## RTK
 

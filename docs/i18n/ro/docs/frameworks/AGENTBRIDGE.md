@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge este proxy-ul MITM (Man-in-the-Middle) al OmniRoute, care interceptează traficul HTTPS provenit de la agenții AI din IDE-uri și îl redirecționează prin motorul unificat de rutare al OmniRoute. Acesta acceptă **10 agenți IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code și Trae (în curs de investigare) — ceea ce face din OmniRoute proxy-ul MITM cu cea mai extinsă acoperire pentru asistenții AI de programare de pe piață.
+AgentBridge este proxy-ul MITM (Man-in-the-Middle) al 67router, care interceptează traficul HTTPS provenit de la agenții AI din IDE-uri și îl redirecționează prin motorul unificat de rutare al 67router. Acesta acceptă **10 agenți IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code și Trae (în curs de investigare) — ceea ce face din 67router proxy-ul MITM cu cea mai extinsă acoperire pentru asistenții AI de programare de pe piață.
 
 **Locație în panoul de control:** `/dashboard/tools/agent-bridge`
 **Grup în bara laterală:** Instrumente (după Agenți cloud)
@@ -16,18 +16,18 @@ AgentBridge este proxy-ul MITM (Man-in-the-Middle) al OmniRoute, care intercepte
 
 ### Ce este AgentBridge?
 
-Atunci când un agent IDE (de ex., GitHub Copilot, Cursor, Claude Code) efectuează un apel API, acesta se conectează direct la furnizorul AI upstream (OpenAI, Anthropic etc.). AgentBridge interceptează transparent acea conexiune la nivel TLS — fără a necesita vreo modificare a configurației agentului — și rescrie cererea prin OmniRoute.
+Atunci când un agent IDE (de ex., GitHub Copilot, Cursor, Claude Code) efectuează un apel API, acesta se conectează direct la furnizorul AI upstream (OpenAI, Anthropic etc.). AgentBridge interceptează transparent acea conexiune la nivel TLS — fără a necesita vreo modificare a configurației agentului — și rescrie cererea prin 67router.
 
 Acest lucru înseamnă că poți:
 
-- **Redirecționa orice agent către orice furnizor**: Copilot comunică cu OpenAI? Redirecționează-l către Anthropic Claude, Gemini sau oricare dintre cei 375 de furnizori ai OmniRoute.
+- **Redirecționa orice agent către orice furnizor**: Copilot comunică cu OpenAI? Redirecționează-l către Anthropic Claude, Gemini sau oricare dintre cei 375 de furnizori ai 67router.
 - **Aplica mapări de modele**: `gemini-3-flash` → `claude-sonnet-4.7` transparent, la nivelul handlerului.
 - **Observa tot traficul agenților**: fiecare cerere interceptată este publicată în [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Aplica reziliența OmniRoute**: rutarea combinată, întrerupătoarele de circuit, mecanismele de fallback și urmărirea costurilor funcționează și pentru traficul agenților IDE.
+- **Aplica reziliența 67router**: rutarea combinată, întrerupătoarele de circuit, mecanismele de fallback și urmărirea costurilor funcționează și pentru traficul agenților IDE.
 
 ### Poziționare față de piață
 
-| Funcționalitate                    | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
+| Funcționalitate                    | 9router | anti-api | llm-interceptor | **67router AgentBridge**  |
 | ---------------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
 | Antigravity                        |    ✓    |    ✓     |        —        |             ✓             |
 | GitHub Copilot                     |    ✓    |    ✓     |        —        |             ✓             |
@@ -40,7 +40,7 @@ Acest lucru înseamnă că poți:
 | Trae                               |    —    |    —     |        —        | 🔍 În curs de investigare |
 | Interfață de panou de control      |    ✓    |    ✗     |        ✗        |             ✓             |
 | Traffic Inspector                  |    ✗    |    ✗     |        ✓        |             ✓             |
-| Rutare OmniRoute                   |    ✗    |    ✗     |        ✗        |             ✓             |
+| Rutare 67router                    |    ✗    |    ✗     |        ✗        |             ✓             |
 | Interfață pentru maparea modelelor |    ✗    |    ✗     |        ✗        |             ✓             |
 | Listă de ocolire                   |    ✗    |    ✗     |        ✓        |             ✓             |
 | Certificat CA upstream             |    ✗    |    ✗     |        ✓        |             ✓             |
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (portul 443, proces copil CJS)
     │  determină ținta după antetul Host și SNI
     │  generează pentru fiecare SNI un certificat TLS semnat de CA-ul AgentBridge
     ├── Corespunde listei de ocolire? → tranzit TCP (fără decriptare)
-    ├── Corespunde unei ținte? → fetch → routerul OmniRoute (portul 20128)
+    ├── Corespunde unei ținte? → fetch → routerul 67router (portul 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() pentru corpul/antetele cererii
     │               ├── TrafficBuffer.push() — publică în Inspectorul de trafic
@@ -205,7 +205,7 @@ Certificatul CA AgentBridge trebuie să fie considerat de încredere de către s
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ Exemple de intrări `/etc/hosts` pentru GitHub Copilot:
 
 Utilizați tabelul Model Mapping din cardul fiecărui agent pentru a defini mapările sursă → destinație:
 
-| Model sursă (nativ agentului) | Model destinație (OmniRoute) |
-| ----------------------------- | ---------------------------- |
-| `gpt-4o`                      | `claude-sonnet-4.7`          |
-| `*` (metacaracter)            | `claude-haiku-4.7`           |
+| Model sursă (nativ agentului) | Model destinație (67router) |
+| ----------------------------- | --------------------------- |
+| `gpt-4o`                      | `claude-sonnet-4.7`         |
+| `*` (metacaracter)            | `claude-haiku-4.7`          |
 
 Metacaracterul `*` mapează orice model nerecunoscut la destinația specificată. Mapările sunt păstrate în tabelul `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ Metacaracterul `*` mapează orice model nerecunoscut la destinația specificată
 
 ### 3.5 Notificare privind riscurile
 
-AgentBridge interceptează acreditările (tokenuri OAuth, chei API) pe care IDE-ul le folosește pentru autentificarea la furnizorii din amonte. Acestea sunt **mascate înainte de înregistrarea în jurnale** (consultați §2.7), dar sunt vizibile pentru nivelul MITM al OmniRoute. La prima activare a fiecărui agent este afișată o fereastră modală cu o notificare privind riscurile, care poate fi închisă.
+AgentBridge interceptează acreditările (tokenuri OAuth, chei API) pe care IDE-ul le folosește pentru autentificarea la furnizorii din amonte. Acestea sunt **mascate înainte de înregistrarea în jurnale** (consultați §2.7), dar sunt vizibile pentru nivelul MITM al 67router. La prima activare a fiecărui agent este afișată o fereastră modală cu o notificare privind riscurile, care poate fi închisă.
 
 ### 3.6 Întreținere și diagnosticare
 
@@ -397,7 +397,7 @@ Detectarea utilizează căi specifice sistemului de operare și verificări ale 
 
 ### Lista de ocolire pentru gazde sensibile
 
-Lista de ocolire garantează că instituțiile financiare, furnizorii OAuth/SSO și alte gazde sensibile nu sunt **niciodată decriptate**. Traficul TLS al acestora trece printr-un tunel TCP transparent — OmniRoute nu vede niciodată textul în clar.
+Lista de ocolire garantează că instituțiile financiare, furnizorii OAuth/SSO și alte gazde sensibile nu sunt **niciodată decriptate**. Traficul TLS al acestora trece printr-un tunel TCP transparent — 67router nu vede niciodată textul în clar.
 
 Modelele implicite de ocolire includ:
 
@@ -448,7 +448,7 @@ Alternativ, configurați un port neprivilegiat în setările AgentBridge și con
 
 Dacă IDE-ul afișează erori TLS după pornirea AgentBridge:
 
-1. Verificați dacă certificatul a fost instalat: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) sau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Verificați dacă certificatul a fost instalat: `security find-certificate -c "OmniRoute MITM CA"` (macOS) sau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Unele aplicații își gestionează propriul magazin de încredere (Firefox, Chrome pe Linux). Rulați din nou „Trust Cert” și verificați magazinul de certificate specific NSS/Firefox.
 3. Reporniți IDE-ul după acordarea încrederii — sesiunile TLS aflate în desfășurare utilizează starea de încredere anterioară.
 
@@ -499,7 +499,7 @@ Detectarea automată utilizează căi de instalare uzuale. Dacă detectarea eșu
 Dacă AgentBridge interceptează, dar toate solicitările eșuează:
 
 1. Verificați dacă este conectat cel puțin un furnizor la `/dashboard/providers`
-2. Verificați jurnalele serverului OmniRoute: `APP_LOG_LEVEL=debug` în `.env`
+2. Verificați jurnalele serverului 67router: `APP_LOG_LEVEL=debug` în `.env`
 3. Verificați dacă `OMNIROUTE_BASE_URL` indică endpointul corect al routerului (implicit: `http://127.0.0.1:20128`)
 
 ---

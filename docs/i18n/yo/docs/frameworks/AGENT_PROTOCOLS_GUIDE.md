@@ -7,15 +7,15 @@
 > **Orísun:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Ìmúdójúìwọ̀n tó gbẹ̀yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute ń pèsè ojú-ọ̀nà mẹ́ta ọ̀tọ̀ọ̀tọ̀ tó ní í ṣe pẹ̀lú àwọn agent. Wọ́n jọra ní ìwò àkọ́kọ́, ṣùgbọ́n wọ́n ń yanjú àwọn ìṣòro ọ̀tọ̀ọ̀tọ̀. Lo ojú-ewé yìí láti yan èyí tó tọ́.
+67router ń pèsè ojú-ọ̀nà mẹ́ta ọ̀tọ̀ọ̀tọ̀ tó ní í ṣe pẹ̀lú àwọn agent. Wọ́n jọra ní ìwò àkọ́kọ́, ṣùgbọ́n wọ́n ń yanjú àwọn ìṣòro ọ̀tọ̀ọ̀tọ̀. Lo ojú-ewé yìí láti yan èyí tó tọ́.
 
 ## Ní ṣókí
 
 | Ojú-ọ̀nà                          | Ó dára jù fún                                                                                                                                         | Ọ̀nà ìgbékalẹ̀                                 | Ìlànà                       |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------- |
 | **A2A — Agent-sí-Agent**         | Ìfọwọ́sowọ́pọ̀ láàárín àwọn agent pẹ̀lú àwọn agent ẹlẹgbẹ́ tí wọ́n ń lo ìlànà A2A                                                                           | JSON-RPC 2.0 lórí HTTP                       | A2A v0.3 (àlàyé ìlànà ṣíṣí) |
-| **ACP — Àkọsílẹ̀ Àwọn Agent CLI** | Ṣíṣàwárí / fíforúkọsílẹ̀ / ṣíṣe ìfilọ́lẹ̀ àwọn agent ìkọ̀-kóòdù CLI tí a fi sórí ẹ̀rọ olùlò (Cursor, Cline, Codex CLI, Claude Code, Aider, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) | HTTP REST                                    | Ti OmniRoute pàtó           |
-| **Àwọn Agent Cloud**             | Fífi àwọn iṣẹ́ ìkọ̀-kóòdù tó máa ń pé ránṣẹ́ sí àwọn iṣẹ́ cloud ita (Codex Cloud, Devin, Jules, Cursor Cloud)                                             | HTTP REST + àwọn iṣẹ́ tí DB ń ṣe àtìlẹ́yìn fún | Ti OmniRoute pàtó           |
+| **ACP — Àkọsílẹ̀ Àwọn Agent CLI** | Ṣíṣàwárí / fíforúkọsílẹ̀ / ṣíṣe ìfilọ́lẹ̀ àwọn agent ìkọ̀-kóòdù CLI tí a fi sórí ẹ̀rọ olùlò (Cursor, Cline, Codex CLI, Claude Code, Aider, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) | HTTP REST                                    | Ti 67router pàtó            |
+| **Àwọn Agent Cloud**             | Fífi àwọn iṣẹ́ ìkọ̀-kóòdù tó máa ń pé ránṣẹ́ sí àwọn iṣẹ́ cloud ita (Codex Cloud, Devin, Jules, Cursor Cloud)                                             | HTTP REST + àwọn iṣẹ́ tí DB ń ṣe àtìlẹ́yìn fún | Ti 67router pàtó            |
 
 Àwọn mẹ́tẹ̀ẹ̀ta ò sinmi lé ara wọn — yan èyíkéyìí nínú wọn.
 
@@ -38,14 +38,14 @@ OmniRoute ń pèsè ojú-ọ̀nà mẹ́ta ọ̀tọ̀ọ̀tọ̀ tó ní í ṣ
 ## 1. A2A — Agent-sí-Agent
 
 **Àlàyé ìlànà:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
+**Endpoint 67router:** `POST /a2a` (JSON-RPC 2.0)
 **Káàdì Agent:** `GET /.well-known/agent.json`
 
 ### Ìgbà tó yẹ kí o lò ó
 
-- Ṣíṣe ètò agent púpọ̀ níbi tí OmniRoute ti jẹ́ ọ̀kan lára àwọn ẹlẹgbẹ́
-- Ṣíṣí òye ìdarí OmniRoute (ìdarí ọlọ́gbọ́n, ìṣàkóso iye-ààyè, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) sí àwọn agent nínú àwọn framework bíi Google ADK tàbí àwọn nẹ́tíwọ́ọ̀kì agent gbogbogbòò
-- Ṣíṣàkójọpọ̀ OmniRoute lẹ́yìn ojú-ọ̀nà àwárí + ìpè tó tẹ̀lé ìlànà
+- Ṣíṣe ètò agent púpọ̀ níbi tí 67router ti jẹ́ ọ̀kan lára àwọn ẹlẹgbẹ́
+- Ṣíṣí òye ìdarí 67router (ìdarí ọlọ́gbọ́n, ìṣàkóso iye-ààyè, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) sí àwọn agent nínú àwọn framework bíi Google ADK tàbí àwọn nẹ́tíwọ́ọ̀kì agent gbogbogbòò
+- Ṣíṣàkójọpọ̀ 67router lẹ́yìn ojú-ọ̀nà àwárí + ìpè tó tẹ̀lé ìlànà
 
 ### Àwọn Method
 
@@ -69,12 +69,12 @@ Wo [A2A-SERVER.md](./A2A-SERVER.md) fún àwọn àlàyé ọ̀nà ìgbékalẹ�
 
 ## 2. ACP — Ìforúkọsílẹ̀ Àwọn Aṣojú CLI
 
-**OmniRoute endpoint:** `GET /api/acp/agents`
+**67router endpoint:** `GET /api/acp/agents`
 **Orísun:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Ohun tí ó jẹ́
 
-ACP jẹ́ **àkójọ àwọn aṣojú CLI abẹ́lẹ̀** ti OmniRoute. Ó ń ṣàwárí àwọn CLI ìkọ-kóòdù tí a ti fi sórí ẹ̀rọ agbàlejò (Cursor, Cline, Claude Code, Codex CLI, Continue, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ), ó ń pinnu àwọn ẹ̀yà wọn, ó sì ń fi wọ́n hàn lórí pátákó ìdarí kí olumulo lè ṣètò CLI kọ̀ọ̀kan láti tọ́ka sí OmniRoute.
+ACP jẹ́ **àkójọ àwọn aṣojú CLI abẹ́lẹ̀** ti 67router. Ó ń ṣàwárí àwọn CLI ìkọ-kóòdù tí a ti fi sórí ẹ̀rọ agbàlejò (Cursor, Cline, Claude Code, Codex CLI, Continue, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ), ó ń pinnu àwọn ẹ̀yà wọn, ó sì ń fi wọ́n hàn lórí pátákó ìdarí kí olumulo lè ṣètò CLI kọ̀ọ̀kan láti tọ́ka sí 67router.
 
 Apá HTTP náà jẹ́ àkójọ abẹ́lẹ̀ tí ó ń mú UI "Àwọn Irinṣẹ́ CLI" ṣiṣẹ́, tí ó sì ń
 tọpinpin àmì ìdánimọ̀ CLI (wo [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Ní ọ̀nà mìíràn,
@@ -114,8 +114,8 @@ Wo [Ìforúkọsílẹ̀ ACP àti àwọn olùbẹ̀rẹ̀](./ACP.md) fún àw�
 
 ### Àwọn ọ̀nà ìlò
 
-- Ojú-ìwé "Àwọn Irinṣẹ́ CLI" lórí pátákó ìdarí ń ṣàkójọ ohun tí a ti fi sí, ó sì ń ràn ọ́ lọ́wọ́ láti tọ́ka ọ̀kọ̀ọ̀kan sí OmniRoute
-- Àwọn aṣojú àkànṣe ń jẹ́ kí àwọn olumulo amọ̀ja forúkọsílẹ̀ àwọn CLI abẹ́lé/ohun-ìní tí OmniRoute kò mọ̀ nípa wọn láìsí àtúnṣe
+- Ojú-ìwé "Àwọn Irinṣẹ́ CLI" lórí pátákó ìdarí ń ṣàkójọ ohun tí a ti fi sí, ó sì ń ràn ọ́ lọ́wọ́ láti tọ́ka ọ̀kọ̀ọ̀kan sí 67router
+- Àwọn aṣojú àkànṣe ń jẹ́ kí àwọn olumulo amọ̀ja forúkọsílẹ̀ àwọn CLI abẹ́lé/ohun-ìní tí 67router kò mọ̀ nípa wọn láìsí àtúnṣe
 - Àbájáde ìṣàwárí ń pèsè dátà fún àtòjọ àmì ìdánimọ̀ `cli-tools`
 
 ### Ìgbà tí kò yẹ kí o lo ACP
@@ -127,12 +127,12 @@ Wo [Ìforúkọsílẹ̀ ACP àti àwọn olùbẹ̀rẹ̀](./ACP.md) fún àw�
 
 ## 3. Àwọn Aṣojú Àwọsánmà
 
-**OmniRoute endpoints:** `/api/v1/agents/tasks/*` (ìgbésí-ayé) + `/api/cloud/*` (àsopọ̀ abẹ́nú)
+**67router endpoints:** `/api/v1/agents/tasks/*` (ìgbésí-ayé) + `/api/cloud/*` (àsopọ̀ abẹ́nú)
 **Orísun:** `src/lib/cloudAgent/`
 
 ### Ohun tí ó jẹ́
 
-Àtẹ̀jáde ìṣọ̀kan kan lórí àwọn aṣojú ìkọ́kóòdù àwọsánmà ẹni-kẹta. O fi ìtọ́ni + URL ibi ìpamójú kóòdù ránṣẹ́, OmniRoute yóò fi ránṣẹ́ sí aṣojú àwọsánmà tó tọ́, yóò máa ṣàyẹ̀wò ipò rẹ̀, yóò sì dá àwọn àbájáde padà.
+Àtẹ̀jáde ìṣọ̀kan kan lórí àwọn aṣojú ìkọ́kóòdù àwọsánmà ẹni-kẹta. O fi ìtọ́ni + URL ibi ìpamójú kóòdù ránṣẹ́, 67router yóò fi ránṣẹ́ sí aṣojú àwọsánmà tó tọ́, yóò máa ṣàyẹ̀wò ipò rẹ̀, yóò sì dá àwọn àbájáde padà.
 
 ### Àwọn aṣojú tí a ṣe àtìlẹ́yìn fún (4, gbogbo wọn ni a ti fìdí rẹ̀ múlẹ̀ nínú `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Wo [CLOUD_AGENT.md](./CLOUD_AGENT.md) fún àdéhùn `CloudAgentBase`, àwọn �
 
 | Abala                  | A2A                                                                                     | Cloud Agents                                             |
 | ---------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| Ìlànà                  | Open A2A v0.3                                                                           | Ìlànà pàtó fún OmniRoute                                 |
-| Ibi tí ìṣirò ti ń ṣiṣẹ́ | Nínú OmniRoute (ó ń lo àwọn àkójọpọ̀ tí a ti ṣètò)                                       | Níta (àwọn olupin Codex / Devin / Jules)                 |
+| Ìlànà                  | Open A2A v0.3                                                                           | Ìlànà pàtó fún 67router                                  |
+| Ibi tí ìṣirò ti ń ṣiṣẹ́ | Nínú 67router (ó ń lo àwọn àkójọpọ̀ tí a ti ṣètò)                                        | Níta (àwọn olupin Codex / Devin / Jules)                 |
 | Àkókò iṣẹ́              | TTL àìyípadà jẹ́ ìṣẹ́jú 5 (a lè ṣàtúnṣe rẹ̀ nínú `TaskManager`)                            | Láti ìṣẹ́jú dé ọ̀pọ̀ wákàtí                                 |
 | Ìmọ̀ ibi-ìpamọ́ kóòdù    | Rárá (àwọn ìtọ́ni nìkan ni ó ń fi ránṣẹ́)                                                 | Bẹ́ẹ̀ ni (URL ibi-ìpamọ́ + ẹ̀ka)                             |
 | Ìlò                    | Ìfọwọ́sowọ́pọ̀ láàárín àwọn aṣojú, ìdarí ọlọ́gbọ́n gẹ́gẹ́ bí iṣẹ́                               | Fífi “ṣe àfikún ẹ̀yà X sínú ibi-ìpamọ́ Y” lé ẹlòmíràn lọ́wọ́ |
@@ -182,7 +182,7 @@ Wo [CLOUD_AGENT.md](./CLOUD_AGENT.md) fún àdéhùn `CloudAgentBase`, àwọn �
 
 ## Àwọn Àpẹẹrẹ Ìṣọ̀kan
 
-### Ṣàwárí àwọn agbára A2A ti OmniRoute
+### Ṣàwárí àwọn agbára A2A ti 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Ó ń dá Agent Card padà pẹ̀lú gbogbo ọgbọ́n mẹ́fà, àwọn ọ̀nà ìgbékalẹ̀, àti ẹ̀yà.
 
-### Pe OmniRoute gẹ́gẹ́ bí aṣojú A2A
+### Pe 67router gẹ́gẹ́ bí aṣojú A2A
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Ọkàn OmniRoute    │
+                │   Ọkàn 67router    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

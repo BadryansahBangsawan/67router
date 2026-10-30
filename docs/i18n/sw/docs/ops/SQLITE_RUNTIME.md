@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute huchagua kiendeshi chake cha SQLite wakati wa kuanza kupitia mnyororo wa hatua 5 wa chaguo mbadala:
+67router huchagua kiendeshi chake cha SQLite wakati wa kuanza kupitia mnyororo wa hatua 5 wa chaguo mbadala:
 
 1. **`better-sqlite3` iliyojumuishwa** (kupitia `dependencies` katika `package.json`)
    — ndiyo ya kasi zaidi, hutumia faili asili ya mfumo, na husakinishwa na `npm install` zana za uundaji zinapopatikana.
@@ -28,13 +28,13 @@ OmniRoute huchagua kiendeshi chake cha SQLite wakati wa kuanza kupitia mnyororo 
 - **Hakuna zana za uundaji**: Baadhi ya mazingira (Windows za mashirika zisizo na VS Build
   Tools, picha ndogo za Docker) hayawezi kukusanya `better-sqlite3`. Kisakinishaji cha wakati
   wa utekelezaji hupata faili iliyoundwa mapema kutoka sajili ya npm; viendeshi mbadala
-  huhakikisha OmniRoute bado inaanza hata hilo likishindwa.
+  huhakikisha 67router bado inaanza hata hilo likishindwa.
 - **Mifumo isiyo na muunganisho wa nje**: Ikiwa sajili ya npm haipatikani, `node:sqlite`
   au `sql.js` huhakikisha utendaji wa msingi.
 
 ## Uthibitishaji wa baiti bainifu
 
-Kabla ya kupakia faili ya `.node` iliyosakinishwa wakati wa utekelezaji, OmniRoute husoma baiti 8
+Kabla ya kupakia faili ya `.node` iliyosakinishwa wakati wa utekelezaji, 67router husoma baiti 8
 za kwanza na kuzilinganisha na baiti bainifu zinazojulikana za majukwaa:
 
 | Jukwaa                | Baiti (hex)   | Lebo        |
@@ -104,9 +104,9 @@ Utekelezaji:
 ## Topolojia ya mwandishi mmoja (HA haitumiki)
 
 Mnyororo wa viendeshi mbadala hapo juu bado huendeshwa katika **mchakato mmoja**. Kwa SQLite
-chaguo-msingi, OmniRoute ni **mwandishi mmoja**:
+chaguo-msingi, 67router ni **mwandishi mmoja**:
 
-- Usiunganishe nakala mbili za OmniRoute kwenye faili moja ya `storage.sqlite`.
+- Usiunganishe nakala mbili za 67router kwenye faili moja ya `storage.sqlite`.
 - Kuanzishwa upya kwa kontena, usambazaji wa Recreate, kuzimwa kwa sababu ya OOM, au kuanzishwa upya na HEALTHCHECK hukatisha
   kila kipindi cha SSE kinachoendelea. Hakuna uondoaji taratibu wa vipindi kwenye njia ya kawaida.
 - Ukaguzi wa uhai wa kiratibu unaochukulia `/healthz` yenye mwitikio wa polepole kuwa imekufa utazima

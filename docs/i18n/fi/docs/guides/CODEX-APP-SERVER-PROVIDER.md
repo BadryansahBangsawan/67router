@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute tarjoaa **kaksi** tapaa käyttää OpenAI Codexia:
+67router tarjoaa **kaksi** tapaa käyttää OpenAI Codexia:
 
 | Palveluntarjoaja       | Miten se kommunikoi OpenAI:n kanssa                                                                                                                                                                                                           | Käyttöä koskeva varaus                                                                                    |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | **`codex`**            | Välittää ChatGPT/OpenAI OAuth -tunnuksesi suoraan Responses API:lle                                                                                                                                                                           | **Kyllä** — virallista istuntoa ei ole valtuutettu käytettäväksi välityspalvelimen tai reitittimen kautta |
-| **`codex-app-server`** | Ohjaa **Codex CLI:n omaa `codex app-server` -palvelinta** JSON-RPC:n ja WebSocketin kautta; CLI hallitsee OAuth-tunnistautumistaan ja päivittää sen automaattisesti (`~/.codex/auth.json`) täsmälleen kuten vuorovaikutteinen `codex`-istunto | **Ei** — OmniRoute ei koskaan välitä tunnusta API:lle                                                     |
+| **`codex-app-server`** | Ohjaa **Codex CLI:n omaa `codex app-server` -palvelinta** JSON-RPC:n ja WebSocketin kautta; CLI hallitsee OAuth-tunnistautumistaan ja päivittää sen automaattisesti (`~/.codex/auth.json`) täsmälleen kuten vuorovaikutteinen `codex`-istunto | **Ei** — 67router ei koskaan välitä tunnusta API:lle                                                      |
 
 Koska `codex-app-server` ei koskaan välitä tunnusta, siihen ei liity
 istunnon uudelleenvälitystä koskevaa käyttövarausta. Se kuitenkin edellyttää,
@@ -21,7 +21,7 @@ ja että CLI:hin on **kirjauduttu sisään**.
 ## 1. Arkkitehtuuri
 
 ```
-┌─ OmniRoute-sovellus ────────────┐        ┌─ codex-app-server-sivukontti ───────┐
+┌─ 67router-sovellus ────────────┐        ┌─ codex-app-server-sivukontti ───────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ ominaisuustunnus)            │  JSON  │  --ws-auth capability-token         │
@@ -80,7 +80,7 @@ ole tai sen tunnus on vanhentunut (varmuuskopio luodaan aina).
 - **Julkinen käyttäjä, jonka koneelle Codexia ei ole asennettu** — tällä ei ole
   merkitystä, sillä CLI sisältyy sivukonttiin. Käyttäjä tunnistautuu vain
   koontinäytön kautta.
-- **OmniRoute suoraan palvelimella (ei sivukonttia, Codex isäntäkoneella)** —
+- **67router suoraan palvelimella (ei sivukonttia, Codex isäntäkoneella)** —
   aseta `OMNIROUTE_CODEX_APPSERVER_WS` osoittamaan omaan
   `codex app-server` -palvelimeesi ja varmista, että isäntäkoneen Codexiin on
   kirjauduttu sisään; jos suoritettava tiedosto puuttuu, näytetään

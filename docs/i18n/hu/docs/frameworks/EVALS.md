@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Legutóbb frissítve:** 2026-06-28 — v3.8.40
 
-Az OmniRoute egy általános kiértékelési keretrendszert biztosít, amellyel teljesítménytesztelhetők az útválasztási konfigurációk, az egyes szolgáltatók/modellek, illetve a mellékelt „golden set” tesztcsomagok. Segítségével ellenőrizhetők az útválasztási módosítások, validálhatók az új szolgáltatók, és kiadási feltételek szabhatók meg, mielőtt a változtatások éles forgalomba kerülnének.
+A 67router egy általános kiértékelési keretrendszert biztosít, amellyel teljesítménytesztelhetők az útválasztási konfigurációk, az egyes szolgáltatók/modellek, illetve a mellékelt „golden set” tesztcsomagok. Segítségével ellenőrizhetők az útválasztási módosítások, validálhatók az új szolgáltatók, és kiadási feltételek szabhatók meg, mielőtt a változtatások éles forgalomba kerülnének.
 
 A keretrendszer a következő elemekből áll:
 

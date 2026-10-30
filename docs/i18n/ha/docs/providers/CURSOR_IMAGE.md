@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yana samar da **ƙirƙirar hoto** ta tsarin Cursor a kan `POST /v1/images/generations` ta amfani da id na mai samarwa iri ɗaya da na taɗi: `cursor` (laƙabi `cu`).
+67router yana samar da **ƙirƙirar hoto** ta tsarin Cursor a kan `POST /v1/images/generations` ta amfani da id na mai samarwa iri ɗaya da na taɗi: `cursor` (laƙabi `cu`).
 
 | Fili                    | Ƙima                                                                                   |
 | ----------------------- | -------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute yana samar da **ƙirƙirar hoto** ta tsarin Cursor a kan `POST /v1/ima
 
 ## Dalilin Amfani da Agent CLI
 
-Taɗin Cursor a OmniRoute yana amfani da `agent.v1.AgentService/Run` (protobuf). Wannan hanyar tana **ƙin karɓar** ginannun kayan aikin abokin hulɗa (shell, write, …). Ƙirƙirar hoto kayan aiki ne na asali na Cursor wanda **`agent` CLI** ke gudanarwa a kan seat ɗin. Saboda haka, mai kula da hoton yana ƙaddamar da `agent` tare da tsayayyen prompt da wurin aiki na wucin gadi na kowace buƙata (mai kama da tsarin community seat bridges), sannan ya mayar da `b64_json` mai dacewa da OpenAI.
+Taɗin Cursor a 67router yana amfani da `agent.v1.AgentService/Run` (protobuf). Wannan hanyar tana **ƙin karɓar** ginannun kayan aikin abokin hulɗa (shell, write, …). Ƙirƙirar hoto kayan aiki ne na asali na Cursor wanda **`agent` CLI** ke gudanarwa a kan seat ɗin. Saboda haka, mai kula da hoton yana ƙaddamar da `agent` tare da tsayayyen prompt da wurin aiki na wucin gadi na kowace buƙata (mai kama da tsarin community seat bridges), sannan ya mayar da `b64_json` mai dacewa da OpenAI.
 
 ## Ƙuntatawar shiga (Ƙa’idoji Masu Tsauri #15 + #17)
 
@@ -23,12 +23,12 @@ Wannan ne kaɗai tsarin `IMAGE_PROVIDERS` da ke ƙaddamar da child process (bina
 
 ## Shingen concurrency yana matakin module ne (ƙayyadaddiyar instance guda ɗaya)
 
-Ana aiwatar da `CURSOR_IMG_MAX_CONCURRENT` ta hanyar counter/queue na cikin ƙwaƙwalwa wanda aka keɓance ga instance na Node module (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Yana iyakance ƙaddamarwar `agent` masu gudana lokaci guda daidai a cikin process guda na OmniRoute, amma **ba ya** daidaitawa tsakanin processes/instances da yawa da ke amfani da seat ɗin Cursor iri ɗaya (misali, tsarin tura multi-replica) — kowane instance yana aiwatar da nasa iyaka mai zaman kansa. Ga tsarin instance guda ɗaya (wanda shi ne tsoho), wannan daidai ne; tsarin da aka faɗaɗa a kwance ya kamata ya sa `CURSOR_IMG_MAX_CONCURRENT` ya kasance mai taka-tsantsan a kowane instance ko kuma ya tura zirga-zirgar hotunan Cursor zuwa instance guda ɗaya.
+Ana aiwatar da `CURSOR_IMG_MAX_CONCURRENT` ta hanyar counter/queue na cikin ƙwaƙwalwa wanda aka keɓance ga instance na Node module (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Yana iyakance ƙaddamarwar `agent` masu gudana lokaci guda daidai a cikin process guda na 67router, amma **ba ya** daidaitawa tsakanin processes/instances da yawa da ke amfani da seat ɗin Cursor iri ɗaya (misali, tsarin tura multi-replica) — kowane instance yana aiwatar da nasa iyaka mai zaman kansa. Ga tsarin instance guda ɗaya (wanda shi ne tsoho), wannan daidai ne; tsarin da aka faɗaɗa a kwance ya kamata ya sa `CURSOR_IMG_MAX_CONCURRENT` ya kasance mai taka-tsantsan a kowane instance ko kuma ya tura zirga-zirgar hotunan Cursor zuwa instance guda ɗaya.
 
 ## Abubuwan da ake buƙata
 
 1. Asusun Cursor da aka haɗa a dashboard (OAuth ko `crsr_…` API key).
-2. Binary na Cursor Agent wanda process na OmniRoute zai iya samu:
+2. Binary na Cursor Agent wanda process na 67router zai iya samu:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, ko
    - `~/.local/bin/agent`, ko
    - `providerSpecificData.agentBin` a kan haɗin Cursor.

@@ -4,13 +4,13 @@
 
 ---
 
-Delegoitu **kontekstin muokkaus** on vain Claudessa käytettävissä oleva kontekstinhallintaominaisuus. Toisin kuin OmniRouten paikalliset
+Delegoitu **kontekstin muokkaus** on vain Claudessa käytettävissä oleva kontekstinhallintaominaisuus. Toisin kuin 67routerin paikalliset
 pakkausmoottorit (Caveman, RTK, LLMLingua, pinotut käsittelyketjut), jotka kirjoittavat pyyntörungon uudelleen
 _ennen_ kuin se poistuu välityspalvelimelta, kontekstin muokkaus pyytää **palveluntarjoajaa** poistamaan vanhentuneet
-työkalukutsu- ja työkalutuloslohkot omasta aktiivisesta konteksti-ikkunastaan. OmniRoute lisää vain rungon
+työkalukutsu- ja työkalutuloslohkot omasta aktiivisesta konteksti-ikkunastaan. 67router lisää vain rungon
 parametrin (`context_management.edits[]`); Claude suorittaa varsinaisen poistamisen omaa tokenisoijaansa käyttäen.
 
-Tämä ominaisuus on luonteeltaan delegoitu: muut palveluntarjoajat hylkäävät parametrin, joten OmniRoute rajaa
+Tämä ominaisuus on luonteeltaan delegoitu: muut palveluntarjoajat hylkäävät parametrin, joten 67router rajaa
 sen tiukasti Claudeen ja Claude Code -yhteensopiviin välityspalveluihin.
 
 Ensisijaiset lähteet: `open-sse/config/contextEditing.ts` (strategiatunnisteet, rungon parametrien lisäys, telemetrian
@@ -19,7 +19,7 @@ poiminta), `open-sse/executors/base.ts` (lisäyksen ehto + 400-virheen varamenet
 
 ## Mitä `clear_tool_uses` tekee
 
-OmniRoute lisää yhden muokkauksen lähtevän Anthropic Messages -pyynnön runkoon:
+67router lisää yhden muokkauksen lähtevän Anthropic Messages -pyynnön runkoon:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute lisää yhden muokkauksen lähtevän Anthropic Messages -pyynnön runk
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Betaominaisuudesta ilmoitetaan `anthropic-beta: context-management-2025-06-27`-otsakkeella, jonka
-OmniRoute lähettää jo Claude-pyynnöissä.
+67router lähettää jo Claude-pyynnöissä.
 
 Lisäyksen suorittaa `applyContextEditingToBody()`, ja se on **idempotentti**: jos rungossa on jo
 `clear_tool_uses`-muokkaus (aiemman kutsun lisäämänä tai asiakkaan toimittamana), runko jätetään
-ennalleen. Jos mukana on myös `clear_thinking_20251015`-muokkaus, OmniRoute järjestää vakaalla lajittelulla
+ennalleen. Jos mukana on myös `clear_thinking_20251015`-muokkaus, 67router järjestää vakaalla lajittelulla
 `clear_thinking`-muokkauksen ensimmäiseksi, koska Anthropic edellyttää, että `clear_thinking` on ennen
 `clear_tool_uses`-muokkausta `edits[]`-taulukossa.
 
@@ -145,7 +145,7 @@ Aidolla Claudella beta sisältyy `ANTHROPIC_BETA_BASE`-arvoon, eikä se päädy 
 
 ## `applied_edits`-telemetria
 
-Claude-vastauksen jälkeen OmniRoute tallentaa, kuinka paljon kontekstia palveluntarjoaja todellisuudessa tyhjensi. Tätä
+Claude-vastauksen jälkeen 67router tallentaa, kuinka paljon kontekstia palveluntarjoaja todellisuudessa tyhjensi. Tätä
 **ei** suoratoisteta — se poimitaan ei-suoratoistetun vastauksen rungosta best effort -periaatteella, eikä se koskaan
 vaikuta vastaukseen (telemetriavirheet jätetään huomiotta).
 
@@ -175,14 +175,14 @@ Näin delegoitu tyhjennys näkyy pakkausanalytiikassa paikallisten moottorien ri
 
 | Näkökohta            | Paikalliset moottorit (Caveman / RTK / LLMLingua / stacked) | Delegoitu kontekstin muokkaus                                |
 | -------------------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| Missä se suoritetaan | OmniRoutessa, ennen kuin pyyntö poistuu välityspalvelimelta | Palveluntarjoajalla (Claude), palvelinpuolella               |
+| Missä se suoritetaan | 67routerissa, ennen kuin pyyntö poistuu välityspalvelimelta | Palveluntarjoajalla (Claude), palvelinpuolella               |
 | Mitä se muokkaa      | Kehote-/konteksti-/työkalutulosteksti                       | Vanhat työkalunkäyttö-/työkalutuloslohkot                    |
 | Palveluntarjoajat    | Kaikki palveluntarjoajat                                    | Vain `claude` + `anthropic-compatible-cc-*`                  |
 | Käyttöönotto         | Pakkaustilan asetukset                                      | `contextEditing.enabled`                                     |
 | Virhetoiminta        | Virheen sattuessa käytetään alkuperäistä tekstiä            | 400-varatoiminto: poista parametri ja yritä kerran uudelleen |
 | Säästöjen telemetria | `engine: <engine id>`                                       | `engine: "context-editing"`                                  |
 
-Nämä kaksi täydentävät toisiaan: paikalliset moottorit pakkaavat OmniRouten lähettämät tavut, kun taas kontekstin muokkauksen avulla
+Nämä kaksi täydentävät toisiaan: paikalliset moottorit pakkaavat 67routerin lähettämät tavut, kun taas kontekstin muokkauksen avulla
 Claude voi karsia keskusteluvuorojen aikana kertynyttä kontekstia. Molemmat voidaan ottaa käyttöön samanaikaisesti.
 
 ## Katso myös

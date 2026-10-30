@@ -4,7 +4,7 @@
 
 ---
 
-A desencriptação transparente TPROXY é o **5.º modo de captura** do OmniRoute para a pilha MITM do
+A desencriptação transparente TPROXY é o **5.º modo de captura** do 67router para a pilha MITM do
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Interceta e **desencripta** tráfego HTTPS local de saída no Linux
 utilizando TPROXY do kernel + encaminhamento baseado em políticas — **sem** falsificar `/etc/hosts` e
@@ -53,7 +53,7 @@ Utilize-o quando pretender capturar e desencriptar tráfego de um processo que:
 - não pretende perturbar através de uma alteração ao proxy de todo o sistema.
 
 Como a interceção ocorre no kernel, o processo de origem **não necessita de qualquer
-alteração de configuração** — mas tem de confiar na AC dinâmica que o OmniRoute
+alteração de configuração** — mas tem de confiar na AC dinâmica que o 67router
 instala (consulte [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -73,7 +73,7 @@ addon (`src/mitm/tproxy/transparentSocket.ts::loadTransparentAddon`) devolve
 `null` em vez de lançar uma exceção. O estado do modo de captura indica então
 `available: false`, o seletor no painel fica **desativado** com a descrição
 "TPROXY decrypt requer Linux + root + o addon nativo", e o restante do
-OmniRoute continua a funcionar.
+67router continua a funcionar.
 
 ---
 
@@ -264,7 +264,7 @@ isto com uma marca de bypass no socket (**SO_MARK**):
 | **Saneamento de erros**                   | As respostas de erro da rota passam por `sanitizeErrorMessage()` (Regra Rígida n.º 12).                                                                                                                                                                                                                                                                                                                                               |
 
 **A AC MITM é uma capacidade poderosa.** Uma AC considerada fidedigna pelo sistema operativo e capaz de assinar para qualquer
-anfitrião significa que tudo o que o OmniRoute intercetar pode ser desencriptado. Esta capacidade está protegida pelo
+anfitrião significa que tudo o que o 67router intercetar pode ser desencriptado. Esta capacidade está protegida pelo
 modo explícito de captura TPROXY apenas local, desativado por predefinição, e a entrada
 no repositório de confiança é removida quando o modo é interrompido.
 
@@ -374,7 +374,7 @@ devolve `available: false` quando o addon está em falta.
 ### Regras de firewall obsoletas após uma falha
 
 `revertTproxy()` é o inverso exato da aplicação e é idempotente. Parar o
-modo reverte as regras; se o OmniRoute tiver sido terminado a meio da sessão, utilize a ação
+modo reverte as regras; se o 67router tiver sido terminado a meio da sessão, utilize a ação
 **Repair** do AgentBridge (`POST /api/tools/agent-bridge/repair`) para reverter o estado de sistema
 órfão (falsificação de DNS, CA raiz, proxy do sistema). As regras `mangle` do TPROXY e a rota também
 são automaticamente removidas ao reiniciar.

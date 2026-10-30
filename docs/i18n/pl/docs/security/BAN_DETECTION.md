@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute skanuje odpowiedzi błędów od dostawców w poszukiwaniu sygnałów wskazujących, że **konto zostało trwale wyłączone** (zawieszone / dezaktywowane / zablokowane za naruszenie warunków korzystania), a po znalezieniu dopasowania przenosi to połączenie do **terminalnego stanu `banned`**, dzięki czemu nie jest ono już wybierane do obsługi żądań. To właśnie konfiguruje karta ustawień **Security → Banned Keywords** („Dodatkowe słowa kluczowe wyzwalające wykrywanie trwałej blokady konta. Wbudowane słowa kluczowe mają zastosowanie zawsze.”).
+67router skanuje odpowiedzi błędów od dostawców w poszukiwaniu sygnałów wskazujących, że **konto zostało trwale wyłączone** (zawieszone / dezaktywowane / zablokowane za naruszenie warunków korzystania), a po znalezieniu dopasowania przenosi to połączenie do **terminalnego stanu `banned`**, dzięki czemu nie jest ono już wybierane do obsługi żądań. To właśnie konfiguruje karta ustawień **Security → Banned Keywords** („Dodatkowe słowa kluczowe wyzwalające wykrywanie trwałej blokady konta. Wbudowane słowa kluczowe mają zastosowanie zawsze.”).
 
 Ta strona opisuje wbudowaną listę, przebieg wykrywania, jego zakres, bezpieczne dodawanie niestandardowych słów kluczowych oraz sposób przywrócenia oznaczonego połączenia. Sam stan terminalny jest częścią modelu odporności — zobacz
 [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) („Stany terminalne”).

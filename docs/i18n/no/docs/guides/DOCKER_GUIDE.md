@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Norsk)
+# 🐳 Docker Guide — 67router (Norsk)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Med miljøfil](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Tilgjengelige profiler](#available-profiles)
-- [Konfigurere CLI-verktøy på verten når OmniRoute kjører i Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Konfigurere CLI-verktøy på verten når 67router kjører i Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis-sidecar](#redis-sidecar)
 - [Compose for produksjon](#production-compose)
 - [Dockerfile-stadier](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Tilgjengelige profiler
 
-OmniRoute leveres med Compose-profiler for de vanligste distribusjonsoppsettene. Velg den som passer miljøet ditt.
+67router leveres med Compose-profiler for de vanligste distribusjonsoppsettene. Velg den som passer miljøet ditt.
 
 | Profil            | Tjeneste         | Når den skal brukes                                                                                                                                   | Kommando                                     |
 | ----------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute leveres med Compose-profiler for de vanligste distribusjonsoppsettene.
 
 > Flere profiler kan kombineres: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Konfigurere CLI-verktøy på verten når OmniRoute kjører i Docker
+## Konfigurere CLI-verktøy på verten når 67router kjører i Docker
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` og knappen
 **Lagre konfigurasjon** i kontrollpanelet skriver alle filer som `~/.codex/*.config.toml`. Disse banene
@@ -103,11 +103,11 @@ i containeren, skrives filene til containerens egen hjemmekatalog (`/home/node` 
 avbildningen kjører med `USER node`), der ingen CLI-verktøy på verten noen gang vil lese dem, og der de
 forkastes i det øyeblikket containeren opprettes på nytt.
 
-OmniRoute oppdager dette og avviser skrivingen med instruksjoner i stedet for å
+67router oppdager dette og avviser skrivingen med instruksjoner i stedet for å
 rapportere en suksess du ikke kan dra nytte av: CLI-verktøyet avsluttes med `2`, og API-et svarer `422`
 med `containerEphemeralTarget: true`.
 
-### Anbefalt: Kjør CLI-verktøyet på verten og OmniRoute i Docker
+### Anbefalt: Kjør CLI-verktøyet på verten og 67router i Docker
 
 Containeren leverer API-et, mens CLI-verktøyet konfigurerer verktøyene på verten.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-En bind-montering er det som gjør banen pålitelig: OmniRoute leser
+En bind-montering er det som gjør banen pålitelig: 67router leser
 `/proc/self/mountinfo` og tillater skriving til monterte baner (og til kataloger
 der underkatalogene er monteringer, som er nøyaktig strukturen til `/host-home` ovenfor), samtidig som
 skriving til umonterte baner fortsatt avvises.
@@ -178,7 +178,7 @@ med en advarsel om at den ikke vil overleve containeren.
 
 ## Redis-sidecar
 
-OmniRoute bruker Redis som grunnlag for den distribuerte hastighetsbegrenseren og den delte hurtigbufferen. Tjenesten `redis` er **alltid definert** i `docker-compose.yml` (den har ingen profilbegrensning) og starter sammen med alle andre profiler.
+67router bruker Redis som grunnlag for den distribuerte hastighetsbegrenseren og den delte hurtigbufferen. Tjenesten `redis` er **alltid definert** i `docker-compose.yml` (den har ingen profilbegrensning) og starter sammen med alle andre profiler.
 
 | Detalj                     | Verdi                                         |
 | -------------------------- | --------------------------------------------- |
@@ -367,7 +367,7 @@ I tillegg til standardverdiene som er dokumentert i [ENVIRONMENT.md](../referenc
 
 ## Omvendt proxy på en underbane (Traefik / nginx)
 
-Next.js `basePath` kompileres inn i den frittstående pakken. OmniRoute registrerer den innbakte
+Next.js `basePath` kompileres inn i den frittstående pakken. 67router registrerer den innbakte
 verdien i en kontrollfil i appens rotmappe (skrevet under `npm run build`; lest av
 `scripts/docker/ensure-docker-base-path.mjs`) og sammenligner den med
 `OMNIROUTE_BASE_PATH` når containeren starter. Når de er forskjellige og avbildningen ble
@@ -440,7 +440,7 @@ aktivitetskontroll hvis HTTP-kontroller får tidsavbrudd. Fullstendig veiledning
 
 ## Docker Compose med Caddy (automatisk HTTPS/TLS)
 
-OmniRoute kan eksponeres sikkert ved hjelp av Caddys automatiske SSL-klargjøring. Sørg for at domenets DNS A-post peker til serverens IP-adresse.
+67router kan eksponeres sikkert ved hjelp av Caddys automatiske SSL-klargjøring. Sørg for at domenets DNS A-post peker til serverens IP-adresse.
 
 ```yaml
 services:
@@ -471,11 +471,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy angir standard videresendingshoder for oppstrømsbeholderen. OmniRoute bruker
+Caddy angir standard videresendingshoder for oppstrømsbeholderen. 67router bruker
 `NEXT_PUBLIC_BASE_URL` som den kanoniske offentlige opprinnelsen for OAuth-tilbakekall og genererte offentlige
 lenker. Autentiserte skriveoperasjoner i kontrollpanelet bruker forespørsler med samme opprinnelse samt øktbundet CSRF-
 beskyttelse. Aktiver bare `OMNIROUTE_TRUST_PROXY` for avanserte distribusjoner der du bevisst
-vil at OmniRoute skal utlede den offentlige opprinnelsen fra klarerte videresendingshoder i stedet for eksplisitt
+vil at 67router skal utlede den offentlige opprinnelsen fra klarerte videresendingshoder i stedet for eksplisitt
 konfigurasjon.
 
 ## Cloudflare Quick Tunnel
@@ -487,11 +487,11 @@ Tunnelpaneler for endepunkter (Cloudflare, Tailscale, ngrok) kan vises eller skj
 ### Merknader om tunneler
 
 - Quick Tunnel-URL-er er midlertidige og endres etter hver omstart.
-- Quick Tunnels gjenopprettes ikke automatisk etter omstart av OmniRoute eller beholderen. Aktiver dem på nytt fra kontrollpanelet ved behov.
+- Quick Tunnels gjenopprettes ikke automatisk etter omstart av 67router eller beholderen. Aktiver dem på nytt fra kontrollpanelet ved behov.
 - Administrert installasjon støtter for øyeblikket Linux, macOS og Windows på `x64` / `arm64`.
 - Administrerte Quick Tunnels bruker som standard HTTP/2-transport for å unngå støyende advarsler om QUIC UDP-buffere i begrensede beholdermiljøer. Angi `CLOUDFLARED_PROTOCOL=quic` eller `auto` hvis du ønsker en annen transport.
 - Docker-avbildninger inkluderer systemets CA-røtter og sender dem videre til administrerte `cloudflared`, noe som forhindrer TLS-klareringsfeil når tunnelen startes opp i beholderen.
-- Angi `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` hvis du vil at OmniRoute skal bruke en eksisterende binærfil i stedet for å laste ned en.
+- Angi `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` hvis du vil at 67router skal bruke en eksisterende binærfil i stedet for å laste ned en.
 
 ## Avbildningstagger
 
@@ -504,7 +504,7 @@ Flerplattformmanifest: opprinnelig støtte for `linux/amd64` + `linux/arm64` (Ap
 
 ### Utgivelseskanaler
 
-OmniRoute publiserer separate Docker-kanaler for stabile utgivelser, aktiv testing av utgivelsesgrener og utviklingsbygg.
+67router publiserer separate Docker-kanaler for stabile utgivelser, aktiv testing av utgivelsesgrener og utviklingsbygg.
 
 | Kanal                           | Kilde                                 | Endringsmulighet               | Anbefalt bruk                                                                                                                       |
 | ------------------------------- | ------------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -557,7 +557,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Før testing bør du sikkerhetskopiere OmniRoute-datavolumet eller den bind-monterte datakatalogen. For å rulle tilbake gjenoppretter du den stabile versjonen eller digesten som ble brukt tidligere, og oppretter containeren på nytt:
+Før testing bør du sikkerhetskopiere 67router-datavolumet eller den bind-monterte datakatalogen. For å rulle tilbake gjenoppretter du den stabile versjonen eller digesten som ble brukt tidligere, og oppretter containeren på nytt:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -577,7 +577,7 @@ Et bygg fra en release-gren kan aldri flytte `latest`; bare en kvalifisert stabi
 
 ## Dashboardoppdateringer i Docker
 
-En container fra et publisert image kan ikke erstatte seg selv. Når OmniRoute oppdager at den kjører i en
+En container fra et publisert image kan ikke erstatte seg selv. Når 67router oppdager at den kjører i en
 container (ingen `.git`-utsjekking, ikke en npm-installasjon), viser oppdateringsbanneret på hoveddashboardet
 vertskommandoen som skal kjøres i stedet for npm/git-instruksjonene, med en kopieringsknapp:
 
@@ -593,7 +593,7 @@ Tjenestenavnet kommer fra `AUTO_UPDATE_SERVICE` (standardverdien er `omniroute`,
 
 For å beholde funksjonaliteten til **Oppdater nå** uten å montere `/var/run/docker.sock` (som gir containeren
 root-tilgang på verten – se advarselen for `cli`-profilen ovenfor), angir du `DOCKER_UPDATE_TRIGGER_FILE` for
-OmniRoute-tjenesten og kjører en overvåker på verten:
+67router-tjenesten og kjører en overvåker på verten:
 
 ```yaml
 services:
@@ -607,7 +607,7 @@ services:
 Banen må være innenfor `DATA_DIR` (relative verdier løses i forhold til den); alt annet
 avvises. **Oppdater nå** skriver deretter `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` til denne
 filen, svarer med `202`, og dashboardet spør `/api/system/version` regelmessig frem til den nye versjonen er aktiv,
-og laster deretter inn på nytt. OmniRoute kjører aldri en shell- eller Docker-kommando i denne modusen. Som for alle
+og laster deretter inn på nytt. 67router kjører aldri en shell- eller Docker-kommando i denne modusen. Som for alle
 oppdateringshandlinger godtas forespørselen bare fra loopback-/LAN-klienter.
 
 En bind-montert datakatalog gir verten en stabil bane å overvåke. Eksempler på `systemd`-enheter
@@ -616,7 +616,7 @@ En bind-montert datakatalog gir verten en stabil bane å overvåke. Eksempler p�
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Overvåk oppdateringsforespørsler fra OmniRoute-dashboardet
+Description=Overvåk oppdateringsforespørsler fra 67router-dashboardet
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -628,7 +628,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Hent og opprett OmniRoute-containeren på nytt
+Description=Hent og opprett 67router-containeren på nytt
 
 [Service]
 Type=oneshot
@@ -648,13 +648,13 @@ Tjenesten fjerner forespørselen før hentingen, slik at en mislykket kjøring i
 
 ## Tilgjengelighet: Standard SQLite støtter én replika
 
-Standard Docker-/Kubernetes-oppsett for OmniRoute består av **én Node-prosess + én SQLite-skriver**. Høy tilgjengelighet er **ikke støttet** med denne topologien.
+Standard Docker-/Kubernetes-oppsett for 67router består av **én Node-prosess + én SQLite-skriver**. Høy tilgjengelighet er **ikke støttet** med denne topologien.
 
-| Begrensning                                 | Konsekvens                                                                                                                                                                                                                                                                                                                             |
-| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Én skriver                                  | Kjør **ikke** flere replikaer mot den samme SQLite-filen. Det skader databasen.                                                                                                                                                                                                                                                        |
-| Ny opprettelse / omstart / HEALTHCHECK-drap | **Fullstendig nedetid** for pågående SSE, dashboardsesjoner og tilstand i minnet. Alle tilkoblede klienter kobles fra. Nye forespørsler mens ingen endepunkter er tilgjengelige, får en **`502 Bad Gateway: Unknown error`** fra reverse proxyen, ikke OmniRoute-JSON – klienter kan ikke skille dette fra en leverandørfeil (#11015). |
-| Samme hendelsesløkke som `/healthz`         | En travel katalog- eller komprimeringssyklus kan forsinke probene; et kort tidsavbrudd starter da den **eneste** replikaen på nytt.                                                                                                                                                                                                    |
+| Begrensning                                 | Konsekvens                                                                                                                                                                                                                                                                                                                            |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Én skriver                                  | Kjør **ikke** flere replikaer mot den samme SQLite-filen. Det skader databasen.                                                                                                                                                                                                                                                       |
+| Ny opprettelse / omstart / HEALTHCHECK-drap | **Fullstendig nedetid** for pågående SSE, dashboardsesjoner og tilstand i minnet. Alle tilkoblede klienter kobles fra. Nye forespørsler mens ingen endepunkter er tilgjengelige, får en **`502 Bad Gateway: Unknown error`** fra reverse proxyen, ikke 67router-JSON – klienter kan ikke skille dette fra en leverandørfeil (#11015). |
+| Samme hendelsesløkke som `/healthz`         | En travel katalog- eller komprimeringssyklus kan forsinke probene; et kort tidsavbrudd starter da den **eneste** replikaen på nytt.                                                                                                                                                                                                   |
 
 **Probematrise** (se også [Anbefalinger for Kubernetes-prober](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -757,7 +757,7 @@ samt den faktiske tilkoblingsruten. Denne feilen alene betyr ikke at API-nøkkel
 
 ### Foretrekk en tilkoblingsspesifikk proxy
 
-Bruk OmniRoutes [proxykonfigurasjon per tilkobling](../ops/PROXY_GUIDE.md#4-level-proxy-system)
+Bruk 67routers [proxykonfigurasjon per tilkobling](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 for den berørte Gemini-tilkoblingen, og gjenta deretter **Test tilkobling** og en liten forespørsel
 med samme modell. Dette begrenser rutingsendringen til den aktuelle tilkoblingen. Kontroller
 at proxyen kan nås fra containeren, og at tilkoblingen faktisk velger
@@ -827,7 +827,7 @@ på nytt kan avbryte andre containere som er koblet til det. Ikke slett volumet 
 
 ## Viktige merknader
 
-- **SQLite WAL-modus:** `docker stop` må få fullføre, slik at OmniRoute kan skrive de nyeste endringene tilbake til `storage.sqlite` via et kontrollpunkt. De medfølgende Compose-filene angir allerede en stoppfrist på 40 sekunder. Hvis du kjører avbildningen direkte, må du beholde `--stop-timeout 40`.
+- **SQLite WAL-modus:** `docker stop` må få fullføre, slik at 67router kan skrive de nyeste endringene tilbake til `storage.sqlite` via et kontrollpunkt. De medfølgende Compose-filene angir allerede en stoppfrist på 40 sekunder. Hvis du kjører avbildningen direkte, må du beholde `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Sett til `true` hvis rutinemessige sikkerhetskopier og sikkerhetskopier før skriving administreres eksternt. Migreringer av eksisterende databaser krever fortsatt et eget varig sikkerhetsøyeblikksbilde og en beskyttelsesmekanisme for massemigrering.
 - **Datapersistens:** Monter alltid et volum på `/app/data` for å bevare databasen, nøklene og konfigurasjonene på tvers av omstarter av containeren.
 - **Portkonfigurasjon:** Overstyr miljøvariabelen `PORT` for å endre standardporten `20128`.

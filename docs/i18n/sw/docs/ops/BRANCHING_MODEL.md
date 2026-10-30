@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute hutumia muundo wa uchapishaji wa **mizunguko sambamba**: tawi maalumu la `release/vX.Y.Z`
+67router hutumia muundo wa uchapishaji wa **mizunguko sambamba**: tawi maalumu la `release/vX.Y.Z`
 kwa ajili ya mzunguko unaoendelea, `main` kwa ajili ya mkondo uliochapishwa, na lebo isiyoweza kubadilishwa ya
 `vX.Y.Z` wakati mzunguko huo unapotolewa. Kuona commits zikiingia kwenye `release/*` _na_ kwenye
 `main` ni jambo linalotarajiwa — si mkanganyiko.

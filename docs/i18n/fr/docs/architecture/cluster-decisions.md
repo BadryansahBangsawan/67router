@@ -14,7 +14,7 @@ Deux profils Compose facultatifs (`memory`, `bifrost`) pour le déploiement exis
 
 ## Pourquoi cette approche est prudente
 
-L’architecture de déploiement existante d’OmniRoute est déjà légère et éprouvée :
+L’architecture de déploiement existante de 67router est déjà légère et éprouvée :
 
 - **`redis:7-alpine`** gère la charge de limitation du débit et de mise en cache à l’échelle de la production.
 - **SQLite + sqlite-vec + FTS5** couvrent la mémoire locale, les vecteurs et la recherche textuelle (voir [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Les deux profils présentés ici sont des **options de mise à l’échelle pour
 
 - Vous exécutez ≥3 réplicas `omniroute` et souhaitez centraliser la rotation des fournisseurs dans un seul processus Go.
 - Vous souhaitez disposer d’une interface unique d’audit et de journalisation pour les requêtes adressées aux fournisseurs en amont depuis tous les réplicas.
-- Vous souhaitez mettre à l’échelle horizontalement la couche de routage de niveau 1, indépendamment des réplicas OmniRoute.
+- Vous souhaitez mettre à l’échelle horizontalement la couche de routage de niveau 1, indépendamment des réplicas 67router.
 
 **Ce qu’il ajoute :**
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har **to** proceslokale banesystemer med forskellige anvendelsesområder. De er
+67router har **to** proceslokale banesystemer med forskellige anvendelsesområder. De er
 komplementære; operatører bør vide, hvilket af dem de ser på.
 
 ## 1. Bytebaseret adgangskontrol på procesniveau (`chatBodyAdmission.ts`)

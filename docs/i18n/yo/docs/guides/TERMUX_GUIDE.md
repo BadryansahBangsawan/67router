@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute lè ṣiṣẹ́ gẹ́gẹ́ bí olupín aláìní ojú-iṣẹ́ lórí Android nípasẹ̀ Termux. Ìṣàfilọ́lẹ̀ tabili Electron kò ní àtìlẹ́yìn nínú Termux, ṣùgbọ́n pátákó ìṣàkóso wẹ́ẹ̀bù àti API tó bá OpenAI mu ń ṣiṣẹ́ láti inú aṣàwákiri abẹ́lẹ̀ tàbí láti àwọn ẹ̀rọ míì tó wà lórí nẹ́tíwọ́ọ̀kì kan náà.
+67router lè ṣiṣẹ́ gẹ́gẹ́ bí olupín aláìní ojú-iṣẹ́ lórí Android nípasẹ̀ Termux. Ìṣàfilọ́lẹ̀ tabili Electron kò ní àtìlẹ́yìn nínú Termux, ṣùgbọ́n pátákó ìṣàkóso wẹ́ẹ̀bù àti API tó bá OpenAI mu ń ṣiṣẹ́ láti inú aṣàwákiri abẹ́lẹ̀ tàbí láti àwọn ẹ̀rọ míì tó wà lórí nẹ́tíwọ́ọ̀kì kan náà.
 
 ## Àwọn Ohun Àkọ́kọ́ Tó Nílò
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Ẹ̀yà Node.js:** OmniRoute nílò Node `>=22.22.2 <23 || >=24.0.0 <27` (ó bá `engines` nínú `package.json` / `SUPPORTED_NODE_RANGE` mu). `nodejs-lts` ti Termux sábà máa ń pèsè Node 20 LTS, èyí tí **kò ní àtìlẹ́yìn mọ́** — fi `pkg install nodejs` (ẹ̀yà lọ́wọ́lọ́wọ́) sori ẹrọ dípò rẹ̀, kí o sì ṣàyẹ̀wò pé `node --version` ń fi ìlà 22.x/24.x+ hàn.
+> **Ẹ̀yà Node.js:** 67router nílò Node `>=22.22.2 <23 || >=24.0.0 <27` (ó bá `engines` nínú `package.json` / `SUPPORTED_NODE_RANGE` mu). `nodejs-lts` ti Termux sábà máa ń pèsè Node 20 LTS, èyí tí **kò ní àtìlẹ́yìn mọ́** — fi `pkg install nodejs` (ẹ̀yà lọ́wọ́lọ́wọ́) sori ẹrọ dípò rẹ̀, kí o sì ṣàyẹ̀wò pé `node --version` ń fi ìlà 22.x/24.x+ hàn.
 
-Tí ìkójọpọ̀ package abinibi bá kùnà, tún àṣẹ `pkg install` tó wà lókè ṣiṣẹ́, lẹ́yìn náà tún gbìyànjú láti fi OmniRoute sori ẹrọ.
+Tí ìkójọpọ̀ package abinibi bá kùnà, tún àṣẹ `pkg install` tó wà lókè ṣiṣẹ́, lẹ́yìn náà tún gbìyànjú láti fi 67router sori ẹrọ.
 
 ## Fífi Sori Ẹrọ
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Ṣíṣe
 
-Bẹ̀rẹ̀ OmniRoute ní ipò olupín aláìní ojú-iṣẹ́:
+Bẹ̀rẹ̀ 67router ní ipò olupín aláìní ojú-iṣẹ́:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Fún àpẹẹrẹ:
 http://192.168.1.50:20128
 ```
 
-Jẹ́ kí fóònù àti client wà lórí nẹ́tíwọ́ọ̀kì kan náà tí o fọkàn tán. Tí o bá ṣí OmniRoute síta fóònù náà, mú àwọn API key àti ìfàṣẹsí pátákó ìṣàkóso ṣiṣẹ́.
+Jẹ́ kí fóònù àti client wà lórí nẹ́tíwọ́ọ̀kì kan náà tí o fọkàn tán. Tí o bá ṣí 67router síta fóònù náà, mú àwọn API key àti ìfàṣẹsí pátákó ìṣàkóso ṣiṣẹ́.
 
 ## Àkọsílẹ̀ Data
 
-Nípa àìyípadà, OmniRoute ń tọ́jú data sábẹ́ àkọsílẹ̀ home ti Termux, ní títẹ̀lé ìhùwàsí ọ̀nà data ẹgbẹ́ olupín kan náà tí a ń lò lórí Linux. Láti fi database sí ibi pàtó:
+Nípa àìyípadà, 67router ń tọ́jú data sábẹ́ àkọsílẹ̀ home ti Termux, ní títẹ̀lé ìhùwàsí ọ̀nà data ẹgbẹ́ olupín kan náà tí a ń lò lórí Linux. Láti fi database sí ibi pàtó:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Platform tí kò ní àtìlẹ́yìn: android (gbogbo ìbéèrè ń dá HTTP 500 padà)
 
-**Àmì:** `omniroute` / `omniroute serve` ń tẹ̀jáde `✔ OmniRoute is running!`, ṣùgbọ́n gbogbo ìbéèrè pátákó ìṣàkóso tàbí API ń dá `500 Internal Server Error` lásán padà. `~/.omniroute/logs/application/app.log` ṣì ṣófo, `APP_LOG_LEVEL=debug` kò tẹ ohunkóhun tó wúlò jáde, ara ìdáhùn náà sì jẹ́ ọ̀rọ̀ lásán (`Internal Server Error`) láìsí àlàyé JSON.
+**Àmì:** `omniroute` / `omniroute serve` ń tẹ̀jáde `✔ 67router is running!`, ṣùgbọ́n gbogbo ìbéèrè pátákó ìṣàkóso tàbí API ń dá `500 Internal Server Error` lásán padà. `~/.omniroute/logs/application/app.log` ṣì ṣófo, `APP_LOG_LEVEL=debug` kò tẹ ohunkóhun tó wúlò jáde, ara ìdáhùn náà sì jẹ́ ọ̀rọ̀ lásán (`Internal Server Error`) láìsí àlàyé JSON.
 
 **Okùnfà:** Àwọn build Termux/Node kan ń fi `process.platform === "android"` hàn. `getCacheDirectory()` ti Next.js kò bójú tó platform yẹn: ó nílò kí `~/.cache` (tàbí àkọsílẹ̀ tmp gbogbogbòò kan) ti wà _tẹ́lẹ̀_, bí bẹ́ẹ̀ kọ́, yóò kùnà nígbà tó ń ṣàkójọpọ̀ hook instrumentation pẹ̀lú:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Nítorí pé hook náà kò kójọpọ̀ rárá, logging kò bẹ̀rẹ̀ — 500 náà dà bí ohun tí kò ṣeé ṣe àyẹ̀wò rẹ̀ rárá. OmniRoute ń ṣẹ̀dá `~/.cache` (ó sì ń ṣètò `XDG_CACHE_HOME` nígbà tí a kò bá ṣètò rẹ̀) nínú ibi ìwọlé CLI kí Next.js tó bẹ̀rẹ̀, kí àyẹ̀wò yìí lè ṣàṣeyọrí lórí Android/Termux.
+Nítorí pé hook náà kò kójọpọ̀ rárá, logging kò bẹ̀rẹ̀ — 500 náà dà bí ohun tí kò ṣeé ṣe àyẹ̀wò rẹ̀ rárá. 67router ń ṣẹ̀dá `~/.cache` (ó sì ń ṣètò `XDG_CACHE_HOME` nígbà tí a kò bá ṣètò rẹ̀) nínú ibi ìwọlé CLI kí Next.js tó bẹ̀rẹ̀, kí àyẹ̀wò yìí lè ṣàṣeyọrí lórí Android/Termux.
 
 **Ojútùú tó ní àtìlẹ́yìn (láìṣe àtúnṣe package):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Lórí àwọn build OmniRoute lọ́wọ́lọ́wọ́, CLI máa ń ṣe èyí fúnra rẹ̀ lórí Android/Termux — `npx -y omniroute@latest` tuntun / fífi sori ẹrọ káàkiri kò yẹ kí ó nílò ìgbésẹ̀ ọwọ́ yìí. Tí o bá ṣì ń rí àṣìṣe náà lẹ́yìn ìmúdójúìwọ̀n, ṣẹ̀dá `~/.cache` lẹ́ẹ̀kan gẹ́gẹ́ bí ó ṣe wà lókè, kí o sì tún un bẹ̀rẹ̀.
+Lórí àwọn build 67router lọ́wọ́lọ́wọ́, CLI máa ń ṣe èyí fúnra rẹ̀ lórí Android/Termux — `npx -y omniroute@latest` tuntun / fífi sori ẹrọ káàkiri kò yẹ kí ó nílò ìgbésẹ̀ ọwọ́ yìí. Tí o bá ṣì ń rí àṣìṣe náà lẹ́yìn ìmúdójúìwọ̀n, ṣẹ̀dá `~/.cache` lẹ́ẹ̀kan gẹ́gẹ́ bí ó ṣe wà lókè, kí o sì tún un bẹ̀rẹ̀.
 
 **Má ṣe** ṣàtúnṣe `dist/server.js` láti fipá mú `process.platform = "linux"`. Irú àtúnṣe package bẹ́ẹ̀ ni a ó kọ lé lórí ní gbogbo ìgbà tí a bá tún fi package sori ẹrọ/tún un ṣe ìmúdójúìwọ̀n, kò sì pọn dandan lẹ́yìn tí àkọsílẹ̀ cache bá ti wà.
 

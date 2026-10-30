@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **చివరిగా నవీకరించబడింది:** 2026-06-28 — v3.8.40
 
-OmniRoute, WordPress-శైలి ప్లగిన్ వ్యవస్థతో అందించబడుతుంది. ప్లగిన్లు స్వయం-సమగ్ర
+67router, WordPress-శైలి ప్లగిన్ వ్యవస్థతో అందించబడుతుంది. ప్లగిన్లు స్వయం-సమగ్ర
 డైరెక్టరీలు — ప్రతి దానిలో ఒక `plugin.json` మానిఫెస్ట్ మరియు ఒక ఎంట్రీ ఫైల్ ఉంటాయి — ఇవి
 అభ్యర్థన పైప్లైన్లో (`onRequest` / `onResponse` / `onError`) మరియు
 లైఫ్సైకిల్ ఈవెంట్లలో (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)
@@ -154,7 +154,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### ప్లగిన్ డైరెక్టరీ
 
-ప్లగిన్లు OmniRoute డేటా డైరెక్టరీ కింద ఉంటాయి:
+ప్లగిన్లు 67router డేటా డైరెక్టరీ కింద ఉంటాయి:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

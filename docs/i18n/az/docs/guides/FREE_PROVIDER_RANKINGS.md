@@ -4,7 +4,7 @@
 
 ---
 
-> **Qısa xülasə**: OmniRoute **pulsuz** provayderlərini model keyfiyyətinə görə **Arena AI
+> **Qısa xülasə**: 67router **pulsuz** provayderlərini model keyfiyyətinə görə **Arena AI
 > (LMArena üslublu) ELO xalları** əsasında sıralayır. Tapşırığınız üçün ən güclü
 > modelləri hansı pulsuz provayderlərin təqdim etdiyini görmək məqsədilə idarəetmə panelində
 > **Pulsuz Provayderlərin Reytinqi** səhifəsini açın — ümumi şəkildə və ya kateqoriya
@@ -14,7 +14,7 @@
 
 ## Bu Nədir
 
-OmniRoute 375 provayderi qeydiyyata alır, o cümlədən **free/no-auth** kimi
+67router 375 provayderi qeydiyyata alır, o cümlədən **free/no-auth** kimi
 işarələnmiş 155 kataloq qeydi
 (no-auth,
 pulsuz səviyyəli OAuth və ya pulsuz səviyyəli API açarı — bax:
@@ -135,9 +135,9 @@ dəyəridir (aşağıya baxın). Qiymətləndirilmiş modeli olmayan provayderl�
 
 Arena ELO sinxronizasiya mühərriki (`src/lib/arenaEloSync.ts`) Arena AI liderlər cədvəli API-sindən (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`) iki liderlər cədvəlini — `text` və `code` — əldə edir. Hər liderlər cədvəli qeydinə model adı, təchizatçı, ELO `score` göstəricisi, etibar intervalı və səs sayı daxildir.
 
-Liderlər cədvəli kateqoriyaları OmniRoute tapşırıq kateqoriyalarına belə uyğunlaşdırılır:
+Liderlər cədvəli kateqoriyaları 67router tapşırıq kateqoriyalarına belə uyğunlaşdırılır:
 
-| Arena liderlər cədvəli | OmniRoute tapşırıq kateqoriyaları                 |
+| Arena liderlər cədvəli | 67router tapşırıq kateqoriyaları                  |
 | ---------------------- | ------------------------------------------------- |
 | `text`                 | `default`, `review`, `documentation`, `debugging` |
 | `code`                 | `coding`                                          |
@@ -170,7 +170,7 @@ Sinxronizasiya **standart olaraq aktivdir**:
 
 - Server işə salınarkən bir dəfə, sonra isə dövri taymer əsasında işləyir
   (`src/lib/arenaEloSync.ts`, `src/instrumentation-node.ts` vasitəsilə qoşulur).
-- O, **bloklamır və heç vaxt kritik xətaya səbəb olmur** — yuxarı axındakı məlumatların əldə edilməsi uğursuz olarsa, OmniRoute işləməyə davam edir və sıralamalar sadəcə son uğurlu məlumatları (və ya boş vəziyyəti) göstərir.
+- O, **bloklamır və heç vaxt kritik xətaya səbəb olmur** — yuxarı axındakı məlumatların əldə edilməsi uğursuz olarsa, 67router işləməyə davam edir və sıralamalar sadəcə son uğurlu məlumatları (və ya boş vəziyyəti) göstərir.
 
 Onu iki mühit dəyişəni idarə edir ([`docs/reference/ENVIRONMENT.md`](../reference/ENVIRONMENT.md) sənədində təsvir edilib):
 
@@ -199,7 +199,7 @@ Reyestr model ID-ləri və Arena model adları həmişə tam uyğun gəlmir. Sı
 2. Sondakı versiya şəkilçisi çıxarıldıqdan sonra uyğunluq (məsələn, `kimi-k2.6` → `kimi-k2`).
 3. Prefiks uyğunluğu (liderlər cədvəlindəki model adı reyestr ID-sinin prefiksidir).
 
-Sinxronizasiya tərəfində məlum təchizatçı prefiksləri (`anthropic/`, `openai/`, `google/`, …) çıxarılır və kiçik ləqəb xəritəsi kanonik adları OmniRoute-un daxildə istifadə etdiyi variantlara genişləndirir. Beləliklə, modellər istənilən adla tapıla bilir.
+Sinxronizasiya tərəfində məlum təchizatçı prefiksləri (`anthropic/`, `openai/`, `google/`, …) çıxarılır və kiçik ləqəb xəritəsi kanonik adları 67router-un daxildə istifadə etdiyi variantlara genişləndirir. Beləliklə, modellər istənilən adla tapıla bilir.
 
 ### Təchizatçının sıralanması
 

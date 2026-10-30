@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Yorùbá)
+# 📖 Setup Guide — 67router (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Ìtọ́kasí ìṣètò pípé fún OmniRoute. Fún ẹ̀yà kúkúrú, wo [Ìbẹ̀rẹ̀ Kíákíá nínú README](../README.md#-quick-start).
+> Ìtọ́kasí ìṣètò pípé fún 67router. Fún ẹ̀yà kúkúrú, wo [Ìbẹ̀rẹ̀ Kíákíá nínú README](../README.md#-quick-start).
 
 ## Àkójọ Àwọn Àkóónú
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Package AUR](https://aur.archlinux.org/packages/omniroute-bin) náà ń fi OmniRoute sórí ẹ̀rọ, ó sì pèsè iṣẹ́ onílò systemd.
+[Package AUR](https://aur.archlinux.org/packages/omniroute-bin) náà ń fi 67router sórí ẹ̀rọ, ó sì pèsè iṣẹ́ onílò systemd.
 
 ### Láti Kóòdù Orísun
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Àkíyèsí Windows:** Ní àìyẹsẹ̀, OmniRoute máa ń lo `%APPDATA%\omniroute` nígbà tí fódà àtijọ́ `%USERPROFILE%\.omniroute` kò bá sí. Ṣètò `DATA_DIR` láti yan ibi mìíràn fún fódà dátà.
+> **Àkíyèsí Windows:** Ní àìyẹsẹ̀, 67router máa ń lo `%APPDATA%\omniroute` nígbà tí fódà àtijọ́ `%USERPROFILE%\.omniroute` kò bá sí. Ṣètò `DATA_DIR` láti yan ibi mìíràn fún fódà dátà.
 
 > **Àkíyèsí:** `npm install` máa ń dá `.env` sílẹ̀ láti inú `.env.example` ní àkókò ìṣiṣẹ́ àkọ́kọ́. Àwọn ìfísórí-ẹ̀rọ tó tẹ̀lé kò ní kọ lé `.env` tó ti wà, nítorí náà àwọn àtúnṣe rẹ yóò dúró. Láti tún un ṣe láti ìbẹ̀rẹ̀, pa `.env` rẹ́ kí o tó tún ṣiṣẹ́.
 
@@ -64,7 +64,7 @@ Wo [Ìtọ́sọ́nà Docker](./DOCKER_GUIDE.md) fún ìṣètò Docker pípé, 
 
 ### Ètò Orí Dẹ́sítọ́ọ̀bù (Electron)
 
-OmniRoute ní àpò dìde dẹ́sítọ́ọ̀bù tí a kọ́ lórí Electron 41 + electron-builder 26.10. Àwọn skripti tó wà (ní gbòǹgbò workspace):
+67router ní àpò dìde dẹ́sítọ́ọ̀bù tí a kọ́ lórí Electron 41 + electron-builder 26.10. Àwọn skripti tó wà (ní gbòǹgbò workspace):
 
 ```bash
 npm run electron:dev          # Ṣi dẹ́sítọ́ọ̀bù pẹ̀lú àtúnrù-gbóná
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Nípa lílò èyí papọ̀ pẹ̀lú àwọn env vars (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ), o lè mú instance OmniRoute kan ṣiṣẹ́ tí a lè darí ní kíkún pẹ̀lú skripti.
+Nípa lílò èyí papọ̀ pẹ̀lú àwọn env vars (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ), o lè mú instance 67router kan ṣiṣẹ́ tí a lè darí ní kíkún pẹ̀lú skripti.
 
 ### Àwọn Àṣàyàn CLI
 
@@ -99,7 +99,7 @@ Nípa lílò èyí papọ̀ pẹ̀lú àwọn env vars (`INITIAL_PASSWORD`, `OMN
 | `omniroute config`      | Ìṣètò irinṣẹ́ CLI — ṣe àkójọ, gbà, ṣètò, kí o sì fìdí àwọn ìṣètò múlẹ̀ |
 | `omniroute status`      | Dashboard ipò àìsílóníforíkorí — ẹ̀yà, DB, irinṣẹ́, ìṣètò              |
 | `omniroute logs`        | Ṣàgbéjáde àwọn àkọsílẹ̀ lílò láti API (ó ṣe àtìlẹ́yìn fún `--follow`)  |
-| `omniroute update`      | Ṣàyẹ̀wò tàbí lo àwọn ìmúdójúìwọ̀n OmniRoute                            |
+| `omniroute update`      | Ṣàyẹ̀wò tàbí lo àwọn ìmúdójúìwọ̀n 67router                             |
 | `omniroute provider`    | Ṣàkóso àwọn àsopọ̀ provider — ṣàfikún, ṣe àkójọ, yọ, dán wò, àìyẹsẹ̀   |
 | `omniroute --port 3000` | Ṣètò pọ́ọ̀tù àṣẹ/API sí 3000                                           |
 | `omniroute --mcp`       | Bẹ̀rẹ̀ sẹ́fà MCP (ìgbékalẹ̀ stdio)                                       |
@@ -165,7 +165,7 @@ URL Àwọn Tags Ollama: http://localhost:20128/api/v1/vscode/YOUR_KEY/api/tags
 
 #### Ṣètò rẹ̀ láìfọwọ́ṣe pẹ̀lú `setup-*`
 
-Dípò lílẹ URL ìpìlẹ̀ àti kọ́kọ́rọ́ náà mọ́lẹ̀ lọ́wọ́, jẹ́ kí OmniRoute kọ
+Dípò lílẹ URL ìpìlẹ̀ àti kọ́kọ́rọ́ náà mọ́lẹ̀ lọ́wọ́, jẹ́ kí 67router kọ
 ìṣètò ohun èlò kọ̀ọ̀kan láti inú àkójọ àwọn módẹ́lì tó ń ṣiṣẹ́. Àṣẹ kan fún ohun èlò kọ̀ọ̀kan:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Ọ̀kọ̀ọ̀kan gba `--remote <url> --api-key <key>` láti ṣètò ohun èlò agbègbè kan láti ṣiṣẹ́ pẹ̀lú
-OmniRoute **jíjìnnà**, àti `--dry-run` láti wo àgbéyẹ̀wò. Láti bẹ̀rẹ̀ CLI kan pẹ̀lú env tó tọ́
+67router **jíjìnnà**, àti `--dry-run` láti wo àgbéyẹ̀wò. Láti bẹ̀rẹ̀ CLI kan pẹ̀lú env tó tọ́
 tí a ti fi sínú rẹ̀ láìkọ ìṣètò kankan rárá, lo olùbẹ̀rẹ̀ gbogbogbò
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 àwọn olùbẹ̀rẹ̀ ohun èlò kọ̀ọ̀kan ti àtijọ́ `omniroute launch` (Claude Code) àti
@@ -277,15 +277,15 @@ Fún ọ̀pọ̀ jù lọ àwọn ìmúṣiṣẹ́, àwọn àyípadà méjì y
 | Àyípadà                  | Àìyípadà                   | Ète                                                                                                                                                                              |
 | ------------------------ | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                   | Ìwọ̀n ìpìlẹ̀ tí a pín fún àkókò ìdádúró ìbẹ̀rẹ̀-ìdáhùn láti upstream, àwọn àkókò ìdádúró Undici tí a fi pamọ́, àwọn ìbéèrè ìdánimọ̀ TLS, àti àwọn àkókò ìdádúró ìbéèrè/proxy afárá API |
-| `STREAM_IDLE_TIMEOUT_MS` | jogún `REQUEST_TIMEOUT_MS` | Àlàfo tó pọ̀ jù láàárín àwọn ẹ̀ka ṣiṣàn kí OmniRoute tó fòpin sí ṣiṣàn SSE                                                                                                         |
+| `STREAM_IDLE_TIMEOUT_MS` | jogún `REQUEST_TIMEOUT_MS` | Àlàfo tó pọ̀ jù láàárín àwọn ẹ̀ka ṣiṣàn kí 67router tó fòpin sí ṣiṣàn SSE                                                                                                          |
 
 Ìbámu sẹ́yìn ṣì wà: `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS`, àti àwọn àyípadà àkókò ìdádúró mìíràn fún ìpele kọ̀ọ̀kan tí ó ti wà tẹ́lẹ̀ ṣì ń ṣiṣẹ́, wọ́n sì máa borí ìwọ̀n ìpìlẹ̀ tí a pín.
 
 ### Àwọn Àkíyèsí Pàtó Fún Olùpèsè
 
-Fún àwọn upstream tó bá Claude Code mu (`anthropic-compatible-cc-*`), OmniRoute máa ń ṣe àkọlé àbájáde `X-Stainless-Timeout` láti inú àkókò ìdádúró fetch tí a ti yanjú, kí àwọn àkókò ìdádúró kíkà ní ẹ̀gbẹ́ olùpèsè lè wà ní ìbámu pẹ̀lú ìṣètò env rẹ.
+Fún àwọn upstream tó bá Claude Code mu (`anthropic-compatible-cc-*`), 67router máa ń ṣe àkọlé àbájáde `X-Stainless-Timeout` láti inú àkókò ìdádúró fetch tí a ti yanjú, kí àwọn àkókò ìdádúró kíkà ní ẹ̀gbẹ́ olùpèsè lè wà ní ìbámu pẹ̀lú ìṣètò env rẹ.
 
-Fún àwọn reverse proxy ẹnikẹta tó bá Claude Code mu, OmniRoute máa ń jẹ́ kí àkójọpọ̀ `anthropic-beta` àìyípadà jẹ́ ti ìṣọ́ra, àti nígbà tí a bá fi `Client Cache Control` sílẹ̀ lórí `Auto`, ó máa ń fi àwọn àmì `cache_control` tí oníbàárà pèsè nìkan ránṣẹ́ síwájú. Mu aṣàyàn "Mú redact-thinking beta ṣiṣẹ́" fún àsopọ̀ kọ̀ọ̀kan ṣiṣẹ́ kìkì nígbà tí upstream bá béèrè pàtó fún àwọn ṣiṣàn ìrònú Claude tí a ti ṣàtúnṣe láti fi àṣírí pamọ́.
+Fún àwọn reverse proxy ẹnikẹta tó bá Claude Code mu, 67router máa ń jẹ́ kí àkójọpọ̀ `anthropic-beta` àìyípadà jẹ́ ti ìṣọ́ra, àti nígbà tí a bá fi `Client Cache Control` sílẹ̀ lórí `Auto`, ó máa ń fi àwọn àmì `cache_control` tí oníbàárà pèsè nìkan ránṣẹ́ síwájú. Mu aṣàyàn "Mú redact-thinking beta ṣiṣẹ́" fún àsopọ̀ kọ̀ọ̀kan ṣiṣẹ́ kìkì nígbà tí upstream bá béèrè pàtó fún àwọn ṣiṣàn ìrònú Claude tí a ti ṣàtúnṣe láti fi àṣírí pamọ́.
 
 ### Àwọn Àtúnṣe Àkókò Ìdádúró Onípele-gíga
 
@@ -303,11 +303,11 @@ Fún àwọn reverse proxy ẹnikẹta tó bá Claude Code mu, OmniRoute máa ń
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | Àkókò ìdádúró keep-alive lórí server afárá API                                 |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | Àkókò ìdádúró àìṣiṣẹ́ socket lórí server afárá API (`0` máa ń pa á)             |
 
-> **Àkíyèsí:** Fún àwọn ìbéèrè ṣiṣàn, `FETCH_TIMEOUT_MS` bo ìṣètò àsopọ̀ / dídúró de ìdáhùn upstream àkọ́kọ́ nìkan. Ní kété tí ṣiṣàn bá ti ń ṣiṣẹ́, OmniRoute yóò fòpin sí i kìkì nígbà ìdúró gidi (`STREAM_IDLE_TIMEOUT_MS`) tàbí àìṣiṣẹ́ ara Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Àkíyèsí:** Fún àwọn ìbéèrè ṣiṣàn, `FETCH_TIMEOUT_MS` bo ìṣètò àsopọ̀ / dídúró de ìdáhùn upstream àkọ́kọ́ nìkan. Ní kété tí ṣiṣàn bá ti ń ṣiṣẹ́, 67router yóò fòpin sí i kìkì nígbà ìdúró gidi (`STREAM_IDLE_TIMEOUT_MS`) tàbí àìṣiṣẹ́ ara Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Ìbámu Reverse Proxy
 
-Tí o bá ń ṣiṣẹ́ OmniRoute lẹ́yìn Nginx, Caddy, Cloudflare, tàbí reverse proxy mìíràn, rí i dájú pé àwọn àkókò ìdádúró proxy náà ga ju àwọn àkókò ìdádúró ṣiṣàn/fetch OmniRoute rẹ lọ.
+Tí o bá ń ṣiṣẹ́ 67router lẹ́yìn Nginx, Caddy, Cloudflare, tàbí reverse proxy mìíràn, rí i dájú pé àwọn àkókò ìdádúró proxy náà ga ju àwọn àkókò ìdádúró ṣiṣàn/fetch 67router rẹ lọ.
 
 ---
 

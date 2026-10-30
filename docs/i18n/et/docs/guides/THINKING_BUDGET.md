@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Lähtekood:** `open-sse/services/thinkingBudget.ts`
 
-Mõtlemise eelarve määrab, kas OmniRoute **kirjutab teenusepakkujatele saatmisel ümber kliendi mõtlemis-/arutlusparameetrid**. See **ei** lülita tihendamist, marsruutimist ega viipade vahemälu sisse või välja.
+Mõtlemise eelarve määrab, kas 67router **kirjutab teenusepakkujatele saatmisel ümber kliendi mõtlemis-/arutlusparameetrid**. See **ei** lülita tihendamist, marsruutimist ega viipade vahemälu sisse või välja.
 
 ## Režiimid
 
-| Režiim                        | Mida OmniRoute teeb                                                                                                 | Millal kasutada                                                                                                                                                                         |
+| Režiim                        | Mida 67router teeb                                                                                                  | Millal kasutada                                                                                                                                                                         |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (vaikimisi) | Jätab kliendi väljad muutmata (`reasoning`, `reasoning_effort`, Claude’i `thinking`, Gemini `thinking_config` jne). | **Codex / Desktop / iga klient, mis peaks ise määrama pingutuse taseme ja arutluskokkuvõtted.** Nõutav nähtavate mõtlemispaneelide jaoks, kui klient taotleb `reasoning.summary` välja. |
 | **`auto`**                    | **Eemaldab kõik** mõtlemis-/arutlusväljad päringu kehast enne ülesvooluteenusele saatmist.                          | Ainult siis, kui soovite teadlikult, et **teenusepakkuja** määraks vaikeväärtused, ja te **ei** vaja kliendi juhitavat mõtlemist. See **ei** tähenda „näita mõtlemist automaatselt”.    |
@@ -38,7 +38,7 @@ Kui klient (nt Codex Desktop) saatis `reasoning: { effort: "ultra", summary: "de
 | **Kombineeritud marsruutimine / varuvariandid** | Eraldiseisev. Mõju puudub.                                                                                                                               |
 | **API-võtme žetoonilimiidid / kulueelarved**    | Eraldiseisev. Mõju puudub.                                                                                                                               |
 | **Arutluse taasesituse vahemälu**               | Mitme vooru korral uuesti sisestamine rangete teenusepakkujate jaoks (DeepSeek, Kimi, Qwen-thinking, …). See ei ole sama mis Desktopi „näita mõtlemist”. |
-| **`encrypted_content` dekrüptimine**            | **Võimatu.** OpenAI/Codexi privaatsed arutlusplokid on läbipaistmatud. OmniRoute ei dekrüpti neid kunagi (#7095 / #7176 / #7304).                        |
+| **`encrypted_content` dekrüptimine**            | **Võimatu.** OpenAI/Codexi privaatsed arutlusplokid on läbipaistmatud. 67router ei dekrüpti neid kunagi (#7095 / #7176 / #7304).                         |
 
 ## Nähtav mõttekäik (Codexi / Responsesi kliendid)
 
@@ -51,7 +51,7 @@ Et klient kuvaks mõttekäigu teksti, peavad olema täidetud **kõik** järgmise
 Kui saate ainult „krüpteeritud privaatse mõttekäigu”, siis:
 
 - režiim oli **`auto`** (kliendi taotlus eemaldati) või
-- ülemine teenus tagastas `encrypted_content` ilma kokkuvõtte tekstita (teenusepakkuja piirang; OmniRoute saab kuvada ainult kohatäidet, mitte lihtteksti).
+- ülemine teenus tagastas `encrypted_content` ilma kokkuvõtte tekstita (teenusepakkuja piirang; 67router saab kuvada ainult kohatäidet, mitte lihtteksti).
 
 ## API näited
 
@@ -71,7 +71,7 @@ Skeem (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Püsivus / taaskäivitamine
 
-Väärtus salvestatakse seadete võtme `thinkingBudget` alla ja laaditakse protsessi käivitamisel (`hydrateThinkingBudgetConfig`). Pärast väärtuse muutmist andmebaasi või mõne API-välise tee kaudu **taaskäivitage OmniRoute'i protsess**, et mälus olev singleton vastaks kettal olevale väärtusele.
+Väärtus salvestatakse seadete võtme `thinkingBudget` alla ja laaditakse protsessi käivitamisel (`hydrateThinkingBudgetConfig`). Pärast väärtuse muutmist andmebaasi või mõne API-välise tee kaudu **taaskäivitage 67router'i protsess**, et mälus olev singleton vastaks kettal olevale väärtusele.
 
 ## Operaatori kontrollnimekiri
 

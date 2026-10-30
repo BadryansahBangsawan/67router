@@ -14,7 +14,7 @@ jarayon muhiti holatini import qilmasdan foydalanishi mumkin.
 Xuddi shu manifest jarayondan tashqarida ishlaydigan saydkarlar uchun HTTP orqali
 `GET /api/v1/provider-plugin-manifest` manzilida mavjud.
 
-OmniRoute ushbu URL manzilini Bifrost va CLIProxyAPI uchun
+67router ushbu URL manzilini Bifrost va CLIProxyAPI uchun
 `X-OmniRoute-Provider-Manifest-Url` soʻrov sarlavhasi orqali eʼlon qiladi. Saydkarga
 mahalliy soʻrov manbasi oʻrniga ommaviy yoki konteyner tarmogʻi URL manzili kerak boʻlsa,
 `OMNIROUTE_PROVIDER_MANIFEST_URL` ni sozlang.
@@ -31,7 +31,7 @@ soʻrov yuborishi shart.
 ## Maqsad
 
 Provayder metamaʼlumotlarini plagin shartnomasi tomon yoʻnaltirish, natijada tezkor soʻrov
-yoʻli pastroq kechikishga ega saydkar tomonidan boshqarilishi, OmniRoute esa TypeScript
+yoʻli pastroq kechikishga ega saydkar tomonidan boshqarilishi, 67router esa TypeScript
 marshrutini siyosat darvozasi va zaxira sifatida saqlab qolishi mumkin. Manifest qoʻshimcha
 xususiyatdir: uning oʻzi soʻrovlarni marshrutlashni oʻzgartirmaydi.
 
@@ -75,7 +75,7 @@ savolga mashina oʻqiy oladigan javob sifatida qabul qilishlari kerak.
 | `usage-fetch`        | Ulangan foydalanish yoki kvota oluvchisiga (`getUsageForProvider`) ega.                |
 | `usage-supported`    | Foydalanish APIʼsi ushbu provayderni qabul qiladi (`isSupportedUsageConnection`).      |
 
-`usage-fetch` faqat aniqlash uchun moʻljallangan. U OmniRoute provayder uchun foydalanish
+`usage-fetch` faqat aniqlash uchun moʻljallangan. U 67router provayder uchun foydalanish
 maʼlumotlarini qanday oʻqishni bilishini bildiradi; u maʼlumotlarni olishni faollashtirmaydi,
 kvota semantikasini oʻzgartirmaydi yoki Dashboard kvota vidjeti provayder uchun
 yoqilganini anglatmaydi — ushbu vidjet alohida ravishda `USAGE_SUPPORTED_PROVIDERS`

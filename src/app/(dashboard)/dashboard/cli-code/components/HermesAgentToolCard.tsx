@@ -459,7 +459,7 @@ export default function HermesAgentToolCard({
                   (current?.base_url || "").includes("localhost");
 
                 if (isOmni) {
-                  badge = { label: "OmniRoute", pending: false, outsideOmniRoute: false };
+                  badge = { label: "67router", pending: false, outsideOmniRoute: false };
                 } else {
                   const realProvider = current.provider || t("other");
                   badge = {

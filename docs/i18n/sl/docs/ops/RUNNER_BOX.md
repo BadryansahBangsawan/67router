@@ -5,7 +5,7 @@
 ---
 
 Samostojno gostovana gruča se izvaja na strežniku **.113** (`tomni-proxmox-113`). Od 2026-10-18 ima vsak
-izvajalnik OmniRoute **eno vlogo**, eno oznako ter pomnilniško/procesorsko kvoto, prilagojeno izmerjeni
+izvajalnik 67router **eno vlogo**, eno oznako ter pomnilniško/procesorsko kvoto, prilagojeno izmerjeni
 obremenitvi. Reža za Turbopack dobi vire, ki jih zahteva izdelava; druge reže so prilagojene njihovim
 izmerjenim konicam. Strežnik vire čezmerno dodeli le, kadar izdelava s Turbopack sovpade z izdelavo
 webpack Release-Green in opravilom lint; to obremenitev prevzame izmenjalni prostor gostitelja (16 GB).
@@ -28,7 +28,7 @@ Izmerjeno 2026-10-18:
 | izmenjalni prostor | 16 GB                                | `omniroute-113-5` se izvaja brez izmenjalnega prostora (`MemorySwapMax=0`), zato se podivjana izdelava prekine ob dosegu omejitve, namesto da bi strežnik začel uporabljati izmenjalni prostor                                                                                                                                                                                                                                |
 | `/tmp`             | **12 GB tmpfs = RAM**                | vse, kar je shranjeno tam, zaseda pomnilnik; ostanki se odstranijo po 3 urah                                                                                                                                                                                                                                                                                                                                                  |
 | CPU                | opažena obremenitev 60 pri 32 jedrih | pred uvedbo kvot sta ena izdelava s Turbopack (približno 1166 % CPU) in zbirka testov pokritosti na istem strežniku izrinili signale za preverjanje odzivnosti drugih poslušalcev (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                       |
-| izvajalniki        | **6 poslušalcev**                    | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` so onemogočeni (`systemctl enable --now` enega znova zažene)                                                                                                                                                                                                                                                                                                  |
+| izvajalniki        | **6 poslušalcev**                    | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` so onemogočeni (`systemctl enable --now` enega znova zažene)                                                                                                                                                                                                                                                                                                   |
 
 Omejitve so določene v datoteki `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 vsake enote (prejšnje vrednosti so shranjene kot `override.conf.bak-20261018`) in so bile uveljavljene
@@ -55,7 +55,7 @@ Pravilo 75 minut ne zazna gradnje, nad katero je GitHub že obupal. Ko `Runner.L
 
 ## Enote izvajalnikov: KillMode
 
-Privzeti `KillMode=process` izvajalnika pusti procese `Runner.Worker → npm → next-build` žive, ko je enota ustavljena ali znova zagnana — osirotela gradnja še naprej porablja RAM in CPE, ne da bi bila pripeta k opravilu. Vsaka enota OmniRoute vsebuje dopolnilno konfiguracijo (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) z nastavitvijo `KillMode=mixed`: najprej pošlje SIGTERM poslušalcu, ob `TimeoutStop` pa SIGKILL celotni kontrolni skupini. Uveljavi se ob naslednjem ponovnem zagonu enote — znova zaženite **po enega izvajalnika naenkrat in samo, ko je nedejaven**, pri čemer morata biti preverjanje nedejavnosti in ponovni zagon izvedena z istim ukazom.
+Privzeti `KillMode=process` izvajalnika pusti procese `Runner.Worker → npm → next-build` žive, ko je enota ustavljena ali znova zagnana — osirotela gradnja še naprej porablja RAM in CPE, ne da bi bila pripeta k opravilu. Vsaka enota 67router vsebuje dopolnilno konfiguracijo (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) z nastavitvijo `KillMode=mixed`: najprej pošlje SIGTERM poslušalcu, ob `TimeoutStop` pa SIGKILL celotni kontrolni skupini. Uveljavi se ob naslednjem ponovnem zagonu enote — znova zaženite **po enega izvajalnika naenkrat in samo, ko je nedejaven**, pri čemer morata biti preverjanje nedejavnosti in ponovni zagon izvedena z istim ukazom.
 
 ## Pravila delovanja
 
@@ -94,7 +94,7 @@ Privzeti `KillMode=process` izvajalnika pusti procese `Runner.Worker → npm →
   samo zaledni `next build` (~5–6 GB; webpack), in `lint-guard` iz `quality.yml`. `omniroute-113` je imel do
   2026-10-18 nastavitev `MemoryHigh=4G` — gradnja promptfoo je tam vseh 54 minut sproščala pomnilnik; 8 GB
   odpravi omejevanje.
-- **Manj poslušalnikov je namernih.** Štiri enote OmniRoute so bile onemogočene 2026-08-29 — vsak dodatni
+- **Manj poslušalnikov je namernih.** Štiri enote 67router so bile onemogočene 2026-08-29 — vsak dodatni
   poslušalnik je še en porabnik zgornjega pomnilniškega proračuna. Zgornja meja čistilnika je 6
   (`MAX_ACTIVE_RUNNERS=6` v cron): šteje vsak `Runner.Listener` na sistemu, OmniHeuris in OmniMind pa našim
   štirim dodata še dva.

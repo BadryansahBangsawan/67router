@@ -152,7 +152,7 @@ Vipengele vinavyotegemea Playwright katika `tests/unit/claude-web-auto-refresh.t
 
 ### Usanidi
 
-1. Anzisha OmniRoute kwa `npm run dev` au usakinishaji uliojengwa.
+1. Anzisha 67router kwa `npm run dev` au usakinishaji uliojengwa.
 2. Fungua Dashibodi → Watoa Huduma → Ongeza Mtoa Huduma.
 3. Chagua kategoria ya Web Cookie na Claude Web.
 4. Bandika kichwa kizima cha Cookie kilichonakiliwa kutoka kwenye ombi la `claude.ai` lililothibitishwa.

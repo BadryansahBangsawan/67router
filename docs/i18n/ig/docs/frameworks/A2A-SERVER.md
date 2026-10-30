@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Igbo)
+# 67router A2A Server Documentation (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — OmniRoute dịka onye nnọchi anya nwere ọgụgụ isi maka ịhọrọ ụzọ
+> Agent-to-Agent Protocol v0.3 — 67router dịka onye nnọchi anya nwere ọgụgụ isi maka ịhọrọ ụzọ
 
 Ụdị njikọ A2A nwere akụkụ abụọ:
 
@@ -19,7 +19,7 @@ A na-eji `A2ATaskManager` (`src/lib/a2a/taskManager.ts`, TTL ndabara nke nkeji 5
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Ọ na-eweghachi Kaadị Onye Nnọchi Anya nke na-akọwa ikike, nka, na ihe nyocha njirimara OmniRoute chọrọ.
+Ọ na-eweghachi Kaadị Onye Nnọchi Anya nke na-akọwa ikike, nka, na ihe nyocha njirimara 67router chọrọ.
 
 A na-enweta mpaghara `version` nke Kaadị Onye Nnọchi Anya site na `process.env.npm_package_version` (lee `src/app/.well-known/agent.json/route.ts:13`), ya mere ọ na-emekọrịta onwe ya na `package.json` mgbe ọ bụla e wepụtara ụdị ọhụrụ.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Ọrụ Ndị Dị Ugbu A
 
-OmniRoute na-ekpughe ọrụ A2A 6 ndị e jikọrọ na `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Modul ọrụ ọ bụla bi na `src/lib/a2a/skills/`.
+67router na-ekpughe ọrụ A2A 6 ndị e jikọrọ na `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Modul ọrụ ọ bụla bi na `src/lib/a2a/skills/`.
 
 | Ọrụ                | ID                   | Nkọwa                                                                                                                                                             | Mkpado                     | Ọmụmaatụ                                 |
 | :----------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :--------------------------------------- |
-| Smart Routing      | `smart-routing`      | Na-ebufe prompt site na provider/combo kacha mma site na iji combo engine nke OmniRoute + scoring                                                                 | routing, providers         | "Bufee prompt a site na model kacha mma" |
+| Smart Routing      | `smart-routing`      | Na-ebufe prompt site na provider/combo kacha mma site na iji combo engine nke 67router + scoring                                                                  | routing, providers         | "Bufee prompt a site na model kacha mma" |
 | Quota Management   | `quota-management`   | Na-akọ ọnọdụ quota nke provider ọ bụla, na-enyere ndị na-akpọ aka ịkpebi mgbe ha ga-achịkwa ọsọ/gbanwee                                                           | quota, providers           | "Lelee quota maka anthropic"             |
 | Provider Discovery | `provider-discovery` | Na-edepụta providers arụnyere na ikike ha, flags free-tier, ọnọdụ OAuth                                                                                           | providers, discovery       | "Kedu providers ndị dị?"                 |
 | Cost Analysis      | `cost-analysis`      | Na-atụle ọnụ ego nke request/mkparịta ụka site na catalog + ojiji nke na-adịbeghị anya                                                                            | cost, usage                | "Tụlee ọnụ ego maka mkparịta ụka a"      |
 | Health Report      | `health-report`      | Na-akọkọta ọnọdụ circuit breaker, cooldown, na lockout nke provider ọ bụla                                                                                        | health, resilience         | "Gosi ọnọdụ ahụ ike nke providers niile" |
-| List Capabilities  | `list-capabilities`  | Na-alọghachi catalog Agent Skills zuru ezu nke ihe ndenye 43 (22 API + 20 CLI + 1 config) dị ka tebulu markdown nwere URL SKILL.md gburugburu maka ịtinye context | catalog, discovery, skills | "Depụta ikike OmniRoute niile"           |
+| List Capabilities  | `list-capabilities`  | Na-alọghachi catalog Agent Skills zuru ezu nke ihe ndenye 43 (22 API + 20 CLI + 1 config) dị ka tebulu markdown nwere URL SKILL.md gburugburu maka ịtinye context | catalog, discovery, skills | "Depụta ikike 67router niile"            |
 
 > A ga-edebe Agent Card ka ọ kwekọrọ na catalog ndị provider 375 dị ugbu a; a na-enweta ọnụ ọgụgụ provider na metadata free/no-auth site na registry oge ọrụ.
 
 ### Nkọwa Zuru Ezu nke Ọrụ `list-capabilities`
 
-Ọrụ `list-capabilities` bara nnukwu uru maka ndị agent mpụga chọrọ ịchọpụta ihe OmniRoute na-ekpughe tupu ha iziga API calls. Ọ na-alọghachi artifact tebulu markdown haziri ahazi:
+Ọrụ `list-capabilities` bara nnukwu uru maka ndị agent mpụga chọrọ ịchọpụta ihe 67router na-ekpughe tupu ha iziga API calls. Ọ na-alọghachi artifact tebulu markdown haziri ahazi:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ Ebe njedebe JSON-RPC `/a2a` bụ ebe ntinye A2A izizi. Ebe njedebe REST ndị d�
 | `/.well-known/agent.json`    | GET   | Kaadị Agent (nchọpụta A2A)                                  | (ọha, echekwara 3600s)                           |
 | `/api/a2a/tasks`             | POST  | Nnyefe ọrụ mbata nye ìgwè OmniConductor (Conductor PRD RF5) | Bearer megide `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Nnyefe ọrụ Conductor mbata (`POST /api/a2a/tasks`):** ndị agent A2A mpụga na-enyefe ọrụ ide koodu nye ìgwè OmniConductor site na OmniRoute. Ahụ: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — naanị nkà nke ìgwè Conductor (ndị ekwuputara na Kaadị Agent) ka enwere ike inyefe ọrụ; `metadata.conductor.repo.url` dị mkpa (ìgwè ahụ na-arụ ọrụ na repo git). Ụzọ ahụ na-atụgharị gaa na `POST /v1/tasks` nke hub site n'iji `CONDUCTOR_ORCHESTRATOR_TOKEN` dị n'akụkụ sava (ọ bụrụ na nke ahụ adịghị, `CONDUCTOR_HUB_TOKEN`) ma weghachite `201 { conductor_task_id, state: "submitted" }`; ọnọdụ ọrụ na-alaghachi site na enyo SSE→A2A (RF1), a pụkwara ịhụ ha site na `GET /api/a2a/tasks?skill=conductor`.
+**Nnyefe ọrụ Conductor mbata (`POST /api/a2a/tasks`):** ndị agent A2A mpụga na-enyefe ọrụ ide koodu nye ìgwè OmniConductor site na 67router. Ahụ: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — naanị nkà nke ìgwè Conductor (ndị ekwuputara na Kaadị Agent) ka enwere ike inyefe ọrụ; `metadata.conductor.repo.url` dị mkpa (ìgwè ahụ na-arụ ọrụ na repo git). Ụzọ ahụ na-atụgharị gaa na `POST /v1/tasks` nke hub site n'iji `CONDUCTOR_ORCHESTRATOR_TOKEN` dị n'akụkụ sava (ọ bụrụ na nke ahụ adịghị, `CONDUCTOR_HUB_TOKEN`) ma weghachite `201 { conductor_task_id, state: "submitted" }`; ọnọdụ ọrụ na-alaghachi site na enyo SSE→A2A (RF1), a pụkwara ịhụ ha site na `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

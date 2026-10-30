@@ -10,7 +10,7 @@
 
 ## Contexte
 
-OmniRoute expose actuellement des fonctions de persistance orientées domaine depuis `src/lib/db/`, tandis que la
+67router expose actuellement des fonctions de persistance orientées domaine depuis `src/lib/db/`, tandis que la
 connexion partagée renvoyée par `src/lib/db/core.ts` implémente le contrat synchrone `SqliteAdapter`
 défini dans `src/lib/db/adapters/types.ts`. Cet adaptateur prend en charge plusieurs environnements d’exécution SQLite, mais son
 interface reste calquée sur SQLite : instructions préparées synchrones, `pragma`, transactions différées et immédiates,

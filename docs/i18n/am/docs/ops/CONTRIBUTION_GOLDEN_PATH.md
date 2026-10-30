@@ -113,7 +113,7 @@ production buildን እና ሰፋ ያሉ suitesን ያስኬዳል፤ visual beh
 - CLI catalogs በ`bin/cli/locales/` ስር ተለይተው ይገኛሉ።
 - ICU placeholders እና tagsን በትክክል እንዳሉ ያቆዩ። የproduct/provider/model ስሞችን፣
   protocol እና header ስሞችን፣ commandsን፣ code/JSON identifiersን፣ URLsን፣ environment variablesን ወይም
-  እንደ `OmniRoute`፣ `OAuth`፣ `MCP` እና `A2A` ያሉ protected termsን አይተርጉሙ። የአሁኑ source list
+  እንደ `67router`፣ `OAuth`፣ `MCP` እና `A2A` ያሉ protected termsን አይተርጉሙ። የአሁኑ source list
   `scripts/i18n/glossary/protected-terms.json` ነው።
 
 **የተኮረ ዑደት**
@@ -254,7 +254,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # ሌላ ቦታ (CI) የ
 - **ወደነበረበት ይመልሱ።** `run` ወደ ምርት ያደገውን slot እንደገና ያረጋግጣል፤ ያ ፍተሻ ካልተሳካ
   `current` እና `previous` ን ወደነበሩበት መልሶ ይቀያይራል። የመጀመሪያውን ማረጋገጫ የማያልፍ candidate በፍጹም ወደ ምርት አይተላለፍም።
 
-ሁሉም ነገር gitignored በሆነው `_artifacts/candidate/` ስር ይጻፋል፤ አስቀድሞ ያለ OmniRoute
+ሁሉም ነገር gitignored በሆነው `_artifacts/candidate/` ስር ይጻፋል፤ አስቀድሞ ያለ 67router
 ጭነት እና የውሂብ ማውጫው ፈጽሞ አይነኩም። ወደ ምርት ያደገው CLI
 `_artifacts/candidate/current/prefix/bin/omniroute` ነው፤ ሲጠቀሙበት በራስዎ `DATA_DIR` ያስነሱት። የመውጫ ኮዶች፦ `0` ስኬት፣ `1` ያልተሳካ ማረጋገጫ ወይም ወደ ምርት ማሳደግ፣ `2` የአጠቃቀም ስህተት ወይም የጎደለ build።
 

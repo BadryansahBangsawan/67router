@@ -8,7 +8,7 @@
 
 > **Chanzo cha ukweli:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute huruhusu kila proksi kuwa na **agizo la familia ya anwani kwa trafiki inayotoka**. Kwa chaguo-msingi, mfumo wa uendeshaji huchagua IPv4 au IPv6 (dual-stack, "Happy Eyeballs"). Unapoweka agizo kuwa `ipv4` au `ipv6`, OmniRoute hulazimisha kila muunganisho unaopitia proksi hiyo kutumia familia iliyochaguliwa na **huzuia muunganisho unaposhindikana** badala ya kurudi kwenye familia nyingine.
+67router huruhusu kila proksi kuwa na **agizo la familia ya anwani kwa trafiki inayotoka**. Kwa chaguo-msingi, mfumo wa uendeshaji huchagua IPv4 au IPv6 (dual-stack, "Happy Eyeballs"). Unapoweka agizo kuwa `ipv4` au `ipv6`, 67router hulazimisha kila muunganisho unaopitia proksi hiyo kutumia familia iliyochaguliwa na **huzuia muunganisho unaposhindikana** badala ya kurudi kwenye familia nyingine.
 
 Ukurasa huu unafafanua agizo hilo ni nini, kwa nini lipo, mahali pa kulisanidi, na jinsi mazingira ya utekelezaji yanavyolitatua.
 
@@ -122,7 +122,7 @@ Kwa sehemu nyingine ya API ya CRUD/ugawaji wa proksi, angalia [PROXY_GUIDE.md](.
 
 ## Jinsi `auto` Inavyotatua
 
-Wakati `family` ni `auto`, OmniRoute **haiongezi** agizo lolote — URL ya proksi hutumiwa jinsi ilivyo na familia ya muunganisho huamuliwa moja kwa moja.
+Wakati `family` ni `auto`, 67router **haiongezi** agizo lolote — URL ya proksi hutumiwa jinsi ilivyo na familia ya muunganisho huamuliwa moja kwa moja.
 
 Wakati wa kuunda URL (`proxyConfigToUrl` / `normalizeProxyUrl` katika `open-sse/utils/proxyDispatcher.ts`), proksi ya `auto` hutoa URL ya kawaida isiyo na alama:
 
@@ -158,7 +158,7 @@ Kwa hivyo:
 
 Maagizo yasiyo ya `auto` husafirishwa kama alama moja ya hoja ya usanifu — `?family=ipv4` au `?family=ipv6` — inayoongezwa mara moja kwenye URL ya proksi iliyosawazishwa. `normalizeProxyUrl` huondoa na kuongeza tena alama hii kwa uangalifu mara moja tu ili isiharibu kamwe uchanganuzi wa porti.
 
-Dispatcher inapoundwa, alama hiyo husomwa na kubadilishwa kuwa family mahususi ya muunganisho. Ikiwa host ni IP halisi ya family **kinyume**, OmniRoute hutupa hitilafu (mgongano hufungwa kwa usalama):
+Dispatcher inapoundwa, alama hiyo husomwa na kubadilishwa kuwa family mahususi ya muunganisho. Ikiwa host ni IP halisi ya family **kinyume**, 67router hutupa hitilafu (mgongano hufungwa kwa usalama):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Kisha family hiyo mahususi hufungwa kwenye connector:
 
 ## Uoanifu wa SOCKS5
 
-Ufungaji wa family hufanya kazi na proksi za SOCKS5, lakini `fetch-socks` ya kawaida haiwezeshi kufikia chaguo za socket zinazohitajika ili kufunga family ya hatua ya proksi. OmniRoute huja na connector yake yenyewe kwa ajili hiyo:
+Ufungaji wa family hufanya kazi na proksi za SOCKS5, lakini `fetch-socks` ya kawaida haiwezeshi kufikia chaguo za socket zinazohitajika ili kufunga family ya hatua ya proksi. 67router huja na connector yake yenyewe kwa ajili hiyo:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

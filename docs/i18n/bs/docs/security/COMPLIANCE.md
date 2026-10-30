@@ -9,7 +9,7 @@
 > **Izvor istine:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40
 
-OmniRoute bilježi administrativne radnje, događaje autentifikacije, promjene životnog ciklusa vjerodajnica provajdera i pozive MCP alata u revizijske tabele zasnovane na SQLite-u. Ova stranica obuhvata šta se bilježi, gdje se podaci nalaze, koliko dugo se čuvaju, kako API ključevi mogu isključiti bilježenje i kako pretraživati podatke.
+67router bilježi administrativne radnje, događaje autentifikacije, promjene životnog ciklusa vjerodajnica provajdera i pozive MCP alata u revizijske tabele zasnovane na SQLite-u. Ova stranica obuhvata šta se bilježi, gdje se podaci nalaze, koliko dugo se čuvaju, kako API ključevi mogu isključiti bilježenje i kako pretraživati podatke.
 
 Implementacija se nalazi u `src/lib/compliance/index.ts` (T-43 — "Kontrole usklađenosti") i `src/lib/compliance/providerAudit.ts`. Zapisivanje revizije nikada ne baca izuzetak: u slučaju bilo kakvog neuspjeha, poziv se tiho zanemaruje kako revizijsko bilježenje ne bi prekinulo glavni tok zahtjeva.
 

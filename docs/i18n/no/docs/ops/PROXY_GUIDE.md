@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Norsk)
+# 🌐 67router Proxy Guide (Norsk)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Omgå geografiske blokkeringer, beskytt identiteten din og rut AI-trafikk gjennom hvilken som helst proxy — helt uten komplisert konfigurasjon.**
 
-OmniRoute inkluderer et komplett system for proxyadministrasjon som lar deg rute trafikk til eksterne AI-leverandører gjennom HTTP-, HTTPS- eller SOCKS5-proxyer. Enten du befinner deg i en blokkert region, trenger IP-rotasjon eller ønsker skjult fingeravtrykksbeskyttelse — denne veiledningen dekker alt.
+67router inkluderer et komplett system for proxyadministrasjon som lar deg rute trafikk til eksterne AI-leverandører gjennom HTTP-, HTTPS- eller SOCKS5-proxyer. Enten du befinner deg i en blokkert region, trenger IP-rotasjon eller ønsker skjult fingeravtrykksbeskyttelse — denne veiledningen dekker alt.
 
 ---
 
@@ -51,7 +51,7 @@ Selv utenfor blokkerte regioner er proxyer nyttige for:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute-server                        │
+│                       67router-server                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Proxy-      │    │ Proxy-       │    │ Proxy-           │  │
@@ -83,7 +83,7 @@ Selv utenfor blokkerte regioner er proxyer nyttige for:
 
 ## 4-nivåers proxysystem
 
-OmniRoute støtter proxykonfigurasjon på **fire uavhengige nivåer**, som løses i prioritert rekkefølge:
+67router støtter proxykonfigurasjon på **fire uavhengige nivåer**, som løses i prioritert rekkefølge:
 
 ```
 Prioritert løsningsrekkefølge (høyest → lavest):
@@ -96,7 +96,7 @@ Prioritert løsningsrekkefølge (høyest → lavest):
 
 ### Slik fungerer løsningen
 
-Når OmniRoute sender en forespørsel til en oppstrømsleverandør, kalles `resolveProxyForConnectionFromRegistry()`, som kontrollerer hvert nivå i rekkefølge:
+Når 67router sender en forespørsel til en oppstrømsleverandør, kalles `resolveProxyForConnectionFromRegistry()`, som kontrollerer hvert nivå i rekkefølge:
 
 1. **Kontonivå** — Er en proxy tilordnet denne spesifikke tilkoblings-ID-en?
 2. **Leverandørnivå** — Er en proxy tilordnet denne leverandøren (f.eks. `openai`)?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Import/eksport
 
-Proxyer er inkludert i systemet for **sikkerhetskopiering/gjenoppretting**. Når du eksporterer OmniRoute-konfigurasjonen:
+Proxyer er inkludert i systemet for **sikkerhetskopiering/gjenoppretting**. Når du eksporterer 67router-konfigurasjonen:
 
 1. Gå til **Kontrollpanel → Innstillinger → Sikkerhetskopiering**
 2. Klikk på **Eksporter** — proxyregisteret og tilordningene er inkludert
@@ -248,7 +248,7 @@ Proxyregisteret støtter også **upsert etter vert+port** — hvis du importerer
 
 ### Migrering fra eldre versjoner
 
-Hvis du konfigurerte proxyer i en eldre versjon (før registeret), migrerer OmniRoute dem automatisk:
+Hvis du konfigurerte proxyer i en eldre versjon (før registeret), migrerer 67router dem automatisk:
 
 ```
 Eldre key_value-lager → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Dette skjer én gang ved første oppstart etter oppgraderingen. Bruk `migrateLeg
 
 > 🆕 **Bidratt av [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (sak [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute integreres med fellesskapsplattformen **[1proxy](https://1proxy-api.aitradepulse.com)** for å gi tilgang til **hundrevis av gratis, validerte proxyer** fra hele verden. Dette er perfekt for brukere som ikke har sin egen proxy-infrastruktur.
+67router integreres med fellesskapsplattformen **[1proxy](https://1proxy-api.aitradepulse.com)** for å gi tilgang til **hundrevis av gratis, validerte proxyer** fra hele verden. Dette er perfekt for brukere som ikke har sin egen proxy-infrastruktur.
 
 ### Slik fungerer det
 
@@ -273,7 +273,7 @@ OmniRoute integreres med fellesskapsplattformen **[1proxy](https://1proxy-api.ai
 └─────────────┘    proxyer    └─────────────────┘               └──────────┘
 ```
 
-1. **Synkroniser** — OmniRoute henter validerte proxyer fra 1proxy API-et
+1. **Synkroniser** — 67router henter validerte proxyer fra 1proxy API-et
 2. **Lagre** — Proxyene lagres i den samme `proxy_registry`-tabellen med `source = 'oneproxy'`
 3. **Filtrer** — Filtrer etter protokoll, land og kvalitetspoeng
 4. **Roter** — Velg den beste proxyen ved hjelp av kvalitetsbaserte, tilfeldige eller sekvensielle strategier
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Antideteksjon og skjuling
 
-OmniRoute ruter ikke bare trafikk gjennom en proxy — det får også trafikken til å se legitim ut:
+67router ruter ikke bare trafikk gjennom en proxy — det får også trafikken til å se legitim ut:
 
 ### Forfalskning av TLS-fingeravtrykk
 
@@ -407,11 +407,11 @@ Merket viser også den fastslåtte proxy-IP-en for verifisering.
 
 ## Oppstrøms proxymoduser
 
-For leverandører som bruker CLIProxyAPI-mønsteret, støtter OmniRoute tre oppstrøms proxymoduser:
+For leverandører som bruker CLIProxyAPI-mønsteret, støtter 67router tre oppstrøms proxymoduser:
 
 | Modus         | Beskrivelse                                                   |
 | ------------- | ------------------------------------------------------------- |
-| `native`      | OmniRoute håndterer proxyruting direkte (standard)            |
+| `native`      | 67router håndterer proxyruting direkte (standard)             |
 | `cliproxyapi` | Delegerer til en ekstern CLIProxyAPI-instans                  |
 | `fallback`    | Prøver opprinnelig modus først og går tilbake til CLIProxyAPI |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API for tunneler
 
-Hvis du vil eksponere OmniRoute-instansen din på det offentlige internettet (Cloudflare/ngrok/Tailscale) i stedet for å rute utgående trafikk gjennom en proxy, kan du se [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST-API-et for tunneler ligger under `/api/tunnels/{cloudflared,ngrok,tailscale}/*` og er uavhengig av den utgående proxykjeden som er dokumentert ovenfor.
+Hvis du vil eksponere 67router-instansen din på det offentlige internettet (Cloudflare/ngrok/Tailscale) i stedet for å rute utgående trafikk gjennom en proxy, kan du se [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST-API-et for tunneler ligger under `/api/tunnels/{cloudflared,ngrok,tailscale}/*` og er uavhengig av den utgående proxykjeden som er dokumentert ovenfor.
 
 ### API for 1proxy
 
@@ -516,7 +516,7 @@ Angi `ENABLE_SOCKS5_PROXY=true` i `.env`-filen, og start på nytt.
 
 ### «socket hang up»-feil via proxy
 
-Dette er normalt med billige proxyer som lukker inaktive tilkoblinger. OmniRoute håndterer allerede dette ved å:
+Dette er normalt med billige proxyer som lukker inaktive tilkoblinger. 67router håndterer allerede dette ved å:
 
 - Deaktivere keep-alive på proxytilkoblinger (`keepAliveTimeout: 1`)
 - Deaktivere pipelining (`pipelining: 0`)
@@ -526,7 +526,7 @@ Hvis problemet vedvarer, kan du prøve en annen proxy eller bruke rotasjonsfunks
 
 ### «unsupported_country_region_territory» under OAuth
 
-Kontroller at proxyen er konfigurert **før** du starter OAuth-flyten. OmniRoute ruter utvekslingen av OAuth-tokener gjennom den konfigurerte proxyen. Angi først en global proxy eller en proxy på leverandørnivå, og koble deretter til.
+Kontroller at proxyen er konfigurert **før** du starter OAuth-flyten. 67router ruter utvekslingen av OAuth-tokener gjennom den konfigurerte proxyen. Angi først en global proxy eller en proxy på leverandørnivå, og koble deretter til.
 
 ### Proxyen brukes ikke
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Helsesjekk av proxyer (v3.8.16+)
 
-OmniRoutes mekanisme for **rask proxyfeil** (`src/lib/proxyHealth.ts`) oppdager døde proxyer på <2s via en rask kontroll av TCP-tilkoblingen og **mellomlagrer deretter resultatet** for å unngå ekstraarbeid per forespørsel.
+67routers mekanisme for **rask proxyfeil** (`src/lib/proxyHealth.ts`) oppdager døde proxyer på <2s via en rask kontroll av TCP-tilkoblingen og **mellomlagrer deretter resultatet** for å unngå ekstraarbeid per forespørsel.
 
 ### Slik fungerer det
 
@@ -659,11 +659,11 @@ Egendefinerte porter i URL-en (`http://host:9999`) har alltid prioritet over sta
 
 ## Proxyanalyse og observerbarhet
 
-OmniRoute sporer bruk per proxy for å hjelpe operatører med å diagnostisere rutingsmønstre, forsinkelsestopper og gjentakende feil.
+67router sporer bruk per proxy for å hjelpe operatører med å diagnostisere rutingsmønstre, forsinkelsestopper og gjentakende feil.
 
 ### Hva som spores
 
-For hver forespørsel gjennom en konfigurert proxy registrerer OmniRoute:
+For hver forespørsel gjennom en konfigurert proxy registrerer 67router:
 
 | Måleverdi    | Beskrivelse                                         |
 | ------------ | --------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Beslutningstre for rotasjonsstrategi
 
-Når flere proxyer er tilordnet et virkeområde, bruker OmniRoute en **rotasjonsstrategi** for å velge hvilken som skal brukes for hver forespørsel. Strategien konfigureres på virkeområdenivå (globalt, per leverandør, per konto, per kombinasjon).
+Når flere proxyer er tilordnet et virkeområde, bruker 67router en **rotasjonsstrategi** for å velge hvilken som skal brukes for hver forespørsel. Strategien konfigureres på virkeområdenivå (globalt, per leverandør, per konto, per kombinasjon).
 
 ### Tilgjengelige strategier
 

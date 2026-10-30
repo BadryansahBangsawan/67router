@@ -6,7 +6,7 @@
 
 ## Gambaran keseluruhan
 
-Perintah OmniRoute CLI mengesahkan identiti terhadap API pengurusan setempat menggunakan token
+Perintah 67router CLI mengesahkan identiti terhadap API pengurusan setempat menggunakan token
 `HMAC-SHA256(machine-id, salt)` yang dihantar melalui pengepala permintaan
 `x-omniroute-cli-token`.
 

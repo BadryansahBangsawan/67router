@@ -14,7 +14,7 @@ Dalawang opt-in na compose profile (`memory`, `bifrost`) para sa kasalukuyang 8-
 
 ## Bakit konserbatibo ang paraang ito
 
-Payak at subok na ang kasalukuyang deployment setup ng OmniRoute:
+Payak at subok na ang kasalukuyang deployment setup ng 67router:
 
 - Pinangangasiwaan ng **`redis:7-alpine`** ang rate-limit/cache workload sa production scale.
 - Saklaw ng **SQLite + sqlite-vec + FTS5** ang lokal na memory + vector + text search (tingnan ang [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Ang dalawang profile na ito ay mga **opsyon sa scale-out para sa mga deployment 
 
 - Nagpapatakbo ka ng ≥3 `omniroute` replica at nais mong isentralisa ang provider rotation sa iisang Go process.
 - Nais mo ng iisang audit/logging surface para sa mga request sa upstream provider mula sa lahat ng replica.
-- Nais mong i-horizontal scale ang Tier-1 routing layer nang hiwalay sa mga OmniRoute replica.
+- Nais mong i-horizontal scale ang Tier-1 routing layer nang hiwalay sa mga 67router replica.
 
 **Ano ang idinaragdag nito:**
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute có **bốn nhóm thông tin xác thực** có thể ủy quyền các tuyến quản lý.
+67router có **bốn nhóm thông tin xác thực** có thể ủy quyền các tuyến quản lý.
 Chúng không thể hoán đổi cho nhau. Khóa API suy luận (`sk-…`) **không** quản lý
 máy chủ trừ khi chúng được cấp rõ ràng phạm vi `manage` hoặc `admin`.
 

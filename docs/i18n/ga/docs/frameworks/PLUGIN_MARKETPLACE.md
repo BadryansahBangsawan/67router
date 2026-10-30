@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
-Tagann OmniRoute le córas breiseán ar nós WordPress. Is eolairí féinchuimsitheacha
+Tagann 67router le córas breiseán ar nós WordPress. Is eolairí féinchuimsitheacha
 iad na breiseáin — agus forléiriú `plugin.json` agus comhad iontrála ag gach ceann acu — a
 nascann leis an bpíblíne iarratais (`onRequest` / `onResponse` / `onError`) agus le
 teagmhais saolré (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -152,7 +152,7 @@ nach bhfuil sa scéimre.
 
 ### Eolaire breiseán
 
-Tá breiseáin lonnaithe faoi eolaire sonraí OmniRoute:
+Tá breiseáin lonnaithe faoi eolaire sonraí 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

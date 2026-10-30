@@ -43,9 +43,9 @@
    नाम टाँस्नुहोस्। नयाँ उपकरण-सक्षम सेटअपहरूले ठ्याक्कै
    `OmniRoute Codex v2` नाम दिइएको नयाँ connector प्रयोग गर्नुपर्छ, जसमा Authentication लाई None र Permissions लाई Allow all
    actions मा सेट गरिएको हुनुपर्छ।
-3. जडान जाँच चलाउनुहोस्। OmniRoute ले ब्राउजरद्वारा समर्थित Temporary Chat खोल्छ र
+3. जडान जाँच चलाउनुहोस्। 67router ले ब्राउजरद्वारा समर्थित Temporary Chat खोल्छ र
    खाताका लागि Sol र Pro उपलब्ध छन् कि छैनन् भनेर पत्ता लगाउँछ।
-4. जडान सुरक्षित गर्नुहोस्। OmniRoute ले टाँसिएको cookie लाई प्रमाणित
+4. जडान सुरक्षित गर्नुहोस्। 67router ले टाँसिएको cookie लाई प्रमाणित
    Playwright storage state ले प्रतिस्थापन गर्छ र encrypted
    credential abstraction मार्फत runtime key सँगै भण्डारण गर्छ।
 
@@ -101,18 +101,18 @@ High सम्म उपलब्ध गराउँछन्, र Pro-सक्
 
 ## डिस्प्लेरहित VPS र Docker
 
-npm, systemd, र PM2 स्थापनाहरूका लागि, OmniRoute ले प्रचलित Chrome र Chromium पथहरू पत्ता लगाउँछ।
+npm, systemd, र PM2 स्थापनाहरूका लागि, 67router ले प्रचलित Chrome र Chromium पथहरू पत्ता लगाउँछ।
 वैकल्पिक रूपमा, `CHATGPT_WEB_CODEX_CHROME_PATH` सेट गर्नुहोस्। Runtime turns ले जानाजानी headed
 Chrome प्रयोग गर्छन्, किनकि ChatGPT ले वास्तविक headless browser को स्वरूप अस्वीकार गर्छ। त्यसैले डिस्प्लेरहित host ले
-निजी Xvfb display सहित OmniRoute चलाउनुपर्छ; Chrome path मात्र सेट गर्दा display उपलब्ध हुँदैन।
+निजी Xvfb display सहित 67router चलाउनुपर्छ; Chrome path मात्र सेट गर्दा display उपलब्ध हुँदैन।
 
 Docker को `web` profile ले आन्तरिक Compose
 network मा `chatgpt-web-codex-browser` सुरु गर्छ। Sidecar ले Xvfb भित्र headed Chrome चलाउँछ, त्यसैले कुनै भौतिक display आवश्यक पर्दैन। यसको CDP
 port host मा प्रकाशित हुँदैन। सुरक्षित browser profile volume
-OmniRoute data volume बाट अलग हुन्छ, र browser ले पर्याप्त shared memory प्राप्त गर्छ। आन्तरिक CDP proxy ले
+67router data volume बाट अलग हुन्छ, र browser ले पर्याप्त shared memory प्राप्त गर्छ। आन्तरिक CDP proxy ले
 Compose network भित्रको port `9223` मा मात्र सुन्छ; Chrome sidecar मा loopback मै बाँधिएको रहन्छ।
 
-`DATA_DIR` अन्तर्गतको supervisor lease ले धेरै OmniRoute प्रक्रियाहरूलाई एउटै
+`DATA_DIR` अन्तर्गतको supervisor lease ले धेरै 67router प्रक्रियाहरूलाई एउटै
 tunnel र broker state को स्वामित्व लिनबाट रोक्छ। द्वन्द्वबारे doctor ले जानकारी दिन्छ।
 
 ## अन्तरक्रियात्मक पुनःप्राप्ति

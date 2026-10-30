@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute etsii ylävirran virhevastauksista merkkejä, jotka ilmaisevat, että palveluntarjoajan
+67router etsii ylävirran virhevastauksista merkkejä, jotka ilmaisevat, että palveluntarjoajan
 **tili on pysyvästi poissa käytöstä** (jäädytetty / deaktivoitu / estetty käyttöehtorikkomuksen vuoksi), ja
 kun vastaavuus löytyy, siirtää kyseisen yhteyden **lopulliseen `banned`-tilaan**, jolloin sitä ei
 enää valita pyyntöihin. Tätä määritetään **Security → Banned Keywords**

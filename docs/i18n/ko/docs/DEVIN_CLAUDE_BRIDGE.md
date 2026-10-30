@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic`를 사용하면 실제 Claude Code 런타임이 OmniRoute의 로컬 Anthropic
+`devin-cli-agentic`를 사용하면 실제 Claude Code 런타임이 67router의 로컬 Anthropic
 Messages 엔드포인트를 사용하는 동시에 공식 Devin CLI가 ACP stdio를 통해 모델 응답을
 제공할 수 있습니다. 기존 Anthropic, Claude OAuth, Claude Web 또는 `devin-cli` 공급자는
 변경하지 않습니다.
@@ -21,7 +21,7 @@ Messages 엔드포인트를 사용하는 동시에 공식 Devin CLI가 ACP stdio
 > 완료했습니다. 해당 최종 라이브 실행에서는 클라이언트 소유 `Read`, `Edit`, `Bash`
 > 턴, 성공적인 `npm test` 결과, 프로젝트 명령 및 스킬 검색, Devin 전용 라우팅,
 > 그리고 Claude 외부 송신 0건이 입증되었습니다. 이후 고정 버전은 `2.1.258`로
-> 상향되었습니다. 이 버전은 OmniRoute의 Claude ID가 가장하는 CLI 세대이며 Fable 5.1
+> 상향되었습니다. 이 버전은 67router의 Claude ID가 가장하는 CLI 세대이며 Fable 5.1
 > 티어를 기본으로 제공하는 최초의 릴리스 라인입니다. 새 고정 버전에서는 고정된 기본
 > 이미지에서 설치 계층과 `claude --version`이 검증되었으며, 브리지 단위 테스트 모음,
 > `compose config`, 정적 격리 증명이 모두 통과했습니다. 하지만 오프라인 모의 시나리오와
@@ -52,12 +52,12 @@ Claude Code 2.1.258 (격리된 비루트 Linux 컨테이너)
 파서는 모델 턴당 독립된 `<tool>{...}</tool>` 봉투 하나를 허용합니다. 요청의 도구 목록과
 이름을 대조하고, 해당 도구의 JSON 스키마에 따라 인수를 검증하며, 설명과 작업이 혼합된
 응답을 거부하고, 제한된 한 번의 복구 시도를 허용합니다. 그런 다음 Claude Code는 생성된
-Anthropic `tool_use`를 로컬에서 실행하고 `tool_result`를 OmniRoute를 통해 다시
+Anthropic `tool_use`를 로컬에서 실행하고 `tool_result`를 67router를 통해 다시
 전송합니다.
 
 ## 자동 라우팅
 
-차단되지 않은 경우 이 공급자는 OmniRoute의 `auto/*` 후보 풀에 포함될 수 있습니다.
+차단되지 않은 경우 이 공급자는 67router의 `auto/*` 후보 풀에 포함될 수 있습니다.
 후보 자격이 선택을 보장하지는 않습니다. 콤보의 라우팅 전략(예: 마지막으로 정상 작동한
 공급자)이 다른 공급자를 우선할 수 있습니다. 모든 요청을 Devin을 통해 보내야 한다면
 `dva/<model>` 또는 Devin 우선 콤보를 사용하십시오.
@@ -69,16 +69,16 @@ Anthropic `tool_use`를 로컬에서 실행하고 `tool_result`를 OmniRoute를 
 
 - UID/GID `10001:10001`로 실행되며, 읽기 전용 루트 파일 시스템, 제거된 capabilities 및
   `no-new-privileges`를 사용합니다.
-- 비공개 `/home/bridge`, 전용 Claude 구성 볼륨, 격리된 OmniRoute 데이터 및
+- 비공개 `/home/bridge`, 전용 Claude 구성 볼륨, 격리된 67router 데이터 및
   별도의 `devin-auth` 볼륨을 사용합니다.
 - 폐기 가능한 `.sandbox` 작업 공간/증거만 마운트합니다.
 - 호스트 홈, Keychain, SSH, 클라우드 자격 증명 또는 Docker 소켓을 마운트하지 않습니다.
 - 명시적인 환경을 구성하고 Anthropic API/OAuth/라우팅 변수를 제거합니다.
 - 로컬 전용 키를 사용하여 Claude Code 추론을 `http://omniroute:20128`로만 전달합니다.
 
-오프라인 프로필은 내부 네트워크를 사용합니다. 라이브 프로필에서 OmniRoute는
+오프라인 프로필은 내부 네트워크를 사용합니다. 라이브 프로필에서 67router는
 `network-guard`를 통해서만 공식 Devin 엔드포인트에 접근하며, 관련 없는 대상은 거부됩니다.
-Claude Code에는 별도의 모든 이그레스 거부 가드가 있으며, `NO_PROXY`를 통해 로컬 OmniRoute
+Claude Code에는 별도의 모든 이그레스 거부 가드가 있으며, `NO_PROXY`를 통해 로컬 67router
 서비스에만 접근할 수 있습니다. 가드 감사 파일은 해당 가드 프로세스에만 마운트됩니다.
 스크립트는 토큰이 제거된 증거를 내보내기 전에 파일 소유권, 모드, 링크 수 및 모든 결정을
 검증합니다.

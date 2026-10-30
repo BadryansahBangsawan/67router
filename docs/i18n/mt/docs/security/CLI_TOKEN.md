@@ -6,7 +6,7 @@
 
 ## Ħarsa ġenerali
 
-Il-kmandi tal-CLI ta’ OmniRoute jawtentikaw mal-API lokali tal-ġestjoni permezz ta’
+Il-kmandi tal-CLI ta’ 67router jawtentikaw mal-API lokali tal-ġestjoni permezz ta’
 token `HMAC-SHA256(machine-id, salt)` mibgħut permezz tal-header tat-talba
 `x-omniroute-cli-token`.
 

@@ -6,7 +6,7 @@
 
 ## 回報漏洞
 
-如果您在 OmniRoute 中發現安全漏洞，請以負責任的方式回報：
+如果您在 67router 中發現安全漏洞，請以負責任的方式回報：
 
 1. **請勿**建立公開的 GitHub issue
 2. 使用 [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@
 
 ## 安全性架構
 
-OmniRoute 實作了多層式安全模型：
+67router 實作了多層式安全模型：
 
 ```
 請求 → CORS → 授權管線（分類 → 原則 → 強制執行）
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ 防護機制框架
 
-OmniRoute 內建一個可熱重載的**防護機制登錄檔**（`src/lib/guardrails/`），其中包含 3 個依優先順序排列的內建防護機制：
+67router 內建一個可熱重載的**防護機制登錄檔**（`src/lib/guardrails/`），其中包含 3 個依優先順序排列的內建防護機制：
 
 | 防護機制           | 優先順序 | 用途                                                                  |
 | ------------------ | -------- | --------------------------------------------------------------------- |

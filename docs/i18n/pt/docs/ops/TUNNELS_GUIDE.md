@@ -7,7 +7,7 @@
 > **Fonte de verdade:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Última atualização:** 2026-06-28 — v3.8.40
 
-O OmniRoute pode expor o seu servidor local (`http://localhost:20128`) à Internet
+O 67router pode expor o seu servidor local (`http://localhost:20128`) à Internet
 pública através de três backends de túnel. Isto é útil para:
 
 - Callbacks OAuth de fornecedores de cloud (Antigravity, Gemini, Cursor) que necessitem de um
@@ -15,7 +15,7 @@ pública através de três backends de túnel. Isto é útil para:
 - Partilhar a sua instância local com colegas de equipa sem implementar uma VM.
 - Testes em dispositivos móveis, remotos ou entre redes.
 
-Os três backends são geridos no próprio processo — o OmniRoute inicia/para o binário
+Os três backends são geridos no próprio processo — o 67router inicia/para o binário
 ou SDK subjacente a partir do painel ou da API REST. Não é necessária qualquer configuração
 de proxy inverso ou systemd.
 
@@ -41,7 +41,7 @@ dois modos, selecionados consoante seja ou não fornecida uma configuração de 
 http://localhost:<apiPort>` e extrai do stdout o URL `*.trycloudflare.com`
   atribuído. Os URLs são efémeros e mudam a cada reinício.
 - **Túnel nomeado (opcional).** Quando `CLOUDFLARED_CONFIG` aponta para um
-  `config.yml` do cloudflared gerido localmente, o OmniRoute executa `cloudflared tunnel --no-autoupdate
+  `config.yml` do cloudflared gerido localmente, o 67router executa `cloudflared tunnel --no-autoupdate
 --config <path> run`, fornecendo-lhe um **nome de anfitrião estável e nomeado**. A configuração
   fornece o UUID do túnel, `credentials-file` e o encaminhamento `ingress`, pelo que não é
   passado nenhum `--url` nem é necessário qualquer token do painel Zero Trust. `run` lê
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` e extrai do stdout o URL `*.trycloudflare.com`
 
 Comportamentos principais:
 
-- **Instalação automática.** Na primeira utilização, o OmniRoute transfere o binário `cloudflared`
+- **Instalação automática.** Na primeira utilização, o 67router transfere o binário `cloudflared`
   mais recente a partir das versões oficiais do GitHub (a instalação gerida fica em
   `DATA_DIR/cloudflared/`). O SHA256 do recurso transferido é verificado em relação ao
   manifesto da versão antes da execução.
@@ -68,7 +68,7 @@ Comportamentos principais:
    ```
 
 2. Crie um `~/.cloudflared/config.yml` que encaminhe o seu nome de anfitrião para a porta
-   local da API do OmniRoute (predefinição: 20128):
+   local da API do 67router (predefinição: 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Comportamentos principais:
      - service: http_status:404
    ```
 
-3. Aponte o OmniRoute para a configuração e (re)inicie o túnel:
+3. Aponte o 67router para a configuração e (re)inicie o túnel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # opcional — substitui o nome de anfitrião comunicado pelo OmniRoute; caso contrário, é lido a partir da
+   # opcional — substitui o nome de anfitrião comunicado pelo 67router; caso contrário, é lido a partir da
    # primeira regra de ingress da configuração:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -122,9 +122,9 @@ Ou através do painel: **Definições → Túneis → Cloudflare**.
 
 | Variável                                             | Finalidade                                                                                                                                                                                          |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Substitui o caminho do binário. Se estiver definido e for válido, o OmniRoute utiliza-o em vez de efetuar a transferência.                                                                          |
+| `CLOUDFLARED_BIN`                                    | Substitui o caminho do binário. Se estiver definido e for válido, o 67router utiliza-o em vez de efetuar a transferência.                                                                           |
 | `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protocolo de transporte (predefinição: `http2`; também `quic`, `auto`).                                                                                                                             |
-| `CLOUDFLARED_CONFIG`                                 | Caminho para um `config.yml` do cloudflared gerido localmente. Quando definido, o OmniRoute executa um túnel **com nome/persistente** (`tunnel --config <path> run`) em vez de um túnel rápido.     |
+| `CLOUDFLARED_CONFIG`                                 | Caminho para um `config.yml` do cloudflared gerido localmente. Quando definido, o 67router executa um túnel **com nome/persistente** (`tunnel --config <path> run`) em vez de um túnel rápido.      |
 | `CLOUDFLARED_HOSTNAME`                               | Substitui o nome de anfitrião público comunicado pelo túnel com nome (por exemplo, `ai.example.com`). Quando não definido, é lido a partir do primeiro nome de anfitrião `ingress` da configuração. |
 
 ## 2. ngrok
@@ -173,7 +173,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 A resposta inclui o `publicUrl` atribuído (por exemplo,
 `https://abcd-1234.ngrok-free.app`). Os domínios personalizados, as regiões e
-as regras de políticas têm de ser configurados no painel do ngrok — o OmniRoute
+as regras de políticas têm de ser configurados no painel do ngrok — o 67router
 apenas encaminha o URL de destino local para o SDK.
 
 ## 3. Tailscale Funnel
@@ -188,15 +188,15 @@ O URL público tem o formato `https://<machine>.<tailnet>.ts.net/`.
 
 ### Pré-requisitos
 
-1. Instale o Tailscale (ou permita que o OmniRoute o faça — consulte o endpoint
+1. Instale o Tailscale (ou permita que o 67router o faça — consulte o endpoint
    `install` abaixo).
-2. Inicie sessão (`tailscale login` ou através do endpoint `login` do OmniRoute).
+2. Inicie sessão (`tailscale login` ou através do endpoint `login` do 67router).
 3. Ative o Funnel para a sua tailnet na consola de administração do Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
 No Linux e no macOS, o daemon (`tailscaled`) requer `sudo` para ser controlado.
 Os endpoints POST aceitam um campo opcional `sudoPassword`, que é encaminhado
-para a cache de palavras-passe MITM do OmniRoute (`getCachedPassword` /
+para a cache de palavras-passe MITM do 67router (`getCachedPassword` /
 `setCachedPassword`) durante a chamada. O Windows utiliza a instalação
 predefinida do serviço em `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -258,7 +258,7 @@ independente.
 
 ## Considerações sobre callbacks OAuth
 
-Quando expõe o OmniRoute através de um túnel, o painel e os fluxos OAuth têm de
+Quando expõe o 67router através de um túnel, o painel e os fluxos OAuth têm de
 criar URLs de callback com base no nome de anfitrião **público**, e não em
 `localhost`. Caso contrário, o fornecedor OAuth redireciona o utilizador para um
 URL ao qual os respetivos servidores não conseguem aceder, e o processo de
@@ -277,7 +277,7 @@ Defina:
 NEXT_PUBLIC_BASE_URL=https://<seu-anfitriao-do-tunel>
 ```
 
-e reinicie o OmniRoute antes de iniciar o OAuth. Nos Cloudflare Quick Tunnels
+e reinicie o 67router antes de iniciar o OAuth. Nos Cloudflare Quick Tunnels
 efémeros, o URL muda após cada reinício; por isso, para utilizar OAuth em
 produção, dê preferência ao ngrok com um domínio reservado ou ao Tailscale
 Funnel.
@@ -294,13 +294,13 @@ O painel apresenta o estado do túnel em **Definições → Túneis**:
 
 Para monitorização programática, consulte periodicamente os endpoints `GET` de
 cada backend. É permitido executar mais do que um backend em simultâneo; o
-OmniRoute acompanhará cada um de forma independente.
+67router acompanhará cada um de forma independente.
 
 ## Resolução de problemas
 
 ### "binário cloudflared não encontrado"
 
-O OmniRoute tenta efetuar a instalação automática na primeira utilização. Se a
+O 67router tenta efetuar a instalação automática na primeira utilização. Se a
 instalação estiver bloqueada (rede restrita, sem acesso ao GitHub), transfira
 manualmente o `cloudflared` a partir de
 <https://github.com/cloudflare/cloudflared/releases> e defina

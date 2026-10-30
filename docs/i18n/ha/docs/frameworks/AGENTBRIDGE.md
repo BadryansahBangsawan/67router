@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge shi ne wakilin MITM (Man-in-the-Middle) na OmniRoute wanda ke katse zirga-zirgar HTTPS daga wakilan AI na IDE sannan ya sake tura ta ta injin sarrafa hanyoyi na bai ɗaya na OmniRoute. Yana tallafa wa **wakilan IDE guda 10** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, da Trae (ana bincike) — wanda hakan ya sa OmniRoute ya zama wakilin MITM mai mafi faɗin tallafi ga mataimakan rubuta lambar AI a kasuwa.
+AgentBridge shi ne wakilin MITM (Man-in-the-Middle) na 67router wanda ke katse zirga-zirgar HTTPS daga wakilan AI na IDE sannan ya sake tura ta ta injin sarrafa hanyoyi na bai ɗaya na 67router. Yana tallafa wa **wakilan IDE guda 10** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, da Trae (ana bincike) — wanda hakan ya sa 67router ya zama wakilin MITM mai mafi faɗin tallafi ga mataimakan rubuta lambar AI a kasuwa.
 
 **Wurin dashboard:** `/dashboard/tools/agent-bridge`
 **Rukunin sidebar:** Tools (bayan Cloud Agents)
@@ -16,34 +16,34 @@ AgentBridge shi ne wakilin MITM (Man-in-the-Middle) na OmniRoute wanda ke katse 
 
 ### Menene AgentBridge?
 
-Lokacin da wakilin IDE (misali, GitHub Copilot, Cursor, Claude Code) ya yi kiran API, yana haɗawa kai tsaye zuwa mai samar da AI na sama (OpenAI, Anthropic, da sauransu). AgentBridge yana katse wannan haɗin kai a bayyane a matakin TLS — ba tare da buƙatar kowane canji na saitin wakili ba — kuma yana sake rubuta buƙatar ta hanyar OmniRoute.
+Lokacin da wakilin IDE (misali, GitHub Copilot, Cursor, Claude Code) ya yi kiran API, yana haɗawa kai tsaye zuwa mai samar da AI na sama (OpenAI, Anthropic, da sauransu). AgentBridge yana katse wannan haɗin kai a bayyane a matakin TLS — ba tare da buƙatar kowane canji na saitin wakili ba — kuma yana sake rubuta buƙatar ta hanyar 67router.
 
 Wannan yana nufin kuna iya:
 
-- **Sake tura kowane wakili zuwa kowane mai samarwa**: Copilot yana magana da OpenAI? Sake tura shi zuwa Anthropic Claude, Gemini, ko ɗaya daga cikin masu samarwa 375 na OmniRoute.
+- **Sake tura kowane wakili zuwa kowane mai samarwa**: Copilot yana magana da OpenAI? Sake tura shi zuwa Anthropic Claude, Gemini, ko ɗaya daga cikin masu samarwa 375 na 67router.
 - **Aiwatar da daidaiton samfura**: `gemini-3-flash` → `claude-sonnet-4.7` a bayyane a matakin mai sarrafawa.
 - **Lura da duk zirga-zirgar wakili**: kowace buƙata da aka katse ana buga ta zuwa [Mai Binciken Zirga-zirga](./TRAFFIC_INSPECTOR.md).
-- **Aiwatar da juriya na OmniRoute**: combo routing, circuit breakers, fallbacks, da bin diddigin kuɗi suna aiki ga zirga-zirgar wakilin IDE kuma.
+- **Aiwatar da juriya na 67router**: combo routing, circuit breakers, fallbacks, da bin diddigin kuɗi suna aiki ga zirga-zirgar wakilin IDE kuma.
 
 ### Matsayi idan aka kwatanta da kasuwa
 
-| Fasali                      | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| --------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity                 |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot              |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                  |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex                |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                  |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries              |    —    |    ✓     |        —        |             ✓             |
-| Claude Code                 |    —    |    —     |        ✓        |             ✓             |
-| Open Code                   |    —    |    —     |        ✓        |             ✓             |
-| Trae                        |    —    |    —     |        —        |      🔍 Ana bincike       |
-| UI na Dashboard             |    ✓    |    ✗     |        ✗        |             ✓             |
-| Mai Binciken Zirga-zirga    |    ✗    |    ✗     |        ✓        |             ✓             |
-| Tsarin hanya na OmniRoute   |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI na daidaita samfura      |    ✗    |    ✗     |        ✗        |             ✓             |
-| Jerin bypass                |    ✗    |    ✗     |        ✓        |             ✓             |
-| Takardar shaidar CA ta sama |    ✗    |    ✗     |        ✓        |             ✓             |
+| Fasali                      | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| --------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity                 |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot              |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                  |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex                |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                  |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries              |    —    |    ✓     |        —        |            ✓             |
+| Claude Code                 |    —    |    —     |        ✓        |            ✓             |
+| Open Code                   |    —    |    —     |        ✓        |            ✓             |
+| Trae                        |    —    |    —     |        —        |      🔍 Ana bincike      |
+| UI na Dashboard             |    ✓    |    ✗     |        ✗        |            ✓             |
+| Mai Binciken Zirga-zirga    |    ✗    |    ✗     |        ✓        |            ✓             |
+| Tsarin hanya na 67router    |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI na daidaita samfura      |    ✗    |    ✗     |        ✗        |            ✓             |
+| Jerin bypass                |    ✗    |    ✗     |        ✓        |            ✓             |
+| Takardar shaidar CA ta sama |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (tashar 443, tsarin ɗa na CJS)
     │  yana gano manufa ta hanyar SNI na taken Host
     │  yana ƙirƙirar takardar shaidar TLS ga kowane SNI wadda AgentBridge CA ya sanya wa hannu
     ├── Ya dace da jerin kaucewa? → wucewar TCP kai tsaye (ba tare da warware ɓoyewa ba)
-    ├── Ya dace da manufa? → fetch → na'ura mai ba da hanya ta OmniRoute (tashar 20128)
+    ├── Ya dace da manufa? → fetch → na'ura mai ba da hanya ta 67router (tashar 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() a jikin buƙata/takenta
     │               ├── TrafficBuffer.push() — yana turawa zuwa Traffic Inspector
@@ -205,7 +205,7 @@ Dole ne OS ya amince da takardar shaidar CA ta AgentBridge kafin IDEs su karɓi 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -250,10 +250,10 @@ Misalan shigarwar `/etc/hosts` don GitHub Copilot:
 
 Yi amfani da Jadawalin Taswirar Model a kowane katin agent don ayyana taswirar source → target:
 
-| Model na source (na asali ga agent) | Model na target (OmniRoute) |
-| ----------------------------------- | --------------------------- |
-| `gpt-4o`                            | `claude-sonnet-4.7`         |
-| `*` (wildcard)                      | `claude-haiku-4.7`          |
+| Model na source (na asali ga agent) | Model na target (67router) |
+| ----------------------------------- | -------------------------- |
+| `gpt-4o`                            | `claude-sonnet-4.7`        |
+| `*` (wildcard)                      | `claude-haiku-4.7`         |
 
 Wildcard `*` yana danganta duk wani model da ba a gane ba zuwa target da aka ƙayyade. Ana adana shi a teburin `agent_bridge_mappings`.
 
@@ -266,7 +266,7 @@ Wildcard `*` yana danganta duk wani model da ba a gane ba zuwa target da aka ƙa
 
 ### 3.5 Sanarwar haɗari
 
-AgentBridge yana tare bayanan tantancewa (alamomin OAuth, maɓallan API) waɗanda IDE ke amfani da su don tantance kansa ga masu samar da sabis na sama. Ana **ɓoye su kafin a rubuta su cikin rajista** (duba §2.7), amma ana iya ganin su a matakin MITM na OmniRoute. Kunna kowane wakili a karon farko yana nuna taga ta sanarwar haɗari da za a iya rufewa.
+AgentBridge yana tare bayanan tantancewa (alamomin OAuth, maɓallan API) waɗanda IDE ke amfani da su don tantance kansa ga masu samar da sabis na sama. Ana **ɓoye su kafin a rubuta su cikin rajista** (duba §2.7), amma ana iya ganin su a matakin MITM na 67router. Kunna kowane wakili a karon farko yana nuna taga ta sanarwar haɗari da za a iya rufewa.
 
 ### 3.6 Kulawa & Bincike
 
@@ -386,7 +386,7 @@ Ganowa yana amfani da hanyoyi na musamman ga OS da binciken binaries (misali, `c
 
 ### Jerin bypass na hosts masu muhimmanci
 
-Jerin bypass yana tabbatar da cewa cibiyoyin kuɗi, masu samar da OAuth/SSO, da sauran hosts masu muhimmanci **ba a taɓa decrypt ɗinsu ba**. Zirga-zirgar TLS ɗinsu tana wucewa a matsayin transparent TCP tunnel — OmniRoute ba ya taɓa ganin plaintext ɗin.
+Jerin bypass yana tabbatar da cewa cibiyoyin kuɗi, masu samar da OAuth/SSO, da sauran hosts masu muhimmanci **ba a taɓa decrypt ɗinsu ba**. Zirga-zirgar TLS ɗinsu tana wucewa a matsayin transparent TCP tunnel — 67router ba ya taɓa ganin plaintext ɗin.
 
 Tsarin bypass na asali ya haɗa da:
 
@@ -437,7 +437,7 @@ A madadin haka, saita port marar gata a cikin saitunan AgentBridge sannan ka kaf
 
 Idan IDE ya nuna kurakuran TLS bayan kunna AgentBridge:
 
-1. Tabbatar an shigar da cert ɗin: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) ko `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Tabbatar an shigar da cert ɗin: `security find-certificate -c "OmniRoute MITM CA"` (macOS) ko `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Wasu apps suna da nasu trust store (Firefox, Chrome a Linux). Sake gudanar da "Trust Cert" sannan ka duba cert store na musamman na NSS/Firefox.
 3. Sake kunna IDE bayan amincewa — zaman TLS da ke gudana suna amfani da tsohon yanayin amincewa.
 
@@ -488,7 +488,7 @@ Ganowa ta atomatik tana amfani da sanannun wuraren shigarwa. Idan ganowa ta gaza
 Idan AgentBridge yana katsewa amma duk buƙatun suna gaza:
 
 1. Tabbatar an haɗa aƙalla provider guda ɗaya a `/dashboard/providers`
-2. Duba logs na server na OmniRoute: `APP_LOG_LEVEL=debug` a cikin `.env`
+2. Duba logs na server na 67router: `APP_LOG_LEVEL=debug` a cikin `.env`
 3. Tabbatar `OMNIROUTE_BASE_URL` yana nuni zuwa madaidaicin router endpoint (na asali: `http://127.0.0.1:20128`)
 
 ---

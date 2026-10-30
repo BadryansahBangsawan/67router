@@ -4,7 +4,7 @@
 
 ---
 
-Nire-resolve ng OmniRoute ang SQLite driver nito sa pagsisimula sa pamamagitan ng 5-hakbang na fallback chain:
+Nire-resolve ng 67router ang SQLite driver nito sa pagsisimula sa pamamagitan ng 5-hakbang na fallback chain:
 
 1. **Naka-bundle na `better-sqlite3`** (sa pamamagitan ng `dependencies` sa `package.json`)
    — pinakamabilis, native binary, ini-install ng `npm install` kapag mayroong mga build tool.
@@ -28,13 +28,13 @@ Nire-resolve ng OmniRoute ang SQLite driver nito sa pagsisimula sa pamamagitan n
 - **Walang mga build tool**: Hindi kayang i-compile ng ilang environment (corporate Windows na walang VS Build
   Tools, minimal na Docker images) ang `better-sqlite3`. Kumukuha ang runtime
   installer ng pre-built na binary mula sa npm registry; tinitiyak ng mga fallback
-  driver na makakapagsimula pa rin ang OmniRoute kahit pumalya iyon.
+  driver na makakapagsimula pa rin ang 67router kahit pumalya iyon.
 - **Mga air-gapped system**: Kung hindi maabot ang npm registry, ginagarantiya ng `node:sqlite`
   o `sql.js` ang pangunahing functionality.
 
 ## Pag-validate ng magic byte
 
-Bago mag-load ng runtime-installed na `.node` file, binabasa ng OmniRoute ang unang 8
+Bago mag-load ng runtime-installed na `.node` file, binabasa ng 67router ang unang 8
 byte at itinutugma ang mga ito sa mga kilalang magic ng platform:
 
 | Platform              | Mga byte (hex) | Label       |
@@ -104,9 +104,9 @@ Implementasyon:
 ## Single-writer na topology (hindi suportado ang HA)
 
 Gumagana pa rin ang driver fallback chain sa itaas sa **iisang proseso**. Ang default na SQLite
-OmniRoute ay may **iisang writer**:
+67router ay may **iisang writer**:
 
-- Huwag ikonekta ang dalawang OmniRoute replica sa iisang `storage.sqlite` file.
+- Huwag ikonekta ang dalawang 67router replica sa iisang `storage.sqlite` file.
 - Kapag nag-restart ang container, may Recreate deploy, OOM kill, o HEALTHCHECK restart, mapuputol
   ang bawat kasalukuyang SSE session. Walang session drain sa karaniwang path.
 - Papatayin ng orchestrator liveness na itinuturing na dead ang mabagal na `/healthz` ang nag-iisang

@@ -124,7 +124,7 @@ node --import tsx/esm --test tests/unit/claude-web-auto-refresh.test.ts tests/un
 
 ### સેટઅપ
 
-1. `npm run dev` અથવા બિલ્ટ ઇન્સ્ટોલેશન વડે OmniRoute શરૂ કરો.
+1. `npm run dev` અથવા બિલ્ટ ઇન્સ્ટોલેશન વડે 67router શરૂ કરો.
 2. Dashboard → Providers → Add Provider ખોલો.
 3. Web Cookie કૅટેગરી અને Claude Web પસંદ કરો.
 4. પ્રમાણિત `claude.ai` રિક્વેસ્ટમાંથી કૉપી કરેલું સંપૂર્ણ Cookie હેડર પેસ્ટ કરો.

@@ -4,15 +4,15 @@
 
 ---
 
-La **Modifica del contesto** delegata è una funzionalità di gestione del contesto esclusiva di Claude. A differenza dei motori di compressione locali di OmniRoute (Caveman, RTK, LLMLingua, pipeline impilate), che riscrivono il corpo della richiesta _prima_ che lasci il proxy, la Modifica del contesto chiede al **provider** di eliminare i blocchi obsoleti relativi all'uso degli strumenti e ai relativi risultati dalla propria finestra di contesto attiva. OmniRoute si limita ad aggiungere un parametro al corpo (`context_management.edits[]`); Claude esegue l'effettiva eliminazione in base al proprio tokenizer.
+La **Modifica del contesto** delegata è una funzionalità di gestione del contesto esclusiva di Claude. A differenza dei motori di compressione locali di 67router (Caveman, RTK, LLMLingua, pipeline impilate), che riscrivono il corpo della richiesta _prima_ che lasci il proxy, la Modifica del contesto chiede al **provider** di eliminare i blocchi obsoleti relativi all'uso degli strumenti e ai relativi risultati dalla propria finestra di contesto attiva. 67router si limita ad aggiungere un parametro al corpo (`context_management.edits[]`); Claude esegue l'effettiva eliminazione in base al proprio tokenizer.
 
-Per sua natura, si tratta di una funzionalità delegata: gli altri provider rifiutano il parametro, pertanto OmniRoute ne limita rigorosamente l'uso a Claude e ai relay compatibili con Claude Code.
+Per sua natura, si tratta di una funzionalità delegata: gli altri provider rifiutano il parametro, pertanto 67router ne limita rigorosamente l'uso a Claude e ai relay compatibili con Claude Code.
 
 Fonte autorevole: `open-sse/config/contextEditing.ts` (ID delle strategie, inserimento nel corpo, estrazione della telemetria), `open-sse/executors/base.ts` (controllo per l'inserimento + fallback in caso di errore 400) e `open-sse/services/compression/types.ts` (struttura della configurazione + valore predefinito).
 
 ## Funzionamento di `clear_tool_uses`
 
-OmniRoute inserisce una singola modifica nel corpo in uscita di Anthropic Messages:
+67router inserisce una singola modifica nel corpo in uscita di Anthropic Messages:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute inserisce una singola modifica nel corpo in uscita di Anthropic Messag
 - `trigger.value: 100000` — quando i token di input della richiesta superano questa soglia, Claude inizia a eliminare le vecchie coppie di utilizzo/risultato degli strumenti (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, valore predefinito di Anthropic).
 - `keep.value: 3` — le N coppie di utilizzo/risultato degli strumenti più recenti vengono mantenute intatte (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-La funzionalità beta viene dichiarata tramite l'header `anthropic-beta: context-management-2025-06-27`, che OmniRoute emette già nelle richieste a Claude.
+La funzionalità beta viene dichiarata tramite l'header `anthropic-beta: context-management-2025-06-27`, che 67router emette già nelle richieste a Claude.
 
-L'inserimento viene eseguito da `applyContextEditingToBody()` ed è **idempotente**: se nel corpo esiste già una modifica `clear_tool_uses` (aggiunta da una chiamata precedente o fornita dal client), il corpo viene lasciato invariato. Se è presente anche una modifica `clear_thinking_20251015`, OmniRoute esegue un ordinamento stabile per portare la modifica `clear_thinking` in prima posizione, poiché Anthropic richiede che `clear_thinking` preceda `clear_tool_uses` nell'array `edits[]`.
+L'inserimento viene eseguito da `applyContextEditingToBody()` ed è **idempotente**: se nel corpo esiste già una modifica `clear_tool_uses` (aggiunta da una chiamata precedente o fornita dal client), il corpo viene lasciato invariato. Se è presente anche una modifica `clear_thinking_20251015`, 67router esegue un ordinamento stabile per portare la modifica `clear_thinking` in prima posizione, poiché Anthropic richiede che `clear_thinking` preceda `clear_tool_uses` nell'array `edits[]`.
 
 ## L'opzione di attivazione per ogni combinazione
 
@@ -126,7 +126,7 @@ Claude autentico include la beta in `ANTHROPIC_BETA_BASE` e non percorre questo 
 
 ## Telemetria di `applied_edits`
 
-Dopo una risposta di Claude, OmniRoute registra la quantità di contesto che il provider ha
+Dopo una risposta di Claude, 67router registra la quantità di contesto che il provider ha
 effettivamente eliminato. Questa telemetria **non** viene trasmessa in streaming: viene estratta,
 secondo il principio del massimo sforzo, dal corpo della risposta non in streaming e non influisce
 mai sulla risposta (gli errori di telemetria vengono ignorati).
@@ -162,14 +162,14 @@ RTK/Caveman/LLMLingua.
 
 | Aspetto                    | Motori locali (Caveman / RTK / LLMLingua / combinati)  | Modifica delegata del contesto                         |
 | -------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| Dove viene eseguita        | In OmniRoute, prima che la richiesta lasci il proxy    | Nel provider (Claude), lato server                     |
+| Dove viene eseguita        | In 67router, prima che la richiesta lasci il proxy     | Nel provider (Claude), lato server                     |
 | Cosa modifica              | Testo di prompt / contesto / risultati degli strumenti | Vecchi blocchi di utilizzo/risultato strumenti         |
 | Ambito dei provider        | Tutti i provider                                       | Solo `claude` + `anthropic-compatible-cc-*`            |
 | Attivazione/disattivazione | Impostazioni della modalità di compressione            | `contextEditing.enabled`                               |
 | Modalità di errore         | Fail-open (testo originale)                            | Fallback 400: rimuove il parametro e riprova una volta |
 | Telemetria del risparmio   | `engine: <engine id>`                                  | `engine: "context-editing"`                            |
 
-I due approcci sono complementari: i motori locali comprimono i byte inviati da OmniRoute; la modifica del contesto consente a
+I due approcci sono complementari: i motori locali comprimono i byte inviati da 67router; la modifica del contesto consente a
 Claude di ridurre il contesto corrente tra i vari turni. Possono essere abilitati insieme.
 
 ## Vedi anche

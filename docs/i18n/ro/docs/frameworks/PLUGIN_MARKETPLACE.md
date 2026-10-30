@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute include un sistem de pluginuri în stil WordPress. Pluginurile sunt
+67router include un sistem de pluginuri în stil WordPress. Pluginurile sunt
 directoare autonome — fiecare având un manifest `plugin.json` și un fișier de
 intrare — care se conectează la fluxul de procesare a cererilor (`onRequest` /
 `onResponse` / `onError`) și la evenimentele ciclului de viață (`onInstall` /
@@ -158,7 +158,7 @@ sunt permise.
 
 ### Directorul de pluginuri
 
-Pluginurile se află în directorul de date OmniRoute:
+Pluginurile se află în directorul de date 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

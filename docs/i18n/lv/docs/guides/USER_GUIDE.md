@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Pilnīgs ceļvedis pakalpojumu sniedzēju konfigurēšanai, kombināciju izveidei, CLI rīku integrēšanai un OmniRoute izvietošanai.
+Pilnīgs ceļvedis pakalpojumu sniedzēju konfigurēšanai, kombināciju izveidei, CLI rīku integrēšanai un 67router izvietošanai.
 
 ---
 
@@ -137,11 +137,11 @@ Modeļi:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Profesionāļa padoms:** Sarežģītiem uzdevumiem izmantojiet Opus, bet ātrumam — Sonnet. OmniRoute uzskaita kvotu katram modelim!
+**Profesionāļa padoms:** Sarežģītiem uzdevumiem izmantojiet Opus, bet ātrumam — Sonnet. 67router uzskaita kvotu katram modelim!
 
-OmniRoute resursdatorā nav pārlūkprogrammas? Palaidiet `claude setup-token` jebkur, kur ir veikta pieteikšanās Claude Code, un ielīmējiet viena gada pilnvaru cilnē **Iestatīšanas pilnvara**. Skatiet [Claude Code ar iestatīšanas pilnvaru](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+67router resursdatorā nav pārlūkprogrammas? Palaidiet `claude setup-token` jebkur, kur ir veikta pieteikšanās Claude Code, un ielīmējiet viena gada pilnvaru cilnē **Iestatīšanas pilnvara**. Skatiet [Claude Code ar iestatīšanas pilnvaru](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Claude un ar Claude Code saderīgie maršruti Opus un Sonnet modeļiem saglabā `max` domāšanas intensitāti. Haiku modeļi nepieņem `max` intensitātes līmeni, tāpēc OmniRoute pirms pieprasījuma nosūtīšanas augšupstraumes pakalpojumam pazemina to līdz augstam domāšanas budžetam.
+Claude un ar Claude Code saderīgie maršruti Opus un Sonnet modeļiem saglabā `max` domāšanas intensitāti. Haiku modeļi nepieņem `max` intensitātes līmeni, tāpēc 67router pirms pieprasījuma nosūtīšanas augšupstraumes pakalpojumam pazemina to līdz augstam domāšanas budžetam.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -260,7 +260,7 @@ Izmaksas: pašlaik uzskaitītas kā $0; nosacījumi un pieejamība var mainītie
 
 ### Cursor IDE
 
-**Izmantojot Cursor kā OmniRoute klientu** (maršrutēt Cursor tērzēšanu caur OmniRoute):
+**Izmantojot Cursor kā 67router klientu** (maršrutēt Cursor tērzēšanu caur 67router):
 
 ```
 Settings → Models → Advanced:
@@ -269,7 +269,7 @@ Settings → Models → Advanced:
   Model: cc/claude-opus-4-7
 ```
 
-**Izmantojot OmniRoute kā Cursor pakalpojumu sniedzēju** (OmniRoute izsauc Cursor augšpusē): priekšroka
+**Izmantojot 67router kā Cursor pakalpojumu sniedzēju** (67router izsauc Cursor augšpusē): priekšroka
 **Panelis → Pakalpojumu sniedzēji → Cursor → Pieteikties ar Cursor**. Docker vidē skatiet
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -356,7 +356,7 @@ CLI automātiski ielādē `.env` no `~/.omniroute/.env` vai `./.env`.
 
 ### Tekstūras režīms
 
-Startējiet OmniRoute sistēmas tekstūrā:
+Startējiet 67router sistēmas tekstūrā:
 
 ```bash
 omniroute serve --tray
@@ -373,7 +373,7 @@ Izmantojiet tekstūras izvēlni šādām darbībām:
 - Atvērt paneli.
 - Atvērt `/dashboard/logs`.
 - Mainīt automātisko startēšanu.
-- Apturēt OmniRoute.
+- Apturēt 67router.
 
 Neapvienojiet `--tray` ar šādām opcijām:
 
@@ -399,14 +399,14 @@ omniroute autostart disable
 
 ### Atinstalēšana
 
-Kad OmniRoute vairs nav nepieciešams, mēs piedāvājam divas ātras skriptus tīrai noņemšanai:
+Kad 67router vairs nav nepieciešams, mēs piedāvājam divas ātras skriptus tīrai noņemšanai:
 
 | Komanda                  | Darbība                                                                                        |
 | ------------------------ | ---------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Noņem sistēmas lietotni, bet **saglabā jūsu DB un konfigurācijas** `~/.omniroute` direktorijā. |
 | `npm run uninstall:full` | Noņem lietotni UN neatgriezeniski **izdzēš visas konfigurācijas, atslēgas un datubāzes**.      |
 
-> Piezīme: Lai palaistu šīs komandas, dodieties uz OmniRoute projekta mapi (ja to klonējāt) un izpildiet tās. Alternatīvi, ja tā ir instalēta globāli, varat vienkārši palaist `npm uninstall -g omniroute`.
+> Piezīme: Lai palaistu šīs komandas, dodieties uz 67router projekta mapi (ja to klonējāt) un izpildiet tās. Alternatīvi, ja tā ir instalēta globāli, varat vienkārši palaist `npm uninstall -g omniroute`.
 
 ### VPS ieviešana
 
@@ -478,7 +478,7 @@ Par hosta integrēto režīmu ar CLI binārjiem, skatiet Docker sadaļu galvenaj
 
 ### Void Linux (xbps-src)
 
-Void Linux lietotāji var iepakot un instalēt OmniRoute natīvi, izmantojot `xbps-src` krusteniskās kompilēšanas sistēmu. Tas automatizē Node.js standartizēto veidošanu kopā ar nepieciešamajiem `better-sqlite3` natīvajiem saitēm.
+Void Linux lietotāji var iepakot un instalēt 67router natīvi, izmantojot `xbps-src` krusteniskās kompilēšanas sistēmu. Tas automatizē Node.js standartizēto veidošanu kopā ar nepieciešamajiem `better-sqlite3` natīvajiem saitēm.
 
 <details>
 <summary><b>Skatīt xbps-src veidni</b></summary>
@@ -658,7 +658,7 @@ Par pilnu vides mainīgo atsauci skatiet [README](../README.md).
 
 **Citi saderīgi sniedzēji** (izvēlēti): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (caur `aws-bedrock`), `azure-ai`, `openrouter` (caurlaides katalogs), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Katrs uztur savu modeļu sarakstu `providerRegistry.ts` un var tikt automātiski sinhronizēts, kad sniedzējs nodrošina `/models` galapunktu.
 
-**Piezīme par modeļu ID:** OmniRoute izmanto sniedzēja dzimtos ID (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Daži ID satur punktota versija, jo tā to sagaida augšpus esošā API. Ja modelis nav uzskaitīts iepriekš, palaidiet `omniroute models --search <term>` vai izsauciet `GET /api/models/catalog`, lai apstiprinātu pieejamību.
+**Piezīme par modeļu ID:** 67router izmanto sniedzēja dzimtos ID (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Daži ID satur punktota versija, jo tā to sagaida augšpus esošā API. Ja modelis nav uzskaitīts iepriekš, palaidiet `omniroute models --search <term>` vai izsauciet `GET /api/models/catalog`, lai apstiprinātu pieejamību.
 
 </details>
 
@@ -724,9 +724,9 @@ kļūdas ziņojumā ir norādīts iebūvēts pakalpojumu sniedzējs vai tā akre
 rezervēts: mezgli, kas saglabāti pirms šī noteikuma ieviešanas, joprojām tiek glabāti, taču to prefikss novirza pieprasījumus
 iebūvētajam pakalpojumu sniedzējam. Rediģējiet mezglu un piešķiriet tam jaunu prefiksu.
 
-### OmniRoute vienādranga mezglu ķēdēšana
+### 67router vienādranga mezglu ķēdēšana
 
-Citu OmniRoute vārteju var pievienot kā **pielāgotu ar OpenAI saderīgu** pakalpojumu sniedzēju. Izmantojiet
+Citu 67router vārteju var pievienot kā **pielāgotu ar OpenAI saderīgu** pakalpojumu sniedzēju. Izmantojiet
 vienādranga mezgla `/v1` bāzes URL un īpaši tam izsniegtu API atslēgu ar minimālām nepieciešamajām privilēģijām.
 
 Savstarpējām vai vairāku posmu ķēdēm katrā vārtejā iespējojiet brīvprātīgi aktivizējamo ciklu aizsardzību:
@@ -752,7 +752,7 @@ parastie augšupstraumes pakalpojumu sniedzēji nesaņem vienādranga mezglu met
 Vienādranga mezglu ķēdēšana nav datubāzes replikācija vai resursdatora kļūmjpārlēce. Katra vārteja uztur neatkarīgu
 SQLite stāvokli, kešatmiņas, ātruma ierobežojumu skaitītājus un sesijas. Aktīvai/pasīvai vai aktīvai/aktīvai pieejamībai izmantojiet
 reverso starpniekserveri ar darbspējas pārbaudēm vai klienta kļūmjpārlēci un nekad nepievienojiet vienu SQLite datubāzi
-vairākām vienlaikus darbojošām OmniRoute instancēm.
+vairākām vienlaikus darbojošām 67router instancēm.
 
 ### Īpaši pakalpojumu sniedzēju maršruti
 
@@ -803,7 +803,7 @@ Atgriež modeļus, kas sagrupēti pēc pakalpojumu sniedzēja un tipa (`chat`, `
 - Pieejams sadaļā **Dashboard → Endpoints** Docker un citām pašmitinātām izvietošanām
 - Izveido pagaidu `https://*.trycloudflare.com` URL, kas pārsūta pieprasījumus uz jūsu pašreizējo ar OpenAI saderīgo `/v1` galapunktu
 - Pirmajā iespējošanas reizē `cloudflared` tiek instalēts tikai tad, kad tas ir nepieciešams; turpmākajās restartēšanas reizēs tiek atkārtoti izmantots tas pats pārvaldītais binārais fails
-- Ātrie tuneļi netiek automātiski atjaunoti pēc OmniRoute vai konteinera restartēšanas; nepieciešamības gadījumā iespējojiet tos vēlreiz informācijas panelī
+- Ātrie tuneļi netiek automātiski atjaunoti pēc 67router vai konteinera restartēšanas; nepieciešamības gadījumā iespējojiet tos vēlreiz informācijas panelī
 - Tuneļu URL ir īslaicīgi un mainās ikreiz, kad apturat vai palaižat tuneli
 - Pārvaldītie ātrie tuneļi pēc noklusējuma izmanto HTTP/2 transportu, lai ierobežotos konteineros izvairītos no traucējošiem QUIC UDP bufera brīdinājumiem
 - Iestatiet `CLOUDFLARED_PROTOCOL=quic` vai `auto`, ja vēlaties pārrakstīt pārvaldītā transporta izvēli
@@ -820,7 +820,7 @@ Atgriež modeļus, kas sagrupēti pēc pakalpojumu sniedzēja un tipa (`chat`, `
 
 ### Tulkotāja izmēģinājumu vide
 
-Piekļūstiet, izmantojot **Dashboard → Translator**. Atkļūdojiet un vizualizējiet, kā OmniRoute tulko API pieprasījumus starp nodrošinātājiem.
+Piekļūstiet, izmantojot **Dashboard → Translator**. Atkļūdojiet un vizualizējiet, kā 67router tulko API pieprasījumus starp nodrošinātājiem.
 
 | Režīms                   | Mērķis                                                                                                      |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -873,7 +873,7 @@ Konfigurējiet sadaļā **Dashboard → Settings → Routing**. Informācijas pa
 X-Session-Id: your-session-key
 ```
 
-OmniRoute pieņem arī `x_session_id` un atgriež faktisko sesijas atslēgu galvenē `X-OmniRoute-Session-Id`.
+67router pieņem arī `x_session_id` un atgriež faktisko sesijas atslēgu galvenē `X-OmniRoute-Session-Id`.
 
 Ja izmantojat Nginx un sūtāt galvenes ar pasvītrojumiem, iespējojiet:
 
@@ -907,7 +907,7 @@ Definējiet globālas atkāpšanās ķēdes, kas tiek lietotas visiem pieprasīj
 
 ### Biežākās nodrošinātāju kombinācijas un maršrutēšanas modeļi
 
-Tālāk ir sniegti paraugi vairāku nodrošinātāju apvienošanai un maršrutēšanai starp tiem platformā OmniRoute:
+Tālāk ir sniegti paraugi vairāku nodrošinātāju apvienošanai un maršrutēšanai starp tiem platformā 67router:
 
 #### 1. Programmēšanas aģenta kombinācija: augsta līmeņa spriešana ar izmaksu/ātruma atkāpšanos
 
@@ -968,7 +968,7 @@ Specializētu attēlu modeļu apvienošana ar ātrdarbīgu teksta ģenerēšanu 
 
 Konfigurējiet sadaļā **Informācijas panelis → Iestatījumi → Noturība**.
 
-OmniRoute nodrošina pakalpojumu sniedzēja līmeņa noturību, izmantojot piecus komponentus:
+67router nodrošina pakalpojumu sniedzēja līmeņa noturību, izmantojot piecus komponentus:
 
 1. **Pieprasījumu rinda un tempa regulēšana** — Sistēmas līmeņa pieprasījumu plūsmas veidošana:
    - **Pieprasījumi minūtē (RPM)** — Maksimālais pieprasījumu skaits minūtē vienam kontam
@@ -993,7 +993,7 @@ OmniRoute nodrošina pakalpojumu sniedzēja līmeņa noturību, izmantojot piecu
 
    Pakalpojumu sniedzēja ķēdes pārtraucēja izpildlaika stāvoklis tiek rādīts tikai sadaļā **Informācijas panelis → Darbspēja**.
 
-4. **Gaidīt atdzišanu** — Ja visi iespējamie savienojumi jau atdziest, OmniRoute var gaidīt līdz agrākā atdzišanas perioda beigām un automātiski atkārtot to pašu klienta pieprasījumu.
+4. **Gaidīt atdzišanu** — Ja visi iespējamie savienojumi jau atdziest, 67router var gaidīt līdz agrākā atdzišanas perioda beigām un automātiski atkārtot to pašu klienta pieprasījumu.
 
 5. **Ātruma ierobežojuma automātiska noteikšana** — Ja augšupstraumes pakalpojumu sniedzēji atgriež skaidri norādītus gaidīšanas periodus, šīs norādes aizstāj lokālo savienojuma atdzišanas periodu, ja šis iestatījums ir iespējots.
 
@@ -1027,7 +1027,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Lietošanas gadījumi:**
 
-- OmniRoute migrēšana starp datoriem
+- 67router migrēšana starp datoriem
 - Ārēju dublējumu izveide avārijas atkopšanai
 - Konfigurāciju kopīgošana starp komandas dalībniekiem (eksportēt visu → kopīgot arhīvu)
 
@@ -1079,7 +1079,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Audio transkripcija
 
-OmniRoute atbalsta audio transkripciju, izmantojot ar OpenAI saderīgu galapunktu:
+67router atbalsta audio transkripciju, izmantojot ar OpenAI saderīgu galapunktu:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1155,7 +1155,7 @@ Atspējojiet **spriešanas marķieru buferi**, ja augšupējie pakalpojumu snied
 `max_tokens` / `maxOutputTokens` ierobežojumus. Ja tas ir iespējots, kombinētā maršrutēšana pievieno spriešanas modeļiem
 papildu rezervi tikai tiem modeļiem, kuriem ir zināms izvades ierobežojums, un atstāj klienta marķieru ierobežojumu nemainītu, ja
 drošā buferētā vērtība pārsniegtu šo ierobežojumu. Ja klienta ierobežojums jau pārsniedz zināmo ierobežojumu,
-OmniRoute pirms pieprasījuma nosūtīšanas augšupējam pakalpojumu sniedzējam samazina to līdz šim ierobežojumam.
+67router pirms pieprasījuma nosūtīšanas augšupējam pakalpojumu sniedzējam samazina to līdz šim ierobežojumam.
 
 ---
 
@@ -1178,7 +1178,7 @@ Piekļūstiet, izmantojot **Informācijas panelis → Darbspēja**. Reāllaika s
 
 ## 🤖 Automātiskā maršrutēšana (bez konfigurācijas)
 
-OmniRoute piegādā **rezultātu virzītu automātisko maršrutētāju**, kas katram pieprasījumam visos savienotajos pakalpojumos izvēlas labāko modeli — nav jāuztur kombinācija. Vienkārši nosūtiet pieprasījumu ar kādu no `auto/*` prefiksiem, un OmniRoute dinamiski izveidos virtuālu kombināciju, novērtējot kandidātus pēc aiztures, izmaksām, panākumu līmeņa, konteksta piemērotības, modeļa atbilstības uzdevumam, neseno kļūmju, kvotas un ķēdes pārtrauktāja stāvokļa.
+67router piegādā **rezultātu virzītu automātisko maršrutētāju**, kas katram pieprasījumam visos savienotajos pakalpojumos izvēlas labāko modeli — nav jāuztur kombinācija. Vienkārši nosūtiet pieprasījumu ar kādu no `auto/*` prefiksiem, un 67router dinamiski izveidos virtuālu kombināciju, novērtējot kandidātus pēc aiztures, izmaksām, panākumu līmeņa, konteksta piemērotības, modeļa atbilstības uzdevumam, neseno kļūmju, kvotas un ķēdes pārtrauktāja stāvokļa.
 
 | Prefikss       | Optimizē šādām vajadzībām                                                                                   |
 | -------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -1209,7 +1209,7 @@ Automātiskais maršrutētājs ir pilnībā aprakstīts [AUTO-COMBO.md](../routi
 
 ## 🔌 MCP & A2A integrācija
 
-OmniRoute ir gan **MCP serveris** (Model Context Protocol), gan **A2A serveris** (Agent-to-Agent JSON-RPC 2.0). Jebkurš MCP saderīgs IDE vai aģenta saimnieks var tieši izsaukt OmniRoute rīkus — nav nepieciešama papildu iesaiņošana.
+67router ir gan **MCP serveris** (Model Context Protocol), gan **A2A serveris** (Agent-to-Agent JSON-RPC 2.0). Jebkurš MCP saderīgs IDE vai aģenta saimnieks var tieši izsaukt 67router rīkus — nav nepieciešama papildu iesaiņošana.
 
 ### MCP pārvadātāji
 
@@ -1244,7 +1244,7 @@ MCP pašlaik definē 32 nosauktus pielāgošanas līmeņus. Katru Bearer atslēg
 
 ## 🧠 Prasmju sistēma
 
-OmniRoute piedāvā paplašināmu **prasmju ietvaru** (`src/lib/skills/`), lai aģenti un A2A galapunkts varētu izpildīt jomas specifiskas rutīnas (piemēram, `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router piedāvā paplašināmu **prasmju ietvaru** (`src/lib/skills/`), lai aģenti un A2A galapunkts varētu izpildīt jomas specifiskas rutīnas (piemēram, `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Tirgus lietotāja saskarne** — Pārlūkojiet un instalējiet prasmes no **Vadības paneļa → Prasmes**
 - **Atslēgu mērogi** — Ierobežojiet, kuras API atslēgas var izsaukt kuras prasmes
@@ -1256,7 +1256,7 @@ Pilna atsauce: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Atmiņas sistēma
 
-OmniRoute saglabā **ilgtermiņa sarunas atmiņu** ar hibrīdmeklēšanu:
+67router saglabā **ilgtermiņa sarunas atmiņu** ar hibrīdmeklēšanu:
 
 - **SQLite FTS5** atslēgvārdu meklēšanai iepriekšējās sarunās
 - **Qdrant vektoru krātuve** (pēc izvēles) semantiskai atsaukšanai
@@ -1269,7 +1269,7 @@ Pārvaldiet atmiņas **Vadības panelī → Atmiņa** (meklēšana, rediģēšan
 
 ## 🔒 Tīmekļa āķi
 
-Abonējiet OmniRoute notikumus reāllaika uzraudzībai un automatizācijai.
+Abonējiet 67router notikumus reāllaika uzraudzībai un automatizācijai.
 
 - Izveidojiet tīmekļa āķi **Vadības panelī → Tīmekļa āķi** ar mērķa URL un HMAC parakstu noslēpumu
 - Pieejamie notikumi: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1282,11 +1282,11 @@ Pilna shēma atrodama [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ## ☁️ Mākoņa aģenti
 
-OmniRoute integrējas ar mākoņa kodēšanas aģentiem (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), lai jūs varētu uzdot ilgstošus uzdevumus no tā paša vadības paneļa, kas apstrādā jūsu vietējo maršrutēšanu.
+67router integrējas ar mākoņa kodēšanas aģentiem (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), lai jūs varētu uzdot ilgstošus uzdevumus no tā paša vadības paneļa, kas apstrādā jūsu vietējo maršrutēšanu.
 
 - Izveidojiet uzdevumus **Vadības panelī → Mākoņa aģenti** vai caur `POST /api/v1/agents/tasks`
 - Izsekojiet statusu, žurnālus un izstrādājumus katram uzdevumam
-- Izmantojiet savu API atslēgu katram pakalpojuma sniedzējam — akreditācijas dati nekad neatstāj OmniRoute instanci
+- Izmantojiet savu API atslēgu katram pakalpojuma sniedzējam — akreditācijas dati nekad neatstāj 67router instanci
 
 Pilna atsauce: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1294,7 +1294,7 @@ Pilna atsauce: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Programmatiskā pārvaldība
 
-Jūs varat pārvaldīt katru OmniRoute resursu (sniedzējus, kombinācijas, atslēgas, iestatījumus) caur HTTP, izmantojot **Bearer atslēgu ar `manage` mērogu**.
+Jūs varat pārvaldīt katru 67router resursu (sniedzējus, kombinācijas, atslēgas, iestatījumus) caur HTTP, izmantojot **Bearer atslēgu ar `manage` mērogu**.
 
 Ģenerējiet atslēgu **Vadības panelī → API atslēgas → Jauna atslēga → Mērogs: manage**, pēc tam:
 
@@ -1327,7 +1327,7 @@ Skatiet [API_REFERENCE.md](../reference/API_REFERENCE.md) pilnam galapunktu kata
 
 ## 💻 Iekšējais CLI
 
-OmniRoute piedāvā iekšējo CLI (`omniroute …`) iestatīšanai, diagnostikai un darbības kontrolei. Šis ir **atsevišķs no "CLI rīki" lapas informācijas panelī**, kas konfigurē trešās puses CLI (Claude Code, Cursor, Codex, Cline, …), lai tie varētu sazināties ar OmniRoute.
+67router piedāvā iekšējo CLI (`omniroute …`) iestatīšanai, diagnostikai un darbības kontrolei. Šis ir **atsevišķs no "CLI rīki" lapas informācijas panelī**, kas konfigurē trešās puses CLI (Claude Code, Cursor, Codex, Cline, …), lai tie varētu sazināties ar 67router.
 
 ```bash
 omniroute setup                    # Interaktīvais vednis (parole, pakalpojumu sniedzēji, kombinācijas)
@@ -1358,7 +1358,7 @@ Padoms: savienojiet `omniroute doctor --json` ar savu monitorēšanas rīku, lai
 
 ## 🖥️ Darbvirsmas lietojumprogramma (Electron)
 
-OmniRoute ir pieejams kā oriģināla darbvirsmas lietojumprogramma operētājsistēmām Windows, macOS un Linux.
+67router ir pieejams kā oriģināla darbvirsmas lietojumprogramma operētājsistēmām Windows, macOS un Linux.
 
 ### Uzstādīšana
 

@@ -73,7 +73,7 @@ test("initSystrayUnix loads the injected SysTray ctor and builds the menu (#4605
     `the "Show Logs" item must be preserved, got: ${titles.join(", ")}`
   );
   assert.ok(
-    titles.includes("Quit OmniRoute"),
+    titles.includes("Quit 67router"),
     `the Quit item must be present, got: ${titles.join(", ")}`
   );
 });

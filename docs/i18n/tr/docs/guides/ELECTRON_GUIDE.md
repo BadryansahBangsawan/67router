@@ -7,7 +7,7 @@
 > **Doğruluk kaynağı:** `electron/` çalışma alanı
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
-OmniRoute, **Electron 41** + **electron-builder 26.10** üzerinde geliştirilmiş, platformlar arası bir masaüstü uygulamasıyla (Windows / macOS / Linux) birlikte sunulur. Masaüstü uygulaması, bağımsız Next.js sunucusunu bir alt süreç olarak başlatır, bir `BrowserWindow` örneğini bu sunucuya yönlendirir ve sistem tepsisi, otomatik güncelleyici, IPC köprüsü ve sıfır yapılandırmalı gizli değer önyüklemesi ekler.
+67router, **Electron 41** + **electron-builder 26.10** üzerinde geliştirilmiş, platformlar arası bir masaüstü uygulamasıyla (Windows / macOS / Linux) birlikte sunulur. Masaüstü uygulaması, bağımsız Next.js sunucusunu bir alt süreç olarak başlatır, bir `BrowserWindow` örneğini bu sunucuya yönlendirir ve sistem tepsisi, otomatik güncelleyici, IPC köprüsü ve sıfır yapılandırmalı gizli değer önyüklemesi ekler.
 
 ## Mimari
 
@@ -189,7 +189,7 @@ Süreç ortamı, uygulama başlatıldığında yakalanır. Bu nedenle uygulama �
 - `BrowserWindow`: 1400×900 (min. 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, trafik ışığı düğmeleri `{ x: 16, y: 16 }` konumunda.
 - Windows/Linux: yerel başlık çubuğu.
-- Kapat düğmesi uygulamayı sistem tepsisine küçültür; tepsi menüsünde **OmniRoute'u Aç**, **Panoyu Aç** (harici tarayıcı), **Sunucu Bağlantı Noktası** alt menüsü, **Güncellemeleri Denetle** ve **Çıkış** seçenekleri bulunur.
+- Kapat düğmesi uygulamayı sistem tepsisine küçültür; tepsi menüsünde **67router'u Aç**, **Panoyu Aç** (harici tarayıcı), **Sunucu Bağlantı Noktası** alt menüsü, **Güncellemeleri Denetle** ve **Çıkış** seçenekleri bulunur.
 
 ## İçerik Güvenliği Politikası
 

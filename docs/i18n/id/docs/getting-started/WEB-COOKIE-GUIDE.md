@@ -4,7 +4,7 @@
 
 ---
 
-Penyedia Web Cookie memungkinkan OmniRoute menggunakan layanan AI melalui sesi browser Anda yang sudah ada, bukan melalui kunci API. Penyedia ini berguna ketika Anda sudah memiliki akses ke suatu layanan melalui situs webnya dan ingin OmniRoute menggunakan sesi terautentikasi yang sama.
+Penyedia Web Cookie memungkinkan 67router menggunakan layanan AI melalui sesi browser Anda yang sudah ada, bukan melalui kunci API. Penyedia ini berguna ketika Anda sudah memiliki akses ke suatu layanan melalui situs webnya dan ingin 67router menggunakan sesi terautentikasi yang sama.
 
 Tidak seperti penyedia berbasis kunci API, penyedia Web Cookie melakukan autentikasi menggunakan kredensial yang dikirim browser Anda ke situs web.
 
@@ -49,7 +49,7 @@ DevTools
 
 Header permintaan `Cookie` berisi informasi autentikasi persis yang berhasil digunakan oleh browser Anda.
 
-Untuk sebagian besar penyedia Web Cookie, nilai inilah yang harus ditempelkan ke OmniRoute.
+Untuk sebagian besar penyedia Web Cookie, nilai inilah yang harus ditempelkan ke 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Proses penyiapannya sama untuk sebagian besar penyedia Web Cookie.
 4. Muat ulang halaman.
 5. Buka permintaan obrolan atau percakapan yang terautentikasi.
 6. Salin kredensial autentikasi yang diperlukan.
-7. Buka OmniRoute.
+7. Buka 67router.
 8. Buka **Providers → Add Provider**.
 9. Pilih penyedia Web Cookie Anda.
 10. Tempelkan kredensial.
@@ -92,17 +92,17 @@ Situs web yang berbeda menyimpan autentikasi dengan cara yang berbeda. Beberapa 
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) adalah platform chat konsumen gratis yang tidak memerlukan pendaftaran — sesi dibuat secara anonim pada kunjungan pertama dan dipertahankan melalui tiga cookie: `uid`, `si_usr_id`, dan `si_ses_id`. OmniRoute meneruskan endpoint `/api/dispatch` yang sama melalui satu id model (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) adalah platform chat konsumen gratis yang tidak memerlukan pendaftaran — sesi dibuat secara anonim pada kunjungan pertama dan dipertahankan melalui tiga cookie: `uid`, `si_usr_id`, dan `si_ses_id`. 67router meneruskan endpoint `/api/dispatch` yang sama melalui satu id model (`notrack-c`, alias `ntw`).
 
 ### Langkah-langkah untuk terhubung
 
 1. Buka [notrack.ai](https://notrack.ai) di browser Anda dan biarkan cookie sesi anonim ditetapkan.
 2. Buka **DevTools → Network**, muat ulang halaman, lalu klik permintaan `/api` apa pun.
 3. Di **Request Headers**, salin seluruh nilai header `Cookie`.
-4. Di OmniRoute, buka **Providers → Add Provider → NoTrack Web (Free)**.
+4. Di 67router, buka **Providers → Add Provider → NoTrack Web (Free)**.
 5. Tempel string cookie ke kolom `apiKey`, lalu klik **Save**.
 
-OmniRoute mengekstrak `uid`, `si_usr_id`, dan `si_ses_id` dari string yang ditempelkan, lalu membuat ulang header `Cookie` yang bersih hanya dengan pasangan tersebut — ditambah `nt_session` (token `ntk_…` yang ditetapkan untuk akun yang telah masuk) jika tersedia. Jika salah satu dari ketiganya tidak ada, string mentah yang ditempelkan akan diteruskan tanpa perubahan sehingga operator dapat bereksperimen dengan format alternatif.
+67router mengekstrak `uid`, `si_usr_id`, dan `si_ses_id` dari string yang ditempelkan, lalu membuat ulang header `Cookie` yang bersih hanya dengan pasangan tersebut — ditambah `nt_session` (token `ntk_…` yang ditetapkan untuk akun yang telah masuk) jika tersedia. Jika salah satu dari ketiganya tidak ada, string mentah yang ditempelkan akan diteruskan tanpa perubahan sehingga operator dapat bereksperimen dengan format alternatif.
 
 ### Id model
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Cookie Berfungsi di Browser tetapi Tidak di OmniRoute
+## Cookie Berfungsi di Browser tetapi Tidak di 67router
 
 Beberapa penyedia menyertakan cookie yang hanya dikirim selama permintaan terautentikasi.
 

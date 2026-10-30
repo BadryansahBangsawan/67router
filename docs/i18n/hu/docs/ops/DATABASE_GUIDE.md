@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Az OmniRoute elsődleges adattárként **WAL naplózást használó SQLite-ot** alkalmaz, az érzékeny mezők nyugalmi állapotú titkosításához pedig **AES-256-GCM** titkosítást használ. Ez az útmutató az adatbázissémát, a migrációkat, a biztonsági mentést és helyreállítást, valamint az üzemeltetési eljárásokat ismerteti.
+> **TL;DR**: A 67router elsődleges adattárként **WAL naplózást használó SQLite-ot** alkalmaz, az érzékeny mezők nyugalmi állapotú titkosításához pedig **AES-256-GCM** titkosítást használ. Ez az útmutató az adatbázissémát, a migrációkat, a biztonsági mentést és helyreállítást, valamint az üzemeltetési eljárásokat ismerteti.
 
 **Források:**
 
@@ -19,7 +19,7 @@
 
 ## Miért SQLite?
 
-Az OmniRoute több okból választotta a SQLite-ot a PostgreSQL/MySQL helyett:
+A 67router több okból választotta a SQLite-ot a PostgreSQL/MySQL helyett:
 
 | Szempont               | SQLite                                      | PostgreSQL                                  |
 | ---------------------- | ------------------------------------------- | ------------------------------------------- |
@@ -30,7 +30,7 @@ Az OmniRoute több okból választotta a SQLite-ot a PostgreSQL/MySQL helyett:
 | **Biztonsági mentés**  | Egyetlen fájl másolása                      | `pg_dump` vagy fájlrendszer-pillanatkép     |
 | **Felhasználási eset** | Felhasználónkénti telepítés, beágyazott     | Több-bérlős SaaS                            |
 
-Az **egyfelhasználós, egypéldányos** telepítésekhez (az OmniRoute elsődleges felhasználási módjához) a SQLite egyszerűbb és gyorsabb.
+Az **egyfelhasználós, egypéldányos** telepítésekhez (a 67router elsődleges felhasználási módjához) a SQLite egyszerűbb és gyorsabb.
 
 ### WAL-naplózás
 
@@ -50,7 +50,7 @@ Az alapértelmezett gyorsítótárméret **65 536 KiB (64 MiB)**. A SQLite a neg
 `cache_size` értéket megközelítő felső korlátként értelmezi KiB-ban, és igény szerint foglal le lapokat.
 A **Beállítások > Rendszer és tárhely > Gyorsítótár mérete** mező **1 és
 1 000 000 KiB** közötti egész értékeket fogad el; a beállítás mentése alkalmazza azt az élő adatbázis-kapcsolatra,
-az OmniRoute pedig indításkor visszaállítja a megőrzött értéket.
+a 67router pedig indításkor visszaállítja a megőrzött értéket.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Tartományi modularchitektúra
 
-Az OmniRoute adatbázisa **110 legfelső szintű TypeScript-modult** tartalmaz a `src/lib/db/` könyvtárban. Minden tartományi modul:
+A 67router adatbázisa **110 legfelső szintű TypeScript-modult** tartalmaz a `src/lib/db/` könyvtárban. Minden tartományi modul:
 
 - Egy vagy több konkrét táblát kezel
 - Típusbiztos CRUD-függvényeket exportál
@@ -90,7 +90,7 @@ Az OmniRoute adatbázisa **110 legfelső szintű TypeScript-modult** tartalmaz a
 
 ### A 110 legfelső szintű adatbázismodul
 
-Az OmniRoute **110 legfelső szintű TypeScript-fájlt** tartalmaz a `src/lib/db/` könyvtárban. Az alábbiakban az alapvető modulokból látható egy válogatás; a teljes lista a könyvtár tartalomjegyzékében található:
+A 67router **110 legfelső szintű TypeScript-fájlt** tartalmaz a `src/lib/db/` könyvtárban. Az alábbiakban az alapvető modulokból látható egy válogatás; a teljes lista a könyvtár tartalomjegyzékében található:
 
 | Modul                   | Táblák                                                         | Felelősségi kör                                                                         |
 | ----------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ A több mint 30 táblát tartalmazó teljes lista a `src/lib/db/migrations/` kö
 
 ## Migrációk
 
-Az OmniRoute **verziózott, idempotens migrációkat** használ a `src/lib/db/migrations/` könyvtárban. Minden migráció egyetlen SQL-fájl, amelynek neve `NNN_description.sql` formátumú.
+A 67router **verziózott, idempotens migrációkat** használ a `src/lib/db/migrations/` könyvtárban. Minden migráció egyetlen SQL-fájl, amelynek neve `NNN_description.sql` formátumú.
 
 ### A migrációk elnevezése
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> A **visszafelé nem kompatibilis módosítások** (például oszlopok törlése) körülményesek. Az OmniRoute NEM támogatja a visszaállítást — egy migráció alkalmazása után a sémamódosítás végleges. Ennek megfelelően tervezzen.
+> A **visszafelé nem kompatibilis módosítások** (például oszlopok törlése) körülményesek. A 67router NEM támogatja a visszaállítást — egy migráció alkalmazása után a sémamódosítás végleges. Ennek megfelelően tervezzen.
 
 ---
 
@@ -310,7 +310,7 @@ Teljesítménybeli okokból a következő adatok egyszerű szövegként vannak t
 
 ## Titkosítási tudnivalók (v3.8.16+)
 
-Az OmniRoute a **`migrateLegacyEncryptedString()`** függvényt használja két titkosítási séma átlátható kezelésére:
+A 67router a **`migrateLegacyEncryptedString()`** függvényt használja két titkosítási séma átlátható kezelésére:
 
 - **Korábbi** (v3.5.0 előtti): XOR-alapú „titkosítás” (nem valódi kriptográfia)
 - **Jelenlegi**: AES-256-GCM megfelelő IV-vel és hitelesítési címkével
@@ -399,7 +399,7 @@ Egy aktív adatbázis leállás nélküli biztonsági mentéséhez:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Ez az SQLite online biztonsági mentési API-ját használja — biztonságosan futtatható az OmniRoute működése közben.
+Ez az SQLite online biztonsági mentési API-ját használja — biztonságosan futtatható a 67router működése közben.
 
 ## Teljesítményhangolás
 
@@ -440,7 +440,7 @@ PRAGMA mmap_size = 268435456;  -- 256 MB
 
 ### Tömörítés
 
-A hosszú ideig futó OmniRoute-példányok számára előnyös az alkalmankénti `VACUUM`:
+A hosszú ideig futó 67router-példányok számára előnyös az alkalmankénti `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -572,7 +572,7 @@ EOF
 ### Az összes adat visszaállítása (törlése)
 
 ```bash
-# Először állítsa le az OmniRoute-ot
+# Először állítsa le a 67router-ot
 omniroute stop
 
 # Törölje az adatbázisfájlt
@@ -610,7 +610,7 @@ Egy másik folyamat írási zárolást tart fenn. Lehetőségek:
 
 - Várja meg, amíg a másik folyamat befejeződik (ellenőrzés: `lsof | grep storage.sqlite`)
 - Állítsa le a másik folyamatot
-- Ha a probléma továbbra is fennáll, indítsa újra az OmniRoute-ot
+- Ha a probléma továbbra is fennáll, indítsa újra a 67router-ot
 
 ### „Az idegenkulcs-megkötés megsértése”
 
@@ -640,10 +640,10 @@ PRAGMA mmap_size = 0;
 
 A migráció tranzakcióban futott, ezért vissza kellett volna görgetni. Ha ez nem történt meg:
 
-1. **Állítsa le az OmniRoute-ot** (akadályozza meg a további próbálkozásokat)
+1. **Állítsa le a 67router-ot** (akadályozza meg a további próbálkozásokat)
 2. **Ellenőrizze az adatbázis állapotát** az `sqlite3` segítségével
 3. **Javítsa manuálisan** a részleges migrációt
-4. **Indítsa újra** az OmniRoute-ot (a rendszer újra megkísérli a migrációt)
+4. **Indítsa újra** a 67router-ot (a rendszer újra megkísérli a migrációt)
 
 Ennek megelőzéséhez a migrációkat először mindig egy másolaton tesztelje.
 

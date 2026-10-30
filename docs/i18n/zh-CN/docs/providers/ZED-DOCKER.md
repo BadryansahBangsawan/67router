@@ -4,7 +4,7 @@
 
 ---
 
-当 OmniRoute 在 Docker 内运行时，标准的“从 Zed 钥匙串导入”流程会失败，
+当 67router 在 Docker 内运行时，标准的“从 Zed 钥匙串导入”流程会失败，
 因为容器无法访问宿主操作系统的钥匙串守护进程（Linux 上的 libsecret、
 macOS 上的 Keychain、Windows 上的 Credential Manager），并且默认情况下，
 容器无法看到宿主文件系统中的 Zed 配置目录。
@@ -20,7 +20,7 @@ macOS 上的 Keychain、Windows 上的 Credential Manager），并且默认情�
    或 D-Bus 会话与操作系统钥匙串服务通信。默认情况下，这两者都不会桥接到容器中，
    因此读取凭据始终会失败。
 
-OmniRoute 通过以下两种启发式方法检测 Docker 环境：
+67router 通过以下两种启发式方法检测 Docker 环境：
 
 - 存在 `/.dockerenv`（由 Docker 守护进程在容器启动时写入）。
 - `/proc/1/cgroup` 中出现字符串 `docker`（Linux cgroup v1）。
@@ -32,7 +32,7 @@ OmniRoute 通过以下两种启发式方法检测 Docker 环境：
 
 1. 打开**仪表板 → 提供者 → Zed**。
 2. **手动令牌导入**面板会显示在钥匙串导入卡片下方。当
-   OmniRoute 检测到 Docker 时，该面板会在第一次钥匙串导入尝试失败后自动展开。
+   67router 检测到 Docker 时，该面板会在第一次钥匙串导入尝试失败后自动展开。
 3. 从下拉列表中选择提供者（OpenAI、Anthropic、Google、Mistral、xAI、
    OpenRouter 或 DeepSeek）。
 4. 在密码字段中粘贴 API 密钥。

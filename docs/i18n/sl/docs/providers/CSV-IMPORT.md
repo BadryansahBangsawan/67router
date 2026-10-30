@@ -25,7 +25,7 @@ Prva vrstica, katere prvi stolpec vsebuje dobesedno besedo `provider` (ne glede 
 Začetno datoteko prenesite iz modalnega okna za uvoz (**Prenesi predlogo CSV**). Primer:
 
 ```csv
-# Uvoz ponudnikov OmniRoute (položajni stolpci)
+# Uvoz ponudnikov 67router (položajni stolpci)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

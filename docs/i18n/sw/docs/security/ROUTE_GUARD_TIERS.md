@@ -6,7 +6,7 @@
 
 ## Muhtasari
 
-Njia zote za API ya usimamizi ya OmniRoute zimeainishwa katika mojawapo ya viwango vitatu vya ulinzi. Uainishaji huu ni tuli, umefafanuliwa katika `src/server/authz/routeGuard.ts`, na unatathminiwa kabla ya tawi jingine lolote la uthibitishaji kutekelezwa.
+Njia zote za API ya usimamizi ya 67router zimeainishwa katika mojawapo ya viwango vitatu vya ulinzi. Uainishaji huu ni tuli, umefafanuliwa katika `src/server/authz/routeGuard.ts`, na unatathminiwa kabla ya tawi jingine lolote la uthibitishaji kutekelezwa.
 
 ## Viwango
 
@@ -25,9 +25,9 @@ CVE ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)).
 **GHSA-fhh6-4qxv-rpqj ni nini (aina ya shambulio):** seva ya usimamizi/ajenti
 huweka wazi endpoint inayozindua mchakato-mdogo (`npm install`, `node`, kivinjari,
 proksi, `git`, `tar`, …). Ikiwa endpoint hiyo inaweza kufikiwa kutoka nje ya seva mwenyeji — kwa sababu
-mwendeshaji aliweka OmniRoute nyuma ya handaki la nginx/Cloudflare/Tailscale na JWT
+mwendeshaji aliweka 67router nyuma ya handaki la nginx/Cloudflare/Tailscale na JWT
 ikavuja, au uthibitishaji ulisanidiwa vibaya — mshambuliaji hubadilisha "ita API" kuwa "tekeleza
-amri kwenye seva mwenyeji" (utekelezaji wa msimbo kwa mbali). OmniRoute huzuia hili kwa kutekeleza
+amri kwenye seva mwenyeji" (utekelezaji wa msimbo kwa mbali). 67router huzuia hili kwa kutekeleza
 **ukaguzi wa seva mwenyeji ya loopback bila masharti, kabla ya ukaguzi wowote wa uthibitishaji**, kwenye kila
 njia inayoweza kuanzisha mchakato: tokeni iliyovuja kupitia handaki bado haiwezi kufikia uanzishaji wa mchakato.
 
@@ -116,7 +116,7 @@ kwa wapigaji simu wa mbali wa MCP pekee ambao hawapaswi kuhitaji ufikiaji mpana 
 
 #### Mwongozo wa waendeshaji na ukaguzi
 
-Ikiwa unaendesha OmniRoute nyuma ya proksi ya kinyume au handaki (nginx, Caddy, Cloudflare
+Ikiwa unaendesha 67router nyuma ya proksi ya kinyume au handaki (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), ukaguzi wa loopback bado hulinda njia zilizo hapo juu
 zinazoweza kuanzisha michakato — ombi ambalo anwani ya mteja wake si ya loopback hukataliwa kwa
 `403 LOCAL_ONLY` **kabla ya uthibitishaji kutekelezwa**, kwa hivyo JWT iliyovuja haiwezi kufikia uanzishaji wa mchakato. Majukumu mawili
@@ -154,7 +154,7 @@ ya mwendeshaji yanasalia:
 - Tafuta kwenye kumbukumbu za proksi rejea / ufikiaji wako viambishi awali vilivyo juu vilivyooanishwa na
   anwani ya mteja isiyo ya loopback. Tukio lolote kama hilo lililorudisha `200` badala ya
   `403 LOCAL_ONLY` linamaanisha proksi inaficha IP halisi ya mteja — rekebisha proksi.
-- `403 LOCAL_ONLY` katika kumbukumbu za OmniRoute kwa mojawapo ya njia hizi ni kinga
+- `403 LOCAL_ONLY` katika kumbukumbu za 67router kwa mojawapo ya njia hizi ni kinga
   inayofanya kazi kama ilivyokusudiwa, si hitilafu ya kuficha.
 
 #### Njia zinazofikika kwa mbali zenye lango la uchunguzi kwenye eneo la mwito

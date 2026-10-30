@@ -45,7 +45,7 @@ WS1.3 garantisini korurken (sızdırılmış bir token tek başına yayımlama y
 projenin v3.8.48'e kadar sahip olduğu tamamen otomatik akışı geri getirir.
 
 **Tek seferlik kurulum (sahip):** npmjs.com → `omniroute` paketi → Settings → _Trusted
-Publisher_ → GitHub: sahip `diegosouzapw`, depo `OmniRoute`, iş akışı `npm-publish.yml`
+Publisher_ → GitHub: sahip `diegosouzapw`, depo `67router`, iş akışı `npm-publish.yml`
 (ortam: yok). Bu yapılandırma tamamlanana kadar otomatik adım `ENEEDAUTH` hatasıyla başarısız olur:
 `publish_mode=staged` (aşağıda) veya `direct` ile yeniden tetikleyin.
 

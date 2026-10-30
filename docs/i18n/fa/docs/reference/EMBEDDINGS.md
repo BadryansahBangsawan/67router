@@ -4,9 +4,9 @@
 
 ---
 
-یادداشتهای اپراتوری برای `POST /v1/embeddings` هنگامی که OmniRoute در جلوی
+یادداشتهای اپراتوری برای `POST /v1/embeddings` هنگامی که 67router در جلوی
 Hindsight 0.9.1 (متد متنی `encode(list[str])`) و Memorix 1.6.0 (دروازهٔ رسانهای Jina)
-قرار دارد. در تاریخ 2026-08-17 بهصورت زنده با OmniRoute 3.8.49 در
+قرار دارد. در تاریخ 2026-08-17 بهصورت زنده با 67router 3.8.49 در
 `https://omniroute.jaguar-fish.ts.net/v1` راستیآزمایی شده است. هیچ اطلاعات محرمانهای در ادامه وجود ندارد.
 
 ## شناسههای مدلِ فعال
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` بومی صرفاً از طریق GitOps نمیتواند موفق شود. یک کلید Google AI
 Studio باید بهعنوان اتصال ارائهدهندهٔ `gemini` افزوده شود (از طریق داشبورد یا
-وارد کردن `GEMINI_API_KEY` به OmniRoute). این اطلاعات محرمانه در این مخزن وجود ندارد.
+وارد کردن `GEMINI_API_KEY` به 67router). این اطلاعات محرمانه در این مخزن وجود ندارد.
 
 ### مسیر چندوجهی Jina
 
@@ -100,7 +100,7 @@ Studio باید بهعنوان اتصال ارائهدهندهٔ `gemini` افز
 
 ### شیء تصویر Jina / Memorix
 
-آیتم تصویر متعارف OmniRoute (PNG با ابعاد 28×28، شامل 784 پیکسل — Jina تصاویر 1×1 را رد میکند):
+آیتم تصویر متعارف 67router (PNG با ابعاد 28×28، شامل 784 پیکسل — Jina تصاویر 1×1 را رد میکند):
 
 ```json
 {
@@ -149,7 +149,7 @@ Studio باید بهعنوان اتصال ارائهدهندهٔ `gemini` افز
 
 embeddingهای Hindsight فقط متنی هستند (`encode(list[str])`). این کلاینت اشیای
 تصویر را ارسال نمیکند. نشانی پایهٔ embeddingهای سازگار با OpenAI در Hindsight را روی
-مسیر `/v1` از OmniRoute تنظیم کنید و یکی از شناسههای فعال جدول بالا را به کار ببرید
+مسیر `/v1` از 67router تنظیم کنید و یکی از شناسههای فعال جدول بالا را به کار ببرید
 (`jina-ai/jina-embeddings-v5-omni-small` یا
 `openrouter/google/gemini-embedding-2`). مدل را روی
 `gemini-embedding-2` بدون پیشوند تنظیم نکنید، مگر اینکه یک کلید API برای `gemini` روی دروازه وجود داشته باشد.
@@ -157,11 +157,11 @@ embeddingهای Hindsight فقط متنی هستند (`encode(list[str])`). ای
 ### Memorix 1.6.0
 
 Memorix فقط `baseUrl`هایی را که با `/jina\.ai/i` مطابقت دارند، رسانهٔ بومی در نظر میگیرد. یک
-URL متعلق به OmniRoute حتی زمانی که مدل Jina omni باشد، در مسیر فقطمتنی باقی میماند.
-این دروازه ناشی از مشکلی در کلاینت Memorix است. مستقل از آن، OmniRoute همچنان بدنهٔ
+URL متعلق به 67router حتی زمانی که مدل Jina omni باشد، در مسیر فقطمتنی باقی میماند.
+این دروازه ناشی از مشکلی در کلاینت Memorix است. مستقل از آن، 67router همچنان بدنهٔ
 Jina بهشکل `{image: "data:..."}` را که Memorix در صورت باز شدن دروازه ارسال میکرد، رد میکند؛
-بنابراین کلاینتهای سازگار با Jina بدون شِمای متعارف `{type,source}` نمیتوانند تصاویر را از طریق OmniRoute
+بنابراین کلاینتهای سازگار با Jina بدون شِمای متعارف `{type,source}` نمیتوانند تصاویر را از طریق 67router
 به embedding تبدیل کنند.
 
 برای متن از `jina-ai/jina-embeddings-v5-omni-small` استفاده کنید. مقدار
-`base_url` در Memorix را روی `https://api.jina.ai` تنظیم نکنید — OmniRoute را بهعنوان تنها واسطه نگه دارید.
+`base_url` در Memorix را روی `https://api.jina.ai` تنظیم نکنید — 67router را بهعنوان تنها واسطه نگه دارید.

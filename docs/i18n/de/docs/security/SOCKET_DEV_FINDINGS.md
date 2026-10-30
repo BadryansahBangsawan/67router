@@ -51,7 +51,7 @@ einen Tunnel offengelegtes JWT kann diesen Codepfad **nicht** auslösen.
 | Linux+Firefox/Chromium | Aktualisierung der NSS-Datenbank pro Profil über `certutil -d sql:<profile>`                                      |
 
 Dies sind dieselben Befehle, die von `mitmproxy`, Charles Proxy, Fiddler und
-Caddy verwendet werden. Dass sie in OmniRoute vorhanden sind, ist unter
+Caddy verwendet werden. Dass sie in 67router vorhanden sind, ist unter
 `docs/security/STEALTH_GUIDE.md` dokumentiert.
 
 **Abhilfemaßnahme in v3.8.6**:
@@ -110,7 +110,7 @@ aktualisiert haben. Es wird in v3.9 entfernt.
 
 **Warum wir dies beibehalten**: Der Zed-Import ist der benutzerfreundlichste
 Onboarding-Pfad für Benutzer, die Zed bereits verwenden und ihre
-Provider-Schlüssel in OmniRoute spiegeln möchten, ohne sie erneut einzufügen.
+Provider-Schlüssel in 67router spiegeln möchten, ohne sie erneut einzufügen.
 
 ---
 
@@ -121,7 +121,7 @@ Provider-Schlüssel in OmniRoute spiegeln möchten, ohne sie erneut einzufügen.
 **Grund für die Beanstandung**: Der Chunk exportiert `execFileWithPassword`,
 `runElevatedPowerShell` und den gemeinsam verwendeten Helfer `quotePowerShell`
 erneut. Der KI-Klassifikator von Socket.dev erkennt sie als generisches
-„Toolkit für Host-Ausführung und Rechteerhöhung“. Innerhalb von OmniRoute
+„Toolkit für Host-Ausführung und Rechteerhöhung“. Innerhalb von 67router
 werden sie ausschließlich vom MITM-Zertifikatinstallationspfad (§1) sowie von
 `execFileWithPassword` für die Ausführung von `sudo`-Befehlen verwendet.
 
@@ -178,7 +178,7 @@ ausdrückliche Aktivierung ist zwingend erforderlich.
 
 ---
 
-## §5 — Zurückschreiben von OmniRoute-Cloud-Sync-Anmeldedaten (`api/keys/[id]/route.js`)
+## §5 — Zurückschreiben von 67router-Cloud-Sync-Anmeldedaten (`api/keys/[id]/route.js`)
 
 **Quelldateien**:
 
@@ -211,7 +211,7 @@ rawBody)`), bevor das JSON geparst wird. Wenn das Secret gesetzt ist, ist
    `rateLimitedUntil`, `updatedAt`). Dies ist eine **inkompatible Änderung** für Benutzer,
    die sich auf die Remote-Synchronisierung von Token verlassen haben — sie müssen diese explizit aktivieren.
 
-**Warum wir diese Funktion beibehalten**: Cloud Sync ist die einzige Möglichkeit für einen OmniRoute-Cloud-Mandanten,
+**Warum wir diese Funktion beibehalten**: Cloud Sync ist die einzige Möglichkeit für einen 67router-Cloud-Mandanten,
 Team-Anmeldedaten zentral zu verwalten. Die Korrektur bildet das Bedrohungsmodell ehrlich ab:
 „Der Server signiert, der Client verifiziert, der Betreiber stimmt zu.“
 

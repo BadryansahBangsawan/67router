@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Termux vasitəsilə Android-də başlıqsız server kimi işləyə bilər. Electron masaüstü tətbiqi Termux-da dəstəklənmir, lakin veb idarəetmə paneli və OpenAI ilə uyğun API lokal brauzerdən və ya eyni şəbəkədəki digər cihazlardan işləyir.
+67router Termux vasitəsilə Android-də başlıqsız server kimi işləyə bilər. Electron masaüstü tətbiqi Termux-da dəstəklənmir, lakin veb idarəetmə paneli və OpenAI ilə uyğun API lokal brauzerdən və ya eyni şəbəkədəki digər cihazlardan işləyir.
 
 ## İlkin tələblər
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js versiyası:** OmniRoute üçün Node `>=22.22.2 <23 || >=24.0.0 <27` tələb olunur (`package.json` faylındakı `engines` / `SUPPORTED_NODE_RANGE` ilə uyğun gəlir). Termux-un `nodejs-lts` paketi adətən Node 20 LTS versiyasını təqdim edir və bu versiya **artıq dəstəklənmir** — əvəzinə `pkg install nodejs` (cari versiya) quraşdırın və `node --version` əmrinin 22.x/24.x+ xəttinə aid versiya göstərdiyini yoxlayın.
+> **Node.js versiyası:** 67router üçün Node `>=22.22.2 <23 || >=24.0.0 <27` tələb olunur (`package.json` faylındakı `engines` / `SUPPORTED_NODE_RANGE` ilə uyğun gəlir). Termux-un `nodejs-lts` paketi adətən Node 20 LTS versiyasını təqdim edir və bu versiya **artıq dəstəklənmir** — əvəzinə `pkg install nodejs` (cari versiya) quraşdırın və `node --version` əmrinin 22.x/24.x+ xəttinə aid versiya göstərdiyini yoxlayın.
 
-Yerli paketlərin kompilyasiyası uğursuz olarsa, yuxarıdakı `pkg install` əmrini yenidən icra edin və sonra OmniRoute quraşdırmasını təkrar sınayın.
+Yerli paketlərin kompilyasiyası uğursuz olarsa, yuxarıdakı `pkg install` əmrini yenidən icra edin və sonra 67router quraşdırmasını təkrar sınayın.
 
 ## Quraşdırma
 
@@ -37,7 +37,7 @@ omniroute
 
 ## İşə salma
 
-OmniRoute-u başlıqsız server rejimində başladın:
+67router-u başlıqsız server rejimində başladın:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Məsələn:
 http://192.168.1.50:20128
 ```
 
-Telefonu və klienti eyni etibarlı şəbəkədə saxlayın. OmniRoute-u telefondan kənara açırsınızsa, API açarlarını və idarəetmə paneli autentifikasiyasını aktivləşdirin.
+Telefonu və klienti eyni etibarlı şəbəkədə saxlayın. 67router-u telefondan kənara açırsınızsa, API açarlarını və idarəetmə paneli autentifikasiyasını aktivləşdirin.
 
 ## Məlumat kataloqu
 
-Standart olaraq OmniRoute məlumatları Linux-da istifadə edilən eyni server tərəfli məlumat yolu davranışına uyğun şəkildə Termux-un ev kataloqunda saxlayır. Verilənlər bazasını konkret bir yerdə saxlamaq üçün:
+Standart olaraq 67router məlumatları Linux-da istifadə edilən eyni server tərəfli məlumat yolu davranışına uyğun şəkildə Termux-un ev kataloqunda saxlayır. Verilənlər bazasını konkret bir yerdə saxlamaq üçün:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Dəstəklənməyən platforma: android (hər sorğu HTTP 500 qaytarır)
 
-**Əlamət:** `omniroute` / `omniroute serve` əmri `✔ OmniRoute işləyir!` mesajını göstərir, lakin idarəetmə panelinə və ya API-yə edilən hər sorğu sadə `500 Internal Server Error` xətası qaytarır. `~/.omniroute/logs/application/app.log` boş qalır, `APP_LOG_LEVEL=debug` faydalı heç nə göstərmir və cavab gövdəsi heç bir JSON təfərrüatı olmadan adi mətndir (`Internal Server Error`).
+**Əlamət:** `omniroute` / `omniroute serve` əmri `✔ 67router işləyir!` mesajını göstərir, lakin idarəetmə panelinə və ya API-yə edilən hər sorğu sadə `500 Internal Server Error` xətası qaytarır. `~/.omniroute/logs/application/app.log` boş qalır, `APP_LOG_LEVEL=debug` faydalı heç nə göstərmir və cavab gövdəsi heç bir JSON təfərrüatı olmadan adi mətndir (`Internal Server Error`).
 
 **Səbəb:** Bəzi Termux/Node quruluşları `process.platform === "android"` nəticəsini verir. Next.js `getCacheDirectory()` bu platformanı emal etmir: `~/.cache` kataloqunun (və ya ümumi müvəqqəti kataloqun) _əvvəlcədən_ mövcud olmasını tələb edir, əks halda aşağıdakı xəta ilə instrumentasiya qarmağını yükləyərkən uğursuz olur:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Qarmaq heç vaxt yüklənmədiyi üçün jurnallaşdırma da başlamır — 500 xətasının səbəbini müəyyən etmək tamamilə mümkünsüz görünür. OmniRoute, bu yoxlamanın Android/Termux-da uğurla keçməsi üçün Next.js başlamazdan əvvəl CLI giriş nöqtəsində `~/.cache` yaradır (və təyin edilməyibsə, `XDG_CACHE_HOME` dəyişənini təyin edir).
+Qarmaq heç vaxt yüklənmədiyi üçün jurnallaşdırma da başlamır — 500 xətasının səbəbini müəyyən etmək tamamilə mümkünsüz görünür. 67router, bu yoxlamanın Android/Termux-da uğurla keçməsi üçün Next.js başlamazdan əvvəl CLI giriş nöqtəsində `~/.cache` yaradır (və təyin edilməyibsə, `XDG_CACHE_HOME` dəyişənini təyin edir).
 
 **Dəstəklənən həll (paketə düzəliş etmədən):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Cari OmniRoute quruluşlarında CLI bunu Android/Termux-da avtomatik edir — yeni `npx -y omniroute@latest` / qlobal quraşdırma əl ilə bu addımın yerinə yetirilməsini tələb etməməlidir. Yeniləmədən sonra da xətanı görürsünüzsə, yuxarıda göstərildiyi kimi `~/.cache` kataloqunu bir dəfə yaradın və yenidən başladın.
+Cari 67router quruluşlarında CLI bunu Android/Termux-da avtomatik edir — yeni `npx -y omniroute@latest` / qlobal quraşdırma əl ilə bu addımın yerinə yetirilməsini tələb etməməlidir. Yeniləmədən sonra da xətanı görürsünüzsə, yuxarıda göstərildiyi kimi `~/.cache` kataloqunu bir dəfə yaradın və yenidən başladın.
 
 `process.platform = "linux"` dəyərini məcburi təyin etmək üçün `dist/server.js` faylına düzəliş **etməyin**. Bu cür paket düzəlişi hər təkrar quraşdırma/yeniləmə zamanı üzərinə yazılır və keş kataloqu mövcud olduqda buna ehtiyac yoxdur.
 

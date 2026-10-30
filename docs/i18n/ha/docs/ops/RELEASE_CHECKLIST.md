@@ -45,7 +45,7 @@ yana dawo da cikakken tsarin atomatik da aikin yake da shi har zuwa v3.8.48 tare
 garantin WS1.3 (token da ya fallasa ba zai iya wallafawa shi kaɗai ba — babu token).
 
 **Saitin sau ɗaya kawai (mai shi):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: babu). Har sai an samar da wannan, matakin atomatik zai gaza da `ENEEDAUTH`:
 sake ƙaddamarwa da `publish_mode=staged` (a ƙasa) ko `direct`.
 

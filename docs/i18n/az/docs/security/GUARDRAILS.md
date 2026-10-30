@@ -9,7 +9,7 @@
 > hook-ların hansı marşrutlara və cavab yollarına çatdığı, birləşdirilmiş deaktivasiya başlıqları (#16412),
 > məcburi sərhəd kimi inyeksiya blok rejimi (#16413) və post-call-dan əvvəl cavabı nəyin gördüyü)
 
-Guardrail-lər OmniRoute ilə yuxarı axın provayderlər arasındakı sərhəddə
+Guardrail-lər 67router ilə yuxarı axın provayderlər arasındakı sərhəddə
 təhlükəsizlik, siyasət və məzmun çevrilmələrini icra edir. Hər bir guardrail
 sorğu yüklərini (`preCall`) və yuxarı axın cavablarını (`postCall`) yoxlaya
 (və istəyə bağlı olaraq rədd edə, çevirə və ya annotasiya edə) bilər.
@@ -115,7 +115,7 @@ Məcburi rejimlər auto heuristikası işə düşməzdən **əvvəl** qısaqapan
 `modelAccessMode: "restricted"` / `disableNonPublicModels`) məhdudlaşdırdıqda,
 körpü yalnız açarın istifadə edə biləcəyi reroute və describe modellərini,
 açarın istifadə edə biləcəyi bağlantılarda seçir. Describe çağırışı sonra
-həmişə `x-omniroute-self-loop-key-id` başlığı ilə OmniRoute self-loop-u
+həmişə `x-omniroute-self-loop-key-id` başlığı ilə 67router self-loop-u
 vasitəsilə keçir, beləliklə qəbul edən söhbət sorğusu həmin açarın bağlantı
 və model siyasətini yenidən tətbiq edir. `enforceApiKeyPolicy()` bu başlığı
 yalnız self-loop bearer-i ilə birlikdə nəzərə alır, ona görə də o, yalnız
@@ -146,7 +146,7 @@ asılı olmayaraq. Aşağı detallı nümunəgötürmə məhz bu prompt-un təl�
 mətn-transkripsiya tapşırığı üçün OCR dəqiqliyini pisləşdirir, ona görə də
 describe çağırışının özü orijinal daxilolan sorğunun hansı detal səviyyəsindən
 istifadə etməsindən asılı olmayaraq həmişə yüksək detal istəyir. Bu, yalnız
-daxili describe sorğusunun gövdəsinə təsir edir; OmniRoute-un əsas sorğuda
+daxili describe sorğusunun gövdəsinə təsir edir; 67router-un əsas sorğuda
 çağırışçının öz `image_url.detail`-ını necə yönləndirdiyini dəyişmir —
 həmin defolt ayrıca və yalnız aşkarlanmış OpenCode müştəriləri üçün
 `defaultImageDetail()`-da (`open-sse/handlers/chatCore/upstreamBody.ts`)
@@ -272,7 +272,7 @@ Providers həmçinin Image-to-Text və Speech-to-Text iş axınlarını mövcud
 Speech-to-Text sınaq meydançasını silmədən müvafiq Modality Bridge
 vərəqlərinə bağlayır.
 
-**Self-loop qəbul bypass-ı:** describe çağırışı OmniRoute-un öz `/v1`
+**Self-loop qəbul bypass-ı:** describe çağırışı 67router-un öz `/v1`
 self-loop-u (qeyri-standart provayder modeli) vasitəsilə yönləndirildikdə,
 alt-sorğu `x-omniroute-admission-bypass: internal` göndərir və həll edilmiş
 self-loop etimadnaməsi ilə autentifikasiya olunur — lokal rejimdə lokal
@@ -479,13 +479,13 @@ qiymətləndiricisi yoxdur. `--caption-cost-per-call-usd` açıq müsbət
 hər-çağırış qiyməti təqdim etmədikcə, pul qənaətləri də `HOLD` olaraq qalır;
 skript nəticələrin heç birini uydurmur.
 
-Hər kadr 4 MiB ilə, bütün xam kadrlar birlikdə 23 MiB ilə, serializasiya olunmuş broker cavabı isə 32 MiB ilə məhdudlaşır. Şəxsi müvəqqəti qovluq `finally` blokunda silinir. OmniRoute FFmpeg-i paketinə daxil etmir və fərdi icra faylı yolunu qəbul etmir. Təsvirləmədən əvvəl körpü ehtiyatlı bir vizual deduplikasiya keçidi tətbiq edir: hər JPEG 16×16 boz çalarlı buferə endirilir və yalnız son saxlanılan kadrla müqayisə olunur. Bir kadrı ötən tələb olunmuş təsvir büdcəsi üçün çıxarılma həmin büdcənin iki qatına qədər, lakin heç vaxt 16 kadrdan çox olmayan məhdud namizəd hovuzu təmin edir. Tələb olunan limit yalnız deduplikasiyadan sonra tətbiq olunur; büdcə ən azı iki olduqda son incəltmə zamanı birinci və son seçilmiş namizədlər saxlanılır. Versiyalaşdırılmış `grayscale-16x16-mean-cells-v2` siyasəti orta luma fərqi ilə normallaşdırılmış fərqi ən azı 0.05 olan miniatür xanaların nisbətindən böyük olanını istifadə edir. Dublikat həddi proqnozlaşdırıla bilmək naminə seçilmiş və iş vaxtı parametri kimi açılmamış sabit 0.04-dür. Bu ikinci dərəcəli yüksək kontrastlı siqnal yalnız orta qiymət üzrə müqayisənin gizlədə biləcəyi kiçik hərəkətləri və görünən mətn dəyişikliklərini qoruyur. Müqayisəçi və ya dekoder xətaları açıq davranaraq uğursuz olur və əhatəni saxlayır. Çıxış metadatası çıxarılmış namizədləri, uğurla istifadə olunmuş kadrları və atılmış vizual dublikatları bir-birindən ayırır.
+Hər kadr 4 MiB ilə, bütün xam kadrlar birlikdə 23 MiB ilə, serializasiya olunmuş broker cavabı isə 32 MiB ilə məhdudlaşır. Şəxsi müvəqqəti qovluq `finally` blokunda silinir. 67router FFmpeg-i paketinə daxil etmir və fərdi icra faylı yolunu qəbul etmir. Təsvirləmədən əvvəl körpü ehtiyatlı bir vizual deduplikasiya keçidi tətbiq edir: hər JPEG 16×16 boz çalarlı buferə endirilir və yalnız son saxlanılan kadrla müqayisə olunur. Bir kadrı ötən tələb olunmuş təsvir büdcəsi üçün çıxarılma həmin büdcənin iki qatına qədər, lakin heç vaxt 16 kadrdan çox olmayan məhdud namizəd hovuzu təmin edir. Tələb olunan limit yalnız deduplikasiyadan sonra tətbiq olunur; büdcə ən azı iki olduqda son incəltmə zamanı birinci və son seçilmiş namizədlər saxlanılır. Versiyalaşdırılmış `grayscale-16x16-mean-cells-v2` siyasəti orta luma fərqi ilə normallaşdırılmış fərqi ən azı 0.05 olan miniatür xanaların nisbətindən böyük olanını istifadə edir. Dublikat həddi proqnozlaşdırıla bilmək naminə seçilmiş və iş vaxtı parametri kimi açılmamış sabit 0.04-dür. Bu ikinci dərəcəli yüksək kontrastlı siqnal yalnız orta qiymət üzrə müqayisənin gizlədə biləcəyi kiçik hərəkətləri və görünən mətn dəyişikliklərini qoruyur. Müqayisəçi və ya dekoder xətaları açıq davranaraq uğursuz olur və əhatəni saxlayır. Çıxış metadatası çıxarılmış namizədləri, uğurla istifadə olunmuş kadrları və atılmış vizual dublikatları bir-birindən ayırır.
 
 Açıq şəkildə işarələnmiş video hissəsi zaman möhürlü kontakt vərəqi tələb edə bilər. Körpü ən çox 4 sütunlu, 16 kadrlıq JPEG şəbəkəsi qurur. Hər 512 piksellik xana öz mənbə zaman möhürünü yüksək kontrastlı alt zolağa həkk edir, eyni zaman möhürləri isə sonrakı əlaqələndirmə və audit üçün mətn metadatasında da qalır. Tam JPEG 32 MiB ilə məhdudlaşdırılmış olaraq qalır. `sharp` şəbəkəni deşifrə edə və ya qura bilmirsə, körpü ayrı-ayrı JPEG kadrlarına qayıdır; müştəri tərəfindən dayandırma isə vərəq əməliyyatı vasitəsilə yenə də yayılır.
 
 Promosiya sübutları sintetik kompozisiya mikrobenchmarkından qəsdən ayrı saxlanılır. `scripts/perf/video-bridge-contact-sheet-eval.ts` real OpenAI-uyğun görmə modelləri üçün sxem versiyalı A/B hərnəsi müəyyən edir. O, provayderin bildirdiyi tokenləri, ucdan-uca real gecikməni (vərəq yığımı daxil olmaqla), model çağırışlarının sayını və manifesdə müəyyən edilmiş faktların saxlanmasını ölçür. Xam model cavabları hesabata yazılmır; yalnız SHA-256 xəritələri və uyğunlaşdırılmış fakt ID-ləri saxlanılır. Hərnes `--execute-real` ötürülmədikcə və `--model`, `OMNIROUTE_BASE_URL` ilə `OMNIROUTE_API_KEY` konfiqurasiya edilmədikcə heç bir şəbəkə və ya ödənişli model çağırışı etmir. Bu açıq real icra olmadan onun maşın tərəfindən oxunan qərarı `HOLD` olaraq qalır; təkcə sintetik yük/çağırış sayı ölçmələri promosiya sübutu deyil.
 
-Çağırışçılar artıq uyğunlaşdırılmış mətnə sahib olduqda dəstəklənən video hissəsinə istəyə bağlı `transcript.cues` massivi əlavə edə bilərlər. Hər kiy `text`, ölçülmüş müddətin daxilində sonlu `start`/`end` intervalı və icazə verilmiş siyahıda olan `source` (`client`, `embedded` və ya `audio-bridge`) daşımalıdır; `confidence` susmaya görə `1` olur və `0` ilə `1` arasında qalmalıdır. Dəqiq dublikat kiy-lər birləşdirilir. OmniRoute bu metadatadan heç vaxt transkripsiya başlatmır: yoxlanılmış kiy-lər mənbə, etibarlılıq və interval ilə təsvir edilmiş nəticəyə köçürülür və kadr təsvirləri ilə yanaşı etibarsız müşahidələr kimi göstərilir. Keçərsiz, diapazondan kənar və ya mənşəsiz mətn təsvir axınına qarışdırılmaq əvəzinə rədd edilir. Hər iki sorğu gövdəsi transkript kanalı verilmiş mənşəni — öz bəyan etdiyi `embedded` və ya `audio-bridge` etiketləri də daxil olmaqla — `client` dəyərinə normallaşdırır. Bu etibarlı etiketləri yalnız serverə məxsus adapter, yalnız koddan keçilə bilən `trustedSource` arqumenti vasitəsilə təyin edə bilər; sorğu JSON sahəsi həmin arqumentə çata bilməz. Transkript mətni mənşəyindən asılı olmayaraq etibarsız, mediadan törəyən məzmun olaraq qalır və heç vaxt səlahiyyət qərarını müəyyən etməməlidir.
+Çağırışçılar artıq uyğunlaşdırılmış mətnə sahib olduqda dəstəklənən video hissəsinə istəyə bağlı `transcript.cues` massivi əlavə edə bilərlər. Hər kiy `text`, ölçülmüş müddətin daxilində sonlu `start`/`end` intervalı və icazə verilmiş siyahıda olan `source` (`client`, `embedded` və ya `audio-bridge`) daşımalıdır; `confidence` susmaya görə `1` olur və `0` ilə `1` arasında qalmalıdır. Dəqiq dublikat kiy-lər birləşdirilir. 67router bu metadatadan heç vaxt transkripsiya başlatmır: yoxlanılmış kiy-lər mənbə, etibarlılıq və interval ilə təsvir edilmiş nəticəyə köçürülür və kadr təsvirləri ilə yanaşı etibarsız müşahidələr kimi göstərilir. Keçərsiz, diapazondan kənar və ya mənşəsiz mətn təsvir axınına qarışdırılmaq əvəzinə rədd edilir. Hər iki sorğu gövdəsi transkript kanalı verilmiş mənşəni — öz bəyan etdiyi `embedded` və ya `audio-bridge` etiketləri də daxil olmaqla — `client` dəyərinə normallaşdırır. Bu etibarlı etiketləri yalnız serverə məxsus adapter, yalnız koddan keçilə bilən `trustedSource` arqumenti vasitəsilə təyin edə bilər; sorğu JSON sahəsi həmin arqumentə çata bilməz. Transkript mətni mənşəyindən asılı olmayaraq etibarsız, mediadan törəyən məzmun olaraq qalır və heç vaxt səlahiyyət qərarını müəyyən etməməlidir.
 
 Təcrübəli çağırışçı eyni video üçün `audioTranscript` trekini təqdim edə bilər; o, server transkripsiyasının sübutu deyil, müştərinin təqdim etdiyi mətn kimi qəbul edilir. Birləşmə qatı vizual və audio müşahidələri vahid son icra vaxtı və vahid dayandırma siqnalı altında işlədir, onları ümumi zaman oxunda sıralayır, dəqiq dublikatları birləşdirir və yalnız bir tərəf uğur qazandıqda qismən nəticə bildirir. Keçərsiz `audioTranscript` bütün videonun uğursuz olması əvəzinə həmin qismən nəticəyə enir — vizual təsvir saxlanılır, audio qolunda isə təmizlənmiş xəta kodu qeyd olunur. Qol üzrə əlçatanlıq, qismən bayraq və təmizlənmiş xəta kodları təsvir edilmiş nəticədə, guardrail metadatasında (`audioFusionRuns`/`audioFusionPartials`/`audioFusionFailureCodes`), nəticə keşinin metadatasında və körpünün birləşmə sayğaclarında saxlanılır. Susmaya görə Video Bridge yolu nitqi mətnə çevirmə işə salmır və ikinci media surətini yükləmir; həmin açıq trek olmadan o, yalnız video olaraq qalır.
 
@@ -923,7 +923,7 @@ dispatch) iki job-a malikdir:
   (məs. "ignore all previous instructions…", DAN tipli jailbreak-lər) cavabın
   `error.code === "SECURITY_001"` daşıdığını təsdiq edir, yəni guard sorğunu
   həqiqətən rədd edir.
-- **`garak` (məsləhət xarakterli)** — lokal OmniRoute instansiyasına
+- **`garak` (məsləhət xarakterli)** — lokal 67router instansiyasına
   (`http://localhost:20128/v1`) qarşı garak `--probes promptinject,dan,leakreplay`
   işlədir. Provider secret-ə (`PROMPTFOO_PROVIDER_KEY`) bağlıdır; problemsiz şəkildə
   keçir və `|| true` ilə sonlanır, ona görə də CI-u pozmadan hesabat verir.

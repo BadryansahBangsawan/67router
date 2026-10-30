@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute expone la **generación de imágenes** del plan de Cursor en `POST /v1/images/generations` mediante el mismo id de proveedor que el chat: `cursor` (alias `cu`).
+67router expone la **generación de imágenes** del plan de Cursor en `POST /v1/images/generations` mediante el mismo id de proveedor que el chat: `cursor` (alias `cu`).
 
 | Campo                   | Valor                                                                                                    |
 | ----------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute expone la **generación de imágenes** del plan de Cursor en `POST /v1
 
 ## Por qué se usa Agent CLI
 
-El chat de Cursor en OmniRoute utiliza `agent.v1.AgentService/Run` (protobuf). Esa vía **rechaza** las herramientas integradas del cliente (shell, escritura, etc.). La generación de imágenes es una herramienta nativa de Cursor que la **CLI `agent`** ejecuta mediante la cuenta. Por lo tanto, el controlador de imágenes inicia `agent` con un prompt bloqueado y un espacio de trabajo temporal por solicitud (con la misma estructura que los puentes de cuentas de la comunidad) y, a continuación, devuelve `b64_json` compatible con OpenAI.
+El chat de Cursor en 67router utiliza `agent.v1.AgentService/Run` (protobuf). Esa vía **rechaza** las herramientas integradas del cliente (shell, escritura, etc.). La generación de imágenes es una herramienta nativa de Cursor que la **CLI `agent`** ejecuta mediante la cuenta. Por lo tanto, el controlador de imágenes inicia `agent` con un prompt bloqueado y un espacio de trabajo temporal por solicitud (con la misma estructura que los puentes de cuentas de la comunidad) y, a continuación, devuelve `b64_json` compatible con OpenAI.
 
 ## Restricción de acceso (Reglas estrictas n.º 15 y 17)
 
@@ -23,12 +23,12 @@ Este es el único formato de `IMAGE_PROVIDERS` que inicia un proceso secundario 
 
 ## La restricción de concurrencia está en el ámbito del módulo (limitación de instancia única)
 
-`CURSOR_IMG_MAX_CONCURRENT` se aplica mediante un contador/una cola en memoria cuyo ámbito es la instancia del módulo de Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Limita correctamente los inicios simultáneos de `agent` dentro de un proceso de OmniRoute, pero **no** coordina varios procesos/instancias que compartan la misma cuenta de Cursor (por ejemplo, un despliegue con varias réplicas): cada instancia aplica su propio límite independiente. En un despliegue de instancia única (el valor predeterminado), esto es exacto; los despliegues con escalado horizontal deben mantener un valor conservador de `CURSOR_IMG_MAX_CONCURRENT` por instancia o dirigir el tráfico de imágenes de Cursor a una única instancia.
+`CURSOR_IMG_MAX_CONCURRENT` se aplica mediante un contador/una cola en memoria cuyo ámbito es la instancia del módulo de Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Limita correctamente los inicios simultáneos de `agent` dentro de un proceso de 67router, pero **no** coordina varios procesos/instancias que compartan la misma cuenta de Cursor (por ejemplo, un despliegue con varias réplicas): cada instancia aplica su propio límite independiente. En un despliegue de instancia única (el valor predeterminado), esto es exacto; los despliegues con escalado horizontal deben mantener un valor conservador de `CURSOR_IMG_MAX_CONCURRENT` por instancia o dirigir el tráfico de imágenes de Cursor a una única instancia.
 
 ## Requisitos
 
 1. Una cuenta de Cursor conectada en el panel (OAuth o clave de API `crsr_…`).
-2. El binario de Cursor Agent disponible para el proceso de OmniRoute:
+2. El binario de Cursor Agent disponible para el proceso de 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, o
    - `~/.local/bin/agent`, o
    - `providerSpecificData.agentBin` en la conexión de Cursor.

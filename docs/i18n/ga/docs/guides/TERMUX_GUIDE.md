@@ -4,7 +4,7 @@
 
 ---
 
-Is féidir OmniRoute a rith mar fhreastalaí gan chomhéadan grafach ar Android trí Termux. Ní thacaítear leis an aip deisce Electron in Termux, ach oibríonn an painéal gréasáin agus an API atá comhoiriúnach le OpenAI ón mbrabhsálaí áitiúil nó ó ghléasanna eile ar an líonra céanna.
+Is féidir 67router a rith mar fhreastalaí gan chomhéadan grafach ar Android trí Termux. Ní thacaítear leis an aip deisce Electron in Termux, ach oibríonn an painéal gréasáin agus an API atá comhoiriúnach le OpenAI ón mbrabhsálaí áitiúil nó ó ghléasanna eile ar an líonra céanna.
 
 ## Réamhriachtanais
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Leagan Node.js:** Teastaíonn Node `>=22.22.2 <23 || >=24.0.0 <27` ó OmniRoute (comhoireann sé seo le `engines` in `package.json` / `SUPPORTED_NODE_RANGE`). Is gnách go soláthraíonn `nodejs-lts` Termux Node 20 LTS, nach dtacaítear leis **a thuilleadh** — suiteáil `pkg install nodejs` (an leagan reatha) ina ionad agus deimhnigh go dtuairiscíonn `node --version` líne 22.x/24.x+.
+> **Leagan Node.js:** Teastaíonn Node `>=22.22.2 <23 || >=24.0.0 <27` ó 67router (comhoireann sé seo le `engines` in `package.json` / `SUPPORTED_NODE_RANGE`). Is gnách go soláthraíonn `nodejs-lts` Termux Node 20 LTS, nach dtacaítear leis **a thuilleadh** — suiteáil `pkg install nodejs` (an leagan reatha) ina ionad agus deimhnigh go dtuairiscíonn `node --version` líne 22.x/24.x+.
 
-Má theipeann ar thiomsú pacáiste dúchasaigh, rith an t-ordú `pkg install` thuas arís agus ansin bain triail eile as suiteáil OmniRoute.
+Má theipeann ar thiomsú pacáiste dúchasaigh, rith an t-ordú `pkg install` thuas arís agus ansin bain triail eile as suiteáil 67router.
 
 ## Suiteáil
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Rith
 
-Tosaigh OmniRoute i mód freastalaí gan chomhéadan grafach:
+Tosaigh 67router i mód freastalaí gan chomhéadan grafach:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Mar shampla:
 http://192.168.1.50:20128
 ```
 
-Coinnigh an guthán agus an cliant ar an líonra iontaofa céanna. Má nochtann tú OmniRoute lasmuigh den ghuthán, cumasaigh eochracha API agus fíordheimhniú an phainéil.
+Coinnigh an guthán agus an cliant ar an líonra iontaofa céanna. Má nochtann tú 67router lasmuigh den ghuthán, cumasaigh eochracha API agus fíordheimhniú an phainéil.
 
 ## Eolaire Sonraí
 
-De réir réamhshocraithe, stórálann OmniRoute sonraí faoi eolaire baile Termux, de réir an iompair chéanna maidir le conair sonraí ar thaobh an fhreastalaí a úsáidtear ar Linux. Chun an bunachar sonraí a chur i suíomh sonrach:
+De réir réamhshocraithe, stórálann 67router sonraí faoi eolaire baile Termux, de réir an iompair chéanna maidir le conair sonraí ar thaobh an fhreastalaí a úsáidtear ar Linux. Chun an bunachar sonraí a chur i suíomh sonrach:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Ardán nach dtacaítear leis: android (seolann gach iarratas HTTP 500 ar ais)
 
-**Siomptóm:** Priontálann `omniroute` / `omniroute serve` `✔ OmniRoute is running!`, ach seolann gach iarratas painéil nó API `500 Internal Server Error` lom ar ais. Fanann `~/.omniroute/logs/application/app.log` folamh, ní phriontálann `APP_LOG_LEVEL=debug` aon rud úsáideach, agus is gnáth-théacs é corp an fhreagra (`Internal Server Error`) gan aon mhionsonraí JSON.
+**Siomptóm:** Priontálann `omniroute` / `omniroute serve` `✔ 67router is running!`, ach seolann gach iarratas painéil nó API `500 Internal Server Error` lom ar ais. Fanann `~/.omniroute/logs/application/app.log` folamh, ní phriontálann `APP_LOG_LEVEL=debug` aon rud úsáideach, agus is gnáth-théacs é corp an fhreagra (`Internal Server Error`) gan aon mhionsonraí JSON.
 
 **Cúis:** Tuairiscíonn roinnt leaganacha Termux/Node `process.platform === "android"`. Ní láimhseálann `getCacheDirectory()` Next.js an t-ardán sin: éilíonn sé go mbeadh `~/.cache` (nó eolaire cineálach sealadach) ann _cheana féin_; murach sin, teipeann air agus an duán ionstraimíochta á luchtú aige leis an méid seo a leanas:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Ós rud é nach luchtaítear an duán riamh, ní thosaíonn an logáil riamh — is cosúil nach féidir fáth an 500 a dhiagnóisiú ar chor ar bith. Cruthaíonn OmniRoute `~/.cache` (agus socraíonn sé `XDG_CACHE_HOME` nuair nach bhfuil sé socraithe) i bpointe iontrála CLI sula dtosaíonn Next.js, ionas go n-éireoidh leis an tseiceáil seo ar Android/Termux.
+Ós rud é nach luchtaítear an duán riamh, ní thosaíonn an logáil riamh — is cosúil nach féidir fáth an 500 a dhiagnóisiú ar chor ar bith. Cruthaíonn 67router `~/.cache` (agus socraíonn sé `XDG_CACHE_HOME` nuair nach bhfuil sé socraithe) i bpointe iontrála CLI sula dtosaíonn Next.js, ionas go n-éireoidh leis an tseiceáil seo ar Android/Termux.
 
 **Réiteach a dtacaítear leis (gan an pacáiste a phaisteáil):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Ar leaganacha reatha OmniRoute, déanann an CLI é seo go huathoibríoch ar Android/Termux — níor cheart go mbeadh an chéim láimhe ag teastáil tar éis `npx -y omniroute@latest` úr / suiteála domhanda. Má fheiceann tú an earráid fós tar éis uasghrádaithe, cruthaigh `~/.cache` uair amháin mar atá thuas agus atosaigh.
+Ar leaganacha reatha 67router, déanann an CLI é seo go huathoibríoch ar Android/Termux — níor cheart go mbeadh an chéim láimhe ag teastáil tar éis `npx -y omniroute@latest` úr / suiteála domhanda. Má fheiceann tú an earráid fós tar éis uasghrádaithe, cruthaigh `~/.cache` uair amháin mar atá thuas agus atosaigh.
 
 **Ná** paisteáil `dist/server.js` chun `process.platform = "linux"` a fhorchur. Forscríobhtar paiste pacáiste den chineál sin le gach athshuiteáil/uasghrádú agus ní bhíonn gá leis nuair atá an t-eolaire taisce ann.
 

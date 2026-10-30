@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute heeft drie verschillende maar verwante veerkrachtmechanismen. Elk heeft een eigen bereik en doel. Houd ze gescheiden bij het debuggen van routeringsgedrag.
+67router heeft drie verschillende maar verwante veerkrachtmechanismen. Elk heeft een eigen bereik en doel. Houd ze gescheiden bij het debuggen van routeringsgedrag.
 
 ![Veerkrachtmodel met 3 lagen](../diagrams/exported/resilience-3layers.svg)
 
@@ -197,7 +197,7 @@ alleen een interne correlatie-id.
 ### Exclusieve connection leases voor beheerde sessies
 
 **Scope:** één actieve beheerde HTTP-client/-sessie bezit één in aanmerking komende
-OmniRoute-verbinding.
+67router-verbinding.
 
 **Doel:** duurzaam exclusief eigendom van een verbinding bieden voor clients die een harde
 routing-afbakening over verzoeken heen nodig hebben. Dit verschilt van sessie-affiniteit, wat
@@ -221,7 +221,7 @@ API-sleutel-ID en de actieve verbindings-ID. Lease-controleheaders worden verwij
 verzoeksnapshots en upstream-executorheaders.
 
 Als gewone routering in aanmerking komende beheerde kandidaten heeft, maar elke vrije kandidaat bezet is
-door een vreemde actieve lease, retourneert OmniRoute HTTP `429`, een
+door een vreemde actieve lease, retourneert 67router HTTP `429`, een
 lease-capaciteit-niet-beschikbaar-code, een wacht-op-capaciteit-status en een begrensde `Retry-After`
 die is afgeleid van de vroegst relevante vervaltijd. Gewone lege geschiktheid is geen lease-conflict en
 behoudt zijn bestaande routeringsfoutsemantiek.
@@ -245,7 +245,7 @@ Gerelateerde mechanismen blijven gescheiden:
   voor codex de volledige `codex` / `spark`-scope (elk `gpt-5*`-model van de
   connection), voor andere providers `getQuotaScopedModelForProvider()`.
 - `404` vergrendelt het kale model (`getModelLockKey()` vernauwt `not_found`).
-- Elke andere status — `5xx`-transport-/serverfouten en OmniRoute's eigen
+- Elke andere status — `5xx`-transport-/serverfouten en 67router's eigen
   gesynthetiseerde `502` uit kwaliteitsvalidatie — vergrendelt alleen de **exacte**
   provider/connection/model-tuple. Een slechte stream op één model is geen bewijs
   over het quota van het account; vóór deze regel verwijderde één leeg antwoord op
@@ -382,7 +382,7 @@ Concurrencyplafonds per model**, één `model=cap` per regel) of via
   die als plafond voor gelijktijdige requests gelden.
 - **Lokale wachtrij, geen discovery:** overtollige requests worden lokaal in de
   wachtrij geplaatst met de bestaande wachtrij-/timeoutsemantiek (getypte
-  toelatingsfouten `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute
+  toelatingsfouten `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router
   ontdekt of leidt geen upstream-beleid af — het handhaaft exact de plafonds die
   de operator heeft geconfigureerd. Een verzadigde modelgate schakelt de provider
   nooit uit en creëert nooit een permanente model-lockout; upstream
@@ -556,7 +556,7 @@ deze unit-testbaar is zonder een echte Bottleneck-limiter.
 ### Vangnet voor automatisch inschakelen van rate-limits & verbindingsbescherming (`rateLimitProtection`)
 
 **Vangnet voor automatisch inschakelen** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, standaard `true`):
-OmniRoute schakelt standaard automatisch rate-limit-wachtrijbescherming in voor alle actieve API-key-providerverbindingen (`getProviderCategory(provider) === "apikey"`). Dit zorgt ervoor dat inkomende verzoeken naar rate-gevoelige upstream API-keys in een wachtrij worden geplaatst en via Bottleneck worden afgeremd in plaats van uit te lopen op upstream 429-fouten. Het vangnet kan worden overschreven via de omgevingsvariabele `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` schakelt uit, `true`/`1`/`on` forceert aan), die voorrang heeft op de opgeslagen dashboardinstelling (**Settings → Resilience** / `PATCH /api/resilience`).
+67router schakelt standaard automatisch rate-limit-wachtrijbescherming in voor alle actieve API-key-providerverbindingen (`getProviderCategory(provider) === "apikey"`). Dit zorgt ervoor dat inkomende verzoeken naar rate-gevoelige upstream API-keys in een wachtrij worden geplaatst en via Bottleneck worden afgeremd in plaats van uit te lopen op upstream 429-fouten. Het vangnet kan worden overschreven via de omgevingsvariabele `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` schakelt uit, `true`/`1`/`on` forceert aan), die voorrang heeft op de opgeslagen dashboardinstelling (**Settings → Resilience** / `PATCH /api/resilience`).
 
 **Semantiek van per-verbinding `rateLimitProtection`:**
 Per-verbinding rate-limit-bescherming wordt bijgehouden via het booleaanse veld `rateLimitProtection` op providerverbindingen (opgeslagen als `rate_limit_protection` in SQLite):
@@ -916,7 +916,7 @@ een uitgeput quotum. Eerlijke beperkingen:
 > agentgids onder het contextbudget van 40k blijft. Het is de gecondenseerde, op de agent
 > gerichte weergave van de bovenstaande secties; de genummerde secties blijven de volledige referentie.
 
-OmniRoute heeft drie verwante maar distincte mechanismen voor tijdelijke fouten. Houd hun
+67router heeft drie verwante maar distincte mechanismen voor tijdelijke fouten. Houd hun
 scope gescheiden bij het debuggen van routeringsgedrag. Zie het
 [3-lagen-resilientiediagram](../diagrams/exported/resilience-3layers.svg)
 (bron: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

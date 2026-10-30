@@ -1,16 +1,16 @@
-# Auto-Combo: Let OmniRoute Pick the Best AI for You (Norsk)
+# Auto-Combo: Let 67router Pick the Best AI for You (Norsk)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/AUTO-COMBO-GUIDE.md)
 
 ---
 
-> **Kort fortalt**: Sett modellen din til `auto`, så velger OmniRoute automatisk den beste KI-leverandøren for hver forespørsel. Ingen konfigurasjon er nødvendig.
+> **Kort fortalt**: Sett modellen din til `auto`, så velger 67router automatisk den beste KI-leverandøren for hver forespørsel. Ingen konfigurasjon er nødvendig.
 
 ---
 
 ## Hva det gjør
 
-I stedet for å velge en bestemt KI-modell (som GPT-4o eller Claude), kan du la OmniRoute **automatisk velge den beste** for hver forespørsel. Tjenesten vurderer:
+I stedet for å velge en bestemt KI-modell (som GPT-4o eller Claude), kan du la 67router **automatisk velge den beste** for hver forespørsel. Tjenesten vurderer:
 
 - **Driftstilstand** — Fungerer leverandøren akkurat nå?
 - **Hastighet** — Hvor rask er den?
@@ -18,7 +18,7 @@ I stedet for å velge en bestemt KI-modell (som GPT-4o eller Claude), kan du la 
 - **Kvalitet** — Er den god til denne typen oppgave?
 - **Kapasitet** — Har den gjenstående kvote?
 
-OmniRoute vurderer alle de tilkoblede leverandørene dine og velger den beste. Hvis den mislykkes, prøver OmniRoute automatisk den neste.
+67router vurderer alle de tilkoblede leverandørene dine og velger den beste. Hvis den mislykkes, prøver 67router automatisk den neste.
 
 ---
 
@@ -30,7 +30,7 @@ OmniRoute vurderer alle de tilkoblede leverandørene dine og velger den beste. H
 model: "auto"
 ```
 
-**Trinn 2**: Det var alt! OmniRoute håndterer resten.
+**Trinn 2**: Det var alt! 67router håndterer resten.
 
 **Trinn 3** (valgfritt): Bruk en variant for bestemte oppgaver:
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## Slik fungerer det (enkel versjon)
 
-Når du sender en forespørsel med `model: "auto"`, gjør OmniRoute følgende:
+Når du sender en forespørsel med `model: "auto"`, gjør 67router følgende:
 
 1. **Ser på alle de tilkoblede leverandørene dine** — Alle leverandører du har lagt til (OpenAI, Anthropic, Google osv.)
 2. **Gir hver av dem en poengsum**, basert på blant annet:
@@ -86,7 +86,7 @@ Når du sender en forespørsel med `model: "auto"`, gjør OmniRoute følgende:
    - Hvor rask er den? (hastighet)
    - Er den god til denne oppgaven? (kvalitet)
 3. **Velger den beste** — Leverandøren med høyest poengsum får forespørselen din
-4. **Gjenoppretter automatisk** — Hvis den mislykkes, prøver OmniRoute automatisk den neste
+4. **Gjenoppretter automatisk** — Hvis den mislykkes, prøver 67router automatisk den neste
 
 ### Poengsystemet
 
@@ -120,11 +120,11 @@ Hver variant bruker forskjellige vekter:
 
 ## Slik håndteres feil
 
-OmniRoute har **tre beskyttelseslag**:
+67router har **tre beskyttelseslag**:
 
 ### 1. Automatisk reserveleverandør
 
-Hvis den beste leverandøren svikter, prøver OmniRoute automatisk den neste. Du trenger ikke å gjøre noe.
+Hvis den beste leverandøren svikter, prøver 67router automatisk den neste. Du trenger ikke å gjøre noe.
 
 ### 2. Selvhelbreding
 
@@ -136,13 +136,13 @@ Hvis en leverandør fortsetter å svikte:
 
 ### 3. Nødreserve
 
-Hvis alle leverandørene svikter, ruter OmniRoute til stabile gratisleverandører (som Kiro eller Qoder) som en siste utvei.
+Hvis alle leverandørene svikter, ruter 67router til stabile gratisleverandører (som Kiro eller Qoder) som en siste utvei.
 
 ---
 
 ## Støtte for flere kontoer
 
-Hvis du har flere kontoer hos samme leverandør (f.eks. to OpenAI-nøkler), behandler OmniRoute hver av dem som en **separat kandidat**. Dette betyr:
+Hvis du har flere kontoer hos samme leverandør (f.eks. to OpenAI-nøkler), behandler 67router hver av dem som en **separat kandidat**. Dette betyr:
 
 - Konto A har gjenværende kvote → bruk den
 - Konto B er hastighetsbegrenset → hopp over den
@@ -154,13 +154,13 @@ Hver konto får en uavhengig poengsum basert på sin egen tilstand, kvote og has
 
 ## Bandit-utforskning
 
-OmniRoute **utforsker** av og til nye leverandører for å finne bedre alternativer:
+67router **utforsker** av og til nye leverandører for å finne bedre alternativer:
 
 - **Standard**: 5 % av forespørslene sendes til tilfeldige leverandører
 - **Auto/smart**: 10 % utforskningsgrad
 - **Deaktivert** når mer enn 50 % av leverandørene har problemer
 
-Dette hjelper OmniRoute med å finne ut hvilke leverandører som fungerer best for bruksmønstrene dine.
+Dette hjelper 67router med å finne ut hvilke leverandører som fungerer best for bruksmønstrene dine.
 
 ---
 
@@ -172,11 +172,11 @@ Dette hjelper OmniRoute med å finne ut hvilke leverandører som fungerer best f
 
 ### «Hva skjer hvis en leverandør går ned?»
 
-OmniRoute hopper automatisk over den og prøver den neste. Hvis en leverandør fortsetter å svikte, ekskluderes den midlertidig (5–30 minutter). Du trenger ikke å gjøre noe.
+67router hopper automatisk over den og prøver den neste. Hvis en leverandør fortsetter å svikte, ekskluderes den midlertidig (5–30 minutter). Du trenger ikke å gjøre noe.
 
 ### «Kan jeg se hvilken leverandør som ble brukt?»
 
-Sjekk responsoverskriftene — OmniRoute inkluderer leverandøren og modellen som ble brukt, i hver respons.
+Sjekk responsoverskriftene — 67router inkluderer leverandøren og modellen som ble brukt, i hver respons.
 
 ### «Lærer den av bruken min?»
 

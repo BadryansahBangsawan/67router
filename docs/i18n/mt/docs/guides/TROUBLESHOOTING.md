@@ -8,17 +8,17 @@
 
 🌐 **Lingwi:** 🇺🇸 [Ingliż](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Problemi komuni u soluzzjonijiet għal OmniRoute.
+Problemi komuni u soluzzjonijiet għal 67router.
 
 ---
 
 ## Referenza ta' Malajr
 
-**Għadek ġdid għal OmniRoute?** Ibda minn hawn — dawn isolvu 90% tal-problemi:
+**Għadek ġdid għal 67router?** Ibda minn hawn — dawn isolvu 90% tal-problemi:
 
 | Nara dan                      | Xi jfisser                                              | X'għandek tagħmel                                                                                |
 | ----------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| "Ma jistax jaqbad"            | OmniRoute mhux qed jaħdem                               | Ħaddem `omniroute` jew `docker restart omniroute`                                                |
+| "Ma jistax jaqbad"            | 67router mhux qed jaħdem                                | Ħaddem `omniroute` jew `docker restart omniroute`                                                |
 | "API key invalida"            | Iċ-ċavetta tiegħek hija ħażina jew skadiet              | Erġa' kkopja ċ-ċavetta mis-sit web tal-fornitur                                                  |
 | "Inqabeż il-limitu tar-rata"  | Qed tibgħat wisq talbiet                                | Stenna minuta, jew uża `model: "auto"` għal alternattiva awtomatika                              |
 | "Inqabeż il-kwota"            | Użajt il-kwota kollha, bla ħlas jew imħallsa            | Qabbad aktar fornituri, jew uża fornituri bla ħlas (Kiro, Pollinations)                          |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # limitu espliċitu ta’ ammissjo
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # żid l-istennija limitata lil hinn mill-valur predefinit ta’ RATE_LIMIT_MAX_WAIT_MS għal servizzi upstream bil-mod
 ```
 
-Issettjahom fl-ambjent tal-proċess OmniRoute (id-daemon, eż. permezz tal-plist ta’ LaunchAgent jew `systemctl edit`), imbagħad erġa’ ibda OmniRoute. Il-flag tar-rotazzjoni huwa l-aktar mekkaniżmu effettiv: jikkonverti falliment definittiv f’tentattiv mill-ġdid trasparenti ma’ fornitur f’saħħtu fil-pool.
+Issettjahom fl-ambjent tal-proċess 67router (id-daemon, eż. permezz tal-plist ta’ LaunchAgent jew `systemctl edit`), imbagħad erġa’ ibda 67router. Il-flag tar-rotazzjoni huwa l-aktar mekkaniżmu effettiv: jikkonverti falliment definittiv f’tentattiv mill-ġdid trasparenti ma’ fornitur f’saħħtu fil-pool.
 
 **Nota**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` jillimita kemm-il talba tqila — b’kuntest twil — tista’ titħaddem fl-istess ħin; il-limitu huwa bieb ta’ ammissjoni, mhux limitatur tar-rata tal-fornitur. **Aġġornament dwar #503-fanout:** din il-varjabbli m’għadhiex issettjata b’mod predefinit (issa tapplika biss meta tiġi kkonfigurata espliċitament, kif muri hawn fuq) — minflok, l-ammissjoni ta’ talbiet tqal hija kkontrollata minn baġit ta’ bytes idderivat awtomatikament (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) li jaġġusta ruħu skont il-limitu reali tal-memorja tal-host, għalhekk deployment ġdid għandu jara ħafna inqas rifjuti `503 chat_admission_busy` mingħajr ma din il-varjabbli tiġi ssettjata; jekk tiġi ssettjata espliċitament hawn, xorta taħdem eżatt kif iddokumentat. Overrides espliċiti tal-baġit tal-bytes jiġu limitati għal 8 MiB–2 GiB. `413 body_exceeds_budget` mhuwiex temporanju: żid dak il-baġit tal-bytes, naqqas `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`, jew żid il-limitu tal-memorja tal-proċess. Tneħħija minħabba `inflight_bytes_budget` hija kontenzjoni temporanja u tista’ tibqa’ tiġi ppruvata mill-ġdid. Il-limitazzjoni tar-rata għal kull fornitur (`open-sse/services/rateLimitManager.ts`) hija rregolata separatament minn `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, u `RATE_LIMIT_AUTO_ENABLE` — ara `.env.example`.
 
 **Kif tivverifika li ħadmet**: ħaddem l-aġent/cron tiegħek darbtejn wara xulxin f’intervall qasir u kkonferma li t-tnejn jirnexxu. Qabel is-soluzzjoni, it-tieni tħaddim tipikament jirritorna `429`/`401`. Wara s-soluzzjoni, il-fallimenti (jekk ikun hemm) jerġgħu jiġu ppruvati b’mod trasparenti u s-sejħa titlesta. Tista’ wkoll tuża `curl /monitoring/health` u tosserva l-field `rateLimitedUntil` fuq il-konnessjonijiet tal-fornituri u `circuitBreakers.providerBreakers[].state` għall-fornituri affettwati — l-istat ikun wieħed minn `CLOSED`, `DEGRADED`, `OPEN`, jew `HALF_OPEN` (ara `src/shared/utils/circuitBreaker.ts`), u fornitur li jibqa’ jfalli jaqleb minn `CLOSED → DEGRADED → OPEN` qabel ma l-intervall ta’ reset jippermetti li jgħaddi probe (`HALF_OPEN`).
 
-**Jekk xorta tara 429**: il-kont attiv għal dak il-fornitur ikun ġenwinament eżawrixxa l-_kwota_ tiegħu (mhux biss ir-rata). Żid kont ieħor għall-istess fornitur fid-dashboard ta’ OmniRoute → Providers → Accounts, jew inkludi fornitur bla ħlas ieħor (eż. `routeway`, `auggie`). Ir-rotazzjoni tgħin biss b’limitazzjonijiet temporanji tar-rata/400/401; eżawriment definittiv tal-kwota jeħtieġ kredenzjali oħra jew fornitur differenti.
+**Jekk xorta tara 429**: il-kont attiv għal dak il-fornitur ikun ġenwinament eżawrixxa l-_kwota_ tiegħu (mhux biss ir-rata). Żid kont ieħor għall-istess fornitur fid-dashboard ta’ 67router → Providers → Accounts, jew inkludi fornitur bla ħlas ieħor (eż. `routeway`, `auggie`). Ir-rotazzjoni tgħin biss b’limitazzjonijiet temporanji tar-rata/400/401; eżawriment definittiv tal-kwota jeħtieġ kredenzjali oħra jew fornitur differenti.
 
 **Jekk tara 403 fuq mudelli tal-viżjoni (`auto/vision`, `bazaarlink/*`)**: il-kont konness m’għandux pjan bi ħlas li jinkludi l-viżjoni, jew l-API key m’għandhiex permessi biżżejjed. Ivverifika fid-dashboard tal-fornitur li l-ambitu tal-key jinkludi viżjoni/multimodali, jew qabbad kont ta’ livell bi ħlas u żommu bħala l-mira tal-viżjoni.
 
@@ -71,7 +71,7 @@ Issettjahom fl-ambjent tal-proċess OmniRoute (id-daemon, eż. permezz tal-plist
 
 Meta tħaddem `npm install -g omniroute`, tista' tara għadd kbir ta' twissijiet bħal `npm warn ERESOLVE`, avviżi dwar dipendenzi peer, u messaġġi `deprecated`. **Dawn huma mistennija u ma jagħmlux ħsara.** L-installazzjoni tkun irnexxiet jekk tara `added <N> packages` fl-output.
 
-Biex trażżan it-twissijiet dwar ir-riżoluzzjoni tad-dipendenzi peer, uża l-forma ta' installazzjoni appoġġjata minn OmniRoute:
+Biex trażżan it-twissijiet dwar ir-riżoluzzjoni tad-dipendenzi peer, uża l-forma ta' installazzjoni appoġġjata minn 67router:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` irażżan biss `ERESOLVE` u l-avviżi dwar id-dipendenzi peer. L-avviżi ta' deprekazzjoni jibqgħu jidhru għax ġejjin minn pakketti tranżittivi ta' partijiet terzi; dawn ma jindikawx li l-installazzjoni falliet.
 
-It-twissijiet ġejjin minn meded skaduti ta' dipendenzi peer f'pakketti ta' partijiet terzi li OmniRoute ma jikkontrollax:
+It-twissijiet ġejjin minn meded skaduti ta' dipendenzi peer f'pakketti ta' partijiet terzi li 67router ma jikkontrollax:
 
 1. **`marked-terminal` jeħtieġ `marked >=1 <16`, iżda nstab `marked@18`** — fil-prattika jaħdem tajjeb; il-medda peer tal-proġett oriġinali sempliċement hija skaduta.
 2. **`deprecated prebuild-install@7.1.3`** — utilità tranżittiva biex jinġabru binarji nattivi. Ma tintużax
@@ -104,19 +104,19 @@ npm warn install-scripts 7 pakketti kellhom l-iskripts tal-installazzjoni tagħh
 
 ### Din it-twissija tista’ tiġi injorata?
 
-**Parzjalment, iżda mhux rakkomandat li tħaddem mingħajr skripts.** OmniRoute jinkludi alternattivi ta’ riżerva affidabbli: jekk il-bindings nattivi ta’ `better-sqlite3` ma jkunux jistgħu jitgħabbew mill-bundle awtonomu, l-applikazzjoni taqleb għal drivers alternattivi bħal `node:sqlite` jew `sql.js` (ara [Riżoluzzjoni tar-Runtime ta’ SQLite](../ops/SQLITE_RUNTIME.md)). Is-server xorta jibda, iżda l-użu ta’ alternattivi ta’ riżerva WASM bħal `sql.js` jiddiżattiva l-modalità WAL (Write-Ahead Logging) ta’ SQLite u jżid l-ispiża ġenerali tal-memorja u tas-sinkronizzazzjoni mad-diska.
+**Parzjalment, iżda mhux rakkomandat li tħaddem mingħajr skripts.** 67router jinkludi alternattivi ta’ riżerva affidabbli: jekk il-bindings nattivi ta’ `better-sqlite3` ma jkunux jistgħu jitgħabbew mill-bundle awtonomu, l-applikazzjoni taqleb għal drivers alternattivi bħal `node:sqlite` jew `sql.js` (ara [Riżoluzzjoni tar-Runtime ta’ SQLite](../ops/SQLITE_RUNTIME.md)). Is-server xorta jibda, iżda l-użu ta’ alternattivi ta’ riżerva WASM bħal `sql.js` jiddiżattiva l-modalità WAL (Write-Ahead Logging) ta’ SQLite u jżid l-ispiża ġenerali tal-memorja u tas-sinkronizzazzjoni mad-diska.
 
 ### Liema skripts huma fil-fatt meħtieġa?
 
-Mhux l-iskripts imblukkati kollha huma essenzjali biex jitħaddem OmniRoute:
+Mhux l-iskripts imblukkati kollha huma essenzjali biex jitħaddem 67router:
 
-- **Essenzjali (`omniroute`, `better-sqlite3`):** OmniRoute jitħaddem minn bundle ta’ applikazzjoni awtonoma ta’ Next.js (`dist/`). Matul l-installazzjoni, npm iniżżel jew jikkompila d-driver nattiv ta’ SQLite speċifiku għall-host fil-`node_modules/better-sqlite3/` tal-ogħla livell. L-iskript `postinstall` ta’ OmniRoute (`scripts/build/postinstall.mjs`) imbagħad jivverifika u jikkopja dawn il-binarji speċifiċi għall-host għal ġo `dist/node_modules/` sabiex is-server awtonomu jkun jista’ jaċċessahom. Jekk l-iskript postinstall ta’ `omniroute` ikun imblukkat, dan il-pass tal-ikkupjar jinqabeż.
+- **Essenzjali (`omniroute`, `better-sqlite3`):** 67router jitħaddem minn bundle ta’ applikazzjoni awtonoma ta’ Next.js (`dist/`). Matul l-installazzjoni, npm iniżżel jew jikkompila d-driver nattiv ta’ SQLite speċifiku għall-host fil-`node_modules/better-sqlite3/` tal-ogħla livell. L-iskript `postinstall` ta’ 67router (`scripts/build/postinstall.mjs`) imbagħad jivverifika u jikkopja dawn il-binarji speċifiċi għall-host għal ġo `dist/node_modules/` sabiex is-server awtonomu jkun jista’ jaċċessahom. Jekk l-iskript postinstall ta’ `omniroute` ikun imblukkat, dan il-pass tal-ikkupjar jinqabeż.
 - **Fakultattivi/tranżittivi (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Dawn huma għodod ta’ għajnuna għall-bini, għodod ta’ monitoraġġ, jew utilitajiet tal-keychain tas-sistema. Jekk tippermettilhom, tevita twissijiet tal-bini, iżda mhumiex meħtieġa għall-funzjonalità ewlenija tar-routing.
-- **Eskluż (`onnxruntime-node`):** Dipendenza fakultattiva għall-embeddings lokali tal-IA u **mhijiex** meħtieġa biex jitħaddem OmniRoute. L-iskript postinstall tagħha jniżżel madwar 300MB ta’ assi CUDA minn NuGet; tinkludihiex fil-lista tal-permessi sakemm ma tkunx biħsiebek espliċitament tuża aċċellerazzjoni ONNX lokali fuq hardware appoġġjat.
+- **Eskluż (`onnxruntime-node`):** Dipendenza fakultattiva għall-embeddings lokali tal-IA u **mhijiex** meħtieġa biex jitħaddem 67router. L-iskript postinstall tagħha jniżżel madwar 300MB ta’ assi CUDA minn NuGet; tinkludihiex fil-lista tal-permessi sakemm ma tkunx biħsiebek espliċitament tuża aċċellerazzjoni ONNX lokali fuq hardware appoġġjat.
 
 ### Soluzzjoni rakkomandata
 
-Biex tippermetti l-iskripts tal-installazzjoni meħtieġa waqt installazzjoni globali u telimina t-twissijiet, għaddi `--allow-scripts` għal OmniRoute u d-dipendenzi nattivi tiegħu:
+Biex tippermetti l-iskripts tal-installazzjoni meħtieġa waqt installazzjoni globali u telimina t-twissijiet, għaddi `--allow-scripts` għal 67router u d-dipendenzi nattivi tiegħu:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -147,15 +147,15 @@ Playwright intenzjonalment iżomm it-tniżżil tal-browsers separat mill-install
 tal-pakkett npm, għalhekk din ir-risposta hija mistennija sakemm jiġi installat il-browser.
 
 Għal installazzjoni globali ta’ npm, installa Chromium mid-direttorju tal-pakkett
-OmniRoute sabiex il-cache tal-browser tkun tappartjeni għall-istess installazzjoni ta’ Playwright:
+67router sabiex il-cache tal-browser tkun tappartjeni għall-istess installazzjoni ta’ Playwright:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Erġa’ ibda OmniRoute wara l-installazzjoni, imbagħad erġa’ pprova t-talba ta’ Gemini Web. Jekk
-tħaddem OmniRoute minn immaġni Docker, uża l-immaġni `-web` (jew il-mira tal-build
+Erġa’ ibda 67router wara l-installazzjoni, imbagħad erġa’ pprova t-talba ta’ Gemini Web. Jekk
+tħaddem 67router minn immaġni Docker, uża l-immaġni `-web` (jew il-mira tal-build
 `runner-web`), li tinkludi Chromium u d-dipendenzi tiegħu; l-immaġni bażi
 ma tinkludihomx.
 
@@ -188,7 +188,7 @@ ma tinkludihomx.
 **Dan huwa pożittiv falz. Xejn mhu infettat, u mhi meħtieġa l-ebda azzjoni.**
 
 Avast u AVG jużaw euristika li timmarka fajls b’test sempliċi/Markdown li jkun fihom ħafna
-links li jixbhu talbiet HTTP. Il-`README.md` ta’ OmniRoute jiġi inkluż fil-pakkett npm (huwa
+links li jixbhu talbiet HTTP. Il-`README.md` ta’ 67router jiġi inkluż fil-pakkett npm (huwa
 elenkat f’`package.json` → `files`), għalhekk jispiċċa f’`node_modules/omniroute/README.md`
 waqt installazzjoni globali — u fih madwar 15-il eżempju `http://localhost:20128/...` (l-endpoints
 HTTP/SSE tal-MCP, il-URL `.well-known` tal-A2A, u siltiet ta’ `curl`). Dik id-densità ta’ links
@@ -205,7 +205,7 @@ b’mod sigur mill-kwarantina.
 
 1. **Waqqaf in-notifiki** — eskludi d-direttorju tal-installazzjoni mill-antivirus tiegħek
    (Avast: Settings → Exceptions), billi żżid il-path globali ta’ `node_modules` u/jew
-   id-direttorju tad-data ta’ OmniRoute (`~/.omniroute/`).
+   id-direttorju tad-data ta’ 67router (`~/.omniroute/`).
 2. **Irrapporta l-pożittiv falz** — <https://www.avast.com/false-positive-file-form.php>,
    u ehmeż il-`README.md` li jinsab fi kwarantina. Din hija s-soluzzjoni li tgħin lil kulħadd,
    peress li hija l-euristika tal-bejjiegħ li qed tirreaġixxi żżejjed għal fajl ta’ test.
@@ -267,7 +267,7 @@ L-iffirmar tal-kodiċi huwa ppjanat; sakemm jiġi implimentat, rilaxxi ġodda ji
 
 ### Il-paġna tal-login tiġġarraf jew turi l-iżball "Module self-registration"
 
-**Kawża:** Qed tħaddem verżjoni ta’ Node.js barra mil-limitu minimu approvat minn OmniRoute għal ambjent ta’ eżekuzzjoni sigur. L-aktar każ komuni huwa meta titħaddem verżjoni ta’ patch eqdem ta’ Node 22 jew 24 li tkun taħt il-limitu tas-sigurtà bil-garżi meħtieġa minn OmniRoute.
+**Kawża:** Qed tħaddem verżjoni ta’ Node.js barra mil-limitu minimu approvat minn 67router għal ambjent ta’ eżekuzzjoni sigur. L-aktar każ komuni huwa meta titħaddem verżjoni ta’ patch eqdem ta’ Node 22 jew 24 li tkun taħt il-limitu tas-sigurtà bil-garżi meħtieġa minn 67router.
 
 **Sintomi:**
 
@@ -283,7 +283,7 @@ L-iffirmar tal-kodiċi huwa ppjanat; sakemm jiġi implimentat, rilaxxi ġodda ji
    nvm use 24
    ```
 2. Ivverifika l-verżjoni tiegħek: `node --version` għandu juri `v24.0.0` jew verżjoni aktar ġdida fil-linja LTS 24.x
-3. Erġa’ installa OmniRoute: `npm install -g omniroute`
+3. Erġa’ installa 67router: `npm install -g omniroute`
 4. Erġa’ ibda: `omniroute`
 
 > **Verżjonijiet siguri appoġġjati:** `>=22.22.2 <23` jew `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) u Node.js 26 huma appoġġjati bis-sħiħ.
@@ -366,13 +366,13 @@ omniroute
 
 **Kawża:** Fuq Node.js 22, id-dispatcher undici@8 mhuwiex kompatibbli mal-implimentazzjoni integrata ta' `fetch()` ta' Node.
 
-**Soluzzjoni (v3.5.5+):** OmniRoute issa juża l-funzjoni `fetch()` ta' undici stess meta dispatcher tal-proxy jkun attiv, biex jiżgura mġiba konsistenti. Aġġorna għal v3.5.5+.
+**Soluzzjoni (v3.5.5+):** 67router issa juża l-funzjoni `fetch()` ta' undici stess meta dispatcher tal-proxy jkun attiv, biex jiżgura mġiba konsistenti. Aġġorna għal v3.5.5+.
 
 ### Proxy MITM taħt WSL: l-apps tad-desktop fuq il-host Windows ma jiġux interċettati
 
-**Kawża:** Il-proxy MITM u ċ-ċertifikat CA tiegħu jiġu installati fl-ambjent fejn jitħaddem OmniRoute. Taħt WSL, dak l-ambjent huwa l-guest Linux, filwaqt li l-apps tad-desktop tal-AI (Kiro, Trae, Copilot, Zed, …) jitħaddmu fuq il-host Windows. L-apps tal-host ma jafdawx il-maħżen taċ-ċertifikati tal-guest u ma jgħaddux mill-proxy tas-sistema tal-guest, għalhekk l-interċettazzjoni tad-desktop ma taħdimx hemmhekk.
+**Kawża:** Il-proxy MITM u ċ-ċertifikat CA tiegħu jiġu installati fl-ambjent fejn jitħaddem 67router. Taħt WSL, dak l-ambjent huwa l-guest Linux, filwaqt li l-apps tad-desktop tal-AI (Kiro, Trae, Copilot, Zed, …) jitħaddmu fuq il-host Windows. L-apps tal-host ma jafdawx il-maħżen taċ-ċertifikati tal-guest u ma jgħaddux mill-proxy tas-sistema tal-guest, għalhekk l-interċettazzjoni tad-desktop ma taħdimx hemmhekk.
 
-**Rakkomandazzjoni:** Ħaddem OmniRoute b'mod nattiv fuq l-istess OS tal-apps tad-desktop li trid tinterċetta (Windows għall-apps ta' Windows; l-istess japplika għal macOS/Linux). Jekk iżżomm OmniRoute ġewwa WSL filwaqt li timmira l-apps tal-host, ikollok bżonn tafda manwalment iċ-ċertifikat CA ġġenerat fuq il-host Windows u tipponta s-settings tan-network/proxy ta' kull app tal-host lejn l-endpoint tal-proxy WSL — konfigurazzjoni mhux appoġġjata u fraġli.
+**Rakkomandazzjoni:** Ħaddem 67router b'mod nattiv fuq l-istess OS tal-apps tad-desktop li trid tinterċetta (Windows għall-apps ta' Windows; l-istess japplika għal macOS/Linux). Jekk iżżomm 67router ġewwa WSL filwaqt li timmira l-apps tal-host, ikollok bżonn tafda manwalment iċ-ċertifikat CA ġġenerat fuq il-host Windows u tipponta s-settings tan-network/proxy ta' kull app tal-host lejn l-endpoint tal-proxy WSL — konfigurazzjoni mhux appoġġjata u fraġli.
 
 ---
 
@@ -399,7 +399,7 @@ omniroute
 
 ### It-Token OAuth Skada
 
-OmniRoute jaġġorna t-tokens awtomatikament. Jekk il-problemi jippersistu:
+67router jaġġorna t-tokens awtomatikament. Jekk il-problemi jippersistu:
 
 1. Dashboard → Provider → Reconnect
 2. Ħassar u erġa' żid il-konnessjoni tal-fornitur
@@ -612,7 +612,7 @@ Il-profili tal-fornituri jappoġġjaw dawn is-settings:
 
 ### Prevenzjoni tal-effett “thundering herd”
 
-Meta ħafna talbiet konkorrenti jilħqu fornitur b’rata limitata, OmniRoute juża mutex + limitazzjoni awtomatika tar-rata biex jissekwenzjalizza t-talbiet u jipprevjeni fallimenti kaskata. Dan iseħħ awtomatikament għall-fornituri b’API key.
+Meta ħafna talbiet konkorrenti jilħqu fornitur b’rata limitata, 67router juża mutex + limitazzjoni awtomatika tar-rata biex jissekwenzjalizza t-talbiet u jipprevjeni fallimenti kaskata. Dan iseħħ awtomatikament għall-fornituri b’API key.
 
 ### It-talbiet taċ-chat ifallu b’503 / chat_admission_busy
 
@@ -648,7 +648,7 @@ Bil-limiti default, talba titqies strutturalment tqila meta jkollha mill-inqas `
 mill-inqas `64` għodda, jew mill-inqas `32,000` token stmat, jew meta l-istima limitata tal-istruttura
 teżawrixxi l-limiti tagħha ta’ `10,000` node miżjur jew fond ta’ `12`.
 
-**Kawża:** Din hija tnaqqis intenzjonat tat-tagħbija fi ħdan OmniRoute, mhux falliment ta’ fornitur upstream.
+**Kawża:** Din hija tnaqqis intenzjonat tat-tagħbija fi ħdan 67router, mhux falliment ta’ fornitur upstream.
 Kull proċess juża guard lokali għall-proċess biex jirriżerva kapaċità heavyweight limitata qabel ma jżomm
 u jipparsja body kbir ta’ talba. Heavyweight lease jibqa’ miżmum tul il-ħajja ta’ tweġiba SSE.
 
@@ -692,7 +692,7 @@ għas-settings awtorevoli tal-ammissjoni.
 
 ## Tassonomija fakultattiva tal-fallimenti ta' RAG / LLM (16-il problema)
 
-Xi utenti ta' OmniRoute jqiegħdu l-gateway quddiem stacks ta' RAG jew aġenti. F'dawn il-konfigurazzjonijiet huwa komuni li jidher mudell stramb: OmniRoute jidher li qed jaħdem sew (il-fornituri attivi, il-profili tar-routing tajbin, l-ebda twissija dwar il-limitu tar-rata) iżda t-tweġiba finali xorta tkun ħażina.
+Xi utenti ta' 67router jqiegħdu l-gateway quddiem stacks ta' RAG jew aġenti. F'dawn il-konfigurazzjonijiet huwa komuni li jidher mudell stramb: 67router jidher li qed jaħdem sew (il-fornituri attivi, il-profili tar-routing tajbin, l-ebda twissija dwar il-limitu tar-rata) iżda t-tweġiba finali xorta tkun ħażina.
 
 Fil-prattika, dawn l-inċidenti normalment joriġinaw mill-pipeline RAG downstream, mhux mill-gateway innifsu.
 
@@ -711,17 +711,17 @@ L-idea hija sempliċi:
 
 1. Meta tinvestiga tweġiba ħażina, irreġistra:
    - il-kompitu u t-talba tal-utent
-   - ir-rotta jew il-kombinazzjoni tal-fornituri f'OmniRoute
+   - ir-rotta jew il-kombinazzjoni tal-fornituri f'67router
    - kwalunkwe kuntest RAG użat downstream (dokumenti rkuprati, sejħiet ta' għodod, eċċ.)
 2. Assenja l-inċident lil numru wieħed jew tnejn tal-WFGY ProblemMap (`No.1` … `No.16`).
-3. Aħżen in-numru fid-dashboard, fir-runbook, jew fit-tracker tal-inċidenti tiegħek ħdejn il-logs ta' OmniRoute.
+3. Aħżen in-numru fid-dashboard, fir-runbook, jew fit-tracker tal-inċidenti tiegħek ħdejn il-logs ta' 67router.
 4. Uża l-paġna korrispondenti ta' WFGY biex tiddeċiedi jekk għandekx bżonn tibdel l-istack RAG, ir-retriever, jew l-istrateġija tar-routing tiegħek.
 
 It-test sħiħ u r-riċetti konkreti jinsabu hawn (liċenzja MIT, test biss):
 
 [README tal-WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Tista' tinjora din it-taqsima jekk ma tħaddimx pipelines ta' RAG jew aġenti wara OmniRoute.
+Tista' tinjora din it-taqsima jekk ma tħaddimx pipelines ta' RAG jew aġenti wara 67router.
 
 ---
 
@@ -745,7 +745,7 @@ Problemi speċifiċi għar-rilaxx v3.8.0 u s-soluzzjonijiet temporanji attwali t
 
 1. Installa d-Devin CLI għall-pjattaforma tiegħek
 2. Issettja `CLI_DEVIN_BIN=/usr/local/bin/devin` (jew il-path reali) f'`.env`
-3. Erġa' ibda OmniRoute u erġa' ttestja minn **Dashboard → CLI Tools**
+3. Erġa' ibda 67router u erġa' ttestja minn **Dashboard → CLI Tools**
 
 ### Il-cooldown tal-mudell jibqa' mwaħħal (reset manwali)
 
@@ -800,7 +800,7 @@ Problemi speċifiċi għar-rilaxx v3.8.0 u s-soluzzjonijiet temporanji attwali t
 
 1. Iġġenera secret każwali: `openssl rand -hex 32`
 2. Issettja `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` fl-env tas-server tal-produzzjoni (u fi kwalunkwe client li jikkomunika mal-bridge)
-3. Erġa' ibda OmniRoute
+3. Erġa' ibda 67router
 
 ### Responses API: il-modalità fl-isfond degradata għal sinkronika
 

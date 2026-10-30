@@ -4,15 +4,15 @@
 
 ---
 
-OmniRoute ń pèsè ọ̀nà **méjì** láti lo OpenAI Codex:
+67router ń pèsè ọ̀nà **méjì** láti lo OpenAI Codex:
 
 | Olùpèsè                | Bí ó ṣe ń bá OpenAI sọ̀rọ̀                                                                                                                                                                         | Ìkìlọ̀ nípa lílò                                                    |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | **`codex`**            | Ó tún ń fi tọ́kìnì ChatGPT/OpenAI OAuth rẹ ránṣẹ́ tààrà sí Responses API                                                                                                                           | **Bẹ́ẹ̀ ni** — a kò fún sáẹ́ṣọ̀nù oníṣẹ́ náà láṣẹ fún lílò proxy/router |
-| **`codex-app-server`** | Ó ń darí **`codex app-server` ti Codex CLI fúnra rẹ̀** lórí JSON-RPC/WebSocket; CLI náà ni ó ni OAuth rẹ̀, ó sì ń sọ ọ́ di ọ̀tun fúnra rẹ̀ (`~/.codex/auth.json`) gan-an bí sáẹ́ṣọ̀nù `codex` alábáṣepọ̀ | **Rárá** — OmniRoute kì í tún tọ́kìnì kan ránṣẹ́ sí API láé          |
+| **`codex-app-server`** | Ó ń darí **`codex app-server` ti Codex CLI fúnra rẹ̀** lórí JSON-RPC/WebSocket; CLI náà ni ó ni OAuth rẹ̀, ó sì ń sọ ọ́ di ọ̀tun fúnra rẹ̀ (`~/.codex/auth.json`) gan-an bí sáẹ́ṣọ̀nù `codex` alábáṣepọ̀ | **Rárá** — 67router kì í tún tọ́kìnì kan ránṣẹ́ sí API láé           |
 
 Nítorí pé `codex-app-server` kì í tún tọ́kìnì kan ránṣẹ́ láé, ìkìlọ̀ lílò
-nípa ṣíṣàtúnránṣẹ́ sáẹ́ṣọ̀nù kò kan án. Ó nílò **Codex CLI tí OmniRoute lè dé
+nípa ṣíṣàtúnránṣẹ́ sáẹ́ṣọ̀nù kò kan án. Ó nílò **Codex CLI tí 67router lè dé
 ní URL app-server tí a ti ṣètò**, CLI náà sì gbọ́dọ̀ ti **wọlé**.
 
 ---
@@ -20,7 +20,7 @@ ní URL app-server tí a ti ṣètò**, CLI náà sì gbọ́dọ̀ ti **wọlé
 ## 1. Àwòrán-ilana
 
 ```
-┌─ Ìṣàfilọ́lẹ̀ OmniRoute ──────────┐        ┌─ sidecar codex-app-server ──────────┐
+┌─ Ìṣàfilọ́lẹ̀ 67router ──────────┐        ┌─ sidecar codex-app-server ──────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ tọ́kìnì agbára)              │  JSON  │  --ws-auth capability-token         │
@@ -77,7 +77,7 @@ Dashboard kì í kọ àkóónú tuntun bo `~/.codex/auth.json` tó wà ní ìle
   host rẹ sínú sidecar (`codex-appserver-home`), kí o sì fo ìgbésẹ̀ ìwọlé náà.
 - **Onílò gbogbogbò, tí kò ní codex lórí ẹ̀rọ rẹ̀** — kò ṣe pàtàkì: sidecar náà
   ní CLI. Onílò náà kàn ń gba ìfàṣẹsí nípasẹ̀ dashboard.
-- **OmniRoute bare-metal (kò sí sidecar, codex host)** — tọ́ka
+- **67router bare-metal (kò sí sidecar, codex host)** — tọ́ka
   `OMNIROUTE_CODEX_APPSERVER_WS` sí `codex app-server` tirẹ, kí o sì rí i dájú
   pé codex host ti wọlé; ìmọ̀ràn "a kò fi codex sori ẹrọ" yóò hàn tí binary náà
   kò bá sí.

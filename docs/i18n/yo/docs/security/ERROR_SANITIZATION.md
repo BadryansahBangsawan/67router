@@ -215,7 +215,7 @@ mutation lẹ́yìn builder máa ń rékọjá public projection náà.
 3. Òpin depth: nesting tó kọjá level 4 ni a máa fi string `"[truncated]"` rópò.
 4. A fi òpin element 32 sí àwọn array.
 
-Àwọn call site tó ní body error provider tí a ti parse nìkan ló yẹ kí wọ́n fi `upstreamDetails` ránṣẹ́. Àwọn error OmniRoute
+Àwọn call site tó ní body error provider tí a ti parse nìkan ló yẹ kí wọ́n fi `upstreamDetails` ránṣẹ́. Àwọn error 67router
 inú (ìkùnà parse SSE, content òfìfo, block guardrail) kò gbọ́dọ̀ ní i nínú.
 
 Má ṣe fi raw `err.stack`, `err.message`, tàbí string èyíkéyìí láti inú runtime exception ránṣẹ́ sí
@@ -226,7 +226,7 @@ Fífi upstream 4xx àṣàyàn kọjá ń pa shape JSON àìléwu àti wording p
 client auto-recovery nílò mọ́, ṣùgbọ́n kì í ṣe fífi kọjá byte-fún-byte: recursive sanitizer máa ń ṣiṣẹ́ ní gbogbo ìgbà
 kí serialization tó ṣẹlẹ̀. Àwọn body tó ní cycle, tó ní BigInt, tàbí tó ní `toJSON()` tó léwu máa ń kùnà ní ọ̀nà títì-pa, wọn kò sì
 ní ẹ̀tọ́ sí passthrough. OCR àti moderation ń lo ìlànà kan náà; àwọn body upstream tí kì í ṣe JSON, tí ó ṣófo, tàbí
-tí a fi label tí kò tọ́ sí ni a máa yí padà sí canonical JSON error envelope OmniRoute.
+tí a fi label tí kò tọ́ sí ni a máa yí padà sí canonical JSON error envelope 67router.
 
 ## Ààlà CodeQL tí a mọ̀: kò dá àwọn sanitizer àdáni mọ̀
 

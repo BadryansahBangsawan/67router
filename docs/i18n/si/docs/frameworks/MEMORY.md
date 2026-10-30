@@ -7,7 +7,7 @@
 > **සත්යයේ මූලාශ්රය:** `src/lib/memory/` සහ `src/app/api/memory/`
 > **අවසන් වරට යාවත්කාලීන කළේ:** 2026-06-28 — v3.8.40 (පෙරනිමියෙන් අක්රිය + int8 quantization පසුගාමී සැකසුම)
 
-OmniRoute විසින් API key එක අනුව (සහ විකල්ප ලෙස session id එක අනුව) හඳුනාගන්නා ස්ථිර සංවාද මතකයක් සපයයි. සැහැල්ලු regex රටා ගැළපීම මඟින් LLM ප්රතිචාරවලින් මතකයන් ස්වයංක්රීයව උකහාගෙන, පසුව සිදු කරන ඉල්ලීම්වලට ආරම්භක system පණිවිඩයක් ලෙස (හෝ system role එක ප්රතික්ෂේප කරන providers සඳහා පළමු user පණිවිඩය ලෙස) ඒවා නැවත ඇතුළත් කරයි.
+67router විසින් API key එක අනුව (සහ විකල්ප ලෙස session id එක අනුව) හඳුනාගන්නා ස්ථිර සංවාද මතකයක් සපයයි. සැහැල්ලු regex රටා ගැළපීම මඟින් LLM ප්රතිචාරවලින් මතකයන් ස්වයංක්රීයව උකහාගෙන, පසුව සිදු කරන ඉල්ලීම්වලට ආරම්භක system පණිවිඩයක් ලෙස (හෝ system role එක ප්රතික්ෂේප කරන providers සඳහා පළමු user පණිවිඩය ලෙස) ඒවා නැවත ඇතුළත් කරයි.
 
 > **පෙරනිමියෙන් මතකය අක්රියයි (v3.8.30+).** `DEFAULT_MEMORY_SETTINGS.enabled`
 > දැන් `false` වේ (`src/lib/memory/settings.ts`). මතකය සක්රිය කිරීමෙන් නැවත ලබාගත් සන්දර්භයෙන්
@@ -605,7 +605,7 @@ metadata?}` → `createMemory()` ආවරණය කරයි. පිළිග�
 
 ## Embedding සපයන්නෙකු තෝරාගැනීම (v3.8.16+)
 
-OmniRoute හි මතක එන්ජිම **embedding මූලාශ්ර හතරකට** (`src/lib/memory/embedding/`) සහාය දක්වයි. එක් එක් මූලාශ්රයේ **ප්රමාදය, පිරිවැය, ආකෘති ගුණාත්මකභාවය සහ සැකසුම් සංකීර්ණතාව** සම්බන්ධයෙන් වෙනස් වාසි හා අවාසි ඇත.
+67router හි මතක එන්ජිම **embedding මූලාශ්ර හතරකට** (`src/lib/memory/embedding/`) සහාය දක්වයි. එක් එක් මූලාශ්රයේ **ප්රමාදය, පිරිවැය, ආකෘති ගුණාත්මකභාවය සහ සැකසුම් සංකීර්ණතාව** සම්බන්ධයෙන් වෙනස් වාසි හා අවාසි ඇත.
 
 ### Embedding මූලාශ්ර
 
@@ -1020,13 +1020,13 @@ memoryManager.register(sqliteBackend);
 worker එක loopback වෙත පමණක් බැඳෙන අතර, `GenericMemoryBackend` හි SSRF ආරක්ෂකය එය හිතාමතාම ප්රතික්ෂේප කරයි.
 මෙම අනුවර්තකය එම ආරක්ෂකය ලිහිල් නොකරයි: host එක `127.0.0.1` ලෙස දෘඪ-කේතගත කර ඇති අතර වින්යාස schema එක (`ClaudeMemBackendConfigSchema`, `.strict()`) පිළිගන්නේ පහත දෑ පමණි:
 
-| යතුර        | වර්ගය  | පෙරනිමිය | සටහන්                                                                                                                      |
-| ----------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | අංකය   | —        | අනිවාර්යයි, 1024–65535. එහි සැකසුම් ගොනුවේ ඇති claude-mem worker port එක (පෙරනිමිය `37700 + uid % 100`).                   |
-| `project`   | තන්තුව | —        | භාවිත කළ යුතු claude-mem ව්යාපෘතිය. සකසා නැතිනම් → සෑම OmniRoute API යතුරක්ම තමන්ගේම ව්යාපෘතියට (`apiKeyId`) සිතියම්ගත වේ. |
-| `timeoutMs` | අංකය   | `5000`   | එක් එක් ඉල්ලීම සඳහා කාලසීමාව, 100–30000.                                                                                   |
+| යතුර        | වර්ගය  | පෙරනිමිය | සටහන්                                                                                                                     |
+| ----------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | අංකය   | —        | අනිවාර්යයි, 1024–65535. එහි සැකසුම් ගොනුවේ ඇති claude-mem worker port එක (පෙරනිමිය `37700 + uid % 100`).                  |
+| `project`   | තන්තුව | —        | භාවිත කළ යුතු claude-mem ව්යාපෘතිය. සකසා නැතිනම් → සෑම 67router API යතුරක්ම තමන්ගේම ව්යාපෘතියට (`apiKeyId`) සිතියම්ගත වේ. |
+| `timeoutMs` | අංකය   | `5000`   | එක් එක් ඉල්ලීම සඳහා කාලසීමාව, 100–30000.                                                                                  |
 
-`PUT /api/settings/memory` හරහා එය සබල කර OmniRoute නැවත ආරම්භ කරන්න (backends ලියාපදිංචි කරනු ලබන්නේ
+`PUT /api/settings/memory` හරහා එය සබල කර 67router නැවත ආරම්භ කරන්න (backends ලියාපදිංචි කරනු ලබන්නේ
 එක් වරක් පමණි, `initMemoryBackends()` තුළ):
 
 ```json
@@ -1043,7 +1043,7 @@ worker එක loopback වෙත පමණක් බැඳෙන අතර, `Gen
 
 - IDs `claude-mem:<observationId>` ආකාරය ගනී; `get`/`delete`, ජාල ඇමතුමක් නොකර වෙනත් backends වල IDs
   නොසලකා හරියි.
-- `create` → `POST /api/memory/save`; OmniRoute ක්ෂේත්ර (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router ක්ෂේත්ර (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) claude-mem හි `metadata.omniroute` තුළ යවන අතර කියවීමේදී නැවත ඒ ආකාරයෙන්ම ලැබේ.
 - `search` → `GET /api/search?format=json&type=observations`, `maxTokens`
   දක්වා කප්පාදු කරයි (අක්ෂර / 4). `list` → worker හි පිටුගත කළ observations endpoint එක (`total` යනු පහළ සීමාවකි — worker
@@ -1055,16 +1055,16 @@ worker එක loopback වෙත පමණක් බැඳෙන අතර, `Gen
 - Prompt injection (`retrieval.ts`) සහ `omniroute_memory_*` MCP මෙවලම් තවමත් SQLite
   වෙතින් සෘජුවම කියවයි — ඒවා `memoryManager` හරහා නොයන බැවින් මෙම backend එක ඒවාට දත්ත සපයන්නේ නැත.
 
-**claude-mem හිම LLM ඇමතුම් OmniRoute හරහා මාර්ගගත කිරීම.** claude-mem observations
+**claude-mem හිම LLM ඇමතුම් 67router හරහා මාර්ගගත කිරීම.** claude-mem observations
 LLM එකක් සමඟ සම්පීඩනය කරයි (පෙරනිමිය: Claude Agent SDK). ඒ වෙනුවට එහි `openai-compatible` provider එක
-OmniRoute වෙත යොමු කළ හැකි අතර, එමඟින් combo fallback සහ පිරිවැය හඹා යාම ලබා ගත හැක. `~/.claude-mem/settings.json` තුළ:
+67router වෙත යොමු කළ හැකි අතර, එමඟින් combo fallback සහ පිරිවැය හඹා යාම ලබා ගත හැක. `~/.claude-mem/settings.json` තුළ:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API යතුර>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model හෝ combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API යතුර>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model හෝ combo>"
 }
 ```
 

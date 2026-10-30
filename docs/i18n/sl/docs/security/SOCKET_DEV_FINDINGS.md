@@ -49,7 +49,7 @@ prek tunela, **ne more** sprožiti te poti kode.
 | Linux+Firefox/Chromium | posodobitev zbirke podatkov NSS za posamezen profil prek `certutil -d sql:<profile>`                              |
 
 To so isti ukazi, ki jih uporabljajo `mitmproxy`, Charles Proxy, Fiddler in
-Caddy. Dejstvo, da so prisotni v OmniRoute, je dokumentirano v
+Caddy. Dejstvo, da so prisotni v 67router, je dokumentirano v
 `docs/security/STEALTH_GUIDE.md`.
 
 **Omilitveni ukrepi v v3.8.6**:
@@ -111,7 +111,7 @@ v3.8.5 za upravljavce, ki še niso posodobili svoje avtomatizacije. Odstranjena
 bo v v3.9.
 
 **Zakaj to ohranjamo**: uvoz iz Zed je uporabniku najprijaznejši način začetne nastavitve za uporabnike,
-ki že uporabljajo Zed in želijo svoje ključe ponudnikov preslikati v OmniRoute
+ki že uporabljajo Zed in želijo svoje ključe ponudnikov preslikati v 67router
 brez ponovnega lepljenja.
 
 ---
@@ -123,7 +123,7 @@ brez ponovnega lepljenja.
 **Zakaj označeno**: paket znova izvozi `execFileWithPassword`,
 `runElevatedPowerShell` in skupni pomožni program `quotePowerShell`. Klasifikator
 UI storitve Socket.dev jih prepozna kot splošni »komplet orodij za izvajanje na gostitelju in povišanje
-pravic«. Znotraj OmniRoute se uporabljajo samo na poti za namestitev potrdila MITM
+pravic«. Znotraj 67router se uporabljajo samo na poti za namestitev potrdila MITM
 (§1) in v `execFileWithPassword` za izvajanje ukazov `sudo`.
 
 **Omilitev v3.8.6**:
@@ -173,7 +173,7 @@ da so poti s povišanimi pravicami fizično odstranjene iz paketa.
 
 ---
 
-## §5 — Povratni zapis poverilnic OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Povratni zapis poverilnic 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Izvorne datoteke**:
 
@@ -206,7 +206,7 @@ rawBody)`) pred razčlenjevanjem JSON-a. Če je skrivnost nastavljena, je podpis
    `rateLimitedUntil`, `updatedAt`). To je **nezdružljiva sprememba** za uporabnike,
    ki so se zanašali na oddaljeno sinhronizacijo žetonov — izrecno jo morajo vključiti.
 
-**Zakaj to ohranjamo**: Cloud Sync je edini način, da najemnik OmniRoute Cloud
+**Zakaj to ohranjamo**: Cloud Sync je edini način, da najemnik 67router Cloud
 centralizira poverilnice ekipe. Popravek jasno opredeljuje model groženj:
 »strežnik podpiše, odjemalec preveri, upravljavec izrecno privoli.«
 

@@ -4,7 +4,7 @@
 
 ---
 
-Saat OmniRoute berjalan di dalam Docker, alur standar "Impor dari Zed Keychain" gagal
+Saat 67router berjalan di dalam Docker, alur standar "Impor dari Zed Keychain" gagal
 karena kontainer tidak dapat mengakses daemon keychain OS host (libsecret di Linux,
 Keychain di macOS, Credential Manager di Windows), dan direktori konfigurasi Zed pada
 sistem berkas host secara default tidak terlihat dari dalam kontainer.
@@ -21,7 +21,7 @@ Dua masalah penghambat terjadi di dalam kontainer:
    Keduanya tidak diteruskan ke dalam kontainer secara default, sehingga pembacaan kredensial
    selalu gagal.
 
-OmniRoute mendeteksi lingkungan Docker melalui dua heuristik:
+67router mendeteksi lingkungan Docker melalui dua heuristik:
 
 - Keberadaan `/.dockerenv` (ditulis oleh daemon Docker saat kontainer dimulai).
 - Kemunculan string `docker` dalam `/proc/1/cgroup` (Linux cgroup v1).
@@ -33,7 +33,7 @@ Saat salah satu heuristik terpicu, rute impor mengembalikan HTTP 422 dengan
 
 1. Buka **Dasbor → Penyedia → Zed**.
 2. Panel **Impor Token Manual** muncul di bawah kartu impor keychain. Saat
-   OmniRoute mendeteksi Docker, panel ini otomatis terbuka setelah upaya pertama
+   67router mendeteksi Docker, panel ini otomatis terbuka setelah upaya pertama
    untuk mengimpor keychain gagal.
 3. Pilih penyedia dari menu tarik-turun (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, atau DeepSeek).

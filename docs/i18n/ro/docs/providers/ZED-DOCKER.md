@@ -4,7 +4,7 @@
 
 ---
 
-Când OmniRoute rulează în Docker, fluxul standard „Import from Zed Keychain” eșuează
+Când 67router rulează în Docker, fluxul standard „Import from Zed Keychain” eșuează
 deoarece containerul nu poate accesa daemonul pentru lanțul de chei al sistemului de operare gazdă (`libsecret` pe Linux,
 Keychain pe macOS, Credential Manager pe Windows), iar directoarele de configurare Zed din
 sistemul de fișiere gazdă nu sunt vizibile implicit în interiorul containerului.
@@ -20,7 +20,7 @@ sistemul de fișiere gazdă nu sunt vizibile implicit în interiorul containerul
    `keytar` comunică cu serviciul de gestionare a lanțului de chei al sistemului de operare printr-un socket Unix sau o sesiune D-Bus.
    Niciunul dintre acestea nu este conectat implicit la container, astfel încât citirea acreditărilor eșuează întotdeauna.
 
-OmniRoute detectează mediul Docker folosind două metode euristice:
+67router detectează mediul Docker folosind două metode euristice:
 
 - Prezența fișierului `/.dockerenv` (scris de daemonul Docker la pornirea containerului).
 - Apariția șirului `docker` în `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Când se activează oricare dintre aceste metode euristice, ruta de import retur
 
 1. Deschideți **Dashboard → Providers → Zed**.
 2. Panoul **Manual Token Import** apare sub cardul pentru importul din lanțul de chei. Când
-   OmniRoute detectează Docker, acest panou se extinde automat după prima încercare eșuată
+   67router detectează Docker, acest panou se extinde automat după prima încercare eșuată
    de import din lanțul de chei.
 3. Selectați furnizorul din lista derulantă (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter sau DeepSeek).

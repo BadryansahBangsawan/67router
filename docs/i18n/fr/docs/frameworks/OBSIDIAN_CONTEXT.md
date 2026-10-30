@@ -13,7 +13,7 @@
 
 ## Présentation
 
-OmniRoute se connecte à un coffre **Obsidian** en tant que **source de contexte** — une
+67router se connecte à un coffre **Obsidian** en tant que **source de contexte** — une
 base de connaissances Markdown locale que les agents lisent et modifient au moyen du
 serveur MCP intégré. L’intégration communique avec l’extension communautaire
 **Obsidian Local REST API** exécutée dans l’application de bureau, ce qui permet aux
@@ -80,7 +80,7 @@ et valide le jeton en appelant le point de terminaison d’état de l’API REST
 ### Synchronisation WebDAV du coffre
 
 `src/app/api/settings/obsidian/webdav/route.ts` gère une synchronisation facultative du
-coffre basée sur WebDAV (pilotée par `src/lib/obsidianSync.ts`). Son activation fait pointer OmniRoute vers un
+coffre basée sur WebDAV (pilotée par `src/lib/obsidianSync.ts`). Son activation fait pointer 67router vers un
 répertoire de coffre local et génère une paire aléatoire de nom d’utilisateur et de mot de passe WebDAV :
 
 ```bash
@@ -116,26 +116,26 @@ Les quatre outils `obsidian_sync_*` conservent leur comportement distinct relati
 
 Définis dans `open-sse/mcp-server/tools/obsidianTools.ts`. Le jeton et l’URL de base sont déterminés
 à chaque appel (d’abord ceux propres à la clé API, puis ceux définis globalement). Les outils qui interrogent le **serveur de synchronisation**
-OmniRoute (les quatre outils `obsidian_sync_*`) nécessitent également le jeton d’authentification de synchronisation configuré
-dans les paramètres d’OmniRoute.
+67router (les quatre outils `obsidian_sync_*`) nécessitent également le jeton d’authentification de synchronisation configuré
+dans les paramètres de 67router.
 
 ### Outils de lecture (`read:obsidian`)
 
-| Outil                        | Description                                                                                                                             |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Vérifie si l’API REST locale est accessible et authentifiée.                                                                            |
-| `obsidian_search_simple`     | Effectue une recherche en texte intégral dans le contenu des notes et renvoie des extraits avec les chemins des fichiers.               |
-| `obsidian_search_structured` | Effectue une recherche à l’aide d’une expression JSON Logic (filtres and/or/regex/path).                                                |
-| `obsidian_read_note`         | Lit une note à partir de son chemin relatif au coffre, éventuellement à un titre/bloc/frontmatter précis.                               |
-| `obsidian_list_vault`        | Répertorie les fichiers et les répertoires du coffre (arborescence d’entrées).                                                          |
-| `obsidian_get_document_map`  | Récupère la structure des titres de la note sous forme de correspondance titres → numéros de ligne.                                     |
-| `obsidian_get_note_metadata` | Récupère le frontmatter, les étiquettes, les liens et le nombre de caractères/mots sans le contenu intégral.                            |
-| `obsidian_get_active_file`   | Récupère le chemin et le contenu du fichier actuellement actif dans Obsidian.                                                           |
-| `obsidian_get_periodic_note` | Récupère la note périodique quotidienne/hebdomadaire/mensuelle pour une date donnée (aujourd’hui si elle est omise).                    |
-| `obsidian_get_tags`          | Répertorie toutes les étiquettes du coffre avec leur fréquence.                                                                         |
-| `obsidian_list_commands`     | Répertorie les identifiants des commandes Obsidian disponibles (à utiliser avec `obsidian_execute_command`).                            |
-| `obsidian_sync_status`       | État du serveur de synchronisation OmniRoute : fonctionnement, nom du coffre, port, durée de disponibilité et dernière synchronisation. |
-| `obsidian_sync_conflicts`    | Répertorie les conflits de synchronisation non résolus (chemin, chemin du conflit, date de détection).                                  |
+| Outil                        | Description                                                                                                                            |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Vérifie si l’API REST locale est accessible et authentifiée.                                                                           |
+| `obsidian_search_simple`     | Effectue une recherche en texte intégral dans le contenu des notes et renvoie des extraits avec les chemins des fichiers.              |
+| `obsidian_search_structured` | Effectue une recherche à l’aide d’une expression JSON Logic (filtres and/or/regex/path).                                               |
+| `obsidian_read_note`         | Lit une note à partir de son chemin relatif au coffre, éventuellement à un titre/bloc/frontmatter précis.                              |
+| `obsidian_list_vault`        | Répertorie les fichiers et les répertoires du coffre (arborescence d’entrées).                                                         |
+| `obsidian_get_document_map`  | Récupère la structure des titres de la note sous forme de correspondance titres → numéros de ligne.                                    |
+| `obsidian_get_note_metadata` | Récupère le frontmatter, les étiquettes, les liens et le nombre de caractères/mots sans le contenu intégral.                           |
+| `obsidian_get_active_file`   | Récupère le chemin et le contenu du fichier actuellement actif dans Obsidian.                                                          |
+| `obsidian_get_periodic_note` | Récupère la note périodique quotidienne/hebdomadaire/mensuelle pour une date donnée (aujourd’hui si elle est omise).                   |
+| `obsidian_get_tags`          | Répertorie toutes les étiquettes du coffre avec leur fréquence.                                                                        |
+| `obsidian_list_commands`     | Répertorie les identifiants des commandes Obsidian disponibles (à utiliser avec `obsidian_execute_command`).                           |
+| `obsidian_sync_status`       | État du serveur de synchronisation 67router : fonctionnement, nom du coffre, port, durée de disponibilité et dernière synchronisation. |
+| `obsidian_sync_conflicts`    | Répertorie les conflits de synchronisation non résolus (chemin, chemin du conflit, date de détection).                                 |
 
 ### Outils d’écriture (`write:obsidian`)
 

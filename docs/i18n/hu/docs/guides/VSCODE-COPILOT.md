@@ -4,7 +4,7 @@
 
 ---
 
-**Az OmniCopilot** az OmniRoute által kiszolgált összes modellt elérhetővé teszi a _natív_ GitHub Copilot Chat
+**Az OmniCopilot** a 67router által kiszolgált összes modellt elérhetővé teszi a _natív_ GitHub Copilot Chat
 modellválasztójában. Nincs második oldalsáv, nincs külön csevegőfelület — a Copilot ügynökmódja, eszközhívása,
 MCP-kiszolgálói és egyéni utasításai mind tovább működnek, csak éppen az Ön által kiválasztott modellen futnak.
 
@@ -23,12 +23,12 @@ MCP-kiszolgálói és egyéni utasításai mind tovább működnek, csak éppen 
 
 ## Beállítás
 
-1. **Indítsa el az OmniRoute-ot** — `npm install -g omniroute && omniroute` (az irányítópult címe: `http://localhost:20128`).
-2. **Telepítse a bővítményt** — keressen rá az „OmniRoute” kifejezésre a Bővítmények nézetben.
+1. **Indítsa el a 67router-ot** — `npm install -g omniroute && omniroute` (az irányítópult címe: `http://localhost:20128`).
+2. **Telepítse a bővítményt** — keressen rá az „67router” kifejezésre a Bővítmények nézetben.
 3. **Válasszon modellt** — Copilot Chat → modellválasztó → **Manage Models…** → **OmniRoute**, majd jelölje be
    a kívánt modelleket.
 
-Ha az OmniRoute az alapértelmezett porton fut, nincs szükség beállításra. Távoli példány esetén nyissa meg az
+Ha a 67router az alapértelmezett porton fut, nincs szükség beállításra. Távoli példány esetén nyissa meg az
 **OmniRoute ikont a Tevékenységsávon** (vagy futtassa az `OmniRoute: Manage Connection` parancsot), és állítsa be a következőket:
 
 - **Kiszolgáló URL-címe** — a kiszolgáló gyökércíme, például `http://192.168.0.15:20128`. A `/v1` utótagot
@@ -75,7 +75,7 @@ HTTP 400 — A(z) '<id>' modell képgeneráló modell, és nem használható a
 
 ezért a modellválasztó elérése előtt kiszűri őket a `type` mezőjük alapján. **A Responses-API
 modelljei megmaradnak** — minden Codex- és GPT-5.x-bejegyzés `supported_endpoints: ["responses"]` értéket tesz közzé,
-az OmniRoute pedig lefordítja ezeket a `/v1/chat/completions` számára, így teljes mértékben használhatók.
+a 67router pedig lefordítja ezeket a `/v1/chat/completions` számára, így teljes mértékben használhatók.
 
 ### Soha nem konfigurált szolgáltatók
 
@@ -88,7 +88,7 @@ bővítményben semmit sem kell módosítani.
 
 ## Irányítópult egy VS Code-lapon belül
 
-Az `omnicopilot.dashboardOpen: "editor"` a külső böngésző helyett a Simple Browser használatával jeleníti meg az OmniRoute irányítópultját egy szerkesztőlapon. A beágyazás **kiszolgálóoldali engedélyezést igényel** a `DASHBOARD_ALLOW_EMBED=vscode` használatával, amelynek hatására a HTML-oldalak kiszolgálása az alapértelmezett `frame-ancestors 'none'` + `X-Frame-Options: DENY` helyett a `frame-ancestors 'self' vscode-webview:` beállítással történik. Az API-felület (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) mindkét esetben megtartja a szigorú fejléceket.
+Az `omnicopilot.dashboardOpen: "editor"` a külső böngésző helyett a Simple Browser használatával jeleníti meg a 67router irányítópultját egy szerkesztőlapon. A beágyazás **kiszolgálóoldali engedélyezést igényel** a `DASHBOARD_ALLOW_EMBED=vscode` használatával, amelynek hatására a HTML-oldalak kiszolgálása az alapértelmezett `frame-ancestors 'none'` + `X-Frame-Options: DENY` helyett a `frame-ancestors 'self' vscode-webview:` beállítással történik. Az API-felület (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) mindkét esetben megtartja a szigorú fejléceket.
 
 > ⚠️ **Ez fordítási idejű, nem pedig futásidejű jelző.** A Next.js a `headers()` függvényt az útvonaljegyzékbe fordítja, ezért a `next.config.mjs` a csomag összeállításakor olvassa be a változót
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).
@@ -124,7 +124,7 @@ Az **`OmniRoute: Configure Coding CLI`** az `omniroute` CLI használatával azon
 
 | Jelenség                                                    | Ok / megoldás                                                                                                                                                                                                                                                                                                 |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nem jelennek meg OmniRoute-modellek a választóban           | A kiszolgáló nem érhető el. Az állapotsoron lévő pont szürkére vált; futtassa az `OmniRoute: Check Connection` parancsot. A felderítés szándékosan csendben történik, és kérdés megjelenítése helyett egyszerűen nem ad hozzá modelleket.                                                                     |
+| Nem jelennek meg 67router-modellek a választóban            | A kiszolgáló nem érhető el. Az állapotsoron lévő pont szürkére vált; futtassa az `OmniRoute: Check Connection` parancsot. A felderítés szándékosan csendben történik, és kérdés megjelenítése helyett egyszerűen nem ad hozzá modelleket.                                                                     |
 | Minden modell kétszer jelenik meg                           | Az OmniCopilot 1.0.1-nél régebbi verzióját használja — frissítse. A bővítmény mostantól a `?prefix=alias` paraméterrel küldi a kéréseket.                                                                                                                                                                     |
 | Egy korábban felsorolt kép-/hangmodell eltűnt               | Az 1.0.1-es verzió óta szándékos — az ilyen modellek soha nem tudtak csevegési kérésre válaszolni.                                                                                                                                                                                                            |
 | A panel hiányzik a Tevékenységsávról                        | A VS Code a további nézettárolókat a Tevékenységsáv alján található **„…”** túlcsordulási menübe helyezi, és a jobb gombbal elrejtett tárolók rejtve maradnak. Kattintson jobb gombbal a Tevékenységsávra → jelölje be az **OmniRoute** elemet, vagy nyissa meg az `OmniRoute: Manage Connection` paranccsal. |
@@ -136,6 +136,6 @@ Az **`OmniRoute: Configure Coding CLI`** az `omniroute` CLI használatával azon
 ## Lásd még
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — minden más kódolási eszköz
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — távoli OmniRoute vezérlése
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — távoli 67router vezérlése
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — a `/v1/models` szerződése
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — a bővítmény saját katalógusjegyzetei

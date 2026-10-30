@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute menggunakan model keluaran **kitaran selari**: cabang khusus `release/vX.Y.Z`
+67router menggunakan model keluaran **kitaran selari**: cabang khusus `release/vX.Y.Z`
 untuk kitaran aktif, `main` untuk barisan yang telah diterbitkan dan tag kekal
 `vX.Y.Z` apabila kitaran tersebut dikeluarkan. Melihat komit dimasukkan ke dalam `release/*` _dan_ ke dalam
 `main` adalah dijangka — bukannya suatu kekeliruan.

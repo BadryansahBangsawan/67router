@@ -7,7 +7,7 @@
 > **የእውነት ምንጭ፦** `src/lib/cloudAgent/` እና `src/app/api/v1/agents/tasks/`
 > **ለመጨረሻ ጊዜ የዘመነው፦** 2026-06-28 — v3.8.40 (የfrontmatter ማደስ፤ cursor-cloudን ጨምሮ 4 ወኪሎች)
 
-OmniRoute በሶስተኛ ወገን ደመና የሚስተናገዱ የኮድ ሥራ ወኪሎችን (Codex Cloud፣ Cursor፣
+67router በሶስተኛ ወገን ደመና የሚስተናገዱ የኮድ ሥራ ወኪሎችን (Codex Cloud፣ Cursor፣
 Devin፣ Jules) እንደ ረጅም ጊዜ የሚከናወኑ ተግባራት ያቀናጃል። ደንበኞች ከአቅራቢ-ተኮር
 APIዎች ጋር ሳይገናኙ ጥያቄ + የማከማቻ URL እንዲያስገቡ እና ውጤቶችን እንዲቀበሉ፣
 እያንዳንዱ ወኪል በወጥ በይነገጽ ይጠቀለላል።

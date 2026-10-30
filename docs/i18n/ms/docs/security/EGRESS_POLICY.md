@@ -8,7 +8,7 @@
 
 > **Sumber rujukan utama:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute membolehkan setiap proksi mempunyai **arahan keluarga alamat untuk trafik keluar**. Secara lalai, OS memilih IPv4 atau IPv6 (dwitindan, "Happy Eyeballs"). Apabila anda menetapkan arahan kepada `ipv4` atau `ipv6`, OmniRoute menetapkan setiap sambungan melalui proksi tersebut kepada keluarga yang dipilih dan **gagal secara tertutup** dan bukannya beralih kembali kepada keluarga yang lain.
+67router membolehkan setiap proksi mempunyai **arahan keluarga alamat untuk trafik keluar**. Secara lalai, OS memilih IPv4 atau IPv6 (dwitindan, "Happy Eyeballs"). Apabila anda menetapkan arahan kepada `ipv4` atau `ipv6`, 67router menetapkan setiap sambungan melalui proksi tersebut kepada keluarga yang dipilih dan **gagal secara tertutup** dan bukannya beralih kembali kepada keluarga yang lain.
 
 Halaman ini mendokumentasikan maksud arahan tersebut, sebab ia diwujudkan, tempat untuk mengkonfigurasikannya dan cara masa jalan menyelesaikannya.
 
@@ -122,7 +122,7 @@ Untuk API CRUD/penugasan proksi yang selebihnya, lihat [PROXY_GUIDE.md](../ops/P
 
 ## Cara `auto` Diselesaikan
 
-Apabila `family` ialah `auto`, OmniRoute **tidak** menambahkan sebarang arahan — URL proksi digunakan seperti sedia ada dan keluarga sambungan ditentukan secara intrinsik.
+Apabila `family` ialah `auto`, 67router **tidak** menambahkan sebarang arahan — URL proksi digunakan seperti sedia ada dan keluarga sambungan ditentukan secara intrinsik.
 
 Pada masa pembinaan URL (`proxyConfigToUrl` / `normalizeProxyUrl` dalam `open-sse/utils/proxyDispatcher.ts`), proksi `auto` menghasilkan URL biasa tanpa penanda:
 
@@ -158,7 +158,7 @@ Jadi:
 
 Arahan bukan-`auto` dihantar sebagai satu penanda pertanyaan sintetik — `?family=ipv4` atau `?family=ipv6` — yang ditambahkan sekali pada URL proksi yang telah dinormalkan. `normalizeProxyUrl` memastikan penanda ini dibuang dan ditambahkan semula tepat sekali supaya ia tidak merosakkan penghuraian port.
 
-Apabila dispatcher dibina, penanda tersebut dibaca dan ditukarkan kepada keluarga sambungan yang konkrit. Jika hos ialah literal IP daripada keluarga yang **bertentangan**, OmniRoute akan melontarkan ralat (percanggahan dikendalikan secara tutup-selamat):
+Apabila dispatcher dibina, penanda tersebut dibaca dan ditukarkan kepada keluarga sambungan yang konkrit. Jika hos ialah literal IP daripada keluarga yang **bertentangan**, 67router akan melontarkan ralat (percanggahan dikendalikan secara tutup-selamat):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Keluarga konkrit tersebut kemudiannya ditetapkan pada penyambung:
 
 ## Keserasian SOCKS5
 
-Penetapan keluarga berfungsi dengan proksi SOCKS5, tetapi `fetch-socks` standard tidak mendedahkan pilihan soket yang diperlukan untuk menetapkan keluarga bagi lompatan proksi. OmniRoute menyediakan penyambungnya sendiri untuk tujuan tersebut:
+Penetapan keluarga berfungsi dengan proksi SOCKS5, tetapi `fetch-socks` standard tidak mendedahkan pilihan soket yang diperlukan untuk menetapkan keluarga bagi lompatan proksi. 67router menyediakan penyambungnya sendiri untuk tujuan tersebut:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

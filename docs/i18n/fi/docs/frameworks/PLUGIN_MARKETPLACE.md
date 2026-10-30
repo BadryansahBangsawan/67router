@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Päivitetty viimeksi:** 2026-06-28 — v3.8.40
 
-OmniRoute sisältää WordPress-tyylisen lisäosajärjestelmän. Lisäosat ovat
+67router sisältää WordPress-tyylisen lisäosajärjestelmän. Lisäosat ovat
 itsenäisiä hakemistoja, joista jokainen sisältää `plugin.json`-manifestin ja
 aloitustiedoston. Ne kytkeytyvät pyyntöputkeen (`onRequest` / `onResponse` /
 `onError`) ja elinkaaritapahtumiin (`onInstall` / `onActivate` / `onDeactivate` /
@@ -157,7 +157,7 @@ sallitaan sellaisinaan.
 
 ### Lisäosahakemisto
 
-Lisäosat sijaitsevat OmniRouten datahakemistossa:
+Lisäosat sijaitsevat 67routerin datahakemistossa:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

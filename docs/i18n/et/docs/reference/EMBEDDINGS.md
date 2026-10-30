@@ -4,9 +4,9 @@
 
 ---
 
-Operaatori märkmed `POST /v1/embeddings` kohta, kui OmniRoute asub
+Operaatori märkmed `POST /v1/embeddings` kohta, kui 67router asub
 Hindsight 0.9.1 (ainult tekstiga `encode(list[str])`) ja Memorix 1.6.0 (Jina meedia
-värav) ees. Reaalajas kontrollitud 2026-08-17 OmniRoute 3.8.49 vastu aadressil
+värav) ees. Reaalajas kontrollitud 2026-08-17 67router 3.8.49 vastu aadressil
 `https://omniroute.jaguar-fish.ts.net/v1`. Allpool pole saladusi.
 
 ## Töötavad mudeli-ID-d
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Omaühendusega `gemini-embedding-2` ei saa ainult GitOpsi abil töötada. Google AI
 Studio võti tuleb lisada teenusepakkuja `gemini` ühendusena (juhtpaneelil või
-importides `GEMINI_API_KEY` OmniRoute'i). Seda saladust selles hoidlas pole.
+importides `GEMINI_API_KEY` 67router'i). Seda saladust selles hoidlas pole.
 
 ### Jina multimodaalne marsruut
 
@@ -100,7 +100,7 @@ Kasutage `POST /v1/embeddings`, kuni alias on olemas.
 
 ### Jina / Memorixi pildiobjekt
 
-OmniRoute'i kanooniline pildielement (28×28 PNG, 784 pikslit — Jina lükkab 1×1 tagasi):
+67router'i kanooniline pildielement (28×28 PNG, 784 pikslit — Jina lükkab 1×1 tagasi):
 
 ```json
 {
@@ -149,7 +149,7 @@ Koos kasutatud `{ "text": "..." }` ja `{ "image": "data:..." }` annavad sama vea
 
 Hindsighti manustamised on ainult tekstipõhised (`encode(list[str])`). See ei saada
 pildiobjekte. Suunake Hindsighti OpenAI-ga ühilduvate manustamiste baas-URL
-OmniRoute'i marsruudile `/v1` ja kasutage ülaltoodud tabelist töötavat ID-d
+67router'i marsruudile `/v1` ja kasutage ülaltoodud tabelist töötavat ID-d
 (`jina-ai/jina-embeddings-v5-omni-small` või
 `openrouter/google/gemini-embedding-2`). Ärge määrake mudeliks prefiksita
 `gemini-embedding-2`, kui lüüsis pole `gemini` API võtit.
@@ -157,11 +157,11 @@ OmniRoute'i marsruudile `/v1` ja kasutage ülaltoodud tabelist töötavat ID-d
 ### Memorix 1.6.0
 
 Memorix käsitleb omameediana ainult sellist `baseUrl` väärtust, mis vastab mustrile `/jina\.ai/i`. Kui
-URL viitab OmniRoute'ile, jääb kasutusele ainult teksti toetav marsruut isegi siis, kui mudel on Jina omni.
-See värav on Memorixi kliendi probleem. Sellest sõltumatult lükkab OmniRoute endiselt tagasi
+URL viitab 67router'ile, jääb kasutusele ainult teksti toetav marsruut isegi siis, kui mudel on Jina omni.
+See värav on Memorixi kliendi probleem. Sellest sõltumatult lükkab 67router endiselt tagasi
 Jina `{image: "data:..."}` päringukeha, mille Memorix värava avanemisel saadaks,
-seega ei saa Jina-ga ühilduvad kliendid OmniRoute'i kaudu pilte manustada
+seega ei saa Jina-ga ühilduvad kliendid 67router'i kaudu pilte manustada
 ilma kanoonilise `{type,source}` skeemita.
 
 Kasutage teksti jaoks mudelit `jina-ai/jina-embeddings-v5-omni-small`. Ärge suunake Memorixi
-`base_url` aadressile `https://api.jina.ai` — jätke OmniRoute ainsaks vahesammuks.
+`base_url` aadressile `https://api.jina.ai` — jätke 67router ainsaks vahesammuks.

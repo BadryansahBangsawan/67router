@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 可透過 Termux 在 Android 上以無頭伺服器方式執行。Termux 不支援 Electron 桌面應用程式，但可透過本機瀏覽器或相同網路上的其他裝置使用 Web 儀表板和 OpenAI 相容 API。
+67router 可透過 Termux 在 Android 上以無頭伺服器方式執行。Termux 不支援 Electron 桌面應用程式，但可透過本機瀏覽器或相同網路上的其他裝置使用 Web 儀表板和 OpenAI 相容 API。
 
 ## 先決條件
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js 版本：**OmniRoute 需要 Node `>=22.22.2 <23 || >=24.0.0 <27`（與 `package.json` 中的 `engines` / `SUPPORTED_NODE_RANGE` 相符）。Termux 的 `nodejs-lts` 通常提供 Node 20 LTS，而該版本已**不再受到支援**——請改為執行 `pkg install nodejs` 安裝目前版本，並確認 `node --version` 顯示 22.x/24.x+ 系列版本。
+> **Node.js 版本：**67router 需要 Node `>=22.22.2 <23 || >=24.0.0 <27`（與 `package.json` 中的 `engines` / `SUPPORTED_NODE_RANGE` 相符）。Termux 的 `nodejs-lts` 通常提供 Node 20 LTS，而該版本已**不再受到支援**——請改為執行 `pkg install nodejs` 安裝目前版本，並確認 `node --version` 顯示 22.x/24.x+ 系列版本。
 
-如果原生套件編譯失敗，請重新執行上述 `pkg install` 命令，然後再次嘗試安裝 OmniRoute。
+如果原生套件編譯失敗，請重新執行上述 `pkg install` 命令，然後再次嘗試安裝 67router。
 
 ## 安裝
 
@@ -37,7 +37,7 @@ omniroute
 
 ## 執行
 
-以無頭伺服器模式啟動 OmniRoute：
+以無頭伺服器模式啟動 67router：
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ http://PHONE_IP:20128
 http://192.168.1.50:20128
 ```
 
-請讓手機和用戶端保持連線至同一個受信任的網路。如果要從手機外部公開 OmniRoute，請啟用 API 金鑰及儀表板驗證。
+請讓手機和用戶端保持連線至同一個受信任的網路。如果要從手機外部公開 67router，請啟用 API 金鑰及儀表板驗證。
 
 ## 資料目錄
 
-依預設，OmniRoute 會將資料儲存在 Termux 主目錄下，並遵循 Linux 所使用的相同伺服器端資料路徑行為。若要將資料庫放置在明確指定的位置：
+依預設，67router 會將資料儲存在 Termux 主目錄下，並遵循 Linux 所使用的相同伺服器端資料路徑行為。若要將資料庫放置在明確指定的位置：
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### 不支援的平台：android（每個請求都傳回 HTTP 500）
 
-**症狀：**`omniroute` / `omniroute serve` 會顯示 `✔ OmniRoute is running!`，但每個儀表板或 API 請求都會傳回單純的 `500 Internal Server Error`。`~/.omniroute/logs/application/app.log` 保持空白，`APP_LOG_LEVEL=debug` 不會輸出任何有用資訊，而回應本文是純文字（`Internal Server Error`），沒有 JSON 詳細資訊。
+**症狀：**`omniroute` / `omniroute serve` 會顯示 `✔ 67router is running!`，但每個儀表板或 API 請求都會傳回單純的 `500 Internal Server Error`。`~/.omniroute/logs/application/app.log` 保持空白，`APP_LOG_LEVEL=debug` 不會輸出任何有用資訊，而回應本文是純文字（`Internal Server Error`），沒有 JSON 詳細資訊。
 
 **原因：**某些 Termux/Node 組建會回報 `process.platform === "android"`。Next.js 的 `getCacheDirectory()` 不會處理該平台：它要求 `~/.cache`（或通用 tmp 目錄）必須_事先_存在，否則在載入檢測掛鉤時會失敗，並顯示：
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-由於掛鉤從未載入，記錄功能也不會啟動——因此這個 500 錯誤看起來完全無法診斷。OmniRoute 會在 Next.js 啟動前，於 CLI 進入點建立 `~/.cache`（並在尚未設定時設定 `XDG_CACHE_HOME`），讓此探測作業可在 Android/Termux 上成功執行。
+由於掛鉤從未載入，記錄功能也不會啟動——因此這個 500 錯誤看起來完全無法診斷。67router 會在 Next.js 啟動前，於 CLI 進入點建立 `~/.cache`（並在尚未設定時設定 `XDG_CACHE_HOME`），讓此探測作業可在 Android/Termux 上成功執行。
 
 **受支援的解決方式（無須修補套件）：**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-目前的 OmniRoute 組建會由 CLI 在 Android/Termux 上自動執行此操作——全新的 `npx -y omniroute@latest`／全域安裝應不需要手動執行此步驟。如果升級後仍看到此錯誤，請依照上述方式建立一次 `~/.cache`，然後重新啟動。
+目前的 67router 組建會由 CLI 在 Android/Termux 上自動執行此操作——全新的 `npx -y omniroute@latest`／全域安裝應不需要手動執行此步驟。如果升級後仍看到此錯誤，請依照上述方式建立一次 `~/.cache`，然後重新啟動。
 
 **請勿**修補 `dist/server.js` 以強制設定 `process.platform = "linux"`。這類套件修補會在每次重新安裝／升級時遭到覆寫，而且只要快取目錄存在，就不需要進行此修補。
 

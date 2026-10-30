@@ -6,7 +6,7 @@
 
 🌐 **Dillər:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API-si üçün əsas istinad sənədi. Bu sənəd ictimai `/v1` interfeysini və ən çox istifadə olunan idarəetmə son nöqtələrini əhatə edir; maşın tərəfindən oxuna bilən [`docs/openapi.yaml`](../openapi.yaml) və `src/app/api/` altındakı marşrut ağacı tam mənbələrdir.
+67router API-si üçün əsas istinad sənədi. Bu sənəd ictimai `/v1` interfeysini və ən çox istifadə olunan idarəetmə son nöqtələrini əhatə edir; maşın tərəfindən oxuna bilən [`docs/openapi.yaml`](../openapi.yaml) və `src/app/api/` altındakı marşrut ağacı tam mənbələrdir.
 
 OpenAI ilə uyğun protokol və provayder imkanları matrisi haqqında ətraflı məlumat üçün
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md) sənədinə baxın.
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Cavab     | `HIT` və ya `MISS` (axınsız)                                                                                                                                                                                                         |
 | `X-OmniRoute-Idempotent` | Cavab     | Dublikat aradan qaldırılıbsa `true`                                                                                                                                                                                                  |
 | `X-OmniRoute-Progress`   | Cavab     | Gedişatın izlənməsi aktivdirsə `enabled`                                                                                                                                                                                             |
-| `X-OmniRoute-Session-Id` | Cavab     | OmniRoute tərəfindən istifadə edilən effektiv sessiya ID-si                                                                                                                                                                          |
+| `X-OmniRoute-Session-Id` | Cavab     | 67router tərəfindən istifadə edilən effektiv sessiya ID-si                                                                                                                                                                           |
 | `X-OmniRoute-Request-Id` | Cavab     | Sorğunun korrelyasiya identifikatoru (məlum olduqda)                                                                                                                                                                                 |
-| `X-OmniRoute-Version`    | Cavab     | OmniRoute yığım versiyası (həmişə mövcuddur)                                                                                                                                                                                         |
+| `X-OmniRoute-Version`    | Cavab     | 67router yığım versiyası (həmişə mövcuddur)                                                                                                                                                                                          |
 | `X-OmniRoute-Cost-Saved` | Cavab     | Keşin HIT zamanı qənaət etdirdiyi USD məbləği (yalnız keş uyğunluqları)                                                                                                                                                              |
 | `X-OmniRoute-Decision`   | Cavab     | Marşrutlaşdırma izi: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` kombinasiya strategiyasıdır və ya kombinasiya olmayan sorğu üçün `single`) — tamamlanma cavablarında həmişə mövcuddur                             |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Hər sorğu üçün hesabın sabitlənməsi
 
-Provayderin bir neçə bağlantısı (hesabı və ya açarı) olduqda, OmniRoute adətən
+Provayderin bir neçə bağlantısı (hesabı və ya açarı) olduqda, 67router adətən
 hesab seçimi strategiyası vasitəsilə onlardan birini seçir. Bunun əvəzinə, sorğu
 `x-omniroute-connection` başlığı ilə konkret bir bağlantını sabitləyə bilər:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ sabitləmək məqsədilə layihə səviyyəli `.claude/settings.json` faylına �
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Mənbə: `src/sse/handlers/chat.ts` (başlığın oxunması), `src/sse/services/
 ## Eksklüziv idarə olunan sessiya icarələri
 
 Eksklüziv idarə olunan sessiya icarəsi seçim əsasında aktivləşdirilən, müştəridən asılı olmayan marşrutlaşdırma müqaviləsidir: bir aktiv sahib
-bir uyğun OmniRoute bağlantısını özündə saxlayır. Bu, modeli icarəyə götürmür, OAuth tələb etmir, konkret
+bir uyğun 67router bağlantısını özündə saxlayır. Bu, modeli icarəyə götürmür, OAuth tələb etmir, konkret
 müştərini müəyyənləşdirmir və ya konkret provayder tələb etmir.
 
 Autentifikasiya üçün istifadə edilən API açarı `lease:exclusive` əhatə dairəsinə və açıq şəkildə göstərilmiş, boş olmayan
@@ -190,7 +190,7 @@ Aktiv icarə sahibi cari əlaqələndirməsi üçün məxfiliyi qoruyan ekran me
 
 Seçim əsasında aktivləşdirilən bu status əməliyyatı bir verilənlər bazası tranzaksiyası daxilində qeyri-şəffaf sahib, autentifikasiya edilmiş idarə olunan API açarı və dəqiq
 aktiv nəsil ilə qorunur. `displayName` yalnız konfiqurasiya edilmiş bağlantı adının kənar boşluqları silinmiş formasıdır;
-təhlükəsiz konfiqurasiya edilmiş ad mövcud olmadıqda bu, `null` olur. OmniRoute heç vaxt bunun əvəzinə
+təhlükəsiz konfiqurasiya edilmiş ad mövcud olmadıqda bu, `null` olur. 67router heç vaxt bunun əvəzinə
 e-poçt ünvanından və ya yaradılmış hesab identifikatorundan istifadə etmir. Provayder dəyəri məxfi olmayan ekran etiketidir və heç vaxt
 yaradılmış uyğun provayder identifikatoru deyil. Etimadnamələr, tokenlər, kukilər, xam bağlantı və ya API
 açarı identifikatorları, sahib heşləri, qoruma sirləri və daxili marşrutlaşdırma məlumatları istisna edilir.
@@ -231,7 +231,7 @@ Müvəqqəti resurs münaqişəsi `Retry-After` ilə birlikdə HTTP `429` və a�
 
 Bu cavab yalnız adi uyğun dəstin boş olmadığını və bütün sərbəst namizədlərin
 başqa aktiv icarələr tərəfindən tutulduğunu bildirir. Dəstəklənməyən modellər/provayderlər, siyasət uyğunsuzluğu, gözləmə müddəti, kvota,
-sağlamlıq və digər adi uyğunluq xətaları mövcud OmniRoute cavablarını saxlayır.
+sağlamlıq və digər adi uyğunluq xətaları mövcud 67router cavablarını saxlayır.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request sənədlərini qəbul edir və onları **dəyişiklik etməd
 ```
 
 Yerli `{ image | audio | video | pdf }` dəyərləri ictimai HTTPS URL-i, `data:` URI-si və ya xam
-base64 ola bilər. OmniRoute həmin obyektləri sətirə çevirmir və yerli şəkil URL-lərini əldə etmir — Jina
+base64 ola bilər. 67router həmin obyektləri sətirə çevirmir və yerli şəkil URL-lərini əldə etmir — Jina
 ictimai medianı özü əldə edir. Əlavə Jina sahələri (`task`, `normalized`, `truncate`, `embedding_type`)
 ötürülür. Yalnız mətn üçün nəzərdə tutulmuş Jina SKU-ları mətn olmayan sənədləri yenə də rədd edir.
 
@@ -429,7 +429,7 @@ Azure Document Intelligence-ın `analyze` API-si asinxrondur: ilkin sorğu cavab
 
 ### Vertex AI DeepSeek OCR autentifikasiyası və son nöqtənin müəyyənləşdirilməsi
 
-`vertex-deepseek-ocr`, OmniRoute-un çat/şəkil trafiki üçün artıq dəstəklədiyi eyni Vertex AI autentifikasiyasından (`open-sse/executors/vertex.ts`) təkrar istifadə edir: bağlantının API açarı ya Service Account JSON etimadnaməsidir (JWT-bearer axını vasitəsilə qısamüddətli OAuth giriş tokeninə dəyişdirilir), ya da olduğu kimi istifadə edilən, əvvəlcədən yaradılmış OAuth giriş tokenidir. Yuxarı axın son nöqtəsinin URL-i bağlantının layihə və region məlumatlarından yaradılan Vertex-in ümumi `openapi/chat/completions` tərəfdaş son nöqtəsidir — açıq şəkildə göstərilmiş `providerSpecificData.project`/`providerSpecificData.region` həmişə üstünlük təşkil edir; əks halda layihə Service Account JSON faylındakı `project_id` əsasında müəyyən edilir və region üçün standart dəyər `us-central1` olur. Hər iki müəyyənləşdirmə `open-sse/handlers/ocr.ts` daxilində (`resolveVertexOcrAccessToken`, `resolveVertexOcrBaseUrl`) baş verir və `handleOcr` funksiyasına yönləndirilməzdən əvvəl `src/app/api/v1/ocr/route.ts` tərəfindən istifadə olunur.
+`vertex-deepseek-ocr`, 67router-un çat/şəkil trafiki üçün artıq dəstəklədiyi eyni Vertex AI autentifikasiyasından (`open-sse/executors/vertex.ts`) təkrar istifadə edir: bağlantının API açarı ya Service Account JSON etimadnaməsidir (JWT-bearer axını vasitəsilə qısamüddətli OAuth giriş tokeninə dəyişdirilir), ya da olduğu kimi istifadə edilən, əvvəlcədən yaradılmış OAuth giriş tokenidir. Yuxarı axın son nöqtəsinin URL-i bağlantının layihə və region məlumatlarından yaradılan Vertex-in ümumi `openapi/chat/completions` tərəfdaş son nöqtəsidir — açıq şəkildə göstərilmiş `providerSpecificData.project`/`providerSpecificData.region` həmişə üstünlük təşkil edir; əks halda layihə Service Account JSON faylındakı `project_id` əsasında müəyyən edilir və region üçün standart dəyər `us-central1` olur. Hər iki müəyyənləşdirmə `open-sse/handlers/ocr.ts` daxilində (`resolveVertexOcrAccessToken`, `resolveVertexOcrBaseUrl`) baş verir və `handleOcr` funksiyasına yönləndirilməzdən əvvəl `src/app/api/v1/ocr/route.ts` tərəfindən istifadə olunur.
 
 ---
 
@@ -444,7 +444,7 @@ Authorization: Bearer your-api-key
 
 ### Model qiymətləri (`pricing`)
 
-OmniRoute modelin qiymətini bildikdə, qeyd `pricing` obyektini ehtiva edir. Qiymət xərc uçotunun istifadə etdiyi qiymət cədvəlindən əldə olunur: daxili standart qiymətlər, sinxronlaşdırılmış qiymətlər və `/api/pricing` vasitəsilə təyin edilmiş əvəzləmələr. Bunlar siyahı qiymətləridir, buna görə də abunəlik provayderləri token üzrə qiymət göstərir.
+67router modelin qiymətini bildikdə, qeyd `pricing` obyektini ehtiva edir. Qiymət xərc uçotunun istifadə etdiyi qiymət cədvəlindən əldə olunur: daxili standart qiymətlər, sinxronlaşdırılmış qiymətlər və `/api/pricing` vasitəsilə təyin edilmiş əvəzləmələr. Bunlar siyahı qiymətləridir, buna görə də abunəlik provayderləri token üzrə qiymət göstərir.
 
 ```json
 "pricing": {
@@ -578,7 +578,7 @@ Sidecar ayrıca prosesdə işlədikdə və `open-sse/config/providerPluginManife
 
 ## ElevenLabs audio generasiyası
 
-OmniRoute-da ElevenLabs API açarınızla `elevenlabs` provayder bağlantısını konfiqurasiya edin. Müştərilər öz **OmniRoute** açarları ilə (`Authorization: Bearer $OMNIROUTE_API_KEY`) autentifikasiya olunur; şlüz saxlanılmış provayder açarını `xi-api-key` kimi təqdim edir. ElevenLabs açarını heç vaxt şlüzün bearer tokeni kimi göndərməyin.
+67router-da ElevenLabs API açarınızla `elevenlabs` provayder bağlantısını konfiqurasiya edin. Müştərilər öz **67router** açarları ilə (`Authorization: Bearer $OMNIROUTE_API_KEY`) autentifikasiya olunur; şlüz saxlanılmış provayder açarını `xi-api-key` kimi təqdim edir. ElevenLabs açarını heç vaxt şlüzün bearer tokeni kimi göndərməyin.
 
 | Metod | Yol                         | Cavab                                                          | API açarı endpoint kateqoriyası |
 | ----- | --------------------------- | -------------------------------------------------------------- | ------------------------------- |
@@ -621,7 +621,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
   -d '{"model":"elevenlabs/music_v1","prompt":"Gentle instrumental piano","duration":10,"instrumental":true}'
 ```
 
-Endpoint, model, büdcə və bağlantı məhdudiyyətləri yuxarı axın çağırışından əvvəl tətbiq olunur. Provayderə məxsus marşrutlar yuxarı axının status kodlarını və xəta gövdələrini dəyişmədən qaytarır; buraya plan məhdudiyyəti üçün `402` və kvota limiti üçün `429` daxildir. Mövcud olduqda `character-cost`, `song-id`, `request-id` və `retry-after` başlıqları qorunur. Pulsuz kredit balansı hər bir musiqi modelinə, çıxış formatına və ya API funksiyasına girişə zəmanət vermir: hər sorğu üçün icazəni ElevenLabs müəyyən edir. Birləşdirilmiş endpoint xəta status kodlarını OmniRoute-un normallaşdırılmış xəta zərfində qoruyur.
+Endpoint, model, büdcə və bağlantı məhdudiyyətləri yuxarı axın çağırışından əvvəl tətbiq olunur. Provayderə məxsus marşrutlar yuxarı axının status kodlarını və xəta gövdələrini dəyişmədən qaytarır; buraya plan məhdudiyyəti üçün `402` və kvota limiti üçün `429` daxildir. Mövcud olduqda `character-cost`, `song-id`, `request-id` və `retry-after` başlıqları qorunur. Pulsuz kredit balansı hər bir musiqi modelinə, çıxış formatına və ya API funksiyasına girişə zəmanət vermir: hər sorğu üçün icazəni ElevenLabs müəyyən edir. Birləşdirilmiş endpoint xəta status kodlarını 67router-un normallaşdırılmış xəta zərfində qoruyur.
 
 Yuxarı axın müqavilələri: [səs effektləri](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [musiqi kompozisiyası](https://elevenlabs.io/docs/api-reference/music/compose) və
@@ -662,7 +662,7 @@ Yuxarı axın müqavilələri: [səs effektləri](https://elevenlabs.io/docs/api
 
 Bütün POST marşrutları eyni struktura malikdir: `Bearer your-api-key` + Zod tərəfindən doğrulanan JSON gövdəsi (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` və s.; `src/shared/validation/schemas.ts` faylına baxın). Sxem doğrulaması uğursuz olduqda 4xx qaytarılır.
 
-`Authorization: Bearer ...` əlavə edə bilməyən klientlər üçün OmniRoute həmçinin sorğu sətri uyğunluğu (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) və ya aşağıda sənədləşdirilmiş xüsusi `/api/v1/vscode/{token}/...` endpoint-ləri vasitəsilə URL-də API açarlarını qəbul edir.
+`Authorization: Bearer ...` əlavə edə bilməyən klientlər üçün 67router həmçinin sorğu sətri uyğunluğu (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) və ya aşağıda sənədləşdirilmiş xüsusi `/api/v1/vscode/{token}/...` endpoint-ləri vasitəsilə URL-də API açarlarını qəbul edir.
 
 ```bash
 # Yenidən sıralama (bulud reyestri provayderi və ya "<prefix>/<model>" şəklində OpenAI-uyğun provayder qovşağı)
@@ -825,7 +825,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract) vasit�
 Parallel Extract (`parallel-search`, Parallel Search ilə eyni API açarı) yalnız Markdown
 qaytarır — istənilən digər `format` üçün `400` qaytarılır — və məzmunu 100.000 simvolla məhdudlaşdırır. Hədəf
 səhifənin özü çıxarıla bilmədikdə, yuxarı axın xidməti bunu HTTP 200 cavabının daxilində bildirir;
-OmniRoute isə bunu sabit mesajla `422` kimi təqdim edir.
+67router isə bunu sabit mesajla `422` kimi təqdim edir.
 
 | Metod | Yol             | Təsvir                                                                        |
 | ----- | --------------- | ----------------------------------------------------------------------------- |
@@ -887,7 +887,7 @@ aktiv giriş nöqtəsi olmalıdır (`app/server-ws.mjs` mövcud olduqda standart
 OpenAI **Codex CLI** `supports_websockets = true` olduqda model adını müştəri tərəfində yoxlayır və
 `codex/gpt-5.5` kimi **provayder prefiksli ID-ləri rədd edir**
 (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). **Prefikssiz** ID göndərin (məsələn, `gpt-5.5`). OmniRoute körpüsü
+a ChatGPT account`). **Prefikssiz** ID göndərin (məsələn, `gpt-5.5`). 67router körpüsü
 yalnız codex üçün nəzərdə tutulub, buna görə də yuxarı axına tunel yaratmazdan əvvəl prefikssiz ID-ni codex modeli kimi
 (`resolveCodexWsModelInfo`) yenidən müəyyənləşdirir — baxmayaraq ki, prefikssiz
 `gpt-5.5` HTTP üzərindən başqa provayderə marşrutlaşdırıla bilərdi.
@@ -895,7 +895,7 @@ yalnız codex üçün nəzərdə tutulub, buna görə də yuxarı axına tunel y
 #### OpenAI Codex CLI-nin konfiqurasiyası
 
 `~/.codex/config.toml` faylına WebSocket dəstəyi olan fərdi provayder əlavə edərək
-Codex CLI-ni OmniRoute-a yönəldin (mövcud konfiqurasiyaya toxunmamaq üçün ayrıca `CODEX_HOME` istifadə edin):
+Codex CLI-ni 67router-a yönəldin (mövcud konfiqurasiyaya toxunmamaq üçün ayrıca `CODEX_HOME` istifadə edin):
 
 ```toml
 model = "gpt-5.5"                 # prefikssiz ID — "codex/gpt-5.5" DEYİL
@@ -906,15 +906,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # sonunda əyri xətt olmamalıdır; WS URL-i bundan yaradılır (istehsal mühitində https/wss istifadə edin)
 wire_api = "responses"                    # 2026-cı ilin fevralından bəri dəstəklənən yeganə dəyər
 supports_websockets = true                # Responses-over-WS nəqliyyatını aktivləşdirir
-env_key = "OMNIROUTE_API_KEY"             # OmniRoute API açarını saxlayır (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # 67router API açarını saxlayır (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API açarı (REQUIRE_API_KEY=false olduqda istənilən açar)
+export OMNIROUTE_API_KEY=sk-...           # 67router API açarı (REQUIRE_API_KEY=false olduqda istənilən açar)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI `base_url + /responses` ünvanını WebSocket-ə təkmilləşdirir və OmniRoute onu
+CLI `base_url + /responses` ünvanını WebSocket-ə təkmilləşdirir və 67router onu
 seçilmiş codex OAuth bağlantısına tunelləyir. Lokal serverdə başdan sona yoxlanılıb:
 ChatGPT `codex.rate_limits` + `response.created` qaytarır və tamamlamanı axınla ötürür.
 
@@ -997,7 +997,7 @@ strukturlaşdırılmış **JSON çıxışındakı** faizlər arasındakı fərqi
 
 #### Kəsilmə Həddinə Uyğunlaşdırma Düsturu
 
-OmniRoute yuxarı axın resurslarının tükənməsinin qarşısını almaq üçün proaktiv kvota kəsilmə hədlərini dəstəkləyir
+67router yuxarı axın resurslarının tükənməsinin qarşısını almaq üçün proaktiv kvota kəsilmə hədlərini dəstəkləyir
 (bağlantının `quotaWindowThresholds` parametri, provayderin standart dəyərləri və ya qlobal dayanıqlılıq parametrləri vasitəsilə konfiqurasiya edilir). Kvota pəncərəsində kəsilmə həddi
 (məsələn, `cutoff = 25%`) aktiv olduqda, mətn renderer-i qalan limiti belə hesablayır:
 
@@ -1544,7 +1544,7 @@ Qeydlər:
 
 - Tokenləşdirilmiş alternativ yollar `/v1/*` və `/api/tags` ilə eyni emalçılardan istifadə edir; cavab strukturları dəyişməz qalır.
 - Klient fərdi başlıqları dəstəklədikdə `Authorization: Bearer ...` istifadəsinə üstünlük verin.
-- URL əsaslı tokenlər əks-proksi jurnallarında, brauzer tarixçəsində və OmniRoute-dan kənar telemetriyada görünə bilər. Onları standart autentifikasiya rejimi deyil, uyğunluq seçimi kimi qəbul edin.
+- URL əsaslı tokenlər əks-proksi jurnallarında, brauzer tarixçəsində və 67router-dan kənar telemetriyada görünə bilər. Onları standart autentifikasiya rejimi deyil, uyğunluq seçimi kimi qəbul edin.
 
 ---
 
@@ -1652,7 +1652,7 @@ Daha yüksək səviyyəli marşrutlaşdırma combo-ları (artıq `/api/combos*` 
 
 ## Vebhuklar
 
-OmniRoute hadisələri (sorğunun tamamlanması, kvotanın tükənməsi, açarın rotasiyası və s.) üçün gedən vebhuk abunəlikləri.
+67router hadisələri (sorğunun tamamlanması, kvotanın tükənməsi, açarın rotasiyası və s.) üçün gedən vebhuk abunəlikləri.
 
 | Metod  | Yol                       | Təsvir                                                                      |
 | ------ | ------------------------- | --------------------------------------------------------------------------- |
@@ -1685,7 +1685,7 @@ Gündəlik/saatlıq kvotalarla təminatçı/hesab əsasında API açarlarını y
 
 ## Agentlər Protokolu
 
-OmniRoute istifadəçiləri adından uzaqdan icra edilən bulud agenti tapşırıqları (Claude Code, Codex Cloud, OpenHands və s.).
+67router istifadəçiləri adından uzaqdan icra edilən bulud agenti tapşırıqları (Claude Code, Codex Cloud, OpenHands və s.).
 
 | Metod  | Yol                           | Təsvir                                                                                                                                               |
 | ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1731,7 +1731,7 @@ Provayderlərə, hesablara və ya qlobal şəkildə təyin edilə bilən çıxı
 
 ## Davamlılıq (genişləndirilmiş)
 
-OmniRoute üç müstəqil müvəqqəti nasazlıq mexanizmi təqdim edir; aşağıdakı idarəetmə son nöqtələri operatorlara onları oxumağa və ləğv etməyə imkan verir:
+67router üç müstəqil müvəqqəti nasazlıq mexanizmi təqdim edir; aşağıdakı idarəetmə son nöqtələri operatorlara onları oxumağa və ləğv etməyə imkan verir:
 
 | Əhatə dairəsi               | Vəziyyətin saxlanması                          | Oxuma                                     | Sıfırlama / təmizləmə                                                            |
 | --------------------------- | ---------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------- |
@@ -1766,7 +1766,7 @@ Tam konseptual istinad və dövrə açarının standart dəyərləri üçün bax
 
 ## Bacarıqlar
 
-OmniRoute-u fərdi icra edilə bilən işləyicilərlə genişləndirmək üçün bacarıq çərçivəsi və marketpleys inteqrasiyaları.
+67router-u fərdi icra edilə bilən işləyicilərlə genişləndirmək üçün bacarıq çərçivəsi və marketpleys inteqrasiyaları.
 
 | Metod  | Yol                               | Təsvir                                                                                                                                         |
 | ------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1803,7 +1803,7 @@ Hər API açarı / sessiya üzrə əhatə dairəsi müəyyən edilmiş davamlı 
 
 ## MCP Serveri
 
-OmniRoute 3 nəqliyyat mexanizminə (stdio, SSE, streamable-http) və əhatə dairəsi məhdudlaşdırılmış alətlərə malik daxili Model Kontekst Protokolu serveri ilə təchiz edilir. Aşağıdakı idarəetmə paneli endpoint-ləri vəziyyət/audit məlumatlarını oxuyur və HTTP nəqliyyatlarını proksi edir.
+67router 3 nəqliyyat mexanizminə (stdio, SSE, streamable-http) və əhatə dairəsi məhdudlaşdırılmış alətlərə malik daxili Model Kontekst Protokolu serveri ilə təchiz edilir. Aşağıdakı idarəetmə paneli endpoint-ləri vəziyyət/audit məlumatlarını oxuyur və HTTP nəqliyyatlarını proksi edir.
 
 | Metod | Yol | Təsvir |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1825,7 +1825,7 @@ OmniRoute 3 nəqliyyat mexanizminə (stdio, SSE, streamable-http) və əhatə da
 
 ## A2A Serveri
 
-OmniRoute yoxlama və idarə panelində istifadə üçün A2A (Agent-to-Agent) JSON-RPC 2.0 son nöqtəsini və REST örtüyünü təqdim edir.
+67router yoxlama və idarə panelində istifadə üçün A2A (Agent-to-Agent) JSON-RPC 2.0 son nöqtəsini və REST örtüyünü təqdim edir.
 
 ### JSON-RPC
 
@@ -2054,7 +2054,7 @@ analitika son nöqtələri. Bunlar `/dashboard/analytics/*` səhifələrinin iş
 
 ## CLI Alətlərinin İdarə Edilməsi
 
-OmniRoute ilə inteqrasiya olunan CLI alətlərini (antigravity, commandCode,
+67router ilə inteqrasiya olunan CLI alətlərini (antigravity, commandCode,
 devin-cli və s.) idarə edin. Tam siyahı üçün [Provayder Arayışına](./PROVIDER_REFERENCE.md) baxın.
 
 | Metod | Yol                                     | Təsvir                                                                                                                                                                           |
@@ -2165,7 +2165,7 @@ Bacarıqları (agent əsaslı genişləndirmələr çərçivəsini) idarə edin.
 
 ## Plaginlər
 
-OmniRoute plaginlərini (üçüncü tərəf genişləndirmələrini) idarə edin.
+67router plaginlərini (üçüncü tərəf genişləndirmələrini) idarə edin.
 
 | Metod  | Yol                                | Təsvir                                 |
 | ------ | ---------------------------------- | -------------------------------------- |

@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Türkçe)
+# 67router Architecture (Türkçe)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Son güncelleme: 2026-06-28_
 
 ## Yönetici Özeti
 
-OmniRoute, Next.js üzerine inşa edilmiş yerel bir yapay zekâ yönlendirme ağ geçidi ve kontrol panelidir.
+67router, Next.js üzerine inşa edilmiş yerel bir yapay zekâ yönlendirme ağ geçidi ve kontrol panelidir.
 Tek bir OpenAI uyumlu uç nokta (`/v1/*`) sağlar ve trafiği çeviri, yedek devreye alma, token yenileme ve kullanım takibi özellikleriyle birden fazla üst sağlayıcı arasında yönlendirir.
 
 Temel yetenekler:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Tarayıcı Panosu]
     end
 
-    subgraph Router[OmniRoute Yerel Süreci]
+    subgraph Router[67router Yerel Süreci]
         API[V1 Uyumluluk API'si\n/v1/*]
         DASH[Pano + Yönetim API'si\n/api/*]
         CORE[SSE + Dönüştürme Çekirdeği\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth sağlayıcı modülleri (`src/lib/oauth/providers/` altında 27 ayrı dosy
 
 ## 5) Gömülü Hizmetler (v3.8.4)
 
-OmniRoute, **gömülü hizmetler** olarak adlandırılan ve yerel olarak çalışan AI araç süreçlerini
+67router, **gömülü hizmetler** olarak adlandırılan ve yerel olarak çalışan AI araç süreçlerini
 kurabilir, denetleyebilir ve bunlara yönlendirme yapabilir. Beş hizmet birlikte sunulur: 9Router, CLIProxyAPI, Bifrost, Mux ve Dario.
 
 Mimari katmanlar:
@@ -430,7 +430,7 @@ Kural kümesi oluşturma ve eşik ayarlama için
 - Kota önbelleği: `src/domain/quotaCache.ts`
 - Bozulma durumu: `src/domain/degradation.ts`
 - Yapılandırma denetimi: `src/domain/configAudit.ts`
-- OmniRoute yanıt meta verisi oluşturucusu: `src/domain/omnirouteResponseMeta.ts`
+- 67router yanıt meta verisi oluşturucusu: `src/domain/omnirouteResponseMeta.ts`
 - Değerlendirme alt sistemi: `src/domain/assessment/` — periyodik değerlendirme işleri
 
 ### E. Yetkilendirme İşlem Hattı
@@ -804,7 +804,7 @@ flowchart LR
         Browser[Gösterge Paneli Tarayıcısı]
     end
 
-    subgraph ContainerOrProcess[OmniRoute Çalışma Ortamı]
+    subgraph ContainerOrProcess[67router Çalışma Ortamı]
         Next[Next.js Sunucusu\nPORT=20128]
         Core[SSE Çekirdeği + Yürütücüler]
         MainDB[(storage.sqlite)]
@@ -922,7 +922,7 @@ Diğer tüm sağlayıcılar (özel uyumlu düğümler dahil) `DefaultExecutor` k
 
 ## Sağlayıcı Uyumluluk Matrisi
 
-> **Not:** Aşağıdaki matris, OmniRoute v3.8.0'da kayıtlı 351 sağlayıcıyı temsil eden bir örneklemdir.
+> **Not:** Aşağıdaki matris, 67router v3.8.0'da kayıtlı 351 sağlayıcıyı temsil eden bir örneklemdir.
 > Standart ve sürekli güncellenen liste için [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md)
 > (otomatik oluşturulur) belgesine veya yükleme sırasında Zod ile doğrulanan asıl kaynak olan
 > `src/shared/constants/providers.ts` dosyasına başvurun.
@@ -1104,7 +1104,7 @@ Ayrıntılı istek yükü yakalama, yönlendirilen çağrı başına en fazla d�
 - İstemciden alınan ham istek
 - Gerçekte üst sağlayıcıya gönderilen çevrilmiş istek
 - JSON olarak yeniden oluşturulan sağlayıcı yanıtı; akışlı yanıtlar, nihai özet ve akış meta verileri biçiminde sıkıştırılır
-- OmniRoute tarafından döndürülen nihai istemci yanıtı; akışlı yanıtlar aynı sıkıştırılmış özet biçiminde depolanır
+- 67router tarafından döndürülen nihai istemci yanıtı; akışlı yanıtlar aynı sıkıştırılmış özet biçiminde depolanır
 
 ## Güvenlik Açısından Hassas Sınırlar
 

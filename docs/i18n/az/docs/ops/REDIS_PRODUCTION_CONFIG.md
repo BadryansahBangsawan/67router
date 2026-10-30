@@ -6,7 +6,7 @@
 
 ## İcmal
 
-Redis OmniRoute-da **ixtiyari, yumşaq asılılıqdır** — Redis əlçatan olmadıqda tətbiq işləməyə davam edir və funksionallığı uyğun şəkildə azaldır (yaddaşdaxili
+Redis 67router-da **ixtiyari, yumşaq asılılıqdır** — Redis əlçatan olmadıqda tətbiq işləməyə davam edir və funksionallığı uyğun şəkildə azaldır (yaddaşdaxili
 ehtiyat mexanizmlərindən istifadə edir). İstehsal mühitində Redis-in tənzimlənməsi dörd fərqli
 iş yükü üçün gecikməni azaldır:
 
@@ -17,7 +17,7 @@ iş yükü üçün gecikməni azaldır:
 | Kvota anbarı                        | `redisQuotaStore.ts`          | Ayrı `getRedisClient(url)` singleton-u                       | `<prefix>quota:*`, hər instansiya üçün konfiqurasiya edilə bilər |
 | İlkin qızdırma dövrə kəsicisi       | `redisCircuitBreakerStore.ts` | `circuitBreakerFactory.ts` daxilində ayrıca klient           | `<prefix>warmup:cb:<connectionId>`                               |
 
-OmniRoute-un digər tətbiqlərlə tək bir Redis instansiyasında (məsələn, `127.0.0.1:6379`) yanaşı işləyə bilməsi üçün bütün dörd iş yükü eyni ad məkanı prefiksindən istifadə edir.
+67router-un digər tətbiqlərlə tək bir Redis instansiyasında (məsələn, `127.0.0.1:6379`) yanaşı işləyə bilməsi üçün bütün dörd iş yükü eyni ad məkanı prefiksindən istifadə edir.
 Baxın: [Açarların ad məkanı üzrə ayrılması](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ Baxın: [Açarların ad məkanı üzrə ayrılması](#key-namespacing).
 
 ## Açarların ad məkanı üzrə ayrılması
 
-OmniRoute Redis instansiyasını hostda işləyən digər xidmətlərlə paylaşır. Ad məkanı olmadan
+67router Redis instansiyasını hostda işləyən digər xidmətlərlə paylaşır. Ad məkanı olmadan
 `auth:api_key:<sha256>` və ya `rl:*` kimi açarlar eyni Redis-dən istifadə edən digər tətbiqlərin
 açarları ilə toqquşa bilər (bu instansiya Redis-i digər xidmətlərlə yanaşı `127.0.0.1:6379` ünvanında işlədir).
 
-**Bütün** OmniRoute açarlarına prefiks əlavə etmək üçün `REDIS_KEY_PREFIX` dəyişənini boş olmayan sətirə təyin edin:
+**Bütün** 67router açarlarına prefiks əlavə etmək üçün `REDIS_KEY_PREFIX` dəyişənini boş olmayan sətirə təyin edin:
 
 ```bash
-# .env — bütün OmniRoute açarları omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* formasını alır
+# .env — bütün 67router açarları omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* formasını alır
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # ƏS səhifə keşi üçün yer saxla
 maxmemory-policy allkeys-lru         # yük altında köhnəlmiş autentifikasiya keş qeydlərini çıxar
 
-# Davamlılıq (ixtiyaridir — OmniRoute onsuz da qəzalara davamlıdır)
+# Davamlılıq (ixtiyaridir — 67router onsuz da qəzalara davamlıdır)
 save 300 1                           # ≥1 açar dəyişibsə, ən azı hər 5 dəqiqədən bir ani görüntü yarat
 appendonly no                        # AOF lazım deyil; məlumatlar yenidən yaradıla bilər
 appendfsync no                       # fsync əlavə yükü yoxdur (RDB kifayətdir)

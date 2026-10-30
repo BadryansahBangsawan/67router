@@ -13,7 +13,7 @@
 
 Mechanizmus zdieľania kvót spravodlivo rozdeľuje časovo obmedzenú kvótu poskytovateľa (napr. 5-hodinové okno Codex, Kimi 1500 požiadaviek/h) medzi viacero API kľúčov, ktoré zdieľajú rovnaké pripojenie.
 
-**Problém, ktorý rieši:** OmniRoute sprostredkúva požiadavky mnohých API kľúčov voči rovnakému účtu upstream poskytovateľa. Bez logiky zdieľania môže nárazový nárast požiadaviek z kľúča A vyčerpať kvótu poskytovateľa na danú hodinu, čím zablokuje kľúče B a C až do obnovenia okna. Mechanizmus tomu zabraňuje nasledujúcimi spôsobmi:
+**Problém, ktorý rieši:** 67router sprostredkúva požiadavky mnohých API kľúčov voči rovnakému účtu upstream poskytovateľa. Bez logiky zdieľania môže nárazový nárast požiadaviek z kľúča A vyčerpať kvótu poskytovateľa na danú hodinu, čím zablokuje kľúče B a C až do obnovenia okna. Mechanizmus tomu zabraňuje nasledujúcimi spôsobmi:
 
 1. Sleduje priebežnú spotrebu každého kľúča pre jednotlivé dimenzie (%, požiadavky, tokeny, $).
 2. Používa spravodlivý algoritmus so zachovaním využitia kapacity: kľúč si môže požičať z nevyužitých podielov, pokiaľ globálny fond nie je saturovaný.
@@ -106,7 +106,7 @@ Ovládač Redis: skript Lua EVAL na atómové zvýšenie hodnoty — spúšťa s
 
 - Tabuľka: `quota_consumption` (pozrite migráciu `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Najvhodnejší pre nasadenia s jednou inštanciou.
-- Všetky perzistentné údaje sa nachádzajú v existujúcej databáze SQLite systému OmniRoute (`DATA_DIR/storage.sqlite`).
+- Všetky perzistentné údaje sa nachádzajú v existujúcej databáze SQLite systému 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (voliteľný, pre viacero inštancií)
 

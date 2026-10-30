@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** `src/lib/cloudAgent/` àti `src/app/api/v1/agents/tasks/`
 > **Ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40 (ìmúdójúìwọ̀n frontmatter; àwọn agent 4 pẹ̀lú cursor-cloud)
 
-OmniRoute ń ṣètò àwọn agent ìkọ́ kóòdù tí àwọn ẹlòmíràn gbàlejò lórí cloud (Codex Cloud, Cursor,
+67router ń ṣètò àwọn agent ìkọ́ kóòdù tí àwọn ẹlòmíràn gbàlejò lórí cloud (Codex Cloud, Cursor,
 Devin, Jules) gẹ́gẹ́ bí àwọn iṣẹ́ tó ń ṣiṣẹ́ fún ìgbà pípẹ́. Agent kọ̀ọ̀kan ni a fi pamọ́ sẹ́yìn interface kan náà kí
 àwọn client lè fi prompt + URL repo ránṣẹ́, kí wọ́n sì gba àbájáde láìní láti bójú tó
 àwọn API tó jẹ́ ti provider kọ̀ọ̀kan.

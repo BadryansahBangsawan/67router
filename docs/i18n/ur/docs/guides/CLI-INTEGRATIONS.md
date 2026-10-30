@@ -7,10 +7,10 @@
 مشترکہ executable manifest، محدود child environments اور مستقل
 Gemini setup کے لیے، [CLI launch contracts](./CLI-LAUNCH-CONTRACTS.md) دیکھیں۔
 
-OmniRoute متعدد `setup-*` commands فراہم کرتا ہے جو کسی coding
-CLI (Codex، Claude Code، OpenCode، Cline، …) کو OmniRoute بطور backend استعمال کرنے کے لیے configure کرتی ہیں — تاکہ
-tool **ایک** endpoint سے رابطہ کرے اور OmniRoute خودکار fallback کے ساتھ درست provider کی جانب
-route کرے۔ ہر command چلتے ہوئے OmniRoute (مقامی یا remote) سے **live** model catalog پڑھتی ہے
+67router متعدد `setup-*` commands فراہم کرتا ہے جو کسی coding
+CLI (Codex، Claude Code، OpenCode، Cline، …) کو 67router بطور backend استعمال کرنے کے لیے configure کرتی ہیں — تاکہ
+tool **ایک** endpoint سے رابطہ کرے اور 67router خودکار fallback کے ساتھ درست provider کی جانب
+route کرے۔ ہر command چلتے ہوئے 67router (مقامی یا remote) سے **live** model catalog پڑھتی ہے
 اور **آپ کی** machine پر tool کی اپنی config file لکھتی ہے۔ جہاں tool
 اس کی معاونت کرتا ہے، وہاں API key کا حوالہ environment variable کے ذریعے دیا جاتا ہے۔
 جو commands tool-local environment file مستقل طور پر محفوظ کرتی ہیں، ان کی نشان دہی ذیل میں کی گئی ہے۔
@@ -53,7 +53,7 @@ management endpoint، context یا management credentials کو override نہیں
 
 - [Claude Code کی configuration](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI کی configuration](./CODEX-CLI-CONFIGURATION.md)
-- [Remote Mode](./REMOTE-MODE.md) — اپنے laptop سے remote OmniRoute (VPS / Tailnet) چلائیں
+- [Remote Mode](./REMOTE-MODE.md) — اپنے laptop سے remote 67router (VPS / Tailnet) چلائیں
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot extension؛ یہ editor کے اندر سے آپ کے لیے یہ
   `setup-*` commands بھی چلا سکتی ہے
 
@@ -89,7 +89,7 @@ management endpoint، context یا management credentials کو override نہیں
 
 فلیگز کے بارے میں نوٹس (کمانڈ کے سورس میں تصدیق شدہ):
 
-- `--remote <url>` — ریموٹ OmniRoute سے کیٹلاگ حاصل کرتا ہے (`--port`
+- `--remote <url>` — ریموٹ 67router سے کیٹلاگ حاصل کرتا ہے (`--port`
   اور فعال سیاق کو اوور رائیڈ کرتا ہے)۔ `--api-key <key>` اس
   سرور کے لیے اسناد فراہم کرتا ہے (بطور ڈیفالٹ `OMNIROUTE_API_KEY` env var، یا فعال سیاق کا ٹوکن)۔
 - `--only <patterns>` — کاما سے علیحدہ کردہ ذیلی سٹرنگز؛ صرف مماثل ماڈل IDs
@@ -110,7 +110,7 @@ management endpoint، context یا management credentials کو override نہیں
   **codex** کو `-c model_providers.omniroute.*` args کے ذریعے ملتا ہے۔ **Qwen واحد run
   ہدف ہے جس کے لیے `--model` قطعی طور پر درکار ہے** — اس کے بغیر `omniroute run qwen`
   ایک واضح خرابی کے ساتھ `2` پر خارج ہوتا ہے۔
-- `--port <port>` — مقامی OmniRoute پورٹ (ڈیفالٹ `20128`، جب `--remote`
+- `--port <port>` — مقامی 67router پورٹ (ڈیفالٹ `20128`، جب `--remote`
   مقرر ہو تو نظرانداز کیا جاتا ہے)۔ تمام `setup-*` اور دونوں لانچرز پر موجود ہے۔
 - `omniroute run` کے خروجی کوڈز: چائلڈ CLI کا اپنا خروجی کوڈ بعینہٖ آگے منتقل کیا جاتا ہے؛
   `2` = غلط آرگیومنٹس (غیر معاون ہدف، مطلوبہ `--model` غائب،
@@ -155,7 +155,7 @@ MITM، اور صرف رہنمائی والے کیٹلاگ اندراجات بد�
 
 ## مقامی استعمال
 
-جب OmniRoute، `localhost:20128` پر چل رہا ہو تو بس اپنے ٹول کے لیے سیٹ اپ کمانڈ چلائیں۔ کیٹلاگ مقامی سرور سے حاصل کیا جاتا ہے۔
+جب 67router، `localhost:20128` پر چل رہا ہو تو بس اپنے ٹول کے لیے سیٹ اپ کمانڈ چلائیں۔ کیٹلاگ مقامی سرور سے حاصل کیا جاتا ہے۔
 
 ```bash
 # Codex: ہر مماثل ماڈل کے لیے ~/.codex/ میں ایک پروفائل لکھیں
@@ -182,8 +182,8 @@ omniroute setup-continue --dry-run
 کوئی بھی کنفیگ لکھے بغیر لانچ کریں (صرف env-injection):
 
 ```bash
-omniroute launch                 # Claude Code → مقامی OmniRoute
-omniroute launch-codex           # Codex CLI → مقامی OmniRoute
+omniroute launch                 # Claude Code → مقامی 67router
+omniroute launch-codex           # Codex CLI → مقامی 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -201,7 +201,7 @@ omniroute run claude -- --print-system-prompt "اس diff کا جائزہ لیں"
 
 ## ریموٹ استعمال
 
-کسی بھی سیٹ اپ کمانڈ کو `--remote` + `--api-key` کے ساتھ ریموٹ OmniRoute کی جانب متوجہ کریں۔ کیٹلاگ ریموٹ سے حاصل کیا جاتا ہے؛ کنفیگ آپ کی مقامی مشین پر لکھی جاتی ہے۔
+کسی بھی سیٹ اپ کمانڈ کو `--remote` + `--api-key` کے ساتھ ریموٹ 67router کی جانب متوجہ کریں۔ کیٹلاگ ریموٹ سے حاصل کیا جاتا ہے؛ کنفیگ آپ کی مقامی مشین پر لکھی جاتی ہے۔
 
 ```bash
 # ریموٹ VPS کے ساتھ OpenCode، صرف glm/kimi ماڈلز رکھیں
@@ -239,7 +239,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-دونوں صورتیں ایک 5dive **تصدیقی پروفائل** لکھتی ہیں، اور اس پروفائل سے منسلک ہر `claude` سیٹ پھر OmniRoute سے رابطہ کرتی ہے۔ اس ہدف سے متعلق تین چیزیں مخصوص ہیں:
+دونوں صورتیں ایک 5dive **تصدیقی پروفائل** لکھتی ہیں، اور اس پروفائل سے منسلک ہر `claude` سیٹ پھر 67router سے رابطہ کرتی ہے۔ اس ہدف سے متعلق تین چیزیں مخصوص ہیں:
 
 - **یہ فلیٹ ہوسٹ پر root کی حیثیت سے چلتا ہے۔** 5dive کے افعال مقامی systemd یونٹس اور root کی ملکیت والی اسٹیٹ ڈائریکٹری پر کام کرتے ہیں؛ کوئی ریموٹ موڈ نہیں ہے۔ جب یہ پہلے ہی root نہ ہو تو نسخہ `sudo` کے ذریعے خود کو دوبارہ چلاتا ہے (`--no-sudo` اسے بند کر دیتا ہے اور اس کے بجائے کمانڈ پرنٹ کرتا ہے)۔
 - **اینڈ پوائنٹ کا `https://` ہونا ضروری ہے، الا یہ کہ وہ loopback ہو۔** ایجنٹ کی API کلید ہر درخواست کے ساتھ اس URL کے ذریعے جاتی ہے، اور 5dive مشین سے باہر کسی سادہ متن والے اینڈ پوائنٹ کو قبول نہیں کرتا۔ نجی LAN ایڈریس بھی اس سے مستثنیٰ نہیں ہے۔
@@ -247,13 +247,13 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API کلید **stdin** (`--api-key=-`) کے ذریعے 5dive کو دی جاتی ہے، اس لیے یہ کبھی `ps` آؤٹ پٹ میں ظاہر نہیں ہوتی۔
 
-پروفائل کو کسی ایک ماڈل کے بجائے OmniRoute **combo** کی جانب متوجہ کرنے سے ہی فلیٹ کو فراہم کنندہ failover حاصل ہوتا ہے: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) پر ریکارڈ کیے گئے رن میں جب بنیادی اینڈ پوائنٹ دورانِ عمل مکمل طور پر بند ہو گیا، تو ایجنٹ نے اپنے باقی مراحل fallback پر مکمل کیے اور تعطل کبھی ظاہر نہیں کیا۔
+پروفائل کو کسی ایک ماڈل کے بجائے 67router **combo** کی جانب متوجہ کرنے سے ہی فلیٹ کو فراہم کنندہ failover حاصل ہوتا ہے: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) پر ریکارڈ کیے گئے رن میں جب بنیادی اینڈ پوائنٹ دورانِ عمل مکمل طور پر بند ہو گیا، تو ایجنٹ نے اپنے باقی مراحل fallback پر مکمل کیے اور تعطل کبھی ظاہر نہیں کیا۔
 
 ---
 
 ## بنیادی URL کے اصول (کن ٹولز کو `/v1` درکار ہے)
 
-OmniRoute، OpenAI انٹرفیس کو `/v1` پر، Anthropic انٹرفیس کو روٹ پر،
+67router، OpenAI انٹرفیس کو `/v1` پر، Anthropic انٹرفیس کو روٹ پر،
 اور مقامی Gemini انٹرفیس کو `/v1beta` پر فراہم کرتا ہے۔ ہر انٹیگریشن کو اس شکل کے مطابق ترتیب دیا گیا ہے
 جس کی متعلقہ ٹول کو توقع ہوتی ہے (کمانڈ سورس میں تصدیق شدہ):
 
@@ -275,7 +275,7 @@ OmniRoute، OpenAI انٹرفیس کو `/v1` پر، Anthropic انٹرفیس ک�
 ## اپ ڈیٹ کے دوران مقامی انحصارات برقرار رکھنا: `--include=optional`
 
 جب آپ `omniroute update` کے ذریعے اپ ڈیٹ کرتے ہیں (تصدیق کے بعد، یا `--apply` کے ساتھ)،
-تو OmniRoute انسٹالیشن کو پہلے سے شامل `--include=optional` کے ساتھ چلاتا ہے:
+تو 67router انسٹالیشن کو پہلے سے شامل `--include=optional` کے ساتھ چلاتا ہے:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -303,14 +303,14 @@ omniroute update --dry-run
 `@google/gemini-cli` 0.50.0 کے مقابلے میں معاہدے کی تصدیق کی گئی ہے: CLI،
 `GOOGLE_GEMINI_BASE_URL` کی تعمیل کرتا ہے اور اس کے خلاف
 `POST /v1beta/models/<model>:generateContent` (اور `:streamGenerateContent?alt=sse`)
-جاری کرتا ہے — عین OmniRoute کا مقامی Gemini انٹرفیس (`/v1beta`)۔ `omniroute run gemini`
+جاری کرتا ہے — عین 67router کا مقامی Gemini انٹرفیس (`/v1beta`)۔ `omniroute run gemini`
 اسے خودکار طور پر منسلک کرتا ہے:
 
-- `GOOGLE_GEMINI_BASE_URL` → فعال OmniRoute بیس URL (روٹ، `/v1` کے بغیر)؛
-- `GEMINI_API_KEY` → حل شدہ OmniRoute اسناد (آپشن/env/سیاق)؛
+- `GOOGLE_GEMINI_BASE_URL` → فعال 67router بیس URL (روٹ، `/v1` کے بغیر)؛
+- `GEMINI_API_KEY` → حل شدہ 67router اسناد (آپشن/env/سیاق)؛
 - ایک **عارضی اور الگ تھلگ `GEMINI_CLI_HOME`** جس کی `.gemini/settings.json`
   میں `gemini-api-key` توثیق منتخب ہوتی ہے، تاکہ محفوظ شدہ Google OAuth سیشن (Code Assist)
-  کبھی بھی OmniRoute کی طرف بھیجی گئی لانچ کو اوور رائیڈ نہ کرے — خروج کے بعد اسے ہٹا دیا جاتا ہے؛
+  کبھی بھی 67router کی طرف بھیجی گئی لانچ کو اوور رائیڈ نہ کرے — خروج کے بعد اسے ہٹا دیا جاتا ہے؛
 - **env کی صفائی**: چائلڈ env سے `GOOGLE_API_KEY`،
   `GOOGLE_GENAI_USE_VERTEXAI` اور `GOOGLE_GENAI_USE_GCA` ہٹا دیے جاتے ہیں (جو توثیق
   کو Vertex/Code Assist کی طرف بھیج دیتے)، اور اضافی احتیاط کے طور پر
@@ -333,7 +333,7 @@ Gemini کا ورک اسپیس اعتماد محافظ ہیڈ لیس موڈ می�
 ## حقیقی اسموک سویپ (اختیاری)
 
 متعین لانچ پلان کے ریگریشن ٹیسٹس CI میں چلتے ہیں (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`)۔ حقیقی OmniRoute سرور کے مقابل حقیقی بائنریز کی توثیق کے لیے، ایک اختیاری ہارنس
+`tests/unit/cli/run-execution.test.ts`)۔ حقیقی 67router سرور کے مقابل حقیقی بائنریز کی توثیق کے لیے، ایک اختیاری ہارنس
 `tests/integration/upstream-cli-smoke.int.test.ts` پر موجود ہے۔ یہ کبھی خودکار طور پر نہیں چلتا
 (ہر ذیلی ٹیسٹ اس وقت تک چھوڑ دیا جاتا ہے جب تک `RUN_CLI_SMOKE=1` نہ ہو)، اسناد کو env-var کے
 نام کے ذریعے منتقل کرتا ہے (قدر کے ذریعے کبھی نہیں)، کسی بھی ریکارڈ شدہ آؤٹ پٹ سے کلید جیسی اسٹرنگز مخفی کرتا ہے، ایسے

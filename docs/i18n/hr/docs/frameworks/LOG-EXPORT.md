@@ -4,7 +4,7 @@
 
 ---
 
-Kontinuirani, inkrementalni izvoz zapisa poziva OmniRoute u vanjsko spremište analitičkih podataka.
+Kontinuirani, inkrementalni izvoz zapisa poziva 67router u vanjsko spremište analitičkih podataka.
 
 Kartica nadzorne ploče Logs čuva povijest zahtjeva u SQLiteu (`call_logs`), čija je veličina ograničena
 rotacijom i pravilima zadržavanja. Izvoz zapisa šalje isti skup zapisa prema rasporedu kako bi se mogli

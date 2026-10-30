@@ -15,7 +15,7 @@
 - [OAuth 2.0 vietinėms programoms (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — įdiegtų programų OAuth client_id / client_secret yra vieši; faktinį saugumą užtikrina PKCE.
 - [Firebase API raktai](https://firebase.google.com/docs/projects/api-keys) — žiniatinklio klientų identifikatoriai pagal paskirtį yra vieši.
 
-OmniRoute turi įterpti šias reikšmes, kad `.env` nesukonfigūravę naudotojai iš karto gautų veikiančią OAuth eigą. Be įterptos atsarginės reikšmės Gemini / Antigravity teikėjai nustoja veikti visiems naudotojams, kurie pasirenka kelią „tiesiog klonuoti ir paleisti“.
+67router turi įterpti šias reikšmes, kad `.env` nesukonfigūravę naudotojai iš karto gautų veikiančią OAuth eigą. Be įterptos atsarginės reikšmės Gemini / Antigravity teikėjai nustoja veikti visiems naudotojams, kurie pasirenka kelią „tiesiog klonuoti ir paleisti“.
 
 Tačiau pažodines reikšmes, tokias kaip `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com`, aptinka **GitHub Secret Scanning**, **Semgrep** ir panašūs šablonų skaitytuvai. Kiekvienas leidimas sukelia triukšmingą klaidingų teigiamų rezultatų srautą, push apsauga blokuoja teisėtus pakeitimus, o operatoriai nustoja pasitikėti įspėjimų srautu.
 

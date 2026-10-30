@@ -4,7 +4,7 @@
 
 ---
 
-Ukandamizaji wa RTK ni injini ya ukandamizaji ya OmniRoute inayotambua amri kwa ajili ya matokeo ya terminali na zana. Imeundwa kwa ajili ya vikao vya mawakala wa uandishi wa msimbo ambapo ukuaji mkubwa wa muktadha unatokana na kumbukumbu za majaribio, matokeo ya uundaji, taarifa zisizo muhimu za vidhibiti vya vifurushi, nakala za shell, matokeo ya Docker, matokeo ya git, na ufuatiliaji wa rundo.
+Ukandamizaji wa RTK ni injini ya ukandamizaji ya 67router inayotambua amri kwa ajili ya matokeo ya terminali na zana. Imeundwa kwa ajili ya vikao vya mawakala wa uandishi wa msimbo ambapo ukuaji mkubwa wa muktadha unatokana na kumbukumbu za majaribio, matokeo ya uundaji, taarifa zisizo muhimu za vidhibiti vya vifurushi, nakala za shell, matokeo ya Docker, matokeo ya git, na ufuatiliaji wa rundo.
 
 RTK inaweza kuendeshwa moja kwa moja kwa `defaultMode: "rtk"` au kama hatua ya kwanza katika mtiririko uliopangwa kwa mfululizo, kwa kawaida:
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 Mpangilio huo hukandamiza kwanza matokeo ya mashine yenye taarifa nyingi zisizo muhimu, kisha huruhusu Caveman kufupisha nathari iliyosalia.
 
-RTK ya awali inaripoti uokoaji wa `60-90%` kwenye matokeo ya amri. Sampuli ya kikao katika README yake hupungua kutoka tokeni za kawaida `~118,000` hadi tokeni za RTK `~23,900`, ambayo ni uokoaji wa `79.7%` (`~80%`). OmniRoute hutumia wastani huo wa awali kwa hesabu ya uokoaji wa mtiririko uliopangwa pamoja na ukandamizaji wa ingizo wa Caveman:
+RTK ya awali inaripoti uokoaji wa `60-90%` kwenye matokeo ya amri. Sampuli ya kikao katika README yake hupungua kutoka tokeni za kawaida `~118,000` hadi tokeni za RTK `~23,900`, ambayo ni uokoaji wa `79.7%` (`~80%`). 67router hutumia wastani huo wa awali kwa hesabu ya uokoaji wa mtiririko uliopangwa pamoja na ukandamizaji wa ingizo wa Caveman:
 
 ```txt
 Wastani wa RTK:  80% imeokolewa
@@ -48,7 +48,7 @@ RTK hupakia vichujio kwa mpangilio huu:
 2. Vichujio vya kimataifa kutoka `DATA_DIR/rtk/filters.toml` na `DATA_DIR/rtk/filters.json`.
 3. Vichujio vilivyojengewa ndani kutoka `open-sse/services/compression/engines/rtk/filters/`.
 
-Ndani ya upeo mmoja, vichujio vya RTK TOML schema v1 vina kipaumbele juu ya vichujio vya OmniRoute JSON. Misemo ya TOML `match_command` hukaguliwa kabla ya ulinganishaji wa aina ya amri ili kichujio mahususi cha amri kilichoingizwa kiweze kubatilisha kichujio kipana zaidi katika upeo huo. Upeo wa mradi bado una kipaumbele juu ya upeo wa kimataifa, bila kujali umbizo la faili.
+Ndani ya upeo mmoja, vichujio vya RTK TOML schema v1 vina kipaumbele juu ya vichujio vya 67router JSON. Misemo ya TOML `match_command` hukaguliwa kabla ya ulinganishaji wa aina ya amri ili kichujio mahususi cha amri kilichoingizwa kiweze kubatilisha kichujio kipana zaidi katika upeo huo. Upeo wa mradi bado una kipaumbele juu ya upeo wa kimataifa, bila kujali umbizo la faili.
 
 Vichujio vya mradi huwekewa kwa makusudi sharti la uaminifu kwa sababu vichujio vya regex vinaweza kubadilisha jinsi matokeo ya zana yanavyoonyeshwa kwa mawakala. Faili ya kichujio cha mradi hukubaliwa wakati mojawapo ya masharti haya ni kweli:
 
@@ -71,7 +71,7 @@ Vichujio maalum vinaweza kuwa kipengee kimoja cha kichujio au safu ya vipengee v
 
 ## Upatanifu wa schema ya RTK TOML v1
 
-OmniRoute inaweza kuchanganua, kuthibitisha, kujaribu na kusakinisha faili tangazo za vichujio kwa kutumia schema ya RTK TOML v1.
+67router inaweza kuchanganua, kuthibitisha, kujaribu na kusakinisha faili tangazo za vichujio kwa kutumia schema ya RTK TOML v1.
 Sehemu zinazotumika ni `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, na majaribio ya ndani ya `[[tests.<filter>]]`.
@@ -80,7 +80,7 @@ Sehemu zisizotambulika, semi za kawaida zisizo sahihi au zisizo salama, kanuni z
 kuthibitishwa kwa ajili ya ukaguzi lakini haiwezi kusakinishwa au kupakiwa. Hitilafu za upakiaji wa faili maalum hubaki
 katika hali ya kuruhusu kuendelea: faili batili hurukwa na vichujio vilivyosalia huendelea kufanya kazi.
 
-OmniRoute hupokea matokeo ya zana baada ya kiteja kuyakamata tayari, kwa hivyo `filter_stderr = true`
+67router hupokea matokeo ya zana baada ya kiteja kuyakamata tayari, kwa hivyo `filter_stderr = true`
 haiwezi kubadilisha unasa wa mchakato. Sehemu hii inakubaliwa bila kutekeleza kitendo chochote na uthibitishaji hurejesha onyo.
 Hii inaelezewa kwa makusudi kama **upatanifu wa schema ya RTK TOML v1**, si upatanifu kamili
 na faili tekelezi ya RTK, vianzio vya shell, utekelezaji wa amri za Rust, au mpangilio wake wa hifadhi ya uaminifu.

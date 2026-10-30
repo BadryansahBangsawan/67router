@@ -12,7 +12,7 @@ User-Agent, tutocin `anthropic-beta`, taken Stainless SDK, da sauransu).
 
 ## Farawa cikin sauri — yi amfani da mai samar da `agentrouter` na asali (an ba da shawarar haka)
 
-Ga yawancin masu amfani, **ba a buƙatar wani saiti na musamman**. OmniRoute yana zuwa da
+Ga yawancin masu amfani, **ba a buƙatar wani saiti na musamman**. 67router yana zuwa da
 mai samar da `agentrouter` da aka gina a ciki tare da cikakkiyar siffar sadarwar Claude Code da aka riga aka haɗa (duba
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Don amfani da shi:
 
@@ -34,7 +34,7 @@ URL na tushe, hanyar tattaunawa, ko saitin take.
 
 ## Ci-gaba: haɗawa ta nau'in mai samarwa mai dacewa da Claude Code
 
-OmniRoute kuma yana tallafa wa AgentRouter (da makamantan hanyoyin isar da buƙatu) ta nau'in mai samarwa
+67router kuma yana tallafa wa AgentRouter (da makamantan hanyoyin isar da buƙatu) ta nau'in mai samarwa
 **mai dacewa da Claude Code** (`anthropic-compatible-cc-*`), wanda ke sadarwa da
 Anthropic Messages API ta amfani da madaidaiciyar siffar sadarwa. Mai samarwa na gama-gari na
 `openai-compatible-chat` da aka nuna masa `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code ba.
 
 - Asusun AgentRouter da maɓallin API. Sabbin masu rajista suna samun kiredit kyauta ta hanyar mahaɗin haɗin gwiwa
   da ke cikin [README](../README.md) na aikin.
-- OmniRoute yana gudana tare da kunna tutar fasalin `ENABLE_CC_COMPATIBLE_PROVIDER`
+- 67router yana gudana tare da kunna tutar fasalin `ENABLE_CC_COMPATIBLE_PROVIDER`
   (duba ƙasa).
 
 ## 1. Kunna nau'in mai samarwa mai dacewa da CC
 
 An sanya nau'in mai samarwa mai dacewa da Claude Code a bayan tutar fasali saboda yana
 aika zirga-zirgar da ke kwaikwayon abokin cinikin Claude Code na hukuma sosai. Kunna shi ta
-saita wani sauyin muhalli kafin fara OmniRoute:
+saita wani sauyin muhalli kafin fara 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

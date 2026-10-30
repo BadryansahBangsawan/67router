@@ -4,7 +4,7 @@
 
 ---
 
-Paano tinatantiya, itinatala, at iniuulat ng OmniRoute ang gastos ng bawat request — at kung bakit ang
+Paano tinatantiya, itinatala, at iniuulat ng 67router ang gastos ng bawat request — at kung bakit ang
 numero sa dashboard ay isang **tagasubaybay ng natitipid**, hindi isang singil.
 
 Tingnan din: [Gabay ng User](./USER_GUIDE.md) · [Gallery ng mga Feature](./FEATURES.md)
@@ -13,11 +13,11 @@ Tingnan din: [Gabay ng User](./USER_GUIDE.md) · [Gallery ng mga Feature](./FEAT
 
 ## Ano ito (at ano ang hindi nito ginagawa)
 
-Nagtatalaga ang OmniRoute ng gastos sa USD sa bawat request para sa bawat completion sa pamamagitan ng pag-multiply ng bilang
+Nagtatalaga ang 67router ng gastos sa USD sa bawat request para sa bawat completion sa pamamagitan ng pag-multiply ng bilang
 ng mga token sa mga rate ng pagpepresyo ng isang model. Ang mga numerong ito ang ginagamit ng **Costs** dashboard, ng
 `omniroute cost` / `omniroute usage` CLI, ng mga CSV/JSON export, at ng mga budget para sa bawat API key.
 
-> **Ang "gastos" sa dashboard ay isang tagasubaybay ng natitipid, hindi isang singil.** Hindi ka kailanman sinisingil ng OmniRoute
+> **Ang "gastos" sa dashboard ay isang tagasubaybay ng natitipid, hindi isang singil.** Hindi ka kailanman sinisingil ng 67router
 > — niruruta nito ang iyong mga request sa mga provider na naikonekta mo na (ang sarili mong
 > mga subscription, free tier, at API key). Ang "$290 kabuuang gastos" na ganap na naipon sa mga libreng
 > model ay nangangahulugang humigit-kumulang **$290 ang _hindi_ mo ibinayad** sa isang may-bayad na API. Ang halagang ito ay isang _pagtatantiya_
@@ -29,7 +29,7 @@ Direktang nakasaad ang paliwanag na ito sa [README](../../README.md) ng proyekto
 
 Dahil pagtatantiya ang numero:
 
-- Nakadepende ito sa pricing table na mayroon ang OmniRoute para sa bawat model. Ang isang model na walang pricing
+- Nakadepende ito sa pricing table na mayroon ang 67router para sa bawat model. Ang isang model na walang pricing
   entry ay nag-aambag ng `0` na gastos (ipinapakita ito bilang row na "Legacy / Free" sa explorer).
 - Nagkakaroon pa rin ng _tinatantiyang_ gastos ang traffic mula sa free tier at subscription — ito ang
   halagang natitipid mo, hindi halagang dapat bayaran.
@@ -47,7 +47,7 @@ Nagmumula ang mga gastos sa isang pricing table na tinutukoy ayon sa sumusunod n
 2. **Naka-sync na external pricing** — kinukuha mula sa pampublikong
    `model_prices_and_context_window.json` ng LiteLLM kapag naka-enable ang sync (iniimbak sa hiwalay na
    `pricing_synced` namespace upang hindi nito kailanman ma-overwrite ang iyong mga override).
-3. **Mga hardcoded na default** — kasama sa OmniRoute.
+3. **Mga hardcoded na default** — kasama sa 67router.
 
 Ang external pricing sync ay **opt-in** at naka-disable bilang default. Mga nauugnay na env var
 (tingnan ang [`.env.example`](../../.env.example)):
@@ -191,7 +191,7 @@ may ibang nakasaad.
 
 ## CLI
 
-Inilalantad ng CLI ng OmniRoute ang mga command para sa gastos, paggamit, at pagpepresyo (nakarehistro sa
+Inilalantad ng CLI ng 67router ang mga command para sa gastos, paggamit, at pagpepresyo (nakarehistro sa
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

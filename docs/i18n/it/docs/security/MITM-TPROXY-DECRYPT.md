@@ -4,7 +4,7 @@
 
 ---
 
-La decrittazione trasparente TPROXY è la **5ª modalità di cattura** di OmniRoute per lo stack MITM di
+La decrittazione trasparente TPROXY è la **5ª modalità di cattura** di 67router per lo stack MITM di
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Intercetta e **decrittografa** il traffico HTTPS locale in uscita su Linux
 utilizzando TPROXY del kernel e il routing basato su criteri — **senza** falsificare `/etc/hosts` e
@@ -53,7 +53,7 @@ Utilizzala quando vuoi acquisire e decrittografare il traffico proveniente da un
 - non vuoi interferire con una modifica del proxy a livello di sistema.
 
 Poiché l'intercettazione avviene nel kernel, il processo di origine non richiede **alcuna
-modifica della configurazione** — ma deve considerare attendibile la CA dinamica installata da OmniRoute
+modifica della configurazione** — ma deve considerare attendibile la CA dinamica installata da 67router
 (consulta [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ addon non compilato), il loader dell'addon (`src/mitm/tproxy/transparentSocket.t
 restituisce `null` anziché generare un'eccezione. Lo stato della modalità di acquisizione segnala quindi
 `available: false`, l'interruttore nella dashboard è **disabilitato** con il tooltip
 "La decrittazione TPROXY richiede Linux + root + l'addon nativo", mentre il resto di
-OmniRoute continua a funzionare.
+67router continua a funzionare.
 
 ---
 
@@ -269,7 +269,7 @@ contrassegno di bypass del socket (**SO_MARK**):
 | **Sanificazione degli errori**               | Le risposte di errore della route vengono elaborate tramite `sanitizeErrorMessage()` (Regola rigida n. 12).                                                                                                                                                                                                                                                                                                                                         |
 
 **La CA MITM è una funzionalità potente.** Una CA considerata attendibile dal sistema operativo e in grado di firmare per qualsiasi
-host implica che tutto ciò che OmniRoute intercetta possa essere decifrato. È protetta dalla
+host implica che tutto ciò che 67router intercetta possa essere decifrato. È protetta dalla
 modalità esplicita di acquisizione TPROXY, accessibile solo localmente e disattivata per impostazione predefinita; inoltre, la relativa voce
 viene rimossa dall'archivio delle autorità attendibili quando la modalità viene arrestata.
 
@@ -379,7 +379,7 @@ restituisce `available: false` quando l'addon è assente.
 ### Regole del firewall obsolete dopo un arresto anomalo
 
 `revertTproxy()` è l'esatto inverso dell'applicazione ed è idempotente. L'arresto della
-modalità ripristina le regole; se OmniRoute è stato terminato durante una sessione, utilizza
+modalità ripristina le regole; se 67router è stato terminato durante una sessione, utilizza
 l'azione **Repair** di AgentBridge (`POST /api/tools/agent-bridge/repair`) per annullare lo stato di sistema
 orfano (spoofing DNS, CA root, proxy di sistema). Anche le regole TPROXY `mangle` e la route vengono
 rimosse automaticamente al riavvio.

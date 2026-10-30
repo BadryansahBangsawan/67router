@@ -6,7 +6,7 @@
 
 ## Pag-uulat ng mga Kahinaan
 
-Kung makatuklas ka ng kahinaan sa seguridad ng OmniRoute, mangyaring iulat ito nang responsable:
+Kung makatuklas ka ng kahinaan sa seguridad ng 67router, mangyaring iulat ito nang responsable:
 
 1. **HUWAG** magbukas ng pampublikong GitHub issue
 2. Gamitin ang [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ branch na `stable/v3` (tingnan ang [`ROADMAP.md`](ROADMAP.md) → "Yugto 3 — v
 
 ## Arkitektura ng Seguridad
 
-Nagpapatupad ang OmniRoute ng multi-layered na modelo ng seguridad:
+Nagpapatupad ang 67router ng multi-layered na modelo ng seguridad:
 
 ```
 Kahilingan → CORS → Authz pipeline (uriin → mga patakaran → ipatupad)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Framework ng mga Guardrail
 
-Kasama sa OmniRoute ang isang hot-reloadable na **guardrails registry** (`src/lib/guardrails/`) na may 3 built-in na guardrail na nakaayos ayon sa priyoridad:
+Kasama sa 67router ang isang hot-reloadable na **guardrails registry** (`src/lib/guardrails/`) na may 3 built-in na guardrail na nakaayos ayon sa priyoridad:
 
 | Guardrail          | Priyoridad | Layunin                                                                                                                 |
 | ------------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------- |

@@ -14,7 +14,7 @@ executor-kode, OAuth-standardværdier, headers eller procesmiljøets tilstand.
 Det samme manifest er tilgængeligt via HTTP på
 `GET /api/v1/provider-plugin-manifest` for sidecars, der kører i en separat proces.
 
-OmniRoute annoncerer denne URL til Bifrost og CLIProxyAPI via
+67router annoncerer denne URL til Bifrost og CLIProxyAPI via
 request-headeren `X-OmniRoute-Provider-Manifest-Url`. Indstil
 `OMNIROUTE_PROVIDER_MANIFEST_URL`, når sidecaren har brug for en offentlig URL eller en
 URL på containernetværket i stedet for den lokale request-origin.
@@ -31,7 +31,7 @@ acceptere et `304`.
 ## Mål
 
 Flyt provider-metadata i retning af en plugin-kontrakt, så den aktive request-sti
-med tiden kan ejes af en sidecar med lavere latenstid, mens OmniRoute beholder
+med tiden kan ejes af en sidecar med lavere latenstid, mens 67router beholder
 TypeScript-ruten som policy-gate og fallback. Manifestet er additivt: Det ændrer
 ikke i sig selv request-routing.
 
@@ -75,7 +75,7 @@ at genlæse TypeScript-kilderne.
 | `usage-fetch`        | Har en tilkoblet usage- eller quota-fetcher (`getUsageForProvider`).     |
 | `usage-supported`    | Usage-API'et accepterer denne provider (`isSupportedUsageConnection`).   |
 
-`usage-fetch` er kun til registrering. Det angiver, at OmniRoute ved, hvordan usage-data
+`usage-fetch` er kun til registrering. Det angiver, at 67router ved, hvordan usage-data
 aflæses for provideren; det aktiverer ikke hentning, ændrer quota-semantik eller antyder, at
 Dashboardets quota-widget er aktiveret for provideren — denne widget styres separat af
 `USAGE_SUPPORTED_PROVIDERS`. Sandhedskilden er `USAGE_FETCHER_PROVIDERS` i

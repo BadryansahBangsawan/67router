@@ -25,7 +25,7 @@
 可从导入模态框下载起始文件（**下载 CSV 模板**）。示例：
 
 ```csv
-# OmniRoute 提供者导入（按位置排列的列）
+# 67router 提供者导入（按位置排列的列）
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

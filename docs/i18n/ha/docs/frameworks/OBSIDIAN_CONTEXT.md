@@ -13,7 +13,7 @@
 
 ## Mene ne
 
-OmniRoute yana haɗuwa da rumbun **Obsidian** a matsayin **tushen mahallin bayani** — ma'ajiyar
+67router yana haɗuwa da rumbun **Obsidian** a matsayin **tushen mahallin bayani** — ma'ajiyar
 ilimin Markdown ta gida wadda wakilai ke karantawa da rubutawa ta hanyar sabar MCP da aka
 gina a ciki. Haɗin yana sadarwa da plugin ɗin al'umma na **Obsidian Local REST API** wanda
 ke gudana a cikin manhajar tebur, don haka wakilai za su iya bincika bayanan rubutu,
@@ -76,7 +76,7 @@ kuma yana tabbatar da token ta hanyar kiran status endpoint na Local REST API ka
 ### Daidaita vault ta WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` yana sarrafa daidaita vault na zaɓi mai amfani da WebDAV
-(wanda `src/lib/obsidianSync.ts` ke tafiyarwa). Kunna shi yana nuna OmniRoute zuwa
+(wanda `src/lib/obsidianSync.ts` ke tafiyarwa). Kunna shi yana nuna 67router zuwa
 kundin vault na gida kuma yana ƙirƙirar bazuwar sunan mai amfani/kalmar sirri na WebDAV:
 
 ```bash
@@ -112,8 +112,8 @@ Kayan aikin `obsidian_sync_*` guda huɗu suna ci gaba da amfani da halayen sync-
 
 An ayyana su a cikin `open-sse/mcp-server/tools/obsidianTools.ts`. Ana tantance token/base-URL
 ga kowane kira (na API key da farko, sannan na gama-gari). Kayan aikin da ke hulɗa da **sync server**
-na OmniRoute (kayan aikin `obsidian_sync_*` guda huɗu) suna kuma buƙatar sync auth token da aka saita
-a cikin saitunan OmniRoute.
+na 67router (kayan aikin `obsidian_sync_*` guda huɗu) suna kuma buƙatar sync auth token da aka saita
+a cikin saitunan 67router.
 
 ### Kayan aikin karantawa (`read:obsidian`)
 
@@ -130,7 +130,7 @@ a cikin saitunan OmniRoute.
 | `obsidian_get_periodic_note` | Sami bayanin rubutu na kullum/mako-wata-wata/wata-wata na wata rana (yau idan ba a bayar ba).    |
 | `obsidian_get_tags`          | Jera duk tags na vault tare da yawan bayyanarsu.                                                 |
 | `obsidian_list_commands`     | Jera IDs na commands na Obsidian da ake da su (a yi amfani da `obsidian_execute_command`).       |
-| `obsidian_sync_status`       | Matsayin sync server na OmniRoute: yana gudana, sunan vault, port, uptime, da sync na ƙarshe.    |
+| `obsidian_sync_status`       | Matsayin sync server na 67router: yana gudana, sunan vault, port, uptime, da sync na ƙarshe.     |
 | `obsidian_sync_conflicts`    | Jera rikice-rikicen sync da ba a warware ba (path, conflict path, detected-at).                  |
 
 ### Kayan aikin rubutawa (`write:obsidian`)

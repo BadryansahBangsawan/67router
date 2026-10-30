@@ -41,7 +41,7 @@ vai ārēja integrācija pašlaik ir pieejama.
 | Piedāvājumi atbalstītājiem             | Implementēti kā atsevišķa parakstīta, tikai tiešsaistē pieejama plūsma un informācijas paneļa lapa. Klients atkārtoti validē slēgto priekšrocību shēmu, saglabā pēdējo derīgo kešatmiņu, filtrē ierakstus ar beigušos termiņu un skaidri marķē partneru piedāvājumus.     |
 | Informācija un atbalstītāju atpazīšana | Implementēta kā stingri parakstīta, tikai tiešsaistē pieejama plūsma ar Radar pārvaldītu ELO, faktiskajiem kataloga aktualitātes/tendenču datiem, verificētu lokālo atbalstītāja emblēmu, informācijas paneļa lapu un tikai lokālām CLI statusa/sinhronizācijas komandām. |
 | Maksājumi un transakciju e-pasts       | OSS klientā nav implementēti. Pirkumi, ziedojumi, kvīšu pārskatīšana, atkopšana un pasta piegāde pieder privātajam pakalpojumam; mitinātā pakalpojuma pieejamība joprojām ir atkarīga no tā uzraudzītās izvietošanas un pakalpojumu sniedzēja konfigurācijas.             |
-| Izpētes aģenta darba plūsma            | Nav daļa no šī klienta laidiena. Pārvaldīto plūsmu saturs paliek servera puses dati; nevienā OmniRoute instalācijā nedarbojas autonoms izpētes aģents.                                                                                                                    |
+| Izpētes aģenta darba plūsma            | Nav daļa no šī klienta laidiena. Pārvaldīto plūsmu saturs paliek servera puses dati; nevienā 67router instalācijā nedarbojas autonoms izpētes aģents.                                                                                                                     |
 
 ---
 
@@ -119,7 +119,7 @@ Kad abi ir ieslēgti, sinhronizācijas process ir šāds:
    manuālai ļaunprātīgas izmantošanas pārbaudei; šajās tabulās ne atslēga, ne IP adrese netiek glabāta neapstrādātā formā.
    Infrastruktūras piekļuves žurnāli un šifrētā piegādes izsūtne ir atsevišķas darbības
    robežas.
-3. OmniRoute nekad nesūta Radar pakalpojumam uzvednes, atbildes, sarunas, pakalpojumu sniedzēju akreditācijas datus, modeļu datplūsmu,
+3. 67router nekad nesūta Radar pakalpojumam uzvednes, atbildes, sarunas, pakalpojumu sniedzēju akreditācijas datus, modeļu datplūsmu,
    darbspējas laiku, latentumu vai lokālo pakalpojumu sniedzēja konfigurāciju.
 4. Atbilde tiek verificēta, validēta un lokāli saglabāta kešatmiņā (skatiet
    [Drošības modelis](#security-model)). Radar ir tieši četri servera puses tīkla ceļi:
@@ -239,13 +239,13 @@ kuram tā jau ir, to aktivizē.
 ### Pilna aktivizācija un vadīta iestatīšana
 
 Privātajam plūsmas pakalpojumam un šim OSS klientam ir apzināti šauri nodalīta atbildība: pakalpojums
-izsniedz un validē atbalstītāja atslēgu, savukārt lokālā OmniRoute instalācija šifrē atslēgu,
+izsniedz un validē atbalstītāja atslēgu, savukārt lokālā 67router instalācija šifrē atslēgu,
 sinhronizē parakstītos artefaktus servera pusē un vada pakalpojumu sniedzēja iestatīšanu. Vadītās validācijas secība ir:
 
 1. Iegūstiet no jauna izsniegtu vai atgūtu atslēgu, izmantojot līdzdalībnieka pieprasījumu, plānu/noformēšanas procesu, atkopšanas
    procesu vai pilnvarotu privātā servera operatoru. Neievietojiet neapstrādāto atslēgu žurnālos,
    ekrānuzņēmumos, problēmu komentāros vai komandrindas argumentos.
-2. Iespējojiet `RADAR_ENABLED` funkcionalitātes karogu lokālajā OmniRoute instalācijā. Tas padara lietotāja saskarni
+2. Iespējojiet `RADAR_ENABLED` funkcionalitātes karogu lokālajā 67router instalācijā. Tas padara lietotāja saskarni
    pieejamu, taču tīkla darbības netiek veiktas, kamēr nav saglabāta atsevišķā piekrišana.
 3. Atveriet `/dashboard/radar`, ielīmējiet atslēgu un aktivizējiet. Pārlūks nosūta vienu lokālu
    `POST /api/radar/settings` pieprasījumu ar `{ optIn: true, supporterKey }`; atslēga tiek šifrēta lokāli, un
@@ -309,7 +309,7 @@ derīgas līdz atkārtotai sinhronizācijai.
 
 ### Atzariem piemērotas vides mainīgo pārrakstīšanas iespējas
 
-Divi vides mainīgie ļauj atzariem un pašmitinātājiem noklusējuma OmniRoute pakalpojuma vietā
+Divi vides mainīgie ļauj atzariem un pašmitinātājiem noklusējuma 67router pakalpojuma vietā
 novirzīt klientu uz savu plūsmu — skatiet tālāk
 [Kā pašmitināt plūsmu](#how-to-self-host-a-feed):
 
@@ -465,7 +465,7 @@ Plūsmas `enabled: false` joprojām ir drošības izņēmums: tam ir priekšroka
 Kataloga publikācijas izmanto `schemaVersion: 2`. `contextWindow` un katrs no `tools`, `vision` un
 `thinking` ir neatkarīgi `number | null` / `boolean | null`: `null` nozīmē, ka vērtība nav zināma, savukārt
 `false` nozīmē, ka D16 apstiprināts oficiāls nodrošinātāja avots nepārprotami norāda uz iespējas neesamību.
-Iekšējie OmniRoute reģistra/modeļa specifikācijas karodziņi nekad netiek tieši paaugstināti līdz plūsmas faktiem. Klients
+Iekšējie 67router reģistra/modeļa specifikācijas karodziņi nekad netiek tieši paaugstināti līdz plūsmas faktiem. Klients
 joprojām pieņem v1 momentuzņēmumus; tā kā vecais būvētājs izmantoja `false` kā neesamības vietturi, v1 `false` tiek
 normalizēts kā nezināms, bet v1 `true` joprojām tiek uzskatīts par faktu. Nezināmas shēmas versijas tiek droši noraidītas, un
 pēdējā derīgā kešatmiņa joprojām ir pieejama. Katram v2 modelim ar konteksta/iespējas vērtību, kas nav nulles vērtība, jāietver
@@ -526,7 +526,7 @@ Tālāk norādītās lokālās Radar maršrutu saimes nodrošina lietotāja sask
 | `/api/radar/local-model-state` | DELETE | Notīra rediģējamos pārrakstīšanas laukus, saglabājot visus dzēšanas marķierus.                                                         |
 
 **Stingrs noteikums: šie maršruti nekad nedarbojas kā plūsmas pakalpojuma starpniekserveris.** Pārlūkprogramma sazinās tikai
-ar lokālo OmniRoute serveri. Četri moduļi, kas sazinās ar Radar pakalpojumu, ir
+ar lokālo 67router serveri. Četri moduļi, kas sazinās ar Radar pakalpojumu, ir
 `src/lib/radar/sync.ts` (katalogs), `src/lib/radar/referralsSync.ts` (novirzījumi) un
 `src/lib/radar/offersSync.ts` (piedāvājumi), kā arī `src/lib/radar/intelSync.ts` (Intel); tie visi darbojas
 servera pusē, nekad klienta pusē. Tādējādi
@@ -596,7 +596,7 @@ tā nekad neatjaunina līderu tabulas un atkārtoti neizmanto `token_share`. `/d
 tikai no verificētas lokālās kešatmiņas metadatiem.
 
 CLI nodrošina komandas `omniroute radar status` un `omniroute radar sync`. Abas sazinās tikai ar
-lokālo OmniRoute API. `status` veic tikai lasāmu `GET /api/radar/status`; `sync` nosūta vienu
+lokālo 67router API. `status` veic tikai lasāmu `GET /api/radar/status`; `sync` nosūta vienu
 `POST /api/radar/sync-all` un izdrukā rezultātu katrai plūsmai. Neviena no komandām nelasa, nepieņem un neizdrukā
 atbalstītāja atslēgu, un neviena tieši nesazinās ar Radar pakalpojumu.
 

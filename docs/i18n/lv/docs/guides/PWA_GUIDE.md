@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute tiek piedāvāts kā pilnībā instalējama progresīvā tīmekļa lietotne. Piekļūstot informācijas panelim no jebkuras mobilās pārlūkprogrammas — Android (Chrome) vai iOS (Safari) —, varat izvēlēties opciju „Pievienot sākuma ekrānam” un iegūt vietējai lietotnei līdzīgu pieredzi bez nepieciešamības izmantot lietotņu veikalu.
+67router tiek piedāvāts kā pilnībā instalējama progresīvā tīmekļa lietotne. Piekļūstot informācijas panelim no jebkuras mobilās pārlūkprogrammas — Android (Chrome) vai iOS (Safari) —, varat izvēlēties opciju „Pievienot sākuma ekrānam” un iegūt vietējai lietotnei līdzīgu pieredzi bez nepieciešamības izmantot lietotņu veikalu.
 
 ## Kas ir PWA?
 
-Progresīvā tīmekļa lietotne pārvērš OmniRoute tīmekļa informācijas paneli par risinājumu, kas izskatās un darbojas kā vietējā mobilā lietotne. Pēc instalēšanas tā:
+Progresīvā tīmekļa lietotne pārvērš 67router tīmekļa informācijas paneli par risinājumu, kas izskatās un darbojas kā vietējā mobilā lietotne. Pēc instalēšanas tā:
 
 - Tiek palaista no sākuma ekrāna, izmantojot savu ikonu
 - Tiek atvērta pilnekrāna režīmā — bez pārlūkprogrammas adreses joslas vai ciļņu saskarnes
@@ -20,26 +20,26 @@ Progresīvā tīmekļa lietotne pārvērš OmniRoute tīmekļa informācijas pan
 
 ### Android (Chrome)
 
-1. Atveriet OmniRoute informācijas paneli pārlūkprogrammā Chrome: `http://YOUR_IP:20128`
-2. Chrome automātiski parādīs reklāmkarogu **„Pievienot OmniRoute sākuma ekrānam”**, vai:
+1. Atveriet 67router informācijas paneli pārlūkprogrammā Chrome: `http://YOUR_IP:20128`
+2. Chrome automātiski parādīs reklāmkarogu **„Pievienot 67router sākuma ekrānam”**, vai:
    - Pieskarieties izvēlnei **⋮** (trīs punkti) → **„Pievienot sākuma ekrānam”** vai **„Instalēt lietotni”**
 3. Apstipriniet uzvedni
-4. OmniRoute sākuma ekrānā tiek parādīts kā patstāvīga lietotne
+4. 67router sākuma ekrānā tiek parādīts kā patstāvīga lietotne
 
 ### iOS (Safari)
 
-1. Atveriet OmniRoute informācijas paneli pārlūkprogrammā Safari: `http://YOUR_IP:20128`
+1. Atveriet 67router informācijas paneli pārlūkprogrammā Safari: `http://YOUR_IP:20128`
 2. Pieskarieties pogai **Kopīgot** (lodziņš ar bultiņu)
 3. Ritiniet lejup un pieskarieties opcijai **„Pievienot sākuma ekrānam”**
-4. Piešķiriet nosaukumu (pēc noklusējuma „OmniRoute”) un pieskarieties pogai **Pievienot**
-5. OmniRoute sākuma ekrānā tiek parādīts ar lietotnes ikonu
+4. Piešķiriet nosaukumu (pēc noklusējuma „67router”) un pieskarieties pogai **Pievienot**
+5. 67router sākuma ekrānā tiek parādīts ar lietotnes ikonu
 
 ### Dators (Chrome / Edge)
 
-1. Atveriet OmniRoute informācijas paneli
-2. Adreses joslā noklikšķiniet uz **instalēšanas ikonas** (vai ⋮ → „Instalēt OmniRoute...”)
+1. Atveriet 67router informācijas paneli
+2. Adreses joslā noklikšķiniet uz **instalēšanas ikonas** (vai ⋮ → „Instalēt 67router...”)
 3. Apstipriniet uzvedni
-4. OmniRoute tiek atvērts kā patstāvīgs logs — bez cilnēm un adreses joslas
+4. 67router tiek atvērts kā patstāvīgs logs — bez cilnēm un adreses joslas
 
 ## Funkcijas
 
@@ -49,7 +49,7 @@ Manifests ir konfigurēts ar `display: "fullscreen"`, kas nozīmē, ka instalēt
 
 ### Bezsaistes atbalsts
 
-OmniRoute ietver servisa darbinieku (`sw.js`), kas nodrošina viedu kešošanu:
+67router ietver servisa darbinieku (`sw.js`), kas nodrošina viedu kešošanu:
 
 | Resursa veids                                                          | Stratēģija                                  | Darbība                                                                                                      |
 | ---------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -70,7 +70,7 @@ Ja tīkls nav pieejams un lietotājs pāriet uz jaunu lapu, servisa darbinieks n
 
 ### Lietotnes ikonas
 
-OmniRoute nodrošina katrai platformai optimizētas ikonas:
+67router nodrošina katrai platformai optimizētas ikonas:
 
 | Fails                  | Izmērs            | Izmanto                                     |
 | ---------------------- | ----------------- | ------------------------------------------- |
@@ -93,9 +93,9 @@ Next.js to ģenerē, izmantojot `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Saknes izkārtojums nodrošina visus PWA prasībām nepieciešamos metatagus:
 
 ## Izmantošana ar Termux (Android)
 
-Palaižot OmniRoute Android ierīcē, izmantojot Termux, PWA darbojas nevainojami:
+Palaižot 67router Android ierīcē, izmantojot Termux, PWA darbojas nevainojami:
 
-1. Palaidiet OmniRoute lietotnē Termux: `npx omniroute`
+1. Palaidiet 67router lietotnē Termux: `npx omniroute`
 2. Tajā pašā tālrunī atveriet Chrome: `http://localhost:20128`
 3. Instalējiet PWA, izmantojot opciju „Pievienot sākuma ekrānam”
 4. PWA izveido savienojumu ar lokālo Termux serveri — viss darbojas pašā ierīcē
@@ -156,7 +156,7 @@ Palaižot OmniRoute Android ierīcē, izmantojot Termux, PWA darbojas nevainojam
 
 ## Izmantošana no citām ierīcēm
 
-Instalējiet PWA jebkurā ierīcē, kuras pārlūkprogramma var piekļūt jūsu OmniRoute serverim:
+Instalējiet PWA jebkurā ierīcē, kuras pārlūkprogramma var piekļūt jūsu 67router serverim:
 
 - **Cits tālrunis/planšetdators**: Atveriet `http://PHONE_IP:20128` un instalējiet PWA
 - **Klēpjdators**: Atveriet Chrome/Edge un instalējiet to kā darbvirsmas PWA

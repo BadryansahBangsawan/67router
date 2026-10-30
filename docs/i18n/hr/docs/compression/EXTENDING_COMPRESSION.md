@@ -4,7 +4,7 @@
 
 ---
 
-> **Ukratko**: OmniRouteov mehanizam kompresije je **proširiv** — možete registrirati prilagođene mehanizme, isporučiti jezične pakete za nove jezike i sastavljati višeslojne cjevovode. Ovaj vodič pokazuje kako.
+> **Ukratko**: 67routerov mehanizam kompresije je **proširiv** — možete registrirati prilagođene mehanizme, isporučiti jezične pakete za nove jezike i sastavljati višeslojne cjevovode. Ovaj vodič pokazuje kako.
 
 **Povezani vodiči:**
 
@@ -232,7 +232,7 @@ u izborniku strategije putem svojeg `id`. Testirajte integraciju kombiniranjem m
 
 ## Izrada jezičnih paketa
 
-Kompresija u stilu pećinskog čovjeka koristi **pakete pravila specifične za jezik** kako bi obradila poštapalice, ublažavanje tvrdnji i opširne obrasce u svakom prirodnom jeziku. OmniRoute dolazi sa **6 jezičnih paketa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Kompresija u stilu pećinskog čovjeka koristi **pakete pravila specifične za jezik** kako bi obradila poštapalice, ublažavanje tvrdnji i opširne obrasce u svakom prirodnom jeziku. 67router dolazi sa **6 jezičnih paketa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Struktura paketa
 
@@ -391,7 +391,7 @@ Izlaz mehanizma N postaje ulaz mehanizma N+1.
 
 ### Načini kompresije
 
-OmniRoute odabire **JEDAN način po zahtjevu** na temelju konfiguracije, pragova automatskog pokretanja i nadjačavanja kombinacija.
+67router odabire **JEDAN način po zahtjevu** na temelju konfiguracije, pragova automatskog pokretanja i nadjačavanja kombinacija.
 Dostupni načini definirani su u `open-sse/services/compression/types.ts` (tip `CompressionMode`):
 
 | Način        | Mehanizmi            | Slučaj upotrebe                                                                                                                                                                                                        |
@@ -511,10 +511,10 @@ Da biste njime upravljali putem konfiguracije, postavite `mode: "stacked"` i nav
 
 ## Pravila sinkronizacije s izvornim projektima
 
-OmniRouteovi mehanizmi kompresije u README-u navode nekoliko izvornih projekata
+67routerovi mehanizmi kompresije u README-u navode nekoliko izvornih projekata
 ("inspirirano projektima RTK, Caveman, LLMLingua-2, Troglodita"). Često pitanje
 suradnika glasi: **kada izvorni RTK doda novi filtar alata ili Caveman doda paket
-pravila, kako to dospijeva u OmniRoute?** Ovaj je odjeljak mjerodavan odgovor.
+pravila, kako to dospijeva u 67router?** Ovaj je odjeljak mjerodavan odgovor.
 
 ### Uključene kopije nasuprot neovisnim implementacijama
 
@@ -536,7 +536,7 @@ README navodi "inspirirano projektom", a ne "uključeno".
 `compression-sync`** — i to je namjerno. Budući da su mehanizmi ponovne
 implementacije, filtar iz izvornog RTK-a ili Cavemanov paket pravila ne
 integriraju se kao kod; oni se **ponovno izražavaju kao novo pravilo/filtar u
-OmniRouteovu vlastitom formatu** (pogledajte
+67routerovu vlastitom formatu** (pogledajte
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) i dodaju se ad hoc
 putem uobičajenog PR-a. Gore navedene točke proširenja (prilagođeni mehanizam,
 jezični paket, RTK filtar) odobreni su način za doprinos.
@@ -550,14 +550,14 @@ Nedavni primjeri upravo takvog tijeka:
 ### Headroom (proxy za kompresiju ulaza)
 
 Headroom je **u potpunosti interni** — prikvačena uključena snimka kodeka `gcf`
-uz OmniRouteove vlastite slojeve `smartcrusher` / `toon` / `tabular`. Ne postoji
+uz 67routerove vlastite slojeve `smartcrusher` / `toon` / `tabular`. Ne postoji
 aktivni izvorni projekt koji bi trebalo pratiti izvan uključene kopije; ažuriranja
 za `gcf` osvježavaju se ručno kada se kodek promijeni i ponovno provjeravaju prema
 kontrolnoj točki proračuna kompresije (`check:compression-budget`).
 
 ### Predlaganje poboljšanja inspiriranog izvornim projektom
 
-1. **Nemojte uključivati izvorni kod** — ponovno izrazite izvorno pravilo/filtar u OmniRouteovu formatu.
+1. **Nemojte uključivati izvorni kod** — ponovno izrazite izvorno pravilo/filtar u 67routerovu formatu.
 2. Dodajte ga putem odgovarajuće točke proširenja u nastavku (jezični paket, RTK
    filtar ili prilagođeni mehanizam).
 3. Navedite izvorni projekt u opisu PR-a (pripisivanje zasluga), a ne kopiranjem

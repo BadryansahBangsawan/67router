@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Español)
+# 🌐 67router Proxy Guide (Español)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Evita bloqueos geográficos, protege tu identidad y enruta el tráfico de IA a través de cualquier proxy, sin ninguna complejidad de configuración.**
 
-OmniRoute incluye un sistema completo de gestión de proxies que permite enrutar el tráfico hacia proveedores de IA externos a través de proxies HTTP, HTTPS o SOCKS5. Tanto si te encuentras en una región bloqueada como si necesitas rotación de IP o quieres ocultar tu huella digital, esta guía lo explica todo.
+67router incluye un sistema completo de gestión de proxies que permite enrutar el tráfico hacia proveedores de IA externos a través de proxies HTTP, HTTPS o SOCKS5. Tanto si te encuentras en una región bloqueada como si necesitas rotación de IP o quieres ocultar tu huella digital, esta guía lo explica todo.
 
 ---
 
@@ -51,7 +51,7 @@ Incluso fuera de las regiones bloqueadas, los proxies resultan útiles para:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                     Servidor OmniRoute                        │
+│                     Servidor 67router                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Registro de │    │ Distribuidor │    │ Fetch (undici)   │  │
@@ -83,7 +83,7 @@ Incluso fuera de las regiones bloqueadas, los proxies resultan útiles para:
 
 ## Sistema de proxy de 4 niveles
 
-OmniRoute admite la configuración de proxies en **cuatro ámbitos independientes**, que se resuelven por orden de prioridad:
+67router admite la configuración de proxies en **cuatro ámbitos independientes**, que se resuelven por orden de prioridad:
 
 ```
 Orden de resolución de prioridad (de mayor → menor):
@@ -96,7 +96,7 @@ Orden de resolución de prioridad (de mayor → menor):
 
 ### Cómo funciona la resolución
 
-Cuando OmniRoute envía una solicitud a un proveedor ascendente, llama a `resolveProxyForConnectionFromRegistry()`, que comprueba cada nivel en orden:
+Cuando 67router envía una solicitud a un proveedor ascendente, llama a `resolveProxyForConnectionFromRegistry()`, que comprueba cada nivel en orden:
 
 1. **Nivel de cuenta** — ¿Hay un proxy asignado a este ID de conexión específico?
 2. **Nivel de proveedor** — ¿Hay un proxy asignado a este proveedor (p. ej., `openai`)?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Importación/exportación
 
-Los proxies se incluyen en el sistema de **Copia de seguridad/restauración**. Cuando exporta su configuración de OmniRoute:
+Los proxies se incluyen en el sistema de **Copia de seguridad/restauración**. Cuando exporta su configuración de 67router:
 
 1. Vaya a **Panel → Configuración → Copia de seguridad**
 2. Haga clic en **Exportar** — se incluyen el registro de proxies y las asignaciones
@@ -248,7 +248,7 @@ El registro de proxies también admite la operación **upsert por host+puerto**:
 
 ### Migración heredada
 
-Si configuraste proxies en una versión anterior (previa al registro), OmniRoute los migra automáticamente:
+Si configuraste proxies en una versión anterior (previa al registro), 67router los migra automáticamente:
 
 ```
 Almacén key_value heredado → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Esto ocurre una sola vez durante el primer inicio tras la actualización. Usa `m
 
 > 🆕 **Contribución de [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (incidencia [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute se integra con la plataforma comunitaria **[1proxy](https://1proxy-api.aitradepulse.com)** para proporcionar acceso a **cientos de proxies gratuitos y validados** de todo el mundo. Esto es ideal para usuarios que no disponen de su propia infraestructura de proxies.
+67router se integra con la plataforma comunitaria **[1proxy](https://1proxy-api.aitradepulse.com)** para proporcionar acceso a **cientos de proxies gratuitos y validados** de todo el mundo. Esto es ideal para usuarios que no disponen de su propia infraestructura de proxies.
 
 ### Cómo funciona
 
@@ -273,7 +273,7 @@ OmniRoute se integra con la plataforma comunitaria **[1proxy](https://1proxy-api
 └─────────────┘   proxies     └─────────────────┘               └───────────┘
 ```
 
-1. **Sincronización** — OmniRoute obtiene proxies validados desde la API de 1proxy
+1. **Sincronización** — 67router obtiene proxies validados desde la API de 1proxy
 2. **Almacenamiento** — Los proxies se guardan en la misma tabla `proxy_registry` con `source = 'oneproxy'`
 3. **Filtrado** — Filtra por protocolo, país y puntuación de calidad
 4. **Rotación** — Selecciona el mejor proxy mediante estrategias de calidad, aleatoria o secuencial
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Antidetección y sigilo
 
-OmniRoute no se limita a enrutar el tráfico a través de un proxy, sino que hace que el tráfico parezca legítimo:
+67router no se limita a enrutar el tráfico a través de un proxy, sino que hace que el tráfico parezca legítimo:
 
 ### Suplantación de huella digital TLS
 
@@ -407,13 +407,13 @@ La insignia también muestra la IP resuelta del proxy para su verificación.
 
 ## Modos de proxy ascendente
 
-Para los proveedores que utilizan el patrón CLIProxyAPI, OmniRoute admite tres modos de proxy ascendente:
+Para los proveedores que utilizan el patrón CLIProxyAPI, 67router admite tres modos de proxy ascendente:
 
-| Modo          | Descripción                                                                |
-| ------------- | -------------------------------------------------------------------------- |
-| `native`      | OmniRoute gestiona directamente el enrutamiento del proxy (predeterminado) |
-| `cliproxyapi` | Delega en una instancia externa de CLIProxyAPI                             |
-| `fallback`    | Primero prueba el modo nativo y, si falla, recurre a CLIProxyAPI           |
+| Modo          | Descripción                                                               |
+| ------------- | ------------------------------------------------------------------------- |
+| `native`      | 67router gestiona directamente el enrutamiento del proxy (predeterminado) |
+| `cliproxyapi` | Delega en una instancia externa de CLIProxyAPI                            |
+| `fallback`    | Primero prueba el modo nativo y, si falla, recurre a CLIProxyAPI          |
 
 Configúralo por proveedor:
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API de túneles
 
-Para exponer tu instancia de OmniRoute a Internet (Cloudflare/ngrok/Tailscale) en lugar de enrutar el tráfico saliente a través de un proxy, consulta [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). La API REST de túneles se encuentra en `/api/tunnels/{cloudflared,ngrok,tailscale}/*` y es independiente de la cadena de proxies salientes documentada anteriormente.
+Para exponer tu instancia de 67router a Internet (Cloudflare/ngrok/Tailscale) en lugar de enrutar el tráfico saliente a través de un proxy, consulta [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). La API REST de túneles se encuentra en `/api/tunnels/{cloudflared,ngrok,tailscale}/*` y es independiente de la cadena de proxies salientes documentada anteriormente.
 
 ### API de 1proxy
 
@@ -516,7 +516,7 @@ Establezca `ENABLE_SOCKS5_PROXY=true` en su archivo `.env` y reinicie.
 
 ### Errores "socket hang up" a través del proxy
 
-Esto es normal con proxies económicos que cierran las conexiones inactivas. OmniRoute ya gestiona esta situación mediante:
+Esto es normal con proxies económicos que cierran las conexiones inactivas. 67router ya gestiona esta situación mediante:
 
 - La desactivación de keep-alive en las conexiones de proxy (`keepAliveTimeout: 1`)
 - La desactivación del pipelining (`pipelining: 0`)
@@ -526,7 +526,7 @@ Si el problema persiste, pruebe otro proxy o utilice la función de rotación de
 
 ### "unsupported_country_region_territory" durante OAuth
 
-Asegúrese de que el proxy esté configurado **antes** de iniciar el flujo de OAuth. OmniRoute enruta el intercambio de tokens de OAuth a través del proxy configurado. Configure primero un proxy global o a nivel de proveedor y, después, establezca la conexión.
+Asegúrese de que el proxy esté configurado **antes** de iniciar el flujo de OAuth. 67router enruta el intercambio de tokens de OAuth a través del proxy configurado. Configure primero un proxy global o a nivel de proveedor y, después, establezca la conexión.
 
 ### El proxy no se está utilizando
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Comprobación del estado del proxy (v3.8.16+)
 
-El mecanismo de **fallo rápido del proxy** de OmniRoute (`src/lib/proxyHealth.ts`) detecta proxies inactivos en <2s mediante una comprobación rápida de conexión TCP y, a continuación, **almacena el resultado en caché** para evitar la sobrecarga en cada solicitud.
+El mecanismo de **fallo rápido del proxy** de 67router (`src/lib/proxyHealth.ts`) detecta proxies inactivos en <2s mediante una comprobación rápida de conexión TCP y, a continuación, **almacena el resultado en caché** para evitar la sobrecarga en cada solicitud.
 
 ### Cómo funciona
 
@@ -659,11 +659,11 @@ Los puertos personalizados de la URL (`http://host:9999`) siempre tienen priorid
 
 ## Análisis y observabilidad de proxies
 
-OmniRoute realiza un seguimiento del uso por proxy para ayudar a los operadores a diagnosticar patrones de enrutamiento, picos de latencia y fallos recurrentes.
+67router realiza un seguimiento del uso por proxy para ayudar a los operadores a diagnosticar patrones de enrutamiento, picos de latencia y fallos recurrentes.
 
 ### Datos registrados
 
-Para cada solicitud realizada a través de un proxy configurado, OmniRoute registra:
+Para cada solicitud realizada a través de un proxy configurado, 67router registra:
 
 | Métrica      | Descripción                                            |
 | ------------ | ------------------------------------------------------ |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Árbol de decisión de la estrategia de rotación
 
-Cuando se asignan varios proxies a un ámbito, OmniRoute utiliza una **estrategia de rotación** para elegir cuál usar en cada solicitud. La estrategia se configura en el nivel del ámbito (global, por proveedor, por cuenta o por combinación).
+Cuando se asignan varios proxies a un ámbito, 67router utiliza una **estrategia de rotación** para elegir cuál usar en cada solicitud. La estrategia se configura en el nivel del ámbito (global, por proveedor, por cuenta o por combinación).
 
 ### Estrategias disponibles
 

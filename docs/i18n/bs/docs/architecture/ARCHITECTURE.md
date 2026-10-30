@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Bosanski)
+# 67router Architecture (Bosanski)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Posljednje ažuriranje: 2026-06-28_
 
 ## Izvršni sažetak
 
-OmniRoute je lokalni pristupnik za usmjeravanje AI zahtjeva i nadzorna ploča izgrađena na Next.js-u.
+67router je lokalni pristupnik za usmjeravanje AI zahtjeva i nadzorna ploča izgrađena na Next.js-u.
 Pruža jednu krajnju tačku kompatibilnu s OpenAI-em (`/v1/*`) i usmjerava saobraćaj kroz više uzvodnih pružalaca uz prevođenje, rezervno prebacivanje, osvježavanje tokena i praćenje korištenja.
 
 Osnovne mogućnosti:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Kontrolna tabla u pregledniku]
     end
 
-    subgraph Router[Lokalni proces OmniRoute]
+    subgraph Router[Lokalni proces 67router]
         API[V1 API za kompatibilnost\n/v1/*]
         DASH[Kontrolna tabla + API za upravljanje\n/api/*]
         CORE[SSE + jezgra za prevođenje\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ Moduli OAuth pružalaca usluga (27 pojedinačnih datoteka u `src/lib/oauth/provi
 
 ## 5) Ugrađene usluge (v3.8.4)
 
-OmniRoute može instalirati, nadzirati i usmjeravati zahtjeve prema lokalno pokrenutim procesima AI alata
+67router može instalirati, nadzirati i usmjeravati zahtjeve prema lokalno pokrenutim procesima AI alata
 koji se nazivaju **ugrađene usluge**. Isporučuje ih se pet: 9Router, CLIProxyAPI, Bifrost, Mux i Dario.
 
 Arhitektonski slojevi:
@@ -438,7 +438,7 @@ sami sastavljati logiku zaključavanja/budžeta/rezervnog rješenja.
 - Keš kvota: `src/domain/quotaCache.ts`
 - Stanje degradacije: `src/domain/degradation.ts`
 - Revizija konfiguracije: `src/domain/configAudit.ts`
-- Graditelj metapodataka OmniRoute odgovora: `src/domain/omnirouteResponseMeta.ts`
+- Graditelj metapodataka 67router odgovora: `src/domain/omnirouteResponseMeta.ts`
 - Podsistem procjene: `src/domain/assessment/` — periodični poslovi procjene
 
 ### E. Autorizacijski cjevovod
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Preglednik kontrolne ploče]
     end
 
-    subgraph ContainerOrProcess[OmniRoute izvršno okruženje]
+    subgraph ContainerOrProcess[67router izvršno okruženje]
         Next[Next.js server\nPORT=20128]
         Core[SSE jezgra + izvršitelji]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Svi ostali pružaoci usluga (uključujući prilagođene kompatibilne čvorove) k
 ## Matrica kompatibilnosti pružalaca usluga
 
 > **Napomena:** Matrica u nastavku predstavlja reprezentativan uzorak od 351 registriranog pružaoca usluga u
-> OmniRoute v3.8.0. Za kanonski i kontinuirano ažurirani spisak pogledajte
+> 67router v3.8.0. Za kanonski i kontinuirano ažurirani spisak pogledajte
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (automatski generiran) ili izvor
 > istine u `src/shared/constants/providers.ts` (validiran pomoću Zoda pri učitavanju).
 
@@ -1117,7 +1117,7 @@ Detaljna pohrana sadržaja zahtjeva čuva do četiri faze JSON sadržaja po usmj
 - neobrađeni zahtjev primljen od klijenta
 - prevedeni zahtjev koji je stvarno poslan uzvodno
 - odgovor pružaoca usluge rekonstruisan kao JSON; odgovori koji se prenose tokom sažimaju se na završni sažetak i metapodatke toka
-- završni odgovor klijentu koji vraća OmniRoute; odgovori koji se prenose tokom pohranjuju se u istom sažetom obliku
+- završni odgovor klijentu koji vraća 67router; odgovori koji se prenose tokom pohranjuju se u istom sažetom obliku
 
 ## Sigurnosno osjetljive granice
 

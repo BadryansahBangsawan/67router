@@ -1,10 +1,10 @@
-# OmniRoute Antigravity (Google One AI) Onboarding Guide (አማርኛ)
+# 67router Antigravity (Google One AI) Onboarding Guide (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇦 [ar](../../../ar/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇿 [az](../../../az/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇬 [bg](../../../bg/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇩 [bn](../../../bn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇦 [bs](../../../bs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇿 [cs](../../../cs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇰 [da](../../../da/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇪 [de](../../../de/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇷 [el](../../../el/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇸 [es](../../../es/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇪 [et](../../../et/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇷 [fa](../../../fa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇮 [fi](../../../fi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇷 [fr](../../../fr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇪 [ga](../../../ga/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [gu](../../../gu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ha](../../../ha/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇱 [he](../../../he/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [hi](../../../hi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇷 [hr](../../../hr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇺 [hu](../../../hu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇲 [hy](../../../hy/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇩 [id](../../../id/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ig](../../../ig/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇹 [it](../../../it/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇯🇵 [ja](../../../ja/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇪 [ka](../../../ka/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇭 [km](../../../km/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [kn](../../../kn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇷 [ko](../../../ko/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇹 [lt](../../../lt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇻 [lv](../../../lv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ml](../../../ml/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [mr](../../../mr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇾 [ms](../../../ms/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇹 [mt](../../../mt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇲 [my](../../../my/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇵 [ne](../../../ne/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇱 [nl](../../../nl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇴 [no](../../../no/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [or](../../../or/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [pa](../../../pa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇭 [phi](../../../phi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇱 [pl](../../../pl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇹 [pt](../../../pt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇴 [ro](../../../ro/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇺 [ru](../../../ru/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇰 [si](../../../si/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇰 [sk](../../../sk/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇮 [sl](../../../sl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇸 [sr](../../../sr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇪 [sv](../../../sv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇪 [sw](../../../sw/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ta](../../../ta/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [te](../../../te/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇭 [th](../../../th/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇷 [tr](../../../tr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇰 [ur](../../../ur/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇿 [uz](../../../uz/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇻🇳 [vi](../../../vi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [yo](../../../yo/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/ANTIGRAVITY-ONBOARDING.md)
 
 ---
 
-> **የሚያገኙት**፦ በGoogle One AI Pro የደንበኝነት ምዝገባዎ በኩል Gemini 3.1 Pro፣ Gemini 3.7 Flash፣ Claude Sonnet 4.6 እና ሌሎች ሞዴሎችን መጠቀም — እንደ አንድ ወጥ መግቢያ በር በOmniRoute በኩል የሚተላለፉ።
+> **የሚያገኙት**፦ በGoogle One AI Pro የደንበኝነት ምዝገባዎ በኩል Gemini 3.1 Pro፣ Gemini 3.7 Flash፣ Claude Sonnet 4.6 እና ሌሎች ሞዴሎችን መጠቀም — እንደ አንድ ወጥ መግቢያ በር በ67router በኩል የሚተላለፉ።
 
 **ይፋዊ ማጣቀሻዎች**፦
 
@@ -22,17 +22,17 @@
 
 > የGoogleን ይፋዊ ንጽጽር ለማየት [የAntigravity CLI ማስታወቂያን](https://antigravity.google/blog/introducing-google-antigravity-cli) ይመልከቱ።
 
-| ገጽታ                | `antigravity` (IDE)                        | `agy` (CLI)                                       |
-| ------------------ | ------------------------------------------ | ------------------------------------------------- |
-| **የGoogle ምርት**    | Antigravity 2.0 / Antigravity IDE          | Antigravity CLI                                   |
-| **የኋላ ስርዓት**       | ተመሳሳዩ Google Cloud Code API                | ተመሳሳዩ Google Cloud Code API                       |
-| **OAuth / ቶከን**    | ተመሳሳይ ደንበኛ፣ ተመሳሳይ እድሳት                     | ተመሳሳይ ደንበኛ፣ ተመሳሳይ እድሳት                            |
-| **የሞዴል ካታሎግ**      | ቋሚ የተመረጠ ዝርዝር (በOmniRoute ውስጥ በቋሚነት የተቀመጠ) | `:fetchAvailableModels`ን በመጠቀም ከGoogle በቀጥታ የሚፈተሽ |
-| **Claude ሞዴሎች**    | Sonnet 4.6፣ Opus 4.6 (እያንዳንዳቸው 4 ልዩነቶች)    | Sonnet 4.6፣ Opus 4.6 (እያንዳንዳቸው 4 ልዩነቶች)           |
-| **የGemini አሰያየም**  | ግልጽ መለያዎች (Low/Medium/High)                | የต้น ምንጭ IDs (extra-low/low/agent)                |
-| **ተጨማሪ ሞዴሎች**      | `gpt-oss-120b-medium`                      | ከGoogle የሚቀርቡ ተጨማሪ ሞዴሎችን ሊያካትት ይችላል               |
-| **ነባሪ የአጠቃቀም ሁኔታ** | የIDE ውህደት (VS Code፣ JetBrains)             | የCLI / API መዳረሻ                                   |
-| **ኮታ**             | ከagy ጋር የጋራ (ተመሳሳዩ Google መለያ)             | ከantigravity ጋር የጋራ (ተመሳሳዩ Google መለያ)            |
+| ገጽታ                | `antigravity` (IDE)                       | `agy` (CLI)                                       |
+| ------------------ | ----------------------------------------- | ------------------------------------------------- |
+| **የGoogle ምርት**    | Antigravity 2.0 / Antigravity IDE         | Antigravity CLI                                   |
+| **የኋላ ስርዓት**       | ተመሳሳዩ Google Cloud Code API               | ተመሳሳዩ Google Cloud Code API                       |
+| **OAuth / ቶከን**    | ተመሳሳይ ደንበኛ፣ ተመሳሳይ እድሳት                    | ተመሳሳይ ደንበኛ፣ ተመሳሳይ እድሳት                            |
+| **የሞዴል ካታሎግ**      | ቋሚ የተመረጠ ዝርዝር (በ67router ውስጥ በቋሚነት የተቀመጠ) | `:fetchAvailableModels`ን በመጠቀም ከGoogle በቀጥታ የሚፈተሽ |
+| **Claude ሞዴሎች**    | Sonnet 4.6፣ Opus 4.6 (እያንዳንዳቸው 4 ልዩነቶች)   | Sonnet 4.6፣ Opus 4.6 (እያንዳንዳቸው 4 ልዩነቶች)           |
+| **የGemini አሰያየም**  | ግልጽ መለያዎች (Low/Medium/High)               | የต้น ምንጭ IDs (extra-low/low/agent)                |
+| **ተጨማሪ ሞዴሎች**      | `gpt-oss-120b-medium`                     | ከGoogle የሚቀርቡ ተጨማሪ ሞዴሎችን ሊያካትት ይችላል               |
+| **ነባሪ የአጠቃቀም ሁኔታ** | የIDE ውህደት (VS Code፣ JetBrains)            | የCLI / API መዳረሻ                                   |
+| **ኮታ**             | ከagy ጋር የጋራ (ተመሳሳዩ Google መለያ)            | ከantigravity ጋር የጋራ (ተመሳሳዩ Google መለያ)            |
 
 **የሚገኙ ሞዴሎች (በሙከራ የተረጋገጡ፣ 2026-07-29)**፦
 
@@ -89,11 +89,11 @@ Google Antigravity በመልዕክት ብዛት ሳይሆን በ"የተሰራ �
 
 ### ቁልፍ ዝርዝሮች
 
-- ኮታው **በመለያ ደረጃ የጋራ ነው** — በAntigravity IDE፣ CLI እና OmniRoute ውስጥ ያለው ተመሳሳይ Google መለያ አንድ የኮታ ክምችት ይጋራል
+- ኮታው **በመለያ ደረጃ የጋራ ነው** — በAntigravity IDE፣ CLI እና 67router ውስጥ ያለው ተመሳሳይ Google መለያ አንድ የኮታ ክምችት ይጋራል
 - እያንዳንዱ Google መለያ የራሱ ነጻ ኮታ አለው — በርካታ መለያዎች = በርካታ የኮታ ክምችቶች
 - AI Pro ተጠቃሚዎች ሳምንታዊው የመነሻ ገደብ ላይ ሲደረስ ከ5-ሰዓት ዳግም ማስጀመር ይልቅ **የ7-ቀን መዘጋት** እንደገጠማቸው ሪፖርት አድርገዋል (Google ይህ ለከፍተኛ ፍላጎት ሆን ተብሎ የተነደፈ መሆኑን አረጋግጧል)
 
-**የመለያዎ ኮታ ሲያልቅ**፡ OmniRoute በcombo route ውስጥ በሚቀጥለው ዝግጁ መለያ በራስ-ሰር እንደገና ይሞክራል። በእጅ ጣልቃ መግባት አያስፈልግም።
+**የመለያዎ ኮታ ሲያልቅ**፡ 67router በcombo route ውስጥ በሚቀጥለው ዝግጁ መለያ በራስ-ሰር እንደገና ይሞክራል። በእጅ ጣልቃ መግባት አያስፈልግም።
 
 ---
 
@@ -103,9 +103,9 @@ Google Antigravity በመልዕክት ብዛት ሳይሆን በ"የተሰራ �
 
 ### ዘዴ A፡ ራስ-ሰር (የሚመከር)
 
-OmniRoute ይህን በራስ-ሰር ያከናውናል። በDashboard OAuth በኩል አዲስ Google መለያ ሲያክሉ፦
+67router ይህን በራስ-ሰር ያከናውናል። በDashboard OAuth በኩል አዲስ Google መለያ ሲያክሉ፦
 
-1. OmniRoute ቶከኑን ያድሳል
+1. 67router ቶከኑን ያድሳል
 2. projectIdን ለማግኘት `loadCodeAssist`ን ይጠራል
 3. ምንም project ከሌለ፣ አንድ ለመፍጠር `onboardUser`ን ይጠራል
 4. አዲስ የተፈጠረውን projectId ለማግኘት `loadCodeAssist`ን እንደገና ይሞክራል
@@ -128,14 +128,14 @@ agy login
 # ይህ Cloud Code ምዝገባን ያስጀምርና projectId ይመድባል
 ```
 
-`agy login` በተሳካ ሁኔታ ከተጠናቀቀ በኋላ፣ በOmniRoute Dashboard ውስጥ ቶከኑን ያድሱ። projectId በራስ-ሰር ይገኛል።
+`agy login` በተሳካ ሁኔታ ከተጠናቀቀ በኋላ፣ በ67router Dashboard ውስጥ ቶከኑን ያድሱ። projectId በራስ-ሰር ይገኛል።
 
 ### እንዴት ማረጋገጥ እንደሚቻል
 
 databaseን ይፈትሹ፦
 
 ```bash
-# በOmniRoute container ውስጥ
+# በ67router container ውስጥ
 node -e "const db=require('better-sqlite3')('/app/data/storage.sqlite'); \
   console.log(JSON.stringify(db.prepare(\
     'SELECT email,project_id FROM provider_connections WHERE provider=\"agy\"'\
@@ -154,7 +154,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 ### ችግሩ
 
-Google OAuth ትክክለኛ የማዞሪያ URI ይፈልጋል። የOmniRoute ነባሪ ቅንብር `http://127.0.0.1:20128/callback` (loopback) ይጠቀማል። ይህ ለአካባቢያዊ ግንባታዎች ይሠራል፣ ነገር ግን **ለርቀት ማሰማራቶች አይሠራም** (ለምሳሌ፣ በLAN IP በኩል የሚደረስበት ሰርቨር)።
+Google OAuth ትክክለኛ የማዞሪያ URI ይፈልጋል። የ67router ነባሪ ቅንብር `http://127.0.0.1:20128/callback` (loopback) ይጠቀማል። ይህ ለአካባቢያዊ ግንባታዎች ይሠራል፣ ነገር ግን **ለርቀት ማሰማራቶች አይሠራም** (ለምሳሌ፣ በLAN IP በኩል የሚደረስበት ሰርቨር)።
 
 Google የሚከተሉትን የማዞሪያ URIዎች ውድቅ ያደርጋል፦
 
@@ -165,7 +165,7 @@ Google የሚከተሉትን የማዞሪያ URIዎች ውድቅ ያደርጋል
 
 **አማራጭ A፦ አብሮ የተካተተውን OAuth ፍሰት ይጠቀሙ (ነባሪ)**
 
-- OmniRouteን ከ`localhost` ወይም `127.0.0.1` ሲደርሱበት ይሠራል
+- 67routerን ከ`localhost` ወይም `127.0.0.1` ሲደርሱበት ይሠራል
 - ምንም ውቅር አያስፈልግም
 
 **አማራጭ B፦ ብጁ OAuth ማረጋገጫዎች**
@@ -180,9 +180,9 @@ Google የሚከተሉትን የማዞሪያ URIዎች ውድቅ ያደርጋል
 
 **አማራጭ C፦ ለመጀመሪያ መግቢያ agy CLIን ይጠቀሙ**
 
-- OmniRouteን በሚደርስበት ማሽን ላይ `agy login`ን ያስኪዱ
+- 67routerን በሚደርስበት ማሽን ላይ `agy login`ን ያስኪዱ
 - የOAuth ፍሰቱ በአካባቢው ይጠናቀቃል፣ ቶከኖችም ይከማቻሉ
-- በDashboard በኩል ግንኙነቱን ወደ OmniRoute ያስመጡ
+- በDashboard በኩል ግንኙነቱን ወደ 67router ያስመጡ
 
 ### ገደቦች
 
@@ -193,7 +193,7 @@ Google የሚከተሉትን የማዞሪያ URIዎች ውድቅ ያደርጋል
 
 ## 5. ችግር መፍታት፦ ራስ-ሰር ማዋቀር ሳይሳካ ሲቀር
 
-OmniRoute ለአብዛኛዎቹ መለያዎች የprojectId ፍለጋን እና የመጀመሪያ ምዝገባን በራስ-ሰር ያስተናግዳል። ይህ ሳይሳካ ሲቀር፣ ዋናው ምክንያት ብዙውን ጊዜ ከሚከተሉት አንዱ ነው፦
+67router ለአብዛኛዎቹ መለያዎች የprojectId ፍለጋን እና የመጀመሪያ ምዝገባን በራስ-ሰር ያስተናግዳል። ይህ ሳይሳካ ሲቀር፣ ዋናው ምክንያት ብዙውን ጊዜ ከሚከተሉት አንዱ ነው፦
 
 ### የመለያው ክልል ታግዷል
 
@@ -221,7 +221,7 @@ OmniRoute ለአብዛኛዎቹ መለያዎች የprojectId ፍለጋን እና
 
 **ዋና ምክንያት**፦ መለያው ከዚህ በፊት በGoogle Cloud Code ተመዝግቦ አያውቅም፣ እና ራስ-ሰር የመጀመሪያ ምዝገባው አልተሳካም።
 
-**መፍትሔ**፦ የCloud Code ምዝገባን ለማስጀመር `agy login`ን በእጅ ያስኪዱ፣ ከዚያም በOmniRoute Dashboard ውስጥ ቶከኑን ያድሱ።
+**መፍትሔ**፦ የCloud Code ምዝገባን ለማስጀመር `agy login`ን በእጅ ያስኪዱ፣ ከዚያም በ67router Dashboard ውስጥ ቶከኑን ያድሱ።
 
 ### ቶከኑ ጊዜው አልፏል ወይም ተሰርዟል
 
@@ -273,4 +273,4 @@ OmniRoute ለአብዛኛዎቹ መለያዎች የprojectId ፍለጋን እና
 
 ---
 
-_ለመጨረሻ ጊዜ የተዘመነው፦ 2026-07-31። በOmniRoute v3.8.50 ላይ የተመሠረተ።_
+_ለመጨረሻ ጊዜ የተዘመነው፦ 2026-07-31። በ67router v3.8.50 ላይ የተመሠረተ።_

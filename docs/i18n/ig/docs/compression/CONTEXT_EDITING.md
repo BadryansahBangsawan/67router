@@ -4,13 +4,13 @@
 
 ---
 
-**Ndezi Context** e nyefere bụ njirimara njikwa context nke naanị Claude. N'adịghị ka engine mkpakọ mpaghara nke OmniRoute
+**Ndezi Context** e nyefere bụ njirimara njikwa context nke naanị Claude. N'adịghị ka engine mkpakọ mpaghara nke 67router
 (Caveman, RTK, LLMLingua, stacked pipelines) — ndị na-edegharị request body
 _tupu_ ọ pụọ na proxy — Ndezi Context na-arịọ **provider** ka ọ kpochapụ block ochie
-nke tool-use / tool-result na context window ya na-aga n'ihu. OmniRoute na-etinye naanị parameter
+nke tool-use / tool-result na context window ya na-aga n'ihu. 67router na-etinye naanị parameter
 n'ime body (`context_management.edits[]`); Claude na-eji tokenizer nke ya eme mkpochapụ ahụ n'ezie.
 
-Nke a bụ ikike e nyefere site n'ọdịdị ya: provider ndị ọzọ na-ajụ parameter ahụ, ya mere OmniRoute na-amachi
+Nke a bụ ikike e nyefere site n'ọdịdị ya: provider ndị ọzọ na-ajụ parameter ahụ, ya mere 67router na-amachi
 ya kpamkpam na Claude na relay ndị kwekọrọ na Claude-Code.
 
 Isi mmalite nke eziokwu: `open-sse/config/contextEditing.ts` (strategy ids, ntinye n'ime body, iwepụta telemetry),
@@ -19,7 +19,7 @@ Isi mmalite nke eziokwu: `open-sse/config/contextEditing.ts` (strategy ids, ntin
 
 ## Ihe `clear_tool_uses` na-eme
 
-OmniRoute na-etinye otu edit n'ime Anthropic Messages body a na-ezipụ:
+67router na-etinye otu edit n'ime Anthropic Messages body a na-ezipụ:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute na-etinye otu edit n'ime Anthropic Messages body a na-ezipụ:
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 A na-akpọsa beta ahụ site na header `anthropic-beta: context-management-2025-06-27`, nke
-OmniRoute na-ezipụlarị na request Claude.
+67router na-ezipụlarị na request Claude.
 
 `applyContextEditingToBody()` na-eme ntinye ahụ, ọ bụkwa **idempotent**: ọ bụrụ na edit `clear_tool_uses`
 adịlarị na body (nke oku gara aga tinyere ma ọ bụ nke client nyere), a na-ahapụ body ahụ
-otu ọ dị. Ọ bụrụ na edit `clear_thinking_20251015` dịkwa, OmniRoute na-eme stable-sort ka
+otu ọ dị. Ọ bụrụ na edit `clear_thinking_20251015` dịkwa, 67router na-eme stable-sort ka
 edit `clear_thinking` bịa n'ihu, n'ihi na Anthropic chọrọ ka `clear_thinking` buru ụzọ bịa tupu
 `clear_tool_uses` n'ime array `edits[]`.
 
@@ -145,7 +145,7 @@ Claude n’ezie na-ebu beta ahụ n’ime `ANTHROPIC_BETA_BASE`, ọ naghịkwa 
 
 ## Telemetry `applied_edits`
 
-Mgbe response Claude gasịrị, OmniRoute na-edekọ oke context provider ahụ kpochapụrụ n’ezie. Nke a
+Mgbe response Claude gasịrị, 67router na-edekọ oke context provider ahụ kpochapụrụ n’ezie. Nke a
 **anaghị** aga site na stream — a na-ewepụta ya site na body response na-abụghị streaming dịka ike siri dị, ọ naghịkwa
 emetụta response ahụ ma ọlị (a na-eleghara ọdịda telemetry anya).
 
@@ -175,14 +175,14 @@ label engine `context-editing`, a pụkwara ịmata ọdịiche ya na nchekwa RT
 
 | Akụkụ                       | Injin mpaghara (Caveman / RTK / LLMLingua / stacked) | Ndezigharị Ọdịnaya E Nyefere N'aka Onye Na-enye Ọrụ |
 | --------------------------- | ---------------------------------------------------- | --------------------------------------------------- |
-| Ebe ọ na-arụ ọrụ            | N'ime OmniRoute, tupu arịrịọ ahụ apụ na proxy        | N'ime onye na-enye ọrụ (Claude), n'akụkụ sava       |
+| Ebe ọ na-arụ ọrụ            | N'ime 67router, tupu arịrịọ ahụ apụ na proxy         | N'ime onye na-enye ọrụ (Claude), n'akụkụ sava       |
 | Ihe ọ na-edezi              | Ederede prompt / context / nsonaazụ tool             | Blọk ochie nke ojiji tool / nsonaazụ tool           |
 | Oke ndị na-enye ọrụ         | Ndị na-enye ọrụ niile                                | Naanị `claude` + `anthropic-compatible-cc-*`        |
 | Ihe mgbanyụ/mgbanye         | Ntọala ọnọdụ mkpakọ                                  | `contextEditing.enabled`                            |
 | Ọnọdụ ọdịda                 | Ọ bụrụ na ọ daa, ọ na-eji ederede mbụ                | Nlaghachi 400: wepụ paramita, nwaa ọzọ otu ugboro   |
 | Telemetry nke ego echekwara | `engine: <engine id>`                                | `engine: "context-editing"`                         |
 
-Ha abụọ na-akwado ibe ha: injin mpaghara na-akpakọ baitị ndị OmniRoute na-eziga; Ndezigharị Ọdịnaya na-enye
+Ha abụọ na-akwado ibe ha: injin mpaghara na-akpakọ baitị ndị 67router na-eziga; Ndezigharị Ọdịnaya na-enye
 Claude ohere iwepụ akụkụ ndị na-adịghịzi mkpa na ọdịnaya na-aga n'ihu n'ofe ntụgharị mkparịta ụka. Enwere ike ime ka ha abụọ rụọ ọrụ ọnụ.
 
 ## Hụkwa

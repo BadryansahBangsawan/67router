@@ -5,7 +5,7 @@
 ---
 
 > **Kiekvieno katalogo ir šakninio failo vienos eilutės aprašymas.**
-> Paskutinį kartą atnaujinta: 2026-06-28 — OmniRoute v3.8.40
+> Paskutinį kartą atnaujinta: 2026-06-28 — 67router v3.8.40
 >
 > Naudokite šį žemėlapį, kad galėtumėte greitai naršyti kodo bazėje. Norėdami įsigilinti, sekite nuorodas į specializuotą dokumentaciją.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Visas leidimo procesas (įgūdžiai, husky, sutartiniai įsipareigojimai, diegimas)                            |
 | `COVERAGE_PLAN.md`          | Testų aprėpties tikslai ir dabartinė būsena                                                                |
 | `FREE_TIERS.md`             | Atrinkti nemokamų planų teikėjai (48+ nemokami + 11 OAuth)                                                 |
-| `CLI-TOOLS.md`              | Išorinės CLI integracijos + vidinis OmniRoute CLI                                                          |
+| `CLI-TOOLS.md`              | Išorinės CLI integracijos + vidinis 67router CLI                                                           |
 | `I18N.md`                   | i18n architektūra, kalbos pridėjimas, 67 lokalės                                                           |
 | `UNINSTALL.md`              | Švaraus pašalinimo veiksmai                                                                                |
 | `PROVIDER_REFERENCE.md`     | **Automatiškai sugeneruotas** 375 teikėjų katalogas (generuoti iš naujo: `npm run gen:provider-reference`) |

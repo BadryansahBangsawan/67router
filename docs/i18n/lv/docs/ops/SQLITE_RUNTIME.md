@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute startēšanas laikā nosaka SQLite draiveri, izmantojot 5 pakāpju atkāpšanās ķēdi:
+67router startēšanas laikā nosaka SQLite draiveri, izmantojot 5 pakāpju atkāpšanās ķēdi:
 
 1. **Komplektā iekļautais `better-sqlite3`** (izmantojot `dependencies` failā `package.json`)
    — ātrākais variants, vietējais binārais fails, ko instalē `npm install`, ja ir pieejami būvēšanas rīki.
@@ -28,13 +28,13 @@ OmniRoute startēšanas laikā nosaka SQLite draiveri, izmantojot 5 pakāpju atk
 - **Nav būvēšanas rīku**: Dažās vidēs (uzņēmumu Windows sistēmās bez VS Build
   Tools, minimālos Docker attēlos) nevar kompilēt `better-sqlite3`. Izpildlaika
   instalētājs iegūst iepriekš izveidotu bināro failu no npm reģistra; atkāpšanās
-  draiveri nodrošina, ka OmniRoute joprojām var startēties, pat ja tas neizdodas.
+  draiveri nodrošina, ka 67router joprojām var startēties, pat ja tas neizdodas.
 - **No tīkla izolētas sistēmas**: Ja npm reģistrs nav sasniedzams, `node:sqlite`
   vai `sql.js` garantē pamata funkcionalitāti.
 
 ## Maģisko baitu validācija
 
-Pirms izpildlaikā instalēta `.node` faila ielādes OmniRoute nolasa pirmos 8
+Pirms izpildlaikā instalēta `.node` faila ielādes 67router nolasa pirmos 8
 baitus un salīdzina tos ar zināmajiem platformu maģiskajiem baitiem:
 
 | Platforma              | Baiti (hex)   | Apzīmējums  |
@@ -107,9 +107,9 @@ Implementācija:
 ## Viena rakstītāja topoloģija (HA netiek atbalstīta)
 
 Iepriekš aprakstītā draiveru atkāpšanās ķēde joprojām darbojas **vienā procesā**.
-OmniRoute ar noklusējuma SQLite konfigurāciju izmanto **vienu rakstītāju**:
+67router ar noklusējuma SQLite konfigurāciju izmanto **vienu rakstītāju**:
 
-- Nepievienojiet divas OmniRoute replikas vienam un tam pašam `storage.sqlite` failam.
+- Nepievienojiet divas 67router replikas vienam un tam pašam `storage.sqlite` failam.
 - Konteinera restartēšana, Recreate izvietošana, procesa apturēšana OOM dēļ vai HEALTHCHECK restartēšana
   pārtrauc katru aktīvo SSE sesiju. Standarta darbības ceļā sesiju pakāpeniska slēgšana nav paredzēta.
 - Orķestratora darbspējas pārbaude, kas lēnu `/healthz` uzskata par nedarbojošos, apturēs vienīgo

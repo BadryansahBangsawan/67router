@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute menggunakan **SQLite dengan penjurnalan WAL** sebagai stor utama, dengan penyulitan **AES-256-GCM** ketika disimpan untuk medan sensitif. Panduan ini merangkumi skema, migrasi, sandaran/pemulihan, dan buku panduan operasi.
+> **TL;DR**: 67router menggunakan **SQLite dengan penjurnalan WAL** sebagai stor utama, dengan penyulitan **AES-256-GCM** ketika disimpan untuk medan sensitif. Panduan ini merangkumi skema, migrasi, sandaran/pemulihan, dan buku panduan operasi.
 
 **Sumber:**
 
@@ -19,7 +19,7 @@
 
 ## Mengapa SQLite?
 
-OmniRoute memilih SQLite berbanding PostgreSQL/MySQL atas beberapa sebab:
+67router memilih SQLite berbanding PostgreSQL/MySQL atas beberapa sebab:
 
 | Faktor             | SQLite                                         | PostgreSQL                                         |
 | ------------------ | ---------------------------------------------- | -------------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute memilih SQLite berbanding PostgreSQL/MySQL atas beberapa sebab:
 | **Sandaran**       | Salinan fail tunggal                           | `pg_dump` atau syot kilat sistem fail              |
 | **Kes penggunaan** | Pemasangan per pengguna, terbenam              | SaaS berbilang penyewa                             |
 
-Untuk penggunaan **pengguna tunggal, tika tunggal** (kes penggunaan utama OmniRoute), SQLite lebih ringkas dan pantas.
+Untuk penggunaan **pengguna tunggal, tika tunggal** (kes penggunaan utama 67router), SQLite lebih ringkas dan pantas.
 
 ### Penjurnalan WAL
 
@@ -50,7 +50,7 @@ Saiz cache lalai ialah **65,536 KiB (64 MiB)**. SQLite mentafsirkan `cache_size`
 negatif sebagai had atas anggaran dalam KiB dan memperuntukkan halaman mengikut
 keperluan. **Tetapan > Sistem & Storan > Saiz Cache** menerima nilai integer dari
 **1 hingga 1,000,000 KiB**; penyimpanan tetapan akan menerapkannya pada sambungan
-pangkalan data aktif, dan OmniRoute memulihkan nilai tersimpan ketika dimulakan.
+pangkalan data aktif, dan 67router memulihkan nilai tersimpan ketika dimulakan.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Seni Bina Modul Domain
 
-Pangkalan data OmniRoute mempunyai **110 modul TypeScript peringkat atas** dalam `src/lib/db/`. Setiap modul domain:
+Pangkalan data 67router mempunyai **110 modul TypeScript peringkat atas** dalam `src/lib/db/`. Setiap modul domain:
 
 - Memiliki satu atau lebih jadual khusus
 - Mengeksport fungsi CRUD berjenis
@@ -90,7 +90,7 @@ Pangkalan data OmniRoute mempunyai **110 modul TypeScript peringkat atas** dalam
 
 ### 110 Modul DB Peringkat Atas
 
-OmniRoute mempunyai **110 fail TypeScript peringkat atas** dalam `src/lib/db/`. Di bawah ialah sampel modul teras; lihat penyenaraian direktori untuk senarai lengkap:
+67router mempunyai **110 fail TypeScript peringkat atas** dalam `src/lib/db/`. Di bawah ialah sampel modul teras; lihat penyenaraian direktori untuk senarai lengkap:
 
 | Modul                   | Jadual                                                         | Tanggungjawab                                                             |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Senarai penuh kira-kira 30+ jadual terdapat dalam `src/lib/db/migrations/`.
 
 ## Migrasi
 
-OmniRoute menggunakan **migrasi berversi dan idempoten** dalam `src/lib/db/migrations/`. Setiap migrasi ialah satu fail SQL yang dinamakan `NNN_description.sql`.
+67router menggunakan **migrasi berversi dan idempoten** dalam `src/lib/db/migrations/`. Setiap migrasi ialah satu fail SQL yang dinamakan `NNN_description.sql`.
 
 ### Penamaan Migrasi
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Perubahan yang tidak serasi dengan versi terdahulu** (contohnya, menggugurkan lajur) adalah rumit. OmniRoute TIDAK menyokong penurunan versi — sebaik sahaja migrasi digunakan, perubahan skema tersebut adalah kekal. Rancang dengan sewajarnya.
+> **Perubahan yang tidak serasi dengan versi terdahulu** (contohnya, menggugurkan lajur) adalah rumit. 67router TIDAK menyokong penurunan versi — sebaik sahaja migrasi digunakan, perubahan skema tersebut adalah kekal. Rancang dengan sewajarnya.
 
 ---
 
@@ -310,7 +310,7 @@ Atas sebab prestasi, perkara berikut disimpan dalam bentuk teks biasa:
 
 ## Peringatan Penyulitan (v3.8.16+)
 
-OmniRoute menggunakan **`migrateLegacyEncryptedString()`** untuk mengendalikan dua skim penyulitan secara telus:
+67router menggunakan **`migrateLegacyEncryptedString()`** untuk mengendalikan dua skim penyulitan secara telus:
 
 - **Legasi** (sebelum v3.5.0): "penyulitan" berasaskan XOR (bukan kriptografi sebenar)
 - **Semasa**: AES-256-GCM dengan IV dan tag pengesahan yang betul
@@ -399,7 +399,7 @@ Untuk membuat sandaran pangkalan data aktif tanpa masa henti:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Ini menggunakan API sandaran dalam talian SQLite — selamat dijalankan semasa OmniRoute sedang berjalan.
+Ini menggunakan API sandaran dalam talian SQLite — selamat dijalankan semasa 67router sedang berjalan.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Pemadatan
 
-Tika OmniRoute yang berjalan dalam jangka masa panjang mendapat manfaat daripada pelaksanaan `VACUUM` sekali-sekala:
+Tika 67router yang berjalan dalam jangka masa panjang mendapat manfaat daripada pelaksanaan `VACUUM` sekali-sekala:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Tetapkan Semula (Padam) Semua Data
 
 ```bash
-# Hentikan OmniRoute terlebih dahulu
+# Hentikan 67router terlebih dahulu
 omniroute stop
 
 # Padam fail DB
@@ -613,7 +613,7 @@ Proses lain sedang memegang kunci tulis. Anda boleh:
 
 - Tunggu sehingga proses lain selesai (semak `lsof | grep storage.sqlite`)
 - Tamatkan proses lain
-- Jika masalah berterusan, mulakan semula OmniRoute
+- Jika masalah berterusan, mulakan semula 67router
 
 ### "Kekangan kunci asing gagal"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Migrasi dijalankan dalam transaksi, jadi ia sepatutnya telah digulung balik. Jika tidak:
 
-1. **Hentikan OmniRoute** (cegah percubaan selanjutnya)
+1. **Hentikan 67router** (cegah percubaan selanjutnya)
 2. **Semak keadaan DB** dengan `sqlite3`
 3. **Baiki secara manual** migrasi separa
-4. **Jalankan semula** OmniRoute (migrasi akan dicuba semula)
+4. **Jalankan semula** 67router (migrasi akan dicuba semula)
 
 Untuk mencegah perkara ini, sentiasa uji migrasi pada salinan terlebih dahulu.
 

@@ -4,7 +4,7 @@
 
 ---
 
-Wenn OmniRoute innerhalb von Docker ausgeführt wird, schlagen die veralteten Abläufe **Import aus Cursor IDE** /
+Wenn 67router innerhalb von Docker ausgeführt wird, schlagen die veralteten Abläufe **Import aus Cursor IDE** /
 `cursor-agent` fehl, da der Container nicht auf die Cursor-Installation des Hosts
 zugreifen kann. Verwenden Sie stattdessen **Mit Cursor anmelden** (Deep-Control-PKCE).
 
@@ -14,7 +14,7 @@ zugreifen kann. Verwenden Sie stattdessen **Mit Cursor anmelden** (Deep-Control-
    `~/.config/Cursor/User/globalStorage/state.vscdb` _innerhalb_ des Containers.
    Unter Docker Desktop für macOS wird die IDE-Datenbank des Hosts standardmäßig nicht eingebunden, und
    das Betriebssystem des Containers ist Linux, selbst wenn auf dem Host Darwin ausgeführt wird.
-2. **Keine `cursor-agent`-Binärdatei** — Offizielle OmniRoute-Images enthalten
+2. **Keine `cursor-agent`-Binärdatei** — Offizielle 67router-Images enthalten
    `cursor-agent` nicht. „Verfügbare Modelle“ führte zuvor
    `cursor-agent --list-models` in einer Shell aus und griff ersatzweise auf einen statischen Katalog zurück.
 3. **Falsche Binärdatei** — Binden Sie **keinen** macOS-`cursor-agent` in einen Linux-
@@ -24,11 +24,11 @@ zugreifen kann. Verwenden Sie stattdessen **Mit Cursor anmelden** (Deep-Control-
 
 1. Öffnen Sie **Dashboard → Anbieter → Cursor**.
 2. Wählen Sie den Tab **Mit Cursor anmelden**.
-3. Klicken Sie auf **Mit Cursor anmelden** — OmniRoute öffnet
+3. Klicken Sie auf **Mit Cursor anmelden** — 67router öffnet
    `https://cursor.com/loginDeepControl?…` im Browser Ihres **Hosts**.
-4. Bestätigen Sie die Anmeldung im Browser und kehren Sie anschließend zum Dashboard zurück. OmniRoute
+4. Bestätigen Sie die Anmeldung im Browser und kehren Sie anschließend zum Dashboard zurück. 67router
    fragt `api2.cursor.sh/auth/poll` ab, bis die Token eintreffen.
-5. OmniRoute speichert **Zugriffs- und Aktualisierungs-Token** und aktualisiert sie über
+5. 67router speichert **Zugriffs- und Aktualisierungs-Token** und aktualisiert sie über
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Dieser Weg erfordert weder Cursor IDE noch `cursor-agent` innerhalb des Containers.
@@ -37,10 +37,10 @@ Dieser Weg erfordert weder Cursor IDE noch `cursor-agent` innerhalb des Containe
 
 Bei einer angemeldeten Verbindung bevorzugt **Verfügbare Modelle / Automatische Synchronisierung** den
 HTTP-Katalog `AiService/AvailableModels` von Cursor unter Verwendung des Bearer-Tokens der Verbindung.
-Falls dies fehlschlägt, versucht OmniRoute weiterhin, den `cursor-agent` des Hosts zu verwenden (sofern vorhanden), und greift danach
+Falls dies fehlschlägt, versucht 67router weiterhin, den `cursor-agent` des Hosts zu verwenden (sofern vorhanden), und greift danach
 auf den statischen Registry-Ausgangsbestand zurück.
 
-OmniRoute stellt im Katalog immer **`auto`** bereit (Anzeige „Auto“), zusätzlich zu den
+67router stellt im Katalog immer **`auto`** bereit (Anzeige „Auto“), zusätzlich zu den
 OpenCodex-artigen Routermodi **`auto-cost`**, **`auto-balance`** und
 **`auto-intelligence`**. Bei der Übertragung werden diese dem Cursor-Modell `default`
 zugeordnet (mit einem `optimization`-ModelParameter für die drei Varianten). Bevorzugen Sie
@@ -87,7 +87,7 @@ allein ist nicht mehr erforderlich).
 ## Leere Durchläufe / Nutzung ausgeschöpft
 
 Wenn Cursor einen Lauf akzeptiert, aber keinen Assistententext zurückgibt (was häufig vorkommt, wenn die Premium-
-Nutzung ausgeschöpft ist), zeigt OmniRoute einen handlungsorientierten **429**-Fehler (Kontingenthinweise) oder
+Nutzung ausgeschöpft ist), zeigt 67router einen handlungsorientierten **429**-Fehler (Kontingenthinweise) oder
 **502**-Fehler mit Hinweisen an — nicht lediglich „Anbieter hat leeren Inhalt zurückgegeben“. Streaming-
 Fehler wie `not_found: AI Model Not Found` (Nutzungszeitfenster ausgeschöpft) werden als
 **Cursor-Ratenlimit / Nutzung überschritten** klassifiziert und behalten diese Meldung
@@ -97,7 +97,7 @@ die Limits Ihres Cursor-Tarifs.
 
 ## Clientversion (headless)
 
-Ohne eine lokale `cursor-agent`-Installation ermittelt OmniRoute
+Ohne eine lokale `cursor-agent`-Installation ermittelt 67router
 `x-cursor-client-version` zunächst über die Umgebungsvariable `CURSOR_AGENT_CLI_VERSION`, dann über einen auf dem Datenträger zwischengespeicherten
 Abruf des Cursor-Installationsskripts und schließlich über eine fest vorgegebene Build-ID. Überschreiben Sie den Wert bei
 Bedarf mit `CURSOR_AGENT_CLI_VERSION`.

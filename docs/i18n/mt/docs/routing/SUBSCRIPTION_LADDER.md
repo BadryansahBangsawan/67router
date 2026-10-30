@@ -10,7 +10,7 @@
 
 ## Għaliex jeżisti dan
 
-OmniRoute diġà jwieġeb żewġ mistoqsijiet dwar l-ispejjeż, iżda l-ebda waħda minnhom ma hija dik li jistaqsu l-biċċa l-kbira tal-operaturi.
+67router diġà jwieġeb żewġ mistoqsijiet dwar l-ispejjeż, iżda l-ebda waħda minnhom ma hija dik li jistaqsu l-biċċa l-kbira tal-operaturi.
 
 | Mekkaniżmu eżistenti                                     | Iwieġeb                                            |
 | -------------------------------------------------------- | -------------------------------------------------- |

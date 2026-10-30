@@ -4,7 +4,7 @@
 
 ---
 
-RTK glaudinimas yra „OmniRoute“ komandų kontekstą atpažįstantis terminalo ir įrankių išvesties glaudinimo variklis. Jis skirtas programavimo agentų sesijoms, kuriose kontekstas daugiausia auga dėl testų žurnalų, komponavimo išvesties, paketų tvarkyklių perteklinės informacijos, apvalkalo seansų išrašų, Docker išvesties, git išvesties ir dėklo pėdsakų.
+RTK glaudinimas yra „67router“ komandų kontekstą atpažįstantis terminalo ir įrankių išvesties glaudinimo variklis. Jis skirtas programavimo agentų sesijoms, kuriose kontekstas daugiausia auga dėl testų žurnalų, komponavimo išvesties, paketų tvarkyklių perteklinės informacijos, apvalkalo seansų išrašų, Docker išvesties, git išvesties ir dėklo pėdsakų.
 
 RTK gali veikti tiesiogiai su `defaultMode: "rtk"` arba būti pirmasis sudėtinio konvejerio etapas, paprastai:
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 Tokia tvarka pirmiausia suglaudinama triukšminga mašininė išvestis, o tada „Caveman“ sutraukia likusį tekstą.
 
-Pirminio RTK projekto duomenimis, komandų išvestis sumažinama `60-90%`. Jo README pateiktame sesijos pavyzdyje `~118,000` standartinių žetonų sumažėja iki `~23,900` RTK žetonų, taigi sutaupoma `79.7%` (`~80%`). „OmniRoute“ naudoja šį pirminio projekto vidurkį apskaičiuodama sudėtinį sutaupymą kartu su „Caveman“ įvesties glaudinimu:
+Pirminio RTK projekto duomenimis, komandų išvestis sumažinama `60-90%`. Jo README pateiktame sesijos pavyzdyje `~118,000` standartinių žetonų sumažėja iki `~23,900` RTK žetonų, taigi sutaupoma `79.7%` (`~80%`). „67router“ naudoja šį pirminio projekto vidurkį apskaičiuodama sudėtinį sutaupymą kartu su „Caveman“ įvesties glaudinimu:
 
 ```txt
 RTK vidurkis:     sutaupyta 80%
@@ -48,7 +48,7 @@ RTK įkelia filtrus tokia tvarka:
 2. Visuotiniai filtrai iš `DATA_DIR/rtk/filters.toml` ir `DATA_DIR/rtk/filters.json`.
 3. Integruoti filtrai iš `open-sse/services/compression/engines/rtk/filters/`.
 
-Toje pačioje srityje RTK TOML schemos v1 filtrams teikiama pirmenybė prieš „OmniRoute“ JSON filtrus. TOML `match_command` išraiškos tikrinamos prieš komandos tipo atitiktį, kad importuotas konkrečiai komandai skirtas filtras galėtų pakeisti platesnį tos srities filtrą. Projekto sričiai vis tiek teikiama pirmenybė prieš visuotinę sritį, neatsižvelgiant į failo formatą.
+Toje pačioje srityje RTK TOML schemos v1 filtrams teikiama pirmenybė prieš „67router“ JSON filtrus. TOML `match_command` išraiškos tikrinamos prieš komandos tipo atitiktį, kad importuotas konkrečiai komandai skirtas filtras galėtų pakeisti platesnį tos srities filtrą. Projekto sričiai vis tiek teikiama pirmenybė prieš visuotinę sritį, neatsižvelgiant į failo formatą.
 
 Projekto filtrams sąmoningai taikomas pasitikėjimo patikrinimas, nes reguliariųjų išraiškų filtrai gali pakeisti įrankių išvesties pateikimą agentams. Projekto filtro failas priimamas, kai tenkinama viena iš šių sąlygų:
 
@@ -71,7 +71,7 @@ Pasirinktinis filtras gali būti vienas filtro objektas arba filtro objektų mas
 
 ## Suderinamumas su RTK TOML schema v1
 
-„OmniRoute“ gali analizuoti, tikrinti, testuoti ir įdiegti deklaratyvius filtrų failus, naudojančius RTK TOML schema v1.
+„67router“ gali analizuoti, tikrinti, testuoti ir įdiegti deklaratyvius filtrų failus, naudojančius RTK TOML schema v1.
 Palaikomi laukai: `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` ir įterptieji `[[tests.<filter>]]` testai.
@@ -80,7 +80,7 @@ Nežinomi laukai, netinkamos arba nesaugios reguliariosios išraiškos, vienu me
 galima patikrinti peržiūros tikslais, tačiau jo negalima įdiegti ar įkelti. Pasirinktinių failų įkėlimo klaidų atveju
 ir toliau taikomas veikimo tęstinumo principas: netinkamas failas praleidžiamas, o likę filtrai toliau veikia.
 
-„OmniRoute“ gauna įrankio išvestį po to, kai klientas ją jau užfiksavo, todėl `filter_stderr = true`
+„67router“ gauna įrankio išvestį po to, kai klientas ją jau užfiksavo, todėl `filter_stderr = true`
 negali pakeisti proceso išvesties fiksavimo. Laukas priimamas, tačiau neatlieka jokio veiksmo, o patikros metu grąžinamas įspėjimas.
 Tai sąmoningai apibūdinama kaip **suderinamumas su RTK TOML schema v1**, o ne visiškas suderinamumas
 su RTK vykdomuoju failu, apvalkalo kabliais, „Rust“ komandų realizacijomis ar jo patikimų šaltinių saugyklos struktūra.

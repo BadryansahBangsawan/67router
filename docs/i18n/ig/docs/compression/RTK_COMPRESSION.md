@@ -4,7 +4,7 @@
 
 ---
 
-Mkpokọta RTK bụ injin mkpokọta OmniRoute nke maara iwu, maka nsonaazụ terminal na ngwaọrụ. E
+Mkpokọta RTK bụ injin mkpokọta 67router nke maara iwu, maka nsonaazụ terminal na ngwaọrụ. E
 mepụtara ya maka nnọkọ coding-agent ebe ọtụtụ uto context si na ndekọ ule, nsonaazụ build,
 mkpọtụ package manager, transcript shell, nsonaazụ Docker, nsonaazụ git, na stack trace.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Usoro ahụ na-ebu ụzọ chịkọta nsonaazụ igwe nwere mkpọtụ, wee kwe ka Caveman chịkọta prose fọdụrụ.
 
 RTK upstream na-akọ na a na-echekwa `60-90%` nke nsonaazụ iwu. Nnọkọ atụ dị na README ya si na
-token ọkọlọtọ `~118,000` gbadaa na token RTK `~23,900`, nke pụtara na echekwara `79.7%` (`~80%`). OmniRoute na-eji
+token ọkọlọtọ `~118,000` gbadaa na token RTK `~23,900`, nke pụtara na echekwara `79.7%` (`~80%`). 67router na-eji
 nkezi upstream ahụ maka mgbakọ ego echekwara site na nchịkọta e jikọtara ọnụ ya na mkpokọta input Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK na-ebunye filter n'usoro a:
 2. Filter global sitere na `DATA_DIR/rtk/filters.toml` na `DATA_DIR/rtk/filters.json`.
 3. Filter e wuru n'ime ya sitere na `open-sse/services/compression/engines/rtk/filters/`.
 
-N'ime scope otu, filter RTK TOML schema v1 na-ebute filter OmniRoute JSON ụzọ. A na-enyocha expression TOML
+N'ime scope otu, filter RTK TOML schema v1 na-ebute filter 67router JSON ụzọ. A na-enyocha expression TOML
 `match_command` tupu command-type matching ka filter a bubatara nke metụtara otu iwu kpọmkwem nwee ike dochie
 filter sara mbara n'ime scope ahụ. Scope project ka na-ebute scope global ụzọ,
 n'agbanyeghị format faịlụ.
@@ -84,7 +84,7 @@ ma `/api/context/rtk/filters` diagnostics na-akọ ha. Filter e wuru n'ime ya na
 
 ## Ndakọrịta RTK TOML schema v1
 
-OmniRoute nwere ike ịgụ, nyochaa, nwalee, ma wụnye faịlụ nzacha ndị e kọwara n'ụzọ nkwupụta site na iji RTK TOML schema v1.
+67router nwere ike ịgụ, nyochaa, nwalee, ma wụnye faịlụ nzacha ndị e kọwara n'ụzọ nkwupụta site na iji RTK TOML schema v1.
 Ubi ndị a na-akwado bụ `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, na nnwale inline `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ A na-ajụ ubi ndị a na-amaghị, regular expressions ndị na-ezighi ezi ma �
 ịwụnye ma ọ bụ budata ya. Ọdịda n'ịbudata faịlụ omenala ka na-eji usoro
 fail-open: a na-amafe faịlụ na-ezighi ezi, ebe nzacha ndị ọzọ na-aga n'ihu na-arụ ọrụ.
 
-OmniRoute na-anata nsonaazụ ngwá ọrụ mgbe client ahụ nwụcharala ya, ya mere `filter_stderr = true`
+67router na-anata nsonaazụ ngwá ọrụ mgbe client ahụ nwụcharala ya, ya mere `filter_stderr = true`
 enweghị ike ịgbanwe otu e si ejide process ahụ. A na-anabata ubi ahụ dị ka no-op, nyocha nkwado ahụ na-ewepụtakwa ịdọ aka ná ntị.
 A na-akọwa nke a ụma dị ka **ndakọrịta RTK TOML schema v1**, ọ bụghị ndakọrịta zuru oke
 na RTK executable, shell hooks, mmejuputa iwu Rust, ma ọ bụ nhazi trust-store ya.

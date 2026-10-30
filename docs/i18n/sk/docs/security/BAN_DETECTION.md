@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute vyhľadáva v chybových odpovediach nadradených poskytovateľov signály, ktoré naznačujú, že
+67router vyhľadáva v chybových odpovediach nadradených poskytovateľov signály, ktoré naznačujú, že
 **účet poskytovateľa je natrvalo nefunkčný** (pozastavený / deaktivovaný / zablokovaný pre porušenie podmienok používania), a pri
 zhode presunie dané pripojenie do **koncového stavu `banned`**, aby sa už
 nevyberalo pre požiadavky. Toto správanie konfiguruje karta nastavení **Zabezpečenie → Zakázané kľúčové slová**

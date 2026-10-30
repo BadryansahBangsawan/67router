@@ -42,7 +42,7 @@ və ya xarici inteqrasiyanın hazırda əlçatan olduğuna dair vəd deyil.
 | Dəstəkçi təklifləri              | Ayrı, imzalanmış və yalnız canlı lent, həmçinin idarəetmə paneli səhifəsi kimi implementasiya edilib. Klient qapalı üstünlük sxemini yenidən doğrulayır, son etibarlı keşi qoruyur, vaxtı bitmiş qeydləri filtrləyir və tərəfdaş təkliflərini açıq şəkildə etiketləyir. |
 | Analitika və dəstəkçi tanınması  | Radar-a məxsus ELO, kataloqun yeniliyi/trendi üzrə faktiki məlumat, doğrulanmış lokal dəstəkçi nişanı, idarəetmə paneli səhifəsi və yalnız lokal CLI status/sinxronizasiya komandaları ilə ciddi şəkildə imzalanmış, yalnız canlı lent kimi implementasiya edilib.      |
 | Ödənişlər və tranzaksiya e-poçtu | OSS klientində implementasiya edilməyib. Satınalma, ianə, qəbzlərin nəzərdən keçirilməsi, bərpa və poçtun çatdırılması məxfi xidmətə aiddir; hostinqdə əlçatanlıq hələ də onun nəzarət edilən yerləşdirilməsindən və provayder konfiqurasiyasından asılıdır.            |
-| Tədqiqat agenti iş axını         | Bu klient buraxılışının bir hissəsi deyil. Kurasiya edilmiş lent məzmunu server tərəfli məlumat olaraq qalır; OmniRoute quraşdırmasında heç bir avtonom tədqiqat agenti işləmir.                                                                                        |
+| Tədqiqat agenti iş axını         | Bu klient buraxılışının bir hissəsi deyil. Kurasiya edilmiş lent məzmunu server tərəfli məlumat olaraq qalır; 67router quraşdırmasında heç bir avtonom tədqiqat agenti işləmir.                                                                                         |
 
 ---
 
@@ -123,7 +123,7 @@ Hər ikisi aktiv olduqda sinxronizasiya yolu belədir:
    istifadə edir; həmin cədvəllər nə açarı, nə də IP-ni xam formada saxlayır.
    İnfrastruktur giriş jurnalları və şifrələnmiş çatdırılma çıxış qutusu ayrıca əməliyyat
    sərhədləridir.
-3. OmniRoute heç vaxt Radar xidmətinə sorğu mətnlərini, cavabları, söhbətləri, provayder
+3. 67router heç vaxt Radar xidmətinə sorğu mətnlərini, cavabları, söhbətləri, provayder
    autentifikasiya məlumatlarını, model trafikini, işlək qalma müddətini, gecikməni və ya
    lokal provayder konfiqurasiyasını göndərmir.
 4. Cavab yoxlanılır, doğrulanır və lokal olaraq keşlənir (bax:
@@ -201,10 +201,10 @@ Ziyarətçi açar (`omr_` + 40 onaltılıq simvol) əldə etdikdən sonra aktivl
 
 ### Başdan sona aktivləşdirmə və istiqamətləndirilən quraşdırma
 
-Şəxsi lent xidməti ilə bu OSS klienti arasında məqsədli şəkildə dar sərhəd mövcuddur: xidmət dəstəkçi açarını verir və doğrulayır, lokal OmniRoute quraşdırması isə açarı şifrələyir, imzalanmış artefaktları server tərəfində sinxronlaşdırır və provayder quraşdırılmasını istiqamətləndirir. Dəstəklənən doğrulama ardıcıllığı belədir:
+Şəxsi lent xidməti ilə bu OSS klienti arasında məqsədli şəkildə dar sərhəd mövcuddur: xidmət dəstəkçi açarını verir və doğrulayır, lokal 67router quraşdırması isə açarı şifrələyir, imzalanmış artefaktları server tərəfində sinxronlaşdırır və provayder quraşdırılmasını istiqamətləndirir. Dəstəklənən doğrulama ardıcıllığı belədir:
 
 1. İştirakçı sorğusu, planlar/ödəniş, bərpa prosesi və ya səlahiyyətli özəl server operatorundan yeni verilmiş və ya bərpa edilmiş açarı əldə edin. Xam açarı jurnallara, ekran görüntülərinə, problem şərhlərinə və ya komanda sətri arqumentlərinə yapışdırmayın.
-2. Lokal OmniRoute quraşdırmasında `RADAR_ENABLED` funksiya bayrağını aktivləşdirin. Bu, istifadəçi interfeysini əlçatan edir, lakin ayrıca qoşulma seçimi yadda saxlanılanadək şəbəkə fəaliyyəti baş vermir.
+2. Lokal 67router quraşdırmasında `RADAR_ENABLED` funksiya bayrağını aktivləşdirin. Bu, istifadəçi interfeysini əlçatan edir, lakin ayrıca qoşulma seçimi yadda saxlanılanadək şəbəkə fəaliyyəti baş vermir.
 3. `/dashboard/radar` səhifəsini açın, açarı yapışdırın və aktivləşdirin. Brauzer lokal olaraq `{ optIn: true, supporterKey }` ilə bir dəfə `POST /api/radar/settings` sorğusu göndərir; açar lokal olaraq şifrələnir və cavab yalnız `omr_****<last4>` ehtiva edir.
 4. Aktivləşdirmə ekranının kataloq sinxronizasiyasını tamamlamasına imkan verin və ya **İndi sinxronlaşdırın** seçin. Səhifədə `live` statusunun, lent versiyasının və əldəetmə vaxtının göstərildiyini təsdiqləyin. Autentifikasiya edilmiş lokal diaqnostika üçün `GET /api/radar/status` açarı qaytarmadan qoşulma seçiminin/açarın mövcudluğunu və dörd keşin vəziyyətini bildirir. `POST /api/radar/sync-all` kataloqu, yönləndirmələri, təklifləri və Intel-i açıq şəkildə yeniləyə bilər.
 5. `/dashboard/radar/setup?provider=<provider>` səhifəsini açın. Provayderə məxsus giriş məlumatları URL-sinə keçin, **API açarı əlavə edin** seçin, real provayder forması vasitəsilə yadda saxlayın, bələdçiyə qayıdın və **Bağlantını sınaqdan keçirin** əməliyyatını başladın. Bələdçi standart `/api/providers` və `/api/providers/<connection-id>/test` marşrutlarından istifadə edir; ayrıca Radar giriş məlumatı yaratmır.
@@ -245,7 +245,7 @@ lentlər isə yenidən sinxronizasiya edilənədək etibarlı qalır.
 ### Fork-lar üçün əlverişli mühit dəyişəni əvəzləmələri
 
 İki mühit dəyişəni fork-lara və sistemi öz serverində yerləşdirənlərə müştərini
-standart OmniRoute xidməti əvəzinə öz lentlərinə yönəltməyə imkan verir — aşağıdakı
+standart 67router xidməti əvəzinə öz lentlərinə yönəltməyə imkan verir — aşağıdakı
 [Lenti öz serverinizdə necə yerləşdirməli](#how-to-self-host-a-feed) bölməsinə baxın:
 
 | Dəyişən             | Məqsəd                                                                                                 |
@@ -400,7 +400,7 @@ Lentdəki `enabled: false` təhlükəsizlik istisnası olaraq qalır: köhnəlmi
 Kataloq nəşrləri `schemaVersion: 2` istifadə edir. `contextWindow` və `tools`, `vision` və
 `thinking` sahələrinin hər biri müstəqil olaraq `number | null` / `boolean | null` tipindədir: `null`
 naməlum deməkdir, `false` isə D16 ilə təsdiqlənmiş rəsmi provayder mənbəsinin imkanın mövcud olmadığını
-açıq şəkildə bildirməsi deməkdir. Daxili OmniRoute reyestri/model spesifikasiyası bayraqları heç vaxt
+açıq şəkildə bildirməsi deməkdir. Daxili 67router reyestri/model spesifikasiyası bayraqları heç vaxt
 birbaşa lent faktlarına çevrilmir. Müştəri hələ də v1 ani görüntülərini qəbul edir; köhnə qurucu
 `false` dəyərini yoxluq əvəzedicisi kimi istifadə etdiyinə görə, v1-dəki `false` naməlum olaraq
 normallaşdırılır, v1-dəki `true` isə fakt kimi qalır. Naməlum sxem versiyaları bağlı rejimdə uğursuz
@@ -463,7 +463,7 @@ Aşağıdakı lokal Radar marşrut ailələri `src/app/api/radar/` altındakı U
 | `/api/radar/local-model-state` | DELETE | İstənilən silinmə markerini qoruyaraq redaktə edilə bilən əvəzləmə sahələrini təmizləyir.                                                       |
 
 **Sərt qayda: bu marşrutlar heç vaxt lent xidmətini proksi etmir.** Brauzer yalnız
-lokal OmniRoute serveri ilə əlaqə saxlayır. Radar xidmətinə müraciət edən dörd modul
+lokal 67router serveri ilə əlaqə saxlayır. Radar xidmətinə müraciət edən dörd modul
 `src/lib/radar/sync.ts` (kataloq), `src/lib/radar/referralsSync.ts` (yönləndirmələr),
 `src/lib/radar/offersSync.ts` (təkliflər) və `src/lib/radar/intelSync.ts` (Intel)
 modullarıdır; onların hamısı server tərəfində işləyir, heç vaxt klient tərəfində
@@ -543,7 +543,7 @@ yeniləmir və ya `token_share` hadisəsindən təkrar istifadə etmir. `/dashbo
 yalnız doğrulanmış lokal keş metadatası əsasında göstərir.
 
 CLI `omniroute radar status` və `omniroute radar sync` əmrlərini təqdim edir. Hər ikisi yalnız lokal
-OmniRoute API ilə əlaqə saxlayır. `status` yalnız oxuma üçün `GET /api/radar/status` sorğusunu icra
+67router API ilə əlaqə saxlayır. `status` yalnız oxuma üçün `GET /api/radar/status` sorğusunu icra
 edir; `sync` bir `POST /api/radar/sync-all` sorğusu göndərir və hər lent üçün nəticə çap edir. Heç bir
 əmr dəstəkçi açarını oxumur, qəbul etmir və ya çap etmir və heç biri Radar xidməti ilə birbaşa əlaqə
 saxlamır.

@@ -4,7 +4,7 @@
 
 ---
 
-> **Qısa xülasə**: OmniRoute hər sorğunun token istifadəsini izləyir, xərci hesablayır, hər API açarı üzrə kvotanı tətbiq edir və analitik məlumatları idarəetmə panelində göstərir. Bu təlimat bütün bunların necə işlədiyini izah edir.
+> **Qısa xülasə**: 67router hər sorğunun token istifadəsini izləyir, xərci hesablayır, hər API açarı üzrə kvotanı tətbiq edir və analitik məlumatları idarəetmə panelində göstərir. Bu təlimat bütün bunların necə işlədiyini izah edir.
 
 **Mənbələr:**
 
@@ -17,7 +17,7 @@
 
 ## Ümumi baxış
 
-OmniRoute üzərindən keçən hər sorğu aşağıdakı məlumatları əhatə edən **istifadə qeydi** yaradır:
+67router üzərindən keçən hər sorğu aşağıdakı məlumatları əhatə edən **istifadə qeydi** yaradır:
 
 - **İdentifikasiya**: hansı API açarı, provayder, model və kombinasiya
 - **Tokenlər**: prompt tokenləri, tamamlama tokenləri, keşlənmiş tokenlər, ümumi say
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-İstifadə məlumatlarını qaytarmayan provayderlər üçün (bəzi veb-kuki provayderləri) OmniRoute tokenlərin sayını `hər token üçün ~4 simvol` evristikasından istifadə edərək **təxmin edir** (bax: `open-sse/services/autoCombo/pipelineRouter.ts`).
+İstifadə məlumatlarını qaytarmayan provayderlər üçün (bəzi veb-kuki provayderləri) 67router tokenlərin sayını `hər token üçün ~4 simvol` evristikasından istifadə edərək **təxmin edir** (bax: `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Keşlənmiş Tokenlər
 
-OmniRoute `cached_tokens` göstəricisini `prompt_tokens` göstəricisindən ayrı izləyir, çünki:
+67router `cached_tokens` göstəricisini `prompt_tokens` göstəricisindən ayrı izləyir, çünki:
 
 - Anthropic prompt keşləməsi keşlənmiş tokenlər üçün daha aşağı tarif tətbiq edir (normal tarifin 10%-i)
 - Bəzi provayderlər fərqli qiymətləndirilməli olan `cache_read_input_tokens` qaytarır
@@ -117,7 +117,7 @@ Qiymət məlumatları LiteLLM-dən `/api/pricing/sync` son nöqtəsi vasitəsil�
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Qiymət məlumatları olmayan modellər üçün OmniRoute daxili orta tariflərdən (LiteLLM-in qiymət məlumatlarından əldə edilən) istifadə edərək **xərci təxmini hesablayır**.
+Qiymət məlumatları olmayan modellər üçün 67router daxili orta tariflərdən (LiteLLM-in qiymət məlumatlarından əldə edilən) istifadə edərək **xərci təxmini hesablayır**.
 
 ---
 

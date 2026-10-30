@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector ni kitatuzi kilichojengewa ndani cha trafiki ya HTTPS cha OmniRoute — zana inayofanana na Charles Proxy / mitmweb / HTTP Toolkit ambayo **inafahamu LLM** na **inafahamu mawakala**. Inapatikana katika `/dashboard/tools/traffic-inspector` na hupokea trafiki ya moja kwa moja kutoka hadi vyanzo 5 vya kunasa kwa wakati mmoja.
+Traffic Inspector ni kitatuzi kilichojengewa ndani cha trafiki ya HTTPS cha 67router — zana inayofanana na Charles Proxy / mitmweb / HTTP Toolkit ambayo **inafahamu LLM** na **inafahamu mawakala**. Inapatikana katika `/dashboard/tools/traffic-inspector` na hupokea trafiki ya moja kwa moja kutoka hadi vyanzo 5 vya kunasa kwa wakati mmoja.
 
 **Mahali kwenye dashibodi:** `/dashboard/tools/traffic-inspector`
 **Kikundi cha utepe wa pembeni:** Zana (baada ya AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector ni kitatuzi kilichojengewa ndani cha trafiki ya HTTPS cha Omni
 
 ### Kinachoifanya Traffic Inspector kuwa ya kipekee
 
-| Kipengele                                                                          | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ---------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Inayotumia wavuti                                                                  |    ✓    |    ✗    |    ✗    |                ✓                |
-| Chanzo huria                                                                       |    ✓    |    ✗    |  kiasi  |                ✓                |
-| **Inafahamu mawakala** (inajua ikiwa ombi limetoka Antigravity/Copilot/n.k.)       |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Inafahamu LLM** (huchanganua muundo wa OpenAI/Anthropic/Gemini, tokeni, modeli)  |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ulinganishaji wa modeli unaonekana** (gemini-3-flash → claude-sonnet-4.7)        |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Mgawanyo wa ukawivu wa proksi/upstream**                                         |  kiasi  |    ✗    |    ✗    |                ✓                |
-| **Imeunganishwa na** uelekezaji, fallback na gharama za OmniRoute                  |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Utatuzi wa proksi wa mfumo mzima** (programu yoyote kwenye mashine)              |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Unasaji wa host maalum** (uelekezaji upya wa DNS kwa kila host)                  |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Hali ya mazingira ya HTTP_PROXY**                                                |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Mwonekano wa mazungumzo** (viputo vya zamu nyingi, tool_use/tool_result)         |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Kiunganishi cha mtiririko wa SSE** (huunda upya kutoka kwa matukio ya delta)     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Kurekodi vipindi** (vilivyopewa majina, vinavyoweza kuhamishwa kama .har/.jsonl) |    ✗    |    ✓    |    ✓    |                ✓                |
+| Kipengele                                                                          | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Inayotumia wavuti                                                                  |    ✓    |    ✗    |    ✗    |               ✓                |
+| Chanzo huria                                                                       |    ✓    |    ✗    |  kiasi  |               ✓                |
+| **Inafahamu mawakala** (inajua ikiwa ombi limetoka Antigravity/Copilot/n.k.)       |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Inafahamu LLM** (huchanganua muundo wa OpenAI/Anthropic/Gemini, tokeni, modeli)  |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ulinganishaji wa modeli unaonekana** (gemini-3-flash → claude-sonnet-4.7)        |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Mgawanyo wa ukawivu wa proksi/upstream**                                         |  kiasi  |    ✗    |    ✗    |               ✓                |
+| **Imeunganishwa na** uelekezaji, fallback na gharama za 67router                   |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Utatuzi wa proksi wa mfumo mzima** (programu yoyote kwenye mashine)              |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Unasaji wa host maalum** (uelekezaji upya wa DNS kwa kila host)                  |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Hali ya mazingira ya HTTP_PROXY**                                                |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Mwonekano wa mazungumzo** (viputo vya zamu nyingi, tool_use/tool_result)         |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Kiunganishi cha mtiririko wa SSE** (huunda upya kutoka kwa matukio ya delta)     |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Kurekodi vipindi** (vilivyopewa majina, vinavyoweza kuhamishwa kama .har/.jsonl) |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Usanifu kwa aya moja
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true ikiwa ni jibu la SSE
   mappedTo: string | null; // header ya x-omniroute-mapped
-  costEstimateUsd: number | null; // makadirio ya gharama kulingana na bei za OmniRoute
+  costEstimateUsd: number | null; // makadirio ya gharama kulingana na bei za 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Proksi ya mfumo haikurejeshwa
 
-Ikiwa OmniRoute itaacha kufanya kazi wakati modi ya proksi ya mfumo mzima inatumika:
+Ikiwa 67router itaacha kufanya kazi wakati modi ya proksi ya mfumo mzima inatumika:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Njia ya msingi: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Orodhesha maombi (yanaweza kuchujwa: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Maelezo ya ombi moja                                                                         |
 | DELETE | `/requests`                 | Futa bafa ya kumbukumbu                                                                      |
-| POST   | `/requests/{id}/replay`     | Tekeleza tena ombi lilelile kupitia kipanga-njia cha OmniRoute                               |
+| POST   | `/requests/{id}/replay`     | Tekeleza tena ombi lilelile kupitia kipanga-njia cha 67router                                |
 | PUT    | `/requests/{id}/annotation` | Hifadhi au sasisha dokezo kwenye ombi                                                        |
 
 ### WebSocket

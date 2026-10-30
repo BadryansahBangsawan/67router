@@ -5,9 +5,9 @@
 ---
 
 Perdavimo mazgai (Vercel, Deno, Cloudflare) nutraukia išorinį ryšį
-serverless galinėje sistemoje, kad OmniRoute galėtų siųsti srautą iš stabilaus regiono, o
+serverless galinėje sistemoje, kad 67router galėtų siųsti srautą iš stabilaus regiono, o
 teikėjo API raktas liktų serverio pusėje. Šiame dokumente aprašomi du trikčių režimai,
-su kuriais operatoriai susiduria produkcinėje aplinkoje, ir OmniRoute pateikiami kiekvieno
+su kuriais operatoriai susiduria produkcinėje aplinkoje, ir 67router pateikiami kiekvieno
 iš jų atkūrimo būdai.
 
 ## Kaip saugomi perdavimo mazgo autentifikavimo duomenys
@@ -36,7 +36,7 @@ nesiunčia autentifikavimo duomenų.
 1. Atidarykite **Settings → Proxy Pool**.
 2. Perdavimo mazgų eilutėse, kuriose trūksta autentifikavimo duomenų, rodoma geltona
    žyma `auth missing` ir mygtukas **Repair**.
-3. Spustelėkite **Repair**. OmniRoute iškviečia
+3. Spustelėkite **Repair**. 67router iškviečia
    `POST /api/settings/proxies/[id]/repair-relay`, kuris:
    - iššifruoja `relayAuthEnc` naudodamas **dabartinį** raktą,
    - įrašo atvirojo teksto `relayAuth` atgal į `notes`,
@@ -69,7 +69,7 @@ kai prieigos rakto atkurti neįmanoma, todėl jums niekada nereikia jo ieškoti 
 **Požymis:** tarpinio serverio testas (mygtukas `speed`) rodo, kad perdavimo mazgas
 veikia, tačiau užklausos vis tiek su pertrūkiais nepavyksta.
 
-Patikrinkite perdavimo mazgo būsenos antraštes, kurias grąžina OmniRoute automatinio
+Patikrinkite perdavimo mazgo būsenos antraštes, kurias grąžina 67router automatinio
 testavimo užklausa (žr. **Settings → Proxy Pool** ir `relayTested` / `relayAlive`
 skaitiklius):
 

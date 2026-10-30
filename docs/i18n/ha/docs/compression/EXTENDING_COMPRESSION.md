@@ -4,7 +4,7 @@
 
 ---
 
-> **A taƙaice**: Injin matsawar OmniRoute **mai karɓar kari ne** — za ka iya yin rajistar injuna na musamman, samar da fakitin harsuna don sababbin harsuna, da kuma haɗa bututun sarrafawa masu jere. Wannan jagorar tana nuna yadda ake yin hakan.
+> **A taƙaice**: Injin matsawar 67router **mai karɓar kari ne** — za ka iya yin rajistar injuna na musamman, samar da fakitin harsuna don sababbin harsuna, da kuma haɗa bututun sarrafawa masu jere. Wannan jagorar tana nuna yadda ake yin hakan.
 
 **Jagorori masu alaƙa:**
 
@@ -232,7 +232,7 @@ a cikin mai zaɓin dabaru ta hanyar `id` nasa. Gwada haɗin kai ta hanyar haɗa 
 
 ## Ƙirƙirar Kunshin Harsuna
 
-Matsewa irin ta Caveman tana amfani da **kunshin ƙa'idoji na musamman ga kowane harshe** don sarrafa kalmomin cikawa, kalaman rashin tabbaci, da tsarin magana mai tsawo a kowane harshe na ɗan Adam. OmniRoute ya zo da **kunshin harsuna 6**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Matsewa irin ta Caveman tana amfani da **kunshin ƙa'idoji na musamman ga kowane harshe** don sarrafa kalmomin cikawa, kalaman rashin tabbaci, da tsarin magana mai tsawo a kowane harshe na ɗan Adam. 67router ya zo da **kunshin harsuna 6**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Tsarin Kunshi
 
@@ -391,7 +391,7 @@ Sakamakon inji N yana zama shigarwar inji N+1.
 
 ### Yanayin Matsewa
 
-OmniRoute yana zaɓar **yanayi ƊAYA ga kowace buƙata** bisa ga saituna, iyakokin kunnawa ta atomatik, da sauye-sauyen combo.
+67router yana zaɓar **yanayi ƊAYA ga kowace buƙata** bisa ga saituna, iyakokin kunnawa ta atomatik, da sauye-sauyen combo.
 An ayyana yanayoyin da ake da su a cikin `open-sse/services/compression/types.ts` (nau'in `CompressionMode`):
 
 | Yanayi       | Injina                 | Amfani                                                                                                                                                                                                           |
@@ -511,10 +511,10 @@ Don sarrafa shi daga config, saita `mode: "stacked"` sannan ka bayar da jerin ma
 
 ## Manufofin Daidaitawa da Upstream
 
-Injinan matse bayanai na OmniRoute suna ambaton wasu ayyukan upstream a cikin README
+Injinan matse bayanai na 67router suna ambaton wasu ayyukan upstream a cikin README
 ("inspired by RTK, Caveman, LLMLingua-2, Troglodita"). Tambayar da masu ba da gudummawa
 suka fi yi ita ce: **idan upstream RTK ya ƙara sabon matatar kayan aiki ko Caveman ya ƙara
-kunshin ƙa'idoji, ta yaya hakan zai isa OmniRoute?** Wannan sashe ne yake ba da amsar hukuma.
+kunshin ƙa'idoji, ta yaya hakan zai isa 67router?** Wannan sashe ne yake ba da amsar hukuma.
 
 ### Kwafe da aka haɗa kai tsaye vs. aiwatarwa masu zaman kansu
 
@@ -535,7 +535,7 @@ kwafin upstream da za a yi `git pull` daga gare shi — kuma wannan ne ainihin d
 Babu **bibiyar fitowar upstream ta atomatik kuma babu alamar `compression-sync`
 ** — da gangan. Saboda injinan sake aiwatarwa ne, ba a haɗa matatar upstream RTK
 ko kunshin ƙa'idojin Caveman a matsayin lamba; a maimakon haka, ana **sake bayyana shi a matsayin sabuwar
-ƙa'ida/matata cikin tsarin OmniRoute na kansa** (duba
+ƙa'ida/matata cikin tsarin 67router na kansa** (duba
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) sannan a shigar da shi lokaci-lokaci ta hanyar
 PR na yau da kullum. Wuraren faɗaɗawa da ke sama (inji na musamman, kunshin harshe, matatar RTK)
 su ne hanyoyin da aka amince da su don ba da gudummawar guda ɗaya.
@@ -549,14 +549,14 @@ Misalan kwanan nan na wannan tsarin kai tsaye:
 ### Headroom (wakilin matse bayanan shigarwa)
 
 Headroom **na ciki ne gaba ɗaya** — hoton codec na `gcf` da aka ƙayyade kuma aka haɗa kai tsaye tare da
-matakan `smartcrusher` / `toon` / `tabular` na OmniRoute. Babu wani upstream mai aiki
+matakan `smartcrusher` / `toon` / `tabular` na 67router. Babu wani upstream mai aiki
 da za a bibiya bayan kwafin da aka haɗa; ana sabunta `gcf`
 da hannu idan codec ya canza sannan a sake tabbatar da shi ta ƙofar kasafin matse bayanai
 (`check:compression-budget`).
 
 ### Gabatar da ingantawa da aka yi bisa wahayi daga upstream
 
-1. **Kada a haɗa lambar kai tsaye** — a sake bayyana ƙa'idar/matatar upstream cikin tsarin OmniRoute.
+1. **Kada a haɗa lambar kai tsaye** — a sake bayyana ƙa'idar/matatar upstream cikin tsarin 67router.
 2. Ƙara ta ta hanyar wurin faɗaɗawa da ya dace a ƙasa (kunshin harshe, matatar RTK, ko
    inji na musamman).
 3. Ambaci aikin upstream a cikin bayanin PR (don nuna tushen gudummawa), ba ta hanyar

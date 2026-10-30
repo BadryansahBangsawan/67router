@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute pārbauda augšupstraumes kļūdu atbildes, meklējot pazīmes, kas norāda, ka pakalpojumu sniedzēja
+67router pārbauda augšupstraumes kļūdu atbildes, meklējot pazīmes, kas norāda, ka pakalpojumu sniedzēja
 **konts ir neatgriezeniski nederīgs** (apturēts / deaktivizēts / bloķēts pakalpojumu sniegšanas noteikumu pārkāpuma dēļ), un, ja
 tiek atrasta atbilstība, pārslēdz šo savienojumu **terminālā `banned` stāvoklī**, lai tas
 vairs netiktu atlasīts pieprasījumiem. To konfigurē iestatījumu kartīte **Drošība → Aizlieguma atslēgvārdi**

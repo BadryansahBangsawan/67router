@@ -4,7 +4,7 @@
 
 ---
 
-RTK 压缩是 OmniRoute 面向命令的终端及工具输出压缩引擎。它专为编码智能体会话而设计；在此类会话中，大部分上下文增长来自测试日志、构建输出、包管理器噪声、Shell 记录、Docker 输出、git 输出和堆栈跟踪。
+RTK 压缩是 67router 面向命令的终端及工具输出压缩引擎。它专为编码智能体会话而设计；在此类会话中，大部分上下文增长来自测试日志、构建输出、包管理器噪声、Shell 记录、Docker 输出、git 输出和堆栈跟踪。
 
 RTK 可以通过 `defaultMode: "rtk"` 直接运行，也可以作为堆叠管线的第一步，通常为：
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 此顺序会先压缩嘈杂的机器输出，然后让 Caveman 精简剩余的文本。
 
-上游 RTK 报告称，命令输出可节省 `60-90%`。其 README 中的示例会话从约 `~118,000` 个标准 token 降至约 `~23,900` 个 RTK token，即节省 `79.7%`（约 `~80%`）。OmniRoute 使用该上游平均值，与 Caveman 输入压缩一起计算堆叠节省率：
+上游 RTK 报告称，命令输出可节省 `60-90%`。其 README 中的示例会话从约 `~118,000` 个标准 token 降至约 `~23,900` 个 RTK token，即节省 `79.7%`（约 `~80%`）。67router 使用该上游平均值，与 Caveman 输入压缩一起计算堆叠节省率：
 
 ```txt
 RTK 平均值：       节省 80%
@@ -48,7 +48,7 @@ RTK 按以下顺序加载过滤器：
 2. 来自 `DATA_DIR/rtk/filters.toml` 和 `DATA_DIR/rtk/filters.json` 的全局过滤器。
 3. 来自 `open-sse/services/compression/engines/rtk/filters/` 的内置过滤器。
 
-在同一作用域内，RTK TOML schema v1 过滤器的优先级高于 OmniRoute JSON 过滤器。TOML `match_command` 表达式会先于命令类型匹配进行检查，因此导入的命令专用过滤器可以覆盖该作用域内更宽泛的过滤器。无论文件格式如何，项目作用域的优先级始终高于全局作用域。
+在同一作用域内，RTK TOML schema v1 过滤器的优先级高于 67router JSON 过滤器。TOML `match_command` 表达式会先于命令类型匹配进行检查，因此导入的命令专用过滤器可以覆盖该作用域内更宽泛的过滤器。无论文件格式如何，项目作用域的优先级始终高于全局作用域。
 
 项目过滤器特意设置了信任门控，因为正则表达式过滤器可以改变向智能体展示工具输出的方式。满足以下任一条件时，项目过滤器文件会被接受：
 
@@ -71,7 +71,7 @@ RTK 按以下顺序加载过滤器：
 
 ## RTK TOML schema v1 兼容性
 
-OmniRoute 可以使用 RTK TOML schema v1 解析、验证、测试和安装声明式过滤器文件。
+67router 可以使用 RTK TOML schema v1 解析、验证、测试和安装声明式过滤器文件。
 支持的字段包括 `description`、`match_command`、`strip_ansi`、`filter_stderr`、
 `strip_lines_matching`、`keep_lines_matching`、`replace`、`match_output`、`truncate_lines_at`、
 `head_lines`、`tail_lines`、`max_lines`、`on_empty`，以及 `[[tests.<filter>]]` 内联测试。
@@ -79,7 +79,7 @@ OmniRoute 可以使用 RTK TOML schema v1 解析、验证、测试和安装声�
 1 MiB 或引用未知过滤器的文件将被拒绝。内联测试失败的文件可以进行验证以供检查，
 但无法安装或加载。自定义文件加载失败时仍采用失败开放策略：跳过无效文件，其余过滤器继续工作。
 
-OmniRoute 在客户端已捕获工具输出后才接收该输出，因此 `filter_stderr = true`
+67router 在客户端已捕获工具输出后才接收该输出，因此 `filter_stderr = true`
 无法改变进程捕获行为。该字段会被接受但不执行任何操作，验证会返回警告。
 这里特意将其描述为 **RTK TOML schema v1 兼容性**，而非与 RTK 可执行文件、
 shell 钩子、Rust 命令实现或其信任存储布局完全兼容。

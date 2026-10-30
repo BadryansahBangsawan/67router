@@ -4,7 +4,7 @@
 
 ---
 
-Ukandamizaji wa OmniRoute umejengwa kuzunguka mikataba ya injini. Modi inaweza kuendesha injini moja moja kwa moja
+Ukandamizaji wa 67router umejengwa kuzunguka mikataba ya injini. Modi inaweza kuendesha injini moja moja kwa moja
 (`caveman` au `rtk`) au bomba lililopangwa kwa njia bainifu linalotekeleza injini nyingi kwa mpangilio.
 
 ## Njia
@@ -35,7 +35,7 @@ Wasifu ni **dari, si sakafu**: `mergeCompressionProfileOptions` katika kifurushi
 
 Imepimwa kwenye msingi huu wa msimbo: `coding-safe` na `balanced` huongeza `minCompressChars` hadi kiwango chake cha juu na huweka mfumo, skimu za zana na matokeo ya zana yakiwa asilia, kwa hivyo kikao ambacho bado hakijakusanya historia huishia kwenye `below_min_chars` na injini haibadilishi chochote. Ndiyo maana chaguo-msingi ni `aggressive` badala ya wasifu salama zaidi.
 
-Kifurushi hutatua upeo wake wa modeli na wasifu kutoka kwa usanidi wake wa mazingira. OmniRoute haikabidhi uamuzi kamwe: adapta huweka lango la modeli kwenye upeo mkali zaidi wa kifurushi, kwa hivyo mipangilio ya mazingira ya mwenyeji inaweza tu kupunguza orodha ya kuruhusiwa, kamwe haipanui zaidi ya risiti zilizopimwa za OmniRoute.
+Kifurushi hutatua upeo wake wa modeli na wasifu kutoka kwa usanidi wake wa mazingira. 67router haikabidhi uamuzi kamwe: adapta huweka lango la modeli kwenye upeo mkali zaidi wa kifurushi, kwa hivyo mipangilio ya mazingira ya mwenyeji inaweza tu kupunguza orodha ya kuruhusiwa, kamwe haipanui zaidi ya risiti zilizopimwa za 67router.
 
 ## Sajili ya Injini
 
@@ -98,7 +98,7 @@ Hali ya Caveman inalenga ufupishaji wa kisemantiki wa nathari ya kawaida:
 Sehemu yake kwenye dashibodi ni `Dashboard -> Context & Cache -> Caveman`.
 
 Mradi wa msingi wa Caveman unaripoti tokeni za matokeo zilizopungua kwa `~75%`, uokoaji wa wastani wa matokeo wa `65%` katika majaribio ya utendaji
-ukiwa na masafa ya `22-87%`, na zana ya ukandamizaji wa ingizo ya `~46%`. OmniRoute hutumia takwimu ya upande wa ingizo wa Caveman
+ukiwa na masafa ya `22-87%`, na zana ya ukandamizaji wa ingizo ya `~46%`. 67router hutumia takwimu ya upande wa ingizo wa Caveman
 inapoandika kuhusu uokoaji uliounganishwa wa prompt/muktadha; hali ya matokeo ya Caveman inabaki kuwa kipengele tofauti
 cha tabia ya majibu.
 

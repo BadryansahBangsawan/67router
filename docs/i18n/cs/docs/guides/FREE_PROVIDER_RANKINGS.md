@@ -4,7 +4,7 @@
 
 ---
 
-> **Stručně**: OmniRoute řadí své **bezplatné** poskytovatele podle kvality modelů pomocí **ELO skóre
+> **Stručně**: 67router řadí své **bezplatné** poskytovatele podle kvality modelů pomocí **ELO skóre
 > z Arena AI (ve stylu LMArena)**. Otevřete v řídicím panelu stránku **Žebříček bezplatných poskytovatelů**
 > a zjistěte, kteří bezplatní poskytovatelé nabízejí nejsilnější modely pro váš úkol —
 > celkově nebo podle filtrované kategorie (programování, kontrola, dokumentace, ladění).
@@ -13,7 +13,7 @@
 
 ## Co to je
 
-OmniRoute registruje 375 poskytovatelů, včetně 155 položek katalogu označených jako **free/no-auth**
+67router registruje 375 poskytovatelů, včetně 155 položek katalogu označených jako **free/no-auth**
 (no-auth,
 free-tier OAuth nebo free-tier API klíč — viz
 [Průvodce bezplatnými úrovněmi](../getting-started/FREE-TIERS-GUIDE.md) a úplný
@@ -129,9 +129,9 @@ Synchronizační modul Arena ELO (`src/lib/arenaEloSync.ts`) načítá z API že
 a `code`. Každá položka žebříčku obsahuje název modelu, dodavatele, ELO `score`,
 interval spolehlivosti a počet hlasů.
 
-Kategorie žebříčku se mapují na kategorie úloh OmniRoute:
+Kategorie žebříčku se mapují na kategorie úloh 67router:
 
-| Žebříček Arena | Kategorie úloh OmniRoute                          |
+| Žebříček Arena | Kategorie úloh 67router                           |
 | -------------- | ------------------------------------------------- |
 | `text`         | `default`, `review`, `documentation`, `debugging` |
 | `code`         | `coding`                                          |
@@ -169,7 +169,7 @@ Synchronizace je **ve výchozím nastavení zapnutá**:
 - Spustí se jednou při spuštění serveru a poté pravidelně podle časovače
   (`src/lib/arenaEloSync.ts`, připojeno z `src/instrumentation-node.ts`).
 - Je **neblokující a nikdy nezpůsobí kritické selhání** — pokud načtení ze zdroje selže,
-  OmniRoute pokračuje v provozu a žebříčky jednoduše zobrazí poslední platná data
+  67router pokračuje v provozu a žebříčky jednoduše zobrazí poslední platná data
   (nebo prázdný stav).
 
 Řídí ji dvě proměnné prostředí (zdokumentované v
@@ -204,7 +204,7 @@ flexibilní párování (`findMatchingIntelligence` v `src/lib/freeProviderRanki
 3. Shoda prefixu (název modelu v žebříčku je prefixem ID v registru).
 
 Na straně synchronizace se odstraňují známé prefixy dodavatelů (`anthropic/`, `openai/`,
-`google/`, …) a malá mapa aliasů rozšiřuje kanonické názvy o varianty, které OmniRoute
+`google/`, …) a malá mapa aliasů rozšiřuje kanonické názvy o varianty, které 67router
 používá interně, takže modely lze najít pod libovolným názvem.
 
 ### Jak se poskytovatelé řadí

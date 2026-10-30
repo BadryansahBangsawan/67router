@@ -20,10 +20,10 @@ Ir-rwol ta’ magna huwa deskritt minn **żewġ assi indipendenti**, ikkodifikat
 fir-`RouterBackendDefinition` tar-reġistru:
 
 1. **Ċiklu tal-ħajja** (`RouterBackendLifecycle`) — _kif taħdem il-magna_:
-   - `in-process` — taħdem fi ħdan il-proċess Node ta’ OmniRoute (il-pipeline nattiv tat-TS).
-   - `supervised` — proċess wild lokali li OmniRoute jinstalla/jibda/jwaqqaf/jiċċekkja s-saħħa tiegħu
+   - `in-process` — taħdem fi ħdan il-proċess Node ta’ 67router (il-pipeline nattiv tat-TS).
+   - `supervised` — proċess wild lokali li 67router jinstalla/jibda/jwaqqaf/jiċċekkja s-saħħa tiegħu
      permezz ta’ `ServiceSupervisor`, u mbagħad jużah bħala konnessjoni ma’ fornitur.
-   - `external` — endpoint HTTP li OmniRoute jibgħatlu t-talbiet iżda **ma** jimmaniġġjahx
+   - `external` — endpoint HTTP li 67router jibgħatlu t-talbiet iżda **ma** jimmaniġġjahx
      (ikkonfigurat permezz ta’ URL bażi f’varjabbli tal-ambjent).
    - `disabled` — irreġistrat iżda mhux disponibbli għall-għażla.
 2. **Assi tal-għażla** (backend tar-routing tar-relay) — _jekk ir-relay jibgħatx it-talbiet lilu_:

@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookie -palveluntarjoajien avulla OmniRoute voi käyttää tekoälypalvelua olemassa olevan selainistuntosi kautta API-avaimen sijaan. Ne ovat hyödyllisiä, kun sinulla on jo pääsy palveluun sen verkkosivuston kautta ja haluat OmniRouten käyttävän samaa todennettua istuntoa.
+Web Cookie -palveluntarjoajien avulla 67router voi käyttää tekoälypalvelua olemassa olevan selainistuntosi kautta API-avaimen sijaan. Ne ovat hyödyllisiä, kun sinulla on jo pääsy palveluun sen verkkosivuston kautta ja haluat 67routerin käyttävän samaa todennettua istuntoa.
 
 Toisin kuin API-avainta käyttävät palveluntarjoajat, Web Cookie -palveluntarjoajat todentavat käyttäjän selaimen verkkosivustolle lähettämillä tunnistetiedoilla.
 
@@ -49,7 +49,7 @@ DevTools
 
 `Cookie`-pyyntöotsake sisältää täsmälleen ne todennustiedot, joita selaimesi käytti onnistuneesti.
 
-Useimpien Web Cookie -palveluntarjoajien kohdalla tämä arvo tulee liittää OmniRouteen.
+Useimpien Web Cookie -palveluntarjoajien kohdalla tämä arvo tulee liittää 67routeriin.
 
 ---
 
@@ -63,7 +63,7 @@ Määritysprosessi on sama useimmille Web Cookie -palveluntarjoajille.
 4. Päivitä sivu.
 5. Avaa todennettu keskustelu- tai viestipyyntö.
 6. Kopioi vaaditut todennustiedot.
-7. Avaa OmniRoute.
+7. Avaa 67router.
 8. Siirry kohtaan **Providers → Add Provider**.
 9. Valitse Web Cookie -palveluntarjoajasi.
 10. Liitä tunnistetiedot.
@@ -92,17 +92,17 @@ Eri verkkosivustot tallentavat todennustiedot eri tavoin. Jotkin vaativat vain e
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) on maksuton kuluttajille tarkoitettu keskustelualusta, joka ei edellytä rekisteröitymistä — istunto luodaan anonyymisti ensimmäisellä käynnillä ja säilytetään kolmella evästeellä: `uid`, `si_usr_id` ja `si_ses_id`. OmniRoute välittää saman `/api/dispatch`-päätepisteen yhden mallitunnuksen (`notrack-c`, alias `ntw`) kautta.
+NoTrack ([notrack.ai](https://notrack.ai)) on maksuton kuluttajille tarkoitettu keskustelualusta, joka ei edellytä rekisteröitymistä — istunto luodaan anonyymisti ensimmäisellä käynnillä ja säilytetään kolmella evästeellä: `uid`, `si_usr_id` ja `si_ses_id`. 67router välittää saman `/api/dispatch`-päätepisteen yhden mallitunnuksen (`notrack-c`, alias `ntw`) kautta.
 
 ### Yhdistämisen vaiheet
 
 1. Avaa [notrack.ai](https://notrack.ai) selaimessasi ja anna anonyymin istuntoevästeen asettua.
 2. Avaa **Kehittäjätyökalut → Verkko**, päivitä sivu ja napsauta mitä tahansa `/api`-pyyntöä.
 3. Kopioi **Pyynnön otsakkeet** -kohdasta koko `Cookie`-otsakkeen arvo.
-4. Siirry OmniRoutessa kohtaan **Palveluntarjoajat → Lisää palveluntarjoaja → NoTrack Web (maksuton)**.
+4. Siirry 67routerissa kohtaan **Palveluntarjoajat → Lisää palveluntarjoaja → NoTrack Web (maksuton)**.
 5. Liitä evästemerkkijono `apiKey`-kenttään ja napsauta **Tallenna**.
 
-OmniRoute poimii liitetystä merkkijonosta arvot `uid`, `si_usr_id` ja `si_ses_id` ja muodostaa puhtaan `Cookie`-otsakkeen, joka sisältää vain nämä parit — sekä arvon `nt_session` (kirjautuneille tileille asetettava `ntk_…`-tunnus), jos se on mukana. Jos jokin kolmesta puuttuu, liitetty raakamerkkijono välitetään sellaisenaan, jotta operaattorit voivat kokeilla vaihtoehtoisia muotoja.
+67router poimii liitetystä merkkijonosta arvot `uid`, `si_usr_id` ja `si_ses_id` ja muodostaa puhtaan `Cookie`-otsakkeen, joka sisältää vain nämä parit — sekä arvon `nt_session` (kirjautuneille tileille asetettava `ntk_…`-tunnus), jos se on mukana. Jos jokin kolmesta puuttuu, liitetty raakamerkkijono välitetään sellaisenaan, jotta operaattorit voivat kokeilla vaihtoehtoisia muotoja.
 
 ### Mallitunnukset
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Eväste toimii selaimessa mutta ei OmniRoutessa
+## Eväste toimii selaimessa mutta ei 67routerissa
 
 Jotkin palveluntarjoajat käyttävät evästeitä, jotka lähetetään vain todennettujen pyyntöjen yhteydessä.
 

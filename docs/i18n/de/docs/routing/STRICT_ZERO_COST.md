@@ -33,7 +33,7 @@ Für jeden Kandidaten im Pool (`open-sse/services/autoCombo/virtualFactory.ts::b
 direkt nach `filterPaidOnlyCandidates`):
 
 1. **Überhaupt nicht in `FREE_MODEL_BUDGETS` enthalten** → ausgeschlossen. Dies umfasst tatsächlich
-   kostenpflichtige Modelle sowie alle Anbieter/Modelle, die OmniRoute noch nicht klassifiziert hat —
+   kostenpflichtige Modelle sowie alle Anbieter/Modelle, die 67router noch nicht klassifiziert hat —
    neue Kandidaten werden zunächst ausgeschlossen, nicht eingeschlossen.
 2. **`freeType: "keyless"`** → wird sofort zugelassen, **jedoch nur für einen Kandidaten, der
    tatsächlich über den No-Auth-Pfad eingegangen ist** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -93,7 +93,7 @@ und niemals ein anderes, nicht verifiziertes Konto desselben Kandidaten. Siehe
 (Keyless-Bypass-Fälle A/B/C, Mehrkontenfälle 1–5).
 
 `automatisch erkannt`: Ein Provider/Modell, der/das morgen mit den richtigen Metadaten ausgeliefert wird (im
-Katalog, mit einem Nutzungsadapter und `hardStopGuaranteed: true`), ist sofort verwendbar, sobald OmniRoute
+Katalog, mit einem Nutzungsadapter und `hardStopGuaranteed: true`), ist sofort verwendbar, sobald 67router
 davon Kenntnis hat — keine Codeänderung, kein Eintrag in einer Positivliste und nichts, was in diesem Modul bearbeitet werden müsste. Wird ein Eintrag aus
 dem Katalog entfernt, verschwindet er auf dieselbe Weise. Siehe
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` für den Regressionsnachweis (über

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute වෙනත් ස්ථානයක ක්රියාත්මක වන අතරතුර (VPS එකක, නිවසේ server එකක, ඔබගේ Tailnet හි වෙනත් යන්ත්රයක) ඔබගේ laptop එකේ `omniroute` CLI එක ධාවනය කරන්න.
+67router වෙනත් ස්ථානයක ක්රියාත්මක වන අතරතුර (VPS එකක, නිවසේ server එකක, ඔබගේ Tailnet හි වෙනත් යන්ත්රයක) ඔබගේ laptop එකේ `omniroute` CLI එක ධාවනය කරන්න.
 ඔබ `omniroute connect` භාවිතයෙන් එක් වරක් පිවිසුණු පසු, එතැන් සිට **සෑම** CLI command එකක්ම එම remote
 server එක ඉලක්ක කරයි — එකම commands, එකම output, නමුත් ක්රියාත්මක වන්නේ remote server එකට එරෙහිවය.
 
@@ -23,7 +23,7 @@ omniroute configure codex                # ← remote catalog එකෙන් lo
 ## එය ක්රියා කරන ආකාරය
 
 ```
-ඔබගේ laptop එක                         remote OmniRoute (VPS)
+ඔබගේ laptop එක                         remote 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (password → token)         │
 │  context: vps      │ ───────────────►  │ scope කළ access token එකක් නිකුත් කරයි │
@@ -105,7 +105,7 @@ Antigravity භාවිත කරන්නේ Google හි firstparty/nativeap
 ළඟා විය හැකි නම් පමණි**. දුරස්ථ VPS ස්ථාපනයක එම loopback එක පවතින්නේ
 සේවාදායකයේ මිස ඔබේ පරිගණකයේ නොවන බැවින්, අනුමැති තිරය **සදහටම රැඳී සිටින අතර
 කිසි විටෙක කේතයක් නිකුත් නොකරයි** — සාමාන්ය "callback URL එක අලවන්න" යන විකල්ප ක්රමයේ
-අලවන්නට කිසිවක් නොමැත. (මෙය Google පාර්ශ්වයේ සීමාවකි: OmniRoute හි පමණක් නොව,
+අලවන්නට කිසිවක් නොමැත. (මෙය Google පාර්ශ්වයේ සීමාවකි: 67router හි පමණක් නොව,
 ඇතුළත් කර ඇති Antigravity desktop client එක භාවිත කරන ඕනෑම proxy එකකදී ද එම
 රැඳී සිටීම සිදු වේ.)
 
@@ -115,7 +115,7 @@ Antigravity භාවිත කරන්නේ Google හි firstparty/nativeap
 පුරවා ඇත. (LAN ලිපිනයක් ද මෙයට අදාළ වේ — මෙම callback එක සම්බන්ධයෙන්
 `192.168.x.x` යනු localhost නොවේ.)
 
-Antigravity දුරස්ථ OmniRoute එකකට සම්බන්ධ කිරීමට සහාය දක්වන ක්රම දෙකක් ඇත.
+Antigravity දුරස්ථ 67router එකකට සම්බන්ධ කිරීමට සහාය දක්වන ක්රම දෙකක් ඇත.
 
 ### විකල්පය A — දේශීය පුරනය වීමේ සහායකය (නිර්දේශිතයි)
 
@@ -154,7 +154,7 @@ npx omniroute login antigravity --no-push
 
 ඉන්පසු, **දුරස්ථ** dashboard එකේ: **Providers → Antigravity → Connect** වෙත ගොස්,
 `omniroute-cred-v1.…` blob එක **Step 2** ක්ෂේත්රයට අලවන්න (එය callback URL එකක් හෝ
-credential blob එකක් පිළිගනී). OmniRoute එය decode කර, Cloud Code onboarding ක්රියාවලිය
+credential blob එකක් පිළිගනී). 67router එය decode කර, Cloud Code onboarding ක්රියාවලිය
 සේවාදායක පාර්ශ්වයෙන් ධාවනය කර, සම්බන්ධතාව සුරකියි.
 
 > blob එක තුළ refresh token එකක් අඩංගු වේ — එය මුරපදයක් මෙන් සලකන්න. push මාර්ගයේදී එය
@@ -196,7 +196,7 @@ provider එකට විශේෂිත දෙවන port එකක් නො�
 ## දුරස්ථ ස්ථාපනයක Codex / Grok සම්බන්ධ කිරීම (ස්ථාවර-loopback සපයන්නන්)
 
 Codex, xAI (`xai-oauth`) සහ Grok CLI (`grok-cli`) ඔවුන්ගේ upstream OAuth යෙදුම සමඟ **ස්ථාවර**
-loopback `redirect_uri` එකක් ලියාපදිංචි කරයි. OmniRoute හට එය වෙනස් කළ නොහැක — සපයන්නා
+loopback `redirect_uri` එකක් ලියාපදිංචි කරයි. 67router හට එය වෙනස් කළ නොහැක — සපයන්නා
 සැමවිටම බ්රවුසරය එකම hardcoded ලිපිනය වෙත ආපසු යවයි:
 
 | සපයන්නා     | සපයන්නා යළි යොමු කරන ස්ථාවර callback එක |
@@ -205,7 +205,7 @@ loopback `redirect_uri` එකක් ලියාපදිංචි කරයි
 | `xai-oauth` | `http://127.0.0.1:56121/callback`       |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`       |
 
-එහි `localhost` යන්නෙන් අදහස් වන්නේ **බ්රවුසරය ක්රියාත්මක වන යන්ත්රය** වන අතර, OmniRoute හි PKCE
+එහි `localhost` යන්නෙන් අදහස් වන්නේ **බ්රවුසරය ක්රියාත්මක වන යන්ත්රය** වන අතර, 67router හි PKCE
 callback සේවාදායකය සවන් දෙන්නේ **සේවාදායකයේ** loopback මතය. `http://192.168.0.15:20128`
 වැනි LAN ලිපිනයකින් dashboard එක විවෘත කළ විට ඒ දෙක කිසිවිටෙකත් හමු නොවේ: authorization
 code එක ඔබගේම laptop එකේ `localhost:1455` වෙත ලබා දෙන අතර, එහි කිසිවක් සවන් නොදෙන බැවින්
@@ -224,7 +224,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 
 forwards දෙකක් අවශ්ය වන අතර, එකක් පමණක් forward කළද එය තවමත් අසාර්ථක වේ:
 
-- **`20128`** (dashboard port එක) origin එක සැබෑ-localhost බවට පත් කරයි; OmniRoute විසින්
+- **`20128`** (dashboard port එක) origin එක සැබෑ-localhost බවට පත් කරයි; 67router විසින්
   PKCE callback සේවාදායකය ආරම්භ කරන්නේ ඒ නිසාය — LAN origin එකක් කිසිවිටෙකත්
   එම branch එකට ළඟා නොවේ.
 - **`1455`** (සපයන්නාගේ ස්ථාවර callback port එක) යනු බ්රවුසරය ආපසු යවනු ලබන ස්ථානයයි;
@@ -343,7 +343,7 @@ omniroute contexts current         # සක්රීය සේවාදායක
 
 ```text
   | නම      | මූල URL                   | සත්යාපනය | විෂය පථය | විස්තරය
-● | vps     | http://100.67.86.91:20128 | ටෝකනය  | පරිපාලක | දුරස්ථ OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | ටෝකනය  | පරිපාලක | දුරස්ථ 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

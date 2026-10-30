@@ -41,7 +41,7 @@ nasazení nebo externí integrace aktuálně dostupná.
 | Nabídky pro podporovatele           | Implementovány jako samostatný podepsaný zdroj dat dostupný pouze živě a jako stránka řídicího panelu. Klient znovu ověřuje uzavřené schéma výhod, zachovává poslední platnou mezipaměť, filtruje položky po vypršení platnosti a nabídky partnerů výslovně označuje.                |
 | Přehledy a rozpoznání podporovatelů | Implementováno jako striktní podepsaný zdroj dat dostupný pouze živě, s hodnocením ELO spravovaným Radarem, faktickými údaji o aktuálnosti a trendech katalogu, ověřeným lokálním odznakem podporovatele, stránkou řídicího panelu a lokálními příkazy CLI pro stav a synchronizaci. |
 | Platby a transakční e-maily         | V OSS klientovi nejsou implementovány. Nákup, darování, kontrola účtenek, obnovení a doručování e-mailů zajišťuje privátní služba; dostupnost hostované služby nadále závisí na jejím spravovaném nasazení a konfiguraci poskytovatele.                                              |
-| Pracovní proud výzkumného agenta    | Není součástí tohoto vydání klienta. Spravovaný obsah zdrojů dat zůstává daty na straně serveru; v instalaci OmniRoute neběží žádný autonomní výzkumný agent.                                                                                                                        |
+| Pracovní proud výzkumného agenta    | Není součástí tohoto vydání klienta. Spravovaný obsah zdrojů dat zůstává daty na straně serveru; v instalaci 67router neběží žádný autonomní výzkumný agent.                                                                                                                         |
 
 ---
 
@@ -119,7 +119,7 @@ Když jsou oba zapnuté, synchronizace probíhá následovně:
    IP adresy pro ruční kontrolu zneužití; tyto tabulky neuchovávají klíč ani IP adresu v nezpracované podobě.
    Protokoly přístupu k infrastruktuře a šifrovaná fronta odchozího doručování představují samostatné provozní
    hranice.
-3. OmniRoute službě Radar nikdy neodesílá výzvy, odpovědi, konverzace, přihlašovací údaje
+3. 67router službě Radar nikdy neodesílá výzvy, odpovědi, konverzace, přihlašovací údaje
    poskytovatelů, provoz modelů, údaje o dostupnosti, latenci ani místní konfiguraci poskytovatelů.
 4. Odpověď je ověřena, validována a uložena do místní mezipaměti (viz
    [Model zabezpečení](#security-model)). Radar má přesně čtyři síťové cesty na straně serveru:
@@ -243,13 +243,13 @@ který už klíč má.
 ### Kompletní aktivace a průvodce nastavením
 
 Privátní služba kanálu a tento OSS klient mají záměrně úzce vymezené rozhraní: služba
-vydává a ověřuje podporovatelský klíč, zatímco místní instalace OmniRoute klíč šifruje,
+vydává a ověřuje podporovatelský klíč, zatímco místní instalace 67router klíč šifruje,
 synchronizuje podepsané artefakty na straně serveru a provází nastavením poskytovatele. Pořadí asistovaného ověřování je:
 
 1. Získejte nově vydaný nebo obnovený klíč z procesu uplatnění nároku přispěvatele, plánů/pokladny, procesu
    obnovení nebo od autorizovaného provozovatele soukromého serveru. Nevkládejte nezpracovaný klíč do protokolů,
    snímků obrazovky, komentářů k problémům ani argumentů příkazového řádku.
-2. Povolte příznak funkce `RADAR_ENABLED` v místní instalaci OmniRoute. Tím se zpřístupní uživatelské rozhraní,
+2. Povolte příznak funkce `RADAR_ENABLED` v místní instalaci 67router. Tím se zpřístupní uživatelské rozhraní,
    ale síťová komunikace zůstane neaktivní, dokud nebude uložen samostatný výslovný souhlas.
 3. Otevřete `/dashboard/radar`, vložte klíč a proveďte aktivaci. Prohlížeč odešle jeden místní požadavek
    `POST /api/radar/settings` s `{ optIn: true, supporterKey }`; klíč se místně zašifruje a
@@ -314,7 +314,7 @@ platné až do další synchronizace.
 ### Přepsání pomocí proměnných prostředí s ohledem na forky
 
 Dvě proměnné prostředí umožňují forkům a uživatelům provozujícím vlastní instanci
-nasměrovat klienta na vlastní feed namísto výchozí služby OmniRoute — viz níže
+nasměrovat klienta na vlastní feed namísto výchozí služby 67router — viz níže
 [Jak provozovat vlastní feed](#how-to-self-host-a-feed):
 
 | Proměnná            | Účel                                                                                                               |
@@ -471,7 +471,7 @@ hodnotou `enabled: true`, ponechá sloučený záznam deaktivovaný a zaznamená
 Publikace katalogu používají `schemaVersion: 2`. `contextWindow` a každá z hodnot `tools`, `vision` a
 `thinking` mají nezávisle typ `number | null` / `boolean | null`: `null` znamená neznámou hodnotu, zatímco
 `false` znamená, že oficiální zdroj poskytovatele ověřený podle D16 výslovně uvádí nepřítomnost dané schopnosti.
-Interní příznaky registru/specifikace modelu OmniRoute se nikdy přímo nepovyšují na fakta feedu. Klient
+Interní příznaky registru/specifikace modelu 67router se nikdy přímo nepovyšují na fakta feedu. Klient
 nadále přijímá snímky v1; protože starý sestavovací nástroj používal `false` jako zástupnou hodnotu nepřítomnosti, v1 `false` se
 normalizuje na neznámou hodnotu, zatímco v1 `true` zůstává faktickou hodnotou. Neznámé verze schématu bezpečně selžou a
 poslední platná mezipaměť zůstane dostupná. Každý model v2 s nenulovým kontextem/schopností musí obsahovat
@@ -532,7 +532,7 @@ Níže uvedené rodiny lokálních tras Radar zajišťují uživatelské rozhran
 | `/api/radar/local-model-state` | DELETE | Vymaže upravitelná pole přepsání a zachová případný záznam tombstone.                                                     |
 
 **Pevné pravidlo: tyto trasy nikdy nefungují jako proxy služby feedu.** Prohlížeč komunikuje
-výhradně s lokálním serverem OmniRoute. Čtyři moduly, které komunikují se službou Radar, jsou
+výhradně s lokálním serverem 67router. Čtyři moduly, které komunikují se službou Radar, jsou
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (doporučení) a
 `src/lib/radar/offersSync.ts` (nabídky) spolu s `src/lib/radar/intelSync.ts` (Intel); všechny běží
 na straně serveru, nikdy na straně klienta. Díky tomu se
@@ -601,7 +601,7 @@ nikdy neaktualizuje žebříčky ani znovu nepoužívá `token_share`. `/dashboa
 pouze na základě ověřených metadat místní mezipaměti.
 
 CLI zpřístupňuje `omniroute radar status` a `omniroute radar sync`. Oba komunikují pouze s
-místním API OmniRoute. `status` provádí pouze čtecí požadavek `GET /api/radar/status`; `sync` odešle jeden
+místním API 67router. `status` provádí pouze čtecí požadavek `GET /api/radar/status`; `sync` odešle jeden
 `POST /api/radar/sync-all` a vypíše výsledek pro každý kanál. Žádný z příkazů klíč podporovatele nečte, nepřijímá ani nevypisuje
 a žádný z nich nekontaktuje službu Radar přímo.
 

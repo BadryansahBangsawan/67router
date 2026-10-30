@@ -4,7 +4,7 @@
 
 ---
 
-Releji (Vercel, Deno, Cloudflare) prekinejo povezavo navzgor v brezstrežniškem zaledju, tako da lahko OmniRoute izhodni promet usmerja iz stabilne regije, ključ API ponudnika pa ostane na strani strežnika. Ta dokument obravnava dva načina odpovedi, s katerima se operaterji srečujejo v produkciji, in postopke obnovitve, ki jih OmniRoute ponuja za vsakega od njiju.
+Releji (Vercel, Deno, Cloudflare) prekinejo povezavo navzgor v brezstrežniškem zaledju, tako da lahko 67router izhodni promet usmerja iz stabilne regije, ključ API ponudnika pa ostane na strani strežnika. Ta dokument obravnava dva načina odpovedi, s katerima se operaterji srečujejo v produkciji, in postopke obnovitve, ki jih 67router ponuja za vsakega od njiju.
 
 ## Kako se shranjuje preverjanje pristnosti releja
 
@@ -24,7 +24,7 @@ Ob času zahteve `extractRelayAuth(notes)` vrne katerokoli prisotno obliko, zato
 
 1. Odprite **Settings → Proxy Pool**.
 2. Vrstice relejev, pri katerih manjkajo podatki za preverjanje pristnosti, prikazujejo rumeno oznako `auth missing` in gumb **Repair**.
-3. Kliknite **Repair**. OmniRoute pokliče
+3. Kliknite **Repair**. 67router pokliče
    `POST /api/settings/proxies/[id]/repair-relay`, ki:
    - dešifrira `relayAuthEnc` s **trenutnim** ključem,
    - zapiše nešifrirani `relayAuth` nazaj v `notes`,
@@ -49,7 +49,7 @@ Ko žetona ni mogoče obnoviti, gumb **Repair** v uporabniškem vmesniku samodej
 
 **Simptom:** preskus posredniškega strežnika (gumb `speed`) kaže, da rele deluje, vendar zahteve še vedno občasno ne uspejo.
 
-Preverite glave o stanju releja, ki jih vrne sonda za samodejni preskus OmniRoute (glejte **Settings → Proxy Pool** in števca `relayTested` / `relayAlive`):
+Preverite glave o stanju releja, ki jih vrne sonda za samodejni preskus 67router (glejte **Settings → Proxy Pool** in števca `relayTested` / `relayAlive`):
 
 - `x-relay-url` — katero zaledje releja se je odzvalo.
 - `x-relay-mode` — `ts` | `bifrost` | `auto` za to zahtevo.

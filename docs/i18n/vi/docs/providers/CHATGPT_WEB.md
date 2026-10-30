@@ -40,9 +40,9 @@ cùng một khả năng công cụ cục bộ gắn với lượt khi tunnel và
    Các thiết lập mới có khả năng sử dụng công cụ phải dùng một connector mới được tạo có tên chính xác là
    `OmniRoute Codex v2`, với Authentication được đặt thành None và Permissions được đặt thành Allow all
    actions.
-3. Chạy kiểm tra kết nối. OmniRoute mở một Temporary Chat dựa trên trình duyệt và phát hiện
+3. Chạy kiểm tra kết nối. 67router mở một Temporary Chat dựa trên trình duyệt và phát hiện
    liệu Sol và Pro có khả dụng cho tài khoản hay không.
-4. Lưu kết nối. OmniRoute thay thế cookie đã dán bằng trạng thái lưu trữ Playwright
+4. Lưu kết nối. 67router thay thế cookie đã dán bằng trạng thái lưu trữ Playwright
    đã được xác minh và lưu trạng thái đó cùng runtime key thông qua lớp trừu tượng thông tin xác thực
    được mã hóa.
 
@@ -99,20 +99,20 @@ một trình kết nối `OmniRoute Codex v2` mới.
 
 ## VPS không có màn hình và Docker
 
-Đối với các bản cài đặt npm, systemd và PM2, OmniRoute phát hiện các đường dẫn Chrome và Chromium phổ biến.
+Đối với các bản cài đặt npm, systemd và PM2, 67router phát hiện các đường dẫn Chrome và Chromium phổ biến.
 Ngoài ra, hãy đặt `CHATGPT_WEB_CODEX_CHROME_PATH`. Các lượt thời gian chạy chủ ý sử dụng Chrome
 có giao diện vì ChatGPT từ chối đặc điểm nhận dạng của trình duyệt thực sự không giao diện. Do đó, máy chủ
-không có màn hình phải chạy OmniRoute với màn hình Xvfb riêng; chỉ đặt đường dẫn Chrome sẽ không
+không có màn hình phải chạy 67router với màn hình Xvfb riêng; chỉ đặt đường dẫn Chrome sẽ không
 cung cấp màn hình.
 
 Hồ sơ Docker `web` khởi động `chatgpt-web-codex-browser` trên mạng Compose
 nội bộ. Sidecar chạy Chrome có giao diện bên trong Xvfb, nên không cần màn hình vật lý. Cổng CDP
 của nó không được công khai trên máy chủ. Ổ đĩa hồ sơ trình duyệt được bảo vệ tách biệt với ổ đĩa
-dữ liệu OmniRoute, và trình duyệt nhận đủ bộ nhớ dùng chung. Proxy CDP nội bộ
+dữ liệu 67router, và trình duyệt nhận đủ bộ nhớ dùng chung. Proxy CDP nội bộ
 chỉ lắng nghe trên cổng `9223` bên trong mạng Compose; Chrome vẫn được liên kết với loopback trong
 sidecar.
 
-Một lease giám sát trong `DATA_DIR` ngăn nhiều tiến trình OmniRoute sở hữu
+Một lease giám sát trong `DATA_DIR` ngăn nhiều tiến trình 67router sở hữu
 cùng trạng thái đường hầm và trình môi giới. Xung đột sẽ được doctor báo cáo.
 
 ## Khôi phục tương tác

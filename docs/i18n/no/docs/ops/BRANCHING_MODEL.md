@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute bruker en **parallellsyklusmodell** for utgivelser: en dedikert `release/vX.Y.Z`-gren
+67router bruker en **parallellsyklusmodell** for utgivelser: en dedikert `release/vX.Y.Z`-gren
 for den aktive syklusen, `main` for den publiserte linjen og en uforanderlig
 `vX.Y.Z`-tagg når syklusen lanseres. Det er forventet at commits legges til både på `release/*` _og_ på
 `main` — det er ikke en forveksling.

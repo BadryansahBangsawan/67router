@@ -48,7 +48,7 @@ JWT, der eksponeres via en tunnel, **kan ikke** udløse denne kodesti.
 | Linux+Firefox/Chromium | opdatering af NSS-database pr. profil via `certutil -d sql:<profile>`                                             |
 
 Det er de samme kommandoer, som bruges af `mitmproxy`, Charles Proxy, Fiddler og
-Caddy. Det forhold, at de findes i OmniRoute, er dokumenteret i
+Caddy. Det forhold, at de findes i 67router, er dokumenteret i
 `docs/security/STEALTH_GUIDE.md`.
 
 **Afhjælpning i v3.8.6**:
@@ -109,7 +109,7 @@ fjernes i v3.9.
 
 **Hvorfor vi beholder det**: Import fra Zed er den mest brugervenlige
 onboarding-metode for brugere, som allerede anvender Zed og ønsker at spejle
-deres udbydernøgler i OmniRoute uden at skulle indsætte dem igen.
+deres udbydernøgler i 67router uden at skulle indsætte dem igen.
 
 ---
 
@@ -121,7 +121,7 @@ deres udbydernøgler i OmniRoute uden at skulle indsætte dem igen.
 `execFileWithPassword`, `runElevatedPowerShell` og den delte
 `quotePowerShell`-hjælpefunktion. Socket.devs AI-klassifikator opfatter dem som
 et generisk "værktøjssæt til afvikling på værten og rettighedsforhøjelse." I
-OmniRoute bruges de kun af installationsforløbet for MITM-certifikater (§1) og
+67router bruges de kun af installationsforløbet for MITM-certifikater (§1) og
 af `execFileWithPassword` til afvikling af `sudo`-kommandoer.
 
 **Afhjælpning i v3.8.6**:
@@ -173,7 +173,7 @@ installeres lokalt (tænk: et plugin i WordPress-stil) — strengt tilvalg.
 
 ---
 
-## §5 — tilbageskrivning af legitimationsoplysninger ved OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — tilbageskrivning af legitimationsoplysninger ved 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Kildefiler**:
 
@@ -206,7 +206,7 @@ rawBody)`), før JSON-dataene parses. Hvis hemmeligheden er angivet, er signatur
    `rateLimitedUntil`, `updatedAt`). Dette er en **inkompatibel ændring** for brugere,
    der var afhængige af fjernsynkronisering af tokens — de skal udtrykkeligt tilmelde sig.
 
-**Hvorfor vi beholder den**: Cloud Sync er den eneste måde, hvorpå en OmniRoute Cloud-lejer
+**Hvorfor vi beholder den**: Cloud Sync er den eneste måde, hvorpå en 67router Cloud-lejer
 kan centralisere teamets legitimationsoplysninger. Rettelsen gør trusselsmodellen ærlig:
 "serveren signerer, klienten verificerer, operatøren tilmelder sig."
 

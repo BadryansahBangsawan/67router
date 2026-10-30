@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ma trzy odrębne, ale powiązane ze sobą mechanizmy odporności. Każdy z nich ma inny zakres i cel. Podczas debugowania zachowania routingu należy je traktować osobno.
+67router ma trzy odrębne, ale powiązane ze sobą mechanizmy odporności. Każdy z nich ma inny zakres i cel. Podczas debugowania zachowania routingu należy je traktować osobno.
 
 ![3-warstwowy model odporności](../diagrams/exported/resilience-3layers.svg)
 
@@ -164,7 +164,7 @@ Trzy nagłówki przywiązania sesji nigdy nie są przekazywane do upstreamu — 
 
 ### Ekskluzywne dzierżawy połączeń dla zarządzanych sesji
 
-**Zakres:** jeden aktywny zarządzany klient HTTP/sesja posiada jedno kwalifikowalne połączenie OmniRoute.
+**Zakres:** jeden aktywny zarządzany klient HTTP/sesja posiada jedno kwalifikowalne połączenie 67router.
 
 **Cel:** zapewnienie trwałego, wyłącznego posiadania połączenia dla klientów, którzy potrzebują
 twardej bariery routingu między żądaniami. Różni się to od przywiązania sesji, które jest miękką
@@ -188,7 +188,7 @@ identyfikator klucza API oraz identyfikator aktywnego połączenia. Nagłówki s
 z dzienników, zachowanych migawek żądań oraz nagłówków wysyłanych do wykonawców upstream.
 
 Jeśli standardowy routing dysponuje kwalifikującymi się zarządzanymi kandydatami, ale każdy wolny kandydat
-jest zajęty przez obcą aktywną dzierżawę, OmniRoute zwraca HTTP `429`, kod braku dostępnej pojemności dzierżaw,
+jest zajęty przez obcą aktywną dzierżawę, 67router zwraca HTTP `429`, kod braku dostępnej pojemności dzierżaw,
 stan oczekiwania na pojemność oraz ograniczoną wartość `Retry-After` wyprowadzoną z najwcześniejszego istotnego
 wygaśnięcia. Zwykły brak kwalifikujących się kandydatów nie jest rywalizacją o dzierżawę i zachowuje dotychczasową
 semantykę błędów routingu.
@@ -214,7 +214,7 @@ zapisywana jest blokada (`resolveLockoutScope()` w
   połączenia), dla innych dostawców `getQuotaScopedModelForProvider()`.
 - `404` blokuje sam model (`getModelLockKey()` zawęża `not_found`).
 - Każdy inny status — błędy transportowe/serwerowe `5xx` oraz wewnętrzny,
-  syntetyzowany `502` OmniRoute pochodzący z walidacji jakości — blokuje wyłącznie
+  syntetyzowany `502` 67router pochodzący z walidacji jakości — blokuje wyłącznie
   **dokładną** krotkę dostawca/połączenie/model. Wadliwy strumień na jednym modelu
   nie jest dowodem na wyczerpanie limitu konta; przed wprowadzeniem tej reguły
   jedna pusta odpowiedź na `codex/gpt-5.6-luna` usuwała z routingu wszystkie modele
@@ -355,7 +355,7 @@ dla poszczególnych modeli**, po jednym `model=cap` na linię) lub przez
   wyrażone dodatnimi liczbami całkowitymi.
 - **Lokalne kolejkowanie, bez wykrywania:** nadmiarowe żądania są kolejkowane
   lokalnie zgodnie z istniejącą semantyką kolejki/timeoutu (typizowane błędy
-  dopuszczenia `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute nie
+  dopuszczenia `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router nie
   wykrywa ani nie wywnioskowuje polityki upstream — wymusza dokładnie te limity,
   które skonfigurował operator. Wysycona bramka modelu nigdy nie wyłącza dostawcy
   i nigdy nie tworzy trwałej blokady modelu; zachowanie upstream
@@ -458,7 +458,7 @@ Samo sprawdzenie przyjęcia jest funkcją czystą (`open-sse/services/rateLimitM
 ### Siatka bezpieczeństwa automatycznego włączania limitów szybkości i ochrona połączeń (`rateLimitProtection`)
 
 **Siatka bezpieczeństwa automatycznego włączania** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, domyślnie `true`):
-Domyślnie OmniRoute automatycznie włącza ochronę kolejki limitów szybkości dla wszystkich aktywnych połączeń dostawców typu klucz API (`getProviderCategory(provider) === "apikey"`). Dzięki temu przychodzące żądania kierowane do nadrzędnych kluczy API wrażliwych na limity są kolejkowane i dławione przez Bottleneck, zamiast masowo wywoływać nadrzędne błędy 429. Siatkę bezpieczeństwa można nadpisać zmienną środowiskową `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` wyłącza, `true`/`1`/`on` wymusza włączenie), która ma pierwszeństwo przed zapisanym ustawieniem panelu (**Ustawienia → Odporność** / `PATCH /api/resilience`).
+Domyślnie 67router automatycznie włącza ochronę kolejki limitów szybkości dla wszystkich aktywnych połączeń dostawców typu klucz API (`getProviderCategory(provider) === "apikey"`). Dzięki temu przychodzące żądania kierowane do nadrzędnych kluczy API wrażliwych na limity są kolejkowane i dławione przez Bottleneck, zamiast masowo wywoływać nadrzędne błędy 429. Siatkę bezpieczeństwa można nadpisać zmienną środowiskową `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` wyłącza, `true`/`1`/`on` wymusza włączenie), która ma pierwszeństwo przed zapisanym ustawieniem panelu (**Ustawienia → Odporność** / `PATCH /api/resilience`).
 
 **Semantyka pola `rateLimitProtection` dla poszczególnych połączeń:**
 Ochrona limitów szybkości dla poszczególnych połączeń jest śledzona za pomocą pola logicznego `rateLimitProtection` w połączeniach dostawców (zapisywanego jako `rate_limit_protection` w SQLite):
@@ -768,7 +768,7 @@ co wyczerpany limit przydziału. Uczciwe ograniczenia:
 > przewodnik agenta mieścił się w budżecie kontekstu 40k. Jest to skondensowany, skierowany
 > do agentów obraz powyższych sekcji; sekcje numerowane pozostają pełnym źródłem odniesienia.
 
-OmniRoute ma trzy powiązane, ale odrębne mechanizmy obsługi awarii tymczasowych. Podczas
+67router ma trzy powiązane, ale odrębne mechanizmy obsługi awarii tymczasowych. Podczas
 debugowania zachowania routingu utrzymuj ich zakresy rozdzielnie. Zobacz
 [diagram 3-warstwowej odporności](../diagrams/exported/resilience-3layers.svg)
 (źródło: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd)),

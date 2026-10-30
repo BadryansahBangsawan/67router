@@ -48,7 +48,7 @@ JWT divulgué par l'intermédiaire d'un tunnel **ne peut pas** déclencher ce ch
 | Linux+Firefox/Chromium | mise à jour de la base de données NSS de chaque profil via `certutil -d sql:<profile>`                            |
 
 Il s'agit des mêmes commandes que celles utilisées par `mitmproxy`, Charles Proxy, Fiddler et
-Caddy. Leur présence dans OmniRoute est documentée dans
+Caddy. Leur présence dans 67router est documentée dans
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mesures d'atténuation de la v3.8.6** :
@@ -112,7 +112,7 @@ mis à jour leur automatisation. Elle sera supprimée dans v3.9.
 
 **Pourquoi nous le conservons** : l’importation depuis Zed constitue le
 parcours d’intégration le plus convivial pour les utilisateurs qui emploient
-déjà Zed et souhaitent répliquer leurs clés de fournisseurs dans OmniRoute
+déjà Zed et souhaitent répliquer leurs clés de fournisseurs dans 67router
 sans avoir à les coller de nouveau.
 
 ---
@@ -125,7 +125,7 @@ sans avoir à les coller de nouveau.
 `execFileWithPassword`, `runElevatedPowerShell` et la fonction utilitaire
 partagée `quotePowerShell`. Le classificateur d’IA de Socket.dev les considère
 comme une boîte à outils générique d’« exécution sur l’hôte + élévation de
-privilèges ». Dans OmniRoute, ils sont utilisés uniquement par le parcours
+privilèges ». Dans 67router, ils sont utilisés uniquement par le parcours
 d’installation du certificat MITM (§1) et par `execFileWithPassword` pour
 l’exécution de commandes `sudo`.
 
@@ -182,7 +182,7 @@ activation strictement volontaire.
 
 ---
 
-## §5 — Réécriture des identifiants OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Réécriture des identifiants 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Fichiers sources** :
 
@@ -215,7 +215,7 @@ rawBody)`) avant d’analyser le JSON. Si le secret est défini, la signature es
    `rateLimitedUntil`, `updatedAt`). Il s’agit d’un **changement incompatible** pour les utilisateurs
    qui dépendaient de la synchronisation distante des jetons — ils doivent l’activer explicitement.
 
-**Pourquoi nous le conservons** : Cloud Sync est le seul moyen permettant à un locataire OmniRoute Cloud
+**Pourquoi nous le conservons** : Cloud Sync est le seul moyen permettant à un locataire 67router Cloud
 de centraliser les identifiants de l’équipe. Le correctif rend le modèle de menace explicite :
 « le serveur signe, le client vérifie, l’opérateur choisit de l’activer ».
 

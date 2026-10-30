@@ -15,7 +15,7 @@ Mehanizem za deljenje kvot pravično porazdeli časovno omejeno kvoto ponudnika 
 5-urno okno, Kimijevih 1500 zahtev/h) med več ključev API, ki si delijo isto
 povezavo.
 
-**Težava, ki jo rešuje:** OmniRoute posreduje zahteve več ključev API istemu računu
+**Težava, ki jo rešuje:** 67router posreduje zahteve več ključev API istemu računu
 pri zunanjem ponudniku. Brez logike deljenja lahko naval zahtev ključa A izčrpa
 ponudnikovo kvoto za tekočo uro, zaradi česar ključa B in C ostaneta blokirana do ponastavitve okna.
 Mehanizem to preprečuje tako, da:
@@ -119,7 +119,7 @@ Gonilnik Redis: skript Lua EVAL za atomsko povečanje — izvede se kot en sam u
 
 - Tabela: `quota_consumption` (glejte migraciji `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Najprimernejši za uvedbe z enim primerkom.
-- Vsi trajni podatki so shranjeni v obstoječi zbirki podatkov SQLite OmniRoute (`DATA_DIR/storage.sqlite`).
+- Vsi trajni podatki so shranjeni v obstoječi zbirki podatkov SQLite 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (izbirno, več primerkov)
 

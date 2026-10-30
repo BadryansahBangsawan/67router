@@ -28,9 +28,9 @@ Tunnel faqat vositali almashinuvlar uchun kerak. Roʻyxatdagi har bir marshrut, 
    nomini kiriting. Vositalarni qoʻllab-quvvatlaydigan yangi sozlamalarda aynan
    `OmniRoute Codex v2` nomi bilan yangi yaratilgan konnektordan foydalanish, Authentication qiymatini None va Permissions qiymatini Allow all
    actions qilib belgilash kerak.
-3. Ulanish tekshiruvini ishga tushiring. OmniRoute brauzer asosidagi Temporary Chat oynasini ochadi va
+3. Ulanish tekshiruvini ishga tushiring. 67router brauzer asosidagi Temporary Chat oynasini ochadi va
    hisob uchun Sol hamda Pro mavjudligini aniqlaydi.
-4. Ulanishni saqlang. OmniRoute kiritilgan cookieni tasdiqlangan
+4. Ulanishni saqlang. 67router kiritilgan cookieni tasdiqlangan
    Playwright saqlash holati bilan almashtiradi va uni shifrlangan
    hisob maʼlumotlari abstraksiyasi orqali runtime kaliti bilan birga saqlaydi.
 
@@ -72,11 +72,11 @@ Eski `Codex Native` yoki `OmniRoute Codex` konnektorining nomini oʻzgartirmang 
 
 ## Displeysiz VPS va Docker
 
-npm, systemd va PM2 oʻrnatishlari uchun OmniRoute keng tarqalgan Chrome va Chromium yoʻllarini aniqlaydi. Muqobil ravishda `CHATGPT_WEB_CODEX_CHROME_PATH`ni sozlang. Bajarilish vaqtidagi navbatlar ataylab oynali Chrome'dan foydalanadi, chunki ChatGPT haqiqiy boshsiz brauzer shaklini rad etadi. Shu sababli displeysiz xost OmniRoute'ni xususiy Xvfb displeyi bilan ishga tushirishi kerak; faqat Chrome yoʻlini sozlash displeyni taqdim etmaydi.
+npm, systemd va PM2 oʻrnatishlari uchun 67router keng tarqalgan Chrome va Chromium yoʻllarini aniqlaydi. Muqobil ravishda `CHATGPT_WEB_CODEX_CHROME_PATH`ni sozlang. Bajarilish vaqtidagi navbatlar ataylab oynali Chrome'dan foydalanadi, chunki ChatGPT haqiqiy boshsiz brauzer shaklini rad etadi. Shu sababli displeysiz xost 67router'ni xususiy Xvfb displeyi bilan ishga tushirishi kerak; faqat Chrome yoʻlini sozlash displeyni taqdim etmaydi.
 
-Docker `web` profili ichki Compose tarmogʻida `chatgpt-web-codex-browser`ni ishga tushiradi. Yordamchi konteyner Xvfb ichida oynali Chrome'ni ishga tushiradi, shuning uchun jismoniy displey talab qilinmaydi. Uning CDP porti xostda eʼlon qilinmaydi. Himoyalangan brauzer profili jildi OmniRoute maʼlumotlar jildidan alohida saqlanadi va brauzer yetarli miqdorda umumiy xotira oladi. Ichki CDP proksi faqat Compose tarmogʻi ichidagi `9223` portini tinglaydi; Chrome yordamchi konteynerda loopback interfeysiga bogʻlangan holda qoladi.
+Docker `web` profili ichki Compose tarmogʻida `chatgpt-web-codex-browser`ni ishga tushiradi. Yordamchi konteyner Xvfb ichida oynali Chrome'ni ishga tushiradi, shuning uchun jismoniy displey talab qilinmaydi. Uning CDP porti xostda eʼlon qilinmaydi. Himoyalangan brauzer profili jildi 67router maʼlumotlar jildidan alohida saqlanadi va brauzer yetarli miqdorda umumiy xotira oladi. Ichki CDP proksi faqat Compose tarmogʻi ichidagi `9223` portini tinglaydi; Chrome yordamchi konteynerda loopback interfeysiga bogʻlangan holda qoladi.
 
-`DATA_DIR` ostidagi nazoratchi ijara qulfi bir nechta OmniRoute jarayonlarining bir xil tunnel va broker holatiga egalik qilishiga yoʻl qoʻymaydi. Ziddiyat doctor tomonidan xabar qilinadi.
+`DATA_DIR` ostidagi nazoratchi ijara qulfi bir nechta 67router jarayonlarining bir xil tunnel va broker holatiga egalik qilishiga yoʻl qoʻymaydi. Ziddiyat doctor tomonidan xabar qilinadi.
 
 ## Interaktiv tiklash
 

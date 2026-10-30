@@ -4,7 +4,7 @@
 
 ---
 
-> **ഈ രേഖ എന്താണ്.** OmniRoute-ന്റെ quality-gate സിസ്റ്റത്തെ വ്യവസായത്തിലെ മികച്ച സമ്പ്രദായങ്ങളുമായി താരതമ്യം ചെയ്തുള്ള ഒരു വിമർശനാത്മക വിലയിരുത്തൽ, **കൂടാതെ** എല്ലാ quality checkpoint-ുകളുടെയും സമഗ്രമായ ഒരു പട്ടികയും ഇതേ സിസ്റ്റം ഏതൊരു പ്രോജക്റ്റിലും പ്രയോഗിക്കാനുള്ള **ടൂൾ-സ്വതന്ത്രമായ പുനഃസൃഷ്ടിക്കൽ പദ്ധതിയും**. ഓർമ്മയിൽ നിന്നല്ല, യഥാർഥ repository നിലയെ അടിസ്ഥാനമാക്കി 2026-06-16-ന് സൃഷ്ടിച്ചത്.
+> **ഈ രേഖ എന്താണ്.** 67router-ന്റെ quality-gate സിസ്റ്റത്തെ വ്യവസായത്തിലെ മികച്ച സമ്പ്രദായങ്ങളുമായി താരതമ്യം ചെയ്തുള്ള ഒരു വിമർശനാത്മക വിലയിരുത്തൽ, **കൂടാതെ** എല്ലാ quality checkpoint-ുകളുടെയും സമഗ്രമായ ഒരു പട്ടികയും ഇതേ സിസ്റ്റം ഏതൊരു പ്രോജക്റ്റിലും പ്രയോഗിക്കാനുള്ള **ടൂൾ-സ്വതന്ത്രമായ പുനഃസൃഷ്ടിക്കൽ പദ്ധതിയും**. ഓർമ്മയിൽ നിന്നല്ല, യഥാർഥ repository നിലയെ അടിസ്ഥാനമാക്കി 2026-06-16-ന് സൃഷ്ടിച്ചത്.
 >
 > മാനദണ്ഡങ്ങൾ: OWASP DSOMM · OpenSSF Scorecard · SLSA · SonarQube "Clean as You Code" ·
 > Quality-Ratchet pattern · DORA 2024 · OWASP LLM Top 10 (2025) · mutation-testing-ലെ മികച്ച സമ്പ്രദായങ്ങൾ.
@@ -96,62 +96,62 @@
 
 ### 1. ശൈലിയും ഫോർമാറ്റിംഗും (നിർണിതം, വേഗമേറിയത്)
 
-- **OmniRoute:** lint-staged വഴി Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col.
+- **67router:** lint-staged വഴി Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col.
 - **പൊതുവായത്:** സ്വയമേവ പരിഹരിക്കാവുന്ന ഒരു ഫോർമാറ്റർ + ഒരു ലിന്റർ; staged ഫയലുകളിൽ pre-commit സമയത്ത് പ്രവർത്തിക്കുന്നത്.
 
 ### 2. ടൈപ്പുകൾ
 
-- **OmniRoute:** `typecheck:core` (തടയുന്നത്) + `typecheck:noimplicit:core` (ഉപദേശാത്മകം) + `type-coverage` റാച്ചറ്റ് 92.17% + ഓരോ ഫയലിനുമുള്ള any-budget.
+- **67router:** `typecheck:core` (തടയുന്നത്) + `typecheck:noimplicit:core` (ഉപദേശാത്മകം) + `type-coverage` റാച്ചറ്റ് 92.17% + ഓരോ ഫയലിനുമുള്ള any-budget.
 - **പൊതുവായത്:** CI-യിൽ കർശനമായ typecheck + റാച്ചറ്റ് ചെയ്ത type-coverage മെട്രിക് + ഓരോ ഫയലിനുമുള്ള `any`/escape-hatch ബജറ്റ്.
 
 ### 3. ടെസ്റ്റുകൾ (തീവ്രത)
 
-- **OmniRoute:** പരസ്പരം ഓവർലാപ്പ് ചെയ്യാത്ത 2 റണ്ണറുകൾ (Node native + vitest), 8 shards, ആഗോള കവറേജ് 60/60/60/60 + റാച്ചറ്റ് ~76% + **നിർണായക മൊഡ്യൂളുകൾക്കായി ഓരോ മൊഡ്യൂളിനുമുള്ള 8 കുറഞ്ഞ പരിധികൾ** + രാത്രികാല property tests + രാത്രികാല **mutation testing**.
+- **67router:** പരസ്പരം ഓവർലാപ്പ് ചെയ്യാത്ത 2 റണ്ണറുകൾ (Node native + vitest), 8 shards, ആഗോള കവറേജ് 60/60/60/60 + റാച്ചറ്റ് ~76% + **നിർണായക മൊഡ്യൂളുകൾക്കായി ഓരോ മൊഡ്യൂളിനുമുള്ള 8 കുറഞ്ഞ പരിധികൾ** + രാത്രികാല property tests + രാത്രികാല **mutation testing**.
 - **പൊതുവായത്:** ടെസ്റ്റ് റണ്ണർ(കൾ) + **സമ്പൂർണ്ണമായ** കവറേജ് കുറഞ്ഞ പരിധി (പൂജ്യമാകുന്നത് തടയാൻ) + കവറേജ് **റാച്ചറ്റ്** (പിന്നോട്ടുപോകൽ തടയാൻ) + **ഉയർന്ന അപകടസാധ്യതയുള്ള കോഡിനായി ഓരോ മൊഡ്യൂളിനുമുള്ള കുറഞ്ഞ പരിധികൾ** (Goodhart പ്രതിഭാസം തടയാൻ) + ശുദ്ധമായ ലോജിക്കിനായി property-based പരിശോധന + ടെസ്റ്റ് ഗുണനിലവാരത്തിന്റെ യഥാർഥ അളവായി രാത്രികാല **mutation testing**.
 
 ### 4. ടെസ്റ്റ് നയം (കൃത്രിമമായി മറികടക്കുന്നത് തടയാൻ)
 
-- **OmniRoute:** `pr-test-policy` (പ്രൊഡക്ഷൻ കോഡിന് ടെസ്റ്റ് നിർബന്ധം), `check-test-masking` (ദുർബലമാക്കിയ asserts തടയുന്നു), `pr-evidence` (വിജയവാദത്തിന് തെളിവ് ബ്ലോക്ക് ആവശ്യമാണ്), `test-discovery` (ഓരോ ടെസ്റ്റും ഒരു റണ്ണർ ശേഖരിക്കുന്നു).
+- **67router:** `pr-test-policy` (പ്രൊഡക്ഷൻ കോഡിന് ടെസ്റ്റ് നിർബന്ധം), `check-test-masking` (ദുർബലമാക്കിയ asserts തടയുന്നു), `pr-evidence` (വിജയവാദത്തിന് തെളിവ് ബ്ലോക്ക് ആവശ്യമാണ്), `test-discovery` (ഓരോ ടെസ്റ്റും ഒരു റണ്ണർ ശേഖരിക്കുന്നു).
 - **പൊതുവായത്:** "പുതിയ കോഡ് ⇒ പുതിയ ടെസ്റ്റ്" ഗേറ്റ് + നീക്കംചെയ്ത assert/tautology കണ്ടെത്തൽ + തെളിവ് ആവശ്യകത (TDD അല്ലെങ്കിൽ നിലവിലുള്ള ടെസ്റ്റ്) + glob-കൾക്ക് പുറത്തായി ഒരു ടെസ്റ്റും അനാഥമാകുന്നില്ലെന്ന ഉറപ്പ്.
 
 ### 5. സങ്കീർണ്ണതയും കോഡ് ആരോഗ്യവും (റാച്ചറ്റുകൾ)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ഓരോ ഫയലിനുമുള്ള file-size (സ്ഥിരീകരിച്ചത്, കുറയ്ക്കാൻ മാത്രം), circular-deps (ഇഷ്ടാനുസൃത Tarjan, തടയുന്നത്).
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ഓരോ ഫയലിനുമുള്ള file-size (സ്ഥിരീകരിച്ചത്, കുറയ്ക്കാൻ മാത്രം), circular-deps (ഇഷ്ടാനുസൃത Tarjan, തടയുന്നത്).
 - **പൊതുവായത്:** എല്ലാ ആരോഗ്യ മെട്രിക്കുകളും റാച്ചറ്റ് ചെയ്യുക (മുന്നറിയിപ്പുകൾ, ഡ്യൂപ്ലിക്കേഷൻ, cyclomatic **കൂടാതെ** cognitive complexity, dead code, file size, import cycles). ദിശ എല്ലായ്പ്പോഴും "പിന്നോട്ടുപോകരുത്" എന്നതാണ്.
 
 ### 6. സ്റ്റാറ്റിക് സുരക്ഷ (SAST + രഹസ്യങ്ങൾ)
 
-- **OmniRoute:** CodeQL (അലേർട്ട് റാച്ചറ്റ് = 0), gitleaks (`[extend] useDefault=true` — നിർണായകം!), SonarQube, ഇഷ്ടാനുസൃത സുരക്ഷാ നിയമങ്ങൾ (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (അലേർട്ട് റാച്ചറ്റ് = 0), gitleaks (`[extend] useDefault=true` — നിർണായകം!), SonarQube, ഇഷ്ടാനുസൃത സുരക്ഷാ നിയമങ്ങൾ (public-creds, error-helper, route-guard-membership, route-validation).
 - **പൊതുവായത്:** അലേർട്ട് റാച്ചറ്റോടുകൂടിയ SAST (CodeQL/Sonar/semgrep) + **പാരമ്പര്യമായി ലഭിച്ച ഡിഫോൾട്ട് നിയമസമുച്ചയം** ഉപയോഗിക്കുന്ന secrets scanner (ഡിഫോൾട്ടിനെ അസാധുവാക്കുന്ന ഇഷ്ടാനുസൃത കോൺഫിഗറേഷൻ = അന്ധത) + പ്രോജക്റ്റ്-നിർദ്ദിഷ്ട Hard Rule സുരക്ഷാ ഗേറ്റുകൾ.
 
 ### 7. വിതരണ ശൃംഖല (ഡിപെൻഡൻസികൾ)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + പ്രായം ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + പ്രായം ≥72h).
 - **പൊതുവായത്:** ഒന്നിലധികം സ്രോതസ്സുകളുള്ള SCA + ലൈസൻസ് allowlist + lockfile സമഗ്രതാ പരിശോധന + പ്രായം/typosquatting പരിശോധനയോടുകൂടിയ ഡിപെൻഡൻസി allowlist + ഗ്രൂപ്പ് ചെയ്ത അപ്ഡേറ്റ് ബോട്ട്.
 
 ### 8. വിതരണ ശൃംഖല (ബിൽഡും റിലീസും)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (പ്രതിവാരം), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (പ്രതിവാരം), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **പൊതുവായത്:** പ്രസിദ്ധീകരിക്കുമ്പോൾ SBOM സൃഷ്ടിക്കുക + ഒപ്പിട്ട provenance (SLSA L2+) + ഷെഡ്യൂൾ ചെയ്ത Scorecard + എല്ലാ workflows-ഉം സുരക്ഷിതമാക്കുക (കുറഞ്ഞ പ്രിവിലേജുള്ള ടോക്കണുകൾ, പുഷ് ചെയ്യാത്ത checkout-ൽ credentials നിലനിർത്തരുത്, actions SHA ഉപയോഗിച്ച് പിൻ ചെയ്യുക).
 
 ### 9. കരാറുകളും API-യും
 
-- **OmniRoute:** oasdiff (ബ്രേക്കിംഗ്-ചേഞ്ച് OpenAPI), schemathesis (രാത്രികാല contract fuzz), openapi-coverage (% രേഖപ്പെടുത്തിയ routes, റാച്ചറ്റ് 38.3%), openapi-security-tiers (spec-നും route-guard-നും ഇടയിൽ).
+- **67router:** oasdiff (ബ്രേക്കിംഗ്-ചേഞ്ച് OpenAPI), schemathesis (രാത്രികാല contract fuzz), openapi-coverage (% രേഖപ്പെടുത്തിയ routes, റാച്ചറ്റ് 38.3%), openapi-security-tiers (spec-നും route-guard-നും ഇടയിൽ).
 - **പൊതുവായത്:** ബ്രേക്കിംഗ്-ചേഞ്ച് contract diff (oasdiff/buf) + spec-നെ അടിസ്ഥാനമാക്കിയുള്ള property-based fuzz (schemathesis) + റാച്ചറ്റ് ചെയ്ത ഡോക്യുമെന്റേഷൻ കവറേജ് + spec↔code സ്ഥിരത.
 
 ### 10. ഡോക്സും i18n-ഉം (കാലഹരണപ്പെടൽ തടയാൻ)
 
-- **OmniRoute:** docs-sync (പ്രതിഫലിപ്പിച്ച പതിപ്പുകൾ), docs-counts-sync (ഡോക്സിലെ സംഖ്യകളും കോഡിലെ സംഖ്യകളും), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + റാച്ചറ്റ് 80.1%).
+- **67router:** docs-sync (പ്രതിഫലിപ്പിച്ച പതിപ്പുകൾ), docs-counts-sync (ഡോക്സിലെ സംഖ്യകളും കോഡിലെ സംഖ്യകളും), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + റാച്ചറ്റ് 80.1%).
 - **പൊതുവായത്:** ഡോക്സിനും കോഡിനുമിടയിൽ versions/counts/env-vars സമന്വയിപ്പിക്കുക (വിശ്വാസമല്ല, ഗേറ്റ്) + ആന്തരിക ലിങ്കുകൾ സാധൂകരിക്കുക + റാച്ചറ്റ് ചെയ്ത i18n കവറേജ്.
 
 ### 11. ഭ്രമാത്മക സൃഷ്ടികൾ തടയൽ / സ്ഥിരത (അപൂർവ വിഭാഗം)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ നിലവിലുള്ള symbol), provider-consistency, fetch-targets (client fetch ⇒ യഥാർഥ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ നിലവിലുള്ള symbol), provider-consistency, fetch-targets (client fetch ⇒ യഥാർഥ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **പൊതുവായത്:** ഓരോ "ഡ്യൂപ്ലിക്കേറ്റ് ചെയ്ത ഏക സത്യസ്രോതസ്സിനും" (registry, string dispatch, cross-layer references), ഇരുവശവും പൊരുത്തപ്പെടുന്നുവെന്ന് തെളിയിക്കുന്ന ഒരു ഗേറ്റ്. typecheck/test കണ്ടെത്താത്ത കാലഹരണപ്പെടൽ ഇത് കണ്ടെത്തുന്നു.
 
 ### 12. പ്രതിരോധശേഷിയും ഡൊമെയ്നും (ഉൽപ്പന്ന-നിർദ്ദിഷ്ടം)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 resilience നിയമങ്ങൾ (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 resilience നിയമങ്ങൾ (circuit-breaker/cooldown/lockout).
 - **പൊതുവായത്:** **നിങ്ങളുടെ** ഡൊമെയ്നിന്റെ പരാജയ സാഹചര്യങ്ങൾ തിരിച്ചറിയുകയും ഓരോന്നിനും ഒരു ഗേറ്റ് ഉണ്ടായിരിക്കുകയും ചെയ്യുക (അത് രാത്രികാലമാണെങ്കിലും). AI ആപ്പുകൾക്ക്: injection red-team. വിതരണ സംവിധാനങ്ങൾക്ക്: chaos + leak + soak.
 
 ---

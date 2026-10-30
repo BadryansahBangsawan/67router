@@ -4,7 +4,7 @@
 
 ---
 
-> **요약**: OmniRoute는 기본 저장소로 **WAL 저널링을 사용하는 SQLite**를 사용하며, 민감한 필드의 저장 데이터에는 **AES-256-GCM** 암호화를 적용합니다. 이 가이드에서는 스키마, 마이그레이션, 백업/복구 및 운영 런북을 다룹니다.
+> **요약**: 67router는 기본 저장소로 **WAL 저널링을 사용하는 SQLite**를 사용하며, 민감한 필드의 저장 데이터에는 **AES-256-GCM** 암호화를 적용합니다. 이 가이드에서는 스키마, 마이그레이션, 백업/복구 및 운영 런북을 다룹니다.
 
 **출처:**
 
@@ -19,7 +19,7 @@
 
 ## SQLite를 사용하는 이유
 
-OmniRoute는 다음과 같은 여러 이유로 PostgreSQL/MySQL 대신 SQLite를 선택했습니다.
+67router는 다음과 같은 여러 이유로 PostgreSQL/MySQL 대신 SQLite를 선택했습니다.
 
 | 요소          | SQLite                                | PostgreSQL                        |
 | ------------- | ------------------------------------- | --------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute는 다음과 같은 여러 이유로 PostgreSQL/MySQL 대신 SQLite를
 | **백업**      | 단일 파일 복사                        | `pg_dump` 또는 파일 시스템 스냅샷 |
 | **사용 사례** | 사용자별 설치, 임베디드 환경          | 멀티 테넌트 SaaS                  |
 
-**단일 사용자, 단일 인스턴스** 배포(OmniRoute의 주요 사용 사례)에서는 SQLite가 더 간단하고 빠릅니다.
+**단일 사용자, 단일 인스턴스** 배포(67router의 주요 사용 사례)에서는 SQLite가 더 간단하고 빠릅니다.
 
 ### WAL 저널링
 
@@ -50,7 +50,7 @@ WAL을 사용하면 쓰기 작업 중에도 **동시 읽기**가 가능합니다
 `cache_size`를 KiB 단위의 대략적인 상한으로 해석하고 필요에 따라 페이지를 할당합니다.
 **설정 > 시스템 및 저장소 > 캐시 크기**에는 **1~1,000,000 KiB** 범위의 정수 값을
 입력할 수 있습니다. 설정을 저장하면 현재 데이터베이스 연결에 적용되며,
-OmniRoute는 시작 시 저장된 값을 복원합니다.
+67router는 시작 시 저장된 값을 복원합니다.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## 도메인 모듈 아키텍처
 
-OmniRoute의 데이터베이스에는 `src/lib/db/`에 **110개의 최상위 TypeScript 모듈**이 있습니다. 각 도메인 모듈은 다음 원칙을 따릅니다.
+67router의 데이터베이스에는 `src/lib/db/`에 **110개의 최상위 TypeScript 모듈**이 있습니다. 각 도메인 모듈은 다음 원칙을 따릅니다.
 
 - 하나 이상의 특정 테이블을 소유합니다
 - 타입이 지정된 CRUD 함수를 내보냅니다
@@ -90,7 +90,7 @@ OmniRoute의 데이터베이스에는 `src/lib/db/`에 **110개의 최상위 Typ
 
 ### 110개의 최상위 DB 모듈
 
-OmniRoute에는 `src/lib/db/`에 **110개의 최상위 TypeScript 파일**이 있습니다. 다음은 핵심 모듈의 일부 예시이며, 전체 목록은 디렉터리 목록을 참조하세요.
+67router에는 `src/lib/db/`에 **110개의 최상위 TypeScript 파일**이 있습니다. 다음은 핵심 모듈의 일부 예시이며, 전체 목록은 디렉터리 목록을 참조하세요.
 
 | 모듈                    | 테이블                                                         | 역할                                                 |
 | ----------------------- | -------------------------------------------------------------- | ---------------------------------------------------- |
@@ -186,7 +186,7 @@ const providers = await listProviders();
 
 ## 마이그레이션
 
-OmniRoute는 `src/lib/db/migrations/`에서 **버전이 지정된 멱등성 마이그레이션**을 사용합니다. 각 마이그레이션은 `NNN_description.sql` 형식의 이름을 가진 단일 SQL 파일입니다.
+67router는 `src/lib/db/migrations/`에서 **버전이 지정된 멱등성 마이그레이션**을 사용합니다. 각 마이그레이션은 `NNN_description.sql` 형식의 이름을 가진 단일 SQL 파일입니다.
 
 ### 마이그레이션 이름 지정
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **하위 호환되지 않는 변경 사항**(예: 열 삭제)은 처리하기 까다롭습니다. OmniRoute는 다운그레이드를 지원하지 **않습니다**. 마이그레이션이 적용되면 스키마 변경은 영구적입니다. 이를 고려하여 계획하세요.
+> **하위 호환되지 않는 변경 사항**(예: 열 삭제)은 처리하기 까다롭습니다. 67router는 다운그레이드를 지원하지 **않습니다**. 마이그레이션이 적용되면 스키마 변경은 영구적입니다. 이를 고려하여 계획하세요.
 
 ---
 
@@ -310,7 +310,7 @@ STORAGE_ENCRYPTION_KEY=<your-key>
 
 ## 암호화 관련 주의 사항 (v3.8.16+)
 
-OmniRoute는 두 가지 암호화 방식을 투명하게 처리하기 위해 **`migrateLegacyEncryptedString()`**을 사용합니다.
+67router는 두 가지 암호화 방식을 투명하게 처리하기 위해 **`migrateLegacyEncryptedString()`**을 사용합니다.
 
 - **레거시** (v3.5.0 이전): XOR 기반 "암호화"(실제 암호화 기술이 아님)
 - **현재**: 적절한 IV 및 인증 태그를 사용하는 AES-256-GCM
@@ -399,7 +399,7 @@ omniroute backup auto enable --cron "0 2 * * *" --retention 7
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-이 명령은 SQLite의 온라인 백업 API를 사용하므로 OmniRoute가 실행 중인 동안에도 안전하게 실행할 수 있습니다.
+이 명령은 SQLite의 온라인 백업 API를 사용하므로 67router가 실행 중인 동안에도 안전하게 실행할 수 있습니다.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### 압축
 
-장기간 실행되는 OmniRoute 인스턴스에는 가끔 `VACUUM`을 실행하는 것이 좋습니다.
+장기간 실행되는 67router 인스턴스에는 가끔 `VACUUM`을 실행하는 것이 좋습니다.
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### 모든 데이터 초기화(삭제)
 
 ```bash
-# 먼저 OmniRoute 중지
+# 먼저 67router 중지
 omniroute stop
 
 # DB 파일 삭제
@@ -613,7 +613,7 @@ EOF
 
 - 다른 프로세스가 완료될 때까지 기다립니다(`lsof | grep storage.sqlite`로 확인)
 - 다른 프로세스를 종료합니다
-- 문제가 지속되면 OmniRoute를 다시 시작합니다
+- 문제가 지속되면 67router를 다시 시작합니다
 
 ### "외래 키 제약 조건을 위반했습니다"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 마이그레이션은 트랜잭션 내에서 실행되었으므로 롤백되었어야 합니다. 롤백되지 않았다면 다음을 수행하세요:
 
-1. **OmniRoute 중지**(추가 시도 방지)
+1. **67router 중지**(추가 시도 방지)
 2. `sqlite3`로 **DB 상태 확인**
 3. 부분적으로 적용된 마이그레이션을 **수동으로 수정**
-4. OmniRoute를 **다시 실행**(마이그레이션이 재시도됨)
+4. 67router를 **다시 실행**(마이그레이션이 재시도됨)
 
 이 문제를 방지하려면 항상 복사본에서 마이그레이션을 먼저 테스트하세요.
 

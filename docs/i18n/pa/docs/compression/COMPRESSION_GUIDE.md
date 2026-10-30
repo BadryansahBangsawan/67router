@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (ਪੰਜਾਬੀ)
+# 🗜️ Prompt Compression Guide — 67router (ਪੰਜਾਬੀ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## ਸੰਖੇਪ ਜਾਣਕਾਰੀ
 
-OmniRoute ਇੱਕ ਮੋਡੀਊਲਰ ਪ੍ਰੌਂਪਟ ਕੰਪ੍ਰੈਸ਼ਨ ਪਾਈਪਲਾਈਨ ਲਾਗੂ ਕਰਦਾ ਹੈ ਜੋ ਬੇਨਤੀਆਂ ਦੇ ਅੱਪਸਟ੍ਰੀਮ ਪ੍ਰਦਾਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚਣ ਤੋਂ **ਪਹਿਲਾਂ ਹੀ ਸਰਗਰਮੀ ਨਾਲ** ਚੱਲਦੀ ਹੈ। ਇਸਦਾ ਮਤਲਬ ਹੈ ਕਿ ਤੁਹਾਡੀ ਟੋਕਨ ਬਚਤ ਪਾਰਦਰਸ਼ੀ ਢੰਗ ਨਾਲ ਹੁੰਦੀ ਹੈ — ਤੁਹਾਡੇ ਵਰਕਫ਼ਲੋ ਵਿੱਚ ਕਿਸੇ ਤਬਦੀਲੀ ਦੀ ਲੋੜ ਨਹੀਂ।
+67router ਇੱਕ ਮੋਡੀਊਲਰ ਪ੍ਰੌਂਪਟ ਕੰਪ੍ਰੈਸ਼ਨ ਪਾਈਪਲਾਈਨ ਲਾਗੂ ਕਰਦਾ ਹੈ ਜੋ ਬੇਨਤੀਆਂ ਦੇ ਅੱਪਸਟ੍ਰੀਮ ਪ੍ਰਦਾਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚਣ ਤੋਂ **ਪਹਿਲਾਂ ਹੀ ਸਰਗਰਮੀ ਨਾਲ** ਚੱਲਦੀ ਹੈ। ਇਸਦਾ ਮਤਲਬ ਹੈ ਕਿ ਤੁਹਾਡੀ ਟੋਕਨ ਬਚਤ ਪਾਰਦਰਸ਼ੀ ਢੰਗ ਨਾਲ ਹੁੰਦੀ ਹੈ — ਤੁਹਾਡੇ ਵਰਕਫ਼ਲੋ ਵਿੱਚ ਕਿਸੇ ਤਬਦੀਲੀ ਦੀ ਲੋੜ ਨਹੀਂ।
 
 ```
 ਕਲਾਇੰਟ ਬੇਨਤੀ
@@ -120,15 +120,15 @@ RTK -> Caveman
 
 ## ਅੱਪਸਟ੍ਰੀਮ ਬੱਚਤ ਦਾ ਹਿਸਾਬ
 
-OmniRoute ਦੋ ਸਰੋਤਾਂ ਤੋਂ ਹੋਣ ਵਾਲੀ ਕੰਪ੍ਰੈਸ਼ਨ ਬੱਚਤ ਦਾ ਦਸਤਾਵੇਜ਼ੀਕਰਨ ਕਰਦਾ ਹੈ: ਅੱਪਸਟ੍ਰੀਮ ਪ੍ਰੋਜੈਕਟ ਬੈਂਚਮਾਰਕ ਅਤੇ
-OmniRoute ਦੀ ਆਪਣੀ ਇੰਜਣ ਰਚਨਾ।
+67router ਦੋ ਸਰੋਤਾਂ ਤੋਂ ਹੋਣ ਵਾਲੀ ਕੰਪ੍ਰੈਸ਼ਨ ਬੱਚਤ ਦਾ ਦਸਤਾਵੇਜ਼ੀਕਰਨ ਕਰਦਾ ਹੈ: ਅੱਪਸਟ੍ਰੀਮ ਪ੍ਰੋਜੈਕਟ ਬੈਂਚਮਾਰਕ ਅਤੇ
+67router ਦੀ ਆਪਣੀ ਇੰਜਣ ਰਚਨਾ।
 
 | ਸਰੋਤ    | ਇੱਥੇ ਵਰਤਿਆ ਗਿਆ ਅੱਪਸਟ੍ਰੀਮ README ਅੰਕ                                                                      |
 | ------- | -------------------------------------------------------------------------------------------------------- |
 | Caveman | `~75%` ਘੱਟ ਆਉਟਪੁੱਟ ਟੋਕਨ, `65%` ਬੈਂਚਮਾਰਕ ਔਸਤ ਆਉਟਪੁੱਟ ਬੱਚਤ, `22-87%` ਰੇਂਜ, ਅਤੇ `~46%` ਇਨਪੁੱਟ ਕੰਪ੍ਰੈਸ਼ਨ ਟੂਲ |
 | RTK     | ਕਮਾਂਡ ਆਉਟਪੁੱਟ ਵਿੱਚ `60-90%` ਬੱਚਤ; ਨਮੂਨਾ ਸੈਸ਼ਨ `~118,000 -> ~23,900` ਟੋਕਨ, ਜਾਂ `79.7%` ਬਚਾਏ (`~80%`)      |
 
-ਓਵਰਲੈਪ ਹੋਣ ਵਾਲੇ ਟੂਲ/ਕਾਂਟੈਕਸਟ ਪੇਲੋਡਾਂ ਲਈ, ਮੂਲ OmniRoute ਕੌਂਬੋ ਇੰਜਣਾਂ ਨੂੰ ਇਸ ਤਰ੍ਹਾਂ ਸਟੈਕ ਕਰਦਾ ਹੈ:
+ਓਵਰਲੈਪ ਹੋਣ ਵਾਲੇ ਟੂਲ/ਕਾਂਟੈਕਸਟ ਪੇਲੋਡਾਂ ਲਈ, ਮੂਲ 67router ਕੌਂਬੋ ਇੰਜਣਾਂ ਨੂੰ ਇਸ ਤਰ੍ਹਾਂ ਸਟੈਕ ਕਰਦਾ ਹੈ:
 
 ```txt
 RTK -> Caveman

@@ -7,15 +7,15 @@
 > **출처:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **마지막 업데이트:** 2026-06-28 — v3.8.40
 
-OmniRoute는 서로 다른 세 가지 에이전트 관련 인터페이스를 제공합니다. 언뜻 보기에는 비슷하지만 서로 다른 문제를 해결합니다. 이 페이지를 참고하여 적합한 인터페이스를 선택하세요.
+67router는 서로 다른 세 가지 에이전트 관련 인터페이스를 제공합니다. 언뜻 보기에는 비슷하지만 서로 다른 문제를 해결합니다. 이 페이지를 참고하여 적합한 인터페이스를 선택하세요.
 
 ## 요약
 
 | 인터페이스                        | 적합한 용도                                                                                                    | 전송 방식                | 표준                 |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
 | **A2A — 에이전트 간 통신**        | A2A 프로토콜을 사용하는 동료 에이전트와의 에이전트 간 협업                                                     | HTTP 기반 JSON-RPC 2.0   | A2A v0.3 (공개 사양) |
-| **ACP — CLI 에이전트 레지스트리** | 사용자 컴퓨터에 설치된 CLI 코딩 에이전트(Cursor, Cline, Codex CLI, Claude Code, Aider 등)의 감지, 등록 및 실행 | HTTP REST                | OmniRoute 전용       |
-| **클라우드 에이전트**             | 외부 클라우드 서비스(Codex Cloud, Devin, Jules, Cursor Cloud)에 장시간 실행되는 코딩 작업 제출                 | HTTP REST + DB 기반 작업 | OmniRoute 전용       |
+| **ACP — CLI 에이전트 레지스트리** | 사용자 컴퓨터에 설치된 CLI 코딩 에이전트(Cursor, Cline, Codex CLI, Claude Code, Aider 등)의 감지, 등록 및 실행 | HTTP REST                | 67router 전용        |
+| **클라우드 에이전트**             | 외부 클라우드 서비스(Codex Cloud, Devin, Jules, Cursor Cloud)에 장시간 실행되는 코딩 작업 제출                 | HTTP REST + DB 기반 작업 | 67router 전용        |
 
 세 인터페이스는 서로 독립적이므로 필요한 것만 선택해 사용할 수 있습니다.
 
@@ -38,14 +38,14 @@ OmniRoute는 서로 다른 세 가지 에이전트 관련 인터페이스를 제
 ## 1. A2A — 에이전트 간 통신
 
 **사양:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute 엔드포인트:** `POST /a2a` (JSON-RPC 2.0)
+**67router 엔드포인트:** `POST /a2a` (JSON-RPC 2.0)
 **에이전트 카드:** `GET /.well-known/agent.json`
 
 ### 사용 시기
 
-- OmniRoute가 동료 중 하나로 참여하는 멀티 에이전트 시스템을 구축할 때
-- Google ADK 또는 범용 에이전트 메시와 같은 프레임워크의 에이전트에 OmniRoute의 라우팅 인텔리전스(smart-routing, quota-management 등)를 제공할 때
-- 표준 검색 및 호출 인터페이스 뒤에 OmniRoute를 래핑할 때
+- 67router가 동료 중 하나로 참여하는 멀티 에이전트 시스템을 구축할 때
+- Google ADK 또는 범용 에이전트 메시와 같은 프레임워크의 에이전트에 67router의 라우팅 인텔리전스(smart-routing, quota-management 등)를 제공할 때
+- 표준 검색 및 호출 인터페이스 뒤에 67router를 래핑할 때
 
 ### 메서드
 
@@ -69,12 +69,12 @@ OmniRoute는 서로 다른 세 가지 에이전트 관련 인터페이스를 제
 
 ## 2. ACP — CLI 에이전트 레지스트리
 
-**OmniRoute 엔드포인트:** `GET /api/acp/agents`
+**67router 엔드포인트:** `GET /api/acp/agents`
 **소스:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### 개요
 
-ACP는 OmniRoute의 **로컬 CLI 에이전트 인벤토리**입니다. 호스트에 설치된 코딩 CLI(Cursor, Cline, Claude Code, Codex CLI, Continue 등)를 감지하고 버전을 확인한 후 대시보드에 표시하여 사용자가 각 CLI를 OmniRoute에 연결하도록 설정할 수 있게 합니다.
+ACP는 67router의 **로컬 CLI 에이전트 인벤토리**입니다. 호스트에 설치된 코딩 CLI(Cursor, Cline, Claude Code, Codex CLI, Continue 등)를 감지하고 버전을 확인한 후 대시보드에 표시하여 사용자가 각 CLI를 67router에 연결하도록 설정할 수 있게 합니다.
 
 HTTP 인터페이스는 "CLI Tools" UI와 CLI 지문 추적을 지원하는 내부 인벤토리입니다([CLI-TOOLS.md](../reference/CLI-TOOLS.md) 참조). 이와 별도로 내부 프로세스 관리자는 등록된 Gemini 런처를 위한 네이티브 Agent Client Protocol과 기타 계약을 위한 레거시 stdio 어댑터를 지원합니다. 이러한 개별 모드와 제한 사항은 [ACP 레지스트리 및 런처](./ACP.md)를 참조하세요.
 
@@ -110,8 +110,8 @@ POST 본문 형식(`src/app/api/acp/agents/route.ts`의 `customAgentBodySchema`)
 
 ### 사용 사례
 
-- 대시보드의 "CLI Tools" 페이지에 설치된 도구를 나열하고 각 도구가 OmniRoute를 가리키도록 설정할 수 있게 합니다.
-- 사용자 정의 에이전트를 통해 고급 사용자는 OmniRoute가 기본적으로 인식하지 못하는 내부/독점 CLI를 등록할 수 있습니다.
+- 대시보드의 "CLI Tools" 페이지에 설치된 도구를 나열하고 각 도구가 67router를 가리키도록 설정할 수 있게 합니다.
+- 사용자 정의 에이전트를 통해 고급 사용자는 67router가 기본적으로 인식하지 못하는 내부/독점 CLI를 등록할 수 있습니다.
 - 감지 결과는 `cli-tools` 지문 매트릭스에 사용됩니다.
 
 ### ACP를 사용하지 말아야 하는 경우
@@ -120,12 +120,12 @@ POST 본문 형식(`src/app/api/acp/agents/route.ts`의 `customAgentBodySchema`)
 
 ## 3. 클라우드 에이전트
 
-**OmniRoute 엔드포인트:** `/api/v1/agents/tasks/*`(수명 주기) + `/api/cloud/*`(연결 기반 기능)
+**67router 엔드포인트:** `/api/v1/agents/tasks/*`(수명 주기) + `/api/cloud/*`(연결 기반 기능)
 **소스:** `src/lib/cloudAgent/`
 
 ### 개요
 
-타사 클라우드 코딩 에이전트를 위한 통합 인터페이스입니다. 프롬프트와 저장소 URL을 제출하면 OmniRoute가 적절한 클라우드 에이전트에 작업을 전달하고, 상태를 폴링한 후 결과를 반환합니다.
+타사 클라우드 코딩 에이전트를 위한 통합 인터페이스입니다. 프롬프트와 저장소 URL을 제출하면 67router가 적절한 클라우드 에이전트에 작업을 전달하고, 상태를 폴링한 후 결과를 반환합니다.
 
 ### 지원되는 에이전트(`src/lib/cloudAgent/agents/`에서 모두 확인됨)
 
@@ -166,8 +166,8 @@ DELETE /api/v1/agents/tasks/[id]
 
 | 측면             | A2A                                                                              | Cloud Agents                     |
 | ---------------- | -------------------------------------------------------------------------------- | -------------------------------- |
-| 표준             | Open A2A v0.3                                                                    | OmniRoute 전용                   |
-| 컴퓨팅 실행 위치 | OmniRoute 내부(구성된 조합 사용)                                                 | 외부(Codex / Devin / Jules 서버) |
+| 표준             | Open A2A v0.3                                                                    | 67router 전용                    |
+| 컴퓨팅 실행 위치 | 67router 내부(구성된 조합 사용)                                                  | 외부(Codex / Devin / Jules 서버) |
 | 작업 소요 시간   | 기본 TTL 5분(`TaskManager`에서 구성 가능)                                        | 수분에서 수시간                  |
 | 저장소 인식      | 아니요(프롬프트만 전달)                                                          | 예(저장소 URL + 브랜치)          |
 | 사용 사례        | 에이전트 간 협업, 서비스 형태의 스마트 라우팅                                    | "저장소 Y에 기능 X 구현" 위임    |
@@ -175,7 +175,7 @@ DELETE /api/v1/agents/tasks/[id]
 
 ## 통합 예시
 
-### OmniRoute의 A2A 기능 검색
+### 67router의 A2A 기능 검색
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -183,7 +183,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 6개의 모든 스킬, 전송 방식 및 버전이 포함된 Agent Card를 반환합니다.
 
-### OmniRoute를 A2A 에이전트로 호출
+### 67router를 A2A 에이전트로 호출
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -257,7 +257,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute 코어    │
+                │   67router 코어    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

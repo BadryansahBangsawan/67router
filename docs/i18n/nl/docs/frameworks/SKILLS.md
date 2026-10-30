@@ -7,29 +7,29 @@
 > **Bron van waarheid:** `src/lib/skills/` en `src/app/api/skills/`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
-OmniRoute biedt een uitbreidbaar Skills-framework waarmee taalmodellen (en operators) herbruikbare mogelijkheden kunnen samenstellen — van het lezen van bestanden en HTTP-verzoeken tot uitvoering van code in een sandbox en zorgvuldig geselecteerde marketplace-skills.
+67router biedt een uitbreidbaar Skills-framework waarmee taalmodellen (en operators) herbruikbare mogelijkheden kunnen samenstellen — van het lezen van bestanden en HTTP-verzoeken tot uitvoering van code in een sandbox en zorgvuldig geselecteerde marketplace-skills.
 
-Een skill is een geversioneerde, door een schema gedefinieerde werkeenheid. OmniRoute kan skills als tooldefinities in uitgaande verzoeken injecteren, toolaanroepen onderscheppen die van het model terugkomen, de bijbehorende handler uitvoeren en het resultaat terugsturen naar het model, zodat het gesprek kan worden voortgezet. Het model ziet nooit de implementatie — alleen de toolinterface.
+Een skill is een geversioneerde, door een schema gedefinieerde werkeenheid. 67router kan skills als tooldefinities in uitgaande verzoeken injecteren, toolaanroepen onderscheppen die van het model terugkomen, de bijbehorende handler uitvoeren en het resultaat terugsturen naar het model, zodat het gesprek kan worden voortgezet. Het model ziet nooit de implementatie — alleen de toolinterface.
 
 ---
 
 ## Agent Skills versus Omni Skills
 
-OmniRoute heeft twee verschillende, maar elkaar aanvullende skillsystemen:
+67router heeft twee verschillende, maar elkaar aanvullende skillsystemen:
 
 | Dimensie          | **Omni Skills** (dit document)                                    | **Agent Skills**                                                                            |
 | :---------------- | :---------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
 | Doel              | Injectie van LLM-tools + uitvoering in een sandbox                | SKILL.md-catalogus die externe agents kunnen ontdekken en gebruiken                         |
 | Bron van waarheid | `src/lib/skills/` + marketplace                                   | `src/lib/agentSkills/` + map `skills/`                                                      |
 | Runtime-modus     | Geïnjecteerd in uitgaande verzoeken, uitgevoerd bij toolaanroepen | Statische markdown-catalogus + REST/MCP/A2A-discovery-endpoints                             |
-| Wie gebruikt het  | OmniRoute zelf (combinatieroutering, inkomende LLM-aanroepen)     | Externe agents, MCP-clients, A2A-orchestrators                                              |
+| Wie gebruikt het  | 67router zelf (combinatieroutering, inkomende LLM-aanroepen)      | Externe agents, MCP-clients, A2A-orchestrators                                              |
 | Aantal            | Variabel (aangestuurd door de marketplace)                        | 43 catalogusvermeldingen (22 API + 20 CLI + 1 configuratie)                                 |
 | Indeling          | `SkillDefinition` met toolschema + handler                        | `SKILL.md`-frontmatter + markdown-inhoud                                                    |
 | Discovery         | `/api/skills/*` REST + `omniroute_skills_*` MCP-tools             | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-tools + A2A `list-capabilities` |
 
-**Omni Skills** vormen de uitvoeringsengine — ze definiëren wat OmniRoute _kan doen_ wanneer een LLM een tool aanroept.
+**Omni Skills** vormen de uitvoeringsengine — ze definiëren wat 67router _kan doen_ wanneer een LLM een tool aanroept.
 
-**Agent Skills** vormen de documentatiecatalogus — ze leggen aan externe agents uit _hoe ze_ de REST API en CLI van OmniRoute kunnen gebruiken, met gestructureerde SKILL.md-bestanden die rechtstreeks in agent-prompts kunnen worden opgenomen.
+**Agent Skills** vormen de documentatiecatalogus — ze leggen aan externe agents uit _hoe ze_ de REST API en CLI van 67router kunnen gebruiken, met gestructureerde SKILL.md-bestanden die rechtstreeks in agent-prompts kunnen worden opgenomen.
 
 Zie [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md) voor de Agent Skills-catalogus, generator, MCP-tools en A2A-skill.
 
@@ -41,14 +41,14 @@ Zie [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md) voor de Agent Skills-ca
 
 Drie bronnen van skills bestaan naast elkaar in hetzelfde register:
 
-1. **Ingebouwde skills** (`src/lib/skills/builtins.ts`) — worden meegeleverd met OmniRoute. Ze dekken de meest voorkomende situaties:
+1. **Ingebouwde skills** (`src/lib/skills/builtins.ts`) — worden meegeleverd met 67router. Ze dekken de meest voorkomende situaties:
    - `file_read`, `file_write` — sandbox-werkruimte per API-sleutel onder `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — uitgaande HTTP via `safeOutboundFetch` met `guard: "public-only"`
    - `web_search` — configureerbare zoekprovider met caching (`executeWebSearch`)
    - `eval_code` — uitvoering van `node` of `python` in een Docker-sandbox
    - `execute_command` — uitvoering van shell-opdrachten in een Docker-sandbox
    - `browser` — door Playwright ondersteunde basisstructuur, standaard uitgeschakeld (`builtin/browser.ts`)
-2. **SkillsMP** (de OmniRoute Marketplace) — opgehaald van `https://skillsmp.com/api/v1/skills/search`. Vereist `skillsmpApiKey` in Instellingen.
+2. **SkillsMP** (de 67router Marketplace) — opgehaald van `https://skillsmp.com/api/v1/skills/search`. Vereist `skillsmpApiKey` in Instellingen.
 3. **SkillsSH** (de communitycatalogus van `skills.sh`) — opgehaald van `https://skills.sh/api/search`. Geen authenticatie vereist; SKILL.md-inhoud wordt opgehaald via GitHub raw.
 
 Eén enkele "actieve provider" bepaalt vanuit welke catalogus het dashboard installeert (`src/lib/skills/providerSettings.ts`). Wijzig deze via **Instellingen → Geheugen en skills**. Standaard: `skillsmp`.
@@ -442,7 +442,7 @@ er is geen drempelwaarde met een decimaal getal zoals `0.6` en er vindt geen sco
 
 ## Catalogus met ingebouwde skills
 
-OmniRoute wordt geleverd met een zorgvuldig samengestelde set ingebouwde skills in `src/lib/skills/builtin/`. De meestgebruikte zijn:
+67router wordt geleverd met een zorgvuldig samengestelde set ingebouwde skills in `src/lib/skills/builtin/`. De meestgebruikte zijn:
 
 ### Skill voor browserautomatisering
 

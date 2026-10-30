@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute izvietojuma reālās vides E2E validācija, kas darbojas homologācijas VPS
+67router izvietojuma reālās vides E2E validācija, kas darbojas homologācijas VPS
 (`HOMOLOG_BASE_URL`, piem., `http://192.168.0.15:20128`). Viena komanda aizstāj manuālo
 laidiena STOP #2 kontrolsarakstu ar automatizētu izpildi, kas ģenerē pierādījumus.
 

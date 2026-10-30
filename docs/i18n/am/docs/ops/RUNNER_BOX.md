@@ -5,7 +5,7 @@
 ---
 
 በራስ የሚስተናገደው ፑል በ**.113** ማሽን (`tomni-proxmox-113`) ላይ ይሰራል። ከ2026-10-18 ጀምሮ እያንዳንዱ
-የOmniRoute runner **አንድ ሚና**፣ አንድ label እና በworkload መለኪያው መሠረት የተመደበ የmemory/CPU በጀት
+የ67router runner **አንድ ሚና**፣ አንድ label እና በworkload መለኪያው መሠረት የተመደበ የmemory/CPU በጀት
 አለው። የTurbopack ስሎት ለbuild የሚያስፈልገውን ያገኛል፤ ሌሎቹ ስሎቶች ደግሞ በተለኩት
 ከፍተኛ አጠቃቀሞቻቸው መሠረት መጠናቸው ተወስኗል። ማሽኑ overcommit የሚያደርገው የTurbopack build ከRelease-Green
 webpack build እና lint job ጋር ሲገጣጠም ብቻ ነው፤ የhost swap (16 GB) ይህን ይሸፍናል፣ እና የpull-request Builds
@@ -27,7 +27,7 @@ webpack build እና lint job ጋር ሲገጣጠም ብቻ ነው፤ የhost sw
 | swap      | 16 GB                     | `omniroute-113-5` swap ጠፍቶ (`MemorySwapMax=0`) ይሰራል፤ ስለዚህ ከቁጥጥር ውጭ የሆነ build ማሽኑን swap ከማስገባት ይልቅ በተወሰነለት ገደብ ላይ ይቋረጣል                                                                                                                                                                                                                                              |
 | `/tmp`    | **12 GB tmpfs = RAM**     | እዚያ የተቀመጠ ማንኛውም ነገር memory ይጠቀማል፤ የቀሩ ፋይሎች ከ3 h በኋላ ይጸዳሉ                                                                                                                                                                                                                                                                                                            |
 | CPU       | በ32 cores ላይ load 60 ታይቷል | quotas ከመደረጋቸው በፊት፣ አንድ Turbopack build (~1166 % CPU) ከcoverage suite ጋር በተመሳሳይ ማሽን ላይ ሲሰራ የሌሎቹን listeners heartbeats ሀብት አሳጥቷል (`The self-hosted runner lost communication`፣ #16853)                                                                                                                                                                               |
-| runners   | **6 listeners**           | 4 OmniRoute + OmniHeuris + OmniMind፤ `omniroute-113-3/-4/-7/-8` ተሰናክለዋል (`systemctl enable --now` አንዱን መልሶ ያስነሳል)                                                                                                                                                                                                                                                   |
+| runners   | **6 listeners**           | 4 67router + OmniHeuris + OmniMind፤ `omniroute-113-3/-4/-7/-8` ተሰናክለዋል (`systemctl enable --now` አንዱን መልሶ ያስነሳል)                                                                                                                                                                                                                                                    |
 
 ገደቦቹ በእያንዳንዱ unit `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` ውስጥ ይገኛሉ
 (የቀድሞ ዋጋዎች እንደ `override.conf.bak-20261018` ተቀምጠዋል)፣ እና
@@ -77,7 +77,7 @@ ref-ውን ያረጋግጡ፣ ከዚያ የbuild tree-ውን ብቻ በPID SIGTE
 
 የrunner-ው ነባሪ `KillMode=process`፣ unit ሲቆም ወይም እንደገና ሲጀምር
 `Runner.Worker → npm → next-build`ን እንደተነሳ ይተዋል — ወላጅ አልባ build ምንም
-job ሳይያያዝበት RAM እና CPU መጠቀሙን ይቀጥላል። እያንዳንዱ OmniRoute unit
+job ሳይያያዝበት RAM እና CPU መጠቀሙን ይቀጥላል። እያንዳንዱ 67router unit
 `KillMode=mixed` ያለው drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 ይዟል፦ መጀመሪያ SIGTERM ወደ listener-ው፣ ከዚያ `TimeoutStop` ላይ SIGKILL ወደ
@@ -122,7 +122,7 @@ job ሳይያያዝበት RAM እና CPU መጠቀሙን ይቀጥላል። እ�
   `next build` (~5–6 GB፤ webpack) የሚፈልጉትን የሌሊት runs እና `quality.yml` `lint-guard`ን ያስኬዳሉ። `omniroute-113`
   እስከ2026-10-18 ድረስ `MemoryHigh=4G` ነበረው — promptfoo build በዚያ ላይ ለ54 ደቂቃ
   memoryን በተደጋጋሚ እየመለሰ በችግር አልፏል፤ 8 GB throttlingን ያስወግዳል።
-- **ሆን ተብሎ ያነሱ listeners።** አራት OmniRoute units በ2026-08-29 disabled ተደርገዋል — እያንዳንዱ ተጨማሪ
+- **ሆን ተብሎ ያነሱ listeners።** አራት 67router units በ2026-08-29 disabled ተደርገዋል — እያንዳንዱ ተጨማሪ
   listener ከላይ ባለው የmemory budget ላይ ሌላ tenant ነው። የjanitor ከፍተኛ ገደብ 6 ነው (`MAX_ACTIVE_RUNNERS=6` በcron ውስጥ)፦ በማሽኑ ላይ ያለውን
   እያንዳንዱን `Runner.Listener` ይቆጥራል፣ እና OmniHeuris + OmniMind በእኛ አራት ላይ ሁለት ይጨምራሉ።
 - **ማንኛውም runner ሥራ ላይ እያለ `/tmp`ን ወይም `_work`ን በእጅ ፈጽሞ አታጽዱ።** በማረጋገጥ እና በመሰረዝ መካከል ክፍተት ያለው

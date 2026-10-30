@@ -7,7 +7,7 @@
 > **Sumber kebenaran:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Terakhir dikemas kini:** 2026-09-22 — ruang lingkup nama ruang merujuk kepada MCP-SERVER.md
 
-OmniRoute mempunyai saluran paip kebenaran yang peka laluan yang mengawal setiap permintaan API. Pengelasan adalah **deterministik** dan **gagal-tertutup** — apa-apa yang tidak dapat dikelaskan akan berakhir sebagai `MANAGEMENT` dan memerlukan sesi atau token gred pengurusan. Halaman ini menerangkan model untuk jurutera yang menyelenggara laluan atau mereka bentuk titik akhir baharu.
+67router mempunyai saluran paip kebenaran yang peka laluan yang mengawal setiap permintaan API. Pengelasan adalah **deterministik** dan **gagal-tertutup** — apa-apa yang tidak dapat dikelaskan akan berakhir sebagai `MANAGEMENT` dan memerlukan sesi atau token gred pengurusan. Halaman ini menerangkan model untuk jurutera yang menyelenggara laluan atau mereka bentuk titik akhir baharu.
 
 ![AuthZ pipeline (3 route classes + policy evaluation)](../diagrams/exported/authz-pipeline.svg)
 

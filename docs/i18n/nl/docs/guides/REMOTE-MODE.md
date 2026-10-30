@@ -4,7 +4,7 @@
 
 ---
 
-Voer de `omniroute`-CLI uit op je laptop terwijl OmniRoute zelf ergens anders draait
+Voer de `omniroute`-CLI uit op je laptop terwijl 67router zelf ergens anders draait
 (een VPS, een thuisserver, een andere machine op je Tailnet). Je logt één keer in met
 `omniroute connect`, waarna **elke** CLI-opdracht op die externe server is gericht —
 dezelfde opdrachten, dezelfde uitvoer, maar dan uitgevoerd op de externe server.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← schrijft een lokaal Codex-profiel
 ## Hoe het werkt
 
 ```
-je laptop                                externe OmniRoute (VPS)
+je laptop                                externe 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute-CLI      │  POST /api/cli/connect  (wachtwoord → token)       │
 │  context: vps      │ ───────────────►  │ maakt een toegangstoken met    │
@@ -109,7 +109,7 @@ de aanmelding goedkeurt**. Bij een installatie op een externe VPS bevindt die lo
 server, niet op jouw machine, waardoor het toestemmingsscherm **oneindig blijft hangen en nooit
 een code afgeeft** — bij de gebruikelijke terugvaloptie ‘plak de callback-URL’ valt er niets te
 plakken. (Dit is een beperking van Google: hetzelfde probleem treedt op in elke proxy
-die de meegeleverde Antigravity-desktopclient gebruikt, niet alleen in OmniRoute.)
+die de meegeleverde Antigravity-desktopclient gebruikt, niet alleen in 67router.)
 
 Het dashboard detecteert dit voordat je vastloopt: wanneer je **Providers → Antigravity →
 Connect** opent vanaf een adres dat geen localhost is, wordt de algemene melding ‘kopieer de callback-URL’
@@ -117,7 +117,7 @@ vervangen door de twee onderstaande oplossingen, waarbij je host en poort al zij
 (Een LAN-adres telt ook — voor deze callback wordt `192.168.x.x` niet als localhost
 beschouwd.)
 
-Er zijn twee ondersteunde manieren om Antigravity met een externe OmniRoute te verbinden.
+Er zijn twee ondersteunde manieren om Antigravity met een externe 67router te verbinden.
 
 ### Optie A — lokale aanmeldhulp (aanbevolen)
 
@@ -155,7 +155,7 @@ npx omniroute login antigravity --no-push
 
 Ga vervolgens in het **externe** dashboard naar **Providers → Antigravity → Connect** en plak
 de `omniroute-cred-v1.…`-blob in het veld bij **Step 2** (dit accepteert zowel een
-callback-URL als een referentieblob). OmniRoute decodeert deze, voert de Cloud Code-
+callback-URL als een referentieblob). 67router decodeert deze, voert de Cloud Code-
 onboarding aan de serverzijde uit en slaat de verbinding permanent op.
 
 > De blob bevat een vernieuwingstoken — behandel dit als een wachtwoord. Bij verzending
@@ -196,7 +196,7 @@ providerspecifieke poort via een tunnel hoeft te worden geleid.
 ## Codex / Grok verbinden met een externe installatie (providers met vaste loopback)
 
 Codex, xAI (`xai-oauth`) en Grok CLI (`grok-cli`) registreren een **vaste** loopback-
-`redirect_uri` bij hun upstream OAuth-app. OmniRoute kan deze niet wijzigen — de
+`redirect_uri` bij hun upstream OAuth-app. 67router kan deze niet wijzigen — de
 provider stuurt de browser altijd terug naar hetzelfde hardgecodeerde adres:
 
 | Provider    | Vaste callback waarnaar de provider omleidt |
@@ -206,7 +206,7 @@ provider stuurt de browser altijd terug naar hetzelfde hardgecodeerde adres:
 | `grok-cli`  | `http://127.0.0.1:56122/callback`           |
 
 `localhost` betekent hier **de machine waarop de browser draait**, terwijl de PKCE-
-callbackserver van OmniRoute luistert op de loopback van de **server**. Open het dashboard
+callbackserver van 67router luistert op de loopback van de **server**. Open het dashboard
 op een LAN-adres zoals `http://192.168.0.15:20128` en de twee komen nooit bij elkaar:
 de autorisatiecode wordt afgeleverd bij `localhost:1455` van je eigen laptop, waar niets
 luistert, en de provider laat de aanmelding mislukken zonder een foutmelding weer te geven.
@@ -225,7 +225,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Er zijn twee doorsturingen vereist; slechts één poort doorsturen mislukt nog steeds:
 
 - **`20128`** (de dashboardpoort) zorgt ervoor dat de origin daadwerkelijk localhost is,
-  waardoor OmniRoute de PKCE-callbackserver überhaupt start — een LAN-origin
+  waardoor 67router de PKCE-callbackserver überhaupt start — een LAN-origin
   bereikt die vertakking nooit.
 - **`1455`** (de vaste callbackpoort van de provider) is waarnaar de browser wordt
   teruggestuurd; deze moet via de tunnel naar de loopback van de server worden geleid.
@@ -347,7 +347,7 @@ omniroute contexts current         # de actieve server, authenticatiestatus, sco
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

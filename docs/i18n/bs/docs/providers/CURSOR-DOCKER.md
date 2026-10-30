@@ -6,29 +6,29 @@
 
 # Cursor provajder u Docker okruženjima
 
-Kada se OmniRoute pokreće unutar Docker-a, naslijeđeni tokovi **Import from Cursor IDE** / `cursor-agent` ne uspijevaju jer kontejner ne može vidjeti instalaciju Cursor-a na hostu. Umjesto toga koristite **Login with Cursor** (deep-control PKCE).
+Kada se 67router pokreće unutar Docker-a, naslijeđeni tokovi **Import from Cursor IDE** / `cursor-agent` ne uspijevaju jer kontejner ne može vidjeti instalaciju Cursor-a na hostu. Umjesto toga koristite **Login with Cursor** (deep-control PKCE).
 
 ## Zašto IDE / CLI uvoz ne uspijeva u Docker-u
 
 1. **Izolacija sistema datoteka** — Automatski uvoz traži Linux putanje kao što je `~/.config/Cursor/User/globalStorage/state.vscdb` _unutar_ kontejnera. Na Docker Desktop-u za macOS, baza podataka host IDE-a nije montirana po defaultu, a OS kontejnera je Linux čak i kada je host Darwin.
-2. **Nema `cursor-agent` binarnog fajla** — Zvanične OmniRoute slike ne isporučuju `cursor-agent`. Dostupni modeli su prethodno pozivali `cursor-agent --list-models` i vraćali se na statički katalog.
+2. **Nema `cursor-agent` binarnog fajla** — Zvanične 67router slike ne isporučuju `cursor-agent`. Dostupni modeli su prethodno pozivali `cursor-agent --list-models` i vraćali se na statički katalog.
 3. **Pogrešan binarni fajl** — Nemojte **bind-mount**-ovati macOS `cursor-agent` u Linux kontejner. Neće se izvršiti.
 
 ## Preporučeno: Login with Cursor
 
 1. Otvorite **Dashboard → Providers → Cursor**.
 2. Odaberite karticu **Login with Cursor**.
-3. Kliknite na **Login with Cursor** — OmniRoute otvara `https://cursor.com/loginDeepControl?…` u vašem **host** pretraživaču.
-4. Odobrite prijavu u pretraživaču, a zatim se vratite na kontrolnu tablu. OmniRoute vrši upite (polls) ka `api2.cursor.sh/auth/poll` dok tokeni ne stignu.
-5. OmniRoute pohranjuje **access + refresh** tokene i osvježava ih putem `https://api2.cursor.sh/auth/exchange_user_api_key`.
+3. Kliknite na **Login with Cursor** — 67router otvara `https://cursor.com/loginDeepControl?…` u vašem **host** pretraživaču.
+4. Odobrite prijavu u pretraživaču, a zatim se vratite na kontrolnu tablu. 67router vrši upite (polls) ka `api2.cursor.sh/auth/poll` dok tokeni ne stignu.
+5. 67router pohranjuje **access + refresh** tokene i osvježava ih putem `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Ova putanja ne zahtijeva Cursor IDE ili `cursor-agent` unutar kontejnera.
 
 ## Otkrivanje modela
 
-Sa prijavljenom konekcijom, **Available Models / Auto-Sync** preferira Cursor-ov HTTP `AiService/AvailableModels` katalog koristeći bearer token konekcije. Ako to ne uspije, OmniRoute i dalje pokušava sa host `cursor-agent`-om (kada je prisutan), a zatim sa statičkim registarskim seed-om.
+Sa prijavljenom konekcijom, **Available Models / Auto-Sync** preferira Cursor-ov HTTP `AiService/AvailableModels` katalog koristeći bearer token konekcije. Ako to ne uspije, 67router i dalje pokušava sa host `cursor-agent`-om (kada je prisutan), a zatim sa statičkim registarskim seed-om.
 
-OmniRoute uvijek izlaže **`auto`** u katalogu (prikaz “Auto”), plus OpenCodex-stil router modove **`auto-cost`**, **`auto-balance`** i **`auto-intelligence`**. Na mreži se oni mapiraju na Cursor-ov `default` model (sa `optimization` ModelParameter-om za tri varijante). Preferirajte `cu/auto` kada su premium modeli van upotrebe — Auto često još uvijek ima budžet.
+67router uvijek izlaže **`auto`** u katalogu (prikaz “Auto”), plus OpenCodex-stil router modove **`auto-cost`**, **`auto-balance`** i **`auto-intelligence`**. Na mreži se oni mapiraju na Cursor-ov `default` model (sa `optimization` ModelParameter-om za tri varijante). Preferirajte `cu/auto` kada su premium modeli van upotrebe — Auto često još uvijek ima budžet.
 
 ### Katalog uživo je ekskluzivan kada je sinhronizovan
 
@@ -57,11 +57,11 @@ Windows obično uključuju **Total**, **Auto + Composer** i **API**. Ako ograni�
 
 ## Prazni potezi / van upotrebe
 
-Kada Cursor prihvati Run, ali ne vrati tekst asistenta (uobičajeno kada je premium upotreba iscrpljena), OmniRoute izbacuje djelotvoran **429** (indikatori kvote) ili **502** sa smjernicama — a ne samo “Provider returned empty content”. Greške strimovanja kao što je `not_found: AI Model Not Found` (prozor upotrebe iscrpljen) klasifikuju se kao **Cursor rate limit / usage exceeded** i zadržavaju tu poruku kroz SSE cjevovod (zajednički čuvar praznog strima ne prepisuje već emitovanu grešku). Provjerite ograničenja provajdera, isprobajte model **`auto`** ili povećajte ograničenja Cursor plana.
+Kada Cursor prihvati Run, ali ne vrati tekst asistenta (uobičajeno kada je premium upotreba iscrpljena), 67router izbacuje djelotvoran **429** (indikatori kvote) ili **502** sa smjernicama — a ne samo “Provider returned empty content”. Greške strimovanja kao što je `not_found: AI Model Not Found` (prozor upotrebe iscrpljen) klasifikuju se kao **Cursor rate limit / usage exceeded** i zadržavaju tu poruku kroz SSE cjevovod (zajednički čuvar praznog strima ne prepisuje već emitovanu grešku). Provjerite ograničenja provajdera, isprobajte model **`auto`** ili povećajte ograničenja Cursor plana.
 
 ## Verzija klijenta (headless)
 
-Bez lokalne `cursor-agent` instalacije, OmniRoute razrješava `x-cursor-client-version` putem env `CURSOR_AGENT_CLI_VERSION`, zatim disk-keširane ekstrakcije Cursor instalacione skripte, a zatim fiksiranog build ID-a. Nadjačajte sa `CURSOR_AGENT_CLI_VERSION` kada je potrebno.
+Bez lokalne `cursor-agent` instalacije, 67router razrješava `x-cursor-client-version` putem env `CURSOR_AGENT_CLI_VERSION`, zatim disk-keširane ekstrakcije Cursor instalacione skripte, a zatim fiksiranog build ID-a. Nadjačajte sa `CURSOR_AGENT_CLI_VERSION` kada je potrebno.
 
 ## Rezerva: Ručni uvoz tokena
 

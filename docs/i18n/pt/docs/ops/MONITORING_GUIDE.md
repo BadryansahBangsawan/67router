@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: O OmniRoute inclui monitorização de estado, piloto automático de fornecedores, acompanhamento de quotas e hooks de observabilidade integrados. Este guia aborda o dashboard, os alertas e a resolução de problemas.
+> **TL;DR**: O 67router inclui monitorização de estado, piloto automático de fornecedores, acompanhamento de quotas e hooks de observabilidade integrados. Este guia aborda o dashboard, os alertas e a resolução de problemas.
 
 **Fontes:**
 
@@ -20,7 +20,7 @@
 
 ## Visão geral
 
-O OmniRoute tem **3 camadas de monitorização**:
+O 67router tem **3 camadas de monitorização**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Por combinação:
 
 ## API de verificação de estado
 
-O OmniRoute disponibiliza **dois** endpoints HTTP de verificação de estado. Estes não são equivalentes para os orquestradores.
+O 67router disponibiliza **dois** endpoints HTTP de verificação de estado. Estes não são equivalentes para os orquestradores.
 
 | Caminho                      | Finalidade                                                                      | Carga                                           | Utilizar para                                                                              |
 | ---------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -180,7 +180,7 @@ endpoint. Utilize `failed` + `failedConnections` para falhas de sondas em tempo 
 
 ### Recomendações de sondas para Kubernetes
 
-O OmniRoute é um **processo Node único** (um ciclo de eventos). O `HEALTHCHECK` padrão do Docker utiliza o endpoint leve `/healthz`. `/api/monitoring/health` é **demasiado pesado** para os intervalos de verificação de atividade do kubelet.
+O 67router é um **processo Node único** (um ciclo de eventos). O `HEALTHCHECK` padrão do Docker utiliza o endpoint leve `/healthz`. `/api/monitoring/health` é **demasiado pesado** para os intervalos de verificação de atividade do kubelet.
 
 | Sonda                  | Alvo recomendado                                                                           | Notas                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Relacionado: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (s
 
 ### watchdog do systemd (ciclo de eventos bloqueado)
 
-Num anfitrião systemd, o OmniRoute informa o gestor de serviços quando está pronto e continua a enviar-lhe sinais, para que um servidor cujo ciclo de eventos esteja bloqueado seja terminado e reiniciado em vez de permanecer em execução e sem responder. Os sinais são enviados pelo próprio ciclo de eventos do servidor: quando este fica bloqueado, os sinais param e o systemd reinicia o serviço assim que `WatchdogSec` decorre sem receber nenhum.
+Num anfitrião systemd, o 67router informa o gestor de serviços quando está pronto e continua a enviar-lhe sinais, para que um servidor cujo ciclo de eventos esteja bloqueado seja terminado e reiniciado em vez de permanecer em execução e sem responder. Os sinais são enviados pelo próprio ciclo de eventos do servidor: quando este fica bloqueado, os sinais param e o systemd reinicia o serviço assim que `WatchdogSec` decorre sem receber nenhum.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) já cria uma unidade de utilizador com esta configuração. Uma unidade criada por si (com a predefinição `Type=simple`) não tem watchdog, por isso adicione estas linhas à respetiva secção `[Service]`:
 
@@ -443,7 +443,7 @@ A configuração da verificação do estado dos tokens é gerida internamente po
 
 ### Canais Integrados
 
-O OmniRoute suporta **3 canais de alerta**:
+O 67router suporta **3 canais de alerta**:
 
 | Canal           | Configuração   | Caso de utilização                 |
 | --------------- | -------------- | ---------------------------------- |
@@ -559,7 +559,7 @@ Crie `~/.omniroute/dashboard.json`:
 ### "A quota aparece como disponível, mas vejo erros 429"
 
 - O erro 429 significa que o fornecedor indica que esgotou a sua quota
-- O controlo de quotas do OmniRoute pode estar **desatualizado** — a informação do fornecedor a montante é a referência
+- O controlo de quotas do 67router pode estar **desatualizado** — a informação do fornecedor a montante é a referência
 - Os dados da quota são atualizados automaticamente através do monitor interno de quotas
 
 ### "A combinação está a falhar, mas todos os destinos parecem operacionais"
@@ -572,7 +572,7 @@ Crie `~/.omniroute/dashboard.json`:
 
 - Execute `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Se o resultado for "ok" — é um falso alarme; a verificação de estado está a ser demasiado rigorosa
-- Se o resultado for qualquer outro — **pare o OmniRoute** e siga o [guia de recuperação após desastre](./DATABASE_GUIDE.md#disaster-recovery)
+- Se o resultado for qualquer outro — **pare o 67router** e siga o [guia de recuperação após desastre](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "A pressão sobre a memória heap é crítica"
 

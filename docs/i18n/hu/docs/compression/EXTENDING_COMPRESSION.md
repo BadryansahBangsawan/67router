@@ -4,7 +4,7 @@
 
 ---
 
-> **Röviden**: Az OmniRoute tömörítési motorja **bővíthető** — egyéni motorokat regisztrálhat, nyelvi csomagokat készíthet új nyelvekhez, és többlépcsős feldolgozási folyamatokat állíthat össze. Ez az útmutató bemutatja, hogyan.
+> **Röviden**: A 67router tömörítési motorja **bővíthető** — egyéni motorokat regisztrálhat, nyelvi csomagokat készíthet új nyelvekhez, és többlépcsős feldolgozási folyamatokat állíthat össze. Ez az útmutató bemutatja, hogyan.
 
 **Kapcsolódó útmutatók:**
 
@@ -232,7 +232,7 @@ a stratégiaválasztóban. Tesztelje az integrációt úgy, hogy egy rétegzett 
 
 ## Nyelvi csomagok létrehozása
 
-A Caveman-stílusú tömörítés **nyelvspecifikus szabálycsomagokat** használ az egyes természetes nyelvek töltelékszavainak, bizonytalankodó fordulatainak és terjengős mintáinak kezelésére. Az OmniRoute **6 nyelvi csomagot** tartalmaz: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+A Caveman-stílusú tömörítés **nyelvspecifikus szabálycsomagokat** használ az egyes természetes nyelvek töltelékszavainak, bizonytalankodó fordulatainak és terjengős mintáinak kezelésére. A 67router **6 nyelvi csomagot** tartalmaz: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### A csomag felépítése
 
@@ -391,7 +391,7 @@ Az N. motor kimenete az N+1. motor bemenetévé válik.
 
 ### Tömörítési módok
 
-Az OmniRoute konfiguráció, automatikus aktiválási küszöbértékek és kombinációs felülbírálások alapján **kérésenként EGY módot** választ ki.
+A 67router konfiguráció, automatikus aktiválási küszöbértékek és kombinációs felülbírálások alapján **kérésenként EGY módot** választ ki.
 Az elérhető módok az `open-sse/services/compression/types.ts` fájlban vannak definiálva (`CompressionMode` típus):
 
 | Mód          | Motorok                  | Felhasználási eset                                                                                                                                                                                                       |
@@ -508,10 +508,10 @@ A konfigurációból történő vezérléshez állítsa be a `mode: "stacked"` �
 
 ## Upstream szinkronizálási szabályzat
 
-Az OmniRoute tömörítési motorjai több upstream projektet is megjelölnek a README-ben inspirációs forrásként
+A 67router tömörítési motorjai több upstream projektet is megjelölnek a README-ben inspirációs forrásként
 („inspired by RTK, Caveman, LLMLingua-2, Troglodita”). A közreműködők gyakori
 kérdése: **amikor az upstream RTK új eszközszűrőt, vagy a Caveman új
-szabálycsomagot ad hozzá, hogyan kerül az be az OmniRoute-ba?** Ez a szakasz adja a mérvadó választ.
+szabálycsomagot ad hozzá, hogyan kerül az be a 67router-ba?** Ez a szakasz adja a mérvadó választ.
 
 ### Beemelt másolatok és független implementációk
 
@@ -532,7 +532,7 @@ a README-ben az „inspired by”, nem pedig a „bundled” megfogalmazás.
 Szándékosan **nincs automatizált upstream kiadáskövetés, és nincs
 `compression-sync` címke sem**. Mivel a motorok újraimplementációk, egy upstream RTK-szűrő
 vagy Caveman-szabálycsomag nem kódként kerül egyesítésre; ehelyett **új
-szabályként/szűrőként fejezzük ki újra az OmniRoute saját formátumában** (lásd:
+szabályként/szűrőként fejezzük ki újra a 67router saját formátumában** (lásd:
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)), és eseti jelleggel,
 normál PR-en keresztül kerül be. A fent említett bővítési pontok (egyéni motor,
 nyelvi csomag, RTK-szűrő) biztosítják az ilyen hozzájárulások hivatalos módját.
@@ -546,7 +546,7 @@ Néhány közelmúltbeli példa pontosan erre a folyamatra:
 ### Headroom (bemenettömörítő proxy)
 
 A Headroom **teljes egészében belső fejlesztés** — egy rögzített, beemelt `gcf`
-kodekpillanatkép, valamint az OmniRoute saját `smartcrusher` / `toon` / `tabular`
+kodekpillanatkép, valamint a 67router saját `smartcrusher` / `toon` / `tabular`
 rétegei alkotják. A beemelt másolaton túl nincs követendő aktív upstream projekt;
 a `gcf` frissítéseit manuálisan emeljük be a kodek változásakor, majd újból
 ellenőrizzük őket a tömörítési keret ellenőrzési kapujával
@@ -554,7 +554,7 @@ ellenőrizzük őket a tömörítési keret ellenőrzési kapujával
 
 ### Upstream által inspirált fejlesztés javaslata
 
-1. **Ne emeld be a forrást** — fejezd ki újra az upstream szabályt/szűrőt az OmniRoute formátumában.
+1. **Ne emeld be a forrást** — fejezd ki újra az upstream szabályt/szűrőt a 67router formátumában.
 2. Add hozzá az alábbi megfelelő bővítési ponton keresztül (nyelvi csomag, RTK-szűrő vagy
    egyéni motor).
 3. A PR leírásában hivatkozz az upstream projektre (forrásmegjelölésként), ne pedig

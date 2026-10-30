@@ -10,7 +10,7 @@
 
 ## Konteks
 
-OmniRoute kini menyediakan fungsi pengekalan berorientasikan domain daripada `src/lib/db/`, manakala
+67router kini menyediakan fungsi pengekalan berorientasikan domain daripada `src/lib/db/`, manakala
 sambungan dikongsi yang dikembalikan oleh `src/lib/db/core.ts` melaksanakan kontrak segerak `SqliteAdapter`
 dalam `src/lib/db/adapters/types.ts`. Penyesuai tersebut menyokong beberapa masa jalan SQLite, tetapi
 antara mukanya kekal berbentuk SQLite: pernyataan disediakan yang segerak, `pragma`, transaksi tertunda

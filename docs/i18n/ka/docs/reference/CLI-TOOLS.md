@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (ქართული)
+# CLI Tools — 67router (ქართული)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 ბოლო განახლება: 2026-08-23
 
-OmniRoute ინტეგრირებულია CLI ხელსაწყოების სამ კატეგორიასთან, რომლებიც დაფის სამ ცალკეულ გვერდზეა განაწილებული:
+67router ინტეგრირებულია CLI ხელსაწყოების სამ კატეგორიასთან, რომლებიც დაფის სამ ცალკეულ გვერდზეა განაწილებული:
 
-| გვერდი         | მარშრუტი                | კონცეფცია                                                                                        | რაოდენობა      |
-| -------------- | ----------------------- | ------------------------------------------------------------------------------------------------ | -------------- |
-| **CLI Code's** | `/dashboard/cli-code`   | კოდირების ხელსაწყოები, რომლებსაც OmniRoute-ზე მიუთითებთ (კლიენტი → CLI → OmniRoute → პროვაიდერი) | 26             |
-| **CLI Agents** | `/dashboard/cli-agents` | ავტონომიური აგენტები, რომლებსაც OmniRoute-ზე მიუთითებთ (იგივე ნაკადი, უფრო ფართო არეალი)         | 10             |
-| **ACP Agents** | `/dashboard/acp-agents` | CLI-ები, რომლებსაც OmniRoute stdio/ACP-ის საშუალებით ბექენდად უშვებს (შებრუნებული ნაკადი)        | იხილეთ რეესტრი |
+| გვერდი         | მარშრუტი                | კონცეფცია                                                                                      | რაოდენობა      |
+| -------------- | ----------------------- | ---------------------------------------------------------------------------------------------- | -------------- |
+| **CLI Code's** | `/dashboard/cli-code`   | კოდირების ხელსაწყოები, რომლებსაც 67router-ზე მიუთითებთ (კლიენტი → CLI → 67router → პროვაიდერი) | 26             |
+| **CLI Agents** | `/dashboard/cli-agents` | ავტონომიური აგენტები, რომლებსაც 67router-ზე მიუთითებთ (იგივე ნაკადი, უფრო ფართო არეალი)        | 10             |
+| **ACP Agents** | `/dashboard/acp-agents` | CLI-ები, რომლებსაც 67router stdio/ACP-ის საშუალებით ბექენდად უშვებს (შებრუნებული ნაკადი)       | იხილეთ რეესტრი |
 
 მოძველებული მარშრუტები 308-ის საშუალებით გადამისამართდება: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ OmniRoute ინტეგრირებულია CLI ხელსაწყ�
 CLI Code's / CLI Agents (მოხმარების ნაკადი):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (ყველა OmniRoute-ზე მიუთითებს)
+           ▼  (ყველა 67router-ზე მიუთითებს)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute მოთხოვნას შესაბამის პროვაიდერთან მარშრუტიზებს)
+           ▼  (67router მოთხოვნას შესაბამის პროვაიდერთან მარშრუტიზებს)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (შებრუნებული გაშვების ნაკადი):
-    კლიენტის მოთხოვნა → OmniRoute → უშვებს CLI-ს stdio/ACP-ის საშუალებით → პასუხი
+    კლიენტის მოთხოვნა → 67router → უშვებს CLI-ს stdio/ACP-ის საშუალებით → პასუხი
 ```
 
 **უპირატესობები:**
@@ -45,9 +45,9 @@ ACP Agents (შებრუნებული გაშვების ნაკ
 
 ## ავტომატური კონფიგურაცია `setup-*`-ით
 
-არ არის საჭირო თითოეული ხელსაწყოს კონფიგურაციის ხელით დაწერა. OmniRoute-ს თითოეული მხარდაჭერილი CLI-სთვის მოჰყვება `setup-*`
+არ არის საჭირო თითოეული ხელსაწყოს კონფიგურაციის ხელით დაწერა. 67router-ს თითოეული მხარდაჭერილი CLI-სთვის მოჰყვება `setup-*`
 ბრძანება, რომელიც გაშვებული
-OmniRoute-იდან (ლოკალურიდან ან დისტანციურიდან) კითხულობს მოდელების **აქტიურ** კატალოგს და თქვენს კომპიუტერზე ხელსაწყოს საკუთარ კონფიგურაციას წერს:
+67router-იდან (ლოკალურიდან ან დისტანციურიდან) კითხულობს მოდელების **აქტიურ** კატალოგს და თქვენს კომპიუტერზე ხელსაწყოს საკუთარ კონფიგურაციას წერს:
 
 ```bash
 omniroute setup-codex        omniroute setup-claude       omniroute setup-opencode
@@ -57,7 +57,7 @@ omniroute setup-goose        omniroute setup-qwen         omniroute setup-aider
 omniroute setup-5dive        omniroute setup-zed
 ```
 
-თითოეული მათგანი იღებს `--remote <url> --api-key <key>` პარამეტრებს (ლოკალური ხელსაწყოს დისტანციურ OmniRoute-თან კონფიგურაციისთვის), `--dry-run`-ს (ჩაწერის გარეშე წინასწარი ნახვისთვის) და `--port`-ს. მოდელების ავტომატური აღმოჩენის არმქონე ხელსაწყოები (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) იღებენ
+თითოეული მათგანი იღებს `--remote <url> --api-key <key>` პარამეტრებს (ლოკალური ხელსაწყოს დისტანციურ 67router-თან კონფიგურაციისთვის), `--dry-run`-ს (ჩაწერის გარეშე წინასწარი ნახვისთვის) და `--port`-ს. მოდელების ავტომატური აღმოჩენის არმქონე ხელსაწყოები (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) იღებენ
 `--model <id>`-ს (და `--yes`-ს არაინტერაქტიული გაშვებებისთვის). `setup-5dive` ერთადერთი რეცეპტია, რომელიც
 `$HOME`-ის ქვეშ არ წერს: ის 5dive-ის აგენტების ფლოტს აკონფიგურირებს
 ფლოტის ჰოსტზე root-ის მფლობელობაში არსებული ავთენტიფიკაციის პროფილის ჩაწერით, ამიტომ ხელახლა ეშვება `sudo`-ს მეშვეობით
@@ -75,9 +75,9 @@ gemini — სამიზნოების და ფსევდონიმ�
 
 ### მათი კონტეინერის შიგნით გაშვება
 
-OmniRoute-ის კონტეინერის შიგნით შესრულებული `setup-*` ბრძანება წერს
+67router-ის კონტეინერის შიგნით შესრულებული `setup-*` ბრძანება წერს
 კონტეინერის საკუთარ საშინაო დირექტორიაში, რომელსაც ჰოსტის არცერთი CLI არ კითხულობს და რომელიც
-კონტეინერთან ერთად ქრება. OmniRoute ამას ამოიცნობს და ჩაწერის ნაცვლად ინსტრუქციებითურთ
+კონტეინერთან ერთად ქრება. 67router ამას ამოიცნობს და ჩაწერის ნაცვლად ინსტრუქციებითურთ
 კოდით `2` ასრულებს მუშაობას. შემდგომი მოქმედების ორი მხარდაჭერილი გზა არსებობს — დააინსტალირეთ CLI ჰოსტზე და
 კონტეინერს `omniroute connect`-ით დაუკავშირდით, ან bind-mount-ით მიამაგრეთ კონფიგურაციის დირექტორიები და დააყენეთ
 `CLI_CONFIG_HOME` (`host` compose-პროფილი). ყოველი `setup-*` ბრძანება, ასევე
@@ -194,7 +194,7 @@ kilo, continue) — `hostSetupCommand`-ით (მაგ., `omniroute setup-open
 
 ## 3. ACP აგენტები (/dashboard/acp-agents)
 
-ეს გვერდი (რომელსაც სახელი შეეცვალა `/dashboard/agents`-იდან) აჩვენებს CLI-ებს, რომელთა **გაშვებაც** OmniRoute-ს შეუძლია backend-ის შესრულების ძრავების სახით, stdio/ACP პროტოკოლის მეშვეობით. კატალოგი ცალკე იმართება `src/lib/acp/registry.ts`-ში და **არ** არის იგივე, რაც `CLI_TOOLS`.
+ეს გვერდი (რომელსაც სახელი შეეცვალა `/dashboard/agents`-იდან) აჩვენებს CLI-ებს, რომელთა **გაშვებაც** 67router-ს შეუძლია backend-ის შესრულების ძრავების სახით, stdio/ACP პროტოკოლის მეშვეობით. კატალოგი ცალკე იმართება `src/lib/acp/registry.ts`-ში და **არ** არის იგივე, რაც `CLI_TOOLS`.
 
 ---
 
@@ -321,7 +321,7 @@ interface ToolBatchStatus {
 
 ## 9. სწრაფი დაწყება
 
-### ნაბიჯი 1 — მიიღეთ OmniRoute API გასაღები
+### ნაბიჯი 1 — მიიღეთ 67router API გასაღები
 
 1. გახსენით `/dashboard/api-manager` → **API გასაღების შექმნა**
 2. დაარქვით სახელი (მაგ., `cli-tools`) და აირჩიეთ ყველა ნებართვა
@@ -385,7 +385,7 @@ cargo install smelt  # Rust-ზე დაფუძნებული
 ### ნაბიჯი 4 — დააყენეთ გლობალური გარემოს ცვლადები
 
 ```bash
-# OmniRoute-ის უნივერსალური საბოლოო წერტილი
+# 67router-ის უნივერსალური საბოლოო წერტილი
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -496,7 +496,7 @@ EOF
 **VS Code რეჟიმი:**
 Cline გაფართოების პარამეტრები → API პროვაიდერი: `OpenAI Compatible` → საბაზისო URL: `http://localhost:20128/v1`
 
-ან გამოიყენეთ OmniRoute-ის მართვის პანელი → **CLI ხელსაწყოები → Cline → კონფიგურაციის გამოყენება**.
+ან გამოიყენეთ 67router-ის მართვის პანელი → **CLI ხელსაწყოები → Cline → კონფიგურაციის გამოყენება**.
 
 ---
 
@@ -517,7 +517,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-ან გამოიყენეთ OmniRoute-ის მართვის პანელი → **CLI ხელსაწყოები → KiloCode → კონფიგურაციის გამოყენება**.
+ან გამოიყენეთ 67router-ის მართვის პანელი → **CLI ხელსაწყოები → KiloCode → კონფიგურაციის გამოყენება**.
 
 ---
 
@@ -541,14 +541,14 @@ models:
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-გამოიყენეთ ეს, როდესაც VS Code Insiders მორგებული საბოლოო წერტილის მოდელებისთვისაა კონფიგურირებული და გსურთ, OmniRoute-მა მორგებული სათაურის ველის გარეშე იმუშაოს.
+გამოიყენეთ ეს, როდესაც VS Code Insiders მორგებული საბოლოო წერტილის მოდელებისთვისაა კონფიგურირებული და გსურთ, 67router-მა მორგებული სათაურის ველის გარეშე იმუშაოს.
 
 **რეკომენდებული მდებარეობა:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**ტოკენიზებული OmniRoute ფსევდონიმის გამოყენების მაგალითი:**
+**ტოკენიზებული 67router ფსევდონიმის გამოყენების მაგალითი:**
 
 ```json
 [
@@ -572,7 +572,7 @@ models:
 
 **შენიშვნები:**
 
-- ჩაანაცვლეთ `sk-your-omniroute-key` OmniRoute-ში შექმნილი API გასაღებით.
+- ჩაანაცვლეთ `sk-your-omniroute-key` 67router-ში შექმნილი API გასაღებით.
 - `url` ველი უნდა მიუთითებდეს `/api/v1/vscode/{token}/chat/completions`-ზე.
 - `modelsUrl` ველი უნდა მიუთითებდეს `/api/v1/vscode/{token}/models`-ზე.
 - თუ კლიენტს მორგებული სათაურების მხარდაჭერა აქვს, უპირატესობა მიანიჭეთ ჩვეულებრივ `/v1` + Bearer სათაურის მეთოდს.
@@ -586,17 +586,17 @@ models:
 # შედით თქვენს AWS/Kiro ანგარიშში:
 kiro-cli login
 
-# CLI საკუთარ ავთენტიფიკაციას იყენებს — თავად Kiro CLI-ისთვის OmniRoute ბექენდის სახით საჭირო არ არის.
-# სხვა ხელსაწყოებისთვის გამოიყენეთ kiro-cli OmniRoute-თან ერთად.
+# CLI საკუთარ ავთენტიფიკაციას იყენებს — თავად Kiro CLI-ისთვის 67router ბექენდის სახით საჭირო არ არის.
+# სხვა ხელსაწყოებისთვის გამოიყენეთ kiro-cli 67router-თან ერთად.
 kiro-cli status
 ```
 
-**Kiro IDE** დესკტოპ აპისთვის გამოიყენეთ OmniRoute-ის მიერ ხელმისაწვდომი MITM ენდპოინტი,
+**Kiro IDE** დესკტოპ აპისთვის გამოიყენეთ 67router-ის მიერ ხელმისაწვდომი MITM ენდპოინტი,
 რომელიც მდებარეობს `/dashboard/cli-tools → Kiro`-ში.
 
 ---
 
-## 10. შიდა OmniRoute CLI
+## 10. შიდა 67router CLI
 
 `omniroute` ორობითი ფაილი უზრუნველყოფს ბრძანებებს სერვერის სასიცოცხლო ციკლის, საწყისი გამართვის, დიაგნოსტიკისა და პროვაიდერების მართვისთვის. შესვლის წერტილი: `bin/omniroute.mjs`.
 
@@ -630,7 +630,7 @@ omniroute setup --add-provider \
 | ცვლადი              | დანიშნულება                                                                                  |
 | ------------------- | -------------------------------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | პროვაიდერის API გასაღები (დაკავშირებულია `--api-key`-თან Commander-ის `.env()`-ის მეშვეობით) |
-| `DATA_DIR`          | OmniRoute-ის მონაცემთა დირექტორიის ჩანაცვლება                                                |
+| `DATA_DIR`          | 67router-ის მონაცემთა დირექტორიის ჩანაცვლება                                                 |
 
 ყველა სხვა არაინტერაქტიული შესატანი პარამეტრი გადაიცემა ალმების სახით და არა გარემოს ცვლადებად:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -653,7 +653,7 @@ doctor ასრულებს შემდეგ შემოწმებე�
 ### პროვაიდერების მართვა
 
 ```bash
-omniroute providers available                       # OmniRoute-ის პროვაიდერების კატალოგი
+omniroute providers available                       # 67router-ის პროვაიდერების კატალოგი
 omniroute providers available --search openai       # კატალოგის გაფილტვრა id/სახელის/ფსევდონიმის/კატეგორიის მიხედვით
 omniroute providers available --category api-key    # კატეგორიის მიხედვით გაფილტვრა (api-key, oauth, free, ...)
 omniroute providers available --json                # მანქანის მიერ წაკითხვადი JSON
@@ -674,7 +674,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` პირველ რიგში API-ზეა დაფუძნებული და, შესაბამისად, მუშაობს
 აქტიური ლოკალური ან დისტანციური კონტექსტის მიმართ. ავტორიზაციის მონაცემების შესაყვანად გამოიყენეთ
 `--credential-stdin` ან `--credential-env`; `--dry-run --json` აჩვენებს მხოლოდ
-შენიღბულ ინფორმაციას მონაცემების არსებობისა და ფორმის შესახებ. `providers available` კითხულობს OmniRoute-ის კატალოგს;
+შენიღბულ ინფორმაციას მონაცემების არსებობისა და ფორმის შესახებ. `providers available` კითხულობს 67router-ის კატალოგს;
 `providers list/test/test-all/validate` ინარჩუნებს ლოკალურ SQLite ქცევას და
 არ მოითხოვს სერვერის გაშვებულ მდგომარეობაში ყოფნას.
 
@@ -717,7 +717,7 @@ omniroute auth export --force --out creds.json           # ფაილში �
 
 ### სხვა ქვებრძანებები
 
-თუ სხვაგვარად არ არის მითითებული, ეს ბრძანებები მოითხოვს გაშვებულ OmniRoute სერვერს:
+თუ სხვაგვარად არ არის მითითებული, ეს ბრძანებები მოითხოვს გაშვებულ 67router სერვერს:
 
 ```bash
 omniroute status                       # შესრულების გარემოს სრული სტატუსი
@@ -725,7 +725,7 @@ omniroute logs                         # მოთხოვნების ჟ�
 omniroute config list                  # კონფიგურირებული CLI ხელსაწყოების ჩვენება
 
 omniroute provider list                # ხელმისაწვდომი პროვაიდერების სია (providers list-ის ფსევდონიმი)
-omniroute provider add                 # OmniRoute-ის პროვაიდერად რეგისტრაცია ხელსაწყოში
+omniroute provider add                 # 67router-ის პროვაიდერად რეგისტრაცია ხელსაწყოში
 omniroute keys add | list | remove     # API გასაღებების მართვა
 omniroute models [provider]            # მოდელების სია (--json, --search)
 omniroute combo list | switch | create | delete
@@ -775,7 +775,7 @@ omniroute completion                   # გარსის ავტომა�
 | `/v1/audio/speech`         | ტექსტიდან მეტყველების სინთეზი       | ElevenLabs, OpenAI TTS                           |
 | `/v1/audio/transcriptions` | მეტყველებიდან ტექსტად გარდაქმნა     | Deepgram, AssemblyAI                             |
 
-ჩასასმელად გამზადებული მაგალითები ტოკენიზებული OmniRoute URL-ით:
+ჩასასმელად გამზადებული მაგალითები ტოკენიზებული 67router URL-ით:
 
 ```txt
 ტოკენის მაგალითი: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -794,7 +794,7 @@ Ollama-ს ჩატი: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3
 
 | შეცდომა                                         | მიზეზი                                    | გამოსწორება                                                   |
 | ----------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------- |
-| `Connection refused`                            | OmniRoute არ არის გაშვებული               | `omniroute serve`                                             |
+| `Connection refused`                            | 67router არ არის გაშვებული                | `omniroute serve`                                             |
 | `401 Unauthorized`                              | არასწორი API გასაღები                     | შეამოწმეთ `/dashboard/api-manager`-ში                         |
 | `No combo configured`                           | აქტიური მარშრუტიზაციის კომბინაცია არ არის | გამართეთ `/dashboard/combos`-ში                               |
 | CLI აჩვენებს „not installed“                    | ორობითი ფაილი PATH-ში არ არის             | შეამოწმეთ `which <command>`                                   |
@@ -802,7 +802,7 @@ Ollama-ს ჩატი: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3
 | ძველი ბმული `/dashboard/cli-tools`              | v3.8.6-მდელი სანიშნე                      | ავტომატურად გადამისამართდება `/dashboard/cli-code`-ზე (308)   |
 | ძველი ბმული `/dashboard/agents`                 | v3.8.6-მდელი სანიშნე                      | ავტომატურად გადამისამართდება `/dashboard/acp-agents`-ზე (308) |
 
-## inference-key-ის პოლიტიკის მართვა OmniRoute CLI-ით
+## inference-key-ის პოლიტიკის მართვა 67router CLI-ით
 
 გამოიყენეთ ავთენტიფიცირებული მართვის კონტექსტი (იხილეთ [დისტანციური რეჟიმი](../guides/REMOTE-MODE.md)),
 რათა არსებული inference key მისი ID-ით შეამოწმოთ ან განაახლოთ:

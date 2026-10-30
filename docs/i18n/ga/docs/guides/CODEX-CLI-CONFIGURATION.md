@@ -1,10 +1,10 @@
-# Codex CLI — Configuration with OmniRoute (Gaeilge)
+# Codex CLI — Configuration with 67router (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CODEX-CLI-CONFIGURATION.md)
 
 ---
 
-Treoir iomlán maidir le Codex CLI a úsáid agus é dírithe ar OmniRoute mar inneall OpenAI-chomhoiriúnach.
+Treoir iomlán maidir le Codex CLI a úsáid agus é dírithe ar 67router mar inneall OpenAI-chomhoiriúnach.
 
 ---
 
@@ -60,17 +60,17 @@ command -v codex
 codex --version
 ```
 
-### OmniRoute áitiúil gan fíordheimhniú: is leor eochair ionadchoinneála
+### 67router áitiúil gan fíordheimhniú: is leor eochair ionadchoinneála
 
 Deimhníonn Codex go bhfuil an athróg timpeallachta atá ainmnithe ag `env_key` ann
 **sula** bhfágann an chéad iarratas an CLI. Mura n-éilíonn do shampla **áitiúil**
-OmniRoute fíordheimhniú, oibreoidh aon ionadchoinneálaí nach bhfuil folamh:
+67router fíordheimhniú, oibreoidh aon ionadchoinneálaí nach bhfuil folamh:
 
 ```bash
 export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 ```
 
-Úsáid fíoreochair ina ionad sin nuair atá do fhreastalaí OmniRoute cosanta nó cianda.
+Úsáid fíoreochair ina ionad sin nuair atá do fhreastalaí 67router cosanta nó cianda.
 
 > **Roghanna coitianta óstach**
 >
@@ -86,19 +86,19 @@ export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 
 Chuir Codex CLI `wire_api = "chat"` (Chat Completions) as feidhm i mí Feabhra 2026 agus **éilíonn** sé `wire_api = "responses"` (OpenAI Responses API) anois. Má shocraítear `wire_api = "chat"`, tuairteálfaidh sé láithreach ag am tosaithe ó v0.138 i leith.
 
-Ní chuireann go leor soláthraithe, GLM agus Kimi ina measc, ar fáil fós ach críochphointe Chat Completions. Cuireann DeepSeek V4 Responses API dúchasach ar fáil anois chomh maith le críochphointe atá comhoiriúnach le Anthropic; úsáideann OmniRoute Responses de réir réamhshocraithe agus ligeann sé do gach nasc DeepSeek comhoiriúnacht Anthropic a roghnú.
+Ní chuireann go leor soláthraithe, GLM agus Kimi ina measc, ar fáil fós ach críochphointe Chat Completions. Cuireann DeepSeek V4 Responses API dúchasach ar fáil anois chomh maith le críochphointe atá comhoiriúnach le Anthropic; úsáideann 67router Responses de réir réamhshocraithe agus ligeann sé do gach nasc DeepSeek comhoiriúnacht Anthropic a roghnú.
 
-**Réitíonn OmniRoute é seo go trédhearcach:**
+**Réitíonn 67router é seo go trédhearcach:**
 
 ```
 Codex CLI
   → wire_api = "responses"
-  → POST /v1/responses (OmniRoute)
-    → Roghnaíonn OmniRoute prótacal dúchasach an tsoláthraí agus aistríonn sé nuair is gá
+  → POST /v1/responses (67router)
+    → Roghnaíonn 67router prótacal dúchasach an tsoláthraí agus aistríonn sé nuair is gá
     → POST /responses (DeepSeek V4) nó /chat/completions (Mistral / GLM / Kimi / cinn eile)
 ```
 
-Ní bhíonn seachfhreastalaí aistriúcháin ar leith de dhíth ort riamh agus OmniRoute á úsáid agat. **Úsáideann gach samhail `wire_api = "responses"`** — láimhseálann OmniRoute an chuid eile.
+Ní bhíonn seachfhreastalaí aistriúcháin ar leith de dhíth ort riamh agus 67router á úsáid agat. **Úsáideann gach samhail `wire_api = "responses"`** — láimhseálann 67router an chuid eile.
 
 > **Is é `wire_api` an réamhshocrú** — is é `"responses"` luach réamhshocraithe an réimse agus is féidir é a fhágáil ar lár go hiomlán ó `config.toml`. Ná socraigh go sainráite é ach amháin má tá tú ag taifeadadh na hintinne.
 
@@ -117,7 +117,7 @@ Ní bhíonn seachfhreastalaí aistriúcháin ar leith de dhíth ort riamh agus O
 
 ### Fuinneoga comhthéacs de réir samhla
 
-| Samhail                              | Aitheantas OmniRoute                 | Fuinneog chomhthéacs          | `auto_compact` | `tool_output_limit` |
+| Samhail                              | Aitheantas 67router                  | Fuinneog chomhthéacs          | `auto_compact` | `tool_output_limit` |
 | ------------------------------------ | ------------------------------------ | ----------------------------- | -------------- | ------------------- |
 | GPT-5.5                              | `cx/gpt-5.5`                         | 400k iontaofa (1M ar a mhéad) | 350,000        | 32,768              |
 | Kimi K2.7 (réasúnú)                  | `kmc/kimi-k2.7`                      | 131,072                       | 112,000        | 32,768              |
@@ -145,16 +145,16 @@ Ní bhíonn seachfhreastalaí aistriúcháin ar leith de dhíth ort riamh agus O
 
 ## Réimír samhla: `cx/`
 
-Úsáideann gach samhail Codex in OmniRoute an réimír `cx/`:
+Úsáideann gach samhail Codex in 67router an réimír `cx/`:
 
-| Ainm Codex CLI          | Samhail OmniRoute    |
+| Ainm Codex CLI          | Samhail 67router     |
 | ----------------------- | -------------------- |
 | `cx/gpt-5.5`            | GPT-5.5 caighdeánach |
 | `cx/gpt-5.4`            | GPT-5.4 caighdeánach |
 | `cx/gpt-5.4-mini`       | GPT-5.4 mini         |
 | `cx/gpt-5.1-codex-mini` | GPT-5.1 Codex mini   |
 
-Úsáideann soláthraithe eile a réimír féin (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — meaitseálann an réimír ailias an tsoláthraí in OmniRoute.
+Úsáideann soláthraithe eile a réimír féin (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — meaitseálann an réimír ailias an tsoláthraí in 67router.
 
 ---
 
@@ -184,9 +184,9 @@ model_reasoning_effort = "xhigh"   # nó ultra nuair a thacaítear leis
 model_reasoning_summary = "detailed"  # auto | concise | detailed | none
 ```
 
-### Buiséad Machnaimh OmniRoute (socrú freastalaí)
+### Buiséad Machnaimh 67router (socrú freastalaí)
 
-Ar óstach OmniRoute, ní mór **Settings → AI → Thinking Budget** a bheith socraithe mar **`passthrough`** chun go sroichfidh iarracht/achoimre Codex an soláthraí réamhtheachtach. Baineann mód **`auto` na réimsí uile** `reasoning` / `reasoning_effort` de chuid an chliaint agus fágfaidh sé painéil mhachnaimh folamh fiú nuair atá Codex cumraithe i gceart.
+Ar óstach 67router, ní mór **Settings → AI → Thinking Budget** a bheith socraithe mar **`passthrough`** chun go sroichfidh iarracht/achoimre Codex an soláthraí réamhtheachtach. Baineann mód **`auto` na réimsí uile** `reasoning` / `reasoning_effort` de chuid an chliaint agus fágfaidh sé painéil mhachnaimh folamh fiú nuair atá Codex cumraithe i gceart.
 
 Treoir iomlán: [THINKING_BUDGET.md](./THINKING_BUDGET.md).
 
@@ -272,10 +272,10 @@ codex -p chat     # cx/gpt-5.5, gan iarracht socraithe (réamhshocrú an fhreast
 
 ## Próifílí a ghiniúint go huathoibríoch le `omniroute setup-codex`
 
-Má ritheann tú OmniRoute ar VPS, is féidir leat comhaid phróifíle a ghiniúint go huathoibríoch ón gcatalóg bheo samhlacha:
+Má ritheann tú 67router ar VPS, is féidir leat comhaid phróifíle a ghiniúint go huathoibríoch ón gcatalóg bheo samhlacha:
 
 ```bash
-# Ó VPS (úsáideann sé OmniRoute áitiúil ar phort 20128)
+# Ó VPS (úsáideann sé 67router áitiúil ar phort 20128)
 omniroute setup-codex
 
 # Ó aon ríomhaire — treoraigh chuig do VPS é
@@ -302,7 +302,7 @@ TOML neamhbhailí sa bhunchomhad stop leis an nginiúint sula scríobhtar próif
 Nuair a sholáthraíonn tú `--api-key` nó `OMNIROUTE_API_KEY`, tagraíonn soláthraí nuashainithe do
 `env_key = "OMNIROUTE_API_KEY"`; ní shábháiltear ná ní phriontáiltear an eochair féin sa
 réamhamharc choíche. Socraigh an athróg sin sa timpeallacht ina seolann tú Codex. Gan
-eochair sholáthraithe, níl aon riachtanas eochrach sa sainmhíniú nua, le haghaidh ásc OmniRoute
+eochair sholáthraithe, níl aon riachtanas eochrach sa sainmhíniú nua, le haghaidh ásc 67router
 atá cumraithe chun glacadh le hiarratais neamhfhíordheimhnithe.
 
 Caomhnaíonn uathshioncronú roghnach na catalóige a bhfuil cur síos air thíos sainmhínithe soláthraí atá
@@ -310,16 +310,16 @@ i bhforleagan cheana féin ach ní chuireann sé socruithe nua soláthraí ar bu
 ar dtús le socrú follasach nó leis an deais. Fágtar socruithe soláthraí atá ann cheana ar lár
 ó réamhamhairc rith thirim toisc go bhféadfadh dintiúir arna mbainistiú ag an oibreoir a bheith iontu.
 
-Is féidir le OmniRoute na comhaid phróifíle chéanna seo a **uathshioncronú** freisin tar éis d’fhionnachtain/iompórtáil rathúil samhlacha soláthraí an chatalóg bheo a athrú. Tá sé seo **roghnach agus múchta de réir réamhshocraithe**: scoránaigh é ón **deais CLI Code** ("Uathshioncronú próifílí CLI" → Codex), nó socraigh `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (urramaíonn sé `CLI_ALLOW_CONFIG_WRITES` freisin, atá casta air de réir réamhshocraithe). Nuair atá sé cumasaithe, ní scríobhann sé ach comhaid phróifíle ar leith `~/.codex/*.config.toml`; ní athraíonn sé an comhad gníomhach/réamhshocraithe `~/.codex/config.toml`, socruithe Codex-lb, fíordheimhniú ná roghnú soláthraí choíche.
+Is féidir le 67router na comhaid phróifíle chéanna seo a **uathshioncronú** freisin tar éis d’fhionnachtain/iompórtáil rathúil samhlacha soláthraí an chatalóg bheo a athrú. Tá sé seo **roghnach agus múchta de réir réamhshocraithe**: scoránaigh é ón **deais CLI Code** ("Uathshioncronú próifílí CLI" → Codex), nó socraigh `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (urramaíonn sé `CLI_ALLOW_CONFIG_WRITES` freisin, atá casta air de réir réamhshocraithe). Nuair atá sé cumasaithe, ní scríobhann sé ach comhaid phróifíle ar leith `~/.codex/*.config.toml`; ní athraíonn sé an comhad gníomhach/réamhshocraithe `~/.codex/config.toml`, socruithe Codex-lb, fíordheimhniú ná roghnú soláthraí choíche.
 
 ---
 
 ## Codex a sheoladh le `omniroute launch-codex`
 
-Seiceálann sé sláinte do shampla OmniRoute sula seolann sé Codex:
+Seiceálann sé sláinte do shampla 67router sula seolann sé Codex:
 
 ```bash
-# Seol le OmniRoute áitiúil (port réamhshocraithe 20128)
+# Seol le 67router áitiúil (port réamhshocraithe 20128)
 omniroute launch-codex
 
 # Seol le próifíl shonrach
@@ -469,7 +469,7 @@ Laistigh de sheisiún idirghníomhach:
 
 ## Tascanna fadtréimhseacha
 
-Is féidir le dhá réamhshocrú OmniRoute loitiméireacht chiúin a dhéanamh ar sheisiúin Codex CLI a mhaireann roinnt uaireanta. Ní socrú Codex CLI ceachtar acu — tá an dá cheann ar thaobh OmniRoute. Is minic a bhuaileann úsáideoirí atá ag aistriú cumraíochta ó sheachfhreastalaithe réamhtheachtacha a phionnálann cuntais agus a dhíchumasaíonn teorainneacha díomhaointis leis an dá cheann, agus tagann siad ar an tátal nach féidir le OmniRoute “seisiún fada a choinneáil ar bun.”
+Is féidir le dhá réamhshocrú 67router loitiméireacht chiúin a dhéanamh ar sheisiúin Codex CLI a mhaireann roinnt uaireanta. Ní socrú Codex CLI ceachtar acu — tá an dá cheann ar thaobh 67router. Is minic a bhuaileann úsáideoirí atá ag aistriú cumraíochta ó sheachfhreastalaithe réamhtheachtacha a phionnálann cuntais agus a dhíchumasaíonn teorainneacha díomhaointis leis an dá cheann, agus tagann siad ar an tátal nach féidir le 67router “seisiún fada a choinneáil ar bun.”
 
 | Siomptóm                                                                                      | Cúis dhóchúil                                                                                  | Rialtán                  |
 | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------ |
@@ -491,7 +491,7 @@ Plé gaolmhar: [#7126](https://github.com/diegosouzapw/OmniRoute/discussions/712
 
 **Cad a bhriseann nuair a fhanann sé ag 0**
 
-Ródaítear gach seal i gcomhrá Codex ilseal go neamhspleách de réir na straitéise teaglaim gníomhaí agus féadfaidh sé teacht i dtír ar **chuntas difriúil in aghaidh an tseala**. Briseann sé sin leanúnachas seisiúin / taisce leide an chórais réamhtheachtaigh. Ní théann OmniRoute i gcomhairle le ceanntásca seisiúin Codex (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) ná le réimsí coirp amhail `prompt_cache_key` / `session_id` ach amháin nuair atá an TTL níos mó ná `0` (`extractSessionAffinityKey` in `src/sse/services/auth.ts`).
+Ródaítear gach seal i gcomhrá Codex ilseal go neamhspleách de réir na straitéise teaglaim gníomhaí agus féadfaidh sé teacht i dtír ar **chuntas difriúil in aghaidh an tseala**. Briseann sé sin leanúnachas seisiúin / taisce leide an chórais réamhtheachtaigh. Ní théann 67router i gcomhairle le ceanntásca seisiúin Codex (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) ná le réimsí coirp amhail `prompt_cache_key` / `session_id` ach amháin nuair atá an TTL níos mó ná `0` (`extractSessionAffinityKey` in `src/sse/services/auth.ts`).
 
 **Molta do thasc aonair a mhaireann roinnt uaireanta**
 
@@ -513,13 +513,13 @@ Tá an rogha isteach d'aon ghnó: má dhíchumasaítear cleamhnas, tugtar tús �
 
 Dúnann faireoir díomhaointis SSE (`open-sse/utils/stream.ts`) go héigeantach seal réasúnaíochta / uirlise Codex a fhanann ciúin ar feadh níos mó ná 10 nóiméad gan **aon fhíorchnapán réamhtheachtach**. Is minic nach bhfeiceann an cliant ach titim lom sa nasc — rud a mheaitseálann “stopadh go huathoibríoch gan aon fhógra.”
 
-Sonra ríthábhachtach: **ní athshocraíonn** buille croí sintéiseach SSE OmniRoute an clog díomhaointis. Ní nuashonraítear `lastChunkTime` ach le fíorchnapán coirp réamhtheachtach. Ó thaobh an fhaireora de, tá samhail chiúin atá fós “ag smaoineamh” do-aitheanta ó fhoinse réamhtheachtach atá stoptha.
+Sonra ríthábhachtach: **ní athshocraíonn** buille croí sintéiseach SSE 67router an clog díomhaointis. Ní nuashonraítear `lastChunkTime` ach le fíorchnapán coirp réamhtheachtach. Ó thaobh an fhaireora de, tá samhail chiúin atá fós “ag smaoineamh” do-aitheanta ó fhoinse réamhtheachtach atá stoptha.
 
 Neamhghníomhaíocht ghaolmhar i gcorp Undici: `FETCH_BODY_TIMEOUT_MS` (is é an bhunlíne chéanna 10 nóiméad an réamhshocrú freisin; díchumasaíonn `0` é). Maidir le sruthú, ní chumhdaíonn `FETCH_TIMEOUT_MS` ach socrú an naisc / na chéad cheanntásca — a luaithe a bhíonn an sruth gníomhach, rialaítear stopanna le `STREAM_IDLE_TIMEOUT_MS` agus `FETCH_BODY_TIMEOUT_MS`.
 
 **Molta do thasc aonair iluaire**
 
-I dtimpeallacht phróisis OmniRoute (`.env` / compose / systemd):
+I dtimpeallacht phróisis 67router (`.env` / compose / systemd):
 
 ```bash
 # Díchumasaigh teorainneacha díomhaointis srutha agus neamhghníomhaíochta coirp le haghaidh sealanna fada réasúnaíochta
@@ -535,12 +535,12 @@ STREAM_IDLE_TIMEOUT_MS=7200000
 FETCH_BODY_TIMEOUT_MS=7200000
 ```
 
-Atosaigh OmniRoute tar éis na hathróga timpeallachta seo a athrú.
+Atosaigh 67router tar éis na hathróga timpeallachta seo a athrú.
 
 ### Oideas nithiúil — tasc iluaire Codex
 
 1. **Pionnáil an cuntas:** Dashboard → Settings → Routing → Session affinity → Affinity TTL = `43200` (12u) nó `86400` (uasmhéid 24u).
-2. **Ardaigh / díchumasaigh teorainneacha díomhaointis** i dtimpeallacht OmniRoute:
+2. **Ardaigh / díchumasaigh teorainneacha díomhaointis** i dtimpeallacht 67router:
 
 ```bash
 STREAM_IDLE_TIMEOUT_MS=0
@@ -548,7 +548,7 @@ FETCH_BODY_TIMEOUT_MS=0
 ```
 
 3. Coinnigh an gnáth-`config.toml` Codex (`wire_api = "responses"`, an `base_url` ceart, `OMNIROUTE_API_KEY`) — níl aon socruithe cleamhnais/díomhaointis ar thaobh Codex ann don dá iompraíocht seo.
-4. Atosaigh OmniRoute, ansin cuir tús leis an tasc fada Codex.
+4. Atosaigh 67router, ansin cuir tús leis an tasc fada Codex.
 
 ### Cinneadh maidir le réamhshocruithe (#7287)
 
@@ -561,13 +561,13 @@ D’athródh aisiompú ceachtar réamhshocraithe go domhanda an iompraíocht do 
 
 ### Diagnóisiú ciorruithe díomhaointis
 
-Nuair a ghníomhaíonn an faireoir díomhaointis, logálann OmniRoute líne den chruth seo:
+Nuair a ghníomhaíonn an faireoir díomhaointis, logálann 67router líne den chruth seo:
 
 ```text
 [STREAM] Idle timeout: no data from codex for 600000ms (model: cx/gpt-5.5)
 ```
 
-Cuardaigh le grep le haghaidh `Idle timeout: no data from` (nó an cód `stream_idle_timeout` / ainm na hearráide `StreamIdleTimeoutError`). Is é deighleog an tsoláthraí cibé rud a d’úsáid OmniRoute don iarratas sin (`codex`, aitheantas soláthraí eile, nó `provider` mura bhfuil sé ar eolas) — ní hé an teaghrán litriúil `codex` é i gcónaí.
+Cuardaigh le grep le haghaidh `Idle timeout: no data from` (nó an cód `stream_idle_timeout` / ainm na hearráide `StreamIdleTimeoutError`). Is é deighleog an tsoláthraí cibé rud a d’úsáid 67router don iarratas sin (`codex`, aitheantas soláthraí eile, nó `provider` mura bhfuil sé ar eolas) — ní hé an teaghrán litriúil `codex` é i gcónaí.
 
 ---
 
@@ -577,7 +577,7 @@ Cuardaigh le grep le haghaidh `Idle timeout: no data from` (nó an cód `stream_
 Bain `wire_api = "chat"` de do chumraíocht. Socraigh `wire_api = "responses"` nó fág an réimse ar lár (is é `"responses"` an réamhshocrú ó v0.138).
 
 **`Error: model not found`**
-Deimhnigh go bhfuil an tsamhail ann in OmniRoute leis an réimír cheart. Úsáid `omniroute models list` nó oscail `/dashboard/providers/<provider>`.
+Deimhnigh go bhfuil an tsamhail ann in 67router leis an réimír cheart. Úsáid `omniroute models list` nó oscail `/dashboard/providers/<provider>`.
 
 **`Authentication error`**
 Deimhnigh go bhfuil `OMNIROUTE_API_KEY` easpórtáilte: `echo $OMNIROUTE_API_KEY`.
@@ -585,11 +585,11 @@ Deimhnigh go bhfuil `OMNIROUTE_API_KEY` easpórtáilte: `echo $OMNIROUTE_API_KEY
 **`ERROR: Missing environment variable: OMNIROUTE_API_KEY`**
 Deimhníonn Codex go bhfuil an athróg timpeallachta ann sula ndéanann sé an chéad iarratas. Easpórtáil
 fíoreochair le haghaidh freastalaithe cosanta, nó ionadchoinneálaí neamhfholamh amhail
-`OMNIROUTE_API_KEY=local` nuair nach dteastaíonn fíordheimhniú ó d'ásc **áitiúil** OmniRoute.
+`OMNIROUTE_API_KEY=local` nuair nach dteastaíonn fíordheimhniú ó d'ásc **áitiúil** 67router.
 Atosaigh an bhlaosc má chuir tú le `~/.bashrc` nó `~/.zshrc` í.
 
 **`Connection refused`**
-Deimhnigh go bhfuil OmniRoute ar siúl agus go bhfuil óstach/port `base_url` ceart do do líonra (áitiúil seachas Tailscale seachas VPS).
+Deimhnigh go bhfuil 67router ar siúl agus go bhfuil óstach/port `base_url` ceart do do líonra (áitiúil seachas Tailscale seachas VPS).
 
 **Tuairteálann an seisiún gar don teorainn comhthéacs**
 Socraigh `model_context_window` agus `model_auto_compact_token_limit` go sainráite. Féach an tábla fuinneoige comhthéacs thuas.
@@ -601,4 +601,4 @@ Socraigh `model_context_window` agus `model_auto_compact_token_limit` go sainrá
 Deimhnigh go bhfuil an comhad ann ag `~/.codex/<name>.config.toml` (gan réimír `profile-`). Rith `ls ~/.codex/*.config.toml`.
 
 **Titeann tasc fada Codex amach i lár a rite / athraíonn sé cuntais idir sealanna**
-Féach [Tascanna fadreatha](#long-running-tasks). Cumasaigh cleamhnas seisiúin (TTL níos faide ná fad an taisc) agus ardaigh nó díchumasaigh `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Cuardaigh `Idle timeout: no data from` i logaí OmniRoute le grep.
+Féach [Tascanna fadreatha](#long-running-tasks). Cumasaigh cleamhnas seisiúin (TTL níos faide ná fad an taisc) agus ardaigh nó díchumasaigh `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Cuardaigh `Idle timeout: no data from` i logaí 67router le grep.

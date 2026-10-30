@@ -14,7 +14,7 @@ User-Agent, `anthropic-beta` zastavice, Stainless SDK zaglavlja, itd.).
 
 ## Brzi početak — koristite nativni `agentrouter` provider (preporučeno)
 
-Za većinu korisnika, **nije potrebno nikakvo posebno postavljanje**. OmniRoute dolazi sa
+Za većinu korisnika, **nije potrebno nikakvo posebno postavljanje**. 67router dolazi sa
 ugrađenim `agentrouter` providerom koji već sadrži kompletan Claude Code protokol
 (vidi `open-sse/config/providerRegistry.ts` → `agentrouter`). Da biste ga koristili:
 
@@ -36,7 +36,7 @@ base URL, chat putanju ili set zaglavlja.
 
 ## Napredno: povezivanje putem Claude Code kompatibilnog tipa providera
 
-OmniRoute također podržava AgentRouter (i slične relaye) putem **Claude Code
+67router također podržava AgentRouter (i slične relaye) putem **Claude Code
 kompatibilnog** tipa providera (`anthropic-compatible-cc-*`), koji komunicira
 preko Anthropic Messages API-ja sa ispravnim protokolom. Generički
 `openai-compatible-chat` provider koji pokazuje na `https://agentrouter.org`
@@ -49,14 +49,14 @@ Code.
 
 - AgentRouter nalog i API ključ. Novi korisnici dobijaju besplatne kredite putem affiliate
   linka u projektu [README](../README.md).
-- OmniRoute pokrenut sa omogućenom `ENABLE_CC_COMPATIBLE_PROVIDER` feature zastavicom
+- 67router pokrenut sa omogućenom `ENABLE_CC_COMPATIBLE_PROVIDER` feature zastavicom
   (vidi ispod).
 
 ## 1. Omogućite CC-kompatibilni tip providera
 
 Claude Code kompatibilni tip providera je ograničen feature zastavicom jer
 šalje saobraćaj koji vrlo vjerno oponaša službeni Claude Code klijent. Omogućite ga
-postavljanjem varijable okruženja prije pokretanja OmniRoute-a:
+postavljanjem varijable okruženja prije pokretanja 67router-a:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

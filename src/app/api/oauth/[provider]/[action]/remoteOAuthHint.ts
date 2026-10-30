@@ -1,8 +1,7 @@
 import { isLoopbackHost } from "@/server/authz/routeGuard";
 
 export type RemoteOAuthHint =
-  | { remoteHost: false }
-  | { remoteHost: true; tunnelCommand: string; message: string };
+  { remoteHost: false } | { remoteHost: true; tunnelCommand: string; message: string };
 
 /**
  * #7523: The PKCE callback server binds the SERVER's loopback (localhost:PORT).
@@ -23,7 +22,7 @@ export function buildRemoteOAuthHint(hostHeader: string | null, port: number): R
     remoteHost: true,
     tunnelCommand: `ssh -L ${port}:127.0.0.1:${port} <user>@<omniroute-host>`,
     message:
-      `OmniRoute appears to be running on a remote host (${hostHeader}). ` +
+      `67router appears to be running on a remote host (${hostHeader}). ` +
       `The OAuth callback returns to localhost:${port} on THIS machine, not the server, ` +
       `so the login will hang. Open a reverse tunnel first (see tunnelCommand), then retry — ` +
       `or use the token import flow instead.`,

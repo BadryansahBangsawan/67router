@@ -42,7 +42,7 @@ sruthanna oibre Radar níos déanaí. Is stádas ar leibhéal an chóid é, ní 
 | Tairiscintí do thacadóirí                     | Curtha chun feidhme mar fhotha sínithe ar leith, beo amháin, agus mar leathanach deaise. Déanann an cliant scéimre dhúnta na sochar a athbhailíochtú, caomhnaíonn sé an taisce mhaith dheireanach, scagann sé iontrálacha atá imithe in éag, agus lipéadaíonn sé tairiscintí comhpháirtithe go sainráite. |
 | Faisnéis agus aitheantas tacadóirí            | Curtha chun feidhme mar fhotha docht sínithe, beo amháin, le ELO faoi úinéireacht Radar, úire/treocht fhíorasach na catalóige, suaitheantas fíoraithe tacadóra áitiúil, leathanach deaise, agus orduithe áitiúla amháin CLI maidir le stádas/sioncronú.                                                   |
 | Íocaíochtaí agus ríomhphost idirbheartaíochta | Níl siad curtha chun feidhme sa chliant OSS. Is leis an tseirbhís phríobháideach ceannach, síntiús, athbhreithniú admhála, aisghabháil, agus seachadadh poist; braitheann infhaighteacht óstáilte fós ar a himscaradh faoi mhaoirseacht agus ar chumraíocht an tsoláthraí.                                |
-| Sruth oibre an ghníomhaire taighde            | Ní cuid den eisiúint cliaint seo é. Fanann inneachar coimeádta an fhotha mar shonraí ar thaobh an fhreastalaí; ní ritheann aon ghníomhaire taighde uathrialach i suiteáil OmniRoute.                                                                                                                      |
+| Sruth oibre an ghníomhaire taighde            | Ní cuid den eisiúint cliaint seo é. Fanann inneachar coimeádta an fhotha mar shonraí ar thaobh an fhreastalaí; ní ritheann aon ghníomhaire taighde uathrialach i suiteáil 67router.                                                                                                                       |
 
 ---
 
@@ -120,7 +120,7 @@ Nuair atá an dá cheann ar siúl, seo é an chonair sioncronaithe:
    teasctha den IP a rothlaítear go laethúil le haghaidh athbhreithniú láimhe ar mhí-úsáid; ní choinníonn na táblaí
    sin an eochair ná an IP i bhfoirm amh. Is teorainneacha oibríochtúla ar leith iad logaí rochtana bonneagair
    agus an bosca amach criptithe seachadta.
-3. Ní sheolann OmniRoute leideanna, freagraí, comhráite, dintiúir soláthraí, trácht samhla,
+3. Ní sheolann 67router leideanna, freagraí, comhráite, dintiúir soláthraí, trácht samhla,
    aga fónaimh, aga folaigh ná cumraíocht áitiúil an tsoláthraí chuig seirbhís Radar riamh.
 4. Déantar an freagra a fhíorú, a bhailíochtú agus a thaisceadh go háitiúil (féach
    [Samhail slándála](#security-model)). Tá ceithre chonair líonra ar thaobh an fhreastalaí go díreach ag Radar:
@@ -244,13 +244,13 @@ a bhfuil ceann aige cheana í.
 ### Gníomhachtú ó cheann ceann agus socrú treoraithe
 
 Tá teorainn chúng d'aon ghnó idir an tseirbhís phríobháideach fotha agus an cliant OSS seo: eisíonn agus
-bailíochtaíonn an tseirbhís an eochair tacaíochta, agus criptíonn suiteáil áitiúil OmniRoute an eochair,
+bailíochtaíonn an tseirbhís an eochair tacaíochta, agus criptíonn suiteáil áitiúil 67router an eochair,
 sioncronaíonn sí déantáin shínithe ar thaobh an fhreastalaí, agus treoraíonn sí socrú an tsoláthraí. Seo é ord an bhailíochtaithe chúnta:
 
 1. Faigh eochair nua-eisithe nó aisghafa ó éileamh an ranníocóra, ó plans/checkout, ón turas
    aisghabhála, nó ó oibreoir údaraithe freastalaí phríobháidigh. Ná greamaigh an eochair amh i logaí,
    i ngabhálacha scáileáin, i nótaí ar shaincheisteanna, ná in argóintí líne na n-orduithe.
-2. Cumasaigh bratach ghné `RADAR_ENABLED` ar an tsuiteáil áitiúil OmniRoute. Nochtann sé seo an
+2. Cumasaigh bratach ghné `RADAR_ENABLED` ar an tsuiteáil áitiúil 67router. Nochtann sé seo an
    comhéadan úsáideora ach fanann sé neamhghníomhach ar an líonra go dtí go sábháiltear an rogha
    liostála isteach ar leith.
 3. Oscail `/dashboard/radar`, greamaigh an eochair, agus gníomhachtaigh í. Seolann an brabhsálaí
@@ -323,7 +323,7 @@ n-athshioncronaítear iad.
 ### Sáruithe env atá fabhrach d'fhorcanna
 
 Ligeann dhá athróg env d'fhorcanna agus d'fhéinóstálaithe an cliant a dhíriú ar a bhfotha féin in ionad
-sheirbhís réamhshocraithe OmniRoute — féach
+sheirbhís réamhshocraithe 67router — féach
 [Conas fotha a fhéinóstáil](#how-to-self-host-a-feed) thíos:
 
 | Athróg              | Cuspóir                                                                                                                                 |
@@ -477,7 +477,7 @@ Is eisceacht sábháilteachta fós é `enabled: false` ón bhfotha: bíonn an bu
 Úsáideann foilseacháin chatalóige `schemaVersion: 2`. Is `number | null` / `boolean | null` go neamhspleách iad `contextWindow` agus gach ceann de `tools`, `vision`, agus
 `thinking`: ciallaíonn `null` nach fios, agus
 ciallaíonn `false` go ndeir foinse oifigiúil soláthraí atá deimhnithe ag D16 go sainráite nach bhfuil an cumas ann.
-Ní chuirtear bratacha inmheánacha clárlainne/sonraíochta samhla OmniRoute chun cinn go díreach mar fhíricí fotha riamh. Glacann an cliant
+Ní chuirtear bratacha inmheánacha clárlainne/sonraíochta samhla 67router chun cinn go díreach mar fhíricí fotha riamh. Glacann an cliant
 le seatanna v1 fós; ós rud é gur úsáid an sean-tógálaí `false` mar ionadchoinneálaí d'easnamh, normalófar `false` v1
 go staid anaithnid agus fanann `true` v1 mar fhíric. Teipeann leaganacha anaithnide scéimre go dúnta agus fanann an
 taisce bhailí dheireanach ar fáil. Ní mór do gach samhail v2 a bhfuil comhthéacs/cumas neamh-null aici
@@ -538,7 +538,7 @@ Tacaíonn na teaghlaigh ródaithe áitiúla Radar thíos leis an gcomhéadan ús
 | `/api/radar/local-model-state` | DELETE | Glanann sé réimsí sáraithe ineagarthóireachta agus aon leac uaighe á caomhnú aige.                                                    |
 
 **Riail dhocht: ní dhéanann na bealaí seo seachfhreastalaíocht ar an tseirbhís fotha riamh.** Ní dhéanann an brabhsálaí cumarsáid
-ach leis an bhfreastalaí áitiúil OmniRoute. Is iad na ceithre mhodúl a dhéanann teagmháil leis an tseirbhís Radar ná
+ach leis an bhfreastalaí áitiúil 67router. Is iad na ceithre mhodúl a dhéanann teagmháil leis an tseirbhís Radar ná
 `src/lib/radar/sync.ts` (catalóg), `src/lib/radar/referralsSync.ts` (atreoruithe), agus
 `src/lib/radar/offersSync.ts` (tairiscintí), chomh maith le `src/lib/radar/intelSync.ts` (Intel); ritheann siad uile
 ar thaobh an fhreastalaí, agus ní ritheann siad ar thaobh an chliaint riamh. Coinníonn sé seo
@@ -580,7 +580,7 @@ Is déantán sínithe é Intel ag `GET /v1/intel/latest`. Ní ghlacann an `Radar
 
 Cuireann `syncRadarIntel()` na rialacha céanna i bhfeidhm agus a chuirtear i bhfeidhm ar thairiscintí: Bearer ar thaobh an fhreastalaí, teorainn ama 30 soicind, teorainn sruthaithe 10 MiB, fíorú Ed25519 ar na bearta beachta, scéimre dhocht, ceanglas `live` sa chorp/ceanntásc, íosleagan, agus caomhnú an taisce dheireanaigh mhaith. Tar éis pictiúr fíoraithe beo a bhuanú, díorthaíonn an cliant `radar:<sha256(supporter key)>`, ní stórálann sé ach an t-aitheantas aontreoch sin, agus astaíonn sé an teagmhas aitheantais tiomnaithe `radar_supporter`. Tá a shuaitheantas `radar-supporter` idémpótach agus bronnann sé náid XP; ní nuashonraíonn sé cláir cheannaireachta riamh ná ní athúsáideann sé `token_share`. Ní rindreálann `/dashboard/radar/intel` an suaitheantas ach ó mheiteashonraí taisce áitiúla fíoraithe.
 
-Nochtann an CLI `omniroute radar status` agus `omniroute radar sync`. Ní dhéanann an dá cheann cumarsáid ach le API áitiúil OmniRoute. Déanann `status` `GET /api/radar/status` inléite amháin; seolann `sync` `POST /api/radar/sync-all` amháin agus priontálann sé toradh do gach fotha. Ní léann, ní ghlacann ná ní phriontálann ceachtar ordú an eochair do lucht tacaíochta, agus ní dhéanann ceachtar acu teagmháil dhíreach le seirbhís Radar.
+Nochtann an CLI `omniroute radar status` agus `omniroute radar sync`. Ní dhéanann an dá cheann cumarsáid ach le API áitiúil 67router. Déanann `status` `GET /api/radar/status` inléite amháin; seolann `sync` `POST /api/radar/sync-all` amháin agus priontálann sé toradh do gach fotha. Ní léann, ní ghlacann ná ní phriontálann ceachtar ordú an eochair do lucht tacaíochta, agus ní dhéanann ceachtar acu teagmháil dhíreach le seirbhís Radar.
 
 ---
 

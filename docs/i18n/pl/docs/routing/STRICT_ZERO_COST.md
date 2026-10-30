@@ -31,7 +31,7 @@ Dla każdego kandydata w puli (`open-sse/services/autoCombo/virtualFactory.ts::b
 bezpośrednio po `filterPaidOnlyCandidates`):
 
 1. **Całkowity brak w `FREE_MODEL_BUDGETS`** → wykluczenie. Obejmuje to modele faktycznie płatne oraz każdego
-   dostawcę/model, którego OmniRoute jeszcze nie sklasyfikował — nowi kandydaci są początkowo wykluczeni, a nie uwzględnieni.
+   dostawcę/model, którego 67router jeszcze nie sklasyfikował — nowi kandydaci są początkowo wykluczeni, a nie uwzględnieni.
 2. **`freeType: "keyless"`** → natychmiastowe dopuszczenie, **ale tylko w przypadku kandydata, który faktycznie
    pochodzi ze ścieżki bez uwierzytelniania** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Dla takiego kandydata nie istnieją żadne
@@ -86,7 +86,7 @@ nigdy innym, niezweryfikowanym kontem tego samego kandydata. Dowód regresji zna
 (przypadki A/B/C obejścia bez klucza, przypadki 1-5 dla wielu kont).
 
 `discovered automatically`: dostawca/model udostępniony jutro z właściwymi metadanymi (obecny w
-katalogu, z adapterem użycia, `hardStopGuaranteed: true`) jest dostępny natychmiast, gdy OmniRoute
+katalogu, z adapterem użycia, `hardStopGuaranteed: true`) jest dostępny natychmiast, gdy 67router
 go rozpozna — bez zmiany kodu, bez wpisu na białej liście i bez potrzeby edytowania czegokolwiek w tym module. Element usunięty z
 katalogu znika w ten sam sposób. Dowód regresji znajduje się w
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` (za pomocą

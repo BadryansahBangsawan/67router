@@ -45,7 +45,7 @@ hiermee wordt het volledig automatische proces hersteld dat het project tot en m
 WS1.3-garantie behouden blijft (een gelekt token kan niet zelfstandig publiceren — er is geen token).
 
 **Eenmalige configuratie (eigenaar):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). Totdat dit bestaat, mislukt de automatische stap met `ENEEDAUTH`:
 start de workflow opnieuw met `publish_mode=staged` (hieronder) of `direct`.
 

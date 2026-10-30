@@ -4,7 +4,7 @@
 
 ---
 
-Spouštějte CLI `omniroute` na svém notebooku, zatímco samotný OmniRoute běží někde jinde
+Spouštějte CLI `omniroute` na svém notebooku, zatímco samotný 67router běží někde jinde
 (na VPS, domácím serveru nebo jiném zařízení ve vaší síti Tailnet). Jednou se přihlásíte pomocí
 `omniroute connect` a od té chvíle se **každý** příkaz CLI zaměřuje na tento vzdálený
 server — stejné příkazy, stejný výstup, pouze se provádějí vůči vzdálenému serveru.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← vytvoří místní profil Codex z
 ## Jak to funguje
 
 ```
-váš notebook                             vzdálený OmniRoute (VPS)
+váš notebook                             vzdálený 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (heslo → token)           │
 │  kontext: vps      │ ───────────────►  │ vydá přístupový token         │
@@ -108,7 +108,7 @@ serveru, nikoli na vašem počítači, takže souhlasná obrazovka **zůstane na
 a nikdy nevydá kód** — běžný záložní postup „vložte URL zpětného volání“ tedy nemá
 co vložit. (Jde o omezení na straně Googlu: ke stejnému zablokování dochází
 v jakémkoli proxy serveru, který používá přibaleného desktopového klienta
-Antigravity, nejen v OmniRoute.)
+Antigravity, nejen v 67router.)
 
 Řídicí panel tuto situaci rozpozná dříve, než se zablokujete: otevřete-li
 **Poskytovatelé → Antigravity → Připojit** z jiné adresy než localhost, obecné
@@ -116,7 +116,7 @@ oznámení „zkopírujte URL zpětného volání“ se nahradí dvěma níže u
 v nichž už budou vyplněny váš hostitel a port. (Počítá se i adresa LAN —
 `192.168.x.x` není z hlediska tohoto zpětného volání localhost.)
 
-Existují dva podporované způsoby připojení Antigravity ke vzdálenému OmniRoute.
+Existují dva podporované způsoby připojení Antigravity ke vzdálenému 67router.
 
 ### Možnost A — místní pomocník pro přihlášení (doporučeno)
 
@@ -155,7 +155,7 @@ npx omniroute login antigravity --no-push
 Poté ve **vzdáleném** řídicím panelu otevřete **Poskytovatelé → Antigravity →
 Připojit** a vložte datový blok `omniroute-cred-v1.…` do pole v **Kroku 2**
 (přijímá buď URL zpětného volání, nebo datový blok s přihlašovacími údaji).
-OmniRoute jej dekóduje, na straně serveru spustí úvodní nastavení Cloud Code
+67router jej dekóduje, na straně serveru spustí úvodní nastavení Cloud Code
 a připojení trvale uloží.
 
 > Datový blok obsahuje obnovovací token — zacházejte s ním jako s heslem. Při
@@ -199,7 +199,7 @@ panelu, takže není nutné tunelovat druhý port specifický pro poskytovatele.
 ## Připojení Codexu / Groku ke vzdálené instalaci (poskytovatelé s pevnou adresou loopback)
 
 Codex, xAI (`xai-oauth`) a Grok CLI (`grok-cli`) registrují ve své upstreamové aplikaci OAuth **pevnou** adresu loopback
-`redirect_uri`. OmniRoute ji nemůže změnit — poskytovatel vždy přesměruje
+`redirect_uri`. 67router ji nemůže změnit — poskytovatel vždy přesměruje
 prohlížeč zpět na stejnou pevně zadanou adresu:
 
 | Poskytovatel | Pevná adresa callbacku, na kterou poskytovatel přesměruje |
@@ -209,7 +209,7 @@ prohlížeč zpět na stejnou pevně zadanou adresu:
 | `grok-cli`   | `http://127.0.0.1:56122/callback`                         |
 
 `localhost` zde znamená **počítač, na kterém běží prohlížeč**, zatímco server callbacku PKCE
-v OmniRoute naslouchá na loopbacku **serveru**. Pokud otevřete řídicí panel na adrese v LAN,
+v 67router naslouchá na loopbacku **serveru**. Pokud otevřete řídicí panel na adrese v LAN,
 například `http://192.168.0.15:20128`, tyto dvě strany se nikdy nespojí: autorizační
 kód je doručen na `localhost:1455` vašeho notebooku, kde nic nenaslouchá,
 a poskytovatel přihlášení ukončí, aniž by zobrazil chybu.
@@ -228,7 +228,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Jsou nutná dvě přesměrování; přesměrování pouze jednoho portu stále selže:
 
 - **`20128`** (port řídicího panelu) zajistí, že origin bude skutečně localhost, což
-  je podmínka, aby OmniRoute vůbec spustil server callbacku PKCE — origin z LAN
+  je podmínka, aby 67router vůbec spustil server callbacku PKCE — origin z LAN
   se do této větve nikdy nedostane.
 - **`1455`** (pevný port callbacku poskytovatele) je místo, kam je prohlížeč přesměrován;
   musí být tunelem propojen s loopbackem serveru.
@@ -344,7 +344,7 @@ omniroute contexts current         # aktivní server, stav autentizace, rozsah
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

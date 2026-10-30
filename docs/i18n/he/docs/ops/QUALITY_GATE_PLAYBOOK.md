@@ -4,7 +4,7 @@
 
 ---
 
-> **מהו מסמך זה.** הערכה ביקורתית של מערכת שערי האיכות של OmniRoute,
+> **מהו מסמך זה.** הערכה ביקורתית של מערכת שערי האיכות של 67router,
 > בהשוואה לשיטות העבודה המומלצות בתעשייה, **ובנוסף** קטלוג מקיף של כל נקודות
 > בקרת האיכות ו**תוכנית שכפול שאינה תלויה בכלי מסוים**, המאפשרת להחיל את אותה מערכת על
 > כל פרויקט. המסמך הופק ב־2026-06-16 ממצבו האמיתי של המאגר (ולא מהזיכרון).
@@ -101,62 +101,62 @@
 
 ### 1. סגנון ועיצוב (דטרמיניסטי, מהיר)
 
-- **OmniRoute:** ‏Prettier + ESLint באמצעות lint-staged (בשלב pre-commit), ‏2 רווחים/מירכאות כפולות/100 עמודות.
+- **67router:** ‏Prettier + ESLint באמצעות lint-staged (בשלב pre-commit), ‏2 רווחים/מירכאות כפולות/100 עמודות.
 - **כללי:** כלי עיצוב אחד עם תיקון אוטומטי + כלי lint אחד, המופעלים בשלב pre-commit על קבצים שנמצאים ב-staging.
 
 ### 2. טיפוסים
 
-- **OmniRoute:** ‏`typecheck:core` (חוסם) + `typecheck:noimplicit:core` (מייעץ) + מנגנון ratchet לכיסוי טיפוסים בשיעור 92.17% + תקציב `any` לכל קובץ.
+- **67router:** ‏`typecheck:core` (חוסם) + `typecheck:noimplicit:core` (מייעץ) + מנגנון ratchet לכיסוי טיפוסים בשיעור 92.17% + תקציב `any` לכל קובץ.
 - **כללי:** בדיקת טיפוסים מחמירה ב-CI + מדד כיסוי טיפוסים עם ratchet + תקציב `any`/מעקף לכל קובץ.
 
 ### 3. בדיקות (עוצמה)
 
-- **OmniRoute:** שני מריצים שאינם חופפים (Node native + vitest), ‏8 מקטעים, כיסוי גלובלי 60/60/60/60 + ratchet של כ-76% + **8 ספי מינימום ברמת המודול עבור מודולים קריטיים** + בדיקות מבוססות-מאפיינים ליליות + **בדיקות מוטציה** ליליות.
+- **67router:** שני מריצים שאינם חופפים (Node native + vitest), ‏8 מקטעים, כיסוי גלובלי 60/60/60/60 + ratchet של כ-76% + **8 ספי מינימום ברמת המודול עבור מודולים קריטיים** + בדיקות מבוססות-מאפיינים ליליות + **בדיקות מוטציה** ליליות.
 - **כללי:** מריץ/י בדיקות + סף כיסוי **מוחלט** (מונע אפס) + **ratchet** לכיסוי (מונע נסיגה) + **ספי מינימום ברמת המודול עבור קוד בסיכון גבוה** (מונע Goodhart) + בדיקות מבוססות-מאפיינים עבור לוגיקה טהורה + **בדיקות מוטציה** ליליות כמדד האמיתי לאיכות הבדיקות.
 
 ### 4. מדיניות בדיקות (מניעת מניפולציות)
 
-- **OmniRoute:** ‏`pr-test-policy` (קוד ייצור מחייב בדיקה), ‏`check-test-masking` (חוסם החלשה של assertions), ‏`pr-evidence` (טענת הצלחה מחייבת בלוק ראיות), ‏`test-discovery` (כל בדיקה נאספת על ידי מריץ).
+- **67router:** ‏`pr-test-policy` (קוד ייצור מחייב בדיקה), ‏`check-test-masking` (חוסם החלשה של assertions), ‏`pr-evidence` (טענת הצלחה מחייבת בלוק ראיות), ‏`test-discovery` (כל בדיקה נאספת על ידי מריץ).
 - **כללי:** שער "קוד חדש ⇒ בדיקה חדשה" + גלאי assertions שהוסרו/טאוטולוגיות + דרישת ראיות (TDD או בדיקה חיה) + הבטחה שאף בדיקה אינה נותרת יתומה מחוץ ל-globs.
 
 ### 5. מורכבות ובריאות הקוד (ratchets)
 
-- **OmniRoute:** אזהרות ESLint ‏(3769↓), כפילויות jscpd ‏(5.72%↓), מורכבות ציקלומטית + max-lines ‏(1800↓), מורכבות קוגניטיבית sonarjs ‏(753↓), קוד מת/exports שאינם בשימוש באמצעות knip ‏(339↓), גודל קובץ לכל קובץ (מוקפא, ניתן רק להקטנה), תלויות מעגליות (Tarjan מותאם אישית, חוסם).
+- **67router:** אזהרות ESLint ‏(3769↓), כפילויות jscpd ‏(5.72%↓), מורכבות ציקלומטית + max-lines ‏(1800↓), מורכבות קוגניטיבית sonarjs ‏(753↓), קוד מת/exports שאינם בשימוש באמצעות knip ‏(339↓), גודל קובץ לכל קובץ (מוקפא, ניתן רק להקטנה), תלויות מעגליות (Tarjan מותאם אישית, חוסם).
 - **כללי:** החלת ratchet על כל מדד בריאות (אזהרות, כפילויות, מורכבות ציקלומטית **וגם** קוגניטיבית, קוד מת, גודל קובץ, מחזורי imports). הכיוון הוא תמיד "לא לסגת".
 
 ### 6. אבטחה סטטית (SAST + סודות)
 
-- **OmniRoute:** ‏CodeQL (ratchet להתראות = 0), ‏gitleaks ‏(`[extend] useDefault=true` — קריטי!), ‏SonarQube, כללי אבטחה מותאמים אישית (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** ‏CodeQL (ratchet להתראות = 0), ‏gitleaks ‏(`[extend] useDefault=true` — קריטי!), ‏SonarQube, כללי אבטחה מותאמים אישית (public-creds, error-helper, route-guard-membership, route-validation).
 - **כללי:** ‏SAST ‏(CodeQL/Sonar/semgrep) עם ratchet להתראות + סורק סודות עם **ערכת כללי ברירת מחדל שעוברת בירושה** (תצורה מותאמת אישית שדורסת את ברירת המחדל = עיוורון) + שערי אבטחה מסוג Hard Rule המותאמים לפרויקט.
 
 ### 7. שרשרת אספקה (תלויות)
 
-- **OmniRoute:** ‏osv-scanner + npm-audit + Trivy + Dependabot ‏(SCA), ‏license-checker (רשימת היתרים של SPDX), ‏lockfile-lint ‏(HTTPS+sha512+registry), ‏`check-deps` למניעת slopsquatting (רשימת היתרים + גיל ≥72 שעות).
+- **67router:** ‏osv-scanner + npm-audit + Trivy + Dependabot ‏(SCA), ‏license-checker (רשימת היתרים של SPDX), ‏lockfile-lint ‏(HTTPS+sha512+registry), ‏`check-deps` למניעת slopsquatting (רשימת היתרים + גיל ≥72 שעות).
 - **כללי:** ‏SCA מרובה-מקורות + רשימת היתרים לרישיונות + בדיקת תקינות של lockfile + רשימת היתרים לתלויות עם בדיקת גיל/typosquatting + בוט עדכונים מקובצים.
 
 ### 8. שרשרת אספקה (בנייה והפצה)
 
-- **OmniRoute:** ‏SBOM ‏(CycloneDX + syft), מקור מאומת של SLSA ‏(`--provenance`), ‏OpenSSF Scorecard (שבועי), הקשחת workflows ‏(zizmor: ‏artipacked→`persist-credentials:false`, הרעלת cache, הרשאות token).
+- **67router:** ‏SBOM ‏(CycloneDX + syft), מקור מאומת של SLSA ‏(`--provenance`), ‏OpenSSF Scorecard (שבועי), הקשחת workflows ‏(zizmor: ‏artipacked→`persist-credentials:false`, הרעלת cache, הרשאות token).
 - **כללי:** יצירת SBOM בעת פרסום + מקור חתום (SLSA L2+) + Scorecard מתוזמן + הקשחת כל ה-workflows (אסימונים בהרשאות מינימליות, ללא פרטי זיהוי שמורים ב-checkout שאינו מבצע push, ‏actions המקובעים באמצעות SHA).
 
 ### 9. חוזים ו-API
 
-- **OmniRoute:** ‏oasdiff (שינוי שובר ב-OpenAPI), ‏schemathesis (fuzz של חוזים מדי לילה), ‏openapi-coverage (אחוז הנתיבים המתועדים, ratchet של 38.3%), ‏openapi-security-tiers (מפרט מול route-guard).
+- **67router:** ‏oasdiff (שינוי שובר ב-OpenAPI), ‏schemathesis (fuzz של חוזים מדי לילה), ‏openapi-coverage (אחוז הנתיבים המתועדים, ratchet של 38.3%), ‏openapi-security-tiers (מפרט מול route-guard).
 - **כללי:** השוואת חוזים לאיתור שינויים שוברים (oasdiff/buf) + fuzz מבוסס-מאפיינים מול המפרט (schemathesis) + כיסוי תיעוד עם ratchet + עקביות בין המפרט לקוד.
 
 ### 10. תיעוד ו-i18n (מניעת התיישנות)
 
-- **OmniRoute:** ‏docs-sync (גרסאות משוקפות), ‏docs-counts-sync (מספרים בתיעוד מול הקוד), ‏env-doc-sync, ‏doc-links, ‏fabricated-docs, ‏cli-i18n, ‏i18n-ui-coverage ‏(`--threshold=65` + ratchet של 80.1%).
+- **67router:** ‏docs-sync (גרסאות משוקפות), ‏docs-counts-sync (מספרים בתיעוד מול הקוד), ‏env-doc-sync, ‏doc-links, ‏fabricated-docs, ‏cli-i18n, ‏i18n-ui-coverage ‏(`--threshold=65` + ratchet של 80.1%).
 - **כללי:** סנכרון גרסאות/ספירות/משתני סביבה בין התיעוד לקוד (שער, לא אמון) + אימות קישורים פנימיים + כיסוי i18n עם ratchet.
 
 ### 11. מניעת הזיות / עקביות (הקטגוריה הנדירה)
 
-- **OmniRoute:** ‏known-symbols (ניתוב באמצעות מחרוזות ⇒ סמל חי), ‏provider-consistency, ‏fetch-targets (קריאת fetch בצד הלקוח ⇒ נתיב אמיתי), ‏docs-symbols, ‏db-rules ‏(Hard Rules #2/#5), ‏migration-numbering.
+- **67router:** ‏known-symbols (ניתוב באמצעות מחרוזות ⇒ סמל חי), ‏provider-consistency, ‏fetch-targets (קריאת fetch בצד הלקוח ⇒ נתיב אמיתי), ‏docs-symbols, ‏db-rules ‏(Hard Rules #2/#5), ‏migration-numbering.
 - **כללי:** עבור כל "מקור אמת משוכפל" (registry, ניתוב באמצעות מחרוזות, הפניות בין שכבות), שער שמוכיח ששני הצדדים תואמים. לוכד את ההתיישנות שבדיקת טיפוסים/בדיקות אינן מזהות.
 
 ### 12. חוסן ותחום (ספציפי למוצר)
 
-- **OmniRoute:** ‏chaos (הזרקת תקלות), ‏heap-growth (דליפה), ‏k6 (בדיקת עומס ממושכת), ‏promptfoo+garak (צוות אדום ל-LLM לפי OWASP LLM Top 10), שלושת חוקי החוסן (circuit-breaker/cooldown/lockout).
+- **67router:** ‏chaos (הזרקת תקלות), ‏heap-growth (דליפה), ‏k6 (בדיקת עומס ממושכת), ‏promptfoo+garak (צוות אדום ל-LLM לפי OWASP LLM Top 10), שלושת חוקי החוסן (circuit-breaker/cooldown/lockout).
 - **כללי:** זיהוי מצבי הכשל של התחום **שלכם** ויצירת שער (גם אם הוא מופעל מדי לילה) עבור כל אחד מהם. עבור יישומי AI: צוות אדום לבדיקת הזרקות. עבור מערכות מבוזרות: chaos + בדיקות דליפה + בדיקות עומס ממושכות.
 
 ---

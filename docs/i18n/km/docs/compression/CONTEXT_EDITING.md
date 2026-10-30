@@ -4,15 +4,15 @@
 
 ---
 
-**Context Editing** ដែលបានផ្ទេរសិទ្ធិ គឺជាមុខងារគ្រប់គ្រង context សម្រាប់តែ Claude ប៉ុណ្ណោះ។ ខុសពីម៉ាស៊ីនបង្រួមទិន្នន័យមូលដ្ឋានរបស់ OmniRoute (Caveman, RTK, LLMLingua, stacked pipelines) — ដែលសរសេរ request body ឡើងវិញ _មុនពេល_ វាចាកចេញពី proxy — Context Editing ស្នើឱ្យ **provider** លុបប្លុក tool-use / tool-result ដែលលែងត្រូវការចេញពី context window ដែលកំពុងដំណើរការរបស់ខ្លួន។ OmniRoute គ្រាន់តែភ្ជាប់ body parameter (`context_management.edits[]`) ប៉ុណ្ណោះ; Claude ជាអ្នកអនុវត្តការលុបជាក់ស្តែងដោយផ្អែកលើ tokenizer របស់ខ្លួន។
+**Context Editing** ដែលបានផ្ទេរសិទ្ធិ គឺជាមុខងារគ្រប់គ្រង context សម្រាប់តែ Claude ប៉ុណ្ណោះ។ ខុសពីម៉ាស៊ីនបង្រួមទិន្នន័យមូលដ្ឋានរបស់ 67router (Caveman, RTK, LLMLingua, stacked pipelines) — ដែលសរសេរ request body ឡើងវិញ _មុនពេល_ វាចាកចេញពី proxy — Context Editing ស្នើឱ្យ **provider** លុបប្លុក tool-use / tool-result ដែលលែងត្រូវការចេញពី context window ដែលកំពុងដំណើរការរបស់ខ្លួន។ 67router គ្រាន់តែភ្ជាប់ body parameter (`context_management.edits[]`) ប៉ុណ្ណោះ; Claude ជាអ្នកអនុវត្តការលុបជាក់ស្តែងដោយផ្អែកលើ tokenizer របស់ខ្លួន។
 
-តាមលក្ខណៈរបស់វា នេះគឺជាសមត្ថភាពដែលបានផ្ទេរសិទ្ធិ៖ provider ផ្សេងទៀតនឹងបដិសេធ parameter នេះ ដូច្នេះ OmniRoute កំណត់វិសាលភាពរបស់វាយ៉ាងតឹងរ៉ឹងសម្រាប់តែ Claude និង relay ដែលឆបគ្នាជាមួយ Claude Code ប៉ុណ្ណោះ។
+តាមលក្ខណៈរបស់វា នេះគឺជាសមត្ថភាពដែលបានផ្ទេរសិទ្ធិ៖ provider ផ្សេងទៀតនឹងបដិសេធ parameter នេះ ដូច្នេះ 67router កំណត់វិសាលភាពរបស់វាយ៉ាងតឹងរ៉ឹងសម្រាប់តែ Claude និង relay ដែលឆបគ្នាជាមួយ Claude Code ប៉ុណ្ណោះ។
 
 ប្រភពយោងចម្បង៖ `open-sse/config/contextEditing.ts` (strategy ids, ការបញ្ចូល body, ការស្រង់ telemetry), `open-sse/executors/base.ts` (injection gate + 400-fallback) និង `open-sse/services/compression/types.ts` (ទម្រង់ config + តម្លៃលំនាំដើម)។
 
 ## អ្វីដែល `clear_tool_uses` ធ្វើ
 
-OmniRoute បញ្ចូល edit តែមួយទៅក្នុង Anthropic Messages body ដែលត្រូវបញ្ជូនចេញ៖
+67router បញ្ចូល edit តែមួយទៅក្នុង Anthropic Messages body ដែលត្រូវបញ្ជូនចេញ៖
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute បញ្ចូល edit តែមួយទៅក្នុង Anthropic
 - `trigger.value: 100000` — នៅពេល input tokens របស់ request លើសពីកម្រិតនេះ Claude នឹងចាប់ផ្ដើមលុបគូ tool-use/result ចាស់ៗ (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS` ដែលជាតម្លៃលំនាំដើមរបស់ Anthropic)។
 - `keep.value: 3` — គូ tool-use/result ចំនួន N ដែលថ្មីបំផុត នឹងត្រូវបានរក្សាទុកដោយមិនប៉ះពាល់ (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`)។
 
-beta ត្រូវបានប្រកាសតាមរយៈ header `anthropic-beta: context-management-2025-06-27` ដែល OmniRoute បានបញ្ចេញរួចជាស្រេចនៅលើ request ទៅ Claude។
+beta ត្រូវបានប្រកាសតាមរយៈ header `anthropic-beta: context-management-2025-06-27` ដែល 67router បានបញ្ចេញរួចជាស្រេចនៅលើ request ទៅ Claude។
 
-ការបញ្ចូលត្រូវបានអនុវត្តដោយ `applyContextEditingToBody()` ហើយមានលក្ខណៈ **idempotent**៖ ប្រសិនបើ edit `clear_tool_uses` មាននៅក្នុង body រួចហើយ (ត្រូវបានបន្ថែមដោយការហៅពីមុន ឬផ្ដល់ដោយ client) នោះ body នឹងត្រូវទុកដដែល។ ប្រសិនបើ edit `clear_thinking_20251015` ក៏មានវត្តមានដែរ OmniRoute នឹងធ្វើ stable-sort ដើម្បីដាក់ edit `clear_thinking` នៅខាងមុខ ព្រោះ Anthropic តម្រូវឱ្យ `clear_thinking` ស្ថិតនៅមុន `clear_tool_uses` ក្នុង array `edits[]`។
+ការបញ្ចូលត្រូវបានអនុវត្តដោយ `applyContextEditingToBody()` ហើយមានលក្ខណៈ **idempotent**៖ ប្រសិនបើ edit `clear_tool_uses` មាននៅក្នុង body រួចហើយ (ត្រូវបានបន្ថែមដោយការហៅពីមុន ឬផ្ដល់ដោយ client) នោះ body នឹងត្រូវទុកដដែល។ ប្រសិនបើ edit `clear_thinking_20251015` ក៏មានវត្តមានដែរ 67router នឹងធ្វើ stable-sort ដើម្បីដាក់ edit `clear_thinking` នៅខាងមុខ ព្រោះ Anthropic តម្រូវឱ្យ `clear_thinking` ស្ថិតនៅមុន `clear_tool_uses` ក្នុង array `edits[]`។
 
 ## toggle បើកដំណើរការសម្រាប់ combo នីមួយៗ
 
@@ -122,7 +122,7 @@ Claude ពិតប្រាកដដាក់ beta នៅក្នុង `ANTHR
 
 ## ទិន្នន័យ telemetry របស់ `applied_edits`
 
-បន្ទាប់ពី response របស់ Claude OmniRoute កត់ត្រាថា provider បានសម្អាត context ជាក់ស្ដែងប៉ុនណា។ ទិន្នន័យនេះ
+បន្ទាប់ពី response របស់ Claude 67router កត់ត្រាថា provider បានសម្អាត context ជាក់ស្ដែងប៉ុនណា។ ទិន្នន័យនេះ
 **មិន** ត្រូវបាន streamed ទេ — វាត្រូវបានស្រង់ចេញពី body នៃ response ដែលមិនមែនជា streaming តាមលទ្ធភាពដែលអាចធ្វើបាន ហើយមិនដែល
 ប៉ះពាល់ដល់ response ទេ (កំហុស telemetry ត្រូវបានមិនអើពើ)។
 
@@ -152,14 +152,14 @@ analytics ដោយមាន tag៖
 
 | ទិដ្ឋភាព               | ម៉ាស៊ីនក្នុងមូលដ្ឋាន (Caveman / RTK / LLMLingua / stacked) | ការកែសម្រួលបរិបទដែលបានផ្ទេរសិទ្ធិ                                |
 | ---------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
-| ទីកន្លែងដំណើរការ       | ក្នុង OmniRoute មុនពេលសំណើចាកចេញពីប្រូកស៊ី                 | ក្នុងអ្នកផ្តល់សេវា (Claude) នៅផ្នែកម៉ាស៊ីនមេ                     |
+| ទីកន្លែងដំណើរការ       | ក្នុង 67router មុនពេលសំណើចាកចេញពីប្រូកស៊ី                  | ក្នុងអ្នកផ្តល់សេវា (Claude) នៅផ្នែកម៉ាស៊ីនមេ                     |
 | អ្វីដែលវាកែសម្រួល      | អត្ថបទប្រូម / បរិបទ / លទ្ធផលឧបករណ៍                         | ប្លុកការប្រើឧបករណ៍ / លទ្ធផលឧបករណ៍ចាស់ៗ                           |
 | វិសាលភាពអ្នកផ្តល់សេវា  | អ្នកផ្តល់សេវាទាំងអស់                                       | `claude` + `anthropic-compatible-cc-*` ប៉ុណ្ណោះ                  |
 | ការបិទបើក              | ការកំណត់របៀបបង្ហាប់                                        | `contextEditing.enabled`                                         |
 | របៀបបរាជ័យ             | បើកឱ្យបន្តនៅពេលបរាជ័យ (អត្ថបទដើម)                          | ការត្រឡប់បម្រុងពេល 400៖ ដកប៉ារ៉ាម៉ែត្រចេញ ហើយសាកល្បងម្តងទៀតមួយដង |
 | ទិន្នន័យតាមដានការសន្សំ | `engine: <engine id>`                                      | `engine: "context-editing"`                                      |
 
-ទាំងពីរនេះបំពេញគ្នាទៅវិញទៅមក៖ ម៉ាស៊ីនក្នុងមូលដ្ឋានបង្ហាប់ទិន្នន័យបៃដែល OmniRoute ផ្ញើ ចំណែកឯការកែសម្រួលបរិបទអនុញ្ញាតឱ្យ
+ទាំងពីរនេះបំពេញគ្នាទៅវិញទៅមក៖ ម៉ាស៊ីនក្នុងមូលដ្ឋានបង្ហាប់ទិន្នន័យបៃដែល 67router ផ្ញើ ចំណែកឯការកែសម្រួលបរិបទអនុញ្ញាតឱ្យ
 Claude កាត់បន្ថយបរិបទដែលកំពុងបន្តឆ្លងកាត់វេនសន្ទនា។ វាទាំងពីរអាចត្រូវបានបើកប្រើរួមគ្នា។
 
 ## សូមមើលផងដែរ

@@ -36,7 +36,7 @@ Puni URL ima oblik:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. U OmniRoute-u, idite na **Providers → Add Provider**, izaberite **Microsoft 365 Copilot (BizChat)** i nalijepite akreditiv u formatu:
+6. U 67router-u, idite na **Providers → Add Provider**, izaberite **Microsoft 365 Copilot (BizChat)** i nalijepite akreditiv u formatu:
 
 ```
 access_token=<jwt>; chathubPath=<oid>@<tenant>
@@ -51,9 +51,9 @@ Umjesto ručnog kopiranja vrijednosti iz WebSocket URL-a, možete izvesti DevToo
 1. Otvorite **DevTools → Network**.
 2. Započnite ili nastavite BizChat razgovor (ovo pokreće WebSocket konekciju).
 3. Kliknite desnim tasterom miša na Network panel i izaberite **Save all as HAR with content**.
-4. U OmniRoute-u koristite dugme **Import .har file** u dijalogu za povezivanje provajdera.
+4. U 67router-u koristite dugme **Import .har file** u dijalogu za povezivanje provajdera.
 
-OmniRoute skenira HAR u potrazi za Chathub WebSocket URL-om, ekstrahuje `access_token` i `chathubPath`, i automatski popunjava polja za akreditive. HAR uvoz dekodira JWT isteka i prikazuje preostalo vrijeme trajanja tokena.
+67router skenira HAR u potrazi za Chathub WebSocket URL-om, ekstrahuje `access_token` i `chathubPath`, i automatski popunjava polja za akreditive. HAR uvoz dekodira JWT isteka i prikazuje preostalo vrijeme trajanja tokena.
 
 > **Nikada ne commit-ujte pravi HAR izvoz, pristupni token ili token za osvježavanje.** Testne i dokumentacione vrijednosti moraju uvijek biti placeholderi.
 
@@ -70,7 +70,7 @@ Da biste izbjegli ručno ponovno hvatanje, možete pohraniti Microsoft token za 
 | `refreshToken` | Microsoft OAuth token za osvježavanje za `substrate.office.com/sydney` opseg |
 | `tier`         | `individual` (podrazumijevano), `edu`, ili `enterprise`                      |
 
-Dobavite token za osvježavanje iz Microsoft device-code ili authorization-code toka sa opsegom `substrate.office.com/sydney`. Sa postavljenim `refreshToken`-om, OmniRoute vrši pre-flight osvježavanje `access_token`-a prije svakog zahtjeva, tako da ne morate ponovo hvatati akreditiv nakon svakog isteka od ~75 minuta.
+Dobavite token za osvježavanje iz Microsoft device-code ili authorization-code toka sa opsegom `substrate.office.com/sydney`. Sa postavljenim `refreshToken`-om, 67router vrši pre-flight osvježavanje `access_token`-a prije svakog zahtjeva, tako da ne morate ponovo hvatati akreditiv nakon svakog isteka od ~75 minuta.
 
 Ako `refreshToken` nije postavljen, morate ručno ponovo uhvatiti WebSocket akreditiv nakon svakog isteka.
 

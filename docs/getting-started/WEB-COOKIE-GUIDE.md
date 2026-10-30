@@ -6,7 +6,7 @@ lastUpdated: 2026-07-20
 
 # Web Cookie Providers
 
-Web Cookie providers let OmniRoute use an AI service through your existing browser session instead of an API key. They are useful when you already have access to a service through its website and want OmniRoute to use the same authenticated session.
+Web Cookie providers let 67router use an AI service through your existing browser session instead of an API key. They are useful when you already have access to a service through its website and want 67router to use the same authenticated session.
 
 Unlike API-key providers, Web Cookie providers authenticate using the credentials that your browser sends to the website.
 
@@ -51,7 +51,7 @@ DevTools
 
 The `Cookie` request header contains the exact authentication information that your browser successfully used.
 
-For most Web Cookie providers, this is the value that should be pasted into OmniRoute.
+For most Web Cookie providers, this is the value that should be pasted into 67router.
 
 ---
 
@@ -65,7 +65,7 @@ The setup process is the same for most Web Cookie providers.
 4. Refresh the page.
 5. Open an authenticated chat or conversation request.
 6. Copy the required authentication credentials.
-7. Open OmniRoute.
+7. Open 67router.
 8. Go to **Providers → Add Provider**.
 9. Select your Web Cookie provider.
 10. Paste the credentials.
@@ -94,17 +94,17 @@ Different websites store authentication differently. Some require only cookies, 
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) is a free consumer chat platform with no signup required — the session is created anonymously on first visit and persists via three cookies: `uid`, `si_usr_id`, and `si_ses_id`. OmniRoute proxies the same `/api/dispatch` endpoint through a single model id (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) is a free consumer chat platform with no signup required — the session is created anonymously on first visit and persists via three cookies: `uid`, `si_usr_id`, and `si_ses_id`. 67router proxies the same `/api/dispatch` endpoint through a single model id (`notrack-c`, alias `ntw`).
 
 ### Steps to connect
 
 1. Open [notrack.ai](https://notrack.ai) in your browser and let the anonymous session cookie be set.
 2. Open **DevTools → Network**, refresh the page, and click any `/api` request.
 3. In **Request Headers**, copy the full `Cookie` header value.
-4. In OmniRoute, go to **Providers → Add Provider → NoTrack Web (Free)**.
+4. In 67router, go to **Providers → Add Provider → NoTrack Web (Free)**.
 5. Paste the cookie string into the `apiKey` field and **Save**.
 
-OmniRoute extracts `uid`, `si_usr_id`, and `si_ses_id` from the pasted string and rebuilds a clean `Cookie` header with only those pairs — plus `nt_session` (the `ntk_…` token set for logged-in accounts) when present. If any of the three is missing, the raw pasted string is forwarded unchanged so operators can experiment with alternative shapes.
+67router extracts `uid`, `si_usr_id`, and `si_ses_id` from the pasted string and rebuilds a clean `Cookie` header with only those pairs — plus `nt_session` (the `ntk_…` token set for logged-in accounts) when present. If any of the three is missing, the raw pasted string is forwarded unchanged so operators can experiment with alternative shapes.
 
 ### Model ids
 
@@ -200,7 +200,7 @@ Application
 
 ---
 
-## Cookie Works in Browser but Not in OmniRoute
+## Cookie Works in Browser but Not in 67router
 
 Some providers include cookies that are only sent during authenticated requests.
 

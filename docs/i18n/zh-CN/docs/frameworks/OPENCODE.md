@@ -5,11 +5,11 @@
 ---
 
 > **状态：** 正式可用。
-> **受众：** 将 OpenCode 接入 OmniRoute 部署的运维人员。
+> **受众：** 将 OpenCode 接入 67router 部署的运维人员。
 > **权威来源（配置架构）：** `src/shared/services/opencodeConfig.ts`
 > **权威来源（npm 包）：** `@omniroute/opencode-provider/`（可发布的工作区）
 
-[OpenCode](https://opencode.ai) 是一款智能体式 CLI/桌面 AI 客户端。它从 `~/.config/opencode/opencode.json`（或 `opencode.jsonc`）读取提供者目录，并遵循 `https://opencode.ai/config.json` 中的架构。OmniRoute 作为其中一个提供者向 OpenCode 提供服务——每个请求都会通过 OmniRoute 标准的 OpenAI 兼容 `/v1` 接口，因此 OpenCode 会自动受益于 Auto-Combo 路由、熔断器、密钥策略、可观测性等功能。
+[OpenCode](https://opencode.ai) 是一款智能体式 CLI/桌面 AI 客户端。它从 `~/.config/opencode/opencode.json`（或 `opencode.jsonc`）读取提供者目录，并遵循 `https://opencode.ai/config.json` 中的架构。67router 作为其中一个提供者向 OpenCode 提供服务——每个请求都会通过 67router 标准的 OpenAI 兼容 `/v1` 接口，因此 OpenCode 会自动受益于 Auto-Combo 路由、熔断器、密钥策略、可观测性等功能。
 
 支持**两种集成方式**。任选其一——它们生成相同的配置。
 
@@ -17,16 +17,16 @@
 
 ## 方式 1 — CLI 生成器（无需安装 npm 包）
 
-推荐最终用户使用。随 OmniRoute 一同提供。直接写入 `opencode.json`。
+推荐最终用户使用。随 67router 一同提供。直接写入 `opencode.json`。
 
 ```bash
-# 安装 OmniRoute 后（npm i -g @omniroute/cli 或使用本地克隆）
+# 安装 67router 后（npm i -g @omniroute/cli 或使用本地克隆）
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-CLI 在后台调用 `mergeOpenCodeConfigText()`（`src/shared/services/opencodeConfig.ts:104`），因此现有的 `opencode.json` 会保留其他提供者及注释。OmniRoute 条目会以原子方式添加或替换。
+CLI 在后台调用 `mergeOpenCodeConfigText()`（`src/shared/services/opencodeConfig.ts:104`），因此现有的 `opencode.json` 会保留其他提供者及注释。67router 条目会以原子方式添加或替换。
 
 生成的文件（默认模型目录）：
 
@@ -90,8 +90,8 @@ writeFileSync("opencode.json", JSON.stringify(config, null, 2));
 ```
 OpenCode UI/智能体
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          （OmniRoute OpenAI 接口）
-         → OmniRoute /v1/chat/completions 处理程序     （open-sse/handlers/chatCore.ts）
+      → HTTP POST {baseURL}/chat/completions          （67router OpenAI 接口）
+         → 67router /v1/chat/completions 处理程序     （open-sse/handlers/chatCore.ts）
             → 组合路由 / Auto-Combo / 执行器
                → 上游提供者
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 你可以通过 `models: [...]` 覆盖默认值。建议添加：
 
-- `"auto"` — 提供 OmniRoute 的 [Auto-Combo](../routing/AUTO-COMBO.md) 零配置路由器。让 OpenCode 选择“最佳可用模型”，无需对目录进行硬编码。
-- `"<combo-name>"` — 你在控制面板中定义的任意组合；OmniRoute 会透明地解析它。
+- `"auto"` — 提供 67router 的 [Auto-Combo](../routing/AUTO-COMBO.md) 零配置路由器。让 OpenCode 选择“最佳可用模型”，无需对目录进行硬编码。
+- `"<combo-name>"` — 你在控制面板中定义的任意组合；67router 会透明地解析它。
 
 ---
 
@@ -135,29 +135,29 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ## 身份验证模式
 
-| OmniRoute 设置                            | 推荐的 `apiKey` 值                              |
+| 67router 设置                             | 推荐的 `apiKey` 值                              |
 | ----------------------------------------- | ----------------------------------------------- |
 | `REQUIRE_API_KEY=false`（本地环境默认值） | `sk_omniroute`（字面量占位符）                  |
 | `REQUIRE_API_KEY=true`                    | 从控制面板 → API Keys 获取的真实用户 API 密钥。 |
 
-对于发送 `x-api-key` + `anthropic-version` 的 Anthropic 风格客户端，OmniRoute 的 `extractApiKey` 也会识别来自 `x-api-key` 的密钥。OpenCode 使用 OpenAI 接口，因此它始终会发送 `Authorization: Bearer ${apiKey}`——这里不适用 Anthropic 特殊处理。
+对于发送 `x-api-key` + `anthropic-version` 的 Anthropic 风格客户端，67router 的 `extractApiKey` 也会识别来自 `x-api-key` 的密钥。OpenCode 使用 OpenAI 接口，因此它始终会发送 `Authorization: Bearer ${apiKey}`——这里不适用 Anthropic 特殊处理。
 
 ---
 
 ## 故障排除
 
-| 症状                                                      | 原因                                                        | 修复方法                                                                                    |
-| --------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| URL 包含 `/v1/v1/` 时，每个请求都返回 `404`               | v3.8 之前的插件配置已过时，导致重复添加 `/v1` 后缀。        | 通过路径 1 或路径 2 重新生成。                                                              |
-| `401 Invalid API key`                                     | OmniRoute 设置了 `REQUIRE_API_KEY=true`，但无法识别该密钥。 | 在控制面板中创建密钥，或设置 `REQUIRE_API_KEY=false`（仅限本地环境）并使用 `sk_omniroute`。 |
-| OpenCode UI 中的模型列表为空                              | OmniRoute 的提供者可见性设置隐藏了全部 4 个默认模型。       | 传入 `models: ["auto", ...]`，以显示你已启用的模型。                                        |
-| OpenCode 返回 500，并显示 `cannot read property 'models'` | 较旧版本的 OpenCode（< 0.1.x）不接受内联 `models`。         | 将 OpenCode 升级到遵循 v1 架构（`opencode.ai/config.json`）的版本。                         |
+| 症状                                                      | 原因                                                       | 修复方法                                                                                    |
+| --------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| URL 包含 `/v1/v1/` 时，每个请求都返回 `404`               | v3.8 之前的插件配置已过时，导致重复添加 `/v1` 后缀。       | 通过路径 1 或路径 2 重新生成。                                                              |
+| `401 Invalid API key`                                     | 67router 设置了 `REQUIRE_API_KEY=true`，但无法识别该密钥。 | 在控制面板中创建密钥，或设置 `REQUIRE_API_KEY=false`（仅限本地环境）并使用 `sk_omniroute`。 |
+| OpenCode UI 中的模型列表为空                              | 67router 的提供者可见性设置隐藏了全部 4 个默认模型。       | 传入 `models: ["auto", ...]`，以显示你已启用的模型。                                        |
+| OpenCode 返回 500，并显示 `cannot read property 'models'` | 较旧版本的 OpenCode（< 0.1.x）不接受内联 `models`。        | 将 OpenCode 升级到遵循 v1 架构（`opencode.ai/config.json`）的版本。                         |
 
 ---
 
 ## 另请参阅
 
-- [API 参考](../reference/API_REFERENCE.md) — 完整的 OmniRoute REST 接口
+- [API 参考](../reference/API_REFERENCE.md) — 完整的 67router REST 接口
 - [Auto-Combo](../routing/AUTO-COMBO.md) — `model: "auto"` 的含义
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - 源代码：`src/shared/services/opencodeConfig.ts`、`src/lib/cli-helper/config-generator/opencode.ts`、`@omniroute/opencode-provider/src/index.ts`

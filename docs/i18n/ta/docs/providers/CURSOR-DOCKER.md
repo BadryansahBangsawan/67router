@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, Docker-க்குள் இயங்கும்போது, container-ஆல் host Cursor
+67router, Docker-க்குள் இயங்கும்போது, container-ஆல் host Cursor
 நிறுவலைப் பார்க்க முடியாததால், பழைய **Cursor IDE-இலிருந்து இறக்குமதி** /
 `cursor-agent` செயல்முறைகள் தோல்வியடையும். அதற்குப் பதிலாக **Cursor மூலம் உள்நுழைதல்**
 (deep-control PKCE) முறையைப் பயன்படுத்தவும்.
@@ -16,7 +16,7 @@ OmniRoute, Docker-க்குள் இயங்கும்போது, conta
    பாதைகளைத் தேடுகிறது. macOS-க்கான Docker Desktop-இல் host IDE DB இயல்பாக
    mount செய்யப்படுவதில்லை; மேலும் host Darwin ஆக இருந்தாலும் container OS
    Linux ஆகும்.
-2. **`cursor-agent` binary இல்லை** — அதிகாரப்பூர்வ OmniRoute images-ல்
+2. **`cursor-agent` binary இல்லை** — அதிகாரப்பூர்வ 67router images-ல்
    `cursor-agent` சேர்க்கப்படவில்லை. முன்பு, கிடைக்கக்கூடிய மாதிரிகளைப் பெற
    `cursor-agent --list-models` shell வழியாக இயக்கப்பட்டு, அது தோல்வியடைந்தால்
    நிலையான catalog பயன்படுத்தப்பட்டது.
@@ -27,13 +27,13 @@ OmniRoute, Docker-க்குள் இயங்கும்போது, conta
 
 1. **Dashboard → Providers → Cursor** என்பதைத் திறக்கவும்.
 2. **Cursor மூலம் உள்நுழைதல்** tab-ஐத் தேர்ந்தெடுக்கவும்.
-3. **Cursor மூலம் உள்நுழைதல்** என்பதைக் கிளிக் செய்யவும் — OmniRoute,
+3. **Cursor மூலம் உள்நுழைதல்** என்பதைக் கிளிக் செய்யவும் — 67router,
    உங்கள் **host** browser-ல் `https://cursor.com/loginDeepControl?…` என்பதைத்
    திறக்கும்.
 4. Browser-ல் உள்நுழைவை அங்கீகரித்துவிட்டு dashboard-க்குத் திரும்பவும்.
-   Tokens கிடைக்கும் வரை OmniRoute, `api2.cursor.sh/auth/poll` endpoint-ஐ
+   Tokens கிடைக்கும் வரை 67router, `api2.cursor.sh/auth/poll` endpoint-ஐ
    poll செய்யும்.
-5. OmniRoute, **access + refresh** tokens-ஐச் சேமித்து, அவற்றை
+5. 67router, **access + refresh** tokens-ஐச் சேமித்து, அவற்றை
    `https://api2.cursor.sh/auth/exchange_user_api_key` மூலம் புதுப்பிக்கும்.
 
 இந்த வழிமுறைக்கு container-க்குள் Cursor IDE அல்லது `cursor-agent` தேவையில்லை.
@@ -43,10 +43,10 @@ OmniRoute, Docker-க்குள் இயங்கும்போது, conta
 உள்நுழைந்த connection இருக்கும்போது, **கிடைக்கக்கூடிய மாதிரிகள் / தானியங்கி
 ஒத்திசைவு**, connection bearer token-ஐப் பயன்படுத்தும் Cursor-ன் HTTP
 `AiService/AvailableModels` catalog-க்கு முன்னுரிமை அளிக்கும். அது தோல்வியடைந்தால்,
-OmniRoute இன்னும் host `cursor-agent`-ஐ (இருந்தால்) முயற்சித்து, பின்னர் நிலையான
+67router இன்னும் host `cursor-agent`-ஐ (இருந்தால்) முயற்சித்து, பின்னர் நிலையான
 registry seed-ஐப் பயன்படுத்தும்.
 
-OmniRoute எப்போதும் catalog-ல் **`auto`** என்பதை (காட்சிப் பெயர் “Auto”)
+67router எப்போதும் catalog-ல் **`auto`** என்பதை (காட்சிப் பெயர் “Auto”)
 வெளிப்படுத்தும்; மேலும் OpenCodex-பாணி router முறைகளான **`auto-cost`**,
 **`auto-balance`**, மற்றும் **`auto-intelligence`** ஆகியவற்றையும் வழங்கும்.
 Wire-ல், இவை Cursor-ன் `default` மாதிரியாக map செய்யப்படும் (மூன்று
@@ -99,7 +99,7 @@ Windows பொதுவாக **மொத்தம்**, **Auto + Composer**, �
 ## காலியான turns / பயன்பாட்டு அளவு தீர்ந்த நிலை
 
 Cursor ஒரு Run-ஐ ஏற்றுக்கொண்டு assistant text எதையும் வழங்காதபோது (premium
-பயன்பாட்டு அளவு தீர்ந்திருக்கும்போது இது பொதுவானது), OmniRoute வெறும்
+பயன்பாட்டு அளவு தீர்ந்திருக்கும்போது இது பொதுவானது), 67router வெறும்
 “Provider காலியான உள்ளடக்கத்தை வழங்கியது” என்பதற்குப் பதிலாக, நடவடிக்கை
 எடுக்க உதவும் **429** (quota குறிப்புகள்) அல்லது வழிகாட்டுதலுடன் கூடிய **502**
 பிழையை வெளிப்படுத்தும். `not_found: AI Model Not Found` (பயன்பாட்டு window
@@ -111,7 +111,7 @@ Cursor ஒரு Run-ஐ ஏற்றுக்கொண்டு assistant text 
 
 ## Client பதிப்பு (headless)
 
-உள்ளூர் `cursor-agent` நிறுவல் இல்லாதபோது, OmniRoute
+உள்ளூர் `cursor-agent` நிறுவல் இல்லாதபோது, 67router
 `x-cursor-client-version`-ஐ முதலில் env `CURSOR_AGENT_CLI_VERSION` மூலம்
 தீர்மானிக்கும்; பின்னர் Cursor installer script-இன் disk-cached scrape-ஐயும்,
 அதற்குப் பிறகு pinned build id-ஐயும் பயன்படுத்தும். தேவைப்படும்போது

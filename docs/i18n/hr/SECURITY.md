@@ -6,7 +6,7 @@
 
 ## Prijavljivanje ranjivosti
 
-Ako otkrijete sigurnosnu ranjivost u OmniRouteu, prijavite je na odgovoran način:
+Ako otkrijete sigurnosnu ranjivost u 67routeru, prijavite je na odgovoran način:
 
 1. **NEMOJTE** otvarati javni GitHub problem
 2. Upotrijebite [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ grani `stable/v3` (pogledajte [`ROADMAP.md`](ROADMAP.md) → „Faza 3 — v3.9.
 
 ## Sigurnosna arhitektura
 
-OmniRoute implementira višeslojni sigurnosni model:
+67router implementira višeslojni sigurnosni model:
 
 ```
 Zahtjev → CORS → Authz proces (klasificiranje → pravila → provedba)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Okvir zaštitnih mjera
 
-OmniRoute isporučuje **registar zaštitnih mjera** koji se može ponovno učitati bez prekida rada (`src/lib/guardrails/`) s 3 ugrađene zaštitne mjere poredane prema prioritetu:
+67router isporučuje **registar zaštitnih mjera** koji se može ponovno učitati bez prekida rada (`src/lib/guardrails/`) s 3 ugrađene zaštitne mjere poredane prema prioritetu:
 
 | Zaštitna mjera     | Prioritet | Svrha                                                                                                        |
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |

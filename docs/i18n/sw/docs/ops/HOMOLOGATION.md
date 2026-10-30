@@ -4,7 +4,7 @@
 
 ---
 
-Uthibitishaji wa E2E katika mazingira halisi wa deploy ya OmniRoute inayoendeshwa kwenye VPS ya homologation
+Uthibitishaji wa E2E katika mazingira halisi wa deploy ya 67router inayoendeshwa kwenye VPS ya homologation
 (`HOMOLOG_BASE_URL`, kwa mfano `http://192.168.0.15:20128`). Amri moja inachukua nafasi ya orodha hakiki ya
 mikono ya release STOP #2 kwa utekelezaji wa kiotomatiki unaozalisha ushahidi.
 

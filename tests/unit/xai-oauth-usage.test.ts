@@ -162,7 +162,7 @@ describe("xAI OAuth usage dispatch", () => {
       };
     };
     assert.ok(r.quotas?.monthly, `expected fallback quotas, got: ${JSON.stringify(r)}`);
-    assert.match(r.plan || "", /OmniRoute-tracked/i);
+    assert.match(r.plan || "", /67router-tracked/i);
     assert.match(r.message || "", /Live weekly quota unavailable/i);
     assert.equal(r.quotas!.monthly!.used, 1_500_000);
     assert.equal(r.quotas!.monthly!.unlimited, true, "fallback is uncapped self-track");

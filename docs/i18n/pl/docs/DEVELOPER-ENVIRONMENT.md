@@ -4,7 +4,7 @@
 
 ---
 
-Ta strona wyjaśnia lokalne zachowanie pliku `.env` w projekcie oraz sposób obsługi plików środowiskowych i sekretów podczas rozwijania OmniRoute.
+Ta strona wyjaśnia lokalne zachowanie pliku `.env` w projekcie oraz sposób obsługi plików środowiskowych i sekretów podczas rozwijania 67router.
 
 ## Zachowanie `.env` podczas postinstall
 

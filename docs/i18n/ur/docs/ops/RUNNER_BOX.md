@@ -5,7 +5,7 @@
 ---
 
 سیلف ہوسٹڈ پول **.113** مشین (`tomni-proxmox-113`) پر چلتا ہے۔ 2026-10-18 سے ہر
-OmniRoute رنر کا **ایک کردار**، ایک لیبل، اور اس کے ورک لوڈ کی پیمائش کے مطابق میموری/CPU بجٹ
+67router رنر کا **ایک کردار**، ایک لیبل، اور اس کے ورک لوڈ کی پیمائش کے مطابق میموری/CPU بجٹ
 ہے۔ Turbopack سلاٹ کو بلڈ کی ضرورت کے مطابق وسائل ملتے ہیں؛ دیگر سلاٹس کو ان کی
 پیمائش شدہ بلند ترین ضروریات کے مطابق وسائل دیے گئے ہیں۔ مشین صرف اس وقت اوور کمیٹ کرتی ہے جب Turbopack بلڈ، Release-Green
 webpack بلڈ اور lint جاب ایک ساتھ چل رہے ہوں؛ ہوسٹ swap (16 GB) اسے سنبھال لیتا ہے، اور چونکہ pull-request بلڈز
@@ -27,7 +27,7 @@ webpack بلڈ اور lint جاب ایک ساتھ چل رہے ہوں؛ ہوسٹ 
 | swap      | 16 GB                        | `omniroute-113-5`، swap بند (`MemorySwapMax=0`) ہونے کے ساتھ چلتا ہے، تاکہ بے قابو بلڈ مشین کو swap پر ڈالنے کے بجائے اپنی حد پر ختم کر دیا جائے                                                                                                                                                                                                                                               |
 | `/tmp`    | **12 GB tmpfs = RAM**        | یہاں رکھی گئی ہر چیز میموری استعمال کرتی ہے؛ بچ جانے والی چیزیں 3 گھنٹے بعد صاف کر دی جاتی ہیں                                                                                                                                                                                                                                                                                                 |
 | CPU       | 32 کورز پر load 60 دیکھا گیا | quotas سے پہلے، اسی مشین پر ایک Turbopack بلڈ (تقریباً 1166 % CPU) اور coverage suite نے دوسرے listeners کے heartbeats کو وسائل سے محروم کر دیا تھا (`The self-hosted runner lost communication`، #16853)                                                                                                                                                                                      |
-| رنرز      | **6 listeners**              | 4 OmniRoute + OmniHeuris + OmniMind؛ `omniroute-113-3/-4/-7/-8` غیر فعال ہیں (`systemctl enable --now` ان میں سے کسی ایک کو دوبارہ فعال کر دیتا ہے)                                                                                                                                                                                                                                            |
+| رنرز      | **6 listeners**              | 4 67router + OmniHeuris + OmniMind؛ `omniroute-113-3/-4/-7/-8` غیر فعال ہیں (`systemctl enable --now` ان میں سے کسی ایک کو دوبارہ فعال کر دیتا ہے)                                                                                                                                                                                                                                             |
 
 حدود ہر unit کی `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 میں موجود ہیں (پچھلی اقدار `override.conf.bak-20261018` کے طور پر محفوظ ہیں) اور انہیں براہ راست
@@ -53,7 +53,7 @@ ssh root@192.168.0.113 'chmod +x /opt/omniroute-ops/runner-janitor.sh; apt-get i
 
 ## رنر یونٹس: KillMode
 
-رنر کا ڈیفالٹ `KillMode=process` کسی یونٹ کو روکنے یا دوبارہ شروع کرنے پر `Runner.Worker → npm → next-build` کو چلتا چھوڑ دیتا ہے — ایک یتیم بلڈ بغیر کسی منسلک جاب کے RAM اور CPU استعمال کرتی رہتی ہے۔ ہر OmniRoute یونٹ میں ایک ڈراپ اِن (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) موجود ہے جس میں `KillMode=mixed` ہے: پہلے لسٹنر کو SIGTERM، پھر `TimeoutStop` پر پورے cgroup کو SIGKILL۔ یہ یونٹ کے اگلے ریاسٹارٹ پر مؤثر ہوتا ہے — **ایک وقت میں صرف ایک رنر، اور صرف اس وقت جب وہ غیر فعال ہو**، دوبارہ شروع کریں؛ غیر فعالیت کی جانچ اور ریاسٹارٹ ایک ہی کمانڈ میں کریں۔
+رنر کا ڈیفالٹ `KillMode=process` کسی یونٹ کو روکنے یا دوبارہ شروع کرنے پر `Runner.Worker → npm → next-build` کو چلتا چھوڑ دیتا ہے — ایک یتیم بلڈ بغیر کسی منسلک جاب کے RAM اور CPU استعمال کرتی رہتی ہے۔ ہر 67router یونٹ میں ایک ڈراپ اِن (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) موجود ہے جس میں `KillMode=mixed` ہے: پہلے لسٹنر کو SIGTERM، پھر `TimeoutStop` پر پورے cgroup کو SIGKILL۔ یہ یونٹ کے اگلے ریاسٹارٹ پر مؤثر ہوتا ہے — **ایک وقت میں صرف ایک رنر، اور صرف اس وقت جب وہ غیر فعال ہو**، دوبارہ شروع کریں؛ غیر فعالیت کی جانچ اور ریاسٹارٹ ایک ہی کمانڈ میں کریں۔
 
 ## عملیاتی اصول
 
@@ -92,7 +92,7 @@ ssh root@192.168.0.113 'chmod +x /opt/omniroute-ops/runner-janitor.sh; apt-get i
   صرف بیک اینڈ کا `next build` (~5–6 GB؛ webpack) اور `quality.yml` کا `lint-guard` درکار ہوتا ہے۔ `omniroute-113`
   پر 2026-10-18 تک `MemoryHigh=4G` تھا — promptfoo بلڈ وہاں 54 منٹ تک میموری واپس حاصل کرتے ہوئے کسی طرح آگے بڑھتا رہا؛
   8 GB تھروٹلنگ ختم کر دیتا ہے۔
-- **جان بوجھ کر کم listeners۔** 2026-08-29 کو OmniRoute کے چار یونٹس غیر فعال کیے گئے — ہر اضافی
+- **جان بوجھ کر کم listeners۔** 2026-08-29 کو 67router کے چار یونٹس غیر فعال کیے گئے — ہر اضافی
   listener اوپر دیے گئے میموری بجٹ کا ایک اور صارف ہے۔ janitor کی بالائی حد 6 ہے (cron میں `MAX_ACTIVE_RUNNERS=6`): یہ مشین پر
   ہر `Runner.Listener` کو شمار کرتا ہے، اور ہمارے چار کے علاوہ OmniHeuris + OmniMind مزید دو شامل کرتے ہیں۔
 - **جب کوئی بھی runner مصروف ہو تو `/tmp` یا `_work` کو کبھی ہاتھ سے صاف نہ کریں۔** جانچ اور حذف

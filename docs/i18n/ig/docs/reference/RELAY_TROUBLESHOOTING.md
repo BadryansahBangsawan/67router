@@ -5,9 +5,9 @@
 ---
 
 Relays (Vercel, Deno, Cloudflare) na-akwụsị njikọ upstream na backend
-serverless ka OmniRoute nwee ike isi na mpaghara kwụsiri ike zipụ okporoụzọ, ma na-edobe
+serverless ka 67router nwee ike isi na mpaghara kwụsiri ike zipụ okporoụzọ, ma na-edobe
 igodo API nke provider n'akụkụ sava. Akwụkwọ a na-akọwa ụdị ọdịda abụọ
-ndị ọrụ na-ahụ na production na ụzọ mgbake OmniRoute na-enye maka
+ndị ọrụ na-ahụ na production na ụzọ mgbake 67router na-enye maka
 nke ọ bụla.
 
 ## Otu esi echekwa relay auth
@@ -36,7 +36,7 @@ auth ọ bụla.
 1. Mepee **Ntọala → Proxy Pool**.
 2. Ahịrị relay ndị auth ha na-efu na-egosi baajị odo `auth na-efu` na
    bọtịnụ **Rụzie**.
-3. Pịa **Rụzie**. OmniRoute na-akpọ
+3. Pịa **Rụzie**. 67router na-akpọ
    `POST /api/settings/proxies/[id]/repair-relay`, nke na-eme ihe ndị a:
    - jiri igodo **dị ugbu a** kọpụ izo `relayAuthEnc`,
    - deghachi plaintext `relayAuth` n'ime `notes`,
@@ -68,7 +68,7 @@ a na-apụghị iweghachite token ahụ, ya mere ị gaghị achọgharị ya n'
 **Mgbaàmà:** nnwale proxy (bọtịnụ `speed`) na-egosi na relay ahụ dị ndụ, mana arịrịọ
 ka na-ada mgbe ụfọdụ.
 
-Lelee headers ngosipụta ọnọdụ relay nke probe auto-test OmniRoute weghachiri
+Lelee headers ngosipụta ọnọdụ relay nke probe auto-test 67router weghachiri
 (lee **Ntọala → Proxy Pool** na counters `relayTested` / `relayAlive`):
 
 - `x-relay-url` — backend relay nke zara.

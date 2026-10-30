@@ -25,7 +25,7 @@ Pirmoji eilutė, kurios pirmame stulpelyje yra pažodinis žodis `provider` (nea
 Atsisiųskite pradinį failą iš importavimo modalinio lango (**Atsisiųsti CSV šabloną**). Pavyzdys:
 
 ```csv
-# „OmniRoute“ teikėjų importavimas (poziciniai stulpeliai)
+# „67router“ teikėjų importavimas (poziciniai stulpeliai)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

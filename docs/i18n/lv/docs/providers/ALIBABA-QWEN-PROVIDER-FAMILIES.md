@@ -10,7 +10,7 @@ attēloti kā četras pakalpojumu sniedzēju saimes. Reģions ir savienojuma dat
 
 ## Lēmums
 
-| Pakalpojumu sniedzēja saime                      | OmniRoute ID            | Globālais reģions | Ķīnas reģions |
+| Pakalpojumu sniedzēja saime                      | 67router ID             | Globālais reģions | Ķīnas reģions |
 | ------------------------------------------------ | ----------------------- | ----------------- | ------------- |
 | Alibaba Cloud Model Studio (maksa par lietojumu) | `alibaba`               | Singapūra         | Pekina        |
 | Alibaba Cloud Token Plan                         | `bailian-coding-plan`   | Singapūra         | Pekina        |

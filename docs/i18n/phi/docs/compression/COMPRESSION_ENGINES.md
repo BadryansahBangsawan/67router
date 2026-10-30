@@ -4,7 +4,7 @@
 
 ---
 
-Ang compression ng OmniRoute ay binuo sa paligid ng mga kontrata ng engine. Maaaring direktang magpatakbo ang isang mode ng isang engine
+Ang compression ng 67router ay binuo sa paligid ng mga kontrata ng engine. Maaaring direktang magpatakbo ang isang mode ng isang engine
 (`caveman` o `rtk`) o ng isang deterministikong stacked pipeline na nagpapatakbo ng maraming engine nang sunod-sunod.
 
 ## Mga Mode
@@ -43,8 +43,8 @@ nakakakolekta ng kasaysayan ay humihinto sa `below_min_chars` at walang binabago
 kung bakit ang default ay `aggressive` sa halip na ang pinakaligtas na profile.
 
 Ang package ay nilulutas ang sarili nitong saklaw ng modelo at profile mula sa configuration ng kapaligiran nito.
-Hindi kailanman ipinagkakatiwala ng OmniRoute ang desisyon: ipinipilit ng adapter ang model gate sa pinakamahigpit na saklaw ng package,
-kaya ang mga setting ng host environment ay maaari lamang paliitin ang allowlist, hindi kailanman palawakin ito lampas sa mga sinukat na resibo ng OmniRoute.
+Hindi kailanman ipinagkakatiwala ng 67router ang desisyon: ipinipilit ng adapter ang model gate sa pinakamahigpit na saklaw ng package,
+kaya ang mga setting ng host environment ay maaari lamang paliitin ang allowlist, hindi kailanman palawakin ito lampas sa mga sinukat na resibo ng 67router.
 
 ## Registry ng Engine
 
@@ -106,7 +106,7 @@ Nakatuon ang Caveman mode sa semantikong pagkondensa ng karaniwang prosa:
 
 Ang dashboard surface ay `Dashboard -> Context & Cache -> Caveman`.
 
-Iniulat ng upstream ng Caveman ang `~75%` na mas kaunting output token, `65%` na average na pagtitipid sa output sa mga benchmark na may saklaw na `22-87%`, at isang tool na may `~46%` input compression. Ginagamit ng OmniRoute ang bilang ng input-side compression ng Caveman kapag idinodokumento ang pinagsama-samang pagtitipid sa prompt/context; nananatiling hiwalay na feature ng response behavior ang Caveman output mode.
+Iniulat ng upstream ng Caveman ang `~75%` na mas kaunting output token, `65%` na average na pagtitipid sa output sa mga benchmark na may saklaw na `22-87%`, at isang tool na may `~46%` input compression. Ginagamit ng 67router ang bilang ng input-side compression ng Caveman kapag idinodokumento ang pinagsama-samang pagtitipid sa prompt/context; nananatiling hiwalay na feature ng response behavior ang Caveman output mode.
 
 ## RTK
 

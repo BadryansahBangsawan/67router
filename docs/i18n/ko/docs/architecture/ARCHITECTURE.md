@@ -1,4 +1,4 @@
-# OmniRoute Architecture (한국어)
+# 67router Architecture (한국어)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _최종 업데이트: 2026-06-28_
 
 ## 개요
 
-OmniRoute는 Next.js를 기반으로 구축된 로컬 AI 라우팅 게이트웨이이자 대시보드입니다.
+67router는 Next.js를 기반으로 구축된 로컬 AI 라우팅 게이트웨이이자 대시보드입니다.
 단일 OpenAI 호환 엔드포인트(`/v1/*`)를 제공하며, 변환, 폴백, 토큰 갱신 및 사용량 추적 기능을 통해 여러 업스트림 공급자 간에 트래픽을 라우팅합니다.
 
 핵심 기능:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[브라우저 대시보드]
     end
 
-    subgraph Router[OmniRoute 로컬 프로세스]
+    subgraph Router[67router 로컬 프로세스]
         API[V1 호환성 API\n/v1/*]
         DASH[대시보드 + 관리 API\n/api/*]
         CORE[SSE + 변환 코어\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth 제공자 모듈(`src/lib/oauth/providers/` 아래의 개별 파일 27개)
 
 ## 5) 임베디드 서비스 (v3.8.4)
 
-OmniRoute는 **임베디드 서비스**라고 하는 로컬 실행 AI 도구 프로세스를 설치하고, 감독하며, 해당 프로세스로 라우팅할 수 있습니다. 9Router, CLIProxyAPI, Bifrost, Mux, Dario의 다섯 가지가 함께 제공됩니다.
+67router는 **임베디드 서비스**라고 하는 로컬 실행 AI 도구 프로세스를 설치하고, 감독하며, 해당 프로세스로 라우팅할 수 있습니다. 9Router, CLIProxyAPI, Bifrost, Mux, Dario의 다섯 가지가 함께 제공됩니다.
 
 아키텍처 계층:
 
@@ -426,7 +426,7 @@ logic을 직접 조합하지 않아도 되도록 합니다.
 - Quota cache: `src/domain/quotaCache.ts`
 - Degradation state: `src/domain/degradation.ts`
 - Configuration audit: `src/domain/configAudit.ts`
-- OmniRoute response metadata builder: `src/domain/omnirouteResponseMeta.ts`
+- 67router response metadata builder: `src/domain/omnirouteResponseMeta.ts`
 - Assessment subsystem: `src/domain/assessment/` — 주기적인 평가 job
 
 ### E. Authorization Pipeline
@@ -792,7 +792,7 @@ flowchart LR
         Browser[대시보드 브라우저]
     end
 
-    subgraph ContainerOrProcess[OmniRoute 런타임]
+    subgraph ContainerOrProcess[67router 런타임]
         Next[Next.js 서버\nPORT=20128]
         Core[SSE 코어 + 실행기]
         MainDB[(storage.sqlite)]
@@ -910,7 +910,7 @@ flowchart LR
 
 ## 공급자 호환성 매트릭스
 
-> **참고:** 아래 매트릭스는 OmniRoute v3.8.0에 등록된 351개 공급자 중 대표적인 일부입니다.
+> **참고:** 아래 매트릭스는 67router v3.8.0에 등록된 351개 공급자 중 대표적인 일부입니다.
 > 표준 목록 및 지속적으로 업데이트되는 목록은 [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md)(자동 생성)를 참조하거나,
 > 로드 시 Zod로 검증되는 기준 소스인 `src/shared/constants/providers.ts`를 참조하세요.
 
@@ -1091,7 +1091,7 @@ flowchart LR
 - 클라이언트에서 수신한 원시 요청
 - 실제로 업스트림에 전송된 변환된 요청
 - JSON으로 재구성된 제공자 응답. 스트리밍 응답은 최종 요약과 스트림 메타데이터로 압축됨
-- OmniRoute가 반환한 최종 클라이언트 응답. 스트리밍 응답은 동일한 압축 요약 형식으로 저장됨
+- 67router가 반환한 최종 클라이언트 응답. 스트리밍 응답은 동일한 압축 요약 형식으로 저장됨
 
 ## 보안에 민감한 경계
 

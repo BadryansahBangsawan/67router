@@ -1,10 +1,10 @@
 ---
-title: "OmniRoute CLI Plugin System"
+title: "67router CLI Plugin System"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# OmniRoute CLI Plugin System
+# 67router CLI Plugin System
 
 Extend the `omniroute` CLI without modifying its core. Plugins follow the `omniroute-cmd-*` naming convention, similar to `gh extension` or `kubectl plugin`.
 
@@ -56,7 +56,7 @@ omniroute-cmd-myplugin/
 export const meta = {
   name: "myplugin",
   version: "0.1.0",
-  description: "My plugin for OmniRoute",
+  description: "My plugin for 67router",
   omnirouteApi: ">=4.0.0",
 };
 
@@ -83,7 +83,7 @@ The `ctx` object passed to `register(program, ctx)`:
 
 | Property                     | Type             | Description                                        |
 | ---------------------------- | ---------------- | -------------------------------------------------- |
-| `ctx.apiFetch(path, opts)`   | `async function` | Authenticated fetch to the OmniRoute server        |
+| `ctx.apiFetch(path, opts)`   | `async function` | Authenticated fetch to the 67router server         |
 | `ctx.emit(data, opts)`       | `function`       | Output in table/json/jsonl/csv per `--output` flag |
 | `ctx.t(key)`                 | `async function` | i18n translation lookup                            |
 | `ctx.withSpinner(label, fn)` | `async function` | Wraps async fn with ora spinner                    |

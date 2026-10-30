@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute má **čtyři skupiny přihlašovacích údajů**, které mohou autorizovat přístup k trasám správy.
+67router má **čtyři skupiny přihlašovacích údajů**, které mohou autorizovat přístup k trasám správy.
 Nejsou vzájemně zaměnitelné. Klíče inferenčního API (`sk-…`) **nespravují**
 server, pokud jim nebyl výslovně udělen rozsah `manage` nebo `admin`.
 

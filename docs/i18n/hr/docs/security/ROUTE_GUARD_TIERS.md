@@ -6,7 +6,7 @@
 
 ## Pregled
 
-Sve rute upravljačkog API-ja OmniRoute klasificirane su u jednu od triju razina
+Sve rute upravljačkog API-ja 67router klasificirane su u jednu od triju razina
 zaštite. Klasifikacija je statična, definirana u `src/server/authz/routeGuard.ts`
 i provjerava se prije izvršavanja bilo koje druge grane autentifikacije.
 
@@ -28,10 +28,10 @@ procesa — poznata klasa CVE ranjivosti
 **Što je GHSA-fhh6-4qxv-rpqj (klasa napada):** poslužitelj za upravljanje/agente
 izlaže krajnju točku koja pokreće podproces (`npm install`, `node`, preglednik,
 proxy, `git`, `tar`, …). Ako je ta krajnja točka dostupna izvan lokalnog računala —
-jer je operater postavio OmniRoute iza nginx/Cloudflare/Tailscale tunela, a JWT
+jer je operater postavio 67router iza nginx/Cloudflare/Tailscale tunela, a JWT
 je procurio, ili je autentifikacija bila pogrešno konfigurirana — napadač pretvara
 „pozivanje API-ja” u „izvršavanje naredbe na računalu” (daljinsko izvršavanje kôda).
-OmniRoute to sprječava **bezuvjetnom provjerom je li host povratne petlje, prije
+67router to sprječava **bezuvjetnom provjerom je li host povratne petlje, prije
 bilo kakve provjere autentifikacije**, na svakoj ruti koja može pokretati procese:
 token koji je procurio putem tunela i dalje ne može pristupiti pokretanju procesa.
 
@@ -122,7 +122,7 @@ trebao biti potreban širok upravljački pristup.
 
 #### Smjernice za operatere i revizija
 
-Ako OmniRoute upotrebljavate iza obrnutog proxyja ili tunela (nginx, Caddy,
+Ako 67router upotrebljavate iza obrnutog proxyja ili tunela (nginx, Caddy,
 Cloudflare Tunnel, Tailscale, Ngrok), provjera povratne petlje i dalje štiti
 prethodno navedene rute koje mogu pokretati procese — zahtjev čija adresa
 klijenta nije adresa povratne petlje odbija se odgovorom `403 LOCAL_ONLY`
@@ -161,7 +161,7 @@ pokrenuti proces. Operateri i dalje imaju dvije odgovornosti:
 - Pretražite zapisnike obrnutog proxyja / pristupa za prethodno navedene prefikse u kombinaciji s
   adresom klijenta koja nije adresa povratne petlje. Svaki takav pogodak koji je vratio `200` umjesto
   `403 LOCAL_ONLY` znači da proxy prikriva stvarnu IP adresu klijenta — ispravite proxy.
-- Zapis `403 LOCAL_ONLY` u zapisnicima OmniRoutea za jednu od tih putanja znači da zaštita
+- Zapis `403 LOCAL_ONLY` u zapisnicima 67routera za jednu od tih putanja znači da zaštita
   radi kako je predviđeno, a ne da je riječ o pogrešci koju treba potisnuti.
 
 #### Udaljeno dostupne rute s provjerom pozivnog mjesta prije ispitivanja

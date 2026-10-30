@@ -8,11 +8,11 @@
 > **Emelitere ikpeazụ:** 2026-09-02 — v3.8.51
 > **Ndị e bu n’uche:** Ndị injinia na-elekọta njikọta nzuzo pụrụ iche maka ndị na-eweta ọrụ.
 
-OmniRoute na-ejikọta na ndị na-eweta ọrụ nke sistemụ nsọtụ ha na-achọpụta njirimara nke ndị ahịa na-abụghị nke gọọmenti kwadoro (TLS JA3/JA4, usoro nhazi nkụnye ndị isi, ọdịdị ahụ JSON, token iguzosi ike n’ezi ihe). Ibe a na-akọwa akụkụ nzuzo ndị OmniRoute na-enye na ebe e mejuputara ha.
+67router na-ejikọta na ndị na-eweta ọrụ nke sistemụ nsọtụ ha na-achọpụta njirimara nke ndị ahịa na-abụghị nke gọọmenti kwadoro (TLS JA3/JA4, usoro nhazi nkụnye ndị isi, ọdịdị ahụ JSON, token iguzosi ike n’ezi ihe). Ibe a na-akọwa akụkụ nzuzo ndị 67router na-enye na ebe e mejuputara ha.
 
 ## Ọkwa Iwu na Ụkpụrụ Omume
 
-Njirimara nzuzo dị ka OmniRoute wee nwee ike ịrụ ọrụ dịka oyi akwa ndakọrịta n’etiti akaụntụ gọọmenti kwadoro nke onye ọrụ nwe (Claude Code CLI, Codex, Antigravity, Cursor, wdg.) na API jikọtara ọnụ nke OmniRoute. Ha abụghị **maka** izere nchọpụta aghụghọ, ikekọrịta nzere, ma ọ bụ imebi Usoro Ọrụ nke onye na-eweta ọrụ. Ndị na-elekọta ya na-atụ anya ka ndị ọrụ sistemụ rube isi na ToS nke ọrụ dị n’elu ha kwenyere mgbe ha na-emepụta akaụntụ.
+Njirimara nzuzo dị ka 67router wee nwee ike ịrụ ọrụ dịka oyi akwa ndakọrịta n’etiti akaụntụ gọọmenti kwadoro nke onye ọrụ nwe (Claude Code CLI, Codex, Antigravity, Cursor, wdg.) na API jikọtara ọnụ nke 67router. Ha abụghị **maka** izere nchọpụta aghụghọ, ikekọrịta nzere, ma ọ bụ imebi Usoro Ọrụ nke onye na-eweta ọrụ. Ndị na-elekọta ya na-atụ anya ka ndị ọrụ sistemụ rube isi na ToS nke ọrụ dị n’elu ha kwenyere mgbe ha na-emepụta akaụntụ.
 
 ---
 
@@ -79,7 +79,7 @@ tupu ikwu na ọ dakọtara na ihe nchọgharị nke ọrụ dị n’elu.
 
 ## Ngwugwu Nzuzo Claude Code
 
-Mgbe `cliCompatMode` dị ọkụ, OmniRoute na-agbanwe nhazi arịrịọ Claude ndị na-apụ apụ ka a ghara inwe ike ịmata ọdịiche dị n’etiti ha na okporoụzọ data `claude-cli`. Modulu atọ na-arụkọ ọrụ:
+Mgbe `cliCompatMode` dị ọkụ, 67router na-agbanwe nhazi arịrịọ Claude ndị na-apụ apụ ka a ghara inwe ike ịmata ọdịiche dị n’etiti ha na okporoụzọ data `claude-cli`. Modulu atọ na-arụkọ ọrụ:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -95,7 +95,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Hash Ọdịnaya Klayenti)
 
-Nnyocha iguzosi ike n’ezi ihe n’akụkụ sava nke Claude Code CLI gọọmentị na-agbakọ site na Bun/Zig. OmniRoute na-eji `xxhash-wasm` megharịa ya:
+Nnyocha iguzosi ike n’ezi ihe n’akụkụ sava nke Claude Code CLI gọọmentị na-agbakọ site na Bun/Zig. 67router na-eji `xxhash-wasm` megharịa ya:
 
 1. Hazie body ka ọ bụrụ usoro data site na iji njide ọnọdụ `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -141,7 +141,7 @@ Modulu ibe ya dị n’otu ngwugwu ahụ:
 
 ## Nzuzo Antigravity
 
-Arịrịọ Antigravity na-echekwa ederede onye kpọrọ ya byte-for-byte. OmniRoute anaghị etinye mkpụrụedemede zero-width n’ime prompts ma ọ bụ gbanwee aha/tinye ngwaọrụ iji ṅomie klayenti IDE.
+Arịrịọ Antigravity na-echekwa ederede onye kpọrọ ya byte-for-byte. 67router anaghị etinye mkpụrụedemede zero-width n’ime prompts ma ọ bụ gbanwee aha/tinye ngwaọrụ iji ṅomie klayenti IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -151,13 +151,13 @@ Na-ewepụ akara Stainless SDK (`x-stainless-lang`, `x-stainless-package-version
 
 `ANTIGRAVITY_CREDITS=always` (nke `open-sse/executors/antigravity.ts` na-eji) na-ebufe arịrịọ **niile** site na Antigravity AI Credit Overages (kredịtị Google a na-akwụ ụgwọ) kama ikwe ka oke free-tier nke Google gbochie ihe. Edekọrọ nke a dịka atụmatụ, mana ọ bụ **otu akụkọ mmebi ToS kacha emekarị anyị na-ahụ** — amachibidola ọtụtụ akaụntụ Google Ultra site na `403 / "service disabled for ToS violation" / insufficient_quota` mgbe ha jiri `=always` rụọ ọrụ ruo awa ole na ole.
 
-Mmanye upstream dị **n’akụkụ Google**, ọ bụghị ihe OmniRoute nwere ike igbochi. Aha env var na dọkụmentị ndị dị ugbu a na-eme ka ọ dị ka ntọala dị nchebe ịgbanwe; ọ bụghị.
+Mmanye upstream dị **n’akụkụ Google**, ọ bụghị ihe 67router nwere ike igbochi. Aha env var na dọkụmentị ndị dị ugbu a na-eme ka ọ dị ka ntọala dị nchebe ịgbanwe; ọ bụghị.
 
 **Ihe mere nke a ji akpalite nchọpụta mmegbu karịa ojiji free-tier naanị:**
 
 - Mmefu akpaaka na-aga n’ihu n’otu akaụntụ Google na-ebute akara dị iche karịa free-tier nke ruru oke wee kwụsị.
 - Overage kredịtị enweghị oke ọsọ, ya mere klayenti ahaziri n’ụzọ na-ezighị ezi nwere ike imefu ọtụtụ narị USD n’ime nkeji ole na ole ma yie ireghachi API-key ma ọ bụ okporoụzọ data bot.
-- Mgbe ọtụtụ ndị ọrụ OmniRoute na-eji overage kredịtị n’otu oge site n’otu IP mpụga ahụ, ọ na-eme ka akara ahụ sie ike.
+- Mgbe ọtụtụ ndị ọrụ 67router na-eji overage kredịtị n’otu oge site n’otu IP mpụga ahụ, ọ na-eme ka akara ahụ sie ike.
 
 **Ọnọdụ a tụrụ aro:**
 
@@ -196,7 +196,7 @@ Jiri env gbanye ma ọ bụ gbanyụọ ya maka provider ọ bụla (lee n'okpur
 
 ## Proxy MITM (Antigravity, Linux/macOS/Windows)
 
-Maka CLI ndị enweghị ike iji `OPENAI_BASE_URL` tụgharịa binary ha, OmniRoute na-agba proxy mpaghara nke na-akwụsị TLS. Endpoint ndị ahụ dị n'okpuru `src/app/api/cli-tools/antigravity-mitm/`.
+Maka CLI ndị enweghị ike iji `OPENAI_BASE_URL` tụgharịa binary ha, 67router na-agba proxy mpaghara nke na-akwụsị TLS. Endpoint ndị ahụ dị n'okpuru `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Usoro  | Endpoint                                | Ebumnuche                                         |
 | ------ | --------------------------------------- | ------------------------------------------------- |
@@ -275,7 +275,7 @@ A na-echekwa IP nke onye na-eweta ọrụ **mgbe niile** — ihe mgbanwe ahụ n
 
 ## Nhichapụ Header Na-abata
 
-OmniRoute na-ehichapụ header ndị ahịa na-abata tupu o zipụ ha n'ihu ka arịrịọ sitere na Cursor ghara ikpughe `User-Agent: Cursor/X.Y.Z` nye Claude upstream. Lee `src/shared/constants/upstreamHeaders.ts` maka denylist, nke a na-edobe ka ọ na-aga n'otu usoro na schema Zod na ule unit.
+67router na-ehichapụ header ndị ahịa na-abata tupu o zipụ ha n'ihu ka arịrịọ sitere na Cursor ghara ikpughe `User-Agent: Cursor/X.Y.Z` nye Claude upstream. Lee `src/shared/constants/upstreamHeaders.ts` maka denylist, nke a na-edobe ka ọ na-aga n'otu usoro na schema Zod na ule unit.
 
 ---
 

@@ -15,7 +15,7 @@ A kvótamegosztó motor méltányosan osztja el egy szolgáltató időalapú kv�
 (pl. a Codex 5 órás időablakát vagy a Kimi 1500 kérés/óra korlátját) az azonos
 kapcsolatot használó több API-kulcs között.
 
-**A megoldott probléma:** Az OmniRoute számos API-kulcs kéréseit továbbítja
+**A megoldott probléma:** A 67router számos API-kulcs kéréseit továbbítja
 ugyanahhoz a felsőbb szintű szolgáltatói fiókhoz. Megosztási logika nélkül az A
 kulcstól érkező hirtelen terhelés kimerítheti a szolgáltató adott órára vonatkozó
 kvótáját, így a B és C kulcsok az időablak visszaállásáig blokkolva maradnak.
@@ -123,7 +123,7 @@ Redis-illesztőprogram: Lua EVAL-szkript az atomi növeléshez — egyetlen Redi
 
 - Tábla: `quota_consumption` (lásd a `073_quota_pools.sql` / `074_quota_consumption.sql` migrációt).
 - Egyetlen példányból álló telepítésekhez a legjobb.
-- Minden tartós adat a meglévő OmniRoute SQLite-adatbázisban található (`DATA_DIR/storage.sqlite`).
+- Minden tartós adat a meglévő 67router SQLite-adatbázisban található (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opcionális, több példányhoz)
 

@@ -32,7 +32,7 @@ Havuzdaki her aday için (`open-sse/services/autoCombo/virtualFactory.ts::buildP
 `filterPaidOnlyCandidates` çağrısının hemen ardından):
 
 1. **`FREE_MODEL_BUDGETS` içinde hiç yer almıyorsa** → hariç tutulur. Bu, gerçekten ücretli modelleri
-   ve OmniRoute'un henüz sınıflandırmadığı tüm sağlayıcı/modelleri kapsar — yeni adaylar dahil edilerek
+   ve 67router'un henüz sınıflandırmadığı tüm sağlayıcı/modelleri kapsar — yeni adaylar dahil edilerek
    değil, hariç tutularak başlar.
 2. **`freeType: "keyless"`** → hemen geçer, **ancak yalnızca gerçekten kimlik doğrulamasız yoldan
    gelen bir aday için** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -91,7 +91,7 @@ aynı aday üzerindeki farklı, doğrulanmamış bir hesap hiçbir zaman kullan�
 (anahtarsız atlama durumları A/B/C, çok hesaplı durumlar 1-5).
 
 `discovered automatically`: yarın doğru meta verilerle kullanıma sunulan bir sağlayıcı/model (katalogda bulunan,
-bir kullanım bağdaştırıcısına sahip olan ve `hardStopGuaranteed: true` değerini taşıyan), OmniRoute tarafından
+bir kullanım bağdaştırıcısına sahip olan ve `hardStopGuaranteed: true` değerini taşıyan), 67router tarafından
 bilindiği anda kullanılabilir hâle gelir — kod değişikliği, izin listesi girdisi veya bu modülde düzenlenecek herhangi bir şey gerekmez. Katalogdan
 kaldırılan bir sağlayıcı/model de aynı şekilde ortadan kalkar. Regresyon kanıtı için
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` dosyasına bakın (gerçek katalog değiştirilmeden,

@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY caurspīdīgā atšifrēšana ir OmniRoute **5. pārtveršanas režīms**
+TPROXY caurspīdīgā atšifrēšana ir 67router **5. pārtveršanas režīms**
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM stekam. Tas pārtver un **atšifrē** lokālo izejošo HTTPS datplūsmu operētājsistēmā Linux,
 izmantojot kodola TPROXY un politiku maršrutēšanu — **bez** `/etc/hosts` viltošanas un
@@ -53,7 +53,7 @@ Izmantojiet to, ja vēlaties tvert un atšifrēt datplūsmu no procesa, kas:
 - kuru nevēlaties traucēt ar sistēmas mēroga starpniekservera izmaiņām.
 
 Tā kā pārtveršana notiek kodolā, izcelsmes procesam **nav nepieciešamas nekādas
-konfigurācijas izmaiņas** — tomēr procesam ir jāuzticas dinamiskajai CA, ko instalē OmniRoute
+konfigurācijas izmaiņas** — tomēr procesam ir jāuzticas dinamiskajai CA, ko instalē 67router
 (skatiet [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ papildinājums nav uzbūvēts), papildinājuma ielādētājs (`src/mitm/tproxy/t
 atgriež `null`, nevis izmet kļūdu. Tādā gadījumā uztveršanas režīma statuss ziņo
 `available: false`, vadības paneļa pārslēgs ir **atspējots** ar rīka padomu
 "TPROXY atšifrēšanai nepieciešams Linux + root + native addon", un pārējā
-OmniRoute daļa turpina darboties.
+67router daļa turpina darboties.
 
 ---
 
@@ -258,7 +258,7 @@ Pārsūtīšanas ceļš pret to aizsargājas ar apiešanas ligzdas atzīmi (**SO
 | **Kļūdu sanitizēšana**                        | Maršruta kļūdu atbildes tiek apstrādātas ar `sanitizeErrorMessage()` (stingrais noteikums Nr. 12).                                                                                                                                                                                                                                                                                                                             |
 
 **MITM CA nodrošina plašas iespējas.** Operētājsistēmas uzticēts CA, kas var parakstīt jebkuru
-resursdatoru, nozīmē, ka visu OmniRoute pārtverto saturu var atšifrēt. Tas ir pieejams tikai
+resursdatoru, nozīmē, ka visu 67router pārtverto saturu var atšifrēt. Tas ir pieejams tikai
 skaidri aktivizētā, lokālā TPROXY tveršanas režīmā, pēc noklusējuma ir izslēgts, un uzticamības krātuves
 ieraksts tiek noņemts, kad režīms tiek apturēts.
 
@@ -370,7 +370,7 @@ Vietējo papildinājumu nevar ielādēt. Pārliecinieties, ka izmantojat Linux, 
 ### Pēc avārijas palikušas novecojušas ugunsmūra kārtulas
 
 `revertTproxy()` ir precīza piemērošanas darbības inversija un ir idempotenta. Apturot
-režīmu, kārtulas tiek atsauktas; ja OmniRoute tika piespiedu kārtā apturēts sesijas laikā, izmantojiet AgentBridge
+režīmu, kārtulas tiek atsauktas; ja 67router tika piespiedu kārtā apturēts sesijas laikā, izmantojiet AgentBridge
 darbību **Repair** (`POST /api/tools/agent-bridge/repair`), lai atsauktu pamesto sistēmas
 stāvokli (DNS viltošanu, saknes CA, sistēmas starpniekserveri). TPROXY `mangle` kārtulas un maršruts arī
 tiek automātiski notīrīti pēc pārstartēšanas.

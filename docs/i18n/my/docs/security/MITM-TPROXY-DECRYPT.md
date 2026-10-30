@@ -5,7 +5,7 @@
 ---
 
 TPROXY transparent decrypt သည် [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
-MITM stack အတွက် OmniRoute ၏ **5 ခုမြောက် capture mode** ဖြစ်သည်။ ၎င်းသည် Linux ပေါ်ရှိ
+MITM stack အတွက် 67router ၏ **5 ခုမြောက် capture mode** ဖြစ်သည်။ ၎င်းသည် Linux ပေါ်ရှိ
 local outbound HTTPS traffic ကို kernel TPROXY + policy routing အသုံးပြု၍ ကြားဖြတ်ဖမ်းယူပြီး
 **decrypt** လုပ်သည် — `/etc/hosts` ကို spoof လုပ်ရန် **မလိုအပ်သလို**
 OS တစ်ခုလုံးနှင့်သက်ဆိုင်သည့် system-proxy settings များကို ပြောင်းလဲရန်လည်း **မလိုအပ်ပါ**။
@@ -55,7 +55,7 @@ mark လုပ်ပြီး၊ `ip rule` တစ်ခုက mark လုပ်�
 - system-wide proxy ပြောင်းလဲမှုဖြင့် မနှောင့်ယှက်လိုသည့်အခါ။
 
 ကြားဖြတ်ဖမ်းယူမှုသည် kernel အတွင်းတွင် ဖြစ်ပေါ်သောကြောင့် မူလ process တွင် **configuration
-ပြောင်းလဲရန်မလိုအပ်ပါ** — သို့သော် ထို process သည် OmniRoute က install လုပ်ထားသော dynamic CA ကို
+ပြောင်းလဲရန်မလိုအပ်ပါ** — သို့သော် ထို process သည် 67router က install လုပ်ထားသော dynamic CA ကို
 ယုံကြည်ရမည် ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer) ကို ကြည့်ပါ)။
 
 ---
@@ -74,7 +74,7 @@ addon ကို build မလုပ်ထားခြင်း) addon loader (`sr
 သည် exception ပစ်မည့်အစား `null` ကို ပြန်ပေးသည်။ ထို့နောက် capture-mode status တွင်
 `available: false` ဟု ဖော်ပြပြီး dashboard toggle ကို
 "TPROXY decrypt အတွက် Linux + root + native addon လိုအပ်သည်" ဟူသော tooltip ဖြင့် **ပိတ်ထားမည်**ဖြစ်ကာ
-OmniRoute ၏ ကျန်အစိတ်အပိုင်းများသည် ဆက်လက်အလုပ်လုပ်နေမည်ဖြစ်သည်။
+67router ၏ ကျန်အစိတ်အပိုင်းများသည် ဆက်လက်အလုပ်လုပ်နေမည်ဖြစ်သည်။
 
 ---
 
@@ -251,7 +251,7 @@ Rule များသည် စက်တွင်းမှ အသစ်ထွက�
 | **Error သန့်စင်ခြင်း**                       | Route ၏ error responses များကို `sanitizeErrorMessage()` မှတစ်ဆင့် ဆောင်ရွက်သည် (Hard Rule #12)။                                                                                                                                                                                                                                                                                                                                                      |
 
 **MITM CA သည် အလွန်အစွမ်းထက်သော လုပ်ဆောင်နိုင်စွမ်းတစ်ခုဖြစ်သည်။** မည်သည့်
-host အတွက်မဆို လက်မှတ်ရေးထိုးနိုင်ပြီး OS က ယုံကြည်ထားသော CA တစ်ခုရှိခြင်းကြောင့် OmniRoute က ကြားဖြတ်ဖမ်းယူသမျှကို
+host အတွက်မဆို လက်မှတ်ရေးထိုးနိုင်ပြီး OS က ယုံကြည်ထားသော CA တစ်ခုရှိခြင်းကြောင့် 67router က ကြားဖြတ်ဖမ်းယူသမျှကို
 စာဝှက်ဖြည်နိုင်သည်။ ၎င်းကို အတိအလင်းဖွင့်ရပြီး local-only ဖြစ်သော TPROXY capture mode နောက်ကွယ်တွင်
 ကန့်သတ်ထားသည်၊ ပုံသေအားဖြင့် ပိတ်ထားပြီး mode ကို ရပ်လိုက်သည့်အခါ trust-store
 entry ကို ဖယ်ရှားသည်။
@@ -363,7 +363,7 @@ load လုပ်နိုင်ခြင်း။ `isTransparentSocketAvailable
 ### Crash ဖြစ်ပြီးနောက် ကျန်ရှိနေသော firewall စည်းမျဉ်းများ
 
 `revertTproxy()` သည် apply လုပ်ဆောင်ချက်၏ အတိအကျ ဆန့်ကျင်ဘက်ဖြစ်ပြီး idempotent ဖြစ်သည်။ mode ကို
-ရပ်တန့်ခြင်းဖြင့် စည်းမျဉ်းများကို ပြန်လည်ဖယ်ရှားသည်။ session အလယ်တွင် OmniRoute ကို အဆုံးသတ်ခံခဲ့ရပါက
+ရပ်တန့်ခြင်းဖြင့် စည်းမျဉ်းများကို ပြန်လည်ဖယ်ရှားသည်။ session အလယ်တွင် 67router ကို အဆုံးသတ်ခံခဲ့ရပါက
 မိဘမဲ့ system state (DNS spoof၊ root CA၊ system proxy) ကို ပြန်လည်ဖယ်ရှားရန် AgentBridge
 **Repair** လုပ်ဆောင်ချက် (`POST /api/tools/agent-bridge/repair`) ကို အသုံးပြုပါ။ TPROXY `mangle`
 စည်းမျဉ်းများနှင့် route သည် reboot လုပ်သည့်အခါလည်း အလိုအလျောက် ရှင်းလင်းသွားသည်။

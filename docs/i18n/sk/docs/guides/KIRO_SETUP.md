@@ -4,7 +4,7 @@
 
 ---
 
-Táto príručka opisuje pridávanie účtov Kiro (AI asistenta na programovanie hostovaného v AWS) do OmniRoute
+Táto príručka opisuje pridávanie účtov Kiro (AI asistenta na programovanie hostovaného v AWS) do 67router
 so zameraním na súbežné používanie viacerých účtov bez konfliktov relácií.
 
 ---
@@ -22,10 +22,10 @@ tokenu prvého účtu.
 
 ---
 
-## Ako to rieši OmniRoute (v3.8.0+)
+## Ako to rieši 67router (v3.8.0+)
 
-Od verzie v3.8.0 volá OmniRoute počas každého importu pripojenia Kiro funkciu
-`registerClient()` (AWS SSO OIDC). Vďaka tomu získa každé pripojenie OmniRoute vlastnú
+Od verzie v3.8.0 volá 67router počas každého importu pripojenia Kiro funkciu
+`registerClient()` (AWS SSO OIDC). Vďaka tomu získa každé pripojenie 67router vlastnú
 vyhradenú registráciu klienta OIDC. Keďže každá registrácia klienta je nezávislá, obnovenie
 alebo opätovná autentifikácia jedného účtu neovplyvní obnovovací token žiadneho iného účtu.
 
@@ -59,7 +59,7 @@ pripojenia automaticky získajú vlastnú registráciu klienta.
 
 ### Predpoklady
 
-- OmniRoute v3.8.0 alebo novšia verzia.
+- 67router v3.8.0 alebo novšia verzia.
 - Funkčný účet Kiro (e-mail + heslo alebo prihlásenie cez Google či GitHub).
 - Voliteľne druhý účet Kiro.
 
@@ -70,7 +70,7 @@ pripojenia automaticky získajú vlastnú registráciu klienta.
    - **Importovať token** — vložte obnovovací token začínajúci reťazcom `aorAAAAAG`.
    - **Kľúč API** — vložte dlhodobý kľúč API Kiro / CodeWhisperer.
    - **Prihlásenie cez Google / GitHub** — dokončite tok OAuth v prehliadači.
-   - **Automatický import** — kliknite na tlačidlo; OmniRoute načíta prihlasovacie údaje
+   - **Automatický import** — kliknite na tlačidlo; 67router načíta prihlasovacie údaje
      z lokálnej databázy kiro-cli alebo z `~/.aws/sso/cache`.
 3. Pripojenie sa uloží. Toky s obnovovacím tokenom automaticky zaregistrujú vyhradeného
    klienta OIDC. Toky s kľúčom API overia kľúč pomocou AWS a neuložia obnovovací token.
@@ -128,7 +128,7 @@ obnovovanie OAuth, takže sa vyhýba zneplatneniu zdieľanej relácie OIDC.
 2. Vyberte **Kľúč API**.
 3. Vložte kľúč API a vyberte región AWS: **Automaticky rozpoznať** (predvolené), **Východ USA
    (S. Virgínia)** alebo **Európa (Frankfurt)**.
-4. OmniRoute overí kľúč a uloží pripojenie pripnuté k regiónu, v ktorom
+4. 67router overí kľúč a uloží pripojenie pripnuté k regiónu, v ktorom
    kľúč funguje.
 
 ### API
@@ -178,7 +178,7 @@ na `https://q.<region>.amazonaws.com/generateAssistantResponse` — vrátane `us
 ## Vypršanie platnosti klienta OIDC
 
 Platnosť verejných klientov AWS SSO OIDC zvyčajne vyprší po 90 dňoch
-(`clientSecretExpiresAt`). OmniRoute ukladá túto časovú pečiatku v `providerSpecificData`
+(`clientSecretExpiresAt`). 67router ukladá túto časovú pečiatku v `providerSpecificData`
 na účely pozorovateľnosti. Ak sa pripojenie po približne 90 dňoch prestane obnovovať, opätovne
 ho importujte, aby ste získali novú registráciu klienta OIDC. Automatická opätovná registrácia po
 vypršaní platnosti je evidovaná ako budúce vylepšenie.
@@ -199,7 +199,7 @@ prostredníctvom AWS SSO OIDC.
 ### Import zlyhá s hlásením „Token validation failed“
 
 - Uistite sa, že obnovovací token začína na `aorAAAAAG`.
-- Uistite sa, že OmniRoute môže pristupovať k `https://oidc.us-east-1.amazonaws.com` (alebo k nakonfigurovanému
+- Uistite sa, že 67router môže pristupovať k `https://oidc.us-east-1.amazonaws.com` (alebo k nakonfigurovanému
   regiónu). Ak používate podnikový proxy server, nastavte proxy na úrovni poskytovateľa v
   **Dashboard → Settings → Proxies**.
 
@@ -207,7 +207,7 @@ prostredníctvom AWS SSO OIDC.
 
 - Overte, že kľúč je API kľúč Kiro / CodeWhisperer, nie obnovovací token.
 - Overte, že región AWS zodpovedá kľúču/účtu. Predvolená hodnota je `us-east-1`.
-- Kľúč musí umožňovať volanie `ListAvailableProfiles`; inak OmniRoute nedokáže
+- Kľúč musí umožňovať volanie `ListAvailableProfiles`; inak 67router nedokáže
   získať požadovaný `profileArn`.
 
 Ďalšie problémy nájdete v hlavnom súbore [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

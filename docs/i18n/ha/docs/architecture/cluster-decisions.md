@@ -14,7 +14,7 @@ Compose profiles guda biyu na zaɓi (`memory`, `bifrost`) don tsarin turawa na a
 
 ## Dalilin da ya sa wannan yake taka-tsantsan
 
-Tsarin turawa na OmniRoute da ake da shi ya riga ya kasance mai sauƙi kuma tabbatacce:
+Tsarin turawa na 67router da ake da shi ya riga ya kasance mai sauƙi kuma tabbatacce:
 
 - **`redis:7-alpine`** yana sarrafa aikin iyakance ƙimar buƙatu/cache a ma'aunin production.
 - **SQLite + sqlite-vec + FTS5** suna kula da local memory + vector + binciken rubutu (duba [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Profiles guda biyun nan **zaɓuɓɓukan faɗaɗa ma'auni ne ga tsarin turawa da 
 
 - Kuna gudanar da replicas ≥3 na `omniroute` kuma kuna son a tattara juyawar providers a cikin Go process guda ɗaya.
 - Kuna son wuri guda na audit/logging don buƙatun upstream-provider a duk replicas.
-- Kuna son horizontal scaling na Tier-1 routing layer ba tare da dogaro da OmniRoute replicas ba.
+- Kuna son horizontal scaling na Tier-1 routing layer ba tare da dogaro da 67router replicas ba.
 
 **Abin da yake ƙarawa:**
 

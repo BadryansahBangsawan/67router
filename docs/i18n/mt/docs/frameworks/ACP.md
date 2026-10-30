@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute jissepara **l-iskoperta tas-CLI**, il-**protokoll nattiv Agent Client Protocol**, u
+67router jissepara **l-iskoperta tas-CLI**, il-**protokoll nattiv Agent Client Protocol**, u
 l-**adapters stdio tradizzjonali**. Is-sejba ta' binarju installat ma tipprovax
 l-awtentikazzjoni tiegħu, il-kompatibbiltà tal-mudell, jew kemm hu lest biex jipproċessa prompt.
 

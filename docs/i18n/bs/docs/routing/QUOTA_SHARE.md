@@ -15,7 +15,7 @@
 
 Mehanizam za dijeljenje kvota (Quota Sharing Engine) distribuira vremenski ograničenu kvotu provajdera (npr. Codex 5-satni prozor, Kimi 1500 zahtjeva/h) ravnomjerno između više API ključeva koji dijele istu konekciju.
 
-**Problem koji rješava:** OmniRoute proksira mnoge API ključeve prema istom upstream nalogu provajdera. Bez logike dijeljenja, nagli porast (burst) sa ključa A može iscrpiti kvotu provajdera za taj sat, ostavljajući ključeve B i C blokiranim dok se prozor ne resetuje. Mehanizam ovo sprječava tako što:
+**Problem koji rješava:** 67router proksira mnoge API ključeve prema istom upstream nalogu provajdera. Bez logike dijeljenja, nagli porast (burst) sa ključa A može iscrpiti kvotu provajdera za taj sat, ostavljajući ključeve B i C blokiranim dok se prozor ne resetuje. Mehanizam ovo sprječava tako što:
 
 1. Prati tekuću potrošnju svakog ključa po dimenziji (%, zahtjevi, tokeni, $).
 2. Primjenjuje algoritam pravedne raspodjele koji čuva rad: ključ može posuditi iz neiskorištenih udjela dok globalni skup nije zasićen.
@@ -106,7 +106,7 @@ Redis drajver: Lua EVAL skripta za atomsko povećanje — izvršava se kao jedna
 
 - Tabela: `quota_consumption` (pogledajte migraciju `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Najbolje za implementacije sa jednom instancom.
-- Sva perzistencija se nalazi u postojećoj OmniRoute SQLite bazi podataka (`DATA_DIR/storage.sqlite`).
+- Sva perzistencija se nalazi u postojećoj 67router SQLite bazi podataka (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opciono, više-instancno)
 

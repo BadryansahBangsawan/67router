@@ -111,7 +111,7 @@ production build ଏବଂ broader suites ଚଲାଏ; visual ଆଚରଣ ପ�
 - CLI catalogs ପୃଥକ ଭାବରେ `bin/cli/locales/` ଅଧୀନରେ ରହେ।
 - ICU placeholders ଏବଂ tagsକୁ ଅବିକଳ ସଂରକ୍ଷଣ କରନ୍ତୁ। Product/provider/model names,
   protocol ଏବଂ header names, commands, code/JSON identifiers, URLs, environment variables, କିମ୍ବା
-  `OmniRoute`, `OAuth`, `MCP`, ଏବଂ `A2A` ପରି protected termsକୁ ଅନୁବାଦ କରନ୍ତୁ ନାହିଁ। ବର୍ତ୍ତମାନର source list ହେଉଛି
+  `67router`, `OAuth`, `MCP`, ଏବଂ `A2A` ପରି protected termsକୁ ଅନୁବାଦ କରନ୍ତୁ ନାହିଁ। ବର୍ତ୍ତମାନର source list ହେଉଛି
   `scripts/i18n/glossary/protected-terms.json`।
 
 **Focused loop**
@@ -252,7 +252,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # ଅନ୍ୟତ୍ର 
 - **Rollback କରନ୍ତୁ।** `run` promoted slotକୁ ପୁଣି validate କରେ ଏବଂ ସେହି ଯାଞ୍ଚ ବିଫଳ ହେଲେ
   `current` ଏବଂ `previous`କୁ ପୁନଃ ଅଦଳବଦଳ କରେ। ପ୍ରଥମ validationରେ ବିଫଳ ହେଉଥିବା candidateକୁ କେବେ ମଧ୍ୟ promote କରାଯାଏ ନାହିଁ।
 
-ସବୁକିଛି gitignored `_artifacts/candidate/` ଅଧୀନରେ ଲେଖାଯାଏ; ଏକ ବିଦ୍ୟମାନ OmniRoute
+ସବୁକିଛି gitignored `_artifacts/candidate/` ଅଧୀନରେ ଲେଖାଯାଏ; ଏକ ବିଦ୍ୟମାନ 67router
 installation ଏବଂ ତାହାର data directoryକୁ କେବେ ମଧ୍ୟ ସ୍ପର୍ଶ କରାଯାଏ ନାହିଁ। promoted CLI ହେଉଛି
 `_artifacts/candidate/current/prefix/bin/omniroute`; ଏହାକୁ ବ୍ୟବହାର କରିବାବେଳେ ନିଜ `DATA_DIR` ସହିତ ଆରମ୍ଭ କରନ୍ତୁ।
 Exit codeଗୁଡ଼ିକ: ସଫଳତା ପାଇଁ `0`, ବିଫଳ validation କିମ୍ବା promotion ପାଇଁ `1`, usage error କିମ୍ବା build ନଥିଲେ `2`।

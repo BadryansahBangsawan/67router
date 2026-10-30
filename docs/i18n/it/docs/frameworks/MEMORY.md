@@ -7,7 +7,7 @@
 > **Fonte autorevole:** `src/lib/memory/` e `src/app/api/memory/`
 > **Ultimo aggiornamento:** 2026-06-28 — v3.8.40 (disattivata per impostazione predefinita + aggiornamento della quantizzazione int8)
 
-OmniRoute fornisce una memoria conversazionale persistente associata alla chiave API (e
+67router fornisce una memoria conversazionale persistente associata alla chiave API (e
 facoltativamente all'ID di sessione). I ricordi vengono estratti automaticamente dalle risposte dell'LLM
 tramite un leggero sistema di corrispondenza basato su espressioni regolari e reinseriti nelle richieste
 successive come messaggio di sistema iniziale (o come primo messaggio utente per i provider che
@@ -646,7 +646,7 @@ TTL predefinito di 5 min).
 
 ## Scelta di un provider di embedding (v3.8.16+)
 
-Il motore di memoria di OmniRoute supporta **quattro sorgenti di embedding** (`src/lib/memory/embedding/`). Ognuna presenta compromessi diversi in termini di **latenza, costo, qualità del modello e complessità di configurazione**.
+Il motore di memoria di 67router supporta **quattro sorgenti di embedding** (`src/lib/memory/embedding/`). Ognuna presenta compromessi diversi in termini di **latenza, costo, qualità del modello e complessità di configurazione**.
 
 ### Le sorgenti di embedding
 
@@ -1066,13 +1066,13 @@ Il worker esegue il binding solo sull'interfaccia di loopback, che la protezione
 Questo adattatore non rende tale protezione meno restrittiva: l'host è impostato in modo permanente su `127.0.0.1` e lo schema di
 configurazione (`ClaudeMemBackendConfigSchema`, `.strict()`) accetta esclusivamente:
 
-| Chiave      | Tipo   | Predefinito | Note                                                                                                                              |
-| ----------- | ------ | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —           | Obbligatorio, 1024–65535. La porta del worker claude-mem nel relativo file di impostazioni (predefinita: `37700 + uid % 100`).    |
-| `project`   | string | —           | Progetto claude-mem da utilizzare. Se non impostato → ogni chiave API OmniRoute viene associata al proprio progetto (`apiKeyId`). |
-| `timeoutMs` | number | `5000`      | Timeout per richiesta, 100–30000.                                                                                                 |
+| Chiave      | Tipo   | Predefinito | Note                                                                                                                             |
+| ----------- | ------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —           | Obbligatorio, 1024–65535. La porta del worker claude-mem nel relativo file di impostazioni (predefinita: `37700 + uid % 100`).   |
+| `project`   | string | —           | Progetto claude-mem da utilizzare. Se non impostato → ogni chiave API 67router viene associata al proprio progetto (`apiKeyId`). |
+| `timeoutMs` | number | `5000`      | Timeout per richiesta, 100–30000.                                                                                                |
 
-Abilitalo tramite `PUT /api/settings/memory` e riavvia OmniRoute (i backend vengono registrati
+Abilitalo tramite `PUT /api/settings/memory` e riavvia 67router (i backend vengono registrati
 una sola volta, in `initMemoryBackends()`):
 
 ```json
@@ -1090,7 +1090,7 @@ Mappatura e limiti:
 
 - Gli ID hanno il formato `claude-mem:<observationId>`; `get`/`delete` ignorano gli ID di altri
   backend senza effettuare una chiamata di rete.
-- `create` → `POST /api/memory/save`; i campi OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; i campi 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) vengono inseriti in `metadata.omniroute` di claude-mem e mantenuti nel round-trip di lettura.
 - `search` → `GET /api/search?format=json&type=observations`, limitato a `maxTokens`
   (caratteri / 4). `list` → l'endpoint paginato delle osservazioni del worker (`total` è un limite inferiore: il worker
@@ -1102,16 +1102,16 @@ Mappatura e limiti:
 - L'iniezione nei prompt (`retrieval.ts`) e gli strumenti MCP `omniroute_memory_*` continuano a leggere SQLite
   direttamente: non passano attraverso `memoryManager`, quindi questo backend non fornisce loro dati.
 
-**Instradamento delle chiamate LLM di claude-mem tramite OmniRoute.** claude-mem comprime le osservazioni
+**Instradamento delle chiamate LLM di claude-mem tramite 67router.** claude-mem comprime le osservazioni
 con un LLM (predefinito: Claude Agent SDK). Il suo provider `openai-compatible` può invece puntare a
-OmniRoute, usufruendo del fallback combinato e del monitoraggio dei costi. In `~/.claude-mem/settings.json`:
+67router, usufruendo del fallback combinato e del monitoraggio dei costi. In `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<chiave API OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<modello o combinazione OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<chiave API 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<modello o combinazione 67router>"
 }
 ```
 

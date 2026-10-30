@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Slovenčina)
+# 67router A2A Server Documentation (Slovenčina)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — OmniRoute ako inteligentný smerovací agent
+> Agent-to-Agent Protocol v0.3 — 67router ako inteligentný smerovací agent
 
 Rozhranie A2A má dve podoby:
 
@@ -19,7 +19,7 @@ Rozhranie A2A má dve podoby:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Vráti kartu agenta opisujúcu schopnosti a zručnosti OmniRoute a požiadavky na autentifikáciu.
+Vráti kartu agenta opisujúcu schopnosti a zručnosti 67router a požiadavky na autentifikáciu.
 
 Pole `version` karty agenta získava hodnotu z `process.env.npm_package_version` (pozri `src/app/.well-known/agent.json/route.ts:13`), takže pri každom vydaní zostáva automaticky synchronizované so súborom `package.json`.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Dostupné zručnosti
 
-OmniRoute sprístupňuje 6 zručností A2A zapojených v `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Každý modul zručnosti sa nachádza v `src/lib/a2a/skills/`.
+67router sprístupňuje 6 zručností A2A zapojených v `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Každý modul zručnosti sa nachádza v `src/lib/a2a/skills/`.
 
 | Zručnosť                   | ID                   | Popis                                                                                                                                                 | Značky                          | Príklady                                   |
 | :------------------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------ | :----------------------------------------- |
-| Inteligentné smerovanie    | `smart-routing`      | Smeruje prompt cez optimálneho poskytovateľa/kombináciu pomocou kombinačného enginu OmniRoute a skórovania                                            | smerovanie, poskytovatelia      | „Nasmeruj tento prompt cez najlepší model" |
+| Inteligentné smerovanie    | `smart-routing`      | Smeruje prompt cez optimálneho poskytovateľa/kombináciu pomocou kombinačného enginu 67router a skórovania                                             | smerovanie, poskytovatelia      | „Nasmeruj tento prompt cez najlepší model" |
 | Správa kvót                | `quota-management`   | Hlási stav kvót jednotlivých poskytovateľov, pomáha volajúcim rozhodnúť, kedy obmedziť/prepnúť                                                        | kvóty, poskytovatelia           | „Skontroluj kvótu pre anthropic"           |
 | Objavovanie poskytovateľov | `provider-discovery` | Vypisuje nainštalovaných poskytovateľov so schopnosťami, príznakmi bezplatnej úrovne a stavom OAuth                                                   | poskytovatelia, objavovanie     | „Akí poskytovatelia sú dostupní?"          |
 | Analýza nákladov           | `cost-analysis`      | Odhaduje náklady požiadavky/konverzácie na základe katalógu a nedávneho využitia                                                                      | náklady, využitie               | „Odhadni náklady tejto konverzácie"        |
 | Správa o stave             | `health-report`      | Agreguje stav circuit breakera, cooldownu a zablokovania pre jednotlivých poskytovateľov                                                              | stav, odolnosť                  | „Zobraz stav všetkých poskytovateľov"      |
-| Zoznam schopností          | `list-capabilities`  | Vracia kompletný 43-položkový katalóg Agent Skills (22 API + 20 CLI + 1 config) ako markdown tabuľku s priamymi URL na SKILL.md pre vloženie kontextu | katalóg, objavovanie, zručnosti | „Vypíš všetky schopnosti OmniRoute"        |
+| Zoznam schopností          | `list-capabilities`  | Vracia kompletný 43-položkový katalóg Agent Skills (22 API + 20 CLI + 1 config) ako markdown tabuľku s priamymi URL na SKILL.md pre vloženie kontextu | katalóg, objavovanie, zručnosti | „Vypíš všetky schopnosti 67router"         |
 
 > Agent Card by mal byť udržiavaný v súlade so živým katalógom 375 poskytovateľov; počty poskytovateľov a metadáta o bezplatnom prístupe/bez autentifikácie pochádzajú z runtime registra.
 
 ### Detail zručnosti `list-capabilities`
 
-Zručnosť `list-capabilities` je obzvlášť užitočná pre externých agentov, ktorí potrebujú pred odoslaním API volaní zistiť, čo OmniRoute sprístupňuje. Vracia štruktúrovaný artefakt vo forme markdown tabuľky:
+Zručnosť `list-capabilities` je obzvlášť užitočná pre externých agentov, ktorí potrebujú pred odoslaním API volaní zistiť, čo 67router sprístupňuje. Vracia štruktúrovaný artefakt vo forme markdown tabuľky:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ Koncový bod JSON-RPC `/a2a` je štandardným vstupným bodom A2A. Nižšie uved
 | `/.well-known/agent.json`    | GET    | Karta agenta (vyhľadávanie A2A)                                        | (verejné, uložené vo vyrovnávacej pamäti 3600 s) |
 | `/api/a2a/tasks`             | POST   | Prichádzajúce delegovanie do flotily OmniConductor (Conductor PRD RF5) | Bearer voči `OMNIROUTE_API_KEY` + `a2aEnabled`   |
 
-**Prichádzajúce delegovanie Conductor (`POST /api/a2a/tasks`):** externí agenti A2A delegujú programátorské úlohy flotile OmniConductor prostredníctvom OmniRoute. Telo: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — delegovať možno iba zručnosti flotily Conductor (tie, ktoré sú uvedené na karte agenta); `metadata.conductor.repo.url` je povinné (flotila pracuje s repozitármi git). Trasa vykoná prevod na `POST /v1/tasks` centra pomocou tokenu `CONDUCTOR_ORCHESTRATOR_TOKEN` na strane servera (s náhradným použitím `CONDUCTOR_HUB_TOKEN`) a vráti `201 { conductor_task_id, state: "submitted" }`; stavy úloh sa prenášajú späť prostredníctvom zrkadlenia SSE→A2A (RF1) a sú viditeľné cez `GET /api/a2a/tasks?skill=conductor`.
+**Prichádzajúce delegovanie Conductor (`POST /api/a2a/tasks`):** externí agenti A2A delegujú programátorské úlohy flotile OmniConductor prostredníctvom 67router. Telo: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — delegovať možno iba zručnosti flotily Conductor (tie, ktoré sú uvedené na karte agenta); `metadata.conductor.repo.url` je povinné (flotila pracuje s repozitármi git). Trasa vykoná prevod na `POST /v1/tasks` centra pomocou tokenu `CONDUCTOR_ORCHESTRATOR_TOKEN` na strane servera (s náhradným použitím `CONDUCTOR_HUB_TOKEN`) a vráti `201 { conductor_task_id, state: "submitted" }`; stavy úloh sa prenášajú späť prostredníctvom zrkadlenia SSE→A2A (RF1) a sú viditeľné cez `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-Endesha CLI ya `omniroute` kwenye kompyuta yako huku OmniRoute yenyewe ikiendeshwa mahali pengine
+Endesha CLI ya `omniroute` kwenye kompyuta yako huku 67router yenyewe ikiendeshwa mahali pengine
 (VPS, seva ya nyumbani, mashine nyingine kwenye Tailnet yako). Unaingia mara moja kwa
 `omniroute connect`, na kuanzia hapo **kila** amri ya CLI inalenga seva hiyo ya mbali
 — amri zilezile, matokeo yaleyale, ila zinatekelezwa kwenye seva ya mbali.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← huandika wasifu wa ndani wa Codex
 ## Jinsi inavyofanya kazi
 
 ```
-kompyuta yako                            OmniRoute ya mbali (VPS)
+kompyuta yako                            67router ya mbali (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI ya omniroute   │  POST /api/cli/connect  (nenosiri → tokeni)        │
 │  muktadha: vps     │ ───────────────►  │ hutengeneza tokeni ya ufikiaji │
@@ -108,7 +108,7 @@ kwenye seva, si kwenye kompyuta yako, kwa hivyo skrini ya idhini **hukwama milel
 haitoi msimbo kamwe** — mbinu mbadala ya kawaida ya "kubandika URL ya callback" haina
 chochote cha kubandika. (Hiki ni kizuizi cha upande wa Google: kukwama huku pia
 hutokea katika proksi yoyote inayotumia kiteja cha eneo-kazi cha Antigravity
-kilichojumuishwa, si OmniRoute pekee.)
+kilichojumuishwa, si 67router pekee.)
 
 Dashibodi hugundua hili kabla hujakwama: kufungua **Providers → Antigravity →
 Connect** kutoka kwenye anwani isiyo localhost hubadilisha arifa ya jumla ya "nakili
@@ -116,7 +116,7 @@ URL ya callback" na suluhisho mbili zilizo hapa chini, kila moja ikiwa na host n
 port yako ambazo tayari zimejazwa. (Anwani ya LAN pia inahesabika —
 `192.168.x.x` si localhost kuhusiana na callback hii.)
 
-Kuna njia mbili zinazotumika rasmi za kuunganisha Antigravity kwenye OmniRoute ya
+Kuna njia mbili zinazotumika rasmi za kuunganisha Antigravity kwenye 67router ya
 mbali.
 
 ### Chaguo A — kisaidizi cha kuingia cha ndani (kinapendekezwa)
@@ -157,7 +157,7 @@ npx omniroute login antigravity --no-push
 
 Kisha, kwenye dashibodi ya **mbali**: **Providers → Antigravity → Connect**, na
 ubandike blob ya `omniroute-cred-v1.…` kwenye sehemu ya **Step 2** (inakubali URL ya
-callback au blob ya kitambulisho). OmniRoute huisimbua, huendesha mchakato wa
+callback au blob ya kitambulisho). 67router huisimbua, huendesha mchakato wa
 kuanzisha Cloud Code upande wa seva, na huhifadhi muunganisho.
 
 > Blob ina tokeni ya kuonyesha upya — ishughulikie kama nenosiri. Kwenye njia ya
@@ -201,7 +201,7 @@ hivyo hakuna port ya pili inayomhusu mtoa huduma ambayo inahitaji handaki.
 ## Kuunganisha Codex / Grok kwenye usakinishaji wa mbali (watoa huduma wenye loopback isiyobadilika)
 
 Codex, xAI (`xai-oauth`) na Grok CLI (`grok-cli`) husajili `redirect_uri` ya
-loopback **isiyobadilika** kwenye programu yao ya OAuth ya upstream. OmniRoute haiwezi kuibadilisha — mtoa huduma
+loopback **isiyobadilika** kwenye programu yao ya OAuth ya upstream. 67router haiwezi kuibadilisha — mtoa huduma
 daima hurejesha kivinjari kwenye anwani ileile iliyowekwa moja kwa moja:
 
 | Mtoa huduma | Callback isiyobadilika ambako mtoa huduma huelekeza |
@@ -210,7 +210,7 @@ daima hurejesha kivinjari kwenye anwani ileile iliyowekwa moja kwa moja:
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                   |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                   |
 
-`localhost` hapo humaanisha **mashine inayoendesha kivinjari**, ilhali seva ya callback ya PKCE ya OmniRoute
+`localhost` hapo humaanisha **mashine inayoendesha kivinjari**, ilhali seva ya callback ya PKCE ya 67router
 husikiliza kwenye loopback ya **seva**. Fungua dashibodi kupitia anwani ya LAN
 kama `http://192.168.0.15:20128` na hizo mbili hazitawahi kuungana: msimbo wa uidhinishaji
 unawasilishwa kwenye `localhost:1455` ya kompyuta yako mwenyewe, ambako hakuna kinachosikiliza,
@@ -230,7 +230,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Usambazaji wa milango miwili unahitajika, na kusambaza mmoja pekee bado kutashindwa:
 
 - **`20128`** (mlango wa dashibodi) hufanya origin kuwa localhost halisi, jambo ambalo
-  hufanya OmniRoute ianzishe seva ya callback ya PKCE — origin ya LAN kamwe
+  hufanya 67router ianzishe seva ya callback ya PKCE — origin ya LAN kamwe
   haifikii tawi hilo.
 - **`1455`** (mlango wa callback usiobadilika wa mtoa huduma) ndipo kivinjari kinaporejeshwa;
   ni lazima upitie kwenye tunnel hadi loopback ya seva.
@@ -346,7 +346,7 @@ omniroute contexts current         # the active server, auth status, scope
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

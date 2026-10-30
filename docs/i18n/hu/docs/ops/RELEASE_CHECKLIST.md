@@ -45,7 +45,7 @@ visszaállítja a projektben v3.8.48-ig használt teljesen automatikus folyamato
 WS1.3 garanciáját (egy kiszivárgott token önmagában nem képes publikálni — nincs token).
 
 **Egyszeri beállítás (tulajdonos):** npmjs.com → `omniroute` csomag → Settings → _Trusted
-Publisher_ → GitHub: tulajdonos `diegosouzapw`, repository `OmniRoute`, munkafolyamat `npm-publish.yml`
+Publisher_ → GitHub: tulajdonos `diegosouzapw`, repository `67router`, munkafolyamat `npm-publish.yml`
 (környezet: nincs). Amíg ez nem létezik, az automatikus lépés `ENEEDAUTH` hibával meghiúsul:
 indítsd újra `publish_mode=staged` (lásd alább) vagy `direct` beállítással.
 

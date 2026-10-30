@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute sprístupňuje **generovanie obrázkov** v rámci plánu Cursor na `POST /v1/images/generations` prostredníctvom rovnakého ID poskytovateľa ako čet: `cursor` (alias `cu`).
+67router sprístupňuje **generovanie obrázkov** v rámci plánu Cursor na `POST /v1/images/generations` prostredníctvom rovnakého ID poskytovateľa ako čet: `cursor` (alias `cu`).
 
 | Pole                 | Hodnota                                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute sprístupňuje **generovanie obrázkov** v rámci plánu Cursor na `PO
 
 ## Prečo Agent CLI
 
-Čet Cursor v OmniRoute používa `agent.v1.AgentService/Run` (protobuf). Táto cesta **odmieta** vstavané klientske nástroje (shell, zápis, …). Generovanie obrázkov je natívny nástroj Cursor spúšťaný cez rozhranie **`agent` CLI** voči licencii. Obslužný program obrázkov preto spustí `agent` s uzamknutým promptom a dočasným pracovným priestorom pre každú požiadavku (rovnakým spôsobom ako komunitné mosty licencií) a následne vráti `b64_json` kompatibilný s OpenAI.
+Čet Cursor v 67router používa `agent.v1.AgentService/Run` (protobuf). Táto cesta **odmieta** vstavané klientske nástroje (shell, zápis, …). Generovanie obrázkov je natívny nástroj Cursor spúšťaný cez rozhranie **`agent` CLI** voči licencii. Obslužný program obrázkov preto spustí `agent` s uzamknutým promptom a dočasným pracovným priestorom pre každú požiadavku (rovnakým spôsobom ako komunitné mosty licencií) a následne vráti `b64_json` kompatibilný s OpenAI.
 
 ## Obmedzenie prístupu (Pevné pravidlá č. 15 + 17)
 
@@ -37,7 +37,7 @@ Rovnaké pravidlá uplatňované na zvyšok úrovne `LOCAL_ONLY` nájdete v
 `CURSOR_IMG_MAX_CONCURRENT` sa presadzuje prostredníctvom počítadla/frontu v pamäti
 s rozsahom platnosti obmedzeným na inštanciu modulu Node
 (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Správne obmedzuje súbežné spustenia `agent` v rámci jedného procesu OmniRoute, ale
+Správne obmedzuje súbežné spustenia `agent` v rámci jedného procesu 67router, ale
 **nekoordinuje** ich medzi viacerými procesmi/inštanciami zdieľajúcimi rovnakú licenciu
 Cursor (napr. pri nasadení s viacerými replikami) — každá inštancia presadzuje svoj
 vlastný nezávislý limit. Pri nasadení s jednou inštanciou (predvolené nastavenie) je
@@ -48,7 +48,7 @@ generovania obrázkov Cursor na jedinú inštanciu.
 ## Požiadavky
 
 1. Pripojený účet Cursor v ovládacom paneli (OAuth alebo API kľúč `crsr_…`).
-2. Binárny súbor Cursor Agent dostupný procesu OmniRoute:
+2. Binárny súbor Cursor Agent dostupný procesu 67router:
    - premenná prostredia `CURSOR_AGENT_BIN=/path/to/agent`, alebo
    - `~/.local/bin/agent`, alebo
    - `providerSpecificData.agentBin` v pripojení Cursor.

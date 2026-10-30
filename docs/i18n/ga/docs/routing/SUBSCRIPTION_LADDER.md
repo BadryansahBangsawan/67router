@@ -10,7 +10,7 @@
 
 ## Cén fáth a bhfuil sé seo ann
 
-Freagraíonn OmniRoute dhá cheist faoi chostas cheana féin, ach ní ceachtar acu an cheist a chuireann formhór na n-oibreoirí.
+Freagraíonn 67router dhá cheist faoi chostas cheana féin, ach ní ceachtar acu an cheist a chuireann formhór na n-oibreoirí.
 
 | Meicníocht atá ann cheana                                | An cheist a fhreagraíonn sí                                              |
 | -------------------------------------------------------- | ------------------------------------------------------------------------ |

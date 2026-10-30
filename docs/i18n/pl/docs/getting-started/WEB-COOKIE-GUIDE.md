@@ -4,7 +4,7 @@
 
 ---
 
-Dostawcy Web Cookie umożliwiają OmniRoute korzystanie z usługi AI za pośrednictwem istniejącej sesji przeglądarki zamiast klucza API. Są przydatni, gdy masz już dostęp do usługi poprzez jej witrynę i chcesz, aby OmniRoute korzystał z tej samej uwierzytelnionej sesji.
+Dostawcy Web Cookie umożliwiają 67router korzystanie z usługi AI za pośrednictwem istniejącej sesji przeglądarki zamiast klucza API. Są przydatni, gdy masz już dostęp do usługi poprzez jej witrynę i chcesz, aby 67router korzystał z tej samej uwierzytelnionej sesji.
 
 W przeciwieństwie do dostawców korzystających z kluczy API dostawcy Web Cookie uwierzytelniają przy użyciu danych logowania wysyłanych przez przeglądarkę do witryny.
 
@@ -49,7 +49,7 @@ DevTools
 
 Nagłówek żądania `Cookie` zawiera dokładne informacje uwierzytelniające, których przeglądarka pomyślnie użyła.
 
-W przypadku większości dostawców Web Cookie jest to wartość, którą należy wkleić do OmniRoute.
+W przypadku większości dostawców Web Cookie jest to wartość, którą należy wkleić do 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Proces konfiguracji jest taki sam dla większości dostawców Web Cookie.
 4. Odśwież stronę.
 5. Otwórz uwierzytelnione żądanie czatu lub konwersacji.
 6. Skopiuj wymagane dane uwierzytelniające.
-7. Otwórz OmniRoute.
+7. Otwórz 67router.
 8. Przejdź do **Providers → Add Provider**.
 9. Wybierz dostawcę Web Cookie.
 10. Wklej dane uwierzytelniające.
@@ -92,17 +92,17 @@ Różne witryny przechowują dane uwierzytelniające na różne sposoby. Niektó
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) to bezpłatna platforma czatu dla użytkowników, która nie wymaga rejestracji — sesja jest tworzona anonimowo podczas pierwszej wizyty i utrzymywana za pomocą trzech plików cookie: `uid`, `si_usr_id` oraz `si_ses_id`. OmniRoute przekazuje żądania do tego samego punktu końcowego `/api/dispatch` za pośrednictwem jednego identyfikatora modelu (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) to bezpłatna platforma czatu dla użytkowników, która nie wymaga rejestracji — sesja jest tworzona anonimowo podczas pierwszej wizyty i utrzymywana za pomocą trzech plików cookie: `uid`, `si_usr_id` oraz `si_ses_id`. 67router przekazuje żądania do tego samego punktu końcowego `/api/dispatch` za pośrednictwem jednego identyfikatora modelu (`notrack-c`, alias `ntw`).
 
 ### Kroki konfiguracji
 
 1. Otwórz [notrack.ai](https://notrack.ai) w przeglądarce i poczekaj na ustawienie pliku cookie anonimowej sesji.
 2. Otwórz **Narzędzia deweloperskie → Sieć**, odśwież stronę i kliknij dowolne żądanie `/api`.
 3. W sekcji **Nagłówki żądania** skopiuj pełną wartość nagłówka `Cookie`.
-4. W OmniRoute przejdź do **Dostawcy → Dodaj dostawcę → NoTrack Web (bezpłatny)**.
+4. W 67router przejdź do **Dostawcy → Dodaj dostawcę → NoTrack Web (bezpłatny)**.
 5. Wklej ciąg plików cookie w polu `apiKey` i kliknij **Zapisz**.
 
-OmniRoute wyodrębnia `uid`, `si_usr_id` oraz `si_ses_id` z wklejonego ciągu i tworzy czysty nagłówek `Cookie`, zawierający tylko te pary — a także `nt_session` (token `ntk_…` ustawiany dla zalogowanych kont), jeśli jest obecny. Jeśli brakuje któregokolwiek z tych trzech elementów, nieprzetworzony wklejony ciąg jest przekazywany bez zmian, aby operatorzy mogli eksperymentować z alternatywnymi formatami.
+67router wyodrębnia `uid`, `si_usr_id` oraz `si_ses_id` z wklejonego ciągu i tworzy czysty nagłówek `Cookie`, zawierający tylko te pary — a także `nt_session` (token `ntk_…` ustawiany dla zalogowanych kont), jeśli jest obecny. Jeśli brakuje któregokolwiek z tych trzech elementów, nieprzetworzony wklejony ciąg jest przekazywany bez zmian, aby operatorzy mogli eksperymentować z alternatywnymi formatami.
 
 ### Identyfikatory modeli
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Plik cookie działa w przeglądarce, ale nie w OmniRoute
+## Plik cookie działa w przeglądarce, ale nie w 67router
 
 Niektórzy dostawcy używają plików cookie, które są wysyłane tylko podczas uwierzytelnionych żądań.
 

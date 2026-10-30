@@ -48,7 +48,7 @@ ta hanyar tunnel **ba zai iya** tayar da wannan hanyar lamba ba.
 | Linux+Firefox/Chromium | sabunta NSS DB na kowane profile ta hanyar `certutil -d sql:<profile>`                                            |
 
 Waɗannan su ne umurnai iri ɗaya da `mitmproxy`, Charles Proxy, Fiddler, da
-Caddy suke amfani da su. An rubuta bayanin kasancewarsu a cikin OmniRoute a
+Caddy suke amfani da su. An rubuta bayanin kasancewarsu a cikin 67router a
 `docs/security/STEALTH_GUIDE.md`.
 
 **Matakin rage haɗari na v3.8.6**:
@@ -108,7 +108,7 @@ ga operators waɗanda ba su sabunta automation ɗinsu ba tukuna. Za a
 cire ta a v3.9.
 
 **Dalilin da ya sa muke riƙe shi**: shigo da bayanai daga Zed ita ce hanya mafi sauƙi ta farawa ga masu amfani
-waɗanda suke amfani da Zed tuni kuma suke son kwafe maɓallan provider ɗinsu zuwa OmniRoute
+waɗanda suke amfani da Zed tuni kuma suke son kwafe maɓallan provider ɗinsu zuwa 67router
 ba tare da sake liƙa su ba.
 
 ---
@@ -120,7 +120,7 @@ ba tare da sake liƙa su ba.
 **Dalilin da ya sa aka yi masa alama**: chunk ɗin yana sake fitar da `execFileWithPassword`,
 `runElevatedPowerShell`, da helper na gama-gari `quotePowerShell`. Mai rarrabewar AI na
 Socket.dev yana kallonsu a matsayin kayan aiki na gama-gari na "aiwatarwa a host + ɗaga
-izini." A cikin OmniRoute ana amfani da su ne kawai ta hanyar shigar da takardar shaidar MITM
+izini." A cikin 67router ana amfani da su ne kawai ta hanyar shigar da takardar shaidar MITM
 (§1) da kuma ta `execFileWithPassword` don aiwatar da umarnin `sudo`.
 
 **Matakin kariya na v3.8.6**:
@@ -170,7 +170,7 @@ a cire hanyoyin masu ƙarin izini gaba ɗaya daga bundle.
 
 ---
 
-## §5 — Mayar da bayanan shaida na OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Mayar da bayanan shaida na 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Fayilolin tushe**:
 
@@ -203,7 +203,7 @@ rawBody)`) kafin ya fassara JSON. Idan an saita secret ɗin, dole ne a sami sa h
    `rateLimitedUntil`, `updatedAt`). Wannan **canji ne da ke karya dacewa** ga masu amfani
    waɗanda suka dogara da daidaita token daga nesa — dole ne su ba da izini a sarari.
 
-**Dalilin da ya sa muke riƙe da shi**: Cloud Sync ita ce kaɗai hanyar da tenant na OmniRoute Cloud
+**Dalilin da ya sa muke riƙe da shi**: Cloud Sync ita ce kaɗai hanyar da tenant na 67router Cloud
 zai iya tattara bayanan shaidar ƙungiya wuri guda. Gyaran yana fayyace samfurin barazanar:
 "server yana sa hannu, client yana tabbatarwa, operator yana ba da izini."
 

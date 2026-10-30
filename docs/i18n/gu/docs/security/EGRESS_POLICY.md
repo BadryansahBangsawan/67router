@@ -8,7 +8,7 @@
 
 > **સત્યનો સ્રોત:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute દરેક proxy ને **address-family egress directive** રાખવાની સુવિધા આપે છે. મૂળભૂત રીતે OS IPv4 અથવા IPv6 પસંદ કરે છે (dual-stack, "Happy Eyeballs"). જ્યારે તમે directive ને `ipv4` અથવા `ipv6` પર સેટ કરો છો, ત્યારે OmniRoute તે proxy મારફતે થતા દરેક connection ને પસંદ કરેલી family સાથે નિશ્ચિત કરે છે અને બીજી family પર fallback કરવાને બદલે **બંધ સ્થિતિમાં નિષ્ફળ થાય છે**.
+67router દરેક proxy ને **address-family egress directive** રાખવાની સુવિધા આપે છે. મૂળભૂત રીતે OS IPv4 અથવા IPv6 પસંદ કરે છે (dual-stack, "Happy Eyeballs"). જ્યારે તમે directive ને `ipv4` અથવા `ipv6` પર સેટ કરો છો, ત્યારે 67router તે proxy મારફતે થતા દરેક connection ને પસંદ કરેલી family સાથે નિશ્ચિત કરે છે અને બીજી family પર fallback કરવાને બદલે **બંધ સ્થિતિમાં નિષ્ફળ થાય છે**.
 
 આ પેજ directive શું છે, તે શા માટે અસ્તિત્વમાં છે, તમે તેને ક્યાં configure કરી શકો છો અને runtime તેને કેવી રીતે resolve કરે છે તેનું દસ્તાવેજીકરણ કરે છે.
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## `auto` કેવી રીતે ઉકેલાય છે
 
-જ્યારે `family` નું મૂલ્ય `auto` હોય, ત્યારે OmniRoute કોઈ પણ ડિરેક્ટિવ ઉમેરતું **નથી** — પ્રૉક્સી URL નો જેમ છે તેમ ઉપયોગ થાય છે અને કનેક્ટ ફૅમિલી અંતર્નિહિત રીતે નક્કી થાય છે.
+જ્યારે `family` નું મૂલ્ય `auto` હોય, ત્યારે 67router કોઈ પણ ડિરેક્ટિવ ઉમેરતું **નથી** — પ્રૉક્સી URL નો જેમ છે તેમ ઉપયોગ થાય છે અને કનેક્ટ ફૅમિલી અંતર્નિહિત રીતે નક્કી થાય છે.
 
 URL બનાવતી વખતે (`open-sse/utils/proxyDispatcher.ts` માં `proxyConfigToUrl` / `normalizeProxyUrl`), `auto` પ્રૉક્સી કોઈ માર્કર વિનાનું સાદું URL આપે છે:
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 બિન-`auto` નિર્દેશ એક જ કૃત્રિમ ક્વેરી માર્કર તરીકે પસાર થાય છે — `?family=ipv4` અથવા `?family=ipv6` — જેને સામાન્યકૃત પ્રોક્સી URL સાથે માત્ર એક વાર જોડવામાં આવે છે. `normalizeProxyUrl` આ માર્કરને ચોક્કસ એક જ વાર દૂર કરીને ફરી જોડવાની કાળજી રાખે છે, જેથી તે પોર્ટ પાર્સિંગને ક્યારેય બગાડતું નથી.
 
-ડિસ્પેચર બનાવવામાં આવે ત્યારે, માર્કરને વાંચીને તેને ચોક્કસ કનેક્ટ ફેમિલીમાં રૂપાંતરિત કરવામાં આવે છે. જો હોસ્ટ **વિપરીત** ફેમિલીનું IP લિટરલ હોય, તો OmniRoute ભૂલ ફેંકે છે (વિરોધાભાસ માટે fail-closed વર્તન અપનાવવામાં આવે છે):
+ડિસ્પેચર બનાવવામાં આવે ત્યારે, માર્કરને વાંચીને તેને ચોક્કસ કનેક્ટ ફેમિલીમાં રૂપાંતરિત કરવામાં આવે છે. જો હોસ્ટ **વિપરીત** ફેમિલીનું IP લિટરલ હોય, તો 67router ભૂલ ફેંકે છે (વિરોધાભાસ માટે fail-closed વર્તન અપનાવવામાં આવે છે):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## SOCKS5 સુસંગતતા
 
-ફેમિલી પિન SOCKS5 પ્રોક્સીઓ સાથે કાર્ય કરે છે, પરંતુ મૂળભૂત `fetch-socks` પ્રોક્સી હૉપની ફેમિલીને પિન કરવા માટે જરૂરી સૉકેટ વિકલ્પો પ્રદાન કરતું નથી. તેના માટે OmniRoute પોતાનું કનેક્ટર આપે છે:
+ફેમિલી પિન SOCKS5 પ્રોક્સીઓ સાથે કાર્ય કરે છે, પરંતુ મૂળભૂત `fetch-socks` પ્રોક્સી હૉપની ફેમિલીને પિન કરવા માટે જરૂરી સૉકેટ વિકલ્પો પ્રદાન કરતું નથી. તેના માટે 67router પોતાનું કનેક્ટર આપે છે:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

@@ -7,7 +7,7 @@
 > **Totuuden lähde:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Päivitetty viimeksi:** 2026-06-28 — v3.8.40
 
-OmniRoute tallentaa ajattelutilan mallien tuottaman avustajan `reasoning_content`-sisällön ja toistaa sen läpinäkyvästi monivaiheisissa pyynnöissä, kun ylävirran palveluntarjoaja sitä edellyttää. Tämä poistaa HTTP 400 -virheet, joita tiukat palveluntarjoajat palauttavat, kun asiakkaan keskusteluhistoriasta puuttuu edellisen vuoron päättely.
+67router tallentaa ajattelutilan mallien tuottaman avustajan `reasoning_content`-sisällön ja toistaa sen läpinäkyvästi monivaiheisissa pyynnöissä, kun ylävirran palveluntarjoaja sitä edellyttää. Tämä poistaa HTTP 400 -virheet, joita tiukat palveluntarjoajat palauttavat, kun asiakkaan keskusteluhistoriasta puuttuu edellisen vuoron päättely.
 
 ## Miksi tämä on olemassa
 
@@ -17,7 +17,7 @@ Useat ajattelutilan palveluntarjoajat hylkäävät jatkovuoron, ellei **edelline
 Virheellinen parametri: ajattelutilan reasoning_content on välitettävä takaisin API:lle.
 ```
 
-Tavalliset asiakkaat (Cursor, Cline, Roo Code, OpenAI SDK) kuitenkin poistavat `reasoning_content`-sisällön uudelleen lähettämästään historiasta. OmniRoute palauttaa sen palvelinpuolen välimuistista, jotta ylävirran vastaanottama pyyntö on johdonmukainen. Ongelma #1628 lisäsi muistin ja SQLiten yhdistävän hybriditallennuksen, jotta välimuisti säilyy prosessin uudelleenkäynnistysten yli.
+Tavalliset asiakkaat (Cursor, Cline, Roo Code, OpenAI SDK) kuitenkin poistavat `reasoning_content`-sisällön uudelleen lähettämästään historiasta. 67router palauttaa sen palvelinpuolen välimuistista, jotta ylävirran vastaanottama pyyntö on johdonmukainen. Ongelma #1628 lisäsi muistin ja SQLiten yhdistävän hybriditallennuksen, jotta välimuisti säilyy prosessin uudelleenkäynnistysten yli.
 
 ## Arkkitehtuuri
 

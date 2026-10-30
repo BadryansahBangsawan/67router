@@ -8,11 +8,11 @@
 > **Paskutinį kartą atnaujinta:** 2026-09-02 — v3.8.51
 > **Auditorija:** inžinieriai, prižiūrintys konkretiems teikėjams skirtas maskavimo integracijas.
 
-„OmniRoute“ integruojamas su teikėjais, kurių perimetro sistemos aktyviai identifikuoja neoficialių klientų skaitmeninius atspaudus (TLS JA3/JA4, antraščių tvarką, JSON turinio struktūrą, vientisumo prieigos raktus). Šiame puslapyje aprašomi „OmniRoute“ suteikiami maskavimo mechanizmai ir jų įgyvendinimo vietos.
+„67router“ integruojamas su teikėjais, kurių perimetro sistemos aktyviai identifikuoja neoficialių klientų skaitmeninius atspaudus (TLS JA3/JA4, antraščių tvarką, JSON turinio struktūrą, vientisumo prieigos raktus). Šiame puslapyje aprašomi „67router“ suteikiami maskavimo mechanizmai ir jų įgyvendinimo vietos.
 
 ## Teisinė ir etinė pastaba
 
-Maskavimo funkcijos sukurtos tam, kad „OmniRoute“ galėtų veikti kaip suderinamumo sluoksnis tarp naudotojams priklausančių oficialių paskyrų („Claude Code CLI“, „Codex“, „Antigravity“, „Cursor“ ir kt.) ir „OmniRoute“ suvienodintos API. Jos **nėra** skirtos sukčiavimo aptikimo sistemoms apeiti, prisijungimo duomenims bendrinti ar teikėjų paslaugų teikimo sąlygoms pažeisti. Prižiūrėtojai tikisi, kad operatoriai laikysis pirminių teikėjų paslaugų teikimo sąlygų, su kuriomis sutiko kurdami paskyras.
+Maskavimo funkcijos sukurtos tam, kad „67router“ galėtų veikti kaip suderinamumo sluoksnis tarp naudotojams priklausančių oficialių paskyrų („Claude Code CLI“, „Codex“, „Antigravity“, „Cursor“ ir kt.) ir „67router“ suvienodintos API. Jos **nėra** skirtos sukčiavimo aptikimo sistemoms apeiti, prisijungimo duomenims bendrinti ar teikėjų paslaugų teikimo sąlygoms pažeisti. Prižiūrėtojai tikisi, kad operatoriai laikysis pirminių teikėjų paslaugų teikimo sąlygų, su kuriomis sutiko kurdami paskyras.
 
 ---
 
@@ -55,7 +55,7 @@ Profilius palaiko užfiksuotos versijos paketas, tačiau realus WAF priimtinumas
 
 ## Claude Code maskavimo rinkinys
 
-Kai `cliCompatMode` įjungtas, OmniRoute pertvarko siunčiamas Claude užklausas taip, kad jų nebūtų galima atskirti nuo `claude-cli` srauto. Kartu veikia trys moduliai:
+Kai `cliCompatMode` įjungtas, 67router pertvarko siunčiamas Claude užklausas taip, kad jų nebūtų galima atskirti nuo `claude-cli` srauto. Kartu veikia trys moduliai:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -71,7 +71,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (kliento turinio maiša)
 
-Serverio pusės vientisumo patikra, kurią oficiali Claude Code CLI apskaičiuoja naudodama Bun/Zig. OmniRoute ją iš naujo įgyvendina su `xxhash-wasm`:
+Serverio pusės vientisumo patikra, kurią oficiali Claude Code CLI apskaičiuoja naudodama Bun/Zig. 67router ją iš naujo įgyvendina su `xxhash-wasm`:
 
 1. Serializuoti turinį naudojant `cch=00000;` vietos rezervavimo reikšmę
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -117,7 +117,7 @@ Susiję to paties rinkinio moduliai:
 
 ## Antigravity maskavimas
 
-Antigravity užklausose kviečiančiojo tekstas išsaugomas baitas į baitą. OmniRoute neįterpia nulinio pločio simbolių į užklausas ir nepervadina ar neįterpia įrankių, kad imituotų IDE klientą.
+Antigravity užklausose kviečiančiojo tekstas išsaugomas baitas į baitą. 67router neįterpia nulinio pločio simbolių į užklausas ir nepervadina ar neįterpia įrankių, kad imituotų IDE klientą.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -127,13 +127,13 @@ Prieš persiunčiant pašalina Stainless SDK žymeklius (`x-stainless-lang`, `x-
 
 `ANTIGRAVITY_CREDITS=always` (naudojamas `open-sse/executors/antigravity.ts`) nukreipia **kiekvieną** užklausą per Antigravity AI Credit Overages (mokamus Google kreditus), užuot leidus nemokamo plano kvotai riboti naudojimą. Tai dokumentuota kaip funkcija, tačiau tai yra **viena dažniausiai mūsų gaunamų pranešimų apie paslaugų teikimo sąlygų pažeidimą priežasčių** — kelios Google Ultra paskyros buvo užblokuotos su `403 / "service disabled for ToS violation" / insufficient_quota`, kai kelias valandas veikė su `=always`.
 
-Apribojimus taiko **Google**, ir OmniRoute negali jų išvengti. Aplinkos kintamojo pavadinimas ir esama dokumentacija sudaro įspūdį, kad šią parinktį saugu įjungti, tačiau taip nėra.
+Apribojimus taiko **Google**, ir 67router negali jų išvengti. Aplinkos kintamojo pavadinimas ir esama dokumentacija sudaro įspūdį, kad šią parinktį saugu įjungti, tačiau taip nėra.
 
 **Kodėl tai piktnaudžiavimo aptikimo sistemas suaktyvina labiau nei vien nemokamo plano naudojimas:**
 
 - Nuolatinės automatizuotos vienos Google paskyros išlaidos pažymimos kitaip nei nemokamo plano naudojimas, kuris pasiekia kvotą ir sustoja.
 - Papildomų kreditų naudojimui netaikoma spartos riba, todėl netinkamai sukonfigūruotas klientas per kelias minutes gali išleisti kelis šimtus USD ir atrodyti kaip API rakto perpardavimas arba robotų srautas.
-- Kai keli OmniRoute naudotojai lygiagrečiai naudoja papildomus kreditus iš to paties išorinio IP adreso, signalas dar labiau sustiprėja.
+- Kai keli 67router naudotojai lygiagrečiai naudoja papildomus kreditus iš to paties išorinio IP adreso, signalas dar labiau sustiprėja.
 
 **Rekomenduojama praktika:**
 
@@ -172,7 +172,7 @@ interface CliFingerprint {
 
 ## MITM tarpinis serveris (Antigravity, Linux/macOS/Windows)
 
-CLI, kurių dvejetainių failų negalima nukreipti naudojant `OPENAI_BASE_URL`, atveju OmniRoute paleidžia vietinį TLS užbaigiantį tarpinį serverį. Galiniai taškai yra kataloge `src/app/api/cli-tools/antigravity-mitm/`.
+CLI, kurių dvejetainių failų negalima nukreipti naudojant `OPENAI_BASE_URL`, atveju 67router paleidžia vietinį TLS užbaigiantį tarpinį serverį. Galiniai taškai yra kataloge `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metodas | Galinis taškas                          | Paskirtis                                             |
 | ------- | --------------------------------------- | ----------------------------------------------------- |
@@ -253,7 +253,7 @@ Paslaugų teikėjo IP adresas **visada išsaugomas** — perjungiklis tik pakei�
 
 ## Gaunamų antraščių sanitizavimas
 
-Prieš persiųsdama „OmniRoute“ išvalo gaunamas kliento antraštes, kad iš „Cursor“ gauta užklausa neatskleistų `User-Agent: Cursor/X.Y.Z` „Claude“ aukštesniojo lygio paslaugai. Neleidžiamų reikšmių sąrašą, sinchronizuojamą su „Zod“ schemomis ir vienetų testais, rasite `src/shared/constants/upstreamHeaders.ts`.
+Prieš persiųsdama „67router“ išvalo gaunamas kliento antraštes, kad iš „Cursor“ gauta užklausa neatskleistų `User-Agent: Cursor/X.Y.Z` „Claude“ aukštesniojo lygio paslaugai. Neleidžiamų reikšmių sąrašą, sinchronizuojamą su „Zod“ schemomis ir vienetų testais, rasite `src/shared/constants/upstreamHeaders.ts`.
 
 ---
 

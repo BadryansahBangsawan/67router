@@ -7,7 +7,7 @@
 > **Isi iyi nke eziokwu:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute na-edekọ omume nchịkwa, ihe omume nyocha njirimara, mgbanwe n’usoro ndụ nke nzere ndị na-eweta ọrụ, na oku ngwaọrụ MCP n’ime tebụl nyocha SQLite na-akwado. Ibe a na-akọwa ihe ndị a na-edekọ, ebe ha dị, ogologo oge a na-edowe ha, otu igodo API nwere ike isi họrọ ịghara isonye, na otu esi ajụ data ahụ ajụjụ.
+67router na-edekọ omume nchịkwa, ihe omume nyocha njirimara, mgbanwe n’usoro ndụ nke nzere ndị na-eweta ọrụ, na oku ngwaọrụ MCP n’ime tebụl nyocha SQLite na-akwado. Ibe a na-akọwa ihe ndị a na-edekọ, ebe ha dị, ogologo oge a na-edowe ha, otu igodo API nwere ike isi họrọ ịghara isonye, na otu esi ajụ data ahụ ajụjụ.
 
 Mmejuputa ya dị na `src/lib/compliance/index.ts` (T-43 — "Njikwa Nrubeisi") na `src/lib/compliance/providerAudit.ts`. Ide ndekọ nyocha anaghị atụpụ njehie ma ọlị: mgbe ọdịda ọ bụla mere, a na-eleghara oku ahụ anya na nzuzo ka ndekọ nyocha ghara imebi usoro arịrịọ bụ isi.
 

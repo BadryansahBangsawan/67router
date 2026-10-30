@@ -22,10 +22,10 @@ Rola silnika jest opisana przez **dwie niezależne osie**, zakodowane łącznie 
 `RouterBackendDefinition` rejestru:
 
 1. **Lifecycle** (`RouterBackendLifecycle`) — _jak silnik działa_:
-   - `in-process` — działa wewnątrz procesu Node OmniRoute (natywny pipeline TS).
-   - `supervised` — lokalny proces potomny, który OmniRoute instaluje/uruchamia/zatrzymuje/sprawdza
+   - `in-process` — działa wewnątrz procesu Node 67router (natywny pipeline TS).
+   - `supervised` — lokalny proces potomny, który 67router instaluje/uruchamia/zatrzymuje/sprawdza
      health przez `ServiceSupervisor`, a następnie konsumuje jako połączenie providera.
-   - `external` — endpoint HTTP, do którego OmniRoute dysponuje żądania, ale którego **nie**
+   - `external` — endpoint HTTP, do którego 67router dysponuje żądania, ale którego **nie**
      zarządza (konfigurowany przez bazowy URL ze zmiennej środowiskowej).
    - `disabled` — zarejestrowany, ale nie do wyboru.
 2. **Selection axis** (backend routingu relay) — _czy relay do niego dysponuje_:

@@ -4,7 +4,7 @@
 
 ---
 
-Tabbatarwar E2E a ainihin muhalli don tura OmniRoute da ke gudana a kan VPS na homologation
+Tabbatarwar E2E a ainihin muhalli don tura 67router da ke gudana a kan VPS na homologation
 (`HOMOLOG_BASE_URL`, misali `http://192.168.0.15:20128`). Umarni guda yana maye gurbin jerin binciken
 saki na hannu na STOP #2 da gudu mai sarrafa kansa wanda ke samar da hujjoji.
 

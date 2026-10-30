@@ -4,9 +4,9 @@
 
 ---
 
-Catatan operator untuk `POST /v1/embeddings` ketika OmniRoute berada di depan
+Catatan operator untuk `POST /v1/embeddings` ketika 67router berada di depan
 Hindsight 0.9.1 (`encode(list[str])` khusus teks) dan Memorix 1.6.0 (gerbang
-media Jina). Diverifikasi langsung pada 2026-08-17 terhadap OmniRoute 3.8.49 di
+media Jina). Diverifikasi langsung pada 2026-08-17 terhadap 67router 3.8.49 di
 `https://omniroute.jaguar-fish.ts.net/v1`. Tidak ada rahasia di bawah ini.
 
 ## ID model yang berfungsi
@@ -81,7 +81,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` native tidak dapat berfungsi hanya melalui GitOps. Kunci
 Google AI Studio harus ditambahkan sebagai koneksi penyedia `gemini` (melalui
-dasbor atau `GEMINI_API_KEY` yang diimpor ke OmniRoute). Rahasia tersebut tidak
+dasbor atau `GEMINI_API_KEY` yang diimpor ke 67router). Rahasia tersebut tidak
 ada dalam repo ini.
 
 ### Jalur multimodal Jina
@@ -103,7 +103,7 @@ Gunakan `POST /v1/embeddings` hingga tersedia alias.
 
 ### Objek gambar Jina / Memorix
 
-Item gambar kanonis OmniRoute (PNG 28×28, 784 piksel — Jina menolak 1×1):
+Item gambar kanonis 67router (PNG 28×28, 784 piksel — Jina menolak 1×1):
 
 ```json
 {
@@ -153,7 +153,7 @@ Hasil aktual: HTTP **400**
 
 Embedding Hindsight hanya mendukung teks (`encode(list[str])`). Hindsight tidak
 mengirim objek gambar. Arahkan URL dasar embedding yang kompatibel dengan OpenAI
-milik Hindsight ke `/v1` OmniRoute dan gunakan ID yang berfungsi dari tabel di
+milik Hindsight ke `/v1` 67router dan gunakan ID yang berfungsi dari tabel di
 atas (`jina-ai/jina-embeddings-v5-omni-small` atau
 `openrouter/google/gemini-embedding-2`). Jangan atur model ke
 `gemini-embedding-2` tanpa prefiks, kecuali tersedia kunci API `gemini` pada
@@ -162,13 +162,13 @@ gateway.
 ### Memorix 1.6.0
 
 Memorix hanya memperlakukan `baseUrl` yang cocok dengan `/jina\.ai/i` sebagai
-media native. URL OmniRoute tetap menggunakan jalur khusus teks, bahkan ketika
+media native. URL 67router tetap menggunakan jalur khusus teks, bahkan ketika
 modelnya adalah Jina omni. Gerbang tersebut merupakan masalah pada klien
-Memorix. Terlepas dari itu, OmniRoute tetap menolak isi permintaan Jina
+Memorix. Terlepas dari itu, 67router tetap menolak isi permintaan Jina
 `{image: "data:..."}` yang akan dikirim Memorix jika gerbang terbuka. Oleh karena
 itu, klien yang kompatibel dengan Jina tidak dapat menghasilkan embedding
-gambar melalui OmniRoute tanpa skema kanonis `{type,source}`.
+gambar melalui 67router tanpa skema kanonis `{type,source}`.
 
 Gunakan `jina-ai/jina-embeddings-v5-omni-small` untuk teks. Jangan arahkan
-`base_url` Memorix ke `https://api.jina.ai` — pertahankan OmniRoute sebagai
+`base_url` Memorix ke `https://api.jina.ai` — pertahankan 67router sebagai
 satu-satunya perantara.

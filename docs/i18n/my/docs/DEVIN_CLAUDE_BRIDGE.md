@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` သည် တရားဝင် Devin CLI က ACP stdio မှတစ်ဆင့် model တုံ့ပြန်ချက်များကို ပေးပို့နေစဉ်၊ အမှန်တကယ် Claude Code runtime အား OmniRoute ၏ local Anthropic
+`devin-cli-agentic` သည် တရားဝင် Devin CLI က ACP stdio မှတစ်ဆင့် model တုံ့ပြန်ချက်များကို ပေးပို့နေစဉ်၊ အမှန်တကယ် Claude Code runtime အား 67router ၏ local Anthropic
 Messages endpoint ကို အသုံးပြုနိုင်စေသည်။ ၎င်းသည် လက်ရှိရှိပြီးသား Anthropic၊ Claude OAuth၊ Claude Web သို့မဟုတ် `devin-cli` provider များကို
 ပြင်ဆင်ခြင်းမရှိပါ။
 
@@ -18,7 +18,7 @@ metadata ကိုလည်း ထိုအတိုင်း သတ်မှတ
 > `3000.2.17` နှင့် model `swe-1-7-lightning` မှတစ်ဆင့် သီးခြားခွဲထားသော scenario သုံးခုကို ပြီးမြောက်စေခဲ့သည်။ ထိုနောက်ဆုံး live run က client ပိုင် `Read`၊
 > `Edit` နှင့် `Bash` turn များ၊ အောင်မြင်သော `npm test` ရလဒ်များ၊ project command နှင့် skill
 > ရှာဖွေတွေ့ရှိမှု၊ Devin သီးသန့် routing နှင့် Claude egress လုံးဝမရှိခြင်းတို့ကို သက်သေပြခဲ့သည်။ ထို့နောက် pin ကို `2.1.258` သို့
-> မြှင့်တင်ခဲ့သည် (OmniRoute ၏ Claude identity က အယောင်ဆောင်ထားသည့် CLI generation ဖြစ်ပြီး
+> မြှင့်တင်ခဲ့သည် (67router ၏ Claude identity က အယောင်ဆောင်ထားသည့် CLI generation ဖြစ်ပြီး
 > Fable 5.1 tier ကို မူလအတိုင်း ပထမဆုံး ထည့်သွင်းပေးသည့် line လည်းဖြစ်သည်)။ pin အသစ်တွင် install layer နှင့် `claude --version` ကို
 > pin လုပ်ထားသော base image ပေါ်၌ စစ်ဆေးအတည်ပြုခဲ့ပြီး bridge unit suite၊ `compose config` နှင့်
 > static isolation proof တို့ အောင်မြင်သည် — သို့သော် offline mock scenario နှင့် live scenario သုံးခုပါ
@@ -47,11 +47,11 @@ Claude Code က ပေးပို့ထားသော tool များကိ�
 
 parser သည် model turn တစ်ခုစီအတွက် သီးခြား `<tool>{...}</tool>` envelope တစ်ခုကို လက်ခံသည်။ ၎င်းက
 request ၏ tool list နှင့် name ကို တိုက်စစ်ပြီး၊ argument များကို ထို tool ၏ JSON
-Schema နှင့်အညီ မှန်ကန်ကြောင်း စစ်ဆေးကာ narrative နှင့် action ရောနှောထားမှုကို ငြင်းပယ်ပြီး ကန့်သတ်ထားသော ပြုပြင်မှုတစ်ကြိမ်ကို ခွင့်ပြုသည်။ ထို့နောက် Claude Code က ရရှိလာသော Anthropic `tool_use` ကို local တွင် လုပ်ဆောင်ပြီး `tool_result` ကို OmniRoute မှတစ်ဆင့် ပြန်လည်ပေးပို့သည်။
+Schema နှင့်အညီ မှန်ကန်ကြောင်း စစ်ဆေးကာ narrative နှင့် action ရောနှောထားမှုကို ငြင်းပယ်ပြီး ကန့်သတ်ထားသော ပြုပြင်မှုတစ်ကြိမ်ကို ခွင့်ပြုသည်။ ထို့နောက် Claude Code က ရရှိလာသော Anthropic `tool_use` ကို local တွင် လုပ်ဆောင်ပြီး `tool_result` ကို 67router မှတစ်ဆင့် ပြန်လည်ပေးပို့သည်။
 
 ## အလိုအလျောက် routing
 
-provider သည် ပိတ်ဆို့မထားသည့်အခါ OmniRoute ၏ `auto/*` candidate pool များတွင် ရွေးချယ်ခံနိုင်သည်။
+provider သည် ပိတ်ဆို့မထားသည့်အခါ 67router ၏ `auto/*` candidate pool များတွင် ရွေးချယ်ခံနိုင်သည်။
 candidate အဖြစ် ရွေးချယ်ခံနိုင်ခြင်းသည် အမှန်တကယ် ရွေးချယ်ခံရမည်ဟု အာမမခံပါ။ combo ၏ routing strategy (ဥပမာ
 နောက်ဆုံးအောင်မြင်ခဲ့သည့် provider ကို ဦးစားပေးခြင်း) က အခြား provider တစ်ခုကို ပိုမိုဦးစားပေးနိုင်သည်။ request တိုင်းကို
 Devin မှတစ်ဆင့် ပို့ရန်လိုအပ်ပါက `dva/<model>` သို့မဟုတ် Devin-first combo ကို အသုံးပြုပါ။
@@ -63,16 +63,16 @@ Host ၏ Claude ထည့်သွင်းမှု၊ အကောင့်န
 
 - ဖတ်ရှုရန်သာဖြစ်သော root ဖိုင်စနစ်၊ ဖယ်ရှားထားသော လုပ်ဆောင်ခွင့်များနှင့်
   `no-new-privileges` တို့ကို အသုံးပြုပြီး UID/GID `10001:10001` အဖြစ် လည်ပတ်သည်။
-- သီးသန့် `/home/bridge`၊ Claude ဖွဲ့စည်းသတ်မှတ်မှုအတွက် သီးခြား volume၊ ခွဲခြားထားသော OmniRoute ဒေတာ
+- သီးသန့် `/home/bridge`၊ Claude ဖွဲ့စည်းသတ်မှတ်မှုအတွက် သီးခြား volume၊ ခွဲခြားထားသော 67router ဒေတာ
   နှင့် သီးခြား `devin-auth` volume တို့ကို အသုံးပြုသည်။
 - စွန့်ပစ်နိုင်သော `.sandbox` workspace/evidence များကိုသာ mount လုပ်သည်။
 - Host home၊ Keychain၊ SSH၊ cloud အထောက်အထားများ သို့မဟုတ် Docker socket ကို mount မလုပ်ပါ။
 - တိကျစွာသတ်မှတ်ထားသော environment များကို တည်ဆောက်ပြီး Anthropic API/OAuth/routing variable များကို ဖယ်ရှားသည်။
 - Claude Code inference ကို စက်အတွင်းသုံး key ဖြင့် `http://omniroute:20128` သို့သာ ညွှန်ကြားသည်။
 
-Offline profile သည် internal network ကို အသုံးပြုသည်။ Live profile တွင် OmniRoute သည်
+Offline profile သည် internal network ကို အသုံးပြုသည်။ Live profile တွင် 67router သည်
 တရားဝင် Devin endpoint များကို `network-guard` မှတစ်ဆင့်သာ ဆက်သွယ်ပြီး အခြားမသက်ဆိုင်သော destination များကို ပိတ်ပင်ထားသည်။
-Claude Code တွင် သီးခြား deny-all egress guard ရှိပြီး `NO_PROXY` မှတစ်ဆင့် local OmniRoute
+Claude Code တွင် သီးခြား deny-all egress guard ရှိပြီး `NO_PROXY` မှတစ်ဆင့် local 67router
 ဝန်ဆောင်မှုကိုသာ ဆက်သွယ်နိုင်သည်။ Guard audit ဖိုင်များကို သက်ဆိုင်ရာ guard process ကသာ mount လုပ်ထားသည်။
 Script များသည် token မပါဝင်သော evidence ကို export မလုပ်မီ ဖိုင်ပိုင်ရှင်၊ mode၊ link အရေအတွက်နှင့် ဆုံးဖြတ်ချက်တိုင်းကို
 စစ်ဆေးသည်။

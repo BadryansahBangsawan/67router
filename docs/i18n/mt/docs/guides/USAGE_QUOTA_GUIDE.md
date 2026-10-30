@@ -4,7 +4,7 @@
 
 ---
 
-> **Fil-qosor**: OmniRoute isegwi l-użu tat-tokens ta’ kull talba, jikkalkula l-ispiża, jinforza l-kwota għal kull ċavetta API, u juri l-analitika fid-dashboard. Din il-gwida tispjega kif jaħdem kollox.
+> **Fil-qosor**: 67router isegwi l-użu tat-tokens ta’ kull talba, jikkalkula l-ispiża, jinforza l-kwota għal kull ċavetta API, u juri l-analitika fid-dashboard. Din il-gwida tispjega kif jaħdem kollox.
 
 **Sorsi:**
 
@@ -17,7 +17,7 @@
 
 ## Ħarsa Ġenerali
 
-Kull talba li tgħaddi minn OmniRoute tiġġenera **rekord tal-użu** li jiġbor:
+Kull talba li tgħaddi minn 67router tiġġenera **rekord tal-użu** li jiġbor:
 
 - **Identità**: liema ċavetta API, fornitur, mudell u kombinazzjoni
 - **Tokens**: tokens tal-prompt, tokens tat-tlestija, tokens fil-cache u t-total
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Għall-fornituri li ma jirritornawx l-użu (xi fornituri li jużaw cookies tal-web), OmniRoute **jistma** t-tokens permezz tal-euristika `~4 chars per token` (ara `open-sse/services/autoCombo/pipelineRouter.ts`).
+Għall-fornituri li ma jirritornawx l-użu (xi fornituri li jużaw cookies tal-web), 67router **jistma** t-tokens permezz tal-euristika `~4 chars per token` (ara `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Tokens fil-Cache
 
-OmniRoute jsegwi `cached_tokens` separatament minn `prompt_tokens` għaliex:
+67router jsegwi `cached_tokens` separatament minn `prompt_tokens` għaliex:
 
 - Il-cache tal-prompt ta’ Anthropic jitlob rata mnaqqsa għat-tokens fil-cache (10% tar-rata normali)
 - Xi fornituri jirritornaw `cache_read_input_tokens` li għandhom jiġu pprezzati b’mod differenti
@@ -117,7 +117,7 @@ Id-data tal-ipprezzar tiġi sinkronizzata awtomatikament minn LiteLLM permezz ta
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Għal mudelli mingħajr data tal-ipprezzar, OmniRoute jirrikorri għal **stima tal-ispiża** bl-użu ta’ rati medji interni (meħuda mid-data tal-ipprezzar ta’ LiteLLM).
+Għal mudelli mingħajr data tal-ipprezzar, 67router jirrikorri għal **stima tal-ispiża** bl-użu ta’ rati medji interni (meħuda mid-data tal-ipprezzar ta’ LiteLLM).
 
 ---
 

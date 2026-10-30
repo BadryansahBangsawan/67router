@@ -4,7 +4,7 @@
 
 ---
 
-Lokacin da OmniRoute yake gudana a cikin Docker, tsofaffin hanyoyin **Shigo daga Cursor IDE** /
+Lokacin da 67router yake gudana a cikin Docker, tsofaffin hanyoyin **Shigo daga Cursor IDE** /
 `cursor-agent` ba sa aiki saboda container ba ya iya ganin shigarwar Cursor da ke kan host.
 A maimakon haka, yi amfani da **Shiga da Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ A maimakon haka, yi amfani da **Shiga da Cursor** (deep-control PKCE).
    `~/.config/Cursor/User/globalStorage/state.vscdb` _a cikin_ container.
    A Docker Desktop na macOS, ba a mount ɗin bayanan IDE DB na host ta tsoho, kuma
    tsarin aiki na container Linux ne ko da kuwa host ɗin Darwin ne.
-2. **Babu binary na `cursor-agent`** — Hotunan OmniRoute na hukuma ba sa zuwa da
+2. **Babu binary na `cursor-agent`** — Hotunan 67router na hukuma ba sa zuwa da
    `cursor-agent`. A baya Samfuran da Ake da Su suna gudanar da
    `cursor-agent --list-models` ta shell, sannan su koma amfani da kasida tabbatacciya.
 3. **Binary mara dacewa** — Kada ka yi bind-mount na `cursor-agent` na macOS zuwa cikin
@@ -24,11 +24,11 @@ A maimakon haka, yi amfani da **Shiga da Cursor** (deep-control PKCE).
 
 1. Buɗe **Dashboard → Providers → Cursor**.
 2. Zaɓi shafin **Shiga da Cursor**.
-3. Danna **Shiga da Cursor** — OmniRoute zai buɗe
+3. Danna **Shiga da Cursor** — 67router zai buɗe
    `https://cursor.com/loginDeepControl?…` a burauzar **host** ɗinka.
-4. Amince da shiga a cikin burauzar, sannan ka koma dashboard. OmniRoute
+4. Amince da shiga a cikin burauzar, sannan ka koma dashboard. 67router
    yana polling na `api2.cursor.sh/auth/poll` har sai tokens sun iso.
-5. OmniRoute yana adana tokens na **access + refresh**, sannan yana sabunta su ta
+5. 67router yana adana tokens na **access + refresh**, sannan yana sabunta su ta
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Wannan hanyar ba ta buƙatar Cursor IDE ko `cursor-agent` a cikin container.
@@ -37,10 +37,10 @@ Wannan hanyar ba ta buƙatar Cursor IDE ko `cursor-agent` a cikin container.
 
 Idan akwai haɗin da aka shiga, **Samfuran da Ake da Su / Daidaitawa ta Atomatik** yana fifita kasidar
 HTTP `AiService/AvailableModels` ta Cursor ta amfani da bearer token na haɗin.
-Idan hakan ya gaza, OmniRoute har yanzu yana gwada `cursor-agent` na host idan yana nan, sannan
+Idan hakan ya gaza, 67router har yanzu yana gwada `cursor-agent` na host idan yana nan, sannan
 ya koma ga static registry seed.
 
-OmniRoute koyaushe yana nuna **`auto`** a cikin kasida (sunan nuni “Auto”), tare da
+67router koyaushe yana nuna **`auto`** a cikin kasida (sunan nuni “Auto”), tare da
 hanyoyin router irin na OpenCodex, wato **`auto-cost`**, **`auto-balance`**, da
 **`auto-intelligence`**. A kan wire, waɗannan suna komawa zuwa samfurin `default` na Cursor
 (tare da `optimization` ModelParameter ga bambance-bambancen ukun). Fi son
@@ -87,7 +87,7 @@ limits sun bayyana babu komai, sake gudanar da **Shiga da Cursor** ko sake shigo
 ## Saƙonni marasa komai / ƙarewar amfani
 
 Lokacin da Cursor ya karɓi Run amma bai dawo da rubutun assistant ba (abin da aka fi gani idan
-an ƙare premium usage), OmniRoute yana nuna **429** mai bayanin abin da za a yi (alamun quota) ko
+an ƙare premium usage), 67router yana nuna **429** mai bayanin abin da za a yi (alamun quota) ko
 **502** tare da jagora — ba kawai “Provider ya dawo da abun ciki mara komai” ba. Gazawar streaming
 kamar `not_found: AI Model Not Found` (lokacin da usage window ya ƙare) ana
 rarraba su a matsayin **an kai iyakar Cursor / amfani ya wuce iyaka**, kuma saƙon yana nan
@@ -97,7 +97,7 @@ iyakokin tsarin Cursor.
 
 ## Sigar client (headless)
 
-Ba tare da shigarwar `cursor-agent` ta gida ba, OmniRoute yana tantance
+Ba tare da shigarwar `cursor-agent` ta gida ba, 67router yana tantance
 `x-cursor-client-version` ta env `CURSOR_AGENT_CLI_VERSION`, sannan ta scrape na
 script ɗin shigar da Cursor da aka cache a disk, sannan ta pinned build id. Yi override da
 `CURSOR_AGENT_CLI_VERSION` idan ana buƙata.

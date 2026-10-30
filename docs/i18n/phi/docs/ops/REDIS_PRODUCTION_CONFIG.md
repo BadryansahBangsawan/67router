@@ -6,7 +6,7 @@
 
 ## Pangkalahatang-ideya
 
-Ang Redis ay isang **opsyonal at hindi mahigpit na dependency** sa OmniRoute — maayos na bumababa ang kakayahan ng application (gumagamit ng mga in-memory na fallback) kapag hindi available ang Redis. Sa production, ang pag-tune sa Redis ay nagpapababa ng latency para sa apat na magkakaibang workload:
+Ang Redis ay isang **opsyonal at hindi mahigpit na dependency** sa 67router — maayos na bumababa ang kakayahan ng application (gumagamit ng mga in-memory na fallback) kapag hindi available ang Redis. Sa production, ang pag-tune sa Redis ay nagpapababa ng latency para sa apat na magkakaibang workload:
 
 | Workload                  | Driver                        | Client Factory                                   | Pattern ng Key                                        |
 | ------------------------- | ----------------------------- | ------------------------------------------------ | ----------------------------------------------------- |
@@ -15,7 +15,7 @@ Ang Redis ay isang **opsyonal at hindi mahigpit na dependency** sa OmniRoute —
 | Imbakan ng quota          | `redisQuotaStore.ts`          | Hiwalay na `getRedisClient(url)` singleton       | `<prefix>quota:*` na nako-configure sa bawat instance |
 | Circuit breaker ng warmup | `redisCircuitBreakerStore.ts` | Hiwalay na client sa `circuitBreakerFactory.ts`  | `<prefix>warmup:cb:<connectionId>`                    |
 
-Iisang namespace prefix ang ginagamit ng lahat ng apat na workload upang makapagpatakbo ang OmniRoute kasama ng iba pang app sa iisang Redis instance (hal. `127.0.0.1:6379`). Tingnan ang [Paglalagay sa Namespace ng mga Key](#key-namespacing).
+Iisang namespace prefix ang ginagamit ng lahat ng apat na workload upang makapagpatakbo ang 67router kasama ng iba pang app sa iisang Redis instance (hal. `127.0.0.1:6379`). Tingnan ang [Paglalagay sa Namespace ng mga Key](#key-namespacing).
 
 ---
 
@@ -38,12 +38,12 @@ Iisang namespace prefix ang ginagamit ng lahat ng apat na workload upang makapag
 
 ## Paglalagay sa Namespace ng mga Key
 
-Nakikibahagi ang OmniRoute sa isang Redis instance kasama ng anumang iba pang tumatakbo sa host. Kung walang namespace, maaaring magbanggaan ang mga key tulad ng `auth:api_key:<sha256>` o `rl:*` at ang mga key mula sa iba pang application na gumagamit ng parehong Redis (nagpapatakbo ang instance na ito ng Redis sa `127.0.0.1:6379` kasama ng iba pang serbisyo).
+Nakikibahagi ang 67router sa isang Redis instance kasama ng anumang iba pang tumatakbo sa host. Kung walang namespace, maaaring magbanggaan ang mga key tulad ng `auth:api_key:<sha256>` o `rl:*` at ang mga key mula sa iba pang application na gumagamit ng parehong Redis (nagpapatakbo ang instance na ito ng Redis sa `127.0.0.1:6379` kasama ng iba pang serbisyo).
 
-Itakda ang `REDIS_KEY_PREFIX` sa isang string na hindi walang laman upang lagyan ng prefix ang **bawat** key ng OmniRoute:
+Itakda ang `REDIS_KEY_PREFIX` sa isang string na hindi walang laman upang lagyan ng prefix ang **bawat** key ng 67router:
 
 ```bash
-# .env — magiging omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* ang lahat ng key ng OmniRoute
+# .env — magiging omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* ang lahat ng key ng 67router
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -87,7 +87,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # maglaan ng espasyo para sa OS page cache
 maxmemory-policy allkeys-lru         # alisin ang mga lipas na auth cache entry kapag kapos sa memory
 
-# Persistence (opsyonal — crash-safe ang OmniRoute kahit wala nito)
+# Persistence (opsyonal — crash-safe ang 67router kahit wala nito)
 save 300 1                           # gumawa ng snapshot kahit bawat 5 min kung ≥1 key ang nagbago
 appendonly no                        # hindi kailangan ang AOF; maaaring buuing muli ang data
 appendfsync no                       # walang fsync overhead (sapat na ang RDB)

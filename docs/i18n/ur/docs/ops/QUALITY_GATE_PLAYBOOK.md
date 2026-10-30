@@ -4,7 +4,7 @@
 
 ---
 
-> **یہ دستاویز کیا ہے۔** OmniRoute کے quality-gate نظام کا ایک تنقیدی جائزہ،
+> **یہ دستاویز کیا ہے۔** 67router کے quality-gate نظام کا ایک تنقیدی جائزہ،
 > جس کا موازنہ صنعتی بہترین طریقوں سے کیا گیا ہے، **نیز** تمام quality
 > checkpoints کی ایک جامع فہرست اور اسی نظام کو کسی بھی project پر لاگو کرنے کے لیے ایک **tool-agnostic replication plan**۔
 > یہ 2026-06-16 کو repository کی حقیقی حالت کی بنیاد پر تیار کی گئی (یادداشت کی بنیاد پر نہیں)۔
@@ -101,62 +101,62 @@
 
 ### 1. انداز اور فارمیٹنگ (قطعی، تیز)
 
-- **OmniRoute:** lint-staged کے ذریعے Prettier + ESLint (pre-commit)، 2-spaces/double-quotes/100col۔
+- **67router:** lint-staged کے ذریعے Prettier + ESLint (pre-commit)، 2-spaces/double-quotes/100col۔
 - **عمومی:** خودکار طور پر درست کیا جا سکنے والا ایک فارمیٹر + ایک لنٹر، جو staged فائلوں پر pre-commit میں چلیں۔
 
 ### 2. اقسام
 
-- **OmniRoute:** `typecheck:core` (روکنے والا) + `typecheck:noimplicit:core` (مشاورتی) + `type-coverage` ریچٹ 92.17% + ہر فائل کے لیے any-budget۔
+- **67router:** `typecheck:core` (روکنے والا) + `typecheck:noimplicit:core` (مشاورتی) + `type-coverage` ریچٹ 92.17% + ہر فائل کے لیے any-budget۔
 - **عمومی:** CI میں سخت typecheck + ریچٹ شدہ type-coverage میٹرک + ہر فائل کے لیے `any`/escape-hatch بجٹ۔
 
 ### 3. ٹیسٹس (شدت)
 
-- **OmniRoute:** 2 غیر متداخل رنرز (Node native + vitest)، 8 shards، مجموعی coverage 60/60/60/60 + ریچٹ ~76% + **اہم ماڈیولز کے لیے 8 فی ماڈیول کم از کم حدیں** + راتانہ property tests + راتانہ **mutation testing**۔
+- **67router:** 2 غیر متداخل رنرز (Node native + vitest)، 8 shards، مجموعی coverage 60/60/60/60 + ریچٹ ~76% + **اہم ماڈیولز کے لیے 8 فی ماڈیول کم از کم حدیں** + راتانہ property tests + راتانہ **mutation testing**۔
 - **عمومی:** ٹیسٹ رنر (یا رنرز) + coverage کی **مطلق** کم از کم حد (صفر سے بچاؤ) + coverage **ریچٹ** (تنزلی سے بچاؤ) + **زیادہ خطرے والے کوڈ کے لیے فی ماڈیول کم از کم حدیں** (Goodhart سے بچاؤ) + خالص منطق کے لیے property-based ٹیسٹنگ + ٹیسٹ کے معیار کی حقیقی پیمائش کے طور پر راتانہ **mutation testing**۔
 
 ### 4. ٹیسٹ پالیسی (ہیرا پھیری سے بچاؤ)
 
-- **OmniRoute:** `pr-test-policy` (پروڈکشن کوڈ کے لیے ٹیسٹ لازم ہے)، `check-test-masking` (کمزور کیے گئے asserts کو روکتا ہے)، `pr-evidence` (کامیابی کے دعوے کے لیے ثبوت کا بلاک لازم ہے)، `test-discovery` (ہر ٹیسٹ کو کوئی رنر جمع کرتا ہے)۔
+- **67router:** `pr-test-policy` (پروڈکشن کوڈ کے لیے ٹیسٹ لازم ہے)، `check-test-masking` (کمزور کیے گئے asserts کو روکتا ہے)، `pr-evidence` (کامیابی کے دعوے کے لیے ثبوت کا بلاک لازم ہے)، `test-discovery` (ہر ٹیسٹ کو کوئی رنر جمع کرتا ہے)۔
 - **عمومی:** "نیا کوڈ ⇒ نیا ٹیسٹ" گیٹ + ہٹائے گئے assert/tautology کا کھوج کار + ثبوت کی شرط (TDD یا فعال ٹیسٹ) + یہ ضمانت کہ کوئی ٹیسٹ globs سے باہر یتیم نہ رہ جائے۔
 
 ### 5. پیچیدگی اور کوڈ کی صحت (ریچٹس)
 
-- **OmniRoute:** ESLint-warnings (3769↓)، jscpd duplication (5.72%↓)، cyclomatic+max-lines complexity (1800↓)، cognitive complexity sonarjs (753↓)، dead-code/unused-exports knip (339↓)، ہر فائل کا file-size (منجمد، صرف کمی)، circular-deps (حسبِ ضرورت Tarjan، روکنے والا)۔
+- **67router:** ESLint-warnings (3769↓)، jscpd duplication (5.72%↓)، cyclomatic+max-lines complexity (1800↓)، cognitive complexity sonarjs (753↓)، dead-code/unused-exports knip (339↓)، ہر فائل کا file-size (منجمد، صرف کمی)، circular-deps (حسبِ ضرورت Tarjan، روکنے والا)۔
 - **عمومی:** صحت کے ہر میٹرک کو ریچٹ کریں (تنبیہات، نقل، cyclomatic **اور** cognitive پیچیدگی، مردہ کوڈ، فائل کا حجم، import چکر)۔ سمت ہمیشہ "تنزلی نہ ہو" ہو۔
 
 ### 6. جامد سکیورٹی (SAST + secrets)
 
-- **OmniRoute:** CodeQL (alerts ریچٹ = 0)، gitleaks (`[extend] useDefault=true` — انتہائی اہم!)، SonarQube، حسبِ ضرورت سکیورٹی قواعد (public-creds، error-helper، route-guard-membership، route-validation)۔
+- **67router:** CodeQL (alerts ریچٹ = 0)، gitleaks (`[extend] useDefault=true` — انتہائی اہم!)، SonarQube، حسبِ ضرورت سکیورٹی قواعد (public-creds، error-helper، route-guard-membership، route-validation)۔
 - **عمومی:** alert ریچٹ کے ساتھ SAST (CodeQL/Sonar/semgrep) + **وراثت میں ملنے والے پہلے سے طے شدہ ruleset** کے ساتھ secrets scanner (پہلے سے طے شدہ ترتیب کو override کرنے والی حسبِ ضرورت ترتیب = اندھا پن) + منصوبے کے لیے مخصوص Hard Rule سکیورٹی گیٹس۔
 
 ### 7. سپلائی چین (dependencies)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA)، license-checker (SPDX allowlist)، lockfile-lint (HTTPS+sha512+registry)، `check-deps` anti-slopsquatting (allowlist + عمر ≥72h)۔
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA)، license-checker (SPDX allowlist)، lockfile-lint (HTTPS+sha512+registry)، `check-deps` anti-slopsquatting (allowlist + عمر ≥72h)۔
 - **عمومی:** متعدد ذرائع والا SCA + لائسنس allowlist + lockfile کی سالمیت کی جانچ + عمر/typosquatting کی جانچ کے ساتھ dependency allowlist + گروپ شدہ update bot۔
 
 ### 8. سپلائی چین (build اور release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft)، SLSA provenance (`--provenance`)، OpenSSF Scorecard (ہفتہ وار)، workflow کی مضبوطی (zizmor: artipacked→`persist-credentials:false`، cache-poisoning، token-permissions)۔
+- **67router:** SBOM (CycloneDX + syft)، SLSA provenance (`--provenance`)، OpenSSF Scorecard (ہفتہ وار)، workflow کی مضبوطی (zizmor: artipacked→`persist-credentials:false`، cache-poisoning، token-permissions)۔
 - **عمومی:** publish کرتے وقت SBOM بنائیں + دستخط شدہ provenance (SLSA L2+) + مقررہ شیڈول پر Scorecard + تمام workflows کو مضبوط بنائیں (کم از کم اختیارات والے tokens، non-pusher checkout پر کوئی محفوظ شدہ credentials نہیں، actions کو SHA کے ذریعے pin کیا گیا ہو)۔
 
 ### 9. معاہدے اور API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI)، schemathesis (راتانہ contract fuzz)، openapi-coverage (دستاویزی routes کا %، ریچٹ 38.3%)، openapi-security-tiers (spec بمقابلہ route-guard)۔
+- **67router:** oasdiff (breaking-change OpenAPI)، schemathesis (راتانہ contract fuzz)، openapi-coverage (دستاویزی routes کا %، ریچٹ 38.3%)، openapi-security-tiers (spec بمقابلہ route-guard)۔
 - **عمومی:** breaking-change contract diff (oasdiff/buf) + spec کے خلاف property-based fuzz (schemathesis) + دستاویزی coverage کا ریچٹ + spec↔code مطابقت۔
 
 ### 10. دستاویزات اور i18n (بوسیدگی سے بچاؤ)
 
-- **OmniRoute:** docs-sync (عکس شدہ versions)، docs-counts-sync (دستاویزات کے اعداد بمقابلہ کوڈ)، env-doc-sync، doc-links، fabricated-docs، cli-i18n، i18n-ui-coverage (`--threshold=65` + ریچٹ 80.1%)۔
+- **67router:** docs-sync (عکس شدہ versions)، docs-counts-sync (دستاویزات کے اعداد بمقابلہ کوڈ)، env-doc-sync، doc-links، fabricated-docs، cli-i18n، i18n-ui-coverage (`--threshold=65` + ریچٹ 80.1%)۔
 - **عمومی:** دستاویزات اور کوڈ کے درمیان versions/counts/env-vars کو ہم آہنگ کریں (گیٹ، محض اعتماد نہیں) + داخلی links کی توثیق کریں + i18n coverage کو ریچٹ کریں۔
 
 ### 11. واہمہ سازی سے بچاؤ / مطابقت (نایاب زمرہ)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ فعال symbol)، provider-consistency، fetch-targets (client fetch ⇒ حقیقی route)، docs-symbols، db-rules (Hard Rules #2/#5)، migration-numbering۔
+- **67router:** known-symbols (string dispatch ⇒ فعال symbol)، provider-consistency، fetch-targets (client fetch ⇒ حقیقی route)، docs-symbols، db-rules (Hard Rules #2/#5)، migration-numbering۔
 - **عمومی:** ہر "نقل شدہ واحد ماخذِ حقیقت" (registry، string dispatch، تہوں کے درمیان حوالہ جات) کے لیے ایسا گیٹ جو ثابت کرے کہ دونوں اطراف مطابقت رکھتے ہیں۔ یہ اس بوسیدگی کو پکڑتا ہے جسے typecheck/test نہیں پکڑتے۔
 
 ### 12. لچک اور ڈومین (پروڈکٹ کے لیے مخصوص)
 
-- **OmniRoute:** chaos (fault-injection)، heap-growth (leak)، k6 (soak)، promptfoo+garak (LLM red-team OWASP LLM Top 10)، لچک کے 3 قوانین (circuit-breaker/cooldown/lockout)۔
+- **67router:** chaos (fault-injection)، heap-growth (leak)، k6 (soak)، promptfoo+garak (LLM red-team OWASP LLM Top 10)، لچک کے 3 قوانین (circuit-breaker/cooldown/lockout)۔
 - **عمومی:** **اپنے** ڈومین کی ناکامی کی صورتوں کی نشان دہی کریں اور ہر ایک کے لیے ایک گیٹ رکھیں (چاہے وہ راتانہ ہی کیوں نہ ہو)۔ AI ایپس کے لیے: injection red-team۔ تقسیم شدہ نظاموں کے لیے: chaos + leak + soak۔
 
 ---

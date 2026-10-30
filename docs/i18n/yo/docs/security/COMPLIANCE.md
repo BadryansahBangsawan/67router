@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Ìgbà ìmúdójúìwọ̀n tó gbẹ̀yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute ń ṣàkọsílẹ̀ àwọn ìṣe ìṣàkóso, àwọn ìṣẹ̀lẹ̀ ìfàṣẹsí, àwọn ìyípadà ìgbésí-ayé ẹ̀rí ìdánimọ̀ olùpèsè, àti àwọn ìpè irinṣẹ́ MCP sínú àwọn tábìlì àyẹ̀wò tí SQLite ń ṣe àtìlẹ́yìn fún. Ojú-ewé yìí ṣàlàyé ohun tí a ń ṣàkọsílẹ̀, ibi tí a ti ń tọ́jú rẹ̀, bí a ṣe ń pẹ́ tó láti pa á mọ́, bí àwọn kọ́kọ́rọ́ API ṣe lè jáde kúrò nínú rẹ̀, àti bí a ṣe lè ṣe ìbéèrè sí dátà náà.
+67router ń ṣàkọsílẹ̀ àwọn ìṣe ìṣàkóso, àwọn ìṣẹ̀lẹ̀ ìfàṣẹsí, àwọn ìyípadà ìgbésí-ayé ẹ̀rí ìdánimọ̀ olùpèsè, àti àwọn ìpè irinṣẹ́ MCP sínú àwọn tábìlì àyẹ̀wò tí SQLite ń ṣe àtìlẹ́yìn fún. Ojú-ewé yìí ṣàlàyé ohun tí a ń ṣàkọsílẹ̀, ibi tí a ti ń tọ́jú rẹ̀, bí a ṣe ń pẹ́ tó láti pa á mọ́, bí àwọn kọ́kọ́rọ́ API ṣe lè jáde kúrò nínú rẹ̀, àti bí a ṣe lè ṣe ìbéèrè sí dátà náà.
 
 Ìmúlò náà wà nínú `src/lib/compliance/index.ts` (T-43 — "Àwọn Ìṣàkóso Ìbámu") àti `src/lib/compliance/providerAudit.ts`. Àwọn ìkọ̀wé àyẹ̀wò kì í dá àṣìṣe jáde láé: nígbà ìkùnà èyíkéyìí, a máa foju kọ ìpè náà láìsọ ohunkóhun kí ṣíṣe àkọsílẹ̀ àyẹ̀wò má bàa dá ìṣàn ìbéèrè pàtàkì dúró.
 

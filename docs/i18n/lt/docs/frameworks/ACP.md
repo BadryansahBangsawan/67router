@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute atskiria **CLI aptikimą**, **savitąjį Agent Client Protocol** ir
+67router atskiria **CLI aptikimą**, **savitąjį Agent Client Protocol** ir
 **senesnius stdio adapterius**. Įdiegto vykdomojo failo aptikimas nepatvirtina jo
 autentifikavimo, modelio suderinamumo ar pasirengimo apdoroti užklausą.
 

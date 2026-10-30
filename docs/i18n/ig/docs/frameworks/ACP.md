@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-ekewa **nchọpụta CLI**, **Agent Client Protocol nke e wuru n'ime ya**, na
+67router na-ekewa **nchọpụta CLI**, **Agent Client Protocol nke e wuru n'ime ya**, na
 **ihe nkwụnye stdio ochie**. Ịchọta binary arụnyere anaghị egosi na
 ntọala njirimara ya, ndakọrịta model ya, ma ọ bụ njikere ya ijikwa prompt dị mma.
 

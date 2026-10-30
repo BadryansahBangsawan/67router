@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge on OmniRoute'i MITM-puhverserver (vahendusrünne ehk Man-in-the-Middle), mis püüab kinni IDE tehisintellektiagentide HTTPS-liikluse ja suunab selle ümber OmniRoute'i ühtse marsruutimismootori kaudu. See toetab **10 IDE agenti** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code ja Trae (uurimisel) — tehes OmniRoute'ist turu kõige laiema katvusega MITM-puhverserveri tehisintellektipõhistele programmeerimisabilistele.
+AgentBridge on 67router'i MITM-puhverserver (vahendusrünne ehk Man-in-the-Middle), mis püüab kinni IDE tehisintellektiagentide HTTPS-liikluse ja suunab selle ümber 67router'i ühtse marsruutimismootori kaudu. See toetab **10 IDE agenti** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code ja Trae (uurimisel) — tehes 67router'ist turu kõige laiema katvusega MITM-puhverserveri tehisintellektipõhistele programmeerimisabilistele.
 
 **Juhtpaneeli asukoht:** `/dashboard/tools/agent-bridge`
 **Külgriba rühm:** Tööriistad (pärast jaotist Pilveagendid)
@@ -16,34 +16,34 @@ AgentBridge on OmniRoute'i MITM-puhverserver (vahendusrünne ehk Man-in-the-Midd
 
 ### Mis on AgentBridge?
 
-Kui IDE-i agent (nt GitHub Copilot, Cursor, Claude Code) teeb API-kutse, ühendub see otse ülemvoo tehisintellekti pakkujaga (OpenAI, Anthropic jne). AgentBridge püüab selle ühenduse läbipaistvalt kinni TLS-i tasemel — ilma et agendi konfiguratsiooni oleks vaja muuta — ja kirjutab päringu üle OmniRoute'i kaudu.
+Kui IDE-i agent (nt GitHub Copilot, Cursor, Claude Code) teeb API-kutse, ühendub see otse ülemvoo tehisintellekti pakkujaga (OpenAI, Anthropic jne). AgentBridge püüab selle ühenduse läbipaistvalt kinni TLS-i tasemel — ilma et agendi konfiguratsiooni oleks vaja muuta — ja kirjutab päringu üle 67router'i kaudu.
 
 See tähendab, et saate:
 
-- **Suunata mis tahes agendi mis tahes pakkujale**: Kas Copilot suhtleb OpenAI-ga? Suunake see ümber Anthropic Claude'i, Gemini või mõne muu OmniRoute'i 375 pakkuja poole.
+- **Suunata mis tahes agendi mis tahes pakkujale**: Kas Copilot suhtleb OpenAI-ga? Suunake see ümber Anthropic Claude'i, Gemini või mõne muu 67router'i 375 pakkuja poole.
 - **Rakendada mudelite vastendamist**: `gemini-3-flash` → `claude-sonnet-4.7` läbipaistvalt töötleja tasemel.
 - **Jälgida kogu agendi liiklust**: iga pealt kuulatud päring avaldatakse [Traffic Inspector](./TRAFFIC_INSPECTOR.md)-is.
-- **Rakendada OmniRoute'i vastupidavust**: kombo-marsruutimine, ahelakatkestajad, tagavaralahendused ja kulude jälgimine töötavad ka IDE-i agendi liikluse puhul.
+- **Rakendada 67router'i vastupidavust**: kombo-marsruutimine, ahelakatkestajad, tagavaralahendused ja kulude jälgimine töötavad ka IDE-i agendi liikluse puhul.
 
 ### Positsioneerimine turuga võrreldes
 
-| Funktsioon                       | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| -------------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity                      |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot                   |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                       |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex                     |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                       |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries                   |    —    |    ✓     |        —        |             ✓             |
-| Claude Code                      |    —    |    —     |        ✓        |             ✓             |
-| Open Code                        |    —    |    —     |        ✓        |             ✓             |
-| Trae                             |    —    |    —     |        —        |       🔍 Uurimisel        |
-| Armatuurlaua kasutajaliides      |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector                |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute'i marsruutimine        |    ✗    |    ✗     |        ✗        |             ✓             |
-| Mudelivastenduste kasutajaliides |    ✗    |    ✗     |        ✗        |             ✓             |
-| Möödaviigu loend                 |    ✗    |    ✗     |        ✓        |             ✓             |
-| Ülemvoo CA-sertifikaat           |    ✗    |    ✗     |        ✓        |             ✓             |
+| Funktsioon                       | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| -------------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity                      |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot                   |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                       |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex                     |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                       |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries                   |    —    |    ✓     |        —        |            ✓             |
+| Claude Code                      |    —    |    —     |        ✓        |            ✓             |
+| Open Code                        |    —    |    —     |        ✓        |            ✓             |
+| Trae                             |    —    |    —     |        —        |       🔍 Uurimisel       |
+| Armatuurlaua kasutajaliides      |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector                |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router'i marsruutimine         |    ✗    |    ✗     |        ✗        |            ✓             |
+| Mudelivastenduste kasutajaliides |    ✗    |    ✗     |        ✗        |            ✓             |
+| Möödaviigu loend                 |    ✗    |    ✗     |        ✓        |            ✓             |
+| Ülemvoo CA-sertifikaat           |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, CJS-i alamprotsess)
     │  tuvastab sihtkoha Host-päise SNI järgi
     │  genereerib iga SNI jaoks AgentBridge'i CA allkirjastatud TLS-serdi
     ├── Möödaviiguloendi vaste? → TCP otseühendus (dekrüptimist ei toimu)
-    ├── Sihtkoha vaste? → fetch → OmniRoute'i marsruuter (port 20128)
+    ├── Sihtkoha vaste? → fetch → 67router'i marsruuter (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() päringu kehal/päistel
     │               ├── TrafficBuffer.push() — avaldab liiklusinspektorile
@@ -205,7 +205,7 @@ Enne kui IDE-d MITM-ühenduse aktsepteerivad, peab operatsioonisüsteem AgentBri
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -253,10 +253,10 @@ GitHub Copiloti `/etc/hosts` kirjete näide:
 
 Kasutage iga agendikaardi mudelite vastendamise tabelit, et määratleda lähte- → sihtmudeli vastendused:
 
-| Lähte mudel (agendi omamudel) | Sihtmudel (OmniRoute) |
-| ----------------------------- | --------------------- |
-| `gpt-4o`                      | `claude-sonnet-4.7`   |
-| `*` (metamärk)                | `claude-haiku-4.7`    |
+| Lähte mudel (agendi omamudel) | Sihtmudel (67router) |
+| ----------------------------- | -------------------- |
+| `gpt-4o`                      | `claude-sonnet-4.7`  |
+| `*` (metamärk)                | `claude-haiku-4.7`   |
 
 Metamärk `*` vastendab iga tundmatu mudeli määratud sihtmudeliga. Salvestatakse tabelisse `agent_bridge_mappings`.
 
@@ -269,7 +269,7 @@ Metamärk `*` vastendab iga tundmatu mudeli määratud sihtmudeliga. Salvestatak
 
 ### 3.5 Riskiteade
 
-AgentBridge püüab kinni identimisteabe (OAuthi tokenid, API-võtmed), mida IDE kasutab autentimiseks ülesvoolu teenusepakkujate juures. See teave **maskeeritakse enne logimist** (vt §2.7), kuid on OmniRoute'i MITM-kihile nähtav. Iga agendi esmakordsel aktiveerimisel kuvatakse suletav riskiteate modaalaken.
+AgentBridge püüab kinni identimisteabe (OAuthi tokenid, API-võtmed), mida IDE kasutab autentimiseks ülesvoolu teenusepakkujate juures. See teave **maskeeritakse enne logimist** (vt §2.7), kuid on 67router'i MITM-kihile nähtav. Iga agendi esmakordsel aktiveerimisel kuvatakse suletav riskiteate modaalaken.
 
 ### 3.6 Hooldus ja diagnostika
 
@@ -389,7 +389,7 @@ Tuvastamiseks kasutatakse operatsioonisüsteemipõhiseid teid ja binaarfailide k
 
 ### Tundlike hostide möödaviiguloend
 
-Möödaviiguloend tagab, et finantsasutuste, OAuthi/SSO pakkujate ja muude tundlike hostide liiklust **ei dekrüptita kunagi**. Nende TLS-liiklus läbib süsteemi läbipaistva TCP-tunnelina — OmniRoute ei näe kunagi avateksti.
+Möödaviiguloend tagab, et finantsasutuste, OAuthi/SSO pakkujate ja muude tundlike hostide liiklust **ei dekrüptita kunagi**. Nende TLS-liiklus läbib süsteemi läbipaistva TCP-tunnelina — 67router ei näe kunagi avateksti.
 
 Vaikimisi möödaviigumustrid hõlmavad järgmist:
 
@@ -440,7 +440,7 @@ Teise võimalusena seadista AgentBridge'i sätetes mitteprivilegeeritud port nin
 
 Kui IDE kuvab pärast AgentBridge'i käivitamist TLS-i tõrkeid:
 
-1. Kontrolli, kas sertifikaat paigaldati: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) või `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Kontrolli, kas sertifikaat paigaldati: `security find-certificate -c "OmniRoute MITM CA"` (macOS) või `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Mõned rakendused haldavad oma usaldushoidlat (Firefox, Chrome Linuxis). Käivita „Trust Cert” uuesti ja kontrolli NSS-i/Firefoxi-spetsiifilist sertifikaadihoidlat.
 3. Pärast usalduse määramist taaskäivita IDE — pooleliolevad TLS-seansid kasutavad vana usaldusolekut.
 
@@ -491,7 +491,7 @@ Automaatne tuvastamine kasutab tavapäraseid paigaldusteid. Kui tuvastamine nurj
 Kui AgentBridge püüab päringud kinni, kuid kõik päringud nurjuvad:
 
 1. Kontrolli aadressil `/dashboard/providers`, et ühendatud oleks vähemalt üks teenusepakkuja
-2. Kontrolli OmniRoute'i serveri logisid: `APP_LOG_LEVEL=debug` failis `.env`
+2. Kontrolli 67router'i serveri logisid: `APP_LOG_LEVEL=debug` failis `.env`
 3. Kontrolli, et `OMNIROUTE_BASE_URL` osutaks õigele ruuteri lõpp-punktile (vaikeväärtus: `http://127.0.0.1:20128`)
 
 ---

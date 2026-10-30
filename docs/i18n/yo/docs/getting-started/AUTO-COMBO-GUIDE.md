@@ -1,16 +1,16 @@
-# Auto-Combo: Let OmniRoute Pick the Best AI for You (Yorùbá)
+# Auto-Combo: Let 67router Pick the Best AI for You (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/AUTO-COMBO-GUIDE.md)
 
 ---
 
-> **Ní ṣókí**: Ṣètò model rẹ sí `auto`, OmniRoute yóò sì yan olùpèsè AI tó dára jù lọ fún ìbéèrè kọ̀ọ̀kan láìfọwọ́yí. Kò sí ìṣètò kankan tí o nílò.
+> **Ní ṣókí**: Ṣètò model rẹ sí `auto`, 67router yóò sì yan olùpèsè AI tó dára jù lọ fún ìbéèrè kọ̀ọ̀kan láìfọwọ́yí. Kò sí ìṣètò kankan tí o nílò.
 
 ---
 
 ## Ohun Tó Ń Ṣe
 
-Dípò kí o yan model AI kan pàtó (bíi GPT-4o tàbí Claude), o lè jẹ́ kí OmniRoute **yan èyí tó dára jù lọ láìfọwọ́yí** fún ìbéèrè kọ̀ọ̀kan. Ó máa ń gbé àwọn nǹkan wọ̀nyí yẹ̀ wò:
+Dípò kí o yan model AI kan pàtó (bíi GPT-4o tàbí Claude), o lè jẹ́ kí 67router **yan èyí tó dára jù lọ láìfọwọ́yí** fún ìbéèrè kọ̀ọ̀kan. Ó máa ń gbé àwọn nǹkan wọ̀nyí yẹ̀ wò:
 
 - **Ìlera** — Ṣé olùpèsè náà ń ṣiṣẹ́ ní báyìí?
 - **Ìyára** — Báwo ló ṣe yára tó?
@@ -18,7 +18,7 @@ Dípò kí o yan model AI kan pàtó (bíi GPT-4o tàbí Claude), o lè jẹ́ k
 - **Dídára** — Ṣé ó dára fún irú iṣẹ́ yìí?
 - **Agbára** — Ṣé quota ṣì kù fún un?
 
-OmniRoute máa ń fún gbogbo àwọn olùpèsè tí o so pọ̀ ní àmì, yóò sì yan èyí tó dára jù lọ. Tí ó bá kùnà, yóò gbìyànjú èyí tó tẹ̀ lé e láìfọwọ́yí.
+67router máa ń fún gbogbo àwọn olùpèsè tí o so pọ̀ ní àmì, yóò sì yan èyí tó dára jù lọ. Tí ó bá kùnà, yóò gbìyànjú èyí tó tẹ̀ lé e láìfọwọ́yí.
 
 ---
 
@@ -30,7 +30,7 @@ OmniRoute máa ń fún gbogbo àwọn olùpèsè tí o so pọ̀ ní àmì, yó�
 model: "auto"
 ```
 
-**Ìgbésẹ̀ 2**: Èyí nìkan ni! OmniRoute yóò bójú tó ìyókù.
+**Ìgbésẹ̀ 2**: Èyí nìkan ni! 67router yóò bójú tó ìyókù.
 
 **Ìgbésẹ̀ 3** (kì í ṣe dandan): Lo variant kan fún àwọn iṣẹ́ pàtó:
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## Bí Ó Ṣe Ń Ṣiṣẹ́ (Ẹ̀yà Tó Rọrùn)
 
-Nígbà tí o bá fi ìbéèrè kan ránṣẹ́ pẹ̀lú `model: "auto"`, OmniRoute yóò:
+Nígbà tí o bá fi ìbéèrè kan ránṣẹ́ pẹ̀lú `model: "auto"`, 67router yóò:
 
 1. **Wo gbogbo àwọn olùpèsè tí o so pọ̀** — Gbogbo olùpèsè tí o ti ṣàfikún (OpenAI, Anthropic, Google, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ)
 2. **Fún ọ̀kọ̀ọ̀kan ní àmì**, nípa gbígbé àwọn nǹkan wọ̀nyí yẹ̀ wò, lára àwọn ohun mìíràn:
@@ -86,7 +86,7 @@ Nígbà tí o bá fi ìbéèrè kan ránṣẹ́ pẹ̀lú `model: "auto"`, Omni
    - Báwo ló ṣe yára tó? (ìyára)
    - Ṣé ó dára fún iṣẹ́ yìí? (dídára)
 3. **Yan èyí tó dára jù lọ** — Olùpèsè tó ní àmì tó ga jù lọ ni yóò gba ìbéèrè rẹ
-4. **Padà bọ̀ sípò láìfọwọ́yí** — Tí ó bá kùnà, OmniRoute yóò gbìyànjú èyí tó tẹ̀ lé e láìfọwọ́yí
+4. **Padà bọ̀ sípò láìfọwọ́yí** — Tí ó bá kùnà, 67router yóò gbìyànjú èyí tó tẹ̀ lé e láìfọwọ́yí
 
 ### Ètò Fífún Ní Àmì
 
@@ -120,11 +120,11 @@ Variant kọ̀ọ̀kan ń lo àwọn ìwúwo tó yàtọ̀:
 
 ## Bí Ó Ṣe N Kojú Àwọn Ìkùnà
 
-OmniRoute ní **ìpele ààbò mẹ́ta**:
+67router ní **ìpele ààbò mẹ́ta**:
 
 ### 1. Ìyípadà Aifọwọ́yí
 
-Tí olùpèsè tó dára jù lọ bá kùnà, OmniRoute yóò gbìyànjú èyí tó tẹ̀ lé e laifọwọ́yí. O kò nílò láti ṣe ohunkóhun.
+Tí olùpèsè tó dára jù lọ bá kùnà, 67router yóò gbìyànjú èyí tó tẹ̀ lé e laifọwọ́yí. O kò nílò láti ṣe ohunkóhun.
 
 ### 2. Ìmúra-ẹni-padà
 
@@ -136,13 +136,13 @@ Tí olùpèsè kan bá ń kùnà léraléra:
 
 ### 3. Ìyípadà Pàjáwìrì
 
-Tí gbogbo àwọn olùpèsè bá kùnà, OmniRoute yóò darí ìbéèrè sí àwọn olùpèsè ọ̀fẹ́ tó dúró ṣinṣin (bíi Kiro tàbí Qoder) gẹ́gẹ́ bí ọ̀nà àṣàyàn ìkẹyìn.
+Tí gbogbo àwọn olùpèsè bá kùnà, 67router yóò darí ìbéèrè sí àwọn olùpèsè ọ̀fẹ́ tó dúró ṣinṣin (bíi Kiro tàbí Qoder) gẹ́gẹ́ bí ọ̀nà àṣàyàn ìkẹyìn.
 
 ---
 
 ## Àtìlẹ́yìn Fún Ọ̀pọ̀ Àkọọ́lẹ̀
 
-Tí o bá ní ọ̀pọ̀ àkọọ́lẹ̀ fún olùpèsè kan náà (fún àpẹẹrẹ, kọ́kọ́rọ́ OpenAI méjì), OmniRoute yóò ka ọ̀kọ̀ọ̀kan sí **olùdíje ọ̀tọ̀ọ̀tọ̀**. Èyí túmọ̀ sí pé:
+Tí o bá ní ọ̀pọ̀ àkọọ́lẹ̀ fún olùpèsè kan náà (fún àpẹẹrẹ, kọ́kọ́rọ́ OpenAI méjì), 67router yóò ka ọ̀kọ̀ọ̀kan sí **olùdíje ọ̀tọ̀ọ̀tọ̀**. Èyí túmọ̀ sí pé:
 
 - Àkọọ́lẹ̀ A ṣì ní ìpín lílò tó kù → lò ó
 - Àkọọ́lẹ̀ B ní ìdíwọ̀n ìwọ̀n-ìbéèrè → fo òun kọjá
@@ -154,13 +154,13 @@ A máa ń ṣe àgbéyẹ̀wò àmì àkọọ́lẹ̀ kọ̀ọ̀kan lọ́tọ
 
 ## Ìṣàwárí Bandit
 
-OmniRoute máa ń **ṣàwárí** àwọn olùpèsè tuntun lẹ́ẹ̀kọ̀ọ̀kan láti rí àwọn àṣàyàn tó dára sí i:
+67router máa ń **ṣàwárí** àwọn olùpèsè tuntun lẹ́ẹ̀kọ̀ọ̀kan láti rí àwọn àṣàyàn tó dára sí i:
 
 - **Àìpéye**: 5% àwọn ìbéèrè ni a máa ń fi ránṣẹ́ sí àwọn olùpèsè laileto
 - **Aifọwọ́yí/ọlọ́gbọ́n**: Ìwọ̀n ìṣàwárí 10%
 - **A dá a dúró** nígbà tí ó lé ní 50% àwọn olùpèsè kò bá ní ìlera tó dára
 
-Èyí ń ran OmniRoute lọ́wọ́ láti kọ́ àwọn olùpèsè wo ni ó ṣiṣẹ́ dáadáa jù lọ fún àwọn àṣà lílò rẹ.
+Èyí ń ran 67router lọ́wọ́ láti kọ́ àwọn olùpèsè wo ni ó ṣiṣẹ́ dáadáa jù lọ fún àwọn àṣà lílò rẹ.
 
 ---
 
@@ -172,11 +172,11 @@ OmniRoute máa ń **ṣàwárí** àwọn olùpèsè tuntun lẹ́ẹ̀kọ̀ọ
 
 ### "Kí ló máa ṣẹlẹ̀ tí olùpèsè kan kò bá ṣiṣẹ́?"
 
-OmniRoute máa fo òun kọjá laifọwọ́yí, yóò sì gbìyànjú èyí tó tẹ̀ lé e. Tí olùpèsè kan bá ń kùnà léraléra, a ó yọ ọ́ kúrò fún ìgbà díẹ̀ (ìṣẹ́jú 5-30). O kò nílò láti ṣe ohunkóhun.
+67router máa fo òun kọjá laifọwọ́yí, yóò sì gbìyànjú èyí tó tẹ̀ lé e. Tí olùpèsè kan bá ń kùnà léraléra, a ó yọ ọ́ kúrò fún ìgbà díẹ̀ (ìṣẹ́jú 5-30). O kò nílò láti ṣe ohunkóhun.
 
 ### "Ṣé mo lè rí olùpèsè tí a lò?"
 
-Ṣàyẹ̀wò àwọn àkọlé ìdáhùn — OmniRoute máa ń ṣàfikún olùpèsè àti àwòṣe tí a lò sínú ìdáhùn kọ̀ọ̀kan.
+Ṣàyẹ̀wò àwọn àkọlé ìdáhùn — 67router máa ń ṣàfikún olùpèsè àti àwòṣe tí a lò sínú ìdáhùn kọ̀ọ̀kan.
 
 ### "Ṣé ó máa ń kẹ́kọ̀ọ́ láti inú lílò mi?"
 

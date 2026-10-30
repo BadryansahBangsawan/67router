@@ -6,7 +6,7 @@
 
 ## Tổng quan
 
-Các lệnh OmniRoute CLI xác thực với API quản lý cục bộ bằng token
+Các lệnh 67router CLI xác thực với API quản lý cục bộ bằng token
 `HMAC-SHA256(machine-id, salt)` được gửi qua header yêu cầu
 `x-omniroute-cli-token`.
 

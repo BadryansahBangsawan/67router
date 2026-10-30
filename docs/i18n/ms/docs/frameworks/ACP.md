@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute memisahkan **penemuan CLI**, **Agent Client Protocol natif**, dan
+67router memisahkan **penemuan CLI**, **Agent Client Protocol natif**, dan
 **penyesuai stdio legasi**. Penemuan binari yang dipasang tidak membuktikan
 pengesahan, keserasian model atau kesediaannya untuk mengendalikan gesaan.
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **Lyhyesti**: `open-sse/` on keskeinen suoratoistomoottori, joka käsittelee kaikki OmniRouten LLM-pyynnöt. Se sisältää noin 1 400 tiedostoa, joissa toteutetaan pyyntöputki, suorittimet, palvelut, MCP-palvelin ja käännöskerros. Tässä oppaassa selitetään, miten osat toimivat yhdessä.
+> **Lyhyesti**: `open-sse/` on keskeinen suoratoistomoottori, joka käsittelee kaikki 67routerin LLM-pyynnöt. Se sisältää noin 1 400 tiedostoa, joissa toteutetaan pyyntöputki, suorittimet, palvelut, MCP-palvelin ja käännöskerros. Tässä oppaassa selitetään, miten osat toimivat yhdessä.
 
 **Lähde:** `open-sse/` (työtilapaketti, noin 1 440 muuta kuin testaukseen tarkoitettua `.ts`-tiedostoa)
 
@@ -12,10 +12,10 @@
 
 ## Miksi erillinen työtilapaketti?
 
-`open-sse/` on **itsenäinen työtila** OmniRoute-monorepositoriossa useista syistä:
+`open-sse/` on **itsenäinen työtila** 67router-monorepositoriossa useista syistä:
 
 1. **Uudelleenkäytettävyys** — `open-sse` julkaistaan npm:ssä nimellä `@omniroute/open-sse`, joten muut projektit voivat käyttää sitä itsenäisesti
-2. **Selkeät rajat** — suoratoistomoottori on irrotettu OmniRoute-kohtaisesta käyttöliittymä- ja tietokantakerroksesta
+2. **Selkeät rajat** — suoratoistomoottori on irrotettu 67router-kohtaisesta käyttöliittymä- ja tietokantakerroksesta
 3. **Suorituskyky** — moottorilla ei ole Next.js-riippuvuuksia, mikä mahdollistaa nopeammat kylmäkäynnistykset komentorivi- ja palvelimettomissa ympäristöissä
 4. **Versiointi** — `open-sse` voidaan julkaista omassa tahdissaan
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Miksi erillinen muunnin?
 
-Responses API on OpenAI:n uusi muoto, joka tukee **tilallisia keskusteluja** (`previous_response_id`). Kun asiakas lähettää Responses-pyynnön, OmniRoute:
+Responses API on OpenAI:n uusi muoto, joka tukee **tilallisia keskusteluja** (`previous_response_id`). Kun asiakas lähettää Responses-pyynnön, 67router:
 
 1. Muuntaa Responses-muodon sisäisesti Chat Completions -muotoon
 2. Lähettää pyynnön palveluntarjoajalle (mille tahansa Chat Completions -muotoa tukevalle palveluntarjoajalle)

@@ -4,7 +4,7 @@
 
 ---
 
-Žiniatinklio slapukų teikėjai leidžia „OmniRoute“ naudoti DI paslaugą per esamą naršyklės seansą, o ne API raktą. Jie naudingi, kai jau turite prieigą prie paslaugos per jos svetainę ir norite, kad „OmniRoute“ naudotų tą patį autentifikuotą seansą.
+Žiniatinklio slapukų teikėjai leidžia „67router“ naudoti DI paslaugą per esamą naršyklės seansą, o ne API raktą. Jie naudingi, kai jau turite prieigą prie paslaugos per jos svetainę ir norite, kad „67router“ naudotų tą patį autentifikuotą seansą.
 
 Kitaip nei API raktų teikėjai, žiniatinklio slapukų teikėjai autentifikuoja naudodami kredencialus, kuriuos jūsų naršyklė siunčia svetainei.
 
@@ -49,7 +49,7 @@ DevTools
 
 Užklausos `Cookie` antraštėje pateikiama tiksli autentifikavimo informacija, kurią jūsų naršyklė sėkmingai panaudojo.
 
-Daugumai žiniatinklio slapukų teikėjų būtent šią reikšmę reikia įklijuoti į „OmniRoute“.
+Daugumai žiniatinklio slapukų teikėjų būtent šią reikšmę reikia įklijuoti į „67router“.
 
 ---
 
@@ -63,7 +63,7 @@ Daugumos žiniatinklio slapukų teikėjų sąrankos procesas yra toks pats.
 4. Atnaujinkite puslapį.
 5. Atidarykite autentifikuotą pokalbio ar dialogo užklausą.
 6. Nukopijuokite reikiamus autentifikavimo kredencialus.
-7. Atidarykite „OmniRoute“.
+7. Atidarykite „67router“.
 8. Eikite į **Providers → Add Provider**.
 9. Pasirinkite savo žiniatinklio slapukų teikėją.
 10. Įklijuokite kredencialus.
@@ -92,17 +92,17 @@ Skirtingos svetainės autentifikavimo informaciją saugo skirtingai. Kai kurioms
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) yra nemokama pokalbių platforma naudotojams, kurioje nereikia registruotis — seansas anonimiškai sukuriamas pirmojo apsilankymo metu ir išsaugomas naudojant tris slapukus: `uid`, `si_usr_id` ir `si_ses_id`. OmniRoute perduoda tą patį `/api/dispatch` galinį tašką per vieną modelio ID (`notrack-c`, alternatyvus pavadinimas `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) yra nemokama pokalbių platforma naudotojams, kurioje nereikia registruotis — seansas anonimiškai sukuriamas pirmojo apsilankymo metu ir išsaugomas naudojant tris slapukus: `uid`, `si_usr_id` ir `si_ses_id`. 67router perduoda tą patį `/api/dispatch` galinį tašką per vieną modelio ID (`notrack-c`, alternatyvus pavadinimas `ntw`).
 
 ### Prisijungimo veiksmai
 
 1. Naršyklėje atidarykite [notrack.ai](https://notrack.ai) ir leiskite nustatyti anoniminio seanso slapuką.
 2. Atidarykite **DevTools → Network**, atnaujinkite puslapį ir spustelėkite bet kurią `/api` užklausą.
 3. Skiltyje **Request Headers** nukopijuokite visą `Cookie` antraštės reikšmę.
-4. OmniRoute eikite į **Providers → Add Provider → NoTrack Web (Free)**.
+4. 67router eikite į **Providers → Add Provider → NoTrack Web (Free)**.
 5. Įklijuokite slapukų eilutę į lauką `apiKey` ir spustelėkite **Save**.
 
-OmniRoute iš įklijuotos eilutės išskiria `uid`, `si_usr_id` ir `si_ses_id` bei iš naujo sukuria švarią `Cookie` antraštę, kurioje yra tik šios poros, taip pat `nt_session` (`ntk_…` prieigos raktas, nustatomas prisijungusioms paskyroms), jei jis yra. Jei kurios nors iš šių trijų reikšmių trūksta, neapdorota įklijuota eilutė persiunčiama nepakeista, kad operatoriai galėtų išbandyti alternatyvias struktūras.
+67router iš įklijuotos eilutės išskiria `uid`, `si_usr_id` ir `si_ses_id` bei iš naujo sukuria švarią `Cookie` antraštę, kurioje yra tik šios poros, taip pat `nt_session` (`ntk_…` prieigos raktas, nustatomas prisijungusioms paskyroms), jei jis yra. Jei kurios nors iš šių trijų reikšmių trūksta, neapdorota įklijuota eilutė persiunčiama nepakeista, kad operatoriai galėtų išbandyti alternatyvias struktūras.
 
 ### Modelių ID
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Slapukas veikia naršyklėje, bet neveikia „OmniRoute“
+## Slapukas veikia naršyklėje, bet neveikia „67router“
 
 Kai kurie teikėjai įtraukia slapukus, kurie siunčiami tik autentifikuotų užklausų metu.
 

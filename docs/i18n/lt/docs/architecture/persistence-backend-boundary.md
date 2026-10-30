@@ -10,7 +10,7 @@
 
 ## Kontekstas
 
-Šiuo metu „OmniRoute“ teikia į domeną orientuotas išliekamumo funkcijas iš `src/lib/db/`, o bendras ryšys, kurį grąžina `src/lib/db/core.ts`, įgyvendina sinchroninę `SqliteAdapter` sutartį, apibrėžtą `src/lib/db/adapters/types.ts`. Šis adapteris palaiko kelias SQLite vykdymo aplinkas, tačiau jo sąsaja išlieka pritaikyta SQLite: sinchroniniai paruošti teiginiai, `pragma`, atidėtosios ir neatidėliotinos operacijos, savasis arba failo kopijavimu pagrįstas atsarginių kopijų kūrimas, kontrolinių taškų kūrimas ir vietinės duomenų bazės deskriptorius.
+Šiuo metu „67router“ teikia į domeną orientuotas išliekamumo funkcijas iš `src/lib/db/`, o bendras ryšys, kurį grąžina `src/lib/db/core.ts`, įgyvendina sinchroninę `SqliteAdapter` sutartį, apibrėžtą `src/lib/db/adapters/types.ts`. Šis adapteris palaiko kelias SQLite vykdymo aplinkas, tačiau jo sąsaja išlieka pritaikyta SQLite: sinchroniniai paruošti teiginiai, `pragma`, atidėtosios ir neatidėliotinos operacijos, savasis arba failo kopijavimu pagrįstas atsarginių kopijų kūrimas, kontrolinių taškų kūrimas ir vietinės duomenų bazės deskriptorius.
 
 Dabartinis paleidimo ir atkūrimo procesas taip pat valdo SQLite failo gyvavimo ciklą. `src/lib/db/core.ts` nustato `storage.sqlite` vietą, prižiūri vieną visam procesui bendrą adapterį, kuria WAL kontrolinius taškus, atkūrimo metu išsaugo pasirinktas lenteles ir, iš naujo kurdamas duomenų bazę, pašalina SQLite lydimuosius failus. Tvarkyklės parinkimas faile `src/lib/db/adapters/driverFactory.ts` pasirenka vieną iš palaikomų SQLite vykdymo aplinkų; tai nėra išorinių posistemių abstrakcija.
 

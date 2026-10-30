@@ -8,7 +8,7 @@ lastUpdated: 2026-09-18
 
 # OpenAI-compatible protocol
 
-OmniRoute exposes a client-facing OpenAI-shaped API at `/v1`. Authenticate with
+67router exposes a client-facing OpenAI-shaped API at `/v1`. Authenticate with
 `Authorization: Bearer <key>` and use a model id returned by `GET /v1/models`.
 The model id normally has the form `<provider-prefix>/<model-id>`; combos are
 also valid model targets.
@@ -40,7 +40,7 @@ aliases.
 
 The chat route requires `model` and at least one of `messages`, `input`, or
 `prompt`. The schema is intentionally forward-compatible and preserves unknown
-OpenAI-style fields for translation; the canonical fields used by OmniRoute
+OpenAI-style fields for translation; the canonical fields used by 67router
 include:
 
 | Field                                                 | Behavior                                                                                                                                            |
@@ -55,7 +55,7 @@ include:
 | multimodal content                                    | Use the OpenAI message content parts supported by the target model. Do not assume that a text model accepts image, audio, video, or document parts. |
 
 Tool calls can be emitted as one or more calls in a single assistant turn.
-When a provider does not natively use OpenAI tool-call objects, OmniRoute's
+When a provider does not natively use OpenAI tool-call objects, 67router's
 translator maps the provider representation back to `tool_calls` in the
 OpenAI response. The application remains responsible for executing tools and
 sending the matching tool results in the next request.
@@ -65,7 +65,7 @@ sending the matching tool results in the next request.
 Chat and Responses streams are long-lived HTTP responses. Keep the connection
 open until the terminal event, propagate client cancellation, and treat a
 non-2xx response before the stream starts as an ordinary JSON error. A provider
-failure during dispatch is returned through OmniRoute's sanitized error shape;
+failure during dispatch is returned through 67router's sanitized error shape;
 raw upstream stacks and credential material are not exposed.
 
 Typical client-visible statuses are `400` for validation or unsupported request
@@ -100,7 +100,7 @@ An operator can add a provider node with `type: "openai-compatible"`, a
 ```
 
 Supported `apiType` values are `chat`, `responses`, `embeddings`,
-`audio-transcriptions`, `audio-speech`, and `images-generations`. OmniRoute
+`audio-transcriptions`, `audio-speech`, and `images-generations`. 67router
 appends the corresponding standard path (`/chat/completions`, `/responses`,
 `/embeddings`, `/audio/transcriptions`, `/audio/speech`, or
 `/images/generations`) to the configured base URL. A trailing slash is removed.
@@ -123,7 +123,7 @@ curl "$OMNIROUTE_BASE_URL/chat/completions" \
 ```
 
 For an OpenAI SDK, set its base URL to `http://localhost:20128/v1` (the `/v1`
-root, not `/v1/chat/completions`) and supply the OmniRoute key as the API key.
+root, not `/v1/chat/completions`) and supply the 67router key as the API key.
 The same root works for clients that use Chat Completions or Responses, subject
 to the client's own wire-format setting.
 

@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** huweka kila modeli inayotolewa na OmniRoute yako kwenye kichagua modeli cha _asili_ cha GitHub Copilot Chat.
+**OmniCopilot** huweka kila modeli inayotolewa na 67router yako kwenye kichagua modeli cha _asili_ cha GitHub Copilot Chat.
 Hakuna utepe wa pili wa pembeni, wala kiolesura tofauti cha gumzo — hali ya wakala ya Copilot, uitaji wa zana,
 seva za MCP na maagizo maalum yote huendelea kufanya kazi, ila sasa yakitumia modeli unayochagua.
 
@@ -23,13 +23,13 @@ seva za MCP na maagizo maalum yote huendelea kufanya kazi, ila sasa yakitumia mo
 
 ## Usanidi
 
-1. **Endesha OmniRoute** — `npm install -g omniroute && omniroute` (dashibodi kwenye `http://localhost:20128`).
+1. **Endesha 67router** — `npm install -g omniroute && omniroute` (dashibodi kwenye `http://localhost:20128`).
 2. **Sakinisha kiendelezi** — tafuta "OmniRoute" katika mwonekano wa Extensions.
 3. **Chagua modeli** — Copilot Chat → kichagua modeli → **Manage Models…** → **OmniRoute**, kisha teua
    unazotaka.
 
-Hakuna cha kusanidi wakati OmniRoute inaendeshwa kwenye kituo chaguomsingi. Kwa instansi ya mbali, fungua
-**ikoni ya OmniRoute katika Activity Bar** (au endesha `OmniRoute: Manage Connection`) na uweke:
+Hakuna cha kusanidi wakati 67router inaendeshwa kwenye kituo chaguomsingi. Kwa instansi ya mbali, fungua
+**ikoni ya 67router katika Activity Bar** (au endesha `OmniRoute: Manage Connection`) na uweke:
 
 - **URL ya seva** — mzizi wa seva, k.m. `http://192.168.0.15:20128`. Kiambishi `/v1`
   huongezwa na kiendelezi; usikijumuishe.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 
 kwa hiyo huchujwa kwa kutumia uga wao wa `type` kabla ya kufika kwenye kichagua modeli. **Modeli za Responses-API
 hubakizwa** — kila ingizo la Codex / GPT-5.x hutangaza `supported_endpoints: ["responses"]`,
-na OmniRoute huzitafsiri kwa ajili ya `/v1/chat/completions`, kwa hiyo zinaweza kutumika kikamilifu.
+na 67router huzitafsiri kwa ajili ya `/v1/chat/completions`, kwa hiyo zinaweza kutumika kikamilifu.
 
 ### Watoa huduma ambao hujawahi kusanidi
 
@@ -88,7 +88,7 @@ kiendelezi.
 
 ## Dashibodi ndani ya kichupo cha VS Code
 
-`omnicopilot.dashboardOpen: "editor"` huonyesha dashibodi ya OmniRoute katika kichupo cha kihariri kupitia
+`omnicopilot.dashboardOpen: "editor"` huonyesha dashibodi ya 67router katika kichupo cha kihariri kupitia
 Simple Browser badala ya kivinjari cha nje. Upachikaji **huchaguliwa kwa hiari kwenye seva** kupitia
 `DASHBOARD_ALLOW_EMBED=vscode`, ambayo hutoa kurasa za HTML zikiwa na
 `frame-ancestors 'self' vscode-webview:` badala ya chaguo-msingi la `frame-ancestors 'none'` +
@@ -133,7 +133,7 @@ kigezo cha mazingira cha `OMNIROUTE_API_KEY`, kamwe si kwenye mstari wa amri.
 
 | Dalili                                                                | Sababu / suluhisho                                                                                                                                                                                                                                                                              |
 | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hakuna modeli za OmniRoute kwenye kiteuzi                             | Seva haifikiki. Nukta ya upau wa hali huwa ya kijivu; endesha `OmniRoute: Check Connection`. Ugunduzi hufanyika kimya kimakusudi na hauongezi modeli zozote badala ya kuonyesha ombi.                                                                                                           |
+| Hakuna modeli za 67router kwenye kiteuzi                              | Seva haifikiki. Nukta ya upau wa hali huwa ya kijivu; endesha `OmniRoute: Check Connection`. Ugunduzi hufanyika kimya kimakusudi na hauongezi modeli zozote badala ya kuonyesha ombi.                                                                                                           |
 | Kila modeli huonekana mara mbili                                      | Unatumia OmniCopilot ya zamani kuliko 1.0.1 — sasisha. Sasa kiendelezi huomba `?prefix=alias`.                                                                                                                                                                                                  |
 | Modeli ya picha/sauti iliyokuwa ikiorodheshwa imetoweka               | Hii ni ya makusudi tangu 1.0.1 — haikuweza kamwe kujibu ombi la gumzo.                                                                                                                                                                                                                          |
 | Paneli haipo kwenye Activity Bar                                      | VS Code huhamisha vikasha vya ziada vya mionekano hadi kwenye sehemu ya ziada ya **"…"** iliyo chini ya Activity Bar, na kikasha kilichofichwa kwa kubofya kulia hubaki kimefichwa. Bofya kulia Activity Bar → weka tiki kwenye **OmniRoute**, au ukifungue kwa `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ kigezo cha mazingira cha `OMNIROUTE_API_KEY`, kamwe si kwenye mstari wa amri.
 ## Tazama pia
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — kila zana nyingine ya uandishi wa msimbo
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — kudhibiti OmniRoute ya mbali
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — kudhibiti 67router ya mbali
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — mkataba wa `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — maelezo ya katalogi ya kiendelezi chenyewe

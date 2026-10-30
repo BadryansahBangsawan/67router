@@ -5,7 +5,7 @@
 ---
 
 พูลแบบโฮสต์เองทำงานอยู่บนเครื่อง **.113** (`tomni-proxmox-113`) ตั้งแต่ 2026-10-18 รันเนอร์
-OmniRoute แต่ละตัวมี **บทบาทเดียว** ป้ายกำกับเดียว และงบหน่วยความจำ/CPU ที่ปรับขนาดตามปริมาณงาน
+67router แต่ละตัวมี **บทบาทเดียว** ป้ายกำกับเดียว และงบหน่วยความจำ/CPU ที่ปรับขนาดตามปริมาณงาน
 ที่วัดได้ สล็อต Turbopack ได้รับทรัพยากรตามที่บิลด์ต้องใช้ ส่วนสล็อตอื่นได้รับการปรับขนาดตาม
 ค่าสูงสุดที่วัดได้ เครื่องจะจัดสรรทรัพยากรเกินจริงเฉพาะเมื่อบิลด์ Turbopack เกิดขึ้นพร้อมกับบิลด์
 webpack ของ Release-Green และงาน lint โดย swap ของโฮสต์ (16 GB) จะรองรับส่วนเกินนั้น และเนื่องจาก
@@ -27,7 +27,7 @@ Build ของ pull request ทำงานบนรันเนอร์แบ
 | swap      | 16 GB                 | `omniroute-113-5` ทำงานโดยปิด swap (`MemorySwapMax=0`) ดังนั้นบิลด์ที่ใช้ทรัพยากรผิดปกติจะถูกหยุดที่ขีดจำกัดของมันแทนที่จะทำให้เครื่องใช้ swap                                                                                                                                                                                                                                                            |
 | `/tmp`    | **tmpfs 12 GB = RAM** | ทุกอย่างที่เก็บไว้ในนั้นใช้หน่วยความจำ โดยไฟล์ตกค้างจะถูกล้างหลังจาก 3 ชม.                                                                                                                                                                                                                                                                                                                                |
 | CPU       | พบโหลด 60 บน 32 คอร์  | ก่อนกำหนดโควตา บิลด์ Turbopack หนึ่งงาน (~1166 % CPU) ร่วมกับชุดทดสอบ coverage บนเครื่องเดียวกันทำให้สัญญาณ heartbeat ของ listener ตัวอื่นขาดช่วง (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                   |
-| รันเนอร์  | **listener 6 ตัว**    | OmniRoute 4 ตัว + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ถูกปิดใช้งาน (`systemctl enable --now` จะเปิดกลับมาหนึ่งตัว)                                                                                                                                                                                                                                                                          |
+| รันเนอร์  | **listener 6 ตัว**    | 67router 4 ตัว + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ถูกปิดใช้งาน (`systemctl enable --now` จะเปิดกลับมาหนึ่งตัว)                                                                                                                                                                                                                                                                           |
 
 ขีดจำกัดอยู่ใน `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` ของแต่ละ unit
 (ค่าเดิมเก็บไว้เป็น `override.conf.bak-20261018`) และถูกนำไปใช้ขณะระบบทำงานด้วย
@@ -70,7 +70,7 @@ worker จะรายงานว่างานถูกยกเลิก แ
 
 `KillMode=process` ค่าเริ่มต้นของ runner จะปล่อยให้ `Runner.Worker → npm → next-build`
 ทำงานต่อไปเมื่อ unit ถูกหยุดหรือรีสตาร์ต — บิลด์กำพร้าจะยังคงใช้ RAM และ
-CPU โดยไม่มีงานผูกอยู่ OmniRoute unit ทุกตัวมี drop-in
+CPU โดยไม่มีงานผูกอยู่ 67router unit ทุกตัวมี drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 ที่กำหนด `KillMode=mixed`: ส่ง SIGTERM ไปยัง listener ก่อน แล้วจึงส่ง SIGKILL ไปยัง cgroup ทั้งหมดเมื่อถึง
 `TimeoutStop` การตั้งค่านี้จะมีผลเมื่อรีสตาร์ต unit ครั้งถัดไป — รีสตาร์ต **ครั้งละหนึ่ง runner
@@ -115,7 +115,7 @@ CPU โดยไม่มีงานผูกอยู่ OmniRoute unit ทุ
   `next build` เฉพาะ backend (~5–6 GB; webpack) และ `quality.yml` `lint-guard` โดย `omniroute-113`
   เคยมี `MemoryHigh=4G` จนถึง 2026-10-18 — บิลด์ promptfoo ต้อง reclaim หน่วยความจำไปตลอด 54 นาที
   บนเครื่องนั้น การเพิ่มเป็น 8 GB ช่วยขจัดการควบคุมความเร็วนี้
-- **ตั้งใจให้มี listener น้อยลง** OmniRoute สี่ unit ถูกปิดใช้งานเมื่อ 2026-08-29 — listener ที่เพิ่มขึ้นแต่ละตัว
+- **ตั้งใจให้มี listener น้อยลง** 67router สี่ unit ถูกปิดใช้งานเมื่อ 2026-08-29 — listener ที่เพิ่มขึ้นแต่ละตัว
   คือ tenant เพิ่มอีกหนึ่งรายสำหรับงบประมาณหน่วยความจำข้างต้น เพดานของ janitor คือ 6 (`MAX_ACTIVE_RUNNERS=6` ใน cron) โดยจะนับ
   `Runner.Listener` ทุกตัวบนเครื่อง และ OmniHeuris + OmniMind เพิ่มอีกสองตัวจากสี่ตัวของเรา
 - **ห้ามล้าง `/tmp` หรือ `_work` ด้วยตนเองขณะที่ runner ใดก็ตามกำลังทำงาน** การ

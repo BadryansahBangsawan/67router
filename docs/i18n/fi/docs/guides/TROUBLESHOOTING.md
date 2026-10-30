@@ -8,17 +8,17 @@
 
 🌐 **Kielet:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-OmniRouten yleisiä ongelmia ja niiden ratkaisuja.
+67routerin yleisiä ongelmia ja niiden ratkaisuja.
 
 ---
 
 ## Pikaopas
 
-**Oletko uusi OmniRouten käyttäjä?** Aloita tästä — nämä ratkaisevat 90 % ongelmista:
+**Oletko uusi 67routerin käyttäjä?** Aloita tästä — nämä ratkaisevat 90 % ongelmista:
 
 | Näen tämän                    | Mitä se tarkoittaa                                        | Mitä tehdä                                                                                                    |
 | ----------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| "Can't connect"               | OmniRoute ei ole käynnissä                                | Suorita `omniroute` tai `docker restart omniroute`                                                            |
+| "Can't connect"               | 67router ei ole käynnissä                                 | Suorita `omniroute` tai `docker restart omniroute`                                                            |
 | "Invalid API key"             | Avaimesi on virheellinen tai vanhentunut                  | Kopioi avain uudelleen palveluntarjoajan verkkosivustolta                                                     |
 | "Rate limit exceeded"         | Lähetät liian monta pyyntöä                               | Odota 1 minuutti tai käytä automaattista varajärjestelyä asetuksella `model: "auto"`                          |
 | "Quota exceeded"              | Olet käyttänyt ilmaisen tai maksullisen kiintiösi loppuun | Yhdistä lisää palveluntarjoajia tai käytä ilmaisia palveluntarjoajia (Kiro, Pollinations)                     |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # eksplisiittinen raja samanaikais
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # pidennä rajattu odotusaika hitaiden ylävirran palvelujen RATE_LIMIT_MAX_WAIT_MS-oletusarvoa pidemmäksi
 ```
 
-Aseta nämä OmniRoute-prosessin ympäristöön (esimerkiksi taustapalvelulle LaunchAgent-plist-tiedoston tai komennon `systemctl edit` kautta) ja käynnistä OmniRoute sitten uudelleen. Kierrätysasetus on yksittäisistä keinoista tehokkain: se muuttaa ehdottoman virheen läpinäkyväksi uudelleenyritykseksi poolissa olevaa toimivaa palveluntarjoajaa käyttäen.
+Aseta nämä 67router-prosessin ympäristöön (esimerkiksi taustapalvelulle LaunchAgent-plist-tiedoston tai komennon `systemctl edit` kautta) ja käynnistä 67router sitten uudelleen. Kierrätysasetus on yksittäisistä keinoista tehokkain: se muuttaa ehdottoman virheen läpinäkyväksi uudelleenyritykseksi poolissa olevaa toimivaa palveluntarjoajaa käyttäen.
 
 **Huomautus**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` rajoittaa sitä, kuinka monta raskasta eli pitkän kontekstin pyyntöä suoritetaan samanaikaisesti. Raja toimii hyväksyntäporttina, ei palveluntarjoajan nopeusrajoittimena. **#503-fanout-päivitys:** tätä muuttujaa ei enää aseteta oletusarvoisesti (se vaikuttaa nyt vain eksplisiittisesti määritettynä, kuten yllä). Sen sijaan raskaiden pyyntöjen hyväksyntää säätelee automaattisesti johdettu tavubudjetti (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`), joka skaalautuu isäntäkoneen todellisen muistirajan mukaan. Siksi uuden käyttöönoton pitäisi tuottaa huomattavasti vähemmän `503 chat_admission_busy` -hylkäyksiä ilman tämän muuttujan määrittämistä lainkaan. Muuttujan eksplisiittinen määrittäminen tässä toimii edelleen täsmälleen dokumentoidulla tavalla. Tavubudjetin eksplisiittiset ohitukset rajataan välille 8 MiB–2 GiB. `413 body_exceeds_budget` ei ole tilapäinen virhe: kasvata kyseistä tavubudjettia, pienennä arvoa `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` tai kasvata prosessin muistirajaa. `inflight_bytes_budget`-pudotus johtuu tilapäisestä resurssikilpailusta, joten sitä voidaan edelleen yrittää uudelleen. Palveluntarjoajakohtaista nopeusrajoitusta (`open-sse/services/rateLimitManager.ts`) hallitaan erikseen muuttujilla `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH` ja `RATE_LIMIT_AUTO_ENABLE` — katso `.env.example`.
 
 **Korjauksen toimivuuden varmistaminen**: suorita agenttisi tai cron-työsi kahdesti nopeasti peräkkäin ja varmista, että molemmat suoritukset onnistuvat. Ennen korjausta toinen suoritus tuottaa tavallisesti virheen `429`/`401`. Korjauksen jälkeen virheitä (jos niitä ilmenee) yritetään läpinäkyvästi uudelleen ja kutsu suoritetaan loppuun. Voit myös suorittaa komennon `curl /monitoring/health` ja tarkkailla palveluntarjoajayhteyksien `rateLimitedUntil`-kenttää sekä kyseisten palveluntarjoajien arvoa `circuitBreakers.providerBreakers[].state`. Tila on jokin arvoista `CLOSED`, `DEGRADED`, `OPEN` tai `HALF_OPEN` (katso `src/shared/utils/circuitBreaker.ts`), ja jatkuvasti epäonnistuvan palveluntarjoajan tila vaihtuu järjestyksessä `CLOSED → DEGRADED → OPEN`, ennen kuin nollausikkuna sallii koepyynnön (`HALF_OPEN`).
 
-**Jos virhe 429 näkyy edelleen**: kyseisen palveluntarjoajan aktiivisen tilin _kiintiö_ on aidosti kulunut loppuun (kyse ei siis ole pelkästä nopeusrajoituksesta). Lisää samalle palveluntarjoajalle toinen tili OmniRoute-hallintapaneelissa kohdassa Providers → Accounts tai ota mukaan toinen ilmainen palveluntarjoaja (esimerkiksi `routeway` tai `auggie`). Kierrätys auttaa vain tilapäisiin nopeusrajoitus- sekä 400/401-virheisiin. Kiintiön täydellinen loppuminen edellyttää toisia tunnistetietoja tai eri palveluntarjoajaa.
+**Jos virhe 429 näkyy edelleen**: kyseisen palveluntarjoajan aktiivisen tilin _kiintiö_ on aidosti kulunut loppuun (kyse ei siis ole pelkästä nopeusrajoituksesta). Lisää samalle palveluntarjoajalle toinen tili 67router-hallintapaneelissa kohdassa Providers → Accounts tai ota mukaan toinen ilmainen palveluntarjoaja (esimerkiksi `routeway` tai `auggie`). Kierrätys auttaa vain tilapäisiin nopeusrajoitus- sekä 400/401-virheisiin. Kiintiön täydellinen loppuminen edellyttää toisia tunnistetietoja tai eri palveluntarjoajaa.
 
 **Jos visiomalleissa (`auto/vision`, `bazaarlink/*`) näkyy virhe 403**: yhdistetyllä tilillä ei ole vision sisältävää maksullista tilausta tai API-avaimen käyttöoikeudet ovat riittämättömät. Varmista palveluntarjoajan hallintapaneelissa, että avaimen käyttöalue sisältää vision tai multimodaalisuuden, tai yhdistä maksullisen tason tili ja pidä se visiopyyntöjen kohteena.
 
@@ -71,7 +71,7 @@ Aseta nämä OmniRoute-prosessin ympäristöön (esimerkiksi taustapalvelulle La
 
 Kun suoritat komennon `npm install -g omniroute`, saatat nähdä suuren määrän varoituksia, kuten `npm warn ERESOLVE`, vertaisriippuvuuksia koskevia ilmoituksia ja `deprecated`-viestejä. **Nämä ovat odotettuja ja vaarattomia.** Asennus onnistui, jos tulosteessa näkyy `added <N> packages`.
 
-Voit piilottaa vertaisriippuvuuksien ratkaisemista koskevat varoitukset käyttämällä OmniRouten tukemaa asennustapaa:
+Voit piilottaa vertaisriippuvuuksien ratkaisemista koskevat varoitukset käyttämällä 67routerin tukemaa asennustapaa:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` piilottaa vain `ERESOLVE`-varoitukset ja vertaisriippuvuuksia koskevat ilmoitukset. Vanhentumisilmoitukset jäävät näkyviin, koska ne ovat peräisin epäsuorista kolmannen osapuolen paketeista. Ne eivät tarkoita, että asennus olisi epäonnistunut.
 
-Varoitukset johtuvat vanhentuneista vertaisriippuvuuksien versioalueista kolmannen osapuolen paketeissa, joita OmniRoute ei hallitse:
+Varoitukset johtuvat vanhentuneista vertaisriippuvuuksien versioalueista kolmannen osapuolen paketeissa, joita 67router ei hallitse:
 
 1. **`marked-terminal` vaatii version `marked >=1 <16`, mutta löytyi `marked@18`** — toimii käytännössä ongelmitta; upstream-paketin vertaisriippuvuuden versioalue on vain vanhentunut.
 2. **`deprecated prebuild-install@7.1.3`** — epäsuora apuohjelma natiivibinäärien hakemiseen. Sitä ei
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### Voiko tämän varoituksen jättää huomiotta?
 
-**Osittain, mutta käyttöä ilman komentosarjoja ei suositella.** OmniRoute sisältää hallitut varamekanismit: jos natiiveja `better-sqlite3`-sidoksia ei voida ladata itsenäisestä sovelluspaketista, sovellus siirtyy käyttämään vaihtoehtoisia ajureita, kuten `node:sqlite` tai `sql.js` (katso [SQLite-ajonaikaisen toteutuksen valinta](../ops/SQLITE_RUNTIME.md)). Palvelin käynnistyy silti, mutta WASM-varatoteutusten, kuten `sql.js`, käyttäminen poistaa SQLite WAL (Write-Ahead Logging) -tilan käytöstä sekä lisää muistin käyttöä ja levysynkronoinnin kuormitusta.
+**Osittain, mutta käyttöä ilman komentosarjoja ei suositella.** 67router sisältää hallitut varamekanismit: jos natiiveja `better-sqlite3`-sidoksia ei voida ladata itsenäisestä sovelluspaketista, sovellus siirtyy käyttämään vaihtoehtoisia ajureita, kuten `node:sqlite` tai `sql.js` (katso [SQLite-ajonaikaisen toteutuksen valinta](../ops/SQLITE_RUNTIME.md)). Palvelin käynnistyy silti, mutta WASM-varatoteutusten, kuten `sql.js`, käyttäminen poistaa SQLite WAL (Write-Ahead Logging) -tilan käytöstä sekä lisää muistin käyttöä ja levysynkronoinnin kuormitusta.
 
 ### Mitkä komentosarjat todella vaaditaan?
 
-Kaikki estetyt komentosarjat eivät ole välttämättömiä OmniRouten käyttämiseen:
+Kaikki estetyt komentosarjat eivät ole välttämättömiä 67routerin käyttämiseen:
 
-- **Välttämättömät (`omniroute`, `better-sqlite3`):** OmniRoute suoritetaan itsenäisestä Next.js-sovelluspaketista (`dist/`). Asennuksen aikana npm lataa tai kääntää isäntäjärjestelmäkohtaisen natiivin SQLite-ajurin ylätason hakemistoon `node_modules/better-sqlite3/`. OmniRouten `postinstall`-komentosarja (`scripts/build/postinstall.mjs`) tarkistaa ja kopioi sitten nämä isäntäjärjestelmäkohtaiset binäärit hakemistoon `dist/node_modules/`, jotta itsenäinen palvelin voi käyttää niitä. Jos `omniroute`-paketin postinstall-komentosarja estetään, tämä kopiointivaihe ohitetaan.
+- **Välttämättömät (`omniroute`, `better-sqlite3`):** 67router suoritetaan itsenäisestä Next.js-sovelluspaketista (`dist/`). Asennuksen aikana npm lataa tai kääntää isäntäjärjestelmäkohtaisen natiivin SQLite-ajurin ylätason hakemistoon `node_modules/better-sqlite3/`. 67routerin `postinstall`-komentosarja (`scripts/build/postinstall.mjs`) tarkistaa ja kopioi sitten nämä isäntäjärjestelmäkohtaiset binäärit hakemistoon `dist/node_modules/`, jotta itsenäinen palvelin voi käyttää niitä. Jos `omniroute`-paketin postinstall-komentosarja estetään, tämä kopiointivaihe ohitetaan.
 - **Valinnaiset/transitiiviset (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Nämä ovat koontiapuohjelmia, tiedostomuutosten tarkkailutyökaluja tai järjestelmän avainnipun apuohjelmia. Niiden salliminen estää koontivaroitukset, mutta niitä ei tarvita reitityksen ydintoimintoihin.
-- **Pois jätettävä (`onnxruntime-node`):** Tämä on paikallisten tekoälyupotusten valinnainen riippuvuus, eikä sitä **tarvita** OmniRouten suorittamiseen. Sen postinstall-komentosarja lataa NuGetistä noin 300 Mt CUDA-resursseja. Älä sisällytä sitä sallittujen luetteloon, ellet nimenomaisesti aio käyttää paikallista ONNX-kiihdytystä tuetulla laitteistolla.
+- **Pois jätettävä (`onnxruntime-node`):** Tämä on paikallisten tekoälyupotusten valinnainen riippuvuus, eikä sitä **tarvita** 67routerin suorittamiseen. Sen postinstall-komentosarja lataa NuGetistä noin 300 Mt CUDA-resursseja. Älä sisällytä sitä sallittujen luetteloon, ellet nimenomaisesti aio käyttää paikallista ONNX-kiihdytystä tuetulla laitteistolla.
 
 ### Suositeltu korjaus
 
-Salli tarvittavat asennuskomentosarjat globaalin asennuksen aikana ja poista varoitukset välittämällä `--allow-scripts` OmniRoutelle ja sen natiiveille riippuvuuksille:
+Salli tarvittavat asennuskomentosarjat globaalin asennuksen aikana ja poista varoitukset välittämällä `--allow-scripts` 67routerille ja sen natiiveille riippuvuuksille:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ ole asennettu, npm-paketti on olemassa, mutta selaimen binääritiedosto puuttuu
 Playwright pitää selaimen lataukset tarkoituksella erillään npm-paketin
 asennuksesta, joten tämä vastaus on odotettavissa, kunnes selain on asennettu.
 
-Jos npm on asennettu globaalisti, asenna Chromium OmniRoute-paketin
+Jos npm on asennettu globaalisti, asenna Chromium 67router-paketin
 hakemistosta, jotta selainvälimuisti kuuluu samaan Playwright-asennukseen:
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Käynnistä OmniRoute uudelleen asennuksen jälkeen ja yritä sitten Gemini Web -pyyntöä uudelleen. Jos
-suoritat OmniRoutea Docker-levykuvasta, käytä `-web`-levykuvaa (tai `runner-web`-
+Käynnistä 67router uudelleen asennuksen jälkeen ja yritä sitten Gemini Web -pyyntöä uudelleen. Jos
+suoritat 67routeria Docker-levykuvasta, käytä `-web`-levykuvaa (tai `runner-web`-
 koontikohdetta), joka sisältää Chromiumin ja sen riippuvuudet; peruslevykuva ei
 sisällä niitä.
 
@@ -188,7 +188,7 @@ sisällä niitä.
 **Kyseessä on väärä positiivinen havainto. Mikään ei ole saastunut, eikä toimenpiteitä tarvita.**
 
 Avast ja AVG käyttävät heuristiikkaa, joka merkitsee paljon HTTP-pyynnöiltä näyttäviä
-linkkejä sisältävät teksti-/Markdown-tiedostot epäilyttäviksi. OmniRouten `README.md`
+linkkejä sisältävät teksti-/Markdown-tiedostot epäilyttäviksi. 67routerin `README.md`
 toimitetaan npm-paketin mukana (se on lueteltu kohdassa `package.json` → `files`), joten
 globaalissa asennuksessa se päätyy polkuun `node_modules/omniroute/README.md` — ja sisältää
 noin 15 `http://localhost:20128/...`-esimerkkiä (MCP:n HTTP/SSE-päätepisteet, A2A:n
@@ -206,7 +206,7 @@ palauttaa sen turvallisesti karanteenista.
 
 1. **Lopeta ilmoitukset** — lisää asennushakemisto virustorjunnan poikkeuksiin
    (Avast: Settings → Exceptions) lisäämällä globaali `node_modules`-polkusi ja/tai
-   OmniRouten datahakemisto (`~/.omniroute/`).
+   67routerin datahakemisto (`~/.omniroute/`).
 2. **Ilmoita väärästä positiivisesta havainnosta** — <https://www.avast.com/false-positive-file-form.php>,
    ja liitä mukaan karanteeniin asetettu `README.md`. Tämä korjaustapa auttaa kaikkia,
    sillä ongelma johtuu valmistajan heuristiikan ylireagoinnista tekstitiedostoon.
@@ -273,7 +273,7 @@ Koodin allekirjoitus on suunnitteilla; siihen asti ongelma voi toistua uusissa j
 
 ### Kirjautumissivu kaatuu tai näyttää "Module self-registration" -virheen
 
-**Syy:** Käytössäsi on Node.js-versio, joka ei täytä OmniRouten hyväksyttyä turvallisen suoritusympäristön vähimmäisvaatimusta. Yleisin tapaus on vanhempi Node 22- tai 24-korjausversio, joka alittaa OmniRouten vaatiman korjatun turvallisuustason.
+**Syy:** Käytössäsi on Node.js-versio, joka ei täytä 67routerin hyväksyttyä turvallisen suoritusympäristön vähimmäisvaatimusta. Yleisin tapaus on vanhempi Node 22- tai 24-korjausversio, joka alittaa 67routerin vaatiman korjatun turvallisuustason.
 
 **Oireet:**
 
@@ -289,7 +289,7 @@ Koodin allekirjoitus on suunnitteilla; siihen asti ongelma voi toistua uusissa j
    nvm use 24
    ```
 2. Tarkista versiosi: komennon `node --version` pitäisi näyttää `v24.0.0` tai uudempi 24.x LTS -sarjan versio
-3. Asenna OmniRoute uudelleen: `npm install -g omniroute`
+3. Asenna 67router uudelleen: `npm install -g omniroute`
 4. Käynnistä uudelleen: `omniroute`
 
 > **Tuetut turvalliset versiot:** `>=22.22.2 <23` tai `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) ja Node.js 26 ovat täysin tuettuja.
@@ -372,13 +372,13 @@ omniroute
 
 **Syy:** Node.js 22:ssa undici@8:n dispatcher ei ole yhteensopiva Noden sisäänrakennetun `fetch()`-toteutuksen kanssa.
 
-**Korjaus (v3.5.5+):** OmniRoute käyttää nyt undicin omaa `fetch()`-funktiota, kun välityspalvelimen dispatcher on aktiivinen, mikä varmistaa yhdenmukaisen toiminnan. Päivitä versioon v3.5.5 tai uudempaan.
+**Korjaus (v3.5.5+):** 67router käyttää nyt undicin omaa `fetch()`-funktiota, kun välityspalvelimen dispatcher on aktiivinen, mikä varmistaa yhdenmukaisen toiminnan. Päivitä versioon v3.5.5 tai uudempaan.
 
 ### MITM-välityspalvelin WSL:ssä: Windows-isäntäjärjestelmän työpöytäsovellusten liikennettä ei siepata
 
-**Syy:** MITM-välityspalvelin ja sen CA-varmenne asennetaan ympäristöön, jossa OmniRoute suoritetaan. WSL:ssä tämä ympäristö on Linux-vierasjärjestelmä, kun taas tekoälytyöpöytäsovellukset (Kiro, Trae, Copilot, Zed, …) suoritetaan Windows-isäntäjärjestelmässä. Isäntäjärjestelmän sovellukset eivät luota vierasjärjestelmän varmennevarastoon eivätkä reititä liikennettä vierasjärjestelmän järjestelmävälityspalvelimen kautta, joten työpöytäsovellusten liikenteen sieppaus ei toimi siellä.
+**Syy:** MITM-välityspalvelin ja sen CA-varmenne asennetaan ympäristöön, jossa 67router suoritetaan. WSL:ssä tämä ympäristö on Linux-vierasjärjestelmä, kun taas tekoälytyöpöytäsovellukset (Kiro, Trae, Copilot, Zed, …) suoritetaan Windows-isäntäjärjestelmässä. Isäntäjärjestelmän sovellukset eivät luota vierasjärjestelmän varmennevarastoon eivätkä reititä liikennettä vierasjärjestelmän järjestelmävälityspalvelimen kautta, joten työpöytäsovellusten liikenteen sieppaus ei toimi siellä.
 
-**Suositus:** Suorita OmniRoute natiivisti samassa käyttöjärjestelmässä kuin työpöytäsovellukset, joiden liikenteen haluat siepata (Windows Windows-sovelluksille; vastaavasti macOS/Linux). Jos OmniRoute pidetään WSL:n sisällä ja kohteena ovat isäntäjärjestelmän sovellukset, luotu CA-varmenne on lisättävä manuaalisesti luotetuksi Windows-isäntäjärjestelmässä ja jokaisen isäntäjärjestelmän sovelluksen verkko-/välityspalvelinasetukset on määritettävä käyttämään WSL:n välityspalvelinpäätepistettä — tätä kokoonpanoa ei tueta, ja se on altis häiriöille.
+**Suositus:** Suorita 67router natiivisti samassa käyttöjärjestelmässä kuin työpöytäsovellukset, joiden liikenteen haluat siepata (Windows Windows-sovelluksille; vastaavasti macOS/Linux). Jos 67router pidetään WSL:n sisällä ja kohteena ovat isäntäjärjestelmän sovellukset, luotu CA-varmenne on lisättävä manuaalisesti luotetuksi Windows-isäntäjärjestelmässä ja jokaisen isäntäjärjestelmän sovelluksen verkko-/välityspalvelinasetukset on määritettävä käyttämään WSL:n välityspalvelinpäätepistettä — tätä kokoonpanoa ei tueta, ja se on altis häiriöille.
 
 ---
 
@@ -405,7 +405,7 @@ omniroute
 
 ### OAuth-tunnus on vanhentunut
 
-OmniRoute päivittää tunnukset automaattisesti. Jos ongelmat jatkuvat:
+67router päivittää tunnukset automaattisesti. Jos ongelmat jatkuvat:
 
 1. Hallintapaneeli → Palveluntarjoaja → Yhdistä uudelleen
 2. Poista palveluntarjoajayhteys ja lisää se uudelleen
@@ -618,7 +618,7 @@ Palveluntarjoajaprofiilit tukevat seuraavia asetuksia:
 
 ### Samanaikaisten uudelleenyritysten estäminen
 
-Kun useat samanaikaiset pyynnöt kohdistuvat nopeusrajoitettuun palveluntarjoajaan, OmniRoute käyttää mutexia ja automaattista nopeusrajoitusta pyyntöjen sarjallistamiseen ja ketjureaktiona syntyvien virheiden estämiseen. Tämä tapahtuu automaattisesti API-avainpalveluntarjoajille.
+Kun useat samanaikaiset pyynnöt kohdistuvat nopeusrajoitettuun palveluntarjoajaan, 67router käyttää mutexia ja automaattista nopeusrajoitusta pyyntöjen sarjallistamiseen ja ketjureaktiona syntyvien virheiden estämiseen. Tämä tapahtuu automaattisesti API-avainpalveluntarjoajille.
 
 ### Keskustelupyynnöt epäonnistuvat virheellä 503 / chat_admission_busy
 
@@ -654,7 +654,7 @@ Oletuskynnysarvoilla pyyntö on rakenteellisesti raskas, jos siinä on vähintä
 vähintään `64` työkalua tai vähintään `32,000` arvioitua tokenia tai jos rajattu rakenteen arviointi
 saavuttaa rajansa eli `10,000` vierailtua solmua tai syvyyden `12`.
 
-**Syy:** Kyse on tarkoituksellisesta kuormanpudotuksesta OmniRouten sisällä, ei ylävirran palveluntarjoajan virheestä.
+**Syy:** Kyse on tarkoituksellisesta kuormanpudotuksesta 67routerin sisällä, ei ylävirran palveluntarjoajan virheestä.
 Kukin prosessi käyttää prosessikohtaista suojausta varatakseen rajallista kapasiteettia raskaille pyynnöille ennen suuren
 pyyntörungon säilyttämistä ja jäsentämistä. Raskaan pyynnön varaus pysyy voimassa SSE-vastauksen
 koko elinkaaren ajan.
@@ -698,7 +698,7 @@ Viralliset pääsynhallinta-asetukset löytyvät [ympäristömuuttujien viittees
 
 ## Valinnainen RAG-/LLM-virheluokitus (16 ongelmaa)
 
-Jotkut OmniRoute-käyttäjät sijoittavat yhdyskäytävän RAG- tai agenttipinojen eteen. Tällaisissa kokoonpanoissa esiintyy usein outo tilanne: OmniRoute vaikuttaa toimivan oikein (palveluntarjoajat ovat käytettävissä, reititysprofiilit ovat kunnossa eikä nopeusrajoitushälytyksiä ole), mutta lopullinen vastaus on silti väärä.
+Jotkut 67router-käyttäjät sijoittavat yhdyskäytävän RAG- tai agenttipinojen eteen. Tällaisissa kokoonpanoissa esiintyy usein outo tilanne: 67router vaikuttaa toimivan oikein (palveluntarjoajat ovat käytettävissä, reititysprofiilit ovat kunnossa eikä nopeusrajoitushälytyksiä ole), mutta lopullinen vastaus on silti väärä.
 
 Käytännössä nämä häiriöt johtuvat yleensä jatkokäsittelyssä olevasta RAG-putkesta, eivät itse yhdyskäytävästä.
 
@@ -717,17 +717,17 @@ Ajatus on yksinkertainen:
 
 1. Kun tutkit virheellistä vastausta, tallenna:
    - käyttäjän tehtävä ja pyyntö
-   - OmniRouten reitti tai palveluntarjoajayhdistelmä
+   - 67routerin reitti tai palveluntarjoajayhdistelmä
    - jatkokäsittelyssä käytetty RAG-konteksti (haetut asiakirjat, työkalukutsut jne.)
 2. Yhdistä häiriö yhteen tai kahteen WFGY ProblemMap -numeroon (`No.1` … `No.16`).
-3. Tallenna numero omaan hallintapaneeliisi, toimintaohjeeseesi tai häiriöseurantaasi OmniRoute-lokien yhteyteen.
+3. Tallenna numero omaan hallintapaneeliisi, toimintaohjeeseesi tai häiriöseurantaasi 67router-lokien yhteyteen.
 4. Päätä vastaavan WFGY-sivun avulla, onko RAG-pinoa, hakukomponenttia tai reititysstrategiaa muutettava.
 
 Täydellinen teksti ja käytännön ohjeet ovat täällä (MIT-lisenssi, vain tekstiä):
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Voit ohittaa tämän osion, jos et käytä RAG- tai agenttiputkia OmniRouten takana.
+Voit ohittaa tämän osion, jos et käytä RAG- tai agenttiputkia 67routerin takana.
 
 ---
 
@@ -751,7 +751,7 @@ v3.8.0-julkaisuun liittyvät ongelmat ja niiden nykyiset kiertotavat. Jos korjau
 
 1. Asenna Devin CLI alustallesi
 2. Aseta `.env`-tiedostossa `CLI_DEVIN_BIN=/usr/local/bin/devin` (tai todellinen polku)
-3. Käynnistä OmniRoute uudelleen ja testaa uudelleen kohdasta **Hallintapaneeli → CLI-työkalut**
+3. Käynnistä 67router uudelleen ja testaa uudelleen kohdasta **Hallintapaneeli → CLI-työkalut**
 
 ### Mallin jäähdytys jumissa (manuaalinen nollaus)
 
@@ -806,7 +806,7 @@ v3.8.0-julkaisuun liittyvät ongelmat ja niiden nykyiset kiertotavat. Jos korjau
 
 1. Luo satunnainen salaisuus: `openssl rand -hex 32`
 2. Aseta `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` tuotantopalvelimen ympäristöön (sekä kaikkiin siltaan yhteydessä oleviin asiakasohjelmiin)
-3. Käynnistä OmniRoute uudelleen
+3. Käynnistä 67router uudelleen
 
 ### Responses API: taustatila heikennetty synkroniseksi
 

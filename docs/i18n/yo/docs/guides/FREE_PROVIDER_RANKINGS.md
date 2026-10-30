@@ -4,7 +4,7 @@
 
 ---
 
-> **Ní ṣókí**: OmniRoute ń ṣe ìpele àwọn olupèsè **ọ̀fẹ́** rẹ̀ nípa dídára àwòṣe, ní lílo àwọn **ìwọ̀n ELO Arena AI
+> **Ní ṣókí**: 67router ń ṣe ìpele àwọn olupèsè **ọ̀fẹ́** rẹ̀ nípa dídára àwòṣe, ní lílo àwọn **ìwọ̀n ELO Arena AI
 > (ara-LMArena)**. Ṣí ojú-ewé **Ìpele Àwọn Olùpèsè Ọ̀fẹ́** nínú
 > pánẹ́ẹ̀lì ìṣàkóso láti rí àwọn olupèsè ọ̀fẹ́ tí ń pèsè àwọn àwòṣe tó lágbára jù fún iṣẹ́ rẹ —
 > lápapọ̀, tàbí nípasẹ̀ ṣíṣàlẹ̀mọ́ gẹ́gẹ́ bí ẹ̀ka (kíkọ kóòdù, àyẹ̀wò, ìkọ̀wé ìtọ́sọ́nà, àtúnṣe àṣìṣe).
@@ -13,7 +13,7 @@
 
 ## Ohun Tó Jẹ́
 
-OmniRoute forúkọ sílẹ̀ àwọn olùpèsè 375, pẹ̀lú àwọn ẹ̀yà àkójọ 155 tí a ṣàmì sí **free/no-auth**
+67router forúkọ sílẹ̀ àwọn olùpèsè 375, pẹ̀lú àwọn ẹ̀yà àkójọ 155 tí a ṣàmì sí **free/no-auth**
 (no-auth,
 OAuth ipele-ọfẹ́, tàbí kì API ipele-ọfẹ́ — wo
 [Ìtọ́nisọ́nà Àwọn Ipele Ọfẹ́](../getting-started/FREE-TIERS-GUIDE.md) àti
@@ -127,9 +127,9 @@ GET /api/free-provider-rankings?category=coding&limit=20
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Gbogbo àkọsílẹ̀ inú àtẹ ìṣàkóso
 ní orúkọ àwòṣe, olùpèsè, `score` ELO, àárín ìgbẹ́kẹ̀lé, àti iye ìbò.
 
-Àwọn ẹ̀ka àtẹ ìṣàkóso bá àwọn ẹ̀ka iṣẹ́ OmniRoute mu báyìí:
+Àwọn ẹ̀ka àtẹ ìṣàkóso bá àwọn ẹ̀ka iṣẹ́ 67router mu báyìí:
 
-| Àtẹ ìṣàkóso Arena | Àwọn ẹ̀ka iṣẹ́ OmniRoute                            |
+| Àtẹ ìṣàkóso Arena | Àwọn ẹ̀ka iṣẹ́ 67router                             |
 | ----------------- | ------------------------------------------------- |
 | `text`            | `default`, `review`, `documentation`, `debugging` |
 | `code`            | `coding`                                          |
@@ -166,7 +166,7 @@ dátà àtijọ́.
 
 - Ó máa ń ṣiṣẹ́ lẹ́ẹ̀kan nígbà tí olupin bá bẹ̀rẹ̀, lẹ́yìn náà yóò máa ṣiṣẹ́ lórí aago àsìkò déédéé
   (`src/lib/arenaEloSync.ts`, tí a so pọ̀ láti `src/instrumentation-node.ts`).
-- Ó **kì í dá iṣẹ́ dúró, bẹ́ẹ̀ ni kì í fa ìkùnà pátápátá** — bí gbígba dátà láti orísun òkè bá kùnà, OmniRoute yóò tẹ̀síwájú
+- Ó **kì í dá iṣẹ́ dúró, bẹ́ẹ̀ ni kì í fa ìkùnà pátápátá** — bí gbígba dátà láti orísun òkè bá kùnà, 67router yóò tẹ̀síwájú
   láti ṣiṣẹ́, àwọn ìtòlẹ́sẹẹsẹ yóò sì kàn fi dátà tó dára jù lọ tí ó gbẹ̀yìn hàn (tàbí ipò òfo).
 
 Àwọn àyípadà àyíká méjì ló ń ṣàkóso rẹ̀ (tí a ṣàkọsílẹ̀ nínú
@@ -201,7 +201,7 @@ tun olupin bẹ̀rẹ̀) yóò tún fi dátà kún un.
 3. Ìbámu ìbẹ̀rẹ̀-orúkọ (orúkọ àwòṣe inú àtẹ ìṣàkóso jẹ́ ìbẹ̀rẹ̀ ID inú àkọsílẹ̀).
 
 Ní ẹ̀gbẹ́ ìmúdójúìwọ̀n, a máa ń yọ àwọn ìbẹ̀rẹ̀-orúkọ olùpèsè tí a mọ̀ (`anthropic/`, `openai/`, `google/`, …)
-kúrò, àwòrán alias kékeré kan sì máa ń fẹ àwọn orúkọ àgbà kalẹ̀ sí àwọn ìyàtọ̀ tí OmniRoute ń lò
+kúrò, àwòrán alias kékeré kan sì máa ń fẹ àwọn orúkọ àgbà kalẹ̀ sí àwọn ìyàtọ̀ tí 67router ń lò
 ní inú, kí àwọn àwòṣe lè máa ṣeé rí lábẹ́ orúkọ èyíkéyìí.
 
 ### Bí a ṣe ń to olùpèsè sí ipò

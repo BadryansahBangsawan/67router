@@ -6,13 +6,13 @@
 
 # Rangiranje besplatnih provajdera (Arena ELO)
 
-> **TL;DR**: OmniRoute rangira svoje **besplatne** provajdere prema kvalitetu modela koristeći **Arena AI (LMArena-stil) ELO rezultate**. Otvorite stranicu **Rangiranje besplatnih provajdera** na kontrolnoj tabli da vidite koji besplatni provajderi isporučuju najjače modele za vaš zadatak — ukupno, ili filtrirano po kategoriji (kodiranje, pregled, dokumentacija, otklanjanje grešaka).
+> **TL;DR**: 67router rangira svoje **besplatne** provajdere prema kvalitetu modela koristeći **Arena AI (LMArena-stil) ELO rezultate**. Otvorite stranicu **Rangiranje besplatnih provajdera** na kontrolnoj tabli da vidite koji besplatni provajderi isporučuju najjače modele za vaš zadatak — ukupno, ili filtrirano po kategoriji (kodiranje, pregled, dokumentacija, otklanjanje grešaka).
 
 ---
 
 ## Šta je ovo
 
-OmniRoute registruje 375 provajdera, uključujući 155 unosa u katalogu označenih kao **free/no-auth**
+67router registruje 375 provajdera, uključujući 155 unosa u katalogu označenih kao **free/no-auth**
 (no-auth, free-tier OAuth ili free-tier API ključ — pogledajte
 [Vodič kroz besplatne pakete](../getting-started/FREE-TIERS-GUIDE.md) i potpuni
 [direktorij besplatnih paketa](../reference/FREE_TIERS.md)). Tu je kvaka: besplatni provajderi
@@ -118,9 +118,9 @@ Oblik odgovora:
 
 Mehanizam za sinkronizaciju Arena ELO (`src/lib/arenaEloSync.ts`) dohvaća dvije tablice s rezultatima — `text` i `code` — s Arena AI leaderboard API-ja (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Svaki unos u tablici s rezultatima sadrži naziv modela, dobavljača, ELO `score`, interval pouzdanosti i broj glasova.
 
-Kategorije tablice s rezultatima mapiraju se na kategorije zadataka OmniRoute:
+Kategorije tablice s rezultatima mapiraju se na kategorije zadataka 67router:
 
-| Arena tablica s rezultatima | OmniRoute kategorije zadataka                     |
+| Arena tablica s rezultatima | 67router kategorije zadataka                      |
 | --------------------------- | ------------------------------------------------- |
 | `text`                      | `default`, `review`, `documentation`, `debugging` |
 | `code`                      | `coding`                                          |
@@ -152,7 +152,7 @@ Normalizirani unosi zapisuju se u `model_intelligence` DB tablicu s `source = "a
 Sinkronizacija je **uključena prema zadanim postavkama**:
 
 - Pokreće se jednom pri pokretanju poslužitelja, a zatim na periodičnom tajmeru (`src/lib/arenaEloSync.ts`, povezano iz `src/instrumentation-node.ts`).
-- Ona **ne blokira i nikada nije fatalna** — ako dohvaćanje iz izvora ne uspije, OmniRoute nastavlja raditi, a ljestvice jednostavno prikazuju posljednje dobre podatke (ili prazno stanje).
+- Ona **ne blokira i nikada nije fatalna** — ako dohvaćanje iz izvora ne uspije, 67router nastavlja raditi, a ljestvice jednostavno prikazuju posljednje dobre podatke (ili prazno stanje).
 
 Dvije varijable okruženja je kontroliraju (dokumentirano u [`docs/reference/ENVIRONMENT.md`](../reference/ENVIRONMENT.md)):
 
@@ -181,7 +181,7 @@ ID-ovi modela u registru i nazivi modela na Areni se ne podudaraju uvijek točno
 2. Podudaranje nakon uklanjanja završnog sufiksa verzije (npr. `kimi-k2.6` → `kimi-k2`).
 3. Podudaranje prefiksa (naziv modela na tablici s rezultatima je prefiks ID-a registra).
 
-Na strani sinkronizacije, poznati prefiksi dobavljača (`anthropic/`, `openai/`, `google/`, …) se uklanjaju, a mala mapa aliasa proširuje kanonske nazive u varijante koje OmniRoute koristi interno, tako da modeli ostaju pretraživi pod bilo kojim nazivom.
+Na strani sinkronizacije, poznati prefiksi dobavljača (`anthropic/`, `openai/`, `google/`, …) se uklanjaju, a mala mapa aliasa proširuje kanonske nazive u varijante koje 67router koristi interno, tako da modeli ostaju pretraživi pod bilo kojim nazivom.
 
 ### Kako se dobavljač rangira
 

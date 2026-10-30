@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Türkçe)
+# Providers Guide: Connect AI Models to 67router (Türkçe)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Kısaca**: Sağlayıcı, bir yapay zekâ hizmetine (OpenAI, Anthropic, Google gibi) bağlantıdır. OmniRoute'u kullanmak için en az bir sağlayıcıya ihtiyacınız vardır.
+> **Kısaca**: Sağlayıcı, bir yapay zekâ hizmetine (OpenAI, Anthropic, Google gibi) bağlantıdır. 67router'u kullanmak için en az bir sağlayıcıya ihtiyacınız vardır.
 
 ---
 
 ## Sağlayıcı Nedir?
 
-Bir sağlayıcıyı **telefon operatörü** gibi düşünün. Arama yapmak için bir telefon operatörüne ihtiyaç duyduğunuz gibi, yapay zeka modellerini kullanmak için de bir yapay zeka sağlayıcısına ihtiyacınız vardır. OmniRoute, **tüm operatörlerle** çalışan bir telefon gibidir — aralarında otomatik olarak geçiş yapabilirsiniz.
+Bir sağlayıcıyı **telefon operatörü** gibi düşünün. Arama yapmak için bir telefon operatörüne ihtiyaç duyduğunuz gibi, yapay zeka modellerini kullanmak için de bir yapay zeka sağlayıcısına ihtiyacınız vardır. 67router, **tüm operatörlerle** çalışan bir telefon gibidir — aralarında otomatik olarak geçiş yapabilirsiniz.
 
 ### Sağlayıcı Türleri
 
@@ -31,8 +31,8 @@ Genel kurulum talimatları, sınırlamalar, sorun giderme ve sağlayıcıya öze
 ### İsteğe bağlı ilk çalıştırmada ücretsiz sağlayıcı kurulumu
 
 İlk çalıştırma sihirbazı açıkça belirtilen bir **Ücretsiz sağlayıcıları kur** kartı sunar. Mevcut
-uygun listeyi OmniRoute'un kimlik doğrulama gerektirmeyen sağlayıcı kayıt defterinden oluşturur ve ardından onaylamadan önce her
-sağlayıcıyı incelemenize ve seçimini kaldırmanıza olanak tanır. OmniRoute, önce üçüncü taraf koşullarını,
+uygun listeyi 67router'un kimlik doğrulama gerektirmeyen sağlayıcı kayıt defterinden oluşturur ve ardından onaylamadan önce her
+sağlayıcıyı incelemenize ve seçimini kaldırmanıza olanak tanır. 67router, önce üçüncü taraf koşullarını,
 gizlilik politikasını, kullanılabilirliği ve hız sınırlarını inceleyebilmeniz için sağlayıcının uyarı bildirimini ve sitesine yönlendiren bir bağlantıyı gösterir.
 
 Bu işlem isteğe bağlıdır: sihirbazın tamamlanması hiçbir zaman ücretsiz sağlayıcı bağlantılarını sessizce oluşturmaz.
@@ -80,7 +80,7 @@ yalnızca başarısız olanları güvenle yeniden deneyebilirsiniz.
 
 ### Seçenek D: Yerel MLX Modelleri (Apple Silicon)
 
-Birleşik belleğe sahip Apple Silicon Mac'ler için OmniRoute, `mlx-lm.server` aracılığıyla çalışan yerel MLX modellerine standart OpenAI uyumlu yerel sağlayıcılar olarak bağlanmayı destekler.
+Birleşik belleğe sahip Apple Silicon Mac'ler için 67router, `mlx-lm.server` aracılığıyla çalışan yerel MLX modellerine standart OpenAI uyumlu yerel sağlayıcılar olarak bağlanmayı destekler.
 
 #### Ön Koşullar
 
@@ -110,14 +110,14 @@ Birleşik belleğe sahip Apple Silicon Mac'ler için OmniRoute, `mlx-lm.server` 
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **OmniRoute Kontrol Panelinde bağlanın**:
+3. **67router Kontrol Panelinde bağlanın**:
    - **Sağlayıcılar** → **Sağlayıcı Ekle** bölümüne gidin
    - **MLX Gemma 26B** veya **MLX Qwen 3.8 27B** seçeneğini belirleyin
    - **Bağlan** seçeneğine tıklayın (API anahtarı gerekmez)
 
 4. **OpenCode ile kullanın**:
    ```bash
-   # OpenCode'u OmniRoute'u kullanacak şekilde yapılandırın
+   # OpenCode'u 67router'u kullanacak şekilde yapılandırın
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Bunu manuel olarak yönetmeniz gerekir:
 - İkisini ayrı makinelerde çalıştırın ya da
 - Diğerini başlatmadan önce birini durdurun
 
-OmniRoute, MLX sunucu süreçlerini otomatik olarak yönetmez — yalnızca istekleri yapılandırdığınız OpenAI uyumlu uç noktalara yönlendirir.
+67router, MLX sunucu süreçlerini otomatik olarak yönetmez — yalnızca istekleri yapılandırdığınız OpenAI uyumlu uç noktalara yönlendirir.
 
 #### Araç Çağırma Desteği
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Bellek yetersiz        | Yalnızca bir modelin çalıştığından emin olun; diğer uygulamaları kapatın; Etkinlik Monitörü'nü kontrol edin |
 | Bağlantı reddedildi    | Sunucunun doğru portta (11435/11436) çalıştığını doğrulayın                                                 |
 | Yanıtlar yavaş         | İlk istek modeli belleğe yükler (~30-60sn); sonraki istekler hızlıdır                                       |
-| Araç çağırma başarısız | Modelin araçları desteklediğinden emin olun; çeviri hataları için OmniRoute günlüklerini kontrol edin       |
+| Araç çağırma başarısız | Modelin araçları desteklediğinden emin olun; çeviri hataları için 67router günlüklerini kontrol edin        |
 
 ---
 
@@ -236,12 +236,12 @@ Sağlayıcınız artık bağlıdır. `model: "auto"` ile kullanabilir veya sağl
 
 ## Birden Fazla Sağlayıcı Kullanma
 
-OmniRoute, **birden fazla sağlayıcıyla** en iyi şekilde çalışır. Bu size şunları sağlar:
+67router, **birden fazla sağlayıcıyla** en iyi şekilde çalışır. Bu size şunları sağlar:
 
-- **Otomatik yedekleme** — Bir sağlayıcı başarısız olursa OmniRoute bir sonrakini dener
-- **Maliyet optimizasyonu** — OmniRoute her istek için en ucuz sağlayıcıyı seçer
-- **Hız optimizasyonu** — OmniRoute her istek için en hızlı sağlayıcıyı seçer
-- **Kalite optimizasyonu** — OmniRoute her görev için en iyi sağlayıcıyı seçer
+- **Otomatik yedekleme** — Bir sağlayıcı başarısız olursa 67router bir sonrakini dener
+- **Maliyet optimizasyonu** — 67router her istek için en ucuz sağlayıcıyı seçer
+- **Hız optimizasyonu** — 67router her istek için en hızlı sağlayıcıyı seçer
+- **Kalite optimizasyonu** — 67router her görev için en iyi sağlayıcıyı seçer
 
 ### Önerilen Kurulum
 
@@ -251,7 +251,7 @@ En iyi deneyim için en az **3 sağlayıcı** bağlayın:
 2. **Bir hızlı sağlayıcı** (Groq, Cerebras) — Hızlı yanıtlar için
 3. **Bir kaliteli sağlayıcı** (OpenAI, Anthropic, Google) — Karmaşık görevler için
 
-Ardından `model: "auto"` kullanın; OmniRoute her istek için en iyi sağlayıcıyı otomatik olarak seçecektir.
+Ardından `model: "auto"` kullanın; 67router her istek için en iyi sağlayıcıyı otomatik olarak seçecektir.
 
 ---
 
@@ -260,37 +260,37 @@ Ardından `model: "auto"` kullanın; OmniRoute her istek için en iyi sağlayıc
 ### OpenAI
 
 1. API anahtarını alın: https://platform.openai.com/api-keys
-2. OmniRoute içinde: Sağlayıcılar → Sağlayıcı Ekle → OpenAI
+2. 67router içinde: Sağlayıcılar → Sağlayıcı Ekle → OpenAI
 3. API anahtarını yapıştırın → Bağlan
 
 ### Anthropic
 
 1. API anahtarını alın: https://console.anthropic.com/
-2. OmniRoute içinde: Sağlayıcılar → Sağlayıcı Ekle → Anthropic
+2. 67router içinde: Sağlayıcılar → Sağlayıcı Ekle → Anthropic
 3. API anahtarını yapıştırın → Bağlan
 
 ### Google (Gemini)
 
 1. API anahtarını alın: https://aistudio.google.com/apikey
-2. OmniRoute içinde: Sağlayıcılar → Sağlayıcı Ekle → Gemini
+2. 67router içinde: Sağlayıcılar → Sağlayıcı Ekle → Gemini
 3. API anahtarını yapıştırın → Bağlan
 
 ### DeepSeek
 
 1. API anahtarını alın: https://platform.deepseek.com/
-2. OmniRoute içinde: Sağlayıcılar → Sağlayıcı Ekle → DeepSeek
+2. 67router içinde: Sağlayıcılar → Sağlayıcı Ekle → DeepSeek
 3. API anahtarını yapıştırın → Bağlan
 
 ### Qoder: kimlik bilgisi aktarım yöntemini seçin
 
 Qoder, kimlik bilgileri gerektirir. İki aktarım yöntemi farklı yeteneklere sahiptir; yalnızca bir model adı, belirli bir bağlantının neler yapabileceğini göstermez.
 
-| Kimlik bilgisi                                 | OmniRoute aktarım yöntemi                           | Çağıran tarafın araç çağrısı                          | Akış                                                                         |
-| ---------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `pt-` ile başlayan PAT                         | OmniRoute ana makinesindeki yerel `qodercli` işlemi | Desteklenmez                                          | Arabelleğe alınır: SSE yalnızca CLI tam yanıtı döndürdükten sonra gönderilir |
-| PAT olmayan erişim belirteci veya API anahtarı | DashScope OpenAI uyumlu HTTP uç noktası             | Üst modelin/anahtarın desteğine bağlı olarak iletilir | Üst HTTP/SSE yolu                                                            |
+| Kimlik bilgisi                                 | 67router aktarım yöntemi                           | Çağıran tarafın araç çağrısı                          | Akış                                                                         |
+| ---------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `pt-` ile başlayan PAT                         | 67router ana makinesindeki yerel `qodercli` işlemi | Desteklenmez                                          | Arabelleğe alınır: SSE yalnızca CLI tam yanıtı döndürdükten sonra gönderilir |
+| PAT olmayan erişim belirteci veya API anahtarı | DashScope OpenAI uyumlu HTTP uç noktası            | Üst modelin/anahtarın desteğine bağlı olarak iletilir | Üst HTTP/SSE yolu                                                            |
 
-PAT için Qoder CLI'ı OmniRoute ile aynı ana makineye veya container'a yükleyin. Yürütülebilir dosya `qodercli` olarak bulunabilir olmalı ya da `CLI_QODER_BIN` değerini yürütülebilir dosyanın yoluna ayarlamalısınız. Yalnızca Docker ana makinesine yüklenen bir CLI, container içinde otomatik olarak kullanılamaz. Eksik yürütülebilir dosyalar, sizi yükleme veya yol ayarına yönlendiren açık bir hata oluşturur.
+PAT için Qoder CLI'ı 67router ile aynı ana makineye veya container'a yükleyin. Yürütülebilir dosya `qodercli` olarak bulunabilir olmalı ya da `CLI_QODER_BIN` değerini yürütülebilir dosyanın yoluna ayarlamalısınız. Yalnızca Docker ana makinesine yüklenen bir CLI, container içinde otomatik olarak kullanılamaz. Eksik yürütülebilir dosyalar, sizi yükleme veya yol ayarına yönlendiren açık bir hata oluşturur.
 
 PAT sohbet yolunun işlem zaman aşımı 45 saniyedir. Konuşmayı tek bir isteme dönüştürür ve CLI'ı akışsız yazdırma modunda çağırır. `stream: true` istenmesi, yanıt zarfını SSE olarak değiştirir; üst kaynaktan artımlı belirteç iletimi sağlamaz. CLI doğrulaması/model listelemesi, 20 saniyelik ayrı bir zaman aşımı kullanır. Bunlar mevcut kod varsayılanlarıdır; yapılandırılabilir pano ayarları değildir.
 
@@ -306,16 +306,16 @@ ve yapılandırılabilir zaman aşımı ayrı geliştirmelerdir; bu davranış b
 ### Groq
 
 1. API anahtarını alın: https://console.groq.com/
-2. OmniRoute içinde: Sağlayıcılar → Sağlayıcı Ekle → Groq
+2. 67router içinde: Sağlayıcılar → Sağlayıcı Ekle → Groq
 3. API anahtarını yapıştırın → Bağlan
 
 ---
 
 ## Sık Sorulan Sorular
 
-### "OmniRoute'u kullanmak için ödeme yapmam gerekiyor mu?"
+### "67router'u kullanmak için ödeme yapmam gerekiyor mu?"
 
-**Hayır!** OmniRoute ücretsiz ve açık kaynaklıdır. Ücretsiz sağlayıcıları (Kiro, Pollinations) hiçbir ücret ödemeden kullanabilirsiniz. Yalnızca ücretli sağlayıcıları kullanmayı seçerseniz ödeme yaparsınız.
+**Hayır!** 67router ücretsiz ve açık kaynaklıdır. Ücretsiz sağlayıcıları (Kiro, Pollinations) hiçbir ücret ödemeden kullanabilirsiniz. Yalnızca ücretli sağlayıcıları kullanmayı seçerseniz ödeme yaparsınız.
 
 ### "Hangi sağlayıcıyla başlamalıyım?"
 
@@ -323,11 +323,11 @@ ve yapılandırılabilir zaman aşımı ayrı geliştirmelerdir; bu davranış b
 
 ### "Aynı anda birden fazla sağlayıcı kullanabilir miyim?"
 
-**Evet!** OmniRoute'un temel amacı budur. Birden fazla sağlayıcı bağlayın ve OmniRoute'un her istek için en iyisini seçmesine olanak tanımak üzere `model: "auto"` kullanın.
+**Evet!** 67router'un temel amacı budur. Birden fazla sağlayıcı bağlayın ve 67router'un her istek için en iyisini seçmesine olanak tanımak üzere `model: "auto"` kullanın.
 
 ### "Bir sağlayıcı hizmet dışı kalırsa ne olur?"
 
-OmniRoute, başarısız olan sağlayıcıları otomatik olarak atlar ve sıradakini dener. Herhangi bir şey yapmanız gerekmez.
+67router, başarısız olan sağlayıcıları otomatik olarak atlar ve sıradakini dener. Herhangi bir şey yapmanız gerekmez.
 
 ### "Bir sağlayıcının bağlantısını nasıl keserim?"
 
@@ -335,13 +335,13 @@ Providers → sağlayıcıya tıklayın → **Disconnect** seçeneğine tıklay�
 
 ### "Mevcut API anahtarlarımı kullanabilir miyim?"
 
-**Evet!** OpenAI, Anthropic, Google vb. için hâlihazırda API anahtarlarınız varsa bunları OmniRoute'ta kullanabilirsiniz. Sağlayıcıyı bağlarken anahtarları yapıştırmanız yeterlidir.
+**Evet!** OpenAI, Anthropic, Google vb. için hâlihazırda API anahtarlarınız varsa bunları 67router'ta kullanabilirsiniz. Sağlayıcıyı bağlarken anahtarları yapıştırmanız yeterlidir.
 
 ---
 
 ## Sırada Ne Var?
 
-- **[Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md)** — OmniRoute'un sizin için en iyi yapay zekâyı seçmesini sağlayın
+- **[Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md)** — 67router'un sizin için en iyi yapay zekâyı seçmesini sağlayın
 - **[Ücretsiz Katmanlar Kılavuzu](./FREE-TIERS-GUIDE.md)** — Kredi kartı olmadan ücretsiz yapay zekâ kullanın
 - **[Sorun Giderme](../guides/TROUBLESHOOTING.md)** — Yaygın sorunları giderin
 - **[Sağlayıcı Referansı](../reference/PROVIDER_REFERENCE.md)** — 226 sağlayıcının tam listesi

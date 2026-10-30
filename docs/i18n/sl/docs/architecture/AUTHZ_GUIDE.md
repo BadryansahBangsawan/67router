@@ -7,7 +7,7 @@
 > **Vir resnice:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Zadnja posodobitev:** 2026-09-22 — imenski prostori obsega kažejo na MCP-SERVER.md
 
-OmniRoute ima cevovod za avtorizacijo, ki je odvisen od poti in varuje vsako zahtevo API-ja. Klasifikacija je **determinirana** in **zapira ob napaki** — vse, kar ni mogoče klasificirati, se konča kot `MANAGEMENT` in zahteva sejo ali žeton za upravljanje. Ta stran pojasnjuje model za inženirje, ki vzdržujejo poti ali načrtujejo nove končne točke.
+67router ima cevovod za avtorizacijo, ki je odvisen od poti in varuje vsako zahtevo API-ja. Klasifikacija je **determinirana** in **zapira ob napaki** — vse, kar ni mogoče klasificirati, se konča kot `MANAGEMENT` in zahteva sejo ali žeton za upravljanje. Ta stran pojasnjuje model za inženirje, ki vzdržujejo poti ali načrtujejo nove končne točke.
 
 ![Cevovod AuthZ (3 razredi poti + vrednotenje pravilnika)](../diagrams/exported/authz-pipeline.svg)
 

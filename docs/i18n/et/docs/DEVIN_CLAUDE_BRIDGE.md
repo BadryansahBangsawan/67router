@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` võimaldab tegelikul Claude Code'i käituskeskkonnal kasutada OmniRoute'i kohalikku Anthropic
+`devin-cli-agentic` võimaldab tegelikul Claude Code'i käituskeskkonnal kasutada 67router'i kohalikku Anthropic
 Messagesi lõpp-punkti, samal ajal kui ametlik Devin CLI edastab mudeli vastused ACP stdio kaudu. See
 ei muuda olemasolevaid Anthropic, Claude OAuthi, Claude Webi ega `devin-cli` pakkujaid.
 
@@ -18,7 +18,7 @@ metaandmed on vastavalt märgitud, et tööriistu nõudev kombineeritud marsruut
 > `3000.2.17` ja mudeliga `swe-1-7-lightning`; see viimane reaalajas käitus tõendas kliendi hallatavaid `Read`,
 > `Edit` ja `Bash` voore, edukaid `npm test` tulemusi, projekti käskude ja oskuste
 > tuvastamist, ainult Devini kaudu marsruutimist ning Claude'i väljamineva liikluse puudumist. Seejärel tõsteti fikseeritud versioon `2.1.258`-le
-> (CLI põlvkond, mida OmniRoute'i Claude'i identiteet jäljendab, ja esimene väljalase, mis sisaldab
+> (CLI põlvkond, mida 67router'i Claude'i identiteet jäljendab, ja esimene väljalase, mis sisaldab
 > Fable 5.1 taset loomupäraselt). Uue fikseeritud versiooniga kontrolliti installikihti ja `claude --version` käsku
 > fikseeritud baastõmmisel ning silla üksustestide komplekt, `compose config` ja
 > staatiline isolatsioonitõend läbivad kontrolli — kuid võrguühenduseta näidisstsenaariumi ja reaalajas kolme stsenaariumi
@@ -50,12 +50,12 @@ korral kasutatakse nähtavat kärpimismarkerit.
 Parser aktsepteerib mudeli iga vooru kohta üht eraldiseisvat `<tool>{...}</tool>` ümbrist. See kontrollib
 nime päringu tööriistaloendi alusel, valideerib argumendid vastava tööriista JSON
 Schema järgi, lükkab segatud narratiivi/toimingud tagasi ja lubab ühe piiratud paranduse. Seejärel
-käitab Claude Code saadud Anthropicu `tool_use` kutse kohalikult ja saadab `tool_result` tulemuse OmniRoute'i
+käitab Claude Code saadud Anthropicu `tool_use` kutse kohalikult ja saadab `tool_result` tulemuse 67router'i
 kaudu tagasi.
 
 ## Automaatne marsruutimine
 
-Pakkuja sobib OmniRoute'i `auto/*` kandidaatide kogumitesse, kui see pole blokeeritud.
+Pakkuja sobib 67router'i `auto/*` kandidaatide kogumitesse, kui see pole blokeeritud.
 Kandidaadiks sobivus ei taga valimist: kombinatsiooni marsruutimisstrateegia (näiteks
 viimane teadaolevalt toimiv) võib eelistada mõnda teist pakkujat. Kasutage `dva/<model>` või Devinit eelistavat kombinatsiooni, kui
 nõuate, et iga päring läbiks Devini.
@@ -67,16 +67,16 @@ käsitletakse keelatuna. Compose’i teenused:
 
 - töötavad UID/GID-ga `10001:10001`, kirjutuskaitstud juurfailisüsteemi, eemaldatud õiguste ja
   valikuga `no-new-privileges`;
-- kasutavad privaatset kataloogi `/home/bridge`, spetsiaalset Claude’i konfiguratsiooniköidet, isoleeritud OmniRoute’i andmeid
+- kasutavad privaatset kataloogi `/home/bridge`, spetsiaalset Claude’i konfiguratsiooniköidet, isoleeritud 67router’i andmeid
   ja eraldi `devin-auth` köidet;
 - haagivad ainult ühekordselt kasutatavaid `.sandbox` tööruume/tõendeid;
 - ei haagi hosti kodukataloogi, Keychaini, SSH-d, pilveteenuste autentimisandmeid ega Dockeri soklit;
 - koostavad keskkonnad eksplitsiitselt ning eemaldavad Anthropic API/OAuthi/marsruutimise muutujad;
 - suunavad Claude Code’i inferentsi ainult aadressile `http://omniroute:20128`, kasutades üksnes kohalikku võtit.
 
-Võrguühenduseta profiil kasutab sisevõrku. Reaalühendusega profiilis pääseb OmniRoute
+Võrguühenduseta profiil kasutab sisevõrku. Reaalühendusega profiilis pääseb 67router
 ametlikele Devini lõpp-punktidele juurde ainult `network-guard` kaudu; muud sihtkohad on keelatud.
-Claude Code’il on eraldi kogu väljaminevat liiklust keelav kaitse ning see pääseb `NO_PROXY` kaudu juurde ainult kohalikule OmniRoute’i
+Claude Code’il on eraldi kogu väljaminevat liiklust keelav kaitse ning see pääseb `NO_PROXY` kaudu juurde ainult kohalikule 67router’i
 teenusele. Kaitsete auditifailid on haagitud ainult vastava kaitseprotsessi külge.
 Skriptid kontrollivad enne lubadeta tõendite eksportimist failide omanikku, režiimi, linkide arvu
 ja kõiki otsuseid.

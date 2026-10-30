@@ -14,7 +14,7 @@ kodu wykonawców, domyślnych ustawień OAuth, nagłówków ani stanu środowisk
 Ten sam manifest jest dostępny przez HTTP pod adresem
 `GET /api/v1/provider-plugin-manifest` dla procesów sidecar działających poza procesem głównym.
 
-OmniRoute przekazuje ten adres URL do Bifrost i CLIProxyAPI za pośrednictwem nagłówka żądania
+67router przekazuje ten adres URL do Bifrost i CLIProxyAPI za pośrednictwem nagłówka żądania
 `X-OmniRoute-Provider-Manifest-Url`. Ustaw
 `OMNIROUTE_PROVIDER_MANIFEST_URL`, gdy proces sidecar wymaga publicznego adresu URL lub adresu
 w sieci kontenerowej zamiast lokalnego źródła żądania.
@@ -32,7 +32,7 @@ akceptować odpowiedź `304`.
 
 Przenieść metadane dostawców w stronę kontraktu wtyczki, aby w przyszłości
 gorąca ścieżka żądań mogła być obsługiwana przez proces sidecar o niższych opóźnieniach,
-podczas gdy OmniRoute zachowa trasę TypeScript jako bramę polityk i mechanizm rezerwowy.
+podczas gdy 67router zachowa trasę TypeScript jako bramę polityk i mechanizm rezerwowy.
 Manifest ma charakter rozszerzający: sam w sobie nie zmienia routingu żądań.
 
 ## Kontrakt
@@ -75,7 +75,7 @@ ponownie analizować źródła TypeScript.
 | `usage-fetch`        | Ma skonfigurowany mechanizm pobierania użycia lub limitów (`getUsageForProvider`).       |
 | `usage-supported`    | Interfejs API użycia akceptuje tego dostawcę (`isSupportedUsageConnection`).             |
 
-`usage-fetch` służy wyłącznie do wykrywania. Informuje, że OmniRoute potrafi odczytywać dane o użyciu dla
+`usage-fetch` służy wyłącznie do wykrywania. Informuje, że 67router potrafi odczytywać dane o użyciu dla
 dostawcy; nie aktywuje pobierania, nie zmienia semantyki limitów ani nie oznacza, że
 widżet limitów w Dashboardzie jest włączony dla dostawcy — ten widżet jest kontrolowany osobno przez
 `USAGE_SUPPORTED_PROVIDERS`. Źródłem prawdy jest `USAGE_FETCHER_PROVIDERS` w

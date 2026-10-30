@@ -5,7 +5,7 @@
 ---
 
 > **Hər qovluq və kök fayl üçün bir sətirlik təsvir.**
-> Son yenilənmə: 2026-06-28 — OmniRoute v3.8.40
+> Son yenilənmə: 2026-06-28 — 67router v3.8.40
 >
 > Kod bazasında sürətlə naviqasiya etmək üçün bu xəritədən istifadə edin. Ətraflı məlumat üçün xüsusi sənədlərə keçidlərə baxın.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Tam buraxılış prosesi (bacarıqlar, husky, conventional commits, yerləşdirmə)                                      |
 | `COVERAGE_PLAN.md`          | Əhatə məqsədləri və cari vəziyyət                                                                                 |
 | `FREE_TIERS.md`             | Seçilmiş pulsuz səviyyəli provayderlər (48+ pulsuz + 11 OAuth)                                                    |
-| `CLI-TOOLS.md`              | Xarici CLI inteqrasiyaları + daxili OmniRoute CLI                                                                 |
+| `CLI-TOOLS.md`              | Xarici CLI inteqrasiyaları + daxili 67router CLI                                                                  |
 | `I18N.md`                   | i18n arxitekturası, dil əlavə edilməsi, 67 lokalizasiya                                                           |
 | `UNINSTALL.md`              | Təmiz silmə addımları                                                                                             |
 | `PROVIDER_REFERENCE.md`     | 375 provayderdən ibarət **avtomatik yaradılan** kataloq (yenidən yaratmaq üçün: `npm run gen:provider-reference`) |

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Termux orqali Android qurilmasida interfeyssiz server sifatida ishlashi mumkin. Electron ish stoli ilovasi Termux muhitida qoʻllab-quvvatlanmaydi, biroq veb boshqaruv paneli va OpenAI bilan mos API mahalliy brauzerdan yoki shu tarmoqdagi boshqa qurilmalardan ishlaydi.
+67router Termux orqali Android qurilmasida interfeyssiz server sifatida ishlashi mumkin. Electron ish stoli ilovasi Termux muhitida qoʻllab-quvvatlanmaydi, biroq veb boshqaruv paneli va OpenAI bilan mos API mahalliy brauzerdan yoki shu tarmoqdagi boshqa qurilmalardan ishlaydi.
 
 ## Talablar
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js versiyasi:** OmniRoute uchun Node `>=22.22.2 <23 || >=24.0.0 <27` talab qilinadi (`package.json` ichidagi `engines` / `SUPPORTED_NODE_RANGE` bilan mos keladi). Termux paketidagi `nodejs-lts` odatda Node 20 LTS versiyasini taqdim etadi, u **endi qoʻllab-quvvatlanmaydi** — uning oʻrniga `pkg install nodejs` (joriy versiya) orqali oʻrnating va `node --version` natijasi 22.x/24.x+ qatoridagi versiyani koʻrsatishini tekshiring.
+> **Node.js versiyasi:** 67router uchun Node `>=22.22.2 <23 || >=24.0.0 <27` talab qilinadi (`package.json` ichidagi `engines` / `SUPPORTED_NODE_RANGE` bilan mos keladi). Termux paketidagi `nodejs-lts` odatda Node 20 LTS versiyasini taqdim etadi, u **endi qoʻllab-quvvatlanmaydi** — uning oʻrniga `pkg install nodejs` (joriy versiya) orqali oʻrnating va `node --version` natijasi 22.x/24.x+ qatoridagi versiyani koʻrsatishini tekshiring.
 
-Agar mahalliy paketni kompilyatsiya qilish muvaffaqiyatsiz tugasa, yuqoridagi `pkg install` buyrugʻini qayta ishga tushiring va keyin OmniRoute oʻrnatilishini yana bir bor sinab koʻring.
+Agar mahalliy paketni kompilyatsiya qilish muvaffaqiyatsiz tugasa, yuqoridagi `pkg install` buyrugʻini qayta ishga tushiring va keyin 67router oʻrnatilishini yana bir bor sinab koʻring.
 
 ## Oʻrnatish
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Ishga tushirish
 
-OmniRouteʼni interfeyssiz server rejimida ishga tushiring:
+67routerʼni interfeyssiz server rejimida ishga tushiring:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Masalan:
 http://192.168.1.50:20128
 ```
 
-Telefon va mijozni bir xil ishonchli tarmoqda saqlang. Agar OmniRouteʼni telefondan tashqaridagi tarmoq uchun ochsangiz, API kalitlari va boshqaruv paneli autentifikatsiyasini yoqing.
+Telefon va mijozni bir xil ishonchli tarmoqda saqlang. Agar 67routerʼni telefondan tashqaridagi tarmoq uchun ochsangiz, API kalitlari va boshqaruv paneli autentifikatsiyasini yoqing.
 
 ## Maʼlumotlar katalogi
 
-Odatiy holatda OmniRoute maʼlumotlarni Termux uy katalogida saqlaydi va Linux tizimida ishlatiladigan server maʼlumotlari yoʻli qoidalariga amal qiladi. Maʼlumotlar bazasini aniq belgilangan joyga joylashtirish uchun:
+Odatiy holatda 67router maʼlumotlarni Termux uy katalogida saqlaydi va Linux tizimida ishlatiladigan server maʼlumotlari yoʻli qoidalariga amal qiladi. Maʼlumotlar bazasini aniq belgilangan joyga joylashtirish uchun:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Qoʻllab-quvvatlanmaydigan platforma: android (har bir soʻrov HTTP 500 qaytaradi)
 
-**Alomat:** `omniroute` / `omniroute serve` `✔ OmniRoute ishlamoqda!` xabarini chiqaradi, ammo boshqaruv paneli yoki APIʼga yuborilgan har bir soʻrov oddiy `500 Internal Server Error` xatosini qaytaradi. `~/.omniroute/logs/application/app.log` boʻsh qoladi, `APP_LOG_LEVEL=debug` foydali hech narsa chiqarmaydi va javob tanasi JSON tafsilotlarisiz oddiy matndan (`Internal Server Error`) iborat boʻladi.
+**Alomat:** `omniroute` / `omniroute serve` `✔ 67router ishlamoqda!` xabarini chiqaradi, ammo boshqaruv paneli yoki APIʼga yuborilgan har bir soʻrov oddiy `500 Internal Server Error` xatosini qaytaradi. `~/.omniroute/logs/application/app.log` boʻsh qoladi, `APP_LOG_LEVEL=debug` foydali hech narsa chiqarmaydi va javob tanasi JSON tafsilotlarisiz oddiy matndan (`Internal Server Error`) iborat boʻladi.
 
 **Sabab:** Ayrim Termux/Node toʻplamlari `process.platform === "android"` qiymatini qaytaradi. Next.js ichidagi `getCacheDirectory()` bu platformani qoʻllab-quvvatlamaydi: u `~/.cache` (yoki umumiy vaqtinchalik katalog) _avvaldan_ mavjud boʻlishini talab qiladi, aks holda instrumentation hukini yuklashda quyidagi xato yuz beradi:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Huk umuman yuklanmagani sababli jurnalga yozish ham boshlanmaydi — shu bois 500 xatosining sababini aniqlash mutlaqo imkonsizdek koʻrinadi. Ushbu tekshiruv Android/Termux muhitida muvaffaqiyatli oʻtishi uchun OmniRoute Next.js ishga tushishidan oldin CLI kirish nuqtasida `~/.cache` katalogini yaratadi (va belgilanmagan boʻlsa, `XDG_CACHE_HOME` qiymatini oʻrnatadi).
+Huk umuman yuklanmagani sababli jurnalga yozish ham boshlanmaydi — shu bois 500 xatosining sababini aniqlash mutlaqo imkonsizdek koʻrinadi. Ushbu tekshiruv Android/Termux muhitida muvaffaqiyatli oʻtishi uchun 67router Next.js ishga tushishidan oldin CLI kirish nuqtasida `~/.cache` katalogini yaratadi (va belgilanmagan boʻlsa, `XDG_CACHE_HOME` qiymatini oʻrnatadi).
 
 **Qoʻllab-quvvatlanadigan yechim (paketni yamoqlamasdan):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-OmniRouteʼning joriy toʻplamlarida CLI buni Android/Termux muhitida avtomatik bajaradi — yangidan bajarilgan `npx -y omniroute@latest` / global oʻrnatish qoʻlda bajariladigan bu qadamni talab qilmasligi kerak. Yangilagandan keyin ham xatoni koʻrsangiz, yuqoridagidek `~/.cache` katalogini bir marta yarating va qayta ishga tushiring.
+67routerʼning joriy toʻplamlarida CLI buni Android/Termux muhitida avtomatik bajaradi — yangidan bajarilgan `npx -y omniroute@latest` / global oʻrnatish qoʻlda bajariladigan bu qadamni talab qilmasligi kerak. Yangilagandan keyin ham xatoni koʻrsangiz, yuqoridagidek `~/.cache` katalogini bir marta yarating va qayta ishga tushiring.
 
 `process.platform = "linux"` qiymatini majburan belgilash uchun `dist/server.js` faylini **yamoqlamang**. Bunday paket yamogʻi har bir qayta oʻrnatish/yangilashda ustidan yoziladi va kesh katalogi mavjud boʻlgach, bunga ehtiyoj qolmaydi.
 

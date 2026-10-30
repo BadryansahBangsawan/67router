@@ -25,7 +25,7 @@ Dashboard → Providers → **นำเข้าจากไฟล์** จะ�
 ดาวน์โหลดไฟล์เริ่มต้นจากโมดอลนำเข้า (**ดาวน์โหลดเทมเพลต CSV**) ตัวอย่าง:
 
 ```csv
-# การนำเข้าผู้ให้บริการ OmniRoute (คอลัมน์ตามตำแหน่ง)
+# การนำเข้าผู้ให้บริการ 67router (คอลัมน์ตามตำแหน่ง)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

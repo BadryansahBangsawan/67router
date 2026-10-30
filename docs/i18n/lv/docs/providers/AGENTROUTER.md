@@ -12,7 +12,7 @@ tāpēc tas pieņem tikai tādu datplūsmu, kas atbilst Claude Code pieprasījum
 
 ## Ātrā darba sākšana — izmantojiet iebūvēto `agentrouter` nodrošinātāju (ieteicams)
 
-Lielākajai daļai lietotāju **nav nepieciešama īpaša konfigurēšana**. OmniRoute ietver
+Lielākajai daļai lietotāju **nav nepieciešama īpaša konfigurēšana**. 67router ietver
 iebūvētu `agentrouter` nodrošinātāju, kurā jau ir pilnībā iestrādāts Claude Code
 pieprasījumu profils (skatiet `open-sse/config/providerRegistry.ts` → `agentrouter`).
 Lai to izmantotu:
@@ -36,7 +36,7 @@ tērzēšanas ceļu vai galveņu kopu.
 
 ## Papildu iespējas: savienojuma izveide, izmantojot ar Claude Code saderīgu nodrošinātāja tipu
 
-OmniRoute atbalsta arī AgentRouter (un līdzīgus starpniekpakalpojumus), izmantojot
+67router atbalsta arī AgentRouter (un līdzīgus starpniekpakalpojumus), izmantojot
 **ar Claude Code saderīgu** nodrošinātāja tipu (`anthropic-compatible-cc-*`), kas
 izmanto Anthropic Messages API ar pareizo pieprasījumu profilu. Vispārīgs
 `openai-compatible-chat` nodrošinātājs, kas norāda uz `https://agentrouter.org`,
@@ -49,14 +49,14 @@ Claude Code pieprasījumiem.
 
 - AgentRouter konts un API atslēga. Jaunie lietotāji saņem bezmaksas kredītus,
   reģistrējoties ar partnera saiti projekta [README](../README.md).
-- OmniRoute darbojas ar iespējotu `ENABLE_CC_COMPATIBLE_PROVIDER` funkcijas
+- 67router darbojas ar iespējotu `ENABLE_CC_COMPATIBLE_PROVIDER` funkcijas
   karodziņu (skatiet tālāk).
 
 ## 1. Iespējojiet ar CC saderīgo nodrošinātāja tipu
 
 Ar Claude Code saderīgais nodrošinātāja tips ir pieejams tikai ar funkcijas
 karodziņu, jo tas sūta datplūsmu, kas ļoti līdzinās oficiālā Claude Code klienta
-datplūsmai. Iespējojiet to, pirms OmniRoute palaišanas iestatot vides mainīgo:
+datplūsmai. Iespējojiet to, pirms 67router palaišanas iestatot vides mainīgo:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

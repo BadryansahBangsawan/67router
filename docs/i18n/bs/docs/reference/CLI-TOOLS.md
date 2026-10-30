@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Bosanski)
+# CLI Tools — 67router (Bosanski)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Posljednje ažuriranje: 2026-08-23
 
-OmniRoute se integrira s tri kategorije CLI alata raspoređenih na tri namjenske stranice kontrolne ploče:
+67router se integrira s tri kategorije CLI alata raspoređenih na tri namjenske stranice kontrolne ploče:
 
-| Stranica       | Ruta                    | Koncept                                                                                     | Broj                |
-| -------------- | ----------------------- | ------------------------------------------------------------------------------------------- | ------------------- |
-| **CLI kodovi** | `/dashboard/cli-code`   | Alati za programiranje koje usmjeravate na OmniRoute (Klijent → CLI → OmniRoute → Pružalac) | 26                  |
-| **CLI agenti** | `/dashboard/cli-agents` | Autonomni agenti koje usmjeravate na OmniRoute (isti tok, širi opseg)                       | 10                  |
-| **ACP agenti** | `/dashboard/acp-agents` | CLI alati koje OmniRoute pokreće kao pozadinske procese putem stdio/ACP-a (obrnuti tok)     | pogledajte registar |
+| Stranica       | Ruta                    | Koncept                                                                                   | Broj                |
+| -------------- | ----------------------- | ----------------------------------------------------------------------------------------- | ------------------- |
+| **CLI kodovi** | `/dashboard/cli-code`   | Alati za programiranje koje usmjeravate na 67router (Klijent → CLI → 67router → Pružalac) | 26                  |
+| **CLI agenti** | `/dashboard/cli-agents` | Autonomni agenti koje usmjeravate na 67router (isti tok, širi opseg)                      | 10                  |
+| **ACP agenti** | `/dashboard/acp-agents` | CLI alati koje 67router pokreće kao pozadinske procese putem stdio/ACP-a (obrnuti tok)    | pogledajte registar |
 
 Zastarjele rute preusmjeravaju putem statusa 308: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ Zastarjele rute preusmjeravaju putem statusa 308: `/dashboard/cli-tools` → `/d
 CLI kodovi / CLI agenti (tok korištenja):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (svi su usmjereni na OmniRoute)
+           ▼  (svi su usmjereni na 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute usmjerava prema odgovarajućem pružaocu)
+           ▼  (67router usmjerava prema odgovarajućem pružaocu)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP agenti (obrnuti tok pokretanja):
-    Zahtjev klijenta → OmniRoute → pokreće CLI putem stdio/ACP-a → odgovor
+    Zahtjev klijenta → 67router → pokreće CLI putem stdio/ACP-a → odgovor
 ```
 
 **Prednosti:**
@@ -45,9 +45,9 @@ ACP agenti (obrnuti tok pokretanja):
 
 ## Automatska konfiguracija pomoću `setup-*`
 
-Ne morate ručno pisati konfiguraciju svakog alata. OmniRoute isporučuje po jednu
+Ne morate ručno pisati konfiguraciju svakog alata. 67router isporučuje po jednu
 naredbu `setup-*` za svaki podržani CLI, koja čita **aktuelni** katalog modela iz
-pokrenutog OmniRoutea (lokalnog ili udaljenog) i zapisuje vlastitu konfiguraciju
+pokrenutog 67routera (lokalnog ili udaljenog) i zapisuje vlastitu konfiguraciju
 alata na vaš računar:
 
 ```bash
@@ -59,7 +59,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Svaka prihvata `--remote <url> --api-key <key>` (konfigurira lokalni alat za
-udaljeni OmniRoute), `--dry-run` (pregled bez zapisivanja) i `--port`. Alati
+udaljeni 67router), `--dry-run` (pregled bez zapisivanja) i `--port`. Alati
 bez automatskog otkrivanja modela (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive)
 prihvataju `--model <id>` (i `--yes` za neinteraktivna pokretanja). `setup-5dive`
 je jedini recept koji ne zapisuje unutar `$HOME`: konfigurira flotu 5dive agenata
@@ -80,9 +80,9 @@ pokretanje: on je cilj za `omniroute run`, ali nema recept `setup-*`/`configure`
 
 ### Pokretanje ovih naredbi unutar kontejnera
 
-Naredba `setup-*` izvršena unutar OmniRoute kontejnera zapisuje podatke u vlastiti
+Naredba `setup-*` izvršena unutar 67router kontejnera zapisuje podatke u vlastiti
 početni direktorij kontejnera, koji nijedan CLI na hostu ne čita i koji nestaje
-zajedno s kontejnerom. OmniRoute to otkriva i završava s kodom `2`, prikazujući
+zajedno s kontejnerom. 67router to otkriva i završava s kodom `2`, prikazujući
 upute umjesto zapisivanja. Postoje dva podržana načina za nastavak — instalirajte
 CLI na hostu i koristite `omniroute connect` za povezivanje s kontejnerom ili
 povežite direktorije konfiguracije putem bind mounta i postavite
@@ -209,7 +209,7 @@ Autonomni agenti koji se pojavljuju na `/dashboard/cli-agents`:
 
 ## 3. ACP agenti (/dashboard/acp-agents)
 
-Ova stranica (preimenovana iz `/dashboard/agents`) prikazuje CLI-je koje OmniRoute može **pokrenuti** kao pozadinske izvršne mehanizme putem stdio/ACP protokola. Katalog se zasebno održava u `src/lib/acp/registry.ts` i **nije** isti kao `CLI_TOOLS`.
+Ova stranica (preimenovana iz `/dashboard/agents`) prikazuje CLI-je koje 67router može **pokrenuti** kao pozadinske izvršne mehanizme putem stdio/ACP protokola. Katalog se zasebno održava u `src/lib/acp/registry.ts` i **nije** isti kao `CLI_TOOLS`.
 
 ---
 
@@ -336,7 +336,7 @@ Dostupni su potpuni prijevodi za PT-BR i EN. Ostalih 39 lokalizacija automatski 
 
 ## 9. Brzi početak
 
-### Korak 1 — Nabavite OmniRoute API ključ
+### Korak 1 — Nabavite 67router API ključ
 
 1. Otvorite `/dashboard/api-manager` → **Kreiraj API ključ**
 2. Dodijelite mu naziv (npr. `cli-tools`) i odaberite sve dozvole
@@ -400,7 +400,7 @@ cargo install smelt  # Zasnovan na Rustu
 ### Korak 4 — Postavite globalne varijable okruženja
 
 ```bash
-# Univerzalna krajnja tačka OmniRoutea
+# Univerzalna krajnja tačka 67routera
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -512,7 +512,7 @@ EOF
 **VS Code način rada:**
 Postavke proširenja Cline → API Provider: `OpenAI Compatible` → Base URL: `http://localhost:20128/v1`
 
-Ili koristite kontrolnu ploču OmniRoute → **CLI alati → Cline → Primijeni konfiguraciju**.
+Ili koristite kontrolnu ploču 67router → **CLI alati → Cline → Primijeni konfiguraciju**.
 
 ---
 
@@ -533,7 +533,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Ili koristite kontrolnu ploču OmniRoute → **CLI alati → KiloCode → Primijeni konfiguraciju**.
+Ili koristite kontrolnu ploču 67router → **CLI alati → KiloCode → Primijeni konfiguraciju**.
 
 ---
 
@@ -557,14 +557,14 @@ Ponovo pokrenite VS Code nakon uređivanja.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Koristite ovo kada je VS Code Insiders konfigurisan za modele prilagođenih krajnjih tačaka i želite da OmniRoute radi bez prilagođenog polja zaglavlja.
+Koristite ovo kada je VS Code Insiders konfigurisan za modele prilagođenih krajnjih tačaka i želite da 67router radi bez prilagođenog polja zaglavlja.
 
 **Preporučena lokacija:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Primjer korištenja tokeniziranog OmniRoute aliasa:**
+**Primjer korištenja tokeniziranog 67router aliasa:**
 
 ```json
 [
@@ -588,7 +588,7 @@ Koristite ovo kada je VS Code Insiders konfigurisan za modele prilagođenih kraj
 
 **Napomene:**
 
-- Zamijenite `sk-your-omniroute-key` API ključem kreiranim u OmniRouteu.
+- Zamijenite `sk-your-omniroute-key` API ključem kreiranim u 67routeru.
 - Polje `url` treba upućivati na `/api/v1/vscode/{token}/chat/completions`.
 - Polje `modelsUrl` treba upućivati na `/api/v1/vscode/{token}/models`.
 - Dajte prednost standardnom toku `/v1` + Bearer zaglavlje kada klijent podržava prilagođena zaglavlja.
@@ -602,17 +602,17 @@ Koristite ovo kada je VS Code Insiders konfigurisan za modele prilagođenih kraj
 # Prijavite se na svoj AWS/Kiro račun:
 kiro-cli login
 
-# CLI koristi vlastitu autentifikaciju — OmniRoute nije potreban kao pozadinski sistem za sam Kiro CLI.
-# Koristite kiro-cli uz OmniRoute za druge alate.
+# CLI koristi vlastitu autentifikaciju — 67router nije potreban kao pozadinski sistem za sam Kiro CLI.
+# Koristite kiro-cli uz 67router za druge alate.
 kiro-cli status
 ```
 
-Za desktop aplikaciju **Kiro IDE** koristite MITM krajnju tačku koju OmniRoute izlaže
+Za desktop aplikaciju **Kiro IDE** koristite MITM krajnju tačku koju 67router izlaže
 na `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. Interni OmniRoute CLI
+## 10. Interni 67router CLI
 
 Binarna datoteka `omniroute` pruža komande za životni ciklus servera, postavljanje, dijagnostiku i upravljanje pružaocima usluga. Ulazna tačka: `bin/omniroute.mjs`.
 
@@ -646,7 +646,7 @@ Prepoznate varijable okruženja za neinteraktivno postavljanje:
 | Varijabla           | Namjena                                                                    |
 | ------------------- | -------------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | API ključ pružaoca (povezan s `--api-key` putem Commander metode `.env()`) |
-| `DATA_DIR`          | Nadjačava direktorij podataka za OmniRoute                                 |
+| `DATA_DIR`          | Nadjačava direktorij podataka za 67router                                  |
 
 Svi ostali neinteraktivni ulazni podaci prosljeđuju se kao zastavice, a ne kao varijable okruženja:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -669,7 +669,7 @@ Doctor izvršava sljedeće provjere: `Config`, `Database`, `Storage/encryption`,
 ### Upravljanje pružaocima usluga
 
 ```bash
-omniroute providers available                       # Katalog OmniRoute pružalaca usluga
+omniroute providers available                       # Katalog 67router pružalaca usluga
 omniroute providers available --search openai       # Filtriraj katalog prema ID-u/nazivu/aliasu/kategoriji
 omniroute providers available --category api-key    # Filtriraj prema kategoriji (api-key, oauth, free, ...)
 omniroute providers available --json                # Mašinski čitljiv JSON
@@ -690,7 +690,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` prvenstveno koriste API i stoga rade s
 aktivnim lokalnim ili udaljenim kontekstom. Za unos vjerodajnica treba koristiti
 `--credential-stdin` ili `--credential-env`; `--dry-run --json` prikazuje samo
-redigirane podatke o prisutnosti/strukturi. `providers available` čita OmniRoute katalog;
+redigirane podatke o prisutnosti/strukturi. `providers available` čita 67router katalog;
 `providers list/test/test-all/validate` zadržavaju svoje lokalno SQLite ponašanje i
 ne zahtijevaju da server bude pokrenut.
 
@@ -733,7 +733,7 @@ uvijek se ispisuje na stderr prije emitovanja bilo kakvog otvorenog teksta. Zaht
 
 ### Ostale potkomande
 
-One podrazumijevaju pokrenut OmniRoute server, osim ako nije drugačije navedeno:
+One podrazumijevaju pokrenut 67router server, osim ako nije drugačije navedeno:
 
 ```bash
 omniroute status                       # Sveobuhvatan status izvršavanja
@@ -741,7 +741,7 @@ omniroute logs                         # Prati zapisnike zahtjeva (--json, --sea
 omniroute config list                  # Prikaži konfigurirane CLI alate
 
 omniroute provider list                # Prikaži dostupne pružaoce (pseudonim za providers list)
-omniroute provider add                 # Registruj OmniRoute kao pružaoca u alatu
+omniroute provider add                 # Registruj 67router kao pružaoca u alatu
 omniroute keys add | list | remove     # Upravljaj API ključevima
 omniroute models [provider]            # Prikaži modele (--json, --search)
 omniroute combo list | switch | create | delete
@@ -791,7 +791,7 @@ omniroute completion                   # Generiši dovršavanje naredbi ljuske
 | `/v1/audio/speech`         | Pretvaranje teksta u govor     | ElevenLabs, OpenAI TTS               |
 | `/v1/audio/transcriptions` | Pretvaranje govora u tekst     | Deepgram, AssemblyAI                 |
 
-Primjeri spremni za lijepljenje s tokeniziranim OmniRoute URL-om:
+Primjeri spremni za lijepljenje s tokeniziranim 67router URL-om:
 
 ```txt
 Primjer tokena: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -810,7 +810,7 @@ Ollama chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070
 
 | Greška                                                     | Uzrok                                 | Rješenje                                                 |
 | ---------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------- |
-| `Connection refused`                                       | OmniRoute nije pokrenut               | `omniroute serve`                                        |
+| `Connection refused`                                       | 67router nije pokrenut                | `omniroute serve`                                        |
 | `401 Unauthorized`                                         | Pogrešan API ključ                    | Provjerite u `/dashboard/api-manager`                    |
 | `No combo configured`                                      | Nema aktivne kombinacije usmjeravanja | Postavite je u `/dashboard/combos`                       |
 | CLI prikazuje "not installed"                              | Binarna datoteka nije u PATH-u        | Provjerite `which <command>`                             |
@@ -818,7 +818,7 @@ Ollama chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070
 | Stari link `/dashboard/cli-tools`                          | Oznaka prije v3.8.6                   | Automatski preusmjereno na `/dashboard/cli-code` (308)   |
 | Stari link `/dashboard/agents`                             | Oznaka prije v3.8.6                   | Automatski preusmjereno na `/dashboard/acp-agents` (308) |
 
-## Upravljanje pravilima ključa za zaključivanje pomoću OmniRoute CLI-ja
+## Upravljanje pravilima ključa za zaključivanje pomoću 67router CLI-ja
 
 Koristite autentificirani kontekst upravljanja (pogledajte [Udaljeni način rada](../guides/REMOTE-MODE.md))
 da biste pregledali ili ažurirali postojeći ključ za zaključivanje prema njegovom ID-u:

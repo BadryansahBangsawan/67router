@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 透過與聊天相同的提供者 id `cursor`（別名 `cu`），在 `POST /v1/images/generations` 公開 Cursor 方案的**圖片生成**功能。
+67router 透過與聊天相同的提供者 id `cursor`（別名 `cu`），在 `POST /v1/images/generations` 公開 Cursor 方案的**圖片生成**功能。
 
 | 欄位                 | 值                                                                             |
 | -------------------- | ------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ OmniRoute 透過與聊天相同的提供者 id `cursor`（別名 `cu`），在 `
 
 ## 為何使用 Agent CLI
 
-OmniRoute 中的 Cursor 聊天使用 `agent.v1.AgentService/Run`（protobuf）。該路徑會**拒絕**內建的用戶端工具（shell、write 等）。圖片生成是由 **`agent` CLI** 針對該席位執行的 Cursor 原生工具。因此，圖片處理常式會使用鎖定的提示詞和每個請求各自的臨時工作區來啟動 `agent`（結構與社群席位橋接器相同），然後傳回與 OpenAI 相容的 `b64_json`。
+67router 中的 Cursor 聊天使用 `agent.v1.AgentService/Run`（protobuf）。該路徑會**拒絕**內建的用戶端工具（shell、write 等）。圖片生成是由 **`agent` CLI** 針對該席位執行的 Cursor 原生工具。因此，圖片處理常式會使用鎖定的提示詞和每個請求各自的臨時工作區來啟動 `agent`（結構與社群席位橋接器相同），然後傳回與 OpenAI 相容的 `b64_json`。
 
 ## 存取限制（強制規則 #15 + #17）
 
@@ -23,12 +23,12 @@ OmniRoute 中的 Cursor 聊天使用 `agent.v1.AgentService/Run`（protobuf）�
 
 ## 並行閘門位於模組層級（單一執行個體限制）
 
-`CURSOR_IMG_MAX_CONCURRENT` 由作用域限定於 Node 模組執行個體（`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`）的記憶體內計數器／佇列強制執行。它可正確限制單一 OmniRoute 程序內同時啟動的 `agent` 數量，但**不會**在共用相同 Cursor 席位的多個程序／執行個體之間協調（例如多複本部署）；每個執行個體都會執行各自獨立的限制。對於單一執行個體部署（預設值），此限制是精確的；水平擴充的部署應為每個執行個體保守設定 `CURSOR_IMG_MAX_CONCURRENT`，或將 Cursor 圖片流量路由至單一執行個體。
+`CURSOR_IMG_MAX_CONCURRENT` 由作用域限定於 Node 模組執行個體（`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`）的記憶體內計數器／佇列強制執行。它可正確限制單一 67router 程序內同時啟動的 `agent` 數量，但**不會**在共用相同 Cursor 席位的多個程序／執行個體之間協調（例如多複本部署）；每個執行個體都會執行各自獨立的限制。對於單一執行個體部署（預設值），此限制是精確的；水平擴充的部署應為每個執行個體保守設定 `CURSOR_IMG_MAX_CONCURRENT`，或將 Cursor 圖片流量路由至單一執行個體。
 
 ## 需求
 
 1. 儀表板中已連線的 Cursor 帳戶（OAuth 或 `crsr_…` API 金鑰）。
-2. OmniRoute 程序可使用 Cursor Agent 二進位檔：
+2. 67router 程序可使用 Cursor Agent 二進位檔：
    - 環境變數 `CURSOR_AGENT_BIN=/path/to/agent`，或
    - `~/.local/bin/agent`，或
    - Cursor 連線上的 `providerSpecificData.agentBin`。

@@ -4,7 +4,7 @@
 
 ---
 
-„OmniRoute“ gali veikti kaip serveris be grafinės sąsajos „Android“ sistemoje per „Termux“. „Electron“ darbalaukio programa „Termux“ aplinkoje nepalaikoma, tačiau žiniatinklio valdymo skydelį ir su „OpenAI“ suderinamą API galima naudoti vietinėje naršyklėje arba kituose to paties tinklo įrenginiuose.
+„67router“ gali veikti kaip serveris be grafinės sąsajos „Android“ sistemoje per „Termux“. „Electron“ darbalaukio programa „Termux“ aplinkoje nepalaikoma, tačiau žiniatinklio valdymo skydelį ir su „OpenAI“ suderinamą API galima naudoti vietinėje naršyklėje arba kituose to paties tinklo įrenginiuose.
 
 ## Būtinosios sąlygos
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js versija:** „OmniRoute“ reikia Node `>=22.22.2 <23 || >=24.0.0 <27` (atitinka `engines`, nurodytą `package.json` / `SUPPORTED_NODE_RANGE`). „Termux“ pakete `nodejs-lts` paprastai pateikiama Node 20 LTS, kuri **nebepalaikoma** — vietoje jos įdiekite dabartinę versiją naudodami `pkg install nodejs` ir patikrinkite, ar `node --version` nurodo 22.x / 24.x ar naujesnę versiją.
+> **Node.js versija:** „67router“ reikia Node `>=22.22.2 <23 || >=24.0.0 <27` (atitinka `engines`, nurodytą `package.json` / `SUPPORTED_NODE_RANGE`). „Termux“ pakete `nodejs-lts` paprastai pateikiama Node 20 LTS, kuri **nebepalaikoma** — vietoje jos įdiekite dabartinę versiją naudodami `pkg install nodejs` ir patikrinkite, ar `node --version` nurodo 22.x / 24.x ar naujesnę versiją.
 
-Jei nepavyksta sukompiliuoti savųjų paketų, dar kartą paleiskite pirmiau pateiktą komandą `pkg install`, o tada pakartokite „OmniRoute“ diegimą.
+Jei nepavyksta sukompiliuoti savųjų paketų, dar kartą paleiskite pirmiau pateiktą komandą `pkg install`, o tada pakartokite „67router“ diegimą.
 
 ## Diegimas
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Paleidimas
 
-Paleiskite „OmniRoute“ serverio be grafinės sąsajos režimu:
+Paleiskite „67router“ serverio be grafinės sąsajos režimu:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Pavyzdžiui:
 http://192.168.1.50:20128
 ```
 
-Telefoną ir kliento įrenginį laikykite prijungtus prie to paties patikimo tinklo. Jei „OmniRoute“ padarote pasiekiamą už telefono ribų, įjunkite API raktus ir valdymo skydelio autentifikavimą.
+Telefoną ir kliento įrenginį laikykite prijungtus prie to paties patikimo tinklo. Jei „67router“ padarote pasiekiamą už telefono ribų, įjunkite API raktus ir valdymo skydelio autentifikavimą.
 
 ## Duomenų katalogas
 
-Pagal numatytuosius nustatymus „OmniRoute“ saugo duomenis „Termux“ namų kataloge, vadovaudamasi tokia pačia serverio duomenų kelio elgsena kaip „Linux“ sistemoje. Norėdami duomenų bazę laikyti aiškiai nurodytoje vietoje:
+Pagal numatytuosius nustatymus „67router“ saugo duomenis „Termux“ namų kataloge, vadovaudamasi tokia pačia serverio duomenų kelio elgsena kaip „Linux“ sistemoje. Norėdami duomenų bazę laikyti aiškiai nurodytoje vietoje:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Nepalaikoma platforma: android (kiekviena užklausa grąžina HTTP 500)
 
-**Požymis:** `omniroute` / `omniroute serve` išveda `✔ OmniRoute is running!`, tačiau kiekviena valdymo skydelio arba API užklausa grąžina tik `500 Internal Server Error`. Failas `~/.omniroute/logs/application/app.log` lieka tuščias, `APP_LOG_LEVEL=debug` neišveda nieko naudingo, o atsakymo turinys yra paprastasis tekstas (`Internal Server Error`) be išsamios JSON informacijos.
+**Požymis:** `omniroute` / `omniroute serve` išveda `✔ 67router is running!`, tačiau kiekviena valdymo skydelio arba API užklausa grąžina tik `500 Internal Server Error`. Failas `~/.omniroute/logs/application/app.log` lieka tuščias, `APP_LOG_LEVEL=debug` neišveda nieko naudingo, o atsakymo turinys yra paprastasis tekstas (`Internal Server Error`) be išsamios JSON informacijos.
 
 **Priežastis:** kai kurie „Termux“ / Node dariniai nurodo `process.platform === "android"`. „Next.js“ funkcija `getCacheDirectory()` šios platformos neapdoroja: jai reikia, kad `~/.cache` (arba bendrasis laikinųjų failų katalogas) _jau_ egzistuotų, antraip įkeliant instrumentavimo kablį įvyksta klaida:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Kadangi kablys neįkeliamas, žurnalų rašymas nepradedamas — todėl 500 klaidos priežasties atrodo visiškai neįmanoma nustatyti. Prieš paleidžiant „Next.js“, „OmniRoute“ CLI įėjimo taške sukuria `~/.cache` (ir nustato `XDG_CACHE_HOME`, jei jis nenustatytas), kad šis tikrinimas „Android“ / „Termux“ aplinkoje būtų sėkmingas.
+Kadangi kablys neįkeliamas, žurnalų rašymas nepradedamas — todėl 500 klaidos priežasties atrodo visiškai neįmanoma nustatyti. Prieš paleidžiant „Next.js“, „67router“ CLI įėjimo taške sukuria `~/.cache` (ir nustato `XDG_CACHE_HOME`, jei jis nenustatytas), kad šis tikrinimas „Android“ / „Termux“ aplinkoje būtų sėkmingas.
 
 **Palaikomas sprendimas (nekeičiant paketo):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Dabartiniuose „OmniRoute“ dariniuose CLI tai automatiškai atlieka „Android“ / „Termux“ aplinkoje — iš naujo paleidus `npx -y omniroute@latest` arba įdiegus visuotinai, šio veiksmo rankiniu būdu atlikti neturėtų reikėti. Jei po naujinimo klaida vis tiek rodoma, vieną kartą sukurkite `~/.cache`, kaip nurodyta pirmiau, ir paleiskite iš naujo.
+Dabartiniuose „67router“ dariniuose CLI tai automatiškai atlieka „Android“ / „Termux“ aplinkoje — iš naujo paleidus `npx -y omniroute@latest` arba įdiegus visuotinai, šio veiksmo rankiniu būdu atlikti neturėtų reikėti. Jei po naujinimo klaida vis tiek rodoma, vieną kartą sukurkite `~/.cache`, kaip nurodyta pirmiau, ir paleiskite iš naujo.
 
 **Nekeiskite** `dist/server.js`, kad priverstinai nustatytumėte `process.platform = "linux"`. Toks paketo pakeitimas perrašomas kiekvieną kartą diegiant iš naujo ar naujinant ir nėra reikalingas, kai podėlio katalogas jau egzistuoja.
 

@@ -52,7 +52,7 @@ d’inactivité. Il s’agit du même limiteur de débit lié à l’adresse IP 
 des erreurs intermittentes `400 content-blocked` lorsque Claude Code ou Codex CLI
 effectue plusieurs appels d’utilisation d’outil ou d’envoi de message en succession rapide.
 
-## Mesures d’atténuation déjà appliquées dans OmniRoute
+## Mesures d’atténuation déjà appliquées dans 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — protection contre les rafales imposant un
    intervalle minimal de 500 ms entre les requêtes sortantes vers toute URL `agentrouter:*`.

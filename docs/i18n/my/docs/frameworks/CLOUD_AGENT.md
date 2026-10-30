@@ -7,7 +7,7 @@
 > **အမှန်တရား၏ မူရင်းရင်းမြစ်:** `src/lib/cloudAgent/` နှင့် `src/app/api/v1/agents/tasks/`
 > **နောက်ဆုံးမွမ်းမံသည့်ရက်:** 2026-06-28 — v3.8.40 (frontmatter အသစ်ပြန်လည်ပြင်ဆင်မှု; cursor-cloud အပါအဝင် agent 4 ခု)
 
-OmniRoute သည် third-party cloud တွင် host လုပ်ထားသော coding agent များ (Codex Cloud, Cursor၊
+67router သည် third-party cloud တွင် host လုပ်ထားသော coding agent များ (Codex Cloud, Cursor၊
 Devin၊ Jules) ကို အချိန်ကြာမြင့်စွာ လုပ်ဆောင်သည့် task များအဖြစ် စီမံညှိနှိုင်းပေးသည်။ Agent တစ်ခုစီကို တစ်ပြေးညီ interface နောက်ကွယ်တွင် ထုပ်ပိုးထားသောကြောင့်
 client များသည် provider အလိုက် ကွဲပြားသော API များကို ကိုင်တွယ်စရာမလိုဘဲ prompt + repo URL ကို ပေးပို့ပြီး ရလဒ်များကို လက်ခံရရှိနိုင်သည်။
 

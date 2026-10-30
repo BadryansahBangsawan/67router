@@ -7,7 +7,7 @@
 > **Nguồn tham chiếu chính xác:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute có thể đưa máy chủ cục bộ (`http://localhost:20128`) ra internet công
+67router có thể đưa máy chủ cục bộ (`http://localhost:20128`) ra internet công
 khai thông qua ba backend đường hầm. Điều này hữu ích cho:
 
 - Các callback OAuth từ nhà cung cấp đám mây (Antigravity, Gemini, Cursor) cần
@@ -15,7 +15,7 @@ khai thông qua ba backend đường hầm. Điều này hữu ích cho:
 - Chia sẻ phiên bản cục bộ của bạn với đồng đội mà không cần triển khai máy ảo.
 - Kiểm thử trên thiết bị di động, từ xa hoặc xuyên mạng.
 
-Cả ba backend đều được quản lý trong tiến trình — OmniRoute khởi động/dừng tệp
+Cả ba backend đều được quản lý trong tiến trình — 67router khởi động/dừng tệp
 nhị phân hoặc SDK nền từ bảng điều khiển hay REST API. Không cần thiết lập
 reverse proxy hoặc systemd.
 
@@ -42,7 +42,7 @@ hai chế độ, được chọn dựa trên việc có cung cấp cấu hình �
 http://localhost:<apiPort>` và phân tích URL `*.trycloudflare.com` được cấp
   từ stdout. Các URL là tạm thời và thay đổi sau mỗi lần khởi động lại.
 - **Đường hầm được đặt tên (tùy chọn).** Khi `CLOUDFLARED_CONFIG` trỏ đến một
-  `config.yml` của cloudflared được quản lý cục bộ, OmniRoute chạy `cloudflared tunnel --no-autoupdate
+  `config.yml` của cloudflared được quản lý cục bộ, 67router chạy `cloudflared tunnel --no-autoupdate
 --config <path> run`, cung cấp cho bạn một **tên máy chủ ổn định, có tên xác định**. Tệp cấu hình
   cung cấp UUID đường hầm, `credentials-file` và định tuyến `ingress`, vì vậy
   không truyền `--url` và không cần token của bảng điều khiển Zero Trust. `run` đọc
@@ -51,7 +51,7 @@ http://localhost:<apiPort>` và phân tích URL `*.trycloudflare.com` được c
 
 Các hành vi chính:
 
-- **Tự động cài đặt.** Trong lần sử dụng đầu tiên, OmniRoute tải xuống tệp nhị phân
+- **Tự động cài đặt.** Trong lần sử dụng đầu tiên, 67router tải xuống tệp nhị phân
   `cloudflared` mới nhất từ các bản phát hành GitHub chính thức (bản cài đặt được quản lý nằm trong
   `DATA_DIR/cloudflared/`). SHA256 của tài nguyên đã tải xuống được xác minh dựa trên
   bản kê khai phát hành trước khi thực thi.
@@ -69,7 +69,7 @@ Các hành vi chính:
    ```
 
 2. Tạo `~/.cloudflared/config.yml` để định tuyến tên máy chủ của bạn đến cổng API
-   cục bộ của OmniRoute (mặc định là 20128):
+   cục bộ của 67router (mặc định là 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -80,11 +80,11 @@ Các hành vi chính:
      - service: http_status:404
    ```
 
-3. Trỏ OmniRoute đến tệp cấu hình và (khởi động lại) đường hầm:
+3. Trỏ 67router đến tệp cấu hình và (khởi động lại) đường hầm:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # tùy chọn — ghi đè tên máy chủ mà OmniRoute báo cáo; nếu không, tên này được đọc từ
+   # tùy chọn — ghi đè tên máy chủ mà 67router báo cáo; nếu không, tên này được đọc từ
    # quy tắc ingress đầu tiên của tệp cấu hình:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -123,12 +123,12 @@ Hoặc qua bảng điều khiển: **Settings → Tunnels → Cloudflare**.
 
 ### Các biến môi trường tùy chọn
 
-| Biến                                                 | Mục đích                                                                                                                                                                                                   |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Ghi đè đường dẫn tệp nhị phân. Nếu được đặt và hợp lệ, OmniRoute sẽ sử dụng tệp này thay vì tải xuống.                                                                                                     |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Giao thức truyền tải (mặc định là `http2`; cũng hỗ trợ `quic`, `auto`).                                                                                                                                    |
-| `CLOUDFLARED_CONFIG`                                 | Đường dẫn đến tệp `config.yml` của cloudflared được quản lý cục bộ. Khi được đặt, OmniRoute sẽ chạy một đường hầm **được đặt tên/duy trì lâu dài** (`tunnel --config <path> run`) thay vì đường hầm nhanh. |
-| `CLOUDFLARED_HOSTNAME`                               | Ghi đè tên máy chủ công khai được báo cáo của đường hầm được đặt tên (ví dụ: `ai.example.com`). Khi không được đặt, giá trị được đọc từ tên máy chủ `ingress` đầu tiên trong cấu hình.                     |
+| Biến                                                 | Mục đích                                                                                                                                                                                                  |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Ghi đè đường dẫn tệp nhị phân. Nếu được đặt và hợp lệ, 67router sẽ sử dụng tệp này thay vì tải xuống.                                                                                                     |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Giao thức truyền tải (mặc định là `http2`; cũng hỗ trợ `quic`, `auto`).                                                                                                                                   |
+| `CLOUDFLARED_CONFIG`                                 | Đường dẫn đến tệp `config.yml` của cloudflared được quản lý cục bộ. Khi được đặt, 67router sẽ chạy một đường hầm **được đặt tên/duy trì lâu dài** (`tunnel --config <path> run`) thay vì đường hầm nhanh. |
+| `CLOUDFLARED_HOSTNAME`                               | Ghi đè tên máy chủ công khai được báo cáo của đường hầm được đặt tên (ví dụ: `ai.example.com`). Khi không được đặt, giá trị được đọc từ tên máy chủ `ingress` đầu tiên trong cấu hình.                    |
 
 ## 2. ngrok
 
@@ -172,7 +172,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 Phản hồi bao gồm `publicUrl` được chỉ định (ví dụ:
-`https://abcd-1234.ngrok-free.app`). Các miền tùy chỉnh, khu vực và quy tắc chính sách phải được cấu hình trong bảng điều khiển ngrok — bản thân OmniRoute chỉ chuyển tiếp URL đích cục bộ đến SDK.
+`https://abcd-1234.ngrok-free.app`). Các miền tùy chỉnh, khu vực và quy tắc chính sách phải được cấu hình trong bảng điều khiển ngrok — bản thân 67router chỉ chuyển tiếp URL đích cục bộ đến SDK.
 
 ## 3. Tailscale Funnel
 
@@ -182,12 +182,12 @@ Phần triển khai gọi `tailscale funnel --bg <port>` (chế độ nền). UR
 
 ### Điều kiện tiên quyết
 
-1. Cài đặt Tailscale (hoặc để OmniRoute thực hiện — xem endpoint `install` bên dưới).
-2. Đăng nhập (`tailscale login` hoặc qua endpoint `login` của OmniRoute).
+1. Cài đặt Tailscale (hoặc để 67router thực hiện — xem endpoint `install` bên dưới).
+2. Đăng nhập (`tailscale login` hoặc qua endpoint `login` của 67router).
 3. Bật Funnel cho tailnet của bạn trong bảng điều khiển quản trị Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
-Trên Linux và macOS, daemon (`tailscaled`) yêu cầu `sudo` để điều khiển. Các endpoint POST chấp nhận trường `sudoPassword` tùy chọn, trường này được chuyển tiếp đến bộ nhớ đệm mật khẩu MITM của OmniRoute (`getCachedPassword` / `setCachedPassword`) trong suốt thời gian xử lý lệnh gọi. Windows sử dụng bản cài đặt dịch vụ mặc định tại `C:\Program Files\Tailscale\tailscale.exe`.
+Trên Linux và macOS, daemon (`tailscaled`) yêu cầu `sudo` để điều khiển. Các endpoint POST chấp nhận trường `sudoPassword` tùy chọn, trường này được chuyển tiếp đến bộ nhớ đệm mật khẩu MITM của 67router (`getCachedPassword` / `setCachedPassword`) trong suốt thời gian xử lý lệnh gọi. Windows sử dụng bản cài đặt dịch vụ mặc định tại `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### Các endpoint REST
 
@@ -244,7 +244,7 @@ Không có endpoint `/api/settings/tunnels` trung tâm — mỗi backend hoạt 
 
 ## Những điều cần lưu ý về callback OAuth
 
-Khi bạn cung cấp quyền truy cập OmniRoute thông qua một đường hầm, bảng điều khiển và các luồng OAuth phải
+Khi bạn cung cấp quyền truy cập 67router thông qua một đường hầm, bảng điều khiển và các luồng OAuth phải
 tạo URL callback dựa trên tên máy chủ **công khai**, không phải `localhost`. Nếu không,
 nhà cung cấp OAuth sẽ chuyển hướng người dùng trở lại một URL mà máy chủ của họ không thể truy cập,
 khiến quá trình bắt tay thất bại.
@@ -260,7 +260,7 @@ vẫn có thể được sử dụng để quản lý giao diện người dùng
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-và khởi động lại OmniRoute trước khi bắt đầu OAuth. Với Cloudflare Quick
+và khởi động lại 67router trước khi bắt đầu OAuth. Với Cloudflare Quick
 Tunnel tạm thời, URL sẽ thay đổi sau mỗi lần khởi động lại, vì vậy khi sử dụng OAuth trong môi trường production,
 hãy ưu tiên ngrok với tên miền dành riêng hoặc Tailscale Funnel.
 
@@ -275,14 +275,14 @@ Bảng điều khiển hiển thị trạng thái đường hầm trong **Settin
 - Thông báo lỗi gần nhất, nếu có.
 
 Để giám sát bằng chương trình, hãy thăm dò các endpoint `GET` tương ứng của từng backend. Có thể chạy đồng thời
-nhiều backend; OmniRoute sẽ theo dõi từng backend
+nhiều backend; 67router sẽ theo dõi từng backend
 một cách độc lập.
 
 ## Khắc phục sự cố
 
 ### "Không tìm thấy tệp nhị phân cloudflared"
 
-OmniRoute sẽ cố gắng tự động cài đặt trong lần sử dụng đầu tiên. Nếu quá trình cài đặt bị chặn
+67router sẽ cố gắng tự động cài đặt trong lần sử dụng đầu tiên. Nếu quá trình cài đặt bị chặn
 (mạng bị hạn chế, không thể truy cập GitHub), hãy tải xuống `cloudflared` theo cách thủ công từ
 <https://github.com/cloudflare/cloudflared/releases> và đặt
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

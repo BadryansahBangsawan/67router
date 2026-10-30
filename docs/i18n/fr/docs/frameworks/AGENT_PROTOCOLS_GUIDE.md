@@ -7,15 +7,15 @@
 > **Source :** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Dernière mise à jour :** 2026-06-28 — v3.8.40
 
-OmniRoute expose trois interfaces différentes liées aux agents. Elles semblent similaires à première vue, mais répondent à des besoins différents. Utilisez cette page pour choisir celle qui convient.
+67router expose trois interfaces différentes liées aux agents. Elles semblent similaires à première vue, mais répondent à des besoins différents. Utilisez cette page pour choisir celle qui convient.
 
 ## En bref
 
 | Interface                       | Idéale pour                                                                                                                                                          | Transport                          | Standard                         |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | -------------------------------- |
 | **A2A — Agent à agent**         | La collaboration entre agents avec des agents pairs prenant en charge le protocole A2A                                                                               | JSON-RPC 2.0 sur HTTP              | A2A v0.3 (spécification ouverte) |
-| **ACP — Registre d’agents CLI** | La détection, l’enregistrement et le lancement d’agents de codage CLI installés sur la machine de l’utilisateur (Cursor, Cline, Codex CLI, Claude Code, Aider, etc.) | HTTP REST                          | Spécifique à OmniRoute           |
-| **Agents cloud**                | La soumission de tâches de codage de longue durée à des services cloud externes (Codex Cloud, Devin, Jules, Cursor Cloud)                                            | HTTP REST + tâches stockées en BDD | Spécifique à OmniRoute           |
+| **ACP — Registre d’agents CLI** | La détection, l’enregistrement et le lancement d’agents de codage CLI installés sur la machine de l’utilisateur (Cursor, Cline, Codex CLI, Claude Code, Aider, etc.) | HTTP REST                          | Spécifique à 67router            |
+| **Agents cloud**                | La soumission de tâches de codage de longue durée à des services cloud externes (Codex Cloud, Devin, Jules, Cursor Cloud)                                            | HTTP REST + tâches stockées en BDD | Spécifique à 67router            |
 
 Les trois sont indépendantes — vous pouvez en choisir n’importe quelle combinaison.
 
@@ -38,14 +38,14 @@ Avez-vous besoin qu’un service cloud effectue un travail en dehors de cette ma
 ## 1. A2A — Agent à agent
 
 **Spécification :** [A2A v0.3](https://a2a-protocol.org)
-**Point de terminaison OmniRoute :** `POST /a2a` (JSON-RPC 2.0)
+**Point de terminaison 67router :** `POST /a2a` (JSON-RPC 2.0)
 **Fiche de l’agent :** `GET /.well-known/agent.json`
 
 ### Quand l’utiliser
 
-- Créer un système multi-agent dans lequel OmniRoute est l’un des pairs
-- Exposer l’intelligence de routage d’OmniRoute (`smart-routing`, `quota-management`, etc.) aux agents de frameworks tels que Google ADK ou de réseaux d’agents génériques
-- Encapsuler OmniRoute derrière une interface standard de découverte et d’invocation
+- Créer un système multi-agent dans lequel 67router est l’un des pairs
+- Exposer l’intelligence de routage de 67router (`smart-routing`, `quota-management`, etc.) aux agents de frameworks tels que Google ADK ou de réseaux d’agents génériques
+- Encapsuler 67router derrière une interface standard de découverte et d’invocation
 
 ### Méthodes
 
@@ -69,12 +69,12 @@ Consultez [A2A-SERVER.md](./A2A-SERVER.md) pour obtenir des détails sur le tran
 
 ## 2. ACP — Registre des agents CLI
 
-**Point de terminaison OmniRoute :** `GET /api/acp/agents`
+**Point de terminaison 67router :** `GET /api/acp/agents`
 **Source :** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Présentation
 
-ACP est l’**inventaire local des agents CLI** d’OmniRoute. Il détecte les CLI de programmation installées sur l’hôte (Cursor, Cline, Claude Code, Codex CLI, Continue, etc.), détermine leurs versions et les affiche dans le tableau de bord afin que l’utilisateur puisse configurer chaque CLI pour qu’elle pointe vers OmniRoute.
+ACP est l’**inventaire local des agents CLI** de 67router. Il détecte les CLI de programmation installées sur l’hôte (Cursor, Cline, Claude Code, Codex CLI, Continue, etc.), détermine leurs versions et les affiche dans le tableau de bord afin que l’utilisateur puisse configurer chaque CLI pour qu’elle pointe vers 67router.
 
 L’interface HTTP est un inventaire interne qui alimente l’interface utilisateur « CLI Tools » et
 le suivi des empreintes CLI (voir [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Par ailleurs,
@@ -114,8 +114,8 @@ Structure du corps pour POST (`customAgentBodySchema` dans `src/app/api/acp/agen
 
 ### Cas d’utilisation
 
-- La page « CLI Tools » du tableau de bord répertorie les outils installés et vous aide à configurer chacun d’eux pour qu’il pointe vers OmniRoute
-- Les agents personnalisés permettent aux utilisateurs avancés d’enregistrer des CLI internes/propriétaires qu’OmniRoute ne connaît pas par défaut
+- La page « CLI Tools » du tableau de bord répertorie les outils installés et vous aide à configurer chacun d’eux pour qu’il pointe vers 67router
+- Les agents personnalisés permettent aux utilisateurs avancés d’enregistrer des CLI internes/propriétaires que 67router ne connaît pas par défaut
 - Le résultat de la détection alimente la matrice d’empreintes `cli-tools`
 
 ### Quand NE PAS utiliser ACP
@@ -127,12 +127,12 @@ Structure du corps pour POST (`customAgentBodySchema` dans `src/app/api/acp/agen
 
 ## 3. Agents cloud
 
-**Endpoints OmniRoute :** `/api/v1/agents/tasks/*` (cycle de vie) + `/api/cloud/*` (infrastructure)
+**Endpoints 67router :** `/api/v1/agents/tasks/*` (cycle de vie) + `/api/cloud/*` (infrastructure)
 **Source :** `src/lib/cloudAgent/`
 
 ### Présentation
 
-Une interface uniforme pour les agents de programmation cloud tiers. Vous soumettez une invite et l’URL d’un dépôt ; OmniRoute transmet la requête à l’agent cloud approprié, interroge son état et renvoie les résultats.
+Une interface uniforme pour les agents de programmation cloud tiers. Vous soumettez une invite et l’URL d’un dépôt ; 67router transmet la requête à l’agent cloud approprié, interroge son état et renvoie les résultats.
 
 ### Agents pris en charge (4, tous confirmés dans `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Tous deux proposent des « tâches de longue durée », mais à des niveaux diff
 
 | Aspect                     | A2A                                                                                         | Cloud Agents                                                 |
 | -------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Standard                   | Open A2A v0.3                                                                               | Propre à OmniRoute                                           |
-| Lieu d’exécution du calcul | Dans OmniRoute (utilise les combinaisons configurées)                                       | Externe (serveurs Codex / Devin / Jules)                     |
+| Standard                   | Open A2A v0.3                                                                               | Propre à 67router                                            |
+| Lieu d’exécution du calcul | Dans 67router (utilise les combinaisons configurées)                                        | Externe (serveurs Codex / Devin / Jules)                     |
 | Durée des tâches           | TTL par défaut de 5 min (configurable dans `TaskManager`)                                   | De quelques minutes à plusieurs heures                       |
 | Prise en compte du dépôt   | Non (transmet uniquement les prompts)                                                       | Oui (URL du dépôt + branche)                                 |
 | Cas d’utilisation          | Collaboration entre agents, routage intelligent en tant que service                         | Déléguer « implémenter la fonctionnalité X dans le dépôt Y » |
@@ -182,7 +182,7 @@ Tous deux proposent des « tâches de longue durée », mais à des niveaux diff
 
 ## Exemples d’intégration
 
-### Découvrir les fonctionnalités A2A d’OmniRoute
+### Découvrir les fonctionnalités A2A de 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Renvoie l’Agent Card avec les 6 compétences, les transports et la version.
 
-### Appeler OmniRoute en tant qu’agent A2A
+### Appeler 67router en tant qu’agent A2A
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Cœur OmniRoute    │
+                │   Cœur 67router    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (ਪੰਜਾਬੀ)
+# 67router A2A Server Documentation (ਪੰਜਾਬੀ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — ਇੱਕ ਬੁੱਧੀਮਾਨ ਰੂਟਿੰਗ ਏਜੰਟ ਵਜੋਂ OmniRoute
+> Agent-to-Agent Protocol v0.3 — ਇੱਕ ਬੁੱਧੀਮਾਨ ਰੂਟਿੰਗ ਏਜੰਟ ਵਜੋਂ 67router
 
 A2A ਇੰਟਰਫੇਸ ਦੇ ਦੋ ਰੂਪ ਹਨ:
 
@@ -19,7 +19,7 @@ A2A ਇੰਟਰਫੇਸ ਦੇ ਦੋ ਰੂਪ ਹਨ:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute ਦੀਆਂ ਸਮਰੱਥਾਵਾਂ, ਸਕਿੱਲਾਂ ਅਤੇ ਪ੍ਰਮਾਣੀਕਰਨ ਲੋੜਾਂ ਦਾ ਵੇਰਵਾ ਦੇਣ ਵਾਲਾ Agent Card ਵਾਪਸ ਕਰਦਾ ਹੈ।
+67router ਦੀਆਂ ਸਮਰੱਥਾਵਾਂ, ਸਕਿੱਲਾਂ ਅਤੇ ਪ੍ਰਮਾਣੀਕਰਨ ਲੋੜਾਂ ਦਾ ਵੇਰਵਾ ਦੇਣ ਵਾਲਾ Agent Card ਵਾਪਸ ਕਰਦਾ ਹੈ।
 
 Agent Card ਦਾ `version` ਫੀਲਡ `process.env.npm_package_version` ਤੋਂ ਲਿਆ ਜਾਂਦਾ ਹੈ (`src/app/.well-known/agent.json/route.ts:13` ਵੇਖੋ), ਇਸ ਲਈ ਇਹ ਹਰ ਰਿਲੀਜ਼ ਉੱਤੇ `package.json` ਨਾਲ ਆਪਣੇ-ਆਪ ਸਮਕਾਲੀ ਰਹਿੰਦਾ ਹੈ।
 
@@ -147,22 +147,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## ਉਪਲਬਧ ਸਕਿੱਲਾਂ
 
-OmniRoute 6 A2A ਸਕਿੱਲਾਂ ਐਕਸਪੋਜ਼ ਕਰਦਾ ਹੈ ਜੋ `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` ਵਿੱਚ ਜੁੜੀਆਂ ਹਨ। ਹਰ ਸਕਿੱਲ ਮੋਡੀਊਲ `src/lib/a2a/skills/` ਵਿੱਚ ਸਥਿਤ ਹੈ।
+67router 6 A2A ਸਕਿੱਲਾਂ ਐਕਸਪੋਜ਼ ਕਰਦਾ ਹੈ ਜੋ `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` ਵਿੱਚ ਜੁੜੀਆਂ ਹਨ। ਹਰ ਸਕਿੱਲ ਮੋਡੀਊਲ `src/lib/a2a/skills/` ਵਿੱਚ ਸਥਿਤ ਹੈ।
 
 | ਸਕਿੱਲ             | ID                   | ਵਰਣਨ                                                                                                                                              | ਟੈਗ                        | ਉਦਾਹਰਣਾਂ                                        |
 | :---------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------- | :---------------------------------------------- |
-| ਸਮਾਰਟ ਰੂਟਿੰਗ      | `smart-routing`      | OmniRoute ਦੇ ਕੰਬੋ ਇੰਜਣ + ਸਕੋਰਿੰਗ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕਿਸੇ ਪ੍ਰੌਂਪਟ ਨੂੰ ਸਭ ਤੋਂ ਅਨੁਕੂਲ ਪ੍ਰੋਵਾਈਡਰ/ਕੰਬੋ ਰਾਹੀਂ ਰੂਟ ਕਰਦਾ ਹੈ                                    | routing, providers         | "ਇਸ ਪ੍ਰੌਂਪਟ ਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਮਾਡਲ ਰਾਹੀਂ ਰੂਟ ਕਰੋ" |
+| ਸਮਾਰਟ ਰੂਟਿੰਗ      | `smart-routing`      | 67router ਦੇ ਕੰਬੋ ਇੰਜਣ + ਸਕੋਰਿੰਗ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕਿਸੇ ਪ੍ਰੌਂਪਟ ਨੂੰ ਸਭ ਤੋਂ ਅਨੁਕੂਲ ਪ੍ਰੋਵਾਈਡਰ/ਕੰਬੋ ਰਾਹੀਂ ਰੂਟ ਕਰਦਾ ਹੈ                                     | routing, providers         | "ਇਸ ਪ੍ਰੌਂਪਟ ਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਮਾਡਲ ਰਾਹੀਂ ਰੂਟ ਕਰੋ" |
 | ਕੋਟਾ ਪ੍ਰਬੰਧਨ      | `quota-management`   | ਹਰੇਕ-ਪ੍ਰੋਵਾਈਡਰ ਕੋਟਾ ਸਥਿਤੀ ਦੀ ਰਿਪੋਰਟ ਕਰਦਾ ਹੈ, ਕਾਲ ਕਰਨ ਵਾਲਿਆਂ ਨੂੰ ਇਹ ਫੈਸਲਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ ਕਦੋਂ throttle/switch ਕਰਨਾ ਹੈ                     | quota, providers           | "anthropic ਲਈ ਕੋਟਾ ਜਾਂਚੋ"                       |
 | ਪ੍ਰੋਵਾਈਡਰ ਖੋਜ     | `provider-discovery` | ਇੰਸਟਾਲ ਕੀਤੇ ਪ੍ਰੋਵਾਈਡਰਾਂ ਨੂੰ ਸਮਰੱਥਾਵਾਂ, free-tier ਫਲੈਗਾਂ ਅਤੇ OAuth ਸਥਿਤੀ ਸਮੇਤ ਸੂਚੀਬੱਧ ਕਰਦਾ ਹੈ                                                      | providers, discovery       | "ਕਿਹੜੇ ਪ੍ਰੋਵਾਈਡਰ ਉਪਲਬਧ ਹਨ?"                     |
 | ਲਾਗਤ ਵਿਸ਼ਲੇਸ਼ਣ    | `cost-analysis`      | ਕੈਟਾਲਾਗ + ਹਾਲੀਆ ਵਰਤੋਂ ਦੇ ਆਧਾਰ 'ਤੇ ਕਿਸੇ ਰਿਕਵੈਸਟ/ਗੱਲਬਾਤ ਦੀ ਲਾਗਤ ਦਾ ਅਨੁਮਾਨ ਲਗਾਉਂਦਾ ਹੈ                                                                | cost, usage                | "ਇਸ ਗੱਲਬਾਤ ਦੀ ਲਾਗਤ ਦਾ ਅਨੁਮਾਨ ਲਗਾਓ"              |
 | ਹੈਲਥ ਰਿਪੋਰਟ       | `health-report`      | ਹਰੇਕ ਪ੍ਰੋਵਾਈਡਰ ਲਈ circuit breaker, cooldown, lockout ਸਥਿਤੀ ਨੂੰ ਇਕੱਠਾ ਕਰਦਾ ਹੈ                                                                      | health, resilience         | "ਸਾਰੇ ਪ੍ਰੋਵਾਈਡਰਾਂ ਦੀ ਹੈਲਥ ਸਥਿਤੀ ਦਿਖਾਓ"          |
-| ਸਮਰੱਥਾਵਾਂ ਦੀ ਸੂਚੀ | `list-capabilities`  | ਪੂਰਾ 43-ਐਂਟਰੀ Agent Skills ਕੈਟਾਲਾਗ (22 API + 20 CLI + 1 config) context injection ਲਈ raw SKILL.md URLs ਦੇ ਨਾਲ ਇੱਕ markdown ਟੇਬਲ ਵਜੋਂ ਵਾਪਸ ਕਰਦਾ ਹੈ | catalog, discovery, skills | "ਸਾਰੀਆਂ OmniRoute ਸਮਰੱਥਾਵਾਂ ਸੂਚੀਬੱਧ ਕਰੋ"        |
+| ਸਮਰੱਥਾਵਾਂ ਦੀ ਸੂਚੀ | `list-capabilities`  | ਪੂਰਾ 43-ਐਂਟਰੀ Agent Skills ਕੈਟਾਲਾਗ (22 API + 20 CLI + 1 config) context injection ਲਈ raw SKILL.md URLs ਦੇ ਨਾਲ ਇੱਕ markdown ਟੇਬਲ ਵਜੋਂ ਵਾਪਸ ਕਰਦਾ ਹੈ | catalog, discovery, skills | "ਸਾਰੀਆਂ 67router ਸਮਰੱਥਾਵਾਂ ਸੂਚੀਬੱਧ ਕਰੋ"         |
 
 > Agent Card ਨੂੰ ਲਾਈਵ 375-ਪ੍ਰੋਵਾਈਡਰ ਕੈਟਾਲਾਗ ਨਾਲ ਸੰਰੇਖਿਤ ਰੱਖਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ; ਪ੍ਰੋਵਾਈਡਰ ਗਿਣਤੀਆਂ ਅਤੇ free/no-auth ਮੈਟਾਡੇਟਾ runtime registry ਤੋਂ ਲਿਆ ਜਾਂਦਾ ਹੈ।
 
 ### `list-capabilities` ਸਕਿੱਲ ਵੇਰਵਾ
 
-`list-capabilities` ਸਕਿੱਲ ਬਾਹਰੀ ਏਜੰਟਾਂ ਲਈ ਖਾਸ ਤੌਰ 'ਤੇ ਉਪਯੋਗੀ ਹੈ ਜਿਨ੍ਹਾਂ ਨੂੰ API ਕਾਲਾਂ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਇਹ ਖੋਜਣਾ ਹੁੰਦਾ ਹੈ ਕਿ OmniRoute ਕੀ ਐਕਸਪੋਜ਼ ਕਰਦਾ ਹੈ। ਇਹ ਇੱਕ structured markdown ਟੇਬਲ artifact ਵਾਪਸ ਕਰਦਾ ਹੈ:
+`list-capabilities` ਸਕਿੱਲ ਬਾਹਰੀ ਏਜੰਟਾਂ ਲਈ ਖਾਸ ਤੌਰ 'ਤੇ ਉਪਯੋਗੀ ਹੈ ਜਿਨ੍ਹਾਂ ਨੂੰ API ਕਾਲਾਂ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਇਹ ਖੋਜਣਾ ਹੁੰਦਾ ਹੈ ਕਿ 67router ਕੀ ਐਕਸਪੋਜ਼ ਕਰਦਾ ਹੈ। ਇਹ ਇੱਕ structured markdown ਟੇਬਲ artifact ਵਾਪਸ ਕਰਦਾ ਹੈ:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -188,7 +188,7 @@ JSON-RPC ਐਂਡਪੌਇੰਟ `/a2a` ਪ੍ਰਮਾਣਿਕ A2A ਪ੍ਰ�
 | `/.well-known/agent.json`    | GET  | ਏਜੰਟ ਕਾਰਡ (A2A ਖੋਜ)                                            | (ਜਨਤਕ, 3600s ਲਈ ਕੈਸ਼ ਕੀਤਾ)                           |
 | `/api/a2a/tasks`             | POST | OmniConductor ਫ਼ਲੀਟ ਨੂੰ ਆਉਣ ਵਾਲਾ ਡੈਲੀਗੇਸ਼ਨ (Conductor PRD RF5) | `OMNIROUTE_API_KEY` + `a2aEnabled` ਦੇ ਮੁਕਾਬਲੇ Bearer |
 
-**ਆਉਣ ਵਾਲਾ Conductor ਡੈਲੀਗੇਸ਼ਨ (`POST /api/a2a/tasks`):** ਬਾਹਰੀ A2A ਏਜੰਟ OmniRoute ਰਾਹੀਂ ਕੋਡਿੰਗ ਦਾ ਕੰਮ OmniConductor ਫ਼ਲੀਟ ਨੂੰ ਸੌਂਪਦੇ ਹਨ। ਬਾਡੀ: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ਸਿਰਫ਼ Conductor ਫ਼ਲੀਟ ਦੇ ਹੁਨਰ (ਜੋ ਏਜੰਟ ਕਾਰਡ ਉੱਤੇ ਘੋਸ਼ਿਤ ਕੀਤੇ ਗਏ ਹਨ) ਹੀ ਸੌਂਪੇ ਜਾ ਸਕਦੇ ਹਨ; `metadata.conductor.repo.url` ਲਾਜ਼ਮੀ ਹੈ (ਫ਼ਲੀਟ git ਰਿਪੋਜ਼ ਉੱਤੇ ਕੰਮ ਕਰਦੀ ਹੈ)। ਇਹ ਰੂਟ ਸਰਵਰ-ਸਾਈਡ `CONDUCTOR_ORCHESTRATOR_TOKEN` (ਫ਼ਾਲਬੈਕ `CONDUCTOR_HUB_TOKEN`) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਹੱਬ ਦੇ `POST /v1/tasks` ਵਿੱਚ ਅਨੁਵਾਦ ਹੁੰਦਾ ਹੈ ਅਤੇ `201 { conductor_task_id, state: "submitted" }` ਵਾਪਸ ਕਰਦਾ ਹੈ; ਕਾਰਜ ਦੀਆਂ ਸਥਿਤੀਆਂ SSE→A2A ਮਿਰਰ (RF1) ਰਾਹੀਂ ਵਾਪਸ ਪ੍ਰਵਾਹਿਤ ਹੁੰਦੀਆਂ ਹਨ ਅਤੇ `GET /api/a2a/tasks?skill=conductor` ਰਾਹੀਂ ਦਿਸਦੀਆਂ ਹਨ।
+**ਆਉਣ ਵਾਲਾ Conductor ਡੈਲੀਗੇਸ਼ਨ (`POST /api/a2a/tasks`):** ਬਾਹਰੀ A2A ਏਜੰਟ 67router ਰਾਹੀਂ ਕੋਡਿੰਗ ਦਾ ਕੰਮ OmniConductor ਫ਼ਲੀਟ ਨੂੰ ਸੌਂਪਦੇ ਹਨ। ਬਾਡੀ: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ਸਿਰਫ਼ Conductor ਫ਼ਲੀਟ ਦੇ ਹੁਨਰ (ਜੋ ਏਜੰਟ ਕਾਰਡ ਉੱਤੇ ਘੋਸ਼ਿਤ ਕੀਤੇ ਗਏ ਹਨ) ਹੀ ਸੌਂਪੇ ਜਾ ਸਕਦੇ ਹਨ; `metadata.conductor.repo.url` ਲਾਜ਼ਮੀ ਹੈ (ਫ਼ਲੀਟ git ਰਿਪੋਜ਼ ਉੱਤੇ ਕੰਮ ਕਰਦੀ ਹੈ)। ਇਹ ਰੂਟ ਸਰਵਰ-ਸਾਈਡ `CONDUCTOR_ORCHESTRATOR_TOKEN` (ਫ਼ਾਲਬੈਕ `CONDUCTOR_HUB_TOKEN`) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਹੱਬ ਦੇ `POST /v1/tasks` ਵਿੱਚ ਅਨੁਵਾਦ ਹੁੰਦਾ ਹੈ ਅਤੇ `201 { conductor_task_id, state: "submitted" }` ਵਾਪਸ ਕਰਦਾ ਹੈ; ਕਾਰਜ ਦੀਆਂ ਸਥਿਤੀਆਂ SSE→A2A ਮਿਰਰ (RF1) ਰਾਹੀਂ ਵਾਪਸ ਪ੍ਰਵਾਹਿਤ ਹੁੰਦੀਆਂ ਹਨ ਅਤੇ `GET /api/a2a/tasks?skill=conductor` ਰਾਹੀਂ ਦਿਸਦੀਆਂ ਹਨ।
 
 ---
 

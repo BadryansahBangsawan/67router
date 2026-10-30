@@ -4,7 +4,7 @@
 
 ---
 
-Sinusuri ng OmniRoute ang mga upstream error response para sa mga senyas na nagpapahiwatig na ang isang provider
+Sinusuri ng 67router ang mga upstream error response para sa mga senyas na nagpapahiwatig na ang isang provider
 **account ay permanenteng hindi na magagamit** (suspended / deactivated / na-ban dahil sa ToS) at, kapag
 may tumugma, inililipat ang koneksiyong iyon sa isang **terminal na `banned` state** upang hindi na ito
 mapili para sa mga request. Ito ang kino-configure ng settings card na **Security → Banned Keywords**

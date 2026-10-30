@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute は、チャットと同じプロバイダー ID `cursor`（エイリアス `cu`）を通じて、`POST /v1/images/generations` で Cursor プランの**画像生成**を提供します。
+67router は、チャットと同じプロバイダー ID `cursor`（エイリアス `cu`）を通じて、`POST /v1/images/generations` で Cursor プランの**画像生成**を提供します。
 
 | フィールド           | 値                                                                                |
 | -------------------- | --------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute は、チャットと同じプロバイダー ID `cursor`（エイリ�
 
 ## Agent CLI を使用する理由
 
-OmniRoute の Cursor チャットは `agent.v1.AgentService/Run`（protobuf）を使用します。この経路では、組み込みのクライアントツール（shell、write、…）が**拒否されます**。画像生成は、シートに対して **`agent` CLI** により実行される Cursor ネイティブのツールです。そのため、画像ハンドラーは固定されたプロンプトとリクエストごとの一時ワークスペース（コミュニティのシートブリッジと同じ形式）を使用して `agent` を起動し、OpenAI 互換の `b64_json` を返します。
+67router の Cursor チャットは `agent.v1.AgentService/Run`（protobuf）を使用します。この経路では、組み込みのクライアントツール（shell、write、…）が**拒否されます**。画像生成は、シートに対して **`agent` CLI** により実行される Cursor ネイティブのツールです。そのため、画像ハンドラーは固定されたプロンプトとリクエストごとの一時ワークスペース（コミュニティのシートブリッジと同じ形式）を使用して `agent` を起動し、OpenAI 互換の `b64_json` を返します。
 
 ## アクセス制限（ハードルール #15 + #17）
 
@@ -23,12 +23,12 @@ OmniRoute の Cursor チャットは `agent.v1.AgentService/Run`（protobuf）�
 
 ## 同時実行ゲートはモジュール単位（単一インスタンスの制限）
 
-`CURSOR_IMG_MAX_CONCURRENT` は、Node モジュールインスタンス（`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`）にスコープされたインメモリのカウンター／キューによって適用されます。単一の OmniRoute プロセス内では、同時に起動される `agent` の数を正しく制限しますが、同じ Cursor シートを共有する複数のプロセス／インスタンス（マルチレプリカ構成など）の間では**連携しません**。各インスタンスがそれぞれ独立した制限を適用します。単一インスタンス構成（デフォルト）では正確に機能します。水平スケーリングされた構成では、インスタンスごとの `CURSOR_IMG_MAX_CONCURRENT` を控えめな値に設定するか、Cursor の画像トラフィックを単一のインスタンスにルーティングしてください。
+`CURSOR_IMG_MAX_CONCURRENT` は、Node モジュールインスタンス（`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`）にスコープされたインメモリのカウンター／キューによって適用されます。単一の 67router プロセス内では、同時に起動される `agent` の数を正しく制限しますが、同じ Cursor シートを共有する複数のプロセス／インスタンス（マルチレプリカ構成など）の間では**連携しません**。各インスタンスがそれぞれ独立した制限を適用します。単一インスタンス構成（デフォルト）では正確に機能します。水平スケーリングされた構成では、インスタンスごとの `CURSOR_IMG_MAX_CONCURRENT` を控えめな値に設定するか、Cursor の画像トラフィックを単一のインスタンスにルーティングしてください。
 
 ## 要件
 
 1. ダッシュボードで接続済みの Cursor アカウント（OAuth または `crsr_…` API キー）。
-2. OmniRoute プロセスから Cursor Agent バイナリを利用できること：
+2. 67router プロセスから Cursor Agent バイナリを利用できること：
    - 環境変数 `CURSOR_AGENT_BIN=/path/to/agent`、または
    - `~/.local/bin/agent`、または
    - Cursor 接続の `providerSpecificData.agentBin`。

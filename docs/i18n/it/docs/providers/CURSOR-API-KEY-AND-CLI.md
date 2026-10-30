@@ -4,18 +4,18 @@
 
 ---
 
-Due modi per usare Cursor dietro OmniRoute senza una sessione IDE:
+Due modi per usare Cursor dietro 67router senza una sessione IDE:
 
 1. **Provider `cursor-api`** (scheda "Cursor API", alias `cua`): un provider con
    chiave API che conserva una chiave API utente Cursor (`crsr_…`, generata su
-   `https://cursor.com/dashboard/api`). Qualsiasi client OmniRoute può quindi
+   `https://cursor.com/dashboard/api`). Qualsiasi client 67router può quindi
    accedere ai modelli Cursor tramite `/v1/chat/completions` come
    `cursor-api/<model>` o `cua/<model>`, con i consueti livelli di quota,
    fallback e logging. Il provider IDE (`cursor`, sessione OAuth/IDE) rimane
    invariato.
 2. **Passthrough della CLI Cursor**: configura la CLI Cursor (`agent`) affinché
-   punti a OmniRoute, così ogni RPC effettuata dalla CLI viene autenticata con
-   una chiave API OmniRoute, inoltrata a Cursor con le credenziali di una
+   punti a 67router, così ogni RPC effettuata dalla CLI viene autenticata con
+   una chiave API 67router, inoltrata a Cursor con le credenziali di una
    connessione `cursor-api` e registrata nella pagina Logs.
 
 ## Perché la chiave viene scambiata
@@ -63,7 +63,7 @@ Note:
 
 - L'elenco dei modelli per `cursor-api` proviene dal registro statico di Cursor
   (lo stesso elenco usato come fallback dal provider IDE); non è necessario
-  installare `cursor-agent` sull'host OmniRoute.
+  installare `cursor-agent` sull'host 67router.
 - `POST /api/providers/{id}/refresh-cursor` è riservato al provider IDE
   `cursor`; le connessioni `cursor-api` non dispongono di una sessione IDE da
   rinnovare.
@@ -73,7 +73,7 @@ Note:
 Per `cursor` / `cu` e `cursor-api` / `cua`, il normalizzatore condiviso
 dell'effort di Claude mantiene invariato l'ID del modello richiesto. Cursor può
 pubblicizzare un suffisso come `-low` come parte di un ID modello reale, anziché
-come alias di effort di OmniRoute. L'executor Cursor mantiene una corrispondenza
+come alias di effort di 67router. L'executor Cursor mantiene una corrispondenza
 esatta con il catalogo attivo; quando non vi è alcuna corrispondenza, il resolver
 di modelli esistente gestisce il fallback dal suffisso al parametro.
 
@@ -88,19 +88,19 @@ Route: `src/app/api/cursor-cli/[...path]/route.ts` →
 registrato in `src/shared/constants/publicApiRoutes.ts` perché l'handler
 applica la propria autenticazione:
 
-| Percorso                                                                                                                        | Autenticazione prevista dalla CLI | Operazioni eseguite da OmniRoute                                                                                                                                                                |
+| Percorso                                                                                                                        | Autenticazione prevista dalla CLI | Operazioni eseguite da 67router                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <chiave API OmniRoute>`   | Convalida la chiave, genera un JWT HS256 valido 1 ora (firmato con `JWT_SECRET`) e lo restituisce                                                                                               |
+| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <chiave API 67router>`    | Convalida la chiave, genera un JWT HS256 valido 1 ora (firmato con `JWT_SECRET`) e lo restituisce                                                                                               |
 | ogni altro percorso (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <quel JWT>`               | Verifica emittente/destinatario/scadenza, seleziona una connessione `cursor-api` attiva, sostituisce l'header Authorization con il token Cursor ottenuto e ritrasmette la risposta in streaming |
 
 La CLI decodifica `exp` da qualsiasi token ricevuto, quindi fornirle un token
 opaco la induce a ripetere lo scambio prima di quasi ogni richiesta; il JWT
-generato evita questo problema. Una risposta 401 da OmniRoute fa sì che la CLI
+generato evita questo problema. Una risposta 401 da 67router fa sì che la CLI
 esegua nuovamente lo scambio.
 
 ### Configurazione
 
-1. Crea una chiave API OmniRoute (Dashboard → Chiavi API) e una connessione
+1. Crea una chiave API 67router (Dashboard → Chiavi API) e una connessione
    `cursor-api`.
 2. Indica alla CLI di usare HTTP/1.1 per lo stream dell'agente. In
    `~/.cursor/cli-config.json`:
@@ -113,7 +113,7 @@ esegua nuovamente lo scambio.
    verso un host dell'agente configurato separatamente e solo le RPC del piano
    di controllo passano attraverso l'endpoint.
 
-3. Esegui la CLI tramite OmniRoute:
+3. Esegui la CLI tramite 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -123,17 +123,17 @@ esegua nuovamente lo scambio.
 
 Ogni passaggio viene registrato nei log con provider `cursor-api`, tipo di
 richiesta `cursor-cli`, percorso `/api/cursor-cli/<rpc>` e attribuito alla
-chiave API OmniRoute e alla connessione che lo ha gestito.
+chiave API 67router e alla connessione che lo ha gestito.
 
 ### Modalità di errore
 
-| Situazione                                            | Risposta alla CLI                                      |
-| ----------------------------------------------------- | ------------------------------------------------------ |
-| Chiave OmniRoute sconosciuta e `REQUIRE_API_KEY=true` | 401 `unauthenticated` durante lo scambio               |
-| `REQUIRE_API_KEY=false`                               | sessione anonima (rispecchia il comportamento `/v1/*`) |
-| JWT di sessione scaduto / esterno / manomesso         | 401, la CLI ripete lo scambio                          |
-| Chiave API OmniRoute revocata dopo lo scambio         | 401 alla RPC successiva                                |
-| Nessuna connessione `cursor-api` attiva               | 503 `unavailable`                                      |
-| Cursor rifiuta la chiave della connessione            | 401 `unauthenticated`, sessione memorizzata eliminata  |
-| Upstream non raggiungibile                            | 502 `unavailable` (messaggio sanificato)               |
-| `JWT_SECRET` non impostato                            | 503 durante lo scambio                                 |
+| Situazione                                           | Risposta alla CLI                                      |
+| ---------------------------------------------------- | ------------------------------------------------------ |
+| Chiave 67router sconosciuta e `REQUIRE_API_KEY=true` | 401 `unauthenticated` durante lo scambio               |
+| `REQUIRE_API_KEY=false`                              | sessione anonima (rispecchia il comportamento `/v1/*`) |
+| JWT di sessione scaduto / esterno / manomesso        | 401, la CLI ripete lo scambio                          |
+| Chiave API 67router revocata dopo lo scambio         | 401 alla RPC successiva                                |
+| Nessuna connessione `cursor-api` attiva              | 503 `unavailable`                                      |
+| Cursor rifiuta la chiave della connessione           | 401 `unauthenticated`, sessione memorizzata eliminata  |
+| Upstream non raggiungibile                           | 502 `unavailable` (messaggio sanificato)               |
+| `JWT_SECRET` non impostato                           | 503 durante lo scambio                                 |

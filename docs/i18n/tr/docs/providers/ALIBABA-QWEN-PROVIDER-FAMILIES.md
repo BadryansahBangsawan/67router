@@ -9,7 +9,7 @@ Bu belge,
 
 ## Karar
 
-| Sağlayıcı ailesi                             | OmniRoute kimliği       | Global bölge | Çin bölgesi |
+| Sağlayıcı ailesi                             | 67router kimliği        | Global bölge | Çin bölgesi |
 | -------------------------------------------- | ----------------------- | ------------ | ----------- |
 | Alibaba Cloud Model Studio (kullandıkça öde) | `alibaba`               | Singapur     | Pekin       |
 | Alibaba Cloud Token Planı                    | `bailian-coding-plan`   | Singapur     | Pekin       |

@@ -7,7 +7,7 @@
 > **信頼できる情報源:** `src/lib/memory/` および `src/app/api/memory/`
 > **最終更新:** 2026-06-28 — v3.8.40（デフォルト無効化 + int8 量子化のキャッチアップ）
 
-OmniRoute は、API キー（およびオプションでセッション ID）をキーとする永続的な会話メモリを提供します。メモリは軽量な正規表現パターンマッチングによって LLM の応答から自動的に抽出され、後続のリクエストに先頭のシステムメッセージとして再挿入されます（system ロールを拒否するプロバイダーの場合は、最初のユーザーメッセージとして挿入されます）。
+67router は、API キー（およびオプションでセッション ID）をキーとする永続的な会話メモリを提供します。メモリは軽量な正規表現パターンマッチングによって LLM の応答から自動的に抽出され、後続のリクエストに先頭のシステムメッセージとして再挿入されます（system ロールを拒否するプロバイダーの場合は、最初のユーザーメッセージとして挿入されます）。
 
 > **メモリはデフォルトで無効です（v3.8.30 以降）。** `DEFAULT_MEMORY_SETTINGS.enabled` は
 > 現在 `false` です（`src/lib/memory/settings.ts`）。メモリを有効にすると、取得されたコンテキストが
@@ -566,7 +566,7 @@ metadata?}` → `createMemory()` をラップします。4 つの標準タイプ
 
 ## 埋め込みプロバイダーの選択（v3.8.16+）
 
-OmniRoute のメモリエンジンは、**4 つの埋め込みソース**（`src/lib/memory/embedding/`）をサポートしています。それぞれ、**レイテンシ、コスト、モデル品質、セットアップの複雑さ**におけるトレードオフが異なります。
+67router のメモリエンジンは、**4 つの埋め込みソース**（`src/lib/memory/embedding/`）をサポートしています。それぞれ、**レイテンシ、コスト、モデル品質、セットアップの複雑さ**におけるトレードオフが異なります。
 
 ### 埋め込みソース
 
@@ -981,13 +981,13 @@ memoryManager.register(sqliteBackend);
 このワーカーはループバックのみにバインドされますが、`GenericMemoryBackend` の SSRF ガードは意図的にこれを拒否します。
 このアダプターはそのガードを緩和しません。ホストは `127.0.0.1` にハードコードされており、設定スキーマ（`ClaudeMemBackendConfigSchema`、`.strict()`）が受け付けるのは以下のみです。
 
-| キー        | 型     | デフォルト | 備考                                                                                                               |
-| ----------- | ------ | ---------- | ------------------------------------------------------------------------------------------------------------------ |
-| `port`      | number | —          | 必須、1024～65535。設定ファイルにある claude-mem ワーカーのポート（デフォルトは `37700 + uid % 100`）。            |
-| `project`   | string | —          | 使用する claude-mem プロジェクト。未設定 → 各 OmniRoute API キーがそれぞれ独自のプロジェクト（`apiKeyId`）に対応。 |
-| `timeoutMs` | number | `5000`     | リクエストごとのタイムアウト、100～30000。                                                                         |
+| キー        | 型     | デフォルト | 備考                                                                                                              |
+| ----------- | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —          | 必須、1024～65535。設定ファイルにある claude-mem ワーカーのポート（デフォルトは `37700 + uid % 100`）。           |
+| `project`   | string | —          | 使用する claude-mem プロジェクト。未設定 → 各 67router API キーがそれぞれ独自のプロジェクト（`apiKeyId`）に対応。 |
+| `timeoutMs` | number | `5000`     | リクエストごとのタイムアウト、100～30000。                                                                        |
 
-`PUT /api/settings/memory` で有効化し、OmniRoute を再起動してください（バックエンドは
+`PUT /api/settings/memory` で有効化し、67router を再起動してください（バックエンドは
 `initMemoryBackends()` 内で一度だけ登録されます）。
 
 ```json
@@ -1004,7 +1004,7 @@ memoryManager.register(sqliteBackend);
 
 - ID は `claude-mem:<observationId>` です。`get`/`delete` は、他のバックエンドの ID を
   ネットワーク呼び出しなしで無視します。
-- `create` → `POST /api/memory/save`。OmniRoute のフィールド（`apiKeyId`、`sessionId`、`type`、
+- `create` → `POST /api/memory/save`。67router のフィールド（`apiKeyId`、`sessionId`、`type`、
   `key`、`metadata`）は claude-mem の `metadata.omniroute` に格納され、読み取り時にラウンドトリップされます。
 - `search` → `GET /api/search?format=json&type=observations`。`maxTokens`
   （文字数 / 4）に収まるよう切り詰められます。`list` → ワーカーのページネーション対応 observations エンドポイント
@@ -1016,16 +1016,16 @@ memoryManager.register(sqliteBackend);
 - プロンプトインジェクション（`retrieval.ts`）と `omniroute_memory_*` MCP ツールは、引き続き SQLite を
   直接読み取ります。これらは `memoryManager` を経由しないため、このバックエンドからデータは供給されません。
 
-**claude-mem 自身の LLM 呼び出しを OmniRoute 経由でルーティングする。** claude-mem は LLM
+**claude-mem 自身の LLM 呼び出しを 67router 経由でルーティングする。** claude-mem は LLM
 （デフォルト：Claude Agent SDK）を使用して observation を圧縮します。その `openai-compatible` プロバイダーを
-OmniRoute に向けることで、コンボのフォールバックとコスト追跡を利用できます。`~/.claude-mem/settings.json` で次のように設定します。
+67router に向けることで、コンボのフォールバックとコスト追跡を利用できます。`~/.claude-mem/settings.json` で次のように設定します。
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API キー>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute モデルまたはコンボ>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API キー>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router モデルまたはコンボ>"
 }
 ```
 

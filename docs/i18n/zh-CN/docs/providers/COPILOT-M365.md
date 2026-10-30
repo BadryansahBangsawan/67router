@@ -38,7 +38,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. 在 OmniRoute 中，前往 **Providers → Add Provider**，选择 **Microsoft 365 Copilot
+6. 在 67router 中，前往 **Providers → Add Provider**，选择 **Microsoft 365 Copilot
    (BizChat)**，然后按以下格式粘贴凭据：
 
 ```
@@ -55,9 +55,9 @@ access_token=<jwt>; chathubPath=<oid>@<tenant>
 1. 打开 **DevTools → Network**。
 2. 开始或继续 BizChat 对话（这将触发 WebSocket 连接）。
 3. 在 Network 面板中右键单击，然后选择 **Save all as HAR with content**。
-4. 在 OmniRoute 的提供者连接对话框中，使用 **Import .har file** 按钮。
+4. 在 67router 的提供者连接对话框中，使用 **Import .har file** 按钮。
 
-OmniRoute 会扫描 HAR 以查找 Chathub WebSocket URL，提取
+67router 会扫描 HAR 以查找 Chathub WebSocket URL，提取
 `access_token` 和 `chathubPath`，并自动填充凭据字段。
 导入 HAR 时还会解码 JWT 的过期时间，并显示令牌的剩余有效期。
 
@@ -80,7 +80,7 @@ OmniRoute 会扫描 HAR 以查找 Chathub WebSocket URL，提取
 | `tier`         | `individual`（默认）、`edu` 或 `enterprise`                        |
 
 通过范围限定为 `substrate.office.com/sydney` 的 Microsoft 设备代码流程或授权代码流程
-获取刷新令牌。设置 `refreshToken` 后，OmniRoute 会在每次请求前预先刷新
+获取刷新令牌。设置 `refreshToken` 后，67router 会在每次请求前预先刷新
 `access_token`，因此无需在每次约 75 分钟的有效期结束后重新获取凭据。
 
 如果未设置 `refreshToken`，则必须在每次凭据过期后手动重新获取 WebSocket 凭据。

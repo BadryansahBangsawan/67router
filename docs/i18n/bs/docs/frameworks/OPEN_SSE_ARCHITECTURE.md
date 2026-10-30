@@ -4,7 +4,7 @@
 
 ---
 
-> **Ukratko**: `open-sse/` je osnovni mehanizam za streaming koji pokreće svaki LLM zahtjev u OmniRouteu. Sadrži oko 1.400 datoteka koje implementiraju tok obrade zahtjeva, izvršioce, servise, MCP server i sloj za prevođenje. Ovaj vodič objašnjava kako su svi dijelovi povezani.
+> **Ukratko**: `open-sse/` je osnovni mehanizam za streaming koji pokreće svaki LLM zahtjev u 67routeru. Sadrži oko 1.400 datoteka koje implementiraju tok obrade zahtjeva, izvršioce, servise, MCP server i sloj za prevođenje. Ovaj vodič objašnjava kako su svi dijelovi povezani.
 
 **Izvor:** `open-sse/` (workspace paket, oko 1.440 `.ts` datoteka koje nisu testovi)
 
@@ -12,10 +12,10 @@
 
 ## Zašto zaseban workspace paket?
 
-`open-sse/` je **samostalan workspace** u OmniRoute monorepozitoriju iz nekoliko razloga:
+`open-sse/` je **samostalan workspace** u 67router monorepozitoriju iz nekoliko razloga:
 
 1. **Ponovna upotrebljivost** — `open-sse` se objavljuje kao `@omniroute/open-sse` na npm-u, tako da ga drugi projekti mogu koristiti nezavisno
-2. **Jasne granice** — mehanizam za streaming odvojen je od UI/DB sloja specifičnog za OmniRoute
+2. **Jasne granice** — mehanizam za streaming odvojen je od UI/DB sloja specifičnog za 67router
 3. **Performanse** — mehanizam nema Next.js zavisnosti, što omogućava brže hladno pokretanje u CLI/serverless okruženjima
 4. **Verzioniranje** — `open-sse` može objavljivati izdanja vlastitim tempom
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Zašto zaseban transformator?
 
-Responses API je novi OpenAI format sa **razgovorima sa stanjem** (`previous_response_id`). Kada klijent pošalje Responses zahtjev, OmniRoute:
+Responses API je novi OpenAI format sa **razgovorima sa stanjem** (`previous_response_id`). Kada klijent pošalje Responses zahtjev, 67router:
 
 1. Interno konvertuje Responses → Chat Completions
 2. Šalje pružaocu (bilo kojem pružaocu koji podržava Chat Completions)

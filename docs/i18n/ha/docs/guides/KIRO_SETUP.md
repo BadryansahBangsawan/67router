@@ -4,7 +4,7 @@
 
 ---
 
-Wannan jagorar ta ƙunshi yadda ake ƙara asusun Kiro (mataimakin rubuta lambar AI da AWS ke ɗaukar nauyinsa) zuwa OmniRoute,
+Wannan jagorar ta ƙunshi yadda ake ƙara asusun Kiro (mataimakin rubuta lambar AI da AWS ke ɗaukar nauyinsa) zuwa 67router,
 tare da mai da hankali kan gudanar da asusu da yawa a lokaci guda ba tare da rikicin zama ba.
 
 ---
@@ -22,10 +22,10 @@ asusun farko.
 
 ---
 
-## Yadda OmniRoute Ke Magance Wannan (v3.8.0+)
+## Yadda 67router Ke Magance Wannan (v3.8.0+)
 
-Tun daga v3.8.0, OmniRoute yana kiran `registerClient()` (AWS SSO OIDC) yayin kowace
-shigo da haɗin Kiro. Wannan yana ba kowane haɗin OmniRoute rajistar abokin cinikin OIDC
+Tun daga v3.8.0, 67router yana kiran `registerClient()` (AWS SSO OIDC) yayin kowace
+shigo da haɗin Kiro. Wannan yana ba kowane haɗin 67router rajistar abokin cinikin OIDC
 ta kansa. Saboda kowace rajistar abokin ciniki mai zaman kanta ce, sabuntawa ko
 sake tabbatar da asusu ɗaya ba ya shafar refresh token na wani asusu.
 
@@ -59,7 +59,7 @@ za su karɓi rajistar abokin ciniki ta kansu kai tsaye.
 
 ### Abubuwan da ake Buƙata Tun Farko
 
-- OmniRoute v3.8.0 ko mafi sabo.
+- 67router v3.8.0 ko mafi sabo.
 - Asusun Kiro mai aiki (imel + kalmar sirri, ko shiga ta Google, ko GitHub).
 - Idan ana so, asusun Kiro na biyu.
 
@@ -70,7 +70,7 @@ za su karɓi rajistar abokin ciniki ta kansu kai tsaye.
    - **Import Token** — liƙa refresh token da ke farawa da `aorAAAAAG`.
    - **API Key** — liƙa API key na Kiro / CodeWhisperer mai dogon lokaci.
    - **Shiga ta Google / GitHub** — kammala gudanarwar OAuth a cikin burauza.
-   - **Auto-Import** — danna maɓallin; OmniRoute zai karanta bayanan shaidar shiga daga
+   - **Auto-Import** — danna maɓallin; 67router zai karanta bayanan shaidar shiga daga
      bayanan kiro-cli na cikin na'ura ko `~/.aws/sso/cache`.
 3. Ana adana haɗin. Gudanarwar refresh-token za ta yi wa abokin cinikin OIDC na musamman
    rajista kai tsaye. Gudanarwar API-key tana inganta maɓallin tare da AWS kuma ba ta adana refresh token.
@@ -127,7 +127,7 @@ amfani da sabunta OAuth, don haka tana kauce wa lalacewar zaman OIDC da ake raba
 2. Zaɓi **API Key**.
 3. Liƙa maɓallin API ɗin sannan zaɓi yankin AWS: **Auto-detect** (tsoho), **US East
    (N. Virginia)** ko **Europe (Frankfurt)**.
-4. OmniRoute yana tabbatar da ingancin maɓallin kuma yana adana haɗin a kulle zuwa yankin da
+4. 67router yana tabbatar da ingancin maɓallin kuma yana adana haɗin a kulle zuwa yankin da
    maɓallin ke aiki.
 
 ### API
@@ -177,7 +177,7 @@ zuwa `https://q.<region>.amazonaws.com/generateAssistantResponse` — har da `us
 ## Ƙarewar Lokacin OIDC Client
 
 AWS SSO OIDC public clients yawanci suna ƙarewa bayan kwanaki 90
-(`clientSecretExpiresAt`). OmniRoute yana adana wannan timestamp a cikin `providerSpecificData`
+(`clientSecretExpiresAt`). 67router yana adana wannan timestamp a cikin `providerSpecificData`
 don sa ido. Idan haɗi ya daina sabuntawa bayan kusan kwanaki 90, sake shigo da
 haɗin domin samun sabon rajistar OIDC client. Ana bibiyar sake yin rajista ta atomatik bayan
 ƙarewar lokaci a matsayin ingantawa ta gaba.
@@ -198,7 +198,7 @@ ta hanyar AWS SSO OIDC.
 ### Shigo da bayanai ya gaza da "Tabbatar da token ya gaza"
 
 - Tabbatar refresh token ya fara da `aorAAAAAG`.
-- Tabbatar OmniRoute zai iya isa ga `https://oidc.us-east-1.amazonaws.com` (ko yankin da aka saita).
+- Tabbatar 67router zai iya isa ga `https://oidc.us-east-1.amazonaws.com` (ko yankin da aka saita).
   Idan kana bayan corporate proxy, saita proxy na matakin provider a
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ ta hanyar AWS SSO OIDC.
 
 - Tabbatar key ɗin API key ne na Kiro / CodeWhisperer, ba refresh token ba.
 - Tabbatar yankin AWS ya dace da key/asusun. `us-east-1` ne na asali.
-- Dole ne key ɗin ya iya kiran `ListAvailableProfiles`; in ba haka ba OmniRoute ba zai iya
+- Dole ne key ɗin ya iya kiran `ListAvailableProfiles`; in ba haka ba 67router ba zai iya
   gano `profileArn` da ake buƙata ba.
 
 Don wasu matsaloli, duba babban [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

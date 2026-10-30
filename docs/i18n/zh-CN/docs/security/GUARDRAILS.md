@@ -9,7 +9,7 @@
 > 钩子所能触达的路由与响应路径、合并后的禁用请求头 (#16412)、作为强制边界的注入
 > 阻断模式 (#16413)，以及在 post-call 之前哪些组件会看到响应）
 
-护栏（Guardrails）在 OmniRoute 与上游提供者之间的边界上强制执行安全、策略与内容转换。每个护栏都可以检查（并可选地拒绝、转换或标注）请求负载（`preCall`）与上游响应（`postCall`）。
+护栏（Guardrails）在 67router 与上游提供者之间的边界上强制执行安全、策略与内容转换。每个护栏都可以检查（并可选地拒绝、转换或标注）请求负载（`preCall`）与上游响应（`postCall`）。
 
 该系统采用**故障开放（fail-open）**设计：如果某个护栏在执行时抛出异常，注册表会记录该错误并继续执行下一个护栏，而不是让请求失败。阻断是一个显式决策（`block: true`），绝不会意外发生。唯一的例外是被中止的请求：当调用方的 `signal` 被中止时，抛出异常的护栏会使本次钩子运行被拒绝，而不是被跳过。
 
@@ -92,7 +92,7 @@ OpenAI `image_url` 内容之前完成描述或处理 (#17069)。
 （`allowedQuotas`）或模型（`allowedModels` / `blockedModels` /
 `modelAccessMode: "restricted"` / `disableNonPublicModels`）时，桥接只会在该密钥
 可使用的连接上，选择该密钥可使用的重路由模型和 describe 模型。随后 describe 调用
-始终通过带有 `x-omniroute-self-loop-key-id` 请求头的 OmniRoute 自环（self-loop）
+始终通过带有 `x-omniroute-self-loop-key-id` 请求头的 67router 自环（self-loop）
 进行，因此接收端的 chat 请求会再次强制执行该密钥的连接和模型策略。
 `enforceApiKeyPolicy()` 仅在同时存在自环 bearer 凭据时才认可该请求头，因此它
 只能缩小访问范围；无法解析的 id 将被拒绝。
@@ -116,7 +116,7 @@ describe 自环自身的 OpenAI 兼容请求（`visionBridgeHelpers.ts` 中的
 无条件地，对每个调用方/提供者都是如此，不受任何客户端信号控制。
 低细节采样会降低 OCR 准确率，而这正是该提示词所要求的文本转录任务，
 因此无论原始入站请求使用了什么细节级别，describe 调用本身始终请求
-高细节。这仅影响内部 describe 请求体；它不会改变 OmniRoute 在主请求上
+高细节。这仅影响内部 describe 请求体；它不会改变 67router 在主请求上
 转发调用方自己的 `image_url.detail` 的方式——该默认值是单独应用的，
 并且仅针对检测到的 OpenCode 客户端，在 `defaultImageDetail()`
 （`open-sse/handlers/chatCore/upstreamBody.ts`）中。describe 自环的
@@ -229,7 +229,7 @@ FFmpeg/ffprobe 运行时状态——四种明确的 UI 状态之一（探测进�
 将 Image-to-Text 和 Speech-to-Text 工作流链接到相应的 Modality
 Bridge 标签页，同时不移除现有的 Speech-to-Text 演练场。
 
-**自循环准入绕过：** 当 describe 调用通过 OmniRoute
+**自循环准入绕过：** 当 describe 调用通过 67router
 自身的 `/v1` 自循环路由时（非标准提供方模型），子请求会发送
 `x-omniroute-admission-bypass: internal`，并使用解析出的
 自循环凭据进行认证——本地模式下的本地 `sk_omniroute` 哨兵值，或
@@ -293,7 +293,7 @@ Bridge 标签页，同时不移除现有的 Speech-to-Text 演练场。
 
 `scripts/perf/video-bridge-fu07-eval.ts` 生成确定性的真实 FFmpeg 夹具（fixture），用于去重后字幕调用节省、密集运动预算分配、模糊/曝光/SI-TI 证据、带长尾的快速剪切以及渐变误报。它记录预分析的实际耗时（wall time），并在 `/usr/bin/time` 可用时记录子进程 CPU 和峰值 RSS。其质量检查仅为结构性预言机（oracle）。真实字幕模型的质量仍为 `HOLD`，因为该测试装置没有授权端点或冻结的评判器（judge）。除非 `--caption-cost-per-call-usd` 提供明确的正的每次调用估计值，否则金钱节省也保持 `HOLD`；该脚本永远不会捏造这两种结果中的任何一种。
 
-每帧限制为 4 MiB，所有原始帧合计限制为 23 MiB，序列化后的代理响应限制为 32 MiB。私有临时目录会在 `finally` 中移除。OmniRoute 不捆绑 FFmpeg，也不接受自定义可执行文件路径。在生成字幕之前，桥接层会执行一次保守的视觉去重处理：每张 JPEG 被缩减为 16×16 灰度缓冲区，并且仅与最近保留的一帧进行比较。当请求的字幕预算大于一帧时，提取阶段会提供一个有上限的候选池，其大小最多为预算的两倍，且永不超过 16 帧。请求的上限仅在去重之后才应用；当预算至少为两帧时，最终稀疏化过程中会保留首个和最后一个被选中的候选帧。带版本标识的
+每帧限制为 4 MiB，所有原始帧合计限制为 23 MiB，序列化后的代理响应限制为 32 MiB。私有临时目录会在 `finally` 中移除。67router 不捆绑 FFmpeg，也不接受自定义可执行文件路径。在生成字幕之前，桥接层会执行一次保守的视觉去重处理：每张 JPEG 被缩减为 16×16 灰度缓冲区，并且仅与最近保留的一帧进行比较。当请求的字幕预算大于一帧时，提取阶段会提供一个有上限的候选池，其大小最多为预算的两倍，且永不超过 16 帧。请求的上限仅在去重之后才应用；当预算至少为两帧时，最终稀疏化过程中会保留首个和最后一个被选中的候选帧。带版本标识的
 `grayscale-16x16-mean-cells-v2` 策略取平均亮度差值与归一化差值不低于 0.05 的缩略图单元格比例这两者中的较大者。
 重复帧阈值是常量 0.04，出于可预测性考虑而选择固定值，而非作为运行时设置公开。这一辅助的
 高对比度信号可以保留仅做均值比较时可能被掩盖的微小运动和可见文本变化。比较器或解码器错误会以开放方式失败（fail open），从而保持帧覆盖率。输出元数据会区分提取的候选帧、成功使用的帧，以及被丢弃的视觉重复帧。
@@ -320,7 +320,7 @@ JPEG 始终限制在 32 MiB 以内。如果 `sharp` 无法解码或合成该网�
 位于探测时长范围内的有限 `start`/`end` 区间，以及一个白名单内的
 `source`（`client`、`embedded` 或 `audio-bridge`）；`confidence` 默认为
 `1`，且必须保持在 `0` 和 `1` 之间。完全重复的提示会被折叠。
-OmniRoute 绝不会根据这些元数据启动转录：经过验证的提示会连同来源、置信度和区间一起
+67router 绝不会根据这些元数据启动转录：经过验证的提示会连同来源、置信度和区间一起
 复制到描述结果中，并作为不可信观察内容与帧字幕一同
 呈现。无效的、超出范围的或没有来源信息的文本会被拒绝，而不是混入
 字幕流。两个请求体的转录通道都会将所提供的来源
@@ -710,7 +710,7 @@ guardrailRegistry.register(new BudgetGuardrail());
   下运行 `promptfoo eval -c promptfooconfig.yaml`。每个对抗性用例
   （例如 "ignore all previous instructions…"、DAN 风格的越狱）断言响应携带
   `error.code === "SECURITY_001"`，即防护确实拒绝了该请求。
-- **`garak`（建议性）** —— 针对本地 OmniRoute 实例
+- **`garak`（建议性）** —— 针对本地 67router 实例
   （`http://localhost:20128/v1`）运行 garak `--probes promptinject,dan,leakreplay`。
   由提供者密钥（`PROMPTFOO_PROVIDER_KEY`）门控；无密钥时优雅跳过，
   并以 `|| true` 作为后缀，因此它会报告结果而不会导致 CI 失败。

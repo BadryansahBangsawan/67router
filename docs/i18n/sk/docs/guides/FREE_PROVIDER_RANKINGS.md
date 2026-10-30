@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute zoraďuje svojich **bezplatných** poskytovateľov podľa kvality modelov pomocou **ELO skóre
+> **TL;DR**: 67router zoraďuje svojich **bezplatných** poskytovateľov podľa kvality modelov pomocou **ELO skóre
 > Arena AI (v štýle LMArena)**. Otvorte stránku **Rebríček bezplatných poskytovateľov** na
 > ovládacom paneli a zistite, ktorí bezplatní poskytovatelia ponúkajú najsilnejšie modely pre vašu úlohu —
 > celkovo alebo filtrované podľa kategórie (programovanie, kontrola, dokumentácia, ladenie).
@@ -13,7 +13,7 @@
 
 ## Čo to je
 
-OmniRoute registruje 375 poskytovateľov vrátane 155 položiek katalógu označených ako **free/no-auth**
+67router registruje 375 poskytovateľov vrátane 155 položiek katalógu označených ako **free/no-auth**
 (bez autentifikácie, OAuth s bezplatnou úrovňou alebo API kľúč s bezplatnou úrovňou — pozrite si
 [Sprievodcu bezplatnými úrovňami](../getting-started/FREE-TIERS-GUIDE.md) a úplný
 [adresár bezplatných úrovní](../reference/FREE_TIERS.md)). Háčik je v tom, že bezplatní poskytovatelia
@@ -128,9 +128,9 @@ Synchronizačný mechanizmus Arena ELO (`src/lib/arenaEloSync.ts`) získava z AP
 a `code`. Každá položka rebríčka obsahuje názov modelu, dodávateľa, ELO `score`,
 interval spoľahlivosti a počet hlasov.
 
-Kategórie rebríčka sa mapujú na kategórie úloh OmniRoute:
+Kategórie rebríčka sa mapujú na kategórie úloh 67router:
 
-| Rebríček Arena | Kategórie úloh OmniRoute                          |
+| Rebríček Arena | Kategórie úloh 67router                           |
 | -------------- | ------------------------------------------------- |
 | `text`         | `default`, `review`, `documentation`, `debugging` |
 | `code`         | `coding`                                          |
@@ -167,7 +167,7 @@ Synchronizácia je **predvolene zapnutá**:
 
 - Spustí sa raz pri štarte servera a potom pravidelne podľa časovača
   (`src/lib/arenaEloSync.ts`, zapojené zo súboru `src/instrumentation-node.ts`).
-- Je **neblokujúca a nikdy nie je fatálna** — ak získanie údajov zo vzdialeného zdroja zlyhá, OmniRoute
+- Je **neblokujúca a nikdy nie je fatálna** — ak získanie údajov zo vzdialeného zdroja zlyhá, 67router
   pokračuje v prevádzke a rebríčky jednoducho zobrazujú posledné platné údaje (alebo prázdny stav).
 
 Ovládajú ju dve premenné prostredia (zdokumentované v
@@ -202,7 +202,7 @@ flexibilné priraďovanie (`findMatchingIntelligence` v `src/lib/freeProviderRan
 3. Zhoda podľa prefixu (názov modelu v rebríčku je prefixom ID v registri).
 
 Na strane synchronizácie sa odstraňujú známe prefixy dodávateľov (`anthropic/`, `openai/`, `google/`, …)
-a malá mapa aliasov rozširuje kanonické názvy na varianty, ktoré OmniRoute používa
+a malá mapa aliasov rozširuje kanonické názvy na varianty, ktoré 67router používa
 interne, takže modely zostávajú dohľadateľné pod ľubovoľným názvom.
 
 ### Ako sa poskytovateľ umiestňuje v rebríčku

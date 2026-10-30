@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute wá gẹ́gẹ́ bí Progressive Web App tí a lè fi sori ẹrọ ní kíkún. Nígbà tí o bá wọ dashboard láti inú browser alágbèéká èyíkéyìí — Android (Chrome) tàbí iOS (Safari) — o lè yan **“Fi kún Ojú-ìbẹ̀rẹ̀”** kí o sì rí ìrírí bíi ti app abinibi láìní láti lo app store.
+67router wá gẹ́gẹ́ bí Progressive Web App tí a lè fi sori ẹrọ ní kíkún. Nígbà tí o bá wọ dashboard láti inú browser alágbèéká èyíkéyìí — Android (Chrome) tàbí iOS (Safari) — o lè yan **“Fi kún Ojú-ìbẹ̀rẹ̀”** kí o sì rí ìrírí bíi ti app abinibi láìní láti lo app store.
 
 ## Kí Ni PWA?
 
-Progressive Web App ń sọ dashboard wẹ́ẹ̀bù OmniRoute di ohun tí ó rí, tí ó sì ń ṣiṣẹ́ bí app alágbèéká abinibi. Ní kété tí a bá fi sí ẹrọ, ó:
+Progressive Web App ń sọ dashboard wẹ́ẹ̀bù 67router di ohun tí ó rí, tí ó sì ń ṣiṣẹ́ bí app alágbèéká abinibi. Ní kété tí a bá fi sí ẹrọ, ó:
 
 - Máa ń bẹ̀rẹ̀ láti ojú-ìbẹ̀rẹ̀ rẹ pẹ̀lú àmì tirẹ̀
 - Máa ń ṣí ní ojú-iboju kíkún — kò sí ọ̀pá àdírẹ́sì browser tàbí UI taabu
@@ -20,26 +20,26 @@ Progressive Web App ń sọ dashboard wẹ́ẹ̀bù OmniRoute di ohun tí ó r�
 
 ### Android (Chrome)
 
-1. Ṣí dashboard OmniRoute nínú Chrome: `http://YOUR_IP:20128`
-2. Chrome yóò fi àsìá **“Fi OmniRoute kún Ojú-ìbẹ̀rẹ̀”** hàn láìfọwọ́ṣe, tàbí:
+1. Ṣí dashboard 67router nínú Chrome: `http://YOUR_IP:20128`
+2. Chrome yóò fi àsìá **“Fi 67router kún Ojú-ìbẹ̀rẹ̀”** hàn láìfọwọ́ṣe, tàbí:
    - Tẹ àkójọ **⋮** (àmì mẹ́ta) → **“Fi kún Ojú-ìbẹ̀rẹ̀”** tàbí **“Fi app sori ẹrọ”**
 3. Fìdí ìbéèrè náà múlẹ̀
-4. OmniRoute yóò hàn lórí ojú-ìbẹ̀rẹ̀ rẹ gẹ́gẹ́ bí app olómìnira
+4. 67router yóò hàn lórí ojú-ìbẹ̀rẹ̀ rẹ gẹ́gẹ́ bí app olómìnira
 
 ### iOS (Safari)
 
-1. Ṣí dashboard OmniRoute nínú Safari: `http://YOUR_IP:20128`
+1. Ṣí dashboard 67router nínú Safari: `http://YOUR_IP:20128`
 2. Tẹ bọ́tìnì **Pín** (àpótí tí ó ní ọfà)
 3. Yí lọ sísàlẹ̀ kí o sì tẹ **“Fi kún Ojú-ìbẹ̀rẹ̀”**
-4. Fún un ní orúkọ (orúkọ àìyípadà ni “OmniRoute”) kí o sì tẹ **Fi kún**
-5. OmniRoute yóò hàn lórí ojú-ìbẹ̀rẹ̀ rẹ pẹ̀lú àmì app náà
+4. Fún un ní orúkọ (orúkọ àìyípadà ni “67router”) kí o sì tẹ **Fi kún**
+5. 67router yóò hàn lórí ojú-ìbẹ̀rẹ̀ rẹ pẹ̀lú àmì app náà
 
 ### Kọ̀ǹpútà (Chrome / Edge)
 
-1. Ṣí dashboard OmniRoute
-2. Tẹ **àmì fífi sori ẹrọ** nínú ọ̀pá àdírẹ́sì (tàbí ⋮ → “Fi OmniRoute sori ẹrọ...”)
+1. Ṣí dashboard 67router
+2. Tẹ **àmì fífi sori ẹrọ** nínú ọ̀pá àdírẹ́sì (tàbí ⋮ → “Fi 67router sori ẹrọ...”)
 3. Fìdí ìbéèrè náà múlẹ̀
-4. OmniRoute yóò ṣí gẹ́gẹ́ bí fèrèsé olómìnira — kò sí taabu, kò sì sí ọ̀pá àdírẹ́sì
+4. 67router yóò ṣí gẹ́gẹ́ bí fèrèsé olómìnira — kò sí taabu, kò sì sí ọ̀pá àdírẹ́sì
 
 ## Àwọn Ẹ̀yà
 
@@ -49,7 +49,7 @@ A ti ṣètò manifest náà pẹ̀lú `display: "fullscreen"`, èyí túmọ̀ 
 
 ### Àtìlẹ́yìn Láìsí Ìsopọ̀
 
-OmniRoute ní service worker (`sw.js`) tí ó ń pèsè ìfipamọ́ cache ọlọ́gbọ́n:
+67router ní service worker (`sw.js`) tí ó ń pèsè ìfipamọ́ cache ọlọ́gbọ́n:
 
 | Irú Ohun Èlò                                                   | Ìlànà                             | Ìhùwàsí                                                                                             |
 | -------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Nígbà tí network kò bá sí, tí olumulo sì lọ sí ojú-ìwé tuntun, ser
 
 ### Àwọn Àmì App
 
-OmniRoute ń pèsè àwọn àmì tí a ṣe àtúnṣe fún platform kọ̀ọ̀kan:
+67router ń pèsè àwọn àmì tí a ṣe àtúnṣe fún platform kọ̀ọ̀kan:
 
 | Fáìlì                  | Ìwọ̀n             | Ibi Tí A Ti Ń Lò Ó                      |
 | ---------------------- | ---------------- | --------------------------------------- |
@@ -93,9 +93,9 @@ Next.js ló ń ṣẹ̀dá rẹ̀ nípasẹ̀ `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Service worker vanilla kan (tí kò ní ìgbẹ́kẹ̀lé lórí framework) p�
 
 ## Lílò Pẹ̀lú Termux (Android)
 
-Nígbà tí OmniRoute bá ń ṣiṣẹ́ lórí Android nípasẹ̀ Termux, PWA náà ń ṣiṣẹ́ láìsí ìṣòro:
+Nígbà tí 67router bá ń ṣiṣẹ́ lórí Android nípasẹ̀ Termux, PWA náà ń ṣiṣẹ́ láìsí ìṣòro:
 
-1. Bẹ̀rẹ̀ OmniRoute nínú Termux: `npx omniroute`
+1. Bẹ̀rẹ̀ 67router nínú Termux: `npx omniroute`
 2. Ṣí Chrome lórí fóònù kan náà: `http://localhost:20128`
 3. Fi PWA náà sori ẹrọ nípasẹ̀ “Fikún sí Ojú-ìbẹ̀rẹ̀”
 4. PWA náà yóò sopọ̀ mọ́ server Termux agbègbè — gbogbo nǹkan ń ṣiṣẹ́ lórí ẹrọ náà
@@ -156,7 +156,7 @@ Nígbà tí OmniRoute bá ń ṣiṣẹ́ lórí Android nípasẹ̀ Termux, PWA
 
 ## Lílò Láti Orí Àwọn Ẹrọ Mìíràn
 
-Fi PWA náà sori ẹrọ èyíkéyìí tí browser rẹ̀ lè ráyè wọlé sí server OmniRoute rẹ:
+Fi PWA náà sori ẹrọ èyíkéyìí tí browser rẹ̀ lè ráyè wọlé sí server 67router rẹ:
 
 - **Fóònù/tabulẹti mìíràn**: Lọ sí `http://PHONE_IP:20128`, kí o sì fi PWA náà sori ẹrọ
 - **Laptop**: Ṣí Chrome/Edge, kí o sì fi í sori ẹrọ gẹ́gẹ́ bí PWA desktop

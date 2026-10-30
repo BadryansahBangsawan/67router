@@ -7,11 +7,11 @@
 לפרטים על מניפסט קובצי ההרצה המשותף, סביבות צאצא מוגבלות והגדרת Gemini מתמשכת,
 ראו [חוזי הפעלת CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute כולל משפחה של פקודות `setup-*` שמגדירות CLI לתכנות
-(Codex, Claude Code, OpenCode, Cline, …) לשימוש ב-OmniRoute כקצה העורפי שלו — כך
-שהכלי מתקשר עם נקודת קצה **אחת**, ו-OmniRoute מנתב לספק המתאים עם
+67router כולל משפחה של פקודות `setup-*` שמגדירות CLI לתכנות
+(Codex, Claude Code, OpenCode, Cline, …) לשימוש ב-67router כקצה העורפי שלו — כך
+שהכלי מתקשר עם נקודת קצה **אחת**, ו-67router מנתב לספק המתאים עם
 מעבר אוטומטי לספק חלופי. כל פקודה קוראת את קטלוג המודלים **הפעיל** ממופע
-OmniRoute פועל (מקומי או מרוחק), וכותבת את קובץ התצורה של הכלי עצמו במחשב
+67router פועל (מקומי או מרוחק), וכותבת את קובץ התצורה של הכלי עצמו במחשב
 **שלכם**. ההפניה למפתח ה-API נעשית באמצעות משתנה סביבה בכל מקום שבו הכלי
 תומך בכך. פקודות ששומרות קובץ סביבה מקומי של הכלי מצוינות להלן.
 
@@ -53,7 +53,7 @@ omniroute providers remove <connection-id> --yes
 
 - [הגדרת Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [הגדרת Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [מצב מרוחק](./REMOTE-MODE.md) — הפעילו OmniRoute מרוחק (VPS / Tailnet) מהמחשב הנייד שלכם
+- [מצב מרוחק](./REMOTE-MODE.md) — הפעילו 67router מרוחק (VPS / Tailnet) מהמחשב הנייד שלכם
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — התוסף OmniCopilot; הוא יכול גם להריץ עבורכם את
   פקודות `setup-*` האלה מתוך העורך
 
@@ -89,7 +89,7 @@ omniroute providers remove <connection-id> --yes
 
 הערות על דגלים (אומתו בקוד המקור של הפקודה):
 
-- `--remote <url>` — מאחזר את הקטלוג מ-OmniRoute מרוחק (דורס את `--port`
+- `--remote <url>` — מאחזר את הקטלוג מ-67router מרוחק (דורס את `--port`
   ואת ההקשר הפעיל). `--api-key <key>` מספק את פרטי ההזדהות עבור שרת זה
   (ברירת המחדל היא משתנה הסביבה `OMNIROUTE_API_KEY`, או האסימון של ההקשר הפעיל).
 - `--only <patterns>` — מחרוזות משנה מופרדות בפסיקים; משאיר רק מזהי מודלים שתואמים
@@ -110,7 +110,7 @@ omniroute providers remove <connection-id> --yes
   **codex** באמצעות הארגומנטים `-c model_providers.omniroute.*`. **Qwen הוא יעד ההרצה היחיד
   שמחייב `--model`** — הפעלת `omniroute run qwen` בלעדיו מסתיימת
   בקוד `2` עם שגיאה מפורשת.
-- `--port <port>` — הפורט המקומי של OmniRoute (ברירת המחדל היא `20128`, ומתעלמים ממנו כאשר
+- `--port <port>` — הפורט המקומי של 67router (ברירת המחדל היא `20128`, ומתעלמים ממנו כאשר
   `--remote` מוגדר). קיים בכל פקודות `setup-*` ובשני מפעילי התוכניות.
 - קודי היציאה של `omniroute run`: קוד היציאה של תוכנית ה-CLI הבת מועבר
   כפי שהוא; `2` = ארגומנטים לא תקינים (יעד שאינו נתמך, `--model` נדרש אך חסר,
@@ -155,7 +155,7 @@ omniroute configure qwen --model qwen/qwen3.8-max-preview --yes
 
 ## שימוש מקומי
 
-כאשר OmniRoute פועל ב־`localhost:20128`, פשוט הריצו את פקודת ההגדרה עבור
+כאשר 67router פועל ב־`localhost:20128`, פשוט הריצו את פקודת ההגדרה עבור
 הכלי שלכם. הקטלוג נשלף מהשרת המקומי.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 הפעלה בלי לכתוב תצורה כלשהי (הזרקת משתני סביבה בלבד):
 
 ```bash
-omniroute launch                 # Claude Code ← OmniRoute מקומי
-omniroute launch-codex           # Codex CLI ← OmniRoute מקומי
+omniroute launch                 # Claude Code ← 67router מקומי
+omniroute launch-codex           # Codex CLI ← 67router מקומי
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## שימוש מרוחק
 
-הפנו כל פקודת הגדרה אל OmniRoute מרוחק באמצעות `--remote` + `--api-key`. הקטלוג
+הפנו כל פקודת הגדרה אל 67router מרוחק באמצעות `--remote` + `--api-key`. הקטלוג
 נשלף מהשרת המרוחק; התצורה נכתבת במחשב המקומי שלכם.
 
 ```bash
@@ -245,7 +245,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 שתי הצורות כותבות **פרופיל אימות** אחד של 5dive, וכל עמדת `claude` המשויכת
-לפרופיל זה מתקשרת לאחר מכן עם OmniRoute. שלושה דברים ייחודיים ליעד זה:
+לפרופיל זה מתקשרת לאחר מכן עם 67router. שלושה דברים ייחודיים ליעד זה:
 
 - **הוא פועל במארח הצי, כ־root.** הפקודות של 5dive פועלות על יחידות systemd מקומיות
   ועל ספריית מצב בבעלות root; אין מצב מרוחק. המתכון מפעיל את עצמו מחדש דרך
@@ -263,7 +263,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 מפתח ה־API מועבר אל 5dive דרך **stdin** (`--api-key=-`), ולכן הוא לעולם אינו מופיע
 בפלט של `ps`.
 
-הפניית הפרופיל אל **combo** של OmniRoute במקום אל מודל יחיד היא שמספקת לצי
+הפניית הפרופיל אל **combo** של 67router במקום אל מודל יחיד היא שמספקת לצי
 יתירות בעת כשל ספק: כאשר נקודת הקצה הראשית קרסה לחלוטין באמצע פנייה בהרצה שתועדה
 ב־[#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), הסוכן השלים
 את שאר השלבים באמצעות החלופה ומעולם לא חשף את ההשבתה.
@@ -272,7 +272,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 ## מוסכמות כתובת URL בסיסית (אילו כלים דורשים `/v1`)
 
-OmniRoute חושף את ממשק OpenAI תחת `/v1`, את ממשק Anthropic בשורש,
+67router חושף את ממשק OpenAI תחת `/v1`, את ממשק Anthropic בשורש,
 וממשק Gemini מקורי תחת `/v1beta`. כל אינטגרציה מוגדרת בהתאם לתבנית שהכלי
 מצפה לה (כפי שאומת בקוד המקור של הפקודה):
 
@@ -294,7 +294,7 @@ OmniRoute חושף את ממשק OpenAI תחת `/v1`, את ממשק Anthropic ב
 ## שמירת תלויות מקוריות בעת עדכון: `--include=optional`
 
 בעת עדכון באמצעות `omniroute update` (לאחר אישור, או עם `--apply`),
-OmniRoute מריץ את ההתקנה כאשר `--include=optional` כבר כלול:
+67router מריץ את ההתקנה כאשר `--include=optional` כבר כלול:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -322,13 +322,13 @@ omniroute update --dry-run
 החוזה אומת מול `@google/gemini-cli` 0.50.0: כלי שורת הפקודה מכבד את
 `GOOGLE_GEMINI_BASE_URL` ושולח `POST /v1beta/models/<model>:generateContent`
 (וכן `:streamGenerateContent?alt=sse`) אליו — בדיוק ממשק Gemini המקורי של
-OmniRoute (`/v1beta`). הפקודה `omniroute run gemini` מגדירה זאת באופן אוטומטי:
+67router (`/v1beta`). הפקודה `omniroute run gemini` מגדירה זאת באופן אוטומטי:
 
-- `GOOGLE_GEMINI_BASE_URL` ← כתובת ה-URL הבסיסית הפעילה של OmniRoute (נתיב הבסיס, ללא `/v1`);
-- `GEMINI_API_KEY` ← פרטי האימות של OmniRoute לאחר פתרונם (אפשרות/סביבה/הקשר);
+- `GOOGLE_GEMINI_BASE_URL` ← כתובת ה-URL הבסיסית הפעילה של 67router (נתיב הבסיס, ללא `/v1`);
+- `GEMINI_API_KEY` ← פרטי האימות של 67router לאחר פתרונם (אפשרות/סביבה/הקשר);
 - **`GEMINI_CLI_HOME` זמני ומבודד** שקובץ ה-`.gemini/settings.json` שלו
   בוחר באימות `gemini-api-key`, כך שהפעלת Google OAuth שמורה (Code Assist)
-  לעולם לא תדרוס הפעלה שמופנית אל OmniRoute — והוא מוסר לאחר היציאה;
+  לעולם לא תדרוס הפעלה שמופנית אל 67router — והוא מוסר לאחר היציאה;
 - **היגיינת סביבה**: מסביבת תהליך הבן מוסרים `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` ו-`GOOGLE_GENAI_USE_GCA` (שהיו מפנים מחדש את
   האימות אל Vertex/Code Assist), ו-`GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -352,7 +352,7 @@ omniroute run gemini --model glm/glm-5.2 -- --skip-trust -p "hello"
 
 הרצות רגרסיה דטרמיניסטיות של תוכנית ההפעלה מתבצעות ב-CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). כדי לאמת את קובצי ההרצה האמיתיים מול שרת
-OmniRoute אמיתי, קיימת רתמת בדיקה אופציונלית ב-
+67router אמיתי, קיימת רתמת בדיקה אופציונלית ב-
 `tests/integration/upstream-cli-smoke.int.test.ts`. היא לעולם אינה פועלת אוטומטית
 (כל תת-בדיקה מדולגת אלא אם `RUN_CLI_SMOKE=1`), מעבירה את פרטי ההזדהות באמצעות שם
 משתנה סביבה (לעולם לא באמצעות הערך), משחירה מחרוזות בעלות מבנה של מפתח בכל פלט מתועד, מדלגת על

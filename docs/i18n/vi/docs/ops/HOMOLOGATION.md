@@ -4,7 +4,7 @@
 
 ---
 
-Xác thực E2E trong môi trường thực cho bản triển khai OmniRoute đang chạy trên VPS homologation
+Xác thực E2E trong môi trường thực cho bản triển khai 67router đang chạy trên VPS homologation
 (`HOMOLOG_BASE_URL`, ví dụ: `http://192.168.0.15:20128`). Một lệnh duy nhất thay thế danh sách kiểm tra
 STOP #2 thủ công khi phát hành bằng một lượt chạy tự động có tạo bằng chứng.
 

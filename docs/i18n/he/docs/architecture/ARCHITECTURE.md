@@ -1,4 +1,4 @@
-# OmniRoute Architecture (עברית)
+# 67router Architecture (עברית)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _עודכן לאחרונה: 2026-06-28_
 
 ## תקציר מנהלים
 
-OmniRoute הוא שער ניתוב מקומי לבינה מלאכותית ולוח מחוונים המבוססים על Next.js.
+67router הוא שער ניתוב מקומי לבינה מלאכותית ולוח מחוונים המבוססים על Next.js.
 הוא מספק נקודת קצה יחידה התואמת ל-OpenAI (`/v1/*`) ומנתב תעבורה בין מספר ספקי upstream, עם תרגום, מעבר לגיבוי, רענון אסימונים ומעקב אחר שימוש.
 
 יכולות ליבה:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[לוח מחוונים בדפדפן]
     end
 
-    subgraph Router[תהליך OmniRoute מקומי]
+    subgraph Router[תהליך 67router מקומי]
         API[API תאימות V1\n/v1/*]
         DASH[לוח מחוונים + API ניהול\n/api/*]
         CORE[ליבת SSE + תרגום\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ flowchart LR
 
 ## 5) שירותים מוטמעים (v3.8.4)
 
-OmniRoute יכול להתקין, לפקח ולנתב אל תהליכי כלי AI הפועלים באופן מקומי,
+67router יכול להתקין, לפקח ולנתב אל תהליכי כלי AI הפועלים באופן מקומי,
 הנקראים **שירותים מוטמעים**. חמישה מהם כלולים: 9Router, CLIProxyAPI, Bifrost, Mux ו-Dario.
 
 שכבות הארכיטקטורה:
@@ -438,7 +438,7 @@ Jules) מאחורי מחזור חיים אחיד של משימות המגובה 
 - מטמון מכסות: `src/domain/quotaCache.ts`
 - מצב הידרדרות: `src/domain/degradation.ts`
 - ביקורת תצורה: `src/domain/configAudit.ts`
-- בונה מטא-נתונים לתגובת OmniRoute:‏ `src/domain/omnirouteResponseMeta.ts`
+- בונה מטא-נתונים לתגובת 67router:‏ `src/domain/omnirouteResponseMeta.ts`
 - תת-מערכת הערכה: `src/domain/assessment/` — משימות הערכה תקופתיות
 
 ### E. צינור הרשאות
@@ -816,7 +816,7 @@ flowchart LR
         Browser[דפדפן לוח הבקרה]
     end
 
-    subgraph ContainerOrProcess[סביבת ההרצה של OmniRoute]
+    subgraph ContainerOrProcess[סביבת ההרצה של 67router]
         Next[שרת Next.js\nPORT=20128]
         Core[ליבת SSE + רכיבי ביצוע]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ flowchart LR
 ## מטריצת תאימות ספקים
 
 > **הערה:** המטריצה שלהלן היא מדגם מייצג של 351 הספקים הרשומים ב-
-> OmniRoute v3.8.0. לרשימה הרשמית והמתעדכנת באופן שוטף, עיינו ב-
+> 67router v3.8.0. לרשימה הרשמית והמתעדכנת באופן שוטף, עיינו ב-
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (נוצר אוטומטית) או במקור
 > האמת ב-`src/shared/constants/providers.ts` (מאומת באמצעות Zod בעת הטעינה).
 
@@ -1117,7 +1117,7 @@ flowchart LR
 - הבקשה הגולמית שהתקבלה מהלקוח
 - הבקשה המתורגמת שנשלחה בפועל ל-upstream
 - תגובת הספק ששוחזרה כ-JSON; תגובות מוזרמות מצומצמות לסיכום הסופי בתוספת מטא-נתוני הזרם
-- תגובת הלקוח הסופית שהוחזרה על ידי OmniRoute; תגובות מוזרמות נשמרות באותה צורת סיכום מצומצמת
+- תגובת הלקוח הסופית שהוחזרה על ידי 67router; תגובות מוזרמות נשמרות באותה צורת סיכום מצומצמת
 
 ## גבולות רגישים לאבטחה
 

@@ -184,8 +184,8 @@ test("M-06: a hop failure carries the canonical error text", async () => {
       new Response("upstream said no", { status: 503 })) as typeof fetch;
     await assert.rejects(
       () => omniRouteFetch("/api/whatever"),
-      /OmniRoute API error \[503\]: upstream said no/,
-      "the hop must use the canonical 'OmniRoute API error [status]' text"
+      /67router API error \[503\]: upstream said no/,
+      "the hop must use the canonical '67router API error [status]' text"
     );
   } finally {
     globalThis.fetch = originalFetch;

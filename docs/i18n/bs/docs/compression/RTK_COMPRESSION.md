@@ -6,7 +6,7 @@
 
 # RTK kompresija
 
-RTK kompresija je OmniRoute-ov mehanizam za kompresiju koji prepoznaje komande za izlaz terminala i alata. Dizajniran je za sesije agenata za kodiranje gdje većina rasta konteksta dolazi od testnih logova, izlaza build-a, šuma menadžera paketa, transkripata shell-a, Docker izlaza, git izlaza i stack trace-ova.
+RTK kompresija je 67router-ov mehanizam za kompresiju koji prepoznaje komande za izlaz terminala i alata. Dizajniran je za sesije agenata za kodiranje gdje većina rasta konteksta dolazi od testnih logova, izlaza build-a, šuma menadžera paketa, transkripata shell-a, Docker izlaza, git izlaza i stack trace-ova.
 
 RTK se može pokrenuti direktno sa `defaultMode: "rtk"` ili kao prvi korak u složenom cjevovodu (pipeline), obično:
 
@@ -16,7 +16,7 @@ rtk -> caveman
 
 Taj redoslijed prvo komprimuje bučni mašinski izlaz, a zatim omogućava Caveman-u da kondenzuje preostali tekst.
 
-Upstream RTK izvještava o `60-90%` uštede na izlazu komandi. Njegova README probna sesija ide od `~118,000` standardnih tokena do `~23,900` RTK tokena, što je `79.7%` uštede (`~80%`). OmniRoute koristi taj upstream prosjek za proračun složene uštede sa Caveman kompresijom ulaza:
+Upstream RTK izvještava o `60-90%` uštede na izlazu komandi. Njegova README probna sesija ide od `~118,000` standardnih tokena do `~23,900` RTK tokena, što je `79.7%` uštede (`~80%`). 67router koristi taj upstream prosjek za proračun složene uštede sa Caveman kompresijom ulaza:
 
 ```txt
 RTK average:    80% saved
@@ -50,7 +50,7 @@ RTK učitava filtere ovim redoslijedom:
 2. Globalni filteri iz `DATA_DIR/rtk/filters.toml` i `DATA_DIR/rtk/filters.json`.
 3. Ugrađeni filteri iz `open-sse/services/compression/engines/rtk/filters/`.
 
-Unutar istog opsega, RTK TOML schema v1 filteri imaju prednost nad OmniRoute JSON filterima. TOML `match_command` izrazi se provjeravaju prije podudaranja tipa komande tako da uvezeni filter specifičan za komandu može nadjačati širi filter u tom opsegu. Projektni opseg i dalje ima prednost nad globalnim opsegom, bez obzira na format datoteke.
+Unutar istog opsega, RTK TOML schema v1 filteri imaju prednost nad 67router JSON filterima. TOML `match_command` izrazi se provjeravaju prije podudaranja tipa komande tako da uvezeni filter specifičan za komandu može nadjačati širi filter u tom opsegu. Projektni opseg i dalje ima prednost nad globalnim opsegom, bez obzira na format datoteke.
 
 Projektni filteri su namjerno zaštićeni provjerom povjerenja jer regex filteri mogu promijeniti način na koji se izlaz alata prikazuje agentima. Datoteka projektnih filtera se prihvata kada je jedno od sljedećeg tačno:
 
@@ -73,13 +73,13 @@ Prilagođeni filteri mogu biti jedan objekt filtera ili niz objekata filtera. Ne
 
 ## RTK TOML schema v1 kompatibilnost
 
-OmniRoute može parsirati, validirati, testirati i instalirati deklarativne datoteke filtera koristeći RTK TOML shemu v1.
+67router može parsirati, validirati, testirati i instalirati deklarativne datoteke filtera koristeći RTK TOML shemu v1.
 Podržana polja su `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, i `[[tests.<filter>]]` inline testovi.
 Nepoznata polja, nevažeći ili nesigurni regularni izrazi, istovremena pravila strip/keep, datoteke veće od 1 MiB i reference na nepoznate filtere se odbijaju. Datoteka čiji inline testovi ne uspiju može se validirati radi inspekcije, ali se ne može instalirati ili učitati. Neuspjesi učitavanja prilagođenih datoteka ostaju 'fail-open': nevažeća datoteka se preskače, a preostali filteri nastavljaju raditi.
 
-OmniRoute prima izlaz alata nakon što ga je klijent već uhvatio, tako da `filter_stderr = true` ne može promijeniti hvatanje procesa. Polje se prihvaća kao no-op, a validacija vraća upozorenje.
+67router prima izlaz alata nakon što ga je klijent već uhvatio, tako da `filter_stderr = true` ne može promijeniti hvatanje procesa. Polje se prihvaća kao no-op, a validacija vraća upozorenje.
 Ovo je namjerno opisano kao **RTK TOML schema v1 compatibility**, a ne potpuna kompatibilnost sa RTK izvršnom datotekom, shell hookovima, implementacijama Rust naredbi ili njegovim rasporedom trust-store-a.
 
 Napredni RTK prikaz kontrolne ploče prihvaća zalijepljeni ili učitani TOML. Validacija je samo za čitanje.

@@ -5,7 +5,7 @@
 ---
 
 Šiame dokumente aprašomas atsiliepimais grindžiamo adaptyviojo maršruto parinkimo pagrindas, pridėtas prie
-OmniRoute. Jis sąmoningai nedidelis: jame pristatomas tipizuotas maršruto parinkimo rezultatų
+67router. Jis sąmoningai nedidelis: jame pristatomas tipizuotas maršruto parinkimo rezultatų
 kanalas, realiuoju laiku atnaujinamas kokybės signalas, perduodamas esamam automatinio derinio vertintuvui,
 pasirinktinis OpenTelemetry eksportuotojas ir paaiškinamumo galinis taškas. Jis **nepakeičia**
 esamo atsparumo mechanizmų rinkinio (grandinės pertraukiklio, ryšio atvėsimo laikotarpio,
@@ -13,7 +13,7 @@ modelio blokavimo, būsenos matricos, autopiloto) — jis jį papildo.
 
 ## 1. Architektūrinis kontekstas
 
-OmniRoute yra duomenų plokštuma, turinti **karštąją užklausų vykdymo trajektoriją** ir **valdymo / analizės
+67router yra duomenų plokštuma, turinti **karštąją užklausų vykdymo trajektoriją** ir **valdymo / analizės
 plokštumą**. Karštoji trajektorija turi išlikti sparti, taupiai naudoti atmintį, būti asinchroninė, atspari ir
 nuspėjama. Vertinimas, kokybės įvertinimas, eksperimentai ir istorinių duomenų analizė priklauso
 valdymo plokštumai.
@@ -23,7 +23,7 @@ DI agentas / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   duomenų plokštuma (sparti, sinchroninė, atmintyje)
+│    67router        │   duomenų plokštuma (sparti, sinchroninė, atmintyje)
 │  maršruto parinkimas│
 │  / perjungimas      │
 │  būsena / apsaugos  │
@@ -235,7 +235,7 @@ Failai: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK).
 - Intervalai atitinka GenAI semantines konvencijas (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) ir OmniRoute maršruto parinkimo
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) ir 67router maršruto parinkimo
   atributus (rezultatas, būsena, ttft, pakartotiniai bandymai, atsarginis variantas).
 - `record()` tik įtraukia į riboto dydžio buferį (O(1)); foninis laikmatis
   asinchroniškai išsiunčia duomenis per `POST {endpoint}/v1/traces`. Esant perkrovai,
@@ -257,7 +257,7 @@ Failai: `open-sse/services/routing/otel.ts`
 
 ## 6. Vertinimo plokštumos integracija (pasirengimas Future AGI)
 
-OmniRoute traktuoja Future AGI (ar bet kurį vertintoją) kaip **galimą
+67router traktuoja Future AGI (ar bet kurį vertintoją) kaip **galimą
 intelekto / vertinimo posistemę, o ne priklausomybę**. Integravimo taškai:
 
 - `RoutingEventSink` gali asinchroniškai persiųsti įvykius vertintojui.

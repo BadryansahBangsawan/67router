@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** ń fi gbogbo model tí OmniRoute rẹ ń pèsè sínú olùyan model GitHub Copilot Chat
+**OmniCopilot** ń fi gbogbo model tí 67router rẹ ń pèsè sínú olùyan model GitHub Copilot Chat
 _abínibí_. Kò sí sidebar kejì, kò sí UI ìfọ̀rọ̀wérọ̀ ọ̀tọ̀ — mode aṣojú Copilot, pípè irinṣẹ́,
 àwọn olupin MCP àti àwọn ìtọ́nisọ́nà àdáni yóò máa ṣiṣẹ́ bí ti tẹ́lẹ̀, ṣùgbọ́n lórí model tí o yàn.
 
@@ -23,13 +23,13 @@ _abínibí_. Kò sí sidebar kejì, kò sí UI ìfọ̀rọ̀wérọ̀ ọ̀tọ
 
 ## Ìṣètò
 
-1. **Ṣiṣẹ́ OmniRoute** — `npm install -g omniroute && omniroute` (dashboard wà ní `http://localhost:20128`).
+1. **Ṣiṣẹ́ 67router** — `npm install -g omniroute && omniroute` (dashboard wà ní `http://localhost:20128`).
 2. **Fi extension náà sílẹ̀** — wá "OmniRoute" nínú ojú-ìwòye Extensions.
 3. **Yan model kan** — Copilot Chat → olùyan model → **Ṣàkóso Àwọn Model…** → **OmniRoute**, lẹ́yìn náà yan
    àwọn tí o fẹ́.
 
-Kò sí ohun tí o nílò láti ṣètò nígbà tí OmniRoute bá ń ṣiṣẹ́ lórí port àìyípadà. Fún instance tó wà ní ọ̀nà jíjìn, ṣí
-**àmì OmniRoute nínú Activity Bar** (tàbí ṣiṣẹ́ `OmniRoute: Manage Connection`) kí o sì ṣètò:
+Kò sí ohun tí o nílò láti ṣètò nígbà tí 67router bá ń ṣiṣẹ́ lórí port àìyípadà. Fún instance tó wà ní ọ̀nà jíjìn, ṣí
+**àmì 67router nínú Activity Bar** (tàbí ṣiṣẹ́ `OmniRoute: Manage Connection`) kí o sì ṣètò:
 
 - **URL olupin** — root olupin náà, fún àpẹẹrẹ `http://192.168.0.15:20128`. Extension náà yóò
   fi suffix `/v1` kún un; má ṣe fi í sínú rẹ.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' jẹ́ model ìṣẹ̀dá-àwòrán, a kò sì lè l�
 
 nítorí náà, a máa yọ wọ́n kúrò nípasẹ̀ field `type` wọn kí wọ́n tó dé ọ̀dọ̀ olùyan. **Àwọn model Responses-API
 ni a ń pa mọ́** — gbogbo entry Codex / GPT-5.x ń polówó `supported_endpoints: ["responses"]`,
-OmniRoute sì ń túmọ̀ àwọn wọ̀nyẹn fún `/v1/chat/completions`, nítorí náà wọ́n ṣeé lò dáadáa.
+67router sì ń túmọ̀ àwọn wọ̀nyẹn fún `/v1/chat/completions`, nítorí náà wọ́n ṣeé lò dáadáa.
 
 ### Àwọn olùpèsè tí o kò ṣètò rí
 
@@ -88,7 +88,7 @@ extension náà.
 
 ## Pátákó ìṣàkóso inú táàbù VS Code
 
-`omnicopilot.dashboardOpen: "editor"` máa ń ṣàfihàn pátákó ìṣàkóso OmniRoute nínú táàbù olóòtú nípasẹ̀
+`omnicopilot.dashboardOpen: "editor"` máa ń ṣàfihàn pátákó ìṣàkóso 67router nínú táàbù olóòtú nípasẹ̀
 Simple Browser dípò aṣàwákiri òde. Ìfìmọ́ra jẹ́ **ohun tí a gbọ́dọ̀ yàn láti mú ṣiṣẹ́ lórí apèsè** nípasẹ̀
 `DASHBOARD_ALLOW_EMBED=vscode`, èyí tí ó ń fi àwọn ojú-ewé HTML ránṣẹ́ pẹ̀lú
 `frame-ancestors 'self' vscode-webview:` dípò `frame-ancestors 'none'` +
@@ -133,7 +133,7 @@ oníyípadà àyíká `OMNIROUTE_API_KEY`, kì í ṣe lórí ìlà àṣẹ lá
 
 | Àmì ìṣòro                                                    | Okùnfà / àtúnṣe                                                                                                                                                                                                                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kò sí àwọn módẹ́ẹ̀lì OmniRoute nínú ohun àṣàyàn                | A kò lè dé ọ̀dọ̀ apèsè. Dọ́ọ̀tì ọ̀pá-ipò máa di ewú; ṣiṣẹ́ `OmniRoute: Check Connection`. A ṣe àwárí láìfi ìkìlọ̀ hàn ní ìmọ̀ọ́mọ̀, kò sì ní fi módẹ́ẹ̀lì kankan kún dípò fífi ìbéèrè hàn.                                                              |
+| Kò sí àwọn módẹ́ẹ̀lì 67router nínú ohun àṣàyàn                 | A kò lè dé ọ̀dọ̀ apèsè. Dọ́ọ̀tì ọ̀pá-ipò máa di ewú; ṣiṣẹ́ `OmniRoute: Check Connection`. A ṣe àwárí láìfi ìkìlọ̀ hàn ní ìmọ̀ọ́mọ̀, kò sì ní fi módẹ́ẹ̀lì kankan kún dípò fífi ìbéèrè hàn.                                                              |
 | Módẹ́ẹ̀lì kọ̀ọ̀kan hàn lẹ́ẹ̀mejì                                   | O ń lo OmniCopilot tí ó dàgbà ju 1.0.1 lọ — ṣe ìmúdójúìwọ̀n. Àfikún náà ń béèrè `?prefix=alias` báyìí.                                                                                                                                       |
 | Módẹ́ẹ̀lì àwòrán/ohùn kan tí ó máa ń wà lórí àtòjọ ti pòórá    | Èyí jẹ́ ìmọ̀ọ́mọ̀ láti 1.0.1 — kò lè dáhùn ìbéèrè ìbánisọ̀rọ̀ láé.                                                                                                                                                                                |
 | Pánẹ́ẹ̀lì kò sí ní Ọ̀pá Ìṣe                                     | VS Code máa ń gbé àwọn àpótí ìwòran àfikún sínú àkúnwọ́sílẹ̀ **"…"** ní ìsàlẹ̀ Ọ̀pá Ìṣe, àpótí tí a sì fi pamọ́ nípasẹ̀ títẹ̀-ọ̀tún yóò ṣì wà ní fífarapamọ́. Tẹ Ọ̀pá Ìṣe ní ọ̀tún → yan **OmniRoute**, tàbí ṣí i pẹ̀lú `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ oníyípadà àyíká `OMNIROUTE_API_KEY`, kì í ṣe lórí ìlà àṣẹ lá
 ## Tún wo
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — gbogbo irinṣẹ́ kíkọ kóòdù mìíràn
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ṣíṣàkóso OmniRoute láti ọ̀nà jíjìn
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ṣíṣàkóso 67router láti ọ̀nà jíjìn
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — àdéhùn `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — àwọn àkọsílẹ̀ katalọ́ọ̀gù ti ẹ̀kúnrẹ́rẹ́ náà fúnra rẹ̀

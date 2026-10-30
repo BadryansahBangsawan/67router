@@ -4,7 +4,7 @@
 
 ---
 
-Saat OmniRoute berjalan di dalam Docker, alur lama **Impor dari Cursor IDE** /
+Saat 67router berjalan di dalam Docker, alur lama **Impor dari Cursor IDE** /
 `cursor-agent` gagal karena container tidak dapat melihat instalasi Cursor di
 host. Gunakan **Masuk dengan Cursor** (PKCE deep-control) sebagai gantinya.
 
@@ -14,7 +14,7 @@ host. Gunakan **Masuk dengan Cursor** (PKCE deep-control) sebagai gantinya.
    `~/.config/Cursor/User/globalStorage/state.vscdb` _di dalam_ container.
    Pada Docker Desktop untuk macOS, DB IDE host tidak dipasang secara default,
    dan OS container adalah Linux meskipun host menggunakan Darwin.
-2. **Tidak ada binary `cursor-agent`** — Image OmniRoute resmi tidak menyertakan
+2. **Tidak ada binary `cursor-agent`** — Image 67router resmi tidak menyertakan
    `cursor-agent`. Sebelumnya, Model yang Tersedia menjalankan
    `cursor-agent --list-models` melalui shell dan beralih ke katalog statis jika gagal.
 3. **Binary yang salah** — **Jangan** melakukan bind mount `cursor-agent` macOS
@@ -24,11 +24,11 @@ host. Gunakan **Masuk dengan Cursor** (PKCE deep-control) sebagai gantinya.
 
 1. Buka **Dasbor → Penyedia → Cursor**.
 2. Pilih tab **Masuk dengan Cursor**.
-3. Klik **Masuk dengan Cursor** — OmniRoute membuka
+3. Klik **Masuk dengan Cursor** — 67router membuka
    `https://cursor.com/loginDeepControl?…` di browser **host** Anda.
-4. Setujui proses masuk di browser, lalu kembali ke dasbor. OmniRoute
+4. Setujui proses masuk di browser, lalu kembali ke dasbor. 67router
    melakukan polling pada `api2.cursor.sh/auth/poll` hingga token diterima.
-5. OmniRoute menyimpan token **akses + penyegaran** dan menyegarkannya melalui
+5. 67router menyimpan token **akses + penyegaran** dan menyegarkannya melalui
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Jalur ini tidak memerlukan Cursor IDE atau `cursor-agent` di dalam container.
@@ -37,10 +37,10 @@ Jalur ini tidak memerlukan Cursor IDE atau `cursor-agent` di dalam container.
 
 Dengan koneksi yang sudah masuk, **Model yang Tersedia / Sinkronisasi Otomatis**
 mengutamakan katalog HTTP `AiService/AvailableModels` milik Cursor menggunakan
-token bearer koneksi. Jika gagal, OmniRoute tetap mencoba `cursor-agent` host
+token bearer koneksi. Jika gagal, 67router tetap mencoba `cursor-agent` host
 (jika tersedia), lalu seed registri statis.
 
-OmniRoute selalu menyediakan **`auto`** dalam katalog (tampilan “Otomatis”),
+67router selalu menyediakan **`auto`** dalam katalog (tampilan “Otomatis”),
 serta mode router bergaya OpenCodex **`auto-cost`**, **`auto-balance`**, dan
 **`auto-intelligence`**. Saat dikirim, mode-mode ini dipetakan ke model
 `default` milik Cursor (dengan `optimization` ModelParameter untuk ketiga
@@ -91,7 +91,7 @@ token (impor IDE saja tidak lagi diperlukan).
 ## Respons kosong / penggunaan habis
 
 Ketika Cursor menerima sebuah Run tetapi tidak mengembalikan teks asisten
-(umum terjadi ketika penggunaan premium habis), OmniRoute menampilkan **429**
+(umum terjadi ketika penggunaan premium habis), 67router menampilkan **429**
 yang dapat ditindaklanjuti (petunjuk kuota) atau **502** beserta panduan —
 bukan sekadar “Penyedia mengembalikan konten kosong”. Kegagalan streaming
 seperti `not_found: AI Model Not Found` (jendela penggunaan habis)
@@ -102,7 +102,7 @@ coba model **`auto`**, atau naikkan batas paket Cursor.
 
 ## Versi klien (headless)
 
-Tanpa instalasi `cursor-agent` lokal, OmniRoute menentukan
+Tanpa instalasi `cursor-agent` lokal, 67router menentukan
 `x-cursor-client-version` melalui env `CURSOR_AGENT_CLI_VERSION`, kemudian
 scrape skrip penginstal Cursor yang di-cache pada disk, lalu build id yang
 disematkan. Timpa dengan `CURSOR_AGENT_CLI_VERSION` bila diperlukan.

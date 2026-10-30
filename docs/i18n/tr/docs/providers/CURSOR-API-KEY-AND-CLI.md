@@ -4,10 +4,10 @@
 
 ---
 
-IDE oturumu olmadan Cursor'ı OmniRoute arkasına yerleştirmenin iki yolu:
+IDE oturumu olmadan Cursor'ı 67router arkasına yerleştirmenin iki yolu:
 
-1. **`cursor-api` sağlayıcısı** ("Cursor API" kartı, `cua` diğer adı): Cursor kullanıcı API anahtarını (`crsr_…`, `https://cursor.com/dashboard/api` adresinde oluşturulur) saklayan bir API anahtarı sağlayıcısıdır. Böylece herhangi bir OmniRoute istemcisi, standart kota, yedek sağlayıcı ve günlükleme katmanlarıyla Cursor modellerine `/v1/chat/completions` üzerinden `cursor-api/<model>` veya `cua/<model>` olarak erişebilir. IDE sağlayıcısı (`cursor`, OAuth/IDE oturumu) değişmemiştir.
-2. **Cursor CLI doğrudan geçişi**: Cursor CLI'ı (`agent`) OmniRoute'a yönlendirin; böylece CLI'ın yaptığı her RPC çağrısı bir OmniRoute API anahtarıyla doğrulanır, bir `cursor-api` bağlantısının kimlik bilgileriyle Cursor'a iletilir ve Günlükler sayfasına kaydedilir.
+1. **`cursor-api` sağlayıcısı** ("Cursor API" kartı, `cua` diğer adı): Cursor kullanıcı API anahtarını (`crsr_…`, `https://cursor.com/dashboard/api` adresinde oluşturulur) saklayan bir API anahtarı sağlayıcısıdır. Böylece herhangi bir 67router istemcisi, standart kota, yedek sağlayıcı ve günlükleme katmanlarıyla Cursor modellerine `/v1/chat/completions` üzerinden `cursor-api/<model>` veya `cua/<model>` olarak erişebilir. IDE sağlayıcısı (`cursor`, OAuth/IDE oturumu) değişmemiştir.
+2. **Cursor CLI doğrudan geçişi**: Cursor CLI'ı (`agent`) 67router'a yönlendirin; böylece CLI'ın yaptığı her RPC çağrısı bir 67router API anahtarıyla doğrulanır, bir `cursor-api` bağlantısının kimlik bilgileriyle Cursor'a iletilir ve Günlükler sayfasına kaydedilir.
 
 ## Anahtar neden takas edilir?
 
@@ -44,12 +44,12 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 Notlar:
 
-- `cursor-api` için model listesi, statik Cursor kayıt defterinden gelir (IDE sağlayıcısının yedek olarak kullandığı listeyle aynıdır); OmniRoute ana makinesine `cursor-agent` kurulması gerekmez.
+- `cursor-api` için model listesi, statik Cursor kayıt defterinden gelir (IDE sağlayıcısının yedek olarak kullandığı listeyle aynıdır); 67router ana makinesine `cursor-agent` kurulması gerekmez.
 - `POST /api/providers/{id}/refresh-cursor` yalnızca `cursor` IDE sağlayıcısı içindir; `cursor-api` bağlantılarının yenilenecek bir IDE oturumu yoktur.
 
 ## Yerel model kimlikleri ve efor
 
-`cursor` / `cu` ve `cursor-api` / `cua` için paylaşılan Claude efor normalleştiricisi, istenen model kimliğini olduğu gibi bırakır. Cursor, `-low` gibi bir son eki OmniRoute efor diğer adı olarak değil, gerçek bir model kimliğinin parçası olarak yayımlayabilir.
+`cursor` / `cu` ve `cursor-api` / `cua` için paylaşılan Claude efor normalleştiricisi, istenen model kimliğini olduğu gibi bırakır. Cursor, `-low` gibi bir son eki 67router efor diğer adı olarak değil, gerçek bir model kimliğinin parçası olarak yayımlayabilir.
 Cursor yürütücüsü, canlı katalogdaki tam eşleşmeyi korur; eşleşme olmadığında, mevcut model çözümleyicisi son ekten parametreye geri dönüş işlemini yönetir.
 
 Bu, doğrudan Claude, Claude uyumlu veya Vertex rotaları için efor normalleştirmesini değiştirmez. Kullanılabilirlik yine de seçilen Cursor hesabının kataloğuna ve yetkilerine bağlıdır.
@@ -61,19 +61,19 @@ Rota: `src/app/api/cursor-cli/[...path]/route.ts` →
 işleyici kendi kimlik doğrulamasını uyguladığı için
 `src/shared/constants/publicApiRoutes.ts` içinde kayıtlıdır:
 
-| Yol                                                                                                                          | CLI'dan beklenen kimlik doğrulaması | OmniRoute'un yaptığı                                                                                                                                                                         |
+| Yol                                                                                                                          | CLI'dan beklenen kimlik doğrulaması | 67router'un yaptığı                                                                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <OmniRoute API key>`        | Anahtarı doğrular, 1 saatlik bir HS256 JWT (`JWT_SECRET` ile imzalanmış) oluşturur ve döndürür                                                                                               |
+| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <67router API key>`         | Anahtarı doğrular, 1 saatlik bir HS256 JWT (`JWT_SECRET` ile imzalanmış) oluşturur ve döndürür                                                                                               |
 | diğer tüm yollar (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`                 | Veren/hedef kitle/süre sonu bilgilerini doğrular, etkin bir `cursor-api` bağlantısı seçer, Authorization başlığını takas edilmiş Cursor belirteciyle değiştirir ve yanıtı akışla geri iletir |
 
 CLI, aldığı herhangi bir belirteçten `exp` değerini çözümler; bu nedenle ona opak
 bir belirteç vermek, neredeyse her istekten önce yeniden takas yapmasına neden
-olur. Oluşturulan JWT bunu önler. OmniRoute'tan gelen bir 401 yanıtı, CLI'ın
+olur. Oluşturulan JWT bunu önler. 67router'tan gelen bir 401 yanıtı, CLI'ın
 yeniden takas yapmasını sağlar.
 
 ### Kurulum
 
-1. Bir OmniRoute API anahtarı (Dashboard → API keys) ve bir `cursor-api`
+1. Bir 67router API anahtarı (Dashboard → API keys) ve bir `cursor-api`
    bağlantısı oluşturun.
 2. CLI'a agent akışı için HTTP/1.1 kullanmasını söyleyin.
    `~/.cursor/cli-config.json` içinde:
@@ -86,7 +86,7 @@ yeniden takas yapmasını sağlar.
    sunucusuna HTTP/2 üzerinden açar ve yalnızca kontrol düzlemi RPC'leri uç nokta
    üzerinden geçer.
 
-3. CLI'ı OmniRoute'a karşı çalıştırın:
+3. CLI'ı 67router'a karşı çalıştırın:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -95,18 +95,18 @@ yeniden takas yapmasını sağlar.
    ```
 
 Her geçiş Logs bölümünde sağlayıcı `cursor-api`, istek türü `cursor-cli`,
-yol `/api/cursor-cli/<rpc>` olarak görünür ve ilgili OmniRoute API anahtarı ile
+yol `/api/cursor-cli/<rpc>` olarak görünür ve ilgili 67router API anahtarı ile
 isteği sunan bağlantıya atfedilir.
 
 ### Hata durumları
 
-| Durum                                                   | CLI'a verilen yanıt                                     |
-| ------------------------------------------------------- | ------------------------------------------------------- |
-| Bilinmeyen OmniRoute anahtarı ve `REQUIRE_API_KEY=true` | Takas sırasında 401 `unauthenticated`                   |
-| `REQUIRE_API_KEY=false`                                 | anonim oturum (`/v1/*` davranışını yansıtır)            |
-| Süresi dolmuş / yabancı / değiştirilmiş oturum JWT'si   | 401, CLI yeniden takas yapar                            |
-| OmniRoute API anahtarının takastan sonra iptal edilmesi | Sonraki RPC'de 401                                      |
-| Etkin `cursor-api` bağlantısının olmaması               | 503 `unavailable`                                       |
-| Cursor'ın bağlantının anahtarını reddetmesi             | 401 `unauthenticated`, önbelleğe alınmış oturum silinir |
-| Yukarı akışa erişilememesi                              | 502 `unavailable` (arındırılmış ileti)                  |
-| `JWT_SECRET` ayarlanmamış                               | Takas sırasında 503                                     |
+| Durum                                                  | CLI'a verilen yanıt                                     |
+| ------------------------------------------------------ | ------------------------------------------------------- |
+| Bilinmeyen 67router anahtarı ve `REQUIRE_API_KEY=true` | Takas sırasında 401 `unauthenticated`                   |
+| `REQUIRE_API_KEY=false`                                | anonim oturum (`/v1/*` davranışını yansıtır)            |
+| Süresi dolmuş / yabancı / değiştirilmiş oturum JWT'si  | 401, CLI yeniden takas yapar                            |
+| 67router API anahtarının takastan sonra iptal edilmesi | Sonraki RPC'de 401                                      |
+| Etkin `cursor-api` bağlantısının olmaması              | 503 `unavailable`                                       |
+| Cursor'ın bağlantının anahtarını reddetmesi            | 401 `unauthenticated`, önbelleğe alınmış oturum silinir |
+| Yukarı akışa erişilememesi                             | 502 `unavailable` (arındırılmış ileti)                  |
+| `JWT_SECRET` ayarlanmamış                              | Takas sırasında 503                                     |

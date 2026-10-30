@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute özü başqa bir yerdə (VPS-də, ev serverində, Tailnet-dəki başqa bir maşında) işləyərkən `omniroute` CLI-ni noutbukunuzda işə salın.
+67router özü başqa bir yerdə (VPS-də, ev serverində, Tailnet-dəki başqa bir maşında) işləyərkən `omniroute` CLI-ni noutbukunuzda işə salın.
 `omniroute connect` ilə bir dəfə daxil olursunuz və bundan sonra **hər bir** CLI əmri həmin uzaq serveri hədəfləyir — eyni əmrlər, eyni çıxış, sadəcə uzaq serverdə icra olunur.
 
 Quraşdırılacaq ikinci bir alət yoxdur: uzaq rejim adi `omniroute` CLI-dən və əhatə dairəsi müəyyən edilmiş **giriş tokenlərindən** istifadə edir.
@@ -21,7 +21,7 @@ omniroute configure codex                # ← uzaq kataloqdan lokal Codex profi
 ## İş prinsipi
 
 ```
-noutbukunuz                              uzaq OmniRoute (VPS)
+noutbukunuz                              uzaq 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (parol → token)            │
 │  kontekst: vps     │ ───────────────►  │ əhatə dairəli giriş tokeni     │
@@ -98,13 +98,13 @@ müəyyən edir. Əhatə dairəsi kifayət etməyən token aydın mesajla `403` 
 ## Uzaqdan quraşdırmada Antigravity-yə qoşulma
 
 Antigravity Google-un firstparty/nativeapp razılıq ekranından istifadə edir. Google avtorizasiya kodunu yalnız **geridöngü yönləndirməsi**
-(`http://127.0.0.1:<port>/callback`) **girişi təsdiqləyən brauzerdən əlçatan olduqda** təqdim edir. Uzaq VPS quraşdırmasında həmin geridöngü sizin kompüterinizdə deyil, serverdə yerləşir, buna görə də razılıq ekranı **həmişəlik ilişib qalır və heç vaxt kod yaratmır** — adi «geri çağırış URL-sini yapışdırın» ehtiyat variantında yapışdırılacaq heç nə olmur. (Bu, Google tərəfindəki məhdudiyyətdir: eyni ilişmə yalnız OmniRoute-da deyil, daxili Antigravity masaüstü klientindən istifadə edən istənilən proksidə baş verir.)
+(`http://127.0.0.1:<port>/callback`) **girişi təsdiqləyən brauzerdən əlçatan olduqda** təqdim edir. Uzaq VPS quraşdırmasında həmin geridöngü sizin kompüterinizdə deyil, serverdə yerləşir, buna görə də razılıq ekranı **həmişəlik ilişib qalır və heç vaxt kod yaratmır** — adi «geri çağırış URL-sini yapışdırın» ehtiyat variantında yapışdırılacaq heç nə olmur. (Bu, Google tərəfindəki məhdudiyyətdir: eyni ilişmə yalnız 67router-da deyil, daxili Antigravity masaüstü klientindən istifadə edən istənilən proksidə baş verir.)
 
 İdarəetmə paneli ilişib qalmazdan əvvəl bunu aşkarlayır: localhost olmayan ünvandan **Providers → Antigravity →
 Connect** bölməsini açdıqda ümumi «geri çağırış URL-sini kopyalayın» bildirişi aşağıdakı iki həll yolu ilə əvəz olunur və hər birində hostunuzla portunuz əvvəlcədən doldurulur.
 (LAN ünvanı da buna daxildir — bu geri çağırış baxımından `192.168.x.x` localhost deyil.)
 
-Antigravity-ni uzaq OmniRoute-a qoşmağın dəstəklənən iki üsulu var.
+Antigravity-ni uzaq 67router-a qoşmağın dəstəklənən iki üsulu var.
 
 ### Variant A — lokal giriş köməkçisi (tövsiyə olunur)
 
@@ -132,7 +132,7 @@ npx omniroute login antigravity --no-push
 #   omniroute-cred-v1.eyJ2IjoxLCJ...
 ```
 
-Sonra **uzaq** idarəetmə panelində **Providers → Antigravity → Connect** bölməsinə keçin və `omniroute-cred-v1.…` blob-unu **Step 2** sahəsinə yapışdırın (bu sahə həm geri çağırış URL-sini, həm də giriş məlumatı blob-unu qəbul edir). OmniRoute onu dekodlaşdırır, Cloud Code ilkin quraşdırmasını server tərəfində icra edir və bağlantını qalıcı saxlayır.
+Sonra **uzaq** idarəetmə panelində **Providers → Antigravity → Connect** bölməsinə keçin və `omniroute-cred-v1.…` blob-unu **Step 2** sahəsinə yapışdırın (bu sahə həm geri çağırış URL-sini, həm də giriş məlumatı blob-unu qəbul edir). 67router onu dekodlaşdırır, Cloud Code ilkin quraşdırmasını server tərəfində icra edir və bağlantını qalıcı saxlayır.
 
 > Blob yeniləmə tokeni ehtiva edir — onunla parol kimi davranın. Göndərmə üsulunda o, kontekstinizin autentifikasiya edilmiş bağlantısı üzərindən bir dəfə göndərilir; yapışdırma üsulunda isə idarəetmə paneli bağlantınız üzərindən ötürülür. Hər iki halda o, saxlanma zamanı şifrələnir və uğurlu göndərmə onu heç vaxt terminalınızda çap etmir.
 
@@ -161,7 +161,7 @@ Aşağıdakı sabit geridöngülü provayderlərdən fərqli olaraq, burada **bi
 ## Codex / Grok-un uzaq quraşdırmaya qoşulması (sabit loopback provayderləri)
 
 Codex, xAI (`xai-oauth`) və Grok CLI (`grok-cli`) yuxarı səviyyəli OAuth tətbiqində
-**sabit** loopback `redirect_uri` qeydiyyatdan keçirir. OmniRoute bunu dəyişə bilmir —
+**sabit** loopback `redirect_uri` qeydiyyatdan keçirir. 67router bunu dəyişə bilmir —
 provayder brauzeri həmişə eyni sərt kodlaşdırılmış ünvana geri yönləndirir:
 
 | Provayder   | Provayderin yönləndirdiyi sabit callback |
@@ -170,7 +170,7 @@ provayder brauzeri həmişə eyni sərt kodlaşdırılmış ünvana geri yönlə
 | `xai-oauth` | `http://127.0.0.1:56121/callback`        |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`        |
 
-Buradakı `localhost` **brauzerin işlədiyi maşını** bildirir, OmniRoute-un PKCE
+Buradakı `localhost` **brauzerin işlədiyi maşını** bildirir, 67router-un PKCE
 callback serveri isə **serverin** loopback interfeysində dinləyir. İdarəetmə panelini
 `http://192.168.0.15:20128` kimi LAN ünvanında açdıqda bu ikisi heç vaxt
 əlaqələnmir: avtorizasiya kodu heç nəyin dinləmədiyi şəxsi noutbukunuzun
@@ -192,7 +192,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 nəticələnir:
 
 - **`20128`** (idarəetmə panelinin portu) mənbəni həqiqi localhost edir və bu,
-  OmniRoute-un PKCE callback serverini ümumiyyətlə işə salmasını təmin edir —
+  67router-un PKCE callback serverini ümumiyyətlə işə salmasını təmin edir —
   LAN mənbəyi heç vaxt həmin şaxəyə çatmır.
 - **`1455`** (provayderin sabit callback portu) brauzerin geri göndərildiyi yerdir;
   bu trafik tunel vasitəsilə serverin loopback interfeysinə çatmalıdır.
@@ -310,7 +310,7 @@ omniroute contexts current         # aktiv server, autentifikasiya statusu, əha
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

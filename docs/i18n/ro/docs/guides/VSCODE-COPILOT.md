@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** adaugă fiecare model furnizat de OmniRoute în selectorul de modele _nativ_ din GitHub Copilot Chat.
+**OmniCopilot** adaugă fiecare model furnizat de 67router în selectorul de modele _nativ_ din GitHub Copilot Chat.
 Fără o a doua bară laterală, fără o interfață de chat separată — modul agent al Copilot, apelarea instrumentelor,
 serverele MCP și instrucțiunile personalizate continuă să funcționeze, doar că rulează pe modelul ales de dvs.
 
@@ -23,13 +23,13 @@ serverele MCP și instrucțiunile personalizate continuă să funcționeze, doar
 
 ## Configurare
 
-1. **Rulați OmniRoute** — `npm install -g omniroute && omniroute` (panoul de control la `http://localhost:20128`).
-2. **Instalați extensia** — căutați „OmniRoute” în vizualizarea Extensions.
+1. **Rulați 67router** — `npm install -g omniroute && omniroute` (panoul de control la `http://localhost:20128`).
+2. **Instalați extensia** — căutați „67router” în vizualizarea Extensions.
 3. **Alegeți un model** — Copilot Chat → selectorul de modele → **Manage Models…** → **OmniRoute**, apoi bifați
    modelele dorite.
 
-Nu trebuie configurat nimic atunci când OmniRoute rulează pe portul implicit. Pentru o instanță la distanță, deschideți
-**pictograma OmniRoute din Activity Bar** (sau rulați `OmniRoute: Manage Connection`) și setați:
+Nu trebuie configurat nimic atunci când 67router rulează pe portul implicit. Pentru o instanță la distanță, deschideți
+**pictograma 67router din Activity Bar** (sau rulați `OmniRoute: Manage Connection`) și setați:
 
 - **URL-ul serverului** — rădăcina serverului, de exemplu `http://192.168.0.15:20128`. Sufixul `/v1` este
   adăugat de extensie; nu îl includeți.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 
 prin urmare, sunt filtrate după câmpul `type` înainte de a ajunge în selector. **Modelele Responses-API
 sunt păstrate** — fiecare intrare Codex / GPT-5.x declară `supported_endpoints: ["responses"]`,
-iar OmniRoute le convertește pentru `/v1/chat/completions`, astfel încât pot fi utilizate fără probleme.
+iar 67router le convertește pentru `/v1/chat/completions`, astfel încât pot fi utilizate fără probleme.
 
 ### Furnizori pe care nu i-ați configurat niciodată
 
@@ -88,7 +88,7 @@ extensie.
 
 ## Panou de control într-o filă VS Code
 
-`omnicopilot.dashboardOpen: "editor"` afișează panoul de control OmniRoute într-o filă de editor prin
+`omnicopilot.dashboardOpen: "editor"` afișează panoul de control 67router într-o filă de editor prin
 Simple Browser, în locul unui browser extern. Încorporarea este **opțională pe server** prin
 `DASHBOARD_ALLOW_EMBED=vscode`, care servește paginile HTML cu
 `frame-ancestors 'self' vscode-webview:` în locul valorilor implicite `frame-ancestors 'none'` +
@@ -133,7 +133,7 @@ Kilo și Roo — aceleași configurații descrise în
 
 | Simptom                                                            | Cauză / soluție                                                                                                                                                                                                                                                                                            |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Niciun model OmniRoute în selector                                 | Serverul nu este accesibil. Punctul din bara de stare devine gri; rulați `OmniRoute: Check Connection`. Detectarea nu afișează mesaje prin proiectare și nu furnizează niciun model, în loc să solicite intervenția utilizatorului.                                                                        |
+| Niciun model 67router în selector                                  | Serverul nu este accesibil. Punctul din bara de stare devine gri; rulați `OmniRoute: Check Connection`. Detectarea nu afișează mesaje prin proiectare și nu furnizează niciun model, în loc să solicite intervenția utilizatorului.                                                                        |
 | Fiecare model apare de două ori                                    | Utilizați o versiune OmniCopilot mai veche de 1.0.1 — actualizați-o. Extensia solicită acum `?prefix=alias`.                                                                                                                                                                                               |
 | Un model de imagine/audio care era listat a dispărut               | Intenționat începând cu versiunea 1.0.1 — acesta nu putea răspunde niciodată unei solicitări de chat.                                                                                                                                                                                                      |
 | Panoul lipsește din bara de activități                             | VS Code mută containerele de vizualizare suplimentare în meniul de depășire **„…”** din partea de jos a barei de activități, iar un container ascuns prin clic dreapta rămâne ascuns. Faceți clic dreapta pe bara de activități → bifați **OmniRoute** sau deschideți-l cu `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ Kilo și Roo — aceleași configurații descrise în
 ## Consultați și
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — toate celelalte instrumente de programare
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — controlarea unui OmniRoute la distanță
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — controlarea unui 67router la distanță
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — contractul `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — notele de catalog proprii extensiei

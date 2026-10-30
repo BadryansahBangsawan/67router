@@ -6,7 +6,7 @@
 
 ## Prezentare generală
 
-Toate rutele API de administrare OmniRoute sunt clasificate într-unul dintre cele trei niveluri de
+Toate rutele API de administrare 67router sunt clasificate într-unul dintre cele trei niveluri de
 protecție. Clasificarea este statică, definită în `src/server/authz/routeGuard.ts`
 și evaluată înainte de executarea oricărei alte ramuri de autentificare.
 
@@ -28,10 +28,10 @@ declanșeze lansarea de procese — o clasă cunoscută de vulnerabilități CVE
 **Ce este GHSA-fhh6-4qxv-rpqj (clasa de atac):** un server de administrare/agent
 expune un endpoint care lansează un subproces (`npm install`, `node`, un browser,
 un proxy, `git`, `tar`, …). Dacă acel endpoint poate fi accesat din afara gazdei —
-deoarece operatorul a plasat OmniRoute în spatele unui tunel nginx/Cloudflare/Tailscale
+deoarece operatorul a plasat 67router în spatele unui tunel nginx/Cloudflare/Tailscale
 și un JWT s-a scurs sau autentificarea a fost configurată incorect — atacatorul
 transformă „apelarea unui API” în „executarea unei comenzi pe gazdă” (execuție de
-cod de la distanță). OmniRoute împiedică acest lucru aplicând **necondiționat o
+cod de la distanță). 67router împiedică acest lucru aplicând **necondiționat o
 verificare a gazdei loopback, înaintea oricărei verificări de autentificare**,
 pentru fiecare rută capabilă să lanseze procese: un token compromis printr-un
 tunel tot nu poate accesa funcționalitatea de lansare.
@@ -122,7 +122,7 @@ pentru apelanții MCP la distanță care nu ar trebui să aibă nevoie de acces 
 
 #### Îndrumări pentru operatori și auditare
 
-Dacă rulați OmniRoute în spatele unui proxy invers sau al unui tunel (nginx, Caddy, Cloudflare
+Dacă rulați 67router în spatele unui proxy invers sau al unui tunel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), verificarea loopback protejează în continuare rutele de mai sus
 capabile să pornească procese — o solicitare a cărei adresă de client nu este loopback este respinsă cu
 `403 LOCAL_ONLY` **înainte de rularea autentificării**, astfel încât un JWT divulgat nu poate iniția un proces. Rămân două
@@ -160,7 +160,7 @@ responsabilități pentru operatori:
 - Căutați în jurnalele proxy-ului invers/de acces prefixele de mai sus asociate cu o
   adresă de client care nu este de loopback. Orice astfel de acces care a returnat `200` în loc de
   `403 LOCAL_ONLY` înseamnă că proxy-ul maschează IP-ul real al clientului — remediați proxy-ul.
-- Un `403 LOCAL_ONLY` în jurnalele OmniRoute pentru una dintre aceste căi indică faptul că mecanismul de protecție
+- Un `403 LOCAL_ONLY` în jurnalele 67router pentru una dintre aceste căi indică faptul că mecanismul de protecție
   funcționează conform intenției, nu o eroare care trebuie suprimată.
 
 #### Rute accesibile de la distanță cu o barieră de sondare la locul apelului

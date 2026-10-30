@@ -4,9 +4,9 @@
 
 ---
 
-Operatørnotater for `POST /v1/embeddings` når OmniRoute står foran
+Operatørnotater for `POST /v1/embeddings` når 67router står foran
 Hindsight 0.9.1 (kun tekst, `encode(list[str])`) og Memorix 1.6.0 (Jina-medieport).
-Verifisert i produksjon 2026-08-17 mot OmniRoute 3.8.49 på
+Verifisert i produksjon 2026-08-17 mot 67router 3.8.49 på
 `https://omniroute.jaguar-fish.ts.net/v1`. Ingen hemmeligheter nedenfor.
 
 ## Fungerende modell-ID-er
@@ -80,7 +80,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Innebygd `gemini-embedding-2` kan ikke fungere kun via GitOps. En Google AI
 Studio-nøkkel må legges til som en `gemini`-leverandørtilkobling (kontrollpanelet
-eller `GEMINI_API_KEY` importert til OmniRoute). Denne hemmeligheten finnes ikke
+eller `GEMINI_API_KEY` importert til 67router). Denne hemmeligheten finnes ikke
 i dette repositoriet.
 
 ### Jinas multimodale endepunkt
@@ -102,7 +102,7 @@ Bruk `POST /v1/embeddings` inntil det finnes et alias.
 
 ### Jina-/Memorix-bildeobjekt
 
-OmniRoutes kanoniske bildeelement (28×28 PNG, 784 piksler — Jina avviser 1×1):
+67routers kanoniske bildeelement (28×28 PNG, 784 piksler — Jina avviser 1×1):
 
 ```json
 {
@@ -151,7 +151,7 @@ Faktisk resultat: HTTP **400**
 
 Hindsight-embeddings støtter bare tekst (`encode(list[str])`). Det sender ikke
 bildeobjekter. Pek Hindsights OpenAI-kompatible basis-URL for embeddings mot
-OmniRoute `/v1`, og bruk en fungerende ID fra tabellen ovenfor
+67router `/v1`, og bruk en fungerende ID fra tabellen ovenfor
 (`jina-ai/jina-embeddings-v5-omni-small` eller
 `openrouter/google/gemini-embedding-2`). Ikke sett modellen til bare
 `gemini-embedding-2` med mindre det finnes en `gemini`-API-nøkkel på gatewayen.
@@ -159,12 +159,12 @@ OmniRoute `/v1`, og bruk en fungerende ID fra tabellen ovenfor
 ### Memorix 1.6.0
 
 Memorix behandler bare `baseUrl` som innebygd mediestøtte når den samsvarer med
-`/jina\.ai/i`. En OmniRoute-URL forblir på banen som bare støtter tekst, selv
+`/jina\.ai/i`. En 67router-URL forblir på banen som bare støtter tekst, selv
 når modellen er Jina omni. Denne porten er et problem i Memorix-klienten.
-Uavhengig av dette avviser OmniRoute fortsatt Jina-formatet
+Uavhengig av dette avviser 67router fortsatt Jina-formatet
 `{image: "data:..."}` som Memorix ville sendt dersom porten ble åpnet. Derfor
-kan ikke Jina-kompatible klienter bygge embeddings av bilder gjennom OmniRoute
+kan ikke Jina-kompatible klienter bygge embeddings av bilder gjennom 67router
 uten det kanoniske `{type,source}`-skjemaet.
 
 Bruk `jina-ai/jina-embeddings-v5-omni-small` for tekst. Ikke pek Memorix'
-`base_url` mot `https://api.jina.ai` — behold OmniRoute som eneste mellomledd.
+`base_url` mot `https://api.jina.ai` — behold 67router som eneste mellomledd.

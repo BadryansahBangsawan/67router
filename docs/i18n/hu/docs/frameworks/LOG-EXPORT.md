@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute hívásnaplóinak folyamatos, inkrementális exportálása egy külső analitikai adattárba.
+A 67router hívásnaplóinak folyamatos, inkrementális exportálása egy külső analitikai adattárba.
 
 A Naplók irányítópultlap SQLite-ban (`call_logs`) őrzi a kérések előzményeit, amelyek méretét
 a rotáció és a megőrzési idő korlátozza. A naplóexport ugyanazt a rekordkészletet ütemezetten

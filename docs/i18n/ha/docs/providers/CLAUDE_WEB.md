@@ -124,7 +124,7 @@ An tsallake shari'o'in da suka dogara da Playwright a cikin `tests/unit/claude-w
 
 ### Saitawa
 
-1. Fara OmniRoute da `npm run dev` ko built installation.
+1. Fara 67router da `npm run dev` ko built installation.
 2. Buɗe Dashboard → Providers → Add Provider.
 3. Zaɓi rukunin Web Cookie da Claude Web.
 4. Liƙa cikakken Cookie header da aka kwafa daga authenticated `claude.ai` request.

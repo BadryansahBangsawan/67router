@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Manba:** `open-sse/services/thinkingBudget.ts`
 
-Fikrlash budjeti OmniRoute provayderlarga yuborish jarayonida **mijozning fikrlash/mulohaza yuritish parametrlarini qayta yozishi yoki yozmasligini** boshqaradi. U siqish, yoʻnaltirish yoki prompt keshini yoqmaydi hamda oʻchirmaydi.
+Fikrlash budjeti 67router provayderlarga yuborish jarayonida **mijozning fikrlash/mulohaza yuritish parametrlarini qayta yozishi yoki yozmasligini** boshqaradi. U siqish, yoʻnaltirish yoki prompt keshini yoqmaydi hamda oʻchirmaydi.
 
 ## Rejimlar
 
-| Rejim                        | OmniRoute nima qiladi                                                                                                       | Qachon foydalanish kerak                                                                                                                                                                            |
+| Rejim                        | 67router nima qiladi                                                                                                        | Qachon foydalanish kerak                                                                                                                                                                            |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (standart) | Mijoz maydonlarini oʻzgartirmaydi (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` va hokazo). | **Codex / Desktop / harakat darajasi va mulohaza xulosalarini mijoz boshqarishi kerak boʻlgan har qanday mijoz.** Mijoz `reasoning.summary` soʻraganda koʻrinadigan fikrlash panellari uchun zarur. |
 | **`auto`**                   | Yuqori oqimga yuborishdan oldin soʻrov tanasidan **barcha** fikrlash/mulohaza yuritish maydonlarini olib tashlaydi.         | Faqat **provayder** standart qiymatlarni oʻzi belgilashini ataylab xohlasangiz va mijoz boshqaradigan fikrlash kerak boʻlmasa. Bu “fikrlashni avtomatik koʻrsatish” degani **emas**.                |
@@ -38,7 +38,7 @@ Agar mijoz (masalan, Codex Desktop) `reasoning: { effort: "ultra", summary: "det
 | **Kombinatsiyalangan yoʻnaltirish / zaxira variantlari** | Alohida. Taʼsir qilmaydi.                                                                                                                            |
 | **API kaliti token cheklovlari / xarajat budjetlari**    | Alohida. Taʼsir qilmaydi.                                                                                                                            |
 | **Mulohazani qayta ijro etish keshi**                    | Qatʼiy provayderlar (DeepSeek, Kimi, Qwen-thinking, …) uchun koʻp bosqichli qayta kiritish. Desktop’dagi “fikrlashni koʻrsatish” bilan bir xil emas. |
-| **`encrypted_content` shifrini ochish**                  | **Imkonsiz.** OpenAI/Codex’ning maxfiy mulohaza bloblari yopiq. OmniRoute ularni hech qachon shifrdan chiqarmaydi (#7095 / #7176 / #7304).           |
+| **`encrypted_content` shifrini ochish**                  | **Imkonsiz.** OpenAI/Codex’ning maxfiy mulohaza bloblari yopiq. 67router ularni hech qachon shifrdan chiqarmaydi (#7095 / #7176 / #7304).            |
 
 ## Koʻrinadigan fikrlash (Codex / Responses mijozlari)
 
@@ -51,7 +51,7 @@ Mijoz fikrlash matnini koʻrsatishi uchun quyidagilarning **barchasi** talab qil
 Agar faqat “shifrlangan maxfiy fikrlash” olsangiz, buning sababi quyidagilardan biri:
 
 - rejim **`auto`** boʻlgan (mijoz soʻrovi olib tashlangan), yoki
-- yuqori oqim xulosa matnisiz `encrypted_content` qaytargan (provayder cheklovi; OmniRoute oddiy matnni emas, faqat oʻrinbosarni koʻrsata oladi).
+- yuqori oqim xulosa matnisiz `encrypted_content` qaytargan (provayder cheklovi; 67router oddiy matnni emas, faqat oʻrinbosarni koʻrsata oladi).
 
 ## API misollari
 
@@ -71,7 +71,7 @@ Sxema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Saqlanish / qayta ishga tushirish
 
-Qiymat sozlamalardagi `thinkingBudget` kaliti ostida saqlanadi va jarayon ishga tushganda yuklanadi (`hydrateThinkingBudgetConfig`). DB orqali yoki ayrim APIʼdan tashqari yoʻllar orqali oʻzgartirilgandan soʻng, xotiradagi singleton diskdagi qiymatga mos kelishi uchun **OmniRoute jarayonini qayta ishga tushiring**.
+Qiymat sozlamalardagi `thinkingBudget` kaliti ostida saqlanadi va jarayon ishga tushganda yuklanadi (`hydrateThinkingBudgetConfig`). DB orqali yoki ayrim APIʼdan tashqari yoʻllar orqali oʻzgartirilgandan soʻng, xotiradagi singleton diskdagi qiymatga mos kelishi uchun **67router jarayonini qayta ishga tushiring**.
 
 ## Operator nazorat roʻyxati
 

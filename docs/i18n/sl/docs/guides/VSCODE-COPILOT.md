@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** doda vsak model, ki ga ponuja vaš OmniRoute, v _izvorni_ izbirnik modelov za GitHub Copilot Chat.
+**OmniCopilot** doda vsak model, ki ga ponuja vaš 67router, v _izvorni_ izbirnik modelov za GitHub Copilot Chat.
 Brez druge stranske vrstice, brez ločenega uporabniškega vmesnika za klepet — Copilotov način agenta, klicanje orodij,
 strežniki MCP in navodila po meri še naprej delujejo, le da se izvajajo z modelom, ki ga izberete.
 
@@ -23,13 +23,13 @@ strežniki MCP in navodila po meri še naprej delujejo, le da se izvajajo z mode
 
 ## Nastavitev
 
-1. **Zaženite OmniRoute** — `npm install -g omniroute && omniroute` (nadzorna plošča je na `http://localhost:20128`).
-2. **Namestite razširitev** — v pogledu Extensions poiščite »OmniRoute«.
+1. **Zaženite 67router** — `npm install -g omniroute && omniroute` (nadzorna plošča je na `http://localhost:20128`).
+2. **Namestite razširitev** — v pogledu Extensions poiščite »67router«.
 3. **Izberite model** — Copilot Chat → izbirnik modelov → **Manage Models…** → **OmniRoute**, nato označite
    želene modele.
 
-Ko OmniRoute deluje na privzetih vratih, ni treba nastaviti ničesar. Za oddaljeni primerek odprite
-**ikono OmniRoute v vrstici dejavnosti** (ali zaženite `OmniRoute: Manage Connection`) in nastavite:
+Ko 67router deluje na privzetih vratih, ni treba nastaviti ničesar. Za oddaljeni primerek odprite
+**ikono 67router v vrstici dejavnosti** (ali zaženite `OmniRoute: Manage Connection`) in nastavite:
 
 - **URL strežnika** — korenski naslov strežnika, npr. `http://192.168.0.15:20128`. Pripono `/v1`
   doda razširitev; ne vključite je.
@@ -74,7 +74,7 @@ HTTP 400 — Model '<id>' je model za ustvarjanje slik in ga ni mogoče uporabit
 
 zato so na podlagi polja `type` izločeni, preden dosežejo izbirnik. **Modeli Responses-API
 se ohranijo** — vsak vnos Codex / GPT-5.x navaja `supported_endpoints: ["responses"]`,
-OmniRoute pa jih prevede za `/v1/chat/completions`, zato so povsem uporabni.
+67router pa jih prevede za `/v1/chat/completions`, zato so povsem uporabni.
 
 ### Ponudniki, ki jih niste nikoli konfigurirali
 
@@ -87,7 +87,7 @@ nič.
 
 ## Nadzorna plošča znotraj zavihka VS Code
 
-`omnicopilot.dashboardOpen: "editor"` prikaže nadzorno ploščo OmniRoute v zavihku urejevalnika prek
+`omnicopilot.dashboardOpen: "editor"` prikaže nadzorno ploščo 67router v zavihku urejevalnika prek
 preprostega brskalnika namesto v zunanjem brskalniku. Vdelava je **omogočena izrecno v strežniku** prek
 `DASHBOARD_ALLOW_EMBED=vscode`, zaradi česar so strani HTML posredovane z
 `frame-ancestors 'self' vscode-webview:` namesto s privzetima `frame-ancestors 'none'` +
@@ -132,7 +132,7 @@ okoljske spremenljivke `OMNIROUTE_API_KEY`, nikoli prek ukazne vrstice.
 
 | Simptom                                                     | Vzrok/rešitev                                                                                                                                                                                                                                                               |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| V izbirniku ni modelov OmniRoute                            | Strežnik ni dosegljiv. Pika v vrstici stanja postane siva; zaženite `OmniRoute: Check Connection`. Odkrivanje je načrtno tiho in namesto prikaza poziva ne doda nobenega modela.                                                                                            |
+| V izbirniku ni modelov 67router                             | Strežnik ni dosegljiv. Pika v vrstici stanja postane siva; zaženite `OmniRoute: Check Connection`. Odkrivanje je načrtno tiho in namesto prikaza poziva ne doda nobenega modela.                                                                                            |
 | Vsak model se prikaže dvakrat                               | Uporabljate različico OmniCopilot, starejšo od 1.0.1 — posodobite jo. Razširitev zdaj zahteva `?prefix=alias`.                                                                                                                                                              |
 | Model za slike/zvok je bil prej naveden, zdaj pa ga ni      | Namerno od različice 1.0.1 — nikoli ni mogel odgovoriti na zahtevo klepeta.                                                                                                                                                                                                 |
 | Podokno manjka v vrstici dejavnosti                         | VS Code premakne dodatne vsebnike pogledov v prelivni meni **"…"** na dnu vrstice dejavnosti, vsebnik, skrit z desnim klikom, pa ostane skrit. Z desno tipko miške kliknite vrstico dejavnosti → označite **OmniRoute** ali pa ga odprite z `OmniRoute: Manage Connection`. |
@@ -144,6 +144,6 @@ okoljske spremenljivke `OMNIROUTE_API_KEY`, nikoli prek ukazne vrstice.
 ## Glejte tudi
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — vsa druga orodja za programiranje
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — upravljanje oddaljenega sistema OmniRoute
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — upravljanje oddaljenega sistema 67router
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — pogodba za `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — lastne opombe razširitve o katalogu

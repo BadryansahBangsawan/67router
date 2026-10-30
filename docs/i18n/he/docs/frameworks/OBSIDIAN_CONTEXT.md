@@ -13,7 +13,7 @@
 
 ## מה זה
 
-OmniRoute מתחבר לכספת **Obsidian** בתור **מקור הקשר** — בסיס ידע מקומי בפורמט Markdown
+67router מתחבר לכספת **Obsidian** בתור **מקור הקשר** — בסיס ידע מקומי בפורמט Markdown
 שסוכנים קוראים וכותבים באמצעות שרת ה-MCP המובנה. האינטגרציה מתקשרת עם תוסף הקהילה
 **Obsidian Local REST API** שפועל בתוך יישום שולחן העבודה, כך שסוכנים יכולים לחפש
 הערות, לקרוא/לכתוב/לעדכן קבצים, להציג את תוכן הכספת, לעבוד עם הערות מחזוריות יומיות
@@ -75,7 +75,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### סנכרון כספת באמצעות WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` מנהל סנכרון כספת אופציונלי המבוסס על
-WebDAV (ומופעל באמצעות `src/lib/obsidianSync.ts`). הפעלתו מפנה את OmniRoute אל
+WebDAV (ומופעל באמצעות `src/lib/obsidianSync.ts`). הפעלתו מפנה את 67router אל
 ספריית כספת מקומית ויוצרת צמד אקראי של שם משתמש וסיסמה ל-WebDAV:
 
 ```bash
@@ -111,26 +111,26 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian/webdav
 
 מוגדרים ב-`open-sse/mcp-server/tools/obsidianTools.ts`. הטוקן/כתובת ה-URL הבסיסית נפתרים
 בכל קריאה (תחילה לפי מפתח API, ולאחר מכן באופן גלובלי). כלים שניגשים אל **שרת הסנכרון**
-של OmniRoute (ארבעת כלי `obsidian_sync_*`) דורשים בנוסף את טוקן האימות לסנכרון שהוגדר
-בהגדרות OmniRoute.
+של 67router (ארבעת כלי `obsidian_sync_*`) דורשים בנוסף את טוקן האימות לסנכרון שהוגדר
+בהגדרות 67router.
 
 ### כלי קריאה (`read:obsidian`)
 
-| כלי                          | תיאור                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | בדיקה אם ה-Local REST API נגיש ומאומת.                                          |
-| `obsidian_search_simple`     | חיפוש טקסט מלא בתוכן ההערות; מחזיר קטעים עם נתיבי קבצים.                        |
-| `obsidian_search_structured` | חיפוש באמצעות ביטוי JSON Logic (מסנני and/or/regex/path).                       |
-| `obsidian_read_note`         | קריאת הערה לפי נתיב יחסי לכספת; אופציונלית כותרת, בלוק או frontmatter מסוימים.  |
-| `obsidian_list_vault`        | הצגת רשימת הקבצים והתיקיות בכספת (עץ רשומות).                                   |
-| `obsidian_get_document_map`  | קבלת מבנה הכותרות של ההערה כמפה של כותרות ← מספרי שורות.                        |
-| `obsidian_get_note_metadata` | קבלת frontmatter, תגיות, קישורים וספירת תווים/מילים ללא התוכן המלא.             |
-| `obsidian_get_active_file`   | קבלת הנתיב והתוכן של הקובץ הפעיל כעת ב-Obsidian.                                |
-| `obsidian_get_periodic_note` | קבלת ההערה התקופתית היומית/שבועית/חודשית עבור תאריך (היום, אם לא צוין).         |
-| `obsidian_get_tags`          | הצגת כל תגיות הכספת ותדירויותיהן.                                               |
-| `obsidian_list_commands`     | הצגת מזהי הפקודות הזמינות ב-Obsidian (לשימוש עם `obsidian_execute_command`).    |
-| `obsidian_sync_status`       | מצב שרת הסנכרון של OmniRoute: פעיל, שם הכספת, פורט, זמן פעילות והסנכרון האחרון. |
-| `obsidian_sync_conflicts`    | הצגת התנגשויות סנכרון שלא נפתרו (נתיב, נתיב ההתנגשות וזמן הזיהוי).              |
+| כלי                          | תיאור                                                                          |
+| ---------------------------- | ------------------------------------------------------------------------------ |
+| `obsidian_check_status`      | בדיקה אם ה-Local REST API נגיש ומאומת.                                         |
+| `obsidian_search_simple`     | חיפוש טקסט מלא בתוכן ההערות; מחזיר קטעים עם נתיבי קבצים.                       |
+| `obsidian_search_structured` | חיפוש באמצעות ביטוי JSON Logic (מסנני and/or/regex/path).                      |
+| `obsidian_read_note`         | קריאת הערה לפי נתיב יחסי לכספת; אופציונלית כותרת, בלוק או frontmatter מסוימים. |
+| `obsidian_list_vault`        | הצגת רשימת הקבצים והתיקיות בכספת (עץ רשומות).                                  |
+| `obsidian_get_document_map`  | קבלת מבנה הכותרות של ההערה כמפה של כותרות ← מספרי שורות.                       |
+| `obsidian_get_note_metadata` | קבלת frontmatter, תגיות, קישורים וספירת תווים/מילים ללא התוכן המלא.            |
+| `obsidian_get_active_file`   | קבלת הנתיב והתוכן של הקובץ הפעיל כעת ב-Obsidian.                               |
+| `obsidian_get_periodic_note` | קבלת ההערה התקופתית היומית/שבועית/חודשית עבור תאריך (היום, אם לא צוין).        |
+| `obsidian_get_tags`          | הצגת כל תגיות הכספת ותדירויותיהן.                                              |
+| `obsidian_list_commands`     | הצגת מזהי הפקודות הזמינות ב-Obsidian (לשימוש עם `obsidian_execute_command`).   |
+| `obsidian_sync_status`       | מצב שרת הסנכרון של 67router: פעיל, שם הכספת, פורט, זמן פעילות והסנכרון האחרון. |
+| `obsidian_sync_conflicts`    | הצגת התנגשויות סנכרון שלא נפתרו (נתיב, נתיב ההתנגשות וזמן הזיהוי).             |
 
 ### כלי כתיבה (`write:obsidian`)
 

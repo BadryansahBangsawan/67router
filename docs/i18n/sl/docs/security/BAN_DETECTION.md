@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute v odgovorih napak ponudnikov išče znake, ki kažejo, da je ponudnikov
+67router v odgovorih napak ponudnikov išče znake, ki kažejo, da je ponudnikov
 **račun trajno neaktiven** (začasno onemogočen / deaktiviran / blokiran zaradi kršitve pogojev uporabe), in ob
 ujemajočem se znaku povezavo premakne v **končno stanje `banned`**, zato ni
 več izbrana za zahteve. To nastavlja kartica z nastavitvami **Varnost → Prepovedane ključne besede**

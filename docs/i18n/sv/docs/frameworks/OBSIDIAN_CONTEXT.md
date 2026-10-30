@@ -13,7 +13,7 @@
 
 ## Vad det är
 
-OmniRoute ansluter till ett **Obsidian**-valv som en **kontextkälla** – en lokal
+67router ansluter till ett **Obsidian**-valv som en **kontextkälla** – en lokal
 kunskapsbas i Markdown som agenter läser och skriver via den inbyggda MCP-servern.
 Integrationen kommunicerar med community-pluginet **Obsidian Local REST API** som körs
 i skrivbordsappen, så att agenter kan söka bland anteckningar, läsa/skriva/patcha filer,
@@ -76,7 +76,7 @@ och validerar token genom att anropa status-slutpunkten för Local REST API inna
 ### WebDAV-valvsynkning
 
 `src/app/api/settings/obsidian/webdav/route.ts` hanterar en valfri WebDAV-baserad
-valvsynkning (som drivs av `src/lib/obsidianSync.ts`). När den aktiveras pekar OmniRoute på en
+valvsynkning (som drivs av `src/lib/obsidianSync.ts`). När den aktiveras pekar 67router på en
 lokal valvkatalog och genererar ett slumpmässigt WebDAV-par med användarnamn och lösenord:
 
 ```bash
@@ -111,9 +111,9 @@ De fyra `obsidian_sync_*`-verktygen behåller sitt separata beteende för synkni
 ## MCP-verktyg (22)
 
 Definieras i `open-sse/mcp-server/tools/obsidianTools.ts`. Token/bas-URL löses
-per anrop (först per API-nyckel, därefter globalt). Verktyg som anropar OmniRoutes **synkroniseringsserver**
+per anrop (först per API-nyckel, därefter globalt). Verktyg som anropar 67routers **synkroniseringsserver**
 (de fyra `obsidian_sync_*`-verktygen) kräver dessutom den autentiseringstoken för synkronisering som konfigurerats
-i OmniRoute-inställningarna.
+i 67router-inställningarna.
 
 ### Läsverktyg (`read:obsidian`)
 
@@ -130,7 +130,7 @@ i OmniRoute-inställningarna.
 | `obsidian_get_periodic_note` | Hämta den dagliga/veckovisa/månatliga periodiska anteckningen för ett datum (idag om det utelämnas). |
 | `obsidian_get_tags`          | Lista alla valvtaggar med deras frekvenser.                                                          |
 | `obsidian_list_commands`     | Lista tillgängliga Obsidian-kommando-ID:n (använd med `obsidian_execute_command`).                   |
-| `obsidian_sync_status`       | Status för OmniRoutes synkroniseringsserver: körs, valvnamn, port, drifttid, senaste synkronisering. |
+| `obsidian_sync_status`       | Status för 67routers synkroniseringsserver: körs, valvnamn, port, drifttid, senaste synkronisering.  |
 | `obsidian_sync_conflicts`    | Lista olösta synkroniseringskonflikter (sökväg, konfliktsökväg, tidpunkt då de upptäcktes).          |
 
 ### Skrivverktyg (`write:obsidian`)

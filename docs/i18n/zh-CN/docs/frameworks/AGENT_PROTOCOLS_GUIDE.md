@@ -7,15 +7,15 @@
 > **来源：** `src/lib/{a2a,acp,cloudAgent}/`、`src/app/api/{a2a,acp,cloud}/`、`src/app/api/v1/agents/`
 > **最后更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 提供了三个不同的智能体相关接口。它们乍看之下很相似，但解决的是不同的问题。请使用本页选择合适的接口。
+67router 提供了三个不同的智能体相关接口。它们乍看之下很相似，但解决的是不同的问题。请使用本页选择合适的接口。
 
 ## 简要概述
 
 | 接口                       | 最适合                                                                                                 | 传输方式                   | 标准                 |
 | -------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------- | -------------------- |
 | **A2A — 智能体到智能体**   | 与支持 A2A 协议的对等智能体进行跨智能体协作                                                            | 基于 HTTP 的 JSON-RPC 2.0  | A2A v0.3（开放规范） |
-| **ACP — CLI 智能体注册表** | 检测 / 注册 / 启动用户计算机上安装的 CLI 编码智能体（Cursor、Cline、Codex CLI、Claude Code、Aider 等） | HTTP REST                  | OmniRoute 专用       |
-| **云智能体**               | 将长时间运行的编码任务提交给外部云服务（Codex Cloud、Devin、Jules、Cursor Cloud）                      | HTTP REST + 数据库后端任务 | OmniRoute 专用       |
+| **ACP — CLI 智能体注册表** | 检测 / 注册 / 启动用户计算机上安装的 CLI 编码智能体（Cursor、Cline、Codex CLI、Claude Code、Aider 等） | HTTP REST                  | 67router 专用        |
+| **云智能体**               | 将长时间运行的编码任务提交给外部云服务（Codex Cloud、Devin、Jules、Cursor Cloud）                      | HTTP REST + 数据库后端任务 | 67router 专用        |
 
 三者彼此独立，可任意选择其中一个或多个。
 
@@ -38,14 +38,14 @@ OmniRoute 提供了三个不同的智能体相关接口。它们乍看之下很�
 ## 1. A2A — 智能体到智能体
 
 **规范：** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute 端点：** `POST /a2a`（JSON-RPC 2.0）
+**67router 端点：** `POST /a2a`（JSON-RPC 2.0）
 **智能体卡片：** `GET /.well-known/agent.json`
 
 ### 适用场景
 
-- 构建以 OmniRoute 作为对等方之一的多智能体系统
-- 向 Google ADK 等框架中的智能体或通用智能体网络开放 OmniRoute 的路由能力（智能路由、配额管理等）
-- 使用标准的发现与调用接口封装 OmniRoute
+- 构建以 67router 作为对等方之一的多智能体系统
+- 向 Google ADK 等框架中的智能体或通用智能体网络开放 67router 的路由能力（智能路由、配额管理等）
+- 使用标准的发现与调用接口封装 67router
 
 ### 方法
 
@@ -69,12 +69,12 @@ OmniRoute 提供了三个不同的智能体相关接口。它们乍看之下很�
 
 ## 2. ACP — CLI 代理注册表
 
-**OmniRoute 端点：** `GET /api/acp/agents`
+**67router 端点：** `GET /api/acp/agents`
 **源文件：** `src/lib/acp/{index,manager,registry}.ts`
 
 ### 简介
 
-ACP 是 OmniRoute 的**本地 CLI 代理清单**。它会检测主机上安装了哪些编程 CLI（Cursor、Cline、Claude Code、Codex CLI、Continue 等），解析其版本，并将其显示在仪表板中，以便用户将各个 CLI 配置为指向 OmniRoute。
+ACP 是 67router 的**本地 CLI 代理清单**。它会检测主机上安装了哪些编程 CLI（Cursor、Cline、Claude Code、Codex CLI、Continue 等），解析其版本，并将其显示在仪表板中，以便用户将各个 CLI 配置为指向 67router。
 
 该 HTTP 接口是一个内部清单，为“CLI 工具”UI 和
 CLI 指纹跟踪提供支持（参见 [CLI-TOOLS.md](../reference/CLI-TOOLS.md)）。此外，
@@ -113,8 +113,8 @@ POST 的请求体结构（`src/app/api/acp/agents/route.ts` 中的 `customAgentB
 
 ### 使用场景
 
-- 仪表板的“CLI 工具”页面会列出已安装的工具，并帮助你将每个工具配置为指向 OmniRoute
-- 自定义代理允许高级用户注册 OmniRoute 默认不支持的内部/专有 CLI
+- 仪表板的“CLI 工具”页面会列出已安装的工具，并帮助你将每个工具配置为指向 67router
+- 自定义代理允许高级用户注册 67router 默认不支持的内部/专有 CLI
 - 检测结果用于生成 `cli-tools` 指纹矩阵
 
 ### 不应使用 ACP 的场景
@@ -125,12 +125,12 @@ POST 的请求体结构（`src/app/api/acp/agents/route.ts` 中的 `customAgentB
 
 ## 3. 云代理
 
-**OmniRoute 端点：** `/api/v1/agents/tasks/*`（生命周期）+ `/api/cloud/*`（底层衔接）
+**67router 端点：** `/api/v1/agents/tasks/*`（生命周期）+ `/api/cloud/*`（底层衔接）
 **源代码：** `src/lib/cloudAgent/`
 
 ### 简介
 
-这是第三方云端编程代理的统一接口。你可以提交提示词和仓库 URL，OmniRoute 会将任务分派给相应的云代理、轮询状态并返回结果。
+这是第三方云端编程代理的统一接口。你可以提交提示词和仓库 URL，67router 会将任务分派给相应的云代理、轮询状态并返回结果。
 
 ### 支持的代理（3 个，均已在 `src/lib/cloudAgent/agents/` 中确认）
 
@@ -171,8 +171,8 @@ DELETE /api/v1/agents/tasks/[id]
 
 | 方面         | A2A                                                                             | Cloud Agents                         |
 | ------------ | ------------------------------------------------------------------------------- | ------------------------------------ |
-| 标准         | 开放标准 A2A v0.3                                                               | OmniRoute 专用                       |
-| 计算运行位置 | OmniRoute 内部（使用已配置的组合）                                              | 外部（Codex / Devin / Jules 服务器） |
+| 标准         | 开放标准 A2A v0.3                                                               | 67router 专用                        |
+| 计算运行位置 | 67router 内部（使用已配置的组合）                                               | 外部（Codex / Devin / Jules 服务器） |
 | 任务持续时间 | 默认 TTL 为 5 分钟（可在 `TaskManager` 中配置）                                 | 数分钟至数小时                       |
 | 仓库感知     | 否（仅传递提示词）                                                              | 是（仓库 URL + 分支）                |
 | 使用场景     | 跨智能体协作、将智能路由作为服务                                                | 委派“在仓库 Y 中实现功能 X”          |
@@ -180,7 +180,7 @@ DELETE /api/v1/agents/tasks/[id]
 
 ## 集成示例
 
-### 探索 OmniRoute 的 A2A 能力
+### 探索 67router 的 A2A 能力
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -188,7 +188,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 返回包含全部 6 项技能、传输方式和版本信息的 Agent Card。
 
-### 将 OmniRoute 作为 A2A 智能体调用
+### 将 67router 作为 A2A 智能体调用
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -262,7 +262,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute 核心    │
+                │   67router 核心    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

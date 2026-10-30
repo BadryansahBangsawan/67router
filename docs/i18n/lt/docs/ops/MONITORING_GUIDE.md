@@ -4,7 +4,7 @@
 
 ---
 
-> **Trumpai**: „OmniRoute“ pateikiamas su integruotu būklės stebėjimu, teikėjų autopilotu, kvotų sekimu ir stebimumo integracijos taškais. Šiame vadove aprašomas valdymo skydelis, įspėjimai ir trikčių šalinimas.
+> **Trumpai**: „67router“ pateikiamas su integruotu būklės stebėjimu, teikėjų autopilotu, kvotų sekimu ir stebimumo integracijos taškais. Šiame vadove aprašomas valdymo skydelis, įspėjimai ir trikčių šalinimas.
 
 **Šaltiniai:**
 
@@ -20,7 +20,7 @@
 
 ## Apžvalga
 
-„OmniRoute“ turi **3 stebėjimo sluoksnius**:
+„67router“ turi **3 stebėjimo sluoksnius**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Kiekvienam deriniui:
 
 ## Būklės patikros API
 
-OmniRoute pateikia **dvi** HTTP būklės patikros sąsajas. Orkestravimo sistemose jos nėra tarpusavyje pakeičiamos.
+67router pateikia **dvi** HTTP būklės patikros sąsajas. Orkestravimo sistemose jos nėra tarpusavyje pakeičiamos.
 
 | Kelias                       | Paskirtis                                                                   | Apkrova                                      | Kam naudoti                                                                         |
 | ---------------------------- | --------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ Tiesioginėms patikrų klaidoms naudokite `failed` + `failedConnections`, o
 
 ### Kubernetes patikrų rekomendacijos
 
-OmniRoute yra **vienas Node procesas** (viena įvykių kilpa). Standartinė Docker `HEALTHCHECK` naudoja lengvą `/healthz`. `/api/monitoring/health` yra **per sunkus** kubelet veikimo patikrų intervalams.
+67router yra **vienas Node procesas** (viena įvykių kilpa). Standartinė Docker `HEALTHCHECK` naudoja lengvą `/healthz`. `/api/monitoring/health` yra **per sunkus** kubelet veikimo patikrų intervalams.
 
 | Patikra             | Rekomenduojamas tikslas                                                                       | Pastabos                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Susiję klausimai: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/100
 
 ### systemd priežiūros mechanizmas (užstrigęs įvykių ciklas)
 
-systemd pagrindu veikiančioje sistemoje OmniRoute praneša paslaugų tvarkytuvei, kai yra pasirengusi, ir reguliariai siunčia jai signalus, todėl serveris, kurio įvykių ciklas užstrigo, nutraukiamas bei paleidžiamas iš naujo, užuot toliau veikęs be atsako. Signalai siunčiami iš paties serverio įvykių ciklo: jam užsiblokavus, signalai sustoja, o pasibaigus `WatchdogSec` laikotarpiui be signalo systemd iš naujo paleidžia paslaugą.
+systemd pagrindu veikiančioje sistemoje 67router praneša paslaugų tvarkytuvei, kai yra pasirengusi, ir reguliariai siunčia jai signalus, todėl serveris, kurio įvykių ciklas užstrigo, nutraukiamas bei paleidžiamas iš naujo, užuot toliau veikęs be atsako. Signalai siunčiami iš paties serverio įvykių ciklo: jam užsiblokavus, signalai sustoja, o pasibaigus `WatchdogSec` laikotarpiui be signalo systemd iš naujo paleidžia paslaugą.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) jau sukuria tai naudojantį naudotojo vienetą. Savarankiškai sukurtas vienetas (numatytasis `Type=simple`) priežiūros mechanizmo neturi, todėl į jo `[Service]` skiltį įtraukite šias eilutes:
 
@@ -443,7 +443,7 @@ Prieigos raktų būklės patikros konfigūraciją viduje tvarko `tokenHealthChec
 
 ### Integruoti kanalai
 
-OmniRoute palaiko **3 įspėjimų kanalus**:
+67router palaiko **3 įspėjimų kanalus**:
 
 | Kanalas                 | Sąranka            | Naudojimo paskirtis                   |
 | ----------------------- | ------------------ | ------------------------------------- |
@@ -559,7 +559,7 @@ Sukurkite `~/.omniroute/dashboard.json`:
 ### „Kvota rodoma kaip neviršyta, tačiau matau 429 klaidas“
 
 - 429 reiškia, kad, teikėjo duomenimis, išnaudojote savo kvotą
-- OmniRoute kvotos stebėjimo duomenys gali būti **pasenę** — teikėjo išorinės sistemos duomenys yra tiksliausi
+- 67router kvotos stebėjimo duomenys gali būti **pasenę** — teikėjo išorinės sistemos duomenys yra tiksliausi
 - Kvotos duomenys automatiškai atnaujinami naudojant vidinį kvotos stebėjimo komponentą
 
 ### „Derinys neveikia, nors visi tiksliniai elementai atrodo veikiantys“
@@ -572,7 +572,7 @@ Sukurkite `~/.omniroute/dashboard.json`:
 
 - Paleiskite `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Jei rezultatas yra „ok“ — tai klaidingas įspėjimas, būklės patikra yra pernelyg griežta
-- Jei rezultatas kitoks — **sustabdykite OmniRoute** ir vadovaukitės [atkūrimo po avarijos vadovu](./DATABASE_GUIDE.md#disaster-recovery)
+- Jei rezultatas kitoks — **sustabdykite 67router** ir vadovaukitės [atkūrimo po avarijos vadovu](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### „Atminties kaupo apkrova yra kritinė“
 

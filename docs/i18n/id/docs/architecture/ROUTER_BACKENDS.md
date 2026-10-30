@@ -15,9 +15,9 @@ ADR ini menetapkan hubungan antara mesin `ts` (native), `bifrost`, `cliproxy`, `
 Peran mesin dijelaskan oleh **dua sumbu independen**, yang dikodekan bersama dalam `RouterBackendDefinition` milik registri:
 
 1. **Siklus hidup** (`RouterBackendLifecycle`) — _bagaimana mesin dijalankan_:
-   - `in-process` — berjalan di dalam proses Node OmniRoute (pipeline TS native).
-   - `supervised` — proses anak lokal yang diinstal/dimulai/dihentikan/diperiksa kesehatannya oleh OmniRoute melalui `ServiceSupervisor`, lalu digunakan sebagai koneksi penyedia.
-   - `external` — endpoint HTTP yang menjadi tujuan penerusan OmniRoute tetapi **tidak** dikelola oleh OmniRoute (dikonfigurasi melalui URL dasar env).
+   - `in-process` — berjalan di dalam proses Node 67router (pipeline TS native).
+   - `supervised` — proses anak lokal yang diinstal/dimulai/dihentikan/diperiksa kesehatannya oleh 67router melalui `ServiceSupervisor`, lalu digunakan sebagai koneksi penyedia.
+   - `external` — endpoint HTTP yang menjadi tujuan penerusan 67router tetapi **tidak** dikelola oleh 67router (dikonfigurasi melalui URL dasar env).
    - `disabled` — terdaftar tetapi tidak dapat dipilih.
 2. **Sumbu pemilihan** (backend perutean relay) — _apakah relay meneruskan permintaan kepadanya_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` dalam

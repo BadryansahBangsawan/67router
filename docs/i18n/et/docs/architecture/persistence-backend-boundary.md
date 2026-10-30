@@ -10,7 +10,7 @@
 
 ## Kontekst
 
-OmniRoute pakub praegu domeenipõhiseid püsivusfunktsioone asukohast `src/lib/db/`, samas kui
+67router pakub praegu domeenipõhiseid püsivusfunktsioone asukohast `src/lib/db/`, samas kui
 faili `src/lib/db/core.ts` tagastatav jagatud ühendus rakendab failis `src/lib/db/adapters/types.ts`
 määratletud sünkroonset `SqliteAdapter` lepingut. See adapter toetab mitut SQLite'i käituskeskkonda,
 kuid selle liides jääb SQLite'i-keskseks: sünkroonsed ettevalmistatud laused, `pragma`, edasilükatud ja

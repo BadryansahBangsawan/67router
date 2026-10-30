@@ -12,7 +12,7 @@ User-Agent específico, indicadores `anthropic-beta`, encabezados del SDK de Sta
 
 ## Inicio rápido — usar el proveedor nativo `agentrouter` (recomendado)
 
-Para la mayoría de los usuarios, **no se requiere ninguna configuración especial**. OmniRoute incluye un
+Para la mayoría de los usuarios, **no se requiere ninguna configuración especial**. 67router incluye un
 proveedor `agentrouter` integrado con el formato de comunicación completo de Claude Code ya incorporado (consulta
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Para usarlo:
 
@@ -34,7 +34,7 @@ URL base, la ruta de chat o el conjunto de encabezados.
 
 ## Avanzado: conexión mediante el tipo de proveedor compatible con Claude Code
 
-OmniRoute también admite AgentRouter (y servicios de retransmisión similares) mediante el tipo de proveedor
+67router también admite AgentRouter (y servicios de retransmisión similares) mediante el tipo de proveedor
 **compatible con Claude Code** (`anthropic-compatible-cc-*`), que utiliza la
 API Messages de Anthropic con el formato de comunicación correcto. Un proveedor genérico
 `openai-compatible-chat` que apunte a `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Una cuenta y una clave de API de AgentRouter. Los nuevos registros reciben créditos gratuitos mediante el enlace
   de afiliado incluido en el [README](../README.md) del proyecto.
-- OmniRoute ejecutándose con la opción de funcionalidad `ENABLE_CC_COMPATIBLE_PROVIDER` habilitada
+- 67router ejecutándose con la opción de funcionalidad `ENABLE_CC_COMPATIBLE_PROVIDER` habilitada
   (consulta la sección siguiente).
 
 ## 1. Habilitar el tipo de proveedor compatible con CC
 
 El tipo de proveedor compatible con Claude Code está protegido por una opción de funcionalidad porque
 envía tráfico que imita fielmente al cliente oficial de Claude Code. Habilítalo
-estableciendo una variable de entorno antes de iniciar OmniRoute:
+estableciendo una variable de entorno antes de iniciar 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

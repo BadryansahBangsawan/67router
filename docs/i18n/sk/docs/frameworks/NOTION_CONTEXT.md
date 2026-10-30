@@ -11,11 +11,11 @@
 
 ## Čo to je
 
-OmniRoute sa môže pripojiť k pracovnému priestoru **Notion** ako k **zdroju kontextu** — databáze
+67router sa môže pripojiť k pracovnému priestoru **Notion** ako k **zdroju kontextu** — databáze
 znalostí na čítanie a zápis, ku ktorej agenti pristupujú prostredníctvom vstavaného servera MCP. Po
 nakonfigurovaní integračného tokenu Notion umožnia nástroje MCP modelu LLM vyhľadávať stránky a
 databázy, čítať obsah stránok a stromy blokov, vyhľadávať v databázach pomocou filtrov/zoradenia
-a pridávať nové bloky — všetko je sprostredkované cez OmniRoute (s opakovaním, časovým limitom a
+a pridávať nové bloky — všetko je sprostredkované cez 67router (s opakovaním, časovým limitom a
 klasifikáciou chýb), takže model nikdy nepristupuje priamo k API Notion.
 
 Integrácia je jednoduchá a odolná nadstavba nad oficiálnym rozhraním Notion REST API
@@ -40,7 +40,7 @@ koncového bodu (`NotionSourceCard` vedľa `ObsidianSourceCard`) alebo prostredn
 > [!NOTE]
 > Token je **token internej integrácie Notion**. Vytvorte integráciu na adrese
 > <https://www.notion.com/my-integrations> a následne s ňou zdieľajte stránky/databázy,
-> ku ktorým má mať OmniRoute prístup (model oprávnení Notion je založený na zdieľaní,
+> ku ktorým má mať 67router prístup (model oprávnení Notion je založený na zdieľaní,
 > nie na prístupe k celému pracovnému priestoru).
 
 ### Konfigurácia prostredníctvom REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Všetky tri metódy vyžadujú autentifikáciu ovládacieho panela (`isAuthenticated`). Pri požiadavke `POST`
-OmniRoute uloží token a okamžite spustí testovacie vyhľadávanie s 1 výsledkom; ak Notion
+67router uloží token a okamžite spustí testovacie vyhľadávanie s 1 výsledkom; ak Notion
 vráti objekt chyby, token sa vymaže a volanie zlyhá so stavom `400`.
 
 ## Nástroje MCP (6)

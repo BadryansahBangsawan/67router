@@ -5,7 +5,7 @@
 ---
 
 > **Deskripsi satu baris untuk setiap direktori dan file root.**
-> Terakhir diperbarui: 2026-06-28 — OmniRoute v3.8.40
+> Terakhir diperbarui: 2026-06-28 — 67router v3.8.40
 >
 > Gunakan peta ini untuk menavigasi basis kode dengan cepat. Untuk pembahasan mendalam, ikuti tautan ke dokumentasi khusus.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Alur rilis lengkap (skill, husky, conventional commit, deployment)                           |
 | `COVERAGE_PLAN.md`          | Sasaran cakupan dan status saat ini                                                          |
 | `FREE_TIERS.md`             | Penyedia tingkat gratis pilihan (48+ gratis + 11 OAuth)                                      |
-| `CLI-TOOLS.md`              | Integrasi CLI eksternal + CLI OmniRoute Internal                                             |
+| `CLI-TOOLS.md`              | Integrasi CLI eksternal + CLI 67router Internal                                              |
 | `I18N.md`                   | Arsitektur i18n, penambahan bahasa, 67 locale                                                |
 | `UNINSTALL.md`              | Langkah-langkah penghapusan instalasi secara bersih                                          |
 | `PROVIDER_REFERENCE.md`     | Katalog 375 penyedia yang **dibuat otomatis** (buat ulang: `npm run gen:provider-reference`) |

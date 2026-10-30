@@ -4,7 +4,7 @@
 
 ---
 
-La compression RTK est le moteur de compression d’OmniRoute sensible aux commandes pour les sorties de terminal et d’outils. Elle est conçue pour les sessions d’agents de codage, dans lesquelles l’essentiel de l’augmentation du contexte provient des journaux de tests, des sorties de build, du bruit des gestionnaires de paquets, des transcriptions shell, des sorties Docker, des sorties git et des traces de pile.
+La compression RTK est le moteur de compression de 67router sensible aux commandes pour les sorties de terminal et d’outils. Elle est conçue pour les sessions d’agents de codage, dans lesquelles l’essentiel de l’augmentation du contexte provient des journaux de tests, des sorties de build, du bruit des gestionnaires de paquets, des transcriptions shell, des sorties Docker, des sorties git et des traces de pile.
 
 RTK peut s’exécuter directement avec `defaultMode: "rtk"` ou comme première étape d’un pipeline empilé, généralement :
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 Cet ordre compresse d’abord les sorties machine bruyantes, puis permet à Caveman de condenser le texte restant.
 
-Le projet RTK en amont annonce des économies de `60-90%` sur les sorties de commandes. Dans l’exemple de session de son README, le volume passe de `~118,000` jetons standard à `~23,900` jetons RTK, soit une économie de `79.7%` (`~80%`). OmniRoute utilise cette moyenne en amont pour calculer les économies cumulées avec la compression des entrées de Caveman :
+Le projet RTK en amont annonce des économies de `60-90%` sur les sorties de commandes. Dans l’exemple de session de son README, le volume passe de `~118,000` jetons standard à `~23,900` jetons RTK, soit une économie de `79.7%` (`~80%`). 67router utilise cette moyenne en amont pour calculer les économies cumulées avec la compression des entrées de Caveman :
 
 ```txt
 Moyenne RTK :   80% économisés
@@ -48,7 +48,7 @@ RTK charge les filtres dans l’ordre suivant :
 2. Filtres globaux provenant de `DATA_DIR/rtk/filters.toml` et `DATA_DIR/rtk/filters.json`.
 3. Filtres intégrés provenant de `open-sse/services/compression/engines/rtk/filters/`.
 
-Au sein d’une même portée, les filtres du schéma TOML v1 de RTK ont priorité sur les filtres JSON d’OmniRoute. Les expressions TOML `match_command` sont vérifiées avant la correspondance par type de commande, afin qu’un filtre importé propre à une commande puisse remplacer un filtre plus général dans cette portée. La portée du projet reste prioritaire sur la portée globale, quel que soit le format de fichier.
+Au sein d’une même portée, les filtres du schéma TOML v1 de RTK ont priorité sur les filtres JSON de 67router. Les expressions TOML `match_command` sont vérifiées avant la correspondance par type de commande, afin qu’un filtre importé propre à une commande puisse remplacer un filtre plus général dans cette portée. La portée du projet reste prioritaire sur la portée globale, quel que soit le format de fichier.
 
 Les filtres de projet sont intentionnellement soumis à une vérification de confiance, car les filtres utilisant des expressions régulières peuvent modifier la manière dont les sorties d’outils sont présentées aux agents. Un fichier de filtres de projet est accepté lorsque l’une des conditions suivantes est remplie :
 
@@ -71,7 +71,7 @@ Les filtres personnalisés peuvent être constitués d’un objet de filtre uniq
 
 ## Compatibilité avec le schéma RTK TOML v1
 
-OmniRoute peut analyser, valider, tester et installer des fichiers de filtres déclaratifs utilisant le schéma RTK TOML v1.
+67router peut analyser, valider, tester et installer des fichiers de filtres déclaratifs utilisant le schéma RTK TOML v1.
 Les champs pris en charge sont `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` et les tests intégrés `[[tests.<filter>]]`.
@@ -80,7 +80,7 @@ Les champs inconnus, les expressions régulières non valides ou non sûres, l'u
 validé à des fins d'inspection, mais ne peut pas être installé ni chargé. Les échecs de chargement de fichiers personnalisés restent
 non bloquants : le fichier non valide est ignoré et les autres filtres continuent de fonctionner.
 
-OmniRoute reçoit la sortie de l'outil après sa capture par le client ; `filter_stderr = true`
+67router reçoit la sortie de l'outil après sa capture par le client ; `filter_stderr = true`
 ne peut donc pas modifier la capture du processus. Le champ est accepté sans produire d'effet et la validation renvoie un avertissement.
 Cette fonctionnalité est intentionnellement décrite comme une **compatibilité avec le schéma RTK TOML v1**, et non comme une compatibilité complète
 avec l'exécutable RTK, les hooks de shell, les implémentations de commandes en Rust ou la structure de son magasin de confiance.

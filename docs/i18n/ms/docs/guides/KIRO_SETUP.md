@@ -4,7 +4,7 @@
 
 ---
 
-Panduan ini merangkumi cara menambahkan akaun Kiro (pembantu pengekodan AI yang dihoskan oleh AWS) kepada OmniRoute,
+Panduan ini merangkumi cara menambahkan akaun Kiro (pembantu pengekodan AI yang dihoskan oleh AWS) kepada 67router,
 dengan tumpuan pada menjalankan berbilang akaun secara serentak tanpa konflik sesi.
 
 ---
@@ -22,10 +22,10 @@ token akaun pertama.
 
 ---
 
-## Cara OmniRoute Menyelesaikan Masalah Ini (v3.8.0+)
+## Cara 67router Menyelesaikan Masalah Ini (v3.8.0+)
 
-Bermula dengan v3.8.0, OmniRoute memanggil `registerClient()` (AWS SSO OIDC) semasa setiap
-import sambungan Kiro. Ini memberikan setiap sambungan OmniRoute pendaftaran klien OIDC
+Bermula dengan v3.8.0, 67router memanggil `registerClient()` (AWS SSO OIDC) semasa setiap
+import sambungan Kiro. Ini memberikan setiap sambungan 67router pendaftaran klien OIDC
 khususnya sendiri. Oleh sebab setiap pendaftaran klien adalah bebas, penyegaran atau
 pengesahan semula satu akaun tidak menjejaskan token segar semula mana-mana akaun lain.
 
@@ -59,7 +59,7 @@ menerima pendaftaran klien masing-masing secara automatik.
 
 ### Prasyarat
 
-- OmniRoute v3.8.0 atau lebih baharu.
+- 67router v3.8.0 atau lebih baharu.
 - Akaun Kiro yang berfungsi (e-mel + kata laluan, log masuk Google atau GitHub).
 - Akaun Kiro kedua, jika dikehendaki.
 
@@ -70,7 +70,7 @@ menerima pendaftaran klien masing-masing secara automatik.
    - **Import Token** — tampal token segar semula yang bermula dengan `aorAAAAAG`.
    - **API Key** — tampal kunci API Kiro / CodeWhisperer jangka panjang.
    - **Log masuk Google / GitHub** — lengkapkan aliran OAuth dalam pelayar.
-   - **Auto-Import** — klik butang tersebut; OmniRoute membaca bukti kelayakan daripada
+   - **Auto-Import** — klik butang tersebut; 67router membaca bukti kelayakan daripada
      pangkalan data kiro-cli setempat atau `~/.aws/sso/cache`.
 3. Sambungan disimpan. Aliran token segar semula mendaftarkan klien OIDC khusus
    secara automatik. Aliran kunci API mengesahkan kunci dengan AWS dan tidak menyimpan token segar semula.
@@ -127,7 +127,7 @@ tidak menggunakan penyegaran OAuth, maka ia mengelakkan pembatalan sesi OIDC yan
 2. Pilih **Kunci API**.
 3. Tampalkan kunci API dan pilih rantau AWS: **Kesan secara automatik** (lalai), **AS Timur
    (Virginia Utara)** atau **Eropah (Frankfurt)**.
-4. OmniRoute mengesahkan kunci dan menyimpan sambungan yang ditetapkan pada rantau tempat
+4. 67router mengesahkan kunci dan menyimpan sambungan yang ditetapkan pada rantau tempat
    kunci tersebut berfungsi.
 
 ### API
@@ -177,7 +177,7 @@ ke `https://q.<region>.amazonaws.com/generateAssistantResponse` — termasuk `us
 ## Tamat Tempoh Klien OIDC
 
 Klien awam AWS SSO OIDC lazimnya tamat tempoh selepas 90 hari
-(`clientSecretExpiresAt`). OmniRoute menyimpan cap masa ini dalam `providerSpecificData`
+(`clientSecretExpiresAt`). 67router menyimpan cap masa ini dalam `providerSpecificData`
 untuk tujuan kebolehcerapan. Jika sambungan berhenti membuat penyegaran selepas kira-kira 90 hari, import
 semula sambungan untuk mendapatkan pendaftaran klien OIDC yang baharu. Pendaftaran semula secara automatik apabila
 tamat tempoh dijejaki sebagai penambahbaikan akan datang.
@@ -198,7 +198,7 @@ melalui AWS SSO OIDC.
 ### Import gagal dengan "Pengesahan token gagal"
 
 - Pastikan token penyegaran bermula dengan `aorAAAAAG`.
-- Pastikan OmniRoute boleh mencapai `https://oidc.us-east-1.amazonaws.com` (atau rantau yang
+- Pastikan 67router boleh mencapai `https://oidc.us-east-1.amazonaws.com` (atau rantau yang
   dikonfigurasikan). Jika anda berada di sebalik proksi korporat, tetapkan proksi peringkat penyedia dalam
   **Papan Pemuka → Tetapan → Proksi**.
 
@@ -206,7 +206,7 @@ melalui AWS SSO OIDC.
 
 - Sahkan bahawa kunci tersebut ialah kunci API Kiro / CodeWhisperer, bukannya token penyegaran.
 - Sahkan bahawa rantau AWS sepadan dengan kunci/akaun. `us-east-1` ialah nilai lalai.
-- Kunci tersebut mestilah boleh memanggil `ListAvailableProfiles`; jika tidak, OmniRoute tidak dapat
+- Kunci tersebut mestilah boleh memanggil `ListAvailableProfiles`; jika tidak, 67router tidak dapat
   menentukan `profileArn` yang diperlukan.
 
 Untuk isu lain, lihat [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) utama.

@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute pakub OpenAI Codexi kasutamiseks **kahte** võimalust:
+67router pakub OpenAI Codexi kasutamiseks **kahte** võimalust:
 
 | Pakkuja                | Kuidas see OpenAI-ga suhtleb                                                                                                                                                                | Kasutuspiirang                                                                     |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | **`codex`**            | Edastab teie ChatGPT/OpenAI OAuthi loa otse Responses API-le                                                                                                                                | **Jah** — ametlik seanss ei ole puhverserveri/ruuteri kaudu kasutamiseks volitatud |
-| **`codex-app-server`** | Juhib **Codex CLI enda `codex app-server`-it** JSON-RPC/WebSocketi kaudu; CLI haldab ja värskendab oma OAuthi (`~/.codex/auth.json`) automaatselt täpselt nagu interaktiivne `codex`-seanss | **Ei** — OmniRoute ei edasta kunagi luba API-le                                    |
+| **`codex-app-server`** | Juhib **Codex CLI enda `codex app-server`-it** JSON-RPC/WebSocketi kaudu; CLI haldab ja värskendab oma OAuthi (`~/.codex/auth.json`) automaatselt täpselt nagu interaktiivne `codex`-seanss | **Ei** — 67router ei edasta kunagi luba API-le                                     |
 
 Kuna `codex-app-server` ei edasta kunagi luba, ei kaasne sellega
 seansi taasesitamise kasutuspiirangut. See nõuab siiski, et **Codex CLI oleks
@@ -20,7 +20,7 @@ seadistatud app-serveri URL-il kättesaadav**, ning CLI peab olema **sisse logit
 ## 1. Arhitektuur
 
 ```
-┌─ OmniRoute'i rakendus ───────────┐        ┌─ codex-app-server'i kõrvalkonteiner ─┐
+┌─ 67router'i rakendus ───────────┐        ┌─ codex-app-server'i kõrvalkonteiner ─┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                    │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456          │
 │  (+ võimekusluba)                │  JSON  │  --ws-auth capability-token          │
@@ -81,7 +81,7 @@ on aegunud (alati luuakse varukoopia).
 - **Avalik kasutaja, kellel pole codex'it kohalikult installitud** — see pole
   oluline: CLI asub kõrvalkonteineris. Kasutaja autendib end ainult juhtpaneeli
   kaudu.
-- **OmniRoute otse serveris (ilma kõrvalkonteinerita, codex hostis)** — suunake
+- **67router otse serveris (ilma kõrvalkonteinerita, codex hostis)** — suunake
   `OMNIROUTE_CODEX_APPSERVER_WS` enda `codex app-server`-ile ja veenduge, et
   hosti codex oleks sisse logitud; kui binaarfail puudub, kuvatakse vihje
   „codex pole installitud“.

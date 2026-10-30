@@ -126,8 +126,8 @@ export function buildCodexModelCatalog(
     entry.slug = model.id;
     entry.display_name = model.id;
     entry.description = matched
-      ? `${model.id} via OmniRoute`
-      : `${model.id} via OmniRoute (Codex profile: ${defaultTemplate.slug})`;
+      ? `${model.id} via 67router`
+      : `${model.id} via 67router (Codex profile: ${defaultTemplate.slug})`;
     entry.visibility = "list";
     entry.priority = listedEntries.length + 1;
     // Retirement notices point at bare OpenAI slugs; an inherited upgrade would push

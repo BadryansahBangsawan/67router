@@ -13,7 +13,7 @@
 
 Injini ya Kushiriki Kiwango hugawa kwa usawa kiwango cha mtoa huduma kinachotegemea muda (k.m. dirisha la saa 5 la Codex, maombi 1500 kwa saa ya Kimi) kati ya funguo nyingi za API zinazotumia muunganisho mmoja.
 
-**Tatizo linalotatuliwa:** OmniRoute hupitisha funguo nyingi za API kupitia akaunti ileile ya mtoa huduma wa juu. Bila mantiki ya kushiriki, ongezeko la ghafla la matumizi kutoka kwa ufunguo A linaweza kumaliza kiwango cha mtoa huduma kwa saa hiyo, na kuacha funguo B na C zikiwa zimezuiwa hadi dirisha liwekwe upya. Injini huzuia hali hii kwa:
+**Tatizo linalotatuliwa:** 67router hupitisha funguo nyingi za API kupitia akaunti ileile ya mtoa huduma wa juu. Bila mantiki ya kushiriki, ongezeko la ghafla la matumizi kutoka kwa ufunguo A linaweza kumaliza kiwango cha mtoa huduma kwa saa hiyo, na kuacha funguo B na C zikiwa zimezuiwa hadi dirisha liwekwe upya. Injini huzuia hali hii kwa:
 
 1. Kufuatilia matumizi endelevu ya kila ufunguo kwa kila kipimo (%, maombi, tokeni, $).
 2. Kutumia algoriti ya mgao wa haki inayohifadhi matumizi ya uwezo: ufunguo unaweza kukopa kutoka kwa migawo isiyotumika mradi hazina ya jumla haijafikia ukomo.
@@ -106,7 +106,7 @@ Kiendeshaji cha Redis: hati ya Lua EVAL kwa ongezeko atomiki — hutekelezwa kam
 
 - Jedwali: `quota_consumption` (tazama uhamishaji `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Inafaa zaidi kwa uwekaji wa nakala moja.
-- Udumishaji wote wa data upo katika DB iliyopo ya OmniRoute SQLite (`DATA_DIR/storage.sqlite`).
+- Udumishaji wote wa data upo katika DB iliyopo ya 67router SQLite (`DATA_DIR/storage.sqlite`).
 
 ### Redis (hiari, nakala nyingi)
 

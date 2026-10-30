@@ -5,7 +5,7 @@
 ---
 
 Wannan takarda tana bayyana tushen daidaita zaɓin hanya bisa ra'ayoyin sakamako da aka ƙara wa
-OmniRoute. An tsara shi da gangan ya zama ƙarami: yana gabatar da tashar sakamakon zaɓin hanya
+67router. An tsara shi da gangan ya zama ƙarami: yana gabatar da tashar sakamakon zaɓin hanya
 mai nau'i, siginar inganci ta kan-layi da ke ciyar da mai ƙididdige auto-combo da ake da shi, mai
 fitar da bayanai zuwa OpenTelemetry na zaɓi, da kuma maƙurar bayani. **Ba ya**
 maye gurbin tsarin juriya da ake da shi (circuit breaker, sanyaya haɗi,
@@ -13,7 +13,7 @@ kulle samfur, health matrix, autopilot) — yana ƙara masa ƙarfi ne.
 
 ## 1. Mahallin gine-gine
 
-OmniRoute matakin bayanai ne mai **hanyar buƙata mai sauri** da kuma **matakin sarrafawa/basira**.
+67router matakin bayanai ne mai **hanyar buƙata mai sauri** da kuma **matakin sarrafawa/basira**.
 Dole ne hanyar mai sauri ta ci gaba da kasancewa mai sauri, mai ingantaccen amfani da ƙwaƙwalwa,
 asynchronous, mai juriya kuma mai sauƙin hasashen hali. Kimantawa, ƙididdige inganci, gwaje-gwaje
 da nazarin tarihi suna cikin matakin sarrafawa.
@@ -23,7 +23,7 @@ Wakilin AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   matakin bayanai (mai sauri, sync, cikin ƙwaƙwalwa)
+│    67router        │   matakin bayanai (mai sauri, sync, cikin ƙwaƙwalwa)
 │  zaɓin hanya / sauyawa│
 │  lafiya / kariya    │
 │  ma'ajiyar wucin gadi / yaɗawa │
@@ -238,7 +238,7 @@ Fayiloli: `open-sse/services/routing/otel.ts`
 - Spans suna bin ƙa'idodin ma'ana na GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) tare da siffofin routing
-  na OmniRoute (sakamako, matsayi, ttft, sake-gwadawa, fallback).
+  na 67router (sakamako, matsayi, ttft, sake-gwadawa, fallback).
 - `record()` kawai yana saka abubuwa cikin buffer mai iyaka (O(1)); timer da ke aiki a bango
   yana tura su ta `POST {endpoint}/v1/traces` ba tare da jira ba. Idan nauyi ya yi yawa,
   ana zubar da tsofaffin events (`dropped` counter) — ba a taɓa sanya backpressure a kan
@@ -259,7 +259,7 @@ Fayiloli: `open-sse/services/routing/otel.ts`
 
 ## 6. Haɗewar evaluation-plane (shirye-shiryen Future AGI)
 
-OmniRoute yana ɗaukar Future AGI (ko duk wani evaluator) a matsayin **mai yiwuwar
+67router yana ɗaukar Future AGI (ko duk wani evaluator) a matsayin **mai yiwuwar
 backend na hankali/kimantawa, ba dependency ba**. Mahadodin su ne:
 
 - `RoutingEventSink` zai iya tura events zuwa evaluator ba tare da jira ba.

@@ -6,7 +6,7 @@
 
 # Udaljeni način rada
 
-Pokrenite `omniroute` CLI na svom laptopu dok OmniRoute sam radi negdje drugdje
+Pokrenite `omniroute` CLI na svom laptopu dok 67router sam radi negdje drugdje
 (VPS, kućni server, druga mašina na vašem Tailnet-u). Prijavite se jednom pomoću
 `omniroute connect`, i od tada **svaka** CLI komanda cilja taj udaljeni
 server — iste komande, isti izlaz, samo izvršene na udaljenom serveru.
@@ -26,7 +26,7 @@ omniroute configure codex                # ← zapisuje lokalni Codex profil iz 
 ## Kako to radi
 
 ```
-vaš laptop                               udaljeni OmniRoute (VPS)
+vaš laptop                               udaljeni 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (lozinka → token)         │
 │  kontekst: vps     │ ───────────────►  │ kreira pristupni token sa     │
@@ -100,11 +100,11 @@ Token sa nedovoljnim opsegom dobija `403` sa jasnom porukom.
 
 ## Povezivanje Antigravity na udaljenoj instalaciji
 
-Antigravity koristi Googleov `firstparty/nativeapp` ekran za saglasnost. Google izdaje autorizacioni kod samo kada je **loopback preusmjeravanje** (`http://127.0.0.1:<port>/callback`) **dostupno iz pretraživača koji odobrava prijavu**. Na udaljenoj VPS instalaciji, ta povratna petlja (loopback) se nalazi na serveru, a ne na vašem računaru, tako da se ekran za saglasnost **zaledi zauvijek i nikada ne izda kod** — uobičajena rezervna opcija "zalijepi URL povratnog poziva" (paste the callback URL) nema šta da zalijepi. (Ovo je ograničenje na strani Googlea: isto zaleđivanje se dešava u bilo kojem proksiju koji koristi ugrađeni Antigravity desktop klijent, ne samo u OmniRoute-u.)
+Antigravity koristi Googleov `firstparty/nativeapp` ekran za saglasnost. Google izdaje autorizacioni kod samo kada je **loopback preusmjeravanje** (`http://127.0.0.1:<port>/callback`) **dostupno iz pretraživača koji odobrava prijavu**. Na udaljenoj VPS instalaciji, ta povratna petlja (loopback) se nalazi na serveru, a ne na vašem računaru, tako da se ekran za saglasnost **zaledi zauvijek i nikada ne izda kod** — uobičajena rezervna opcija "zalijepi URL povratnog poziva" (paste the callback URL) nema šta da zalijepi. (Ovo je ograničenje na strani Googlea: isto zaleđivanje se dešava u bilo kojem proksiju koji koristi ugrađeni Antigravity desktop klijent, ne samo u 67router-u.)
 
 Kontrolna tabla ovo detektuje prije nego što se zaglavite: otvaranje **Providers → Antigravity → Connect** sa adrese koja nije localhost zamjenjuje generičko obavještenje "kopiraj URL povratnog poziva" sa dva rješenja ispod, od kojih svako već ima popunjen vaš host i port. (LAN adresa se računa — `192.168.x.x` nije localhost što se tiče ovog povratnog poziva.)
 
-Postoje dva podržana načina za povezivanje Antigravity-ja na udaljeni OmniRoute.
+Postoje dva podržana načina za povezivanje Antigravity-ja na udaljeni 67router.
 
 ### Opcija A — lokalni pomoćnik za prijavu (preporučeno)
 
@@ -132,7 +132,7 @@ npx omniroute login antigravity --no-push
 #   omniroute-cred-v1.eyJ2IjoxLCJ...
 ```
 
-Zatim, na **udaljenoj** kontrolnoj tabli: **Providers → Antigravity → Connect**, i zalijepite `omniroute-cred-v1.…` blob u polje **Step 2** (prihvata ili URL povratnog poziva ili blob akreditiva). OmniRoute ga dekodira, pokreće Cloud Code onboarding na strani servera i trajno čuva konekciju.
+Zatim, na **udaljenoj** kontrolnoj tabli: **Providers → Antigravity → Connect**, i zalijepite `omniroute-cred-v1.…` blob u polje **Step 2** (prihvata ili URL povratnog poziva ili blob akreditiva). 67router ga dekodira, pokreće Cloud Code onboarding na strani servera i trajno čuva konekciju.
 
 > Blob sadrži refresh token — tretirajte ga kao lozinku. Na putanji push-a, on se šalje jednom preko autentifikovane konekcije vašeg konteksta; na putanji lijepljenja, preko konekcije vaše kontrolne table. U svakom slučaju, on se čuva šifrovano u stanju mirovanja (at rest), a uspješan push ga nikada ne ispisuje u vašem terminalu.
 
@@ -159,7 +159,7 @@ Za razliku od provajdera sa fiksnom povratnom petljom (fixed-loopback) ispod, **
 
 ## Povezivanje Codex / Grok na udaljenoj instalaciji (provajderi sa fiksiranim loopback-om)
 
-Codex, xAI (`xai-oauth`) i Grok CLI (`grok-cli`) registruju **fiksirani** loopback `redirect_uri` kod svoje upstream OAuth aplikacije. OmniRoute to ne može promijeniti — provajder uvijek šalje pretraživač nazad na istu hardkodiranu adresu:
+Codex, xAI (`xai-oauth`) i Grok CLI (`grok-cli`) registruju **fiksirani** loopback `redirect_uri` kod svoje upstream OAuth aplikacije. 67router to ne može promijeniti — provajder uvijek šalje pretraživač nazad na istu hardkodiranu adresu:
 
 | Provajder   | Fiksirani callback na koji provajder preusmjerava |
 | ----------- | ------------------------------------------------- |
@@ -167,7 +167,7 @@ Codex, xAI (`xai-oauth`) i Grok CLI (`grok-cli`) registruju **fiksirani** loopba
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                 |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                 |
 
-`localhost` ovdje znači **mašinu na kojoj se pokreće pretraživač**, dok OmniRoute-ov PKCE callback server osluškuje na loopback-u **servera**. Otvorite kontrolnu tablu na LAN adresi kao što je `http://192.168.0.15:20128` i njih dvoje se nikada ne susretnu: autorizacioni kod se isporučuje na `localhost:1455` vašeg laptopa, gdje ništa ne osluškuje, a provajder ne uspijeva da izvrši prijavu bez prikazivanja greške.
+`localhost` ovdje znači **mašinu na kojoj se pokreće pretraživač**, dok 67router-ov PKCE callback server osluškuje na loopback-u **servera**. Otvorite kontrolnu tablu na LAN adresi kao što je `http://192.168.0.15:20128` i njih dvoje se nikada ne susretnu: autorizacioni kod se isporučuje na `localhost:1455` vašeg laptopa, gdje ništa ne osluškuje, a provajder ne uspijeva da izvrši prijavu bez prikazivanja greške.
 
 Kontrolna tabla ovo detektuje prije otvaranja iskačućeg prozora i prikazuje komandu za tunel umjesto da dozvoli da prijava neuspješno prođe tiho (#8046).
 
@@ -181,7 +181,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 
 Potrebna su dva prosljeđivanja, a prosljeđivanje samo jednog i dalje ne uspijeva:
 
-- **`20128`** (port kontrolne table) čini porijeklo pravim localhost-om, što je ono što uopšte tjera OmniRoute da pokrene PKCE callback server — LAN porijeklo nikada ne stiže do te grane.
+- **`20128`** (port kontrolne table) čini porijeklo pravim localhost-om, što je ono što uopšte tjera 67router da pokrene PKCE callback server — LAN porijeklo nikada ne stiže do te grane.
 - **`1455`** (fiksirani callback port provajdera) je mjesto na koje se pretraživač vraća; on mora proći kroz tunel do loopback-a servera.
 
 Zamijenite `1455` sa `56121`/`56122` kada povezujete xAI ili Grok CLI, a `20128` sa vašim stvarnim portom kontrolne table. Držite tunel otvorenim dok se veza ne prikaže kao aktivna.
@@ -290,7 +290,7 @@ omniroute contexts current         # aktivni server, status autentifikacije, ops
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

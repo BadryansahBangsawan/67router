@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (မြန်မာ)
+# 🌐 67router Proxy Guide (မြန်မာ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **ပထဝီဝင်ဆိုင်ရာ ပိတ်ပင်မှုများကို ကျော်လွှားပါ၊ သင့်အထောက်အထားကို ကာကွယ်ပါ၊ ထို့ပြင် AI traffic ကို မည်သည့် proxy မှတစ်ဆင့်မဆို စီစဉ်သတ်မှတ်မှု ရှုပ်ထွေးခြင်း လုံးဝမရှိဘဲ လမ်းကြောင်းပေးပို့ပါ။**
 
-OmniRoute တွင် upstream AI provider traffic ကို HTTP၊ HTTPS သို့မဟုတ် SOCKS5 proxy များမှတစ်ဆင့် လမ်းကြောင်းပေးပို့နိုင်စေသည့် လုပ်ဆောင်ချက်အပြည့်အစုံပါဝင်သော proxy စီမံခန့်ခွဲမှုစနစ်တစ်ခု ပါရှိသည်။ သင်သည် ပိတ်ပင်ထားသော ဒေသတစ်ခုတွင် ရှိနေသည်ဖြစ်စေ၊ IP လှည့်လည်အသုံးပြုမှု လိုအပ်သည်ဖြစ်စေ၊ မမြင်သာသော fingerprinting ကို အသုံးပြုလိုသည်ဖြစ်စေ — ဤလမ်းညွှန်တွင် အားလုံးကို ဖော်ပြထားသည်။
+67router တွင် upstream AI provider traffic ကို HTTP၊ HTTPS သို့မဟုတ် SOCKS5 proxy များမှတစ်ဆင့် လမ်းကြောင်းပေးပို့နိုင်စေသည့် လုပ်ဆောင်ချက်အပြည့်အစုံပါဝင်သော proxy စီမံခန့်ခွဲမှုစနစ်တစ်ခု ပါရှိသည်။ သင်သည် ပိတ်ပင်ထားသော ဒေသတစ်ခုတွင် ရှိနေသည်ဖြစ်စေ၊ IP လှည့်လည်အသုံးပြုမှု လိုအပ်သည်ဖြစ်စေ၊ မမြင်သာသော fingerprinting ကို အသုံးပြုလိုသည်ဖြစ်စေ — ဤလမ်းညွှန်တွင် အားလုံးကို ဖော်ပြထားသည်။
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute Server                        │
+│                       67router Server                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Proxy       │    │ Proxy        │    │ Proxy            │  │
@@ -82,7 +82,7 @@ unsupported_country_region_territory
 
 ## အဆင့် 4 ဆင့်ပါ Proxy စနစ်
 
-OmniRoute သည် **သီးခြားလွတ်လပ်သော နယ်ပယ်လေးခု** တွင် proxy သတ်မှတ်ခြင်းကို ပံ့ပိုးပေးပြီး ဦးစားပေးအစီအစဉ်အတိုင်း ဖြေရှင်းရွေးချယ်ပါသည်-
+67router သည် **သီးခြားလွတ်လပ်သော နယ်ပယ်လေးခု** တွင် proxy သတ်မှတ်ခြင်းကို ပံ့ပိုးပေးပြီး ဦးစားပေးအစီအစဉ်အတိုင်း ဖြေရှင်းရွေးချယ်ပါသည်-
 
 ```
 ဦးစားပေး ဖြေရှင်းရွေးချယ်မှု အစီအစဉ် (အမြင့်ဆုံး → အနိမ့်ဆုံး)-
@@ -95,7 +95,7 @@ OmniRoute သည် **သီးခြားလွတ်လပ်သော နယ
 
 ### ဖြေရှင်းရွေးချယ်ပုံ
 
-OmniRoute က upstream provider တစ်ခုထံ request ပေးပို့သည့်အခါ အဆင့်တစ်ခုချင်းစီကို အစဉ်လိုက် စစ်ဆေးသည့် `resolveProxyForConnectionFromRegistry()` ကို ခေါ်ဆိုပါသည်-
+67router က upstream provider တစ်ခုထံ request ပေးပို့သည့်အခါ အဆင့်တစ်ခုချင်းစီကို အစဉ်လိုက် စစ်ဆေးသည့် `resolveProxyForConnectionFromRegistry()` ကို ခေါ်ဆိုပါသည်-
 
 1. **အကောင့်အဆင့်** — ဤသီးခြား connection ID အတွက် proxy သတ်မှတ်ထားပါသလား။
 2. **Provider အဆင့်** — ဤ provider (ဥပမာ၊ `openai`) အတွက် proxy သတ်မှတ်ထားပါသလား။
@@ -237,7 +237,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### တင်သွင်းခြင်း/ထုတ်ယူခြင်း
 
-Proxy များကို **Backup/Restore** စနစ်တွင် ထည့်သွင်းထားပါသည်။ သင့် OmniRoute configuration ကို ထုတ်ယူသည့်အခါ-
+Proxy များကို **Backup/Restore** စနစ်တွင် ထည့်သွင်းထားပါသည်။ သင့် 67router configuration ကို ထုတ်ယူသည့်အခါ-
 
 1. **Dashboard → Settings → Backup** သို့ သွားပါ
 2. **Export** ကို နှိပ်ပါ — proxy registry နှင့် သတ်မှတ်ချိတ်ဆက်ထားမှုများ ပါဝင်သည်
@@ -247,7 +247,7 @@ Proxy registry သည် **host+port ဖြင့် upsert လုပ်ခြ�
 
 ### အဟောင်းစနစ်မှ ပြောင်းရွှေ့ခြင်း
 
-ဗားရှင်းအဟောင်း (registry မတိုင်မီ) တွင် proxy များကို သတ်မှတ်ပြင်ဆင်ထားခဲ့ပါက OmniRoute သည် ၎င်းတို့ကို အလိုအလျောက် ပြောင်းရွှေ့ပေးသည်-
+ဗားရှင်းအဟောင်း (registry မတိုင်မီ) တွင် proxy များကို သတ်မှတ်ပြင်ဆင်ထားခဲ့ပါက 67router သည် ၎င်းတို့ကို အလိုအလျောက် ပြောင်းရွှေ့ပေးသည်-
 
 ```
 အဟောင်း key_value သိုလှောင်မှု → proxy_registry + proxy_assignments
@@ -261,7 +261,7 @@ Proxy registry သည် **host+port ဖြင့် upsert လုပ်ခြ�
 
 > 🆕 **[@oyi77](https://github.com/oyi77) မှ ပါဝင်ပံ့ပိုးထားသည်** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Issue [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute သည် ကမ္ဘာတစ်ဝန်းမှ **အခမဲ့ဖြစ်ပြီး စစ်ဆေးအတည်ပြုထားသော proxy ရာပေါင်းများစွာ** ကို အသုံးပြုနိုင်ရန် **[1proxy](https://1proxy-api.aitradepulse.com)** ကွန်မြူနတီပလက်ဖောင်းနှင့် ပေါင်းစပ်ထားသည်။ ကိုယ်ပိုင် proxy အခြေခံအဆောက်အအုံမရှိသော အသုံးပြုသူများအတွက် အထူးသင့်လျော်သည်။
+67router သည် ကမ္ဘာတစ်ဝန်းမှ **အခမဲ့ဖြစ်ပြီး စစ်ဆေးအတည်ပြုထားသော proxy ရာပေါင်းများစွာ** ကို အသုံးပြုနိုင်ရန် **[1proxy](https://1proxy-api.aitradepulse.com)** ကွန်မြူနတီပလက်ဖောင်းနှင့် ပေါင်းစပ်ထားသည်။ ကိုယ်ပိုင် proxy အခြေခံအဆောက်အအုံမရှိသော အသုံးပြုသူများအတွက် အထူးသင့်လျော်သည်။
 
 ### အလုပ်လုပ်ပုံ
 
@@ -272,7 +272,7 @@ OmniRoute သည် ကမ္ဘာတစ်ဝန်းမှ **အခမဲ့
 └─────────────┘                     └─────────────────┘                  └────────────┘
 ```
 
-1. **တစ်ပြေးညီလုပ်ခြင်း** — OmniRoute သည် 1proxy API မှ စစ်ဆေးအတည်ပြုထားသော proxy များကို ရယူသည်
+1. **တစ်ပြေးညီလုပ်ခြင်း** — 67router သည် 1proxy API မှ စစ်ဆေးအတည်ပြုထားသော proxy များကို ရယူသည်
 2. **သိမ်းဆည်းခြင်း** — Proxy များကို `source = 'oneproxy'` ဖြင့် တူညီသော `proxy_registry` ဇယားထဲတွင် သိမ်းဆည်းသည်
 3. **စစ်ထုတ်ခြင်း** — Protocol၊ နိုင်ငံနှင့် အရည်အသွေးရမှတ်တို့အလိုက် စစ်ထုတ်သည်
 4. **အလှည့်ကျအသုံးပြုခြင်း** — အရည်အသွေးအလိုက်၊ ကျပန်း သို့မဟုတ် အစဉ်လိုက် နည်းဗျူဟာများကို အသုံးပြုပြီး အကောင်းဆုံး proxy ကို ရွေးချယ်သည်
@@ -372,7 +372,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## ရှာဖွေဖော်ထုတ်မှု တားဆီးခြင်းနှင့် ခြေရာဖျောက်ခြင်း
 
-OmniRoute သည် traffic ကို proxy မှတစ်ဆင့် လမ်းကြောင်းပြောင်းပေးရုံသာမက traffic ကို တရားဝင်အသုံးပြုမှုကဲ့သို့ မြင်ရအောင်လည်း ပြုလုပ်ပေးသည်-
+67router သည် traffic ကို proxy မှတစ်ဆင့် လမ်းကြောင်းပြောင်းပေးရုံသာမက traffic ကို တရားဝင်အသုံးပြုမှုကဲ့သို့ မြင်ရအောင်လည်း ပြုလုပ်ပေးသည်-
 
 ### TLS Fingerprint အတုယူခြင်း
 
@@ -406,11 +406,11 @@ Dashboard ရှိ အရောင်ခွဲခြားထားသော ba
 
 ## Upstream Proxy Mode များ
 
-CLIProxyAPI pattern ကို အသုံးပြုသည့် provider များအတွက် OmniRoute သည် upstream proxy mode သုံးမျိုးကို ပံ့ပိုးပေးသည်-
+CLIProxyAPI pattern ကို အသုံးပြုသည့် provider များအတွက် 67router သည် upstream proxy mode သုံးမျိုးကို ပံ့ပိုးပေးသည်-
 
 | Mode          | ဖော်ပြချက်                                                                 |
 | ------------- | -------------------------------------------------------------------------- |
-| `native`      | OmniRoute က proxy routing ကို တိုက်ရိုက်ကိုင်တွယ်သည် (မူလသတ်မှတ်ချက်)      |
+| `native`      | 67router က proxy routing ကို တိုက်ရိုက်ကိုင်တွယ်သည် (မူလသတ်မှတ်ချက်)       |
 | `cliproxyapi` | ပြင်ပ CLIProxyAPI instance တစ်ခုထံ လွှဲအပ်သည်                              |
 | `fallback`    | native ကို ဦးစွာ စမ်းသပ်ပြီး မအောင်မြင်ပါက CLIProxyAPI သို့ ပြောင်းသုံးသည် |
 
@@ -475,7 +475,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tunnels API
 
-Traffic ကို proxy မှတစ်ဆင့် အပြင်ဘက်သို့ လမ်းကြောင်းပို့ခြင်းအစား သင့် OmniRoute instance ကို အများသုံးအင်တာနက်သို့ ဖွင့်ပေးရန် (Cloudflare/ngrok/Tailscale) [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) ကို ကြည့်ပါ။ Tunnel REST API သည် `/api/tunnels/{cloudflared,ngrok,tailscale}/*` အောက်တွင် ရှိပြီး အထက်တွင် မှတ်တမ်းတင်ထားသော outbound proxy chain နှင့် သီးခြားလွတ်လပ်စွာ အလုပ်လုပ်သည်။
+Traffic ကို proxy မှတစ်ဆင့် အပြင်ဘက်သို့ လမ်းကြောင်းပို့ခြင်းအစား သင့် 67router instance ကို အများသုံးအင်တာနက်သို့ ဖွင့်ပေးရန် (Cloudflare/ngrok/Tailscale) [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) ကို ကြည့်ပါ။ Tunnel REST API သည် `/api/tunnels/{cloudflared,ngrok,tailscale}/*` အောက်တွင် ရှိပြီး အထက်တွင် မှတ်တမ်းတင်ထားသော outbound proxy chain နှင့် သီးခြားလွတ်လပ်စွာ အလုပ်လုပ်သည်။
 
 ### 1proxy API
 
@@ -515,7 +515,7 @@ Traffic ကို proxy မှတစ်ဆင့် အပြင်ဘက်သ�
 
 ### Proxy မှတစ်ဆင့် ဖြစ်ပေါ်သော "socket hang up" အမှားများ
 
-အလုပ်မလုပ်ဘဲ ရပ်နားနေသော ချိတ်ဆက်မှုများကို ဖြုတ်ချတတ်သည့် ဈေးသက်သာသော proxy များတွင် ဤသည်မှာ ပုံမှန်ဖြစ်သည်။ OmniRoute သည် အောက်ပါနည်းလမ်းများဖြင့် ၎င်းကို ကိုင်တွယ်ထားပြီးဖြစ်သည်-
+အလုပ်မလုပ်ဘဲ ရပ်နားနေသော ချိတ်ဆက်မှုများကို ဖြုတ်ချတတ်သည့် ဈေးသက်သာသော proxy များတွင် ဤသည်မှာ ပုံမှန်ဖြစ်သည်။ 67router သည် အောက်ပါနည်းလမ်းများဖြင့် ၎င်းကို ကိုင်တွယ်ထားပြီးဖြစ်သည်-
 
 - Proxy ချိတ်ဆက်မှုများတွင် keep-alive ကို ပိတ်ခြင်း (`keepAliveTimeout: 1`)
 - Pipelining ကို ပိတ်ခြင်း (`pipelining: 0`)
@@ -525,7 +525,7 @@ Traffic ကို proxy မှတစ်ဆင့် အပြင်ဘက်သ�
 
 ### OAuth အတွင်း "unsupported_country_region_territory" ဖြစ်ပေါ်ခြင်း
 
-OAuth လုပ်ငန်းစဉ်ကို မစတင်မီ proxy ကို ပြင်ဆင်သတ်မှတ်ထားကြောင်း သေချာပါစေ။ OmniRoute သည် OAuth token လဲလှယ်မှုကို ပြင်ဆင်သတ်မှတ်ထားသော proxy မှတစ်ဆင့် လမ်းကြောင်းပေးသည်။ ဦးစွာ global သို့မဟုတ် provider အဆင့် proxy တစ်ခုကို သတ်မှတ်ပြီးနောက် ချိတ်ဆက်ပါ။
+OAuth လုပ်ငန်းစဉ်ကို မစတင်မီ proxy ကို ပြင်ဆင်သတ်မှတ်ထားကြောင်း သေချာပါစေ။ 67router သည် OAuth token လဲလှယ်မှုကို ပြင်ဆင်သတ်မှတ်ထားသော proxy မှတစ်ဆင့် လမ်းကြောင်းပေးသည်။ ဦးစွာ global သို့မဟုတ် provider အဆင့် proxy တစ်ခုကို သတ်မှတ်ပြီးနောက် ချိတ်ဆက်ပါ။
 
 ### Proxy ကို အသုံးမပြုခြင်း
 
@@ -593,7 +593,7 @@ CREATE TABLE proxy_assignments (
 
 ## Proxy အခြေအနေ စစ်ဆေးခြင်း (v3.8.16+)
 
-OmniRoute ၏ **proxy fast-fail** ယန္တရား (`src/lib/proxyHealth.ts`) သည် လျင်မြန်သော TCP ချိတ်ဆက်မှု စစ်ဆေးခြင်းမှတစ်ဆင့် အလုပ်မလုပ်သော proxy များကို <2s အတွင်း ရှာဖွေသိရှိပြီး request တစ်ခုချင်းစီအတွက် ထပ်ဆောင်းလုပ်ဆောင်ရမှုကို ရှောင်ရှားရန် **ရလဒ်ကို cache လုပ်ထားသည်**။
+67router ၏ **proxy fast-fail** ယန္တရား (`src/lib/proxyHealth.ts`) သည် လျင်မြန်သော TCP ချိတ်ဆက်မှု စစ်ဆေးခြင်းမှတစ်ဆင့် အလုပ်မလုပ်သော proxy များကို <2s အတွင်း ရှာဖွေသိရှိပြီး request တစ်ခုချင်းစီအတွက် ထပ်ဆောင်းလုပ်ဆောင်ရမှုကို ရှောင်ရှားရန် **ရလဒ်ကို cache လုပ်ထားသည်**။
 
 ### အလုပ်လုပ်ပုံ
 
@@ -658,11 +658,11 @@ URL အတွင်းရှိ စိတ်ကြိုက် port များ
 
 ## Proxy ခွဲခြမ်းစိတ်ဖြာမှုနှင့် စောင့်ကြည့်လေ့လာနိုင်မှု
 
-OmniRoute သည် အော်ပရေတာများအနေဖြင့် လမ်းကြောင်းရွေးချယ်မှုပုံစံများ၊ latency ရုတ်တရက်မြင့်တက်မှုများနှင့် ထပ်တလဲလဲဖြစ်ပေါ်သော ချို့ယွင်းမှုများကို ရှာဖွေဖော်ထုတ်နိုင်ရန် proxy တစ်ခုချင်းစီ၏ အသုံးပြုမှုကို ခြေရာခံပါသည်။
+67router သည် အော်ပရေတာများအနေဖြင့် လမ်းကြောင်းရွေးချယ်မှုပုံစံများ၊ latency ရုတ်တရက်မြင့်တက်မှုများနှင့် ထပ်တလဲလဲဖြစ်ပေါ်သော ချို့ယွင်းမှုများကို ရှာဖွေဖော်ထုတ်နိုင်ရန် proxy တစ်ခုချင်းစီ၏ အသုံးပြုမှုကို ခြေရာခံပါသည်။
 
 ### ခြေရာခံသည့်အချက်များ
 
-ပြင်ဆင်သတ်မှတ်ထားသော proxy မှတစ်ဆင့် ဖြတ်သန်းသည့် request တိုင်းအတွက် OmniRoute သည် အောက်ပါတို့ကို မှတ်တမ်းတင်ပါသည်-
+ပြင်ဆင်သတ်မှတ်ထားသော proxy မှတစ်ဆင့် ဖြတ်သန်းသည့် request တိုင်းအတွက် 67router သည် အောက်ပါတို့ကို မှတ်တမ်းတင်ပါသည်-
 
 | မက်ထရစ်      | ဖော်ပြချက်                                                       |
 | ------------ | ---------------------------------------------------------------- |
@@ -724,7 +724,7 @@ ORDER BY latency_ms DESC;
 
 ## Rotation မဟာဗျူဟာ ဆုံးဖြတ်ချက်သစ်ပင်
 
-Scope တစ်ခုတွင် proxy အများအပြားကို သတ်မှတ်ထားသောအခါ OmniRoute သည် request တစ်ခုချင်းစီအတွက် မည်သည့် proxy ကို အသုံးပြုမည်ကို ရွေးချယ်ရန် **rotation strategy** ကို အသုံးပြုသည်။ မဟာဗျူဟာကို scope အဆင့်တွင် ပြင်ဆင်သတ်မှတ်သည် (global၊ provider တစ်ခုချင်းစီ၊ account တစ်ခုချင်းစီ၊ combo တစ်ခုချင်းစီ)။
+Scope တစ်ခုတွင် proxy အများအပြားကို သတ်မှတ်ထားသောအခါ 67router သည် request တစ်ခုချင်းစီအတွက် မည်သည့် proxy ကို အသုံးပြုမည်ကို ရွေးချယ်ရန် **rotation strategy** ကို အသုံးပြုသည်။ မဟာဗျူဟာကို scope အဆင့်တွင် ပြင်ဆင်သတ်မှတ်သည် (global၊ provider တစ်ခုချင်းစီ၊ account တစ်ခုချင်းစီ၊ combo တစ်ခုချင်းစီ)။
 
 ### အသုံးပြုနိုင်သော မဟာဗျူဟာများ
 

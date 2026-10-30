@@ -7,7 +7,7 @@
 > **Sumber acuan:** `src/lib/memory/` dan `src/app/api/memory/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40 (dinonaktifkan secara default + penyesuaian kuantisasi int8)
 
-OmniRoute menyediakan memori percakapan persisten yang diidentifikasi berdasarkan kunci API (dan
+67router menyediakan memori percakapan persisten yang diidentifikasi berdasarkan kunci API (dan
 secara opsional id sesi). Memori diekstraksi secara otomatis dari respons LLM
 melalui pencocokan pola regex ringan dan disuntikkan kembali ke permintaan
 berikutnya sebagai pesan sistem di awal (atau pesan pengguna pertama untuk penyedia yang
@@ -624,7 +624,7 @@ dengan cakupannya sendiri (LRU 1.000 entri, TTL default 5 min).
 
 ## Memilih Penyedia Embedding (v3.8.16+)
 
-Mesin memori OmniRoute mendukung **empat sumber embedding** (`src/lib/memory/embedding/`). Masing-masing memiliki kompromi berbeda dalam hal **latensi, biaya, kualitas model, dan kompleksitas penyiapan**.
+Mesin memori 67router mendukung **empat sumber embedding** (`src/lib/memory/embedding/`). Masing-masing memiliki kompromi berbeda dalam hal **latensi, biaya, kualitas model, dan kompleksitas penyiapan**.
 
 ### Sumber Embedding
 
@@ -1045,13 +1045,13 @@ Worker hanya melakukan bind ke loopback, yang sengaja ditolak oleh perlindungan 
 Adaptor ini tidak melonggarkan perlindungan tersebut: host di-hardcode ke `127.0.0.1` dan skema
 konfigurasi (`ClaudeMemBackendConfigSchema`, `.strict()`) hanya menerima:
 
-| Kunci       | Tipe   | Default | Catatan                                                                                                                       |
-| ----------- | ------ | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —       | Wajib, 1024–65535. Port worker claude-mem dari file pengaturannya (default `37700 + uid % 100`).                              |
-| `project`   | string | —       | Proyek claude-mem yang digunakan. Jika tidak diatur → setiap kunci API OmniRoute dipetakan ke proyeknya sendiri (`apiKeyId`). |
-| `timeoutMs` | number | `5000`  | Batas waktu per permintaan, 100–30000.                                                                                        |
+| Kunci       | Tipe   | Default | Catatan                                                                                                                      |
+| ----------- | ------ | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —       | Wajib, 1024–65535. Port worker claude-mem dari file pengaturannya (default `37700 + uid % 100`).                             |
+| `project`   | string | —       | Proyek claude-mem yang digunakan. Jika tidak diatur → setiap kunci API 67router dipetakan ke proyeknya sendiri (`apiKeyId`). |
+| `timeoutMs` | number | `5000`  | Batas waktu per permintaan, 100–30000.                                                                                       |
 
-Aktifkan melalui `PUT /api/settings/memory` dan mulai ulang OmniRoute (backend didaftarkan
+Aktifkan melalui `PUT /api/settings/memory` dan mulai ulang 67router (backend didaftarkan
 sekali, di `initMemoryBackends()`):
 
 ```json
@@ -1068,7 +1068,7 @@ Pemetaan dan batasan:
 
 - ID menggunakan format `claude-mem:<observationId>`; `get`/`delete` mengabaikan ID milik backend lain tanpa
   panggilan jaringan.
-- `create` → `POST /api/memory/save`; bidang OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; bidang 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) disimpan dalam `metadata.omniroute` milik claude-mem dan dipulihkan saat dibaca.
 - `search` → `GET /api/search?format=json&type=observations`, dipangkas hingga `maxTokens`
   (karakter / 4). `list` → endpoint observasi dengan paginasi milik worker (`total` adalah batas bawah — worker
@@ -1080,16 +1080,16 @@ Pemetaan dan batasan:
 - Injeksi prompt (`retrieval.ts`) dan alat MCP `omniroute_memory_*` masih membaca SQLite
   secara langsung — keduanya tidak melalui `memoryManager`, sehingga backend ini tidak memasok data kepada keduanya.
 
-**Merutekan panggilan LLM milik claude-mem melalui OmniRoute.** claude-mem memampatkan observasi
+**Merutekan panggilan LLM milik claude-mem melalui 67router.** claude-mem memampatkan observasi
 menggunakan LLM (default: Claude Agent SDK). Provider `openai-compatible` miliknya dapat diarahkan ke
-OmniRoute sebagai gantinya, sehingga memanfaatkan fallback kombinasi dan pelacakan biaya. Di `~/.claude-mem/settings.json`:
+67router sebagai gantinya, sehingga memanfaatkan fallback kombinasi dan pelacakan biaya. Di `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<kunci API OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<model atau kombinasi OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<kunci API 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<model atau kombinasi 67router>"
 }
 ```
 

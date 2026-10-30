@@ -7,7 +7,7 @@
 > **Fuente de referencia:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Última actualización:** 2026-06-28 — v3.8.40
 
-OmniRoute puede exponer su servidor local (`http://localhost:20128`) a Internet
+67router puede exponer su servidor local (`http://localhost:20128`) a Internet
 mediante tres servicios de túnel. Esto resulta útil para:
 
 - Retrollamadas de OAuth de proveedores en la nube (Antigravity, Gemini, Cursor) que necesitan una
@@ -15,7 +15,7 @@ mediante tres servicios de túnel. Esto resulta útil para:
 - Compartir tu instancia local con compañeros de equipo sin implementar una máquina virtual.
 - Pruebas móviles, remotas o entre redes.
 
-Los tres servicios se gestionan dentro del proceso: OmniRoute inicia y detiene el
+Los tres servicios se gestionan dentro del proceso: 67router inicia y detiene el
 binario o SDK subyacente desde el panel de control o la API REST. No se requiere
 configurar un proxy inverso ni systemd.
 
@@ -41,7 +41,7 @@ dos modos, seleccionados en función de si se proporciona una configuración de 
 http://localhost:<apiPort>` y extrae de stdout la URL `*.trycloudflare.com`
   asignada. Las URL son efímeras y cambian con cada reinicio.
 - **Túnel con nombre (opcional).** Cuando `CLOUDFLARED_CONFIG` apunta a un
-  `config.yml` de cloudflared gestionado localmente, OmniRoute ejecuta `cloudflared tunnel --no-autoupdate
+  `config.yml` de cloudflared gestionado localmente, 67router ejecuta `cloudflared tunnel --no-autoupdate
 --config <path> run`, lo que proporciona un **nombre de host estable y con nombre**. La configuración
   proporciona el UUID del túnel, `credentials-file` y el enrutamiento `ingress`, por lo que no
   se pasa `--url` ni se requiere un token del panel de control de Zero Trust. `run` lee
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` y extrae de stdout la URL `*.trycloudflare.com`
 
 Comportamientos principales:
 
-- **Instalación automática.** En el primer uso, OmniRoute descarga el binario
+- **Instalación automática.** En el primer uso, 67router descarga el binario
   `cloudflared` más reciente de las versiones oficiales de GitHub (la instalación
   gestionada se almacena en `DATA_DIR/cloudflared/`). Antes de ejecutarlo, se verifica
   el SHA256 del recurso descargado comparándolo con el manifiesto de la versión.
@@ -68,7 +68,7 @@ Comportamientos principales:
    ```
 
 2. Crea un archivo `~/.cloudflared/config.yml` que dirija tu nombre de host al puerto
-   de la API local de OmniRoute (20128 de forma predeterminada):
+   de la API local de 67router (20128 de forma predeterminada):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Comportamientos principales:
      - service: http_status:404
    ```
 
-3. Indica a OmniRoute la configuración y (re)inicia el túnel:
+3. Indica a 67router la configuración y (re)inicia el túnel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # opcional: sustituye el nombre de host que comunica OmniRoute; de lo contrario, se lee de la
+   # opcional: sustituye el nombre de host que comunica 67router; de lo contrario, se lee de la
    # primera regla ingress de la configuración:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ O mediante el panel de control: **Settings → Tunnels → Cloudflare**.
 
 ### Variables de entorno opcionales
 
-| Variable                                             | Propósito                                                                                                                                                                                                  |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Sobrescribe la ruta del binario. Si está definida y es válida, OmniRoute la utiliza en lugar de descargarlo.                                                                                               |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protocolo de transporte (valor predeterminado: `http2`; también `quic`, `auto`).                                                                                                                           |
-| `CLOUDFLARED_CONFIG`                                 | Ruta a un archivo `config.yml` de cloudflared administrado localmente. Cuando se define, OmniRoute ejecuta un túnel **con nombre/persistente** (`tunnel --config <path> run`) en lugar de un túnel rápido. |
-| `CLOUDFLARED_HOSTNAME`                               | Sobrescribe el nombre de host público indicado por el túnel con nombre (p. ej., `ai.example.com`). Si no se define, se lee del primer nombre de host de `ingress` en la configuración.                     |
+| Variable                                             | Propósito                                                                                                                                                                                                 |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Sobrescribe la ruta del binario. Si está definida y es válida, 67router la utiliza en lugar de descargarlo.                                                                                               |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protocolo de transporte (valor predeterminado: `http2`; también `quic`, `auto`).                                                                                                                          |
+| `CLOUDFLARED_CONFIG`                                 | Ruta a un archivo `config.yml` de cloudflared administrado localmente. Cuando se define, 67router ejecuta un túnel **con nombre/persistente** (`tunnel --config <path> run`) en lugar de un túnel rápido. |
+| `CLOUDFLARED_HOSTNAME`                               | Sobrescribe el nombre de host público indicado por el túnel con nombre (p. ej., `ai.example.com`). Si no se define, se lee del primer nombre de host de `ingress` en la configuración.                    |
 
 ## 2. ngrok
 
@@ -173,7 +173,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 La respuesta incluye la `publicUrl` asignada (por ejemplo,
 `https://abcd-1234.ngrok-free.app`). Los dominios personalizados, las regiones
-y las reglas de políticas deben configurarse en el panel de ngrok; OmniRoute
+y las reglas de políticas deben configurarse en el panel de ngrok; 67router
 solo reenvía la URL de destino local al SDK.
 
 ## 3. Tailscale Funnel
@@ -188,15 +188,15 @@ La URL pública tiene el formato `https://<machine>.<tailnet>.ts.net/`.
 
 ### Requisitos previos
 
-1. Instala Tailscale (o deja que OmniRoute lo haga; consulta el endpoint
+1. Instala Tailscale (o deja que 67router lo haga; consulta el endpoint
    `install` a continuación).
-2. Inicia sesión (`tailscale login` o mediante el endpoint `login` de OmniRoute).
+2. Inicia sesión (`tailscale login` o mediante el endpoint `login` de 67router).
 3. Activa Funnel para tu tailnet en la consola de administración de Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
 En Linux y macOS, el daemon (`tailscaled`) requiere `sudo` para su control. Los
 endpoints POST aceptan un campo opcional `sudoPassword`, que se reenvía a la
-caché de contraseñas MITM de OmniRoute (`getCachedPassword` /
+caché de contraseñas MITM de 67router (`getCachedPassword` /
 `setCachedPassword`) durante la llamada. Windows utiliza la instalación de
 servicio predeterminada en `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -258,7 +258,7 @@ independiente.
 
 ## Consideraciones sobre la devolución de llamada de OAuth
 
-Cuando exponga OmniRoute mediante un túnel, el panel y los flujos de OAuth deben
+Cuando exponga 67router mediante un túnel, el panel y los flujos de OAuth deben
 crear las URL de devolución de llamada usando el nombre de host **público**, no
 `localhost`. De lo contrario, el proveedor de OAuth redirige al usuario a una
 URL a la que sus servidores no pueden acceder y el protocolo de enlace falla.
@@ -275,7 +275,7 @@ Establezca:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-y reinicie OmniRoute antes de iniciar OAuth. En los Cloudflare Quick Tunnels
+y reinicie 67router antes de iniciar OAuth. En los Cloudflare Quick Tunnels
 efímeros, la URL cambia después de cada reinicio, por lo que para el uso de OAuth
 en producción es preferible usar ngrok con un dominio reservado o Tailscale
 Funnel.
@@ -292,13 +292,13 @@ El panel muestra el estado de los túneles en **Configuración → Túneles**:
 
 Para la monitorización programática, consulte periódicamente los endpoints `GET`
 de cada backend. Se permite ejecutar más de un backend simultáneamente;
-OmniRoute realizará el seguimiento de cada uno de forma independiente.
+67router realizará el seguimiento de cada uno de forma independiente.
 
 ## Solución de problemas
 
 ### «No se encontró el binario cloudflared»
 
-OmniRoute intenta instalarlo automáticamente la primera vez que se utiliza. Si
+67router intenta instalarlo automáticamente la primera vez que se utiliza. Si
 la instalación está bloqueada (red restringida o sin acceso a GitHub), descargue
 `cloudflared` manualmente desde
 <https://github.com/cloudflare/cloudflared/releases> y establezca

@@ -204,13 +204,13 @@ const safe = String(err).split("\n")[0];
 3. จำกัดความลึก: การซ้อนเกิน 4 ระดับจะถูกแทนที่ด้วย string `"[truncated]"`
 4. จำกัด array ไว้ที่ 32 element
 
-เฉพาะ call site ที่มี body ข้อผิดพลาดจาก provider ซึ่ง parse แล้วเท่านั้นที่ควรส่ง `upstreamDetails` ข้อผิดพลาดภายในของ OmniRoute (การ parse SSE ล้มเหลว, content ว่างเปล่า, การบล็อกโดย guardrail) ต้องไม่รวมข้อมูลนี้
+เฉพาะ call site ที่มี body ข้อผิดพลาดจาก provider ซึ่ง parse แล้วเท่านั้นที่ควรส่ง `upstreamDetails` ข้อผิดพลาดภายในของ 67router (การ parse SSE ล้มเหลว, content ว่างเปล่า, การบล็อกโดย guardrail) ต้องไม่รวมข้อมูลนี้
 
 ห้ามส่ง `err.stack`, `err.message` แบบดิบ หรือ string ใดๆ จาก runtime exception ไปยัง
 `upstreamDetails` ค่าเหล่านั้นยังคงต้องผ่าน `errorResponse` / `buildErrorBody(code, msg)`
 โดยไม่มี upstream body
 
-การส่งผ่าน upstream 4xx แบบเลือกเฉพาะกรณีจะคงรูปแบบ JSON ที่ปลอดภัยและถ้อยคำของ provider ซึ่งจำเป็นต่อการกู้คืนอัตโนมัติของ client แต่ไม่ใช่การส่งผ่านแบบตรงกันทุก byte: recursive sanitizer จะทำงานก่อน serialization เสมอ body ที่เป็น cyclic, มี BigInt หรือมี `toJSON()` ที่เป็นอันตรายจะถูกปฏิเสธอย่างปลอดภัยและไม่มีสิทธิ์ส่งผ่าน OCR และ moderation ใช้กฎเดียวกัน ส่วน upstream body ที่ไม่ใช่ JSON ว่างเปล่า หรือติด label ผิด จะถูกแปลงเป็น envelope ข้อผิดพลาด JSON มาตรฐานของ OmniRoute
+การส่งผ่าน upstream 4xx แบบเลือกเฉพาะกรณีจะคงรูปแบบ JSON ที่ปลอดภัยและถ้อยคำของ provider ซึ่งจำเป็นต่อการกู้คืนอัตโนมัติของ client แต่ไม่ใช่การส่งผ่านแบบตรงกันทุก byte: recursive sanitizer จะทำงานก่อน serialization เสมอ body ที่เป็น cyclic, มี BigInt หรือมี `toJSON()` ที่เป็นอันตรายจะถูกปฏิเสธอย่างปลอดภัยและไม่มีสิทธิ์ส่งผ่าน OCR และ moderation ใช้กฎเดียวกัน ส่วน upstream body ที่ไม่ใช่ JSON ว่างเปล่า หรือติด label ผิด จะถูกแปลงเป็น envelope ข้อผิดพลาด JSON มาตรฐานของ 67router
 
 ## ข้อจำกัดที่ทราบของ CodeQL: ไม่รู้จักตัวกรองข้อมูลแบบกำหนดเอง
 

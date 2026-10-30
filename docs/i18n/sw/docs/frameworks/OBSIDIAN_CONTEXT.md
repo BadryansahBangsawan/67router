@@ -13,7 +13,7 @@
 
 ## Ni nini
 
-OmniRoute huunganishwa na vault ya **Obsidian** kama **chanzo cha muktadha** — hifadhi ya maarifa
+67router huunganishwa na vault ya **Obsidian** kama **chanzo cha muktadha** — hifadhi ya maarifa
 ya ndani ya Markdown ambayo mawakala huisoma na kuiandikia kupitia seva ya MCP iliyojengewa ndani.
 Muunganisho huu huwasiliana na programu-jalizi ya jumuiya ya **Obsidian Local REST API** inayoendeshwa
 ndani ya programu ya eneo-kazi, ili mawakala waweze kutafuta madokezo, kusoma/kuandika/kurekebisha faili,
@@ -76,7 +76,7 @@ na huthibitisha tokeni kwa kuita endpoint ya hali ya Local REST API kabla ya kui
 ### Ulandanishaji wa vault wa WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` hudhibiti ulandanishaji wa hiari wa
-vault unaotumia WebDAV (unaoendeshwa na `src/lib/obsidianSync.ts`). Kuuwezesha huielekeza OmniRoute kwenye
+vault unaotumia WebDAV (unaoendeshwa na `src/lib/obsidianSync.ts`). Kuuwezesha huielekeza 67router kwenye
 saraka ya vault ya ndani na huzalisha jozi nasibu ya jina la mtumiaji/nenosiri la WebDAV:
 
 ```bash
@@ -112,26 +112,26 @@ Zana nne za `obsidian_sync_*` hudumisha tabia yake tofauti ya tokeni ya ulandani
 
 Zimefafanuliwa katika `open-sse/mcp-server/tools/obsidianTools.ts`. Tokeni/URL-msingi hutatuliwa
 kwa kila mwito (ya ufunguo wa API kwanza, kisha ya jumla). Zana zinazofikia **seva ya usawazishaji**
-ya OmniRoute (zana nne za `obsidian_sync_*`) pia zinahitaji tokeni ya uthibitishaji wa usawazishaji iliyosanidiwa
-katika mipangilio ya OmniRoute.
+ya 67router (zana nne za `obsidian_sync_*`) pia zinahitaji tokeni ya uthibitishaji wa usawazishaji iliyosanidiwa
+katika mipangilio ya 67router.
 
 ### Zana za kusoma (`read:obsidian`)
 
-| Zana                         | Maelezo                                                                                                                     |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Angalia kama Local REST API inaweza kufikiwa na imethibitishwa.                                                             |
-| `obsidian_search_simple`     | Utafutaji wa maandishi yote katika maudhui ya madokezo; hurejesha vijisehemu pamoja na njia za faili.                       |
-| `obsidian_search_structured` | Tafuta kwa kutumia usemi wa JSON Logic (vichujio vya and/or/regex/path).                                                    |
-| `obsidian_read_note`         | Soma dokezo kwa njia inayohusiana na vault; kwa hiari kichwa/sehemu/frontmatter mahususi.                                   |
-| `obsidian_list_vault`        | Orodhesha faili na saraka katika vault (mti wa vipengee).                                                                   |
-| `obsidian_get_document_map`  | Pata muundo wa vichwa wa dokezo kama ramani ya vichwa → nambari za mistari.                                                 |
-| `obsidian_get_note_metadata` | Pata frontmatter, lebo, viungo, na idadi ya herufi/maneno bila maudhui kamili.                                              |
-| `obsidian_get_active_file`   | Pata njia + maudhui ya faili inayotumika kwa sasa katika Obsidian.                                                          |
-| `obsidian_get_periodic_note` | Pata dokezo la mara kwa mara la kila siku/kila wiki/kila mwezi kwa tarehe fulani (leo ikiwa imeachwa).                      |
-| `obsidian_get_tags`          | Orodhesha lebo zote za vault pamoja na masafa yake.                                                                         |
-| `obsidian_list_commands`     | Orodhesha vitambulisho vya amri vya Obsidian vinavyopatikana (tumia pamoja na `obsidian_execute_command`).                  |
-| `obsidian_sync_status`       | Hali ya seva ya usawazishaji ya OmniRoute: inaendeshwa, jina la vault, porti, muda wa kufanya kazi, usawazishaji wa mwisho. |
-| `obsidian_sync_conflicts`    | Orodhesha migongano ya usawazishaji ambayo haijatatuliwa (njia, njia ya mgongano, muda wa kugunduliwa).                     |
+| Zana                         | Maelezo                                                                                                                    |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Angalia kama Local REST API inaweza kufikiwa na imethibitishwa.                                                            |
+| `obsidian_search_simple`     | Utafutaji wa maandishi yote katika maudhui ya madokezo; hurejesha vijisehemu pamoja na njia za faili.                      |
+| `obsidian_search_structured` | Tafuta kwa kutumia usemi wa JSON Logic (vichujio vya and/or/regex/path).                                                   |
+| `obsidian_read_note`         | Soma dokezo kwa njia inayohusiana na vault; kwa hiari kichwa/sehemu/frontmatter mahususi.                                  |
+| `obsidian_list_vault`        | Orodhesha faili na saraka katika vault (mti wa vipengee).                                                                  |
+| `obsidian_get_document_map`  | Pata muundo wa vichwa wa dokezo kama ramani ya vichwa → nambari za mistari.                                                |
+| `obsidian_get_note_metadata` | Pata frontmatter, lebo, viungo, na idadi ya herufi/maneno bila maudhui kamili.                                             |
+| `obsidian_get_active_file`   | Pata njia + maudhui ya faili inayotumika kwa sasa katika Obsidian.                                                         |
+| `obsidian_get_periodic_note` | Pata dokezo la mara kwa mara la kila siku/kila wiki/kila mwezi kwa tarehe fulani (leo ikiwa imeachwa).                     |
+| `obsidian_get_tags`          | Orodhesha lebo zote za vault pamoja na masafa yake.                                                                        |
+| `obsidian_list_commands`     | Orodhesha vitambulisho vya amri vya Obsidian vinavyopatikana (tumia pamoja na `obsidian_execute_command`).                 |
+| `obsidian_sync_status`       | Hali ya seva ya usawazishaji ya 67router: inaendeshwa, jina la vault, porti, muda wa kufanya kazi, usawazishaji wa mwisho. |
+| `obsidian_sync_conflicts`    | Orodhesha migongano ya usawazishaji ambayo haijatatuliwa (njia, njia ya mgongano, muda wa kugunduliwa).                    |
 
 ### Zana za kuandika (`write:obsidian`)
 

@@ -215,7 +215,7 @@ Rialacha sláintithe a chuirtear i bhfeidhm ar `upstreamDetails`:
 3. Uasteorainn doimhneachta: cuirtear an teaghrán `"[truncated]"` in ionad neadaithe thar 4 leibhéal.
 4. Tá eagar teoranta do 32 eilimint.
 
-Níor cheart ach do shuíomhanna glao a bhfuil corp earráide parsáilte ón soláthraí acu `upstreamDetails` a chur ar aghaidh. Níor cheart é a áireamh le hearráidí inmheánacha OmniRoute
+Níor cheart ach do shuíomhanna glao a bhfuil corp earráide parsáilte ón soláthraí acu `upstreamDetails` a chur ar aghaidh. Níor cheart é a áireamh le hearráidí inmheánacha 67router
 (teipeanna parsála SSE, ábhar folamh, blocálacha ráille cosanta).
 
 NÁ cuir `err.stack`, `err.message` amh, ná aon teaghrán ó eisceacht am rite ar aghaidh chuig
@@ -226,7 +226,7 @@ Caomhnaíonn cur ar aghaidh roghnaitheach 4xx réamhtheachtach cruth sábháilte
 uath-aisghabháil an chliaint, ach ní cur ar aghaidh beart ar bheart é: ritear an sláintitheoir athchúrsach i gcónaí
 roimh shraithiú. Teipeann coirp thimthriallacha, coirp ina bhfuil BigInt, nó coirp le `toJSON()` naimhdeach ar bhealach dúnta agus níl siad
 incháilithe lena gcur ar aghaidh. Cuireann OCR agus modhnóireacht an riail chéanna i bhfeidhm; tiontaítear coirp réamhtheachtacha
-nach JSON iad, atá bán, nó a bhfuil lipéad mícheart orthu go dtí imchlúdach caighdeánach earráide JSON OmniRoute.
+nach JSON iad, atá bán, nó a bhfuil lipéad mícheart orthu go dtí imchlúdach caighdeánach earráide JSON 67router.
 
 ## Teorainn aitheanta de chuid CodeQL: ní aithnítear sláintitheoirí saincheaptha
 

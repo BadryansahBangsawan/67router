@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute’ning oʻzi boshqa joyda (VPS, uy serveri yoki Tailnet’ingizdagi boshqa qurilmada) ishlayotgan paytda `omniroute` CLI’ni noutbukingizda ishga tushiring. Siz `omniroute connect` yordamida bir marta tizimga kirasiz va shundan keyin **har bir** CLI buyrugʻi oʻsha masofaviy serverga yoʻnaltiriladi — buyruqlar ham, chiqish natijalari ham bir xil, faqat masofaviy serverda bajariladi.
+67router’ning oʻzi boshqa joyda (VPS, uy serveri yoki Tailnet’ingizdagi boshqa qurilmada) ishlayotgan paytda `omniroute` CLI’ni noutbukingizda ishga tushiring. Siz `omniroute connect` yordamida bir marta tizimga kirasiz va shundan keyin **har bir** CLI buyrugʻi oʻsha masofaviy serverga yoʻnaltiriladi — buyruqlar ham, chiqish natijalari ham bir xil, faqat masofaviy serverda bajariladi.
 
 Oʻrnatish uchun ikkinchi vosita yoʻq: masofaviy rejim — bu odatiy `omniroute` CLI va qamrovi belgilangan **kirish tokenlari**.
 
@@ -20,7 +20,7 @@ omniroute configure codex                # ← masofaviy katalogdan mahalliy Cod
 ## Bu qanday ishlaydi
 
 ```
-noutbukingiz                            masofaviy OmniRoute (VPS)
+noutbukingiz                            masofaviy 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (parol → token)            │
 │  context: vps      │ ───────────────►  │ qamrovli kirish tokenini       │
@@ -103,7 +103,7 @@ ochiq bo‘lganda** beradi. Masofaviy VPS o‘rnatmasida bu loopback sizning
 kompyuteringizda emas, serverda joylashadi, shu sababli rozilik ekrani **abadiy
 qotib qoladi va hech qachon kod bermaydi** — odatiy «callback URL manzilini
 joylashtirish» muqobil usulida joylashtirish uchun hech narsa bo‘lmaydi. (Bu
-Google tomonidagi cheklov: xuddi shunday qotib qolish holati faqat OmniRoute’da
+Google tomonidagi cheklov: xuddi shunday qotib qolish holati faqat 67router’da
 emas, balki o‘rnatilgan Antigravity ish stoli mijozidan foydalanadigan har qanday
 proksida yuz beradi.)
 
@@ -114,7 +114,7 @@ yechim bilan almashtiriladi va ularning har birida host hamda portingiz oldindan
 to‘ldirilgan bo‘ladi. (LAN manzili ham shunday hisoblanadi — ushbu callback nuqtayi
 nazaridan `192.168.x.x` localhost emas.)
 
-Antigravity’ni masofaviy OmniRoute’ga ulashning qo‘llab-quvvatlanadigan ikkita usuli
+Antigravity’ni masofaviy 67router’ga ulashning qo‘llab-quvvatlanadigan ikkita usuli
 mavjud.
 
 ### A variant — mahalliy kirish yordamchisi (tavsiya etiladi)
@@ -156,7 +156,7 @@ npx omniroute login antigravity --no-push
 Keyin **masofaviy** boshqaruv panelida **Providers → Antigravity → Connect**
 bo‘limiga o‘ting va `omniroute-cred-v1.…` blob’ini **Step 2** maydoniga joylashtiring
 (u callback URL manzilini ham, hisob ma’lumotlari blob’ini ham qabul qiladi).
-OmniRoute uni dekodlaydi, Cloud Code dastlabki sozlash jarayonini server tomonida
+67router uni dekodlaydi, Cloud Code dastlabki sozlash jarayonini server tomonida
 bajaradi va ulanishni saqlab qoladi.
 
 > Blob yangilash tokenini o‘z ichiga oladi — unga parol kabi munosabatda bo‘ling.
@@ -201,7 +201,7 @@ emas.
 ## Codex / Grok’ni masofaviy o‘rnatishga ulash (qat’iy loopback provayderlari)
 
 Codex, xAI (`xai-oauth`) va Grok CLI (`grok-cli`) o‘zlarining yuqori darajadagi OAuth ilovasida **qat’iy** loopback
-`redirect_uri` manzilini ro‘yxatdan o‘tkazadi. OmniRoute uni o‘zgartira olmaydi — provayder
+`redirect_uri` manzilini ro‘yxatdan o‘tkazadi. 67router uni o‘zgartira olmaydi — provayder
 brauzerni har doim bir xil, kodga qat’iy kiritilgan manzilga qaytaradi:
 
 | Provayder   | Provayder yo‘naltiradigan qat’iy callback manzili |
@@ -210,7 +210,7 @@ brauzerni har doim bir xil, kodga qat’iy kiritilgan manzilga qaytaradi:
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                 |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                 |
 
-Bu yerda `localhost` **brauzer ishlayotgan kompyuter**ni anglatadi, OmniRoute’ning PKCE
+Bu yerda `localhost` **brauzer ishlayotgan kompyuter**ni anglatadi, 67router’ning PKCE
 callback serveri esa **serverning** loopback interfeysida tinglaydi. Boshqaruv panelini
 `http://192.168.0.15:20128` kabi LAN manzilida ochsangiz, ular hech qachon uchrashmaydi:
 avtorizatsiya kodi o‘z noutbukingizdagi `localhost:1455` manziliga yetkaziladi, u yerda esa
@@ -231,7 +231,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Ikkita yo‘naltirish talab qilinadi va faqat bittasini yo‘naltirish hamon muvaffaqiyatsiz tugaydi:
 
 - **`20128`** (boshqaruv paneli porti) origin’ni haqiqiy localhost qiladi, aynan shu
-  OmniRoute’ning PKCE callback serverini umuman ishga tushirishiga sabab bo‘ladi — LAN origin
+  67router’ning PKCE callback serverini umuman ishga tushirishiga sabab bo‘ladi — LAN origin
   bu tarmoqqa hech qachon yetib bormaydi.
 - **`1455`** (provayderning qat’iy callback porti) — brauzer qaytarib yuboriladigan joy;
   u tunnel orqali serverning loopback interfeysigacha yetib borishi kerak.
@@ -348,7 +348,7 @@ omniroute contexts current         # faol server, autentifikatsiya holati, doira
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

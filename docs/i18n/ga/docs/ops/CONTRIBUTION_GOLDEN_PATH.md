@@ -113,7 +113,7 @@ nó seiceáil láimhe dhoiciméadaithe atá oiriúnach don athrú chun iompar am
 - Coinnítear catalóga CLI ar leithligh faoi `bin/cli/locales/`.
 - Caomhnaigh ionadchoinneálaithe agus clibeanna ICU go díreach. Ná haistrigh ainmneacha táirgí/soláthraithe/samhlacha,
   ainmneacha prótacail agus ceanntásca, orduithe, aitheantóirí cóid/JSON, URLanna, athróga timpeallachta, ná
-  téarmaí cosanta amhail `OmniRoute`, `OAuth`, `MCP`, agus `A2A`. Is é an liosta foinse reatha
+  téarmaí cosanta amhail `67router`, `OAuth`, `MCP`, agus `A2A`. Is é an liosta foinse reatha
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Lúb spriocdhírithe**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # athúsáid tarball a t
   theipeann ar an tseiceáil sin. Ní chuirtear iarrthóir a dteipeann air sa chéad bhailíochtú chun cinn choíche.
 
 Scríobhtar gach rud faoin `_artifacts/candidate/` atá ligthe ar lár ag git; ní dhéantar teagmháil choíche le suiteáil
-OmniRoute atá ann cheana ná lena heolaire sonraí. Is é
+67router atá ann cheana ná lena heolaire sonraí. Is é
 `_artifacts/candidate/current/prefix/bin/omniroute` an CLI curtha chun cinn; tosaigh é le do `DATA_DIR` féin nuair a úsáideann
 tú é. Cóid scoir: `0` rath, `1` bailíochtú nó cur chun cinn teipthe, `2` earráid úsáide nó tógáil ar iarraidh.
 

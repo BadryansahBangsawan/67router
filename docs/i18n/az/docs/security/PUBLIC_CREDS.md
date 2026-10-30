@@ -15,7 +15,7 @@
 - [Doğma tətbiqlər üçün OAuth 2.0 (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — Quraşdırılmış tətbiqlər üçün OAuth client_id / client_secret açıqdır; faktiki təhlükəsizliyi PKCE təmin edir.
 - [Firebase API açarları](https://firebase.google.com/docs/projects/api-keys) — Veb-klient identifikatorları dizayn etibarilə açıqdır.
 
-OmniRoute bu dəyərləri daxil etməlidir ki, `.env` konfiqurasiya etməyən istifadəçilər də heç bir əlavə sazlama olmadan işlək OAuth axını əldə etsinlər. Daxil edilmiş ehtiyat dəyər olmadıqda, Gemini / Antigravity provayderləri "sadəcə klonla və işə sal" yolunu izləyən bütün istifadəçilər üçün işləməyi dayandırır.
+67router bu dəyərləri daxil etməlidir ki, `.env` konfiqurasiya etməyən istifadəçilər də heç bir əlavə sazlama olmadan işlək OAuth axını əldə etsinlər. Daxil edilmiş ehtiyat dəyər olmadıqda, Gemini / Antigravity provayderləri "sadəcə klonla və işə sal" yolunu izləyən bütün istifadəçilər üçün işləməyi dayandırır.
 
 Lakin `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` kimi hərfi dəyərlər **GitHub Secret Scanning**, **Semgrep** və oxşar nümunə skanerləri tərəfindən aşkarlanır. Hər buraxılış səs-küylü yanlış müsbət nəticələr axınına çevrilir, push qoruması legitim commit-ləri bloklayır və operatorlar xəbərdarlıq lentinə etibar etməyi dayandırırlar.
 

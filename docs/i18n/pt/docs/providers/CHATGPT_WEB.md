@@ -40,9 +40,9 @@ mesma capacidade de ferramenta local associada à interação quando o túnel e 
    do conector personalizado. As novas configurações com suporte para ferramentas têm de utilizar um conector recém-criado com o nome exato
    `OmniRoute Codex v2`, com Authentication definido como None e Permissions definido como Allow all
    actions.
-3. Execute a verificação da ligação. O OmniRoute abre um Temporary Chat suportado pelo browser e deteta
+3. Execute a verificação da ligação. O 67router abre um Temporary Chat suportado pelo browser e deteta
    se Sol e Pro estão disponíveis para a conta.
-4. Guarde a ligação. O OmniRoute substitui o cookie colado pelo estado de armazenamento
+4. Guarde a ligação. O 67router substitui o cookie colado pelo estado de armazenamento
    Playwright verificado e armazena-o com a chave de runtime através da abstração de
    credenciais encriptadas.
 
@@ -99,19 +99,19 @@ um novo conector `OmniRoute Codex v2`.
 
 ## VPS sem ecrã e Docker
 
-Para instalações com npm, systemd e PM2, o OmniRoute deteta caminhos comuns do Chrome e do Chromium.
+Para instalações com npm, systemd e PM2, o 67router deteta caminhos comuns do Chrome e do Chromium.
 Em alternativa, defina `CHATGPT_WEB_CODEX_CHROME_PATH`. Os turnos de runtime utilizam deliberadamente o
 Chrome com interface gráfica, porque o ChatGPT rejeita a configuração de um browser verdadeiramente headless. Por conseguinte, um anfitrião sem ecrã tem de
-executar o OmniRoute com um ecrã Xvfb privado; definir apenas o caminho do Chrome não disponibiliza um.
+executar o 67router com um ecrã Xvfb privado; definir apenas o caminho do Chrome não disponibiliza um.
 
 O perfil `web` do Docker inicia `chatgpt-web-codex-browser` na rede interna do
 Compose. O sidecar executa o Chrome com interface gráfica dentro do Xvfb, pelo que não é necessário um ecrã físico. A respetiva porta
 CDP não é publicada no anfitrião. O volume protegido do perfil do browser é separado do
-volume de dados do OmniRoute, e o browser recebe memória partilhada suficiente. O proxy CDP interno
+volume de dados do 67router, e o browser recebe memória partilhada suficiente. O proxy CDP interno
 escuta apenas na porta `9223` dentro da rede do Compose; o Chrome permanece associado ao loopback no
 sidecar.
 
-Um lease de supervisor em `DATA_DIR` impede que vários processos do OmniRoute controlem
+Um lease de supervisor em `DATA_DIR` impede que vários processos do 67router controlem
 o mesmo estado do túnel e do broker. Um conflito é reportado pelo doctor.
 
 ## Recuperação interativa

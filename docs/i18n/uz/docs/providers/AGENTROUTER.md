@@ -8,7 +8,7 @@
 
 ## Tezkor boshlash — mahalliy `agentrouter` provayderidan foydalanish (tavsiya etiladi)
 
-Aksariyat foydalanuvchilar uchun **hech qanday maxsus sozlash talab qilinmaydi**. OmniRoute tarkibida Claude Code protokol ko‘rinishi to‘liq o‘rnatilgan ichki `agentrouter` provayderi mavjud (`open-sse/config/providerRegistry.ts` → `agentrouter` ga qarang). Undan foydalanish uchun:
+Aksariyat foydalanuvchilar uchun **hech qanday maxsus sozlash talab qilinmaydi**. 67router tarkibida Claude Code protokol ko‘rinishi to‘liq o‘rnatilgan ichki `agentrouter` provayderi mavjud (`open-sse/config/providerRegistry.ts` → `agentrouter` ga qarang). Undan foydalanish uchun:
 
 1. **Boshqaruv paneli → Provayderlar → Provayder qo‘shish** bo‘limini oching.
 2. Ro‘yxatdan **AgentRouter** ni tanlang.
@@ -22,18 +22,18 @@ Ushbu qo‘llanmaning qolgan qismi **kengaytirilgan usul**ni, ya’ni `anthropic
 
 ## Kengaytirilgan: Claude Code bilan mos provayder turi orqali ulanish
 
-OmniRoute AgentRouter va shunga o‘xshash relaylarni to‘g‘ri protokol ko‘rinishidagi Anthropic Messages API bilan ishlaydigan **Claude Code bilan mos** provayder turi (`anthropic-compatible-cc-*`) orqali ham qo‘llab-quvvatlaydi. `https://agentrouter.org` manziliga yo‘naltirilgan oddiy `openai-compatible-chat` provayderi **ishlamaydi** — yuqori oqimdagi WAF Claude Code so‘rovlariga o‘xshamaydigan so‘rovlarni rad etadi.
+67router AgentRouter va shunga o‘xshash relaylarni to‘g‘ri protokol ko‘rinishidagi Anthropic Messages API bilan ishlaydigan **Claude Code bilan mos** provayder turi (`anthropic-compatible-cc-*`) orqali ham qo‘llab-quvvatlaydi. `https://agentrouter.org` manziliga yo‘naltirilgan oddiy `openai-compatible-chat` provayderi **ishlamaydi** — yuqori oqimdagi WAF Claude Code so‘rovlariga o‘xshamaydigan so‘rovlarni rad etadi.
 
 ---
 
 ## Dastlabki talablar
 
 - AgentRouter hisobi va API kaliti. Yangi ro‘yxatdan o‘tgan foydalanuvchilar loyiha [README](../README.md) faylidagi hamkorlik havolasi orqali bepul kreditlar oladi.
-- OmniRoute `ENABLE_CC_COMPATIBLE_PROVIDER` funksiya bayrog‘i yoqilgan holda ishlayotgan bo‘lishi kerak (quyiga qarang).
+- 67router `ENABLE_CC_COMPATIBLE_PROVIDER` funksiya bayrog‘i yoqilgan holda ishlayotgan bo‘lishi kerak (quyiga qarang).
 
 ## 1. CC bilan mos provayder turini yoqing
 
-Claude Code bilan mos provayder turi funksiya bayrog‘i ortida yashirilgan, chunki u rasmiy Claude Code mijozi trafikka juda o‘xshash trafik yuboradi. Uni yoqish uchun OmniRoute xizmatini ishga tushirishdan oldin muhit o‘zgaruvchisini belgilang:
+Claude Code bilan mos provayder turi funksiya bayrog‘i ortida yashirilgan, chunki u rasmiy Claude Code mijozi trafikka juda o‘xshash trafik yuboradi. Uni yoqish uchun 67router xizmatini ishga tushirishdan oldin muhit o‘zgaruvchisini belgilang:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

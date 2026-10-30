@@ -7,7 +7,7 @@
 > **Pinagmulan ng katotohanan:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Huling na-update:** 2026-06-28 — v3.8.40
 
-Itinatala ng OmniRoute ang mga administratibong pagkilos, kaganapan sa authentication, pagbabago sa lifecycle ng mga kredensyal ng provider, at mga invocation ng MCP tool sa mga audit table na gumagamit ng SQLite. Tinatalakay ng pahinang ito kung ano ang itinatala, kung saan ito nakaimbak, kung gaano katagal itong pinananatili, kung paano maaaring mag-opt out ang mga API key, at kung paano i-query ang data.
+Itinatala ng 67router ang mga administratibong pagkilos, kaganapan sa authentication, pagbabago sa lifecycle ng mga kredensyal ng provider, at mga invocation ng MCP tool sa mga audit table na gumagamit ng SQLite. Tinatalakay ng pahinang ito kung ano ang itinatala, kung saan ito nakaimbak, kung gaano katagal itong pinananatili, kung paano maaaring mag-opt out ang mga API key, at kung paano i-query ang data.
 
 Matatagpuan ang implementasyon sa `src/lib/compliance/index.ts` (T-43 — "Mga Kontrol sa Compliance") at `src/lib/compliance/providerAudit.ts`. Hindi kailanman nagta-throw ang mga audit write: kapag may anumang pagkabigo, tahimik na binabalewala ang call upang hindi masira ng audit logging ang pangunahing daloy ng request.
 

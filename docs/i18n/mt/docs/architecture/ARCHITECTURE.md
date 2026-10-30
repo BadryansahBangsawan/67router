@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Malti)
+# 67router Architecture (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Aġġornat l-aħħar: 2026-06-28_
 
 ## Sommarju Eżekuttiv
 
-OmniRoute huwa gateway lokali għar-routing tal-AI u dashboard mibni fuq Next.js.
+67router huwa gateway lokali għar-routing tal-AI u dashboard mibni fuq Next.js.
 Jipprovdi endpoint wieħed kompatibbli ma’ OpenAI (`/v1/*`) u jidderieġi t-traffiku bejn diversi fornituri upstream bi traduzzjoni, fallback, tiġdid tat-token, u traċċar tal-użu.
 
 Kapaċitajiet ewlenin:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Dashboard fil-Browser]
     end
 
-    subgraph Router[Proċess Lokali OmniRoute]
+    subgraph Router[Proċess Lokali 67router]
         API[API tal-Kompatibilità V1\n/v1/*]
         DASH[Dashboard + API tal-Ġestjoni\n/api/*]
         CORE[Kernel SSE + Taljum\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ Moduli tal-fornituri OAuth (27 fajl individwali taħt `src/lib/oauth/providers/`
 
 ## 5) Servizzi Embedditi (v3.8.4)
 
-OmniRoute jista' jinstalla, jissorvelja, u jirrotta lejn proċessi ta' għodda AI li qed jigu ejkolluwati lokally, magħrufa bħala **servizzi embedditi**. Huma n슴ell u jaslu mill-fiduċja: 9Router, CLIProxyAPI, Bifrost, u Dario.
+67router jista' jinstalla, jissorvelja, u jirrotta lejn proċessi ta' għodda AI li qed jigu ejkolluwati lokally, magħrufa bħala **servizzi embedditi**. Huma n슴ell u jaslu mill-fiduċja: 9Router, CLIProxyAPI, Bifrost, u Dario.
 
 Għal ħarsa ħafif ta' l-arkitettura, ara [`docs/ARCHITECTURE.md`](../ARCHITECTURE.md).
 
@@ -439,7 +439,7 @@ għalfejn jikkomponu huma stess il-loġika tal-lockout/baġit/fallback.
 - Cache tal-kwota: `src/domain/quotaCache.ts`
 - Stat ta' degradazzjoni: `src/domain/degradation.ts`
 - Awditu tal-konfigurazzjoni: `src/domain/configAudit.ts`
-- Bennej tal-metadata tat-tweġiba OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Bennej tal-metadata tat-tweġiba 67router: `src/domain/omnirouteResponseMeta.ts`
 - Subsistema ta' valutazzjoni: `src/domain/assessment/` — kompiti ta' evalwazzjoni perjodika
 
 ### E. Pipeline tal-Awtorizzazzjoni
@@ -817,7 +817,7 @@ flowchart LR
         Browser[Brawżer tal-Panorama tal-Amministrazzjoni]
     end
 
-    subgraph ContainerOrProcess[Ħin Real OmniRoute]
+    subgraph ContainerOrProcess[Ħin Real 67router]
         Next[Next.js Server\nPORT=20128]
         Core[SSE Core + Eżekutturi]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Il-bqija tal-provajers (inklużi n-nodi kompatibbli personalizzati) jużaw l-`De
 ## Kompatibilità tal-Fornitur
 
 > **Nota:** It-tabella hawn taħtu hija kampjun rappreżentattiv tal-351 fornitur irreġistrati fi
-> OmniRoute v3.8.0. Għal lista kanonika u aġġornata kontinwament, irreferi lejn
+> 67router v3.8.0. Għal lista kanonika u aġġornata kontinwament, irreferi lejn
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (ġenerat awtomatikament) jew is-sors tal-
 > verità f'`src/shared/constants/providers.ts` (validat b'Zod fil-miftuħ).
 
@@ -1116,7 +1116,7 @@ Id-dettalji tal-pajp tal-talba jaħżnu sa erba' stadji JSON tal-pajp għal kull
 - talba ħarxa rċevuta mill-klijent
 - talba tħarrix attwalment mibgħuta lill-maġenb
 - rispons tal-fornitur rikostruwit bħala JSON; risponsi mistednin jidħlu fil-kumpriża fl-aħħar ħarxa flimkien ma' metadata tal-misterednin
-- rispons finali tal-klijent ritornata minn OmniRoute; risponsi mistednin jiġu maħżuna fil-forma tal-kumpriża fl-aħħar ħarxa
+- rispons finali tal-klijent ritornata minn 67router; risponsi mistednin jiġu maħżuna fil-forma tal-kumpriża fl-aħħar ħarxa
 
 ## Limiti Sensittivi għas-Sigurtà
 

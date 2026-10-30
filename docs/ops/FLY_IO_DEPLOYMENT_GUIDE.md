@@ -1,12 +1,12 @@
 ---
-title: "OmniRoute Fly.io Deployment Guide"
+title: "67router Fly.io Deployment Guide"
 version: 3.8.52
 lastUpdated: 2026-10-05
 ---
 
-# OmniRoute Fly.io Deployment Guide
+# 67router Fly.io Deployment Guide
 
-This document describes the actual deployment process for OmniRoute on Fly.io, covering two scenarios:
+This document describes the actual deployment process for 67router on Fly.io, covering two scenarios:
 
 - Deploying the current project to Fly.io for the first time
 - Publishing subsequent code updates

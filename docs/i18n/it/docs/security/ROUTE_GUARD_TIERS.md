@@ -6,7 +6,7 @@
 
 ## Panoramica
 
-Tutte le route dell'API di gestione di OmniRoute sono classificate in uno dei tre
+Tutte le route dell'API di gestione di 67router sono classificate in uno dei tre
 livelli di protezione. La classificazione è statica, definita in `src/server/authz/routeGuard.ts`,
 e viene valutata prima dell'esecuzione di qualsiasi altro ramo di autenticazione.
 
@@ -27,9 +27,9 @@ nota ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)).
 **Che cos'è GHSA-fhh6-4qxv-rpqj (la classe di attacco):** un server di gestione/agente
 espone un endpoint che avvia un sottoprocesso (`npm install`, `node`, un browser,
 un proxy, `git`, `tar`, …). Se tale endpoint è raggiungibile dall'esterno dell'host — perché
-l'operatore ha collocato OmniRoute dietro un tunnel nginx/Cloudflare/Tailscale e un JWT
+l'operatore ha collocato 67router dietro un tunnel nginx/Cloudflare/Tailscale e un JWT
 è trapelato, oppure l'autenticazione è stata configurata in modo errato — l'utente malintenzionato trasforma «chiamare un'API» in «eseguire un
-comando sull'host» (esecuzione di codice da remoto). OmniRoute impedisce questo attacco applicando
+comando sull'host» (esecuzione di codice da remoto). 67router impedisce questo attacco applicando
 **incondizionatamente un controllo dell'host di loopback, prima di qualsiasi controllo di autenticazione**, su ogni
 route in grado di avviare processi: un token trapelato attraverso un tunnel non può comunque raggiungere l'avvio del processo.
 
@@ -123,7 +123,7 @@ gestione.
 
 #### Indicazioni per gli operatori e audit
 
-Se esegui OmniRoute dietro un reverse proxy o un tunnel (nginx, Caddy,
+Se esegui 67router dietro un reverse proxy o un tunnel (nginx, Caddy,
 Cloudflare Tunnel, Tailscale, Ngrok), il controllo del loopback continua a
 proteggere le route sopra indicate in grado di avviare processi — una richiesta
 il cui indirizzo client non è di loopback viene rifiutata con
@@ -164,7 +164,7 @@ a carico dell'operatore:
 - Cerca nei log del reverse proxy / degli accessi i prefissi indicati sopra associati a un
   indirizzo client non loopback. Qualsiasi corrispondenza che abbia restituito `200` anziché
   `403 LOCAL_ONLY` indica che il proxy sta mascherando il vero IP del client: correggi il proxy.
-- Un `403 LOCAL_ONLY` nei log di OmniRoute per uno di questi percorsi indica che la protezione
+- Un `403 LOCAL_ONLY` nei log di 67router per uno di questi percorsi indica che la protezione
   funziona come previsto, non un errore da ignorare.
 
 #### Route raggiungibili da remoto con un gate per le verifiche nel punto di chiamata

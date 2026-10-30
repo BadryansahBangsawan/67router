@@ -15,7 +15,7 @@ Motorul de partajare a cotelor distribuie echitabil cota bazată pe timp a unui 
 de 5 ore Codex, Kimi 1500 cereri/h) între mai multe chei API care partajează
 aceeași conexiune.
 
-**Problema pe care o rezolvă:** OmniRoute intermediază multe chei API către același cont
+**Problema pe care o rezolvă:** 67router intermediază multe chei API către același cont
 al furnizorului din amonte. Fără o logică de partajare, un vârf de trafic de la cheia A poate epuiza
 cota furnizorului pentru ora respectivă, lăsând cheile B și C blocate până la resetarea ferestrei.
 Motorul previne acest lucru prin:
@@ -119,7 +119,7 @@ Driver Redis: script Lua EVAL pentru incrementare atomică — rulează ca o sin
 
 - Tabel: `quota_consumption` (consultați migrarea `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Recomandat pentru implementările cu o singură instanță.
-- Toate datele persistente sunt stocate în baza de date SQLite existentă a OmniRoute (`DATA_DIR/storage.sqlite`).
+- Toate datele persistente sunt stocate în baza de date SQLite existentă a 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opțional, pentru mai multe instanțe)
 

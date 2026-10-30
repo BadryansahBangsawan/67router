@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (বাংলা)
+# 67router A2A Server Documentation (বাংলা)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — একটি বুদ্ধিমান রাউটিং এজেন্ট হিসেবে OmniRoute
+> Agent-to-Agent Protocol v0.3 — একটি বুদ্ধিমান রাউটিং এজেন্ট হিসেবে 67router
 
 A2A সারফেসের দুটি দিক রয়েছে:
 
@@ -19,7 +19,7 @@ A2A সারফেসের দুটি দিক রয়েছে:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute-এর সক্ষমতা, স্কিল এবং প্রমাণীকরণের প্রয়োজনীয়তা বর্ণনাকারী Agent Card ফেরত দেয়।
+67router-এর সক্ষমতা, স্কিল এবং প্রমাণীকরণের প্রয়োজনীয়তা বর্ণনাকারী Agent Card ফেরত দেয়।
 
 Agent Card-এর `version` ফিল্ডটি `process.env.npm_package_version` থেকে নেওয়া হয় (`src/app/.well-known/agent.json/route.ts:13` দেখুন), তাই প্রতিটি রিলিজে এটি `package.json`-এর সঙ্গে স্বয়ংক্রিয়ভাবে সিঙ্ক থাকে।
 
@@ -151,22 +151,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## উপলব্ধ স্কিল
 
-OmniRoute 6টি A2A স্কিল এক্সপোজ করে, যেগুলো `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`-এ সংযুক্ত। প্রতিটি স্কিল মডিউল `src/lib/a2a/skills/`-এ অবস্থিত।
+67router 6টি A2A স্কিল এক্সপোজ করে, যেগুলো `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`-এ সংযুক্ত। প্রতিটি স্কিল মডিউল `src/lib/a2a/skills/`-এ অবস্থিত।
 
 | স্কিল              | ID                   | বিবরণ                                                                                                                                                     | ট্যাগ                      | উদাহরণ                                 |
 | :----------------- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------------- |
-| Smart Routing      | `smart-routing`      | OmniRoute-এর কম্বো ইঞ্জিন + স্কোরিং ব্যবহার করে সর্বোত্তম প্রোভাইডার/কম্বোর মাধ্যমে একটি প্রম্পট রাউট করে                                                 | routing, providers         | "Route this prompt via the best model" |
+| Smart Routing      | `smart-routing`      | 67router-এর কম্বো ইঞ্জিন + স্কোরিং ব্যবহার করে সর্বোত্তম প্রোভাইডার/কম্বোর মাধ্যমে একটি প্রম্পট রাউট করে                                                  | routing, providers         | "Route this prompt via the best model" |
 | Quota Management   | `quota-management`   | প্রতি-প্রোভাইডার কোটার অবস্থা রিপোর্ট করে, কলারদের কখন থ্রটল/সুইচ করতে হবে তা সিদ্ধান্ত নিতে সাহায্য করে                                                  | quota, providers           | "Check quota for anthropic"            |
 | Provider Discovery | `provider-discovery` | ক্ষমতা, ফ্রি-টিয়ার ফ্ল্যাগ, OAuth স্ট্যাটাসসহ ইনস্টল করা প্রোভাইডারদের তালিকাভুক্ত করে                                                                   | providers, discovery       | "What providers are available?"        |
 | Cost Analysis      | `cost-analysis`      | ক্যাটালগ + সাম্প্রতিক ব্যবহারের ভিত্তিতে একটি রিকোয়েস্ট/কথোপকথনের খরচ অনুমান করে                                                                         | cost, usage                | "Estimate cost for this conversation"  |
 | Health Report      | `health-report`      | প্রতি প্রোভাইডারের সার্কিট ব্রেকার, কুলডাউন, লকআউট অবস্থা একত্রিত করে                                                                                     | health, resilience         | "Show health status of all providers"  |
-| List Capabilities  | `list-capabilities`  | কনটেক্সট ইনজেকশনের জন্য raw SKILL.md URL সহ সম্পূর্ণ 43-এন্ট্রির Agent Skills ক্যাটালগ (22 API + 20 CLI + 1 config) একটি মার্কডাউন টেবিল হিসেবে ফেরত দেয় | catalog, discovery, skills | "List all OmniRoute capabilities"      |
+| List Capabilities  | `list-capabilities`  | কনটেক্সট ইনজেকশনের জন্য raw SKILL.md URL সহ সম্পূর্ণ 43-এন্ট্রির Agent Skills ক্যাটালগ (22 API + 20 CLI + 1 config) একটি মার্কডাউন টেবিল হিসেবে ফেরত দেয় | catalog, discovery, skills | "List all 67router capabilities"       |
 
 > Agent Cardটি লাইভ 375-প্রোভাইডার ক্যাটালগের সাথে সামঞ্জস্যপূর্ণ রাখা উচিত; প্রোভাইডার সংখ্যা এবং ফ্রি/নো-অথ মেটাডেটা রানটাইম রেজিস্ট্রি থেকে সংগৃহীত হয়।
 
 ### `list-capabilities` স্কিলের বিস্তারিত
 
-`list-capabilities` স্কিলটি বিশেষভাবে এমন বহিরাগত এজেন্টদের জন্য উপযোগী যাদের API কল পাঠানোর আগে OmniRoute কী এক্সপোজ করে তা আবিষ্কার করতে হয়। এটি একটি স্ট্রাকচার্ড মার্কডাউন টেবিল আর্টিফ্যাক্ট ফেরত দেয়:
+`list-capabilities` স্কিলটি বিশেষভাবে এমন বহিরাগত এজেন্টদের জন্য উপযোগী যাদের API কল পাঠানোর আগে 67router কী এক্সপোজ করে তা আবিষ্কার করতে হয়। এটি একটি স্ট্রাকচার্ড মার্কডাউন টেবিল আর্টিফ্যাক্ট ফেরত দেয়:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -192,7 +192,7 @@ JSON-RPC এন্ডপয়েন্ট `/a2a` হলো প্রামা�
 | `/.well-known/agent.json`    | GET  | Agent Card (A2A আবিষ্কার)                                  | (সর্বজনীন, 3600s ক্যাশ করা)                    |
 | `/api/a2a/tasks`             | POST | OmniConductor ফ্লিটে ইনবাউন্ড ডেলিগেশন (Conductor PRD RF5) | Bearer বনাম `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**ইনবাউন্ড Conductor ডেলিগেশন (`POST /api/a2a/tasks`):** বাহ্যিক A2A এজেন্টগুলো OmniRoute-এর মাধ্যমে OmniConductor ফ্লিটে কোডিংয়ের কাজ অর্পণ করে। বডি: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — শুধু Conductor ফ্লিটের স্কিলগুলোই (Agent Card-এ ঘোষিত স্কিলগুলো) অর্পণযোগ্য; `metadata.conductor.repo.url` আবশ্যক (ফ্লিটটি git রিপোজিটরিতে কাজ করে)। রুটটি সার্ভার-সাইড `CONDUCTOR_ORCHESTRATOR_TOKEN` (ফলব্যাক `CONDUCTOR_HUB_TOKEN`) ব্যবহার করে হাবের `POST /v1/tasks`-এ অনুবাদ করে এবং `201 { conductor_task_id, state: "submitted" }` ফেরত দেয়; টাস্কের অবস্থাগুলো SSE→A2A মিরর (RF1)-এর মাধ্যমে ফিরে আসে এবং `GET /api/a2a/tasks?skill=conductor` ব্যবহার করে দেখা যায়।
+**ইনবাউন্ড Conductor ডেলিগেশন (`POST /api/a2a/tasks`):** বাহ্যিক A2A এজেন্টগুলো 67router-এর মাধ্যমে OmniConductor ফ্লিটে কোডিংয়ের কাজ অর্পণ করে। বডি: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — শুধু Conductor ফ্লিটের স্কিলগুলোই (Agent Card-এ ঘোষিত স্কিলগুলো) অর্পণযোগ্য; `metadata.conductor.repo.url` আবশ্যক (ফ্লিটটি git রিপোজিটরিতে কাজ করে)। রুটটি সার্ভার-সাইড `CONDUCTOR_ORCHESTRATOR_TOKEN` (ফলব্যাক `CONDUCTOR_HUB_TOKEN`) ব্যবহার করে হাবের `POST /v1/tasks`-এ অনুবাদ করে এবং `201 { conductor_task_id, state: "submitted" }` ফেরত দেয়; টাস্কের অবস্থাগুলো SSE→A2A মিরর (RF1)-এর মাধ্যমে ফিরে আসে এবং `GET /api/a2a/tasks?skill=conductor` ব্যবহার করে দেখা যায়।
 
 ---
 

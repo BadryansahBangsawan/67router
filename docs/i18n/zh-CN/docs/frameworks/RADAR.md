@@ -40,7 +40,7 @@ Radar 是一项**可选附加功能**，它会在发布基线（
 | 支持者优惠           | 已实现为独立签名、仅实时提供的数据源和仪表板页面。客户端会重新验证封闭式权益架构、保留最后一次有效缓存、过滤已过期条目，并明确标注合作伙伴优惠。                     |
 | 情报与支持者认可     | 已实现为严格签名、仅实时提供的数据源，其中包含 Radar 自有的 ELO、客观的目录新鲜度/趋势、经过验证的本地支持者徽章、仪表板页面，以及仅限本地使用的 CLI 状态/同步命令。 |
 | 支付与交易类电子邮件 | OSS 客户端中未实现。购买、捐赠、收据审核、恢复和邮件投递均属于私有服务；托管服务的可用性仍取决于其受监管的部署和提供者配置。                                         |
-| 研究代理工作流       | 不属于此客户端版本。整理后的数据源内容仍是服务端数据；OmniRoute 安装中不会运行自主研究代理。                                                                         |
+| 研究代理工作流       | 不属于此客户端版本。整理后的数据源内容仍是服务端数据；67router 安装中不会运行自主研究代理。                                                                          |
 
 ---
 
@@ -118,7 +118,7 @@ Radar 由 `RADAR_ENABLED` 功能标志进行端到端控制
    以供人工滥用审查；这些表不会以原始形式持久化密钥或 IP。
    基础设施访问日志和加密的投递发件箱属于彼此独立的运营
    边界。
-3. OmniRoute 绝不会向 Radar 服务发送提示词、响应、对话、提供者凭据、模型流量、
+3. 67router 绝不会向 Radar 服务发送提示词、响应、对话、提供者凭据、模型流量、
    运行时间、延迟或本地提供者配置。
 4. 响应会在本地进行验证、校验和缓存（请参阅
    [安全模型](#security-model)）。Radar 恰好有四条服务端网络路径：
@@ -235,11 +235,11 @@ OSS 仓库本身从不签发密钥、不运行支付代码，并且**从不标�
 ### 端到端激活和引导式设置
 
 私有订阅源服务与此 OSS 客户端之间有一道刻意保持精简的边界：服务负责签发和验证
-支持者密钥，而本地 OmniRoute 安装负责加密该密钥、在服务端同步已签名的工件，并引导
+支持者密钥，而本地 67router 安装负责加密该密钥、在服务端同步已签名的工件，并引导
 提供者设置。辅助验证顺序如下：
 
 1. 从贡献者认领、套餐/结账、恢复流程或经授权的私有服务器运营者处获取新签发或恢复的密钥。请勿将原始密钥粘贴到日志、截图、问题评论或命令行参数中。
-2. 在本地 OmniRoute 安装中启用 `RADAR_ENABLED` 功能标志。这会显示 UI，但在另行保存选择加入设置之前，不会进行网络活动。
+2. 在本地 67router 安装中启用 `RADAR_ENABLED` 功能标志。这会显示 UI，但在另行保存选择加入设置之前，不会进行网络活动。
 3. 打开 `/dashboard/radar`，粘贴密钥并激活。浏览器会在本地发送一次 `POST /api/radar/settings`，请求内容为 `{ optIn: true, supporterKey }`；密钥会在本地加密，响应仅包含 `omr_****<last4>`。
 4. 让激活屏幕完成目录同步，或选择 **立即同步**。确认页面显示 `live`、源版本和获取时间。对于经过身份验证的本地诊断，`GET /api/radar/status` 会报告选择加入/密钥是否存在以及四种缓存状态，但不会返回密钥。`POST /api/radar/sync-all` 可以显式刷新目录、推荐、优惠和 Intel。
 5. 打开 `/dashboard/radar/setup?provider=<provider>`。访问提供者提供的凭据 URL，选择 **添加 API 密钥**，通过真实的提供者表单保存，返回指南，然后运行 **测试连接**。该指南使用常规的 `/api/providers` 和 `/api/providers/<connection-id>/test` 路由；它不会创建单独的 Radar 凭据。
@@ -277,7 +277,7 @@ OSS 仓库本身从不签发密钥、不运行支付代码，并且**从不标�
 ### 便于分叉项目使用的环境变量覆盖
 
 两个环境变量允许分叉项目和自行托管者将客户端指向自己的订阅源，而不是
-默认的 OmniRoute 服务——请参阅下文的
+默认的 67router 服务——请参阅下文的
 [如何自行托管订阅源](#how-to-self-host-a-feed)：
 
 | 变量                | 用途                                                                   |
@@ -414,7 +414,7 @@ version, tier }` 返回——仪表板显示的是此值，而绝不是原始正
 目录发布使用 `schemaVersion: 2`。`contextWindow` 以及 `tools`、`vision` 和
 `thinking` 均各自独立为 `number | null` / `boolean | null`：`null` 表示未知，而
 `false` 表示经 D16 确认的官方提供者来源明确指出该能力不存在。
-OmniRoute 内部注册表/模型规范标志绝不会被直接提升为订阅源事实。客户端
+67router 内部注册表/模型规范标志绝不会被直接提升为订阅源事实。客户端
 仍接受 v1 快照；由于旧版构建器使用 `false` 作为缺失占位符，因此 v1 `false` 会被
 规范化为未知，而 v1 `true` 仍被视为事实。未知的架构版本会以封闭方式失败，并且
 最后一个有效缓存仍然可用。每个具有非 null 上下文/能力值的 v2 模型都必须携带
@@ -473,7 +473,7 @@ MCP 客户端可以通过 `omniroute_radar_catalog`（`read:radar`）读取相�
 | `/api/radar/local-model-state` | PUT    | 使用 `{ provider, modelId, tombstoned }` 创建或移除逻辑删除标记。                                   |
 | `/api/radar/local-model-state` | DELETE | 清除可编辑的覆盖字段，同时保留所有逻辑删除标记。                                                    |
 
-**硬性规则：这些路由绝不代理源服务。** 浏览器始终只与本地 OmniRoute 服务器
+**硬性规则：这些路由绝不代理源服务。** 浏览器始终只与本地 67router 服务器
 通信。会访问 Radar 服务的四个模块分别是
 `src/lib/radar/sync.ts`（目录）、`src/lib/radar/referralsSync.ts`（推荐）、
 `src/lib/radar/offersSync.ts`（优惠）以及 `src/lib/radar/intelSync.ts`（Intel）；
@@ -516,7 +516,7 @@ API 密钥，与保护其余 `/api/settings/*` 端点的访问门控相同。标
 
 `syncRadarIntel()` 采用与优惠相同的服务器端 Bearer 认证、30 秒超时、10 MiB 流式传输上限、原始字节 Ed25519 验证、严格架构校验、正文/标头 `live` 要求、版本下限，以及保留上次有效缓存的机制。经过验证的实时快照持久化后，客户端会派生 `radar:<sha256(supporter key)>`，仅存储该单向身份标识，并发出专用的 `radar_supporter` 认可事件。其 `radar-supporter` 徽章具有幂等性且奖励零 XP；它绝不会更新排行榜或复用 `token_share`。`/dashboard/radar/intel` 仅根据经过验证的本地缓存元数据渲染徽章。
 
-CLI 提供 `omniroute radar status` 和 `omniroute radar sync`。两者都仅与本地 OmniRoute API 通信。`status` 执行只读的 `GET /api/radar/status`；`sync` 发送一次 `POST /api/radar/sync-all`，并输出每个信息源的结果。这两个命令都不会读取、接受或输出支持者密钥，也不会直接联系 Radar 服务。
+CLI 提供 `omniroute radar status` 和 `omniroute radar sync`。两者都仅与本地 67router API 通信。`status` 执行只读的 `GET /api/radar/status`；`sync` 发送一次 `POST /api/radar/sync-all`，并输出每个信息源的结果。这两个命令都不会读取、接受或输出支持者密钥，也不会直接联系 Radar 服务。
 
 ---
 

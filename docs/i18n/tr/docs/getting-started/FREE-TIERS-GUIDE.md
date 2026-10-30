@@ -4,7 +4,7 @@
 
 ---
 
-> **Kısaca**: Uygun sağlayıcı hesaplarınızı kendiniz getirin. OmniRoute, yapılandırdığınız bağlantıları birleştirir; ilan edilen toplam token bütçesini kendisi sağlamaz. Ücretsiz erişim; kayıt, API anahtarı, onay veya ödeme yöntemi gerektirebilir. Sağlayıcı limitleri, gizlilik politikaları ve kullanım koşulları geçerliliğini korur.
+> **Kısaca**: Uygun sağlayıcı hesaplarınızı kendiniz getirin. 67router, yapılandırdığınız bağlantıları birleştirir; ilan edilen toplam token bütçesini kendisi sağlamaz. Ücretsiz erişim; kayıt, API anahtarı, onay veya ödeme yöntemi gerektirebilir. Sağlayıcı limitleri, gizlilik politikaları ve kullanım koşulları geçerliliğini korur.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Birçok yapay zekâ sağlayıcısı bir tür **ücretsiz erişim** sunar. Sağlayıcıya bağlı olarak bu; kimlik doğrulama gerektirmeyen bir uç nokta, yenilenen kota, hız sınırlı ancak kullanım kotası olmayan erişim, kayıt bonusu, manuel onay veya geçici bir promosyon anlamına gelebilir. Bazı seçenekler hesap, API anahtarı, kredi kartı, KYC veya sağlayıcıya özel koşulların kabul edilmesini gerektirir.
 
-OmniRoute, yapılandırılmış bağlantıları tek bir uç noktada **birleştirir**. Hesap gerektiren her sağlayıcıya yine ayrı ayrı kaydolmanız gerekir. Bu hesapları bağlayın ve uygun hedefler arasında yönlendirme yapmak için `model: "auto"` kullanın. Yeni bir kurulumda anahtarsız uygun bir hedef bulunmayabilir; yalnızca OmniRoute'u kurmak, başarılı bir sohbet yanıtını garanti etmez.
+67router, yapılandırılmış bağlantıları tek bir uç noktada **birleştirir**. Hesap gerektiren her sağlayıcıya yine ayrı ayrı kaydolmanız gerekir. Bu hesapları bağlayın ve uygun hedefler arasında yönlendirme yapmak için `model: "auto"` kullanın. Yeni bir kurulumda anahtarsız uygun bir hedef bulunmayabilir; yalnızca 67router'u kurmak, başarılı bir sohbet yanıtını garanti etmez.
 
 ---
 
@@ -57,7 +57,7 @@ Bu sağlayıcılar, belirli sınırlara sahip **ücretsiz katmanlar** sunar:
 
 ## Ücretsiz Katmanlar Nasıl Birleştirilir?
 
-OmniRoute'un sihri, **ücretsiz katmanları birleştirmesinde** yatar. Tek bir sağlayıcıya güvenmek yerine birden fazla ücretsiz sağlayıcı bağlarsınız ve OmniRoute'un her istek için en uygun olanı otomatik olarak seçmesini sağlarsınız.
+67router'un sihri, **ücretsiz katmanları birleştirmesinde** yatar. Tek bir sağlayıcıya güvenmek yerine birden fazla ücretsiz sağlayıcı bağlarsınız ve 67router'un her istek için en uygun olanı otomatik olarak seçmesini sağlarsınız.
 
 ### Örnek: Daha Geniş Ücretsiz Katman Kapsamı
 
@@ -68,7 +68,7 @@ Herhangi bir kotaya bağımlılığı azaltmak için birkaç sağlayıcı bağla
 3. **Pollinations** — anahtarsız, hız sınırlamalı erişim
 4. **LongCat** — tek seferlik kayıt hibesi (KYC gerektirir)
 
-Ardından `model: "auto"` kullanın; OmniRoute şunları yapacaktır:
+Ardından `model: "auto"` kullanın; 67router şunları yapacaktır:
 
 - Önce en yüksek sıradaki uygun bağlantıyı dener
 - Bağlantının kotası tükenmişse veya sistem durumu denetimi başarısız olursa → yapılandırılmış bir sonraki sağlayıcıyı dener
@@ -101,7 +101,7 @@ sınırsız/anahtarsız erişimi, kayıt kredilerini, kullanımdan kaldırılmı
 
 ### Adım 5: Bağlan'a Tıklayın
 
-Bir `NOAUTH` sağlayıcısı için OmniRoute, yukarı akış hizmetine ait kimlik bilgilerini talep etmez. Bu, yukarı akış hizmetinin üçüncü taraf istemcileri kabul ettiğini veya kullanılabilir kapasiteye sahip olduğunu garanti etmez. OAuth ve API anahtarı kullanan sağlayıcılara, belgelerinde açıklanan hesap akışı üzerinden bağlanılmalıdır. Yönlendirici kimlik doğrulaması etkinleştirildiğinde istemciniz yine **Pano → Uç Noktalar** bölümünde gösterilen OmniRoute API anahtarını kullanır.
+Bir `NOAUTH` sağlayıcısı için 67router, yukarı akış hizmetine ait kimlik bilgilerini talep etmez. Bu, yukarı akış hizmetinin üçüncü taraf istemcileri kabul ettiğini veya kullanılabilir kapasiteye sahip olduğunu garanti etmez. OAuth ve API anahtarı kullanan sağlayıcılara, belgelerinde açıklanan hesap akışı üzerinden bağlanılmalıdır. Yönlendirici kimlik doğrulaması etkinleştirildiğinde istemciniz yine **Pano → Uç Noktalar** bölümünde gösterilen 67router API anahtarını kullanır.
 
 ### Adım 6: Tekrarlayın
 
@@ -111,7 +111,7 @@ Koşulları ve gizlilik modeli kullanım senaryonuza uygun olan birkaç sağlay�
 
 ## Kataloğu Doğru Okuma
 
-- `NOAUTH`, OmniRoute'un sizden bir sağlayıcı kimlik bilgisi istemediği anlamına gelir; çalışma süresi, gizlilik veya sınırsız kapasite garantisi vermez.
+- `NOAUTH`, 67router'un sizden bir sağlayıcı kimlik bilgisi istemediği anlamına gelir; çalışma süresi, gizlilik veya sınırsız kapasite garantisi vermez.
 - `hasFree`, keşif meta verisidir. Yinelenen bir kotayı, anahtarsız erişimi, kayıt kredisini, onay programını veya promosyonu temsil edebilir.
 - `recurring-uncapped`, yayımlanmış bir token üst sınırının bulunmadığı anlamına gelir; hız ve eşzamanlılık sınırları yine de geçerlidir.
 - `one-time-initial`, kayıt hibesi tükendikten sonra yinelenmez.
@@ -120,15 +120,15 @@ Koşulları ve gizlilik modeli kullanım senaryonuza uygun olan birkaç sağlay�
 
 ---
 
-## OmniRoute Ücretsiz Katmanları Nasıl Daha İyi Hâle Getirir?
+## 67router Ücretsiz Katmanları Nasıl Daha İyi Hâle Getirir?
 
 ### 1. Otomatik Geri Dönüş
 
-Bir ücretsiz sağlayıcı meşgulse veya çalışmıyorsa OmniRoute otomatik olarak bir sonrakini dener. Herhangi bir işlem yapmanız gerekmez.
+Bir ücretsiz sağlayıcı meşgulse veya çalışmıyorsa 67router otomatik olarak bir sonrakini dener. Herhangi bir işlem yapmanız gerekmez.
 
 ### 2. Akıllı Yönlendirme
 
-OmniRoute, her istek için **en iyi ücretsiz sağlayıcıyı** şunlara göre seçer:
+67router, her istek için **en iyi ücretsiz sağlayıcıyı** şunlara göre seçer:
 
 - Hız — Şu anda en hızlı sağlayıcı hangisi?
 - Kalite — Bu görev için en iyi sağlayıcı hangisi?
@@ -136,13 +136,13 @@ OmniRoute, her istek için **en iyi ücretsiz sağlayıcıyı** şunlara göre s
 
 ### 3. Token Tasarrufu
 
-OmniRoute'un sıkıştırma işlem hattı, uygun istem ve araç çıktısı tokenlarının sayısını azaltabilir. Gerçek
+67router'un sıkıştırma işlem hattı, uygun istem ve araç çıktısı tokenlarının sayısını azaltabilir. Gerçek
 tasarruf; içeriğe, seçilen motorlara, sağlayıcının hesaplama yöntemine ve aslına uygunluk
 ayarlarına bağlıdır; sıkıştırma, her sağlayıcının kotasını sabit bir katsayıyla artırmaz.
 
 ### 4. Çoklu Hesap Desteği
 
-Sağlayıcı koşulları birden fazla hesaba veya kimlik bilgisine izin veriyorsa OmniRoute her
+Sağlayıcı koşulları birden fazla hesaba veya kimlik bilgisine izin veriyorsa 67router her
 bağlantıyı ayrı bir yönlendirme adayı olarak değerlendirebilir. Bir sağlayıcının kotasını veya
 erişim politikasını aşmak amacıyla ek hesaplar oluşturmayın.
 
@@ -157,7 +157,7 @@ Canlı, havuz bazında yinelenen kayıtları ayıklanmış katalog şu anda aşa
 | Yinelenen nicel kullanım hakkı |      **~1.62B token/ay** | Paylaşılan havuzlar bir kez sayılır; sınırsız sağlayıcılar toplama dahil edilmez |
 | Kayıt hibeleriyle ilk ay       |         **~2.22B token** | Yinelenen toplam ile tek seferlik ve yinelenen kredilerin toplamı                |
 
-Bunlar, birbirinden ayrı uygun hesaplar genelinde katalog çapında tahminlerdir; OmniRoute tarafından sağlanan bir kullanım hakkı veya yeni bir kurulum için öngörü değildir. Kullanılabilir kapasiteniz, bağladığınız sağlayıcılara ve bunların mevcut koşullarına bağlıdır. Değerler `open-sse/config/freeModelCatalog.ts` dosyasından hesaplanır; havuz bazında yinelenen kayıtların ayıklanması, Hizmet Şartları işaretleri, kullanımdan kaldırılan girdiler ve kayıt kredisi metodolojisi için
+Bunlar, birbirinden ayrı uygun hesaplar genelinde katalog çapında tahminlerdir; 67router tarafından sağlanan bir kullanım hakkı veya yeni bir kurulum için öngörü değildir. Kullanılabilir kapasiteniz, bağladığınız sağlayıcılara ve bunların mevcut koşullarına bağlıdır. Değerler `open-sse/config/freeModelCatalog.ts` dosyasından hesaplanır; havuz bazında yinelenen kayıtların ayıklanması, Hizmet Şartları işaretleri, kullanımdan kaldırılan girdiler ve kayıt kredisi metodolojisi için
 [Ücretsiz Katmanlar Referansı](../reference/FREE_TIERS.md) belgesine bakın.
 
 ---
@@ -183,7 +183,7 @@ gereksinimlerinizi karşılıyorsa. Kritik iş yükleri izlenen ve sözleşme a�
 
 Ödünler arasında katı sınırlar, bekleme listeleri, KYC, kredi kartı doğrulaması, istemlerin eğitim için
 kullanılması, daha zayıf gizlilik, SLA olmaması, model değişkenliği, coğrafi kısıtlamalar, ücretli kota aşımı veya
-hesap politikası riski yer alabilir. OmniRoute kullanılabilir meta verileri gösterir; neyi etkinleştireceğinize siz karar verirsiniz.
+hesap politikası riski yer alabilir. 67router kullanılabilir meta verileri gösterir; neyi etkinleştireceğinize siz karar verirsiniz.
 
 ### "Daha fazla ücretsiz kotayı nasıl edinebilirim?"
 
@@ -202,7 +202,7 @@ erişim sağlar ancak sınırlar, gecikme, gizlilik, güvenilirlik ve model sür
 
 ## Sırada Ne Var?
 
-- **[Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md)** — OmniRoute'un sizin için en iyi yapay zekâyı seçmesine izin verin
+- **[Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md)** — 67router'un sizin için en iyi yapay zekâyı seçmesine izin verin
 - **[Sağlayıcılar Kılavuzu](./PROVIDERS-GUIDE.md)** — Daha fazla sağlayıcı bağlayın
 - **[Sorun Giderme](../guides/TROUBLESHOOTING.md)** — Yaygın sorunları düzeltin
 - **[Ücretsiz Katmanlar Referansı](../reference/FREE_TIERS.md)** — Ücretsiz katmanların tam listesi

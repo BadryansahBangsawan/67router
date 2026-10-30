@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tiene **dos** sistemas de carriles locales al proceso con ámbitos diferentes. Son
+67router tiene **dos** sistemas de carriles locales al proceso con ámbitos diferentes. Son
 complementarios; los operadores deben saber cuál están observando.
 
 ## 1. Admisión a nivel de bytes para todo el proceso (`chatBodyAdmission.ts`)

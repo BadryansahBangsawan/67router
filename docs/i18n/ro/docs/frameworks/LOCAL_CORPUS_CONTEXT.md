@@ -12,9 +12,9 @@
 
 ## Ce este
 
-Local Corpus îi permite unui operator să expună serverului MCP al OmniRoute un singur
+Local Corpus îi permite unui operator să expună serverului MCP al 67router un singur
 director de fișiere text, aprobat în mod explicit. Fișierele rămân în directorul lor
-original: OmniRoute stochează în SQLite doar calea rădăcină canonică și menține un index
+original: 67router stochează în SQLite doar calea rădăcină canonică și menține un index
 de căutare în memorie. Conținutul corpusului nu este copiat în depozit sau în baza de date.
 
 Actualizarea indexului este incrementală. Fișierele nemodificate sunt reutilizate pe baza

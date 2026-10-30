@@ -6,7 +6,7 @@ lastUpdated: 2026-06-28
 
 # MITM TPROXY — przezroczyste deszyfrowanie
 
-TPROXY transparent decrypt to **5. tryb przechwytywania** OmniRoute w stosie MITM
+TPROXY transparent decrypt to **5. tryb przechwytywania** 67router w stosie MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Przechwytuje i **deszyfruje** lokalny ruch HTTPS wychodzący na Linuksie
 przy użyciu kernelowego TPROXY + policy routing — **bez** spoofingu `/etc/hosts` i
@@ -55,7 +55,7 @@ Użyj go, gdy chcesz przechwycić i odszyfrować ruch z procesu, który:
 - nie chcesz go ruszać systemową zmianą proxy.
 
 Ponieważ przechwycenie dzieje się w kernelu, proces źródłowy **nie wymaga żadnej
-zmiany konfiguracji** — ale musi ufać dynamicznemu CA instalowanemu przez OmniRoute
+zmiany konfiguracji** — ale musi ufać dynamicznemu CA instalowanemu przez 67router
 (zob. [§4](#4-dynamiczne-ca-per-sni-i-instalator-trust-store)).
 
 ---
@@ -73,7 +73,7 @@ zmiany konfiguracji** — ale musi ufać dynamicznemu CA instalowanemu przez Omn
 addon nie zbudowany), loader addonu (`src/mitm/tproxy/transparentSocket.ts::loadTransparentAddon`)
 zwraca `null` zamiast rzucać wyjątek. Status trybu przechwytywania raportuje wtedy
 `available: false`, przełącznik w dashboardzie jest **disabled** z tooltipem
-"TPROXY decrypt requires Linux + root + the native addon", a reszta OmniRoute
+"TPROXY decrypt requires Linux + root + the native addon", a reszta 67router
 działa normalnie.
 
 ---
@@ -255,7 +255,7 @@ ponownie zaszyfrowany forward proxy zostałby normalnie przechwycony ponownie �
 | **Error sanitization**           | The route's error responses go through `sanitizeErrorMessage()` (Hard Rule #12).                                                                                                                                                                                                                                                                                   |
 
 **CA MITM to potężna zdolność.** CA zaufane przez OS, które może podpisać dowolny
-host, oznacza, że wszystko przechwycone przez OmniRoute może zostać odszyfrowane. Jest bramkowane przez
+host, oznacza, że wszystko przechwycone przez 67router może zostać odszyfrowane. Jest bramkowane przez
 explicit, local-only tryb przechwytywania TPROXY, domyślnie wyłączony, a wpis trust-store
 jest usuwany po zatrzymaniu trybu.
 
@@ -365,7 +365,7 @@ zwraca `available: false`, gdy addon brakuje.
 ### Stare reguły firewalla po crashu
 
 `revertTproxy()` jest dokładną odwrotnością apply i jest idempotentne. Zatrzymanie
-trybu cofa reguły; jeśli OmniRoute zostało zabite w trakcie sesji, użyj akcji AgentBridge
+trybu cofa reguły; jeśli 67router zostało zabite w trakcie sesji, użyj akcji AgentBridge
 **Repair** (`POST /api/tools/agent-bridge/repair`), by cofnąć osierocony stan systemu
 (DNS spoof, root CA, system proxy). Reguły TPROXY `mangle` i trasa również
 czyszczą się automatycznie po restarcie.

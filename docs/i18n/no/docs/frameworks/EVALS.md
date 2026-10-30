@@ -7,7 +7,7 @@
 > **Sannhetskilde:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Sist oppdatert:** 2026-06-28 — v3.8.40
 
-OmniRoute leveres med et generisk evalueringsrammeverk du kan bruke til å sammenligne rutingskonfigurasjoner, enkeltleverandører/-modeller eller de medfølgende «golden set»-testpakkene.
+67router leveres med et generisk evalueringsrammeverk du kan bruke til å sammenligne rutingskonfigurasjoner, enkeltleverandører/-modeller eller de medfølgende «golden set»-testpakkene.
 Bruk det til å verifisere rutingsendringer, validere nye leverandører og kontrollere lanseringer
 før de sendes til produksjonstrafikk.
 

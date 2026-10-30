@@ -1,14 +1,14 @@
 ---
-title: "OmniRoute — Dashboard Features Gallery"
+title: "67router — Dashboard Features Gallery"
 version: 3.8.52
 lastUpdated: 2026-10-05
 ---
 
-# OmniRoute — Dashboard Features Gallery
+# 67router — Dashboard Features Gallery
 
 🌐 **Languages:** 🇺🇸 [English](./FEATURES.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/FEATURES.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/FEATURES.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/FEATURES.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/FEATURES.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/FEATURES.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/FEATURES.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/FEATURES.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/FEATURES.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/FEATURES.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/FEATURES.md) | 🇪🇸 [Español](../i18n/es/docs/guides/FEATURES.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/FEATURES.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/FEATURES.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/FEATURES.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/FEATURES.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/FEATURES.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/FEATURES.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/FEATURES.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/FEATURES.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/FEATURES.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/FEATURES.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/FEATURES.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/FEATURES.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/FEATURES.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/FEATURES.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/FEATURES.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/FEATURES.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/FEATURES.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/FEATURES.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/FEATURES.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/FEATURES.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/FEATURES.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/FEATURES.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/FEATURES.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/FEATURES.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/FEATURES.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/FEATURES.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/FEATURES.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/FEATURES.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/FEATURES.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/FEATURES.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/FEATURES.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/FEATURES.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/FEATURES.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/FEATURES.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/FEATURES.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/FEATURES.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/FEATURES.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/FEATURES.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/FEATURES.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/FEATURES.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/FEATURES.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/FEATURES.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/FEATURES.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/FEATURES.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/FEATURES.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/FEATURES.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/FEATURES.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/FEATURES.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/FEATURES.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/FEATURES.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/FEATURES.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/FEATURES.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/FEATURES.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/FEATURES.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/FEATURES.md)
 
-Visual guide to every section of the OmniRoute dashboard.
+Visual guide to every section of the 67router dashboard.
 
 > 📅 **Last updated:** 2026-06-28 — **v3.8.40**
 
@@ -53,7 +53,7 @@ The v3.7.x → v3.8.0 cycle added zero-config auto routing, new providers, OAuth
 
 Manage AI provider connections: OAuth providers (Claude Code, Codex), API key providers (Groq, DeepSeek, OpenRouter), and free providers (Qoder, Kiro). Kiro accounts include credit balance tracking — remaining credits, total allowance, and renewal date visible in Dashboard → Usage.
 
-OpenRouter connections can store a per-connection `preset` in Advanced Settings. When set, OmniRoute sends it as the OpenRouter top-level request field, for example `"preset": "email-copywriter"`, unless the client request already supplied its own `preset`.
+OpenRouter connections can store a per-connection `preset` in Advanced Settings. When set, 67router sends it as the OpenRouter top-level request field, for example `"preset": "email-copywriter"`, unless the client request already supplied its own `preset`.
 
 ![Providers Dashboard](../screenshots/01-providers.png)
 
@@ -159,7 +159,7 @@ Dashboard for discovering and managing CLI agents. Shows a grid of 16 built-in a
 
 ## 🔗 Context Relay _(v3.5.5+)_
 
-A combo strategy that preserves session continuity when account rotation happens mid-conversation. Before the active account is exhausted, OmniRoute generates a structured handoff summary in the background. After the next request resolves to a different account, the summary is injected as a system message so the new account continues with full context.
+A combo strategy that preserves session continuity when account rotation happens mid-conversation. Before the active account is exhausted, 67router generates a structured handoff summary in the background. After the next request resolves to a different account, the summary is injected as a system message so the new account continues with full context.
 
 Configurable via combo-level or global settings:
 
@@ -269,7 +269,7 @@ Administrative action tracking with filtering by action type, actor, target, IP 
 
 ## 🖥️ Desktop Application
 
-Native Electron desktop app for Windows, macOS, and Linux. Run OmniRoute as a standalone application with system tray integration, offline support, auto-update, and one-click install.
+Native Electron desktop app for Windows, macOS, and Linux. Run 67router as a standalone application with system tray integration, offline support, auto-update, and one-click install.
 
 Key features:
 
@@ -288,7 +288,7 @@ Key features:
 
 ## 🌐 V1 WebSocket Bridge _(v3.6.6+)_
 
-OmniRoute now supports **OpenAI-compatible WebSocket clients** via the `/v1/ws` upgrade endpoint. The custom `scripts/dev/v1-ws-bridge.mjs` server wraps Next.js and upgrades WS connections to full bidirectional streaming sessions. Authentication uses the same API key or session cookie as HTTP requests.
+67router now supports **OpenAI-compatible WebSocket clients** via the `/v1/ws` upgrade endpoint. The custom `scripts/dev/v1-ws-bridge.mjs` server wraps Next.js and upgrades WS connections to full bidirectional streaming sessions. Authentication uses the same API key or session cookie as HTTP requests.
 
 Key behaviours:
 
@@ -314,7 +314,7 @@ The config bundle is built by `src/lib/sync/bundle.ts`. Consumers compare the `E
 
 **GLM Thinking (`glmt`)** is now a registered first-class provider: 65 536 max output tokens, 24 576 thinking budget, 900 s default timeout, Claude-compatible API format, and shared usage sync with the GLM family.
 
-**Hybrid token counting** also lands in v3.6.6: when a Claude-compatible provider exposes `/messages/count_tokens`, OmniRoute calls it before large requests with graceful estimation fallback.
+**Hybrid token counting** also lands in v3.6.6: when a Claude-compatible provider exposes `/messages/count_tokens`, 67router calls it before large requests with graceful estimation fallback.
 
 ---
 

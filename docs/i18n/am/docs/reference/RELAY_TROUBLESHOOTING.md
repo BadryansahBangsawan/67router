@@ -4,7 +4,7 @@
 
 ---
 
-ሪሌዎች (Vercel, Deno, Cloudflare) የupstream ግንኙነቱን serverless backend ላይ ያቋርጣሉ፤ ይህም OmniRoute የprovider API key-ን በserver-side እያቆየ ከተረጋጋ ክልል የወጪ ግንኙነት እንዲፈጽም ያስችለዋል። ይህ ሰነድ ኦፕሬተሮች በproduction የሚያጋጥሟቸውን ሁለት የብልሽት ሁነታዎች እና OmniRoute ለእያንዳንዳቸው የሚያቀርባቸውን የመልሶ ማግኛ መንገዶች ይሸፍናል።
+ሪሌዎች (Vercel, Deno, Cloudflare) የupstream ግንኙነቱን serverless backend ላይ ያቋርጣሉ፤ ይህም 67router የprovider API key-ን በserver-side እያቆየ ከተረጋጋ ክልል የወጪ ግንኙነት እንዲፈጽም ያስችለዋል። ይህ ሰነድ ኦፕሬተሮች በproduction የሚያጋጥሟቸውን ሁለት የብልሽት ሁነታዎች እና 67router ለእያንዳንዳቸው የሚያቀርባቸውን የመልሶ ማግኛ መንገዶች ይሸፍናል።
 
 ## የሪሌይ ማረጋገጫ እንዴት እንደሚከማች
 
@@ -25,7 +25,7 @@
 1. **Settings → Proxy Pool** ይክፈቱ።
 2. ማረጋገጫቸው የጎደለ የሪሌይ ረድፎች ቢጫ `auth missing` ባጅ እና
    **Repair** አዝራር ያሳያሉ።
-3. **Repair** የሚለውን ጠቅ ያድርጉ። OmniRoute
+3. **Repair** የሚለውን ጠቅ ያድርጉ። 67router
    `POST /api/settings/proxies/[id]/repair-relay` ይጠራል፤ ይህም፦
    - `relayAuthEnc`-ን በ**አሁኑ** ቁልፍ ዲክሪፕት ያደርጋል፣
    - ግልጽ ጽሑፉን `relayAuth` መልሶ ወደ `notes` ይጽፋል፣
@@ -50,7 +50,7 @@
 
 **ምልክት፦** የፕሮክሲ ሙከራው (`speed` አዝራር) ሪሌዩ እየሰራ መሆኑን ያሳያል፣ ነገር ግን ጥያቄዎች አሁንም አልፎ አልፎ አይሳኩም።
 
-በOmniRoute ራስ-ሰር የሙከራ probe የሚመለሱትን የሪሌይ ግንዛቤ ራስጌዎች ያረጋግጡ
+በ67router ራስ-ሰር የሙከራ probe የሚመለሱትን የሪሌይ ግንዛቤ ራስጌዎች ያረጋግጡ
 (**Settings → Proxy Pool** እና `relayTested` / `relayAlive` ቆጣሪዎችን ይመልከቱ)፦
 
 - `x-relay-url` — የትኛው የሪሌይ backend እንደመለሰ።

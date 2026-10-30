@@ -48,7 +48,7 @@ export function archiveFileName(contentDisposition, now = new Date()) {
 /** Hint for a status meaning "this server does not mount the route" (older/newer server). */
 function routeUnavailableHint(status, route) {
   return isRouteUnavailableStatus(status)
-    ? `the server does not serve ${route}; update OmniRoute on the server.`
+    ? `the server does not serve ${route}; update 67router on the server.`
     : null;
 }
 

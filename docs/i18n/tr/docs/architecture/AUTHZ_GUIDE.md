@@ -7,7 +7,7 @@
 > **Doğruluk Kaynağı:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Son Güncelleme:** 2026-09-22 — kapsam ad alanları `MCP-SERVER.md`'yi işaret ediyor
 
-OmniRoute, her API isteğini denetleyen rota-farkındalıklı bir yetkilendirme hattına sahiptir. Sınıflandırma **deterministik** ve **kapalı-güvenli**dir — sınıflandırılamayan her şey `MANAGEMENT` olarak sonuçlanır ve bir oturum veya yönetim düzeyinde bir jeton gerektirir. Bu sayfa, rotaları sürdüren veya yeni uç noktalar tasarlayan mühendisler için modeli açıklar.
+67router, her API isteğini denetleyen rota-farkındalıklı bir yetkilendirme hattına sahiptir. Sınıflandırma **deterministik** ve **kapalı-güvenli**dir — sınıflandırılamayan her şey `MANAGEMENT` olarak sonuçlanır ve bir oturum veya yönetim düzeyinde bir jeton gerektirir. Bu sayfa, rotaları sürdüren veya yeni uç noktalar tasarlayan mühendisler için modeli açıklar.
 
 ![Yetkilendirme hattı (3 rota sınıfı + politika değerlendirmesi)](../diagrams/exported/authz-pipeline.svg)
 

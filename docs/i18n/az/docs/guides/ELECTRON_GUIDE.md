@@ -7,7 +7,7 @@
 > **Həqiqət mənbəyi:** `electron/` iş sahəsi
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute **Electron 41** + **electron-builder 26.10** əsasında qurulmuş platformalararası masaüstü tətbiqi (Windows / macOS / Linux) ilə təqdim olunur. Masaüstü tətbiqi Next.js müstəqil serverini alt proses kimi işə salır, `BrowserWindow` pəncərəsini ona yönəldir və sistem treyi, avtomatik yeniləyici, IPC körpüsü və konfiqurasiya tələb etməyən məxfi məlumatların ilkin quraşdırılmasını əlavə edir.
+67router **Electron 41** + **electron-builder 26.10** əsasında qurulmuş platformalararası masaüstü tətbiqi (Windows / macOS / Linux) ilə təqdim olunur. Masaüstü tətbiqi Next.js müstəqil serverini alt proses kimi işə salır, `BrowserWindow` pəncərəsini ona yönəldir və sistem treyi, avtomatik yeniləyici, IPC körpüsü və konfiqurasiya tələb etməyən məxfi məlumatların ilkin quraşdırılmasını əlavə edir.
 
 ## Arxitektura
 
@@ -192,7 +192,7 @@ icra vaxtı parametrləri üçün (baxın:
 - `BrowserWindow`: 1400×900 (minimum 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, idarəetmə düymələri `{ x: 16, y: 16 }` mövqeyində.
 - Windows/Linux: sistemin standart başlıq paneli.
-- Bağlama düyməsi tətbiqi sistem panelinə kiçildir; sistem paneli menyusunda **OmniRoute-u aç**, **İdarəetmə panelini aç** (xarici brauzerdə), **Server portu** alt menyusu, **Yeniləmələri yoxla**, **Çıxış** seçimləri var.
+- Bağlama düyməsi tətbiqi sistem panelinə kiçildir; sistem paneli menyusunda **67router-u aç**, **İdarəetmə panelini aç** (xarici brauzerdə), **Server portu** alt menyusu, **Yeniləmələri yoxla**, **Çıxış** seçimləri var.
 
 ## Məzmun Təhlükəsizliyi Siyasəti
 

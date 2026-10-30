@@ -7,7 +7,7 @@
 > **Tushen gaskiya:** `src/lib/memory/` da `src/app/api/memory/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40 (a kashe ta tsohuwa + cike gibin quantization na int8)
 
-OmniRoute yana samar da ma’adanar tattaunawa mai ɗorewa wadda aka ware bisa API key (da
+67router yana samar da ma’adanar tattaunawa mai ɗorewa wadda aka ware bisa API key (da
 session id idan ana so). Ana cire abubuwan tunawa kai tsaye daga amsoshin LLM
 ta hanyar daidaita tsarin regex mai sauƙi, sannan a sake saka su cikin buƙatu
 na gaba a matsayin saƙon system na farko (ko saƙon user na farko ga masu samarwa waɗanda
@@ -638,7 +638,7 @@ iyakantaccen fanni ke amfani da su (LRU mai shigarwa 1 000, tsohuwar TTL 5 min).
 
 ## Zaɓar Mai Bayar da Embedding (v3.8.16+)
 
-Injin ƙwaƙwalwar OmniRoute yana goyon bayan **tushen embedding guda huɗu** (`src/lib/memory/embedding/`). Kowannensu yana da bambance-bambancen fifiko a **jinkiri, kuɗi, ingancin samfuri, da rikitarwar saiti**.
+Injin ƙwaƙwalwar 67router yana goyon bayan **tushen embedding guda huɗu** (`src/lib/memory/embedding/`). Kowannensu yana da bambance-bambancen fifiko a **jinkiri, kuɗi, ingancin samfuri, da rikitarwar saiti**.
 
 ### Tushen Embedding
 
@@ -1059,13 +1059,13 @@ Worker ɗin yana ɗaurewa da loopback kawai, wanda kariyar SSRF ta `GenericMemor
 Wannan adaftar ba ta sassauta wannan kariyar: an ƙayyade host ɗin kai tsaye zuwa `127.0.0.1`, kuma schema na
 daidaitawa (`ClaudeMemBackendConfigSchema`, `.strict()`) yana karɓar waɗannan kaɗai:
 
-| Maɓalli     | Nau'i   | Na asali | Bayanan kula                                                                                                                            |
-| ----------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | lamba   | —        | Wajibi ne, 1024–65535. tashar claude-mem worker daga fayil ɗin saitunansa (na asali `37700 + uid % 100`).                               |
-| `project`   | kirtani | —        | Aikin claude-mem da za a yi amfani da shi. Idan ba a saita ba → kowane maɓallin OmniRoute API zai yi daidai da nasa aikin (`apiKeyId`). |
-| `timeoutMs` | lamba   | `5000`   | Wa'adin kowace buƙata, 100–30000.                                                                                                       |
+| Maɓalli     | Nau'i   | Na asali | Bayanan kula                                                                                                                           |
+| ----------- | ------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | lamba   | —        | Wajibi ne, 1024–65535. tashar claude-mem worker daga fayil ɗin saitunansa (na asali `37700 + uid % 100`).                              |
+| `project`   | kirtani | —        | Aikin claude-mem da za a yi amfani da shi. Idan ba a saita ba → kowane maɓallin 67router API zai yi daidai da nasa aikin (`apiKeyId`). |
+| `timeoutMs` | lamba   | `5000`   | Wa'adin kowace buƙata, 100–30000.                                                                                                      |
 
-Kunna shi ta hanyar `PUT /api/settings/memory` sannan a sake kunna OmniRoute (ana rajistar backends
+Kunna shi ta hanyar `PUT /api/settings/memory` sannan a sake kunna 67router (ana rajistar backends
 sau ɗaya, a cikin `initMemoryBackends()`):
 
 ```json
@@ -1082,7 +1082,7 @@ Taswira da iyakoki:
 
 - IDs suna da tsarin `claude-mem:<observationId>`; `get`/`delete` suna yin watsi da IDs na sauran backends ba tare da
   kiran hanyar sadarwa ba.
-- `create` → `POST /api/memory/save`; filayen OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; filayen 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) suna tafiya a cikin `metadata.omniroute` na claude-mem kuma suna dawowa yadda suke lokacin karantawa.
 - `search` → `GET /api/search?format=json&type=observations`, ana rage shi zuwa `maxTokens`
   (haruffa / 4). `list` → endpoint na observations mai rarraba shafuka na worker (`total` ƙaramar iyaka ce — worker
@@ -1094,16 +1094,16 @@ Taswira da iyakoki:
 - Shigar da prompt (`retrieval.ts`) da kayan aikin MCP na `omniroute_memory_*` har yanzu suna karanta SQLite
   kai tsaye — ba sa bi ta `memoryManager`, don haka wannan backend ba ya samar musu da bayanai.
 
-**Tura kiran LLM na claude-mem ta cikin OmniRoute.** claude-mem yana matse observations
+**Tura kiran LLM na claude-mem ta cikin 67router.** claude-mem yana matse observations
 ta amfani da LLM (na asali: Claude Agent SDK). Za a iya nuna mai samar da sabis na `openai-compatible` zuwa
-OmniRoute maimakon haka, domin ya yi amfani da combo fallback da bin diddigin farashi. A cikin `~/.claude-mem/settings.json`:
+67router maimakon haka, domin ya yi amfani da combo fallback da bin diddigin farashi. A cikin `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API key>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model or combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API key>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model or combo>"
 }
 ```
 

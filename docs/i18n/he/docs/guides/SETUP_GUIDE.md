@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (עברית)
+# 📖 Setup Guide — 67router (עברית)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> מדריך התקנה מלא עבור OmniRoute. לגרסה המהירה, ראו את [המדריך להתחלה מהירה ב-README](../README.md#-quick-start).
+> מדריך התקנה מלא עבור 67router. לגרסה המהירה, ראו את [המדריך להתחלה מהירה ב-README](../README.md#-quick-start).
 
 ## תוכן העניינים
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[חבילת AUR](https://aur.archlinux.org/packages/omniroute-bin) מתקינה את OmniRoute ומספקת שירות משתמש של systemd.
+[חבילת AUR](https://aur.archlinux.org/packages/omniroute-bin) מתקינה את 67router ומספקת שירות משתמש של systemd.
 
 ### מקוד המקור
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **הערה עבור Windows:** כברירת מחדל, OmniRoute משתמש ב-`%APPDATA%\omniroute` כאשר התיקייה הישנה `%USERPROFILE%\.omniroute` אינה קיימת. הגדירו את `DATA_DIR` כדי לבחור מיקום אחר עבור תיקיית הנתונים.
+> **הערה עבור Windows:** כברירת מחדל, 67router משתמש ב-`%APPDATA%\omniroute` כאשר התיקייה הישנה `%USERPROFILE%\.omniroute` אינה קיימת. הגדירו את `DATA_DIR` כדי לבחור מיקום אחר עבור תיקיית הנתונים.
 
 > **הערה:** `npm install` יוצר אוטומטית את `.env` מתוך `.env.example` בהפעלה הראשונה. התקנות עתידיות לא ידרסו קובץ `.env` קיים, ולכן ההתאמות האישיות נשמרות. כדי לאתחל אותו מחדש, מחקו את `.env` לפני הפעלה חוזרת.
 
@@ -64,7 +64,7 @@ PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm 
 
 ### יישום שולחן עבודה (Electron)
 
-OmniRoute כולל מעטפת שולחן עבודה המבוססת על Electron 41 ועל electron-builder 26.10. הסקריפטים הזמינים (בשורש סביבת העבודה):
+67router כולל מעטפת שולחן עבודה המבוססת על Electron 41 ועל electron-builder 26.10. הסקריפטים הזמינים (בשורש סביבת העבודה):
 
 ```bash
 npm run electron:dev          # הפעלת יישום שולחן העבודה עם טעינה מחדש בזמן אמת
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-בשילוב עם משתני סביבה (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` וכו'), הדבר מאפשר להפעיל מופע OmniRoute שניתן לשלוט בו באופן מלא באמצעות סקריפטים.
+בשילוב עם משתני סביבה (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` וכו'), הדבר מאפשר להפעיל מופע 67router שניתן לשלוט בו באופן מלא באמצעות סקריפטים.
 
 ### אפשרויות CLI
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | הגדרת כלי CLI — הצגה, קבלה, הגדרה ואימות של תצורות              |
 | `omniroute status`      | לוח מצב לא מקוון — גרסה, מסד נתונים, כלים ותצורה                |
 | `omniroute logs`        | הזרמת יומני שימוש מה-API (תומך ב-`--follow`)                    |
-| `omniroute update`      | בדיקה או החלה של עדכוני OmniRoute                               |
+| `omniroute update`      | בדיקה או החלה של עדכוני 67router                                |
 | `omniroute provider`    | ניהול חיבורי ספקים — הוספה, הצגה, הסרה, בדיקה והגדרת ברירת מחדל |
 | `omniroute --port 3000` | הגדרת היציאה הראשית/יציאת ה-API ל-3000                          |
 | `omniroute --mcp`       | הפעלת שרת MCP (תעבורת stdio)                                    |
@@ -165,7 +165,7 @@ omniroute providers validate
 
 #### הגדרה אוטומטית באמצעות `setup-*`
 
-במקום להדביק ידנית את כתובת הבסיס ואת המפתח, אפשרו ל-OmniRoute לכתוב את קובץ התצורה
+במקום להדביק ידנית את כתובת הבסיס ואת המפתח, אפשרו ל-67router לכתוב את קובץ התצורה
 הייחודי של כל כלי מתוך קטלוג המודלים הפעיל. פקודה אחת לכל כלי:
 
 ```bash
@@ -184,7 +184,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-כל פקודה מקבלת את `--remote <url> --api-key <key>` כדי להגדיר כלי מקומי מול OmniRoute
+כל פקודה מקבלת את `--remote <url> --api-key <key>` כדי להגדיר כלי מקומי מול 67router
 **מרוחק**, וכן את `--dry-run` לתצוגה מקדימה. כדי להפעיל CLI עם משתני הסביבה המתאימים
 מוזרקים, מבלי לכתוב כלל קובץ תצורה, השתמשו במפעיל הכללי
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
@@ -277,15 +277,15 @@ curl -X POST http://localhost:20128/a2a \
 | משתנה                    | ברירת מחדל                   | מטרה                                                                                                                                                         |
 | ------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `REQUEST_TIMEOUT_MS`     | `600000`                     | ערך בסיס משותף לזמן הקצוב לתחילת תגובה מהשרת במעלה הזרם, לזמנים הקצובים הנסתרים של Undici, לבקשות טביעת אצבע של TLS ולזמנים קצובים של בקשות/תיווך בגשר ה-API |
-| `STREAM_IDLE_TIMEOUT_MS` | יורש את `REQUEST_TIMEOUT_MS` | המרווח המרבי בין מקטעי זרימה לפני ש-OmniRoute מבטל את זרם ה-SSE                                                                                              |
+| `STREAM_IDLE_TIMEOUT_MS` | יורש את `REQUEST_TIMEOUT_MS` | המרווח המרבי בין מקטעי זרימה לפני ש-67router מבטל את זרם ה-SSE                                                                                               |
 
 התאימות לאחור נשמרת: `FETCH_TIMEOUT_MS`,‏ `API_BRIDGE_PROXY_TIMEOUT_MS` ומשתני זמן קצוב אחרים לכל שכבה ממשיכים לפעול וגוברים על ערך הבסיס המשותף.
 
 ### הערות ספציפיות לספקים
 
-עבור שרתי מעלה תואמי Claude Code (`anthropic-compatible-cc-*`),‏ OmniRoute גוזר את כותרת ה-`X-Stainless-Timeout` היוצאת מזמן הקצוב המחושב של האחזור, כך שזמני הקצוב לקריאה בצד הספק נשארים תואמים להגדרות הסביבה שלכם.
+עבור שרתי מעלה תואמי Claude Code (`anthropic-compatible-cc-*`),‏ 67router גוזר את כותרת ה-`X-Stainless-Timeout` היוצאת מזמן הקצוב המחושב של האחזור, כך שזמני הקצוב לקריאה בצד הספק נשארים תואמים להגדרות הסביבה שלכם.
 
-עבור שרתי proxy הפוכים של צד שלישי התואמים ל-Claude Code,‏ OmniRoute שומר על ערכת ברירת מחדל שמרנית של `anthropic-beta`, וכאשר `Client Cache Control` נשאר במצב `Auto`, מעביר רק סמני `cache_control` שסופקו על ידי הלקוח. הפעילו את המתג "Enable redact-thinking beta" לכל חיבור רק כאשר שרת המעלה דורש במפורש זרמי חשיבה מושחרים של Claude.
+עבור שרתי proxy הפוכים של צד שלישי התואמים ל-Claude Code,‏ 67router שומר על ערכת ברירת מחדל שמרנית של `anthropic-beta`, וכאשר `Client Cache Control` נשאר במצב `Auto`, מעביר רק סמני `cache_control` שסופקו על ידי הלקוח. הפעילו את המתג "Enable redact-thinking beta" לכל חיבור רק כאשר שרת המעלה דורש במפורש זרמי חשיבה מושחרים של Claude.
 
 ### דריסות מתקדמות של זמני קצוב
 
@@ -303,11 +303,11 @@ curl -X POST http://localhost:20128/a2a \
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | זמן קצוב ל-keep-alive בשרת גשר ה-API                            |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | זמן קצוב לחוסר פעילות של socket בשרת גשר ה-API (`0` משבית אותו) |
 
-> **הערה:** עבור בקשות זורמות, `FETCH_TIMEOUT_MS` מכסה רק את הקמת החיבור / ההמתנה לתגובה הראשונה משרת המעלה. לאחר שהזרם פעיל, OmniRoute יבטל אותו רק במקרה של עצירה בפועל (`STREAM_IDLE_TIMEOUT_MS`) או חוסר פעילות בגוף לפי Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **הערה:** עבור בקשות זורמות, `FETCH_TIMEOUT_MS` מכסה רק את הקמת החיבור / ההמתנה לתגובה הראשונה משרת המעלה. לאחר שהזרם פעיל, 67router יבטל אותו רק במקרה של עצירה בפועל (`STREAM_IDLE_TIMEOUT_MS`) או חוסר פעילות בגוף לפי Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### תאימות לשרת proxy הפוך
 
-אם אתם מריצים את OmniRoute מאחורי Nginx,‏ Caddy,‏ Cloudflare או שרת proxy הפוך אחר, ודאו שגם זמני הקצוב של ה-proxy גבוהים מזמני הקצוב של OmniRoute לזרימה/אחזור.
+אם אתם מריצים את 67router מאחורי Nginx,‏ Caddy,‏ Cloudflare או שרת proxy הפוך אחר, ודאו שגם זמני הקצוב של ה-proxy גבוהים מזמני הקצוב של 67router לזרימה/אחזור.
 
 ---
 

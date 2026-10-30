@@ -10,7 +10,7 @@
 
 ## Kontekst
 
-OmniRoute trenutačno pruža funkcije perzistencije usmjerene na domenu iz `src/lib/db/`, dok
+67router trenutačno pruža funkcije perzistencije usmjerene na domenu iz `src/lib/db/`, dok
 dijeljena veza koju vraća `src/lib/db/core.ts` implementira sinkroni ugovor `SqliteAdapter`
 iz `src/lib/db/adapters/types.ts`. Taj adapter podržava nekoliko SQLite runtimeova, ali njegovo
 sučelje ostaje oblikovano prema SQLiteu: sinkroni pripremljeni izrazi, `pragma`, odgođene i neposredne

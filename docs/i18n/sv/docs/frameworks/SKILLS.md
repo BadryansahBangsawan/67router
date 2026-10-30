@@ -7,29 +7,29 @@
 > **Sanningskälla:** `src/lib/skills/` och `src/app/api/skills/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40
 
-OmniRoute tillhandahåller ett utbyggbart ramverk för färdigheter som låter språkmodeller (och operatörer) kombinera återanvändbara funktioner — från filsystemsläsning och HTTP-förfrågningar till sandlådeskyddad kodkörning och kurerade färdigheter från marknadsplatsen.
+67router tillhandahåller ett utbyggbart ramverk för färdigheter som låter språkmodeller (och operatörer) kombinera återanvändbara funktioner — från filsystemsläsning och HTTP-förfrågningar till sandlådeskyddad kodkörning och kurerade färdigheter från marknadsplatsen.
 
-En färdighet är en versionshanterad, schemadefinierad arbetsenhet. OmniRoute kan injicera färdigheter som verktygsdefinitioner i utgående förfrågningar, fånga upp verktygsanrop som kommer tillbaka från modellen, köra den matchande hanteraren och skicka resultatet tillbaka till modellen så att konversationen kan fortsätta. Modellen ser aldrig implementationen — endast verktygsgränssnittet.
+En färdighet är en versionshanterad, schemadefinierad arbetsenhet. 67router kan injicera färdigheter som verktygsdefinitioner i utgående förfrågningar, fånga upp verktygsanrop som kommer tillbaka från modellen, köra den matchande hanteraren och skicka resultatet tillbaka till modellen så att konversationen kan fortsätta. Modellen ser aldrig implementationen — endast verktygsgränssnittet.
 
 ---
 
 ## Agentfärdigheter kontra Omni-färdigheter
 
-OmniRoute har två separata men kompletterande färdighetssystem:
+67router har två separata men kompletterande färdighetssystem:
 
 | Dimension        | **Omni-färdigheter** (detta dokument)                         | **Agentfärdigheter**                                                                          |
 | :--------------- | :------------------------------------------------------------ | :-------------------------------------------------------------------------------------------- |
 | Syfte            | Injektion av LLM-verktyg + sandlådeskyddad körning            | SKILL.md-katalog som externa agenter kan upptäcka och använda                                 |
 | Sanningskälla    | `src/lib/skills/` + marknadsplats                             | `src/lib/agentSkills/` + katalogen `skills/`                                                  |
 | Körningsläge     | Injiceras i utgående förfrågningar och körs vid verktygsanrop | Statisk markdown-katalog + REST/MCP/A2A-slutpunkter för identifiering                         |
-| Vem använder det | OmniRoute självt (kombinationsroutning, inkommande LLM-anrop) | Externa agenter, MCP-klienter, A2A-orkestrerare                                               |
+| Vem använder det | 67router självt (kombinationsroutning, inkommande LLM-anrop)  | Externa agenter, MCP-klienter, A2A-orkestrerare                                               |
 | Antal            | Variabelt (marknadsplatsstyrt)                                | 43 katalogposter (22 API + 20 CLI + 1 konfiguration)                                          |
 | Format           | `SkillDefinition` med verktygsschema + hanterare              | `SKILL.md`-frontmatter + markdown-brödtext                                                    |
 | Identifiering    | `/api/skills/*` REST + `omniroute_skills_*` MCP-verktyg       | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-verktyg + A2A `list-capabilities` |
 
-**Omni-färdigheter** är körningsmotorn — de definierar vad OmniRoute _kan göra_ när en LLM anropar ett verktyg.
+**Omni-färdigheter** är körningsmotorn — de definierar vad 67router _kan göra_ när en LLM anropar ett verktyg.
 
-**Agentfärdigheter** är dokumentationskatalogen — de förklarar för externa agenter _hur de använder_ OmniRoutes REST-API och CLI, med strukturerade SKILL.md-filer som kan matas direkt in i agentprompter.
+**Agentfärdigheter** är dokumentationskatalogen — de förklarar för externa agenter _hur de använder_ 67routers REST-API och CLI, med strukturerade SKILL.md-filer som kan matas direkt in i agentprompter.
 
 För katalogen över agentfärdigheter, generatorn, MCP-verktygen och A2A-färdigheten, se [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ För katalogen över agentfärdigheter, generatorn, MCP-verktygen och A2A-färdi
 
 Tre källor till färdigheter samexisterar i samma register:
 
-1. **Inbyggda färdigheter** (`src/lib/skills/builtins.ts`) — levereras med OmniRoute. Täcker de vanligaste fallen:
+1. **Inbyggda färdigheter** (`src/lib/skills/builtins.ts`) — levereras med 67router. Täcker de vanligaste fallen:
    - `file_read`, `file_write` — sandlådearbetsyta per API-nyckel under `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — utgående HTTP via `safeOutboundFetch` med `guard: "public-only"`
    - `web_search` — utbytbar sökleverantör med cachning (`executeWebSearch`)
    - `eval_code` — Docker-sandlådeskyddad körning av `node` eller `python`
    - `execute_command` — Docker-sandlådeskyddat skalkommando
    - `browser` — Playwright-baserad grundstruktur, inaktiverad som standard (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoutes marknadsplats) — hämtas från `https://skillsmp.com/api/v1/skills/search`. Kräver `skillsmpApiKey` i Inställningar.
+2. **SkillsMP** (67routers marknadsplats) — hämtas från `https://skillsmp.com/api/v1/skills/search`. Kräver `skillsmpApiKey` i Inställningar.
 3. **SkillsSH** (`skills.sh`-communitykatalogen) — hämtas från `https://skills.sh/api/search`. Ingen autentisering krävs; SKILL.md-innehåll hämtas från GitHub raw.
 
 En enda ”aktiv leverantör” styr vilken katalog som instrumentpanelen installerar från (`src/lib/skills/providerSettings.ts`). Byt den under **Inställningar → Minne och färdigheter**. Standard: `skillsmp`.
@@ -442,7 +442,7 @@ dokumentet; det finns inget tröskelvärde av typen flyttalet `0.6` och ingen po
 
 ## Katalog över inbyggda färdigheter
 
-OmniRoute levereras med en utvald uppsättning inbyggda färdigheter i `src/lib/skills/builtin/`. De vanligaste är:
+67router levereras med en utvald uppsättning inbyggda färdigheter i `src/lib/skills/builtin/`. De vanligaste är:
 
 ### Färdighet för webbläsarautomatisering
 

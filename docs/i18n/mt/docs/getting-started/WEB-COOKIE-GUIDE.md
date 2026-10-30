@@ -4,7 +4,7 @@
 
 ---
 
-Il-fornituri tal-Web Cookie jippermettu lil OmniRoute juża servizz tal-IA permezz tas-sessjoni eżistenti tal-browser tiegħek minflok API key. Dawn huma utli meta diġà għandek aċċess għal servizz permezz tas-sit web tiegħu u trid li OmniRoute juża l-istess sessjoni awtentikata.
+Il-fornituri tal-Web Cookie jippermettu lil 67router juża servizz tal-IA permezz tas-sessjoni eżistenti tal-browser tiegħek minflok API key. Dawn huma utli meta diġà għandek aċċess għal servizz permezz tas-sit web tiegħu u trid li 67router juża l-istess sessjoni awtentikata.
 
 B'differenza mill-fornituri li jużaw API key, il-fornituri tal-Web Cookie jawtentikaw billi jużaw il-kredenzjali li l-browser tiegħek jibgħat lis-sit web.
 
@@ -49,7 +49,7 @@ DevTools
 
 L-header tat-talba `Cookie` fih l-informazzjoni eżatta tal-awtentikazzjoni li l-browser tiegħek uża b'suċċess.
 
-Għall-biċċa l-kbira tal-fornituri tal-Web Cookie, dan huwa l-valur li għandu jitwaħħal f'OmniRoute.
+Għall-biċċa l-kbira tal-fornituri tal-Web Cookie, dan huwa l-valur li għandu jitwaħħal f'67router.
 
 ---
 
@@ -63,7 +63,7 @@ Il-proċess ta' konfigurazzjoni huwa l-istess għall-biċċa l-kbira tal-fornitu
 4. Aġġorna l-paġna.
 5. Iftaħ talba awtentikata ta' chat jew konverżazzjoni.
 6. Ikkopja l-kredenzjali tal-awtentikazzjoni meħtieġa.
-7. Iftaħ OmniRoute.
+7. Iftaħ 67router.
 8. Mur f'**Providers → Add Provider**.
 9. Agħżel il-fornitur tal-Web Cookie tiegħek.
 10. Waħħal il-kredenzjali.
@@ -92,17 +92,17 @@ Siti web differenti jaħżnu l-awtentikazzjoni b'modi differenti. Xi wħud jeħt
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) hija pjattaforma taċ-chat bla ħlas għall-konsumaturi li ma teħtieġx reġistrazzjoni — is-sessjoni tinħoloq b’mod anonimu mal-ewwel żjara u tippersisti permezz ta’ tliet cookies: `uid`, `si_usr_id`, u `si_ses_id`. OmniRoute jagħmel proxy tal-istess endpoint `/api/dispatch` permezz ta’ id wieħed tal-mudell (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) hija pjattaforma taċ-chat bla ħlas għall-konsumaturi li ma teħtieġx reġistrazzjoni — is-sessjoni tinħoloq b’mod anonimu mal-ewwel żjara u tippersisti permezz ta’ tliet cookies: `uid`, `si_usr_id`, u `si_ses_id`. 67router jagħmel proxy tal-istess endpoint `/api/dispatch` permezz ta’ id wieħed tal-mudell (`notrack-c`, alias `ntw`).
 
 ### Passi għall-konnessjoni
 
 1. Iftaħ [notrack.ai](https://notrack.ai) fil-browser tiegħek u ħalli l-cookie tas-sessjoni anonima tiġi ssettjata.
 2. Iftaħ **DevTools → Network**, aġġorna l-paġna, u kklikkja kwalunkwe talba `/api`.
 3. F’**Request Headers**, ikkopja l-valur sħiħ tal-header `Cookie`.
-4. F’OmniRoute, mur **Providers → Add Provider → NoTrack Web (Free)**.
+4. F’67router, mur **Providers → Add Provider → NoTrack Web (Free)**.
 5. Waħħal is-sekwenza tal-cookie fil-field `apiKey` u agħfas **Save**.
 
-OmniRoute jiġbed `uid`, `si_usr_id`, u `si_ses_id` mis-sekwenza mwaħħla u jerġa’ jibni header `Cookie` nadif li jkun fih dawk il-pari biss — flimkien ma’ `nt_session` (it-token `ntk_…` issettjat għall-kontijiet illoggjati) meta jkun preżenti. Jekk xi wieħed mit-tlieta jkun nieqes, is-sekwenza mhux mibdula li tkun twaħħlet tintbagħat kif inhi sabiex l-operaturi jkunu jistgħu jesperimentaw b’forom alternattivi.
+67router jiġbed `uid`, `si_usr_id`, u `si_ses_id` mis-sekwenza mwaħħla u jerġa’ jibni header `Cookie` nadif li jkun fih dawk il-pari biss — flimkien ma’ `nt_session` (it-token `ntk_…` issettjat għall-kontijiet illoggjati) meta jkun preżenti. Jekk xi wieħed mit-tlieta jkun nieqes, is-sekwenza mhux mibdula li tkun twaħħlet tintbagħat kif inhi sabiex l-operaturi jkunu jistgħu jesperimentaw b’forom alternattivi.
 
 ### IDs tal-mudelli
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Il-Cookie Taħdem fil-Browser iżda Mhux f’OmniRoute
+## Il-Cookie Taħdem fil-Browser iżda Mhux f’67router
 
 Xi fornituri jinkludu cookies li jintbagħtu biss waqt talbiet awtentikati.
 

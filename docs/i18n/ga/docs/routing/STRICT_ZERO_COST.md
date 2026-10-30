@@ -31,7 +31,7 @@ I gcás gach iarrthóra sa linn (`open-sse/services/autoCombo/virtualFactory.ts:
 díreach i ndiaidh `filterPaidOnlyCandidates`):
 
 1. **Gan a bheith in `FREE_MODEL_BUDGETS` ar chor ar bith** → eisiata. Clúdaíonn sé seo samhlacha a bhfuil táille orthu i ndáiríre agus aon
-   soláthraí/samhail nach bhfuil aicmithe fós ag OmniRoute — tosaíonn iarrthóirí nua mar iarrthóirí eisiata, ní mar iarrthóirí san áireamh.
+   soláthraí/samhail nach bhfuil aicmithe fós ag 67router — tosaíonn iarrthóirí nua mar iarrthóirí eisiata, ní mar iarrthóirí san áireamh.
 2. **`freeType: "keyless"`** → ceadaítear láithreach é, **ach amháin i gcás iarrthóra a tháinig
    tríd an gconair gan fíordheimhniú i ndáiríre** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Níl dintiúr ar bith ann don
@@ -85,7 +85,7 @@ agus nach cuntas eile, neamhfhíoraithe, ar an iarrthóir céanna é riamh. Féa
 (cásanna A/B/C de sheachaint gan eochair, cásanna ilchuntais 1-5).
 
 `discovered automatically`: is féidir soláthraí/samhail a sheoltar amárach leis na meiteashonraí cearta (sa
-chatalóg, le hoiriúntóir úsáide, `hardStopGuaranteed: true`) a úsáid a luaithe is atá eolas ag OmniRoute
+chatalóg, le hoiriúntóir úsáide, `hardStopGuaranteed: true`) a úsáid a luaithe is atá eolas ag 67router
 air — gan athrú cód, gan iontráil ar liosta bán, gan aon rud le cur in eagar sa mhodúl seo. Má bhaintear ceann
 den chatalóg, imíonn sé ar an mbealach céanna. Féach
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` le haghaidh chruthúnas an aischéimnithe (trí

@@ -7,29 +7,29 @@
 > **Totuuden lähde:** `src/lib/skills/` ja `src/app/api/skills/`
 > **Viimeksi päivitetty:** 2026-06-28 — v3.8.40
 
-OmniRoute tarjoaa laajennettavan Skills-kehyksen, jonka avulla kielimallit (ja operaattorit) voivat koostaa uudelleenkäytettäviä toiminnallisuuksia — tiedostojärjestelmän lukuoperaatioista ja HTTP-pyynnöistä hiekkalaatikossa suoritettavaan koodiin ja kuratoituihin markkinapaikan taitoihin.
+67router tarjoaa laajennettavan Skills-kehyksen, jonka avulla kielimallit (ja operaattorit) voivat koostaa uudelleenkäytettäviä toiminnallisuuksia — tiedostojärjestelmän lukuoperaatioista ja HTTP-pyynnöistä hiekkalaatikossa suoritettavaan koodiin ja kuratoituihin markkinapaikan taitoihin.
 
-Taito on versioitu ja skeemalla määritelty työyksikkö. OmniRoute voi lisätä taitoja työkalumääritelminä lähteviin pyyntöihin, siepata mallilta palaavat työkalukutsut, suorittaa niitä vastaavan käsittelijän ja syöttää tuloksen takaisin mallille, jotta keskustelu voi jatkua. Malli ei koskaan näe toteutusta — ainoastaan työkalurajapinnan.
+Taito on versioitu ja skeemalla määritelty työyksikkö. 67router voi lisätä taitoja työkalumääritelminä lähteviin pyyntöihin, siepata mallilta palaavat työkalukutsut, suorittaa niitä vastaavan käsittelijän ja syöttää tuloksen takaisin mallille, jotta keskustelu voi jatkua. Malli ei koskaan näe toteutusta — ainoastaan työkalurajapinnan.
 
 ---
 
 ## Agent Skills vs. Omni Skills
 
-OmniRoutessa on kaksi erillistä mutta toisiaan täydentävää taitojärjestelmää:
+67routerissa on kaksi erillistä mutta toisiaan täydentävää taitojärjestelmää:
 
 | Ulottuvuus     | **Omni Skills** (tämä dokumentti)                                               | **Agent Skills**                                                                               |
 | :------------- | :------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------- |
 | Tarkoitus      | LLM-työkalujen lisäys + suoritus hiekkalaatikossa                               | SKILL.md-luettelo ulkoisten agenttien löydettäväksi ja käytettäväksi                           |
 | Totuuden lähde | `src/lib/skills/` + markkinapaikka                                              | `src/lib/agentSkills/` + `skills/`-hakemisto                                                   |
 | Suoritustila   | Lisätään lähteviin pyyntöihin ja suoritetaan työkalukutsutapahtumien yhteydessä | Staattinen markdown-luettelo + REST/MCP/A2A-löytämisen päätepisteet                            |
-| Käyttäjä       | OmniRoute itse (yhdistelmäreititys, saapuvat LLM-kutsut)                        | Ulkoiset agentit, MCP-asiakkaat, A2A-orkestraattorit                                           |
+| Käyttäjä       | 67router itse (yhdistelmäreititys, saapuvat LLM-kutsut)                         | Ulkoiset agentit, MCP-asiakkaat, A2A-orkestraattorit                                           |
 | Määrä          | Vaihteleva (markkinapaikan ohjaama)                                             | 43 luettelomerkintää (22 API + 20 CLI + 1 määritys)                                            |
 | Muoto          | `SkillDefinition`, joka sisältää työkaluskeeman ja käsittelijän                 | `SKILL.md`-frontmatter + markdown-sisältö                                                      |
 | Löytäminen     | `/api/skills/*` REST + `omniroute_skills_*` MCP-työkalut                        | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-työkalut + A2A `list-capabilities` |
 
-**Omni Skills** on suoritusmoottori — se määrittää, mitä OmniRoute _voi tehdä_, kun LLM kutsuu työkalua.
+**Omni Skills** on suoritusmoottori — se määrittää, mitä 67router _voi tehdä_, kun LLM kutsuu työkalua.
 
-**Agent Skills** on dokumentaatioluettelo — se selittää ulkoisille agenteille, _kuinka OmniRouten REST APIa ja CLI:tä käytetään_, käyttäen rakenteisia SKILL.md-tiedostoja, jotka voidaan syöttää suoraan agenttien kehotteisiin.
+**Agent Skills** on dokumentaatioluettelo — se selittää ulkoisille agenteille, _kuinka 67routerin REST APIa ja CLI:tä käytetään_, käyttäen rakenteisia SKILL.md-tiedostoja, jotka voidaan syöttää suoraan agenttien kehotteisiin.
 
 Lisätietoja Agent Skills -luettelosta, generaattorista, MCP-työkaluista ja A2A-taidosta on tiedostossa [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Lisätietoja Agent Skills -luettelosta, generaattorista, MCP-työkaluista ja A2A
 
 Samassa rekisterissä on rinnakkain kolme taitolähdettä:
 
-1. **Sisäänrakennetut taidot** (`src/lib/skills/builtins.ts`) — toimitetaan OmniRouten mukana. Kattavat yleiset käyttötapaukset:
+1. **Sisäänrakennetut taidot** (`src/lib/skills/builtins.ts`) — toimitetaan 67routerin mukana. Kattavat yleiset käyttötapaukset:
    - `file_read`, `file_write` — API-avainkohtainen hiekkalaatikkotyötila hakemistossa `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — lähtevä HTTP-yhteys `safeOutboundFetch`-toiminnon kautta käyttäen asetusta `guard: "public-only"`
    - `web_search` — vaihdettava hakupalveluntarjoaja ja välimuisti (`executeWebSearch`)
    - `eval_code` — Docker-hiekkalaatikossa suoritettava `node`- tai `python`-koodi
    - `execute_command` — Docker-hiekkalaatikossa suoritettava komentotulkkikomento
    - `browser` — Playwright-pohjainen runko, oletusarvoisesti poistettu käytöstä (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRouten markkinapaikka) — haetaan osoitteesta `https://skillsmp.com/api/v1/skills/search`. Edellyttää `skillsmpApiKey`-arvoa asetuksissa.
+2. **SkillsMP** (67routerin markkinapaikka) — haetaan osoitteesta `https://skillsmp.com/api/v1/skills/search`. Edellyttää `skillsmpApiKey`-arvoa asetuksissa.
 3. **SkillsSH** (`skills.sh`-yhteisöluettelo) — haetaan osoitteesta `https://skills.sh/api/search`. Todennusta ei tarvita; SKILL.md-sisältö noudetaan GitHubin raakasisällöstä.
 
 Yksi aktiivinen palveluntarjoaja määrittää, mistä luettelosta hallintapaneeli asentaa taidot (`src/lib/skills/providerSettings.ts`). Voit vaihtaa sen kohdassa **Asetukset → Muisti ja taidot**. Oletus: `skillsmp`.
@@ -442,7 +442,7 @@ käytössä ei ole liukulukuista `0.6`-tyyppistä kynnysarvoa eikä `registry.ts
 
 ## Sisäänrakennettujen taitojen luettelo
 
-OmniRoute sisältää kuratoidun joukon sisäänrakennettuja taitoja hakemistossa `src/lib/skills/builtin/`. Yleisimmät niistä:
+67router sisältää kuratoidun joukon sisäänrakennettuja taitoja hakemistossa `src/lib/skills/builtin/`. Yleisimmät niistä:
 
 ### Selaimen automaatiotaito
 

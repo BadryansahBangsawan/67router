@@ -205,13 +205,13 @@ Kohteeseen `upstreamDetails` sovellettavat puhdistussäännöt:
 3. Syvyysraja: yli neljän tason menevä sisäkkäisyys korvataan merkkijonolla `"[truncated]"`.
 4. Taulukot rajataan 32 alkioon.
 
-Vain kutsukohtien, joilla on jäsennetty palveluntarjoajan virherunko, tulee välittää `upstreamDetails`. Sisäiset OmniRoute-virheet (SSE-jäsennysvirheet, tyhjä sisältö, suojakaiteiden estot) eivät saa sisältää sitä.
+Vain kutsukohtien, joilla on jäsennetty palveluntarjoajan virherunko, tulee välittää `upstreamDetails`. Sisäiset 67router-virheet (SSE-jäsennysvirheet, tyhjä sisältö, suojakaiteiden estot) eivät saa sisältää sitä.
 
 ÄLÄ välitä raakaa `err.stack`- tai `err.message`-arvoa äläkä mitään suorituksenaikaisesta poikkeuksesta peräisin olevaa merkkijonoa kohteeseen
 `upstreamDetails`. Ne on edelleen käsiteltävä funktioilla `errorResponse` / `buildErrorBody(code, msg)`
 ilman ylävirran runkoa.
 
-Valikoiva ylävirran 4xx-vastausten välitys säilyttää palveluntarjoajan turvallisen JSON-rakenteen ja sanamuodon, joita asiakkaan automaattinen palautuminen edellyttää, mutta välitys ei tapahdu tavu tavulta: rekursiivinen puhdistus suoritetaan aina ennen sarjallistamista. Sykliset, BigInt-arvoja sisältävät tai vihamielisiä `toJSON()`-toteutuksia sisältävät rungot hylätään turvallisesti, eivätkä ne kelpaa välitettäviksi. Tekstintunnistus ja moderointi soveltavat samaa sääntöä; muut kuin JSON-muotoiset, tyhjät tai virheellisesti merkityt ylävirran rungot muunnetaan kanoniseksi OmniRoute-JSON-virhekääreeksi.
+Valikoiva ylävirran 4xx-vastausten välitys säilyttää palveluntarjoajan turvallisen JSON-rakenteen ja sanamuodon, joita asiakkaan automaattinen palautuminen edellyttää, mutta välitys ei tapahdu tavu tavulta: rekursiivinen puhdistus suoritetaan aina ennen sarjallistamista. Sykliset, BigInt-arvoja sisältävät tai vihamielisiä `toJSON()`-toteutuksia sisältävät rungot hylätään turvallisesti, eivätkä ne kelpaa välitettäviksi. Tekstintunnistus ja moderointi soveltavat samaa sääntöä; muut kuin JSON-muotoiset, tyhjät tai virheellisesti merkityt ylävirran rungot muunnetaan kanoniseksi 67router-JSON-virhekääreeksi.
 
 ## Tunnettu CodeQL-rajoitus: mukautettuja puhdistajia ei tunnisteta
 

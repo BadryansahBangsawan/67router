@@ -4,7 +4,7 @@
 
 ---
 
-Relay (Vercel, Deno, Cloudflare) hukatisha muunganisho wa upstream kwenye backend isiyotumia seva ili OmniRoute iweze kutuma trafiki kutoka eneo thabiti huku ikiweka ufunguo wa API wa mtoa huduma upande wa seva. Hati hii inaelezea hali mbili za hitilafu ambazo waendeshaji hukumbana nazo katika uzalishaji na njia za urejeshaji ambazo OmniRoute hutoa kwa kila hali.
+Relay (Vercel, Deno, Cloudflare) hukatisha muunganisho wa upstream kwenye backend isiyotumia seva ili 67router iweze kutuma trafiki kutoka eneo thabiti huku ikiweka ufunguo wa API wa mtoa huduma upande wa seva. Hati hii inaelezea hali mbili za hitilafu ambazo waendeshaji hukumbana nazo katika uzalishaji na njia za urejeshaji ambazo 67router hutoa kwa kila hali.
 
 ## Jinsi uthibitishaji wa relay unavyohifadhiwa
 
@@ -24,7 +24,7 @@ Wakati wa ombi, `extractRelayAuth(notes)` hurejesha aina yoyote iliyopo, hivyo r
 
 1. Fungua **Mipangilio → Proxy Pool**.
 2. Safu za relay ambazo uthibitishaji wake haupo huonyesha beji ya njano ya `uthibitishaji haupo` na kitufe cha **Rekebisha**.
-3. Bofya **Rekebisha**. OmniRoute huita
+3. Bofya **Rekebisha**. 67router huita
    `POST /api/settings/proxies/[id]/repair-relay`, ambayo:
    - husimbua `relayAuthEnc` kwa kutumia ufunguo wa **sasa**,
    - huandika tena `relayAuth` ya maandishi wazi kwenye `notes`,
@@ -49,7 +49,7 @@ Katika UI, kitufe cha **Rekebisha** chenyewe hufungua dirisha la kusambaza upya 
 
 **Dalili:** jaribio la proksi (kitufe cha `speed`) huonyesha kuwa relay inafanya kazi, lakini maombi bado hushindwa mara kwa mara.
 
-Kagua vichwa vya uelewa wa relay vinavyorejeshwa na uchunguzi wa majaribio ya kiotomatiki wa OmniRoute (angalia **Mipangilio → Proxy Pool** na vihesabu vya `relayTested` / `relayAlive`):
+Kagua vichwa vya uelewa wa relay vinavyorejeshwa na uchunguzi wa majaribio ya kiotomatiki wa 67router (angalia **Mipangilio → Proxy Pool** na vihesabu vya `relayTested` / `relayAlive`):
 
 - `x-relay-url` — ni backend ipi ya relay iliyojibu.
 - `x-relay-mode` — `ts` | `bifrost` | `auto` kwa ombi hilo.

@@ -4,7 +4,7 @@
 
 ---
 
-Veebiküpsiste pakkujad võimaldavad OmniRoute’il kasutada tehisintellektiteenust API-võtme asemel teie olemasoleva brauseriseansi kaudu. Need on kasulikud, kui teil on teenusele selle veebisaidi kaudu juba juurdepääs ja soovite, et OmniRoute kasutaks sama autentitud seanssi.
+Veebiküpsiste pakkujad võimaldavad 67router’il kasutada tehisintellektiteenust API-võtme asemel teie olemasoleva brauseriseansi kaudu. Need on kasulikud, kui teil on teenusele selle veebisaidi kaudu juba juurdepääs ja soovite, et 67router kasutaks sama autentitud seanssi.
 
 Erinevalt API-võtme pakkujatest kasutavad veebiküpsiste pakkujad autentimiseks identimisteavet, mille teie brauser veebisaidile saadab.
 
@@ -49,7 +49,7 @@ DevTools
 
 Päringupäis `Cookie` sisaldab täpselt seda autentimisteavet, mida teie brauser edukalt kasutas.
 
-Enamiku veebiküpsiste pakkujate puhul tuleb OmniRoute’i kleepida just see väärtus.
+Enamiku veebiküpsiste pakkujate puhul tuleb 67router’i kleepida just see väärtus.
 
 ---
 
@@ -63,7 +63,7 @@ Seadistamisprotsess on enamiku veebiküpsiste pakkujate puhul sama.
 4. Värskendage lehte.
 5. Avage autentitud vestluse või suhtluse päring.
 6. Kopeerige nõutav autentimise identimisteave.
-7. Avage OmniRoute.
+7. Avage 67router.
 8. Avage **Providers → Add Provider**.
 9. Valige oma veebiküpsiste pakkuja.
 10. Kleepige identimisteave.
@@ -92,17 +92,17 @@ Eri veebisaidid talletavad autentimisteavet erinevalt. Mõned nõuavad ainult k�
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) on tasuta tarbijatele mõeldud vestlusplatvorm, mis ei nõua registreerumist — seanss luuakse esimesel külastusel anonüümselt ja see säilib kolme küpsise abil: `uid`, `si_usr_id` ja `si_ses_id`. OmniRoute vahendab sama `/api/dispatch` lõpp-punkti ühe mudeli-ID (`notrack-c`, alias `ntw`) kaudu.
+NoTrack ([notrack.ai](https://notrack.ai)) on tasuta tarbijatele mõeldud vestlusplatvorm, mis ei nõua registreerumist — seanss luuakse esimesel külastusel anonüümselt ja see säilib kolme küpsise abil: `uid`, `si_usr_id` ja `si_ses_id`. 67router vahendab sama `/api/dispatch` lõpp-punkti ühe mudeli-ID (`notrack-c`, alias `ntw`) kaudu.
 
 ### Ühendamise sammud
 
 1. Avage brauseris [notrack.ai](https://notrack.ai) ja laske anonüümse seansi küpsis määrata.
 2. Avage **Arendajatööriistad → Võrk**, värskendage lehte ja klõpsake mis tahes `/api` päringul.
 3. Kopeerige jaotises **Päringu päised** päise `Cookie` täielik väärtus.
-4. Avage OmniRoute'is **Pakkujad → Lisa pakkuja → NoTrack Web (tasuta)**.
+4. Avage 67router'is **Pakkujad → Lisa pakkuja → NoTrack Web (tasuta)**.
 5. Kleepige küpsisestring väljale `apiKey` ja klõpsake nuppu **Salvesta**.
 
-OmniRoute eraldab kleebitud stringist väärtused `uid`, `si_usr_id` ja `si_ses_id` ning koostab puhta `Cookie` päise, mis sisaldab ainult neid paare — ja olemasolu korral ka `nt_session` väärtust (sisselogitud kontodele määratud `ntk_…` luba). Kui mõni neist kolmest puudub, edastatakse kleebitud toorstring muutmata kujul, et operaatorid saaksid katsetada alternatiivsete vormingutega.
+67router eraldab kleebitud stringist väärtused `uid`, `si_usr_id` ja `si_ses_id` ning koostab puhta `Cookie` päise, mis sisaldab ainult neid paare — ja olemasolu korral ka `nt_session` väärtust (sisselogitud kontodele määratud `ntk_…` luba). Kui mõni neist kolmest puudub, edastatakse kleebitud toorstring muutmata kujul, et operaatorid saaksid katsetada alternatiivsete vormingutega.
 
 ### Mudeli-ID-d
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Küpsis töötab brauseris, kuid mitte OmniRoute'is
+## Küpsis töötab brauseris, kuid mitte 67router'is
 
 Mõned pakkujad kasutavad küpsiseid, mis saadetakse ainult autenditud päringute ajal.
 

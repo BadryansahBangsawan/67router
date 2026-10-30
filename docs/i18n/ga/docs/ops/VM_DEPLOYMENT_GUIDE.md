@@ -1,4 +1,4 @@
-# OmniRoute — Deployment Guide on VM with Cloudflare (Gaeilge)
+# 67router — Deployment Guide on VM with Cloudflare (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/VM_DEPLOYMENT_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 🌐 **Teangacha:** 🇺🇸 [Béarla](./VM_DEPLOYMENT_GUIDE.md) | 🇪🇹 [Amáiris](../i18n/am/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇸🇦 [Araibis](../i18n/ar/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇦🇿 [Asarbaiseáinis](../i18n/az/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇧🇬 [Bulgáiris](../i18n/bg/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇧🇩 [Beangáilis](../i18n/bn/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇧🇦 [Boisnis](../i18n/bs/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇨🇿 [Seicis](../i18n/cs/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇩🇰 [Danmhairgis](../i18n/da/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇩🇪 [Gearmáinis](../i18n/de/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇬🇷 [Gréigis](../i18n/el/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇪🇸 [Spáinnis](../i18n/es/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇪🇪 [Eastóinis](../i18n/et/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇷 [Peirsis](../i18n/fa/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇫🇮 [Fionlainnis](../i18n/fi/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇫🇷 [Fraincis](../i18n/fr/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Gúisearáitis](../i18n/gu/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇳🇬 [Hásais](../i18n/ha/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇱 [Eabhrais](../i18n/he/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Hiondúis](../i18n/hi/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇭🇷 [Cróitis](../i18n/hr/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇭🇺 [Ungáiris](../i18n/hu/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇦🇲 [Airméinis](../i18n/hy/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇩 [Indinéisis](../i18n/id/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇳🇬 [Íogbóis](../i18n/ig/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇹 [Iodáilis](../i18n/it/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇯🇵 [Seapáinis](../i18n/ja/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇬🇪 [Seoirsis](../i18n/ka/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇰🇭 [Ciméiris](../i18n/km/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Cannadais](../i18n/kn/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇰🇷 [Cóiréis](../i18n/ko/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇱🇹 [Liotuáinis](../i18n/lt/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇱🇻 [Laitvis](../i18n/lv/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Mailéalaimis](../i18n/ml/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Maraitis](../i18n/mr/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇲🇾 [Malaeis](../i18n/ms/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇲🇹 [Máltais](../i18n/mt/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇲🇲 [Burmais](../i18n/my/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇳🇵 [Neipeailis](../i18n/ne/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇳🇱 [Ollainnis](../i18n/nl/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇳🇴 [Ioruais](../i18n/no/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Odia](../i18n/or/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Puinseáibis](../i18n/pa/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇵🇭 [Filipínis](../i18n/phi/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇵🇱 [Polainnis](../i18n/pl/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇵🇹 [Portaingéilis (an Phortaingéil)](../i18n/pt/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇧🇷 [Portaingéilis (an Bhrasaíl)](../i18n/pt-BR/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇷🇴 [Rómáinis](../i18n/ro/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇷🇺 [Rúisis](../i18n/ru/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇱🇰 [Siolóinis](../i18n/si/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇸🇰 [Slóvaicis](../i18n/sk/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇸🇮 [Slóivéinis](../i18n/sl/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇷🇸 [Seirbis](../i18n/sr/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇸🇪 [Sualainnis](../i18n/sv/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇰🇪 [Svahaílis](../i18n/sw/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Tamailis](../i18n/ta/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇮🇳 [Teileagúis](../i18n/te/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇹🇭 [Téalainnis](../i18n/th/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇹🇷 [Tuircis](../i18n/tr/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇺🇦 [Úcráinis](../i18n/uk-UA/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇵🇰 [Urdúis](../i18n/ur/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇺🇿 [Úisbéicis](../i18n/uz/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇻🇳 [Vítneaimis](../i18n/vi/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇳🇬 [Iarúibis](../i18n/yo/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇨🇳 [Sínis (Shimplithe)](../i18n/zh-CN/docs/ops/VM_DEPLOYMENT_GUIDE.md) | 🇹🇼 [Sínis (Thraidisiúnta)](../i18n/zh-TW/docs/ops/VM_DEPLOYMENT_GUIDE.md)
 
-Treoir iomlán chun OmniRoute a shuiteáil agus a chumrú ar VM (VPS) le fearann atá á bhainistiú trí Cloudflare.
+Treoir iomlán chun 67router a shuiteáil agus a chumrú ar VM (VPS) le fearann atá á bhainistiú trí Cloudflare.
 
 ---
 
@@ -84,7 +84,7 @@ ufw enable
 
 ---
 
-## 2. Suiteáil OmniRoute
+## 2. Suiteáil 67router
 
 ### 2.1 Cruthaigh an chomhadlann chumraíochta
 
@@ -194,7 +194,7 @@ server {
     return 444;
 }
 
-# OmniRoute — HTTPS
+# 67router — HTTPS
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
@@ -237,16 +237,16 @@ server {
 NGINX
 ```
 
-Coinnigh teorainneacha ama shruth an tseachfhreastalaí droim ar ais ailínithe le hathróga timpeallachta teorann ama OmniRoute. Má ardaíonn tú
+Coinnigh teorainneacha ama shruth an tseachfhreastalaí droim ar ais ailínithe le hathróga timpeallachta teorann ama 67router. Má ardaíonn tú
 `FETCH_TIMEOUT_MS` / `STREAM_IDLE_TIMEOUT_MS`, ardaigh `proxy_read_timeout` / `proxy_send_timeout`
 os cionn na tairsí céanna.
 
-Úsáideann OmniRoute `NEXT_PUBLIC_BASE_URL` mar an bhfoinse chanónach atá os comhair an bhrabhsálaí le haghaidh
+Úsáideann 67router `NEXT_PUBLIC_BASE_URL` mar an bhfoinse chanónach atá os comhair an bhrabhsálaí le haghaidh
 aisghlaonna OAuth agus nasc poiblí ginte. Úsáideann scríbhinní fíordheimhnithe na deaise iarratais den bhunús céanna
 mar aon le cosaint CSRF atá ceangailte leis an seisiún, mar sin ní theastaíonn bun-URL poiblí statach uathu. Is
 meiteashonraí ródaithe úsáideacha fós iad na ceanntásca `X-Forwarded-*` thuas, ach ní hionann iad agus an URL poiblí
 sainráite a shocrú nuair a bhíonn ceann de dhíth ar OAuth nó ar naisc bhrabhsálaí ghinte. Ná cumasaigh
-`OMNIROUTE_TRUST_PROXY` ach amháin mura bhfuil OmniRoute inrochtana go díreach ag cliaint agus má bhaineann do sheachfhreastalaí
+`OMNIROUTE_TRUST_PROXY` ach amháin mura bhfuil 67router inrochtana go díreach ag cliaint agus má bhaineann do sheachfhreastalaí
 na ceanntásca seolta isteach agus má atógann sé iad.
 
 ### 3.3 Cumasaigh agus Tástáil
@@ -255,7 +255,7 @@ na ceanntásca seolta isteach agus má atógann sé iad.
 # Bain an chumraíocht réamhshocraithe
 rm -f /etc/nginx/sites-enabled/default
 
-# Cumasaigh OmniRoute
+# Cumasaigh 67router
 ln -sf /etc/nginx/sites-available/omniroute /etc/nginx/sites-enabled/omniroute
 
 # Tástáil agus athlódáil
@@ -419,7 +419,7 @@ Féach freisin ar [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) le haghaidh na treorach
 | 22    | SSH         | Poiblí (le fail2ban)             |
 | 80    | nginx HTTP  | Atreorú → HTTPS                  |
 | 443   | nginx HTTPS | Trí Sheachfhreastalaí Cloudflare |
-| 20128 | OmniRoute   | Ó localhost amháin (trí nginx)   |
+| 20128 | 67router    | Ó localhost amháin (trí nginx)   |
 
 ## Optamú le haghaidh Cuimhne Íseal / VPS Beag
 
@@ -430,4 +430,4 @@ Le haghaidh imlonnuithe ar áscanna beaga VPS (1 GB RAM nó níos lú):
 - **Cuir teorainn leis an gcarn V8** — socraigh `OMNIROUTE_MEMORY_MB` (m.sh. `512`) ionas nach ndéanfaidh an t-am rite uasteorainn níos mó ná an VM a chalabrú. Féach `docs/reference/ENVIRONMENT.md`.
 - **Scálaíonn cead isteach trom go huathoibríoch de réir theorainn an chairn** -- a luaithe a shocraítear `OMNIROUTE_MEMORY_MB` thuas, díorthaítear buiséad beart an ionghabhála (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) ón uasteorainn chéanna, mar sin faigheann VM atá srianta ó thaobh cuimhne de buiséad níos lú d’iarratais chomhthráthacha gan aon mhionchoigeartú breise; faigheann iarratais bharrachais freagra `503` ar féidir triail eile a bhaint as, mar aon le `Retry-After`, in ionad dul in iomaíocht le haghaidh cuimhne. Ná socraigh teorainn oidhreachta líon na n-iarratas `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` ach amháin má theastaíonn uasteorainn chrua sa bhreis air sin.
 - **Seachain `next build` ar an VPS** — déan an tógáil go háitiúil agus imlonnaigh an t-aschur neamhspleách (`.next/standalone/`).
-- **Déan monatóireacht le `top` / `free -m`** — is gnách go n-úsáideann OmniRoute 200-400 MB RSS agus é díomhaoin ar VM 1 GB.
+- **Déan monatóireacht le `top` / `free -m`** — is gnách go n-úsáideann 67router 200-400 MB RSS agus é díomhaoin ar VM 1 GB.

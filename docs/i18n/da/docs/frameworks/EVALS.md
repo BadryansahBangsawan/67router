@@ -7,7 +7,7 @@
 > **Sandhedskilde:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Senest opdateret:** 2026-06-28 — v3.8.40
 
-OmniRoute leveres med et generisk evalueringsframework, som du kan bruge til at benchmarke routingkonfigurationer, individuelle udbydere/modeller eller de medfølgende "golden set"-suiter. Brug det til at verificere routingændringer, validere nye udbydere og kontrollere releases, før de sendes videre til produktionstrafik.
+67router leveres med et generisk evalueringsframework, som du kan bruge til at benchmarke routingkonfigurationer, individuelle udbydere/modeller eller de medfølgende "golden set"-suiter. Brug det til at verificere routingændringer, validere nye udbydere og kontrollere releases, før de sendes videre til produktionstrafik.
 
 Frameworket er implementeret som:
 

@@ -25,7 +25,7 @@ Prima linie este omisă ca antet dacă prima sa coloană conține cuvântul lite
 Descărcați un fișier inițial din fereastra modală de import (**Descărcați șablonul CSV**). Exemplu:
 
 ```csv
-# Importul furnizorilor OmniRoute (coloane poziționale)
+# Importul furnizorilor 67router (coloane poziționale)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

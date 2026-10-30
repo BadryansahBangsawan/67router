@@ -7,7 +7,7 @@
 > **Tushen gaskiya:** `src/lib/cloudAgent/` da `src/app/api/v1/agents/tasks/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40 (sabunta frontmatter; wakilai 4 ciki har da cursor-cloud)
 
-OmniRoute yana tsara wakilan rubuta lamba da wasu kamfanoni ke masaukinsu a cloud (Codex Cloud, Cursor,
+67router yana tsara wakilan rubuta lamba da wasu kamfanoni ke masaukinsu a cloud (Codex Cloud, Cursor,
 Devin, Jules) a matsayin ayyuka masu ɗaukar dogon lokaci. Ana naɗe kowane wakili a bayan haɗaɗɗiyar mahanga guda domin
 abokan hulɗa su iya aika prompt + URL na ma'ajiyar lamba sannan su karɓi sakamako ba tare da hulɗa da
 API na musamman ga kowane mai samarwa ba.

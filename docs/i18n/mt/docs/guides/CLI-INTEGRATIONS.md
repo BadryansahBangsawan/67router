@@ -7,11 +7,11 @@
 Għall-manifest tal-eżegwibbli kondiviż, l-ambjenti subordinati ristretti u
 l-konfigurazzjoni persistenti ta’ Gemini, ara [Il-kuntratti tat-tnedija tas-CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute jinkludi familja ta’ kmandi `setup-*` li jikkonfiguraw CLI
-għall-ipprogrammar (Codex, Claude Code, OpenCode, Cline, …) biex juża lil OmniRoute
+67router jinkludi familja ta’ kmandi `setup-*` li jikkonfiguraw CLI
+għall-ipprogrammar (Codex, Claude Code, OpenCode, Cline, …) biex juża lil 67router
 bħala l-backend tiegħu — sabiex l-għodda tikkomunika ma’ endpoint **wieħed** u
-OmniRoute jidderieġiha lejn il-fornitur it-tajjeb bi bdil awtomatiku f’każ ta’
-ħsara. Kull kmand jaqra l-katalgu **attiv** tal-mudelli minn OmniRoute li jkun
+67router jidderieġiha lejn il-fornitur it-tajjeb bi bdil awtomatiku f’każ ta’
+ħsara. Kull kmand jaqra l-katalgu **attiv** tal-mudelli minn 67router li jkun
 qed jaħdem (lokalment jew mill-bogħod) u jikteb il-fajl tal-konfigurazzjoni
 tal-għodda fuq il-magna **tiegħek**. Iċ-ċavetta tal-API tiġi referenzjata permezz
 ta’ varjabbli tal-ambjent kull fejn l-għodda tappoġġjah. Il-kmandi li jippersistu
@@ -58,7 +58,7 @@ integrazzjonijiet bl-aktar funzjonalità, ara l-gwidi dettaljati għal kull għo
 
 - [Konfigurazzjoni ta’ Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Konfigurazzjoni ta’ Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Modalità Remota](./REMOTE-MODE.md) — ikkontrolla OmniRoute remot (VPS / Tailnet) mil-laptop tiegħek
+- [Modalità Remota](./REMOTE-MODE.md) — ikkontrolla 67router remot (VPS / Tailnet) mil-laptop tiegħek
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — l-estensjoni OmniCopilot; tista’ wkoll tħaddem dawn
   il-kmandi `setup-*` għalik minn ġewwa l-editur
 
@@ -94,7 +94,7 @@ is-server u jikteb il-konfigurazzjoni lokalment.
 
 Noti dwar il-flags (ivverifikati fis-sors tal-kmand):
 
-- `--remote <url>` — iġib il-katalgu minn OmniRoute remot (jieħu preċedenza fuq `--port`
+- `--remote <url>` — iġib il-katalgu minn 67router remot (jieħu preċedenza fuq `--port`
   u l-kuntest attiv). `--api-key <key>` jipprovdi l-kredenzjali għal dak
   is-server (b’mod awtomatiku juża l-varjabbli env `OMNIROUTE_API_KEY`, jew it-token tal-kuntest attiv).
 - `--only <patterns>` — sottostrings separati b’virgoli; iżomm biss l-IDs tal-mudelli li jaqblu
@@ -115,7 +115,7 @@ Noti dwar il-flags (ivverifikati fis-sors tal-kmand):
   **codex** permezz tal-argumenti `-c model_providers.omniroute.*`. **Qwen huwa l-uniku target ta’ run
   li jirrikjedi b’mod strett `--model`** — `omniroute run qwen` mingħajru joħroġ
   b’`2` u żball espliċitu.
-- `--port <port>` — il-port lokali ta’ OmniRoute (predefinit `20128`, jiġi injorat meta jkun issettjat
+- `--port <port>` — il-port lokali ta’ 67router (predefinit `20128`, jiġi injorat meta jkun issettjat
   `--remote`). Preżenti fuq il-kmandi `setup-*` kollha u ż-żewġ launchers.
 - Kodiċijiet tal-ħruġ ta’ `omniroute run`: il-kodiċi tal-ħruġ proprju tas-CLI child jiġi propagat
   kelma b’kelma; `2` = argumenti invalidi (target mhux appoġġjat, `--model` meħtieġ
@@ -160,7 +160,7 @@ ma jiġux ippreżentati bħala targets li jistgħu jitnedew.
 
 ## Użu lokali
 
-B'OmniRoute jaħdem fuq `localhost:20128`, sempliċement ħaddem il-kmand tas-setup għall-għodda tiegħek. Il-katalgu jinġieb mis-server lokali.
+B'67router jaħdem fuq `localhost:20128`, sempliċement ħaddem il-kmand tas-setup għall-għodda tiegħek. Il-katalgu jinġieb mis-server lokali.
 
 ```bash
 # Codex: ikteb profil għal kull mudell imqabbel f'~/.codex/
@@ -187,8 +187,8 @@ omniroute setup-continue --dry-run
 Niedi mingħajr ma tikteb l-ebda konfigurazzjoni (injezzjoni tal-ambjent biss):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute lokali
-omniroute launch-codex           # Codex CLI → OmniRoute lokali
+omniroute launch                 # Claude Code → 67router lokali
+omniroute launch-codex           # Codex CLI → 67router lokali
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -206,7 +206,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Użu mill-bogħod
 
-Indika kwalunkwe kummerċ setup għal OmniRoute mill-bogħod b `--remote` + `--api-key`. Il-
+Indika kwalunkwe kummerċ setup għal 67router mill-bogħod b `--remote` + `--api-key`. Il-
 katalogu jitniżżel mill-bogħod; il-konfigurazzjoni titniżżel fil-magna lokali tiegħek.
 
 ```bash
@@ -249,7 +249,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Iż-żewġ forom jiktbu **profil ta' awtentikazzjoni** wieħed ta' 5dive, u kull pjan `claude` marbut mal-
-profil jitkellem mal-OmniRoute. Tliet affarijiet huma speċifiċi għal din il-mira:
+profil jitkellem mal-67router. Tliet affarijiet huma speċifiċi għal din il-mira:
 
 - **Jiġi żviluppat fuq il-flotta host, bħala root.** Istampi ta' 5dive joperaw fuq unitajiet lokali tas-sistema
   u fuq direttorju stat bl-isem tal-root; mhuwiex hemm modalità mill-bogħod. Ir-riċetta terġa' taħdem mill-
@@ -264,14 +264,14 @@ profil jitkellem mal-OmniRoute. Tliet affarijiet huma speċifiċi għal din il-m
 L-awtentikazzjoni tal-API tingħata lill-5dive fuq **stdin** (`--api-key=-`), hekk li qatt tidher fil-
 output tal-`ps`.
 
-Il-profil imur lejn kombinazzjoni **OmniRoute** minflok mudell wieħed biss li jġib il-falliment tal-fornitur tal-flotta: meta l-punt ewlieni waqa' waqt karozza f'run irreġistrat fuq
+Il-profil imur lejn kombinazzjoni **67router** minflok mudell wieħed biss li jġib il-falliment tal-fornitur tal-flotta: meta l-punt ewlieni waqa' waqt karozza f'run irreġistrat fuq
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), l-aġent lesta il-passi li fadal fuq il-fallback u qatt ma ħareġ in-breakout.
 
 ---
 
 ## Konvenzjonijiet tal-Base URL (liema għodod jeħtieġu `/v1`)
 
-OmniRoute jesponi l-interfaċċa ta’ OpenAI f’`/v1`, l-interfaċċa ta’ Anthropic fl-għerq,
+67router jesponi l-interfaċċa ta’ OpenAI f’`/v1`, l-interfaċċa ta’ Anthropic fl-għerq,
 u interfaċċa nattiva ta’ Gemini f’`/v1beta`. Kull integrazzjoni hija kkonfigurata skont il-format li
 tistenna l-għodda tagħha (ivverifikat fis-sors tal-kmand):
 
@@ -292,7 +292,7 @@ tistenna l-għodda tagħha (ivverifikat fis-sors tal-kmand):
 
 ## It-tħażin ta' dipendenzi nattivi waqt it-tġdid: `--include=optional`
 
-Meta tġdid b'`omniroute update` (wara li tikkonferma, jew b'`--apply`), OmniRoute jimmoda l-installazzjoni b'`--include=optional` internament:
+Meta tġdid b'`omniroute update` (wara li tikkonferma, jew b'`--apply`), 67router jimmoda l-installazzjoni b'`--include=optional` internament:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -311,11 +311,11 @@ Flemm oħra ta' `omniroute update` (verifikati fil-kodiċi): `--check` (ħarġa 
 
 ## Google Gemini CLI permezz ta' `omniroute run gemini`
 
-Il-kuntratt verifikat kontra `@google/gemini-cli` 0.50.0: il-CLI jirrikonoxxi `GOOGLE_GEMINI_BASE_URL` u jagħmel `POST /v1beta/models/<model>:generateContent` (u `:streamGenerateContent?alt=sse`) fuq dan — eżatt is-superfiċċja nativa ta' OmniRoute (`/v1beta`). `omniroute run gemini` iqabbad dan awtomatikament:
+Il-kuntratt verifikat kontra `@google/gemini-cli` 0.50.0: il-CLI jirrikonoxxi `GOOGLE_GEMINI_BASE_URL` u jagħmel `POST /v1beta/models/<model>:generateContent` (u `:streamGenerateContent?alt=sse`) fuq dan — eżatt is-superfiċċja nativa ta' 67router (`/v1beta`). `omniroute run gemini` iqabbad dan awtomatikament:
 
-- `GOOGLE_GEMINI_BASE_URL` → il-URL bażi attiv ta' OmniRoute (rads, bla `/v1`);
-- `GEMINI_API_KEY` → i-kredenzjali risolta ta' OmniRoute (għażla/madwar/kuntest);
-- **`GEMINI_CLI_HOME` temporanju iżolat** li fih il-`.gemini/settings.json` jagħżel awtentikazzjoni ta' `gemini-api-key`, sabiessi ħlas Google OAuth maħżun (Code Assist) qatt ma jiskontra l-ħruġ immexxi minn OmniRoute — jitneħħa wara l-ħruġ;
+- `GOOGLE_GEMINI_BASE_URL` → il-URL bażi attiv ta' 67router (rads, bla `/v1`);
+- `GEMINI_API_KEY` → i-kredenzjali risolta ta' 67router (għażla/madwar/kuntest);
+- **`GEMINI_CLI_HOME` temporanju iżolat** li fih il-`.gemini/settings.json` jagħżel awtentikazzjoni ta' `gemini-api-key`, sabiessi ħlas Google OAuth maħżun (Code Assist) qatt ma jiskontra l-ħruġ immexxi minn 67router — jitneħħa wara l-ħruġ;
 - **iġjene tal-madwar**: l-madwar tat-tifel jitħassar minn `GOOGLE_API_KEY`, `GOOGLE_GENAI_USE_VERTEXAI` u `GOOGLE_GENAI_USE_GCA` (li jiddirott l-awtentikazzjoni għal Vertex/Code Assist), u `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key` jiġi stabbilit bħalaappoġġż added — il-miri oħra `run` jirċievu l-istess trattament għal l-ilħna konfliġġenti tagħhom stess;
 - injettjar `--model <id>` minn `--provider`/`--model`.
 
@@ -330,7 +330,7 @@ Is-sentunzja tal-fiduċja tax-xogħol ta' Gemini għadha tapplika fil-modalità 
 ## Swejjar tal-mħagna reali (b'għażula)
 
 Il-jiċċekkjani reġressivi deterministiċi tal-pjan ta' tnedija jseħħu fl-CI (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). Biex jivvaluta l-binarji REALI kontra Server OmniRoute REALI, hemm ġgħastra b'għażula fis-
+`tests/unit/cli/run-execution.test.ts`). Biex jivvaluta l-binarji REALI kontra Server 67router REALI, hemm ġgħastra b'għażula fis-
 `tests/integration/upstream-cli-smoke.int.test.ts`. Qatt m'għandha taħdem awtomatikament
 (kull sub-test jispiċċa sakemm `RUN_CLI_SMOKE=1`), tgħaddi l-kredenzjali permezz tal-isem tal-varjabbli tal-ambjent
 (qatt bil-valur), tħassar iż-żġunijiet f'forma ta' sieħa minn kwalunkwe output irrekordjat, tispiċċa

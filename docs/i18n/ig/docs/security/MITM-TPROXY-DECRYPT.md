@@ -4,7 +4,7 @@
 
 ---
 
-Mgbasa koodu nzuzo doro anya nke TPROXY bụ **ụzọ njide nke 5** nke OmniRoute maka nchịkọta MITM nke
+Mgbasa koodu nzuzo doro anya nke TPROXY bụ **ụzọ njide nke 5** nke 67router maka nchịkọta MITM nke
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Ọ na-egbochi ma **na-ewepụ koodu nzuzo** na okporo HTTPS mpaghara na-apụ apụ na Linux
 site n’iji TPROXY kernel + ntụgharị ụzọ dabere na amụma — **na-enweghị** imegharị `/etc/hosts` dịka adịgboroja ma
@@ -53,7 +53,7 @@ Jiri ya mgbe ịchọrọ ijide ma wepụ koodu nzuzo n’okporo sitere na proce
 - ị chọghị iji mgbanwe proxy nke sistemụ dum kpaghasịa ya.
 
 N’ihi na mgbochi ahụ na-eme n’ime kernel, process malitere njikọ ahụ achọghị **mgbanwe
-nhazi ọ bụla** — mana process ahụ ga-atụkwasị CA dynamic nke OmniRoute
+nhazi ọ bụla** — mana process ahụ ga-atụkwasị CA dynamic nke 67router
 wụnyere obi (lee [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ ewughị addon), addon loader (`src/mitm/tproxy/transparentSocket.ts::loadTransp
 na-eweghachi `null` kama ịtụpụ njehie. Ọnọdụ capture-mode ahụ ga-egosizi
 `available: false`, a ga-eme ka toggle dashboard ahụ **ghara ịrụ ọrụ** yana tooltip
 "TPROXY decrypt chọrọ Linux + root + native addon", ma akụkụ ndị ọzọ nke
-OmniRoute ga-anọgide na-arụ ọrụ.
+67router ga-anọgide na-arụ ọrụ.
 
 ---
 
@@ -257,7 +257,7 @@ njedebe. Forward path na-eji bypass socket mark (**SO_MARK**) echebe onwe ya p�
 | **Nhicha njehie**               | Error responses nke route ahụ na-agafe na `sanitizeErrorMessage()` (Iwu Siri Ike #12).                                                                                                                                                                                                                                                                                 |
 
 **MITM CA bụ ikike dị ike.** CA nke OS tụkwasịrị obi, nke nwere ike ịbanye aka na
-host ọ bụla, pụtara na enwere ike iwepụ izo ezo n'ihe ọ bụla OmniRoute na-egbochi. A na-echekwa ya n'azụ
+host ọ bụla, pụtara na enwere ike iwepụ izo ezo n'ihe ọ bụla 67router na-egbochi. A na-echekwa ya n'azụ
 ọnọdụ njide TPROXY doro anya, nke bụ naanị maka mpaghara, agbanyụrụ ya na ndabara, a na-ewepụkwa
 ntinye trust-store mgbe ị kwụsịrị ọnọdụ ahụ.
 
@@ -367,7 +367,7 @@ na-eweghachi `available: false` mgbe addon ahụ na-efu.
 ### Iwu firewall ochie fọdụrụ mgbe crash gasịrị
 
 `revertTproxy()` bụ kpọmkwem ntụgharị nke apply ma bụrụ idempotent. Ịkwụsị
-mode ahụ na-eweghachite iwu ndị ahụ; ọ bụrụ na e gburu OmniRoute n'etiti nnọkọ, jiri omume
+mode ahụ na-eweghachite iwu ndị ahụ; ọ bụrụ na e gburu 67router n'etiti nnọkọ, jiri omume
 **Repair** nke AgentBridge (`POST /api/tools/agent-bridge/repair`) iji kagbuo ọnọdụ system
 ahapụrụ n'enweghị onye na-elekọta ya (DNS spoof, root CA, system proxy). Iwu `mangle` nke TPROXY na route ahụ
 na-ekpochapụkwa onwe ha mgbe e mere reboot.

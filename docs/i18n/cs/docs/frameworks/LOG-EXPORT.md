@@ -4,7 +4,7 @@
 
 ---
 
-Průběžný, inkrementální export protokolů volání OmniRoute do externího analytického úložiště.
+Průběžný, inkrementální export protokolů volání 67router do externího analytického úložiště.
 
 Karta Logs na řídicím panelu uchovává historii požadavků v SQLite (`call_logs`), jejíž velikost je omezená
 rotací a dobou uchování. Export protokolů odesílá podle plánu stejnou sadu záznamů, aby přetrvala

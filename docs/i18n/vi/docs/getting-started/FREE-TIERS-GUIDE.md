@@ -4,7 +4,7 @@
 
 ---
 
-> **Tóm tắt**: Hãy sử dụng các tài khoản nhà cung cấp đủ điều kiện của riêng bạn. OmniRoute kết hợp các kết nối mà bạn cấu hình; dịch vụ này không tự cung cấp tổng hạn mức token được quảng bá. Quyền truy cập miễn phí có thể yêu cầu đăng ký, khóa API, phê duyệt hoặc phương thức thanh toán. Các giới hạn, chính sách quyền riêng tư và điều khoản của nhà cung cấp vẫn được áp dụng.
+> **Tóm tắt**: Hãy sử dụng các tài khoản nhà cung cấp đủ điều kiện của riêng bạn. 67router kết hợp các kết nối mà bạn cấu hình; dịch vụ này không tự cung cấp tổng hạn mức token được quảng bá. Quyền truy cập miễn phí có thể yêu cầu đăng ký, khóa API, phê duyệt hoặc phương thức thanh toán. Các giới hạn, chính sách quyền riêng tư và điều khoản của nhà cung cấp vẫn được áp dụng.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Nhiều nhà cung cấp AI cung cấp một hình thức **truy cập miễn phí** nào đó. Tùy thuộc vào nhà cung cấp, hình thức này có thể là điểm cuối không cần xác thực, hạn mức được cấp lại định kỳ, quyền truy cập không giới hạn tổng dung lượng nhưng bị giới hạn tốc độ, ưu đãi khi đăng ký, phê duyệt thủ công hoặc chương trình khuyến mãi tạm thời. Một số tùy chọn yêu cầu tài khoản, khóa API, thẻ tín dụng, KYC hoặc chấp nhận các điều khoản riêng của nhà cung cấp.
 
-OmniRoute **tổng hợp** các kết nối đã được cấu hình vào một điểm cuối duy nhất. Bạn vẫn cần đăng ký riêng với từng nhà cung cấp yêu cầu tài khoản. Hãy kết nối các tài khoản đó và sử dụng `model: "auto"` để định tuyến giữa các đích đủ điều kiện. Một bản cài đặt mới có thể không có đích không cần khóa nào đủ điều kiện; chỉ cài đặt OmniRoute không đảm bảo sẽ nhận được phản hồi trò chuyện thành công.
+67router **tổng hợp** các kết nối đã được cấu hình vào một điểm cuối duy nhất. Bạn vẫn cần đăng ký riêng với từng nhà cung cấp yêu cầu tài khoản. Hãy kết nối các tài khoản đó và sử dụng `model: "auto"` để định tuyến giữa các đích đủ điều kiện. Một bản cài đặt mới có thể không có đích không cần khóa nào đủ điều kiện; chỉ cài đặt 67router không đảm bảo sẽ nhận được phản hồi trò chuyện thành công.
 
 ---
 
@@ -57,7 +57,7 @@ Các nhà cung cấp này có **gói miễn phí** với những giới hạn c�
 
 ## Cách kết hợp các gói miễn phí
 
-Điểm đặc biệt của OmniRoute là khả năng **kết hợp các gói miễn phí**. Thay vì phụ thuộc vào một nhà cung cấp, bạn kết nối nhiều nhà cung cấp miễn phí và để OmniRoute tự động chọn nhà cung cấp phù hợp nhất cho từng yêu cầu.
+Điểm đặc biệt của 67router là khả năng **kết hợp các gói miễn phí**. Thay vì phụ thuộc vào một nhà cung cấp, bạn kết nối nhiều nhà cung cấp miễn phí và để 67router tự động chọn nhà cung cấp phù hợp nhất cho từng yêu cầu.
 
 ### Ví dụ: Mở rộng phạm vi sử dụng gói miễn phí
 
@@ -68,7 +68,7 @@ Kết nối nhiều nhà cung cấp để giảm sự phụ thuộc vào hạn m
 3. **Pollinations** — truy cập không cần khóa, có giới hạn tốc độ
 4. **LongCat** — khoản tín dụng cấp một lần khi đăng ký (yêu cầu KYC)
 
-Sau đó, sử dụng `model: "auto"` và OmniRoute sẽ:
+Sau đó, sử dụng `model: "auto"` và 67router sẽ:
 
 - Trước tiên, thử kết nối đủ điều kiện có thứ hạng cao nhất
 - Nếu hạn mức đã hết hoặc kiểm tra tình trạng không thành công → thử nhà cung cấp tiếp theo đã được cấu hình
@@ -101,7 +101,7 @@ quyền truy cập không giới hạn/không cần khóa, tín dụng đăng k�
 
 ### Bước 5: Nhấp vào Connect
 
-Đối với nhà cung cấp `NOAUTH`, OmniRoute không yêu cầu thông tin xác thực của dịch vụ nguồn. Điều này không đảm bảo rằng dịch vụ nguồn chấp nhận các ứng dụng khách bên thứ ba hoặc còn dung lượng khả dụng. Các nhà cung cấp sử dụng OAuth và API key phải được kết nối thông qua quy trình tài khoản đã được tài liệu hóa của họ. Ứng dụng khách của bạn vẫn sử dụng API key OmniRoute hiển thị trong **Dashboard → Endpoints** khi tính năng xác thực bộ định tuyến được bật.
+Đối với nhà cung cấp `NOAUTH`, 67router không yêu cầu thông tin xác thực của dịch vụ nguồn. Điều này không đảm bảo rằng dịch vụ nguồn chấp nhận các ứng dụng khách bên thứ ba hoặc còn dung lượng khả dụng. Các nhà cung cấp sử dụng OAuth và API key phải được kết nối thông qua quy trình tài khoản đã được tài liệu hóa của họ. Ứng dụng khách của bạn vẫn sử dụng API key 67router hiển thị trong **Dashboard → Endpoints** khi tính năng xác thực bộ định tuyến được bật.
 
 ### Bước 6: Lặp lại
 
@@ -111,7 +111,7 @@ Kết nối với một số nhà cung cấp có điều khoản và mô hình q
 
 ## Đọc Danh mục cho Đúng
 
-- `NOAUTH` có nghĩa là OmniRoute không yêu cầu bạn cung cấp thông tin xác thực của nhà cung cấp; điều này không đảm bảo thời gian hoạt động, quyền riêng tư hoặc dung lượng không giới hạn.
+- `NOAUTH` có nghĩa là 67router không yêu cầu bạn cung cấp thông tin xác thực của nhà cung cấp; điều này không đảm bảo thời gian hoạt động, quyền riêng tư hoặc dung lượng không giới hạn.
 - `hasFree` là siêu dữ liệu phục vụ việc khám phá. Nó có thể biểu thị hạn mức định kỳ, quyền truy cập không cần khóa, tín dụng khi đăng ký, chương trình phê duyệt hoặc chương trình khuyến mãi.
 - `recurring-uncapped` có nghĩa là không có mức trần token nào được công bố; các giới hạn về tốc độ và số lượng yêu cầu đồng thời vẫn được áp dụng.
 - `one-time-initial` không được cấp lại sau khi khoản cấp ban đầu lúc đăng ký đã được sử dụng hết.
@@ -120,15 +120,15 @@ Kết nối với một số nhà cung cấp có điều khoản và mô hình q
 
 ---
 
-## Cách OmniRoute Cải Thiện Các Gói Miễn Phí
+## Cách 67router Cải Thiện Các Gói Miễn Phí
 
 ### 1. Tự Động Chuyển Đổi Dự Phòng
 
-Nếu một nhà cung cấp miễn phí đang quá tải hoặc ngừng hoạt động, OmniRoute sẽ tự động thử nhà cung cấp tiếp theo. Bạn không cần thực hiện bất kỳ thao tác nào.
+Nếu một nhà cung cấp miễn phí đang quá tải hoặc ngừng hoạt động, 67router sẽ tự động thử nhà cung cấp tiếp theo. Bạn không cần thực hiện bất kỳ thao tác nào.
 
 ### 2. Định Tuyến Thông Minh
 
-OmniRoute chọn **nhà cung cấp miễn phí tốt nhất** cho từng yêu cầu dựa trên:
+67router chọn **nhà cung cấp miễn phí tốt nhất** cho từng yêu cầu dựa trên:
 
 - Tốc độ — Nhà cung cấp nào nhanh nhất tại thời điểm hiện tại?
 - Chất lượng — Nhà cung cấp nào phù hợp nhất với tác vụ này?
@@ -136,13 +136,13 @@ OmniRoute chọn **nhà cung cấp miễn phí tốt nhất** cho từng yêu c�
 
 ### 3. Tiết Kiệm Token
 
-Quy trình nén của OmniRoute có thể giảm số lượng token của prompt và đầu ra công cụ đủ điều kiện. Mức
+Quy trình nén của 67router có thể giảm số lượng token của prompt và đầu ra công cụ đủ điều kiện. Mức
 tiết kiệm thực tế phụ thuộc vào nội dung, engine được chọn, cách tính của nhà cung cấp và các cài đặt về độ
 trung thực; quá trình nén không nhân hạn mức của mọi nhà cung cấp theo một hệ số cố định.
 
 ### 4. Hỗ Trợ Nhiều Tài Khoản
 
-Nếu điều khoản của nhà cung cấp cho phép sử dụng nhiều tài khoản hoặc thông tin xác thực, OmniRoute có thể xem mỗi
+Nếu điều khoản của nhà cung cấp cho phép sử dụng nhiều tài khoản hoặc thông tin xác thực, 67router có thể xem mỗi
 kết nối là một ứng viên định tuyến riêng biệt. Không tạo thêm tài khoản để né tránh hạn mức hoặc chính sách
 truy cập của nhà cung cấp.
 
@@ -157,7 +157,7 @@ Danh mục đang hoạt động, đã loại bỏ trùng lặp theo nhóm dùng 
 | Hạn mức định kỳ được định lượng  |       **~1.62B token/tháng** | Các nhóm dùng chung chỉ được tính một lần; không bao gồm các nhà cung cấp không giới hạn trong tổng số |
 | Tháng đầu tiên có ưu đãi đăng ký |             **~2.22B token** | Tổng định kỳ cộng với các khoản tín dụng một lần và định kỳ                                            |
 
-Đây là các ước tính trên toàn danh mục cho các tài khoản đủ điều kiện riêng biệt, không phải hạn mức do OmniRoute cung cấp hay dự đoán cho một bản cài đặt mới. Dung lượng bạn có thể sử dụng phụ thuộc vào các nhà cung cấp mà bạn kết nối và điều kiện hiện tại của họ. Các giá trị được tính từ `open-sse/config/freeModelCatalog.ts`; xem
+Đây là các ước tính trên toàn danh mục cho các tài khoản đủ điều kiện riêng biệt, không phải hạn mức do 67router cung cấp hay dự đoán cho một bản cài đặt mới. Dung lượng bạn có thể sử dụng phụ thuộc vào các nhà cung cấp mà bạn kết nối và điều kiện hiện tại của họ. Các giá trị được tính từ `open-sse/config/freeModelCatalog.ts`; xem
 [Tài liệu tham khảo về các gói miễn phí](../reference/FREE_TIERS.md) để biết thông tin về việc loại bỏ trùng lặp theo nhóm dùng chung, các cờ ToS,
 các mục đã ngừng cung cấp và phương pháp tính khoản tín dụng đăng ký.
 
@@ -184,7 +184,7 @@ của bạn. Các khối lượng công việc quan trọng cần có phương �
 
 Các đánh đổi có thể bao gồm giới hạn nghiêm ngặt, danh sách chờ, KYC, xác minh thẻ tín dụng, sử dụng
 prompt để huấn luyện, quyền riêng tư yếu hơn, không có SLA, thay đổi mô hình thường xuyên, hạn chế theo khu vực địa lý, phí vượt hạn mức hoặc
-rủi ro liên quan đến chính sách tài khoản. OmniRoute hiển thị siêu dữ liệu hiện có; bạn quyết định những gì cần bật.
+rủi ro liên quan đến chính sách tài khoản. 67router hiển thị siêu dữ liệu hiện có; bạn quyết định những gì cần bật.
 
 ### "Làm cách nào để nhận thêm hạn mức miễn phí?"
 
@@ -203,7 +203,7 @@ trang Xếp hạng Nhà cung cấp Miễn phí như một tín hiệu chất lư
 
 ## Tiếp theo là gì?
 
-- **[Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Để OmniRoute chọn AI tốt nhất cho bạn
+- **[Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Để 67router chọn AI tốt nhất cho bạn
 - **[Hướng dẫn về nhà cung cấp](./PROVIDERS-GUIDE.md)** — Kết nối thêm nhà cung cấp
 - **[Khắc phục sự cố](../guides/TROUBLESHOOTING.md)** — Khắc phục các sự cố thường gặp
 - **[Tham khảo các gói miễn phí](../reference/FREE_TIERS.md)** — Danh sách đầy đủ các gói miễn phí

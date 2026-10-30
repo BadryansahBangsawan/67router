@@ -4,7 +4,7 @@
 
 ---
 
-Certains services ont été intégrés à OmniRoute, puis supprimés à la demande des personnes qui les
+Certains services ont été intégrés à 67router, puis supprimés à la demande des personnes qui les
 exploitent. Cette page constitue l’historique durable de ces suppressions. Son seul objectif est
 d’éviter leur réintroduction accidentelle : un contributeur qui trouve un ancien fork, une archive
 npm mise en cache, un ticket archivé ou une demande visant à « restaurer le fournisseur X » doit
@@ -17,10 +17,10 @@ la demande, et un lien vers cette autorisation doit être ajouté à l’entrée
 
 ## Politique
 
-1. **Une demande de retrait émanant de l’opérateur d’un service est respectée, et non négociée.** OmniRoute n’est
+1. **Une demande de retrait émanant de l’opérateur d’un service est respectée, et non négociée.** 67router n’est
    affilié à aucun service en amont. Lorsque l’opérateur d’un service demande la suppression de
    l’intégration, celle-ci est supprimée, qu’elle ait utilisé ou non une API officielle.
-2. **« Supprimé » signifie supprimé de toutes les surfaces contrôlées par OmniRoute.** L’exécuteur, l’entrée de registre, l’identifiant et l’alias du
+2. **« Supprimé » signifie supprimé de toutes les surfaces contrôlées par 67router.** L’exécuteur, l’entrée de registre, l’identifiant et l’alias du
    fournisseur, la liste des modèles, les points de terminaison, les variables d’environnement, l’icône, les cartes du tableau de bord, la
    référence du fournisseur générée, `FREE_TIERS.md`, la référence des variables d’environnement, les décomptes du README,
    les miroirs `llm.txt`, les tests dédiés et les instantanés de référence, les commentaires du code, les entrées du CHANGELOG
@@ -31,7 +31,7 @@ la demande, et un lien vers cette autorisation doit être ajouté à l’entrée
 3. **Ne réintroduisez jamais une entrée figurant sur cette page sans autorisation écrite.** Cela inclut
    le fait de rajouter l’identifiant ou l’alias à un catalogue de fournisseurs, d’ajouter les domaines à un exécuteur,
    d’accepter une PR d’un contributeur qui la « restaure », de l’ajouter au catalogue des modèles gratuits ou de
-   documenter une méthode manuelle permettant d’y accéder via OmniRoute. Fermez ces PR et tickets en fournissant un
+   documenter une méthode manuelle permettant d’y accéder via 67router. Fermez ces PR et tickets en fournissant un
    lien vers cette page.
 4. **Gardez l’entrée minimale.** Consignez uniquement ce dont un relecteur a besoin pour reconnaître une
    réintroduction : les identifiants, les domaines, les dates et la pull request ayant effectué la suppression.
@@ -48,7 +48,7 @@ la demande, et un lien vers cette autorisation doit être ajouté à l’entrée
 | 2026-08-12  | `puter`                    | `pu`     | `puter.com`                                                              | Propriétaire de Puter (Nariman Jelveh)                                                                                                                                                 | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Fournisseur avec clé API. La migration `152_remove_puter_provider.sql` nettoie la configuration enregistrée.                                                                                                                                                                                                                                                                                                                                    |
 | 2026-09-02  | `theoldllm`                | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                  | Opérateur du service (e-mail d'assistance)                                                                                                                                             | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Fournisseur sans clé. Demande écrite reçue le 2026-08-30. Les tickets et la discussion dédiés ont été supprimés, et les PR ont été renommées.                                                                                                                                                                                                                                                                                                   |
 | 2026-09-21  | `gemini-business`          | `gembiz` | `business.gemini.google`                                                 | Décision du propriétaire du projet (ticket [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                                           | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Fournisseur web basé sur les cookies. Google a retiré le point de terminaison `BardFrontendService/StreamGenerate` ciblé par l'exécuteur ; son remplacement (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, JWT Bearer initialisé à partir de `__Secure-C_SES`/`csesidx`) ne peut être développé ni validé sans compte Gemini Enterprise/Workspace actif, dont le projet ne dispose pas. Retiré plutôt que réécrit sans validation. |
-| 2026-09-21  | `suno`                     | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                         | Décision du propriétaire du projet (`#14224`)                                                                                                                                          | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Fournisseur authentifié par cookie, et non retrait demandé par l'opérateur. `studio-api.suno.ai` a été suspendu (503) ; l'hôte actif exige un échange de JWT Clerk ainsi qu'une dépendance payante de résolution de hCaptcha qu'OmniRoute a choisi de ne pas ajouter pour un unique fournisseur de musique. `kie/suno-v4.0` et `kie/suno-v3.5` (hébergés par kie.ai) ne sont pas affectés et restent pris en charge.                            |
+| 2026-09-21  | `suno`                     | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                         | Décision du propriétaire du projet (`#14224`)                                                                                                                                          | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Fournisseur authentifié par cookie, et non retrait demandé par l'opérateur. `studio-api.suno.ai` a été suspendu (503) ; l'hôte actif exige un échange de JWT Clerk ainsi qu'une dépendance payante de résolution de hCaptcha que 67router a choisi de ne pas ajouter pour un unique fournisseur de musique. `kie/suno-v4.0` et `kie/suno-v3.5` (hébergés par kie.ai) ne sont pas affectés et restent pris en charge.                            |
 | 2026-10-10  | `opencode`                 | `oc`     | `opencode.ai/zen/v1` (offre gratuite ; hôte partagé avec `opencode-zen`) | Suppression préventive (décision du propriétaire du projet), conformément à la demande publique de retrait adressée par l'opérateur d'OpenCode au projet 9router en amont (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Seul le fournisseur sans clé « OpenCode Free » est supprimé. Les fournisseurs authentifiés `opencode-zen` et `opencode-go`, tous les modèles du catalogue Zen et leurs contrats de requête, les intégrations du client OpenCode et `@omniroute/opencode-plugin*` sont conservés. La migration `207_remove_opencode_free_provider.sql` transfère vers Zen les connexions existantes comportant une clé API et nettoie la configuration sans clé. |
 
 ## Ajout d’une entrée
@@ -63,5 +63,5 @@ Lorsqu’une nouvelle demande de retrait est reçue :
    fournisseur avec clé d’API et connexions stockées (ajoutez une migration).
 3. Ajoutez une ligne au tableau ci-dessus et les identifiants à
    `tests/unit/removed-providers-blocklist.test.ts`, dans la même PR.
-4. Répondez à l’opérateur une fois la PR fusionnée, en indiquant ce qui a été supprimé et ce qu’OmniRoute
+4. Répondez à l’opérateur une fois la PR fusionnée, en indiquant ce qui a été supprimé et ce que 67router
    ne peut pas modifier (versions npm et Docker déjà publiées, historique git, forks tiers).

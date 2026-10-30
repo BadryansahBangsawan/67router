@@ -11,11 +11,11 @@
 
 ## Présentation
 
-OmniRoute peut se connecter à un espace de travail **Notion** en tant que **source de contexte** — une base de connaissances
+67router peut se connecter à un espace de travail **Notion** en tant que **source de contexte** — une base de connaissances
 en lecture/écriture à laquelle les agents accèdent via le serveur MCP intégré. Une fois qu’un jeton
 d’intégration Notion est configuré, les outils MCP permettent à un LLM de rechercher des pages et des bases de données,
 de lire le contenu des pages et les arborescences de blocs, d’interroger les bases de données avec des filtres/critères de tri et d’ajouter de nouveaux
-blocs — le tout par l’intermédiaire d’OmniRoute (avec nouvelles tentatives, délai d’expiration et classification des erreurs),
+blocs — le tout par l’intermédiaire de 67router (avec nouvelles tentatives, délai d’expiration et classification des erreurs),
 afin que le modèle n’accède jamais directement à l’API Notion.
 
 L’intégration est une surcouche légère et renforcée de l’API REST officielle de Notion
@@ -40,7 +40,7 @@ du point de terminaison (`NotionSourceCard`, voisin de `ObsidianSourceCard`), ou
 > [!NOTE]
 > Le jeton est un **jeton d’intégration interne Notion**. Créez une intégration sur
 > <https://www.notion.com/my-integrations>, puis partagez avec cette intégration les pages/bases de données auxquelles
-> OmniRoute doit accéder (le modèle d’autorisation de Notion repose sur le partage,
+> 67router doit accéder (le modèle d’autorisation de Notion repose sur le partage,
 > et non sur un accès à l’ensemble de l’espace de travail).
 
 ### Configuration via REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Les trois méthodes nécessitent une authentification au tableau de bord (`isAuthenticated`). Lors d’une requête `POST`,
-OmniRoute enregistre le jeton et exécute immédiatement une recherche de test limitée à 1 résultat ; si Notion
+67router enregistre le jeton et exécute immédiatement une recherche de test limitée à 1 résultat ; si Notion
 renvoie un objet d’erreur, le jeton est supprimé et l’appel échoue avec le code `400`.
 
 ## Outils MCP (6)

@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** በOmniRoute የሚቀርብልዎትን እያንዳንዱን ሞዴል በGitHub Copilot Chat _ነባር_ የሞዴል መምረጫ ውስጥ ያስገባል። ሁለተኛ የጎን አሞሌ ወይም የተለየ የውይይት UI የለም — የCopilot ወኪል ሁነታ፣ የመሳሪያ ጥሪ፣
+**OmniCopilot** በ67router የሚቀርብልዎትን እያንዳንዱን ሞዴል በGitHub Copilot Chat _ነባር_ የሞዴል መምረጫ ውስጥ ያስገባል። ሁለተኛ የጎን አሞሌ ወይም የተለየ የውይይት UI የለም — የCopilot ወኪል ሁነታ፣ የመሳሪያ ጥሪ፣
 MCP ሰርቨሮች እና ብጁ መመሪያዎች ሁሉ መስራታቸውን ይቀጥላሉ፤ ልዩነቱ እርስዎ በመረጡት ሞዴል ላይ መስራታቸው ብቻ ነው።
 
 |                  |                                                                                                                                                 |
@@ -21,12 +21,12 @@ MCP ሰርቨሮች እና ብጁ መመሪያዎች ሁሉ መስራታቸው�
 
 ## ማዋቀር
 
-1. **OmniRouteን ያስኪዱ** — `npm install -g omniroute && omniroute` (ዳሽቦርዱ `http://localhost:20128` ላይ ነው)።
+1. **67routerን ያስኪዱ** — `npm install -g omniroute && omniroute` (ዳሽቦርዱ `http://localhost:20128` ላይ ነው)።
 2. **ቅጥያውን ይጫኑ** — በExtensions እይታ ውስጥ "OmniRoute" ብለው ይፈልጉ።
 3. **ሞዴል ይምረጡ** — Copilot Chat → የሞዴል መምረጫ → **ሞዴሎችን ያስተዳድሩ…** → **OmniRoute**፣ ከዚያ የሚፈልጉትን ምልክት ያድርጉበት።
 
-OmniRoute በነባሪው ወደብ ላይ ሲሰራ የሚዋቀር ነገር የለም። ለርቀት ምሳሌ፣
-**በActivity Bar ውስጥ ያለውን የOmniRoute አዶ ይክፈቱ** (ወይም `OmniRoute: Manage Connection`ን ያስኪዱ) እና የሚከተሉትን ያዋቅሩ፦
+67router በነባሪው ወደብ ላይ ሲሰራ የሚዋቀር ነገር የለም። ለርቀት ምሳሌ፣
+**በActivity Bar ውስጥ ያለውን የ67router አዶ ይክፈቱ** (ወይም `OmniRoute: Manage Connection`ን ያስኪዱ) እና የሚከተሉትን ያዋቅሩ፦
 
 - **የሰርቨር URL** — የሰርቨሩ ስር፣ ለምሳሌ `http://192.168.0.15:20128`። የ`/v1` ቅጥያ
   በቅጥያው በራስ-ሰር ይጨመራል፤ እርስዎ አያካትቱት።
@@ -71,7 +71,7 @@ HTTP 400 — ሞዴል '<id>' የምስል-ማመንጫ ሞዴል ስለሆነ �
 
 ስለዚህ ወደ መምረጫው ከመድረሳቸው በፊት በ`type` መስካቸው መሠረት ይጣራሉ። **የResponses-API
 ሞዴሎች ይቀመጣሉ** — እያንዳንዱ Codex / GPT-5.x ግቤት `supported_endpoints: ["responses"]`ን ያስተዋውቃል፣
-እና OmniRoute እነዚያን ለ`/v1/chat/completions` ይተረጉማል፣ ስለዚህ ሙሉ በሙሉ ጥቅም ላይ ሊውሉ ይችላሉ።
+እና 67router እነዚያን ለ`/v1/chat/completions` ይተረጉማል፣ ስለዚህ ሙሉ በሙሉ ጥቅም ላይ ሊውሉ ይችላሉ።
 
 ### ፈጽሞ ያላዋቀሯቸው አቅራቢዎች
 
@@ -83,7 +83,7 @@ HTTP 400 — ሞዴል '<id>' የምስል-ማመንጫ ሞዴል ስለሆነ �
 
 ## በVS Code ትር ውስጥ ያለ Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` የOmniRoute dashboardን በውጫዊ browser ፈንታ በSimple Browser በኩል በeditor ትር ውስጥ ያሳያል። ማካተት **በserver ላይ በምርጫ የሚነቃ** ሲሆን፣ ይህም በ`DASHBOARD_ALLOW_EMBED=vscode` ይከናወናል፤ የHTML ገጾቹን በነባሪው `frame-ancestors 'none'` +
+`omnicopilot.dashboardOpen: "editor"` የ67router dashboardን በውጫዊ browser ፈንታ በSimple Browser በኩል በeditor ትር ውስጥ ያሳያል። ማካተት **በserver ላይ በምርጫ የሚነቃ** ሲሆን፣ ይህም በ`DASHBOARD_ALLOW_EMBED=vscode` ይከናወናል፤ የHTML ገጾቹን በነባሪው `frame-ancestors 'none'` +
 `X-Frame-Options: DENY` ፈንታ በ`frame-ancestors 'self' vscode-webview:` ያቀርባል። የAPI ወሰን (`/api`፣ `/v1`፣ `/v1beta`፣ `/a2a`፣ `/healthz`) በሁለቱም ሁኔታዎች ጥብቅ headersን እንዳሉ ይጠብቃል።
 
 > ⚠️ **ይህ የbuild ጊዜ flag ነው፣ የruntime አይደለም።** Next.js `headers()`ን ወደ route
@@ -122,7 +122,7 @@ Kilo እና Roo ዝግጁ-ለአጠቃቀም profiles እንዲጽፍ `omniroute
 
 | ምልክት                                            | ምክንያት / መፍትሔ                                                                                                                                                                                                                       |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| በpicker ውስጥ የOmniRoute models አይታዩም             | Serverውን ማግኘት አልተቻለም። የstatus-bar ነጥቡ ግራጫ ይሆናል፤ `OmniRoute: Check Connection`ን ያሂዱ። Discovery ሆን ተብሎ ያለማሳወቂያ ይከናወናል፣ እና ጥያቄ ከማቅረብ ይልቅ ምንም models አያክልም።                                                                            |
+| በpicker ውስጥ የ67router models አይታዩም              | Serverውን ማግኘት አልተቻለም። የstatus-bar ነጥቡ ግራጫ ይሆናል፤ `OmniRoute: Check Connection`ን ያሂዱ። Discovery ሆን ተብሎ ያለማሳወቂያ ይከናወናል፣ እና ጥያቄ ከማቅረብ ይልቅ ምንም models አያክልም።                                                                            |
 | እያንዳንዱ model ሁለት ጊዜ ይታያል                        | ከ1.0.1 በፊት የሆነ OmniCopilot እየተጠቀሙ ነው — update ያድርጉ። extensionው አሁን `?prefix=alias`ን ይጠይቃል።                                                                                                                                         |
 | ቀደም ሲል የነበረ image/audio model ከዝርዝሩ ጠፍቷል        | ከ1.0.1 ጀምሮ ሆን ተብሎ የተደረገ ነው — የchat requestን ፈጽሞ መመለስ አይችልም ነበር።                                                                                                                                                                    |
 | Panel ከActivity Bar ጠፍቷል                        | VS Code ተጨማሪ view containersን በActivity Bar ግርጌ ወዳለው **"…"** overflow ያንቀሳቅሳል፣ እና በright-click የተደበቀ container እንደተደበቀ ይቆያል። Activity Barን right-click ያድርጉ → **OmniRoute**ን ምልክት ያድርጉ፣ ወይም በ`OmniRoute: Manage Connection` ይክፈቱት። |
@@ -134,6 +134,6 @@ Kilo እና Roo ዝግጁ-ለአጠቃቀም profiles እንዲጽፍ `omniroute
 ## በተጨማሪ ይመልከቱ
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — ሌሎች ሁሉም የኮድ መጻፊያ መሣሪያዎች
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — የርቀት OmniRouteን መቆጣጠር
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — የርቀት 67routerን መቆጣጠር
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — የ`/v1/models` ውል
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — የቅጥያው የራሱ ካታሎግ ማስታወሻዎች

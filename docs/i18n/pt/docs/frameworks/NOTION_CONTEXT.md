@@ -11,11 +11,11 @@
 
 ## O que é
 
-O OmniRoute pode ligar-se a um espaço de trabalho do **Notion** como uma **fonte de contexto** — uma base de
+O 67router pode ligar-se a um espaço de trabalho do **Notion** como uma **fonte de contexto** — uma base de
 conhecimentos de leitura/escrita à qual os agentes acedem através do servidor MCP integrado. Assim que um token
 de integração do Notion estiver configurado, as ferramentas MCP permitem que um LLM pesquise páginas e bases de dados,
 leia o conteúdo das páginas e árvores de blocos, consulte bases de dados com filtros/ordenações e acrescente novos
-blocos — tudo encaminhado através do OmniRoute (com repetição, tempo limite e classificação de erros),
+blocos — tudo encaminhado através do 67router (com repetição, tempo limite e classificação de erros),
 pelo que o modelo nunca acede diretamente à API do Notion.
 
 A integração é um invólucro simples e robusto da API REST oficial do Notion
@@ -40,7 +40,7 @@ tabela `key_value` do SQLite (espaço de nomes `notion`, chave `integration_toke
 > [!NOTE]
 > O token é um **token de integração interna do Notion**. Crie uma integração em
 > <https://www.notion.com/my-integrations> e, em seguida, partilhe com essa integração as páginas/bases de dados às quais pretende
-> que o OmniRoute aceda (o modelo de permissões do Notion baseia-se em partilhas,
+> que o 67router aceda (o modelo de permissões do Notion baseia-se em partilhas,
 > não abrange todo o espaço de trabalho).
 
 ### Configurar através de REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Os três métodos requerem autenticação no painel (`isAuthenticated`). Num pedido `POST`,
-o OmniRoute guarda o token e executa imediatamente uma pesquisa de teste com 1 resultado; se o Notion
+o 67router guarda o token e executa imediatamente uma pesquisa de teste com 1 resultado; se o Notion
 devolver um objeto de erro, o token é limpo e a chamada falha com `400`.
 
 ## Ferramentas MCP (6)

@@ -12,7 +12,7 @@
 
 ## Was es ist
 
-Local Corpus ermöglicht es einem Betreiber, ein ausdrücklich genehmigtes Verzeichnis mit Textdateien für den MCP-Server von OmniRoute bereitzustellen. Die Dateien verbleiben in ihrem ursprünglichen Verzeichnis: OmniRoute speichert lediglich den kanonischen Stammpfad in SQLite und verwaltet einen Suchindex im Arbeitsspeicher. Korpusinhalte werden weder in das Repository noch in die Datenbank kopiert.
+Local Corpus ermöglicht es einem Betreiber, ein ausdrücklich genehmigtes Verzeichnis mit Textdateien für den MCP-Server von 67router bereitzustellen. Die Dateien verbleiben in ihrem ursprünglichen Verzeichnis: 67router speichert lediglich den kanonischen Stammpfad in SQLite und verwaltet einen Suchindex im Arbeitsspeicher. Korpusinhalte werden weder in das Repository noch in die Datenbank kopiert.
 
 Der Index wird inkrementell aktualisiert. Unveränderte Dateien werden anhand ihrer Größe und Änderungszeit wiederverwendet, geänderte Dateien werden erneut eingelesen und mit SHA-256 gehasht, und gelöschte Dateien werden entfernt. Bei einer Suche wird ein Index aktualisiert, der älter als 30 Sekunden ist; Aufrufer können außerdem eine sofortige Aktualisierung anfordern.
 

@@ -4,15 +4,15 @@
 
 ---
 
-လွှဲအပ်ထားသော **Context Editing** သည် Claude အတွက်သာ ရရှိနိုင်သည့် context စီမံခန့်ခွဲမှု လုပ်ဆောင်ချက်ဖြစ်သည်။ Request body ကို proxy မှ _မထွက်ခွာမီ_ ပြန်လည်ရေးသားသည့် OmniRoute ၏ local compression engine များ (Caveman, RTK, LLMLingua, stacked pipelines) နှင့် မတူဘဲ Context Editing သည် ၎င်း၏ လက်ရှိအသုံးပြုနေသော context window မှ သက်တမ်းလွန် tool-use / tool-result block များကို ရှင်းလင်းရန် **provider** ထံ တောင်းဆိုသည်။ OmniRoute သည် body parameter (`context_management.edits[]`) ကိုသာ ထည့်သွင်းပေးပြီး Claude က ၎င်း၏ ကိုယ်ပိုင် tokenizer ကို အသုံးပြု၍ အမှန်တကယ် ရှင်းလင်းမှုကို လုပ်ဆောင်သည်။
+လွှဲအပ်ထားသော **Context Editing** သည် Claude အတွက်သာ ရရှိနိုင်သည့် context စီမံခန့်ခွဲမှု လုပ်ဆောင်ချက်ဖြစ်သည်။ Request body ကို proxy မှ _မထွက်ခွာမီ_ ပြန်လည်ရေးသားသည့် 67router ၏ local compression engine များ (Caveman, RTK, LLMLingua, stacked pipelines) နှင့် မတူဘဲ Context Editing သည် ၎င်း၏ လက်ရှိအသုံးပြုနေသော context window မှ သက်တမ်းလွန် tool-use / tool-result block များကို ရှင်းလင်းရန် **provider** ထံ တောင်းဆိုသည်။ 67router သည် body parameter (`context_management.edits[]`) ကိုသာ ထည့်သွင်းပေးပြီး Claude က ၎င်း၏ ကိုယ်ပိုင် tokenizer ကို အသုံးပြု၍ အမှန်တကယ် ရှင်းလင်းမှုကို လုပ်ဆောင်သည်။
 
-၎င်းသည် မူလသဘောသဘာဝအရ လွှဲအပ်လုပ်ဆောင်ရသော စွမ်းဆောင်ရည်တစ်ခုဖြစ်သည်။ အခြား provider များက ထို parameter ကို လက်မခံကြသဖြင့် OmniRoute သည် ၎င်းကို Claude နှင့် Claude-Code-compatible relay များအတွက်သာ တင်းကျပ်စွာ ကန့်သတ်ထားသည်။
+၎င်းသည် မူလသဘောသဘာဝအရ လွှဲအပ်လုပ်ဆောင်ရသော စွမ်းဆောင်ရည်တစ်ခုဖြစ်သည်။ အခြား provider များက ထို parameter ကို လက်မခံကြသဖြင့် 67router သည် ၎င်းကို Claude နှင့် Claude-Code-compatible relay များအတွက်သာ တင်းကျပ်စွာ ကန့်သတ်ထားသည်။
 
 တရားဝင်အချက်အလက်ရင်းမြစ်- `open-sse/config/contextEditing.ts` (strategy id များ၊ body ထည့်သွင်းမှု၊ telemetry ထုတ်ယူမှု)၊ `open-sse/executors/base.ts` (ထည့်သွင်းမှု gate + 400-fallback) နှင့် `open-sse/services/compression/types.ts` (config ပုံစံ + မူလတန်ဖိုး)။
 
 ## `clear_tool_uses` က ဘာလုပ်သလဲ
 
-OmniRoute သည် အပြင်သို့ပို့မည့် Anthropic Messages body ထဲသို့ edit တစ်ခုတည်းကို ထည့်သွင်းသည်-
+67router သည် အပြင်သို့ပို့မည့် Anthropic Messages body ထဲသို့ edit တစ်ခုတည်းကို ထည့်သွင်းသည်-
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute သည် အပြင်သို့ပို့မည့် Anthropi
 - `trigger.value: 100000` — request ၏ input token များသည် ဤအတိုင်းအတာထက် ကျော်လွန်သွားသည်နှင့် Claude သည် tool-use/result အတွဲဟောင်းများကို စတင်ရှင်းလင်းသည် (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`၊ Anthropic ၏ မူလတန်ဖိုး)။
 - `keep.value: 3` — လတ်တလောအဖြစ်ဆုံး tool-use/result အတွဲ N ခုကို မပြောင်းလဲဘဲ ထိန်းသိမ်းထားသည် (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`)။
 
-Beta ကို `anthropic-beta: context-management-2025-06-27` header မှတစ်ဆင့် ကြေညာထားပြီး OmniRoute သည် Claude request များတွင် ၎င်းကို ထည့်သွင်းပေးထားပြီးဖြစ်သည်။
+Beta ကို `anthropic-beta: context-management-2025-06-27` header မှတစ်ဆင့် ကြေညာထားပြီး 67router သည် Claude request များတွင် ၎င်းကို ထည့်သွင်းပေးထားပြီးဖြစ်သည်။
 
-ထည့်သွင်းမှုကို `applyContextEditingToBody()` က လုပ်ဆောင်ပြီး **idempotent** ဖြစ်သည်။ Body ပေါ်တွင် `clear_tool_uses` edit တစ်ခု ရှိနှင့်ပြီးဖြစ်ပါက (ယခင်ခေါ်ဆိုမှုတစ်ခုက ထည့်ထားခြင်း သို့မဟုတ် client က ပေးထားခြင်း) body ကို မူလအတိုင်း ထားမည်ဖြစ်သည်။ `clear_thinking_20251015` edit တစ်ခုလည်း ပါဝင်နေပါက Anthropic က `edits[]` array ထဲတွင် `clear_thinking` ကို `clear_tool_uses` မတိုင်မီ ထားရန် လိုအပ်သောကြောင့် OmniRoute သည် `clear_thinking` edit ကို ရှေ့ဆုံးသို့ အစီအစဉ်တည်ငြိမ်စွာ ပြန်စီသည်။
+ထည့်သွင်းမှုကို `applyContextEditingToBody()` က လုပ်ဆောင်ပြီး **idempotent** ဖြစ်သည်။ Body ပေါ်တွင် `clear_tool_uses` edit တစ်ခု ရှိနှင့်ပြီးဖြစ်ပါက (ယခင်ခေါ်ဆိုမှုတစ်ခုက ထည့်ထားခြင်း သို့မဟုတ် client က ပေးထားခြင်း) body ကို မူလအတိုင်း ထားမည်ဖြစ်သည်။ `clear_thinking_20251015` edit တစ်ခုလည်း ပါဝင်နေပါက Anthropic က `edits[]` array ထဲတွင် `clear_thinking` ကို `clear_tool_uses` မတိုင်မီ ထားရန် လိုအပ်သောကြောင့် 67router သည် `clear_thinking` edit ကို ရှေ့ဆုံးသို့ အစီအစဉ်တည်ငြိမ်စွာ ပြန်စီသည်။
 
 ## Combo တစ်ခုချင်းစီအလိုက် ဖွင့်/ပိတ် toggle
 
@@ -110,7 +110,7 @@ if (
 
 ## `applied_edits` telemetry
 
-Claude response တစ်ခုရရှိပြီးနောက် OmniRoute သည် provider က အမှန်တကယ် ရှင်းလင်းခဲ့သည့် context ပမာဏကို မှတ်တမ်းတင်သည်။ ၎င်းကို **stream မလုပ်ပါ** — non-streaming response body မှ best-effort ဖြင့် ထုတ်ယူပြီး response အပေါ် မည်သည့်အခါမျှ သက်ရောက်မှုမရှိပါ (telemetry ချို့ယွင်းမှုများကို လျစ်လျူရှုသည်)။
+Claude response တစ်ခုရရှိပြီးနောက် 67router သည် provider က အမှန်တကယ် ရှင်းလင်းခဲ့သည့် context ပမာဏကို မှတ်တမ်းတင်သည်။ ၎င်းကို **stream မလုပ်ပါ** — non-streaming response body မှ best-effort ဖြင့် ထုတ်ယူပြီး response အပေါ် မည်သည့်အခါမျှ သက်ရောက်မှုမရှိပါ (telemetry ချို့ယွင်းမှုများကို လျစ်လျူရှုသည်)။
 
 - ထုတ်ယူခြင်း- `open-sse/config/contextEditing.ts` ရှိ `extractContextEditingTelemetry(responseBody)`။
   ၎င်းသည် response shape အမျိုးမျိုးကို ခံနိုင်ရည်ရှိစေရန် နေရာသုံးခုရှိ `applied_edits` ကို စစ်ဆေးသည်-
@@ -134,14 +134,14 @@ Claude response တစ်ခုရရှိပြီးနောက် OmniRoute
 
 | ရှုထောင့်             | ဒေသတွင်းအင်ဂျင်များ (Caveman / RTK / LLMLingua / stacked) | လွှဲအပ်ထားသော Context Editing                                       |
 | --------------------- | --------------------------------------------------------- | ------------------------------------------------------------------- |
-| လုပ်ဆောင်သည့်နေရာ     | တောင်းဆိုချက်သည် proxy မှ မထွက်ခွာမီ OmniRoute အတွင်း     | Provider (Claude) အတွင်း၊ server-side တွင်                          |
+| လုပ်ဆောင်သည့်နေရာ     | တောင်းဆိုချက်သည် proxy မှ မထွက်ခွာမီ 67router အတွင်း      | Provider (Claude) အတွင်း၊ server-side တွင်                          |
 | ပြင်ဆင်သည့်အရာ        | Prompt / context / tool-result စာသား                      | အဟောင်း tool-use / tool-result blocks များ                          |
 | Provider နယ်ပယ်       | Provider အားလုံး                                          | `claude` + `anthropic-compatible-cc-*` သာ                           |
 | အဖွင့်အပိတ်ဆက်တင်     | ဖိသိပ်မှုမုဒ် ဆက်တင်များ                                  | `contextEditing.enabled`                                            |
 | ချို့ယွင်းမှုမုဒ်     | Fail-open (မူရင်းစာသား)                                   | 400-fallback: parameter ကို ဖယ်ရှားပြီး တစ်ကြိမ် ပြန်လည်ကြိုးစားသည် |
 | ချွေတာမှု တယ်လီမက်ထရီ | `engine: <engine id>`                                     | `engine: "context-editing"`                                         |
 
-နှစ်မျိုးစလုံးသည် အပြန်အလှန်ဖြည့်ဆည်းပေးသည်- ဒေသတွင်းအင်ဂျင်များသည် OmniRoute ပေးပို့သည့် bytes များကို ဖိသိပ်ပေးပြီး Context Editing က
+နှစ်မျိုးစလုံးသည် အပြန်အလှန်ဖြည့်ဆည်းပေးသည်- ဒေသတွင်းအင်ဂျင်များသည် 67router ပေးပို့သည့် bytes များကို ဖိသိပ်ပေးပြီး Context Editing က
 Claude အား အပြန်အလှန်ဆက်သွယ်မှုများတစ်လျှောက် လက်ရှိ context ကို ရှင်းလင်းလျှော့ချပေးနိုင်စေသည်။ နှစ်မျိုးစလုံးကို တစ်ပြိုင်နက် ဖွင့်ထားနိုင်သည်။
 
 ## ထပ်မံကြည့်ရှုရန်

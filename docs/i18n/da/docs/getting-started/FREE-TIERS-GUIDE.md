@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: Medbring dine egne kvalificerede udbyderkonti. OmniRoute kombinerer de forbindelser, du konfigurerer; tjenesten tildeler ikke det annoncerede samlede tokenbudget. Gratis adgang kan kræve tilmelding, en API-nøgle, godkendelse eller en betalingsmetode. Udbydernes begrænsninger, privatlivspolitikker og vilkår gælder stadig.
+> **Kort fortalt**: Medbring dine egne kvalificerede udbyderkonti. 67router kombinerer de forbindelser, du konfigurerer; tjenesten tildeler ikke det annoncerede samlede tokenbudget. Gratis adgang kan kræve tilmelding, en API-nøgle, godkendelse eller en betalingsmetode. Udbydernes begrænsninger, privatlivspolitikker og vilkår gælder stadig.
 
 ---
 
@@ -15,7 +15,7 @@ betyde et slutpunkt uden godkendelse, en tilbagevendende kvote, ubegrænset adga
 manuel godkendelse eller en midlertidig kampagne. Nogle muligheder kræver en konto, API-nøgle,
 kreditkort, KYC eller accept af udbyderspecifikke vilkår.
 
-OmniRoute **samler** konfigurerede forbindelser i ét slutpunkt. Du skal stadig tilmelde dig separat hos hver udbyder, der kræver en konto. Forbind disse konti, og brug `model: "auto"` til at dirigere mellem kvalificerede mål. En ny installation har muligvis ikke noget kvalificeret mål uden nøgle. Installation af OmniRoute alene garanterer ikke et vellykket chatsvar.
+67router **samler** konfigurerede forbindelser i ét slutpunkt. Du skal stadig tilmelde dig separat hos hver udbyder, der kræver en konto. Forbind disse konti, og brug `model: "auto"` til at dirigere mellem kvalificerede mål. En ny installation har muligvis ikke noget kvalificeret mål uden nøgle. Installation af 67router alene garanterer ikke et vellykket chatsvar.
 
 ---
 
@@ -60,7 +60,7 @@ Disse udbydere har **gratis niveauer** med specifikke begrænsninger:
 
 ## Sådan kombinerer du gratisniveauer
 
-Det smarte ved OmniRoute er **kombinationen af gratisniveauer**. I stedet for at være afhængig af én udbyder forbinder du flere gratis udbydere og lader OmniRoute automatisk vælge den bedste til hver anmodning.
+Det smarte ved 67router er **kombinationen af gratisniveauer**. I stedet for at være afhængig af én udbyder forbinder du flere gratis udbydere og lader 67router automatisk vælge den bedste til hver anmodning.
 
 ### Eksempel: Bredere dækning med gratisniveauer
 
@@ -71,7 +71,7 @@ Forbind flere udbydere for at mindske afhængigheden af en enkelt kvote:
 3. **Pollinations** — nøglefri, hastighedsbegrænset adgang
 4. **LongCat** — engangstildeling ved tilmelding (kræver KYC)
 
-Brug derefter `model: "auto"`, hvorefter OmniRoute vil:
+Brug derefter `model: "auto"`, hvorefter 67router vil:
 
 - Først prøve den højest rangerede kvalificerede forbindelse
 - Hvis dens kvote eller sundhedskontrol mislykkes → prøve den næste konfigurerede udbyder
@@ -105,7 +105,7 @@ ubegrænset/nøglefri adgang, tilmeldingskreditter, udgåede poster og kilder me
 
 ### Trin 5: Klik på Forbind
 
-For en `NOAUTH`-udbyder anmoder OmniRoute ikke om legitimationsoplysninger til upstream-tjenesten. Dette garanterer ikke, at upstream-tjenesten accepterer tredjepartsklienter eller har ledig kapacitet. OAuth- og API-nøgleudbydere skal forbindes via deres dokumenterede kontoprocedure. Din klient bruger stadig den OmniRoute-API-nøgle, der vises under **Kontrolpanel → Slutpunkter**, når routergodkendelse er aktiveret.
+For en `NOAUTH`-udbyder anmoder 67router ikke om legitimationsoplysninger til upstream-tjenesten. Dette garanterer ikke, at upstream-tjenesten accepterer tredjepartsklienter eller har ledig kapacitet. OAuth- og API-nøgleudbydere skal forbindes via deres dokumenterede kontoprocedure. Din klient bruger stadig den 67router-API-nøgle, der vises under **Kontrolpanel → Slutpunkter**, når routergodkendelse er aktiveret.
 
 ### Trin 6: Gentag
 
@@ -115,7 +115,7 @@ Forbind flere udbydere, hvis vilkår og privatlivsmodel passer til dit anvendels
 
 ## Sådan læses kataloget korrekt
 
-- `NOAUTH` betyder, at OmniRoute ikke beder dig om legitimationsoplysninger til en udbyder; det
+- `NOAUTH` betyder, at 67router ikke beder dig om legitimationsoplysninger til en udbyder; det
   garanterer ikke oppetid, privatliv eller ubegrænset kapacitet.
 - `hasFree` er metadata til opdagelse. Det kan repræsentere en tilbagevendende kvote, nøglefri adgang,
   tilmeldingskredit, et godkendelsesprogram eller en kampagne.
@@ -128,15 +128,15 @@ Forbind flere udbydere, hvis vilkår og privatlivsmodel passer til dit anvendels
 
 ---
 
-## Sådan gør OmniRoute gratisniveauer bedre
+## Sådan gør 67router gratisniveauer bedre
 
 ### 1. Automatisk fallback
 
-Hvis en gratis udbyder er overbelastet eller nede, prøver OmniRoute automatisk den næste. Du behøver ikke at gøre noget.
+Hvis en gratis udbyder er overbelastet eller nede, prøver 67router automatisk den næste. Du behøver ikke at gøre noget.
 
 ### 2. Intelligent routing
 
-OmniRoute vælger den **bedste gratis udbyder** til hver anmodning baseret på:
+67router vælger den **bedste gratis udbyder** til hver anmodning baseret på:
 
 - Hastighed — Hvilken udbyder er hurtigst lige nu?
 - Kvalitet — Hvilken udbyder er bedst til denne opgave?
@@ -144,13 +144,13 @@ OmniRoute vælger den **bedste gratis udbyder** til hver anmodning baseret på:
 
 ### 3. Tokenbesparelser
 
-OmniRoutes komprimeringspipeline kan reducere antallet af kvalificerede tokens i prompts og værktøjsoutput. De
+67routers komprimeringspipeline kan reducere antallet af kvalificerede tokens i prompts og værktøjsoutput. De
 faktiske besparelser afhænger af indhold, valgte engines, udbyderens opgørelsesmetode og indstillinger
 for nøjagtighed; komprimering multiplicerer ikke alle udbyderkvoter med en fast faktor.
 
 ### 4. Understøttelse af flere konti
 
-Hvis udbyderens vilkår tillader flere konti eller legitimationsoplysninger, kan OmniRoute behandle hver
+Hvis udbyderens vilkår tillader flere konti eller legitimationsoplysninger, kan 67router behandle hver
 forbindelse som en separat routingkandidat. Opret ikke ekstra konti for at omgå en
 udbyders kvote- eller adgangspolitik.
 
@@ -165,7 +165,7 @@ Det aktive, pool-deduplikerede katalog rapporterer i øjeblikket:
 | Tilbagevendende kvantificeret tildeling | **~1.62B tokens/måned** | Delte pools tælles én gang; udbydere uden loft er udeladt fra summen     |
 | Første måned med oprettelseskreditter   |       **~2.22B tokens** | Tilbagevendende total plus engangskreditter og tilbagevendende kreditter |
 
-Dette er estimater for hele kataloget på tværs af separate kvalificerede konti, ikke en kvote leveret af OmniRoute eller en prognose for en ny installation. Din anvendelige kapacitet afhænger af de udbydere, du forbinder, og deres aktuelle vilkår. Værdierne beregnes ud fra `open-sse/config/freeModelCatalog.ts`; se
+Dette er estimater for hele kataloget på tværs af separate kvalificerede konti, ikke en kvote leveret af 67router eller en prognose for en ny installation. Din anvendelige kapacitet afhænger af de udbydere, du forbinder, og deres aktuelle vilkår. Værdierne beregnes ud fra `open-sse/config/freeModelCatalog.ts`; se
 [Reference til gratisniveauer](../reference/FREE_TIERS.md) for deduplikering af pools, markeringer vedrørende brugsvilkår,
 udgåede poster og metodologien for oprettelseskreditter.
 
@@ -192,7 +192,7 @@ Kritiske arbejdsbelastninger bør have overvåget reservekapacitet, der er kontr
 
 Kompromiser kan omfatte strenge begrænsninger, ventelister, KYC, bekræftelse med kreditkort, træning på
 prompter, ringere privatliv, ingen SLA, hyppige modelændringer, geografiske begrænsninger, betalt overforbrug eller
-risici forbundet med kontopolitikker. OmniRoute viser de tilgængelige metadata; du vælger, hvad der skal aktiveres.
+risici forbundet med kontopolitikker. 67router viser de tilgængelige metadata; du vælger, hvad der skal aktiveres.
 
 ### "Hvordan får jeg en større gratis kvote?"
 
@@ -211,7 +211,7 @@ Rangering af gratisudbydere som en kvalitetsindikator, og kontrollér den model,
 
 ## Hvad er det næste?
 
-- **[Guide til Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lad OmniRoute vælge den bedste AI til dig
+- **[Guide til Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lad 67router vælge den bedste AI til dig
 - **[Guide til udbydere](./PROVIDERS-GUIDE.md)** — Tilslut flere udbydere
 - **[Fejlfinding](../guides/TROUBLESHOOTING.md)** — Løs almindelige problemer
 - **[Oversigt over gratis niveauer](../reference/FREE_TIERS.md)** — Komplet liste over gratis niveauer

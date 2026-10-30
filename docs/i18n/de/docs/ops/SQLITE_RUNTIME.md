@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute löst seinen SQLite-Treiber beim Start über eine 5-stufige Fallback-Kette auf:
+67router löst seinen SQLite-Treiber beim Start über eine 5-stufige Fallback-Kette auf:
 
 1. **Mitgeliefertes `better-sqlite3`** (über `dependencies` in `package.json`)
    — am schnellsten, native Binärdatei, wird durch `npm install` installiert, wenn Build-Werkzeuge vorhanden sind.
@@ -28,13 +28,13 @@ OmniRoute löst seinen SQLite-Treiber beim Start über eine 5-stufige Fallback-K
 - **Keine Build-Werkzeuge**: Einige Umgebungen (Unternehmens-Windows ohne VS Build
   Tools, minimale Docker-Images) können `better-sqlite3` nicht kompilieren. Das Laufzeit-
   Installationsprogramm bezieht eine vorkompilierte Binärdatei aus der npm-Registry; die Fallback-
-  Treiber stellen sicher, dass OmniRoute auch dann noch startet, wenn dies fehlschlägt.
+  Treiber stellen sicher, dass 67router auch dann noch startet, wenn dies fehlschlägt.
 - **Vom Netzwerk isolierte Systeme**: Wenn die npm-Registry nicht erreichbar ist, garantieren `node:sqlite`
   oder `sql.js` eine grundlegende Funktionalität.
 
 ## Magic-Byte-Validierung
 
-Vor dem Laden einer zur Laufzeit installierten `.node`-Datei liest OmniRoute die ersten 8
+Vor dem Laden einer zur Laufzeit installierten `.node`-Datei liest 67router die ersten 8
 Bytes und gleicht sie mit bekannten Plattform-Magic-Bytes ab:
 
 | Plattform              | Bytes (hex)   | Bezeichnung |
@@ -104,9 +104,9 @@ Implementierung:
 ## Single-Writer-Topologie (HA wird nicht unterstützt)
 
 Die obige Treiber-Fallback-Kette wird weiterhin in **einem Prozess** ausgeführt. Mit
-standardmäßigem SQLite ist OmniRoute ein **Single Writer**:
+standardmäßigem SQLite ist 67router ein **Single Writer**:
 
-- Verbinden Sie nicht zwei OmniRoute-Replikate mit derselben `storage.sqlite`-Datei.
+- Verbinden Sie nicht zwei 67router-Replikate mit derselben `storage.sqlite`-Datei.
 - Ein Container-Neustart, Recreate-Deployment, OOM-Kill oder HEALTHCHECK-Neustart beendet
   jede laufende SSE-Sitzung. Im Standardpfad findet kein geordnetes Beenden der Sitzungen statt.
 - Eine Orchestrator-Liveness-Prüfung, die einen langsamen `/healthz`-Endpunkt als Ausfall interpretiert, beendet das einzige

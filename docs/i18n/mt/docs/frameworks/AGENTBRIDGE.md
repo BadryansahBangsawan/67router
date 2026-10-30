@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge huwa l-proxy MITM (Man-in-the-Middle) ta' OmniRoute li jinterċetta t-traffiku HTTPS mill-aġenti tal-IA tal-IDE u jerġa' jidderiġih permezz tal-magna unifikata tar-routing ta' OmniRoute. Jappoġġja **10 aġenti tal-IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, u Trae (taħt investigazzjoni) — u b'hekk jagħmel lil OmniRoute l-proxy MITM bl-aktar kopertura wiesgħa fis-suq għall-assistenti tal-ipprogrammar bl-IA.
+AgentBridge huwa l-proxy MITM (Man-in-the-Middle) ta' 67router li jinterċetta t-traffiku HTTPS mill-aġenti tal-IA tal-IDE u jerġa' jidderiġih permezz tal-magna unifikata tar-routing ta' 67router. Jappoġġja **10 aġenti tal-IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, u Trae (taħt investigazzjoni) — u b'hekk jagħmel lil 67router l-proxy MITM bl-aktar kopertura wiesgħa fis-suq għall-assistenti tal-ipprogrammar bl-IA.
 
 **Post tad-dashboard:** `/dashboard/tools/agent-bridge`
 **Grupp fil-sidebar:** Għodod (wara Cloud Agents)
@@ -16,34 +16,34 @@ AgentBridge huwa l-proxy MITM (Man-in-the-Middle) ta' OmniRoute li jinterċetta 
 
 ### X'inhu AgentBridge?
 
-Meta aġent tal-IDE (eż., GitHub Copilot, Cursor, Claude Code) jagħmel sejħa API, jikkonnettja direttament mal-fornitur AI upstream (OpenAI, Anthropic, eċċ.). AgentBridge jinterċetta dik il-konnessjoni b'mod trasparenti fil-livell tat-TLS — mingħajr ma teħtieġ ebda bidla fil-konfigurazzjoni tal-aġent — u jikteb mill-ġdid it-talba permezz ta' OmniRoute.
+Meta aġent tal-IDE (eż., GitHub Copilot, Cursor, Claude Code) jagħmel sejħa API, jikkonnettja direttament mal-fornitur AI upstream (OpenAI, Anthropic, eċċ.). AgentBridge jinterċetta dik il-konnessjoni b'mod trasparenti fil-livell tat-TLS — mingħajr ma teħtieġ ebda bidla fil-konfigurazzjoni tal-aġent — u jikteb mill-ġdid it-talba permezz ta' 67router.
 
 Dan ifisser li tista':
 
-- **Irreroutja kwalunkwe aġent lejn kwalunkwe fornitur**: Copilot jitkellem ma' OpenAI? Iddirejjah lejn Anthropic Claude, Gemini, jew kwalunkwe wieħed mill-375 fornitur ta' OmniRoute.
+- **Irreroutja kwalunkwe aġent lejn kwalunkwe fornitur**: Copilot jitkellem ma' OpenAI? Iddirejjah lejn Anthropic Claude, Gemini, jew kwalunkwe wieħed mill-375 fornitur ta' 67router.
 - **Applika mappini tal-mudelli**: `gemini-3-flash` → `claude-sonnet-4.7` b'mod trasparenti fil-livell tal-handler.
 - **Osserva t-traffiku kollu tal-aġenti**: kull talba interċettata tiġi ppublikata fl-[Spezzjoni tat-Traffiku](./TRAFFIC_INSPECTOR.md).
-- **Applika r-reżiljenza ta' OmniRoute**: combo routing, circuit breakers, fallbacks, u intraċċar tal-ispejjeż jaħdmu wkoll għat-traffiku tal-aġenti tal-IDE.
+- **Applika r-reżiljenza ta' 67router**: combo routing, circuit breakers, fallbacks, u intraċċar tal-ispejjeż jaħdmu wkoll għat-traffiku tal-aġenti tal-IDE.
 
 ### Pożizzjonament meta mqabbel mas-suq
 
-| Karatteristika              | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| --------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity                 |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot              |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                  |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex                |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                  |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries              |    —    |    ✓     |        —        |             ✓             |
-| Claude Code                 |    —    |    —     |        ✓        |             ✓             |
-| Open Code                   |    —    |    —     |        ✓        |             ✓             |
-| Trae                        |    —    |    —     |        —        |     🔍 Qed tinvestiga     |
-| UI tad-Dashboard            |    ✓    |    ✗     |        ✗        |             ✓             |
-| Spezzjoni tat-Traffiku      |    ✗    |    ✗     |        ✓        |             ✓             |
-| Ir-rottar ta' OmniRoute     |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI għall-mappar tal-mudelli |    ✗    |    ✗     |        ✗        |             ✓             |
-| Lista ta' bypass            |    ✗    |    ✗     |        ✓        |             ✓             |
-| Ċertifikat CA upstream      |    ✗    |    ✗     |        ✓        |             ✓             |
+| Karatteristika              | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| --------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity                 |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot              |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                  |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex                |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                  |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries              |    —    |    ✓     |        —        |            ✓             |
+| Claude Code                 |    —    |    —     |        ✓        |            ✓             |
+| Open Code                   |    —    |    —     |        ✓        |            ✓             |
+| Trae                        |    —    |    —     |        —        |    🔍 Qed tinvestiga     |
+| UI tad-Dashboard            |    ✓    |    ✗     |        ✗        |            ✓             |
+| Spezzjoni tat-Traffiku      |    ✗    |    ✗     |        ✓        |            ✓             |
+| Ir-rottar ta' 67router      |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI għall-mappar tal-mudelli |    ✗    |    ✗     |        ✗        |            ✓             |
+| Lista ta' bypass            |    ✗    |    ✗     |        ✓        |            ✓             |
+| Ċertifikat CA upstream      |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, proċess sekondarju CJS)
     │  jirriżolvi d-destinazzjoni permezz tal-SNI tal-header Host
     │  jiġġenera ċertifikat TLS għal kull SNI, iffirmat mis-CA ta’ AgentBridge
     ├── Taqbel mal-lista ta’ bypass? → passthrough TCP (mingħajr deċifrar)
-    ├── Taqbel ma’ destinazzjoni? → fetch → router OmniRoute (port 20128)
+    ├── Taqbel ma’ destinazzjoni? → fetch → router 67router (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() fuq il-body/headers tat-talba
     │               ├── TrafficBuffer.push() — jippubblika fit-Traffic Inspector
@@ -205,7 +205,7 @@ Iċ-ċertifikat CA ta’ AgentBridge jrid ikun fdat mill-OS qabel ma l-IDEs jaċ
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ Eżempji ta’ entrati f’`/etc/hosts` għal GitHub Copilot:
 
 Uża t-Tabella tal-Immappjar tal-Mudelli f’kull kard tal-aġent biex tiddefinixxi mmappjar mis-sors → għall-mira:
 
-| Mudell tas-sors (nattiv għall-aġent) | Mudell fil-mira (OmniRoute) |
-| ------------------------------------ | --------------------------- |
-| `gpt-4o`                             | `claude-sonnet-4.7`         |
-| `*` (wildcard)                       | `claude-haiku-4.7`          |
+| Mudell tas-sors (nattiv għall-aġent) | Mudell fil-mira (67router) |
+| ------------------------------------ | -------------------------- |
+| `gpt-4o`                             | `claude-sonnet-4.7`        |
+| `*` (wildcard)                       | `claude-haiku-4.7`         |
 
 Il-wildcard `*` jimmappja kwalunkwe mudell mhux rikonoxxut mal-mira speċifikata. Dan jinħażen b’mod persistenti fit-tabella `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ Il-wildcard `*` jimmappja kwalunkwe mudell mhux rikonoxxut mal-mira speċifikata
 
 ### 3.5 Avviż dwar ir-riskju
 
-AgentBridge jinterċetta l-kredenzjali (tokens OAuth, ċwievet API) li l-IDE juża biex jawtentika mal-fornituri upstream. Dawn jiġu **moħbija qabel ma jiġu rreġistrati** (ara §2.7) iżda jkunu viżibbli għas-saff MITM ta’ OmniRoute. L-ewwel attivazzjoni ta’ kull aġent turi tieqa modali b’avviż dwar ir-riskju li tista’ tingħalaq.
+AgentBridge jinterċetta l-kredenzjali (tokens OAuth, ċwievet API) li l-IDE juża biex jawtentika mal-fornituri upstream. Dawn jiġu **moħbija qabel ma jiġu rreġistrati** (ara §2.7) iżda jkunu viżibbli għas-saff MITM ta’ 67router. L-ewwel attivazzjoni ta’ kull aġent turi tieqa modali b’avviż dwar ir-riskju li tista’ tingħalaq.
 
 ### 3.6 Manutenzjoni u Dijanjostika
 
@@ -397,7 +397,7 @@ L-identifikazzjoni tuża mogħdijiet speċifiċi għas-sistema operattiva u kont
 
 ### Lista ta' bypass għal hosts sensittivi
 
-Il-lista ta' bypass tiżgura li istituzzjonijiet finanzjarji, fornituri OAuth/SSO, u hosts sensittivi oħra **qatt ma jiġu ddeċifrati**. It-traffiku TLS tagħhom jgħaddi bħala mina TCP trasparenti — OmniRoute qatt ma jara t-test mhux iċċifrat.
+Il-lista ta' bypass tiżgura li istituzzjonijiet finanzjarji, fornituri OAuth/SSO, u hosts sensittivi oħra **qatt ma jiġu ddeċifrati**. It-traffiku TLS tagħhom jgħaddi bħala mina TCP trasparenti — 67router qatt ma jara t-test mhux iċċifrat.
 
 Il-mudelli ta' bypass predefiniti jinkludu:
 
@@ -448,7 +448,7 @@ Inkella, ikkonfigura port mhux privileġġat fis-settings ta' AgentBridge u stab
 
 Jekk l-IDE juri żbalji TLS wara li jinbeda AgentBridge:
 
-1. Ivverifika li ċ-ċertifikat ġie installat: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) jew `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Ivverifika li ċ-ċertifikat ġie installat: `security find-certificate -c "OmniRoute MITM CA"` (macOS) jew `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Xi apps iżommu l-maħżen tal-fiduċja tagħhom stess (Firefox, Chrome fuq Linux). Erġa' ħaddem "Trust Cert" u ċċekkja l-maħżen taċ-ċertifikati speċifiku għal NSS/Firefox.
 3. Erġa' ibda l-IDE wara li tafda ċ-ċertifikat — is-sessjonijiet TLS li jkunu għaddejjin jużaw l-istat ta' fiduċja l-antik.
 
@@ -499,7 +499,7 @@ L-individwazzjoni awtomatika tuża mogħdijiet komuni ta' installazzjoni. Jekk l
 Jekk AgentBridge jinterċetta iżda t-talbiet kollha jfallu:
 
 1. Ivverifika li mill-inqas fornitur wieħed huwa konness f'`/dashboard/providers`
-2. Iċċekkja l-logs tas-server OmniRoute: `APP_LOG_LEVEL=debug` f'`.env`
+2. Iċċekkja l-logs tas-server 67router: `APP_LOG_LEVEL=debug` f'`.env`
 3. Ivverifika li `OMNIROUTE_BASE_URL` jindika l-endpoint korrett tar-router (default: `http://127.0.0.1:20128`)
 
 ---

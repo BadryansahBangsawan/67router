@@ -9,9 +9,9 @@
 > **Kali terakhir diselidik:** 2026-06-17 — penyelidikan web bagi setiap penyedia (dokumentasi rasmi + berita 7 hari terakhir, semakan 50 ejen dengan pengesahan adversarial) yang mengemas kini setiap kuota peringkat percuma + ToS. **Audit semula separa pada 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — lihat nota bertarikh di bawah).
 > **Sumber rujukan utama (katalog):** `open-sse/config/freeModelCatalog.ts` (belanjawan bagi setiap MODEL, dinyahduplikasi mengikut kumpulan). Angka belanjawan token di bawah diperoleh daripada penyelidikan web secara langsung dan merupakan suatu **anggaran** — lihat [Metodologi & kaveat](#methodology--caveats).
 
-## TL;DR — berapa banyak inferens percuma yang sebenarnya diagregatkan oleh OmniRoute?
+## TL;DR — berapa banyak inferens percuma yang sebenarnya diagregatkan oleh 67router?
 
-Angka ini menerangkan akaun pihak ketiga dan syarat kelayakan yang berasingan di seluruh katalog. OmniRoute tidak memberikan belanjawan ini: anda mesti mendapatkan akaun atau kelayakan yang diperlukan, menyambungkan penyedia yang layak dan mematuhi had mereka. Kapasiti sebenar yang boleh digunakan mungkin lebih rendah, termasuk sifar pada pemasangan baharu tanpa laluan yang layak. Penyedia yang ditandai `tos: avoid` dikecualikan daripada penghalaan automatik secara lalai.
+Angka ini menerangkan akaun pihak ketiga dan syarat kelayakan yang berasingan di seluruh katalog. 67router tidak memberikan belanjawan ini: anda mesti mendapatkan akaun atau kelayakan yang diperlukan, menyambungkan penyedia yang layak dan mematuhi had mereka. Kapasiti sebenar yang boleh digunakan mungkin lebih rendah, termasuk sifar pada pemasangan baharu tanpa laluan yang layak. Penyedia yang ditandai `tos: avoid` dikecualikan daripada penghalaan automatik secara lalai.
 
 **Disemak pada 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) menawarkan kredit promosi sekali sahaja sebanyak $5 yang memerlukan kaedah pembayaran dan tamat tempoh selepas 30 hari. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) menerbitkan had kadar mengikut projek/model/peringkat; ia kekal di luar angka utama bulanan yang dikuantifikasikan.
 
@@ -86,7 +86,7 @@ mewakili pemberian percuma berulang yang telah dipastikan.
 
 ## Dua rejim — pengiraan berbanding penentuan
 
-OmniRoute menjawab "adakah ia percuma?" melalui dua rejim yang sengaja membaca sumber yang berbeza:
+67router menjawab "adakah ia percuma?" melalui dua rejim yang sengaja membaca sumber yang berbeza:
 
 | Rejim                   | Sumber rujukan                                                                                                                                                                   | Antara muka                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ Kebanyakan angka "token percuma sebulan" dalam bidang ini ialah hasil tambah lab
 
 ### ⚠️ Berhati-hati — klausa penggunaan peribadi / proksi yang wajar disemak (16)
 
-> Akses percuma mereka adalah sebenar dan OmniRoute boleh menghalakan permintaan kepada mereka; klausa di bawah hanya wajar diketahui. Pilihan OAuth/tanpa kunci tidak boleh dikuantifikasikan dalam bentuk token, jadi pilihan tersebut tidak termasuk dalam angka tajuk utama (bukannya kerana pilihan tersebut tidak boleh digunakan).
+> Akses percuma mereka adalah sebenar dan 67router boleh menghalakan permintaan kepada mereka; klausa di bawah hanya wajar diketahui. Pilihan OAuth/tanpa kunci tidak boleh dikuantifikasikan dalam bentuk token, jadi pilihan tersebut tidak termasuk dalam angka tajuk utama (bukannya kerana pilihan tersebut tidak boleh digunakan).
 
 | Penyedia         | Catatan                                                                                                                                                                                                           |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ Kebanyakan angka "token percuma sebulan" dalam bidang ini ialah hasil tambah lab
 | `fireworks`      | ToS secara nyata melarang penggunaan proksi/perantara, pemindahan kunci API dan pemberian sublesen (Seksyen 2.1 dan 2.2(i)(j)); proksi peribadi hos kendiri tidak…                                                |
 | `friendliai`     | Seksyen 8(e) dan 8(f) ToS secara nyata melarang penggunaan FriendliAI sebagai proksi atau membenarkan akses pihak ketiga secara kendiri, serta melarang penjualan semula/…                                        |
 | `iflytek`        | Seksyen 2.4(3) Perjanjian Perkhidmatan iFlytek Spark LLM secara nyata melarang "penggunaan sebarang kaedah automatik atau terprogram untuk mengekstrak data atau output…                                          |
-| `kiro`           | FAQ Kiro secara nyata melarang penggunaan dengan "OpenClaw dan alat serupa yang memanfaatkan abah-abah pihak ketiga" — proksi AI hos kendiri (seperti OmniRoute) yang menghalakan…                                |
+| `kiro`           | FAQ Kiro secara nyata melarang penggunaan dengan "OpenClaw dan alat serupa yang memanfaatkan abah-abah pihak ketiga" — proksi AI hos kendiri (seperti 67router) yang menghalakan…                                 |
 | `modal`          | Seksyen 1.3 ToS secara nyata melarang "menyewakan, menjual semula atau dengan cara lain membenarkan mana-mana pihak ketiga mengakses atau menggunakan Perkhidmatan secara langsung" — membina proksi hos kendiri… |
 | `muse-spark-web` | ToS Meta secara nyata melarang akses automatik tanpa kebenaran terlebih dahulu, kejuruteraan songsang tanpa kebenaran bertulis dan pemintasan teknologi…                                                          |
 | `nlpcloud`       | ToS secara nyata melarang "menyediakan proksi atau peranti lain yang membolehkan orang lain mengakses Perkhidmatan melaluinya" dan hanya memberikan hak yang tidak boleh dipindah milik,…                         |
@@ -304,7 +304,7 @@ Kebanyakan angka "token percuma sebulan" dalam bidang ini ialah hasil tambah lab
 
 - **`360ai`** — freeNote yang disertakan, "Model Otak AI 360 Percuma", kelihatan sudah lapuk. Akses semasa memerlukan permohonan dan berbayar. Token promosi era pelancaran 2023 (100M–250M sekali sahaja) mungkin menjadi asas kepada…
 - **`agentrouter`** — freeNote yang disertakan menyatakan "$200 kredit percuma semasa pendaftaran." Realiti semasa menunjukkan bahawa pendaftaran standard (bukan rujukan) hanya menerima $100; pendaftaran melalui rujukan mungkin mendapat $200 tetapi ulasan komuniti dari April 2026…
-- **`agy`** — freeNote yang disertakan menyatakan "(tiada)", yang membayangkan tiada peringkat percuma, tetapi Antigravity sememangnya mempunyai peringkat percuma yang memerlukan OAuth. Walau bagaimanapun, Syarat Perkhidmatan secara jelas melarang penggunaan peringkat percuma ini melalui proksi seperti OmniRoute …
+- **`agy`** — freeNote yang disertakan menyatakan "(tiada)", yang membayangkan tiada peringkat percuma, tetapi Antigravity sememangnya mempunyai peringkat percuma yang memerlukan OAuth. Walau bagaimanapun, Syarat Perkhidmatan secara jelas melarang penggunaan peringkat percuma ini melalui proksi seperti 67router …
 - **`ai21`** — Diperketat: tempoh percubaan dipendekkan daripada "3 bulan" kepada 7 hari. Jumlah kredit $10 kekal sama, tetapi tempoh sah menurun dengan ketara daripada ~90 hari kepada 7 hari.
 - **`aimlapi`** — Berubah dengan ketara. freeNote yang disertakan mengiklankan "$0.025/hari kredit percuma — 200+ model" tetapi peringkat percuma kini dijeda/dihentikan. Peruntukan kredit $0.025/hari (50,000 kredit/hari, 10 permintaan/h…
 - **`amazon-q`** — freeNote yang disertakan menyatakan "(tiada)" — realitinya lebih buruk: produk tersebut kini dihentikan untuk pendaftaran baharu (15 Mei 2026). Sebelum ini, peringkat percuma menawarkan 50 permintaan berautonomi/bulan + tanpa had secara sebar…

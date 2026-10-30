@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute separă **descoperirea CLI**, **protocolul nativ Agent Client Protocol** și
+67router separă **descoperirea CLI**, **protocolul nativ Agent Client Protocol** și
 **adaptoarele stdio moștenite**. Găsirea unui binar instalat nu dovedește
 autentificarea, compatibilitatea modelelor sau disponibilitatea acestuia de a procesa un prompt.
 

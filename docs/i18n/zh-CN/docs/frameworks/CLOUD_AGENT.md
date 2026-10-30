@@ -7,7 +7,7 @@
 > **事实来源：** `src/lib/cloudAgent/` 和 `src/app/api/v1/agents/tasks/`
 > **最后更新：** 2026-06-28 — v3.8.40（刷新 frontmatter；包含 cursor-cloud 在内的 4 个智能体）
 
-OmniRoute 将第三方云托管编码智能体（Codex Cloud、Cursor、Devin、Jules）编排为长时间运行的任务。每个智能体都封装在统一接口之后，因此客户端可以提交提示词和仓库 URL 并接收结果，而无需处理提供者特定的 API。
+67router 将第三方云托管编码智能体（Codex Cloud、Cursor、Devin、Jules）编排为长时间运行的任务。每个智能体都封装在统一接口之后，因此客户端可以提交提示词和仓库 URL 并接收结果，而无需处理提供者特定的 API。
 
 Cloud Agent 任务**不是**常规的聊天补全。它是一个持久化的多步骤工作单元，可能需要数分钟到数小时才能完成，可以生成 Pull Request 作为产物，并支持后续消息以及（部分提供者支持的）计划审批门禁。
 

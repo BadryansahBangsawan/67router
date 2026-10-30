@@ -9,9 +9,9 @@
 > **Naposledy preskúmané:** 2026-06-17 — webový prieskum jednotlivých poskytovateľov (oficiálna dokumentácia + správy z posledných 7 dní, kontrola 50 agentmi s adversariálnym overením), ktorý aktualizoval všetky kvóty bezplatných úrovní a podmienky používania. **Čiastočný opätovný audit 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — pozrite si poznámku s dátumom nižšie).
 > **Zdroj pravdy (katalóg):** `open-sse/config/freeModelCatalog.ts` (rozpočty pre jednotlivé MODELY, s odstránenými duplicitami fondov). Nižšie uvedené počty rozpočtových tokenov pochádzajú z aktuálneho webového prieskumu a sú **približné** — pozrite si [Metodiku a upozornenia](#methodology--caveats).
 
-## V skratke — koľko bezplatných inferencií OmniRoute skutočne agreguje?
+## V skratke — koľko bezplatných inferencií 67router skutočne agreguje?
 
-Tieto údaje opisujú samostatné účty tretích strán a podmienky oprávnenosti v rámci celého katalógu. OmniRoute tento rozpočet neposkytuje: musíte si zaobstarať požadované účty alebo prihlasovacie údaje, pripojiť oprávnených poskytovateľov a dodržiavať ich limity. Skutočne využiteľná kapacita môže byť nižšia, vrátane nulovej pri čerstvej inštalácii bez oprávnenej trasy. Poskytovatelia označení ako `tos: avoid` sú predvolene vylúčení z automatického smerovania.
+Tieto údaje opisujú samostatné účty tretích strán a podmienky oprávnenosti v rámci celého katalógu. 67router tento rozpočet neposkytuje: musíte si zaobstarať požadované účty alebo prihlasovacie údaje, pripojiť oprávnených poskytovateľov a dodržiavať ich limity. Skutočne využiteľná kapacita môže byť nižšia, vrátane nulovej pri čerstvej inštalácii bez oprávnenej trasy. Poskytovatelia označení ako `tos: avoid` sú predvolene vylúčení z automatického smerovania.
 
 **Overené 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) ponúka jednorazový propagačný kredit vo výške 5 USD, ktorý vyžaduje platobnú metódu a vyprší po 30 dňoch. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) zverejňuje limity frekvencie podľa projektu, modelu a úrovne; naďalej zostáva mimo kvantifikovaného mesačného súhrnu.
 
@@ -94,7 +94,7 @@ v poznámke poskytovateľa nižšie.
 
 ## Dva režimy — počítanie verzus rozhodovanie
 
-OmniRoute odpovedá na otázku „je to bezplatné?“ prostredníctvom dvoch režimov,
+67router odpovedá na otázku „je to bezplatné?“ prostredníctvom dvoch režimov,
 ktoré zámerne čítajú z odlišných zdrojov:
 
 | Režim                      | Zdroj pravdy                                                                                                                                                             | Použitie                                                                                                                        |
@@ -142,7 +142,7 @@ Väčšina údajov o „bezplatných tokenoch za mesiac“ v tejto oblasti je s�
 
 ### ⚠️ Opatrnosť — ustanovenia o osobnom použití/proxy, ktoré sa oplatí skontrolovať (16)
 
-> Ich bezplatný prístup je skutočný a OmniRoute k nim dokáže smerovať požiadavky; o nižšie uvedených ustanoveniach je len dobré vedieť. Varianty s OAuth/bez kľúča nemožno vyčísliť v tokenoch, preto nie sú zahrnuté v hlavnom údaji (nie preto, že by boli nepoužiteľné).
+> Ich bezplatný prístup je skutočný a 67router k nim dokáže smerovať požiadavky; o nižšie uvedených ustanoveniach je len dobré vedieť. Varianty s OAuth/bez kľúča nemožno vyčísliť v tokenoch, preto nie sú zahrnuté v hlavnom údaji (nie preto, že by boli nepoužiteľné).
 
 | Provider         | Poznámka                                                                                                                                                                                                  |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -156,7 +156,7 @@ Väčšina údajov o „bezplatných tokenoch za mesiac“ v tejto oblasti je s�
 | `fireworks`      | ToS výslovne zakazujú používanie proxy/sprostredkovateľa, prenos API kľúčov a poskytovanie sublicencií (časti 2.1 a 2.2(i)(j)); osobné proxy prevádzkované vo vlastnej réžii nie sú…                      |
 | `friendliai`     | Časti 8(e) a 8(f) ToS výslovne zakazujú používanie FriendliAI ako proxy alebo samostatné umožnenie prístupu tretím stranám a zakazujú ďalší predaj/…                                                      |
 | `iflytek`        | Časť 2.4(3) zmluvy iFlytek Spark LLM Service Agreement výslovne zakazuje „používanie akýchkoľvek automatizovaných alebo programových metód na extrakciu údajov alebo výstupov…                            |
-| `kiro`           | Časté otázky Kiro výslovne zakazujú používanie s „OpenClaw a podobnými nástrojmi, ktoré využívajú prostredia tretích strán“ — proxy AI prevádzkovaná vo vlastnej réžii (ako OmniRoute), ktorá smeruje…    |
+| `kiro`           | Časté otázky Kiro výslovne zakazujú používanie s „OpenClaw a podobnými nástrojmi, ktoré využívajú prostredia tretích strán“ — proxy AI prevádzkovaná vo vlastnej réžii (ako 67router), ktorá smeruje…     |
 | `modal`          | Časť 1.3 ToS výslovne zakazuje „prenajímať, ďalej predávať alebo inak umožniť akejkoľvek tretej strane priamy prístup k službe alebo jej používanie“ — vytvorenie proxy prevádzkovanej vo vlastnej réžii… |
 | `muse-spark-web` | ToS spoločnosti Meta výslovne zakazujú automatizovaný prístup bez predchádzajúceho povolenia, reverzné inžinierstvo bez písomného povolenia a obchádzanie technologických…                                |
 | `nlpcloud`       | ToS výslovne zakazujú „zriadenie proxy alebo iného zariadenia, ktoré ostatným umožňuje pristupovať k službe jeho prostredníctvom“, a udeľujú iba neprenosné…                                              |
@@ -318,7 +318,7 @@ Väčšina údajov o „bezplatných tokenoch za mesiac“ v tejto oblasti je s�
 
 - **`360ai`** — Dodávaná poznámka freeNote „Bezplatné modely Free 360 AI Brain“ je zrejme zastaraná. Aktuálny prístup je podmienený schválením žiadosti a je platený. Základom mohli byť jednorazové propagačné tokeny z obdobia spustenia v roku 2023 (100M–250M)…
 - **`agentrouter`** — Naša dodávaná poznámka freeNote uvádza „$200 bezplatného kreditu pri registrácii“. V súčasnosti však štandardné registrácie (bez odporúčania) získajú iba $100; registrácie cez odporúčanie môžu získať $200, ale komentár komunity z apríla 2026…
-- **`agy`** — Naša dodávaná poznámka freeNote uvádza „(žiadna)“, čo naznačuje, že bezplatná úroveň neexistuje, no Antigravity má bezplatnú úroveň podmienenú autentifikáciou OAuth. Podmienky používania však výslovne zakazujú používať túto bezplatnú úroveň prostredníctvom proxy, ako je OmniRoute…
+- **`agy`** — Naša dodávaná poznámka freeNote uvádza „(žiadna)“, čo naznačuje, že bezplatná úroveň neexistuje, no Antigravity má bezplatnú úroveň podmienenú autentifikáciou OAuth. Podmienky používania však výslovne zakazujú používať túto bezplatnú úroveň prostredníctvom proxy, ako je 67router…
 - **`ai21`** — Sprísnené: skúšobné obdobie sa skrátilo z „3 mesiacov“ na 7 dní. Výška kreditu $10 zostáva rovnaká, no jeho platnosť sa prudko skrátila z približne 90 dní na 7 dní.
 - **`aimlapi`** — Výrazná zmena. Dodávaná poznámka freeNote propagovala „$0.025/deň v bezplatných kreditoch — viac ako 200 modelov“, ale bezplatná úroveň je teraz pozastavená/zrušená. Denné pridelenie kreditu $0.025 (50 000 kreditov/deň, 10 požiadaviek/d…
 - **`amazon-q`** — Naša dodávaná poznámka freeNote uvádza „(žiadna)“ — skutočnosť je ešte horšia: produkt už nie je dostupný pre nové registrácie (15. mája 2026). Predtým bezplatná úroveň ponúkala 50 agentných požiadaviek/mesiac + neobmedzené vnorené…

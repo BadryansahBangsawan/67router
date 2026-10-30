@@ -4,7 +4,7 @@
 
 ---
 
-> **Kurzfassung**: Die Komprimierungs-Engine von OmniRoute ist **erweiterbar** — Sie können benutzerdefinierte Engines registrieren, Sprachpakete für neue Sprachen bereitstellen und gestapelte Pipelines zusammenstellen. Dieser Leitfaden zeigt, wie das geht.
+> **Kurzfassung**: Die Komprimierungs-Engine von 67router ist **erweiterbar** — Sie können benutzerdefinierte Engines registrieren, Sprachpakete für neue Sprachen bereitstellen und gestapelte Pipelines zusammenstellen. Dieser Leitfaden zeigt, wie das geht.
 
 **Verwandte Leitfäden:**
 
@@ -233,7 +233,7 @@ Registrieren Sie Ihre Engine in einem Plugin oder einer Startfunktion. Nach der 
 
 ## Sprachpakete erstellen
 
-Die Komprimierung im Caveman-Stil verwendet **sprachspezifische Regelpakete**, um Füllwörter, abschwächende Formulierungen und weitschweifige Ausdrucksmuster in jeder natürlichen Sprache zu verarbeiten. OmniRoute wird mit **6 Sprachpaketen** ausgeliefert: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Die Komprimierung im Caveman-Stil verwendet **sprachspezifische Regelpakete**, um Füllwörter, abschwächende Formulierungen und weitschweifige Ausdrucksmuster in jeder natürlichen Sprache zu verarbeiten. 67router wird mit **6 Sprachpaketen** ausgeliefert: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Paketstruktur
 
@@ -389,7 +389,7 @@ Die Ausgabe von Engine N wird zur Eingabe von Engine N+1.
 
 ### Komprimierungsmodi
 
-OmniRoute wählt anhand der Konfiguration, der Schwellenwerte für die automatische Auslösung und der Combo-Überschreibungen **EINEN Modus pro Anfrage** aus.
+67router wählt anhand der Konfiguration, der Schwellenwerte für die automatische Auslösung und der Combo-Überschreibungen **EINEN Modus pro Anfrage** aus.
 Die verfügbaren Modi sind in `open-sse/services/compression/types.ts` definiert (Typ `CompressionMode`):
 
 | Modus        | Engines                     | Anwendungsfall                                                                                                                                                                                                                            |
@@ -509,10 +509,10 @@ Um sie über die Konfiguration zu steuern, setzen Sie `mode: "stacked"` und gebe
 
 ## Richtlinie zur Upstream-Synchronisierung
 
-Die Komprimierungs-Engines von OmniRoute nennen im README mehrere Upstream-Projekte
+Die Komprimierungs-Engines von 67router nennen im README mehrere Upstream-Projekte
 („inspired by RTK, Caveman, LLMLingua-2, Troglodita“). Eine häufige Frage von
 Mitwirkenden lautet: **Wie gelangt ein neuer Tool-Filter aus Upstream-RTK oder ein
-neues Regelpaket von Caveman in OmniRoute?** Dieser Abschnitt enthält die verbindliche Antwort.
+neues Regelpaket von Caveman in 67router?** Dieser Abschnitt enthält die verbindliche Antwort.
 
 ### Eingebundene Kopien vs. unabhängige Implementierungen
 
@@ -533,7 +533,7 @@ Upstream-Kopie, aus der man mittels `git pull` Änderungen übernehmen könnte �
 Es gibt **keine automatisierte Nachverfolgung von Upstream-Releases und kein `compression-sync`-
 Label** — und das ist beabsichtigt. Da es sich bei den Engines um Neuimplementierungen handelt, wird ein Upstream-RTK-
 Filter oder ein Caveman-Regelpaket nicht als Code integriert, sondern **als neue
-Regel bzw. neuer Filter in OmniRoutes eigenem Format neu ausgedrückt** (siehe
+Regel bzw. neuer Filter in 67routers eigenem Format neu ausgedrückt** (siehe
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) und bei Bedarf über
 einen normalen PR eingereicht. Die oben genannten Erweiterungspunkte (benutzerdefinierte Engine, Sprachpaket, RTK-Filter)
 sind die vorgesehenen Möglichkeiten, einen solchen Beitrag einzureichen.
@@ -547,14 +547,14 @@ Aktuelle Beispiele für genau diesen Ablauf:
 ### Headroom (Proxy zur Eingabekomprimierung)
 
 Headroom ist **vollständig intern** — ein eingebundener, auf eine bestimmte Version festgelegter `gcf`-Codec-Snapshot sowie
-OmniRoutes eigene `smartcrusher`- / `toon`- / `tabular`-Schichten. Abgesehen von der eingebundenen Kopie gibt es keinen aktiven
+67routers eigene `smartcrusher`- / `toon`- / `tabular`-Schichten. Abgesehen von der eingebundenen Kopie gibt es keinen aktiven
 Upstream, der nachverfolgt werden müsste; Aktualisierungen von `gcf` werden bei Änderungen am Codec
 manuell übernommen und erneut anhand der Prüfung des Komprimierungsbudgets
 (`check:compression-budget`) validiert.
 
 ### Vorschlagen einer von einem Upstream-Projekt inspirierten Verbesserung
 
-1. **Nicht einbinden** — die Upstream-Regel bzw. den Upstream-Filter in OmniRoutes Format neu ausdrücken.
+1. **Nicht einbinden** — die Upstream-Regel bzw. den Upstream-Filter in 67routers Format neu ausdrücken.
 2. Über den passenden Erweiterungspunkt unten hinzufügen (Sprachpaket, RTK-Filter oder
    benutzerdefinierte Engine).
 3. Das Upstream-Projekt in der PR-Beschreibung nennen (Attribution), anstatt

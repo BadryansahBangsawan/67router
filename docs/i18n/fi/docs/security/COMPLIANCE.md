@@ -7,7 +7,7 @@
 > **Totuuden lähde:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Viimeksi päivitetty:** 2026-06-28 — v3.8.40
 
-OmniRoute tallentaa hallinnolliset toimet, todennustapahtumat, palveluntarjoajien tunnistetietojen elinkaaren muutokset ja MCP-työkalukutsut SQLite-pohjaisiin auditointitauluihin. Tällä sivulla käsitellään, mitä lokitetaan, missä tiedot sijaitsevat, kuinka kauan niitä säilytetään, miten API-avaimet voivat kieltäytyä lokituksesta ja miten tietoja voi hakea.
+67router tallentaa hallinnolliset toimet, todennustapahtumat, palveluntarjoajien tunnistetietojen elinkaaren muutokset ja MCP-työkalukutsut SQLite-pohjaisiin auditointitauluihin. Tällä sivulla käsitellään, mitä lokitetaan, missä tiedot sijaitsevat, kuinka kauan niitä säilytetään, miten API-avaimet voivat kieltäytyä lokituksesta ja miten tietoja voi hakea.
 
 Toteutus sijaitsee tiedostoissa `src/lib/compliance/index.ts` (T-43 — "Compliance Controls") ja `src/lib/compliance/providerAudit.ts`. Auditointikirjaukset eivät koskaan heitä poikkeusta: virheen ilmetessä kutsu ohitetaan hiljaisesti, jotta auditointilokitus ei voi häiritä varsinaisen pyynnön käsittelyä.
 

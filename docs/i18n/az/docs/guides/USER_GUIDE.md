@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Provayderlərin konfiqurasiyası, kombinasiyaların yaradılması, CLI alətlərinin inteqrasiyası və OmniRoute-un yerləşdirilməsi üçün tam təlimat.
+Provayderlərin konfiqurasiyası, kombinasiyaların yaradılması, CLI alətlərinin inteqrasiyası və 67router-un yerləşdirilməsi üçün tam təlimat.
 
 ---
 
@@ -137,11 +137,11 @@ Modellər:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Peşəkar məsləhət:** Mürəkkəb tapşırıqlar üçün Opus, sürət üçün Sonnet istifadə edin. OmniRoute kvotanı hər model üzrə izləyir!
+**Peşəkar məsləhət:** Mürəkkəb tapşırıqlar üçün Opus, sürət üçün Sonnet istifadə edin. 67router kvotanı hər model üzrə izləyir!
 
-OmniRoute hostunda brauzer yoxdur? Claude Code-a daxil olduğunuz istənilən yerdə `claude setup-token` əmrini icra edin və birillik tokeni **Quraşdırma tokeni** tabına yapışdırın. Baxın: [Claude Code-dan quraşdırma tokeni ilə istifadə](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+67router hostunda brauzer yoxdur? Claude Code-a daxil olduğunuz istənilən yerdə `claude setup-token` əmrini icra edin və birillik tokeni **Quraşdırma tokeni** tabına yapışdırın. Baxın: [Claude Code-dan quraşdırma tokeni ilə istifadə](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Claude və Claude Code ilə uyğun marşrutlar Opus və Sonnet modelləri üçün `max` düşünmə səyini qoruyur. Haiku modelləri `max` səy səviyyəsini qəbul etmir, buna görə də OmniRoute həmin sorğunu yuxarı axına göndərməzdən əvvəl onu yüksək düşünmə büdcəsi səviyyəsinə endirir.
+Claude və Claude Code ilə uyğun marşrutlar Opus və Sonnet modelləri üçün `max` düşünmə səyini qoruyur. Haiku modelləri `max` səy səviyyəsini qəbul etmir, buna görə də 67router həmin sorğunu yuxarı axına göndərməzdən əvvəl onu yüksək düşünmə büdcəsi səviyyəsinə endirir.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -262,7 +262,7 @@ Xərc: hazırda $0 kimi göstərilir; şərtlər və əlçatanlıq dəyişə bil
 
 ### Cursor IDE
 
-**Cursor-dan OmniRoute klienti kimi istifadə** (Cursor çatını OmniRoute vasitəsilə yönləndirin):
+**Cursor-dan 67router klienti kimi istifadə** (Cursor çatını 67router vasitəsilə yönləndirin):
 
 ```
 Parametrlər → Modellər → Qabaqcıl:
@@ -271,7 +271,7 @@ Parametrlər → Modellər → Qabaqcıl:
   Model: cc/claude-opus-4-7
 ```
 
-**OmniRoute-dan Cursor provayderi kimi istifadə** (OmniRoute yuxarı axında Cursor-a müraciət edir): üstünlük olaraq
+**67router-dan Cursor provayderi kimi istifadə** (67router yuxarı axında Cursor-a müraciət edir): üstünlük olaraq
 **İdarəetmə paneli → Provayderlər → Cursor → Cursor ilə daxil ol** seçimindən istifadə edin. Docker-də
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md) sənədinə baxın.
 
@@ -358,7 +358,7 @@ CLI `.env` faylını avtomatik olaraq `~/.omniroute/.env` və ya `./.env` yolund
 
 ### Sistem treyi rejimi
 
-OmniRoute-u sistem treyində başladın:
+67router-u sistem treyində başladın:
 
 ```bash
 omniroute serve --tray
@@ -375,7 +375,7 @@ Aşağıdakı əməliyyatlar üçün sistem treyi menyusundan istifadə edin:
 - İdarəetmə panelini açmaq.
 - `/dashboard/logs` səhifəsini açmaq.
 - Avtomatik başlanğıcı dəyişdirmək.
-- OmniRoute-u dayandırmaq.
+- 67router-u dayandırmaq.
 
 `--tray` seçimini aşağıdakı seçimlərlə birlikdə istifadə etməyin:
 
@@ -401,14 +401,14 @@ omniroute autostart disable
 
 ### Silinmə
 
-OmniRoute-a artıq ehtiyacınız olmadıqda, təmiz silinmə üçün iki sürətli skript təqdim edirik:
+67router-a artıq ehtiyacınız olmadıqda, təmiz silinmə üçün iki sürətli skript təqdim edirik:
 
 | Əmr                      | Əməliyyat                                                                                                           |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Sistem tətbiqini silir, lakin `~/.omniroute` daxilindəki **verilənlər bazanızı və konfiqurasiyalarınızı saxlayır**. |
 | `npm run uninstall:full` | Tətbiqi silir VƏ **bütün konfiqurasiyaları, açarları və verilənlər bazalarını** həmişəlik **silir**.                |
 
-> Qeyd: Bu əmrləri icra etmək üçün OmniRoute layihə qovluğuna keçin (əgər onu klonlamısınızsa) və əmrləri orada icra edin. Alternativ olaraq, qlobal şəkildə quraşdırılıbsa, sadəcə `npm uninstall -g omniroute` əmrini icra edə bilərsiniz.
+> Qeyd: Bu əmrləri icra etmək üçün 67router layihə qovluğuna keçin (əgər onu klonlamısınızsa) və əmrləri orada icra edin. Alternativ olaraq, qlobal şəkildə quraşdırılıbsa, sadəcə `npm uninstall -g omniroute` əmrini icra edə bilərsiniz.
 
 ### VPS-də yerləşdirmə
 
@@ -480,7 +480,7 @@ CLI binar faylları ilə hosta inteqrasiya olunmuş rejim üçün əsas sənədl
 
 ### Void Linux (xbps-src)
 
-Void Linux istifadəçiləri `xbps-src` çarpaz kompilyasiya infrastrukturu vasitəsilə OmniRoute-u yerli paket kimi hazırlayıb quraşdıra bilərlər. Bu, tələb olunan `better-sqlite3` yerli bağlamaları ilə birlikdə müstəqil Node.js yığımını avtomatlaşdırır.
+Void Linux istifadəçiləri `xbps-src` çarpaz kompilyasiya infrastrukturu vasitəsilə 67router-u yerli paket kimi hazırlayıb quraşdıra bilərlər. Bu, tələb olunan `better-sqlite3` yerli bağlamaları ilə birlikdə müstəqil Node.js yığımını avtomatlaşdırır.
 
 <details>
 <summary><b>xbps-src şablonuna baxın</b></summary>
@@ -660,7 +660,7 @@ Mühit dəyişənlərinin tam siyahısı üçün [README](../README.md) faylına
 
 **Digər uyğun provayderlər** (seçilmiş): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (`aws-bedrock` vasitəsilə), `azure-ai`, `openrouter` (ötürmə kataloqu), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Hər biri `providerRegistry.ts` daxilində öz model siyahısını saxlayır və provayder `/models` son nöqtəsini təqdim etdikdə avtomatik sinxronlaşdırıla bilər.
 
-**Model ID-ləri haqqında qeyd:** OmniRoute provayderə məxsus ID-lərdən (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`) istifadə edir. Bəzi ID-lərə nöqtəli versiyalar daxildir, çünki yuxarı axın API-si onları bu formada gözləyir. Model yuxarıda göstərilməyibsə, əlçatanlığını təsdiqləmək üçün `omniroute models --search <term>` əmrini icra edin və ya `GET /api/models/catalog` sorğusunu göndərin.
+**Model ID-ləri haqqında qeyd:** 67router provayderə məxsus ID-lərdən (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`) istifadə edir. Bəzi ID-lərə nöqtəli versiyalar daxildir, çünki yuxarı axın API-si onları bu formada gözləyir. Model yuxarıda göstərilməyibsə, əlçatanlığını təsdiqləmək üçün `omniroute models --search <term>` əmrini icra edin və ya `GET /api/models/catalog` sorğusunu göndərin.
 
 </details>
 
@@ -726,9 +726,9 @@ təchizatçının və ya onun giriş məlumatlarının adını çəkən xəta il
 rezerv edilib-edilmədiyini yoxlayın: bu qayda mövcud olmamışdan əvvəl saxlanılmış qovşaqlar hələ də qalır, lakin onların prefiksi
 daxili təchizatçıya yönləndirilir. Qovşağı redaktə edin və ona yeni prefiks verin.
 
-### OmniRoute Həmkarlarının Zəncirlənməsi
+### 67router Həmkarlarının Zəncirlənməsi
 
-Başqa bir OmniRoute şlüzü **Fərdi OpenAI-uyğun** təchizatçı kimi əlavə edilə bilər. Həmkarın
+Başqa bir 67router şlüzü **Fərdi OpenAI-uyğun** təchizatçı kimi əlavə edilə bilər. Həmkarın
 `/v1` əsas URL-indən və həmin həmkar tərəfindən verilmiş, minimal səlahiyyətli ayrıca API açarından istifadə edin.
 
 Qarşılıqlı və ya çoxkeçidli zəncirlər üçün hər bir şlüzdə istəyə bağlı dövr qorumasını aktivləşdirin:
@@ -754,7 +754,7 @@ limitini HTTP `508 Loop Detected` ilə rədd edir; adi yuxarı axın təchizatç
 Həmkarların zəncirlənməsi verilənlər bazasının replikasiyası və ya hostun nasazlığa davamlı əvəzlənməsi deyil. Hər şlüz müstəqil
 SQLite vəziyyətini, keşləri, sürət sayğaclarını və sessiyaları saxlayır. Aktiv/passiv və ya aktiv/aktiv əlçatanlıq üçün
 sağlamlıq yoxlamalı əks proksidən və ya müştəri tərəfli nasazlıq əvəzləməsindən istifadə edin və heç vaxt eyni SQLite verilənlər bazasını
-birdən çox işləyən OmniRoute instansiyasına qoşmayın.
+birdən çox işləyən 67router instansiyasına qoşmayın.
 
 ### Xüsusi Təchizatçı Marşrutları
 
@@ -805,7 +805,7 @@ Təchizatçıya görə qruplaşdırılmış modelləri növləri (`chat`, `embed
 - Docker və digər öz serverinizdə yerləşdirilən quraşdırmalar üçün **Dashboard → Endpoints** bölməsində mövcuddur
 - Cari OpenAI-uyğun `/v1` son nöqtənizə yönləndirən müvəqqəti `https://*.trycloudflare.com` URL-i yaradır
 - İlk aktivləşdirmə zamanı `cloudflared` yalnız ehtiyac olduqda quraşdırılır; sonrakı yenidən başladılmalarda eyni idarə olunan binar fayldan təkrar istifadə edilir
-- Quick Tunnel-lər OmniRoute və ya konteyner yenidən başladıldıqdan sonra avtomatik bərpa edilmir; ehtiyac olduqda onları idarəetmə panelindən yenidən aktivləşdirin
+- Quick Tunnel-lər 67router və ya konteyner yenidən başladıldıqdan sonra avtomatik bərpa edilmir; ehtiyac olduqda onları idarəetmə panelindən yenidən aktivləşdirin
 - Tunel URL-ləri müvəqqətidir və tuneli hər dayandırıb başlatdığınızda dəyişir
 - İdarə olunan Quick Tunnel-lər məhdud konteynerlərdə səs-küylü QUIC UDP bufer xəbərdarlıqlarının qarşısını almaq üçün standart olaraq HTTP/2 nəqlindən istifadə edir
 - İdarə olunan nəql seçimini dəyişdirmək istəyirsinizsə, `CLOUDFLARED_PROTOCOL=quic` və ya `auto` təyin edin
@@ -822,7 +822,7 @@ Təchizatçıya görə qruplaşdırılmış modelləri növləri (`chat`, `embed
 
 ### Tərcüməçi Sınaq Meydanı
 
-**Dashboard → Translator** vasitəsilə daxil olun. OmniRoute-un provayderlər arasında API sorğularını necə çevirdiyini sazlayın və vizuallaşdırın.
+**Dashboard → Translator** vasitəsilə daxil olun. 67router-un provayderlər arasında API sorğularını necə çevirdiyini sazlayın və vizuallaşdırın.
 
 | Rejim              | Məqsəd                                                                                            |
 | ------------------ | ------------------------------------------------------------------------------------------------- |
@@ -875,7 +875,7 @@ Xarici sessiya uyğunluğu üçün (məsələn, əks proksilərin arxasındakı 
 X-Session-Id: your-session-key
 ```
 
-OmniRoute həmçinin `x_session_id` qəbul edir və qüvvədə olan sessiya açarını `X-OmniRoute-Session-Id` daxilində qaytarır.
+67router həmçinin `x_session_id` qəbul edir və qüvvədə olan sessiya açarını `X-OmniRoute-Session-Id` daxilində qaytarır.
 
 Nginx istifadə edir və alt xətli başlıqlar göndərirsinizsə, aşağıdakını aktivləşdirin:
 
@@ -909,7 +909,7 @@ Zəncir: production-fallback
 
 ### Ümumi Provayder Kombinasiyaları və Marşrutlaşdırma Nümunələri
 
-OmniRoute-da bir neçə provayderi birləşdirmək və onlar arasında marşrutlaşdırma aparmaq üçün bəzi nümunələr:
+67router-da bir neçə provayderi birləşdirmək və onlar arasında marşrutlaşdırma aparmaq üçün bəzi nümunələr:
 
 #### 1. Kodlaşdırma Agenti Kombinasiyası: Xərc/Sürət Ehtiyat Keçidi ilə Yüksək Səviyyəli Məntiqi Təhlil
 
@@ -970,7 +970,7 @@ omniroute combo create free-stack \
 
 **İdarəetmə paneli → Parametrlər → Dayanıqlılıq** vasitəsilə konfiqurasiya edin.
 
-OmniRoute provayder səviyyəsində dayanıqlılığı beş komponent vasitəsilə təmin edir:
+67router provayder səviyyəsində dayanıqlılığı beş komponent vasitəsilə təmin edir:
 
 1. **Sorğu növbəsi və tempin tənzimlənməsi** — Sistem səviyyəsində sorğuların formalaşdırılması:
    - **Dəqiqədə sorğular (RPM)** — Hər hesab üçün dəqiqədə maksimum sorğu sayı
@@ -995,7 +995,7 @@ OmniRoute provayder səviyyəsində dayanıqlılığı beş komponent vasitəsil
 
    Provayder kəsicisinin icra vəziyyəti yalnız **İdarəetmə paneli → Sağlamlıq** bölməsində göstərilir.
 
-4. **Gözləmə müddətinin bitməsini gözləmək** — Bütün namizəd bağlantılar artıq gözləmə vəziyyətindədirsə, OmniRoute ən tez bitəcək gözləmə müddətini gözləyə və eyni müştəri sorğusunu avtomatik olaraq yenidən sınaya bilər.
+4. **Gözləmə müddətinin bitməsini gözləmək** — Bütün namizəd bağlantılar artıq gözləmə vəziyyətindədirsə, 67router ən tez bitəcək gözləmə müddətini gözləyə və eyni müştəri sorğusunu avtomatik olaraq yenidən sınaya bilər.
 
 5. **Sürət məhdudiyyətinin avtomatik aşkarlanması** — Yuxarı axın provayderləri aydın gözləmə pəncərələri qaytardıqda və bu parametr aktiv olduqda, həmin göstərişlər lokal bağlantı gözləmə müddətini üstələyir.
 
@@ -1029,7 +1029,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **İstifadə halları:**
 
-- OmniRoute-u maşınlar arasında köçürmək
+- 67router-u maşınlar arasında köçürmək
 - Fövqəladə hallardan sonra bərpa üçün xarici ehtiyat nüsxələr yaratmaq
 - Konfiqurasiyaları komanda üzvləri arasında paylaşmaq (hamısını ixrac et → arxivi paylaş)
 
@@ -1081,7 +1081,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Audio Transkripsiyası
 
-OmniRoute OpenAI ilə uyğun endpoint vasitəsilə audio transkripsiyasını dəstəkləyir:
+67router OpenAI ilə uyğun endpoint vasitəsilə audio transkripsiyasını dəstəkləyir:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1152,7 +1152,7 @@ tarixçəsinə əsasən hədəfləri ötürməsinin və ya ehtiyat sorğuları s
 onu aktivləşdirmək isə konfiqurasiya edilmiş hedcinq, proqnozlaşdırıcı TTFT ötürmələri və proaktiv ehtiyat sıxışdırma vasitəsilə marşrutlaşdırma/sorğu
 dəqiqliyini daha aşağı son gecikmə ilə dəyişməyə imkan verir.
 
-Yuxarı axın provayderləri sərt `max_tokens` / `maxOutputTokens` limitləri tələb etdikdə **Reasoning token buffer** funksiyasını deaktiv edin. Aktiv olduqda, kombinə edilmiş marşrutlaşdırma yalnız məlum çıxış həddi olan modellər üçün düşünmə modelinə əlavə token ehtiyatı ayırır və təhlükəsiz buferlənmiş dəyər həmin həddi aşacağı halda müştərinin token limitini dəyişməz saxlayır. Müştəri limiti artıq məlum həddən yüksəkdirsə, OmniRoute yuxarı axın sorğusunu göndərməzdən əvvəl onu həmin həddə endirir.
+Yuxarı axın provayderləri sərt `max_tokens` / `maxOutputTokens` limitləri tələb etdikdə **Reasoning token buffer** funksiyasını deaktiv edin. Aktiv olduqda, kombinə edilmiş marşrutlaşdırma yalnız məlum çıxış həddi olan modellər üçün düşünmə modelinə əlavə token ehtiyatı ayırır və təhlükəsiz buferlənmiş dəyər həmin həddi aşacağı halda müştərinin token limitini dəyişməz saxlayır. Müştəri limiti artıq məlum həddən yüksəkdirsə, 67router yuxarı axın sorğusunu göndərməzdən əvvəl onu həmin həddə endirir.
 
 ---
 
@@ -1175,7 +1175,7 @@ Yuxarı axın provayderləri sərt `max_tokens` / `maxOutputTokens` limitləri t
 
 ## 🤖 Avtomatik Marşrutlaşdırma (Sıfır konfiqurasiya)
 
-OmniRoute hər bir sorğu üçün bütün qoşulmuş provayderlər arasından ən yaxşı modeli seçən **xal əsaslı avtomatik marşrutlaşdırıcı** ilə təqdim olunur — idarə ediləcək heç bir kombinasiya yoxdur. Sorğunu sadəcə `auto/*` prefikslərindən biri ilə göndərin və OmniRoute gecikmə, xərc, uğur faizi, kontekstə uyğunluq, modelin tapşırığa uyğunluğu, son uğursuzluqlar, kvota və dövrə açarının vəziyyətinə əsasən namizədləri qiymətləndirərək dinamik şəkildə virtual kombinasiya yaradacaq.
+67router hər bir sorğu üçün bütün qoşulmuş provayderlər arasından ən yaxşı modeli seçən **xal əsaslı avtomatik marşrutlaşdırıcı** ilə təqdim olunur — idarə ediləcək heç bir kombinasiya yoxdur. Sorğunu sadəcə `auto/*` prefikslərindən biri ilə göndərin və 67router gecikmə, xərc, uğur faizi, kontekstə uyğunluq, modelin tapşırığa uyğunluğu, son uğursuzluqlar, kvota və dövrə açarının vəziyyətinə əsasən namizədləri qiymətləndirərək dinamik şəkildə virtual kombinasiya yaradacaq.
 
 | Prefiks        | Optimallaşdırma meyarı                                                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -1206,7 +1206,7 @@ Avtomatik marşrutlaşdırıcı [AUTO-COMBO.md](../routing/AUTO-COMBO.md) sənə
 
 ## 🔌 MCP və A2A İnteqrasiyası
 
-OmniRoute həm **MCP serveri** (Model Kontekst Protokolu), həm də **A2A serveridir** (Agentdən Agentə JSON-RPC 2.0). MCP ilə uyğun istənilən IDE və ya agent hostu OmniRoute alətlərini birbaşa çağıra bilər — əlavə örtük tələb olunmur.
+67router həm **MCP serveri** (Model Kontekst Protokolu), həm də **A2A serveridir** (Agentdən Agentə JSON-RPC 2.0). MCP ilə uyğun istənilən IDE və ya agent hostu 67router alətlərini birbaşa çağıra bilər — əlavə örtük tələb olunmur.
 
 ### MCP nəqliyyatları
 
@@ -1241,7 +1241,7 @@ MCP hazırda 32 adlandırılmış əhatə dairəsi müəyyən edir. Hər bir Bea
 
 ## 🧠 Bacarıqlar Sistemi
 
-OmniRoute agentlərin və A2A son nöqtəsinin domenə xas prosedurları (məsələn, `code-review`, `summarize`, `extract-facts`, `web-research`) icra edə bilməsi üçün genişləndirilə bilən **bacarıq çərçivəsi** (`src/lib/skills/`) təqdim edir.
+67router agentlərin və A2A son nöqtəsinin domenə xas prosedurları (məsələn, `code-review`, `summarize`, `extract-facts`, `web-research`) icra edə bilməsi üçün genişləndirilə bilən **bacarıq çərçivəsi** (`src/lib/skills/`) təqdim edir.
 
 - **Marketplace interfeysi** — **İdarəetmə paneli → Bacarıqlar** bölməsindən bacarıqlara baxın və onları quraşdırın
 - **Hər açar üzrə əhatə dairələri** — Hansı API açarlarının hansı bacarıqları çağıra biləcəyini məhdudlaşdırın
@@ -1253,7 +1253,7 @@ Tam istinad sənədi: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Yaddaş Sistemi
 
-OmniRoute hibrid axtarışla **uzunmüddətli danışıq yaddaşını** saxlayır:
+67router hibrid axtarışla **uzunmüddətli danışıq yaddaşını** saxlayır:
 
 - Keçmiş dialoq addımları üzrə açar söz axtarışı üçün **SQLite FTS5**
 - Semantik xatırlama üçün **Qdrant vektor yaddaşı** (ixtiyari)
@@ -1266,7 +1266,7 @@ Yaddaşları **İdarəetmə paneli → Yaddaş** bölməsində idarə edin (axta
 
 ## 🔔 Vebhuklar
 
-Real vaxt rejimində monitorinq və avtomatlaşdırma üçün OmniRoute hadisələrinə abunə olun.
+Real vaxt rejimində monitorinq və avtomatlaşdırma üçün 67router hadisələrinə abunə olun.
 
 - Hədəf URL və HMAC imzalama sirri ilə **İdarəetmə paneli → Vebhuklar** bölməsində vebhuk yaradın
 - Mövcud hadisələr: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1279,11 +1279,11 @@ Tam sxem [WEBHOOKS.md](../frameworks/WEBHOOKS.md) sənədindədir.
 
 ## ☁️ Bulud Agentləri
 
-OmniRoute bulud kodlaşdırma agentləri (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ilə inteqrasiya olunur, beləliklə, lokal marşrutlaşdırmanızı idarə edən eyni paneldən uzunmüddətli tapşırıqlar göndərə bilərsiniz.
+67router bulud kodlaşdırma agentləri (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ilə inteqrasiya olunur, beləliklə, lokal marşrutlaşdırmanızı idarə edən eyni paneldən uzunmüddətli tapşırıqlar göndərə bilərsiniz.
 
 - Tapşırıqları **İdarəetmə paneli → Bulud Agentləri** bölməsində və ya `POST /api/v1/agents/tasks` vasitəsilə yaradın
 - Hər tapşırıq üzrə statusu, jurnalları və artefaktları izləyin
-- Hər provayder üçün öz API açarınızı istifadə edin — giriş məlumatları heç vaxt OmniRoute instansiyasını tərk etmir
+- Hər provayder üçün öz API açarınızı istifadə edin — giriş məlumatları heç vaxt 67router instansiyasını tərk etmir
 
 Tam istinad sənədi: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1291,7 +1291,7 @@ Tam istinad sənədi: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Proqram Vasitəsilə İdarəetmə
 
-**`manage` əhatə dairəsinə malik Bearer açarından** istifadə edərək bütün OmniRoute resurslarını (provayderlər, kombinasiyalar, açarlar, parametrlər) HTTP üzərindən idarə edə bilərsiniz.
+**`manage` əhatə dairəsinə malik Bearer açarından** istifadə edərək bütün 67router resurslarını (provayderlər, kombinasiyalar, açarlar, parametrlər) HTTP üzərindən idarə edə bilərsiniz.
 
 Açarı **İdarəetmə paneli → API Açarları → Yeni Açar → Əhatə dairəsi: manage** bölməsində yaradın, sonra:
 
@@ -1324,7 +1324,7 @@ Son nöqtələrin tam kataloqu və sorğu/cavab sxemləri üçün [API_REFERENCE
 
 ## 💻 Daxili CLI
 
-OmniRoute quraşdırma, diaqnostika və işləmə zamanı idarəetmə üçün daxili CLI (`omniroute …`) ilə təqdim olunur. Bu, üçüncü tərəf CLI-lərinin (Claude Code, Cursor, Codex, Cline, …) OmniRoute ilə əlaqə qura bilməsi üçün onları konfiqurasiya edən idarəetmə panelindəki **"CLI Alətləri" səhifəsindən ayrıdır**.
+67router quraşdırma, diaqnostika və işləmə zamanı idarəetmə üçün daxili CLI (`omniroute …`) ilə təqdim olunur. Bu, üçüncü tərəf CLI-lərinin (Claude Code, Cursor, Codex, Cline, …) 67router ilə əlaqə qura bilməsi üçün onları konfiqurasiya edən idarəetmə panelindəki **"CLI Alətləri" səhifəsindən ayrıdır**.
 
 ```bash
 omniroute setup                    # İnteraktiv quraşdırma köməkçisi (parol, provayderlər, kombinasiyalar)
@@ -1355,7 +1355,7 @@ omniroute --port 3000              # Serveri fərdi portda işə sal
 
 ## 🖥️ Masaüstü Tətbiqi (Electron)
 
-OmniRoute Windows, macOS və Linux üçün yerli masaüstü tətbiqi kimi mövcuddur.
+67router Windows, macOS və Linux üçün yerli masaüstü tətbiqi kimi mövcuddur.
 
 ### Quraşdırma
 

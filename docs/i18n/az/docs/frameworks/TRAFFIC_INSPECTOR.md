@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector OmniRoute-un daxili HTTPS trafik sazlama alətidir — Charles Proxy / mitmweb / HTTP Toolkit-ə bənzər, **LLM-lərdən xəbərdar** və **agentlərdən xəbərdar** bir alətdir. O, `/dashboard/tools/traffic-inspector` ünvanında yerləşir və eyni vaxtda 5-ə qədər trafik ələkeçirmə mənbəyindən canlı trafik qəbul edir.
+Traffic Inspector 67router-un daxili HTTPS trafik sazlama alətidir — Charles Proxy / mitmweb / HTTP Toolkit-ə bənzər, **LLM-lərdən xəbərdar** və **agentlərdən xəbərdar** bir alətdir. O, `/dashboard/tools/traffic-inspector` ünvanında yerləşir və eyni vaxtda 5-ə qədər trafik ələkeçirmə mənbəyindən canlı trafik qəbul edir.
 
 **İdarəetmə panelindəki yeri:** `/dashboard/tools/traffic-inspector`
 **Yan panel qrupu:** Alətlər (AgentBridge-dən sonra)
@@ -16,21 +16,21 @@ Traffic Inspector OmniRoute-un daxili HTTPS trafik sazlama alətidir — Charles
 
 ### Traffic Inspector-u unikal edən xüsusiyyətlər
 
-| Xüsusiyyət                                                                                     | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ---------------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Veb əsaslı                                                                                     |    ✓    |    ✗    |    ✗    |                ✓                |
-| Açıq mənbəli                                                                                   |    ✓    |    ✗    | qismən  |                ✓                |
-| **Agentlərdən xəbərdar** (sorğunun Antigravity/Copilot/və s.-dən gəlib-gəlmədiyini bilir)      |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM-lərdən xəbərdar** (OpenAI/Anthropic/Gemini strukturunu, tokenləri və modeli təhlil edir) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Model uyğunlaşdırması görünür** (gemini-3-flash → claude-sonnet-4.7)                         |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Proksi/yuxarı axın gecikməsinin bölgüsü**                                                    | qismən  |    ✗    |    ✗    |                ✓                |
-| OmniRoute-un marşrutlaşdırma, alternativə keçid və xərc imkanları ilə **inteqrasiya**          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sistem miqyaslı proksi sazlaması** (maşındakı istənilən tətbiq)                              |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Fərdi host ələkeçirməsi** (hər host üçün DNS yönləndirməsi)                                  |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY mühit rejimi**                                                                    |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Söhbət görünüşü** (çoxgedişli qabarcıqlar, tool_use/tool_result)                             |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE axın birləşdiricisi** (delta hadisələrindən yenidən qurur)                               |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sessiyanın qeydə alınması** (adlandırıla bilən, .har/.jsonl formatında ixrac edilə bilən)    |    ✗    |    ✓    |    ✓    |                ✓                |
+| Xüsusiyyət                                                                                     | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Veb əsaslı                                                                                     |    ✓    |    ✗    |    ✗    |               ✓                |
+| Açıq mənbəli                                                                                   |    ✓    |    ✗    | qismən  |               ✓                |
+| **Agentlərdən xəbərdar** (sorğunun Antigravity/Copilot/və s.-dən gəlib-gəlmədiyini bilir)      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM-lərdən xəbərdar** (OpenAI/Anthropic/Gemini strukturunu, tokenləri və modeli təhlil edir) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Model uyğunlaşdırması görünür** (gemini-3-flash → claude-sonnet-4.7)                         |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Proksi/yuxarı axın gecikməsinin bölgüsü**                                                    | qismən  |    ✗    |    ✗    |               ✓                |
+| 67router-un marşrutlaşdırma, alternativə keçid və xərc imkanları ilə **inteqrasiya**           |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sistem miqyaslı proksi sazlaması** (maşındakı istənilən tətbiq)                              |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Fərdi host ələkeçirməsi** (hər host üçün DNS yönləndirməsi)                                  |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY mühit rejimi**                                                                    |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Söhbət görünüşü** (çoxgedişli qabarcıqlar, tool_use/tool_result)                             |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE axın birləşdiricisi** (delta hadisələrindən yenidən qurur)                               |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sessiyanın qeydə alınması** (adlandırıla bilən, .har/.jsonl formatında ixrac edilə bilən)    |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Bir abzasda arxitektura
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // SSE cavabıdırsa true
   mappedTo: string | null; // x-omniroute-mapped başlığı
-  costEstimateUsd: number | null; // OmniRoute qiymətlərinə əsaslanan təxmini xərc
+  costEstimateUsd: number | null; // 67router qiymətlərinə əsaslanan təxmini xərc
 }
 ```
 
@@ -395,7 +395,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Sistem proksisi əvvəlki vəziyyətinə qaytarılmır
 
-Sistem miqyaslı proksi rejimi aktiv olduğu zaman OmniRoute çökərsə:
+Sistem miqyaslı proksi rejimi aktiv olduğu zaman 67router çökərsə:
 
 **macOS:**
 
@@ -440,7 +440,7 @@ Baza yolu: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Sorğuları siyahılayır (filtrlənə bilər: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Tək sorğunun təfərrüatları                                                                      |
 | DELETE | `/requests`                 | Yaddaşdakı buferi təmizləyir                                                                    |
-| POST   | `/requests/{id}/replay`     | Eyni sorğunu OmniRoute routeri vasitəsilə yenidən icra edir                                     |
+| POST   | `/requests/{id}/replay`     | Eyni sorğunu 67router routeri vasitəsilə yenidən icra edir                                      |
 | PUT    | `/requests/{id}/annotation` | Sorğu ilə bağlı qeydi saxlayır və ya yeniləyir                                                  |
 
 ### WebSocket

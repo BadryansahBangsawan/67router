@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **עדכון אחרון:** 2026-06-28 — v3.8.40
 
-OmniRoute מגיעה עם מערכת תוספים בסגנון WordPress. תוספים הם תיקיות עצמאיות —
+67router מגיעה עם מערכת תוספים בסגנון WordPress. תוספים הם תיקיות עצמאיות —
 כל אחת כוללת מניפסט `plugin.json` וקובץ כניסה — שמתחברות לצינור עיבוד הבקשות
 (`onRequest` / `onResponse` / `onError`) ולאירועי מחזור החיים
 (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -150,7 +150,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### ספריית התוספים
 
-התוספים נמצאים תחת ספריית הנתונים של OmniRoute:
+התוספים נמצאים תחת ספריית הנתונים של 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

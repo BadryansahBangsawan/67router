@@ -13,7 +13,7 @@
 
 ## X’inhu
 
-OmniRoute jikkonnettja ma’ vault ta’ **Obsidian** bħala **sors ta’ kuntest** — bażi lokali
+67router jikkonnettja ma’ vault ta’ **Obsidian** bħala **sors ta’ kuntest** — bażi lokali
 ta’ għarfien f’Markdown li l-aġenti jaqraw u jiktbu fiha permezz tas-server MCP integrat.
 L-integrazzjoni tikkomunika mal-plugin tal-komunità **Obsidian Local REST API** li jkun qed
 jaħdem fl-applikazzjoni tad-desktop, sabiex l-aġenti jkunu jistgħu jfittxu fin-noti,
@@ -82,7 +82,7 @@ u jivvalida t-token billi jsejjaħ l-endpoint tal-istatus tal-Local REST API qab
 
 `src/app/api/settings/obsidian/webdav/route.ts` jimmaniġġja sinkronizzazzjoni fakultattiva
 tal-vault appoġġjata minn WebDAV (immexxija minn `src/lib/obsidianSync.ts`). Meta tiġi attivata,
-tidderieġi lil OmniRoute lejn direttorju lokali tal-vault u tiġġenera par każwali ta’ isem tal-utent/password għal WebDAV:
+tidderieġi lil 67router lejn direttorju lokali tal-vault u tiġġenera par każwali ta’ isem tal-utent/password għal WebDAV:
 
 ```bash
 # Attiva s-sinkronizzazzjoni WebDAV għal direttorju tal-vault (tiġġenera isem tal-utent/password)
@@ -117,26 +117,26 @@ L-erba’ għodod `obsidian_sync_*` iżommu l-imġiba separata tagħhom għat-to
 
 Definiti f’`open-sse/mcp-server/tools/obsidianTools.ts`. It-token/URL bażi jiġu riżolti
 għal kull sejħa (l-ewwel skont iċ-ċavetta API, imbagħad globalment). Għodod li jaċċessaw is-**server tas-sinkronizzazzjoni**
-ta’ OmniRoute (l-erba’ għodod `obsidian_sync_*`) jeħtieġu wkoll it-token tal-awtentikazzjoni tas-sinkronizzazzjoni kkonfigurat
-fis-settings ta’ OmniRoute.
+ta’ 67router (l-erba’ għodod `obsidian_sync_*`) jeħtieġu wkoll it-token tal-awtentikazzjoni tas-sinkronizzazzjoni kkonfigurat
+fis-settings ta’ 67router.
 
 ### Għodod tal-qari (`read:obsidian`)
 
-| Għodda                       | Deskrizzjoni                                                                                                                                 |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Iċċekkja jekk il-Local REST API hijiex aċċessibbli u awtentikata.                                                                            |
-| `obsidian_search_simple`     | Tiftix fit-test sħiħ tal-kontenut tan-noti; jirritorna siltiet bil-mogħdijiet tal-fajls.                                                     |
-| `obsidian_search_structured` | Fittex billi tuża espressjoni JSON Logic (filtri and/or/regex/path).                                                                         |
-| `obsidian_read_note`         | Aqra nota permezz ta’ mogħdija relattiva għall-vault; b’mod fakultattiv intestatura/blokka/frontmatter speċifiċi.                            |
-| `obsidian_list_vault`        | Elenka l-fajls u d-direttorji fil-vault (siġra ta’ entrati).                                                                                 |
-| `obsidian_get_document_map`  | Ikseb l-istruttura tal-intestaturi tan-nota bħala mappa ta’ intestaturi → numri tal-linji.                                                   |
-| `obsidian_get_note_metadata` | Ikseb il-frontmatter, it-tags, il-links, u l-għadd ta’ karattri/kliem mingħajr il-kontenut sħiħ.                                             |
-| `obsidian_get_active_file`   | Ikseb il-mogħdija + il-kontenut tal-fajl attiv bħalissa f’Obsidian.                                                                          |
-| `obsidian_get_periodic_note` | Ikseb in-nota perjodika ta’ kuljum/kull ġimgħa/kull xahar għal data (illum jekk titħalla barra).                                             |
-| `obsidian_get_tags`          | Elenka t-tags kollha tal-vault bil-frekwenzi tagħhom.                                                                                        |
-| `obsidian_list_commands`     | Elenka l-IDs tal-kmandi disponibbli ta’ Obsidian (uża ma’ `obsidian_execute_command`).                                                       |
-| `obsidian_sync_status`       | Status tas-server tas-sinkronizzazzjoni ta’ OmniRoute: jekk hux qed jaħdem, isem il-vault, port, ħin ta’ tħaddim, l-aħħar sinkronizzazzjoni. |
-| `obsidian_sync_conflicts`    | Elenka l-kunflitti tas-sinkronizzazzjoni mhux solvuti (mogħdija, mogħdija tal-kunflitt, ħin tal-identifikazzjoni).                           |
+| Għodda                       | Deskrizzjoni                                                                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Iċċekkja jekk il-Local REST API hijiex aċċessibbli u awtentikata.                                                                           |
+| `obsidian_search_simple`     | Tiftix fit-test sħiħ tal-kontenut tan-noti; jirritorna siltiet bil-mogħdijiet tal-fajls.                                                    |
+| `obsidian_search_structured` | Fittex billi tuża espressjoni JSON Logic (filtri and/or/regex/path).                                                                        |
+| `obsidian_read_note`         | Aqra nota permezz ta’ mogħdija relattiva għall-vault; b’mod fakultattiv intestatura/blokka/frontmatter speċifiċi.                           |
+| `obsidian_list_vault`        | Elenka l-fajls u d-direttorji fil-vault (siġra ta’ entrati).                                                                                |
+| `obsidian_get_document_map`  | Ikseb l-istruttura tal-intestaturi tan-nota bħala mappa ta’ intestaturi → numri tal-linji.                                                  |
+| `obsidian_get_note_metadata` | Ikseb il-frontmatter, it-tags, il-links, u l-għadd ta’ karattri/kliem mingħajr il-kontenut sħiħ.                                            |
+| `obsidian_get_active_file`   | Ikseb il-mogħdija + il-kontenut tal-fajl attiv bħalissa f’Obsidian.                                                                         |
+| `obsidian_get_periodic_note` | Ikseb in-nota perjodika ta’ kuljum/kull ġimgħa/kull xahar għal data (illum jekk titħalla barra).                                            |
+| `obsidian_get_tags`          | Elenka t-tags kollha tal-vault bil-frekwenzi tagħhom.                                                                                       |
+| `obsidian_list_commands`     | Elenka l-IDs tal-kmandi disponibbli ta’ Obsidian (uża ma’ `obsidian_execute_command`).                                                      |
+| `obsidian_sync_status`       | Status tas-server tas-sinkronizzazzjoni ta’ 67router: jekk hux qed jaħdem, isem il-vault, port, ħin ta’ tħaddim, l-aħħar sinkronizzazzjoni. |
+| `obsidian_sync_conflicts`    | Elenka l-kunflitti tas-sinkronizzazzjoni mhux solvuti (mogħdija, mogħdija tal-kunflitt, ħin tal-identifikazzjoni).                          |
 
 ### Għodod tal-kitba (`write:obsidian`)
 

@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Zdroj:** `open-sse/services/thinkingBudget.ts`
 
-Rozpočet přemýšlení určuje, zda OmniRoute **přepisuje klientské parametry přemýšlení/uvažování** při předávání poskytovatelům. **Nezapíná ani nevypíná** kompresi, směrování ani mezipaměť promptů.
+Rozpočet přemýšlení určuje, zda 67router **přepisuje klientské parametry přemýšlení/uvažování** při předávání poskytovatelům. **Nezapíná ani nevypíná** kompresi, směrování ani mezipaměť promptů.
 
 ## Režimy
 
-| Režim                       | Co OmniRoute dělá                                                                                                      | Kdy použít                                                                                                                                                                  |
+| Režim                       | Co 67router dělá                                                                                                       | Kdy použít                                                                                                                                                                  |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (výchozí) | Ponechá klientská pole beze změny (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` atd.). | **Codex / Desktop / jakýkoli klient, který má řídit míru úsilí a souhrny uvažování.** Vyžadováno pro viditelné panely přemýšlení, když klient požaduje `reasoning.summary`. |
 | **`auto`**                  | Před odesláním upstreamu z těla požadavku **odstraní všechna** pole přemýšlení/uvažování.                              | Pouze pokud záměrně chcete, aby výchozí hodnoty vytvořil **poskytovatel**, a nepotřebujete přemýšlení řízené klientem. **Neznamená** „automaticky zobrazit přemýšlení“.     |
@@ -38,7 +38,7 @@ Pokud klient (např. Codex Desktop) odeslal `reasoning: { effort: "ultra", summa
 | **Kombinované směrování / záložní varianty**   | Samostatné. Neovlivněno.                                                                                                                                               |
 | **Limity tokenů API klíčů / rozpočty nákladů** | Samostatné. Neovlivněno.                                                                                                                                               |
 | **Mezipaměť opakovaného přehrávání uvažování** | Opětovné vložení ve vícekolových konverzacích pro striktní poskytovatele (DeepSeek, Kimi, Qwen-thinking, …). Není totéž jako „zobrazit přemýšlení“ v aplikaci Desktop. |
-| **Dešifrování `encrypted_content`**            | **Nemožné.** Soukromé bloky uvažování OpenAI/Codex jsou neprůhledné. OmniRoute je nikdy nedešifruje (#7095 / #7176 / #7304).                                           |
+| **Dešifrování `encrypted_content`**            | **Nemožné.** Soukromé bloky uvažování OpenAI/Codex jsou neprůhledné. 67router je nikdy nedešifruje (#7095 / #7176 / #7304).                                            |
 
 ## Viditelné uvažování (klienti Codex / Responses)
 
@@ -51,7 +51,7 @@ Aby klient zobrazil text uvažování, je nutné splnit **všechny** následují
 Pokud získáte pouze „šifrované soukromé uvažování“, pak buď:
 
 - byl použit režim **`auto`** (požadavek klienta byl odstraněn), nebo
-- nadřazená služba vrátila `encrypted_content` bez textu souhrnu (omezení poskytovatele; OmniRoute může zobrazit pouze zástupný text, nikoli prostý text).
+- nadřazená služba vrátila `encrypted_content` bez textu souhrnu (omezení poskytovatele; 67router může zobrazit pouze zástupný text, nikoli prostý text).
 
 ## Příklady API
 
@@ -71,7 +71,7 @@ Schéma (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adap
 
 ### Trvalé uložení / restart
 
-Hodnota je uložena pod klíčem nastavení `thinkingBudget` a načtena při spuštění procesu (`hydrateThinkingBudgetConfig`). Po změně prostřednictvím databáze nebo některých cest mimo API **restartujte proces OmniRoute**, aby instance singletonu v paměti odpovídala datům na disku.
+Hodnota je uložena pod klíčem nastavení `thinkingBudget` a načtena při spuštění procesu (`hydrateThinkingBudgetConfig`). Po změně prostřednictvím databáze nebo některých cest mimo API **restartujte proces 67router**, aby instance singletonu v paměti odpovídala datům na disku.
 
 ## Kontrolní seznam operátora
 

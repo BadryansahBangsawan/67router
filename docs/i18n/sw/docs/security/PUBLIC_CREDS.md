@@ -15,7 +15,7 @@
 - [OAuth 2.0 kwa programu asilia (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret za programu zilizosakinishwa ni za umma; PKCE ndiyo inayotoa usalama halisi.
 - [Firebase API keys](https://firebase.google.com/docs/projects/api-keys) — Vitambulishi vya wateja wa Web ni vya umma kwa makusudi.
 
-OmniRoute lazima ipachike thamani hizi ili watumiaji ambao hawasanidi `.env` bado wapate mtiririko wa OAuth unaofanya kazi moja kwa moja. Bila chaguo-msingi lililopachikwa, watoa huduma wa Gemini / Antigravity huacha kufanya kazi kwa mtumiaji yeyote anayefuata njia ya "nakili tu na uendeshe".
+67router lazima ipachike thamani hizi ili watumiaji ambao hawasanidi `.env` bado wapate mtiririko wa OAuth unaofanya kazi moja kwa moja. Bila chaguo-msingi lililopachikwa, watoa huduma wa Gemini / Antigravity huacha kufanya kazi kwa mtumiaji yeyote anayefuata njia ya "nakili tu na uendeshe".
 
 Hata hivyo, thamani halisi kama `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` hutambuliwa na **GitHub Secret Scanning**, **Semgrep**, na vichanganuzi vingine vinavyofanana vya ruwaza. Kila toleo huwa mtiririko wenye kelele wa tahadhari zisizo sahihi, ulinzi wa push huzuia commit halali, na waendeshaji huacha kuamini mkondo wa tahadhari.
 

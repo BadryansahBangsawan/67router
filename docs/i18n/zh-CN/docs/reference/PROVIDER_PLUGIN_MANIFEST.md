@@ -9,7 +9,7 @@
 对于在进程外运行的 sidecar，也可以通过 HTTP 的
 `GET /api/v1/provider-plugin-manifest` 获取同一份清单。
 
-OmniRoute 通过 `X-OmniRoute-Provider-Manifest-Url` 请求头向 Bifrost 和 CLIProxyAPI 提供该 URL。当 sidecar 需要使用公共 URL 或容器网络 URL，而不是本地请求来源时，请设置 `OMNIROUTE_PROVIDER_MANIFEST_URL`。
+67router 通过 `X-OmniRoute-Provider-Manifest-Url` 请求头向 Bifrost 和 CLIProxyAPI 提供该 URL。当 sidecar 需要使用公共 URL 或容器网络 URL，而不是本地请求来源时，请设置 `OMNIROUTE_PROVIDER_MANIFEST_URL`。
 
 ## 刷新清单
 
@@ -17,7 +17,7 @@ OmniRoute 通过 `X-OmniRoute-Provider-Manifest-Url` 请求头向 Bifrost 和 CL
 
 ## 目标
 
-推动提供者元数据逐步转向插件契约，使低延迟 sidecar 最终能够接管高频请求路径，同时 OmniRoute 继续将 TypeScript 路由作为策略网关和回退方案。该清单是增量式扩展：它本身不会改变请求路由。
+推动提供者元数据逐步转向插件契约，使低延迟 sidecar 最终能够接管高频请求路径，同时 67router 继续将 TypeScript 路由作为策略网关和回退方案。该清单是增量式扩展：它本身不会改变请求路由。
 
 ## 契约
 
@@ -56,7 +56,7 @@ OmniRoute 通过 `X-OmniRoute-Provider-Manifest-Url` 请求头向 Bifrost 和 CL
 | `usage-fetch`        | 已接入用量或配额获取器（`getUsageForProvider`）。       |
 | `usage-supported`    | 用量 API 接受此提供者（`isSupportedUsageConnection`）。 |
 
-`usage-fetch` 仅用于发现。它表示 OmniRoute 知道如何读取该提供者的用量；它不会启用获取操作、改变配额语义，也不意味着已为该提供者启用 Dashboard 配额组件——该组件由 `USAGE_SUPPORTED_PROVIDERS` 单独控制。事实来源是 `open-sse/services/usage/fetcherProviders.ts` 中的 `USAGE_FETCHER_PROVIDERS`。
+`usage-fetch` 仅用于发现。它表示 67router 知道如何读取该提供者的用量；它不会启用获取操作、改变配额语义，也不意味着已为该提供者启用 Dashboard 配额组件——该组件由 `USAGE_SUPPORTED_PROVIDERS` 单独控制。事实来源是 `open-sse/services/usage/fetcherProviders.ts` 中的 `USAGE_FETCHER_PROVIDERS`。
 
 该列表以用量分发器所接受的字符串为键，因此混合使用了规范 id 和别名，其长度略大于带标签的提供者数量：未包含在清单注册表中的聊天提供者条目（例如 `firecrawl` 搜索提供者和 `amazon-q` ACP 提供者）没有可供添加标签的清单条目。
 

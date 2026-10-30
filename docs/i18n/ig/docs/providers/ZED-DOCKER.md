@@ -4,7 +4,7 @@
 
 ---
 
-Mgbe OmniRoute na-arụ ọrụ n'ime Docker, usoro ọkọlọtọ nke "Import from Zed Keychain" anaghị arụ ọrụ
+Mgbe 67router na-arụ ọrụ n'ime Docker, usoro ọkọlọtọ nke "Import from Zed Keychain" anaghị arụ ọrụ
 n'ihi na container enweghị ike iru daemon keychain nke OS host (`libsecret` na Linux,
 Keychain na macOS, Credential Manager na Windows), ebe ndekọ nhazi Zed dị na
 filesystem host anaghịkwa apụta n'ime container na ndabara.
@@ -20,7 +20,7 @@ Nsogbu abụọ na-egbochi ọrụ na-eme n'ime container:
    na-ekwurịta okwu na ọrụ keychain nke OS site na socket Unix ma ọ bụ session D-Bus.
    Ejikọtaghị nke ọ bụla n'ime ha na container na ndabara, ya mere ịgụ credential na-ada mgbe niile.
 
-OmniRoute na-achọpụta gburugburu Docker site na heuristic abụọ:
+67router na-achọpụta gburugburu Docker site na heuristic abụọ:
 
 - Ọdịdị nke `/.dockerenv` (nke daemon Docker na-ede mgbe container malitere).
 - Eriri `docker` pụtara na `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Mgbe nke ọ bụla n'ime heuristic ndị a kpaliri, route mbubata na-eweghachi 
 
 1. Mepee **Dashboard → Providers → Zed**.
 2. Panel **Manual Token Import** na-apụta n'okpuru kaadị mbubata keychain. Mgbe
-   OmniRoute chọpụtara Docker, panel a na-agbasawanye na-akpaghị aka mgbe mbọ mbụ
+   67router chọpụtara Docker, panel a na-agbasawanye na-akpaghị aka mgbe mbọ mbụ
    nke mbubata keychain dara.
 3. Họrọ provider site na dropdown (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, ma ọ bụ DeepSeek).

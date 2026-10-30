@@ -48,7 +48,7 @@ JWT-a izloženog putem tunela **ne može** aktivirati ovu putanju koda.
 | Linux+Firefox/Chromium | ažuriranje NSS DB-a po profilu putem `certutil -d sql:<profile>`                                                  |
 
 Ovo su iste komande koje koriste `mitmproxy`, Charles Proxy, Fiddler i
-Caddy. Činjenica da one postoje u OmniRoute-u je dokumentovana u
+Caddy. Činjenica da one postoje u 67router-u je dokumentovana u
 `docs/security/STEALTH_GUIDE.md`.
 
 **v3.8.6 ublažavanje**:
@@ -91,7 +91,7 @@ njege bi pokvarilo set funkcija agent-bridge-a.
 
 `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` env flag čuva ponašanje iz v3.8.5 za operatore koji još nisu ažurirali svoju automatizaciju. Bit će uklonjen u v3.9.
 
-**Zašto to zadržavamo**: Zed uvoz je najlakši put za onboarding korisnika koji već koriste Zed i žele preslikati svoje provider ključeve u OmniRoute bez ponovnog lijepljenja.
+**Zašto to zadržavamo**: Zed uvoz je najlakši put za onboarding korisnika koji već koriste Zed i žele preslikati svoje provider ključeve u 67router bez ponovnog lijepljenja.
 
 ---
 
@@ -99,7 +99,7 @@ njege bi pokvarilo set funkcija agent-bridge-a.
 
 **Izvorni fajlovi**: `src/mitm/systemCommands.ts`.
 
-**Zašto je označeno**: ovaj dio ponovo izvozi `execFileWithPassword`, `runElevatedPowerShell` i zajednički `quotePowerShell` helper. Socket.dev AI klasifikator ih vidi kao generički "toolkit za izvršavanje na hostu + podizanje privilegija." Unutar OmniRoute-a, oni se koriste samo u putanji za instalaciju MITM certifikata (§1) i od strane `execFileWithPassword` za izvršavanje `sudo` komandi.
+**Zašto je označeno**: ovaj dio ponovo izvozi `execFileWithPassword`, `runElevatedPowerShell` i zajednički `quotePowerShell` helper. Socket.dev AI klasifikator ih vidi kao generički "toolkit za izvršavanje na hostu + podizanje privilegija." Unutar 67router-a, oni se koriste samo u putanji za instalaciju MITM certifikata (§1) i od strane `execFileWithPassword` za izvršavanje `sudo` komandi.
 
 **Ublažavanje u v3.8.6**:
 
@@ -130,7 +130,7 @@ njege bi pokvarilo set funkcija agent-bridge-a.
 
 **Zašto to zadržavamo**: 9router je opcionalni, lokalno instalabilni pomoćni servis (slično WordPress pluginu) — strogo na bazi odluke korisnika (opt-in).
 
-## §5 — OmniRoute Cloud Sync povratno pisanje kredencijala (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync povratno pisanje kredencijala (`api/keys/[id]/route.js`)
 
 **Izvorni fajlovi**:
 
@@ -163,7 +163,7 @@ rawBody)`) prije parsiranja JSON-a. Ako je tajna (secret) postavljena, potpis je
    `rateLimitedUntil`, `updatedAt`). Ovo je **breaking change** za korisnike
    koji su se oslanjali na udaljenu sinhronizaciju tokena — oni se moraju eksplicitno prijaviti (opt-in).
 
-**Zašto to zadržavamo**: Cloud Sync je jedini način za OmniRoute Cloud tenant
+**Zašto to zadržavamo**: Cloud Sync je jedini način za 67router Cloud tenant
 da centralizuje kredencijale tima. Ispravka čini model prijetnje iskrenim:
 "server potpisuje, klijent verifikuje, operator se prijavljuje."
 

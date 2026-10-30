@@ -52,7 +52,7 @@ HTTP/1.1 400 Bad Request
 أخطاء `400 content-blocked` المتقطعة عندما يجري Claude Code أو Codex CLI
 عدة استدعاءات لاستخدام الأدوات أو إرسال الرسائل بتتابع سريع.
 
-## إجراءات التخفيف المطبقة بالفعل في OmniRoute
+## إجراءات التخفيف المطبقة بالفعل في 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — حارس تدفق يفرض
    حدًا أدنى قدره 500 ms بين الطلبات الصادرة إلى أي عنوان URL من نوع `agentrouter:*`.

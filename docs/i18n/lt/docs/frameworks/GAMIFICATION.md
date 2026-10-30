@@ -7,7 +7,7 @@
 > **Tiesos šaltinis:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-OmniRoute apima pirmiausia vietinį žaidybinimo sluoksnį, kuris apdovanoja naudotojus už
+67router apima pirmiausia vietinį žaidybinimo sluoksnį, kuris apdovanoja naudotojus už
 naudojimąsi platforma — užklausų teikimą, paslaugų teikėjų keitimą, derinių kūrimą,
 žetonų dalijimąsi ir indėlį į bendruomenę. Visa būsena saugoma
 SQLite; federacija su bendruomenės serveriais yra pasirenkama ir pagrįsta duomenų siuntimu.
@@ -36,7 +36,7 @@ dalijimąsi, apdovanojimus už pakvietimus).
 | Lyderių lentelės                 | Bendroji, savaitinė, mėnesinė, žetonų dalijimosi ir indėlio sritys                      |
 | Žetonų dalijimasis               | Kreditų pervedimas tarp naudotojų naudojant dvejybinio įrašo apskaitą                   |
 | Pakvietimas ir kodų panaudojimas | Rekomendacijų kodai, saugomi kaip SHA-256 maišos reikšmės                               |
-| Bendruomenės serveriai           | Federacija su išoriniais OmniRoute egzemplioriais                                       |
+| Bendruomenės serveriai           | Federacija su išoriniais 67router egzemplioriais                                        |
 | Apsauga nuo sukčiavimo           | Vertinimas serverio pusėje, užklausų dažnio ribojimas, anomalijų aptikimas pagal z balą |
 
 ### Projektavimo principai
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Duomenų bazės lentelės
 
-Visos lentelės yra pagrindinėje „OmniRoute“ SQLite duomenų bazėje, sukurtoje naudojant migraciją
+Visos lentelės yra pagrindinėje „67router“ SQLite duomenų bazėje, sukurtoje naudojant migraciją
 `060_create_gamification.sql`. WAL žurnalų rašymas paveldimas iš vienetinio egzemplioriaus
 `getDbInstance()`, esančio `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Visos lentelės yra pagrindinėje „OmniRoute“ SQLite duomenų bazėje, sukur
 
 ### Domeno modulis: `src/lib/db/gamification.ts`
 
-Atitinka standartinį „OmniRoute“ šabloną — importuoja `getDbInstance()` iš
+Atitinka standartinį „67router“ šabloną — importuoja `getDbInstance()` iš
 `core.ts` ir eksportuoja tipizuotas CRUD funkcijas. Maršrutų apdorojimo funkcijose nėra neapdorotų SQL užklausų.
 
 Pagrindinės funkcijos:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Veiksmas          | XP  | Aprašymas                                                                 |
 | ----------------- | --- | ------------------------------------------------------------------------- |
-| `request`         | 1   | Už kiekvieną per OmniRoute nukreiptą API užklausą                         |
+| `request`         | 1   | Už kiekvieną per 67router nukreiptą API užklausą                          |
 | `provider_switch` | 5   | Už perjungimą į kitą teikėją                                              |
 | `model_switch`    | 3   | Už perjungimą į kitą modelį                                               |
 | `combo_create`    | 10  | Už naujo derinio sukūrimą                                                 |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unikalus, indeksuotas) |
 | `token_hash` | SHA-256(raw_token)                 |
 
-Neapdorotas žetonas naudotojui grąžinamas tik vieną kartą, jį sukuriant. OmniRoute
+Neapdorotas žetonas naudotojui grąžinamas tik vieną kartą, jį sukuriant. 67router
 daugiau niekada jo nesaugo ir nerodo — išlieka tik maiša.
 
 ### Kvietimo sau prevencija
@@ -704,7 +704,7 @@ Administratoriai gali gauti visą audito seką per `GET /api/gamification/anomal
 
 ## API maršrutai
 
-Visi maršrutai atitinka standartinį OmniRoute šabloną:
+Visi maršrutai atitinka standartinį 67router šabloną:
 
 ```
 Maršrutas → CORS išankstinė patikra → Užklausos turinio validavimas (Zod) → Autentifikavimas (extractApiKey)

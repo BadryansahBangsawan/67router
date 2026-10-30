@@ -4,7 +4,7 @@
 
 ---
 
-> **Go hachomair**: Tá inneall comhbhrúite OmniRoute **inphlugáilte** — is féidir leat innill shaincheaptha a chlárú, pacáistí teanga a sholáthar do theangacha nua, agus píblínte cruachta a chumadh. Léirítear sa treoir seo conas é sin a dhéanamh.
+> **Go hachomair**: Tá inneall comhbhrúite 67router **inphlugáilte** — is féidir leat innill shaincheaptha a chlárú, pacáistí teanga a sholáthar do theangacha nua, agus píblínte cruachta a chumadh. Léirítear sa treoir seo conas é sin a dhéanamh.
 
 **Treoracha gaolmhara:**
 
@@ -235,7 +235,7 @@ sa roghnóir straitéise trína `id`. Tástáil an comhtháthú trína chumadh i
 
 ## Pacáistí Teanga a Chruthú
 
-Úsáideann comhbhrú ar nós Caveman **pacáistí rialacha a bhaineann go sonrach le teanga** chun focail líonta, maolú cainte agus patrúin fhoclacha a láimhseáil i ngach teanga nádúrtha. Tagann OmniRoute le **6 phacáiste teanga**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Úsáideann comhbhrú ar nós Caveman **pacáistí rialacha a bhaineann go sonrach le teanga** chun focail líonta, maolú cainte agus patrúin fhoclacha a láimhseáil i ngach teanga nádúrtha. Tagann 67router le **6 phacáiste teanga**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Struchtúr Pacáiste
 
@@ -394,7 +394,7 @@ Is é aschur inneall N ionchur inneall N+1.
 
 ### Modhanna Comhbhrúite
 
-Roghnaíonn OmniRoute **AON mhodh amháin in aghaidh na hiarrata** bunaithe ar chumraíocht, tairseacha uathspreagtha, agus sáruithe teaglama.
+Roghnaíonn 67router **AON mhodh amháin in aghaidh na hiarrata** bunaithe ar chumraíocht, tairseacha uathspreagtha, agus sáruithe teaglama.
 Sainítear na modhanna atá ar fáil in `open-sse/services/compression/types.ts` (cineál `CompressionMode`):
 
 | Modh         | Innill                | Cás úsáide                                                                                                                                                                                                     |
@@ -514,10 +514,10 @@ Chun é a rialú ón gcumraíocht, socraigh `mode: "stacked"` agus cuir eagar na
 
 ## Beartas Sioncrónaithe Réamhtheachtach
 
-Tugann innill chomhbhrúite OmniRoute aitheantas do roinnt tionscadal réamhtheachtach sa README
+Tugann innill chomhbhrúite 67router aitheantas do roinnt tionscadal réamhtheachtach sa README
 ("spreagtha ag RTK, Caveman, LLMLingua-2, Troglodita"). Ceist choitianta ó rannchuiditheoirí
 is ea: **nuair a chuireann RTK réamhtheachtach scagaire uirlise nua leis nó nuair a chuireann Caveman pacáiste rialacha
-leis, conas a shroicheann sé sin OmniRoute?** Is í an rannán seo an freagra údarásach.
+leis, conas a shroicheann sé sin 67router?** Is í an rannán seo an freagra údarásach.
 
 ### Cóipeanna díoltóra vs. feidhmiúcháin neamhspleácha
 
@@ -538,7 +538,7 @@ chóip réamhtheachtach ann le `git pull` a dhéanamh uaithi — agus sin go dí
 Níl **aon rianú uathoibrithe ar eisiúintí réamhtheachtacha ná lipéad `compression-sync`
 ann** — d'aon ghnó. Toisc gur athfheidhmiúcháin iad na hinnill, ní chumaisctear scagaire RTK
 ná pacáiste rialacha Caveman mar chód; ina ionad sin, **athléirítear é mar riail/scagaire nua
-i bhformáid OmniRoute féin** (féach
+i bhformáid 67router féin** (féach
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) agus cuirtear isteach é ar bhonn ad hoc trí
 ghnáth-PR. Is iad na pointí sínte thuas (inneall saincheaptha, pacáiste teanga, scagaire RTK)
 na bealaí ceadaithe chun ceann a chur leis.
@@ -552,14 +552,14 @@ Seo samplaí le déanaí den sreabhadh seo go díreach:
 ### Headroom (seachfhreastalaí comhbhrú ionchuir)
 
 Tá Headroom **go hiomlán inmheánach** — léargas díoltóirithe pionnáilte den codec `gcf` móide
-sraitheanna `smartcrusher` / `toon` / `tabular` OmniRoute féin. Níl aon fhoinse réamhtheachtach bheo
+sraitheanna `smartcrusher` / `toon` / `tabular` 67router féin. Níl aon fhoinse réamhtheachtach bheo
 le rianú seachas an chóip dhíoltóirithe; athnuaitear nuashonruithe ar `gcf`
 de láimh nuair a athraíonn an codec agus déantar iad a athbhailíochtú i gcoinne gheata an bhuiséid chomhbhrúite
 (`check:compression-budget`).
 
 ### Feabhsúchán arna spreagadh ag tionscadal réamhtheachtach a mholadh
 
-1. **Ná díoltóirigh é** — athléirigh an riail/scagaire réamhtheachtach i bhformáid OmniRoute.
+1. **Ná díoltóirigh é** — athléirigh an riail/scagaire réamhtheachtach i bhformáid 67router.
 2. Cuir leis é tríd an bpointe sínte meaitseála thíos (pacáiste teanga, scagaire RTK, nó
    inneall saincheaptha).
 3. Déan tagairt don tionscadal réamhtheachtach sa chur síos ar an PR (lua), seachas

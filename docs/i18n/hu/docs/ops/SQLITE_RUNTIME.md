@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute indításkor egy ötlépéses tartalékmechanizmuson keresztül választja ki a SQLite-illesztőprogramját:
+A 67router indításkor egy ötlépéses tartalékmechanizmuson keresztül választja ki a SQLite-illesztőprogramját:
 
 1. **Csomagolt `better-sqlite3`** (a `package.json` `dependencies` mezőjén keresztül)
    — a leggyorsabb, natív bináris; az `npm install` telepíti, ha rendelkezésre állnak a fordítóeszközök.
@@ -28,14 +28,14 @@ Az OmniRoute indításkor egy ötlépéses tartalékmechanizmuson keresztül vá
 - **Nincsenek fordítóeszközök**: Egyes környezetek (például VS Build Tools nélküli vállalati
   Windows-rendszerek vagy minimális Docker-lemezképek) nem képesek lefordítani a `better-sqlite3`
   csomagot. A futásidejű telepítő egy előre lefordított binárist szerez be az npm-regisztrációs
-  adatbázisból; a tartalék illesztőprogramok pedig gondoskodnak arról, hogy az OmniRoute akkor is
+  adatbázisból; a tartalék illesztőprogramok pedig gondoskodnak arról, hogy a 67router akkor is
   elinduljon, ha ez sikertelen.
 - **Hálózattól elszigetelt rendszerek**: Ha az npm-regisztrációs adatbázis nem érhető el,
   a `node:sqlite` vagy a `sql.js` garantálja az alapvető működést.
 
 ## Mágikusbájt-ellenőrzés
 
-Egy futásidőben telepített `.node` fájl betöltése előtt az OmniRoute beolvassa az első 8
+Egy futásidőben telepített `.node` fájl betöltése előtt a 67router beolvassa az első 8
 bájtot, és összeveti azokat az ismert platformspecifikus mágikus értékekkel:
 
 | Platform                | Bájtok (hex)  | Címke       |
@@ -110,9 +110,9 @@ Megvalósítás:
 ## Egyetlen írót használó topológia (a HA nem támogatott)
 
 A fenti illesztőprogram-tartalékmechanizmus továbbra is **egyetlen folyamatban** fut.
-Az alapértelmezett SQLite-konfigurációjú OmniRoute **egyetlen írót** használ:
+Az alapértelmezett SQLite-konfigurációjú 67router **egyetlen írót** használ:
 
-- Ne csatlakoztasson két OmniRoute-replikát ugyanahhoz a `storage.sqlite` fájlhoz.
+- Ne csatlakoztasson két 67router-replikát ugyanahhoz a `storage.sqlite` fájlhoz.
 - Egy konténer újraindítása, Recreate-telepítés, OOM miatti leállítás vagy HEALTHCHECK
   általi újraindítás megszakít minden folyamatban lévő SSE-munkamenetet. Az alapértelmezett
   működési útvonalon nincs munkamenet-leürítés.

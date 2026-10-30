@@ -6,7 +6,7 @@
 
 ## Overzicht
 
-Alle OmniRoute-beheer-API-routes zijn ingedeeld in een van drie
+Alle 67router-beheer-API-routes zijn ingedeeld in een van drie
 beveiligingsniveaus. De classificatie is statisch, vastgelegd in
 `src/server/authz/routeGuard.ts`, en wordt geëvalueerd voordat enige andere
 authenticatievertakking wordt uitgevoerd.
@@ -28,9 +28,9 @@ CVE-klasse ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-r
 **Wat GHSA-fhh6-4qxv-rpqj is (de aanvalsklasse):** een beheer-/agentserver
 biedt een eindpunt aan dat een subproces start (`npm install`, `node`, een browser,
 een proxy, `git`, `tar`, …). Als dat eindpunt vanaf een externe host bereikbaar is — omdat
-de beheerder OmniRoute achter een nginx-/Cloudflare-/Tailscale-tunnel heeft geplaatst en een JWT
+de beheerder 67router achter een nginx-/Cloudflare-/Tailscale-tunnel heeft geplaatst en een JWT
 is gelekt, of authenticatie verkeerd was geconfigureerd — zet de aanvaller „een API aanroepen” om in „een
-opdracht op de host uitvoeren” (uitvoering van externe code). OmniRoute voorkomt dit door
+opdracht op de host uitvoeren” (uitvoering van externe code). 67router voorkomt dit door
 **onvoorwaardelijk, vóór elke authenticatiecontrole, een controle op de loopbackhost af te dwingen** voor elke
 route die processen kan starten: een gelekt token kan via een tunnel nog steeds de processtartfunctie niet bereiken.
 
@@ -120,7 +120,7 @@ nodig zouden moeten hebben.
 
 #### Richtlijnen voor operators en auditing
 
-Als u OmniRoute achter een reverse proxy of tunnel uitvoert (nginx, Caddy, Cloudflare
+Als u 67router achter een reverse proxy of tunnel uitvoert (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), beschermt de loopbackcontrole nog steeds de hierboven vermelde
 routes die processen kunnen starten — een verzoek waarvan het clientadres geen loopbackadres is, wordt geweigerd met
 `403 LOCAL_ONLY` **voordat authenticatie wordt uitgevoerd**, zodat een gelekte JWT geen proces kan starten. Er
@@ -158,7 +158,7 @@ blijven twee verantwoordelijkheden voor de operator over:
 - Doorzoek de logs van je reverse proxy/toegangslogs naar de bovenstaande voorvoegsels in combinatie met een
   clientadres dat geen loopback-adres is. Elke dergelijke treffer die `200` retourneerde in plaats van
   `403 LOCAL_ONLY`, betekent dat de proxy het werkelijke client-IP-adres maskeert — corrigeer de proxy.
-- Een `403 LOCAL_ONLY` in de logs van OmniRoute voor een van deze paden betekent dat de beveiliging
+- Een `403 LOCAL_ONLY` in de logs van 67router voor een van deze paden betekent dat de beveiliging
   naar behoren werkt, niet dat er een fout is die moet worden onderdrukt.
 
 #### Extern bereikbare routes met een probe-beveiliging op de aanroeplocatie

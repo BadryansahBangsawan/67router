@@ -7,7 +7,7 @@
 > **Fuente de verdad:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Última actualización:** 2026-06-28 — v3.8.40
 
-OmniRoute incluye una capa de gamificación con enfoque local que recompensa a los usuarios por
+67router incluye una capa de gamificación con enfoque local que recompensa a los usuarios por
 interactuar con la plataforma: realizar solicitudes, cambiar de proveedor, crear
 combinaciones, compartir tokens y contribuir a la comunidad. Todo el estado reside en
 SQLite; la federación con servidores de la comunidad es opcional y se basa en envíos.
@@ -36,7 +36,7 @@ niveles, insignias), prueba social (tablas de clasificación) e incentivos econ�
 | Tablas de clasificación    | Ámbitos global, semanal, mensual, de compartición de tokens y de contribuciones                           |
 | Compartición de tokens     | Transfiere créditos entre usuarios mediante un libro mayor de partida doble                               |
 | Invitación y canje         | Códigos de referido almacenados con hashes SHA-256                                                        |
-| Servidores de la comunidad | Federación con instancias externas de OmniRoute                                                           |
+| Servidores de la comunidad | Federación con instancias externas de 67router                                                            |
 | Prevención de trampas      | Puntuación del lado del servidor, limitación de frecuencia y detección de anomalías mediante puntuación z |
 
 ### Principios de diseño
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tablas de la base de datos
 
-Todas las tablas se encuentran en la base de datos SQLite principal de OmniRoute, creada mediante la migración
+Todas las tablas se encuentran en la base de datos SQLite principal de 67router, creada mediante la migración
 `060_create_gamification.sql`. El registro en diario WAL se hereda de la instancia singleton
 `getDbInstance()` de `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Todas las tablas se encuentran en la base de datos SQLite principal de OmniRoute
 
 ### Módulo de dominio: `src/lib/db/gamification.ts`
 
-Sigue el patrón estándar de OmniRoute: importa `getDbInstance()` desde
+Sigue el patrón estándar de 67router: importa `getDbInstance()` desde
 `core.ts` y exporta funciones CRUD tipadas. No se utiliza SQL sin procesar en los controladores de rutas.
 
 Funciones principales:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Acción            | XP  | Descripción                                                      |
 | ----------------- | --- | ---------------------------------------------------------------- |
-| `request`         | 1   | Por cada solicitud de API enrutada a través de OmniRoute         |
+| `request`         | 1   | Por cada solicitud de API enrutada a través de 67router          |
 | `provider_switch` | 5   | Cambiar a un proveedor diferente                                 |
 | `model_switch`    | 3   | Cambiar a un modelo diferente                                    |
 | `combo_create`    | 10  | Crear un nuevo combo                                             |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (único, indexado) |
 | `token_hash` | SHA-256(raw_token)           |
 
-El token sin procesar se devuelve al usuario una sola vez durante su creación. OmniRoute
+El token sin procesar se devuelve al usuario una sola vez durante su creación. 67router
 nunca vuelve a almacenarlo ni a mostrarlo; únicamente se conserva el hash.
 
 ### Prevención de autorreferencias
@@ -703,7 +703,7 @@ Los administradores pueden consultar el registro de auditoría completo mediante
 
 ## Rutas de la API
 
-Todas las rutas siguen el patrón estándar de OmniRoute:
+Todas las rutas siguen el patrón estándar de 67router:
 
 ```
 Ruta → Preflight de CORS → Validación del cuerpo (Zod) → Autenticación (extractApiKey)

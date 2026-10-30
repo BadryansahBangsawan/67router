@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute، **CLI دریافت**، **مقامی Agent Client Protocol**، اور
+67router، **CLI دریافت**، **مقامی Agent Client Protocol**، اور
 **قدیمی stdio adapters** کو الگ رکھتا ہے۔ کسی نصب شدہ binary کا مل جانا اس کی
 authentication، model compatibility، یا prompt سنبھالنے کی تیاری کو ثابت نہیں کرتا۔
 

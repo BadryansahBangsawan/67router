@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (සිංහල)
+# 67router A2A Server Documentation (සිංහල)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — බුද්ධිමත් මාර්ගගත කිරීමේ නියෝජිතයෙකු ලෙස OmniRoute
+> Agent-to-Agent Protocol v0.3 — බුද්ධිමත් මාර්ගගත කිරීමේ නියෝජිතයෙකු ලෙස 67router
 
 A2A අතුරුමුහුණතට ආකාර දෙකක් ඇත:
 
@@ -19,7 +19,7 @@ A2A අතුරුමුහුණතට ආකාර දෙකක් ඇත:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute හි හැකියාවන්, කුසලතා සහ සත්යාපන අවශ්යතා විස්තර කරන නියෝජිත කාඩ්පත ආපසු ලබා දෙයි.
+67router හි හැකියාවන්, කුසලතා සහ සත්යාපන අවශ්යතා විස්තර කරන නියෝජිත කාඩ්පත ආපසු ලබා දෙයි.
 
 නියෝජිත කාඩ්පතේ `version` ක්ෂේත්රය `process.env.npm_package_version` වෙතින් ලබා ගනී (`src/app/.well-known/agent.json/route.ts:13` බලන්න), එම නිසා සෑම නිකුතුවකදීම එය `package.json` සමඟ ස්වයංක්රීයව සමමුහුර්තව පවතී.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## පවතින කුසලතා
 
-OmniRoute, `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` හි සම්බන්ධ කර ඇති A2A කුසලතා 6ක් නිරාවරණය කරයි. සෑම කුසලතා මොඩියුලයක්ම `src/lib/a2a/skills/` හි පිහිටා ඇත.
+67router, `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` හි සම්බන්ධ කර ඇති A2A කුසලතා 6ක් නිරාවරණය කරයි. සෑම කුසලතා මොඩියුලයක්ම `src/lib/a2a/skills/` හි පිහිටා ඇත.
 
 | කුසලතාවය           | ID                   | විස්තරය                                                                                                                                              | ටැග                        | උදාහරණ                                        |
 | :----------------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------------------------------- |
-| Smart Routing      | `smart-routing`      | OmniRoute හි combo engine + scoring භාවිතයෙන් prompt එකක් ප්රශස්ත provider/combo එක හරහා යොමු කරයි                                                   | routing, providers         | "මෙම prompt එක හොඳම model එක හරහා යොමු කරන්න" |
+| Smart Routing      | `smart-routing`      | 67router හි combo engine + scoring භාවිතයෙන් prompt එකක් ප්රශස්ත provider/combo එක හරහා යොමු කරයි                                                    | routing, providers         | "මෙම prompt එක හොඳම model එක හරහා යොමු කරන්න" |
 | Quota Management   | `quota-management`   | එක් එක් provider සඳහා quota තත්ත්වය වාර්තා කරයි, ඇමතුම්කරුවන්ට throttle/switch කළ යුත්තේ කවදාද යනු තීරණය කිරීමට උදව් වේ                              | quota, providers           | "anthropic සඳහා quota පරීක්ෂා කරන්න"          |
 | Provider Discovery | `provider-discovery` | ස්ථාපිත providers, හැකියාවන්, free-tier ධජ, OAuth තත්ත්වය සමඟ ලැයිස්තුගත කරයි                                                                        | providers, discovery       | "පවතින providers මොනවාද?"                     |
 | Cost Analysis      | `cost-analysis`      | catalog එක + මෑත භාවිතය සලකා request/conversation එකක පිරිවැය ඇස්තමේන්තු කරයි                                                                        | cost, usage                | "මෙම සංවාදය සඳහා පිරිවැය ඇස්තමේන්තු කරන්න"    |
 | Health Report      | `health-report`      | එක් එක් provider සඳහා circuit breaker, cooldown, lockout තත්ත්ව එකතු කරයි                                                                            | health, resilience         | "සියලුම providers හි සෞඛ්ය තත්ත්වය පෙන්වන්න"  |
-| List Capabilities  | `list-capabilities`  | සම්පූර්ණ Agent Skills catalog එක (entries 45: API 23 + CLI 21 + config 1) context injection සඳහා අමු SKILL.md URLs සහිත markdown වගුවක් ලෙස ලබා දෙයි | catalog, discovery, skills | "සියලුම OmniRoute හැකියාවන් ලැයිස්තුගත කරන්න" |
+| List Capabilities  | `list-capabilities`  | සම්පූර්ණ Agent Skills catalog එක (entries 45: API 23 + CLI 21 + config 1) context injection සඳහා අමු SKILL.md URLs සහිත markdown වගුවක් ලෙස ලබා දෙයි | catalog, discovery, skills | "සියලුම 67router හැකියාවන් ලැයිස්තුගත කරන්න"  |
 
 > Agent Card එක සජීවී providers 375ක catalog එක සමඟ ගැලපෙන පරිදි තබා ගත යුතුය; provider ගණන සහ free/no-auth metadata runtime registry එකෙන් ලබාගැනේ.
 
 ### `list-capabilities` කුසලතා විස්තර
 
-`list-capabilities` කුසලතාවය, API ඇමතුම් යැවීමට පෙර OmniRoute නිරාවරණය කරන දේ සොයා ගැනීමට අවශ්ය බාහිර agents සඳහා විශේෂයෙන් ප්රයෝජනවත් වේ. එය ව්යුහගත markdown වගු artifact එකක් ලබා දෙයි:
+`list-capabilities` කුසලතාවය, API ඇමතුම් යැවීමට පෙර 67router නිරාවරණය කරන දේ සොයා ගැනීමට අවශ්ය බාහිර agents සඳහා විශේෂයෙන් ප්රයෝජනවත් වේ. එය ව්යුහගත markdown වගු artifact එකක් ලබා දෙයි:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ JSON-RPC අන්ත ලක්ෂ්යය වන `/a2a`, සම්මත A2A �
 | `/.well-known/agent.json`    | GET   | නියෝජිත කාඩ්පත (A2A සොයාගැනීම)                        | (පොදු, තත්පර 3600ක් හැඹිලිගත කර ඇත)          |
 | `/api/a2a/tasks`             | POST  | OmniConductor සමූහය වෙත එන පැවරීම (Conductor PRD RF5) | Bearer හා `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**එන Conductor පැවරීම (`POST /api/a2a/tasks`):** බාහිර A2A නියෝජිතයන් OmniRoute හරහා OmniConductor සමූහයට කේතකරණ වැඩ පවරයි. අන්තර්ගතය: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — පැවරිය හැක්කේ Conductor සමූහ කුසලතා (Agent Card හි නිවේදනය කර ඇති ඒවා) පමණි; `metadata.conductor.repo.url` අවශ්ය වේ (සමූහය git ගබඩා මත ක්රියා කරයි). මෙම මාර්ගය සේවාදායක-පාර්ශ්වීය `CONDUCTOR_ORCHESTRATOR_TOKEN` (විකල්පය `CONDUCTOR_HUB_TOKEN`) භාවිතයෙන් hub හි `POST /v1/tasks` වෙත පරිවර්තනය වන අතර `201 { conductor_task_id, state: "submitted" }` ආපසු ලබා දෙයි; කාර්ය තත්ත්වයන් SSE→A2A දර්පණය (RF1) හරහා නැවත ගලා එන අතර `GET /api/a2a/tasks?skill=conductor` මඟින් දැකගත හැක.
+**එන Conductor පැවරීම (`POST /api/a2a/tasks`):** බාහිර A2A නියෝජිතයන් 67router හරහා OmniConductor සමූහයට කේතකරණ වැඩ පවරයි. අන්තර්ගතය: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — පැවරිය හැක්කේ Conductor සමූහ කුසලතා (Agent Card හි නිවේදනය කර ඇති ඒවා) පමණි; `metadata.conductor.repo.url` අවශ්ය වේ (සමූහය git ගබඩා මත ක්රියා කරයි). මෙම මාර්ගය සේවාදායක-පාර්ශ්වීය `CONDUCTOR_ORCHESTRATOR_TOKEN` (විකල්පය `CONDUCTOR_HUB_TOKEN`) භාවිතයෙන් hub හි `POST /v1/tasks` වෙත පරිවර්තනය වන අතර `201 { conductor_task_id, state: "submitted" }` ආපසු ලබා දෙයි; කාර්ය තත්ත්වයන් SSE→A2A දර්පණය (RF1) හරහා නැවත ගලා එන අතර `GET /api/a2a/tasks?skill=conductor` මඟින් දැකගත හැක.
 
 ---
 

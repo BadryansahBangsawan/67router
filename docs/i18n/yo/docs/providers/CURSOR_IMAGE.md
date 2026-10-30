@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ń ṣí **ìṣẹ̀dá àwòrán** ètò Cursor síta lórí `POST /v1/images/generations` nípasẹ̀ id olùpèsè kan náà bí ìfọ̀rọ̀wérọ̀: `cursor` (orúkọ ìnagijẹ `cu`).
+67router ń ṣí **ìṣẹ̀dá àwòrán** ètò Cursor síta lórí `POST /v1/images/generations` nípasẹ̀ id olùpèsè kan náà bí ìfọ̀rọ̀wérọ̀: `cursor` (orúkọ ìnagijẹ `cu`).
 
 | Ààyè                 | Iye                                                                                     |
 | -------------------- | --------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute ń ṣí **ìṣẹ̀dá àwòrán** ètò Cursor síta lórí `POST /
 
 ## Ìdí tí Agent CLI fi wà
 
-Ìfọ̀rọ̀wérọ̀ Cursor nínú OmniRoute ń lo `agent.v1.AgentService/Run` (protobuf). Ọ̀nà yẹn **kọ̀** àwọn irinṣẹ́ oníbàárà tí a kọ sínú rẹ̀ (shell, write, …). Ìṣẹ̀dá àwòrán jẹ́ irinṣẹ́ abinibi Cursor tí **`agent` CLI** ń ṣiṣẹ́ lórí seat náà. Nítorí náà, olùṣàmúlò àwòrán máa ń dá `agent` sílẹ̀ pẹ̀lú prompt tí a ti tì pa àti workspace ìgbà díẹ̀ fún ìbéèrè kọ̀ọ̀kan (ní ìrísí kan náà bí àwọn afárá seat àwùjọ), lẹ́yìn náà ó máa ń dá `b64_json` tó bá OpenAI mu padà.
+Ìfọ̀rọ̀wérọ̀ Cursor nínú 67router ń lo `agent.v1.AgentService/Run` (protobuf). Ọ̀nà yẹn **kọ̀** àwọn irinṣẹ́ oníbàárà tí a kọ sínú rẹ̀ (shell, write, …). Ìṣẹ̀dá àwòrán jẹ́ irinṣẹ́ abinibi Cursor tí **`agent` CLI** ń ṣiṣẹ́ lórí seat náà. Nítorí náà, olùṣàmúlò àwòrán máa ń dá `agent` sílẹ̀ pẹ̀lú prompt tí a ti tì pa àti workspace ìgbà díẹ̀ fún ìbéèrè kọ̀ọ̀kan (ní ìrísí kan náà bí àwọn afárá seat àwùjọ), lẹ́yìn náà ó máa ń dá `b64_json` tó bá OpenAI mu padà.
 
 ## Ìdíwọ̀n ìráyè (Àwọn Òfin Líle #15 + #17)
 
@@ -35,7 +35,7 @@ náà tí a lò fún ìyókù tier `LOCAL_ONLY`.
 Counter/queue inú memory tí a fi mọ́ instance module
 Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) ló ń fipá mú
 `CURSOR_IMG_MAX_CONCURRENT`. Ó ń fi tọ́ ṣe ààlà àwọn spawn `agent` tó lè ṣiṣẹ́ lẹ́ẹ̀kan
-náà nínú process OmniRoute kan, ṣùgbọ́n **kò** ṣètò àjọṣe láàárín ọ̀pọ̀ process/instance
+náà nínú process 67router kan, ṣùgbọ́n **kò** ṣètò àjọṣe láàárín ọ̀pọ̀ process/instance
 tó ń pín seat Cursor kan náà (fún àpẹẹrẹ, deployment tó ní ọ̀pọ̀ replica) — instance
 kọ̀ọ̀kan ń fi ààlà tirẹ̀ tí kò gbára lé ti ẹlòmíràn múlẹ̀. Fún deployment instance kan ṣoṣo
 (èyí tó jẹ́ àtẹ̀jáde àìyípadà), èyí péye; àwọn deployment tí a ti ṣe horizontal scaling
@@ -45,7 +45,7 @@ wọ́n darí traffic àwòrán Cursor sí instance kan ṣoṣo.
 ## Àwọn ohun tí a nílò
 
 1. Account Cursor tí a ti sopọ̀ nínú dashboard (OAuth tàbí API key `crsr_…`).
-2. Binary Cursor Agent gbọ́dọ̀ wà níbi tí process OmniRoute ti lè dé:
+2. Binary Cursor Agent gbọ́dọ̀ wà níbi tí process 67router ti lè dé:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, tàbí
    - `~/.local/bin/agent`, tàbí
    - `providerSpecificData.agentBin` lórí ìsopọ̀ Cursor.

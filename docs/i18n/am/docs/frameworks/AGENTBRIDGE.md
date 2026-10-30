@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge የOmniRoute MITM (Man-in-the-Middle) ፕሮክሲ ሲሆን፣ ከIDE AI ወኪሎች የሚመጣውን HTTPS ትራፊክ በመጥለፍ በOmniRoute የተዋሃደ የማዘዋወሪያ ሞተር በኩል እንደገና ያዞረዋል። **10 IDE ወኪሎችን** — Antigravity፣ Kiro፣ GitHub Copilot፣ GHE Copilot፣ OpenAI Codex፣ Cursor፣ Zed፣ Claude Code፣ Open Code እና Trae (በምርመራ ላይ) — ይደግፋል፤ ይህም OmniRouteን በገበያው ላይ ለAI ኮድ ረዳቶች እጅግ ሰፊ ሽፋን ያለው MITM ፕሮክሲ ያደርገዋል።
+AgentBridge የ67router MITM (Man-in-the-Middle) ፕሮክሲ ሲሆን፣ ከIDE AI ወኪሎች የሚመጣውን HTTPS ትራፊክ በመጥለፍ በ67router የተዋሃደ የማዘዋወሪያ ሞተር በኩል እንደገና ያዞረዋል። **10 IDE ወኪሎችን** — Antigravity፣ Kiro፣ GitHub Copilot፣ GHE Copilot፣ OpenAI Codex፣ Cursor፣ Zed፣ Claude Code፣ Open Code እና Trae (በምርመራ ላይ) — ይደግፋል፤ ይህም 67routerን በገበያው ላይ ለAI ኮድ ረዳቶች እጅግ ሰፊ ሽፋን ያለው MITM ፕሮክሲ ያደርገዋል።
 
 **የዳሽቦርድ መገኛ:** `/dashboard/tools/agent-bridge`
 **የጎን አሞሌ ቡድን:** Tools (ከCloud Agents በኋላ)
@@ -16,34 +16,34 @@ AgentBridge የOmniRoute MITM (Man-in-the-Middle) ፕሮክሲ ሲሆን፣ ከI
 
 ### AgentBridge ምንድን ነው?
 
-IDE ወኪል (ለምሳሌ፣ GitHub Copilot፣ Cursor፣ Claude Code) API ጥሪ ሲያደርግ፣ በቀጥታ ከላይኛው (upstream) AI አቅራቢ (OpenAI፣ Anthropic፣ ወዘተ) ጋር ይገናኛል። AgentBridge ያንን ግንኙነት በTLS ደረጃ በግልጽ ሁኔታ ያግደዋል — ምንም የወኪል ማዋቀሪያ ለውጥ ሳይጠይቅ — እና ጥያቄውን በOmniRoute በኩል እንደገና ይጽፈዋል።
+IDE ወኪል (ለምሳሌ፣ GitHub Copilot፣ Cursor፣ Claude Code) API ጥሪ ሲያደርግ፣ በቀጥታ ከላይኛው (upstream) AI አቅራቢ (OpenAI፣ Anthropic፣ ወዘተ) ጋር ይገናኛል። AgentBridge ያንን ግንኙነት በTLS ደረጃ በግልጽ ሁኔታ ያግደዋል — ምንም የወኪል ማዋቀሪያ ለውጥ ሳይጠይቅ — እና ጥያቄውን በ67router በኩል እንደገና ይጽፈዋል።
 
 ይህ ማለት የሚከተሉትን መሥራት ይችላሉ ማለት ነው፦
 
-- **ማንኛውንም ወኪል ወደ ማንኛውም አቅራቢ እንደገና ማስመራት**፦ Copilot ከOpenAI ጋር እየተነጋገረ ነው? ወደ Anthropic Claude፣ Gemini፣ ወይም ከOmniRoute 375 አቅራቢዎች ወደ ማንኛውም ያዞሩት።
+- **ማንኛውንም ወኪል ወደ ማንኛውም አቅራቢ እንደገና ማስመራት**፦ Copilot ከOpenAI ጋር እየተነጋገረ ነው? ወደ Anthropic Claude፣ Gemini፣ ወይም ከ67router 375 አቅራቢዎች ወደ ማንኛውም ያዞሩት።
 - **የሞዴል ማስማቶችን መተግበር**፦ `gemini-3-flash` → `claude-sonnet-4.7` በግልጽ ሁኔታ በአስተናጋጅ (handler) ደረጃ።
 - **የወኪሎችን ሁሉ ትራፊክ መከታተል**፦ እያንዳንዱ የተያዘ ጥያቄ ወደ [Traffic Inspector](./TRAFFIC_INSPECTOR.md) ይታተማል።
-- **የOmniRoute መቋቋምን መተግበር**፦ የተጣመረ መከፋፈል (combo routing)፣ የወሰን መቋረጫዎች (circuit breakers)፣ አማራጭ መንገዶች (fallbacks)፣ እና የወጪ ክትትል ለIDE ወኪል ትራፊክም ይሠራሉ።
+- **የ67router መቋቋምን መተግበር**፦ የተጣመረ መከፋፈል (combo routing)፣ የወሰን መቋረጫዎች (circuit breakers)፣ አማራጭ መንገዶች (fallbacks)፣ እና የወጪ ክትትል ለIDE ወኪል ትራፊክም ይሠራሉ።
 
 ### ከገበያ ጋር ያለው አቀማመጥ
 
-| ባህሪይ              | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ----------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity       |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot    |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)        |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex      |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE        |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries    |    —    |    ✓     |        —        |             ✓             |
-| Claude Code       |    —    |    —     |        ✓        |             ✓             |
-| Open Code         |    —    |    —     |        ✓        |             ✓             |
-| Trae              |    —    |    —     |        —        |        🔍 በምርመራ ላይ        |
-| የዳሽቦርድ UI         |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector |    ✗    |    ✗     |        ✓        |             ✓             |
-| የOmniRoute መከፋፈል  |    ✗    |    ✗     |        ✗        |             ✓             |
-| የሞዴል ማስማት UI      |    ✗    |    ✗     |        ✗        |             ✓             |
-| የማለፊያ ዝርዝር        |    ✗    |    ✗     |        ✓        |             ✓             |
-| የኋላኛ CA ምስክር ወረቀት |    ✗    |    ✗     |        ✓        |             ✓             |
+| ባህሪይ              | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ----------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity       |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot    |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)        |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex      |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE        |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries    |    —    |    ✓     |        —        |            ✓             |
+| Claude Code       |    —    |    —     |        ✓        |            ✓             |
+| Open Code         |    —    |    —     |        ✓        |            ✓             |
+| Trae              |    —    |    —     |        —        |       🔍 በምርመራ ላይ        |
+| የዳሽቦርድ UI         |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector |    ✗    |    ✗     |        ✓        |            ✓             |
+| የ67router መከፋፈል   |    ✗    |    ✗     |        ✗        |            ✓             |
+| የሞዴል ማስማት UI      |    ✗    |    ✗     |        ✗        |            ✓             |
+| የማለፊያ ዝርዝር        |    ✗    |    ✗     |        ✓        |            ✓             |
+| የኋላኛ CA ምስክር ወረቀት |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (ወደብ 443፣ CJS ልጅ ሂደት)
     │  ዒላማውን በ Host header SNI ይወስናል
     │  በ AgentBridge CA የተፈረመ ለእያንዳንዱ SNI የTLS ሰርቲፊኬት ያመነጫል
     ├── ከማለፊያ ዝርዝሩ ጋር ይዛመዳል? → TCP ቀጥታ ማሳለፊያ (ዲክሪፕት አይደረግም)
-    ├── ከዒላማ ጋር ይዛመዳል? → fetch → OmniRoute ራውተር (ወደብ 20128)
+    ├── ከዒላማ ጋር ይዛመዳል? → fetch → 67router ራውተር (ወደብ 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() በጥያቄ አካል/headers ላይ
     │               ├── TrafficBuffer.push() — ወደ Traffic Inspector ያትማል
@@ -205,7 +205,7 @@ IDEs የMITM ግንኙነቱን ከመቀበላቸው በፊት የAgentBridge C
 **Linux (NSS — Chrome/Firefox)፦**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain)፦**
@@ -261,10 +261,10 @@ TLS አሁንም አይሳካም — የMITM ምዝግብ ማስታወሻ የbac
 
 የምንጭ → ዒላማ ማዛመጃዎችን ለመግለጽ በእያንዳንዱ agent ካርድ ውስጥ ያለውን የሞዴል ማዛመጃ ሰንጠረዥ ይጠቀሙ፦
 
-| የምንጭ ሞዴል (የagent ቤተኛ) | የዒላማ ሞዴል (OmniRoute) |
-| --------------------- | -------------------- |
-| `gpt-4o`              | `claude-sonnet-4.7`  |
-| `*` (ሁሉን አቀፍ)         | `claude-haiku-4.7`   |
+| የምንጭ ሞዴል (የagent ቤተኛ) | የዒላማ ሞዴል (67router) |
+| --------------------- | ------------------- |
+| `gpt-4o`              | `claude-sonnet-4.7` |
+| `*` (ሁሉን አቀፍ)         | `claude-haiku-4.7`  |
 
 ሁሉን አቀፉ `*` ማንኛውንም ያልታወቀ ሞዴል ከተጠቀሰው ዒላማ ጋር ያዛምዳል። በ`agent_bridge_mappings` ሰንጠረዥ ውስጥ በቋሚነት ይቀመጣል።
 
@@ -277,7 +277,7 @@ TLS አሁንም አይሳካም — የMITM ምዝግብ ማስታወሻ የbac
 
 ### 3.5 የአደጋ ማሳሰቢያ
 
-AgentBridge IDEው ከላይኛ ደረጃ አቅራቢዎች ጋር ማንነቱን ለማረጋገጥ የሚጠቀምባቸውን ማረጋገጫዎች (OAuth tokens፣ API keys) ይጠልፋል። እነዚህ **ወደ ምዝግብ ከመጻፋቸው በፊት ይደበቃሉ** (§2.7ን ይመልከቱ)፣ ነገር ግን ለOmniRoute MITM ንብርብር የሚታዩ ናቸው። እያንዳንዱ ወኪል ለመጀመሪያ ጊዜ ሲነቃ ሊዘጋ የሚችል የአደጋ ማሳሰቢያ ሞዳል ያሳያል።
+AgentBridge IDEው ከላይኛ ደረጃ አቅራቢዎች ጋር ማንነቱን ለማረጋገጥ የሚጠቀምባቸውን ማረጋገጫዎች (OAuth tokens፣ API keys) ይጠልፋል። እነዚህ **ወደ ምዝግብ ከመጻፋቸው በፊት ይደበቃሉ** (§2.7ን ይመልከቱ)፣ ነገር ግን ለ67router MITM ንብርብር የሚታዩ ናቸው። እያንዳንዱ ወኪል ለመጀመሪያ ጊዜ ሲነቃ ሊዘጋ የሚችል የአደጋ ማሳሰቢያ ሞዳል ያሳያል።
 
 ### 3.6 ጥገና እና ምርመራዎች
 
@@ -396,7 +396,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### ለስሱ አስተናጋጆች የማለፊያ ዝርዝር
 
-የማለፊያ ዝርዝሩ የፋይናንስ ተቋማት፣ OAuth/SSO አቅራቢዎች እና ሌሎች ለስሱ አስተናጋጆች **ፈጽሞ ዲክሪፕት እንዳይደረጉ** ያረጋግጣል። የእነሱ TLS ትራፊክ እንደ ግልጽ TCP ቦይ ያልፋል — OmniRoute የተፈታውን ጽሑፍ ፈጽሞ አያይም።
+የማለፊያ ዝርዝሩ የፋይናንስ ተቋማት፣ OAuth/SSO አቅራቢዎች እና ሌሎች ለስሱ አስተናጋጆች **ፈጽሞ ዲክሪፕት እንዳይደረጉ** ያረጋግጣል። የእነሱ TLS ትራፊክ እንደ ግልጽ TCP ቦይ ያልፋል — 67router የተፈታውን ጽሑፍ ፈጽሞ አያይም።
 
 ነባሪ የማለፊያ ንድፎች የሚከተሉትን ያካትታሉ፦
 
@@ -447,7 +447,7 @@ sudo fuser -k 443/tcp  # በግድ ያቋርጡ (በጥንቃቄ ይጠቀሙ)
 
 AgentBridgeን ካስጀመሩ በኋላ IDEው የTLS ስህተቶችን ካሳየ፦
 
-1. ሰርተፍኬቱ መጫኑን ያረጋግጡ፦ `security find-certificate -c "OmniRoute AgentBridge"` (macOS) ወይም `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. ሰርተፍኬቱ መጫኑን ያረጋግጡ፦ `security find-certificate -c "OmniRoute MITM CA"` (macOS) ወይም `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. አንዳንድ መተግበሪያዎች የራሳቸውን የታመኑ ሰርተፍኬቶች ማከማቻ ይይዛሉ (Firefox፣ Chrome በLinux ላይ)። "Trust Cert"ን እንደገና ያስኪዱ እና ለNSS/Firefox የተለየውን የሰርተፍኬት ማከማቻ ያረጋግጡ።
 3. እምነት ከሰጡ በኋላ IDEውን እንደገና ያስጀምሩ — በሂደት ላይ ያሉ የTLS ክፍለ ጊዜዎች የድሮውን የእምነት ሁኔታ ይጠቀማሉ።
 
@@ -498,7 +498,7 @@ ipconfig /flushdns
 AgentBridge ጥያቄዎቹን ቢያቋርጥም ሁሉም ጥያቄዎች ካልተሳኩ፦
 
 1. ቢያንስ አንድ provider በ`/dashboard/providers` ላይ መገናኘቱን ያረጋግጡ
-2. የOmniRoute አገልጋይ ምዝግቦችን ያረጋግጡ፦ `APP_LOG_LEVEL=debug` በ`.env` ውስጥ
+2. የ67router አገልጋይ ምዝግቦችን ያረጋግጡ፦ `APP_LOG_LEVEL=debug` በ`.env` ውስጥ
 3. `OMNIROUTE_BASE_URL` ወደ ትክክለኛው የrouter መጨረሻ ነጥብ ማመልከቱን ያረጋግጡ (ነባሪ፦ `http://127.0.0.1:20128`)
 
 ---

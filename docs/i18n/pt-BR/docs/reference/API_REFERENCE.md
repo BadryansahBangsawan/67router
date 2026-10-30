@@ -6,7 +6,7 @@
 
 🌐 **Idiomas:** 🇺🇸 [Inglês](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Referência principal da API OmniRoute. Ela abrange a interface pública `/v1` e os endpoints de gerenciamento mais utilizados; o arquivo legível por máquina [`docs/openapi.yaml`](../openapi.yaml) e a árvore de rotas em `src/app/api/` são as fontes completas.
+Referência principal da API 67router. Ela abrange a interface pública `/v1` e os endpoints de gerenciamento mais utilizados; o arquivo legível por máquina [`docs/openapi.yaml`](../openapi.yaml) e a árvore de rotas em `src/app/api/` são as fontes completas.
 
 Para consultar o protocolo específico compatível com a OpenAI e a matriz de recursos dos provedores, consulte
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Resposta   | `HIT` ou `MISS` (sem streaming)                                                                                                                                                                                                     |
 | `X-OmniRoute-Idempotent` | Resposta   | `true` se desduplicada                                                                                                                                                                                                              |
 | `X-OmniRoute-Progress`   | Resposta   | `enabled` se o acompanhamento de progresso estiver ativado                                                                                                                                                                          |
-| `X-OmniRoute-Session-Id` | Resposta   | ID efetivo da sessão usado pelo OmniRoute                                                                                                                                                                                           |
+| `X-OmniRoute-Session-Id` | Resposta   | ID efetivo da sessão usado pelo 67router                                                                                                                                                                                            |
 | `X-OmniRoute-Request-Id` | Resposta   | ID de correlação da requisição (quando conhecido)                                                                                                                                                                                   |
-| `X-OmniRoute-Version`    | Resposta   | Versão da build do OmniRoute (sempre presente)                                                                                                                                                                                      |
+| `X-OmniRoute-Version`    | Resposta   | Versão da build do 67router (sempre presente)                                                                                                                                                                                       |
 | `X-OmniRoute-Cost-Saved` | Resposta   | Valor em USD que o cache evitou em um HIT (somente acertos de cache)                                                                                                                                                                |
 | `X-OmniRoute-Decision`   | Resposta   | Rastreamento de roteamento: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` é a estratégia do combo ou `single` para uma requisição sem combo) — sempre presente nas respostas de conclusão                           |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Fixação de conta por solicitação
 
-Quando um provedor tem várias conexões (contas ou chaves), o OmniRoute normalmente escolhe uma
+Quando um provedor tem várias conexões (contas ou chaves), o 67router normalmente escolhe uma
 por meio de sua estratégia de seleção de contas. Como alternativa, uma solicitação pode fixar
 uma conexão específica com o cabeçalho `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ fixar uma conta diferente por projeto:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Fonte: `src/sse/handlers/chat.ts` (leitura do cabeçalho), `src/sse/services/aut
 ## Leases exclusivas de sessões gerenciadas
 
 A lease exclusiva de sessão gerenciada é um contrato de roteamento opcional e neutro em relação ao cliente: um proprietário ativo
-mantém uma conexão OmniRoute elegível. Ela não concede um modelo, não exige OAuth, não identifica um
+mantém uma conexão 67router elegível. Ela não concede um modelo, não exige OAuth, não identifica um
 cliente específico nem exige um provedor específico.
 
 A chave de API usada na autenticação deve ter o escopo `lease:exclusive` e uma lista
@@ -190,7 +190,7 @@ O proprietário de uma lease ativa pode solicitar explicitamente metadados de ex
 
 Essa ação opcional de status é protegida, em uma única transação de banco de dados, pelo proprietário opaco, pela chave de API gerenciada autenticada e pela
 geração ativa exata. `displayName` contém somente o nome configurado da
-conexão após a remoção de espaços em branco nas extremidades; seu valor é `null` quando não existe um nome configurado seguro. O OmniRoute nunca o substitui por um
+conexão após a remoção de espaços em branco nas extremidades; seu valor é `null` quando não existe um nome configurado seguro. O 67router nunca o substitui por um
 e-mail ou por uma identidade de conta gerada. O valor do provedor é um rótulo de exibição não sensível e nunca
 um identificador gerado de provedor compatível. Credenciais, tokens, cookies, IDs brutos de conexão ou de chave de
 API, hashes de proprietário, segredos de fencing e dados internos de roteamento são excluídos.
@@ -231,7 +231,7 @@ A contenção temporária retorna HTTP `429` com `Retry-After` e:
 
 Essa resposta significa apenas que o conjunto comum de conexões elegíveis não estava vazio e que todos os candidatos livres estavam
 mantidos por uma lease ativa de outro proprietário. Modelos/provedores não compatíveis, incompatibilidade de política, cooldown, cota,
-integridade e outras falhas comuns de elegibilidade mantêm suas respostas existentes do OmniRoute.
+integridade e outras falhas comuns de elegibilidade mantêm suas respostas existentes do 67router.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request da Jina e **os encaminha intactos** para `https://api.jina.a
 ```
 
 Os valores nativos `{ image | audio | video | pdf }` podem ser uma URL HTTPS pública, um URI `data:` ou dados
-base64 brutos. O OmniRoute não converte esses objetos em strings nem busca URLs de imagens nativas — a Jina recupera
+base64 brutos. O 67router não converte esses objetos em strings nem busca URLs de imagens nativas — a Jina recupera
 a mídia pública por conta própria. Campos adicionais da Jina (`task`, `normalized`, `truncate`, `embedding_type`) são
 encaminhados. SKUs da Jina exclusivos para texto ainda rejeitam documentos que não sejam de texto.
 
@@ -454,7 +454,7 @@ chamador, portanto o código cliente não precisa tratar o provedor de forma esp
 
 ### Autenticação e resolução de endpoint do Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` reutiliza a mesma autenticação do Vertex AI que o OmniRoute já oferece para
+`vertex-deepseek-ocr` reutiliza a mesma autenticação do Vertex AI que o 67router já oferece para
 tráfego de chat/imagem (`open-sse/executors/vertex.ts`): a chave de API da conexão é uma
 credencial JSON de Service Account (trocada por um token de acesso OAuth de curta duração por meio do fluxo
 JWT bearer) ou um token de acesso OAuth já emitido, usado como está. A URL do endpoint upstream é o
@@ -478,7 +478,7 @@ Authorization: Bearer sua-chave-de-api
 
 ### Preços dos modelos (`pricing`)
 
-Uma entrada contém um objeto `pricing` quando o OmniRoute conhece o preço do modelo. O preço vem
+Uma entrada contém um objeto `pricing` quando o 67router conhece o preço do modelo. O preço vem
 da tabela de preços usada pela contabilização de custos: valores padrão integrados, preços sincronizados e
 substituições definidas por meio de `/api/pricing`. Esses são preços de tabela, portanto, provedores de assinatura também
 exibem um preço por token.
@@ -634,8 +634,8 @@ Use este endpoint quando um sidecar for executado fora do processo e não puder 
 
 ## Geração de áudio do ElevenLabs
 
-Configure uma conexão de provedor `elevenlabs` no OmniRoute com sua chave de API do ElevenLabs.
-Os clientes se autenticam com sua chave do **OmniRoute** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Configure uma conexão de provedor `elevenlabs` no 67router com sua chave de API do ElevenLabs.
+Os clientes se autenticam com sua chave do **67router** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 o gateway fornece a chave armazenada do provedor como `xi-api-key`. Nunca envie uma chave do ElevenLabs
 como o token bearer do gateway.
 
@@ -700,7 +700,7 @@ rotas nativas retornam os códigos de status e os corpos de erro do serviço ups
 restrição de plano e `429` para um limite de cota. Os cabeçalhos `character-cost`, `song-id`, `request-id` e `retry-after`
 são preservados quando presentes. Um saldo de créditos gratuitos não garante acesso a todos os
 modelos de música, formatos de saída ou recursos da API: o ElevenLabs determina a autorização para cada solicitação.
-O endpoint unificado preserva os códigos de status de erro no envelope de erro normalizado do OmniRoute.
+O endpoint unificado preserva os códigos de status de erro no envelope de erro normalizado do 67router.
 
 Contratos upstream: [efeitos sonoros](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [composição musical](https://elevenlabs.io/docs/api-reference/music/compose) e
@@ -741,7 +741,7 @@ Contratos upstream: [efeitos sonoros](https://elevenlabs.io/docs/api-reference/t
 
 Todas as rotas POST seguem o mesmo formato: `Bearer your-api-key` + corpo JSON validado pelo Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` etc.; consulte `src/shared/validation/schemas.ts`). Um status 4xx é retornado em caso de falha na validação do schema.
 
-Para clientes que não conseguem anexar `Authorization: Bearer ...`, o OmniRoute também aceita chaves de API na URL por meio da compatibilidade com parâmetros de consulta (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ou dos endpoints dedicados `/api/v1/vscode/{token}/...` documentados abaixo.
+Para clientes que não conseguem anexar `Authorization: Bearer ...`, o 67router também aceita chaves de API na URL por meio da compatibilidade com parâmetros de consulta (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ou dos endpoints dedicados `/api/v1/vscode/{token}/...` documentados abaixo.
 
 ```bash
 # Reordenação (provedor do registro na nuvem ou nó de provedor compatível com OpenAI como "<prefix>/<model>")
@@ -903,7 +903,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 O Parallel Extract (`parallel-search`, mesma chave de API do Parallel Search) retorna apenas
 Markdown — qualquer outro `format` resulta em um `400` — e limita o conteúdo a 100.000 caracteres. Quando
 a própria página de destino não pode ser extraída, o serviço upstream informa isso em uma resposta HTTP 200;
-o OmniRoute expõe essa situação como um `422` com uma mensagem fixa.
+o 67router expõe essa situação como um `422` com uma mensagem fixa.
 
 | Método | Caminho         | Descrição                                                    |
 | ------ | --------------- | ------------------------------------------------------------ |
@@ -965,14 +965,14 @@ deve ser o ponto de entrada ativo (e é, por padrão, quando `app/server-ws.mjs`
 A **CLI Codex** da OpenAI valida o nome do modelo no lado do cliente quando
 `supports_websockets = true` e **rejeita IDs prefixados com o provedor**, como
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Envie o ID **puro** (por exemplo, `gpt-5.5`). A ponte do OmniRoute funciona
+a ChatGPT account`). Envie o ID **puro** (por exemplo, `gpt-5.5`). A ponte do 67router funciona
 somente com codex, portanto resolve novamente um ID puro como um modelo codex
 (`resolveCodexWsModelInfo`) antes de estabelecer o túnel upstream — embora um
 `gpt-5.5` puro fosse, de outra forma, roteado para outro provedor via HTTP.
 
 #### Configuração da CLI Codex da OpenAI
 
-Direcione a CLI Codex para o OmniRoute adicionando um provedor personalizado com suporte a WebSocket
+Direcione a CLI Codex para o 67router adicionando um provedor personalizado com suporte a WebSocket
 em `~/.codex/config.toml` (use um `CODEX_HOME` separado para evitar alterar
 uma configuração existente):
 
@@ -985,15 +985,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # sem barra final; a URL WS é derivada (use https/wss em produção)
 wire_api = "responses"                    # único valor compatível desde fevereiro de 2026
 supports_websockets = true                # habilita o transporte Responses via WS
-env_key = "OMNIROUTE_API_KEY"             # contém a chave de API do OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # contém a chave de API do 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # uma chave de API do OmniRoute (qualquer chave se REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # uma chave de API do 67router (qualquer chave se REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-A CLI faz o upgrade de `base_url + /responses` para um WebSocket, e o OmniRoute estabelece um túnel
+A CLI faz o upgrade de `base_url + /responses` para um WebSocket, e o 67router estabelece um túnel
 para a conexão OAuth do codex selecionada. Validado de ponta a ponta com o servidor
 local: o ChatGPT retorna `codex.rate_limits` + `response.created` e transmite a
 conclusão via streaming.
@@ -1077,7 +1077,7 @@ percentuais apresentados pela **saída em texto simples** e pela **saída JSON**
 
 #### A Fórmula de Ajuste do Limite de Corte
 
-O OmniRoute oferece suporte a limites de corte proativos de cota para evitar o esgotamento upstream (configurados por meio de
+O 67router oferece suporte a limites de corte proativos de cota para evitar o esgotamento upstream (configurados por meio de
 `quotaWindowThresholds` da conexão, padrões do provedor ou configurações globais de resiliência). Quando um limite de corte
 (por exemplo, `cutoff = 25%`) está ativo em uma janela de cota, o renderizador de texto calcula a disponibilidade restante da seguinte forma:
 
@@ -1616,7 +1616,7 @@ Observações:
 
 - Os aliases tokenizados reutilizam os mesmos manipuladores que `/v1/*` e `/api/tags`; os formatos das respostas permanecem idênticos.
 - Prefira `Authorization: Bearer ...` sempre que o cliente oferecer suporte a cabeçalhos personalizados.
-- Tokens baseados em URL podem aparecer em logs de proxy reverso, no histórico do navegador e em telemetria fora do OmniRoute. Trate-os como uma opção de compatibilidade, não como o modo de autenticação padrão.
+- Tokens baseados em URL podem aparecer em logs de proxy reverso, no histórico do navegador e em telemetria fora do 67router. Trate-os como uma opção de compatibilidade, não como o modo de autenticação padrão.
 
 ---
 
@@ -1724,7 +1724,7 @@ Combos de roteamento de nível superior (já resumidos em `/api/combos*`) també
 
 ## Webhooks
 
-Assinaturas de webhooks de saída para eventos do OmniRoute (conclusão de solicitações, esgotamento de cota, rotação de chaves etc.).
+Assinaturas de webhooks de saída para eventos do 67router (conclusão de solicitações, esgotamento de cota, rotação de chaves etc.).
 
 | Método | Caminho                   | Descrição                                                                         |
 | ------ | ------------------------- | --------------------------------------------------------------------------------- |
@@ -1757,7 +1757,7 @@ Usadas pelo subsistema de gerenciamento automático de chaves para emitir e rota
 
 ## Protocolo de Agentes
 
-Tarefas de agentes na nuvem (Claude Code, Codex Cloud, OpenHands etc.) executadas remotamente em nome dos usuários do OmniRoute.
+Tarefas de agentes na nuvem (Claude Code, Codex Cloud, OpenHands etc.) executadas remotamente em nome dos usuários do 67router.
 
 | Método | Caminho                       | Descrição                                                                                                                                                |
 | ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1803,7 +1803,7 @@ Proxies HTTP(S)/SOCKS de saída que podem ser atribuídos a provedores, contas o
 
 ## Resiliência (estendida)
 
-O OmniRoute disponibiliza três mecanismos independentes para falhas temporárias; os endpoints de gerenciamento abaixo permitem que os operadores consultem e substituam suas configurações:
+O 67router disponibiliza três mecanismos independentes para falhas temporárias; os endpoints de gerenciamento abaixo permitem que os operadores consultem e substituam suas configurações:
 
 | Escopo                | Armazenamento de estado                           | Consulta                                  | Redefinição / limpeza                                    |
 | --------------------- | ------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------- |
@@ -1838,7 +1838,7 @@ Para obter a referência conceitual completa e os valores padrão dos disjuntore
 
 ## Habilidades
 
-Framework de habilidades para estender o OmniRoute com manipuladores executáveis personalizados, além de integrações com marketplaces.
+Framework de habilidades para estender o 67router com manipuladores executáveis personalizados, além de integrações com marketplaces.
 
 | Método | Caminho                           | Descrição                                                                                                                                     |
 | ------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1875,7 +1875,7 @@ Armazenamento persistente de memória conversacional/factual, com escopo por cha
 
 ## Servidor MCP
 
-O OmniRoute inclui um servidor Model Context Protocol integrado com 3 transportes (stdio, SSE, streamable-http) e ferramentas com escopo definido. Os endpoints do painel abaixo leem dados de status/auditoria e fazem proxy dos transportes HTTP.
+O 67router inclui um servidor Model Context Protocol integrado com 3 transportes (stdio, SSE, streamable-http) e ferramentas com escopo definido. Os endpoints do painel abaixo leem dados de status/auditoria e fazem proxy dos transportes HTTP.
 
 | Método | Caminho | Descrição |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1897,7 +1897,7 @@ O OmniRoute inclui um servidor Model Context Protocol integrado com 3 transporte
 
 ## Servidor A2A
 
-O OmniRoute expõe um endpoint A2A (Agente para Agente) JSON-RPC 2.0, além de um wrapper REST para uso em inspeção/painéis.
+O 67router expõe um endpoint A2A (Agente para Agente) JSON-RPC 2.0, além de um wrapper REST para uso em inspeção/painéis.
 
 ### JSON-RPC
 
@@ -2126,7 +2126,7 @@ Endpoints exclusivos para administradores destinados ao gerenciamento operaciona
 
 ## Gerenciamento de Ferramentas de CLI
 
-Gerencie ferramentas de CLI que se integram ao OmniRoute (antigravity, commandCode,
+Gerencie ferramentas de CLI que se integram ao 67router (antigravity, commandCode,
 devin-cli etc.). Consulte a [Referência de Provedores](./PROVIDER_REFERENCE.md) para obter a lista completa.
 
 | Método | Caminho                                 | Descrição                                                                                                                                                                        |
@@ -2237,7 +2237,7 @@ Consulte [Framework de Skills](../frameworks/SKILLS.md) para obter todos os deta
 
 ## Plugins
 
-Gerencie plugins do OmniRoute (extensões de terceiros).
+Gerencie plugins do 67router (extensões de terceiros).
 
 | Método | Caminho                            | Descrição                                 |
 | ------ | ---------------------------------- | ----------------------------------------- |

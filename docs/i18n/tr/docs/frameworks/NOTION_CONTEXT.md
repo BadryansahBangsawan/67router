@@ -11,12 +11,12 @@
 
 ## Nedir?
 
-OmniRoute, yerleşik MCP sunucusu aracılığıyla ajanların erişebildiği bir okuma/yazma
+67router, yerleşik MCP sunucusu aracılığıyla ajanların erişebildiği bir okuma/yazma
 bilgi tabanı olan **Notion** çalışma alanına **bağlam kaynağı** olarak bağlanabilir. Bir
 Notion entegrasyon token'ı yapılandırıldıktan sonra MCP araçları, bir LLM'in sayfalarda
 ve veritabanlarında arama yapmasına, sayfa içeriklerini ve blok ağaçlarını okumasına,
 filtreler/sıralamalar ile veritabanlarını sorgulamasına ve yeni bloklar eklemesine olanak
-tanır. Tüm bu işlemler OmniRoute üzerinden (yeniden deneme, zaman aşımı ve hata
+tanır. Tüm bu işlemler 67router üzerinden (yeniden deneme, zaman aşımı ve hata
 sınıflandırmasıyla) gerçekleştirilir; böylece model hiçbir zaman Notion API'sine
 doğrudan erişmez.
 
@@ -43,7 +43,7 @@ REST API'si üzerinden yapılandırın.
 
 > [!NOTE]
 > Token, bir **Notion dâhilî entegrasyon token'ıdır**. Şu adreste bir entegrasyon
-> oluşturun: <https://www.notion.com/my-integrations>. Ardından OmniRoute'un erişmesini
+> oluşturun: <https://www.notion.com/my-integrations>. Ardından 67router'un erişmesini
 > istediğiniz sayfaları/veritabanlarını bu entegrasyonla paylaşın (Notion'ın izin modeli
 > çalışma alanı genelinde değil, paylaşım tabanlıdır).
 
@@ -63,7 +63,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Üç yöntemin tamamı pano kimlik doğrulaması (`isAuthenticated`) gerektirir. `POST`
-isteğinde OmniRoute, token'ı kaydeder ve hemen 1 sonuçlu bir test araması çalıştırır;
+isteğinde 67router, token'ı kaydeder ve hemen 1 sonuçlu bir test araması çalıştırır;
 Notion bir hata nesnesi döndürürse token temizlenir ve çağrı `400` ile başarısız olur.
 
 ## MCP araçları (6)

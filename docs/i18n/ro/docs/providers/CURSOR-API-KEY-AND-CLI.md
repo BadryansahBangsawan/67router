@@ -4,18 +4,18 @@
 
 ---
 
-Două modalități de a plasa Cursor în spatele OmniRoute fără o sesiune IDE:
+Două modalități de a plasa Cursor în spatele 67router fără o sesiune IDE:
 
 1. **Furnizorul `cursor-api`** (cardul „Cursor API”, alias `cua`): un furnizor
    bazat pe cheie API care deține o cheie API de utilizator Cursor (`crsr_…`,
-   generată la `https://cursor.com/dashboard/api`). Orice client OmniRoute poate
+   generată la `https://cursor.com/dashboard/api`). Orice client 67router poate
    apoi accesa modelele Cursor prin `/v1/chat/completions` ca
    `cursor-api/<model>` sau `cua/<model>`, beneficiind de straturile obișnuite
    pentru cote, fallback și jurnalizare. Furnizorul IDE (`cursor`, sesiune
    OAuth/IDE) rămâne neschimbat.
 2. **Redirecționare transparentă pentru Cursor CLI**: configurați Cursor CLI
-   (`agent`) să utilizeze OmniRoute, astfel încât fiecare RPC efectuat de CLI să
-   fie autentificat cu o cheie API OmniRoute, redirecționat către Cursor folosind
+   (`agent`) să utilizeze 67router, astfel încât fiecare RPC efectuat de CLI să
+   fie autentificat cu o cheie API 67router, redirecționat către Cursor folosind
    acreditările unei conexiuni `cursor-api` și înregistrat în pagina Logs.
 
 ## De ce este schimbată cheia
@@ -63,7 +63,7 @@ Note:
 
 - Lista de modele pentru `cursor-api` provine din registrul Cursor static
   (aceeași listă pe care furnizorul IDE o folosește ca fallback); instalarea
-  `cursor-agent` pe gazda OmniRoute nu este necesară.
+  `cursor-agent` pe gazda 67router nu este necesară.
 - `POST /api/providers/{id}/refresh-cursor` este destinat exclusiv furnizorului
   IDE `cursor`; conexiunile `cursor-api` nu au nicio sesiune IDE de reînnoit.
 
@@ -72,7 +72,7 @@ Note:
 Pentru `cursor` / `cu` și `cursor-api` / `cua`, normalizatorul comun pentru
 nivelul de efort Claude păstrează intact ID-ul modelului solicitat. Cursor poate
 publica un sufix precum `-low` ca parte a unui ID real de model, nu ca alias
-OmniRoute pentru nivelul de efort. Executorul Cursor păstrează o potrivire exactă
+67router pentru nivelul de efort. Executorul Cursor păstrează o potrivire exactă
 cu catalogul activ; atunci când nu există nicio potrivire, resolverul său de
 modele existent gestionează fallback-ul de la sufix la parametru.
 
@@ -87,19 +87,19 @@ Rută: `src/app/api/cursor-cli/[...path]/route.ts` →
 înregistrat în `src/shared/constants/publicApiRoutes.ts`, deoarece gestionarul
 aplică propria autentificare:
 
-| Cale                                                                                                                        | Autentificare așteptată de la CLI | Ce face OmniRoute                                                                                                                                                                            |
+| Cale                                                                                                                        | Autentificare așteptată de la CLI | Ce face 67router                                                                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                          | `Bearer <cheie API OmniRoute>`    | Validează cheia, emite un JWT HS256 valabil 1 h (semnat cu `JWT_SECRET`) și îl returnează                                                                                                    |
+| `POST /auth/exchange_user_api_key`                                                                                          | `Bearer <cheie API 67router>`     | Validează cheia, emite un JWT HS256 valabil 1 h (semnat cu `JWT_SECRET`) și îl returnează                                                                                                    |
 | orice altă cale (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <acel JWT>`               | Verifică emitentul/publicul-țintă/expirarea, alege o conexiune `cursor-api` activă, înlocuiește antetul Authorization cu tokenul Cursor obținut prin schimb și retransmite răspunsul în flux |
 
 CLI-ul decodează `exp` din orice token pe care îl primește, astfel încât furnizarea
 unui token opac îl determină să efectueze din nou schimbul înainte de aproape fiecare
-cerere; JWT-ul emis evită acest lucru. Un răspuns 401 de la OmniRoute determină CLI-ul
+cerere; JWT-ul emis evită acest lucru. Un răspuns 401 de la 67router determină CLI-ul
 să efectueze din nou schimbul.
 
 ### Configurare
 
-1. Creați o cheie API OmniRoute (Panou de control → Chei API) și o conexiune
+1. Creați o cheie API 67router (Panou de control → Chei API) și o conexiune
    `cursor-api`.
 2. Configurați CLI-ul să utilizeze HTTP/1.1 pentru fluxul agentului. În
    `~/.cursor/cli-config.json`:
@@ -112,7 +112,7 @@ să efectueze din nou schimbul.
    o gazdă de agent configurată separat și numai apelurile RPC ale planului de
    control trec prin punctul final.
 
-3. Rulați CLI-ul prin OmniRoute:
+3. Rulați CLI-ul prin 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -121,18 +121,18 @@ să efectueze din nou schimbul.
    ```
 
 Fiecare etapă apare în Jurnale cu furnizorul `cursor-api`, tipul cererii
-`cursor-cli`, calea `/api/cursor-cli/<rpc>`, fiind atribuită cheii API OmniRoute
+`cursor-cli`, calea `/api/cursor-cli/<rpc>`, fiind atribuită cheii API 67router
 și conexiunii care a deservit-o.
 
 ### Moduri de eșec
 
-| Situație                                              | Răspuns către CLI                                        |
-| ----------------------------------------------------- | -------------------------------------------------------- |
-| Cheie OmniRoute necunoscută și `REQUIRE_API_KEY=true` | 401 `unauthenticated` la efectuarea schimbului           |
-| `REQUIRE_API_KEY=false`                               | sesiune anonimă (reflectă comportamentul `/v1/*`)        |
-| JWT de sesiune expirat / străin / modificat           | 401, CLI-ul efectuează din nou schimbul                  |
-| Cheie API OmniRoute revocată după schimb              | 401 la următorul RPC                                     |
-| Nicio conexiune `cursor-api` activă                   | 503 `unavailable`                                        |
-| Cursor respinge cheia conexiunii                      | 401 `unauthenticated`, sesiunea din cache este eliminată |
-| Serviciul din amonte nu poate fi accesat              | 502 `unavailable` (mesaj igienizat)                      |
-| `JWT_SECRET` nu este setată                           | 503 la efectuarea schimbului                             |
+| Situație                                             | Răspuns către CLI                                        |
+| ---------------------------------------------------- | -------------------------------------------------------- |
+| Cheie 67router necunoscută și `REQUIRE_API_KEY=true` | 401 `unauthenticated` la efectuarea schimbului           |
+| `REQUIRE_API_KEY=false`                              | sesiune anonimă (reflectă comportamentul `/v1/*`)        |
+| JWT de sesiune expirat / străin / modificat          | 401, CLI-ul efectuează din nou schimbul                  |
+| Cheie API 67router revocată după schimb              | 401 la următorul RPC                                     |
+| Nicio conexiune `cursor-api` activă                  | 503 `unavailable`                                        |
+| Cursor respinge cheia conexiunii                     | 401 `unauthenticated`, sesiunea din cache este eliminată |
+| Serviciul din amonte nu poate fi accesat             | 502 `unavailable` (mesaj igienizat)                      |
+| `JWT_SECRET` nu este setată                          | 503 la efectuarea schimbului                             |

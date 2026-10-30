@@ -4,15 +4,15 @@
 
 ---
 
-Delegiertes **Context Editing** ist eine ausschließlich für Claude verfügbare Funktion zur Kontextverwaltung. Im Gegensatz zu den lokalen Komprimierungs-Engines von OmniRoute (Caveman, RTK, LLMLingua, gestapelte Pipelines) — die den Request-Body umschreiben, _bevor_ er den Proxy verlässt — weist Context Editing den **Provider** an, veraltete Tool-Use-/Tool-Result-Blöcke aus seinem eigenen laufenden Kontextfenster zu entfernen. OmniRoute fügt lediglich einen Body-Parameter (`context_management.edits[]`) hinzu; Claude führt die eigentliche Bereinigung anhand seines eigenen Tokenizers durch.
+Delegiertes **Context Editing** ist eine ausschließlich für Claude verfügbare Funktion zur Kontextverwaltung. Im Gegensatz zu den lokalen Komprimierungs-Engines von 67router (Caveman, RTK, LLMLingua, gestapelte Pipelines) — die den Request-Body umschreiben, _bevor_ er den Proxy verlässt — weist Context Editing den **Provider** an, veraltete Tool-Use-/Tool-Result-Blöcke aus seinem eigenen laufenden Kontextfenster zu entfernen. 67router fügt lediglich einen Body-Parameter (`context_management.edits[]`) hinzu; Claude führt die eigentliche Bereinigung anhand seines eigenen Tokenizers durch.
 
-Diese Funktion ist ihrem Wesen nach delegiert: Andere Provider lehnen den Parameter ab, daher beschränkt OmniRoute sie strikt auf Claude und Claude-Code-kompatible Relays.
+Diese Funktion ist ihrem Wesen nach delegiert: Andere Provider lehnen den Parameter ab, daher beschränkt 67router sie strikt auf Claude und Claude-Code-kompatible Relays.
 
 Verbindliche Referenz: `open-sse/config/contextEditing.ts` (Strategie-IDs, Body-Injektion, Telemetrieextraktion), `open-sse/executors/base.ts` (Injektions-Gate + 400-Fallback) und `open-sse/services/compression/types.ts` (Konfigurationsstruktur + Standardwert).
 
 ## Funktionsweise von `clear_tool_uses`
 
-OmniRoute injiziert eine einzelne Bearbeitung in den ausgehenden Anthropic-Messages-Body:
+67router injiziert eine einzelne Bearbeitung in den ausgehenden Anthropic-Messages-Body:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute injiziert eine einzelne Bearbeitung in den ausgehenden Anthropic-Messa
 - `trigger.value: 100000` — sobald die Eingabe-Tokens des Requests diesen Schwellenwert überschreiten, beginnt Claude damit, alte Tool-Use-/Result-Paare zu entfernen (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, der Standardwert von Anthropic).
 - `keep.value: 3` — die N neuesten Tool-Use-/Result-Paare bleiben unverändert erhalten (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Die Beta wird über den Header `anthropic-beta: context-management-2025-06-27` angekündigt, den OmniRoute bereits bei Claude-Requests ausgibt.
+Die Beta wird über den Header `anthropic-beta: context-management-2025-06-27` angekündigt, den 67router bereits bei Claude-Requests ausgibt.
 
-Die Injektion erfolgt durch `applyContextEditingToBody()` und ist **idempotent**: Wenn im Body bereits eine `clear_tool_uses`-Bearbeitung vorhanden ist (durch einen vorherigen Aufruf hinzugefügt oder vom Client bereitgestellt), bleibt der Body unverändert. Wenn außerdem eine `clear_thinking_20251015`-Bearbeitung vorhanden ist, sortiert OmniRoute die `clear_thinking`-Bearbeitung stabil an den Anfang, da Anthropic verlangt, dass `clear_thinking` vor `clear_tool_uses` im Array `edits[]` steht.
+Die Injektion erfolgt durch `applyContextEditingToBody()` und ist **idempotent**: Wenn im Body bereits eine `clear_tool_uses`-Bearbeitung vorhanden ist (durch einen vorherigen Aufruf hinzugefügt oder vom Client bereitgestellt), bleibt der Body unverändert. Wenn außerdem eine `clear_thinking_20251015`-Bearbeitung vorhanden ist, sortiert 67router die `clear_thinking`-Bearbeitung stabil an den Anfang, da Anthropic verlangt, dass `clear_thinking` vor `clear_tool_uses` im Array `edits[]` steht.
 
 ## Der Aktivierungsschalter pro Kombination
 
@@ -126,7 +126,7 @@ Echtes Claude führt die Beta in `ANTHROPIC_BETA_BASE` mit und gelangt nicht auf
 
 ## `applied_edits`-Telemetrie
 
-Nach einer Claude-Antwort zeichnet OmniRoute auf, wie viel Kontext der Provider tatsächlich
+Nach einer Claude-Antwort zeichnet 67router auf, wie viel Kontext der Provider tatsächlich
 gelöscht hat. Dies wird **nicht** gestreamt — die Daten werden nach bestem Bemühen aus dem
 nicht gestreamten Antwort-Body extrahiert und wirken sich niemals auf die Antwort aus
 (Telemetriefehler werden unterdrückt).
@@ -161,14 +161,14 @@ RTK/Caveman/LLMLingua unterschieden werden.
 
 | Aspekt              | Lokale Engines (Caveman / RTK / LLMLingua / stacked) | Delegierte Kontextbearbeitung                              |
 | ------------------- | ---------------------------------------------------- | ---------------------------------------------------------- |
-| Ausführungsort      | In OmniRoute, bevor die Anfrage den Proxy verlässt   | Beim Anbieter (Claude), serverseitig                       |
+| Ausführungsort      | In 67router, bevor die Anfrage den Proxy verlässt    | Beim Anbieter (Claude), serverseitig                       |
 | Bearbeiteter Inhalt | Prompt-/Kontext-/Tool-Ergebnistext                   | Alte Tool-Aufruf-/Tool-Ergebnisblöcke                      |
 | Anbieterumfang      | Alle Anbieter                                        | Nur `claude` + `anthropic-compatible-cc-*`                 |
 | Umschalter          | Einstellungen des Komprimierungsmodus                | `contextEditing.enabled`                                   |
 | Fehlerverhalten     | Fail-open (Originaltext)                             | 400-Fallback: Parameter entfernen, einmal erneut versuchen |
 | Einsparungsmetrik   | `engine: <engine id>`                                | `engine: "context-editing"`                                |
 
-Beide Ansätze ergänzen sich: Lokale Engines komprimieren die von OmniRoute gesendeten Bytes; die Kontextbearbeitung ermöglicht es
+Beide Ansätze ergänzen sich: Lokale Engines komprimieren die von 67router gesendeten Bytes; die Kontextbearbeitung ermöglicht es
 Claude, den laufenden Kontext über mehrere Interaktionen hinweg zu bereinigen. Beide können gleichzeitig aktiviert werden.
 
 ## Siehe auch

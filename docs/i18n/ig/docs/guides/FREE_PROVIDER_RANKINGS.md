@@ -4,7 +4,7 @@
 
 ---
 
-> **Nchịkọta dị mkpirikpi**: OmniRoute na-ahazi ndị na-enye ọrụ **n’efu** dịka ogo ụdị ha si dị site n’iji **akara ELO nke Arena AI
+> **Nchịkọta dị mkpirikpi**: 67router na-ahazi ndị na-enye ọrụ **n’efu** dịka ogo ụdị ha si dị site n’iji **akara ELO nke Arena AI
 > (ụdị LMArena)**. Mepee ibe **Nhazi Ndị Na-enye Ọrụ N’efu** na
 > dashboard ka ị hụ ndị na-enye ọrụ n’efu na-eweta ụdị kacha ike maka ọrụ gị —
 > n’ozuzu, ma ọ bụ mgbe e nyochara ha dịka ngalaba si dị (ide koodu, ntụle, akwụkwọ nkọwa, ịchọpụta ma dozie njehie).
@@ -13,7 +13,7 @@
 
 ## Ihe Ọ Bụ
 
-OmniRoute debanyere ndị na-enye ọrụ 375, gụnyere ndenye ndepụta 155 e gosipụtara **efu/enweghị njirimara**
+67router debanyere ndị na-enye ọrụ 375, gụnyere ndenye ndepụta 155 e gosipụtara **efu/enweghị njirimara**
 (enweghị njirimara,
 OAuth ogo efu, ma ọ bụ igodo API ogo efu — lee
 [Ntuziaka Ogo Efu](../getting-started/FREE-TIERS-GUIDE.md) na ndekọ
@@ -129,9 +129,9 @@ na `code` — site na API bọọdụ ndị-isi Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Ndenye ọ bụla na bọọdụ ndị-isi
 nwere aha model, vendor, `score` ELO, etiti ntụkwasị obi, na ọnụọgụ votu.
 
-Ụdịdị bọọdụ ndị-isi na-adaba na ụdịdị ọrụ OmniRoute:
+Ụdịdị bọọdụ ndị-isi na-adaba na ụdịdị ọrụ 67router:
 
-| Bọọdụ ndị-isi Arena | Ụdịdị ọrụ OmniRoute                               |
+| Bọọdụ ndị-isi Arena | Ụdịdị ọrụ 67router                                |
 | ------------------- | ------------------------------------------------- |
 | `text`              | `default`, `review`, `documentation`, `debugging` |
 | `code`              | `coding`                                          |
@@ -168,7 +168,7 @@ Mmekọrịta ahụ na-arụ ọrụ **na ndabara**:
 
 - Ọ na-agba otu ugboro mgbe server malitere, ma mesịa na-agba site na timer oge n'ogologo
   (`src/lib/arenaEloSync.ts`, nke ejikọrọ site na `src/instrumentation-node.ts`).
-- Ọ **anaghị egbochi ọrụ ma ọ dịghị mgbe ọ na-ebute ọdịda zuru ezu** — ọ bụrụ na iwetara data site n'isi mmalite adaa, OmniRoute ga-anọgide
+- Ọ **anaghị egbochi ọrụ ma ọ dịghị mgbe ọ na-ebute ọdịda zuru ezu** — ọ bụrụ na iwetara data site n'isi mmalite adaa, 67router ga-anọgide
   na-arụ ọrụ, ebe nhazi ọkwa ga-egosi naanị data ọma ikpeazụ (ma ọ bụ ọnọdụ efu).
 
 Environment variables abụọ na-achịkwa ya (a kọwara ha na
@@ -203,7 +203,7 @@ ndakọrịta na-agbanwe agbanwe (`findMatchingIntelligence` na `src/lib/freePro
 3. Ndakọrịta prefix (aha model dị na bọọdụ ndị-isi bụ prefix nke registry ID).
 
 N'akụkụ mmekọrịta, a na-ewepụ prefix vendor ndị a maara (`anthropic/`, `openai/`, `google/`, …)
-ma otu obere map alias na-agbasawanye aha canonical ka ọ bụrụ variant ndị OmniRoute na-eji
+ma otu obere map alias na-agbasawanye aha canonical ka ọ bụrụ variant ndị 67router na-eji
 n'ime ya, ka e wee nwee ike ịchọta model n'okpuru aha ọ bụla.
 
 ### Otu e si ahazi provider n'ọkwa

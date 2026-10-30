@@ -14,7 +14,7 @@
 
 ## यो किन सावधानीपूर्ण छ
 
-OmniRoute को विद्यमान परिनियोजन संरचना पहिले नै हल्का र प्रमाणित छ:
+67router को विद्यमान परिनियोजन संरचना पहिले नै हल्का र प्रमाणित छ:
 
 - **`redis:7-alpine`** ले उत्पादन स्तरमा rate-limit/cache workload सम्हाल्छ।
 - **SQLite + sqlite-vec + FTS5** ले स्थानीय memory + vector + text-search समेट्छन् ([`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts) हेर्नुहोस्)।
@@ -49,7 +49,7 @@ OmniRoute को विद्यमान परिनियोजन संर�
 
 - तपाईं ≥3 `omniroute` replicas चलाउनुहुन्छ र provider rotation लाई एउटै Go process मा केन्द्रीकृत गर्न चाहनुहुन्छ।
 - तपाईं सबै replicas बाट upstream-provider requests का लागि एउटै audit/logging surface चाहनुहुन्छ।
-- तपाईं OmniRoute replicas बाट स्वतन्त्र रूपमा Tier-1 routing layer को horizontal scaling गर्न चाहनुहुन्छ।
+- तपाईं 67router replicas बाट स्वतन्त्र रूपमा Tier-1 routing layer को horizontal scaling गर्न चाहनुहुन्छ।
 
 **यसले के थप्छ:**
 

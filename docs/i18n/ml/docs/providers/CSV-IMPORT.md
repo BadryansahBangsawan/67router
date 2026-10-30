@@ -25,7 +25,7 @@ Dashboard → Providers → **ഫയലിൽ നിന്ന് ഇമ്പോ
 ഇമ്പോർട്ട് മോഡലിൽ നിന്ന് ഒരു പ്രാരംഭ ഫയൽ ഡൗൺലോഡ് ചെയ്യുക (**CSV ടെംപ്ലേറ്റ് ഡൗൺലോഡ് ചെയ്യുക**). ഉദാഹരണം:
 
 ```csv
-# OmniRoute provider ഇമ്പോർട്ട് (സ്ഥാനാധിഷ്ഠിത കോളങ്ങൾ)
+# 67router provider ഇമ്പോർട്ട് (സ്ഥാനാധിഷ്ഠിത കോളങ്ങൾ)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

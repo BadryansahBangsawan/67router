@@ -7,7 +7,7 @@
 > **Sumber rujukan utama:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40
 
-OmniRoute disertakan dengan rangka kerja penilaian generik yang boleh anda gunakan untuk menanda aras konfigurasi penghalaan, penyedia/model tunggal, atau suit "set emas" yang disertakan. Gunakannya untuk mengesahkan perubahan penghalaan, mengesahkan penyedia baharu dan mengawal keluaran sebelum mengalihkannya kepada trafik pengeluaran.
+67router disertakan dengan rangka kerja penilaian generik yang boleh anda gunakan untuk menanda aras konfigurasi penghalaan, penyedia/model tunggal, atau suit "set emas" yang disertakan. Gunakannya untuk mengesahkan perubahan penghalaan, mengesahkan penyedia baharu dan mengawal keluaran sebelum mengalihkannya kepada trafik pengeluaran.
 
 Rangka kerja ini dilaksanakan sebagai:
 

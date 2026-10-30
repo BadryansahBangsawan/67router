@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **آخر تحديث:** 2026-06-28 — v3.8.40
 
-يأتي OmniRoute مزودًا بنظام إضافات على غرار WordPress. الإضافات هي أدلة
+يأتي 67router مزودًا بنظام إضافات على غرار WordPress. الإضافات هي أدلة
 مستقلة بذاتها — يحتوي كل منها على ملف بيان `plugin.json` وملف دخول — وترتبط
 بمسار معالجة الطلبات (`onRequest` / `onResponse` / `onError`) وبأحداث
 دورة الحياة (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### دليل الإضافات
 
-توجد الإضافات ضمن دليل بيانات OmniRoute:
+توجد الإضافات ضمن دليل بيانات 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

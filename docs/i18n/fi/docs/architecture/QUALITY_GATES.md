@@ -4,7 +4,7 @@
 
 ---
 
-Tämä asiakirja on kaikkien OmniRouten CI-laatuporttien ensisijainen viite.
+Tämä asiakirja on kaikkien 67routerin CI-laatuporttien ensisijainen viite.
 Siinä kuvataan jokainen portti, mitä se validoi, missä CI-työssä se suoritetaan, käyttääkö se
 ratchet-vertailutasoa vai hyväksy/hylkää-käytäntöä ja estääkö se koontiversion muodostamisen vai onko se neuvoa-antava.
 
@@ -272,7 +272,7 @@ Nämä ajetaan cron-aikataululla (ja `workflow_dispatch`-kutsuna), ei koskaan PR
 | `nightly-property`     | fast-checkin property-testit satunnaisella siemenarvolla + suuri ajomäärä                                                                                                                     | **Neuvoa-antava** |
 | `nightly-resilience`   | heap-kasvun gate, chaos-vikainjektio, k6-kuormitus/soak                                                                                                                                       | **Neuvoa-antava** |
 | `nightly-llm-security` | promptfoo-injektiosuojaus (block-tila) + garak-koettimet (ohitetaan ilman palveluntarjoajan secret-arvoa)                                                                                     | **Neuvoa-antava** |
-| `nightly-schemathesis` | OpenAPI-sopimuksen fuzzaus (schemathesis) käynnissä olevaa OmniRoutea vastaan `docs/openapi.yaml`-tiedostolla — paljastaa määrittelyrikkomuksia / käsittelemättömiä 500-virheitä (Fase 8 B.4) | **Neuvoa-antava** |
+| `nightly-schemathesis` | OpenAPI-sopimuksen fuzzaus (schemathesis) käynnissä olevaa 67routeria vastaan `docs/openapi.yaml`-tiedostolla — paljastaa määrittelyrikkomuksia / käsittelemättömiä 500-virheitä (Fase 8 B.4) | **Neuvoa-antava** |
 | `nightly-mutation`     | Stryker-mutaatiotestauksen pistemäärä nopealla yksikkötestikaistalla — selviytyneet mutantit paljastavat heikot assertit                                                                      | **Neuvoa-antava** |
 | `nightly-compat`       | Node-moottorin yhteensopivuusmatriisi tuettujen `engines.node`-versiovälien osalta                                                                                                            | **Neuvoa-antava** |
 
@@ -547,7 +547,7 @@ sallittujen poikkeusten luettelo luovat väärän käsityksen laadusta.
 
 ## Agenttityökalut: LSP osana työnkulkua (valinnainen)
 
-CI-tarkistusten lisäksi OmniRoute sisältää **valinnaisen** `agent-lsp`-rungon
+CI-tarkistusten lisäksi 67router sisältää **valinnaisen** `agent-lsp`-rungon
 (projektitason `.mcp.json`, vaihe 7, tehtävä 15). Luo `.mcp.json`
 ja tuo TypeScript-kielipalvelin ohjelmointiagenttien saataville, jotta ne selvittävät symbolit /
 diagnostiikan **ennen** koodin kirjoittamista — se täydentää `typecheck:core`-tarkistusta kääntämällä ennen väitteiden esittämistä

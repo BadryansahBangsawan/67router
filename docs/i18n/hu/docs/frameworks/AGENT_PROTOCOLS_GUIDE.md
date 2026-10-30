@@ -7,15 +7,15 @@
 > **Forrás:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Legutóbb frissítve:** 2026-06-28 — v3.8.40
 
-Az OmniRoute három különböző, ügynökökkel kapcsolatos felületet biztosít. Első pillantásra hasonlónak tűnnek, de eltérő problémákat oldanak meg. Ezen az oldalon kiválaszthatja a megfelelőt.
+A 67router három különböző, ügynökökkel kapcsolatos felületet biztosít. Első pillantásra hasonlónak tűnnek, de eltérő problémákat oldanak meg. Ezen az oldalon kiválaszthatja a megfelelőt.
 
 ## Röviden
 
 | Felület                       | Ideális felhasználás                                                                                                                          | Átvitel                               | Szabvány                      |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ----------------------------- |
 | **A2A — ügynökök között**     | Együttműködés az A2A protokollt használó partnerügynökökkel                                                                                   | JSON-RPC 2.0 HTTP-n keresztül         | A2A v0.3 (nyílt specifikáció) |
-| **ACP — CLI-ügynökregiszter** | A felhasználó gépére telepített CLI kódolóügynökök (Cursor, Cline, Codex CLI, Claude Code, Aider stb.) észlelése, regisztrálása és elindítása | HTTP REST                             | OmniRoute-specifikus          |
-| **Felhőügynökök**             | Hosszú ideig futó kódolási feladatok beküldése külső felhőszolgáltatásoknak (Codex Cloud, Devin, Jules, Cursor Cloud)                         | HTTP REST + adatbázis-alapú feladatok | OmniRoute-specifikus          |
+| **ACP — CLI-ügynökregiszter** | A felhasználó gépére telepített CLI kódolóügynökök (Cursor, Cline, Codex CLI, Claude Code, Aider stb.) észlelése, regisztrálása és elindítása | HTTP REST                             | 67router-specifikus           |
+| **Felhőügynökök**             | Hosszú ideig futó kódolási feladatok beküldése külső felhőszolgáltatásoknak (Codex Cloud, Devin, Jules, Cursor Cloud)                         | HTTP REST + adatbázis-alapú feladatok | 67router-specifikus           |
 
 A három egymástól független — bármelyik részhalmazuk használható.
 
@@ -38,14 +38,14 @@ Szüksége van egy felhőszolgáltatásra, amely ezen a gépen kívül végzi el
 ## 1. A2A — ügynökök között
 
 **Specifikáció:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute-végpont:** `POST /a2a` (JSON-RPC 2.0)
+**67router-végpont:** `POST /a2a` (JSON-RPC 2.0)
 **Ügynökkártya:** `GET /.well-known/agent.json`
 
 ### Mikor használja
 
-- Többügynökös rendszer építésekor, amelyben az OmniRoute az egyik partner
-- Az OmniRoute útválasztási intelligenciájának (intelligens útválasztás, kvótakezelés stb.) elérhetővé tétele olyan keretrendszerek ügynökei számára, mint a Google ADK, illetve általános ügynökhálózatok számára
-- Az OmniRoute szabványos felderítési és meghívási felülettel történő ellátásakor
+- Többügynökös rendszer építésekor, amelyben a 67router az egyik partner
+- A 67router útválasztási intelligenciájának (intelligens útválasztás, kvótakezelés stb.) elérhetővé tétele olyan keretrendszerek ügynökei számára, mint a Google ADK, illetve általános ügynökhálózatok számára
+- A 67router szabványos felderítési és meghívási felülettel történő ellátásakor
 
 ### Metódusok
 
@@ -69,12 +69,12 @@ Az átviteli részleteket, az ügynökkártya felépítését, a feladatok TTL-k
 
 ## 2. ACP — CLI-ügynökök nyilvántartása
 
-**OmniRoute-végpont:** `GET /api/acp/agents`
+**67router-végpont:** `GET /api/acp/agents`
 **Forrás:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Mi ez?
 
-Az ACP az OmniRoute **helyi CLI-ügynöknyilvántartása**. Észleli, hogy mely programozási CLI-k vannak telepítve a gazdagépen (Cursor, Cline, Claude Code, Codex CLI, Continue stb.), meghatározza a verziójukat, és megjeleníti őket az irányítópulton, hogy a felhasználó mindegyik CLI-t beállíthassa az OmniRoute használatára.
+Az ACP a 67router **helyi CLI-ügynöknyilvántartása**. Észleli, hogy mely programozási CLI-k vannak telepítve a gazdagépen (Cursor, Cline, Claude Code, Codex CLI, Continue stb.), meghatározza a verziójukat, és megjeleníti őket az irányítópulton, hogy a felhasználó mindegyik CLI-t beállíthassa a 67router használatára.
 
 A HTTP-felület egy belső nyilvántartás, amely a „CLI Tools” felhasználói felületet és
 a CLI-ujjlenyomatok követését működteti (lásd: [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Ettől elkülönülten
@@ -114,8 +114,8 @@ A POST törzsének szerkezete (`customAgentBodySchema` itt: `src/app/api/acp/age
 
 ### Felhasználási esetek
 
-- Az irányítópult „CLI Tools” oldala felsorolja a telepített eszközöket, és segít mindegyiket az OmniRoute használatára beállítani
-- Az egyéni ügynökök lehetővé teszik a haladó felhasználók számára olyan belső/saját fejlesztésű CLI-k regisztrálását, amelyeket az OmniRoute alapértelmezés szerint nem ismer
+- Az irányítópult „CLI Tools” oldala felsorolja a telepített eszközöket, és segít mindegyiket a 67router használatára beállítani
+- Az egyéni ügynökök lehetővé teszik a haladó felhasználók számára olyan belső/saját fejlesztésű CLI-k regisztrálását, amelyeket a 67router alapértelmezés szerint nem ismer
 - Az észlelés eredménye szolgáltat adatokat a `cli-tools` ujjlenyomatmátrixhoz
 
 ### Mikor NE használja az ACP-t?
@@ -127,12 +127,12 @@ A POST törzsének szerkezete (`customAgentBodySchema` itt: `src/app/api/acp/age
 
 ## 3. Felhőalapú ügynökök
 
-**OmniRoute-végpontok:** `/api/v1/agents/tasks/*` (életciklus) + `/api/cloud/*` (háttér-infrastruktúra)
+**67router-végpontok:** `/api/v1/agents/tasks/*` (életciklus) + `/api/cloud/*` (háttér-infrastruktúra)
 **Forrás:** `src/lib/cloudAgent/`
 
 ### Mi ez?
 
-Egységes felület külső szolgáltatók felhőalapú programozási ügynökeihez. Ön elküld egy promptot és egy adattár-URL-t, az OmniRoute továbbítja ezeket a megfelelő felhőalapú ügynöknek, lekérdezi az állapotot, majd visszaadja az eredményeket.
+Egységes felület külső szolgáltatók felhőalapú programozási ügynökeihez. Ön elküld egy promptot és egy adattár-URL-t, a 67router továbbítja ezeket a megfelelő felhőalapú ügynöknek, lekérdezi az állapotot, majd visszaadja az eredményeket.
 
 ### Támogatott ügynökök (4, mind megerősítve az `src/lib/cloudAgent/agents/` könyvtárban)
 
@@ -173,8 +173,8 @@ Mindkettő támogat „hosszú ideig futó feladatokat”, de különböző rét
 
 | Szempont                    | A2A                                                                                                       | Cloud Agents                                            |
 | --------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| Szabvány                    | Nyílt A2A v0.3                                                                                            | OmniRoute-specifikus                                    |
-| A számítás futtatási helye  | Az OmniRoute-on belül (a konfigurált kombinációkat használja)                                             | Külső (Codex / Devin / Jules szerverek)                 |
+| Szabvány                    | Nyílt A2A v0.3                                                                                            | 67router-specifikus                                     |
+| A számítás futtatási helye  | A 67router-on belül (a konfigurált kombinációkat használja)                                               | Külső (Codex / Devin / Jules szerverek)                 |
 | Feladat időtartama          | Alapértelmezett TTL: 5 perc (a `TaskManager` osztályban konfigurálható)                                   | Percektől órákig                                        |
 | Tároló tartalmának ismerete | Nem (csak promptokat továbbít)                                                                            | Igen (tároló URL-je + ág)                               |
 | Felhasználási eset          | Ügynökök közötti együttműködés, intelligens útválasztás szolgáltatásként                                  | „Valósítsd meg az X funkciót az Y tárolóban” delegálása |
@@ -182,7 +182,7 @@ Mindkettő támogat „hosszú ideig futó feladatokat”, de különböző rét
 
 ## Integrációs példák
 
-### Az OmniRoute A2A-képességeinek felderítése
+### A 67router A2A-képességeinek felderítése
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Visszaadja az Agent Cardot mind a 6 készséggel, az átviteli módokkal és a verzióval.
 
-### Az OmniRoute meghívása A2A-ügynökként
+### A 67router meghívása A2A-ügynökként
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute-mag     │
+                │   67router-mag     │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

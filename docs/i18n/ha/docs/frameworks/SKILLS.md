@@ -7,29 +7,29 @@
 > **Tushen gaskiya:** `src/lib/skills/` da `src/app/api/skills/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute yana samar da tsarin Skills mai faɗaɗawa wanda ke bai wa samfurin harshe (da masu gudanarwa) damar haɗa ƙwarewa masu sake amfani — daga karanta tsarin fayil da buƙatun HTTP zuwa aiwatar da lamba a cikin sandbox da ƙwarewar kasuwa da aka zaɓa.
+67router yana samar da tsarin Skills mai faɗaɗawa wanda ke bai wa samfurin harshe (da masu gudanarwa) damar haɗa ƙwarewa masu sake amfani — daga karanta tsarin fayil da buƙatun HTTP zuwa aiwatar da lamba a cikin sandbox da ƙwarewar kasuwa da aka zaɓa.
 
-Skill wani sashe ne na aiki mai sigar da aka ayyana ta schema. OmniRoute na iya saka skills a matsayin ma’anar kayan aiki cikin buƙatun da ake fitarwa, tare kiran kayan aiki da ke dawowa daga samfurin, gudanar da handler da ya dace, sannan ya mayar da sakamakon ga samfurin domin tattaunawar ta ci gaba. Samfurin ba ya taɓa ganin yadda aka aiwatar — yana ganin hanyar mu’amala da kayan aikin kawai.
+Skill wani sashe ne na aiki mai sigar da aka ayyana ta schema. 67router na iya saka skills a matsayin ma’anar kayan aiki cikin buƙatun da ake fitarwa, tare kiran kayan aiki da ke dawowa daga samfurin, gudanar da handler da ya dace, sannan ya mayar da sakamakon ga samfurin domin tattaunawar ta ci gaba. Samfurin ba ya taɓa ganin yadda aka aiwatar — yana ganin hanyar mu’amala da kayan aikin kawai.
 
 ---
 
 ## Agent Skills da Omni Skills
 
-OmniRoute yana da tsarukan skill guda biyu masu bambanci amma masu taimaka wa juna:
+67router yana da tsarukan skill guda biyu masu bambanci amma masu taimaka wa juna:
 
 | Girma               | **Omni Skills** (wannan takarda)                                               | **Agent Skills**                                                                                     |
 | :------------------ | :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
 | Manufa              | Saka kayan aikin LLM + aiwatarwa cikin sandbox                                 | Kundin SKILL.md domin external agents su gano kuma su yi amfani da shi                               |
 | Tushen gaskiya      | `src/lib/skills/` + marketplace                                                | `src/lib/agentSkills/` + kundin adireshin `skills/`                                                  |
 | Yanayin runtime     | Ana sakawa cikin buƙatun da ake fitarwa, ana aiwatarwa yayin aukuwar tool-call | Kundin markdown tsayayye + wuraren gano REST/MCP/A2A                                                 |
-| Wa ke amfani da shi | OmniRoute da kansa (combo routing, kiran LLM masu shigowa)                     | External agents, MCP clients, A2A orchestrators                                                      |
+| Wa ke amfani da shi | 67router da kansa (combo routing, kiran LLM masu shigowa)                      | External agents, MCP clients, A2A orchestrators                                                      |
 | Adadi               | Mai canzawa (marketplace ne ke ƙayyade shi)                                    | Shigarwar kundi 45 (API 23 + CLI 21 + config 1)                                                      |
 | Tsari               | `SkillDefinition` mai tool schema + handler                                    | `SKILL.md` frontmatter + jikin markdown                                                              |
 | Ganowa              | `/api/skills/*` REST + kayan aikin MCP na `omniroute_skills_*`                 | `/api/agent-skills/*` REST + kayan aikin MCP na `omniroute_agent_skills_*` + A2A `list-capabilities` |
 
-**Omni Skills** su ne injin aiwatarwa — suna ayyana abin da OmniRoute _zai iya yi_ lokacin da LLM ya kira kayan aiki.
+**Omni Skills** su ne injin aiwatarwa — suna ayyana abin da 67router _zai iya yi_ lokacin da LLM ya kira kayan aiki.
 
-**Agent Skills** su ne kundin takardu — suna bayyana wa external agents _yadda ake amfani da_ REST API da CLI na OmniRoute, tare da fayilolin SKILL.md masu tsari waɗanda za a iya saka kai tsaye cikin prompts na agent.
+**Agent Skills** su ne kundin takardu — suna bayyana wa external agents _yadda ake amfani da_ REST API da CLI na 67router, tare da fayilolin SKILL.md masu tsari waɗanda za a iya saka kai tsaye cikin prompts na agent.
 
 Don kundin Agent Skills, generator, kayan aikin MCP, da skill na A2A, duba [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Don kundin Agent Skills, generator, kayan aikin MCP, da skill na A2A, duba [docs
 
 Tushen skills guda uku suna aiki tare a registry ɗaya:
 
-1. **Ginannun skills** (`src/lib/skills/builtins.ts`) — ana kawo su tare da OmniRoute. Suna ɗauke da abubuwan da aka fi amfani da su:
+1. **Ginannun skills** (`src/lib/skills/builtins.ts`) — ana kawo su tare da 67router. Suna ɗauke da abubuwan da aka fi amfani da su:
    - `file_read`, `file_write` — wurin aiki na sandbox na kowace API key a ƙarƙashin `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP mai fita ta hanyar `safeOutboundFetch` tare da `guard: "public-only"`
    - `web_search` — search provider mai iya sauyawa tare da caching (`executeWebSearch`)
    - `eval_code` — aiwatar da `node` ko `python` cikin sandbox na Docker
    - `execute_command` — umarnin shell cikin sandbox na Docker
    - `browser` — tsarin farko mai amfani da Playwright, a kashe ta tsohuwa (`builtin/browser.ts`)
-2. **SkillsMP** (Kasuwar OmniRoute) — ana ɗaukowa daga `https://skillsmp.com/api/v1/skills/search`. Yana buƙatar `skillsmpApiKey` a cikin Settings.
+2. **SkillsMP** (Kasuwar 67router) — ana ɗaukowa daga `https://skillsmp.com/api/v1/skills/search`. Yana buƙatar `skillsmpApiKey` a cikin Settings.
 3. **SkillsSH** (kundin al’umma na `skills.sh`) — ana ɗaukowa daga `https://skills.sh/api/search`. Ba a buƙatar tantancewa; ana ɗauko abun cikin SKILL.md daga GitHub raw.
 
 "Active provider" guda ɗaya ne ke sarrafa kundin da dashboard ke girkawa daga gare shi (`src/lib/skills/providerSettings.ts`). Sauya shi a ƙarƙashin **Settings → Memory & Skills**. Na tsohuwa: `skillsmp`.
@@ -442,7 +442,7 @@ takarda; babu ma'aunin float irin na `0.6`, kuma babu tantancewa a `registry.ts`
 
 ## Kundin Built-in Skills
 
-OmniRoute yana zuwa da zaɓaɓɓun built-in skills a cikin `src/lib/skills/builtin/`. Mafi yawan amfani sun haɗa da:
+67router yana zuwa da zaɓaɓɓun built-in skills a cikin `src/lib/skills/builtin/`. Mafi yawan amfani sun haɗa da:
 
 ### Skill na Sarrafa Browser Kai Tsaye
 

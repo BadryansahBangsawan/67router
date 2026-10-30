@@ -4,7 +4,7 @@
 
 ---
 
-> **Qısa xülasə**: `open-sse/` OmniRoute daxilində hər bir LLM sorğusunu işlədən əsas axın mühərrikidir. Burada sorğu konveyerini, icraçıları, xidmətləri, MCP serverini və tərcümə qatını həyata keçirən təxminən 1,400 fayl var. Bu təlimat hissələrin bir-biri ilə necə əlaqəli olduğunu izah edir.
+> **Qısa xülasə**: `open-sse/` 67router daxilində hər bir LLM sorğusunu işlədən əsas axın mühərrikidir. Burada sorğu konveyerini, icraçıları, xidmətləri, MCP serverini və tərcümə qatını həyata keçirən təxminən 1,400 fayl var. Bu təlimat hissələrin bir-biri ilə necə əlaqəli olduğunu izah edir.
 
 **Mənbə:** `open-sse/` (iş sahəsi paketi, test olmayan təxminən 1,440 `.ts` faylı)
 
@@ -12,10 +12,10 @@
 
 ## Niyə ayrıca iş sahəsi paketi?
 
-`open-sse/` bir neçə səbəbə görə OmniRoute monoreposunda **müstəqil iş sahəsidir**:
+`open-sse/` bir neçə səbəbə görə 67router monoreposunda **müstəqil iş sahəsidir**:
 
 1. **Təkrar istifadə imkanı** — `open-sse`, npm-də `@omniroute/open-sse` kimi dərc edilir, buna görə digər layihələr ondan müstəqil şəkildə istifadə edə bilər
-2. **Aydın sərhədlər** — axın mühərriki OmniRoute-a xas UI/DB qatından ayrılıb
+2. **Aydın sərhədlər** — axın mühərriki 67router-a xas UI/DB qatından ayrılıb
 3. **Performans** — mühərrikin Next.js asılılıqları yoxdur, bu da CLI/serverless kontekstlərində daha sürətli soyuq başlanğıca imkan verir
 4. **Versiyalaşdırma** — `open-sse` öz buraxılış qrafikinə uyğun olaraq buraxıla bilər
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Niyə ayrıca transformator?
 
-Responses API, OpenAI-ın **vəziyyət saxlayan söhbətlərə** (`previous_response_id`) malik yeni formatıdır. Müştəri Responses sorğusu göndərdikdə OmniRoute:
+Responses API, OpenAI-ın **vəziyyət saxlayan söhbətlərə** (`previous_response_id`) malik yeni formatıdır. Müştəri Responses sorğusu göndərdikdə 67router:
 
 1. Daxildə Responses → Chat Completions çevrilməsini həyata keçirir
 2. Sorğunu provayderə (Chat Completions dəstəkləyən istənilən provayderə) göndərir

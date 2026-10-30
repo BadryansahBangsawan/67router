@@ -10,7 +10,7 @@
 
 ## Kodėl tai reikalinga
 
-OmniRoute jau atsako į du klausimus apie sąnaudas, tačiau nė vienas iš jų nėra tas, kurį užduoda dauguma operatorių.
+67router jau atsako į du klausimus apie sąnaudas, tačiau nė vienas iš jų nėra tas, kurį užduoda dauguma operatorių.
 
 | Esamas mechanizmas                                       | Į kokį klausimą atsako                                |
 | -------------------------------------------------------- | ----------------------------------------------------- |

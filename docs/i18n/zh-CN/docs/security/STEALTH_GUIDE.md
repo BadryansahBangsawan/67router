@@ -8,11 +8,11 @@
 > **最后更新：** 2026-09-02 — v3.8.51
 > **目标读者：** 维护特定提供者隐蔽集成的工程师。
 
-OmniRoute 与一些提供者集成，这些提供者的边缘服务会主动识别非官方客户端的指纹（TLS JA3/JA4、请求头顺序、JSON 请求体结构、完整性令牌）。本文档介绍 OmniRoute 提供的隐蔽能力及其实现位置。
+67router 与一些提供者集成，这些提供者的边缘服务会主动识别非官方客户端的指纹（TLS JA3/JA4、请求头顺序、JSON 请求体结构、完整性令牌）。本文档介绍 67router 提供的隐蔽能力及其实现位置。
 
 ## 法律与道德声明
 
-隐蔽功能旨在使 OmniRoute 能够充当兼容层，连接用户自有的官方账户（Claude Code CLI、Codex、Antigravity、Cursor 等）与 OmniRoute 的统一 API。它们**不得**用于规避欺诈检测、共享凭据或违反提供者的服务条款。维护者要求运营方遵守其创建账户时签署的上游服务条款。
+隐蔽功能旨在使 67router 能够充当兼容层，连接用户自有的官方账户（Claude Code CLI、Codex、Antigravity、Cursor 等）与 67router 的统一 API。它们**不得**用于规避欺诈检测、共享凭据或违反提供者的服务条款。维护者要求运营方遵守其创建账户时签署的上游服务条款。
 
 ---
 
@@ -74,7 +74,7 @@ Web Cookie 传输的共享适配器。每个轻量级提供者封装器都会选
 
 ## Claude Code 隐身套件
 
-启用 `cliCompatMode` 后，OmniRoute 会重塑发出的 Claude 请求，使其与 `claude-cli` 流量无法区分。三个模块协同工作：
+启用 `cliCompatMode` 后，67router 会重塑发出的 Claude 请求，使其与 `claude-cli` 流量无法区分。三个模块协同工作：
 
 ### `claudeCodeFingerprint.ts`
 
@@ -90,7 +90,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts`（客户端内容哈希）
 
-官方 Claude Code CLI 通过 Bun/Zig 计算的服务端完整性校验。OmniRoute 使用 `xxhash-wasm` 重新实现：
+官方 Claude Code CLI 通过 Bun/Zig 计算的服务端完整性校验。67router 使用 `xxhash-wasm` 重新实现：
 
 1. 使用 `cch=00000;` 占位符序列化请求体
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -136,7 +136,7 @@ aider, continue.dev, copilot, avante, codecompanion
 
 ## Antigravity 隐身
 
-Antigravity 请求会逐字节保留调用方文本。OmniRoute 不会在提示词中插入零宽字符，也不会重命名/注入工具来模仿 IDE 客户端。
+Antigravity 请求会逐字节保留调用方文本。67router 不会在提示词中插入零宽字符，也不会重命名/注入工具来模仿 IDE 客户端。
 
 ### `antigravityHeaderScrub.ts`
 
@@ -146,13 +146,13 @@ Antigravity 请求会逐字节保留调用方文本。OmniRoute 不会在提示�
 
 `ANTIGRAVITY_CREDITS=always`（由 `open-sse/executors/antigravity.ts` 使用）会将**每个**请求都通过 Antigravity AI Credit Overages（付费 Google 积分）路由，而不是由 Google 的免费层级配额进行限制。该行为在文档中被描述为一项功能，但它是**我们看到的最常见 ToS 违规报告来源**——多个 Google Ultra 账号在使用 `=always` 运行数小时后，因 `403 / "service disabled for ToS violation" / insufficient_quota` 而被封禁。
 
-上游强制措施发生在 **Google 一侧**，并非 OmniRoute 所能阻止。该环境变量的名称和现有文档让它看起来像一个可以安全启用的选项；事实并非如此。
+上游强制措施发生在 **Google 一侧**，并非 67router 所能阻止。该环境变量的名称和现有文档让它看起来像一个可以安全启用的选项；事实并非如此。
 
 **为什么与仅使用免费层级相比，这种方式更容易触发滥用检测：**
 
 - 在单个 Google 账号上持续进行自动化消费，其风险标记方式不同于免费层级达到配额后即停止的情况。
 - 超额积分没有速率上限，因此配置错误的客户端可能在几分钟内消耗数百美元，并呈现出类似 API 密钥转售或机器人流量的特征。
-- 多个 OmniRoute 用户从同一外部 IP 并行使用超额积分会进一步放大这一信号。
+- 多个 67router 用户从同一外部 IP 并行使用超额积分会进一步放大这一信号。
 
 **建议做法：**
 
@@ -191,7 +191,7 @@ interface CliFingerprint {
 
 ## MITM 代理（Antigravity、Linux/macOS/Windows）
 
-对于二进制文件无法通过 `OPENAI_BASE_URL` 重定向的 CLI，OmniRoute 会运行本地 TLS 终止代理。端点位于 `src/app/api/cli-tools/antigravity-mitm/` 下。
+对于二进制文件无法通过 `OPENAI_BASE_URL` 重定向的 CLI，67router 会运行本地 TLS 终止代理。端点位于 `src/app/api/cli-tools/antigravity-mitm/` 下。
 
 | 方法   | 端点                                    | 用途                                           |
 | ------ | --------------------------------------- | ---------------------------------------------- |
@@ -272,7 +272,7 @@ interface CliFingerprint {
 
 ## 入站请求头清理
 
-OmniRoute 会在转发前清理入站客户端请求头，避免来自 Cursor 的请求将 `User-Agent: Cursor/X.Y.Z` 泄露给 Claude 上游。拒绝列表请参阅 `src/shared/constants/upstreamHeaders.ts`；该列表与 Zod 模式及单元测试保持同步。
+67router 会在转发前清理入站客户端请求头，避免来自 Cursor 的请求将 `User-Agent: Cursor/X.Y.Z` 泄露给 Claude 上游。拒绝列表请参阅 `src/shared/constants/upstreamHeaders.ts`；该列表与 Zod 模式及单元测试保持同步。
 
 ---
 

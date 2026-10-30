@@ -7,29 +7,29 @@
 > **Izvor istine:** `src/lib/skills/` i `src/app/api/skills/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40
 
-OmniRoute pruža proširivi okvir Skills koji jezičnim modelima (i operaterima) omogućuje sastavljanje višekratno upotrebljivih mogućnosti — od čitanja datotečnog sustava i HTTP zahtjeva do izvršavanja koda u izoliranom okruženju i odabranih vještina s tržišta.
+67router pruža proširivi okvir Skills koji jezičnim modelima (i operaterima) omogućuje sastavljanje višekratno upotrebljivih mogućnosti — od čitanja datotečnog sustava i HTTP zahtjeva do izvršavanja koda u izoliranom okruženju i odabranih vještina s tržišta.
 
-Vještina je verzionirana jedinica rada definirana shemom. OmniRoute može umetnuti vještine kao definicije alata u odlazne zahtjeve, presresti pozive alata koje model vraća, pokrenuti odgovarajući rukovatelj i proslijediti rezultat natrag modelu kako bi se razgovor mogao nastaviti. Model nikada ne vidi implementaciju — samo sučelje alata.
+Vještina je verzionirana jedinica rada definirana shemom. 67router može umetnuti vještine kao definicije alata u odlazne zahtjeve, presresti pozive alata koje model vraća, pokrenuti odgovarajući rukovatelj i proslijediti rezultat natrag modelu kako bi se razgovor mogao nastaviti. Model nikada ne vidi implementaciju — samo sučelje alata.
 
 ---
 
 ## Agent Skills i Omni Skills
 
-OmniRoute ima dva različita, ali komplementarna sustava vještina:
+67router ima dva različita, ali komplementarna sustava vještina:
 
 | Dimenzija       | **Omni Skills** (ovaj dokument)                                      | **Agent Skills**                                                                            |
 | :-------------- | :------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
 | Svrha           | Umetanje LLM alata + izvršavanje u izoliranom okruženju              | SKILL.md katalog koji vanjski agenti mogu otkrivati i koristiti                             |
 | Izvor istine    | `src/lib/skills/` + tržište                                          | `src/lib/agentSkills/` + direktorij `skills/`                                               |
 | Način izvođenja | Umeću se u odlazne zahtjeve i izvršavaju pri događajima poziva alata | Statički markdown katalog + krajnje točke za otkrivanje putem REST/MCP/A2A                  |
-| Tko ih koristi  | Sam OmniRoute (kombinirano usmjeravanje, dolazni LLM pozivi)         | Vanjski agenti, MCP klijenti, A2A orkestratori                                              |
+| Tko ih koristi  | Sam 67router (kombinirano usmjeravanje, dolazni LLM pozivi)          | Vanjski agenti, MCP klijenti, A2A orkestratori                                              |
 | Broj            | Promjenjiv (ovisi o tržištu)                                         | 43 kataloških stavki (22 API + 20 CLI + 1 konfiguracijska)                                  |
 | Format          | `SkillDefinition` sa shemom alata + rukovateljem                     | `SKILL.md` frontmatter + markdown sadržaj                                                   |
 | Otkrivanje      | `/api/skills/*` REST + `omniroute_skills_*` MCP alati                | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP alati + A2A `list-capabilities` |
 
-**Omni Skills** su mehanizam izvršavanja — definiraju što OmniRoute _može učiniti_ kada LLM pozove alat.
+**Omni Skills** su mehanizam izvršavanja — definiraju što 67router _može učiniti_ kada LLM pozove alat.
 
-**Agent Skills** su dokumentacijski katalog — vanjskim agentima objašnjavaju _kako koristiti_ OmniRouteov REST API i CLI, uz strukturirane SKILL.md datoteke koje se mogu izravno uključiti u upite agenata.
+**Agent Skills** su dokumentacijski katalog — vanjskim agentima objašnjavaju _kako koristiti_ 67routerov REST API i CLI, uz strukturirane SKILL.md datoteke koje se mogu izravno uključiti u upite agenata.
 
 Za katalog Agent Skills, generator, MCP alate i A2A vještinu pogledajte [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Za katalog Agent Skills, generator, MCP alate i A2A vještinu pogledajte [docs/f
 
 Tri izvora vještina postoje istodobno u istom registru:
 
-1. **Ugrađene vještine** (`src/lib/skills/builtins.ts`) — isporučuju se s OmniRouteom. Pokrivaju uobičajene slučajeve:
+1. **Ugrađene vještine** (`src/lib/skills/builtins.ts`) — isporučuju se s 67routerom. Pokrivaju uobičajene slučajeve:
    - `file_read`, `file_write` — izolirani radni prostor za svaki API ključ pod `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — odlazni HTTP putem `safeOutboundFetch` uz `guard: "public-only"`
    - `web_search` — zamjenjivi pružatelj pretraživanja s predmemoriranjem (`executeWebSearch`)
    - `eval_code` — izvršavanje programa `node` ili `python` u Dockerovu izoliranom okruženju
    - `execute_command` — izvršavanje naredbi ljuske u Dockerovu izoliranom okruženju
    - `browser` — početna struktura temeljena na Playwrightu, onemogućena prema zadanim postavkama (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRouteovo tržište) — dohvaća se s `https://skillsmp.com/api/v1/skills/search`. Zahtijeva `skillsmpApiKey` u postavkama.
+2. **SkillsMP** (67routerovo tržište) — dohvaća se s `https://skillsmp.com/api/v1/skills/search`. Zahtijeva `skillsmpApiKey` u postavkama.
 3. **SkillsSH** (katalog zajednice `skills.sh`) — dohvaća se s `https://skills.sh/api/search`. Autentifikacija nije potrebna; sadržaj SKILL.md dohvaća se izravno s GitHuba.
 
 Jedan „aktivni pružatelj” određuje iz kojeg kataloga nadzorna ploča instalira vještine (`src/lib/skills/providerSettings.ts`). Promijenite ga u odjeljku **Postavke → Memorija i vještine**. Zadano: `skillsmp`.
@@ -442,7 +442,7 @@ dokumentu; ne postoji prag s decimalnim brojem poput `0.6` niti bodovanje u dato
 
 ## Katalog ugrađenih vještina
 
-OmniRoute isporučuje odabrani skup ugrađenih vještina u `src/lib/skills/builtin/`. Najčešće su:
+67router isporučuje odabrani skup ugrađenih vještina u `src/lib/skills/builtin/`. Najčešće su:
 
 ### Vještina automatizacije preglednika
 

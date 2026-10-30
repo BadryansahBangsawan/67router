@@ -4,7 +4,7 @@
 
 ---
 
-Kako OmniRoute ocenjuje, beleži in poroča o stroških vsake zahteve — in zakaj je
+Kako 67router ocenjuje, beleži in poroča o stroških vsake zahteve — in zakaj je
 številka na nadzorni plošči **sledilnik prihrankov** in ne račun.
 
 Glejte tudi: [Uporabniški priročnik](./USER_GUIDE.md) · [Galerija funkcij](./FEATURES.md)
@@ -13,11 +13,11 @@ Glejte tudi: [Uporabniški priročnik](./USER_GUIDE.md) · [Galerija funkcij](./
 
 ## Kaj je (in kaj ni)
 
-OmniRoute vsaki zaključitvi pripiše strošek v USD na zahtevo tako, da število žetonov
+67router vsaki zaključitvi pripiše strošek v USD na zahtevo tako, da število žetonov
 pomnoži s cenami modela. Te številke so osnova za nadzorno ploščo **Stroški**,
 CLI `omniroute cost` / `omniroute usage`, izvoze CSV/JSON in proračune posameznih ključev API.
 
-> **»Strošek« na nadzorni plošči je sledilnik prihrankov in ne račun.** OmniRoute vam
+> **»Strošek« na nadzorni plošči je sledilnik prihrankov in ne račun.** 67router vam
 > nikoli ničesar ne zaračuna — vaše zahteve usmerja ponudnikom, ki ste jih že povezali
 > (vaše lastne naročnine, brezplačne ravni in ključi API). »Skupni strošek 290 USD«, ki je
 > v celoti nastal pri brezplačnih modelih, pomeni približno **290 USD, ki jih _niste_ plačali**
@@ -30,7 +30,7 @@ Ta razlaga je neposredno navedena v projektnem dokumentu [README](../../README.m
 
 Ker je številka le ocena:
 
-- Odvisna je od cenika, ki ga ima OmniRoute za vsak model. Model brez vnosa cene
+- Odvisna je od cenika, ki ga ima 67router za vsak model. Model brez vnosa cene
   prispeva strošek `0` (v raziskovalcu je prikazan kot vrstica »Starejši / brezplačen«).
 - Promet v brezplačni ravni in prek naročnin še vedno ustvarja _ocenjeni_ strošek — to je
   znesek, ki ga prihranite, in ne dolgovani znesek.
@@ -48,7 +48,7 @@ Stroški izhajajo iz cenika, ki se razreši po naslednjem prednostnem vrstnem re
 2. **Sinhronizirane zunanje cene** — pridobljene iz LiteLLM-ove javne datoteke
    `model_prices_and_context_window.json`, ko je sinhronizacija omogočena (shranjene v
    ločenem imenskem prostoru `pricing_synced`, zato nikoli ne prepišejo vaših preglasitev).
-3. **Vnaprej določene privzete vrednosti** — vključene v OmniRoute.
+3. **Vnaprej določene privzete vrednosti** — vključene v 67router.
 
 Sinhronizacija zunanjih cen je **izbirna** in privzeto onemogočena. Ustrezne okoljske
 spremenljivke (glejte [`.env.example`](../../.env.example)):
@@ -200,7 +200,7 @@ razen kjer je navedeno drugače.
 
 ## CLI
 
-Vmesnik CLI orodja OmniRoute ponuja ukaze za stroške, uporabo in cene (registrirane v
+Vmesnik CLI orodja 67router ponuja ukaze za stroške, uporabo in cene (registrirane v
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

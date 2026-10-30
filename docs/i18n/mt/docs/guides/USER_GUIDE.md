@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Gwida kompluta għall-konfigurazzjoni tal-fornituri, il-ħolqien ta’ kombinazzjonijiet, l-integrazzjoni tal-għodod CLI, u d-distribuzzjoni ta’ OmniRoute.
+Gwida kompluta għall-konfigurazzjoni tal-fornituri, il-ħolqien ta’ kombinazzjonijiet, l-integrazzjoni tal-għodod CLI, u d-distribuzzjoni ta’ 67router.
 
 ---
 
@@ -137,11 +137,11 @@ Mudelli:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Parir Professjonali:** Uża Opus għal kompiti kumplessi u Sonnet għall-veloċità. OmniRoute jimmonitorja l-kwota għal kull mudell!
+**Parir Professjonali:** Uża Opus għal kompiti kumplessi u Sonnet għall-veloċità. 67router jimmonitorja l-kwota għal kull mudell!
 
-M’hemmx browser fuq il-host ta’ OmniRoute? Ħaddem `claude setup-token` kull fejn tkun illoggjat fi Claude Code u waħħal it-token ta’ sena fit-tab **Setup Token**. Ara [Claude Code b’token ta’ konfigurazzjoni](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+M’hemmx browser fuq il-host ta’ 67router? Ħaddem `claude setup-token` kull fejn tkun illoggjat fi Claude Code u waħħal it-token ta’ sena fit-tab **Setup Token**. Ara [Claude Code b’token ta’ konfigurazzjoni](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Ir-rotot kompatibbli ma’ Claude u Claude Code jippreservaw il-livell ta’ sforz ta’ ħsieb `max` għall-mudelli Opus u Sonnet. Il-mudelli Haiku ma jaċċettawx il-livell ta’ sforz `max`, għalhekk OmniRoute jbaxxi dik it-talba għal baġit għoli ta’ ħsieb qabel jibgħatha lis-servizz upstream.
+Ir-rotot kompatibbli ma’ Claude u Claude Code jippreservaw il-livell ta’ sforz ta’ ħsieb `max` għall-mudelli Opus u Sonnet. Il-mudelli Haiku ma jaċċettawx il-livell ta’ sforz `max`, għalhekk 67router jbaxxi dik it-talba għal baġit għoli ta’ ħsieb qabel jibgħatha lis-servizz upstream.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -261,7 +261,7 @@ Cost: currently listed as $0; terms and availability may change
 
 ### Cursor IDE
 
-**Użu ta' Cursor bħala klijent OmniRoute** (instradi chat ta' Cursor permezz ta' OmniRoute):
+**Użu ta' Cursor bħala klijent 67router** (instradi chat ta' Cursor permezz ta' 67router):
 
 ```
 Settings → Models → Advanced:
@@ -270,7 +270,7 @@ Settings → Models → Advanced:
   Model: cc/claude-opus-4-7
 ```
 
-**Użu ta' OmniRoute bħala fornitur ta' Cursor** (OmniRoute jistenna lill-Cursor upstream): prefer
+**Użu ta' 67router bħala fornitur ta' Cursor** (67router jistenna lill-Cursor upstream): prefer
 **Dashboard → Providers → Cursor → Login with Cursor**. F'Docker, ara
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -357,7 +357,7 @@ L-CLI awtomatikament jgħabbi `.env` minn `~/.omniroute/.env` jew `./.env`.
 
 ### Triq il-tray
 
-Bedal OmniRoute fil-tray tas-sistema:
+Bedal 67router fil-tray tas-sistema:
 
 ```bash
 omniroute serve --tray
@@ -374,7 +374,7 @@ Uża l-menu tal-tray għal dawn l-azzjonijiet:
 - Ftaħ l-dashboard.
 - Ftaħ `/dashboard/logs`.
 - Biddel l-awto-bidu.
-- Waqqaf OmniRoute.
+- Waqqaf 67router.
 
 Tagħmilx `--tray` ma' dawn l-għażliet:
 
@@ -400,14 +400,14 @@ omniroute autostart disable
 
 ### Tneħħija
 
-Meta m'għadekx teħtieġ OmniRoute, noffrulek żewġ scripts ħfief għat-tneħħija nadifa:
+Meta m'għadekx teħtieġ 67router, noffrulek żewġ scripts ħfief għat-tneħħija nadifa:
 
 | Kmand                    | Azzjoni                                                                                         |
 | ------------------------ | ----------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Jneħħi l-app tal-sistema iżda **jżomm il-DB u l-konfigurazzjonijiet tiegħek** f'`~/.omniroute`. |
 | `npm run uninstall:full` | Jneħħi l-app U **jħassar permanentement il-konfigurazzjonijiet, ċavetti, u databases kollha**.  |
 
-> Nota: Biex tħaddem dawn il-kmandi, mur fil-folder tal-proġett OmniRoute (jekk klonjajtu) u ħaddemhom. Barra minn hekk, jekk installat globalment, tista' sempliċement tħaddem `npm uninstall -g omniroute`.
+> Nota: Biex tħaddem dawn il-kmandi, mur fil-folder tal-proġett 67router (jekk klonjajtu) u ħaddemhom. Barra minn hekk, jekk installat globalment, tista' sempliċement tħaddem `npm uninstall -g omniroute`.
 
 ### Twaqqif VPS
 
@@ -479,7 +479,7 @@ Għall-mod host-integrated b'binaries CLI, ara t-taqsima Docker fil-dokumentazzj
 
 ### Void Linux (xbps-src)
 
-L-utenti tal-Void Linux jistgħu jippakkjaw u jinstallaw OmniRoute b'mod nattiv jużand il-framework tal-kross-kompilazzjoni `xbps-src`. Dan jawtomatizza l-bini standalone tal-Node/js flimkien mal-`better-sqlite3` native bindings meħtieġa.
+L-utenti tal-Void Linux jistgħu jippakkjaw u jinstallaw 67router b'mod nattiv jużand il-framework tal-kross-kompilazzjoni `xbps-src`. Dan jawtomatizza l-bini standalone tal-Node/js flimkien mal-`better-sqlite3` native bindings meħtieġa.
 
 <details>
 <summary><b>Ara l-mudell xbps-src</b></summary>
@@ -657,7 +657,7 @@ Għar-riferenza sħiħa tal-varjabbli tal-ambjent, ara l-[README](../README.md).
 
 **Provajderi kompatibbli oħra** (magħżula): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (permezz ta' `aws-bedrock`), `azure-ai`, `openrouter` (katalaġi pass-through), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Kull wieħed iżomm il-lista tal-mudelli tiegħu stess fil-`providerRegistry.ts` u jista' jiġi ssinkronizzat awtomatikament meta l-provajder jiżvela endpoint `/models`.
 
-**Nota dwar l-IDs tal-mudelli:** OmniRoute juża IDs nattivi tal-provajder (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `groq-4.20-0309-reasoning`). Xi IDs jinkludu versjonijiet bil-punti għaliex hekk qed tistenna l-API ta' fuq. Jekk mudelli mhux elenkat hawn fuq, ħdimt `omniroute models --search <term>` jew sejjaħ `GET /api/models/catalog` biex tikkonferma d-disponibbiltà.
+**Nota dwar l-IDs tal-mudelli:** 67router juża IDs nattivi tal-provajder (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `groq-4.20-0309-reasoning`). Xi IDs jinkludu versjonijiet bil-punti għaliex hekk qed tistenna l-API ta' fuq. Jekk mudelli mhux elenkat hawn fuq, ħdimt `omniroute models --search <term>` jew sejjaħ `GET /api/models/catalog` biex tikkonferma d-disponibbiltà.
 
 </details>
 
@@ -723,9 +723,9 @@ Agħżel prefiss distint (`mygw`, `acme-proxy`). Jekk talbiet lil node personali
 riżervat: nodes issejvjati qabel ma kienet teżisti din ir-regola għadhom maħżuna, iżda l-prefiss tagħhom jibgħat it-traffiku
 lill-fornitur inkorporat. Editja n-node u agħtih prefiss ġdid.
 
-### Katina ta’ Peers ta’ OmniRoute
+### Katina ta’ Peers ta’ 67router
 
-Gateway OmniRoute ieħor jista’ jiżdied bħala fornitur **Personalizzat kompatibbli ma’ OpenAI**. Uża l-
+Gateway 67router ieħor jista’ jiżdied bħala fornitur **Personalizzat kompatibbli ma’ OpenAI**. Uża l-
 URL bażi `/v1` tal-peer u ċavetta tal-API dedikata bl-inqas privileġġi possibbli maħruġa minn dak il-peer.
 
 Għal ktajjen reċiproċi jew b’diversi hops, attiva l-protezzjoni fakultattiva kontra loops fuq kull gateway:
@@ -751,7 +751,7 @@ eżawrit b’HTTP `508 Loop Detected`; il-fornituri upstream ordinarji ma jirċi
 Il-katina ta’ peers mhijiex replikazzjoni tad-database jew failover tal-host. Kull gateway iżomm
 stat, caches, counters tar-rata u sessions ta’ SQLite indipendenti. Uża reverse proxy b’kontrolli tas-saħħa jew
 failover tal-klijent għal disponibbiltà attiva/passiva jew attiva/attiva, u qatt timmonta database SQLite waħda
-f’diversi istanzi OmniRoute li jkunu qed jaħdmu.
+f’diversi istanzi 67router li jkunu qed jaħdmu.
 
 ### Routes Dedikati tal-Fornituri
 
@@ -802,7 +802,7 @@ Jirritorna mudelli raggruppati skont il-fornitur bit-tipi (`chat`, `embedding`, 
 - Disponibbli f’**Dashboard → Endpoints** għal Docker u skjeramenti oħra ospitati lokalment
 - Joħloq URL temporanju `https://*.trycloudflare.com` li jgħaddi t-traffiku lill-endpoint attwali tiegħek kompatibbli ma’ OpenAI `/v1`
 - L-ewwel attivazzjoni tinstalla `cloudflared` biss meta jkun meħtieġ; startjar mill-ġdid sussegwenti jerġa’ juża l-istess binarju ġestit
-- Quick Tunnels ma jiġux restawrati awtomatikament wara startjar mill-ġdid ta’ OmniRoute jew tal-kontejner; erġa’ attivahom mid-dashboard meta jkun meħtieġ
+- Quick Tunnels ma jiġux restawrati awtomatikament wara startjar mill-ġdid ta’ 67router jew tal-kontejner; erġa’ attivahom mid-dashboard meta jkun meħtieġ
 - L-URLs tat-tunnel huma temporanji u jinbidlu kull darba li twaqqaf jew tistartja t-tunnel
 - Managed Quick Tunnels jużaw HTTP/2 bħala t-trasport awtomatiku biex jevitaw twissijiet storbjużi dwar il-buffer UDP ta’ QUIC f’kontejners b’riżorsi limitati
 - Issettja `CLOUDFLARED_PROTOCOL=quic` jew `auto` jekk trid tegħleb l-għażla tat-trasport ġestit
@@ -819,7 +819,7 @@ Jirritorna mudelli raggruppati skont il-fornitur bit-tipi (`chat`, `embedding`, 
 
 ### Ambjent ta’ Esperimentazzjoni għat-Traduttur
 
-Aċċessibbli permezz ta’ **Dashboard → Translator**. Sib u solvi problemi u viżwalizza kif OmniRoute jittraduċi t-talbiet tal-API bejn il-fornituri.
+Aċċessibbli permezz ta’ **Dashboard → Translator**. Sib u solvi problemi u viżwalizza kif 67router jittraduċi t-talbiet tal-API bejn il-fornituri.
 
 | Modalità                          | Għan                                                                                                             |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -872,7 +872,7 @@ Għall-affinità ta’ sessjoni esterna (pereżempju, aġenti Claude Code/Codex 
 X-Session-Id: your-session-key
 ```
 
-OmniRoute jaċċetta wkoll `x_session_id` u jirritorna ċ-ċavetta effettiva tas-sessjoni f’`X-OmniRoute-Session-Id`.
+67router jaċċetta wkoll `x_session_id` u jirritorna ċ-ċavetta effettiva tas-sessjoni f’`X-OmniRoute-Session-Id`.
 
 Jekk tuża Nginx u tibgħat headers bil-format tal-linja ta’ taħt, attiva:
 
@@ -906,7 +906,7 @@ Katina: production-fallback
 
 ### Kombinazzjonijiet Komuni ta’ Fornituri u Mudelli tar-Rotot
 
-Dawn huma eżempji ta’ mudelli biex tgħaqqad diversi fornituri u tidderieġi bejniethom f’OmniRoute:
+Dawn huma eżempji ta’ mudelli biex tgħaqqad diversi fornituri u tidderieġi bejniethom f’67router:
 
 #### 1. Combo għal Aġent tal-Ikkowdjar: Raġunament Avvanzat b’Fallback għall-Ispiża/Veloċità
 
@@ -967,7 +967,7 @@ Tqabbil ta' mudelli speċjalizzati tal-viżjoni ma' ġenerazzjoni ta' test b'vel
 
 Ikkonfigura permezz ta' **Dashboard → Settings → Resilience**.
 
-OmniRoute jimplimenta reżiljenza fil-livell tal-fornitur b'ħames komponenti:
+67router jimplimenta reżiljenza fil-livell tal-fornitur b'ħames komponenti:
 
 1. **Kju tat-Talbiet u Ritmu** — Kontroll tat-talbiet fil-livell tas-sistema:
    - **Talbiet Kull Minuta (RPM)** — Għadd massimu ta' talbiet kull minuta għal kull kont
@@ -992,7 +992,7 @@ OmniRoute jimplimenta reżiljenza fil-livell tal-fornitur b'ħames komponenti:
 
    L-istat waqt it-tħaddim tal-breaker tal-fornitur jintwera biss f'**Dashboard → Health**.
 
-4. **Stenna l-Perjodu ta' Stennija** — Jekk kull konnessjoni kandidata tkun diġà fil-perjodu ta' stennija, OmniRoute jista' jistenna sal-ewwel tmiem ta' perjodu ta' stennija u awtomatikament jerġa' jipprova l-istess talba tal-klijent.
+4. **Stenna l-Perjodu ta' Stennija** — Jekk kull konnessjoni kandidata tkun diġà fil-perjodu ta' stennija, 67router jista' jistenna sal-ewwel tmiem ta' perjodu ta' stennija u awtomatikament jerġa' jipprova l-istess talba tal-klijent.
 
 5. **Sejbien Awtomatiku tal-Limitu tar-Rata** — Meta l-fornituri upstream jirritornaw intervalli espliċiti ta' stennija, dawk is-suġġerimenti jieħdu preċedenza fuq il-perjodu lokali ta' stennija tal-konnessjoni meta l-issettjar ikun attivat.
 
@@ -1026,7 +1026,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Każijiet ta' Użu:**
 
-- Ittrasferixxi OmniRoute bejn magni
+- Ittrasferixxi 67router bejn magni
 - Oħloq backups esterni għall-irkupru minn diżastri
 - Aqsam il-konfigurazzjonijiet bejn il-membri tat-tim (esporta kollox → aqsam l-arkivju)
 
@@ -1078,7 +1078,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Traskrizzjoni tal-Awdjo
 
-OmniRoute jappoġġja t-traskrizzjoni tal-awdjo permezz tal-endpoint kompatibbli ma' OpenAI:
+67router jappoġġja t-traskrizzjoni tal-awdjo permezz tal-endpoint kompatibbli ma' OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1153,7 +1153,7 @@ Iddiżattiva l-**buffer tat-tokens tar-raġunament** meta l-fornituri upstream j
 `max_tokens` / `maxOutputTokens`. Meta jkun attivat, ir-routing ikkombinat iżid spazju addizzjonali għall-mudelli
 ta’ raġunament biss għal mudelli b’limitu tal-output magħruf u jħalli l-limitu tat-tokens tal-klijent l-istess meta
 l-valur ibbufferjat sikur ikun jaqbeż dak il-limitu. Jekk il-limitu tal-klijent ikun diġà ogħla minn limitu magħruf,
-OmniRoute jnaqqsu għal dak il-limitu qabel ma jibgħat it-talba upstream.
+67router jnaqqsu għal dak il-limitu qabel ma jibgħat it-talba upstream.
 
 ---
 
@@ -1176,7 +1176,7 @@ Aċċessah permezz ta’ **Dashboard → Health**. Ħarsa ġenerali f’ħin rea
 
 ## 🤖 Awto-Routjar (B’ebda konfigurazzjoni)
 
-OmniRoute jittrasmetti b’**awto-router mmexxi b’iskor** li jagħżel l-aħjar mudell għal kull talba fost il-provdituri kollha konnessi — l-ebda kombo x’tżomm. Agħti biss it-talba b’wieħed mill-prefissi `auto/*` u l-Omniroute se jkabbar kombo virtwali fuq il-post, billi jskora l-kandidati skont id-dewmien, l-ispiża, ir-rata ta’ suċċess, l-adattament tal-kuntest, l-adattament tal-mudell għall-impjiegi, it-telf reċenti, il-kwota, u l-kundizzjonijiet tal-ksur tal-ċirkuwitu.
+67router jittrasmetti b’**awto-router mmexxi b’iskor** li jagħżel l-aħjar mudell għal kull talba fost il-provdituri kollha konnessi — l-ebda kombo x’tżomm. Agħti biss it-talba b’wieħed mill-prefissi `auto/*` u l-Omniroute se jkabbar kombo virtwali fuq il-post, billi jskora l-kandidati skont id-dewmien, l-ispiża, ir-rata ta’ suċċess, l-adattament tal-kuntest, l-adattament tal-mudell għall-impjiegi, it-telf reċenti, il-kwota, u l-kundizzjonijiet tal-ksur tal-ċirkuwitu.
 
 | Prefiss        | Jottimizza għal                                                                                                      |
 | -------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -1242,7 +1242,7 @@ L-MCP bħalissa jiddefinixxi 32 ambitu magħruf. Kull Bearer key jista’ jiġi 
 
 ## 🧩 Sistema ta' Ħiliet
 
-OmniRoute toffri **qafas ta' ħiliet estensibbli** (`src/lib/skills/`) sabiex l-agenti u l-punt tat-tmiem A2A jistgħu jwettqu rutini speċifiċi għal domini (eż. `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router toffri **qafas ta' ħiliet estensibbli** (`src/lib/skills/`) sabiex l-agenti u l-punt tat-tmiem A2A jistgħu jwettqu rutini speċifiċi għal domini (eż. `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Interfaċi tal-Marketplace** — Stenna u tinstalla ħiliet minn **Dashboard → Ħiliet**
 - **Ambiti fuq iċ-ċavetta** — Irstrinġu liema ċavetti tal-API jistgħu jsejħu liema ħiliet
@@ -1254,7 +1254,7 @@ Referenza sħiħa: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Sistema tal-Memorja
 
-OmniRoute jippreżerva **memorja twila tal-konverżazzjoni** b'retrieval ibridu:
+67router jippreżerva **memorja twila tal-konverżazzjoni** b'retrieval ibridu:
 
 - **SQLite FTS5** għal tiftixa bil-kelma mal-turns li għaddew
 - **Ħażna vetturali ta' Qdrant** (għażla) għal tifkira semantika
@@ -1267,7 +1267,7 @@ Immaniġġja l-mororji f' **Dashboard → Memorja** (tiftixa, teditja, esportazz
 
 ## 🔔 Webhooks
 
-Abbona għall-avvenimenti tal-OmniRoute għal monitoraġġ u awtomazzjoni f'ħin reali.
+Abbona għall-avvenimenti tal-67router għal monitoraġġ u awtomazzjoni f'ħin reali.
 
 - Oħloq webhook f' **Dashboard → Webhooks** b'URL ta' skop u sigriet tal-iffirma HMAC
 - L-avvenimenti disponibbli: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1280,11 +1280,11 @@ Is-sema sħiħa f' [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ## ☁️ Aġenti tal-Cloud
 
-OmniRoute jintegra ma' aġenti tal-kodiċi tal-cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) sabiex tista' tiddispatchja xogħlijiet li jdumu fit-tul minn l-istess dashboard li tiġġestixxi r-rotta lokali tiegħek.
+67router jintegra ma' aġenti tal-kodiċi tal-cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) sabiex tista' tiddispatchja xogħlijiet li jdumu fit-tul minn l-istess dashboard li tiġġestixxi r-rotta lokali tiegħek.
 
 - Oħloq xogħlijiet f' **Dashboard → Aġenti tal-Cloud** jew permezz ta' `POST /api/v1/agents/tasks`
 - Iġbor l-istatus, il-logs, u l-artifatti għal kull xogħol
-- Ġib ċavetta tal-API tiegħek stess għal kull fornitur — il-kredenzjali qatt ma ħarġu minn l-istanza tal-OmniRoute
+- Ġib ċavetta tal-API tiegħek stess għal kull fornitur — il-kredenzjali qatt ma ħarġu minn l-istanza tal-67router
 
 Referenza sħiħa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1292,7 +1292,7 @@ Referenza sħiħa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️Ġestjoni Programmatika
 
-Tista' timmaniġġja kull riżorsa tal-OmniRoute (fornituri, kombos, ċavetti, settings) permezz ta' HTTP billi tuża **ċavetta Bearer b' l-ambitu `manage`**.
+Tista' timmaniġġja kull riżorsa tal-67router (fornituri, kombos, ċavetti, settings) permezz ta' HTTP billi tuża **ċavetta Bearer b' l-ambitu `manage`**.
 
 Ġenera l-ċavetta f' **Dashboard → Ċavetti tal-API → Ċavetta Ġdida → Ambitu: manage**, imbagħad:
 
@@ -1325,7 +1325,7 @@ Ara [API_REFERENCE.md](../reference/API_REFERENCE.md) għall-katalgu sħiħ tal-
 
 ## 💻 CLI Interna
 
-OmniRoute jipprovdi CLI intern (`omniroute …`) għat-twaqqif, dijanjostika, u kontroll waqt l-isfond. Dan huwa **separat mill-paġna "Għodod CLI" fil-dashboard**, li tikkonfigura CLIs ta' parti terza (Claude Code, Cursor, Codex, Cline, …) sabiex ikunu jistgħu jikkomunikaw ma' OmniRoute.
+67router jipprovdi CLI intern (`omniroute …`) għat-twaqqif, dijanjostika, u kontroll waqt l-isfond. Dan huwa **separat mill-paġna "Għodod CLI" fil-dashboard**, li tikkonfigura CLIs ta' parti terza (Claude Code, Cursor, Codex, Cline, …) sabiex ikunu jistgħu jikkomunikaw ma' 67router.
 
 ```bash
 omniroute setup                    # Wizard interattiv (password, fornituri, kombinazzjonijiet)
@@ -1356,7 +1356,7 @@ Parir: għaqqad `omniroute doctor --json` mal-għodda ta' monitoraġġ tiegħek 
 
 ## 🖥️ Applikazzjoni Desktop (Electron)
 
-OmniRoute huwa disponibbli bħala applikazzjoni desktop nattiva għal Windows, macOS, u Linux.
+67router huwa disponibbli bħala applikazzjoni desktop nattiva għal Windows, macOS, u Linux.
 
 ### Twaqqif
 

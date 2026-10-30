@@ -10,7 +10,7 @@ esitetty neljänä palveluntarjoajaperheenä. Alue on yhteystietoa, ei erillinen
 
 ## Päätös
 
-| Palveluntarjoajaperhe                      | OmniRoute-tunnus        | Globaali alue | Kiinan alue |
+| Palveluntarjoajaperhe                      | 67router-tunnus         | Globaali alue | Kiinan alue |
 | ------------------------------------------ | ----------------------- | ------------- | ----------- |
 | Alibaba Cloud Model Studio (käytön mukaan) | `alibaba`               | Singapore     | Beijing     |
 | Alibaba Cloud Token Plan                   | `bailian-coding-plan`   | Singapore     | Beijing     |

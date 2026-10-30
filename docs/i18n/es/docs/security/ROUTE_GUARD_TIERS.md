@@ -6,7 +6,7 @@
 
 ## Descripción general
 
-Todas las rutas de la API de administración de OmniRoute se clasifican en uno de tres niveles de
+Todas las rutas de la API de administración de 67router se clasifican en uno de tres niveles de
 protección. La clasificación es estática, se define en `src/server/authz/routeGuard.ts`
 y se evalúa antes de que se ejecute cualquier otra rama de autenticación.
 
@@ -27,9 +27,9 @@ conocida ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpq
 **Qué es GHSA-fhh6-4qxv-rpqj (la clase de ataque):** un servidor de administración/agente
 expone un endpoint que inicia un subproceso (`npm install`, `node`, un navegador,
 un proxy, `git`, `tar`, …). Si se puede acceder a ese endpoint desde fuera del host, porque
-el operador colocó OmniRoute detrás de un túnel de nginx/Cloudflare/Tailscale y se filtró un JWT,
+el operador colocó 67router detrás de un túnel de nginx/Cloudflare/Tailscale y se filtró un JWT,
 o porque la autenticación estaba mal configurada, el atacante convierte «llamar a una API» en «ejecutar un
-comando en el host» (ejecución remota de código). OmniRoute impide esto aplicando una
+comando en el host» (ejecución remota de código). 67router impide esto aplicando una
 **comprobación incondicional del host de loopback, antes de cualquier comprobación de autenticación**, en todas las
 rutas capaces de crear procesos: un token filtrado a través de un túnel sigue sin poder acceder a la creación de procesos.
 
@@ -118,7 +118,7 @@ para clientes remotos exclusivamente de MCP que no deberían necesitar un acceso
 
 #### Orientación para operadores y auditoría
 
-Si ejecuta OmniRoute detrás de un proxy inverso o un túnel (nginx, Caddy, Cloudflare
+Si ejecuta 67router detrás de un proxy inverso o un túnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), la comprobación de loopback sigue protegiendo las rutas anteriores
 capaces de iniciar procesos: una solicitud cuya dirección de cliente no sea de loopback se rechaza con
 `403 LOCAL_ONLY` **antes de que se ejecute la autenticación**, por lo que un JWT filtrado no puede iniciar ningún proceso. Siguen
@@ -161,7 +161,7 @@ existiendo dos responsabilidades para el operador:
   con una dirección de cliente que no sea loopback. Cualquier acceso de ese tipo que haya
   devuelto `200` en lugar de `403 LOCAL_ONLY` significa que el proxy está ocultando la IP
   real del cliente: corrige el proxy.
-- Un `403 LOCAL_ONLY` en los registros de OmniRoute para una de estas rutas indica que la
+- Un `403 LOCAL_ONLY` en los registros de 67router para una de estas rutas indica que la
   protección está funcionando como se espera, no es un error que deba suprimirse.
 
 #### Rutas accesibles remotamente con una barrera de sondeo en el punto de llamada

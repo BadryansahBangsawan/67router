@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute usa um modelo de lançamento de **ciclos paralelos**: uma branch dedicada `release/vX.Y.Z`
+O 67router usa um modelo de lançamento de **ciclos paralelos**: uma branch dedicada `release/vX.Y.Z`
 para o ciclo ativo, `main` para a linha publicada e uma tag imutável
 `vX.Y.Z` quando esse ciclo é lançado. É esperado que commits sejam incorporados em `release/*` _e_ em
 `main` — não se trata de um engano.

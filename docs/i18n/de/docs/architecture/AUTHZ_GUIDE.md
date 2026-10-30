@@ -7,7 +7,7 @@
 > **Maßgebliche Quelle:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Zuletzt aktualisiert:** 2026-09-22 — Scope-Namespaces verweisen auf MCP-SERVER.md
 
-OmniRoute verfügt über eine routenabhängige Autorisierungspipeline, die jede API-Anfrage absichert. Die Klassifizierung ist **deterministisch** und erfolgt nach dem **Fail-Closed-Prinzip** — alles, was nicht klassifiziert werden kann, wird als `MANAGEMENT` eingestuft und erfordert eine Sitzung oder ein Token mit Berechtigungen auf Management-Ebene. Diese Seite erläutert das Modell für Entwickler, die Routen verwalten oder neue Endpunkte entwerfen.
+67router verfügt über eine routenabhängige Autorisierungspipeline, die jede API-Anfrage absichert. Die Klassifizierung ist **deterministisch** und erfolgt nach dem **Fail-Closed-Prinzip** — alles, was nicht klassifiziert werden kann, wird als `MANAGEMENT` eingestuft und erfordert eine Sitzung oder ein Token mit Berechtigungen auf Management-Ebene. Diese Seite erläutert das Modell für Entwickler, die Routen verwalten oder neue Endpunkte entwerfen.
 
 ![Autorisierungspipeline (3 Routenklassen + Richtlinienauswertung)](../diagrams/exported/authz-pipeline.svg)
 

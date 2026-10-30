@@ -4,16 +4,16 @@
 
 ---
 
-Dva způsoby, jak připojit Cursor za OmniRoute bez relace IDE:
+Dva způsoby, jak připojit Cursor za 67router bez relace IDE:
 
 1. **Provider `cursor-api`** (karta „Cursor API“, alias `cua`): provider
    s API klíčem, který uchovává uživatelský API klíč Cursoru (`crsr_…`, vygenerovaný na
-   `https://cursor.com/dashboard/api`). Libovolný klient OmniRoute pak může přistupovat
+   `https://cursor.com/dashboard/api`). Libovolný klient 67router pak může přistupovat
    k modelům Cursoru prostřednictvím `/v1/chat/completions` jako `cursor-api/<model>` nebo
    `cua/<model>`, s obvyklými vrstvami pro kvóty, záložní směrování a protokolování. Provider
    IDE (`cursor`, relace OAuth/IDE) zůstává beze změny.
-2. **Průchozí režim Cursor CLI**: nasměrujte Cursor CLI (`agent`) na OmniRoute, aby
-   každé RPC volání provedené CLI bylo ověřeno pomocí API klíče OmniRoute, přeposláno
+2. **Průchozí režim Cursor CLI**: nasměrujte Cursor CLI (`agent`) na 67router, aby
+   každé RPC volání provedené CLI bylo ověřeno pomocí API klíče 67router, přeposláno
    do Cursoru s přihlašovacím údajem připojení `cursor-api` a zaznamenáno na
    stránce Protokoly.
 
@@ -59,7 +59,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 Poznámky:
 
 - Seznam modelů pro `cursor-api` pochází ze statického registru Cursoru (ze
-  stejného seznamu, který provider IDE používá jako záložní); na hostiteli OmniRoute není
+  stejného seznamu, který provider IDE používá jako záložní); na hostiteli 67router není
   potřeba instalovat `cursor-agent`.
 - `POST /api/providers/{id}/refresh-cursor` je určen pouze pro provider IDE `cursor`;
   připojení `cursor-api` nemají žádnou relaci IDE, kterou by bylo možné obnovit.
@@ -68,7 +68,7 @@ Poznámky:
 
 Pro `cursor` / `cu` a `cursor-api` / `cua` ponechává sdílený normalizátor úsilí pro Claude
 požadované ID modelu beze změny. Cursor může uvádět příponu, jako je
-`-low`, jako součást skutečného ID modelu, nikoli jako alias úsilí OmniRoute.
+`-low`, jako součást skutečného ID modelu, nikoli jako alias úsilí 67router.
 Executor Cursoru zachová přesnou shodu s aktuálním katalogem; pokud žádná
 shoda neexistuje, převezme jeho stávající resolver modelů záložní převod přípony na parametr.
 
@@ -83,18 +83,18 @@ Trasa: `src/app/api/cursor-cli/[...path]/route.ts` →
 zaregistrován v `src/shared/constants/publicApiRoutes.ts`, protože obslužná rutina
 vynucuje vlastní ověřování:
 
-| Cesta                                                                                                                        | Ověření očekávané od CLI     | Co provádí OmniRoute                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <OmniRoute API key>` | Ověří klíč, vystaví JWT HS256 s platností 1 hodiny (podepsaný pomocí `JWT_SECRET`) a vrátí jej                                                                                        |
-| každá jiná cesta (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`          | Ověří vydavatele, cílovou skupinu a dobu platnosti, vybere aktivní připojení `cursor-api`, nahradí hlavičku Authorization za vyměněný token Cursoru a odpověď odešle zpět jako stream |
+| Cesta                                                                                                                        | Ověření očekávané od CLI    | Co provádí 67router                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <67router API key>` | Ověří klíč, vystaví JWT HS256 s platností 1 hodiny (podepsaný pomocí `JWT_SECRET`) a vrátí jej                                                                                        |
+| každá jiná cesta (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`         | Ověří vydavatele, cílovou skupinu a dobu platnosti, vybere aktivní připojení `cursor-api`, nahradí hlavičku Authorization za vyměněný token Cursoru a odpověď odešle zpět jako stream |
 
 CLI dekóduje `exp` z libovolného přijatého tokenu, takže pokud obdrží neprůhledný
 token, provede novou výměnu téměř před každým požadavkem; vystavený JWT tomu
-zabraňuje. Odpověď 401 z OmniRoute způsobí, že CLI provede výměnu znovu.
+zabraňuje. Odpověď 401 z 67router způsobí, že CLI provede výměnu znovu.
 
 ### Nastavení
 
-1. Vytvořte API klíč OmniRoute (Dashboard → API keys) a připojení `cursor-api`.
+1. Vytvořte API klíč 67router (Dashboard → API keys) a připojení `cursor-api`.
 2. Nastavte CLI tak, aby pro stream agenta používalo HTTP/1.1. V souboru
    `~/.cursor/cli-config.json`:
 
@@ -106,7 +106,7 @@ zabraňuje. Odpověď 401 z OmniRoute způsobí, že CLI provede výměnu znovu.
    nakonfigurovanému hostiteli agenta a přes koncový bod budou procházet pouze
    RPC řídicí roviny.
 
-3. Spusťte CLI proti OmniRoute:
+3. Spusťte CLI proti 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -115,18 +115,18 @@ zabraňuje. Odpověď 401 z OmniRoute způsobí, že CLI provede výměnu znovu.
    ```
 
 Každý krok se zaznamená v Logs s poskytovatelem `cursor-api`, typem požadavku
-`cursor-cli` a cestou `/api/cursor-cli/<rpc>` a je přiřazen API klíči OmniRoute
+`cursor-cli` a cestou `/api/cursor-cli/<rpc>` a je přiřazen API klíči 67router
 a připojení, které jej obsloužilo.
 
 ### Chybové stavy
 
-| Situace                                         | Odpověď pro CLI                                       |
-| ----------------------------------------------- | ----------------------------------------------------- |
-| Neznámý klíč OmniRoute a `REQUIRE_API_KEY=true` | 401 `unauthenticated` při výměně                      |
-| `REQUIRE_API_KEY=false`                         | anonymní relace (odpovídá chování `/v1/*`)            |
-| Expirovaný / cizí / pozměněný JWT relace        | 401, CLI provede výměnu znovu                         |
-| API klíč OmniRoute odvolaný po výměně           | 401 při následujícím RPC                              |
-| Žádné aktivní připojení `cursor-api`            | 503 `unavailable`                                     |
-| Cursor odmítne klíč připojení                   | 401 `unauthenticated`, relace v mezipaměti odstraněna |
-| Nadřazená služba není dostupná                  | 502 `unavailable` (sanitizovaná zpráva)               |
-| `JWT_SECRET` není nastaven                      | 503 při výměně                                        |
+| Situace                                        | Odpověď pro CLI                                       |
+| ---------------------------------------------- | ----------------------------------------------------- |
+| Neznámý klíč 67router a `REQUIRE_API_KEY=true` | 401 `unauthenticated` při výměně                      |
+| `REQUIRE_API_KEY=false`                        | anonymní relace (odpovídá chování `/v1/*`)            |
+| Expirovaný / cizí / pozměněný JWT relace       | 401, CLI provede výměnu znovu                         |
+| API klíč 67router odvolaný po výměně           | 401 při následujícím RPC                              |
+| Žádné aktivní připojení `cursor-api`           | 503 `unavailable`                                     |
+| Cursor odmítne klíč připojení                  | 401 `unauthenticated`, relace v mezipaměti odstraněna |
+| Nadřazená služba není dostupná                 | 502 `unavailable` (sanitizovaná zpráva)               |
+| `JWT_SECRET` není nastaven                     | 503 při výměně                                        |

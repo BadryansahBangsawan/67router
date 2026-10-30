@@ -4,7 +4,7 @@
 
 ---
 
-Cuireann **OmniCopilot** gach samhail a fhreastalaíonn do OmniRoute uirthi isteach i roghnóir samhlacha _dúchais_ GitHub Copilot Chat.
+Cuireann **OmniCopilot** gach samhail a fhreastalaíonn do 67router uirthi isteach i roghnóir samhlacha _dúchais_ GitHub Copilot Chat.
 Níl aon dara taobhbharra ná aon chomhéadan comhrá ar leith ann — leanann mód gníomhaire Copilot, glaoch uirlisí,
 freastalaithe MCP agus treoracha saincheaptha ar aghaidh ag obair, ach iad ag rith ar an tsamhail a roghnaíonn tú.
 
@@ -23,13 +23,13 @@ freastalaithe MCP agus treoracha saincheaptha ar aghaidh ag obair, ach iad ag ri
 
 ## Socrú
 
-1. **Rith OmniRoute** — `npm install -g omniroute && omniroute` (an deais ar `http://localhost:20128`).
+1. **Rith 67router** — `npm install -g omniroute && omniroute` (an deais ar `http://localhost:20128`).
 2. **Suiteáil an eisínteacht** — cuardaigh "OmniRoute" san amharc Eisínteachtaí.
 3. **Roghnaigh samhail** — Copilot Chat → roghnóir samhlacha → **Bainistigh Samhlacha…** → **OmniRoute**, ansin cuir tic leis
    na cinn atá uait.
 
-Ní gá aon rud a chumrú nuair a ritheann OmniRoute ar an bport réamhshocraithe. I gcás cianásc, oscail
-**deilbhín OmniRoute sa Bharra Gníomhaíochta** (nó rith `OmniRoute: Manage Connection`) agus socraigh:
+Ní gá aon rud a chumrú nuair a ritheann 67router ar an bport réamhshocraithe. I gcás cianásc, oscail
+**deilbhín 67router sa Bharra Gníomhaíochta** (nó rith `OmniRoute: Manage Connection`) agus socraigh:
 
 - **URL an fhreastalaí** — fréamh an fhreastalaí, m.sh. `http://192.168.0.15:20128`. Cuireann an eisínteacht
   an iarmhír `/v1` leis; ná cuir san áireamh í.
@@ -75,7 +75,7 @@ HTTP 400 — Is samhail giniúna íomhánna í an tsamhail '<id>' agus ní féid
 
 mar sin scagtar amach iad de réir a réimse `type` sula sroicheann siad an roghnóir. **Coinnítear samhlacha Responses-API
 ** — fógraíonn gach iontráil Codex / GPT-5.x `supported_endpoints: ["responses"]`,
-agus aistríonn OmniRoute iad sin do `/v1/chat/completions`, mar sin is féidir iad a úsáid gan stró.
+agus aistríonn 67router iad sin do `/v1/chat/completions`, mar sin is féidir iad a úsáid gan stró.
 
 ### Soláthraithe nár chumraigh tú riamh
 
@@ -88,7 +88,7 @@ eisínteacht.
 
 ## Painéal taobh istigh de chluaisín VS Code
 
-Rindreálann `omnicopilot.dashboardOpen: "editor"` painéal OmniRoute i gcluaisín eagarthóra tríd an
+Rindreálann `omnicopilot.dashboardOpen: "editor"` painéal 67router i gcluaisín eagarthóra tríd an
 Simple Browser seachas i mbrabhsálaí seachtrach. Ní mór leabú a **roghnú go sainráite ar an bhfreastalaí** trí
 `DASHBOARD_ALLOW_EMBED=vscode`, a fhreastalaíonn na leathanaigh HTML le
 `frame-ancestors 'self' vscode-webview:` seachas an réamhshocrú `frame-ancestors 'none'` +
@@ -133,7 +133,7 @@ athróg timpeallachta `OMNIROUTE_API_KEY`, agus ní chuirtear ar líne na n-ordu
 
 | Siomptóm                                                        | Cúis / réiteach                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Níl aon samhlacha OmniRoute sa roghnóir                         | Ní féidir an freastalaí a rochtain. Éiríonn ponc an bharra stádais liath; rith `OmniRoute: Check Connection`. Tá an aimsiú ciúin de réir dearaidh agus ní chuireann sé aon samhlacha leis seachas leid a thaispeáint.                                                                                         |
+| Níl aon samhlacha 67router sa roghnóir                          | Ní féidir an freastalaí a rochtain. Éiríonn ponc an bharra stádais liath; rith `OmniRoute: Check Connection`. Tá an aimsiú ciúin de réir dearaidh agus ní chuireann sé aon samhlacha leis seachas leid a thaispeáint.                                                                                         |
 | Taispeántar gach samhail faoi dhó                               | Tá leagan OmniCopilot níos sine ná 1.0.1 agat — nuashonraigh é. Iarrann an eisínteacht `?prefix=alias` anois.                                                                                                                                                                                                 |
 | Bhí samhail íomhá/fuaime liostaithe ach níl sí ann a thuilleadh | D’aon ghnó ó 1.0.1 — ní raibh sí in ann freagra a thabhairt ar iarratas comhrá riamh.                                                                                                                                                                                                                         |
 | Tá an painéal ar iarraidh ón mBarra Gníomhaíochta               | Bogann VS Code coimeádáin amhairc bhreise isteach sa roghchlár thar maoil **"…"** ag bun an Bharra Gníomhaíochta, agus fanann coimeádán a cuireadh i bhfolach trí dheaschliceáil i bhfolach. Deaschliceáil an Barra Gníomhaíochta → cuir tic le **OmniRoute**, nó oscail é le `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ athróg timpeallachta `OMNIROUTE_API_KEY`, agus ní chuirtear ar líne na n-ordu
 ## Féach freisin
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — gach uirlis códaithe eile
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — OmniRoute cianda a rialú
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — 67router cianda a rialú
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — conradh `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — nótaí catalóige na heisínteachta féin

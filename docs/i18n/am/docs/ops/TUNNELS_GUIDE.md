@@ -7,7 +7,7 @@
 > **የእውነት ምንጭ:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **መጨረሻ የተዘመነው:** 2026-06-28 — v3.8.40
 
-OmniRoute በሦስት የቱነል ባክኤንዶች አማካይነት የአካባቢ አገልጋዩን (`http://localhost:20128`) ለሕዝባዊ
+67router በሦስት የቱነል ባክኤንዶች አማካይነት የአካባቢ አገልጋዩን (`http://localhost:20128`) ለሕዝባዊ
 በይነመረብ ተደራሽ ማድረግ ይችላል። ይህ ለሚከተሉት ጠቃሚ ነው፦
 
 - በይፋ ተደራሽ የሆነ የማዘዋወሪያ URL ለሚፈልጉ የደመና አቅራቢዎች (Antigravity, Gemini, Cursor)
@@ -15,7 +15,7 @@ OmniRoute በሦስት የቱነል ባክኤንዶች አማካይነት የአ
 - VM ሳያሰማሩ የአካባቢ ኢንስታንስዎን ከቡድን አባላትዎ ጋር ማጋራት።
 - የሞባይል፣ የርቀት ወይም የኔትወርክ-ተሻጋሪ ሙከራ።
 
-ሦስቱም ባክኤንዶች በሂደቱ ውስጥ ይተዳደራሉ — OmniRoute ከዳሽቦርዱ ወይም ከREST API መሠረታዊውን
+ሦስቱም ባክኤንዶች በሂደቱ ውስጥ ይተዳደራሉ — 67router ከዳሽቦርዱ ወይም ከREST API መሠረታዊውን
 ባይነሪ ወይም SDK ያስጀምራል/ያቆማል። የተገላቢጦሽ-ፕሮክሲ ወይም systemd ማዋቀር
 አያስፈልግም።
 
@@ -40,7 +40,7 @@ OmniRoute በሦስት የቱነል ባክኤንዶች አማካይነት የአ
 http://localhost:<apiPort>`ን ያስኬዳል እና የተመደበውን `*.trycloudflare.com` URL
   ከstdout ይተነትናል። URL-ዎቹ ጊዜያዊ ሲሆኑ በእያንዳንዱ ዳግም ማስጀመር ይለወጣሉ።
 - **የተሰየመ ቱነል (በምርጫ)።** `CLOUDFLARED_CONFIG` በአካባቢው ወደሚተዳደር
-  የcloudflared `config.yml` ሲያመለክት፣ OmniRoute `cloudflared tunnel --no-autoupdate
+  የcloudflared `config.yml` ሲያመለክት፣ 67router `cloudflared tunnel --no-autoupdate
 --config <path> run`ን ያስኬዳል፤ ይህም **የተረጋጋ፣ የተሰየመ የአስተናጋጅ ስም** ይሰጥዎታል። ውቅሩ
   የቱነሉን UUID፣ `credentials-file` እና `ingress` ማዘዋወር ያቀርባል፤ ስለዚህ
   `--url` አይተላለፍም እና የZero Trust ዳሽቦርድ ቶከን አያስፈልግም። `run`
@@ -49,7 +49,7 @@ http://localhost:<apiPort>`ን ያስኬዳል እና የተመደበውን `*.t
 
 ቁልፍ ባህሪያት፦
 
-- **በራስ-ሰር መጫን።** በመጀመሪያ አጠቃቀም፣ OmniRoute የቅርብ ጊዜውን `cloudflared`
+- **በራስ-ሰር መጫን።** በመጀመሪያ አጠቃቀም፣ 67router የቅርብ ጊዜውን `cloudflared`
   ባይነሪ ከይፋዊው GitHub releases ያወርዳል (የሚተዳደረው ጭነት በ
   `DATA_DIR/cloudflared/` ስር ይገኛል)። የወረደው ንብረት SHA256 ከመፈጸሙ በፊት ከrelease manifest ጋር ይረጋገጣል።
 - **የሂደት ክትትል።** የcloudflared PID እና የተፈታው URL በ
@@ -65,7 +65,7 @@ http://localhost:<apiPort>`ን ያስኬዳል እና የተመደበውን `*.t
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. የአስተናጋጅ ስምዎን ወደ OmniRoute የአካባቢ API ወደብ (ነባሪ 20128) የሚያዘዋውር
+2. የአስተናጋጅ ስምዎን ወደ 67router የአካባቢ API ወደብ (ነባሪ 20128) የሚያዘዋውር
    `~/.cloudflared/config.yml` ይጻፉ፦
 
    ```yaml
@@ -77,11 +77,11 @@ http://localhost:<apiPort>`ን ያስኬዳል እና የተመደበውን `*.t
      - service: http_status:404
    ```
 
-3. OmniRouteን ወደ ውቅሩ ያመልክቱ እና ቱነሉን (ዳግም) ያስጀምሩ፦
+3. 67routerን ወደ ውቅሩ ያመልክቱ እና ቱነሉን (ዳግም) ያስጀምሩ፦
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # አማራጭ — OmniRoute የሚዘግበውን የአስተናጋጅ ስም ይተካል፤ አለበለዚያ ከውቅሩ
+   # አማራጭ — 67router የሚዘግበውን የአስተናጋጅ ስም ይተካል፤ አለበለዚያ ከውቅሩ
    # የመጀመሪያ ingress ደንብ ይነበባል፦
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -118,12 +118,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### አማራጭ env vars
 
-| ተለዋዋጭ                                                | ዓላማ                                                                                                                                  |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `CLOUDFLARED_BIN`                                    | የሁለትዮሽ ፋይሉን ዱካ ይተካል። ከተዋቀረ እና ትክክለኛ ከሆነ፣ OmniRoute ከማውረድ ይልቅ ይህንን ይጠቀማል።                                                             |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | የማጓጓዣ ፕሮቶኮል (ነባሪው `http2`፤ `quic` እና `auto` እንዲሁም ይደገፋሉ)።                                                                            |
-| `CLOUDFLARED_CONFIG`                                 | በአካባቢው የሚተዳደር የcloudflared `config.yml` ዱካ። ሲዋቀር፣ OmniRoute ፈጣን ቱነል ከማስኬድ ይልቅ **የተሰየመ/ቋሚ** ቱነል (`tunnel --config <path> run`) ያስኬዳል። |
-| `CLOUDFLARED_HOSTNAME`                               | በተሰየመው ቱነል ሪፖርት የሚደረገውን ይፋዊ የአስተናጋጅ ስም ይተካል (ለምሳሌ `ai.example.com`)። ካልተዋቀረ፣ ከውቅሩ የመጀመሪያ `ingress` የአስተናጋጅ ስም ይነበባል።                 |
+| ተለዋዋጭ                                                | ዓላማ                                                                                                                                 |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | የሁለትዮሽ ፋይሉን ዱካ ይተካል። ከተዋቀረ እና ትክክለኛ ከሆነ፣ 67router ከማውረድ ይልቅ ይህንን ይጠቀማል።                                                             |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | የማጓጓዣ ፕሮቶኮል (ነባሪው `http2`፤ `quic` እና `auto` እንዲሁም ይደገፋሉ)።                                                                           |
+| `CLOUDFLARED_CONFIG`                                 | በአካባቢው የሚተዳደር የcloudflared `config.yml` ዱካ። ሲዋቀር፣ 67router ፈጣን ቱነል ከማስኬድ ይልቅ **የተሰየመ/ቋሚ** ቱነል (`tunnel --config <path> run`) ያስኬዳል። |
+| `CLOUDFLARED_HOSTNAME`                               | በተሰየመው ቱነል ሪፖርት የሚደረገውን ይፋዊ የአስተናጋጅ ስም ይተካል (ለምሳሌ `ai.example.com`)። ካልተዋቀረ፣ ከውቅሩ የመጀመሪያ `ingress` የአስተናጋጅ ስም ይነበባል።                |
 
 ## 2. ngrok
 
@@ -168,7 +168,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 ምላሹ የተመደበውን `publicUrl` ያካትታል (ለምሳሌ፣
 `https://abcd-1234.ngrok-free.app`)። ብጁ ዶሜይኖች፣ ክልሎች እና የፖሊሲ ደንቦች
-በngrok ዳሽቦርድ ውስጥ መዋቀር አለባቸው — OmniRoute ራሱ የአካባቢውን ዒላማ URL ወደSDKው ከማስተላለፍ ውጭ ሌላ ነገር አያደርግም።
+በngrok ዳሽቦርድ ውስጥ መዋቀር አለባቸው — 67router ራሱ የአካባቢውን ዒላማ URL ወደSDKው ከማስተላለፍ ውጭ ሌላ ነገር አያደርግም።
 
 ## 3. Tailscale Funnel
 
@@ -178,12 +178,12 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 ### ቅድመ ሁኔታዎች
 
-1. Tailscaleን ይጫኑ (ወይም OmniRoute እንዲጭነው ይፍቀዱ — ከታች ያለውን `install` endpoint ይመልከቱ)።
-2. ይግቡ (`tailscale login` ወይም በOmniRoute `login` endpoint በኩል)።
+1. Tailscaleን ይጫኑ (ወይም 67router እንዲጭነው ይፍቀዱ — ከታች ያለውን `install` endpoint ይመልከቱ)።
+2. ይግቡ (`tailscale login` ወይም በ67router `login` endpoint በኩል)።
 3. በTailscale የአስተዳዳሪ ኮንሶል ውስጥ Funnelን ለtailnetዎ ያንቁ፦
    <https://login.tailscale.com/admin/settings/features>።
 
-በLinux እና macOS፣ daemonው (`tailscaled`) ለመቆጣጠር `sudo`ን ይፈልጋል። የPOST endpointዎቹ፣ ጥሪው በሚቆይበት ጊዜ ወደOmniRoute MITM የይለፍ ቃል መሸጎጫ (`getCachedPassword` / `setCachedPassword`) የሚተላለፍ አማራጭ `sudoPassword` መስክ ይቀበላሉ። Windows በ`C:\Program Files\Tailscale\tailscale.exe` ያለውን ነባሪ የአገልግሎት ጭነት ይጠቀማል።
+በLinux እና macOS፣ daemonው (`tailscaled`) ለመቆጣጠር `sudo`ን ይፈልጋል። የPOST endpointዎቹ፣ ጥሪው በሚቆይበት ጊዜ ወደ67router MITM የይለፍ ቃል መሸጎጫ (`getCachedPassword` / `setCachedPassword`) የሚተላለፍ አማራጭ `sudoPassword` መስክ ይቀበላሉ። Windows በ`C:\Program Files\Tailscale\tailscale.exe` ያለውን ነባሪ የአገልግሎት ጭነት ይጠቀማል።
 
 ### የREST endpointዎች
 
@@ -240,7 +240,7 @@ Funnel በአስተዳዳሪ ኮንሶሉ ውስጥ ካልነቃ፣ ምላሹ `f
 
 ## የOAuth callback ግምትዎች
 
-OmniRouteን በtunnel በኩል ሲያጋልጡ፣ dashboard እና የOAuth ፍሰቶች
+67routerን በtunnel በኩል ሲያጋልጡ፣ dashboard እና የOAuth ፍሰቶች
 የcallback URLዎችን በ`localhost` ሳይሆን በ**ይፋዊ** hostname መሠረት
 መገንባት አለባቸው። ካልሆነ፣ የOAuth አቅራቢው ተጠቃሚውን አገልጋዮቹ
 ሊደርሱበት ወደማይችሉት URL ይመልሰዋል፣ እና handshake አይሳካም።
@@ -257,7 +257,7 @@ dashboard ከsession ጋር በተሳሰረ CSRF token ተመሳሳይ-origin un
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-OAuthን ከማስጀመርዎ በፊት OmniRouteን እንደገና ያስጀምሩ። ለephemeral
+OAuthን ከማስጀመርዎ በፊት 67routerን እንደገና ያስጀምሩ። ለephemeral
 Cloudflare Quick Tunnels URLው ከእያንዳንዱ ዳግም ማስጀመር በኋላ ይቀየራል፤
 ስለዚህ በproduction ውስጥ OAuthን ለመጠቀም የተጠበቀ domain ያለውን ngrok
 ወይም Tailscale Funnelን ይምረጡ።
@@ -273,14 +273,14 @@ dashboard የtunnel ሁኔታን በ**ቅንብሮች → Tunnels** ሥር ያ�
 - ካለ፣ የመጨረሻው የስህተት መልዕክት።
 
 በፕሮግራም ለመከታተል የእያንዳንዱን backend `GET` መዳረሻ ነጥብ በየጊዜው
-ይጠይቁ። ከአንድ በላይ backendን በአንድ ጊዜ ማስኬድ ይፈቀዳል፤ OmniRoute
+ይጠይቁ። ከአንድ በላይ backendን በአንድ ጊዜ ማስኬድ ይፈቀዳል፤ 67router
 እያንዳንዱን ለብቻው ይከታተላል።
 
 ## መላ ፍለጋ
 
 ### "cloudflared binary አልተገኘም"
 
-OmniRoute በመጀመሪያ አጠቃቀም ጊዜ በራስ-ሰር ለመጫን ይሞክራል። መጫኑ
+67router በመጀመሪያ አጠቃቀም ጊዜ በራስ-ሰር ለመጫን ይሞክራል። መጫኑ
 ከታገደ (የተገደበ network፣ የGitHub መዳረሻ ከሌለ)፣ `cloudflared`ን ከ
 <https://github.com/cloudflare/cloudflared/releases> በእጅ ያውርዱ እና
 `CLOUDFLARED_BIN=/path/to/cloudflared` ያቀናብሩ።

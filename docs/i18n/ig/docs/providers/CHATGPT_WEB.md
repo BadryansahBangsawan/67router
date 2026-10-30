@@ -41,9 +41,9 @@ otu ikike ngwa mpaghara ahụ e kegidere na ntụgharị mgbe a haziri tunnel na
    Nhazi ọhụrụ nwere ike iji ngwa ga-ejirịrị connector e mepụtara ọhụrụ nke aha ya bụ kpọmkwem
    `OmniRoute Codex v2`, ebe edobere Authentication ka ọ bụrụ None ma debe Permissions ka ọ bụrụ Allow all
    actions.
-3. Mee nyocha njikọ ahụ. OmniRoute ga-emepe Temporary Chat nke ihe nchọgharị na-akwado ma chọpụta
+3. Mee nyocha njikọ ahụ. 67router ga-emepe Temporary Chat nke ihe nchọgharị na-akwado ma chọpụta
    ma Sol na Pro dị maka akaụntụ ahụ.
-4. Chekwaa njikọ ahụ. OmniRoute ga-eji ọnọdụ nchekwa Playwright a kwadoro dochie cookie ahụ
+4. Chekwaa njikọ ahụ. 67router ga-eji ọnọdụ nchekwa Playwright a kwadoro dochie cookie ahụ
    e madoro ma chekwaa ya na runtime key site na usoro nchekwa nzere ezoro ezo.
 
 A naghị edowe cookie mbụ ahụ mgbe echekwara ya nke ọma. Mgbe oge nnọkọ ahụ gwụrụ, mepee
@@ -92,19 +92,19 @@ connector ọhụrụ `OmniRoute Codex v2`.
 
 ## VPS na-enweghị ihuenyo na Docker
 
-Maka nrụnye npm, systemd, na PM2, OmniRoute na-achọpụta ụzọ Chrome na Chromium ndị a na-ahụkarị.
+Maka nrụnye npm, systemd, na PM2, 67router na-achọpụta ụzọ Chrome na Chromium ndị a na-ahụkarị.
 N’ụzọ ọzọ, tọọ `CHATGPT_WEB_CODEX_CHROME_PATH`. Runtime turns na-eji Chrome nwere interface n’ụma
 n’ihi na ChatGPT na-ajụ nhazi browser nke bụ true-headless. Ya mere, host na-enweghị ihuenyo ga-eji
-private Xvfb display mee ka OmniRoute rụọ ọrụ; naanị ịtọ ụzọ Chrome anaghị enye display.
+private Xvfb display mee ka 67router rụọ ọrụ; naanị ịtọ ụzọ Chrome anaghị enye display.
 
 Profaịlụ Docker `web` na-amalite `chatgpt-web-codex-browser` na netwọkụ Compose dị n’ime.
 Sidecar ahụ na-eme Chrome nwere interface ka ọ rụọ ọrụ n’ime Xvfb, ya mere, a chọghị ihuenyo anụ ahụ. A naghị
 ebipụta port CDP ya na host. Volume profaịlụ browser e chebere dị iche na
-volume data OmniRoute, browser ahụ na-enwetakwa shared memory zuru ezu. Proxy CDP dị n’ime
+volume data 67router, browser ahụ na-enwetakwa shared memory zuru ezu. Proxy CDP dị n’ime
 na-ege ntị naanị na port `9223` n’ime netwọkụ Compose; Chrome ka na-ejikọta naanị na loopback n’ime
 sidecar.
 
-Supervisor lease dị n’okpuru `DATA_DIR` na-egbochi ọtụtụ process OmniRoute inwe
+Supervisor lease dị n’okpuru `DATA_DIR` na-egbochi ọtụtụ process 67router inwe
 otu tunnel na broker state. Doctor na-akọ esemokwu ọ bụla.
 
 ## Mgbake mmekọrịta

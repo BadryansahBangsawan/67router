@@ -25,7 +25,7 @@ Dashboard → Providers → **फाइलमधून आयात करा** 
 आयात modal मधून प्रारंभिक फाइल डाउनलोड करा (**CSV template डाउनलोड करा**). उदाहरण:
 
 ```csv
-# OmniRoute provider आयात (स्थानाधारित स्तंभ)
+# 67router provider आयात (स्थानाधारित स्तंभ)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

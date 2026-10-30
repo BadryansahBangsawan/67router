@@ -4,7 +4,7 @@
 
 ---
 
-> **Resumindo**: o OmniRoute classifica seus provedores **gratuitos** pela qualidade dos modelos usando **pontuações ELO
+> **Resumindo**: o 67router classifica seus provedores **gratuitos** pela qualidade dos modelos usando **pontuações ELO
 > do Arena AI (no estilo LMArena)**. Abra a página **Classificação de Provedores Gratuitos** no
 > painel para ver quais provedores gratuitos oferecem os modelos mais avançados para sua tarefa —
 > de forma geral ou filtrados por categoria (programação, revisão, documentação, depuração).
@@ -13,7 +13,7 @@
 
 ## O Que É
 
-O OmniRoute registra 375 provedores, incluindo 155 entradas de catálogo marcadas como **free/no-auth**
+O 67router registra 375 provedores, incluindo 155 entradas de catálogo marcadas como **free/no-auth**
 (no-auth,
 OAuth com nível gratuito ou chave de API com nível gratuito — veja o
 [Guia de Níveis Gratuitos](../getting-started/FREE-TIERS-GUIDE.md) e o diretório completo de
@@ -129,9 +129,9 @@ e `code` — na API de classificação do Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Cada entrada da classificação
 contém o nome do modelo, fornecedor, `score` ELO, intervalo de confiança e número de votos.
 
-As categorias da classificação são mapeadas para as categorias de tarefas do OmniRoute:
+As categorias da classificação são mapeadas para as categorias de tarefas do 67router:
 
-| Classificação do Arena | Categorias de tarefas do OmniRoute                |
+| Classificação do Arena | Categorias de tarefas do 67router                 |
 | ---------------------- | ------------------------------------------------- |
 | `text`                 | `default`, `review`, `documentation`, `debugging` |
 | `code`                 | `coding`                                          |
@@ -168,7 +168,7 @@ A sincronização é executada **por padrão**:
 
 - Ela é executada uma vez na inicialização do servidor e, depois, em um temporizador periódico
   (`src/lib/arenaEloSync.ts`, conectado a partir de `src/instrumentation-node.ts`).
-- Ela é **não bloqueante e nunca fatal** — se a busca na fonte externa falhar, o OmniRoute continua
+- Ela é **não bloqueante e nunca fatal** — se a busca na fonte externa falhar, o 67router continua
   em execução, e as classificações simplesmente exibem os últimos dados válidos (ou um estado vazio).
 
 Duas variáveis de ambiente a controlam (documentadas em
@@ -203,7 +203,7 @@ correspondência flexível (`findMatchingIntelligence` em `src/lib/freeProviderR
 3. Correspondência por prefixo (o nome de um modelo na classificação é um prefixo do ID no registro).
 
 No lado da sincronização, prefixos conhecidos de fornecedores (`anthropic/`, `openai/`, `google/`, …) são
-removidos, e um pequeno mapa de aliases expande os nomes canônicos para as variantes usadas pelo OmniRoute
+removidos, e um pequeno mapa de aliases expande os nomes canônicos para as variantes usadas pelo 67router
 internamente, mantendo os modelos localizáveis por qualquer nome.
 
 ### Como um fornecedor é classificado

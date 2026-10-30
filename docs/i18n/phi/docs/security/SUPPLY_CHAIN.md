@@ -4,7 +4,7 @@
 
 ---
 
-Naglalabas ang OmniRoute ng npm + Docker artifacts. Ang mga gate na ito ay nagbibigay ng provenance, imbentaryo (SBOM) at pag-scan ng CVE, lahat ay OSS, na nakakabit sa mga workflow ng paglabas.
+Naglalabas ang 67router ng npm + Docker artifacts. Ang mga gate na ito ay nagbibigay ng provenance, imbentaryo (SBOM) at pag-scan ng CVE, lahat ay OSS, na nakakabit sa mga workflow ng paglabas.
 Posisyong **Advisory-first** — nagre-report sila ngayon, at nagiging blocking pagkatapos ng ika-1 matagumpay na paglabas.
 
 | Gate                  | Tool                                           | Saan                          | Nagba-block?                     | Output                                        |
@@ -48,7 +48,7 @@ Ayon sa sangay ng "walang upstream fix" ng CVE Variance remedy sa itaas, ito ay 
   kasalukuyang npm-latest (`0.1.29`) ng `@openai/codex-security` ay humihila pa rin ng `extract-zip@2.0.1`.
 - **Hindi maabot mula sa production.** Ang `promptfoo` ay devDependency-only (hindi kailanman nakalista
   sa ilalim ng `dependencies`), at walang file sa ilalim ng `src/`, `open-sse/`, o `bin/` ang nag-i-import ng
-  `extract-zip` npm package — ang sariling `extractZip()` helper ng OmniRoute
+  `extract-zip` npm package — ang sariling `extractZip()` helper ng 67router
   (`src/lib/versionManager/binaryManager.ts:93`) ay gumagamit ng native na `unzip`/`tar`
   at hindi nauugnay. Ang `@openai/codex-security` ay mayroon ding sariling symlink-traversal
   guard bukod pa sa onEntry callback ng extract-zip.

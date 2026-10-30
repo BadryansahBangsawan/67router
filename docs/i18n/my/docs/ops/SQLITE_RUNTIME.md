@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute သည် စတင်ချိန်တွင် အဆင့် ၅ ဆင့်ပါ fallback chain မှတစ်ဆင့် ၎င်း၏ SQLite driver ကို ရွေးချယ်သတ်မှတ်သည်-
+67router သည် စတင်ချိန်တွင် အဆင့် ၅ ဆင့်ပါ fallback chain မှတစ်ဆင့် ၎င်း၏ SQLite driver ကို ရွေးချယ်သတ်မှတ်သည်-
 
 1. **တွဲဖက်ပါဝင်သော `better-sqlite3`** (`package.json` ရှိ `dependencies` မှတစ်ဆင့်)
    — အမြန်ဆုံးဖြစ်ပြီး native binary ကို အသုံးပြုကာ build tools များရှိသည့်အခါ `npm install` က ထည့်သွင်းပေးသည်။
@@ -28,14 +28,14 @@ OmniRoute သည် စတင်ချိန်တွင် အဆင့် ၅ 
 - **Build tools မရှိခြင်း**- အချို့ environment များတွင် (VS Build Tools မရှိသော
   corporate Windows၊ အနည်းဆုံးလိုအပ်ချက်သာပါသည့် Docker image များ) `better-sqlite3`
   ကို compile မလုပ်နိုင်ပါ။ Runtime installer သည် npm registry မှ ကြိုတင် build လုပ်ထားသော
-  binary ကို ရယူပေးပြီး ထိုလုပ်ဆောင်ချက် မအောင်မြင်လျှင်ပင် fallback driver များက OmniRoute
+  binary ကို ရယူပေးပြီး ထိုလုပ်ဆောင်ချက် မအောင်မြင်လျှင်ပင် fallback driver များက 67router
   ကို ဆက်လက်စတင်နိုင်စေသည်။
 - **ကွန်ရက်မှ သီးခြားခွဲထားသော စနစ်များ**- npm registry ကို ဆက်သွယ်၍မရပါက `node:sqlite`
   သို့မဟုတ် `sql.js` က အခြေခံလုပ်ဆောင်နိုင်စွမ်းကို အာမခံပေးသည်။
 
 ## Magic-byte စစ်ဆေးအတည်ပြုခြင်း
 
-Runtime တွင် ထည့်သွင်းထားသော `.node` file ကို မတင်မီ OmniRoute သည် ပထမဆုံး 8
+Runtime တွင် ထည့်သွင်းထားသော `.node` file ကို မတင်မီ 67router သည် ပထမဆုံး 8
 bytes ကိုဖတ်ပြီး သိရှိထားသော platform magic များနှင့် တိုက်ဆိုင်စစ်ဆေးသည်-
 
 | Platform              | Bytes (hex)   | Label       |
@@ -110,9 +110,9 @@ operation သတိပေးချက်များ၊ host/storage metric မ�
 ## Single-writer topology (HA ကို မပံ့ပိုးပါ)
 
 အထက်ပါ driver fallback chain သည် **process တစ်ခုတည်း** အတွင်းသာ လည်ပတ်နေဆဲဖြစ်သည်။
-SQLite ကို မူလသတ်မှတ်ချက်ဖြင့် အသုံးပြုသော OmniRoute သည် **single writer** ဖြစ်သည်-
+SQLite ကို မူလသတ်မှတ်ချက်ဖြင့် အသုံးပြုသော 67router သည် **single writer** ဖြစ်သည်-
 
-- OmniRoute replica နှစ်ခုကို `storage.sqlite` file တစ်ခုတည်းနှင့် မချိတ်ဆက်ပါနှင့်။
+- 67router replica နှစ်ခုကို `storage.sqlite` file တစ်ခုတည်းနှင့် မချိတ်ဆက်ပါနှင့်။
 - Container restart၊ Recreate deploy၊ OOM kill သို့မဟုတ် HEALTHCHECK restart တစ်ခုသည်
   လုပ်ဆောင်နေဆဲ SSE session အားလုံးကို ဖြုတ်ချမည်။ မူလလမ်းကြောင်းတွင် session drain မရှိပါ။
 - နှေးကွေးသော `/healthz` ကို dead အဖြစ် သတ်မှတ်သည့် orchestrator liveness သည် တစ်ခုတည်းသော

@@ -10,7 +10,7 @@ représentés sous la forme de quatre familles de fournisseurs. La région const
 
 ## Décision
 
-| Famille de fournisseurs                         | ID OmniRoute            | Région globale | Région Chine |
+| Famille de fournisseurs                         | ID 67router             | Région globale | Région Chine |
 | ----------------------------------------------- | ----------------------- | -------------- | ------------ |
 | Alibaba Cloud Model Studio (paiement à l’usage) | `alibaba`               | Singapour      | Pékin        |
 | Alibaba Cloud Token Plan                        | `bailian-coding-plan`   | Singapour      | Pékin        |

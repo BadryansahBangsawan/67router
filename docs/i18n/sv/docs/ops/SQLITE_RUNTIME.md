@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute identifierar sin SQLite-drivrutin vid start genom en reservkedja i fem steg:
+67router identifierar sin SQLite-drivrutin vid start genom en reservkedja i fem steg:
 
 1. **Medföljande `better-sqlite3`** (via `dependencies` i `package.json`)
    — snabbast, inbyggd binärfil, installeras av `npm install` när byggverktyg finns tillgängliga.
@@ -28,13 +28,13 @@ OmniRoute identifierar sin SQLite-drivrutin vid start genom en reservkedja i fem
 - **Inga byggverktyg**: Vissa miljöer (företags-Windows utan VS Build
   Tools, minimala Docker-avbildningar) kan inte kompilera `better-sqlite3`. Körtids-
   installeraren hämtar en förkompilerad binärfil från npm-registret; reserv-
-  drivrutinerna säkerställer att OmniRoute ändå kan starta om detta misslyckas.
+  drivrutinerna säkerställer att 67router ändå kan starta om detta misslyckas.
 - **Luftgapade system**: Om npm-registret inte kan nås garanterar `node:sqlite`
   eller `sql.js` grundläggande funktionalitet.
 
 ## Validering av magiska byte
 
-Innan en körtidsinstallerad `.node`-fil läses in läser OmniRoute de första 8
+Innan en körtidsinstallerad `.node`-fil läses in läser 67router de första 8
 byten och jämför dem med kända plattformssignaturer:
 
 | Plattform              | Byte (hex)    | Etikett     |
@@ -103,10 +103,10 @@ Implementering:
 
 ## Topologi med en enda skrivare (HA stöds inte)
 
-Reservkedjan för drivrutiner ovan körs fortfarande i **en process**. OmniRoute med
+Reservkedjan för drivrutiner ovan körs fortfarande i **en process**. 67router med
 SQLite som standard har **en enda skrivare**:
 
-- Anslut inte två OmniRoute-repliker till samma `storage.sqlite`-fil.
+- Anslut inte två 67router-repliker till samma `storage.sqlite`-fil.
 - En omstart av en container, Recreate-distribution, OOM-avslutning eller HEALTHCHECK-omstart avslutar
   varje pågående SSE-session. Standardsökvägen har ingen sessionsdränering.
 - Orkestrerarens liveness-kontroll som betraktar en långsam `/healthz` som död kommer att avsluta den enda

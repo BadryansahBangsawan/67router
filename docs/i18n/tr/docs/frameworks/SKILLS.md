@@ -7,29 +7,29 @@
 > **Doğruluk kaynağı:** `src/lib/skills/` ve `src/app/api/skills/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
-OmniRoute, dil modellerinin (ve operatörlerin) yeniden kullanılabilir yetenekler oluşturmasına olanak tanıyan genişletilebilir bir Skills çerçevesi sunar — dosya sistemi okumalarından ve HTTP isteklerinden korumalı alanlarda kod yürütmeye ve özenle seçilmiş pazaryeri becerilerine kadar.
+67router, dil modellerinin (ve operatörlerin) yeniden kullanılabilir yetenekler oluşturmasına olanak tanıyan genişletilebilir bir Skills çerçevesi sunar — dosya sistemi okumalarından ve HTTP isteklerinden korumalı alanlarda kod yürütmeye ve özenle seçilmiş pazaryeri becerilerine kadar.
 
-Bir beceri; sürümlendirilmiş, şemayla tanımlanmış bir iş birimidir. OmniRoute, becerileri araç tanımları olarak giden isteklere enjekte edebilir, modelden dönen araç çağrılarını yakalayabilir, eşleşen işleyiciyi çalıştırabilir ve konuşmanın devam edebilmesi için sonucu modele geri iletebilir. Model, uygulamayı hiçbir zaman görmez — yalnızca araç arayüzünü görür.
+Bir beceri; sürümlendirilmiş, şemayla tanımlanmış bir iş birimidir. 67router, becerileri araç tanımları olarak giden isteklere enjekte edebilir, modelden dönen araç çağrılarını yakalayabilir, eşleşen işleyiciyi çalıştırabilir ve konuşmanın devam edebilmesi için sonucu modele geri iletebilir. Model, uygulamayı hiçbir zaman görmez — yalnızca araç arayüzünü görür.
 
 ---
 
 ## Agent Skills ve Omni Skills
 
-OmniRoute, birbirinden farklı ancak birbirini tamamlayan iki beceri sistemine sahiptir:
+67router, birbirinden farklı ancak birbirini tamamlayan iki beceri sistemine sahiptir:
 
 | Boyut               | **Omni Skills** (bu belge)                                         | **Agent Skills**                                                                               |
 | :------------------ | :----------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | Amaç                | LLM aracı enjeksiyonu + korumalı alanda yürütme                    | Harici aracıların keşfedip kullanabileceği SKILL.md kataloğu                                   |
 | Doğruluk kaynağı    | `src/lib/skills/` + pazaryeri                                      | `src/lib/agentSkills/` + `skills/` dizini                                                      |
 | Çalışma zamanı modu | Giden isteklere enjekte edilir, araç çağrısı olaylarında yürütülür | Statik markdown kataloğu + REST/MCP/A2A keşif uç noktaları                                     |
-| Kim kullanır        | OmniRoute'un kendisi (birleşik yönlendirme, gelen LLM çağrıları)   | Harici aracılar, MCP istemcileri, A2A orkestratörleri                                          |
+| Kim kullanır        | 67router'un kendisi (birleşik yönlendirme, gelen LLM çağrıları)    | Harici aracılar, MCP istemcileri, A2A orkestratörleri                                          |
 | Sayı                | Değişken (pazaryerine bağlı)                                       | 43 katalog girdisi (22 API + 20 CLI + 1 yapılandırma)                                          |
 | Biçim               | Araç şeması + işleyici içeren `SkillDefinition`                    | `SKILL.md` ön bilgisi + markdown gövdesi                                                       |
 | Keşif               | `/api/skills/*` REST + `omniroute_skills_*` MCP araçları           | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP araçları + A2A `list-capabilities` |
 
-**Omni Skills**, yürütme motorudur — bir LLM bir aracı çağırdığında OmniRoute'un _neler yapabileceğini_ tanımlar.
+**Omni Skills**, yürütme motorudur — bir LLM bir aracı çağırdığında 67router'un _neler yapabileceğini_ tanımlar.
 
-**Agent Skills**, dokümantasyon kataloğudur — doğrudan aracı istemlerine aktarılabilen yapılandırılmış SKILL.md dosyalarıyla harici aracılara OmniRoute'un REST API'sinin ve CLI'ının _nasıl kullanılacağını_ açıklar.
+**Agent Skills**, dokümantasyon kataloğudur — doğrudan aracı istemlerine aktarılabilen yapılandırılmış SKILL.md dosyalarıyla harici aracılara 67router'un REST API'sinin ve CLI'ının _nasıl kullanılacağını_ açıklar.
 
 Agent Skills kataloğu, oluşturucusu, MCP araçları ve A2A becerisi için [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md) belgesine bakın.
 
@@ -41,14 +41,14 @@ Agent Skills kataloğu, oluşturucusu, MCP araçları ve A2A becerisi için [doc
 
 Aynı kayıt defterinde üç beceri kaynağı birlikte bulunur:
 
-1. **Yerleşik beceriler** (`src/lib/skills/builtins.ts`) — OmniRoute ile birlikte sunulur. Yaygın kullanım alanlarını kapsar:
+1. **Yerleşik beceriler** (`src/lib/skills/builtins.ts`) — 67router ile birlikte sunulur. Yaygın kullanım alanlarını kapsar:
    - `file_read`, `file_write` — `<DATA_DIR>/skills/workspaces/<hashed-key>/` altında API anahtarı başına korumalı alan çalışma dizini
    - `http_request` — `guard: "public-only"` ile `safeOutboundFetch` üzerinden giden HTTP
    - `web_search` — önbelleğe alma özellikli takılabilir arama sağlayıcısı (`executeWebSearch`)
    - `eval_code` — Docker korumalı alanında `node` veya `python` yürütme
    - `execute_command` — Docker korumalı alanında kabuk komutu
    - `browser` — Playwright destekli iskelet; varsayılan olarak devre dışıdır (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute Pazaryeri) — `https://skillsmp.com/api/v1/skills/search` adresinden alınır. Ayarlar'da `skillsmpApiKey` gerektirir.
+2. **SkillsMP** (67router Pazaryeri) — `https://skillsmp.com/api/v1/skills/search` adresinden alınır. Ayarlar'da `skillsmpApiKey` gerektirir.
 3. **SkillsSH** (`skills.sh` topluluk kataloğu) — `https://skills.sh/api/search` adresinden alınır. Kimlik doğrulaması gerekmez; SKILL.md içeriği GitHub raw üzerinden alınır.
 
 Tek bir "etkin sağlayıcı", panonun hangi katalogdan kurulum yapacağını belirler (`src/lib/skills/providerSettings.ts`). Bunu **Ayarlar → Bellek ve Beceriler** altında değiştirebilirsiniz. Varsayılan: `skillsmp`.
@@ -443,7 +443,7 @@ kısmına bakın; kayan noktalı `0.6` tarzı bir eşik ve `registry.ts` puanlam
 
 ## Yerleşik Beceriler Kataloğu
 
-OmniRoute, `src/lib/skills/builtin/` içinde özenle seçilmiş bir dizi yerleşik beceriyle birlikte gelir. En yaygın olanlar:
+67router, `src/lib/skills/builtin/` içinde özenle seçilmiş bir dizi yerleşik beceriyle birlikte gelir. En yaygın olanlar:
 
 ### Tarayıcı Otomasyonu Becerisi
 

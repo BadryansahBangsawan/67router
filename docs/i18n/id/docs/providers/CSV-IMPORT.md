@@ -25,7 +25,7 @@ Baris pertama yang kolom pertamanya berupa kata literal `provider` (dengan kapit
 Unduh file awal dari modal impor (**Unduh templat CSV**). Contoh:
 
 ```csv
-# Impor penyedia OmniRoute (kolom berdasarkan posisi)
+# Impor penyedia 67router (kolom berdasarkan posisi)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

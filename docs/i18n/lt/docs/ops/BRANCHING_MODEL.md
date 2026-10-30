@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute naudoja **lygiagrečių ciklų** leidimų modelį: aktyviam ciklui skirtą
+67router naudoja **lygiagrečių ciklų** leidimų modelį: aktyviam ciklui skirtą
 `release/vX.Y.Z` šaką, paskelbtų leidimų linijai skirtą `main` ir nekintamą
 `vX.Y.Z` žymą, sukuriamą išleidžiant ciklo versiją. Įrašų atsiradimas tiek `release/*`,
 tiek `main` yra numatytas — tai nėra klaida.

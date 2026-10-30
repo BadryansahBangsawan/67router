@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (中文 (简体))
+# 67router Auto-Combo Engine (中文 (简体))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # 每个 token 的成本最低
 
 **运行过程：**
 
-1. OmniRoute 在 `src/sse/handlers/chat.ts` 中检测 `auto/` 前缀
+1. 67router 在 `src/sse/handlers/chat.ts` 中检测 `auto/` 前缀
 2. 从数据库查询所有**活跃的提供者连接**
 3. 筛选出具有有效凭据（API 密钥或 OAuth 令牌）的连接
 4. 确定每个连接使用的模型（`connection.defaultModel` 或提供者的第一个模型）
@@ -83,7 +83,7 @@ model: "auto/cheap"           # 每个 token 的成本最低
 - 连接冷却——已解析的 `provider_connections` 行中的 `rateLimitedUntil` / `testStatus`
 - 模型锁定——`isModelLocked(provider, connectionId, model)`
 
-每个候选项还会包含此 API 密钥对应的 `excluded` 标志。排除项按 API 密钥存储（`auto_candidate_overrides` 表，迁移 `128`）——OmniRoute 是单租户系统，没有 `users` 表，因此 `apiKeyId` 是最接近真实调用方身份的标识——并通过纯函数且经过单元测试的 `filterExcludedCandidates()`（`open-sse/services/autoCombo/candidateOverrides.ts`），在 `open-sse/services/autoCombo/virtualFactory.ts` 的候选池汇聚点强制执行。该过滤器采用**失败时开放**策略：未设置 apiKeyId/channel 或数据库查询失败时，都会保留未过滤的候选池，因此未配置任何覆盖项的运维人员所看到的路由行为与引入此功能之前逐字节完全一致。
+每个候选项还会包含此 API 密钥对应的 `excluded` 标志。排除项按 API 密钥存储（`auto_candidate_overrides` 表，迁移 `128`）——67router 是单租户系统，没有 `users` 表，因此 `apiKeyId` 是最接近真实调用方身份的标识——并通过纯函数且经过单元测试的 `filterExcludedCandidates()`（`open-sse/services/autoCombo/candidateOverrides.ts`），在 `open-sse/services/autoCombo/virtualFactory.ts` 的候选池汇聚点强制执行。该过滤器采用**失败时开放**策略：未设置 apiKeyId/channel 或数据库查询失败时，都会保留未过滤的候选池，因此未配置任何覆盖项的运维人员所看到的路由行为与引入此功能之前逐字节完全一致。
 
 **推迟到后续 issue：** 每个候选项的权重 + 显式排序（Level 3
 — 接入现有的加权/优先级策略路径），以及为每个 `auto/*` 通道固定特定的
@@ -149,7 +149,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 两个常见陷阱：
 
 - **`auto` 不会使用你的组合。** `auto`/`auto/*` 会构建自己的零配置候选池，且仅当某个组合的名称恰好为 `auto` 时才会查询持久化组合（不建议这样做）。要通过组合进行路由，请发送其精确名称，而不是 `auto`。
-- **`openrouter/auto` 是真实的付费 OpenRouter 产品**（“自动选择最佳可用模型”），并非 OmniRoute 别名。它是 OpenRouter 注册表（`open-sse/config/providers/registry/openrouter/index.ts`）中的单个静态模型条目，并单独计费。使用“设置 → 路由 → 隐藏付费模型”可将其从 `auto` 候选池中排除。
+- **`openrouter/auto` 是真实的付费 OpenRouter 产品**（“自动选择最佳可用模型”），并非 67router 别名。它是 OpenRouter 注册表（`open-sse/config/providers/registry/openrouter/index.ts`）中的单个静态模型条目，并单独计费。使用“设置 → 路由 → 隐藏付费模型”可将其从 `auto` 候选池中排除。
 
 有关本文所记录的最初困惑，请参阅 [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) 和 [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111)。
 
@@ -245,7 +245,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## 所有路由策略
 
-OmniRoute 的组合引擎支持 **20 种路由策略**（声明于 `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`）。Auto Combo 引擎本身通过 `auto` 策略提供；其他策略可用于持久化组合。
+67router 的组合引擎支持 **20 种路由策略**（声明于 `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`）。Auto Combo 引擎本身通过 `auto` 策略提供；其他策略可用于持久化组合。
 
 | 策略                | 描述                                                                                                                              |
 | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------- |
@@ -289,7 +289,7 @@ OmniRoute 的组合引擎支持 **20 种路由策略**（声明于 `src/shared/c
 
 包含至少两个模型的 `pipeline` 组合可通过
 `config.agenticOrchestration.enabled` 启用规划器/执行器路由。第一个目标负责规划和最终回答；
-第二个目标发出客户端原生工具调用。OmniRoute 会从请求协议中检测工具结果
+第二个目标发出客户端原生工具调用。67router 会从请求协议中检测工具结果
 续传，请规划器判断是否需要新一轮工具调用，并动态选择执行器或规划器作为面向客户端的
 最终步骤。
 
@@ -807,11 +807,11 @@ SLA 感知字段：
 
 ### 受控的实时冒烟测试（不在 CI 中——使用真实提供者）
 
-| 命令                                   | 功能                                                                        |
-| :------------------------------------- | :-------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | 使用 `RUN_COMBO_LIVE=1` 进行进程内真实路由；创建实时 OmniRoute 数据库的快照 |
-| `npm run test:combo:live:vps`          | 对实时 OmniRoute 服务器发起 HTTP 调用（设置 `COMBO_LIVE_BASE_URL`）         |
-| `npm run test:combo:live:vps:failover` | 同上，但包含刻意设计的故障转移场景                                          |
+| 命令                                   | 功能                                                                       |
+| :------------------------------------- | :------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | 使用 `RUN_COMBO_LIVE=1` 进行进程内真实路由；创建实时 67router 数据库的快照 |
+| `npm run test:combo:live:vps`          | 对实时 67router 服务器发起 HTTP 调用（设置 `COMBO_LIVE_BASE_URL`）         |
+| `npm run test:combo:live:vps:failover` | 同上，但包含刻意设计的故障转移场景                                         |
 
 这些冒烟测试会验证真实的线缆路径（组合 → 提供者 → 补全）。它们被有意
 排除在 CI 之外，因为需要实时凭据和 VPS 访问权限。

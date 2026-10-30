@@ -8,11 +8,11 @@
 > **Sist oppdatert:** 2026-09-02 — v3.8.51
 > **Målgruppe:** Utviklere som vedlikeholder leverandørspesifikke stealth-integrasjoner.
 
-OmniRoute integreres med leverandører hvis grenseinfrastruktur aktivt identifiserer uoffisielle klienter ved hjelp av fingeravtrykk (TLS JA3/JA4, rekkefølge på headere, JSON-strukturen i forespørselskroppen og integritetstokener). Denne siden dokumenterer stealth-grensesnittene OmniRoute eksponerer, og hvor de er implementert.
+67router integreres med leverandører hvis grenseinfrastruktur aktivt identifiserer uoffisielle klienter ved hjelp av fingeravtrykk (TLS JA3/JA4, rekkefølge på headere, JSON-strukturen i forespørselskroppen og integritetstokener). Denne siden dokumenterer stealth-grensesnittene 67router eksponerer, og hvor de er implementert.
 
 ## Juridisk og etisk merknad
 
-Stealth-funksjoner finnes slik at OmniRoute kan fungere som et kompatibilitetslag mellom brukereide offisielle kontoer (Claude Code CLI, Codex, Antigravity, Cursor osv.) og OmniRoutes enhetlige API. De er **ikke** ment for å omgå svindeloppdagelse, dele påloggingsopplysninger eller bryte leverandørens tjenestevilkår. Vedlikeholderne forventer at operatører overholder vilkårene de godtok hos oppstrømsleverandøren da kontoene ble opprettet.
+Stealth-funksjoner finnes slik at 67router kan fungere som et kompatibilitetslag mellom brukereide offisielle kontoer (Claude Code CLI, Codex, Antigravity, Cursor osv.) og 67routers enhetlige API. De er **ikke** ment for å omgå svindeloppdagelse, dele påloggingsopplysninger eller bryte leverandørens tjenestevilkår. Vedlikeholderne forventer at operatører overholder vilkårene de godtok hos oppstrømsleverandøren da kontoene ble opprettet.
 
 ---
 
@@ -79,7 +79,7 @@ før det hevdes samsvar med en oppstrømsnettleser.
 
 ## Claude Code Stealth-pakke
 
-Når `cliCompatMode` er aktivert, omformer OmniRoute utgående Claude-forespørsler slik at de ikke kan skilles fra `claude-cli`-trafikk. Tre moduler samarbeider:
+Når `cliCompatMode` er aktivert, omformer 67router utgående Claude-forespørsler slik at de ikke kan skilles fra `claude-cli`-trafikk. Tre moduler samarbeider:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -95,7 +95,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Client Content Hash)
 
-Integritetskontroll på serversiden som den offisielle Claude Code CLI-en beregner via Bun/Zig. OmniRoute implementerer den på nytt med `xxhash-wasm`:
+Integritetskontroll på serversiden som den offisielle Claude Code CLI-en beregner via Bun/Zig. 67router implementerer den på nytt med `xxhash-wasm`:
 
 1. Serialiser innholdet med plassholderen `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -141,7 +141,7 @@ Beslektede moduler i samme pakke:
 
 ## Antigravity Stealth
 
-Antigravity-forespørsler bevarer innringerens tekst byte for byte. OmniRoute setter ikke inn tegn uten bredde i ledetekster og gir heller ikke verktøy nye navn eller injiserer dem for å etterligne en IDE-klient.
+Antigravity-forespørsler bevarer innringerens tekst byte for byte. 67router setter ikke inn tegn uten bredde i ledetekster og gir heller ikke verktøy nye navn eller injiserer dem for å etterligne en IDE-klient.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -151,13 +151,13 @@ Fjerner markører fra Stainless SDK (`x-stainless-lang`, `x-stainless-package-ve
 
 `ANTIGRAVITY_CREDITS=always` (brukt av `open-sse/executors/antigravity.ts`) sender **hver eneste** forespørsel gjennom Antigravity AI Credit Overages (betalte Google-kreditter), i stedet for å la Googles gratiskvote begrense bruken. Dette er dokumentert som en funksjon, men det er **den vanligste rapporterte typen ToS-brudd vi ser** — flere Google Ultra-kontoer har blitt sperret med `403 / "service disabled for ToS violation" / insufficient_quota` etter å ha kjørt i noen timer med `=always`.
 
-Håndhevingen oppstrøms skjer på **Googles side**, og er ikke noe OmniRoute kan forhindre. Navnet på miljøvariabelen og den eksisterende dokumentasjonen får dette til å høres ut som en trygg innstilling å aktivere; det er det ikke.
+Håndhevingen oppstrøms skjer på **Googles side**, og er ikke noe 67router kan forhindre. Navnet på miljøvariabelen og den eksisterende dokumentasjonen får dette til å høres ut som en trygg innstilling å aktivere; det er det ikke.
 
 **Hvorfor dette utløser misbruksdeteksjon mer aggressivt enn bruk begrenset til gratiskvoten:**
 
 - Vedvarende automatisert forbruk på én enkelt Google-konto flagges annerledes enn når gratiskvoten nås og bruken stopper.
 - Kredittoverforbruk har ingen øvre hastighetsgrense, så en feilkonfigurert klient kan bruke flere hundre USD på få minutter og se ut som videresalg av API-nøkler eller bottrafikk.
-- Når flere OmniRoute-brukere belaster overforbrukskreditter parallelt fra samme eksterne IP-adresse, forsterkes signalet.
+- Når flere 67router-brukere belaster overforbrukskreditter parallelt fra samme eksterne IP-adresse, forsterkes signalet.
 
 **Anbefalt praksis:**
 
@@ -196,7 +196,7 @@ Aktiver eller deaktiver per leverandør via miljøvariabler (se nedenfor). Når 
 
 ## MITM-proxy (Antigravity, Linux/macOS/Windows)
 
-For CLI-verktøy der binærfilene ikke kan omdirigeres via `OPENAI_BASE_URL`, kjører OmniRoute en lokal TLS-terminerende proxy. Endepunktene ligger under `src/app/api/cli-tools/antigravity-mitm/`.
+For CLI-verktøy der binærfilene ikke kan omdirigeres via `OPENAI_BASE_URL`, kjører 67router en lokal TLS-terminerende proxy. Endepunktene ligger under `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metode | Endepunkt                               | Formål                                          |
 | ------ | --------------------------------------- | ----------------------------------------------- |
@@ -275,7 +275,7 @@ Leverandørens IP-adresse **bevares alltid** — bryteren endrer bare forespørs
 
 ## Rensing av innkommende headere
 
-OmniRoute fjerner innkommende klientheadere før videresending, slik at en forespørsel som kommer fra Cursor, ikke lekker `User-Agent: Cursor/X.Y.Z` til en oppstrøms Claude-tjeneste. Se `src/shared/constants/upstreamHeaders.ts` for blokkeringslisten, som holdes synkronisert med Zod-skjemaene og enhetstestene.
+67router fjerner innkommende klientheadere før videresending, slik at en forespørsel som kommer fra Cursor, ikke lekker `User-Agent: Cursor/X.Y.Z` til en oppstrøms Claude-tjeneste. Se `src/shared/constants/upstreamHeaders.ts` for blokkeringslisten, som holdes synkronisert med Zod-skjemaene og enhetstestene.
 
 ---
 

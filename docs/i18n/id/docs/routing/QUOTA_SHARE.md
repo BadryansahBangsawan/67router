@@ -15,7 +15,7 @@ Mesin Berbagi Kuota mendistribusikan kuota berbasis waktu milik penyedia (misaln
 jendela 5 jam Codex, Kimi 1500 permintaan/jam) secara adil ke beberapa kunci API
 yang menggunakan koneksi yang sama.
 
-**Masalah yang diselesaikan:** OmniRoute memproksikan banyak kunci API ke akun
+**Masalah yang diselesaikan:** 67router memproksikan banyak kunci API ke akun
 penyedia upstream yang sama. Tanpa logika berbagi, lonjakan dari kunci A dapat
 menghabiskan kuota penyedia untuk satu jam, sehingga kunci B dan C diblokir hingga
 jendela direset. Mesin ini mencegahnya dengan:
@@ -119,7 +119,7 @@ Driver Redis: skrip Lua EVAL untuk inkremen atomik — berjalan sebagai satu per
 
 - Tabel: `quota_consumption` (lihat migrasi `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Paling sesuai untuk deployment satu instans.
-- Semua persistensi berada dalam DB SQLite OmniRoute yang sudah ada (`DATA_DIR/storage.sqlite`).
+- Semua persistensi berada dalam DB SQLite 67router yang sudah ada (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opsional, multi-instans)
 

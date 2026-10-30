@@ -15,9 +15,9 @@ Ez az ADR pontosan meghatározza, hogyan viszonyul egymáshoz a `ts` (natív), a
 Egy motor szerepét **két független tengely** írja le, amelyeket a nyilvántartás `RouterBackendDefinition` típusa együtt kódol:
 
 1. **Életciklus** (`RouterBackendLifecycle`) — _hogyan fut a motor_:
-   - `in-process` — az OmniRoute Node-folyamatán belül fut (a natív TS-folyamatlánc).
-   - `supervised` — egy helyi gyermekfolyamat, amelyet az OmniRoute a `ServiceSupervisor` segítségével telepít, indít el, állít le és ellenőriz állapot szempontjából, majd szolgáltatói kapcsolatként használ.
-   - `external` — egy HTTP-végpont, amelyhez az OmniRoute kéréseket irányít, de amelyet **nem** kezel (egy környezeti változóban megadott alap-URL konfigurálja).
+   - `in-process` — a 67router Node-folyamatán belül fut (a natív TS-folyamatlánc).
+   - `supervised` — egy helyi gyermekfolyamat, amelyet a 67router a `ServiceSupervisor` segítségével telepít, indít el, állít le és ellenőriz állapot szempontjából, majd szolgáltatói kapcsolatként használ.
+   - `external` — egy HTTP-végpont, amelyhez a 67router kéréseket irányít, de amelyet **nem** kezel (egy környezeti változóban megadott alap-URL konfigurálja).
    - `disabled` — regisztrálva van, de nem választható ki.
 2. **Kiválasztási tengely** (a relay útválasztási háttérrendszere) — _a relay továbbít-e hozzá kéréseket_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` a

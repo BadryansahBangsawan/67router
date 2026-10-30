@@ -8,11 +8,11 @@
 > **Nuashonraithe go deireanach:** 2026-09-02 — v3.8.51
 > **Lucht léitheoireachta:** Innealtóirí a chothaíonn comhtháthuithe ceilteachta a bhaineann go sonrach le soláthraithe.
 
-Comhtháthaíonn OmniRoute le soláthraithe a ndéanann a n-imeall méarlorgaireacht ghníomhach ar chliaint neamhoifigiúla (TLS JA3/JA4, ord na gceanntásca, cruth chorp JSON, comharthaí sláine). Déanann an leathanach seo doiciméadú ar na dromchlaí ceilteachta a nochtann OmniRoute agus ar na háiteanna ina gcuirtear i bhfeidhm iad.
+Comhtháthaíonn 67router le soláthraithe a ndéanann a n-imeall méarlorgaireacht ghníomhach ar chliaint neamhoifigiúla (TLS JA3/JA4, ord na gceanntásca, cruth chorp JSON, comharthaí sláine). Déanann an leathanach seo doiciméadú ar na dromchlaí ceilteachta a nochtann 67router agus ar na háiteanna ina gcuirtear i bhfeidhm iad.
 
 ## Fógra Dlíthiúil agus Eiticiúil
 
-Tá gnéithe ceilteachta ann ionas gur féidir le OmniRoute feidhmiú mar shraith chomhoiriúnachta idir cuntais oifigiúla atá faoi úinéireacht úsáideoirí (Claude Code CLI, Codex, Antigravity, Cursor, etc.) agus API aontaithe OmniRoute. **Ní** chun brath calaoise a sheachaint, dintiúir a chomhroinnt ná Téarmaí Seirbhíse soláthraithe a shárú atá siad. Tá na cothaitheoirí ag súil go gcomhlíonfaidh oibreoirí na ToS réamhtheachtacha ar thoiligh siad leo nuair a chruthaigh siad cuntais.
+Tá gnéithe ceilteachta ann ionas gur féidir le 67router feidhmiú mar shraith chomhoiriúnachta idir cuntais oifigiúla atá faoi úinéireacht úsáideoirí (Claude Code CLI, Codex, Antigravity, Cursor, etc.) agus API aontaithe 67router. **Ní** chun brath calaoise a sheachaint, dintiúir a chomhroinnt ná Téarmaí Seirbhíse soláthraithe a shárú atá siad. Tá na cothaitheoirí ag súil go gcomhlíonfaidh oibreoirí na ToS réamhtheachtacha ar thoiligh siad leo nuair a chruthaigh siad cuntais.
 
 ---
 
@@ -83,7 +83,7 @@ bheo atá údaraithe go sainráite sula maítear comhionannas le brabhsálaí r�
 
 ## Beart Rúnda Claude Code
 
-Nuair atá `cliCompatMode` casta air, athmhúnlaíonn OmniRoute iarratais Claude atá ag dul amach ionas nach féidir iad a idirdhealú ó thrácht `claude-cli`. Comhoibríonn trí mhodúl:
+Nuair atá `cliCompatMode` casta air, athmhúnlaíonn 67router iarratais Claude atá ag dul amach ionas nach féidir iad a idirdhealú ó thrácht `claude-cli`. Comhoibríonn trí mhodúl:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -99,7 +99,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Hais Inneachair an Chliaint)
 
-Seiceáil sláine ar thaobh an fhreastalaí a ríomhann CLI oifigiúil Claude Code trí Bun/Zig. Déanann OmniRoute í a athchur chun feidhme le `xxhash-wasm`:
+Seiceáil sláine ar thaobh an fhreastalaí a ríomhann CLI oifigiúil Claude Code trí Bun/Zig. Déanann 67router í a athchur chun feidhme le `xxhash-wasm`:
 
 1. Srathaigh an corp leis an ionadchoinneálaí `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -145,7 +145,7 @@ Modúil ghaolmhara sa bheart céanna:
 
 ## Rúndacht Antigravity
 
-Caomhnaíonn iarratais Antigravity téacs an ghlaoiteora beart ar bheart. Ní chuireann OmniRoute carachtair nialasleithead isteach i leid ná ní athainmníonn/insteallann sé uirlisí chun aithris a dhéanamh ar chliant IDE.
+Caomhnaíonn iarratais Antigravity téacs an ghlaoiteora beart ar bheart. Ní chuireann 67router carachtair nialasleithead isteach i leid ná ní athainmníonn/insteallann sé uirlisí chun aithris a dhéanamh ar chliant IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -155,13 +155,13 @@ Baineann sé marcóirí SDK Stainless (`x-stainless-lang`, `x-stainless-package-
 
 Treoraíonn `ANTIGRAVITY_CREDITS=always` (a úsáideann `open-sse/executors/antigravity.ts`) **gach** iarratas trí Bharrachais Chreidmheasanna AI Antigravity (creidmheasanna íoctha Google), seachas ligean do chuóta sraithe in aisce Google na hiarratais a theorannú. Tá sé seo doiciméadaithe mar ghné, ach is é **an tuairisc is coitianta ar shárú na dTéarmaí Seirbhíse a fheicimid** — cuireadh toirmeasc ar roinnt cuntas Google Ultra le `403 / "service disabled for ToS violation" / insufficient_quota` tar éis dóibh rith ar feadh cúpla uair an chloig le `=always`.
 
-Déantar an forfheidhmiú réamhtheachtach ar **thaobh Google**, agus ní féidir le OmniRoute é a chosc. Tugann ainm na hathróige timpeallachta agus an doiciméadacht reatha le tuiscint gur socrú sábháilte é seo le casadh air; ní hea.
+Déantar an forfheidhmiú réamhtheachtach ar **thaobh Google**, agus ní féidir le 67router é a chosc. Tugann ainm na hathróige timpeallachta agus an doiciméadacht reatha le tuiscint gur socrú sábháilte é seo le casadh air; ní hea.
 
 **An fáth a dtarraingíonn sé seo brath mí-úsáide níos ionsaithí ná úsáid na sraithe in aisce amháin:**
 
 - Marcáiltear caiteachas uathoibrithe leanúnach ar chuntas aonair Google ar bhealach eile seachas úsáid na sraithe in aisce a shroicheann an cuóta agus a stopann.
 - Níl aon uasteorainn ráta ar bharrachais chreidmheasa, mar sin is féidir le cliant míchumraithe na céadta USD a chaitheamh i gceann nóiméad agus cuma athdhíola eochracha API nó tráchta róbait a bheith air.
-- Méadaítear an comhartha nuair a úsáideann roinnt úsáideoirí OmniRoute creidmheasanna barrachais go comhthreomhar ón seoladh IP seachtrach céanna.
+- Méadaítear an comhartha nuair a úsáideann roinnt úsáideoirí 67router creidmheasanna barrachais go comhthreomhar ón seoladh IP seachtrach céanna.
 
 **Cur chuige molta:**
 
@@ -200,7 +200,7 @@ Scoránaigh de réir soláthraí trí env (féach thíos). Nuair atá sé díchu
 
 ## Seachfhreastalaí MITM (Antigravity, Linux/macOS/Windows)
 
-I gcás CLIanna nach féidir a ndénártha a atreorú trí `OPENAI_BASE_URL`, ritheann OmniRoute seachfhreastalaí áitiúil a fhoirceannann TLS. Tá na críochphointí faoi `src/app/api/cli-tools/antigravity-mitm/`.
+I gcás CLIanna nach féidir a ndénártha a atreorú trí `OPENAI_BASE_URL`, ritheann 67router seachfhreastalaí áitiúil a fhoirceannann TLS. Tá na críochphointí faoi `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Modh   | Críochphointe                           | Cuspóir                                           |
 | ------ | --------------------------------------- | ------------------------------------------------- |
@@ -279,7 +279,7 @@ Caomhnaítear IP an tsoláthraí **i gcónaí** — ní dhéanann an scorán ach
 
 ## Sláintiú Ceanntásca Isteach
 
-Glanann OmniRoute ceanntásca cliaint isteach sula gcuirtear ar aghaidh iad, ionas nach sceithfidh iarratas a thagann ó Cursor `User-Agent: Cursor/X.Y.Z` chuig réamhtheagmhas Claude. Féach `src/shared/constants/upstreamHeaders.ts` don liosta coiscthe, a choinnítear ar aon dul leis na scéimeanna Zod agus na tástálacha aonaid.
+Glanann 67router ceanntásca cliaint isteach sula gcuirtear ar aghaidh iad, ionas nach sceithfidh iarratas a thagann ó Cursor `User-Agent: Cursor/X.Y.Z` chuig réamhtheagmhas Claude. Féach `src/shared/constants/upstreamHeaders.ts` don liosta coiscthe, a choinnítear ar aon dul leis na scéimeanna Zod agus na tástálacha aonaid.
 
 ---
 

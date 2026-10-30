@@ -12,7 +12,7 @@
 
 ## Kas tai yra
 
-„Local Corpus“ leidžia operatoriui suteikti „OmniRoute“ MCP serveriui prieigą prie vieno aiškiai patvirtinto tekstinių failų katalogo. Failai lieka savo pradiniame kataloge: „OmniRoute“ SQLite duomenų bazėje saugo tik kanoninį šakninį kelią ir atmintyje palaiko paieškos indeksą. Korpuso turinys nekopijuojamas į saugyklą ar duomenų bazę.
+„Local Corpus“ leidžia operatoriui suteikti „67router“ MCP serveriui prieigą prie vieno aiškiai patvirtinto tekstinių failų katalogo. Failai lieka savo pradiniame kataloge: „67router“ SQLite duomenų bazėje saugo tik kanoninį šakninį kelią ir atmintyje palaiko paieškos indeksą. Korpuso turinys nekopijuojamas į saugyklą ar duomenų bazę.
 
 Indeksas atnaujinamas laipsniškai. Nepakeisti failai pakartotinai naudojami pagal jų dydį ir modifikavimo laiką, pakeisti failai perskaitomi iš naujo ir maišos reikšmė apskaičiuojama naudojant SHA-256, o ištrinti failai pašalinami. Atliekant paiešką atnaujinamas senesnis nei 30 sekundžių indeksas; iškvietėjai taip pat gali paprašyti jį atnaujinti nedelsiant.
 

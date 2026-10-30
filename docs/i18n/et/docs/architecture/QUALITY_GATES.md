@@ -4,7 +4,7 @@
 
 ---
 
-See dokument on kõigi OmniRoute’i CI kvaliteediväravate autoriteetne viide.
+See dokument on kõigi 67router’i CI kvaliteediväravate autoriteetne viide.
 See kirjeldab iga väravat, mida see valideerib, millises CI töös see käivitatakse, kas see kasutab
 ratchet-lähtejoont või läbitud/läbikukutud poliitikat ning kas see blokeerib järgu või on nõuandev.
 
@@ -265,14 +265,14 @@ Käivitub pärast `build` tööd. Blokeerib liitmise ebaõnnestumise korral.
 
 Need käivituvad cron-i ajakava järgi (ja `workflow_dispatch` kaudu), mitte kunagi PR-idel. Kõik on nõuandvad.
 
-| Töövoog                | Valideerib                                                                                                                                                                  | Blokeeriv    |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `nightly-property`     | fast-check omadustestid juhusliku seemne ja suure käivituste arvuga                                                                                                         | **Nõuandev** |
-| `nightly-resilience`   | hunniku kasvu värav, kaaose rikete sissetoomine, k6 koormus-/kestvustestid                                                                                                  | **Nõuandev** |
-| `nightly-llm-security` | promptfoo injektsioonikaitse (blokeerimisrežiim) + garak sondid (jäetakse vahele ilma teenusepakkuja salasõnata)                                                            | **Nõuandev** |
-| `nightly-schemathesis` | OpenAPI lepingu fuzzing (schemathesis) elusa OmniRoute vastu, kasutades `docs/openapi.yaml` — toob pinnale spetsifikatsiooni rikkumised / käsitlemata 500-vead (Fase 8 B.4) | **Nõuandev** |
-| `nightly-mutation`     | Stryker mutatsioonitestimise skoor kiirel ühiktestide rajal — ellujäänud mutandid paljastavad nõrgad assertid                                                               | **Nõuandev** |
-| `nightly-compat`       | Node'i mootori ühilduvusmaatriks toetatud `engines.node` vahemike ulatuses                                                                                                  | **Nõuandev** |
+| Töövoog                | Valideerib                                                                                                                                                                 | Blokeeriv    |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `nightly-property`     | fast-check omadustestid juhusliku seemne ja suure käivituste arvuga                                                                                                        | **Nõuandev** |
+| `nightly-resilience`   | hunniku kasvu värav, kaaose rikete sissetoomine, k6 koormus-/kestvustestid                                                                                                 | **Nõuandev** |
+| `nightly-llm-security` | promptfoo injektsioonikaitse (blokeerimisrežiim) + garak sondid (jäetakse vahele ilma teenusepakkuja salasõnata)                                                           | **Nõuandev** |
+| `nightly-schemathesis` | OpenAPI lepingu fuzzing (schemathesis) elusa 67router vastu, kasutades `docs/openapi.yaml` — toob pinnale spetsifikatsiooni rikkumised / käsitlemata 500-vead (Fase 8 B.4) | **Nõuandev** |
+| `nightly-mutation`     | Stryker mutatsioonitestimise skoor kiirel ühiktestide rajal — ellujäänud mutandid paljastavad nõrgad assertid                                                              | **Nõuandev** |
+| `nightly-compat`       | Node'i mootori ühilduvusmaatriks toetatud `engines.node` vahemike ulatuses                                                                                                 | **Nõuandev** |
 
 Jõudluse baasjooned (hunnik, TTFB, ehitusaeg) fikseeritakse, mitte ei kasutata väravana: vt [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -544,7 +544,7 @@ lubatud loendiga loob petliku kvaliteeditunde.
 
 ## Agendi tööriistad: LSP tsüklis (valikuline)
 
-Lisaks CI kontrollväravatele sisaldab OmniRoute **valikulist** `agent-lsp` alustaristut
+Lisaks CI kontrollväravatele sisaldab 67router **valikulist** `agent-lsp` alustaristut
 (projektitaseme `.mcp.json`, 7. faasi ülesanne 15). Looge `.mcp.json`,
 et teha TypeScripti keeleserver programmeerimisagentidele kättesaadavaks, võimaldades neil lahendada sümbolid /
 diagnostika **enne** koodi kirjutamist — see on kompileeri-enne-väidet kaaslane käsule

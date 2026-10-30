@@ -7,7 +7,7 @@
 > **Sumber rujukan utama:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40
 
-OmniRoute merekodkan tindakan pentadbiran, peristiwa pengesahan, perubahan kitar hayat kelayakan penyedia, dan pemanggilan alat MCP ke dalam jadual audit berasaskan SQLite. Halaman ini menerangkan perkara yang direkodkan, lokasi penyimpanannya, tempoh penyimpanannya, cara kunci API boleh memilih untuk tidak menyertainya, dan cara membuat pertanyaan terhadap data tersebut.
+67router merekodkan tindakan pentadbiran, peristiwa pengesahan, perubahan kitar hayat kelayakan penyedia, dan pemanggilan alat MCP ke dalam jadual audit berasaskan SQLite. Halaman ini menerangkan perkara yang direkodkan, lokasi penyimpanannya, tempoh penyimpanannya, cara kunci API boleh memilih untuk tidak menyertainya, dan cara membuat pertanyaan terhadap data tersebut.
 
 Pelaksanaannya terdapat dalam `src/lib/compliance/index.ts` (T-43 — "Kawalan Pematuhan") dan `src/lib/compliance/providerAudit.ts`. Penulisan audit tidak pernah mencetuskan ralat: sekiranya berlaku sebarang kegagalan, panggilan tersebut diabaikan secara senyap supaya pengelogan audit tidak menjejaskan aliran permintaan utama.
 

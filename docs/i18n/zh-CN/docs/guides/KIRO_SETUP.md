@@ -4,7 +4,7 @@
 
 ---
 
-本指南介绍如何将 Kiro（由 AWS 托管的 AI 编程助手）账户添加到 OmniRoute，重点说明如何同时运行多个账户而不发生会话冲突。
+本指南介绍如何将 Kiro（由 AWS 托管的 AI 编程助手）账户添加到 67router，重点说明如何同时运行多个账户而不发生会话冲突。
 
 ---
 
@@ -17,9 +17,9 @@ Kiro 的后端使用 AWS SSO OIDC 客户端注册来跟踪活动会话。
 
 ---
 
-## OmniRoute 如何解决此问题（v3.8.0+）
+## 67router 如何解决此问题（v3.8.0+）
 
-从 v3.8.0 开始，OmniRoute 会在每次导入 Kiro 连接时调用 `registerClient()`（AWS SSO OIDC）。这样，每个 OmniRoute 连接都会获得自己专用的 OIDC 客户端注册。由于每个客户端注册彼此独立，刷新或重新验证一个账户不会影响其他任何账户的刷新令牌。
+从 v3.8.0 开始，67router 会在每次导入 Kiro 连接时调用 `registerClient()`（AWS SSO OIDC）。这样，每个 67router 连接都会获得自己专用的 OIDC 客户端注册。由于每个客户端注册彼此独立，刷新或重新验证一个账户不会影响其他任何账户的刷新令牌。
 
 这种隔离适用于刷新令牌导入方式，而 API 密钥身份验证则完全不使用 OIDC 刷新会话：
 
@@ -45,7 +45,7 @@ Kiro 的后端使用 AWS SSO OIDC 客户端注册来跟踪活动会话。
 
 ### 前提条件
 
-- OmniRoute v3.8.0 或更高版本。
+- 67router v3.8.0 或更高版本。
 - 一个可正常使用的 Kiro 账户（电子邮件地址 + 密码、Google 或 GitHub 登录）。
 - 可选：第二个 Kiro 账户。
 
@@ -56,7 +56,7 @@ Kiro 的后端使用 AWS SSO OIDC 客户端注册来跟踪活动会话。
    - **导入令牌**——粘贴以 `aorAAAAAG` 开头的刷新令牌。
    - **API 密钥**——粘贴长期有效的 Kiro / CodeWhisperer API 密钥。
    - **Google / GitHub 登录**——在浏览器中完成 OAuth 流程。
-   - **自动导入**——单击按钮；OmniRoute 会从本地 kiro-cli 数据库或 `~/.aws/sso/cache` 读取凭据。
+   - **自动导入**——单击按钮；67router 会从本地 kiro-cli 数据库或 `~/.aws/sso/cache` 读取凭据。
 3. 连接将被保存。刷新令牌流程会自动注册一个专用的 OIDC 客户端。API 密钥流程会通过 AWS 验证密钥，并且不会存储刷新令牌。
 
 ### 第 2 步：导入第二个账户
@@ -106,7 +106,7 @@ API 密钥身份验证适用于长期有效的 Kiro / AWS CodeWhisperer Bearer �
 2. 选择 **API 密钥**。
 3. 粘贴 API 密钥并选择 AWS 区域：**自动检测**（默认）、**美国东部
    （弗吉尼亚北部）**或**欧洲（法兰克福）**。
-4. OmniRoute 会验证该密钥，并保存连接，将其固定到该密钥可用的区域。
+4. 67router 会验证该密钥，并保存连接，将其固定到该密钥可用的区域。
 
 ### API
 
@@ -150,7 +150,7 @@ OIDC 或社交登录访问令牌。`KiroExecutor.execute()` 仅将 API 密钥推
 
 ## OIDC 客户端过期
 
-AWS SSO OIDC 公共客户端通常会在 90 天后过期（`clientSecretExpiresAt`）。OmniRoute 会将此时间戳存储在 `providerSpecificData` 中，以便进行可观测性监控。如果连接在约 90 天后停止刷新，请重新导入连接以获取新的 OIDC 客户端注册。过期时自动重新注册已列为未来改进项。
+AWS SSO OIDC 公共客户端通常会在 90 天后过期（`clientSecretExpiresAt`）。67router 会将此时间戳存储在 `providerSpecificData` 中，以便进行可观测性监控。如果连接在约 90 天后停止刷新，请重新导入连接以获取新的 OIDC 客户端注册。过期时自动重新注册已列为未来改进项。
 
 API 密钥连接不会出现 OIDC 客户端过期问题，因为它们不通过 AWS SSO OIDC 进行刷新。
 
@@ -165,12 +165,12 @@ API 密钥连接不会出现 OIDC 客户端过期问题，因为它们不通过 
 ### 导入失败并显示 "Token validation failed"
 
 - 确保刷新令牌以 `aorAAAAAG` 开头。
-- 确保 OmniRoute 可以访问 `https://oidc.us-east-1.amazonaws.com`（或已配置区域的对应地址）。如果您位于企业代理之后，请在 **Dashboard → Settings → Proxies** 中设置提供者级代理。
+- 确保 67router 可以访问 `https://oidc.us-east-1.amazonaws.com`（或已配置区域的对应地址）。如果您位于企业代理之后，请在 **Dashboard → Settings → Proxies** 中设置提供者级代理。
 
 ### API 密钥导入失败
 
 - 确认该密钥是 Kiro / CodeWhisperer API 密钥，而不是刷新令牌。
 - 确认 AWS 区域与密钥/账户匹配。默认区域为 `us-east-1`。
-- 该密钥必须能够调用 `ListAvailableProfiles`；否则，OmniRoute 无法解析所需的 `profileArn`。
+- 该密钥必须能够调用 `ListAvailableProfiles`；否则，67router 无法解析所需的 `profileArn`。
 
 有关其他问题，请参阅主文档 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)。

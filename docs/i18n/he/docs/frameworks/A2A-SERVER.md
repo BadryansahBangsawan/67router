@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (עברית)
+# 67router A2A Server Documentation (עברית)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> פרוטוקול Agent-to-Agent גרסה v0.3 — ‏OmniRoute כסוכן ניתוב חכם
+> פרוטוקול Agent-to-Agent גרסה v0.3 — ‏67router כסוכן ניתוב חכם
 
 לממשק A2A יש שני פנים:
 
@@ -19,7 +19,7 @@
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-מחזירה את כרטיס הסוכן המתאר את היכולות, המיומנויות ודרישות האימות של OmniRoute.
+מחזירה את כרטיס הסוכן המתאר את היכולות, המיומנויות ודרישות האימות של 67router.
 
 השדה `version` בכרטיס הסוכן נלקח מתוך `process.env.npm_package_version` (ראו `src/app/.well-known/agent.json/route.ts:13`), ולכן הוא נשאר מסונכרן אוטומטית עם `package.json` בכל גרסה חדשה.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## מיומנויות זמינות
 
-OmniRoute חושפת 6 מיומנויות A2A המחוברות ב-`src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. כל מודול מיומנות נמצא ב-`src/lib/a2a/skills/`.
+67router חושפת 6 מיומנויות A2A המחוברות ב-`src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. כל מודול מיומנות נמצא ב-`src/lib/a2a/skills/`.
 
 | מיומנות      | מזהה                 | תיאור                                                                                                                                          | תגיות                   | דוגמאות                                   |
 | :----------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------- | :---------------------------------------- |
-| ניתוב חכם    | `smart-routing`      | מנתבת פרומפט דרך הספק/השילוב האופטימלי באמצעות מנוע השילובים + הניקוד של OmniRoute                                                             | ניתוב, ספקים            | "נתב את הפרומפט הזה דרך המודל הטוב ביותר" |
+| ניתוב חכם    | `smart-routing`      | מנתבת פרומפט דרך הספק/השילוב האופטימלי באמצעות מנוע השילובים + הניקוד של 67router                                                              | ניתוב, ספקים            | "נתב את הפרומפט הזה דרך המודל הטוב ביותר" |
 | ניהול מכסות  | `quota-management`   | מדווחת על מצב המכסה לכל ספק, ועוזרת למתקשרים להחליט מתי לצמצם קצב/להחליף ספק                                                                   | מכסה, ספקים             | "בדוק מכסה עבור anthropic"                |
 | גילוי ספקים  | `provider-discovery` | מציגה את הספקים המותקנים עם יכולות, דגלי שכבה חינמית וסטטוס OAuth                                                                              | ספקים, גילוי            | "אילו ספקים זמינים?"                      |
 | ניתוח עלויות | `cost-analysis`      | מעריכה את עלות הבקשה/השיחה בהתבסס על הקטלוג + השימוש האחרון                                                                                    | עלות, שימוש             | "הערך עלות עבור השיחה הזו"                |
 | דוח תקינות   | `health-report`      | מאגדת מצבי circuit breaker, cooldown ו-lockout לכל ספק                                                                                         | תקינות, שרידות          | "הצג סטטוס תקינות של כל הספקים"           |
-| רשימת יכולות | `list-capabilities`  | מחזירה את קטלוג ה-Agent Skills המלא בן 43 הרשומות (22 API + 20 CLI + 1 config) כטבלת markdown עם כתובות URL גולמיות של SKILL.md להזרקת קונטקסט | קטלוג, גילוי, מיומנויות | "רשום את כל היכולות של OmniRoute"         |
+| רשימת יכולות | `list-capabilities`  | מחזירה את קטלוג ה-Agent Skills המלא בן 43 הרשומות (22 API + 20 CLI + 1 config) כטבלת markdown עם כתובות URL גולמיות של SKILL.md להזרקת קונטקסט | קטלוג, גילוי, מיומנויות | "רשום את כל היכולות של 67router"          |
 
 > יש לשמור על ה-Agent Card מיושר עם קטלוג 375 הספקים החי; ספירות הספקים והמטא-דאטה של free/no-auth נשאבים מהרג'יסטרי של זמן הריצה.
 
 ### פירוט המיומנות `list-capabilities`
 
-המיומנות `list-capabilities` שימושית במיוחד עבור סוכנים חיצוניים שצריכים לגלות מה OmniRoute חושפת לפני שליחת קריאות API. היא מחזירה ארטיפקט של טבלת markdown מובנית:
+המיומנות `list-capabilities` שימושית במיוחד עבור סוכנים חיצוניים שצריכים לגלות מה 67router חושפת לפני שליחת קריאות API. היא מחזירה ארטיפקט של טבלת markdown מובנית:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ OmniRoute חושפת 6 מיומנויות A2A המחוברות ב-`src/lib/a2a/t
 | `/.well-known/agent.json`    | GET  | כרטיס סוכן (גילוי A2A)                             | (ציבורי, נשמר במטמון למשך 3600 שניות)         |
 | `/api/a2a/tasks`             | POST | האצלה נכנסת לצי OmniConductor‏ (Conductor PRD RF5) | Bearer מול `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**האצלת Conductor נכנסת (`POST /api/a2a/tasks`):** סוכני A2A חיצוניים מאצילים עבודת קוד לצי OmniConductor דרך OmniRoute. גוף הבקשה: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ניתן להאציל רק מיומנויות של צי Conductor (אלו שמוכרזות בכרטיס הסוכן); השדה `metadata.conductor.repo.url` הוא חובה (הצי עובד על מאגרי git). הנתיב מתרגם את הבקשה ל-`POST /v1/tasks` של ה-hub באמצעות `CONDUCTOR_ORCHESTRATOR_TOKEN` בצד השרת (עם `CONDUCTOR_HUB_TOKEN` כחלופה), ומחזיר `201 { conductor_task_id, state: "submitted" }`; מצבי המשימה זורמים בחזרה דרך שיקוף SSE→A2A‏ (RF1) וניתן לצפות בהם באמצעות `GET /api/a2a/tasks?skill=conductor`.
+**האצלת Conductor נכנסת (`POST /api/a2a/tasks`):** סוכני A2A חיצוניים מאצילים עבודת קוד לצי OmniConductor דרך 67router. גוף הבקשה: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ניתן להאציל רק מיומנויות של צי Conductor (אלו שמוכרזות בכרטיס הסוכן); השדה `metadata.conductor.repo.url` הוא חובה (הצי עובד על מאגרי git). הנתיב מתרגם את הבקשה ל-`POST /v1/tasks` של ה-hub באמצעות `CONDUCTOR_ORCHESTRATOR_TOKEN` בצד השרת (עם `CONDUCTOR_HUB_TOKEN` כחלופה), ומחזיר `201 { conductor_task_id, state: "submitted" }`; מצבי המשימה זורמים בחזרה דרך שיקוף SSE→A2A‏ (RF1) וניתן לצפות בהם באמצעות `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

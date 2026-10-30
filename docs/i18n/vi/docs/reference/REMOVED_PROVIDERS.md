@@ -4,7 +4,7 @@
 
 ---
 
-Một số dịch vụ từng được tích hợp vào OmniRoute nhưng sau đó đã bị gỡ bỏ theo yêu cầu của
+Một số dịch vụ từng được tích hợp vào 67router nhưng sau đó đã bị gỡ bỏ theo yêu cầu của
 những người vận hành chúng. Trang này là hồ sơ lâu dài về những lần gỡ bỏ đó. Mục đích duy nhất
 của trang là ngăn các dịch vụ này vô tình được đưa trở lại: một cộng tác viên tìm thấy một fork
 cũ, một tarball npm được lưu trong bộ nhớ đệm, một issue đã lưu trữ hoặc một yêu cầu "khôi phục
@@ -19,10 +19,10 @@ phí") và có thể được đưa trở lại nếu dịch vụ hoạt động
 ## Chính sách
 
 1. **Yêu cầu gỡ bỏ từ đơn vị vận hành dịch vụ phải được thực hiện, không phải để thương lượng.**
-   OmniRoute không liên kết với bất kỳ dịch vụ thượng nguồn nào. Khi đơn vị vận hành một dịch
+   67router không liên kết với bất kỳ dịch vụ thượng nguồn nào. Khi đơn vị vận hành một dịch
    vụ yêu cầu gỡ bỏ phần tích hợp, phần tích hợp đó sẽ bị gỡ bỏ, bất kể nó có sử dụng API chính
    thức hay không.
-2. **"Đã gỡ bỏ" nghĩa là khỏi mọi nơi do OmniRoute kiểm soát.** Bộ thực thi, mục đăng ký, id và
+2. **"Đã gỡ bỏ" nghĩa là khỏi mọi nơi do 67router kiểm soát.** Bộ thực thi, mục đăng ký, id và
    bí danh của nhà cung cấp, danh sách mô hình, endpoint, biến môi trường, biểu tượng, thẻ trên
    bảng điều khiển, tài liệu tham chiếu nhà cung cấp được tạo tự động, `FREE_TIERS.md`, tài liệu
    tham chiếu môi trường, số lượng trong README, các bản sao `llm.txt`, các bài kiểm thử chuyên
@@ -34,7 +34,7 @@ phí") và có thể được đưa trở lại nếu dịch vụ hoạt động
 3. **Không bao giờ đưa trở lại một mục trên trang này nếu không có sự cho phép bằng văn bản.**
    Điều đó bao gồm việc thêm lại id hoặc bí danh vào bất kỳ danh mục nhà cung cấp nào, thêm các
    miền vào bộ thực thi, chấp nhận PR của cộng tác viên nhằm "khôi phục" mục đó, thêm mục đó vào
-   danh mục mô hình miễn phí hoặc ghi lại cách thủ công để truy cập mục đó thông qua OmniRoute.
+   danh mục mô hình miễn phí hoặc ghi lại cách thủ công để truy cập mục đó thông qua 67router.
    Hãy đóng các PR và issue như vậy kèm liên kết đến trang này.
 4. **Giữ mục ghi nhận ở mức tối thiểu.** Chỉ ghi lại những gì người đánh giá cần để nhận biết
    một lần đưa trở lại: định danh, miền, ngày tháng và pull request đã thực hiện việc gỡ bỏ.
@@ -51,7 +51,7 @@ phí") và có thể được đưa trở lại nếu dịch vụ hoạt động
 | 2026-08-12 | `puter`           | `pu`     | `puter.com`                                                                | Chủ sở hữu Puter (Nariman Jelveh)                                                                                                                                          | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Nhà cung cấp sử dụng khóa API. Bản di chuyển `152_remove_puter_provider.sql` dọn dẹp cấu hình đã lưu.                                                                                                                                                                                                                                                                                                                                                                                  |
 | 2026-09-02 | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                    | Đơn vị vận hành dịch vụ (qua email hỗ trợ)                                                                                                                                 | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Nhà cung cấp không cần khóa. Đã nhận được yêu cầu bằng văn bản vào 2026-08-30. Các vấn đề và cuộc thảo luận riêng đã bị xóa, các PR đã được đổi tiêu đề.                                                                                                                                                                                                                                                                                                                               |
 | 2026-09-21 | `gemini-business` | `gembiz` | `business.gemini.google`                                                   | Quyết định của chủ sở hữu dự án (vấn đề [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                                  | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Nhà cung cấp web dựa trên cookie. Google đã ngừng cung cấp điểm cuối `BardFrontendService/StreamGenerate` mà trình thực thi nhắm đến; phương án thay thế (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT được khởi tạo từ `__Secure-C_SES`/`csesidx`) không thể được xây dựng hoặc xác thực nếu không có tài khoản Gemini Enterprise/Workspace đang hoạt động, mà dự án không có. Do đó, nhà cung cấp này bị ngừng thay vì được viết lại mà không qua xác minh. |
-| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                           | Quyết định của chủ sở hữu dự án (`#14224`)                                                                                                                                 | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Nhà cung cấp xác thực bằng cookie, không phải bị gỡ theo yêu cầu của đơn vị vận hành. `studio-api.suno.ai` đã bị đình chỉ (503); máy chủ đang hoạt động yêu cầu trao đổi Clerk JWT cùng một dịch vụ giải hCaptcha trả phí mà OmniRoute quyết định không bổ sung chỉ cho một nhà cung cấp nhạc. `kie/suno-v4.0` và `kie/suno-v3.5` (do kie.ai lưu trữ) không bị ảnh hưởng và vẫn được hỗ trợ.                                                                                           |
+| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                           | Quyết định của chủ sở hữu dự án (`#14224`)                                                                                                                                 | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Nhà cung cấp xác thực bằng cookie, không phải bị gỡ theo yêu cầu của đơn vị vận hành. `studio-api.suno.ai` đã bị đình chỉ (503); máy chủ đang hoạt động yêu cầu trao đổi Clerk JWT cùng một dịch vụ giải hCaptcha trả phí mà 67router quyết định không bổ sung chỉ cho một nhà cung cấp nhạc. `kie/suno-v4.0` và `kie/suno-v3.5` (do kie.ai lưu trữ) không bị ảnh hưởng và vẫn được hỗ trợ.                                                                                            |
 | 2026-10-10 | `opencode`        | `oc`     | `opencode.ai/zen/v1` (gói miễn phí; dùng chung máy chủ với `opencode-zen`) | Gỡ bỏ để phòng ngừa (quyết định của chủ sở hữu dự án), nhằm tôn trọng yêu cầu gỡ bỏ công khai của đơn vị vận hành OpenCode đối với dự án 9router thượng nguồn (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Chỉ nhà cung cấp "OpenCode Free" không cần khóa bị gỡ bỏ. `opencode-zen` và `opencode-go` có xác thực, tất cả mô hình trong danh mục Zen và các hợp đồng yêu cầu tương ứng, các tích hợp máy khách OpenCode cùng `@omniroute/opencode-plugin*` vẫn được giữ lại. Bản di chuyển `207_remove_opencode_free_provider.sql` chuyển các kết nối cũ có khóa API sang Zen và dọn dẹp cấu hình không cần khóa.                                                                                  |
 
 ## Thêm một mục
@@ -67,5 +67,5 @@ Khi nhận được yêu cầu gỡ bỏ mới:
 3. Thêm một hàng vào bảng trên và thêm các định danh vào
    `tests/unit/removed-providers-blocklist.test.ts` trong cùng một PR.
 4. Phản hồi đơn vị vận hành sau khi PR được hợp nhất, liệt kê những gì đã được gỡ bỏ và những
-   gì OmniRoute không thể thay đổi (các phiên bản npm và Docker đã được phát hành, lịch sử git,
+   gì 67router không thể thay đổi (các phiên bản npm và Docker đã được phát hành, lịch sử git,
    các fork của bên thứ ba).

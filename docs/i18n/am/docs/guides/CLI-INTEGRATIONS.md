@@ -7,11 +7,11 @@
 ስለ የጋራ executable manifest፣ የተገደቡ የልጅ environments እና ቀጣይነት ያለው
 የGemini ማዋቀር፣ [CLI ማስጀመሪያ ውሎች](./CLI-LAUNCH-CONTRACTS.md)ን ይመልከቱ።
 
-OmniRoute የcoding CLIን (Codex፣ Claude Code፣ OpenCode፣ Cline፣ …) OmniRouteን
+67router የcoding CLIን (Codex፣ Claude Code፣ OpenCode፣ Cline፣ …) 67routerን
 እንደ backend እንዲጠቀም የሚያዋቅሩ የ`setup-*` ትዕዛዞች ስብስብ ይዞ ይመጣል — በዚህም
-መሣሪያው ከ**አንድ** endpoint ጋር ይገናኛል፣ OmniRoute ደግሞ auto-fallbackን በመጠቀም
+መሣሪያው ከ**አንድ** endpoint ጋር ይገናኛል፣ 67router ደግሞ auto-fallbackን በመጠቀም
 ወደ ትክክለኛው provider ይመራዋል። እያንዳንዱ ትዕዛዝ እየሰራ ካለ
-OmniRoute (አካባቢያዊ ወይም ሩቅ) የ**ቀጥታ** model catalogን ያነባል
+67router (አካባቢያዊ ወይም ሩቅ) የ**ቀጥታ** model catalogን ያነባል
 እና የመሣሪያውን የራሱ config file በ**እርስዎ** ማሽን ላይ ይጽፋል።
 መሣሪያው በሚደግፈው ቦታ ሁሉ API keyው በenvironment variable አማካይነት
 ይጠቀሳል። የመሣሪያውን አካባቢያዊ environment file በቋሚነት የሚያስቀምጡ
@@ -59,7 +59,7 @@ credentials ሊተኩ አይችሉም።
 
 - [የClaude Code ውቅር](./CLAUDE-CODE-CONFIGURATION.md)
 - [የCodex CLI ውቅር](./CODEX-CLI-CONFIGURATION.md)
-- [የርቀት ሁነታ](./REMOTE-MODE.md) — ሩቅ OmniRouteን (VPS / Tailnet) ከlaptopዎ ይቆጣጠሩ
+- [የርቀት ሁነታ](./REMOTE-MODE.md) — ሩቅ 67routerን (VPS / Tailnet) ከlaptopዎ ይቆጣጠሩ
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot extension፤ እነዚህን
   `setup-*` ትዕዛዞችም ከeditor ውስጥ ሆኖ ሊያስኬድልዎ ይችላል
 
@@ -95,7 +95,7 @@ credentials ሊተኩ አይችሉም።
 
 ስለ ጠቋሚዎቹ ማስታወሻዎች (በትዕዛዙ ምንጭ ውስጥ የተረጋገጡ)፦
 
-- `--remote <url>` — ካታሎጉን ከርቀት OmniRoute ያመጣል (`--port`ን
+- `--remote <url>` — ካታሎጉን ከርቀት 67router ያመጣል (`--port`ን
   እና ንቁውን አውድ ይሽራል)። `--api-key <key>` ለዚያ አገልጋይ
   ማረጋገጫውን ያቀርባል (ነባሪው የ`OMNIROUTE_API_KEY` የአካባቢ ተለዋዋጭ ወይም የንቁው አውድ ቶከን ነው)።
 - `--only <patterns>` — በኮማ የተለዩ ንዑስ ሕብረቁምፊዎች፤ የሚዛመዱ የሞዴል መታወቂያዎችን ብቻ
@@ -116,7 +116,7 @@ credentials ሊተኩ አይችሉም።
   **codex** በ`-c model_providers.omniroute.*` ነጋሪ እሴቶች ይቀበሉታል። **`--model`ን በግድ የሚፈልግ ብቸኛው የአሂድ
   ዒላማ Qwen ነው** — `omniroute run qwen` ያለእሱ ሲሰራ
   ግልጽ በሆነ ስህተት በ`2` ይወጣል።
-- `--port <port>` — የአካባቢ OmniRoute ወደብ (ነባሪ `20128`፣ `--remote`
+- `--port <port>` — የአካባቢ 67router ወደብ (ነባሪ `20128`፣ `--remote`
   ሲዘጋጅ ችላ ይባላል)። በሁሉም `setup-*` እና በሁለቱም ማስጀመሪያዎች ላይ ይገኛል።
 - የ`omniroute run` መውጫ ኮዶች፦ የልጁ CLI የራሱ መውጫ ኮድ ምንም ሳይቀየር ይተላለፋል፤
   `2` = ልክ ያልሆኑ ነጋሪ እሴቶች (የማይደገፍ ዒላማ፣ አስፈላጊው `--model` የጎደለ፣
@@ -161,7 +161,7 @@ MITM እና መመሪያ-ብቻ የካታሎግ ግቤቶች ግልጽ `setup-*`
 
 ## የአካባቢ አጠቃቀም
 
-OmniRoute በ`localhost:20128` ላይ እየሰራ ሳለ፣ ለመሣሪያዎ የማዋቀሪያ ትዕዛዙን ብቻ ያሂዱ። ካታሎጉ ከአካባቢያዊው አገልጋይ ይመጣል።
+67router በ`localhost:20128` ላይ እየሰራ ሳለ፣ ለመሣሪያዎ የማዋቀሪያ ትዕዛዙን ብቻ ያሂዱ። ካታሎጉ ከአካባቢያዊው አገልጋይ ይመጣል።
 
 ```bash
 # Codex፦ ለእያንዳንዱ የተዛመደ ሞዴል በ~/.codex/ ውስጥ ፕሮፋይል ይጻፉ
@@ -188,8 +188,8 @@ omniroute setup-continue --dry-run
 ምንም ውቅር ሳይጻፍ ያስጀምሩ (የአካባቢ ተለዋዋጭ ማስገባት ብቻ)፦
 
 ```bash
-omniroute launch                 # Claude Code → አካባቢያዊ OmniRoute
-omniroute launch-codex           # Codex CLI → አካባቢያዊ OmniRoute
+omniroute launch                 # Claude Code → አካባቢያዊ 67router
+omniroute launch-codex           # Codex CLI → አካባቢያዊ 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -207,7 +207,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## የርቀት አጠቃቀም
 
-ማንኛውንም የማዋቀሪያ ትዕዛዝ `--remote` + `--api-key` በመጠቀም ወደ ሩቅ OmniRoute ያመልክቱ። ካታሎጉ ከሩቅ ይመጣል፤ ውቅሩ ግን በአካባቢያዊ ማሽንዎ ላይ ይጻፋል።
+ማንኛውንም የማዋቀሪያ ትዕዛዝ `--remote` + `--api-key` በመጠቀም ወደ ሩቅ 67router ያመልክቱ። ካታሎጉ ከሩቅ ይመጣል፤ ውቅሩ ግን በአካባቢያዊ ማሽንዎ ላይ ይጻፋል።
 
 ```bash
 # OpenCodeን ከሩቅ VPS ጋር ይጠቀሙ፣ glm/kimi ሞዴሎችን ብቻ ያቆዩ
@@ -245,7 +245,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-ሁለቱም ቅጾች አንድ የ5dive **የማረጋገጫ ፕሮፋይል** ይጽፋሉ፣ ከዚያም ከዚያ ፕሮፋይል ጋር የተያያዘ እያንዳንዱ `claude` መቀመጫ ከOmniRoute ጋር ይገናኛል። ሦስት ነገሮች ለዚህ ዒላማ የተለዩ ናቸው፦
+ሁለቱም ቅጾች አንድ የ5dive **የማረጋገጫ ፕሮፋይል** ይጽፋሉ፣ ከዚያም ከዚያ ፕሮፋይል ጋር የተያያዘ እያንዳንዱ `claude` መቀመጫ ከ67router ጋር ይገናኛል። ሦስት ነገሮች ለዚህ ዒላማ የተለዩ ናቸው፦
 
 - **በመንጋው አስተናጋጅ ላይ እንደ root ይሰራል።** የ5dive ግሶች በአካባቢያዊ systemd ዩኒቶች እና root በሚቆጣጠረው የሁኔታ ማውጫ ላይ ይሰራሉ፤ የርቀት ሁነታ የለም። አሰራሩ አስቀድሞ root ካልሆነ በ`sudo` በኩል ራሱን እንደገና ያስኬዳል (`--no-sudo` ይህን ያሰናክላል እና በምትኩ ትዕዛዙን ያትማል)።
 - **loopback ካልሆነ በስተቀር መጨረሻ ነጥቡ `https://` መሆን አለበት።** የወኪሉ API ቁልፍ በእያንዳንዱ ጥያቄ ላይ በዚያ URL በኩል ይጓዛል፣ እና 5dive ከማሽኑ ውጭ ያለ በግልጽ ጽሑፍ የሚተላለፍ መጨረሻ ነጥብን አይቀበልም። የግል LAN አድራሻም ልዩ ሁኔታ አይደለም።
@@ -253,13 +253,13 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API ቁልፉ ለ5dive በ**stdin** (`--api-key=-`) ላይ ይሰጣል፣ ስለዚህ በ`ps` ውጤት ውስጥ ፈጽሞ አይታይም።
 
-ፕሮፋይሉን ከአንድ ሞዴል ይልቅ ወደ OmniRoute **ጥምር** ማመልከት ለመንጋው የአቅራቢ መቀያየሪያን የሚያስገኘው ነው፦ በ[#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) ላይ በተመዘገበው አሂድ ወቅት ዋናው መጨረሻ ነጥብ በዙሩ መካከል ሙሉ በሙሉ ሲቋረጥ፣ ወኪሉ ቀሪ ደረጃዎቹን በመጠባበቂያው ላይ አጠናቀቀ እና መቋረጡን ለተጠቃሚው ፈጽሞ አላሳየም።
+ፕሮፋይሉን ከአንድ ሞዴል ይልቅ ወደ 67router **ጥምር** ማመልከት ለመንጋው የአቅራቢ መቀያየሪያን የሚያስገኘው ነው፦ በ[#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) ላይ በተመዘገበው አሂድ ወቅት ዋናው መጨረሻ ነጥብ በዙሩ መካከል ሙሉ በሙሉ ሲቋረጥ፣ ወኪሉ ቀሪ ደረጃዎቹን በመጠባበቂያው ላይ አጠናቀቀ እና መቋረጡን ለተጠቃሚው ፈጽሞ አላሳየም።
 
 ---
 
 ## የBase URL አጠቃቀም ደንቦች (`/v1` የሚፈልጉ መሣሪያዎች)
 
-OmniRoute የOpenAI በይነገጽን በ`/v1`፣ የAnthropic በይነገጽን በroot፣
+67router የOpenAI በይነገጽን በ`/v1`፣ የAnthropic በይነገጽን በroot፣
 እና ቤተኛውን የGemini በይነገጽ በ`/v1beta` ያቀርባል። እያንዳንዱ ውህደት መሣሪያው
 በሚጠብቀው ቅርጽ ተዋቅሯል (በትዕዛዙ ምንጭ ውስጥ ተረጋግጧል)፦
 
@@ -281,7 +281,7 @@ OmniRoute የOpenAI በይነገጽን በ`/v1`፣ የAnthropic በይነገጽ�
 ## በማዘመን ጊዜ ቤተኛ ጥገኞችን ማቆየት፦ `--include=optional`
 
 በ`omniroute update` ሲያዘምኑ (ካረጋገጡ በኋላ፣ ወይም `--apply`ን በመጠቀም)፣
-OmniRoute መጫኑን `--include=optional` በውስጡ ተካቶ ያስኬዳል፦
+67router መጫኑን `--include=optional` በውስጡ ተካቶ ያስኬዳል፦
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -308,14 +308,14 @@ omniroute update --dry-run
 
 ከ`@google/gemini-cli` 0.50.0 ጋር በማነጻጸር የተረጋገጠ ውል፦ CLIው
 `GOOGLE_GEMINI_BASE_URL`ን ያከብራል፣ እና `POST /v1beta/models/<model>:generateContent`
-(እና `:streamGenerateContent?alt=sse`)ን በእሱ ላይ ይልካል — ይህም በትክክል የOmniRoute ቤተኛ
+(እና `:streamGenerateContent?alt=sse`)ን በእሱ ላይ ይልካል — ይህም በትክክል የ67router ቤተኛ
 Gemini በይነገጽ (`/v1beta`) ነው። `omniroute run gemini` ይህን በራስ-ሰር ያዋቅራል፦
 
-- `GOOGLE_GEMINI_BASE_URL` → ገቢሩ የOmniRoute መሠረታዊ URL (ስር፣ `/v1` የሌለው)፤
-- `GEMINI_API_KEY` → የተፈታው የOmniRoute ምስክርነት (አማራጭ/አካባቢ/ዐውድ)፤
+- `GOOGLE_GEMINI_BASE_URL` → ገቢሩ የ67router መሠረታዊ URL (ስር፣ `/v1` የሌለው)፤
+- `GEMINI_API_KEY` → የተፈታው የ67router ምስክርነት (አማራጭ/አካባቢ/ዐውድ)፤
 - በ`.gemini/settings.json` ውስጥ `gemini-api-key` ማረጋገጫን የሚመርጥ
   **ጊዜያዊና የተነጠለ `GEMINI_CLI_HOME`**፤ ስለዚህ የተከማቸ የGoogle OAuth ክፍለ-ጊዜ (Code Assist)
-  ወደ OmniRoute የተመራውን ማስጀመሪያ ፈጽሞ አይተካውም — ከመውጣት በኋላ ይወገዳል፤
+  ወደ 67router የተመራውን ማስጀመሪያ ፈጽሞ አይተካውም — ከመውጣት በኋላ ይወገዳል፤
 - **የአካባቢ ንጽህና**፦ የልጅ ሂደቱ አካባቢ `GOOGLE_API_KEY`፣
   `GOOGLE_GENAI_USE_VERTEXAI` እና `GOOGLE_GENAI_USE_GCA`ን (ማረጋገጫውን
   ወደ Vertex/Code Assist የሚያዞሩ) በማስወገድ ይጸዳል፣ እና `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -339,7 +339,7 @@ omniroute run gemini --model glm/glm-5.2 -- --skip-trust -p "hello"
 
 ተመሳሳይ ውጤት የሚሰጥ የማስጀመሪያ ዕቅድ regression ሙከራ በCI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`) ውስጥ ይካሄዳል። እውነተኛዎቹን binaries ከእውነተኛ
-OmniRoute server ጋር ለማረጋገጥ፣ በፈቃድ የሚነቃ harness በ
+67router server ጋር ለማረጋገጥ፣ በፈቃድ የሚነቃ harness በ
 `tests/integration/upstream-cli-smoke.int.test.ts` ይገኛል። በራስ-ሰር ፈጽሞ አይካሄድም
 (`RUN_CLI_SMOKE=1` ካልሆነ በስተቀር እያንዳንዱ ንዑስ ሙከራ ይዘለላል)፣ ማረጋገጫውን በenv-var
 NAME ያስተላልፋል (በእሴቱ ፈጽሞ አይደለም)፣ በማንኛውም የተመዘገበ ውጤት ውስጥ ያሉ key-shaped ሕብረቁምፊዎችን ይደብቃል፣ binary ያልተጫነላቸውን

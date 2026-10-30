@@ -41,7 +41,7 @@ async function createCompatibleNode(id: string, prefix: string): Promise<void> {
 function assertRetiredError(error: unknown): boolean {
   assert.ok(error instanceof Error);
   assert.equal((error as Error & { status?: number }).status, 410);
-  assert.equal(error.message, "Provider has been retired from OmniRoute runtime.");
+  assert.equal(error.message, "Provider has been retired from 67router runtime.");
   return true;
 }
 
@@ -105,7 +105,7 @@ test("compatible-node remapping cannot erase a retired Designer prefix", async (
   assert.equal(resolved.error.status, 410);
   assert.deepEqual(await resolved.error.json(), {
     error: {
-      message: "Provider has been retired from OmniRoute runtime.",
+      message: "Provider has been retired from 67router runtime.",
       type: "invalid_request_error",
       code: "model_shutdown",
     },

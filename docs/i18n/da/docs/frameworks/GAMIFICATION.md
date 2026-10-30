@@ -7,7 +7,7 @@
 > **Sandhedskilde:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Senest opdateret:** 2026-06-28 — v3.8.40
 
-OmniRoute indeholder et local-first-gamificationlag, der belønner brugere for
+67router indeholder et local-first-gamificationlag, der belønner brugere for
 at interagere med platformen — ved at foretage forespørgsler, skifte udbydere, oprette
 kombinationer, dele tokens og bidrage til fællesskabet. Al tilstand opbevares i
 SQLite; føderation med fællesskabsservere er valgfri og push-baseret.
@@ -36,7 +36,7 @@ af tokens, invitationsbelønninger).
 | Ranglister         | Globale, ugentlige, månedlige, token-delings- og bidragsområder         |
 | Tokendeling        | Overfør kreditter mellem brugere via et dobbelt bogføringssystem        |
 | Invitér og indløs  | Henvisningskoder med SHA-256-hashet lagring                             |
-| Fællesskabsservere | Føderér med eksterne OmniRoute-instanser                                |
+| Fællesskabsservere | Føderér med eksterne 67router-instanser                                 |
 | Anti-snyd          | Scoring på serversiden, hastighedsbegrænsning, z-score-anomalidetektion |
 
 ### Designprincipper
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Databasetabeller
 
-Alle tabeller findes i OmniRoutes primære SQLite-database, som oprettes af migreringen
+Alle tabeller findes i 67routers primære SQLite-database, som oprettes af migreringen
 `060_create_gamification.sql`. WAL-journalføring nedarves fra singleton-instansen
 `getDbInstance()` i `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Alle tabeller findes i OmniRoutes primære SQLite-database, som oprettes af migr
 
 ### Domænemodul: `src/lib/db/gamification.ts`
 
-Følger OmniRoutes standardmønster — importerer `getDbInstance()` fra
+Følger 67routers standardmønster — importerer `getDbInstance()` fra
 `core.ts` og eksporterer typeangivne CRUD-funktioner. Ingen rå SQL i route-handlere.
 
 Nøglefunktioner:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Handling          | XP  | Beskrivelse                                                 |
 | ----------------- | --- | ----------------------------------------------------------- |
-| `request`         | 1   | Pr. API-anmodning dirigeret gennem OmniRoute                |
+| `request`         | 1   | Pr. API-anmodning dirigeret gennem 67router                 |
 | `provider_switch` | 5   | Skift til en anden udbyder                                  |
 | `model_switch`    | 3   | Skift til en anden model                                    |
 | `combo_create`    | 10  | Oprettelse af en ny kombination                             |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unik, indekseret) |
 | `token_hash` | SHA-256(raw_token)            |
 
-Det rå token returneres til brugeren præcis én gang på oprettelsestidspunktet. OmniRoute
+Det rå token returneres til brugeren præcis én gang på oprettelsestidspunktet. 67router
 gemmer eller viser det aldrig igen — kun hashen bevares.
 
 ### Forhindring af selvhenvisning
@@ -703,7 +703,7 @@ Administratorer kan forespørge på hele revisionssporet via `GET /api/gamificat
 
 ## API-ruter
 
-Alle ruter følger OmniRoutes standardmønster:
+Alle ruter følger 67routers standardmønster:
 
 ```
 Rute → CORS-preflight → Validering af body (Zod) → Godkendelse (extractApiKey)

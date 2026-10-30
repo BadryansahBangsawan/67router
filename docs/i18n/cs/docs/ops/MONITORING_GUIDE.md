@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute obsahuje integrované monitorování stavu, autopilota poskytovatelů, sledování kvót a integrační body pro observabilitu. Tato příručka popisuje řídicí panel, upozornění a řešení problémů.
+> **TL;DR**: 67router obsahuje integrované monitorování stavu, autopilota poskytovatelů, sledování kvót a integrační body pro observabilitu. Tato příručka popisuje řídicí panel, upozornění a řešení problémů.
 
 **Zdroje:**
 
@@ -20,7 +20,7 @@
 
 ## Přehled
 
-OmniRoute má **3 vrstvy monitorování**:
+67router má **3 vrstvy monitorování**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Pro každou kombinaci:
 
 ## API kontroly stavu
 
-OmniRoute zpřístupňuje **dva** HTTP endpointy pro kontrolu stavu. Pro orchestrátory nejsou vzájemně zaměnitelné.
+67router zpřístupňuje **dva** HTTP endpointy pro kontrolu stavu. Pro orchestrátory nejsou vzájemně zaměnitelné.
 
 | Cesta                        | Účel                                                                     | Náročnost                                     | Použití                                                                         |
 | ---------------------------- | ------------------------------------------------------------------------ | --------------------------------------------- | ------------------------------------------------------------------------------- |
@@ -181,7 +181,7 @@ uložených trvalých stavů.
 
 ### Doporučení pro sondy Kubernetes
 
-OmniRoute je **jeden proces Node** (jedna smyčka událostí). Výchozí Docker `HEALTHCHECK` cílí na odlehčený endpoint `/healthz`. `/api/monitoring/health` je pro intervaly sond liveness kubeletu **příliš náročný**.
+67router je **jeden proces Node** (jedna smyčka událostí). Výchozí Docker `HEALTHCHECK` cílí na odlehčený endpoint `/healthz`. `/api/monitoring/health` je pro intervaly sond liveness kubeletu **příliš náročný**.
 
 | Sonda                        | Doporučený cíl                                                                    | Poznámky                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -228,7 +228,7 @@ Související: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) 
 
 ### Watchdog systemd (zamrzlá událostní smyčka)
 
-Na hostiteli se systemd OmniRoute informuje správce služeb, když je připraven, a nadále mu pravidelně posílá signály, takže server se zaseknutou událostní smyčkou bude ukončen a restartován, místo aby zůstal spuštěný a nereagoval. Signály odesílá vlastní událostní smyčka serveru: když se zablokuje, signály se přestanou odesílat a systemd službu restartuje, jakmile uplyne `WatchdogSec`, aniž by některý obdržel.
+Na hostiteli se systemd 67router informuje správce služeb, když je připraven, a nadále mu pravidelně posílá signály, takže server se zaseknutou událostní smyčkou bude ukončen a restartován, místo aby zůstal spuštěný a nereagoval. Signály odesílá vlastní událostní smyčka serveru: když se zablokuje, signály se přestanou odesílat a systemd službu restartuje, jakmile uplyne `WatchdogSec`, aniž by některý obdržel.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) již vytváří uživatelskou jednotku s touto konfigurací. Jednotka, kterou vytvoříte sami (s výchozím nastavením `Type=simple`), watchdog nemá, proto do její sekce `[Service]` přidejte tyto řádky:
 
@@ -444,7 +444,7 @@ Konfiguraci kontroly stavu tokenů interně zajišťuje `tokenHealthCheck.ts`.
 
 ### Vestavěné kanály
 
-OmniRoute podporuje **3 kanály upozornění**:
+67router podporuje **3 kanály upozornění**:
 
 | Kanál            | Nastavení          | Případ použití                 |
 | ---------------- | ------------------ | ------------------------------ |
@@ -560,7 +560,7 @@ Vytvořte soubor `~/.omniroute/dashboard.json`:
 ### „Kvóta je v pořádku, ale vidím chyby 429“
 
 - 429 znamená, že podle poskytovatele jste vyčerpali svou kvótu
-- Sledování kvót v OmniRoute může být **zastaralé** — rozhodující jsou údaje nadřazené služby poskytovatele
+- Sledování kvót v 67router může být **zastaralé** — rozhodující jsou údaje nadřazené služby poskytovatele
 - Data o kvótách se automaticky obnovují prostřednictvím interního monitoru kvót
 
 ### „Kombinace selhává, ale všechny cíle vypadají v pořádku“
@@ -573,7 +573,7 @@ Vytvořte soubor `~/.omniroute/dashboard.json`:
 
 - Spusťte `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Pokud vrátí „ok“ — jde o planý poplach, kontrola stavu je příliš přísná
-- Pokud vrátí cokoli jiného — **zastavte OmniRoute** a postupujte podle [průvodce obnovou po havárii](./DATABASE_GUIDE.md#disaster-recovery)
+- Pokud vrátí cokoli jiného — **zastavte 67router** a postupujte podle [průvodce obnovou po havárii](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### „Zatížení haldy paměti je kritické“
 

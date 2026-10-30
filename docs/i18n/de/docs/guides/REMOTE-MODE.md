@@ -4,7 +4,7 @@
 
 ---
 
-Führe die `omniroute`-CLI auf deinem Laptop aus, während OmniRoute selbst an einem anderen Ort läuft
+Führe die `omniroute`-CLI auf deinem Laptop aus, während 67router selbst an einem anderen Ort läuft
 (einem VPS, einem Heimserver oder einem anderen Rechner in deinem Tailnet). Du meldest dich einmal mit
 `omniroute connect` an, und von da an richtet sich **jeder** CLI-Befehl an diesen entfernten
 Server — dieselben Befehle, dieselbe Ausgabe, nur gegen den entfernten Server ausgeführt.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← erstellt ein lokales Codex-Profil
 ## Funktionsweise
 
 ```
-dein Laptop                               entfernter OmniRoute-Server (VPS)
+dein Laptop                               entfernter 67router-Server (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute-CLI      │  POST /api/cli/connect  (Passwort → Token)         │
 │  Kontext: vps      │ ───────────────►  │ stellt ein bereichsbeschränktes│
@@ -108,7 +108,7 @@ der Zustimmungsbildschirm **für immer hängen und gibt niemals einen Code aus**
 für die übliche Ausweichlösung „Callback-URL einfügen“ gibt es also nichts
 einzufügen. (Dies ist eine Einschränkung aufseiten von Google: Dasselbe Problem
 tritt bei jedem Proxy auf, der den mitgelieferten Antigravity-Desktop-Client
-verwendet, nicht nur bei OmniRoute.)
+verwendet, nicht nur bei 67router.)
 
 Das Dashboard erkennt dies, bevor Sie stecken bleiben: Wenn Sie **Providers → Antigravity →
 Connect** über eine Adresse öffnen, die nicht localhost ist, wird der allgemeine Hinweis
@@ -117,7 +117,7 @@ und Port bereits für Sie eingetragen sind. (Auch eine LAN-Adresse zählt —
 `192.168.x.x` ist im Hinblick auf diesen Callback nicht localhost.)
 
 Es gibt zwei unterstützte Möglichkeiten, Antigravity mit einer Remote-Instanz von
-OmniRoute zu verbinden.
+67router zu verbinden.
 
 ### Option A — lokaler Anmelde-Helper (empfohlen)
 
@@ -157,7 +157,7 @@ npx omniroute login antigravity --no-push
 
 Öffnen Sie anschließend im **Remote-Dashboard**: **Providers → Antigravity → Connect**,
 und fügen Sie den `omniroute-cred-v1.…`-Blob in das Feld unter **Schritt 2** ein
-(es akzeptiert entweder eine Callback-URL oder einen Zugangsdaten-Blob). OmniRoute
+(es akzeptiert entweder eine Callback-URL oder einen Zugangsdaten-Blob). 67router
 dekodiert ihn, führt das Cloud-Code-Onboarding serverseitig aus und speichert die
 Verbindung dauerhaft.
 
@@ -205,7 +205,7 @@ werden muss.
 
 ## Codex / Grok mit einer Remote-Installation verbinden (Anbieter mit festem Loopback)
 
-Codex, xAI (`xai-oauth`) und Grok CLI (`grok-cli`) registrieren bei ihrer vorgelagerten OAuth-App eine **feste** Loopback-`redirect_uri`. OmniRoute kann sie nicht ändern — der Anbieter leitet den Browser immer an dieselbe fest codierte Adresse zurück:
+Codex, xAI (`xai-oauth`) und Grok CLI (`grok-cli`) registrieren bei ihrer vorgelagerten OAuth-App eine **feste** Loopback-`redirect_uri`. 67router kann sie nicht ändern — der Anbieter leitet den Browser immer an dieselbe fest codierte Adresse zurück:
 
 | Anbieter    | Fester Callback, an den der Anbieter weiterleitet |
 | ----------- | ------------------------------------------------- |
@@ -213,7 +213,7 @@ Codex, xAI (`xai-oauth`) und Grok CLI (`grok-cli`) registrieren bei ihrer vorgel
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                 |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                 |
 
-`localhost` bezeichnet hier **den Rechner, auf dem der Browser ausgeführt wird**, während der PKCE-Callback-Server von OmniRoute auf der Loopback-Schnittstelle des **Servers** lauscht. Wenn Sie das Dashboard über eine LAN-Adresse wie `http://192.168.0.15:20128` öffnen, treffen die beiden nie aufeinander: Der Autorisierungscode wird an `localhost:1455` Ihres eigenen Laptops übermittelt, wo nichts lauscht, und der Anbieter bricht die Anmeldung ab, ohne einen Fehler anzuzeigen.
+`localhost` bezeichnet hier **den Rechner, auf dem der Browser ausgeführt wird**, während der PKCE-Callback-Server von 67router auf der Loopback-Schnittstelle des **Servers** lauscht. Wenn Sie das Dashboard über eine LAN-Adresse wie `http://192.168.0.15:20128` öffnen, treffen die beiden nie aufeinander: Der Autorisierungscode wird an `localhost:1455` Ihres eigenen Laptops übermittelt, wo nichts lauscht, und der Anbieter bricht die Anmeldung ab, ohne einen Fehler anzuzeigen.
 
 Das Dashboard erkennt dies, bevor das Pop-up geöffnet wird, und zeigt den Tunnelbefehl an, statt die Anmeldung ohne sichtbare Fehlermeldung scheitern zu lassen (#8046).
 
@@ -227,7 +227,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 
 Es sind zwei Weiterleitungen erforderlich; auch die Weiterleitung nur eines Ports schlägt weiterhin fehl:
 
-- **`20128`** (der Dashboard-Port) sorgt dafür, dass der Ursprung tatsächlich localhost ist, wodurch OmniRoute den PKCE-Callback-Server überhaupt erst startet — bei einem LAN-Ursprung wird dieser Zweig nie erreicht.
+- **`20128`** (der Dashboard-Port) sorgt dafür, dass der Ursprung tatsächlich localhost ist, wodurch 67router den PKCE-Callback-Server überhaupt erst startet — bei einem LAN-Ursprung wird dieser Zweig nie erreicht.
 - **`1455`** (der feste Callback-Port des Anbieters) ist das Ziel, an das der Browser zurückgeleitet wird; dieser Port muss per Tunnel zur Loopback-Schnittstelle des Servers weitergeleitet werden.
 
 Ersetzen Sie beim Verbinden mit xAI oder Grok CLI `1455` durch `56121`/`56122` und `20128` durch den tatsächlichen Port Ihres Dashboards. Lassen Sie den Tunnel geöffnet, bis die Verbindung als aktiv angezeigt wird.
@@ -345,7 +345,7 @@ omniroute contexts current         # der aktive Server, Authentifizierungsstatus
 
 ```text
   | Name    | Base URL                  | Auth  | Scope     | Description
-● | vps     | http://100.67.86.91:20128 | token | admin     | Entfernter OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin     | Entfernter 67router (…)
   | default | http://localhost:20128    | ✗     |           |
 ```
 

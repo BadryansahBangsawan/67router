@@ -52,14 +52,14 @@ Neither mode bypasses Gemini's workspace-trust checks.
 ## Codex profiles
 
 `configure codex` writes a private `<name>.config.toml` with a model and its
-OmniRoute provider endpoint. Credentials are referenced through
+67router provider endpoint. Credentials are referenced through
 `OMNIROUTE_API_KEY`, never embedded. The launch command sets the selected
 model at the top-level `model` key, not inside `model_providers`.
 
 Separate profile files are the current documented Codex contract; they overlay
 the user configuration when selected with `codex --profile <name>`.
 See [the official profile reference](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles)
-and [the OmniRoute Codex guide](./CODEX-CLI-CONFIGURATION.md).
+and [the 67router Codex guide](./CODEX-CLI-CONFIGURATION.md).
 
 ## Hermetic command execution
 

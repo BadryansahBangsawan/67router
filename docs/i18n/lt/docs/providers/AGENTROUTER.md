@@ -12,7 +12,7 @@ User-Agent, `anthropic-beta` vėliavėles, Stainless SDK antraštes ir kt.).
 
 ## Greitoji pradžia — naudokite savąjį `agentrouter` teikėją (rekomenduojama)
 
-Daugumai naudotojų **nereikia jokios specialios konfigūracijos**. OmniRoute turi integruotą
+Daugumai naudotojų **nereikia jokios specialios konfigūracijos**. 67router turi integruotą
 `agentrouter` teikėją, kuriame jau įdiegtas visas Claude Code užklausų formatas (žr.
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Norėdami jį naudoti:
 
@@ -34,7 +34,7 @@ bazinį URL, pokalbių kelią ar antraščių rinkinį.
 
 ## Išplėstinis būdas: prisijungimas naudojant su Claude Code suderinamą teikėjo tipą
 
-OmniRoute taip pat palaiko AgentRouter (ir panašius tarpinius serverius) per **su Claude Code
+67router taip pat palaiko AgentRouter (ir panašius tarpinius serverius) per **su Claude Code
 suderinamą** teikėjo tipą (`anthropic-compatible-cc-*`), kuris naudoja
 Anthropic Messages API ir tinkamą užklausų formatą. Bendrasis
 `openai-compatible-chat` teikėjas, nukreiptas į `https://agentrouter.org`,
@@ -47,14 +47,14 @@ Code užklausos.
 
 - AgentRouter paskyra ir API raktas. Nauji užsiregistravę naudotojai gauna nemokamų kreditų per partnerio
   nuorodą projekto faile [README](../README.md).
-- OmniRoute turi veikti su įjungta `ENABLE_CC_COMPATIBLE_PROVIDER` funkcijos vėliavėle
+- 67router turi veikti su įjungta `ENABLE_CC_COMPATIBLE_PROVIDER` funkcijos vėliavėle
   (žr. toliau).
 
 ## 1. Įjunkite su CC suderinamą teikėjo tipą
 
 Su Claude Code suderinamas teikėjo tipas valdomas funkcijos vėliavėle, nes jis
 siunčia srautą, labai panašų į oficialaus Claude Code kliento srautą. Įjunkite jį
-nustatydami aplinkos kintamąjį prieš paleisdami OmniRoute:
+nustatydami aplinkos kintamąjį prieš paleisdami 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

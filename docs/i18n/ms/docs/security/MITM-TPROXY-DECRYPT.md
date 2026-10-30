@@ -4,7 +4,7 @@
 
 ---
 
-Penyahsulitan telus TPROXY ialah **mod tangkapan ke-5** OmniRoute untuk tindanan MITM
+Penyahsulitan telus TPROXY ialah **mod tangkapan ke-5** 67router untuk tindanan MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Ia memintas dan **menyahsulit** trafik HTTPS keluar setempat pada Linux menggunakan
 TPROXY kernel + penghalaan dasar — **tanpa** memalsukan `/etc/hosts` dan
@@ -55,7 +55,7 @@ Gunakannya apabila anda mahu menangkap dan menyahsulit trafik daripada proses ya
 
 Oleh sebab pemintasan berlaku dalam kernel, proses asal **tidak memerlukan
 sebarang perubahan konfigurasi** — tetapi proses tersebut mesti mempercayai CA dinamik yang
-dipasang oleh OmniRoute (lihat [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
+dipasang oleh 67router (lihat [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
 
@@ -73,7 +73,7 @@ tambahan tidak dibina), pemuat tambahan (`src/mitm/tproxy/transparentSocket.ts::
 mengembalikan `null` dan bukannya melontarkan ralat. Status mod tangkapan kemudiannya melaporkan
 `available: false`, suis papan pemuka **dinyahdayakan** dengan petua alat
 "Penyahsulitan TPROXY memerlukan Linux + root + tambahan asli", dan bahagian lain
-OmniRoute terus berfungsi.
+67router terus berfungsi.
 
 ---
 
@@ -265,7 +265,7 @@ tanda soket pintasan (**SO_MARK**):
 | **Sanitasi ralat**                         | Respons ralat laluan melalui `sanitizeErrorMessage()` (Peraturan Tegas #12).                                                                                                                                                                                                                                                                                                                                      |
 
 **CA MITM ialah keupayaan yang amat berkuasa.** CA yang dipercayai oleh OS dan boleh menandatangani mana-mana
-hos bermakna apa-apa yang dipintas oleh OmniRoute boleh dinyahsulit. Ia dikawal oleh
+hos bermakna apa-apa yang dipintas oleh 67router boleh dinyahsulit. Ia dikawal oleh
 mod tangkapan TPROXY eksplisit yang setempat sahaja, dimatikan secara lalai, dan entri
 gedung amanah dialih keluar apabila anda menghentikan mod tersebut.
 
@@ -375,7 +375,7 @@ mengembalikan `available: false` apabila tambahan tiada.
 ### Peraturan tembok api lapuk selepas ranap
 
 `revertTproxy()` ialah songsangan tepat bagi operasi penggunaan dan bersifat idempoten. Menghentikan
-mod akan mengembalikan peraturan; jika OmniRoute dimatikan di pertengahan sesi, gunakan tindakan
+mod akan mengembalikan peraturan; jika 67router dimatikan di pertengahan sesi, gunakan tindakan
 **Repair** AgentBridge (`POST /api/tools/agent-bridge/repair`) untuk membatalkan keadaan sistem
 terbiar (pemalsuan DNS, CA akar, proksi sistem). Peraturan `mangle` dan laluan TPROXY juga
 dikosongkan secara automatik apabila sistem dibut semula.

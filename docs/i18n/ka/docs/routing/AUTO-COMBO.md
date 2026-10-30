@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (ქართული)
+# 67router Auto-Combo Engine (ქართული)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # ყველაზე იაფი თითო 
 
 **რა ხდება:**
 
-1. OmniRoute აფიქსირებს `auto/` პრეფიქსს `src/sse/handlers/chat.ts`-ში
+1. 67router აფიქსირებს `auto/` პრეფიქსს `src/sse/handlers/chat.ts`-ში
 2. მონაცემთა ბაზიდან მოითხოვს ყველა **აქტიურ პროვაიდერულ კავშირს**
 3. ფილტრავს და ტოვებს მათ, რომლებსაც მართებული ავტორიზაციის მონაცემები აქვთ (API გასაღები ან OAuth ტოკენი)
 4. განსაზღვრავს მოდელს თითოეული კავშირისთვის (`connection.defaultModel` ან პროვაიდერის პირველი მოდელი)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # ყველაზე იაფი თითო 
 - მოდელის დაბლოკვა — `isModelLocked(provider, connectionId, model)`
 
 თითოეულ კანდიდატს ასევე ახლავს ამ API გასაღების `excluded` დროშა. გამონაკლისები ინახება
-ცალ-ცალკე თითოეული API გასაღებისთვის (`auto_candidate_overrides` ცხრილი, მიგრაცია `128`) — OmniRoute
+ცალ-ცალკე თითოეული API გასაღებისთვის (`auto_candidate_overrides` ცხრილი, მიგრაცია `128`) — 67router
 ერთმომხმარებლიანია და `users` ცხრილი არ გააჩნია, ამიტომ `apiKeyId` არის რეალური
 ინდივიდუალური გამომძახებლის იდენტობის უახლოესი ანალოგი — და აღსრულდება კანდიდატების ნაკრების საკონტროლო წერტილში,
 `open-sse/services/autoCombo/virtualFactory.ts`-ში, სუფთა, მოდულურად ტესტირებული
@@ -181,7 +181,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 ორი გავრცელებული შეცდომა:
 
 - **`auto` თქვენს კომბოებს არ იყენებს.** `auto`/`auto/*` ქმნის საკუთარ, ნულოვანი კონფიგურაციის მქონე კანდიდატთა ერთობლიობას და შენახულ კომბოებს მხოლოდ მაშინ ამოწმებს, თუ რომელიმე კომბოს პირდაპირ `auto` ჰქვია (არ არის რეკომენდებული). კომბოს გავლით მარშრუტიზაციისთვის გაგზავნეთ მისი ზუსტი სახელი — არა `auto`.
-- **`openrouter/auto` არის OpenRouter-ის რეალური ფასიანი პროდუქტი** („ავტომატურად საუკეთესო ხელმისაწვდომი“) და არა OmniRoute-ის ფსევდონიმი. ის OpenRouter-ის რეესტრის ერთადერთი სტატიკური მოდელის ჩანაწერია (`open-sse/config/providers/registry/openrouter/index.ts`) და მისი საფასური ცალკე ირიცხება. `auto` ერთობლიობებიდან მის გამოსარიცხად გამოიყენეთ პარამეტრები → მარშრუტიზაცია → ფასიანი მოდელების დამალვა.
+- **`openrouter/auto` არის OpenRouter-ის რეალური ფასიანი პროდუქტი** („ავტომატურად საუკეთესო ხელმისაწვდომი“) და არა 67router-ის ფსევდონიმი. ის OpenRouter-ის რეესტრის ერთადერთი სტატიკური მოდელის ჩანაწერია (`open-sse/config/providers/registry/openrouter/index.ts`) და მისი საფასური ცალკე ირიცხება. `auto` ერთობლიობებიდან მის გამოსარიცხად გამოიყენეთ პარამეტრები → მარშრუტიზაცია → ფასიანი მოდელების დამალვა.
 
 თავდაპირველი გაუგებრობის შესახებ, რომელსაც ეს დოკუმენტაცია განმარტავს, იხილეთ [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) და [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111).
 
@@ -278,7 +278,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## მარშრუტიზაციის ყველა სტრატეგია
 
-OmniRoute-ის კომბინაციების ძრავა მხარს უჭერს **მარშრუტიზაციის 20 სტრატეგიას** (გამოცხადებულია `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`-ში). თავად Auto Combo ძრავა ხელმისაწვდომია `auto` სტრატეგიის სახით; დანარჩენები ხელმისაწვდომია შენახული კომბინაციებისთვის.
+67router-ის კომბინაციების ძრავა მხარს უჭერს **მარშრუტიზაციის 20 სტრატეგიას** (გამოცხადებულია `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`-ში). თავად Auto Combo ძრავა ხელმისაწვდომია `auto` სტრატეგიის სახით; დანარჩენები ხელმისაწვდომია შენახული კომბინაციებისთვის.
 
 | სტრატეგია           | აღწერა                                                                                                                                                                                                                           |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -326,7 +326,7 @@ OmniRoute-ის კომბინაციების ძრავა მხ�
 
 ### აგენტური კონვეიერის რეჟიმი
 
-`pipeline` კომბინაციას, სულ მცირე, ორი მოდელით შეუძლია ჩართოს დამგეგმავ/შემსრულებელზე დაფუძნებული მარშრუტიზაცია `config.agenticOrchestration.enabled`-ის მეშვეობით. პირველი სამიზნე პასუხისმგებელია დაგეგმვასა და საბოლოო პასუხებზე; მეორე სამიზნე აგენერირებს კლიენტისთვის ნატიურ ინსტრუმენტების გამოძახებებს. OmniRoute მოთხოვნის პროტოკოლიდან ამოიცნობს ინსტრუმენტის შედეგის გაგრძელებებს, დამგეგმავს ეკითხება, საჭიროა თუ არა ინსტრუმენტის კიდევ ერთი რაუნდი, და კლიენტისთვის ხილულ საბოლოო ეტაპად დინამიკურად ირჩევს შემსრულებელს ან დამგეგმავს.
+`pipeline` კომბინაციას, სულ მცირე, ორი მოდელით შეუძლია ჩართოს დამგეგმავ/შემსრულებელზე დაფუძნებული მარშრუტიზაცია `config.agenticOrchestration.enabled`-ის მეშვეობით. პირველი სამიზნე პასუხისმგებელია დაგეგმვასა და საბოლოო პასუხებზე; მეორე სამიზნე აგენერირებს კლიენტისთვის ნატიურ ინსტრუმენტების გამოძახებებს. 67router მოთხოვნის პროტოკოლიდან ამოიცნობს ინსტრუმენტის შედეგის გაგრძელებებს, დამგეგმავს ეკითხება, საჭიროა თუ არა ინსტრუმენტის კიდევ ერთი რაუნდი, და კლიენტისთვის ხილულ საბოლოო ეტაპად დინამიკურად ირჩევს შემსრულებელს ან დამგეგმავს.
 
 მეორე სამიზნის შემდეგ დამატებული მოდელები დალაგებული სარეზერვო შემსრულებლებია. წარუმატებელი HTTP პასუხის ან ტრანსპორტის გამონაკლისის შემთხვევაში სისტემა გადადის შემდეგ შემსრულებელზე და თან გადააქვს იგივე დამგეგმავის გადაწყვეტილება და ნატიური ინსტრუმენტები, თუმცა იყენებს ამ შემსრულებლის საკუთარ ეტაპის მოთხოვნასა და განსაზღვრულ კავშირს. პირველი წარმატებული პასუხი უცვლელად ბრუნდება, SSE ნაკადური გადაცემის ჩათვლით; აქ ხელახალი ცდა შეუძლებელია, თუ შეცდომა წარმატებული ნაკადის დაწყების შემდეგ წარმოიშვა. თუ ყველა შემსრულებელი წარუმატებელია, ბრუნდება ბოლო შეცდომა. კლიენტის მიერ გაუქმება დისპეტჩერიზაციას აჩერებს.
 
@@ -831,11 +831,11 @@ offline-friendly) ჩამოთვლილია ცხრილში „წ
 
 ### პირობაზე დამოკიდებული რეალური smoke-ტესტები (არა CI-ში — რეალური პროვაიდერები)
 
-| ბრძანება                               | რას აკეთებს                                                                                           |
-| :------------------------------------- | :---------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | რეალური მარშრუტიზაცია პროცესის შიგნით `RUN_COMBO_LIVE=1`-ით; ქმნის რეალური OmniRoute DB-ის snapshot-ს |
-| `npm run test:combo:live:vps`          | HTTP გამოძახებები რეალური OmniRoute სერვერის მისამართით (დააყენეთ `COMBO_LIVE_BASE_URL`)              |
-| `npm run test:combo:live:vps:failover` | იგივე, განზრახ შექმნილი failover სცენარებით                                                           |
+| ბრძანება                               | რას აკეთებს                                                                                          |
+| :------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | რეალური მარშრუტიზაცია პროცესის შიგნით `RUN_COMBO_LIVE=1`-ით; ქმნის რეალური 67router DB-ის snapshot-ს |
+| `npm run test:combo:live:vps`          | HTTP გამოძახებები რეალური 67router სერვერის მისამართით (დააყენეთ `COMBO_LIVE_BASE_URL`)              |
+| `npm run test:combo:live:vps:failover` | იგივე, განზრახ შექმნილი failover სცენარებით                                                          |
 
 ეს smoke-ტესტები რეალურ საკომუნიკაციო გზას ამოწმებს (კომბო → პროვაიდერი → დასრულება). ისინი
 განზრახ გამორიცხულია CI-დან, რადგან საჭიროებს რეალურ ავტორიზაციის მონაცემებსა და VPS-ზე წვდომას.

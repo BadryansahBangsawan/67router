@@ -7,29 +7,29 @@
 > **신뢰할 수 있는 원본:** `src/lib/skills/` 및 `src/app/api/skills/`
 > **최종 업데이트:** 2026-06-28 — v3.8.40
 
-OmniRoute는 언어 모델(및 운영자)이 파일 시스템 읽기와 HTTP 요청부터 샌드박스 기반 코드 실행 및 엄선된 마켓플레이스 스킬까지 재사용 가능한 기능을 조합할 수 있도록 확장 가능한 Skills 프레임워크를 제공합니다.
+67router는 언어 모델(및 운영자)이 파일 시스템 읽기와 HTTP 요청부터 샌드박스 기반 코드 실행 및 엄선된 마켓플레이스 스킬까지 재사용 가능한 기능을 조합할 수 있도록 확장 가능한 Skills 프레임워크를 제공합니다.
 
-스킬은 버전 및 스키마가 정의된 작업 단위입니다. OmniRoute는 스킬을 도구 정의로 변환하여 외부 요청에 삽입하고, 모델에서 반환되는 도구 호출을 가로채 일치하는 핸들러를 실행한 후, 대화를 계속할 수 있도록 결과를 모델에 다시 전달합니다. 모델은 구현을 볼 수 없으며 도구 인터페이스만 볼 수 있습니다.
+스킬은 버전 및 스키마가 정의된 작업 단위입니다. 67router는 스킬을 도구 정의로 변환하여 외부 요청에 삽입하고, 모델에서 반환되는 도구 호출을 가로채 일치하는 핸들러를 실행한 후, 대화를 계속할 수 있도록 결과를 모델에 다시 전달합니다. 모델은 구현을 볼 수 없으며 도구 인터페이스만 볼 수 있습니다.
 
 ---
 
 ## Agent Skills와 Omni Skills
 
-OmniRoute에는 서로 구별되면서도 상호 보완적인 두 가지 스킬 시스템이 있습니다.
+67router에는 서로 구별되면서도 상호 보완적인 두 가지 스킬 시스템이 있습니다.
 
 | 구분                | **Omni Skills**(이 문서)                             | **Agent Skills**                                                                           |
 | :------------------ | :--------------------------------------------------- | :----------------------------------------------------------------------------------------- |
 | 목적                | LLM 도구 삽입 + 샌드박스 기반 실행                   | 외부 에이전트가 검색하고 사용할 수 있는 SKILL.md 카탈로그                                  |
 | 신뢰할 수 있는 원본 | `src/lib/skills/` + 마켓플레이스                     | `src/lib/agentSkills/` + `skills/` 디렉터리                                                |
 | 런타임 모드         | 외부 요청에 삽입되고 도구 호출 이벤트 시 실행됨      | 정적 마크다운 카탈로그 + REST/MCP/A2A 검색 엔드포인트                                      |
-| 사용자              | OmniRoute 자체(콤보 라우팅, 인바운드 LLM 호출)       | 외부 에이전트, MCP 클라이언트, A2A 오케스트레이터                                          |
+| 사용자              | 67router 자체(콤보 라우팅, 인바운드 LLM 호출)        | 외부 에이전트, MCP 클라이언트, A2A 오케스트레이터                                          |
 | 개수                | 가변적(마켓플레이스 기반)                            | 45개 카탈로그 항목(23개 API + 21개 CLI + 1개 구성)                                         |
 | 형식                | 도구 스키마 + 핸들러가 포함된 `SkillDefinition`      | `SKILL.md` 프런트매터 + 마크다운 본문                                                      |
 | 검색                | `/api/skills/*` REST + `omniroute_skills_*` MCP 도구 | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP 도구 + A2A `list-capabilities` |
 
-**Omni Skills**는 실행 엔진입니다. LLM이 도구를 호출할 때 OmniRoute가 _무엇을 할 수 있는지_ 정의합니다.
+**Omni Skills**는 실행 엔진입니다. LLM이 도구를 호출할 때 67router가 _무엇을 할 수 있는지_ 정의합니다.
 
-**Agent Skills**는 문서 카탈로그입니다. 외부 에이전트에 OmniRoute의 REST API 및 CLI를 _사용하는 방법_을 설명하며, 에이전트 프롬프트에 직접 제공할 수 있는 구조화된 SKILL.md 파일을 사용합니다.
+**Agent Skills**는 문서 카탈로그입니다. 외부 에이전트에 67router의 REST API 및 CLI를 _사용하는 방법_을 설명하며, 에이전트 프롬프트에 직접 제공할 수 있는 구조화된 SKILL.md 파일을 사용합니다.
 
 Agent Skills 카탈로그, 생성기, MCP 도구 및 A2A 스킬에 관한 내용은 [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md)를 참조하세요.
 
@@ -41,14 +41,14 @@ Agent Skills 카탈로그, 생성기, MCP 도구 및 A2A 스킬에 관한 내용
 
 동일한 레지스트리에 다음 세 가지 소스의 스킬이 공존합니다.
 
-1. **기본 제공 스킬**(`src/lib/skills/builtins.ts`) — OmniRoute와 함께 제공됩니다. 다음과 같은 일반적인 사용 사례를 지원합니다.
+1. **기본 제공 스킬**(`src/lib/skills/builtins.ts`) — 67router와 함께 제공됩니다. 다음과 같은 일반적인 사용 사례를 지원합니다.
    - `file_read`, `file_write` — `<DATA_DIR>/skills/workspaces/<hashed-key>/` 아래에 API 키별로 격리된 샌드박스 작업 공간 제공
    - `http_request` — `guard: "public-only"`가 적용된 `safeOutboundFetch`를 통한 아웃바운드 HTTP
    - `web_search` — 캐싱을 지원하는 교체 가능한 검색 제공자(`executeWebSearch`)
    - `eval_code` — Docker로 샌드박스 처리된 `node` 또는 `python` 실행
    - `execute_command` — Docker로 샌드박스 처리된 셸 명령 실행
    - `browser` — Playwright 기반 스캐폴딩이며 기본적으로 비활성화됨(`builtin/browser.ts`)
-2. **SkillsMP**(OmniRoute 마켓플레이스) — `https://skillsmp.com/api/v1/skills/search`에서 가져옵니다. Settings에 `skillsmpApiKey`가 필요합니다.
+2. **SkillsMP**(67router 마켓플레이스) — `https://skillsmp.com/api/v1/skills/search`에서 가져옵니다. Settings에 `skillsmpApiKey`가 필요합니다.
 3. **SkillsSH**(`skills.sh` 커뮤니티 카탈로그) — `https://skills.sh/api/search`에서 가져옵니다. 인증은 필요하지 않으며, SKILL.md 콘텐츠는 GitHub raw에서 가져옵니다.
 
 하나의 "활성 제공자"가 대시보드에서 스킬을 설치할 카탈로그를 결정합니다(`src/lib/skills/providerSettings.ts`). **Settings → Memory & Skills**에서 변경할 수 있습니다. 기본값은 `skillsmp`입니다.
@@ -435,7 +435,7 @@ enum SkillMode {
 
 ## 기본 제공 스킬 카탈로그
 
-OmniRoute는 `src/lib/skills/builtin/`에 엄선된 기본 제공 스킬 세트를 포함합니다. 가장 일반적인 스킬은 다음과 같습니다.
+67router는 `src/lib/skills/builtin/`에 엄선된 기본 제공 스킬 세트를 포함합니다. 가장 일반적인 스킬은 다음과 같습니다.
 
 ### 브라우저 자동화 스킬
 

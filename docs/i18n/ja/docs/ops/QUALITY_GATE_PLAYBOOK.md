@@ -4,7 +4,7 @@
 
 ---
 
-> **このドキュメントについて。** OmniRoute の品質ゲートシステムを業界のベストプラクティスと比較した批判的評価に、すべての品質チェックポイントの包括的なカタログと、同じシステムをあらゆるプロジェクトに適用するための**ツール非依存の再現計画**を加えたものです。記憶ではなく、実際のリポジトリの状態に基づき、2026-06-16 に生成されました。
+> **このドキュメントについて。** 67router の品質ゲートシステムを業界のベストプラクティスと比較した批判的評価に、すべての品質チェックポイントの包括的なカタログと、同じシステムをあらゆるプロジェクトに適用するための**ツール非依存の再現計画**を加えたものです。記憶ではなく、実際のリポジトリの状態に基づき、2026-06-16 に生成されました。
 >
 > ベンチマーク: OWASP DSOMM · OpenSSF Scorecard · SLSA · SonarQube「Clean as You Code」·
 > Quality-Ratchet パターン · DORA 2024 · OWASP LLM Top 10 (2025) · ミューテーションテストのベストプラクティス。
@@ -95,62 +95,62 @@
 
 ### 1. スタイルとフォーマット（決定的・高速）
 
-- **OmniRoute:** lint-staged（pre-commit）経由のPrettier + ESLint、スペース2個／ダブルクォート／100col。
+- **67router:** lint-staged（pre-commit）経由のPrettier + ESLint、スペース2個／ダブルクォート／100col。
 - **汎用:** 自動修正可能なフォーマッター1つ + リンター1つを、pre-commitでステージ済みファイルに対して実行する。
 
 ### 2. 型
 
-- **OmniRoute:** `typecheck:core`（ブロッキング）+ `typecheck:noimplicit:core`（助言的）+ `type-coverage`のラチェット92.17% + ファイル単位のany予算。
+- **67router:** `typecheck:core`（ブロッキング）+ `typecheck:noimplicit:core`（助言的）+ `type-coverage`のラチェット92.17% + ファイル単位のany予算。
 - **汎用:** CIでの厳格な型チェック + ラチェット式の型カバレッジ指標 + ファイル単位の`any`／エスケープハッチ予算。
 
 ### 3. テスト（強度）
 
-- **OmniRoute:** 重複しない2つのランナー（Nodeネイティブ + vitest）、8シャード、全体カバレッジ60/60/60/60 + 約76%のラチェット + **重要モジュール向けのモジュール単位の下限8個** + 夜間のプロパティテスト + 夜間の**ミューテーションテスト**。
+- **67router:** 重複しない2つのランナー（Nodeネイティブ + vitest）、8シャード、全体カバレッジ60/60/60/60 + 約76%のラチェット + **重要モジュール向けのモジュール単位の下限8個** + 夜間のプロパティテスト + 夜間の**ミューテーションテスト**。
 - **汎用:** テストランナー + **絶対的な**カバレッジ下限（ゼロ対策）+ カバレッジの**ラチェット**（リグレッション対策）+ **高リスクコード向けのモジュール単位の下限**（グッドハートの法則対策）+ 純粋ロジック向けのプロパティベーステスト + テスト品質の真の尺度として夜間に実行する**ミューテーションテスト**。
 
 ### 4. テストポリシー（不正回避対策）
 
-- **OmniRoute:** `pr-test-policy`（本番コードにはテストを必須化）、`check-test-masking`（弱体化されたアサーションをブロック）、`pr-evidence`（成功を主張する場合はエビデンスブロックを必須化）、`test-discovery`（すべてのテストがいずれかのランナーによって収集されることを保証）。
+- **67router:** `pr-test-policy`（本番コードにはテストを必須化）、`check-test-masking`（弱体化されたアサーションをブロック）、`pr-evidence`（成功を主張する場合はエビデンスブロックを必須化）、`test-discovery`（すべてのテストがいずれかのランナーによって収集されることを保証）。
 - **汎用:** 「新しいコード ⇒ 新しいテスト」ゲート + アサーション削除／恒真条件の検出器 + エビデンス要件（TDDまたは現行仕様を表すテスト）+ globの対象外に孤立したテストが存在しないことの保証。
 
 ### 5. 複雑度とコード健全性（ラチェット）
 
-- **OmniRoute:** ESLint警告（3769↓）、jscpd重複率（5.72%↓）、循環的複雑度 + 最大行数（1800↓）、sonarjsによる認知的複雑度（753↓）、knipによるデッドコード／未使用エクスポート（339↓）、ファイル単位のファイルサイズ（固定、縮小のみ）、循環依存（カスタムTarjan、ブロッキング）。
+- **67router:** ESLint警告（3769↓）、jscpd重複率（5.72%↓）、循環的複雑度 + 最大行数（1800↓）、sonarjsによる認知的複雑度（753↓）、knipによるデッドコード／未使用エクスポート（339↓）、ファイル単位のファイルサイズ（固定、縮小のみ）、循環依存（カスタムTarjan、ブロッキング）。
 - **汎用:** すべての健全性指標（警告、重複、循環的**および**認知的複雑度、デッドコード、ファイルサイズ、インポート循環）をラチェット化する。方向性は常に「悪化させない」。
 
 ### 6. 静的セキュリティ（SAST + シークレット）
 
-- **OmniRoute:** CodeQL（アラートのラチェット = 0）、gitleaks（`[extend] useDefault=true` — 極めて重要！）、SonarQube、カスタムセキュリティルール（public-creds、error-helper、route-guard-membership、route-validation）。
+- **67router:** CodeQL（アラートのラチェット = 0）、gitleaks（`[extend] useDefault=true` — 極めて重要！）、SonarQube、カスタムセキュリティルール（public-creds、error-helper、route-guard-membership、route-validation）。
 - **汎用:** アラートをラチェット化したSAST（CodeQL/Sonar/semgrep）+ **継承されたデフォルトルールセット**を使用するシークレットスキャナー（デフォルトを上書きするカスタム設定は死角を生む）+ プロジェクト固有のHard Ruleセキュリティゲート。
 
 ### 7. サプライチェーン（依存関係）
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot（SCA）、license-checker（SPDX許可リスト）、lockfile-lint（HTTPS+sha512+registry）、`check-deps`によるslopsquatting対策（許可リスト + 公開後72時間以上）。
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot（SCA）、license-checker（SPDX許可リスト）、lockfile-lint（HTTPS+sha512+registry）、`check-deps`によるslopsquatting対策（許可リスト + 公開後72時間以上）。
 - **汎用:** 複数ソースのSCA + ライセンス許可リスト + lockfileの完全性チェック + パッケージの経過時間／typosquattingチェックを伴う依存関係許可リスト + 更新をグループ化するbot。
 
 ### 8. サプライチェーン（ビルドとリリース）
 
-- **OmniRoute:** SBOM（CycloneDX + syft）、SLSA provenance（`--provenance`）、OpenSSF Scorecard（毎週）、ワークフローの強化（zizmor: artipacked→`persist-credentials:false`、cache-poisoning、token-permissions）。
+- **67router:** SBOM（CycloneDX + syft）、SLSA provenance（`--provenance`）、OpenSSF Scorecard（毎週）、ワークフローの強化（zizmor: artipacked→`persist-credentials:false`、cache-poisoning、token-permissions）。
 - **汎用:** 公開時にSBOMを生成 + 署名付きprovenance（SLSA L2+）+ 定期実行のScorecard + すべてのワークフローを強化（最小権限トークン、プッシュしないcheckoutでは認証情報を永続化しない、actionsをSHAで固定）。
 
 ### 9. コントラクトとAPI
 
-- **OmniRoute:** oasdiff（OpenAPIの破壊的変更）、schemathesis（夜間のコントラクトファジング）、openapi-coverage（文書化されたルートの割合、ラチェット38.3%）、openapi-security-tiers（仕様とroute-guardの比較）。
+- **67router:** oasdiff（OpenAPIの破壊的変更）、schemathesis（夜間のコントラクトファジング）、openapi-coverage（文書化されたルートの割合、ラチェット38.3%）、openapi-security-tiers（仕様とroute-guardの比較）。
 - **汎用:** 破壊的変更を検出するコントラクト差分（oasdiff/buf）+ 仕様に対するプロパティベースのファジング（schemathesis）+ ラチェット式のドキュメントカバレッジ + 仕様↔コードの整合性。
 
 ### 10. ドキュメントとi18n（陳腐化対策）
 
-- **OmniRoute:** docs-sync（ミラーされたバージョン）、docs-counts-sync（ドキュメントとコード内の数値）、env-doc-sync、doc-links、fabricated-docs、cli-i18n、i18n-ui-coverage（`--threshold=65` + ラチェット80.1%）。
+- **67router:** docs-sync（ミラーされたバージョン）、docs-counts-sync（ドキュメントとコード内の数値）、env-doc-sync、doc-links、fabricated-docs、cli-i18n、i18n-ui-coverage（`--threshold=65` + ラチェット80.1%）。
 - **汎用:** ドキュメントとコード間でバージョン／件数／環境変数を同期（信頼に頼らずゲート化）+ 内部リンクの検証 + ラチェット式のi18nカバレッジ。
 
 ### 11. ハルシネーション対策／整合性（希少なカテゴリ）
 
-- **OmniRoute:** known-symbols（文字列ディスパッチ ⇒ 実在するシンボル）、provider-consistency、fetch-targets（クライアントのfetch ⇒ 実在するルート）、docs-symbols、db-rules（Hard Rules #2/#5）、migration-numbering。
+- **67router:** known-symbols（文字列ディスパッチ ⇒ 実在するシンボル）、provider-consistency、fetch-targets（クライアントのfetch ⇒ 実在するルート）、docs-symbols、db-rules（Hard Rules #2/#5）、migration-numbering。
 - **汎用:** 「重複した信頼できる情報源」（レジストリ、文字列ディスパッチ、レイヤー間参照）ごとに、両者の一致を証明するゲートを設ける。型チェックやテストでは検出できない陳腐化を捉える。
 
 ### 12. レジリエンスとドメイン（製品固有）
 
-- **OmniRoute:** chaos（障害注入）、heap-growth（リーク）、k6（ソーク）、promptfoo+garak（LLMレッドチーム、OWASP LLM Top 10）、3つのレジリエンス法則（circuit-breaker/cooldown/lockout）。
+- **67router:** chaos（障害注入）、heap-growth（リーク）、k6（ソーク）、promptfoo+garak（LLMレッドチーム、OWASP LLM Top 10）、3つのレジリエンス法則（circuit-breaker/cooldown/lockout）。
 - **汎用:** **自分たちの**ドメインの障害モードを特定し、それぞれに対するゲートを設ける（夜間実行でも可）。AIアプリではインジェクションに対するレッドチームテスト。分散システムではカオス + リーク + ソーク。
 
 ---

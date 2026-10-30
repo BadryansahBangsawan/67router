@@ -10,7 +10,7 @@
 
 ## Kuntest
 
-OmniRoute bħalissa jippreżenta funzjonijiet ta' persistenza orjentati lejn id-dominju minn `src/lib/db/`, filwaqt li l-konnessjoni kondiviża rritornata minn `src/lib/db/core.ts` timplimenta l-kuntratt sinkroniku `SqliteAdapter` f'`src/lib/db/adapters/types.ts`. Dak l-adapter jappoġġja diversi runtimes ta' SQLite, iżda l-interfaċċa tiegħu tibqa' mfassla skont SQLite: dikjarazzjonijiet ippreparati sinkroniċi, `pragma`, tranżazzjonijiet differiti u immedjati, backup nattiv/permezz ta' kopja tal-fajl, checkpoint, u handle ta' database lokali.
+67router bħalissa jippreżenta funzjonijiet ta' persistenza orjentati lejn id-dominju minn `src/lib/db/`, filwaqt li l-konnessjoni kondiviża rritornata minn `src/lib/db/core.ts` timplimenta l-kuntratt sinkroniku `SqliteAdapter` f'`src/lib/db/adapters/types.ts`. Dak l-adapter jappoġġja diversi runtimes ta' SQLite, iżda l-interfaċċa tiegħu tibqa' mfassla skont SQLite: dikjarazzjonijiet ippreparati sinkroniċi, `pragma`, tranżazzjonijiet differiti u immedjati, backup nattiv/permezz ta' kopja tal-fajl, checkpoint, u handle ta' database lokali.
 
 Il-fluss attwali tal-istartjar u tal-irkupru jimmaniġġja wkoll iċ-ċiklu tal-ħajja tal-fajl SQLite. `src/lib/db/core.ts` jirriżolvi `storage.sqlite`, iżomm adapter wieħed globali għall-proċess, joħloq checkpoints tal-WAL, jippreserva tabelli magħżula matul l-irkupru, u jneħħi l-fajls anċillari ta' SQLite meta jerġa' jibni database. L-għażla tad-driver f'`src/lib/db/adapters/driverFactory.ts` tagħżel minn fost ir-runtimes SQLite appoġġjati; mhijiex astrazzjoni ta' backend estern.
 

@@ -4,7 +4,7 @@
 
 ---
 
-Az RTK-tömörítés az OmniRoute parancsérzékeny tömörítőmotorja terminál- és eszközkimenetekhez. Olyan kódolásiügynök-munkamenetekhez készült, amelyekben a kontextus növekedésének legnagyobb részét tesztnaplók, buildkimenetek, csomagkezelői zaj, shell-átiratok, Docker-kimenetek, git-kimenetek és veremkövetések okozzák.
+Az RTK-tömörítés a 67router parancsérzékeny tömörítőmotorja terminál- és eszközkimenetekhez. Olyan kódolásiügynök-munkamenetekhez készült, amelyekben a kontextus növekedésének legnagyobb részét tesztnaplók, buildkimenetek, csomagkezelői zaj, shell-átiratok, Docker-kimenetek, git-kimenetek és veremkövetések okozzák.
 
 Az RTK közvetlenül futtatható a `defaultMode: "rtk"` beállítással, vagy egy egymásra épülő feldolgozási folyamat első lépéseként, általában így:
 
@@ -15,7 +15,7 @@ rtk -> caveman
 Ez a sorrend először a zajos gépi kimenetet tömöríti, majd lehetővé teszi, hogy a Caveman tömörítse a fennmaradó prózai szöveget.
 
 Az upstream RTK `60-90%`-os megtakarításról számol be a parancskimeneteknél. A README mintamunkamenete
-`~118,000` szabványos tokenről `~23,900` RTK-tokenre csökken, ami `79.7%`-os megtakarítás (`~80%`). Az OmniRoute
+`~118,000` szabványos tokenről `~23,900` RTK-tokenre csökken, ami `79.7%`-os megtakarítás (`~80%`). A 67router
 ezt az upstream átlagot használja a Caveman bemeneti tömörítésével kombinált megtakarítás kiszámításához:
 
 ```txt
@@ -50,7 +50,7 @@ Az RTK a következő sorrendben tölti be a szűrőket:
 2. Globális szűrők a `DATA_DIR/rtk/filters.toml` és `DATA_DIR/rtk/filters.json` fájlokból.
 3. Beépített szűrők az `open-sse/services/compression/engines/rtk/filters/` könyvtárból.
 
-Ugyanazon hatókörön belül az RTK TOML schema v1 szűrői elsőbbséget élveznek az OmniRoute JSON-szűrőivel szemben. A TOML
+Ugyanazon hatókörön belül az RTK TOML schema v1 szűrői elsőbbséget élveznek a 67router JSON-szűrőivel szemben. A TOML
 `match_command` kifejezéseinek ellenőrzése a parancstípus szerinti illesztés előtt történik, így egy importált, parancsspecifikus
 szűrő felülírhat egy tágabb szűrőt az adott hatókörben. A projekthatókör a fájlformátumtól függetlenül továbbra is elsőbbséget
 élvez a globális hatókörrel szemben.
@@ -80,13 +80,13 @@ a rendszer kihagyja, és az `/api/context/rtk/filters` diagnosztikája jelenti �
 
 ## RTK TOML-séma v1 kompatibilitás
 
-Az OmniRoute képes az RTK TOML-séma v1 formátumát használó deklaratív szűrőfájlok elemzésére, ellenőrzésére, tesztelésére és telepítésére.
+A 67router képes az RTK TOML-séma v1 formátumát használó deklaratív szűrőfájlok elemzésére, ellenőrzésére, tesztelésére és telepítésére.
 A támogatott mezők: `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, valamint a `[[tests.<filter>]]` beágyazott tesztek.
 Az ismeretlen mezőket, az érvénytelen vagy nem biztonságos reguláris kifejezéseket, az egyidejű eltávolítási/megőrzési szabályokat, az 1 MiB-nál nagyobb fájlokat, valamint az ismeretlen szűrőkre mutató hivatkozásokat a rendszer elutasítja. Az a fájl, amelynek beágyazott tesztjei sikertelenek, vizsgálati célból ellenőrizhető, de nem telepíthető és nem tölthető be. Az egyéni fájlok betöltési hibái továbbra is nyitott hibakezelésűek: az érvénytelen fájlt a rendszer kihagyja, a többi szűrő pedig tovább működik.
 
-Az OmniRoute az eszköz kimenetét azután kapja meg, hogy a kliens már rögzítette azt, ezért a `filter_stderr = true`
+A 67router az eszköz kimenetét azután kapja meg, hogy a kliens már rögzítette azt, ezért a `filter_stderr = true`
 nem módosíthatja a folyamat kimenetének rögzítését. A mezőt a rendszer hatás nélküli műveletként elfogadja, az ellenőrzés pedig figyelmeztetést ad vissza.
 Ezt szándékosan **RTK TOML-séma v1 kompatibilitásként** írjuk le, nem pedig az RTK futtatható állományával, a shell-hookokkal, a Rust-parancsimplementációkkal vagy a megbízhatósági tár elrendezésével való teljes kompatibilitásként.
 

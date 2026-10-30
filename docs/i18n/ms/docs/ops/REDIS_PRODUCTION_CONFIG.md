@@ -6,7 +6,7 @@
 
 ## Gambaran Keseluruhan
 
-Redis ialah **kebergantungan lembut pilihan** dalam OmniRoute — aplikasi mengalami degradasi secara terkawal (sandaran dalam memori) apabila Redis tidak tersedia. Dalam pengeluaran, penalaan Redis mengurangkan kependaman untuk empat beban kerja yang berbeza:
+Redis ialah **kebergantungan lembut pilihan** dalam 67router — aplikasi mengalami degradasi secara terkawal (sandaran dalam memori) apabila Redis tidak tersedia. Dalam pengeluaran, penalaan Redis mengurangkan kependaman untuk empat beban kerja yang berbeza:
 
 | Beban Kerja             | Pemacu                        | Kilang Klien                                      | Corak Kunci                                               |
 | ----------------------- | ----------------------------- | ------------------------------------------------- | --------------------------------------------------------- |
@@ -15,7 +15,7 @@ Redis ialah **kebergantungan lembut pilihan** dalam OmniRoute — aplikasi menga
 | Storan kuota            | `redisQuotaStore.ts`          | Singleton `getRedisClient(url)` yang berasingan   | `<prefix>quota:*` boleh dikonfigurasikan bagi setiap tika |
 | Pemutus litar pemanasan | `redisCircuitBreakerStore.ts` | Klien berasingan dalam `circuitBreakerFactory.ts` | `<prefix>warmup:cb:<connectionId>`                        |
 
-Keempat-empat beban kerja berkongsi satu awalan ruang nama supaya OmniRoute boleh wujud bersama aplikasi lain pada satu tika Redis (cth. `127.0.0.1:6379`). Lihat [Penggunaan Ruang Nama Kunci](#key-namespacing).
+Keempat-empat beban kerja berkongsi satu awalan ruang nama supaya 67router boleh wujud bersama aplikasi lain pada satu tika Redis (cth. `127.0.0.1:6379`). Lihat [Penggunaan Ruang Nama Kunci](#key-namespacing).
 
 ---
 
@@ -38,12 +38,12 @@ Keempat-empat beban kerja berkongsi satu awalan ruang nama supaya OmniRoute bole
 
 ## Penggunaan Ruang Nama Kunci
 
-OmniRoute berkongsi satu tika Redis dengan apa-apa sahaja yang berjalan pada hos. Tanpa ruang nama, kunci seperti `auth:api_key:<sha256>` atau `rl:*` mungkin bertembung dengan kunci daripada aplikasi lain yang menggunakan Redis yang sama (tika ini menjalankan Redis pada `127.0.0.1:6379` bersama perkhidmatan lain).
+67router berkongsi satu tika Redis dengan apa-apa sahaja yang berjalan pada hos. Tanpa ruang nama, kunci seperti `auth:api_key:<sha256>` atau `rl:*` mungkin bertembung dengan kunci daripada aplikasi lain yang menggunakan Redis yang sama (tika ini menjalankan Redis pada `127.0.0.1:6379` bersama perkhidmatan lain).
 
-Tetapkan `REDIS_KEY_PREFIX` kepada rentetan yang tidak kosong untuk mengawalkan **setiap** kunci OmniRoute:
+Tetapkan `REDIS_KEY_PREFIX` kepada rentetan yang tidak kosong untuk mengawalkan **setiap** kunci 67router:
 
 ```bash
-# .env — semua kunci OmniRoute menjadi omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — semua kunci 67router menjadi omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -98,7 +98,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # tinggalkan ruang untuk cache halaman OS
 maxmemory-policy allkeys-lru         # singkirkan entri cache pengesahan yang lapuk apabila tertekan
 
-# Pengekalan (pilihan — OmniRoute selamat daripada ranap tanpanya)
+# Pengekalan (pilihan — 67router selamat daripada ranap tanpanya)
 save 300 1                           # ambil petikan sekurang-kurangnya setiap 5 min jika ≥1 kekunci berubah
 appendonly no                        # AOF tidak diperlukan; data boleh dijana semula
 appendfsync no                       # tiada overhed fsync (RDB sudah mencukupi)

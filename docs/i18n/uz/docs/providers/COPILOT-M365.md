@@ -34,7 +34,7 @@ Toʻliq URL quyidagi koʻrinishga ega:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute ilovasida **Providers → Add Provider** boʻlimiga oʻting, **Microsoft 365 Copilot (BizChat)** provayderini tanlang va hisob maʼlumotini quyidagi formatda kiriting:
+6. 67router ilovasida **Providers → Add Provider** boʻlimiga oʻting, **Microsoft 365 Copilot (BizChat)** provayderini tanlang va hisob maʼlumotini quyidagi formatda kiriting:
 
 ```
 access_token=<jwt>; chathubPath=<oid>@<tenant>
@@ -49,9 +49,9 @@ WebSocket URL manzilidan qiymatlarni qoʻlda nusxalash oʻrniga DevTools HAR fay
 1. **DevTools → Network** boʻlimini oching.
 2. BizChat suhbatini boshlang yoki davom ettiring (bu WebSocket ulanishini ishga tushiradi).
 3. Network panelida sichqonchaning oʻng tugmasini bosing va **Save all as HAR with content** bandini tanlang.
-4. OmniRoute ilovasidagi provayder ulanishi dialog oynasida **Import .har file** tugmasidan foydalaning.
+4. 67router ilovasidagi provayder ulanishi dialog oynasida **Import .har file** tugmasidan foydalaning.
 
-OmniRoute HAR faylini Chathub WebSocket URL manzili uchun tekshiradi, `access_token` va `chathubPath` qiymatlarini ajratib oladi hamda hisob maʼlumoti maydonlarini avtomatik ravishda toʻldiradi. HAR importi JWT amal qilish muddatini dekodlaydi va tokenning qolgan amal qilish vaqtini koʻrsatadi.
+67router HAR faylini Chathub WebSocket URL manzili uchun tekshiradi, `access_token` va `chathubPath` qiymatlarini ajratib oladi hamda hisob maʼlumoti maydonlarini avtomatik ravishda toʻldiradi. HAR importi JWT amal qilish muddatini dekodlaydi va tokenning qolgan amal qilish vaqtini koʻrsatadi.
 
 > **Haqiqiy HAR eksporti, kirish tokeni yoki yangilash tokenini hech qachon repozitoriyga commit qilmang.** Sinov va hujjatlardagi qiymatlar doimo oʻrinbosar qiymatlar boʻlishi kerak.
 
@@ -68,7 +68,7 @@ Qoʻlda qayta olish zaruratidan qochish uchun Microsoft yangilash tokenini ulani
 | `refreshToken` | `substrate.office.com/sydney` doirasi uchun Microsoft OAuth yangilash tokeni |
 | `tier`         | `individual` (standart), `edu` yoki `enterprise`                             |
 
-Yangilash tokenini `substrate.office.com/sydney` doirasiga ega Microsoft qurilma kodi yoki avtorizatsiya kodi oqimi orqali oling. `refreshToken` oʻrnatilgan boʻlsa, OmniRoute har bir soʻrovdan oldin `access_token` ni oldindan yangilaydi, shuning uchun har bir ~75 daqiqalik amal qilish muddati tugaganidan keyin hisob maʼlumotini qayta olishingiz shart emas.
+Yangilash tokenini `substrate.office.com/sydney` doirasiga ega Microsoft qurilma kodi yoki avtorizatsiya kodi oqimi orqali oling. `refreshToken` oʻrnatilgan boʻlsa, 67router har bir soʻrovdan oldin `access_token` ni oldindan yangilaydi, shuning uchun har bir ~75 daqiqalik amal qilish muddati tugaganidan keyin hisob maʼlumotini qayta olishingiz shart emas.
 
 Agar `refreshToken` oʻrnatilmagan boʻlsa, har safar amal qilish muddati tugaganidan keyin WebSocket hisob maʼlumotini qoʻlda qayta olishingiz kerak.
 

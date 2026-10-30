@@ -7,29 +7,29 @@
 > **Sors awtorevoli:** `src/lib/skills/` u `src/app/api/skills/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jipprovdi qafas estensibbli ta’ Skills li jippermetti lill-mudelli tal-lingwa (u lill-operaturi) jikkomponu kapaċitajiet li jistgħu jerġgħu jintużaw — mill-qari tas-sistema tal-fajls u talbiet HTTP sal-eżekuzzjoni ta’ kodiċi f’ambjent iżolat u skills magħżula mis-suq.
+67router jipprovdi qafas estensibbli ta’ Skills li jippermetti lill-mudelli tal-lingwa (u lill-operaturi) jikkomponu kapaċitajiet li jistgħu jerġgħu jintużaw — mill-qari tas-sistema tal-fajls u talbiet HTTP sal-eżekuzzjoni ta’ kodiċi f’ambjent iżolat u skills magħżula mis-suq.
 
-Skill hija unità ta’ xogħol b’verżjoni u definita permezz ta’ schema. OmniRoute jista’ jinjetta skills bħala definizzjonijiet ta’ għodod fit-talbiet li joħorġu, jinterċetta sejħiet ta’ għodod li jirritornaw mill-mudell, iħaddem il-handler korrispondenti, u jgħaddi r-riżultat lura lill-mudell sabiex il-konverżazzjoni tkun tista’ tkompli. Il-mudell qatt ma jara l-implimentazzjoni — jara biss l-interfaċċa tal-għodda.
+Skill hija unità ta’ xogħol b’verżjoni u definita permezz ta’ schema. 67router jista’ jinjetta skills bħala definizzjonijiet ta’ għodod fit-talbiet li joħorġu, jinterċetta sejħiet ta’ għodod li jirritornaw mill-mudell, iħaddem il-handler korrispondenti, u jgħaddi r-riżultat lura lill-mudell sabiex il-konverżazzjoni tkun tista’ tkompli. Il-mudell qatt ma jara l-implimentazzjoni — jara biss l-interfaċċa tal-għodda.
 
 ---
 
 ## Agent Skills kontra Omni Skills
 
-OmniRoute għandu żewġ sistemi ta’ skills distinti iżda komplementari:
+67router għandu żewġ sistemi ta’ skills distinti iżda komplementari:
 
 | Dimensjoni               | **Omni Skills** (dan id-dokument)                                                 | **Agent Skills**                                                                                 |
 | :----------------------- | :-------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
 | Għan                     | Injezzjoni ta’ għodod tal-LLM + eżekuzzjoni f’ambjent iżolat                      | Katalgu SKILL.md biex aġenti esterni jiskopruh u jużawh                                          |
 | Sors awtorevoli          | `src/lib/skills/` + is-suq                                                        | `src/lib/agentSkills/` + id-direttorju `skills/`                                                 |
 | Modalità waqt it-tħaddim | Injettati fit-talbiet li joħorġu, eżegwiti mal-avvenimenti ta’ sejħiet tal-għodod | Katalgu statiku ta’ markdown + endpoints ta’ skoperta REST/MCP/A2A                               |
-| Min jużahom              | OmniRoute innifsu (routing ikkombinat, sejħiet LLM deħlin)                        | Aġenti esterni, klijenti MCP, orkestraturi A2A                                                   |
+| Min jużahom              | 67router innifsu (routing ikkombinat, sejħiet LLM deħlin)                         | Aġenti esterni, klijenti MCP, orkestraturi A2A                                                   |
 | Għadd                    | Varjabbli (immexxi mis-suq)                                                       | 43 entrata fil-katalgu (22 API + 20 CLI + 1 konfigurazzjoni)                                     |
 | Format                   | `SkillDefinition` bi schema tal-għodda + handler                                  | frontmatter ta’ `SKILL.md` + korp markdown                                                       |
 | Skoperta                 | REST `/api/skills/*` + għodod MCP `omniroute_skills_*`                            | REST `/api/agent-skills/*` + għodod MCP `omniroute_agent_skills_*` + `list-capabilities` ta’ A2A |
 
-**Omni Skills** huma l-magna tal-eżekuzzjoni — jiddefinixxu x’_jista’ jagħmel_ OmniRoute meta LLM isejjaħ għodda.
+**Omni Skills** huma l-magna tal-eżekuzzjoni — jiddefinixxu x’_jista’ jagħmel_ 67router meta LLM isejjaħ għodda.
 
-**Agent Skills** huma l-katalgu tad-dokumentazzjoni — jispjegaw lill-aġenti esterni _kif jużaw_ l-API REST u s-CLI ta’ OmniRoute, permezz ta’ fajls SKILL.md strutturati li jistgħu jiddaħħlu direttament fil-prompts tal-aġenti.
+**Agent Skills** huma l-katalgu tad-dokumentazzjoni — jispjegaw lill-aġenti esterni _kif jużaw_ l-API REST u s-CLI ta’ 67router, permezz ta’ fajls SKILL.md strutturati li jistgħu jiddaħħlu direttament fil-prompts tal-aġenti.
 
 Għall-katalgu ta’ Agent Skills, il-ġeneratur, l-għodod MCP, u l-skill A2A, ara [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Għall-katalgu ta’ Agent Skills, il-ġeneratur, l-għodod MCP, u l-skill A2A, 
 
 Tliet sorsi ta’ skills jeżistu flimkien fl-istess reġistru:
 
-1. **Skills inkorporati** (`src/lib/skills/builtins.ts`) — inklużi ma’ OmniRoute. Ikopru l-każijiet komuni:
+1. **Skills inkorporati** (`src/lib/skills/builtins.ts`) — inklużi ma’ 67router. Ikopru l-każijiet komuni:
    - `file_read`, `file_write` — spazju tax-xogħol iżolat għal kull API key taħt `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP li joħroġ permezz ta’ `safeOutboundFetch` b’`guard: "public-only"`
    - `web_search` — fornitur ta’ tfittxija sostitwibbli b’caching (`executeWebSearch`)
    - `eval_code` — eżekuzzjoni ta’ `node` jew `python` iżolata permezz ta’ Docker
    - `execute_command` — kmand tax-shell iżolat permezz ta’ Docker
    - `browser` — struttura bażika appoġġjata minn Playwright, diżattivata b’mod predefinit (`builtin/browser.ts`)
-2. **SkillsMP** (is-Suq ta’ OmniRoute) — jinġiebu minn `https://skillsmp.com/api/v1/skills/search`. Jeħtieġ `skillsmpApiKey` fis-Settings.
+2. **SkillsMP** (is-Suq ta’ 67router) — jinġiebu minn `https://skillsmp.com/api/v1/skills/search`. Jeħtieġ `skillsmpApiKey` fis-Settings.
 3. **SkillsSH** (il-katalgu komunitarju ta’ `skills.sh`) — jinġiebu minn `https://skills.sh/api/search`. Ma jeħtieġ l-ebda awtentikazzjoni; il-kontenut ta’ SKILL.md jinġibed minn GitHub raw.
 
 “Fornitur attiv” wieħed jikkontrolla minn liema katalgu jinstalla d-dashboard (`src/lib/skills/providerSettings.ts`). Ibiddlu taħt **Settings → Memory & Skills**. Predefinit: `skillsmp`.
@@ -442,7 +442,7 @@ id-dokument; ma hemm l-ebda limitu deċimali bħal `0.6` u l-ebda punteġġ f'`r
 
 ## Katalgu tal-Ħiliet Inkorporati
 
-OmniRoute jiġi b'sett magħżul ta' ħiliet inkorporati f'`src/lib/skills/builtin/`. L-aktar komuni huma:
+67router jiġi b'sett magħżul ta' ħiliet inkorporati f'`src/lib/skills/builtin/`. L-aktar komuni huma:
 
 ### Ħila għall-Awtomazzjoni tal-Browser
 

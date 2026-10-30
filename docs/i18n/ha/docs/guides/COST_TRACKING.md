@@ -4,7 +4,7 @@
 
 ---
 
-Yadda OmniRoute ke ƙiyasta, yin rikodi, da bayar da rahoton kuɗin kowace buƙata — da kuma dalilin da ya sa
+Yadda 67router ke ƙiyasta, yin rikodi, da bayar da rahoton kuɗin kowace buƙata — da kuma dalilin da ya sa
 lambar da ke dashboard ta zama **mai bin diddigin tanadi**, ba takardar kuɗi ba.
 
 Duba kuma: [Jagorar Mai Amfani](./USER_GUIDE.md) · [Taskar Fasaloli](./FEATURES.md)
@@ -13,11 +13,11 @@ Duba kuma: [Jagorar Mai Amfani](./USER_GUIDE.md) · [Taskar Fasaloli](./FEATURES
 
 ## Abin da yake (da abin da ba shi ba)
 
-OmniRoute yana danganta kuɗin USD na kowace buƙata ga kowane kammalawa ta hanyar ninka adadin token
+67router yana danganta kuɗin USD na kowace buƙata ga kowane kammalawa ta hanyar ninka adadin token
 da farashin samfurin. Waɗannan lambobi ne ke samar da bayanan dashboard na **Kuɗaɗe**,
 CLI na `omniroute cost` / `omniroute usage`, fitarwar CSV/JSON, da kasafin kuɗin kowane mabuɗin API.
 
-> **“Kuɗin” da ke dashboard mai bin diddigin tanadi ne, ba takardar kuɗi ba.** OmniRoute ba ya taɓa cajin ku
+> **“Kuɗin” da ke dashboard mai bin diddigin tanadi ne, ba takardar kuɗi ba.** 67router ba ya taɓa cajin ku
 > — yana tura buƙatunku zuwa masu samar da sabis da kuka riga kuka haɗa (rajistocinku,
 > matakan kyauta, da maɓallan API). “Jimillar kuɗi ta $290” da ta taru gaba ɗaya daga samfuran
 > kyauta tana nufin kusan **$290 da ba ku biya ba** ga API mai kuɗi. Adadin _ƙiyasi_ ne
@@ -29,7 +29,7 @@ mai bin diddigin tanadi ne, ba takardar kuɗi ba”).
 
 Saboda lambar ƙiyasi ce:
 
-- Ta dogara da teburin farashin da OmniRoute yake da shi ga kowane samfuri. Samfurin da ba shi da shigarwar
+- Ta dogara da teburin farashin da 67router yake da shi ga kowane samfuri. Samfurin da ba shi da shigarwar
   farashi yana bayar da kuɗin `0` (yana bayyana a matsayin layin “Tsoho / Kyauta” a cikin mai binciken).
 - Zirga-zirgar matakin kyauta da ta rajista har yanzu tana tara _ƙiyastaccen_ kuɗi — wannan shi ne
   adadin da kuke adanawa, ba adadin da ake bin ku ba.
@@ -47,7 +47,7 @@ Kuɗaɗe suna fitowa ne daga teburin farashi da ake tantancewa bisa wannan jerin
 2. **Farashin waje da aka daidaita** — wanda aka ɗauko daga
    `model_prices_and_context_window.json` na jama'a na LiteLLM lokacin da aka kunna daidaitawa (ana adana shi a wani
    namespace na `pricing_synced` na daban don kada ya taɓa goge sauye-sauyenku).
-3. **Tsoffin ƙimomin da aka dasa a lamba** — waɗanda aka haɗa da OmniRoute.
+3. **Tsoffin ƙimomin da aka dasa a lamba** — waɗanda aka haɗa da 67router.
 
 Daidaita farashin waje na buƙatar **bayyanannen amincewa**, kuma a kashe yake ta tsohuwa. Muhimman env vars
 (duba [`.env.example`](../../.env.example)):
@@ -192,7 +192,7 @@ an bayyana akasin haka.
 
 ## CLI
 
-CLI na OmniRoute yana samar da umarnin kuɗi, amfani, da farashi (waɗanda aka yi wa rajista a cikin
+CLI na 67router yana samar da umarnin kuɗi, amfani, da farashi (waɗanda aka yi wa rajista a cikin
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

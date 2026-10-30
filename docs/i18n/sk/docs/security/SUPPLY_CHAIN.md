@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute publikuje npm + Docker artefakty. Tieto brány poskytujú provenienciu, inventár (SBOM) a skenovanie CVE, všetko OSS, integrované do pracovných postupov vydávania. **Postoj 'najprv poradiť'** — hlásia teraz, na blokovanie prejdú po prvom úspešnom vydaní.
+67router publikuje npm + Docker artefakty. Tieto brány poskytujú provenienciu, inventár (SBOM) a skenovanie CVE, všetko OSS, integrované do pracovných postupov vydávania. **Postoj 'najprv poradiť'** — hlásia teraz, na blokovanie prejdú po prvom úspešnom vydaní.
 
 | Brána                   | Nástroj                                        | Kde                           | Blokuje?                  | Výstup                                       |
 | ----------------------- | ---------------------------------------------- | ----------------------------- | ------------------------- | -------------------------------------------- |
@@ -47,7 +47,7 @@ Podľa vetvy "žiadna oprava upstream" v rámci nápravy CVE Variance vyššie, 
   aktuálny npm-latest (`0.1.29`) stále sťahuje `extract-zip@2.0.1`.
 - **Nedostupné z produkcie.** `promptfoo` je iba devDependency (nikdy nie je uvedené
   pod `dependencies`), a žiadny súbor pod `src/`, `open-sse/`, alebo `bin/` neimportuje
-  npm balík `extract-zip` — vlastný pomocník OmniRoute `extractZip()`
+  npm balík `extract-zip` — vlastný pomocník 67router `extractZip()`
   (`src/lib/versionManager/binaryManager.ts:93`) používa natívne `unzip`/`tar`
   a nesúvisí s tým. `@openai/codex-security` tiež dodáva vlastnú ochranu proti symlink-traversal
   nad callbackom `onEntry` z `extract-zip`.

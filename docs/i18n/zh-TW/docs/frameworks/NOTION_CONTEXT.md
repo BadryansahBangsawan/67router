@@ -11,9 +11,9 @@
 
 ## 功能說明
 
-OmniRoute 可將 **Notion** 工作區連接為**內容來源**，也就是代理程式能透過內建 MCP 伺服器存取的讀寫知識庫。設定 Notion
+67router 可將 **Notion** 工作區連接為**內容來源**，也就是代理程式能透過內建 MCP 伺服器存取的讀寫知識庫。設定 Notion
 整合權杖後，MCP 工具可讓 LLM 搜尋頁面與資料庫、讀取頁面內容和區塊樹狀結構、使用篩選條件／排序查詢資料庫，以及附加新
-區塊。所有操作都會透過 OmniRoute 代理（並具備重試、逾時及錯誤分類機制），
+區塊。所有操作都會透過 67router 代理（並具備重試、逾時及錯誤分類機制），
 因此模型絕不會直接接觸 Notion API。
 
 此整合是官方 Notion REST API
@@ -37,7 +37,7 @@ Notion 權杖**沒有對應的環境變數**，而是透過
 > [!NOTE]
 > 此權杖是 **Notion 內部整合權杖**。請在
 > <https://www.notion.com/my-integrations> 建立整合，然後將希望
-> OmniRoute 存取的頁面／資料庫與該整合共用（Notion 的權限模型以共用為基礎，
+> 67router 存取的頁面／資料庫與該整合共用（Notion 的權限模型以共用為基礎，
 > 並非涵蓋整個工作區）。
 
 ### 透過 REST 設定
@@ -56,7 +56,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 這三種方法都需要儀表板驗證（`isAuthenticated`）。執行 `POST` 時，
-OmniRoute 會儲存權杖，並立即執行只傳回 1 筆結果的測試搜尋；若 Notion
+67router 會儲存權杖，並立即執行只傳回 1 筆結果的測試搜尋；若 Notion
 傳回錯誤物件，系統會清除權杖，且呼叫會以 `400` 失敗。
 
 ## MCP 工具（6 個）

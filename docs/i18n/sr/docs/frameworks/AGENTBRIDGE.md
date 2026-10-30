@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge је OmniRoute-ов MITM (Man-in-the-Middle) прокси који пресреће HTTPS саобраћај IDE AI агената и преусмерава га кроз OmniRoute-ов обједињени механизам за рутирање. Подржава **10 IDE агената** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code и Trae (у фази истраживања) — што чини OmniRoute MITM проксијем са најширом подршком за AI асистенте за програмирање на тржишту.
+AgentBridge је 67router-ов MITM (Man-in-the-Middle) прокси који пресреће HTTPS саобраћај IDE AI агената и преусмерава га кроз 67router-ов обједињени механизам за рутирање. Подржава **10 IDE агената** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code и Trae (у фази истраживања) — што чини 67router MITM проксијем са најширом подршком за AI асистенте за програмирање на тржишту.
 
 **Локација контролне табле:** `/dashboard/tools/agent-bridge`
 **Група на бочној траци:** Алатке (после Cloud Agents)
@@ -16,34 +16,34 @@ AgentBridge је OmniRoute-ов MITM (Man-in-the-Middle) прокси који �
 
 ### Šta je AgentBridge?
 
-Kada IDE agent (npr. GitHub Copilot, Cursor, Claude Code) uputi API poziv, on se povezuje direktno sa izvornim AI provajderom (OpenAI, Anthropic, itd.). AgentBridge presreće tu vezu transparentno na TLS nivou — bez potrebe za bilo kakvom izmenom konfiguracije agenta — i preusmerava zahtev kroz OmniRoute.
+Kada IDE agent (npr. GitHub Copilot, Cursor, Claude Code) uputi API poziv, on se povezuje direktno sa izvornim AI provajderom (OpenAI, Anthropic, itd.). AgentBridge presreće tu vezu transparentno na TLS nivou — bez potrebe za bilo kakvom izmenom konfiguracije agenta — i preusmerava zahtev kroz 67router.
 
 Ovo znači da možete:
 
-- **Preusmeriti bilo kog agenta na bilo kog provajdera**: Copilot komunicira sa OpenAI? Preusmerite ga na Anthropic Claude, Gemini ili bilo kog od 375 provajdera koje OmniRoute podržava.
+- **Preusmeriti bilo kog agenta na bilo kog provajdera**: Copilot komunicira sa OpenAI? Preusmerite ga na Anthropic Claude, Gemini ili bilo kog od 375 provajdera koje 67router podržava.
 - **Primeniti mapiranja modela**: `gemini-3-flash` → `claude-sonnet-4.7` transparentno na nivou obrađivača.
 - **Posmatrati sav saobraćaj agenata**: svaki presretnuti zahtev se objavljuje u [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Primeniti otpornost OmniRoute-a**: kombinovano rutiranje, prekidači kola, rezervne varijante i praćenje troškova funkcionišu i za saobraćaj IDE agenata.
+- **Primeniti otpornost 67router-a**: kombinovano rutiranje, prekidači kola, rezervne varijante i praćenje troškova funkcionišu i za saobraćaj IDE agenata.
 
 ### Pozicioniranje u odnosu na tržište
 
-| Funkcija               | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ---------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity            |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot         |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)             |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex           |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE             |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries         |    —    |    ✓     |        —        |             ✓             |
-| Claude Code            |    —    |    —     |        ✓        |             ✓             |
-| Open Code              |    —    |    —     |        ✓        |             ✓             |
-| Trae                   |    —    |    —     |        —        |      🔍 Istražuje se      |
-| Kontrolna tabla (UI)   |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector      |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute rutiranje    |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI za mapiranje modela |    ✗    |    ✗     |        ✗        |             ✓             |
-| Lista zaobilaženja     |    ✗    |    ✗     |        ✓        |             ✓             |
-| Upstream CA sertifikat |    ✗    |    ✗     |        ✓        |             ✓             |
+| Funkcija               | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ---------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity            |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot         |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)             |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex           |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE             |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries         |    —    |    ✓     |        —        |            ✓             |
+| Claude Code            |    —    |    —     |        ✓        |            ✓             |
+| Open Code              |    —    |    —     |        ✓        |            ✓             |
+| Trae                   |    —    |    —     |        —        |     🔍 Istražuje se      |
+| Kontrolna tabla (UI)   |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector      |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router rutiranje     |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI za mapiranje modela |    ✗    |    ✗     |        ✗        |            ✓             |
+| Lista zaobilaženja     |    ✗    |    ✗     |        ✓        |            ✓             |
+| Upstream CA sertifikat |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (порт 443, CJS подређени процес)
     │  разрешава одредиште према SNI-ју из Host заглавља
     │  генерише TLS сертификат за сваки SNI, потписан AgentBridge CA сертификатом
     ├── Подударање са листом заобилажења? → TCP директно прослеђивање (без дешифровања)
-    ├── Подударање са одредиштем? → fetch → OmniRoute рутер (порт 20128)
+    ├── Подударање са одредиштем? → fetch → 67router рутер (порт 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() над телом/заглављима захтева
     │               ├── TrafficBuffer.push() — објављује у Инспектор саобраћаја
@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ IDE окружења (нпр. Go језички сервер, који кори�
 
 Користите табелу за мапирање модела на свакој картици агента да бисте дефинисали мапирања извор → циљ:
 
-| Изворни модел (изворни модел агента) | Циљни модел (OmniRoute) |
-| ------------------------------------ | ----------------------- |
-| `gpt-4o`                             | `claude-sonnet-4.7`     |
-| `*` (џокер)                          | `claude-haiku-4.7`      |
+| Изворни модел (изворни модел агента) | Циљни модел (67router) |
+| ------------------------------------ | ---------------------- |
+| `gpt-4o`                             | `claude-sonnet-4.7`    |
+| `*` (џокер)                          | `claude-haiku-4.7`     |
 
 Џокер `*` мапира сваки непрепознати модел на наведени циљ. Чува се у табели `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ IDE окружења (нпр. Go језички сервер, који кори�
 
 ### 3.5 Obaveštenje o riziku
 
-AgentBridge presreće akreditive (OAuth tokene, API ključeve) koje IDE koristi za autentifikaciju kod udaljenih pružalaca usluga. Oni se **maskiraju pre beleženja** (pogledajte §2.7), ali su vidljivi OmniRoute MITM sloju. Pri prvom aktiviranju svakog agenta prikazuje se modalni prozor sa obaveštenjem o riziku koji se može zatvoriti.
+AgentBridge presreće akreditive (OAuth tokene, API ključeve) koje IDE koristi za autentifikaciju kod udaljenih pružalaca usluga. Oni se **maskiraju pre beleženja** (pogledajte §2.7), ali su vidljivi 67router MITM sloju. Pri prvom aktiviranju svakog agenta prikazuje se modalni prozor sa obaveštenjem o riziku koji se može zatvoriti.
 
 ### 3.6 Održavanje i dijagnostika
 
@@ -397,7 +397,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### Листа заобилажења за осетљиве хостове
 
-Листа заобилажења обезбеђује да се саобраћај финансијских институција, OAuth/SSO добављача и других осетљивих хостова **никада не дешифрује**. Њихов TLS саобраћај пролази као транспарентан TCP тунел — OmniRoute никада не види отворени текст.
+Листа заобилажења обезбеђује да се саобраћај финансијских институција, OAuth/SSO добављача и других осетљивих хостова **никада не дешифрује**. Њихов TLS саобраћај пролази као транспарентан TCP тунел — 67router никада не види отворени текст.
 
 Подразумевани обрасци заобилажења обухватају:
 
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # принудно заустављање (користи
 
 Ако IDE приказује TLS грешке након покретања AgentBridge-а:
 
-1. Проверите да ли је сертификат инсталиран: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) или `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Проверите да ли је сертификат инсталиран: `security find-certificate -c "OmniRoute MITM CA"` (macOS) или `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Неке апликације одржавају сопствено складиште поузданих сертификата (Firefox, Chrome на Linux-у). Поново покрените „Trust Cert“ и проверите складиште сертификата специфично за NSS/Firefox.
 3. Поново покрените IDE након што означите сертификат као поуздан — активне TLS сесије користе претходно стање поверења.
 
@@ -499,7 +499,7 @@ ipconfig /flushdns
 Ако AgentBridge пресреће захтеве, али сви захтеви не успевају:
 
 1. Проверите да ли је бар један добављач повезан на `/dashboard/providers`
-2. Проверите евиденцију OmniRoute сервера: `APP_LOG_LEVEL=debug` у `.env`
+2. Проверите евиденцију 67router сервера: `APP_LOG_LEVEL=debug` у `.env`
 3. Проверите да ли `OMNIROUTE_BASE_URL` упућује на исправну крајњу тачку рутера (подразумевано: `http://127.0.0.1:20128`)
 
 ---

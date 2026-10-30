@@ -25,7 +25,7 @@ En første linje, hvis første kolonne er det bogstavelige ord `provider` (uanse
 Download en startfil fra importdialogboksen (**Download CSV-skabelon**). Eksempel:
 
 ```csv
-# OmniRoute-udbyderimport (positionsbaserede kolonner)
+# 67router-udbyderimport (positionsbaserede kolonner)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

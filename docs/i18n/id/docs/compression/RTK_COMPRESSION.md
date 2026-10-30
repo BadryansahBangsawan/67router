@@ -4,7 +4,7 @@
 
 ---
 
-Kompresi RTK adalah mesin kompresi OmniRoute yang memahami perintah untuk output terminal dan alat. Mesin ini
+Kompresi RTK adalah mesin kompresi 67router yang memahami perintah untuk output terminal dan alat. Mesin ini
 dirancang untuk sesi agen pengodean, tempat sebagian besar pertumbuhan konteks berasal dari log pengujian, output build,
 derau pengelola paket, transkrip shell, output Docker, output git, dan stack trace.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Urutan tersebut terlebih dahulu mengompresi output mesin yang penuh derau, lalu memungkinkan Caveman memadatkan prosa yang tersisa.
 
 RTK upstream melaporkan penghematan output perintah sebesar `60-90%`. Contoh sesi dalam README-nya berubah dari
-`~118,000` token standar menjadi `~23,900` token RTK, yang berarti penghematan sebesar `79.7%` (`~80%`). OmniRoute menggunakan
+`~118,000` token standar menjadi `~23,900` token RTK, yang berarti penghematan sebesar `79.7%` (`~80%`). 67router menggunakan
 rata-rata upstream tersebut untuk menghitung penghematan bertumpuk dengan kompresi input Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK memuat filter dalam urutan berikut:
 2. Filter global dari `DATA_DIR/rtk/filters.toml` dan `DATA_DIR/rtk/filters.json`.
 3. Filter bawaan dari `open-sse/services/compression/engines/rtk/filters/`.
 
-Dalam cakupan yang sama, filter skema RTK TOML v1 lebih diprioritaskan daripada filter JSON OmniRoute. Ekspresi TOML
+Dalam cakupan yang sama, filter skema RTK TOML v1 lebih diprioritaskan daripada filter JSON 67router. Ekspresi TOML
 `match_command` diperiksa sebelum pencocokan jenis perintah agar filter khusus perintah yang diimpor dapat
 menggantikan filter yang lebih luas dalam cakupan tersebut. Cakupan proyek tetap lebih diprioritaskan daripada cakupan global,
 apa pun format filenya.
@@ -84,7 +84,7 @@ dilewati dan dilaporkan oleh diagnostik `/api/context/rtk/filters`. Filter bawaa
 
 ## Kompatibilitas skema RTK TOML v1
 
-OmniRoute dapat mengurai, memvalidasi, menguji, dan menginstal file filter deklaratif menggunakan skema RTK TOML v1.
+67router dapat mengurai, memvalidasi, menguji, dan menginstal file filter deklaratif menggunakan skema RTK TOML v1.
 Bidang yang didukung adalah `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, dan pengujian inline `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ Bidang yang tidak dikenal, ekspresi reguler yang tidak valid atau tidak aman, at
 divalidasi untuk diperiksa, tetapi tidak dapat diinstal atau dimuat. Kegagalan pemuatan file kustom tetap
 bersifat fail-open: file yang tidak valid akan dilewati dan filter lainnya akan terus berfungsi.
 
-OmniRoute menerima keluaran alat setelah klien selesai menangkapnya, sehingga `filter_stderr = true`
+67router menerima keluaran alat setelah klien selesai menangkapnya, sehingga `filter_stderr = true`
 tidak dapat mengubah penangkapan proses. Bidang tersebut diterima sebagai no-op dan validasi menghasilkan peringatan.
 Hal ini sengaja dideskripsikan sebagai **kompatibilitas skema RTK TOML v1**, bukan kompatibilitas penuh
 dengan executable RTK, hook shell, implementasi perintah Rust, atau tata letak trust store-nya.

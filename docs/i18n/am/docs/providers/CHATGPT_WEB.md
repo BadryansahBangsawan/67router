@@ -28,9 +28,9 @@
    ስም ይለጥፉ። መሣሪያዎችን መጠቀም የሚችሉ አዳዲስ ውቅሮች በትክክል
    `OmniRoute Codex v2` ተብሎ የተሰየመ አዲስ connector መጠቀም አለባቸው፤ Authentication ወደ None እና Permissions ወደ Allow all
    actions መዋቀር አለባቸው።
-3. የግንኙነት ማረጋገጫውን ያስኪዱ። OmniRoute በአሳሽ የሚደገፍ Temporary Chat ይከፍታል እና
+3. የግንኙነት ማረጋገጫውን ያስኪዱ። 67router በአሳሽ የሚደገፍ Temporary Chat ይከፍታል እና
    Sol እና Pro ለመለያው የሚገኙ መሆናቸውን ይለያል።
-4. ግንኙነቱን ያስቀምጡ። OmniRoute የተለጠፈውን cookie በተረጋገጠው
+4. ግንኙነቱን ያስቀምጡ። 67router የተለጠፈውን cookie በተረጋገጠው
    Playwright storage state ይተካዋል፣ እንዲሁም በተመሰጠረው
    የማረጋገጫ መረጃ abstraction በኩል ከruntime key ጋር ያከማቸዋል።
 
@@ -79,19 +79,19 @@ Free/Go መለያዎች የLuna መስመሮችን ያቀርባሉ። Solን መ
 
 ## ማሳያ የሌለው VPS እና Docker
 
-ለnpm፣ systemd እና PM2 ጭነቶች፣ OmniRoute የተለመዱ የChrome እና Chromium መንገዶችን ይለያል።
+ለnpm፣ systemd እና PM2 ጭነቶች፣ 67router የተለመዱ የChrome እና Chromium መንገዶችን ይለያል።
 እንደ አማራጭ፣ `CHATGPT_WEB_CODEX_CHROME_PATH`ን ያዘጋጁ። ChatGPT እውነተኛ-headless የአሳሽ ቅርጽን ስለማይቀበል፣ runtime turns ሆን ብለው ማሳያ ያለው
-Chrome ይጠቀማሉ። ስለዚህ ማሳያ የሌለው host OmniRouteን በግላዊ Xvfb ማሳያ ማስኬድ
+Chrome ይጠቀማሉ። ስለዚህ ማሳያ የሌለው host 67routerን በግላዊ Xvfb ማሳያ ማስኬድ
 አለበት፤ የChromeን መንገድ ብቻ ማዘጋጀት ማሳያ አያቀርብም።
 
 የDocker `web` profile በውስጣዊው Compose
 አውታረ መረብ ላይ `chatgpt-web-codex-browser`ን ያስጀምራል። sidecar በXvfb ውስጥ ማሳያ ያለው Chromeን ያስኬዳል፣ ስለዚህ አካላዊ ማሳያ አያስፈልግም። የእሱ CDP
 port በhost ላይ አይታተምም። የተጠበቀው የbrowser profile volume ከ
-OmniRoute data volume የተለየ ሲሆን፣ browser በቂ shared memory ይቀበላል። ውስጣዊው CDP proxy
+67router data volume የተለየ ሲሆን፣ browser በቂ shared memory ይቀበላል። ውስጣዊው CDP proxy
 በCompose አውታረ መረብ ውስጥ በport `9223` ብቻ ያዳምጣል፤ Chrome በ
 sidecar ውስጥ ከloopback ጋር እንደተሳሰረ ይቆያል።
 
-በ`DATA_DIR` ስር ያለ supervisor lease በርካታ OmniRoute processes ተመሳሳይ tunnel እና broker stateን እንዳይቆጣጠሩ ይከላከላል። ግጭት በdoctor ሪፖርት ይደረጋል።
+በ`DATA_DIR` ስር ያለ supervisor lease በርካታ 67router processes ተመሳሳይ tunnel እና broker stateን እንዳይቆጣጠሩ ይከላከላል። ግጭት በdoctor ሪፖርት ይደረጋል።
 
 ## መስተጋብራዊ መልሶ ማግኛ
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI ፍለጋን**፣ **የመነሻ Agent Client Protocolን** እና
+67router **CLI ፍለጋን**፣ **የመነሻ Agent Client Protocolን** እና
 **የቆዩ stdio አስማሚዎችን** ለይቶ ይይዛል። የተጫነ binary ማግኘት የእሱን
 ማረጋገጫ፣ ከሞዴል ጋር ተኳኋኝነት ወይም prompt ለማስተናገድ ዝግጁነት አያረጋግጥም።
 

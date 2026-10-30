@@ -11,12 +11,12 @@
 
 ## Wat het is
 
-OmniRoute kan verbinding maken met een **Notion**-werkruimte als **contextbron** — een
+67router kan verbinding maken met een **Notion**-werkruimte als **contextbron** — een
 kennisbank met lees- en schrijftoegang die agents via de ingebouwde MCP-server kunnen
 benaderen. Zodra een Notion-integratietoken is geconfigureerd, kunnen de MCP-tools een
 LLM pagina's en databases laten doorzoeken, pagina-inhoud en blokstructuren laten lezen,
 databases met filters/sorteringen laten doorzoeken en nieuwe blokken laten toevoegen —
-dit alles verloopt via OmniRoute (met nieuwe pogingen, time-outs en foutclassificatie),
+dit alles verloopt via 67router (met nieuwe pogingen, time-outs en foutclassificatie),
 zodat het model de Notion-API nooit rechtstreeks benadert.
 
 De integratie is een dunne, geharde wrapper rond de officiële Notion REST-API
@@ -43,7 +43,7 @@ REST-API voor instellingen.
 > [!NOTE]
 > Het token is een **intern integratietoken van Notion**. Maak een integratie aan op
 > <https://www.notion.com/my-integrations> en deel vervolgens de pagina's/databases
-> waartoe OmniRoute toegang moet hebben met die integratie (het machtigingsmodel van
+> waartoe 67router toegang moet hebben met die integratie (het machtigingsmodel van
 > Notion is gebaseerd op delen, niet op toegang tot de volledige werkruimte).
 
 ### Configureren via REST
@@ -62,7 +62,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Alle drie de methoden vereisen dashboardauthenticatie (`isAuthenticated`). Bij `POST`
-slaat OmniRoute het token op en voert het onmiddellijk een testzoekopdracht met 1
+slaat 67router het token op en voert het onmiddellijk een testzoekopdracht met 1
 resultaat uit. Als Notion een foutobject retourneert, wordt het token gewist en mislukt
 de aanroep met `400`.
 

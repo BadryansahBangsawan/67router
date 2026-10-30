@@ -6,7 +6,7 @@
 
 # Izvoz logova
 
-Kontinuirani, inkrementalni izvoz OmniRoute logova poziva u vanjsko skladište za analitiku.
+Kontinuirani, inkrementalni izvoz 67router logova poziva u vanjsko skladište za analitiku.
 
 Kartica Logs na kontrolnoj ploči čuva historiju zahtjeva u SQLite (`call_logs`), koja je ograničena rotacijom i zadržavanjem. Izvoz logova šalje isti skup zapisa prema rasporedu kako bi mogao nadživjeti lokalnu bazu podataka i biti povezan s drugim podacima. BigQuery je prvo odredište; cjevovod (pipeline) je registar, tako da su dodatna odredišta aditivna.
 

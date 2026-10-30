@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Chanzo:** `open-sse/services/thinkingBudget.ts`
 
-Bajeti ya Kufikiri hudhibiti iwapo OmniRoute **huandika upya vigezo vya kufikiri/kutoa hoja vya mteja** vinapoelekea kwa watoa huduma. **Haiwashi wala kuzima** ufinyazaji, uelekezaji, au akiba ya prompt.
+Bajeti ya Kufikiri hudhibiti iwapo 67router **huandika upya vigezo vya kufikiri/kutoa hoja vya mteja** vinapoelekea kwa watoa huduma. **Haiwashi wala kuzima** ufinyazaji, uelekezaji, au akiba ya prompt.
 
 ## Modi
 
-| Modi                              | Kile OmniRoute hufanya                                                                                                                | Wakati wa kuitumia                                                                                                                                                                            |
+| Modi                              | Kile 67router hufanya                                                                                                                 | Wakati wa kuitumia                                                                                                                                                                            |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (chaguo-msingi) | Huacha sehemu za mteja bila kuzibadilisha (`reasoning`, `reasoning_effort`, `thinking` ya Claude, `thinking_config` ya Gemini, n.k.). | **Codex / Desktop / mteja yeyote anayepaswa kudhibiti kiwango cha juhudi + mihtasari ya utoaji hoja.** Inahitajika ili paneli za kufikiri zionekane wakati mteja anaomba `reasoning.summary`. |
 | **`auto`**                        | **Huondoa sehemu zote** za kufikiri/kutoa hoja kutoka kwenye kiini cha ombi kabla ya kutumwa kwa mtoa huduma.                         | Ni pale tu unapotaka kwa makusudi **mtoa huduma** aunde chaguo-msingi na **huhitaji** kufikiri kunakodhibitiwa na mteja. **Haimaanishi** “onyesha kufikiri kiotomatiki”.                      |
@@ -38,7 +38,7 @@ Ikiwa mteja (k.m. Codex Desktop) alituma `reasoning: { effort: "ultra", summary:
 | **Uelekezaji mseto / njia mbadala**                  | Ni tofauti. Haiathiriwi.                                                                                                                           |
 | **Vikomo vya tokeni za API key / bajeti za gharama** | Ni tofauti. Haiathiriwi.                                                                                                                           |
 | **Akiba ya kurudia utoaji hoja**                     | Uingizaji upya wa zamu nyingi kwa watoa huduma wenye masharti makali (DeepSeek, Kimi, Qwen-thinking, …). Si sawa na “onyesha kufikiri” ya Desktop. |
-| **Kusimbua `encrypted_content`**                     | **Haiwezekani.** Vipande vya faragha vya utoaji hoja vya OpenAI/Codex havionyeshi yaliyomo. OmniRoute haivisimbui kamwe (#7095 / #7176 / #7304).   |
+| **Kusimbua `encrypted_content`**                     | **Haiwezekani.** Vipande vya faragha vya utoaji hoja vya OpenAI/Codex havionyeshi yaliyomo. 67router haivisimbui kamwe (#7095 / #7176 / #7304).    |
 
 ## Mawazo yanayoonekana (viteja vya Codex / Responses)
 
@@ -51,7 +51,7 @@ Ili kiteja kionyeshe maandishi ya mawazo, unahitaji **yote** yafuatayo:
 Ukipata tu “mawazo ya faragha yaliyosimbwa”, basi:
 
 - hali ilikuwa **`auto`** (ombi la kiteja liliondolewa), au
-- upstream ilirejesha `encrypted_content` bila maandishi ya muhtasari (kizuizi cha mtoa huduma; OmniRoute inaweza kuonyesha tu kishikilia nafasi, si maandishi wazi).
+- upstream ilirejesha `encrypted_content` bila maandishi ya muhtasari (kizuizi cha mtoa huduma; 67router inaweza kuonyesha tu kishikilia nafasi, si maandishi wazi).
 
 ## Mifano ya API
 
@@ -71,7 +71,7 @@ Skima (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Uhifadhi / kuwasha upya
 
-Thamani huhifadhiwa chini ya ufunguo wa mipangilio `thinkingBudget` na kupakiwa wakati mchakato unapoanza (`hydrateThinkingBudgetConfig`). Baada ya kubadilisha kupitia DB au baadhi ya njia zisizo za API, **washa upya mchakato wa OmniRoute** ili singleton iliyo kwenye kumbukumbu ilingane na data iliyo kwenye diski.
+Thamani huhifadhiwa chini ya ufunguo wa mipangilio `thinkingBudget` na kupakiwa wakati mchakato unapoanza (`hydrateThinkingBudgetConfig`). Baada ya kubadilisha kupitia DB au baadhi ya njia zisizo za API, **washa upya mchakato wa 67router** ili singleton iliyo kwenye kumbukumbu ilingane na data iliyo kwenye diski.
 
 ## Orodha hakiki ya mwendeshaji
 

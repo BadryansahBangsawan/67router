@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute erfasst die Token-Nutzung jeder Anfrage, berechnet die Kosten, setzt Kontingente pro API-Schlüssel durch und zeigt Analysen im Dashboard an. Dieser Leitfaden erklärt, wie all das funktioniert.
+> **TL;DR**: 67router erfasst die Token-Nutzung jeder Anfrage, berechnet die Kosten, setzt Kontingente pro API-Schlüssel durch und zeigt Analysen im Dashboard an. Dieser Leitfaden erklärt, wie all das funktioniert.
 
 **Quellen:**
 
@@ -17,7 +17,7 @@
 
 ## Übersicht
 
-Jede Anfrage, die OmniRoute durchläuft, erzeugt einen **Nutzungsdatensatz**, der Folgendes erfasst:
+Jede Anfrage, die 67router durchläuft, erzeugt einen **Nutzungsdatensatz**, der Folgendes erfasst:
 
 - **Identität**: welcher API-Schlüssel, Anbieter, welches Modell und welche Kombination
 - **Tokens**: Prompt-Tokens, Vervollständigungs-Tokens, zwischengespeicherte Tokens, Gesamtzahl
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Für Anbieter, die keine Nutzungsdaten zurückgeben (einige Web-Cookie-Anbieter), **schätzt** OmniRoute die Token-Anzahl anhand der Heuristik `~4 Zeichen pro Token` (siehe `open-sse/services/autoCombo/pipelineRouter.ts`).
+Für Anbieter, die keine Nutzungsdaten zurückgeben (einige Web-Cookie-Anbieter), **schätzt** 67router die Token-Anzahl anhand der Heuristik `~4 Zeichen pro Token` (siehe `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Zwischengespeicherte Tokens
 
-OmniRoute erfasst `cached_tokens` getrennt von `prompt_tokens`, weil:
+67router erfasst `cached_tokens` getrennt von `prompt_tokens`, weil:
 
 - Anthropic-Prompt-Caching für zwischengespeicherte Tokens einen reduzierten Preis berechnet (10 % des normalen Preises)
 - Einige Anbieter `cache_read_input_tokens` zurückgeben, die anders abgerechnet werden sollten
@@ -117,7 +117,7 @@ Die Preisdaten werden über den Endpunkt `/api/pricing/sync` automatisch von Lit
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Bei Modellen ohne Preisdaten greift OmniRoute auf eine **Kostenschätzung** anhand interner Durchschnittspreise zurück (basierend auf den Preisdaten von LiteLLM).
+Bei Modellen ohne Preisdaten greift 67router auf eine **Kostenschätzung** anhand interner Durchschnittspreise zurück (basierend auf den Preisdaten von LiteLLM).
 
 ---
 

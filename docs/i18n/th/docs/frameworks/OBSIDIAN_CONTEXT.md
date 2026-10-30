@@ -13,7 +13,7 @@
 
 ## คืออะไร
 
-OmniRoute เชื่อมต่อกับ vault ของ **Obsidian** ในฐานะ **แหล่งบริบท** — ฐานความรู้ Markdown
+67router เชื่อมต่อกับ vault ของ **Obsidian** ในฐานะ **แหล่งบริบท** — ฐานความรู้ Markdown
 ภายในเครื่องที่เอเจนต์อ่านและเขียนผ่านเซิร์ฟเวอร์ MCP ในตัว การผสานรวมนี้สื่อสารกับปลั๊กอินชุมชน
 **Obsidian Local REST API** ที่ทำงานอยู่ภายในแอปเดสก์ท็อป เพื่อให้เอเจนต์สามารถค้นหาโน้ต,
 อ่าน/เขียน/แก้ไขไฟล์บางส่วน, แสดงรายการภายใน vault, ทำงานกับโน้ตประจำวัน/ประจำสัปดาห์,
@@ -75,7 +75,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### การซิงค์ vault ผ่าน WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` จัดการการซิงค์ vault ที่รองรับโดย WebDAV
-ซึ่งเป็นทางเลือก (ขับเคลื่อนโดย `src/lib/obsidianSync.ts`) การเปิดใช้งานจะกำหนดให้ OmniRoute ใช้
+ซึ่งเป็นทางเลือก (ขับเคลื่อนโดย `src/lib/obsidianSync.ts`) การเปิดใช้งานจะกำหนดให้ 67router ใช้
 ไดเรกทอรี vault ในเครื่อง และสร้างคู่ชื่อผู้ใช้/รหัสผ่าน WebDAV แบบสุ่ม:
 
 ```bash
@@ -111,26 +111,26 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian/webdav
 
 กำหนดไว้ใน `open-sse/mcp-server/tools/obsidianTools.ts` โดย token/base-URL จะถูกกำหนด
 แยกสำหรับแต่ละการเรียก (ใช้ค่าของ API key ก่อน แล้วจึงใช้ค่าส่วนกลาง) เครื่องมือที่เรียกใช้ **sync server**
-ของ OmniRoute (เครื่องมือ `obsidian_sync_*` ทั้งสี่รายการ) จำเป็นต้องใช้ sync auth token ที่กำหนดค่าไว้
-ในการตั้งค่า OmniRoute เพิ่มเติมด้วย
+ของ 67router (เครื่องมือ `obsidian_sync_*` ทั้งสี่รายการ) จำเป็นต้องใช้ sync auth token ที่กำหนดค่าไว้
+ในการตั้งค่า 67router เพิ่มเติมด้วย
 
 ### เครื่องมืออ่าน (`read:obsidian`)
 
-| เครื่องมือ                   | คำอธิบาย                                                                              |
-| ---------------------------- | ------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | ตรวจสอบว่าสามารถเข้าถึง Local REST API และผ่านการยืนยันตัวตนได้หรือไม่                |
-| `obsidian_search_simple`     | ค้นหาข้อความแบบเต็มในเนื้อหาโน้ต โดยส่งคืนส่วนย่อยพร้อมพาธไฟล์                        |
-| `obsidian_search_structured` | ค้นหาโดยใช้นิพจน์ JSON Logic (ตัวกรอง and/or/regex/path)                              |
-| `obsidian_read_note`         | อ่านโน้ตตามพาธที่สัมพันธ์กับ vault โดยเลือกเฉพาะ heading/block/frontmatter ได้        |
-| `obsidian_list_vault`        | แสดงรายการไฟล์และไดเรกทอรีใน vault (โครงสร้างแบบต้นไม้ของรายการ)                      |
-| `obsidian_get_document_map`  | รับโครงสร้าง heading ของโน้ตในรูปแบบแผนที่ heading → หมายเลขบรรทัด                    |
-| `obsidian_get_note_metadata` | รับ frontmatter, แท็ก, ลิงก์ และจำนวนอักขระ/คำโดยไม่ต้องดึงเนื้อหาทั้งหมด             |
-| `obsidian_get_active_file`   | รับพาธและเนื้อหาของไฟล์ที่กำลังใช้งานอยู่ใน Obsidian                                  |
-| `obsidian_get_periodic_note` | รับโน้ตรายวัน/รายสัปดาห์/รายเดือนสำหรับวันที่ระบุ (ใช้วันนี้หากไม่ระบุ)               |
-| `obsidian_get_tags`          | แสดงแท็กทั้งหมดใน vault พร้อมความถี่ในการปรากฏ                                        |
-| `obsidian_list_commands`     | แสดง ID คำสั่ง Obsidian ที่พร้อมใช้งาน (ใช้กับ `obsidian_execute_command`)            |
-| `obsidian_sync_status`       | สถานะ sync server ของ OmniRoute: การทำงาน, ชื่อ vault, พอร์ต, uptime, การ sync ล่าสุด |
-| `obsidian_sync_conflicts`    | แสดงข้อขัดแย้งในการ sync ที่ยังไม่ได้แก้ไข (พาธ, พาธข้อขัดแย้ง, เวลาที่ตรวจพบ)        |
+| เครื่องมือ                   | คำอธิบาย                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------ |
+| `obsidian_check_status`      | ตรวจสอบว่าสามารถเข้าถึง Local REST API และผ่านการยืนยันตัวตนได้หรือไม่               |
+| `obsidian_search_simple`     | ค้นหาข้อความแบบเต็มในเนื้อหาโน้ต โดยส่งคืนส่วนย่อยพร้อมพาธไฟล์                       |
+| `obsidian_search_structured` | ค้นหาโดยใช้นิพจน์ JSON Logic (ตัวกรอง and/or/regex/path)                             |
+| `obsidian_read_note`         | อ่านโน้ตตามพาธที่สัมพันธ์กับ vault โดยเลือกเฉพาะ heading/block/frontmatter ได้       |
+| `obsidian_list_vault`        | แสดงรายการไฟล์และไดเรกทอรีใน vault (โครงสร้างแบบต้นไม้ของรายการ)                     |
+| `obsidian_get_document_map`  | รับโครงสร้าง heading ของโน้ตในรูปแบบแผนที่ heading → หมายเลขบรรทัด                   |
+| `obsidian_get_note_metadata` | รับ frontmatter, แท็ก, ลิงก์ และจำนวนอักขระ/คำโดยไม่ต้องดึงเนื้อหาทั้งหมด            |
+| `obsidian_get_active_file`   | รับพาธและเนื้อหาของไฟล์ที่กำลังใช้งานอยู่ใน Obsidian                                 |
+| `obsidian_get_periodic_note` | รับโน้ตรายวัน/รายสัปดาห์/รายเดือนสำหรับวันที่ระบุ (ใช้วันนี้หากไม่ระบุ)              |
+| `obsidian_get_tags`          | แสดงแท็กทั้งหมดใน vault พร้อมความถี่ในการปรากฏ                                       |
+| `obsidian_list_commands`     | แสดง ID คำสั่ง Obsidian ที่พร้อมใช้งาน (ใช้กับ `obsidian_execute_command`)           |
+| `obsidian_sync_status`       | สถานะ sync server ของ 67router: การทำงาน, ชื่อ vault, พอร์ต, uptime, การ sync ล่าสุด |
+| `obsidian_sync_conflicts`    | แสดงข้อขัดแย้งในการ sync ที่ยังไม่ได้แก้ไข (พาธ, พาธข้อขัดแย้ง, เวลาที่ตรวจพบ)       |
 
 ### เครื่องมือเขียน (`write:obsidian`)
 

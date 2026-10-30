@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute는 OpenAI Codex를 사용하는 **두 가지** 방법을 제공합니다.
+67router는 OpenAI Codex를 사용하는 **두 가지** 방법을 제공합니다.
 
 | 제공자                 | OpenAI와 통신하는 방식                                                                                                                                                         | 사용 시 주의 사항                                               |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
 | **`codex`**            | ChatGPT/OpenAI OAuth 토큰을 Responses API에 직접 재전송합니다                                                                                                                  | **있음** — 공식 세션은 프록시/라우터 용도로 승인되지 않았습니다 |
-| **`codex-app-server`** | JSON-RPC/WebSocket을 통해 **Codex CLI 자체의 `codex app-server`**를 구동합니다. CLI는 대화형 `codex` 세션과 똑같이 자체 OAuth(`~/.codex/auth.json`)를 관리하고 자동 갱신합니다 | **없음** — OmniRoute는 API에 토큰을 재전송하지 않습니다         |
+| **`codex-app-server`** | JSON-RPC/WebSocket을 통해 **Codex CLI 자체의 `codex app-server`**를 구동합니다. CLI는 대화형 `codex` 세션과 똑같이 자체 OAuth(`~/.codex/auth.json`)를 관리하고 자동 갱신합니다 | **없음** — 67router는 API에 토큰을 재전송하지 않습니다          |
 
 `codex-app-server`는 토큰을 재전송하지 않으므로 세션 재전송과 관련된
 사용상 주의 사항이 적용되지 않습니다. 단, **구성된 app-server URL에서
@@ -20,7 +20,7 @@ Codex CLI에 접근할 수 있어야** 하며 해당 CLI가 **로그인된 상�
 ## 1. 아키텍처
 
 ```
-┌─ OmniRoute 앱 ──────────────────┐        ┌─ codex-app-server 사이드카 ─────────┐
+┌─ 67router 앱 ──────────────────┐        ┌─ codex-app-server 사이드카 ─────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ 기능 토큰)                   │  JSON  │  --ws-auth capability-token         │
@@ -76,7 +76,7 @@ docker compose --profile base --profile codex-app-server up -d
   건너뜁니다.
 - **로컬에 codex가 설치되지 않은 일반 사용자** — 문제되지 않습니다.
   사이드카에 CLI가 포함되어 있습니다. 사용자는 대시보드를 통해서만 인증하면 됩니다.
-- **베어메탈 OmniRoute(사이드카 없이 호스트 codex 사용)** —
+- **베어메탈 67router(사이드카 없이 호스트 codex 사용)** —
   `OMNIROUTE_CODEX_APPSERVER_WS`가 자체 `codex app-server`를 가리키도록
   설정하고 호스트의 codex가 로그인된 상태인지 확인합니다. 바이너리가 없으면
   "codex가 설치되지 않음" 안내가 표시됩니다.

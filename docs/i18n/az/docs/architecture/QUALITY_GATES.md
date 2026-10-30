@@ -4,7 +4,7 @@
 
 ---
 
-Bu sənəd OmniRoute-da bütün CI keyfiyyət qapıları üçün əsas istinaddır.
+Bu sənəd 67router-da bütün CI keyfiyyət qapıları üçün əsas istinaddır.
 O, hər bir qapını, qapının nəyi yoxladığını, hansı CI tapşırığında işlədiyini, ratchet baza səviyyəsindən, yoxsa keçdi/qaldı siyasətindən istifadə etdiyini və yığmanı bloklayıb-bloklamadığını, yaxud yalnız tövsiyə xarakterli olub-olmadığını təsvir edir.
 
 Qısa xülasə və icazə siyahısı siyasəti üçün `AGENTS.md` faylındakı "Keyfiyyət Qapıları və Ratchet-lər" bölməsinə baxın. Eyni sistemin kritik qiymətləndirilməsi, yetkinlik təsnifatı və alətdən asılı olmayan təkrarlama planı üçün
@@ -265,14 +265,14 @@ Yalnız pull request-lərdə işləyir.
 
 Bunlar cron cədvəli ilə (və `workflow_dispatch` ilə) işləyir, heç vaxt PR-lərdə yox. Hamısı məsləhət xarakterlidir.
 
-| İş axını               | Validasiya edir                                                                                                                                                                       | Bloklayır    |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `nightly-property`     | təsadüfi toxum + yüksək işlətmə sayı ilə fast-check property testləri                                                                                                                 | **Məsləhət** |
-| `nightly-resilience`   | heap-artım qapısı, xaos xəta inyeksiyası, k6 yük/davamlı yük                                                                                                                          | **Məsləhət** |
-| `nightly-llm-security` | promptfoo inyeksiya mühafizəsi (blok rejimi) + garak zondları (provider secret olmadıqda keçirilir)                                                                                   | **Məsləhət** |
-| `nightly-schemathesis` | `docs/openapi.yaml` istifadə edərək canlı OmniRoute-a qarşı OpenAPI müqavilə fuzzinqi (schemathesis) — spesifikasiya pozuntularını / emal edilməmiş 500-ləri üzə çıxarır (Fase 8 B.4) | **Məsləhət** |
-| `nightly-mutation`     | sürətli vahid zolağı üzrə Stryker mutasiya-testi balı — sağ qalan mutantlar zəif assert-ləri üzə çıxarır                                                                              | **Məsləhət** |
-| `nightly-compat`       | dəstəklənən `engines.node` aralıqları üzrə Node mühərriki uyğunluq matrisi                                                                                                            | **Məsləhət** |
+| İş axını               | Validasiya edir                                                                                                                                                                      | Bloklayır    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| `nightly-property`     | təsadüfi toxum + yüksək işlətmə sayı ilə fast-check property testləri                                                                                                                | **Məsləhət** |
+| `nightly-resilience`   | heap-artım qapısı, xaos xəta inyeksiyası, k6 yük/davamlı yük                                                                                                                         | **Məsləhət** |
+| `nightly-llm-security` | promptfoo inyeksiya mühafizəsi (blok rejimi) + garak zondları (provider secret olmadıqda keçirilir)                                                                                  | **Məsləhət** |
+| `nightly-schemathesis` | `docs/openapi.yaml` istifadə edərək canlı 67router-a qarşı OpenAPI müqavilə fuzzinqi (schemathesis) — spesifikasiya pozuntularını / emal edilməmiş 500-ləri üzə çıxarır (Fase 8 B.4) | **Məsləhət** |
+| `nightly-mutation`     | sürətli vahid zolağı üzrə Stryker mutasiya-testi balı — sağ qalan mutantlar zəif assert-ləri üzə çıxarır                                                                             | **Məsləhət** |
+| `nightly-compat`       | dəstəklənən `engines.node` aralıqları üzrə Node mühərriki uyğunluq matrisi                                                                                                           | **Məsləhət** |
 
 Performans baza xətləri (heap, TTFB, yığma müddəti) qeydə alınır, qapılanmır: bax: [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -553,7 +553,7 @@ icazə siyahısı ilə uğurlu yoxlama yanlış keyfiyyət təəssüratı yarad�
 
 ## Agent alətləri: dövrədə LSP (seçimlidir)
 
-CI yoxlamalarına əlavə olaraq, OmniRoute **seçimli** `agent-lsp` ilkin strukturunu
+CI yoxlamalarına əlavə olaraq, 67router **seçimli** `agent-lsp` ilkin strukturunu
 (layihə səviyyəli `.mcp.json`, Fase 7 Task 15) təqdim edir. TypeScript dil serverini
 kodlaşdırma agentləri üçün əlçatan etmək məqsədilə `.mcp.json` yaradın ki, onlar kodu yazmazdan
 **əvvəl** simvolları / diaqnostikanı müəyyənləşdirsinlər — bu, “uydurulmuş simvol” xətalarını

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'i kõnelogide pidev, inkrementaalne eksport välisesse analüütikaandmehoidlasse.
+67router'i kõnelogide pidev, inkrementaalne eksport välisesse analüütikaandmehoidlasse.
 
 Logide töölaua vahekaart säilitab päringute ajaloo SQLite'is (`call_logs`), mille mahtu piiravad
 rotatsioon ja säilitusperiood. Logide eksport saadab sama kirjete kogumi ajakava alusel välja, et see säiliks

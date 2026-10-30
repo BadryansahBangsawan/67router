@@ -9,15 +9,15 @@
 > **Izvor:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40
 
-OmniRoute izlaže tri različite površine povezane s agentima. Na prvi pogled izgledaju slično, ali rješavaju različite probleme. Koristite ovu stranicu da odaberete pravu.
+67router izlaže tri različite površine povezane s agentima. Na prvi pogled izgledaju slično, ali rješavaju različite probleme. Koristite ovu stranicu da odaberete pravu.
 
 ## TL;DR
 
 | Površina                      | Najbolje za                                                                                                                                              | Transport                   | Standard             |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | -------------------- |
 | **A2A — Agent-to-Agent**      | Saradnja između agenata s ravnopravnim agentima koji govore A2A protokol                                                                                 | JSON-RPC 2.0 over HTTP      | A2A v0.3 (open spec) |
-| **ACP — CLI Agents Registry** | Otkrivanje / registracija / pokretanje CLI agenata za kodiranje instaliranih na korisnikovoj mašini (Cursor, Cline, Codex CLI, Claude Code, Aider, itd.) | HTTP REST                   | OmniRoute-specific   |
-| **Cloud Agents**              | Slanje dugotrajnih zadataka kodiranja vanjskim cloud servisima (Codex Cloud, Devin, Jules, Cursor Cloud)                                                 | HTTP REST + DB-backed tasks | OmniRoute-specific   |
+| **ACP — CLI Agents Registry** | Otkrivanje / registracija / pokretanje CLI agenata za kodiranje instaliranih na korisnikovoj mašini (Cursor, Cline, Codex CLI, Claude Code, Aider, itd.) | HTTP REST                   | 67router-specific    |
+| **Cloud Agents**              | Slanje dugotrajnih zadataka kodiranja vanjskim cloud servisima (Codex Cloud, Devin, Jules, Cursor Cloud)                                                 | HTTP REST + DB-backed tasks | 67router-specific    |
 
 Ove tri su nezavisne — odaberite bilo koji podskup.
 
@@ -40,14 +40,14 @@ Trebate li cloud servis za obavljanje posla izvan ove mašine (Codex Cloud / Cur
 ## 1. A2A — Agent-to-Agent
 
 **Specifikacija:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute krajnja tačka:** `POST /a2a` (JSON-RPC 2.0)
+**67router krajnja tačka:** `POST /a2a` (JSON-RPC 2.0)
 **Agent kartica:** `GET /.well-known/agent.json`
 
 ### Kada koristiti
 
-- Izgradnja multi-agent sistema gdje je OmniRoute jedan od ravnopravnih učesnika
-- Izlaganje OmniRoute inteligencije rutiranja (smart-routing, quota-management, itd.) agentima u okvirima kao što su Google ADK ili generičke agent mreže
-- Omotavanje OmniRoute-a iza standardne površine za otkrivanje + pozivanje
+- Izgradnja multi-agent sistema gdje je 67router jedan od ravnopravnih učesnika
+- Izlaganje 67router inteligencije rutiranja (smart-routing, quota-management, itd.) agentima u okvirima kao što su Google ADK ili generičke agent mreže
+- Omotavanje 67router-a iza standardne površine za otkrivanje + pozivanje
 
 ### Metode
 
@@ -71,12 +71,12 @@ Pogledajte [A2A-SERVER.md](./A2A-SERVER.md) za detalje o transportu, strukturu a
 
 ## 2. ACP — Registar CLI agenata
 
-**OmniRoute krajnja tačka:** `GET /api/acp/agents`
+**67router krajnja tačka:** `GET /api/acp/agents`
 **Izvor:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Šta je to
 
-ACP je OmniRouteov **lokalni inventar CLI agenata**. Otkriva koji su CLI alati za programiranje instalirani na računaru (Cursor, Cline, Claude Code, Codex CLI, Continue itd.), utvrđuje njihove verzije i prikazuje ih na kontrolnoj ploči kako bi korisnik mogao konfigurirati svaki CLI da koristi OmniRoute.
+ACP je 67routerov **lokalni inventar CLI agenata**. Otkriva koji su CLI alati za programiranje instalirani na računaru (Cursor, Cline, Claude Code, Codex CLI, Continue itd.), utvrđuje njihove verzije i prikazuje ih na kontrolnoj ploči kako bi korisnik mogao konfigurirati svaki CLI da koristi 67router.
 
 HTTP interfejs je interni inventar koji omogućava rad korisničkog interfejsa „CLI Tools“ i
 praćenje CLI otisaka (pogledajte [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Zasebno,
@@ -116,8 +116,8 @@ Struktura tijela za POST (`customAgentBodySchema` u `src/app/api/acp/agents/rout
 
 ### Slučajevi upotrebe
 
-- Stranica „CLI Tools“ na kontrolnoj ploči prikazuje šta je instalirano i pomaže vam da svaki alat usmjerite na OmniRoute
-- Prilagođeni agenti omogućavaju naprednim korisnicima da registriraju interne/vlasničke CLI alate koje OmniRoute ne prepoznaje prema zadanim postavkama
+- Stranica „CLI Tools“ na kontrolnoj ploči prikazuje šta je instalirano i pomaže vam da svaki alat usmjerite na 67router
+- Prilagođeni agenti omogućavaju naprednim korisnicima da registriraju interne/vlasničke CLI alate koje 67router ne prepoznaje prema zadanim postavkama
 - Rezultat otkrivanja popunjava matricu otisaka `cli-tools`
 
 ### Kada NE koristiti ACP
@@ -129,12 +129,12 @@ Struktura tijela za POST (`customAgentBodySchema` u `src/app/api/acp/agents/rout
 
 ## 3. Cloud agenti
 
-**OmniRoute krajnje tačke:** `/api/v1/agents/tasks/*` (životni ciklus) + `/api/cloud/*` (infrastruktura)
+**67router krajnje tačke:** `/api/v1/agents/tasks/*` (životni ciklus) + `/api/cloud/*` (infrastruktura)
 **Izvor:** `src/lib/cloudAgent/`
 
 ### Šta je to
 
-Jedinstveni interfejs preko cloud agenata za kodiranje trećih strana. Vi šaljete prompt + URL repozitorijuma, OmniRoute prosljeđuje odgovarajućem cloud agentu, provjerava status i vraća rezultate.
+Jedinstveni interfejs preko cloud agenata za kodiranje trećih strana. Vi šaljete prompt + URL repozitorijuma, 67router prosljeđuje odgovarajućem cloud agentu, provjerava status i vraća rezultate.
 
 ### Podržani agenti (4, svi potvrđeni u `src/lib/cloudAgent/agents/`)
 
@@ -175,8 +175,8 @@ Oba imaju "dugotrajne zadatke" (long-running tasks), ali na različitim nivoima:
 
 | Aspekt                     | A2A                                                                               | Cloud Agents                                              |
 | -------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| Standard                   | Open A2A v0.3                                                                     | Specifično za OmniRoute                                   |
-| Gdje se izvršava računanje | Unutar OmniRoute (koristi konfigurisane kombinacije)                              | Eksterno (Codex / Devin / Jules serveri)                  |
+| Standard                   | Open A2A v0.3                                                                     | Specifično za 67router                                    |
+| Gdje se izvršava računanje | Unutar 67router (koristi konfigurisane kombinacije)                               | Eksterno (Codex / Devin / Jules serveri)                  |
 | Trajanje zadatka           | Podrazumevani TTL 5 min (konfigurisano u `TaskManager`)                           | Od minuta do sati                                         |
 | Svjestan repozitorijuma    | Ne (prosljeđuje samo upite)                                                       | Da (URL repozitorijuma + grana)                           |
 | Slučaj upotrebe            | Saradnja između agenata, pametno rutiranje kao usluga                             | Delegiranje "implementiraj funkciju X u repozitorijumu Y" |
@@ -184,7 +184,7 @@ Oba imaju "dugotrajne zadatke" (long-running tasks), ali na različitim nivoima:
 
 ## Primjeri integracije
 
-### Otkrivanje A2A mogućnosti OmniRoute-a
+### Otkrivanje A2A mogućnosti 67router-a
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -192,7 +192,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Vraća Agent Card sa svih 6 vještina, transporta i verzijom.
 
-### Pozivanje OmniRoute-a kao A2A agenta
+### Pozivanje 67router-a kao A2A agenta
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -266,7 +266,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute Core    │
+                │   67router Core    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

@@ -7,15 +7,15 @@
 > **Sumber:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40
 
-OmniRoute menyediakan tiga antara muka berkaitan ejen yang berbeza. Ketiga-tiganya kelihatan serupa pada pandangan pertama tetapi menyelesaikan masalah yang berbeza. Gunakan halaman ini untuk memilih antara muka yang sesuai.
+67router menyediakan tiga antara muka berkaitan ejen yang berbeza. Ketiga-tiganya kelihatan serupa pada pandangan pertama tetapi menyelesaikan masalah yang berbeza. Gunakan halaman ini untuk memilih antara muka yang sesuai.
 
 ## Ringkasan
 
 | Antara muka               | Paling sesuai untuk                                                                                                                              | Pengangkutan                      | Piawaian                       |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- | ------------------------------ |
 | **A2A — Ejen-ke-Ejen**    | Kerjasama merentas ejen dengan ejen rakan setara yang menggunakan protokol A2A                                                                   | JSON-RPC 2.0 melalui HTTP         | A2A v0.3 (spesifikasi terbuka) |
-| **ACP — Daftar Ejen CLI** | Mengesan / mendaftarkan / melancarkan ejen pengekodan CLI yang dipasang pada mesin pengguna (Cursor, Cline, Codex CLI, Claude Code, Aider, dll.) | HTTP REST                         | Khusus untuk OmniRoute         |
-| **Ejen Awan**             | Menghantar tugas pengekodan jangka panjang kepada perkhidmatan awan luaran (Codex Cloud, Devin, Jules, Cursor Cloud)                             | HTTP REST + tugas bersandarkan DB | Khusus untuk OmniRoute         |
+| **ACP — Daftar Ejen CLI** | Mengesan / mendaftarkan / melancarkan ejen pengekodan CLI yang dipasang pada mesin pengguna (Cursor, Cline, Codex CLI, Claude Code, Aider, dll.) | HTTP REST                         | Khusus untuk 67router          |
+| **Ejen Awan**             | Menghantar tugas pengekodan jangka panjang kepada perkhidmatan awan luaran (Codex Cloud, Devin, Jules, Cursor Cloud)                             | HTTP REST + tugas bersandarkan DB | Khusus untuk 67router          |
 
 Ketiga-tiganya adalah bebas — pilih mana-mana gabungan.
 
@@ -38,14 +38,14 @@ Adakah anda memerlukan perkhidmatan awan untuk melakukan kerja di luar mesin ini
 ## 1. A2A — Ejen-ke-Ejen
 
 **Spesifikasi:** [A2A v0.3](https://a2a-protocol.org)
-**Titik akhir OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
+**Titik akhir 67router:** `POST /a2a` (JSON-RPC 2.0)
 **Kad Ejen:** `GET /.well-known/agent.json`
 
 ### Bila hendak digunakan
 
-- Membina sistem berbilang ejen dengan OmniRoute sebagai salah satu rakan setara
-- Mendedahkan kecerdasan penghalaan OmniRoute (penghalaan pintar, pengurusan kuota, dll.) kepada ejen dalam rangka kerja seperti Google ADK atau rangkaian ejen generik
-- Membungkus OmniRoute di sebalik antara muka penemuan + penyeruan standard
+- Membina sistem berbilang ejen dengan 67router sebagai salah satu rakan setara
+- Mendedahkan kecerdasan penghalaan 67router (penghalaan pintar, pengurusan kuota, dll.) kepada ejen dalam rangka kerja seperti Google ADK atau rangkaian ejen generik
+- Membungkus 67router di sebalik antara muka penemuan + penyeruan standard
 
 ### Kaedah
 
@@ -69,12 +69,12 @@ Lihat [A2A-SERVER.md](./A2A-SERVER.md) untuk butiran pengangkutan, struktur kad 
 
 ## 2. ACP — Daftar Ejen CLI
 
-**Titik akhir OmniRoute:** `GET /api/acp/agents`
+**Titik akhir 67router:** `GET /api/acp/agents`
 **Sumber:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Apakah itu
 
-ACP ialah **inventori ejen CLI setempat** OmniRoute. Ia mengesan CLI pengekodan yang dipasang pada hos (Cursor, Cline, Claude Code, Codex CLI, Continue dan sebagainya), menentukan versinya dan memaparkannya pada papan pemuka supaya pengguna boleh mengkonfigurasi setiap CLI untuk menghala ke OmniRoute.
+ACP ialah **inventori ejen CLI setempat** 67router. Ia mengesan CLI pengekodan yang dipasang pada hos (Cursor, Cline, Claude Code, Codex CLI, Continue dan sebagainya), menentukan versinya dan memaparkannya pada papan pemuka supaya pengguna boleh mengkonfigurasi setiap CLI untuk menghala ke 67router.
 
 Antara muka HTTP ialah inventori dalaman yang menyokong UI "Alat CLI" dan
 penjejakan cap jari CLI (lihat [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Secara berasingan,
@@ -114,8 +114,8 @@ Bentuk isi untuk POST (`customAgentBodySchema` dalam `src/app/api/acp/agents/rou
 
 ### Kes penggunaan
 
-- Halaman "Alat CLI" pada papan pemuka menyenaraikan alat yang dipasang dan membantu anda menghalakan setiap satunya ke OmniRoute
-- Ejen tersuai membolehkan pengguna mahir mendaftarkan CLI dalaman/proprietari yang tidak diketahui oleh OmniRoute secara lalai
+- Halaman "Alat CLI" pada papan pemuka menyenaraikan alat yang dipasang dan membantu anda menghalakan setiap satunya ke 67router
+- Ejen tersuai membolehkan pengguna mahir mendaftarkan CLI dalaman/proprietari yang tidak diketahui oleh 67router secara lalai
 - Hasil pengesanan membekalkan data kepada matriks cap jari `cli-tools`
 
 ### Bila ACP TIDAK patut digunakan
@@ -127,12 +127,12 @@ Bentuk isi untuk POST (`customAgentBodySchema` dalam `src/app/api/acp/agents/rou
 
 ## 3. Ejen Awan
 
-**Titik akhir OmniRoute:** `/api/v1/agents/tasks/*` (kitaran hayat) + `/api/cloud/*` (infrastruktur)
+**Titik akhir 67router:** `/api/v1/agents/tasks/*` (kitaran hayat) + `/api/cloud/*` (infrastruktur)
 **Sumber:** `src/lib/cloudAgent/`
 
 ### Apakah itu
 
-Antara muka seragam untuk ejen pengekodan awan pihak ketiga. Anda menyerahkan gesaan + URL repositori, OmniRoute menghantarnya kepada ejen awan yang betul, meninjau status dan mengembalikan hasil.
+Antara muka seragam untuk ejen pengekodan awan pihak ketiga. Anda menyerahkan gesaan + URL repositori, 67router menghantarnya kepada ejen awan yang betul, meninjau status dan mengembalikan hasil.
 
 ### Ejen yang disokong (4, semuanya disahkan dalam `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Kedua-duanya mempunyai "tugas jangka panjang", tetapi pada lapisan yang berbeza:
 
 | Aspek                    | A2A                                                                                   | Ejen Awan                                 |
 | ------------------------ | ------------------------------------------------------------------------------------- | ----------------------------------------- |
-| Piawaian                 | Open A2A v0.3                                                                         | Khusus untuk OmniRoute                    |
-| Tempat pengiraan berlaku | Dalam OmniRoute (menggunakan gabungan yang dikonfigurasikan)                          | Luaran (pelayan Codex / Devin / Jules)    |
+| Piawaian                 | Open A2A v0.3                                                                         | Khusus untuk 67router                     |
+| Tempat pengiraan berlaku | Dalam 67router (menggunakan gabungan yang dikonfigurasikan)                           | Luaran (pelayan Codex / Devin / Jules)    |
 | Tempoh tugas             | TTL lalai 5 min (boleh dikonfigurasikan dalam `TaskManager`)                          | Beberapa minit hingga beberapa jam        |
 | Peka repositori          | Tidak (hanya menghantar gesaan)                                                       | Ya (URL repositori + cabang)              |
 | Kes penggunaan           | Kerjasama merentas ejen, penghalaan pintar sebagai perkhidmatan                       | Wakilkan "laksanakan ciri X dalam repo Y" |
@@ -182,7 +182,7 @@ Kedua-duanya mempunyai "tugas jangka panjang", tetapi pada lapisan yang berbeza:
 
 ## Contoh Integrasi
 
-### Temui keupayaan A2A OmniRoute
+### Temui keupayaan A2A 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Mengembalikan Kad Ejen dengan kesemua 6 kemahiran, pengangkutan dan versi.
 
-### Panggil OmniRoute sebagai ejen A2A
+### Panggil 67router sebagai ejen A2A
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Teras OmniRoute   │
+                │   Teras 67router   │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

@@ -6,7 +6,7 @@
 
 🌐 **ဘာသာစကားများ:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API အတွက် အဓိက ကိုးကားချက်ဖြစ်သည်။ ၎င်းတွင် အများပြည်သူသုံး `/v1` မျက်နှာပြင်နှင့် အသုံးအများဆုံး စီမံခန့်ခွဲမှု endpoint များကို ဖော်ပြထားပြီး၊ စက်ဖြင့် ဖတ်ရှုနိုင်သော [`docs/openapi.yaml`](../openapi.yaml) နှင့် `src/app/api/` အောက်ရှိ route tree တို့သည် အပြည့်အစုံပါဝင်သော အရင်းအမြစ်များဖြစ်သည်။
+67router API အတွက် အဓိက ကိုးကားချက်ဖြစ်သည်။ ၎င်းတွင် အများပြည်သူသုံး `/v1` မျက်နှာပြင်နှင့် အသုံးအများဆုံး စီမံခန့်ခွဲမှု endpoint များကို ဖော်ပြထားပြီး၊ စက်ဖြင့် ဖတ်ရှုနိုင်သော [`docs/openapi.yaml`](../openapi.yaml) နှင့် `src/app/api/` အောက်ရှိ route tree တို့သည် အပြည့်အစုံပါဝင်သော အရင်းအမြစ်များဖြစ်သည်။
 
 OpenAI နှင့် ကိုက်ညီသော protocol နှင့် provider စွမ်းဆောင်ရည် matrix ကို အသေးစိတ်လေ့လာရန်
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md) ကို ကြည့်ပါ။
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Response  | `HIT` သို့မဟုတ် `MISS` (streaming မဟုတ်သည့်အခါ)                                                                                                                                                                                                                   |
 | `X-OmniRoute-Idempotent` | Response  | ထပ်တူဖယ်ရှားထားပါက `true`                                                                                                                                                                                                                                         |
 | `X-OmniRoute-Progress`   | Response  | တိုးတက်မှုခြေရာခံခြင်း ဖွင့်ထားပါက `enabled`                                                                                                                                                                                                                      |
-| `X-OmniRoute-Session-Id` | Response  | OmniRoute အသုံးပြုခဲ့သည့် အကျိုးသက်ရောက်သော session ID                                                                                                                                                                                                            |
+| `X-OmniRoute-Session-Id` | Response  | 67router အသုံးပြုခဲ့သည့် အကျိုးသက်ရောက်သော session ID                                                                                                                                                                                                             |
 | `X-OmniRoute-Request-Id` | Response  | Request ဆက်စပ်ဖော်ထုတ်ရေး id (သိရှိသည့်အခါ)                                                                                                                                                                                                                       |
-| `X-OmniRoute-Version`    | Response  | OmniRoute build version (အမြဲပါရှိသည်)                                                                                                                                                                                                                            |
+| `X-OmniRoute-Version`    | Response  | 67router build version (အမြဲပါရှိသည်)                                                                                                                                                                                                                             |
 | `X-OmniRoute-Cost-Saved` | Response  | HIT တစ်ခုတွင် cache ကြောင့် ရှောင်ရှားနိုင်ခဲ့သော USD ကုန်ကျစရိတ် (cache hit များအတွက်သာ)                                                                                                                                                                         |
 | `X-OmniRoute-Decision`   | Response  | Routing trace: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` သည် combo strategy ဖြစ်ပြီး combo မဟုတ်သော request အတွက် `single` ဖြစ်သည်) — ပြီးစီးမှု response များတွင် အမြဲပါရှိသည်                                                               |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### တောင်းဆိုမှုတစ်ခုချင်းအလိုက် အကောင့်ကို ပင်တွဲသတ်မှတ်ခြင်း
 
-ပံ့ပိုးသူတစ်ခုတွင် ချိတ်ဆက်မှုများ (အကောင့်များ သို့မဟုတ် key များ) အများအပြားရှိသည့်အခါ OmniRoute သည် ပုံမှန်အားဖြင့် ၎င်း၏ အကောင့်ရွေးချယ်မှု နည်းဗျူဟာမှတစ်ဆင့် ချိတ်ဆက်မှုတစ်ခုကို
+ပံ့ပိုးသူတစ်ခုတွင် ချိတ်ဆက်မှုများ (အကောင့်များ သို့မဟုတ် key များ) အများအပြားရှိသည့်အခါ 67router သည် ပုံမှန်အားဖြင့် ၎င်း၏ အကောင့်ရွေးချယ်မှု နည်းဗျူဟာမှတစ်ဆင့် ချိတ်ဆက်မှုတစ်ခုကို
 ရွေးချယ်သည်။ သို့သော် တောင်းဆိုမှုတစ်ခုသည် `x-omniroute-connection` header ကို အသုံးပြု၍
 သီးခြားချိတ်ဆက်မှုတစ်ခုကို ပင်တွဲသတ်မှတ်နိုင်သည်-
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ Claude Code သည် စိတ်ကြိုက် header များကိ�
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -139,7 +139,7 @@ Claude Code သည် စိတ်ကြိုက် header များကိ�
 
 ## သီးသန့် စီမံခန့်ခွဲထားသော စက်ရှင် ငှားရမ်းခွင့်များ
 
-သီးသန့် စီမံခန့်ခွဲထားသော စက်ရှင် ငှားရမ်းခြင်းသည် အသုံးပြုရန် ကိုယ်တိုင်ရွေးချယ်ရပြီး client နှင့်မသက်ဆိုင်သော routing သဘောတူညီချက်တစ်ခုဖြစ်သည်။ လက်ရှိအသုံးပြုနေသော ပိုင်ရှင်တစ်ဦးသည် သတ်မှတ်ချက်ပြည့်မီသော OmniRoute ချိတ်ဆက်မှုတစ်ခုကို ကိုင်ထားသည်။ ၎င်းသည် model တစ်ခုကို ငှားရမ်းခြင်းမဟုတ်သကဲ့သို့ OAuth ကိုလည်း မလိုအပ်ပါ၊ သီးခြား client တစ်ခုကိုလည်း သတ်မှတ်ဖော်ထုတ်ခြင်းမရှိပါ၊ သီးခြား provider တစ်ခုကိုလည်း မလိုအပ်ပါ။
+သီးသန့် စီမံခန့်ခွဲထားသော စက်ရှင် ငှားရမ်းခြင်းသည် အသုံးပြုရန် ကိုယ်တိုင်ရွေးချယ်ရပြီး client နှင့်မသက်ဆိုင်သော routing သဘောတူညီချက်တစ်ခုဖြစ်သည်။ လက်ရှိအသုံးပြုနေသော ပိုင်ရှင်တစ်ဦးသည် သတ်မှတ်ချက်ပြည့်မီသော 67router ချိတ်ဆက်မှုတစ်ခုကို ကိုင်ထားသည်။ ၎င်းသည် model တစ်ခုကို ငှားရမ်းခြင်းမဟုတ်သကဲ့သို့ OAuth ကိုလည်း မလိုအပ်ပါ၊ သီးခြား client တစ်ခုကိုလည်း သတ်မှတ်ဖော်ထုတ်ခြင်းမရှိပါ၊ သီးခြား provider တစ်ခုကိုလည်း မလိုအပ်ပါ။
 
 စစ်မှန်ကြောင်းအတည်ပြုရာတွင် အသုံးပြုသော API key တွင် `lease:exclusive` scope နှင့် ပြတ်သားစွာ သတ်မှတ်ထားသော ဗလာမဟုတ်သည့် `allowedConnections` စာရင်း ရှိရမည်။ Database mutation boundary သည် key ဖန်တီးချိန်နှင့် တစ်စိတ်တစ်ပိုင်း update လုပ်ချိန် နှစ်ခုစလုံးတွင် အဆိုပါ field နှစ်ခုကို တွဲဖက်၍ မဖြစ်မနေ လိုက်နာစေသည်။
 
@@ -182,7 +182,7 @@ X-OmniRoute-Lease-Owner: vlo_<43-base64url-characters>
 }
 ```
 
-ဤကိုယ်တိုင်ရွေးချယ်အသုံးပြုရသော status action ကို ခွဲခြားမသိနိုင်သည့် owner၊ စစ်မှန်ကြောင်း အတည်ပြုထားသော managed API key နှင့် တိကျသော လက်ရှိအသုံးပြုနေသည့် generation တို့ဖြင့် database transaction တစ်ခုတည်းအတွင်း ကန့်သတ်ထားသည်။ `displayName` သည် အစနှင့်အဆုံးရှိ whitespace များကို ဖယ်ရှားထားသော သတ်မှတ်ချိတ်ဆက်မှုအမည်သာဖြစ်ပြီး လုံခြုံစွာ သတ်မှတ်ထားသော အမည်မရှိပါက `null` ဖြစ်သည်။ OmniRoute သည် email သို့မဟုတ် စနစ်က ထုတ်လုပ်ထားသော account identity ကို မည်သည့်အခါမျှ အစားထိုးအသုံးမပြုပါ။ Provider value သည် အရေးကြီးအချက်အလက် မပါဝင်သော display label တစ်ခုဖြစ်ပြီး စနစ်က ထုတ်လုပ်ထားသော compatible-provider identifier လုံးဝမဟုတ်ပါ။ Credential များ၊ token များ၊ cookie များ၊ မပြုပြင်ရသေးသော connection သို့မဟုတ် API key id များ၊ owner hash များ၊ fencing secret များနှင့် အတွင်းပိုင်း routing data တို့ကို ဖယ်ထုတ်ထားသည်။
+ဤကိုယ်တိုင်ရွေးချယ်အသုံးပြုရသော status action ကို ခွဲခြားမသိနိုင်သည့် owner၊ စစ်မှန်ကြောင်း အတည်ပြုထားသော managed API key နှင့် တိကျသော လက်ရှိအသုံးပြုနေသည့် generation တို့ဖြင့် database transaction တစ်ခုတည်းအတွင်း ကန့်သတ်ထားသည်။ `displayName` သည် အစနှင့်အဆုံးရှိ whitespace များကို ဖယ်ရှားထားသော သတ်မှတ်ချိတ်ဆက်မှုအမည်သာဖြစ်ပြီး လုံခြုံစွာ သတ်မှတ်ထားသော အမည်မရှိပါက `null` ဖြစ်သည်။ 67router သည် email သို့မဟုတ် စနစ်က ထုတ်လုပ်ထားသော account identity ကို မည်သည့်အခါမျှ အစားထိုးအသုံးမပြုပါ။ Provider value သည် အရေးကြီးအချက်အလက် မပါဝင်သော display label တစ်ခုဖြစ်ပြီး စနစ်က ထုတ်လုပ်ထားသော compatible-provider identifier လုံးဝမဟုတ်ပါ။ Credential များ၊ token များ၊ cookie များ၊ မပြုပြင်ရသေးသော connection သို့မဟုတ် API key id များ၊ owner hash များ၊ fencing secret များနှင့် အတွင်းပိုင်း routing data တို့ကို ဖယ်ထုတ်ထားသည်။
 
 မှားယွင်းသော key၊ မှားယွင်းသော owner၊ သက်တမ်းမမီတော့သော generation၊ မရှိသော၊ သက်တမ်းကုန်သော၊ release လုပ်ထားသောနှင့် invalid ဖြစ်သွားသော lookup များအားလုံးသည် connection metadata မပါဘဲ တူညီသော `409 LEASE_FENCE_STALE` error ကို ပြန်ပေးသည်။ Capacity-wait response ကို လက်ခံရရှိထားသော client တွင် စစ်ဆေးနိုင်သည့် လက်ရှိ binding မရှိပါ။ Routing က လက်ရှိအသုံးပြုနေသော lease တစ်ခုကို ပြောင်းလဲပေးသောအခါ တူညီသည့် generation သည် ဆက်လက်အကျုံးဝင်ပြီး status သည် binding အသစ်ကို atomic နည်းလမ်းဖြင့် ပြန်ပေးကာ အဟောင်းကို မည်သည့်အခါမျှ ပြန်မပေးပါ။ Acquire၊ renew၊ release နှင့် waiting response များသည် ၎င်းတို့၏ ယခင်ဖွဲ့စည်းပုံများအတိုင်း ဆက်ရှိနေသောကြောင့် ရှိပြီးသား client များမှာ မပြောင်းလဲပါ။
 
@@ -208,7 +208,7 @@ X-OmniRoute-Lease-Generation: 1
 }
 ```
 
-ဤ response သည် ပုံမှန်အကျုံးဝင်သောအစုမှာ ဗလာမဟုတ်ဘဲ လွတ်နေသော candidate အားလုံးကို အခြားသူပိုင် လက်ရှိအသုံးပြုနေသည့် lease များက ကိုင်ထားကြောင်းကိုသာ ဆိုလိုသည်။ ပံ့ပိုးမထားသော model/provider များ၊ policy မကိုက်ညီမှု၊ cooldown၊ quota၊ health နှင့် အခြားပုံမှန် eligibility failure များသည် ၎င်းတို့၏ ရှိပြီးသား OmniRoute response များကို ဆက်လက်ထိန်းသိမ်းထားသည်။
+ဤ response သည် ပုံမှန်အကျုံးဝင်သောအစုမှာ ဗလာမဟုတ်ဘဲ လွတ်နေသော candidate အားလုံးကို အခြားသူပိုင် လက်ရှိအသုံးပြုနေသည့် lease များက ကိုင်ထားကြောင်းကိုသာ ဆိုလိုသည်။ ပံ့ပိုးမထားသော model/provider များ၊ policy မကိုက်ညီမှု၊ cooldown၊ quota၊ health နှင့် အခြားပုံမှန် eligibility failure များသည် ၎င်းတို့၏ ရှိပြီးသား 67router response များကို ဆက်လက်ထိန်းသိမ်းထားသည်။
 
 ### `x-omniroute-compression`
 
@@ -280,7 +280,7 @@ EmbeddingsV5Request document များကိုလည်း လက်ခံ�
 ```
 
 မူရင်း `{ image | audio | video | pdf }` တန်ဖိုးများသည် အများပြည်သူ အသုံးပြုနိုင်သော HTTPS URL၊ `data:` URI သို့မဟုတ် မူရင်း
-base64 ဖြစ်နိုင်သည်။ OmniRoute သည် ထို object များကို string အဖြစ် မပြောင်းသကဲ့သို့ မူရင်း image URL များကိုလည်း ရယူခြင်းမပြုပါ — Jina က
+base64 ဖြစ်နိုင်သည်။ 67router သည် ထို object များကို string အဖြစ် မပြောင်းသကဲ့သို့ မူရင်း image URL များကိုလည်း ရယူခြင်းမပြုပါ — Jina က
 အများပြည်သူ အသုံးပြုနိုင်သော media ကို ကိုယ်တိုင်ရယူသည်။ ထပ်ဆောင်း Jina field များ (`task`, `normalized`, `truncate`, `embedding_type`) ကို
 တိုက်ရိုက်ပေးပို့သည်။ Text-only Jina SKU များသည် text မဟုတ်သော document များကို ဆက်လက်ငြင်းပယ်သည်။
 
@@ -429,7 +429,7 @@ poll မလုပ်ပါ)၊ သတ်မှတ်ထားသော ကြိ
 
 ### Vertex AI DeepSeek OCR auth နှင့် endpoint ဖြေရှင်းသတ်မှတ်ခြင်း
 
-`vertex-deepseek-ocr` သည် chat/image traffic အတွက် OmniRoute က ပံ့ပိုးထားပြီးဖြစ်သော တူညီသည့် Vertex AI authentication
+`vertex-deepseek-ocr` သည် chat/image traffic အတွက် 67router က ပံ့ပိုးထားပြီးဖြစ်သော တူညီသည့် Vertex AI authentication
 (`open-sse/executors/vertex.ts`) ကို ပြန်လည်အသုံးပြုသည်။ Connection ၏ API key သည်
 Service Account JSON credential (JWT-bearer
 flow မှတစ်ဆင့် သက်တမ်းတို OAuth access token တစ်ခုနှင့် လဲလှယ်သည်) သို့မဟုတ် အသင့်ထုတ်ပေးပြီးသား OAuth access token တစ်ခုဖြစ်ပြီး ထိုအတိုင်း အသုံးပြုသည်။ Upstream endpoint URL သည် Vertex ၏
@@ -453,7 +453,7 @@ Authorization: Bearer your-api-key
 
 ### မော်ဒယ်စျေးနှုန်းများ (`pricing`)
 
-OmniRoute က မော်ဒယ်၏စျေးနှုန်းကို သိရှိထားသည့်အခါ entry တစ်ခုတွင် `pricing` object ပါဝင်သည်။ စျေးနှုန်းသည် ကုန်ကျစရိတ်စာရင်းကိုင်ရာတွင် အသုံးပြုသည့် pricing table မှ ရရှိသည်- built-in မူလသတ်မှတ်ချက်များ၊ sync လုပ်ထားသောစျေးနှုန်းများနှင့် `/api/pricing` မှတစ်ဆင့် သတ်မှတ်ထားသော override များ ဖြစ်သည်။ ၎င်းတို့သည် စာရင်းစျေးနှုန်းများဖြစ်သောကြောင့် subscription provider များတွင်လည်း token တစ်ခုချင်းစီအလိုက် စျေးနှုန်းကို ပြသသည်။
+67router က မော်ဒယ်၏စျေးနှုန်းကို သိရှိထားသည့်အခါ entry တစ်ခုတွင် `pricing` object ပါဝင်သည်။ စျေးနှုန်းသည် ကုန်ကျစရိတ်စာရင်းကိုင်ရာတွင် အသုံးပြုသည့် pricing table မှ ရရှိသည်- built-in မူလသတ်မှတ်ချက်များ၊ sync လုပ်ထားသောစျေးနှုန်းများနှင့် `/api/pricing` မှတစ်ဆင့် သတ်မှတ်ထားသော override များ ဖြစ်သည်။ ၎င်းတို့သည် စာရင်းစျေးနှုန်းများဖြစ်သောကြောင့် subscription provider များတွင်လည်း token တစ်ခုချင်းစီအလိုက် စျေးနှုန်းကို ပြသသည်။
 
 ```json
 "pricing": {
@@ -585,7 +585,7 @@ sidecar တစ်ခုသည် process ပြင်ပတွင် အလု�
 
 ## ElevenLabs အသံထုတ်လုပ်ခြင်း
 
-သင်၏ ElevenLabs API key ဖြင့် OmniRoute တွင် `elevenlabs` provider connection တစ်ခုကို configure လုပ်ပါ။ Client များသည် ၎င်းတို့၏ **OmniRoute** key (`Authorization: Bearer $OMNIROUTE_API_KEY`) ဖြင့် authentication လုပ်ပြီး gateway က သိမ်းဆည်းထားသော provider key ကို `xi-api-key` အဖြစ် ပေးပို့သည်။ ElevenLabs key ကို gateway bearer token အဖြစ် မည်သည့်အခါမျှ မပို့ပါနှင့်။
+သင်၏ ElevenLabs API key ဖြင့် 67router တွင် `elevenlabs` provider connection တစ်ခုကို configure လုပ်ပါ။ Client များသည် ၎င်းတို့၏ **67router** key (`Authorization: Bearer $OMNIROUTE_API_KEY`) ဖြင့် authentication လုပ်ပြီး gateway က သိမ်းဆည်းထားသော provider key ကို `xi-api-key` အဖြစ် ပေးပို့သည်။ ElevenLabs key ကို gateway bearer token အဖြစ် မည်သည့်အခါမျှ မပို့ပါနှင့်။
 
 | Method | Path                        | တုံ့ပြန်မှု                                   | API key endpoint အမျိုးအစား |
 | ------ | --------------------------- | --------------------------------------------- | --------------------------- |
@@ -628,7 +628,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
   -d '{"model":"elevenlabs/music_v1","prompt":"Gentle instrumental piano","duration":10,"instrumental":true}'
 ```
 
-Upstream call တစ်ခုမပြုလုပ်မီ endpoint၊ model၊ budget နှင့် connection ကန့်သတ်ချက်များကို သက်ရောက်စေသည်။ မူရင်း route များသည် plan ကန့်သတ်ချက်အတွက် `402` နှင့် quota ကန့်သတ်ချက်အတွက် `429` အပါအဝင် upstream status code များနှင့် error body များကို မပြောင်းလဲဘဲ ပြန်ပေးသည်။ ရှိပါက `character-cost`၊ `song-id`၊ `request-id` နှင့် `retry-after` header များကို ထိန်းသိမ်းထားသည်။ အခမဲ့ credit လက်ကျန်ရှိခြင်းသည် music model၊ output format သို့မဟုတ် API feature အားလုံးကို အသုံးပြုခွင့်ရမည်ဟု အာမမခံပါ။ Request တစ်ခုချင်းစီအတွက် အသုံးပြုခွင့်ကို ElevenLabs က ဆုံးဖြတ်သည်။ ပေါင်းစည်းထားသော endpoint သည် OmniRoute ၏ normalized error envelope အတွင်း error status code များကို ထိန်းသိမ်းထားသည်။
+Upstream call တစ်ခုမပြုလုပ်မီ endpoint၊ model၊ budget နှင့် connection ကန့်သတ်ချက်များကို သက်ရောက်စေသည်။ မူရင်း route များသည် plan ကန့်သတ်ချက်အတွက် `402` နှင့် quota ကန့်သတ်ချက်အတွက် `429` အပါအဝင် upstream status code များနှင့် error body များကို မပြောင်းလဲဘဲ ပြန်ပေးသည်။ ရှိပါက `character-cost`၊ `song-id`၊ `request-id` နှင့် `retry-after` header များကို ထိန်းသိမ်းထားသည်။ အခမဲ့ credit လက်ကျန်ရှိခြင်းသည် music model၊ output format သို့မဟုတ် API feature အားလုံးကို အသုံးပြုခွင့်ရမည်ဟု အာမမခံပါ။ Request တစ်ခုချင်းစီအတွက် အသုံးပြုခွင့်ကို ElevenLabs က ဆုံးဖြတ်သည်။ ပေါင်းစည်းထားသော endpoint သည် 67router ၏ normalized error envelope အတွင်း error status code များကို ထိန်းသိမ်းထားသည်။
 
 Upstream contract များ- [sound effect များ](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert)၊ [တေးဂီတဖွဲ့စည်းမှု](https://elevenlabs.io/docs/api-reference/music/compose) နှင့် [streaming တေးဂီတအသေးစိတ်များ](https://elevenlabs.io/docs/api-reference/music/compose-detailed-stream)။
 
@@ -667,7 +667,7 @@ Upstream contract များ- [sound effect များ](https://elevenlabs.i
 
 POST route အားလုံးသည် တူညီသောပုံစံကို လိုက်နာသည်- `Bearer your-api-key` + Zod ဖြင့် အတည်ပြုထားသော JSON body (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` စသည်တို့၊ `src/shared/validation/schemas.ts` ကို ကြည့်ပါ)။ Schema အတည်ပြုမှု မအောင်မြင်ပါက 4xx ကို ပြန်ပေးသည်။
 
-`Authorization: Bearer ...` ကို ထည့်သွင်း၍မရသော client များအတွက် OmniRoute သည် query-string လိုက်ဖက်ညီမှု (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) သို့မဟုတ် အောက်တွင် မှတ်တမ်းတင်ထားသော သီးသန့် `/api/v1/vscode/{token}/...` endpoint များမှတစ်ဆင့် URL ထဲရှိ API key များကိုလည်း လက်ခံသည်။
+`Authorization: Bearer ...` ကို ထည့်သွင်း၍မရသော client များအတွက် 67router သည် query-string လိုက်ဖက်ညီမှု (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) သို့မဟုတ် အောက်တွင် မှတ်တမ်းတင်ထားသော သီးသန့် `/api/v1/vscode/{token}/...` endpoint များမှတစ်ဆင့် URL ထဲရှိ API key များကိုလည်း လက်ခံသည်။
 
 ```bash
 # Rerank (cloud registry provider သို့မဟုတ် "<prefix>/<model>" ပုံစံ OpenAI-compatible provider node)
@@ -829,7 +829,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract) မှ
 Parallel Extract (`parallel-search`, Parallel Search နှင့် API key တူညီသည်) သည် Markdown
 ကိုသာ ပြန်ပေးသည် — အခြားမည်သည့် `format` မဆို `400` ဖြစ်မည် — ထို့ပြင် အကြောင်းအရာကို စာလုံးရေ 100,000 အထိ ကန့်သတ်ထားသည်။ ပစ်မှတ်စာမျက်နှာကိုယ်တိုင်ကို
 ထုတ်ယူ၍မရသည့်အခါ upstream က ၎င်းကို HTTP 200 အတွင်း ထည့်သွင်းဖော်ပြသည်၊
-OmniRoute ကမူ ၎င်းကို ပုံသေမက်ဆေ့ချ်နှင့်အတူ `422` အဖြစ် ဖော်ပြသည်။
+67router ကမူ ၎င်းကို ပုံသေမက်ဆေ့ချ်နှင့်အတူ `422` အဖြစ် ဖော်ပြသည်။
 
 | နည်းလမ်း | လမ်းကြောင်း     | ဖော်ပြချက်                                                                  |
 | -------- | --------------- | --------------------------------------------------------------------------- |
@@ -892,7 +892,7 @@ Quota-share routing အတွက် `model: "qtSd/<group>/codex/<model>"` ကိ
 OpenAI **Codex CLI** သည် `supports_websockets = true` ဖြစ်သည့်အခါ model အမည်ကို client ဘက်တွင် အတည်ပြုပြီး
 `codex/gpt-5.5` ကဲ့သို့ **provider prefix ပါသော ID များကို ငြင်းပယ်သည်**
 (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`)။ **prefix မပါသော** ID ကို ပေးပို့ပါ (ဥပမာ `gpt-5.5`)။ OmniRoute ၏ bridge သည်
+a ChatGPT account`)။ **prefix မပါသော** ID ကို ပေးပို့ပါ (ဥပမာ `gpt-5.5`)။ 67router ၏ bridge သည်
 codex သီးသန့်ဖြစ်သောကြောင့် upstream သို့ tunnel မပြုလုပ်မီ prefix မပါသော ID ကို codex model တစ်ခုအဖြစ်
 (`resolveCodexWsModelInfo`) ပြန်လည်ဖြေရှင်းသတ်မှတ်သည် — prefix မပါသော
 `gpt-5.5` သည် HTTP မှတစ်ဆင့်ဆိုလျှင် အခြား provider တစ်ခုသို့ route လုပ်မည်ဖြစ်သော်လည်း ထိုသို့ ဆောင်ရွက်ခြင်းဖြစ်သည်။
@@ -900,7 +900,7 @@ codex သီးသန့်ဖြစ်သောကြောင့် upstream �
 #### OpenAI Codex CLI ကို စီစဉ်သတ်မှတ်ခြင်း
 
 `~/.codex/config.toml` တွင် WebSocket
-ပံ့ပိုးမှုပါသည့် custom provider တစ်ခု ထည့်ခြင်းဖြင့် Codex CLI ကို OmniRoute သို့ ညွှန်ပါ (ရှိပြီးသား config ကို
+ပံ့ပိုးမှုပါသည့် custom provider တစ်ခု ထည့်ခြင်းဖြင့် Codex CLI ကို 67router သို့ ညွှန်ပါ (ရှိပြီးသား config ကို
 မထိခိုက်စေရန် သီးခြား `CODEX_HOME` တစ်ခုကို အသုံးပြုပါ)-
 
 ```toml
@@ -912,15 +912,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # နောက်ဆုံး slash မပါရ၊ WS URL ကို ဆင်းသက်ဖန်တီးသည် (production တွင် https/wss ကို အသုံးပြုပါ)
 wire_api = "responses"                    # Feb 2026 မှစ၍ ပံ့ပိုးသည့် တစ်ခုတည်းသော တန်ဖိုး
 supports_websockets = true                # Responses-over-WS transport ကို ဖွင့်ပေးသည်
-env_key = "OMNIROUTE_API_KEY"             # OmniRoute API key (Bearer) ကို သိမ်းဆည်းထားသည်
+env_key = "OMNIROUTE_API_KEY"             # 67router API key (Bearer) ကို သိမ်းဆည်းထားသည်
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API key တစ်ခု (REQUIRE_API_KEY=false ဖြစ်ပါက မည်သည့် key မဆို)
+export OMNIROUTE_API_KEY=sk-...           # 67router API key တစ်ခု (REQUIRE_API_KEY=false ဖြစ်ပါက မည်သည့် key မဆို)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI သည် `base_url + /responses` ကို WebSocket သို့ upgrade လုပ်ပြီး OmniRoute က ၎င်းကို
+CLI သည် `base_url + /responses` ကို WebSocket သို့ upgrade လုပ်ပြီး 67router က ၎င်းကို
 ရွေးချယ်ထားသော codex OAuth connection သို့ tunnel ပြုလုပ်သည်။ Local
 server နှင့် အစမှအဆုံး အတည်ပြုစမ်းသပ်ထားသည်- ChatGPT သည် `codex.rate_limits` + `response.created` ကို ပြန်ပေးပြီး
 completion ကို stream လုပ်သည်။
@@ -1004,7 +1004,7 @@ manager က key တစ်ခုချင်းစီအလိုက် ပြေ
 
 #### ဖြတ်တောက်မှု ချိန်ညှိခြင်း ဖော်မြူလာ
 
-OmniRoute သည် upstream ကုန်ဆုံးမှုကို ကာကွယ်ရန် ကြိုတင်လုပ်ဆောင်သော ကန့်သတ်ပမာဏ ဖြတ်တောက်မှုများကို ပံ့ပိုးသည် (connection
+67router သည် upstream ကုန်ဆုံးမှုကို ကာကွယ်ရန် ကြိုတင်လုပ်ဆောင်သော ကန့်သတ်ပမာဏ ဖြတ်တောက်မှုများကို ပံ့ပိုးသည် (connection
 `quotaWindowThresholds`၊ provider မူလသတ်မှတ်ချက်များ သို့မဟုတ် ကမ္ဘာလုံးဆိုင်ရာ resilience setting များမှတစ်ဆင့် သတ်မှတ်သည်)။ ကန့်သတ်ပမာဏ window တစ်ခုတွင် ဖြတ်တောက်သတ်မှတ်ချက်
 (ဥပမာ၊ `cutoff = 25%`) ကို အသက်သွင်းထားသောအခါ text renderer သည် ကျန်ရှိသော ပမာဏကို အောက်ပါအတိုင်း တွက်ချက်သည်-
 
@@ -1552,7 +1552,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - Token ပါဝင်သော alias များသည် `/v1/*` နှင့် `/api/tags` တို့ကဲ့သို့ တူညီသော handler များကို ပြန်လည်အသုံးပြုသောကြောင့် တုံ့ပြန်ချက်ပုံစံများသည် တူညီနေမည်ဖြစ်သည်။
 - Client က စိတ်ကြိုက် header များကို ပံ့ပိုးသည့်အခါတိုင်း `Authorization: Bearer ...` ကို ဦးစားပေးအသုံးပြုပါ။
-- URL အခြေပြု token များသည် OmniRoute ပြင်ပရှိ reverse-proxy log များ၊ browser history နှင့် telemetry တို့တွင် ပေါ်လာနိုင်သည်။ ၎င်းတို့ကို ပုံမှန် authentication mode အဖြစ် မသတ်မှတ်ဘဲ လိုက်ဖက်ညီမှုအတွက် ရွေးချယ်စရာတစ်ခုအဖြစ်သာ သတ်မှတ်ပါ။
+- URL အခြေပြု token များသည် 67router ပြင်ပရှိ reverse-proxy log များ၊ browser history နှင့် telemetry တို့တွင် ပေါ်လာနိုင်သည်။ ၎င်းတို့ကို ပုံမှန် authentication mode အဖြစ် မသတ်မှတ်ဘဲ လိုက်ဖက်ညီမှုအတွက် ရွေးချယ်စရာတစ်ခုအဖြစ်သာ သတ်မှတ်ပါ။
 
 ---
 
@@ -1660,7 +1660,7 @@ Architecture အပြည့်အစုံ ကိုးကားချက်- [
 
 ## ဝဘ်ဟွတ်များ
 
-OmniRoute ဖြစ်ရပ်များ (တောင်းဆိုမှု ပြီးဆုံးခြင်း၊ ခွဲတမ်း ကုန်ဆုံးခြင်း၊ သော့ လှည့်ပြောင်းခြင်း စသည်) အတွက် အပြင်သို့ပို့သော ဝဘ်ဟွတ် စာရင်းသွင်းမှုများ။
+67router ဖြစ်ရပ်များ (တောင်းဆိုမှု ပြီးဆုံးခြင်း၊ ခွဲတမ်း ကုန်ဆုံးခြင်း၊ သော့ လှည့်ပြောင်းခြင်း စသည်) အတွက် အပြင်သို့ပို့သော ဝဘ်ဟွတ် စာရင်းသွင်းမှုများ။
 
 | နည်းလမ်း | လမ်းကြောင်း               | ဖော်ပြချက်                                                                               |
 | -------- | ------------------------- | ---------------------------------------------------------------------------------------- |
@@ -1693,7 +1693,7 @@ OmniRoute ဖြစ်ရပ်များ (တောင်းဆိုမှ�
 
 ## Agent များဆိုင်ရာ ပရိုတိုကော
 
-OmniRoute အသုံးပြုသူများကိုယ်စား အဝေးမှ လုပ်ဆောင်သည့် cloud agent လုပ်ဆောင်ချက်များ (Claude Code, Codex Cloud, OpenHands စသည်တို့)။
+67router အသုံးပြုသူများကိုယ်စား အဝေးမှ လုပ်ဆောင်သည့် cloud agent လုပ်ဆောင်ချက်များ (Claude Code, Codex Cloud, OpenHands စသည်တို့)။
 
 | မက်သဒ် | လမ်းကြောင်း                   | ဖော်ပြချက်                                                                                                                                                                                  |
 | ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1739,7 +1739,7 @@ Provider များ၊ account များ သို့မဟုတ် ကမ
 
 ## ခံနိုင်ရည်ရှိမှု (တိုးချဲ့ဖော်ပြချက်)
 
-OmniRoute သည် သီးခြားလွတ်လပ်သော ယာယီချို့ယွင်းမှု ကိုင်တွယ်ရေးယန္တရား သုံးမျိုးကို ပံ့ပိုးထားပါသည်။ အောက်ပါ စီမံခန့်ခွဲမှု endpoint များမှတစ်ဆင့် အော်ပရေတာများသည် ၎င်းတို့၏အခြေအနေကို ဖတ်ရှုနိုင်ပြီး သတ်မှတ်ချက်များကို အစားထိုးပြင်ဆင်နိုင်ပါသည်-
+67router သည် သီးခြားလွတ်လပ်သော ယာယီချို့ယွင်းမှု ကိုင်တွယ်ရေးယန္တရား သုံးမျိုးကို ပံ့ပိုးထားပါသည်။ အောက်ပါ စီမံခန့်ခွဲမှု endpoint များမှတစ်ဆင့် အော်ပရေတာများသည် ၎င်းတို့၏အခြေအနေကို ဖတ်ရှုနိုင်ပြီး သတ်မှတ်ချက်များကို အစားထိုးပြင်ဆင်နိုင်ပါသည်-
 
 | အတိုင်းအတာ           | အခြေအနေသိုလှောင်မှု                                | ဖတ်ရှုရန်                                 | ပြန်လည်သတ်မှတ်ရန် / ရှင်းလင်းရန်                                            |
 | -------------------- | -------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------- |
@@ -1774,7 +1774,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## စွမ်းရည်များ
 
-OmniRoute ကို စိတ်ကြိုက် လုပ်ဆောင်နိုင်သော handler များဖြင့် တိုးချဲ့ရန် စွမ်းရည် framework နှင့် marketplace ပေါင်းစည်းမှုများ။
+67router ကို စိတ်ကြိုက် လုပ်ဆောင်နိုင်သော handler များဖြင့် တိုးချဲ့ရန် စွမ်းရည် framework နှင့် marketplace ပေါင်းစည်းမှုများ။
 
 | နည်းလမ်း | လမ်းကြောင်း                       | ဖော်ပြချက်                                                                                                                                                       |
 | -------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1811,7 +1811,7 @@ API key / session တစ်ခုချင်းအလိုက် နယ်ပ�
 
 ## MCP ဆာဗာ
 
-OmniRoute တွင် transport 3 မျိုး (stdio, SSE, streamable-http) နှင့် နယ်ပယ်သတ်မှတ်ထားသော ကိရိယာများပါဝင်သည့် ထည့်သွင်းပေါင်းစပ်ထားသော Model Context Protocol ဆာဗာတစ်ခု ပါရှိသည်။ အောက်ပါ dashboard endpoint များသည် အခြေအနေ/စာရင်းစစ်ဒေတာကို ဖတ်ရှုပြီး HTTP transport များကို proxy ပြုလုပ်သည်။
+67router တွင် transport 3 မျိုး (stdio, SSE, streamable-http) နှင့် နယ်ပယ်သတ်မှတ်ထားသော ကိရိယာများပါဝင်သည့် ထည့်သွင်းပေါင်းစပ်ထားသော Model Context Protocol ဆာဗာတစ်ခု ပါရှိသည်။ အောက်ပါ dashboard endpoint များသည် အခြေအနေ/စာရင်းစစ်ဒေတာကို ဖတ်ရှုပြီး HTTP transport များကို proxy ပြုလုပ်သည်။
 
 | နည်းလမ်း | လမ်းကြောင်း | ဖော်ပြချက် |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1833,7 +1833,7 @@ OmniRoute တွင် transport 3 မျိုး (stdio, SSE, streamable-http)
 
 ## A2A ဆာဗာ
 
-OmniRoute သည် A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint တစ်ခုနှင့် စစ်ဆေးခြင်း/dashboard အသုံးပြုမှုအတွက် REST wrapper တစ်ခုကို ပံ့ပိုးပေးသည်။
+67router သည် A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint တစ်ခုနှင့် စစ်ဆေးခြင်း/dashboard အသုံးပြုမှုအတွက် REST wrapper တစ်ခုကို ပံ့ပိုးပေးသည်။
 
 ### JSON-RPC
 
@@ -2061,7 +2061,7 @@ routing၊ compression နှင့် provider မျိုးစုံအသ�
 
 ## CLI ကိရိယာများ စီမံခန့်ခွဲခြင်း
 
-OmniRoute နှင့် ပေါင်းစပ်အလုပ်လုပ်သည့် CLI ကိရိယာများကို စီမံခန့်ခွဲပါ (antigravity, commandCode,
+67router နှင့် ပေါင်းစပ်အလုပ်လုပ်သည့် CLI ကိရိယာများကို စီမံခန့်ခွဲပါ (antigravity, commandCode,
 devin-cli စသည်တို့)။ စာရင်းအပြည့်အစုံအတွက် [Provider ကိုးကားချက်](./PROVIDER_REFERENCE.md) ကို ကြည့်ပါ။
 
 | နည်းလမ်း | လမ်းကြောင်း                             | ဖော်ပြချက်                                                                                                                                                                                                     |
@@ -2172,7 +2172,7 @@ Skills (agentic extensions မူဘောင်) ကို စီမံခန�
 
 ## Plugins
 
-OmniRoute plugins (ပြင်ပအဖွဲ့အစည်း extensions) ကို စီမံခန့်ခွဲပါ။
+67router plugins (ပြင်ပအဖွဲ့အစည်း extensions) ကို စီမံခန့်ခွဲပါ။
 
 | နည်းလမ်း | လမ်းကြောင်း                        | ဖော်ပြချက်                                    |
 | -------- | ---------------------------------- | --------------------------------------------- |

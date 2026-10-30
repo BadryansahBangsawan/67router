@@ -41,7 +41,7 @@ eller ekstern integrasjon er tilgjengelig for øyeblikket.
 | Tilbud til støttespillere                  | Implementert som en separat signert datastrøm kun for live-nivået og som en side i kontrollpanelet. Klienten validerer det lukkede fordelsskjemaet på nytt, beholder det siste fungerende mellomlageret, filtrerer ut utløpte oppføringer og merker partnertilbud uttrykkelig. |
 | Innsikt og anerkjennelse av støttespillere | Implementert som en streng, signert datastrøm kun for live-nivået, med Radar-eid ELO, faktisk katalogaktualitet/-trend, et verifisert lokalt støttespillermerke, en side i kontrollpanelet og CLI-kommandoer kun for lokal status/synkronisering.                              |
 | Betalinger og transaksjons-e-post          | Ikke implementert i OSS-klienten. Kjøp, donasjon, kvitteringsgjennomgang, gjenoppretting og levering av e-post hører til den private tjenesten; driftet tilgjengelighet avhenger fortsatt av dens overvåkede distribusjon og leverandørkonfigurasjon.                          |
-| Arbeidsstrøm for forskningsagent           | Ikke en del av denne klientutgivelsen. Innholdet i de kuraterte datastrømmene forblir data på serversiden; ingen autonom forskningsagent kjører i en OmniRoute-installasjon.                                                                                                   |
+| Arbeidsstrøm for forskningsagent           | Ikke en del av denne klientutgivelsen. Innholdet i de kuraterte datastrømmene forblir data på serversiden; ingen autonom forskningsagent kjører i en 67router-installasjon.                                                                                                    |
 
 ---
 
@@ -119,7 +119,7 @@ Når begge er slått på, er synkroniseringsforløpet:
    av IP-adressen for manuell misbruksgjennomgang; disse tabellene lagrer verken nøkkelen eller IP-adressen i råformat.
    Tilgangslogger for infrastrukturen og den krypterte leveringsutboksen er separate driftsmessige
    grenser.
-3. OmniRoute sender aldri ledetekster, svar, samtaler, leverandørlegitimasjon, modelltrafikk,
+3. 67router sender aldri ledetekster, svar, samtaler, leverandørlegitimasjon, modelltrafikk,
    oppetid, ventetid eller den lokale leverandørkonfigurasjonen til Radar-tjenesten.
 4. Svaret verifiseres, valideres og bufres lokalt (se
    [Sikkerhetsmodell](#security-model)). Radar har nøyaktig fire nettverksbaner på serversiden:
@@ -243,11 +243,11 @@ som allerede har en nøkkel, aktiverer den.
 ### Ende-til-ende-aktivering og veiledet oppsett
 
 Den private feed-tjenesten og denne OSS-klienten har et bevisst avgrenset grensesnitt: Tjenesten
-utsteder og validerer støttespillernøkkelen, mens den lokale OmniRoute-installasjonen krypterer nøkkelen,
+utsteder og validerer støttespillernøkkelen, mens den lokale 67router-installasjonen krypterer nøkkelen,
 synkroniserer signerte artefakter på serversiden og veileder oppsettet av leverandører. Rekkefølgen for assistert validering er:
 
 1. Skaff en nyutstedt eller gjenopprettet nøkkel fra bidragsyterkravet, plans/checkout, gjenopprettingsprosessen eller en autorisert operatør av en privat server. Ikke lim inn den rå nøkkelen i logger, skjermbilder, sakskommentarer eller kommandolinjeargumenter.
-2. Aktiver funksjonsflagget `RADAR_ENABLED` i den lokale OmniRoute-installasjonen. Dette gjør brukergrensesnittet tilgjengelig, men det forblir nettverksinaktivt til det separate samtykket er lagret.
+2. Aktiver funksjonsflagget `RADAR_ENABLED` i den lokale 67router-installasjonen. Dette gjør brukergrensesnittet tilgjengelig, men det forblir nettverksinaktivt til det separate samtykket er lagret.
 3. Åpne `/dashboard/radar`, lim inn nøkkelen og aktiver. Nettleseren sender én lokal `POST /api/radar/settings` med `{ optIn: true, supporterKey }`; nøkkelen krypteres lokalt, og svaret inneholder bare `omr_****<last4>`.
 4. La aktiveringsskjermen kjøre katalogsynkroniseringen, eller velg **Synkroniser nå**. Bekreft at siden viser `live`, en feedversjon og et hentetidspunkt. For en autentisert lokal diagnose rapporterer `GET /api/radar/status` status for samtykke/nøkkel og de fire hurtigbuffertilstandene uten å returnere nøkkelen. `POST /api/radar/sync-all` kan eksplisitt oppdatere katalog, henvisninger, tilbud og Intel.
 5. Åpne `/dashboard/radar/setup?provider=<provider>`. Følg den leverandøreide URL-en for påloggingsinformasjon, velg **Legg til API-nøkkel**, lagre via det faktiske leverandørskjemaet, gå tilbake til veiledningen og kjør **Test tilkobling**. Veiledningen bruker de vanlige rutene `/api/providers` og `/api/providers/<connection-id>/test`; den oppretter ikke separat påloggingsinformasjon for Radar.
@@ -287,7 +287,7 @@ de synkroniseres på nytt.
 ### Miljøoverstyringer som støtter forgreninger
 
 To miljøvariabler lar forgreninger og de som drifter selv, peke klienten mot sin egen feed i stedet for
-standardtjenesten fra OmniRoute — se
+standardtjenesten fra 67router — se
 [Slik drifter du en feed selv](#how-to-self-host-a-feed) nedenfor:
 
 | Variabel            | Formål                                                                                                                               |
@@ -441,7 +441,7 @@ Feed-verdien `enabled: false` er fortsatt sikkerhetsunntaket: Den vinner over en
 Katalogpubliseringer bruker `schemaVersion: 2`. `contextWindow` og hver av `tools`, `vision` og
 `thinking` er uavhengig av typen `number | null` / `boolean | null`: `null` betyr ukjent, mens
 `false` betyr at en D16-bekreftet offisiell leverandørkilde eksplisitt oppgir at funksjonen mangler.
-Interne flagg fra OmniRoute-registeret eller modellspesifikasjonen oppgraderes aldri direkte til feed-fakta. Klienten
+Interne flagg fra 67router-registeret eller modellspesifikasjonen oppgraderes aldri direkte til feed-fakta. Klienten
 godtar fortsatt v1-øyeblikksbilder. Siden den gamle byggeren brukte `false` som plassholder for fravær, blir `false` i v1
 normalisert til ukjent, mens `true` i v1 fortsatt behandles som et faktum. Ukjente skjemaversjoner avvises sikkert, og den
 siste gyldige hurtigbufferen forblir tilgjengelig. Hver v2-modell med en kontekst-/funksjonsverdi som ikke er null, må ha en
@@ -502,7 +502,7 @@ De lokale Radar-rutefamiliene nedenfor støtter brukergrensesnittet under `src/a
 | `/api/radar/local-model-state` | DELETE | Fjerner redigerbare overstyringsfelt, men bevarer eventuelle gravsteiner.                                                              |
 
 **Ufravikelig regel: Disse rutene fungerer aldri som proxy for datastrømtjenesten.** Nettleseren kommuniserer bare
-med den lokale OmniRoute-serveren. De fire modulene som kommuniserer med Radar-tjenesten, er
+med den lokale 67router-serveren. De fire modulene som kommuniserer med Radar-tjenesten, er
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (henvisninger) og
 `src/lib/radar/offersSync.ts` (tilbud), samt `src/lib/radar/intelSync.ts` (Intel); alle kjører
 på serversiden, aldri på klientsiden. Dette holder
@@ -578,7 +578,7 @@ gjenbruker `token_share`. `/dashboard/radar/intel` viser merket bare basert på 
 buffermetadata.
 
 CLI-et tilbyr `omniroute radar status` og `omniroute radar sync`. Begge kommuniserer bare med det
-lokale OmniRoute-API-et. `status` utfører en skrivebeskyttet `GET /api/radar/status`; `sync` sender én
+lokale 67router-API-et. `status` utfører en skrivebeskyttet `GET /api/radar/status`; `sync` sender én
 `POST /api/radar/sync-all` og skriver ut ett resultat per feed. Ingen av kommandoene leser, godtar
 eller skriver ut støttespillernøkkelen, og ingen av dem kontakter Radar-tjenesten direkte.
 

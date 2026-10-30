@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har tre distinkta men relaterade resiliensmekanismer. Var och en har en egen omfattning och ett eget syfte. Håll dem åtskilda när du felsöker routningsbeteende.
+67router har tre distinkta men relaterade resiliensmekanismer. Var och en har en egen omfattning och ett eget syfte. Håll dem åtskilda när du felsöker routningsbeteende.
 
 ![Resiliensmodell med 3 lager](../diagrams/exported/resilience-3layers.svg)
 
@@ -224,7 +224,7 @@ De tre sessionsaffinitetsheadrarna vidarebefordras aldrig uppströms — exekver
 
 ### Exklusiva anslutningslån för hanterade sessioner
 
-**Omfattning:** en aktiv hanterad HTTP-klient/session äger en kvalificerad OmniRoute-anslutning.
+**Omfattning:** en aktiv hanterad HTTP-klient/session äger en kvalificerad 67router-anslutning.
 
 **Syfte:** tillhandahålla beständigt exklusivt ägarskap av anslutningar för klienter som behöver
 en hård routingbarriär över förfrågningar. Detta skiljer sig från sessionsaffinitet, som är en
@@ -248,7 +248,7 @@ det aktiva anslutnings-ID:t. Lease-kontrollhuvuden tas bort från loggar, kvarh�
 uppströms exekverarhuvuden.
 
 Om vanlig routing har behöriga hanterade kandidater men varje ledig kandidat är upptagen av ett
-främmande aktivt lease, returnerar OmniRoute HTTP `429`, koden lease-capacity-unavailable, tillståndet
+främmande aktivt lease, returnerar 67router HTTP `429`, koden lease-capacity-unavailable, tillståndet
 waiting-for-capacity och ett begränsat `Retry-After` som härleds från den tidigaste relevanta utgångstiden.
 Vanlig tom behörighet är inte lease-konkurrens och behåller sin befintliga routing-felsemantik.
 
@@ -268,7 +268,7 @@ Relaterade mekanismer förblir separata:
 
 - `429` / `403` / `402` — en kvot- eller behörighetssignal — låser **kvotfamiljen**: för codex hela `codex` / `spark`-scopet (alla `gpt-5*`-modeller för anslutningen), för andra providers `getQuotaScopedModelForProvider()`.
 - `404` låser själva modellen (`getModelLockKey()` begränsar `not_found`).
-- Alla övriga statusar — `5xx`-transport-/serverfel och OmniRoutes egen syntetiserade `502` från kvalitetsvalideringen — låser endast den **exakta** provider/connection/model-tupeln. En dålig ström på en modell säger inget om kontots kvot; före den här regeln kunde ett enda tomt svar på `codex/gpt-5.6-luna` ta bort alla `gpt-5*`-modeller för den anslutningen från routing i 2–30 min (eskalerande), medan kvoten var orörd.
+- Alla övriga statusar — `5xx`-transport-/serverfel och 67routers egen syntetiserade `502` från kvalitetsvalideringen — låser endast den **exakta** provider/connection/model-tupeln. En dålig ström på en modell säger inget om kontots kvot; före den här regeln kunde ett enda tomt svar på `codex/gpt-5.6-luna` ta bort alla `gpt-5*`-modeller för den anslutningen från routing i 2–30 min (eskalerande), medan kvoten var orörd.
 - En anropares explicita `scope`-option vinner alltid (Antigravity skickar `"exact"`).
 
 **Syfte:** att undvika att inaktivera en hel anslutning när bara en modell är otillgänglig eller kvotbegränsad.
@@ -391,7 +391,7 @@ Samtidighetstak per modell**, en `model=cap` per rad) eller via
   som positiva heltal.
 - **Lokal köbildning, ingen upptäckt:** överskjutande förfrågningar köar lokalt
   med befintlig kö-/timeout-semantik (typade `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL`-tillträdesfel). OmniRoute upptäcker eller härleder
+  `SEMAPHORE_QUEUE_FULL`-tillträdesfel). 67router upptäcker eller härleder
   inte uppströmspolicy – den upprätthåller exakt de tak som operatören
   konfigurerat. En mättad modellgrind inaktiverar aldrig leverantören och
   skapar aldrig en permanent modellutelåsning; uppströms
@@ -547,7 +547,7 @@ den kan enhetstestas utan en riktig Bottleneck-begränsare.
 ### Säkerhetsnät för automatisk aktivering av hastighetsbegränsning samt anslutningsskydd (`rateLimitProtection`)
 
 **Säkerhetsnät för automatisk aktivering** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, standard `true`):
-Som standard aktiverar OmniRoute automatiskt köskydd för hastighetsbegränsning för alla aktiva API-nyckel-leverantörsanslutningar (`getProviderCategory(provider) === "apikey"`). Detta säkerställer att inkommande förfrågningar till hastighetskänsliga uppströms-API-nycklar köas och stryps via Bottleneck istället för att skickas i skurar som resulterar i uppströms 429-fel. Säkerhetsnätet kan åsidosättas via miljövariabeln `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` inaktiverar, `true`/`1`/`on` tvingar på), vilken har företräde framför den sparade instrumentpanelsinställningen (**Inställningar → Resiliens** / `PATCH /api/resilience`).
+Som standard aktiverar 67router automatiskt köskydd för hastighetsbegränsning för alla aktiva API-nyckel-leverantörsanslutningar (`getProviderCategory(provider) === "apikey"`). Detta säkerställer att inkommande förfrågningar till hastighetskänsliga uppströms-API-nycklar köas och stryps via Bottleneck istället för att skickas i skurar som resulterar i uppströms 429-fel. Säkerhetsnätet kan åsidosättas via miljövariabeln `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` inaktiverar, `true`/`1`/`on` tvingar på), vilken har företräde framför den sparade instrumentpanelsinställningen (**Inställningar → Resiliens** / `PATCH /api/resilience`).
 
 **Semantik för `rateLimitProtection` per anslutning:**
 Hastighetsbegränsningsskydd per anslutning spåras via det booleska fältet `rateLimitProtection` på leverantörsanslutningar (sparat som `rate_limit_protection` i SQLite):
@@ -895,7 +895,7 @@ IP-bucketad rate limit samma signal som en uttömd kvot. Ärliga begränsningar:
 > guiden håller sig inom kontextbudgeten på 40k. Detta är den komprimerade, agentinriktade översikten över
 > avsnitten ovan; de numrerade avsnitten är fortfarande den fullständiga referensen.
 
-OmniRoute har tre relaterade men åtskilda mekanismer för tillfälliga fel. Håll deras
+67router har tre relaterade men åtskilda mekanismer för tillfälliga fel. Håll deras
 omfattning åtskild när du felsöker routningsbeteendet. Se
 [resiliensdiagrammet med tre lager](../diagrams/exported/resilience-3layers.svg)
 (källa: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

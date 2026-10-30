@@ -8,8 +8,8 @@
 > **Emelitere ikpeazụ:** 2026-09-16
 > **Ndị e zubere maka ha:** Ndị injinia na-agbakwunye, na-elekọta, ma ọ bụ na-achọ ma na-edozi nsogbu n’ọrụ ndị agbakwunyere n’ime sistemụ (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Ọrụ ndị agbakwunyere n’ime sistemụ bụ ngwa process sidecar a rụnyere na kọmputa ahụ nke OmniRoute na-arụnye, na-elekọta, ma na-eme ka ha bụrụ ebumnuche routing zuru oke. N’adịghị ka ndị na-eweta ọrụ mpụga (ndị a na-enweta site n’ịntanetị
-site na API keys), ọrụ ndị agbakwunyere n’ime sistemụ na-arụ ọrụ n’otu kọmputa ahụ OmniRoute nọ na ya ma na-ekwurịta okwu site na loopback.
+Ọrụ ndị agbakwunyere n’ime sistemụ bụ ngwa process sidecar a rụnyere na kọmputa ahụ nke 67router na-arụnye, na-elekọta, ma na-eme ka ha bụrụ ebumnuche routing zuru oke. N’adịghị ka ndị na-eweta ọrụ mpụga (ndị a na-enweta site n’ịntanetị
+site na API keys), ọrụ ndị agbakwunyere n’ime sistemụ na-arụ ọrụ n’otu kọmputa ahụ 67router nọ na ya ma na-ekwurịta okwu site na loopback.
 
 ---
 
@@ -34,7 +34,7 @@ E tinyere ọrụ asaa:
 
 | Ọrụ             | Ngwugwu npm                                        | Ọdụ ụgbọ ndabara | Ebumnuche                                                                                                                                                                                                                                                                                                                                                             |
 | --------------- | -------------------------------------------------- | :--------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                          |      20130       | Ihe rawụta AI nke OmniRoute nwere ike iji dịka onye na-eweta ọrụ nọ n'okpuru. A na-ekpughe ụdịdị dịka `9router/{sub}/{model}`                                                                                                                                                                                                                                         |
+| **9Router**     | `9router`                                          |      20130       | Ihe rawụta AI nke 67router nwere ike iji dịka onye na-eweta ọrụ nọ n'okpuru. A na-ekpughe ụdịdị dịka `9router/{sub}/{model}`                                                                                                                                                                                                                                          |
 | **CLIProxyAPI** | Faịlụ binary sitere na GitHub release (`cliproxy`) |       8317       | Ihe nkwụnye proxy mpaghara maka usoro njirimara Anthropic CLI. Ọ na-enye ụzọ ndabere mgbe token OAuth kubie ume                                                                                                                                                                                                                                                       |
 | **Mux**         | `mux` (`mux server` na-enweghị UI)                 |       8322       | Daemon mpaghara maka ịhazi ndị nnọchi anya (coder/mux). Naanị usoro ndụ ya ka a na-achịkwa — ọ bụghị ebe a na-eziga arịrịọ (ọ naghị eme proxy LLM).                                                                                                                                                                                                                   |
 | **Bifrost**     | `@maximhq/bifrost`                                 |       8080       | Backend relay nke ọnụ ụzọ AI e ji Go rụọ. Mgbe ọ na-arụ ọrụ, ụzọ relay (`/v1/relay/`) na-ahọrọ ya na-akpaghị aka                                                                                                                                                                                                                                                      |
@@ -44,21 +44,21 @@ E tinyere ọrụ asaa:
 
 Ha asaa niile na-agbaso otu usoro nlekọta a:
 
-- OmniRoute na-etinye ha n'okpuru `DATA_DIR/services/{name}/` (e kewapụrụ ha na `package.json` nke OmniRoute n'onwe ya)
-- OmniRoute na-amalite ma na-enyocha ha dịka child processes
-- OmniRoute na-etinye igodo API nwa oge n'ime environment nke child process ma na-atụgharị ya n'emeghị ka ọrụ kwụsị (ebe o kwesịrị)
+- 67router na-etinye ha n'okpuru `DATA_DIR/services/{name}/` (e kewapụrụ ha na `package.json` nke 67router n'onwe ya)
+- 67router na-amalite ma na-enyocha ha dịka child processes
+- 67router na-etinye igodo API nwa oge n'ime environment nke child process ma na-atụgharị ya n'emeghị ka ọrụ kwụsị (ebe o kwesịrị)
 - Ụzọ nchịkwa niile (`/api/services/*`) bụ **LOCAL_ONLY** — naanị site na loopback ka a pụrụ iji ha (iwu siri ike #17)
 
 ### Mkpebi ndị bụ isi (sitere na atụmatụ nhazi)
 
-| Mkpebi                                   | Uru                                                                                             |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Dashboard iji nweta UI izizi nke 9Router | Reverse proxy na `/dashboard/providers/services/9router/embed/*`                                |
-| Usoro ntinye                             | `npm install {package}` site na `execFile` (enweghị shell interpolation)                        |
-| Ụdị ojiji                                | E debanyere onye na-eweta ọrụ dịka `9router/{sub}/{model}` n'ime routing engine                 |
-| Nchịkwa igodo API                        | OmniRoute na-emepụta ya, na-ezo ya mgbe echekwara ya (AES-256-GCM), ma na-etinye ya site na env |
-| Ebe dashboard dị                         | `/dashboard/providers/services` (taabụ atọ)                                                     |
-| Mmalite akpaka                           | Toggle maka ọrụ ọ bụla, ndabara bụ OFF                                                          |
+| Mkpebi                                   | Uru                                                                                            |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Dashboard iji nweta UI izizi nke 9Router | Reverse proxy na `/dashboard/providers/services/9router/embed/*`                               |
+| Usoro ntinye                             | `npm install {package}` site na `execFile` (enweghị shell interpolation)                       |
+| Ụdị ojiji                                | E debanyere onye na-eweta ọrụ dịka `9router/{sub}/{model}` n'ime routing engine                |
+| Nchịkwa igodo API                        | 67router na-emepụta ya, na-ezo ya mgbe echekwara ya (AES-256-GCM), ma na-etinye ya site na env |
+| Ebe dashboard dị                         | `/dashboard/providers/services` (taabụ atọ)                                                    |
+| Mmalite akpaka                           | Toggle maka ọrụ ọ bụla, ndabara bụ OFF                                                         |
 
 ---
 
@@ -220,7 +220,7 @@ Arịrịọ ndị na-abụghị loopback na-enweta `403 LOCAL_ONLY` n'agbanyegh
 #### `POST /api/services/9router/install`
 
 Wụnye 9Router site na npm. Ọ na-emepụta `DATA_DIR/services/9router/` nke nwere
-`package.json` na `node_modules/` nke ya. Ọ naghị emegide dependencies nke OmniRoute n'onwe ya.
+`package.json` na `node_modules/` nke ya. Ọ naghị emegide dependencies nke 67router n'onwe ya.
 
 **Ahụ arịrịọ** (ha niile bụ nhọrọ):
 
@@ -381,7 +381,7 @@ A na-echekwa ya n'ụdị ezoro ezo (AES-256-GCM) na tebụl `version_manager`.
 #### `POST /api/services/9router/auto-start`
 
 Gbanwee ọkọlọtọ mmalite akpaka. Mgbe `enabled: true`, ọrụ ahụ ga-amalite n'onwe ya
-oge ọzọ OmniRoute na-ebido (ọ bụrụ na awụnyela ọrụ ahụ).
+oge ọzọ 67router na-ebido (ọ bụrụ na awụnyela ọrụ ahụ).
 
 **Ahụ arịrịọ:**
 
@@ -589,7 +589,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Proxy a:
 
 - Na-ebuga arịrịọ ahụ na `http://127.0.0.1:{port}/{path}` (naanị loopback)
-- Na-ewepụ nkụnyeisi `cookie` na `authorization` ndị batara (enweghị mwepụ ozi session OmniRoute)
+- Na-ewepụ nkụnyeisi `cookie` na `authorization` ndị batara (enweghị mwepụ ozi session 67router)
 - Na-etinye `Authorization: Bearer {apiKey}` maka njirimara 9Router
 - Na-ewepụ `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` na nzaghachi ahụ
 - Na-edegharị nzaghachi HTML iji tinye `<base href>` ma mee ka ụzọ zuru oke bụrụ otu (`/foo` → `/dashboard/.../embed/foo`)
@@ -625,7 +625,7 @@ zuru ezu.
 ### Itinye API key
 
 9Router na Mux chọrọ API key/bearer token maka endpoint HTTP nke ha.
-OmniRoute:
+67router:
 
 1. Na-emepụta key site na `crypto.randomBytes(32).toString("base64url")` nke nwere
    prefix pụrụ iche maka service (`nr_` maka 9Router, `mx_` maka Mux).
@@ -805,7 +805,7 @@ Debanye taabụ ahụ na `ServicesPageShell.tsx`.
 
 1. Lelee `GET /api/services/{name}/logs` (ma ọ bụ ogwe Logs dị na dashboard). Chọọ
    ahịrị dịka `Error: ENOENT`, `address already in use`, ma ọ bụ `Cannot find module`.
-2. Nyochaa na `npm` dị na PATH: jiri `which npm` site n'otu akaụntụ onye ọrụ ahụ na-agba OmniRoute.
+2. Nyochaa na `npm` dị na PATH: jiri `which npm` site n'otu akaụntụ onye ọrụ ahụ na-agba 67router.
 3. Nyochaa na arụnyere ọrụ ahụ: lelee `GET /api/services/{name}/status` maka
    `installedVersion`. Ọ bụrụ na ọ bụ `null`, buru ụzọ mee nrụnye.
 4. Lelee na `DATA_DIR/services/{name}/node_modules/` dị ma ọ bụghị ihe tọgbọ chakoo.
@@ -843,7 +843,7 @@ supervisor ekwupụta na oge agwụla (mana ọ na-aga n'ihu na-enyocha).
 3. Enwere ike ịhazi ọdụ ụgbọ maka ọrụ ọ bụla na `bootstrap.ts` site na oghere `port`.
 
 **Rịba ama:** 9Router na-eji ọdụ ụgbọ 20130 na ndabara kpọmkwem iji zere esemokwu na
-ọdụ ụgbọ ndabara 20128 nke OmniRoute.
+ọdụ ụgbọ ndabara 20128 nke 67router.
 
 ---
 
@@ -853,13 +853,13 @@ supervisor ekwupụta na oge agwụla (mana ọ na-aga n'ihu na-enyocha).
 
 **Ihe kpatara ya:**
 
-- Usoro OmniRoute enweghị ikike ide ihe na `DATA_DIR` ma ọ bụ ndekọ nne na nna ya.
+- Usoro 67router enweghị ikike ide ihe na `DATA_DIR` ma ọ bụ ndekọ nne na nna ya.
 - Ịgba ọsọ n'ime Docker rootless na-enweghị ikike ide ihe na volume e jikọtara.
 
 **Ndozi:**
 
 1. Lelee `DATA_DIR` (ndabara: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Gbaa mbọ hụ na onye ọrụ nke usoro OmniRoute bụ onye nwe ndekọ ahụ: `chown -R $USER ~/.omniroute/`
+2. Gbaa mbọ hụ na onye ọrụ nke usoro 67router bụ onye nwe ndekọ ahụ: `chown -R $USER ~/.omniroute/`
 3. N'ime Docker, gbaa mbọ hụ na volume mount nwere ikike ziri ezi maka onye ọrụ container ahụ.
 
 ---
@@ -907,9 +907,9 @@ manage-scope. Lee `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **Ajụjụ: 9Router na CLIProxyAPI hà ga-adị na deployment production/cloud?**
 
-Ee. Ọrụ abụọ ahụ na-agbaso otu model local-first ahụ OmniRoute n’onwe ya na-agbaso.
+Ee. Ọrụ abụọ ahụ na-agbaso otu model local-first ahụ 67router n’onwe ya na-agbaso.
 Ha na-arụ ọrụ n’otu igwe ma na-ekwurịta okwu site na loopback. “Production” n’ebe a
-pụtara VPS ma ọ bụ sava mpaghara e tinyere OmniRoute na ya, ọ bụghị provider cloud
+pụtara VPS ma ọ bụ sava mpaghara e tinyere 67router na ya, ọ bụghị provider cloud
 dịpụrụ adịpụ.
 
 ---
@@ -917,7 +917,7 @@ dịpụrụ adịpụ.
 **Ajụjụ: Olee otu m ga-esi debug supervisor?**
 
 1. Soro stream log SSE: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Lelee log ahaziri ahazi na output pino nke OmniRoute, nke e ji namespace
+2. Lelee log ahaziri ahazi na output pino nke 67router, nke e ji namespace
    `service:supervisor` nyochaa.
 3. Nyochaa row DB: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Jiri `GET /api/services/9router/status` hụ state dị ugbu a, PID, health,

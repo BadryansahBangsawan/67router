@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector 是 OmniRoute 內建的 HTTPS 流量偵錯工具——類似 Charles Proxy / mitmweb / HTTP Toolkit，但具備 **LLM 感知能力**與**代理程式感知能力**。它位於 `/dashboard/tools/traffic-inspector`，最多可同時接收來自 5 個擷取來源的即時流量。
+Traffic Inspector 是 67router 內建的 HTTPS 流量偵錯工具——類似 Charles Proxy / mitmweb / HTTP Toolkit，但具備 **LLM 感知能力**與**代理程式感知能力**。它位於 `/dashboard/tools/traffic-inspector`，最多可同時接收來自 5 個擷取來源的即時流量。
 
 **儀表板位置：** `/dashboard/tools/traffic-inspector`
 **側邊欄群組：** 工具（位於 AgentBridge 之後）
@@ -16,21 +16,21 @@ Traffic Inspector 是 OmniRoute 內建的 HTTPS 流量偵錯工具——類似 C
 
 ### Traffic Inspector 的獨特之處
 
-| 功能                                                          | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| 網頁式                                                        |    ✓    |    ✗    |    ✗    |                ✓                |
-| 開放原始碼                                                    |    ✓    |    ✗    |  部分   |                ✓                |
-| **代理程式感知**（知道請求是否來自 Antigravity/Copilot/等）   |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM 感知**（解析 OpenAI/Anthropic/Gemini 格式、權杖、模型） |    ✗    |    ✗    |    ✗    |                ✓                |
-| **模型對應關係可見**（gemini-3-flash → claude-sonnet-4.7）    |    ✗    |    ✗    |    ✗    |                ✓                |
-| **區分 Proxy/上游延遲**                                       |  部分   |    ✗    |    ✗    |                ✓                |
-| **與 OmniRoute 整合**路由、備援與成本                         |    ✗    |    ✗    |    ✗    |                ✓                |
-| **系統全域 Proxy 偵錯**（機器上的任何應用程式）               |    ✓    |    ✓    |    ✓    |                ✓                |
-| **自訂主機擷取**（各主機的 DNS 重新導向）                     |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY 環境變數模式**                                   |    ✓    |    ✓    |    ✓    |                ✓                |
-| **對話檢視**（多輪訊息泡泡、tool_use/tool_result）            |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE 串流合併器**（從差異事件重建）                          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **工作階段錄製**（可命名、可匯出為 .har/.jsonl）              |    ✗    |    ✓    |    ✓    |                ✓                |
+| 功能                                                          | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| 網頁式                                                        |    ✓    |    ✗    |    ✗    |               ✓                |
+| 開放原始碼                                                    |    ✓    |    ✗    |  部分   |               ✓                |
+| **代理程式感知**（知道請求是否來自 Antigravity/Copilot/等）   |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM 感知**（解析 OpenAI/Anthropic/Gemini 格式、權杖、模型） |    ✗    |    ✗    |    ✗    |               ✓                |
+| **模型對應關係可見**（gemini-3-flash → claude-sonnet-4.7）    |    ✗    |    ✗    |    ✗    |               ✓                |
+| **區分 Proxy/上游延遲**                                       |  部分   |    ✗    |    ✗    |               ✓                |
+| **與 67router 整合**路由、備援與成本                          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **系統全域 Proxy 偵錯**（機器上的任何應用程式）               |    ✓    |    ✓    |    ✓    |               ✓                |
+| **自訂主機擷取**（各主機的 DNS 重新導向）                     |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY 環境變數模式**                                   |    ✓    |    ✓    |    ✓    |               ✓                |
+| **對話檢視**（多輪訊息泡泡、tool_use/tool_result）            |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE 串流合併器**（從差異事件重建）                          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **工作階段錄製**（可命名、可匯出為 .har/.jsonl）              |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### 架構簡述
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // 若為 SSE 回應則為 true
   mappedTo: string | null; // x-omniroute-mapped 標頭
-  costEstimateUsd: number | null; // 根據 OmniRoute 定價估算的成本
+  costEstimateUsd: number | null; // 根據 67router 定價估算的成本
 }
 ```
 
@@ -392,7 +392,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### 系統代理未還原
 
-如果 OmniRoute 在系統全域代理模式啟用時當機：
+如果 67router 在系統全域代理模式啟用時當機：
 
 **macOS：**
 
@@ -437,7 +437,7 @@ netsh winhttp reset proxy
 | GET    | `/requests`                 | 列出請求（可篩選：`?profile=llm&host=&agent=&status=&source=&sessionId=`） |
 | GET    | `/requests/{id}`            | 單一請求的詳細資料                                                         |
 | DELETE | `/requests`                 | 清除記憶體內緩衝區                                                         |
-| POST   | `/requests/{id}/replay`     | 透過 OmniRoute 路由器重新執行相同請求                                      |
+| POST   | `/requests/{id}/replay`     | 透過 67router 路由器重新執行相同請求                                       |
 | PUT    | `/requests/{id}/annotation` | 儲存或更新請求上的註記                                                     |
 
 ### WebSocket

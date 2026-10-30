@@ -5,7 +5,7 @@
 ---
 
 Ta dokument opisuje temelj prilagodljivega usmerjanja na podlagi povratnih informacij, dodan v
-OmniRoute. Namenoma je majhen: uvaja tipiziran kanal za izide usmerjanja,
+67router. Namenoma je majhen: uvaja tipiziran kanal za izide usmerjanja,
 sprotni signal kakovosti, ki napaja obstoječi ocenjevalnik auto-combo, izbirni
 izvoznik OpenTelemetry in končno točko za razložljivost. **Ne**
 nadomešča obstoječega sklada odpornosti (prekinjevalnik tokokroga, ohlajanje povezave,
@@ -13,7 +13,7 @@ zaklep modela, matrika zdravja, avtopilot) — temveč ga dopolnjuje.
 
 ## 1. Arhitekturni kontekst
 
-OmniRoute je podatkovna ravnina z **vročo potjo zahtev** in **nadzorno/inteligenčno
+67router je podatkovna ravnina z **vročo potjo zahtev** in **nadzorno/inteligenčno
 ravnino**. Vroča pot mora ostati hitra, pomnilniško učinkovita, asinhrona, odporna in
 predvidljiva. Vrednotenje, ocenjevanje kakovosti, poskusi in zgodovinska analiza sodijo
 v nadzorno ravnino.
@@ -23,7 +23,7 @@ Agent UI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   podatkovna ravnina (hitra, sinhrona, v pomnilniku)
+│    67router        │   podatkovna ravnina (hitra, sinhrona, v pomnilniku)
 │ usmerjanje / preklop│
 │ zdravje / varovala  │
 │ predpom. / pretakanje│
@@ -234,7 +234,7 @@ Datoteke: `open-sse/services/routing/otel.ts`
 - Razponi sledijo semantičnim konvencijam GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) in atributom usmerjanja
-  OmniRoute (izid, stanje, ttft, ponovni poskusi, nadomestna možnost).
+  67router (izid, stanje, ttft, ponovni poskusi, nadomestna možnost).
 - `record()` samo doda dogodek v omejen medpomnilnik (O(1)); časovnik v ozadju
   jih asinhrono pošilja prek `POST {endpoint}/v1/traces`. Ob preobremenitvi se
   najstarejši dogodki zavržejo (števec `dropped`) — brez povratnega pritiska na
@@ -256,7 +256,7 @@ Datoteke: `open-sse/services/routing/otel.ts`
 
 ## 6. Integracija evalvacijske ravnine (pripravljenost na Future AGI)
 
-OmniRoute obravnava Future AGI (ali kateri koli ocenjevalnik) kot **potencialno
+67router obravnava Future AGI (ali kateri koli ocenjevalnik) kot **potencialno
 zaledje za inteligenco/ocenjevanje, ne kot odvisnost**. Integracijske točke:
 
 - `RoutingEventSink` lahko asinhrono posreduje dogodke ocenjevalniku.

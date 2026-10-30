@@ -20,10 +20,10 @@ Dvigatelning roli reyestrdagi `RouterBackendDefinition` ichida birgalikda kodlan
 **ikkita mustaqil oʻq** bilan tavsiflanadi:
 
 1. **Hayotiy sikl** (`RouterBackendLifecycle`) — _dvigatel qanday ishlaydi_:
-   - `in-process` — OmniRoute Node jarayoni ichida ishlaydi (mahalliy TS konveyeri).
-   - `supervised` — OmniRoute `ServiceSupervisor` orqali oʻrnatadigan/ishga tushiradigan/toʻxtatadigan/sogʻligʻini tekshiradigan,
+   - `in-process` — 67router Node jarayoni ichida ishlaydi (mahalliy TS konveyeri).
+   - `supervised` — 67router `ServiceSupervisor` orqali oʻrnatadigan/ishga tushiradigan/toʻxtatadigan/sogʻligʻini tekshiradigan,
      soʻng provayder ulanishi sifatida foydalanadigan mahalliy yordamchi jarayon.
-   - `external` — OmniRoute soʻrovlarni yoʻnaltiradigan, ammo boshqarmaydigan
+   - `external` — 67router soʻrovlarni yoʻnaltiradigan, ammo boshqarmaydigan
      HTTP endpointi (muhit oʻzgaruvchisidagi bazaviy URL orqali sozlanadi).
    - `disabled` — roʻyxatdan oʻtkazilgan, ammo tanlab boʻlmaydi.
 2. **Tanlash oʻqi** (rele marshrutlash backendi) — _rele unga soʻrovlarni yoʻnaltiradimi_:

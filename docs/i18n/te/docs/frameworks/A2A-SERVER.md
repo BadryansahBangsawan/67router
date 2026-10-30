@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (తెలుగు)
+# 67router A2A Server Documentation (తెలుగు)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — తెలివైన రూటింగ్ ఏజెంట్గా OmniRoute
+> Agent-to-Agent Protocol v0.3 — తెలివైన రూటింగ్ ఏజెంట్గా 67router
 
 A2A ఇంటర్ఫేస్కు రెండు రూపాలు ఉన్నాయి:
 
@@ -19,7 +19,7 @@ A2A ఇంటర్ఫేస్కు రెండు రూపాలు ఉన�
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute సామర్థ్యాలు, స్కిల్లు మరియు ప్రమాణీకరణ అవసరాలను వివరించే Agent Cardను తిరిగి అందిస్తుంది.
+67router సామర్థ్యాలు, స్కిల్లు మరియు ప్రమాణీకరణ అవసరాలను వివరించే Agent Cardను తిరిగి అందిస్తుంది.
 
 Agent Cardలోని `version` ఫీల్డ్ `process.env.npm_package_version` నుండి తీసుకోబడుతుంది (`src/app/.well-known/agent.json/route.ts:13` చూడండి), కాబట్టి ప్రతి విడుదలలోనూ అది `package.json`తో స్వయంచాలకంగా సమకాలీకరించబడి ఉంటుంది.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## అందుబాటులో ఉన్న స్కిల్స్
 
-OmniRoute `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` లో వైరింగ్ చేయబడిన 6 A2A స్కిల్స్ను బహిర్గతం చేస్తుంది. ప్రతి స్కిల్ మాడ్యూల్ `src/lib/a2a/skills/` లో ఉంటుంది.
+67router `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` లో వైరింగ్ చేయబడిన 6 A2A స్కిల్స్ను బహిర్గతం చేస్తుంది. ప్రతి స్కిల్ మాడ్యూల్ `src/lib/a2a/skills/` లో ఉంటుంది.
 
 | స్కిల్             | ID                   | వివరణ                                                                                                                                                | ట్యాగ్లు                   | ఉదాహరణలు                                       |
 | :----------------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :--------------------------------------------- |
-| Smart Routing      | `smart-routing`      | OmniRoute యొక్క కాంబో ఇంజిన్ + స్కోరింగ్ను ఉపయోగించి ప్రాంప్ట్ను అత్యంత అనుకూలమైన ప్రొవైడర్/కాంబో ద్వారా రూట్ చేస్తుంది                              | routing, providers         | "ఈ ప్రాంప్ట్ను ఉత్తమ మోడల్ ద్వారా రూట్ చేయండి" |
+| Smart Routing      | `smart-routing`      | 67router యొక్క కాంబో ఇంజిన్ + స్కోరింగ్ను ఉపయోగించి ప్రాంప్ట్ను అత్యంత అనుకూలమైన ప్రొవైడర్/కాంబో ద్వారా రూట్ చేస్తుంది                               | routing, providers         | "ఈ ప్రాంప్ట్ను ఉత్తమ మోడల్ ద్వారా రూట్ చేయండి" |
 | Quota Management   | `quota-management`   | ప్రతి-ప్రొవైడర్ కోటా స్థితిని నివేదిస్తుంది, ఎప్పుడు థ్రాటిల్/స్విచ్ చేయాలో కాలర్లు నిర్ణయించుకోవడానికి సహాయపడుతుంది                                 | quota, providers           | "anthropic కోసం కోటాను తనిఖీ చేయండి"           |
 | Provider Discovery | `provider-discovery` | సామర్థ్యాలు, ఫ్రీ-టైర్ ఫ్లాగ్లు, OAuth స్థితితో కూడిన ఇన్స్టాల్ చేసిన ప్రొవైడర్లను జాబితా చేస్తుంది                                                  | providers, discovery       | "ఏ ప్రొవైడర్లు అందుబాటులో ఉన్నాయి?"            |
 | Cost Analysis      | `cost-analysis`      | కాటలాగ్ + ఇటీవలి వినియోగం ఆధారంగా రిక్వెస్ట్/సంభాషణ యొక్క ఖర్చును అంచనా వేస్తుంది                                                                    | cost, usage                | "ఈ సంభాషణ ఖర్చును అంచనా వేయండి"                |
 | Health Report      | `health-report`      | ప్రతి ప్రొవైడర్ కోసం సర్క్యూట్ బ్రేకర్, కూల్డౌన్, లాక్అవుట్ స్థితిని సమగ్రపరుస్తుంది                                                                 | health, resilience         | "అన్ని ప్రొవైడర్ల హెల్త్ స్థితిని చూపండి"      |
-| List Capabilities  | `list-capabilities`  | కాంటెక్స్ట్ ఇంజెక్షన్ కోసం raw SKILL.md URLలతో పూర్తి 43-ఎంట్రీల Agent Skills కాటలాగ్ను (22 API + 20 CLI + 1 config) మార్క్డౌన్ టేబుల్గా అందిస్తుంది | catalog, discovery, skills | "అన్ని OmniRoute సామర్థ్యాలను జాబితా చేయండి"   |
+| List Capabilities  | `list-capabilities`  | కాంటెక్స్ట్ ఇంజెక్షన్ కోసం raw SKILL.md URLలతో పూర్తి 43-ఎంట్రీల Agent Skills కాటలాగ్ను (22 API + 20 CLI + 1 config) మార్క్డౌన్ టేబుల్గా అందిస్తుంది | catalog, discovery, skills | "అన్ని 67router సామర్థ్యాలను జాబితా చేయండి"    |
 
 > Agent Card ను ప్రత్యక్ష 375-ప్రొవైడర్ కాటలాగ్తో సమలేఖనం చేసి ఉంచాలి; ప్రొవైడర్ గణనలు మరియు ఫ్రీ/నో-ఆత్ మెటాడేటా రన్టైమ్ రిజిస్ట్రీ నుండి పొందబడతాయి.
 
 ### `list-capabilities` స్కిల్ వివరాలు
 
-`list-capabilities` స్కిల్, API కాల్స్ పంపే ముందు OmniRoute ఏమి బహిర్గతం చేస్తుందో కనుగొనవలసిన బాహ్య ఏజెంట్లకు ప్రత్యేకంగా ఉపయోగకరంగా ఉంటుంది. ఇది నిర్మాణాత్మక మార్క్డౌన్ టేబుల్ ఆర్టిఫ్యాక్ట్ను అందిస్తుంది:
+`list-capabilities` స్కిల్, API కాల్స్ పంపే ముందు 67router ఏమి బహిర్గతం చేస్తుందో కనుగొనవలసిన బాహ్య ఏజెంట్లకు ప్రత్యేకంగా ఉపయోగకరంగా ఉంటుంది. ఇది నిర్మాణాత్మక మార్క్డౌన్ టేబుల్ ఆర్టిఫ్యాక్ట్ను అందిస్తుంది:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ JSON-RPC ఎండ్పాయింట్ `/a2a` ప్రామాణిక A2
 | `/.well-known/agent.json`    | GET    | Agent Card (A2A డిస్కవరీ)                                     | (పబ్లిక్, 3600s పాటు క్యాష్ చేయబడింది)            |
 | `/api/a2a/tasks`             | POST   | OmniConductor ఫ్లీట్కు ఇన్బౌండ్ డెలిగేషన్ (Conductor PRD RF5) | Bearer వర్సెస్ `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**ఇన్బౌండ్ Conductor డెలిగేషన్ (`POST /api/a2a/tasks`):** బాహ్య A2A ఏజెంట్లు OmniRoute ద్వారా కోడింగ్ పనిని OmniConductor ఫ్లీట్కు అప్పగిస్తాయి. బాడీ: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — Conductor ఫ్లీట్ నైపుణ్యాలను మాత్రమే (Agent Cardలో ప్రకటించినవి) అప్పగించవచ్చు; `metadata.conductor.repo.url` తప్పనిసరి (ఫ్లీట్ git రిపోజిటరీలపై పనిచేస్తుంది). ఈ రూట్, సర్వర్-సైడ్ `CONDUCTOR_ORCHESTRATOR_TOKEN`ను (ఫాల్బ్యాక్ `CONDUCTOR_HUB_TOKEN`) ఉపయోగించి హబ్ యొక్క `POST /v1/tasks`గా అనువదించి, `201 { conductor_task_id, state: "submitted" }`ను తిరిగి ఇస్తుంది; టాస్క్ స్థితులు SSE→A2A మిర్రర్ (RF1) ద్వారా తిరిగి ప్రవహిస్తాయి మరియు `GET /api/a2a/tasks?skill=conductor` ద్వారా కనిపిస్తాయి.
+**ఇన్బౌండ్ Conductor డెలిగేషన్ (`POST /api/a2a/tasks`):** బాహ్య A2A ఏజెంట్లు 67router ద్వారా కోడింగ్ పనిని OmniConductor ఫ్లీట్కు అప్పగిస్తాయి. బాడీ: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — Conductor ఫ్లీట్ నైపుణ్యాలను మాత్రమే (Agent Cardలో ప్రకటించినవి) అప్పగించవచ్చు; `metadata.conductor.repo.url` తప్పనిసరి (ఫ్లీట్ git రిపోజిటరీలపై పనిచేస్తుంది). ఈ రూట్, సర్వర్-సైడ్ `CONDUCTOR_ORCHESTRATOR_TOKEN`ను (ఫాల్బ్యాక్ `CONDUCTOR_HUB_TOKEN`) ఉపయోగించి హబ్ యొక్క `POST /v1/tasks`గా అనువదించి, `201 { conductor_task_id, state: "submitted" }`ను తిరిగి ఇస్తుంది; టాస్క్ స్థితులు SSE→A2A మిర్రర్ (RF1) ద్వారా తిరిగి ప్రవహిస్తాయి మరియు `GET /api/a2a/tasks?skill=conductor` ద్వారా కనిపిస్తాయి.
 
 ---
 

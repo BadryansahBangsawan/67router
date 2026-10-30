@@ -7,7 +7,7 @@
 > **Izvor istine:** radni prostor `electron/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40
 
-OmniRoute isporučuje višeplatformsku aplikaciju za stolna računala (Windows / macOS / Linux) izgrađenu na
+67router isporučuje višeplatformsku aplikaciju za stolna računala (Windows / macOS / Linux) izgrađenu na
 **Electron 41** + **electron-builder 26.10**. Aplikacija za stolna računala pokreće samostalni Next.js
 poslužitelj kao podređeni proces, usmjerava `BrowserWindow` na njega te dodaje
 ikonu u sistemskoj traci, automatsko ažuriranje, IPC most i inicijalizaciju tajni bez konfiguracije.
@@ -196,7 +196,7 @@ prednost dajte `.env` datoteci, zatim potpuno zatvorite aplikaciju (sistemska tr
 - `BrowserWindow`: 1400×900 (najmanje 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, tipke prozora na `{ x: 16, y: 16 }`.
 - Windows/Linux: izvorna naslovna traka.
-- Gumb za zatvaranje minimizira aplikaciju u sistemsku traku; izbornik sistemske trake sadrži **Otvori OmniRoute**, **Otvori nadzornu ploču** (vanjski preglednik), podizbornik **Priključak poslužitelja**, **Provjeri ažuriranja**, **Zatvori**.
+- Gumb za zatvaranje minimizira aplikaciju u sistemsku traku; izbornik sistemske trake sadrži **Otvori 67router**, **Otvori nadzornu ploču** (vanjski preglednik), podizbornik **Priključak poslužitelja**, **Provjeri ažuriranja**, **Zatvori**.
 
 ## Pravila sigurnosti sadržaja
 

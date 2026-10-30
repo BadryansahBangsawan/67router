@@ -4,16 +4,16 @@
 
 ---
 
-វិធីពីរយ៉ាងដើម្បីដាក់ Cursor នៅពីក្រោយ OmniRoute ដោយមិនចាំបាច់មានសម័យ IDE៖
+វិធីពីរយ៉ាងដើម្បីដាក់ Cursor នៅពីក្រោយ 67router ដោយមិនចាំបាច់មានសម័យ IDE៖
 
 1. **អ្នកផ្តល់សេវា `cursor-api`** (កាត "Cursor API", ឈ្មោះកាត់ `cua`)៖ អ្នកផ្តល់សេវាដែលប្រើ API key
    និងរក្សាទុក Cursor user API key (`crsr_…` ដែលបង្កើតនៅ
-   `https://cursor.com/dashboard/api`)។ បន្ទាប់មក OmniRoute client ណាមួយអាចចូលប្រើ
+   `https://cursor.com/dashboard/api`)។ បន្ទាប់មក 67router client ណាមួយអាចចូលប្រើ
    ម៉ូដែល Cursor តាមរយៈ `/v1/chat/completions` ជា `cursor-api/<model>` ឬ
    `cua/<model>` ដោយមានស្រទាប់កូតា ការបម្រុងជំនួស និងការកត់ត្រាទិន្នន័យដូចធម្មតា។ អ្នកផ្តល់សេវា IDE
    (`cursor`, OAuth/សម័យ IDE) មិនមានការផ្លាស់ប្តូរទេ។
-2. **ការបញ្ជូនបន្ត Cursor CLI**៖ កំណត់ Cursor CLI (`agent`) ឱ្យភ្ជាប់ទៅ OmniRoute ដើម្បីឱ្យ
-   រាល់ RPC ដែល CLI បង្កើត ត្រូវបានផ្ទៀងផ្ទាត់ដោយ OmniRoute API key បញ្ជូនបន្ត
+2. **ការបញ្ជូនបន្ត Cursor CLI**៖ កំណត់ Cursor CLI (`agent`) ឱ្យភ្ជាប់ទៅ 67router ដើម្បីឱ្យ
+   រាល់ RPC ដែល CLI បង្កើត ត្រូវបានផ្ទៀងផ្ទាត់ដោយ 67router API key បញ្ជូនបន្ត
    ទៅ Cursor ដោយប្រើព័ត៌មានសម្ងាត់នៃការតភ្ជាប់ `cursor-api` ហើយត្រូវបានកត់ត្រានៅក្នុង
    ទំព័រ Logs។
 
@@ -60,7 +60,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 - បញ្ជីម៉ូដែលសម្រាប់ `cursor-api` មកពី Cursor registry ថេរ (ជាបញ្ជីដូចគ្នា
   ដែលអ្នកផ្តល់សេវា IDE ប្រើជាជម្រើសបម្រុង); មិនចាំបាច់ដំឡើង `cursor-agent`
-  នៅលើម៉ាស៊ីន host របស់ OmniRoute ទេ។
+  នៅលើម៉ាស៊ីន host របស់ 67router ទេ។
 - `POST /api/providers/{id}/refresh-cursor` គឺសម្រាប់តែអ្នកផ្តល់សេវា `cursor` IDE
   ប៉ុណ្ណោះ; ការតភ្ជាប់ `cursor-api` មិនមានសម័យ IDE សម្រាប់ធ្វើឱ្យស្រស់ទេ។
 
@@ -68,7 +68,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 សម្រាប់ `cursor` / `cu` និង `cursor-api` / `cua` កម្មវិធីសម្របសម្រួល Claude-effort ដែលប្រើរួមគ្នា
 រក្សាលេខសម្គាល់ម៉ូដែលដែលបានស្នើសុំឱ្យនៅដដែល។ Cursor អាចប្រកាស suffix ដូចជា
-`-low` ជាផ្នែកមួយនៃលេខសម្គាល់ម៉ូដែលពិតប្រាកដ ជំនួសឱ្យ alias សម្រាប់ effort របស់ OmniRoute។
+`-low` ជាផ្នែកមួយនៃលេខសម្គាល់ម៉ូដែលពិតប្រាកដ ជំនួសឱ្យ alias សម្រាប់ effort របស់ 67router។
 Cursor executor រក្សាទុកការផ្គូផ្គងជាក់លាក់ពី live catalog; នៅពេលមិនមាន
 ការផ្គូផ្គង កម្មវិធីដោះស្រាយម៉ូដែលដែលមានស្រាប់របស់វានឹងគ្រប់គ្រងការបម្លែង suffix ទៅជាប៉ារ៉ាម៉ែត្រ។
 
@@ -83,18 +83,18 @@ Claude-compatible ឬ Vertex ទេ។ ភាពអាចប្រើបាន�
 ចុះបញ្ជីនៅក្នុង `src/shared/constants/publicApiRoutes.ts` ព្រោះ handler
 អនុវត្តការផ្ទៀងផ្ទាត់អត្តសញ្ញាណដោយខ្លួនឯង៖
 
-| ផ្លូវ                                                                                                                         | ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណដែលរំពឹងពី CLI | អ្វីដែល OmniRoute ធ្វើ                                                                                                                                                       |
+| ផ្លូវ                                                                                                                         | ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណដែលរំពឹងពី CLI | អ្វីដែល 67router ធ្វើ                                                                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <OmniRoute API key>`           | ផ្ទៀងផ្ទាត់ key បង្កើត HS256 JWT ដែលមានសុពលភាព 1 ម៉ោង (ចុះហត្ថលេខាដោយ `JWT_SECRET`) ហើយត្រឡប់វាវិញ                                                                           |
+| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <67router API key>`            | ផ្ទៀងផ្ទាត់ key បង្កើត HS256 JWT ដែលមានសុពលភាព 1 ម៉ោង (ចុះហត្ថលេខាដោយ `JWT_SECRET`) ហើយត្រឡប់វាវិញ                                                                           |
 | រាល់ផ្លូវផ្សេងទៀត (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`                    | ផ្ទៀងផ្ទាត់ issuer/audience/expiry ជ្រើសរើសការតភ្ជាប់ `cursor-api` ដែលសកម្ម ប្ដូរ header Authorization ជាមួយ Cursor token ដែលបានផ្លាស់ប្ដូរ ហើយ stream ការឆ្លើយតបត្រឡប់ទៅវិញ |
 
 CLI ឌិកូដ `exp` ពី token ណាក៏ដោយដែលវាទទួលបាន ដូច្នេះការផ្ដល់ opaque
 token ឱ្យវានឹងធ្វើឱ្យវាផ្លាស់ប្ដូរ token ឡើងវិញមុនស្ទើរតែរាល់ request; JWT ដែលបានបង្កើត
-ជៀសវាងបញ្ហានេះ។ ការឆ្លើយតប 401 ពី OmniRoute ធ្វើឱ្យ CLI ផ្លាស់ប្ដូរ token ម្ដងទៀត។
+ជៀសវាងបញ្ហានេះ។ ការឆ្លើយតប 401 ពី 67router ធ្វើឱ្យ CLI ផ្លាស់ប្ដូរ token ម្ដងទៀត។
 
 ### ការដំឡើង
 
-1. បង្កើត OmniRoute API key មួយ (Dashboard → API keys) និងការតភ្ជាប់ `cursor-api`
+1. បង្កើត 67router API key មួយ (Dashboard → API keys) និងការតភ្ជាប់ `cursor-api`
    មួយ។
 2. កំណត់ឱ្យ CLI ប្រើ HTTP/1.1 សម្រាប់ agent stream។ នៅក្នុង
    `~/.cursor/cli-config.json`៖
@@ -107,7 +107,7 @@ token ឱ្យវានឹងធ្វើឱ្យវាផ្លាស់ប�
    agent host ដែលបានកំណត់រចនាសម្ព័ន្ធដាច់ដោយឡែក ហើយមានតែ control-plane RPCs ប៉ុណ្ណោះដែលឆ្លងកាត់
    endpoint នេះ។
 
-3. ដំណើរការ CLI ជាមួយ OmniRoute៖
+3. ដំណើរការ CLI ជាមួយ 67router៖
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -116,17 +116,17 @@ token ឱ្យវានឹងធ្វើឱ្យវាផ្លាស់ប�
    ```
 
 រាល់ដំណាក់កាលបញ្ជូននីមួយៗត្រូវបានកត់ត្រានៅក្នុង Logs ដោយមាន provider ជា `cursor-api`, request type ជា `cursor-cli`,
-ផ្លូវ `/api/cursor-cli/<rpc>` ហើយត្រូវបានភ្ជាប់ទៅនឹង OmniRoute API key និង
+ផ្លូវ `/api/cursor-cli/<rpc>` ហើយត្រូវបានភ្ជាប់ទៅនឹង 67router API key និង
 ការតភ្ជាប់ដែលបានបម្រើវា។
 
 ### ស្ថានភាពបរាជ័យ
 
 | ស្ថានភាព                                               | ការឆ្លើយតបទៅ CLI                                           |
 | ------------------------------------------------------ | ---------------------------------------------------------- |
-| OmniRoute key មិនស្គាល់ និង `REQUIRE_API_KEY=true`     | 401 `unauthenticated` នៅពេលផ្លាស់ប្ដូរ                     |
+| 67router key មិនស្គាល់ និង `REQUIRE_API_KEY=true`      | 401 `unauthenticated` នៅពេលផ្លាស់ប្ដូរ                     |
 | `REQUIRE_API_KEY=false`                                | session អនាមិក (ដំណើរការដូច `/v1/*`)                       |
 | session JWT ផុតកំណត់ / មកពីប្រភពផ្សេង / ត្រូវបានកែប្រែ | 401 ហើយ CLI ផ្លាស់ប្ដូរ token ឡើងវិញ                       |
-| OmniRoute API key ត្រូវបានដកហូតបន្ទាប់ពីផ្លាស់ប្ដូរ    | 401 នៅ RPC បន្ទាប់                                         |
+| 67router API key ត្រូវបានដកហូតបន្ទាប់ពីផ្លាស់ប្ដូរ     | 401 នៅ RPC បន្ទាប់                                         |
 | គ្មានការតភ្ជាប់ `cursor-api` ដែលសកម្ម                  | 503 `unavailable`                                          |
 | Cursor បដិសេធ key របស់ការតភ្ជាប់                       | 401 `unauthenticated` ហើយ session ដែលបាន cache ត្រូវបានលុប |
 | មិនអាចភ្ជាប់ទៅ upstream បាន                            | 502 `unavailable` (សារដែលបានសម្អាត)                        |

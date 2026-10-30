@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute huchapisha bidhaa za npm + Docker. Milango hii hutoa uthibitisho wa asili, orodha (SBOM) na uchunguzi wa CVE, zote zikiwa OSS, zimeunganishwa kwenye mtiririko wa kazi wa kutolewa. Msimamo wa **Ushauri-kwanza** — huripoti sasa, na kupandishwa hadhi ya kuzuia baada ya toleo la kwanza lililofaulu.
+67router huchapisha bidhaa za npm + Docker. Milango hii hutoa uthibitisho wa asili, orodha (SBOM) na uchunguzi wa CVE, zote zikiwa OSS, zimeunganishwa kwenye mtiririko wa kazi wa kutolewa. Msimamo wa **Ushauri-kwanza** — huripoti sasa, na kupandishwa hadhi ya kuzuia baada ya toleo la kwanza lililofaulu.
 
 | Lango                 | Zana                                           | Wapi                          | Inazuia?                        | Matokeo                                                 |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :------------------------------ | :------------------------------------------------------ |
@@ -41,7 +41,7 @@ Kulingana na tawi la "hakuna marekebisho ya chanzo" la suluhisho la Tofauti ya C
 - **Mfuatano:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`.
   Imethibitishwa kupitia `package-lock.json` — ni kifurushi kimoja tu katika mti mzima wa utegemezi (`@openai/codex-security`) kinachotangaza `extract-zip`, na ni kifurushi kimoja tu (`promptfoo`) kinachotangaza `@openai/codex-security`.
 - **Hakuna toleo lililorekebishwa lililopo popote kwenye mfuatano.** `extract-zip@2.0.1` (iliyochapishwa 2020) ni toleo la mwisho la kifurushi — halitunzwi. Toleo la sasa la npm-latest la `@openai/codex-security` (`0.1.29`) bado linatumia `extract-zip@2.0.1`.
-- **Haiwezi kufikiwa kutoka uzalishishaji.** `promptfoo` ni devDependency-only (haijawahi kuorodheshwa chini ya `dependencies`), na hakuna faili chini ya `src/`, `open-sse/`, au `bin/` inayoingiza kifurushi cha npm cha `extract-zip` — msaidizi wa OmniRoute mwenyewe `extractZip()` (`src/lib/versionManager/binaryManager.ts:93`) hutumia `unzip`/`tar` asilia na haihusiani. `@openai/codex-security` pia inajumuisha ulinzi wake wa symlink-traversal juu ya onEntry callback ya extract-zip.
+- **Haiwezi kufikiwa kutoka uzalishishaji.** `promptfoo` ni devDependency-only (haijawahi kuorodheshwa chini ya `dependencies`), na hakuna faili chini ya `src/`, `open-sse/`, au `bin/` inayoingiza kifurushi cha npm cha `extract-zip` — msaidizi wa 67router mwenyewe `extractZip()` (`src/lib/versionManager/binaryManager.ts:93`) hutumia `unzip`/`tar` asilia na haihusiani. `@openai/codex-security` pia inajumuisha ulinzi wake wa symlink-traversal juu ya onEntry callback ya extract-zip.
 - **Usifanye** alias ya `extract-zip` kupitia `package.json` `overrides` — mbadala pekee unaofaa ni Electron-org-internal na haioani na API ya ukaguzi wa `@openai/codex-security` mwenyewe wa onEntry/defaultDirMode/defaultFileMode; kuibadilisha kungesababisha ukaguzi wa usalama wa kifurushi hicho kuvunjika kimya kimya.
 - **Msingi:** `vulnCount` (3) iliyopimwa ya osv tayari iko chini sana ya msingi uliogandishwa wa `config/quality/quality-baseline.json` (27) — hakuna mabadiliko ya ratchet yanayohitajika.
 - **Ulinzi wa Regression:** `tests/unit/extract-zip-14482-exposure.test.ts` inathibitisha mfuatano na invariant ya kutokuwa na import ya uzalishaji hapo juu; inashindwa CI ikiwa mojawapo itavunjika (k.m. PR ya baadaye inafanya `extract-zip` kufikiwa kutoka uzalishaji).

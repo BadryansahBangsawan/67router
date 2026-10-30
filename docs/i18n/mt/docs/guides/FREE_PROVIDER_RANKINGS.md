@@ -4,7 +4,7 @@
 
 ---
 
-> **Fil-qosor**: OmniRoute jikklassifika l-fornituri **bla ħlas** tiegħu skont il-kwalità tal-mudell billi juża **punteġġi ELO ta’ Arena AI
+> **Fil-qosor**: 67router jikklassifika l-fornituri **bla ħlas** tiegħu skont il-kwalità tal-mudell billi juża **punteġġi ELO ta’ Arena AI
 > (stil LMArena)**. Iftaħ il-paġna **Klassifikazzjonijiet tal-Fornituri Bla Ħlas** fid-
 > dashboard biex tara liema fornituri bla ħlas joffru l-aktar mudelli b’saħħithom għall-kompitu tiegħek —
 > b’mod ġenerali, jew iffiltrati skont il-kategorija (kodifikazzjoni, reviżjoni, dokumentazzjoni, debugging).
@@ -13,7 +13,7 @@
 
 ## X'inhu
 
-OmniRoute tirreġistra 375 fornitur, inklużi 155 entratura fil-katalgu mmarkata **b'xejn/no-auth**
+67router tirreġistra 375 fornitur, inklużi 155 entratura fil-katalgu mmarkata **b'xejn/no-auth**
 (no-auth, OAuth b'livell b'xejn, jew ċavetta API b'livell b'xejn — ara l-
 [Gwida dwar is-Saffi B'xejn](../getting-started/FREE-TIERS-GUIDE.md) u d-
 [direttorju sħiħ tas-Saffi B'xejn](../reference/FREE_TIERS.md)). Il-problema: il-fornituri b'xejn jvarjaw
@@ -128,9 +128,9 @@ u `code` — mill-API tal-klassifika Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Kull entrata fil-klassifika
 tinkludi isem tal-mudell, fornitur, `score` ELO, intervall ta’ kunfidenza, u għadd ta’ voti.
 
-Il-kategoriji tal-klassifika jikkorrispondu mal-kategoriji tal-kompiti ta’ OmniRoute:
+Il-kategoriji tal-klassifika jikkorrispondu mal-kategoriji tal-kompiti ta’ 67router:
 
-| Klassifika Arena | Kategoriji tal-kompiti ta’ OmniRoute              |
+| Klassifika Arena | Kategoriji tal-kompiti ta’ 67router               |
 | ---------------- | ------------------------------------------------- |
 | `text`           | `default`, `review`, `documentation`, `debugging` |
 | `code`           | `coding`                                          |
@@ -167,7 +167,7 @@ Is-sinkronizzazzjoni taħdem **awtomatikament b’mod predefinit**:
 
 - Taħdem darba meta jitħaddem is-server u mbagħad fuq tajmer perjodiku
   (`src/lib/arenaEloSync.ts`, ikkonnettjat minn `src/instrumentation-node.ts`).
-- Hija **mhux imblokkanti u qatt ma tkun fatali** — jekk il-ġbir tad-data mis-sors estern ifalli, OmniRoute jibqa’
+- Hija **mhux imblokkanti u qatt ma tkun fatali** — jekk il-ġbir tad-data mis-sors estern ifalli, 67router jibqa’
   jaħdem u l-klassifiki sempliċement juru l-aħħar data valida (jew stat vojt).
 
 Żewġ varjabbli tal-ambjent jikkontrollawha (dokumentati f’
@@ -202,7 +202,7 @@ tqabbil flessibbli (`findMatchingIntelligence` f’`src/lib/freeProviderRankings
 3. Tqabbil tal-prefiss (isem ta’ mudell fil-klassifika jkun prefiss tal-ID fir-reġistru).
 
 Min-naħa tas-sinkronizzazzjoni, il-prefissi magħrufa tal-fornituri (`anthropic/`, `openai/`, `google/`, …) jiġu
-mneħħija u mappa żgħira tal-psewdonimi tespandi l-ismijiet kanoniċi fil-varjanti li OmniRoute juża
+mneħħija u mappa żgħira tal-psewdonimi tespandi l-ismijiet kanoniċi fil-varjanti li 67router juża
 internament, sabiex il-mudelli jibqgħu jistgħu jinstabu taħt kwalunkwe isem.
 
 ### Kif jiġi kklassifikat fornitur

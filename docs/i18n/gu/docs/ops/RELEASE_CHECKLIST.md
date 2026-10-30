@@ -45,7 +45,7 @@ credential સાથે exchange કરે છે — repository secretsમા�
 (લીક થયેલો token એકલો publish કરી શકતો નથી — કારણ કે કોઈ token જ નથી).
 
 **એક વખતનું setup (owner):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). આ અસ્તિત્વમાં ન હોય ત્યાં સુધી automatic step `ENEEDAUTH` સાથે નિષ્ફળ જાય છે:
 `publish_mode=staged` (નીચે) અથવા `direct` સાથે ફરી dispatch કરો.
 

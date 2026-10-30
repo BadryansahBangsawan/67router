@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Sist oppdatert:** 2026-06-28 — v3.8.40
 
-OmniRoute leveres med et programtilleggssystem i WordPress-stil. Programtillegg er selvstendige
+67router leveres med et programtilleggssystem i WordPress-stil. Programtillegg er selvstendige
 kataloger — hver med et `plugin.json`-manifest og en inngangsfil — som kobler seg
 til forespørselsflyten (`onRequest` / `onResponse` / `onError`) og til
 livssyklushendelser (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ slippes gjennom.
 
 ### Programtilleggskatalog
 
-Programtillegg ligger under OmniRoute-datakatalogen:
+Programtillegg ligger under 67router-datakatalogen:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -40,8 +40,8 @@ povezovalnik konfigurirana.
 
 1. Odprite ponudnika **ChatGPT Web (Codex)** in dodajte povezavo.
 2. Prilepite celotno glavo Cookie za ChatGPT, ID tunela, izvajalni ključ in ime priključka po meri. Nove nastavitve z možnostjo uporabe orodij morajo uporabljati na novo ustvarjen priključek z natančnim imenom `OmniRoute Codex v2`, pri čemer mora biti Authentication nastavljeno na None, Permissions pa na Allow all actions.
-3. Zaženite preverjanje povezave. OmniRoute odpre začasni klepet Temporary Chat v brskalniku in preveri, ali sta Sol in Pro na voljo za račun.
-4. Shranite povezavo. OmniRoute zamenja prilepljeni piškotek s preverjenim stanjem shrambe Playwright in ga skupaj z izvajalnim ključem shrani prek šifrirane abstrakcije poverilnic.
+3. Zaženite preverjanje povezave. 67router odpre začasni klepet Temporary Chat v brskalniku in preveri, ali sta Sol in Pro na voljo za račun.
+4. Shranite povezavo. 67router zamenja prilepljeni piškotek s preverjenim stanjem shrambe Playwright in ga skupaj z izvajalnim ključem shrani prek šifrirane abstrakcije poverilnic.
 
 Neobdelani piškotek se po uspešnem shranjevanju ne ohrani. Ko seja poteče, odprite povezavo, prilepite novo celotno glavo Cookie in znova zaženite preverjanje. Stanje diagnostike v pogovornem oknu za urejanje ločeno poroča o brskalniku, stanju shrambe, prijavi, začasnem klepetu Temporary Chat, tunelu, priključku in celotnem preizkusu orodja. Za avtomatizacijo posodobitev piškotkov ob menjavi sej glejte spremljevalno orodje v [Razširitev za sinhronizacijo seje brskalnika](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -93,19 +93,19 @@ poteze. Izvajalno okolje zavrne te stare identitete in zahteva nov povezovalnik
 
 ## VPS brez zaslona in Docker
 
-Pri namestitvah z npm, systemd in PM2 OmniRoute zazna običajne poti do brskalnikov Chrome in Chromium.
+Pri namestitvah z npm, systemd in PM2 67router zazna običajne poti do brskalnikov Chrome in Chromium.
 Namesto tega lahko nastavite `CHATGPT_WEB_CODEX_CHROME_PATH`. Izvajalne poteze namenoma uporabljajo Chrome
 z grafičnim vmesnikom, ker ChatGPT zavrne obliko resnično brezglavega brskalnika. Gostitelj brez zaslona mora zato
-izvajati OmniRoute z zasebnim zaslonom Xvfb; sama nastavitev poti do brskalnika Chrome ga ne zagotovi.
+izvajati 67router z zasebnim zaslonom Xvfb; sama nastavitev poti do brskalnika Chrome ga ne zagotovi.
 
 Dockerjev profil `web` zažene `chatgpt-web-codex-browser` v notranjem omrežju Compose.
 Stranski vsebnik izvaja Chrome z grafičnim vmesnikom znotraj Xvfb, zato fizični zaslon ni potreben. Njegova vrata CDP
 niso objavljena na gostitelju. Zaščiteni nosilec profila brskalnika je ločen od
-podatkovnega nosilca OmniRoute, brskalnik pa prejme dovolj skupnega pomnilnika. Notranji posredniški strežnik CDP
+podatkovnega nosilca 67router, brskalnik pa prejme dovolj skupnega pomnilnika. Notranji posredniški strežnik CDP
 posluša samo na vratih `9223` znotraj omrežja Compose; Chrome ostane vezan na vmesnik povratne zanke v
 stranskem vsebniku.
 
-Nadzorniški zakup pod `DATA_DIR` preprečuje, da bi več procesov OmniRoute imelo v lasti
+Nadzorniški zakup pod `DATA_DIR` preprečuje, da bi več procesov 67router imelo v lasti
 isto stanje tunela in posrednika. O navzkrižju poroča diagnostično orodje.
 
 ## Interaktivna obnovitev

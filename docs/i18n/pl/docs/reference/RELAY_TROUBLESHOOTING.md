@@ -5,10 +5,10 @@
 ---
 
 Przekaźniki (Vercel, Deno, Cloudflare) kończą połączenie z dostawcą na
-backendzie serverless, dzięki czemu OmniRoute może kierować ruch wychodzący ze
+backendzie serverless, dzięki czemu 67router może kierować ruch wychodzący ze
 stabilnego regionu, jednocześnie przechowując klucz API dostawcy po stronie
 serwera. Ten dokument opisuje dwa tryby awarii występujące w środowisku
-produkcyjnym oraz dostarczane przez OmniRoute sposoby ich usuwania.
+produkcyjnym oraz dostarczane przez 67router sposoby ich usuwania.
 
 ## Jak przechowywane jest uwierzytelnianie przekaźnika
 
@@ -36,7 +36,7 @@ pusty ciąg, a przekaźnik nie wysyła danych uwierzytelniających.
 1. Otwórz **Settings → Proxy Pool**.
 2. Wiersze przekaźników bez danych uwierzytelniających zawierają żółtą etykietę
    `auth missing` oraz przycisk **Repair**.
-3. Kliknij **Repair**. OmniRoute wywoła
+3. Kliknij **Repair**. 67router wywoła
    `POST /api/settings/proxies/[id]/repair-relay`, co spowoduje:
    - odszyfrowanie `relayAuthEnc` przy użyciu **bieżącego** klucza,
    - ponowne zapisanie `relayAuth` jako zwykłego tekstu w `notes`,
@@ -71,7 +71,7 @@ okno modalne ponownego wdrożenia, więc nie trzeba go szukać ręcznie.
 dostępny, ale żądania nadal sporadycznie kończą się niepowodzeniem.
 
 Sprawdź nagłówki diagnostyczne przekaźnika zwracane przez sondę automatycznego
-testu OmniRoute (zobacz **Settings → Proxy Pool** oraz liczniki `relayTested` /
+testu 67router (zobacz **Settings → Proxy Pool** oraz liczniki `relayTested` /
 `relayAlive`):
 
 - `x-relay-url` — backend przekaźnika, który odpowiedział.

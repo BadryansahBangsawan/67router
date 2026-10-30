@@ -7,7 +7,7 @@
 > **Foinse údaráis:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
-Cuimsíonn OmniRoute sraith chearrbhachais áitiúil ar dtús a thugann luaíochtaí
+Cuimsíonn 67router sraith chearrbhachais áitiúil ar dtús a thugann luaíochtaí
 d’úsáideoirí as idirghníomhú leis an ardán — iarrataí a dhéanamh, soláthraithe
 a athrú, teaglamaí a chruthú, comharthaí a chomhroinnt, agus cur leis an bpobal.
 Coinnítear an staid ar fad in SQLite; tá cónascadh le freastalaithe pobail
@@ -37,7 +37,7 @@ dreasachtaí eacnamaíocha (comhroinnt comharthaí, luaíochtaí cuiridh) a chur
 | Cláir Cheannaireachta | Raonta domhanda, seachtainiúla, míosúla, comhroinnte comharthaí, agus rannchuidithe |
 | Comhroinnt Comharthaí | Creidmheasanna a aistriú idir úsáideoirí trí mhórleabhar iontrála dúbailte          |
 | Cuireadh & Fuascailt  | Cóid atreoraithe le stóráil haiseáilte SHA-256                                      |
-| Freastalaithe Pobail  | Cónascadh le háscanna seachtracha OmniRoute                                         |
+| Freastalaithe Pobail  | Cónascadh le háscanna seachtracha 67router                                          |
 | Frithchalaois         | Scóráil ar thaobh an fhreastalaí, teorannú ráta, aimsiú aimhrialtachtaí z-scóir     |
 
 ### Prionsabail Dearaidh
@@ -116,7 +116,7 @@ src/app/api/gamification/
 
 ### Táblaí Bunachair Sonraí
 
-Tá na táblaí go léir i bpríomhbhunachar sonraí SQLite OmniRoute, arna chruthú leis an imirce
+Tá na táblaí go léir i bpríomhbhunachar sonraí SQLite 67router, arna chruthú leis an imirce
 `060_create_gamification.sql`. Faightear iriseoireacht WAL le hoidhreacht ón singilton
 `getDbInstance()` in `src/lib/db/core.ts`.
 
@@ -175,7 +175,7 @@ Tá na táblaí go léir i bpríomhbhunachar sonraí SQLite OmniRoute, arna chru
 
 ### Modúl Fearainn: `src/lib/db/gamification.ts`
 
-Leanann sé gnáthphatrún OmniRoute — iompórtálann sé `getDbInstance()` ó
+Leanann sé gnáthphatrún 67router — iompórtálann sé `getDbInstance()` ó
 `core.ts` agus easpórtálann sé feidhmeanna CRUD clóscríofa. Níl aon SQL amh i láimhseálaithe bealaigh.
 
 Príomhfheidhmeanna:
@@ -238,7 +238,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Gníomh            | XP  | Cur Síos                                                              |
 | ----------------- | --- | --------------------------------------------------------------------- |
-| `request`         | 1   | In aghaidh gach iarratais API a threoraítear trí OmniRoute            |
+| `request`         | 1   | In aghaidh gach iarratais API a threoraítear trí 67router             |
 | `provider_switch` | 5   | Aistriú chuig soláthraí eile                                          |
 | `model_switch`    | 3   | Aistriú chuig samhail eile                                            |
 | `combo_create`    | 10  | Teaglaim nua a chruthú                                                |
@@ -583,7 +583,7 @@ export async function transferTokens(
 | `token_hash` | SHA-256(raw_token)                 |
 
 Tugtar an comhartha amh ar ais don úsáideoir uair amháin go díreach tráth a chruthaithe. Ní
-stórálann ná ní thaispeánann OmniRoute arís é — ní mhaireann ach an hais.
+stórálann ná ní thaispeánann 67router arís é — ní mhaireann ach an hais.
 
 ### Féinatreorú a Chosc
 
@@ -705,7 +705,7 @@ Is féidir le riarthóirí an rian iniúchta iomlán a fhiosrú trí `GET /api/g
 
 ## Bealaí API
 
-Leanann gach bealach patrún caighdeánach OmniRoute:
+Leanann gach bealach patrún caighdeánach 67router:
 
 ```
 Bealach → Réamheitilt CORS → Bailíochtú an choirp (Zod) → Fíordheimhniú (extractApiKey)

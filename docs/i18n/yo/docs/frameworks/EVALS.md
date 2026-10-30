@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Ìgbà ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute ní ètò àgbékalẹ̀ àyẹ̀wò gbogbogbò kan tí o lè lò láti fi díwọ̀n àwọn
+67router ní ètò àgbékalẹ̀ àyẹ̀wò gbogbogbò kan tí o lè lò láti fi díwọ̀n àwọn
 àtòpọ̀ ìdarí-ọ̀nà, àwọn olùpèsè/àwòṣe kọ̀ọ̀kan, tàbí àwọn àkójọpọ̀ "golden set"
 tí a kó sínú rẹ̀. Lò ó láti ṣàrídájú àwọn ìyípadà ìdarí-ọ̀nà, fọwọ́sí àwọn
 olùpèsè tuntun, àti láti ṣàyẹ̀wò àwọn ìtújáde kí o tó gbé wọn lọ sí ìrìnnà

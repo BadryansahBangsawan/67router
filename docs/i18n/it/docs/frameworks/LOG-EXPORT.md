@@ -4,7 +4,7 @@
 
 ---
 
-Esportazione continua e incrementale dei log delle chiamate di OmniRoute verso un archivio di analisi esterno.
+Esportazione continua e incrementale dei log delle chiamate di 67router verso un archivio di analisi esterno.
 
 La scheda Logs della dashboard conserva la cronologia delle richieste in SQLite (`call_logs`), con limiti imposti da
 rotazione e conservazione. L'esportazione dei log invia periodicamente lo stesso insieme di record all'esterno, affinché possa sopravvivere

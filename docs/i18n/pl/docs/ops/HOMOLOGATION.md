@@ -6,7 +6,7 @@ lastUpdated: 2026-07-14
 
 # Pakiet homologacji (`npm run homolog`)
 
-Walidacja E2E w rzeczywistym środowisku wdrożenia OmniRoute działającego na VPS homologacji
+Walidacja E2E w rzeczywistym środowisku wdrożenia 67router działającego na VPS homologacji
 (`HOMOLOG_BASE_URL`, np. `http://192.168.0.15:20128`). Jedno polecenie zastępuje ręczną
 check-listę release STOP #2 zautomatyzowanym przebiegiem generującym dowody.
 

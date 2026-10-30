@@ -13,7 +13,7 @@
 
 O Mecanismo de Compartilhamento de Cota distribui de forma justa a cota baseada em tempo de um provedor (por exemplo, janela de 5 horas do Codex, 1500 req/h do Kimi) entre várias chaves de API que compartilham a mesma conexão.
 
-**Problema que ele resolve:** o OmniRoute encaminha muitas chaves de API para a mesma conta de provedor upstream. Sem uma lógica de compartilhamento, uma rajada da chave A pode esgotar a cota do provedor durante aquela hora, deixando as chaves B e C bloqueadas até que a janela seja redefinida. O mecanismo evita isso:
+**Problema que ele resolve:** o 67router encaminha muitas chaves de API para a mesma conta de provedor upstream. Sem uma lógica de compartilhamento, uma rajada da chave A pode esgotar a cota do provedor durante aquela hora, deixando as chaves B e C bloqueadas até que a janela seja redefinida. O mecanismo evita isso:
 
 1. Rastreando o consumo contínuo de cada chave por dimensão (%, requisições, tokens, $).
 2. Aplicando um algoritmo de compartilhamento justo com conservação de trabalho: uma chave pode tomar emprestadas cotas ociosas enquanto o pool global não estiver saturado.
@@ -106,7 +106,7 @@ Driver Redis: script Lua EVAL para incremento atômico — executado como um ún
 
 - Tabela: `quota_consumption` (consulte as migrações `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Ideal para implantações de instância única.
-- Toda a persistência fica no banco de dados SQLite existente do OmniRoute (`DATA_DIR/storage.sqlite`).
+- Toda a persistência fica no banco de dados SQLite existente do 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opcional, múltiplas instâncias)
 

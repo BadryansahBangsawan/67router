@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "အမှား: {message}",
-    "serverOffline": "OmniRoute ဆာဗာ အော့ဖ်လိုင်းဖြစ်နေသည်။ စတင်ရန်: omniroute serve",
+    "serverOffline": "67router ဆာဗာ အော့ဖ်လိုင်းဖြစ်နေသည်။ စတင်ရန်: omniroute serve",
     "authRequired": "စစ်မှန်ကြောင်း အတည်ပြုရန် လိုအပ်သည်။ OMNIROUTE_API_KEY ကို သတ်မှတ်ပါ သို့မဟုတ် ဤအမိန့်ကို လုပ်ဆောင်ပါ: omniroute setup",
     "rateLimited": "အသုံးပြုမှုနှုန်း ကန့်သတ်ချက် ကျော်လွန်သွားသည်။ {seconds}s ကြာပြီးနောက် ထပ်မံကြိုးစားပါ။",
     "timeout": "တောင်းဆိုမှုသည် {ms}ms ကြာပြီးနောက် အချိန်ကုန်သွားသည်။",
@@ -15,7 +15,7 @@
     "yesOpt": "အတည်ပြုချက် တောင်းခံမှုကို ကျော်ရန်"
   },
   "setup": {
-    "title": "OmniRoute စနစ်ထည့်သွင်းခြင်း",
+    "title": "67router စနစ်ထည့်သွင်းခြင်း",
     "passwordPrompt": "စီမံခန့်ခွဲသူ စကားဝှက်",
     "providerPrompt": "မူလ provider (ကျော်ရန် အလွတ်ထားပါ)",
     "done": "စနစ်ထည့်သွင်းမှု ပြီးပါပြီ",
@@ -30,7 +30,7 @@
     "opencode": "OpenCode အတွက် တွဲဖက်ပါရှိသော @omniroute/opencode-plugin ကို ထည့်သွင်းပြီး စီစဉ်သတ်မှတ်ရန်"
   },
   "doctor": {
-    "title": "OmniRoute စနစ်စစ်ဆေးခြင်း",
+    "title": "67router စနစ်စစ်ဆေးခြင်း",
     "dbOk": "ဒေတာဘေ့စ်: ကောင်းမွန်သည် ({path})",
     "dbMissing": "ဒေတာဘေ့စ်ကို စတင်သတ်မှတ်မထားပါ — `omniroute setup` ကို လုပ်ဆောင်ပါ",
     "portOk": "Port {port}: အသုံးပြုနိုင်သည်",
@@ -82,7 +82,7 @@
       "providerOpt": "ဝန်ဆောင်မှုပေးသူ အမည်ဖြင့် စစ်ထုတ်ရန်",
       "header": "ID         ဝန်ဆောင်မှုပေးသူ       အမည်                     သက်တမ်းကုန်ဆုံးမှု အခြေအနေ  စမ်းသပ်မှုအခြေအနေ  ခေတ္တရပ်နားမှု ပြီးဆုံးချိန်",
       "noData": "ဝန်ဆောင်မှုပေးသူ ချိတ်ဆက်မှုဒေတာ မရရှိနိုင်ပါ။",
-      "requiresServer": "providers status ကို အသုံးပြုရန် OmniRoute server လည်ပတ်နေရန် လိုအပ်သည်။"
+      "requiresServer": "providers status ကို အသုံးပြုရန် 67router server လည်ပတ်နေရန် လိုအပ်သည်။"
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "ဝန်ဆောင်မှုပေးသူတစ်ခုအတွက် API key ကို ထည့်ရန် သို့မဟုတ် အပ်ဒိတ်လုပ်ရန်",
     "listDescription": "ပြင်ဆင်သတ်မှတ်ထားသော API key အားလုံးကို စာရင်းပြုစုရန်",
     "removeDescription": "ဝန်ဆောင်မှုပေးသူတစ်ခုအတွက် API key ကို ဖယ်ရှားရန်",
-    "regenerateDescription": "OmniRoute API key ကို ပြန်လည်ထုတ်လုပ်ရန်",
-    "revokeDescription": "OmniRoute API key ကို ရုပ်သိမ်းရန်",
+    "regenerateDescription": "67router API key ကို ပြန်လည်ထုတ်လုပ်ရန်",
+    "revokeDescription": "67router API key ကို ရုပ်သိမ်းရန်",
     "revealDescription": "ဖုံးကွယ်ထားခြင်းမရှိသော API key တန်ဖိုးကို ဖော်ပြရန်",
     "usageDescription": "API key တစ်ခုအတွက် လတ်တလောအသုံးပြုမှုကို ပြသရန်",
     "usageLimitOpt": "လတ်တလော တောင်းဆိုမှုအရေအတွက်",
@@ -225,7 +225,7 @@
     "noCombo": "ကိုက်ညီသော combo ကို ရှာမတွေ့ပါ။ ဤ command ဖြင့် တစ်ခုဖန်တီးသတ်မှတ်ပါ: omniroute combo create"
   },
   "chat": {
-    "description": "OmniRoute သို့ တစ်ကြိမ်တည်းသုံး chat prompt ပို့ရန်",
+    "description": "67router သို့ တစ်ကြိမ်တည်းသုံး chat prompt ပို့ရန်",
     "file": "ဖိုင်မှ prompt ကို ဖတ်ရန်",
     "stdin": "stdin မှ prompt ကို ဖတ်ရန်",
     "system": "စနစ်ညွှန်ကြားချက်",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "OmniRoute server ကို စတင်ရန် (မူလလုပ်ဆောင်ချက်)",
-    "starting": "port {port} တွင် OmniRoute server ကို စတင်နေသည်...",
+    "description": "67router server ကို စတင်ရန် (မူလလုပ်ဆောင်ချက်)",
+    "starting": "port {port} တွင် 67router server ကို စတင်နေသည်...",
     "ready": "http://localhost:{port} တွင် အသင့်ဖြစ်ပါပြီ",
     "stopping": "server (PID {pid}) ကို ရပ်တန့်နေသည်...",
     "stopped": "server ရပ်တန့်ပြီးပါပြီ။",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "အရန်သိမ်းခြင်း",
-    "description": "OmniRoute ဒေတာကို အရန်သိမ်းပါ",
+    "description": "67router ဒေတာကို အရန်သိမ်းပါ",
     "creating": "အရန်ဖိုင် ဖန်တီးနေသည်...",
     "done": "အရန်ဖိုင်ကို {path} တွင် သိမ်းဆည်းပြီးပါပြီ",
     "noFiles": "အရန်သိမ်းရန် ဖိုင်မရှိပါ (ဒေတာဘေ့စ်ကို စတင်သတ်မှတ်ရသေးပါ)",
@@ -277,7 +277,7 @@
     "noBackups": "အရန်ဖိုင်များ မတွေ့ပါ။",
     "notFound": "အရန်ဖိုင် မတွေ့ပါ: {name}",
     "confirmRestore": "လက်ရှိဒေတာကို {ts} မှ အရန်ဖိုင်ဖြင့် အစားထိုးမလား။",
-    "createDescription": "OmniRoute ဒေတာကို အရန်သိမ်းပါ",
+    "createDescription": "67router ဒေတာကို အရန်သိမ်းပါ",
     "nameOpt": "စိတ်ကြိုက် အရန်ဖိုင်အမည်",
     "cloudOpt": "အရန်ဖိုင်ကို cloud storage သို့ တင်ပါ",
     "encryptOpt": "အရန်ဖိုင်ကို AES-256-GCM ဖြင့် ကုဒ်ဝှက်ပါ",
@@ -321,7 +321,7 @@
     "clearFailed": "ကက်ရှ်ကို ရှင်းလင်း၍ မရပါ။"
   },
   "redis": {
-    "description": "OmniRoute ၏ ကက်ရှ်သိမ်းဆည်းမှုနှင့် ခွဲတမ်းခြေရာခံမှုအတွက် စက်တွင်း Redis ကွန်တိန်နာတစ်ခုကို (Podman သို့မဟုတ် Docker ဖြင့်) တစ်ချက်နှိပ်၍ စတင်ရန်"
+    "description": "67router ၏ ကက်ရှ်သိမ်းဆည်းမှုနှင့် ခွဲတမ်းခြေရာခံမှုအတွက် စက်တွင်း Redis ကွန်တိန်နာတစ်ခုကို (Podman သို့မဟုတ် Docker ဖြင့်) တစ်ချက်နှိပ်၍ စတင်ရန်"
   },
   "test": {
     "description": "ဝန်ဆောင်မှုပေးသူ ချိတ်ဆက်မှုကို စမ်းသပ်ရန်",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "OmniRoute ခွင့်ပြုချက်ဆိုင်ရာ မူဝါဒများကို စီမံပါ",
+    "description": "67router ခွင့်ပြုချက်ဆိုင်ရာ မူဝါဒများကို စီမံပါ",
     "list": {
       "description": "မူဝါဒများကို စာရင်းပြုစုပါ",
       "kind": "အမျိုးအစားအလိုက် စစ်ထုတ်ပါ (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "OmniRoute ချုံ့သိပ်မှု ပိုက်လိုင်းကို စီစဉ်သတ်မှတ်ပြီး စစ်ဆေးပါ",
+    "description": "67router ချုံ့သိပ်မှု ပိုက်လိုင်းကို စီစဉ်သတ်မှတ်ပြီး စစ်ဆေးပါ",
     "status": {
       "description": "လက်ရှိ ချုံ့သိပ်မှု အခြေအနေနှင့် ဆက်တင်များကို ပြပါ"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "တန်နယ် {type} ၏ URL ကို အသစ်ပြောင်းမလား။ (URL အသစ်တစ်ခု ဖန်တီးပါမည်)"
   },
   "stop": {
-    "description": "OmniRoute ဆာဗာကို ရပ်တန့်ပါ",
+    "description": "67router ဆာဗာကို ရပ်တန့်ပါ",
     "stopping": "ဆာဗာကို ရပ်တန့်နေပါသည် (PID {pid})...",
     "stopped": "ဆာဗာကို ရပ်တန့်ပြီးပါပြီ။",
     "notRunning": "လည်ပတ်နေသော ဆာဗာမရှိပါ။",
     "portFallback": "PID ဖိုင်ကို မတွေ့ပါ၊ port အခြေပြု ရပ်တန့်မှုကို ကြိုးစားနေပါသည်..."
   },
   "restart": {
-    "description": "OmniRoute ဆာဗာကို ပြန်လည်စတင်ပါ",
-    "restarting": "OmniRoute ဆာဗာကို ပြန်လည်စတင်နေသည်..."
+    "description": "67router ဆာဗာကို ပြန်လည်စတင်ပါ",
+    "restarting": "67router ဆာဗာကို ပြန်လည်စတင်နေသည်..."
   },
   "dashboard": {
-    "description": "OmniRoute dashboard ကို browser တွင် ဖွင့်ပါ",
+    "description": "67router dashboard ကို browser တွင် ဖွင့်ပါ",
     "opening": "Dashboard ကို {url} တွင် ဖွင့်နေသည်",
     "urlOnly": "Browser မဖွင့်ဘဲ dashboard URL ကိုသာ ထုတ်ပြပါ",
     "tui": "အပြန်အလှန်တုံ့ပြန်နိုင်သော TUI dashboard ကို ဖွင့်ပါ (terminal UI၊ tab ၇ ခု)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "OmniRoute skill များကို စီမံပါ (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "67router skill များကို စီမံပါ (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "ထည့်သွင်းထားသော skill များကို စာရင်းပြုစုပါ",
       "type": "အမျိုးအစားအလိုက် စစ်ထုတ်ပါ (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "OmniRoute စကားပြောဆိုမှု memory (FTS5 + vector) ကို စီမံရန်",
+    "description": "67router စကားပြောဆိုမှု memory (FTS5 + vector) ကို စီမံရန်",
     "search": {
       "description": "အဓိပ္ပာယ်ဆိုင်ရာ query ဖြင့် memory entry များကို ရှာဖွေရန်",
       "type": "memory အမျိုးအစားဖြင့် စစ်ထုတ်ရန် (user|feedback|project|reference)",
@@ -792,14 +792,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — အလိုအလျောက် အရန်ပြောင်းစနစ်ပါဝင်သော စမတ် AI Router",
+    "description": "67router — အလိုအလျောက် အရန်ပြောင်းစနစ်ပါဝင်သော စမတ် AI Router",
     "version": "ဗားရှင်းကို ပြသပြီး ထွက်ရန်",
     "output": "အထွက်ပုံစံ (table, json, jsonl, csv)",
     "quiet": "မလိုအပ်သော အထွက်များကို ဖျောက်ရန်",
     "no_color": "အရောင်ပါသော အထွက်ကို ပိတ်ရန်",
     "timeout": "HTTP တောင်းဆိုမှု အချိန်ကုန်ဆုံးကာလကို မီလီစက္ကန့်ဖြင့် သတ်မှတ်ရန်",
-    "api_key": "OmniRoute ဆာဗာအတွက် API key",
-    "base_url": "OmniRoute ဆာဗာ၏ အခြေခံ URL",
+    "api_key": "67router ဆာဗာအတွက် API key",
+    "base_url": "67router ဆာဗာ၏ အခြေခံ URL",
     "context": "ဤ command အတွက် အသုံးပြုမည့် ဆာဗာ context/profile",
     "lang": "CLI ပြသဘာသာစကား သတ်မှတ်ရန် (OMNIROUTE_LANG ကို ထပ်ဆင့်အစားထိုးသည်)"
   },
@@ -997,7 +997,7 @@
     }
   },
   "openapi": {
-    "description": "OmniRoute OpenAPI spec ကို ရယူအသုံးပြုပြီး စမ်းသပ်ရန်",
+    "description": "67router OpenAPI spec ကို ရယူအသုံးပြုပြီး စမ်းသပ်ရန်",
     "dump": {
       "description": "OpenAPI spec ကို stdout သို့မဟုတ် ဖိုင်သို့ ထုတ်ပေးရန်",
       "format": "အထွက်ပုံစံ: yaml|json (မူလသတ်မှတ်ချက်: yaml)",
@@ -1040,7 +1040,7 @@
     }
   },
   "open": {
-    "description": "သီးခြား OmniRoute dashboard စာမျက်နှာကို browser တွင် ဖွင့်ပါ",
+    "description": "သီးခြား 67router dashboard စာမျက်နှာကို browser တွင် ဖွင့်ပါ",
     "url": "URL ကိုသာ ထုတ်ပြပြီး browser ကို မဖွင့်ပါနှင့်"
   },
   "telemetry": {
@@ -1057,7 +1057,7 @@
     }
   },
   "sync": {
-    "description": "OmniRoute instance များအကြား config ကို ထပ်တူပြုပါ",
+    "description": "67router instance များအကြား config ကို ထပ်တူပြုပါ",
     "push": {
       "description": "Config ကို cloud သို့မဟုတ် အဝေးရှိ instance သို့ ပို့ပါ"
     },
@@ -1116,7 +1116,7 @@
     "filter": "အဆင့်အလိုက် စစ်ထုတ်ရန် (error,warn,info) — ကော်မာဖြင့် ခွဲခြားထားသည်",
     "lines": "ရယူမည့် စာကြောင်းအရေအတွက်",
     "timeout": "ချိတ်ဆက်မှု အချိန်ကုန်ဆုံးကာလ (ms)",
-    "baseUrl": "OmniRoute API အခြေခံ URL",
+    "baseUrl": "67router API အခြေခံ URL",
     "requestId": "တောင်းဆိုမှု ID ဖြင့် စစ်ထုတ်ရန်",
     "apiKey": "API key ဖြင့် စစ်ထုတ်ရန်",
     "combo": "Combo အမည်ဖြင့် စစ်ထုတ်ရန်",
@@ -1132,10 +1132,10 @@
     "description": "စနစ် tray အိုင်ကွန်ကို ထိန်းချုပ်ရန်",
     "show": "tray အိုင်ကွန်ကို ပြရန် (ဆာဗာသည် --tray ဖြင့် လုပ်ဆောင်နေပါက)",
     "hide": "tray အိုင်ကွန်ကို ဖျောက်ရန်",
-    "quit": "tray မှတစ်ဆင့် OmniRoute မှ ထွက်ရန်"
+    "quit": "tray မှတစ်ဆင့် 67router မှ ထွက်ရန်"
   },
   "autostart": {
-    "description": "စနစ်စတင်ချိန်တွင် OmniRoute အလိုအလျောက်စတင်ခြင်းကို စီမံရန် (Linux: systemd user service)",
+    "description": "စနစ်စတင်ချိန်တွင် 67router အလိုအလျောက်စတင်ခြင်းကို စီမံရန် (Linux: systemd user service)",
     "enable": "စနစ်စတင်ချိန်တွင် အလိုအလျောက်စတင်ခြင်းကို ဖွင့်ရန်",
     "disable": "စနစ်စတင်ချိန်တွင် အလိုအလျောက်စတင်ခြင်းကို ပိတ်ရန်",
     "toggle": "စနစ်စတင်ချိန်တွင် အလိုအလျောက်စတင်ခြင်းကို အဖွင့်အပိတ်လုပ်ရန်",
@@ -1167,19 +1167,19 @@
     "scaffold": "plugin boilerplate အသစ်တစ်ခုကို ဖန်တီးရန်"
   },
   "launch": {
-    "description": "OmniRoute သို့ ချိတ်ဆက်ထားသော Claude Code ကို စတင်ရန် (local သို့မဟုတ် remote၊ --profile ဖြင့်)",
+    "description": "67router သို့ ချိတ်ဆက်ထားသော Claude Code ကို စတင်ရန် (local သို့မဟုတ် remote၊ --profile ဖြင့်)",
     "token": "Claude client က ပေးပို့သင့်သည့် token (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "{port} တွင် OmniRoute ကို ဆက်သွယ်၍မရပါ။ 'omniroute serve' ဖြင့် စတင်ပါ။",
+    "notRunning": "{port} တွင် 67router ကို ဆက်သွယ်၍မရပါ။ 'omniroute serve' ဖြင့် စတင်ပါ။",
     "notFound": "PATH တွင် 'claude' CLI ကို ရှာမတွေ့ပါ။"
   },
   "run": {
-    "description": "OmniRoute မှတစ်ဆင့် ပံ့ပိုးထားသော CLI ပစ်မှတ်တစ်ခုကို စတင်ပါ"
+    "description": "67router မှတစ်ဆင့် ပံ့ပိုးထားသော CLI ပစ်မှတ်တစ်ခုကို စတင်ပါ"
   },
   "setupClaude": {
-    "description": "OmniRoute မော်ဒယ်ကတ်တလောက်မှ ~/.claude/profiles Claude Code ပရိုဖိုင်များကို ဖန်တီးပါ"
+    "description": "67router မော်ဒယ်ကတ်တလောက်မှ ~/.claude/profiles Claude Code ပရိုဖိုင်များကို ဖန်တီးပါ"
   },
   "connect": {
-    "description": "အဝေးရှိ OmniRoute ဆာဗာသို့ ချိတ်ဆက်ပြီး အဝေးထိန်းမုဒ်သို့ ဝင်ပါ"
+    "description": "အဝေးရှိ 67router ဆာဗာသို့ ချိတ်ဆက်ပြီး အဝေးထိန်းမုဒ်သို့ ဝင်ပါ"
   },
   "tokens": {
     "description": "နယ်ပယ်ကန့်သတ်ထားသော CLI အသုံးပြုခွင့် တိုကင်များကို စီမံပါ (အဝေးထိန်းမုဒ်)"
@@ -1188,10 +1188,10 @@
     "description": "လက်ရှိအသုံးပြုနေသော ဆာဗာမှ ပံ့ပိုးသူ+မော်ဒယ်ကို ရွေးချယ်ပြီး ပံ့ပိုးထားသော စက်တွင်း CLI ကို စီစဉ်သတ်မှတ်ပါ"
   },
   "launchCodex": {
-    "description": "OmniRoute သို့ ညွှန်ထားသော Codex CLI ကို စတင်ပါ (စက်တွင်း သို့မဟုတ် အဝေးရှိ VPS)"
+    "description": "67router သို့ ညွှန်ထားသော Codex CLI ကို စတင်ပါ (စက်တွင်း သို့မဟုတ် အဝေးရှိ VPS)"
   },
   "setupCodex": {
-    "description": "OmniRoute တိုက်ရိုက်မော်ဒယ်ကတ်တလောက်မှ ~/.codex ပရိုဖိုင်ဖိုင်များကို ဖန်တီးပါ"
+    "description": "67router တိုက်ရိုက်မော်ဒယ်ကတ်တလောက်မှ ~/.codex ပရိုဖိုင်ဖိုင်များကို ဖန်တီးပါ"
   },
   "packs": {
     "description": "ထည့်သွင်းရွေးချယ်နိုင်သော runtime pack များကို စီမံပါ (ML / ဘရောက်ဇာ အလိုအလျောက်လုပ်ဆောင်မှု)",
@@ -1204,7 +1204,7 @@
     "errUnknown": "မသိသော pack: {name}",
     "errNoIndex": "pack အညွှန်းကို မတွေ့ပါ။ pack payload ပါရှိသော --source <dir> ကို ထည့်သွင်းပေးပါ (desktop bundle များတွင် ၎င်းကို app ဘေးတွင် ထည့်သွင်းပေးထားသည်)",
     "installed": "pack \"{name}\" ကို {dir} တွင် ထည့်သွင်းပြီး တိုက်ဆိုင်စစ်ဆေးပြီးပါပြီ",
-    "restartHint": "runtime က pack ကို အသုံးပြုနိုင်ရန် OmniRoute ဆာဗာ (သို့မဟုတ် desktop app) ကို ပြန်လည်စတင်ပါ",
+    "restartHint": "runtime က pack ကို အသုံးပြုနိုင်ရန် 67router ဆာဗာ (သို့မဟုတ် desktop app) ကို ပြန်လည်စတင်ပါ",
     "removed": "pack \"{name}\" ကို ဖယ်ရှားပြီးပါပြီ",
     "notInstalled": "pack \"{name}\" ကို ထည့်သွင်းထားခြင်းမရှိပါ",
     "verifyOk": "ထည့်သွင်းထားသော pack အားလုံးကို အောင်မြင်စွာ တိုက်ဆိုင်စစ်ဆေးပြီးပါပြီ",

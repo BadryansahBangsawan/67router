@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute는 완전히 설치 가능한 프로그레시브 웹 앱으로 제공됩니다. Android(Chrome) 또는 iOS(Safari) 등 모바일 브라우저에서 대시보드에 접속하면 앱 스토어 없이도 "홈 화면에 추가"하여 네이티브 앱과 같은 환경을 이용할 수 있습니다.
+67router는 완전히 설치 가능한 프로그레시브 웹 앱으로 제공됩니다. Android(Chrome) 또는 iOS(Safari) 등 모바일 브라우저에서 대시보드에 접속하면 앱 스토어 없이도 "홈 화면에 추가"하여 네이티브 앱과 같은 환경을 이용할 수 있습니다.
 
 ## PWA란 무엇인가요?
 
-프로그레시브 웹 앱은 OmniRoute 웹 대시보드를 네이티브 모바일 앱처럼 보이고 작동하도록 만들어 줍니다. 설치하면 다음과 같은 기능을 제공합니다.
+프로그레시브 웹 앱은 67router 웹 대시보드를 네이티브 모바일 앱처럼 보이고 작동하도록 만들어 줍니다. 설치하면 다음과 같은 기능을 제공합니다.
 
 - 자체 아이콘을 사용하여 홈 화면에서 실행
 - 브라우저 주소 표시줄이나 탭 UI 없이 전체 화면으로 실행
@@ -20,26 +20,26 @@ OmniRoute는 완전히 설치 가능한 프로그레시브 웹 앱으로 제공�
 
 ### Android (Chrome)
 
-1. Chrome에서 OmniRoute 대시보드를 엽니다: `http://YOUR_IP:20128`
-2. Chrome에 **"OmniRoute를 홈 화면에 추가"** 배너가 자동으로 표시됩니다. 또는 다음 단계를 따릅니다.
+1. Chrome에서 67router 대시보드를 엽니다: `http://YOUR_IP:20128`
+2. Chrome에 **"67router를 홈 화면에 추가"** 배너가 자동으로 표시됩니다. 또는 다음 단계를 따릅니다.
    - **⋮** 메뉴(점 3개) → **"홈 화면에 추가"** 또는 **"앱 설치"**를 탭합니다.
 3. 메시지를 확인합니다.
-4. OmniRoute가 홈 화면에 독립 실행형 앱으로 표시됩니다.
+4. 67router가 홈 화면에 독립 실행형 앱으로 표시됩니다.
 
 ### iOS (Safari)
 
-1. Safari에서 OmniRoute 대시보드를 엽니다: `http://YOUR_IP:20128`
+1. Safari에서 67router 대시보드를 엽니다: `http://YOUR_IP:20128`
 2. **공유** 버튼(화살표가 있는 상자)을 탭합니다.
 3. 아래로 스크롤하여 **"홈 화면에 추가"**를 탭합니다.
-4. 이름을 지정하고(기본값: "OmniRoute") **추가**를 탭합니다.
-5. OmniRoute가 앱 아이콘과 함께 홈 화면에 표시됩니다.
+4. 이름을 지정하고(기본값: "67router") **추가**를 탭합니다.
+5. 67router가 앱 아이콘과 함께 홈 화면에 표시됩니다.
 
 ### 데스크톱 (Chrome / Edge)
 
-1. OmniRoute 대시보드를 엽니다.
-2. 주소 표시줄에서 **설치 아이콘**을 클릭하거나 ⋮ → "OmniRoute 설치..."를 선택합니다.
+1. 67router 대시보드를 엽니다.
+2. 주소 표시줄에서 **설치 아이콘**을 클릭하거나 ⋮ → "67router 설치..."를 선택합니다.
 3. 메시지를 확인합니다.
-4. OmniRoute가 탭이나 주소 표시줄이 없는 독립 실행형 창으로 열립니다.
+4. 67router가 탭이나 주소 표시줄이 없는 독립 실행형 창으로 열립니다.
 
 ## 기능
 
@@ -49,7 +49,7 @@ OmniRoute는 완전히 설치 가능한 프로그레시브 웹 앱으로 제공�
 
 ### 오프라인 지원
 
-OmniRoute에는 지능형 캐싱을 제공하는 서비스 워커(`sw.js`)가 포함되어 있습니다.
+67router에는 지능형 캐싱을 제공하는 서비스 워커(`sw.js`)가 포함되어 있습니다.
 
 | 자산 유형                                               | 전략                           | 동작                                                                                                    |
 | ------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ OmniRoute에는 지능형 캐싱을 제공하는 서비스 워커(`sw.js`)가 �
 
 ### 앱 아이콘
 
-OmniRoute는 각 플랫폼에 최적화된 아이콘을 제공합니다.
+67router는 각 플랫폼에 최적화된 아이콘을 제공합니다.
 
 | 파일                   | 크기          | 사용 위치                      |
 | ---------------------- | ------------- | ------------------------------ |
@@ -93,9 +93,9 @@ Next.js가 `src/app/manifest.ts`를 통해 생성합니다.
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Next.js가 `src/app/manifest.ts`를 통해 생성합니다.
 
 ## Termux(Android)에서 사용
 
-Termux를 통해 Android에서 OmniRoute를 실행하면 PWA가 원활하게 작동합니다.
+Termux를 통해 Android에서 67router를 실행하면 PWA가 원활하게 작동합니다.
 
-1. Termux에서 OmniRoute를 시작합니다: `npx omniroute`
+1. Termux에서 67router를 시작합니다: `npx omniroute`
 2. 같은 휴대전화에서 Chrome을 엽니다: `http://localhost:20128`
 3. "홈 화면에 추가"를 통해 PWA를 설치합니다
 4. PWA가 로컬 Termux 서버에 연결되며, 모든 것이 기기 내에서 실행됩니다
@@ -156,7 +156,7 @@ Termux를 통해 Android에서 OmniRoute를 실행하면 PWA가 원활하게 작
 
 ## 다른 기기에서 사용
 
-OmniRoute 서버에 브라우저로 접근할 수 있는 모든 기기에 PWA를 설치할 수 있습니다.
+67router 서버에 브라우저로 접근할 수 있는 모든 기기에 PWA를 설치할 수 있습니다.
 
 - **다른 휴대전화/태블릿**: `http://PHONE_IP:20128`로 이동하여 PWA를 설치합니다
 - **노트북**: Chrome/Edge에서 열고 데스크톱 PWA로 설치합니다

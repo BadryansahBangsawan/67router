@@ -28,9 +28,9 @@ Az alagútra csak az eszközöket használó fordulókhoz van szükség. A felso
    nevét. Az új, eszközhasználatra képes beállításokhoz újonnan létrehozott, pontosan
    `OmniRoute Codex v2` nevű összekötőt kell használni, amelynél az Authentication értéke None, a Permissions értéke pedig Allow all
    actions.
-3. Futtassa a kapcsolat ellenőrzését. Az OmniRoute megnyit egy böngészőalapú Temporary Chat-beszélgetést, és észleli,
+3. Futtassa a kapcsolat ellenőrzését. A 67router megnyit egy böngészőalapú Temporary Chat-beszélgetést, és észleli,
    hogy a Sol és a Pro elérhető-e a fiók számára.
-4. Mentse a kapcsolatot. Az OmniRoute a beillesztett cookie-t az ellenőrzött
+4. Mentse a kapcsolatot. A 67router a beillesztett cookie-t az ellenőrzött
    Playwright-tárolási állapotra cseréli, és azt a futtatókörnyezeti kulccsal együtt, a titkosított
    hitelesítőadat-absztrakción keresztül tárolja.
 
@@ -72,12 +72,12 @@ Ne nevezzen át és ne használjon újra egy régebbi `Codex Native` vagy `OmniR
 
 ## Kijelző nélküli VPS és Docker
 
-npm-, systemd- és PM2-telepítések esetén az OmniRoute felismeri a Chrome és a Chromium gyakori elérési útjait.
-Alternatív megoldásként állítsa be a `CHATGPT_WEB_CODEX_CHROME_PATH` változót. A futásidejű körök szándékosan grafikus felületű Chrome-ot használnak, mert a ChatGPT elutasítja a valódi headless böngészőkonfigurációt. Egy kijelző nélküli gazdagépnek ezért privát Xvfb-kijelzővel kell futtatnia az OmniRoute-ot; önmagában a Chrome elérési útjának beállítása nem biztosít ilyet.
+npm-, systemd- és PM2-telepítések esetén a 67router felismeri a Chrome és a Chromium gyakori elérési útjait.
+Alternatív megoldásként állítsa be a `CHATGPT_WEB_CODEX_CHROME_PATH` változót. A futásidejű körök szándékosan grafikus felületű Chrome-ot használnak, mert a ChatGPT elutasítja a valódi headless böngészőkonfigurációt. Egy kijelző nélküli gazdagépnek ezért privát Xvfb-kijelzővel kell futtatnia a 67router-ot; önmagában a Chrome elérési útjának beállítása nem biztosít ilyet.
 
-A Docker `web` profilja elindítja a `chatgpt-web-codex-browser` szolgáltatást a belső Compose-hálózaton. A sidecar grafikus felületű Chrome-ot futtat az Xvfb-ben, így nincs szükség fizikai kijelzőre. A CDP-portja nincs közzétéve a gazdagépen. A védett böngészőprofil kötete elkülönül az OmniRoute adatkötetétől, és a böngésző elegendő megosztott memóriát kap. A belső CDP-proxy kizárólag a `9223` porton figyel a Compose-hálózaton belül; a Chrome továbbra is a loopback interfészhez kötődik a sidecarban.
+A Docker `web` profilja elindítja a `chatgpt-web-codex-browser` szolgáltatást a belső Compose-hálózaton. A sidecar grafikus felületű Chrome-ot futtat az Xvfb-ben, így nincs szükség fizikai kijelzőre. A CDP-portja nincs közzétéve a gazdagépen. A védett böngészőprofil kötete elkülönül a 67router adatkötetétől, és a böngésző elegendő megosztott memóriát kap. A belső CDP-proxy kizárólag a `9223` porton figyel a Compose-hálózaton belül; a Chrome továbbra is a loopback interfészhez kötődik a sidecarban.
 
-A `DATA_DIR` alatt található felügyelői bérlet megakadályozza, hogy több OmniRoute-folyamat birtokolja ugyanazt az alagút- és közvetítőállapotot. Az ütközést a doctor jelenti.
+A `DATA_DIR` alatt található felügyelői bérlet megakadályozza, hogy több 67router-folyamat birtokolja ugyanazt az alagút- és közvetítőállapotot. Az ütközést a doctor jelenti.
 
 ## Interaktív helyreállítás
 

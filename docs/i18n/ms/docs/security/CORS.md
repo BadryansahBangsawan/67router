@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute mengawal **origin pelayar** yang dibenarkan membaca respons silang origin
+67router mengawal **origin pelayar** yang dibenarkan membaca respons silang origin
 daripada satu senarai dibenarkan yang berpusat. Model ini **gagal-tertutup secara lalai**:
 tiada origin dibenarkan sehingga anda membenarkannya secara eksplisit. Halaman ini mendokumenkan cara senarai dibenarkan
 ditentukan, perkara yang sebenarnya didedahkan oleh `CORS_ALLOW_ALL=true` (dan, yang penting, perkara yang
@@ -45,13 +45,13 @@ mengikut turutan ini:
 ## Model ancaman — perkara yang sebenarnya didedahkan oleh `CORS_ALLOW_ALL=true`
 
 Amaran umum OWASP ("CORS kad bebas = mana-mana laman boleh memanggil API anda") wajar
-diambil serius, tetapi pendedahan OmniRoute **lebih terhad daripada kes umum**,
+diambil serius, tetapi pendedahan 67router **lebih terhad daripada kes umum**,
 disebabkan satu fakta pelaksanaan yang nyata:
 
 > **`applyCorsHeaders()` pusat tidak pernah mengeluarkan
 > `Access-Control-Allow-Credentials`.** Pelayar tidak akan mendedahkan respons silang origin
 > _yang menggunakan bukti kelayakan_ (mengandungi kuki) melainkan pelayan menghantar
-> `Access-Control-Allow-Credentials: true`. Laluan CORS dikongsi OmniRoute tidak pernah
+> `Access-Control-Allow-Credentials: true`. Laluan CORS dikongsi 67router tidak pernah
 > berbuat demikian.
 
 Maksudnya bagi setiap permukaan, walaupun dengan `CORS_ALLOW_ALL=true`:
@@ -91,7 +91,7 @@ secara berasingan daripada panduan CORS ini.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Jika OmniRoute berjalan di belakang proksi songsang / terowong (nginx, Caddy, Cloudflare
+- Jika 67router berjalan di belakang proksi songsang / terowong (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **bukan** satu-satunya kawalan anda — pengawal laluan
   gelung balik masih melindungi laluan yang mampu melakukan spawn (lihat
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Jangan palsukan
@@ -107,7 +107,7 @@ secara berasingan daripada panduan CORS ini.
 Anda jarang memerlukan kad bebas walaupun dalam persekitaran pembangunan. Benarkan hanya pelayan pembangunan yang anda gunakan:
 
 ```bash
-# Pelayan pembangunan Vite (5173) + Next.js (3000) yang memanggil OmniRoute setempat
+# Pelayan pembangunan Vite (5173) + Next.js (3000) yang memanggil 67router setempat
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +127,14 @@ memulakan semula.
   masukkan origin pengurusan/papan pemuka dalam sebarang konfigurasi permisif; origin tersebut mesti kekal
   tutup-jika-gagal sepenuhnya.
 
-## Contoh: proksi songsang di hadapan OmniRoute
+## Contoh: proksi songsang di hadapan 67router
 
-CORS dikuatkuasakan oleh OmniRoute sendiri, jadi proksi secara umumnya **tidak sepatutnya** menambah atau
+CORS dikuatkuasakan oleh 67router sendiri, jadi proksi secara umumnya **tidak sepatutnya** menambah atau
 menulis semula pengepala `Access-Control-*` (pengepala berganda menyebabkan pelayar gagal berfungsi). Tamatkan TLS
-dan majukan trafik — biarkan OmniRoute menjawab permintaan prapenerbangan:
+dan majukan trafik — biarkan 67router menjawab permintaan prapenerbangan:
 
 ```nginx
-# nginx — majukan ke OmniRoute; JANGAN suntik Access-Control-* di sini
+# nginx — majukan ke 67router; JANGAN suntik Access-Control-* di sini
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +142,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Kekalkan pengepala pemajuan: proksi pada hos yang sama bersambung daripada gelung balik, dan pengepala ini
-    # memberitahu OmniRoute bahawa pemanggil bukan pengendali setempat. Proksi yang tidak menambah mana-mana pengepala ini
+    # memberitahu 67router bahawa pemanggil bukan pengendali setempat. Proksi yang tidak menambah mana-mana pengepala ini
     # menjadikan setiap pemanggil jauh kelihatan seperti pemanggil setempat. Jangan sekali-kali tetapkan X-Forwarded-For kepada 127.0.0.1.
 }
 ```
 
-Tetapkan sumber pelayar yang dibenarkan dalam OmniRoute (`CORS_ALLOWED_ORIGINS` atau
+Tetapkan sumber pelayar yang dibenarkan dalam 67router (`CORS_ALLOWED_ORIGINS` atau
 tab Security), bukan dalam proksi.
 
 ## Fail sumber

@@ -25,7 +25,7 @@ test("Microsoft Designer Web runtime IDs fail closed at the executor seam", asyn
       (error: unknown) => {
         assert.ok(error instanceof Error);
         assert.equal((error as Error & { status?: number }).status, 410);
-        assert.equal(error.message, "Provider has been retired from OmniRoute runtime.");
+        assert.equal(error.message, "Provider has been retired from 67router runtime.");
         assert.equal(error.message.includes(providerId.trim()), false);
         return true;
       }

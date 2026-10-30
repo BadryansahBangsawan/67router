@@ -4,7 +4,7 @@
 
 ---
 
-Lokacin da OmniRoute ke gudana a cikin Docker, tsarin da aka saba na "Import from Zed Keychain" yana gaza
+Lokacin da 67router ke gudana a cikin Docker, tsarin da aka saba na "Import from Zed Keychain" yana gaza
 saboda container ba zai iya isa ga daemon na keychain na tsarin aiki na host ba (`libsecret` a Linux,
 Keychain a macOS, Credential Manager a Windows), sannan kundin adireshin saitunan Zed da ke kan
 tsarin fayil na host ba sa bayyana a cikin container ta tsohuwa.
@@ -20,7 +20,7 @@ Matsaloli biyu masu hana aiki suna faruwa a cikin container:
    yana sadarwa da sabis ɗin keychain na tsarin aiki ta Unix socket ko zaman D-Bus.
    Babu ɗayansu da ake haɗawa zuwa container ta tsohuwa, saboda haka karanta bayanan shiga kullum yana gazawa.
 
-OmniRoute yana gano yanayin Docker ta hanyoyi biyu:
+67router yana gano yanayin Docker ta hanyoyi biyu:
 
 - Kasancewar `/.dockerenv` (wanda Docker daemon ke rubutawa lokacin da container ya fara).
 - Bayyanar kalmar `docker` a cikin `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Idan ɗaya daga cikin waɗannan hanyoyin ya gano Docker, hanyar shigo da bayanai
 
 1. Buɗe **Dashboard → Providers → Zed**.
 2. Bangaren **Manual Token Import** yana bayyana a ƙasan katin shigo da bayanai daga keychain. Idan
-   OmniRoute ya gano Docker, wannan bangaren zai buɗe da kansa bayan yunƙurin farko na shigo da bayanai
+   67router ya gano Docker, wannan bangaren zai buɗe da kansa bayan yunƙurin farko na shigo da bayanai
    daga keychain ya gaza.
 3. Zaɓi provider daga jerin zaɓuka (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, ko DeepSeek).

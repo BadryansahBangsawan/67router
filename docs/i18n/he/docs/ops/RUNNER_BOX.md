@@ -5,7 +5,7 @@
 ---
 
 מאגר ה־self-hosted פועל על השרת **.113** (`tomni-proxmox-113`). מאז 2026-10-18 לכל
-runner של OmniRoute יש **תפקיד אחד**, תווית אחת ותקציב זיכרון/CPU המותאם לצריכה שנמדדה
+runner של 67router יש **תפקיד אחד**, תווית אחת ותקציב זיכרון/CPU המותאם לצריכה שנמדדה
 בעומס העבודה שלו. המשבצת של Turbopack מקבלת את המשאבים שהבנייה דורשת; שאר המשבצות מותאמות
 לשיאים שנמדדו בהן. הקצאת יתר בשרת מתרחשת רק כאשר בניית Turbopack חופפת לבניית webpack של
 Release-Green ולמשימת lint; זיכרון ה־swap של המארח (16 GB) סופג זאת, ומכיוון שבניות של בקשות משיכה
@@ -27,7 +27,7 @@ Release-Green ולמשימת lint; זיכרון ה־swap של המארח (16 GB)
 | swap      | 16 GB                       | `omniroute-113-5` פועל כאשר swap מושבת (`MemorySwapMax=0`), כך שבנייה שיצאה משליטה נעצרת בגבול שלה במקום לגרום לשרת להשתמש ב־swap                                                                                                                                                                                                                                       |
 | `/tmp`    | **tmpfs של 12 GB = RAM**    | כל דבר שמאוחסן שם צורך זיכרון; שאריות נמחקות לאחר 3 שעות                                                                                                                                                                                                                                                                                                                |
 | CPU       | נצפה עומס של 60 על 32 ליבות | לפני המכסות, בניית Turbopack אחת (כ־1166 % CPU) יחד עם חבילת בדיקות כיסוי באותו שרת מנעו את אותות החיים של המאזינים האחרים (`The self-hosted runner lost communication`,‏ #16853)                                                                                                                                                                                       |
-| runners   | **6 מאזינים**               | 4 של OmniRoute +‏ OmniHeuris +‏ OmniMind;‏ `omniroute-113-3/-4/-7/-8` מושבתים (`systemctl enable --now` מחזירה אחד מהם לפעולה)                                                                                                                                                                                                                                          |
+| runners   | **6 מאזינים**               | 4 של 67router +‏ OmniHeuris +‏ OmniMind;‏ `omniroute-113-3/-4/-7/-8` מושבתים (`systemctl enable --now` מחזירה אחד מהם לפעולה)                                                                                                                                                                                                                                           |
 
 ההגבלות נמצאות בקובץ `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` של כל יחידה
 (הערכים הקודמים נשמרו בשם `override.conf.bak-20261018`) והוחלו בזמן אמת באמצעות
@@ -72,7 +72,7 @@ worker מדווח שהמשימה בוטלה, וה-listener חוזר למצב מ�
 
 ברירת המחדל של ה-runner,‏ `KillMode=process`, משאירה את
 `Runner.Worker → npm → next-build` פעילים כאשר יחידה מופסקת או מופעלת מחדש — בנייה יתומה
-ממשיכה לצרוך RAM ו-CPU ללא משימה משויכת. לכל יחידת OmniRoute יש קובץ drop-in
+ממשיכה לצרוך RAM ו-CPU ללא משימה משויכת. לכל יחידת 67router יש קובץ drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 עם `KillMode=mixed`:‏ SIGTERM נשלח תחילה ל-listener, ולאחר מכן SIGKILL לכל ה-cgroup בנקודת
 `TimeoutStop`. ההגדרה נכנסת לתוקף בהפעלה מחדש הבאה של היחידה — הפעילו מחדש **runner אחד
@@ -117,7 +117,7 @@ worker מדווח שהמשימה בוטלה, וה-listener חוזר למצב מ�
   שזקוקות ל-`next build` של ה-backend בלבד (כ-5–6 GB;‏ webpack) ואת `lint-guard` של
   `quality.yml`. ל-`omniroute-113` היה `MemoryHigh=4G` עד 2026-10-18 — בניית promptfoo
   בילתה שם 54 דקות בפינוי זיכרון; 8 GB מבטלים את ההאטה.
-- **פחות listeners בכוונה.** ארבע יחידות OmniRoute הושבתו ב-2026-08-29 — כל listener נוסף
+- **פחות listeners בכוונה.** ארבע יחידות 67router הושבתו ב-2026-08-29 — כל listener נוסף
   הוא צרכן נוסף של תקציב הזיכרון שלעיל. התקרה של ה-janitor היא 6 (`MAX_ACTIVE_RUNNERS=6` ב-cron): הוא סופר
   כל `Runner.Listener` במכונה, ו-OmniHeuris + OmniMind מוסיפים שניים לארבעה שלנו.
 - **לעולם אין לנקות ידנית את `/tmp` או את `_work` בזמן ש-runner כלשהו עסוק.**

@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (ไทย)
+# 67router Auto-Combo Engine (ไทย)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # ราคาต่อโทเค็นต่ำ
 
 **สิ่งที่เกิดขึ้น:**
 
-1. OmniRoute ตรวจพบคำนำหน้า `auto/` ใน `src/sse/handlers/chat.ts`
+1. 67router ตรวจพบคำนำหน้า `auto/` ใน `src/sse/handlers/chat.ts`
 2. สอบถาม **การเชื่อมต่อผู้ให้บริการที่ใช้งานอยู่** ทั้งหมดจากฐานข้อมูล
 3. กรองให้เหลือเฉพาะรายการที่มีข้อมูลรับรองถูกต้อง (API key หรือ OAuth token)
 4. กำหนดโมเดลต่อการเชื่อมต่อ (`connection.defaultModel` หรือโมเดลแรกของผู้ให้บริการ)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # ราคาต่อโทเค็นต่ำ
 - การล็อกโมเดล — `isModelLocked(provider, connectionId, model)`
 
 ตัวเลือกแต่ละรายการยังมีแฟล็ก `excluded` ของ API key นี้ด้วย รายการยกเว้นจะถูกจัดเก็บ
-แยกตาม API key (ตาราง `auto_candidate_overrides`, migration `128`) — OmniRoute เป็น
+แยกตาม API key (ตาราง `auto_candidate_overrides`, migration `128`) — 67router เป็น
 ระบบผู้เช่ารายเดียวโดยไม่มีตาราง `users` ดังนั้น `apiKeyId` จึงเป็นข้อมูลระบุตัวตนต่อผู้เรียก
 ที่มีอยู่จริงและใกล้เคียงที่สุด — และมีการบังคับใช้ที่จุดควบคุมหลักของกลุ่มตัวเลือกใน
 `open-sse/services/autoCombo/virtualFactory.ts` ผ่านฟังก์ชันบริสุทธิ์ที่ผ่านการทดสอบหน่วยแล้ว
@@ -182,7 +182,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 ข้อผิดพลาดที่พบบ่อยสองประการ:
 
 - **`auto` ไม่ได้ใช้คอมโบของคุณ** `auto`/`auto/*` จะสร้างกลุ่มตัวเลือกแบบไม่ต้องตั้งค่าของตัวเอง และจะตรวจสอบคอมโบที่บันทึกไว้ก็ต่อเมื่อมีคอมโบชื่อ `auto` จริง ๆ เท่านั้น (ไม่แนะนำ) หากต้องการกำหนดเส้นทางผ่านคอมโบ ให้ส่งชื่อที่ตรงกันทุกประการ ไม่ใช่ `auto`
-- **`openrouter/auto` เป็นผลิตภัณฑ์ OpenRouter แบบชำระเงินจริง** ("Auto Best Available") ไม่ใช่นามแฝงของ OmniRoute โดยเป็นรายการโมเดลแบบคงที่เพียงรายการเดียวในรีจิสทรี OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) และมีการเรียกเก็บเงินแยกต่างหาก ใช้ การตั้งค่า → การกำหนดเส้นทาง → ซ่อนโมเดลแบบชำระเงิน เพื่อยกเว้นรายการนี้ออกจากกลุ่ม `auto`
+- **`openrouter/auto` เป็นผลิตภัณฑ์ OpenRouter แบบชำระเงินจริง** ("Auto Best Available") ไม่ใช่นามแฝงของ 67router โดยเป็นรายการโมเดลแบบคงที่เพียงรายการเดียวในรีจิสทรี OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) และมีการเรียกเก็บเงินแยกต่างหาก ใช้ การตั้งค่า → การกำหนดเส้นทาง → ซ่อนโมเดลแบบชำระเงิน เพื่อยกเว้นรายการนี้ออกจากกลุ่ม `auto`
 
 ดู [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) และ [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) สำหรับความสับสนเดิมที่เอกสารนี้จัดทำขึ้นเพื่ออธิบาย
 
@@ -279,7 +279,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## กลยุทธ์การกำหนดเส้นทางทั้งหมด
 
-เอนจินคอมโบของ OmniRoute รองรับ **กลยุทธ์การกำหนดเส้นทาง 20 รูปแบบ** (ประกาศไว้ใน `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`) ตัวเอนจิน Auto Combo เองเปิดให้ใช้งานภายใต้กลยุทธ์ `auto` ส่วนกลยุทธ์อื่นๆ พร้อมใช้งานสำหรับคอมโบที่บันทึกไว้
+เอนจินคอมโบของ 67router รองรับ **กลยุทธ์การกำหนดเส้นทาง 20 รูปแบบ** (ประกาศไว้ใน `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`) ตัวเอนจิน Auto Combo เองเปิดให้ใช้งานภายใต้กลยุทธ์ `auto` ส่วนกลยุทธ์อื่นๆ พร้อมใช้งานสำหรับคอมโบที่บันทึกไว้
 
 | กลยุทธ์             | คำอธิบาย                                                                                                                                                                                           |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -329,7 +329,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 คอมโบ `pipeline` ที่มีโมเดลอย่างน้อยสองโมเดลสามารถเลือกใช้การกำหนดเส้นทางแบบผู้วางแผน/ผู้ดำเนินการได้ด้วย
 `config.agenticOrchestration.enabled` เป้าหมายแรกทำหน้าที่วางแผนและตอบคำตอบสุดท้าย
-ส่วนเป้าหมายที่สองส่งการเรียกใช้เครื่องมือในรูปแบบเนทีฟของไคลเอนต์ OmniRoute ตรวจจับคำขอต่อเนื่อง
+ส่วนเป้าหมายที่สองส่งการเรียกใช้เครื่องมือในรูปแบบเนทีฟของไคลเอนต์ 67router ตรวจจับคำขอต่อเนื่อง
 ที่มีผลลัพธ์จากเครื่องมือจากโปรโตคอลคำขอ สอบถามผู้วางแผนว่าจำเป็นต้องเรียกใช้เครื่องมืออีกรอบหรือไม่
 และกำหนดให้ผู้ดำเนินการหรือผู้วางแผนเป็นขั้นตอนสุดท้ายที่ส่งกลับไปยังไคลเอนต์แบบไดนามิก
 
@@ -856,11 +856,11 @@ offline-friendly) แสดงอยู่ในตาราง "โปรไฟ
 
 ### การทดสอบ smoke แบบ live ที่มีเงื่อนไข (ไม่อยู่ใน CI — ผู้ให้บริการจริง)
 
-| คำสั่ง                                 | สิ่งที่ทำ                                                                                                   |
-| :------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | การกำหนดเส้นทางจริงภายในโปรเซสด้วย `RUN_COMBO_LIVE=1`; บันทึก snapshot ของฐานข้อมูล OmniRoute ที่ใช้งานจริง |
-| `npm run test:combo:live:vps`          | เรียก HTTP ไปยังเซิร์ฟเวอร์ OmniRoute ที่ใช้งานจริง (ตั้งค่า `COMBO_LIVE_BASE_URL`)                         |
-| `npm run test:combo:live:vps:failover` | เช่นเดียวกัน แต่มีสถานการณ์ failover ที่จงใจสร้างขึ้น                                                       |
+| คำสั่ง                                 | สิ่งที่ทำ                                                                                                  |
+| :------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | การกำหนดเส้นทางจริงภายในโปรเซสด้วย `RUN_COMBO_LIVE=1`; บันทึก snapshot ของฐานข้อมูล 67router ที่ใช้งานจริง |
+| `npm run test:combo:live:vps`          | เรียก HTTP ไปยังเซิร์ฟเวอร์ 67router ที่ใช้งานจริง (ตั้งค่า `COMBO_LIVE_BASE_URL`)                         |
+| `npm run test:combo:live:vps:failover` | เช่นเดียวกัน แต่มีสถานการณ์ failover ที่จงใจสร้างขึ้น                                                      |
 
 การทดสอบ smoke เหล่านี้ใช้งานเส้นทางการสื่อสารจริง (combo → ผู้ให้บริการ → completion) โดยจงใจไม่นำไปรวมใน CI เนื่องจากต้องใช้ข้อมูลประจำตัวจริงและสิทธิ์เข้าถึง VPS
 

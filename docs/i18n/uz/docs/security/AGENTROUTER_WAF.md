@@ -45,7 +45,7 @@ WAF faqat `messages[].content` tarkibini tekshiradi. U quyidagilarni tekshirmayd
 
 Qisqa vaqt oraligʻida taxminan 5 ta tezkor soʻrovdan keyin WAF odatda oʻtadigan kontentni ham bloklay boshlaydi. Taxminan 5–10 soniyalik faoliyatsizlikdan keyin cheklov yumshaydi. Bu Claude Code yoki Codex CLI ketma-ket bir nechta vositadan foydalanish / xabar yuborish chaqiruvlarini tez amalga oshirganda vaqti-vaqti bilan `400 content-blocked` xatolariga sabab boʻladigan, ayni IP va kalitga bogʻlangan tezlik cheklovchisidir.
 
-## OmniRoute’da allaqachon qoʻllangan yumshatish choralari
+## 67router’da allaqachon qoʻllangan yumshatish choralari
 
 1. **`open-sse/services/wafRateLimit.ts`** — istalgan `agentrouter:*` URL manziliga yuboriladigan tashqi soʻrovlar orasida kamida 500 ms tanaffusni taʼminlaydigan keskin oqimdan himoya vositasi. Bu tanaffus inson sezadigan kechikish chegarasidan ancha past va odatiy trafikda WAF faollashishining oldini oladi.
 

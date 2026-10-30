@@ -5,7 +5,7 @@
 ---
 
 > **Yhden rivin kuvaus jokaisesta hakemistosta ja juuritiedostosta.**
-> Päivitetty viimeksi: 2026-06-28 — OmniRoute v3.8.40
+> Päivitetty viimeksi: 2026-06-28 — 67router v3.8.40
 >
 > Tämän kartan avulla voit siirtyä nopeasti koodikannassa. Tarkempia tietoja saat erillisistä dokumenteista linkkien kautta.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Koko julkaisuprosessi (taidot, husky, conventional commits, käyttöönotto)                                  |
 | `COVERAGE_PLAN.md`          | Kattavuustavoitteet ja nykytila                                                                            |
 | `FREE_TIERS.md`             | Kuratoidut ilmaistason palveluntarjoajat (48+ ilmaista + 11 OAuth-palveluntarjoajaa)                       |
-| `CLI-TOOLS.md`              | Ulkoiset komentorivi-integraatiot + sisäinen OmniRoute-komentorivityökalu                                  |
+| `CLI-TOOLS.md`              | Ulkoiset komentorivi-integraatiot + sisäinen 67router-komentorivityökalu                                   |
 | `I18N.md`                   | i18n-arkkitehtuuri, kielen lisääminen, 67 aluekohtaista versiota                                           |
 | `UNINSTALL.md`              | Puhtaan asennuksen poiston vaiheet                                                                         |
 | `PROVIDER_REFERENCE.md`     | **Automaattisesti luotu** 375 palveluntarjoajan luettelo (luo uudelleen: `npm run gen:provider-reference`) |

@@ -7,7 +7,7 @@
 > **Patiesības avots:** `src/lib/cloudAgent/` un `src/app/api/v1/agents/tasks/`
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40 (frontmatter atsvaidzināšana; 4 aģenti, tostarp cursor-cloud)
 
-OmniRoute vada trešo pušu mākoņvidē mitinātus programmēšanas aģentus (Codex Cloud, Cursor,
+67router vada trešo pušu mākoņvidē mitinātus programmēšanas aģentus (Codex Cloud, Cursor,
 Devin, Jules) kā ilgstošus uzdevumus. Katrs aģents ir ietverts aiz vienotas saskarnes, lai
 klienti varētu iesniegt uzvedni un repozitorija URL un saņemt rezultātus bez nepieciešamības
 strādāt ar konkrētiem pakalpojumu sniedzēju API.

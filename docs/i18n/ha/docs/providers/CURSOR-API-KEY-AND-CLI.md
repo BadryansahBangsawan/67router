@@ -4,16 +4,16 @@
 
 ---
 
-Hanyoyi biyu na sanya Cursor a bayan OmniRoute ba tare da zaman IDE ba:
+Hanyoyi biyu na sanya Cursor a bayan 67router ba tare da zaman IDE ba:
 
 1. **Mai samar da `cursor-api`** (katin "Cursor API", laƙabi `cua`): mai samarwa
    mai amfani da API-key wanda ke riƙe da maɓallin API na mai amfani da Cursor (`crsr_…`, wanda aka samar a
-   `https://cursor.com/dashboard/api`). Duk wani abokin cinikin OmniRoute zai iya isa ga
+   `https://cursor.com/dashboard/api`). Duk wani abokin cinikin 67router zai iya isa ga
    samfurorin Cursor ta `/v1/chat/completions` a matsayin `cursor-api/<model>` ko
    `cua/<model>`, tare da matakan ƙayyadadden amfani, fallback da logging da aka saba. Mai samar da IDE
    (`cursor`, zaman OAuth/IDE) bai canza ba.
-2. **Tura zirga-zirgar Cursor CLI kai tsaye**: saita Cursor CLI (`agent`) zuwa OmniRoute domin
-   kowace RPC da CLI ke yi ta samu tantancewa da maɓallin API na OmniRoute, a tura ta
+2. **Tura zirga-zirgar Cursor CLI kai tsaye**: saita Cursor CLI (`agent`) zuwa 67router domin
+   kowace RPC da CLI ke yi ta samu tantancewa da maɓallin API na 67router, a tura ta
    zuwa Cursor ta amfani da bayanan shaida na haɗin `cursor-api`, sannan a rubuta ta a
    shafin Logs.
 
@@ -60,7 +60,7 @@ Bayanan kula:
 
 - Jerin samfura na `cursor-api` yana fitowa daga tsayayyen rajistar Cursor (jerin
   da mai samar da IDE ke komawa gare shi idan hanyar farko ta gaza); ba a buƙatar girka `cursor-agent`
-  a kan uwar garken OmniRoute.
+  a kan uwar garken 67router.
 - `POST /api/providers/{id}/refresh-cursor` na mai samar da `cursor` IDE
   ne kawai; haɗin `cursor-api` ba su da zaman IDE da za a sabunta.
 
@@ -68,7 +68,7 @@ Bayanan kula:
 
 Ga `cursor` / `cu` da `cursor-api` / `cua`, shared Claude-effort normalizer
 yana barin ID na samfurin da aka nema yadda yake. Cursor na iya nuna ƙari kamar
-`-low` a matsayin wani ɓangare na ainihin ID na samfur, maimakon laƙabin matakin ƙoƙari na OmniRoute.
+`-low` a matsayin wani ɓangare na ainihin ID na samfur, maimakon laƙabin matakin ƙoƙari na 67router.
 Cursor executor yana kiyaye daidaitaccen abin da ya yi daidai da live-catalog; idan babu
 daidaito, existing model resolver ɗinsa ne ke kula da fallback daga suffix zuwa parameter.
 
@@ -83,18 +83,18 @@ Hanya: `src/app/api/cursor-cli/[...path]/route.ts` →
 `src/shared/constants/publicApiRoutes.ts` saboda handler ɗin yana aiwatar da
 tabbatar da kansa:
 
-| Hanya                                                                                                                         | Tabbatarwar da ake tsammani daga CLI | Abin da OmniRoute ke yi                                                                                                                                                                                   |
+| Hanya                                                                                                                         | Tabbatarwar da ake tsammani daga CLI | Abin da 67router ke yi                                                                                                                                                                                    |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <OmniRoute API key>`         | Yana tabbatar da maɓallin, yana ƙirƙirar JWT na HS256 mai tsawon awa 1 (wanda aka sanya wa hannu da `JWT_SECRET`) sannan ya mayar da shi                                                                  |
+| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <67router API key>`          | Yana tabbatar da maɓallin, yana ƙirƙirar JWT na HS256 mai tsawon awa 1 (wanda aka sanya wa hannu da `JWT_SECRET`) sannan ya mayar da shi                                                                  |
 | kowace wata hanya (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`                  | Yana tabbatar da mai bayarwa/masu sauraro/lokacin ƙarewa, yana zaɓar haɗin `cursor-api` mai aiki, yana musanya header na Authorization da token ɗin Cursor da aka musanya sannan ya watsa amsar zuwa baya |
 
 CLI yana warware `exp` daga duk token ɗin da ya karɓa, don haka ba shi token
 marar bayyana bayani yana sa ya sake musanya kafin kusan kowace buƙata; JWT ɗin
-da aka ƙirƙira yana hana hakan. Amsar 401 daga OmniRoute tana sa CLI ya sake musanya.
+da aka ƙirƙira yana hana hakan. Amsar 401 daga 67router tana sa CLI ya sake musanya.
 
 ### Saitawa
 
-1. Ƙirƙiri maɓallin API na OmniRoute (Dashboard → Maɓallan API) da kuma haɗin
+1. Ƙirƙiri maɓallin API na 67router (Dashboard → Maɓallan API) da kuma haɗin
    `cursor-api`.
 2. Umurci CLI ya yi amfani da HTTP/1.1 don rafin agent. A cikin
    `~/.cursor/cli-config.json`:
@@ -106,7 +106,7 @@ da aka ƙirƙira yana hana hakan. Amsar 401 daga OmniRoute tana sa CLI ya sake m
    Idan babu wannan, CLI zai buɗe zagayen agent ta HTTP/2 zuwa host na agent
    da aka saita daban, kuma RPC na control-plane kawai za su bi ta endpoint ɗin.
 
-3. Gudanar da CLI ta OmniRoute:
+3. Gudanar da CLI ta 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -116,17 +116,17 @@ da aka ƙirƙira yana hana hakan. Amsar 401 daga OmniRoute tana sa CLI ya sake m
 
 Kowane mataki yana bayyana a cikin Logs tare da provider `cursor-api`, nau'in buƙata
 `cursor-cli`, hanya `/api/cursor-cli/<rpc>`, kuma ana danganta shi da maɓallin API na
-OmniRoute da haɗin da ya sarrafa shi.
+67router da haɗin da ya sarrafa shi.
 
 ### Yanayin gazawa
 
-| Yanayi                                                         | Amsa ga CLI                                        |
-| -------------------------------------------------------------- | -------------------------------------------------- |
-| Maɓallin OmniRoute da ba a sani ba kuma `REQUIRE_API_KEY=true` | 401 `unauthenticated` yayin musanya                |
-| `REQUIRE_API_KEY=false`                                        | zaman marar suna (yana kwaikwayon halayen `/v1/*`) |
-| JWT na zaman da ya ƙare / na waje / wanda aka sauya            | 401, CLI zai sake musanya                          |
-| An soke maɓallin API na OmniRoute bayan musanya                | 401 a RPC na gaba                                  |
-| Babu haɗin `cursor-api` mai aiki                               | 503 `unavailable`                                  |
-| Cursor ya ƙi maɓallin haɗin                                    | 401 `unauthenticated`, an share zaman da aka adana |
-| Ba za a iya isa ga upstream ba                                 | 502 `unavailable` (saƙon da aka tace)              |
-| Ba a saita `JWT_SECRET` ba                                     | 503 yayin musanya                                  |
+| Yanayi                                                        | Amsa ga CLI                                        |
+| ------------------------------------------------------------- | -------------------------------------------------- |
+| Maɓallin 67router da ba a sani ba kuma `REQUIRE_API_KEY=true` | 401 `unauthenticated` yayin musanya                |
+| `REQUIRE_API_KEY=false`                                       | zaman marar suna (yana kwaikwayon halayen `/v1/*`) |
+| JWT na zaman da ya ƙare / na waje / wanda aka sauya           | 401, CLI zai sake musanya                          |
+| An soke maɓallin API na 67router bayan musanya                | 401 a RPC na gaba                                  |
+| Babu haɗin `cursor-api` mai aiki                              | 503 `unavailable`                                  |
+| Cursor ya ƙi maɓallin haɗin                                   | 401 `unauthenticated`, an share zaman da aka adana |
+| Ba za a iya isa ga upstream ba                                | 502 `unavailable` (saƙon da aka tace)              |
+| Ba a saita `JWT_SECRET` ba                                    | 503 yayin musanya                                  |

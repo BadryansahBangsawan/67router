@@ -13,7 +13,7 @@
 
 Il motore di condivisione delle quote distribuisce equamente la quota temporale di un provider (ad es. finestra di 5 ore di Codex, 1500 richieste/ora di Kimi) tra più chiavi API che condividono la stessa connessione.
 
-**Problema risolto:** OmniRoute inoltra tramite proxy molte chiavi API verso lo stesso account del provider upstream. Senza una logica di condivisione, un picco di richieste dalla chiave A può esaurire la quota oraria del provider, lasciando le chiavi B e C bloccate fino al ripristino della finestra.
+**Problema risolto:** 67router inoltra tramite proxy molte chiavi API verso lo stesso account del provider upstream. Senza una logica di condivisione, un picco di richieste dalla chiave A può esaurire la quota oraria del provider, lasciando le chiavi B e C bloccate fino al ripristino della finestra.
 Il motore evita questa situazione:
 
 1. Monitorando il consumo progressivo di ciascuna chiave per ogni dimensione (%, richieste, token, $).
@@ -107,7 +107,7 @@ Driver Redis: script Lua EVAL per l'incremento atomico, eseguito come singolo co
 
 - Tabella: `quota_consumption` (vedere le migrazioni `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Ideale per i deployment a istanza singola.
-- Tutta la persistenza avviene nel DB SQLite esistente di OmniRoute (`DATA_DIR/storage.sqlite`).
+- Tutta la persistenza avviene nel DB SQLite esistente di 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (facoltativo, multi-istanza)
 

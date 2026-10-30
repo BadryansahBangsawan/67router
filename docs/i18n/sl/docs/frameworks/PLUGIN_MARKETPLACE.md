@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Nazadnje posodobljeno:** 2026-06-28 — v3.8.40
 
-OmniRoute vključuje sistem vtičnikov po vzoru WordPressa. Vtičniki so samostojni
+67router vključuje sistem vtičnikov po vzoru WordPressa. Vtičniki so samostojni
 imeniki — vsak z manifestom `plugin.json` in vstopno datoteko — ki se vključujejo
 v cevovod zahtev (`onRequest` / `onResponse` / `onError`) in dogodke
 življenjskega cikla (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -155,7 +155,7 @@ v shemi, so dovoljeni.
 
 ### Imenik vtičnikov
 
-Vtičniki so shranjeni v podatkovnem imeniku OmniRoute:
+Vtičniki so shranjeni v podatkovnem imeniku 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

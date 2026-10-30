@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute가 Hindsight 0.9.1(텍스트 전용 `encode(list[str])`) 및 Memorix 1.6.0(Jina 미디어 게이트) 앞에 있을 때의 `POST /v1/embeddings` 운영자 참고 사항입니다. 2026-08-17에 OmniRoute 3.8.49 및 `https://omniroute.jaguar-fish.ts.net/v1`을 대상으로 실제 검증했습니다. 아래에는 비밀 정보가 없습니다.
+67router가 Hindsight 0.9.1(텍스트 전용 `encode(list[str])`) 및 Memorix 1.6.0(Jina 미디어 게이트) 앞에 있을 때의 `POST /v1/embeddings` 운영자 참고 사항입니다. 2026-08-17에 67router 3.8.49 및 `https://omniroute.jaguar-fish.ts.net/v1`을 대상으로 실제 검증했습니다. 아래에는 비밀 정보가 없습니다.
 
 ## 작동하는 모델 ID
 
@@ -76,7 +76,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 네이티브 `gemini-embedding-2`는 GitOps만으로 작동하게 할 수 없습니다. Google AI
 Studio 키를 `gemini` 프로바이더 연결로 추가해야 합니다(대시보드에서 추가하거나
-`GEMINI_API_KEY`를 OmniRoute로 가져오기). 해당 비밀 정보는 이 저장소에 없습니다.
+`GEMINI_API_KEY`를 67router로 가져오기). 해당 비밀 정보는 이 저장소에 없습니다.
 
 ### Jina 멀티모달 경로
 
@@ -97,7 +97,7 @@ Studio 키를 `gemini` 프로바이더 연결로 추가해야 합니다(대시�
 
 ### Jina / Memorix 이미지 객체
 
-OmniRoute 표준 이미지 항목(28×28 PNG, 784픽셀 — Jina는 1×1을 거부함):
+67router 표준 이미지 항목(28×28 PNG, 784픽셀 — Jina는 1×1을 거부함):
 
 ```json
 {
@@ -145,7 +145,7 @@ Memorix 1.6.0 / Jina 네이티브 형식:
 ### Hindsight 0.9.1
 
 Hindsight 임베딩은 텍스트 전용(`encode(list[str])`)입니다. 이미지 객체는 전송하지
-않습니다. Hindsight의 OpenAI 호환 임베딩 기본 URL을 OmniRoute `/v1`로 지정하고,
+않습니다. Hindsight의 OpenAI 호환 임베딩 기본 URL을 67router `/v1`로 지정하고,
 위 표에서 작동하는 ID
 (`jina-ai/jina-embeddings-v5-omni-small` 또는
 `openrouter/google/gemini-embedding-2`)를 사용하십시오. 게이트웨이에 `gemini` API 키가
@@ -154,12 +154,12 @@ Hindsight 임베딩은 텍스트 전용(`encode(list[str])`)입니다. 이미지
 ### Memorix 1.6.0
 
 Memorix는 `baseUrl`이 `/jina\.ai/i`와 일치할 때만 네이티브 미디어로 처리합니다.
-OmniRoute URL은 모델이 Jina omni인 경우에도 텍스트 전용 경로를 유지합니다.
-이 게이트는 Memorix 클라이언트의 문제입니다. 이와 별개로 OmniRoute는 게이트가
+67router URL은 모델이 Jina omni인 경우에도 텍스트 전용 경로를 유지합니다.
+이 게이트는 Memorix 클라이언트의 문제입니다. 이와 별개로 67router는 게이트가
 열릴 경우 Memorix가 전송하게 될 Jina `{image: "data:..."}` 본문도 거부합니다.
-따라서 Jina 호환 클라이언트는 표준 `{type,source}` 스키마 없이는 OmniRoute를 통해
+따라서 Jina 호환 클라이언트는 표준 `{type,source}` 스키마 없이는 67router를 통해
 이미지를 임베딩할 수 없습니다.
 
 텍스트에는 `jina-ai/jina-embeddings-v5-omni-small`을 사용하십시오. Memorix의
-`base_url`을 `https://api.jina.ai`로 지정하지 말고 OmniRoute를 유일한 홉으로
+`base_url`을 `https://api.jina.ai`로 지정하지 말고 67router를 유일한 홉으로
 유지하십시오.

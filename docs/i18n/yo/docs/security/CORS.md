@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ń ṣàkóso àwọn **orisun aṣàwákiri** tí a yọ̀ǹda fún láti ka àwọn ìdáhùn láti orísun mìíràn
+67router ń ṣàkóso àwọn **orisun aṣàwákiri** tí a yọ̀ǹda fún láti ka àwọn ìdáhùn láti orísun mìíràn
 láti inú àtòjọ ìyọ̀ǹda àárín gbùngbùn kan ṣoṣo. Àwòṣe náà jẹ́ **kíkọ̀ ààyè sílẹ̀ nípa àìyẹsẹ̀**:
 kò sí orísun kankan tí a yọ̀ǹda títí tí o fi yan láti fi í kún un. Ojú-ìwé yìí ṣe àkọsílẹ̀ bí àtòjọ ìyọ̀ǹda
 ṣe ń yanjú, ohun tí `CORS_ALLOW_ALL=true` ń ṣí sílẹ̀ gan-an (àti, ní pàtàkì, ohun tí
@@ -45,13 +45,13 @@ ní ìtòlẹ́sẹẹsẹ yìí:
 ## Àwòṣe ewu — ohun tí `CORS_ALLOW_ALL=true` ń ṣí sílẹ̀ gan-an
 
 Ó yẹ kí a fi ìkìlọ̀ gbogbogbò OWASP ("CORS àmì gbogbogbò = ojúlé èyíkéyìí lè pe API rẹ") sí
-ọkàn dáadáa, ṣùgbọ́n ohun tí OmniRoute ń ṣí sílẹ̀ **kéré ju ipò gbogbogbò lọ**,
+ọkàn dáadáa, ṣùgbọ́n ohun tí 67router ń ṣí sílẹ̀ **kéré ju ipò gbogbogbò lọ**,
 nítorí òtítọ́ kan pàtó nípa ìmúṣẹ:
 
 > **`applyCorsHeaders()` àárín gbùngbùn kò fi
 > `Access-Control-Allow-Credentials` ránṣẹ́ láéláé.** Aṣàwákiri kò ní fi ìdáhùn láti orísun mìíràn tí ó _ní ẹ̀rí ìdánimọ̀_
 > (tí ó gbé cookie) hàn àfi tí olupin bá fi
-> `Access-Control-Allow-Credentials: true` ránṣẹ́. Ọ̀nà CORS tí OmniRoute ń pín kò ṣe
+> `Access-Control-Allow-Credentials: true` ránṣẹ́. Ọ̀nà CORS tí 67router ń pín kò ṣe
 > bẹ́ẹ̀ láéláé.
 
 Ohun tí ìyẹn túmọ̀ sí fún ojú-iṣẹ́ kọ̀ọ̀kan, àní pẹ̀lú `CORS_ALLOW_ALL=true`:
@@ -91,7 +91,7 @@ lọ́tọ̀ sí ìtọ́sọ́nà CORS yìí.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Bí OmniRoute bá ń ṣiṣẹ́ lẹ́yìn reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Bí 67router bá ń ṣiṣẹ́ lẹ́yìn reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **kì í ṣe** ìṣàkóso rẹ kan ṣoṣo — olùṣọ́ route loopback
   ṣì ń dáàbò bo àwọn route tó lè ṣe spawn (wo
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Má ṣe ṣe
@@ -107,7 +107,7 @@ lọ́tọ̀ sí ìtọ́sọ́nà CORS yìí.
 O kì í sábà nílò wildcard àní ní dev. Gba àwọn dev server tí o ń lò nìkan láàyè:
 
 ```bash
-# Àwọn dev server Vite (5173) + Next.js (3000) tí ń pe OmniRoute local kan
+# Àwọn dev server Vite (5173) + Next.js (3000) tí ń pe 67router local kan
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +127,14 @@ fo slash tó wà ní ìparí, nítorí náà `http://localhost:3000` àti
   management/dashboard sínú config permissive èyíkéyìí; wọ́n gbọ́dọ̀ dúró gẹ́gẹ́ bí
   fail-closed pátápátá.
 
-## Àpẹẹrẹ: reverse proxy ní iwájú OmniRoute
+## Àpẹẹrẹ: reverse proxy ní iwájú 67router
 
-OmniRoute fúnra rẹ̀ ló ń fipá mú CORS ṣiṣẹ́, nítorí náà, ní gbogbogbòò, proxy náà kò yẹ kí ó **ṣàfikún** tàbí
+67router fúnra rẹ̀ ló ń fipá mú CORS ṣiṣẹ́, nítorí náà, ní gbogbogbòò, proxy náà kò yẹ kí ó **ṣàfikún** tàbí
 tún àwọn header `Access-Control-*` kọ (àwọn header oníbejì máa ń fa ìṣòro fún àwọn browser). Parí TLS
-kí o sì forward — jẹ́ kí OmniRoute dá preflight lóhùn:
+kí o sì forward — jẹ́ kí 67router dá preflight lóhùn:
 
 ```nginx
-# nginx — forward sí OmniRoute; MÁ ṢE fi Access-Control-* síbí
+# nginx — forward sí 67router; MÁ ṢE fi Access-Control-* síbí
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +142,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Pa àwọn header forwarding náà mọ́: proxy kan lórí host kan náà máa ń sopọ̀ láti loopback, àwọn náà sì ni
-    # ó ń sọ fún OmniRoute pé olùpè náà kì í ṣe local operator. Proxy tí kò ṣàfikún èyíkéyìí nínú wọn
+    # ó ń sọ fún 67router pé olùpè náà kì í ṣe local operator. Proxy tí kò ṣàfikún èyíkéyìí nínú wọn
     # máa ń jẹ́ kí gbogbo olùpè jíjìn dà bí ẹni pé wọ́n jẹ́ local. Má ṣe ṣètò X-Forwarded-For sí 127.0.0.1 pẹ̀lú.
 }
 ```
 
-Ṣètò àwọn origin browser tí a gbà láàyè nínú OmniRoute (`CORS_ALLOWED_ORIGINS` tàbí
+Ṣètò àwọn origin browser tí a gbà láàyè nínú 67router (`CORS_ALLOWED_ORIGINS` tàbí
 taabu Security), kì í ṣe nínú proxy.
 
 ## Àwọn fáìlì orísun

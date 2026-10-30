@@ -45,7 +45,7 @@ ripristina il flusso completamente automatico che il progetto aveva fino alla v3
 garanzia WS1.3 (un token sottratto non può pubblicare da solo — non esiste alcun token).
 
 **Configurazione una tantum (proprietario):** npmjs.com → pacchetto `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: proprietario `diegosouzapw`, repository `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: proprietario `diegosouzapw`, repository `67router`, workflow `npm-publish.yml`
 (ambiente: nessuno). Finché questa configurazione non esiste, il passaggio automatico non riesce con `ENEEDAUTH`:
 avvia nuovamente il workflow con `publish_mode=staged` (vedi sotto) oppure `direct`.
 

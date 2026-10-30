@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nadzoruje, kateri **izvori brskalnika** lahko berejo odgovore med različnimi izvori
+67router nadzoruje, kateri **izvori brskalnika** lahko berejo odgovore med različnimi izvori
 z enega samega, centraliziranega seznama dovoljenih izvorov. Model je **privzeto zaprt**:
 noben izvor ni dovoljen, dokler ga izrecno ne omogočite. Ta stran opisuje, kako se seznam dovoljenih
 izvorov razrešuje, kaj `CORS_ALLOW_ALL=true` dejansko izpostavi (in, kar je pomembno, česa
@@ -46,13 +46,13 @@ v naslednjem vrstnem redu:
 ## Model groženj — kaj `CORS_ALLOW_ALL=true` dejansko izpostavi
 
 Splošno opozorilo OWASP ("CORS z nadomestnim znakom = katero koli spletno mesto lahko kliče vaš API") je vredno
-jemati resno, vendar je izpostavljenost OmniRoute **ožja kot v splošnem primeru**,
+jemati resno, vendar je izpostavljenost 67router **ožja kot v splošnem primeru**,
 zaradi enega konkretnega dejstva implementacije:
 
 > **Osrednji `applyCorsHeaders()` nikoli ne odda glave
 > `Access-Control-Allow-Credentials`.** Brskalnik ne bo razkril _overjenega_
 > odgovora med različnimi izvori (ki vsebuje piškotke), razen če strežnik pošlje
-> `Access-Control-Allow-Credentials: true`. Skupna pot CORS v OmniRoute tega nikoli
+> `Access-Control-Allow-Credentials: true`. Skupna pot CORS v 67router tega nikoli
 > ne stori.
 
 Kaj to pomeni za posamezna območja, tudi pri `CORS_ALLOW_ALL=true`:
@@ -92,7 +92,7 @@ ločeno od teh smernic CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Če OmniRoute deluje za obratnim posredniškim strežnikom ali tunelom (nginx, Caddy, Cloudflare
+- Če 67router deluje za obratnim posredniškim strežnikom ali tunelom (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **ni** vaš edini nadzorni mehanizem — varovalo poti za povratno zanko
   še vedno ščiti poti, ki lahko zaganjajo procese (glejte
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Ne ponarejajte
@@ -108,7 +108,7 @@ ločeno od teh smernic CORS.
 Tudi med razvojem le redko potrebujete nadomestni znak. Dovolite samo razvojne strežnike, ki jih uporabljate:
 
 ```bash
-# Razvojna strežnika Vite (5173) in Next.js (3000), ki kličeta lokalni OmniRoute
+# Razvojna strežnika Vite (5173) in Next.js (3000), ki kličeta lokalni 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +127,14 @@ lahko med izvajanjem brez ponovnega zagona nastavite v **Dashboard → Security 
   upravljanje oziroma nadzorno ploščo ne vključujte v nobeno permisivno konfiguracijo; zanje mora
   brezpogojno ostati privzeto zavračanje dostopa.
 
-## Primer: obratni posredniški strežnik pred OmniRoute
+## Primer: obratni posredniški strežnik pred 67router
 
-CORS uveljavlja sam OmniRoute, zato posredniški strežnik praviloma **ne sme** dodajati ali
+CORS uveljavlja sam 67router, zato posredniški strežnik praviloma **ne sme** dodajati ali
 prepisovati glav `Access-Control-*` (podvojene glave povzročajo težave v brskalnikih). Zaključite TLS
-in posredujte zahteve — naj OmniRoute odgovarja na predhodne zahteve:
+in posredujte zahteve — naj 67router odgovarja na predhodne zahteve:
 
 ```nginx
-# nginx — posredujte v OmniRoute; tukaj NE vstavljajte glav Access-Control-*
+# nginx — posredujte v 67router; tukaj NE vstavljajte glav Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +142,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Ohranite glave za posredovanje: posredniški strežnik na istem gostitelju se povezuje prek povratne zanke,
-    # te glave pa OmniRoute sporočajo, da klicatelj ni lokalni upravljavec. Če posredniški strežnik ne doda
+    # te glave pa 67router sporočajo, da klicatelj ni lokalni upravljavec. Če posredniški strežnik ne doda
     # nobene od njih, je vsak oddaljeni klicatelj videti kot lokalni. Prav tako nikoli ne nastavite X-Forwarded-For na 127.0.0.1.
 }
 ```
 
-Dovoljene izvore brskalnikov nastavite v OmniRoute (`CORS_ALLOWED_ORIGINS` ali na
+Dovoljene izvore brskalnikov nastavite v 67router (`CORS_ALLOWED_ORIGINS` ali na
 zavihku Varnost), ne v posredniškem strežniku.
 
 ## Izvorne datoteke

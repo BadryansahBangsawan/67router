@@ -5,7 +5,7 @@
 ---
 
 > **Bayanin layi ɗaya ga kowane kundin adireshi da fayil na tushe.**
-> Sabuntawa ta ƙarshe: 2026-06-28 — OmniRoute v3.8.40
+> Sabuntawa ta ƙarshe: 2026-06-28 — 67router v3.8.40
 >
 > Yi amfani da wannan taswira don kewaya tushen lambar cikin sauri. Don zurfafa bincike, bi hanyoyin haɗi zuwa takardun bayani na musamman.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Cikakken tsarin fitarwa (skills, husky, conventional commits, deploy)                               |
 | `COVERAGE_PLAN.md`          | Manufofin coverage da halin yanzu                                                                   |
 | `FREE_TIERS.md`             | Zaɓaɓɓun providers masu matakin kyauta (48+ kyauta + 11 OAuth)                                      |
-| `CLI-TOOLS.md`              | Haɗaɗɗun CLI na waje + CLI na cikin gida na OmniRoute                                               |
+| `CLI-TOOLS.md`              | Haɗaɗɗun CLI na waje + CLI na cikin gida na 67router                                                |
 | `I18N.md`                   | Tsarin gine-ginen i18n, ƙara harshe, locales 67                                                     |
 | `UNINSTALL.md`              | Matakan cire shigarwa gaba ɗaya                                                                     |
 | `PROVIDER_REFERENCE.md`     | Kasidar providers 375 da aka **samar ta atomatik** (sake samarwa: `npm run gen:provider-reference`) |

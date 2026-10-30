@@ -13,7 +13,7 @@
 
 Quota Sharing Engine သည် ချိတ်ဆက်မှုတစ်ခုတည်းကို မျှဝေသုံးစွဲသည့် API key အများအပြားအကြား provider ၏ အချိန်အခြေပြု quota (ဥပမာ Codex ၏ 5 နာရီ window၊ Kimi ၏ တစ်နာရီလျှင် request 1500) ကို မျှတစွာ ခွဲဝေပေးသည်။
 
-**ဖြေရှင်းပေးသည့် ပြဿနာ:** OmniRoute သည် upstream provider account တစ်ခုတည်းသို့ API key အများအပြားကို proxy ပြုလုပ်ပေးသည်။ မျှဝေခြင်းဆိုင်ရာ logic မရှိပါက key A မှ ရုတ်တရက်များပြားလာသော အသုံးပြုမှုသည် တစ်နာရီအတွက် provider quota ကို ကုန်ဆုံးစေနိုင်ပြီး window ပြန်လည်သတ်မှတ်ချိန်အထိ key B နှင့် C တို့ကို ပိတ်ဆို့ထားစေနိုင်သည်။ Engine သည် အောက်ပါနည်းလမ်းများဖြင့် ယင်းကို ကာကွယ်သည်-
+**ဖြေရှင်းပေးသည့် ပြဿနာ:** 67router သည် upstream provider account တစ်ခုတည်းသို့ API key အများအပြားကို proxy ပြုလုပ်ပေးသည်။ မျှဝေခြင်းဆိုင်ရာ logic မရှိပါက key A မှ ရုတ်တရက်များပြားလာသော အသုံးပြုမှုသည် တစ်နာရီအတွက် provider quota ကို ကုန်ဆုံးစေနိုင်ပြီး window ပြန်လည်သတ်မှတ်ချိန်အထိ key B နှင့် C တို့ကို ပိတ်ဆို့ထားစေနိုင်သည်။ Engine သည် အောက်ပါနည်းလမ်းများဖြင့် ယင်းကို ကာကွယ်သည်-
 
 1. Dimension တစ်ခုချင်းစီ (ရာခိုင်နှုန်း၊ request များ၊ token များ၊ $) အလိုက် key တစ်ခုချင်းစီ၏ rolling consumption ကို ခြေရာခံခြင်း။
 2. Work-conserving fair-share algorithm ကို အသုံးပြုခြင်း- global pool ပြည့်နှက်မနေသေးသရွေ့ key တစ်ခုသည် အသုံးမပြုထားသော share များမှ ချေးယူနိုင်သည်။
@@ -106,7 +106,7 @@ Redis driver: atomic increment အတွက် Lua EVAL script ကို အသ�
 
 - Table: `quota_consumption` (migration `073_quota_pools.sql` / `074_quota_consumption.sql` ကို ကြည့်ပါ)။
 - Instance တစ်ခုတည်း အသုံးပြုသည့် deployment များအတွက် အသင့်တော်ဆုံးဖြစ်သည်။
-- Persistence အားလုံးကို လက်ရှိ OmniRoute SQLite DB (`DATA_DIR/storage.sqlite`) တွင် သိမ်းဆည်းထားသည်။
+- Persistence အားလုံးကို လက်ရှိ 67router SQLite DB (`DATA_DIR/storage.sqlite`) တွင် သိမ်းဆည်းထားသည်။
 
 ### Redis (ရွေးချယ်နိုင်၊ instance အများအပြား)
 

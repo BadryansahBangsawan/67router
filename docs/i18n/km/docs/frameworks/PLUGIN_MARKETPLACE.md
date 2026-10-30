@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **បានធ្វើបច្ចុប្បន្នភាពចុងក្រោយ:** 2026-06-28 — v3.8.40
 
-OmniRoute ភ្ជាប់មកជាមួយប្រព័ន្ធកម្មវិធីជំនួយបែប WordPress។ កម្មវិធីជំនួយគឺជាថតដាច់ដោយឡែក
+67router ភ្ជាប់មកជាមួយប្រព័ន្ធកម្មវិធីជំនួយបែប WordPress។ កម្មវិធីជំនួយគឺជាថតដាច់ដោយឡែក
 ដែលថតនីមួយៗមាន manifest `plugin.json` និងឯកសារចំណុចចូលមួយ ដើម្បីតភ្ជាប់
 ទៅក្នុងលំហូរដំណើរការសំណើ (`onRequest` / `onResponse` / `onError`) និងទៅក្នុង
 ព្រឹត្តិការណ៍វដ្តជីវិត (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)។
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### ថត plugin
 
-Plugin ស្ថិតនៅក្រោមថតទិន្នន័យ OmniRoute៖
+Plugin ស្ថិតនៅក្រោមថតទិន្នន័យ 67router៖
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

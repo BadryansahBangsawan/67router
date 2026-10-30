@@ -112,7 +112,7 @@ production build-ഉം കൂടുതൽ വിശാലമായ suites-ഉ�
 - CLI catalogs പ്രത്യേകം `bin/cli/locales/`-ന് കീഴിലാണ്.
 - ICU placeholders, tags എന്നിവ മാറ്റമില്ലാതെ കൃത്യമായി നിലനിർത്തുക. Product/provider/model names,
   protocol, header names, commands, code/JSON identifiers, URLs, environment variables, അല്ലെങ്കിൽ
-  `OmniRoute`, `OAuth`, `MCP`, `A2A` പോലുള്ള protected terms എന്നിവ വിവർത്തനം ചെയ്യരുത്. നിലവിലെ source list
+  `67router`, `OAuth`, `MCP`, `A2A` പോലുള്ള protected terms എന്നിവ വിവർത്തനം ചെയ്യരുത്. നിലവിലെ source list
   `scripts/i18n/glossary/protected-terms.json` ആണ്.
 
 **Focused loop**
@@ -261,7 +261,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # മറ്റൊരി�
   `current`-ഉം `previous`-ഉം തിരികെ പരസ്പരം മാറ്റുകയും ചെയ്യുന്നു. ആദ്യ validation പരാജയപ്പെടുന്ന
   candidate ഒരിക്കലും promote ചെയ്യപ്പെടില്ല.
 
-എല്ലാം gitignore ചെയ്ത `_artifacts/candidate/`-ന് കീഴിലാണ് എഴുതപ്പെടുന്നത്; നിലവിലുള്ള OmniRoute
+എല്ലാം gitignore ചെയ്ത `_artifacts/candidate/`-ന് കീഴിലാണ് എഴുതപ്പെടുന്നത്; നിലവിലുള്ള 67router
 installation-ഉം അതിന്റെ data directory-യും ഒരിക്കലും സ്പർശിക്കപ്പെടില്ല. Promoted CLI
 `_artifacts/candidate/current/prefix/bin/omniroute` ആണ്; അത് ഉപയോഗിക്കുമ്പോൾ നിങ്ങളുടെ സ്വന്തം
 `DATA_DIR` ഉപയോഗിച്ച് ആരംഭിക്കുക. Exit codes: `0` വിജയം, `1` validation അല്ലെങ്കിൽ promotion പരാജയം,

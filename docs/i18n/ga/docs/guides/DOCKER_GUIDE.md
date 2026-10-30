@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Gaeilge)
+# 🐳 Docker Guide — 67router (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Le Comhad Timpeallachta](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Próifílí atá ar Fáil](#available-profiles)
-- [Uirlisí CLI an óstríomhaire a chumrú nuair a ritheann OmniRoute in Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Uirlisí CLI an óstríomhaire a chumrú nuair a ritheann 67router in Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Taobh-choimeádán Redis](#redis-sidecar)
 - [Compose Táirgthe](#production-compose)
 - [Céimeanna Dockerfile](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Próifílí atá ar Fáil
 
-Tagann OmniRoute le próifílí Compose do na príomhleaganacha imscartha. Roghnaigh an ceann a oireann do do thimpeallacht.
+Tagann 67router le próifílí Compose do na príomhleaganacha imscartha. Roghnaigh an ceann a oireann do do thimpeallacht.
 
 | Próifíl              | Seirbhís         | Cathain is ceart í a úsáid                                                                                                                                                  | Ordú                                         |
 | -------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ Tagann OmniRoute le próifílí Compose do na príomhleaganacha imscartha. Roghn
 
 > Is féidir próifílí iomadúla a chomhcheangal: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Uirlisí CLI an óstaigh a chumrú nuair a ritheann OmniRoute in Docker
+## Uirlisí CLI an óstaigh a chumrú nuair a ritheann 67router in Docker
 
 Scríobhann `omniroute setup-codex`, `setup-claude`, `config set <tool>` agus cnaipe
 **Sábháil an chumraíocht** na deaise comhaid amhail `~/.codex/*.config.toml`. Ní bhíonn
@@ -103,11 +103,11 @@ tú iad laistigh den choimeádán, scríobhtar chuig fillteán baile an choimeá
 (`/home/node` — ritheann an íomhá mar `USER node`), áit nach léifidh aon CLI ar an
 óstach iad choíche agus a scriostar iad a luaithe a athchruthaítear an coimeádán.
 
-Braitheann OmniRoute é seo agus diúltaíonn sé don scríobh, agus treoracha á dtabhairt
+Braitheann 67router é seo agus diúltaíonn sé don scríobh, agus treoracha á dtabhairt
 aige in ionad rath nach féidir leat úsáid a bhaint as a thuairisciú: scoireann an CLI
 le `2`, agus freagraíonn an API le `422` agus `containerEphemeralTarget: true`.
 
-### Molta: rith an CLI ar an óstach agus OmniRoute in Docker
+### Molta: rith an CLI ar an óstach agus 67router in Docker
 
 Freastalaíonn an coimeádán ar an API; cumraíonn an CLI uirlisí d'óstaigh.
 
@@ -138,7 +138,7 @@ volumes:
 ```
 
 Is é ceangal-fheiste a fhágann gur féidir muinín a bheith agat as an gconair:
-léann OmniRoute `/proc/self/mountinfo` agus ceadaíonn sé scríobh chuig conairí
+léann 67router `/proc/self/mountinfo` agus ceadaíonn sé scríobh chuig conairí
 feistithe (agus chuig fillteáin ar feistí iad a bhfochomhadlanna, arb é sin go
 díreach struchtúr `/host-home` thuas), agus leanann sé de dhiúltú do chonairí
 nach bhfuil feistithe.
@@ -180,7 +180,7 @@ scríobh ar aghaidh le rabhadh nach mairfidh sé tar éis an coimeádán.
 
 ## Taobhchoimeádán Redis
 
-Braitheann OmniRoute ar Redis chun tacú leis an teorantóir ráta dáilte agus leis an taisce chomhroinnte. Sainítear an tseirbhís `redis` **i gcónaí** in `docker-compose.yml` (níl aon gheata próifíle aici) agus tosaíonn sí in éineacht le haon phróifíl eile.
+Braitheann 67router ar Redis chun tacú leis an teorantóir ráta dáilte agus leis an taisce chomhroinnte. Sainítear an tseirbhís `redis` **i gcónaí** in `docker-compose.yml` (níl aon gheata próifíle aici) agus tosaíonn sí in éineacht le haon phróifíl eile.
 
 | Sonra                  | Luach                                           |
 | ---------------------- | ----------------------------------------------- |
@@ -368,7 +368,7 @@ De bhreis ar na réamhshocruithe atá doiciméadaithe in [ENVIRONMENT.md](../ref
 
 ## Seachfhreastalaí Ionadach ar Fhoch-chonair (Traefik / nginx)
 
-Tiomsaítear `basePath` Next.js isteach sa bheart neamhspleách. Taifeadann OmniRoute an luach
+Tiomsaítear `basePath` Next.js isteach sa bheart neamhspleách. Taifeadann 67router an luach
 ionsuite i gcomhad faire ag fréamh na haipe (scríobhtar é le linn `npm run build`; léitear é ag
 `scripts/docker/ensure-docker-base-path.mjs`) agus cuirtear i gcomparáid é le
 `OMNIROUTE_BASE_PATH` nuair a thosaíonn an coimeádán. Nuair nach ionann iad agus nuair a
@@ -441,7 +441,7 @@ gnóthach ≠ marbh. Roghnaigh beocht TCP má théann tástálacha HTTP thar am.
 
 ## Docker Compose le Caddy (Auto-TLS HTTPS)
 
-Is féidir OmniRoute a nochtadh go slán trí úsáid a bhaint as soláthar uathoibríoch SSL Caddy. Cinntigh go bhfuil taifead DNS A d’fhearainn dírithe ar sheoladh IP do fhreastalaí.
+Is féidir 67router a nochtadh go slán trí úsáid a bhaint as soláthar uathoibríoch SSL Caddy. Cinntigh go bhfuil taifead DNS A d’fhearainn dírithe ar sheoladh IP do fhreastalaí.
 
 ```yaml
 services:
@@ -472,11 +472,11 @@ volumes:
   omniroute-data:
 ```
 
-Socraíonn Caddy na ceanntásca caighdeánacha seolta ar aghaidh don choimeádán réamhtheachtach. Úsáideann OmniRoute
+Socraíonn Caddy na ceanntásca caighdeánacha seolta ar aghaidh don choimeádán réamhtheachtach. Úsáideann 67router
 `NEXT_PUBLIC_BASE_URL` mar an mbunfhoinse phoiblí chanónach le haghaidh aisghlaonna OAuth agus naisc phoiblí
 ghinte; úsáideann scríbhinní fíordheimhnithe na deais iarrataí den bhunfhoinse chéanna chomh maith le cosaint CSRF
 atá ceangailte leis an seisiún. Ná cumasaigh `OMNIROUTE_TRUST_PROXY` ach amháin le haghaidh imscaradh ardleibhéil ina bhfuil sé ar intinn agat
-go ndíorthódh OmniRoute an bhunfhoinse phoiblí ó cheanntásca iontaofa a seoladh ar aghaidh in ionad cumraíocht
+go ndíorthódh 67router an bhunfhoinse phoiblí ó cheanntásca iontaofa a seoladh ar aghaidh in ionad cumraíocht
 shainráite.
 
 ## Tollán Tapa Cloudflare
@@ -488,11 +488,11 @@ Is féidir painéil tolláin críochphointe (Cloudflare, Tailscale, ngrok) a tha
 ### Nótaí faoin Tollán
 
 - Is URLanna sealadacha iad URLanna Tolláin Thapa agus athraíonn siad tar éis gach atosaithe.
-- Ní athchóirítear Tolláin Thapa go huathoibríoch tar éis OmniRoute nó coimeádán a atosú. Cumasaigh arís iad ón deais nuair is gá.
+- Ní athchóirítear Tolláin Thapa go huathoibríoch tar éis 67router nó coimeádán a atosú. Cumasaigh arís iad ón deais nuair is gá.
 - Tacaíonn an tsuiteáil bhainistithe faoi láthair le Linux, macOS, agus Windows ar `x64` / `arm64`.
 - Úsáideann Tolláin Thapa bhainistithe iompar HTTP/2 de réir réamhshocraithe chun rabhaidh fhothrópacha faoi mhaolán UDP QUIC a sheachaint i dtimpeallachtaí coimeádáin srianta. Socraigh `CLOUDFLARED_PROTOCOL=quic` nó `auto` más mian leat iompar eile.
 - Cuimsíonn íomhánna Docker fréamhacha CA an chórais agus cuireann siad ar aghaidh chuig `cloudflared` bainistithe iad, rud a sheachnaíonn teipeanna iontaoibhe TLS nuair a thosaíonn an tollán taobh istigh den choimeádán.
-- Socraigh `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` más mian leat go n-úsáidfeadh OmniRoute dénártha atá ann cheana féin in ionad ceann a íoslódáil.
+- Socraigh `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` más mian leat go n-úsáidfeadh 67router dénártha atá ann cheana féin in ionad ceann a íoslódáil.
 
 ## Clibeanna Íomhá
 
@@ -505,7 +505,7 @@ Léiriúchán ilardáin: `linux/amd64` + `linux/arm64` dúchasach (Apple Silicon
 
 ### Cainéil Eisiúna
 
-Foilsíonn OmniRoute cainéil Docker ar leith le haghaidh eisiúintí cobhsaí, tástáil ghníomhach ar bhrainse eisiúna, agus leaganacha forbartha.
+Foilsíonn 67router cainéil Docker ar leith le haghaidh eisiúintí cobhsaí, tástáil ghníomhach ar bhrainse eisiúna, agus leaganacha forbartha.
 
 | Cainéal                         | Foinse                                      | Inathraitheacht                    | Úsáid mholta                                                                                                                       |
 | ------------------------------- | ------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -558,7 +558,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Sula ndéanfaidh tú tástáil, cruthaigh cúltaca d’imleabhar sonraí OmniRoute nó den chomhadlann sonraí atá gléasta trí cheangal. Chun filleadh ar an leagan roimhe seo, athchóirigh an leagan cobhsaí nó an achoimre a úsáideadh roimhe seo agus athchruthaigh an coimeádán:
+Sula ndéanfaidh tú tástáil, cruthaigh cúltaca d’imleabhar sonraí 67router nó den chomhadlann sonraí atá gléasta trí cheangal. Chun filleadh ar an leagan roimhe seo, athchóirigh an leagan cobhsaí nó an achoimre a úsáideadh roimhe seo agus athchruthaigh an coimeádán:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -578,7 +578,7 @@ Ní féidir le leagan tógála ó bhrainse eisiúna `latest` a bhogadh riamh; n�
 
 ## Nuashonruithe an deais in Docker
 
-Ní féidir le coimeádán ó íomhá fhoilsithe é féin a athsholáthar. Nuair a bhraitheann OmniRoute go bhfuil sé ag rith laistigh de
+Ní féidir le coimeádán ó íomhá fhoilsithe é féin a athsholáthar. Nuair a bhraitheann 67router go bhfuil sé ag rith laistigh de
 choimeádán (gan seiceáil amach `.git`, agus nach suiteáil npm é), taispeánann meirge nuashonraithe na deaise baile an
 t-ordú óstaigh atá le rith in ionad na dtreoracha npm/git, mar aon le cnaipe cóipeála:
 
@@ -594,7 +594,7 @@ Tagann ainm na seirbhíse ó `AUTO_UPDATE_SERVICE` (`omniroute` de réir réamhs
 
 Chun **Nuashonraigh Anois** a choinneáil ag obair gan `/var/run/docker.sock` a fheistiú (rud a thugann
 rochtain fréimhe don choimeádán ar an óstach — féach an rabhadh faoin bpróifíl `cli` thuas), socraigh `DOCKER_UPDATE_TRIGGER_FILE` ar an
-tseirbhís OmniRoute agus rith faireoir ar an óstach:
+tseirbhís 67router agus rith faireoir ar an óstach:
 
 ```yaml
 services:
@@ -608,7 +608,7 @@ services:
 Ní mór don chonair a bheith laistigh de `DATA_DIR` (réitítear luachanna coibhneasta ina aghaidh); diúltaítear do
 gach rud eile. Ansin scríobhann **Nuashonraigh Anois** `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` chuig an
 gcomhad sin, freagraíonn sé le `202`, agus déanann an deais `/api/system/version` a pholláil go dtí go mbeidh an leagan nua beo
-agus go n-athlódálfar í. Ní ritheann OmniRoute blaosc ná ordú Docker riamh sa mhód seo. Mar is amhlaidh le gach gníomh
+agus go n-athlódálfar í. Ní ritheann 67router blaosc ná ordú Docker riamh sa mhód seo. Mar is amhlaidh le gach gníomh
 nuashonraithe, ní ghlactar leis an iarratas ach ó chliaint lúb-ais/LAN.
 
 Tugann eolaire sonraí atá feistithe le ceangal conair chobhsaí don óstach le faire uirthi. Aonaid shamplacha `systemd`
@@ -617,7 +617,7 @@ Tugann eolaire sonraí atá feistithe le ceangal conair chobhsaí don óstach le
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Faire ar iarratais nuashonraithe ó dheais OmniRoute
+Description=Faire ar iarratais nuashonraithe ó dheais 67router
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -629,7 +629,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Tarraing agus athchruthaigh an coimeádán OmniRoute
+Description=Tarraing agus athchruthaigh an coimeádán 67router
 
 [Service]
 Type=oneshot
@@ -649,13 +649,13 @@ Baineann an tseirbhís an t-iarratas sula dtarraingíonn sí, ionas nach lúbfai
 
 ## Infhaighteacht: is macasamhail aonair é SQLite réamhshocraithe
 
-Is éard atá i ngnáthleagan Docker / Kubernetes de OmniRoute ná **próiseas Node amháin + scríbhneoir SQLite amháin**. **Ní thacaítear le hinfhaighteacht ard** ar an toipeolaíocht sin.
+Is éard atá i ngnáthleagan Docker / Kubernetes de 67router ná **próiseas Node amháin + scríbhneoir SQLite amháin**. **Ní thacaítear le hinfhaighteacht ard** ar an toipeolaíocht sin.
 
-| Srian                                  | Iarmhairt                                                                                                                                                                                                                                                                                                                                                       |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scríbhneoir aonair                     | **Ná** rith macasamhla iolracha in aghaidh an chomhaid SQLite chéanna. Truaillíonn sé sin an DB.                                                                                                                                                                                                                                                                |
-| Athchruthú / atosú / marú HEALTHCHECK  | **Briseadh iomlán** ar SSE atá idir lámha, seisiúin deaise, agus staid sa chuimhne. Dícheanglaítear gach cliant nasctha. Faigheann iarratais nua le linn na fuinneoige críochphointe folmha **`502 Bad Gateway: Unknown error`** ón seachfhreastalaí droim ar ais, seachas JSON OmniRoute — ní féidir le cliaint é seo a idirdhealú ó theip soláthraí (#11015). |
-| An lúb teagmhais chéanna le `/healthz` | Is féidir le catalóg ghnóthach nó ticeáil chomhbhrúite taiscéalaithe a mhoilliú; atosaíonn teorainn ama ghearr an t-**aon** mhacasamhail ansin.                                                                                                                                                                                                                 |
+| Srian                                  | Iarmhairt                                                                                                                                                                                                                                                                                                                                                      |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Scríbhneoir aonair                     | **Ná** rith macasamhla iolracha in aghaidh an chomhaid SQLite chéanna. Truaillíonn sé sin an DB.                                                                                                                                                                                                                                                               |
+| Athchruthú / atosú / marú HEALTHCHECK  | **Briseadh iomlán** ar SSE atá idir lámha, seisiúin deaise, agus staid sa chuimhne. Dícheanglaítear gach cliant nasctha. Faigheann iarratais nua le linn na fuinneoige críochphointe folmha **`502 Bad Gateway: Unknown error`** ón seachfhreastalaí droim ar ais, seachas JSON 67router — ní féidir le cliaint é seo a idirdhealú ó theip soláthraí (#11015). |
+| An lúb teagmhais chéanna le `/healthz` | Is féidir le catalóg ghnóthach nó ticeáil chomhbhrúite taiscéalaithe a mhoilliú; atosaíonn teorainn ama ghearr an t-**aon** mhacasamhail ansin.                                                                                                                                                                                                                |
 
 **Maitrís taiscéalaithe** (féach freisin [moltaí taiscéalaithe Kubernetes](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -759,7 +759,7 @@ chomh maith leis an mbealach ceangail iarbhír; ní thugann an earráid seo amh�
 ### Tabhair tús áite do sheachfhreastalaí atá sonrach don cheangal
 
 Úsáid [cumraíocht seachfhreastalaí in aghaidh an cheangail](../ops/PROXY_GUIDE.md#4-level-proxy-system)
-de chuid OmniRoute don cheangal Gemini lena mbaineann, ansin déan **Test Connection** arís agus seol iarratas beag
+de chuid 67router don cheangal Gemini lena mbaineann, ansin déan **Test Connection** arís agus seol iarratas beag
 leis an tsamhail chéanna. Coinníonn sé seo an t-athrú ródaithe teoranta don cheangal sin. Deimhnigh
 gur féidir an seachfhreastalaí a rochtain ón gcoimeádán, agus go roghnaíonn an ceangal
 é i ndáiríre. Ní ráthaíonn athrú an bhealaigh incháilitheacht réigiúnach ag an soláthraí réamhtheachtach.
@@ -828,7 +828,7 @@ cur isteach ar choimeádáin eile atá ceangailte leis; ná scrios an t-imleabha
 
 ## Nótaí Tábhachtacha
 
-- **Mód WAL SQLite:** Ba cheart ligean do `docker stop` críochnú ionas gur féidir le OmniRoute seicphointe a dhéanamh de na hathruithe is déanaí ar ais isteach in `storage.sqlite`. Socraíonn na comhaid Compose atá san áireamh tréimhse chairde 40s don stopadh cheana féin. Má ritheann tú an íomhá go díreach, coinnigh `--stop-timeout 40`.
+- **Mód WAL SQLite:** Ba cheart ligean do `docker stop` críochnú ionas gur féidir le 67router seicphointe a dhéanamh de na hathruithe is déanaí ar ais isteach in `storage.sqlite`. Socraíonn na comhaid Compose atá san áireamh tréimhse chairde 40s don stopadh cheana féin. Má ritheann tú an íomhá go díreach, coinnigh `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Socraigh go `true` é má dhéantar gnáthchúltacaí/cúltacaí réamhscríofa a bhainistiú go seachtrach. Teastaíonn a seat slándála marthanach féin agus cosaint ollaistrithe fós le haghaidh aistrithe bunachar sonraí atá ann cheana féin.
 - **Marthanacht Sonraí:** Feistigh imleabhar ar `/app/data` i gcónaí chun do bhunachar sonraí, eochracha agus cumraíochtaí a chaomhnú thar atosuithe coimeádáin.
 - **Cumraíocht Poirt:** Sáraigh an athróg timpeallachta `PORT` chun an port réamhshocraithe `20128` a athrú.

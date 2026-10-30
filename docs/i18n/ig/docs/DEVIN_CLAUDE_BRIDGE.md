@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` na-eme ka runtime Claude Code n'ezie jiri endpoint Messages nke Anthropic
-dị n'ime mpaghara nke OmniRoute, ebe Devin CLI gọọmenti na-enye nzaghachi model site na ACP stdio. Ọ
+dị n'ime mpaghara nke 67router, ebe Devin CLI gọọmenti na-enye nzaghachi model site na ACP stdio. Ọ
 dịghị agbanwe ndị na-eweta Anthropic, Claude OAuth, Claude Web, ma ọ bụ `devin-cli` dị ugbu a.
 
 Maka oku ngwaọrụ nke client na-achịkwa, zipụ ha site na `devin-cli-agentic` (aha ọzọ `dva`), onye
@@ -18,7 +18,7 @@ metadata model ya n'ụzọ kwekọrọ na nke a ka routing combo chọrọ-ngwa
 > `3000.2.17` na model `swe-1-7-lightning`; ọsọ live ikpeazụ ahụ gosipụtara ntụgharị `Read`,
 > `Edit`, na `Bash` nke client na-achịkwa, nsonaazụ `npm test` gara nke ọma, nchọpụta command na skill
 > nke project, routing naanị site na Devin, na egress Claude efu. E mechaziri bulie mkpọchi ahụ gaa `2.1.258`
-> (ọgbọ CLI nke njirimara Claude nke OmniRoute na-eme onwe ya ka ọ bụrụ ya, nakwa ahịrị mbụ na-ebunye
+> (ọgbọ CLI nke njirimara Claude nke 67router na-eme onwe ya ka ọ bụrụ ya, nakwa ahịrị mbụ na-ebunye
 > ọkwa Fable 5.1 n'ụzọ native). Na mkpọchi ọhụrụ ahụ, e nyochara layer install na `claude --version`
 > n'elu base image ahụ a kpọchiri, ma bridge unit suite, `compose config`, na
 > ihe akaebe static isolation na-agafe — mana emebeghịgharị ọnọdụ mock offline na suite live nwere ọnọdụ atọ
@@ -51,11 +51,11 @@ Parser na-anabata otu envelope `<tool>{...}</tool>` kwụụrụ onwe ya n'otu n
 aha ahụ megide ndepụta ngwaọrụ dị na request, na-enyocha arguments megide JSON
 Schema nke ngwaọrụ ahụ, na-ajụ ngwakọta narrative/actions, ma na-enye ohere otu repair nwere oke. Claude Code na-esote
 na-eme Anthropic `tool_use` sitere na ya n'ime mpaghara ma zipụ `tool_result` ahụ laghachi site na
-OmniRoute.
+67router.
 
 ## Routing akpaka
 
-Onye na-eweta a tozuru isonye na candidate pools `auto/*` nke OmniRoute mgbe a naghị egbochi ya.
+Onye na-eweta a tozuru isonye na candidate pools `auto/*` nke 67router mgbe a naghị egbochi ya.
 Itozu dịka candidate anaghị ekwe nkwa na a ga-ahọrọ ya: usoro routing nke combo ahụ (dịka ọmụmaatụ,
 last-known-good) nwere ike ịhọrọ onye na-eweta ọzọ. Jiri `dva/<model>` ma ọ bụ combo na-ebute Devin ụzọ mgbe
 ịchọrọ ka request ọ bụla gafee Devin.
@@ -67,16 +67,16 @@ ihe amachibidoro. Ọrụ Compose ndị a:
 
 - na-agba dịka UID/GID `10001:10001`, nwere root filesystem nke a na-agụ naanị, ikike ndị e wepụrụ, na
   `no-new-privileges`;
-- na-eji `/home/bridge` nkeonwe, volume nhazi Claude raara onwe ya nye, data OmniRoute e kewapụrụ,
+- na-eji `/home/bridge` nkeonwe, volume nhazi Claude raara onwe ya nye, data 67router e kewapụrụ,
   na volume `devin-auth` dị iche;
 - na-mount naanị ebeọrụ/ihe akaebe `.sandbox` ndị a pụrụ ịtụfu;
 - anaghị e-mount home nke host, Keychain, SSH, nzere cloud, ma ọ bụ socket Docker;
 - na-emepụta environment doro anya ma na-ewepụ mgbanwe Anthropic API/OAuth/routing;
 - na-eziga naanị inference Claude Code gaa na `http://omniroute:20128` site na key a na-eji naanị n'ime mpaghara.
 
-Profaịlụ offline na-eji netwọkụ dị n'ime. Na profaịlụ live, OmniRoute na-erute naanị
+Profaịlụ offline na-eji netwọkụ dị n'ime. Na profaịlụ live, 67router na-erute naanị
 endpoint Devin ndị gọọmentị kwadoro site na `network-guard`; a na-ajụ ebe ndị ọzọ na-enweghị njikọ.
-Claude Code nwere guard egress deny-all dị iche, ọ pụkwara iru naanị ọrụ OmniRoute nke mpaghara
+Claude Code nwere guard egress deny-all dị iche, ọ pụkwara iru naanị ọrụ 67router nke mpaghara
 site na `NO_PROXY`. Ọ bụ naanị process guard nke ọ bụla ka a na-mount faịlụ audit ya nye. Script ndị ahụ
 na-enyocha onye nwe faịlụ, mode, ọnụọgụ link, na mkpebi ọ bụla tupu ha ebupụ
 ihe akaebe na-enweghị token.

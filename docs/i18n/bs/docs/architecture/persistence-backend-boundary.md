@@ -12,7 +12,7 @@
 
 ## Context
 
-OmniRoute trenutno predstavlja funkcije perzistencije orijentirane na domenu iz `src/lib/db/`, dok zajednička konekcija koju vraća `src/lib/db/core.ts` implementira sinkroni `SqliteAdapter` ugovor u `src/lib/db/adapters/types.ts`. Taj adapter podržava nekoliko SQLite runtime-a, ali njegova površina ostaje u obliku SQLite-a: sinkrone pripremljene izjave (prepared statements), `pragma`, odgođene i trenutne transakcije, nativna/file-copy sigurnosna kopija, checkpoint i lokalni handle baze podataka.
+67router trenutno predstavlja funkcije perzistencije orijentirane na domenu iz `src/lib/db/`, dok zajednička konekcija koju vraća `src/lib/db/core.ts` implementira sinkroni `SqliteAdapter` ugovor u `src/lib/db/adapters/types.ts`. Taj adapter podržava nekoliko SQLite runtime-a, ali njegova površina ostaje u obliku SQLite-a: sinkrone pripremljene izjave (prepared statements), `pragma`, odgođene i trenutne transakcije, nativna/file-copy sigurnosna kopija, checkpoint i lokalni handle baze podataka.
 
 Trenutni put pokretanja i oporavka također posjeduje životni ciklus SQLite datoteke. `src/lib/db/core.ts` razrješava `storage.sqlite`, održava jedan procesno-globalni adapter, vrši checkpoint WAL-a, čuva odabrane tablice tijekom oporavka i uklanja prateće SQLite datoteke prilikom ponovne izgradnje baze podataka. Odabir drivera u `src/lib/db/adapters/driverFactory.ts` bira između podržanih SQLite runtime-a; to nije apstrakcija vanjskog backend-a.
 

@@ -12,7 +12,7 @@ usage() {
 Usage: bin/cold-start-bench.sh [--port <n>] [--start-cmd "<cmd>"] [--url <base>]
                                [--listen-budget-ms <n>] [--ttfb-budget-ms <n>] [-h|--help]
 
-Boots OmniRoute, times cold-start to the first /api/health/ping 200, measures
+Boots 67router, times cold-start to the first /api/health/ping 200, measures
 warm TTFB, and compares against the cold-start budgets
 (listen ≤ 800 ms, TTFB ≤ 200 ms). Exits non-zero if a budget is exceeded.
 

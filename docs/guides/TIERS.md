@@ -1,18 +1,18 @@
 ---
-title: "OmniRoute Tiers — User Guide"
+title: "67router Tiers — User Guide"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# OmniRoute Tiers — User Guide
+# 67router Tiers — User Guide
 
-OmniRoute organizes the 352 supported providers into 3 economic tiers. Each
+67router organizes the 352 supported providers into 3 economic tiers. Each
 request travels through them in order until one returns successfully — you
 get the cheapest viable response without ever writing fallback code.
 
 ## Tier 1 — Subscription
 
-**Providers you already pay for.** OmniRoute uses every drop of quota before
+**Providers you already pay for.** 67router uses every drop of quota before
 it expires.
 
 | Provider                            | Why Tier 1                                   |

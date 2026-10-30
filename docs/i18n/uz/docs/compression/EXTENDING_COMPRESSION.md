@@ -4,7 +4,7 @@
 
 ---
 
-> **Qisqasi**: OmniRoute siqish mexanizmi **kengaytiriladigan** — maxsus mexanizmlarni roʻyxatdan oʻtkazishingiz, yangi tillar uchun til paketlarini taqdim etishingiz va ketma-ket konveyerlarni tuzishingiz mumkin. Ushbu qoʻllanma buni qanday amalga oshirishni koʻrsatadi.
+> **Qisqasi**: 67router siqish mexanizmi **kengaytiriladigan** — maxsus mexanizmlarni roʻyxatdan oʻtkazishingiz, yangi tillar uchun til paketlarini taqdim etishingiz va ketma-ket konveyerlarni tuzishingiz mumkin. Ushbu qoʻllanma buni qanday amalga oshirishni koʻrsatadi.
 
 **Tegishli qoʻllanmalar:**
 
@@ -231,7 +231,7 @@ Mexanizmingizni plagin yoki ishga tushirish funksiyasida ro‘yxatdan o‘tkazin
 
 ## Til paketlarini yaratish
 
-Caveman uslubidagi siqish har bir tabiiy tildagi ortiqcha iboralar, ikkilanishni ifodalovchi jumlalar va sergap tuzilmalarni boshqarish uchun **tilga xos qoidalar paketlaridan** foydalanadi. OmniRoute tarkibida **6 ta til paketi** mavjud: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Caveman uslubidagi siqish har bir tabiiy tildagi ortiqcha iboralar, ikkilanishni ifodalovchi jumlalar va sergap tuzilmalarni boshqarish uchun **tilga xos qoidalar paketlaridan** foydalanadi. 67router tarkibida **6 ta til paketi** mavjud: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Paket tuzilishi
 
@@ -387,7 +387,7 @@ N-mexanizmning chiqishi N+1-mexanizmning kirishiga aylanadi.
 
 ### Siqish rejimlari
 
-OmniRoute konfiguratsiya, avtomatik ishga tushirish chegaralari va kombinatsiya qayta belgilashlari asosida **har bir so‘rov uchun BITTA rejimni** tanlaydi.
+67router konfiguratsiya, avtomatik ishga tushirish chegaralari va kombinatsiya qayta belgilashlari asosida **har bir so‘rov uchun BITTA rejimni** tanlaydi.
 Mavjud rejimlar `open-sse/services/compression/types.ts` faylida (`CompressionMode` turi) belgilangan:
 
 | Rejim        | Mexanizmlar          | Qo‘llanish holati                                                                                                                                                                                                                |
@@ -504,10 +504,10 @@ Uni konfiguratsiya orqali boshqarish uchun `mode: "stacked"` ni belgilang va qad
 
 ## Yuqori oqim bilan sinxronlash siyosati
 
-OmniRoute siqish dvigatellari README faylida bir nechta yuqori oqim loyihalarini eʼtirof etadi
+67router siqish dvigatellari README faylida bir nechta yuqori oqim loyihalarini eʼtirof etadi
 ("RTK, Caveman, LLMLingua-2, Troglodita loyihalaridan ilhomlangan"). Hissa qoʻshuvchilar
 tomonidan tez-tez beriladigan savol: **yuqori oqimdagi RTK yangi vosita filtrini yoki Caveman yangi qoidalar
-toʻplamini qoʻshsa, bu OmniRouteʼga qanday yetib keladi?** Ushbu boʻlim rasmiy javobdir.
+toʻplamini qoʻshsa, bu 67routerʼga qanday yetib keladi?** Ushbu boʻlim rasmiy javobdir.
 
 ### Yetkazib beriladigan nusxalar va mustaqil implementatsiyalar
 
@@ -527,7 +527,7 @@ orqali olinadigan yuqori oqim nusxasi mavjud emas — README faylida aynan shu s
 
 Ataylab **yuqori oqim relizlarini avtomatik kuzatish ham, `compression-sync`
 yorligʻi ham mavjud emas**. Dvigatellar qayta implementatsiya qilingani sababli, yuqori oqimdagi RTK
-filtri yoki Caveman qoidalar toʻplami kod sifatida birlashtirilmaydi; u **OmniRouteʼning oʻz
+filtri yoki Caveman qoidalar toʻplami kod sifatida birlashtirilmaydi; u **67routerʼning oʻz
 formatida yangi qoida/filtr sifatida qayta ifodalanadi** (
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md) fayliga qarang) va odatiy PR orqali
 alohida tarzda kiritiladi. Yuqoridagi kengaytirish nuqtalari (maxsus dvigatel, til toʻplami, RTK filtri)
@@ -542,14 +542,14 @@ Aynan shu jarayonning yaqindagi misollari:
 ### Headroom (kirishni siqish proksisi)
 
 Headroom **toʻliq ichki** — mahkamlangan va yetkazib beriladigan `gcf` kodek surati hamda
-OmniRouteʼning oʻz `smartcrusher` / `toon` / `tabular` qatlamlaridan iborat. Yetkazib beriladigan nusxadan tashqari,
+67routerʼning oʻz `smartcrusher` / `toon` / `tabular` qatlamlaridan iborat. Yetkazib beriladigan nusxadan tashqari,
 kuzatiladigan faol yuqori oqim mavjud emas; `gcf` yangilanishlari kodek oʻzgarganda
 qoʻlda yangilanadi va siqish budjeti darvozasi (`check:compression-budget`) bilan
 qayta tekshiriladi.
 
 ### Yuqori oqimdan ilhomlangan yaxshilanishni taklif qilish
 
-1. **Yetkazib beriladigan nusxa yaratmang** — yuqori oqim qoida/filtrini OmniRoute formatida qayta ifodalang.
+1. **Yetkazib beriladigan nusxa yaratmang** — yuqori oqim qoida/filtrini 67router formatida qayta ifodalang.
 2. Uni quyidagi mos kengaytirish nuqtasi orqali qoʻshing (til toʻplami, RTK filtri yoki
    maxsus dvigatel).
 3. PR tavsifida yuqori oqim loyihasiga havola bering (mualliflikni eʼtirof etish uchun), uning

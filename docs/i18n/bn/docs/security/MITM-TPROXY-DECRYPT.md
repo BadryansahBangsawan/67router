@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY transparent decrypt হলো OmniRoute-এর
+TPROXY transparent decrypt হলো 67router-এর
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM স্ট্যাকের **৫ম ক্যাপচার মোড**। এটি kernel TPROXY + policy routing ব্যবহার করে Linux-এ
 স্থানীয় বহির্মুখী HTTPS ট্র্যাফিক ইন্টারসেপ্ট ও **ডিক্রিপ্ট** করে — `/etc/hosts` স্পুফ
@@ -56,7 +56,7 @@ MITM স্ট্যাকের **৫ম ক্যাপচার মোড**�
 - system-wide proxy পরিবর্তন করে যেটিকে ব্যাহত করতে চান না।
 
 যেহেতু ইন্টারসেপশন kernel-এ ঘটে, তাই উৎস প্রক্রিয়ায় **কোনো কনফিগারেশন পরিবর্তনের**
-প্রয়োজন নেই — তবে প্রক্রিয়াটিকে অবশ্যই OmniRoute ইনস্টল করা dynamic CA-কে বিশ্বাস করতে
+প্রয়োজন নেই — তবে প্রক্রিয়াটিকে অবশ্যই 67router ইনস্টল করা dynamic CA-কে বিশ্বাস করতে
 হবে ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer) দেখুন)।
 
 ---
@@ -74,7 +74,7 @@ MITM স্ট্যাকের **৫ম ক্যাপচার মোড**�
 addon build করা হয়নি), addon loader (`src/mitm/tproxy/transparentSocket.ts::loadTransparentAddon`)
 exception না ছুড়ে `null` ফেরত দেয়। এরপর capture-mode status-এ
 `available: false` দেখানো হয়, dashboard toggle-টি **নিষ্ক্রিয়** থাকে এবং এর tooltip হয়
-"TPROXY decrypt-এর জন্য Linux + root + native addon প্রয়োজন", আর OmniRoute-এর
+"TPROXY decrypt-এর জন্য Linux + root + native addon প্রয়োজন", আর 67router-এর
 বাকি অংশ কাজ করতে থাকে।
 
 ---
@@ -264,7 +264,7 @@ CA প্রাইভেট কী **কখনোই মেশিনের ব�
 | **ত্রুটি স্যানিটাইজেশন**             | রুটটির ত্রুটি প্রতিক্রিয়াগুলো `sanitizeErrorMessage()`-এর মধ্য দিয়ে যায় (কঠোর নিয়ম #12)।                                                                                                                                                                                                                                                                                                              |
 
 **MITM CA একটি শক্তিশালী সক্ষমতা।** OS-এর বিশ্বস্ত এমন একটি CA, যা যেকোনো
-হোস্টের জন্য স্বাক্ষর করতে পারে, তার অর্থ OmniRoute যা কিছু ইন্টারসেপ্ট করে, তা ডিক্রিপ্ট করা সম্ভব। এটি
+হোস্টের জন্য স্বাক্ষর করতে পারে, তার অর্থ 67router যা কিছু ইন্টারসেপ্ট করে, তা ডিক্রিপ্ট করা সম্ভব। এটি
 স্পষ্ট, শুধু-লোকাল TPROXY ক্যাপচার মোডের আড়ালে সুরক্ষিত, ডিফল্টভাবে বন্ধ থাকে এবং মোডটি
 বন্ধ করলে ট্রাস্ট-স্টোর এন্ট্রিটি সরিয়ে ফেলা হয়।
 
@@ -376,7 +376,7 @@ POST বডি অথবা উপরের ডিফল্টগুলোর �
 ### ক্র্যাশের পরে থেকে যাওয়া ফায়ারওয়াল রুল
 
 `revertTproxy()` হলো apply-এর সঠিক বিপরীত এবং এটি আইডেমপোটেন্ট। মোড বন্ধ করলে
-রুলগুলো প্রত্যাবর্তিত হয়; যদি সেশনের মাঝখানে OmniRoute বন্ধ হয়ে যায়, তাহলে
+রুলগুলো প্রত্যাবর্তিত হয়; যদি সেশনের মাঝখানে 67router বন্ধ হয়ে যায়, তাহলে
 অনাথ হয়ে থাকা সিস্টেম স্টেট (DNS spoof, root CA, system proxy) পূর্বাবস্থায়
 ফেরাতে AgentBridge-এর **Repair** অ্যাকশন
 (`POST /api/tools/agent-bridge/repair`) ব্যবহার করুন। TPROXY `mangle` রুল এবং রুটও

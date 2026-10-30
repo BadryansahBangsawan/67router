@@ -13,7 +13,7 @@
 
 ## 功能简介
 
-OmniRoute 将 **Obsidian** 仓库连接为**上下文源**——这是一个本地 Markdown
+67router 将 **Obsidian** 仓库连接为**上下文源**——这是一个本地 Markdown
 知识库，智能体通过内置 MCP 服务器对其进行读写。此集成与运行在
 桌面应用中的 **Obsidian Local REST API** 社区插件通信，因此智能体可以搜索笔记、
 读取/写入/修补文件、列出仓库内容、处理每日/每周周期笔记、管理标签、运行 Obsidian
@@ -73,7 +73,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### WebDAV 仓库同步
 
 `src/app/api/settings/obsidian/webdav/route.ts` 管理可选的、由 WebDAV 支持的
-仓库同步（由 `src/lib/obsidianSync.ts` 驱动）。启用后，它会将 OmniRoute 指向
+仓库同步（由 `src/lib/obsidianSync.ts` 驱动）。启用后，它会将 67router 指向
 本地仓库目录，并生成一对随机的 WebDAV 用户名和密码：
 
 ```bash
@@ -105,25 +105,25 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian/webdav
 
 ## MCP 工具 (22)
 
-定义于 `open-sse/mcp-server/tools/obsidianTools.ts`。令牌/基础 URL 会在每次调用时解析（优先使用每个 API 密钥的配置，其次使用全局配置）。调用 OmniRoute **同步服务器**的工具（四个 `obsidian_sync_*` 工具）还需要在 OmniRoute 设置中配置同步认证令牌。
+定义于 `open-sse/mcp-server/tools/obsidianTools.ts`。令牌/基础 URL 会在每次调用时解析（优先使用每个 API 密钥的配置，其次使用全局配置）。调用 67router **同步服务器**的工具（四个 `obsidian_sync_*` 工具）还需要在 67router 设置中配置同步认证令牌。
 
 ### 读取工具 (`read:obsidian`)
 
-| 工具                         | 描述                                                                         |
-| ---------------------------- | ---------------------------------------------------------------------------- |
-| `obsidian_check_status`      | 检查 Local REST API 是否可访问且已通过认证。                                 |
-| `obsidian_search_simple`     | 对笔记内容进行全文搜索；返回包含文件路径的片段。                             |
-| `obsidian_search_structured` | 使用 JSON Logic 表达式（and/or/regex/path 过滤器）进行搜索。                 |
-| `obsidian_read_note`         | 按仓库相对路径读取笔记；可选择特定标题/块/frontmatter。                      |
-| `obsidian_list_vault`        | 列出仓库中的文件和目录（条目树）。                                           |
-| `obsidian_get_document_map`  | 获取笔记的标题结构，格式为标题 → 行号映射。                                  |
-| `obsidian_get_note_metadata` | 获取 frontmatter、标签、链接、字符数/字数，而不获取完整内容。                |
-| `obsidian_get_active_file`   | 获取 Obsidian 中当前活动文件的路径和内容。                                   |
-| `obsidian_get_periodic_note` | 获取指定日期的每日/每周/每月周期笔记（省略时为今天）。                       |
-| `obsidian_get_tags`          | 列出仓库中的所有标签及其出现频率。                                           |
-| `obsidian_list_commands`     | 列出可用的 Obsidian 命令 ID（与 `obsidian_execute_command` 配合使用）。      |
-| `obsidian_sync_status`       | OmniRoute 同步服务器状态：运行状态、仓库名称、端口、运行时间、上次同步时间。 |
-| `obsidian_sync_conflicts`    | 列出未解决的同步冲突（路径、冲突路径、检测时间）。                           |
+| 工具                         | 描述                                                                        |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| `obsidian_check_status`      | 检查 Local REST API 是否可访问且已通过认证。                                |
+| `obsidian_search_simple`     | 对笔记内容进行全文搜索；返回包含文件路径的片段。                            |
+| `obsidian_search_structured` | 使用 JSON Logic 表达式（and/or/regex/path 过滤器）进行搜索。                |
+| `obsidian_read_note`         | 按仓库相对路径读取笔记；可选择特定标题/块/frontmatter。                     |
+| `obsidian_list_vault`        | 列出仓库中的文件和目录（条目树）。                                          |
+| `obsidian_get_document_map`  | 获取笔记的标题结构，格式为标题 → 行号映射。                                 |
+| `obsidian_get_note_metadata` | 获取 frontmatter、标签、链接、字符数/字数，而不获取完整内容。               |
+| `obsidian_get_active_file`   | 获取 Obsidian 中当前活动文件的路径和内容。                                  |
+| `obsidian_get_periodic_note` | 获取指定日期的每日/每周/每月周期笔记（省略时为今天）。                      |
+| `obsidian_get_tags`          | 列出仓库中的所有标签及其出现频率。                                          |
+| `obsidian_list_commands`     | 列出可用的 Obsidian 命令 ID（与 `obsidian_execute_command` 配合使用）。     |
+| `obsidian_sync_status`       | 67router 同步服务器状态：运行状态、仓库名称、端口、运行时间、上次同步时间。 |
+| `obsidian_sync_conflicts`    | 列出未解决的同步冲突（路径、冲突路径、检测时间）。                          |
 
 ### 写入工具 (`write:obsidian`)
 

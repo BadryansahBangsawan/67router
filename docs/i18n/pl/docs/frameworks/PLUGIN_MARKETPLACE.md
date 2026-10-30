@@ -11,7 +11,7 @@ lastUpdated: 2026-06-28
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Ostatnia aktualizacja:** 2026-06-28 — v3.8.40
 
-OmniRoute dostarcza system wtyczek w stylu WordPressa. Wtyczki to samodzielne
+67router dostarcza system wtyczek w stylu WordPressa. Wtyczki to samodzielne
 katalogi — każdy z manifestem `plugin.json` i plikiem wejściowym — które wpinają
 się w potok żądań (`onRequest` / `onResponse` / `onError`) oraz w
 zdarzenia cyklu życia (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -153,7 +153,7 @@ są przepuszczane.
 
 ### Katalog wtyczek
 
-Wtyczki mieszkają w katalogu danych OmniRoute:
+Wtyczki mieszkają w katalogu danych 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

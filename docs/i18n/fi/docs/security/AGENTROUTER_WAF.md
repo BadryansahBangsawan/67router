@@ -52,7 +52,7 @@ joutoajan jälkeen. Kyseessä on sama IP-osoitteeseen ja avaimeen sidottu nopeus
 ajoittaisia `400 content-blocked` -virheitä, kun Claude Code tai Codex CLI
 tekee useita työkalunkäyttö- tai viestinlähetyskutsuja nopeasti peräkkäin.
 
-## OmniRouteen jo toteutetut lievennykset
+## 67routeriin jo toteutetut lievennykset
 
 1. **`open-sse/services/wafRateLimit.ts`** — pyyntöryöppysuoja, joka pakottaa
    vähintään 500 ms:n välin lähteville pyynnöille mihin tahansa `agentrouter:*`-

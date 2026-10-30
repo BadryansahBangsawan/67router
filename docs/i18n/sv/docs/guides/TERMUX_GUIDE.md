@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute kan köras som en headless-server på Android via Termux. Electron-skrivbordsappen stöds inte i Termux, men webbpanelen och det OpenAI-kompatibla API:et fungerar från den lokala webbläsaren eller från andra enheter i samma nätverk.
+67router kan köras som en headless-server på Android via Termux. Electron-skrivbordsappen stöds inte i Termux, men webbpanelen och det OpenAI-kompatibla API:et fungerar från den lokala webbläsaren eller från andra enheter i samma nätverk.
 
 ## Förutsättningar
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js-version:** OmniRoute kräver Node `>=22.22.2 <23 || >=24.0.0 <27` (motsvarar `engines` i `package.json` / `SUPPORTED_NODE_RANGE`). Termux `nodejs-lts` levererar vanligtvis Node 20 LTS, som **inte längre stöds** — installera `pkg install nodejs` (aktuell version) i stället och kontrollera att `node --version` visar en version i 22.x-/24.x+-serien.
+> **Node.js-version:** 67router kräver Node `>=22.22.2 <23 || >=24.0.0 <27` (motsvarar `engines` i `package.json` / `SUPPORTED_NODE_RANGE`). Termux `nodejs-lts` levererar vanligtvis Node 20 LTS, som **inte längre stöds** — installera `pkg install nodejs` (aktuell version) i stället och kontrollera att `node --version` visar en version i 22.x-/24.x+-serien.
 
-Om kompileringen av systemspecifika paket misslyckas kör du kommandot `pkg install` ovan igen och försöker sedan installera OmniRoute på nytt.
+Om kompileringen av systemspecifika paket misslyckas kör du kommandot `pkg install` ovan igen och försöker sedan installera 67router på nytt.
 
 ## Installation
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Körning
 
-Starta OmniRoute i headless-serverläge:
+Starta 67router i headless-serverläge:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Till exempel:
 http://192.168.1.50:20128
 ```
 
-Se till att telefonen och klienten finns i samma betrodda nätverk. Om du exponerar OmniRoute utanför telefonen ska du aktivera API-nycklar och autentisering för kontrollpanelen.
+Se till att telefonen och klienten finns i samma betrodda nätverk. Om du exponerar 67router utanför telefonen ska du aktivera API-nycklar och autentisering för kontrollpanelen.
 
 ## Datakatalog
 
-Som standard lagrar OmniRoute data under Termux hemkatalog och följer samma beteende för datasökvägar på serversidan som används i Linux. Så här placerar du databasen på en uttryckligen angiven plats:
+Som standard lagrar 67router data under Termux hemkatalog och följer samma beteende för datasökvägar på serversidan som används i Linux. Så här placerar du databasen på en uttryckligen angiven plats:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Plattformen stöds inte: android (varje förfrågan returnerar HTTP 500)
 
-**Symptom:** `omniroute` / `omniroute serve` skriver ut `✔ OmniRoute is running!`, men varje förfrågan till kontrollpanelen eller API:et returnerar en enkel `500 Internal Server Error`. `~/.omniroute/logs/application/app.log` förblir tom, `APP_LOG_LEVEL=debug` skriver inte ut något användbart och svarstexten är ren text (`Internal Server Error`) utan JSON-detaljer.
+**Symptom:** `omniroute` / `omniroute serve` skriver ut `✔ 67router is running!`, men varje förfrågan till kontrollpanelen eller API:et returnerar en enkel `500 Internal Server Error`. `~/.omniroute/logs/application/app.log` förblir tom, `APP_LOG_LEVEL=debug` skriver inte ut något användbart och svarstexten är ren text (`Internal Server Error`) utan JSON-detaljer.
 
 **Orsak:** Vissa Termux-/Node-versioner rapporterar `process.platform === "android"`. Next.js `getCacheDirectory()` hanterar inte den plattformen: funktionen kräver att `~/.cache` (eller en allmän tmp-katalog) _redan_ finns, annars misslyckas den när instrumenteringshooken läses in med:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Eftersom hooken aldrig läses in startar loggningen aldrig — 500-felet ser därför helt omöjligt ut att diagnostisera. OmniRoute skapar `~/.cache` (och ställer in `XDG_CACHE_HOME` när variabeln inte redan är angiven) i CLI-startpunkten innan Next.js startar, så att den här kontrollen lyckas på Android/Termux.
+Eftersom hooken aldrig läses in startar loggningen aldrig — 500-felet ser därför helt omöjligt ut att diagnostisera. 67router skapar `~/.cache` (och ställer in `XDG_CACHE_HOME` när variabeln inte redan är angiven) i CLI-startpunkten innan Next.js startar, så att den här kontrollen lyckas på Android/Termux.
 
 **Lösning som stöds (utan att korrigera paketet):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-I aktuella OmniRoute-versioner gör CLI:t detta automatiskt på Android/Termux — en ny `npx -y omniroute@latest`-/global installation bör inte kräva det manuella steget. Om felet fortfarande visas efter uppgraderingen skapar du `~/.cache` en gång enligt ovan och startar om.
+I aktuella 67router-versioner gör CLI:t detta automatiskt på Android/Termux — en ny `npx -y omniroute@latest`-/global installation bör inte kräva det manuella steget. Om felet fortfarande visas efter uppgraderingen skapar du `~/.cache` en gång enligt ovan och startar om.
 
 Korrigera **inte** `dist/server.js` för att tvinga `process.platform = "linux"`. Den typen av paketkorrigering skrivs över vid varje ominstallation/uppgradering och behövs inte när cachekatalogen väl finns.
 

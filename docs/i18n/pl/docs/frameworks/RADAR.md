@@ -41,7 +41,7 @@ lub integracja zewnętrzna są obecnie dostępne.
 | Oferty dla wspierających               | Zaimplementowane jako oddzielne, podpisane źródło danych dostępne wyłącznie dla aktywnego poziomu oraz osobna strona panelu. Klient ponownie sprawdza zamknięty schemat korzyści, zachowuje ostatnią poprawną pamięć podręczną, odfiltrowuje wygasłe pozycje i wyraźnie oznacza oferty partnerów.                              |
 | Informacje i wyróżnianie wspierających | Zaimplementowane jako rygorystyczne, podpisane źródło danych dostępne wyłącznie dla aktywnego poziomu, z należącym do Radar systemem ELO, faktycznymi danymi o aktualności/trendach katalogu, zweryfikowaną lokalną odznaką wspierającego, stroną panelu oraz lokalnymi poleceniami CLI do sprawdzania stanu i synchronizacji. |
 | Płatności i e-maile transakcyjne       | Niezimplementowane w kliencie OSS. Zakupy, darowizny, przegląd potwierdzeń, odzyskiwanie dostępu i dostarczanie poczty należą do prywatnej usługi; dostępność hostowana nadal zależy od jej nadzorowanego wdrożenia i konfiguracji dostawcy.                                                                                   |
-| Strumień prac nad agentem badawczym    | Nie jest częścią tego wydania klienta. Zawartość kuratorowanych źródeł danych pozostaje po stronie serwera; żadna autonomiczna instancja agenta badawczego nie działa w instalacji OmniRoute.                                                                                                                                  |
+| Strumień prac nad agentem badawczym    | Nie jest częścią tego wydania klienta. Zawartość kuratorowanych źródeł danych pozostaje po stronie serwera; żadna autonomiczna instancja agenta badawczego nie działa w instalacji 67router.                                                                                                                                   |
 
 ---
 
@@ -119,7 +119,7 @@ Gdy obie są włączone, ścieżka synchronizacji wygląda następująco:
    adresu IP do ręcznego przeglądu nadużyć; tabele te nie przechowują ani klucza, ani adresu IP w postaci nieprzetworzonej.
    Dzienniki dostępu infrastruktury i zaszyfrowana skrzynka nadawcza są odrębnymi
    granicami operacyjnymi.
-3. OmniRoute nigdy nie wysyła do usługi Radar promptów, odpowiedzi, konwersacji, danych uwierzytelniających dostawców, ruchu modeli,
+3. 67router nigdy nie wysyła do usługi Radar promptów, odpowiedzi, konwersacji, danych uwierzytelniających dostawców, ruchu modeli,
    czasu dostępności, opóźnień ani lokalnej konfiguracji dostawców.
 4. Odpowiedź jest weryfikowana, walidowana i zapisywana w lokalnej pamięci podręcznej (zobacz
    [Model zabezpieczeń](#security-model)). Radar ma dokładnie cztery ścieżki sieciowe po stronie serwera:
@@ -243,13 +243,13 @@ już go ma, do jego aktywacji.
 ### Kompleksowa aktywacja i konfiguracja z przewodnikiem
 
 Prywatna usługa kanału i ten klient OSS mają celowo wąsko zdefiniowaną granicę: usługa
-wydaje i weryfikuje klucz wspierającego, natomiast lokalna instalacja OmniRoute szyfruje klucz,
+wydaje i weryfikuje klucz wspierającego, natomiast lokalna instalacja 67router szyfruje klucz,
 synchronizuje podpisane artefakty po stronie serwera i prowadzi przez konfigurację dostawcy. Kolejność wspomaganej walidacji jest następująca:
 
 1. Uzyskaj nowo wydany lub odzyskany klucz w procesie zgłoszenia kontrybutora, zakupu planu, odzyskiwania
    albo od autoryzowanego operatora prywatnego serwera. Nie wklejaj surowego klucza do logów,
    zrzutów ekranu, komentarzy w zgłoszeniach ani argumentów wiersza poleceń.
-2. Włącz flagę funkcji `RADAR_ENABLED` w lokalnej instalacji OmniRoute. Udostępnia to interfejs użytkownika,
+2. Włącz flagę funkcji `RADAR_ENABLED` w lokalnej instalacji 67router. Udostępnia to interfejs użytkownika,
    ale nie powoduje żadnej aktywności sieciowej, dopóki nie zostanie zapisane osobne wyrażenie zgody.
 3. Otwórz `/dashboard/radar`, wklej klucz i aktywuj usługę. Przeglądarka wysyła jedno lokalne żądanie
    `POST /api/radar/settings` z `{ optIn: true, supporterKey }`; klucz jest szyfrowany lokalnie,
@@ -316,7 +316,7 @@ ponownej synchronizacji.
 ### Przyjazne dla forków nadpisywanie przez zmienne środowiskowe
 
 Dwie zmienne środowiskowe pozwalają forkom i osobom korzystającym z samodzielnego
-hostingu skierować klienta do własnego kanału zamiast domyślnej usługi OmniRoute —
+hostingu skierować klienta do własnego kanału zamiast domyślnej usługi 67router —
 patrz [Jak samodzielnie hostować kanał](#how-to-self-host-a-feed) poniżej:
 
 | Zmienna             | Przeznaczenie                                                                                                                                    |
@@ -475,7 +475,7 @@ Wartość `enabled: false` z kanału pozostaje wyjątkiem bezpieczeństwa: ma pi
 Publikacje katalogu używają `schemaVersion: 2`. `contextWindow` oraz każde z pól `tools`, `vision` i
 `thinking` są niezależnie typu `number | null` / `boolean | null`: `null` oznacza brak wiedzy, natomiast
 `false` oznacza, że oficjalne źródło dostawcy, potwierdzone zgodnie z D16, jawnie stwierdza brak danej możliwości.
-Wewnętrzne flagi rejestru/specyfikacji modeli OmniRoute nigdy nie są bezpośrednio przekształcane w fakty kanału. Klient
+Wewnętrzne flagi rejestru/specyfikacji modeli 67router nigdy nie są bezpośrednio przekształcane w fakty kanału. Klient
 nadal akceptuje migawki v1; ponieważ stary konstruktor używał `false` jako symbolu zastępczego braku danych, wartość `false` w v1 jest
 normalizowana do braku wiedzy, natomiast `true` w v1 pozostaje faktem. Nieznane wersje schematu są bezpiecznie odrzucane, a
 ostatnia prawidłowa pamięć podręczna pozostaje dostępna. Każdy model v2 z niepustą wartością kontekstu/możliwości musi zawierać
@@ -536,7 +536,7 @@ Poniższe rodziny lokalnych tras Radar obsługują interfejs użytkownika w `src
 | `/api/radar/local-model-state` | DELETE | Usuwa edytowalne pola nadpisania, zachowując ewentualny znacznik usunięcia.                                                              |
 
 **Twarda zasada: te trasy nigdy nie działają jako proxy usługi kanału danych.** Przeglądarka komunikuje się wyłącznie
-z lokalnym serwerem OmniRoute. Cztery moduły, które komunikują się z usługą Radar, to
+z lokalnym serwerem 67router. Cztery moduły, które komunikują się z usługą Radar, to
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (polecenia) oraz
 `src/lib/radar/offersSync.ts` (oferty), a także `src/lib/radar/intelSync.ts` (Intel); wszystkie działają
 po stronie serwera, nigdy po stronie klienta. Dzięki temu
@@ -578,7 +578,7 @@ Intel jest podpisanym artefaktem dostępnym pod adresem `GET /v1/intel/latest`. 
 
 `syncRadarIntel()` stosuje takie same mechanizmy jak oferty: Bearer po stronie serwera, 30-sekundowy limit czasu, limit strumienia wynoszący 10 MiB, weryfikację Ed25519 względem dokładnych bajtów, ścisłą walidację schematu, wymóg wartości `live` w treści i nagłówku, minimalną wersję oraz zachowanie ostatniej prawidłowej pamięci podręcznej. Po zapisaniu zweryfikowanego aktywnego obrazu klient wyprowadza `radar:<sha256(supporter key)>`, przechowuje wyłącznie tę jednokierunkową tożsamość i emituje dedykowane zdarzenie uznania `radar_supporter`. Odznaka `radar-supporter` jest idempotentna i przyznaje zero XP; nigdy nie aktualizuje tabel wyników ani nie wykorzystuje ponownie `token_share`. `/dashboard/radar/intel` renderuje odznakę wyłącznie na podstawie zweryfikowanych metadanych lokalnej pamięci podręcznej.
 
-CLI udostępnia polecenia `omniroute radar status` i `omniroute radar sync`. Oba komunikują się wyłącznie z lokalnym API OmniRoute. `status` wykonuje tylko do odczytu żądanie `GET /api/radar/status`; `sync` wysyła jedno żądanie `POST /api/radar/sync-all` i wyświetla wynik dla każdego kanału. Żadne z tych poleceń nie odczytuje, nie przyjmuje ani nie wyświetla klucza wspierającego oraz żadne nie kontaktuje się bezpośrednio z usługą Radar.
+CLI udostępnia polecenia `omniroute radar status` i `omniroute radar sync`. Oba komunikują się wyłącznie z lokalnym API 67router. `status` wykonuje tylko do odczytu żądanie `GET /api/radar/status`; `sync` wysyła jedno żądanie `POST /api/radar/sync-all` i wyświetla wynik dla każdego kanału. Żadne z tych poleceń nie odczytuje, nie przyjmuje ani nie wyświetla klucza wspierającego oraz żadne nie kontaktuje się bezpośrednio z usługą Radar.
 
 ---
 

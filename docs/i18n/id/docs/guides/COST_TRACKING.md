@@ -4,7 +4,7 @@
 
 ---
 
-Bagaimana OmniRoute memperkirakan, mencatat, dan melaporkan biaya setiap permintaan — serta mengapa angka pada
+Bagaimana 67router memperkirakan, mencatat, dan melaporkan biaya setiap permintaan — serta mengapa angka pada
 dasbor merupakan **pelacak penghematan**, bukan tagihan.
 
 Lihat juga: [Panduan Pengguna](./USER_GUIDE.md) · [Galeri Fitur](./FEATURES.md)
@@ -13,12 +13,12 @@ Lihat juga: [Panduan Pengguna](./USER_GUIDE.md) · [Galeri Fitur](./FEATURES.md)
 
 ## Apa itu (dan apa yang bukan)
 
-OmniRoute mengatribusikan biaya USD per permintaan ke setiap penyelesaian dengan mengalikan jumlah
+67router mengatribusikan biaya USD per permintaan ke setiap penyelesaian dengan mengalikan jumlah
 token dengan tarif harga model. Angka-angka ini digunakan oleh dasbor **Biaya**,
 CLI `omniroute cost` / `omniroute usage`, ekspor CSV/JSON, dan anggaran per kunci API.
 
-> **"Biaya" pada dasbor adalah pelacak penghematan, bukan tagihan.** OmniRoute tidak pernah menagih Anda
-> — OmniRoute merutekan permintaan Anda ke penyedia yang telah Anda hubungkan (langganan Anda sendiri,
+> **"Biaya" pada dasbor adalah pelacak penghematan, bukan tagihan.** 67router tidak pernah menagih Anda
+> — 67router merutekan permintaan Anda ke penyedia yang telah Anda hubungkan (langganan Anda sendiri,
 > tingkat gratis, dan kunci API). "Total biaya $290" yang seluruhnya terakumulasi pada model gratis
 > berarti sekitar **$290 yang _tidak_ Anda bayarkan** kepada API berbayar. Angka tersebut merupakan _perkiraan_
 > biaya yang akan dikenakan untuk lalu lintas yang sama berdasarkan harga standar, sehingga Anda dapat melihat
@@ -30,7 +30,7 @@ dasbor adalah pelacak penghematan, bukan tagihan").
 
 Karena angka tersebut merupakan perkiraan:
 
-- Angka ini bergantung pada tabel harga yang dimiliki OmniRoute untuk setiap model. Model tanpa entri
+- Angka ini bergantung pada tabel harga yang dimiliki 67router untuk setiap model. Model tanpa entri
   harga menyumbangkan biaya `0` (ditampilkan sebagai baris "Lama / Gratis" di penjelajah).
 - Lalu lintas tingkat gratis dan langganan tetap mengakumulasi _perkiraan_ biaya — angka tersebut adalah
   jumlah yang Anda hemat, bukan jumlah yang harus dibayar.
@@ -48,7 +48,7 @@ Biaya berasal dari tabel harga yang ditentukan berdasarkan urutan prioritas beri
 2. **Harga eksternal yang disinkronkan** — diambil dari
    `model_prices_and_context_window.json` publik milik LiteLLM saat sinkronisasi diaktifkan (disimpan dalam namespace
    `pricing_synced` terpisah sehingga tidak pernah menimpa penggantian Anda).
-3. **Nilai default yang dikodekan langsung** — disertakan bersama OmniRoute.
+3. **Nilai default yang dikodekan langsung** — disertakan bersama 67router.
 
 Sinkronisasi harga eksternal bersifat **opsional**, dan dinonaktifkan secara default. Variabel lingkungan yang relevan
 (lihat [`.env.example`](../../.env.example)):
@@ -193,7 +193,7 @@ jika dinyatakan lain.
 
 ## CLI
 
-CLI OmniRoute menyediakan perintah biaya, penggunaan, dan harga (didaftarkan di
+CLI 67router menyediakan perintah biaya, penggunaan, dan harga (didaftarkan di
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

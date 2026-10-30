@@ -4,7 +4,7 @@
 
 ---
 
-ይህ ሰነድ ወደ OmniRoute የታከለውን በግብረመልስ የሚመራ መላመድ የሚችል የማዘዋወር መሠረት ይገልጻል።
+ይህ ሰነድ ወደ 67router የታከለውን በግብረመልስ የሚመራ መላመድ የሚችል የማዘዋወር መሠረት ይገልጻል።
 ሆን ተብሎ አነስተኛ እንዲሆን ተደርጓል፦ ዓይነቱ የተገለጸ የማዘዋወር ውጤት
 ቻናል፣ ነባሩን የauto-combo ነጥብ ሰጪ የሚመግብ ቀጣይነት ያለው የጥራት ምልክት፣
 አማራጭ OpenTelemetry ላኪ እና የማብራሪያ መጨረሻ ነጥብ ያስተዋውቃል። ነባሩን
@@ -13,7 +13,7 @@ model lockout፣ health matrix፣ autopilot) **አይተካም** — ያሟላ�
 
 ## 1. የሥነ ሕንፃ አውድ
 
-OmniRoute **የጥያቄ ፈጣን መንገድ** እና **የቁጥጥር/ብልህነት
+67router **የጥያቄ ፈጣን መንገድ** እና **የቁጥጥር/ብልህነት
 ፕሌን** ያለው የውሂብ ፕሌን ነው። ፈጣን መንገዱ ፈጣን፣ በማስታወሻ አጠቃቀም ቆጣቢ፣ አልተመሳሰለ፣ ተቋቋሚ እና
 ሊገመት የሚችል ሆኖ መቆየት አለበት። ግምገማ፣ የጥራት ነጥብ አሰጣጥ፣ ሙከራዎች እና ታሪካዊ ትንተና
 የቁጥጥር ፕሌኑ አካል ናቸው።
@@ -23,7 +23,7 @@ AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   የውሂብ ፕሌን (ፈጣን፣ የተመሳሰለ፣ በማስታወሻ ውስጥ)
+│    67router        │   የውሂብ ፕሌን (ፈጣን፣ የተመሳሰለ፣ በማስታወሻ ውስጥ)
 │  ማዘዋወር / failover │
 │  ጤና / guardrail    │
 │  cache / streaming  │
@@ -236,7 +236,7 @@ TTFT/ITL/የመቋረጥ መረጃ ወደ `RoutingEvent` (`ttftMs`, `itlMs`) ይ
   `@opentelemetry/*` SDK አይጠቀምም)።
 - Spans የGenAI ትርጉማዊ ስምምነቶችን (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) እና የOmniRoute ማዘዋወሪያ
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) እና የ67router ማዘዋወሪያ
   ባህሪያትን (ውጤት፣ ሁኔታ፣ ttft፣ ድጋሚ ሙከራዎች፣ ተተኪ) ይከተላሉ።
 - `record()` ወደ ውስን ቋት ብቻ ያሰልፋል (O(1))፤ የጀርባ ጊዜ ቆጣሪ
   `POST {endpoint}/v1/traces`ን በመጠቀም ያለመመሳሰል ሁኔታ ይልካል። ከአቅም በላይ ጫና ሲኖር
@@ -258,7 +258,7 @@ TTFT/ITL/የመቋረጥ መረጃ ወደ `RoutingEvent` (`ttftMs`, `itlMs`) ይ
 
 ## 6. የግምገማ መስመር ውህደት (ለFuture AGI ዝግጁነት)
 
-OmniRoute Future AGIን (ወይም ማንኛውንም evaluator) እንደ **ሊሆን የሚችል
+67router Future AGIን (ወይም ማንኛውንም evaluator) እንደ **ሊሆን የሚችል
 የብልህነት/ግምገማ backend እንጂ እንደ ጥገኝነት አይመለከተውም**። የማያያዣ ነጥቦቹ፦
 
 - `RoutingEventSink` ክስተቶችን ያለመመሳሰል ሁኔታ ወደ evaluator ሊያስተላልፍ ይችላል።

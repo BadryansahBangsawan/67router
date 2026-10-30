@@ -13,8 +13,8 @@
 ## Bu nima
 
 Local Corpus operatorga matnli fayllardan iborat, aniq tasdiqlangan bitta katalogni
-OmniRoute MCP serveriga taqdim etish imkonini beradi. Fayllar asl katalogida qoladi:
-OmniRoute SQLite bazasida faqat kanonik ildiz yoʻlini saqlaydi va xotirada qidiruv
+67router MCP serveriga taqdim etish imkonini beradi. Fayllar asl katalogida qoladi:
+67router SQLite bazasida faqat kanonik ildiz yoʻlini saqlaydi va xotirada qidiruv
 indeksini yuritadi. U korpus tarkibini repozitoriyga yoki maʼlumotlar bazasiga
 koʻchirmaydi.
 

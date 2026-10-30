@@ -4,7 +4,7 @@
 
 ---
 
-Come OmniRoute stima, registra e riporta il costo di ogni richiesta — e perché il
+Come 67router stima, registra e riporta il costo di ogni richiesta — e perché il
 numero nella dashboard è un **indicatore dei risparmi**, non una fattura.
 
 Vedi anche: [Guida utente](./USER_GUIDE.md) · [Galleria delle funzionalità](./FEATURES.md)
@@ -13,12 +13,12 @@ Vedi anche: [Guida utente](./USER_GUIDE.md) · [Galleria delle funzionalità](./
 
 ## Che cos'è (e che cosa non è)
 
-OmniRoute attribuisce a ogni completamento un costo in USD per richiesta, moltiplicando il
+67router attribuisce a ogni completamento un costo in USD per richiesta, moltiplicando il
 numero di token per le tariffe del modello. Questi valori alimentano la dashboard **Costi**,
 i comandi CLI `omniroute cost` / `omniroute usage`, le esportazioni CSV/JSON e i budget
 per chiave API.
 
-> **Il "costo" nella dashboard è un indicatore dei risparmi, non una fattura.** OmniRoute
+> **Il "costo" nella dashboard è un indicatore dei risparmi, non una fattura.** 67router
 > non ti addebita mai nulla: instrada le tue richieste verso provider che hai già collegato
 > (i tuoi abbonamenti, piani gratuiti e chiavi API). Un "costo totale di $290" maturato
 > interamente su modelli gratuiti indica che, approssimativamente, **non hai pagato $290**
@@ -31,7 +31,7 @@ Questa interpretazione è dichiarata direttamente nel [README](../../README.md) 
 
 Poiché il valore è una stima:
 
-- Dipende dalla tabella dei prezzi di cui OmniRoute dispone per ciascun modello. Un modello
+- Dipende dalla tabella dei prezzi di cui 67router dispone per ciascun modello. Un modello
   senza una voce di prezzo contribuisce con un costo pari a `0` (nell'esploratore viene
   visualizzato come riga "Legacy / Free").
 - Il traffico incluso in piani gratuiti e abbonamenti genera comunque un costo _stimato_:
@@ -51,7 +51,7 @@ precedenza ([`src/lib/pricingSync.ts`](../../src/lib/pricingSync.ts)):
    `model_prices_and_context_window.json` di LiteLLM quando la sincronizzazione è abilitata
    (memorizzati in uno spazio dei nomi `pricing_synced` separato, in modo da non sovrascrivere
    mai le tue sostituzioni).
-3. **Valori predefiniti codificati** — inclusi in OmniRoute.
+3. **Valori predefiniti codificati** — inclusi in 67router.
 
 La sincronizzazione dei prezzi esterni è **facoltativa** e disabilitata per impostazione
 predefinita. Variabili d'ambiente pertinenti
@@ -206,7 +206,7 @@ Tutti questi endpoint richiedono l'autenticazione di gestione (loopback/JWT, tra
 
 ## CLI
 
-La CLI di OmniRoute espone comandi per costi, utilizzo e prezzi (registrati in
+La CLI di 67router espone comandi per costi, utilizzo e prezzi (registrati in
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

@@ -45,7 +45,7 @@ npm run test:e2e           # незадължително, но препоръч
 гаранцията на WS1.3 (изтекъл токен не може самостоятелно да публикува — такъв токен няма).
 
 **Еднократна настройка (собственик):** npmjs.com → пакет `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: собственик `diegosouzapw`, хранилище `OmniRoute`, работен процес `npm-publish.yml`
+Publisher_ → GitHub: собственик `diegosouzapw`, хранилище `67router`, работен процес `npm-publish.yml`
 (среда: няма). Докато това не бъде настроено, автоматичната стъпка завършва неуспешно с `ENEEDAUTH`:
 стартирайте я повторно с `publish_mode=staged` (по-долу) или `direct`.
 

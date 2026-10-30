@@ -4,7 +4,7 @@
 
 ---
 
-> **Īsumā**: OmniRoute izseko katra pieprasījuma tokenu lietojumu, aprēķina izmaksas, piemēro kvotu katrai API atslēgai un parāda analītiku informācijas panelī. Šajā ceļvedī izskaidrots, kā tas viss darbojas.
+> **Īsumā**: 67router izseko katra pieprasījuma tokenu lietojumu, aprēķina izmaksas, piemēro kvotu katrai API atslēgai un parāda analītiku informācijas panelī. Šajā ceļvedī izskaidrots, kā tas viss darbojas.
 
 **Avoti:**
 
@@ -17,7 +17,7 @@
 
 ## Pārskats
 
-Katrs pieprasījums, kas tiek apstrādāts caur OmniRoute, ģenerē **lietojuma ierakstu**, kurā tiek fiksēts:
+Katrs pieprasījums, kas tiek apstrādāts caur 67router, ģenerē **lietojuma ierakstu**, kurā tiek fiksēts:
 
 - **Identitāte**: kura API atslēga, nodrošinātājs, modelis un kombinācija
 - **Tokeni**: uzvednes tokeni, pabeigšanas tokeni, kešatmiņā saglabātie tokeni un kopējais skaits
@@ -75,11 +75,11 @@ const usage = response.usage || {
 };
 ```
 
-Nodrošinātājiem, kuri neatgriež lietojuma datus (daži tīmekļa sīkfailu nodrošinātāji), OmniRoute **aptuveni novērtē** tokenu skaitu, izmantojot heiristiku `~4 rakstzīmes uz tokenu` (skatiet `open-sse/services/autoCombo/pipelineRouter.ts`).
+Nodrošinātājiem, kuri neatgriež lietojuma datus (daži tīmekļa sīkfailu nodrošinātāji), 67router **aptuveni novērtē** tokenu skaitu, izmantojot heiristiku `~4 rakstzīmes uz tokenu` (skatiet `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Kešatmiņā saglabātie tokeni
 
-OmniRoute uzskaita `cached_tokens` atsevišķi no `prompt_tokens`, jo:
+67router uzskaita `cached_tokens` atsevišķi no `prompt_tokens`, jo:
 
 - Anthropic uzvedņu kešošanai par kešatmiņā saglabātajiem tokeniem piemēro samazinātu tarifu (10% no parastā)
 - Daži nodrošinātāji atgriež `cache_read_input_tokens`, kuriem jāpiemēro atšķirīga cena
@@ -118,7 +118,7 @@ Cenu dati tiek automātiski sinhronizēti no LiteLLM, izmantojot galapunktu `/ap
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Modeļiem, kuriem nav cenu datu, OmniRoute izmaksas **aprēķina aptuveni**, izmantojot iekšējās vidējās likmes (iegūtas no LiteLLM cenu datiem).
+Modeļiem, kuriem nav cenu datu, 67router izmaksas **aprēķina aptuveni**, izmantojot iekšējās vidējās likmes (iegūtas no LiteLLM cenu datiem).
 
 ---
 

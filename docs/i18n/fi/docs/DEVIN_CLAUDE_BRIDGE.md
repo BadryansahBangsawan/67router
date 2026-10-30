@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` antaa aidon Claude Code -ajoympäristön käyttää OmniRouten paikallista Anthropic
+`devin-cli-agentic` antaa aidon Claude Code -ajoympäristön käyttää 67routerin paikallista Anthropic
 Messages -päätepistettä samalla, kun virallinen Devin CLI toimittaa mallivastaukset ACP:n stdio-rajapinnan kautta. Se
 ei muokkaa nykyisiä Anthropic-, Claude OAuth-, Claude Web- tai `devin-cli`-palveluntarjoajia.
 
@@ -18,7 +18,7 @@ metatiedot on merkitty vastaavasti, joten työkaluja edellyttävä yhdistelmäre
 > version `3000.2.17` ja mallin `swe-1-7-lightning` kautta. Viimeinen live-ajo varmisti asiakkaan hallitsemat `Read`-,
 > `Edit`- ja `Bash`-vuorot, onnistuneet `npm test` -tulokset, projektikomentojen ja taitojen
 > löytämisen, vain Deviniä käyttävän reitityksen sekä sen, ettei Claudeen lähtenyt lainkaan liikennettä. Kiinnitys nostettiin tämän jälkeen versioon `2.1.258`
-> (CLI-sukupolvi, jota OmniRouten Claude-identiteetti jäljittelee, sekä ensimmäinen versiosarja, joka sisältää
+> (CLI-sukupolvi, jota 67routerin Claude-identiteetti jäljittelee, sekä ensimmäinen versiosarja, joka sisältää
 > Fable 5.1 -tason natiivisti). Uudella kiinnityksellä asennuskerros ja `claude --version`
 > tarkistettiin kiinnitetyssä peruslevykuvassa, ja sillan yksikkötestisarja, `compose config` sekä
 > staattinen eristystodistus läpäisevät tarkistukset — mutta offline-mock-skenaariota ja kolmen skenaarion live-
@@ -51,11 +51,11 @@ Jäsennin hyväksyy yhden itsenäisen `<tool>{...}</tool>`-kirjekuoren mallivuor
 nimen pyynnön työkaluluetteloa vasten, validoi argumentit kyseisen työkalun JSON Schema -skeemaa vasten,
 hylkää kerronnan ja toimintojen sekoitukset sekä sallii yhden rajatun korjausyrityksen. Claude Code suorittaa tämän jälkeen
 tuloksena saadun Anthropicin `tool_use`-kutsun paikallisesti ja lähettää `tool_result`-tuloksen takaisin
-OmniRouten kautta.
+67routerin kautta.
 
 ## Automaattinen reititys
 
-Palveluntarjoaja voidaan sisällyttää OmniRouten `auto/*`-ehdokasjoukkoihin, kun sitä ei ole estetty.
+Palveluntarjoaja voidaan sisällyttää 67routerin `auto/*`-ehdokasjoukkoihin, kun sitä ei ole estetty.
 Ehdokaskelpoisuus ei takaa valintaa: yhdistelmän reititysstrategia (esimerkiksi
 viimeisin toimivaksi tiedetty) voi suosia toista palveluntarjoajaa. Käytä muotoa `dva/<model>` tai Devinin ensisijaiseksi asettavaa yhdistelmää, kun
 jokaisen pyynnön on kuljettava Devinin kautta.
@@ -68,7 +68,7 @@ käsitellään kiellettyinä. Compose-palvelut:
 - suoritetaan UID/GID-tunnuksilla `10001:10001`, vain luku -tilassa olevalla
   juuritiedostojärjestelmällä, ilman ominaisuuksia ja `no-new-privileges`-asetuksella;
 - käyttävät yksityistä `/home/bridge`-hakemistoa, erillistä Claude-määritystaltiota,
-  eristettyjä OmniRoute-tietoja ja erillistä `devin-auth`-taltiota;
+  eristettyjä 67router-tietoja ja erillistä `devin-auth`-taltiota;
 - liittävät vain kertakäyttöisiä `.sandbox`-työtiloja ja todistusaineistoja;
 - eivät liitä isäntäkoneen kotihakemistoa, Keychainia, SSH-tunnistetietoja, pilvipalvelujen
   tunnistetietoja tai Docker-socketia;
@@ -77,10 +77,10 @@ käsitellään kiellettyinä. Compose-palvelut:
 - ohjaavat Claude Coden päättelyn ainoastaan osoitteeseen `http://omniroute:20128`
   käyttäen vain paikallista avainta.
 
-Offline-profiili käyttää sisäistä verkkoa. Live-profiilissa OmniRoute saavuttaa viralliset
+Offline-profiili käyttää sisäistä verkkoa. Live-profiilissa 67router saavuttaa viralliset
 Devin-päätepisteet vain `network-guard`-palvelun kautta; yhteydet muihin kohteisiin estetään.
 Claude Codella on erillinen kaiken ulospäin suuntautuvan liikenteen estävä suojaus, ja se voi
-saavuttaa vain paikallisen OmniRoute-palvelun `NO_PROXY`-muuttujan kautta. Suojausten
+saavuttaa vain paikallisen 67router-palvelun `NO_PROXY`-muuttujan kautta. Suojausten
 auditointitiedostot liitetään vain niitä vastaavaan suojausprosessiin. Komentosarjat
 tarkistavat tiedostojen omistajuuden, käyttöoikeustilan, linkkien määrän ja jokaisen päätöksen
 ennen tunnisteettoman todistusaineiston vientiä.

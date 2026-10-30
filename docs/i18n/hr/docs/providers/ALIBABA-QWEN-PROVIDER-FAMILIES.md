@@ -10,7 +10,7 @@ predstavljeni su kao četiri obitelji pružatelja usluga. Regija je podatak o ve
 
 ## Odluka
 
-| Obitelj pružatelja usluga                             | OmniRoute ID            | Globalna regija | Regija u Kini |
+| Obitelj pružatelja usluga                             | 67router ID             | Globalna regija | Regija u Kini |
 | ----------------------------------------------------- | ----------------------- | --------------- | ------------- |
 | Alibaba Cloud Model Studio (plaćanje prema potrošnji) | `alibaba`               | Singapur        | Peking        |
 | Alibaba Cloud Token Plan                              | `bailian-coding-plan`   | Singapur        | Peking        |

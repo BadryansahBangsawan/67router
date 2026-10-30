@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Fejl: {message}",
-    "serverOffline": "OmniRoute-serveren er offline. Start med: omniroute serve",
+    "serverOffline": "67router-serveren er offline. Start med: omniroute serve",
     "authRequired": "Godkendelse kræves. Sæt OMNIROUTE_API_KEY eller kør: omniroute setup",
     "rateLimited": "Anmodningsgrænse overskredet. Prøv igen om {seconds}s.",
     "timeout": "Anmodningen timed ud efter {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Spring bekræftelse over"
   },
   "setup": {
-    "title": "Opsætning af OmniRoute",
+    "title": "Opsætning af 67router",
     "passwordPrompt": "Administratoradgangskode",
     "providerPrompt": "Standardudbyder (lad feltet være tomt for at springe over)",
     "done": "Opsætning fuldført",
@@ -30,7 +30,7 @@
     "opencode": "Installer og konfigurer det medfølgende @omniroute/opencode-plugin til OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute-diagnosticering",
+    "title": "67router-diagnosticering",
     "dbOk": "Database: OK ({path})",
     "dbMissing": "Database: ikke initialiseret — kør `omniroute setup`",
     "portOk": "Port {port}: tilgængelig",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtrer efter udbydernavn",
       "header": "ID         Udbyder        Navn                     Udløbsstatus  Teststatus  Nedkøling indtil",
       "noData": "Ingen data om udbyderforbindelser tilgængelige.",
-      "requiresServer": "providers status kræver, at OmniRoute-serveren kører."
+      "requiresServer": "providers status kræver, at 67router-serveren kører."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Tilføj eller opdater en API-nøgle for en udbyder",
     "listDescription": "Vis alle konfigurerede API-nøgler",
     "removeDescription": "Fjern en API-nøgle for en udbyder",
-    "regenerateDescription": "Generér en OmniRoute API-nøgle igen",
-    "revokeDescription": "Tilbagekald en OmniRoute API-nøgle",
+    "regenerateDescription": "Generér en 67router API-nøgle igen",
+    "revokeDescription": "Tilbagekald en 67router API-nøgle",
     "revealDescription": "Vis den umaskerede API-nøgleværdi",
     "usageDescription": "Vis seneste brug af en API-nøgle",
     "usageLimitOpt": "Antal seneste anmodninger",
@@ -225,7 +225,7 @@
     "noCombo": "Ingen matchende kombination fundet. Konfigurer en med: omniroute combo create"
   },
   "chat": {
-    "description": "Send en enkeltstående chatprompt til OmniRoute",
+    "description": "Send en enkeltstående chatprompt til 67router",
     "file": "Læs prompt fra fil",
     "stdin": "Læs prompt fra stdin",
     "system": "Systemprompt",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Start OmniRoute-serveren (standardhandling)",
-    "starting": "Starter OmniRoute-serveren på port {port}...",
+    "description": "Start 67router-serveren (standardhandling)",
+    "starting": "Starter 67router-serveren på port {port}...",
     "ready": "Klar på http://localhost:{port}",
     "stopping": "Stopper serveren (PID {pid})...",
     "stopped": "Serveren er stoppet.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Sikkerhedskopi",
-    "description": "Opret en sikkerhedskopi af OmniRoute-data",
+    "description": "Opret en sikkerhedskopi af 67router-data",
     "creating": "Opretter sikkerhedskopi...",
     "done": "Sikkerhedskopien blev gemt i {path}",
     "noFiles": "Ingen filer at sikkerhedskopiere (databasen er ikke initialiseret)",
@@ -277,7 +277,7 @@
     "noBackups": "Ingen sikkerhedskopier fundet.",
     "notFound": "Sikkerhedskopien blev ikke fundet: {name}",
     "confirmRestore": "Overskriv aktuelle data med sikkerhedskopien fra {ts}?",
-    "createDescription": "Opret en sikkerhedskopi af OmniRoute-data",
+    "createDescription": "Opret en sikkerhedskopi af 67router-data",
     "nameOpt": "Brugerdefineret navn på sikkerhedskopi",
     "cloudOpt": "Upload sikkerhedskopi til cloudlager",
     "encryptOpt": "Kryptér sikkerhedskopi med AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Cachen kunne ikke ryddes."
   },
   "redis": {
-    "description": "Start en lokal Redis-container med ét klik (Podman eller Docker) til OmniRoute-caching og kvoteovervågning"
+    "description": "Start en lokal Redis-container med ét klik (Podman eller Docker) til 67router-caching og kvoteovervågning"
   },
   "test": {
     "description": "Test en udbyderforbindelse",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Administrer OmniRoute-godkendelsespolitikker",
+    "description": "Administrer 67router-godkendelsespolitikker",
     "list": {
       "description": "Vis politikker",
       "kind": "Filtrer efter type (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurer og inspicer OmniRoute-komprimeringspipelinen",
+    "description": "Konfigurer og inspicer 67router-komprimeringspipelinen",
     "status": {
       "description": "Vis aktuel komprimeringsstatus og indstillinger"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Skift URL for tunnel {type}? (en ny URL bliver genereret)"
   },
   "stop": {
-    "description": "Stop OmniRoute-serveren",
+    "description": "Stop 67router-serveren",
     "stopping": "Stopper serveren (PID {pid})...",
     "stopped": "Serveren er stoppet.",
     "notRunning": "Der kører ingen server.",
     "portFallback": "Ingen PID-fil fundet, forsøger portbaseret stop..."
   },
   "restart": {
-    "description": "Genstart OmniRoute-serveren",
-    "restarting": "Genstarter OmniRoute-serveren..."
+    "description": "Genstart 67router-serveren",
+    "restarting": "Genstarter 67router-serveren..."
   },
   "dashboard": {
-    "description": "Åbn OmniRoute-dashboardet i en browser",
+    "description": "Åbn 67router-dashboardet i en browser",
     "opening": "Åbner dashboardet på {url}",
     "urlOnly": "Udskriv dashboardets URL uden at åbne browseren",
     "tui": "Åbn interaktivt TUI-dashboard (terminalbrugerflade, 7 faner)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Administrer OmniRoute-færdigheder (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Administrer 67router-færdigheder (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Vis installerede færdigheder",
       "type": "Filtrer efter type (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Administrer OmniRoute-samtalehukommelse (FTS5 + vector)",
+    "description": "Administrer 67router-samtalehukommelse (FTS5 + vector)",
     "search": {
       "description": "Søg i hukommelsesposter med en semantisk forespørgsel",
       "type": "Filtrer efter hukommelsestype (user|feedback|project|reference)",
@@ -792,14 +792,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Smart AI-router med automatisk fallback",
+    "description": "67router — Smart AI-router med automatisk fallback",
     "version": "Vis version og afslut",
     "output": "Outputformat (table, json, jsonl, csv)",
     "quiet": "Undertryk ikke-essentielt output",
     "no_color": "Deaktiver farvet output",
     "timeout": "HTTP-anmodnings timeout i millisekunder",
-    "api_key": "API-nøgle til OmniRoute-serveren",
-    "base_url": "OmniRoute-serverens basis-URL",
+    "api_key": "API-nøgle til 67router-serveren",
+    "base_url": "67router-serverens basis-URL",
     "context": "Server-kontekst/profil til denne kommando",
     "lang": "Angiv CLI-visningssprog (tilsidesætter OMNIROUTE_LANG)"
   },
@@ -997,7 +997,7 @@
     }
   },
   "openapi": {
-    "description": "Tilgå og test OmniRoute OpenAPI-specifikationen",
+    "description": "Tilgå og test 67router OpenAPI-specifikationen",
     "dump": {
       "description": "Udskriv OpenAPI-specifikationen til stdout eller en fil",
       "format": "Outputformat: yaml|json (standard: yaml)",
@@ -1040,7 +1040,7 @@
     }
   },
   "open": {
-    "description": "Åbn en bestemt OmniRoute-dashboardside i browseren",
+    "description": "Åbn en bestemt 67router-dashboardside i browseren",
     "url": "Udskriv kun URL, åbn ikke browseren"
   },
   "telemetry": {
@@ -1057,7 +1057,7 @@
     }
   },
   "sync": {
-    "description": "Synkroniser konfiguration mellem OmniRoute-instanser",
+    "description": "Synkroniser konfiguration mellem 67router-instanser",
     "push": {
       "description": "Send konfiguration til cloud eller fjerninstans"
     },
@@ -1116,7 +1116,7 @@
     "filter": "Filtrér efter niveau (error,warn,info) — kommasepareret",
     "lines": "Antal linjer, der skal hentes",
     "timeout": "Timeout for forbindelse i ms",
-    "baseUrl": "Basis-URL til OmniRoute API",
+    "baseUrl": "Basis-URL til 67router API",
     "requestId": "Filtrér efter anmodnings-id",
     "apiKey": "Filtrér efter API-nøgle",
     "combo": "Filtrér efter kombinationsnavn",
@@ -1132,10 +1132,10 @@
     "description": "Administrer ikonet i systembakken",
     "show": "Vis ikonet i systembakken (hvis serveren kører med --tray)",
     "hide": "Skjul ikonet i systembakken",
-    "quit": "Afslut OmniRoute via systembakken"
+    "quit": "Afslut 67router via systembakken"
   },
   "autostart": {
-    "description": "Administrer automatisk start af OmniRoute ved opstart (Linux: systemd-brugertjeneste)",
+    "description": "Administrer automatisk start af 67router ved opstart (Linux: systemd-brugertjeneste)",
     "enable": "Aktivér automatisk start ved opstart",
     "disable": "Deaktivér automatisk start ved opstart",
     "toggle": "Slå automatisk start ved opstart til eller fra",
@@ -1167,19 +1167,19 @@
     "scaffold": "Opret en skabelon til et nyt plugin"
   },
   "launch": {
-    "description": "Start Claude Code med forbindelse til OmniRoute (lokalt eller eksternt, med --profile)",
+    "description": "Start Claude Code med forbindelse til 67router (lokalt eller eksternt, med --profile)",
     "token": "Token, som Claude-klienten skal sende (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute kan ikke nås på {port}. Start den med 'omniroute serve'.",
+    "notRunning": "67router kan ikke nås på {port}. Start den med 'omniroute serve'.",
     "notFound": "'claude'-CLI'en blev ikke fundet i PATH."
   },
   "run": {
-    "description": "Start et understøttet CLI-mål via OmniRoute"
+    "description": "Start et understøttet CLI-mål via 67router"
   },
   "setupClaude": {
-    "description": "Generér Claude Code-profiler i ~/.claude/profiles ud fra OmniRoutes modelkatalog"
+    "description": "Generér Claude Code-profiler i ~/.claude/profiles ud fra 67routers modelkatalog"
   },
   "connect": {
-    "description": "Opret forbindelse til en ekstern OmniRoute-server, og skift til ekstern tilstand"
+    "description": "Opret forbindelse til en ekstern 67router-server, og skift til ekstern tilstand"
   },
   "tokens": {
     "description": "Administrer afgrænsede CLI-adgangstokens (ekstern tilstand)"
@@ -1188,10 +1188,10 @@
     "description": "Vælg en udbyder og model fra den aktive server, og konfigurer en understøttet lokal CLI"
   },
   "launchCodex": {
-    "description": "Start Codex CLI med forbindelse til OmniRoute (lokalt eller på en ekstern VPS)"
+    "description": "Start Codex CLI med forbindelse til 67router (lokalt eller på en ekstern VPS)"
   },
   "setupCodex": {
-    "description": "Generér profilfiler i ~/.codex ud fra OmniRoutes aktive modelkatalog"
+    "description": "Generér profilfiler i ~/.codex ud fra 67routers aktive modelkatalog"
   },
   "packs": {
     "description": "Administrer valgfrie runtime-pakker (ML/browserautomatisering)",
@@ -1204,7 +1204,7 @@
     "errUnknown": "ukendt pakke: {name}",
     "errNoIndex": "pakkeindekset blev ikke fundet; angiv --source <dir> med pakkedataene (desktop-pakker indeholder det ved siden af appen)",
     "installed": "pakken \"{name}\" er installeret og kontrolleret i {dir}",
-    "restartHint": "genstart OmniRoute-serveren (eller desktopappen), så runtime-miljøet registrerer pakken",
+    "restartHint": "genstart 67router-serveren (eller desktopappen), så runtime-miljøet registrerer pakken",
     "removed": "pakken \"{name}\" er fjernet",
     "notInstalled": "pakken \"{name}\" var ikke installeret",
     "verifyOk": "alle installerede pakker er verificeret",

@@ -54,7 +54,7 @@ kötött sebességkorlátozó okozza az időszakos `400 content-blocked` hibáka
 amikor a Claude Code vagy a Codex CLI gyors egymásutánban több
 eszközhasználati vagy üzenetküldési hívást indít.
 
-## Az OmniRoute-ban már alkalmazott enyhítések
+## A 67router-ban már alkalmazott enyhítések
 
 1. **`open-sse/services/wafRateLimit.ts`** — kéréssorozat-védelem, amely
    legalább 500 ms-os szünetet kényszerít ki a bármely `agentrouter:*`

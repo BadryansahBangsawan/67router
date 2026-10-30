@@ -4,7 +4,7 @@
 
 ---
 
-Is é díchriptiú trédhearcach TPROXY **an 5ú mód gabhála** de chuid OmniRoute don chruach MITM
+Is é díchriptiú trédhearcach TPROXY **an 5ú mód gabhála** de chuid 67router don chruach MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Idircheapann agus **díchriptíonn** sé trácht HTTPS áitiúil amach ar Linux
 trí TPROXY na heithne + ródú bunaithe ar bheartais — **gan** `/etc/hosts` a bhréagú agus
@@ -55,7 +55,7 @@ agus, nuair a athiontrálann siad, tugann an sprioc `TPROXY` in `mangle PREROUTI
 
 Ós rud é go dtarlaíonn an t-idircheapadh san eithne, ní gá **aon athrú cumraíochta**
 a dhéanamh ar an bpróiseas tionscnaimh — ach ní mór don phróiseas muinín a bheith aige as an
-CA dinimiciúil a shuiteálann OmniRoute (féach [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
+CA dinimiciúil a shuiteálann 67router (féach [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
 
@@ -73,7 +73,7 @@ breiseán gan tógáil), filleann lódálaí an bhreiseáin (`src/mitm/tproxy/tr
 `null` seachas eisceacht a chaitheamh. Tuairiscíonn stádas an mhóid gabhála ansin
 `available: false`, tá scorán an deais **díchumasaithe** leis an leid uirlise
 "Éilíonn díchriptiú TPROXY Linux + root + an breiseán dúchasach", agus leanann an chuid eile de
-OmniRoute ag obair.
+67router ag obair.
 
 ---
 
@@ -264,7 +264,7 @@ seachbhóthair (**SO_MARK**):
 | **Sláintíocht earráidí**                       | Téann freagraí earráide an bhealaigh trí `sanitizeErrorMessage()` (Riail Dhocht #12).                                                                                                                                                                                                                                                                                                                                      |
 
 **Is cumas cumhachtach é an CA MITM.** Ciallaíonn CA a bhfuil muinín ag an gcóras oibriúcháin as agus atá in ann aon
-óstach a shíniú gur féidir aon rud a idircheapann OmniRoute a dhíchriptiú. Tá sé cosanta taobh thiar den
+óstach a shíniú gur féidir aon rud a idircheapann 67router a dhíchriptiú. Tá sé cosanta taobh thiar den
 mhód gabhála TPROXY sainráite, áitiúil amháin, atá díchumasaithe de réir réamhshocraithe, agus baintear an iontráil
 stóir iontaoibhe nuair a stopann tú an mód.
 
@@ -374,7 +374,7 @@ Rialaíonn `isTransparentSocketAvailable()` an scorán; filleann `GET /api/tools
 ### Rialacha balla dóiteáin seanchaite tar éis tuairteála
 
 Is é `revertTproxy()` inbhéarta beacht na hoibríochta cur i bhfeidhm agus tá sé idéimpoitéinseach. Má stoptar an
-mód, aisiompaítear na rialacha; má maraíodh OmniRoute i lár seisiúin, úsáid gníomh
+mód, aisiompaítear na rialacha; má maraíodh 67router i lár seisiúin, úsáid gníomh
 **Repair** AgentBridge (`POST /api/tools/agent-bridge/repair`) chun staid chórais dílleachta
 (aithris DNS, CA fréimhe, seachfhreastalaí córais) a chealú. Folmhaítear rialacha `mangle` TPROXY agus an bealach
 go huathoibríoch freisin nuair a atosaítear an córas.

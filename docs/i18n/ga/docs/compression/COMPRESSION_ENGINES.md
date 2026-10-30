@@ -4,7 +4,7 @@
 
 ---
 
-Tá comhbhrú OmniRoute bunaithe ar chonarthaí innill. Is féidir le mód inneall amháin a rith go díreach
+Tá comhbhrú 67router bunaithe ar chonarthaí innill. Is féidir le mód inneall amháin a rith go díreach
 (`caveman` nó `rtk`) nó píblíne chruachta chinntitheach a ritheann innill iolracha in ord.
 
 ## Módanna
@@ -43,9 +43,9 @@ stair carntha aige fós stopann sé ag `below_min_chars` agus ní chlaochlaíonn
 an fáth go bhfuil an réamhshocrú `aggressive` seachas an phróifíl is sábháilte.
 
 Réitíonn an pacáiste a scóip mhúnla féin agus a phróifíl óna chumraíocht timpeallachta.
-Ní tharmligeann OmniRoute an cinneadh riamh: cuireann an t-oiriúnóir an geata múnla chuig an scóip is sriantaí den phacáiste,
+Ní tharmligeann 67router an cinneadh riamh: cuireann an t-oiriúnóir an geata múnla chuig an scóip is sriantaí den phacáiste,
 mar sin ní féidir le socruithe timpeallachta óstach ach an liosta ceadaithe a chúngú, ní féidir leo é a leathnú
-riamh thar admhálacha tomhaiste OmniRoute.
+riamh thar admhálacha tomhaiste 67router.
 
 ## Clárlann na nInneall
 
@@ -109,7 +109,7 @@ Díríonn mód Caveman ar chomhdhlúthú séimeantach gnáthphróis:
 Is é `Dashboard -> Context & Cache -> Caveman` an comhéadan ar an deais.
 
 Tuairiscíonn Caveman réamhtheachtach `~75%` níos lú comharthaí aschuir, meánchoigilteas aschuir de `65%` i dtagarmharcanna
-le raon `22-87%`, agus uirlis comhbhrú ionchuir de `~46%`. Úsáideann OmniRoute uimhir thaobh ionchuir
+le raon `22-87%`, agus uirlis comhbhrú ionchuir de `~46%`. Úsáideann 67router uimhir thaobh ionchuir
 Caveman agus coigilteas cruachta leid/comhthéacs á dhoiciméadú aige; fanann mód aschuir Caveman ina
 ghné ar leith d’iompar freagartha.
 

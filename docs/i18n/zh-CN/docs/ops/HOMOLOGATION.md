@@ -4,7 +4,7 @@
 
 ---
 
-在 homologation VPS 上对 OmniRoute 部署进行真实环境 E2E 验证
+在 homologation VPS 上对 67router 部署进行真实环境 E2E 验证
 （`HOMOLOG_BASE_URL`，例如 `http://192.168.0.15:20128`）。一条命令即可用自动化、可生成证据的运行取代手动的
 发布 STOP #2 检查清单。
 

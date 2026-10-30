@@ -6,7 +6,7 @@
 
 ## Signalement des vulnérabilités
 
-Si vous découvrez une vulnérabilité de sécurité dans OmniRoute, veuillez la signaler de manière responsable :
+Si vous découvrez une vulnérabilité de sécurité dans 67router, veuillez la signaler de manière responsable :
 
 1. **N’OUVREZ PAS** de ticket GitHub public
 2. Utilisez les [avis de sécurité GitHub](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Après la version 3.8.59, la prochaine version est **3.9.0**. Elle inaugure la b
 
 ## Architecture de sécurité
 
-OmniRoute met en œuvre un modèle de sécurité multicouche :
+67router met en œuvre un modèle de sécurité multicouche :
 
 ```
 Requête → CORS → Pipeline Authz (classification → politiques → application)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Cadre de garde-fous
 
-OmniRoute fournit un **registre de garde-fous** rechargeable à chaud (`src/lib/guardrails/`) comprenant 3 garde-fous intégrés, classés par priorité :
+67router fournit un **registre de garde-fous** rechargeable à chaud (`src/lib/guardrails/`) comprenant 3 garde-fous intégrés, classés par priorité :
 
 | Garde-fou          | Priorité | Objectif                                                                                                                     |
 | ------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------- |

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute memiliki **empat keluarga kredensial** yang dapat mengotorisasi rute manajemen.
+67router memiliki **empat keluarga kredensial** yang dapat mengotorisasi rute manajemen.
 Kredensial tersebut tidak dapat dipertukarkan. Kunci API Inferensi (`sk-…`) **tidak** mengelola
 server kecuali jika secara eksplisit diberikan cakupan (`scope`) `manage` atau `admin`.
 

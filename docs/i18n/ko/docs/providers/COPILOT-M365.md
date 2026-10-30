@@ -34,7 +34,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute에서 **Providers → Add Provider**로 이동하여 **Microsoft 365 Copilot
+6. 67router에서 **Providers → Add Provider**로 이동하여 **Microsoft 365 Copilot
    (BizChat)**을 선택한 후, 다음 형식으로 자격 증명을 붙여 넣습니다.
 
 ```
@@ -50,9 +50,9 @@ WebSocket URL에서 값을 수동으로 복사하는 대신 DevTools HAR 파일�
 1. **DevTools → Network**를 엽니다.
 2. BizChat 대화를 시작하거나 계속합니다(이렇게 하면 WebSocket 연결이 트리거됩니다).
 3. Network 패널을 마우스 오른쪽 버튼으로 클릭하고 **Save all as HAR with content**를 선택합니다.
-4. OmniRoute의 공급자 연결 대화 상자에서 **Import .har file** 버튼을 사용합니다.
+4. 67router의 공급자 연결 대화 상자에서 **Import .har file** 버튼을 사용합니다.
 
-OmniRoute는 HAR에서 Chathub WebSocket URL을 검색하고 `access_token`과 `chathubPath`를 추출한 후 자격 증명 필드를 자동으로 채웁니다. HAR 가져오기는 JWT 만료 시간을 디코딩하여 남은 토큰 수명을 표시합니다.
+67router는 HAR에서 Chathub WebSocket URL을 검색하고 `access_token`과 `chathubPath`를 추출한 후 자격 증명 필드를 자동으로 채웁니다. HAR 가져오기는 JWT 만료 시간을 디코딩하여 남은 토큰 수명을 표시합니다.
 
 > **실제 HAR 내보내기 파일, 액세스 토큰 또는 새로 고침 토큰을 절대로 커밋하지 마세요.** 테스트 및 문서 값에는 항상 자리 표시자를 사용해야 합니다.
 
@@ -69,7 +69,7 @@ OmniRoute는 HAR에서 Chathub WebSocket URL을 검색하고 `access_token`과 `
 | `refreshToken` | `substrate.office.com/sydney` 범위에 대한 Microsoft OAuth 새로 고침 토큰 |
 | `tier`         | `individual`(기본값), `edu` 또는 `enterprise`                            |
 
-`substrate.office.com/sydney` 범위로 설정된 Microsoft 디바이스 코드 또는 인증 코드 흐름에서 새로 고침 토큰을 가져옵니다. `refreshToken`이 설정되어 있으면 OmniRoute가 각 요청 전에 `access_token`을 미리 새로 고치므로 약 75분마다 만료된 후 다시 캡처할 필요가 없습니다.
+`substrate.office.com/sydney` 범위로 설정된 Microsoft 디바이스 코드 또는 인증 코드 흐름에서 새로 고침 토큰을 가져옵니다. `refreshToken`이 설정되어 있으면 67router가 각 요청 전에 `access_token`을 미리 새로 고치므로 약 75분마다 만료된 후 다시 캡처할 필요가 없습니다.
 
 `refreshToken`이 설정되어 있지 않으면 만료될 때마다 WebSocket 자격 증명을 수동으로 다시 캡처해야 합니다.
 

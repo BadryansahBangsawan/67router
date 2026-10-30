@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge yra „OmniRoute“ MITM („Man-in-the-Middle“, tarpininko) tarpinis serveris, kuris perima HTTPS srautą iš IDE DI agentų ir nukreipia jį per „OmniRoute“ vieningą maršruto parinkimo variklį. Jis palaiko **10 IDE agentų** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code ir Trae (tiriama) — todėl „OmniRoute“ yra plačiausią DI programavimo pagalbinių priemonių aprėptį rinkoje siūlantis MITM tarpinis serveris.
+AgentBridge yra „67router“ MITM („Man-in-the-Middle“, tarpininko) tarpinis serveris, kuris perima HTTPS srautą iš IDE DI agentų ir nukreipia jį per „67router“ vieningą maršruto parinkimo variklį. Jis palaiko **10 IDE agentų** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code ir Trae (tiriama) — todėl „67router“ yra plačiausią DI programavimo pagalbinių priemonių aprėptį rinkoje siūlantis MITM tarpinis serveris.
 
 **Valdymo skydelio vieta:** `/dashboard/tools/agent-bridge`
 **Šoninės juostos grupė:** Įrankiai (po „Cloud Agents“)
@@ -16,34 +16,34 @@ AgentBridge yra „OmniRoute“ MITM („Man-in-the-Middle“, tarpininko) tarpi
 
 ### Kas yra AgentBridge?
 
-Kai IDE agentas (pvz., GitHub Copilot, Cursor, Claude Code) atlieka API užklausą, jis jungiasi tiesiogiai prie pirminio AI teikėjo (OpenAI, Anthropic ir kt.). AgentBridge skaidriai perima šį ryšį TLS lygmenyje — nereikalaujant jokių agento konfigūracijos pakeitimų — ir perrašo užklausą per OmniRoute.
+Kai IDE agentas (pvz., GitHub Copilot, Cursor, Claude Code) atlieka API užklausą, jis jungiasi tiesiogiai prie pirminio AI teikėjo (OpenAI, Anthropic ir kt.). AgentBridge skaidriai perima šį ryšį TLS lygmenyje — nereikalaujant jokių agento konfigūracijos pakeitimų — ir perrašo užklausą per 67router.
 
 Tai reiškia, kad galite:
 
-- **Peradresuoti bet kurį agentą bet kuriam teikėjui**: Copilot bendrauja su OpenAI? Nukreipkite jį į Anthropic Claude, Gemini ar bet kurį iš 375 OmniRoute teikėjų.
+- **Peradresuoti bet kurį agentą bet kuriam teikėjui**: Copilot bendrauja su OpenAI? Nukreipkite jį į Anthropic Claude, Gemini ar bet kurį iš 375 67router teikėjų.
 - **Taikyti modelių susiejimus**: `gemini-3-flash` → `claude-sonnet-4.7` skaidriai apdorotojo (handler) lygmenyje.
 - **Stebėti visą agentų srautą**: kiekviena perimta užklausa publikuojama [Srauto inspektoriuje](./TRAFFIC_INSPECTOR.md).
-- **Pasinaudoti OmniRoute atsparumu**: kombinuotas maršrutizavimas, grandinės pertraukikliai, atsarginiai variantai ir sąnaudų stebėjimas veikia ir IDE agentų srautui.
+- **Pasinaudoti 67router atsparumu**: kombinuotas maršrutizavimas, grandinės pertraukikliai, atsarginiai variantai ir sąnaudų stebėjimas veikia ir IDE agentų srautui.
 
 ### Pozicionavimas rinkos atžvilgiu
 
-| Funkcija                   | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| -------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity                |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot             |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                 |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex               |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                 |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries             |    —    |    ✓     |        —        |             ✓             |
-| Claude Code                |    —    |    —     |        ✓        |             ✓             |
-| Open Code                  |    —    |    —     |        ✓        |             ✓             |
-| Trae                       |    —    |    —     |        —        |        🔍 Tiriama         |
-| Informacijos suvestinės UI |    ✓    |    ✗     |        ✗        |             ✓             |
-| Srauto inspektorius        |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute maršrutizavimas  |    ✗    |    ✗     |        ✗        |             ✓             |
-| Modelių susiejimo UI       |    ✗    |    ✗     |        ✗        |             ✓             |
-| Aplenkimo sąrašas          |    ✗    |    ✗     |        ✓        |             ✓             |
-| Pirminio CA sertifikatas   |    ✗    |    ✗     |        ✓        |             ✓             |
+| Funkcija                   | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| -------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity                |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot             |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                 |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex               |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                 |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries             |    —    |    ✓     |        —        |            ✓             |
+| Claude Code                |    —    |    —     |        ✓        |            ✓             |
+| Open Code                  |    —    |    —     |        ✓        |            ✓             |
+| Trae                       |    —    |    —     |        —        |        🔍 Tiriama        |
+| Informacijos suvestinės UI |    ✓    |    ✗     |        ✗        |            ✓             |
+| Srauto inspektorius        |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router maršrutizavimas   |    ✗    |    ✗     |        ✗        |            ✓             |
+| Modelių susiejimo UI       |    ✗    |    ✗     |        ✗        |            ✓             |
+| Aplenkimo sąrašas          |    ✗    |    ✗     |        ✓        |            ✓             |
+| Pirminio CA sertifikatas   |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (prievadas 443, CJS antrinis procesas)
     │  nustato paskirties vietą pagal Host antraštės SNI
     │  generuoja kiekvienam SNI skirtą TLS sertifikatą, pasirašytą AgentBridge CA
     ├── Atitinka apėjimo sąrašą? → TCP tiesioginis perdavimas (be iššifravimo)
-    ├── Atitinka paskirties vietą? → fetch → OmniRoute maršrutizatorius (prievadas 20128)
+    ├── Atitinka paskirties vietą? → fetch → 67router maršrutizatorius (prievadas 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() užklausos turiniui / antraštėms
     │               ├── TrafficBuffer.push() — paskelbia srauto inspektoriuje
@@ -205,7 +205,7 @@ Kad IDE priimtų MITM ryšį, OS turi pasitikėti „AgentBridge“ CA sertifika
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ Kiekvieno norimo perimti agento API pagrindinis kompiuteris (-iai) turi būti su
 
 Kiekvieno agento kortelėje esančioje modelių susiejimo lentelėje nustatykite šaltinio → paskirties susiejimus:
 
-| Šaltinio modelis (savasis agento) | Paskirties modelis („OmniRoute“) |
-| --------------------------------- | -------------------------------- |
-| `gpt-4o`                          | `claude-sonnet-4.7`              |
-| `*` (pakaitos simbolis)           | `claude-haiku-4.7`               |
+| Šaltinio modelis (savasis agento) | Paskirties modelis („67router“) |
+| --------------------------------- | ------------------------------- |
+| `gpt-4o`                          | `claude-sonnet-4.7`             |
+| `*` (pakaitos simbolis)           | `claude-haiku-4.7`              |
 
 Pakaitos simbolis `*` susieja bet kurį neatpažintą modelį su nurodytu paskirties modeliu. Duomenys išsaugomi `agent_bridge_mappings` lentelėje.
 
@@ -277,7 +277,7 @@ Pakaitos simbolis `*` susieja bet kurį neatpažintą modelį su nurodytu paskir
 
 ### 3.5 Pranešimas apie riziką
 
-AgentBridge perima prisijungimo duomenis (OAuth prieigos raktus, API raktus), kuriuos IDE naudoja tapatybei patvirtinti pirminių paslaugų teikėjų sistemose. Prieš įrašant į žurnalą jie yra **užmaskuojami** (žr. §2.7), tačiau juos gali matyti OmniRoute MITM sluoksnis. Pirmą kartą aktyvinant kiekvieną agentą parodomas uždaromas modalinis pranešimas apie riziką.
+AgentBridge perima prisijungimo duomenis (OAuth prieigos raktus, API raktus), kuriuos IDE naudoja tapatybei patvirtinti pirminių paslaugų teikėjų sistemose. Prieš įrašant į žurnalą jie yra **užmaskuojami** (žr. §2.7), tačiau juos gali matyti 67router MITM sluoksnis. Pirmą kartą aktyvinant kiekvieną agentą parodomas uždaromas modalinis pranešimas apie riziką.
 
 ### 3.6 Priežiūra ir diagnostika
 
@@ -397,7 +397,7 @@ Aptikimui naudojami konkrečiai OS pritaikyti keliai ir dvejetainių failų pati
 
 ### Išimčių sąrašas jautriems pagrindiniams kompiuteriams
 
-Išimčių sąrašas užtikrina, kad finansų įstaigų, OAuth/SSO teikėjų ir kitų jautrių pagrindinių kompiuterių srautas **niekada nebūtų iššifruojamas**. Jų TLS srautas perduodamas kaip skaidrus TCP tunelis — OmniRoute niekada nemato nešifruoto turinio.
+Išimčių sąrašas užtikrina, kad finansų įstaigų, OAuth/SSO teikėjų ir kitų jautrių pagrindinių kompiuterių srautas **niekada nebūtų iššifruojamas**. Jų TLS srautas perduodamas kaip skaidrus TCP tunelis — 67router niekada nemato nešifruoto turinio.
 
 Numatytieji išimčių šablonai:
 
@@ -448,7 +448,7 @@ Arba AgentBridge nustatymuose sukonfigūruokite neprivilegijuotą prievadą ir n
 
 Jei paleidus AgentBridge IDE rodo TLS klaidas:
 
-1. Patikrinkite, ar sertifikatas buvo įdiegtas: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) arba `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Patikrinkite, ar sertifikatas buvo įdiegtas: `security find-certificate -c "OmniRoute MITM CA"` (macOS) arba `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Kai kurios programos naudoja savo patikimų sertifikatų saugyklą (Firefox, Chrome Linux sistemoje). Dar kartą paleiskite „Trust Cert“ ir patikrinkite NSS / Firefox skirtą sertifikatų saugyklą.
 3. Suteikę sertifikatui pasitikėjimą, paleiskite IDE iš naujo — aktyvūs TLS seansai naudoja ankstesnę pasitikėjimo būseną.
 
@@ -499,7 +499,7 @@ Automatiniam aptikimui naudojami įprasti diegimo keliai. Jei aptikti nepavyksta
 Jei AgentBridge perima užklausas, bet jos visos nepavyksta:
 
 1. Patikrinkite, ar bent vienas paslaugų teikėjas prijungtas adresu `/dashboard/providers`
-2. Patikrinkite OmniRoute serverio žurnalus: `APP_LOG_LEVEL=debug` faile `.env`
+2. Patikrinkite 67router serverio žurnalus: `APP_LOG_LEVEL=debug` faile `.env`
 3. Patikrinkite, ar `OMNIROUTE_BASE_URL` nurodo tinkamą maršrutizatoriaus galinį tašką (numatytoji reikšmė: `http://127.0.0.1:20128`)
 
 ---

@@ -4,7 +4,7 @@
 
 ---
 
-Neprekinjen, inkrementalen izvoz dnevnikov klicev OmniRoute v zunanjo analitično shrambo.
+Neprekinjen, inkrementalen izvoz dnevnikov klicev 67router v zunanjo analitično shrambo.
 
 Zavihek nadzorne plošče Dnevniki hrani zgodovino zahtev v SQLite (`call_logs`), njena velikost pa je omejena z
 rotacijo in obdobjem hrambe. Izvoz dnevnikov po urniku pošilja isti nabor zapisov drugam, da se lahko ohranijo

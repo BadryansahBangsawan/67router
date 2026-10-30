@@ -4,7 +4,7 @@
 
 ---
 
-Khi OmniRoute chạy bên trong Docker, các luồng **Nhập từ Cursor IDE** /
+Khi 67router chạy bên trong Docker, các luồng **Nhập từ Cursor IDE** /
 `cursor-agent` cũ sẽ thất bại vì container không thể truy cập bản cài đặt Cursor
 trên máy chủ. Thay vào đó, hãy sử dụng **Đăng nhập bằng Cursor** (PKCE deep-control).
 
@@ -14,7 +14,7 @@ trên máy chủ. Thay vào đó, hãy sử dụng **Đăng nhập bằng Cursor
    `~/.config/Cursor/User/globalStorage/state.vscdb` _bên trong_ container.
    Trên Docker Desktop dành cho macOS, cơ sở dữ liệu IDE của máy chủ không được gắn kết theo mặc định và
    hệ điều hành của container là Linux ngay cả khi máy chủ là Darwin.
-2. **Không có tệp nhị phân `cursor-agent`** — Các image OmniRoute chính thức không đi kèm
+2. **Không có tệp nhị phân `cursor-agent`** — Các image 67router chính thức không đi kèm
    `cursor-agent`. Trước đây, Mô hình khả dụng gọi
    `cursor-agent --list-models` qua shell và quay về danh mục tĩnh khi thất bại.
 3. **Sai tệp nhị phân** — **Không** bind-mount `cursor-agent` dành cho macOS vào một
@@ -24,11 +24,11 @@ trên máy chủ. Thay vào đó, hãy sử dụng **Đăng nhập bằng Cursor
 
 1. Mở **Bảng điều khiển → Nhà cung cấp → Cursor**.
 2. Chọn tab **Đăng nhập bằng Cursor**.
-3. Nhấp vào **Đăng nhập bằng Cursor** — OmniRoute sẽ mở
+3. Nhấp vào **Đăng nhập bằng Cursor** — 67router sẽ mở
    `https://cursor.com/loginDeepControl?…` trong trình duyệt trên **máy chủ** của bạn.
-4. Phê duyệt đăng nhập trong trình duyệt, sau đó quay lại bảng điều khiển. OmniRoute
+4. Phê duyệt đăng nhập trong trình duyệt, sau đó quay lại bảng điều khiển. 67router
    thăm dò `api2.cursor.sh/auth/poll` cho đến khi nhận được token.
-5. OmniRoute lưu trữ cả token **truy cập + làm mới** và làm mới chúng thông qua
+5. 67router lưu trữ cả token **truy cập + làm mới** và làm mới chúng thông qua
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Quy trình này không yêu cầu Cursor IDE hoặc `cursor-agent` bên trong container.
@@ -37,10 +37,10 @@ Quy trình này không yêu cầu Cursor IDE hoặc `cursor-agent` bên trong co
 
 Với một kết nối đã đăng nhập, **Mô hình khả dụng / Tự động đồng bộ** ưu tiên danh mục
 HTTP `AiService/AvailableModels` của Cursor bằng token bearer của kết nối.
-Nếu thao tác đó thất bại, OmniRoute vẫn thử `cursor-agent` trên máy chủ (khi có), sau đó
+Nếu thao tác đó thất bại, 67router vẫn thử `cursor-agent` trên máy chủ (khi có), sau đó
 sử dụng dữ liệu khởi tạo từ registry tĩnh.
 
-OmniRoute luôn hiển thị **`auto`** trong danh mục (tên hiển thị “Auto”), cùng với
+67router luôn hiển thị **`auto`** trong danh mục (tên hiển thị “Auto”), cùng với
 các chế độ bộ định tuyến theo phong cách OpenCodex là **`auto-cost`**, **`auto-balance`** và
 **`auto-intelligence`**. Khi truyền trên giao thức, chúng ánh xạ tới mô hình `default` của Cursor
 (với một `optimization` ModelParameter cho ba biến thể). Nên ưu tiên
@@ -87,7 +87,7 @@ không còn là yêu cầu bắt buộc).
 ## Lượt trống / hết hạn mức sử dụng
 
 Khi Cursor chấp nhận một Run nhưng không trả về văn bản của trợ lý (thường xảy ra khi
-đã dùng hết hạn mức cao cấp), OmniRoute trả về lỗi **429** có thể xử lý (kèm dấu hiệu về hạn ngạch) hoặc
+đã dùng hết hạn mức cao cấp), 67router trả về lỗi **429** có thể xử lý (kèm dấu hiệu về hạn ngạch) hoặc
 **502** kèm hướng dẫn — thay vì chỉ có “Nhà cung cấp trả về nội dung trống”. Các lỗi
 phát trực tuyến như `not_found: AI Model Not Found` (đã dùng hết cửa sổ hạn mức)
 được phân loại là **Đã vượt quá giới hạn tốc độ / hạn mức sử dụng của Cursor** và thông báo đó
@@ -97,7 +97,7 @@ giới hạn gói Cursor.
 
 ## Phiên bản máy khách (headless)
 
-Khi không có bản cài đặt `cursor-agent` cục bộ, OmniRoute xác định
+Khi không có bản cài đặt `cursor-agent` cục bộ, 67router xác định
 `x-cursor-client-version` thông qua biến môi trường `CURSOR_AGENT_CLI_VERSION`, sau đó là kết quả thu thập
 từ tập lệnh cài đặt Cursor được lưu vào bộ nhớ đệm trên đĩa, rồi đến một build id được ghim. Ghi đè bằng
 `CURSOR_AGENT_CLI_VERSION` khi cần.

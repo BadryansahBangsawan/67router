@@ -8,7 +8,7 @@
 
 > **Pirminis tiesos šaltinis:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute leidžia kiekvienam tarpiniam serveriui turėti **adresų šeimos siunčiamojo srauto direktyvą**. Pagal numatytuosius nustatymus operacinė sistema pasirenka IPv4 arba IPv6 (dvigubas dėklas, „Happy Eyeballs“). Nustačius direktyvą į `ipv4` arba `ipv6`, OmniRoute kiekvieną per tą tarpinį serverį užmezgamą ryšį priskiria pasirinktai šeimai ir **saugiai nutraukia ryšį**, užuot perėjusi prie kitos šeimos.
+67router leidžia kiekvienam tarpiniam serveriui turėti **adresų šeimos siunčiamojo srauto direktyvą**. Pagal numatytuosius nustatymus operacinė sistema pasirenka IPv4 arba IPv6 (dvigubas dėklas, „Happy Eyeballs“). Nustačius direktyvą į `ipv4` arba `ipv6`, 67router kiekvieną per tą tarpinį serverį užmezgamą ryšį priskiria pasirinktai šeimai ir **saugiai nutraukia ryšį**, užuot perėjusi prie kitos šeimos.
 
 Šiame puslapyje aprašoma, kas yra ši direktyva, kodėl ji reikalinga, kur ją konfigūruoti ir kaip vykdymo metu ji nustatoma.
 
@@ -122,7 +122,7 @@ Likusi tarpinio serverio CRUD / priskyrimo API aprašyta faile [PROXY_GUIDE.md](
 
 ## Kaip nustatoma `auto` reikšmė
 
-Kai `family` yra `auto`, OmniRoute **neprideda** jokios direktyvos — tarpinio serverio URL naudojamas toks, koks yra, o ryšio šeima nustatoma savaime.
+Kai `family` yra `auto`, 67router **neprideda** jokios direktyvos — tarpinio serverio URL naudojamas toks, koks yra, o ryšio šeima nustatoma savaime.
 
 Kuriant URL (`proxyConfigToUrl` / `normalizeProxyUrl` faile `open-sse/utils/proxyDispatcher.ts`), `auto` tarpinis serveris pateikia paprastą URL be žymeklio:
 
@@ -158,7 +158,7 @@ Taigi:
 
 Ne `auto` direktyva perduodama kaip vienas sintetinis užklausos žymeklis — `?family=ipv4` arba `?family=ipv6` — vieną kartą pridedamas prie normalizuoto tarpinio serverio URL. `normalizeProxyUrl` kruopščiai pašalina ir iš naujo prideda šį žymeklį lygiai vieną kartą, todėl jis niekada nesugadina prievado analizės.
 
-Kuriant dispečerį, žymeklis nuskaitomas ir paverčiamas konkrečia ryšio šeima. Jei pagrindinis kompiuteris yra **priešingos** šeimos IP literalas, OmniRoute pateikia klaidą (prieštaravimo atveju ryšys atmetamas):
+Kuriant dispečerį, žymeklis nuskaitomas ir paverčiamas konkrečia ryšio šeima. Jei pagrindinis kompiuteris yra **priešingos** šeimos IP literalas, 67router pateikia klaidą (prieštaravimo atveju ryšys atmetamas):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Tada konkreti šeima užfiksuojama jungtyje:
 
 ## SOCKS5 suderinamumas
 
-Šeimos fiksavimas veikia su SOCKS5 tarpiniais serveriais, tačiau standartinis `fetch-socks` nesuteikia prieigos prie lizdo parinkčių, reikalingų tarpinio serverio ryšio etapo šeimai užfiksuoti. Tam OmniRoute pateikia savo jungtį:
+Šeimos fiksavimas veikia su SOCKS5 tarpiniais serveriais, tačiau standartinis `fetch-socks` nesuteikia prieigos prie lizdo parinkčių, reikalingų tarpinio serverio ryšio etapo šeimai užfiksuoti. Tam 67router pateikia savo jungtį:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

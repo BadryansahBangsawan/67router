@@ -10,7 +10,7 @@
 
 ## Pourquoi cela existe
 
-OmniRoute répond déjà à deux questions relatives aux coûts, mais aucune n’est celle que la plupart des opérateurs se posent.
+67router répond déjà à deux questions relatives aux coûts, mais aucune n’est celle que la plupart des opérateurs se posent.
 
 | Mécanisme existant                                       | Question à laquelle il répond                                |
 | -------------------------------------------------------- | ------------------------------------------------------------ |

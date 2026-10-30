@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 자체는 다른 곳(VPS, 홈 서버, Tailnet의 다른 머신)에서 실행하면서 노트북에서는 `omniroute` CLI를 실행할 수 있습니다.
+67router 자체는 다른 곳(VPS, 홈 서버, Tailnet의 다른 머신)에서 실행하면서 노트북에서는 `omniroute` CLI를 실행할 수 있습니다.
 `omniroute connect`로 한 번 로그인하면 그 이후부터는 **모든** CLI 명령이 해당 원격
 서버를 대상으로 실행됩니다. 명령과 출력은 동일하며, 실행 대상만 원격 서버입니다.
 
@@ -23,7 +23,7 @@ omniroute configure codex                # ← 원격 카탈로그를 바탕으�
 ## 작동 방식
 
 ```
-사용자의 노트북                             원격 OmniRoute(VPS)
+사용자의 노트북                             원격 67router(VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (비밀번호 → 토큰)           │
 │  컨텍스트: vps       │ ───────────────►  │ 범위가 지정된 액세스 토큰 발급     │
@@ -101,13 +101,13 @@ CLI는 `GET /api/cli/whoami`를 통해 토큰을 검증한 후 활성 컨텍스�
 ## 원격 설치 환경에서 Antigravity 연결하기
 
 Antigravity는 Google의 firstparty/nativeapp 동의 화면을 사용합니다. Google은 **로그인을 승인하는 브라우저에서 루프백 리디렉션**
-(`http://127.0.0.1:<port>/callback`)에 **접근할 수 있을 때만** 인증 코드를 발급합니다. 원격 VPS에 설치한 경우 해당 루프백은 사용자의 컴퓨터가 아닌 서버에 있으므로 동의 화면이 **영원히 멈추고 코드를 발급하지 않습니다**. 따라서 일반적인 "콜백 URL 붙여넣기" 대체 방식에서도 붙여넣을 내용이 없습니다. (이는 Google 측 제약입니다. OmniRoute뿐 아니라 번들로 제공되는 Antigravity 데스크톱 클라이언트를 사용하는 모든 프록시에서 동일하게 멈춥니다.)
+(`http://127.0.0.1:<port>/callback`)에 **접근할 수 있을 때만** 인증 코드를 발급합니다. 원격 VPS에 설치한 경우 해당 루프백은 사용자의 컴퓨터가 아닌 서버에 있으므로 동의 화면이 **영원히 멈추고 코드를 발급하지 않습니다**. 따라서 일반적인 "콜백 URL 붙여넣기" 대체 방식에서도 붙여넣을 내용이 없습니다. (이는 Google 측 제약입니다. 67router뿐 아니라 번들로 제공되는 Antigravity 데스크톱 클라이언트를 사용하는 모든 프록시에서 동일하게 멈춥니다.)
 
 대시보드는 사용자가 막히기 전에 이를 감지합니다. localhost가 아닌 주소에서 **Providers → Antigravity →
 Connect**를 열면 일반적인 "콜백 URL 복사" 안내 대신 아래 두 가지 해결 방법이 표시되며, 각 방법에는 호스트와 포트가 이미 입력되어 있습니다.
 (LAN 주소도 해당됩니다. 이 콜백의 관점에서 `192.168.x.x`는 localhost가 아닙니다.)
 
-Antigravity를 원격 OmniRoute에 연결하는 방법은 두 가지입니다.
+Antigravity를 원격 67router에 연결하는 방법은 두 가지입니다.
 
 ### 옵션 A — 로컬 로그인 도우미(권장)
 
@@ -135,7 +135,7 @@ npx omniroute login antigravity --no-push
 #   omniroute-cred-v1.eyJ2IjoxLCJ...
 ```
 
-그런 다음 **원격** 대시보드에서 **Providers → Antigravity → Connect**로 이동하고, `omniroute-cred-v1.…` blob을 **Step 2** 필드에 붙여넣으세요. 이 필드는 콜백 URL과 자격 증명 blob을 모두 허용합니다. OmniRoute는 이를 디코딩하고 서버 측에서 Cloud Code 온보딩을 실행한 후 연결을 영구 저장합니다.
+그런 다음 **원격** 대시보드에서 **Providers → Antigravity → Connect**로 이동하고, `omniroute-cred-v1.…` blob을 **Step 2** 필드에 붙여넣으세요. 이 필드는 콜백 URL과 자격 증명 blob을 모두 허용합니다. 67router는 이를 디코딩하고 서버 측에서 Cloud Code 온보딩을 실행한 후 연결을 영구 저장합니다.
 
 > 이 blob에는 갱신 토큰이 포함되어 있으므로 비밀번호처럼 취급하세요. 푸시 방식에서는 컨텍스트의 인증된 연결을 통해 한 번 전송되며, 붙여넣기 방식에서는 대시보드 연결을 통해 전송됩니다. 어느 방식을 사용하든 저장 시 암호화되며, 푸시가 성공하면 터미널에 출력되지 않습니다.
 
@@ -164,7 +164,7 @@ ssh -L 20128:127.0.0.1:20128 user@your-vps
 ## 원격 설치 환경에서 Codex / Grok 연결하기(고정 루프백 공급자)
 
 Codex, xAI(`xai-oauth`) 및 Grok CLI(`grok-cli`)는 업스트림 OAuth 앱에 **고정된** 루프백
-`redirect_uri`를 등록합니다. OmniRoute는 이를 변경할 수 없습니다. 공급자는 항상 브라우저를
+`redirect_uri`를 등록합니다. 67router는 이를 변경할 수 없습니다. 공급자는 항상 브라우저를
 하드코딩된 동일한 주소로 리디렉션합니다.
 
 | 공급자      | 공급자가 리디렉션하는 고정 콜백       |
@@ -173,7 +173,7 @@ Codex, xAI(`xai-oauth`) 및 Grok CLI(`grok-cli`)는 업스트림 OAuth 앱에 **
 | `xai-oauth` | `http://127.0.0.1:56121/callback`     |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`     |
 
-여기서 `localhost`는 **브라우저를 실행하는 머신**을 의미하지만, OmniRoute의 PKCE
+여기서 `localhost`는 **브라우저를 실행하는 머신**을 의미하지만, 67router의 PKCE
 콜백 서버는 **서버의** 루프백에서 수신 대기합니다. `http://192.168.0.15:20128` 같은 LAN
 주소로 대시보드를 열면 둘은 연결되지 않습니다. 인증 코드는 아무것도 수신 대기하지 않는
 사용자 노트북의 `localhost:1455`로 전달되고, 공급자는 오류를 표시하지 않은 채 로그인을
@@ -193,7 +193,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 두 개의 포워딩이 필요하며, 하나만 포워딩해도 여전히 실패합니다.
 
 - **`20128`**(대시보드 포트)은 오리진을 실제 localhost로 만듭니다. 그래야만
-  OmniRoute가 PKCE 콜백 서버를 시작합니다. LAN 오리진은 해당 분기에 도달하지
+  67router가 PKCE 콜백 서버를 시작합니다. LAN 오리진은 해당 분기에 도달하지
   않습니다.
 - **`1455`**(공급자의 고정 콜백 포트)는 브라우저가 다시 리디렉션되는 곳입니다.
   이 포트는 터널을 통해 서버의 루프백으로 연결되어야 합니다.
@@ -313,7 +313,7 @@ omniroute contexts current         # 활성 서버, 인증 상태, 범위
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

@@ -1,4 +1,4 @@
-# OmniRoute Routing Policy
+# 67router Routing Policy
 
 Routing preserves the existing capability and combo selection logic, then applies allocation, health, circuit, quota, latency, reliability, model preference, and cost preference factors.
 

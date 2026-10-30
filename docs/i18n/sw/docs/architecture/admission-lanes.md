@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ina mifumo **miwili** ya njia iliyo ya ndani ya mchakato yenye mawanda tofauti. Mifumo hii
+67router ina mifumo **miwili** ya njia iliyo ya ndani ya mchakato yenye mawanda tofauti. Mifumo hii
 inakamilishana; waendeshaji wanapaswa kujua ni mfumo gani wanaoutazama.
 
 ## 1. Udhibiti wa uingizaji wa kiwango cha baiti katika mchakato mzima (`chatBodyAdmission.ts`)

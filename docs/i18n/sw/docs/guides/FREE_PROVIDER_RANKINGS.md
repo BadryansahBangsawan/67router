@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute hupanga watoa huduma wake **bila malipo** kulingana na ubora wa modeli kwa kutumia **alama za ELO za Arena AI
+> **TL;DR**: 67router hupanga watoa huduma wake **bila malipo** kulingana na ubora wa modeli kwa kutumia **alama za ELO za Arena AI
 > (mtindo wa LMArena)**. Fungua ukurasa wa **Upangaji wa Watoa Huduma Bila Malipo** kwenye
 > dashibodi ili kuona ni watoa huduma gani bila malipo wanaotoa modeli bora zaidi kwa kazi yako —
 > kwa ujumla, au zilizochujwa kulingana na kategoria (uandishi wa msimbo, ukaguzi, uwekaji kumbukumbu, utatuzi wa hitilafu).
@@ -13,7 +13,7 @@
 
 ## Ni Nini
 
-OmniRoute husajili watoa huduma 375, ikijumuisha viingilio 155 vya katalogi vilivyowekewa alama **bure/bila-uthibitishaji**
+67router husajili watoa huduma 375, ikijumuisha viingilio 155 vya katalogi vilivyowekewa alama **bure/bila-uthibitishaji**
 (bila-uthibitishaji,
 OAuth ya kiwango cha bure, au ufunguo wa API wa kiwango cha bure — angalia
 [Mwongozo wa Viwango vya Bure](../getting-started/FREE-TIERS-GUIDE.md) na
@@ -129,9 +129,9 @@ na `code` — kutoka kwenye API ya ubao wa wanaoongoza wa Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Kila ingizo la ubao wa wanaoongoza
 lina jina la modeli, mtoa huduma, `score` ya ELO, muda wa kujiamini, na idadi ya kura.
 
-Kategoria za ubao wa wanaoongoza huhusishwa na kategoria za kazi za OmniRoute:
+Kategoria za ubao wa wanaoongoza huhusishwa na kategoria za kazi za 67router:
 
-| Ubao wa wanaoongoza wa Arena | Kategoria za kazi za OmniRoute                    |
+| Ubao wa wanaoongoza wa Arena | Kategoria za kazi za 67router                     |
 | ---------------------------- | ------------------------------------------------- |
 | `text`                       | `default`, `review`, `documentation`, `debugging` |
 | `code`                       | `coding`                                          |
@@ -168,7 +168,7 @@ Ulandanishi huendeshwa **kwa chaguo-msingi**:
 
 - Huendeshwa mara moja seva inapoanza na kisha kwa kipima muda cha mara kwa mara
   (`src/lib/arenaEloSync.ts`, kikiunganishwa kutoka `src/instrumentation-node.ts`).
-- **Hauzuii na hausababishi hitilafu mbaya kamwe** — ikiwa uchotaji kutoka chanzo cha nje utashindwa, OmniRoute huendelea
+- **Hauzuii na hausababishi hitilafu mbaya kamwe** — ikiwa uchotaji kutoka chanzo cha nje utashindwa, 67router huendelea
   kufanya kazi na upangaji huonyesha tu data nzuri ya mwisho (au hali tupu).
 
 Vigeu viwili vya mazingira vinaudhibiti (vimeandikwa katika
@@ -203,7 +203,7 @@ ulinganishaji unaonyumbulika (`findMatchingIntelligence` katika `src/lib/freePro
 3. Ulinganifu wa kiambishi cha mwanzo (jina la modeli kwenye ubao wa wanaoongoza ni kiambishi cha mwanzo cha kitambulisho cha sajili).
 
 Kwa upande wa ulandanishi, viambishi vya mwanzo vya watoa huduma vinavyojulikana (`anthropic/`, `openai/`, `google/`, …)
-huondolewa na ramani ndogo ya lakabu hupanua majina rasmi kuwa vibadala ambavyo OmniRoute hutumia
+huondolewa na ramani ndogo ya lakabu hupanua majina rasmi kuwa vibadala ambavyo 67router hutumia
 ndani, ili modeli ziendelee kupatikana kwa jina lolote.
 
 ### Jinsi mtoa huduma anavyopangwa

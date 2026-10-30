@@ -217,7 +217,7 @@ Pravidla sanitizace použitá na `upstreamDetails`:
 3. Limit hloubky: vnoření za 4 úrovně je nahrazeno řetězcem `"[truncated]"`.
 4. Pole jsou omezena na 32 prvků.
 
-`upstreamDetails` smějí předávat pouze místa volání, která mají parsované chybové tělo poskytovatele. Interní chyby OmniRoute
+`upstreamDetails` smějí předávat pouze místa volání, která mají parsované chybové tělo poskytovatele. Interní chyby 67router
 (selhané parsování SSE, prázdný obsah, blokace ochrannými pravidly) jej nesmějí obsahovat.
 
 Do `upstreamDetails` NEPŘEDÁVEJTE nezpracované `err.stack`, `err.message` ani žádný řetězec z běhové výjimky.
@@ -228,7 +228,7 @@ Selektivní předávání upstream odpovědí 4xx zachovává bezpečný tvar JS
 pro automatické zotavení klienta, nejde však o předávání bajt po bajtu: rekurzivní sanitizace proběhne vždy
 před serializací. Těla obsahující cykly či BigInt nebo nepřátelské `toJSON()` selžou bezpečným způsobem a nejsou
 způsobilá k předání. OCR a moderování uplatňují stejné pravidlo; upstream těla, která nejsou ve formátu JSON,
-jsou prázdná nebo mají nesprávně uvedený typ, jsou převedena na kanonickou chybovou obálku JSON OmniRoute.
+jsou prázdná nebo mají nesprávně uvedený typ, jsou převedena na kanonickou chybovou obálku JSON 67router.
 
 ## Známé omezení CodeQL: vlastní sanitizátory nejsou rozpoznány
 

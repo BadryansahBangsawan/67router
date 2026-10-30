@@ -6,7 +6,7 @@ lastUpdated: 2026-06-28
 
 # Integracja Zed IDE w środowiskach Docker
 
-Gdy OmniRoute działa wewnątrz Dockera, standardowy przepływ „Import from Zed Keychain” kończy się niepowodzeniem, ponieważ kontener nie ma dostępu do demona keychain systemu hosta (libsecret w Linux, Keychain w macOS, Credential Manager w Windows), a katalogi konfiguracyjne Zed na systemie plików hosta nie są domyślnie widoczne wewnątrz kontenera.
+Gdy 67router działa wewnątrz Dockera, standardowy przepływ „Import from Zed Keychain” kończy się niepowodzeniem, ponieważ kontener nie ma dostępu do demona keychain systemu hosta (libsecret w Linux, Keychain w macOS, Credential Manager w Windows), a katalogi konfiguracyjne Zed na systemie plików hosta nie są domyślnie widoczne wewnątrz kontenera.
 
 ## Dlaczego import z Keychain nie działa w Dockerze
 
@@ -19,7 +19,7 @@ W kontenerze występują dwa blokujące problemy:
    komunikuje się z usługą keychain systemu operacyjnego przez gniazdo Unix lub sesję D-Bus.
    Żadne z nich nie jest domyślnie mostkowane do kontenera, więc odczyt poświadczeń zawsze się nie udaje.
 
-OmniRoute wykrywa środowisko Docker za pomocą dwóch heurystyk:
+67router wykrywa środowisko Docker za pomocą dwóch heurystyk:
 
 - Obecność `/.dockerenv` (zapisywany przez demona Docker przy starcie kontenera).
 - Ciąg `docker` pojawiający się w `/proc/1/cgroup` (Linux cgroup v1).
@@ -31,7 +31,7 @@ Gdy któraś z heurystyk zadziała, trasa importu zwraca HTTP 422 z
 
 1. Otwórz **Dashboard → Providers → Zed**.
 2. Panel **Manual Token Import** pojawia się poniżej karty importu z keychain. Gdy
-   OmniRoute wykryje Docker, panel rozwija się automatycznie po pierwszej nieudanej
+   67router wykryje Docker, panel rozwija się automatycznie po pierwszej nieudanej
    próbie importu z keychain.
 3. Wybierz dostawcę z listy rozwijanej (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter lub DeepSeek).

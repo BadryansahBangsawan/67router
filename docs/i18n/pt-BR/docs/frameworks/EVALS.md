@@ -7,7 +7,7 @@
 > **Fonte da verdade:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Última atualização:** 2026-06-28 — v3.8.40
 
-O OmniRoute inclui uma estrutura genérica de avaliação que você pode usar para comparar configurações de roteamento, provedores/modelos individuais ou os conjuntos de testes "golden set" incluídos.
+O 67router inclui uma estrutura genérica de avaliação que você pode usar para comparar configurações de roteamento, provedores/modelos individuais ou os conjuntos de testes "golden set" incluídos.
 Use-a para verificar alterações de roteamento, validar novos provedores e controlar lançamentos antes de promovê-los para o tráfego de produção.
 
 A estrutura é implementada como:

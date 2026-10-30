@@ -10,7 +10,7 @@
 
 ## Ọnọdụ gbara ya gburugburu
 
-OmniRoute na-enye ugbu a ọrụ persistence ndị a haziri dịka ngalaba site na `src/lib/db/`, ebe njikọ
+67router na-enye ugbu a ọrụ persistence ndị a haziri dịka ngalaba site na `src/lib/db/`, ebe njikọ
 a na-ekekọrịta nke `src/lib/db/core.ts` na-eweghachi na-emejuputa nkwekọrịta `SqliteAdapter`
 synchronous dị na `src/lib/db/adapters/types.ts`. Adapter ahụ na-akwado ọtụtụ SQLite runtimes, mana
 interface ya ka nwere ọdịdị SQLite: prepared statements synchronous, `pragma`, transactions ndị

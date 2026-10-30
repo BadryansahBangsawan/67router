@@ -13,7 +13,7 @@
 
 ## Bu nima
 
-OmniRoute **Obsidian** omboriga **kontekst manbasi** sifatida ulanadi — bu agentlar
+67router **Obsidian** omboriga **kontekst manbasi** sifatida ulanadi — bu agentlar
 oʻrnatilgan MCP serveri orqali oʻqiydigan va yozadigan mahalliy Markdown bilimlar
 bazasi. Integratsiya ish stoli ilovasi ichida ishlayotgan **Obsidian Local REST API**
 hamjamiyat plaginiga murojaat qiladi, shu sababli agentlar qaydlarni qidirishi,
@@ -79,7 +79,7 @@ endpointini chaqirish orqali tokenni tekshiradi.
 
 `src/app/api/settings/obsidian/webdav/route.ts` ixtiyoriy WebDAV asosidagi vault
 sinxronlashini boshqaradi (`src/lib/obsidianSync.ts` orqali ishlaydi). Uni yoqish
-OmniRoute’ni mahalliy vault katalogiga yo‘naltiradi va tasodifiy WebDAV foydalanuvchi
+67router’ni mahalliy vault katalogiga yo‘naltiradi va tasodifiy WebDAV foydalanuvchi
 nomi/paroli juftligini yaratadi:
 
 ```bash
@@ -118,7 +118,7 @@ o‘zining alohida sinxronlash tokeni xatti-harakatini saqlab qoladi.
 
 ## MCP vositalari (22)
 
-`open-sse/mcp-server/tools/obsidianTools.ts` faylida belgilangan. Token/asosiy URL har bir chaqiruv uchun aniqlanadi (avval API kalitiga xos, keyin global). OmniRoute **sinxronlash serveri**ga murojaat qiladigan vositalar (toʻrtta `obsidian_sync_*` vositasi) qoʻshimcha ravishda OmniRoute sozlamalarida konfiguratsiya qilingan sinxronlash autentifikatsiya tokenini talab qiladi.
+`open-sse/mcp-server/tools/obsidianTools.ts` faylida belgilangan. Token/asosiy URL har bir chaqiruv uchun aniqlanadi (avval API kalitiga xos, keyin global). 67router **sinxronlash serveri**ga murojaat qiladigan vositalar (toʻrtta `obsidian_sync_*` vositasi) qoʻshimcha ravishda 67router sozlamalarida konfiguratsiya qilingan sinxronlash autentifikatsiya tokenini talab qiladi.
 
 ### Oʻqish vositalari (`read:obsidian`)
 
@@ -135,7 +135,7 @@ o‘zining alohida sinxronlash tokeni xatti-harakatini saqlab qoladi.
 | `obsidian_get_periodic_note` | Sana uchun kunlik/haftalik/oylik davriy qaydni oladi (koʻrsatilmasa, bugungi sana).                                |
 | `obsidian_get_tags`          | Ombordagi barcha teglarni ularning takrorlanish soni bilan roʻyxatlaydi.                                           |
 | `obsidian_list_commands`     | Mavjud Obsidian buyruq IDʼlarini roʻyxatlaydi (`obsidian_execute_command` bilan ishlatish uchun).                  |
-| `obsidian_sync_status`       | OmniRoute sinxronlash serveri holati: ishlashi, ombor nomi, port, ishlash vaqti, oxirgi sinxronlash.               |
+| `obsidian_sync_status`       | 67router sinxronlash serveri holati: ishlashi, ombor nomi, port, ishlash vaqti, oxirgi sinxronlash.                |
 | `obsidian_sync_conflicts`    | Hal qilinmagan sinxronlash ziddiyatlarini roʻyxatlaydi (yoʻl, ziddiyat yoʻli, aniqlangan vaqt).                    |
 
 ### Yozish vositalari (`write:obsidian`)

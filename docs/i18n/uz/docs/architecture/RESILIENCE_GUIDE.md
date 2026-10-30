@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute uchta alohida, lekin bir-biri bilan bog'liq chidamlilik mexanizmiga ega. Ularning har biri turli qamrov va maqsadga ega. Marshrutlash xatti-harakatini nosozliklarini tuzatishda ularni bir-biridan ajratib ko'ring.
+67router uchta alohida, lekin bir-biri bilan bog'liq chidamlilik mexanizmiga ega. Ularning har biri turli qamrov va maqsadga ega. Marshrutlash xatti-harakatini nosozliklarini tuzatishda ularni bir-biridan ajratib ko'ring.
 
 ![3 qavatli chidamlilik modeli](../diagrams/exported/resilience-3layers.svg)
 
@@ -217,7 +217,7 @@ Uchta sessiya-affiniteti sarlavhasi hech qachon upstreamga uzatilmaydi — ijroc
 
 ### Boshqariladigan sessiya ulanishlarining eksklyuziv ijaralari
 
-**Qamrov:** bitta faol boshqariladigan HTTP mijoz/sessiyasi bitta mos OmniRoute ulanishiga egalik qiladi.
+**Qamrov:** bitta faol boshqariladigan HTTP mijoz/sessiyasi bitta mos 67router ulanishiga egalik qiladi.
 
 **Maqsad:** so'rovlar davomida qattiq marshrutlash to'sig'iga muhtoj bo'lgan mijozlar uchun
 doimiy eksklyuziv ulanish egaligini ta'minlash. Bu sessiya affinitetidan farq qiladi: affinitet
@@ -237,7 +237,7 @@ Hayotiy sikl `acquire`, `renew` va `release` JSON amallari bilan `POST /api/v1/s
 Boshqariladigan inferens soʻrovlari shaffof boʻlmagan `X-OmniRoute-Lease-Owner` qiymatini va aniq
 `X-OmniRoute-Lease-Generation` qiymatini taqdim etadi. Egasi `vlo_` dan keyin 43 ta base64url belgisidan foydalanadi; faqat uning SHA-256 heshi saqlanadi. Har bir yakuniy yuborish chegarasi (dispatch fence) autentifikatsiya qilingan API kalit ID sini va faol ulanish ID sini ham bogʻlaydi. Lizing boshqaruv sarlavhalari jurnallardan, saqlangan soʻrov snapshotlaridan va yuqori oqim ijrochi sarlavhalaridan oʻchiriladi.
 
-Agar oddiy marshrutlashda mos boshqariladigan nomzodlar mavjud boʻlsa, lekin har bir boʻsh nomzod begona faol lizing tomonidan band qilingan boʻlsa, OmniRoute HTTP `429`, lizing-sigʻim-mavjud-emas kodi, sigʻimni kutish holati va eng yaqin tegishli tugash muddatidan olingan chegaralangan `Retry-After` qiymatini qaytaradi.
+Agar oddiy marshrutlashda mos boshqariladigan nomzodlar mavjud boʻlsa, lekin har bir boʻsh nomzod begona faol lizing tomonidan band qilingan boʻlsa, 67router HTTP `429`, lizing-sigʻim-mavjud-emas kodi, sigʻimni kutish holati va eng yaqin tegishli tugash muddatidan olingan chegaralangan `Retry-After` qiymatini qaytaradi.
 Oddiy boʻsh moslik lizing raqobati hisoblanmaydi va mavjud marshrutlash xatoligi semantikasini saqlab qoladi.
 
 Tegishli mexanizmlar alohida qoladi:
@@ -258,7 +258,7 @@ Tegishli mexanizmlar alohida qoladi:
   codex uchun butun `codex` / `spark` qamrovi (ulanishning har bir `gpt-5*`
   modeli), boshqa provayderlar uchun `getQuotaScopedModelForProvider()`.
 - `404` faqat modelning o'zini blokirovka qiladi (`getModelLockKey()` `not_found` holatini toraytiradi).
-- Boshqa har qanday status — `5xx` transport/server xatoliklari va OmniRoute'ning sifat
+- Boshqa har qanday status — `5xx` transport/server xatoliklari va 67router'ning sifat
   tekshiruvidan o'zi sintez qilgan `502` — faqat **aniq**
   provayder/ulanish/model uchligini blokirovka qiladi. Bitta modeldagi yomon oqim
   hisobning kvotasi haqida dalil emas; bu qoidadan oldin
@@ -397,7 +397,7 @@ chegaralari**, har qatorda bitta `model=cap`) yoki xuddi shunday JSON ko'rinishi
   so'rovlar chegaralari.
 - **Mahalliy navbat, avtomatik aniqlash yo'q:** ortiqcha so'rovlar mavjud
   navbat/timeout semantikasi bilan mahalliy navbatga qo'yiladi (tipli
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` kirish xatolari). OmniRoute
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` kirish xatolari). 67router
   upstream siyosatini aniqlamaydi yoki taxmin qilmaydi — u operator sozlagan
   aniq chegaralarni qo'llaydi. To'yangan model darvozasi provayderni hech qachon
   o'chirmaydi va doimiy model blokirovkasini yaratmaydi; upstream
@@ -562,7 +562,7 @@ unit-test qilish mumkin.
 ### Rate-limit avtomatik yoqish xavfsizlik tarmog'i va ulanish himoyasi (`rateLimitProtection`)
 
 **Avtomatik yoqish xavfsizlik tarmog'i** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, standart `true`):
-Standart holatda OmniRoute barcha faol API-kalit provayder ulanishlari uchun rate-limit navbat himoyasini avtomatik ravishda yoqadi (`getProviderCategory(provider) === "apikey"`). Bu so'rov tezligiga sezgir yuqori oqim API kalitlariga kiruvchi so'rovlar yuqori oqim 429 xatolariga o'z-o'zidan portlash o'rniga Bottleneck orqali navbatga qo'yilishi va cheklanishini ta'minlaydi. Xavfsizlik tarmog'ini `RATE_LIMIT_AUTO_ENABLE` muhit o'zgaruvchisi orqali bekor qilish mumkin (`false`/`0`/`off` o'chiradi, `true`/`1`/`on` majburiy yoqadi), bu esa saqlangan dashboard sozlamasidan ustun turadi (**Sozlamalar → Chidamlilik** / `PATCH /api/resilience`).
+Standart holatda 67router barcha faol API-kalit provayder ulanishlari uchun rate-limit navbat himoyasini avtomatik ravishda yoqadi (`getProviderCategory(provider) === "apikey"`). Bu so'rov tezligiga sezgir yuqori oqim API kalitlariga kiruvchi so'rovlar yuqori oqim 429 xatolariga o'z-o'zidan portlash o'rniga Bottleneck orqali navbatga qo'yilishi va cheklanishini ta'minlaydi. Xavfsizlik tarmog'ini `RATE_LIMIT_AUTO_ENABLE` muhit o'zgaruvchisi orqali bekor qilish mumkin (`false`/`0`/`off` o'chiradi, `true`/`1`/`on` majburiy yoqadi), bu esa saqlangan dashboard sozlamasidan ustun turadi (**Sozlamalar → Chidamlilik** / `PATCH /api/resilience`).
 
 **Har bir ulanish uchun `rateLimitProtection` semantikasi:**
 Har bir ulanish uchun rate-limit himoyasi provayder ulanishlaridagi `rateLimitProtection` boolean maydoni orqali kuzatiladi (SQLite'da `rate_limit_protection` sifatida saqlanadi):
@@ -920,7 +920,7 @@ kvota bilan bir xil signaldir. Halol cheklovlar:
 > Runtime State" bo'limidan (PR #12743) so'zma-so'z ko'chirildi. Bu yuqoridagi bo'limlarning
 > ixcham, agentga mo'ljallangan ko'rinishi; raqamlangan bo'limlar to'liq ma'lumotnoma bo'lib qoladi.
 
-OmniRoute da bir-biri bilan bog'liq, lekin alohida uchta vaqtinchalik xato mexanizmi mavjud. Marshrutlash xatti-harakatida nosozlikni qidirganda ularning qamrovini alohida saqlang. Bir qarashda tushunish uchun [3 qatlamli chidamlilik diagrammasi](../diagrams/exported/resilience-3layers.svg) ga qarang (manba: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd)).
+67router da bir-biri bilan bog'liq, lekin alohida uchta vaqtinchalik xato mexanizmi mavjud. Marshrutlash xatti-harakatida nosozlikni qidirganda ularning qamrovini alohida saqlang. Bir qarashda tushunish uchun [3 qatlamli chidamlilik diagrammasi](../diagrams/exported/resilience-3layers.svg) ga qarang (manba: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd)).
 
 ### Provayder Circuit Breaker
 

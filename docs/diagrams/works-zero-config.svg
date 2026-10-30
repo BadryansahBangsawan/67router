@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1200 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Install and start OmniRoute, connect an eligible provider with your own account, then configure your tool. Auto routing depends on eligible connections and provider limits.">
+<svg viewBox="0 0 1200 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Install and start 67router, connect an eligible provider with your own account, then configure your tool. Auto routing depends on eligible connections and provider limits.">
   <desc>Animated flow card: three step tiles (Install and start, Connect provider, Use your tool) fade in left to right, a dot travels along the connectors between them in a loop, and the final check pulses.</desc>
   <defs>
     <pattern id="gridW" width="32" height="32" patternUnits="userSpaceOnUse">

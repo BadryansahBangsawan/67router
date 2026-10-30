@@ -6,7 +6,7 @@
 
 ## Bayar da Rahoton Raunukan Tsaro
 
-Idan ka gano wani raunin tsaro a OmniRoute, da fatan za ka bayar da rahotonsa cikin alhaki:
+Idan ka gano wani raunin tsaro a 67router, da fatan za ka bayar da rahotonsa cikin alhaki:
 
 1. **KADA KA** buɗe batun GitHub na jama'a
 2. Yi amfani da [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Bayan 3.8.59, sigar da ke biye ita ce **3.9.0**, wadda ke buɗe layin tallafi na
 
 ## Tsarin Gine-ginen Tsaro
 
-OmniRoute yana aiwatar da samfurin tsaro mai matakai da yawa:
+67router yana aiwatar da samfurin tsaro mai matakai da yawa:
 
 ```
 Buƙata → CORS → Bututun Authz (rarrabawa → manufofi → tilastawa)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Tsarin Matakan Kariya
 
-OmniRoute yana zuwa da **rajistar matakan kariya** (`src/lib/guardrails/`) mai iya sake lodawa kai tsaye, tare da matakan kariya 3 da aka gina a ciki waɗanda aka tsara bisa fifiko:
+67router yana zuwa da **rajistar matakan kariya** (`src/lib/guardrails/`) mai iya sake lodawa kai tsaye, tare da matakan kariya 3 da aka gina a ciki waɗanda aka tsara bisa fifiko:
 
 | Matakin Kariya     | Fifiko | Manufa                                                                                                   |
 | ------------------ | ------ | -------------------------------------------------------------------------------------------------------- |

@@ -25,7 +25,7 @@
 આયાત મોડલમાંથી પ્રારંભિક ફાઇલ ડાઉનલોડ કરો (**CSV ટેમ્પલેટ ડાઉનલોડ કરો**). ઉદાહરણ:
 
 ```csv
-# OmniRoute પ્રદાતા આયાત (સ્થાન-આધારિત કૉલમ્સ)
+# 67router પ્રદાતા આયાત (સ્થાન-આધારિત કૉલમ્સ)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

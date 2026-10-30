@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Последна актуализация:** 2026-06-28 — v3.8.40
 
-OmniRoute включва система за плъгини в стила на WordPress. Плъгините представляват самостоятелни
+67router включва система за плъгини в стила на WordPress. Плъгините представляват самостоятелни
 директории — всяка с манифест `plugin.json` и входен файл — които се включват
 в конвейера за обработка на заявки (`onRequest` / `onResponse` / `onError`) и в
 събитията от жизнения цикъл (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Директория за плъгини
 
-Плъгините се намират в директорията за данни на OmniRoute:
+Плъгините се намират в директорията за данни на 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

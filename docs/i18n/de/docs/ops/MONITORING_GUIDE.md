@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute wird mit integrierter Zustandsüberwachung, Provider-Autopilot, Kontingentverfolgung und Observability-Hooks ausgeliefert. Dieser Leitfaden behandelt das Dashboard, Warnmeldungen und die Fehlerbehebung.
+> **TL;DR**: 67router wird mit integrierter Zustandsüberwachung, Provider-Autopilot, Kontingentverfolgung und Observability-Hooks ausgeliefert. Dieser Leitfaden behandelt das Dashboard, Warnmeldungen und die Fehlerbehebung.
 
 **Quellen:**
 
@@ -20,7 +20,7 @@
 
 ## Übersicht
 
-OmniRoute verfügt über **3 Überwachungsebenen**:
+67router verfügt über **3 Überwachungsebenen**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Pro Combo:
 
 ## Health-Check-API
 
-OmniRoute stellt **zwei** HTTP-Endpunkte für Zustandsprüfungen bereit. Sie sind für Orchestratoren nicht austauschbar.
+67router stellt **zwei** HTTP-Endpunkte für Zustandsprüfungen bereit. Sie sind für Orchestratoren nicht austauschbar.
 
 | Pfad                         | Zweck                                                                                 | Aufwand                                | Verwendung für                                                                    |
 | ---------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ aus. Verwenden Sie `failed` + `failedConnections` für aktuelle Probe-Fehler und
 
 ### Empfehlungen für Kubernetes-Probes
 
-OmniRoute ist ein **einzelner Node-Prozess** (eine Event-Loop). Der standardmäßige Docker-`HEALTHCHECK` verwendet den leichtgewichtigen Endpunkt `/healthz`. `/api/monitoring/health` ist für Liveness-Intervalle des kubelet **zu aufwendig**.
+67router ist ein **einzelner Node-Prozess** (eine Event-Loop). Der standardmäßige Docker-`HEALTHCHECK` verwendet den leichtgewichtigen Endpunkt `/healthz`. `/api/monitoring/health` ist für Liveness-Intervalle des kubelet **zu aufwendig**.
 
 | Probe             | Empfohlenes Ziel                                                                    | Hinweise                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ----------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Siehe auch: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (Pr
 
 ### systemd-Watchdog (eingefrorene Event-Schleife)
 
-Auf einem systemd-Host teilt OmniRoute dem Dienstmanager mit, wann es bereit ist, und sendet weiterhin Pings. Dadurch wird ein Server, dessen Event-Schleife feststeckt, beendet und neu gestartet, statt aktiv und reaktionslos zu bleiben. Die Pings stammen aus der eigenen Event-Schleife des Servers: Wenn sie blockiert, bleiben die Pings aus, und systemd startet den Dienst neu, sobald innerhalb der mit `WatchdogSec` festgelegten Zeit kein Ping eingegangen ist.
+Auf einem systemd-Host teilt 67router dem Dienstmanager mit, wann es bereit ist, und sendet weiterhin Pings. Dadurch wird ein Server, dessen Event-Schleife feststeckt, beendet und neu gestartet, statt aktiv und reaktionslos zu bleiben. Die Pings stammen aus der eigenen Event-Schleife des Servers: Wenn sie blockiert, bleiben die Pings aus, und systemd startet den Dienst neu, sobald innerhalb der mit `WatchdogSec` festgelegten Zeit kein Ping eingegangen ist.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) schreibt bereits eine Benutzereinheit mit dieser Konfiguration. Eine selbst erstellte Einheit (standardmäßig `Type=simple`) hat keinen Watchdog. Fügen Sie daher ihrem Abschnitt `[Service]` diese Zeilen hinzu:
 
@@ -443,7 +443,7 @@ Die Konfiguration der Token-Zustandsprüfung wird intern von `tokenHealthCheck.t
 
 ### Integrierte Kanäle
 
-OmniRoute unterstützt **3 Benachrichtigungskanäle**:
+67router unterstützt **3 Benachrichtigungskanäle**:
 
 | Kanal            | Einrichtung       | Anwendungsfall                       |
 | ---------------- | ----------------- | ------------------------------------ |
@@ -559,7 +559,7 @@ Erstellen Sie eine Datei unter `~/.omniroute/dashboard.json`:
 ### „Kontingent wird als unproblematisch angezeigt, aber ich erhalte 429-Fehler“
 
 - 429 bedeutet, dass Sie laut Anbieter Ihr Kontingent aufgebraucht haben
-- Die Kontingentverfolgung von OmniRoute kann **veraltet** sein — maßgeblich sind die Upstream-Daten des Anbieters
+- Die Kontingentverfolgung von 67router kann **veraltet** sein — maßgeblich sind die Upstream-Daten des Anbieters
 - Kontingentdaten werden automatisch über den internen Kontingentmonitor aktualisiert
 
 ### „Kombination schlägt fehl, aber alle Ziele werden als fehlerfrei angezeigt“
@@ -572,7 +572,7 @@ Erstellen Sie eine Datei unter `~/.omniroute/dashboard.json`:
 
 - Führen Sie `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"` aus
 - Falls „ok“ ausgegeben wird — Fehlalarm, die Statusprüfung ist zu streng
-- Bei jeder anderen Ausgabe — **stoppen Sie OmniRoute** und befolgen Sie den [Leitfaden zur Notfallwiederherstellung](./DATABASE_GUIDE.md#disaster-recovery)
+- Bei jeder anderen Ausgabe — **stoppen Sie 67router** und befolgen Sie den [Leitfaden zur Notfallwiederherstellung](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### „Speicherdruck im Heap ist kritisch“
 

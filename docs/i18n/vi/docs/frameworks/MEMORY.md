@@ -7,7 +7,7 @@
 > **Nguồn chuẩn:** `src/lib/memory/` và `src/app/api/memory/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40 (mặc định tắt + bổ sung lượng tử hóa int8)
 
-OmniRoute cung cấp bộ nhớ hội thoại liên tục được phân vùng theo khóa API (và
+67router cung cấp bộ nhớ hội thoại liên tục được phân vùng theo khóa API (và
 tùy chọn theo ID phiên). Các ký ức được tự động trích xuất từ phản hồi của LLM
 thông qua cơ chế khớp mẫu regex nhẹ và được chèn trở lại vào các yêu cầu tiếp
 theo dưới dạng thông báo hệ thống ở đầu (hoặc thông báo người dùng đầu tiên đối
@@ -593,7 +593,7 @@ mục cũ nhất) cho các thao tác đọc `getMemory(id)`, cùng với một l
 
 ## Chọn Nhà cung cấp Embedding (v3.8.16+)
 
-Công cụ bộ nhớ của OmniRoute hỗ trợ **bốn nguồn embedding** (`src/lib/memory/embedding/`). Mỗi nguồn có những điểm đánh đổi khác nhau về **độ trễ, chi phí, chất lượng mô hình và độ phức tạp khi thiết lập**.
+Công cụ bộ nhớ của 67router hỗ trợ **bốn nguồn embedding** (`src/lib/memory/embedding/`). Mỗi nguồn có những điểm đánh đổi khác nhau về **độ trễ, chi phí, chất lượng mô hình và độ phức tạp khi thiết lập**.
 
 ### Các nguồn Embedding
 
@@ -1011,13 +1011,13 @@ Worker chỉ liên kết với giao diện loopback, điều mà cơ chế bảo
 Adapter này không nới lỏng cơ chế bảo vệ đó: host được mã hóa cứng thành `127.0.0.1` và schema cấu hình
 (`ClaudeMemBackendConfigSchema`, `.strict()`) chỉ chấp nhận:
 
-| Khóa        | Kiểu   | Mặc định | Ghi chú                                                                                                          |
-| ----------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —        | Bắt buộc, 1024–65535. Cổng worker claude-mem từ tệp cài đặt của nó (mặc định `37700 + uid % 100`).               |
-| `project`   | string | —        | Dự án claude-mem cần sử dụng. Nếu không đặt → mỗi khóa API OmniRoute ánh xạ tới dự án riêng của nó (`apiKeyId`). |
-| `timeoutMs` | number | `5000`   | Thời gian chờ cho mỗi yêu cầu, 100–30000.                                                                        |
+| Khóa        | Kiểu   | Mặc định | Ghi chú                                                                                                         |
+| ----------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —        | Bắt buộc, 1024–65535. Cổng worker claude-mem từ tệp cài đặt của nó (mặc định `37700 + uid % 100`).              |
+| `project`   | string | —        | Dự án claude-mem cần sử dụng. Nếu không đặt → mỗi khóa API 67router ánh xạ tới dự án riêng của nó (`apiKeyId`). |
+| `timeoutMs` | number | `5000`   | Thời gian chờ cho mỗi yêu cầu, 100–30000.                                                                       |
 
-Bật tính năng này thông qua `PUT /api/settings/memory` và khởi động lại OmniRoute (các backend chỉ được đăng ký
+Bật tính năng này thông qua `PUT /api/settings/memory` và khởi động lại 67router (các backend chỉ được đăng ký
 một lần trong `initMemoryBackends()`):
 
 ```json
@@ -1034,7 +1034,7 @@ không hợp lệ sẽ được ghi nhật ký (`claude-mem.backend.invalid_conf
 
 - ID có dạng `claude-mem:<observationId>`; `get`/`delete` bỏ qua ID của các backend khác mà không thực hiện
   lệnh gọi mạng.
-- `create` → `POST /api/memory/save`; các trường OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; các trường 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) được đặt trong `metadata.omniroute` của claude-mem và được khôi phục khi đọc.
 - `search` → `GET /api/search?format=json&type=observations`, được cắt giảm theo `maxTokens`
   (số ký tự / 4). `list` → endpoint quan sát được phân trang của worker (`total` là giới hạn dưới — worker
@@ -1046,16 +1046,16 @@ không hợp lệ sẽ được ghi nhật ký (`claude-mem.backend.invalid_conf
 - Cơ chế chèn prompt (`retrieval.ts`) và các công cụ MCP `omniroute_memory_*` vẫn đọc trực tiếp từ SQLite
   — chúng không đi qua `memoryManager`, vì vậy backend này không cung cấp dữ liệu cho chúng.
 
-**Định tuyến các lệnh gọi LLM của chính claude-mem thông qua OmniRoute.** claude-mem nén các quan sát
+**Định tuyến các lệnh gọi LLM của chính claude-mem thông qua 67router.** claude-mem nén các quan sát
 bằng một LLM (mặc định: Claude Agent SDK). Provider `openai-compatible` của nó có thể trỏ tới
-OmniRoute để tận dụng cơ chế dự phòng combo và theo dõi chi phí. Trong `~/.claude-mem/settings.json`:
+67router để tận dụng cơ chế dự phòng combo và theo dõi chi phí. Trong `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<khóa API OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<mô hình hoặc combo OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<khóa API 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<mô hình hoặc combo 67router>"
 }
 ```
 

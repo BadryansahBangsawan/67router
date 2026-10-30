@@ -4,7 +4,7 @@
 
 ---
 
-> **Na nkenke**: OmniRoute na-eji **SQLite nwere ndekọ WAL** dịka ebe nchekwa mbụ ya, tinyere nzuzo **AES-256-GCM** maka data ndị dị mkpa mgbe echekwara ha. Nduzi a na-akọwa schema, migrations, ndabere/mweghachi, na akwụkwọ ntuziaka arụmọrụ.
+> **Na nkenke**: 67router na-eji **SQLite nwere ndekọ WAL** dịka ebe nchekwa mbụ ya, tinyere nzuzo **AES-256-GCM** maka data ndị dị mkpa mgbe echekwara ha. Nduzi a na-akọwa schema, migrations, ndabere/mweghachi, na akwụkwọ ntuziaka arụmọrụ.
 
 **Isi mmalite:**
 
@@ -19,7 +19,7 @@
 
 ## Gịnị mere SQLite?
 
-OmniRoute họọrọ SQLite kama PostgreSQL/MySQL n'ihi ọtụtụ ihe:
+67router họọrọ SQLite kama PostgreSQL/MySQL n'ihi ọtụtụ ihe:
 
 | Ihe               | SQLite                                        | PostgreSQL                                |
 | ----------------- | --------------------------------------------- | ----------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute họọrọ SQLite kama PostgreSQL/MySQL n'ihi ọtụtụ ihe:
 | **Ndabere**       | Nṅomi otu faịlụ                               | `pg_dump` ma ọ bụ snapshot sistemụ faịlụ  |
 | **Ojiji**         | Nrụnye nke onye ọrụ ọ bụla, etinyere n'ime ya | SaaS nwere ọtụtụ ndị ahịa                 |
 
-Maka mbugharị **nke otu onye ọrụ, otu instance** (ojiji bụ isi nke OmniRoute), SQLite dị mfe ma dịkwa ngwa karịa.
+Maka mbugharị **nke otu onye ọrụ, otu instance** (ojiji bụ isi nke 67router), SQLite dị mfe ma dịkwa ngwa karịa.
 
 ### Ndekọ WAL
 
@@ -50,7 +50,7 @@ Nha cache ndabara bụ **65,536 KiB (64 MiB)**. SQLite na-ewere
 `cache_size` na-adịghị mma dịka oke elu a tụlere na KiB ma na-ekenye peeji dịka mkpa si dị.
 **Settings > System & Storage > Cache Size** na-anabata ọnụọgụ integer sitere na **1 ruo
 1,000,000 KiB**; ichekwa ntọala ahụ na-etinye ya ozugbo na njikọ ọdụ data dị ndụ,
-OmniRoute na-eweghachikwa uru echekwara mgbe ọ na-amalite.
+67router na-eweghachikwa uru echekwara mgbe ọ na-amalite.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Nhazi Modul Domen
 
-Ebe nchekwa data OmniRoute nwere **modul TypeScript 110 dị n'ọkwa kachasị elu** n'ime `src/lib/db/`. Modul domen ọ bụla:
+Ebe nchekwa data 67router nwere **modul TypeScript 110 dị n'ọkwa kachasị elu** n'ime `src/lib/db/`. Modul domen ọ bụla:
 
 - Na-ahụ maka otu tebụl ma ọ bụ karịa akọwapụtara nke ọma
 - Na-ebupụ ọrụ CRUD nwere ụdị
@@ -90,7 +90,7 @@ Ebe nchekwa data OmniRoute nwere **modul TypeScript 110 dị n'ọkwa kachasị 
 
 ### Modul DB 110 Dị n'Ọkwa Kachasị Elu
 
-OmniRoute nwere **faịlụ TypeScript 110 dị n'ọkwa kachasị elu** n'ime `src/lib/db/`. N'okpuru bụ ụfọdụ modul ndị bụ isi; lee ndepụta ndekọ ahụ maka ndepụta zuru ezu:
+67router nwere **faịlụ TypeScript 110 dị n'ọkwa kachasị elu** n'ime `src/lib/db/`. N'okpuru bụ ụfọdụ modul ndị bụ isi; lee ndepụta ndekọ ahụ maka ndepụta zuru ezu:
 
 | Modul                   | Tebụl                                                          | Ọrụ                                                                      |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -186,7 +186,7 @@ Ndepụta zuru ezu nke tebụl ihe dịka 30+ dị na `src/lib/db/migrations/`.
 
 ## Mbugharị
 
-OmniRoute na-eji **mbugharị nwere ụdị mbipụta, nke na-arụ otu ihe n’agbanyeghị ugboro ole a gbara ya** n’ime `src/lib/db/migrations/`. Mbugharị ọ bụla bụ otu faịlụ SQL aha ya bụ `NNN_description.sql`.
+67router na-eji **mbugharị nwere ụdị mbipụta, nke na-arụ otu ihe n’agbanyeghị ugboro ole a gbara ya** n’ime `src/lib/db/migrations/`. Mbugharị ọ bụla bụ otu faịlụ SQL aha ya bụ `NNN_description.sql`.
 
 ### Ịkpọ Mbugharị Aha
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Mgbanwe ndị na-adabaghị n’azụ** (dịka ọmụmaatụ, ihichapụ kọlụm) siri ike. OmniRoute anaghị akwado ịlaghachi n’ụdị ochie — ozugbo etinyere mbugharị n’ọrụ, mgbanwe schema ahụ na-adịgide adịgide. Mee atụmatụ kwekọrọ na nke a.
+> **Mgbanwe ndị na-adabaghị n’azụ** (dịka ọmụmaatụ, ihichapụ kọlụm) siri ike. 67router anaghị akwado ịlaghachi n’ụdị ochie — ozugbo etinyere mbugharị n’ọrụ, mgbanwe schema ahụ na-adịgide adịgide. Mee atụmatụ kwekọrọ na nke a.
 
 ---
 
@@ -310,7 +310,7 @@ Maka ịrụ ọrụ ngwa ngwa, a na-echekwa ihe ndị a dị ka ederede nkịt�
 
 ## Ihe Ị Kwesịrị Ịma Banyere Izo Ozi (v3.8.16+)
 
-OmniRoute na-eji **`migrateLegacyEncryptedString()`** ejikwa usoro izo ozi abụọ n'ụzọ na-enweghị onye ọrụ ịhụ mgbanwe:
+67router na-eji **`migrateLegacyEncryptedString()`** ejikwa usoro izo ozi abụọ n'ụzọ na-enweghị onye ọrụ ịhụ mgbanwe:
 
 - **Nke ochie** (tupu v3.5.0): “izo ozi” dabere na XOR (ọ bụghị ezigbo kriptografi)
 - **Nke ugbu a**: AES-256-GCM nwere IV kwesịrị ekwesị na mkpado nkwado izi ezi
@@ -399,7 +399,7 @@ Maka ime ndabere DB na-arụ ọrụ n’akwụsịghị ọrụ ya:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Nke a na-eji API ndabere SQLite nke ịntanetị — ọ dị nchebe ịrụ ya mgbe OmniRoute na-arụ ọrụ.
+Nke a na-eji API ndabere SQLite nke ịntanetị — ọ dị nchebe ịrụ ya mgbe 67router na-arụ ọrụ.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Mkpakọ
 
-Instance OmniRoute ndị na-arụ ọrụ ogologo oge na-erite uru site n’iji `VACUUM` mgbe ụfọdụ:
+Instance 67router ndị na-arụ ọrụ ogologo oge na-erite uru site n’iji `VACUUM` mgbe ụfọdụ:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Tọgharịa (Hichapụ) Data Niile
 
 ```bash
-# Buru ụzọ kwụsị OmniRoute
+# Buru ụzọ kwụsị 67router
 omniroute stop
 
 # Hichapụ faịlụ DB
@@ -613,7 +613,7 @@ Usoro ọzọ jidere mkpọchi ide ihe. Mee otu n'ime ndị a:
 
 - Chere ka usoro nke ọzọ rụchaa (lelee `lsof | grep storage.sqlite`)
 - Kwụsị usoro nke ọzọ
-- Ọ bụrụ na ọ na-adịgide, malitegharịa OmniRoute
+- Ọ bụrụ na ọ na-adịgide, malitegharịa 67router
 
 ### "Mmachi igodo mba ọzọ dara"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Mbugharị ahụ gara n'ime azụmahịa, ya mere o kwesịrị ịlaghachi n'ọnọdụ mbụ. Ọ bụrụ na ọ laghachighị:
 
-1. **Kwụsị OmniRoute** (gbochie mbọ ndị ọzọ)
+1. **Kwụsị 67router** (gbochie mbọ ndị ọzọ)
 2. **Lelee ọnọdụ DB** site na iji `sqlite3`
 3. **Jiri aka dozie** mbugharị ahụ na-ezughị ezu
-4. **Malitegharịa** OmniRoute (a ga-anwa mbugharị ahụ ọzọ)
+4. **Malitegharịa** 67router (a ga-anwa mbugharị ahụ ọzọ)
 
 Iji gbochie nke a, buru ụzọ nwalee mbugharị mgbe niile na otu oyiri.
 

@@ -7,29 +7,29 @@
 > **Referenčni vir:** `src/lib/skills/` in `src/app/api/skills/`
 > **Nazadnje posodobljeno:** 2026-06-28 — v3.8.40
 
-OmniRoute ponuja razširljivo ogrodje veščin, ki jezikovnim modelom (in operaterjem) omogoča sestavljanje zmogljivosti za večkratno uporabo — od branja datotečnega sistema in zahtev HTTP do izvajanja kode v izoliranem okolju ter skrbno izbranih veščin iz tržnice.
+67router ponuja razširljivo ogrodje veščin, ki jezikovnim modelom (in operaterjem) omogoča sestavljanje zmogljivosti za večkratno uporabo — od branja datotečnega sistema in zahtev HTTP do izvajanja kode v izoliranem okolju ter skrbno izbranih veščin iz tržnice.
 
-Veščina je različičena in s shemo opredeljena enota dela. OmniRoute lahko veščine vstavi kot definicije orodij v odhodne zahteve, prestreže klice orodij, ki jih vrne model, zažene ustrezni izvajalnik in rezultat posreduje nazaj modelu, da se pogovor lahko nadaljuje. Model nikoli ne vidi implementacije — samo vmesnik orodja.
+Veščina je različičena in s shemo opredeljena enota dela. 67router lahko veščine vstavi kot definicije orodij v odhodne zahteve, prestreže klice orodij, ki jih vrne model, zažene ustrezni izvajalnik in rezultat posreduje nazaj modelu, da se pogovor lahko nadaljuje. Model nikoli ne vidi implementacije — samo vmesnik orodja.
 
 ---
 
 ## Agent Skills v primerjavi z Omni Skills
 
-OmniRoute ima dva različna, vendar dopolnjujoča se sistema veščin:
+67router ima dva različna, vendar dopolnjujoča se sistema veščin:
 
 | Razsežnost       | **Omni Skills** (ta dokument)                                   | **Agent Skills**                                                                             |
 | :--------------- | :-------------------------------------------------------------- | :------------------------------------------------------------------------------------------- |
 | Namen            | Vstavljanje orodij LLM + izvajanje v izoliranem okolju          | Katalog SKILL.md, ki ga lahko zunanji agenti odkrijejo in uporabljajo                        |
 | Referenčni vir   | `src/lib/skills/` + tržnica                                     | `src/lib/agentSkills/` + imenik `skills/`                                                    |
 | Način izvajanja  | Vstavljene v odhodne zahteve, izvedene ob dogodkih klica orodja | Statični katalog Markdown + končne točke REST/MCP/A2A za odkrivanje                          |
-| Kdo ga uporablja | Sam OmniRoute (kombinirano usmerjanje, vhodni klici LLM)        | Zunanji agenti, odjemalci MCP, orkestratorji A2A                                             |
+| Kdo ga uporablja | Sam 67router (kombinirano usmerjanje, vhodni klici LLM)         | Zunanji agenti, odjemalci MCP, orkestratorji A2A                                             |
 | Število          | Spremenljivo (odvisno od tržnice)                               | 43 vnosov v katalogu (22 API + 20 CLI + 1 konfiguracijski)                                   |
 | Oblika           | `SkillDefinition` s shemo orodja + izvajalnikom                 | Sprednja vsebina `SKILL.md` + telo Markdown                                                  |
 | Odkrivanje       | REST `/api/skills/*` + orodja MCP `omniroute_skills_*`          | REST `/api/agent-skills/*` + orodja MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 
-**Omni Skills** so izvajalni mehanizem — določajo, kaj OmniRoute _lahko naredi_, ko LLM prikliče orodje.
+**Omni Skills** so izvajalni mehanizem — določajo, kaj 67router _lahko naredi_, ko LLM prikliče orodje.
 
-**Agent Skills** so dokumentacijski katalog — zunanjim agentom pojasnjujejo, _kako uporabljati_ OmniRouteov REST API in CLI, s strukturiranimi datotekami SKILL.md, ki jih je mogoče neposredno vključiti v pozive agentov.
+**Agent Skills** so dokumentacijski katalog — zunanjim agentom pojasnjujejo, _kako uporabljati_ 67routerov REST API in CLI, s strukturiranimi datotekami SKILL.md, ki jih je mogoče neposredno vključiti v pozive agentov.
 
 Za katalog Agent Skills, generator, orodja MCP in veščino A2A glejte [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Za katalog Agent Skills, generator, orodja MCP in veščino A2A glejte [docs/fra
 
 V istem registru soobstajajo trije viri veščin:
 
-1. **Vgrajene veščine** (`src/lib/skills/builtins.ts`) — dobavljene z OmniRoute. Pokrivajo pogoste primere:
+1. **Vgrajene veščine** (`src/lib/skills/builtins.ts`) — dobavljene z 67router. Pokrivajo pogoste primere:
    - `file_read`, `file_write` — izolirani delovni prostor za posamezen ključ API pod `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — odhodni HTTP prek `safeOutboundFetch` z `guard: "public-only"`
    - `web_search` — zamenljiv ponudnik iskanja s predpomnjenjem (`executeWebSearch`)
    - `eval_code` — izvajanje `node` ali `python` v izoliranem okolju Docker
    - `execute_command` — ukaz lupine v izoliranem okolju Docker
    - `browser` — ogrodje, podprto s Playwrightom, privzeto onemogočeno (`builtin/browser.ts`)
-2. **SkillsMP** (tržnica OmniRoute) — pridobljene iz `https://skillsmp.com/api/v1/skills/search`. V nastavitvah zahtevajo `skillsmpApiKey`.
+2. **SkillsMP** (tržnica 67router) — pridobljene iz `https://skillsmp.com/api/v1/skills/search`. V nastavitvah zahtevajo `skillsmpApiKey`.
 3. **SkillsSH** (katalog skupnosti `skills.sh`) — pridobljene iz `https://skills.sh/api/search`. Preverjanje pristnosti ni potrebno; vsebina SKILL.md se pridobi neposredno iz neobdelanih datotek GitHub.
 
 En sam »aktivni ponudnik« določa, iz katerega kataloga nadzorna plošča namešča veščine (`src/lib/skills/providerSettings.ts`). Preklopite ga v razdelku **Nastavitve → Pomnilnik in veščine**. Privzeto: `skillsmp`.
@@ -444,7 +444,7 @@ obstaja, prav tako se točkovanje ne izvaja v `registry.ts`.
 
 ## Katalog vgrajenih spretnosti
 
-OmniRoute vključuje skrbno izbran nabor vgrajenih spretnosti v `src/lib/skills/builtin/`. Najpogostejše so:
+67router vključuje skrbno izbran nabor vgrajenih spretnosti v `src/lib/skills/builtin/`. Najpogostejše so:
 
 ### Spretnost avtomatizacije brskalnika
 

@@ -4,7 +4,7 @@
 
 ---
 
-Ushbu sahifada loyihaning lokal `.env` fayli bilan bogʻliq xatti-harakati hamda OmniRouteʼni ishlab chiqishda muhit fayllari va maxfiy maʼlumotlardan qanday foydalanish tushuntiriladi.
+Ushbu sahifada loyihaning lokal `.env` fayli bilan bogʻliq xatti-harakati hamda 67routerʼni ishlab chiqishda muhit fayllari va maxfiy maʼlumotlardan qanday foydalanish tushuntiriladi.
 
 ## .env postinstall xatti-harakati
 

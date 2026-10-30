@@ -7,11 +7,11 @@
 Jaetun suoritettavan manifestin, rajoitettujen aliprosessiympäristöjen ja pysyvän
 Gemini-määrityksen tiedot ovat kohdassa [CLI-käynnistyssopimukset](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute sisältää joukon `setup-*`-komentoja, jotka määrittävät ohjelmointiin
-tarkoitetun CLI:n (Codex, Claude Code, OpenCode, Cline, …) käyttämään OmniRoutea taustajärjestelmänään — näin
-työkalu käyttää **yhtä** päätepistettä, ja OmniRoute reitittää pyynnöt oikealle palveluntarjoajalle
+67router sisältää joukon `setup-*`-komentoja, jotka määrittävät ohjelmointiin
+tarkoitetun CLI:n (Codex, Claude Code, OpenCode, Cline, …) käyttämään 67routeria taustajärjestelmänään — näin
+työkalu käyttää **yhtä** päätepistettä, ja 67router reitittää pyynnöt oikealle palveluntarjoajalle
 automaattisella varajärjestelmään siirtymisellä. Jokainen komento lukee **ajantasaisen** malliluettelon käynnissä olevasta
-OmniRoute-instanssista (paikallisesta tai etäinstanssista) ja kirjoittaa työkalun oman määritystiedoston **sinun**
+67router-instanssista (paikallisesta tai etäinstanssista) ja kirjoittaa työkalun oman määritystiedoston **sinun**
 koneellesi. API-avaimeen viitataan ympäristömuuttujalla aina, kun työkalu
 tukee sitä. Komennot, jotka tallentavat työkalukohtaisen ympäristötiedoston pysyvästi, on mainittu jäljempänä.
 
@@ -53,7 +53,7 @@ työkalukohtaisissa syventävissä ohjeissa:
 
 - [Claude Coden määritykset](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI:n määritykset](./CODEX-CLI-CONFIGURATION.md)
-- [Etätila](./REMOTE-MODE.md) — ohjaa OmniRoute-etäinstanssia (VPS / Tailnet) kannettavaltasi
+- [Etätila](./REMOTE-MODE.md) — ohjaa 67router-etäinstanssia (VPS / Tailnet) kannettavaltasi
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot-laajennus; se voi suorittaa myös nämä
   `setup-*`-komennot puolestasi editorin sisältä
 
@@ -89,7 +89,7 @@ palvelimelta ja kirjoittaa määritykset paikallisesti.
 
 Huomautuksia valitsimista (vahvistettu komentojen lähdekoodista):
 
-- `--remote <url>` — hakee luettelon etä-OmniRoutesta (ohittaa `--port`-valitsimen
+- `--remote <url>` — hakee luettelon etä-67routerista (ohittaa `--port`-valitsimen
   ja aktiivisen kontekstin). `--api-key <key>` antaa kyseisen palvelimen
   tunnistetiedon (oletuksena `OMNIROUTE_API_KEY`-ympäristömuuttuja tai aktiivisen kontekstin tunniste).
 - `--only <patterns>` — pilkuin erotetut osamerkkijonot; säilyttää vain täsmäävät
@@ -110,7 +110,7 @@ Huomautuksia valitsimista (vahvistettu komentojen lähdekoodista):
   **codex** argumenttien `-c model_providers.omniroute.*` kautta. **Qwen on ainoa
   suorituskohde, jossa `--model` on ehdottomasti pakollinen** — `omniroute run qwen` ilman sitä päättyy
   koodilla `2` ja antaa yksiselitteisen virheilmoituksen.
-- `--port <port>` — paikallisen OmniRouten portti (oletus `20128`, ohitetaan, kun `--remote`
+- `--port <port>` — paikallisen 67routerin portti (oletus `20128`, ohitetaan, kun `--remote`
   on asetettu). Käytettävissä kaikissa `setup-*`-komennoissa ja molemmissa käynnistimissä.
 - `omniroute run` -komennon poistumiskoodit: alikomentona käynnistetyn CLI:n oma poistumiskoodi välitetään
   sellaisenaan; `2` = virheelliset argumentit (tukematon kohde, puuttuva pakollinen
@@ -155,7 +155,7 @@ eikä niitä esitetä käynnistettävinä kohteina.
 
 ## Paikallinen käyttö
 
-Kun OmniRoute on käynnissä osoitteessa `localhost:20128`, suorita vain työkalusi
+Kun 67router on käynnissä osoitteessa `localhost:20128`, suorita vain työkalusi
 asennuskomento. Luettelo haetaan paikalliselta palvelimelta.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 Käynnistä kirjoittamatta lainkaan määrityksiä (vain ympäristömuuttujien syöttö):
 
 ```bash
-omniroute launch                 # Claude Code → paikallinen OmniRoute
-omniroute launch-codex           # Codex CLI → paikallinen OmniRoute
+omniroute launch                 # Claude Code → paikallinen 67router
+omniroute launch-codex           # Codex CLI → paikallinen 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Etäkäyttö
 
-Kohdista mikä tahansa asennuskomento etäpalvelimen OmniRouteen käyttämällä valintoja `--remote` + `--api-key`. Luettelo haetaan etäpalvelimelta, ja määritykset kirjoitetaan paikalliselle koneellesi.
+Kohdista mikä tahansa asennuskomento etäpalvelimen 67routeriin käyttämällä valintoja `--remote` + `--api-key`. Luettelo haetaan etäpalvelimelta, ja määritykset kirjoitetaan paikalliselle koneellesi.
 
 ```bash
 # OpenCode etä-VPS:ää vasten, säilytä vain glm/kimi-mallit
@@ -244,7 +244,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Molemmat muodot kirjoittavat yhden 5dive-**todennusprofiilin**, minkä jälkeen jokainen kyseiseen
-profiiliin sidottu `claude`-paikka kommunikoi OmniRouten kanssa. Tälle kohteelle on ominaista kolme asiaa:
+profiiliin sidottu `claude`-paikka kommunikoi 67routerin kanssa. Tälle kohteelle on ominaista kolme asiaa:
 
 - **Se suoritetaan parven isäntäkoneessa root-käyttäjänä.** 5diven verbit käsittelevät paikallisia systemd-yksiköitä
   ja root-käyttäjän omistamaa tilahakemistoa; etätilaa ei ole. Resepti käynnistää itsensä uudelleen
@@ -262,7 +262,7 @@ profiiliin sidottu `claude`-paikka kommunikoi OmniRouten kanssa. Tälle kohteell
 API-avain annetaan 5divelle **vakiosyötteen** kautta (`--api-key=-`), joten se ei koskaan näy
 `ps`-tulosteessa.
 
-Kun profiili kohdistetaan yksittäisen mallin sijasta OmniRoute-**yhdistelmään**, parvi saa
+Kun profiili kohdistetaan yksittäisen mallin sijasta 67router-**yhdistelmään**, parvi saa
 palveluntarjoajan vikasietoisen vaihdon: kun ensisijainen päätepiste kaatui kokonaan kesken vuoron
 kohteessa [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) tallennetussa ajossa, agentti suoritti
 jäljellä olevat vaiheensa varapalvelussa eikä tuonut käyttökatkoa koskaan näkyviin.
@@ -271,7 +271,7 @@ jäljellä olevat vaiheensa varapalvelussa eikä tuonut käyttökatkoa koskaan n
 
 ## Perus-URL-käytännöt (mitkä työkalut tarvitsevat `/v1`:n)
 
-OmniRoute tarjoaa OpenAI-rajapinnan polussa `/v1`, Anthropic-rajapinnan juuressa
+67router tarjoaa OpenAI-rajapinnan polussa `/v1`, Anthropic-rajapinnan juuressa
 ja natiivin Gemini-rajapinnan polussa `/v1beta`. Jokainen integraatio on määritetty työkalun
 odottamaan muotoon (vahvistettu komentojen lähdekoodista):
 
@@ -293,7 +293,7 @@ odottamaan muotoon (vahvistettu komentojen lähdekoodista):
 ## Natiivien riippuvuuksien säilyttäminen päivityksessä: `--include=optional`
 
 Kun päivität komennolla `omniroute update` (vahvistamisen jälkeen tai käyttäen valitsinta `--apply`),
-OmniRoute suorittaa asennuksen sisäänrakennetulla valitsimella `--include=optional`:
+67router suorittaa asennuksen sisäänrakennetulla valitsimella `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -320,14 +320,14 @@ versio on vanhentunut), `--apply` (asenna ilman vahvistuspyyntöä), `--changelo
 
 Sopimus on vahvistettu versiota `@google/gemini-cli` 0.50.0 vasten: CLI noudattaa
 `GOOGLE_GEMINI_BASE_URL`-muuttujaa ja lähettää sitä vasten pyynnön `POST /v1beta/models/<model>:generateContent`
-(sekä `:streamGenerateContent?alt=sse`) — täsmälleen OmniRouten natiiviin
+(sekä `:streamGenerateContent?alt=sse`) — täsmälleen 67routerin natiiviin
 Gemini-rajapintaan (`/v1beta`). `omniroute run gemini` määrittää tämän automaattisesti:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktiivinen OmniRouten perus-URL (juuri, ei `/v1`:tä);
-- `GEMINI_API_KEY` → selvitetty OmniRoute-tunnistetieto (valitsin/ympäristö/konteksti);
+- `GOOGLE_GEMINI_BASE_URL` → aktiivinen 67routerin perus-URL (juuri, ei `/v1`:tä);
+- `GEMINI_API_KEY` → selvitetty 67router-tunnistetieto (valitsin/ympäristö/konteksti);
 - **tilapäinen eristetty `GEMINI_CLI_HOME`**, jonka `.gemini/settings.json`
   valitsee `gemini-api-key`-todennuksen, jotta tallennettu Google OAuth -istunto (Code Assist)
-  ei koskaan ohita OmniRouteen suunnattua käynnistystä — poistetaan ohjelman sulkeuduttua;
+  ei koskaan ohita 67routeriin suunnattua käynnistystä — poistetaan ohjelman sulkeuduttua;
 - **ympäristön siisteys**: aliprosessin ympäristöstä poistetaan `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` ja `GOOGLE_GENAI_USE_GCA` (jotka ohjaisivat
   todennuksen Vertexiin tai Code Assistiin), ja `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -351,7 +351,7 @@ kohteelle `/dashboard/acp-agents`.
 
 Deterministiset käynnistyssuunnitelman regressiotestit suoritetaan CI:ssä (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). OIKEIDEN binääritiedostojen validoimiseksi OIKEAA
-OmniRoute-palvelinta vasten valinnainen testikehys sijaitsee tiedostossa
+67router-palvelinta vasten valinnainen testikehys sijaitsee tiedostossa
 `tests/integration/upstream-cli-smoke.int.test.ts`. Sitä ei koskaan suoriteta automaattisesti
 (jokainen osatesti ohitetaan, ellei `RUN_CLI_SMOKE=1`), se välittää tunnistetiedon ympäristömuuttujan
 NIMENÄ (ei koskaan arvona), peittää avaimen muotoiset merkkijonot kaikesta tallennetusta tulosteesta, ohittaa

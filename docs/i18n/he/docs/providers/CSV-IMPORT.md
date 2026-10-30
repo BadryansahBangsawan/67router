@@ -25,7 +25,7 @@
 הורידו קובץ התחלתי מחלון הייבוא (**הורדת תבנית CSV**). לדוגמה:
 
 ```csv
-# ייבוא ספקים של OmniRoute (עמודות לפי מיקום)
+# ייבוא ספקים של 67router (עמודות לפי מיקום)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

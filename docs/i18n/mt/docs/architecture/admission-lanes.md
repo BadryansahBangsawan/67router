@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute għandu **żewġ** sistemi ta’ korsiji lokali għall-proċess b’ambiti differenti. Dawn huma
+67router għandu **żewġ** sistemi ta’ korsiji lokali għall-proċess b’ambiti differenti. Dawn huma
 komplementari; l-operaturi għandhom ikunu jafu liema waħda qed jaraw.
 
 ## 1. Ammissjoni fil-livell tal-byte għall-proċess kollu (`chatBodyAdmission.ts`)

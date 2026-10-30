@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` ļauj īstajai Claude Code izpildvidei izmantot OmniRoute lokālo Anthropic
+`devin-cli-agentic` ļauj īstajai Claude Code izpildvidei izmantot 67router lokālo Anthropic
 Messages galapunktu, kamēr oficiālā Devin CLI nodrošina modeļa atbildes, izmantojot ACP stdio. Tas
 nemaina esošos Anthropic, Claude OAuth, Claude Web vai `devin-cli` nodrošinātājus.
 
@@ -19,7 +19,7 @@ rīki, to neizvēlētos.
 > `3000.2.17` un modeli `swe-1-7-lightning`; šī pēdējā tiešsaistes izpilde apstiprināja klienta pārvaldītus `Read`,
 > `Edit` un `Bash` soļus, veiksmīgus `npm test` rezultātus, projekta komandu un prasmju
 > atrašanu, maršrutēšanu tikai caur Devin un nulles izejošo datplūsmu uz Claude. Pēc tam fiksētā versija tika paaugstināta uz `2.1.258`
-> (CLI paaudzi, ko atdarina OmniRoute Claude identitāte, un pirmo laidienu, kas iebūvēti
+> (CLI paaudzi, ko atdarina 67router Claude identitāte, un pirmo laidienu, kas iebūvēti
 > nodrošina Fable 5.1 līmeni). Jaunajai fiksētajai versijai piesaistītajā bāzes attēlā tika
 > pārbaudīts instalēšanas slānis un `claude --version`, un sekmīgi darbojas tilta vienību testu komplekts, `compose config` un
 > statiskais izolācijas apliecinājums, taču bezsaistes imitācijas scenārijs un tiešsaistes trīs scenāriju
@@ -52,11 +52,11 @@ Parsētājs katrā modeļa solī pieņem vienu atsevišķu `<tool>{...}</tool>` 
 nosaukumu, salīdzinot to ar pieprasījuma rīku sarakstu, validē argumentus atbilstoši attiecīgā rīka JSON
 Schema, noraida stāstījuma un darbību sajaukumu un pieļauj vienu ierobežotu labojumu. Pēc tam Claude Code
 lokāli izpilda iegūto Anthropic `tool_use` un nosūta `tool_result` atpakaļ caur
-OmniRoute.
+67router.
 
 ## Automātiskā maršrutēšana
 
-Nodrošinātāju var iekļaut OmniRoute `auto/*` kandidātu kopās, ja tas nav bloķēts.
+Nodrošinātāju var iekļaut 67router `auto/*` kandidātu kopās, ja tas nav bloķēts.
 Atbilstība kandidāta prasībām negarantē izvēli: kombinācijas maršrutēšanas stratēģija (piemēram,
 pēdējais zināmais darbspējīgais variants) var dot priekšroku citam nodrošinātājam. Izmantojiet `dva/<model>` vai kombināciju, kurā
 Devin ir pirmais, ja nepieciešams, lai katrs pieprasījums tiktu maršrutēts caur Devin.
@@ -68,16 +68,16 @@ aizliegtiem. Compose pakalpojumi:
 
 - darbojas ar UID/GID `10001:10001`, tikai lasāmu saknes failu sistēmu, noņemtām iespējām un
   `no-new-privileges`;
-- izmanto privātu `/home/bridge`, atsevišķu Claude konfigurācijas sējumu, izolētus OmniRoute datus
+- izmanto privātu `/home/bridge`, atsevišķu Claude konfigurācijas sējumu, izolētus 67router datus
   un atsevišķu `devin-auth` sējumu;
 - montē tikai vienreizlietojamas `.sandbox` darbvietas/pierādījumus;
 - nemontē resursdatora mājas direktoriju, Keychain, SSH, mākoņpakalpojumu akreditācijas datus vai Docker ligzdu;
 - izveido precīzi definētas vides un noņem Anthropic API/OAuth/maršrutēšanas mainīgos;
 - novirza Claude Code secinājumu izpildi tikai uz `http://omniroute:20128`, izmantojot tikai lokālu atslēgu.
 
-Bezsaistes profils izmanto iekšēju tīklu. Tiešsaistes profilā OmniRoute sasniedz
+Bezsaistes profils izmanto iekšēju tīklu. Tiešsaistes profilā 67router sasniedz
 oficiālos Devin galapunktus tikai caur `network-guard`; nesaistīti galamērķi tiek liegti.
-Claude Code ir atsevišķs visu izejošo savienojumu liegšanas aizsargs, un tas var sasniegt tikai lokālo OmniRoute
+Claude Code ir atsevišķs visu izejošo savienojumu liegšanas aizsargs, un tas var sasniegt tikai lokālo 67router
 pakalpojumu, izmantojot `NO_PROXY`. Aizsargu audita failus montē tikai attiecīgais aizsarga process.
 Skripti pārbauda failu īpašumtiesības, režīmu, saišu skaitu un katru lēmumu, pirms eksportē
 pierādījumus bez marķieriem.

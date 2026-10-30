@@ -5,7 +5,7 @@
 ---
 
 > **Har bir katalog va ildiz fayl uchun bir qatorli tavsif.**
-> Oxirgi yangilanish: 2026-06-28 — OmniRoute v3.8.40
+> Oxirgi yangilanish: 2026-06-28 — 67router v3.8.40
 >
 > Kod bazasida tezkor harakatlanish uchun ushbu xaritadan foydalaning. Batafsil tanishish uchun maxsus hujjatlarga olib boruvchi havolalardan foydalaning.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Toʻliq reliz jarayoni (koʻnikmalar, husky, anʼanaviy commitlar, joylashtirish)                                    |
 | `COVERAGE_PLAN.md`          | Qamrov maqsadlari va joriy holat                                                                                  |
 | `FREE_TIERS.md`             | Saralangan bepul tarif provayderlari (48+ ta bepul + 11 ta OAuth)                                                 |
-| `CLI-TOOLS.md`              | Tashqi CLI integratsiyalari + ichki OmniRoute CLI                                                                 |
+| `CLI-TOOLS.md`              | Tashqi CLI integratsiyalari + ichki 67router CLI                                                                  |
 | `I18N.md`                   | i18n arxitekturasi, til qoʻshish, 67 ta lokal                                                                     |
 | `UNINSTALL.md`              | Toza oʻchirish bosqichlari                                                                                        |
 | `PROVIDER_REFERENCE.md`     | 375 ta provayderdan iborat **avtomatik yaratiladigan** katalog (qayta yaratish: `npm run gen:provider-reference`) |

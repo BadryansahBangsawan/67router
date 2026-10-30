@@ -45,7 +45,7 @@ npm run test:e2e           # προαιρετικό αλλά συνιστάτα�
 εγγύηση WS1.3 (ένα token που έχει διαρρεύσει δεν μπορεί να δημοσιεύσει μόνο του — δεν υπάρχει token).
 
 **Αρχική ρύθμιση μίας φοράς (κάτοχος):** npmjs.com → πακέτο `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: κάτοχος `diegosouzapw`, αποθετήριο `OmniRoute`, ροή εργασίας `npm-publish.yml`
+Publisher_ → GitHub: κάτοχος `diegosouzapw`, αποθετήριο `67router`, ροή εργασίας `npm-publish.yml`
 (περιβάλλον: κανένα). Μέχρι να υπάρχει αυτή η ρύθμιση, το αυτόματο βήμα αποτυγχάνει με `ENEEDAUTH`:
 εκκινήστε το ξανά με `publish_mode=staged` (παρακάτω) ή `direct`.
 

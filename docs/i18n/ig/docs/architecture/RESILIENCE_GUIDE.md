@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nwere usoro resilience atọ dị iche iche mana metụtara ibe ha. Nke ọ bụla nwere oke na ebumnuche dị iche. Jide ha iche iche mgbe ị na-edozi omume routing.
+67router nwere usoro resilience atọ dị iche iche mana metụtara ibe ha. Nke ọ bụla nwere oke na ebumnuche dị iche. Jide ha iche iche mgbe ị na-edozi omume routing.
 
 ![Ihe nlereanya resilience nke ọkwa atọ](../diagrams/exported/resilience-3layers.svg)
 
@@ -190,7 +190,7 @@ Header session-affinity atọ ahụ anaghị ebufe gaa upstream — ndị execut
 
 ### Mgbazinye pụrụ iche nke njikọ seson a na-achịkwa
 
-**Oke ọrụ:** otu onye ahịa HTTP a na-achịkwa na-arụ ọrụ/seson nwe otu njikọ OmniRoute ruru eru.
+**Oke ọrụ:** otu onye ahịa HTTP a na-achịkwa na-arụ ọrụ/seson nwe otu njikọ 67router ruru eru.
 
 **Ebumnuche:** inye nnwere onwe njikọ pụrụ iche nke na-adịgide maka ndị ahịa chọrọ ihe
 mgbochi ụzọ (routing fence) siri ike n'ofe arịrịọ. Nke a dị iche na mmado seson, nke bụ naanị mmasị ịga n'ihu nke na-adịghị siri ike:
@@ -206,7 +206,7 @@ ka ndị isi ma nwee ike ibufe ọgbọ otu ahụ gaa na njikọ ọzọ ruru er
 
 Usoro ndụ ya bụ `POST /api/v1/session-leases` nwere omume JSON `acquire`, `renew`, na `release`. Arịrịọ inference e jikwara na-egosi uru `X-OmniRoute-Lease-Owner` na-apụghị ịgụ na `X-OmniRoute-Lease-Generation` ziri ezi. Onye nwe ya na-eji `vlo_` nke mkpụrụedemede base64url 43 na-eso; naanị hash SHA-256 ya ka echekwara. Fence nkesa ikpeazụ ọ bụla na-ejikwa ID igodo API a kwadoro na ID njikọ na-arụ ọrụ. A na-ewepụ ndị isi njikwa lease na ndekọ, nseta arịrịọ echekwara, na ndị isi onye nmezu n'elu.
 
-Ọ bụrụ na ụzọ nhazi nkịtị nwere ndị ọmụmà e jikwara ruru eru mana lease ndị ọzọ na-arụ ọrụ ejirila ndị niile nwere onwe ha, OmniRoute na-alọghachi HTTP `429`, koodu lease-capacity-unavailable, ọnọdụ waiting-for-capacity, na `Retry-After` nwere oke nke e sitere na oge mmebi kacha mbụ metụtara ya. Enweghị ndị ruru eru nkịtị abụghị asọmpi lease; ọ na-edebe semantics njehie ụzọ nhazi o nwere ugbu a.
+Ọ bụrụ na ụzọ nhazi nkịtị nwere ndị ọmụmà e jikwara ruru eru mana lease ndị ọzọ na-arụ ọrụ ejirila ndị niile nwere onwe ha, 67router na-alọghachi HTTP `429`, koodu lease-capacity-unavailable, ọnọdụ waiting-for-capacity, na `Retry-After` nwere oke nke e sitere na oge mmebi kacha mbụ metụtara ya. Enweghị ndị ruru eru nkịtị abụghị asọmpi lease; ọ na-edebe semantics njehie ụzọ nhazi o nwere ugbu a.
 
 Usoro ndị metụtara ka nọ iche iche:
 
@@ -227,7 +227,7 @@ mkpochi ga-edebe na ya (`resolveLockoutScope()` na `open-sse/services/accountFal
   maka codex ọ bụ oke `codex` / `spark` niile (model `gpt-5*` ọ bụla nke
   connection ahụ), maka ndị provider ndị ọzọ `getQuotaScopedModelForProvider()`.
 - `404` na-akpọchie model ahụ naanị ya (`getModelLockKey()` na-akpọwanyẹ `not_found`).
-- Ọnọdụ ọ bụla ọzọ — ndaa `5xx` nke transport/server na `502` nke OmniRoute
+- Ọnọdụ ọ bụla ọzọ — ndaa `5xx` nke transport/server na `502` nke 67router
   nwe onwe ya mepụtara site n'ọtụlele ọdịmma — na-akpọchie naanị **ọkọwaziri**
   atọ provider/connection/model. Iyi ọjọọ na otu model abụghị ihe akaebe
   banyere quota nke akaụntụ ahụ; tupu iwu a, otu nzaghachi efu na
@@ -344,7 +344,7 @@ Debe ya na modal njikọ (**Ndọpụta oke ọnụego → Oke arịrị otu oge
 
 - **Nke njikọ dum vs nke nlereanya pụrụ iche:** `maxConcurrent` ka na-anọgide dị ka oke ekerịta nke njikọ dum. Mgbe ha abụọ na-adị irè, a na-enweta ụzọ abụọ ahụ otu oge n'otu ụzọ mejupụtara (`global → provider → account → model`); omume dị irè bụ oke kacha sie ike nke na-adị irè.
 - **Nnabata igodo-nlereanya ziri ezi:** igodo ahụ bụ eriri nlereanya e nyefere onye na-arụ ọrụ mgbe routing dochachara — n'ọtụtụ oge ọ bụ id nlereanya upstream dị larịị (`glm-5`), ọ bụghị aha ọzọ `provider/model` n'akụkụ onye ahịa (`zai/glm-5` adabaghị na `glm-5`). Ọnụ ọgụgụ ndị ahụ bụ oke arịrị otu oge nke ọnụọgụ ezi karịa efu.
-- **Nhazi ahịrị n'ebe ahụ, enweghị nchọpụta:** arịrị karịrị oke na-eche n'ahịrị n'ebe ahụ na ọdịmma ahịrị/timeout dị adị (njehie nnabata edepụtara `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute anaghị achọpụta ma ọ bụ nyochaa iwu upstream — ọ na-amanye oke ndị onye ọrụ haziri ziri ezi. Ụzọ nlereanya jupụtara anaghị agbanyụ onye na-enye ma ọ bụ mepụta mkpọchị nlereanya na-adịgide adịgide; omume upstream 429/cooldown/fallback ka na-anọgide dị ka nchekwa njehie ikpeazụ.
+- **Nhazi ahịrị n'ebe ahụ, enweghị nchọpụta:** arịrị karịrị oke na-eche n'ahịrị n'ebe ahụ na ọdịmma ahịrị/timeout dị adị (njehie nnabata edepụtara `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router anaghị achọpụta ma ọ bụ nyochaa iwu upstream — ọ na-amanye oke ndị onye ọrụ haziri ziri ezi. Ụzọ nlereanya jupụtara anaghị agbanyụ onye na-enye ma ọ bụ mepụta mkpọchị nlereanya na-adịgide adịgide; omume upstream 429/cooldown/fallback ka na-anọgide dị ka nchekwa njehie ikpeazụ.
 - **Oke nke njikọ ọ bụla, usoro ọ bụla:** oke ndị ahụ bụ nke njikọ nchekwa data ọ bụla ma e jide ha n'echeta, ya mere njikọ abụọ na-eji otu igodo API upstream ahụ ọzọ anaghị arụkọ ọrụ ọnụ.
 - **Enweghị nhazi pụtara enweghị mgbanwe:** ịhapụ map ahụ (ma ọ bụ ịhapụ oghere dashboard n'efu) anaghị etinye ụzọ nlereanya ọ bụla. Nhazi nlereanya na-ekwupụtaghị oke ọ bụla zuru ụwa ọnụ nke onye na-enye:
 
@@ -415,7 +415,7 @@ Nyocha nnabata n'onwe ya bụ pure function (`open-sse/services/rateLimitManager
 ### Nta Nchekwa Auto-Enable Rate-Limit & Nchebe Njikọ (`rateLimitProtection`)
 
 **Nta nchekwa auto-enable** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, ndabara `true`):
-N'ụzọ ndabara, OmniRoute na-arụsi nchebe queue rate-limit n'ụzọ akpaghị aka maka njikọ ndị provider API-key niile na-arụ ọrụ (`getProviderCategory(provider) === "apikey"`). Nke a na-ahụ na a na-etinye arịrịọ na-abata n'ugboro API keys upstream ndị na-adị mfe mmetụta rate n'queue ma na-achịkwa ha site na Bottleneck kama ịwụba n'ime njehie 429 upstream. Enwere ike ịkagbu nta nchekwa ahụ site na mgbanwe gburugburu `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` na-agbanyụ, `true`/`1`/`on` na-amanye), nke na-ewere ọnọdụ n'elu ntọala dashboard echekwara (**Ntọala → Nkwusike** / `PATCH /api/resilience`).
+N'ụzọ ndabara, 67router na-arụsi nchebe queue rate-limit n'ụzọ akpaghị aka maka njikọ ndị provider API-key niile na-arụ ọrụ (`getProviderCategory(provider) === "apikey"`). Nke a na-ahụ na a na-etinye arịrịọ na-abata n'ugboro API keys upstream ndị na-adị mfe mmetụta rate n'queue ma na-achịkwa ha site na Bottleneck kama ịwụba n'ime njehie 429 upstream. Enwere ike ịkagbu nta nchekwa ahụ site na mgbanwe gburugburu `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` na-agbanyụ, `true`/`1`/`on` na-amanye), nke na-ewere ọnọdụ n'elu ntọala dashboard echekwara (**Ntọala → Nkwusike** / `PATCH /api/resilience`).
 
 **Nkọwa nke `rateLimitProtection` nke njikọ ọ bụla:**
 A na-esochi nchebe rate-limit nke njikọ ọ bụla site na ubi boolean `rateLimitProtection` dị na njikọ ndị provider (echekwa ya dị ka `rate_limit_protection` na SQLite):
@@ -748,7 +748,7 @@ Oke eziokwu:
 > ntụziaka agent nọgide n'okpuru ego context 40k. Ọ bụ nlele mkpirikpi nke na-eche
 > ihu agent nke ngalaba ndị dị n'elu; ngalaba ndị a na-agụ ọnụ ka ọ bụrụ ntụaka zuru oke.
 
-OmniRoute nwere usoro atọ metụtara ibe ha ma dị iche maka ọdịda nwa oge. Kwe ka
+67router nwere usoro atọ metụtara ibe ha ma dị iche maka ọdịda nwa oge. Kwe ka
 oke ha dị iche mgbe ị na-achọpụta mmejọ omume routing. Lee
 [diagram resilience 3-ọkwa](../diagrams/exported/resilience-3layers.svg)
 (isi: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

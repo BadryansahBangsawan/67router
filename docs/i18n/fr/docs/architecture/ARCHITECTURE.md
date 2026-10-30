@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Français)
+# 67router Architecture (Français)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Dernière mise à jour : 2026-06-28_
 
 ## Résumé exécutif
 
-OmniRoute est une passerelle locale de routage d’IA et un tableau de bord basés sur Next.js.
+67router est une passerelle locale de routage d’IA et un tableau de bord basés sur Next.js.
 Il fournit un point de terminaison unique compatible avec OpenAI (`/v1/*`) et achemine le trafic entre plusieurs fournisseurs en amont, avec traduction, repli, actualisation des jetons et suivi de l’utilisation.
 
 Fonctionnalités principales :
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Tableau de bord du navigateur]
     end
 
-    subgraph Router[Processus local OmniRoute]
+    subgraph Router[Processus local 67router]
         API[API de compatibilité V1\n/v1/*]
         DASH[Tableau de bord + API de gestion\n/api/*]
         CORE[Cœur SSE + traduction\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ Modules des fournisseurs OAuth (27 fichiers individuels sous `src/lib/oauth/prov
 
 ## 5) Services intégrés (v3.8.4)
 
-OmniRoute peut installer, superviser et acheminer les requêtes vers des processus locaux d’outils d’IA
+67router peut installer, superviser et acheminer les requêtes vers des processus locaux d’outils d’IA
 appelés **services intégrés**. Cinq sont fournis : 9Router, CLIProxyAPI, Bifrost, Mux et Dario.
 
 Couches de l’architecture :
@@ -438,7 +438,7 @@ L’espace de noms `src/domain/` centralise les décisions de politique afin que
 - Cache des quotas : `src/domain/quotaCache.ts`
 - État de dégradation : `src/domain/degradation.ts`
 - Audit de configuration : `src/domain/configAudit.ts`
-- Générateur de métadonnées de réponse OmniRoute : `src/domain/omnirouteResponseMeta.ts`
+- Générateur de métadonnées de réponse 67router : `src/domain/omnirouteResponseMeta.ts`
 - Sous-système d’évaluation : `src/domain/assessment/` — tâches d’évaluation périodiques
 
 ### E. Pipeline d’autorisation
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Navigateur du tableau de bord]
     end
 
-    subgraph ContainerOrProcess[Environnement d’exécution OmniRoute]
+    subgraph ContainerOrProcess[Environnement d’exécution 67router]
         Next[Serveur Next.js\nPORT=20128]
         Core[Noyau SSE + exécuteurs]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Tous les autres fournisseurs (y compris les nœuds compatibles personnalisés) u
 ## Matrice de compatibilité des fournisseurs
 
 > **Remarque :** La matrice ci-dessous est un échantillon représentatif des 351 fournisseurs enregistrés dans
-> OmniRoute v3.8.0. Pour consulter la liste de référence mise à jour en continu, reportez-vous à
+> 67router v3.8.0. Pour consulter la liste de référence mise à jour en continu, reportez-vous à
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (générée automatiquement) ou à la source de
 > vérité située dans `src/shared/constants/providers.ts` (validée par Zod lors du chargement).
 
@@ -1116,7 +1116,7 @@ La capture détaillée des charges utiles des requêtes stocke jusqu’à quatre
 - requête brute reçue du client
 - requête traduite effectivement envoyée en amont
 - réponse du fournisseur reconstruite au format JSON ; les réponses diffusées en continu sont compactées pour ne conserver que le récapitulatif final et les métadonnées du flux
-- réponse client finale renvoyée par OmniRoute ; les réponses diffusées en continu sont stockées sous la même forme de récapitulatif compacté
+- réponse client finale renvoyée par 67router ; les réponses diffusées en continu sont stockées sous la même forme de récapitulatif compacté
 
 ## Limites sensibles à la sécurité
 

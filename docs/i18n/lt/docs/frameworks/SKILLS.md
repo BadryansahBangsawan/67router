@@ -7,29 +7,29 @@
 > **Tiesos šaltinis:** `src/lib/skills/` ir `src/app/api/skills/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-OmniRoute suteikia išplečiamą įgūdžių sistemą, leidžiančią kalbos modeliams (ir operatoriams) komponuoti pakartotinai naudojamas galimybes — nuo failų sistemos skaitymo ir HTTP užklausų iki izoliuoto kodo vykdymo bei kruopščiai atrinktų prekyvietės įgūdžių.
+67router suteikia išplečiamą įgūdžių sistemą, leidžiančią kalbos modeliams (ir operatoriams) komponuoti pakartotinai naudojamas galimybes — nuo failų sistemos skaitymo ir HTTP užklausų iki izoliuoto kodo vykdymo bei kruopščiai atrinktų prekyvietės įgūdžių.
 
-Įgūdis yra versijuotas, schema apibrėžtas darbo vienetas. OmniRoute gali įtraukti įgūdžius kaip įrankių apibrėžtis į siunčiamas užklausas, perimti iš modelio grįžtančius įrankių iškvietimus, paleisti atitinkamą apdorojimo funkciją ir perduoti rezultatą atgal modeliui, kad pokalbis galėtų tęstis. Modelis niekada nemato realizacijos — tik įrankio sąsają.
+Įgūdis yra versijuotas, schema apibrėžtas darbo vienetas. 67router gali įtraukti įgūdžius kaip įrankių apibrėžtis į siunčiamas užklausas, perimti iš modelio grįžtančius įrankių iškvietimus, paleisti atitinkamą apdorojimo funkciją ir perduoti rezultatą atgal modeliui, kad pokalbis galėtų tęstis. Modelis niekada nemato realizacijos — tik įrankio sąsają.
 
 ---
 
 ## Agentų įgūdžiai ir Omni įgūdžiai
 
-OmniRoute turi dvi skirtingas, tačiau viena kitą papildančias įgūdžių sistemas:
+67router turi dvi skirtingas, tačiau viena kitą papildančias įgūdžių sistemas:
 
 | Aspektas        | **Omni įgūdžiai** (šis dokumentas)                                        | **Agentų įgūdžiai**                                                                            |
 | :-------------- | :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------- |
 | Paskirtis       | LLM įrankių įtraukimas + izoliuotas vykdymas                              | SKILL.md katalogas, skirtas išoriniams agentams aptikti ir naudoti                             |
 | Tiesos šaltinis | `src/lib/skills/` + prekyvietė                                            | `src/lib/agentSkills/` + katalogas `skills/`                                                   |
 | Veikimo režimas | Įtraukiami į siunčiamas užklausas, vykdomi per įrankių iškvietimo įvykius | Statinis Markdown katalogas + REST/MCP/A2A aptikimo galiniai taškai                            |
-| Kas naudoja     | Pats OmniRoute (kombinuotas maršrutizavimas, gaunami LLM iškvietimai)     | Išoriniai agentai, MCP klientai, A2A orkestratoriai                                            |
+| Kas naudoja     | Pats 67router (kombinuotas maršrutizavimas, gaunami LLM iškvietimai)      | Išoriniai agentai, MCP klientai, A2A orkestratoriai                                            |
 | Kiekis          | Kintamas (priklauso nuo prekyvietės)                                      | 43 katalogo įrašai (22 API + 20 CLI + 1 konfigūracijos)                                        |
 | Formatas        | `SkillDefinition` su įrankio schema + apdorojimo funkcija                 | `SKILL.md` metaduomenų antraštė + Markdown turinys                                             |
 | Aptikimas       | `/api/skills/*` REST + `omniroute_skills_*` MCP įrankiai                  | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP įrankiai + A2A `list-capabilities` |
 
-**Omni įgūdžiai** yra vykdymo variklis — jie apibrėžia, ką OmniRoute _gali atlikti_, kai LLM iškviečia įrankį.
+**Omni įgūdžiai** yra vykdymo variklis — jie apibrėžia, ką 67router _gali atlikti_, kai LLM iškviečia įrankį.
 
-**Agentų įgūdžiai** yra dokumentacijos katalogas — struktūrizuotais SKILL.md failais, kuriuos galima tiesiogiai įtraukti į agentų užklausas, jie išoriniams agentams paaiškina, _kaip naudoti_ OmniRoute REST API ir CLI.
+**Agentų įgūdžiai** yra dokumentacijos katalogas — struktūrizuotais SKILL.md failais, kuriuos galima tiesiogiai įtraukti į agentų užklausas, jie išoriniams agentams paaiškina, _kaip naudoti_ 67router REST API ir CLI.
 
 Informacijos apie Agentų įgūdžių katalogą, generatorių, MCP įrankius ir A2A įgūdį rasite [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Informacijos apie Agentų įgūdžių katalogą, generatorių, MCP įrankius ir 
 
 Tame pačiame registre naudojami trys įgūdžių šaltiniai:
 
-1. **Integruotieji įgūdžiai** (`src/lib/skills/builtins.ts`) — pateikiami kartu su OmniRoute. Apima dažniausiai pasitaikančius atvejus:
+1. **Integruotieji įgūdžiai** (`src/lib/skills/builtins.ts`) — pateikiami kartu su 67router. Apima dažniausiai pasitaikančius atvejus:
    - `file_read`, `file_write` — kiekvienam API raktui skirta izoliuota darbo sritis, esanti `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — siunčiamas HTTP ryšys per `safeOutboundFetch`, naudojant `guard: "public-only"`
    - `web_search` — keičiamas paieškos teikėjas su podėliu (`executeWebSearch`)
    - `eval_code` — Docker aplinkoje izoliuotas `node` arba `python` vykdymas
    - `execute_command` — Docker aplinkoje izoliuota apvalkalo komanda
    - `browser` — Playwright pagrįsta bazinė struktūra, pagal numatytąsias nuostatas išjungta (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute prekyvietė) — gaunami iš `https://skillsmp.com/api/v1/skills/search`. Nustatymuose būtinas `skillsmpApiKey`.
+2. **SkillsMP** (67router prekyvietė) — gaunami iš `https://skillsmp.com/api/v1/skills/search`. Nustatymuose būtinas `skillsmpApiKey`.
 3. **SkillsSH** (`skills.sh` bendruomenės katalogas) — gaunami iš `https://skills.sh/api/search`. Autentifikavimas nereikalingas; SKILL.md turinys gaunamas tiesiogiai iš GitHub neapdoroto turinio.
 
 Vienas „aktyvus teikėjas“ nustato, iš kurio katalogo valdymo skydelis diegia įgūdžius (`src/lib/skills/providerSettings.ts`). Jį galite pakeisti skiltyje **Nustatymai → Atmintis ir įgūdžiai**. Numatytoji reikšmė: `skillsmp`.
@@ -442,7 +442,7 @@ slankiojo kablelio `0.6` tipo slenksčio ir vertinimo faile `registry.ts` nėra.
 
 ## Integruotų įgūdžių katalogas
 
-„OmniRoute“ pateikiamas su kruopščiai atrinktu integruotų įgūdžių rinkiniu, esančiu `src/lib/skills/builtin/`. Dažniausiai naudojami:
+„67router“ pateikiamas su kruopščiai atrinktu integruotų įgūdžių rinkiniu, esančiu `src/lib/skills/builtin/`. Dažniausiai naudojami:
 
 ### Naršyklės automatizavimo įgūdis
 

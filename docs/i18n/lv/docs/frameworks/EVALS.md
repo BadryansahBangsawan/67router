@@ -7,7 +7,7 @@
 > **Patiesais avots:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Pēdējo reizi atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute ietver vispārīgu novērtēšanas ietvaru, ko varat izmantot, lai salīdzinoši pārbaudītu maršrutēšanas konfigurācijas, atsevišķus pakalpojumu sniedzējus/modeļus vai komplektācijā iekļautos „zelta kopas” komplektus.
+67router ietver vispārīgu novērtēšanas ietvaru, ko varat izmantot, lai salīdzinoši pārbaudītu maršrutēšanas konfigurācijas, atsevišķus pakalpojumu sniedzējus/modeļus vai komplektācijā iekļautos „zelta kopas” komplektus.
 Izmantojiet to, lai pārbaudītu maršrutēšanas izmaiņas, validētu jaunus pakalpojumu sniedzējus un kontrolētu laidienus pirms to novirzīšanas uz produkcijas datplūsmu.
 
 Ietvaru veido:

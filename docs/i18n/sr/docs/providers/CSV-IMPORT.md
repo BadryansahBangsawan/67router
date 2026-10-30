@@ -25,7 +25,7 @@ Prvi red čija prva kolona sadrži doslovnu reč `provider` (bez obzira na veli�
 Preuzmite početnu datoteku iz modalnog prozora za uvoz (**Preuzmi CSV šablon**). Primer:
 
 ```csv
-# Uvoz pružalaca usluga u OmniRoute (pozicione kolone)
+# Uvoz pružalaca usluga u 67router (pozicione kolone)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

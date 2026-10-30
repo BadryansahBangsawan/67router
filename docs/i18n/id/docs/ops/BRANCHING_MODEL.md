@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute menggunakan model rilis **siklus-paralel**: sebuah branch khusus `release/vX.Y.Z`
+67router menggunakan model rilis **siklus-paralel**: sebuah branch khusus `release/vX.Y.Z`
 untuk siklus aktif, `main` untuk lini yang telah dipublikasikan, dan tag permanen
 `vX.Y.Z` saat siklus tersebut dirilis. Melihat commit masuk ke `release/*` _dan_ ke
 `main` adalah hal yang wajar — bukan kekeliruan.

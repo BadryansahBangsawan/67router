@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ផ្តល់មុខងារ **បង្កើតរូបភាព** របស់គម្រោង Cursor តាម `POST /v1/images/generations` ដោយប្រើ provider id ដូចគ្នានឹងការជជែក៖ `cursor` (ឈ្មោះក្លែងកាត់ `cu`)។
+67router ផ្តល់មុខងារ **បង្កើតរូបភាព** របស់គម្រោង Cursor តាម `POST /v1/images/generations` ដោយប្រើ provider id ដូចគ្នានឹងការជជែក៖ `cursor` (ឈ្មោះក្លែងកាត់ `cu`)។
 
 | វាល                      | តម្លៃ                                                                                     |
 | ------------------------ | ----------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute ផ្តល់មុខងារ **បង្កើតរូបភា�
 
 ## ហេតុអ្វីត្រូវប្រើ Agent CLI
 
-ការជជែក Cursor នៅក្នុង OmniRoute ប្រើ `agent.v1.AgentService/Run` (protobuf)។ ផ្លូវនេះ **បដិសេធ** ឧបករណ៍ client ដែលមានស្រាប់ (shell, write, …)។ ការបង្កើតរូបភាពគឺជាឧបករណ៍ដើមរបស់ Cursor ដែលត្រូវបានប្រតិបត្តិដោយ **`agent` CLI** លើ seat។ ដូច្នេះ image handler នឹងបង្កើត process `agent` ជាមួយ prompt ដែលបានចាក់សោ និង workspace បណ្ដោះអាសន្នដាច់ដោយឡែកសម្រាប់ request នីមួយៗ (មានទម្រង់ដូចគ្នានឹង community seat bridges) ហើយបន្ទាប់មកត្រឡប់ `b64_json` ដែលឆបគ្នាជាមួយ OpenAI។
+ការជជែក Cursor នៅក្នុង 67router ប្រើ `agent.v1.AgentService/Run` (protobuf)។ ផ្លូវនេះ **បដិសេធ** ឧបករណ៍ client ដែលមានស្រាប់ (shell, write, …)។ ការបង្កើតរូបភាពគឺជាឧបករណ៍ដើមរបស់ Cursor ដែលត្រូវបានប្រតិបត្តិដោយ **`agent` CLI** លើ seat។ ដូច្នេះ image handler នឹងបង្កើត process `agent` ជាមួយ prompt ដែលបានចាក់សោ និង workspace បណ្ដោះអាសន្នដាច់ដោយឡែកសម្រាប់ request នីមួយៗ (មានទម្រង់ដូចគ្នានឹង community seat bridges) ហើយបន្ទាប់មកត្រឡប់ `b64_json` ដែលឆបគ្នាជាមួយ OpenAI។
 
 ## ការរឹតបន្តឹងការចូលប្រើ (ច្បាប់តឹងរ៉ឹង #15 + #17)
 
@@ -23,12 +23,12 @@ OmniRoute ផ្តល់មុខងារ **បង្កើតរូបភា�
 
 ## Concurrency gate ស្ថិតនៅកម្រិត module (ដែនកំណត់សម្រាប់ instance តែមួយ)
 
-`CURSOR_IMG_MAX_CONCURRENT` ត្រូវបានអនុវត្តដោយ counter/queue នៅក្នុង memory ដែលមាន scope ត្រឹម Node module instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`)។ វាកំណត់ចំនួនការបង្កើត `agent` ស្របពេលគ្នាបានត្រឹមត្រូវនៅក្នុង process OmniRoute មួយ ប៉ុន្តែ **មិន** សម្របសម្រួលឆ្លងកាត់ process/instance ច្រើនដែលប្រើ Cursor seat ដូចគ្នាទេ (ឧ. deployment ដែលមាន replica ច្រើន)—instance នីមួយៗអនុវត្តដែនកំណត់ឯករាជ្យរបស់ខ្លួន។ សម្រាប់ deployment ដែលមាន instance តែមួយ (លំនាំដើម) ការកំណត់នេះមានភាពត្រឹមត្រូវពេញលេញ។ Deployment ដែលពង្រីកផ្ដេកគួរតែកំណត់ `CURSOR_IMG_MAX_CONCURRENT` ឱ្យទាបសមរម្យសម្រាប់ instance នីមួយៗ ឬបញ្ជូន traffic រូបភាព Cursor ទៅ instance តែមួយ។
+`CURSOR_IMG_MAX_CONCURRENT` ត្រូវបានអនុវត្តដោយ counter/queue នៅក្នុង memory ដែលមាន scope ត្រឹម Node module instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`)។ វាកំណត់ចំនួនការបង្កើត `agent` ស្របពេលគ្នាបានត្រឹមត្រូវនៅក្នុង process 67router មួយ ប៉ុន្តែ **មិន** សម្របសម្រួលឆ្លងកាត់ process/instance ច្រើនដែលប្រើ Cursor seat ដូចគ្នាទេ (ឧ. deployment ដែលមាន replica ច្រើន)—instance នីមួយៗអនុវត្តដែនកំណត់ឯករាជ្យរបស់ខ្លួន។ សម្រាប់ deployment ដែលមាន instance តែមួយ (លំនាំដើម) ការកំណត់នេះមានភាពត្រឹមត្រូវពេញលេញ។ Deployment ដែលពង្រីកផ្ដេកគួរតែកំណត់ `CURSOR_IMG_MAX_CONCURRENT` ឱ្យទាបសមរម្យសម្រាប់ instance នីមួយៗ ឬបញ្ជូន traffic រូបភាព Cursor ទៅ instance តែមួយ។
 
 ## តម្រូវការ
 
 1. គណនី Cursor ដែលបានតភ្ជាប់នៅក្នុង dashboard (OAuth ឬ API key `crsr_…`)។
-2. Cursor Agent binary ដែល OmniRoute process អាចប្រើបាន៖
+2. Cursor Agent binary ដែល 67router process អាចប្រើបាន៖
    - env `CURSOR_AGENT_BIN=/path/to/agent` ឬ
    - `~/.local/bin/agent` ឬ
    - `providerSpecificData.agentBin` នៅលើការតភ្ជាប់ Cursor។

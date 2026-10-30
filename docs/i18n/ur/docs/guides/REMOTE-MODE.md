@@ -4,7 +4,7 @@
 
 ---
 
-اپنے لیپ ٹاپ پر `omniroute` CLI چلائیں جبکہ OmniRoute خود کسی اور جگہ چل رہا ہو
+اپنے لیپ ٹاپ پر `omniroute` CLI چلائیں جبکہ 67router خود کسی اور جگہ چل رہا ہو
 (ایک VPS، ہوم سرور، یا آپ کے Tailnet پر کوئی دوسری مشین)۔ آپ
 `omniroute connect` کے ذریعے ایک بار لاگ اِن کرتے ہیں، اور اس کے بعد **ہر** CLI کمانڈ اسی ریموٹ
 سرور کو ہدف بناتی ہے — وہی کمانڈز، وہی آؤٹ پٹ، بس ریموٹ پر چلائی جاتی ہیں۔
@@ -24,7 +24,7 @@ omniroute configure codex                # ← ریموٹ کیٹلاگ سے مق
 ## یہ کیسے کام کرتا ہے
 
 ```
-آپ کا لیپ ٹاپ                           ریموٹ OmniRoute (VPS)
+آپ کا لیپ ٹاپ                           ریموٹ 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (پاس ورڈ → ٹوکن)           │
 │  context: vps      │ ───────────────►  │ محدود دائرۂ اختیار والا access token بناتا ہے │
@@ -101,13 +101,13 @@ CLI اسے `GET /api/cli/whoami` کے ذریعے توثیق کرتا ہے اور
 ## ریموٹ انسٹالیشن پر Antigravity کو منسلک کرنا
 
 Antigravity، Google کی firstparty/nativeapp رضامندی اسکرین استعمال کرتا ہے۔ Google صرف اسی وقت اجازت کا کوڈ جاری کرتا ہے جب **loopback redirect**
-(`http://127.0.0.1:<port>/callback`) اس براؤزر سے **قابلِ رسائی ہو جو sign-in کی منظوری دیتا ہے**۔ ریموٹ VPS انسٹالیشن پر یہ loopback آپ کی مشین کے بجائے سرور پر موجود ہوتا ہے، اس لیے رضامندی اسکرین **ہمیشہ کے لیے اٹک جاتی ہے اور کبھی کوڈ جاری نہیں کرتی** — عام "callback URL پیسٹ کریں" متبادل میں پیسٹ کرنے کے لیے کچھ نہیں ہوتا۔ (یہ Google کی جانب سے عائد کردہ پابندی ہے: یہی مسئلہ ہر اس proxy میں پیش آتا ہے جو شامل شدہ Antigravity desktop client استعمال کرتا ہے، صرف OmniRoute میں نہیں۔)
+(`http://127.0.0.1:<port>/callback`) اس براؤزر سے **قابلِ رسائی ہو جو sign-in کی منظوری دیتا ہے**۔ ریموٹ VPS انسٹالیشن پر یہ loopback آپ کی مشین کے بجائے سرور پر موجود ہوتا ہے، اس لیے رضامندی اسکرین **ہمیشہ کے لیے اٹک جاتی ہے اور کبھی کوڈ جاری نہیں کرتی** — عام "callback URL پیسٹ کریں" متبادل میں پیسٹ کرنے کے لیے کچھ نہیں ہوتا۔ (یہ Google کی جانب سے عائد کردہ پابندی ہے: یہی مسئلہ ہر اس proxy میں پیش آتا ہے جو شامل شدہ Antigravity desktop client استعمال کرتا ہے، صرف 67router میں نہیں۔)
 
 dashboard آپ کے پھنسنے سے پہلے ہی اس کا پتہ لگا لیتا ہے: کسی non-localhost پتے سے **Providers → Antigravity →
 Connect** کھولنے پر عمومی "callback URL کاپی کریں" نوٹس کی جگہ ذیل کے دو حل دکھائے جاتے ہیں، جن میں آپ کا host اور port پہلے ہی درج ہوتا ہے۔
 (LAN پتہ بھی اسی زمرے میں آتا ہے — اس callback کے لحاظ سے `192.168.x.x` localhost نہیں ہے۔)
 
-Antigravity کو ریموٹ OmniRoute سے منسلک کرنے کے دو معاونت یافتہ طریقے ہیں۔
+Antigravity کو ریموٹ 67router سے منسلک کرنے کے دو معاونت یافتہ طریقے ہیں۔
 
 ### اختیار A — مقامی login helper (تجویز کردہ)
 
@@ -135,7 +135,7 @@ npx omniroute login antigravity --no-push
 #   omniroute-cred-v1.eyJ2IjoxLCJ...
 ```
 
-پھر **ریموٹ** dashboard میں: **Providers → Antigravity → Connect** پر جائیں، اور `omniroute-cred-v1.…` blob کو **Step 2** فیلڈ میں پیسٹ کریں (یہ callback URL یا credential blob، دونوں قبول کرتا ہے)۔ OmniRoute اسے decode کرتا ہے، Cloud Code onboarding کو server-side چلاتا ہے، اور connection کو مستقل طور پر محفوظ کر دیتا ہے۔
+پھر **ریموٹ** dashboard میں: **Providers → Antigravity → Connect** پر جائیں، اور `omniroute-cred-v1.…` blob کو **Step 2** فیلڈ میں پیسٹ کریں (یہ callback URL یا credential blob، دونوں قبول کرتا ہے)۔ 67router اسے decode کرتا ہے، Cloud Code onboarding کو server-side چلاتا ہے، اور connection کو مستقل طور پر محفوظ کر دیتا ہے۔
 
 > blob میں refresh token شامل ہوتا ہے — اسے password کی طرح محفوظ رکھیں۔ push کے طریقے میں اسے آپ کے context کے authenticated connection پر ایک بار بھیجا جاتا ہے؛ paste کے طریقے میں آپ کے dashboard connection پر۔ دونوں صورتوں میں اسے encrypted حالت میں محفوظ کیا جاتا ہے، اور کامیاب push اسے کبھی آپ کے terminal پر پرنٹ نہیں کرتا۔
 
@@ -166,7 +166,7 @@ ssh -L 20128:127.0.0.1:20128 user@your-vps
 ## ریموٹ انسٹالیشن پر Codex / Grok کو منسلک کرنا (فکسڈ loopback فراہم کنندگان)
 
 Codex، xAI (`xai-oauth`) اور Grok CLI (`grok-cli`) اپنی upstream OAuth ایپ کے ساتھ ایک **فکسڈ** loopback
-`redirect_uri` رجسٹر کرتے ہیں۔ OmniRoute اسے تبدیل نہیں کر سکتا — فراہم کنندہ ہمیشہ براؤزر کو اسی hardcoded پتے پر واپس بھیجتا ہے:
+`redirect_uri` رجسٹر کرتے ہیں۔ 67router اسے تبدیل نہیں کر سکتا — فراہم کنندہ ہمیشہ براؤزر کو اسی hardcoded پتے پر واپس بھیجتا ہے:
 
 | فراہم کنندہ | فکسڈ callback جس پر فراہم کنندہ redirect کرتا ہے |
 | ----------- | ------------------------------------------------ |
@@ -174,7 +174,7 @@ Codex، xAI (`xai-oauth`) اور Grok CLI (`grok-cli`) اپنی upstream OAuth �
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                |
 
-یہاں `localhost` سے مراد **وہ مشین ہے جس پر براؤزر چل رہا ہے**، جبکہ OmniRoute کا PKCE
+یہاں `localhost` سے مراد **وہ مشین ہے جس پر براؤزر چل رہا ہے**، جبکہ 67router کا PKCE
 callback سرور **سرور کے** loopback پر سنتا ہے۔ ڈیش بورڈ کو کسی LAN
 پتے، مثلاً `http://192.168.0.15:20128`، پر کھولیں تو دونوں کبھی آپس میں نہیں ملتے: authorization
 code آپ کے اپنے لیپ ٹاپ کے `localhost:1455` پر پہنچایا جاتا ہے، جہاں کچھ بھی نہیں سن رہا ہوتا،
@@ -194,7 +194,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 دو forwards درکار ہیں، اور صرف ایک کو forward کرنے سے پھر بھی ناکامی ہوتی ہے:
 
 - **`20128`** (ڈیش بورڈ port) origin کو حقیقی localhost بناتا ہے، اور یہی
-  OmniRoute کو PKCE callback سرور شروع کرنے کے قابل بناتا ہے — LAN origin کبھی
+  67router کو PKCE callback سرور شروع کرنے کے قابل بناتا ہے — LAN origin کبھی
   اس branch تک نہیں پہنچتا۔
 - **`1455`** (فراہم کنندہ کا فکسڈ callback port) وہ جگہ ہے جہاں براؤزر کو واپس بھیجا جاتا
   ہے؛ اسے tunnel کے ذریعے سرور کے loopback تک پہنچنا ضروری ہے۔
@@ -312,7 +312,7 @@ omniroute contexts current         # فعال سرور، تصدیق کی حیث�
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

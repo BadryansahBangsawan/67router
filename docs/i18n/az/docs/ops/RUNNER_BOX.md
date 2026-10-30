@@ -5,7 +5,7 @@
 ---
 
 Öz-özünə host edilən hovuz **.113** serverində (`tomni-proxmox-113`) işləyir. 2026-10-18 tarixindən etibarən hər
-OmniRoute runner-in **bir rolu**, bir etiketi və iş yükünün ölçülmüş göstəricilərinə uyğun yaddaş/CPU büdcəsi
+67router runner-in **bir rolu**, bir etiketi və iş yükünün ölçülmüş göstəricilərinə uyğun yaddaş/CPU büdcəsi
 var. Turbopack slotuna yığma üçün lazım olan resurslar verilir; digər slotların ölçüləri isə onların
 ölçülmüş pik göstəricilərinə uyğun təyin edilib. Serverdə resursların izafi ayrılması yalnız Turbopack yığması Release-Green
 webpack yığması və lint işi ilə eyni vaxta düşdükdə baş verir; host swap-ı (16 GB) bunu qarşılayır və pull request Build-ləri
@@ -27,7 +27,7 @@ host edilən runner-lərdə işlədiyi üçün Turbopack slotu vaxtın böyük h
 | swap       | 16 GB                             | `omniroute-113-5` swap söndürülmüş halda (`MemorySwapMax=0`) işləyir, buna görə nəzarətdən çıxan yığma serveri swap etməyə məcbur etmək əvəzinə öz limitində dayandırılır                                                                                                                                                                                                                                                           |
 | `/tmp`     | **12 GB tmpfs = RAM**             | burada saxlanılan hər şey yaddaş tutur; qalıqlar 3 saatdan sonra təmizlənir                                                                                                                                                                                                                                                                                                                                                         |
 | CPU        | 32 nüvədə load 60 müşahidə edilib | kvotalardan əvvəl bir Turbopack yığması (~1166 % CPU) və eyni serverdəki coverage test dəsti digər listener-lərin heartbeat siqnallarını resurs çatışmazlığına məruz qoyurdu (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                  |
-| runner-lər | **6 listener**                    | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` deaktiv edilib (`systemctl enable --now` onlardan birini yenidən aktivləşdirir)                                                                                                                                                                                                                                                                                     |
+| runner-lər | **6 listener**                    | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` deaktiv edilib (`systemctl enable --now` onlardan birini yenidən aktivləşdirir)                                                                                                                                                                                                                                                                                      |
 
 Limitlər hər unit-in `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` faylında yerləşir
 (əvvəlki dəyərlər `override.conf.bak-20261018` kimi saxlanılıb) və
@@ -75,7 +75,7 @@ heç vaxt toxunmayın: worker işi ləğv edilmiş kimi bildirir və listener ö
 
 Runner-ın standart `KillMode=process` parametri unit dayandırıldıqda və ya yenidən
 başladıldıqda `Runner.Worker → npm → next-build` proseslərini işlək saxlayır — yetim build
-ona bağlı heç bir iş olmadan RAM və CPU sərf etməyə davam edir. Hər OmniRoute unit-i
+ona bağlı heç bir iş olmadan RAM və CPU sərf etməyə davam edir. Hər 67router unit-i
 `KillMode=mixed` parametrli drop-in faylına
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 malikdir: əvvəlcə listener-ə SIGTERM, `TimeoutStop` zamanı isə bütün cgroup-a SIGKILL
@@ -120,7 +120,7 @@ runner-ı və yalnız boş olduqda** yenidən başladın.
   `next build` tələb edən gecəlik işləri (~5–6 GB; webpack) və `quality.yml` faylındakı `lint-guard` tapşırığını icra edir. `omniroute-113`
   2026-10-18 tarixinədək `MemoryHigh=4G` dəyərinə malik idi — promptfoo yığması orada 54 dəqiqə ərzində
   yaddaşı təkrar-təkrar geri almaqla irəliləmişdi; 8 GB məhdudlaşdırmanı aradan qaldırır.
-- **Qəsdən daha az listener.** 2026-08-29 tarixində dörd OmniRoute vahidi deaktiv edildi — hər əlavə
+- **Qəsdən daha az listener.** 2026-08-29 tarixində dörd 67router vahidi deaktiv edildi — hər əlavə
   listener yuxarıdakı yaddaş büdcəsinin daha bir istifadəçisidir. Təmizləyicinin yuxarı həddi 6-dır (cron daxilində `MAX_ACTIVE_RUNNERS=6`): o,
   maşındakı hər `Runner.Listener` prosesini sayır və OmniHeuris + OmniMind bizim dörd prosesimizə daha ikisini əlavə edir.
 - **Hər hansı runner məşğul olduğu müddətdə `/tmp` və ya `_work` qovluğunu heç vaxt əl ilə təmizləməyin.**

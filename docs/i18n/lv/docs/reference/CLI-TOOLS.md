@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Latviešu)
+# CLI Tools — 67router (Latviešu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Pēdējoreiz atjaunināts: 2026-08-23
 
-OmniRoute integrējas ar trīs kategoriju CLI rīkiem, kas sadalīti trīs īpašās informācijas paneļa lapās:
+67router integrējas ar trīs kategoriju CLI rīkiem, kas sadalīti trīs īpašās informācijas paneļa lapās:
 
-| Lapa           | Maršruts                | Koncepcija                                                                                      | Skaits           |
-| -------------- | ----------------------- | ----------------------------------------------------------------------------------------------- | ---------------- |
-| **CLI kodi**   | `/dashboard/cli-code`   | Kodēšanas rīki, kurus novirzāt uz OmniRoute (Klients → CLI → OmniRoute → Pakalpojuma sniedzējs) | 26               |
-| **CLI aģenti** | `/dashboard/cli-agents` | Autonomi aģenti, kurus novirzāt uz OmniRoute (tā pati plūsma, plašāks tvērums)                  | 10               |
-| **ACP aģenti** | `/dashboard/acp-agents` | CLI, kurus OmniRoute palaiž kā aizmugursistēmas, izmantojot stdio/ACP (apgrieztā plūsma)        | skatiet reģistru |
+| Lapa           | Maršruts                | Koncepcija                                                                                    | Skaits           |
+| -------------- | ----------------------- | --------------------------------------------------------------------------------------------- | ---------------- |
+| **CLI kodi**   | `/dashboard/cli-code`   | Kodēšanas rīki, kurus novirzāt uz 67router (Klients → CLI → 67router → Pakalpojuma sniedzējs) | 26               |
+| **CLI aģenti** | `/dashboard/cli-agents` | Autonomi aģenti, kurus novirzāt uz 67router (tā pati plūsma, plašāks tvērums)                 | 10               |
+| **ACP aģenti** | `/dashboard/acp-agents` | CLI, kurus 67router palaiž kā aizmugursistēmas, izmantojot stdio/ACP (apgrieztā plūsma)       | skatiet reģistru |
 
 Novecojušie maršruti veic 308 novirzīšanu: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ Novecojušie maršruti veic 308 novirzīšanu: `/dashboard/cli-tools` → `/dash
 CLI kodi / CLI aģenti (patēriņa plūsma):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (visi tiek novirzīti uz OmniRoute)
+           ▼  (visi tiek novirzīti uz 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute novirza uz atbilstošo pakalpojuma sniedzēju)
+           ▼  (67router novirza uz atbilstošo pakalpojuma sniedzēju)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP aģenti (apgrieztā palaišanas plūsma):
-    Klienta pieprasījums → OmniRoute → palaiž CLI, izmantojot stdio/ACP → atbilde
+    Klienta pieprasījums → 67router → palaiž CLI, izmantojot stdio/ACP → atbilde
 ```
 
 **Priekšrocības:**
@@ -45,9 +45,9 @@ ACP aģenti (apgrieztā palaišanas plūsma):
 
 ## Automātiska konfigurēšana ar `setup-*`
 
-Katra rīka konfigurācija nav jāraksta manuāli. OmniRoute katrai atbalstītajai CLI nodrošina `setup-*`
+Katra rīka konfigurācija nav jāraksta manuāli. 67router katrai atbalstītajai CLI nodrošina `setup-*`
 komandu, kas nolasa **aktuālo** modeļu katalogu no darbojošās
-OmniRoute instances (lokālas vai attālas) un ieraksta attiecīgā rīka konfigurāciju jūsu datorā:
+67router instances (lokālas vai attālas) un ieraksta attiecīgā rīka konfigurāciju jūsu datorā:
 
 ```bash
 omniroute setup-codex        omniroute setup-claude       omniroute setup-opencode
@@ -58,7 +58,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Katra komanda pieņem `--remote <url> --api-key <key>` (lokāla rīka konfigurēšanai darbam ar
-attālu OmniRoute), `--dry-run` (priekšskatīšanai bez ierakstīšanas) un `--port`. Rīkiem
+attālu 67router), `--dry-run` (priekšskatīšanai bez ierakstīšanas) un `--port`. Rīkiem
 bez automātiskas modeļu atklāšanas (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) ir nepieciešams
 `--model <id>` (un `--yes` neinteraktīvai izpildei). `setup-5dive` ir vienīgā
 recepte, kas neveic ierakstīšanu zem `$HOME`: tā konfigurē 5dive aģentu kopu,
@@ -77,9 +77,9 @@ mērķis, taču tai nav `setup-*`/`configure` receptes.
 
 ### Šo komandu izpilde konteinerā
 
-Konteinerā OmniRoute izpildīta `setup-*` komanda veic ierakstīšanu paša
+Konteinerā 67router izpildīta `setup-*` komanda veic ierakstīšanu paša
 konteinera mājas direktorijā, kuru neviena resursdatora CLI nelasa un kura pazūd kopā ar
-konteineru. OmniRoute to nosaka un tā vietā, lai veiktu ierakstīšanu, beidz darbu ar kodu `2` un parāda norādījumus.
+konteineru. 67router to nosaka un tā vietā, lai veiktu ierakstīšanu, beidz darbu ar kodu `2` un parāda norādījumus.
 Ir divi atbalstīti risinājumi — instalēt CLI resursdatorā un
 izmantot `omniroute connect`, lai izveidotu savienojumu ar konteineru, vai piesaistīt konfigurācijas direktorijus un iestatīt
 `CLI_CONFIG_HOME` (compose profils `host`). Katra `setup-*` komanda, kā arī
@@ -202,7 +202,7 @@ Autonomie aģenti, kas tiek rādīti sadaļā `/dashboard/cli-agents`:
 
 ## 3. ACP aģenti (/dashboard/acp-agents)
 
-Šajā lapā (pārdēvēta no `/dashboard/agents`) tiek rādīti CLI, kurus OmniRoute var **palaist** kā aizmugursistēmas izpildes dzinējus, izmantojot stdio/ACP protokolu. Katalogs tiek uzturēts atsevišķi failā `src/lib/acp/registry.ts`, un tas **nav** tas pats, kas `CLI_TOOLS`.
+Šajā lapā (pārdēvēta no `/dashboard/agents`) tiek rādīti CLI, kurus 67router var **palaist** kā aizmugursistēmas izpildes dzinējus, izmantojot stdio/ACP protokolu. Katalogs tiek uzturēts atsevišķi failā `src/lib/acp/registry.ts`, un tas **nav** tas pats, kas `CLI_TOOLS`.
 
 ---
 
@@ -329,7 +329,7 @@ Ir nodrošināti pilni PT-BR un EN tulkojumi. 39 citām lokalizācijām automāt
 
 ## 9. Ātrā darba sākšana
 
-### 1. darbība — iegūstiet OmniRoute API atslēgu
+### 1. darbība — iegūstiet 67router API atslēgu
 
 1. Atveriet `/dashboard/api-manager` → **Izveidot API atslēgu**
 2. Piešķiriet tai nosaukumu (piemēram, `cli-tools`) un atlasiet visas atļaujas
@@ -393,7 +393,7 @@ cargo install smelt  # Balstīts uz Rust
 ### 4. darbība — iestatiet globālos vides mainīgos
 
 ```bash
-# OmniRoute universālais galapunkts
+# 67router universālais galapunkts
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -505,7 +505,7 @@ EOF
 **VS Code režīms:**
 Cline paplašinājuma iestatījumi → API nodrošinātājs: `OpenAI Compatible` → Bāzes URL: `http://localhost:20128/v1`
 
-Vai izmantojiet OmniRoute informācijas paneli → **CLI rīki → Cline → Lietot konfigurāciju**.
+Vai izmantojiet 67router informācijas paneli → **CLI rīki → Cline → Lietot konfigurāciju**.
 
 ---
 
@@ -526,7 +526,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Vai izmantojiet OmniRoute informācijas paneli → **CLI rīki → KiloCode → Lietot konfigurāciju**.
+Vai izmantojiet 67router informācijas paneli → **CLI rīki → KiloCode → Lietot konfigurāciju**.
 
 ---
 
@@ -550,14 +550,14 @@ Pēc rediģēšanas restartējiet VS Code.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Izmantojiet šo iespēju, ja VS Code Insiders ir konfigurēts pielāgotu galapunktu modeļiem un vēlaties, lai OmniRoute darbotos bez pielāgota galvenes lauka.
+Izmantojiet šo iespēju, ja VS Code Insiders ir konfigurēts pielāgotu galapunktu modeļiem un vēlaties, lai 67router darbotos bez pielāgota galvenes lauka.
 
 **Ieteicamā atrašanās vieta:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Piemērs, izmantojot tokenizēto OmniRoute aizstājvārdu:**
+**Piemērs, izmantojot tokenizēto 67router aizstājvārdu:**
 
 ```json
 [
@@ -581,7 +581,7 @@ Izmantojiet šo iespēju, ja VS Code Insiders ir konfigurēts pielāgotu galapun
 
 **Piezīmes:**
 
-- Aizstājiet `sk-your-omniroute-key` ar OmniRoute izveidotu API atslēgu.
+- Aizstājiet `sk-your-omniroute-key` ar 67router izveidotu API atslēgu.
 - Laukam `url` jānorāda uz `/api/v1/vscode/{token}/chat/completions`.
 - Laukam `modelsUrl` jānorāda uz `/api/v1/vscode/{token}/models`.
 - Ja klients atbalsta pielāgotas galvenes, dodiet priekšroku parastajai `/v1` plūsmai ar Bearer galveni.
@@ -595,17 +595,17 @@ Izmantojiet šo iespēju, ja VS Code Insiders ir konfigurēts pielāgotu galapun
 # Piesakieties savā AWS/Kiro kontā:
 kiro-cli login
 
-# CLI izmanto savu autentifikāciju — OmniRoute nav nepieciešams kā aizmugursistēma pašam Kiro CLI.
-# Izmantojiet kiro-cli kopā ar OmniRoute citiem rīkiem.
+# CLI izmanto savu autentifikāciju — 67router nav nepieciešams kā aizmugursistēma pašam Kiro CLI.
+# Izmantojiet kiro-cli kopā ar 67router citiem rīkiem.
 kiro-cli status
 ```
 
-**Kiro IDE** darbvirsmas lietotnei izmantojiet OmniRoute nodrošināto MITM galapunktu,
+**Kiro IDE** darbvirsmas lietotnei izmantojiet 67router nodrošināto MITM galapunktu,
 kas atrodas sadaļā `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. Iekšējais OmniRoute CLI
+## 10. Iekšējais 67router CLI
 
 `omniroute` binārais fails nodrošina komandas servera dzīves cikla pārvaldībai, iestatīšanai, diagnostikai un pakalpojumu sniedzēju pārvaldībai. Ieejas punkts: `bin/omniroute.mjs`.
 
@@ -639,7 +639,7 @@ Atpazītie vides mainīgie neinteraktīvai iestatīšanai:
 | Mainīgais           | Nolūks                                                                                     |
 | ------------------- | ------------------------------------------------------------------------------------------ |
 | `OMNIROUTE_API_KEY` | Pakalpojumu sniedzēja API atslēga (piesaistīta `--api-key`, izmantojot Commander `.env()`) |
-| `DATA_DIR`          | Aizstāt OmniRoute datu direktoriju                                                         |
+| `DATA_DIR`          | Aizstāt 67router datu direktoriju                                                          |
 
 Visas pārējās neinteraktīvās ievades tiek nodotas kā karogi, nevis vides mainīgie:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -662,7 +662,7 @@ Komanda doctor veic šādas pārbaudes: `Config`, `Database`, `Storage/encryptio
 ### Pakalpojumu sniedzēju pārvaldība
 
 ```bash
-omniroute providers available                       # OmniRoute pakalpojumu sniedzēju katalogs
+omniroute providers available                       # 67router pakalpojumu sniedzēju katalogs
 omniroute providers available --search openai       # Filtrēt katalogu pēc ID/nosaukuma/aizstājvārda/kategorijas
 omniroute providers available --category api-key    # Filtrēt pēc kategorijas (api-key, oauth, free, ...)
 omniroute providers available --json                # Mašīnlasāms JSON
@@ -683,7 +683,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` primāri izmanto API un tādēļ darbojas ar
 aktīvo lokālo vai attālo kontekstu. Akreditācijas datu ievadei jāizmanto
 `--credential-stdin` vai `--credential-env`; `--dry-run --json` ziņo tikai par
-rediģētu esamību/formu. `providers available` nolasa OmniRoute katalogu;
+rediģētu esamību/formu. `providers available` nolasa 67router katalogu;
 `providers list/test/test-all/validate` saglabā savu lokālo SQLite darbību, un
 tiem nav nepieciešams, lai serveris darbotos.
 
@@ -726,7 +726,7 @@ Lauks, kuru neizdodas atšifrēt (novecojusi atslēga, bojāts šifrētais tekst
 
 ### Citas apakškomandas
 
-Ja vien nav norādīts citādi, tās pieņem, ka darbojas OmniRoute serveris:
+Ja vien nav norādīts citādi, tās pieņem, ka darbojas 67router serveris:
 
 ```bash
 omniroute status                       # Visaptverošs izpildlaika statuss
@@ -734,7 +734,7 @@ omniroute logs                         # Pieprasījumu žurnālu straumēšana (
 omniroute config list                  # Konfigurēto CLI rīku parādīšana
 
 omniroute provider list                # Pieejamo pakalpojumu sniedzēju saraksts (providers list aizstājvārds)
-omniroute provider add                 # OmniRoute reģistrēšana rīkā kā pakalpojumu sniedzēju
+omniroute provider add                 # 67router reģistrēšana rīkā kā pakalpojumu sniedzēju
 omniroute keys add | list | remove     # API atslēgu pārvaldība
 omniroute models [provider]            # Modeļu saraksts (--json, --search)
 omniroute combo list | switch | create | delete
@@ -784,7 +784,7 @@ omniroute completion                   # Čaulas automātiskās pabeigšanas ģe
 | `/v1/audio/speech`         | Teksta pārvēršana runā                   | ElevenLabs, OpenAI TTS             |
 | `/v1/audio/transcriptions` | Runas pārvēršana tekstā                  | Deepgram, AssemblyAI               |
 
-Ielīmēšanai gatavi piemēri ar tokenizētu OmniRoute URL:
+Ielīmēšanai gatavi piemēri ar tokenizētu 67router URL:
 
 ```txt
 Tokena piemērs: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -803,7 +803,7 @@ Ollama tērzēšana: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69
 
 | Kļūda                                                       | Cēlonis                                | Risinājums                                                       |
 | ----------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------- |
-| `Connection refused`                                        | OmniRoute nedarbojas                   | `omniroute serve`                                                |
+| `Connection refused`                                        | 67router nedarbojas                    | `omniroute serve`                                                |
 | `401 Unauthorized`                                          | Nepareiza API atslēga                  | Pārbaudiet sadaļā `/dashboard/api-manager`                       |
 | `No combo configured`                                       | Nav aktīvas maršrutēšanas kombinācijas | Iestatiet sadaļā `/dashboard/combos`                             |
 | CLI rāda „nav instalēts”                                    | Binārais fails nav PATH                | Pārbaudiet ar `which <command>`                                  |
@@ -811,7 +811,7 @@ Ollama tērzēšana: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69
 | Vecā saite `/dashboard/cli-tools`                           | Grāmatzīme no versijas pirms v3.8.6    | Automātiski novirzīta uz `/dashboard/cli-code` (308)             |
 | Vecā saite `/dashboard/agents`                              | Grāmatzīme no versijas pirms v3.8.6    | Automātiski novirzīta uz `/dashboard/acp-agents` (308)           |
 
-## Secinājumu atslēgas politikas pārvaldība ar OmniRoute CLI
+## Secinājumu atslēgas politikas pārvaldība ar 67router CLI
 
 Izmantojiet autentificētu pārvaldības kontekstu (skatiet [Attālais režīms](../guides/REMOTE-MODE.md)),
 lai pārbaudītu vai atjauninātu esošu secinājumu atslēgu pēc tās ID:

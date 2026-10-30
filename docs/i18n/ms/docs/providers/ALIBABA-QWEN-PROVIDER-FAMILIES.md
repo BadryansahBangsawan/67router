@@ -10,7 +10,7 @@ empat keluarga penyedia. Rantau ialah data sambungan, bukan produk yang berasing
 
 ## Keputusan
 
-| Keluarga penyedia                                  | ID OmniRoute            | Rantau global | Rantau China |
+| Keluarga penyedia                                  | ID 67router             | Rantau global | Rantau China |
 | -------------------------------------------------- | ----------------------- | ------------- | ------------ |
 | Alibaba Cloud Model Studio (bayar ikut penggunaan) | `alibaba`               | Singapura     | Beijing      |
 | Pelan Token Alibaba Cloud                          | `bailian-coding-plan`   | Singapura     | Beijing      |

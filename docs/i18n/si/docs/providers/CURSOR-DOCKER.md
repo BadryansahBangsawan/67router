@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, Docker තුළ ක්රියාත්මක වන විට, කන්ටේනරයට සත්කාරක Cursor
+67router, Docker තුළ ක්රියාත්මක වන විට, කන්ටේනරයට සත්කාරක Cursor
 ස්ථාපනය දැකිය නොහැකි බැවින් පැරණි **Cursor IDE වෙතින් ආයාත කරන්න** /
 `cursor-agent` ප්රවාහ අසාර්ථක වේ. ඒ වෙනුවට **Cursor සමඟ පුරන්න** (deep-control PKCE) භාවිත කරන්න.
 
@@ -14,7 +14,7 @@ OmniRoute, Docker තුළ ක්රියාත්මක වන විට, ක
    _තුළ_ `~/.config/Cursor/User/globalStorage/state.vscdb` වැනි Linux මාර්ග
    සොයයි. macOS සඳහා Docker Desktop මත, සත්කාරක IDE DB එක පෙරනිමියෙන් mount
    නොකරන අතර, සත්කාරකය Darwin වුවද කන්ටේනර් OS එක Linux වේ.
-2. **`cursor-agent` ද්විමය ගොනුවක් නැත** — නිල OmniRoute images සමඟ
+2. **`cursor-agent` ද්විමය ගොනුවක් නැත** — නිල 67router images සමඟ
    `cursor-agent` සපයන්නේ නැත. මීට පෙර ලබා ගත හැකි ආකෘති සඳහා
    `cursor-agent --list-models` shell මඟින් ක්රියාත්මක කර, එය අසාර්ථක වුවහොත් ස්ථිතික නාමාවලියක් භාවිත කළේය.
 3. **වැරදි ද්විමය ගොනුව** — macOS `cursor-agent` එකක් Linux
@@ -24,11 +24,11 @@ OmniRoute, Docker තුළ ක්රියාත්මක වන විට, ක
 
 1. **උපකරණ පුවරුව → සැපයුම්කරුවන් → Cursor** විවෘත කරන්න.
 2. **Cursor සමඟ පුරන්න** ටැබය තෝරන්න.
-3. **Cursor සමඟ පුරන්න** ක්ලික් කරන්න — OmniRoute ඔබගේ **සත්කාරක**
+3. **Cursor සමඟ පුරන්න** ක්ලික් කරන්න — 67router ඔබගේ **සත්කාරක**
    බ්රවුසරයේ `https://cursor.com/loginDeepControl?…` විවෘත කරයි.
-4. බ්රවුසරය තුළ පුරනය වීම අනුමත කර, පසුව උපකරණ පුවරුව වෙත ආපසු යන්න. ටෝකන ලැබෙන තෙක් OmniRoute
+4. බ්රවුසරය තුළ පුරනය වීම අනුමත කර, පසුව උපකරණ පුවරුව වෙත ආපසු යන්න. ටෝකන ලැබෙන තෙක් 67router
    `api2.cursor.sh/auth/poll` poll කරයි.
-5. OmniRoute **ප්රවේශ + නැවුම් කිරීමේ** ටෝකන ගබඩා කර, ඒවා
+5. 67router **ප්රවේශ + නැවුම් කිරීමේ** ටෝකන ගබඩා කර, ඒවා
    `https://api2.cursor.sh/auth/exchange_user_api_key` හරහා නැවුම් කරයි.
 
 මෙම ක්රමයට කන්ටේනරය තුළ Cursor IDE හෝ `cursor-agent` අවශ්ය නොවේ.
@@ -37,10 +37,10 @@ OmniRoute, Docker තුළ ක්රියාත්මක වන විට, ක
 
 පුරනය වී ඇති සම්බන්ධතාවක් සමඟ, **ලබා ගත හැකි ආකෘති / ස්වයං-සමමුහුර්තකරණය**
 සම්බන්ධතා bearer ටෝකනය භාවිත කරන Cursor හි HTTP `AiService/AvailableModels`
-නාමාවලියට ප්රමුඛතාව දෙයි. එය අසාර්ථක වුවහොත්, OmniRoute තවමත් සත්කාරකයේ
+නාමාවලියට ප්රමුඛතාව දෙයි. එය අසාර්ථක වුවහොත්, 67router තවමත් සත්කාරකයේ
 `cursor-agent` (තිබේ නම්) උත්සාහ කර, ඉන්පසු ස්ථිතික registry seed එක භාවිත කරයි.
 
-OmniRoute නාමාවලිය තුළ සෑම විටම **`auto`** (පෙන්වීම “Auto”) සහ
+67router නාමාවලිය තුළ සෑම විටම **`auto`** (පෙන්වීම “Auto”) සහ
 OpenCodex-ශෛලියේ router ආකාර වන **`auto-cost`**, **`auto-balance`**, සහ
 **`auto-intelligence`** නිරාවරණය කරයි. සම්ප්රේෂණයේදී මේවා Cursor හි `default`
 ආකෘතියට map වේ (ප්රභේද තුන සඳහා `optimization` ModelParameter එකක් සමඟ).
@@ -87,7 +87,7 @@ IDE-ආයාත කළ සැසි සඳහා පැරණි cookie/`cursor
 ## හිස් වාර / භාවිත ධාරිතාව අවසන් වීම
 
 Cursor එක Run එකක් පිළිගෙන නමුත් assistant පාඨයක් ආපසු නොදෙන විට (premium
-භාවිත ධාරිතාව අවසන් වූ විට මෙය සාමාන්ය වේ), OmniRoute ක්රියා කළ හැකි **429** (කෝටා ඉඟි) හෝ
+භාවිත ධාරිතාව අවසන් වූ විට මෙය සාමාන්ය වේ), 67router ක්රියා කළ හැකි **429** (කෝටා ඉඟි) හෝ
 මඟපෙන්වීම සහිත **502** එකක් පෙන්වයි — හුදෙක් “සැපයුම්කරු හිස් අන්තර්ගතයක් ආපසු ලබා දුන්නේය” නොවේ. `not_found: AI Model Not Found` (භාවිත කවුළුව අවසන් වී ඇත) වැනි Streaming
 අසාර්ථකවීම් **Cursor rate limit / usage exceeded** ලෙස වර්ගීකරණය කර,
 SSE pipeline එක පුරා එම පණිවිඩය රඳවා ගනී (හවුල් empty-stream guard එක දැනටමත් නිකුත් කළ
@@ -96,7 +96,7 @@ Cursor සැලසුම් සීමා වැඩි කරන්න.
 
 ## සේවාලාභී අනුවාදය (headless)
 
-දේශීය `cursor-agent` ස්ථාපනයක් නොමැතිව, OmniRoute
+දේශීය `cursor-agent` ස්ථාපනයක් නොමැතිව, 67router
 `x-cursor-client-version` අගය පළමුව env `CURSOR_AGENT_CLI_VERSION` හරහාත්, පසුව Cursor installer script එකේ
 disk-cached scrape එකක් හරහාත්, අවසානයේ pinned build id එකක් හරහාත් විසඳයි. අවශ්ය විට
 `CURSOR_AGENT_CLI_VERSION` සමඟ override කරන්න.

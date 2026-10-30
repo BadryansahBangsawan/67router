@@ -5,7 +5,7 @@
 ---
 
 > **Nkọwa otu ahịrị maka ndekọ ọ bụla na faịlụ mgbọrọgwụ ọ bụla.**
-> Emelitere ikpeazụ: 2026-06-28 — OmniRoute v3.8.40
+> Emelitere ikpeazụ: 2026-06-28 — 67router v3.8.40
 >
 > Jiri map a gagharịa ngwa ngwa n'ime koodu ahụ. Maka nyocha miri emi, soro njikọ gaa na akwụkwọ nkọwa ndị akọwapụtara.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Usoro mwepụta zuru ezu (nkà, husky, conventional commits, ibuga)                                    |
 | `COVERAGE_PLAN.md`          | Ebumnuche mkpuchi na ọnọdụ dị ugbu a                                                                |
 | `FREE_TIERS.md`             | Ndị na-eweta ọkwa n’efu ahọpụtara nke ọma (48+ n’efu + 11 OAuth)                                    |
-| `CLI-TOOLS.md`              | Njikọ CLI mpụga + CLI OmniRoute nke ime                                                             |
+| `CLI-TOOLS.md`              | Njikọ CLI mpụga + CLI 67router nke ime                                                              |
 | `I18N.md`                   | Nhazi ụlọ i18n, ịgbakwunye asụsụ, locale 67                                                         |
 | `UNINSTALL.md`              | Usoro iwepụ nrụnye kpamkpam                                                                         |
 | `PROVIDER_REFERENCE.md`     | Katalọgụ ndị na-eweta 375 **emepụtara na-akpaghị aka** (megharịa: `npm run gen:provider-reference`) |

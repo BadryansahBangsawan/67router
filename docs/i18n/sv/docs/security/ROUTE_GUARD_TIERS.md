@@ -6,7 +6,7 @@
 
 ## Översikt
 
-Alla hanterings-API-rutter i OmniRoute klassificeras i en av tre skyddsnivåer.
+Alla hanterings-API-rutter i 67router klassificeras i en av tre skyddsnivåer.
 Klassificeringen är statisk, definieras i `src/server/authz/routeGuard.ts` och
 utvärderas innan någon annan autentiseringsgren körs.
 
@@ -27,9 +27,9 @@ CVE-klass ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rp
 **Vad GHSA-fhh6-4qxv-rpqj är (angreppsklassen):** en hanterings-/agentserver
 exponerar en slutpunkt som startar en underprocess (`npm install`, `node`, en webbläsare,
 en proxy, `git`, `tar`, …). Om slutpunkten kan nås utifrån värddatorn — eftersom
-operatören placerade OmniRoute bakom en nginx-/Cloudflare-/Tailscale-tunnel och en JWT
+operatören placerade 67router bakom en nginx-/Cloudflare-/Tailscale-tunnel och en JWT
 läckte, eller autentiseringen var felkonfigurerad — omvandlar angriparen ”anropa ett API” till ”kör ett
-kommando på värddatorn” (fjärrkörning av kod). OmniRoute förhindrar detta genom att tillämpa en
+kommando på värddatorn” (fjärrkörning av kod). 67router förhindrar detta genom att tillämpa en
 **kontroll av loopback-värden ovillkorligen, före alla autentiseringskontroller**, på varje
 rutt som kan starta processer: en läckt token över en tunnel kan fortfarande inte nå processstarten.
 
@@ -119,7 +119,7 @@ hanteringsåtkomst.
 
 #### Vägledning för operatörer och granskning
 
-Om du kör OmniRoute bakom en omvänd proxy eller tunnel (nginx, Caddy, Cloudflare
+Om du kör 67router bakom en omvänd proxy eller tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) skyddar loopback-kontrollen fortfarande de
 startkapabla rutterna ovan — en begäran vars klientadress inte är loopback
 avvisas med `403 LOCAL_ONLY` **innan autentisering körs**, så en läckt JWT kan
@@ -157,7 +157,7 @@ inte nå en startåtgärd. Två ansvarsområden återstår för operatören:
 - Sök i loggarna för omvänd proxy/åtkomst efter prefixen ovan tillsammans med en
   klientadress som inte är loopback. Varje sådan träff som returnerade `200` i stället för
   `403 LOCAL_ONLY` innebär att proxyn döljer klientens verkliga IP-adress – åtgärda proxyn.
-- Ett `403 LOCAL_ONLY` i OmniRoutes loggar för någon av dessa sökvägar innebär att skyddet
+- Ett `403 LOCAL_ONLY` i 67routers loggar för någon av dessa sökvägar innebär att skyddet
   fungerar som avsett, inte att det är ett fel som ska undertryckas.
 
 #### Fjärråtkomliga rutter med anropsplatsspärr för sondering

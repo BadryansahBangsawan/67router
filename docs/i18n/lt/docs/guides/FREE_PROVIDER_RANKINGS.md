@@ -4,7 +4,7 @@
 
 ---
 
-> **Trumpai**: „OmniRoute“ reitinguoja savo **nemokamus** teikėjus pagal modelių kokybę, naudodama **Arena AI
+> **Trumpai**: „67router“ reitinguoja savo **nemokamus** teikėjus pagal modelių kokybę, naudodama **Arena AI
 > („LMArena“ stiliaus) ELO balus**. Valdymo skydelyje atidarykite puslapį **Nemokamų teikėjų reitingai**,
 > kad pamatytumėte, kurie nemokami teikėjai siūlo stipriausius modelius jūsų užduočiai —
 > bendrai arba filtruojant pagal kategoriją (programavimas, peržiūra, dokumentacija, derinimas).
@@ -13,7 +13,7 @@
 
 ## Kas tai yra
 
-„OmniRoute“ registruoja 375 tiekėjus, įskaitant 155 katalogo įrašus, pažymėtus kaip **nemokami / be autentifikacijos**
+„67router“ registruoja 375 tiekėjus, įskaitant 155 katalogo įrašus, pažymėtus kaip **nemokami / be autentifikacijos**
 (be autentifikacijos,
 nemokamo lygmens OAuth arba nemokamo lygmens API raktas — žr.
 [Nemokamų lygmenų vadovą](../getting-started/FREE-TIERS-GUIDE.md) ir visą
@@ -129,9 +129,9 @@ ir `code` — iš Arena AI lyderių lentelės API
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Kiekviename lyderių lentelės įraše
 pateikiamas modelio pavadinimas, tiekėjas, ELO `score`, pasikliautinasis intervalas ir balsų skaičius.
 
-Lyderių lentelės kategorijos susiejamos su OmniRoute užduočių kategorijomis:
+Lyderių lentelės kategorijos susiejamos su 67router užduočių kategorijomis:
 
-| Arena lyderių lentelė | OmniRoute užduočių kategorijos                    |
+| Arena lyderių lentelė | 67router užduočių kategorijos                     |
 | --------------------- | ------------------------------------------------- |
 | `text`                | `default`, `review`, `documentation`, `debugging` |
 | `code`                | `coding`                                          |
@@ -168,7 +168,7 @@ Sinchronizavimas **pagal numatytuosius nustatymus įjungtas**:
 
 - Jis vykdomas vieną kartą paleidžiant serverį, o vėliau — periodiškai pagal laikmatį
   (`src/lib/arenaEloSync.ts`, prijungta iš `src/instrumentation-node.ts`).
-- Jis **neblokuoja sistemos ir niekada nesukelia kritinės klaidos** — jei nepavyksta gauti duomenų iš išorinio šaltinio, OmniRoute veikia
+- Jis **neblokuoja sistemos ir niekada nesukelia kritinės klaidos** — jei nepavyksta gauti duomenų iš išorinio šaltinio, 67router veikia
   toliau, o reitinguose tiesiog rodomi paskutiniai sėkmingai gauti duomenys (arba tuščia būsena).
 
 Jį valdo du aplinkos kintamieji (aprašyti
@@ -203,7 +203,7 @@ lankstus atitikmenų nustatymas (`findMatchingIntelligence` faile `src/lib/freeP
 3. Atitikmuo pagal priešdėlį (lyderių lentelės modelio pavadinimas yra registro ID priešdėlis).
 
 Sinchronizavimo pusėje žinomi tiekėjų priešdėliai (`anthropic/`, `openai/`, `google/`, …) yra
-pašalinami, o nedidelis alternatyvių pavadinimų žemėlapis išplečia kanoninius pavadinimus į OmniRoute viduje naudojamus
+pašalinami, o nedidelis alternatyvių pavadinimų žemėlapis išplečia kanoninius pavadinimus į 67router viduje naudojamus
 variantus, todėl modelius galima rasti naudojant bet kurį pavadinimą.
 
 ### Kaip reitinguojamas tiekėjas

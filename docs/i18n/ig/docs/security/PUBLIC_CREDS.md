@@ -15,7 +15,7 @@
 - [OAuth 2.0 maka ngwa native (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret maka ngwa arụnyere bụ nke ọha; PKCE na-enye nchekwa n’ezie.
 - [Firebase API keys](https://firebase.google.com/docs/projects/api-keys) — E mere ihe njirimara Web ka ha bụrụ nke ọha.
 
-OmniRoute ga-etinyerịrị ụkpụrụ ndị a ka ndị ọrụ na-ahazighị `.env` ka nwee usoro OAuth na-arụ ọrụ ozugbo. Enweghị fallback e tinyere n’ime ya, ndị na-eweta Gemini / Antigravity ga-akwụsị ịrụ ọrụ maka onye ọrụ ọ bụla na-agbaso ụzọ “naanị clone ma mee ka ọ rụọ ọrụ”.
+67router ga-etinyerịrị ụkpụrụ ndị a ka ndị ọrụ na-ahazighị `.env` ka nwee usoro OAuth na-arụ ọrụ ozugbo. Enweghị fallback e tinyere n’ime ya, ndị na-eweta Gemini / Antigravity ga-akwụsị ịrụ ọrụ maka onye ọrụ ọ bụla na-agbaso ụzọ “naanị clone ma mee ka ọ rụọ ọrụ”.
 
 Agbanyeghị, ụkpụrụ nkịtị dịka `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` na-adaba na ụkpụrụ ọchụchọ nke **GitHub Secret Scanning**, **Semgrep**, na ndị nyocha ụkpụrụ yiri ha. Release ọ bụla na-eweta ọtụtụ false positives na-enweghị isi, push protection na-egbochi commit ziri ezi, ndị na-ahụ maka sistemụ wee kwụsị ịtụkwasị alert feed obi.
 

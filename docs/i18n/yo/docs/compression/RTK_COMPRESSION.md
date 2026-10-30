@@ -4,7 +4,7 @@
 
 ---
 
-Ìfúnpọ̀ RTK jẹ́ ẹ́ńjìnnì ìfúnpọ̀ OmniRoute tó mọ àwọn àṣẹ fún àbájáde terminal àti irinṣẹ́. A
+Ìfúnpọ̀ RTK jẹ́ ẹ́ńjìnnì ìfúnpọ̀ 67router tó mọ àwọn àṣẹ fún àbájáde terminal àti irinṣẹ́. A
 ṣe é fún àwọn ìpàdé aṣojú-kóòdù níbi tí ọ̀pọ̀ ìdàgbàsókè àyíká-ọ̀rọ̀ ti máa ń wá láti inú àkọsílẹ̀ ìdánwò, àbájáde ìkọ́lé,
 ariwo olùṣàkóso package, àkọsílẹ̀ shell, àbájáde Docker, àbájáde git, àti àwọn stack trace.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Ìtòlẹ́sẹẹsẹ yẹn kọ́kọ́ fún àwọn àbájáde ẹ̀rọ aláriwo pọ̀, lẹ́yìn náà ó jẹ́ kí Caveman ṣe àkótán àwọn ọ̀rọ̀ àsọyé tó kù.
 
 RTK upstream ṣe àlàyé ìfipamọ́ `60-90%` fún àbájáde àṣẹ. Àpẹẹrẹ ìpàdé inú README rẹ̀ yí padà láti
-`~118,000` token boṣewa sí `~23,900` token RTK, èyí tó jẹ́ ìfipamọ́ `79.7%` (`~80%`). OmniRoute ń lo
+`~118,000` token boṣewa sí `~23,900` token RTK, èyí tó jẹ́ ìfipamọ́ `79.7%` (`~80%`). 67router ń lo
 àpapọ̀ upstream yẹn fún ìṣirò ìfipamọ́ tí a tò pọ̀ pẹ̀lú ìfúnpọ̀ àbáwọlé Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK ń kó àwọn asẹ wọlé ní ìtòlẹ́sẹẹsẹ yìí:
 2. Àwọn asẹ àgbáyé láti `DATA_DIR/rtk/filters.toml` àti `DATA_DIR/rtk/filters.json`.
 3. Àwọn asẹ tí a kọ́ sínú rẹ̀ láti `open-sse/services/compression/engines/rtk/filters/`.
 
-Láàárín scope kan náà, àwọn asẹ RTK TOML schema v1 ní ààyò ju àwọn asẹ OmniRoute JSON lọ. A máa ń ṣàyẹ̀wò àwọn expression TOML
+Láàárín scope kan náà, àwọn asẹ RTK TOML schema v1 ní ààyò ju àwọn asẹ 67router JSON lọ. A máa ń ṣàyẹ̀wò àwọn expression TOML
 `match_command` ṣáájú ìbámu irú àṣẹ kí asẹ kan pàtó sí àṣẹ tí a gbé wọlé lè borí asẹ tó gbòòrò sí i
 nínú scope yẹn. Scope iṣẹ́-àkànṣe ṣì ní ààyò ju scope àgbáyé lọ, láìka format fáìlì sí.
 
@@ -83,7 +83,7 @@ a sì máa jabo wọn nípasẹ̀ àyẹ̀wò `/api/context/rtk/filters`. Àwọ
 
 ## Ìbámu pẹ̀lú RTK TOML schema v1
 
-OmniRoute lè túmọ̀, fìdí rẹ̀ múlẹ̀, dán an wò, kí ó sì fi àwọn fáìlì àsẹ̀ àṣàyàn alásọyé tí ń lo RTK TOML schema v1 sílẹ̀.
+67router lè túmọ̀, fìdí rẹ̀ múlẹ̀, dán an wò, kí ó sì fi àwọn fáìlì àsẹ̀ àṣàyàn alásọyé tí ń lo RTK TOML schema v1 sílẹ̀.
 Àwọn pápá tí a ṣe àtìlẹ́yìn fún ni `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, àti àwọn ìdánwò inú-láìnì `[[tests.<filter>]]`.
@@ -91,7 +91,7 @@ A máa kọ àwọn pápá tí a kò mọ̀, àwọn gbólóhùn déédé tí k�
 1 MiB lọ, àti àwọn ìtọ́kasí sí àwọn àsẹ̀ àṣàyàn tí a kò mọ̀. A lè fìdí fáìlì tí àwọn ìdánwò inú-láìnì rẹ̀ kùnà múlẹ̀ fún àyẹ̀wò, ṣùgbọ́n a kò lè fi sílẹ̀ tàbí kó wọlé. Àwọn ìkùnà nígbà tí a bá ń kó fáìlì àdáni wọlé ṣì ń jẹ́
 fail-open: a máa fo fáìlì tí kò tọ́ náà, àwọn àsẹ̀ àṣàyàn tó kù sì máa tẹ̀síwájú láti ṣiṣẹ́.
 
-OmniRoute ń gba àbájáde irinṣẹ́ lẹ́yìn tí oníbárà ti mú un tán, nítorí náà `filter_stderr = true`
+67router ń gba àbájáde irinṣẹ́ lẹ́yìn tí oníbárà ti mú un tán, nítorí náà `filter_stderr = true`
 kò lè yí bí a ṣe ń mú àbájáde ìlànà padà. A gba pápá náà gẹ́gẹ́ bí no-op, ìmúdájú sì máa dá ìkìlọ̀ padà.
 A mọ̀ọ́mọ̀ ṣàpèjúwe èyí gẹ́gẹ́ bí **ìbámu pẹ̀lú RTK TOML schema v1**, kì í ṣe ìbámu kíkún
 pẹ̀lú ohun èlò RTK, àwọn ìkọ́ shell, àwọn ìmúṣẹ àṣẹ Rust, tàbí ìṣètò trust-store rẹ̀.

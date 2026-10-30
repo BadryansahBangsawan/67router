@@ -5,7 +5,7 @@
 ---
 
 Pula self-hostowana działa na maszynie **.113** (`tomni-proxmox-113`). Od 2026-10-18 każdy
-runner OmniRoute ma **jedną rolę**, jedną etykietę oraz budżet pamięci/CPU dostosowany do zmierzonego
+runner 67router ma **jedną rolę**, jedną etykietę oraz budżet pamięci/CPU dostosowany do zmierzonego
 obciążenia. Slot Turbopack otrzymuje zasoby wymagane przez kompilację, a pozostałe sloty są dostosowane
 do zmierzonych wartości szczytowych. Nadmiarowe przydzielenie zasobów na maszynie występuje tylko wtedy,
 gdy kompilacja Turbopack zbiega się z kompilacją webpack Release-Green oraz zadaniem lintowania; swap
@@ -28,7 +28,7 @@ Pomiary z 2026-10-18:
 | swap      | 16 GB                                         | `omniroute-113-5` działa z wyłączonym swapem (`MemorySwapMax=0`), dzięki czemu niekontrolowana kompilacja jest zatrzymywana po osiągnięciu limitu zamiast powodować użycie swapu przez maszynę                                                                                                                                                                                                                 |
 | `/tmp`    | **12 GB tmpfs = RAM**                         | wszystko, co jest tam przechowywane, zajmuje pamięć; pozostałości są usuwane po 3 h                                                                                                                                                                                                                                                                                                                            |
 | CPU       | zaobserwowano obciążenie 60 przy 32 rdzeniach | przed wprowadzeniem limitów jedna kompilacja Turbopack (~1166 % CPU) wraz z zestawem testów pokrycia uruchomionym na tej samej maszynie blokowały sygnały heartbeat pozostałych listenerów (`The self-hosted runner lost communication`, #16853)                                                                                                                                                               |
-| runnery   | **6 listenerów**                              | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` są wyłączone (`systemctl enable --now` ponownie uruchamia jeden z nich)                                                                                                                                                                                                                                                                        |
+| runnery   | **6 listenerów**                              | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` są wyłączone (`systemctl enable --now` ponownie uruchamia jeden z nich)                                                                                                                                                                                                                                                                         |
 
 Limity znajdują się w pliku `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 każdej jednostki (poprzednie wartości zachowano jako `override.conf.bak-20261018`) i zostały zastosowane
@@ -77,7 +77,7 @@ zgłosi zadanie jako anulowane, a listener sam wróci do trybu online.
 Domyślne ustawienie runnera `KillMode=process` pozostawia procesy
 `Runner.Worker → npm → next-build` uruchomione po zatrzymaniu lub ponownym uruchomieniu
 jednostki — osierocona kompilacja nadal zużywa pamięć RAM i CPU bez przypisanego zadania.
-Każda jednostka OmniRoute ma konfigurację uzupełniającą
+Każda jednostka 67router ma konfigurację uzupełniającą
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 z ustawieniem `KillMode=mixed`: najpierw SIGTERM do listenera, a po upływie
 `TimeoutStop` SIGKILL do całej grupy cgroup. Ustawienie zacznie obowiązywać przy następnym
@@ -130,7 +130,7 @@ w tym samym poleceniu.
   `quality.yml`. `omniroute-113` miał `MemoryHigh=4G` do 2026-10-18 — kompilacja promptfoo
   przez 54 min odzyskiwała tam pamięć, aby kontynuować pracę; 8 GB eliminuje ograniczanie
   wydajności.
-- **Celowo mniej procesów nasłuchujących.** Cztery jednostki OmniRoute wyłączono 2026-08-29 —
+- **Celowo mniej procesów nasłuchujących.** Cztery jednostki 67router wyłączono 2026-08-29 —
   każdy dodatkowy proces nasłuchujący jest kolejnym użytkownikiem opisanego powyżej budżetu
   pamięci. Limit janitora wynosi 6 (`MAX_ACTIVE_RUNNERS=6` w cron): zlicza on każdy proces
   `Runner.Listener` na maszynie, a OmniHeuris + OmniMind dodają dwa do naszych czterech.

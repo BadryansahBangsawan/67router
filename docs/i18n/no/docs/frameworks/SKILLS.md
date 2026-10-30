@@ -7,29 +7,29 @@
 > **Sannhetskilde:** `src/lib/skills/` og `src/app/api/skills/`
 > **Sist oppdatert:** 2026-06-28 — v3.8.40
 
-OmniRoute tilbyr et utvidbart Skills-rammeverk som lar språkmodeller (og operatører) sette sammen gjenbrukbare funksjoner — fra lesing av filsystemet og HTTP-forespørsler til sandkassekjøring av kode og kvalitetssikrede ferdigheter fra markedsplassen.
+67router tilbyr et utvidbart Skills-rammeverk som lar språkmodeller (og operatører) sette sammen gjenbrukbare funksjoner — fra lesing av filsystemet og HTTP-forespørsler til sandkassekjøring av kode og kvalitetssikrede ferdigheter fra markedsplassen.
 
-En ferdighet er en versjonert, skjemadefinert arbeidsenhet. OmniRoute kan injisere ferdigheter som verktøydefinisjoner i utgående forespørsler, fange opp verktøykall som kommer tilbake fra modellen, kjøre den samsvarende behandleren og sende resultatet tilbake til modellen slik at samtalen kan fortsette. Modellen ser aldri implementasjonen — bare verktøygrensesnittet.
+En ferdighet er en versjonert, skjemadefinert arbeidsenhet. 67router kan injisere ferdigheter som verktøydefinisjoner i utgående forespørsler, fange opp verktøykall som kommer tilbake fra modellen, kjøre den samsvarende behandleren og sende resultatet tilbake til modellen slik at samtalen kan fortsette. Modellen ser aldri implementasjonen — bare verktøygrensesnittet.
 
 ---
 
 ## Agent Skills kontra Omni Skills
 
-OmniRoute har to separate, men komplementære ferdighetssystemer:
+67router har to separate, men komplementære ferdighetssystemer:
 
 | Dimensjon       | **Omni Skills** (dette dokumentet)                          | **Agent Skills**                                                                              |
 | :-------------- | :---------------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
 | Formål          | Injisering av LLM-verktøy + kjøring i sandkasse             | SKILL.md-katalog som eksterne agenter kan oppdage og bruke                                    |
 | Sannhetskilde   | `src/lib/skills/` + markedsplass                            | `src/lib/agentSkills/` + `skills/`-katalog                                                    |
 | Kjøremodus      | Injiseres i utgående forespørsler og kjøres ved verktøykall | Statisk Markdown-katalog + REST/MCP/A2A-endepunkter for oppdagelse                            |
-| Hvem bruker det | OmniRoute selv (kombinasjonsruting, innkommende LLM-kall)   | Eksterne agenter, MCP-klienter, A2A-orkestratorer                                             |
+| Hvem bruker det | 67router selv (kombinasjonsruting, innkommende LLM-kall)    | Eksterne agenter, MCP-klienter, A2A-orkestratorer                                             |
 | Antall          | Variabelt (markedsplassdrevet)                              | 43 katalogoppføringer (22 API + 20 CLI + 1 konfigurasjon)                                     |
 | Format          | `SkillDefinition` med verktøyskjema + behandler             | `SKILL.md`-frontmatter + Markdown-innhold                                                     |
 | Oppdagelse      | `/api/skills/*` REST + `omniroute_skills_*` MCP-verktøy     | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-verktøy + A2A `list-capabilities` |
 
-**Omni Skills** er kjøringsmotoren — de definerer hva OmniRoute _kan gjøre_ når en LLM kaller et verktøy.
+**Omni Skills** er kjøringsmotoren — de definerer hva 67router _kan gjøre_ når en LLM kaller et verktøy.
 
-**Agent Skills** er dokumentasjonskatalogen — de forklarer eksterne agenter _hvordan de bruker_ OmniRoutes REST-API og CLI, med strukturerte SKILL.md-filer som kan mates direkte inn i agentmeldinger.
+**Agent Skills** er dokumentasjonskatalogen — de forklarer eksterne agenter _hvordan de bruker_ 67routers REST-API og CLI, med strukturerte SKILL.md-filer som kan mates direkte inn i agentmeldinger.
 
 For Agent Skills-katalogen, generatoren, MCP-verktøyene og A2A-ferdigheten, se [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ For Agent Skills-katalogen, generatoren, MCP-verktøyene og A2A-ferdigheten, se 
 
 Tre ferdighetskilder eksisterer side om side i det samme registeret:
 
-1. **Innebygde ferdigheter** (`src/lib/skills/builtins.ts`) — leveres med OmniRoute. Dekker de vanligste tilfellene:
+1. **Innebygde ferdigheter** (`src/lib/skills/builtins.ts`) — leveres med 67router. Dekker de vanligste tilfellene:
    - `file_read`, `file_write` — sandkassearbeidsområde per API-nøkkel under `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — utgående HTTP via `safeOutboundFetch` med `guard: "public-only"`
    - `web_search` — utskiftbar søkeleverandør med hurtigbufring (`executeWebSearch`)
    - `eval_code` — kjøring av `node` eller `python` i Docker-sandkasse
    - `execute_command` — kjøring av skallkommandoer i Docker-sandkasse
    - `browser` — Playwright-basert grunnstruktur, deaktivert som standard (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute-markedsplassen) — hentes fra `https://skillsmp.com/api/v1/skills/search`. Krever `skillsmpApiKey` i Innstillinger.
+2. **SkillsMP** (67router-markedsplassen) — hentes fra `https://skillsmp.com/api/v1/skills/search`. Krever `skillsmpApiKey` i Innstillinger.
 3. **SkillsSH** (`skills.sh`-fellesskapskatalogen) — hentes fra `https://skills.sh/api/search`. Ingen autentisering er nødvendig; SKILL.md-innhold hentes fra GitHub raw.
 
 Én «aktiv leverandør» styrer hvilken katalog kontrollpanelet installerer fra (`src/lib/skills/providerSettings.ts`). Bytt den under **Innstillinger → Minne og ferdigheter**. Standard: `skillsmp`.
@@ -442,7 +442,7 @@ dokumentet. Det finnes ingen flyttallsterskel av typen `0.6` og ingen poengbereg
 
 ## Katalog over innebygde ferdigheter
 
-OmniRoute leveres med et kuratert sett med innebygde ferdigheter i `src/lib/skills/builtin/`. De vanligste er:
+67router leveres med et kuratert sett med innebygde ferdigheter i `src/lib/skills/builtin/`. De vanligste er:
 
 ### Ferdighet for nettleserautomatisering
 

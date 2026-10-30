@@ -4,7 +4,7 @@
 
 ---
 
-Ipinapaliwanag ng pahinang ito ang lokal na gawi ng `.env` sa proyekto at kung paano pangasiwaan ang mga environment file at lihim habang dine-develop ang OmniRoute.
+Ipinapaliwanag ng pahinang ito ang lokal na gawi ng `.env` sa proyekto at kung paano pangasiwaan ang mga environment file at lihim habang dine-develop ang 67router.
 
 ## Gawi ng .env sa postinstall
 

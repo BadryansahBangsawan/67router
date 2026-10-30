@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute हे Hindsight 0.9.1 (केवळ-मजकूर `encode(list[str])`) आणि Memorix 1.6.0 (Jina मीडिया गेट) यांच्या पुढे असताना `POST /v1/embeddings` साठी ऑपरेटर नोंदी. OmniRoute 3.8.49 विरुद्ध `https://omniroute.jaguar-fish.ts.net/v1` येथे 2026-08-17 रोजी प्रत्यक्ष पडताळले. खाली कोणतीही गुपिते नाहीत.
+67router हे Hindsight 0.9.1 (केवळ-मजकूर `encode(list[str])`) आणि Memorix 1.6.0 (Jina मीडिया गेट) यांच्या पुढे असताना `POST /v1/embeddings` साठी ऑपरेटर नोंदी. 67router 3.8.49 विरुद्ध `https://omniroute.jaguar-fish.ts.net/v1` येथे 2026-08-17 रोजी प्रत्यक्ष पडताळले. खाली कोणतीही गुपिते नाहीत.
 
 ## कार्यरत मॉडेल आयडी
 
@@ -76,7 +76,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 मूळ `gemini-embedding-2` केवळ GitOps मधून यशस्वी होऊ शकत नाही. Google AI
 Studio की ही `gemini` प्रोव्हायडर कनेक्शन म्हणून जोडली पाहिजे (डॅशबोर्ड किंवा
-OmniRoute मध्ये इम्पोर्ट केलेली `GEMINI_API_KEY`). हे गुपित या रेपोमध्ये नाही.
+67router मध्ये इम्पोर्ट केलेली `GEMINI_API_KEY`). हे गुपित या रेपोमध्ये नाही.
 
 ### Jina मल्टिमोडल मार्ग
 
@@ -97,7 +97,7 @@ OmniRoute मध्ये इम्पोर्ट केलेली `GEMINI_AP
 
 ### Jina / Memorix प्रतिमा ऑब्जेक्ट
 
-OmniRoute चे प्रमाणित प्रतिमा आयटम (28×28 PNG, 784 पिक्सेल — Jina 1×1 नाकारते):
+67router चे प्रमाणित प्रतिमा आयटम (28×28 PNG, 784 पिक्सेल — Jina 1×1 नाकारते):
 
 ```json
 {
@@ -146,7 +146,7 @@ Memorix 1.6.0 / Jina मूळ रचना:
 
 Hindsight एम्बेडिंग्ज केवळ-मजकूर (`encode(list[str])`) आहेत. ते प्रतिमा
 ऑब्जेक्ट पाठवत नाही. Hindsight च्या OpenAI-सुसंगत एम्बेडिंग्ज बेस URL ला
-OmniRoute `/v1` कडे निर्देशित करा आणि वरील तक्त्यातील कार्यरत आयडी वापरा
+67router `/v1` कडे निर्देशित करा आणि वरील तक्त्यातील कार्यरत आयडी वापरा
 (`jina-ai/jina-embeddings-v5-omni-small` किंवा
 `openrouter/google/gemini-embedding-2`). गेटवेवर `gemini` API की उपलब्ध
 नसेल, तर मॉडेल साध्या `gemini-embedding-2` वर सेट करू नका.
@@ -154,12 +154,12 @@ OmniRoute `/v1` कडे निर्देशित करा आणि वर
 ### Memorix 1.6.0
 
 Memorix केवळ `/jina\.ai/i` शी जुळणाऱ्या `baseUrl` ला मूळ मीडिया म्हणून
-हाताळते. मॉडेल Jina omni असले तरी OmniRoute URL केवळ-मजकूर मार्गावरच
+हाताळते. मॉडेल Jina omni असले तरी 67router URL केवळ-मजकूर मार्गावरच
 राहतो. हा गेट Memorix क्लायंटमधील समस्या आहे. स्वतंत्रपणे, गेट उघडल्यास
-Memorix पाठवेल असा Jina `{image: "data:..."}` बॉडी OmniRoute अजूनही
+Memorix पाठवेल असा Jina `{image: "data:..."}` बॉडी 67router अजूनही
 नाकारते, त्यामुळे प्रमाणित `{type,source}` स्कीमाशिवाय Jina-सुसंगत क्लायंट
-OmniRoute द्वारे प्रतिमा एम्बेड करू शकत नाहीत.
+67router द्वारे प्रतिमा एम्बेड करू शकत नाहीत.
 
 मजकुरासाठी `jina-ai/jina-embeddings-v5-omni-small` वापरा. Memorix चा
-`base_url` `https://api.jina.ai` कडे निर्देशित करू नका — OmniRoute हाच
+`base_url` `https://api.jina.ai` कडे निर्देशित करू नका — 67router हाच
 एकमेव हॉप ठेवा.

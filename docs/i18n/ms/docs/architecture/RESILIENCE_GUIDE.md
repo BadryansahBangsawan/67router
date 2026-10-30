@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute mempunyai tiga mekanisme daya tahan yang berbeza tetapi saling berkaitan. Setiap satu mempunyai skop dan tujuan yang berbeza. Pastikan ia berasingan semasa menyahpepijat tingkah laku penghalaan.
+67router mempunyai tiga mekanisme daya tahan yang berbeza tetapi saling berkaitan. Setiap satu mempunyai skop dan tujuan yang berbeza. Pastikan ia berasingan semasa menyahpepijat tingkah laku penghalaan.
 
 ![3-layer resilience model](../diagrams/exported/resilience-3layers.svg)
 
@@ -185,7 +185,7 @@ Ketiga-tiga pengepala afiniti sesi tidak pernah dimajukan ke huluan — pelaksan
 
 ### Pajakan sambungan sesi terurus eksklusif
 
-**Skop:** satu klien/sesi HTTP terurus aktif memiliki satu sambungan OmniRoute yang layak.
+**Skop:** satu klien/sesi HTTP terurus aktif memiliki satu sambungan 67router yang layak.
 
 **Tujuan:** menyediakan pemilikan sambungan eksklusif yang teguh untuk klien yang memerlukan pagar
 penghalaan tegas merentasi permintaan. Ini berbeza daripada afiniti sesi, yang merupakan keutamaan
@@ -209,7 +209,7 @@ mengikat ID kunci API yang disahkan dan ID sambungan aktif. Pengepala kawalan pa
 daripada log, snapshot permintaan yang dikekalkan, dan pengepala pelaksana huluan.
 
 Jika penghalaan biasa mempunyai calon terurus yang layak tetapi setiap calon bebas diduduki oleh
-pajakan aktif asing, OmniRoute mengembalikan HTTP `429`, kod kapasiti-pajakan-tidak-tersedia,
+pajakan aktif asing, 67router mengembalikan HTTP `429`, kod kapasiti-pajakan-tidak-tersedia,
 keadaan menunggu-kapasiti, dan `Retry-After` terhad yang diterbitkan daripada tamat tempoh
 berkaitan yang paling awal. Kelayakan kosong biasa bukan pertikaian pajakan dan mengekalkan
 semantik ralat penghalaannya yang sedia ada.
@@ -233,7 +233,7 @@ Mekanisme berkaitan kekal berasingan:
   sambungan itu), untuk pembekal lain `getQuotaScopedModelForProvider()`.
 - `404` menyekat model itu sahaja (`getModelLockKey()` menyempitkan `not_found`).
 - Mana-mana status lain — kegagalan pengangkutan/pelayan `5xx` dan `502` sintetis
-  OmniRoute sendiri daripada pengesahan kualiti — hanya menyekat tuple pembekal/sambungan/model
+  67router sendiri daripada pengesahan kualiti — hanya menyekat tuple pembekal/sambungan/model
   yang **tepat** sahaja. Strim yang rosak pada satu model bukan bukti
   tentang kuota akaun; sebelum peraturan ini, satu respons kosong pada
   `codex/gpt-5.6-luna` mengeluarkan setiap model `gpt-5*` sambungan itu daripada
@@ -370,7 +370,7 @@ setiap model**, satu `model=cap` setiap baris) atau melalui
   integer positif.
 - **Giliran setempat, tiada penemuan:** permintaan berlebihan beratur secara
   setempat dengan semantik baris gilir/tamat masa sedia ada (ralat kemasukan
-  bertaip `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute tidak
+  bertaip `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router tidak
   mengesan atau menyimpulkan dasar huluan — ia menguatkuasakan siling tepat
   yang dikonfigurasikan oleh pengendali. Pintu model yang tepu tidak pernah
   melumpuhkan penyedia mahupun mewujudkan sekatan model yang kekal; tingkah
@@ -468,7 +468,7 @@ Semakan kemasukan itu sendiri ialah fungsi tulen (`open-sse/services/rateLimitMa
 ### Jaring Keselamatan Pengaktifan Auto Had Kadar & Perlindungan Sambungan (`rateLimitProtection`)
 
 **Jaring keselamatan pengaktifan auto** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, lalai `true`):
-Secara lalai, OmniRoute secara automatik mengaktifkan perlindungan queue had kadar untuk semua sambungan pembekal kunci API yang aktif (`getProviderCategory(provider) === "apikey"`). Ini memastikan permintaan masuk ke kunci API upstream yang sensitif kadar diatur gilir dan disebat melalui Bottleneck dan bukannya meletus menjadi ralat 429 upstream. Jaring keselamatan boleh ditindih melalui pemboleh ubah persekitaran `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` menyahaktifkan, `true`/`1`/`on` memaksa aktif), yang mengambil keutamaan ke atas tetapan papan pemuka yang dikekalkan (**Tetapan → Resilience** / `PATCH /api/resilience`).
+Secara lalai, 67router secara automatik mengaktifkan perlindungan queue had kadar untuk semua sambungan pembekal kunci API yang aktif (`getProviderCategory(provider) === "apikey"`). Ini memastikan permintaan masuk ke kunci API upstream yang sensitif kadar diatur gilir dan disebat melalui Bottleneck dan bukannya meletus menjadi ralat 429 upstream. Jaring keselamatan boleh ditindih melalui pemboleh ubah persekitaran `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` menyahaktifkan, `true`/`1`/`on` memaksa aktif), yang mengambil keutamaan ke atas tetapan papan pemuka yang dikekalkan (**Tetapan → Resilience** / `PATCH /api/resilience`).
 
 **Semantik `rateLimitProtection` setiap sambungan:**
 Perlindungan had kadar setiap sambungan dijejak melalui medan boolean `rateLimitProtection` pada sambungan pembekal (dikekalkan sebagai `rate_limit_protection` dalam SQLite):
@@ -792,7 +792,7 @@ Batasan sebenar:
 > ejen kekal di bawah bajet konteks 40k. Ia adalah paparan ringkas bersemuka ejen bagi
 > bahagian di atas; bahagian bernombor kekal sebagai rujukan penuh.
 
-OmniRoute mempunyai tiga mekanisme kegagalan sementara yang berkaitan tetapi berbeza. Kekalkan
+67router mempunyai tiga mekanisme kegagalan sementara yang berkaitan tetapi berbeza. Kekalkan
 skopnya berasingan semasa menyahpepijat tingkah laku penghalaan. Lihat
 [gambar rajah daya tahan 3 lapisan](../diagrams/exported/resilience-3layers.svg)
 (sumber: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

@@ -7,11 +7,11 @@
 Pro manifest sdílených spustitelných souborů, omezená prostředí podřízených procesů a trvalé
 nastavení Gemini viz [kontrakty spouštění CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute poskytuje rodinu příkazů `setup-*`, které nakonfigurují programovací
-CLI (Codex, Claude Code, OpenCode, Cline, …) tak, aby používalo OmniRoute jako svůj backend — nástroj tak
-komunikuje s **jedním** koncovým bodem a OmniRoute směruje požadavky ke správnému poskytovateli s
+67router poskytuje rodinu příkazů `setup-*`, které nakonfigurují programovací
+CLI (Codex, Claude Code, OpenCode, Cline, …) tak, aby používalo 67router jako svůj backend — nástroj tak
+komunikuje s **jedním** koncovým bodem a 67router směruje požadavky ke správnému poskytovateli s
 automatickým přepnutím při selhání. Každý příkaz načte **aktuální** katalog modelů z běžícího
-OmniRoute (lokálního nebo vzdáleného) a zapíše vlastní konfigurační soubor nástroje na **vašem**
+67router (lokálního nebo vzdáleného) a zapíše vlastní konfigurační soubor nástroje na **vašem**
 počítači. Klíč API je odkazován prostřednictvím proměnné prostředí všude, kde to nástroj
 podporuje. Příkazy, které trvale ukládají lokální soubor prostředí nástroje, jsou uvedeny níže.
 
@@ -53,7 +53,7 @@ podrobných návodech pro jednotlivé nástroje:
 
 - [Konfigurace Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Konfigurace Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Vzdálený režim](./REMOTE-MODE.md) — ovládejte vzdálený OmniRoute (VPS / Tailnet) ze svého notebooku
+- [Vzdálený režim](./REMOTE-MODE.md) — ovládejte vzdálený 67router (VPS / Tailnet) ze svého notebooku
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — rozšíření OmniCopilot; může také spouštět tyto
   příkazy `setup-*` přímo z editoru
 
@@ -89,7 +89,7 @@ serveru a zapíše konfiguraci lokálně.
 
 Poznámky k příznakům (ověřeno ve zdrojovém kódu příkazu):
 
-- `--remote <url>` — načte katalog ze vzdálené instance OmniRoute (má přednost před `--port`
+- `--remote <url>` — načte katalog ze vzdálené instance 67router (má přednost před `--port`
   a aktivním kontextem). `--api-key <key>` poskytuje přihlašovací údaj pro daný
   server (výchozí je hodnota proměnné prostředí `OMNIROUTE_API_KEY` nebo token aktivního kontextu).
 - `--only <patterns>` — podřetězce oddělené čárkami; ponechá pouze ID modelů, která se shodují
@@ -110,7 +110,7 @@ Poznámky k příznakům (ověřeno ve zdrojovém kódu příkazu):
   **codex** prostřednictvím argumentů `-c model_providers.omniroute.*`. **Qwen je jediný cíl příkazu run,
   který striktně vyžaduje `--model`** — `omniroute run qwen` bez něj skončí
   s kódem `2` a explicitní chybou.
-- `--port <port>` — místní port OmniRoute (výchozí `20128`, ignorován při nastavení `--remote`).
+- `--port <port>` — místní port 67router (výchozí `20128`, ignorován při nastavení `--remote`).
   Je přítomen u všech příkazů `setup-*` a obou spouštěčů.
 - Návratové kódy `omniroute run`: vlastní návratový kód podřízeného CLI je předán
   beze změny; `2` = neplatné argumenty (nepodporovaný cíl, chybějící povinné
@@ -155,7 +155,7 @@ nejsou prezentovány jako spustitelné cíle.
 
 ## Lokální použití
 
-Když OmniRoute běží na `localhost:20128`, stačí spustit příkaz pro nastavení vašeho
+Když 67router běží na `localhost:20128`, stačí spustit příkaz pro nastavení vašeho
 nástroje. Katalog se načte z lokálního serveru.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 Spuštění zcela bez zápisu konfigurace (pouze předání přes proměnné prostředí):
 
 ```bash
-omniroute launch                 # Claude Code → lokální OmniRoute
-omniroute launch-codex           # Codex CLI → lokální OmniRoute
+omniroute launch                 # Claude Code → lokální 67router
+omniroute launch-codex           # Codex CLI → lokální 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Vzdálené použití
 
-Nasměrujte libovolný příkaz pro nastavení na vzdálený OmniRoute pomocí `--remote` + `--api-key`.
+Nasměrujte libovolný příkaz pro nastavení na vzdálený 67router pomocí `--remote` + `--api-key`.
 Katalog se načte ze vzdáleného serveru a konfigurace se zapíše na váš lokální počítač.
 
 ```bash
@@ -245,7 +245,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Obě varianty zapíší jeden **ověřovací profil** 5dive a každé místo `claude` svázané s tímto
-profilem pak komunikuje s OmniRoute. Pro tento cíl jsou specifické tři věci:
+profilem pak komunikuje s 67router. Pro tento cíl jsou specifické tři věci:
 
 - **Spouští se na hostiteli flotily jako root.** Příkazy 5dive pracují s lokálními jednotkami systemd
   a stavovým adresářem vlastněným uživatelem root; vzdálený režim není k dispozici. Pokud recept
@@ -263,7 +263,7 @@ profilem pak komunikuje s OmniRoute. Pro tento cíl jsou specifické tři věci:
 Klíč API se nástroji 5dive předává přes **stdin** (`--api-key=-`), takže se nikdy neobjeví ve
 výstupu `ps`.
 
-Nasměrování profilu na **kombinaci** OmniRoute namísto jednoho modelu zajistí
+Nasměrování profilu na **kombinaci** 67router namísto jednoho modelu zajistí
 pro flotilu přepnutí poskytovatele při selhání: když primární koncový bod během interakce
 zaznamenané v
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) zcela přestal fungovat, agent dokončil
@@ -273,7 +273,7 @@ zbývající kroky přes záložní koncový bod a výpadek se uživateli vůbec
 
 ## Konvence základních URL (které nástroje vyžadují `/v1`)
 
-OmniRoute zpřístupňuje rozhraní OpenAI na `/v1`, rozhraní Anthropic v kořenové cestě
+67router zpřístupňuje rozhraní OpenAI na `/v1`, rozhraní Anthropic v kořenové cestě
 a nativní rozhraní Gemini na `/v1beta`. Každá integrace je nastavena ve formátu,
 který daný nástroj očekává (ověřeno ve zdrojovém kódu příkazu):
 
@@ -295,7 +295,7 @@ který daný nástroj očekává (ověřeno ve zdrojovém kódu příkazu):
 ## Zachování nativních závislostí při aktualizaci: `--include=optional`
 
 Při aktualizaci pomocí `omniroute update` (po potvrzení nebo s `--apply`)
-OmniRoute spustí instalaci se zabudovaným parametrem `--include=optional`:
+67router spustí instalaci se zabudovaným parametrem `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -325,13 +325,13 @@ Kontrakt ověřený vůči `@google/gemini-cli` 0.50.0: CLI respektuje
 `GOOGLE_GEMINI_BASE_URL` a odesílá na tuto adresu požadavky
 `POST /v1beta/models/<model>:generateContent` (a
 `:streamGenerateContent?alt=sse`) — přesně na nativní rozhraní Gemini služby
-OmniRoute (`/v1beta`). Příkaz `omniroute run gemini` vše nakonfiguruje automaticky:
+67router (`/v1beta`). Příkaz `omniroute run gemini` vše nakonfiguruje automaticky:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktivní základní URL služby OmniRoute (kořen, bez `/v1`);
-- `GEMINI_API_KEY` → zjištěné přihlašovací údaje OmniRoute (volba/prostředí/kontext);
+- `GOOGLE_GEMINI_BASE_URL` → aktivní základní URL služby 67router (kořen, bez `/v1`);
+- `GEMINI_API_KEY` → zjištěné přihlašovací údaje 67router (volba/prostředí/kontext);
 - **dočasný izolovaný adresář `GEMINI_CLI_HOME`**, jehož soubor
   `.gemini/settings.json` vybírá ověřování `gemini-api-key`, takže uložená relace
-  Google OAuth (Code Assist) nikdy nepřepíše spuštění směrované přes OmniRoute —
+  Google OAuth (Code Assist) nikdy nepřepíše spuštění směrované přes 67router —
   po ukončení je adresář odstraněn;
 - **hygiena prostředí**: z prostředí podřízeného procesu jsou odstraněny proměnné
   `GOOGLE_API_KEY`, `GOOGLE_GENAI_USE_VERTEXAI` a `GOOGLE_GENAI_USE_GCA` (které by
@@ -357,7 +357,7 @@ agentů pro `/dashboard/acp-agents`.
 
 Deterministické regresní testy plánu spuštění běží v CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Pro ověření SKUTEČNÝCH binárních souborů vůči SKUTEČNÉMU
-serveru OmniRoute je k dispozici volitelný testovací nástroj v
+serveru 67router je k dispozici volitelný testovací nástroj v
 `tests/integration/upstream-cli-smoke.int.test.ts`. Nikdy se nespouští automaticky
 (každý dílčí test je přeskočen, pokud není nastaveno `RUN_CLI_SMOKE=1`), předává přihlašovací údaj prostřednictvím NÁZVU
 proměnné prostředí (nikoli její hodnoty), rediguje řetězce připomínající klíče ve všech zaznamenaných výstupech, přeskakuje

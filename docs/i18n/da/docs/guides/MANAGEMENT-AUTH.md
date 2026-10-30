@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har **fire legitimationsfamilier**, der kan autorisere administrationsruter.
+67router har **fire legitimationsfamilier**, der kan autorisere administrationsruter.
 De kan ikke bruges i stedet for hinanden. Inferens-API-nøgler (`sk-…`) administrerer
 **ikke** serveren, medmindre de udtrykkeligt er blevet tildelt omfanget `manage` eller `admin`.
 

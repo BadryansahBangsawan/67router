@@ -15,9 +15,9 @@
 엔진의 역할은 레지스트리의 `RouterBackendDefinition`에 함께 인코딩된 **서로 독립적인 두 축**으로 설명됩니다.
 
 1. **수명 주기**(`RouterBackendLifecycle`) — _엔진이 실행되는 방식_:
-   - `in-process` — OmniRoute Node 프로세스 내부에서 실행됩니다(네이티브 TS 파이프라인).
-   - `supervised` — OmniRoute가 `ServiceSupervisor`를 통해 설치/시작/중지/상태 확인하는 로컬 자식 프로세스이며, 이후 공급자 연결로 사용됩니다.
-   - `external` — OmniRoute가 요청을 디스패치하지만 관리하지는 **않는** HTTP 엔드포인트입니다(환경 변수의 기본 URL로 구성).
+   - `in-process` — 67router Node 프로세스 내부에서 실행됩니다(네이티브 TS 파이프라인).
+   - `supervised` — 67router가 `ServiceSupervisor`를 통해 설치/시작/중지/상태 확인하는 로컬 자식 프로세스이며, 이후 공급자 연결로 사용됩니다.
+   - `external` — 67router가 요청을 디스패치하지만 관리하지는 **않는** HTTP 엔드포인트입니다(환경 변수의 기본 URL로 구성).
    - `disabled` — 등록되어 있지만 선택할 수 없습니다.
 2. **선택 축**(릴레이 라우팅 백엔드) — _릴레이가 해당 엔진으로 디스패치하는지 여부_:
    `src/app/api/v1/relay/chat/completions/routingBackend.ts`의

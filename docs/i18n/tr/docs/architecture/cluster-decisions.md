@@ -14,7 +14,7 @@
 
 ## Bu yaklaşım neden ihtiyatlıdır?
 
-OmniRoute'un mevcut dağıtım yapısı zaten yalın ve kendini kanıtlamıştır:
+67router'un mevcut dağıtım yapısı zaten yalın ve kendini kanıtlamıştır:
 
 - **`redis:7-alpine`**, üretim ölçeğindeki hız sınırlama/önbellek iş yükünü yönetir.
 - **SQLite + sqlite-vec + FTS5**, yerel bellek + vektör + metin aramasını karşılar (bkz. [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Buradaki iki profil, **SQLite sınırına ulaşan dağıtımlar için ölçek b�
 
 - ≥3 `omniroute` replikası çalıştırıyor ve sağlayıcı rotasyonunu tek bir Go sürecinde merkezîleştirmek istiyorsanız.
 - Tüm replikalardaki yukarı akış sağlayıcısı istekleri için tek bir denetim/günlükleme yüzeyi istiyorsanız.
-- Katman 1 yönlendirme katmanını OmniRoute replikalarından bağımsız olarak yatay biçimde ölçeklendirmek istiyorsanız.
+- Katman 1 yönlendirme katmanını 67router replikalarından bağımsız olarak yatay biçimde ölçeklendirmek istiyorsanız.
 
 **Ekledikleri:**
 

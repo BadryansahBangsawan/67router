@@ -34,7 +34,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute で **Providers → Add Provider** に移動し、**Microsoft 365 Copilot
+6. 67router で **Providers → Add Provider** に移動し、**Microsoft 365 Copilot
    (BizChat)** を選択して、次の形式で認証情報を貼り付けます。
 
 ```
@@ -50,9 +50,9 @@ WebSocket URL から値を手動でコピーする代わりに、DevTools の HA
 1. **DevTools → Network** を開きます。
 2. BizChat の会話を開始または続行します（これにより WebSocket 接続が開始されます）。
 3. Network パネル内を右クリックし、**Save all as HAR with content** を選択します。
-4. OmniRoute のプロバイダー接続ダイアログで、**Import .har file** ボタンを使用します。
+4. 67router のプロバイダー接続ダイアログで、**Import .har file** ボタンを使用します。
 
-OmniRoute は HAR 内で Chathub WebSocket URL を検索し、`access_token` と `chathubPath` を抽出して、認証情報フィールドへ自動的に入力します。HAR インポートでは JWT の有効期限がデコードされ、トークンの残り有効期間が表示されます。
+67router は HAR 内で Chathub WebSocket URL を検索し、`access_token` と `chathubPath` を抽出して、認証情報フィールドへ自動的に入力します。HAR インポートでは JWT の有効期限がデコードされ、トークンの残り有効期間が表示されます。
 
 > **実際の HAR エクスポート、アクセストークン、リフレッシュトークンは絶対にコミットしないでください。** テストおよびドキュメント内の値には、必ずプレースホルダーを使用してください。
 
@@ -69,7 +69,7 @@ OmniRoute は HAR 内で Chathub WebSocket URL を検索し、`access_token` と
 | `refreshToken` | `substrate.office.com/sydney` スコープ用の Microsoft OAuth リフレッシュトークン |
 | `tier`         | `individual`（デフォルト）、`edu`、または `enterprise`                          |
 
-`substrate.office.com/sydney` をスコープとする Microsoft のデバイスコードフローまたは認可コードフローから、リフレッシュトークンを取得します。`refreshToken` を設定すると、OmniRoute は各リクエストの前に `access_token` を事前更新するため、約75分ごとに有効期限が切れるたびに再取得する必要はありません。
+`substrate.office.com/sydney` をスコープとする Microsoft のデバイスコードフローまたは認可コードフローから、リフレッシュトークンを取得します。`refreshToken` を設定すると、67router は各リクエストの前に `access_token` を事前更新するため、約75分ごとに有効期限が切れるたびに再取得する必要はありません。
 
 `refreshToken` を設定していない場合は、有効期限が切れるたびに WebSocket 認証情報を手動で再取得する必要があります。
 

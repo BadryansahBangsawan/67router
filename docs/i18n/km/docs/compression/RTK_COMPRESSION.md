@@ -4,7 +4,7 @@
 
 ---
 
-ការបង្ហាប់ RTK គឺជាម៉ាស៊ីនបង្ហាប់របស់ OmniRoute ដែលយល់ដឹងអំពី command សម្រាប់ output របស់ terminal និង tool។ វាត្រូវបាន
+ការបង្ហាប់ RTK គឺជាម៉ាស៊ីនបង្ហាប់របស់ 67router ដែលយល់ដឹងអំពី command សម្រាប់ output របស់ terminal និង tool។ វាត្រូវបាន
 រចនាឡើងសម្រាប់ session របស់ coding-agent ដែលការកើនឡើងនៃ context ភាគច្រើនកើតចេញពី test logs, build output,
 សំឡេងរំខានពី package manager, shell transcripts, Docker output, git output និង stack traces។
 
@@ -17,7 +17,7 @@ rtk -> caveman
 លំដាប់នេះបង្ហាប់ machine output ដែលមានសំឡេងរំខានជាមុនសិន បន្ទាប់មកអនុញ្ញាតឱ្យ Caveman សង្ខេប prose ដែលនៅសល់។
 
 RTK ដើមរាយការណ៍ពីការសន្សំ command-output ចំនួន `60-90%`។ session គំរូក្នុង README របស់វាបានថយចុះពី
-standard tokens ប្រហែល `~118,000` មកនៅ RTK tokens ប្រហែល `~23,900` ដែលសន្សំបាន `79.7%` (`~80%`)។ OmniRoute ប្រើ
+standard tokens ប្រហែល `~118,000` មកនៅ RTK tokens ប្រហែល `~23,900` ដែលសន្សំបាន `79.7%` (`~80%`)។ 67router ប្រើ
 មធ្យមភាគដើមនោះសម្រាប់ការគណនាការសន្សំរួមជាមួយការបង្ហាប់ input របស់ Caveman៖
 
 ```txt
@@ -54,7 +54,7 @@ RTK ផ្ទុក filter តាមលំដាប់នេះ៖
 2. Global filters ពី `DATA_DIR/rtk/filters.toml` និង `DATA_DIR/rtk/filters.json`។
 3. Built-in filters ពី `open-sse/services/compression/engines/rtk/filters/`។
 
-នៅក្នុង scope ដូចគ្នា RTK TOML schema v1 filters មានអាទិភាពលើ OmniRoute JSON filters។ TOML
+នៅក្នុង scope ដូចគ្នា RTK TOML schema v1 filters មានអាទិភាពលើ 67router JSON filters។ TOML
 `match_command` expressions ត្រូវបានពិនិត្យមុន command-type matching ដូច្នេះ filter ជាក់លាក់សម្រាប់ command
 ដែលបាន import អាច override filter ដែលទូលំទូលាយជាងនៅក្នុង scope នោះ។ Project scope នៅតែមានអាទិភាពលើ global
 scope ដោយមិនគិតពី file format។
@@ -84,7 +84,7 @@ Custom filters អាចជា filter object មួយ ឬ array នៃ filter o
 
 ## ភាពត្រូវគ្នាជាមួយ RTK TOML schema v1
 
-OmniRoute អាចញែក វាយតម្លៃសុពលភាព សាកល្បង និងដំឡើងឯកសារតម្រងបែបប្រកាសដោយប្រើ RTK TOML schema v1។
+67router អាចញែក វាយតម្លៃសុពលភាព សាកល្បង និងដំឡើងឯកសារតម្រងបែបប្រកាសដោយប្រើ RTK TOML schema v1។
 វាលដែលគាំទ្ររួមមាន `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` និងការធ្វើតេស្តក្នុងបន្ទាត់ `[[tests.<filter>]]`។
@@ -93,7 +93,7 @@ OmniRoute អាចញែក វាយតម្លៃសុពលភាព ស�
 វាយតម្លៃសុពលភាពដើម្បីពិនិត្យមើល ប៉ុន្តែមិនអាចដំឡើង ឬផ្ទុកបានទេ។ ការបរាជ័យក្នុងការផ្ទុកឯកសារផ្ទាល់ខ្លួននៅតែមានលក្ខណៈ
 fail-open៖ ឯកសារមិនត្រឹមត្រូវត្រូវបានរំលង ហើយតម្រងដែលនៅសល់បន្តដំណើរការ។
 
-OmniRoute ទទួលលទ្ធផលពីឧបករណ៍ បន្ទាប់ពី client បានចាប់យកវារួចហើយ ដូច្នេះ `filter_stderr = true`
+67router ទទួលលទ្ធផលពីឧបករណ៍ បន្ទាប់ពី client បានចាប់យកវារួចហើយ ដូច្នេះ `filter_stderr = true`
 មិនអាចផ្លាស់ប្ដូរការចាប់យក process បានទេ។ វាលនេះត្រូវបានទទួលយកដោយគ្មានប្រតិបត្តិការ ហើយការវាយតម្លៃសុពលភាពនឹងបញ្ជូនការព្រមានត្រឡប់មកវិញ។
 វាត្រូវបានពិពណ៌នាដោយចេតនាថាជា **ភាពត្រូវគ្នាជាមួយ RTK TOML schema v1** មិនមែនជាភាពត្រូវគ្នាពេញលេញ
 ជាមួយឯកសារប្រតិបត្តិ RTK, shell hooks, ការអនុវត្ត command ជា Rust ឬប្លង់ trust-store របស់វាទេ។

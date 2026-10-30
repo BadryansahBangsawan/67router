@@ -907,7 +907,7 @@ function ProvidersPageContent() {
               title={t("addFirstProvider") || "Add your first provider"}
               description={
                 t("addFirstProviderDesc") ||
-                "Connect an AI provider to start routing requests through OmniRoute. You can use free providers, API keys, or OAuth accounts."
+                "Connect an AI provider to start routing requests through 67router. You can use free providers, API keys, or OAuth accounts."
               }
               actions={
                 <>

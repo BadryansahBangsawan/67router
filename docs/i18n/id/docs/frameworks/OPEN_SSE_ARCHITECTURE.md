@@ -4,7 +4,7 @@
 
 ---
 
-> **Ringkasnya**: `open-sse/` adalah mesin streaming inti yang mendukung setiap permintaan LLM di OmniRoute. Paket ini berisi sekitar 1.400 file yang mengimplementasikan pipeline permintaan, eksekutor, layanan, server MCP, dan lapisan penerjemahan. Panduan ini menjelaskan bagaimana semua komponen tersebut saling terhubung.
+> **Ringkasnya**: `open-sse/` adalah mesin streaming inti yang mendukung setiap permintaan LLM di 67router. Paket ini berisi sekitar 1.400 file yang mengimplementasikan pipeline permintaan, eksekutor, layanan, server MCP, dan lapisan penerjemahan. Panduan ini menjelaskan bagaimana semua komponen tersebut saling terhubung.
 
 **Sumber:** `open-sse/` (paket workspace, sekitar 1.440 file `.ts` non-pengujian)
 
@@ -12,10 +12,10 @@
 
 ## Mengapa Menggunakan Paket Workspace Terpisah?
 
-`open-sse/` merupakan **workspace mandiri** dalam monorepo OmniRoute karena beberapa alasan:
+`open-sse/` merupakan **workspace mandiri** dalam monorepo 67router karena beberapa alasan:
 
 1. **Dapat digunakan kembali** — `open-sse` dipublikasikan sebagai `@omniroute/open-sse` di npm, sehingga proyek lain dapat menggunakannya secara independen
-2. **Batasan yang jelas** — mesin streaming dipisahkan dari lapisan UI/DB khusus OmniRoute
+2. **Batasan yang jelas** — mesin streaming dipisahkan dari lapisan UI/DB khusus 67router
 3. **Performa** — mesin ini tidak memiliki dependensi Next.js, sehingga memungkinkan cold start yang lebih cepat dalam konteks CLI/serverless
 4. **Pembuatan versi** — `open-sse` dapat merilis versi sesuai siklusnya sendiri
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Mengapa Menggunakan Transformer Terpisah?
 
-Responses API adalah format baru OpenAI dengan **percakapan berstatus** (`previous_response_id`). Saat klien mengirimkan permintaan Responses, OmniRoute:
+Responses API adalah format baru OpenAI dengan **percakapan berstatus** (`previous_response_id`). Saat klien mengirimkan permintaan Responses, 67router:
 
 1. Mengonversi Responses → Chat Completions secara internal
 2. Mengirimkannya ke penyedia (penyedia mana pun yang mendukung Chat Completions)

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Huling na-update:** 2026-06-28 — v3.8.40
 
-Kasama sa OmniRoute ang isang plugin system na tulad ng sa WordPress. Ang mga plugin ay mga nagsasariling
+Kasama sa 67router ang isang plugin system na tulad ng sa WordPress. Ang mga plugin ay mga nagsasariling
 directory — bawat isa ay may `plugin.json` manifest at isang entry file — na kumokonekta
 sa request pipeline (`onRequest` / `onResponse` / `onError`) at sa
 mga lifecycle event (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ sa schema.
 
 ### Direktoryo ng plugin
 
-Nakalagay ang mga plugin sa ilalim ng data directory ng OmniRoute:
+Nakalagay ang mga plugin sa ilalim ng data directory ng 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

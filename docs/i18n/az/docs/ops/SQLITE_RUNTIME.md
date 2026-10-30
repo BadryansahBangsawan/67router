@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute işə salınarkən SQLite drayverini 5 mərhələli ehtiyat keçid zənciri vasitəsilə müəyyən edir:
+67router işə salınarkən SQLite drayverini 5 mərhələli ehtiyat keçid zənciri vasitəsilə müəyyən edir:
 
 1. **Paketə daxil edilmiş `better-sqlite3`** (`package.json` daxilindəki `dependencies` vasitəsilə)
    — ən sürətli variantdır, yerli ikili fayldan istifadə edir və qurma alətləri mövcud olduqda `npm install` tərəfindən quraşdırılır.
@@ -28,13 +28,13 @@ OmniRoute işə salınarkən SQLite drayverini 5 mərhələli ehtiyat keçid zə
 - **Qurma alətlərinin olmaması**: Bəzi mühitlər (VS Build Tools olmayan korporativ Windows
   sistemləri, minimal Docker təsvirləri) `better-sqlite3` paketini kompilyasiya edə bilmir. İcra zamanı
   quraşdırıcı npm reyestrindən əvvəlcədən qurulmuş ikili faylı əldə edir; ehtiyat
-  drayverlər isə bu proses uğursuz olsa belə OmniRoute-un işə düşməsini təmin edir.
+  drayverlər isə bu proses uğursuz olsa belə 67router-un işə düşməsini təmin edir.
 - **Şəbəkədən təcrid olunmuş sistemlər**: npm reyestri əlçatmazdırsa, `node:sqlite`
   və ya `sql.js` baza funksionallığına zəmanət verir.
 
 ## Magic baytların yoxlanması
 
-İcra zamanı quraşdırılmış `.node` faylını yükləməzdən əvvəl OmniRoute ilk 8
+İcra zamanı quraşdırılmış `.node` faylını yükləməzdən əvvəl 67router ilk 8
 baytı oxuyur və onları məlum platforma magic baytları ilə müqayisə edir:
 
 | Platforma             | Baytlar (hex) | Etiket      |
@@ -105,9 +105,9 @@ metrikləri ilə tutuşdurun.
 ## Tək-yazıcı topologiyası (HA dəstəklənmir)
 
 Yuxarıdakı drayver ehtiyat keçid zənciri yenə də **bir prosesdə** işləyir. Standart SQLite
-ilə OmniRoute **tək yazıcıdır**:
+ilə 67router **tək yazıcıdır**:
 
-- İki OmniRoute replikasını eyni `storage.sqlite` faylına qoşmayın.
+- İki 67router replikasını eyni `storage.sqlite` faylına qoşmayın.
 - Konteynerin yenidən başladılması, Recreate yerləşdirməsi, OOM səbəbilə dayandırılması və ya HEALTHCHECK tərəfindən yenidən başladılması
   icrada olan bütün SSE sessiyalarını kəsir. Standart yolda sessiyaların mərhələli bağlanması yoxdur.
 - Yavaş `/healthz` cavabını dayanmış vəziyyət kimi qəbul edən orkestrator liveness yoxlaması yeganə

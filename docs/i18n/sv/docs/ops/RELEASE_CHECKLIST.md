@@ -45,7 +45,7 @@ det återställer det helautomatiska flöde som projektet hade fram till v3.8.48
 WS1.3-garantin bibehålls (en läckt token kan inte publicera på egen hand — det finns ingen token).
 
 **Engångskonfiguration (ägare):** npmjs.com → paketet `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: ägare `diegosouzapw`, repo `OmniRoute`, arbetsflöde `npm-publish.yml`
+Publisher_ → GitHub: ägare `diegosouzapw`, repo `67router`, arbetsflöde `npm-publish.yml`
 (miljö: ingen). Tills detta finns misslyckas det automatiska steget med `ENEEDAUTH`:
 starta om manuellt med `publish_mode=staged` (nedan) eller `direct`.
 

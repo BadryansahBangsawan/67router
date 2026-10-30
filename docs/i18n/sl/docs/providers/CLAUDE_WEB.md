@@ -180,7 +180,7 @@ v živo s poverilnicami, zato ti preskočeni primeri niso dokaz delovanja med iz
 
 ### Nastavitev
 
-1. Zaženite OmniRoute z `npm run dev` ali iz izdelane namestitve.
+1. Zaženite 67router z `npm run dev` ali iz izdelane namestitve.
 2. Odprite Nadzorna plošča → Ponudniki → Dodaj ponudnika.
 3. Izberite kategorijo Spletni piškotek in Claude Web.
 4. Prilepite celotno glavo Cookie, kopirano iz overjene zahteve `claude.ai`.

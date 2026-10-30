@@ -1,10 +1,10 @@
-# Claude Code CLI — Configuration with OmniRoute (Igbo)
+# Claude Code CLI — Configuration with 67router (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CLAUDE-CODE-CONFIGURATION.md)
 
 ---
 
-Tụnye **Claude Code** CLI (`claude`) aka na OmniRoute — nke mpaghara ma ọ bụ VPS dị anya —
+Tụnye **Claude Code** CLI (`claude`) aka na 67router — nke mpaghara ma ọ bụ VPS dị anya —
 site na profaịlụ nke ụdịdị ọ bụla, dịka nhazi Codex.
 
 ---
@@ -12,15 +12,15 @@ site na profaịlụ nke ụdịdị ọ bụla, dịka nhazi Codex.
 ## Mmalite ngwa ngwa
 
 ```bash
-# Mepụta Claude Code ka ọ jiri OmniRoute mpaghara (ọ na-achọpụta ọnọdụ na-arụ ọrụ na-akpaghị aka)
+# Mepụta Claude Code ka ọ jiri 67router mpaghara (ọ na-achọpụta ọnọdụ na-arụ ọrụ na-akpaghị aka)
 omniroute launch
 
-# Ka ọ jiri OmniRoute dị anya (mgbe `omniroute connect <host>` gasịrị, nke a na-eme na-akpaghị aka)
+# Ka ọ jiri 67router dị anya (mgbe `omniroute connect <host>` gasịrị, nke a na-eme na-akpaghị aka)
 omniroute launch --remote http://192.168.0.15:20128 --api-key oma_live_xxx
 
 # Mepụta profaịlụ nke ụdịdị ọ bụla, wee malite otu n'ime ha
 omniroute setup-claude            # na-ede ~/.claude/profiles/<name>/settings.json
-omniroute launch --profile glm52  # Claude Code na-eji glm/glm-5.2 site na OmniRoute
+omniroute launch --profile glm52  # Claude Code na-eji glm/glm-5.2 site na 67router
 ```
 
 ---
@@ -33,7 +33,7 @@ tụnye ya aka na endpoint ahaziri iche (o nweghị ọkọlọtọ `--base-url`
 | Variable                                     | Ebumnuche                                                                                                 |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | `ANTHROPIC_BASE_URL`                         | URL mgbọrọgwụ nke gateway (Claude Code na-etinye `/v1/messages`). **Etinyekwala ngwụcha `/v1`.**          |
-| `ANTHROPIC_AUTH_TOKEN`                       | A na-eziga ya dịka `Authorization: Bearer …` — jiri token nnweta / API key OmniRoute gị                   |
+| `ANTHROPIC_AUTH_TOKEN`                       | A na-eziga ya dịka `Authorization: Bearer …` — jiri token nnweta / API key 67router gị                    |
 | `ANTHROPIC_API_KEY`                          | Nhọrọ ọzọ: a na-eziga ya dịka `x-api-key`. Ọ bụrụ na edobere ha abụọ, `ANTHROPIC_AUTH_TOKEN` ga-ebute ụzọ |
 | `ANTHROPIC_MODEL`                            | Manye otu ụdịdị kpọmkwem (na-akagbu ndabara nke onye-ahọpụta `/model`)                                    |
 | `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY` | `1` → onye-ahọpụta `/model` nke mbụ na-edepụta ụdịdị `claude*`/`anthropic*` sitere na `/v1/models`        |
@@ -52,10 +52,10 @@ ga-arụ ọrụ ozugbo), na-enyocha ahụike sava, ma na-eme exec nke `claude`.
 
 Nchọpụta model gateway nke Claude Code na-edepụta naanị ids ndị na-amalite na `claude`
 ma ọ bụ `anthropic`, ya mere, na `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`,
-picker `/model` nke eke na-egosikarị **naanị** models Claude/Anthropic nke OmniRoute —
+picker `/model` nke eke na-egosikarị **naanị** models Claude/Anthropic nke 67router —
 `kimi/kimi-k2.6` ma ọ bụ `glm/glm-5.2` anaghị apụtara, ọbụlagodi na a na-eduzi ya nke ọma.
 
-OmniRoute nwere ike ịmeghari (mirror) model ọ bụla arụnyere ọrụ (na combo) n'okpuru id
+67router nwere ike ịmeghari (mirror) model ọ bụla arụnyere ọrụ (na combo) n'okpuru id
 `claude/…` ka ọ wee gafere nzacha ahụ wee pụta na picker:
 
 ```
@@ -64,7 +64,7 @@ glm/glm-5.2              →  claude/glm/glm-5.2         "GLM 5.2 (OmniRoute)"
 <combo "custo-otimizado"> →  claude/combo/custo-otimizado
 ```
 
-Mgbe ị họọrọ otu n'ime ndị a na Claude Code, OmniRoute na-ewepụ mkpuchi `claude/`
+Mgbe ị họọrọ otu n'ime ndị a na Claude Code, 67router na-ewepụ mkpuchi `claude/`
 ahụ ka ọ laghachi na id nke eke tupu ọ dọtụzie — id `claude/<real-claude-model>`
 nke eke (provider Claude OAuth nke eke) ka a na-ahapụ ka ọ dị mgbe niile.
 
@@ -77,7 +77,7 @@ variants mbọ ndị ahụ ọ bụla ka `OMNIROUTE_DISABLE_THINKING_LEVEL_VARIA
 nmeghari a anaghị etinye variant ọ bụla nke catalog ntọala na-enweghị.
 
 **Nke a gbanyụrụ na ndabara** ma ọnụ ụzọ n'ọkwa atọ na-achịkwa ya (nke kacha kpọmkwem
-na-emeri), ka OmniRoute nkịtị wee ghara ịme ka catalog ya gbaa ugboro abụọ maka clients
+na-emeri), ka 67router nkịtị wee ghara ịme ka catalog ya gbaa ugboro abụọ maka clients
 ndị na-adịghị eji Claude Code:
 
 | Ọkwa     | Ebe                                                                          |
@@ -109,8 +109,8 @@ maka instance a, n'akụkụ bọtịnụ ozi discovery-alias, yana bọtịnụ
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY": "1",
   },
 }
@@ -175,7 +175,7 @@ profaịlụ maka model ọ bụla na `~/.claude/profiles/<name>/settings.json`,
 > context na-arụ ọrụ), ma ọ bụ jiri aka gị bupụ `ANTHROPIC_AUTH_TOKEN` wee mee
 > `CLAUDE_CONFIG_DIR=~/.claude/profiles/<name> claude`.
 
-**Mmekọrịta akpaka mgbe achọpụtachara model (ị ga-ahọrọ ịgbanye ya).** OmniRoute nwere ike iwepụtaghachi otu
+**Mmekọrịta akpaka mgbe achọpụtachara model (ị ga-ahọrọ ịgbanye ya).** 67router nwere ike iwepụtaghachi otu
 faịlụ `~/.claude/profiles/<name>/settings.json` ndị a na-akpaghị aka mgbe ọ bụla mmekọrịta model nke provider
 gbanwere katalọgụ dị ugbu a — ya mere model ọhụrụ ma ọ bụ ndị a gbanwere aha ga-enweta profaịlụ na-enweghị ịmegharị
 command ahụ. Ọ **gbanyụrụ na ndabara**: gbanye ya site na **dashboard CLI Code** ("Mmekọrịta akpaka nke profaịlụ
@@ -186,7 +186,7 @@ na-agbanwe nhazi Claude gị na-arụ ọrụ/nke ndabara, njirimara, ma ọ b�
 ### Ịmepụta + iji profaịlụ
 
 ```bash
-# OmniRoute nke mpaghara
+# 67router nke mpaghara
 omniroute setup-claude
 
 # VPS dị anya (na-etinye URL VPS n'ime profaịlụ ọ bụla)
@@ -210,7 +210,7 @@ omniroute launch --profile kimi-k27
 
 ## Ọkwa model (nhọrọ)
 
-Claude Code na-eziga arịrịọ n'ọkwa ike dị iche iche. Jikọta nke ọ bụla na model OmniRoute site na env /
+Claude Code na-eziga arịrịọ n'ọkwa ike dị iche iche. Jikọta nke ọ bụla na model 67router site na env /
 ntọala ma ọ bụrụ na ịchọrọ ndị na-eweta dị iche iche maka ọkwa ọ bụla:
 
 ```bash
@@ -245,7 +245,7 @@ v2.1.219+ na `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`. Naanị ID model `c
 
 **`400 Ambiguous model 'claude-…'`** — Claude Code na-eziga ID model **na-enweghị prefix**
 mgbe niile (dịka `claude-opus-4-8`), ya mere mgbe ejikọtara ma ndị na-eweta Claude Code (`cc/…`) na
-Claude (`claude/…`), id na-enweghị prefix ga-adaba na route abụọ, OmniRoute
+Claude (`claude/…`), id na-enweghị prefix ga-adaba na route abụọ, 67router
 agaghịkwa achọ ịkọ nkọ. Dozie ya n'otu n'ime ụzọ abụọ: jiri
 `ANTHROPIC_MODEL=cc/claude-opus-4-8` họrọ id nwere prefix kpọmkwem, ma ọ bụ gbanye **Họrọ Claude Code karịa
 maka model Claude ndị na-enweghị prefix** — toggle dị na peeji onye na-eweta Claude, ma ọ bụ

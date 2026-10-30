@@ -5,7 +5,7 @@
 ---
 
 > **Maelezo ya mstari mmoja kwa kila saraka na faili ya mizizi.**
-> Ilisasishwa mwisho: 2026-06-28 — OmniRoute v3.8.40
+> Ilisasishwa mwisho: 2026-06-28 — 67router v3.8.40
 >
 > Tumia ramani hii kuvinjari hifadhi ya msimbo kwa haraka. Kwa uchambuzi wa kina, fuata viungo vya nyaraka mahususi.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Mtiririko kamili wa toleo (ujuzi, husky, conventional commits, upelekaji)                                   |
 | `COVERAGE_PLAN.md`          | Malengo ya ufikiaji wa majaribio na hali ya sasa                                                            |
 | `FREE_TIERS.md`             | Watoa huduma wa viwango vya bila malipo walioteuliwa (48+ bila malipo + 11 OAuth)                           |
-| `CLI-TOOLS.md`              | Miunganisho ya CLI za nje + CLI ya ndani ya OmniRoute                                                       |
+| `CLI-TOOLS.md`              | Miunganisho ya CLI za nje + CLI ya ndani ya 67router                                                        |
 | `I18N.md`                   | Usanifu wa i18n, kuongeza lugha, lugha 67                                                                   |
 | `UNINSTALL.md`              | Hatua za uondoaji safi                                                                                      |
 | `PROVIDER_REFERENCE.md`     | Katalogi ya watoa huduma 375 **inayozalishwa kiotomatiki** (zalisha upya: `npm run gen:provider-reference`) |

@@ -45,7 +45,7 @@ nó khôi phục quy trình hoàn toàn tự động mà dự án đã có cho �
 đảm bảo WS1.3 (một token bị rò rỉ không thể tự phát hành — vì không tồn tại token nào).
 
 **Thiết lập một lần (chủ sở hữu):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). Cho đến khi cấu hình này tồn tại, bước tự động sẽ thất bại với `ENEEDAUTH`:
 kích hoạt lại với `publish_mode=staged` (bên dưới) hoặc `direct`.
 

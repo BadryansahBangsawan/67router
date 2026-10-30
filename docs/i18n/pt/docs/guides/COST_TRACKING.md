@@ -4,7 +4,7 @@
 
 ---
 
-Como o OmniRoute estima, regista e comunica o custo de cada pedido — e por que motivo o
+Como o 67router estima, regista e comunica o custo de cada pedido — e por que motivo o
 valor apresentado no painel é um **registo de poupanças**, não uma fatura.
 
 Consulte também: [Guia do Utilizador](./USER_GUIDE.md) · [Galeria de Funcionalidades](./FEATURES.md)
@@ -13,12 +13,12 @@ Consulte também: [Guia do Utilizador](./USER_GUIDE.md) · [Galeria de Funcional
 
 ## O que é (e o que não é)
 
-O OmniRoute atribui um custo em USD por pedido a cada conclusão, multiplicando as contagens
+O 67router atribui um custo em USD por pedido a cada conclusão, multiplicando as contagens
 de tokens pelas tarifas do modelo. Estes valores alimentam o painel de **Custos**, os
 comandos da CLI `omniroute cost` / `omniroute usage`, as exportações CSV/JSON e os orçamentos
 por chave de API.
 
-> **O "custo" apresentado no painel é um registo de poupanças, não uma fatura.** O OmniRoute nunca lhe cobra
+> **O "custo" apresentado no painel é um registo de poupanças, não uma fatura.** O 67router nunca lhe cobra
 > — encaminha os seus pedidos para fornecedores que já tenha associado (as suas próprias
 > subscrições, níveis gratuitos e chaves de API). Um "custo total de $290" acumulado inteiramente em modelos
 > gratuitos significa que, aproximadamente, **não pagou _$290_** a uma API paga. O valor é uma _estimativa_
@@ -30,7 +30,7 @@ apresentado no painel é um registo de poupanças, não uma fatura").
 
 Como o valor é uma estimativa:
 
-- Depende da tabela de preços que o OmniRoute tem para cada modelo. Um modelo sem uma entrada
+- Depende da tabela de preços que o 67router tem para cada modelo. Um modelo sem uma entrada
   de preço contribui com um custo de `0` (é apresentado como uma linha "Legado / Gratuito" no explorador).
 - O tráfego de níveis gratuitos e de subscrições continua a acumular um custo _estimado_ — esse é o
   montante que está a poupar, não um montante em dívida.
@@ -48,7 +48,7 @@ Os custos provêm de uma tabela de preços determinada pela seguinte ordem de pr
 2. **Preços externos sincronizados** — obtidos a partir do ficheiro público
    `model_prices_and_context_window.json` do LiteLLM quando a sincronização está ativada (armazenados num espaço de nomes
    `pricing_synced` separado, para que nunca substituam as suas definições).
-3. **Predefinições incorporadas** — incluídas com o OmniRoute.
+3. **Predefinições incorporadas** — incluídas com o 67router.
 
 A sincronização de preços externos é **opcional** e está desativada por predefinição. Variáveis de ambiente relevantes
 (consulte [`.env.example`](../../.env.example)):
@@ -193,7 +193,7 @@ indicação em contrário.
 
 ## CLI
 
-A CLI do OmniRoute disponibiliza comandos de custos, utilização e preços (registados em
+A CLI do 67router disponibiliza comandos de custos, utilização e preços (registados em
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

@@ -31,7 +31,7 @@ Kwa kila mgombea katika kundi (`open-sse/services/autoCombo/virtualFactory.ts::b
 mara tu baada ya `filterPaidOnlyCandidates`):
 
 1. **Hayumo kabisa katika `FREE_MODEL_BUDGETS`** → anaondolewa. Hii inajumuisha modeli zinazolipiwa kweli na
-   mtoa huduma/modeli yoyote ambayo OmniRoute bado haijaiainisha — wagombea wapya huanza wakiwa wameondolewa, si kujumuishwa.
+   mtoa huduma/modeli yoyote ambayo 67router bado haijaiainisha — wagombea wapya huanza wakiwa wameondolewa, si kujumuishwa.
 2. **`freeType: "keyless"`** → hupita mara moja, **lakini tu kwa mgombea ambaye kwa hakika
    aliwasili kupitia njia isiyohitaji uthibitishaji** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Hakuna kitambulisho cha ufikiaji kwa
@@ -86,7 +86,7 @@ kamwe si akaunti nyingine isiyothibitishwa iliyo kwenye mgombea huyo huyo. Tazam
 (kesi A/B/C za kupita bila ufunguo, kesi 1-5 za akaunti nyingi).
 
 `discovered automatically`: mtoa huduma/modeli itakayotolewa kesho ikiwa na metadata sahihi (katika
-katalogi, ikiwa na adapta ya matumizi, `hardStopGuaranteed: true`) inaweza kutumika mara tu OmniRoute inapoijua
+katalogi, ikiwa na adapta ya matumizi, `hardStopGuaranteed: true`) inaweza kutumika mara tu 67router inapoijua
 — hakuna mabadiliko ya msimbo, hakuna ingizo la orodha ruhusa, hakuna cha kuhariri katika moduli hii. Inapoondolewa kwenye
 katalogi hupotea kwa njia hiyo hiyo. Tazama
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` kwa uthibitisho wa kutorudia kwa hitilafu (kupitia

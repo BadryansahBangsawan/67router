@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Gaeilge)
+# 🌐 67router Proxy Guide (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Téigh timpeall ar bhacainní geografacha, cosain d’aitheantas, agus treoraigh trácht IS trí sheachfhreastalaí ar bith — gan aon chastacht chumraíochta.**
 
-Cuimsíonn OmniRoute córas bainistíochta seachfhreastalaí lánfheidhmeach a ligeann duit trácht chuig soláthraithe IS réamhtheachtacha a threorú trí sheachfhreastalaithe HTTP, HTTPS, nó SOCKS5. Cibé acu atá tú i réigiún blocáilte, a bhfuil rothlú IP de dhíth ort, nó a dteastaíonn méarlorgú ceilte uait — clúdaíonn an treoir seo gach rud.
+Cuimsíonn 67router córas bainistíochta seachfhreastalaí lánfheidhmeach a ligeann duit trácht chuig soláthraithe IS réamhtheachtacha a threorú trí sheachfhreastalaithe HTTP, HTTPS, nó SOCKS5. Cibé acu atá tú i réigiún blocáilte, a bhfuil rothlú IP de dhíth ort, nó a dteastaíonn méarlorgú ceilte uait — clúdaíonn an treoir seo gach rud.
 
 ---
 
@@ -51,7 +51,7 @@ Fiú lasmuigh de réigiúin bhlocáilte, bíonn seachfhreastalaithe úsáideach 
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Freastalaí OmniRoute                    │
+│                       Freastalaí 67router                    │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Clárlann    │    │ Seoltóir     │    │ Gabháil         │  │
@@ -83,7 +83,7 @@ Fiú lasmuigh de réigiúin bhlocáilte, bíonn seachfhreastalaithe úsáideach 
 
 ## Córas Seachfhreastalaí 4 Leibhéal
 
-Tacaíonn OmniRoute le cumraíocht seachfhreastalaí ag **ceithre raon neamhspleácha**, a réitítear in ord tosaíochta:
+Tacaíonn 67router le cumraíocht seachfhreastalaí ag **ceithre raon neamhspleácha**, a réitítear in ord tosaíochta:
 
 ```
 Ord Réitigh Tosaíochta (is airde → is ísle):
@@ -96,7 +96,7 @@ Ord Réitigh Tosaíochta (is airde → is ísle):
 
 ### Conas a Oibríonn an Réiteach
 
-Nuair a sheolann OmniRoute iarratas chuig soláthraí réamhtheachtach, glaonn sé `resolveProxyForConnectionFromRegistry()`, a sheiceálann gach leibhéal in ord:
+Nuair a sheolann 67router iarratas chuig soláthraí réamhtheachtach, glaonn sé `resolveProxyForConnectionFromRegistry()`, a sheiceálann gach leibhéal in ord:
 
 1. **Leibhéal an chuntais** — An bhfuil seachfhreastalaí sannta don ID ceangail sonrach seo?
 2. **Leibhéal an tsoláthraí** — An bhfuil seachfhreastalaí sannta don soláthraí seo (m.sh., `openai`)?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Iompórtáil/Easpórtáil
 
-Cuirtear seachfhreastalaithe san áireamh sa chóras **Cúltaca/Athchóiriú**. Nuair a easpórtálann tú do chumraíocht OmniRoute:
+Cuirtear seachfhreastalaithe san áireamh sa chóras **Cúltaca/Athchóiriú**. Nuair a easpórtálann tú do chumraíocht 67router:
 
 1. Téigh chuig **Deais → Socruithe → Cúltaca**
 2. Cliceáil **Easpórtáil** — cuirtear clárlann agus sannacháin na seachfhreastalaithe san áireamh
@@ -248,7 +248,7 @@ Tacaíonn an chlárlann seachfhreastalaithe freisin le **upsert de réir host+po
 
 ### Ascú Oidhreachta
 
-Má chumraigh tú seachfhreastalaithe i leagan níos sine (roimh an gclárlann), aistríonn OmniRoute iad go huathoibríoch:
+Má chumraigh tú seachfhreastalaithe i leagan níos sine (roimh an gclárlann), aistríonn 67router iad go huathoibríoch:
 
 ```
 Stór oidhreachta key_value → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Tarlaíonn sé seo uair amháin ar an gcéad tosú tar éis uasghrádaithe. Ús�
 
 > 🆕 **Arna chur leis ag [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Saincheist [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-Comhtháthaíonn OmniRoute le hardán pobail **[1proxy](https://1proxy-api.aitradepulse.com)** chun rochtain a sholáthar ar **na céadta seachfhreastalaí saor in aisce atá bailíochtaithe** ó gach cearn den domhan. Tá sé seo foirfe d’úsáideoirí nach bhfuil a mbonneagar seachfhreastalaí féin acu.
+Comhtháthaíonn 67router le hardán pobail **[1proxy](https://1proxy-api.aitradepulse.com)** chun rochtain a sholáthar ar **na céadta seachfhreastalaí saor in aisce atá bailíochtaithe** ó gach cearn den domhan. Tá sé seo foirfe d’úsáideoirí nach bhfuil a mbonneagar seachfhreastalaí féin acu.
 
 ### Conas a Oibríonn Sé
 
@@ -273,7 +273,7 @@ Comhtháthaíonn OmniRoute le hardán pobail **[1proxy](https://1proxy-api.aitra
 └─────────────┘ seachfhreast. └─────────────────┘               └────────────┘
 ```
 
-1. **Sioncronú** — Faigheann OmniRoute seachfhreastalaithe bailíochtaithe ó API 1proxy
+1. **Sioncronú** — Faigheann 67router seachfhreastalaithe bailíochtaithe ó API 1proxy
 2. **Stóráil** — Sábháiltear seachfhreastalaithe sa tábla céanna `proxy_registry` le `source = 'oneproxy'`
 3. **Scagadh** — Scagtar de réir prótacail, tíre agus scór cáilíochta
 4. **Rothlú** — Roghnaítear an seachfhreastalaí is fearr trí straitéis cháilíochta, randamach nó sheicheamhach a úsáid
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Frithbhraiteacht & Rúndacht
 
-Ní hamháin go seolann OmniRoute trácht trí sheachfhreastalaí — cuireann sé cuma dhlisteanach ar an trácht:
+Ní hamháin go seolann 67router trácht trí sheachfhreastalaí — cuireann sé cuma dhlisteanach ar an trácht:
 
 ### Bréagú Méarloirg TLS
 
@@ -407,11 +407,11 @@ Taispeánann an suaitheantas IP réitithe an tseachfhreastalaí freisin lena fh�
 
 ## Móid Seachfhreastalaí Réamhtheachtach
 
-I gcás soláthraithe a úsáideann patrún CLIProxyAPI, tacaíonn OmniRoute le trí mhód seachfhreastalaí réamhtheachtacha:
+I gcás soláthraithe a úsáideann patrún CLIProxyAPI, tacaíonn 67router le trí mhód seachfhreastalaí réamhtheachtacha:
 
 | Mód           | Cur Síos                                                                                                |
 | ------------- | ------------------------------------------------------------------------------------------------------- |
-| `native`      | Láimhseálann OmniRoute ródú seachfhreastalaí go díreach (réamhshocrú)                                   |
+| `native`      | Láimhseálann 67router ródú seachfhreastalaí go díreach (réamhshocrú)                                    |
 | `cliproxyapi` | Tarmligeann sé chuig ásc seachtrach CLIProxyAPI                                                         |
 | `fallback`    | Baineann sé triail as an mód dúchasach ar dtús, agus téann sé ar ais chuig CLIProxyAPI má theipeann air |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API Tollán
 
-Chun d’ásc OmniRoute a nochtadh don idirlíon poiblí (Cloudflare/ngrok/Tailscale) in ionad trácht amach a ródú trí sheachfhreastalaí, féach [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tá REST API na dtollán faoi `/api/tunnels/{cloudflared,ngrok,tailscale}/*` agus tá sé neamhspleách ar an slabhra seachfhreastalaí amach a bhfuil cur síos air thuas.
+Chun d’ásc 67router a nochtadh don idirlíon poiblí (Cloudflare/ngrok/Tailscale) in ionad trácht amach a ródú trí sheachfhreastalaí, féach [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tá REST API na dtollán faoi `/api/tunnels/{cloudflared,ngrok,tailscale}/*` agus tá sé neamhspleách ar an slabhra seachfhreastalaí amach a bhfuil cur síos air thuas.
 
 ### API 1proxy
 
@@ -516,7 +516,7 @@ Socraigh `ENABLE_SOCKS5_PROXY=true` i do chomhad `.env` agus atosaigh.
 
 ### Earráidí "socket hang up" tríd an seachfhreastalaí
 
-Is gnáthrud é seo le seachfhreastalaithe saora a dhúnann naisc dhíomhaoin. Láimhseálann OmniRoute é seo cheana féin trí:
+Is gnáthrud é seo le seachfhreastalaithe saora a dhúnann naisc dhíomhaoin. Láimhseálann 67router é seo cheana féin trí:
 
 - Coinneáil beo a dhíchumasú ar naisc seachfhreastalaí (`keepAliveTimeout: 1`)
 - Píblíneáil a dhíchumasú (`pipelining: 0`)
@@ -526,7 +526,7 @@ Má mhaireann an fhadhb, bain triail as seachfhreastalaí eile nó úsáid gné 
 
 ### "unsupported_country_region_territory" le linn OAuth
 
-Cinntigh go bhfuil an seachfhreastalaí cumraithe **sula** dtosaíonn tú sreabhadh OAuth. Seolann OmniRoute malartú chomhartha OAuth tríd an seachfhreastalaí cumraithe. Socraigh seachfhreastalaí domhanda nó seachfhreastalaí ar leibhéal an tsoláthraí ar dtús, agus ansin ceangail.
+Cinntigh go bhfuil an seachfhreastalaí cumraithe **sula** dtosaíonn tú sreabhadh OAuth. Seolann 67router malartú chomhartha OAuth tríd an seachfhreastalaí cumraithe. Socraigh seachfhreastalaí domhanda nó seachfhreastalaí ar leibhéal an tsoláthraí ar dtús, agus ansin ceangail.
 
 ### Níl an seachfhreastalaí á úsáid
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Seiceáil Sláinte Seachfhreastalaí (v3.8.16+)
 
-Aimsíonn meicníocht **mear-theipe seachfhreastalaí** OmniRoute (`src/lib/proxyHealth.ts`) seachfhreastalaithe neamhbheo laistigh de <2s trí sheiceáil thapa naisc TCP a dhéanamh, agus ansin **taisceann sí an toradh** chun forchostas in aghaidh an iarratais a sheachaint.
+Aimsíonn meicníocht **mear-theipe seachfhreastalaí** 67router (`src/lib/proxyHealth.ts`) seachfhreastalaithe neamhbheo laistigh de <2s trí sheiceáil thapa naisc TCP a dhéanamh, agus ansin **taisceann sí an toradh** chun forchostas in aghaidh an iarratais a sheachaint.
 
 ### Conas a Oibríonn Sé
 
@@ -659,11 +659,11 @@ Bíonn tosaíocht i gcónaí ag poirt shaincheaptha san URL (`http://host:9999`)
 
 ## Anailísíocht & Infheictheacht Seachfhreastalaí
 
-Rianaíonn OmniRoute úsáid gach seachfhreastalaí chun cabhrú le hoibreoirí patrúin ródaithe, borrthaí foighne agus teipeanna athfhillteacha a dhiagnóisiú.
+Rianaíonn 67router úsáid gach seachfhreastalaí chun cabhrú le hoibreoirí patrúin ródaithe, borrthaí foighne agus teipeanna athfhillteacha a dhiagnóisiú.
 
 ### Na Rudaí a Rianaítear
 
-I gcás gach iarratais a théann trí sheachfhreastalaí cumraithe, taifeadann OmniRoute:
+I gcás gach iarratais a théann trí sheachfhreastalaí cumraithe, taifeadann 67router:
 
 | Méadrach     | Cur síos                                                                        |
 | ------------ | ------------------------------------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Crann Cinntí don Straitéis Rothlaithe
 
-Nuair a shanntar níos mó ná seachfhreastalaí amháin do raon feidhme, úsáideann OmniRoute **straitéis rothlaithe** chun an ceann atá le húsáid do gach iarratas a roghnú. Cumraítear an straitéis ar leibhéal an raoin feidhme (domhanda, de réir soláthraí, de réir cuntais, de réir teaglaim).
+Nuair a shanntar níos mó ná seachfhreastalaí amháin do raon feidhme, úsáideann 67router **straitéis rothlaithe** chun an ceann atá le húsáid do gach iarratas a roghnú. Cumraítear an straitéis ar leibhéal an raoin feidhme (domhanda, de réir soláthraí, de réir cuntais, de réir teaglaim).
 
 ### Straitéisí atá ar Fáil
 

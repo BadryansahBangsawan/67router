@@ -15,7 +15,7 @@ Dáileann an tInneall Comhroinnte Cuóta cuóta ama soláthraí (m.sh. fuinneog 
 Codex, Kimi 1500 req/h) go cothrom ar eochracha iomadúla API a chomhroinneann an
 nasc céanna.
 
-**An fhadhb a réitíonn sé:** Seachfhreastalaíonn OmniRoute go leor eochracha API ar an
+**An fhadhb a réitíonn sé:** Seachfhreastalaíonn 67router go leor eochracha API ar an
 gcuntas céanna soláthraí réamhtheachtaigh. Gan loighic chomhroinnte, féadfaidh ráig ó eochair A
 cuóta an tsoláthraí don uair a ídiú, rud a fhágann eochracha B agus C blocáilte go dtí go
 n-athshocraítear an fhuinneog. Cuireann an t-inneall cosc air seo trí:
@@ -119,7 +119,7 @@ Tiománaí Redis: script Lua EVAL le haghaidh incrimint adamhach — ritear é m
 
 - Tábla: `quota_consumption` (féach an t-aistriú `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Is fearr é d’imlonnuithe aon ásc amháin.
-- Tá an mharthanacht ar fad sa bhunachar sonraí SQLite OmniRoute atá ann cheana (`DATA_DIR/storage.sqlite`).
+- Tá an mharthanacht ar fad sa bhunachar sonraí SQLite 67router atá ann cheana (`DATA_DIR/storage.sqlite`).
 
 ### Redis (roghnach, ilásc)
 

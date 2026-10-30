@@ -25,7 +25,7 @@ Pierwszy wiersz, którego pierwsza kolumna zawiera dosłownie słowo `provider` 
 Pobierz plik startowy z okna importu (**Pobierz szablon CSV**). Przykład:
 
 ```csv
-# Import dostawców OmniRoute (kolumny pozycyjne)
+# Import dostawców 67router (kolumny pozycyjne)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

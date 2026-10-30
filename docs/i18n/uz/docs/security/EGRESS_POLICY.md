@@ -8,7 +8,7 @@
 
 > **Haqiqiy manba:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute har bir proksiga **manzillar oilasi bo‘yicha chiqish direktivasi**ni biriktirish imkonini beradi. Standart holatda operatsion tizim IPv4 yoki IPv6’ni tanlaydi (ikki stekli, "Happy Eyeballs"). Direktivani `ipv4` yoki `ipv6` qilib belgilaganingizda, OmniRoute ushbu proksi orqali o‘tadigan har bir ulanishni tanlangan oilaga biriktiradi va boshqa oilaga qaytish o‘rniga **yopiq holatda xatoga uchraydi**.
+67router har bir proksiga **manzillar oilasi bo‘yicha chiqish direktivasi**ni biriktirish imkonini beradi. Standart holatda operatsion tizim IPv4 yoki IPv6’ni tanlaydi (ikki stekli, "Happy Eyeballs"). Direktivani `ipv4` yoki `ipv6` qilib belgilaganingizda, 67router ushbu proksi orqali o‘tadigan har bir ulanishni tanlangan oilaga biriktiradi va boshqa oilaga qaytish o‘rniga **yopiq holatda xatoga uchraydi**.
 
 Ushbu sahifada direktiva nima ekani, u nima uchun mavjudligi, uni qayerda sozlash va bajarilish vaqtida u qanday aniqlanishi bayon etiladi.
 
@@ -122,7 +122,7 @@ Proksi CRUD/tayinlash API qismining qolgan tafsilotlari uchun [PROXY_GUIDE.md](.
 
 ## `auto` qanday aniqlanadi
 
-`family` qiymati `auto` boʻlsa, OmniRoute hech qanday direktiva qoʻshmaydi — proksi URL manzili oʻz holicha ishlatiladi va ulanish oilasi ichki xususiyatlarga koʻra aniqlanadi.
+`family` qiymati `auto` boʻlsa, 67router hech qanday direktiva qoʻshmaydi — proksi URL manzili oʻz holicha ishlatiladi va ulanish oilasi ichki xususiyatlarga koʻra aniqlanadi.
 
 URL yaratish vaqtida (`open-sse/utils/proxyDispatcher.ts` ichidagi `proxyConfigToUrl` / `normalizeProxyUrl`) `auto` proksi hech qanday belgisiz oddiy URL hosil qiladi:
 
@@ -158,7 +158,7 @@ Demak:
 
 `auto` boʻlmagan direktiva normallashtirilgan proksi URL manziliga bir marta qoʻshiladigan yagona sunʼiy soʻrov belgisi — `?family=ipv4` yoki `?family=ipv6` — sifatida uzatiladi. `normalizeProxyUrl` ushbu belgini aynan bir marta olib tashlash va qayta qoʻshishga eʼtibor beradi, shu sababli u portni tahlil qilishni hech qachon buzmaydi.
 
-Dispatcher yaratilganda belgi oʻqiladi va aniq ulanish oilasiga aylantiriladi. Agar xost **qarama-qarshi** oiladagi IP literal boʻlsa, OmniRoute xatolik chiqaradi (ziddiyatda yopiq rad etish qoʻllanadi):
+Dispatcher yaratilganda belgi oʻqiladi va aniq ulanish oilasiga aylantiriladi. Agar xost **qarama-qarshi** oiladagi IP literal boʻlsa, 67router xatolik chiqaradi (ziddiyatda yopiq rad etish qoʻllanadi):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Soʻngra aniq oila ulagichda qatʼiy belgilanadi:
 
 ## SOCKS5 mosligi
 
-Oilani qatʼiy belgilash SOCKS5 proksilari bilan ishlaydi, biroq standart `fetch-socks` proksi bosqichining oilasini qatʼiy belgilash uchun zarur boʻlgan soket parametrlarini taqdim etmaydi. Shu sababli OmniRoute oʻz ulagichi bilan birga taqdim etiladi:
+Oilani qatʼiy belgilash SOCKS5 proksilari bilan ishlaydi, biroq standart `fetch-socks` proksi bosqichining oilasini qatʼiy belgilash uchun zarur boʻlgan soket parametrlarini taqdim etmaydi. Shu sababli 67router oʻz ulagichi bilan birga taqdim etiladi:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

@@ -4,7 +4,7 @@
 
 ---
 
-E2E validacija u realnom okruženju za OmniRoute implementaciju pokrenutu na homologacionom VPS-u
+E2E validacija u realnom okruženju za 67router implementaciju pokrenutu na homologacionom VPS-u
 (`HOMOLOG_BASE_URL`, npr. `http://192.168.0.15:20128`). Jedna komanda zamenjuje ručnu
 STOP #2 kontrolnu listu za izdavanje automatizovanim izvršavanjem koje generiše dokaze.
 

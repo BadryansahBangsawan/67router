@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Վերջին թարմացումը՝** 2026-06-28 — v3.8.40
 
-OmniRoute-ը տրամադրվում է WordPress-ի ոճով փլագինային համակարգով։ Փլագիններն ինքնաբավ
+67router-ը տրամադրվում է WordPress-ի ոճով փլագինային համակարգով։ Փլագիններն ինքնաբավ
 պանակներ են, որոնցից յուրաքանչյուրն ունի `plugin.json` մանիֆեստ և մուտքային ֆայլ, որոնք կցվում
 են հարցումների մշակման շղթային (`onRequest` / `onResponse` / `onError`) և
 կենսացիկլի իրադարձություններին (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)։
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Փլագինների գրացուցակ
 
-Փլագինները գտնվում են OmniRoute-ի տվյալների գրացուցակի ներքո․
+Փլագինները գտնվում են 67router-ի տվյալների գրացուցակի ներքո․
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

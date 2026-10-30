@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Eesti)
+# 📖 Setup Guide — 67router (Eesti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute’i täielik seadistusjuhend. Kiirversiooni leiate [README kiirjuhendist](../README.md#-quick-start).
+> 67router’i täielik seadistusjuhend. Kiirversiooni leiate [README kiirjuhendist](../README.md#-quick-start).
 
 ## Sisukord
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR-i pakett](https://aur.archlinux.org/packages/omniroute-bin) paigaldab OmniRoute’i ja sisaldab systemd kasutajateenust.
+[AUR-i pakett](https://aur.archlinux.org/packages/omniroute-bin) paigaldab 67router’i ja sisaldab systemd kasutajateenust.
 
 ### Lähtekoodist
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Märkus Windowsi kohta:** kui pärandkataloogi `%USERPROFILE%\.omniroute` pole olemas, kasutab OmniRoute vaikimisi kataloogi `%APPDATA%\omniroute`. Muu andmekataloogi asukoha valimiseks määrake `DATA_DIR`.
+> **Märkus Windowsi kohta:** kui pärandkataloogi `%USERPROFILE%\.omniroute` pole olemas, kasutab 67router vaikimisi kataloogi `%APPDATA%\omniroute`. Muu andmekataloogi asukoha valimiseks määrake `DATA_DIR`.
 
 > **Märkus:** `npm install` genereerib esmakordsel käivitamisel faili `.env` automaatselt faili `.env.example` põhjal. Järgnevad paigaldused olemasolevat faili `.env` üle ei kirjuta, mistõttu kohandused säilivad. Uuesti algväärtustamiseks kustutage `.env` enne käsu korduskäivitamist.
 
@@ -64,7 +64,7 @@ Täieliku Dockeri seadistuse, sealhulgas Compose’i profiilide ja Caddy HTTPS-i
 
 ### Töölauarakendus (Electron)
 
-OmniRoute sisaldab töölauaümbrist, mis põhineb Electron 41-l ja electron-builder 26.10-l. Saadaolevad skriptid (tööruumi juurkaustas):
+67router sisaldab töölauaümbrist, mis põhineb Electron 41-l ja electron-builder 26.10-l. Saadaolevad skriptid (tööruumi juurkaustas):
 
 ```bash
 npm run electron:dev          # Käivita töölauarakendus automaatse uuesti laadimisega
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Koos keskkonnamuutujatega (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` jne) võimaldab see käivitada OmniRoute’i eksemplari täielikult skriptitaval viisil.
+Koos keskkonnamuutujatega (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` jne) võimaldab see käivitada 67router’i eksemplari täielikult skriptitaval viisil.
 
 ### CLI suvandid
 
@@ -99,7 +99,7 @@ Koos keskkonnamuutujatega (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` jne)
 | `omniroute config`      | CLI-tööriista seadistus — loetle, hangi, määra ja valideeri seadistusi        |
 | `omniroute status`      | Võrguühenduseta oleku juhtpaneel — versioon, andmebaas, tööriistad, seadistus |
 | `omniroute logs`        | Voogedasta API-st kasutuslogisid (toetab lippu `--follow`)                    |
-| `omniroute update`      | Kontrolli või rakenda OmniRoute’i värskendusi                                 |
+| `omniroute update`      | Kontrolli või rakenda 67router’i värskendusi                                  |
 | `omniroute provider`    | Halda teenusepakkuja ühendusi — lisa, loetle, eemalda, testi, määra vaikimisi |
 | `omniroute --port 3000` | Määra kanooniliseks/API-pordiks 3000                                          |
 | `omniroute --mcp`       | Käivita MCP-server (stdio-transport)                                          |
@@ -165,7 +165,7 @@ Töötab Claude Code'i, Codex CLI, Cursori, Cline'i, OpenClaw', OpenCode'i ja Op
 
 #### Automaatne seadistamine käsuga `setup-*`
 
-Baas-URL-i ja võtme käsitsi kleepimise asemel laske OmniRoute'il kirjutada iga tööriista
+Baas-URL-i ja võtme käsitsi kleepimise asemel laske 67router'il kirjutada iga tööriista
 konfiguratsioon aktiivse mudelikataloogi põhjal. Üks käsk tööriista kohta:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Iga käsk aktsepteerib suvandeid `--remote <url> --api-key <key>`, et seadistada kohalik tööriist
-**kaugserveris** töötava OmniRoute'i kasutamiseks, ning eelvaateks suvandit `--dry-run`. Õigete
+**kaugserveris** töötava 67router'i kasutamiseks, ning eelvaateks suvandit `--dry-run`. Õigete
 keskkonnamuutujatega CLI käivitamiseks ilma konfiguratsiooni kirjutamata kasutage üldist käivitajat
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 pärandkäivitajad `omniroute launch` (Claude Code) ja
@@ -277,15 +277,15 @@ Enamiku juurutuste puhul vajate ainult neid kahte muutujat:
 | Muutuja                  | Vaikeväärtus                        | Otstarve                                                                                                                                                        |
 | ------------------------ | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                            | Ühine lähtetase ülesvoolu vastuse alguse ajalõpu, peidetud Undici ajalõppude, TLS-sõrmejäljepäringute ning API-silla päringu- ja puhverserveri ajalõppude jaoks |
-| `STREAM_IDLE_TIMEOUT_MS` | pärib väärtuse `REQUEST_TIMEOUT_MS` | Maksimaalne ajavahemik voogedastuse andmeplokkide vahel, enne kui OmniRoute katkestab SSE-voo                                                                   |
+| `STREAM_IDLE_TIMEOUT_MS` | pärib väärtuse `REQUEST_TIMEOUT_MS` | Maksimaalne ajavahemik voogedastuse andmeplokkide vahel, enne kui 67router katkestab SSE-voo                                                                    |
 
 Tagasiühilduvus säilib: olemasolevad `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` ja muud kihipõhised ajalõpumuutujad töötavad endiselt ning alistavad ühise lähtetaseme.
 
 ### Teenusepakkujapõhised märkused
 
-Claude Code'iga ühilduvate ülesvooluteenuste (`anthropic-compatible-cc-*`) puhul tuletab OmniRoute väljamineva `X-Stainless-Timeout` päise lahendatud päringu ajalõpust, et teenusepakkujapoolsed lugemise ajalõpud oleksid teie keskkonnaseadistusega kooskõlas.
+Claude Code'iga ühilduvate ülesvooluteenuste (`anthropic-compatible-cc-*`) puhul tuletab 67router väljamineva `X-Stainless-Timeout` päise lahendatud päringu ajalõpust, et teenusepakkujapoolsed lugemise ajalõpud oleksid teie keskkonnaseadistusega kooskõlas.
 
-Kolmandate osapoolte Claude Code'iga ühilduvate pöördpuhverserverite puhul hoiab OmniRoute vaikimisi `anthropic-beta` väärtuste komplekti konservatiivsena ja kui `Client Cache Control` on jäetud väärtusele `Auto`, edastab ainult kliendi määratud `cache_control` markerid. Lubage ühendusepõhine lüliti „Enable redact-thinking beta” ainult siis, kui ülesvooluteenus nõuab konkreetselt redigeeritud Claude'i mõttekäigu vooge.
+Kolmandate osapoolte Claude Code'iga ühilduvate pöördpuhverserverite puhul hoiab 67router vaikimisi `anthropic-beta` väärtuste komplekti konservatiivsena ja kui `Client Cache Control` on jäetud väärtusele `Auto`, edastab ainult kliendi määratud `cache_control` markerid. Lubage ühendusepõhine lüliti „Enable redact-thinking beta” ainult siis, kui ülesvooluteenus nõuab konkreetselt redigeeritud Claude'i mõttekäigu vooge.
 
 ### Täpsemad ajalõpu alistused
 
@@ -303,11 +303,11 @@ Kolmandate osapoolte Claude Code'iga ühilduvate pöördpuhverserverite puhul ho
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                           | API-silla serveri keep-alive-ajalõpp                                            |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                              | API-silla serveri sokli tegevusetuse ajalõpp (`0` keelab selle)                 |
 
-> **Märkus:** Voogedastuspäringute puhul hõlmab `FETCH_TIMEOUT_MS` ainult ühenduse loomist / esimese ülesvoolu vastuse ootamist. Kui voog on aktiivne, katkestab OmniRoute selle ainult tegeliku seiskumise (`STREAM_IDLE_TIMEOUT_MS`) või Undici vastuse sisu tegevusetuse (`FETCH_BODY_TIMEOUT_MS`) korral.
+> **Märkus:** Voogedastuspäringute puhul hõlmab `FETCH_TIMEOUT_MS` ainult ühenduse loomist / esimese ülesvoolu vastuse ootamist. Kui voog on aktiivne, katkestab 67router selle ainult tegeliku seiskumise (`STREAM_IDLE_TIMEOUT_MS`) või Undici vastuse sisu tegevusetuse (`FETCH_BODY_TIMEOUT_MS`) korral.
 
 ### Pöördpuhverserveri ühilduvus
 
-Kui käitate OmniRoute'i Nginxi, Caddy, Cloudflare'i või mõne muu pöördpuhverserveri taga, veenduge, et ka puhverserveri ajalõpud oleksid pikemad kui OmniRoute'i voo-/päringuajalõpud.
+Kui käitate 67router'i Nginxi, Caddy, Cloudflare'i või mõne muu pöördpuhverserveri taga, veenduge, et ka puhverserveri ajalõpud oleksid pikemad kui 67router'i voo-/päringuajalõpud.
 
 ---
 

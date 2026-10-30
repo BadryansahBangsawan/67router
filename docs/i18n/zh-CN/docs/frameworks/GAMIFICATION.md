@@ -7,7 +7,7 @@
 > **事实来源：** `src/lib/gamification/`、`src/lib/db/gamification.ts`、`src/app/api/gamification/`
 > **最后更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 包含一个本地优先的游戏化层，通过奖励用户与平台的互动行为——发起请求、切换提供者、创建组合、分享令牌以及为社区做贡献——来提升参与度。所有状态均存储在 SQLite 中；与社区服务器的联邦互通由用户选择启用，并采用推送模式。
+67router 包含一个本地优先的游戏化层，通过奖励用户与平台的互动行为——发起请求、切换提供者、创建组合、分享令牌以及为社区做贡献——来提升参与度。所有状态均存储在 SQLite 中；与社区服务器的联邦互通由用户选择启用，并采用推送模式。
 
 该系统旨在实现**热路径零延迟**——游戏化事件从请求管线中以触发后不等待的方式分派，绝不会阻塞 LLM 响应。
 
@@ -29,7 +29,7 @@ OmniRoute 包含一个本地优先的游戏化层，通过奖励用户与平台�
 | 排行榜     | 全局、每周、每月、令牌分享和贡献范围             |
 | 令牌分享   | 通过复式记账账本在用户之间转移额度               |
 | 邀请与兑换 | 使用 SHA-256 哈希存储的推荐码                    |
-| 社区服务器 | 与外部 OmniRoute 实例进行联邦互通                |
+| 社区服务器 | 与外部 67router 实例进行联邦互通                 |
 | 反作弊     | 服务端评分、速率限制和 z-score 异常检测          |
 
 ### 设计原则
@@ -101,7 +101,7 @@ src/app/api/gamification/
 
 ### 数据库表
 
-所有表均位于 OmniRoute 主 SQLite 数据库中，由迁移
+所有表均位于 67router 主 SQLite 数据库中，由迁移
 `060_create_gamification.sql` 创建。WAL 日志模式继承自
 `src/lib/db/core.ts` 中的单例 `getDbInstance()`。
 
@@ -160,7 +160,7 @@ src/app/api/gamification/
 
 ### 领域模块：`src/lib/db/gamification.ts`
 
-遵循标准的 OmniRoute 模式——从 `core.ts` 导入 `getDbInstance()`，
+遵循标准的 67router 模式——从 `core.ts` 导入 `getDbInstance()`，
 并导出带类型的 CRUD 函数。路由处理程序中不包含原始 SQL。
 
 关键函数：
@@ -223,7 +223,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | 操作              | XP  | 描述                               |
 | ----------------- | --- | ---------------------------------- |
-| `request`         | 1   | 每个通过 OmniRoute 路由的 API 请求 |
+| `request`         | 1   | 每个通过 67router 路由的 API 请求  |
 | `provider_switch` | 5   | 切换到其他提供者                   |
 | `model_switch`    | 3   | 切换到其他模型                     |
 | `combo_create`    | 10  | 创建新组合                         |
@@ -562,7 +562,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2`（唯一，已索引） |
 | `token_hash` | SHA-256(raw_token)         |
 
-原始令牌仅在创建时向用户返回一次。此后，OmniRoute
+原始令牌仅在创建时向用户返回一次。此后，67router
 不会再次存储或显示该令牌——仅保留其哈希值。
 
 ### 防止自我推荐
@@ -685,7 +685,7 @@ X-Federation-Version: 1
 
 ## API 路由
 
-所有路由均遵循标准的 OmniRoute 模式：
+所有路由均遵循标准的 67router 模式：
 
 ```
 路由 → CORS 预检 → 请求体验证 (Zod) → 身份验证 (extractApiKey)

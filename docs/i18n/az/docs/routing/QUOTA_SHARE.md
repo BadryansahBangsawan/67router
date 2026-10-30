@@ -15,7 +15,7 @@ Kvota Paylaşma Mühərriki provayderin vaxta əsaslanan kvotasını (məsələn
 üçün 5 saatlıq pəncərə, Kimi üçün 1500 sorğu/saat) eyni bağlantını paylaşan
 çoxsaylı API açarları arasında ədalətli şəkildə bölüşdürür.
 
-**Həll etdiyi problem:** OmniRoute çoxsaylı API açarlarının sorğularını eyni yuxarı
+**Həll etdiyi problem:** 67router çoxsaylı API açarlarının sorğularını eyni yuxarı
 axın provayder hesabına proksiləyir. Paylaşma məntiqi olmadıqda, A açarından gələn
 sorğu sıçrayışı provayderin saatlıq kvotasını tükədə bilər və pəncərə sıfırlanana
 qədər B və C açarlarını bloklanmış vəziyyətdə qoya bilər. Mühərrik bunun qarşısını
@@ -122,7 +122,7 @@ Redis drayveri: atomik artırma üçün Lua EVAL skripti — vahid Redis əmri k
 
 - Cədvəl: `quota_consumption` (`073_quota_pools.sql` / `074_quota_consumption.sql` miqrasiyalarına baxın).
 - Tək instanslı yerləşdirmələr üçün ən uyğundur.
-- Bütün davamlı məlumatlar mövcud OmniRoute SQLite verilənlər bazasında (`DATA_DIR/storage.sqlite`) saxlanılır.
+- Bütün davamlı məlumatlar mövcud 67router SQLite verilənlər bazasında (`DATA_DIR/storage.sqlite`) saxlanılır.
 
 ### Redis (istəyə bağlı, çox instanslı)
 

@@ -7,7 +7,7 @@
 > **Source de vérité :** `src/lib/cloudAgent/` et `src/app/api/v1/agents/tasks/`
 > **Dernière mise à jour :** 2026-06-28 — v3.8.40 (actualisation du frontmatter ; 4 agents, dont cursor-cloud)
 
-OmniRoute orchestre des agents de codage tiers hébergés dans le cloud (Codex Cloud, Cursor,
+67router orchestre des agents de codage tiers hébergés dans le cloud (Codex Cloud, Cursor,
 Devin, Jules) sous forme de tâches de longue durée. Chaque agent est encapsulé derrière une interface uniforme afin que
 les clients puissent envoyer un prompt + l’URL d’un dépôt et recevoir les résultats sans avoir à gérer
 les API propres à chaque fournisseur.

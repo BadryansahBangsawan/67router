@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** `src/lib/memory/` agus `src/app/api/memory/`
 > **Nuashonraithe an uair dheireanach:** 2026-06-28 — v3.8.40 (díchumasaithe de réir réamhshocraithe + cúiteamh cainníochtaithe int8)
 
-Soláthraíonn OmniRoute cuimhne chomhrá mharthanach atá eochraithe de réir eochair API
+Soláthraíonn 67router cuimhne chomhrá mharthanach atá eochraithe de réir eochair API
 (agus, go roghnach, de réir aitheantas seisiúin). Baintear cuimhní go huathoibríoch as freagraí LLM
 trí mheaitseáil éadrom patrún le sloinn rialta agus instealltar ar ais iad in iarratais
 ina dhiaidh sin mar theachtaireacht tosaigh córais (nó mar an chéad teachtaireacht úsáideora i gcás soláthraithe a
@@ -643,7 +643,7 @@ scóipithe féin a bheith acu (LRU 1 000 iontráil, TTL réamhshocraithe 5 nóim
 
 ## Soláthraí Leabaithe a Roghnú (v3.8.16+)
 
-Tacaíonn inneall cuimhne OmniRoute le **ceithre fhoinse leabaithe** (`src/lib/memory/embedding/`). Tá comhbhabhtálacha éagsúla ag gach ceann acu maidir le **foighne, costas, cáilíocht samhla, agus castacht socraithe**.
+Tacaíonn inneall cuimhne 67router le **ceithre fhoinse leabaithe** (`src/lib/memory/embedding/`). Tá comhbhabhtálacha éagsúla ag gach ceann acu maidir le **foighne, costas, cáilíocht samhla, agus castacht socraithe**.
 
 ### Na Foinsí Leabaithe
 
@@ -1062,13 +1062,13 @@ Ní cheanglaíonn an t-oibrí ach le loopback, rud a dhiúltaíonn cosaint SSRF 
 Ní mhaolaíonn an cuibheoir seo an chosaint sin: tá an t-óstach códaithe go docht mar `127.0.0.1` agus ní ghlacann an scéimre
 cumraíochta (`ClaudeMemBackendConfigSchema`, `.strict()`) ach le:
 
-| Eochair     | Cineál   | Réamhshocrú | Nótaí                                                                                                                     |
-| ----------- | -------- | ----------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | uimhir   | —           | Riachtanach, 1024–65535. Port oibrí claude-mem óna chomhad socruithe (réamhshocrú `37700 + uid % 100`).                   |
-| `project`   | teaghrán | —           | Tionscadal claude-mem le húsáid. Gan socrú → mapálann gach eochair API OmniRoute chuig a tionscadal féin (an `apiKeyId`). |
-| `timeoutMs` | uimhir   | `5000`      | Teorainn ama in aghaidh na hiarrata, 100–30000.                                                                           |
+| Eochair     | Cineál   | Réamhshocrú | Nótaí                                                                                                                    |
+| ----------- | -------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `port`      | uimhir   | —           | Riachtanach, 1024–65535. Port oibrí claude-mem óna chomhad socruithe (réamhshocrú `37700 + uid % 100`).                  |
+| `project`   | teaghrán | —           | Tionscadal claude-mem le húsáid. Gan socrú → mapálann gach eochair API 67router chuig a tionscadal féin (an `apiKeyId`). |
+| `timeoutMs` | uimhir   | `5000`      | Teorainn ama in aghaidh na hiarrata, 100–30000.                                                                          |
 
-Cumasaigh é trí `PUT /api/settings/memory` agus atosaigh OmniRoute (cláraítear innealláin
+Cumasaigh é trí `PUT /api/settings/memory` agus atosaigh 67router (cláraítear innealláin
 aon uair amháin, in `initMemoryBackends()`):
 
 ```json
@@ -1085,7 +1085,7 @@ Mapáil agus teorainneacha:
 
 - Is iad `claude-mem:<observationId>` na haitheantais; déanann `get`/`delete` neamhaird ar aitheantais inneallán eile gan
   glao líonra.
-- `create` → `POST /api/memory/save`; iompraítear réimsí OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; iompraítear réimsí 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) in `metadata.omniroute` de chuid claude-mem agus déantar turas fillte orthu tráth léite.
 - `search` → `GET /api/search?format=json&type=observations`, bearrtha go `maxTokens`
   (carachtair / 4). `list` → críochphointe breathnuithe uimhrithe an oibrí (`total` is íosteorainn é — tugann an t-oibrí
@@ -1097,16 +1097,16 @@ Mapáil agus teorainneacha:
 - Léann instealladh leide (`retrieval.ts`) agus na huirlisí MCP `omniroute_memory_*` SQLite
   go díreach fós — ní théann siad trí `memoryManager`, mar sin ní sholáthraíonn an t-inneall seo sonraí dóibh.
 
-**Glaonna LLM claude-mem féin a ródú trí OmniRoute.** Comhbhrúnn claude-mem breathnuithe
+**Glaonna LLM claude-mem féin a ródú trí 67router.** Comhbhrúnn claude-mem breathnuithe
 le LLM (réamhshocrú: Claude Agent SDK). Is féidir a sholáthraí `openai-compatible` a dhíriú ar
-OmniRoute ina ionad sin, agus leas a bhaint as cúltaca teaglama agus rianú costas. In `~/.claude-mem/settings.json`:
+67router ina ionad sin, agus leas a bhaint as cúltaca teaglama agus rianú costas. In `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<eochair API OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<samhail nó teaglama OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<eochair API 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<samhail nó teaglama 67router>"
 }
 ```
 

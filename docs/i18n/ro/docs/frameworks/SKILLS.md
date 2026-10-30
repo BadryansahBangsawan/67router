@@ -7,29 +7,29 @@
 > **Sursa de referință:** `src/lib/skills/` și `src/app/api/skills/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute oferă un cadru extensibil pentru Skills, care permite modelelor lingvistice (și operatorilor) să compună capabilități reutilizabile — de la citirea sistemului de fișiere și solicitări HTTP până la executarea codului într-un mediu izolat și utilizarea skill-urilor atent selecționate din marketplace.
+67router oferă un cadru extensibil pentru Skills, care permite modelelor lingvistice (și operatorilor) să compună capabilități reutilizabile — de la citirea sistemului de fișiere și solicitări HTTP până la executarea codului într-un mediu izolat și utilizarea skill-urilor atent selecționate din marketplace.
 
-Un skill este o unitate de lucru versionată, definită printr-o schemă. OmniRoute poate injecta skill-uri sub formă de definiții de instrumente în solicitările trimise, poate intercepta apelurile instrumentelor returnate de model, poate executa handler-ul corespunzător și poate transmite rezultatul înapoi modelului, astfel încât conversația să poată continua. Modelul nu vede niciodată implementarea — doar interfața instrumentului.
+Un skill este o unitate de lucru versionată, definită printr-o schemă. 67router poate injecta skill-uri sub formă de definiții de instrumente în solicitările trimise, poate intercepta apelurile instrumentelor returnate de model, poate executa handler-ul corespunzător și poate transmite rezultatul înapoi modelului, astfel încât conversația să poată continua. Modelul nu vede niciodată implementarea — doar interfața instrumentului.
 
 ---
 
 ## Agent Skills vs Omni Skills
 
-OmniRoute are două sisteme de skill-uri distincte, dar complementare:
+67router are două sisteme de skill-uri distincte, dar complementare:
 
 | Dimensiune         | **Omni Skills** (acest document)                                                         | **Agent Skills**                                                                                    |
 | :----------------- | :--------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
 | Scop               | Injectarea instrumentelor LLM + execuție în mediu izolat                                 | Catalog SKILL.md pentru descoperire și utilizare de către agenți externi                            |
 | Sursa de referință | `src/lib/skills/` + marketplace                                                          | `src/lib/agentSkills/` + directorul `skills/`                                                       |
 | Mod de rulare      | Injectate în solicitările trimise, executate la evenimentele de apelare a instrumentelor | Catalog Markdown static + endpoint-uri REST/MCP/A2A pentru descoperire                              |
-| Cine le utilizează | OmniRoute însuși (rutare combo, apeluri LLM de intrare)                                  | Agenți externi, clienți MCP, orchestratoare A2A                                                     |
+| Cine le utilizează | 67router însuși (rutare combo, apeluri LLM de intrare)                                   | Agenți externi, clienți MCP, orchestratoare A2A                                                     |
 | Număr              | Variabil (determinat de marketplace)                                                     | 43 de intrări în catalog (22 API + 20 CLI + 1 config)                                               |
 | Format             | `SkillDefinition` cu schema instrumentului + handler                                     | Frontmatter `SKILL.md` + corp Markdown                                                              |
 | Descoperire        | REST `/api/skills/*` + instrumentele MCP `omniroute_skills_*`                            | REST `/api/agent-skills/*` + instrumentele MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 
-**Omni Skills** reprezintă motorul de execuție — acestea definesc ce _poate face_ OmniRoute atunci când un LLM invocă un instrument.
+**Omni Skills** reprezintă motorul de execuție — acestea definesc ce _poate face_ 67router atunci când un LLM invocă un instrument.
 
-**Agent Skills** reprezintă catalogul de documentație — acestea explică agenților externi _cum să utilizeze_ API-ul REST și CLI-ul OmniRoute, prin fișiere SKILL.md structurate care pot fi introduse direct în prompturile agenților.
+**Agent Skills** reprezintă catalogul de documentație — acestea explică agenților externi _cum să utilizeze_ API-ul REST și CLI-ul 67router, prin fișiere SKILL.md structurate care pot fi introduse direct în prompturile agenților.
 
 Pentru catalogul Agent Skills, generator, instrumentele MCP și skill-ul A2A, consultați [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Pentru catalogul Agent Skills, generator, instrumentele MCP și skill-ul A2A, co
 
 Trei surse de skill-uri coexistă în același registru:
 
-1. **Skill-uri integrate** (`src/lib/skills/builtins.ts`) — livrate împreună cu OmniRoute. Acoperă cazurile uzuale:
+1. **Skill-uri integrate** (`src/lib/skills/builtins.ts`) — livrate împreună cu 67router. Acoperă cazurile uzuale:
    - `file_read`, `file_write` — spațiu de lucru izolat per cheie API în `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — solicitări HTTP de ieșire prin `safeOutboundFetch` cu `guard: "public-only"`
    - `web_search` — furnizor de căutare interschimbabil, cu stocare în cache (`executeWebSearch`)
    - `eval_code` — execuție `node` sau `python` izolată prin Docker
    - `execute_command` — comandă shell executată într-un mediu izolat prin Docker
    - `browser` — structură de bază susținută de Playwright, dezactivată implicit (`builtin/browser.ts`)
-2. **SkillsMP** (marketplace-ul OmniRoute) — preluate de la `https://skillsmp.com/api/v1/skills/search`. Necesită `skillsmpApiKey` în Settings.
+2. **SkillsMP** (marketplace-ul 67router) — preluate de la `https://skillsmp.com/api/v1/skills/search`. Necesită `skillsmpApiKey` în Settings.
 3. **SkillsSH** (catalogul comunității `skills.sh`) — preluate de la `https://skills.sh/api/search`. Nu necesită autentificare; conținutul SKILL.md este preluat direct din GitHub raw.
 
 Un singur „furnizor activ” controlează catalogul din care dashboard-ul efectuează instalările (`src/lib/skills/providerSettings.ts`). Îl puteți schimba din **Settings → Memory & Skills**. Valoare implicită: `skillsmp`.
@@ -442,7 +442,7 @@ document; nu există niciun prag în virgulă mobilă de tip `0.6` și niciun ca
 
 ## Catalogul skill-urilor încorporate
 
-OmniRoute este livrat cu un set atent selecționat de skill-uri încorporate în `src/lib/skills/builtin/`. Cele mai comune sunt:
+67router este livrat cu un set atent selecționat de skill-uri încorporate în `src/lib/skills/builtin/`. Cele mai comune sunt:
 
 ### Skill pentru automatizarea browserului
 
