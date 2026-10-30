@@ -730,9 +730,9 @@ async function handleChatImplementation(
   }
 
   // Reject image-generation models routed to /v1/chat/completions (#6457).
-  // Image-only models live in IMAGE_PROVIDERS (open-sse/config/imageRegistry.ts)
-  // and are served by /v1/images/generations. Forwarding them to a chat upstream
-  // yielded confusing raw provider 400s (e.g. HuggingFace: "not a chat model").
+  // Image-only models live in IMAGE_PROVIDERS (open-sse/config/imageRegistry.ts).
+  // 67router has no image-generation endpoint, so they are unsupported here.
+  // Forwarding them to a chat upstream yielded confusing raw provider 400s (e.g. HuggingFace: "not a chat model").
   // Models such as Codex GPT-5.5 support both chat and image generation, so an
   // image-registry match is only image-only when the same provider/model pair is
   // absent from the chat catalog.
@@ -746,7 +746,7 @@ async function handleChatImplementation(
     return logHandlerRejection(
       errorResponse(
         HTTP_STATUS.BAD_REQUEST,
-        `Model '${modelStr}' is an image-generation model and cannot be used on /v1/chat/completions. Use POST /v1/images/generations instead.`
+        `Model '${modelStr}' is an image-generation model and cannot be used on /v1/chat/completions. Image generation is not supported on this server.`
       ),
       {
         path: new URL(request.url).pathname,
