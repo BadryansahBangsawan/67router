@@ -359,7 +359,7 @@ function NamedCombosManager() {
           <Card key={combo.id} padding="sm">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
-                <h3 className="truncate text-base font-semibold text-text-main">{combo.name}</h3>
+                <h3 className="truncate text-sm font-semibold text-text-main">{combo.name}</h3>
                 <p className="mt-1 text-sm text-text-muted">{combo.description}</p>
               </div>
               {combo.id === activeComboId && (
@@ -404,7 +404,7 @@ function NamedCombosManager() {
 
 export default function CompressionCombosPageClient() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="mx-auto flex max-w-6xl flex-col gap-6">
       <CompressionHub />
       <NamedCombosManager />
     </div>

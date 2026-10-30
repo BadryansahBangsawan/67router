@@ -242,7 +242,7 @@ function AdaptiveContextBudgetDial({
   // the panel has no selected-model context here; 200k is Claude-class default.
   const target = getAdaptiveTargetSummary(contextBudget, 200000);
   return (
-    <div className="mb-4 space-y-2 rounded-md border border-border bg-bg-subtle px-3 py-2">
+    <div className="mb-4 space-y-2 rounded-control border border-border bg-bg-subtle px-3 py-2">
       <Select
         compact
         label={t("compressionAdaptiveMode")}
@@ -580,22 +580,22 @@ export default function CompressionPanel() {
   }
 
   return (
-    <Card className="p-6" data-testid="compression-panel">
+    <Card className="p-5" data-testid="compression-panel">
       {/* Master */}
       <div className="mb-5 flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="rounded-lg bg-info/10 p-2 text-info">
-            <Icon name="compress" size={20} />
+          <div className="flex size-8 shrink-0 items-center justify-center rounded-control border border-border bg-surface text-text-muted">
+            <Icon name="compress" size={16} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("compressionTitle")}</h3>
+            <h3 className="text-sm font-semibold text-text-main">{t("compressionTitle")}</h3>
             <p className="text-sm text-text-muted">{t("compressionDesc")}</p>
             <a
               href="https://github.com/cheaper-inference/OmniRoute/blob/main/docs/compression/COMPRESSION_GUIDE.md"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="compression-guide-link"
-              className="mt-0.5 inline-flex items-center gap-1 text-xs text-primary hover:underline"
+              className="mt-0.5 inline-flex items-center gap-1 text-xs text-text-main underline-offset-2 hover:underline"
             >
               {t("compressionGuidanceFullGuideLink")}
               <Icon name="open_in_new" size={12} />
@@ -626,9 +626,11 @@ export default function CompressionPanel() {
       {/* Derived pipeline preview */}
       <div
         data-testid="derived-pipeline-preview"
-        className="mb-4 rounded-md border border-border bg-bg-subtle px-3 py-2 text-xs text-text-muted"
+        className="mb-4 rounded-control border border-border bg-bg-subtle px-3 py-2 font-mono text-xs text-text-muted"
       >
-        <span className="font-medium text-text-main">{t("compressionEffectivePipeline")}</span>{" "}
+        <span className="font-sans font-medium text-text-main">
+          {t("compressionEffectivePipeline")}
+        </span>{" "}
         {derivedText}
       </div>
 
@@ -665,7 +667,7 @@ export default function CompressionPanel() {
                   {engineLabel}
                   <Link
                     href={`/dashboard/context/${id}`}
-                    className="rounded border border-border bg-bg-subtle px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-text-muted hover:border-primary/40 hover:text-primary"
+                    className="rounded-[5px] border border-border bg-surface px-1.5 py-px font-mono text-[11px] text-text-muted transition-colors hover:border-border-strong hover:text-text-main"
                   >
                     {id}
                   </Link>
