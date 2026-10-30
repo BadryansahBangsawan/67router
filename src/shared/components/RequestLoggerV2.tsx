@@ -1203,14 +1203,12 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                 onClick={() => setActiveFilter(activeFilter === f.key ? "all" : f.key)}
                 className={cn(
                   "h-7 min-h-7 rounded-full px-3 text-xs",
+                  // 67router: neutral chips — the active one is a filled chip with a strong
+                  // border; only the error filter keeps its status ink.
                   activeFilter === f.key
                     ? f.key === "error"
-                      ? "bg-error/20 text-error border-error/40"
-                      : f.key === "ok"
-                        ? "bg-success/20 text-success border-success/40"
-                        : f.key === "combo"
-                          ? "bg-chart-3/20 text-chart-3 border-chart-3/40"
-                          : "bg-primary text-accent-foreground border-primary"
+                      ? "bg-error-bg text-error border-error/40"
+                      : "bg-surface-2 text-text-main border-border-strong"
                     : "text-text-muted"
                 )}
               >
@@ -1227,12 +1225,9 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
             {/* Dynamic Provider Quick Filters (from data) */}
             {loadedProviders.map((p) => {
               const compatLabel = getProviderDisplayLabel(p, providerNodes);
-              // Provider identity colours (brand palette in constants/colors), not status tones.
-              const pc = PROVIDER_COLORS[p] || {
-                bg: "#374151",
-                text: "#fff",
-                label: compatLabel || p.toUpperCase(),
-              };
+              // Provider label from constants/colors; 67router renders the chip neutral (the brand
+              // fill is not used any more — colour is reserved for status).
+              const pc = PROVIDER_COLORS[p] || { label: compatLabel || p.toUpperCase() };
               const displayLabel = compatLabel || pc.label;
               const isActive = selectedProvider === p;
               return (
@@ -1243,15 +1238,11 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                   aria-pressed={isActive}
                   onClick={() => setSelectedProvider(isActive ? "" : p)}
                   className={cn(
-                    "h-7 min-h-7 rounded-full border px-3 text-xs font-bold uppercase",
+                    "h-7 min-h-7 rounded-full border px-3 text-xs font-medium",
                     isActive
-                      ? "border-border-strong ring-1 ring-border-strong"
-                      : "border-transparent opacity-70 hover:opacity-100"
+                      ? "border-border-strong bg-surface-2 text-text-main"
+                      : "border-border text-text-muted hover:text-text-main"
                   )}
-                  style={{
-                    backgroundColor: isActive ? pc.bg : `${pc.bg}33`,
-                    color: isActive ? pc.text : pc.bg,
-                  }}
                 >
                   {displayLabel}
                 </Button>
@@ -1328,8 +1319,6 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                   const protocol = protocolKey ? getProtocolColor(protocolKey, log.provider) : null;
                   const compatLabel = getProviderDisplayLabel(log.provider, providerNodes);
                   const providerColor = PROVIDER_COLORS[log.provider] || {
-                    bg: "#374151",
-                    text: "#fff",
                     label: compatLabel || (log.provider || "-").toUpperCase(),
                   };
                   const providerLabel = log.providerDisplay || compatLabel || providerColor.label;
@@ -1349,8 +1338,9 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                       className={cn(
                         "cursor-pointer transition-colors",
                         isError ? "bg-error/5 hover:bg-error/15" : "hover:bg-info/10",
-                        log.isRetry && "border-l-2 border-l-warning/50",
-                        log.isRetry && !isHoveredGroup && "bg-warning/[0.03]",
+                        // Retry attempts are the router's fallback chain → the fallback orange.
+                        log.isRetry && "border-l-2 border-l-fallback/60",
+                        log.isRetry && !isHoveredGroup && "bg-fallback/[0.03]",
                         isHoveredGroup && "bg-chart-3/10 ring-1 ring-chart-3/20"
                       )}
                     >
@@ -1376,7 +1366,7 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                                 !log.isRetry &&
                                 log.status >= 400 && (
                                   <span
-                                    className="text-[11px] text-success"
+                                    className="text-[11px] text-fallback"
                                     title={t("status.recoveredByRetry")}
                                   >
                                     ✓
@@ -1386,7 +1376,7 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                                 <Button
                                   variant="ghost"
                                   size="icon-sm"
-                                  className="ml-0.5 size-5 min-h-5 text-[11px] text-warning"
+                                  className="ml-0.5 size-5 min-h-5 text-[11px] text-fallback"
                                   title={t("status.goToParent")}
                                   aria-label={t("status.goToParent")}
                                   onClick={(e) => {
@@ -1439,7 +1429,7 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                             <span>{log.model}</span>
                             {log.groupStatus === "healed" && !log.isRetry && (
                               <span
-                                className="inline-flex items-center gap-0.5 rounded border border-success/25 bg-success/15 px-1 py-0 text-[8px] font-bold text-success"
+                                className="inline-flex items-center gap-0.5 rounded-[5px] border border-fallback/30 bg-fallback-bg px-1.5 py-0 text-[10.5px] font-sans font-medium text-fallback"
                                 title={t("status.healedTitle", { count: log.groupSize - 1 })}
                               >
                                 {t("status.healed")}
@@ -1447,7 +1437,7 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                             )}
                             {log.groupStatus === "failed" && !log.isRetry && (
                               <span
-                                className="inline-flex items-center gap-0.5 rounded border border-error/25 bg-error/15 px-1 py-0 text-[8px] font-bold text-error"
+                                className="inline-flex items-center gap-0.5 rounded-[5px] border border-error/25 bg-error-bg px-1.5 py-0 text-[10.5px] font-sans font-medium text-error"
                                 title={t("status.failedTitle", { count: log.groupSize })}
                               >
                                 {t("status.failed")}
@@ -1455,7 +1445,7 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                             )}
                             {log.modelPinned && (
                               <span
-                                className="inline-flex items-center gap-0.5 rounded border border-chart-3/25 bg-chart-3/15 px-1 py-0 text-[8px] font-bold text-chart-3"
+                                className="inline-flex items-center gap-0.5 rounded-[5px] border border-border bg-surface-2 px-1.5 py-0 text-[10.5px] font-sans font-medium text-text-muted"
                                 title={t("status.pinnedTitle")}
                               >
                                 {t("status.pinned")}
@@ -1515,14 +1505,8 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                       )}
                       {visibleColumns.provider && (
                         <TableCell className="px-3 py-2">
-                          {/* Provider identity colours (brand palette), not a status tone. */}
-                          <span
-                            className="inline-block rounded px-2 py-0.5 text-[9px] font-bold uppercase"
-                            style={{
-                              backgroundColor: providerColor.bg,
-                              color: providerColor.text,
-                            }}
-                          >
+                          {/* 67router: neutral soft badge — colour is reserved for status. */}
+                          <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11px] font-medium text-text-main">
                             {providerLabel}
                           </span>
                         </TableCell>
@@ -1532,14 +1516,7 @@ const RequestLoggerV2 = forwardRef<RequestLoggerV2Handle, RequestLoggerV2Initial
                           {isActive ? (
                             <span className="text-[10px] text-text-muted">—</span>
                           ) : (
-                            <span
-                              className="inline-block rounded px-2 py-0.5 text-[9px] font-bold uppercase"
-                              style={
-                                protocol
-                                  ? { backgroundColor: protocol.bg, color: protocol.text }
-                                  : {}
-                              }
-                            >
+                            <span className="inline-block rounded-[5px] border border-border px-1.5 py-0.5 font-mono text-[10.5px] text-text-muted">
                               {protocol?.label || "—"}
                             </span>
                           )}
