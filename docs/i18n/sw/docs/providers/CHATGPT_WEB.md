@@ -37,7 +37,7 @@ uwezo uleule wa zana ya ndani unaofungamanishwa na zamu wakati tunnel na kiungan
 
 1. Fungua mtoa huduma wa **ChatGPT Web (Codex)** na uongeze muunganisho.
 2. Bandika kichwa kamili cha ChatGPT Cookie, kitambulisho cha handaki, ufunguo wa wakati wa utekelezaji na jina maalum la kiunganishi. Misanidi mipya yenye uwezo wa kutumia zana lazima itumie kiunganishi kipya kilichoundwa chenye jina kamili
-   `67router Codex v2`, huku Authentication ikiwekwa kuwa None na Permissions ikiwekwa kuwa Allow all
+   `OmniRoute Codex v2`, huku Authentication ikiwekwa kuwa None na Permissions ikiwekwa kuwa Allow all
    actions.
 3. Tekeleza ukaguzi wa muunganisho. 67router hufungua Temporary Chat inayotumia kivinjari na kubaini
    ikiwa Sol na Pro zinapatikana kwa akaunti hiyo.
@@ -75,10 +75,10 @@ High, na akaunti zenye uwezo wa Pro pia hutoa Extra High na Pro. Kila route ina
 modeli ya backend na kiwango cha juhudi za reasoning zisizobadilika; juhudi ya Responses iliyobainishwa wazi inayokinzana
 hukataliwa badala ya kubadilisha kimyakimya modi iliyochaguliwa ya kivinjari.
 
-Usibadilishe jina wala kutumia tena kiunganishi cha zamani cha `Codex Native` au `67router Codex`. ChatGPT
+Usibadilishe jina wala kutumia tena kiunganishi cha zamani cha `Codex Native` au `OmniRoute Codex`. ChatGPT
 huhifadhi kwenye cache mkataba wa umma wa MCP kulingana na utambulisho wa kiunganishi, ilhali daraja lililosasishwa hutumia
 mkataba mpya wa moja kwa moja wa turn-token. Runtime hukataa vitambulisho hivyo vya zamani na huhitaji
-kiunganishi kipya cha `67router Codex v2`.
+kiunganishi kipya cha `OmniRoute Codex v2`.
 
 ## Muundo wa usalama
 

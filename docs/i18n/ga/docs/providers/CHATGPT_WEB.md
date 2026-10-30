@@ -38,7 +38,7 @@ cumas céanna uirlise áitiúla atá ceangailte leis an seal a úsáid nuair at�
 1. Oscail an soláthraí **ChatGPT Web (Codex)** agus cuir nasc leis.
 2. Greamaigh ceanntásc iomlán ChatGPT Cookie, aitheantas an tolláin, an eochair ama rite agus ainm an nascóra shaincheaptha.
    Ní mór do shocruithe nua atá in ann uirlisí a úsáid nascóir nuachruthaithe darb ainm díreach
-   `67router Codex v2` a úsáid, agus Authentication socraithe mar None agus Permissions socraithe mar Allow all
+   `OmniRoute Codex v2` a úsáid, agus Authentication socraithe mar None agus Permissions socraithe mar Allow all
    actions.
 3. Rith seiceáil an naisc. Osclaíonn 67router Temporary Chat atá bunaithe ar bhrabhsálaí agus braitheann sé
    an bhfuil Sol agus Pro ar fáil don chuntas.
@@ -76,10 +76,10 @@ High ar fáil, agus cuireann cuntais atá in ann Pro a úsáid Extra High agus P
 iarracht réasúnaíochta sheasta ag gach bealach; teipeann iarracht shainráite chontrártha Responses
 go dúnta seachas an mód roghnaithe brabhsálaí a athrú go ciúin.
 
-Ná hathainmnigh ná athúsáid nascóir `Codex Native` nó `67router Codex` níos sine. Déanann ChatGPT
+Ná hathainmnigh ná athúsáid nascóir `Codex Native` nó `OmniRoute Codex` níos sine. Déanann ChatGPT
 conradh poiblí MCP a thaisceadh de réir aitheantas an nascóra, agus úsáideann an droichead athnuaite
 conradh nua díreach comhartha sealanna. Diúltaíonn an t-am rite do na haitheantais oidhreachta sin agus éilíonn sé
-nascóir nua `67router Codex v2`.
+nascóir nua `OmniRoute Codex v2`.
 
 ## Samhail slándála
 

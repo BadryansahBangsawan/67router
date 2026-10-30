@@ -26,7 +26,7 @@ Tunnelit on vaja ainult tööriistapööreteks. Iga loetletud marsruut, sealhulg
 1. Avage teenusepakkuja **ChatGPT Web (Codex)** ja lisage ühendus.
 2. Kleepige täielik ChatGPT Cookie-päis, tunneli ID, käitusvõti ja kohandatud konnektori
    nimi. Uued tööriistu toetavad seadistused peavad kasutama äsja loodud konnektorit täpse nimega
-   `67router Codex v2`, mille Authentication on seatud väärtusele None ja Permissions väärtusele Allow all
+   `OmniRoute Codex v2`, mille Authentication on seatud väärtusele None ja Permissions väärtusele Allow all
    actions.
 3. Käivitage ühenduse kontroll. 67router avab brauseripõhise ajutise vestluse Temporary Chat ja tuvastab,
    kas Sol ja Pro on konto jaoks saadaval.
@@ -59,7 +59,7 @@ Lisage üks neist kombinatsiooni nagu iga muu mudel. Codexi rakendus saadab komb
 
 Free/Go kontod pakuvad Luna marsruute. Soli toega kontod pakuvad marsruute Instantist High'ni ning Pro toega kontod pakuvad lisaks marsruute Extra High ja Pro. Igal marsruudil on fikseeritud taustsüsteemi mudel ja arutluse pingutustase; vastuoluline selgesõnaline Responsesi pingutustase põhjustab sulgemise, selle asemel et valitud brauserirežiimi vaikimisi muuta.
 
-Ärge nimetage ümber ega taaskasutage vanemat konnektorit `Codex Native` või `67router Codex`. ChatGPT puhverdamisel seotakse avalik MCP-leping konnektori identiteediga, samas kui värskendatud sild kasutab uut otsest pöördelubade lepingut. Käituskeskkond lükkab need pärandidentiteedid tagasi ja nõuab uut konnektorit `67router Codex v2`.
+Ärge nimetage ümber ega taaskasutage vanemat konnektorit `Codex Native` või `OmniRoute Codex`. ChatGPT puhverdamisel seotakse avalik MCP-leping konnektori identiteediga, samas kui värskendatud sild kasutab uut otsest pöördelubade lepingut. Käituskeskkond lükkab need pärandidentiteedid tagasi ja nõuab uut konnektorit `OmniRoute Codex v2`.
 
 ## Turbemudel
 

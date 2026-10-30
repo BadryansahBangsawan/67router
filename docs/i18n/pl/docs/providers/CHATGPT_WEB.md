@@ -41,7 +41,7 @@ gdy tunel i konektor są skonfigurowane.
 ## Konfiguracja pulpitu
 
 1. Otwórz dostawcę **ChatGPT Web (Codex)** i dodaj połączenie.
-2. Wklej pełny nagłówek Cookie ChatGPT, identyfikator tunelu, klucz środowiska uruchomieniowego oraz nazwę niestandardowego łącznika. Nowe konfiguracje obsługujące narzędzia muszą używać nowo utworzonego łącznika o dokładnej nazwie `67router Codex v2`, z opcją Uwierzytelnianie ustawioną na Brak i opcją Uprawnienia ustawioną na Zezwalaj na wszystkie działania.
+2. Wklej pełny nagłówek Cookie ChatGPT, identyfikator tunelu, klucz środowiska uruchomieniowego oraz nazwę niestandardowego łącznika. Nowe konfiguracje obsługujące narzędzia muszą używać nowo utworzonego łącznika o dokładnej nazwie `OmniRoute Codex v2`, z opcją Uwierzytelnianie ustawioną na Brak i opcją Uprawnienia ustawioną na Zezwalaj na wszystkie działania.
 3. Uruchom sprawdzanie połączenia. 67router otworzy obsługiwany przez przeglądarkę czat tymczasowy i wykryje, czy opcje Sol i Pro są dostępne dla konta.
 4. Zapisz połączenie. 67router zastąpi wklejony plik cookie zweryfikowanym stanem magazynu Playwright i zapisze go wraz z kluczem środowiska uruchomieniowego za pośrednictwem szyfrowanej abstrakcji danych uwierzytelniających.
 
@@ -73,10 +73,10 @@ sprzeczny poziom rozumowania Responses powoduje odrzucenie żądania zamiast nie
 zmiany wybranego trybu przeglądarki.
 
 Nie zmieniaj nazwy ani nie używaj ponownie starszego konektora `Codex Native` lub
-`67router Codex`. ChatGPT buforuje publiczny kontrakt MCP według tożsamości konektora,
+`OmniRoute Codex`. ChatGPT buforuje publiczny kontrakt MCP według tożsamości konektora,
 natomiast odświeżony most korzysta z nowego kontraktu bezpośrednich tokenów tur.
 Środowisko uruchomieniowe odrzuca te starsze tożsamości i wymaga nowego konektora
-`67router Codex v2`.
+`OmniRoute Codex v2`.
 
 ## Model bezpieczeństwa
 

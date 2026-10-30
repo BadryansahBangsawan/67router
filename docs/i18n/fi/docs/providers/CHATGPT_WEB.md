@@ -40,7 +40,7 @@ samaa vuorokohtaista paikallista työkaluominaisuutta, kun tunneli ja yhdistin o
 1. Avaa **ChatGPT Web (Codex)** -palveluntarjoaja ja lisää yhteys.
 2. Liitä koko ChatGPT Cookie -otsake, tunnelin tunnus, suoritusympäristön avain ja mukautetun yhdistimen
    nimi. Uusissa työkaluja tukevissa määrityksissä on käytettävä juuri luotua yhdistintä, jonka nimi on täsmälleen
-   `67router Codex v2`, jonka Authentication-asetuksena on None ja Permissions-asetuksena Allow all
+   `OmniRoute Codex v2`, jonka Authentication-asetuksena on None ja Permissions-asetuksena Allow all
    actions.
 3. Suorita yhteyden tarkistus. 67router avaa selainpohjaisen Temporary Chat -keskustelun ja tunnistaa,
    ovatko Sol ja Pro käytettävissä tilillä.
@@ -78,10 +78,10 @@ High-reittiin, ja Prota tukevat tilit tarjoavat lisäksi Extra High- ja Pro-reit
 kiinteä taustajärjestelmän malli ja päättelypanostus; ristiriitainen eksplisiittinen Responses-päättelypanostus
 hylätään turvallisesti sen sijaan, että valittua selaintilaa muutettaisiin hiljaisesti.
 
-Älä nimeä uudelleen äläkä käytä uudelleen vanhempaa `Codex Native`- tai `67router Codex` -yhdistintä. ChatGPT
+Älä nimeä uudelleen äläkä käytä uudelleen vanhempaa `Codex Native`- tai `OmniRoute Codex` -yhdistintä. ChatGPT
 tallentaa julkisen MCP-sopimuksen välimuistiin yhdistimen identiteetin perusteella, kun taas päivitetty silta käyttää
 uutta suoraa vuorotunnistesopimusta. Suoritusympäristö hylkää nämä vanhat identiteetit ja edellyttää
-uutta `67router Codex v2` -yhdistintä.
+uutta `OmniRoute Codex v2` -yhdistintä.
 
 ## Suojausmalli
 

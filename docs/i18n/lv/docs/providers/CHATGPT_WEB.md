@@ -39,7 +39,7 @@ vienu un to pašu ar mijiedarbības soli saistīto lokālā rīka iespēju, ja t
 1. Atveriet pakalpojuma sniedzēju **ChatGPT Web (Codex)** un pievienojiet savienojumu.
 2. Ielīmējiet pilnu ChatGPT Cookie galveni, tuneļa ID, izpildlaika atslēgu un pielāgotā savienotāja
    nosaukumu. Jaunos iestatījumos ar rīku atbalstu jāizmanto jaunizveidots savienotājs ar precīzu nosaukumu
-   `67router Codex v2`, opcijai Authentication jābūt iestatītai uz None, bet opcijai Permissions — uz Allow all
+   `OmniRoute Codex v2`, opcijai Authentication jābūt iestatītai uz None, bet opcijai Permissions — uz Allow all
    actions.
 3. Palaidiet savienojuma pārbaudi. 67router atver pārlūkprogrammā balstītu pagaidu tērzēšanu (Temporary Chat) un nosaka,
    vai kontam ir pieejami Sol un Pro.
@@ -77,10 +77,10 @@ High, savukārt kontiem ar Pro iespējām papildus ir pieejami Extra High un Pro
 fiksēts aizmugursistēmas modelis un spriešanas intensitāte; konfliktējoša, tieši norādīta Responses intensitāte tiek
 droši noraidīta, nevis klusējot maina atlasīto pārlūkprogrammas režīmu.
 
-Nepārdēvējiet un atkārtoti neizmantojiet vecāku `Codex Native` vai `67router Codex` savienotāju. ChatGPT
+Nepārdēvējiet un atkārtoti neizmantojiet vecāku `Codex Native` vai `OmniRoute Codex` savienotāju. ChatGPT
 kešo publisko MCP līgumu pēc savienotāja identitātes, savukārt atjauninātais tilts izmanto
 jaunu tiešo mijiedarbības soļa pilnvaras līgumu. Izpildlaiks noraida šīs mantotās identitātes un pieprasa
-jaunu `67router Codex v2` savienotāju.
+jaunu `OmniRoute Codex v2` savienotāju.
 
 ## Drošības modelis
 

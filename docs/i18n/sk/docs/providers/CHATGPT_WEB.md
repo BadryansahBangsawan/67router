@@ -38,7 +38,7 @@ nakonfigurované.
 ## Nastavenie ovládacieho panela
 
 1. Otvorte poskytovateľa **ChatGPT Web (Codex)** a pridajte pripojenie.
-2. Vložte úplnú hlavičku ChatGPT Cookie, ID tunela, runtime kľúč a názov vlastného konektora. Nové nastavenia s podporou nástrojov musia používať novovytvorený konektor s presným názvom `67router Codex v2`, pričom Authentication musí byť nastavené na None a Permissions na Allow all actions.
+2. Vložte úplnú hlavičku ChatGPT Cookie, ID tunela, runtime kľúč a názov vlastného konektora. Nové nastavenia s podporou nástrojov musia používať novovytvorený konektor s presným názvom `OmniRoute Codex v2`, pričom Authentication musí byť nastavené na None a Permissions na Allow all actions.
 3. Spustite kontrolu pripojenia. 67router otvorí dočasný chat Temporary Chat podporovaný prehliadačom a zistí, či sú pre daný účet dostupné Sol a Pro.
 4. Uložte pripojenie. 67router nahradí vložený súbor cookie overeným stavom úložiska Playwright a uloží ho spolu s runtime kľúčom prostredníctvom abstrakcie šifrovaných prihlasovacích údajov.
 
@@ -68,10 +68,10 @@ pevne stanovený backendový model a úroveň úsilia pri uvažovaní; konfliktn
 úroveň úsilia Responses bezpečne zlyhá namiesto toho, aby potichu zmenila vybraný režim
 prehliadača.
 
-Nemeňte názov staršieho konektora `Codex Native` ani `67router Codex` a opätovne ho
+Nemeňte názov staršieho konektora `Codex Native` ani `OmniRoute Codex` a opätovne ho
 nepoužívajte. ChatGPT ukladá verejný kontrakt MCP do vyrovnávacej pamäte podľa identity
 konektora, zatiaľ čo aktualizovaný most používa nový priamy kontrakt tokenu kola.
-Runtime tieto staršie identity odmieta a vyžaduje nový konektor `67router Codex v2`.
+Runtime tieto staršie identity odmieta a vyžaduje nový konektor `OmniRoute Codex v2`.
 
 ## Bezpečnostný model
 

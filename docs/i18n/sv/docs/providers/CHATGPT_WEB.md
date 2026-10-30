@@ -36,7 +36,7 @@ turknutna lokala verktygsfunktion när tunneln och connectorn är konfigurerade.
 ## Konfiguration av instrumentpanelen
 
 1. Öppna leverantören **ChatGPT Web (Codex)** och lägg till en anslutning.
-2. Klistra in hela Cookie-headern för ChatGPT, tunnel-ID:t, runtime-nyckeln och det anpassade connector-namnet. Nya konfigurationer med verktygsstöd måste använda en nyskapad connector med det exakta namnet `67router Codex v2`, där Authentication är inställt på None och Permissions är inställt på Allow all actions.
+2. Klistra in hela Cookie-headern för ChatGPT, tunnel-ID:t, runtime-nyckeln och det anpassade connector-namnet. Nya konfigurationer med verktygsstöd måste använda en nyskapad connector med det exakta namnet `OmniRoute Codex v2`, där Authentication är inställt på None och Permissions är inställt på Allow all actions.
 3. Kör anslutningskontrollen. 67router öppnar en webbläsarbaserad tillfällig chatt och identifierar om Sol och Pro är tillgängliga för kontot.
 4. Spara anslutningen. 67router ersätter den inklistrade cookie-informationen med det verifierade Playwright-lagringstillståndet och lagrar det tillsammans med runtime-nyckeln via den krypterade abstraktionen för autentiseringsuppgifter.
 
@@ -65,10 +65,10 @@ High, och konton med Pro-stöd exponerar dessutom Extra High och Pro. Varje rutt
 fast backend-modell och resonemangsnivå; en motstridig explicit Responses-nivå nekas
 i stället för att i tysthet ändra det valda webbläsarläget.
 
-Byt inte namn på eller återanvänd en äldre connector med namnet `Codex Native` eller `67router Codex`. ChatGPT
+Byt inte namn på eller återanvänd en äldre connector med namnet `Codex Native` eller `OmniRoute Codex`. ChatGPT
 cachelagrar det offentliga MCP-kontraktet per connectoridentitet, medan den uppdaterade bryggan använder ett
 nytt direkt kontrakt för turtokens. Runtime-miljön avvisar dessa äldre identiteter och kräver
-en ny connector med namnet `67router Codex v2`.
+en ny connector med namnet `OmniRoute Codex v2`.
 
 ## Säkerhetsmodell
 

@@ -26,7 +26,7 @@
 1. የ**ChatGPT Web (Codex)** አቅራቢን ይክፈቱና ግንኙነት ያክሉ።
 2. ሙሉውን የChatGPT Cookie ራስጌ፣ የቱነል መታወቂያ፣ runtime key እና ብጁ connector
    ስም ይለጥፉ። መሣሪያዎችን መጠቀም የሚችሉ አዳዲስ ውቅሮች በትክክል
-   `67router Codex v2` ተብሎ የተሰየመ አዲስ connector መጠቀም አለባቸው፤ Authentication ወደ None እና Permissions ወደ Allow all
+   `OmniRoute Codex v2` ተብሎ የተሰየመ አዲስ connector መጠቀም አለባቸው፤ Authentication ወደ None እና Permissions ወደ Allow all
    actions መዋቀር አለባቸው።
 3. የግንኙነት ማረጋገጫውን ያስኪዱ። 67router በአሳሽ የሚደገፍ Temporary Chat ይከፍታል እና
    Sol እና Pro ለመለያው የሚገኙ መሆናቸውን ይለያል።
@@ -59,7 +59,7 @@ connectorን እና የመሣሪያ round-tripን በተናጠል ያሳያል�
 
 Free/Go መለያዎች የLuna መስመሮችን ያቀርባሉ። Solን መጠቀም የሚችሉ መለያዎች ከInstant እስከ High ያሉትን ያቀርባሉ፣ Proን መጠቀም የሚችሉ መለያዎች ደግሞ Extra High እና Proን በተጨማሪ ያቀርባሉ። እያንዳንዱ መስመር ቋሚ የጀርባ ጫፍ ሞዴል እና የማመዛዘን ጥረት አለው፤ የሚጋጭ ግልጽ የResponses ጥረት፣ የተመረጠውን የአሳሽ ሁነታ በዝምታ ከመቀየር ይልቅ ዝግ ሆኖ ይከሽፋል።
 
-የቆየ `Codex Native` ወይም `67router Codex` አገናኝን ስሙን አይቀይሩ ወይም እንደገና አይጠቀሙበት። ChatGPT የሕዝብ MCP ውሉን በአገናኙ ማንነት ይሸጎጣል፣ የታደሰው ድልድይ ግን አዲስ ቀጥተኛ የዙር-ቶከን ውል ይጠቀማል። የአሂድ ጊዜው እነዚያን የቆዩ ማንነቶች ውድቅ ያደርጋል እና አዲስ `67router Codex v2` አገናኝ ይፈልጋል።
+የቆየ `Codex Native` ወይም `OmniRoute Codex` አገናኝን ስሙን አይቀይሩ ወይም እንደገና አይጠቀሙበት። ChatGPT የሕዝብ MCP ውሉን በአገናኙ ማንነት ይሸጎጣል፣ የታደሰው ድልድይ ግን አዲስ ቀጥተኛ የዙር-ቶከን ውል ይጠቀማል። የአሂድ ጊዜው እነዚያን የቆዩ ማንነቶች ውድቅ ያደርጋል እና አዲስ `OmniRoute Codex v2` አገናኝ ይፈልጋል።
 
 ## የደህንነት ሞዴል
 

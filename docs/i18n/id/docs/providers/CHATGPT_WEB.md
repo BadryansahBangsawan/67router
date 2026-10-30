@@ -38,7 +38,7 @@ sama saat tunnel dan konektor dikonfigurasi.
 ## Penyiapan dasbor
 
 1. Buka penyedia **ChatGPT Web (Codex)** dan tambahkan koneksi.
-2. Tempelkan header Cookie ChatGPT lengkap, ID tunnel, kunci runtime, dan nama konektor khusus. Penyiapan baru yang mendukung alat harus menggunakan konektor yang baru dibuat dengan nama persis `67router Codex v2`, dengan Authentication diatur ke None dan Permissions diatur ke Allow all actions.
+2. Tempelkan header Cookie ChatGPT lengkap, ID tunnel, kunci runtime, dan nama konektor khusus. Penyiapan baru yang mendukung alat harus menggunakan konektor yang baru dibuat dengan nama persis `OmniRoute Codex v2`, dengan Authentication diatur ke None dan Permissions diatur ke Allow all actions.
 3. Jalankan pemeriksaan koneksi. 67router membuka Temporary Chat berbasis browser dan mendeteksi apakah Sol dan Pro tersedia untuk akun tersebut.
 4. Simpan koneksi. 67router mengganti cookie yang ditempelkan dengan status penyimpanan Playwright yang telah diverifikasi dan menyimpannya bersama kunci runtime melalui abstraksi kredensial terenkripsi.
 
@@ -69,10 +69,10 @@ eksplisit yang bertentangan ditolak secara tertutup alih-alih mengubah mode brow
 dipilih secara diam-diam.
 
 Jangan mengganti nama atau menggunakan kembali konektor lama `Codex Native` atau
-`67router Codex`. ChatGPT menyimpan cache kontrak MCP publik berdasarkan identitas
+`OmniRoute Codex`. ChatGPT menyimpan cache kontrak MCP publik berdasarkan identitas
 konektor, sedangkan bridge yang diperbarui menggunakan kontrak token giliran langsung
 yang baru. Runtime menolak identitas lama tersebut dan mengharuskan konektor baru
-`67router Codex v2`.
+`OmniRoute Codex v2`.
 
 ## Model keamanan
 

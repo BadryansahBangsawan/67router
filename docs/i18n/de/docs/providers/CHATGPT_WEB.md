@@ -37,7 +37,7 @@ an den Turn gebundene lokale Tool-Funktion verwenden, wenn Tunnel und Connector 
 ## Dashboard-Einrichtung
 
 1. Öffnen Sie den Anbieter **ChatGPT Web (Codex)** und fügen Sie eine Verbindung hinzu.
-2. Fügen Sie den vollständigen ChatGPT-Cookie-Header, die Tunnel-ID, den Runtime-Schlüssel und den benutzerdefinierten Connector-Namen ein. Neue Setups mit Tool-Unterstützung müssen einen neu erstellten Connector mit exakt dem Namen `67router Codex v2` verwenden, wobei Authentication auf None und Permissions auf Allow all actions gesetzt sein müssen.
+2. Fügen Sie den vollständigen ChatGPT-Cookie-Header, die Tunnel-ID, den Runtime-Schlüssel und den benutzerdefinierten Connector-Namen ein. Neue Setups mit Tool-Unterstützung müssen einen neu erstellten Connector mit exakt dem Namen `OmniRoute Codex v2` verwenden, wobei Authentication auf None und Permissions auf Allow all actions gesetzt sein müssen.
 3. Führen Sie die Verbindungsprüfung aus. 67router öffnet einen browsergestützten Temporary Chat und erkennt, ob Sol und Pro für das Konto verfügbar sind.
 4. Speichern Sie die Verbindung. 67router ersetzt das eingefügte Cookie durch den verifizierten Playwright-Speicherstatus und speichert diesen zusammen mit dem Runtime-Schlüssel über die verschlüsselte Abstraktion für Anmeldedaten.
 
@@ -67,10 +67,10 @@ High bereit, und Pro-fähige Konten bieten zusätzlich Extra High und Pro. Jede 
 festes Backend-Modell und einen festen Reasoning-Aufwand; ein widersprüchlicher expliziter Responses-Aufwand wird
 abgewiesen, anstatt den ausgewählten Browsermodus stillschweigend zu ändern.
 
-Benennen Sie einen älteren Connector namens `Codex Native` oder `67router Codex` nicht um und verwenden Sie ihn nicht erneut. ChatGPT
+Benennen Sie einen älteren Connector namens `Codex Native` oder `OmniRoute Codex` nicht um und verwenden Sie ihn nicht erneut. ChatGPT
 speichert den öffentlichen MCP-Vertrag anhand der Connector-Identität zwischen, während die aktualisierte Bridge einen
 neuen direkten Turn-Token-Vertrag verwendet. Die Laufzeitumgebung weist diese Legacy-Identitäten zurück und erfordert
-einen neuen Connector namens `67router Codex v2`.
+einen neuen Connector namens `OmniRoute Codex v2`.
 
 ## Sicherheitsmodell
 

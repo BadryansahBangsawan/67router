@@ -39,7 +39,7 @@ povezovalnik konfigurirana.
 ## Nastavitev nadzorne plošče
 
 1. Odprite ponudnika **ChatGPT Web (Codex)** in dodajte povezavo.
-2. Prilepite celotno glavo Cookie za ChatGPT, ID tunela, izvajalni ključ in ime priključka po meri. Nove nastavitve z možnostjo uporabe orodij morajo uporabljati na novo ustvarjen priključek z natančnim imenom `67router Codex v2`, pri čemer mora biti Authentication nastavljeno na None, Permissions pa na Allow all actions.
+2. Prilepite celotno glavo Cookie za ChatGPT, ID tunela, izvajalni ključ in ime priključka po meri. Nove nastavitve z možnostjo uporabe orodij morajo uporabljati na novo ustvarjen priključek z natančnim imenom `OmniRoute Codex v2`, pri čemer mora biti Authentication nastavljeno na None, Permissions pa na Allow all actions.
 3. Zaženite preverjanje povezave. 67router odpre začasni klepet Temporary Chat v brskalniku in preveri, ali sta Sol in Pro na voljo za račun.
 4. Shranite povezavo. 67router zamenja prilepljeni piškotek s preverjenim stanjem shrambe Playwright in ga skupaj z izvajalnim ključem shrani prek šifrirane abstrakcije poverilnic.
 
@@ -70,10 +70,10 @@ zahtevnosti Responses je varno zavrnjena, namesto da bi se izbrani brskalniški 
 tiho spremenil.
 
 Ne preimenujte ali znova uporabite starejšega povezovalnika `Codex Native` ali
-`67router Codex`. ChatGPT predpomni javno pogodbo MCP glede na identiteto
+`OmniRoute Codex`. ChatGPT predpomni javno pogodbo MCP glede na identiteto
 povezovalnika, medtem ko posodobljeni most uporablja novo neposredno pogodbo z žetonom
 poteze. Izvajalno okolje zavrne te stare identitete in zahteva nov povezovalnik
-`67router Codex v2`.
+`OmniRoute Codex v2`.
 
 ## Varnostni model
 

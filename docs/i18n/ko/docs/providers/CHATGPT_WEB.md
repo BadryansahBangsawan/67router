@@ -26,7 +26,7 @@
 1. **ChatGPT Web (Codex)** 제공자를 열고 연결을 추가합니다.
 2. 전체 ChatGPT Cookie 헤더, 터널 ID, 런타임 키 및 사용자 지정 커넥터
    이름을 붙여넣습니다. 도구를 사용할 수 있는 새로운 설정에서는 정확히
-   `67router Codex v2`라는 이름으로 새로 생성한 커넥터를 사용하고, Authentication은 None으로, Permissions는 Allow all
+   `OmniRoute Codex v2`라는 이름으로 새로 생성한 커넥터를 사용하고, Authentication은 None으로, Permissions는 Allow all
    actions로 설정해야 합니다.
 3. 연결 검사를 실행합니다. 67router는 브라우저 기반 Temporary Chat을 열고 해당
    계정에서 Sol과 Pro를 사용할 수 있는지 감지합니다.
@@ -59,7 +59,7 @@
 
 Free/Go 계정에서는 Luna 경로를 사용할 수 있습니다. Sol 지원 계정에서는 Instant부터 High까지 사용할 수 있으며, Pro 지원 계정에서는 Extra High와 Pro도 추가로 사용할 수 있습니다. 각 경로에는 고정된 백엔드 모델과 추론 수준이 지정되어 있습니다. 이와 충돌하는 Responses 추론 수준을 명시적으로 지정하면 선택한 브라우저 모드를 암묵적으로 변경하는 대신 요청이 차단됩니다.
 
-이전 `Codex Native` 또는 `67router Codex` 커넥터의 이름을 변경하거나 재사용하지 마세요. ChatGPT는 커넥터 ID를 기준으로 공개 MCP 계약을 캐시하지만, 갱신된 브리지는 새로운 직접 턴 토큰 계약을 사용합니다. 런타임은 이러한 레거시 ID를 거부하며 새로운 `67router Codex v2` 커넥터를 요구합니다.
+이전 `Codex Native` 또는 `OmniRoute Codex` 커넥터의 이름을 변경하거나 재사용하지 마세요. ChatGPT는 커넥터 ID를 기준으로 공개 MCP 계약을 캐시하지만, 갱신된 브리지는 새로운 직접 턴 토큰 계약을 사용합니다. 런타임은 이러한 레거시 ID를 거부하며 새로운 `OmniRoute Codex v2` 커넥터를 요구합니다.
 
 ## 보안 모델
 

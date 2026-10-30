@@ -26,7 +26,7 @@ Tunel je potreban samo za turnove alata. Svaka navedena ruta, uključujući `pro
 ## Postavljanje kontrolne ploče
 
 1. Otvorite pružaoca usluge **ChatGPT Web (Codex)** i dodajte vezu.
-2. Zalijepite kompletno ChatGPT Cookie zaglavlje, ID tunela, runtime ključ i naziv prilagođenog konektora. Nove postavke koje podržavaju alate moraju koristiti novokreirani konektor nazvan tačno `67router Codex v2`, pri čemu je Authentication postavljen na None, a Permissions na Allow all actions.
+2. Zalijepite kompletno ChatGPT Cookie zaglavlje, ID tunela, runtime ključ i naziv prilagođenog konektora. Nove postavke koje podržavaju alate moraju koristiti novokreirani konektor nazvan tačno `OmniRoute Codex v2`, pri čemu je Authentication postavljen na None, a Permissions na Allow all actions.
 3. Pokrenite provjeru veze. 67router otvara Temporary Chat podržan preglednikom i otkriva jesu li Sol i Pro dostupni za račun.
 4. Sačuvajte vezu. 67router zamjenjuje zalijepljeni kolačić provjerenim Playwright stanjem pohrane i pohranjuje ga s runtime ključem putem apstrakcije šifriranih vjerodajnica.
 
@@ -50,7 +50,7 @@ Dodajte jedan od njih u kombinaciju kao bilo koji drugi model. Codex aplikacija 
 
 Free/Go nalozi izlažu Luna rute. Nalozi sa Sol mogućnostima izlažu Instant do High, a Pro nalozi dodatno izlažu Extra High i Pro. Svaka ruta ima fiksni backend model i napor zaključivanja; konfliktni eksplicitni Responses napor se odbija umjesto da tiho mijenja odabrani režim pretraživača.
 
-Nemojte preimenovati ili ponovo koristiti stariji `Codex Native` ili `67router Codex` konektor. ChatGPT kešira javni MCP ugovor prema identitetu konektora, dok osvježeni most koristi novi direktni ugovor o turn-tokenu. Runtime odbacuje te naslijeđene identitete i zahtijeva novi `67router Codex v2` konektor.
+Nemojte preimenovati ili ponovo koristiti stariji `Codex Native` ili `OmniRoute Codex` konektor. ChatGPT kešira javni MCP ugovor prema identitetu konektora, dok osvježeni most koristi novi direktni ugovor o turn-tokenu. Runtime odbacuje te naslijeđene identitete i zahtijeva novi `OmniRoute Codex v2` konektor.
 
 ## Sigurnosni model
 

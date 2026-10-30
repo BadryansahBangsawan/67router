@@ -26,7 +26,7 @@ Migration `168_retire_chatgpt_web.sql`, പൊരുത്തപ്പെടു�
 1. **ChatGPT Web (Codex)** പ്രൊവൈഡർ തുറന്ന് ഒരു കണക്ഷൻ ചേർക്കുക.
 2. പൂർണ്ണമായ ChatGPT Cookie ഹെഡർ, tunnel ID, runtime key, custom connector
    നാമം എന്നിവ ഒട്ടിക്കുക. പുതിയ tool-capable സജ്ജീകരണങ്ങളിൽ കൃത്യമായി
-   `67router Codex v2` എന്ന് പേരിട്ട പുതുതായി സൃഷ്ടിച്ച connector ഉപയോഗിക്കണം; Authentication എന്നത് None ആയും Permissions എന്നത് Allow all
+   `OmniRoute Codex v2` എന്ന് പേരിട്ട പുതുതായി സൃഷ്ടിച്ച connector ഉപയോഗിക്കണം; Authentication എന്നത് None ആയും Permissions എന്നത് Allow all
    actions ആയും സജ്ജീകരിക്കണം.
 3. കണക്ഷൻ പരിശോധന പ്രവർത്തിപ്പിക്കുക. 67router ബ്രൗസർ പിന്തുണയുള്ള ഒരു Temporary Chat തുറന്ന്
    അക്കൗണ്ടിൽ Sol, Pro എന്നിവ ലഭ്യമാണോയെന്ന് കണ്ടെത്തുന്നു.
@@ -58,7 +58,7 @@ connector, tool round-trip എന്നിവയുടെ നില വെവ്
 
 Free/Go അക്കൗണ്ടുകൾ Luna route-കൾ ലഭ്യമാക്കുന്നു. Sol-ശേഷിയുള്ള അക്കൗണ്ടുകൾ Instant മുതൽ High വരെയുള്ളവ ലഭ്യമാക്കുന്നു; Pro-ശേഷിയുള്ള അക്കൗണ്ടുകൾ കൂടാതെ Extra High, Pro എന്നിവയും ലഭ്യമാക്കുന്നു. ഓരോ route-നും സ്ഥിരമായ backend model-ഉം reasoning effort-ഉം ഉണ്ട്; വൈരുദ്ധ്യമുള്ള വ്യക്തമായ Responses effort, തിരഞ്ഞെടുത്ത browser mode നിശ്ശബ്ദമായി മാറ്റുന്നതിനുപകരം അടച്ച നിലയിൽ പരാജയപ്പെടുന്നു.
 
-പഴയ `Codex Native` അല്ലെങ്കിൽ `67router Codex` connector-ന്റെ പേര് മാറ്റുകയോ അത് വീണ്ടും ഉപയോഗിക്കുകയോ ചെയ്യരുത്. ChatGPT, connector identity അനുസരിച്ച് പൊതു MCP contract cache ചെയ്യുന്നു; അതേസമയം പുതുക്കിയ bridge ഒരു പുതിയ direct turn-token contract ആണ് ഉപയോഗിക്കുന്നത്. runtime ആ legacy identity-കളെ നിരസിക്കുകയും പുതിയ `67router Codex v2` connector ആവശ്യപ്പെടുകയും ചെയ്യുന്നു.
+പഴയ `Codex Native` അല്ലെങ്കിൽ `OmniRoute Codex` connector-ന്റെ പേര് മാറ്റുകയോ അത് വീണ്ടും ഉപയോഗിക്കുകയോ ചെയ്യരുത്. ChatGPT, connector identity അനുസരിച്ച് പൊതു MCP contract cache ചെയ്യുന്നു; അതേസമയം പുതുക്കിയ bridge ഒരു പുതിയ direct turn-token contract ആണ് ഉപയോഗിക്കുന്നത്. runtime ആ legacy identity-കളെ നിരസിക്കുകയും പുതിയ `OmniRoute Codex v2` connector ആവശ്യപ്പെടുകയും ചെയ്യുന്നു.
 
 ## സുരക്ഷാ മാതൃക
 

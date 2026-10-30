@@ -38,7 +38,7 @@ cùng một khả năng công cụ cục bộ gắn với lượt khi tunnel và
 1. Mở nhà cung cấp **ChatGPT Web (Codex)** và thêm một kết nối.
 2. Dán toàn bộ header Cookie của ChatGPT, tunnel ID, runtime key và tên custom connector.
    Các thiết lập mới có khả năng sử dụng công cụ phải dùng một connector mới được tạo có tên chính xác là
-   `67router Codex v2`, với Authentication được đặt thành None và Permissions được đặt thành Allow all
+   `OmniRoute Codex v2`, với Authentication được đặt thành None và Permissions được đặt thành Allow all
    actions.
 3. Chạy kiểm tra kết nối. 67router mở một Temporary Chat dựa trên trình duyệt và phát hiện
    liệu Sol và Pro có khả dụng cho tài khoản hay không.
@@ -76,10 +76,10 @@ High, còn các tài khoản hỗ trợ Pro cung cấp thêm Extra High và Pro.
 mô hình backend và mức nỗ lực suy luận cố định; một mức nỗ lực Responses tường minh nhưng xung đột sẽ bị
 từ chối an toàn thay vì âm thầm thay đổi chế độ trình duyệt đã chọn.
 
-Không đổi tên hoặc tái sử dụng trình kết nối `Codex Native` hay `67router Codex` cũ. ChatGPT
+Không đổi tên hoặc tái sử dụng trình kết nối `Codex Native` hay `OmniRoute Codex` cũ. ChatGPT
 lưu vào bộ nhớ đệm hợp đồng MCP công khai theo danh tính trình kết nối, trong khi bridge đã làm mới sử dụng một
 hợp đồng turn-token trực tiếp mới. Runtime từ chối các danh tính cũ đó và yêu cầu
-một trình kết nối `67router Codex v2` mới.
+một trình kết nối `OmniRoute Codex v2` mới.
 
 ## Mô hình bảo mật
 

@@ -36,7 +36,7 @@ aan de beurt gebonden lokale toolfunctionaliteit gebruiken wanneer de tunnel en 
 ## Dashboard instellen
 
 1. Open de provider **ChatGPT Web (Codex)** en voeg een verbinding toe.
-2. Plak de volledige ChatGPT Cookie-header, tunnel-ID, runtimesleutel en naam van de aangepaste connector. Nieuwe configuraties met toolondersteuning moeten een nieuw aangemaakte connector gebruiken met exact de naam `67router Codex v2`, waarbij Authentication is ingesteld op None en Permissions op Allow all actions.
+2. Plak de volledige ChatGPT Cookie-header, tunnel-ID, runtimesleutel en naam van de aangepaste connector. Nieuwe configuraties met toolondersteuning moeten een nieuw aangemaakte connector gebruiken met exact de naam `OmniRoute Codex v2`, waarbij Authentication is ingesteld op None en Permissions op Allow all actions.
 3. Voer de verbindingscontrole uit. 67router opent een browsergebaseerde Temporary Chat en detecteert of Sol en Pro beschikbaar zijn voor het account.
 4. Sla de verbinding op. 67router vervangt de geplakte cookie door de geverifieerde Playwright-opslagstatus en slaat deze samen met de runtimesleutel op via de versleutelde abstractie voor referentiegegevens.
 
@@ -66,10 +66,10 @@ High, en accounts met Pro-ondersteuning bieden daarnaast Extra High en Pro. Elke
 vast backendmodel en een vast redeneerinspanningsniveau; een conflicterende expliciete Responses-instelling voor inspanning wordt
 standaard geweigerd in plaats van de geselecteerde browsermodus stilzwijgend te wijzigen.
 
-Wijzig de naam van een oudere `Codex Native`- of `67router Codex`-connector niet en gebruik deze niet opnieuw. ChatGPT
+Wijzig de naam van een oudere `Codex Native`- of `OmniRoute Codex`-connector niet en gebruik deze niet opnieuw. ChatGPT
 cachet het openbare MCP-contract op basis van de connectoridentiteit, terwijl de bijgewerkte bridge een
 nieuw direct turn-token-contract gebruikt. De runtime weigert deze verouderde identiteiten en vereist
-een nieuwe `67router Codex v2`-connector.
+een nieuwe `OmniRoute Codex v2`-connector.
 
 ## Beveiligingsmodel
 

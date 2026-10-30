@@ -39,7 +39,7 @@ otu ikike ngwa mpaghara ahụ e kegidere na ntụgharị mgbe a haziri tunnel na
 1. Mepee onye na-eweta **ChatGPT Web (Codex)** ma tinye njikọ.
 2. Mado nkụnye isi ChatGPT Cookie zuru ezu, tunnel ID, runtime key, na aha custom connector.
    Nhazi ọhụrụ nwere ike iji ngwa ga-ejirịrị connector e mepụtara ọhụrụ nke aha ya bụ kpọmkwem
-   `67router Codex v2`, ebe edobere Authentication ka ọ bụrụ None ma debe Permissions ka ọ bụrụ Allow all
+   `OmniRoute Codex v2`, ebe edobere Authentication ka ọ bụrụ None ma debe Permissions ka ọ bụrụ Allow all
    actions.
 3. Mee nyocha njikọ ahụ. 67router ga-emepe Temporary Chat nke ihe nchọgharị na-akwado ma chọpụta
    ma Sol na Pro dị maka akaụntụ ahụ.
@@ -76,10 +76,10 @@ High dị, ebe akaụntụ nwere ikike Pro na-emekwa ka Extra High na Pro dị. 
 model backend na reasoning effort a kapịrị ọnụ; Responses effort e kwuru hoo haa nke na-emegide ya
 ga-ada ozugbo n'ụzọ nchekwa kama ịgbanwe mode ihe nchọgharị ahọpụtara na nzuzo.
 
-Agbanwela aha ma ọ bụ jiri connector ochie `Codex Native` ma ọ bụ `67router Codex` ọzọ. ChatGPT
+Agbanwela aha ma ọ bụ jiri connector ochie `Codex Native` ma ọ bụ `OmniRoute Codex` ọzọ. ChatGPT
 na-echekwa contract MCP ọha na cache dabere na njirimara connector, ebe bridge e melitere na-eji
 contract turn-token ọhụrụ kpọmkwem. Runtime na-ajụ njirimara ochie ndị ahụ ma chọọ
-connector ọhụrụ `67router Codex v2`.
+connector ọhụrụ `OmniRoute Codex v2`.
 
 ## Ụdị nchekwa
 

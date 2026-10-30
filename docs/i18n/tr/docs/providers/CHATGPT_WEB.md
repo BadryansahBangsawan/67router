@@ -26,7 +26,7 @@ Tünel yalnızca araç turları için gereklidir. `pro` dahil olmak üzere liste
 1. **ChatGPT Web (Codex)** sağlayıcısını açın ve bir bağlantı ekleyin.
 2. Tam ChatGPT Cookie üstbilgisini, tünel kimliğini, çalışma zamanı anahtarını ve özel bağlayıcı
    adını yapıştırın. Araç özellikli yeni kurulumlarda, adı tam olarak
-   `67router Codex v2` olan yeni oluşturulmuş bir bağlayıcı kullanılmalı; Authentication değeri None,
+   `OmniRoute Codex v2` olan yeni oluşturulmuş bir bağlayıcı kullanılmalı; Authentication değeri None,
    Permissions değeri ise Allow all actions olarak ayarlanmalıdır.
 3. Bağlantı denetimini çalıştırın. 67router, tarayıcı destekli bir Temporary Chat açar ve
    hesapta Sol ile Pro'nun kullanılabilir olup olmadığını algılar.
@@ -59,7 +59,7 @@ Bunlardan birini diğer modeller gibi bir kombinasyona ekleyin. Codex uygulamas�
 
 Free/Go hesapları Luna rotalarını sunar. Sol özelliğine sahip hesaplar Instant'tan High'a kadar olan rotaları, Pro özelliğine sahip hesaplar ise bunlara ek olarak Extra High ve Pro rotalarını sunar. Her rotanın sabit bir backend modeli ve akıl yürütme eforu vardır; çakışan açık bir Responses eforu, seçili tarayıcı modunu sessizce değiştirmek yerine kapalı biçimde başarısız olur.
 
-Eski bir `Codex Native` veya `67router Codex` bağlayıcısını yeniden adlandırmayın ya da tekrar kullanmayın. ChatGPT, herkese açık MCP sözleşmesini bağlayıcı kimliğine göre önbelleğe alırken yenilenmiş köprü yeni bir doğrudan tur belirteci sözleşmesi kullanır. Çalışma zamanı bu eski kimlikleri reddeder ve yeni bir `67router Codex v2` bağlayıcısı gerektirir.
+Eski bir `Codex Native` veya `OmniRoute Codex` bağlayıcısını yeniden adlandırmayın ya da tekrar kullanmayın. ChatGPT, herkese açık MCP sözleşmesini bağlayıcı kimliğine göre önbelleğe alırken yenilenmiş köprü yeni bir doğrudan tur belirteci sözleşmesi kullanır. Çalışma zamanı bu eski kimlikleri reddeder ve yeni bir `OmniRoute Codex v2` bağlayıcısı gerektirir.
 
 ## Güvenlik modeli
 

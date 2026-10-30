@@ -29,7 +29,7 @@ tunnel صرف ٹول ٹرنز کے لیے درکار ہے۔ درج کردہ ہر
 1. **ChatGPT Web (Codex)** فراہم کنندہ کھولیں اور ایک کنکشن شامل کریں۔
 2. مکمل ChatGPT Cookie ہیڈر، ٹنل ID، رن ٹائم کلید، اور حسبِ ضرورت کنیکٹر کا
    نام پیسٹ کریں۔ نئے ٹول کی صلاحیت رکھنے والے سیٹ اپس کے لیے لازماً ایک نیا کنیکٹر بنائیں جس کا نام عین
-   `67router Codex v2` ہو، جس میں Authentication کو None اور Permissions کو Allow all
+   `OmniRoute Codex v2` ہو، جس میں Authentication کو None اور Permissions کو Allow all
    actions پر سیٹ کیا گیا ہو۔
 3. کنکشن کی جانچ چلائیں۔ 67router براؤزر پر مبنی Temporary Chat کھولتا ہے اور پتہ لگاتا ہے
    کہ آیا اکاؤنٹ کے لیے Sol اور Pro دستیاب ہیں۔
@@ -62,7 +62,7 @@ tunnel صرف ٹول ٹرنز کے لیے درکار ہے۔ درج کردہ ہر
 
 Free/Go اکاؤنٹس Luna routes فراہم کرتے ہیں۔ Sol کی صلاحیت رکھنے والے اکاؤنٹس Instant سے High تک فراہم کرتے ہیں، اور Pro کی صلاحیت رکھنے والے اکاؤنٹس اضافی طور پر Extra High اور Pro فراہم کرتے ہیں۔ ہر route کا backend model اور reasoning effort مقرر ہوتا ہے؛ متصادم واضح Responses effort، منتخب کردہ براؤزر موڈ کو خاموشی سے تبدیل کرنے کے بجائے بند حالت میں ناکام ہو جاتا ہے۔
 
-کسی پرانے `Codex Native` یا `67router Codex` connector کا نام تبدیل یا اسے دوبارہ استعمال نہ کریں۔ ChatGPT عوامی MCP contract کو connector identity کے لحاظ سے cache کرتا ہے، جبکہ تازہ کردہ bridge ایک نیا براہِ راست turn-token contract استعمال کرتا ہے۔ runtime ان legacy identities کو مسترد کرتا ہے اور ایک نیا `67router Codex v2` connector درکار قرار دیتا ہے۔
+کسی پرانے `Codex Native` یا `OmniRoute Codex` connector کا نام تبدیل یا اسے دوبارہ استعمال نہ کریں۔ ChatGPT عوامی MCP contract کو connector identity کے لحاظ سے cache کرتا ہے، جبکہ تازہ کردہ bridge ایک نیا براہِ راست turn-token contract استعمال کرتا ہے۔ runtime ان legacy identities کو مسترد کرتا ہے اور ایک نیا `OmniRoute Codex v2` connector درکار قرار دیتا ہے۔
 
 ## سیکیورٹی ماڈل
 

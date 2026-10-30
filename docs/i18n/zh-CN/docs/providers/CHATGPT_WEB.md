@@ -26,7 +26,7 @@
 1. 打开 **ChatGPT Web (Codex)** 提供者并添加连接。
 2. 粘贴完整的 ChatGPT Cookie 标头、隧道 ID、运行时密钥和自定义连接器
    名称。支持新工具的设置必须使用新创建且名称完全为
-   `67router Codex v2` 的连接器，将 Authentication 设置为 None，并将 Permissions 设置为 Allow all
+   `OmniRoute Codex v2` 的连接器，将 Authentication 设置为 None，并将 Permissions 设置为 Allow all
    actions。
 3. 运行连接检查。67router 会打开一个由浏览器支持的 Temporary Chat，并检测
    该账户是否可以使用 Sol 和 Pro。
@@ -58,7 +58,7 @@
 
 Free/Go 账户提供 Luna 路由。具备 Sol 能力的账户提供从 Instant 到 High 的路由，而具备 Pro 能力的账户还会提供 Extra High 和 Pro。每个路由都有固定的后端模型和推理强度；如果显式指定的 Responses 推理强度与其冲突，请求将关闭并失败，而不会静默更改所选的浏览器模式。
 
-请勿重命名或重复使用旧的 `Codex Native` 或 `67router Codex` 连接器。ChatGPT 会根据连接器身份缓存公共 MCP 合约，而更新后的桥接器使用新的直接交互轮次令牌合约。运行时会拒绝这些旧身份，并要求使用新的 `67router Codex v2` 连接器。
+请勿重命名或重复使用旧的 `Codex Native` 或 `OmniRoute Codex` 连接器。ChatGPT 会根据连接器身份缓存公共 MCP 合约，而更新后的桥接器使用新的直接交互轮次令牌合约。运行时会拒绝这些旧身份，并要求使用新的 `OmniRoute Codex v2` 连接器。
 
 ## 安全模型
 

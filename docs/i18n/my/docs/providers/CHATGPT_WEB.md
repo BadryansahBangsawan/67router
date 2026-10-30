@@ -26,7 +26,7 @@ Tunnel ကို tool turn များအတွက်သာ လိုအပ်�
 1. **ChatGPT Web (Codex)** provider ကိုဖွင့်ပြီး connection တစ်ခုထည့်ပါ။
 2. ChatGPT Cookie header အပြည့်အစုံ၊ tunnel ID၊ runtime key နှင့် custom connector
    အမည်ကို ကူးထည့်ပါ။ Tool အသုံးပြုနိုင်သည့် စနစ်ထည့်သွင်းမှုအသစ်များတွင် အသစ်ဖန်တီးထားပြီး
-   `67router Codex v2` ဟု အတိအကျအမည်ပေးထားသော connector ကို အသုံးပြုရမည်ဖြစ်ကာ Authentication ကို None၊ Permissions ကို Allow all
+   `OmniRoute Codex v2` ဟု အတိအကျအမည်ပေးထားသော connector ကို အသုံးပြုရမည်ဖြစ်ကာ Authentication ကို None၊ Permissions ကို Allow all
    actions ဟု သတ်မှတ်ရမည်။
 3. Connection check ကို လုပ်ဆောင်ပါ။ 67router သည် browser မှတစ်ဆင့် လုပ်ဆောင်သော Temporary Chat ကိုဖွင့်ပြီး
    account အတွက် Sol နှင့် Pro ရရှိနိုင်ခြင်းရှိမရှိ စစ်ဆေးသည်။
@@ -59,7 +59,7 @@ connector နှင့် tool round-trip တို့၏ အခြေအနေ�
 
 Free/Go အကောင့်များတွင် Luna route များကို အသုံးပြုနိုင်သည်။ Sol အသုံးပြုနိုင်သော အကောင့်များတွင် Instant မှ High အထိ အသုံးပြုနိုင်ပြီး Pro အသုံးပြုနိုင်သော အကောင့်များတွင် Extra High နှင့် Pro ကိုလည်း ထပ်မံအသုံးပြုနိုင်သည်။ Route တစ်ခုစီတွင် သတ်မှတ်ထားသော backend model နှင့် reasoning effort ရှိသည်။ ယင်းနှင့် ကွဲလွဲနေသော Responses effort ကို အတိအလင်း သတ်မှတ်ပါက ရွေးချယ်ထားသော browser mode ကို တိတ်တဆိတ် ပြောင်းလဲမည့်အစား လုံခြုံစွာ ပိတ်ပင်၍ မအောင်မြင်စေပါသည်။
 
-အဟောင်းဖြစ်သော `Codex Native` သို့မဟုတ် `67router Codex` connector ကို အမည်ပြောင်းခြင်း သို့မဟုတ် ပြန်လည်အသုံးပြုခြင်း မပြုပါနှင့်။ ChatGPT သည် အများသုံး MCP contract ကို connector identity အလိုက် cache လုပ်ထားပြီး အပ်ဒိတ်လုပ်ထားသော bridge သည် direct turn-token contract အသစ်ကို အသုံးပြုသည်။ Runtime သည် အဆိုပါ legacy identity များကို ငြင်းပယ်ပြီး `67router Codex v2` connector အသစ်တစ်ခုကို လိုအပ်သည်။
+အဟောင်းဖြစ်သော `Codex Native` သို့မဟုတ် `OmniRoute Codex` connector ကို အမည်ပြောင်းခြင်း သို့မဟုတ် ပြန်လည်အသုံးပြုခြင်း မပြုပါနှင့်။ ChatGPT သည် အများသုံး MCP contract ကို connector identity အလိုက် cache လုပ်ထားပြီး အပ်ဒိတ်လုပ်ထားသော bridge သည် direct turn-token contract အသစ်ကို အသုံးပြုသည်။ Runtime သည် အဆိုပါ legacy identity များကို ငြင်းပယ်ပြီး `OmniRoute Codex v2` connector အသစ်တစ်ခုကို လိုအပ်သည်။
 
 ## လုံခြုံရေးပုံစံ
 

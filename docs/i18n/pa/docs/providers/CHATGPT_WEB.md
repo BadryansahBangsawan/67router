@@ -36,7 +36,7 @@ allowlists ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਦੀ ਹੈ; ਇਹ ਕ
 1. **ChatGPT Web (Codex)** ਪ੍ਰਦਾਤਾ ਖੋਲ੍ਹੋ ਅਤੇ ਇੱਕ ਕਨੈਕਸ਼ਨ ਜੋੜੋ।
 2. ਪੂਰਾ ChatGPT Cookie ਹੈਡਰ, ਟਨਲ ID, ਰਨਟਾਈਮ ਕੁੰਜੀ ਅਤੇ ਕਸਟਮ ਕਨੈਕਟਰ ਦਾ
    ਨਾਮ ਪੇਸਟ ਕਰੋ। ਨਵੇਂ ਟੂਲ-ਸਮਰੱਥ ਸੈਟਅੱਪਾਂ ਲਈ ਨਵਾਂ ਬਣਾਇਆ ਗਿਆ ਕਨੈਕਟਰ ਵਰਤਣਾ ਲਾਜ਼ਮੀ ਹੈ, ਜਿਸਦਾ ਨਾਮ ਬਿਲਕੁਲ
-   `67router Codex v2` ਹੋਵੇ, Authentication ਨੂੰ None ਅਤੇ Permissions ਨੂੰ Allow all
+   `OmniRoute Codex v2` ਹੋਵੇ, Authentication ਨੂੰ None ਅਤੇ Permissions ਨੂੰ Allow all
    actions 'ਤੇ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਹੋਵੇ।
 3. ਕਨੈਕਸ਼ਨ ਜਾਂਚ ਚਲਾਓ। 67router ਬ੍ਰਾਊਜ਼ਰ-ਸਮਰਥਿਤ Temporary Chat ਖੋਲ੍ਹਦਾ ਹੈ ਅਤੇ ਪਤਾ ਲਗਾਉਂਦਾ
    ਹੈ ਕਿ ਖਾਤੇ ਲਈ Sol ਅਤੇ Pro ਉਪਲਬਧ ਹਨ ਜਾਂ ਨਹੀਂ।
@@ -74,10 +74,10 @@ High ਤੱਕ ਉਪਲਬਧ ਕਰਵਾਉਂਦੇ ਹਨ, ਅਤੇ Pro-�
 ਨਿਸ਼ਚਿਤ backend ਮਾਡਲ ਅਤੇ reasoning effort ਹੁੰਦਾ ਹੈ; ਟਕਰਾਅ ਵਾਲਾ ਸਪਸ਼ਟ Responses effort
 ਚੁਣੇ ਗਏ ਬ੍ਰਾਊਜ਼ਰ ਮੋਡ ਨੂੰ ਚੁੱਪਚਾਪ ਬਦਲਣ ਦੀ ਬਜਾਏ ਬੰਦ ਹੋ ਕੇ ਅਸਫਲ ਹੁੰਦਾ ਹੈ।
 
-ਕਿਸੇ ਪੁਰਾਣੇ `Codex Native` ਜਾਂ `67router Codex` ਕਨੈਕਟਰ ਦਾ ਨਾਮ ਨਾ ਬਦਲੋ ਜਾਂ ਉਸਦੀ ਮੁੜ ਵਰਤੋਂ ਨਾ ਕਰੋ। ChatGPT
+ਕਿਸੇ ਪੁਰਾਣੇ `Codex Native` ਜਾਂ `OmniRoute Codex` ਕਨੈਕਟਰ ਦਾ ਨਾਮ ਨਾ ਬਦਲੋ ਜਾਂ ਉਸਦੀ ਮੁੜ ਵਰਤੋਂ ਨਾ ਕਰੋ। ChatGPT
 ਕਨੈਕਟਰ ਪਛਾਣ ਦੇ ਆਧਾਰ 'ਤੇ ਜਨਤਕ MCP contract ਨੂੰ cache ਕਰਦਾ ਹੈ, ਜਦਕਿ ਅੱਪਡੇਟ ਕੀਤਾ bridge ਇੱਕ
 ਨਵਾਂ ਸਿੱਧਾ turn-token contract ਵਰਤਦਾ ਹੈ। ਰਨਟਾਈਮ ਉਨ੍ਹਾਂ legacy identities ਨੂੰ ਅਸਵੀਕਾਰ ਕਰਦਾ ਹੈ ਅਤੇ
-ਇੱਕ ਨਵੇਂ `67router Codex v2` ਕਨੈਕਟਰ ਦੀ ਲੋੜ ਰੱਖਦਾ ਹੈ।
+ਇੱਕ ਨਵੇਂ `OmniRoute Codex v2` ਕਨੈਕਟਰ ਦੀ ਲੋੜ ਰੱਖਦਾ ਹੈ।
 
 ## ਸੁਰੱਖਿਆ ਮਾਡਲ
 

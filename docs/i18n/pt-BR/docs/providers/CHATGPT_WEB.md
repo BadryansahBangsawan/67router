@@ -38,7 +38,7 @@ mesma capacidade de ferramenta local vinculada ao turno quando o túnel e o cone
 1. Abra o provedor **ChatGPT Web (Codex)** e adicione uma conexão.
 2. Cole o cabeçalho Cookie completo do ChatGPT, o ID do túnel, a chave de runtime e o nome
    do conector personalizado. Novas configurações com suporte a ferramentas devem usar um
-   conector recém-criado chamado exatamente `67router Codex v2`, com Authentication
+   conector recém-criado chamado exatamente `OmniRoute Codex v2`, com Authentication
    definido como None e Permissions definido como Allow all actions.
 3. Execute a verificação da conexão. O 67router abre um Temporary Chat baseado em navegador
    e detecta se Sol e Pro estão disponíveis para a conta.
@@ -77,10 +77,10 @@ High, e contas com acesso ao Pro também disponibilizam Extra High e Pro. Cada r
 modelo de backend e um nível de esforço de raciocínio fixos; um esforço explícito conflitante no Responses falha
 de forma fechada, em vez de alterar silenciosamente o modo selecionado no navegador.
 
-Não renomeie nem reutilize um conector antigo `Codex Native` ou `67router Codex`. O ChatGPT
+Não renomeie nem reutilize um conector antigo `Codex Native` ou `OmniRoute Codex`. O ChatGPT
 armazena em cache o contrato MCP público de acordo com a identidade do conector, enquanto a ponte atualizada usa um
 novo contrato direto de token por turno. O runtime rejeita essas identidades legadas e exige
-um novo conector `67router Codex v2`.
+um novo conector `OmniRoute Codex v2`.
 
 ## Modelo de segurança
 

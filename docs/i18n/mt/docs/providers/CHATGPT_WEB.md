@@ -42,7 +42,7 @@ l-konnettur ikunu kkonfigurati.
 
 1. Iftaħ il-fornitur **ChatGPT Web (Codex)** u żid konnessjoni.
 2. Waħħal il-header sħiħ tal-Cookie ta’ ChatGPT, l-ID tat-tunnel, ir-runtime key, u l-isem tal-konnettur personalizzat. Konfigurazzjonijiet ġodda li jappoġġjaw l-għodod iridu jużaw konnettur li jkun għadu kif inħoloq bl-isem eżatt
-   `67router Codex v2`, b’Authentication issettjat għal None u Permissions issettjat għal Allow all
+   `OmniRoute Codex v2`, b’Authentication issettjat għal None u Permissions issettjat għal Allow all
    actions.
 3. Ħaddem il-verifika tal-konnessjoni. 67router jiftaħ Temporary Chat appoġġjat minn browser u jidentifika
    jekk Sol u Pro humiex disponibbli għall-kont.
@@ -81,10 +81,10 @@ u Pro. Kull rotta għandha mudell backend u sforz ta’ raġunament fissi; sforz
 ta’ Responses li jkun f’kunflitt ifalli b’mod magħluq minflok ibiddel fis-skiet
 il-modalità magħżula tal-browser.
 
-Tibdilx l-isem u terġax tuża konnettur eqdem `Codex Native` jew `67router Codex`.
+Tibdilx l-isem u terġax tuża konnettur eqdem `Codex Native` jew `OmniRoute Codex`.
 ChatGPT iżomm fil-cache il-kuntratt pubbliku MCP skont l-identità tal-konnettur,
 filwaqt li l-bridge aġġornat juża kuntratt dirett ġdid tat-turn-token. Ir-runtime
-jirrifjuta dawk l-identitajiet legacy u jeħtieġ konnettur ġdid `67router Codex v2`.
+jirrifjuta dawk l-identitajiet legacy u jeħtieġ konnettur ġdid `OmniRoute Codex v2`.
 
 ## Mudell tas-sigurtà
 

@@ -39,7 +39,7 @@ su užklausų ciklu susietą vietinio įrankio galimybę, kai tunelis ir konekto
 1. Atidarykite **ChatGPT Web (Codex)** teikėją ir pridėkite ryšį.
 2. Įklijuokite visą ChatGPT „Cookie“ antraštę, tunelio ID, vykdymo aplinkos raktą ir pasirinktinės jungties
    pavadinimą. Naujose įrankius palaikančiose sąrankose turi būti naudojama naujai sukurta jungtis, pavadinta tiksliai
-   `67router Codex v2`, kurios autentifikavimo parinktis nustatyta į „None“, o leidimų parinktis – į „Allow all
+   `OmniRoute Codex v2`, kurios autentifikavimo parinktis nustatyta į „None“, o leidimų parinktis – į „Allow all
    actions“.
 3. Paleiskite ryšio patikrą. 67router atidaro naršykle paremtą laikinąjį pokalbį („Temporary Chat“) ir nustato,
    ar paskyroje pasiekiami Sol ir Pro.
@@ -76,10 +76,10 @@ High, o Pro palaikančioms paskyroms papildomai prieinami Extra High ir Pro. Kie
 fiksuotą vidinės sistemos modelį ir samprotavimo pastangų lygį; prieštaraujanti aiškiai nurodyta Responses pastangų reikšmė saugiai
 atmetama, užuot nepastebimai pakeitus pasirinktą naršyklės režimą.
 
-Nepervadinkite ir pakartotinai nenaudokite senesnio `Codex Native` arba `67router Codex` konektoriaus. ChatGPT
+Nepervadinkite ir pakartotinai nenaudokite senesnio `Codex Native` arba `OmniRoute Codex` konektoriaus. ChatGPT
 talpykloje saugo viešąją MCP sutartį pagal konektoriaus tapatybę, o atnaujintas tiltas naudoja
 naują tiesioginę užklausų ciklo prieigos rakto sutartį. Vykdymo aplinka atmeta šias pasenusias tapatybes ir reikalauja
-naujo `67router Codex v2` konektoriaus.
+naujo `OmniRoute Codex v2` konektoriaus.
 
 ## Saugumo modelis
 

@@ -26,7 +26,7 @@ Tunnel faqat vositali almashinuvlar uchun kerak. Roʻyxatdagi har bir marshrut, 
 1. **ChatGPT Web (Codex)** provayderini oching va ulanish qoʻshing.
 2. Toʻliq ChatGPT Cookie sarlavhasi, tunnel IDsi, runtime kaliti va maxsus konnektor
    nomini kiriting. Vositalarni qoʻllab-quvvatlaydigan yangi sozlamalarda aynan
-   `67router Codex v2` nomi bilan yangi yaratilgan konnektordan foydalanish, Authentication qiymatini None va Permissions qiymatini Allow all
+   `OmniRoute Codex v2` nomi bilan yangi yaratilgan konnektordan foydalanish, Authentication qiymatini None va Permissions qiymatini Allow all
    actions qilib belgilash kerak.
 3. Ulanish tekshiruvini ishga tushiring. 67router brauzer asosidagi Temporary Chat oynasini ochadi va
    hisob uchun Sol hamda Pro mavjudligini aniqlaydi.
@@ -59,7 +59,7 @@ Ulardan birini boshqa har qanday model kabi kombinatsiyaga qoʻshing. Codex ilov
 
 Free/Go akkauntlari Luna marshrutlarini taqdim etadi. Sol imkoniyatiga ega akkauntlar Instantʼdan Highʼgacha boʻlgan marshrutlarni, Pro imkoniyatiga ega akkauntlar esa qoʻshimcha ravishda Extra High va Proʼni taqdim etadi. Har bir marshrutda belgilangan backend modeli va fikrlash darajasi mavjud; ziddiyatli aniq Responses fikrlash darajasi tanlangan brauzer rejimini yashirincha oʻzgartirish oʻrniga yopiq tarzda rad etiladi.
 
-Eski `Codex Native` yoki `67router Codex` konnektorining nomini oʻzgartirmang va uni qayta ishlatmang. ChatGPT ommaviy MCP shartnomasini konnektor identifikatori boʻyicha keshlaydi, yangilangan koʻprik esa yangi toʻgʻridan-toʻgʻri almashinuv tokeni shartnomasidan foydalanadi. Runtime bu eski identifikatorlarni rad etadi va yangi `67router Codex v2` konnektorini talab qiladi.
+Eski `Codex Native` yoki `OmniRoute Codex` konnektorining nomini oʻzgartirmang va uni qayta ishlatmang. ChatGPT ommaviy MCP shartnomasini konnektor identifikatori boʻyicha keshlaydi, yangilangan koʻprik esa yangi toʻgʻridan-toʻgʻri almashinuv tokeni shartnomasidan foydalanadi. Runtime bu eski identifikatorlarni rad etadi va yangi `OmniRoute Codex v2` konnektorini talab qiladi.
 
 ## Xavfsizlik modeli
 

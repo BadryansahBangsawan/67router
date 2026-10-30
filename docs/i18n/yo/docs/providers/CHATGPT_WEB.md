@@ -37,7 +37,7 @@ agbára irinṣẹ́ agbègbè kan náà tí a dè mọ́ ìyípadà nígbà tí
 1. Ṣí olùpèsè **ChatGPT Web (Codex)** kí o sì ṣàfikún asopọ̀ kan.
 2. Lẹ akọsórí ChatGPT Cookie kíkún, ID tunnel, kọ́kọ́rọ́ runtime, àti orúkọ connector
    àkànṣe náà mọ́lẹ̀. Àwọn ìṣètò tuntun tí ó lè lo irinṣẹ́ gbọ́dọ̀ lo connector tuntun tí a ṣẹ̀dá
-   tí orúkọ rẹ̀ jẹ́ `67router Codex v2` gan-an, pẹ̀lú Authentication tí a ṣètò sí None àti
+   tí orúkọ rẹ̀ jẹ́ `OmniRoute Codex v2` gan-an, pẹ̀lú Authentication tí a ṣètò sí None àti
    Permissions tí a ṣètò sí Allow all actions.
 3. Ṣe àyẹ̀wò asopọ̀ náà. 67router máa ṣí Temporary Chat tí aṣàwákiri ń ṣe àtìlẹ́yìn fún,
    yóò sì ṣàwárí bóyá Sol àti Pro wà fún àkọọ́lẹ̀ náà.
@@ -76,10 +76,10 @@ High hàn, àwọn àkọọ́lẹ̀ tó lè lo Pro sì tún ń fi Extra High à
 awoṣe backend àti ìsapá ìrònú tí a ti dì mú; ìsapá Responses tí a sọ ní gbangba tó tako èyí yóò
 kùnà láìfi àyè sílẹ̀ dípò kí ó yí mode aṣàwákiri tí a yàn padà láìjẹ́kí ẹnikẹ́ni mọ̀.
 
-Má ṣe tún orúkọ asopọ̀ `Codex Native` tàbí `67router Codex` àtijọ́ ṣe, má sì tún lò ó. ChatGPT
+Má ṣe tún orúkọ asopọ̀ `Codex Native` tàbí `OmniRoute Codex` àtijọ́ ṣe, má sì tún lò ó. ChatGPT
 ń cache àdéhùn MCP gbogbogbò nípasẹ̀ ìdánimọ̀ asopọ̀, nígbà tí bridge tí a sọ di tuntun ń lo
 àdéhùn turn-token tààrà tuntun. Runtime kọ àwọn ìdánimọ̀ àtijọ́ wọ̀nyẹn, ó sì ń béèrè
-asopọ̀ `67router Codex v2` tuntun.
+asopọ̀ `OmniRoute Codex v2` tuntun.
 
 ## Àwòṣe ààbò
 

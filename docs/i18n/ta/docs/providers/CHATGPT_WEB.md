@@ -26,7 +26,7 @@
 1. **ChatGPT Web (Codex)** வழங்குநரைத் திறந்து ஒரு இணைப்பைச் சேர்க்கவும்.
 2. முழுமையான ChatGPT Cookie தலைப்பு, tunnel ID, runtime key மற்றும் தனிப்பயன் connector
    பெயரை ஒட்டவும். கருவிகளைப் பயன்படுத்தக்கூடிய புதிய அமைப்புகள், சரியாக
-   `67router Codex v2` எனப் பெயரிடப்பட்ட புதிதாக உருவாக்கப்பட்ட connector-ஐப் பயன்படுத்த வேண்டும்; அதில் Authentication என்பது None எனவும் Permissions என்பது Allow all
+   `OmniRoute Codex v2` எனப் பெயரிடப்பட்ட புதிதாக உருவாக்கப்பட்ட connector-ஐப் பயன்படுத்த வேண்டும்; அதில் Authentication என்பது None எனவும் Permissions என்பது Allow all
    actions எனவும் அமைக்கப்பட்டிருக்க வேண்டும்.
 3. இணைப்புச் சரிபார்ப்பை இயக்கவும். 67router, உலாவி ஆதரவிலான Temporary Chat-ஐத் திறந்து,
    அந்தக் கணக்கிற்கு Sol மற்றும் Pro கிடைக்கின்றனவா என்பதைக் கண்டறியும்.
@@ -59,7 +59,7 @@ connector மற்றும் கருவியின் முழுச் �
 
 Free/Go கணக்குகள் Luna route-களை வழங்குகின்றன. Sol திறனுள்ள கணக்குகள் Instant முதல் High வரை வழங்குகின்றன; Pro திறனுள்ள கணக்குகள் கூடுதலாக Extra High மற்றும் Pro-ஐ வழங்குகின்றன. ஒவ்வொரு route-க்கும் நிலையான backend model மற்றும் reasoning effort உள்ளன; முரண்படும் வெளிப்படையான Responses effort, தேர்ந்தெடுக்கப்பட்ட உலாவி mode-ஐ அமைதியாக மாற்றுவதற்குப் பதிலாக பாதுகாப்பாகத் தோல்வியடையும்.
 
-பழைய `Codex Native` அல்லது `67router Codex` connector-ஐ மறுபெயரிடவோ மீண்டும் பயன்படுத்தவோ வேண்டாம். ChatGPT, connector அடையாளத்தின் அடிப்படையில் பொது MCP contract-ஐ cache செய்கிறது; அதேவேளையில் புதுப்பிக்கப்பட்ட bridge ஒரு புதிய நேரடி turn-token contract-ஐப் பயன்படுத்துகிறது. runtime அந்தப் பழைய அடையாளங்களை நிராகரித்து, புதிய `67router Codex v2` connector-ஐக் கட்டாயப்படுத்துகிறது.
+பழைய `Codex Native` அல்லது `OmniRoute Codex` connector-ஐ மறுபெயரிடவோ மீண்டும் பயன்படுத்தவோ வேண்டாம். ChatGPT, connector அடையாளத்தின் அடிப்படையில் பொது MCP contract-ஐ cache செய்கிறது; அதேவேளையில் புதுப்பிக்கப்பட்ட bridge ஒரு புதிய நேரடி turn-token contract-ஐப் பயன்படுத்துகிறது. runtime அந்தப் பழைய அடையாளங்களை நிராகரித்து, புதிய `OmniRoute Codex v2` connector-ஐக் கட்டாயப்படுத்துகிறது.
 
 ## பாதுகாப்பு மாதிரி
 

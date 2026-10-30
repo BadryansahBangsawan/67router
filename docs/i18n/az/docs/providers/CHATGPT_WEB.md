@@ -37,7 +37,7 @@ tunel və konnektor konfiqurasiya edildikdə sorğu dövrünə bağlı eyni yerl
 1. **ChatGPT Web (Codex)** provayderini açın və bağlantı əlavə edin.
 2. Tam ChatGPT Cookie başlığını, tunel ID-sini, icra mühiti açarını və fərdi konnektor
    adını daxil edin. Alətlərdən istifadə edə bilən yeni quraşdırmalarda adı dəqiq şəkildə
-   `67router Codex v2` olan yeni yaradılmış konnektordan istifadə edilməli, Authentication
+   `OmniRoute Codex v2` olan yeni yaradılmış konnektordan istifadə edilməli, Authentication
    None, Permissions isə Allow all actions olaraq təyin edilməlidir.
 3. Bağlantı yoxlamasını işə salın. 67router brauzer əsaslı Temporary Chat açır və hesab
    üçün Sol və Pro-nun əlçatan olub-olmadığını müəyyən edir.
@@ -76,10 +76,10 @@ High-a qədər marşrutları, Pro imkanlı hesablar isə əlavə olaraq Extra Hi
 sabit arxa sistem modeli və əsaslandırma səy səviyyəsi var; ziddiyyətli açıq Responses səy səviyyəsi
 seçilmiş brauzer rejimini səssizcə dəyişdirmək əvəzinə qapalı şəkildə rədd edilir.
 
-Köhnə `Codex Native` və ya `67router Codex` konnektorunun adını dəyişməyin və onu təkrar istifadə etməyin. ChatGPT
+Köhnə `Codex Native` və ya `OmniRoute Codex` konnektorunun adını dəyişməyin və onu təkrar istifadə etməyin. ChatGPT
 açıq MCP müqaviləsini konnektorun identikliyinə əsasən keşləyir, yenilənmiş körpü isə
 yeni birbaşa sorğu dövrü tokeni müqaviləsindən istifadə edir. İcra mühiti bu köhnə identiklikləri rədd edir və
-yeni `67router Codex v2` konnektorunu tələb edir.
+yeni `OmniRoute Codex v2` konnektorunu tələb edir.
 
 ## Təhlükəsizlik modeli
 

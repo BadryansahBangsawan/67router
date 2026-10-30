@@ -26,7 +26,7 @@ Ana buƙatar tunnel ne kawai don zagayen kayan aiki. Kowace hanya da aka jera, c
 1. Buɗe mai samar da **ChatGPT Web (Codex)** sannan ka ƙara haɗi.
 2. Liƙa cikakken taken ChatGPT Cookie, ID na tunnel, runtime key, da sunan custom connector.
    Sabbin saituna masu iya amfani da kayan aiki dole ne su yi amfani da sabon connector da aka ƙirƙira mai suna daidai
-   `67router Codex v2`, tare da saita Authentication zuwa None da Permissions zuwa Allow all
+   `OmniRoute Codex v2`, tare da saita Authentication zuwa None da Permissions zuwa Allow all
    actions.
 3. Gudanar da binciken haɗin. 67router yana buɗe Temporary Chat mai amfani da browser sannan ya gano
    ko Sol da Pro suna samuwa ga asusun.
@@ -59,7 +59,7 @@ Tabbatattun hanyoyin samfura su ne:
 
 Asusun Free/Go suna samar da hanyoyin Luna. Asusun da ke da damar Sol suna samar da Instant har zuwa High, sannan asusun da ke da damar Pro suna kuma samar da Extra High da Pro. Kowace hanya tana da tabbataccen backend model da reasoning effort; explicit Responses effort mai cin karo yana ƙarewa cikin tsaro maimakon canza yanayin burauzar da aka zaɓa a ɓoye.
 
-Kada a sake suna ko a sake amfani da tsohon connector na `Codex Native` ko `67router Codex`. ChatGPT yana cache na public MCP contract bisa identity na connector, yayin da sabuwar bridge ɗin da aka sabunta ke amfani da sabon direct turn-token contract. Runtime yana ƙin waɗannan tsoffin identities kuma yana buƙatar sabon connector na `67router Codex v2`.
+Kada a sake suna ko a sake amfani da tsohon connector na `Codex Native` ko `OmniRoute Codex`. ChatGPT yana cache na public MCP contract bisa identity na connector, yayin da sabuwar bridge ɗin da aka sabunta ke amfani da sabon direct turn-token contract. Runtime yana ƙin waɗannan tsoffin identities kuma yana buƙatar sabon connector na `OmniRoute Codex v2`.
 
 ## Tsarin tsaro
 

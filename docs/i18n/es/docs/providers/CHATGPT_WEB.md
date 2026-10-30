@@ -42,7 +42,7 @@ cuando el túnel y el conector están configurados.
 ## Configuración del panel
 
 1. Abra el proveedor **ChatGPT Web (Codex)** y añada una conexión.
-2. Pegue el encabezado Cookie completo de ChatGPT, el ID del túnel, la clave de tiempo de ejecución y el nombre del conector personalizado. Las nuevas configuraciones con capacidad para usar herramientas deben utilizar un conector recién creado llamado exactamente `67router Codex v2`, con Authentication establecido en None y Permissions establecido en Allow all actions.
+2. Pegue el encabezado Cookie completo de ChatGPT, el ID del túnel, la clave de tiempo de ejecución y el nombre del conector personalizado. Las nuevas configuraciones con capacidad para usar herramientas deben utilizar un conector recién creado llamado exactamente `OmniRoute Codex v2`, con Authentication establecido en None y Permissions establecido en Allow all actions.
 3. Ejecute la comprobación de la conexión. 67router abre un chat temporal respaldado por un navegador y detecta si Sol y Pro están disponibles para la cuenta.
 4. Guarde la conexión. 67router sustituye la cookie pegada por el estado de almacenamiento verificado de Playwright y lo almacena con la clave de tiempo de ejecución mediante la abstracción de credenciales cifradas.
 
@@ -72,11 +72,11 @@ ruta tiene un modelo de backend y un nivel de esfuerzo de razonamiento fijos; un
 explícito de Responses que entre en conflicto falla de forma segura en lugar de cambiar
 silenciosamente el modo de navegador seleccionado.
 
-No cambie el nombre ni reutilice un conector anterior `Codex Native` u `67router Codex`.
+No cambie el nombre ni reutilice un conector anterior `Codex Native` u `OmniRoute Codex`.
 ChatGPT almacena en caché el contrato MCP público según la identidad del conector,
 mientras que el puente actualizado utiliza un nuevo contrato directo de tokens por turno.
 El entorno de ejecución rechaza esas identidades heredadas y exige un conector nuevo
-`67router Codex v2`.
+`OmniRoute Codex v2`.
 
 ## Modelo de seguridad
 

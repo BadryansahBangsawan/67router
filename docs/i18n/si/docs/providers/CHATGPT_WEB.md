@@ -26,7 +26,7 @@ Tunnel එක අවශ්ය වන්නේ මෙවලම් වාර ස�
 1. **ChatGPT Web (Codex)** සැපයුම්කරු විවෘත කර සම්බන්ධතාවක් එක් කරන්න.
 2. සම්පූර්ණ ChatGPT Cookie ශීර්ෂකය, tunnel ID, runtime key සහ අභිරුචි connector
    නාමය අලවන්න. නව tool-හැකියාව සහිත සැකසුම් සඳහා හරියටම
-   `67router Codex v2` ලෙස නම් කළ අලුතින් සාදන ලද connector එකක් භාවිත කළ යුතු අතර, Authentication සඳහා None ද Permissions සඳහා Allow all
+   `OmniRoute Codex v2` ලෙස නම් කළ අලුතින් සාදන ලද connector එකක් භාවිත කළ යුතු අතර, Authentication සඳහා None ද Permissions සඳහා Allow all
    actions ද සකසා තිබිය යුතුය.
 3. සම්බන්ධතා පරීක්ෂාව ධාවනය කරන්න. 67router විසින් browser-පාදක Temporary Chat එකක් විවෘත කර ගිණුම සඳහා
    Sol සහ Pro ලබා ගත හැකිදැයි හඳුනා ගනී.
@@ -59,7 +59,7 @@ connector සහ tool round-trip වෙන වෙනම වාර්තා ක�
 
 Free/Go ගිණුම් Luna routes ලබාදෙයි. Sol හැකියාව ඇති ගිණුම් Instant සිට High දක්වා ලබාදෙන අතර, Pro හැකියාව ඇති ගිණුම් ඊට අමතරව Extra High සහ Pro ද ලබාදෙයි. සෑම route එකකටම ස්ථාවර backend model එකක් සහ reasoning effort එකක් ඇත; ගැටෙන පැහැදිලි Responses effort එකක්, තෝරාගත් බ්රවුසර mode එක නිහඬව වෙනස් කිරීම වෙනුවට ආරක්ෂිතව අසාර්ථක වේ.
 
-පැරණි `Codex Native` හෝ `67router Codex` connector එකක් නැවත නම් කිරීම හෝ යළි භාවිත කිරීම නොකරන්න. ChatGPT connector අනන්යතාව අනුව public MCP contract එක cache කරන අතර, යාවත්කාලීන කළ bridge එක නව සෘජු turn-token contract එකක් භාවිත කරයි. Runtime එක එම legacy අනන්යතා ප්රතික්ෂේප කර නව `67router Codex v2` connector එකක් අවශ්ය කරයි.
+පැරණි `Codex Native` හෝ `OmniRoute Codex` connector එකක් නැවත නම් කිරීම හෝ යළි භාවිත කිරීම නොකරන්න. ChatGPT connector අනන්යතාව අනුව public MCP contract එක cache කරන අතර, යාවත්කාලීන කළ bridge එක නව සෘජු turn-token contract එකක් භාවිත කරයි. Runtime එක එම legacy අනන්යතා ප්රතික්ෂේප කර නව `OmniRoute Codex v2` connector එකක් අවශ්ය කරයි.
 
 ## ආරක්ෂක ආකෘතිය
 

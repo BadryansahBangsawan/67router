@@ -25,7 +25,7 @@ Migration `168_retire_chatgpt_web.sql` મેળ ખાતા પ્રદાત
 
 1. **ChatGPT Web (Codex)** પ્રોવાઇડર ખોલો અને કનેક્શન ઉમેરો.
 2. સંપૂર્ણ ChatGPT Cookie હેડર, ટનલ ID, રનટાઇમ કી અને કસ્ટમ કનેક્ટરનું
-   નામ પેસ્ટ કરો. નવા ટૂલ-સક્ષમ સેટઅપ્સે `67router Codex v2` નામથી જ નવું બનાવેલું
+   નામ પેસ્ટ કરો. નવા ટૂલ-સક્ષમ સેટઅપ્સે `OmniRoute Codex v2` નામથી જ નવું બનાવેલું
    કનેક્ટર વાપરવું આવશ્યક છે, જેમાં Authentication ને None અને Permissions ને Allow all
    actions પર સેટ કરેલ હોય.
 3. કનેક્શન ચકાસણી ચલાવો. 67router બ્રાઉઝર-આધારિત Temporary Chat ખોલે છે અને
@@ -59,7 +59,7 @@ Migration `168_retire_chatgpt_web.sql` મેળ ખાતા પ્રદાત
 
 Free/Go એકાઉન્ટ્સ Luna routes ઉપલબ્ધ કરાવે છે. Sol-capable એકાઉન્ટ્સ Instantથી High સુધી ઉપલબ્ધ કરાવે છે અને Pro-capable એકાઉન્ટ્સ વધારામાં Extra High તથા Pro ઉપલબ્ધ કરાવે છે. દરેક route માટે નિશ્ચિત backend model અને reasoning effort હોય છે; પરસ્પર વિરોધી સ્પષ્ટ Responses effort પસંદ કરેલા browser modeને મૌનપણે બદલવાને બદલે બંધ સ્થિતિમાં નિષ્ફળ જાય છે.
 
-જૂના `Codex Native` અથવા `67router Codex` connectorનું નામ બદલશો નહીં કે તેનો પુનઃઉપયોગ કરશો નહીં. ChatGPT connector identity દ્વારા જાહેર MCP contractને cache કરે છે, જ્યારે તાજું કરાયેલ bridge નવા direct turn-token contractનો ઉપયોગ કરે છે. runtime તે legacy identitiesને નકારે છે અને નવો `67router Codex v2` connector જરૂરી બનાવે છે.
+જૂના `Codex Native` અથવા `OmniRoute Codex` connectorનું નામ બદલશો નહીં કે તેનો પુનઃઉપયોગ કરશો નહીં. ChatGPT connector identity દ્વારા જાહેર MCP contractને cache કરે છે, જ્યારે તાજું કરાયેલ bridge નવા direct turn-token contractનો ઉપયોગ કરે છે. runtime તે legacy identitiesને નકારે છે અને નવો `OmniRoute Codex v2` connector જરૂરી બનાવે છે.
 
 ## સુરક્ષા મોડેલ
 

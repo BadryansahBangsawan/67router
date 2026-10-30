@@ -24,7 +24,7 @@
 ## 儀表板設定
 
 1. 開啟 **ChatGPT Web (Codex)** 提供者並新增連線。
-2. 貼上完整的 ChatGPT Cookie 標頭、通道 ID、執行階段金鑰，以及自訂連接器名稱。具備新工具功能的設定必須使用新建立且名稱完全為 `67router Codex v2` 的連接器，並將驗證設為 None、權限設為允許所有動作。
+2. 貼上完整的 ChatGPT Cookie 標頭、通道 ID、執行階段金鑰，以及自訂連接器名稱。具備新工具功能的設定必須使用新建立且名稱完全為 `OmniRoute Codex v2` 的連接器，並將驗證設為 None、權限設為允許所有動作。
 3. 執行連線檢查。67router 會開啟由瀏覽器支援的暫時聊天，並偵測該帳戶是否可使用 Sol 和 Pro。
 4. 儲存連線。67router 會以已驗證的 Playwright 儲存狀態取代貼上的 Cookie，並透過加密的認證抽象層將其與執行階段金鑰一併儲存。
 
@@ -49,7 +49,7 @@
 
 Free／Go 帳戶會提供 Luna 路由。支援 Sol 的帳戶會提供 Instant 至 High，而支援 Pro 的帳戶還會提供 Extra High 和 Pro。每個路由都有固定的後端模型和推理強度；若明確指定了與其衝突的 Responses 推理強度，系統會採取封閉式失敗，而不是悄然變更所選的瀏覽器模式。
 
-請勿重新命名或重複使用較舊的 `Codex Native` 或 `67router Codex` 連接器。ChatGPT 會依連接器身分快取公用 MCP 合約，而更新後的橋接器使用新的直接輪次權杖合約。執行階段會拒絕這些舊版身分，並要求使用新的 `67router Codex v2` 連接器。
+請勿重新命名或重複使用較舊的 `Codex Native` 或 `OmniRoute Codex` 連接器。ChatGPT 會依連接器身分快取公用 MCP 合約，而更新後的橋接器使用新的直接輪次權杖合約。執行階段會拒絕這些舊版身分，並要求使用新的 `OmniRoute Codex v2` 連接器。
 
 ## 安全性模型
 

@@ -26,7 +26,7 @@ tunnel শুধু tool turn-এর জন্য প্রয়োজন। tu
 1. **ChatGPT Web (Codex)** প্রোভাইডারটি খুলুন এবং একটি সংযোগ যোগ করুন।
 2. সম্পূর্ণ ChatGPT Cookie হেডার, tunnel ID, runtime key এবং custom connector-এর
    নাম পেস্ট করুন। নতুন tool-সক্ষম সেটআপে অবশ্যই সদ্য তৈরি করা এমন একটি connector ব্যবহার করতে হবে, যার নাম হুবহু
-   `67router Codex v2`, যেখানে Authentication সেট করা থাকবে None এবং Permissions সেট করা থাকবে Allow all
+   `OmniRoute Codex v2`, যেখানে Authentication সেট করা থাকবে None এবং Permissions সেট করা থাকবে Allow all
    actions।
 3. সংযোগ পরীক্ষা চালান। 67router একটি ব্রাউজার-সমর্থিত Temporary Chat খুলে অ্যাকাউন্টটির জন্য
    Sol এবং Pro উপলভ্য কি না তা শনাক্ত করে।
@@ -59,7 +59,7 @@ connector এবং tool round-trip-এর অবস্থা আলাদাভ
 
 Free/Go অ্যাকাউন্টগুলো Luna route প্রকাশ করে। Sol-capable অ্যাকাউন্টগুলো Instant থেকে High পর্যন্ত প্রকাশ করে এবং Pro-capable অ্যাকাউন্টগুলো অতিরিক্তভাবে Extra High ও Pro প্রকাশ করে। প্রতিটি route-এর একটি নির্দিষ্ট backend model এবং reasoning effort রয়েছে; পরস্পরবিরোধী কোনো স্পষ্ট Responses effort নীরবে নির্বাচিত browser mode পরিবর্তন করার বদলে বন্ধ অবস্থায় ব্যর্থ হয়।
 
-পুরোনো কোনো `Codex Native` বা `67router Codex` connector-এর নাম পরিবর্তন বা সেটি পুনরায় ব্যবহার করবেন না। ChatGPT connector identity অনুযায়ী public MCP contract cache করে, অথচ হালনাগাদ bridge একটি নতুন direct turn-token contract ব্যবহার করে। runtime ওই legacy identity-গুলো প্রত্যাখ্যান করে এবং একটি নতুন `67router Codex v2` connector আবশ্যক করে।
+পুরোনো কোনো `Codex Native` বা `OmniRoute Codex` connector-এর নাম পরিবর্তন বা সেটি পুনরায় ব্যবহার করবেন না। ChatGPT connector identity অনুযায়ী public MCP contract cache করে, অথচ হালনাগাদ bridge একটি নতুন direct turn-token contract ব্যবহার করে। runtime ওই legacy identity-গুলো প্রত্যাখ্যান করে এবং একটি নতুন `OmniRoute Codex v2` connector আবশ্যক করে।
 
 ## নিরাপত্তা মডেল
 

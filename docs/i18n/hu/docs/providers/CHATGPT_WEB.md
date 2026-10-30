@@ -26,7 +26,7 @@ Az alagútra csak az eszközöket használó fordulókhoz van szükség. A felso
 1. Nyissa meg a **ChatGPT Web (Codex)** szolgáltatót, és adjon hozzá egy kapcsolatot.
 2. Illessze be a teljes ChatGPT Cookie fejlécet, az alagút azonosítóját, a futtatókörnyezeti kulcsot és az egyéni összekötő
    nevét. Az új, eszközhasználatra képes beállításokhoz újonnan létrehozott, pontosan
-   `67router Codex v2` nevű összekötőt kell használni, amelynél az Authentication értéke None, a Permissions értéke pedig Allow all
+   `OmniRoute Codex v2` nevű összekötőt kell használni, amelynél az Authentication értéke None, a Permissions értéke pedig Allow all
    actions.
 3. Futtassa a kapcsolat ellenőrzését. A 67router megnyit egy böngészőalapú Temporary Chat-beszélgetést, és észleli,
    hogy a Sol és a Pro elérhető-e a fiók számára.
@@ -59,7 +59,7 @@ Ezek bármelyike ugyanúgy hozzáadható egy kombinációhoz, mint bármely más
 
 A Free/Go-fiókok a Luna-útvonalakat teszik elérhetővé. A Sol használatára jogosult fiókok az Instanttól a High-ig terjedő útvonalakat teszik elérhetővé, a Pro használatára jogosult fiókok pedig ezen felül az Extra High és Pro útvonalakat is. Minden útvonalhoz rögzített háttérmodell és következtetési ráfordítás tartozik; az ezzel ütköző, explicit Responses-ráfordítás zárt módon meghiúsul, ahelyett hogy észrevétlenül módosítaná a kiválasztott böngészőmódot.
 
-Ne nevezzen át és ne használjon újra egy régebbi `Codex Native` vagy `67router Codex` összekötőt. A ChatGPT az összekötő identitása alapján gyorsítótárazza a nyilvános MCP-szerződést, míg a frissített híd új, közvetlen fordulótoken-szerződést használ. A futtatókörnyezet elutasítja ezeket a régi identitásokat, és új `67router Codex v2` összekötőt követel meg.
+Ne nevezzen át és ne használjon újra egy régebbi `Codex Native` vagy `OmniRoute Codex` összekötőt. A ChatGPT az összekötő identitása alapján gyorsítótárazza a nyilvános MCP-szerződést, míg a frissített híd új, közvetlen fordulótoken-szerződést használ. A futtatókörnyezet elutasítja ezeket a régi identitásokat, és új `OmniRoute Codex v2` összekötőt követel meg.
 
 ## Biztonsági modell
 

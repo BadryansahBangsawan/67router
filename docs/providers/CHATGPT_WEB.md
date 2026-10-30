@@ -41,7 +41,7 @@ same turn-bound local tool capability when the tunnel and connector are configur
 1. Open the **ChatGPT Web (Codex)** provider and add a connection.
 2. Paste the full ChatGPT Cookie header, tunnel ID, runtime key, and custom connector
    name. New tool-capable setups must use a newly created connector named exactly
-   `67router Codex v2`, with Authentication set to None and Permissions set to Allow all
+   `OmniRoute Codex v2`, with Authentication set to None and Permissions set to Allow all
    actions.
 3. Run the connection check. 67router opens a browser-backed Temporary Chat and detects
    whether Sol and Pro are available for the account.
@@ -79,10 +79,10 @@ High, and Pro-capable accounts additionally expose Extra High and Pro. Each rout
 fixed backend model and reasoning effort; a conflicting explicit Responses effort fails
 closed instead of silently changing the selected browser mode.
 
-Do not rename or reuse an older `Codex Native` or `67router Codex` connector. ChatGPT
+Do not rename or reuse an older `Codex Native` or `OmniRoute Codex` connector. ChatGPT
 caches the public MCP contract by connector identity, while the refreshed bridge uses a
 new direct turn-token contract. The runtime rejects those legacy identities and requires
-a new `67router Codex v2` connector.
+a new `OmniRoute Codex v2` connector.
 
 ## Security model
 

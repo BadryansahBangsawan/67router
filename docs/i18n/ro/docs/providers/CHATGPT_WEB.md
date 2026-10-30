@@ -38,7 +38,7 @@ capabilitate locală pentru instrumente, asociată interacțiunii, atunci când 
 1. Deschideți furnizorul **ChatGPT Web (Codex)** și adăugați o conexiune.
 2. Lipiți antetul Cookie complet pentru ChatGPT, ID-ul tunelului, cheia de execuție și numele
    conectorului personalizat. Configurările noi cu suport pentru instrumente trebuie să utilizeze
-   un conector nou creat, denumit exact `67router Codex v2`, cu Autentificare setată la Niciuna
+   un conector nou creat, denumit exact `OmniRoute Codex v2`, cu Autentificare setată la Niciuna
    și Permisiuni setate la Permite toate acțiunile.
 3. Rulați verificarea conexiunii. 67router deschide un Chat temporar susținut de un browser și
    detectează dacă Sol și Pro sunt disponibile pentru cont.
@@ -78,10 +78,10 @@ High, iar conturile cu acces la Pro expun suplimentar Extra High și Pro. Fiecar
 model backend și un nivel de efort de raționament fixe; un nivel de efort Responses explicit aflat în conflict determină o eroare
 în mod închis, în loc să modifice în tăcere modul de browser selectat.
 
-Nu redenumiți și nu reutilizați un conector mai vechi `Codex Native` sau `67router Codex`. ChatGPT
+Nu redenumiți și nu reutilizați un conector mai vechi `Codex Native` sau `OmniRoute Codex`. ChatGPT
 păstrează în cache contractul MCP public pe baza identității conectorului, în timp ce puntea actualizată utilizează un
 nou contract direct pentru tokenul interacțiunii. Mediul de execuție respinge aceste identități vechi și necesită
-un conector nou `67router Codex v2`.
+un conector nou `OmniRoute Codex v2`.
 
 ## Model de securitate
 

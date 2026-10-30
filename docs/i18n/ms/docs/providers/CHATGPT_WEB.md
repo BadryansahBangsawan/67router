@@ -39,7 +39,7 @@ terowong dan penyambung dikonfigurasikan.
 ## Persediaan papan pemuka
 
 1. Buka penyedia **ChatGPT Web (Codex)** dan tambahkan sambungan.
-2. Tampalkan pengepala Cookie ChatGPT yang lengkap, ID terowong, kunci masa jalan dan nama penyambung tersuai. Persediaan baharu yang menyokong alat mesti menggunakan penyambung yang baru dicipta dengan nama tepat `67router Codex v2`, dengan Authentication ditetapkan kepada None dan Permissions ditetapkan kepada Allow all actions.
+2. Tampalkan pengepala Cookie ChatGPT yang lengkap, ID terowong, kunci masa jalan dan nama penyambung tersuai. Persediaan baharu yang menyokong alat mesti menggunakan penyambung yang baru dicipta dengan nama tepat `OmniRoute Codex v2`, dengan Authentication ditetapkan kepada None dan Permissions ditetapkan kepada Allow all actions.
 3. Jalankan pemeriksaan sambungan. 67router membuka Temporary Chat berasaskan pelayar dan mengesan sama ada Sol dan Pro tersedia untuk akaun tersebut.
 4. Simpan sambungan. 67router menggantikan kuki yang ditampal dengan keadaan storan Playwright yang telah disahkan dan menyimpannya bersama kunci masa jalan melalui abstraksi kelayakan yang disulitkan.
 
@@ -70,10 +70,10 @@ Responses eksplisit yang bercanggah akan terus gagal dan bukannya mengubah mod p
 yang dipilih secara senyap.
 
 Jangan namakan semula atau gunakan semula penyambung `Codex Native` atau
-`67router Codex` yang lebih lama. ChatGPT mencache kontrak MCP awam berdasarkan
+`OmniRoute Codex` yang lebih lama. ChatGPT mencache kontrak MCP awam berdasarkan
 identiti penyambung, manakala jambatan yang dikemas kini menggunakan kontrak token
 giliran langsung yang baharu. Masa jalan menolak identiti legasi tersebut dan
-memerlukan penyambung `67router Codex v2` yang baharu.
+memerlukan penyambung `OmniRoute Codex v2` yang baharu.
 
 ## Model keselamatan
 

@@ -36,7 +36,7 @@ parehong lokal na tool capability na nakatali sa turn kapag naka-configure ang t
 ## Pag-set up ng dashboard
 
 1. Buksan ang provider na **ChatGPT Web (Codex)** at magdagdag ng koneksyon.
-2. I-paste ang buong ChatGPT Cookie header, tunnel ID, runtime key, at pangalan ng custom connector. Ang mga bagong setup na may kakayahang gumamit ng mga tool ay dapat gumamit ng bagong likhang connector na eksaktong pinangalanang `67router Codex v2`, na nakatakda ang Authentication sa None at ang Permissions sa Allow all actions.
+2. I-paste ang buong ChatGPT Cookie header, tunnel ID, runtime key, at pangalan ng custom connector. Ang mga bagong setup na may kakayahang gumamit ng mga tool ay dapat gumamit ng bagong likhang connector na eksaktong pinangalanang `OmniRoute Codex v2`, na nakatakda ang Authentication sa None at ang Permissions sa Allow all actions.
 3. Patakbuhin ang pagsusuri sa koneksyon. Magbubukas ang 67router ng Temporary Chat na sinusuportahan ng browser at tutukuyin kung available ang Sol at Pro para sa account.
 4. I-save ang koneksyon. Papalitan ng 67router ang na-paste na cookie ng napatunayang Playwright storage state at ise-save ito kasama ng runtime key sa pamamagitan ng naka-encrypt na abstraction ng kredensyal.
 
@@ -65,10 +65,10 @@ High, at inilalantad din ng mga account na may kakayahang gumamit ng Pro ang Ext
 nakapirming backend model at reasoning effort; ang sumasalungat na tahasang Responses effort ay ligtas na nabibigo
 sa halip na tahimik na baguhin ang napiling browser mode.
 
-Huwag palitan ang pangalan o muling gamitin ang mas lumang `Codex Native` o `67router Codex` connector. Kino-cache ng ChatGPT
+Huwag palitan ang pangalan o muling gamitin ang mas lumang `Codex Native` o `OmniRoute Codex` connector. Kino-cache ng ChatGPT
 ang pampublikong MCP contract ayon sa pagkakakilanlan ng connector, samantalang gumagamit ang na-refresh na bridge ng isang
 bagong direct turn-token contract. Tinatanggihan ng runtime ang mga legacy identity na iyon at nangangailangan
-ng bagong `67router Codex v2` connector.
+ng bagong `OmniRoute Codex v2` connector.
 
 ## Modelo ng seguridad
 

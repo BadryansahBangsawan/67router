@@ -39,7 +39,7 @@ poveznik konfigurirani.
 ## Postavljanje nadzorne ploče
 
 1. Otvorite pružatelja usluge **ChatGPT Web (Codex)** i dodajte vezu.
-2. Zalijepite cijelo zaglavlje kolačića ChatGPT Cookie, ID tunela, ključ izvođenja i naziv prilagođenog poveznika. Nove postavke koje podržavaju alate moraju upotrebljavati novostvoreni poveznik nazvan točno `67router Codex v2`, pri čemu je Authentication postavljen na None, a Permissions na Allow all actions.
+2. Zalijepite cijelo zaglavlje kolačića ChatGPT Cookie, ID tunela, ključ izvođenja i naziv prilagođenog poveznika. Nove postavke koje podržavaju alate moraju upotrebljavati novostvoreni poveznik nazvan točno `OmniRoute Codex v2`, pri čemu je Authentication postavljen na None, a Permissions na Allow all actions.
 3. Pokrenite provjeru veze. 67router otvara privremeni razgovor Temporary Chat podržan preglednikom i otkriva jesu li Sol i Pro dostupni za račun.
 4. Spremite vezu. 67router zamjenjuje zalijepljeni kolačić provjerenim stanjem pohrane Playwright i pohranjuje ga zajedno s ključem izvođenja putem apstrakcije šifriranih vjerodajnica.
 
@@ -70,9 +70,9 @@ Responsesa zatvoreno se odbija umjesto da se odabrani način preglednika neprimj
 promijeni.
 
 Nemojte preimenovati ni ponovno koristiti stariji poveznik `Codex Native` ili
-`67router Codex`. ChatGPT predmemorira javni MCP ugovor prema identitetu poveznika, dok
+`OmniRoute Codex`. ChatGPT predmemorira javni MCP ugovor prema identitetu poveznika, dok
 osvježeni most koristi novi izravni ugovor tokena interakcije. Okruženje za izvođenje
-odbija te naslijeđene identitete i zahtijeva novi poveznik `67router Codex v2`.
+odbija te naslijeđene identitete i zahtijeva novi poveznik `OmniRoute Codex v2`.
 
 ## Sigurnosni model
 

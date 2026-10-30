@@ -37,7 +37,7 @@ samme interaktionsbundne lokale værktøjsfunktionalitet, når tunnelen og conne
 ## Opsætning af dashboard
 
 1. Åbn udbyderen **ChatGPT Web (Codex)**, og tilføj en forbindelse.
-2. Indsæt den fulde ChatGPT Cookie-header, tunnel-id'et, runtime-nøglen og navnet på den brugerdefinerede connector. Nye opsætninger med værktøjsfunktionalitet skal bruge en nyoprettet connector med det præcise navn `67router Codex v2`, hvor Authentication er indstillet til None, og Permissions er indstillet til Allow all actions.
+2. Indsæt den fulde ChatGPT Cookie-header, tunnel-id'et, runtime-nøglen og navnet på den brugerdefinerede connector. Nye opsætninger med værktøjsfunktionalitet skal bruge en nyoprettet connector med det præcise navn `OmniRoute Codex v2`, hvor Authentication er indstillet til None, og Permissions er indstillet til Allow all actions.
 3. Kør forbindelseskontrollen. 67router åbner en browserbaseret Temporary Chat og registrerer, om Sol og Pro er tilgængelige for kontoen.
 4. Gem forbindelsen. 67router erstatter den indsatte cookie med den verificerede Playwright-lagertilstand og gemmer den sammen med runtime-nøglen via den krypterede abstraktion til legitimationsoplysninger.
 
@@ -66,10 +66,10 @@ High, og konti med Pro-understøttelse giver desuden adgang til Extra High og Pr
 fast backend-model og ræsonneringsindsats; en eksplicit Responses-indsats, der er i konflikt, afvises
 som standard i stedet for stiltiende at ændre den valgte browsertilstand.
 
-Omdøb eller genbrug ikke en ældre `Codex Native`- eller `67router Codex`-connector. ChatGPT
+Omdøb eller genbrug ikke en ældre `Codex Native`- eller `OmniRoute Codex`-connector. ChatGPT
 cachelagrer den offentlige MCP-kontrakt efter connectoridentitet, mens den opdaterede bro bruger en
 ny direkte turn-token-kontrakt. Runtime-miljøet afviser disse ældre identiteter og kræver
-en ny `67router Codex v2`-connector.
+en ny `OmniRoute Codex v2`-connector.
 
 ## Sikkerhedsmodel
 

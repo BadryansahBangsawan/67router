@@ -36,7 +36,7 @@ même capacité d’outil locale liée au tour lorsque le tunnel et le connecteu
 ## Configuration du tableau de bord
 
 1. Ouvrez le fournisseur **ChatGPT Web (Codex)** et ajoutez une connexion.
-2. Collez l’en-tête Cookie complet de ChatGPT, l’identifiant du tunnel, la clé d’exécution et le nom personnalisé du connecteur. Les nouvelles configurations prenant en charge les outils doivent utiliser un connecteur nouvellement créé nommé exactement `67router Codex v2`, avec Authentication défini sur None et Permissions défini sur Allow all actions.
+2. Collez l’en-tête Cookie complet de ChatGPT, l’identifiant du tunnel, la clé d’exécution et le nom personnalisé du connecteur. Les nouvelles configurations prenant en charge les outils doivent utiliser un connecteur nouvellement créé nommé exactement `OmniRoute Codex v2`, avec Authentication défini sur None et Permissions défini sur Allow all actions.
 3. Exécutez la vérification de la connexion. 67router ouvre une conversation temporaire reposant sur un navigateur et détecte si Sol et Pro sont disponibles pour le compte.
 4. Enregistrez la connexion. 67router remplace le cookie collé par l’état de stockage Playwright vérifié et le stocke avec la clé d’exécution au moyen de l’abstraction chiffrée des identifiants.
 
@@ -65,10 +65,10 @@ High, tandis que les comptes compatibles avec Pro donnent également accès à E
 modèle de backend et un niveau d’effort de raisonnement fixes ; un effort Responses explicite incompatible échoue
 de manière fermée au lieu de modifier silencieusement le mode de navigateur sélectionné.
 
-Ne renommez pas et ne réutilisez pas un ancien connecteur `Codex Native` ou `67router Codex`. ChatGPT
+Ne renommez pas et ne réutilisez pas un ancien connecteur `Codex Native` ou `OmniRoute Codex`. ChatGPT
 met en cache le contrat MCP public selon l’identité du connecteur, tandis que la passerelle mise à jour utilise un
 nouveau contrat direct de jeton de tour. L’environnement d’exécution rejette ces identités obsolètes et exige
-un nouveau connecteur `67router Codex v2`.
+un nouveau connecteur `OmniRoute Codex v2`.
 
 ## Modèle de sécurité
 
