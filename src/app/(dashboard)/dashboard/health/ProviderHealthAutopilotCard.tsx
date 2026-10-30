@@ -309,11 +309,13 @@ export default function ProviderHealthAutopilotCard() {
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div>
           <div className="flex items-center gap-3">
-            <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <div className="flex size-8 items-center justify-center rounded-control border border-border bg-surface text-text-muted">
               <Icon name="health_and_safety" size={18} />
             </div>
             <div>
-              <h2 className="text-lg font-semibold text-text-main">{t("title")}</h2>
+              <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main">
+                {t("title")}
+              </h2>
               <p className="text-sm text-text-muted">{t("description")}</p>
             </div>
           </div>
@@ -327,23 +329,23 @@ export default function ProviderHealthAutopilotCard() {
         <div
           className={`rounded-xl border px-3 py-2 ${STATUS_STYLES[report?.status || "healthy"]}`}
         >
-          <p className="text-xs uppercase tracking-wide opacity-80">{t("status")}</p>
+          <p className="text-xs opacity-80">{t("status")}</p>
           <p className="text-lg font-semibold capitalize">
             {t(`state.${report?.status || "loading"}`)}
           </p>
         </div>
         <div className="rounded-xl border border-border bg-bg-subtle px-3 py-2">
-          <p className="text-xs uppercase tracking-wide text-text-muted">{t("issues")}</p>
+          <p className="text-xs text-text-muted">{t("issues")}</p>
           <p className="text-lg font-semibold text-text-main">{report?.summary.issueCount ?? 0}</p>
         </div>
         <div className="rounded-xl border border-border bg-bg-subtle px-3 py-2">
-          <p className="text-xs uppercase tracking-wide text-text-muted">{t("actions")}</p>
+          <p className="text-xs text-text-muted">{t("actions")}</p>
           <p className="text-lg font-semibold text-text-main">
             {report?.summary.actionableCount ?? 0}
           </p>
         </div>
         <div className="rounded-xl border border-border bg-bg-subtle px-3 py-2">
-          <p className="text-xs uppercase tracking-wide text-text-muted">{t("connections")}</p>
+          <p className="text-xs text-text-muted">{t("connections")}</p>
           <p className="text-lg font-semibold text-text-main">
             {report?.summary.connectionCount ?? 0}
           </p>
