@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Kuskure: {message}",
-    "serverOffline": "Sabar OmniRoute ba ta kan layi. Kunna ta da: omniroute serve",
+    "serverOffline": "Sabar 67router ba ta kan layi. Kunna ta da: omniroute serve",
     "authRequired": "Ana buƙatar tantancewa. Saita OMNIROUTE_API_KEY ko gudanar da: omniroute setup",
     "rateLimited": "An wuce iyakar buƙatu. Sake gwadawa bayan {seconds}s.",
     "timeout": "Lokacin buƙata ya ƙare bayan {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Tsallake tambayar tabbatarwa"
   },
   "setup": {
-    "title": "Saitin OmniRoute",
+    "title": "Saitin 67router",
     "passwordPrompt": "Kalmar sirrin mai gudanarwa",
     "providerPrompt": "Mai bayarwa na asali (bar shi babu komai don tsallakewa)",
     "done": "An kammala saiti",
@@ -30,7 +30,7 @@
     "opencode": "Shigar da kuma saita @omniroute/opencode-plugin da aka haɗa don OpenCode"
   },
   "doctor": {
-    "title": "Mai Binciken OmniRoute",
+    "title": "Mai Binciken 67router",
     "dbOk": "Ma'ajiyar bayanai: Lafiya ({path})",
     "dbMissing": "Ma'ajiyar bayanai: ba a fara ta ba — gudanar da `omniroute setup`",
     "portOk": "Tashar {port}: tana samuwa",
@@ -82,7 +82,7 @@
       "providerOpt": "Tace ta sunan mai samarwa",
       "header": "ID         Mai samarwa    Suna                     Matsayin ƙarewa  Matsayin gwaji  Dakatawa har zuwa",
       "noData": "Babu bayanan haɗin mai samarwa da ake da su.",
-      "requiresServer": "providers status yana buƙatar sabar OmniRoute ta kasance tana aiki."
+      "requiresServer": "providers status yana buƙatar sabar 67router ta kasance tana aiki."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Ƙara ko sabunta maɓallin API na mai samarwa",
     "listDescription": "Jera duk maɓallan API da aka saita",
     "removeDescription": "Cire maɓallin API na mai samarwa",
-    "regenerateDescription": "Sake samar da maɓallin API na OmniRoute",
-    "revokeDescription": "Soke maɓallin API na OmniRoute",
+    "regenerateDescription": "Sake samar da maɓallin API na 67router",
+    "revokeDescription": "Soke maɓallin API na 67router",
     "revealDescription": "Bayyana ƙimar maɓallin API da aka ɓoye",
     "usageDescription": "Nuna amfanin baya-bayan nan na maɓallin API",
     "usageLimitOpt": "Adadin buƙatun baya-bayan nan",
@@ -225,7 +225,7 @@
     "noCombo": "Ba a sami combo mai dacewa ba. Saita ɗaya da: omniroute combo create"
   },
   "chat": {
-    "description": "Aika saƙon tattaunawa na sau ɗaya zuwa OmniRoute",
+    "description": "Aika saƙon tattaunawa na sau ɗaya zuwa 67router",
     "file": "Karanta saƙon umarni daga fayil",
     "stdin": "Karanta saƙon umarni daga stdin",
     "system": "Saƙon umarnin tsarin",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Kaddamar da uwar garken OmniRoute (aikin tsoho)",
-    "starting": "Ana kaddamar da uwar garken OmniRoute a tashar {port}...",
+    "description": "Kaddamar da uwar garken 67router (aikin tsoho)",
+    "starting": "Ana kaddamar da uwar garken 67router a tashar {port}...",
     "ready": "A shirye yake a http://localhost:{port}",
     "stopping": "Ana dakatar da uwar garke (PID {pid})...",
     "stopped": "An dakatar da uwar garke.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Ajiyar madadin",
-    "description": "Ƙirƙiri ajiyar madadin bayanan OmniRoute",
+    "description": "Ƙirƙiri ajiyar madadin bayanan 67router",
     "creating": "Ana ƙirƙirar ajiyar madadin...",
     "done": "An adana ajiyar madadin zuwa {path}",
     "noFiles": "Babu fayilolin da za a yi wa ajiyar madadin (ba a fara amfani da ma'ajiyar bayanai ba)",
@@ -277,7 +277,7 @@
     "noBackups": "Ba a sami ajiyoyin madadin ba.",
     "notFound": "Ba a sami ajiyar madadin ba: {name}",
     "confirmRestore": "A rubuta a kan bayanan yanzu da ajiyar madadin daga {ts}?",
-    "createDescription": "Ƙirƙiri ajiyar madadin bayanan OmniRoute",
+    "createDescription": "Ƙirƙiri ajiyar madadin bayanan 67router",
     "nameOpt": "Sunan ajiyar madadin na musamman",
     "cloudOpt": "Loda ajiyar madadin zuwa ma'ajiyar girgije",
     "encryptOpt": "Rufaffen ajiyar madadin da AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "An kasa share ma'ajiyar."
   },
   "redis": {
-    "description": "Ƙaddamar da kwantenar Redis na cikin gida da dannawa 1 (Podman ko Docker) don ma'ajiyar OmniRoute da bin diddigin ƙa'idar adadi"
+    "description": "Ƙaddamar da kwantenar Redis na cikin gida da dannawa 1 (Podman ko Docker) don ma'ajiyar 67router da bin diddigin ƙa'idar adadi"
   },
   "test": {
     "description": "Gwada haɗin mai samarwa",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Sarrafa manufofin ba da izini na OmniRoute",
+    "description": "Sarrafa manufofin ba da izini na 67router",
     "list": {
       "description": "Jera manufofi",
       "kind": "Tace bisa nau'i (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Saita kuma bincika tsarin matse bayanai na OmniRoute",
+    "description": "Saita kuma bincika tsarin matse bayanai na 67router",
     "status": {
       "description": "Nuna halin matse bayanai da saitunan yanzu"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "A sauya tunnel {type}? (za a samar da sabon URL)"
   },
   "stop": {
-    "description": "Dakatar da sabar OmniRoute",
+    "description": "Dakatar da sabar 67router",
     "stopping": "Ana dakatar da sabar (PID {pid})...",
     "stopped": "An dakatar da sabar.",
     "notRunning": "Babu sabar da ke aiki.",
     "portFallback": "Ba a sami fayil ɗin PID ba, ana ƙoƙarin dakatarwa ta hanyar port..."
   },
   "restart": {
-    "description": "Sake kunna sabar OmniRoute",
-    "restarting": "Ana sake kunna sabar OmniRoute..."
+    "description": "Sake kunna sabar 67router",
+    "restarting": "Ana sake kunna sabar 67router..."
   },
   "dashboard": {
-    "description": "Buɗe dashboard na OmniRoute a cikin burauza",
+    "description": "Buɗe dashboard na 67router a cikin burauza",
     "opening": "Ana buɗe dashboard a {url}",
     "urlOnly": "Buga URL na dashboard ba tare da buɗe burauza ba",
     "tui": "Buɗe dashboard na TUI mai hulɗa (UI na tasha, shafuka 7)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Sarrafa ƙwarewar OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Sarrafa ƙwarewar 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Jera ƙwarewar da aka girka",
       "type": "Tace ta nau’i (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Sarrafa ma'ajiyar tattaunawar OmniRoute (FTS5 + vector)",
+    "description": "Sarrafa ma'ajiyar tattaunawar 67router (FTS5 + vector)",
     "search": {
       "description": "Nemo shigarwar ma'ajiya ta tambayar ma'ana",
       "type": "Tace ta nau'in ma'ajiya (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Sarrafa webhooks na OmniRoute",
+    "description": "Sarrafa webhooks na 67router",
     "events": {
       "description": "Jera duk nau'ikan abubuwan da suka faru na webhook da ake da su"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Mai Zabar Hanyar AI Mai Wayo tare da Komawar Kai-tsaye",
+    "description": "67router — Mai Zabar Hanyar AI Mai Wayo tare da Komawar Kai-tsaye",
     "version": "Buga sigar sannan a fita",
     "output": "Tsarin fitarwa (table, json, jsonl, csv)",
     "quiet": "Ɗakile fitarwar da ba ta da muhimmanci",
     "no_color": "Kashe fitarwa mai launuka",
     "timeout": "Wa'adin buƙatar HTTP a cikin milisakan",
-    "api_key": "Maɓallin API na sabar OmniRoute",
-    "base_url": "URL na asalin sabar OmniRoute",
+    "api_key": "Maɓallin API na sabar 67router",
+    "base_url": "URL na asalin sabar 67router",
     "context": "Mahallin/fayil ɗin saitin sabar da za a yi amfani da shi don wannan umarni",
     "lang": "Saita harshen nunawar CLI (yana maye gurbin OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Samun dama da gwada ƙayyadaddun OmniRoute OpenAPI",
+    "description": "Samun dama da gwada ƙayyadaddun 67router OpenAPI",
     "dump": {
       "description": "Fitar da ƙayyadaddun OpenAPI zuwa stdout ko fayil",
       "format": "Tsarin fitarwa: yaml|json (tsoho: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Buɗe takamaiman shafin dashboard na OmniRoute a cikin burauza",
+    "description": "Buɗe takamaiman shafin dashboard na 67router a cikin burauza",
     "url": "Buga URL kawai, kada a buɗe burauza"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Daidaita saituna tsakanin instances na OmniRoute",
+    "description": "Daidaita saituna tsakanin instances na 67router",
     "push": {
       "description": "Tura saituna zuwa cloud ko remote instance"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Tace ta mataki (error,warn,info) — waƙafi ya raba su",
     "lines": "Adadin layukan da za a ɗauko",
     "timeout": "Lokacin ƙarewar haɗi a ms",
-    "baseUrl": "Tushen URL na OmniRoute API",
+    "baseUrl": "Tushen URL na 67router API",
     "requestId": "Tace ta ID na buƙata",
     "apiKey": "Tace ta maɓallin API",
     "combo": "Tace ta sunan combo",
@@ -1244,10 +1244,10 @@
     "description": "Sarrafa alamar tiren tsarin",
     "show": "Nuna alamar tire (idan uwar garken na gudana da --tray)",
     "hide": "Ɓoye alamar tire",
-    "quit": "Rufe OmniRoute ta tire"
+    "quit": "Rufe 67router ta tire"
   },
   "autostart": {
-    "description": "Sarrafa farawa ta atomatik na OmniRoute yayin boot (Linux: sabis ɗin mai amfani na systemd)",
+    "description": "Sarrafa farawa ta atomatik na 67router yayin boot (Linux: sabis ɗin mai amfani na systemd)",
     "enable": "Kunna farawa ta atomatik yayin boot",
     "disable": "Kashe farawa ta atomatik yayin boot",
     "toggle": "Sauya yanayin farawa ta atomatik yayin boot",
@@ -1279,19 +1279,19 @@
     "scaffold": "Ƙirƙiri samfurin farko na sabon plugin"
   },
   "launch": {
-    "description": "Ƙaddamar da Claude Code da aka nuna masa OmniRoute (na gida ko na nesa, tare da --profile)",
+    "description": "Ƙaddamar da Claude Code da aka nuna masa 67router (na gida ko na nesa, tare da --profile)",
     "token": "Token da ya kamata abokin cinikin Claude ya aika (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "Ba a iya isa ga OmniRoute a {port}. Fara shi da 'omniroute serve'.",
+    "notRunning": "Ba a iya isa ga 67router a {port}. Fara shi da 'omniroute serve'.",
     "notFound": "Ba a sami CLI na 'claude' a PATH ba."
   },
   "run": {
-    "description": "Ƙaddamar da manufa ta CLI mai goyan baya ta hanyar OmniRoute"
+    "description": "Ƙaddamar da manufa ta CLI mai goyan baya ta hanyar 67router"
   },
   "setupClaude": {
-    "description": "Samar da bayanan martabar Claude Code na ~/.claude/profiles daga kundin samfuran OmniRoute"
+    "description": "Samar da bayanan martabar Claude Code na ~/.claude/profiles daga kundin samfuran 67router"
   },
   "connect": {
-    "description": "Haɗa zuwa sabar OmniRoute ta nesa kuma shiga yanayin nesa"
+    "description": "Haɗa zuwa sabar 67router ta nesa kuma shiga yanayin nesa"
   },
   "tokens": {
     "description": "Sarrafa alamomin samun damar CLI masu iyakantaccen izini (yanayin nesa)"
@@ -1300,10 +1300,10 @@
     "description": "Zaɓi mai samarwa+samfuri daga sabar da ke aiki sannan saita CLI na gida mai goyan baya"
   },
   "launchCodex": {
-    "description": "Ƙaddamar da Codex CLI da aka nuna masa OmniRoute (na gida ko VPS na nesa)"
+    "description": "Ƙaddamar da Codex CLI da aka nuna masa 67router (na gida ko VPS na nesa)"
   },
   "setupCodex": {
-    "description": "Samar da fayilolin bayanan martabar ~/.codex daga kundin samfuran OmniRoute kai tsaye"
+    "description": "Samar da fayilolin bayanan martabar ~/.codex daga kundin samfuran 67router kai tsaye"
   },
   "packs": {
     "description": "Sarrafa fakitin runtime na zaɓi (ML / sarrafa burauza ta atomatik)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "fakitin da ba a sani ba: {name}",
     "errNoIndex": "ba a sami fihirisar fakiti ba; saka --source <dir> mai ɗauke da abubuwan fakitin (kunshin manhajar tebur na kawo shi kusa da manhajar)",
     "installed": "an shigar da fakitin \"{name}\" kuma an tabbatar da shi a {dir}",
-    "restartHint": "sake kunna sabar OmniRoute (ko manhajar tebur) domin runtime ya ɗauki fakitin",
+    "restartHint": "sake kunna sabar 67router (ko manhajar tebur) domin runtime ya ɗauki fakitin",
     "removed": "an cire fakitin \"{name}\"",
     "notInstalled": "ba a shigar da fakitin \"{name}\" ba",
     "verifyOk": "an tabbatar da duk fakitin da aka shigar",

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Ralat: {message}",
-    "serverOffline": "Pelayan OmniRoute di luar talian. Mulakannya dengan: omniroute serve",
+    "serverOffline": "Pelayan 67router di luar talian. Mulakannya dengan: omniroute serve",
     "authRequired": "Pengesahan diperlukan. Tetapkan OMNIROUTE_API_KEY atau jalankan: omniroute setup",
     "rateLimited": "Had kadar telah dilebihi. Cuba semula selepas {seconds}s.",
     "timeout": "Permintaan tamat masa selepas {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Langkau gesaan pengesahan"
   },
   "setup": {
-    "title": "Persediaan OmniRoute",
+    "title": "Persediaan 67router",
     "passwordPrompt": "Kata laluan pentadbir",
     "providerPrompt": "Penyedia lalai (biarkan kosong untuk langkau)",
     "done": "Persediaan selesai",
@@ -30,7 +30,7 @@
     "opencode": "Pasang dan konfigurasikan @omniroute/opencode-plugin terbina dalam untuk OpenCode"
   },
   "doctor": {
-    "title": "Diagnostik OmniRoute",
+    "title": "Diagnostik 67router",
     "dbOk": "Pangkalan data: OK ({path})",
     "dbMissing": "Pangkalan data: belum dimulakan — jalankan `omniroute setup`",
     "portOk": "Port {port}: tersedia",
@@ -82,7 +82,7 @@
       "providerOpt": "Tapis mengikut nama penyedia",
       "header": "ID         Penyedia       Nama                     Status Tamat Tempoh  Status Ujian  Tempoh Bertenang Hingga",
       "noData": "Tiada data sambungan penyedia tersedia.",
-      "requiresServer": "providers status memerlukan pelayan OmniRoute sedang berjalan."
+      "requiresServer": "providers status memerlukan pelayan 67router sedang berjalan."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Tambah atau kemas kini kunci API untuk penyedia",
     "listDescription": "Senaraikan semua kunci API yang dikonfigurasikan",
     "removeDescription": "Alih keluar kunci API untuk penyedia",
-    "regenerateDescription": "Jana semula kunci API OmniRoute",
-    "revokeDescription": "Batalkan kunci API OmniRoute",
+    "regenerateDescription": "Jana semula kunci API 67router",
+    "revokeDescription": "Batalkan kunci API 67router",
     "revealDescription": "Dedahkan nilai kunci API yang tidak disamarkan",
     "usageDescription": "Tunjukkan penggunaan terkini untuk kunci API",
     "usageLimitOpt": "Bilangan permintaan terkini",
@@ -225,7 +225,7 @@
     "noCombo": "Tiada combo yang sepadan ditemui. Konfigurasikan satu dengan: omniroute combo create"
   },
   "chat": {
-    "description": "Hantar gesaan sembang sekali sahaja kepada OmniRoute",
+    "description": "Hantar gesaan sembang sekali sahaja kepada 67router",
     "file": "Baca gesaan daripada fail",
     "stdin": "Baca gesaan daripada stdin",
     "system": "Gesaan sistem",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Mulakan pelayan OmniRoute (tindakan lalai)",
-    "starting": "Memulakan pelayan OmniRoute pada port {port}...",
+    "description": "Mulakan pelayan 67router (tindakan lalai)",
+    "starting": "Memulakan pelayan 67router pada port {port}...",
     "ready": "Sedia di http://localhost:{port}",
     "stopping": "Menghentikan pelayan (PID {pid})...",
     "stopped": "Pelayan dihentikan.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Sandaran",
-    "description": "Cipta sandaran data OmniRoute",
+    "description": "Cipta sandaran data 67router",
     "creating": "Mencipta sandaran...",
     "done": "Sandaran disimpan ke {path}",
     "noFiles": "Tiada fail untuk disandarkan (pangkalan data belum dimulakan)",
@@ -277,7 +277,7 @@
     "noBackups": "Tiada sandaran ditemukan.",
     "notFound": "Sandaran tidak ditemukan: {name}",
     "confirmRestore": "Tulis ganti data semasa dengan sandaran daripada {ts}?",
-    "createDescription": "Cipta sandaran data OmniRoute",
+    "createDescription": "Cipta sandaran data 67router",
     "nameOpt": "Nama sandaran tersuai",
     "cloudOpt": "Muat naik sandaran ke storan awan",
     "encryptOpt": "Sulitkan sandaran dengan AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Gagal mengosongkan cache."
   },
   "redis": {
-    "description": "Lancarkan kontena Redis tempatan dengan satu klik (Podman atau Docker) untuk caching dan penjejakan kuota OmniRoute"
+    "description": "Lancarkan kontena Redis tempatan dengan satu klik (Podman atau Docker) untuk caching dan penjejakan kuota 67router"
   },
   "test": {
     "description": "Uji sambungan penyedia",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Urus dasar kebenaran OmniRoute",
+    "description": "Urus dasar kebenaran 67router",
     "list": {
       "description": "Senaraikan dasar",
       "kind": "Tapis mengikut jenis (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurasikan dan periksa saluran pemampatan OmniRoute",
+    "description": "Konfigurasikan dan periksa saluran pemampatan 67router",
     "status": {
       "description": "Tunjukkan status dan tetapan pemampatan semasa"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Tukar URL terowong {type}? (URL baharu akan dijana)"
   },
   "stop": {
-    "description": "Hentikan pelayan OmniRoute",
+    "description": "Hentikan pelayan 67router",
     "stopping": "Sedang menghentikan pelayan (PID {pid})...",
     "stopped": "Pelayan dihentikan.",
     "notRunning": "Tiada pelayan sedang berjalan.",
     "portFallback": "Tiada fail PID ditemukan, cuba menghentikan berdasarkan port..."
   },
   "restart": {
-    "description": "Mulakan semula pelayan OmniRoute",
-    "restarting": "Sedang memulakan semula pelayan OmniRoute..."
+    "description": "Mulakan semula pelayan 67router",
+    "restarting": "Sedang memulakan semula pelayan 67router..."
   },
   "dashboard": {
-    "description": "Buka papan pemuka OmniRoute dalam pelayar",
+    "description": "Buka papan pemuka 67router dalam pelayar",
     "opening": "Sedang membuka papan pemuka di {url}",
     "urlOnly": "Paparkan URL papan pemuka tanpa membuka pelayar",
     "tui": "Buka papan pemuka TUI interaktif (UI terminal, 7 tab)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Urus kemahiran OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Urus kemahiran 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Senaraikan kemahiran yang dipasang",
       "type": "Tapis mengikut jenis (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Urus memori perbualan OmniRoute (FTS5 + vector)",
+    "description": "Urus memori perbualan 67router (FTS5 + vector)",
     "search": {
       "description": "Cari entri memori menggunakan pertanyaan semantik",
       "type": "Tapis mengikut jenis memori (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Urus webhook OmniRoute",
+    "description": "Urus webhook 67router",
     "events": {
       "description": "Senaraikan semua jenis peristiwa webhook yang tersedia"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Penghala AI Pintar dengan Sandaran Automatik",
+    "description": "67router — Penghala AI Pintar dengan Sandaran Automatik",
     "version": "Paparkan versi dan keluar",
     "output": "Format output (table, json, jsonl, csv)",
     "quiet": "Sembunyikan output yang tidak penting",
     "no_color": "Nyahdayakan output berwarna",
     "timeout": "Had masa permintaan HTTP dalam milisaat",
-    "api_key": "Kunci API untuk pelayan OmniRoute",
-    "base_url": "URL asas pelayan OmniRoute",
+    "api_key": "Kunci API untuk pelayan 67router",
+    "base_url": "URL asas pelayan 67router",
     "context": "Konteks/profil pelayan untuk digunakan bagi perintah ini",
     "lang": "Tetapkan bahasa paparan CLI (mengatasi OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Akses dan uji spesifikasi OpenAPI OmniRoute",
+    "description": "Akses dan uji spesifikasi OpenAPI 67router",
     "dump": {
       "description": "Eksport spesifikasi OpenAPI ke stdout atau fail",
       "format": "Format output: yaml|json (lalai: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Buka halaman papan pemuka OmniRoute tertentu dalam pelayar",
+    "description": "Buka halaman papan pemuka 67router tertentu dalam pelayar",
     "url": "Cetak URL sahaja, jangan buka pelayar"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Segerakkan konfigurasi antara tika OmniRoute",
+    "description": "Segerakkan konfigurasi antara tika 67router",
     "push": {
       "description": "Tolak konfigurasi ke awan atau tika jauh"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Tapis mengikut tahap (error,warn,info) — dipisahkan dengan koma",
     "lines": "Bilangan baris untuk diambil",
     "timeout": "Tamat masa sambungan dalam ms",
-    "baseUrl": "URL asas API OmniRoute",
+    "baseUrl": "URL asas API 67router",
     "requestId": "Tapis mengikut ID permintaan",
     "apiKey": "Tapis mengikut kunci API",
     "combo": "Tapis mengikut nama kombo",
@@ -1244,10 +1244,10 @@
     "description": "Kawal ikon dulang sistem",
     "show": "Tunjukkan ikon dulang (jika pelayan sedang berjalan dengan --tray)",
     "hide": "Sembunyikan ikon dulang",
-    "quit": "Keluar daripada OmniRoute melalui dulang"
+    "quit": "Keluar daripada 67router melalui dulang"
   },
   "autostart": {
-    "description": "Urus mula automatik OmniRoute semasa but (Linux: perkhidmatan pengguna systemd)",
+    "description": "Urus mula automatik 67router semasa but (Linux: perkhidmatan pengguna systemd)",
     "enable": "Dayakan mula automatik semasa but",
     "disable": "Lumpuhkan mula automatik semasa but",
     "toggle": "Togol mula automatik semasa but",
@@ -1279,19 +1279,19 @@
     "scaffold": "Jana rangka asas pemalam baharu"
   },
   "launch": {
-    "description": "Lancarkan Claude Code yang diarahkan ke OmniRoute (setempat atau jauh, dengan --profile)",
+    "description": "Lancarkan Claude Code yang diarahkan ke 67router (setempat atau jauh, dengan --profile)",
     "token": "Token yang perlu dihantar oleh klien Claude (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute tidak dapat dicapai pada {port}. Mulakannya dengan 'omniroute serve'.",
+    "notRunning": "67router tidak dapat dicapai pada {port}. Mulakannya dengan 'omniroute serve'.",
     "notFound": "CLI 'claude' tidak ditemukan dalam PATH."
   },
   "run": {
-    "description": "Lancarkan sasaran CLI yang disokong melalui OmniRoute"
+    "description": "Lancarkan sasaran CLI yang disokong melalui 67router"
   },
   "setupClaude": {
-    "description": "Jana profil Claude Code ~/.claude/profiles daripada katalog model OmniRoute"
+    "description": "Jana profil Claude Code ~/.claude/profiles daripada katalog model 67router"
   },
   "connect": {
-    "description": "Sambung ke pelayan OmniRoute jauh dan masuk ke mod jauh"
+    "description": "Sambung ke pelayan 67router jauh dan masuk ke mod jauh"
   },
   "tokens": {
     "description": "Urus token akses CLI berskop (mod jauh)"
@@ -1300,10 +1300,10 @@
     "description": "Pilih penyedia+model daripada pelayan aktif dan konfigurasikan CLI setempat yang disokong"
   },
   "launchCodex": {
-    "description": "Lancarkan Codex CLI yang diarahkan ke OmniRoute (VPS setempat atau jauh)"
+    "description": "Lancarkan Codex CLI yang diarahkan ke 67router (VPS setempat atau jauh)"
   },
   "setupCodex": {
-    "description": "Jana fail profil ~/.codex daripada katalog model langsung OmniRoute"
+    "description": "Jana fail profil ~/.codex daripada katalog model langsung 67router"
   },
   "packs": {
     "description": "Urus pek masa jalan pilihan (ML / automasi pelayar)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "pek tidak diketahui: {name}",
     "errNoIndex": "indeks pek tidak ditemukan; berikan --source <dir> yang mengandungi muatan pek (berkas desktop menyertakannya bersebelahan dengan aplikasi)",
     "installed": "pek \"{name}\" dipasang dan disahkan di {dir}",
-    "restartHint": "mulakan semula pelayan OmniRoute (atau aplikasi desktop) supaya masa jalan mengesan pek tersebut",
+    "restartHint": "mulakan semula pelayan 67router (atau aplikasi desktop) supaya masa jalan mengesan pek tersebut",
     "removed": "pek \"{name}\" dialih keluar",
     "notInstalled": "pek \"{name}\" tidak dipasang",
     "verifyOk": "semua pek yang dipasang telah disahkan",

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Greška: {message}",
-    "serverOffline": "OmniRoute server nije dostupan. Pokrenite ga komandom: omniroute serve",
+    "serverOffline": "67router server nije dostupan. Pokrenite ga komandom: omniroute serve",
     "authRequired": "Potrebna je autentifikacija. Postavite OMNIROUTE_API_KEY ili pokrenite: omniroute setup",
     "rateLimited": "Limit zahtjeva je premašen. Pokušajte ponovo za {seconds}s.",
     "timeout": "Zahtjev je istekao nakon {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Preskoči potvrdu"
   },
   "setup": {
-    "title": "OmniRoute Setup",
+    "title": "67router Setup",
     "passwordPrompt": "Admin lozinka",
     "providerPrompt": "Podrazumijevani pružalac (ostavite prazno da preskočite)",
     "done": "Postavka završena",
@@ -30,7 +30,7 @@
     "opencode": "Instalirajte i konfigurišite priloženi @omniroute/opencode-plugin za OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute Doctor",
+    "title": "67router Doctor",
     "dbOk": "Baza podataka: OK ({path})",
     "dbMissing": "Baza podataka: nije inicijalizovana — pokrenite `omniroute setup`",
     "portOk": "Port {port}: dostupan",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtriraj po imenu provajdera",
       "header": "ID Naziv provajdera Istek status Status testa Hlađenje do",
       "noData": "Nema dostupnih podataka o povezivanju provajdera.",
-      "requiresServer": "status pružalaca zahtijeva da OmniRoute server bude pokrenut."
+      "requiresServer": "status pružalaca zahtijeva da 67router server bude pokrenut."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Dodajte ili ažurirajte API ključ za provajdera",
     "listDescription": "Izlistaj sve konfigurirane API ključeve",
     "removeDescription": "Ukloni API ključ za pružaoca",
-    "regenerateDescription": "Ponovo generišite OmniRoute API ključ",
-    "revokeDescription": "Opozovite OmniRoute API ključ",
+    "regenerateDescription": "Ponovo generišite 67router API ključ",
+    "revokeDescription": "Opozovite 67router API ključ",
     "revealDescription": "Otkrij maskiranu vrijednost API ključa",
     "usageDescription": "Prikaži nedavno korištenje za API ključ",
     "usageLimitOpt": "Broj nedavnih zahtjeva",
@@ -225,7 +225,7 @@
     "noCombo": "Nije pronađena odgovarajuća kombinacija. Konfigurišite jednu pomoću: omniroute combo create"
   },
   "chat": {
-    "description": "Pošaljite one-shot chat prompt u OmniRoute",
+    "description": "Pošaljite one-shot chat prompt u 67router",
     "file": "Pročitaj prompt iz datoteke",
     "stdin": "Pročitaj prompt sa stdin-a",
     "system": "Sistemski prompt",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Pokreni OmniRoute server (podrazumijevana radnja)",
-    "starting": "Pokretanje OmniRoute servera na portu {port}...",
+    "description": "Pokreni 67router server (podrazumijevana radnja)",
+    "starting": "Pokretanje 67router servera na portu {port}...",
     "ready": "Spreman na http://localhost:{port}",
     "stopping": "Zaustavljanje servera (PID {pid})...",
     "stopped": "Server je zaustavljen.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Rezervna kopija",
-    "description": "Kreirajte rezervnu kopiju OmniRoute podataka",
+    "description": "Kreirajte rezervnu kopiju 67router podataka",
     "creating": "Kreiranje rezervne kopije...",
     "done": "Rezervna kopija je sačuvana na {path}",
     "noFiles": "Nema datoteka za sigurnosnu kopiju (baza podataka nije inicijalizovana)",
@@ -277,7 +277,7 @@
     "noBackups": "Nema pronađenih rezervnih kopija.",
     "notFound": "Rezervna kopija nije pronađena: {name}",
     "confirmRestore": "Prepišite trenutne podatke rezervnom kopijom iz {ts}?",
-    "createDescription": "Kreirajte rezervnu kopiju OmniRoute podataka",
+    "createDescription": "Kreirajte rezervnu kopiju 67router podataka",
     "nameOpt": "Prilagođeno ime sigurnosne kopije",
     "cloudOpt": "Otpremite rezervnu kopiju na cloud pohranu",
     "encryptOpt": "Šifruj rezervnu kopiju pomoću AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Brisanje predmemorije nije uspjelo."
   },
   "redis": {
-    "description": "Pokrenite lokalni Redis kontejner jednim klikom (Podman ili Docker) za OmniRoute keširanje i praćenje kvota"
+    "description": "Pokrenite lokalni Redis kontejner jednim klikom (Podman ili Docker) za 67router keširanje i praćenje kvota"
   },
   "test": {
     "description": "Testiraj vezu provajdera",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Upravljajte polisama autorizacije OmniRoute-a",
+    "description": "Upravljajte polisama autorizacije 67router-a",
     "list": {
       "description": "Izlistaj polise",
       "kind": "Filtriraj po vrsti (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurišite i pregledajte OmniRoute cjevovod kompresije",
+    "description": "Konfigurišite i pregledajte 67router cjevovod kompresije",
     "status": {
       "description": "Prikaži trenutni status i postavke kompresije"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Rotiraj tunel {type}? (biće generisan novi URL)"
   },
   "stop": {
-    "description": "Zaustavite OmniRoute server",
+    "description": "Zaustavite 67router server",
     "stopping": "Zaustavljanje servera (PID {pid})...",
     "stopped": "Server je zaustavljen.",
     "notRunning": "Nijedan server nije pokrenut.",
     "portFallback": "Nije pronađen PID fajl, pokušaj zaustavljanja putem porta..."
   },
   "restart": {
-    "description": "Ponovo pokreni OmniRoute server",
-    "restarting": "Ponovno pokretanje OmniRoute servera..."
+    "description": "Ponovo pokreni 67router server",
+    "restarting": "Ponovno pokretanje 67router servera..."
   },
   "dashboard": {
-    "description": "Otvorite OmniRoute kontrolnu tablu u pregledniku",
+    "description": "Otvorite 67router kontrolnu tablu u pregledniku",
     "opening": "Otvaranje kontrolne table na {url}",
     "urlOnly": "Ispiši URL kontrolne table bez otvaranja pretraživača",
     "tui": "Otvori interaktivnu TUI kontrolnu tablu (terminal UI, 7 kartica)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Upravljajte OmniRoute vještinama (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Upravljajte 67router vještinama (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Izlistaj instalirane vještine",
       "type": "Filtriraj po tipu (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Upravljajte konverzacijskom memorijom OmniRoute-a (FTS5 + vektor)",
+    "description": "Upravljajte konverzacijskom memorijom 67router-a (FTS5 + vektor)",
     "search": {
       "description": "Pretražite unose u memoriji putem semantičkog upita",
       "type": "Filtriraj po tipu memorije (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Upravljajte OmniRoute webhookovima",
+    "description": "Upravljajte 67router webhookovima",
     "events": {
       "description": "Izlistaj sve dostupne tipove webhook događaja"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Pametni AI ruter sa automatskim fallback-om",
+    "description": "67router — Pametni AI ruter sa automatskim fallback-om",
     "version": "Ispiši verziju i izađi",
     "output": "Format izlaza (table, json, jsonl, csv)",
     "quiet": "Potisni nebitne izlaze",
     "no_color": "Onemogući obojeni izlaz",
     "timeout": "Timeout HTTP zahtjeva u milisekundama",
-    "api_key": "API ključ za OmniRoute server",
-    "base_url": "Bazni URL OmniRoute servera",
+    "api_key": "API ključ za 67router server",
+    "base_url": "Bazni URL 67router servera",
     "context": "Server kontekst/profil koji će se koristiti za ovu komandu",
     "lang": "Postavi jezik prikaza CLI-ja (nadjačava OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Pristupite i testirajte OmniRoute OpenAPI specifikaciju",
+    "description": "Pristupite i testirajte 67router OpenAPI specifikaciju",
     "dump": {
       "description": "Izvezi OpenAPI specifikaciju u stdout ili datoteku",
       "format": "Format izlaza: yaml|json (podrazumijevano: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Otvorite određenu stranicu OmniRoute kontrolne table u pregledniku",
+    "description": "Otvorite određenu stranicu 67router kontrolne table u pregledniku",
     "url": "Ispiši samo URL, nemoj otvarati preglednik"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Sinkronizuj konfiguraciju između OmniRoute instanci",
+    "description": "Sinkronizuj konfiguraciju između 67router instanci",
     "push": {
       "description": "Pošalji konfiguraciju u cloud ili na udaljenu instancu"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Filtriraj po nivou (error,warn,info) — razdvojeno zarezom",
     "lines": "Broj linija za preuzimanje",
     "timeout": "Vrijeme isteka veze u ms",
-    "baseUrl": "OmniRoute API osnovni URL",
+    "baseUrl": "67router API osnovni URL",
     "requestId": "Filtriraj po ID-u zahtjeva",
     "apiKey": "Filtriraj prema API ključu",
     "combo": "Filtriraj prema nazivu kombinacije",
@@ -1244,10 +1244,10 @@
     "description": "Kontrolišite ikonu sistemskog okvira",
     "show": "Prikaži ikonu u sistemskom tray-u (ako server radi sa --tray)",
     "hide": "Sakrij ikonu u sistemskom području",
-    "quit": "Isključi OmniRoute putem sistemske ikonice"
+    "quit": "Isključi 67router putem sistemske ikonice"
   },
   "autostart": {
-    "description": "Upravljajte automatskim pokretanjem OmniRoute pri bootovanju (Linux: systemd korisnička usluga)",
+    "description": "Upravljajte automatskim pokretanjem 67router pri bootovanju (Linux: systemd korisnička usluga)",
     "enable": "Omogući automatsko pokretanje pri podizanju sistema",
     "disable": "Onemogući automatsko pokretanje pri podizanju sistema",
     "toggle": "Uključi/isključi automatsko pokretanje pri podizanju sistema",
@@ -1279,19 +1279,19 @@
     "scaffold": "Generiši novi boilerplate za dodatak"
   },
   "launch": {
-    "description": "Pokrenite Claude Code usmjeren na OmniRoute (lokalno ili udaljeno, pomoću --profile)",
+    "description": "Pokrenite Claude Code usmjeren na 67router (lokalno ili udaljeno, pomoću --profile)",
     "token": "Token koji Claude klijent treba poslati (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute nije dostupan na {port}. Pokrenite ga pomoću 'omniroute serve'.",
+    "notRunning": "67router nije dostupan na {port}. Pokrenite ga pomoću 'omniroute serve'.",
     "notFound": "'claude' CLI nije pronađen u PATH-u."
   },
   "run": {
-    "description": "Pokrenite podržanu CLI metu putem OmniRoute-a"
+    "description": "Pokrenite podržanu CLI metu putem 67router-a"
   },
   "setupClaude": {
-    "description": "Generišite ~/.claude/profiles Claude Code profile iz OmniRoute kataloga modela"
+    "description": "Generišite ~/.claude/profiles Claude Code profile iz 67router kataloga modela"
   },
   "connect": {
-    "description": "Povežite se na udaljeni OmniRoute server i uđite u udaljeni režim"
+    "description": "Povežite se na udaljeni 67router server i uđite u udaljeni režim"
   },
   "tokens": {
     "description": "Upravljajte scoped CLI pristupnim tokenima (remote način)"
@@ -1300,10 +1300,10 @@
     "description": "Odaberite provider+model sa aktivnog servera i konfigurišite podržani lokalni CLI"
   },
   "launchCodex": {
-    "description": "Pokreni Codex CLI usmjeren na OmniRoute (lokalni ili udaljeni VPS)"
+    "description": "Pokreni Codex CLI usmjeren na 67router (lokalni ili udaljeni VPS)"
   },
   "setupCodex": {
-    "description": "Generiši ~/.codex profilne datoteke iz OmniRoute live model kataloga"
+    "description": "Generiši ~/.codex profilne datoteke iz 67router live model kataloga"
   },
   "packs": {
     "description": "Upravljajte opcionim runtime paketima (ML / automatizacija pretraživača)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "nepoznati paket: {name}",
     "errNoIndex": "indeks paketa nije pronađen; proslijedite --source <dir> koji sadrži pack payload (desktop paketi ga isporučuju pored aplikacije)",
     "installed": "paket \"{name}\" je instaliran i provjeren na {dir}",
-    "restartHint": "ponovno pokrenite OmniRoute server (ili desktop aplikaciju) kako bi runtime prepoznao paket",
+    "restartHint": "ponovno pokrenite 67router server (ili desktop aplikaciju) kako bi runtime prepoznao paket",
     "removed": "paket \"{name}\" uklonjen",
     "notInstalled": "paket \"{name}\" nije bio instaliran",
     "verifyOk": "svi instalirani paketi su provjereni",

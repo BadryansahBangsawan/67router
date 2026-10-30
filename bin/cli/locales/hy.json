@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Սխալ՝ {message}",
-    "serverOffline": "OmniRoute սերվերն անցանց է։ Գործարկեք այն հետևյալ հրամանով՝ omniroute serve",
+    "serverOffline": "67router սերվերն անցանց է։ Գործարկեք այն հետևյալ հրամանով՝ omniroute serve",
     "authRequired": "Պահանջվում է նույնականացում։ Սահմանեք OMNIROUTE_API_KEY-ը կամ գործարկեք՝ omniroute setup",
     "rateLimited": "Հարցումների հաճախականության սահմանաչափը գերազանցվել է։ Կրկին փորձեք {seconds} վրկ անց։",
     "timeout": "Հարցման սպասման ժամանակը սպառվեց {ms} մվ անց։",
@@ -15,7 +15,7 @@
     "yesOpt": "Բաց թողնել հաստատման հարցումը"
   },
   "setup": {
-    "title": "OmniRoute-ի կարգավորում",
+    "title": "67router-ի կարգավորում",
     "passwordPrompt": "Ադմինիստրատորի գաղտնաբառ",
     "providerPrompt": "Լռելյայն մատակարար (բաց թողնելու համար դատարկ թողեք)",
     "done": "Կարգավորումն ավարտված է",
@@ -30,7 +30,7 @@
     "opencode": "Տեղադրել և կարգավորել փաթեթում ներառված @omniroute/opencode-plugin-ը OpenCode-ի համար"
   },
   "doctor": {
-    "title": "OmniRoute Doctor",
+    "title": "67router Doctor",
     "dbOk": "Տվյալների բազա՝ OK ({path})",
     "dbMissing": "Տվյալների բազան սկզբնավորված չէ — գործարկեք `omniroute setup`",
     "portOk": "Պորտ {port}՝ հասանելի է",
@@ -82,7 +82,7 @@
       "providerOpt": "Զտել ըստ մատակարարի անվան",
       "header": "ID         Մատակարար     Անուն                     Ժամկետ  Կարգավիճակ  Ստուգման կարգավիճակ  Սպասման ավարտը",
       "noData": "Մատակարարի կապի տվյալներ չկան։",
-      "requiresServer": "providers status հրամանի համար OmniRoute սերվերը պետք է աշխատի։"
+      "requiresServer": "providers status հրամանի համար 67router սերվերը պետք է աշխատի։"
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Ավելացնել կամ թարմացնել մատակարարի API բանալին",
     "listDescription": "Ցուցակել բոլոր կարգավորված API բանալիները",
     "removeDescription": "Հեռացնել մատակարարի API բանալին",
-    "regenerateDescription": "Վերաստեղծել OmniRoute API բանալին",
-    "revokeDescription": "Չեղարկել OmniRoute API բանալին",
+    "regenerateDescription": "Վերաստեղծել 67router API բանալին",
+    "revokeDescription": "Չեղարկել 67router API բանալին",
     "revealDescription": "Ցուցադրել չքողարկված API բանալու արժեքը",
     "usageDescription": "Ցուցադրել API բանալու վերջին օգտագործումը",
     "usageLimitOpt": "Վերջին հարցումների քանակը",
@@ -225,7 +225,7 @@
     "noCombo": "Համապատասխան համակցություն չի գտնվել։ Կարգավորեք այն հետևյալ հրամանով՝ omniroute combo create"
   },
   "chat": {
-    "description": "Ուղարկել մեկանգամյա զրույցի հարցում OmniRoute-ին",
+    "description": "Ուղարկել մեկանգամյա զրույցի հարցում 67router-ին",
     "file": "Կարդալ հարցումը ֆայլից",
     "stdin": "Կարդալ հարցումը stdin-ից",
     "system": "Համակարգային հարցում",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Գործարկել OmniRoute սերվերը (լռելյայն գործողություն)",
-    "starting": "OmniRoute սերվերը գործարկվում է {port} պորտում...",
+    "description": "Գործարկել 67router սերվերը (լռելյայն գործողություն)",
+    "starting": "67router սերվերը գործարկվում է {port} պորտում...",
     "ready": "Հասանելի է http://localhost:{port} հասցեով",
     "stopping": "Սերվերը կանգնեցվում է (PID {pid})...",
     "stopped": "Սերվերը կանգնեցված է։",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Պահուստավորում",
-    "description": "Ստեղծել OmniRoute-ի տվյալների պահուստային պատճենը",
+    "description": "Ստեղծել 67router-ի տվյալների պահուստային պատճենը",
     "creating": "Պահուստային պատճենը ստեղծվում է...",
     "done": "Պահուստային պատճենը պահպանվել է {path} ուղում",
     "noFiles": "Պահուստավորման ենթակա ֆայլեր չկան (տվյալների բազան նախաստեղծված չէ)",
@@ -277,7 +277,7 @@
     "noBackups": "Պահուստային պատճեններ չեն գտնվել։",
     "notFound": "Պահուստային պատճենը չի գտնվել՝ {name}",
     "confirmRestore": "Վերագրե՞լ ընթացիկ տվյալները {ts}-ի պահուստային պատճենով։",
-    "createDescription": "Ստեղծել OmniRoute-ի տվյալների պահուստային պատճենը",
+    "createDescription": "Ստեղծել 67router-ի տվյալների պահուստային պատճենը",
     "nameOpt": "Պահուստային պատճենի հատուկ անուն",
     "cloudOpt": "Վերբեռնել պահուստային պատճենը ամպային պահոց",
     "encryptOpt": "Գաղտնագրել պահուստային պատճենը AES-256-GCM-ով",
@@ -321,7 +321,7 @@
     "clearFailed": "Չհաջողվեց մաքրել քեշը։"
   },
   "redis": {
-    "description": "Մեկ սեղմումով գործարկել տեղային Redis կոնտեյներ (Podman կամ Docker)՝ OmniRoute-ի քեշավորման և քվոտայի հետևման համար"
+    "description": "Մեկ սեղմումով գործարկել տեղային Redis կոնտեյներ (Podman կամ Docker)՝ 67router-ի քեշավորման և քվոտայի հետևման համար"
   },
   "test": {
     "description": "Ստուգել մատակարարի կապը",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Կառավարել OmniRoute-ի լիազորման քաղաքականությունները",
+    "description": "Կառավարել 67router-ի լիազորման քաղաքականությունները",
     "list": {
       "description": "Ցուցադրել քաղաքականությունները",
       "kind": "Զտել ըստ տեսակի (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Կարգավորել և ստուգել OmniRoute-ի սեղմման մշակաշարը",
+    "description": "Կարգավորել և ստուգել 67router-ի սեղմման մշակաշարը",
     "status": {
       "description": "Ցուցադրել սեղմման ընթացիկ կարգավիճակը և կարգավորումները"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Փոխե՞լ {type} թունելի URL-ը։ (կստեղծվի նոր URL)"
   },
   "stop": {
-    "description": "Կանգնեցնել OmniRoute սերվերը",
+    "description": "Կանգնեցնել 67router սերվերը",
     "stopping": "Սերվերը կանգնեցվում է (PID {pid})...",
     "stopped": "Սերվերը կանգնեցվել է։",
     "notRunning": "Գործող սերվեր չկա։",
     "portFallback": "PID ֆայլ չի գտնվել, փորձ է արվում կանգնեցնել ըստ պորտի..."
   },
   "restart": {
-    "description": "Վերագործարկել OmniRoute սերվերը",
-    "restarting": "OmniRoute սերվերը վերագործարկվում է..."
+    "description": "Վերագործարկել 67router սերվերը",
+    "restarting": "67router սերվերը վերագործարկվում է..."
   },
   "dashboard": {
-    "description": "Բացել OmniRoute-ի կառավարման վահանակը դիտարկիչում",
+    "description": "Բացել 67router-ի կառավարման վահանակը դիտարկիչում",
     "opening": "Կառավարման վահանակը բացվում է՝ {url}",
     "urlOnly": "Տպել միայն կառավարման վահանակի URL-ը՝ առանց դիտարկիչը բացելու",
     "tui": "Բացել ինտերակտիվ TUI կառավարման վահանակը (տերմինալային միջերես, 7 ներդիր)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Կառավարել OmniRoute-ի հմտությունները (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Կառավարել 67router-ի հմտությունները (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Ցուցադրել տեղադրված հմտությունները",
       "type": "Զտել ըստ տեսակի (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Կառավարել OmniRoute-ի խոսակցական հիշողությունը (FTS5 + vector)",
+    "description": "Կառավարել 67router-ի խոսակցական հիշողությունը (FTS5 + vector)",
     "search": {
       "description": "Որոնել հիշողության գրառումները իմաստային հարցմամբ",
       "type": "Զտել ըստ հիշողության տեսակի (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Կառավարել OmniRoute վեբհուքերը",
+    "description": "Կառավարել 67router վեբհուքերը",
     "events": {
       "description": "Ցուցակել վեբհուքերի իրադարձությունների բոլոր հասանելի տեսակները"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — խելացի AI երթուղիչ՝ ավտոմատ պահուստային անցմամբ",
+    "description": "67router — խելացի AI երթուղիչ՝ ավտոմատ պահուստային անցմամբ",
     "version": "Տպել տարբերակը և դուրս գալ",
     "output": "Ելքի ձևաչափը (table, json, jsonl, csv)",
     "quiet": "Թաքցնել ոչ էական ելքային տվյալները",
     "no_color": "Անջատել գունավոր ելքը",
     "timeout": "HTTP հարցման սպասման առավելագույն ժամանակը՝ միլիվայրկյաններով",
-    "api_key": "OmniRoute սերվերի API բանալի",
-    "base_url": "OmniRoute սերվերի բազային URL",
+    "api_key": "67router սերվերի API բանալի",
+    "base_url": "67router սերվերի բազային URL",
     "context": "Այս հրամանի համար օգտագործվող սերվերի համատեքստը/պրոֆիլը",
     "lang": "Սահմանել CLI-ի ցուցադրման լեզուն (գերակայում է OMNIROUTE_LANG-ին)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Մուտք գործել և փորձարկել OmniRoute OpenAPI բնութագիրը",
+    "description": "Մուտք գործել և փորձարկել 67router OpenAPI բնութագիրը",
     "dump": {
       "description": "Արտածել OpenAPI բնութագիրը stdout կամ ֆայլ",
       "format": "Ելքային ձևաչափը՝ yaml|json (լռելյայն՝ yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Դիտարկիչում բացել OmniRoute-ի վահանակի որոշակի էջ",
+    "description": "Դիտարկիչում բացել 67router-ի վահանակի որոշակի էջ",
     "url": "Միայն տպել URL-ը՝ առանց դիտարկիչը բացելու"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Համաժամացնել կազմաձևումը OmniRoute-ի օրինակների միջև",
+    "description": "Համաժամացնել կազմաձևումը 67router-ի օրինակների միջև",
     "push": {
       "description": "Ուղարկել կազմաձևումը ամպային կամ հեռակա օրինակին"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Զտել ըստ մակարդակի (error,warn,info)՝ ստորակետերով բաժանված",
     "lines": "Ստացվող տողերի քանակը",
     "timeout": "Կապի սպասման առավելագույն ժամանակը՝ մվ-ով",
-    "baseUrl": "OmniRoute API-ի բազային URL-ը",
+    "baseUrl": "67router API-ի բազային URL-ը",
     "requestId": "Զտել ըստ հարցման ID-ի",
     "apiKey": "Զտել ըստ API բանալու",
     "combo": "Զտել ըստ կոմբոյի անվան",
@@ -1244,10 +1244,10 @@
     "description": "Կառավարել համակարգային վահանակի պատկերակը",
     "show": "Ցուցադրել համակարգային վահանակի պատկերակը (եթե սերվերն աշխատում է --tray-ով)",
     "hide": "Թաքցնել համակարգային վահանակի պատկերակը",
-    "quit": "Դուրս գալ OmniRoute-ից համակարգային վահանակի միջոցով"
+    "quit": "Դուրս գալ 67router-ից համակարգային վահանակի միջոցով"
   },
   "autostart": {
-    "description": "Կառավարել OmniRoute-ի ինքնամեկնարկը համակարգի բեռնման ժամանակ (Linux: systemd օգտատիրոջ ծառայություն)",
+    "description": "Կառավարել 67router-ի ինքնամեկնարկը համակարգի բեռնման ժամանակ (Linux: systemd օգտատիրոջ ծառայություն)",
     "enable": "Միացնել ինքնամեկնարկը համակարգի բեռնման ժամանակ",
     "disable": "Անջատել ինքնամեկնարկը համակարգի բեռնման ժամանակ",
     "toggle": "Փոխարկել ինքնամեկնարկը համակարգի բեռնման ժամանակ",
@@ -1279,19 +1279,19 @@
     "scaffold": "Ստեղծել նոր փլագինի սկզբնական ձևանմուշ"
   },
   "launch": {
-    "description": "Գործարկել Claude Code-ը՝ ուղղված OmniRoute-ին (տեղային կամ հեռակա՝ --profile-ով)",
+    "description": "Գործարկել Claude Code-ը՝ ուղղված 67router-ին (տեղային կամ հեռակա՝ --profile-ով)",
     "token": "Թոքենը, որը Claude հաճախորդը պետք է ուղարկի (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute-ը հասանելի չէ {port} պորտում։ Գործարկեք այն 'omniroute serve' հրամանով։",
+    "notRunning": "67router-ը հասանելի չէ {port} պորտում։ Գործարկեք այն 'omniroute serve' հրամանով։",
     "notFound": "'claude' CLI-ն չի գտնվել PATH-ում։"
   },
   "run": {
-    "description": "Գործարկել աջակցվող CLI թիրախը OmniRoute-ի միջոցով"
+    "description": "Գործարկել աջակցվող CLI թիրախը 67router-ի միջոցով"
   },
   "setupClaude": {
-    "description": "OmniRoute-ի մոդելների կատալոգից ստեղծել ~/.claude/profiles Claude Code պրոֆիլներ"
+    "description": "67router-ի մոդելների կատալոգից ստեղծել ~/.claude/profiles Claude Code պրոֆիլներ"
   },
   "connect": {
-    "description": "Միանալ հեռակա OmniRoute սերվերին և անցնել հեռակա ռեժիմի"
+    "description": "Միանալ հեռակա 67router սերվերին և անցնել հեռակա ռեժիմի"
   },
   "tokens": {
     "description": "Կառավարել սահմանափակ շրջանակով CLI մուտքի թոքենները (հեռակա ռեժիմ)"
@@ -1300,10 +1300,10 @@
     "description": "Ակտիվ սերվերից ընտրել մատակարար+մոդել և կազմաձևել աջակցվող տեղային CLI"
   },
   "launchCodex": {
-    "description": "Գործարկել Codex CLI՝ ուղղված OmniRoute-ին (տեղային կամ հեռակա VPS)"
+    "description": "Գործարկել Codex CLI՝ ուղղված 67router-ին (տեղային կամ հեռակա VPS)"
   },
   "setupCodex": {
-    "description": "OmniRoute-ի գործող մոդելների կատալոգից ստեղծել ~/.codex պրոֆիլի ֆայլեր"
+    "description": "67router-ի գործող մոդելների կատալոգից ստեղծել ~/.codex պրոֆիլի ֆայլեր"
   },
   "packs": {
     "description": "Կառավարել գործարկման միջավայրի ընտրովի փաթեթները (ML / դիտարկչի ավտոմատացում)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "անհայտ փաթեթ՝ {name}",
     "errNoIndex": "փաթեթների ինդեքսը չի գտնվել. փոխանցեք փաթեթի բովանդակությունը պարունակող --source <dir> (աշխատասեղանի փաթեթներում այն գտնվում է հավելվածի կողքին)",
     "installed": "«{name}» փաթեթը տեղադրվել և ստուգվել է {dir}-ում",
-    "restartHint": "վերագործարկեք OmniRoute սերվերը (կամ աշխատասեղանի հավելվածը), որպեսզի գործարկման միջավայրը ճանաչի փաթեթը",
+    "restartHint": "վերագործարկեք 67router սերվերը (կամ աշխատասեղանի հավելվածը), որպեսզի գործարկման միջավայրը ճանաչի փաթեթը",
     "removed": "«{name}» փաթեթը հեռացվել է",
     "notInstalled": "«{name}» փաթեթը տեղադրված չէր",
     "verifyOk": "բոլոր տեղադրված փաթեթները ստուգվել են",

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "ข้อผิดพลาด: {message}",
-    "serverOffline": "เซิร์ฟเวอร์ OmniRoute ออฟไลน์ เริ่มด้วย: omniroute serve",
+    "serverOffline": "เซิร์ฟเวอร์ 67router ออฟไลน์ เริ่มด้วย: omniroute serve",
     "authRequired": "ต้องการการยืนยันตัวตน ตั้งค่า OMNIROUTE_API_KEY หรือรัน: omniroute setup",
     "rateLimited": "เกินขีดจำกัดคำขอ ลองใหม่หลังจาก {seconds}วินาที",
     "timeout": "คำขอหมดเวลาหลังจาก {ms}ms",
@@ -15,7 +15,7 @@
     "yesOpt": "ข้ามการยืนยัน"
   },
   "setup": {
-    "title": "ตั้งค่า OmniRoute",
+    "title": "ตั้งค่า 67router",
     "passwordPrompt": "รหัสผ่านผู้ดูแลระบบ",
     "providerPrompt": "ผู้ให้บริการเริ่มต้น (เว้นว่างเพื่อข้าม)",
     "done": "ตั้งค่าเสร็จสมบูรณ์",
@@ -30,7 +30,7 @@
     "opencode": "ติดตั้งและกำหนดค่า @omniroute/opencode-plugin ที่รวมมาให้สำหรับ OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute Doctor",
+    "title": "67router Doctor",
     "dbOk": "ฐานข้อมูล: ปกติ ({path})",
     "dbMissing": "ฐานข้อมูล: ยังไม่ได้เริ่มต้น — เรียกใช้ `omniroute setup`",
     "portOk": "พอร์ต {port}: พร้อมใช้งาน",
@@ -82,7 +82,7 @@
       "providerOpt": "กรองตามชื่อผู้ให้บริการ",
       "header": "ID         ผู้ให้บริการ       ชื่อ                     สถานะการหมดอายุ  สถานะการทดสอบ  พักใช้งานจนถึง",
       "noData": "ไม่มีข้อมูลการเชื่อมต่อผู้ให้บริการ",
-      "requiresServer": "คำสั่ง providers status ต้องให้เซิร์ฟเวอร์ OmniRoute ทำงานอยู่"
+      "requiresServer": "คำสั่ง providers status ต้องให้เซิร์ฟเวอร์ 67router ทำงานอยู่"
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "เพิ่มหรืออัปเดตคีย์ API สำหรับผู้ให้บริการ",
     "listDescription": "แสดงคีย์ API ที่กำหนดค่าไว้ทั้งหมด",
     "removeDescription": "ลบคีย์ API สำหรับผู้ให้บริการ",
-    "regenerateDescription": "สร้างคีย์ API ของ OmniRoute ใหม่",
-    "revokeDescription": "เพิกถอนคีย์ API ของ OmniRoute",
+    "regenerateDescription": "สร้างคีย์ API ของ 67router ใหม่",
+    "revokeDescription": "เพิกถอนคีย์ API ของ 67router",
     "revealDescription": "แสดงค่าคีย์ API แบบไม่ปกปิด",
     "usageDescription": "แสดงการใช้งานล่าสุดของคีย์ API",
     "usageLimitOpt": "จำนวนคำขอล่าสุด",
@@ -225,7 +225,7 @@
     "noCombo": "ไม่พบคอมโบที่ตรงกัน กำหนดค่าคอมโบด้วย: omniroute combo create"
   },
   "chat": {
-    "description": "ส่งพรอมต์แชตแบบครั้งเดียวไปยัง OmniRoute",
+    "description": "ส่งพรอมต์แชตแบบครั้งเดียวไปยัง 67router",
     "file": "อ่านพรอมต์จากไฟล์",
     "stdin": "อ่านพรอมต์จาก stdin",
     "system": "พรอมต์ระบบ",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "เริ่มเซิร์ฟเวอร์ OmniRoute (การดำเนินการเริ่มต้น)",
-    "starting": "กำลังเริ่มเซิร์ฟเวอร์ OmniRoute บนพอร์ต {port}...",
+    "description": "เริ่มเซิร์ฟเวอร์ 67router (การดำเนินการเริ่มต้น)",
+    "starting": "กำลังเริ่มเซิร์ฟเวอร์ 67router บนพอร์ต {port}...",
     "ready": "พร้อมใช้งานที่ http://localhost:{port}",
     "stopping": "กำลังหยุดเซิร์ฟเวอร์ (PID {pid})...",
     "stopped": "หยุดเซิร์ฟเวอร์แล้ว",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "สำรองข้อมูล",
-    "description": "สร้างข้อมูลสำรองของข้อมูล OmniRoute",
+    "description": "สร้างข้อมูลสำรองของข้อมูล 67router",
     "creating": "กำลังสร้างข้อมูลสำรอง...",
     "done": "บันทึกข้อมูลสำรองไปยัง {path} แล้ว",
     "noFiles": "ไม่มีไฟล์ให้สำรองข้อมูล (ยังไม่ได้เริ่มต้นฐานข้อมูล)",
@@ -277,7 +277,7 @@
     "noBackups": "ไม่พบข้อมูลสำรอง",
     "notFound": "ไม่พบข้อมูลสำรอง: {name}",
     "confirmRestore": "เขียนทับข้อมูลปัจจุบันด้วยข้อมูลสำรองจาก {ts} หรือไม่?",
-    "createDescription": "สร้างข้อมูลสำรองของ OmniRoute",
+    "createDescription": "สร้างข้อมูลสำรองของ 67router",
     "nameOpt": "ชื่อข้อมูลสำรองแบบกำหนดเอง",
     "cloudOpt": "อัปโหลดข้อมูลสำรองไปยังพื้นที่จัดเก็บบนคลาวด์",
     "encryptOpt": "เข้ารหัสข้อมูลสำรองด้วย AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "ล้างแคชไม่สำเร็จ"
   },
   "redis": {
-    "description": "เปิดใช้คอนเทนเนอร์ Redis ในเครื่องด้วยการคลิกเดียว (Podman หรือ Docker) สำหรับการแคชและการติดตามโควตาของ OmniRoute"
+    "description": "เปิดใช้คอนเทนเนอร์ Redis ในเครื่องด้วยการคลิกเดียว (Podman หรือ Docker) สำหรับการแคชและการติดตามโควตาของ 67router"
   },
   "test": {
     "description": "ทดสอบการเชื่อมต่อกับผู้ให้บริการ",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "จัดการนโยบายการอนุญาตของ OmniRoute",
+    "description": "จัดการนโยบายการอนุญาตของ 67router",
     "list": {
       "description": "แสดงรายการนโยบาย",
       "kind": "กรองตามประเภท (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "กำหนดค่าและตรวจสอบไปป์ไลน์การบีบอัดของ OmniRoute",
+    "description": "กำหนดค่าและตรวจสอบไปป์ไลน์การบีบอัดของ 67router",
     "status": {
       "description": "แสดงสถานะและการตั้งค่าการบีบอัดปัจจุบัน"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "เปลี่ยน URL ของทันเนล {type} หรือไม่ (ระบบจะสร้าง URL ใหม่)"
   },
   "stop": {
-    "description": "หยุดเซิร์ฟเวอร์ OmniRoute",
+    "description": "หยุดเซิร์ฟเวอร์ 67router",
     "stopping": "กำลังหยุดเซิร์ฟเวอร์ (PID {pid})...",
     "stopped": "หยุดเซิร์ฟเวอร์แล้ว",
     "notRunning": "ไม่มีเซิร์ฟเวอร์ที่กำลังทำงานอยู่",
     "portFallback": "ไม่พบไฟล์ PID กำลังพยายามหยุดตามพอร์ต..."
   },
   "restart": {
-    "description": "รีสตาร์ตเซิร์ฟเวอร์ OmniRoute",
-    "restarting": "กำลังรีสตาร์ตเซิร์ฟเวอร์ OmniRoute..."
+    "description": "รีสตาร์ตเซิร์ฟเวอร์ 67router",
+    "restarting": "กำลังรีสตาร์ตเซิร์ฟเวอร์ 67router..."
   },
   "dashboard": {
-    "description": "เปิดแดชบอร์ด OmniRoute ในเบราว์เซอร์",
+    "description": "เปิดแดชบอร์ด 67router ในเบราว์เซอร์",
     "opening": "กำลังเปิดแดชบอร์ดที่ {url}",
     "urlOnly": "แสดง URL ของแดชบอร์ดโดยไม่เปิดเบราว์เซอร์",
     "tui": "เปิดแดชบอร์ด TUI แบบโต้ตอบ (UI เทอร์มินัล 7 แท็บ)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "จัดการทักษะของ OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "จัดการทักษะของ 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "แสดงรายการทักษะที่ติดตั้งแล้ว",
       "type": "กรองตามประเภท (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "จัดการหน่วยความจำการสนทนาของ OmniRoute (FTS5 + vector)",
+    "description": "จัดการหน่วยความจำการสนทนาของ 67router (FTS5 + vector)",
     "search": {
       "description": "ค้นหารายการหน่วยความจำด้วยคำค้นหาเชิงความหมาย",
       "type": "กรองตามประเภทหน่วยความจำ (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "จัดการเว็บฮุกของ OmniRoute",
+    "description": "จัดการเว็บฮุกของ 67router",
     "events": {
       "description": "แสดงรายการประเภทเหตุการณ์เว็บฮุกทั้งหมดที่พร้อมใช้งาน"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — AI Router อัจฉริยะพร้อม Auto Fallback",
+    "description": "67router — AI Router อัจฉริยะพร้อม Auto Fallback",
     "version": "แสดงเวอร์ชันและออก",
     "output": "รูปแบบเอาต์พุต (table, json, jsonl, csv)",
     "quiet": "ซ่อนเอาต์พุตที่ไม่จำเป็น",
     "no_color": "ปิดใช้งานเอาต์พุตสี",
     "timeout": "หมดเวลา HTTP request ในมิลลิวินาที",
-    "api_key": "API Key สำหรับ OmniRoute server",
-    "base_url": "Base URL ของ OmniRoute server",
+    "api_key": "API Key สำหรับ 67router server",
+    "base_url": "Base URL ของ 67router server",
     "context": "บริบท/โปรไฟล์ของเซิร์ฟเวอร์สำหรับคำสั่งนี้",
     "lang": "ตั้งค่าภาษาแสดงผล CLI (แทนที่ OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "เข้าถึงและทดสอบข้อกำหนด OpenAPI ของ OmniRoute",
+    "description": "เข้าถึงและทดสอบข้อกำหนด OpenAPI ของ 67router",
     "dump": {
       "description": "ส่งออกข้อกำหนด OpenAPI ไปยัง stdout หรือไฟล์",
       "format": "รูปแบบเอาต์พุต: yaml|json (ค่าเริ่มต้น: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "เปิดหน้าแดชบอร์ด OmniRoute ที่ระบุในเบราว์เซอร์",
+    "description": "เปิดหน้าแดชบอร์ด 67router ที่ระบุในเบราว์เซอร์",
     "url": "แสดงเฉพาะ URL โดยไม่เปิดเบราว์เซอร์"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "ซิงค์การกำหนดค่าระหว่างอินสแตนซ์ OmniRoute",
+    "description": "ซิงค์การกำหนดค่าระหว่างอินสแตนซ์ 67router",
     "push": {
       "description": "พุชการกำหนดค่าไปยังระบบคลาวด์หรืออินสแตนซ์ระยะไกล"
     },
@@ -1228,7 +1228,7 @@
     "filter": "กรองตามระดับ (error,warn,info) — คั่นด้วยเครื่องหมายจุลภาค",
     "lines": "จำนวนบรรทัดที่จะดึงข้อมูล",
     "timeout": "ระยะหมดเวลาการเชื่อมต่อ หน่วยเป็น ms",
-    "baseUrl": "URL ฐานของ OmniRoute API",
+    "baseUrl": "URL ฐานของ 67router API",
     "requestId": "กรองตาม ID คำขอ",
     "apiKey": "กรองตามคีย์ API",
     "combo": "กรองตามชื่อคอมโบ",
@@ -1244,10 +1244,10 @@
     "description": "ควบคุมไอคอนในถาดระบบ",
     "show": "แสดงไอคอนในถาดระบบ (หากเซิร์ฟเวอร์กำลังทำงานด้วย --tray)",
     "hide": "ซ่อนไอคอนในถาดระบบ",
-    "quit": "ออกจาก OmniRoute ผ่านถาดระบบ"
+    "quit": "ออกจาก 67router ผ่านถาดระบบ"
   },
   "autostart": {
-    "description": "จัดการการเริ่ม OmniRoute อัตโนมัติเมื่อบูต (Linux: บริการผู้ใช้ systemd)",
+    "description": "จัดการการเริ่ม 67router อัตโนมัติเมื่อบูต (Linux: บริการผู้ใช้ systemd)",
     "enable": "เปิดใช้การเริ่มอัตโนมัติเมื่อบูต",
     "disable": "ปิดใช้การเริ่มอัตโนมัติเมื่อบูต",
     "toggle": "สลับสถานะการเริ่มอัตโนมัติเมื่อบูต",
@@ -1279,19 +1279,19 @@
     "scaffold": "สร้างโครงเริ่มต้นสำหรับปลั๊กอินใหม่"
   },
   "launch": {
-    "description": "เปิด Claude Code ที่เชื่อมต่อกับ OmniRoute (ภายในเครื่องหรือระยะไกล พร้อม --profile)",
+    "description": "เปิด Claude Code ที่เชื่อมต่อกับ 67router (ภายในเครื่องหรือระยะไกล พร้อม --profile)",
     "token": "โทเค็นที่ไคลเอนต์ Claude ควรส่ง (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "ไม่สามารถเข้าถึง OmniRoute ที่ {port} ได้ เริ่มต้นด้วย 'omniroute serve'",
+    "notRunning": "ไม่สามารถเข้าถึง 67router ที่ {port} ได้ เริ่มต้นด้วย 'omniroute serve'",
     "notFound": "ไม่พบ CLI 'claude' ใน PATH"
   },
   "run": {
-    "description": "เปิดเป้าหมาย CLI ที่รองรับผ่าน OmniRoute"
+    "description": "เปิดเป้าหมาย CLI ที่รองรับผ่าน 67router"
   },
   "setupClaude": {
-    "description": "สร้างโปรไฟล์ Claude Code ใน ~/.claude/profiles จากแค็ตตาล็อกโมเดล OmniRoute"
+    "description": "สร้างโปรไฟล์ Claude Code ใน ~/.claude/profiles จากแค็ตตาล็อกโมเดล 67router"
   },
   "connect": {
-    "description": "เชื่อมต่อกับเซิร์ฟเวอร์ OmniRoute ระยะไกลและเข้าสู่โหมดระยะไกล"
+    "description": "เชื่อมต่อกับเซิร์ฟเวอร์ 67router ระยะไกลและเข้าสู่โหมดระยะไกล"
   },
   "tokens": {
     "description": "จัดการโทเค็นการเข้าถึง CLI แบบกำหนดขอบเขต (โหมดระยะไกล)"
@@ -1300,10 +1300,10 @@
     "description": "เลือกผู้ให้บริการ+โมเดลจากเซิร์ฟเวอร์ที่ใช้งานอยู่และกำหนดค่า CLI ภายในเครื่องที่รองรับ"
   },
   "launchCodex": {
-    "description": "เปิด Codex CLI ที่เชื่อมต่อกับ OmniRoute (ภายในเครื่องหรือ VPS ระยะไกล)"
+    "description": "เปิด Codex CLI ที่เชื่อมต่อกับ 67router (ภายในเครื่องหรือ VPS ระยะไกล)"
   },
   "setupCodex": {
-    "description": "สร้างไฟล์โปรไฟล์ใน ~/.codex จากแค็ตตาล็อกโมเดลแบบสดของ OmniRoute"
+    "description": "สร้างไฟล์โปรไฟล์ใน ~/.codex จากแค็ตตาล็อกโมเดลแบบสดของ 67router"
   },
   "packs": {
     "description": "จัดการแพ็กรันไทม์เสริม (ML / ระบบอัตโนมัติของเบราว์เซอร์)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "แพ็กที่ไม่รู้จัก: {name}",
     "errNoIndex": "ไม่พบดัชนีแพ็ก โปรดส่ง --source <dir> ที่เก็บเพย์โหลดของแพ็ก (บันเดิลเดสก์ท็อปมีไฟล์นี้อยู่ถัดจากแอป)",
     "installed": "ติดตั้งและตรวจสอบแพ็ก \"{name}\" ที่ {dir} แล้ว",
-    "restartHint": "รีสตาร์ทเซิร์ฟเวอร์ OmniRoute (หรือแอปเดสก์ท็อป) เพื่อให้รันไทม์ตรวจพบแพ็ก",
+    "restartHint": "รีสตาร์ทเซิร์ฟเวอร์ 67router (หรือแอปเดสก์ท็อป) เพื่อให้รันไทม์ตรวจพบแพ็ก",
     "removed": "นำแพ็ก \"{name}\" ออกแล้ว",
     "notInstalled": "ยังไม่ได้ติดตั้งแพ็ก \"{name}\"",
     "verifyOk": "ตรวจสอบแพ็กที่ติดตั้งทั้งหมดเรียบร้อยแล้ว",

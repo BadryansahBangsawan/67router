@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Njehie: {message}",
-    "serverOffline": "Sava OmniRoute anọghị n'ịntanetị. Jiri nke a malite ya: omniroute serve",
+    "serverOffline": "Sava 67router anọghị n'ịntanetị. Jiri nke a malite ya: omniroute serve",
     "authRequired": "Achọrọ njirimara. Tọọ OMNIROUTE_API_KEY ma ọ bụ mee: omniroute setup",
     "rateLimited": "Agafela oke arịrịọ. Nwaa ọzọ mgbe sekọnd {seconds} gachara.",
     "timeout": "Oge arịrịọ agwụla mgbe milisekọnd {ms} gachara.",
@@ -15,7 +15,7 @@
     "yesOpt": "Mafee ajụjụ nkwenye"
   },
   "setup": {
-    "title": "Ntọala OmniRoute",
+    "title": "Ntọala 67router",
     "passwordPrompt": "Okwuntughe onye nchịkwa",
     "providerPrompt": "Onye na-enye ọrụ ndabara (hapụ oghere ka ịwụfee)",
     "done": "Emechaala ntọala",
@@ -30,7 +30,7 @@
     "opencode": "Wụnye ma hazie @omniroute/opencode-plugin e jikọtara ọnụ maka OpenCode"
   },
   "doctor": {
-    "title": "Onye Nnyocha OmniRoute",
+    "title": "Onye Nnyocha 67router",
     "dbOk": "Ebe nchekwa data: Ọ DỊ MMA ({path})",
     "dbMissing": "Ebe nchekwa data: ebidobeghị ya — mee `omniroute setup`",
     "portOk": "Ọdụ ụgbọ {port}: dị njikere",
@@ -82,7 +82,7 @@
       "providerOpt": "Jiri aha onye na-eweta nyochaa",
       "header": "ID         Onye na-eweta  Aha                      Ọnọdụ njedebe  Ọnọdụ ule  Oge nchere ruo",
       "noData": "Enweghị data njikọ onye na-eweta dị.",
-      "requiresServer": "providers status chọrọ ka sava OmniRoute na-arụ ọrụ."
+      "requiresServer": "providers status chọrọ ka sava 67router na-arụ ọrụ."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Tinye ma ọ bụ melite igodo API maka onye na-eweta",
     "listDescription": "Depụta igodo API niile ahaziri",
     "removeDescription": "Wepụ igodo API maka onye na-eweta",
-    "regenerateDescription": "Mepụta igodo API OmniRoute ọzọ",
-    "revokeDescription": "Kagbuo igodo API OmniRoute",
+    "regenerateDescription": "Mepụta igodo API 67router ọzọ",
+    "revokeDescription": "Kagbuo igodo API 67router",
     "revealDescription": "Gosi uru igodo API ezoghị ezo",
     "usageDescription": "Gosi ojiji API key n'oge na-adịbeghị anya",
     "usageLimitOpt": "Ọnụọgụ arịrịọ ndị e mere n'oge na-adịbeghị anya",
@@ -225,7 +225,7 @@
     "noCombo": "Ahụghị combo dabara adaba. Hazie otu site na: omniroute combo create"
   },
   "chat": {
-    "description": "Ziga otu prompt nkata na OmniRoute",
+    "description": "Ziga otu prompt nkata na 67router",
     "file": "Gụọ prompt site na faịlụ",
     "stdin": "Gụọ prompt site na stdin",
     "system": "Prompt sistemụ",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Bido sava OmniRoute (omume ndabara)",
-    "starting": "Na-amalite sava OmniRoute na port {port}...",
+    "description": "Bido sava 67router (omume ndabara)",
+    "starting": "Na-amalite sava 67router na port {port}...",
     "ready": "Adịla njikere na http://localhost:{port}",
     "stopping": "Na-akwụsị sava (PID {pid})...",
     "stopped": "Akwụsịla sava.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Ndabere",
-    "description": "Mepụta ndabere nke data OmniRoute",
+    "description": "Mepụta ndabere nke data 67router",
     "creating": "Na-emepụta ndabere...",
     "done": "Echekwara ndabere na {path}",
     "noFiles": "Enweghị faịlụ a ga-etinye na ndabere (ebidobeghị ọdụ data)",
@@ -277,7 +277,7 @@
     "noBackups": "Ahụghị ndabere ọ bụla.",
     "notFound": "Ahụghị ndabere: {name}",
     "confirmRestore": "Jiri ndabere sitere na {ts} dochie data dị ugbu a?",
-    "createDescription": "Mepụta ndabere nke data OmniRoute",
+    "createDescription": "Mepụta ndabere nke data 67router",
     "nameOpt": "Aha ndabere ahaziri iche",
     "cloudOpt": "Bulite ndabere na nchekwa igwe ojii",
     "encryptOpt": "Jiri AES-256-GCM zoo ndabere",
@@ -321,7 +321,7 @@
     "clearFailed": "Enweghị ike ihichapụ cache."
   },
   "redis": {
-    "description": "Jiri otu ọpịpị malite akpa Redis mpaghara (Podman ma ọ bụ Docker) maka nchekwa cache na nsuso oke nke OmniRoute"
+    "description": "Jiri otu ọpịpị malite akpa Redis mpaghara (Podman ma ọ bụ Docker) maka nchekwa cache na nsuso oke nke 67router"
   },
   "test": {
     "description": "Nwalee njikọ onye na-eweta ọrụ",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Jikwaa iwu ikike OmniRoute",
+    "description": "Jikwaa iwu ikike 67router",
     "list": {
       "description": "Depụta iwu",
       "kind": "Jiri ụdị nyochaa (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Hazie ma nyochaa usoro mkpakọ nke OmniRoute",
+    "description": "Hazie ma nyochaa usoro mkpakọ nke 67router",
     "status": {
       "description": "Gosi ọnọdụ na ntọala mkpakọ dị ugbu a"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Gbanwee ọwara {type}? (a ga-emepụta URL ọhụrụ)"
   },
   "stop": {
-    "description": "Kwụsị sava OmniRoute",
+    "description": "Kwụsị sava 67router",
     "stopping": "Na-akwụsị sava (PID {pid})...",
     "stopped": "Akwụsịla sava.",
     "notRunning": "Ọ dịghị sava na-arụ ọrụ.",
     "portFallback": "Ahụghị faịlụ PID, na-anwa ịkwụsị site na port..."
   },
   "restart": {
-    "description": "Malitegharịa sava OmniRoute",
-    "restarting": "A na-amalitegharịa sava OmniRoute..."
+    "description": "Malitegharịa sava 67router",
+    "restarting": "A na-amalitegharịa sava 67router..."
   },
   "dashboard": {
-    "description": "Mepee dashboard OmniRoute na ihe nchọgharị",
+    "description": "Mepee dashboard 67router na ihe nchọgharị",
     "opening": "A na-emepe dashboard na {url}",
     "urlOnly": "Bipụta naanị URL dashboard n'emepeghị ihe nchọgharị",
     "tui": "Mepee dashboard TUI mmekọrịta (UI ọdụ, taabụ 7)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Jikwaa nkà OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Jikwaa nkà 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Depụta nkà arụnyere",
       "type": "Nyochaa site n'ụdị (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Jikwaa ebe nchekwa mkparịta ụka OmniRoute (FTS5 + vector)",
+    "description": "Jikwaa ebe nchekwa mkparịta ụka 67router (FTS5 + vector)",
     "search": {
       "description": "Chọọ ndenye ebe nchekwa site na ajụjụ dabere na nghọta",
       "type": "Nyochaa site n'ụdị ebe nchekwa (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Jikwaa webhook OmniRoute",
+    "description": "Jikwaa webhook 67router",
     "events": {
       "description": "Depụta ụdị event webhook niile dị"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Onye Nhazi Ụzọ AI Nwere Ọgụgụ Isi nke nwere Ndaghachi Akpaka",
+    "description": "67router — Onye Nhazi Ụzọ AI Nwere Ọgụgụ Isi nke nwere Ndaghachi Akpaka",
     "version": "Bipụta ụdị ma pụọ",
     "output": "Ụdị mmepụta (table, json, jsonl, csv)",
     "quiet": "Gbochie mmepụta ndị na-adịghị mkpa",
     "no_color": "Gbanyụọ mmepụta nwere agba",
     "timeout": "Oge nchere arịrịọ HTTP na milisekọnd",
-    "api_key": "Igodo API maka sava OmniRoute",
-    "base_url": "URL ntọala sava OmniRoute",
+    "api_key": "Igodo API maka sava 67router",
+    "base_url": "URL ntọala sava 67router",
     "context": "Ọnọdụ/profaịlụ sava a ga-eji maka iwu a",
     "lang": "Tọọ asụsụ ngosipụta CLI (na-akagbu OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Nweta ma nwalee nkọwapụta OmniRoute OpenAPI",
+    "description": "Nweta ma nwalee nkọwapụta 67router OpenAPI",
     "dump": {
       "description": "Wụpụ nkọwapụta OpenAPI na stdout ma ọ bụ faịlụ",
       "format": "Ụdị mmepụta: yaml|json (ndabara: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Mepee otu ibe dashboard OmniRoute akọwapụtara na browser",
+    "description": "Mepee otu ibe dashboard 67router akọwapụtara na browser",
     "url": "Bipụta naanị URL, emeghela browser"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Mekọrịta nhazi n'etiti instance OmniRoute",
+    "description": "Mekọrịta nhazi n'etiti instance 67router",
     "push": {
       "description": "Ziga nhazi na cloud ma ọ bụ instance dị anya"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Họrọ site n'ọkwa (error,warn,info) — jiri rikọm kewaa ha",
     "lines": "Ọnụọgụ ahịrị a ga-eweta",
     "timeout": "Oge njikọ ga-akwụsị na ms",
-    "baseUrl": "URL ntọala OmniRoute API",
+    "baseUrl": "URL ntọala 67router API",
     "requestId": "Họrọ site na ID arịrịọ",
     "apiKey": "Họrọ site na API key",
     "combo": "Jiri aha combo mee nzacha",
@@ -1244,10 +1244,10 @@
     "description": "Jikwaa akara ngosi dị na tray sistemụ",
     "show": "Gosi akara ngosi tray (ọ bụrụ na sava na-eji --tray arụ ọrụ)",
     "hide": "Zoo akara ngosi tray",
-    "quit": "Site na tray, kwụsị OmniRoute"
+    "quit": "Site na tray, kwụsị 67router"
   },
   "autostart": {
-    "description": "Jikwaa mmalite akpaka nke OmniRoute mgbe sistemụ na-ebido (Linux: ọrụ onye ọrụ systemd)",
+    "description": "Jikwaa mmalite akpaka nke 67router mgbe sistemụ na-ebido (Linux: ọrụ onye ọrụ systemd)",
     "enable": "Gbanye mmalite akpaka mgbe sistemụ na-ebido",
     "disable": "Gbanyụọ mmalite akpaka mgbe sistemụ na-ebido",
     "toggle": "Gbanwee ọnọdụ mmalite akpaka mgbe sistemụ na-ebido",
@@ -1279,19 +1279,19 @@
     "scaffold": "Mepụta usoro ntọala maka plugin ọhụrụ"
   },
   "launch": {
-    "description": "Bido Claude Code ka ọ rụtụ aka na OmniRoute (mpaghara ma ọ bụ ime, site na --profile)",
+    "description": "Bido Claude Code ka ọ rụtụ aka na 67router (mpaghara ma ọ bụ ime, site na --profile)",
     "token": "Token onye ahịa Claude kwesịrị iziga (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "Enweghị ike iru OmniRoute na {port}. Jiri 'omniroute serve' bido ya.",
+    "notRunning": "Enweghị ike iru 67router na {port}. Jiri 'omniroute serve' bido ya.",
     "notFound": "Ahụghị CLI 'claude' na PATH."
   },
   "run": {
-    "description": "Jiri OmniRoute malite ebumnuche CLI a na-akwado"
+    "description": "Jiri 67router malite ebumnuche CLI a na-akwado"
   },
   "setupClaude": {
-    "description": "Mepụta profaịlụ Claude Code na ~/.claude/profiles site na katalọgụ modelụ OmniRoute"
+    "description": "Mepụta profaịlụ Claude Code na ~/.claude/profiles site na katalọgụ modelụ 67router"
   },
   "connect": {
-    "description": "Jikọọ na sava OmniRoute dị anya wee banye na ọnọdụ dị anya"
+    "description": "Jikọọ na sava 67router dị anya wee banye na ọnọdụ dị anya"
   },
   "tokens": {
     "description": "Jikwaa token nnweta CLI nwere oke (ọnọdụ dị anya)"
@@ -1300,10 +1300,10 @@
     "description": "Họrọ provider+model site na sava na-arụ ọrụ ma hazie CLI mpaghara a na-akwado"
   },
   "launchCodex": {
-    "description": "Malite Codex CLI nke e duziri na OmniRoute (VPS mpaghara ma ọ bụ nke dị anya)"
+    "description": "Malite Codex CLI nke e duziri na 67router (VPS mpaghara ma ọ bụ nke dị anya)"
   },
   "setupCodex": {
-    "description": "Mepụta faịlụ profaịlụ ~/.codex site na katalọgụ modelụ OmniRoute dị ndụ"
+    "description": "Mepụta faịlụ profaịlụ ~/.codex site na katalọgụ modelụ 67router dị ndụ"
   },
   "packs": {
     "description": "Jikwaa ngwugwu runtime ndị nhọrọ (ML / akpaaka ihe nchọgharị)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "ngwugwu amaghi: {name}",
     "errNoIndex": "ahụghị ndeksi ngwugwu; tinye --source <dir> nke nwere payload ngwugwu (ngwugwu desktop na-ebunye ya n'akụkụ app ahụ)",
     "installed": "arụnyere ma nyochaa ngwugwu \"{name}\" na {dir}",
-    "restartHint": "malitegharịa sava OmniRoute (ma ọ bụ app desktop) ka runtime wee mata ngwugwu ahụ",
+    "restartHint": "malitegharịa sava 67router (ma ọ bụ app desktop) ka runtime wee mata ngwugwu ahụ",
     "removed": "ewepụla ngwugwu \"{name}\"",
     "notInstalled": "awụnyeghị ngwugwu \"{name}\"",
     "verifyOk": "a nyochachara ngwugwu niile arụnyere nke ọma",

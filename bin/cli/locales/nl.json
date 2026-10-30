@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Fout: {message}",
-    "serverOffline": "OmniRoute-server is offline. Start met: omniroute serve",
+    "serverOffline": "67router-server is offline. Start met: omniroute serve",
     "authRequired": "Authenticatie vereist. Stel OMNIROUTE_API_KEY in of voer uit: omniroute setup",
     "rateLimited": "Verzoeklimiet overschreden. Probeer opnieuw na {seconds}s.",
     "timeout": "Verzoek verlopen na {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Bevestiging overslaan"
   },
   "setup": {
-    "title": "OmniRoute-installatie",
+    "title": "67router-installatie",
     "passwordPrompt": "Beheerderswachtwoord",
     "providerPrompt": "Standaardprovider (laat leeg om over te slaan)",
     "done": "Installatie voltooid",
@@ -30,7 +30,7 @@
     "opencode": "Installeer en configureer de meegeleverde @omniroute/opencode-plugin voor OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute-diagnose",
+    "title": "67router-diagnose",
     "dbOk": "Database: OK ({path})",
     "dbMissing": "Database: niet geïnitialiseerd — voer `omniroute setup` uit",
     "portOk": "Poort {port}: beschikbaar",
@@ -82,7 +82,7 @@
       "providerOpt": "Filteren op providernaam",
       "header": "ID         Provider       Naam                     Vervaldatum Status  Teststatus  Afkoelperiode tot",
       "noData": "Geen gegevens over providerverbindingen beschikbaar.",
-      "requiresServer": "Voor providers status moet de OmniRoute-server actief zijn."
+      "requiresServer": "Voor providers status moet de 67router-server actief zijn."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Een API-sleutel voor een provider toevoegen of bijwerken",
     "listDescription": "Alle geconfigureerde API-sleutels weergeven",
     "removeDescription": "Een API-sleutel voor een provider verwijderen",
-    "regenerateDescription": "Een OmniRoute-API-sleutel opnieuw genereren",
-    "revokeDescription": "Een OmniRoute-API-sleutel intrekken",
+    "regenerateDescription": "Een 67router-API-sleutel opnieuw genereren",
+    "revokeDescription": "Een 67router-API-sleutel intrekken",
     "revealDescription": "De ongemaskeerde waarde van de API-sleutel weergeven",
     "usageDescription": "Recent gebruik van een API-sleutel weergeven",
     "usageLimitOpt": "Aantal recente verzoeken",
@@ -225,7 +225,7 @@
     "noCombo": "Geen overeenkomende combinatie gevonden. Configureer er een met: omniroute combo create"
   },
   "chat": {
-    "description": "Stuur een eenmalige chatprompt naar OmniRoute",
+    "description": "Stuur een eenmalige chatprompt naar 67router",
     "file": "Prompt uit bestand lezen",
     "stdin": "Prompt van stdin lezen",
     "system": "Systeemprompt",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "De OmniRoute-server starten (standaardactie)",
-    "starting": "OmniRoute-server wordt gestart op poort {port}...",
+    "description": "De 67router-server starten (standaardactie)",
+    "starting": "67router-server wordt gestart op poort {port}...",
     "ready": "Beschikbaar op http://localhost:{port}",
     "stopping": "Server wordt gestopt (PID {pid})...",
     "stopped": "Server gestopt.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Back-up",
-    "description": "Een back-up van OmniRoute-gegevens maken",
+    "description": "Een back-up van 67router-gegevens maken",
     "creating": "Back-up wordt gemaakt...",
     "done": "Back-up opgeslagen in {path}",
     "noFiles": "Geen bestanden om een back-up van te maken (database niet geïnitialiseerd)",
@@ -277,7 +277,7 @@
     "noBackups": "Geen back-ups gevonden.",
     "notFound": "Back-up niet gevonden: {name}",
     "confirmRestore": "Huidige gegevens overschrijven met de back-up van {ts}?",
-    "createDescription": "Een back-up van OmniRoute-gegevens maken",
+    "createDescription": "Een back-up van 67router-gegevens maken",
     "nameOpt": "Aangepaste back-upnaam",
     "cloudOpt": "Back-up uploaden naar cloudopslag",
     "encryptOpt": "Back-up versleutelen met AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Kan cache niet wissen."
   },
   "redis": {
-    "description": "Start een lokale Redis-container met één klik (Podman of Docker) voor OmniRoute-caching en quotumtracking"
+    "description": "Start een lokale Redis-container met één klik (Podman of Docker) voor 67router-caching en quotumtracking"
   },
   "test": {
     "description": "Een providerverbinding testen",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "OmniRoute-autorisatiebeleid beheren",
+    "description": "67router-autorisatiebeleid beheren",
     "list": {
       "description": "Beleidsregels weergeven",
       "kind": "Filteren op type (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "De OmniRoute-compressiepijplijn configureren en inspecteren",
+    "description": "De 67router-compressiepijplijn configureren en inspecteren",
     "status": {
       "description": "Huidige compressiestatus en -instellingen weergeven"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Tunnel {type} vernieuwen? (er wordt een nieuwe URL gegenereerd)"
   },
   "stop": {
-    "description": "De OmniRoute-server stoppen",
+    "description": "De 67router-server stoppen",
     "stopping": "Server wordt gestopt (PID {pid})...",
     "stopped": "Server gestopt.",
     "notRunning": "Er is geen server actief.",
     "portFallback": "Geen PID-bestand gevonden, er wordt geprobeerd te stoppen op basis van de poort..."
   },
   "restart": {
-    "description": "De OmniRoute-server opnieuw starten",
-    "restarting": "OmniRoute-server wordt opnieuw gestart..."
+    "description": "De 67router-server opnieuw starten",
+    "restarting": "67router-server wordt opnieuw gestart..."
   },
   "dashboard": {
-    "description": "Het OmniRoute-dashboard openen in een browser",
+    "description": "Het 67router-dashboard openen in een browser",
     "opening": "Dashboard wordt geopend op {url}",
     "urlOnly": "Dashboard-URL weergeven zonder de browser te openen",
     "tui": "Interactief TUI-dashboard openen (terminalinterface, 7 tabbladen)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "OmniRoute-skills beheren (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "67router-skills beheren (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Geïnstalleerde skills weergeven",
       "type": "Filteren op type (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "OmniRoute-gespreksgeheugen beheren (FTS5 + vector)",
+    "description": "67router-gespreksgeheugen beheren (FTS5 + vector)",
     "search": {
       "description": "Geheugenitems zoeken met een semantische zoekopdracht",
       "type": "Filteren op geheugentype (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "OmniRoute-webhooks beheren",
+    "description": "67router-webhooks beheren",
     "events": {
       "description": "Alle beschikbare webhookgebeurtenistypen weergeven"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Slimme AI-router met automatische fallback",
+    "description": "67router — Slimme AI-router met automatische fallback",
     "version": "Versie afdrukken en afsluiten",
     "output": "Uitvoerformaat (table, json, jsonl, csv)",
     "quiet": "Niet-essentiële uitvoer onderdrukken",
     "no_color": "Gekleurde uitvoer uitschakelen",
     "timeout": "HTTP-verzoek timeout in milliseconden",
-    "api_key": "API-sleutel voor de OmniRoute-server",
-    "base_url": "Basis-URL van de OmniRoute-server",
+    "api_key": "API-sleutel voor de 67router-server",
+    "base_url": "Basis-URL van de 67router-server",
     "context": "Servercontext/profiel voor dit commando",
     "lang": "CLI-weergavetaal instellen (overschrijft OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "De OmniRoute OpenAPI-specificatie openen en testen",
+    "description": "De 67router OpenAPI-specificatie openen en testen",
     "dump": {
       "description": "OpenAPI-specificatie naar stdout of een bestand uitvoeren",
       "format": "Uitvoerformaat: yaml|json (standaard: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Een specifieke OmniRoute-dashboardpagina in de browser openen",
+    "description": "Een specifieke 67router-dashboardpagina in de browser openen",
     "url": "Alleen URL weergeven, browser niet openen"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Configuratie synchroniseren tussen OmniRoute-instanties",
+    "description": "Configuratie synchroniseren tussen 67router-instanties",
     "push": {
       "description": "Configuratie naar de cloud of externe instantie pushen"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Filteren op niveau (error,warn,info) — door komma's gescheiden",
     "lines": "Aantal op te halen regels",
     "timeout": "Time-out voor verbinding in ms",
-    "baseUrl": "Basis-URL van de OmniRoute-API",
+    "baseUrl": "Basis-URL van de 67router-API",
     "requestId": "Filteren op aanvraag-ID",
     "apiKey": "Filteren op API-sleutel",
     "combo": "Filteren op combinatienaam",
@@ -1244,10 +1244,10 @@
     "description": "Het systeemvakpictogram beheren",
     "show": "Het systeemvakpictogram weergeven (als de server met --tray wordt uitgevoerd)",
     "hide": "Het systeemvakpictogram verbergen",
-    "quit": "OmniRoute afsluiten via het systeemvak"
+    "quit": "67router afsluiten via het systeemvak"
   },
   "autostart": {
-    "description": "Automatisch opstarten van OmniRoute bij het opstarten beheren (Linux: systemd-gebruikersservice)",
+    "description": "Automatisch opstarten van 67router bij het opstarten beheren (Linux: systemd-gebruikersservice)",
     "enable": "Automatisch opstarten inschakelen",
     "disable": "Automatisch opstarten uitschakelen",
     "toggle": "Automatisch opstarten in- of uitschakelen",
@@ -1279,19 +1279,19 @@
     "scaffold": "Genereer de basisstructuur voor een nieuwe plug-in"
   },
   "launch": {
-    "description": "Start Claude Code, gericht op OmniRoute (lokaal of extern, met --profile)",
+    "description": "Start Claude Code, gericht op 67router (lokaal of extern, met --profile)",
     "token": "Token die de Claude-client moet verzenden (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute is niet bereikbaar op {port}. Start het met 'omniroute serve'.",
+    "notRunning": "67router is niet bereikbaar op {port}. Start het met 'omniroute serve'.",
     "notFound": "De 'claude'-CLI is niet gevonden in PATH."
   },
   "run": {
-    "description": "Start een ondersteund CLI-doel via OmniRoute"
+    "description": "Start een ondersteund CLI-doel via 67router"
   },
   "setupClaude": {
-    "description": "Genereer Claude Code-profielen in ~/.claude/profiles vanuit de OmniRoute-modelcatalogus"
+    "description": "Genereer Claude Code-profielen in ~/.claude/profiles vanuit de 67router-modelcatalogus"
   },
   "connect": {
-    "description": "Maak verbinding met een externe OmniRoute-server en activeer de externe modus"
+    "description": "Maak verbinding met een externe 67router-server en activeer de externe modus"
   },
   "tokens": {
     "description": "Beheer CLI-toegangstokens met een beperkt bereik (externe modus)"
@@ -1300,10 +1300,10 @@
     "description": "Kies een provider+model van de actieve server en configureer een ondersteunde lokale CLI"
   },
   "launchCodex": {
-    "description": "Start Codex CLI, gericht op OmniRoute (lokale of externe VPS)"
+    "description": "Start Codex CLI, gericht op 67router (lokale of externe VPS)"
   },
   "setupCodex": {
-    "description": "Genereer profielbestanden in ~/.codex vanuit de actuele OmniRoute-modelcatalogus"
+    "description": "Genereer profielbestanden in ~/.codex vanuit de actuele 67router-modelcatalogus"
   },
   "packs": {
     "description": "Beheer optionele runtimepakketten (ML / browserautomatisering)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "onbekend pakket: {name}",
     "errNoIndex": "pakketindex niet gevonden; geef --source <dir> op met de pakketinhoud (desktopbundels bevatten deze naast de app)",
     "installed": "pakket \"{name}\" is geïnstalleerd en geverifieerd in {dir}",
-    "restartHint": "start de OmniRoute-server (of desktopapp) opnieuw zodat de runtime het pakket oppikt",
+    "restartHint": "start de 67router-server (of desktopapp) opnieuw zodat de runtime het pakket oppikt",
     "removed": "pakket \"{name}\" verwijderd",
     "notInstalled": "pakket \"{name}\" was niet geïnstalleerd",
     "verifyOk": "alle geïnstalleerde pakketten zijn geverifieerd",

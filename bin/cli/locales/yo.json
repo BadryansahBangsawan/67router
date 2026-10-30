@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Àṣìṣe: {message}",
-    "serverOffline": "Sẹ́fà OmniRoute kò sí lórí ayélujára. Bẹ̀rẹ̀ rẹ̀ pẹ̀lú: omniroute serve",
+    "serverOffline": "Sẹ́fà 67router kò sí lórí ayélujára. Bẹ̀rẹ̀ rẹ̀ pẹ̀lú: omniroute serve",
     "authRequired": "Ìfàṣẹsí jẹ́ dandan. Ṣètò OMNIROUTE_API_KEY tàbí ṣiṣẹ́: omniroute setup",
     "rateLimited": "A ti kọjá òpin iye ìbéèrè. Gbìyànjú lẹ́ẹ̀kan sí i lẹ́yìn {seconds}s.",
     "timeout": "Àkókò ìbéèrè parí lẹ́yìn {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Fo ìbéèrè ìmúdájú"
   },
   "setup": {
-    "title": "Ìṣètò OmniRoute",
+    "title": "Ìṣètò 67router",
     "passwordPrompt": "Ọ̀rọ̀ aṣínà alákóso",
     "providerPrompt": "Olùpèsè àiyípò (fi sílẹ̀ láìkọ nǹkan láti fò ó)",
     "done": "Ìṣètò ti pé",
@@ -30,7 +30,7 @@
     "opencode": "Fi @omniroute/opencode-plugin tí a kó mọ́ ọn sílẹ̀ kí o sì ṣètò rẹ̀ fún OpenCode"
   },
   "doctor": {
-    "title": "Olùṣàyẹ̀wò OmniRoute",
+    "title": "Olùṣàyẹ̀wò 67router",
     "dbOk": "Ibi ìpamọ́ dátà: Ó DÁRA ({path})",
     "dbMissing": "Ibi ìpamọ́ dátà: a kò tíì ṣe ìpilẹ̀ṣẹ̀ rẹ̀ — ṣiṣẹ́ `omniroute setup`",
     "portOk": "Pọ́ọ̀tù {port}: wà fún lílò",
@@ -82,7 +82,7 @@
       "providerOpt": "Ṣe àsẹ̀ nípa orúkọ provider",
       "header": "ID         Provider       Orúkọ                   Ipò Ìparí  Ipò Ìdánwò  Cooldown Títí Di",
       "noData": "Kò sí dátà ìsopọ̀ provider tó wà.",
-      "requiresServer": "providers status nílò kí server OmniRoute máa ṣiṣẹ́."
+      "requiresServer": "providers status nílò kí server 67router máa ṣiṣẹ́."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Ṣàfikún tàbí ṣe ìmúdójúìwọ̀n kọ́kọ́rọ́ API fún provider kan",
     "listDescription": "Ṣàkójọ gbogbo àwọn kọ́kọ́rọ́ API tí a ti ṣètò",
     "removeDescription": "Yọ kọ́kọ́rọ́ API kan kúrò fún provider kan",
-    "regenerateDescription": "Ṣẹ̀dá kọ́kọ́rọ́ API OmniRoute tuntun",
-    "revokeDescription": "Fagilé kọ́kọ́rọ́ API OmniRoute kan",
+    "regenerateDescription": "Ṣẹ̀dá kọ́kọ́rọ́ API 67router tuntun",
+    "revokeDescription": "Fagilé kọ́kọ́rọ́ API 67router kan",
     "revealDescription": "Ṣàfihàn iye kọ́kọ́rọ́ API tí a kò bò mọ́lẹ̀",
     "usageDescription": "Ṣàfihàn ìlò àìpẹ́ fún kọ́kọ́rọ́ API kan",
     "usageLimitOpt": "Iye àwọn ìbéèrè àìpẹ́",
@@ -225,7 +225,7 @@
     "noCombo": "A kò rí combo tó bá mu. Ṣètò ọ̀kan pẹ̀lú: omniroute combo create"
   },
   "chat": {
-    "description": "Fi ìbéèrè ìfọ̀rọ̀wérọ̀ ẹ̀ẹ̀kan ṣoṣo ránṣẹ́ sí OmniRoute",
+    "description": "Fi ìbéèrè ìfọ̀rọ̀wérọ̀ ẹ̀ẹ̀kan ṣoṣo ránṣẹ́ sí 67router",
     "file": "Ka ìbéèrè láti inú fáìlì",
     "stdin": "Ka ìbéèrè láti stdin",
     "system": "Ìbéèrè system",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Bẹ̀rẹ̀ server OmniRoute (ìgbésẹ̀ àìyípadà)",
-    "starting": "Ń bẹ̀rẹ̀ server OmniRoute lórí port {port}...",
+    "description": "Bẹ̀rẹ̀ server 67router (ìgbésẹ̀ àìyípadà)",
+    "starting": "Ń bẹ̀rẹ̀ server 67router lórí port {port}...",
     "ready": "Ó ti ṣetán ní http://localhost:{port}",
     "stopping": "Ń dá server dúró (PID {pid})...",
     "stopped": "Server ti dúró.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Afẹ́yìntì",
-    "description": "Ṣẹ̀dá afẹ́yìntì dátà OmniRoute",
+    "description": "Ṣẹ̀dá afẹ́yìntì dátà 67router",
     "creating": "Ń ṣẹ̀dá afẹ́yìntì...",
     "done": "A ti fi afẹ́yìntì pamọ́ sí {path}",
     "noFiles": "Kò sí fáìlì láti ṣe afẹ́yìntì (a kò tíì ṣe ìbẹ̀rẹ̀ dátábéèsì)",
@@ -277,7 +277,7 @@
     "noBackups": "A kò rí afẹ́yìntì kankan.",
     "notFound": "A kò rí afẹ́yìntì: {name}",
     "confirmRestore": "Ṣé kí a fi afẹ́yìntì láti {ts} kọ bo dátà tó wà lọ́wọ́lọ́wọ́?",
-    "createDescription": "Ṣẹ̀dá afẹ́yìntì dátà OmniRoute",
+    "createDescription": "Ṣẹ̀dá afẹ́yìntì dátà 67router",
     "nameOpt": "Orúkọ àdáni fún afẹ́yìntì",
     "cloudOpt": "Gbé afẹ́yìntì sókè sí ibi ìpamọ́ àwọsánmà",
     "encryptOpt": "Fi AES-256-GCM parọ́ afẹ́yìntì",
@@ -321,7 +321,7 @@
     "clearFailed": "Pípa cache rẹ́ kùnà."
   },
   "redis": {
-    "description": "Ṣí container Redis àdúgbò kan pẹ̀lú títẹ̀ ẹ̀ẹ̀kan (Podman tàbí Docker) fún caching àti títọpa ìpín iṣẹ́ OmniRoute"
+    "description": "Ṣí container Redis àdúgbò kan pẹ̀lú títẹ̀ ẹ̀ẹ̀kan (Podman tàbí Docker) fún caching àti títọpa ìpín iṣẹ́ 67router"
   },
   "test": {
     "description": "Dán ìsopọ̀ olùpèsè kan wò",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Ṣàkóso àwọn ìlànà ìfúnni-láṣẹ OmniRoute",
+    "description": "Ṣàkóso àwọn ìlànà ìfúnni-láṣẹ 67router",
     "list": {
       "description": "Ṣe àkójọ àwọn ìlànà",
       "kind": "Ṣe àsẹ̀ nípasẹ̀ irú (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Ṣètò kí o sì ṣàyẹ̀wò ọ̀nà ṣiṣàn ìfúnpọ̀ OmniRoute",
+    "description": "Ṣètò kí o sì ṣàyẹ̀wò ọ̀nà ṣiṣàn ìfúnpọ̀ 67router",
     "status": {
       "description": "Ṣàfihàn ipò àti àwọn ètò ìfúnpọ̀ lọ́wọ́lọ́wọ́"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Yí túúnẹ́lì {type} padà? (a ó ṣẹ̀dá URL tuntun)"
   },
   "stop": {
-    "description": "Dá olupin OmniRoute dúró",
+    "description": "Dá olupin 67router dúró",
     "stopping": "Ń dá olupin dúró (PID {pid})...",
     "stopped": "A ti dá olupin dúró.",
     "notRunning": "Kò sí olupin kankan tó ń ṣiṣẹ́.",
     "portFallback": "A kò rí fáìlì PID, ń gbìyànjú láti dá a dúró nípasẹ̀ port..."
   },
   "restart": {
-    "description": "Tun olupin OmniRoute bẹ̀rẹ̀",
-    "restarting": "Ń tún sáfà OmniRoute bẹ̀rẹ̀..."
+    "description": "Tun olupin 67router bẹ̀rẹ̀",
+    "restarting": "Ń tún sáfà 67router bẹ̀rẹ̀..."
   },
   "dashboard": {
-    "description": "Ṣí pátákó ìdarí OmniRoute nínú aṣàwákiri",
+    "description": "Ṣí pátákó ìdarí 67router nínú aṣàwákiri",
     "opening": "Ń ṣí pátákó ìdarí ní {url}",
     "urlOnly": "Tẹ URL pátákó ìdarí jáde láìṣí aṣàwákiri",
     "tui": "Ṣí pátákó ìdarí TUI alábáṣepọ̀ (ojú-ìṣàmúlò ebute, taabu 7)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Ṣàkóso àwọn ọgbọ́n OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Ṣàkóso àwọn ọgbọ́n 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Ṣe àkójọ àwọn ọgbọ́n tí a ti fi sílẹ̀",
       "type": "Ṣe àlẹ̀mọ́ nípasẹ̀ irú (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Ṣàkóso ìrántí ìjíròrò OmniRoute (FTS5 + vector)",
+    "description": "Ṣàkóso ìrántí ìjíròrò 67router (FTS5 + vector)",
     "search": {
       "description": "Ṣàwárí àwọn àkọsílẹ̀ ìrántí nípasẹ̀ ìbéèrè ìtumọ̀",
       "type": "Ṣe àlẹ̀mọ́ nípa irú ìrántí (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Ṣàkóso àwọn webhook OmniRoute",
+    "description": "Ṣàkóso àwọn webhook 67router",
     "events": {
       "description": "Ṣàtòjọ gbogbo irú ìṣẹ̀lẹ̀ webhook tó wà"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Olùdarí AI ọlọ́gbọ́n pẹ̀lú ìpadà-aifọwọ́yi",
+    "description": "67router — Olùdarí AI ọlọ́gbọ́n pẹ̀lú ìpadà-aifọwọ́yi",
     "version": "Ṣàfihàn ẹ̀dà kí o sì jáde",
     "output": "Ọ̀nà àgbékalẹ̀ àbájáde (table, json, jsonl, csv)",
     "quiet": "Má ṣe ṣàfihàn àbájáde tí kò ṣe pàtàkì",
     "no_color": "Pa àbájáde aláwọ̀ rẹ́",
     "timeout": "Àkókò ìparí ìbéèrè HTTP ní ìṣẹ́jú-àáyá kékeré",
-    "api_key": "Kọ́kọ́rọ́ API fún olupin OmniRoute",
-    "base_url": "URL ìpìlẹ̀ olupin OmniRoute",
+    "api_key": "Kọ́kọ́rọ́ API fún olupin 67router",
+    "base_url": "URL ìpìlẹ̀ olupin 67router",
     "context": "Àyíká/prófáìlì olupin láti lò fún àṣẹ yìí",
     "lang": "Ṣètò èdè àfihàn CLI (ó borí OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Wọlé sí OpenAPI spec OmniRoute kí o sì dán an wò",
+    "description": "Wọlé sí OpenAPI spec 67router kí o sì dán an wò",
     "dump": {
       "description": "Tú OpenAPI spec jáde sí stdout tàbí fáìlì",
       "format": "Ọ̀nà àgbéjáde: yaml|json (àìyípadà: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Ṣí ojú ìdarí OmniRoute pàtó kan nínú aṣàwákiri",
+    "description": "Ṣí ojú ìdarí 67router pàtó kan nínú aṣàwákiri",
     "url": "Tẹ URL nìkan jáde, má ṣe ṣí aṣàwákiri"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Mú ìṣètò bá ara mu láàárín àwọn instance OmniRoute",
+    "description": "Mú ìṣètò bá ara mu láàárín àwọn instance 67router",
     "push": {
       "description": "Fi ìṣètò ránṣẹ́ sí cloud tàbí instance jíjìn"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Ṣàsẹ̀ nípa ìpele (error,warn,info) — fi kọ́mà yà wọ́n",
     "lines": "Iye àwọn ìlà láti gba",
     "timeout": "Àkókò ìparí àsopọ̀ ní ms",
-    "baseUrl": "URL ìpìlẹ̀ API OmniRoute",
+    "baseUrl": "URL ìpìlẹ̀ API 67router",
     "requestId": "Ṣàsẹ̀ nípa ID ìbéèrè",
     "apiKey": "Ṣàsẹ̀ nípa kọ́kọ́rọ́ API",
     "combo": "Ṣe àlẹ̀mọ́ pẹ̀lú orúkọ combo",
@@ -1244,10 +1244,10 @@
     "description": "Ṣàkóso àmì àtẹ ìṣàmúlò ètò",
     "show": "Fi àmì àtẹ hàn (bí server bá ń ṣiṣẹ́ pẹ̀lú --tray)",
     "hide": "Fi àmì àtẹ pamọ́",
-    "quit": "Jáde kúrò ní OmniRoute nípasẹ̀ àtẹ"
+    "quit": "Jáde kúrò ní 67router nípasẹ̀ àtẹ"
   },
   "autostart": {
-    "description": "Ṣàkóso ìbẹ̀rẹ̀ aládàáṣiṣẹ́ OmniRoute nígbà ìgbéjáde (Linux: iṣẹ́ oníṣe systemd)",
+    "description": "Ṣàkóso ìbẹ̀rẹ̀ aládàáṣiṣẹ́ 67router nígbà ìgbéjáde (Linux: iṣẹ́ oníṣe systemd)",
     "enable": "Mú ìbẹ̀rẹ̀ aládàáṣiṣẹ́ ṣiṣẹ́ nígbà ìgbéjáde",
     "disable": "Pa ìbẹ̀rẹ̀ aládàáṣiṣẹ́ nígbà ìgbéjáde",
     "toggle": "Yí ipò ìbẹ̀rẹ̀ aládàáṣiṣẹ́ padà nígbà ìgbéjáde",
@@ -1279,19 +1279,19 @@
     "scaffold": "Ṣẹ̀dá àwòṣe ìpilẹ̀ plugin tuntun"
   },
   "launch": {
-    "description": "Ṣí Claude Code tí a darí sí OmniRoute (àdúgbò tàbí jíjìnnà, pẹ̀lú --profile)",
+    "description": "Ṣí Claude Code tí a darí sí 67router (àdúgbò tàbí jíjìnnà, pẹ̀lú --profile)",
     "token": "Token tí Claude client gbọ́dọ̀ fi ránṣẹ́ (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "A kò lè dé OmniRoute ní {port}. Bẹ̀rẹ̀ rẹ̀ pẹ̀lú 'omniroute serve'.",
+    "notRunning": "A kò lè dé 67router ní {port}. Bẹ̀rẹ̀ rẹ̀ pẹ̀lú 'omniroute serve'.",
     "notFound": "A kò rí CLI 'claude' nínú PATH."
   },
   "run": {
-    "description": "Ṣe ìfilọ́lẹ̀ ibi-àfojúsùn CLI tí a ṣe àtìlẹ́yìn fún nípasẹ̀ OmniRoute"
+    "description": "Ṣe ìfilọ́lẹ̀ ibi-àfojúsùn CLI tí a ṣe àtìlẹ́yìn fún nípasẹ̀ 67router"
   },
   "setupClaude": {
-    "description": "Ṣẹ̀dá àwọn prófáìlì Claude Code ~/.claude/profiles láti inú àkójọ awoṣe OmniRoute"
+    "description": "Ṣẹ̀dá àwọn prófáìlì Claude Code ~/.claude/profiles láti inú àkójọ awoṣe 67router"
   },
   "connect": {
-    "description": "Sopọ̀ mọ́ olupin OmniRoute jíjìn kí o sì wọ ipò jíjìn"
+    "description": "Sopọ̀ mọ́ olupin 67router jíjìn kí o sì wọ ipò jíjìn"
   },
   "tokens": {
     "description": "Ṣàkóso àwọn àmì ìráyè CLI tí a fi ààlà sí (ipò jíjìn)"
@@ -1300,10 +1300,10 @@
     "description": "Yan olùpèsè+awoṣe láti inú olupin tó ń ṣiṣẹ́ kí o sì ṣètò CLI agbègbè tí a ṣe àtìlẹ́yìn fún"
   },
   "launchCodex": {
-    "description": "Ṣe ìfilọ́lẹ̀ Codex CLI tí a tọ́ka sí OmniRoute (VPS agbègbè tàbí jíjìn)"
+    "description": "Ṣe ìfilọ́lẹ̀ Codex CLI tí a tọ́ka sí 67router (VPS agbègbè tàbí jíjìn)"
   },
   "setupCodex": {
-    "description": "Ṣẹ̀dá àwọn fáìlì prófáìlì ~/.codex láti inú àkójọ awoṣe alààyè OmniRoute"
+    "description": "Ṣẹ̀dá àwọn fáìlì prófáìlì ~/.codex láti inú àkójọ awoṣe alààyè 67router"
   },
   "packs": {
     "description": "Ṣàkóso àwọn àpò runtime àṣàyàn (ML / aládàáṣiṣẹ́ aṣàwákiri)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "àpò tí a kò mọ̀: {name}",
     "errNoIndex": "a kò rí àtọ́ka àpò; fi --source <dir> tó ní payload àpò náà kọjá (àwọn bundle desktop ló máa ń fi í ránṣẹ́ lẹ́gbẹ̀ẹ́ app náà)",
     "installed": "a ti fi àpò \"{name}\" sílẹ̀, a sì ti jẹ́rìí rẹ̀ ní {dir}",
-    "restartHint": "tun olupin OmniRoute (tàbí app desktop) bẹ̀rẹ̀ kí runtime lè lo àpò náà",
+    "restartHint": "tun olupin 67router (tàbí app desktop) bẹ̀rẹ̀ kí runtime lè lo àpò náà",
     "removed": "a ti yọ àpò \"{name}\"",
     "notInstalled": "a kò fi àpò \"{name}\" sílẹ̀",
     "verifyOk": "a ti jẹ́rìí gbogbo àwọn àpò tí a fi sílẹ̀",

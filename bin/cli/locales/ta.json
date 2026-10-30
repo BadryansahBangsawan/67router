@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "பிழை: {message}",
-    "serverOffline": "OmniRoute சேவையகம் ஆஃப்லைனில் உள்ளது. இதைக் கொண்டு தொடங்கவும்: omniroute serve",
+    "serverOffline": "67router சேவையகம் ஆஃப்லைனில் உள்ளது. இதைக் கொண்டு தொடங்கவும்: omniroute serve",
     "authRequired": "அங்கீகாரம் தேவை. OMNIROUTE_API_KEY-ஐ அமைக்கவும் அல்லது இதை இயக்கவும்: omniroute setup",
     "rateLimited": "விகித வரம்பு மீறப்பட்டது. {seconds} வினாடிகளுக்குப் பிறகு மீண்டும் முயற்சிக்கவும்.",
     "timeout": "கோரிக்கை {ms} மி.வி.க்குப் பிறகு காலாவதியானது.",
@@ -15,7 +15,7 @@
     "yesOpt": "உறுதிப்படுத்தல் கேள்வியைத் தவிர்"
   },
   "setup": {
-    "title": "OmniRoute அமைப்பு",
+    "title": "67router அமைப்பு",
     "passwordPrompt": "நிர்வாகி கடவுச்சொல்",
     "providerPrompt": "இயல்புநிலை provider (தவிர்க்க காலியாக விடவும்)",
     "done": "அமைப்பு முடிந்தது",
@@ -30,7 +30,7 @@
     "opencode": "OpenCode-க்கான தொகுக்கப்பட்ட @omniroute/opencode-plugin-ஐ நிறுவி உள்ளமைக்கவும்"
   },
   "doctor": {
-    "title": "OmniRoute பரிசோதனை",
+    "title": "67router பரிசோதனை",
     "dbOk": "தரவுத்தளம்: சரி ({path})",
     "dbMissing": "தரவுத்தளம் தொடங்கப்படவில்லை — `omniroute setup`-ஐ இயக்கவும்",
     "portOk": "போர்ட் {port}: கிடைக்கிறது",
@@ -82,7 +82,7 @@
       "providerOpt": "வழங்குநர் பெயரால் வடிகட்டு",
       "header": "ID         வழங்குநர்       பெயர்                     காலாவதி நிலை  சோதனை நிலை  காத்திருப்பு முடியும் நேரம்",
       "noData": "வழங்குநர் இணைப்புத் தரவு எதுவும் கிடைக்கவில்லை.",
-      "requiresServer": "providers status-க்கு OmniRoute சேவையகம் இயங்கிக்கொண்டிருக்க வேண்டும்."
+      "requiresServer": "providers status-க்கு 67router சேவையகம் இயங்கிக்கொண்டிருக்க வேண்டும்."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "வழங்குநருக்கான API விசையைச் சேர் அல்லது புதுப்பி",
     "listDescription": "உள்ளமைக்கப்பட்ட அனைத்து API விசைகளையும் பட்டியலிடு",
     "removeDescription": "வழங்குநருக்கான API விசையை அகற்று",
-    "regenerateDescription": "OmniRoute API விசையை மீண்டும் உருவாக்கு",
-    "revokeDescription": "OmniRoute API விசையைத் திரும்பப் பெறு",
+    "regenerateDescription": "67router API விசையை மீண்டும் உருவாக்கு",
+    "revokeDescription": "67router API விசையைத் திரும்பப் பெறு",
     "revealDescription": "மறைக்கப்படாத API விசை மதிப்பை வெளிப்படுத்து",
     "usageDescription": "API விசைக்கான சமீபத்திய பயன்பாட்டைக் காட்டு",
     "usageLimitOpt": "சமீபத்திய கோரிக்கைகளின் எண்ணிக்கை",
@@ -225,7 +225,7 @@
     "noCombo": "பொருந்தும் combo எதுவும் கிடைக்கவில்லை. இதைக் கொண்டு ஒன்றை உள்ளமைக்கவும்: omniroute combo create"
   },
   "chat": {
-    "description": "OmniRoute-க்கு ஒரு one-shot chat prompt-ஐ அனுப்பு",
+    "description": "67router-க்கு ஒரு one-shot chat prompt-ஐ அனுப்பு",
     "file": "கோப்பிலிருந்து prompt-ஐ படி",
     "stdin": "stdin-இலிருந்து prompt-ஐ படி",
     "system": "System prompt",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "OmniRoute server-ஐத் தொடங்கு (இயல்புநிலைச் செயல்)",
-    "starting": "{port} port-இல் OmniRoute server தொடங்கப்படுகிறது...",
+    "description": "67router server-ஐத் தொடங்கு (இயல்புநிலைச் செயல்)",
+    "starting": "{port} port-இல் 67router server தொடங்கப்படுகிறது...",
     "ready": "http://localhost:{port} இல் தயாராக உள்ளது",
     "stopping": "server நிறுத்தப்படுகிறது (PID {pid})...",
     "stopped": "server நிறுத்தப்பட்டது.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "காப்புப்பிரதி",
-    "description": "OmniRoute தரவின் காப்புப்பிரதியை உருவாக்கு",
+    "description": "67router தரவின் காப்புப்பிரதியை உருவாக்கு",
     "creating": "காப்புப்பிரதி உருவாக்கப்படுகிறது...",
     "done": "காப்புப்பிரதி {path} இல் சேமிக்கப்பட்டது",
     "noFiles": "காப்புப்பிரதி எடுக்க கோப்புகள் எதுவுமில்லை (தரவுத்தளம் துவக்கப்படவில்லை)",
@@ -277,7 +277,7 @@
     "noBackups": "காப்புப்பிரதிகள் எதுவும் கிடைக்கவில்லை.",
     "notFound": "காப்புப்பிரதி கிடைக்கவில்லை: {name}",
     "confirmRestore": "தற்போதைய தரவை {ts} நேரத்திலுள்ள காப்புப்பிரதியால் மேலெழுதவா?",
-    "createDescription": "OmniRoute தரவின் காப்புப்பிரதியை உருவாக்கு",
+    "createDescription": "67router தரவின் காப்புப்பிரதியை உருவாக்கு",
     "nameOpt": "தனிப்பயன் காப்புப்பிரதிப் பெயர்",
     "cloudOpt": "காப்புப்பிரதியை மேகச் சேமிப்பகத்தில் பதிவேற்று",
     "encryptOpt": "AES-256-GCM மூலம் காப்புப்பிரதியை மறைகுறியாக்கு",
@@ -321,7 +321,7 @@
     "clearFailed": "தற்காலிகச் சேமிப்பை அழிக்க முடியவில்லை."
   },
   "redis": {
-    "description": "OmniRoute தற்காலிக சேமிப்பு மற்றும் ஒதுக்கீடு கண்காணிப்புக்காக ஒரே கிளிக்கில் உள்ளூர் Redis கொள்கலனை (Podman அல்லது Docker) தொடங்கவும்"
+    "description": "67router தற்காலிக சேமிப்பு மற்றும் ஒதுக்கீடு கண்காணிப்புக்காக ஒரே கிளிக்கில் உள்ளூர் Redis கொள்கலனை (Podman அல்லது Docker) தொடங்கவும்"
   },
   "test": {
     "description": "வழங்குநர் இணைப்பைச் சோதிக்கவும்",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "OmniRoute அங்கீகாரக் கொள்கைகளை நிர்வகி",
+    "description": "67router அங்கீகாரக் கொள்கைகளை நிர்வகி",
     "list": {
       "description": "கொள்கைகளைப் பட்டியலிடு",
       "kind": "வகையின்படி வடிகட்டு (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "OmniRoute சுருக்கச் செயலாக்கத் தொடரை உள்ளமைத்து ஆய்வுசெய்",
+    "description": "67router சுருக்கச் செயலாக்கத் தொடரை உள்ளமைத்து ஆய்வுசெய்",
     "status": {
       "description": "தற்போதைய சுருக்க நிலை மற்றும் அமைப்புகளைக் காட்டு"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "{type} சுரங்க URL-ஐ மாற்றவா? (ஒரு புதிய URL உருவாக்கப்படும்)"
   },
   "stop": {
-    "description": "OmniRoute சேவையகத்தை நிறுத்து",
+    "description": "67router சேவையகத்தை நிறுத்து",
     "stopping": "சேவையகம் நிறுத்தப்படுகிறது (PID {pid})...",
     "stopped": "சேவையகம் நிறுத்தப்பட்டது.",
     "notRunning": "எந்தச் சேவையகமும் இயங்கவில்லை.",
     "portFallback": "PID கோப்பு கிடைக்கவில்லை, போர்ட் அடிப்படையில் நிறுத்த முயற்சிக்கப்படுகிறது..."
   },
   "restart": {
-    "description": "OmniRoute சேவையகத்தை மறுதொடக்கம் செய்",
-    "restarting": "OmniRoute சேவையகம் மறுதொடக்கம் செய்யப்படுகிறது..."
+    "description": "67router சேவையகத்தை மறுதொடக்கம் செய்",
+    "restarting": "67router சேவையகம் மறுதொடக்கம் செய்யப்படுகிறது..."
   },
   "dashboard": {
-    "description": "OmniRoute கட்டுப்பாட்டுப் பலகையை உலாவியில் திற",
+    "description": "67router கட்டுப்பாட்டுப் பலகையை உலாவியில் திற",
     "opening": "{url} இல் கட்டுப்பாட்டுப் பலகை திறக்கப்படுகிறது",
     "urlOnly": "உலாவியைத் திறக்காமல் கட்டுப்பாட்டுப் பலகை URL-ஐ அச்சிடு",
     "tui": "ஊடாடும் TUI கட்டுப்பாட்டுப் பலகையைத் திற (முனைய UI, 7 தாவல்கள்)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "OmniRoute திறன்களை நிர்வகி (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "67router திறன்களை நிர்வகி (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "நிறுவப்பட்ட திறன்களைப் பட்டியலிடு",
       "type": "வகை மூலம் வடிகட்டு (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "OmniRoute உரையாடல் நினைவகத்தை நிர்வகிக்கவும் (FTS5 + vector)",
+    "description": "67router உரையாடல் நினைவகத்தை நிர்வகிக்கவும் (FTS5 + vector)",
     "search": {
       "description": "பொருள்சார் வினவல் மூலம் நினைவக உள்ளீடுகளைத் தேடவும்",
       "type": "நினைவக வகையின்படி வடிகட்டவும் (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "OmniRoute வெப்ஹுக்குகளை நிர்வகி",
+    "description": "67router வெப்ஹுக்குகளை நிர்வகி",
     "events": {
       "description": "கிடைக்கக்கூடிய அனைத்து வெப்ஹுக் நிகழ்வு வகைகளையும் பட்டியலிடு"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — தானியங்கு மாற்றுவழியுடன் கூடிய நுண்ணறிவு AI வழிப்படுத்தி",
+    "description": "67router — தானியங்கு மாற்றுவழியுடன் கூடிய நுண்ணறிவு AI வழிப்படுத்தி",
     "version": "பதிப்பை அச்சிட்டு வெளியேறு",
     "output": "வெளியீட்டு வடிவம் (table, json, jsonl, csv)",
     "quiet": "அத்தியாவசியமற்ற வெளியீட்டை மறை",
     "no_color": "வண்ண வெளியீட்டை முடக்கு",
     "timeout": "HTTP கோரிக்கைக்கான நேர முடிவு மில்லிவிநாடிகளில்",
-    "api_key": "OmniRoute சேவையகத்திற்கான API விசை",
-    "base_url": "OmniRoute சேவையகத்தின் அடிப்படை URL",
+    "api_key": "67router சேவையகத்திற்கான API விசை",
+    "base_url": "67router சேவையகத்தின் அடிப்படை URL",
     "context": "இந்தக் கட்டளைக்குப் பயன்படுத்த வேண்டிய சேவையகச் சூழல்/profile",
     "lang": "CLI காட்சி மொழியை அமை (OMNIROUTE_LANG-ஐ மீறும்)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "OmniRoute OpenAPI விவரக்குறிப்பை அணுகிச் சோதி",
+    "description": "67router OpenAPI விவரக்குறிப்பை அணுகிச் சோதி",
     "dump": {
       "description": "OpenAPI விவரக்குறிப்பை stdout அல்லது கோப்பில் வெளியிடு",
       "format": "வெளியீட்டு வடிவம்: yaml|json (இயல்புநிலை: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "குறிப்பிட்ட OmniRoute டாஷ்போர்டு பக்கத்தை உலாவியில் திறக்கவும்",
+    "description": "குறிப்பிட்ட 67router டாஷ்போர்டு பக்கத்தை உலாவியில் திறக்கவும்",
     "url": "URL-ஐ மட்டும் அச்சிடவும்; உலாவியைத் திறக்க வேண்டாம்"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "OmniRoute நிகழ்வுகளுக்கிடையே உள்ளமைவை ஒத்திசைக்கவும்",
+    "description": "67router நிகழ்வுகளுக்கிடையே உள்ளமைவை ஒத்திசைக்கவும்",
     "push": {
       "description": "உள்ளமைவை கிளவுட் அல்லது தொலைநிலை நிகழ்வுக்கு அனுப்பவும்"
     },
@@ -1228,7 +1228,7 @@
     "filter": "நிலைப்படி வடிகட்டு (error,warn,info) — காற்புள்ளியால் பிரிக்கப்பட்டவை",
     "lines": "பெற வேண்டிய வரிகளின் எண்ணிக்கை",
     "timeout": "இணைப்பு நேர முடிவு, ms-இல்",
-    "baseUrl": "OmniRoute API அடிப்படை URL",
+    "baseUrl": "67router API அடிப்படை URL",
     "requestId": "கோரிக்கை ID மூலம் வடிகட்டு",
     "apiKey": "API விசை மூலம் வடிகட்டு",
     "combo": "காம்போ பெயர் மூலம் வடிகட்டு",
@@ -1244,10 +1244,10 @@
     "description": "கணினித் தட்டு ஐகானைக் கட்டுப்படுத்து",
     "show": "தட்டு ஐகானைக் காட்டு (--tray உடன் சேவையகம் இயங்கினால்)",
     "hide": "தட்டு ஐகானை மறை",
-    "quit": "தட்டு வழியாக OmniRoute-இலிருந்து வெளியேறு"
+    "quit": "தட்டு வழியாக 67router-இலிருந்து வெளியேறு"
   },
   "autostart": {
-    "description": "துவக்கத்தின்போது OmniRoute தானாகத் தொடங்குவதை நிர்வகி (Linux: systemd பயனர் சேவை)",
+    "description": "துவக்கத்தின்போது 67router தானாகத் தொடங்குவதை நிர்வகி (Linux: systemd பயனர் சேவை)",
     "enable": "துவக்கத்தின்போது தானாகத் தொடங்குவதை இயக்கு",
     "disable": "துவக்கத்தின்போது தானாகத் தொடங்குவதை முடக்கு",
     "toggle": "துவக்கத்தின்போது தானாகத் தொடங்குவதை மாற்று",
@@ -1279,19 +1279,19 @@
     "scaffold": "புதிய செருகுநிரலுக்கான அடிப்படை வார்ப்புருவை உருவாக்கவும்"
   },
   "launch": {
-    "description": "OmniRoute-ஐ நோக்கி Claude Code-ஐத் தொடங்கவும் (உள்ளூர் அல்லது தொலைநிலை, --profile உடன்)",
+    "description": "67router-ஐ நோக்கி Claude Code-ஐத் தொடங்கவும் (உள்ளூர் அல்லது தொலைநிலை, --profile உடன்)",
     "token": "Claude கிளையன்ட் அனுப்ப வேண்டிய டோக்கன் (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "{port} இல் OmniRoute-ஐ அணுக முடியவில்லை. 'omniroute serve' மூலம் அதைத் தொடங்கவும்.",
+    "notRunning": "{port} இல் 67router-ஐ அணுக முடியவில்லை. 'omniroute serve' மூலம் அதைத் தொடங்கவும்.",
     "notFound": "'claude' CLI, PATH இல் காணப்படவில்லை."
   },
   "run": {
-    "description": "OmniRoute வழியாக ஆதரிக்கப்படும் CLI இலக்கைத் தொடங்கவும்"
+    "description": "67router வழியாக ஆதரிக்கப்படும் CLI இலக்கைத் தொடங்கவும்"
   },
   "setupClaude": {
-    "description": "OmniRoute மாதிரிப் பட்டியலிலிருந்து ~/.claude/profiles Claude Code சுயவிவரங்களை உருவாக்கவும்"
+    "description": "67router மாதிரிப் பட்டியலிலிருந்து ~/.claude/profiles Claude Code சுயவிவரங்களை உருவாக்கவும்"
   },
   "connect": {
-    "description": "தொலைநிலை OmniRoute சேவையகத்துடன் இணைந்து தொலைநிலைப் பயன்முறைக்குச் செல்லவும்"
+    "description": "தொலைநிலை 67router சேவையகத்துடன் இணைந்து தொலைநிலைப் பயன்முறைக்குச் செல்லவும்"
   },
   "tokens": {
     "description": "வரம்பிடப்பட்ட CLI அணுகல் டோக்கன்களை நிர்வகிக்கவும் (தொலைநிலைப் பயன்முறை)"
@@ -1300,10 +1300,10 @@
     "description": "செயலில் உள்ள சேவையகத்திலிருந்து ஒரு வழங்குநர்+மாதிரியைத் தேர்ந்தெடுத்து, ஆதரிக்கப்படும் உள்ளூர் CLI-ஐ உள்ளமைக்கவும்"
   },
   "launchCodex": {
-    "description": "OmniRoute-ஐ நோக்கி Codex CLI-ஐத் தொடங்கவும் (உள்ளூர் அல்லது தொலைநிலை VPS)"
+    "description": "67router-ஐ நோக்கி Codex CLI-ஐத் தொடங்கவும் (உள்ளூர் அல்லது தொலைநிலை VPS)"
   },
   "setupCodex": {
-    "description": "OmniRoute-இன் நேரடி மாதிரிப் பட்டியலிலிருந்து ~/.codex சுயவிவரக் கோப்புகளை உருவாக்கவும்"
+    "description": "67router-இன் நேரடி மாதிரிப் பட்டியலிலிருந்து ~/.codex சுயவிவரக் கோப்புகளை உருவாக்கவும்"
   },
   "packs": {
     "description": "விருப்ப இயக்கநேரத் தொகுப்புகளை நிர்வகிக்கவும் (ML / உலாவித் தானியக்கம்)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "அறியப்படாத தொகுப்பு: {name}",
     "errNoIndex": "தொகுப்புக் குறியீடு காணப்படவில்லை; தொகுப்பு உள்ளடக்கத்தைக் கொண்டுள்ள --source <dir> என்பதை வழங்கவும் (desktop bundles அதை பயன்பாட்டிற்கு அருகில் கொண்டிருக்கும்)",
     "installed": "\"{name}\" தொகுப்பு {dir} இல் நிறுவப்பட்டு சரிபார்க்கப்பட்டது",
-    "restartHint": "இயக்கநேரம் தொகுப்பைப் பயன்படுத்தும் வகையில் OmniRoute சேவையகத்தை (அல்லது desktop app-ஐ) மறுதொடக்கம் செய்யவும்",
+    "restartHint": "இயக்கநேரம் தொகுப்பைப் பயன்படுத்தும் வகையில் 67router சேவையகத்தை (அல்லது desktop app-ஐ) மறுதொடக்கம் செய்யவும்",
     "removed": "\"{name}\" தொகுப்பு அகற்றப்பட்டது",
     "notInstalled": "\"{name}\" தொகுப்பு நிறுவப்படவில்லை",
     "verifyOk": "நிறுவப்பட்ட அனைத்து தொகுப்புகளும் சரிபார்க்கப்பட்டன",

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "កំហុស៖ {message}",
-    "serverOffline": "ម៉ាស៊ីនមេ OmniRoute មិនដំណើរការ។ ចាប់ផ្ដើមវាដោយ៖ omniroute serve",
+    "serverOffline": "ម៉ាស៊ីនមេ 67router មិនដំណើរការ។ ចាប់ផ្ដើមវាដោយ៖ omniroute serve",
     "authRequired": "ទាមទារការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ។ កំណត់ OMNIROUTE_API_KEY ឬដំណើរការ៖ omniroute setup",
     "rateLimited": "បានលើសដែនកំណត់អត្រា។ សាកល្បងម្ដងទៀតក្រោយ {seconds}s។",
     "timeout": "សំណើបានអស់ពេលក្រោយ {ms}ms។",
@@ -15,7 +15,7 @@
     "yesOpt": "រំលងសារស្នើឱ្យបញ្ជាក់"
   },
   "setup": {
-    "title": "ការដំឡើង OmniRoute",
+    "title": "ការដំឡើង 67router",
     "passwordPrompt": "ពាក្យសម្ងាត់អ្នកគ្រប់គ្រង",
     "providerPrompt": "អ្នកផ្ដល់សេវាលំនាំដើម (ទុកទទេដើម្បីរំលង)",
     "done": "ការដំឡើងបានបញ្ចប់",
@@ -30,7 +30,7 @@
     "opencode": "ដំឡើង និងកំណត់រចនាសម្ព័ន្ធ @omniroute/opencode-plugin ដែលបានភ្ជាប់មកជាមួយ សម្រាប់ OpenCode"
   },
   "doctor": {
-    "title": "ការវិនិច្ឆ័យ OmniRoute",
+    "title": "ការវិនិច្ឆ័យ 67router",
     "dbOk": "មូលដ្ឋានទិន្នន័យ៖ ដំណើរការល្អ ({path})",
     "dbMissing": "មូលដ្ឋានទិន្នន័យ៖ មិនទាន់បានចាប់ផ្ដើម — ដំណើរការ `omniroute setup`",
     "portOk": "ច្រក {port}៖ អាចប្រើបាន",
@@ -82,7 +82,7 @@
       "providerOpt": "ត្រងតាមឈ្មោះអ្នកផ្តល់សេវា",
       "header": "ID         អ្នកផ្តល់សេវា       ឈ្មោះ                     ស្ថានភាពផុតកំណត់  ស្ថានភាពតេស្ត  រយៈពេលរង់ចាំដល់",
       "noData": "មិនមានទិន្នន័យការតភ្ជាប់របស់អ្នកផ្តល់សេវាទេ។",
-      "requiresServer": "providers status តម្រូវឱ្យម៉ាស៊ីនមេ OmniRoute កំពុងដំណើរការ។"
+      "requiresServer": "providers status តម្រូវឱ្យម៉ាស៊ីនមេ 67router កំពុងដំណើរការ។"
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "បន្ថែម ឬធ្វើបច្ចុប្បន្នភាព API key សម្រាប់អ្នកផ្តល់សេវា",
     "listDescription": "រាយ API keys ដែលបានកំណត់រចនាសម្ព័ន្ធទាំងអស់",
     "removeDescription": "លុប API key សម្រាប់អ្នកផ្តល់សេវា",
-    "regenerateDescription": "បង្កើត OmniRoute API key ឡើងវិញ",
-    "revokeDescription": "ដកហូត OmniRoute API key",
+    "regenerateDescription": "បង្កើត 67router API key ឡើងវិញ",
+    "revokeDescription": "ដកហូត 67router API key",
     "revealDescription": "បង្ហាញតម្លៃ API key ដែលមិនបានបិទបាំង",
     "usageDescription": "បង្ហាញការប្រើប្រាស់ថ្មីៗសម្រាប់ API key",
     "usageLimitOpt": "ចំនួនសំណើថ្មីៗ",
@@ -225,7 +225,7 @@
     "noCombo": "រកមិនឃើញ combo ដែលត្រូវគ្នា។ កំណត់រចនាសម្ព័ន្ធមួយដោយប្រើ៖ omniroute combo create"
   },
   "chat": {
-    "description": "ផ្ញើ chat prompt មួយលើកទៅ OmniRoute",
+    "description": "ផ្ញើ chat prompt មួយលើកទៅ 67router",
     "file": "អាន prompt ពីឯកសារ",
     "stdin": "អាន prompt ពី stdin",
     "system": "ប្រូមប្រព័ន្ធ",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "ចាប់ផ្តើមម៉ាស៊ីនមេ OmniRoute (សកម្មភាពលំនាំដើម)",
-    "starting": "កំពុងចាប់ផ្តើមម៉ាស៊ីនមេ OmniRoute នៅលើ port {port}...",
+    "description": "ចាប់ផ្តើមម៉ាស៊ីនមេ 67router (សកម្មភាពលំនាំដើម)",
+    "starting": "កំពុងចាប់ផ្តើមម៉ាស៊ីនមេ 67router នៅលើ port {port}...",
     "ready": "រួចរាល់នៅ http://localhost:{port}",
     "stopping": "កំពុងបញ្ឈប់ម៉ាស៊ីនមេ (PID {pid})...",
     "stopped": "ម៉ាស៊ីនមេបានឈប់ហើយ។",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "ការបម្រុងទុក",
-    "description": "បង្កើតច្បាប់ចម្លងបម្រុងទុកនៃទិន្នន័យ OmniRoute",
+    "description": "បង្កើតច្បាប់ចម្លងបម្រុងទុកនៃទិន្នន័យ 67router",
     "creating": "កំពុងបង្កើតច្បាប់ចម្លងបម្រុងទុក...",
     "done": "បានរក្សាទុកច្បាប់ចម្លងបម្រុងទុកទៅ {path}",
     "noFiles": "គ្មានឯកសារសម្រាប់បម្រុងទុកទេ (មូលដ្ឋានទិន្នន័យមិនទាន់ត្រូវបានចាប់ផ្ដើម)",
@@ -277,7 +277,7 @@
     "noBackups": "រកមិនឃើញច្បាប់ចម្លងបម្រុងទុកទេ។",
     "notFound": "រកមិនឃើញច្បាប់ចម្លងបម្រុងទុក៖ {name}",
     "confirmRestore": "សរសេរជាន់លើទិន្នន័យបច្ចុប្បន្នដោយប្រើច្បាប់ចម្លងបម្រុងទុកពី {ts} មែនទេ?",
-    "createDescription": "បង្កើតច្បាប់ចម្លងបម្រុងទុកនៃទិន្នន័យ OmniRoute",
+    "createDescription": "បង្កើតច្បាប់ចម្លងបម្រុងទុកនៃទិន្នន័យ 67router",
     "nameOpt": "ឈ្មោះច្បាប់ចម្លងបម្រុងទុកផ្ទាល់ខ្លួន",
     "cloudOpt": "ផ្ទុកច្បាប់ចម្លងបម្រុងទុកឡើងទៅកន្លែងផ្ទុកលើពពក",
     "encryptOpt": "អ៊ិនគ្រីបច្បាប់ចម្លងបម្រុងទុកដោយប្រើ AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "មិនអាចសម្អាតឃ្លាំងសម្ងាត់បានទេ។"
   },
   "redis": {
-    "description": "បើកដំណើរការកុងតឺន័រ Redis មូលដ្ឋានដោយចុចតែម្តង (Podman ឬ Docker) សម្រាប់ឃ្លាំងសម្ងាត់ និងការតាមដានកូតារបស់ OmniRoute"
+    "description": "បើកដំណើរការកុងតឺន័រ Redis មូលដ្ឋានដោយចុចតែម្តង (Podman ឬ Docker) សម្រាប់ឃ្លាំងសម្ងាត់ និងការតាមដានកូតារបស់ 67router"
   },
   "test": {
     "description": "សាកល្បងការតភ្ជាប់ទៅអ្នកផ្តល់សេវា",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "គ្រប់គ្រងគោលការណ៍ផ្តល់សិទ្ធិរបស់ OmniRoute",
+    "description": "គ្រប់គ្រងគោលការណ៍ផ្តល់សិទ្ធិរបស់ 67router",
     "list": {
       "description": "រាយបញ្ជីគោលការណ៍",
       "kind": "ត្រងតាមប្រភេទ (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "កំណត់រចនាសម្ព័ន្ធ និងពិនិត្យបំពង់ដំណើរការបង្ហាប់របស់ OmniRoute",
+    "description": "កំណត់រចនាសម្ព័ន្ធ និងពិនិត្យបំពង់ដំណើរការបង្ហាប់របស់ 67router",
     "status": {
       "description": "បង្ហាញស្ថានភាព និងការកំណត់បង្ហាប់បច្ចុប្បន្ន"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "ប្ដូរផ្លូវរូងក្រោមដី {type}? (URL ថ្មីនឹងត្រូវបានបង្កើត)"
   },
   "stop": {
-    "description": "បញ្ឈប់ម៉ាស៊ីនមេ OmniRoute",
+    "description": "បញ្ឈប់ម៉ាស៊ីនមេ 67router",
     "stopping": "កំពុងបញ្ឈប់ម៉ាស៊ីនមេ (PID {pid})...",
     "stopped": "បានបញ្ឈប់ម៉ាស៊ីនមេ។",
     "notRunning": "មិនមានម៉ាស៊ីនមេកំពុងដំណើរការទេ។",
     "portFallback": "រកមិនឃើញឯកសារ PID ទេ កំពុងព្យាយាមបញ្ឈប់តាមរយៈច្រក..."
   },
   "restart": {
-    "description": "ចាប់ផ្ដើមម៉ាស៊ីនមេ OmniRoute ឡើងវិញ",
-    "restarting": "កំពុងចាប់ផ្តើមម៉ាស៊ីនមេ OmniRoute ឡើងវិញ..."
+    "description": "ចាប់ផ្ដើមម៉ាស៊ីនមេ 67router ឡើងវិញ",
+    "restarting": "កំពុងចាប់ផ្តើមម៉ាស៊ីនមេ 67router ឡើងវិញ..."
   },
   "dashboard": {
-    "description": "បើកផ្ទាំងគ្រប់គ្រង OmniRoute ក្នុងកម្មវិធីរុករក",
+    "description": "បើកផ្ទាំងគ្រប់គ្រង 67router ក្នុងកម្មវិធីរុករក",
     "opening": "កំពុងបើកផ្ទាំងគ្រប់គ្រងនៅ {url}",
     "urlOnly": "បង្ហាញតែ URL របស់ផ្ទាំងគ្រប់គ្រង ដោយមិនបើកកម្មវិធីរុករក",
     "tui": "បើកផ្ទាំងគ្រប់គ្រង TUI អន្តរកម្ម (ចំណុចប្រទាក់ស្ថានីយ មាន 7 ផ្ទាំង)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "គ្រប់គ្រងជំនាញ OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "គ្រប់គ្រងជំនាញ 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "រាយបញ្ជីជំនាញដែលបានដំឡើង",
       "type": "ត្រងតាមប្រភេទ (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "គ្រប់គ្រងអង្គចងចាំការសន្ទនារបស់ OmniRoute (FTS5 + vector)",
+    "description": "គ្រប់គ្រងអង្គចងចាំការសន្ទនារបស់ 67router (FTS5 + vector)",
     "search": {
       "description": "ស្វែងរកធាតុអង្គចងចាំតាមសំណួរបែបសទិសន័យ",
       "type": "ត្រងតាមប្រភេទអង្គចងចាំ (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "គ្រប់គ្រង webhook របស់ OmniRoute",
+    "description": "គ្រប់គ្រង webhook របស់ 67router",
     "events": {
       "description": "រាយប្រភេទព្រឹត្តិការណ៍ webhook ដែលមានទាំងអស់"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — រ៉ោតទ័រ AI ឆ្លាតវៃជាមួយការប្ដូរទៅជម្រើសបម្រុងដោយស្វ័យប្រវត្តិ",
+    "description": "67router — រ៉ោតទ័រ AI ឆ្លាតវៃជាមួយការប្ដូរទៅជម្រើសបម្រុងដោយស្វ័យប្រវត្តិ",
     "version": "បង្ហាញកំណែ ហើយចាកចេញ",
     "output": "ទម្រង់លទ្ធផល (table, json, jsonl, csv)",
     "quiet": "លាក់លទ្ធផលដែលមិនចាំបាច់",
     "no_color": "បិទការបង្ហាញលទ្ធផលជាពណ៌",
     "timeout": "រយៈពេលអស់កំណត់នៃសំណើ HTTP គិតជាមិល្លីវិនាទី",
-    "api_key": "សោ API សម្រាប់ម៉ាស៊ីនមេ OmniRoute",
-    "base_url": "URL មូលដ្ឋានរបស់ម៉ាស៊ីនមេ OmniRoute",
+    "api_key": "សោ API សម្រាប់ម៉ាស៊ីនមេ 67router",
+    "base_url": "URL មូលដ្ឋានរបស់ម៉ាស៊ីនមេ 67router",
     "context": "បរិបទ/ប្រវត្តិរូបម៉ាស៊ីនមេដែលត្រូវប្រើសម្រាប់ពាក្យបញ្ជានេះ",
     "lang": "កំណត់ភាសាបង្ហាញរបស់ CLI (ជំនួស OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "ចូលប្រើ និងសាកល្បងលក្ខណៈបច្ចេកទេស OmniRoute OpenAPI",
+    "description": "ចូលប្រើ និងសាកល្បងលក្ខណៈបច្ចេកទេស 67router OpenAPI",
     "dump": {
       "description": "បញ្ចេញលក្ខណៈបច្ចេកទេស OpenAPI ទៅ stdout ឬឯកសារ",
       "format": "ទម្រង់លទ្ធផល៖ yaml|json (លំនាំដើម៖ yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "បើកទំព័រផ្ទាំងគ្រប់គ្រង OmniRoute ជាក់លាក់មួយនៅក្នុងកម្មវិធីរុករក",
+    "description": "បើកទំព័រផ្ទាំងគ្រប់គ្រង 67router ជាក់លាក់មួយនៅក្នុងកម្មវិធីរុករក",
     "url": "បោះពុម្ពតែ URL ប៉ុណ្ណោះ កុំបើកកម្មវិធីរុករក"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "ធ្វើសមកាលកម្មការកំណត់រចនាសម្ព័ន្ធរវាង instance របស់ OmniRoute",
+    "description": "ធ្វើសមកាលកម្មការកំណត់រចនាសម្ព័ន្ធរវាង instance របស់ 67router",
     "push": {
       "description": "បញ្ជូនការកំណត់រចនាសម្ព័ន្ធទៅ cloud ឬ instance ពីចម្ងាយ"
     },
@@ -1228,7 +1228,7 @@
     "filter": "ត្រងតាមកម្រិត (error,warn,info) — បំបែកដោយសញ្ញាក្បៀស",
     "lines": "ចំនួនបន្ទាត់ដែលត្រូវទាញយក",
     "timeout": "រយៈពេលអស់កំណត់នៃការតភ្ជាប់គិតជា ms",
-    "baseUrl": "URL មូលដ្ឋានរបស់ OmniRoute API",
+    "baseUrl": "URL មូលដ្ឋានរបស់ 67router API",
     "requestId": "ត្រងតាម ID សំណើ",
     "apiKey": "ត្រងតាម API key",
     "combo": "ត្រងតាមឈ្មោះ combo",
@@ -1244,10 +1244,10 @@
     "description": "គ្រប់គ្រងរូបតំណាងក្នុងថាសប្រព័ន្ធ",
     "show": "បង្ហាញរូបតំណាងក្នុងថាស (ប្រសិនបើម៉ាស៊ីនមេកំពុងដំណើរការជាមួយ --tray)",
     "hide": "លាក់រូបតំណាងក្នុងថាស",
-    "quit": "ចាកចេញពី OmniRoute តាមរយៈថាសប្រព័ន្ធ"
+    "quit": "ចាកចេញពី 67router តាមរយៈថាសប្រព័ន្ធ"
   },
   "autostart": {
-    "description": "គ្រប់គ្រងការចាប់ផ្ដើមដោយស្វ័យប្រវត្តិរបស់ OmniRoute នៅពេលបើកប្រព័ន្ធ (Linux: systemd user service)",
+    "description": "គ្រប់គ្រងការចាប់ផ្ដើមដោយស្វ័យប្រវត្តិរបស់ 67router នៅពេលបើកប្រព័ន្ធ (Linux: systemd user service)",
     "enable": "បើកការចាប់ផ្ដើមដោយស្វ័យប្រវត្តិនៅពេលបើកប្រព័ន្ធ",
     "disable": "បិទការចាប់ផ្ដើមដោយស្វ័យប្រវត្តិនៅពេលបើកប្រព័ន្ធ",
     "toggle": "បិទបើកការចាប់ផ្ដើមដោយស្វ័យប្រវត្តិនៅពេលបើកប្រព័ន្ធ",
@@ -1279,19 +1279,19 @@
     "scaffold": "បង្កើតគ្រោងកូដគំរូដំបូងសម្រាប់កម្មវិធីជំនួយថ្មី"
   },
   "launch": {
-    "description": "បើកដំណើរការ Claude Code ដោយភ្ជាប់ទៅ OmniRoute (ក្នុងមូលដ្ឋាន ឬពីចម្ងាយ ជាមួយ --profile)",
+    "description": "បើកដំណើរការ Claude Code ដោយភ្ជាប់ទៅ 67router (ក្នុងមូលដ្ឋាន ឬពីចម្ងាយ ជាមួយ --profile)",
     "token": "ថូខឹនដែលកម្មវិធី Claude គួរផ្ញើ (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "មិនអាចចូលដំណើរការ OmniRoute នៅ {port} បានទេ។ ចាប់ផ្ដើមវាដោយប្រើ 'omniroute serve'។",
+    "notRunning": "មិនអាចចូលដំណើរការ 67router នៅ {port} បានទេ។ ចាប់ផ្ដើមវាដោយប្រើ 'omniroute serve'។",
     "notFound": "រកមិនឃើញ CLI 'claude' នៅក្នុង PATH ទេ។"
   },
   "run": {
-    "description": "ដំណើរការគោលដៅ CLI ដែលគាំទ្រតាមរយៈ OmniRoute"
+    "description": "ដំណើរការគោលដៅ CLI ដែលគាំទ្រតាមរយៈ 67router"
   },
   "setupClaude": {
-    "description": "បង្កើតប្រូហ្វាល Claude Code ក្នុង ~/.claude/profiles ពីកាតាឡុកម៉ូដែល OmniRoute"
+    "description": "បង្កើតប្រូហ្វាល Claude Code ក្នុង ~/.claude/profiles ពីកាតាឡុកម៉ូដែល 67router"
   },
   "connect": {
-    "description": "ភ្ជាប់ទៅម៉ាស៊ីនមេ OmniRoute ពីចម្ងាយ ហើយចូលរបៀបពីចម្ងាយ"
+    "description": "ភ្ជាប់ទៅម៉ាស៊ីនមេ 67router ពីចម្ងាយ ហើយចូលរបៀបពីចម្ងាយ"
   },
   "tokens": {
     "description": "គ្រប់គ្រងថូខឹនចូលប្រើ CLI ដែលមានវិសាលភាពកំណត់ (របៀបពីចម្ងាយ)"
@@ -1300,10 +1300,10 @@
     "description": "ជ្រើសរើសអ្នកផ្តល់សេវា+ម៉ូដែលពីម៉ាស៊ីនមេដែលកំពុងសកម្ម ហើយកំណត់រចនាសម្ព័ន្ធ CLI មូលដ្ឋានដែលគាំទ្រ"
   },
   "launchCodex": {
-    "description": "ដំណើរការ Codex CLI ដោយចង្អុលទៅ OmniRoute (VPS មូលដ្ឋាន ឬពីចម្ងាយ)"
+    "description": "ដំណើរការ Codex CLI ដោយចង្អុលទៅ 67router (VPS មូលដ្ឋាន ឬពីចម្ងាយ)"
   },
   "setupCodex": {
-    "description": "បង្កើតឯកសារប្រូហ្វាល ~/.codex ពីកាតាឡុកម៉ូដែលបន្តផ្ទាល់របស់ OmniRoute"
+    "description": "បង្កើតឯកសារប្រូហ្វាល ~/.codex ពីកាតាឡុកម៉ូដែលបន្តផ្ទាល់របស់ 67router"
   },
   "packs": {
     "description": "គ្រប់គ្រងកញ្ចប់ពេលដំណើរការជាជម្រើស (ML / ស្វ័យប្រវត្តិកម្មកម្មវិធីរុករក)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "មិនស្គាល់កញ្ចប់៖ {name}",
     "errNoIndex": "រកមិនឃើញលិបិក្រមកញ្ចប់ទេ; សូមបញ្ជូន --source <dir> ដែលផ្ទុកទិន្នន័យកញ្ចប់ (កញ្ចប់ desktop មានឯកសារនេះភ្ជាប់មកនៅក្បែរកម្មវិធី)",
     "installed": "កញ្ចប់ \"{name}\" ត្រូវបានដំឡើង និងផ្ទៀងផ្ទាត់នៅ {dir}",
-    "restartHint": "ចាប់ផ្ដើមម៉ាស៊ីនមេ OmniRoute (ឬកម្មវិធី desktop) ឡើងវិញ ដើម្បីឱ្យប្រព័ន្ធពេលដំណើរការទទួលស្គាល់កញ្ចប់នេះ",
+    "restartHint": "ចាប់ផ្ដើមម៉ាស៊ីនមេ 67router (ឬកម្មវិធី desktop) ឡើងវិញ ដើម្បីឱ្យប្រព័ន្ធពេលដំណើរការទទួលស្គាល់កញ្ចប់នេះ",
     "removed": "កញ្ចប់ \"{name}\" ត្រូវបានលុប",
     "notInstalled": "កញ្ចប់ \"{name}\" មិនត្រូវបានដំឡើងទេ",
     "verifyOk": "កញ្ចប់ដែលបានដំឡើងទាំងអស់ត្រូវបានផ្ទៀងផ្ទាត់",

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Kesalahan: {message}",
-    "serverOffline": "Server OmniRoute sedang offline. Mulai dengan: omniroute serve",
+    "serverOffline": "Server 67router sedang offline. Mulai dengan: omniroute serve",
     "authRequired": "Autentikasi diperlukan. Setel OMNIROUTE_API_KEY atau jalankan: omniroute setup",
     "rateLimited": "Batas permintaan terlampaui. Coba lagi dalam {seconds}d.",
     "timeout": "Permintaan habis waktu setelah {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Lewati konfirmasi"
   },
   "setup": {
-    "title": "Penyiapan OmniRoute",
+    "title": "Penyiapan 67router",
     "passwordPrompt": "Kata sandi admin",
     "providerPrompt": "Penyedia default (biarkan kosong untuk melewati)",
     "done": "Penyiapan selesai",
@@ -30,7 +30,7 @@
     "opencode": "Instal dan konfigurasikan @omniroute/opencode-plugin bawaan untuk OpenCode"
   },
   "doctor": {
-    "title": "Diagnostik OmniRoute",
+    "title": "Diagnostik 67router",
     "dbOk": "Basis data: OK ({path})",
     "dbMissing": "Basis data: belum diinisialisasi — jalankan `omniroute setup`",
     "portOk": "Port {port}: tersedia",
@@ -82,7 +82,7 @@
       "providerOpt": "Filter berdasarkan nama penyedia",
       "header": "ID         Penyedia       Nama                     Status Kedaluwarsa  Status Pengujian  Masa Tunggu Hingga",
       "noData": "Tidak ada data koneksi penyedia yang tersedia.",
-      "requiresServer": "providers status mengharuskan server OmniRoute berjalan."
+      "requiresServer": "providers status mengharuskan server 67router berjalan."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Tambahkan atau perbarui kunci API untuk penyedia",
     "listDescription": "Cantumkan semua kunci API yang dikonfigurasi",
     "removeDescription": "Hapus kunci API untuk penyedia",
-    "regenerateDescription": "Buat ulang kunci API OmniRoute",
-    "revokeDescription": "Cabut kunci API OmniRoute",
+    "regenerateDescription": "Buat ulang kunci API 67router",
+    "revokeDescription": "Cabut kunci API 67router",
     "revealDescription": "Tampilkan nilai kunci API tanpa penyamaran",
     "usageDescription": "Tampilkan penggunaan terbaru untuk kunci API",
     "usageLimitOpt": "Jumlah permintaan terbaru",
@@ -225,7 +225,7 @@
     "noCombo": "Tidak ditemukan combo yang cocok. Konfigurasikan dengan: omniroute combo create"
   },
   "chat": {
-    "description": "Kirim prompt chat sekali jalan ke OmniRoute",
+    "description": "Kirim prompt chat sekali jalan ke 67router",
     "file": "Baca prompt dari file",
     "stdin": "Baca prompt dari stdin",
     "system": "Prompt sistem",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Mulai server OmniRoute (tindakan default)",
-    "starting": "Memulai server OmniRoute pada port {port}...",
+    "description": "Mulai server 67router (tindakan default)",
+    "starting": "Memulai server 67router pada port {port}...",
     "ready": "Siap di http://localhost:{port}",
     "stopping": "Menghentikan server (PID {pid})...",
     "stopped": "Server dihentikan.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Cadangan",
-    "description": "Buat cadangan data OmniRoute",
+    "description": "Buat cadangan data 67router",
     "creating": "Membuat cadangan...",
     "done": "Cadangan disimpan ke {path}",
     "noFiles": "Tidak ada file untuk dicadangkan (basis data belum diinisialisasi)",
@@ -277,7 +277,7 @@
     "noBackups": "Tidak ditemukan cadangan.",
     "notFound": "Cadangan tidak ditemukan: {name}",
     "confirmRestore": "Timpa data saat ini dengan cadangan dari {ts}?",
-    "createDescription": "Buat cadangan data OmniRoute",
+    "createDescription": "Buat cadangan data 67router",
     "nameOpt": "Nama cadangan khusus",
     "cloudOpt": "Unggah cadangan ke penyimpanan cloud",
     "encryptOpt": "Enkripsi cadangan dengan AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Gagal membersihkan cache."
   },
   "redis": {
-    "description": "Luncurkan kontainer Redis lokal dengan satu klik (Podman atau Docker) untuk caching dan pelacakan kuota OmniRoute"
+    "description": "Luncurkan kontainer Redis lokal dengan satu klik (Podman atau Docker) untuk caching dan pelacakan kuota 67router"
   },
   "test": {
     "description": "Uji koneksi penyedia",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Kelola kebijakan otorisasi OmniRoute",
+    "description": "Kelola kebijakan otorisasi 67router",
     "list": {
       "description": "Cantumkan kebijakan",
       "kind": "Filter berdasarkan jenis (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurasikan dan periksa pipeline kompresi OmniRoute",
+    "description": "Konfigurasikan dan periksa pipeline kompresi 67router",
     "status": {
       "description": "Tampilkan status dan pengaturan kompresi saat ini"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Rotasi terowongan {type}? (URL baru akan dibuat)"
   },
   "stop": {
-    "description": "Hentikan server OmniRoute",
+    "description": "Hentikan server 67router",
     "stopping": "Menghentikan server (PID {pid})...",
     "stopped": "Server dihentikan.",
     "notRunning": "Tidak ada server yang berjalan.",
     "portFallback": "File PID tidak ditemukan, mencoba penghentian berbasis port..."
   },
   "restart": {
-    "description": "Mulai ulang server OmniRoute",
-    "restarting": "Memulai ulang server OmniRoute..."
+    "description": "Mulai ulang server 67router",
+    "restarting": "Memulai ulang server 67router..."
   },
   "dashboard": {
-    "description": "Buka dasbor OmniRoute di browser",
+    "description": "Buka dasbor 67router di browser",
     "opening": "Membuka dasbor di {url}",
     "urlOnly": "Cetak URL dasbor tanpa membuka browser",
     "tui": "Buka dasbor TUI interaktif (UI terminal, 7 tab)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Kelola skill OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Kelola skill 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Cantumkan skill yang terinstal",
       "type": "Filter berdasarkan jenis (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Kelola memori percakapan OmniRoute (FTS5 + vector)",
+    "description": "Kelola memori percakapan 67router (FTS5 + vector)",
     "search": {
       "description": "Cari entri memori berdasarkan kueri semantik",
       "type": "Filter berdasarkan jenis memori (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Kelola webhook OmniRoute",
+    "description": "Kelola webhook 67router",
     "events": {
       "description": "Cantumkan semua jenis peristiwa webhook yang tersedia"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Router AI Cerdas dengan Fallback Otomatis",
+    "description": "67router — Router AI Cerdas dengan Fallback Otomatis",
     "version": "Cetak versi dan keluar",
     "output": "Format keluaran (table, json, jsonl, csv)",
     "quiet": "Sembunyikan output yang tidak penting",
     "no_color": "Nonaktifkan output berwarna",
     "timeout": "Batas waktu permintaan HTTP dalam milidetik",
-    "api_key": "Kunci API untuk server OmniRoute",
-    "base_url": "URL dasar server OmniRoute",
+    "api_key": "Kunci API untuk server 67router",
+    "base_url": "URL dasar server 67router",
     "context": "Konteks/profil server untuk perintah ini",
     "lang": "Atur bahasa tampilan CLI (menggantikan OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Akses dan uji spesifikasi OpenAPI OmniRoute",
+    "description": "Akses dan uji spesifikasi OpenAPI 67router",
     "dump": {
       "description": "Ekspor spesifikasi OpenAPI ke stdout atau file",
       "format": "Format keluaran: yaml|json (default: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Buka halaman dasbor OmniRoute tertentu di browser",
+    "description": "Buka halaman dasbor 67router tertentu di browser",
     "url": "Hanya cetak URL, jangan buka browser"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Sinkronkan konfigurasi antarinstans OmniRoute",
+    "description": "Sinkronkan konfigurasi antarinstans 67router",
     "push": {
       "description": "Kirim konfigurasi ke cloud atau instans jarak jauh"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Filter berdasarkan level (error,warn,info) — dipisahkan koma",
     "lines": "Jumlah baris yang akan diambil",
     "timeout": "Batas waktu koneksi dalam milidetik",
-    "baseUrl": "URL dasar API OmniRoute",
+    "baseUrl": "URL dasar API 67router",
     "requestId": "Filter berdasarkan ID permintaan",
     "apiKey": "Filter berdasarkan kunci API",
     "combo": "Filter berdasarkan nama kombinasi",
@@ -1244,10 +1244,10 @@
     "description": "Kontrol ikon baki sistem",
     "show": "Tampilkan ikon baki (jika server berjalan dengan --tray)",
     "hide": "Sembunyikan ikon baki",
-    "quit": "Keluar dari OmniRoute melalui baki"
+    "quit": "Keluar dari 67router melalui baki"
   },
   "autostart": {
-    "description": "Kelola mulai otomatis OmniRoute saat boot (Linux: layanan pengguna systemd)",
+    "description": "Kelola mulai otomatis 67router saat boot (Linux: layanan pengguna systemd)",
     "enable": "Aktifkan mulai otomatis saat boot",
     "disable": "Nonaktifkan mulai otomatis saat boot",
     "toggle": "Alihkan mulai otomatis saat boot",
@@ -1279,19 +1279,19 @@
     "scaffold": "Buat kerangka boilerplate plugin baru"
   },
   "launch": {
-    "description": "Luncurkan Claude Code yang diarahkan ke OmniRoute (lokal atau jarak jauh, dengan --profile)",
+    "description": "Luncurkan Claude Code yang diarahkan ke 67router (lokal atau jarak jauh, dengan --profile)",
     "token": "Token yang harus dikirim oleh klien Claude (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute tidak dapat dijangkau di {port}. Jalankan dengan 'omniroute serve'.",
+    "notRunning": "67router tidak dapat dijangkau di {port}. Jalankan dengan 'omniroute serve'.",
     "notFound": "CLI 'claude' tidak ditemukan di PATH."
   },
   "run": {
-    "description": "Luncurkan target CLI yang didukung melalui OmniRoute"
+    "description": "Luncurkan target CLI yang didukung melalui 67router"
   },
   "setupClaude": {
-    "description": "Buat profil Claude Code di ~/.claude/profiles dari katalog model OmniRoute"
+    "description": "Buat profil Claude Code di ~/.claude/profiles dari katalog model 67router"
   },
   "connect": {
-    "description": "Hubungkan ke server OmniRoute jarak jauh dan masuk ke mode jarak jauh"
+    "description": "Hubungkan ke server 67router jarak jauh dan masuk ke mode jarak jauh"
   },
   "tokens": {
     "description": "Kelola token akses CLI tercakup (mode jarak jauh)"
@@ -1300,10 +1300,10 @@
     "description": "Pilih penyedia+model dari server aktif dan konfigurasikan CLI lokal yang didukung"
   },
   "launchCodex": {
-    "description": "Luncurkan Codex CLI yang diarahkan ke OmniRoute (VPS lokal atau jarak jauh)"
+    "description": "Luncurkan Codex CLI yang diarahkan ke 67router (VPS lokal atau jarak jauh)"
   },
   "setupCodex": {
-    "description": "Buat file profil ~/.codex dari katalog model langsung OmniRoute"
+    "description": "Buat file profil ~/.codex dari katalog model langsung 67router"
   },
   "packs": {
     "description": "Kelola paket runtime opsional (ML / otomatisasi browser)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "paket tidak dikenal: {name}",
     "errNoIndex": "indeks paket tidak ditemukan; berikan --source <dir> yang berisi payload paket (bundel desktop menyertakannya di samping aplikasi)",
     "installed": "paket \"{name}\" telah diinstal dan diverifikasi di {dir}",
-    "restartHint": "mulai ulang server OmniRoute (atau aplikasi desktop) agar runtime memuat paket tersebut",
+    "restartHint": "mulai ulang server 67router (atau aplikasi desktop) agar runtime memuat paket tersebut",
     "removed": "paket \"{name}\" dihapus",
     "notInstalled": "paket \"{name}\" belum diinstal",
     "verifyOk": "semua paket yang diinstal telah diverifikasi",

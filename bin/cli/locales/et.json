@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Viga: {message}",
-    "serverOffline": "OmniRoute server on offline. Käivita see käsuga: omniroute serve",
+    "serverOffline": "67router server on offline. Käivita see käsuga: omniroute serve",
     "authRequired": "Autentimine on nõutav. Määra OMNIROUTE_API_KEY või käivita: omniroute setup",
     "rateLimited": "Kiiruspiirang on ületatud. Proovi uuesti {seconds}s pärast.",
     "timeout": "Päring aegus {ms}ms pärast.",
@@ -15,7 +15,7 @@
     "yesOpt": "Jäta kinnitusküsimus vahele"
   },
   "setup": {
-    "title": "OmniRoute seadistus",
+    "title": "67router seadistus",
     "passwordPrompt": "Administraatori parool",
     "providerPrompt": "Vaikepakkuja (jäta tühjaks, et vahele jätta)",
     "done": "Seadistamine on lõpetatud",
@@ -30,7 +30,7 @@
     "opencode": "Installi ja seadista OpenCode'i jaoks kaasas olev @omniroute/opencode-plugin"
   },
   "doctor": {
-    "title": "OmniRoute'i diagnostika",
+    "title": "67router'i diagnostika",
     "dbOk": "Andmebaas: korras ({path})",
     "dbMissing": "Andmebaas: pole lähtestatud — käivita `omniroute setup`",
     "portOk": "Port {port}: saadaval",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtreeri pakkuja nime järgi",
       "header": "ID         Pakkuja       Nimi                     Kehtivuse olek  Testi olek  Jahtumisperiood kuni",
       "noData": "Pakkuja ühenduse andmed puuduvad.",
-      "requiresServer": "providers status eeldab, et OmniRoute server töötab."
+      "requiresServer": "providers status eeldab, et 67router server töötab."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Lisa või värskenda pakkuja API-võtit",
     "listDescription": "Loetle kõik konfigureeritud API-võtmed",
     "removeDescription": "Eemalda pakkuja API-võti",
-    "regenerateDescription": "Genereeri OmniRoute API-võti uuesti",
-    "revokeDescription": "Tühista OmniRoute API-võti",
+    "regenerateDescription": "Genereeri 67router API-võti uuesti",
+    "revokeDescription": "Tühista 67router API-võti",
     "revealDescription": "Näita API-võtme peidetut väärtust",
     "usageDescription": "Kuva API-võtme viimatine kasutus",
     "usageLimitOpt": "Viimaste päringute arv",
@@ -225,7 +225,7 @@
     "noCombo": "Sobivat kombot ei leitud. Loo see käsuga: omniroute combo create"
   },
   "chat": {
-    "description": "Saada OmniRoute'ile ühekordne vestlusteade",
+    "description": "Saada 67router'ile ühekordne vestlusteade",
     "file": "Loe vestlusteade failist",
     "stdin": "Loe vestlusteade stdin-ist",
     "system": "Süsteemi vestlusteade",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Käivita OmniRoute'i server (vaiketoiming)",
-    "starting": "OmniRoute'i serveri käivitamine pordil {port}...",
+    "description": "Käivita 67router'i server (vaiketoiming)",
+    "starting": "67router'i serveri käivitamine pordil {port}...",
     "ready": "Valmis aadressil http://localhost:{port}",
     "stopping": "Serveri peatamine (PID {pid})...",
     "stopped": "Server on peatatud.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Varukoopia",
-    "description": "Loo OmniRoute andmete varukoopia",
+    "description": "Loo 67router andmete varukoopia",
     "creating": "Varukoopia loomine...",
     "done": "Varukoopia salvestatud asukohta {path}",
     "noFiles": "Varundamiseks ei leitud faile (andmebaas ei ole initsialiseeritud)",
@@ -277,7 +277,7 @@
     "noBackups": "Varukoopiaid ei leitud.",
     "notFound": "Varukoopiat ei leitud: {name}",
     "confirmRestore": "Kirjutada praegused andmed üle varukoopiaga ajast {ts}?",
-    "createDescription": "Loo OmniRoute andmete varukoopia",
+    "createDescription": "Loo 67router andmete varukoopia",
     "nameOpt": "Kohandatud varukoopia nimi",
     "cloudOpt": "Laadi varukoopia pilvesalvestusse",
     "encryptOpt": "Krüpteeri varukoopia AES-256-GCM-iga",
@@ -321,7 +321,7 @@
     "clearFailed": "Vahemälu tühjendamine ebaõnnestus."
   },
   "redis": {
-    "description": "Käivita ühe klikiga kohalik Redis konteiner (Podman või Docker) OmniRoute'i vahemälu ja kvoodi jälgimise jaoks"
+    "description": "Käivita ühe klikiga kohalik Redis konteiner (Podman või Docker) 67router'i vahemälu ja kvoodi jälgimise jaoks"
   },
   "test": {
     "description": "Testi teenusepakkuja ühendust",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Halda OmniRoute'i autoriseerimispoliitikaid",
+    "description": "Halda 67router'i autoriseerimispoliitikaid",
     "list": {
       "description": "Kuva poliitikad",
       "kind": "Filtreeri liigi järgi (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Konfigureeri ja kontrolli OmniRoute'i tihenduskonveierit",
+    "description": "Konfigureeri ja kontrolli 67router'i tihenduskonveierit",
     "status": {
       "description": "Kuva praegune tihenduse olek ja seaded"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Vaheta tunneli {type} URL? (genereeritakse uus URL)"
   },
   "stop": {
-    "description": "Peata OmniRoute server",
+    "description": "Peata 67router server",
     "stopping": "Serveri peatamine (PID {pid})...",
     "stopped": "Server on peatatud.",
     "notRunning": "Ühtegi serverit ei töötle.",
     "portFallback": "PID-faili ei leitud, proovitakse peatada pordi järgi..."
   },
   "restart": {
-    "description": "Taaskäivita OmniRoute server",
-    "restarting": "OmniRoute serveri taaskäivitamine..."
+    "description": "Taaskäivita 67router server",
+    "restarting": "67router serveri taaskäivitamine..."
   },
   "dashboard": {
-    "description": "Ava OmniRoute'i töölaud brauseris",
+    "description": "Ava 67router'i töölaud brauseris",
     "opening": "Töölaua avamine aadressil {url}",
     "urlOnly": "Prindi töölaua URL brauserit avamata",
     "tui": "Ava interaktiivne TUI töölaud (terminali kasutajaliides, 7 vahekaarti)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Halda OmniRoute'i oskusi (sandbox, sisseehitatud, kohandatud, hübriid, skillssh)",
+    "description": "Halda 67router'i oskusi (sandbox, sisseehitatud, kohandatud, hübriid, skillssh)",
     "list": {
       "description": "Loetle installitud oskused",
       "type": "Filtreeri tüübi alusel (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Halda OmniRoute'i vestlusmälu (FTS5 + vektor)",
+    "description": "Halda 67router'i vestlusmälu (FTS5 + vektor)",
     "search": {
       "description": "Otsi mälukirjeid semantilise päringu järgi",
       "type": "Filtreeri mälu tüübi järgi (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Halda OmniRoute veebihaake",
+    "description": "Halda 67router veebihaake",
     "events": {
       "description": "Kuva kõikide saadaolevate veebihaagi sündmuste tüüpide loend"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — nutikas AI ruuter automaatse tõrketaluvusega",
+    "description": "67router — nutikas AI ruuter automaatse tõrketaluvusega",
     "version": "Prindi versioon ja väljume",
     "output": "Väljundvorming (table, json, jsonl, csv)",
     "quiet": "Peida ebaolulised väljundid",
     "no_color": "Keela värviline väljund",
     "timeout": "HTTP päringu ajalõpp millisekundites",
-    "api_key": "OmniRoute serveri API võti",
-    "base_url": "OmniRoute serveri baas-URL",
+    "api_key": "67router serveri API võti",
+    "base_url": "67router serveri baas-URL",
     "context": "Selle käsu jaoks kasutatav serveri kontekst/profiil",
     "lang": "Määra CLI kuvamiskeel (tühistab OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "OmniRoute OpenAPI spetsifikatsiooni vaatamine ja testimine",
+    "description": "67router OpenAPI spetsifikatsiooni vaatamine ja testimine",
     "dump": {
       "description": "OpenAPI spetsifikatsiooni väljastamine standardväljundisse või faili",
       "format": "Väljundvorming: yaml|json (vaikimisi: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Ava veebibrauseris konkreetne OmniRoute juhtpaneeli leht",
+    "description": "Ava veebibrauseris konkreetne 67router juhtpaneeli leht",
     "url": "Kuva ainult URL, ära ava brauserit"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Sünkroonib seadeid OmniRoute'i eksemplaride vahel",
+    "description": "Sünkroonib seadeid 67router'i eksemplaride vahel",
     "push": {
       "description": "Saada seaded pilve või kaugeksemplari"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Filtreeri tasemete järgi (error,warn,info) — komadega eraldatud",
     "lines": "Toodavate ridade arv",
     "timeout": "Ühenduse aegumine millisekundites",
-    "baseUrl": "OmniRoute API baas-URL",
+    "baseUrl": "67router API baas-URL",
     "requestId": "Filtreeri päringu ID järgi",
     "apiKey": "Filtreeri API võtme järgi",
     "combo": "Filtreeri combo nime järgi",
@@ -1244,10 +1244,10 @@
     "description": "Juhi süsteemisalve ikooni",
     "show": "Näita süsteemisalve ikooni (kui server töötab lipuga --tray)",
     "hide": "Peida süsteemisalve ikoon",
-    "quit": "Sulge OmniRoute süsteemisalve kaudu"
+    "quit": "Sulge 67router süsteemisalve kaudu"
   },
   "autostart": {
-    "description": "Halda OmniRoute automaatkäivitust arvuti käivitumisel (Linux: systemd kasutajateenus)",
+    "description": "Halda 67router automaatkäivitust arvuti käivitumisel (Linux: systemd kasutajateenus)",
     "enable": "Luba automaatkäivitus arvuti käivitumisel",
     "disable": "Keela automaatkäivitus arvuti käivitumisel",
     "toggle": "Lülita automaatkäivitus arvuti käivitumisel sisse/välja",
@@ -1279,19 +1279,19 @@
     "scaffold": "Loo uue plugina põhistruktuur"
   },
   "launch": {
-    "description": "Käivita Claude Code, mis suunatakse OmniRoute'i (kohalik või kaug, koos lipuga --profile)",
+    "description": "Käivita Claude Code, mis suunatakse 67router'i (kohalik või kaug, koos lipuga --profile)",
     "token": "Token, mille Claude klient peaks saatma (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute ei ole aadressil {port} kättesaadav. Käivita see käsuga 'omniroute serve'.",
+    "notRunning": "67router ei ole aadressil {port} kättesaadav. Käivita see käsuga 'omniroute serve'.",
     "notFound": "'claude' CLI-d ei leitud PATH-ist."
   },
   "run": {
-    "description": "Käivita toetatud CLI sihtmärk OmniRoute'i kaudu"
+    "description": "Käivita toetatud CLI sihtmärk 67router'i kaudu"
   },
   "setupClaude": {
-    "description": "Genereeri ~/.claude/profiles Claude Code profiilid OmniRoute'i mudelikataloogist"
+    "description": "Genereeri ~/.claude/profiles Claude Code profiilid 67router'i mudelikataloogist"
   },
   "connect": {
-    "description": "Ühendu kaugserveriga OmniRoute ja lülitu kaugrežiimi"
+    "description": "Ühendu kaugserveriga 67router ja lülitu kaugrežiimi"
   },
   "tokens": {
     "description": "Halda ulatusega CLI juurdepääsutokeneid (kaugrežiim)"
@@ -1300,10 +1300,10 @@
     "description": "Vali pakkuja+mudel aktiivselt serverilt ja konfigureeri toetatud kohalik CLI"
   },
   "launchCodex": {
-    "description": "Käivita Codex CLI, mis on suunatud OmniRoute'ile (kohalik või kaug-VPS)"
+    "description": "Käivita Codex CLI, mis on suunatud 67router'ile (kohalik või kaug-VPS)"
   },
   "setupCodex": {
-    "description": "Genereeri ~/.codex profiilifailid OmniRoute'i reaalajas mudelikataloogist"
+    "description": "Genereeri ~/.codex profiilifailid 67router'i reaalajas mudelikataloogist"
   },
   "packs": {
     "description": "Halda valikulisi käitusaja pakke (ML / brauseri automatiseerimine)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "tundmatu pakk: {name}",
     "errNoIndex": "pakkide indeksit ei leitud; edasta --source <kataloog>, mis sisaldab paki sisu (töölauapaketid sisaldavad seda rakenduse kõrval)",
     "installed": "pakk \"{name}\" on installitud ja kontrollitud asukohas {dir}",
-    "restartHint": "taaskäivita OmniRoute server (või töölauarakendus), et käitusaeg paki üles korjaks",
+    "restartHint": "taaskäivita 67router server (või töölauarakendus), et käitusaeg paki üles korjaks",
     "removed": "pakk \"{name}\" on eemaldatud",
     "notInstalled": "pakki \"{name}\" ei olnud installitud",
     "verifyOk": "kõik installitud pakid on kontrollitud",

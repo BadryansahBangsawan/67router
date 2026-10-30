@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Hata: {message}",
-    "serverOffline": "OmniRoute sunucusu çevrimdışı. Başlatın: omniroute serve",
+    "serverOffline": "67router sunucusu çevrimdışı. Başlatın: omniroute serve",
     "authRequired": "Kimlik doğrulama gerekli. OMNIROUTE_API_KEY ayarlayın veya çalıştırın: omniroute setup",
     "rateLimited": "İstek limiti aşıldı. {seconds}s sonra tekrar deneyin.",
     "timeout": "İstek {ms}ms sonra zaman aşımına uğradı.",
@@ -15,7 +15,7 @@
     "yesOpt": "Onayı atla"
   },
   "setup": {
-    "title": "OmniRoute Kurulumu",
+    "title": "67router Kurulumu",
     "passwordPrompt": "Yönetici parolası",
     "providerPrompt": "Varsayılan sağlayıcı (atlamak için boş bırakın)",
     "done": "Kurulum tamamlandı",
@@ -30,7 +30,7 @@
     "opencode": "OpenCode için paketle birlikte gelen @omniroute/opencode-plugin eklentisini yükleyip yapılandırın"
   },
   "doctor": {
-    "title": "OmniRoute Tanılama",
+    "title": "67router Tanılama",
     "dbOk": "Veritabanı: Tamam ({path})",
     "dbMissing": "Veritabanı: başlatılmamış — `omniroute setup` komutunu çalıştırın",
     "portOk": "Port {port}: kullanılabilir",
@@ -82,7 +82,7 @@
       "providerOpt": "Sağlayıcı adına göre filtrele",
       "header": "Kimlik     Sağlayıcı      Ad                       Süre Sonu Durumu  Test Durumu  Bekleme Bitişi",
       "noData": "Kullanılabilir sağlayıcı bağlantısı verisi yok.",
-      "requiresServer": "providers status için OmniRoute sunucusunun çalışıyor olması gerekir."
+      "requiresServer": "providers status için 67router sunucusunun çalışıyor olması gerekir."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Bir sağlayıcı için API anahtarı ekle veya güncelle",
     "listDescription": "Yapılandırılmış tüm API anahtarlarını listele",
     "removeDescription": "Bir sağlayıcının API anahtarını kaldır",
-    "regenerateDescription": "Bir OmniRoute API anahtarını yeniden oluştur",
-    "revokeDescription": "Bir OmniRoute API anahtarını iptal et",
+    "regenerateDescription": "Bir 67router API anahtarını yeniden oluştur",
+    "revokeDescription": "Bir 67router API anahtarını iptal et",
     "revealDescription": "Maskelenmemiş API anahtarı değerini göster",
     "usageDescription": "Bir API anahtarının son kullanımını göster",
     "usageLimitOpt": "Son isteklerin sayısı",
@@ -225,7 +225,7 @@
     "noCombo": "Eşleşen kombinasyon bulunamadı. Şu komutla yapılandırın: omniroute combo create"
   },
   "chat": {
-    "description": "OmniRoute'a tek seferlik bir sohbet istemi gönder",
+    "description": "67router'a tek seferlik bir sohbet istemi gönder",
     "file": "İstemi dosyadan oku",
     "stdin": "İstemi stdin'den oku",
     "system": "Sistem istemi",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "OmniRoute sunucusunu başlat (varsayılan eylem)",
-    "starting": "OmniRoute sunucusu {port} portunda başlatılıyor...",
+    "description": "67router sunucusunu başlat (varsayılan eylem)",
+    "starting": "67router sunucusu {port} portunda başlatılıyor...",
     "ready": "http://localhost:{port} adresinde hazır",
     "stopping": "Sunucu durduruluyor (PID {pid})...",
     "stopped": "Sunucu durduruldu.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Yedekleme",
-    "description": "OmniRoute verilerinin yedeğini oluştur",
+    "description": "67router verilerinin yedeğini oluştur",
     "creating": "Yedek oluşturuluyor...",
     "done": "Yedek {path} konumuna kaydedildi",
     "noFiles": "Yedeklenecek dosya yok (veritabanı başlatılmamış)",
@@ -277,7 +277,7 @@
     "noBackups": "Yedek bulunamadı.",
     "notFound": "Yedek bulunamadı: {name}",
     "confirmRestore": "Mevcut verilerin üzerine {ts} tarihli yedek yazılsın mı?",
-    "createDescription": "OmniRoute verilerinin yedeğini oluştur",
+    "createDescription": "67router verilerinin yedeğini oluştur",
     "nameOpt": "Özel yedek adı",
     "cloudOpt": "Yedeği bulut depolama alanına yükle",
     "encryptOpt": "Yedeği AES-256-GCM ile şifrele",
@@ -321,7 +321,7 @@
     "clearFailed": "Önbellek temizlenemedi."
   },
   "redis": {
-    "description": "OmniRoute önbelleği ve kota takibi için tek tıkla yerel Redis konteyneri (Podman veya Docker) başlatın"
+    "description": "67router önbelleği ve kota takibi için tek tıkla yerel Redis konteyneri (Podman veya Docker) başlatın"
   },
   "test": {
     "description": "Bir sağlayıcı bağlantısını test et",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "OmniRoute yetkilendirme politikalarını yönet",
+    "description": "67router yetkilendirme politikalarını yönet",
     "list": {
       "description": "Politikaları listele",
       "kind": "Türe göre filtrele (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "OmniRoute sıkıştırma işlem hattını yapılandır ve incele",
+    "description": "67router sıkıştırma işlem hattını yapılandır ve incele",
     "status": {
       "description": "Geçerli sıkıştırma durumunu ve ayarlarını göster"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "{type} tüneli yenilensin mi? (yeni bir URL oluşturulacak)"
   },
   "stop": {
-    "description": "OmniRoute sunucusunu durdur",
+    "description": "67router sunucusunu durdur",
     "stopping": "Sunucu durduruluyor (PID {pid})...",
     "stopped": "Sunucu durduruldu.",
     "notRunning": "Çalışan sunucu yok.",
     "portFallback": "PID dosyası bulunamadı, bağlantı noktası üzerinden durdurma deneniyor..."
   },
   "restart": {
-    "description": "OmniRoute sunucusunu yeniden başlat",
-    "restarting": "OmniRoute sunucusu yeniden başlatılıyor..."
+    "description": "67router sunucusunu yeniden başlat",
+    "restarting": "67router sunucusu yeniden başlatılıyor..."
   },
   "dashboard": {
-    "description": "OmniRoute panosunu bir tarayıcıda aç",
+    "description": "67router panosunu bir tarayıcıda aç",
     "opening": "Pano {url} adresinde açılıyor",
     "urlOnly": "Tarayıcıyı açmadan pano URL'sini yazdır",
     "tui": "Etkileşimli TUI panosunu aç (terminal kullanıcı arayüzü, 7 sekme)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "OmniRoute becerilerini yönetin (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "67router becerilerini yönetin (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Yüklü becerileri listele",
       "type": "Türe göre filtrele (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "OmniRoute konuşma belleğini yönet (FTS5 + vector)",
+    "description": "67router konuşma belleğini yönet (FTS5 + vector)",
     "search": {
       "description": "Bellek girdilerini anlamsal sorguyla ara",
       "type": "Bellek türüne göre filtrele (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "OmniRoute webhook'larını yönet",
+    "description": "67router webhook'larını yönet",
     "events": {
       "description": "Kullanılabilir tüm webhook olay türlerini listele"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Otomatik Fallback ile Akıllı AI Yönlendirici",
+    "description": "67router — Otomatik Fallback ile Akıllı AI Yönlendirici",
     "version": "Sürümü yazdır ve çık",
     "output": "Çıktı formatı (table, json, jsonl, csv)",
     "quiet": "Önemsiz çıktıyı gizle",
     "no_color": "Renkli çıktıyı devre dışı bırak",
     "timeout": "HTTP istek zaman aşımı (milisaniye)",
-    "api_key": "OmniRoute sunucusu için API anahtarı",
-    "base_url": "OmniRoute sunucusu temel URL'si",
+    "api_key": "67router sunucusu için API anahtarı",
+    "base_url": "67router sunucusu temel URL'si",
     "context": "Bu komut için sunucu bağlamı/profili",
     "lang": "CLI görüntüleme dilini ayarla (OMNIROUTE_LANG'ı geçersiz kılar)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "OmniRoute OpenAPI spesifikasyonuna erişin ve test edin",
+    "description": "67router OpenAPI spesifikasyonuna erişin ve test edin",
     "dump": {
       "description": "OpenAPI spesifikasyonunu stdout'a veya dosyaya dökün",
       "format": "Çıktı biçimi: yaml|json (varsayılan: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Belirli bir OmniRoute kontrol paneli sayfasını tarayıcıda aç",
+    "description": "Belirli bir 67router kontrol paneli sayfasını tarayıcıda aç",
     "url": "Yalnızca URL'yi yazdır, tarayıcıyı açma"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Yapılandırmayı OmniRoute örnekleri arasında eşitle",
+    "description": "Yapılandırmayı 67router örnekleri arasında eşitle",
     "push": {
       "description": "Yapılandırmayı buluta veya uzak örneğe gönder"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Düzeye göre filtrele (error,warn,info) — virgülle ayrılmış",
     "lines": "Getirilecek satır sayısı",
     "timeout": "Bağlantı zaman aşımı (ms)",
-    "baseUrl": "OmniRoute API temel URL'si",
+    "baseUrl": "67router API temel URL'si",
     "requestId": "İstek kimliğine göre filtrele",
     "apiKey": "API anahtarına göre filtrele",
     "combo": "Kombinasyon adına göre filtrele",
@@ -1244,10 +1244,10 @@
     "description": "Sistem tepsisi simgesini kontrol et",
     "show": "Tepsi simgesini göster (sunucu --tray ile çalışıyorsa)",
     "hide": "Tepsi simgesini gizle",
-    "quit": "OmniRoute'tan tepsi üzerinden çık"
+    "quit": "67router'tan tepsi üzerinden çık"
   },
   "autostart": {
-    "description": "OmniRoute'un açılışta otomatik başlatılmasını yönet (Linux: systemd kullanıcı hizmeti)",
+    "description": "67router'un açılışta otomatik başlatılmasını yönet (Linux: systemd kullanıcı hizmeti)",
     "enable": "Açılışta otomatik başlatmayı etkinleştir",
     "disable": "Açılışta otomatik başlatmayı devre dışı bırak",
     "toggle": "Açılışta otomatik başlatmayı aç/kapat",
@@ -1279,19 +1279,19 @@
     "scaffold": "Yeni bir eklenti için başlangıç şablonu oluştur"
   },
   "launch": {
-    "description": "OmniRoute'u hedefleyen Claude Code'u başlat (yerel veya uzak, --profile ile)",
+    "description": "67router'u hedefleyen Claude Code'u başlat (yerel veya uzak, --profile ile)",
     "token": "Claude istemcisinin göndermesi gereken token (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute'a {port} üzerinden erişilemiyor. 'omniroute serve' ile başlatın.",
+    "notRunning": "67router'a {port} üzerinden erişilemiyor. 'omniroute serve' ile başlatın.",
     "notFound": "'claude' CLI, PATH içinde bulunamadı."
   },
   "run": {
-    "description": "Desteklenen bir CLI hedefini OmniRoute üzerinden başlat"
+    "description": "Desteklenen bir CLI hedefini 67router üzerinden başlat"
   },
   "setupClaude": {
-    "description": "OmniRoute model kataloğundan ~/.claude/profiles Claude Code profilleri oluştur"
+    "description": "67router model kataloğundan ~/.claude/profiles Claude Code profilleri oluştur"
   },
   "connect": {
-    "description": "Uzak bir OmniRoute sunucusuna bağlan ve uzak moda geç"
+    "description": "Uzak bir 67router sunucusuna bağlan ve uzak moda geç"
   },
   "tokens": {
     "description": "Kapsamlı CLI erişim token'larını yönet (uzak mod)"
@@ -1300,10 +1300,10 @@
     "description": "Etkin sunucudan bir sağlayıcı+model seç ve desteklenen bir yerel CLI'ı yapılandır"
   },
   "launchCodex": {
-    "description": "OmniRoute'u hedefleyen Codex CLI'ı başlat (yerel veya uzak VPS)"
+    "description": "67router'u hedefleyen Codex CLI'ı başlat (yerel veya uzak VPS)"
   },
   "setupCodex": {
-    "description": "OmniRoute canlı model kataloğundan ~/.codex profil dosyaları oluştur"
+    "description": "67router canlı model kataloğundan ~/.codex profil dosyaları oluştur"
   },
   "packs": {
     "description": "İsteğe bağlı çalışma zamanı paketlerini yönet (ML / tarayıcı otomasyonu)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "bilinmeyen paket: {name}",
     "errNoIndex": "paket dizini bulunamadı; paket içeriğini barındıran --source <dir> parametresini iletin (masaüstü paketleri bunu uygulamanın yanında içerir)",
     "installed": "\"{name}\" paketi {dir} konumuna yüklendi ve doğrulandı",
-    "restartHint": "çalışma zamanının paketi algılaması için OmniRoute sunucusunu (veya masaüstü uygulamasını) yeniden başlatın",
+    "restartHint": "çalışma zamanının paketi algılaması için 67router sunucusunu (veya masaüstü uygulamasını) yeniden başlatın",
     "removed": "\"{name}\" paketi kaldırıldı",
     "notInstalled": "\"{name}\" paketi yüklü değildi",
     "verifyOk": "yüklü tüm paketler doğrulandı",

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Lỗi: {message}",
-    "serverOffline": "Máy chủ OmniRoute đang offline. Khởi động với: omniroute serve",
+    "serverOffline": "Máy chủ 67router đang offline. Khởi động với: omniroute serve",
     "authRequired": "Cần xác thực. Đặt OMNIROUTE_API_KEY hoặc chạy: omniroute setup",
     "rateLimited": "Đã vượt giới hạn yêu cầu. Thử lại sau {seconds}s.",
     "timeout": "Yêu cầu hết thời gian sau {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Bỏ qua xác nhận"
   },
   "setup": {
-    "title": "Thiết lập OmniRoute",
+    "title": "Thiết lập 67router",
     "passwordPrompt": "Mật khẩu quản trị viên",
     "providerPrompt": "Nhà cung cấp mặc định (để trống để bỏ qua)",
     "done": "Thiết lập hoàn tất",
@@ -30,7 +30,7 @@
     "opencode": "Cài đặt và cấu hình @omniroute/opencode-plugin đi kèm cho OpenCode"
   },
   "doctor": {
-    "title": "Chẩn đoán OmniRoute",
+    "title": "Chẩn đoán 67router",
     "dbOk": "Cơ sở dữ liệu: OK ({path})",
     "dbMissing": "Cơ sở dữ liệu: chưa được khởi tạo — hãy chạy `omniroute setup`",
     "portOk": "Cổng {port}: khả dụng",
@@ -82,7 +82,7 @@
       "providerOpt": "Lọc theo tên nhà cung cấp",
       "header": "ID         Nhà cung cấp  Tên                      Trạng thái hết hạn  Trạng thái kiểm tra  Chờ đến",
       "noData": "Không có dữ liệu kết nối nhà cung cấp.",
-      "requiresServer": "providers status yêu cầu máy chủ OmniRoute đang chạy."
+      "requiresServer": "providers status yêu cầu máy chủ 67router đang chạy."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Thêm hoặc cập nhật khóa API cho một nhà cung cấp",
     "listDescription": "Liệt kê tất cả khóa API đã cấu hình",
     "removeDescription": "Xóa khóa API của một nhà cung cấp",
-    "regenerateDescription": "Tạo lại khóa API OmniRoute",
-    "revokeDescription": "Thu hồi khóa API OmniRoute",
+    "regenerateDescription": "Tạo lại khóa API 67router",
+    "revokeDescription": "Thu hồi khóa API 67router",
     "revealDescription": "Hiển thị giá trị khóa API không bị che",
     "usageDescription": "Hiển thị hoạt động sử dụng gần đây của một khóa API",
     "usageLimitOpt": "Số lượng yêu cầu gần đây",
@@ -225,7 +225,7 @@
     "noCombo": "Không tìm thấy combo phù hợp. Hãy cấu hình một combo bằng lệnh: omniroute combo create"
   },
   "chat": {
-    "description": "Gửi một lời nhắc trò chuyện dùng một lần đến OmniRoute",
+    "description": "Gửi một lời nhắc trò chuyện dùng một lần đến 67router",
     "file": "Đọc lời nhắc từ tệp",
     "stdin": "Đọc lời nhắc từ stdin",
     "system": "Lời nhắc hệ thống",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Khởi động máy chủ OmniRoute (hành động mặc định)",
-    "starting": "Đang khởi động máy chủ OmniRoute trên cổng {port}...",
+    "description": "Khởi động máy chủ 67router (hành động mặc định)",
+    "starting": "Đang khởi động máy chủ 67router trên cổng {port}...",
     "ready": "Sẵn sàng tại http://localhost:{port}",
     "stopping": "Đang dừng máy chủ (PID {pid})...",
     "stopped": "Máy chủ đã dừng.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Sao lưu",
-    "description": "Tạo bản sao lưu dữ liệu OmniRoute",
+    "description": "Tạo bản sao lưu dữ liệu 67router",
     "creating": "Đang tạo bản sao lưu...",
     "done": "Bản sao lưu đã được lưu vào {path}",
     "noFiles": "Không có tệp nào để sao lưu (cơ sở dữ liệu chưa được khởi tạo)",
@@ -277,7 +277,7 @@
     "noBackups": "Không tìm thấy bản sao lưu nào.",
     "notFound": "Không tìm thấy bản sao lưu: {name}",
     "confirmRestore": "Ghi đè dữ liệu hiện tại bằng bản sao lưu từ {ts}?",
-    "createDescription": "Tạo bản sao lưu dữ liệu OmniRoute",
+    "createDescription": "Tạo bản sao lưu dữ liệu 67router",
     "nameOpt": "Tên bản sao lưu tùy chỉnh",
     "cloudOpt": "Tải bản sao lưu lên bộ nhớ đám mây",
     "encryptOpt": "Mã hóa bản sao lưu bằng AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Không thể xóa bộ nhớ đệm."
   },
   "redis": {
-    "description": "Khởi chạy bộ chứa Redis cục bộ bằng một cú nhấp chuột (Podman hoặc Docker) để lưu bộ đệm và theo dõi hạn ngạch của OmniRoute"
+    "description": "Khởi chạy bộ chứa Redis cục bộ bằng một cú nhấp chuột (Podman hoặc Docker) để lưu bộ đệm và theo dõi hạn ngạch của 67router"
   },
   "test": {
     "description": "Kiểm tra kết nối với nhà cung cấp",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Quản lý các chính sách ủy quyền của OmniRoute",
+    "description": "Quản lý các chính sách ủy quyền của 67router",
     "list": {
       "description": "Liệt kê các chính sách",
       "kind": "Lọc theo loại (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Cấu hình và kiểm tra quy trình nén của OmniRoute",
+    "description": "Cấu hình và kiểm tra quy trình nén của 67router",
     "status": {
       "description": "Hiển thị trạng thái và cài đặt nén hiện tại"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Thay đổi URL của đường hầm {type}? (một URL mới sẽ được tạo)"
   },
   "stop": {
-    "description": "Dừng máy chủ OmniRoute",
+    "description": "Dừng máy chủ 67router",
     "stopping": "Đang dừng máy chủ (PID {pid})...",
     "stopped": "Đã dừng máy chủ.",
     "notRunning": "Không có máy chủ nào đang chạy.",
     "portFallback": "Không tìm thấy tệp PID, đang thử dừng dựa trên cổng..."
   },
   "restart": {
-    "description": "Khởi động lại máy chủ OmniRoute",
-    "restarting": "Đang khởi động lại máy chủ OmniRoute..."
+    "description": "Khởi động lại máy chủ 67router",
+    "restarting": "Đang khởi động lại máy chủ 67router..."
   },
   "dashboard": {
-    "description": "Mở bảng điều khiển OmniRoute trong trình duyệt",
+    "description": "Mở bảng điều khiển 67router trong trình duyệt",
     "opening": "Đang mở bảng điều khiển tại {url}",
     "urlOnly": "In URL của bảng điều khiển mà không mở trình duyệt",
     "tui": "Mở bảng điều khiển TUI tương tác (giao diện đầu cuối, 7 thẻ)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Quản lý các skill của OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Quản lý các skill của 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Liệt kê các skill đã cài đặt",
       "type": "Lọc theo loại (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Quản lý bộ nhớ hội thoại của OmniRoute (FTS5 + vector)",
+    "description": "Quản lý bộ nhớ hội thoại của 67router (FTS5 + vector)",
     "search": {
       "description": "Tìm kiếm các mục bộ nhớ bằng truy vấn ngữ nghĩa",
       "type": "Lọc theo loại bộ nhớ (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Quản lý webhook của OmniRoute",
+    "description": "Quản lý webhook của 67router",
     "events": {
       "description": "Liệt kê tất cả các loại sự kiện webhook hiện có"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Bộ định tuyến AI thông minh với tự động chuyển đổi dự phòng",
+    "description": "67router — Bộ định tuyến AI thông minh với tự động chuyển đổi dự phòng",
     "version": "In phiên bản và thoát",
     "output": "Định dạng đầu ra (table, json, jsonl, csv)",
     "quiet": "Ẩn đầu ra không cần thiết",
     "no_color": "Tắt đầu ra màu sắc",
     "timeout": "Thời gian chờ yêu cầu HTTP tính bằng mili giây",
-    "api_key": "Khóa API cho máy chủ OmniRoute",
-    "base_url": "URL cơ sở của máy chủ OmniRoute",
+    "api_key": "Khóa API cho máy chủ 67router",
+    "base_url": "URL cơ sở của máy chủ 67router",
     "context": "Bối cảnh/hồ sơ máy chủ cho lệnh này",
     "lang": "Đặt ngôn ngữ hiển thị CLI (ghi đè OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Truy cập và kiểm thử đặc tả OpenAPI của OmniRoute",
+    "description": "Truy cập và kiểm thử đặc tả OpenAPI của 67router",
     "dump": {
       "description": "Xuất đặc tả OpenAPI ra stdout hoặc tệp",
       "format": "Định dạng đầu ra: yaml|json (mặc định: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Mở một trang bảng điều khiển OmniRoute cụ thể trong trình duyệt",
+    "description": "Mở một trang bảng điều khiển 67router cụ thể trong trình duyệt",
     "url": "Chỉ in URL, không mở trình duyệt"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Đồng bộ cấu hình giữa các phiên bản OmniRoute",
+    "description": "Đồng bộ cấu hình giữa các phiên bản 67router",
     "push": {
       "description": "Đẩy cấu hình lên đám mây hoặc phiên bản từ xa"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Lọc theo cấp độ (error,warn,info) — phân tách bằng dấu phẩy",
     "lines": "Số dòng cần lấy",
     "timeout": "Thời gian chờ kết nối tính bằng ms",
-    "baseUrl": "URL cơ sở của API OmniRoute",
+    "baseUrl": "URL cơ sở của API 67router",
     "requestId": "Lọc theo ID yêu cầu",
     "apiKey": "Lọc theo khóa API",
     "combo": "Lọc theo tên tổ hợp",
@@ -1244,10 +1244,10 @@
     "description": "Điều khiển biểu tượng khay hệ thống",
     "show": "Hiển thị biểu tượng khay (nếu máy chủ đang chạy với --tray)",
     "hide": "Ẩn biểu tượng khay",
-    "quit": "Thoát OmniRoute qua khay hệ thống"
+    "quit": "Thoát 67router qua khay hệ thống"
   },
   "autostart": {
-    "description": "Quản lý tính năng tự động khởi động OmniRoute khi khởi động hệ thống (Linux: dịch vụ người dùng systemd)",
+    "description": "Quản lý tính năng tự động khởi động 67router khi khởi động hệ thống (Linux: dịch vụ người dùng systemd)",
     "enable": "Bật tự động khởi động khi khởi động hệ thống",
     "disable": "Tắt tự động khởi động khi khởi động hệ thống",
     "toggle": "Chuyển đổi trạng thái tự động khởi động khi khởi động hệ thống",
@@ -1279,19 +1279,19 @@
     "scaffold": "Tạo khung mã mẫu cho plugin mới"
   },
   "launch": {
-    "description": "Khởi chạy Claude Code trỏ đến OmniRoute (cục bộ hoặc từ xa, với --profile)",
+    "description": "Khởi chạy Claude Code trỏ đến 67router (cục bộ hoặc từ xa, với --profile)",
     "token": "Token mà ứng dụng Claude cần gửi (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "Không thể truy cập OmniRoute tại {port}. Hãy khởi động bằng 'omniroute serve'.",
+    "notRunning": "Không thể truy cập 67router tại {port}. Hãy khởi động bằng 'omniroute serve'.",
     "notFound": "Không tìm thấy CLI 'claude' trong PATH."
   },
   "run": {
-    "description": "Khởi chạy một CLI được hỗ trợ thông qua OmniRoute"
+    "description": "Khởi chạy một CLI được hỗ trợ thông qua 67router"
   },
   "setupClaude": {
-    "description": "Tạo các hồ sơ Claude Code trong ~/.claude/profiles từ danh mục mô hình OmniRoute"
+    "description": "Tạo các hồ sơ Claude Code trong ~/.claude/profiles từ danh mục mô hình 67router"
   },
   "connect": {
-    "description": "Kết nối với máy chủ OmniRoute từ xa và vào chế độ từ xa"
+    "description": "Kết nối với máy chủ 67router từ xa và vào chế độ từ xa"
   },
   "tokens": {
     "description": "Quản lý token truy cập CLI theo phạm vi (chế độ từ xa)"
@@ -1300,10 +1300,10 @@
     "description": "Chọn nhà cung cấp+mô hình từ máy chủ đang hoạt động và cấu hình một CLI cục bộ được hỗ trợ"
   },
   "launchCodex": {
-    "description": "Khởi chạy Codex CLI trỏ đến OmniRoute (cục bộ hoặc VPS từ xa)"
+    "description": "Khởi chạy Codex CLI trỏ đến 67router (cục bộ hoặc VPS từ xa)"
   },
   "setupCodex": {
-    "description": "Tạo các tệp hồ sơ ~/.codex từ danh mục mô hình trực tiếp của OmniRoute"
+    "description": "Tạo các tệp hồ sơ ~/.codex từ danh mục mô hình trực tiếp của 67router"
   },
   "packs": {
     "description": "Quản lý các gói runtime tùy chọn (ML / tự động hóa trình duyệt)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "gói không xác định: {name}",
     "errNoIndex": "không tìm thấy chỉ mục gói; hãy truyền --source <dir> trỏ đến thư mục chứa nội dung gói (các gói ứng dụng máy tính để bàn đặt tệp đó bên cạnh ứng dụng)",
     "installed": "gói \"{name}\" đã được cài đặt và xác minh tại {dir}",
-    "restartHint": "khởi động lại máy chủ OmniRoute (hoặc ứng dụng máy tính) để môi trường chạy nhận gói",
+    "restartHint": "khởi động lại máy chủ 67router (hoặc ứng dụng máy tính) để môi trường chạy nhận gói",
     "removed": "đã gỡ gói \"{name}\"",
     "notInstalled": "gói \"{name}\" chưa được cài đặt",
     "verifyOk": "đã xác minh tất cả các gói đã cài đặt",

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Fel: {message}",
-    "serverOffline": "OmniRoute-servern är offline. Starta med: omniroute serve",
+    "serverOffline": "67router-servern är offline. Starta med: omniroute serve",
     "authRequired": "Autentisering krävs. Ange OMNIROUTE_API_KEY eller kör: omniroute setup",
     "rateLimited": "Begäransgräns nådd. Försök igen om {seconds}s.",
     "timeout": "Begäran tog slut efter {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Hoppa över bekräftelse"
   },
   "setup": {
-    "title": "OmniRoute-konfiguration",
+    "title": "67router-konfiguration",
     "passwordPrompt": "Administratörslösenord",
     "providerPrompt": "Standardleverantör (lämna tomt för att hoppa över)",
     "done": "Konfigurationen är klar",
@@ -30,7 +30,7 @@
     "opencode": "Installera och konfigurera det medföljande @omniroute/opencode-plugin för OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute-diagnostik",
+    "title": "67router-diagnostik",
     "dbOk": "Databas: OK ({path})",
     "dbMissing": "Databas: inte initierad – kör `omniroute setup`",
     "portOk": "Port {port}: tillgänglig",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtrera efter leverantörsnamn",
       "header": "ID         Leverantör     Namn                     Utgång Status  Teststatus   Vänteperiod till",
       "noData": "Det finns inga data om leverantörsanslutningar.",
-      "requiresServer": "providers status kräver att OmniRoute-servern körs."
+      "requiresServer": "providers status kräver att 67router-servern körs."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Lägg till eller uppdatera en API-nyckel för en leverantör",
     "listDescription": "Lista alla konfigurerade API-nycklar",
     "removeDescription": "Ta bort en API-nyckel för en leverantör",
-    "regenerateDescription": "Generera en ny OmniRoute API-nyckel",
-    "revokeDescription": "Återkalla en OmniRoute API-nyckel",
+    "regenerateDescription": "Generera en ny 67router API-nyckel",
+    "revokeDescription": "Återkalla en 67router API-nyckel",
     "revealDescription": "Visa det omaskerade API-nyckelvärdet",
     "usageDescription": "Visa senaste användningen av en API-nyckel",
     "usageLimitOpt": "Antal senaste förfrågningar",
@@ -225,7 +225,7 @@
     "noCombo": "Ingen matchande kombination hittades. Konfigurera en med: omniroute combo create"
   },
   "chat": {
-    "description": "Skicka en enstaka chattprompt till OmniRoute",
+    "description": "Skicka en enstaka chattprompt till 67router",
     "file": "Läs prompt från fil",
     "stdin": "Läs prompt från standardindata",
     "system": "Systemprompt",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Starta OmniRoute-servern (standardåtgärd)",
-    "starting": "Startar OmniRoute-servern på port {port}...",
+    "description": "Starta 67router-servern (standardåtgärd)",
+    "starting": "Startar 67router-servern på port {port}...",
     "ready": "Redo på http://localhost:{port}",
     "stopping": "Stoppar servern (PID {pid})...",
     "stopped": "Servern har stoppats.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Säkerhetskopiering",
-    "description": "Skapa en säkerhetskopia av OmniRoute-data",
+    "description": "Skapa en säkerhetskopia av 67router-data",
     "creating": "Skapar säkerhetskopia...",
     "done": "Säkerhetskopian sparades i {path}",
     "noFiles": "Inga filer att säkerhetskopiera (databasen har inte initierats)",
@@ -277,7 +277,7 @@
     "noBackups": "Inga säkerhetskopior hittades.",
     "notFound": "Säkerhetskopian hittades inte: {name}",
     "confirmRestore": "Skriv över aktuella data med säkerhetskopian från {ts}?",
-    "createDescription": "Skapa en säkerhetskopia av OmniRoute-data",
+    "createDescription": "Skapa en säkerhetskopia av 67router-data",
     "nameOpt": "Anpassat namn på säkerhetskopian",
     "cloudOpt": "Ladda upp säkerhetskopian till molnlagring",
     "encryptOpt": "Kryptera säkerhetskopian med AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Det gick inte att rensa cachen."
   },
   "redis": {
-    "description": "Starta en lokal Redis-container med ett klick (Podman eller Docker) för OmniRoute-cachning och kvotspårning"
+    "description": "Starta en lokal Redis-container med ett klick (Podman eller Docker) för 67router-cachning och kvotspårning"
   },
   "test": {
     "description": "Testa en leverantörsanslutning",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Hantera OmniRoute-auktoriseringspolicyer",
+    "description": "Hantera 67router-auktoriseringspolicyer",
     "list": {
       "description": "Lista policyer",
       "kind": "Filtrera efter typ (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurera och inspektera OmniRoutes komprimeringspipeline",
+    "description": "Konfigurera och inspektera 67routers komprimeringspipeline",
     "status": {
       "description": "Visa aktuell komprimeringsstatus och aktuella inställningar"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Rotera tunnel {type}? (en ny URL kommer att genereras)"
   },
   "stop": {
-    "description": "Stoppa OmniRoute-servern",
+    "description": "Stoppa 67router-servern",
     "stopping": "Stoppar servern (PID {pid})...",
     "stopped": "Servern stoppades.",
     "notRunning": "Ingen server körs.",
     "portFallback": "Ingen PID-fil hittades, försöker stoppa baserat på port..."
   },
   "restart": {
-    "description": "Starta om OmniRoute-servern",
-    "restarting": "Startar om OmniRoute-servern..."
+    "description": "Starta om 67router-servern",
+    "restarting": "Startar om 67router-servern..."
   },
   "dashboard": {
-    "description": "Öppna OmniRoute-instrumentpanelen i en webbläsare",
+    "description": "Öppna 67router-instrumentpanelen i en webbläsare",
     "opening": "Öppnar instrumentpanelen på {url}",
     "urlOnly": "Skriv ut instrumentpanelens URL utan att öppna webbläsaren",
     "tui": "Öppna en interaktiv TUI-instrumentpanel (terminalgränssnitt, 7 flikar)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Hantera OmniRoute-färdigheter (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Hantera 67router-färdigheter (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Lista installerade färdigheter",
       "type": "Filtrera efter typ (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Hantera OmniRoutes konversationsminne (FTS5 + vektor)",
+    "description": "Hantera 67routers konversationsminne (FTS5 + vektor)",
     "search": {
       "description": "Sök efter minnesposter med en semantisk fråga",
       "type": "Filtrera efter minnestyp (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Hantera OmniRoute-webhooks",
+    "description": "Hantera 67router-webhooks",
     "events": {
       "description": "Lista alla tillgängliga händelsetyper för webhooks"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Smart AI-router med automatisk fallback",
+    "description": "67router — Smart AI-router med automatisk fallback",
     "version": "Skriv ut version och avsluta",
     "output": "Utdataformat (table, json, jsonl, csv)",
     "quiet": "Undertryck icke-väsentlig utdata",
     "no_color": "Inaktivera färgad utdata",
     "timeout": "HTTP-begärans timeout i millisekunder",
-    "api_key": "API-nyckel för OmniRoute-servern",
-    "base_url": "OmniRoute-serverns bas-URL",
+    "api_key": "API-nyckel för 67router-servern",
+    "base_url": "67router-serverns bas-URL",
     "context": "Serverkontext/profil för det här kommandot",
     "lang": "Ange CLI-visningsspråk (åsidosätter OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Öppna och testa OmniRoute OpenAPI-specifikationen",
+    "description": "Öppna och testa 67router OpenAPI-specifikationen",
     "dump": {
       "description": "Skriv OpenAPI-specifikationen till stdout eller en fil",
       "format": "Utdataformat: yaml|json (standard: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Öppna en specifik OmniRoute-instrumentpanelsida i webbläsaren",
+    "description": "Öppna en specifik 67router-instrumentpanelsida i webbläsaren",
     "url": "Skriv endast ut URL:en, öppna inte webbläsaren"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Synkronisera konfiguration mellan OmniRoute-instanser",
+    "description": "Synkronisera konfiguration mellan 67router-instanser",
     "push": {
       "description": "Skicka konfiguration till molnet eller en fjärrinstans"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Filtrera efter nivå (error,warn,info) — kommaseparerat",
     "lines": "Antal rader att hämta",
     "timeout": "Tidsgräns för anslutning i ms",
-    "baseUrl": "Bas-URL för OmniRoute API",
+    "baseUrl": "Bas-URL för 67router API",
     "requestId": "Filtrera efter begärande-ID",
     "apiKey": "Filtrera efter API-nyckel",
     "combo": "Filtrera efter kombinationsnamn",
@@ -1244,10 +1244,10 @@
     "description": "Styr ikonen i systemfältet",
     "show": "Visa ikonen i systemfältet (om servern körs med --tray)",
     "hide": "Dölj ikonen i systemfältet",
-    "quit": "Avsluta OmniRoute via systemfältet"
+    "quit": "Avsluta 67router via systemfältet"
   },
   "autostart": {
-    "description": "Hantera automatisk start av OmniRoute vid systemstart (Linux: systemd-användartjänst)",
+    "description": "Hantera automatisk start av 67router vid systemstart (Linux: systemd-användartjänst)",
     "enable": "Aktivera automatisk start vid systemstart",
     "disable": "Inaktivera automatisk start vid systemstart",
     "toggle": "Växla automatisk start vid systemstart",
@@ -1279,19 +1279,19 @@
     "scaffold": "Skapa en grundstruktur för ett nytt insticksprogram"
   },
   "launch": {
-    "description": "Starta Claude Code ansluten till OmniRoute (lokalt eller på distans, med --profile)",
+    "description": "Starta Claude Code ansluten till 67router (lokalt eller på distans, med --profile)",
     "token": "Token som Claude-klienten ska skicka (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute kan inte nås på {port}. Starta det med 'omniroute serve'.",
+    "notRunning": "67router kan inte nås på {port}. Starta det med 'omniroute serve'.",
     "notFound": "CLI-verktyget 'claude' hittades inte i PATH."
   },
   "run": {
-    "description": "Starta ett CLI-mål som stöds via OmniRoute"
+    "description": "Starta ett CLI-mål som stöds via 67router"
   },
   "setupClaude": {
-    "description": "Generera Claude Code-profiler i ~/.claude/profiles från OmniRoutes modellkatalog"
+    "description": "Generera Claude Code-profiler i ~/.claude/profiles från 67routers modellkatalog"
   },
   "connect": {
-    "description": "Anslut till en fjärrserver för OmniRoute och aktivera fjärrläge"
+    "description": "Anslut till en fjärrserver för 67router och aktivera fjärrläge"
   },
   "tokens": {
     "description": "Hantera omfångsbegränsade CLI-åtkomsttoken (fjärrläge)"
@@ -1300,10 +1300,10 @@
     "description": "Välj en leverantör och modell från den aktiva servern och konfigurera ett lokalt CLI-verktyg som stöds"
   },
   "launchCodex": {
-    "description": "Starta Codex CLI anslutet till OmniRoute (lokalt eller på en fjärr-VPS)"
+    "description": "Starta Codex CLI anslutet till 67router (lokalt eller på en fjärr-VPS)"
   },
   "setupCodex": {
-    "description": "Generera profilfiler i ~/.codex från OmniRoutes aktuella modellkatalog"
+    "description": "Generera profilfiler i ~/.codex från 67routers aktuella modellkatalog"
   },
   "packs": {
     "description": "Hantera valfria körningspaket (ML/webbläsarautomatisering)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "okänt paket: {name}",
     "errNoIndex": "paketindexet hittades inte; ange --source <dir> som innehåller paketdata (i skrivbordspaketen finns det bredvid appen)",
     "installed": "paketet \"{name}\" har installerats och verifierats i {dir}",
-    "restartHint": "starta om OmniRoute-servern (eller skrivbordsappen) så att körmiljön registrerar paketet",
+    "restartHint": "starta om 67router-servern (eller skrivbordsappen) så att körmiljön registrerar paketet",
     "removed": "paketet \"{name}\" har tagits bort",
     "notInstalled": "paketet \"{name}\" var inte installerat",
     "verifyOk": "alla installerade paket har verifierats",

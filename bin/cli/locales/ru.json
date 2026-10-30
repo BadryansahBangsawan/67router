@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Ошибка: {message}",
-    "serverOffline": "Сервер OmniRoute отключён. Запустите: omniroute serve",
+    "serverOffline": "Сервер 67router отключён. Запустите: omniroute serve",
     "authRequired": "Требуется аутентификация. Установите OMNIROUTE_API_KEY или выполните: omniroute setup",
     "rateLimited": "Превышен лимит запросов. Повторите через {seconds}с.",
     "timeout": "Запрос истёк через {ms}мс.",
@@ -15,7 +15,7 @@
     "yesOpt": "Пропустить подтверждение"
   },
   "setup": {
-    "title": "Настройка OmniRoute",
+    "title": "Настройка 67router",
     "passwordPrompt": "Пароль администратора",
     "providerPrompt": "Провайдер по умолчанию (оставьте пустым, чтобы пропустить)",
     "done": "Настройка завершена",
@@ -30,7 +30,7 @@
     "opencode": "Установить и настроить встроенный плагин @omniroute/opencode-plugin для OpenCode"
   },
   "doctor": {
-    "title": "Диагностика OmniRoute",
+    "title": "Диагностика 67router",
     "dbOk": "База данных: ОК ({path})",
     "dbMissing": "База данных: не инициализирована — выполните `omniroute setup`",
     "portOk": "Порт {port}: доступен",
@@ -82,7 +82,7 @@
       "providerOpt": "Фильтровать по имени провайдера",
       "header": "ID         Провайдер      Имя                      Срок действия Статус  Статус проверки  Ожидание до",
       "noData": "Данные о подключениях к провайдерам отсутствуют.",
-      "requiresServer": "Для выполнения providers status сервер OmniRoute должен быть запущен."
+      "requiresServer": "Для выполнения providers status сервер 67router должен быть запущен."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Добавить или обновить API-ключ провайдера",
     "listDescription": "Показать все настроенные API-ключи",
     "removeDescription": "Удалить API-ключ провайдера",
-    "regenerateDescription": "Создать новый API-ключ OmniRoute",
-    "revokeDescription": "Отозвать API-ключ OmniRoute",
+    "regenerateDescription": "Создать новый API-ключ 67router",
+    "revokeDescription": "Отозвать API-ключ 67router",
     "revealDescription": "Показать незамаскированное значение API-ключа",
     "usageDescription": "Показать недавнее использование API-ключа",
     "usageLimitOpt": "Количество недавних запросов",
@@ -225,7 +225,7 @@
     "noCombo": "Подходящая комбинация не найдена. Настройте её с помощью команды: omniroute combo create"
   },
   "chat": {
-    "description": "Отправить одноразовый запрос чата в OmniRoute",
+    "description": "Отправить одноразовый запрос чата в 67router",
     "file": "Прочитать запрос из файла",
     "stdin": "Прочитать запрос из stdin",
     "system": "Системный промпт",
@@ -244,8 +244,8 @@
     }
   },
   "serve": {
-    "description": "Запустить сервер OmniRoute (действие по умолчанию)",
-    "starting": "Запуск сервера OmniRoute на порту {port}...",
+    "description": "Запустить сервер 67router (действие по умолчанию)",
+    "starting": "Запуск сервера 67router на порту {port}...",
     "ready": "Доступен по адресу http://localhost:{port}",
     "stopping": "Остановка сервера (PID {pid})...",
     "stopped": "Сервер остановлен.",
@@ -265,7 +265,7 @@
   },
   "backup": {
     "title": "Резервная копия",
-    "description": "Создать резервную копию данных OmniRoute",
+    "description": "Создать резервную копию данных 67router",
     "creating": "Создание резервной копии...",
     "done": "Резервная копия сохранена в {path}",
     "noFiles": "Нет файлов для резервного копирования (база данных не инициализирована)",
@@ -277,7 +277,7 @@
     "noBackups": "Резервные копии не найдены.",
     "notFound": "Резервная копия не найдена: {name}",
     "confirmRestore": "Перезаписать текущие данные резервной копией от {ts}?",
-    "createDescription": "Создать резервную копию данных OmniRoute",
+    "createDescription": "Создать резервную копию данных 67router",
     "nameOpt": "Пользовательское имя резервной копии",
     "cloudOpt": "Загрузить резервную копию в облачное хранилище",
     "encryptOpt": "Зашифровать резервную копию с помощью AES-256-GCM",
@@ -321,7 +321,7 @@
     "clearFailed": "Не удалось очистить кеш."
   },
   "redis": {
-    "description": "Запустить локальный контейнер Redis одним нажатием (Podman или Docker) для кэширования и отслеживания квот OmniRoute"
+    "description": "Запустить локальный контейнер Redis одним нажатием (Podman или Docker) для кэширования и отслеживания квот 67router"
   },
   "test": {
     "description": "Проверить подключение к провайдеру",
@@ -419,7 +419,7 @@
     }
   },
   "policy": {
-    "description": "Управление политиками авторизации OmniRoute",
+    "description": "Управление политиками авторизации 67router",
     "list": {
       "description": "Показать список политик",
       "kind": "Фильтровать по типу (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +456,7 @@
     }
   },
   "compression": {
-    "description": "Настройка и проверка конвейера сжатия OmniRoute",
+    "description": "Настройка и проверка конвейера сжатия 67router",
     "status": {
       "description": "Показать текущий статус и настройки сжатия"
     },
@@ -510,18 +510,18 @@
     "confirmRotate": "Обновить URL туннеля {type}? (будет создан новый URL)"
   },
   "stop": {
-    "description": "Остановить сервер OmniRoute",
+    "description": "Остановить сервер 67router",
     "stopping": "Остановка сервера (PID {pid})...",
     "stopped": "Сервер остановлен.",
     "notRunning": "Сервер не запущен.",
     "portFallback": "PID-файл не найден, выполняется попытка остановки по порту..."
   },
   "restart": {
-    "description": "Перезапустить сервер OmniRoute",
-    "restarting": "Перезапуск сервера OmniRoute..."
+    "description": "Перезапустить сервер 67router",
+    "restarting": "Перезапуск сервера 67router..."
   },
   "dashboard": {
-    "description": "Открыть панель управления OmniRoute в браузере",
+    "description": "Открыть панель управления 67router в браузере",
     "opening": "Открытие панели управления по адресу {url}",
     "urlOnly": "Вывести URL панели управления, не открывая браузер",
     "tui": "Открыть интерактивную TUI-панель управления (терминальный интерфейс, 7 вкладок)"
@@ -561,7 +561,7 @@
     }
   },
   "skills": {
-    "description": "Управление навыками OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
+    "description": "Управление навыками 67router (sandbox, builtin, custom, hybrid, skillssh)",
     "list": {
       "description": "Показать список установленных навыков",
       "type": "Фильтровать по типу (sandbox|custom|builtin|hybrid|skillssh)",
@@ -634,7 +634,7 @@
     }
   },
   "memory": {
-    "description": "Управление памятью диалогов OmniRoute (FTS5 + vector)",
+    "description": "Управление памятью диалогов 67router (FTS5 + vector)",
     "search": {
       "description": "Поиск записей в памяти по семантическому запросу",
       "type": "Фильтр по типу памяти (user|feedback|project|reference)",
@@ -792,7 +792,7 @@
     }
   },
   "webhooks": {
-    "description": "Управление вебхуками OmniRoute",
+    "description": "Управление вебхуками 67router",
     "events": {
       "description": "Показать все доступные типы событий вебхуков"
     },
@@ -824,14 +824,14 @@
     }
   },
   "program": {
-    "description": "OmniRoute — Умный AI-маршрутизатор с автоматическим переключением",
+    "description": "67router — Умный AI-маршрутизатор с автоматическим переключением",
     "version": "Вывести версию и выйти",
     "output": "Формат вывода (table, json, jsonl, csv)",
     "quiet": "Подавить несущественный вывод",
     "no_color": "Отключить цветной вывод",
     "timeout": "Таймаут HTTP-запросов в миллисекундах",
-    "api_key": "API-ключ для сервера OmniRoute",
-    "base_url": "Базовый URL сервера OmniRoute",
+    "api_key": "API-ключ для сервера 67router",
+    "base_url": "Базовый URL сервера 67router",
     "context": "Контекст/профиль сервера для этой команды",
     "lang": "Установить язык отображения CLI (переопределяет OMNIROUTE_LANG)"
   },
@@ -1082,7 +1082,7 @@
     }
   },
   "openapi": {
-    "description": "Доступ к спецификации OmniRoute OpenAPI и её тестирование",
+    "description": "Доступ к спецификации 67router OpenAPI и её тестирование",
     "dump": {
       "description": "Вывести спецификацию OpenAPI в stdout или файл",
       "format": "Формат вывода: yaml|json (по умолчанию: yaml)",
@@ -1152,7 +1152,7 @@
     }
   },
   "open": {
-    "description": "Открыть указанную страницу панели управления OmniRoute в браузере",
+    "description": "Открыть указанную страницу панели управления 67router в браузере",
     "url": "Только вывести URL, не открывая браузер"
   },
   "telemetry": {
@@ -1169,7 +1169,7 @@
     }
   },
   "sync": {
-    "description": "Синхронизировать конфигурацию между экземплярами OmniRoute",
+    "description": "Синхронизировать конфигурацию между экземплярами 67router",
     "push": {
       "description": "Отправить конфигурацию в облако или удалённый экземпляр"
     },
@@ -1228,7 +1228,7 @@
     "filter": "Фильтр по уровню (error,warn,info), значения разделяются запятыми",
     "lines": "Количество строк для получения",
     "timeout": "Время ожидания подключения в мс",
-    "baseUrl": "Базовый URL API OmniRoute",
+    "baseUrl": "Базовый URL API 67router",
     "requestId": "Фильтр по идентификатору запроса",
     "apiKey": "Фильтр по ключу API",
     "combo": "Фильтр по названию комбинации",
@@ -1244,10 +1244,10 @@
     "description": "Управление значком в системном трее",
     "show": "Показать значок в трее (если сервер запущен с параметром --tray)",
     "hide": "Скрыть значок в трее",
-    "quit": "Завершить работу OmniRoute через трей"
+    "quit": "Завершить работу 67router через трей"
   },
   "autostart": {
-    "description": "Управление автозапуском OmniRoute при загрузке системы (Linux: пользовательская служба systemd)",
+    "description": "Управление автозапуском 67router при загрузке системы (Linux: пользовательская служба systemd)",
     "enable": "Включить автозапуск при загрузке системы",
     "disable": "Отключить автозапуск при загрузке системы",
     "toggle": "Переключить автозапуск при загрузке системы",
@@ -1279,19 +1279,19 @@
     "scaffold": "Создать шаблон нового плагина"
   },
   "launch": {
-    "description": "Запустить Claude Code с подключением к OmniRoute (локально или удалённо, с --profile)",
+    "description": "Запустить Claude Code с подключением к 67router (локально или удалённо, с --profile)",
     "token": "Токен, который должен отправлять клиент Claude (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute недоступен на порте {port}. Запустите его командой 'omniroute serve'.",
+    "notRunning": "67router недоступен на порте {port}. Запустите его командой 'omniroute serve'.",
     "notFound": "CLI 'claude' не найден в PATH."
   },
   "run": {
-    "description": "Запустить поддерживаемый целевой CLI через OmniRoute"
+    "description": "Запустить поддерживаемый целевой CLI через 67router"
   },
   "setupClaude": {
-    "description": "Создать профили Claude Code в ~/.claude/profiles на основе каталога моделей OmniRoute"
+    "description": "Создать профили Claude Code в ~/.claude/profiles на основе каталога моделей 67router"
   },
   "connect": {
-    "description": "Подключиться к удалённому серверу OmniRoute и перейти в удалённый режим"
+    "description": "Подключиться к удалённому серверу 67router и перейти в удалённый режим"
   },
   "tokens": {
     "description": "Управление токенами доступа CLI с ограниченной областью действия (удалённый режим)"
@@ -1300,10 +1300,10 @@
     "description": "Выбрать провайдера и модель на активном сервере и настроить поддерживаемый локальный CLI"
   },
   "launchCodex": {
-    "description": "Запустить Codex CLI с подключением к OmniRoute (локально или на удалённом VPS)"
+    "description": "Запустить Codex CLI с подключением к 67router (локально или на удалённом VPS)"
   },
   "setupCodex": {
-    "description": "Создать файлы профилей в ~/.codex на основе актуального каталога моделей OmniRoute"
+    "description": "Создать файлы профилей в ~/.codex на основе актуального каталога моделей 67router"
   },
   "packs": {
     "description": "Управление дополнительными пакетами среды выполнения (ML / автоматизация браузера)",
@@ -1316,7 +1316,7 @@
     "errUnknown": "неизвестный пакет: {name}",
     "errNoIndex": "индекс пакетов не найден; укажите --source <dir>, содержащий данные пакета (в настольных сборках он поставляется рядом с приложением)",
     "installed": "пакет \"{name}\" установлен и проверен в {dir}",
-    "restartHint": "перезапустите сервер OmniRoute (или настольное приложение), чтобы среда выполнения подхватила пакет",
+    "restartHint": "перезапустите сервер 67router (или настольное приложение), чтобы среда выполнения подхватила пакет",
     "removed": "пакет «{name}» удалён",
     "notInstalled": "пакет «{name}» не был установлен",
     "verifyOk": "все установленные пакеты проверены",
