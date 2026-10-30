@@ -107,7 +107,6 @@ if (typeof mock.module !== "function") {
 
   for (const [source, pattern] of [
     ["api_key_allowlist", /API key.*allowlist/i],
-    ["api_key_quota", /API key.*quota/i],
     ["combo_pin", /combo.*pin/i],
     ["routing_allowlist", /routing.*allowlist/i],
   ] as const) {

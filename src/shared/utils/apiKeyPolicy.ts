@@ -28,8 +28,6 @@ import {
   resolveCanonicalEndpointPath,
   resolveEndpointCategory,
 } from "@/shared/constants/endpointCategories";
-import { resolveQuotaKeyScope } from "@/lib/quota/quotaKey";
-import { isQuotaModelName, parseQuotaModelName } from "@/lib/quota/quotaModelNaming";
 import { buildApiKeyUsageLimitPolicyRejection } from "@/lib/usage/apiKeyUsageLimits";
 import { ALL_COMBOS_ACCESS_RULE } from "@/shared/constants/comboAccess";
 import { hasApiKeyModelRestrictions } from "./resolvedModelAccess";
@@ -83,7 +81,6 @@ export interface ApiKeyMetadata {
   blockedModels?: string[];
   allowedCombos?: string[];
   allowedConnections?: string[];
-  allowedQuotas?: string[];
   noLog?: boolean;
   autoResolve?: boolean;
   budget?: number;
@@ -300,46 +297,6 @@ async function isComboAllowedForKey(
   return { allowed, comboName };
 }
 
-function quotaPolicyResponse(message: string, code: string): Response {
-  const body = buildErrorBody(HTTP_STATUS.FORBIDDEN, message, undefined, { code });
-  return new Response(JSON.stringify(body), {
-    status: HTTP_STATUS.FORBIDDEN,
-    headers: { "Content-Type": "application/json" },
-  });
-}
-
-async function validateQuotaRoutingTarget(
-  modelStr: string,
-  allowedQuotas: string[]
-): Promise<Response | null> {
-  if (isQuotaModelName(modelStr) && allowedQuotas.length === 0) {
-    return quotaPolicyResponse(
-      `Model "${modelStr}" requires a quota-pool allocation; this API key is not allocated to any quota pool`,
-      "QUOTA_NOT_ALLOCATED"
-    );
-  }
-  if (allowedQuotas.length === 0) return null;
-
-  try {
-    const scope = await resolveQuotaKeyScope(allowedQuotas);
-    const parsed = isQuotaModelName(modelStr) ? parseQuotaModelName(modelStr) : null;
-    const allowed =
-      parsed !== null &&
-      scope.poolSlugs.includes(parsed.groupSlug) &&
-      scope.providers.includes(parsed.provider);
-    if (allowed) return null;
-    return quotaPolicyResponse(
-      isQuotaModelName(modelStr)
-        ? `Model "${modelStr}" is not in this key's quota pools`
-        : "This quota-exclusive API key may only use quotaShared-* models",
-      "QUOTA_ONLY"
-    );
-  } catch (error) {
-    log.error("API_POLICY", "Routing target quota check failed. Request blocked.", { error });
-    return errorResponse(HTTP_STATUS.SERVICE_UNAVAILABLE, "API key quota policy unavailable");
-  }
-}
-
 /**
  * Make the combo rejection actionable.
  *
@@ -426,9 +383,6 @@ export async function validateApiKeyRoutingTarget(
 ): Promise<Response | null> {
   if (!apiKey || !apiKeyInfo || !modelStr) return null;
 
-  const allowedQuotas = Array.isArray(apiKeyInfo.allowedQuotas) ? apiKeyInfo.allowedQuotas : [];
-  const quotaRejection = await validateQuotaRoutingTarget(modelStr, allowedQuotas);
-  if (quotaRejection || allowedQuotas.length > 0) return quotaRejection;
   return validateStandardRoutingTarget(request, apiKey, apiKeyInfo, modelStr);
 }
 
@@ -554,37 +508,6 @@ function validateEndpointAccess(context: PolicyContext): Response | null {
   return null;
 }
 
-async function validateQuotaAccess(context: PolicyContext): Promise<Response | null> {
-  const { apiKey, apiKeyInfo, modelStr } = context;
-  if (!modelStr) return null;
-  const allowedQuotas = Array.isArray(apiKeyInfo.allowedQuotas) ? apiKeyInfo.allowedQuotas : [];
-  if (isQuotaModelName(modelStr) && allowedQuotas.length === 0) {
-    return quotaPolicyResponse(
-      `Model "${modelStr}" requires a quota-pool allocation; this API key is not allocated to any quota pool`,
-      "QUOTA_NOT_ALLOCATED"
-    );
-  }
-  if (!allowedQuotas.length) return null;
-
-  try {
-    const scope = await resolveQuotaKeyScope(allowedQuotas);
-    const parsed = isQuotaModelName(modelStr) ? parseQuotaModelName(modelStr) : null;
-    const allowed =
-      parsed !== null &&
-      scope.poolSlugs.length > 0 &&
-      scope.poolSlugs.includes(parsed.groupSlug) &&
-      scope.providers.includes(parsed.provider);
-    if (allowed) return null;
-    const message = isQuotaModelName(modelStr)
-      ? `Model "${modelStr}" is not in this key's quota pools`
-      : "This quota-exclusive API key may only use quotaShared-* models";
-    return quotaPolicyResponse(message, "QUOTA_ONLY");
-  } catch (error) {
-    log.error("API_POLICY", "Quota scope check failed. Request blocked.", { error });
-    return errorResponse(HTTP_STATUS.SERVICE_UNAVAILABLE, "API key quota policy unavailable");
-  }
-}
-
 /**
  * Whether this key is barred from the built-in `auto/*` combos.
  *
@@ -604,7 +527,7 @@ export function isAutoComboDeniedForKey(
 
 async function validateModelAccess(context: PolicyContext): Promise<Response | null> {
   const { request, apiKey, apiKeyInfo, modelStr } = context;
-  if (!modelStr || apiKeyInfo.allowedQuotas?.length) return null;
+  if (!modelStr) return null;
   if (isAutoComboDeniedForKey(apiKeyInfo, modelStr)) {
     return policyErrorResponse(
       request,
@@ -874,9 +797,9 @@ function unresolvedScopedKeyRejection(selfLoopScope: SelfLoopScope): Response | 
  * allowances are not charged twice.
  */
 async function validateSelfLoopScopedAccess(
-  context: Parameters<typeof validateQuotaAccess>[0]
+  context: Parameters<typeof validateModelAccess>[0]
 ): Promise<Response | null> {
-  return (await validateQuotaAccess(context)) ?? (await validateModelAccess(context));
+  return validateModelAccess(context);
 }
 
 export async function enforceApiKeyPolicy(
@@ -923,8 +846,6 @@ export async function enforceApiKeyPolicy(
   const endpointRejection = validateEndpointAccess(context);
   if (endpointRejection) return { apiKey, apiKeyInfo, rejection: endpointRejection };
 
-  const quotaRejection = await validateQuotaAccess(context);
-  if (quotaRejection) return { apiKey, apiKeyInfo, rejection: quotaRejection };
   const modelRejection = await validateModelAccess(context);
   if (modelRejection) return { apiKey, apiKeyInfo, rejection: modelRejection };
 

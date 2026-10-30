@@ -4,7 +4,7 @@ import { getConnectionRestrictionSources } from "./credentialSelectionDiagnostic
 
 /** Pair the existing allowlist intersection with its diagnostic provenance. */
 export function resolveConnectionRestrictions(
-  key: { allowedConnections?: unknown; allowedQuotas?: unknown } | null | undefined,
+  key: { allowedConnections?: unknown } | null | undefined,
   target:
     { connectionId?: string | null; allowedConnectionIds?: string[] | null } | null | undefined,
   isCombo: boolean
@@ -18,7 +18,6 @@ export function resolveConnectionRestrictions(
     allowedConnections: intersectAllowedConnectionIds(key?.allowedConnections, routingAllowlist),
     sources: getConnectionRestrictionSources({
       keyAllowlist: key?.allowedConnections,
-      keyQuotas: key?.allowedQuotas,
       routingAllowlist,
       isCombo,
     }),

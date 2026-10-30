@@ -31,8 +31,7 @@ import { throttleQuotaFetch } from "../quotaFetchThrottle.ts";
 
 type JsonRecord = Record<string, unknown>;
 
-// Xiaomi MiMo Token Plan monthly limit (tokens) for the Lite tier. Keep in sync
-// with the "xiaomi-mimo" preset in src/lib/quota/planRegistry.ts.
+// Xiaomi MiMo Token Plan monthly limit (tokens) for the Lite tier.
 const DEFAULT_MONTHLY_TOKEN_LIMIT = 4_100_000_000;
 
 const MIMO_CONSOLE_BASE_URL = "https://platform.xiaomimimo.com/api/v1";

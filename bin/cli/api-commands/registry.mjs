@@ -25,7 +25,6 @@ import { register_oauth } from "./oauth.mjs";
 import { register_cloud } from "./cloud.mjs";
 import { register_fallback } from "./fallback.mjs";
 import { register_telemetry } from "./telemetry.mjs";
-import { register_quota } from "./quota.mjs";
 import { register_agentbridge } from "./agentbridge.mjs";
 import { register_traffic_inspector } from "./traffic-inspector.mjs";
 import { register_agent_skills } from "./agent-skills.mjs";
@@ -57,7 +56,6 @@ export const API_TAGS = [
   "cloud",
   "fallback",
   "telemetry",
-  "quota",
   "agentbridge",
   "traffic-inspector",
   "agent-skills",
@@ -99,7 +97,6 @@ export function registerApiCommands(program) {
   register_cloud(api);
   register_fallback(api);
   register_telemetry(api);
-  register_quota(api);
   register_agentbridge(api);
   register_traffic_inspector(api);
   register_agent_skills(api);

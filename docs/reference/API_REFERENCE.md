@@ -908,7 +908,7 @@ backend). It listens on the same port as the API/dashboard at paths `/v1/respons
 authenticates + prepares via the internal `codex-responses-ws` bridge, selects a
 codex OAuth connection, and tunnels to `wss://chatgpt.com/backend-api/codex/responses`
 via the `wreq-js` transport. **Non-codex models are rejected** (`codex_ws_provider_required`).
-For quota-share routing use `model: "qtSd/<group>/codex/<model>"`. Implemented in
+Implemented in
 `app/server-ws.mjs` + `scripts/dev/responses-ws-proxy.mjs` + `src/app/api/internal/codex-responses-ws/route.ts`.
 
 **Auth:** Bearer API key during handshake. The bundled HTTP server (`server-ws.mjs`)

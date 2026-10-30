@@ -82,8 +82,7 @@ Model names are normalized first (provider-path prefixes such as `openai/` or
 ### How spend is recorded
 
 - The per-request cost is computed after the response and recorded fire-and-forget so it
-  never adds latency to the client. Shared-quota consumption is scheduled on the next
-  event-loop tick via [`src/lib/quota/spendRecorder.ts`](../../src/lib/quota/spendRecorder.ts).
+  never adds latency to the client.
 - API-key spend is buffered and flushed in batches by the
   [`SpendBatchWriter`](../../src/lib/spend/batchWriter.ts) (default 60s flush interval,
   1,000-entry buffer). Tunable via:
@@ -135,8 +134,6 @@ The Costs area also hosts (all under `/dashboard/costs/`):
 
 - **Pricing** (`/dashboard/costs/pricing`) — view and override per-model prices (renders
   the shared Pricing tab).
-- **Quota Share** (`/dashboard/costs/quota-share`) — shared-quota pools and burn-rate
-  views.
 
 ---
 
@@ -171,10 +168,9 @@ noted.
 
 ### Other cost-relevant endpoints
 
-| Method | Endpoint                      | Purpose                                                                 |
-| ------ | ----------------------------- | ----------------------------------------------------------------------- |
-| `GET`  | `/api/free-tier/summary`      | Free-model token totals, used-this-month, and remaining free allowance. |
-| `GET`  | `/api/quota/pools/[id]/usage` | Usage for a shared-quota pool.                                          |
+| Method | Endpoint                 | Purpose                                                                 |
+| ------ | ------------------------ | ----------------------------------------------------------------------- |
+| `GET`  | `/api/free-tier/summary` | Free-model token totals, used-this-month, and remaining free allowance. |
 
 ---
 

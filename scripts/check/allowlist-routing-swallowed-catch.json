@@ -189,12 +189,6 @@
       "reason": "fail-open, blocked false"
     },
     {
-      "file": "open-sse/services/combo/quotaShareConcurrency.ts",
-      "snippet": "// Fail-open: a saturated queue / timeout must never worsen availability — // proceed without a slot rather than reject ",
-      "count": 1,
-      "reason": "fail-open, proceed without a slot"
-    },
-    {
       "file": "open-sse/services/combo/quotaStrategies.ts",
       "snippet": "log.warn?.(\"COMBO\", \"Reset-aware failed to load quota-aware connections.\", { comboName, err: error, operation: \"getProvi",
       "count": 1,

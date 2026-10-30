@@ -35,11 +35,11 @@ test("admin preset shows activity (not logs-activity) as visible", () => {
   );
 });
 
-test("admin preset shows costs, costs-pricing, costs-quota-share", () => {
+test("admin preset shows costs and costs-pricing", () => {
   const adminPreset = sidebarVisibility.SIDEBAR_PRESETS.find((p) => p.id === "admin");
   assert.ok(adminPreset, "admin preset must exist");
 
-  for (const id of ["costs", "costs-pricing", "costs-quota-share"]) {
+  for (const id of ["costs", "costs-pricing"]) {
     assert.equal(
       (adminPreset.hiddenItems as string[]).includes(id),
       false,

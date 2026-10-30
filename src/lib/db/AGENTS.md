@@ -24,7 +24,6 @@ Live count: `ls src/lib/db/*.ts | wc -l` (currently 131). Migrations: `ls src/li
 | `settings.ts`          | `settings`                | KV store for system configuration                   |
 | `secrets.ts`           | `secrets`                 | Encrypted secret storage (API keys at rest)         |
 | `quotaSnapshots.ts`    | `quota_snapshots`         | Historical quota usage for analytics                |
-| `quotaPools.ts`        | `quota_pools`             | Quota-Share pool management                         |
 | `creditBalance.ts`     | `credit_balance`          | Per-provider credit tracking                        |
 | `compression.ts`       | compression settings      | Prompt compression pipeline config                  |
 | `compressionCombos.ts` | `compression_combos`      | Per-combo compression pipeline assignments          |

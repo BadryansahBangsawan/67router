@@ -7,7 +7,6 @@ import { getTargetFormat } from "../../open-sse/services/provider.ts";
 import { DefaultExecutor } from "../../open-sse/executors/default.ts";
 import { BaseExecutor } from "../../open-sse/executors/base.ts";
 import type { ProviderCredentials } from "../../open-sse/executors/base.ts";
-import { getKnownPlan } from "../../src/lib/quota/planRegistry.ts";
 import { USAGE_SUPPORTED_PROVIDERS } from "../../src/shared/constants/providers.ts";
 
 // ---------------------------------------------------------------------------
@@ -178,18 +177,13 @@ test("buildUrl: xiaomi-mimo-token-plan sem targetFormat mantem a URL OpenAI padr
 // ---------------------------------------------------------------------------
 
 test("xiaomi-mimo-token-plan aponta para o host token-plan-sgp", () => {
-  assert.equal(
-    xiaomi_mimo_token_planProvider.baseUrl,
-    "https://token-plan-sgp.xiaomimimo.com/v1"
-  );
+  assert.equal(xiaomi_mimo_token_planProvider.baseUrl, "https://token-plan-sgp.xiaomimimo.com/v1");
   assert.equal(xiaomi_mimo_token_planProvider.format, "openai");
   assert.equal(xiaomi_mimo_token_planProvider.authHeader, "bearer");
 });
 
 test("xiaomi-mimo-token-plan declara a variante Anthropic no host token-plan", () => {
-  const alt = xiaomi_mimo_token_planProvider.alternateFormats?.find(
-    (a) => a.format === "claude"
-  );
+  const alt = xiaomi_mimo_token_planProvider.alternateFormats?.find((a) => a.format === "claude");
   assert.ok(alt, "esperava uma alternativa claude declarada");
   assert.equal(alt.baseUrl, "https://token-plan-sgp.xiaomimimo.com/anthropic/v1/messages");
   assert.equal(alt.authHeader, "x-api-key");
@@ -197,10 +191,7 @@ test("xiaomi-mimo-token-plan declara a variante Anthropic no host token-plan", (
 
 test("xiaomi-mimo-token-plan esta registrado e nao colide de host com o normal", () => {
   assert.ok(REGISTRY["xiaomi-mimo-token-plan"], "provedor nao registrado");
-  assert.notEqual(
-    REGISTRY["xiaomi-mimo-token-plan"].baseUrl,
-    REGISTRY["xiaomi-mimo"].baseUrl
-  );
+  assert.notEqual(REGISTRY["xiaomi-mimo-token-plan"].baseUrl, REGISTRY["xiaomi-mimo"].baseUrl);
 });
 
 test("xiaomi-mimo-token-plan expoe os modelos de chat", () => {
@@ -217,19 +208,6 @@ test("xiaomi-mimo-token-plan anuncia a janela de 1M e saida de 128K da geracao v
     assert.equal(model?.contextLength, 1048576, id);
     assert.equal(model?.maxOutputTokens, 131072, id);
   }
-});
-
-// ---------------------------------------------------------------------------
-// Task 7: monthly quota plan for the Token Plan
-// ---------------------------------------------------------------------------
-
-test("xiaomi-mimo-token-plan tem plano mensal registrado", () => {
-  const plan = getKnownPlan("xiaomi-mimo-token-plan");
-  assert.ok(plan, "esperava plano registrado para o Token Plan");
-  assert.equal(plan.dimensions.length, 1);
-  assert.equal(plan.dimensions[0].unit, "tokens");
-  assert.equal(plan.dimensions[0].window, "monthly");
-  assert.ok(plan.dimensions[0].limit > 0);
 });
 
 test("xiaomi-mimo-token-plan declara suporte a usage", () => {

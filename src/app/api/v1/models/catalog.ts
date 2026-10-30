@@ -859,14 +859,6 @@ async function buildUnifiedModelsResponseCore(
       },
     };
 
-    // #8770 follow-up: a quota-exclusive key (allowedQuotas non-empty) only ever
-    // receives the pool's `qtSd/*` combos — the key-permission step further down
-    // discards the entire catalog for it. Building that catalog first costs ~1.2s
-    // of CPU on a 1 vCPU host (measured), enough for Claude Code's 3s gateway model
-    // discovery to time out under contention, and every byte of it is thrown away.
-    // Everything the quota path needs (`combos`, `timestamp`,
-    // `buildComboCatalogMetadata`) already exists here, so return before the
-    // provider/auto-combo/registry loops start.
     const earlyApiKey = extractApiKey(request);
     let earlyKeyMeta: Awaited<
       ReturnType<typeof import("@/lib/db/apiKeys").getApiKeyMetadata>
@@ -874,20 +866,6 @@ async function buildUnifiedModelsResponseCore(
     if (earlyApiKey) {
       const { getApiKeyMetadata } = await import("@/lib/db/apiKeys");
       earlyKeyMeta = await getApiKeyMetadata(earlyApiKey);
-      if (earlyKeyMeta?.allowedQuotas && earlyKeyMeta.allowedQuotas.length > 0) {
-        const { buildQuotaExclusiveModels } = await import("@/lib/quota/quotaCombos");
-        const quotaModels = await buildQuotaExclusiveModels(
-          earlyKeyMeta.allowedQuotas,
-          combos,
-          timestamp,
-          (c) => buildComboCatalogMetadata(c, combos)
-        );
-        const quotaFinal = await applyCatalogPostFilters(request, quotaModels, postFilterContext);
-        return finalizeCatalogResponse(request, quotaFinal, () => undefined, {
-          ...corsHeaders,
-          ...diagnosticHeaders,
-        });
-      }
     }
 
     // #4164: advertise the built-in zero-setup `auto/*` combos at the very top.
@@ -2032,19 +2010,8 @@ async function buildUnifiedModelsResponseCore(
       const apiKeyPermissions = await import("@/lib/db/apiKeys");
       const { filterCatalogModelsForKey } = await import("./catalogKeyFilter");
 
-      // Quota-exclusive keys (allowedQuotas non-empty): list ONLY the pool's qtSd/*
-      // virtual models. #4806: build from the hidden qtSd/* combos directly — the base
-      // `models` list drops hidden combos, so filtering it returned nothing (0 models).
       const keyMeta = await apiKeyPermissions.getApiKeyMetadata(apiKey);
-      if (keyMeta && keyMeta.allowedQuotas && keyMeta.allowedQuotas.length > 0) {
-        const { buildQuotaExclusiveModels } = await import("@/lib/quota/quotaCombos");
-        finalModels = await buildQuotaExclusiveModels(
-          keyMeta.allowedQuotas,
-          combos,
-          timestamp,
-          (c) => buildComboCatalogMetadata(c, combos)
-        );
-      } else if (!keyMeta) {
+      if (!keyMeta) {
         // #6406: A valid apiKey without a DB metadata row is an env-var master key
         // (OMNIROUTE_API_KEY / ROUTER_API_KEY per isValidApiKey). Those keys have no
         // per-key allow/deny/quota restrictions — they authenticate the request but

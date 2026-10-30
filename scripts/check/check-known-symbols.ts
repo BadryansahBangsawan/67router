@@ -502,8 +502,8 @@ async function main(): Promise<void> {
 
   // ── (2) Combo strategies ──────────────────────────────────────────────────
   // Canonical = user-facing ROUTING_STRATEGY_VALUES ∪ INTERNAL_ROUTING_STRATEGY_VALUES
-  // (system-only strategies like "quota-share" are registered but hidden from the UI;
-  // they still must have a real dispatch branch in combo.ts — enforced below).
+  // (system-only strategies are registered but hidden from the UI; they still must
+  // have a real dispatch branch in combo.ts — enforced below).
   const strategiesMod = await import("@/shared/constants/routingStrategies.ts");
   const canonical = [
     ...(strategiesMod.ROUTING_STRATEGY_VALUES as readonly string[]),

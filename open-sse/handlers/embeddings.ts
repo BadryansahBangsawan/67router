@@ -439,24 +439,6 @@ async function prepareEmbeddingRequest(
   }
 }
 
-async function enforceEmbeddingQuota(runtime: EmbeddingRuntime): Promise<EmbeddingFailure | null> {
-  if (!runtime.apiKeyId || !runtime.connectionId) return null;
-  try {
-    const { enforceQuotaShare } = await import("@/lib/quota/enforce");
-    const decision = await enforceQuotaShare({
-      apiKeyId: runtime.apiKeyId,
-      connectionId: runtime.connectionId,
-      provider: runtime.provider,
-      model: runtime.model || undefined,
-    });
-    return decision.kind === "block"
-      ? failure(decision.httpStatus ?? 429, decision.reason || "Quota share limit reached")
-      : null;
-  } catch {
-    return null;
-  }
-}
-
 function resolveSingleTexts(runtime: EmbeddingRuntime): string[] | EmbeddingFailure | null {
   if (runtime.providerConfig.singleTextProtocol !== "clova-v2") return null;
   const input = Array.isArray(runtime.body.input) ? runtime.body.input : [runtime.body.input];
@@ -647,34 +629,10 @@ function recordEmbeddingSuccess(
   }).catch(() => {});
 }
 
-async function recordEmbeddingConsumption(
-  runtime: EmbeddingRuntime,
-  data: ParsedEmbeddingResponse,
-  requestCount: number
-): Promise<void> {
-  if (!runtime.apiKeyId || !runtime.connectionId) return;
-  try {
-    const { scheduleRecordConsumption } = await import("@/lib/quota/spendRecorder");
-    scheduleRecordConsumption({
-      apiKeyId: runtime.apiKeyId,
-      connectionId: runtime.connectionId,
-      provider: runtime.provider,
-      model: runtime.model || undefined,
-      cost: {
-        tokens: data.usage?.prompt_tokens || data.usage?.total_tokens || 0,
-        requests: requestCount,
-      },
-    });
-  } catch {
-    // Quota accounting is fail-open.
-  }
-}
-
 async function handleUpstreamSuccess(
   runtime: EmbeddingRuntime,
   prepared: PreparedEmbeddingRequest,
-  response: Response,
-  requestCount: number
+  response: Response
 ): Promise<EmbeddingSuccess> {
   const rawData = (await response.json()) as Record<string, unknown>;
   const { data, normalizedResponse } = normalizeEmbeddingData(
@@ -684,7 +642,6 @@ async function handleUpstreamSuccess(
     prepared.normalizeProviderResponse
   );
   recordEmbeddingSuccess(runtime, data, normalizedResponse);
-  await recordEmbeddingConsumption(runtime, data, requestCount);
   return {
     success: true,
     data: normalizedResponse,
@@ -727,15 +684,13 @@ async function executeEmbedding(
   runtime: EmbeddingRuntime,
   prepared: PreparedEmbeddingRequest
 ): Promise<EmbeddingResult> {
-  const quotaFailure = await enforceEmbeddingQuota(runtime);
-  if (quotaFailure) return quotaFailure;
   const singleTextsOrFailure = resolveSingleTexts(runtime);
   if (singleTextsOrFailure && !Array.isArray(singleTextsOrFailure)) return singleTextsOrFailure;
   const singleTexts = Array.isArray(singleTextsOrFailure) ? singleTextsOrFailure : null;
   try {
     const response = await dispatchEmbeddingRequest(prepared, singleTexts, runtime.reqLogger);
     return response.ok
-      ? handleUpstreamSuccess(runtime, prepared, response, singleTexts?.length ?? 1)
+      ? handleUpstreamSuccess(runtime, prepared, response)
       : handleUpstreamFailure(runtime, response);
   } catch (error) {
     return handleEmbeddingException(runtime, prepared, error);

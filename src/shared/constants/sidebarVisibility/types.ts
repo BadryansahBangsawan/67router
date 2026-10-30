@@ -65,7 +65,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   // Costs section
   "costs-pricing",
   "costs-free-tiers",
-  "costs-quota-share",
   "free-provider-rankings",
   "radar",
   "radar-admin",

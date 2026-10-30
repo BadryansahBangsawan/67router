@@ -358,19 +358,17 @@ lockout _state_ is ephemeral.
 
 ---
 
-## 4. Quota-Share Concurrency Control (v3.8.36)
+## 4. Connection Concurrency Control (v3.8.36)
 
 Subscription accounts (GLM, MiniMax, etc.) often accept only ~1–3 concurrent
-requests; exceeding that triggers 429s and cooldowns. This is acute under
-**quota-share** (`qtSd/…`) combos, where several API keys share one upstream
-account. Three layers keep a shared account from being flooded.
+requests; exceeding that triggers 429s and cooldowns. These layers keep a shared
+account from being flooded.
 
 ### Per-connection concurrency cap (`max_concurrent`)
 
 Each provider connection can declare a `max_concurrent` ceiling
 (`provider_connections.max_concurrent`, set in the connection modal / API / DB).
-Leave it empty for no limit. This is the single knob that drives the serialization
-layer below — set it to the account's real concurrency (e.g. GLM ~1, MiniMax ~2).
+Leave it empty for no limit. Set it to the account's real concurrency (e.g. GLM ~1, MiniMax ~2).
 
 ### Per-model concurrency caps (`modelConcurrency`)
 
@@ -417,22 +415,6 @@ concurrency caps**, one `model=cap` per line) or via
 glm-5=1
 glm-4.7=3
 ```
-
-### Quota-share request serialization
-
-When a quota-share dispatch targets a connection that declares a positive
-`max_concurrent`, concurrent requests to that **account** are serialized through a
-per-connection semaphore (key `qsconn:<connectionId>`): excess requests **wait in
-the queue** instead of flooding the account. It is **fail-open** — a saturated
-queue or timeout proceeds without a slot rather than ever rejecting a dispatchable
-request. Toggle in **Settings → Resilience → Quota-share per-connection
-concurrency** (`resilienceSettings.quotaShareConcurrencyLimit.enabled`, default
-on). Without a `max_concurrent` cap the behavior is unchanged.
-
-> The quota-share routing gate (`selectQuotaShareTarget`, DRR + P2C) is itself
-> fail-open and only _deprioritizes_ an at-cap connection — with a
-> single-connection pool it cannot hard-limit, so this semaphore is what actually
-> contains the flood.
 
 ### Combo cooldown-aware retry
 

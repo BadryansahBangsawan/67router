@@ -146,23 +146,6 @@ export function parseAllowedConnections(value: unknown): string[] {
   }
 }
 
-/**
- * Helper function to safely parse allowed_quotas JSON
- */
-export function parseAllowedQuotas(value: unknown): string[] {
-  if (!value || typeof value !== "string" || value.trim() === "") {
-    return [];
-  }
-  try {
-    const parsed = JSON.parse(value);
-    return Array.isArray(parsed)
-      ? parsed.filter((entry): entry is string => typeof entry === "string")
-      : [];
-  } catch {
-    return [];
-  }
-}
-
 export function parseStringList(value: unknown): string[] {
   // #14500: a driver that decodes the column for us, or a writer that stored a real
   // array, hands us an Array rather than JSON text. Checked before the string guard

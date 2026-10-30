@@ -15,37 +15,8 @@ export function registerQuota(program) {
 
   quota
     .command("status")
-    .description("Show truthful OmniRoute gateway, quota, pool, and circuit state")
+    .description("Show truthful OmniRoute gateway, quota, and circuit state")
     .action(async (opts, cmd) => runBoundedJson("/api/omniroute/status", cmd.optsWithGlobals()));
-
-  quota
-    .command("preview")
-    .description("Preview allocation enforcement without an upstream request")
-    .requiredOption("--api-key-id <id>", "API key id")
-    .requiredOption("--pool-id <id>", "quota pool id")
-    .option("--tokens <n>", "estimated token usage")
-    .action(async (opts, cmd) => {
-      const params = new URLSearchParams({ apiKeyId: opts.apiKeyId, poolId: opts.poolId });
-      if (opts.tokens != null) params.set("estimatedTokens", opts.tokens);
-      await runBoundedJson(`/api/quota/preview?${params}`, cmd.optsWithGlobals());
-    });
-
-  quota
-    .command("ensure <json>")
-    .description("Idempotently create or update a quota pool from a JSON object")
-    .action(async (json, opts, cmd) => {
-      let body;
-      try {
-        body = JSON.parse(json);
-      } catch {
-        console.error("Invalid pool JSON");
-        process.exit(2);
-      }
-      await runBoundedJson("/api/quota/pools?ensure=true", cmd.optsWithGlobals(), {
-        method: "POST",
-        body,
-      });
-    });
 }
 
 async function runBoundedJson(path, opts, request = {}) {

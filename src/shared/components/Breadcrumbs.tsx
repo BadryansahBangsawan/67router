@@ -87,7 +87,6 @@ const PATH_LABELS = {
   "session-dedup": "sessionDedup",
   ultra: "ultra",
   pricing: "pricing",
-  "quota-share": "quotaShare",
   discovery: "discovery",
   "free-provider-rankings": "freeProviderRankings",
   radar: "radar",

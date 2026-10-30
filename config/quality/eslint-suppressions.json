@@ -685,16 +685,6 @@
       "count": 1
     }
   },
-  "src/app/(dashboard)/dashboard/costs/quota-share/QuotaSharePageClient.tsx": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/app/(dashboard)/dashboard/costs/quota-share/components/PoolWizard.tsx": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "src/app/(dashboard)/dashboard/health/ProviderHealthAutopilotCard.tsx": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -1423,16 +1413,6 @@
       "count": 1
     }
   },
-  "src/lib/quota/redisQuotaStore.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/lib/quota/sqliteQuotaStore.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "src/lib/services/ServiceSupervisor.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -2034,11 +2014,6 @@
   "tests/integration/qdrant-routes.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 3
-    }
-  },
-  "tests/integration/quota-pools-usage.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
     }
   },
   "tests/integration/resilience-http-e2e.test.ts": {
@@ -2909,11 +2884,6 @@
       "count": 1
     }
   },
-  "tests/unit/combos-quota-protected.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 4
-    }
-  },
   "tests/unit/comfyui-baseurl-override-6928.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -3200,11 +3170,6 @@
   },
   "tests/unit/db-quota-migrations-idempotency.test.ts": {
     "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/db-quota-pools.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
       "count": 1
     }
   },
@@ -4045,29 +4010,9 @@
       "count": 2
     }
   },
-  "tests/unit/quota-email-privacy.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/quota-enforce.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 6
-    }
-  },
   "tests/unit/quota-fetch-throttle-scope-6911.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
-    }
-  },
-  "tests/unit/quota-groups-crud.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
-  "tests/unit/quota-groups-migration.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
     }
   },
   "tests/unit/quota-helpers.test.ts": {
@@ -4078,41 +4023,6 @@
   "tests/unit/quota-phase2.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
-    }
-  },
-  "tests/unit/quota-pool-connections.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
-  "tests/unit/quota-pool-delete-prune.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 2
-    }
-  },
-  "tests/unit/quota-pool-single-provider.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 9
-    }
-  },
-  "tests/unit/quota-redis-store.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
-  "tests/unit/quota-spend-recorder.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 3
-    }
-  },
-  "tests/unit/quota-store-factory.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/quota-summed-budget.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
     }
   },
   "tests/unit/radar-api-routes.test.ts": {
@@ -4713,11 +4623,6 @@
     }
   },
   "tests/unit/ui/activity-page-redirect.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/ui/allocation-table.test.tsx": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
     }

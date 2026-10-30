@@ -863,9 +863,6 @@ public strategies end-to-end through the real combo pipeline with a mocked upstr
 Coverage includes:
 
 - All 19 `ROUTING_STRATEGY_VALUES` strategies (ordered, weighted, cost, context, fusion, …).
-- `quota-share` (internal) end-to-end: DRR fairness + saturation deprioritization via the
-  real `selectQuotaShareTarget` seam (`registerQuotaFetcher` / `setLKGP` /
-  `__setHeadroomSaturationFetcherForTests`).
 - `context-relay` universal-handoff coverage across every target count.
 
 This suite runs in CI (`test:integration` job) with `--test-concurrency=1` and

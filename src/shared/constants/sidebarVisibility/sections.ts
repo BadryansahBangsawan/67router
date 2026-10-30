@@ -79,13 +79,6 @@ const OMNI_PROXY_ITEMS: readonly SidebarItemDefinition[] = [
     subtitleKey: "providerQuotaSubtitle",
     icon: "tune",
   },
-  {
-    id: "costs-quota-share",
-    href: "/dashboard/costs/quota-share",
-    i18nKey: "costsQuotaShare",
-    subtitleKey: "costsQuotaShareSubtitle",
-    icon: "pie_chart",
-  },
 ];
 
 export const COMPRESSION_CONTEXT_GROUP: SidebarItemGroup = {

@@ -656,8 +656,6 @@
       "proxyConfigModal",
       "proxyLog",
       "proxyLogger",
-      "quotaPlans",
-      "quotaShare",
       "reasoningRouting",
       "requestLogger",
       "requestTimeline",

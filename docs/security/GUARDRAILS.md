@@ -107,8 +107,7 @@ is byte-identical to the pre-PR-1 guardrail.
 
 #### API-key scope (`visionBridgeKeyScope.ts`)
 
-When the caller's API key restricts `allowedConnections`, quota pools
-(`allowedQuotas`) or models (`allowedModels` / `blockedModels` /
+When the caller's API key restricts `allowedConnections` or models (`allowedModels` / `blockedModels` /
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), the bridge only
 picks reroute and describe models the key may use, on connections the key may
 use. The describe call then always goes through the OmniRoute self-loop with

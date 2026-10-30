@@ -3,9 +3,8 @@
  * retrieval, voice proxies) inside the caller API key's connection scope, the
  * same scope chat dispatch applies in `handleSingleModelChat`.
  *
- * Chat narrows credential selection to the key's `allowedConnections`, then
- * to the connections of its quota pools (`allowedQuotas`), refuses an empty
- * result, and skips combo targets the key's model policy does not admit. The
+ * Chat narrows credential selection to the key's `allowedConnections`,
+ * refuses an empty result, and skips combo targets the key's model policy does not admit. The
  * direct routes picked from the provider's whole pool instead. They now share
  * this module so the rule lives in one place:
  *
@@ -29,11 +28,9 @@
 import { errorResponse } from "@omniroute/open-sse/utils/error.ts";
 import { HTTP_STATUS } from "@omniroute/open-sse/config/constants.ts";
 import { isModelAllowedForKey } from "@/lib/db/apiKeys";
-import { constrainConnectionsToQuota, resolveQuotaKeyScope } from "@/lib/quota/quotaKey";
 import { intersectAllowedConnectionIds } from "@/sse/handlers/chat/connectionConstraints";
 import type { ComboTargetKeyPolicyInfo } from "@/sse/handlers/chat/comboTargetKeyPolicy";
 import { hasApiKeyModelRestrictions } from "@/shared/utils/resolvedModelAccess";
-import * as log from "@/sse/utils/logger";
 
 // The pure pieces live in the engine so the media combo executors can use them
 // without importing the app (open-sse → src boundary); re-exported for the app.
@@ -59,7 +56,6 @@ export const NO_ELIGIBLE_CONNECTION_ID = "__omniroute_key_scope_no_connection__"
 
 export interface KeyScopeApiKeyInfo extends ComboTargetKeyPolicyInfo {
   allowedConnections?: unknown;
-  allowedQuotas?: unknown;
 }
 
 export interface KeyConnectionScope {
@@ -67,11 +63,6 @@ export interface KeyConnectionScope {
   allowedConnections: string[] | null;
   /** Set when the key's scope admits no connection at all (chat answers the same 503). */
   rejection: Response | null;
-}
-
-function stringList(value: unknown): string[] {
-  if (!Array.isArray(value)) return [];
-  return value.filter((entry): entry is string => typeof entry === "string" && entry.length > 0);
 }
 
 function noEligibleConnectionResponse(): Response {
@@ -83,28 +74,12 @@ function noEligibleConnectionResponse(): Response {
 
 /**
  * The caller key's connection scope, computed the way chat computes it: the
- * key's `allowedConnections`, narrowed to its quota pools' connections when
- * the key is quota-exclusive. An empty result is refused, never "unfiltered".
+ * key's `allowedConnections`. An empty result is refused, never "unfiltered".
  */
 export async function resolveKeyConnectionScope(
   apiKeyInfo: KeyScopeApiKeyInfo | null | undefined
 ): Promise<KeyConnectionScope> {
-  let allowed = intersectAllowedConnectionIds(apiKeyInfo?.allowedConnections ?? null, null);
-
-  const allowedQuotas = stringList(apiKeyInfo?.allowedQuotas);
-  if (allowedQuotas.length > 0) {
-    try {
-      const quotaScope = await resolveQuotaKeyScope(allowedQuotas);
-      allowed = constrainConnectionsToQuota(allowed ?? [], quotaScope.connectionIds);
-    } catch (error) {
-      // The scope can only narrow: when the quota pools cannot be resolved,
-      // admit nothing rather than the whole provider pool.
-      log.warn("AUTH", "Quota scope unavailable; refusing connection selection", {
-        error: error instanceof Error ? error.name : "unknown",
-      });
-      allowed = [];
-    }
-  }
+  const allowed = intersectAllowedConnectionIds(apiKeyInfo?.allowedConnections ?? null, null);
 
   if (Array.isArray(allowed) && allowed.length === 0) {
     return { allowedConnections: null, rejection: noEligibleConnectionResponse() };

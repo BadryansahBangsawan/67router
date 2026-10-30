@@ -49,7 +49,6 @@ test("primary sidebar items place limits after cache", () => {
       "combos",
       "combos-live",
       "quota",
-      "costs-quota-share",
       "context-settings",
       "context-combos",
       "context-caveman",

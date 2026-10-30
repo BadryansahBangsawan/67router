@@ -32,14 +32,12 @@ Monitoring     ← REORGANIZED (Group B, plan 16)
 
 Path prefix: `/dashboard/costs/`
 
-| Item          | URL                                  | Description                                      |
-| ------------- | ------------------------------------ | ------------------------------------------------ |
-| Overview      | `/dashboard/costs`                   | Aggregated cost dashboard (moved from Analytics) |
-| Pricing       | `/dashboard/costs/pricing`           | Per-model pricing table                          |
-| Quota Sharing | `/dashboard/costs/quota-share`       | Quota Share pools + usage                        |
-| Plan Config   | `/dashboard/costs/quota-share/plans` | Per-provider plan overrides                      |
+| Item     | URL                        | Description                                      |
+| -------- | -------------------------- | ------------------------------------------------ |
+| Overview | `/dashboard/costs`         | Aggregated cost dashboard (moved from Analytics) |
+| Pricing  | `/dashboard/costs/pricing` | Per-model pricing table                          |
 
-**Rationale**: Pricing and Quota Sharing were previously under
+**Rationale**: Pricing was previously under
 `Monitoring > Costs Parameters`. Moving them to a dedicated top-level section
 makes them discoverable without navigating through observability tooling.
 
@@ -102,7 +100,6 @@ the Activity feed. The allowlist includes:
 - Cloud agent session creation
 - MCP tool registration
 - Webhook create/delete
-- Quota pool/plan changes (`quota.*` actions, Group B)
 - Platform events (update, deploy)
 - Skill install/remove
 

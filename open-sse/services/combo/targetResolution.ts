@@ -134,10 +134,9 @@ export interface ResolvedComboTargetPipeline {
   preScreenMap: Map<string, PreScreenResult>;
   /**
    * Idempotent release for the in-flight slot reserved for the winner.
-   * Non-null for `quota-share` (reserved inside selectQuotaShareTarget) and for
-   * `quota-weighted` (reserved in the orderer on the draw). Stickiness/cache may
-   * still move [0]; this pipeline transfers the slot onto the dispatched account
-   * for both strategies. The host MUST invoke it when the request settles; this
+   * Non-null for `quota-weighted` (reserved in the orderer on the draw).
+   * Stickiness/cache may still move [0]; this pipeline transfers the slot onto the
+   * dispatched account. The host MUST invoke it when the request settles; this
    * pipeline already releases it on any earlyResponse it produces after selection.
    */
   quotaShareRelease: (() => void) | null;
@@ -747,7 +746,7 @@ async function applyPromptCacheStage(
   // strategies. Per #8370, lkgp/auto/cache-optimized explicitly support promoting
   // a previously-successful model ahead of the declared order, so they must stay
   // cross-model ("global") rather than be locked into a single model step.
-  // The model-order-preserving set (priority / weighted / fill-first / quota-share) is
+  // The model-order-preserving set (priority / weighted / fill-first) is
   // the `promptCacheAffinityScope: "model"` trait in the strategy registry.
   const promptCacheAffinity = applyPromptCacheAffinity(
     promptCacheAffinityTargets,
@@ -809,11 +808,9 @@ function reserveInflightSlot(connectionId: string): () => void {
 
 /**
  * quota-weighted reserves the draw inside the orderer (same synchronous turn as the
- * pick). quota-share reserves inside selectQuotaShareTarget. Stickiness / prompt-cache
- * may still move [0]; transfer the slot so the reserved account is the one that will be
- * dispatched. The empty-id fallback (drawn target had no connectionId, later filters put
- * a real id in [0]) is quota-weighted only — quota-share always hands back a release,
- * even a no-op, and inventing a slot here would double-count.
+ * pick). Stickiness / prompt-cache may still move [0]; transfer the slot so the reserved
+ * account is the one that will be dispatched. The empty-id fallback (drawn target had
+ * no connectionId, later filters put a real id in [0]) reserves a fresh slot.
  */
 function transferInflightReservation(
   reservation: StrategyTraits["inflightReservation"],

@@ -165,7 +165,6 @@ export async function runNonStreamingResponse(deps: NonStreamingDeps) {
     sanitizeErrorMessage,
     sanitizeUpstreamDetails,
     saveIdempotency,
-    scheduleQuotaShareConsumption,
     semanticCacheEnabled,
     sessionAffinityKey,
     shouldIsolateProbeFailures,
@@ -999,18 +998,6 @@ export async function runNonStreamingResponse(deps: NonStreamingDeps) {
       true,
       unpricedBudgetCost
     );
-
-    // === Quota Share POST-hook (B/F7) — fire-and-forget, fail-open ===
-    await scheduleQuotaShareConsumption({
-      apiKeyId: apiKeyInfo?.id,
-      connectionId: credentials?.connectionId,
-      provider,
-      model,
-      usage,
-      estimatedCost,
-      log,
-    });
-    // === /Quota Share POST-hook ===
 
     // ── Gamification event (fire-and-forget) ──
     await emitRequestGamificationEvent({ apiKeyId: apiKeyInfo?.id, model, provider });
