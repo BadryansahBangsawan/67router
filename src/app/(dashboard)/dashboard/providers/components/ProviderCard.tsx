@@ -472,7 +472,7 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
       >
         <Card
           padding="sm"
-          className={`h-full flex flex-col transition-colors cursor-pointer ${
+          className={`h-full flex flex-col hover:bg-bg-subtle transition-colors cursor-pointer ${
             isKimiPartner
               ? // Kimi (Moonshot AI) official-partnership accent — official Kimi blue
                 // (#1783FF) border (2px, clearly legible) + a subtle whole-card tint
@@ -486,7 +486,7 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
                   // its brand green (#31f889 = rgb(49,248,137)). Keep in sync with
                   // CHEAPERINFERENCE_BRAND_COLOR (featuredProviders.ts).
                   "border-2 border-[#31f889]/70 hover:border-[#31f889]/90 shadow-[inset_0_0_0_100px_rgba(49,248,137,0.035),0_4px_16px_-4px_rgba(49,248,137,0.45)]"
-                : "hover:border-border-strong"
+                : "hover:border-primary/40"
           } ${allDisabled ? "opacity-50" : ""} ${provider.deprecated ? "opacity-60" : ""}`}
         >
           <div className="flex flex-col gap-2 h-full">

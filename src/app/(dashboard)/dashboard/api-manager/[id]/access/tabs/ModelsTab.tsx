@@ -499,11 +499,11 @@ function ClaudeCodeFamilyChips({
     <div className="relative ml-2 flex flex-wrap gap-1 pl-5 animate-in fade-in slide-in-from-top-1 duration-150">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-1.5 top-0 bottom-1 w-px bg-border-strong"
+        className="pointer-events-none absolute left-1.5 top-0 bottom-1 w-px bg-primary/25"
       />
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-1.5 top-3 h-px w-3 bg-border-strong"
+        className="pointer-events-none absolute left-1.5 top-3 h-px w-3 bg-primary/25"
       />
       {visibleClaudeCodeFamilies.map((family) => {
         const canBlock = family.id !== "other";
