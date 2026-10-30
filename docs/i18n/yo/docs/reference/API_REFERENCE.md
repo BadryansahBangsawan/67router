@@ -1416,9 +1416,8 @@ níbẹ̀ pẹ̀lú; `omniroute sync import` máa ń fi ẹ̀rí ìwọlé CLI a
 
 ### Àwọn Ìgbéyẹ̀wò
 
-| Endpoint     | Method   | Àpèjúwe                                      |
-| ------------ | -------- | -------------------------------------------- |
-| `/api/evals` | GET/POST | Ṣe àkójọ àwọn àkójọpọ̀ ìgbéyẹ̀wò / ṣe ìgbéyẹ̀wò |
+| Endpoint | Method | Àpèjúwe |
+| -------- | ------ | ------- |
 
 ### Àwọn Ìlànà
 
@@ -1946,12 +1945,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | Ṣàkọsílẹ̀ àwọn orúkọ-àpèjúwe awoṣe bí a ṣe fi wọ́n hàn fún ìmúdójúìwọ̀n cloud |
 | GET | `/api/assess` | Ka àwọn ìsọ̀rí àyẹ̀wò tuntun jù lọ (fún olùpèsè/awoṣe kọ̀ọ̀kan) |
 | POST | `/api/assess` | Ṣiṣẹ́ àyẹ̀wò kan — ara: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Ṣàkọsílẹ̀ àwọn àkójọpọ̀ eval inú ètò + àwọn ìṣiṣẹ́ tuntun jù lọ |
-| POST | `/api/evals` | Bẹ̀rẹ̀ ìṣiṣẹ́ eval kan |
-| POST | `/api/evals/suites` | Ṣẹ̀dá àkójọpọ̀ eval àdáni kan — a fọwọ́sí ara rẹ̀ nípasẹ̀ `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Gba àkójọpọ̀ eval àdáni kan |
 
-**Ìfàṣẹsí:** `/api/cloud/auth` ń fọwọ́sí kọ́kọ́rọ́ Bearer kan ní tààrà, ó sì ń dá kọ́kọ́rọ́ tí a fi bo àti `projectId` ti àsopọ̀ kọ̀ọ̀kan padà fún kọ́kọ́rọ́ tó ní àyè `manage` / `admin` nìkan; àwọn ipa-ọ̀nà `/api/cloud/*`, `/api/evals/*`, àti `/api/assess` yòókù nílò sáà ìṣàkóso/kọ́kọ́rọ́ API. POST `/api/assess` ń lo `validateBody` pẹ̀lú schema scope discriminated-union kan.
+**Ìfàṣẹsí:** `/api/cloud/auth` ń fọwọ́sí kọ́kọ́rọ́ Bearer kan ní tààrà, ó sì ń dá kọ́kọ́rọ́ tí a fi bo àti `projectId` ti àsopọ̀ kọ̀ọ̀kan padà fún kọ́kọ́rọ́ tó ní àyè `manage` / `admin` nìkan; àwọn ipa-ọ̀nà `/api/cloud/*`, àti `/api/assess` yòókù nílò sáà ìṣàkóso/kọ́kọ́rọ́ API. POST `/api/assess` ń lo `validateBody` pẹ̀lú schema scope discriminated-union kan.
 
 ---
 

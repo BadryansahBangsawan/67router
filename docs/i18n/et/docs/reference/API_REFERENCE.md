@@ -1438,9 +1438,8 @@ GET-vastus sisaldab `agents[]` (id, name, binary, version, installed, protocol, 
 
 ### Hindamised
 
-| Lõpp-punkt   | Meetod   | Kirjeldus                                  |
-| ------------ | -------- | ------------------------------------------ |
-| `/api/evals` | GET/POST | Hindamiskomplektide loetlemine / hindamine |
+| Lõpp-punkt | Meetod | Kirjeldus |
+| ---------- | ------ | --------- |
 
 ### Reeglid
 
@@ -1968,12 +1967,8 @@ Tagastab avaliku A2A-agendikaardi (nimi, kirjeldus, võimekused, oskuste kataloo
 | GET | `/api/cloud/models/alias` | Loetleb pilvesünkroonimisele avaldatud mudelialiased |
 | GET | `/api/assess` | Loeb uusimad hindamiskategooriad (teenusepakkuja/mudeli kaupa) |
 | POST | `/api/assess` | Käivitab hindamise — keha: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Loetleb sisseehitatud evalveerimiskomplektid ja viimatised käivitused |
-| POST | `/api/evals` | Käivitab evalveerimise |
-| POST | `/api/evals/suites` | Loob kohandatud evalveerimiskomplekti — keha valideeritakse skeemiga `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hangib kohandatud evalveerimiskomplekti |
 
-**Autentimine:** `/api/cloud/auth` valideerib Bearer-võtme otse ning tagastab iga ühenduse maskeeritud võtme ja `projectId` ainult võtme puhul, millel on ulatus `manage` / `admin`; teised marsruudid `/api/cloud/*`, `/api/evals/*` ja `/api/assess` nõuavad haldusseanssi/API-võtit. `/api/assess` POST kasutab diskrimineeritud ühendi ulatuseskeemiga funktsiooni `validateBody`.
+**Autentimine:** `/api/cloud/auth` valideerib Bearer-võtme otse ning tagastab iga ühenduse maskeeritud võtme ja `projectId` ainult võtme puhul, millel on ulatus `manage` / `admin`; teised marsruudid `/api/cloud/*` ja `/api/assess` nõuavad haldusseanssi/API-võtit. `/api/assess` POST kasutab diskrimineeritud ühendi ulatuseskeemiga funktsiooni `validateBody`.
 
 ---
 

@@ -1415,9 +1415,8 @@ La réponse GET inclut `agents[]` (id, name, binary, version, installed, protoco
 
 ### Évaluations
 
-| Endpoint     | Méthode  | Description                                                 |
-| ------------ | -------- | ----------------------------------------------------------- |
-| `/api/evals` | GET/POST | Répertorier les suites d’évaluation / lancer une évaluation |
+| Endpoint | Méthode | Description |
+| -------- | ------- | ----------- |
 
 ### Politiques
 
@@ -1939,12 +1938,8 @@ Renvoie la fiche publique de l’agent A2A (nom, description, fonctionnalités, 
 | GET | `/api/cloud/models/alias` | Répertorie les alias de modèles tels qu’ils sont exposés à la synchronisation cloud |
 | GET | `/api/assess` | Lit les catégorisations de la dernière analyse (par fournisseur/modèle) |
 | POST | `/api/assess` | Exécute une analyse — corps : `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Répertorie les suites d’évaluation intégrées et les exécutions les plus récentes |
-| POST | `/api/evals` | Déclenche une exécution d’évaluation |
-| POST | `/api/evals/suites` | Crée une suite d’évaluation personnalisée — corps validé par `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Récupère une suite d’évaluation personnalisée |
 
-**Authentification :** `/api/cloud/auth` valide directement une clé Bearer et ne renvoie la clé masquée et le `projectId` de chaque connexion que pour une clé disposant de la portée `manage` / `admin` ; les autres routes `/api/cloud/*`, `/api/evals/*` et `/api/assess` nécessitent une session de gestion ou une clé API. La requête POST vers `/api/assess` utilise `validateBody` avec un schéma de portée sous forme d’union discriminée.
+**Authentification :** `/api/cloud/auth` valide directement une clé Bearer et ne renvoie la clé masquée et le `projectId` de chaque connexion que pour une clé disposant de la portée `manage` / `admin` ; les autres routes `/api/cloud/*` et `/api/assess` nécessitent une session de gestion ou une clé API. La requête POST vers `/api/assess` utilise `validateBody` avec un schéma de portée sous forme d’union discriminée.
 
 ---
 

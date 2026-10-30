@@ -251,7 +251,6 @@ Domaines de gestion :
 - Budget : `src/app/api/usage/budget` (GET/POST)
 - Chaînes de repli : `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit de conformité : `src/app/api/compliance/audit-log` (GET, avec pagination + métadonnées structurées)
-- Évaluations : `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politiques : `src/app/api/policies` (GET/POST)
 - Jetons de synchronisation : `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Lot de configuration : `src/app/api/sync/bundle` (GET, instantané des paramètres/fournisseurs/combinaisons/clés versionné par ETag)
@@ -315,7 +314,6 @@ Modules de la couche domaine :
 - Délai d’expiration de récupération : `src/shared/utils/fetchTimeout.ts`
 - Télémétrie des requêtes : `src/shared/utils/requestTelemetry.ts`
 - Conformité/audit : `src/lib/compliance/index.ts`
-- Exécuteur d’évaluations : `src/lib/evals/evalRunner.ts`
 - Persistance de l’état du domaine : `src/lib/db/domainState.ts` — opérations CRUD SQLite pour les chaînes de repli, les budgets, l’historique des coûts, l’état de verrouillage et les disjoncteurs
 
 Modules des fournisseurs OAuth (27 fichiers individuels sous `src/lib/oauth/providers/`) :

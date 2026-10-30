@@ -183,7 +183,6 @@ src/
 | `display/`                               | UI 형식 지정 헬퍼(비용, 지연 시간 등)                                                                                                                                                                                                                                                                              |
 | `embeddings/`                            | 임베딩 서비스 헬퍼                                                                                                                                                                                                                                                                                                 |
 | `env/`                                   | 환경 변수 파싱 + 유효성 검사                                                                                                                                                                                                                                                                                       |
-| `evals/`                                 | 평가 프레임워크(스위트, 러너, 런타임) — `docs/frameworks/EVALS.md` 참조                                                                                                                                                                                                                                            |
 | `guardrails/`                            | PII 마스커, 프롬프트 인젝션, 비전 브리지 — `docs/security/GUARDRAILS.md` 참조                                                                                                                                                                                                                                      |
 | `jobs/`                                  | 백그라운드 작업(cron과 유사)                                                                                                                                                                                                                                                                                       |
 | `memory/`                                | 대화형 메모리(SQLite FTS5 + sqlite-vec 하이브리드 RRF + Qdrant 티어 2) — `docs/frameworks/MEMORY.md` 참조                                                                                                                                                                                                          |
@@ -406,7 +405,6 @@ open-sse/
 | `SKILLS.md`                                 | 스킬 프레임워크(기본 제공 + 마켓플레이스 + SkillsSH + 샌드박스)   |
 | `RADAR.md`                                  | Radar 무료 모델 카탈로그 오버레이(`RADAR_ENABLED`, 기본값은 꺼짐) |
 | `MEMORY.md`                                 | 메모리 시스템(SQLite FTS5 + Qdrant)                               |
-| `EVALS.md`                                  | 평가 프레임워크(스위트, 실행, 루브릭)                             |
 | `GUARDRAILS.md`                             | PII 마스커, 프롬프트 인젝션, 비전 브리지                          |
 | `COMPLIANCE.md`                             | 감사 로그, 보존, noLog 옵트아웃                                   |
 | `WEBHOOKS.md`                               | HMAC 서명 웹훅 전송                                               |

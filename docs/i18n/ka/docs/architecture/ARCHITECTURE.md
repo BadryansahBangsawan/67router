@@ -251,7 +251,6 @@ flowchart LR
 - ბიუჯეტი: `src/app/api/usage/budget` (GET/POST)
 - სარეზერვო ჯაჭვები: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - შესაბამისობის აუდიტი: `src/app/api/compliance/audit-log` (GET, გვერდებად დაყოფით + სტრუქტურირებული მეტამონაცემებით)
-- შეფასებები: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - პოლიტიკები: `src/app/api/policies` (GET/POST)
 - სინქრონიზაციის ტოკენები: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - კონფიგურაციის პაკეტი: `src/app/api/sync/bundle` (GET, პარამეტრების/პროვაიდერების/კომბინაციების/გასაღებების ETag-ით ვერსირებული ანაბეჭდი)
@@ -315,7 +314,6 @@ flowchart LR
 - fetch-ის დროის ამოწურვა: `src/shared/utils/fetchTimeout.ts`
 - მოთხოვნის ტელემეტრია: `src/shared/utils/requestTelemetry.ts`
 - შესაბამისობა/აუდიტი: `src/lib/compliance/index.ts`
-- შეფასებების გამშვები: `src/lib/evals/evalRunner.ts`
 - დომენის მდგომარეობის მუდმივი შენახვა: `src/lib/db/domainState.ts` — SQLite CRUD სარეზერვო გადართვის ჯაჭვებისთვის, ბიუჯეტებისთვის, ღირებულების ისტორიისთვის, ბლოკირების მდგომარეობისა და ამომრთველებისთვის
 
 OAuth პროვაიდერის მოდულები (27 ცალკეული ფაილი `src/lib/oauth/providers/`-ში):

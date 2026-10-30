@@ -1436,9 +1436,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### การประเมิน
 
-| Endpoint     | Method   | Description                                  |
-| ------------ | -------- | -------------------------------------------- |
-| `/api/evals` | GET/POST | แสดงรายการชุดการประเมิน / เรียกใช้การประเมิน |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### นโยบาย
 
@@ -1963,12 +1962,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | แสดงรายการนามแฝงโมเดลตามที่เปิดให้การซิงค์คลาวด์ใช้งาน |
 | GET | `/api/assess` | อ่านการจัดหมวดหมู่จากการประเมินล่าสุด (แยกตามผู้ให้บริการ/โมเดล) |
 | POST | `/api/assess` | เรียกใช้การประเมิน — เนื้อหาคำขอ: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | แสดงรายการชุดการประเมินผลในตัวพร้อมการเรียกใช้ล่าสุด |
-| POST | `/api/evals` | เริ่มต้นการเรียกใช้การประเมินผล |
-| POST | `/api/evals/suites` | สร้างชุดการประเมินผลแบบกำหนดเอง — เนื้อหาคำขอผ่านการตรวจสอบโดย `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | เรียกดูชุดการประเมินผลแบบกำหนดเอง |
 
-**การยืนยันตัวตน:** `/api/cloud/auth` ตรวจสอบคีย์ Bearer โดยตรง และส่งคืนคีย์ที่ปกปิดแล้วพร้อม `projectId` ของแต่ละการเชื่อมต่อ เฉพาะเมื่อเป็นคีย์ที่มีขอบเขต `manage` / `admin` เท่านั้น ส่วนเส้นทาง `/api/cloud/*`, `/api/evals/*` และ `/api/assess` อื่นๆ ต้องใช้เซสชัน/คีย์ API สำหรับการจัดการ คำขอ POST ไปยัง `/api/assess` ใช้ `validateBody` ร่วมกับสคีมาขอบเขตแบบ discriminated-union
+**การยืนยันตัวตน:** `/api/cloud/auth` ตรวจสอบคีย์ Bearer โดยตรง และส่งคืนคีย์ที่ปกปิดแล้วพร้อม `projectId` ของแต่ละการเชื่อมต่อ เฉพาะเมื่อเป็นคีย์ที่มีขอบเขต `manage` / `admin` เท่านั้น ส่วนเส้นทาง `/api/cloud/*` และ `/api/assess` อื่นๆ ต้องใช้เซสชัน/คีย์ API สำหรับการจัดการ คำขอ POST ไปยัง `/api/assess` ใช้ `validateBody` ร่วมกับสคีมาขอบเขตแบบ discriminated-union
 
 ---
 

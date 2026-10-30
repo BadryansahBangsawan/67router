@@ -41,7 +41,6 @@ AI නියෝජිතයා / IDE
 | ඡායා ගමනාගමනය                             | `open-sse/services/combo/shadowRouting.ts`                                                           |
 | ආරක්ෂක සීමා                               | `src/lib/guardrails/` (පෙර/පසු hooks)                                                                |
 | නිශ්චිත හැඹිලිය                           | `src/lib/semanticCache.ts` (signature-පාදක)                                                          |
-| ඇගයුම්කාරක / ඇගයීම්-මෙහෙයවන මාර්ගගත කිරීම | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                 |
 | Combo තීරණ පැහැදිලි කිරීමේ හැකියාව        | `open-sse/services/combo/decisionTrace.ts`                                                           |
 | උපකරණ පුවරුවේ තත්ය කාලීන සිදුවීම්         | `src/lib/events/eventBus.ts` (UI දැනුම්දීම් නාලිකාව, `unknown` payloads, ඇතුළත් කිරීම් 100ක ඉතිහාසය) |
 
@@ -252,8 +251,6 @@ OmniRoute විසින් Future AGI (හෝ ඕනෑම evaluator එකක
 - අනාගත `Evaluator` එකක් (deterministic, local judge, HTTP, WASM) විසින්
   events/traces පරිභෝජනය කර, එම
   `getQualityScore`/quality-factor මාර්ගයටම සපයන `QualityScore` එකක් ආපසු ලබා දෙනු ඇත.
-- දැනට පවතින eval-මඟින් මෙහෙයවන routing (`open-sse/services/evalRouting.ts`) සක්රීය කළ විට,
-  `eval_runs` pass-rates අනුව combo targets දැනටමත් නැවත අනුපිළිවෙළගස්වයි.
 
 කිසිදු evaluation එකක් request path එක මත සමමුහුර්තව ක්රියාත්මක නොවන අතර,
 evaluator එක නොමැතිවද gateway එක සම්පූර්ණයෙන් ක්රියාත්මක වේ.

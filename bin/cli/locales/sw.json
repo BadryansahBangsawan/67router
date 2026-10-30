@@ -746,51 +746,6 @@
       "description": "Orodhesha faili chanzo zilizoundwa na kazi"
     }
   },
-  "eval": {
-    "description": "Dhibiti seti na uendeshaji wa tathmini",
-    "suites": {
-      "description": "Dhibiti seti za tathmini",
-      "list": {
-        "description": "Orodhesha seti za tathmini"
-      },
-      "get": {
-        "description": "Pata maelezo ya seti ya tathmini kwa ID"
-      },
-      "create": {
-        "description": "Unda seti ya tathmini kutoka kwenye faili ya JSON",
-        "file": "Njia ya faili ya JSON yenye ufafanuzi wa seti"
-      }
-    },
-    "run": {
-      "description": "Anzisha uendeshaji wa tathmini kwa seti",
-      "model": "ID ya modeli ya kutathmini (chaguo-msingi: auto)",
-      "combo": "Lazimisha mseto mahususi kwa jina",
-      "concurrency": "Idadi ya sampuli zinazoendeshwa kwa wakati mmoja (chaguo-msingi: 4)",
-      "tag": "Weka lebo kwenye uendeshaji huu kwa ajili ya kuchuja baadaye",
-      "watch": "Fuatilia maendeleo ya uendeshaji hadi ukamilike"
-    },
-    "list": {
-      "description": "Orodhesha uendeshaji wa tathmini",
-      "suite": "Chuja kwa ID ya seti",
-      "status": "Chuja kwa hali",
-      "since": "Rejesha uendeshaji tangu muhuri huu wa muda",
-      "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 50)"
-    },
-    "get": {
-      "description": "Pata maelezo ya uendeshaji wa tathmini kwa ID"
-    },
-    "results": {
-      "description": "Onyesha matokeo ya sampuli kwa uendeshaji wa tathmini",
-      "failed": "Onyesha sampuli zilizofeli pekee"
-    },
-    "cancel": {
-      "description": "Ghairi tathmini inayoendelea",
-      "yes": "Ruka kidokezo cha uthibitishaji"
-    },
-    "scorecard": {
-      "description": "Onyesha kadi ya alama ya uendeshaji wa tathmini uliokamilika"
-    }
-  },
   "program": {
     "description": "OmniRoute — Kipanga Njia Mahiri cha AI chenye Njia Mbadala ya Kiotomatiki",
     "version": "Chapisha toleo na uondoke",

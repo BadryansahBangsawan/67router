@@ -746,51 +746,6 @@
       "description": "Lista ta' fajls sors prodotti minn kompitu"
     }
   },
-  "eval": {
-    "description": "Immaniġġja suites u runs ta' evalwazzjoni",
-    "suites": {
-      "description": "Immaniġġja suites ta' evalwazzjoni",
-      "list": {
-        "description": "Lista ta' suites ta' evalwazzjoni"
-      },
-      "get": {
-        "description": "Ikseb dettalji tas-suite ta' evalwazzjoni bl-ID"
-      },
-      "create": {
-        "description": "Oħloq suite ta' evalwazzjoni minn fajl JSON",
-        "file": "Triq għall-fajl JSON tad-definizzjoni tas-suite"
-      }
-    },
-    "run": {
-      "description": "Ibda run ta' evalwazzjoni għal suite",
-      "model": "ID tal-mudell biex tiġi evalwata (default: awtomatiku)",
-      "combo": "Ġiegħel combo speċifiku bl-isem",
-      "concurrency": "Numru ta' kampjuni konkorrenti (default: 4)",
-      "tag": "Immarka dan ir-run għal filtrazzjoni aktar tard",
-      "watch": "Ara l-progress tar-run sakemm jitlesta"
-    },
-    "list": {
-      "description": "Lista ta' runs ta' evalwazzjoni",
-      "suite": "Iffiltra bl-ID tas-suite",
-      "status": "Iffiltra bl-istatus",
-      "since": "Irritorna runs minn dan it-timestamp",
-      "limit": "Riżultati massimi (default: 50)"
-    },
-    "get": {
-      "description": "Ikseb dettalji tar-run ta' evalwazzjoni bl-ID"
-    },
-    "results": {
-      "description": "Uri riżultati tal-kampjuni għal run ta' evalwazzjoni",
-      "failed": "Uri biss kampjuni falluti"
-    },
-    "cancel": {
-      "description": "Ikkanċella evalwazzjoni li qed taħdem",
-      "yes": "Aqbeż il-prompt ta' konferma"
-    },
-    "scorecard": {
-      "description": "Uri l-scorecard għal run ta' evalwazzjoni lest"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI Intelliġenti b'Fallback Awtomatiku",
     "version": "Ipprintja l-verżjoni u oħroġ",

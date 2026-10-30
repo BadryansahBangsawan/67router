@@ -251,7 +251,6 @@ Domini di gestione:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Catene di fallback: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit di conformità: `src/app/api/compliance/audit-log` (GET, con paginazione + metadati strutturati)
-- Valutazioni: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Criteri: `src/app/api/policies` (GET/POST)
 - Token di sincronizzazione: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Pacchetto di configurazione: `src/app/api/sync/bundle` (GET, snapshot con versione ETag di impostazioni/provider/combinazioni/chiavi)
@@ -315,7 +314,6 @@ Moduli del livello di dominio:
 - Timeout del fetch: `src/shared/utils/fetchTimeout.ts`
 - Telemetria delle richieste: `src/shared/utils/requestTelemetry.ts`
 - Conformità/audit: `src/lib/compliance/index.ts`
-- Esecutore delle valutazioni: `src/lib/evals/evalRunner.ts`
 - Persistenza dello stato del dominio: `src/lib/db/domainState.ts` — operazioni CRUD SQLite per catene di fallback, budget, cronologia dei costi, stato di blocco e circuit breaker
 
 Moduli dei provider OAuth (27 file individuali in `src/lib/oauth/providers/`):

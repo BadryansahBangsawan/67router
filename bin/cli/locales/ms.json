@@ -746,51 +746,6 @@
       "description": "Senaraikan fail sumber yang dihasilkan oleh tugas"
     }
   },
-  "eval": {
-    "description": "Urus suite dan pelaksanaan penilaian",
-    "suites": {
-      "description": "Urus suite penilaian",
-      "list": {
-        "description": "Senaraikan suite penilaian"
-      },
-      "get": {
-        "description": "Dapatkan butiran suite penilaian mengikut ID"
-      },
-      "create": {
-        "description": "Cipta suite penilaian daripada fail JSON",
-        "file": "Laluan ke fail JSON definisi suite"
-      }
-    },
-    "run": {
-      "description": "Mulakan pelaksanaan penilaian untuk suite",
-      "model": "ID model untuk dinilai (lalai: auto)",
-      "combo": "Paksa kombo tertentu mengikut nama",
-      "concurrency": "Bilangan sampel serentak (lalai: 4)",
-      "tag": "Tag pelaksanaan ini untuk penapisan kemudian",
-      "watch": "Pantau kemajuan pelaksanaan sehingga selesai"
-    },
-    "list": {
-      "description": "Senaraikan pelaksanaan penilaian",
-      "suite": "Tapis mengikut ID suite",
-      "status": "Tapis mengikut status",
-      "since": "Kembalikan pelaksanaan sejak cap masa ini",
-      "limit": "Hasil maksimum (lalai: 50)"
-    },
-    "get": {
-      "description": "Dapatkan butiran pelaksanaan penilaian mengikut ID"
-    },
-    "results": {
-      "description": "Tunjukkan hasil sampel untuk pelaksanaan penilaian",
-      "failed": "Tunjukkan sampel yang gagal sahaja"
-    },
-    "cancel": {
-      "description": "Batalkan penilaian yang sedang berjalan",
-      "yes": "Langkau gesaan pengesahan"
-    },
-    "scorecard": {
-      "description": "Tunjukkan kad skor untuk pelaksanaan penilaian yang telah selesai"
-    }
-  },
   "program": {
     "description": "OmniRoute — Penghala AI Pintar dengan Sandaran Automatik",
     "version": "Paparkan versi dan keluar",

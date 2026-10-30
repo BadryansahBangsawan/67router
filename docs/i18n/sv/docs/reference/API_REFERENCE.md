@@ -1437,9 +1437,8 @@ GET-svaret inkluderar `agents[]` (id, name, binary, version, installed, protocol
 
 ### Utvärderingar
 
-| Slutpunkt    | Metod    | Beskrivning                              |
-| ------------ | -------- | ---------------------------------------- |
-| `/api/evals` | GET/POST | Lista utvärderingssviter/kör utvärdering |
+| Slutpunkt | Metod | Beskrivning |
+| --------- | ----- | ----------- |
 
 ### Policyer
 
@@ -1961,12 +1960,8 @@ Returnerar det offentliga A2A-agentkortet (namn, beskrivning, funktioner, färdi
 | GET | `/api/cloud/models/alias` | Listar modellalias så som de exponeras för molnsynkronisering |
 | GET | `/api/assess` | Läser de senaste bedömningskategoriseringarna (per leverantör/modell) |
 | POST | `/api/assess` | Kör en bedömning — brödtext: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Listar inbyggda utvärderingssviter + de senaste körningarna |
-| POST | `/api/evals` | Startar en utvärderingskörning |
-| POST | `/api/evals/suites` | Skapar en anpassad utvärderingssvit — brödtexten valideras av `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hämtar en anpassad utvärderingssvit |
 
-**Autentisering:** `/api/cloud/auth` validerar en Bearer-nyckel direkt och returnerar den maskerade nyckeln och `projectId` för varje anslutning endast för en nyckel med omfånget `manage` / `admin`; de övriga rutterna `/api/cloud/*`, `/api/evals/*` och `/api/assess` kräver en hanteringssession/API-nyckel. POST för `/api/assess` använder `validateBody` med ett diskriminerat unionsschema för omfång.
+**Autentisering:** `/api/cloud/auth` validerar en Bearer-nyckel direkt och returnerar den maskerade nyckeln och `projectId` för varje anslutning endast för en nyckel med omfånget `manage` / `admin`; de övriga rutterna `/api/cloud/*` och `/api/assess` kräver en hanteringssession/API-nyckel. POST för `/api/assess` använder `validateBody` med ett diskriminerat unionsschema för omfång.
 
 ---
 

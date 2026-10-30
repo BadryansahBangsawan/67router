@@ -11,7 +11,6 @@ const RESOURCES = {
   logs: "/dashboard/logs",
   memory: "/dashboard/memory",
   skills: "/dashboard/skills",
-  evals: "/dashboard/evals",
   audit: "/dashboard/audit",
   cost: "/dashboard/cost",
   resilience: "/dashboard/resilience",

@@ -34,16 +34,15 @@ AI-ügynök / IDE
 
 ### Ami már rendelkezésre állt (auditálva, nem duplikálva)
 
-| Fogalom                                        | Meglévő megvalósítás                                                                                                |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Elérhetőség (küldhetünk forgalmat?)            | Áramkör-megszakító (CLOSED/DEGRADED/OPEN/HALF_OPEN, adatbázisban tárolva), kapcsolati várakozási idő, modellzárolás |
-| Állapotjelentés                                | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                             |
-| Árnyékforgalom                                 | `open-sse/services/combo/shadowRouting.ts`                                                                          |
-| Védőkorlátok                                   | `src/lib/guardrails/` (elő-/utófeldolgozási horgok)                                                                 |
-| Egzakt gyorsítótár                             | `src/lib/semanticCache.ts` (aláírás-alapú)                                                                          |
-| Kiértékelők / kiértékelés-vezérelt útválasztás | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                |
-| Combo-döntések magyarázhatósága                | `open-sse/services/combo/decisionTrace.ts`                                                                          |
-| Irányítópult valós idejű eseményei             | `src/lib/events/eventBus.ts` (UI-értesítési csatorna, `unknown` hasznos adatok, 100 bejegyzéses előzmény)           |
+| Fogalom                             | Meglévő megvalósítás                                                                                                |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Elérhetőség (küldhetünk forgalmat?) | Áramkör-megszakító (CLOSED/DEGRADED/OPEN/HALF_OPEN, adatbázisban tárolva), kapcsolati várakozási idő, modellzárolás |
+| Állapotjelentés                     | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                             |
+| Árnyékforgalom                      | `open-sse/services/combo/shadowRouting.ts`                                                                          |
+| Védőkorlátok                        | `src/lib/guardrails/` (elő-/utófeldolgozási horgok)                                                                 |
+| Egzakt gyorsítótár                  | `src/lib/semanticCache.ts` (aláírás-alapú)                                                                          |
+| Combo-döntések magyarázhatósága     | `open-sse/services/combo/decisionTrace.ts`                                                                          |
+| Irányítópult valós idejű eseményei  | `src/lib/events/eventBus.ts` (UI-értesítési csatorna, `unknown` hasznos adatok, 100 bejegyzéses előzmény)           |
 
 Az útválasztásiesemény-réteg **nem** az `eventBus` újraimplementálása: ez a busz az irányítópult valós idejű értesítési csatornája (típusos _eseménynevek_, átlátszatlan hasznos adatok, UI-fogyasztók). A `RoutingEvent` egy típusos _eredmény_-struktúra (késleltetés/tokenek/költség/eredmény/befejezési ok), amelyet a vezérlési sík visszajelzés-fogadói (minőségkövető, OTel-exportáló, magyarázattároló) használnak fel.
 
@@ -263,8 +262,6 @@ intelligencia-/kiértékelési háttérrendszerként, nem pedig függőségként
 - Egy jövőbeli `Evaluator` (determinisztikus, helyi bíráló, HTTP, WASM) eseményeket/nyomkövetéseket
   fogyasztana, és egy `QualityScore` értéket adna vissza, amely ugyanabba a
   `getQualityScore`/minőségi tényező útvonalba kerülne.
-- A meglévő, kiértékelésvezérelt útválasztás (`open-sse/services/evalRouting.ts`) engedélyezés
-  esetén már most is átrendezi a kombináció célpontjait az `eval_runs` sikerességi arányai alapján.
 
 Egyetlen kiértékelés sem fut szinkron módon a kérési útvonalon, és az átjáró a kiértékelő
 hiányában is teljes funkcionalitással működik.

@@ -1438,9 +1438,8 @@ GET atbildē ir iekļauti `agents[]` (id, name, binary, version, installed, prot
 
 ### Novērtējumi
 
-| Galapunkts   | Metode   | Apraksts                                             |
-| ------------ | -------- | ---------------------------------------------------- |
-| `/api/evals` | GET/POST | Uzskaitīt novērtējumu komplektus / veikt novērtēšanu |
+| Galapunkts | Metode | Apraksts |
+| ---------- | ------ | -------- |
 
 ### Politikas
 
@@ -1968,12 +1967,8 @@ Atgriež publisko A2A aģenta karti (nosaukumu, aprakstu, iespējas, prasmju kat
 | GET | `/api/cloud/models/alias` | Uzskaita modeļu aizstājvārdus, kas pieejami mākoņa sinhronizācijai |
 | GET | `/api/assess` | Nolasa jaunākās izvērtējuma kategorizācijas (katram pakalpojumu sniedzējam/modelim) |
 | POST | `/api/assess` | Izpilda izvērtējumu — pamatteksts: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Uzskaita iebūvētos novērtēšanas testu komplektus un jaunākās izpildes |
-| POST | `/api/evals` | Aktivizē novērtēšanas testa izpildi |
-| POST | `/api/evals/suites` | Izveido pielāgotu novērtēšanas testu komplektu — pamattekstu validē `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Iegūst pielāgotu novērtēšanas testu komplektu |
 
-**Autentifikācija:** `/api/cloud/auth` tieši validē Bearer atslēgu un atgriež katra savienojuma maskēto atslēgu un `projectId` tikai tad, ja atslēgai ir tvērums `manage` / `admin`; pārējiem `/api/cloud/*`, `/api/evals/*` un `/api/assess` maršrutiem ir nepieciešama pārvaldības sesija/API atslēga. `/api/assess` POST izmanto `validateBody` ar diskriminētas apvienības tvēruma shēmu.
+**Autentifikācija:** `/api/cloud/auth` tieši validē Bearer atslēgu un atgriež katra savienojuma maskēto atslēgu un `projectId` tikai tad, ja atslēgai ir tvērums `manage` / `admin`; pārējiem `/api/cloud/*` un `/api/assess` maršrutiem ir nepieciešama pārvaldības sesija/API atslēga. `/api/assess` POST izmanto `validateBody` ar diskriminētas apvienības tvēruma shēmu.
 
 ---
 

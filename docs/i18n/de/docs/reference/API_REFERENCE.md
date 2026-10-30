@@ -1430,9 +1430,8 @@ Die GET-Antwort enthält `agents[]` (id, name, binary, version, installed, proto
 
 ### Evaluationen
 
-| Endpunkt     | Methode  | Beschreibung                                       |
-| ------------ | -------- | -------------------------------------------------- |
-| `/api/evals` | GET/POST | Evaluationssuiten auflisten / Evaluation ausführen |
+| Endpunkt | Methode | Beschreibung |
+| -------- | ------- | ------------ |
 
 ### Richtlinien
 
@@ -1960,12 +1959,8 @@ Gibt die öffentliche A2A-Agentenkarte zurück (Name, Beschreibung, Funktionen, 
 | GET | `/api/cloud/models/alias` | Listet Modellaliase auf, die für die Cloud-Synchronisierung bereitgestellt werden |
 | GET | `/api/assess` | Liest die neuesten Bewertungskategorisierungen (pro Provider/Modell) |
 | POST | `/api/assess` | Führt eine Bewertung aus — Body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Listet integrierte Evaluierungssuiten und die neuesten Ausführungen auf |
-| POST | `/api/evals` | Startet eine Evaluierungsausführung |
-| POST | `/api/evals/suites` | Erstellt eine benutzerdefinierte Evaluierungssuite — Body wird durch `evalSuiteSaveSchema` validiert |
-| GET | `/api/evals/suites/[id]` | Ruft eine benutzerdefinierte Evaluierungssuite ab |
 
-**Authentifizierung:** `/api/cloud/auth` validiert einen Bearer-Schlüssel direkt und gibt den maskierten Schlüssel sowie die `projectId` jeder Verbindung nur für einen Schlüssel mit dem Geltungsbereich `manage` / `admin` zurück; die übrigen Routen `/api/cloud/*`, `/api/evals/*` und `/api/assess` erfordern eine Verwaltungssitzung bzw. einen Verwaltungs-API-Schlüssel. POST-Anfragen an `/api/assess` verwenden `validateBody` mit einem Bereichsschema auf Basis einer diskriminierten Union.
+**Authentifizierung:** `/api/cloud/auth` validiert einen Bearer-Schlüssel direkt und gibt den maskierten Schlüssel sowie die `projectId` jeder Verbindung nur für einen Schlüssel mit dem Geltungsbereich `manage` / `admin` zurück; die übrigen Routen `/api/cloud/*` und `/api/assess` erfordern eine Verwaltungssitzung bzw. einen Verwaltungs-API-Schlüssel. POST-Anfragen an `/api/assess` verwenden `validateBody` mit einem Bereichsschema auf Basis einer diskriminierten Union.
 
 ---
 

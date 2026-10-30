@@ -746,51 +746,6 @@
       "description": "Liệt kê các tệp nguồn do tác vụ tạo ra"
     }
   },
-  "eval": {
-    "description": "Quản lý các bộ đánh giá và lượt chạy",
-    "suites": {
-      "description": "Quản lý các bộ đánh giá",
-      "list": {
-        "description": "Liệt kê các bộ đánh giá"
-      },
-      "get": {
-        "description": "Lấy thông tin chi tiết về bộ đánh giá theo ID"
-      },
-      "create": {
-        "description": "Tạo bộ đánh giá từ tệp JSON",
-        "file": "Đường dẫn đến tệp JSON định nghĩa bộ đánh giá"
-      }
-    },
-    "run": {
-      "description": "Bắt đầu một lượt chạy đánh giá cho bộ đánh giá",
-      "model": "ID mô hình cần đánh giá (mặc định: auto)",
-      "combo": "Buộc sử dụng một tổ hợp cụ thể theo tên",
-      "concurrency": "Số mẫu chạy đồng thời (mặc định: 4)",
-      "tag": "Gắn thẻ lượt chạy này để lọc sau",
-      "watch": "Theo dõi tiến trình lượt chạy cho đến khi hoàn tất"
-    },
-    "list": {
-      "description": "Liệt kê các lượt chạy đánh giá",
-      "suite": "Lọc theo ID bộ đánh giá",
-      "status": "Lọc theo trạng thái",
-      "since": "Trả về các lượt chạy kể từ dấu thời gian này",
-      "limit": "Số kết quả tối đa (mặc định: 50)"
-    },
-    "get": {
-      "description": "Lấy thông tin chi tiết về lượt chạy đánh giá theo ID"
-    },
-    "results": {
-      "description": "Hiển thị kết quả mẫu của một lượt chạy đánh giá",
-      "failed": "Chỉ hiển thị các mẫu thất bại"
-    },
-    "cancel": {
-      "description": "Hủy một lượt đánh giá đang chạy",
-      "yes": "Bỏ qua lời nhắc xác nhận"
-    },
-    "scorecard": {
-      "description": "Hiển thị bảng điểm của một lượt chạy đánh giá đã hoàn tất"
-    }
-  },
   "program": {
     "description": "OmniRoute — Bộ định tuyến AI thông minh với tự động chuyển đổi dự phòng",
     "version": "In phiên bản và thoát",

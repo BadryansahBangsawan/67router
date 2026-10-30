@@ -1439,9 +1439,8 @@ Odpowiedź GET zawiera `agents[]` (id, name, binary, version, installed, protoco
 
 ### Ewaluacje
 
-| Punkt końcowy | Metoda   | Opis                                                         |
-| ------------- | -------- | ------------------------------------------------------------ |
-| `/api/evals`  | GET/POST | Wyświetlanie zestawów ewaluacyjnych / uruchamianie ewaluacji |
+| Punkt końcowy | Metoda | Opis |
+| ------------- | ------ | ---- |
 
 ### Zasady
 
@@ -1966,12 +1965,8 @@ Zwraca publiczną kartę agenta A2A (nazwę, opis, możliwości, katalog umieję
 | GET | `/api/cloud/models/alias` | Wyświetla aliasy modeli udostępniane synchronizacji z chmurą |
 | GET | `/api/assess` | Odczytuje najnowsze kategoryzacje oceny (dla poszczególnych dostawców/modeli) |
 | POST | `/api/assess` | Uruchamia ocenę — treść żądania: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Wyświetla wbudowane zestawy ewaluacyjne i najnowsze uruchomienia |
-| POST | `/api/evals` | Uruchamia ewaluację |
-| POST | `/api/evals/suites` | Tworzy niestandardowy zestaw ewaluacyjny — treść żądania walidowana przez `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Pobiera niestandardowy zestaw ewaluacyjny |
 
-**Uwierzytelnianie:** `/api/cloud/auth` bezpośrednio weryfikuje klucz Bearer i zwraca zamaskowany klucz oraz `projectId` każdego połączenia wyłącznie dla klucza z zakresem `manage` / `admin`; pozostałe trasy `/api/cloud/*`, `/api/evals/*` i `/api/assess` wymagają sesji administracyjnej lub klucza API. Żądanie POST do `/api/assess` używa `validateBody` ze schematem zakresu będącym sumą rozłączną.
+**Uwierzytelnianie:** `/api/cloud/auth` bezpośrednio weryfikuje klucz Bearer i zwraca zamaskowany klucz oraz `projectId` każdego połączenia wyłącznie dla klucza z zakresem `manage` / `admin`; pozostałe trasy `/api/cloud/*` i `/api/assess` wymagają sesji administracyjnej lub klucza API. Żądanie POST do `/api/assess` używa `validateBody` ze schematem zakresu będącym sumą rozłączną.
 
 ---
 

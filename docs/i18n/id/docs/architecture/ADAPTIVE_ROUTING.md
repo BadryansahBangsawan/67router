@@ -49,7 +49,6 @@ Agen AI / IDE
 | Traffic bayangan                                  | `open-sse/services/combo/shadowRouting.ts`                                                              |
 | Guardrail                                         | `src/lib/guardrails/` (hook sebelum/sesudah)                                                            |
 | Cache eksak                                       | `src/lib/semanticCache.ts` (berbasis signature)                                                         |
-| Evaluator / perutean berbasis evaluasi            | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                    |
 | Keterjelasan keputusan combo                      | `open-sse/services/combo/decisionTrace.ts`                                                              |
 | Peristiwa real-time dashboard                     | `src/lib/events/eventBus.ts` (kanal notifikasi UI, payload `unknown`, riwayat 100 entri)                |
 
@@ -265,8 +264,6 @@ kecerdasan/evaluasi potensial, bukan dependensi**. Titik integrasinya:
 - `Evaluator` di masa mendatang (deterministik, penilai lokal, HTTP, WASM) akan
   mengonsumsi event/jejak dan mengembalikan `QualityScore` yang masuk ke jalur
   `getQualityScore`/faktor kualitas yang sama.
-- Perutean berbasis evaluasi yang sudah ada (`open-sse/services/evalRouting.ts`)
-  telah mengurutkan ulang target combo berdasarkan tingkat kelulusan `eval_runs`
   saat diaktifkan.
 
 Tidak ada evaluasi yang berjalan secara sinkron pada jalur permintaan, dan gateway

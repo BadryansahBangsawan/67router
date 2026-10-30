@@ -251,7 +251,6 @@ Domain pengurusan:
 - Bajet: `src/app/api/usage/budget` (GET/POST)
 - Rantaian sandaran: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit pematuhan: `src/app/api/compliance/audit-log` (GET, dengan penomboran halaman + metadata berstruktur)
-- Penilaian: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Dasar: `src/app/api/policies` (GET/POST)
 - Token penyegerakan: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Berkas konfigurasi: `src/app/api/sync/bundle` (GET, petikan tetapan/penyedia/gabungan/kunci yang diversi menggunakan ETag)
@@ -315,7 +314,6 @@ Modul lapisan domain:
 - Tamat masa pengambilan: `src/shared/utils/fetchTimeout.ts`
 - Telemetri permintaan: `src/shared/utils/requestTelemetry.ts`
 - Pematuhan/audit: `src/lib/compliance/index.ts`
-- Pelaksana penilaian: `src/lib/evals/evalRunner.ts`
 - Pengekalan keadaan domain: `src/lib/db/domainState.ts` — CRUD SQLite untuk rantaian sandaran, belanjawan, sejarah kos, keadaan penguncian dan pemutus litar
 
 Modul penyedia OAuth (27 fail individu di bawah `src/lib/oauth/providers/`):

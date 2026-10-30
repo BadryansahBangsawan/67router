@@ -1438,9 +1438,8 @@ Nzaghachi GET gụnyere `agents[]` (id, name, binary, version, installed, protoc
 
 ### Ntụle
 
-| Ebe njedebe  | Usoro    | Nkọwa                            |
-| ------------ | -------- | -------------------------------- |
-| `/api/evals` | GET/POST | Depụta ngwugwu ntụle / mee ntụle |
+| Ebe njedebe | Usoro | Nkọwa |
+| ----------- | ----- | ----- |
 
 ### Atumatu
 
@@ -1966,12 +1965,8 @@ Na-eweghachi kaadị agent A2A ọha (aha, nkọwa, ikike, katalọgụ skill, u
 | GET | `/api/cloud/models/alias` | Depụta aha ọzọ model dịka e si egosi ha na cloud sync |
 | GET | `/api/assess` | Gụọ nhazi ọkwa assessment kacha ọhụrụ (maka provider/model ọ bụla) |
 | POST | `/api/assess` | Mee assessment — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Depụta ngwugwu eval arụnyere n'ime ya + run ndị kacha ọhụrụ |
-| POST | `/api/evals` | Kpalite eval run |
-| POST | `/api/evals/suites` | Mepụta ngwugwu eval ahaziri iche — a na-eji `evalSuiteSaveSchema` enyocha body |
-| GET | `/api/evals/suites/[id]` | Nweta ngwugwu eval ahaziri iche |
 
-**Auth:** `/api/cloud/auth` na-enyocha igodo Bearer ozugbo ma na-eweghachi naanị igodo ezoro akụkụ ya na `projectId` nke njikọ ọ bụla maka igodo nwere scope `manage` / `admin`; ụzọ `/api/cloud/*`, `/api/evals/*`, na `/api/assess` ndị ọzọ chọrọ session/API key njikwa. POST `/api/assess` na-eji `validateBody` tinyere schema scope discriminated-union.
+**Auth:** `/api/cloud/auth` na-enyocha igodo Bearer ozugbo ma na-eweghachi naanị igodo ezoro akụkụ ya na `projectId` nke njikọ ọ bụla maka igodo nwere scope `manage` / `admin`; ụzọ `/api/cloud/*`, na `/api/assess` ndị ọzọ chọrọ session/API key njikwa. POST `/api/assess` na-eji `validateBody` tinyere schema scope discriminated-union.
 
 ---
 

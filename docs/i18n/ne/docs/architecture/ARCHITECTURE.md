@@ -251,7 +251,6 @@ flowchart LR
 - बजेट: `src/app/api/usage/budget` (GET/POST)
 - फलब्याक शृङ्खलाहरू: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - अनुपालन अडिट: `src/app/api/compliance/audit-log` (GET, पृष्ठाङ्कन + संरचित मेटाडेटासहित)
-- मूल्याङ्कनहरू: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - नीतिहरू: `src/app/api/policies` (GET/POST)
 - सिङ्क टोकनहरू: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - कन्फिगरेसन बन्डल: `src/app/api/sync/bundle` (GET, सेटिङहरू/प्रदायकहरू/कम्बोहरू/कुञ्जीहरूको ETag-संस्करणयुक्त स्न्यापसट)
@@ -315,7 +314,6 @@ flowchart LR
 - फेच टाइमआउट: `src/shared/utils/fetchTimeout.ts`
 - अनुरोध टेलिमेट्री: `src/shared/utils/requestTelemetry.ts`
 - अनुपालन/अडिट: `src/lib/compliance/index.ts`
-- मूल्याङ्कन रनर: `src/lib/evals/evalRunner.ts`
 - डोमेन स्थिति स्थायित्व: `src/lib/db/domainState.ts` — फलब्याक चेनहरू, बजेटहरू, लागत इतिहास, लकआउट स्थिति र सर्किट ब्रेकरहरूका लागि SQLite CRUD
 
 OAuth प्रदायक मोड्युलहरू (`src/lib/oauth/providers/` अन्तर्गतका 27 वटा छुट्टाछुट्टै फाइल):

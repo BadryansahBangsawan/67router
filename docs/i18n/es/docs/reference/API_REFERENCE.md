@@ -1414,9 +1414,8 @@ La respuesta de GET incluye `agents[]` (id, name, binary, version, installed, pr
 
 ### Evaluaciones
 
-| Endpoint     | Método   | Descripción                                              |
-| ------------ | -------- | -------------------------------------------------------- |
-| `/api/evals` | GET/POST | Enumerar conjuntos de evaluación/ejecutar una evaluación |
+| Endpoint | Método | Descripción |
+| -------- | ------ | ----------- |
 
 ### Políticas
 
@@ -1944,12 +1943,8 @@ Devuelve la tarjeta pública del agente A2A (nombre, descripción, capacidades, 
 | GET | `/api/cloud/models/alias` | Enumera los alias de modelos expuestos a la sincronización con la nube |
 | GET | `/api/assess` | Lee las categorizaciones de la evaluación más reciente (por proveedor/modelo) |
 | POST | `/api/assess` | Ejecuta una evaluación — cuerpo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Enumera los conjuntos de evaluaciones integrados + las ejecuciones más recientes |
-| POST | `/api/evals` | Inicia una ejecución de evaluación |
-| POST | `/api/evals/suites` | Crea un conjunto de evaluaciones personalizado — cuerpo validado mediante `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Recupera un conjunto de evaluaciones personalizado |
 
-**Autenticación:** `/api/cloud/auth` valida directamente una clave Bearer y devuelve la clave enmascarada y el `projectId` de cada conexión únicamente cuando la clave tiene el ámbito `manage` / `admin`; las demás rutas `/api/cloud/*`, `/api/evals/*` y `/api/assess` requieren una sesión de administración/clave de API. El método POST de `/api/assess` utiliza `validateBody` con un esquema de ámbito de unión discriminada.
+**Autenticación:** `/api/cloud/auth` valida directamente una clave Bearer y devuelve la clave enmascarada y el `projectId` de cada conexión únicamente cuando la clave tiene el ámbito `manage` / `admin`; las demás rutas `/api/cloud/*` y `/api/assess` requieren una sesión de administración/clave de API. El método POST de `/api/assess` utiliza `validateBody` con un esquema de ámbito de unión discriminada.
 
 ---
 

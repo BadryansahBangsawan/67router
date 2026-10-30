@@ -51,7 +51,6 @@ KI-agent / IDE
 | Skyggetrafikk                           | `open-sse/services/combo/shadowRouting.ts`                                                                |
 | Rekkverk                                | `src/lib/guardrails/` (før-/etter-hooks)                                                                  |
 | Eksakt hurtigbuffer                     | `src/lib/semanticCache.ts` (signaturbasert)                                                               |
-| Evaluatorer / evalueringsdrevet ruting  | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                      |
 | Forklarbarhet for combo-beslutninger    | `open-sse/services/combo/decisionTrace.ts`                                                                |
 | Hendelser i sanntid for kontrollpanelet | `src/lib/events/eventBus.ts` (kanal for UI-varsler, `unknown`-nyttelaster, historikk med 100 oppføringer) |
 
@@ -271,8 +270,6 @@ intelligens-/evalueringsbackend, ikke en avhengighet**. Integrasjonspunktene:
 - En fremtidig `Evaluator` (deterministisk, lokal bedømmer, HTTP, WASM) vil konsumere
   hendelser/spor og returnere en `QualityScore` som mates inn i den samme
   `getQualityScore`-/kvalitetsfaktorbanen.
-- Eksisterende evalueringsdrevet ruting (`open-sse/services/evalRouting.ts`) omorganiserer
-  allerede kombinasjonsmål etter beståttandeler fra `eval_runs` når dette er aktivert.
 
 Ingen evaluering kjøres synkront i forespørselsbanen, og gatewayen fungerer
 fullt ut uten evaluatoren.

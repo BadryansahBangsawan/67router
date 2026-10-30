@@ -1438,9 +1438,8 @@ Odgovor GET vključuje `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evalvacije
 
-| Endpoint     | Metoda   | Opis                                        |
-| ------------ | -------- | ------------------------------------------- |
-| `/api/evals` | GET/POST | Seznam zbirk evalvacij / izvedba evalvacije |
+| Endpoint | Metoda | Opis |
+| -------- | ------ | ---- |
 
 ### Pravilniki
 
@@ -1965,12 +1964,8 @@ Vrne javno kartico agenta A2A (ime, opis, zmožnosti, katalog spretnosti, shemo 
 | GET | `/api/cloud/models/alias` | Prikaže seznam vzdevkov modelov, kot so izpostavljeni sinhronizaciji z oblakom |
 | GET | `/api/assess` | Prebere najnovejše kategorizacije ocenjevanja (po ponudniku/modelu) |
 | POST | `/api/assess` | Izvede ocenjevanje — telo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Prikaže vgrajene zbirke evalvacij + najnovejša izvajanja |
-| POST | `/api/evals` | Sproži izvajanje evalvacije |
-| POST | `/api/evals/suites` | Ustvari zbirko evalvacij po meri — telo je preverjeno z `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Pridobi zbirko evalvacij po meri |
 
-**Avtentikacija:** `/api/cloud/auth` neposredno preveri ključ Bearer in vrne maskirani ključ ter `projectId` vsake povezave samo za ključ z obsegom `manage` / `admin`; druge poti `/api/cloud/*`, `/api/evals/*` in `/api/assess` zahtevajo skrbniško sejo/ključ API. Zahteva POST za `/api/assess` uporablja `validateBody` s shemo obsega diskriminirane unije.
+**Avtentikacija:** `/api/cloud/auth` neposredno preveri ključ Bearer in vrne maskirani ključ ter `projectId` vsake povezave samo za ključ z obsegom `manage` / `admin`; druge poti `/api/cloud/*` in `/api/assess` zahtevajo skrbniško sejo/ključ API. Zahteva POST za `/api/assess` uporablja `validateBody` s shemo obsega diskriminirane unije.
 
 ---
 

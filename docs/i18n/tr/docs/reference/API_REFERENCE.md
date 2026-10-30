@@ -1370,9 +1370,8 @@ GET yanıtı, `agents[]` (id, name, binary, version, installed, protocol, isCust
 
 ### Değerlendirmeler
 
-| Uç Nokta     | Yöntem   | Açıklama                                         |
-| ------------ | -------- | ------------------------------------------------ |
-| `/api/evals` | GET/POST | Değerlendirme paketlerini listeleme / çalıştırma |
+| Uç Nokta | Yöntem | Açıklama |
+| -------- | ------ | -------- |
 
 ### İlkeler
 
@@ -1900,12 +1899,8 @@ Herkese açık A2A aracı kartını (ad, açıklama, yetenekler, beceri kataloğ
 | GET | `/api/cloud/models/alias` | Bulut eşitlemesine sunulan model takma adlarını listeler |
 | GET | `/api/assess` | En son analiz sınıflandırmalarını okur (sağlayıcı/model başına) |
 | POST | `/api/assess` | Bir analiz çalıştırır — gövde: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Yerleşik değerlendirme paketlerini + en son çalıştırmaları listeler |
-| POST | `/api/evals` | Bir değerlendirme çalıştırmasını tetikler |
-| POST | `/api/evals/suites` | Özel bir değerlendirme paketi oluşturur — gövde `evalSuiteSaveSchema` tarafından doğrulanır |
-| GET | `/api/evals/suites/[id]` | Özel bir değerlendirme paketini getirir |
 
-**Kimlik doğrulama:** `/api/cloud/auth`, bir Bearer anahtarını doğrudan doğrular ve her bağlantının maskelenmiş anahtarı ile `projectId` değerini yalnızca `manage` / `admin` kapsamına sahip bir anahtar için döndürür; diğer `/api/cloud/*`, `/api/evals/*` ve `/api/assess` rotaları yönetim oturumu/API anahtarı gerektirir. `/api/assess` POST, ayırt edici birleşim kapsamı şemasıyla `validateBody` kullanır.
+**Kimlik doğrulama:** `/api/cloud/auth`, bir Bearer anahtarını doğrudan doğrular ve her bağlantının maskelenmiş anahtarı ile `projectId` değerini yalnızca `manage` / `admin` kapsamına sahip bir anahtar için döndürür; diğer `/api/cloud/*` ve `/api/assess` rotaları yönetim oturumu/API anahtarı gerektirir. `/api/assess` POST, ayırt edici birleşim kapsamı şemasıyla `validateBody` kullanır.
 
 ---
 

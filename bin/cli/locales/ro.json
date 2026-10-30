@@ -746,51 +746,6 @@
       "description": "Listează fișierele sursă produse de o sarcină"
     }
   },
-  "eval": {
-    "description": "Gestionează suitele și rulările de evaluare",
-    "suites": {
-      "description": "Gestionează suitele de evaluare",
-      "list": {
-        "description": "Listează suitele de evaluare"
-      },
-      "get": {
-        "description": "Obține detaliile suitei de evaluare după ID"
-      },
-      "create": {
-        "description": "Creează o suită de evaluare dintr-un fișier JSON",
-        "file": "Calea către fișierul JSON cu definiția suitei"
-      }
-    },
-    "run": {
-      "description": "Pornește o rulare de evaluare pentru o suită",
-      "model": "ID-ul modelului de evaluat (implicit: auto)",
-      "combo": "Forțează o anumită combinație după nume",
-      "concurrency": "Numărul de eșantioane procesate simultan (implicit: 4)",
-      "tag": "Etichetează această rulare pentru filtrare ulterioară",
-      "watch": "Urmărește progresul rulării până la finalizare"
-    },
-    "list": {
-      "description": "Listează rulările de evaluare",
-      "suite": "Filtrează după ID-ul suitei",
-      "status": "Filtrează după stare",
-      "since": "Returnează rulările începând de la această marcă temporală",
-      "limit": "Numărul maxim de rezultate (implicit: 50)"
-    },
-    "get": {
-      "description": "Obține detaliile rulării de evaluare după ID"
-    },
-    "results": {
-      "description": "Afișează rezultatele eșantioanelor pentru o rulare de evaluare",
-      "failed": "Afișează numai eșantioanele nereușite"
-    },
-    "cancel": {
-      "description": "Anulează o evaluare în curs de rulare",
-      "yes": "Omite solicitarea de confirmare"
-    },
-    "scorecard": {
-      "description": "Afișează fișa de evaluare pentru o rulare de evaluare finalizată"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI inteligent cu fallback automat",
     "version": "Afișează versiunea și ieși",

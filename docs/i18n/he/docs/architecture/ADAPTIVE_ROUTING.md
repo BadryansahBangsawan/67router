@@ -48,7 +48,6 @@ OmniRoute הוא מישור נתונים הכולל **נתיב חם לבקשות
 | תעבורת צל                       | `open-sse/services/combo/shadowRouting.ts`                                                             |
 | מעקות בטיחות                    | `src/lib/guardrails/` (ווים לפני/אחרי)                                                                 |
 | מטמון מדויק                     | `src/lib/semanticCache.ts` (מבוסס חתימה)                                                               |
-| מעריכים / ניתוב מונחה-הערכות    | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                   |
 | יכולת הסבר של החלטות Combo      | `open-sse/services/combo/decisionTrace.ts`                                                             |
 | אירועי לוח מחוונים בזמן אמת     | `src/lib/events/eventBus.ts` (ערוץ התראות לממשק המשתמש, מטענים מסוג `unknown`, היסטוריה של 100 רשומות) |
 
@@ -263,8 +262,6 @@ OmniRoute מתייחס ל-Future AGI (או לכל מעריך אחר) כאל **ת
 - `Evaluator` עתידי (דטרמיניסטי, שופט מקומי, HTTP, WASM) יצרוך
   אירועים/עקבות ויחזיר `QualityScore` שיוזן אל אותו נתיב של
   `getQualityScore`/מקדם האיכות.
-- ניתוב קיים המונע על ידי הערכה (`open-sse/services/evalRouting.ts`) כבר
-  מסדר מחדש יעדי Combo לפי שיעורי המעבר של `eval_runs` כאשר הוא מופעל.
 
 אף הערכה אינה רצה באופן סינכרוני בנתיב הבקשה, והשער פועל
 באופן מלא גם בהיעדר המעריך.

@@ -746,51 +746,6 @@
       "description": "Luettele tehtävän tuottamat lähdetiedostot"
     }
   },
-  "eval": {
-    "description": "Hallitse arviointikokonaisuuksia ja arviointiajoja",
-    "suites": {
-      "description": "Hallitse arviointikokonaisuuksia",
-      "list": {
-        "description": "Listaa arviointikokonaisuudet"
-      },
-      "get": {
-        "description": "Hae arviointikokonaisuuden tiedot tunnuksella"
-      },
-      "create": {
-        "description": "Luo arviointikokonaisuus JSON-tiedostosta",
-        "file": "Kokonaisuuden määrityksen sisältävän JSON-tiedoston polku"
-      }
-    },
-    "run": {
-      "description": "Aloita kokonaisuuden arviointiajo",
-      "model": "Arvioitavan mallin tunnus (oletus: auto)",
-      "combo": "Pakota tietty yhdistelmä nimen perusteella",
-      "concurrency": "Samanaikaisten näytteiden määrä (oletus: 4)",
-      "tag": "Merkitse tämä ajo tunnisteella myöhempää suodatusta varten",
-      "watch": "Seuraa ajon etenemistä valmistumiseen asti"
-    },
-    "list": {
-      "description": "Listaa arviointiajot",
-      "suite": "Suodata kokonaisuuden tunnuksen perusteella",
-      "status": "Suodata tilan perusteella",
-      "since": "Palauta tämän aikaleiman jälkeiset ajot",
-      "limit": "Tulosten enimmäismäärä (oletus: 50)"
-    },
-    "get": {
-      "description": "Hae arviointiajon tiedot tunnuksella"
-    },
-    "results": {
-      "description": "Näytä arviointiajon näytetulokset",
-      "failed": "Näytä vain epäonnistuneet näytteet"
-    },
-    "cancel": {
-      "description": "Peruuta käynnissä oleva arviointi",
-      "yes": "Ohita vahvistuskehote"
-    },
-    "scorecard": {
-      "description": "Näytä valmistuneen arviointiajon tuloskortti"
-    }
-  },
   "program": {
     "description": "OmniRoute — Älykäs AI-reititin automaattisella fallbackilla",
     "version": "Tulosta versio ja poistu",

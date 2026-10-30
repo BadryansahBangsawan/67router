@@ -746,51 +746,6 @@
       "description": "Jera fayilolin tushe da wani aiki ya samar"
     }
   },
-  "eval": {
-    "description": "Sarrafa rukunin gwaje-gwajen tantancewa da gudanarwarsu",
-    "suites": {
-      "description": "Sarrafa rukunin gwaje-gwajen tantancewa",
-      "list": {
-        "description": "Jera rukunin gwaje-gwajen tantancewa"
-      },
-      "get": {
-        "description": "Samo bayanan rukunin gwajin tantancewa ta ID"
-      },
-      "create": {
-        "description": "Ƙirƙiri rukunin gwajin tantancewa daga fayil ɗin JSON",
-        "file": "Hanyar zuwa fayil ɗin JSON mai bayyana rukunin gwajin"
-      }
-    },
-    "run": {
-      "description": "Fara gudanar da tantancewa ga wani rukuni",
-      "model": "ID na samfurin da za a tantance (tsoho: auto)",
-      "combo": "Tilasta amfani da takamaiman haɗi ta suna",
-      "concurrency": "Adadin samfurori da za a gudanar a lokaci guda (tsoho: 4)",
-      "tag": "Yi wa wannan gudanarwar alama don tacewa daga baya",
-      "watch": "Sa ido kan ci gaban gudanarwar har sai ta kammala"
-    },
-    "list": {
-      "description": "Jera gudanarwar tantancewa",
-      "suite": "Tace ta ID na rukuni",
-      "status": "Tace ta matsayi",
-      "since": "Dawo da gudanarwar tun daga wannan tambarin lokaci",
-      "limit": "Matsakaicin adadin sakamako (tsoho: 50)"
-    },
-    "get": {
-      "description": "Samo bayanan gudanarwar tantancewa ta ID"
-    },
-    "results": {
-      "description": "Nuna sakamakon samfurori na gudanarwar tantancewa",
-      "failed": "Nuna samfurorin da suka gaza kawai"
-    },
-    "cancel": {
-      "description": "Soke tantancewar da ke gudana",
-      "yes": "Tsallake tambayar tabbatarwa"
-    },
-    "scorecard": {
-      "description": "Nuna katin sakamako na gudanarwar tantancewa da aka kammala"
-    }
-  },
   "program": {
     "description": "OmniRoute — Mai Zabar Hanyar AI Mai Wayo tare da Komawar Kai-tsaye",
     "version": "Buga sigar sannan a fita",

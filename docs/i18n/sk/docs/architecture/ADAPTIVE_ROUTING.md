@@ -49,7 +49,6 @@ AI agent / IDE
 | Tieňová prevádzka                          | `open-sse/services/combo/shadowRouting.ts`                                                           |
 | Ochranné mechanizmy                        | `src/lib/guardrails/` (hooky pred/po spracovaní)                                                     |
 | Presná cache                               | `src/lib/semanticCache.ts` (založená na signatúrach)                                                 |
-| Vyhodnocovače / smerovanie riadené evalmi  | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                 |
 | Vysvetliteľnosť rozhodnutí combo           | `open-sse/services/combo/decisionTrace.ts`                                                           |
 | Udalosti ovládacieho panela v reálnom čase | `src/lib/events/eventBus.ts` (kanál oznámení UI, dátové obsahy `unknown`, história so 100 položkami) |
 
@@ -269,8 +268,6 @@ backend pre inteligenciu/evaluáciu, nie za závislosť**. Integračné body:
 - Budúci `Evaluator` (deterministický, lokálny posudzovateľ, HTTP, WASM) by spracúval
   udalosti/trasovania a vracal `QualityScore`, ktoré vstupuje do rovnakej
   cesty `getQualityScore`/faktora kvality.
-- Existujúce smerovanie riadené evaluáciami (`open-sse/services/evalRouting.ts`) už
-  pri povolení mení poradie cieľov komba podľa mier úspešnosti `eval_runs`.
 
 Na ceste požiadavky sa synchrónne nespúšťa žiadna evaluácia a brána funguje
 plnohodnotne aj bez evaluátora.

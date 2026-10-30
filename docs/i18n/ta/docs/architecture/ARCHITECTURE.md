@@ -251,7 +251,6 @@ flowchart LR
 - வரவுசெலவுத் திட்டம்: `src/app/api/usage/budget` (GET/POST)
 - மாற்று வழித் தொடர்கள்: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - இணக்கத் தணிக்கை: `src/app/api/compliance/audit-log` (GET, பக்கப்பிரிப்பு + கட்டமைக்கப்பட்ட மெட்டாடேட்டாவுடன்)
-- மதிப்பீடுகள்: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - கொள்கைகள்: `src/app/api/policies` (GET/POST)
 - ஒத்திசைவு டோக்கன்கள்: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - உள்ளமைவுத் தொகுப்பு: `src/app/api/sync/bundle` (GET, அமைப்புகள்/வழங்குநர்கள்/சேர்க்கைகள்/விசைகளின் ETag-பதிப்பிடப்பட்ட நிலைப்படம்)
@@ -315,7 +314,6 @@ flowchart LR
 - பெறுதல் காலக்கெடு: `src/shared/utils/fetchTimeout.ts`
 - கோரிக்கை தொலைஅளவீடு: `src/shared/utils/requestTelemetry.ts`
 - இணக்கப்பாடு/தணிக்கை: `src/lib/compliance/index.ts`
-- மதிப்பீட்டு இயக்கி: `src/lib/evals/evalRunner.ts`
 - டொமைன் நிலை நிலைநிறுத்தம்: `src/lib/db/domainState.ts` — மாற்றுவழிச் சங்கிலிகள், வரவுசெலவுத் திட்டங்கள், செலவு வரலாறு, பூட்டல் நிலை மற்றும் சர்க்யூட் பிரேக்கர்களுக்கான SQLite CRUD
 
 OAuth வழங்குநர் தொகுதிகள் (`src/lib/oauth/providers/`-இன் கீழ் 27 தனிப்பட்ட கோப்புகள்):

@@ -107,7 +107,6 @@ const HEADER_DESCRIPTIONS: Partial<
   a2a: "a2aDescription",
   "api-endpoints": "apiEndpointsDescription",
   // Analytics sub-pages
-  "analytics-evals": "analyticsEvalsDescription",
   "analytics-search": "analyticsSearchDescription",
   "analytics-utilization": "analyticsUtilizationDescription",
   "analytics-combo-health": "analyticsComboHealthDescription",

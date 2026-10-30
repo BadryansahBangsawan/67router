@@ -251,7 +251,6 @@ flowchart LR
 - Բյուջե՝ `src/app/api/usage/budget` (GET/POST)
 - Պահուստային անցման շղթաներ՝ `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Համապատասխանության աուդիտ՝ `src/app/api/compliance/audit-log` (GET՝ էջավորումով + կառուցվածքային մետատվյալներով)
-- Գնահատումներ՝ `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Քաղաքականություններ՝ `src/app/api/policies` (GET/POST)
 - Համաժամացման թոքեններ՝ `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Կազմաձևման փաթեթ՝ `src/app/api/sync/bundle` (GET՝ կարգավորումների/մատակարարների/համակցությունների/բանալիների ETag-ով տարբերակավորված ակնթարթային պատկեր)
@@ -315,7 +314,6 @@ flowchart LR
 - Հարցման ժամանակային սահմանափակում՝ `src/shared/utils/fetchTimeout.ts`
 - Հարցման հեռաչափություն՝ `src/shared/utils/requestTelemetry.ts`
 - Համապատասխանություն/աուդիտ՝ `src/lib/compliance/index.ts`
-- Գնահատումների գործարկիչ՝ `src/lib/evals/evalRunner.ts`
 - Տիրույթի վիճակի պահպանում՝ `src/lib/db/domainState.ts` — SQLite CRUD՝ պահուստային անցման շղթաների, բյուջեների, ծախսերի պատմության, արգելափակման վիճակի և շղթայի անջատիչների համար
 
 OAuth մատակարարների մոդուլներ (27 առանձին ֆայլ `src/lib/oauth/providers/`-ի ներքո)․

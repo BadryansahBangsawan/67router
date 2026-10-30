@@ -251,7 +251,6 @@ flowchart LR
 - Ìnáwó: `src/app/api/usage/budget` (GET/POST)
 - Àwọn ẹ̀wọ̀n fallback: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Àyẹ̀wò ìbámu: `src/app/api/compliance/audit-log` (GET, pẹ̀lú pípín ojú-ìwé + metadata tí a ṣètò)
-- Àwọn eval: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Àwọn ìlànà: `src/app/api/policies` (GET/POST)
 - Àwọn token ìmúdọ́gba: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Àkójọpọ̀ ìṣètò: `src/app/api/sync/bundle` (GET, àwòrán ìpamọ́ àwọn ààtò/olùpèsè/combo/kọ́kọ́rọ́ tí ETag ń ṣàkóso ẹ̀yà rẹ̀)
@@ -315,7 +314,6 @@ flowchart LR
 - Àkókò-ipari ìgbàjáde: `src/shared/utils/fetchTimeout.ts`
 - Tẹlimẹ́tírì ìbéèrè: `src/shared/utils/requestTelemetry.ts`
 - Ìbámu/àyẹ̀wò: `src/lib/compliance/index.ts`
-- Olùṣiṣẹ́ àyẹ̀wò: `src/lib/evals/evalRunner.ts`
 - Ìtọ́jú ipò àgbègbè iṣẹ́: `src/lib/db/domainState.ts` — SQLite CRUD fún àwọn ẹ̀wọ̀n ìyípadà sí omi-in, àwọn ìpín, ìtàn iye owó, ipò ìdènà, àti àwọn olùdádúró sákítì
 
 Àwọn módùlù olùpèsè OAuth (fáìlì kọ̀ọ̀kan 27 lábẹ́ `src/lib/oauth/providers/`):

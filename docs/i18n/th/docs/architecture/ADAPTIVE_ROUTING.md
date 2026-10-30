@@ -49,7 +49,6 @@ AI Agent / IDE
 | Shadow traffic                            | `open-sse/services/combo/shadowRouting.ts`                                                             |
 | Guardrails                                | `src/lib/guardrails/` (hook ก่อน/หลัง)                                                                 |
 | Exact cache                               | `src/lib/semanticCache.ts` (อิงตาม signature)                                                          |
-| Evaluators / การกำหนดเส้นทางตาม eval      | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                   |
 | ความสามารถในการอธิบายการตัดสินใจของ Combo | `open-sse/services/combo/decisionTrace.ts`                                                             |
 | เหตุการณ์แบบเรียลไทม์ของแดชบอร์ด          | `src/lib/events/eventBus.ts` (ช่องทางการแจ้งเตือน UI, payload ชนิด `unknown`, ประวัติ 100 รายการ)      |
 
@@ -265,8 +264,6 @@ OmniRoute ถือว่า Future AGI (หรือตัวประเมิ
 - `Evaluator` ในอนาคต (แบบกำหนดผลลัพธ์ตายตัว ตัวตัดสินภายในเครื่อง HTTP หรือ WASM) จะใช้
   เหตุการณ์/ร่องรอยและส่งคืน `QualityScore` ที่ป้อนเข้าสู่เส้นทาง
   `getQualityScore`/ปัจจัยคุณภาพเดียวกัน
-- การกำหนดเส้นทางที่ขับเคลื่อนด้วยการประเมินซึ่งมีอยู่แล้ว (`open-sse/services/evalRouting.ts`)
-  จะจัดลำดับเป้าหมาย combo ใหม่ตามอัตราการผ่านของ `eval_runs` เมื่อเปิดใช้งาน
 
 ไม่มีการประเมินใดทำงานแบบซิงโครนัสบนเส้นทางคำขอ และเกตเวย์สามารถทำงานได้อย่างสมบูรณ์
 แม้ไม่มีตัวประเมิน

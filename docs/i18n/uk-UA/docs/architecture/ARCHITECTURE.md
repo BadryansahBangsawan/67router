@@ -251,7 +251,6 @@ flowchart LR
 - Бюджет: `src/app/api/usage/budget` (GET/POST)
 - Ланцюжки резервного перемикання: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Аудит відповідності: `src/app/api/compliance/audit-log` (GET, із пагінацією + структурованими метаданими)
-- Оцінювання: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Політики: `src/app/api/policies` (GET/POST)
 - Токени синхронізації: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Пакет конфігурації: `src/app/api/sync/bundle` (GET, версіонований за допомогою ETag знімок налаштувань/постачальників/комбінацій/ключів)
@@ -315,7 +314,6 @@ flowchart LR
 - Тайм-аут отримання даних: `src/shared/utils/fetchTimeout.ts`
 - Телеметрія запитів: `src/shared/utils/requestTelemetry.ts`
 - Відповідність вимогам/аудит: `src/lib/compliance/index.ts`
-- Засіб запуску оцінювання: `src/lib/evals/evalRunner.ts`
 - Збереження стану домену: `src/lib/db/domainState.ts` — операції CRUD у SQLite для ланцюжків резервного перемикання, бюджетів, історії витрат, стану блокування та автоматичних вимикачів
 
 Модулі OAuth-провайдерів (27 окремих файлів у `src/lib/oauth/providers/`):

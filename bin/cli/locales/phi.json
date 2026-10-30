@@ -746,51 +746,6 @@
       "description": "Ilista ang mga source file na ginawa ng isang gawain"
     }
   },
-  "eval": {
-    "description": "Pamahalaan ang mga eval suite at pagpapatakbo",
-    "suites": {
-      "description": "Pamahalaan ang mga eval suite",
-      "list": {
-        "description": "Ilista ang mga eval suite"
-      },
-      "get": {
-        "description": "Kunin ang mga detalye ng eval suite ayon sa ID"
-      },
-      "create": {
-        "description": "Gumawa ng eval suite mula sa isang JSON file",
-        "file": "Path patungo sa JSON file ng depinisyon ng suite"
-      }
-    },
-    "run": {
-      "description": "Magsimula ng eval run para sa isang suite",
-      "model": "Model ID na susuriin (default: auto)",
-      "combo": "Pilitin ang isang partikular na combo ayon sa pangalan",
-      "concurrency": "Bilang ng magkakasabay na sample (default: 4)",
-      "tag": "Lagyan ng tag ang run na ito para sa pagsala sa ibang pagkakataon",
-      "watch": "Subaybayan ang progreso ng run hanggang sa makumpleto"
-    },
-    "list": {
-      "description": "Ilista ang mga eval run",
-      "suite": "I-filter ayon sa suite ID",
-      "status": "I-filter ayon sa status",
-      "since": "Ibalik ang mga run mula sa timestamp na ito",
-      "limit": "Pinakamaraming resulta (default: 50)"
-    },
-    "get": {
-      "description": "Kunin ang mga detalye ng eval run ayon sa ID"
-    },
-    "results": {
-      "description": "Ipakita ang mga resulta ng sample para sa isang eval run",
-      "failed": "Ipakita lamang ang mga nabigong sample"
-    },
-    "cancel": {
-      "description": "Kanselahin ang tumatakbong eval",
-      "yes": "Laktawan ang prompt sa pagkumpirma"
-    },
-    "scorecard": {
-      "description": "Ipakita ang scorecard para sa isang nakumpletong eval run"
-    }
-  },
   "program": {
     "description": "OmniRoute — Matalinong AI Router na may Awtomatikong Fallback",
     "version": "I-print ang bersyon at lumabas",

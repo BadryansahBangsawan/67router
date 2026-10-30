@@ -42,16 +42,15 @@ Agent IA / IDE
 
 ### Ce qui existait déjà (audité, non dupliqué)
 
-| Concept                                       | Implémentation existante                                                                                                        |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Disponibilité (peut-on envoyer du trafic ?)   | Disjoncteur (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistant en BDD), délai de récupération des connexions, verrouillage des modèles |
-| Rapports de santé                             | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                         |
-| Trafic fantôme                                | `open-sse/services/combo/shadowRouting.ts`                                                                                      |
-| Garde-fous                                    | `src/lib/guardrails/` (hooks pré/post)                                                                                          |
-| Cache exact                                   | `src/lib/semanticCache.ts` (basé sur les signatures)                                                                            |
-| Évaluateurs / routage piloté par l’évaluation | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                            |
-| Explicabilité des décisions de combinaison    | `open-sse/services/combo/decisionTrace.ts`                                                                                      |
-| Événements en temps réel du tableau de bord   | `src/lib/events/eventBus.ts` (canal de notification de l’interface, charges utiles `unknown`, historique de 100 entrées)        |
+| Concept                                     | Implémentation existante                                                                                                        |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Disponibilité (peut-on envoyer du trafic ?) | Disjoncteur (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistant en BDD), délai de récupération des connexions, verrouillage des modèles |
+| Rapports de santé                           | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                         |
+| Trafic fantôme                              | `open-sse/services/combo/shadowRouting.ts`                                                                                      |
+| Garde-fous                                  | `src/lib/guardrails/` (hooks pré/post)                                                                                          |
+| Cache exact                                 | `src/lib/semanticCache.ts` (basé sur les signatures)                                                                            |
+| Explicabilité des décisions de combinaison  | `open-sse/services/combo/decisionTrace.ts`                                                                                      |
+| Événements en temps réel du tableau de bord | `src/lib/events/eventBus.ts` (canal de notification de l’interface, charges utiles `unknown`, historique de 100 entrées)        |
 
 La couche d’événements de routage n’est **pas** une réimplémentation de `eventBus` : ce bus
 est le canal de notification en temps réel du tableau de bord (noms d’_événements_
@@ -276,8 +275,6 @@ d’intelligence/d’évaluation, et non comme une dépendance**. Les points d�
 - Un futur `Evaluator` (déterministe, juge local, HTTP, WASM) consommerait
   les événements/traces et renverrait un `QualityScore` alimentant le même
   chemin `getQualityScore`/facteur de qualité.
-- Le routage existant piloté par les évaluations (`open-sse/services/evalRouting.ts`) réordonne déjà
-  les cibles des combos selon les taux de réussite de `eval_runs` lorsqu’il est activé.
 
 Aucune évaluation ne s’exécute de manière synchrone sur le chemin des requêtes, et la passerelle fonctionne
 intégralement en l’absence d’évaluateur.

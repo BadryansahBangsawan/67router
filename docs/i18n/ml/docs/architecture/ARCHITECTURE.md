@@ -251,7 +251,6 @@ flowchart LR
 - ബജറ്റ്: `src/app/api/usage/budget` (GET/POST)
 - ഫാൾബാക്ക് ശൃംഖലകൾ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - പാലന ഓഡിറ്റ്: `src/app/api/compliance/audit-log` (GET, പേജിനേഷനും ഘടനാബദ്ധമായ മെറ്റാഡാറ്റയും സഹിതം)
-- മൂല്യനിർണ്ണയങ്ങൾ: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - നയങ്ങൾ: `src/app/api/policies` (GET/POST)
 - സമന്വയ ടോക്കണുകൾ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - കോൺഫിഗറേഷൻ ബണ്ടിൽ: `src/app/api/sync/bundle` (GET, ക്രമീകരണങ്ങൾ/പ്രൊവൈഡറുകൾ/കോംബോകൾ/കീകൾ എന്നിവയുടെ ETag-പതിപ്പിട്ട സ്നാപ്പ്ഷോട്ട്)
@@ -315,7 +314,6 @@ flowchart LR
 - ഫെച്ച് ടൈംഔട്ട്: `src/shared/utils/fetchTimeout.ts`
 - റിക്വസ്റ്റ് ടെലിമെട്രി: `src/shared/utils/requestTelemetry.ts`
 - കംപ്ലയൻസ്/ഓഡിറ്റ്: `src/lib/compliance/index.ts`
-- ഇവാൽ റണ്ണർ: `src/lib/evals/evalRunner.ts`
 - ഡൊമെയ്ൻ സ്റ്റേറ്റ് പെർസിസ്റ്റൻസ്: `src/lib/db/domainState.ts` — ഫാൾബാക്ക് ചെയിനുകൾ, ബജറ്റുകൾ, ചെലവ് ചരിത്രം, ലോക്ക്ഔട്ട് സ്റ്റേറ്റ്, സർക്യൂട്ട് ബ്രേക്കറുകൾ എന്നിവയ്ക്കായുള്ള SQLite CRUD
 
 OAuth പ്രൊവൈഡർ മൊഡ്യൂളുകൾ (`src/lib/oauth/providers/` എന്നതിനു കീഴിലുള്ള 27 വ്യക്തിഗത ഫയലുകൾ):

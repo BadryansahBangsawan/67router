@@ -49,7 +49,6 @@ AI এজেন্ট / IDE
 | শ্যাডো ট্রাফিক                           | `open-sse/services/combo/shadowRouting.ts`                                                  |
 | গার্ডরেল                                 | `src/lib/guardrails/` (প্রি/পোস্ট হুক)                                                      |
 | এক্স্যাক্ট ক্যাশ                         | `src/lib/semanticCache.ts` (স্বাক্ষর-ভিত্তিক)                                               |
-| মূল্যায়ক / মূল্যায়ন-চালিত রাউটিং       | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                        |
 | কম্বো সিদ্ধান্তের ব্যাখ্যাযোগ্যতা        | `open-sse/services/combo/decisionTrace.ts`                                                  |
 | ড্যাশবোর্ডের রিয়েল-টাইম ইভেন্ট          | `src/lib/events/eventBus.ts` (UI বিজ্ঞপ্তি চ্যানেল, `unknown` পেলোড, ১০০-এন্ট্রির ইতিহাস)   |
 
@@ -265,8 +264,6 @@ OmniRoute Future AGI-কে (অথবা যেকোনো evaluator-কে) �
 - ভবিষ্যতের একটি `Evaluator` (deterministic, local judge, HTTP, WASM)
   events/traces গ্রহণ করবে এবং একটি `QualityScore` ফেরত দেবে, যা একই
   `getQualityScore`/quality-factor পাথে প্রবাহিত হবে।
-- বিদ্যমান eval-চালিত routing (`open-sse/services/evalRouting.ts`) সক্রিয় থাকলে
-  `eval_runs` pass-rate অনুযায়ী combo target-গুলো ইতিমধ্যেই পুনর্বিন্যাস করে।
 
 রিকোয়েস্ট পাথে কোনো evaluation সিঙ্ক্রোনাসভাবে চলে না, এবং evaluator অনুপস্থিত থাকলেও
 gateway সম্পূর্ণভাবে কার্যকর থাকে।

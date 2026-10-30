@@ -41,16 +41,15 @@ Aṣojú AI / IDE
 
 ### Ohun tó ti wà tẹ́lẹ̀ (tí a ti ṣàyẹ̀wò, tí a kò ṣe àdàkọ rẹ̀)
 
-| Èrò                                       | Ìmúlò tó ti wà                                                                                             |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Wíwà-lárọ̀ọ́wọ́ (ṣé a lè fi traffic ránṣẹ́?)  | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, tí a fi pamọ́ sínú DB), connection cooldown, model lockout |
-| Ìjábọ̀ ìlera                               | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                    |
-| Shadow traffic                            | `open-sse/services/combo/shadowRouting.ts`                                                                 |
-| Àwọn guardrail                            | `src/lib/guardrails/` (àwọn hook ṣáájú/lẹ́yìn)                                                              |
-| Cache gédégbé                             | `src/lib/semanticCache.ts` (tó dá lórí signature)                                                          |
-| Àwọn evaluator / ìdarí-ọ̀nà tí eval ń darí | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                       |
-| Ìṣàlàyé ìpinnu combo                      | `open-sse/services/combo/decisionTrace.ts`                                                                 |
-| Àwọn ìṣẹ̀lẹ̀ dashboard ní àkókò-gidi        | `src/lib/events/eventBus.ts` (ikanni ìfitónilétí UI, payload `unknown`, ìtàn onírẹ́kọ́ọ̀dù 100)               |
+| Èrò                                      | Ìmúlò tó ti wà                                                                                             |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Wíwà-lárọ̀ọ́wọ́ (ṣé a lè fi traffic ránṣẹ́?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, tí a fi pamọ́ sínú DB), connection cooldown, model lockout |
+| Ìjábọ̀ ìlera                              | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                    |
+| Shadow traffic                           | `open-sse/services/combo/shadowRouting.ts`                                                                 |
+| Àwọn guardrail                           | `src/lib/guardrails/` (àwọn hook ṣáájú/lẹ́yìn)                                                              |
+| Cache gédégbé                            | `src/lib/semanticCache.ts` (tó dá lórí signature)                                                          |
+| Ìṣàlàyé ìpinnu combo                     | `open-sse/services/combo/decisionTrace.ts`                                                                 |
+| Àwọn ìṣẹ̀lẹ̀ dashboard ní àkókò-gidi       | `src/lib/events/eventBus.ts` (ikanni ìfitónilétí UI, payload `unknown`, ìtàn onírẹ́kọ́ọ̀dù 100)               |
 
 Pẹlẹbẹ routing-event **kì í ṣe** àtúnṣe `eventBus`: bus yẹn ni
 ikanni ìfitónilétí àkókò-gidi ti dashboard (àwọn _orúkọ ìṣẹ̀lẹ̀_ tí a ti sọ irú wọn,
@@ -263,8 +262,6 @@ OmniRoute ka Future AGI (tàbí evaluator èyíkéyìí) sí **backend
 - `Evaluator` ọjọ́ iwájú kan (onípinnu, adájọ́ agbègbè, HTTP, WASM) yóò gba
   àwọn event/trace, yóò sì dá `QualityScore` padà tí yóò wọ inú ọ̀nà
   `getQualityScore`/quality-factor kan náà.
-- Ìdarí tí eval ń darí tó ti wà tẹ́lẹ̀ (`open-sse/services/evalRouting.ts`) ti ń
-  tún àwọn ibi-àfojúsùn combo tò nípasẹ̀ àwọn ìwọ̀n àṣeyọrí `eval_runs` nígbà tí a bá mú un ṣiṣẹ́.
 
 Kò sí ìṣàyẹ̀wò kankan tó ń ṣiṣẹ́ pẹ̀lú ìbéèrè lórí ọ̀nà ìbéèrè, gateway náà sì
 ń ṣiṣẹ́ ní kíkún láìsí evaluator.

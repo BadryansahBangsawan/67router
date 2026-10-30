@@ -1434,9 +1434,8 @@ GET ਜਵਾਬ ਵਿੱਚ `agents[]` (id, name, binary, version, installed, 
 
 ### ਮੁਲਾਂਕਣ
 
-| Endpoint     | ਵਿਧੀ     | ਵੇਰਵਾ                                    |
-| ------------ | -------- | ---------------------------------------- |
-| `/api/evals` | GET/POST | ਮੁਲਾਂਕਣ ਸੂਟਾਂ ਦੀ ਸੂਚੀ ਦਿਓ / ਮੁਲਾਂਕਣ ਚਲਾਓ |
+| Endpoint | ਵਿਧੀ | ਵੇਰਵਾ |
+| -------- | ---- | ----- |
 
 ### ਨੀਤੀਆਂ
 
@@ -1964,12 +1963,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | ਕਲਾਉਡ ਸਿੰਕ ਲਈ ਉਪਲਬਧ ਕਰਵਾਏ ਗਏ ਮਾਡਲ ਉਪਨਾਮਾਂ ਦੀ ਸੂਚੀ |
 | GET | `/api/assess` | ਨਵੀਨਤਮ ਮੁਲਾਂਕਣ ਵਰਗੀਕਰਨ ਪੜ੍ਹੋ (ਹਰੇਕ ਪ੍ਰਦਾਤਾ/ਮਾਡਲ ਲਈ) |
 | POST | `/api/assess` | ਮੁਲਾਂਕਣ ਚਲਾਓ — ਬਾਡੀ: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | ਬਿਲਟ-ਇਨ ਈਵੈਲ ਸੂਟਾਂ + ਸਭ ਤੋਂ ਹਾਲੀਆ ਰਨਾਂ ਦੀ ਸੂਚੀ |
-| POST | `/api/evals` | ਇੱਕ ਈਵੈਲ ਰਨ ਟ੍ਰਿਗਰ ਕਰੋ |
-| POST | `/api/evals/suites` | ਇੱਕ ਕਸਟਮ ਈਵੈਲ ਸੂਟ ਬਣਾਓ — ਬਾਡੀ ਦੀ ਪੁਸ਼ਟੀ `evalSuiteSaveSchema` ਦੁਆਰਾ ਕੀਤੀ ਜਾਂਦੀ ਹੈ |
-| GET | `/api/evals/suites/[id]` | ਇੱਕ ਕਸਟਮ ਈਵੈਲ ਸੂਟ ਪ੍ਰਾਪਤ ਕਰੋ |
 
-**ਪ੍ਰਮਾਣੀਕਰਨ:** `/api/cloud/auth` ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਇੱਕ Bearer ਕੁੰਜੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰਦਾ ਹੈ ਅਤੇ ਸਿਰਫ਼ `manage` / `admin` ਸਕੋਪ ਵਾਲੀ ਕੁੰਜੀ ਲਈ ਹਰੇਕ ਕਨੈਕਸ਼ਨ ਦੀ ਮਾਸਕ ਕੀਤੀ ਕੁੰਜੀ ਅਤੇ `projectId` ਵਾਪਸ ਕਰਦਾ ਹੈ; ਹੋਰ `/api/cloud/*`, `/api/evals/*`, ਅਤੇ `/api/assess` ਰੂਟਾਂ ਲਈ ਪ੍ਰਬੰਧਨ ਸੈਸ਼ਨ/API ਕੁੰਜੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ। `/api/assess` POST ਇੱਕ ਡਿਸਕ੍ਰਿਮਿਨੇਟਿਡ-ਯੂਨੀਅਨ ਸਕੋਪ ਸਕੀਮਾ ਨਾਲ `validateBody` ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ।
+**ਪ੍ਰਮਾਣੀਕਰਨ:** `/api/cloud/auth` ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਇੱਕ Bearer ਕੁੰਜੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰਦਾ ਹੈ ਅਤੇ ਸਿਰਫ਼ `manage` / `admin` ਸਕੋਪ ਵਾਲੀ ਕੁੰਜੀ ਲਈ ਹਰੇਕ ਕਨੈਕਸ਼ਨ ਦੀ ਮਾਸਕ ਕੀਤੀ ਕੁੰਜੀ ਅਤੇ `projectId` ਵਾਪਸ ਕਰਦਾ ਹੈ; ਹੋਰ `/api/cloud/*`, ਅਤੇ `/api/assess` ਰੂਟਾਂ ਲਈ ਪ੍ਰਬੰਧਨ ਸੈਸ਼ਨ/API ਕੁੰਜੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ। `/api/assess` POST ਇੱਕ ਡਿਸਕ੍ਰਿਮਿਨੇਟਿਡ-ਯੂਨੀਅਨ ਸਕੋਪ ਸਕੀਮਾ ਨਾਲ `validateBody` ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ।
 
 ---
 

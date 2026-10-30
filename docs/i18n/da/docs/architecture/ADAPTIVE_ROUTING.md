@@ -42,16 +42,15 @@ AI-agent / IDE
 
 ### Hvad der allerede fandtes (gennemgået, ikke duplikeret)
 
-| Koncept                                 | Eksisterende implementering                                                                            |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Tilgængelighed (kan vi sende trafik?)   | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persisteret i DB), connection cooldown, model lockout |
-| Sundhedsrapportering                    | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                |
-| Skyggetrafik                            | `open-sse/services/combo/shadowRouting.ts`                                                             |
-| Værn                                    | `src/lib/guardrails/` (før-/efter-hooks)                                                               |
-| Eksakt cache                            | `src/lib/semanticCache.ts` (signaturbaseret)                                                           |
-| Evaluatorer / evalueringsdrevet routing | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                   |
-| Forklarbarhed af combo-beslutninger     | `open-sse/services/combo/decisionTrace.ts`                                                             |
-| Dashboard-hændelser i realtid           | `src/lib/events/eventBus.ts` (UI-notifikationskanal, `unknown`-payloads, historik med 100 poster)      |
+| Koncept                               | Eksisterende implementering                                                                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Tilgængelighed (kan vi sende trafik?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persisteret i DB), connection cooldown, model lockout |
+| Sundhedsrapportering                  | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                |
+| Skyggetrafik                          | `open-sse/services/combo/shadowRouting.ts`                                                             |
+| Værn                                  | `src/lib/guardrails/` (før-/efter-hooks)                                                               |
+| Eksakt cache                          | `src/lib/semanticCache.ts` (signaturbaseret)                                                           |
+| Forklarbarhed af combo-beslutninger   | `open-sse/services/combo/decisionTrace.ts`                                                             |
+| Dashboard-hændelser i realtid         | `src/lib/events/eventBus.ts` (UI-notifikationskanal, `unknown`-payloads, historik med 100 poster)      |
 
 Routing-hændelseslaget er **ikke** en genimplementering af `eventBus`: Denne bus er
 dashboardets notifikationskanal i realtid (typede _hændelsesnavne_, uigennemsigtige
@@ -265,8 +264,6 @@ intelligens-/evalueringsbackend, ikke en afhængighed**. Integrationspunkterne:
 - En fremtidig `Evaluator` (deterministisk, lokal bedømmer, HTTP, WASM) vil forbruge
   hændelser/sporinger og returnere en `QualityScore`, der føres ind i den samme
   `getQualityScore`-/kvalitetsfaktorsti.
-- Eksisterende evalueringsdrevet routing (`open-sse/services/evalRouting.ts`) omordner
-  allerede combo-mål efter beståelsesrater fra `eval_runs`, når funktionen er aktiveret.
 
 Ingen evaluering køres synkront i forespørgselsstien, og gatewayen fungerer
 fuldt ud uden en evaluator.

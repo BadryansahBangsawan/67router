@@ -257,7 +257,6 @@ flowchart LR
 - 預算：`src/app/api/usage/budget`（GET/POST）
 - 備援鏈：`src/app/api/fallback/chains`（GET/POST/DELETE）
 - 合規稽核：`src/app/api/compliance/audit-log`（GET，含分頁 + 結構化中繼資料）
-- 評估：`src/app/api/evals`（GET/POST）、`src/app/api/evals/[suiteId]`（GET）
 - 政策：`src/app/api/policies`（GET/POST）
 - 同步令牌：`src/app/api/sync/tokens`（GET/POST）、`src/app/api/sync/tokens/[id]`（GET/DELETE）
 - 設定套件：`src/app/api/sync/bundle`（GET，設定/提供者/組合/金鑰的 ETag 版本化快照）
@@ -321,7 +320,6 @@ flowchart LR
 - 擷取逾時：`src/shared/utils/fetchTimeout.ts`
 - 請求遙測：`src/shared/utils/requestTelemetry.ts`
 - 合規／稽核：`src/lib/compliance/index.ts`
-- 評估執行器：`src/lib/evals/evalRunner.ts`
 - 領域狀態持久化：`src/lib/db/domainState.ts` — 對備援鏈、預算、成本歷程、鎖定狀態及斷路器執行 SQLite CRUD
 
 OAuth 提供者模組（`src/lib/oauth/providers/` 下的 27 個獨立檔案）：

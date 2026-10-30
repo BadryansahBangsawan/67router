@@ -251,7 +251,6 @@ Področja upravljanja:
 - Proračun: `src/app/api/usage/budget` (GET/POST)
 - Verige nadomestnih možnosti: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Revizija skladnosti: `src/app/api/compliance/audit-log` (GET, s paginacijo + strukturiranimi metapodatki)
-- Evalvacije: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Pravilniki: `src/app/api/policies` (GET/POST)
 - Žetoni za sinhronizacijo: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiguracijski sveženj: `src/app/api/sync/bundle` (GET, posnetek nastavitev/ponudnikov/kombinacij/ključev z različicami ETag)
@@ -315,7 +314,6 @@ Moduli domenske plasti:
 - Časovna omejitev pridobivanja: `src/shared/utils/fetchTimeout.ts`
 - Telemetrija zahtev: `src/shared/utils/requestTelemetry.ts`
 - Skladnost/revizija: `src/lib/compliance/index.ts`
-- Izvajalnik vrednotenj: `src/lib/evals/evalRunner.ts`
 - Trajno shranjevanje stanja domene: `src/lib/db/domainState.ts` — operacije CRUD v SQLite za verige nadomestnih možnosti, proračune, zgodovino stroškov, stanje zaklepanja in odklopnike
 
 Moduli ponudnikov OAuth (27 posameznih datotek v `src/lib/oauth/providers/`):

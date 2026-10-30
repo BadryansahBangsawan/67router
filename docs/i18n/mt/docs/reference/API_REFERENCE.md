@@ -1417,9 +1417,8 @@ Ir-risposta GET tinkludi `agents[]` (id, name, binary, version, installed, proto
 
 ### Evalwazzjonijiet
 
-| Punt terminali | Metodu   | Deskrizzjoni                                              |
-| -------------- | -------- | --------------------------------------------------------- |
-| `/api/evals`   | GET/POST | Elenka s-settijiet ta’ evalwazzjoni / wettaq evalwazzjoni |
+| Punt terminali | Metodu | Deskrizzjoni |
+| -------------- | ------ | ------------ |
 
 ### Politiki
 
@@ -1947,12 +1946,8 @@ Jirritorna l-kard pubblika tal-aġent A2A (isem, deskrizzjoni, kapaċitajiet, ka
 | GET | `/api/cloud/models/alias` | Jelenka l-psewdonimi tal-mudelli kif esposti għas-sinkronizzazzjoni tal-cloud |
 | GET | `/api/assess` | Jaqra l-aktar kategorizzazzjonijiet reċenti tal-valutazzjoni (għal kull fornitur/mudell) |
 | POST | `/api/assess` | Iħaddem valutazzjoni — korp: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Jelenka s-suites ta' evalwazzjoni inkorporati + l-aktar eżekuzzjonijiet reċenti |
-| POST | `/api/evals` | Jiskatta eżekuzzjoni ta' evalwazzjoni |
-| POST | `/api/evals/suites` | Joħloq suite ta' evalwazzjoni personalizzata — il-korp jiġi vvalidat minn `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Jirkupra suite ta' evalwazzjoni personalizzata |
 
-**Awtentikazzjoni:** `/api/cloud/auth` jivvalida ċavetta Bearer direttament u jirritorna ċ-ċavetta moħbija u l-`projectId` ta' kull konnessjoni biss għal ċavetta bl-ambitu `manage` / `admin`; ir-rotot l-oħra `/api/cloud/*`, `/api/evals/*`, u `/api/assess` jeħtieġu sessjoni ta' ġestjoni/ċavetta API. Il-POST ta' `/api/assess` juża `validateBody` bi skema ta' ambitu ta' unjoni diskriminata.
+**Awtentikazzjoni:** `/api/cloud/auth` jivvalida ċavetta Bearer direttament u jirritorna ċ-ċavetta moħbija u l-`projectId` ta' kull konnessjoni biss għal ċavetta bl-ambitu `manage` / `admin`; ir-rotot l-oħra `/api/cloud/*`, u `/api/assess` jeħtieġu sessjoni ta' ġestjoni/ċavetta API. Il-POST ta' `/api/assess` juża `validateBody` bi skema ta' ambitu ta' unjoni diskriminata.
 
 ---
 

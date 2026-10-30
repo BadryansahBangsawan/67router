@@ -251,7 +251,6 @@ flowchart LR
 - תקציב: `src/app/api/usage/budget` (GET/POST)
 - שרשראות גיבוי: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - ביקורת תאימות: `src/app/api/compliance/audit-log` (GET, עם עימוד + מטא-נתונים מובנים)
-- הערכות: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - מדיניות: `src/app/api/policies` (GET/POST)
 - אסימוני סנכרון: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - חבילת תצורה: `src/app/api/sync/bundle` (GET, תמונת מצב של הגדרות/ספקים/שילובים/מפתחות עם ניהול גרסאות באמצעות ETag)
@@ -315,7 +314,6 @@ flowchart LR
 - פסק זמן לאחזור: `src/shared/utils/fetchTimeout.ts`
 - טלמטריית בקשות: `src/shared/utils/requestTelemetry.ts`
 - תאימות/ביקורת: `src/lib/compliance/index.ts`
-- מריץ הערכות: `src/lib/evals/evalRunner.ts`
 - שמירת מצב התחום: `src/lib/db/domainState.ts` — פעולות CRUD של SQLite עבור שרשראות גיבוי, תקציבים, היסטוריית עלויות, מצב נעילה ומפסקי זרם
 
 מודולי ספקי OAuth ‏(27 קבצים נפרדים תחת `src/lib/oauth/providers/`):

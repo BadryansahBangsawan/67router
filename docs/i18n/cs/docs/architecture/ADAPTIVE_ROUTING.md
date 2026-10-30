@@ -42,16 +42,15 @@ AI agent / IDE
 
 ### Co již existovalo (auditováno, neduplikováno)
 
-| Koncept                                  | Stávající implementace                                                                              |
-| ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| Dostupnost (můžeme odeslat provoz?)      | Jistič (CLOSED/DEGRADED/OPEN/HALF_OPEN, uložený v DB), čekací doba připojení, blokování modelu      |
-| Hlášení stavu                            | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                             |
-| Stínový provoz                           | `open-sse/services/combo/shadowRouting.ts`                                                          |
-| Ochranná pravidla                        | `src/lib/guardrails/` (hooky před/po)                                                               |
-| Přesná cache                             | `src/lib/semanticCache.ts` (založená na signaturách)                                                |
-| Evaluátory / směrování řízené evaluacemi | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                |
-| Vysvětlitelnost rozhodnutí combo         | `open-sse/services/combo/decisionTrace.ts`                                                          |
-| Události dashboardu v reálném čase       | `src/lib/events/eventBus.ts` (kanál oznámení UI, datové části typu `unknown`, historie 100 položek) |
+| Koncept                             | Stávající implementace                                                                              |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Dostupnost (můžeme odeslat provoz?) | Jistič (CLOSED/DEGRADED/OPEN/HALF_OPEN, uložený v DB), čekací doba připojení, blokování modelu      |
+| Hlášení stavu                       | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                             |
+| Stínový provoz                      | `open-sse/services/combo/shadowRouting.ts`                                                          |
+| Ochranná pravidla                   | `src/lib/guardrails/` (hooky před/po)                                                               |
+| Přesná cache                        | `src/lib/semanticCache.ts` (založená na signaturách)                                                |
+| Vysvětlitelnost rozhodnutí combo    | `open-sse/services/combo/decisionTrace.ts`                                                          |
+| Události dashboardu v reálném čase  | `src/lib/events/eventBus.ts` (kanál oznámení UI, datové části typu `unknown`, historie 100 položek) |
 
 Vrstva událostí směrování **není** novou implementací `eventBus`: tato sběrnice je
 kanálem oznámení dashboardu v reálném čase (typované _názvy událostí_, neprůhledné
@@ -270,8 +269,6 @@ backend inteligence/vyhodnocování, nikoli za závislost**. Integrační body:
 - Budoucí `Evaluator` (deterministický, lokální posuzovatel, HTTP, WASM) by
   zpracovával události/trasy a vracel `QualityScore`, který by vstupoval do
   stejné cesty `getQualityScore`/faktoru kvality.
-- Stávající směrování řízené evaluacemi (`open-sse/services/evalRouting.ts`) již
-  při aktivaci mění pořadí cílů kombinace podle míry úspěšnosti `eval_runs`.
 
 Žádná evaluace se na cestě požadavku nespouští synchronně a brána funguje plně
 i bez hodnoticího systému.

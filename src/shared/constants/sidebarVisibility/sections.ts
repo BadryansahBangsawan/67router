@@ -369,13 +369,6 @@ const ANALYTICS_ITEMS: readonly SidebarItemDefinition[] = [
     icon: "manage_search",
   },
   {
-    id: "analytics-evals",
-    href: "/dashboard/analytics/evals",
-    i18nKey: "analyticsEvals",
-    subtitleKey: "analyticsEvalsSubtitle",
-    icon: "labs",
-  },
-  {
     id: "provider-stats",
     href: "/dashboard/provider-stats",
     i18nKey: "providerStats",

@@ -42,16 +42,15 @@ Ajenti ya AI / IDE
 
 ### Kilichokuwepo tayari (kimekaguliwa, hakijarudiwa)
 
-| Dhana                                           | Utekelezaji uliopo                                                                                           |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Upatikanaji (tunaweza kutuma trafiki?)          | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, imehifadhiwa kwenye DB), connection cooldown, model lockout |
-| Ripoti za afya                                  | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                      |
-| Trafiki kivuli                                  | `open-sse/services/combo/shadowRouting.ts`                                                                   |
-| Guardrail                                       | `src/lib/guardrails/` (hooks za kabla/baada)                                                                 |
-| Cache halisi                                    | `src/lib/semanticCache.ts` (inayotegemea signature)                                                          |
-| Vitathmini / uelekezaji unaoongozwa na tathmini | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                         |
-| Ufafanuzi wa maamuzi ya combo                   | `open-sse/services/combo/decisionTrace.ts`                                                                   |
-| Matukio ya wakati halisi ya dashboard           | `src/lib/events/eventBus.ts` (mkondo wa arifa za UI, payload za `unknown`, historia ya maingizo 100)         |
+| Dhana                                  | Utekelezaji uliopo                                                                                           |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Upatikanaji (tunaweza kutuma trafiki?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, imehifadhiwa kwenye DB), connection cooldown, model lockout |
+| Ripoti za afya                         | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                      |
+| Trafiki kivuli                         | `open-sse/services/combo/shadowRouting.ts`                                                                   |
+| Guardrail                              | `src/lib/guardrails/` (hooks za kabla/baada)                                                                 |
+| Cache halisi                           | `src/lib/semanticCache.ts` (inayotegemea signature)                                                          |
+| Ufafanuzi wa maamuzi ya combo          | `open-sse/services/combo/decisionTrace.ts`                                                                   |
+| Matukio ya wakati halisi ya dashboard  | `src/lib/events/eventBus.ts` (mkondo wa arifa za UI, payload za `unknown`, historia ya maingizo 100)         |
 
 Safu ya matukio ya uelekezaji **si** utekelezaji mpya wa `eventBus`: bus hiyo ni
 mkondo wa arifa za wakati halisi wa dashboard (majina ya _matukio_ yenye aina zilizobainishwa, payload
@@ -264,8 +263,6 @@ akili/tathmini, si utegemezi**. Sehemu za ujumuishaji ni:
 - `Evaluator` ya baadaye (ya kuamuliwa kikamilifu, kihukumu cha ndani, HTTP, WASM) ingetumia
   matukio/ufuatiliaji na kurudisha `QualityScore` inayotumika kwenye njia ileile ya
   `getQualityScore`/kipengele cha ubora.
-- Uelekezaji uliopo unaoongozwa na tathmini (`open-sse/services/evalRouting.ts`) tayari
-  hupanga upya malengo ya mchanganyiko kwa viwango vya ufaulu vya `eval_runs` unapowezeshwa.
 
 Hakuna tathmini inayoendeshwa kisawazishwa kwenye njia ya ombi, na lango hufanya kazi
 kikamilifu bila kuwepo kwa mtathmini.

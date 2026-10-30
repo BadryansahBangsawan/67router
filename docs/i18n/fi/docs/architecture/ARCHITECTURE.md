@@ -251,7 +251,6 @@ Hallinta-alueet:
 - Budjetti: `src/app/api/usage/budget` (GET/POST)
 - Varaketjut: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Vaatimustenmukaisuuden tarkastus: `src/app/api/compliance/audit-log` (GET, sivutuksella + rakenteisilla metatiedoilla)
-- Arvioinnit: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Käytännöt: `src/app/api/policies` (GET/POST)
 - Synkronointitunnukset: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Määrityspaketti: `src/app/api/sync/bundle` (GET, ETag-versioitu tilannevedos asetuksista, palveluntarjoajista, yhdistelmistä ja avaimista)
@@ -315,7 +314,6 @@ Toimialokerroksen moduulit:
 - Noudon aikakatkaisu: `src/shared/utils/fetchTimeout.ts`
 - Pyyntötelemetria: `src/shared/utils/requestTelemetry.ts`
 - Vaatimustenmukaisuus / auditointi: `src/lib/compliance/index.ts`
-- Arviointien suorittaja: `src/lib/evals/evalRunner.ts`
 - Toimialan tilan pysyväistallennus: `src/lib/db/domainState.ts` — SQLite CRUD varajärjestelyketjuille, budjeteille, kustannushistorialle, lukitustilalle ja katkaisijoille
 
 OAuth-palveluntarjoajamoduulit (27 erillistä tiedostoa hakemistossa `src/lib/oauth/providers/`):

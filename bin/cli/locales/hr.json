@@ -746,51 +746,6 @@
       "description": "Prikaži popis izvornih datoteka koje je izradio zadatak"
     }
   },
-  "eval": {
-    "description": "Upravljaj evaluacijskim paketima i pokretanjima",
-    "suites": {
-      "description": "Upravljaj evaluacijskim paketima",
-      "list": {
-        "description": "Prikaži popis evaluacijskih paketa"
-      },
-      "get": {
-        "description": "Prikaži pojedinosti evaluacijskog paketa po ID-u"
-      },
-      "create": {
-        "description": "Izradi evaluacijski paket iz JSON datoteke",
-        "file": "Putanja do JSON datoteke s definicijom paketa"
-      }
-    },
-    "run": {
-      "description": "Pokreni evaluacijsko izvršavanje za paket",
-      "model": "ID modela za evaluaciju (zadano: automatski)",
-      "combo": "Prisilno koristi određenu kombinaciju po nazivu",
-      "concurrency": "Broj istovremenih uzoraka (zadano: 4)",
-      "tag": "Označi ovo izvršavanje za kasnije filtriranje",
-      "watch": "Pratite napredak izvršavanja do završetka"
-    },
-    "list": {
-      "description": "Prikaži popis evaluacijskih izvršavanja",
-      "suite": "Filtriraj po ID-u paketa",
-      "status": "Filtriraj po statusu",
-      "since": "Vrati izvršavanja od ove vremenske oznake",
-      "limit": "Maksimalan broj rezultata (zadano: 50)"
-    },
-    "get": {
-      "description": "Prikaži pojedinosti evaluacijskog izvršavanja po ID-u"
-    },
-    "results": {
-      "description": "Prikaži rezultate uzoraka za evaluacijsko izvršavanje",
-      "failed": "Prikaži samo neuspjele uzorke"
-    },
-    "cancel": {
-      "description": "Otkaži evaluacijsko izvršavanje koje je u tijeku",
-      "yes": "Zaobiđi upit za potvrdu"
-    },
-    "scorecard": {
-      "description": "Prikaži rezultatsku karticu za dovršeno evaluacijsko izvršavanje"
-    }
-  },
   "program": {
     "description": "OmniRoute — Pametni AI Router s automatskim prebacivanjem",
     "version": "Ispiši verziju i izađi",

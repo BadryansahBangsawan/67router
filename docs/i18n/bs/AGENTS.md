@@ -410,7 +410,6 @@ Dokumentacija mora opisivati provjereno ponašanje, a ne vjerovatno ponašanje.
 ### Dodavanje nove zaštitne mjere / evaluacije / vještine / webhook događaja
 
 - Zaštitna mjera: `src/lib/guardrails/` → dokumentacija: `docs/security/GUARDRAILS.md`
-- Paket evaluacija: `src/lib/evals/` → dokumentacija: `docs/frameworks/EVALS.md`
 - Vještina (sandbox): `src/lib/skills/` → dokumentacija: `docs/frameworks/SKILLS.md`
 - Webhook događaj: `src/lib/webhookDispatcher.ts` → dokumentacija: `docs/frameworks/WEBHOOKS.md`
 - Odredište za izvoz zapisnika: dodajte `src/lib/logExport/destinations/<name>.ts` + jedan red u
@@ -438,7 +437,6 @@ Za svaku netrivijalnu izmjenu prvo pročitajte odgovarajući detaljni dokument:
 | Zaštitne mjere (PII / ubacivanje instrukcija / vizija)              | `docs/security/GUARDRAILS.md`                           |
 | Javni pristupni podaci uzvodnih servisa (Gemini itd.)               | `docs/security/PUBLIC_CREDS.md`                         |
 | Sanitizacija poruka o greškama                                      | `docs/security/ERROR_SANITIZATION.md`                   |
-| Evaluacije                                                          | `docs/frameworks/EVALS.md`                              |
 | Usklađenost / revizija                                              | `docs/security/COMPLIANCE.md`                           |
 | Webhookovi                                                          | `docs/frameworks/WEBHOOKS.md`                           |
 | Izvoz zapisnika (zapisi poziva → BigQuery/…)                        | `docs/frameworks/LOG-EXPORT.md`                         |

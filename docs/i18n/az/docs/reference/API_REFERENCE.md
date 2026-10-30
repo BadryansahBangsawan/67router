@@ -1360,9 +1360,8 @@ GET cavabına `agents[]` (id, name, binary, version, installed, protocol, isCust
 
 ### Qiymətləndirmələr
 
-| Endpoint     | Metod    | Təsvir                                                               |
-| ------------ | -------- | -------------------------------------------------------------------- |
-| `/api/evals` | GET/POST | Qiymətləndirmə paketlərini siyahıya alın / qiymətləndirməni başladın |
+| Endpoint | Metod | Təsvir |
+| -------- | ----- | ------ |
 
 ### Siyasətlər
 
@@ -1888,12 +1887,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | Bulud sinxronizasiyasına təqdim edilən model aliaslarını sadalayır |
 | GET | `/api/assess` | Son qiymətləndirmə kateqoriyalarını oxuyur (hər provayder/model üzrə) |
 | POST | `/api/assess` | Qiymətləndirmə aparır — sorğu gövdəsi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Daxili yoxlama dəstlərini və ən son icraları sadalayır |
-| POST | `/api/evals` | Yoxlama icrasını başladır |
-| POST | `/api/evals/suites` | Fərdi yoxlama dəsti yaradır — sorğu gövdəsi `evalSuiteSaveSchema` ilə doğrulanır |
-| GET | `/api/evals/suites/[id]` | Fərdi yoxlama dəstini əldə edir |
 
-**Autentifikasiya:** `/api/cloud/auth` Bearer açarını birbaşa doğrulayır və hər bağlantının maskalanmış açarı ilə `projectId` dəyərini yalnız `manage` / `admin` əhatə dairəsinə malik açar üçün qaytarır; digər `/api/cloud/*`, `/api/evals/*` və `/api/assess` marşrutları idarəetmə sessiyası/API açarı tələb edir. `/api/assess` POST diskriminasiya edilmiş birləşmə əhatə dairəsi sxemi ilə `validateBody` istifadə edir.
+**Autentifikasiya:** `/api/cloud/auth` Bearer açarını birbaşa doğrulayır və hər bağlantının maskalanmış açarı ilə `projectId` dəyərini yalnız `manage` / `admin` əhatə dairəsinə malik açar üçün qaytarır; digər `/api/cloud/*` və `/api/assess` marşrutları idarəetmə sessiyası/API açarı tələb edir. `/api/assess` POST diskriminasiya edilmiş birləşmə əhatə dairəsi sxemi ilə `validateBody` istifadə edir.
 
 ---
 

@@ -1437,9 +1437,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### ការវាយតម្លៃ
 
-| ចំណុចបញ្ចប់  | វិធីសាស្ត្រ | ការពិពណ៌នា                                     |
-| ------------ | ----------- | ---------------------------------------------- |
-| `/api/evals` | GET/POST    | រាយបញ្ជីសំណុំការវាយតម្លៃ / ដំណើរការការវាយតម្លៃ |
+| ចំណុចបញ្ចប់ | វិធីសាស្ត្រ | ការពិពណ៌នា |
+| ----------- | ----------- | ---------- |
 
 ### គោលការណ៍
 
@@ -1964,12 +1963,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | រាយឈ្មោះក្លែងក្លាយរបស់ model ដូចដែលបានបង្ហាញដល់ cloud sync |
 | GET | `/api/assess` | អានការចាត់ថ្នាក់នៃការវាយតម្លៃចុងក្រោយបំផុត (តាម provider/model នីមួយៗ) |
 | POST | `/api/assess` | ដំណើរការការវាយតម្លៃ — body៖ `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | រាយ eval suite ដែលមានស្រាប់ + ការដំណើរការថ្មីៗបំផុត |
-| POST | `/api/evals` | ចាប់ផ្ដើមការដំណើរការ eval |
-| POST | `/api/evals/suites` | បង្កើត eval suite ផ្ទាល់ខ្លួន — body ត្រូវបានផ្ទៀងផ្ទាត់ដោយ `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | ទាញយក eval suite ផ្ទាល់ខ្លួន |
 
-**Auth៖** `/api/cloud/auth` ផ្ទៀងផ្ទាត់សោ Bearer ដោយផ្ទាល់ ហើយត្រឡប់សោដែលបានបិទបាំង និង `projectId` របស់ការតភ្ជាប់នីមួយៗ សម្រាប់តែសោដែលមាន scope `manage` / `admin` ប៉ុណ្ណោះ; route `/api/cloud/*`, `/api/evals/*` និង `/api/assess` ផ្សេងទៀតតម្រូវឱ្យមាន management session/API key។ POST `/api/assess` ប្រើ `validateBody` ជាមួយ scope schema ប្រភេទ discriminated-union។
+**Auth៖** `/api/cloud/auth` ផ្ទៀងផ្ទាត់សោ Bearer ដោយផ្ទាល់ ហើយត្រឡប់សោដែលបានបិទបាំង និង `projectId` របស់ការតភ្ជាប់នីមួយៗ សម្រាប់តែសោដែលមាន scope `manage` / `admin` ប៉ុណ្ណោះ; route `/api/cloud/*` និង `/api/assess` ផ្សេងទៀតតម្រូវឱ្យមាន management session/API key។ POST `/api/assess` ប្រើ `validateBody` ជាមួយ scope schema ប្រភេទ discriminated-union។
 
 ---
 

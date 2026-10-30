@@ -1437,9 +1437,8 @@ Respons GET merangkumi `agents[]` (id, name, binary, version, installed, protoco
 
 ### Penilaian
 
-| Endpoint     | Kaedah   | Penerangan                                    |
-| ------------ | -------- | --------------------------------------------- |
-| `/api/evals` | GET/POST | Senaraikan sut penilaian / jalankan penilaian |
+| Endpoint | Kaedah | Penerangan |
+| -------- | ------ | ---------- |
 
 ### Dasar
 
@@ -1962,12 +1961,8 @@ Mengembalikan kad ejen A2A awam (nama, penerangan, keupayaan, katalog kemahiran,
 | GET | `/api/cloud/models/alias` | Senaraikan alias model seperti yang didedahkan kepada penyegerakan awan |
 | GET | `/api/assess` | Baca pengkategorian pentaksiran terkini (bagi setiap penyedia/model) |
 | POST | `/api/assess` | Jalankan pentaksiran — isi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Senaraikan suit penilaian terbina dalam + pelaksanaan terkini |
-| POST | `/api/evals` | Cetuskan pelaksanaan penilaian |
-| POST | `/api/evals/suites` | Cipta suit penilaian tersuai — isi disahkan oleh `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Dapatkan suit penilaian tersuai |
 
-**Pengesahan:** `/api/cloud/auth` mengesahkan kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` bagi setiap sambungan hanya untuk kunci dengan skop `manage` / `admin`; laluan `/api/cloud/*`, `/api/evals/*`, dan `/api/assess` yang lain memerlukan sesi/kunci API pengurusan. POST `/api/assess` menggunakan `validateBody` dengan skema skop kesatuan berpenghurai.
+**Pengesahan:** `/api/cloud/auth` mengesahkan kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` bagi setiap sambungan hanya untuk kunci dengan skop `manage` / `admin`; laluan `/api/cloud/*`, dan `/api/assess` yang lain memerlukan sesi/kunci API pengurusan. POST `/api/assess` menggunakan `validateBody` dengan skema skop kesatuan berpenghurai.
 
 ---
 

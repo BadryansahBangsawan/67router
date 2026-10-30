@@ -746,51 +746,6 @@
       "description": "Wyświetl pliki źródłowe utworzone przez zadanie"
     }
   },
-  "eval": {
-    "description": "Zarządzaj zestawami ewaluacyjnymi i ich uruchomieniami",
-    "suites": {
-      "description": "Zarządzaj zestawami ewaluacyjnymi",
-      "list": {
-        "description": "Wyświetl zestawy ewaluacyjne"
-      },
-      "get": {
-        "description": "Pobierz szczegóły zestawu ewaluacyjnego według ID"
-      },
-      "create": {
-        "description": "Utwórz zestaw ewaluacyjny z pliku JSON",
-        "file": "Ścieżka do pliku JSON z definicją zestawu"
-      }
-    },
-    "run": {
-      "description": "Rozpocznij ewaluację zestawu",
-      "model": "ID modelu do ewaluacji (domyślnie: auto)",
-      "combo": "Wymuś określoną kombinację według nazwy",
-      "concurrency": "Liczba próbek przetwarzanych równolegle (domyślnie: 4)",
-      "tag": "Oznacz ten przebieg tagiem, aby móc go później filtrować",
-      "watch": "Monitoruj postęp przebiegu aż do zakończenia"
-    },
-    "list": {
-      "description": "Wyświetl przebiegi ewaluacji",
-      "suite": "Filtruj według ID zestawu",
-      "status": "Filtruj według statusu",
-      "since": "Zwróć przebiegi od tego znacznika czasu",
-      "limit": "Maksymalna liczba wyników (domyślnie: 50)"
-    },
-    "get": {
-      "description": "Pobierz szczegóły przebiegu ewaluacji według ID"
-    },
-    "results": {
-      "description": "Pokaż wyniki próbek dla przebiegu ewaluacji",
-      "failed": "Pokaż tylko próbki zakończone niepowodzeniem"
-    },
-    "cancel": {
-      "description": "Anuluj trwającą ewaluację",
-      "yes": "Pomiń monit o potwierdzenie"
-    },
-    "scorecard": {
-      "description": "Pokaż kartę wyników zakończonego przebiegu ewaluacji"
-    }
-  },
   "program": {
     "description": "OmniRoute — Inteligentny router AI z automatycznym fallbackiem",
     "version": "Wydrukuj wersję i wyjdź",

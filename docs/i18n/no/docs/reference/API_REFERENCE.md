@@ -1437,9 +1437,8 @@ GET-svaret inkluderer `agents[]` (id, name, binary, version, installed, protocol
 
 ### Evalueringer
 
-| Endepunkt    | Metode   | Beskrivelse                             |
-| ------------ | -------- | --------------------------------------- |
-| `/api/evals` | GET/POST | Vis evalueringspakker / kjør evaluering |
+| Endepunkt | Metode | Beskrivelse |
+| --------- | ------ | ----------- |
 
 ### Retningslinjer
 
@@ -1967,12 +1966,8 @@ Returnerer det offentlige A2A-agentkortet (navn, beskrivelse, funksjoner, ferdig
 | GET | `/api/cloud/models/alias` | Vis modellaliaser slik de eksponeres for skysynkronisering |
 | GET | `/api/assess` | Les de nyeste vurderingskategoriseringene (per leverandør/modell) |
 | POST | `/api/assess` | Kjør en vurdering — innhold: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Vis innebygde evalueringspakker + de nyeste kjøringene |
-| POST | `/api/evals` | Start en evalueringskjøring |
-| POST | `/api/evals/suites` | Opprett en egendefinert evalueringspakke — innhold valideres av `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hent en egendefinert evalueringspakke |
 
-**Autentisering:** `/api/cloud/auth` validerer en Bearer-nøkkel direkte og returnerer den maskerte nøkkelen og `projectId` for hver tilkobling kun for en nøkkel med omfanget `manage` / `admin`; de andre rutene under `/api/cloud/*`, `/api/evals/*` og `/api/assess` krever en administrasjonsøkt/API-nøkkel. POST mot `/api/assess` bruker `validateBody` med et omfangsskjema basert på en diskriminert union.
+**Autentisering:** `/api/cloud/auth` validerer en Bearer-nøkkel direkte og returnerer den maskerte nøkkelen og `projectId` for hver tilkobling kun for en nøkkel med omfanget `manage` / `admin`; de andre rutene under `/api/cloud/*` og `/api/assess` krever en administrasjonsøkt/API-nøkkel. POST mot `/api/assess` bruker `validateBody` med et omfangsskjema basert på en diskriminert union.
 
 ---
 

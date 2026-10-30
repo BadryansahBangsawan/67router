@@ -42,16 +42,15 @@ KI-Agent / IDE
 
 ### Was bereits vorhanden war (geprüft, nicht dupliziert)
 
-| Konzept                                       | Bestehende Implementierung                                                                              |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Verfügbarkeit (können wir Traffic senden?)    | Circuit Breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-persistiert), Connection Cooldown, Model Lockout    |
-| Zustandsberichte                              | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                 |
-| Shadow-Traffic                                | `open-sse/services/combo/shadowRouting.ts`                                                              |
-| Leitplanken                                   | `src/lib/guardrails/` (Pre-/Post-Hooks)                                                                 |
-| Exakter Cache                                 | `src/lib/semanticCache.ts` (signaturbasiert)                                                            |
-| Evaluatoren / evaluierungsgesteuertes Routing | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                    |
-| Erklärbarkeit von Combo-Entscheidungen        | `open-sse/services/combo/decisionTrace.ts`                                                              |
-| Echtzeitereignisse des Dashboards             | `src/lib/events/eventBus.ts` (UI-Benachrichtigungskanal, `unknown`-Payloads, Verlauf mit 100 Einträgen) |
+| Konzept                                    | Bestehende Implementierung                                                                              |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| Verfügbarkeit (können wir Traffic senden?) | Circuit Breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-persistiert), Connection Cooldown, Model Lockout    |
+| Zustandsberichte                           | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                 |
+| Shadow-Traffic                             | `open-sse/services/combo/shadowRouting.ts`                                                              |
+| Leitplanken                                | `src/lib/guardrails/` (Pre-/Post-Hooks)                                                                 |
+| Exakter Cache                              | `src/lib/semanticCache.ts` (signaturbasiert)                                                            |
+| Erklärbarkeit von Combo-Entscheidungen     | `open-sse/services/combo/decisionTrace.ts`                                                              |
+| Echtzeitereignisse des Dashboards          | `src/lib/events/eventBus.ts` (UI-Benachrichtigungskanal, `unknown`-Payloads, Verlauf mit 100 Einträgen) |
 
 Die Routing-Ereignisebene ist **keine** Neuimplementierung von `eventBus`: Dieser Bus ist
 der Echtzeit-Benachrichtigungskanal des Dashboards (typisierte _Ereignisnamen_, opake
@@ -274,8 +273,6 @@ Intelligenz-/Evaluierungs-Backend, nicht als Abhängigkeit**. Die Integrationspu
 - Ein zukünftiger `Evaluator` (deterministisch, lokaler Judge, HTTP, WASM) würde
   Ereignisse/Traces verarbeiten und einen `QualityScore` zurückgeben, der in denselben
   `getQualityScore`-/Qualitätsfaktor-Pfad einfließt.
-- Das bestehende evaluierungsgesteuerte Routing (`open-sse/services/evalRouting.ts`)
-  ordnet Combo-Ziele bereits anhand der Erfolgsraten von `eval_runs` neu, wenn es aktiviert ist.
 
 Auf dem Request-Pfad werden keine Evaluierungen synchron ausgeführt, und das Gateway
 funktioniert auch ohne Evaluator vollständig.

@@ -746,51 +746,6 @@
       "description": "Prikaži izvorne fajlove koje je proizveo zadatak"
     }
   },
-  "eval": {
-    "description": "Upravljanje eval paketima i pokretanjima",
-    "suites": {
-      "description": "Upravljanje eval paketima",
-      "list": {
-        "description": "Prikaži listu eval paketa"
-      },
-      "get": {
-        "description": "Prikaži detalje eval paketa po ID-u"
-      },
-      "create": {
-        "description": "Kreiraj eval paket iz JSON fajla",
-        "file": "Putanja do JSON fajla sa definicijom paketa"
-      }
-    },
-    "run": {
-      "description": "Pokreni eval pokretanje za paket",
-      "model": "ID modela za evaluaciju (podrazumevano: auto)",
-      "combo": "Prisili određenu kombinaciju po nazivu",
-      "concurrency": "Broj istovremenih uzoraka (podrazumevano: 4)",
-      "tag": "Označi ovo pokretanje za kasnije filtriranje",
-      "watch": "Praćenje toka pokretanja do završetka"
-    },
-    "list": {
-      "description": "Prikaži listu eval pokretanja",
-      "suite": "Filtriraj po ID-u paketa",
-      "status": "Filtriraj po statusu",
-      "since": "Vrati pokretanja od navedenog vremenskog žiga",
-      "limit": "Maksimalan broj rezultata (podrazumevano: 50)"
-    },
-    "get": {
-      "description": "Prikaži detalje eval pokretanja po ID-u"
-    },
-    "results": {
-      "description": "Prikaži rezultate uzoraka za eval pokretanje",
-      "failed": "Prikaži samo neuspešne uzorke"
-    },
-    "cancel": {
-      "description": "Otkaži pokrenuti eval",
-      "yes": "Preskoči potvrdni upit"
-    },
-    "scorecard": {
-      "description": "Prikaži karticu rezultata za završeno eval pokretanje"
-    }
-  },
   "program": {
     "description": "OmniRoute — паметни AI рутер са аутоматским пребацивањем на резервну опцију",
     "version": "Прикажи верзију и изађи",

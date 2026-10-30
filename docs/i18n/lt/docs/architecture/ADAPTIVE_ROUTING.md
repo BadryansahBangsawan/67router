@@ -43,16 +43,15 @@ DI agentas / IDE
 
 ### Kas jau buvo (patikrinta, nedubliuota)
 
-| Sąvoka                                                  | Esamas įgyvendinimas                                                                                                    |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Pasiekiamumas (ar galime siųsti srautą?)                | Grandinės pertraukiklis (CLOSED/DEGRADED/OPEN/HALF_OPEN, išsaugomas DB), ryšio atvėsimo laikotarpis, modelio blokavimas |
-| Būsenos ataskaitų teikimas                              | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                 |
-| Šešėlinis srautas                                       | `open-sse/services/combo/shadowRouting.ts`                                                                              |
-| Apsaugos mechanizmai                                    | `src/lib/guardrails/` (kabliai prieš / po vykdymo)                                                                      |
-| Tikslusis podėlis                                       | `src/lib/semanticCache.ts` (pagrįstas parašais)                                                                         |
-| Vertintuvai / vertinimu grindžiamas maršruto parinkimas | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                    |
-| Derinio sprendimo paaiškinamumas                        | `open-sse/services/combo/decisionTrace.ts`                                                                              |
-| Realaus laiko įvykiai ataskaitų srityje                 | `src/lib/events/eventBus.ts` (UI pranešimų kanalas, `unknown` naudingieji duomenys, 100 įrašų istorija)                 |
+| Sąvoka                                   | Esamas įgyvendinimas                                                                                                    |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Pasiekiamumas (ar galime siųsti srautą?) | Grandinės pertraukiklis (CLOSED/DEGRADED/OPEN/HALF_OPEN, išsaugomas DB), ryšio atvėsimo laikotarpis, modelio blokavimas |
+| Būsenos ataskaitų teikimas               | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                 |
+| Šešėlinis srautas                        | `open-sse/services/combo/shadowRouting.ts`                                                                              |
+| Apsaugos mechanizmai                     | `src/lib/guardrails/` (kabliai prieš / po vykdymo)                                                                      |
+| Tikslusis podėlis                        | `src/lib/semanticCache.ts` (pagrįstas parašais)                                                                         |
+| Derinio sprendimo paaiškinamumas         | `open-sse/services/combo/decisionTrace.ts`                                                                              |
+| Realaus laiko įvykiai ataskaitų srityje  | `src/lib/events/eventBus.ts` (UI pranešimų kanalas, `unknown` naudingieji duomenys, 100 įrašų istorija)                 |
 
 Maršruto parinkimo įvykių sluoksnis **nėra** pakartotinis `eventBus` įgyvendinimas: ši magistralė yra
 ataskaitų srities realaus laiko pranešimų kanalas (tipizuoti _įvykių pavadinimai_, nepermatomi
@@ -266,8 +265,6 @@ intelekto / vertinimo posistemę, o ne priklausomybę**. Integravimo taškai:
 - Būsimas `Evaluator` (deterministinis, vietinis vertintojas, HTTP, WASM) naudotų
   įvykius / trasas ir grąžintų `QualityScore`, kuris būtų perduodamas tam pačiam
   `getQualityScore` / kokybės koeficiento keliui.
-- Esamas vertinimais grindžiamas maršruto parinkimas (`open-sse/services/evalRouting.ts`) jau
-  pakeičia junginio tikslų eilės tvarką pagal `eval_runs` sėkmės rodiklius, kai ši funkcija įjungta.
 
 Joks vertinimas nevykdomas sinchroniškai užklausos kelyje, o tinklų sietuvas visapusiškai
 veikia ir nesant vertintojo.

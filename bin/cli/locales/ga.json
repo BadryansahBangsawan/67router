@@ -746,51 +746,6 @@
       "description": "Liosta comhad foinse cruthaithe le tasc"
     }
   },
-  "eval": {
-    "description": "Dírithe ar shuitéanna agus ar reábhanna",
-    "suites": {
-      "description": "Bainistiú suiteanna luachanna",
-      "list": {
-        "description": "Liosta tacair mheastóireachta"
-      },
-      "get": {
-        "description": "Faigh sonraí an tionscadail measúnaithe de réir ID"
-      },
-      "create": {
-        "description": "Cruthaigh eval suite ón chomhaid JSON",
-        "file": "Cosán go dtí an comhad JSON sainiúcháin seifte"
-      }
-    },
-    "run": {
-      "description": "Tosaigh rith luachánoire do shraith",
-      "model": "Aitheantas an Mhúnla le hathbhreithniú (réamhshocrú: uathoibríoch)",
-      "combo": "Fórsaigh teaglaim ar leith le hainm",
-      "concurrency": "Líon na shamhshamplaí comhuaineacha (réamhshocrú: 4)",
-      "tag": "Cuir lipéad ar an rith seo chun é a scagadh ina dhiaidh sin",
-      "watch": "Féach ar dhul chun cinn an rith go dtí go gcríochnaítear é"
-    },
-    "list": {
-      "description": "Liostaigh ritanna meastóireachta",
-      "suite": "Scag de réir Aitheantas an tseisiúin",
-      "status": "Scag de réir stádais",
-      "since": "Fill ar ais rithanna ó an stampa seo amach",
-      "limit": "Torthaí uasta (réamhshocrú: 50)"
-    },
-    "get": {
-      "description": "Faigh sonraí seisiún eval trí ID"
-    },
-    "results": {
-      "description": "Taispeáin sampla torthaí le haghaidh rith luachmhair",
-      "failed": "Taispeáin samplaí nár éirigh leo amháin"
-    },
-    "cancel": {
-      "description": "Cealaigh eval reáchtáilte",
-      "yes": "Léim thar luaidh dheimhnithe"
-    },
-    "scorecard": {
-      "description": "Taispeáin scórchairt i gcomhthráthadh luaidhméadrach críochtha"
-    }
-  },
   "program": {
     "description": "OmniRoute — Ródaí AI Cliste le Filleadh Uathoibríoch",
     "version": "Priontáil leagan agus scoir",

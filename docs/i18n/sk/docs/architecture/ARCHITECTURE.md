@@ -251,7 +251,6 @@ Oblasti správy:
 - Rozpočet: `src/app/api/usage/budget` (GET/POST)
 - Reťazce záložných možností: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit súladu: `src/app/api/compliance/audit-log` (GET, so stránkovaním + štruktúrovanými metadátami)
-- Vyhodnotenia: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Zásady: `src/app/api/policies` (GET/POST)
 - Synchronizačné tokeny: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiguračný balík: `src/app/api/sync/bundle` (GET, snímka nastavení/poskytovateľov/kombinácií/kľúčov s verziami ETag)
@@ -315,7 +314,6 @@ Moduly doménovej vrstvy:
 - Časový limit načítania: `src/shared/utils/fetchTimeout.ts`
 - Telemetria požiadaviek: `src/shared/utils/requestTelemetry.ts`
 - Súlad/audit: `src/lib/compliance/index.ts`
-- Spúšťač vyhodnotení: `src/lib/evals/evalRunner.ts`
 - Perzistencia stavu domény: `src/lib/db/domainState.ts` — operácie CRUD v SQLite pre reťazce záložných riešení, rozpočty, históriu nákladov, stav uzamknutia a ističe
 
 Moduly poskytovateľov OAuth (27 samostatných súborov v `src/lib/oauth/providers/`):

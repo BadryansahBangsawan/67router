@@ -746,51 +746,6 @@
       "description": "Door een taak geproduceerde bronbestanden weergeven"
     }
   },
-  "eval": {
-    "description": "Evaluatiesuites en uitvoeringen beheren",
-    "suites": {
-      "description": "Evaluatiesuites beheren",
-      "list": {
-        "description": "Evaluatiesuites weergeven"
-      },
-      "get": {
-        "description": "Details van evaluatiesuite ophalen op ID"
-      },
-      "create": {
-        "description": "Een evaluatiesuite maken vanuit een JSON-bestand",
-        "file": "Pad naar JSON-bestand met suitedefinitie"
-      }
-    },
-    "run": {
-      "description": "Een evaluatierun starten voor een suite",
-      "model": "Te evalueren model-ID (standaard: auto)",
-      "combo": "Een specifieke combinatie afdwingen op naam",
-      "concurrency": "Aantal gelijktijdige samples (standaard: 4)",
-      "tag": "Deze run taggen om later te filteren",
-      "watch": "Voortgang van run volgen tot voltooiing"
-    },
-    "list": {
-      "description": "Evaluatieruns weergeven",
-      "suite": "Filteren op suite-ID",
-      "status": "Filteren op status",
-      "since": "Runs vanaf dit tijdstip retourneren",
-      "limit": "Maximaal aantal resultaten (standaard: 50)"
-    },
-    "get": {
-      "description": "Details van evaluatierun ophalen op ID"
-    },
-    "results": {
-      "description": "Sampleresultaten voor een evaluatierun weergeven",
-      "failed": "Alleen mislukte samples weergeven"
-    },
-    "cancel": {
-      "description": "Een actieve evaluatie annuleren",
-      "yes": "Bevestigingsprompt overslaan"
-    },
-    "scorecard": {
-      "description": "Scorekaart voor een voltooide evaluatierun weergeven"
-    }
-  },
   "program": {
     "description": "OmniRoute — Slimme AI-router met automatische fallback",
     "version": "Versie afdrukken en afsluiten",

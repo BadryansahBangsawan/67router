@@ -746,51 +746,6 @@
       "description": "Zobraziť zoznam zdrojových súborov vytvorených úlohou"
     }
   },
-  "eval": {
-    "description": "Spravovať sady a spustenia vyhodnotení",
-    "suites": {
-      "description": "Spravovať sady vyhodnotení",
-      "list": {
-        "description": "Zobraziť zoznam evaluačných súprav"
-      },
-      "get": {
-        "description": "Získať podrobnosti evaluačnej súpravy podľa ID"
-      },
-      "create": {
-        "description": "Vytvoriť evaluačnú súpravu zo súboru JSON",
-        "file": "Cesta k súboru JSON s definíciou súpravy"
-      }
-    },
-    "run": {
-      "description": "Spustiť evaluačný beh pre súpravu",
-      "model": "ID modelu na vyhodnotenie (predvolené: auto)",
-      "combo": "Vynútiť konkrétnu kombináciu podľa názvu",
-      "concurrency": "Počet súbežných vzoriek (predvolené: 4)",
-      "tag": "Označiť tento beh značkou na neskoršie filtrovanie",
-      "watch": "Sledovať priebeh behu až do dokončenia"
-    },
-    "list": {
-      "description": "Zobraziť zoznam evaluačných behov",
-      "suite": "Filtrovať podľa ID súpravy",
-      "status": "Filtrovať podľa stavu",
-      "since": "Vrátiť behy od tejto časovej pečiatky",
-      "limit": "Maximálny počet výsledkov (predvolené: 50)"
-    },
-    "get": {
-      "description": "Získať podrobnosti evaluačného behu podľa ID"
-    },
-    "results": {
-      "description": "Zobraziť výsledky vzoriek evaluačného behu",
-      "failed": "Zobraziť iba neúspešné vzorky"
-    },
-    "cancel": {
-      "description": "Zrušiť prebiehajúci evaluačný beh",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "scorecard": {
-      "description": "Zobraziť kartu skóre dokončeného evaluačného behu"
-    }
-  },
   "program": {
     "description": "OmniRoute — Inteligentný AI router s automatickým prepínaním",
     "version": "Vypísať verziu a skončiť",

@@ -251,7 +251,6 @@ flowchart LR
 - બજેટ: `src/app/api/usage/budget` (GET/POST)
 - ફૉલબૅક ચેઇન્સ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - કમ્પ્લાયન્સ ઑડિટ: `src/app/api/compliance/audit-log` (GET, પેજિનેશન + સંરચિત મેટાડેટા સાથે)
-- મૂલ્યાંકનો: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - નીતિઓ: `src/app/api/policies` (GET/POST)
 - સિંક ટોકન્સ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - કન્ફિગ બંડલ: `src/app/api/sync/bundle` (GET, સેટિંગ્સ/પ્રદાતાઓ/કૉમ્બોઝ/કીઝનો ETag-વર્ઝનવાળો સ્નૅપશૉટ)
@@ -315,7 +314,6 @@ flowchart LR
 - ફેચ ટાઇમઆઉટ: `src/shared/utils/fetchTimeout.ts`
 - રિક્વેસ્ટ ટેલિમેટ્રી: `src/shared/utils/requestTelemetry.ts`
 - અનુપાલન/ઑડિટ: `src/lib/compliance/index.ts`
-- ઇવૅલ રનર: `src/lib/evals/evalRunner.ts`
 - ડોમેન સ્ટેટ પર્સિસ્ટન્સ: `src/lib/db/domainState.ts` — ફૉલબૅક ચેઇન્સ, બજેટ્સ, ખર્ચ ઇતિહાસ, લૉકઆઉટ સ્ટેટ અને સર્કિટ બ્રેકર્સ માટે SQLite CRUD
 
 OAuth પ્રોવાઇડર મોડ્યુલો (`src/lib/oauth/providers/` હેઠળ 27 અલગ ફાઇલો):

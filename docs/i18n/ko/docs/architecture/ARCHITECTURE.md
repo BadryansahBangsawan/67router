@@ -251,7 +251,6 @@ flowchart LR
 - 예산: `src/app/api/usage/budget` (GET/POST)
 - 폴백 체인: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - 규정 준수 감사: `src/app/api/compliance/audit-log` (GET, 페이지네이션 + 구조화된 메타데이터 포함)
-- 평가: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - 정책: `src/app/api/policies` (GET/POST)
 - 동기화 토큰: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - 구성 번들: `src/app/api/sync/bundle` (GET, 설정/제공자/조합/키의 ETag 버전 관리 스냅샷)
@@ -315,7 +314,6 @@ flowchart LR
 - 가져오기 타임아웃: `src/shared/utils/fetchTimeout.ts`
 - 요청 텔레메트리: `src/shared/utils/requestTelemetry.ts`
 - 규정 준수/감사: `src/lib/compliance/index.ts`
-- 평가 실행기: `src/lib/evals/evalRunner.ts`
 - 도메인 상태 영속성: `src/lib/db/domainState.ts` — 폴백 체인, 예산, 비용 기록, 잠금 상태, 회로 차단기를 위한 SQLite CRUD
 
 OAuth 제공자 모듈(`src/lib/oauth/providers/` 아래의 개별 파일 27개):

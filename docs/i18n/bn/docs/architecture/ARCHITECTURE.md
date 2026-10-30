@@ -251,7 +251,6 @@ flowchart LR
 - বাজেট: `src/app/api/usage/budget` (GET/POST)
 - ফলব্যাক চেইন: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - কমপ্লায়েন্স অডিট: `src/app/api/compliance/audit-log` (GET, পেজিনেশন + কাঠামোবদ্ধ মেটাডেটাসহ)
-- মূল্যায়ন: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - নীতিমালা: `src/app/api/policies` (GET/POST)
 - সিঙ্ক টোকেন: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - কনফিগারেশন বান্ডল: `src/app/api/sync/bundle` (GET, সেটিংস/প্রোভাইডার/কম্বো/কী-এর ETag-সংস্করণযুক্ত স্ন্যাপশট)
@@ -315,7 +314,6 @@ flowchart LR
 - ফেচ টাইমআউট: `src/shared/utils/fetchTimeout.ts`
 - অনুরোধ টেলিমেট্রি: `src/shared/utils/requestTelemetry.ts`
 - কমপ্লায়েন্স/অডিট: `src/lib/compliance/index.ts`
-- ইভ্যাল রানার: `src/lib/evals/evalRunner.ts`
 - ডোমেইন স্টেট পারসিস্টেন্স: `src/lib/db/domainState.ts` — ফলব্যাক চেইন, বাজেট, খরচের ইতিহাস, লকআউট স্টেট এবং সার্কিট ব্রেকারের জন্য SQLite CRUD
 
 OAuth প্রোভাইডার মডিউলসমূহ (`src/lib/oauth/providers/`-এর অধীনে 27টি স্বতন্ত্র ফাইল):

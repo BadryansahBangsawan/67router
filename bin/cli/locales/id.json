@@ -746,51 +746,6 @@
       "description": "Cantumkan file sumber yang dihasilkan oleh tugas"
     }
   },
-  "eval": {
-    "description": "Kelola rangkaian evaluasi dan prosesnya",
-    "suites": {
-      "description": "Kelola rangkaian evaluasi",
-      "list": {
-        "description": "Cantumkan suite evaluasi"
-      },
-      "get": {
-        "description": "Dapatkan detail suite evaluasi berdasarkan ID"
-      },
-      "create": {
-        "description": "Buat suite evaluasi dari file JSON",
-        "file": "Jalur ke file JSON definisi suite"
-      }
-    },
-    "run": {
-      "description": "Mulai proses evaluasi untuk sebuah suite",
-      "model": "ID model yang akan dievaluasi (default: auto)",
-      "combo": "Paksa kombinasi tertentu berdasarkan nama",
-      "concurrency": "Jumlah sampel serentak (default: 4)",
-      "tag": "Beri tag pada proses ini untuk pemfilteran nanti",
-      "watch": "Pantau progres proses hingga selesai"
-    },
-    "list": {
-      "description": "Cantumkan proses evaluasi",
-      "suite": "Filter berdasarkan ID suite",
-      "status": "Filter berdasarkan status",
-      "since": "Tampilkan proses sejak stempel waktu ini",
-      "limit": "Jumlah hasil maksimum (default: 50)"
-    },
-    "get": {
-      "description": "Dapatkan detail proses evaluasi berdasarkan ID"
-    },
-    "results": {
-      "description": "Tampilkan hasil sampel untuk proses evaluasi",
-      "failed": "Tampilkan hanya sampel yang gagal"
-    },
-    "cancel": {
-      "description": "Batalkan proses evaluasi yang sedang berjalan",
-      "yes": "Lewati permintaan konfirmasi"
-    },
-    "scorecard": {
-      "description": "Tampilkan kartu skor untuk proses evaluasi yang telah selesai"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI Cerdas dengan Fallback Otomatis",
     "version": "Cetak versi dan keluar",

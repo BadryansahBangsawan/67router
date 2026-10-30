@@ -1433,9 +1433,8 @@ Jibu la GET linajumuisha `agents[]` (id, name, binary, version, installed, proto
 
 ### Tathmini
 
-| Endpoint     | Mbinu    | Maelezo                                          |
-| ------------ | -------- | ------------------------------------------------ |
-| `/api/evals` | GET/POST | Orodhesha makundi ya tathmini / endesha tathmini |
+| Endpoint | Mbinu | Maelezo |
+| -------- | ----- | ------- |
 
 ### Sera
 
@@ -1963,12 +1962,8 @@ Hurejesha kadi ya umma ya agent wa A2A (jina, maelezo, uwezo, katalogi ya ujuzi,
 | GET | `/api/cloud/models/alias` | Orodhesha lakabu za modeli kama zinavyoonyeshwa kwa usawazishaji wa wingu |
 | GET | `/api/assess` | Soma uainishaji wa hivi karibuni wa ukadiriaji (kwa kila mtoa huduma/modeli) |
 | POST | `/api/assess` | Endesha ukadiriaji — mwili: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Orodhesha seti za tathmini za utendaji zilizojengewa ndani + utekelezaji wa hivi karibuni |
-| POST | `/api/evals` | Anzisha utekelezaji wa tathmini ya utendaji |
-| POST | `/api/evals/suites` | Unda seti maalum ya tathmini ya utendaji — mwili unathibitishwa na `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Rejesha seti maalum ya tathmini ya utendaji |
 
-**Uthibitishaji:** `/api/cloud/auth` huthibitisha ufunguo wa Bearer moja kwa moja na kurejesha ufunguo uliofichwa kwa sehemu na `projectId` ya kila muunganisho kwa ufunguo wenye upeo wa `manage` / `admin` pekee; njia nyingine za `/api/cloud/*`, `/api/evals/*`, na `/api/assess` zinahitaji kipindi/ufunguo wa API wa usimamizi. POST ya `/api/assess` hutumia `validateBody` pamoja na skima ya upeo ya muungano wenye kibainishi.
+**Uthibitishaji:** `/api/cloud/auth` huthibitisha ufunguo wa Bearer moja kwa moja na kurejesha ufunguo uliofichwa kwa sehemu na `projectId` ya kila muunganisho kwa ufunguo wenye upeo wa `manage` / `admin` pekee; njia nyingine za `/api/cloud/*`, na `/api/assess` zinahitaji kipindi/ufunguo wa API wa usimamizi. POST ya `/api/assess` hutumia `validateBody` pamoja na skima ya upeo ya muungano wenye kibainishi.
 
 ---
 

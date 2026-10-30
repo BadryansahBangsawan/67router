@@ -251,7 +251,6 @@ Mga domain ng pamamahala:
 - Badyet: `src/app/api/usage/budget` (GET/POST)
 - Mga fallback chain: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit ng compliance: `src/app/api/compliance/audit-log` (GET, may pagination + structured metadata)
-- Mga eval: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Mga patakaran: `src/app/api/policies` (GET/POST)
 - Mga sync token: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Config bundle: `src/app/api/sync/bundle` (GET, snapshot ng mga setting/provider/combo/key na may bersyon gamit ang ETag)
@@ -315,7 +314,6 @@ Mga module ng domain layer:
 - Timeout ng fetch: `src/shared/utils/fetchTimeout.ts`
 - Telemetry ng request: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Runner ng eval: `src/lib/evals/evalRunner.ts`
 - Persistence ng state ng domain: `src/lib/db/domainState.ts` — SQLite CRUD para sa mga fallback chain, budget, history ng gastos, state ng lockout, at mga circuit breaker
 
 Mga module ng OAuth provider (27 indibidwal na file sa ilalim ng `src/lib/oauth/providers/`):

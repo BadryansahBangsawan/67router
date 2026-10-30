@@ -746,51 +746,6 @@
       "description": "Kuva ülesande loodud lähtefailide loend"
     }
   },
-  "eval": {
-    "description": "Halda hindamiskomplekte ja käitamisi",
-    "suites": {
-      "description": "Halda hindamiskomplekte",
-      "list": {
-        "description": "Kuva hindamiskomplektide loend"
-      },
-      "get": {
-        "description": "Hangi hindamiskomplekti üksikasjad ID järgi"
-      },
-      "create": {
-        "description": "Loo hindamiskomplekt JSON-failist",
-        "file": "Komplekti definitsiooni JSON-faili asukoht"
-      }
-    },
-    "run": {
-      "description": "Käivita hindamiskomplekti käitus",
-      "model": "Hinnatava mudeli ID (vaikimisi: automaatne)",
-      "combo": "Sunni konkreetne kombinatsioon nime järgi",
-      "concurrency": "Samaaegsete näidiste arv (vaikimisi: 4)",
-      "tag": "Märgista see käitus hilisema filtreerimise jaoks",
-      "watch": "Jälgi käituse edenemist kuni valmimiseni"
-    },
-    "list": {
-      "description": "Kuva hindamiskäituste loend",
-      "suite": "Filtreeri komplekti ID järgi",
-      "status": "Filtreeri oleku järgi",
-      "since": "Tagasta käitused alates sellest ajatempist",
-      "limit": "Maksimaalne tulemuste arv (vaikimisi: 50)"
-    },
-    "get": {
-      "description": "Hangi hindamiskäituse üksikasjad ID järgi"
-    },
-    "results": {
-      "description": "Kuva hindamiskäituse näidiste tulemused",
-      "failed": "Kuva ainult ebaõnnestunud näidised"
-    },
-    "cancel": {
-      "description": "Tühista käimasolev hindamine",
-      "yes": "Jäta kinnitusküsimus vahele"
-    },
-    "scorecard": {
-      "description": "Kuva lõpetatud hindamiskäituse tulemuskaart"
-    }
-  },
   "program": {
     "description": "OmniRoute — nutikas AI ruuter automaatse tõrketaluvusega",
     "version": "Prindi versioon ja väljume",

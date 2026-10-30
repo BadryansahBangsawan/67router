@@ -746,51 +746,6 @@
       "description": "Listar ficheiros de origem produzidos por uma tarefa"
     }
   },
-  "eval": {
-    "description": "Gerir conjuntos e execuções de avaliação",
-    "suites": {
-      "description": "Gerir conjuntos de avaliação",
-      "list": {
-        "description": "Listar conjuntos de avaliação"
-      },
-      "get": {
-        "description": "Obter detalhes do conjunto de avaliação por ID"
-      },
-      "create": {
-        "description": "Criar um conjunto de avaliação a partir de um ficheiro JSON",
-        "file": "Caminho para o ficheiro JSON de definição do conjunto"
-      }
-    },
-    "run": {
-      "description": "Iniciar uma execução de avaliação para um conjunto",
-      "model": "ID do modelo a avaliar (predefinição: auto)",
-      "combo": "Forçar uma combinação específica pelo nome",
-      "concurrency": "Número de amostras simultâneas (predefinição: 4)",
-      "tag": "Adicionar uma etiqueta a esta execução para filtragem posterior",
-      "watch": "Acompanhar o progresso da execução até à conclusão"
-    },
-    "list": {
-      "description": "Listar execuções de avaliação",
-      "suite": "Filtrar por ID do conjunto",
-      "status": "Filtrar por estado",
-      "since": "Devolver execuções desde esta data e hora",
-      "limit": "Número máximo de resultados (predefinição: 50)"
-    },
-    "get": {
-      "description": "Obter detalhes da execução de avaliação por ID"
-    },
-    "results": {
-      "description": "Mostrar resultados das amostras de uma execução de avaliação",
-      "failed": "Mostrar apenas amostras com falha"
-    },
-    "cancel": {
-      "description": "Cancelar uma avaliação em execução",
-      "yes": "Ignorar pedido de confirmação"
-    },
-    "scorecard": {
-      "description": "Mostrar o quadro de pontuações de uma execução de avaliação concluída"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router de IA inteligente com fallback automático",
     "version": "Mostrar versão e sair",

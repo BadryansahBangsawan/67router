@@ -1348,9 +1348,8 @@ GET 回應包含 `agents[]`（id、name、binary、version、installed、protoco
 
 ### 評估
 
-| 端點         | 方法     | 說明                   |
-| ------------ | -------- | ---------------------- |
-| `/api/evals` | GET/POST | 列出評估套件／執行評估 |
+| 端點 | 方法 | 說明 |
+| ---- | ---- | ---- |
 
 ### 政策
 
@@ -1873,12 +1872,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | 列出公開給雲端同步使用的模型別名 |
 | GET | `/api/assess` | 讀取最新的評估分類（依提供者／模型） |
 | POST | `/api/assess` | 執行評估 — 主體：`{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | 列出內建評測套件與最近的執行紀錄 |
-| POST | `/api/evals` | 觸發評測執行 |
-| POST | `/api/evals/suites` | 建立自訂評測套件 — 主體由 `evalSuiteSaveSchema` 驗證 |
-| GET | `/api/evals/suites/[id]` | 擷取自訂評測套件 |
 
-**驗證：**`/api/cloud/auth` 會直接驗證 Bearer 金鑰，且僅針對具有 `manage` / `admin` 範圍的金鑰，回傳每個連線的已遮罩金鑰與 `projectId`；其他 `/api/cloud/*`、`/api/evals/*` 與 `/api/assess` 路由需要管理工作階段／API 金鑰。`/api/assess` POST 使用 `validateBody` 搭配可辨識聯集範圍結構描述。
+**驗證：**`/api/cloud/auth` 會直接驗證 Bearer 金鑰，且僅針對具有 `manage` / `admin` 範圍的金鑰，回傳每個連線的已遮罩金鑰與 `projectId`；其他 `/api/cloud/*` 與 `/api/assess` 路由需要管理工作階段／API 金鑰。`/api/assess` POST 使用 `validateBody` 搭配可辨識聯集範圍結構描述。
 
 ---
 

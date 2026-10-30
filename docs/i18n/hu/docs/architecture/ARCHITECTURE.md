@@ -251,7 +251,6 @@ Felügyeleti területek:
 - Költségkeret: `src/app/api/usage/budget` (GET/POST)
 - Tartalék láncok: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Megfelelőségi audit: `src/app/api/compliance/audit-log` (GET, lapozással + strukturált metaadatokkal)
-- Kiértékelések: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Szabályzatok: `src/app/api/policies` (GET/POST)
 - Szinkronizálási tokenek: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurációs csomag: `src/app/api/sync/bundle` (GET, a beállításokról/szolgáltatókról/kombinációkról/kulcsokról készült, ETag-verziózott pillanatkép)
@@ -315,7 +314,6 @@ A tartományi réteg moduljai:
 - Lekérési időtúllépés: `src/shared/utils/fetchTimeout.ts`
 - Kéréstelemetria: `src/shared/utils/requestTelemetry.ts`
 - Megfelelőség/audit: `src/lib/compliance/index.ts`
-- Kiértékelés-futtató: `src/lib/evals/evalRunner.ts`
 - Tartományi állapot tartós tárolása: `src/lib/db/domainState.ts` — SQLite CRUD a visszaállási láncokhoz, keretekhez, költségelőzményekhez, kizárási állapothoz és megszakítókhoz
 
 OAuth-szolgáltatói modulok (27 különálló fájl a `src/lib/oauth/providers/` alatt):

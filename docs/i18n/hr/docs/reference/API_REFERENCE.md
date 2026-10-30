@@ -1440,9 +1440,8 @@ GET odgovor uključuje `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evaluacije
 
-| Krajnja točka | Metoda   | Opis                                               |
-| ------------- | -------- | -------------------------------------------------- |
-| `/api/evals`  | GET/POST | Popis evaluacijskih paketa / pokretanje evaluacije |
+| Krajnja točka | Metoda | Opis |
+| ------------- | ------ | ---- |
 
 ### Pravila
 
@@ -1964,12 +1963,8 @@ Vraća javnu karticu A2A agenta (naziv, opis, mogućnosti, katalog vještina, sh
 | GET | `/api/cloud/models/alias` | Popis pseudonima modela izloženih sinkronizaciji s oblakom |
 | GET | `/api/assess` | Čitanje najnovijih kategorizacija procjene (po pružatelju/modelu) |
 | POST | `/api/assess` | Pokretanje procjene — tijelo: `{scope: {type:"all"}                                                      | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Popis ugrađenih paketa evaluacija + najnovijih izvođenja |
-| POST | `/api/evals` | Pokretanje izvođenja evaluacije |
-| POST | `/api/evals/suites` | Izrada prilagođenog paketa evaluacija — tijelo se provjerava pomoću `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Dohvaćanje prilagođenog paketa evaluacija |
 
-**Autentikacija:** `/api/cloud/auth` izravno provjerava Bearer ključ i vraća maskirani ključ i `projectId` svake veze samo za ključ s opsegom `manage` / `admin`; ostale rute `/api/cloud/*`, `/api/evals/*` i `/api/assess` zahtijevaju upravljačku sesiju/API ključ. POST za `/api/assess` upotrebljava `validateBody` sa shemom opsega koja je diskriminirana unija.
+**Autentikacija:** `/api/cloud/auth` izravno provjerava Bearer ključ i vraća maskirani ključ i `projectId` svake veze samo za ključ s opsegom `manage` / `admin`; ostale rute `/api/cloud/*` i `/api/assess` zahtijevaju upravljačku sesiju/API ključ. POST za `/api/assess` upotrebljava `validateBody` sa shemom opsega koja je diskriminirana unija.
 
 ---
 

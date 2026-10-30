@@ -1419,9 +1419,8 @@ Odpověď GET obsahuje `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evaluace
 
-| Endpoint     | Metoda   | Popis                                  |
-| ------------ | -------- | -------------------------------------- |
-| `/api/evals` | GET/POST | Výpis sad evaluací / spuštění evaluace |
+| Endpoint | Metoda | Popis |
+| -------- | ------ | ----- |
 
 ### Zásady
 
@@ -1951,12 +1950,8 @@ Vrací veřejnou kartu agenta A2A (název, popis, schopnosti, katalog dovednost�
 | GET | `/api/cloud/models/alias` | Vypíše aliasy modelů zpřístupněné cloudové synchronizaci |
 | GET | `/api/assess` | Načte nejnovější kategorizace posouzení (pro jednotlivé poskytovatele/modely) |
 | POST | `/api/assess` | Spustí posouzení — tělo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Vypíše vestavěné sady vyhodnocení + nejnovější běhy |
-| POST | `/api/evals` | Spustí běh vyhodnocení |
-| POST | `/api/evals/suites` | Vytvoří vlastní sadu vyhodnocení — tělo ověřované pomocí `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Načte vlastní sadu vyhodnocení |
 
-**Ověření:** `/api/cloud/auth` přímo ověřuje klíč Bearer a vrací maskovaný klíč a `projectId` každého připojení pouze pro klíč s rozsahem `manage` / `admin`; ostatní trasy `/api/cloud/*`, `/api/evals/*` a `/api/assess` vyžadují relaci pro správu nebo klíč API. Požadavek POST na `/api/assess` používá `validateBody` se schématem rozsahu založeným na diskriminovaném sjednocení.
+**Ověření:** `/api/cloud/auth` přímo ověřuje klíč Bearer a vrací maskovaný klíč a `projectId` každého připojení pouze pro klíč s rozsahem `manage` / `admin`; ostatní trasy `/api/cloud/*` a `/api/assess` vyžadují relaci pro správu nebo klíč API. Požadavek POST na `/api/assess` používá `validateBody` se schématem rozsahu založeným na diskriminovaném sjednocení.
 
 ---
 

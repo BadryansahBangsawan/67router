@@ -251,7 +251,6 @@ flowchart LR
 - బడ్జెట్: `src/app/api/usage/budget` (GET/POST)
 - ఫాల్బ్యాక్ చైన్లు: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - కంప్లయన్స్ ఆడిట్: `src/app/api/compliance/audit-log` (GET, పేజినేషన్ + నిర్మిత మెటాడేటాతో)
-- మూల్యాంకనాలు: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - విధానాలు: `src/app/api/policies` (GET/POST)
 - సింక్ టోకెన్లు: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - కాన్ఫిగరేషన్ బండిల్: `src/app/api/sync/bundle` (GET, సెట్టింగ్లు/ప్రొవైడర్లు/కాంబోలు/కీల యొక్క ETag-వెర్షన్ చేయబడిన స్నాప్షాట్)
@@ -315,7 +314,6 @@ flowchart LR
 - ఫెచ్ టైమ్అవుట్: `src/shared/utils/fetchTimeout.ts`
 - అభ్యర్థన టెలిమెట్రీ: `src/shared/utils/requestTelemetry.ts`
 - అనుసరణ/ఆడిట్: `src/lib/compliance/index.ts`
-- మూల్యాంకన రన్నర్: `src/lib/evals/evalRunner.ts`
 - డొమైన్ స్థితి నిల్వ: `src/lib/db/domainState.ts` — ఫాల్బ్యాక్ చైన్లు, బడ్జెట్లు, ఖర్చు చరిత్ర, లాకౌట్ స్థితి, సర్క్యూట్ బ్రేకర్ల కోసం SQLite CRUD
 
 OAuth ప్రొవైడర్ మాడ్యూల్లు (`src/lib/oauth/providers/` కింద 27 వ్యక్తిగత ఫైల్లు):

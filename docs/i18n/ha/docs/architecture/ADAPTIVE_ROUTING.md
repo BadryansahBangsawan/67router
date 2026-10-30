@@ -49,7 +49,6 @@ Wakilin AI / IDE
 | Zirga-zirgar inuwa                            | `open-sse/services/combo/shadowRouting.ts`                                                     |
 | Matakan kariya                                | `src/lib/guardrails/` (ƙugiyoyin kafin/bayan aiki)                                             |
 | Ma'ajiyar wucin gadi ta daidaitaccen sakamako | `src/lib/semanticCache.ts` (bisa sa hannu)                                                     |
-| Masu kimantawa / zaɓin hanya bisa kimantawa   | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                           |
 | Bayanin shawarar combo                        | `open-sse/services/combo/decisionTrace.ts`                                                     |
 | Abubuwan dashboard na ainihin lokaci          | `src/lib/events/eventBus.ts` (tashar sanarwar UI, payloads na `unknown`, tarihin shigarwa 100) |
 
@@ -268,8 +267,6 @@ backend na hankali/kimantawa, ba dependency ba**. Mahadodin su ne:
 - Wani `Evaluator` na gaba (deterministic, local judge, HTTP, WASM) zai karɓi
   events/traces ya kuma mayar da `QualityScore` da zai shiga hanyar
   `getQualityScore`/quality-factor ɗin nan take.
-- Routing da kimantawa ke jagoranta da ake da shi (`open-sse/services/evalRouting.ts`) tuni yana
-  sake jera combo targets bisa pass-rates na `eval_runs` idan an kunna shi.
 
 Babu wani evaluation da ke gudana synchronously a hanyar request, kuma gateway yana aiki
 cikakke ko da babu evaluator.

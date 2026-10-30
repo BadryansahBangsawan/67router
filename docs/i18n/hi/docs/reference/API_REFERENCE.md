@@ -1416,9 +1416,8 @@ GET प्रतिक्रिया में `agents[]` (id, name, binary, ve
 
 ### मूल्यांकन
 
-| Endpoint     | Method   | Description                                    |
-| ------------ | -------- | ---------------------------------------------- |
-| `/api/evals` | GET/POST | मूल्यांकन सुइट सूचीबद्ध करें / मूल्यांकन चलाएँ |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### नीतियाँ
 
@@ -1944,12 +1943,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | क्लाउड सिंक के समक्ष प्रदर्शित मॉडल उपनामों को सूचीबद्ध करें |
 | GET | `/api/assess` | नवीनतम आकलन वर्गीकरण पढ़ें (प्रति-प्रदाता/मॉडल) |
 | POST | `/api/assess` | आकलन चलाएँ — बॉडी: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | अंतर्निहित मूल्यांकन सुइट + नवीनतम रन सूचीबद्ध करें |
-| POST | `/api/evals` | मूल्यांकन रन ट्रिगर करें |
-| POST | `/api/evals/suites` | एक कस्टम मूल्यांकन सुइट बनाएँ — बॉडी को `evalSuiteSaveSchema` द्वारा सत्यापित किया जाता है |
-| GET | `/api/evals/suites/[id]` | एक कस्टम मूल्यांकन सुइट प्राप्त करें |
 
-**प्रमाणीकरण:** `/api/cloud/auth` सीधे Bearer कुंजी को सत्यापित करता है और केवल `manage` / `admin` स्कोप वाली कुंजी के लिए प्रत्येक कनेक्शन की मास्क की गई कुंजी और `projectId` लौटाता है; अन्य `/api/cloud/*`, `/api/evals/*`, और `/api/assess` रूट के लिए प्रबंधन सत्र/API कुंजी आवश्यक है। `/api/assess` POST, विभेदित-यूनियन स्कोप स्कीमा के साथ `validateBody` का उपयोग करता है।
+**प्रमाणीकरण:** `/api/cloud/auth` सीधे Bearer कुंजी को सत्यापित करता है और केवल `manage` / `admin` स्कोप वाली कुंजी के लिए प्रत्येक कनेक्शन की मास्क की गई कुंजी और `projectId` लौटाता है; अन्य `/api/cloud/*`, और `/api/assess` रूट के लिए प्रबंधन सत्र/API कुंजी आवश्यक है। `/api/assess` POST, विभेदित-यूनियन स्कोप स्कीमा के साथ `validateBody` का उपयोग करता है।
 
 ---
 

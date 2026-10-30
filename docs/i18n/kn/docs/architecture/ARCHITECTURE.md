@@ -251,7 +251,6 @@ flowchart LR
 - ಬಜೆಟ್: `src/app/api/usage/budget` (GET/POST)
 - ಫಾಲ್ಬ್ಯಾಕ್ ಸರಪಳಿಗಳು: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - ಅನುಸರಣೆ ಆಡಿಟ್: `src/app/api/compliance/audit-log` (GET, ಪುಟೀಕರಣ + ರಚನಾತ್ಮಕ ಮೆಟಾಡೇಟಾದೊಂದಿಗೆ)
-- ಮೌಲ್ಯಮಾಪನಗಳು: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ನೀತಿಗಳು: `src/app/api/policies` (GET/POST)
 - ಸಿಂಕ್ ಟೋಕನ್ಗಳು: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - ಕಾನ್ಫಿಗ್ ಬಂಡಲ್: `src/app/api/sync/bundle` (GET, ಸೆಟ್ಟಿಂಗ್ಗಳು/ಪೂರೈಕೆದಾರರು/ಕಾಂಬೊಗಳು/ಕೀಗಳ ETag-ಆವೃತ್ತೀಕರಿಸಿದ ಸ್ನ್ಯಾಪ್ಶಾಟ್)
@@ -315,7 +314,6 @@ flowchart LR
 - ಫೆಚ್ ಕಾಲಾವಧಿ ಮಿತಿ: `src/shared/utils/fetchTimeout.ts`
 - ವಿನಂತಿ ಟೆಲಿಮೆಟ್ರಿ: `src/shared/utils/requestTelemetry.ts`
 - ಅನುಸರಣೆ/ಲೆಕ್ಕಪರಿಶೋಧನೆ: `src/lib/compliance/index.ts`
-- ಮೌಲ್ಯಮಾಪನ ರನ್ನರ್: `src/lib/evals/evalRunner.ts`
 - ಡೊಮೇನ್ ಸ್ಥಿತಿ ಶಾಶ್ವತ ಸಂಗ್ರಹಣೆ: `src/lib/db/domainState.ts` — ಫಾಲ್ಬ್ಯಾಕ್ ಸರಪಳಿಗಳು, ಬಜೆಟ್ಗಳು, ವೆಚ್ಚ ಇತಿಹಾಸ, ಲಾಕ್ಔಟ್ ಸ್ಥಿತಿ ಮತ್ತು ಸರ್ಕ್ಯೂಟ್ ಬ್ರೇಕರ್ಗಳಿಗಾಗಿ SQLite CRUD
 
 OAuth ಪ್ರೊವೈಡರ್ ಮಾಡ್ಯೂಲ್ಗಳು (`src/lib/oauth/providers/` ಅಡಿಯಲ್ಲಿ 27 ಪ್ರತ್ಯೇಕ ಫೈಲ್ಗಳು):

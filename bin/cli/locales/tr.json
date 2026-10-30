@@ -746,51 +746,6 @@
       "description": "Bir görev tarafından oluşturulan kaynak dosyaları listele"
     }
   },
-  "eval": {
-    "description": "Değerlendirme paketlerini ve çalıştırmalarını yönet",
-    "suites": {
-      "description": "Değerlendirme paketlerini yönet",
-      "list": {
-        "description": "Değerlendirme paketlerini listele"
-      },
-      "get": {
-        "description": "Kimliğe göre değerlendirme paketi ayrıntılarını getir"
-      },
-      "create": {
-        "description": "Bir JSON dosyasından değerlendirme paketi oluştur",
-        "file": "Paket tanımı JSON dosyasının yolu"
-      }
-    },
-    "run": {
-      "description": "Bir paket için değerlendirme çalıştırması başlat",
-      "model": "Değerlendirilecek model kimliği (varsayılan: auto)",
-      "combo": "Ada göre belirli bir kombinasyonu zorunlu kıl",
-      "concurrency": "Eşzamanlı örnek sayısı (varsayılan: 4)",
-      "tag": "Daha sonra filtrelemek için bu çalıştırmayı etiketle",
-      "watch": "Çalıştırma ilerlemesini tamamlanana kadar izle"
-    },
-    "list": {
-      "description": "Değerlendirme çalıştırmalarını listele",
-      "suite": "Paket kimliğine göre filtrele",
-      "status": "Duruma göre filtrele",
-      "since": "Bu zaman damgasından sonraki çalıştırmaları döndür",
-      "limit": "Azami sonuç sayısı (varsayılan: 50)"
-    },
-    "get": {
-      "description": "Kimliğe göre değerlendirme çalıştırması ayrıntılarını getir"
-    },
-    "results": {
-      "description": "Bir değerlendirme çalıştırmasının örnek sonuçlarını göster",
-      "failed": "Yalnızca başarısız örnekleri göster"
-    },
-    "cancel": {
-      "description": "Çalışan bir değerlendirmeyi iptal et",
-      "yes": "Onay istemini atla"
-    },
-    "scorecard": {
-      "description": "Tamamlanmış bir değerlendirme çalıştırmasının puan kartını göster"
-    }
-  },
   "program": {
     "description": "OmniRoute — Otomatik Fallback ile Akıllı AI Yönlendirici",
     "version": "Sürümü yazdır ve çık",

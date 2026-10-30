@@ -1440,9 +1440,8 @@ GET-vastaus sisältää `agents[]`-taulukon (id, name, binary, version, installe
 
 ### Evaluoinnit
 
-| Päätepiste   | Menetelmä | Kuvaus                                            |
-| ------------ | --------- | ------------------------------------------------- |
-| `/api/evals` | GET/POST  | Luettele evaluointikokoelmat / suorita evaluointi |
+| Päätepiste | Menetelmä | Kuvaus |
+| ---------- | --------- | ------ |
 
 ### Käytännöt
 
@@ -1970,12 +1969,8 @@ Palauttaa julkisen A2A-agenttikortin (nimi, kuvaus, ominaisuudet, taitoluettelo 
 | GET | `/api/cloud/models/alias` | Listaa pilvisynkronoinnille tarjotut mallialiakset |
 | GET | `/api/assess` | Lukee viimeisimmät arviointiluokitukset (palveluntarjoaja- ja mallikohtaisesti) |
 | POST | `/api/assess` | Suorittaa arvioinnin — runko: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Listaa sisäänrakennetut evaluaatiokokoelmat ja viimeisimmät suoritukset |
-| POST | `/api/evals` | Käynnistää evaluaatiosuorituksen |
-| POST | `/api/evals/suites` | Luo mukautetun evaluaatiokokoelman — runko validoidaan skeemalla `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hakee mukautetun evaluaatiokokoelman |
 
-**Todennus:** `/api/cloud/auth` vahvistaa Bearer-avaimen suoraan ja palauttaa kunkin yhteyden peitetyn avaimen sekä `projectId`-arvon vain avaimelle, jolla on käyttöoikeusalue `manage` / `admin`; muut `/api/cloud/*`-, `/api/evals/*`- ja `/api/assess`-reitit edellyttävät hallintaistuntoa tai API-avainta. `/api/assess` POST käyttää `validateBody`-toimintoa erottelevan unionin käyttöalueen skeeman kanssa.
+**Todennus:** `/api/cloud/auth` vahvistaa Bearer-avaimen suoraan ja palauttaa kunkin yhteyden peitetyn avaimen sekä `projectId`-arvon vain avaimelle, jolla on käyttöoikeusalue `manage` / `admin`; muut `/api/cloud/*`-- ja `/api/assess`-reitit edellyttävät hallintaistuntoa tai API-avainta. `/api/assess` POST käyttää `validateBody`-toimintoa erottelevan unionin käyttöalueen skeeman kanssa.
 
 ---
 

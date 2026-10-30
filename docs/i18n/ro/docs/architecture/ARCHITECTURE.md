@@ -251,7 +251,6 @@ Domenii de administrare:
 - Buget: `src/app/api/usage/budget` (GET/POST)
 - Lanțuri de rezervă: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit de conformitate: `src/app/api/compliance/audit-log` (GET, cu paginare + metadate structurate)
-- Evaluări: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politici: `src/app/api/policies` (GET/POST)
 - Tokenuri de sincronizare: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Pachet de configurare: `src/app/api/sync/bundle` (GET, instantaneu al setărilor/furnizorilor/combinațiilor/cheilor, versionat prin ETag)
@@ -315,7 +314,6 @@ Modulele stratului de domeniu:
 - Expirarea preluării: `src/shared/utils/fetchTimeout.ts`
 - Telemetria cererilor: `src/shared/utils/requestTelemetry.ts`
 - Conformitate/audit: `src/lib/compliance/index.ts`
-- Executorul de evaluări: `src/lib/evals/evalRunner.ts`
 - Persistența stării domeniului: `src/lib/db/domainState.ts` — operațiuni CRUD SQLite pentru lanțuri de rezervă, bugete, istoricul costurilor, starea blocărilor și întrerupătoare de circuit
 
 Modulele furnizorilor OAuth (27 de fișiere individuale în `src/lib/oauth/providers/`):

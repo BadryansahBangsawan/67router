@@ -251,7 +251,6 @@ flowchart LR
 - الميزانية: `src/app/api/usage/budget` (GET/POST)
 - سلاسل التحويل الاحتياطي: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - تدقيق الامتثال: `src/app/api/compliance/audit-log` (GET، مع ترقيم الصفحات + بيانات وصفية مهيكلة)
-- التقييمات: `src/app/api/evals` (GET/POST)، `src/app/api/evals/[suiteId]` (GET)
 - السياسات: `src/app/api/policies` (GET/POST)
 - رموز المزامنة: `src/app/api/sync/tokens` (GET/POST)، `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - حزمة التهيئة: `src/app/api/sync/bundle` (GET، لقطة ذات إصدار ETag للإعدادات/المزودين/التركيبات/المفاتيح)
@@ -315,7 +314,6 @@ flowchart LR
 - مهلة الجلب: `src/shared/utils/fetchTimeout.ts`
 - قياس طلبات المعالجة عن بُعد: `src/shared/utils/requestTelemetry.ts`
 - الامتثال/التدقيق: `src/lib/compliance/index.ts`
-- مشغّل التقييمات: `src/lib/evals/evalRunner.ts`
 - استمرارية حالة النطاق: `src/lib/db/domainState.ts` — عمليات CRUD في SQLite لسلاسل الرجوع، والميزانيات، وسجلّ التكلفة، وحالة الحظر، وقواطع الدائرة
 
 وحدات مزوّدي OAuth ‏(27 ملفًا منفردًا ضمن `src/lib/oauth/providers/`):

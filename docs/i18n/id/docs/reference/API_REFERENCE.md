@@ -1437,9 +1437,8 @@ Respons GET mencakup `agents[]` (id, name, binary, version, installed, protocol,
 
 ### Evaluasi
 
-| Endpoint     | Metode   | Deskripsi                                         |
-| ------------ | -------- | ------------------------------------------------- |
-| `/api/evals` | GET/POST | Menampilkan suite evaluasi / menjalankan evaluasi |
+| Endpoint | Metode | Deskripsi |
+| -------- | ------ | --------- |
 
 ### Kebijakan
 
@@ -1967,12 +1966,8 @@ Mengembalikan kartu agen A2A publik (nama, deskripsi, kapabilitas, katalog keter
 | GET | `/api/cloud/models/alias` | Mencantumkan alias model sebagaimana ditampilkan untuk sinkronisasi cloud |
 | GET | `/api/assess` | Membaca kategorisasi penilaian terbaru (per penyedia/model) |
 | POST | `/api/assess` | Menjalankan penilaian — isi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Mencantumkan rangkaian evaluasi bawaan + eksekusi terbaru |
-| POST | `/api/evals` | Memicu eksekusi evaluasi |
-| POST | `/api/evals/suites` | Membuat rangkaian evaluasi khusus — isi divalidasi oleh `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Mengambil rangkaian evaluasi khusus |
 
-**Autentikasi:** `/api/cloud/auth` memvalidasi kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` dari setiap koneksi hanya untuk kunci dengan cakupan `manage` / `admin`; rute `/api/cloud/*`, `/api/evals/*`, dan `/api/assess` lainnya memerlukan sesi/kunci API manajemen. POST `/api/assess` menggunakan `validateBody` dengan skema cakupan discriminated-union.
+**Autentikasi:** `/api/cloud/auth` memvalidasi kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` dari setiap koneksi hanya untuk kunci dengan cakupan `manage` / `admin`; rute `/api/cloud/*`, dan `/api/assess` lainnya memerlukan sesi/kunci API manajemen. POST `/api/assess` menggunakan `validateBody` dengan skema cakupan discriminated-union.
 
 ---
 

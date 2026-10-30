@@ -251,7 +251,6 @@ flowchart LR
 - バジェット：`src/app/api/usage/budget`（GET/POST）
 - フォールバックチェーン：`src/app/api/fallback/chains`（GET/POST/DELETE）
 - コンプライアンス監査：`src/app/api/compliance/audit-log`（GET、ページネーション + 構造化メタデータ対応）
-- 評価：`src/app/api/evals`（GET/POST）、`src/app/api/evals/[suiteId]`（GET）
 - ポリシー：`src/app/api/policies`（GET/POST）
 - 同期トークン：`src/app/api/sync/tokens`（GET/POST）、`src/app/api/sync/tokens/[id]`（GET/DELETE）
 - 設定バンドル：`src/app/api/sync/bundle`（GET、設定/プロバイダー/コンボ/キーのETagバージョン付きスナップショット）
@@ -315,7 +314,6 @@ flowchart LR
 - フェッチタイムアウト: `src/shared/utils/fetchTimeout.ts`
 - リクエストテレメトリ: `src/shared/utils/requestTelemetry.ts`
 - コンプライアンス/監査: `src/lib/compliance/index.ts`
-- 評価ランナー: `src/lib/evals/evalRunner.ts`
 - ドメイン状態の永続化: `src/lib/db/domainState.ts` — フォールバックチェーン、バジェット、コスト履歴、ロックアウト状態、サーキットブレーカーに対するSQLite CRUD
 
 OAuthプロバイダーモジュール（`src/lib/oauth/providers/`配下の個別ファイル27個）:

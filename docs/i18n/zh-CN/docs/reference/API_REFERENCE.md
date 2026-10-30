@@ -1353,9 +1353,8 @@ GET 响应包括 `agents[]`（id、name、binary、version、installed、protoco
 
 ### 评估
 
-| 端点         | 方法     | 描述                  |
-| ------------ | -------- | --------------------- |
-| `/api/evals` | GET/POST | 列出评估套件/运行评估 |
+| 端点 | 方法 | 描述 |
+| ---- | ---- | ---- |
 
 ### 策略
 
@@ -1883,12 +1882,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | 列出向云同步公开的模型别名 |
 | GET | `/api/assess` | 读取最新的评估分类结果（按提供者/模型） |
 | POST | `/api/assess` | 运行评估 — 请求体：`{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | 列出内置评测套件和最近的运行记录 |
-| POST | `/api/evals` | 触发评测运行 |
-| POST | `/api/evals/suites` | 创建自定义评测套件 — 请求体由 `evalSuiteSaveSchema` 验证 |
-| GET | `/api/evals/suites/[id]` | 获取自定义评测套件 |
 
-**身份验证：**`/api/cloud/auth` 直接验证 Bearer 密钥，并且仅当密钥具有 `manage` / `admin` 作用域时，才返回每个连接的已脱敏密钥和 `projectId`；其他 `/api/cloud/*`、`/api/evals/*` 和 `/api/assess` 路由需要管理会话/API 密钥。`/api/assess` POST 使用 `validateBody` 和带鉴别字段的联合作用域架构。
+**身份验证：**`/api/cloud/auth` 直接验证 Bearer 密钥，并且仅当密钥具有 `manage` / `admin` 作用域时，才返回每个连接的已脱敏密钥和 `projectId`；其他 `/api/cloud/*` 和 `/api/assess` 路由需要管理会话/API 密钥。`/api/assess` POST 使用 `validateBody` 和带鉴别字段的联合作用域架构。
 
 ---
 

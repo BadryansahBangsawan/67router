@@ -1407,9 +1407,8 @@ A GET-válasz tartalmazza az `agents[]` tömböt (id, name, binary, version, ins
 
 ### Kiértékelések (Evals)
 
-| Végpont      | Metódus  | Leírás                                                  |
-| ------------ | -------- | ------------------------------------------------------- |
-| `/api/evals` | GET/POST | Kiértékelési csomagok listázása / kiértékelés futtatása |
+| Végpont | Metódus | Leírás |
+| ------- | ------- | ------ |
 
 ### Szabályzatok
 
@@ -1927,12 +1926,8 @@ Visszaadja a nyilvános A2A-ügynökkártyát (név, leírás, képességek, ké
 | GET | `/api/cloud/models/alias` | A felhőszinkronizálás számára elérhető modellálnevek listázása |
 | GET | `/api/assess` | A legújabb felmérési kategorizálások lekérése (szolgáltatónként/modellenként) |
 | POST | `/api/assess` | Felmérés futtatása — törzs: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | A beépített kiértékelési csomagok és a legutóbbi futtatások listázása |
-| POST | `/api/evals` | Kiértékelési futtatás indítása |
-| POST | `/api/evals/suites` | Egyéni kiértékelési csomag létrehozása — a törzset az `evalSuiteSaveSchema` validálja |
-| GET | `/api/evals/suites/[id]` | Egyéni kiértékelési csomag lekérése |
 
-**Hitelesítés:** Az `/api/cloud/auth` közvetlenül ellenőrzi a Bearer-kulcsot, és csak `manage` / `admin` hatókörű kulcs esetén adja vissza az egyes kapcsolatok maszkolt kulcsát és `projectId` értékét; a többi `/api/cloud/*`, `/api/evals/*` és `/api/assess` útvonal kezelői munkamenetet/API-kulcsot igényel. Az `/api/assess` POST a `validateBody` függvényt használja egy diszkriminált uniós hatókörsémával.
+**Hitelesítés:** Az `/api/cloud/auth` közvetlenül ellenőrzi a Bearer-kulcsot, és csak `manage` / `admin` hatókörű kulcs esetén adja vissza az egyes kapcsolatok maszkolt kulcsát és `projectId` értékét; a többi `/api/cloud/*` és `/api/assess` útvonal kezelői munkamenetet/API-kulcsot igényel. Az `/api/assess` POST a `validateBody` függvényt használja egy diszkriminált uniós hatókörsémával.
 
 ---
 

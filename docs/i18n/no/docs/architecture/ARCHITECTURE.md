@@ -251,7 +251,6 @@ Administrasjonsområder:
 - Budsjett: `src/app/api/usage/budget` (GET/POST)
 - Reservekjeder: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Samsvarsrevisjon: `src/app/api/compliance/audit-log` (GET, med paginering + strukturerte metadata)
-- Evalueringer: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Retningslinjer: `src/app/api/policies` (GET/POST)
 - Synkroniseringstokener: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurasjonspakke: `src/app/api/sync/bundle` (GET, ETag-versjonert øyeblikksbilde av innstillinger/leverandører/kombinasjoner/nøkler)
@@ -315,7 +314,6 @@ Moduler i domenelaget:
 - Tidsavbrudd for henting: `src/shared/utils/fetchTimeout.ts`
 - Telemetri for forespørsler: `src/shared/utils/requestTelemetry.ts`
 - Samsvar/revisjon: `src/lib/compliance/index.ts`
-- Evalueringskjører: `src/lib/evals/evalRunner.ts`
 - Persistens av domenetilstand: `src/lib/db/domainState.ts` — SQLite-CRUD for reservekjeder, budsjetter, kostnadshistorikk, utestengingstilstand og kretsbrytere
 
 OAuth-leverandørmoduler (27 individuelle filer under `src/lib/oauth/providers/`):

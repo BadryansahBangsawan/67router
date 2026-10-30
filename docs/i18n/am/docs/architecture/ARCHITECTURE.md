@@ -251,7 +251,6 @@ flowchart LR
 - በጀት፦ `src/app/api/usage/budget` (GET/POST)
 - የመጠባበቂያ ሰንሰለቶች፦ `src/app/api/fallback/chains` (GET/POST/DELETE)
 - የተገዢነት ኦዲት፦ `src/app/api/compliance/audit-log` (GET፣ ከገጽ ክፍፍል + ከተዋቀረ ሜታዳታ ጋር)
-- ግምገማዎች፦ `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ፖሊሲዎች፦ `src/app/api/policies` (GET/POST)
 - የማመሳሰል ቶከኖች፦ `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - የውቅር ጥቅል፦ `src/app/api/sync/bundle` (GET፣ በETag ስሪት የተያዘ የቅንብሮች/አቅራቢዎች/ጥምረቶች/ቁልፎች ቅጽበታዊ ቅጂ)
@@ -315,7 +314,6 @@ flowchart LR
 - የFetch የጊዜ ገደብ፦ `src/shared/utils/fetchTimeout.ts`
 - የጥያቄ ቴሌሜትሪ፦ `src/shared/utils/requestTelemetry.ts`
 - ተገዢነት/ኦዲት፦ `src/lib/compliance/index.ts`
-- የግምገማ አስኪያጅ፦ `src/lib/evals/evalRunner.ts`
 - የጎራ ሁኔታ ማቆያ፦ `src/lib/db/domainState.ts` — ለምትክ ሰንሰለቶች፣ በጀቶች፣ የወጪ ታሪክ፣ የመቆለፊያ ሁኔታ እና የወረዳ መቆራረጫዎች SQLite CRUD
 
 የOAuth አቅራቢ ሞጁሎች (በ`src/lib/oauth/providers/` ስር ያሉ 27 የተናጠል ፋይሎች)፦

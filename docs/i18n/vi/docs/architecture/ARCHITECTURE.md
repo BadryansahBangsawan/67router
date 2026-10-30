@@ -251,7 +251,6 @@ Các miền quản lý:
 - Ngân sách: `src/app/api/usage/budget` (GET/POST)
 - Chuỗi dự phòng: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Kiểm toán tuân thủ: `src/app/api/compliance/audit-log` (GET, có phân trang + siêu dữ liệu có cấu trúc)
-- Đánh giá: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Chính sách: `src/app/api/policies` (GET/POST)
 - Token đồng bộ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Gói cấu hình: `src/app/api/sync/bundle` (GET, ảnh chụp nhanh cài đặt/nhà cung cấp/tổ hợp/khóa được quản lý phiên bản bằng ETag)
@@ -315,7 +314,6 @@ Các mô-đun tầng miền:
 - Thời gian chờ truy xuất: `src/shared/utils/fetchTimeout.ts`
 - Dữ liệu đo từ xa của yêu cầu: `src/shared/utils/requestTelemetry.ts`
 - Tuân thủ/kiểm toán: `src/lib/compliance/index.ts`
-- Trình chạy đánh giá: `src/lib/evals/evalRunner.ts`
 - Lưu trữ trạng thái miền: `src/lib/db/domainState.ts` — CRUD SQLite cho các chuỗi dự phòng, ngân sách, lịch sử chi phí, trạng thái khóa và bộ ngắt mạch
 
 Các mô-đun nhà cung cấp OAuth (27 tệp riêng lẻ trong `src/lib/oauth/providers/`):

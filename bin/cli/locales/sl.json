@@ -746,51 +746,6 @@
       "description": "Prikaži seznam izvornih datotek, ki jih je ustvarilo opravilo"
     }
   },
-  "eval": {
-    "description": "Upravljaj zbirke in zagone vrednotenj",
-    "suites": {
-      "description": "Upravljaj zbirke vrednotenj",
-      "list": {
-        "description": "Prikaži seznam zbirk vrednotenj"
-      },
-      "get": {
-        "description": "Pridobi podrobnosti zbirke vrednotenj po ID-ju"
-      },
-      "create": {
-        "description": "Ustvari zbirko vrednotenj iz datoteke JSON",
-        "file": "Pot do datoteke JSON z definicijo zbirke"
-      }
-    },
-    "run": {
-      "description": "Začni izvajanje vrednotenja za zbirko",
-      "model": "ID modela za vrednotenje (privzeto: auto)",
-      "combo": "Vsili določeno kombinacijo po imenu",
-      "concurrency": "Število sočasnih vzorcev (privzeto: 4)",
-      "tag": "Označi ta zagon za poznejše filtriranje",
-      "watch": "Spremljaj napredek izvajanja do zaključka"
-    },
-    "list": {
-      "description": "Prikaži seznam zagonov vrednotenj",
-      "suite": "Filtriraj po ID-ju zbirke",
-      "status": "Filtriraj po stanju",
-      "since": "Vrni zagone od tega časovnega žiga naprej",
-      "limit": "Največje število rezultatov (privzeto: 50)"
-    },
-    "get": {
-      "description": "Pridobi podrobnosti zagona vrednotenja po ID-ju"
-    },
-    "results": {
-      "description": "Prikaži rezultate vzorcev za zagon vrednotenja",
-      "failed": "Prikaži samo neuspešne vzorce"
-    },
-    "cancel": {
-      "description": "Prekliči vrednotenje, ki se izvaja",
-      "yes": "Preskoči poziv za potrditev"
-    },
-    "scorecard": {
-      "description": "Prikaži preglednico rezultatov za dokončan zagon vrednotenja"
-    }
-  },
   "program": {
     "description": "OmniRoute — pametni usmerjevalnik za UI s samodejnim preklopom",
     "version": "Izpiši različico in končaj",

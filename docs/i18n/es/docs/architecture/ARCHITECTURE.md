@@ -251,7 +251,6 @@ Dominios de administración:
 - Presupuesto: `src/app/api/usage/budget` (GET/POST)
 - Cadenas de respaldo: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Auditoría de cumplimiento: `src/app/api/compliance/audit-log` (GET, con paginación + metadatos estructurados)
-- Evaluaciones: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Políticas: `src/app/api/policies` (GET/POST)
 - Tokens de sincronización: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Paquete de configuración: `src/app/api/sync/bundle` (GET, instantánea de configuración/proveedores/combinaciones/claves versionada mediante ETag)
@@ -315,7 +314,6 @@ Módulos de la capa de dominio:
 - Tiempo de espera de fetch: `src/shared/utils/fetchTimeout.ts`
 - Telemetría de solicitudes: `src/shared/utils/requestTelemetry.ts`
 - Cumplimiento/auditoría: `src/lib/compliance/index.ts`
-- Ejecutor de evaluaciones: `src/lib/evals/evalRunner.ts`
 - Persistencia del estado del dominio: `src/lib/db/domainState.ts` — operaciones CRUD de SQLite para cadenas de respaldo, presupuestos, historial de costes, estado de bloqueo y disyuntores
 
 Módulos de proveedores OAuth (27 archivos individuales en `src/lib/oauth/providers/`):

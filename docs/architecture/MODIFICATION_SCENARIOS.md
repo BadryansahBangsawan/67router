@@ -81,7 +81,6 @@ lastUpdated: 2026-10-18
 ## Adding a New Guardrail / Eval / Skill / Webhook event / Log-export destination
 
 - Guardrail: `src/lib/guardrails/` → docs: `docs/security/GUARDRAILS.md`
-- Eval suite: `src/lib/evals/` → docs: `docs/frameworks/EVALS.md`
 - Skill (sandbox): `src/lib/skills/` → docs: `docs/frameworks/SKILLS.md`
 - Log-export destination: add `src/lib/logExport/destinations/<name>.ts` + one line in
   `src/lib/logExport/registry.ts` → docs: `docs/frameworks/LOG-EXPORT.md`. The runner, REST layer

@@ -251,7 +251,6 @@ flowchart LR
 - งบประมาณ: `src/app/api/usage/budget` (GET/POST)
 - เชนสำรอง: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - การตรวจสอบการปฏิบัติตามข้อกำหนด: `src/app/api/compliance/audit-log` (GET พร้อมการแบ่งหน้า + เมทาดาทาที่มีโครงสร้าง)
-- การประเมินผล: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - นโยบาย: `src/app/api/policies` (GET/POST)
 - โทเค็นการซิงค์: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - บันเดิลการกำหนดค่า: `src/app/api/sync/bundle` (GET, สแนปช็อตของการตั้งค่า/ผู้ให้บริการ/คอมโบ/คีย์ที่กำหนดเวอร์ชันด้วย ETag)
@@ -315,7 +314,6 @@ flowchart LR
 - การหมดเวลาของการดึงข้อมูล: `src/shared/utils/fetchTimeout.ts`
 - เทเลเมทรีของคำขอ: `src/shared/utils/requestTelemetry.ts`
 - การปฏิบัติตามข้อกำหนด/การตรวจสอบ: `src/lib/compliance/index.ts`
-- ตัวรันการประเมิน: `src/lib/evals/evalRunner.ts`
 - การจัดเก็บสถานะโดเมนถาวร: `src/lib/db/domainState.ts` — SQLite CRUD สำหรับเชนตัวสำรอง, งบประมาณ, ประวัติต้นทุน, สถานะการล็อกไม่ให้ใช้งาน และเซอร์กิตเบรกเกอร์
 
 โมดูลผู้ให้บริการ OAuth (ไฟล์แยกกัน 27 ไฟล์ภายใต้ `src/lib/oauth/providers/`):

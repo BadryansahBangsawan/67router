@@ -746,51 +746,6 @@
       "description": "Tapşırıq tərəfindən yaradılmış mənbə fayllarını siyahıla"
     }
   },
-  "eval": {
-    "description": "Qiymətləndirmə paketlərini və icralarını idarə et",
-    "suites": {
-      "description": "Qiymətləndirmə paketlərini idarə et",
-      "list": {
-        "description": "Qiymətləndirmə dəstlərini siyahıya al"
-      },
-      "get": {
-        "description": "Qiymətləndirmə dəstinin təfərrüatlarını ID üzrə əldə et"
-      },
-      "create": {
-        "description": "JSON faylından qiymətləndirmə dəsti yarat",
-        "file": "Dəst tərifinin JSON faylına gedən yol"
-      }
-    },
-    "run": {
-      "description": "Dəst üçün qiymətləndirmə icrasını başlat",
-      "model": "Qiymətləndiriləcək model ID-si (standart: auto)",
-      "combo": "Adına görə konkret kombinasiyanı məcburi seç",
-      "concurrency": "Paralel nümunələrin sayı (standart: 4)",
-      "tag": "Sonradan filtrləmək üçün bu icranı teqlə",
-      "watch": "İcra tamamlanana qədər gedişatını izlə"
-    },
-    "list": {
-      "description": "Qiymətləndirmə icralarını siyahıya al",
-      "suite": "Dəst ID-sinə görə filtrlə",
-      "status": "Statusa görə filtrlə",
-      "since": "Bu vaxt möhüründən sonrakı icraları qaytar",
-      "limit": "Maksimum nəticə sayı (standart: 50)"
-    },
-    "get": {
-      "description": "Qiymətləndirmə icrasının təfərrüatlarını ID üzrə əldə et"
-    },
-    "results": {
-      "description": "Qiymətləndirmə icrası üçün nümunə nəticələrini göstər",
-      "failed": "Yalnız uğursuz nümunələri göstər"
-    },
-    "cancel": {
-      "description": "Davam edən qiymətləndirməni ləğv et",
-      "yes": "Təsdiq sorğusunu keç"
-    },
-    "scorecard": {
-      "description": "Tamamlanmış qiymətləndirmə icrası üçün qiymət cədvəlini göstər"
-    }
-  },
   "program": {
     "description": "OmniRoute — Avtomatik Fallback ilə Ağıllı AI Marşrutlaşdırıcısı",
     "version": "Versiyasını çap et və çıx",

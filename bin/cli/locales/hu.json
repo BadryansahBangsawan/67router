@@ -746,51 +746,6 @@
       "description": "Egy feladat által létrehozott forrásfájlok listázása"
     }
   },
-  "eval": {
-    "description": "Kiértékelési csomagok és futtatások kezelése",
-    "suites": {
-      "description": "Kiértékelési csomagok kezelése",
-      "list": {
-        "description": "Kiértékelési csomagok listázása"
-      },
-      "get": {
-        "description": "Kiértékelési csomag részleteinek lekérése azonosító alapján"
-      },
-      "create": {
-        "description": "Kiértékelési csomag létrehozása JSON-fájlból",
-        "file": "A csomag definícióját tartalmazó JSON-fájl elérési útja"
-      }
-    },
-    "run": {
-      "description": "Kiértékelési futtatás indítása egy csomaghoz",
-      "model": "A kiértékelendő modell azonosítója (alapértelmezett: auto)",
-      "combo": "Adott kombináció kényszerítése név alapján",
-      "concurrency": "Egyidejű minták száma (alapértelmezett: 4)",
-      "tag": "A futtatás megcímkézése későbbi szűréshez",
-      "watch": "A futtatás előrehaladásának követése a befejezésig"
-    },
-    "list": {
-      "description": "Kiértékelési futtatások listázása",
-      "suite": "Szűrés csomagazonosító alapján",
-      "status": "Szűrés állapot alapján",
-      "since": "Az ezen időbélyeg óta indított futtatások visszaadása",
-      "limit": "Találatok maximális száma (alapértelmezett: 50)"
-    },
-    "get": {
-      "description": "Kiértékelési futtatás részleteinek lekérése azonosító alapján"
-    },
-    "results": {
-      "description": "Kiértékelési futtatás mintaeredményeinek megjelenítése",
-      "failed": "Csak a sikertelen minták megjelenítése"
-    },
-    "cancel": {
-      "description": "Folyamatban lévő kiértékelés megszakítása",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "scorecard": {
-      "description": "Befejezett kiértékelési futtatás eredménykártyájának megjelenítése"
-    }
-  },
   "program": {
     "description": "OmniRoute — Intelligens AI útválasztó automatikus fallbackkel",
     "version": "Verzió kiírása és kilépés",

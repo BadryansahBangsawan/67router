@@ -140,8 +140,6 @@ tags:
     description: Discovery endpoints (generated route coverage)
   - name: Docs
     description: Docs endpoints (generated route coverage)
-  - name: Evals
-    description: Evals endpoints (generated route coverage)
   - name: Free models
     description: Free models endpoints (generated route coverage)
   - name: Free provider rankings
@@ -7415,41 +7413,7 @@ paths:
         "200":
           description: Token health status
 
-  # ─── Evals & Policies ──────────────────────────────────────────
-
-  /api/evals:
-    get:
-      tags: [System]
-      summary: List eval suites
-      responses:
-        "200":
-          description: Eval suite list
-    post:
-      tags: [System]
-      summary: Run evaluation
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        "200":
-          description: Eval results
-
-  /api/evals/{suiteId}:
-    get:
-      tags: [System]
-      summary: Get eval suite details
-      parameters:
-        - name: suiteId
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: Eval suite details
+  # ─── Policies ──────────────────────────────────────────────────
 
   /api/policies:
     get:
@@ -10566,36 +10530,6 @@ paths:
       tags:
         - Docs
       summary: "GET docs › codex cli"
-      responses:
-        "200":
-          description: OK
-  /api/evals/suites:
-    post:
-      tags:
-        - Evals
-      summary: "POST evals › suites"
-      responses:
-        "200":
-          description: OK
-  /api/evals/suites/{suiteId}:
-    delete:
-      tags:
-        - Evals
-      summary: "DELETE evals › suites › <suiteId>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Evals
-      summary: "GET evals › suites › <suiteId>"
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Evals
-      summary: "PUT evals › suites › <suiteId>"
       responses:
         "200":
           description: OK

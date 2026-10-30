@@ -251,7 +251,6 @@ flowchart LR
 - بجٹ: `src/app/api/usage/budget` (GET/POST)
 - فال بیک چینز: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - تعمیلی آڈٹ: `src/app/api/compliance/audit-log` (GET، پیجینیشن + منظم میٹا ڈیٹا کے ساتھ)
-- ایویلز: `src/app/api/evals` (GET/POST)، `src/app/api/evals/[suiteId]` (GET)
 - پالیسیاں: `src/app/api/policies` (GET/POST)
 - سنک ٹوکنز: `src/app/api/sync/tokens` (GET/POST)، `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - کنفیگریشن بنڈل: `src/app/api/sync/bundle` (GET، ترتیبات/پرووائیڈرز/کومبوز/کیز کا ETag-ورژن شدہ اسنیپ شاٹ)
@@ -315,7 +314,6 @@ flowchart LR
 - فیچ ٹائم آؤٹ: `src/shared/utils/fetchTimeout.ts`
 - درخواست ٹیلی میٹری: `src/shared/utils/requestTelemetry.ts`
 - تعمیل/آڈٹ: `src/lib/compliance/index.ts`
-- ایویل رنر: `src/lib/evals/evalRunner.ts`
 - ڈومین اسٹیٹ پرسسٹنس: `src/lib/db/domainState.ts` — فال بیک چینز، بجٹس، لاگت کی تاریخ، لاک آؤٹ اسٹیٹ، اور سرکٹ بریکرز کے لیے SQLite CRUD
 
 OAuth پرووائیڈر ماڈیولز (`src/lib/oauth/providers/` کے تحت 27 انفرادی فائلیں):

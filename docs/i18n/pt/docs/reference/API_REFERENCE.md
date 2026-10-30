@@ -1443,9 +1443,8 @@ A resposta GET inclui `agents[]` (id, name, binary, version, installed, protocol
 
 ### Avaliações
 
-| Endpoint     | Método   | Descrição                                     |
-| ------------ | -------- | --------------------------------------------- |
-| `/api/evals` | GET/POST | Listar conjuntos de testes/executar avaliação |
+| Endpoint | Método | Descrição |
+| -------- | ------ | --------- |
 
 ### Políticas
 
@@ -1970,12 +1969,8 @@ Devolve o cartão público do agente A2A (nome, descrição, capacidades, catál
 | GET | `/api/cloud/models/alias` | Lista os aliases de modelos tal como são expostos à sincronização com a cloud |
 | GET | `/api/assess` | Lê as categorizações da avaliação mais recente (por fornecedor/modelo) |
 | POST | `/api/assess` | Executa uma avaliação — corpo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Lista os conjuntos de avaliação incorporados + as execuções mais recentes |
-| POST | `/api/evals` | Inicia uma execução de avaliação |
-| POST | `/api/evals/suites` | Cria um conjunto de avaliação personalizado — corpo validado por `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Obtém um conjunto de avaliação personalizado |
 
-**Autenticação:** `/api/cloud/auth` valida diretamente uma chave Bearer e devolve a chave mascarada e o `projectId` de cada ligação apenas para uma chave com o âmbito `manage` / `admin`; as restantes rotas `/api/cloud/*`, `/api/evals/*` e `/api/assess` requerem uma sessão/chave de API de gestão. O POST de `/api/assess` utiliza `validateBody` com um esquema de âmbito de união discriminada.
+**Autenticação:** `/api/cloud/auth` valida diretamente uma chave Bearer e devolve a chave mascarada e o `projectId` de cada ligação apenas para uma chave com o âmbito `manage` / `admin`; as restantes rotas `/api/cloud/*` e `/api/assess` requerem uma sessão/chave de API de gestão. O POST de `/api/assess` utiliza `validateBody` com um esquema de âmbito de união discriminada.
 
 ---
 

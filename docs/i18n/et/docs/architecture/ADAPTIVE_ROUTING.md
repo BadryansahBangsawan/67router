@@ -50,7 +50,6 @@ AI-agent / IDE
 | Variliiklus                               | `open-sse/services/combo/shadowRouting.ts`                                                                         |
 | Kaitsepiirid                              | `src/lib/guardrails/` (eel-/järelkonksud)                                                                          |
 | Täpne vahemälu                            | `src/lib/semanticCache.ts` (allkirjapõhine)                                                                        |
-| Hindajad / hindamispõhine marsruutimine   | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                               |
 | Combo-otsuste selgitatavus                | `open-sse/services/combo/decisionTrace.ts`                                                                         |
 | Töölaua reaalajasündmused                 | `src/lib/events/eventBus.ts` (UI teavituskanal, `unknown` andmekoormad, 100-kirjeline ajalugu)                     |
 
@@ -269,8 +268,6 @@ intelligentsi-/hindamistaustsüsteemina, mitte sõltuvusena**. Liidesepunktid:
 - Tulevane `Evaluator` (deterministlik, kohalik hindaja, HTTP, WASM) tarbiks
   sündmusi/jälgi ja tagastaks `QualityScore`-i, mis suunatakse samasse
   `getQualityScore`-i / kvaliteediteguri töötlusteekonda.
-- Olemasolev hindamispõhine marsruutimine (`open-sse/services/evalRouting.ts`)
-  järjestab aktiveerimise korral kombosihtmärgid juba ümber `eval_runs`-i
   läbimismäärade järgi.
 
 Ühtegi hindamist ei käitata päringuteel sünkroonselt ning lüüs töötab täielikult

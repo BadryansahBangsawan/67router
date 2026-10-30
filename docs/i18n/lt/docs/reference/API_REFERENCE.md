@@ -1437,9 +1437,8 @@ GET atsakyme pateikiami `agents[]` (id, name, binary, version, installed, protoc
 
 ### Vertinimai
 
-| Galinis taškas | Metodas  | Aprašymas                                              |
-| -------------- | -------- | ------------------------------------------------------ |
-| `/api/evals`   | GET/POST | Pateikti vertinimo rinkinių sąrašą / vykdyti vertinimą |
+| Galinis taškas | Metodas | Aprašymas |
+| -------------- | ------- | --------- |
 
 ### Strategijos
 
@@ -1964,12 +1963,8 @@ Grąžina viešą A2A agento kortelę (pavadinimą, aprašymą, galimybes, gebė
 | GET | `/api/cloud/models/alias` | Pateikti modelių alternatyviųjų vardų, prieinamų debesijos sinchronizavimui, sąrašą |
 | GET | `/api/assess` | Gauti naujausias vertinimo kategorijas (pagal teikėją / modelį) |
 | POST | `/api/assess` | Vykdyti vertinimą — užklausos turinys: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Pateikti integruotų testų rinkinių ir naujausių jų vykdymų sąrašą |
-| POST | `/api/evals` | Pradėti testo vykdymą |
-| POST | `/api/evals/suites` | Sukurti pasirinktinį testų rinkinį — užklausos turinys tikrinamas naudojant `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Gauti pasirinktinį testų rinkinį |
 
-**Autentifikavimas:** `/api/cloud/auth` tiesiogiai patikrina Bearer raktą ir grąžina kiekvieno ryšio užmaskuotą raktą bei `projectId` tik tada, kai raktas turi `manage` / `admin` aprėptį; kitiems `/api/cloud/*`, `/api/evals/*` ir `/api/assess` maršrutams reikia valdymo seanso / API rakto. `/api/assess` POST naudoja `validateBody` su diskriminuotosios sąjungos aprėpties schema.
+**Autentifikavimas:** `/api/cloud/auth` tiesiogiai patikrina Bearer raktą ir grąžina kiekvieno ryšio užmaskuotą raktą bei `projectId` tik tada, kai raktas turi `manage` / `admin` aprėptį; kitiems `/api/cloud/*` ir `/api/assess` maršrutams reikia valdymo seanso / API rakto. `/api/assess` POST naudoja `validateBody` su diskriminuotosios sąjungos aprėpties schema.
 
 ---
 

@@ -746,51 +746,6 @@
       "description": "Vypsat zdrojové soubory vytvořené úlohou"
     }
   },
-  "eval": {
-    "description": "Spravovat sady vyhodnocení a jejich spuštění",
-    "suites": {
-      "description": "Spravovat sady vyhodnocení",
-      "list": {
-        "description": "Vypsat sady vyhodnocení"
-      },
-      "get": {
-        "description": "Získat podrobnosti sady vyhodnocení podle ID"
-      },
-      "create": {
-        "description": "Vytvořit sadu vyhodnocení ze souboru JSON",
-        "file": "Cesta k souboru JSON s definicí sady"
-      }
-    },
-    "run": {
-      "description": "Spustit běh vyhodnocení pro sadu",
-      "model": "ID modelu k vyhodnocení (výchozí: auto)",
-      "combo": "Vynutit konkrétní kombinaci podle názvu",
-      "concurrency": "Počet souběžných vzorků (výchozí: 4)",
-      "tag": "Označit tento běh štítkem pro pozdější filtrování",
-      "watch": "Sledovat průběh běhu až do dokončení"
-    },
-    "list": {
-      "description": "Vypsat běhy vyhodnocení",
-      "suite": "Filtrovat podle ID sady",
-      "status": "Filtrovat podle stavu",
-      "since": "Vrátit běhy od tohoto časového razítka",
-      "limit": "Maximální počet výsledků (výchozí: 50)"
-    },
-    "get": {
-      "description": "Získat podrobnosti běhu vyhodnocení podle ID"
-    },
-    "results": {
-      "description": "Zobrazit výsledky vzorků běhu vyhodnocení",
-      "failed": "Zobrazit pouze neúspěšné vzorky"
-    },
-    "cancel": {
-      "description": "Zrušit probíhající vyhodnocení",
-      "yes": "Přeskočit výzvu k potvrzení"
-    },
-    "scorecard": {
-      "description": "Zobrazit přehled skóre dokončeného běhu vyhodnocení"
-    }
-  },
   "program": {
     "description": "OmniRoute — Chytrý AI router s automatickým přepínáním",
     "version": "Vypsat verzi a skončit",

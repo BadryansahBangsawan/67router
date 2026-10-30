@@ -251,7 +251,6 @@ Pārvaldības jomas:
 - Budžets: `src/app/api/usage/budget` (GET/POST)
 - Atkāpšanās ķēdes: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Atbilstības audits: `src/app/api/compliance/audit-log` (GET, ar lappušu dalīšanu + strukturētiem metadatiem)
-- Novērtējumi: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politikas: `src/app/api/policies` (GET/POST)
 - Sinhronizācijas marķieri: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurācijas pakotne: `src/app/api/sync/bundle` (GET, iestatījumu/pakalpojumu sniedzēju/kombināciju/atslēgu momentuzņēmums ar ETag versijām)
@@ -315,7 +314,6 @@ Domēna slāņa moduļi:
 - Izgūšanas taimauts: `src/shared/utils/fetchTimeout.ts`
 - Pieprasījumu telemetrija: `src/shared/utils/requestTelemetry.ts`
 - Atbilstība/audits: `src/lib/compliance/index.ts`
-- Novērtējumu izpildītājs: `src/lib/evals/evalRunner.ts`
 - Domēna stāvokļa pastāvīga glabāšana: `src/lib/db/domainState.ts` — SQLite CRUD atkāpšanās ķēdēm, budžetiem, izmaksu vēsturei, bloķēšanas stāvoklim un ķēdes pārtraucējiem
 
 OAuth pakalpojumu sniedzēju moduļi (27 atsevišķi faili direktorijā `src/lib/oauth/providers/`):

@@ -251,7 +251,6 @@ Verwaltungsbereiche:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Fallback-Ketten: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance-Audit: `src/app/api/compliance/audit-log` (GET, mit Paginierung + strukturierten Metadaten)
-- Evaluierungen: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Richtlinien: `src/app/api/policies` (GET/POST)
 - Synchronisierungstoken: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurationspaket: `src/app/api/sync/bundle` (GET, ETag-versionierter Snapshot von Einstellungen/Anbietern/Kombinationen/Schlüsseln)
@@ -315,7 +314,6 @@ Module der Domänenschicht:
 - Abrufzeitüberschreitung: `src/shared/utils/fetchTimeout.ts`
 - Anfragetelemetrie: `src/shared/utils/requestTelemetry.ts`
 - Compliance/Audit: `src/lib/compliance/index.ts`
-- Evaluierungsausführung: `src/lib/evals/evalRunner.ts`
 - Persistenz des Domänenzustands: `src/lib/db/domainState.ts` — SQLite-CRUD für Fallback-Ketten, Budgets, Kostenverlauf, Sperrzustand und Circuit Breaker
 
 OAuth-Provider-Module (27 einzelne Dateien unter `src/lib/oauth/providers/`):

@@ -1366,9 +1366,8 @@ GET response တွင် `agents[]` (id, name, binary, version, installed, prot
 
 ### အကဲဖြတ်မှုများ
 
-| Endpoint     | Method   | ဖော်ပြချက်                                                        |
-| ------------ | -------- | ----------------------------------------------------------------- |
-| `/api/evals` | GET/POST | အကဲဖြတ်မှု suite များကို စာရင်းပြုစုရန် / အကဲဖြတ်မှု လုပ်ဆောင်ရန် |
+| Endpoint | Method | ဖော်ပြချက် |
+| -------- | ------ | ---------- |
 
 ### မူဝါဒများ
 
@@ -1896,12 +1895,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | cloud sync သို့ ဖော်ပြထားသည့် model alias များကို စာရင်းပြုစုသည် |
 | GET | `/api/assess` | နောက်ဆုံး assessment အမျိုးအစားခွဲခြားမှုများကို ဖတ်ရှုသည် (provider/model တစ်ခုစီအလိုက်) |
 | POST | `/api/assess` | assessment တစ်ခုကို လုပ်ဆောင်သည် — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | ပါဝင်ပြီးသား eval suite များ + နောက်ဆုံးလုပ်ဆောင်မှုများကို စာရင်းပြုစုသည် |
-| POST | `/api/evals` | eval run တစ်ခုကို စတင်လုပ်ဆောင်သည် |
-| POST | `/api/evals/suites` | စိတ်ကြိုက် eval suite တစ်ခုကို ဖန်တီးသည် — body ကို `evalSuiteSaveSchema` ဖြင့် အတည်ပြုသည် |
-| GET | `/api/evals/suites/[id]` | စိတ်ကြိုက် eval suite တစ်ခုကို ရယူသည် |
 
-**Auth:** `/api/cloud/auth` သည် Bearer key တစ်ခုကို တိုက်ရိုက်အတည်ပြုပြီး `manage` / `admin` scope ပါသော key အတွက်သာ connection တစ်ခုစီ၏ ဖုံးကွယ်ထားသော key နှင့် `projectId` ကို ပြန်ပေးသည်။ အခြား `/api/cloud/*`, `/api/evals/*` နှင့် `/api/assess` route များသည် management session/API key လိုအပ်သည်။ `/api/assess` POST သည် discriminated-union scope schema ပါသော `validateBody` ကို အသုံးပြုသည်။
+**Auth:** `/api/cloud/auth` သည် Bearer key တစ်ခုကို တိုက်ရိုက်အတည်ပြုပြီး `manage` / `admin` scope ပါသော key အတွက်သာ connection တစ်ခုစီ၏ ဖုံးကွယ်ထားသော key နှင့် `projectId` ကို ပြန်ပေးသည်။ အခြား `/api/cloud/*` နှင့် `/api/assess` route များသည် management session/API key လိုအပ်သည်။ `/api/assess` POST သည် discriminated-union scope schema ပါသော `validateBody` ကို အသုံးပြုသည်။
 
 ---
 

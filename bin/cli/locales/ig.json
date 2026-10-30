@@ -746,51 +746,6 @@
       "description": "Depụta faịlụ isi mmalite ndị otu ọrụ mepụtara"
     }
   },
-  "eval": {
-    "description": "Jikwaa nchịkọta na mmemme ntule",
-    "suites": {
-      "description": "Jikwaa nchịkọta ntule",
-      "list": {
-        "description": "Depụta nchịkọta ntule"
-      },
-      "get": {
-        "description": "Nweta nkọwa nchịkọta ntule site na ID"
-      },
-      "create": {
-        "description": "Jiri faịlụ JSON mepụta nchịkọta ntule",
-        "file": "Ụzọ faịlụ JSON nke na-akọwa nchịkọta ahụ"
-      }
-    },
-    "run": {
-      "description": "Malite mmemme ntule maka otu nchịkọta",
-      "model": "ID nke model a ga-enyocha (ndabara: auto)",
-      "combo": "Manye otu combo akọwapụtara site n’aha",
-      "concurrency": "Ọnụọgụ sample ndị a ga-eme n’otu oge (ndabara: 4)",
-      "tag": "Tinye mkpado na mmemme a maka nzacha n’ọdịnihu",
-      "watch": "Lelee ọganihu mmemme ruo mgbe ọ gwụchara"
-    },
-    "list": {
-      "description": "Depụta mmemme ntule",
-      "suite": "Jiri ID nchịkọta nyochaa",
-      "status": "Jiri ọnọdụ nyochaa",
-      "since": "Weghachite mmemme ndị malitere kemgbe timestamp a",
-      "limit": "Nsonaazụ kachasị (ndabara: 50)"
-    },
-    "get": {
-      "description": "Nweta nkọwa mmemme ntule site na ID"
-    },
-    "results": {
-      "description": "Gosi nsonaazụ sample maka otu mmemme ntule",
-      "failed": "Gosi naanị sample ndị dara"
-    },
-    "cancel": {
-      "description": "Kagbuo ntule na-aga n’ihu",
-      "yes": "Mafere ajụjụ nkwenye"
-    },
-    "scorecard": {
-      "description": "Gosi kaadị akara maka mmemme ntule emechara"
-    }
-  },
   "program": {
     "description": "OmniRoute — Onye Nhazi Ụzọ AI Nwere Ọgụgụ Isi nke nwere Ndaghachi Akpaka",
     "version": "Bipụta ụdị ma pụọ",

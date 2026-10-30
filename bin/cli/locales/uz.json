@@ -746,51 +746,6 @@
       "description": "Vazifa yaratgan manba fayllarini ro‘yxatlash"
     }
   },
-  "eval": {
-    "description": "Baholash to‘plamlari va ishga tushirishlarni boshqarish",
-    "suites": {
-      "description": "Baholash to‘plamlarini boshqarish",
-      "list": {
-        "description": "Baholash to‘plamlarini ro‘yxatlash"
-      },
-      "get": {
-        "description": "Baholash to‘plami tafsilotlarini ID bo‘yicha olish"
-      },
-      "create": {
-        "description": "JSON faylidan baholash to‘plamini yaratish",
-        "file": "To‘plam ta’rifi berilgan JSON fayliga yo‘l"
-      }
-    },
-    "run": {
-      "description": "To‘plam uchun baholashni ishga tushirish",
-      "model": "Baholanadigan model IDsi (standart: auto)",
-      "combo": "Muayyan kombinatsiyani nomi bo‘yicha majburan tanlash",
-      "concurrency": "Bir vaqtda bajariladigan namunalar soni (standart: 4)",
-      "tag": "Keyinroq filtrlash uchun ushbu ishga tushirishga teg qo‘yish",
-      "watch": "Ishga tushirish jarayonini yakunlanguniga qadar kuzatish"
-    },
-    "list": {
-      "description": "Baholash ishga tushirishlarini ro‘yxatlash",
-      "suite": "To‘plam IDsi bo‘yicha filtrlash",
-      "status": "Holat bo‘yicha filtrlash",
-      "since": "Ushbu vaqt belgisidan keyingi ishga tushirishlarni qaytarish",
-      "limit": "Natijalarning maksimal soni (standart: 50)"
-    },
-    "get": {
-      "description": "Baholash ishga tushirilishi tafsilotlarini ID bo‘yicha olish"
-    },
-    "results": {
-      "description": "Baholash ishga tushirilishi uchun namuna natijalarini ko‘rsatish",
-      "failed": "Faqat muvaffaqiyatsiz namunalarni ko‘rsatish"
-    },
-    "cancel": {
-      "description": "Ishlayotgan baholashni bekor qilish",
-      "yes": "Tasdiqlash so‘rovini o‘tkazib yuborish"
-    },
-    "scorecard": {
-      "description": "Yakunlangan baholash ishga tushirilishi uchun natijalar jadvalini ko‘rsatish"
-    }
-  },
   "program": {
     "description": "OmniRoute — avtomatik zaxira yo‘naltirishga ega aqlli AI routeri",
     "version": "Versiyani ko‘rsatish va chiqish",

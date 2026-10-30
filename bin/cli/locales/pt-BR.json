@@ -746,51 +746,6 @@
       "description": "Listar arquivos de origem produzidos por uma tarefa"
     }
   },
-  "eval": {
-    "description": "Gerenciar suites e execuções de avaliação",
-    "suites": {
-      "description": "Gerenciar suites de avaliação",
-      "list": {
-        "description": "Listar suites de avaliação"
-      },
-      "get": {
-        "description": "Obter detalhes de suite por ID"
-      },
-      "create": {
-        "description": "Criar suite de avaliação a partir de arquivo JSON",
-        "file": "Caminho para arquivo JSON de definição da suite"
-      }
-    },
-    "run": {
-      "description": "Iniciar execução de avaliação para uma suite",
-      "model": "ID do modelo a avaliar (padrão: auto)",
-      "combo": "Forçar combo específico por nome",
-      "concurrency": "Número de amostras concorrentes (padrão: 4)",
-      "tag": "Tag para esta execução",
-      "watch": "Monitorar progresso até conclusão"
-    },
-    "list": {
-      "description": "Listar execuções de avaliação",
-      "suite": "Filtrar por ID de suite",
-      "status": "Filtrar por status",
-      "since": "Retornar execuções desde este timestamp",
-      "limit": "Máximo de resultados (padrão: 50)"
-    },
-    "get": {
-      "description": "Obter detalhes de execução por ID"
-    },
-    "results": {
-      "description": "Exibir resultados de amostras de uma execução",
-      "failed": "Exibir apenas amostras que falharam"
-    },
-    "cancel": {
-      "description": "Cancelar uma avaliação em execução",
-      "yes": "Pular confirmação"
-    },
-    "scorecard": {
-      "description": "Exibir scorecard de uma execução concluída"
-    }
-  },
   "program": {
     "description": "OmniRoute — Roteador de IA com Fallback Automático",
     "version": "Exibir versão e sair",

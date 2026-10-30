@@ -1432,9 +1432,8 @@ GET ප්රතිචාරයට `agents[]` (id, name, binary, version, instal
 
 ### ඇගයීම්
 
-| Endpoint     | Method   | Description                                            |
-| ------------ | -------- | ------------------------------------------------------ |
-| `/api/evals` | GET/POST | ඇගයීම් කට්ටල ලැයිස්තුගත කිරීම / ඇගයීම ක්රියාත්මක කිරීම |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### ප්රතිපත්ති
 
@@ -1959,12 +1958,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | cloud sync වෙත නිරාවරණය කරන ආකෘති අන්වර්ථ නාම ලැයිස්තුගත කරයි |
 | GET | `/api/assess` | නවතම ඇගයීම් වර්ගීකරණ කියවයි (එක් එක් සපයන්නා/ආකෘතිය අනුව) |
 | POST | `/api/assess` | ඇගයීමක් ධාවනය කරයි — අන්තර්ගතය: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | අන්තර්ගත eval කට්ටල + වඩාත්ම මෑත ධාවන ලැයිස්තුගත කරයි |
-| POST | `/api/evals` | eval ධාවනයක් ආරම්භ කරයි |
-| POST | `/api/evals/suites` | අභිරුචි eval කට්ටලයක් සාදයි — අන්තර්ගතය `evalSuiteSaveSchema` මඟින් වලංගු කෙරේ |
-| GET | `/api/evals/suites/[id]` | අභිරුචි eval කට්ටලයක් ලබා ගනී |
 
-**සත්යාපනය:** `/api/cloud/auth` විසින් Bearer යතුරක් සෘජුවම වලංගු කර, `manage` / `admin` විෂය පථය සහිත යතුරක් සඳහා පමණක් එක් එක් සම්බන්ධතාවේ ආවරණය කළ යතුර සහ `projectId` ආපසු ලබා දෙයි; අනෙකුත් `/api/cloud/*`, `/api/evals/*`, සහ `/api/assess` මාර්ග සඳහා කළමනාකරණ සැසියක්/API යතුරක් අවශ්ය වේ. `/api/assess` POST, වෙනස්කම් හඳුනාගන්නා union විෂය පථ යෝජනා ක්රමයක් සමඟ `validateBody` භාවිත කරයි.
+**සත්යාපනය:** `/api/cloud/auth` විසින් Bearer යතුරක් සෘජුවම වලංගු කර, `manage` / `admin` විෂය පථය සහිත යතුරක් සඳහා පමණක් එක් එක් සම්බන්ධතාවේ ආවරණය කළ යතුර සහ `projectId` ආපසු ලබා දෙයි; අනෙකුත් `/api/cloud/*`, සහ `/api/assess` මාර්ග සඳහා කළමනාකරණ සැසියක්/API යතුරක් අවශ්ය වේ. `/api/assess` POST, වෙනස්කම් හඳුනාගන්නා union විෂය පථ යෝජනා ක්රමයක් සමඟ `validateBody` භාවිත කරයි.
 
 ---
 

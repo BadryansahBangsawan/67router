@@ -1442,9 +1442,8 @@ La risposta GET include `agents[]` (id, name, binary, version, installed, protoc
 
 ### Valutazioni
 
-| Endpoint     | Metodo   | Descrizione                                             |
-| ------------ | -------- | ------------------------------------------------------- |
-| `/api/evals` | GET/POST | Elenca le suite di valutazione / esegue una valutazione |
+| Endpoint | Metodo | Descrizione |
+| -------- | ------ | ----------- |
 
 ### Criteri
 
@@ -1972,12 +1971,8 @@ Restituisce la scheda pubblica dell'agente A2A (nome, descrizione, funzionalità
 | GET | `/api/cloud/models/alias` | Elenca gli alias dei modelli esposti alla sincronizzazione cloud |
 | GET | `/api/assess` | Legge le categorizzazioni dell'assessment più recente (per provider/modello) |
 | POST | `/api/assess` | Esegue un assessment — corpo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Elenca le suite di valutazione integrate + le esecuzioni più recenti |
-| POST | `/api/evals` | Avvia un'esecuzione di valutazione |
-| POST | `/api/evals/suites` | Crea una suite di valutazione personalizzata — corpo convalidato da `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Recupera una suite di valutazione personalizzata |
 
-**Autenticazione:** `/api/cloud/auth` convalida direttamente una chiave Bearer e restituisce la chiave mascherata e il `projectId` di ogni connessione solo per una chiave con ambito `manage` / `admin`; le altre route `/api/cloud/*`, `/api/evals/*` e `/api/assess` richiedono una sessione di gestione/chiave API. La richiesta POST a `/api/assess` utilizza `validateBody` con uno schema di ambito union discriminata.
+**Autenticazione:** `/api/cloud/auth` convalida direttamente una chiave Bearer e restituisce la chiave mascherata e il `projectId` di ogni connessione solo per una chiave con ambito `manage` / `admin`; le altre route `/api/cloud/*` e `/api/assess` richiedono una sessione di gestione/chiave API. La richiesta POST a `/api/assess` utilizza `validateBody` con uno schema di ambito union discriminata.
 
 ---
 

@@ -330,58 +330,6 @@ export function register_system(parent) {
       emit(data, gOpts);
     });
   tag
-    .command("get-api-evals")
-    .description("List eval suites")
-    .action(async (opts, cmd) => {
-      const gOpts = cmd.optsWithGlobals();
-      let url = "/api/evals";
-      const res = await apiFetch(url, {
-        method: "GET",
-        baseUrl: gOpts.baseUrl,
-        apiKey: gOpts.apiKey,
-      });
-      const data = res.ok ? await res.json() : await res.text();
-      emit(data, gOpts);
-    });
-  tag
-    .command("post-api-evals")
-    .description("Run evaluation")
-    .option("--body <jsonOrPath>", "JSON body or @path/to/file.json")
-    .action(async (opts, cmd) => {
-      const gOpts = cmd.optsWithGlobals();
-      let url = "/api/evals";
-      let body;
-      if (opts.body) {
-        body = opts.body.startsWith("@")
-          ? JSON.parse(readFileSync(opts.body.slice(1), "utf8"))
-          : JSON.parse(opts.body);
-      }
-      const res = await apiFetch(url, {
-        method: "POST",
-        body,
-        baseUrl: gOpts.baseUrl,
-        apiKey: gOpts.apiKey,
-      });
-      const data = res.ok ? await res.json() : await res.text();
-      emit(data, gOpts);
-    });
-  tag
-    .command("get-api-evals-suite-id-")
-    .description("Get eval suite details")
-    .requiredOption("--suite-id <suiteId>", "")
-    .action(async (opts, cmd) => {
-      const gOpts = cmd.optsWithGlobals();
-      let url = "/api/evals/{suiteId}";
-      url = url.replaceAll("{suiteId}", encodeURIComponent(opts.suiteId ?? ""));
-      const res = await apiFetch(url, {
-        method: "GET",
-        baseUrl: gOpts.baseUrl,
-        apiKey: gOpts.apiKey,
-      });
-      const data = res.ok ? await res.json() : await res.text();
-      emit(data, gOpts);
-    });
-  tag
     .command("get-api-policies")
     .description("List routing policies")
     .action(async (opts, cmd) => {

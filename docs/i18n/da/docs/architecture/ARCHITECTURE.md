@@ -251,7 +251,6 @@ Administrationsområder:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Fallback-kæder: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance-revision: `src/app/api/compliance/audit-log` (GET, med sideinddeling + strukturerede metadata)
-- Evalueringer: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politikker: `src/app/api/policies` (GET/POST)
 - Synkroniseringstokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurationspakke: `src/app/api/sync/bundle` (GET, ETag-versioneret snapshot af indstillinger/udbydere/kombinationer/nøgler)
@@ -315,7 +314,6 @@ Domænelagsmoduler:
 - Timeout for hentning: `src/shared/utils/fetchTimeout.ts`
 - Telemetri for anmodninger: `src/shared/utils/requestTelemetry.ts`
 - Compliance/revision: `src/lib/compliance/index.ts`
-- Evalueringskørsel: `src/lib/evals/evalRunner.ts`
 - Lagring af domænetilstand: `src/lib/db/domainState.ts` — SQLite-CRUD til fallback-kæder, budgetter, omkostningshistorik, lockout-tilstand og kredsløbsafbrydere
 
 OAuth-udbydermoduler (27 individuelle filer under `src/lib/oauth/providers/`):

@@ -251,7 +251,6 @@ Administravimo sritys:
 - Biudžetas: `src/app/api/usage/budget` (GET/POST)
 - Atsarginių variantų grandinės: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Atitikties auditas: `src/app/api/compliance/audit-log` (GET, su puslapiavimu ir struktūrizuotais metaduomenimis)
-- Vertinimai: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Strategijos: `src/app/api/policies` (GET/POST)
 - Sinchronizavimo prieigos raktai: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigūracijos paketas: `src/app/api/sync/bundle` (GET, pagal ETag versijuojama nustatymų, teikėjų, derinių ir raktų momentinė kopija)
@@ -315,7 +314,6 @@ Domeno sluoksnio moduliai:
 - Duomenų gavimo skirtasis laikas: `src/shared/utils/fetchTimeout.ts`
 - Užklausų telemetrija: `src/shared/utils/requestTelemetry.ts`
 - Atitiktis / auditas: `src/lib/compliance/index.ts`
-- Vertinimų vykdymo priemonė: `src/lib/evals/evalRunner.ts`
 - Domeno būsenos išlaikymas: `src/lib/db/domainState.ts` — SQLite CRUD operacijos, skirtos atsarginio parinkimo grandinėms, biudžetams, sąnaudų istorijai, blokavimo būsenai ir grandinės pertraukikliams
 
 OAuth teikėjų moduliai (27 atskiri failai kataloge `src/lib/oauth/providers/`):

@@ -251,7 +251,6 @@ flowchart LR
 - Буџет: `src/app/api/usage/budget` (GET/POST)
 - Резервни ланци (fallback chains): `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ревизија усклађености (compliance audit): `src/app/api/compliance/audit-log` (GET, са пагинацијом + структурираним метаподацима)
-- Евалуације: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Политике: `src/app/api/policies` (GET/POST)
 - Синхронизациони токени: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Пакет конфигурације: `src/app/api/sync/bundle` (GET, ETag-верзионисани снимак подешавања/провајдера/комбинација/кључева)
@@ -315,7 +314,6 @@ flowchart LR
 - Временско ограничење добављања: `src/shared/utils/fetchTimeout.ts`
 - Телеметрија захтева: `src/shared/utils/requestTelemetry.ts`
 - Усклађеност/ревизија: `src/lib/compliance/index.ts`
-- Покретач евалуација: `src/lib/evals/evalRunner.ts`
 - Перзистенција стања домена: `src/lib/db/domainState.ts` — SQLite CRUD за ланце резервног избора, буџете, историју трошкова, стање блокирања и прекидаче струјног кола
 
 Модули OAuth провајдера (27 засебних датотека у `src/lib/oauth/providers/`):

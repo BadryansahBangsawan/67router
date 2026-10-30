@@ -251,7 +251,6 @@ flowchart LR
 - ថវិកា៖ `src/app/api/usage/budget` (GET/POST)
 - ខ្សែសង្វាក់ fallback៖ `src/app/api/fallback/chains` (GET/POST/DELETE)
 - សវនកម្មអនុលោមភាព៖ `src/app/api/compliance/audit-log` (GET, ជាមួយការបែងចែកទំព័រ + metadata ដែលមានរចនាសម្ព័ន្ធ)
-- ការវាយតម្លៃ៖ `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - គោលការណ៍៖ `src/app/api/policies` (GET/POST)
 - ថូខឹនធ្វើសមកាលកម្ម៖ `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - កញ្ចប់កំណត់រចនាសម្ព័ន្ធ៖ `src/app/api/sync/bundle` (GET, រូបថតចម្លងដែលកំណត់កំណែដោយ ETag នៃការកំណត់/អ្នកផ្តល់សេវា/បន្សំ/សោ)
@@ -315,7 +314,6 @@ flowchart LR
 - ពេលកំណត់សម្រាប់ការទាញយក៖ `src/shared/utils/fetchTimeout.ts`
 - ទិន្នន័យតេឡេមេទ្រីរបស់សំណើ៖ `src/shared/utils/requestTelemetry.ts`
 - ការអនុលោម/សវនកម្ម៖ `src/lib/compliance/index.ts`
-- កម្មវិធីដំណើរការវាយតម្លៃ៖ `src/lib/evals/evalRunner.ts`
 - ការរក្សាទុកស្ថានភាពដែន៖ `src/lib/db/domainState.ts` — ប្រតិបត្តិការ SQLite CRUD សម្រាប់ខ្សែសង្វាក់បម្រុងទុក, ថវិកា, ប្រវត្តិចំណាយ, ស្ថានភាពចាក់សោ និងឧបករណ៍ផ្តាច់សៀគ្វី
 
 ម៉ូឌុលអ្នកផ្តល់សេវា OAuth (ឯកសារដាច់ដោយឡែកចំនួន 27 ក្រោម `src/lib/oauth/providers/`)៖

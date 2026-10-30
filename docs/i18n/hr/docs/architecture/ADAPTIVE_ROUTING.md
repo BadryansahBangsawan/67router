@@ -43,16 +43,15 @@ AI agent / IDE
 
 ### Što je već postojalo (pregledano, bez dupliciranja)
 
-| Koncept                                       | Postojeća implementacija                                                                                                            |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Dostupnost (možemo li slati promet?)          | Prekidač strujnog kruga (CLOSED/DEGRADED/OPEN/HALF_OPEN, pohranjen u bazi podataka), razdoblje mirovanja veze, zaključavanje modela |
-| Izvješćivanje o stanju                        | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                             |
-| Promet u sjeni                                | `open-sse/services/combo/shadowRouting.ts`                                                                                          |
-| Zaštitne mjere                                | `src/lib/guardrails/` (kuke prije/poslije)                                                                                          |
-| Točna predmemorija                            | `src/lib/semanticCache.ts` (temeljena na potpisu)                                                                                   |
-| Evaluatori / usmjeravanje vođeno evaluacijama | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                                |
-| Objašnjivost odluke o kombinaciji             | `open-sse/services/combo/decisionTrace.ts`                                                                                          |
-| Događaji nadzorne ploče u stvarnom vremenu    | `src/lib/events/eventBus.ts` (kanal obavijesti korisničkog sučelja, korisni sadržaji tipa `unknown`, povijest od 100 zapisa)        |
+| Koncept                                    | Postojeća implementacija                                                                                                            |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Dostupnost (možemo li slati promet?)       | Prekidač strujnog kruga (CLOSED/DEGRADED/OPEN/HALF_OPEN, pohranjen u bazi podataka), razdoblje mirovanja veze, zaključavanje modela |
+| Izvješćivanje o stanju                     | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                             |
+| Promet u sjeni                             | `open-sse/services/combo/shadowRouting.ts`                                                                                          |
+| Zaštitne mjere                             | `src/lib/guardrails/` (kuke prije/poslije)                                                                                          |
+| Točna predmemorija                         | `src/lib/semanticCache.ts` (temeljena na potpisu)                                                                                   |
+| Objašnjivost odluke o kombinaciji          | `open-sse/services/combo/decisionTrace.ts`                                                                                          |
+| Događaji nadzorne ploče u stvarnom vremenu | `src/lib/events/eventBus.ts` (kanal obavijesti korisničkog sučelja, korisni sadržaji tipa `unknown`, povijest od 100 zapisa)        |
 
 Sloj događaja usmjeravanja **nije** ponovna implementacija sustava `eventBus`: taj je sustav
 kanal nadzorne ploče za obavijesti u stvarnom vremenu (tipizirani _nazivi događaja_, neprozirni
@@ -270,8 +269,6 @@ pozadinsku uslugu za inteligenciju/evaluaciju, a ne kao ovisnost**. Točke integ
 - Budući `Evaluator` (deterministički, lokalni procjenjivač, HTTP, WASM) obrađivao bi
   događaje/tragove i vraćao `QualityScore` koji se prosljeđuje u istu
   putanju `getQualityScore`/faktora kvalitete.
-- Postojeće usmjeravanje vođeno evaluacijom (`open-sse/services/evalRouting.ts`) već
-  mijenja redoslijed ciljeva kombinacije prema stopama prolaznosti iz `eval_runs` kada je omogućeno.
 
 Nijedna se evaluacija ne izvršava sinkrono na putanji zahtjeva, a pristupnik radi
 u potpunosti i bez evaluatora.

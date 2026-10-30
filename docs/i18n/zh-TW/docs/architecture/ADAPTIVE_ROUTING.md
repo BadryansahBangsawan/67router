@@ -47,7 +47,6 @@ AI 代理程式／IDE
 | 影子流量                 | `open-sse/services/combo/shadowRouting.ts`                                   |
 | 防護機制                 | `src/lib/guardrails/`（前置／後置掛鉤）                                      |
 | 精確快取                 | `src/lib/semanticCache.ts`（以簽章為基礎）                                   |
-| 評估器／評估驅動路由     | `src/lib/evals/`、`open-sse/services/evalRouting.ts`                         |
 | 組合決策可解釋性         | `open-sse/services/combo/decisionTrace.ts`                                   |
 | 儀表板即時事件           | `src/lib/events/eventBus.ts`（UI 通知通道、`unknown` 酬載、100 筆歷史記錄）  |
 
@@ -256,8 +255,6 @@ OmniRoute 將 Future AGI（或任何評估器）視為**潛在的智慧／評估
 - `MemoryRoutingEventStore` 與品質快照可向評估器提供原始決策串流。
 - 未來的 `Evaluator`（確定性、本機評審、HTTP、WASM）可取用事件／追蹤，
   並傳回 `QualityScore`，以饋入同一條 `getQualityScore`／品質因子路徑。
-- 現有的評估驅動路由（`open-sse/services/evalRouting.ts`）啟用後，已會依據
-  `eval_runs` 通過率重新排序組合目標。
 
 請求路徑上不會同步執行任何評估；即使沒有評估器，閘道仍可完整運作。
 

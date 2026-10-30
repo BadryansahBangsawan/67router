@@ -48,7 +48,6 @@ AI Agent / IDE
 | Shadow traffic                          | `open-sse/services/combo/shadowRouting.ts`                                                             |
 | Guardrails                              | `src/lib/guardrails/` (pre/post hooks)                                                                 |
 | Exact cache                             | `src/lib/semanticCache.ts` (signature-based)                                                           |
-| Evaluators / eval-driven routing        | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                   |
 | Combo decision explainability           | `open-sse/services/combo/decisionTrace.ts`                                                             |
 | Dashboard real-time events              | `src/lib/events/eventBus.ts` (UI notification channel, `unknown` payloads, 100-entry history)          |
 
@@ -268,8 +267,6 @@ OmniRoute, Future AGI-യെ (അല്ലെങ്കിൽ ഏതൊരു ഇ
   തീരുമാന സ്ട്രീം നൽകുന്നു.
 - ഭാവിയിലെ ഒരു `Evaluator` (ഡിറ്റർമിനിസ്റ്റിക്, ലോക്കൽ ജഡ്ജ്, HTTP, WASM) ഇവന്റുകൾ/ട്രേസുകൾ ഉപയോഗിക്കുകയും,
   അതേ `getQualityScore`/ക്വാളിറ്റി-ഫാക്ടർ പാത്തിലേക്ക് നൽകപ്പെടുന്ന ഒരു `QualityScore` തിരികെ നൽകുകയും ചെയ്യും.
-- നിലവിലുള്ള ഇവാൽ-ഡ്രിവൻ റൂട്ടിംഗ് (`open-sse/services/evalRouting.ts`) പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുമ്പോൾ
-  `eval_runs` പാസ്-റേറ്റുകൾ പ്രകാരം കോംബോ ടാർഗെറ്റുകളെ ഇതിനകം തന്നെ പുനഃക്രമീകരിക്കുന്നു.
 
 റിക്വസ്റ്റ് പാത്തിൽ ഒരു ഇവാലുവേഷനും സിങ്ക്രണസായി പ്രവർത്തിക്കുന്നില്ല; ഇവാലുവേറ്റർ ഇല്ലാതെയും ഗേറ്റ്വേ
 പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.

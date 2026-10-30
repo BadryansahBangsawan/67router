@@ -42,16 +42,15 @@ AI-agent/IDE
 
 ### Det som redan fanns (granskat, inte duplicerat)
 
-| Koncept                                 | Befintlig implementation                                                                          |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Tillgänglighet (kan vi skicka trafik?)  | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, lagrad i DB), anslutnings-cooldown, modellspärr  |
-| Hälsorapportering                       | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                           |
-| Skuggtrafik                             | `open-sse/services/combo/shadowRouting.ts`                                                        |
-| Skyddsräcken                            | `src/lib/guardrails/` (för-/efter-hookar)                                                         |
-| Exakt cache                             | `src/lib/semanticCache.ts` (signaturbaserad)                                                      |
-| Utvärderare/utvärderingsdriven routning | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                              |
-| Förklarbarhet för kombinationsbeslut    | `open-sse/services/combo/decisionTrace.ts`                                                        |
-| Realtidshändelser på kontrollpanelen    | `src/lib/events/eventBus.ts` (UI-aviseringskanal, `unknown`-nyttolaster, historik med 100 poster) |
+| Koncept                                | Befintlig implementation                                                                          |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Tillgänglighet (kan vi skicka trafik?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, lagrad i DB), anslutnings-cooldown, modellspärr  |
+| Hälsorapportering                      | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                           |
+| Skuggtrafik                            | `open-sse/services/combo/shadowRouting.ts`                                                        |
+| Skyddsräcken                           | `src/lib/guardrails/` (för-/efter-hookar)                                                         |
+| Exakt cache                            | `src/lib/semanticCache.ts` (signaturbaserad)                                                      |
+| Förklarbarhet för kombinationsbeslut   | `open-sse/services/combo/decisionTrace.ts`                                                        |
+| Realtidshändelser på kontrollpanelen   | `src/lib/events/eventBus.ts` (UI-aviseringskanal, `unknown`-nyttolaster, historik med 100 poster) |
 
 Lagret för routningshändelser är **inte** en återimplementering av `eventBus`: den bussen är
 kontrollpanelens kanal för realtidsaviseringar (typade _händelsenamn_, ogenomskinliga
@@ -265,8 +264,6 @@ intelligens-/utvärderingsbackend, inte ett beroende**. Integreringspunkterna ä
 - En framtida `Evaluator` (deterministisk, lokal bedömare, HTTP, WASM) skulle konsumera
   händelser/spår och returnera en `QualityScore` som matas in i samma
   `getQualityScore`-/kvalitetsfaktorväg.
-- Befintlig utvärderingsdriven routning (`open-sse/services/evalRouting.ts`)
-  ordnar redan om kombinationsmålen efter godkännandefrekvenser i `eval_runs` när den är aktiverad.
 
 Ingen utvärdering körs synkront i sökvägen för begäranden, och gatewayen fungerar
 fullständigt utan någon utvärderare.

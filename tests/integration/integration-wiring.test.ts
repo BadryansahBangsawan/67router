@@ -156,8 +156,6 @@ describe("API Routes — existence check", () => {
     "src/app/api/usage/quota/route.ts",
     "src/app/api/fallback/chains/route.ts",
     "src/app/api/compliance/audit-log/route.ts",
-    "src/app/api/evals/route.ts",
-    "src/app/api/evals/[suiteId]/route.ts",
     "src/app/api/policies/route.ts",
   ];
 
@@ -191,14 +189,6 @@ describe("API Routes — export HTTP methods", () => {
 
   it("/api/compliance/audit-log should export GET", () => {
     assertRouteMethods("src/app/api/compliance/audit-log/route.ts", ["GET"]);
-  });
-
-  it("/api/evals should export GET and POST", () => {
-    assertRouteMethods("src/app/api/evals/route.ts", ["GET", "POST"]);
-  });
-
-  it("/api/evals/[suiteId] should export GET", () => {
-    assertRouteMethods("src/app/api/evals/[suiteId]/route.ts", ["GET"]);
   });
 
   it("/api/policies should export GET and POST", () => {

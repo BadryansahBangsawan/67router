@@ -251,7 +251,6 @@ Haldusdomeenid:
 - Eelarve: `src/app/api/usage/budget` (GET/POST)
 - Varuahelad (fallback chains): `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Vastavuse auditeerimine: `src/app/api/compliance/audit-log` (GET, koos lehestamise ja struktureeritud metaandmetega)
-- Hindamised (evals): `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Poliitikad: `src/app/api/policies` (GET/POST)
 - Sünkroonimise märgid (tokens): `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiguratsioonipakett: `src/app/api/sync/bundle` (GET, ETag-versiooniga seadete/pakkujate/kombode/võtmete hetktõmmis)
@@ -315,7 +314,6 @@ Domeenikihi moodulid:
 - Päringu ajalõpp: `src/shared/utils/fetchTimeout.ts`
 - Päringu telemeetria: `src/shared/utils/requestTelemetry.ts`
 - Vastavus / audit: `src/lib/compliance/index.ts`
-- Hindamiste käitaja: `src/lib/evals/evalRunner.ts`
 - Domeenioleku püsisalvestus: `src/lib/db/domainState.ts` — SQLite CRUD varuahelate, eelarvete, kuluajaloo, lukustusoleku ja kaitselülitite jaoks
 
 OAuth-pakkujate moodulid (27 eraldi faili kataloogis `src/lib/oauth/providers/`):

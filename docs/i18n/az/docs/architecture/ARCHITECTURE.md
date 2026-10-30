@@ -251,7 +251,6 @@ Mühüm uyğunluq marşrutları:
 - Büdcə: `src/app/api/usage/budget` (GET/POST)
 - Ehtiyat keçid zəncirləri: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Uyğunluq auditi: `src/app/api/compliance/audit-log` (GET, səhifələmə + strukturlaşdırılmış metadata ilə)
-- Qiymətləndirmələr: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Siyasətlər: `src/app/api/policies` (GET/POST)
 - Sinxronizasiya tokenləri: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiqurasiya paketi: `src/app/api/sync/bundle` (GET, parametrlərin/provayderlərin/kombinasiyaların/açarların ETag versiyalı anlıq görüntüsü)
@@ -315,7 +314,6 @@ Domen qatı modulları:
 - Sorğunun vaxt aşımı: `src/shared/utils/fetchTimeout.ts`
 - Sorğu telemetriyası: `src/shared/utils/requestTelemetry.ts`
 - Uyğunluq/audit: `src/lib/compliance/index.ts`
-- Qiymətləndirmə icraçısı: `src/lib/evals/evalRunner.ts`
 - Domen vəziyyətinin daimi saxlanması: `src/lib/db/domainState.ts` — ehtiyat keçid zəncirləri, büdcələr, xərc tarixçəsi, bloklama vəziyyəti və dövrə açarları üçün SQLite CRUD əməliyyatları
 
 OAuth provayder modulları (`src/lib/oauth/providers/` altında 27 ayrı fayl):

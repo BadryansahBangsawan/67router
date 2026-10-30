@@ -148,7 +148,7 @@ Use `data[].id` as `model` field in requests. Combos appear with `owned_by:"comb
 | CLI admin & lifecycle                  | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-serve/SKILL.md       |
 | CLI providers & keys                   | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-providers/SKILL.md   |
 | CLI cloud agents (`omniroute cloud …`) | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-backup-sync/SKILL.md |
-| CLI evals & benchmarks                 | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-eval/SKILL.md        |
+| CLI routing simulation                 | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-eval/SKILL.md        |
 
 ## Errors
 

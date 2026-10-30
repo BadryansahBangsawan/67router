@@ -260,7 +260,6 @@ flowchart LR
 - 预算：`src/app/api/usage/budget` (GET/POST)
 - 容灾链：`src/app/api/fallback/chains` (GET/POST/DELETE)
 - 合规审计：`src/app/api/compliance/audit-log` (GET, 含分页 + 结构化元数据)
-- 评估：`src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - 策略：`src/app/api/policies` (GET/POST)
 - 同步 Token：`src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - 配置包：`src/app/api/sync/bundle` (GET, ETag 版本控制的设置/服务商/Combo/Key 快照)
@@ -324,7 +323,6 @@ flowchart LR
 - 请求超时：`src/shared/utils/fetchTimeout.ts`
 - 请求遥测：`src/shared/utils/requestTelemetry.ts`
 - 合规/审计：`src/lib/compliance/index.ts`
-- 评估运行器：`src/lib/evals/evalRunner.ts`
 - 领域状态持久化：`src/lib/db/domainState.ts` — 针对回退链、预算、成本历史、锁定状态和熔断器的 SQLite CRUD
 
 OAuth 提供者模块（`src/lib/oauth/providers/` 下的 27 个独立文件）：

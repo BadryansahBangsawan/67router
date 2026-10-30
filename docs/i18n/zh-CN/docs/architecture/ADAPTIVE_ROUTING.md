@@ -41,7 +41,6 @@ AI Agent / IDE
 | 影子流量                 | `open-sse/services/combo/shadowRouting.ts`                                   |
 | 防护机制                 | `src/lib/guardrails/`（前置/后置钩子）                                       |
 | 精确缓存                 | `src/lib/semanticCache.ts`（基于签名）                                       |
-| 评估器 / 评估驱动路由    | `src/lib/evals/`、`open-sse/services/evalRouting.ts`                         |
 | 组合决策可解释性         | `open-sse/services/combo/decisionTrace.ts`                                   |
 | 仪表板实时事件           | `src/lib/events/eventBus.ts`（UI 通知通道、`unknown` 载荷、100 条历史记录）  |
 
@@ -242,8 +241,6 @@ OmniRoute 将 Future AGI（或任何评估器）视为**潜在的智能/评估�
 - 未来的 `Evaluator`（确定性评估器、本地判定器、HTTP、WASM）将消费
   事件/追踪并返回 `QualityScore`，该分数会进入相同的
   `getQualityScore`/质量因子路径。
-- 现有的评估驱动路由（`open-sse/services/evalRouting.ts`）在启用时已根据
-  `eval_runs` 通过率对组合目标重新排序。
 
 请求路径上不会同步运行任何评估，并且在没有评估器的情况下，网关仍可完整运行。
 

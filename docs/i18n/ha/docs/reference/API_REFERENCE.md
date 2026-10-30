@@ -1437,9 +1437,8 @@ Amsar GET ta haɗa da `agents[]` (id, name, binary, version, installed, protocol
 
 ### Kimantawa
 
-| Endpoint     | Hanya    | Bayani                                      |
-| ------------ | -------- | ------------------------------------------- |
-| `/api/evals` | GET/POST | Jera tarin kimantawa / gudanar da kimantawa |
+| Endpoint | Hanya | Bayani |
+| -------- | ----- | ------ |
 
 ### Manufofi
 
@@ -1964,12 +1963,8 @@ Yana dawo da katin wakilin A2A na jama'a (suna, bayani, iyawa, kundin ƙwarewa, 
 | GET | `/api/cloud/models/alias` | Jera laƙaban samfura kamar yadda ake nuna su ga daidaitawar gajimare |
 | GET | `/api/assess` | Karanta sabbin rabe-raben tantancewa (na kowane mai samarwa/samfuri) |
 | POST | `/api/assess` | Gudanar da tantancewa — jiki: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Jera rukunin eval da ke ciki tun farko + ayyukan da aka gudanar kwanan nan |
-| POST | `/api/evals` | Fara gudanar da eval |
-| POST | `/api/evals/suites` | Ƙirƙiri rukunin eval na musamman — ana tantance jiki ta `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Ɗauko rukunin eval na musamman |
 
-**Tantancewa:** `/api/cloud/auth` yana tantance maɓallin Bearer kai-tsaye sannan ya dawo da maɓallin da aka ɓoye wani ɓangarensa da `projectId` na kowane haɗi kawai ga maɓalli mai ikon `manage` / `admin`; sauran hanyoyin `/api/cloud/*`, `/api/evals/*`, da `/api/assess` suna buƙatar zaman gudanarwa/maɓallin API. POST na `/api/assess` yana amfani da `validateBody` tare da tsarin scope na discriminated-union.
+**Tantancewa:** `/api/cloud/auth` yana tantance maɓallin Bearer kai-tsaye sannan ya dawo da maɓallin da aka ɓoye wani ɓangarensa da `projectId` na kowane haɗi kawai ga maɓalli mai ikon `manage` / `admin`; sauran hanyoyin `/api/cloud/*`, da `/api/assess` suna buƙatar zaman gudanarwa/maɓallin API. POST na `/api/assess` yana amfani da `validateBody` tare da tsarin scope na discriminated-union.
 
 ---
 

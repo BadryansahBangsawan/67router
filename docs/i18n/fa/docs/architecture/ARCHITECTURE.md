@@ -251,7 +251,6 @@ flowchart LR
 - بودجه: `src/app/api/usage/budget` (GET/POST)
 - زنجیرههای جایگزین: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - ممیزی انطباق: `src/app/api/compliance/audit-log` (GET، همراه با صفحهبندی + فراداده ساختیافته)
-- ارزیابیها: `src/app/api/evals` (GET/POST)، `src/app/api/evals/[suiteId]` (GET)
 - سیاستها: `src/app/api/policies` (GET/POST)
 - توکنهای همگامسازی: `src/app/api/sync/tokens` (GET/POST)، `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - بسته پیکربندی: `src/app/api/sync/bundle` (GET، اسنپشات نسخهبندیشده با ETag از تنظیمات/ارائهدهندگان/ترکیبها/کلیدها)
@@ -315,7 +314,6 @@ flowchart LR
 - مهلت زمانی واکشی: `src/shared/utils/fetchTimeout.ts`
 - تلهمتری درخواست: `src/shared/utils/requestTelemetry.ts`
 - انطباق/ممیزی: `src/lib/compliance/index.ts`
-- اجراکنندهٔ ارزیابی: `src/lib/evals/evalRunner.ts`
 - ماندگارسازی وضعیت دامنه: `src/lib/db/domainState.ts` — عملیات CRUD در SQLite برای زنجیرههای جایگزینی، بودجهها، تاریخچهٔ هزینه، وضعیت قفلسازی و قطعکنندههای مدار
 
 ماژولهای ارائهدهندهٔ OAuth (27 فایل مجزا در `src/lib/oauth/providers/`):

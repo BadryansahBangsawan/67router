@@ -746,51 +746,6 @@
       "description": "Uzskaitīt avota failus, ko radījis uzdevums"
     }
   },
-  "eval": {
-    "description": "Pārvaldīt vērtēšanas komplektus un palaišanas",
-    "suites": {
-      "description": "Pārvaldīt vērtēšanas komplektus",
-      "list": {
-        "description": "Uzskaitīt vērtēšanas komplektus"
-      },
-      "get": {
-        "description": "Iegūt vērtēšanas komplekta detaļas pēc ID"
-      },
-      "create": {
-        "description": "Izveidot vērtēšanas komplektu no JSON faila",
-        "file": "Ceļš uz komplekta definīcijas JSON failu"
-      }
-    },
-    "run": {
-      "description": "Sākt vērtēšanas palaišanu komplektam",
-      "model": "Vērtējamais modeļa ID (noklusējums: auto)",
-      "combo": "Piespiest konkrētu kombināciju pēc nosaukuma",
-      "concurrency": "Vienlaicīgo paraugu skaits (noklusējums: 4)",
-      "tag": "Tagot šo palaišanu vēlākai filtrēšanai",
-      "watch": "Vērot palaišanas progresu līdz pabeigšanai"
-    },
-    "list": {
-      "description": "Uzskaitīt vērtēšanas palaišanas",
-      "suite": "Filtrēt pēc komplekta ID",
-      "status": "Filtrēt pēc statusa",
-      "since": "Atgriezt palaišanas kopš šī laika zīmogā",
-      "limit": "Maksimālie rezultāti (noklusējums: 50)"
-    },
-    "get": {
-      "description": "Iegūt vērtēšanas palaišanas detaļas pēc ID"
-    },
-    "results": {
-      "description": "Rādīt paraugu rezultātus vērtēšanas palaišanai",
-      "failed": "Rādīt tikai neizdevušos paraugus"
-    },
-    "cancel": {
-      "description": "Atcelt darbojošos vērtēšanu",
-      "yes": "Izlaidiet apstiprinājuma pieprasījumu"
-    },
-    "scorecard": {
-      "description": "Rādīt rezultātu karti pabeigtai vērtēšanas palaišanai"
-    }
-  },
   "program": {
     "description": "OmniRoute — Viedais AI maršrutētājs ar automātisko rezerves režīmu",
     "version": "Drukāt versiju un iziet",

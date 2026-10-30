@@ -251,7 +251,6 @@ Domínios de gerenciamento:
 - Orçamento: `src/app/api/usage/budget` (GET/POST)
 - Cadeias de fallback: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Auditoria de conformidade: `src/app/api/compliance/audit-log` (GET, com paginação + metadados estruturados)
-- Avaliações: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Políticas: `src/app/api/policies` (GET/POST)
 - Tokens de sincronização: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Pacote de configuração: `src/app/api/sync/bundle` (GET, snapshot de configurações/provedores/combos/chaves versionado por ETag)
@@ -315,7 +314,6 @@ Módulos da camada de domínio:
 - Tempo limite de busca: `src/shared/utils/fetchTimeout.ts`
 - Telemetria de requisições: `src/shared/utils/requestTelemetry.ts`
 - Conformidade/auditoria: `src/lib/compliance/index.ts`
-- Executor de avaliações: `src/lib/evals/evalRunner.ts`
 - Persistência do estado do domínio: `src/lib/db/domainState.ts` — CRUD SQLite para cadeias de fallback, orçamentos, histórico de custos, estado de bloqueio e disjuntores
 
 Módulos de provedores OAuth (27 arquivos individuais em `src/lib/oauth/providers/`):

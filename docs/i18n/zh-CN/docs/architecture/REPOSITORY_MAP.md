@@ -183,7 +183,6 @@ src/
 | `display/`                               | UI 格式化辅助工具（成本、延迟等）                                                                                                                                                                                                                                                                           |
 | `embeddings/`                            | 嵌入服务辅助工具                                                                                                                                                                                                                                                                                            |
 | `env/`                                   | 环境变量解析与验证                                                                                                                                                                                                                                                                                          |
-| `evals/`                                 | 评测框架（套件、运行器、运行时）— 参见 `docs/frameworks/EVALS.md`                                                                                                                                                                                                                                           |
 | `guardrails/`                            | PII 脱敏器、提示词注入防护、视觉桥接 — 参见 `docs/security/GUARDRAILS.md`                                                                                                                                                                                                                                   |
 | `jobs/`                                  | 后台任务（类似 cron）                                                                                                                                                                                                                                                                                       |
 | `memory/`                                | 对话记忆（SQLite FTS5 + sqlite-vec 混合 RRF + Qdrant 第二层）— 参见 `docs/frameworks/MEMORY.md`                                                                                                                                                                                                             |
@@ -404,7 +403,6 @@ open-sse/
 | `SKILLS.md`                                  | 技能框架（内置 + 市场 + SkillsSH + 沙箱）                    |
 | `RADAR.md`                                   | Radar 免费模型目录覆盖层（`RADAR_ENABLED`，默认关闭）        |
 | `MEMORY.md`                                  | 记忆系统（SQLite FTS5 + Qdrant）                             |
-| `EVALS.md`                                   | 评估框架（套件、运行、评分标准）                             |
 | `GUARDRAILS.md`                              | PII 屏蔽器、提示词注入、视觉桥接                             |
 | `COMPLIANCE.md`                              | 审计日志、保留策略、noLog 退出机制                           |
 | `WEBHOOKS.md`                                | 使用 HMAC 签名的 Webhook 交付                                |

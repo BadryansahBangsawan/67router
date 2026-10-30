@@ -92,7 +92,6 @@ Podsystemy wtykowe udostępniane klientom, agentom i operatorom.
 - [SKILLS.md](frameworks/SKILLS.md) — framework Skills (piaskownicowe rozszerzenie).
 - [MEMORY.md](frameworks/MEMORY.md) — trwała pamięć (FTS5 + Qdrant).
 - [WEBHOOKS.md](frameworks/WEBHOOKS.md) — zdarzenia webhook i dyspozycja.
-- [EVALS.md](frameworks/EVALS.md) — zestawy ewaluacji.
 - [GAMIFICATION.md](frameworks/GAMIFICATION.md) — system grywalizacji i rankingów.
 - [EMBEDDED-SERVICES.md](frameworks/EMBEDDED-SERVICES.md) — wbudowane usługi sidecar (9Router, CLIProxyAPI).
 - [NOTION_CONTEXT.md](frameworks/NOTION_CONTEXT.md) — źródło kontekstu Notion.

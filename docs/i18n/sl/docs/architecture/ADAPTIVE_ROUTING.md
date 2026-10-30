@@ -42,16 +42,15 @@ Agent UI / IDE
 
 ### Kar je že obstajalo (pregledano, brez podvajanja)
 
-| Koncept                                       | Obstoječa implementacija                                                                                               |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Razpoložljivost (ali lahko pošljemo promet?)  | Prekinjevalnik tokokroga (CLOSED/DEGRADED/OPEN/HALF_OPEN, shranjen v DB), ohlajanje povezave, zaklep modela            |
-| Poročanje o zdravju                           | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                |
-| Senčni promet                                 | `open-sse/services/combo/shadowRouting.ts`                                                                             |
-| Varovala                                      | `src/lib/guardrails/` (kavlji pred/po izvedbi)                                                                         |
-| Natančni predpomnilnik                        | `src/lib/semanticCache.ts` (na podlagi podpisa)                                                                        |
-| Ocenjevalniki/usmerjanje na podlagi evalvacij | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                   |
-| Razložljivost odločitev combo                 | `open-sse/services/combo/decisionTrace.ts`                                                                             |
-| Dogodki nadzorne plošče v realnem času        | `src/lib/events/eventBus.ts` (kanal obvestil uporabniškega vmesnika, koristni tovori `unknown`, zgodovina s 100 vnosi) |
+| Koncept                                      | Obstoječa implementacija                                                                                               |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Razpoložljivost (ali lahko pošljemo promet?) | Prekinjevalnik tokokroga (CLOSED/DEGRADED/OPEN/HALF_OPEN, shranjen v DB), ohlajanje povezave, zaklep modela            |
+| Poročanje o zdravju                          | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                |
+| Senčni promet                                | `open-sse/services/combo/shadowRouting.ts`                                                                             |
+| Varovala                                     | `src/lib/guardrails/` (kavlji pred/po izvedbi)                                                                         |
+| Natančni predpomnilnik                       | `src/lib/semanticCache.ts` (na podlagi podpisa)                                                                        |
+| Razložljivost odločitev combo                | `open-sse/services/combo/decisionTrace.ts`                                                                             |
+| Dogodki nadzorne plošče v realnem času       | `src/lib/events/eventBus.ts` (kanal obvestil uporabniškega vmesnika, koristni tovori `unknown`, zgodovina s 100 vnosi) |
 
 Plast dogodkov usmerjanja **ni** ponovna implementacija `eventBus`: to vodilo je
 kanal nadzorne plošče za obvestila v realnem času (tipizirana _imena dogodkov_,
@@ -265,8 +264,6 @@ zaledje za inteligenco/ocenjevanje, ne kot odvisnost**. Integracijske točke:
 - Prihodnji `Evaluator` (determinističen, lokalni ocenjevalnik, HTTP, WASM) bi
   uporabljal dogodke/sledi in vračal `QualityScore`, ki se posreduje v isto pot
   `getQualityScore`/faktorja kakovosti.
-- Obstoječe usmerjanje na podlagi evalvacij (`open-sse/services/evalRouting.ts`)
-  že prerazporeja cilje kombinacij glede na stopnje uspešnosti `eval_runs`, kadar
   je omogočeno.
 
 Nobena evalvacija se ne izvaja sinhrono na poti zahteve, prehod pa v celoti

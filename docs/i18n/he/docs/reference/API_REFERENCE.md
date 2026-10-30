@@ -1437,9 +1437,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### הערכות
 
-| נקודת קצה    | שיטה     | תיאור                          |
-| ------------ | -------- | ------------------------------ |
-| `/api/evals` | GET/POST | הצגת חבילות הערכה / הרצת הערכה |
+| נקודת קצה | שיטה | תיאור |
+| --------- | ---- | ----- |
 
 ### מדיניות
 
@@ -1967,12 +1966,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | הצגת כינויי מודלים כפי שהם נחשפים לסנכרון ענן |
 | GET | `/api/assess` | קריאת סיווגי ההערכה האחרונים (לפי ספק/מודל) |
 | POST | `/api/assess` | הרצת הערכה — גוף: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | הצגת חבילות ההערכה המובנות + ההרצות האחרונות |
-| POST | `/api/evals` | הפעלת הרצת הערכה |
-| POST | `/api/evals/suites` | יצירת חבילת הערכה מותאמת אישית — הגוף מאומת באמצעות `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | אחזור חבילת הערכה מותאמת אישית |
 
-**אימות:** `/api/cloud/auth` מאמת מפתח Bearer ישירות ומחזיר את המפתח המוסווה ואת `projectId` של כל חיבור רק עבור מפתח בעל ההרשאה `manage` / `admin`; יתר הנתיבים `/api/cloud/*`,‏ `/api/evals/*` ו-`/api/assess` דורשים הפעלת ניהול או מפתח API ניהולי. בקשת POST אל `/api/assess` משתמשת ב-`validateBody` עם סכמת תחום מסוג איחוד מובחן.
+**אימות:** `/api/cloud/auth` מאמת מפתח Bearer ישירות ומחזיר את המפתח המוסווה ואת `projectId` של כל חיבור רק עבור מפתח בעל ההרשאה `manage` / `admin`; יתר הנתיבים `/api/cloud/*`,‏ ו-`/api/assess` דורשים הפעלת ניהול או מפתח API ניהולי. בקשת POST אל `/api/assess` משתמשת ב-`validateBody` עם סכמת תחום מסוג איחוד מובחן.
 
 ---
 

@@ -1374,9 +1374,8 @@ GET 응답에는 `agents[]`(id, name, binary, version, installed, protocol, isCu
 
 ### 평가
 
-| 엔드포인트   | 메서드   | 설명                       |
-| ------------ | -------- | -------------------------- |
-| `/api/evals` | GET/POST | 평가 스위트 나열/평가 실행 |
+| 엔드포인트 | 메서드 | 설명 |
+| ---------- | ------ | ---- |
 
 ### 정책
 
@@ -1894,12 +1893,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | 클라우드 동기화에 노출되는 모델 별칭을 나열합니다 |
 | GET | `/api/assess` | 최신 평가 분류(제공자/모델별)를 읽습니다 |
 | POST | `/api/assess` | 평가 실행 — 본문: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | 기본 제공 평가 스위트와 가장 최근 실행을 나열합니다 |
-| POST | `/api/evals` | 평가 실행을 트리거합니다 |
-| POST | `/api/evals/suites` | 사용자 지정 평가 스위트 생성 — 본문은 `evalSuiteSaveSchema`로 검증됩니다 |
-| GET | `/api/evals/suites/[id]` | 사용자 지정 평가 스위트를 조회합니다 |
 
-**인증:** `/api/cloud/auth`는 Bearer 키를 직접 검증하며, `manage` / `admin` 범위가 있는 키에만 각 연결의 마스킹된 키와 `projectId`를 반환합니다. 그 외 `/api/cloud/*`, `/api/evals/*`, `/api/assess` 경로에는 관리 세션/API 키가 필요합니다. `/api/assess` POST는 판별된 유니온 범위 스키마와 함께 `validateBody`를 사용합니다.
+**인증:** `/api/cloud/auth`는 Bearer 키를 직접 검증하며, `manage` / `admin` 범위가 있는 키에만 각 연결의 마스킹된 키와 `projectId`를 반환합니다. 그 외 `/api/cloud/*`, `/api/assess` 경로에는 관리 세션/API 키가 필요합니다. `/api/assess` POST는 판별된 유니온 범위 스키마와 함께 `validateBody`를 사용합니다.
 
 ---
 

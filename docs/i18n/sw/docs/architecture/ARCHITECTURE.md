@@ -251,7 +251,6 @@ Vikoa vya usimamizi:
 - Bajeti: `src/app/api/usage/budget` (GET/POST)
 - Minyororo ya mbadala: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ukaguzi wa utiifu: `src/app/api/compliance/audit-log` (GET, pamoja na upangaji wa kurasa + metadata iliyopangwa)
-- Tathmini: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Sera: `src/app/api/policies` (GET/POST)
 - Tokeni za usawazishaji: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Kifurushi cha usanidi: `src/app/api/sync/bundle` (GET, picha-tuli yenye toleo la ETag ya mipangilio/watoa huduma/michanganyiko/funguo)
@@ -315,7 +314,6 @@ Moduli za safu ya kikoa:
 - Muda wa kusubiri wa uchotaji: `src/shared/utils/fetchTimeout.ts`
 - Telemetria ya maombi: `src/shared/utils/requestTelemetry.ts`
 - Uzingatiaji/ukaguzi: `src/lib/compliance/index.ts`
-- Kiendesha tathmini: `src/lib/evals/evalRunner.ts`
 - Udumishaji wa hali ya kikoa: `src/lib/db/domainState.ts` — SQLite CRUD kwa misururu ya kutumia mbadala, bajeti, historia ya gharama, hali ya kufungia na vivunja mzunguko
 
 Moduli za watoa huduma wa OAuth (faili 27 mahususi chini ya `src/lib/oauth/providers/`):

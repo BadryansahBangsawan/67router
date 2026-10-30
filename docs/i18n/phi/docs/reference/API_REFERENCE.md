@@ -1437,9 +1437,8 @@ Kasama sa tugon ng GET ang `agents[]` (id, name, binary, version, installed, pro
 
 ### Mga Eval
 
-| Endpoint     | Paraan   | Paglalarawan                                        |
-| ------------ | -------- | --------------------------------------------------- |
-| `/api/evals` | GET/POST | Ilista ang mga eval suite / magsagawa ng evaluation |
+| Endpoint | Paraan | Paglalarawan |
+| -------- | ------ | ------------ |
 
 ### Mga Patakaran
 
@@ -1962,12 +1961,8 @@ Ibinabalik ang pampublikong A2A agent card (pangalan, paglalarawan, mga kakayaha
 | GET | `/api/cloud/models/alias` | Ilista ang mga model alias gaya ng inilalantad sa cloud sync |
 | GET | `/api/assess` | Basahin ang mga pinakabagong pagkakategorya ng assessment (bawat provider/model) |
 | POST | `/api/assess` | Magpatakbo ng assessment — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Ilista ang mga built-in na eval suite + mga pinakabagong run |
-| POST | `/api/evals` | Mag-trigger ng isang eval run |
-| POST | `/api/evals/suites` | Gumawa ng custom na eval suite — bina-validate ang body ng `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Kunin ang isang custom na eval suite |
 
-**Auth:** direktang bina-validate ng `/api/cloud/auth` ang isang Bearer key at ibinabalik lamang ang naka-mask na key at `projectId` ng bawat koneksiyon para sa key na may saklaw na `manage` / `admin`; nangangailangan ang iba pang `/api/cloud/*`, `/api/evals/*`, at `/api/assess` route ng management session/API key. Ginagamit ng `/api/assess` POST ang `validateBody` na may discriminated-union scope schema.
+**Auth:** direktang bina-validate ng `/api/cloud/auth` ang isang Bearer key at ibinabalik lamang ang naka-mask na key at `projectId` ng bawat koneksiyon para sa key na may saklaw na `manage` / `admin`; nangangailangan ang iba pang `/api/cloud/*`, at `/api/assess` route ng management session/API key. Ginagamit ng `/api/assess` POST ang `validateBody` na may discriminated-union scope schema.
 
 ---
 

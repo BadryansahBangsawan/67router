@@ -251,7 +251,6 @@ Domini tal-ġestjoni:
 - Bġit: `src/app/api/usage/budget` (GET/POST)
 - Ħrieġ tal-ħabi: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Reviżjoni tal-konformità: `src/app/api/compliance/audit-log` (GET, b'paginazzjoni + metadata strutturata)
-- Evalwazzjonijiet: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politiki: `src/app/api/policies` (GET/POST)
 - Tokeni ta' sinkronizzazzjoni: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Pacett tal-konfigurazzjoni: `src/app/api/sync/bundle` (GET, stampa versjonata b'ETag tal-issettjiet/fornituri/kombinazzjonijiet/ċavvieri)
@@ -315,7 +314,6 @@ Moduli tas-saff tad-dominju:
 - Limitu ta' ħin tal-fetch: `src/shared/utils/fetchTimeout.ts`
 - Telemetrija tat-talba: `src/shared/utils/requestTelemetry.ts`
 - Konformità/awditjar: `src/lib/compliance/index.ts`
-- Eżekutur tal-evalwazzjonijiet: `src/lib/evals/evalRunner.ts`
 - Persistenza tal-istat tad-dominju: `src/lib/db/domainState.ts` — CRUD ta' SQLite għal ktajjen ta' riżerva, baġits, storja tal-ispejjeż, stat tal-imblukkar, u salvaviti
 
 Moduli tal-fornituri OAuth (27 fajl individwali taħt `src/lib/oauth/providers/`):

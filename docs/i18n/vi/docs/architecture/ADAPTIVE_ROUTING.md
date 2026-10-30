@@ -44,16 +44,15 @@ Tác tử AI / IDE
 
 ### Những gì đã có sẵn (đã kiểm tra, không triển khai trùng lặp)
 
-| Khái niệm                               | Phần triển khai hiện có                                                                                  |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Tính khả dụng (có thể gửi lưu lượng?)   | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, được lưu trong DB), thời gian chờ kết nối, khóa mô hình |
-| Báo cáo tình trạng                      | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                  |
-| Lưu lượng bóng                          | `open-sse/services/combo/shadowRouting.ts`                                                               |
-| Rào chắn                                | `src/lib/guardrails/` (hook trước/sau)                                                                   |
-| Bộ nhớ đệm chính xác                    | `src/lib/semanticCache.ts` (dựa trên chữ ký)                                                             |
-| Trình đánh giá/định tuyến theo đánh giá | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                     |
-| Khả năng giải thích quyết định combo    | `open-sse/services/combo/decisionTrace.ts`                                                               |
-| Sự kiện thời gian thực của dashboard    | `src/lib/events/eventBus.ts` (kênh thông báo UI, payload `unknown`, lịch sử 100 mục)                     |
+| Khái niệm                             | Phần triển khai hiện có                                                                                  |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Tính khả dụng (có thể gửi lưu lượng?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, được lưu trong DB), thời gian chờ kết nối, khóa mô hình |
+| Báo cáo tình trạng                    | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                  |
+| Lưu lượng bóng                        | `open-sse/services/combo/shadowRouting.ts`                                                               |
+| Rào chắn                              | `src/lib/guardrails/` (hook trước/sau)                                                                   |
+| Bộ nhớ đệm chính xác                  | `src/lib/semanticCache.ts` (dựa trên chữ ký)                                                             |
+| Khả năng giải thích quyết định combo  | `open-sse/services/combo/decisionTrace.ts`                                                               |
+| Sự kiện thời gian thực của dashboard  | `src/lib/events/eventBus.ts` (kênh thông báo UI, payload `unknown`, lịch sử 100 mục)                     |
 
 Lớp sự kiện định tuyến **không** phải là bản triển khai lại của `eventBus`: bus đó là
 kênh thông báo thời gian thực của dashboard (tên _sự kiện_ có kiểu dữ liệu, payload
@@ -270,8 +269,6 @@ trí tuệ/đánh giá tiềm năng, không phải dependency**. Các điểm t�
 - Một `Evaluator` trong tương lai (tất định, trình đánh giá cục bộ, HTTP, WASM) sẽ tiếp nhận
   các sự kiện/dấu vết và trả về một `QualityScore`, được đưa vào cùng đường dẫn
   `getQualityScore`/hệ số chất lượng.
-- Cơ chế định tuyến dựa trên eval hiện có (`open-sse/services/evalRouting.ts`) đã
-  sắp xếp lại các đích combo theo tỷ lệ đạt của `eval_runs` khi được bật.
 
 Không có quá trình đánh giá nào chạy đồng bộ trên đường dẫn yêu cầu, và gateway vẫn
 hoạt động đầy đủ khi không có evaluator.

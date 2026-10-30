@@ -1415,9 +1415,8 @@ Phản hồi GET bao gồm `agents[]` (id, name, binary, version, installed, pro
 
 ### Đánh giá
 
-| Endpoint     | Phương thức | Mô tả                                   |
-| ------------ | ----------- | --------------------------------------- |
-| `/api/evals` | GET/POST    | Liệt kê các bộ đánh giá / chạy đánh giá |
+| Endpoint | Phương thức | Mô tả |
+| -------- | ----------- | ----- |
 
 ### Chính sách
 
@@ -1945,12 +1944,8 @@ Trả về thẻ tác nhân A2A công khai (tên, mô tả, các khả năng, da
 | GET | `/api/cloud/models/alias` | Liệt kê các bí danh mô hình được cung cấp cho tính năng đồng bộ hóa đám mây |
 | GET | `/api/assess` | Đọc các phân loại thẩm định mới nhất (theo từng nhà cung cấp/mô hình) |
 | POST | `/api/assess` | Chạy một lượt thẩm định — nội dung: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Liệt kê các bộ đánh giá tích hợp sẵn + những lượt chạy gần đây nhất |
-| POST | `/api/evals` | Kích hoạt một lượt chạy đánh giá |
-| POST | `/api/evals/suites` | Tạo một bộ đánh giá tùy chỉnh — nội dung được xác thực bởi `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Truy xuất một bộ đánh giá tùy chỉnh |
 
-**Xác thực:** `/api/cloud/auth` trực tiếp xác thực khóa Bearer và chỉ trả về khóa đã che cùng `projectId` của từng kết nối đối với khóa có phạm vi `manage` / `admin`; các tuyến `/api/cloud/*`, `/api/evals/*` và `/api/assess` khác yêu cầu phiên quản lý/khóa API. POST `/api/assess` sử dụng `validateBody` với lược đồ phạm vi hợp phân biệt.
+**Xác thực:** `/api/cloud/auth` trực tiếp xác thực khóa Bearer và chỉ trả về khóa đã che cùng `projectId` của từng kết nối đối với khóa có phạm vi `manage` / `admin`; các tuyến `/api/cloud/*` và `/api/assess` khác yêu cầu phiên quản lý/khóa API. POST `/api/assess` sử dụng `validateBody` với lược đồ phạm vi hợp phân biệt.
 
 ---
 

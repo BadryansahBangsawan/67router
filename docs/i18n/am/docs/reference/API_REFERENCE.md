@@ -1415,9 +1415,8 @@ id መልሶ ማግኘት) እና `POST /api/settings/import-json` በቀጥታ 
 
 ### ግምገማዎች
 
-| Endpoint     | Method   | መግለጫ                            |
-| ------------ | -------- | ------------------------------- |
-| `/api/evals` | GET/POST | የግምገማ ስብስቦችን ይዘርዝሩ / ግምገማን ያስኪዱ |
+| Endpoint | Method | መግለጫ |
+| -------- | ------ | ---- |
 
 ### ፖሊሲዎች
 
@@ -1945,12 +1944,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | ለcloud sync እንደቀረቡ የሞዴል ተለዋጭ ስሞችን ዘርዝር |
 | GET | `/api/assess` | የቅርብ ጊዜ የግምገማ ምደባዎችን ያንብቡ (ለእያንዳንዱ አቅራቢ/ሞዴል) |
 | POST | `/api/assess` | ግምገማ ያስኪዱ — የጥያቄ አካል፦ `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | አብረው የተካተቱ የeval ስብስቦችን + የቅርብ ጊዜ አሂዶችን ዘርዝር |
-| POST | `/api/evals` | የeval አሂድን ያስጀምሩ |
-| POST | `/api/evals/suites` | ብጁ የeval ስብስብ ይፍጠሩ — የጥያቄ አካሉ በ`evalSuiteSaveSchema` ይረጋገጣል |
-| GET | `/api/evals/suites/[id]` | ብጁ የeval ስብስብ ያምጡ |
 
-**ማረጋገጫ፦** `/api/cloud/auth` የBearer ቁልፍን በቀጥታ ያረጋግጣል፣ እና `manage` / `admin` ወሰን ላለው ቁልፍ ብቻ የእያንዳንዱን ግንኙነት የተደበቀ ቁልፍ እና `projectId` ይመልሳል፤ ሌሎቹ `/api/cloud/*`፣ `/api/evals/*` እና `/api/assess` መስመሮች የአስተዳደር ክፍለ ጊዜ/API ቁልፍ ያስፈልጋቸዋል። `/api/assess` POST `validateBody`ን ከመለያ ያለው የዩኒየን ወሰን መርሃግብር ጋር ይጠቀማል።
+**ማረጋገጫ፦** `/api/cloud/auth` የBearer ቁልፍን በቀጥታ ያረጋግጣል፣ እና `manage` / `admin` ወሰን ላለው ቁልፍ ብቻ የእያንዳንዱን ግንኙነት የተደበቀ ቁልፍ እና `projectId` ይመልሳል፤ ሌሎቹ `/api/cloud/*`፣ እና `/api/assess` መስመሮች የአስተዳደር ክፍለ ጊዜ/API ቁልፍ ያስፈልጋቸዋል። `/api/assess` POST `validateBody`ን ከመለያ ያለው የዩኒየን ወሰን መርሃግብር ጋር ይጠቀማል።
 
 ---
 

@@ -251,7 +251,6 @@ Boshqaruv sohalari:
 - Byudjet: `src/app/api/usage/budget` (GET/POST)
 - Zaxira zanjirlari: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Muvofiqlik auditi: `src/app/api/compliance/audit-log` (GET, sahifalash + tuzilmaviy metadata bilan)
-- Baholashlar: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Siyosatlar: `src/app/api/policies` (GET/POST)
 - Sinxronlash tokenlari: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiguratsiya to‘plami: `src/app/api/sync/bundle` (GET, sozlamalar/provayderlar/kombinatsiyalar/kalitlarning ETag orqali versiyalangan oniy tasviri)
@@ -315,7 +314,6 @@ Domen qatlami modullari:
 - Fetch kutish vaqti cheklovi: `src/shared/utils/fetchTimeout.ts`
 - Soʻrov telemetriyasi: `src/shared/utils/requestTelemetry.ts`
 - Muvofiqlik/audit: `src/lib/compliance/index.ts`
-- Baholashni ishga tushiruvchi modul: `src/lib/evals/evalRunner.ts`
 - Domen holatini doimiy saqlash: `src/lib/db/domainState.ts` — zaxira zanjirlari, byudjetlar, xarajatlar tarixi, bloklash holati va avtomatik uzgichlar uchun SQLite CRUD amallari
 
 OAuth provayderi modullari (`src/lib/oauth/providers/` ichidagi 27 ta alohida fayl):

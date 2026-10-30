@@ -746,51 +746,6 @@
       "description": "Von einer Aufgabe erzeugte Quelldateien auflisten"
     }
   },
-  "eval": {
-    "description": "Evaluierungssammlungen und -läufe verwalten",
-    "suites": {
-      "description": "Evaluierungssammlungen verwalten",
-      "list": {
-        "description": "Evaluierungssuiten auflisten"
-      },
-      "get": {
-        "description": "Details einer Evaluierungssuite anhand der ID abrufen"
-      },
-      "create": {
-        "description": "Eine Evaluierungssuite aus einer JSON-Datei erstellen",
-        "file": "Pfad zur JSON-Datei mit der Suitendefinition"
-      }
-    },
-    "run": {
-      "description": "Einen Evaluierungslauf für eine Suite starten",
-      "model": "Zu evaluierende Modell-ID (Standard: auto)",
-      "combo": "Eine bestimmte Kombination anhand ihres Namens erzwingen",
-      "concurrency": "Anzahl gleichzeitiger Stichproben (Standard: 4)",
-      "tag": "Diesen Lauf zur späteren Filterung mit einem Tag versehen",
-      "watch": "Fortschritt des Laufs bis zum Abschluss verfolgen"
-    },
-    "list": {
-      "description": "Evaluierungsläufe auflisten",
-      "suite": "Nach Suiten-ID filtern",
-      "status": "Nach Status filtern",
-      "since": "Läufe seit diesem Zeitstempel zurückgeben",
-      "limit": "Maximale Anzahl an Ergebnissen (Standard: 50)"
-    },
-    "get": {
-      "description": "Details eines Evaluierungslaufs anhand der ID abrufen"
-    },
-    "results": {
-      "description": "Stichprobenergebnisse für einen Evaluierungslauf anzeigen",
-      "failed": "Nur fehlgeschlagene Stichproben anzeigen"
-    },
-    "cancel": {
-      "description": "Einen laufenden Evaluierungslauf abbrechen",
-      "yes": "Bestätigungsabfrage überspringen"
-    },
-    "scorecard": {
-      "description": "Scorecard für einen abgeschlossenen Evaluierungslauf anzeigen"
-    }
-  },
   "program": {
     "description": "OmniRoute — Intelligenter AI-Router mit automatischem Fallback",
     "version": "Version ausgeben und beenden",

@@ -746,51 +746,6 @@
       "description": "Listar los archivos fuente producidos por una tarea"
     }
   },
-  "eval": {
-    "description": "Gestionar suites y ejecuciones de evaluación",
-    "suites": {
-      "description": "Gestionar suites de evaluación",
-      "list": {
-        "description": "Listar suites de evaluación"
-      },
-      "get": {
-        "description": "Obtener los detalles de una suite de evaluación por ID"
-      },
-      "create": {
-        "description": "Crear una suite de evaluación desde un archivo JSON",
-        "file": "Ruta al archivo JSON de definición de la suite"
-      }
-    },
-    "run": {
-      "description": "Iniciar una ejecución de evaluación para una suite",
-      "model": "ID del modelo que se va a evaluar (predeterminado: auto)",
-      "combo": "Forzar una combinación específica por nombre",
-      "concurrency": "Número de muestras simultáneas (predeterminado: 4)",
-      "tag": "Etiquetar esta ejecución para filtrarla posteriormente",
-      "watch": "Supervisar el progreso de la ejecución hasta que finalice"
-    },
-    "list": {
-      "description": "Listar ejecuciones de evaluación",
-      "suite": "Filtrar por ID de suite",
-      "status": "Filtrar por estado",
-      "since": "Devolver ejecuciones desde esta marca de tiempo",
-      "limit": "Número máximo de resultados (predeterminado: 50)"
-    },
-    "get": {
-      "description": "Obtener los detalles de una ejecución de evaluación por ID"
-    },
-    "results": {
-      "description": "Mostrar los resultados de las muestras de una ejecución de evaluación",
-      "failed": "Mostrar solo las muestras fallidas"
-    },
-    "cancel": {
-      "description": "Cancelar una evaluación en ejecución",
-      "yes": "Omitir la solicitud de confirmación"
-    },
-    "scorecard": {
-      "description": "Mostrar el cuadro de puntuación de una ejecución de evaluación completada"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router de IA inteligente con fallback automático",
     "version": "Mostrar versión y salir",

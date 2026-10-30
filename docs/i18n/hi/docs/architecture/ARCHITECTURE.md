@@ -251,7 +251,6 @@ flowchart LR
 - बजट: `src/app/api/usage/budget` (GET/POST)
 - फ़ॉलबैक शृंखलाएँ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - अनुपालन ऑडिट: `src/app/api/compliance/audit-log` (GET, पेजिनेशन + संरचित मेटाडेटा के साथ)
-- मूल्यांकन: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - नीतियाँ: `src/app/api/policies` (GET/POST)
 - सिंक टोकन: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - कॉन्फ़िगरेशन बंडल: `src/app/api/sync/bundle` (GET, सेटिंग्स/प्रदाताओं/कॉम्बो/कुंजियों का ETag-संस्करणयुक्त स्नैपशॉट)
@@ -315,7 +314,6 @@ flowchart LR
 - फ़ेच टाइमआउट: `src/shared/utils/fetchTimeout.ts`
 - अनुरोध टेलीमेट्री: `src/shared/utils/requestTelemetry.ts`
 - अनुपालन/ऑडिट: `src/lib/compliance/index.ts`
-- मूल्यांकन रनर: `src/lib/evals/evalRunner.ts`
 - डोमेन स्थिति स्थायित्व: `src/lib/db/domainState.ts` — फ़ॉलबैक चेन, बजट, लागत इतिहास, लॉकआउट स्थिति और सर्किट ब्रेकर के लिए SQLite CRUD
 
 OAuth प्रदाता मॉड्यूल (`src/lib/oauth/providers/` के अंतर्गत 27 अलग-अलग फ़ाइलें):

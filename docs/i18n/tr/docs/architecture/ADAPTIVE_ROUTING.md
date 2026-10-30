@@ -44,16 +44,15 @@ AI Aracısı / IDE
 
 ### Önceden mevcut olanlar (denetlendi, yinelenmedi)
 
-| Kavram                                               | Mevcut uygulama                                                                                       |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Kullanılabilirlik (trafik gönderebilir miyiz?)       | Devre kesici (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB'de kalıcı), bağlantı bekleme süresi, model kilitleme |
-| Sağlık raporlaması                                   | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                               |
-| Gölge trafik                                         | `open-sse/services/combo/shadowRouting.ts`                                                            |
-| Korumalar                                            | `src/lib/guardrails/` (ön/son kancalar)                                                               |
-| Tam eşleşmeli önbellek                               | `src/lib/semanticCache.ts` (imza tabanlı)                                                             |
-| Değerlendiriciler / değerlendirme odaklı yönlendirme | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                  |
-| Combo kararı açıklanabilirliği                       | `open-sse/services/combo/decisionTrace.ts`                                                            |
-| Pano gerçek zamanlı olayları                         | `src/lib/events/eventBus.ts` (UI bildirim kanalı, `unknown` yükler, 100 girdilik geçmiş)              |
+| Kavram                                         | Mevcut uygulama                                                                                       |
+| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Kullanılabilirlik (trafik gönderebilir miyiz?) | Devre kesici (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB'de kalıcı), bağlantı bekleme süresi, model kilitleme |
+| Sağlık raporlaması                             | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                               |
+| Gölge trafik                                   | `open-sse/services/combo/shadowRouting.ts`                                                            |
+| Korumalar                                      | `src/lib/guardrails/` (ön/son kancalar)                                                               |
+| Tam eşleşmeli önbellek                         | `src/lib/semanticCache.ts` (imza tabanlı)                                                             |
+| Combo kararı açıklanabilirliği                 | `open-sse/services/combo/decisionTrace.ts`                                                            |
+| Pano gerçek zamanlı olayları                   | `src/lib/events/eventBus.ts` (UI bildirim kanalı, `unknown` yükler, 100 girdilik geçmiş)              |
 
 Yönlendirme olayı katmanı, `eventBus`'ın yeniden uygulanması **değildir**: bu veri
 yolu, panonun gerçek zamanlı bildirim kanalıdır (tür belirtilmiş _olay adları_, opak
@@ -253,7 +252,6 @@ OmniRoute, Future AGI'yi (veya herhangi bir değerlendiriciyi) **bir bağımlıl
 - Bir `RoutingEventSink`, olayları eşzamansız olarak bir değerlendiriciye iletebilir.
 - `MemoryRoutingEventStore` ve kalite anlık görüntüsü, değerlendiriciye ham karar akışını sağlar.
 - Gelecekteki bir `Evaluator` (deterministik, yerel hakem, HTTP, WASM), olayları/izleri tüketip aynı `getQualityScore`/kalite faktörü yolunu besleyen bir `QualityScore` döndürebilir.
-- Mevcut değerlendirme odaklı yönlendirme (`open-sse/services/evalRouting.ts`), etkinleştirildiğinde combo hedeflerini `eval_runs` başarı oranlarına göre zaten yeniden sıralar.
 
 Hiçbir değerlendirme, istek yolunda eşzamanlı olarak çalışmaz ve ağ geçidi, değerlendirici olmadan da tamamen çalışır.
 

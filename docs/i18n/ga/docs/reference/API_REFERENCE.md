@@ -1419,9 +1419,8 @@ gach cúltaca). Coinníonn liostú (`GET`) agus cruthú cúltaca de láimh (`PUT
 
 ### Meastóireachtaí
 
-| Críochphointe | Modh     | Cur síos                                             |
-| ------------- | -------- | ---------------------------------------------------- |
-| `/api/evals`  | GET/POST | Liostaigh tacair meastóireachta / rith meastóireacht |
+| Críochphointe | Modh | Cur síos |
+| ------------- | ---- | -------- |
 
 ### Beartais
 
@@ -1946,12 +1945,8 @@ Tugtar an cárta poiblí gníomhaire A2A ar ais (ainm, cur síos, cumais, catal�
 | GET | `/api/cloud/models/alias` | Liostaigh ailiasanna samhlacha mar a nochtar iad do shioncronú néil |
 | GET | `/api/assess` | Léigh na catagóirithe measúnaithe is déanaí (de réir soláthraí/samhla) |
 | POST | `/api/assess` | Rith measúnú — corp: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Liostaigh na pacáistí meastóireachta ionsuite + na riteanna is déanaí |
-| POST | `/api/evals` | Spreag rith meastóireachta |
-| POST | `/api/evals/suites` | Cruthaigh pacáiste saincheaptha meastóireachta — corp bailíochtaithe ag `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Aisghabh pacáiste saincheaptha meastóireachta |
 
-**Fíordheimhniú:** bailíochtaíonn `/api/cloud/auth` eochair Bearer go díreach agus ní thugann sé ar ais eochair mhasctha agus `projectId` gach naisc ach amháin i gcás eochrach a bhfuil an raon feidhme `manage` / `admin` aici; teastaíonn seisiún bainistíochta/eochair API ó na conairí eile `/api/cloud/*`, `/api/evals/*`, agus `/api/assess`. Úsáideann POST `/api/assess` `validateBody` le scéim raoin feidhme d’aontas idirdhealaithe.
+**Fíordheimhniú:** bailíochtaíonn `/api/cloud/auth` eochair Bearer go díreach agus ní thugann sé ar ais eochair mhasctha agus `projectId` gach naisc ach amháin i gcás eochrach a bhfuil an raon feidhme `manage` / `admin` aici; teastaíonn seisiún bainistíochta/eochair API ó na conairí eile `/api/cloud/*`, agus `/api/assess`. Úsáideann POST `/api/assess` `validateBody` le scéim raoin feidhme d’aontas idirdhealaithe.
 
 ---
 

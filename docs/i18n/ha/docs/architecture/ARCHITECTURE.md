@@ -251,7 +251,6 @@ Fannonin gudanarwa:
 - Kasafin kuɗi: `src/app/api/usage/budget` (GET/POST)
 - Sarƙoƙin komawa madadin: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Binciken bin ƙa'ida: `src/app/api/compliance/audit-log` (GET, tare da rarraba shafuka + tsararrun metadata)
-- Gwaje-gwajen kimantawa: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Manufofi: `src/app/api/policies` (GET/POST)
 - Token na daidaita aiki: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Kunshin daidaitawa: `src/app/api/sync/bundle` (GET, hoton-lokaci mai sigar ETag na saituna/masu bayarwa/haɗaka/maɓallai)
@@ -315,7 +314,6 @@ Modulolin layin domain:
 - Iyakar lokacin ɗaukowa: `src/shared/utils/fetchTimeout.ts`
 - Bayanan ma'aunin buƙata: `src/shared/utils/requestTelemetry.ts`
 - Bin ƙa'ida/bincike: `src/lib/compliance/index.ts`
-- Mai gudanar da kimantawa: `src/lib/evals/evalRunner.ts`
 - Adana yanayin domain: `src/lib/db/domainState.ts` — ayyukan SQLite CRUD don jerin komawa ga madadi, kasafin kuɗi, tarihin kuɗi, yanayin kullewa, da masu katse da'ira
 
 Modulolin masu samar da OAuth (fayiloli guda 27 a ƙarƙashin `src/lib/oauth/providers/`):

@@ -251,7 +251,6 @@ flowchart LR
 - Бюджет: `src/app/api/usage/budget` (GET/POST)
 - Вериги за резервен избор: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Одит на съответствието: `src/app/api/compliance/audit-log` (GET, с пагинация + структурирани метаданни)
-- Оценявания: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Политики: `src/app/api/policies` (GET/POST)
 - Токени за синхронизация: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Конфигурационен пакет: `src/app/api/sync/bundle` (GET, моментна снимка на настройките/доставчиците/комбинациите/ключовете, версионирана чрез ETag)
@@ -315,7 +314,6 @@ flowchart LR
 - Изчакване при извличане: `src/shared/utils/fetchTimeout.ts`
 - Телеметрия на заявките: `src/shared/utils/requestTelemetry.ts`
 - Съответствие/одит: `src/lib/compliance/index.ts`
-- Изпълнител на оценки: `src/lib/evals/evalRunner.ts`
 - Устойчиво съхранение на състоянието на домейна: `src/lib/db/domainState.ts` — SQLite CRUD за вериги от резервни варианти, бюджети, история на разходите, състояние на блокиране и прекъсвачи на вериги
 
 Модули за OAuth доставчици (27 отделни файла в `src/lib/oauth/providers/`):

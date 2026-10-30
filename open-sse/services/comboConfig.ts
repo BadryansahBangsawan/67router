@@ -185,15 +185,6 @@ const DEFAULT_COMBO_CONFIG = {
     maxTargets: 2,
     timeoutMs: 30000,
   },
-  evalRouting: {
-    enabled: false,
-    suiteIds: [],
-    maxAgeHours: 720,
-    minCases: 1,
-    qualityWeight: 0.85,
-    latencyWeight: 0.15,
-    cacheTtlMs: 60000,
-  },
   // Connection-aware expansion for group-B combo strategies is opt-in.
   connectionAwareExpansion: false,
   connectionAwareExpansionMaxPerTarget: 8,
@@ -339,12 +330,6 @@ export function resolveComboConfig(
       ...(isRecord(global.shadowRouting) ? clean(global.shadowRouting) : {}),
       ...(isRecord(providerOverride.shadowRouting) ? clean(providerOverride.shadowRouting) : {}),
       ...(isRecord(comboConfig.shadowRouting) ? clean(comboConfig.shadowRouting) : {}),
-    },
-    evalRouting: {
-      ...DEFAULT_COMBO_CONFIG.evalRouting,
-      ...(isRecord(global.evalRouting) ? clean(global.evalRouting) : {}),
-      ...(isRecord(providerOverride.evalRouting) ? clean(providerOverride.evalRouting) : {}),
-      ...(isRecord(comboConfig.evalRouting) ? clean(comboConfig.evalRouting) : {}),
     },
   };
 }

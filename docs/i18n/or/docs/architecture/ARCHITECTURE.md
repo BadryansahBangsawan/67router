@@ -251,7 +251,6 @@ flowchart LR
 - ବଜେଟ୍: `src/app/api/usage/budget` (GET/POST)
 - ଫଲ୍ବ୍ୟାକ୍ ଶୃଙ୍ଖଳଗୁଡ଼ିକ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - ଅନୁପାଳନ ଅଡିଟ୍: `src/app/api/compliance/audit-log` (GET, ପୃଷ୍ଠାଙ୍କନ + ସଂରଚିତ ମେଟାଡାଟା ସହିତ)
-- ମୂଲ୍ୟାୟନଗୁଡ଼ିକ: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ନୀତିଗୁଡ଼ିକ: `src/app/api/policies` (GET/POST)
 - ସିଙ୍କ୍ ଟୋକନ୍ଗୁଡ଼ିକ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - ବିନ୍ୟାସ ବଣ୍ଡଲ୍: `src/app/api/sync/bundle` (GET, ସେଟିଂସ୍/ପ୍ରଦାନକାରୀ/ସଂଯୋଜନ/କୀଗୁଡ଼ିକର ETag-ସଂସ୍କରଣଯୁକ୍ତ ସ୍ନାପ୍ଶଟ୍)
@@ -315,7 +314,6 @@ flowchart LR
 - ଫେଚ୍ ସମୟସୀମା: `src/shared/utils/fetchTimeout.ts`
 - ଅନୁରୋଧ ଟେଲିମେଟ୍ରି: `src/shared/utils/requestTelemetry.ts`
 - ଅନୁପାଳନ/ଅଡିଟ୍: `src/lib/compliance/index.ts`
-- ମୂଲ୍ୟାୟନ ରନର୍: `src/lib/evals/evalRunner.ts`
 - ଡୋମେନ୍ ସ୍ଥିତି ସ୍ଥାୟୀକରଣ: `src/lib/db/domainState.ts` — ଫଲ୍ବ୍ୟାକ୍ ଶୃଙ୍ଖଳା, ବଜେଟ୍, ଖର୍ଚ୍ଚ ଇତିହାସ, ଲକ୍ଆଉଟ୍ ସ୍ଥିତି ଏବଂ ସର୍କିଟ୍ ବ୍ରେକର୍ଗୁଡ଼ିକ ପାଇଁ SQLite CRUD
 
 OAuth ପ୍ରଦାତା ମଡ୍ୟୁଲଗୁଡ଼ିକ (`src/lib/oauth/providers/` ଅଧୀନରେ 27ଟି ସ୍ୱତନ୍ତ୍ର ଫାଇଲ୍):

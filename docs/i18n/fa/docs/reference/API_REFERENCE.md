@@ -1415,9 +1415,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### ارزیابیها
 
-| Endpoint     | Method   | Description                             |
-| ------------ | -------- | --------------------------------------- |
-| `/api/evals` | GET/POST | فهرست مجموعههای ارزیابی / اجرای ارزیابی |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### سیاستها
 
@@ -1942,12 +1941,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | فهرست نامهای مستعار مدل، همانگونه که برای همگامسازی ابری ارائه میشوند |
 | GET | `/api/assess` | خواندن جدیدترین دستهبندیهای ارزیابی (برای هر ارائهدهنده/مدل) |
 | POST | `/api/assess` | اجرای یک ارزیابی — بدنه: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | فهرست مجموعههای ارزیابی داخلی + جدیدترین اجراها |
-| POST | `/api/evals` | آغاز یک اجرای ارزیابی |
-| POST | `/api/evals/suites` | ایجاد یک مجموعه ارزیابی سفارشی — بدنه توسط `evalSuiteSaveSchema` اعتبارسنجی میشود |
-| GET | `/api/evals/suites/[id]` | بازیابی یک مجموعه ارزیابی سفارشی |
 
-**احراز هویت:** `/api/cloud/auth` مستقیماً یک کلید Bearer را اعتبارسنجی میکند و فقط برای کلیدی با دامنه `manage` / `admin`، کلید ماسکشده و `projectId` هر اتصال را برمیگرداند؛ سایر مسیرهای `/api/cloud/*`، `/api/evals/*` و `/api/assess` به نشست مدیریتی/کلید API نیاز دارند. درخواست POST به `/api/assess` از `validateBody` همراه با یک شِمای دامنه از نوع اجتماع متمایزشده استفاده میکند.
+**احراز هویت:** `/api/cloud/auth` مستقیماً یک کلید Bearer را اعتبارسنجی میکند و فقط برای کلیدی با دامنه `manage` / `admin`، کلید ماسکشده و `projectId` هر اتصال را برمیگرداند؛ سایر مسیرهای `/api/cloud/*` و `/api/assess` به نشست مدیریتی/کلید API نیاز دارند. درخواست POST به `/api/assess` از `validateBody` همراه با یک شِمای دامنه از نوع اجتماع متمایزشده استفاده میکند.
 
 ---
 

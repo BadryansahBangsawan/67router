@@ -1444,9 +1444,8 @@ Odpoveď GET obsahuje `agents[]` (id, name, binary, version, installed, protocol
 
 ### Vyhodnotenia
 
-| Koncový bod  | Metóda   | Popis                                           |
-| ------------ | -------- | ----------------------------------------------- |
-| `/api/evals` | GET/POST | Zoznam sád vyhodnotení / spustenie vyhodnotenia |
+| Koncový bod | Metóda | Popis |
+| ----------- | ------ | ----- |
 
 ### Zásady
 
@@ -1972,12 +1971,8 @@ Vracia verejnú kartu agenta A2A (názov, popis, možnosti, katalóg zručností
 | GET | `/api/cloud/models/alias` | Zobrazí zoznam aliasov modelov sprístupnených cloudovej synchronizácii |
 | GET | `/api/assess` | Načíta najnovšie kategorizácie hodnotení (podľa poskytovateľa/modelu) |
 | POST | `/api/assess` | Spustí hodnotenie — telo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Zobrazí zoznam vstavaných sád evalov + najnovších behov |
-| POST | `/api/evals` | Spustí beh evalu |
-| POST | `/api/evals/suites` | Vytvorí vlastnú sadu evalov — telo overené pomocou `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Načíta vlastnú sadu evalov |
 
-**Autentifikácia:** `/api/cloud/auth` priamo overuje nosný kľúč a vracia maskovaný kľúč a `projectId` každého pripojenia iba pre kľúč s rozsahom `manage` / `admin`; ostatné trasy `/api/cloud/*`, `/api/evals/*` a `/api/assess` vyžadujú reláciu na správu/kľúč API. POST `/api/assess` používa `validateBody` so schémou rozsahu typu diskriminovaného zjednotenia.
+**Autentifikácia:** `/api/cloud/auth` priamo overuje nosný kľúč a vracia maskovaný kľúč a `projectId` každého pripojenia iba pre kľúč s rozsahom `manage` / `admin`; ostatné trasy `/api/cloud/*` a `/api/assess` vyžadujú reláciu na správu/kľúč API. POST `/api/assess` používa `validateBody` so schémou rozsahu typu diskriminovaného zjednotenia.
 
 ---
 

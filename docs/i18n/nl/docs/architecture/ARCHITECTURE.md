@@ -251,7 +251,6 @@ Beheerdomeinen:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Terugvalketens: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance-audit: `src/app/api/compliance/audit-log` (GET, met paginering + gestructureerde metadata)
-- Evaluaties: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Beleidsregels: `src/app/api/policies` (GET/POST)
 - Synchronisatietokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Configuratiebundel: `src/app/api/sync/bundle` (GET, met ETag geversioneerde momentopname van instellingen/providers/combinaties/sleutels)
@@ -315,7 +314,6 @@ Domeinlaagmodules:
 - Ophaaltime-out: `src/shared/utils/fetchTimeout.ts`
 - Requesttelemetrie: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Evaluatierunner: `src/lib/evals/evalRunner.ts`
 - Persistentie van domeinstatus: `src/lib/db/domainState.ts` — SQLite-CRUD voor terugvalketens, budgetten, kostengeschiedenis, uitsluitingsstatus en stroomonderbrekers
 
 OAuth-providermodules (27 afzonderlijke bestanden onder `src/lib/oauth/providers/`):

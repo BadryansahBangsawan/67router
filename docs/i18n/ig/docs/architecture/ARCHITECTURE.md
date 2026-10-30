@@ -251,7 +251,6 @@ Ngalaba nlekọta:
 - Mmefu ego: `src/app/api/usage/budget` (GET/POST)
 - Usoro fallback: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Nyocha nrubeisi: `src/app/api/compliance/audit-log` (GET, nwere nkewa peeji + metadata ahaziri)
-- Nnwale nyocha: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Iwu: `src/app/api/policies` (GET/POST)
 - Token mmekọrịta: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Ngwugwu nhazi: `src/app/api/sync/bundle` (GET, snapshot nke ntọala/ndị na-enye ọrụ/ngwakọta/igodo nke ETag kewara dịka ụdị)
@@ -315,7 +314,6 @@ Modul oyi akwa ngalaba:
 - Oge ngwụcha nnweta: `src/shared/utils/fetchTimeout.ts`
 - Telemetry arịrịọ: `src/shared/utils/requestTelemetry.ts`
 - Nrubeisi/nyocha: `src/lib/compliance/index.ts`
-- Ihe na-agba ntule: `src/lib/evals/evalRunner.ts`
 - Nchekwa na-adịgide adịgide nke ọnọdụ ngalaba: `src/lib/db/domainState.ts` — SQLite CRUD maka agbụ ndabere, oke ego, akụkọ ihe mere eme nke ọnụ ahịa, ọnọdụ mkpọchi, na ihe nkwụsị sekit
 
 Modul ndị na-eweta OAuth (faịlụ 27 dị iche iche n'okpuru `src/lib/oauth/providers/`):

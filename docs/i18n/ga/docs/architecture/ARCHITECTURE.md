@@ -251,7 +251,6 @@ Fearainn bhainistíochta:
 - Buiséad: `src/app/api/usage/budget` (GET/POST)
 - Slabhraí cúltaca: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Iniúchadh comhlíontachta: `src/app/api/compliance/audit-log` (GET, le huimhriú leathanach + meiteashonraí struchtúrtha)
-- Meastóireachtaí: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Beartais: `src/app/api/policies` (GET/POST)
 - Comharthaí sioncronaithe: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Beart cumraíochta: `src/app/api/sync/bundle` (GET, seat den leagan arna shainaithint le ETag de shocruithe/soláthraithe/teaglamaí/eochracha)
@@ -315,7 +314,6 @@ Modúil na sraithe fearainn:
 - Teorainn ama aisghabhála: `src/shared/utils/fetchTimeout.ts`
 - Teiliméadracht iarratais: `src/shared/utils/requestTelemetry.ts`
 - Comhlíonadh/iniúchadh: `src/lib/compliance/index.ts`
-- Reathaí meastóireachta: `src/lib/evals/evalRunner.ts`
 - Marthanacht staid fearainn: `src/lib/db/domainState.ts` — CRUD SQLite le haghaidh slabhraí cúltaca, buiséad, stair chostais, staid frithdhúnadh agus scoradáin chiorcaid
 
 Modúil soláthraithe OAuth (27 comhad aonair faoi `src/lib/oauth/providers/`):

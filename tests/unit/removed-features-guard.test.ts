@@ -61,6 +61,16 @@ const REMOVED_PATHS: string[] = [
   "src/lib/db/playgroundPresets.ts",
   "src/shared/schemas/playground.ts",
   "bin/cli/api-commands/playground.mjs",
+  // evals
+  "src/lib/evals",
+  "src/lib/db/evals.ts",
+  "src/app/api/evals",
+  "src/app/(dashboard)/dashboard/analytics/evals",
+  "src/app/(dashboard)/dashboard/usage/components/EvalsTab.tsx",
+  "open-sse/services/evalRouting.ts",
+  "src/shared/validation/schemas/evals.ts",
+  "bin/cli/commands/eval.mjs",
+  "bin/cli/tui/EvalWatch.jsx",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -105,6 +115,15 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /db\/playgroundPresets\b/,
   /schemas\/playground\b/,
   /\bregister_playground\b/,
+  // evals
+  /lib\/evals\//,
+  /db\/evals\b/,
+  /api\/evals\b/,
+  /analytics\/evals\b/,
+  /\bEvalsTab\b/,
+  /\borderTargetsByEvalScores\b|\bevalRoutingSchema\b|\.evalRouting\b/,
+  /schemas\/evals\b/,
+  /\bregisterEval\b|\bEvalWatch\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

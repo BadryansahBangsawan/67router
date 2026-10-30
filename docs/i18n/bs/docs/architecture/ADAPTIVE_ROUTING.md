@@ -36,16 +36,15 @@ AI Agent / IDE
 
 ### Što je već postojalo (revidirano, nije duplicirano)
 
-| Koncept                                      | Postojeća implementacija                                                                           |
-| -------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| Dostupnost (možemo li slati promet?)         | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-persisted), connection cooldown, model lockout |
-| Izvještavanje o zdravlju                     | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                            |
-| Shadow promet                                | `open-sse/services/combo/shadowRouting.ts`                                                         |
-| Guardrails                                   | `src/lib/guardrails/` (pre/post hooks)                                                             |
-| Točna predmemorija                           | `src/lib/semanticCache.ts` (signature-based)                                                       |
-| Evaluatori / usmjeravanje vođeno evaluacijom | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                               |
-| Objašnjivost combo odluka                    | `open-sse/services/combo/decisionTrace.ts`                                                         |
-| Događaji nadzorne ploče u stvarnom vremenu   | `src/lib/events/eventBus.ts` (UI notification channel, `unknown` payloads, 100-entry history)      |
+| Koncept                                    | Postojeća implementacija                                                                           |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| Dostupnost (možemo li slati promet?)       | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-persisted), connection cooldown, model lockout |
+| Izvještavanje o zdravlju                   | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                            |
+| Shadow promet                              | `open-sse/services/combo/shadowRouting.ts`                                                         |
+| Guardrails                                 | `src/lib/guardrails/` (pre/post hooks)                                                             |
+| Točna predmemorija                         | `src/lib/semanticCache.ts` (signature-based)                                                       |
+| Objašnjivost combo odluka                  | `open-sse/services/combo/decisionTrace.ts`                                                         |
+| Događaji nadzorne ploče u stvarnom vremenu | `src/lib/events/eventBus.ts` (UI notification channel, `unknown` payloads, 100-entry history)      |
 
 Sloj događaja usmjeravanja (routing-event layer) **nije** ponovna implementacija `eventBus`-a: taj bus je kanal obavijesti nadzorne ploče u stvarnom vremenu (tipizirana _imena događaja_, neprozirni korisni tereti, UI potrošači). `RoutingEvent` je tipizirana struktura _ishoda_ (latencija/tokeni/trošak/ishod/razlog završetka) koju konzumiraju spremnici povratnih informacija kontrolne ravnine (praćenje kvalitete, OTel izvoznik, spremište objašnjenja).
 
@@ -230,7 +229,6 @@ OmniRoute tretira Future AGI (ili bilo koji evaluator) kao **potencijalni backen
 - `RoutingEventSink` može proslijediti događaje evaluatoru asinhrono.
 - `MemoryRoutingEventStore` + snimak kvaliteta daju evaluatoru sirovi tok odluka.
 - Budući `Evaluator` (deterministički, lokalni sudija, HTTP, WASM) bi konzumirao događaje/tragove i vraćao `QualityScore` koji hrani istu `getQualityScore`/quality-factor putanju.
-- Postojeće rutiranje vođeno evaluacijom (`open-sse/services/evalRouting.ts`) već preuređuje ciljeve kombinacija prema stopama prolaznosti `eval_runs` kada je omogućeno.
 
 Nijedna evaluacija se ne izvršava sinhrono na putanji zahtjeva, a gateway radi u potpunosti i kada evaluator nije prisutan.
 

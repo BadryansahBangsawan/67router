@@ -1441,9 +1441,8 @@ GET-svaret inkluderer `agents[]` (id, name, binary, version, installed, protocol
 
 ### Evalueringer
 
-| Slutpunkt    | Metode   | Beskrivelse                             |
-| ------------ | -------- | --------------------------------------- |
-| `/api/evals` | GET/POST | Vis evalueringspakker/kør en evaluering |
+| Slutpunkt | Metode | Beskrivelse |
+| --------- | ------ | ----------- |
 
 ### Politikker
 
@@ -1971,12 +1970,8 @@ Returnerer det offentlige A2A-agentkort (navn, beskrivelse, funktionalitet, fær
 | GET | `/api/cloud/models/alias` | Vis modelaliasser, som de eksponeres for cloudsynkronisering |
 | GET | `/api/assess` | Læs de seneste vurderingskategoriseringer (pr. udbyder/model) |
 | POST | `/api/assess` | Kør en vurdering — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Vis indbyggede evalueringspakker + de seneste kørsler |
-| POST | `/api/evals` | Start en evalueringskørsel |
-| POST | `/api/evals/suites` | Opret en brugerdefineret evalueringspakke — body valideres af `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hent en brugerdefineret evalueringspakke |
 
-**Godkendelse:** `/api/cloud/auth` validerer en Bearer-nøgle direkte og returnerer kun den maskerede nøgle og `projectId` for hver forbindelse, hvis nøglen har rettighedsomfanget `manage` / `admin`; de øvrige ruter under `/api/cloud/*`, `/api/evals/*` og `/api/assess` kræver en administrationssession/API-nøgle. POST til `/api/assess` bruger `validateBody` med et diskrimineret union-scope-skema.
+**Godkendelse:** `/api/cloud/auth` validerer en Bearer-nøgle direkte og returnerer kun den maskerede nøgle og `projectId` for hver forbindelse, hvis nøglen har rettighedsomfanget `manage` / `admin`; de øvrige ruter under `/api/cloud/*` og `/api/assess` kræver en administrationssession/API-nøgle. POST til `/api/assess` bruger `validateBody` med et diskrimineret union-scope-skema.
 
 ---
 

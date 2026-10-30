@@ -1661,11 +1661,6 @@
       "count": 8
     }
   },
-  "src/shared/validation/schemas/evals.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 10
-    }
-  },
   "src/shared/validation/schemas/gemini.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 10
@@ -2537,11 +2532,6 @@
       "count": 16
     }
   },
-  "tests/unit/cli-eval-commands.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 22
-    }
-  },
   "tests/unit/cli-expanded-commands.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 1
@@ -2861,7 +2851,7 @@
   },
   "tests/unit/combo-routing-engine.test.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 267
+      "count": 257
     }
   },
   "tests/unit/combo-same-provider-cascade.test.ts": {

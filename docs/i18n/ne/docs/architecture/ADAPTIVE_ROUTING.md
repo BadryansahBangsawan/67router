@@ -41,7 +41,6 @@ AI Agent / IDE
 | Shadow traffic                           | `open-sse/services/combo/shadowRouting.ts`                                                                 |
 | Guardrails                               | `src/lib/guardrails/` (pre/post hooks)                                                                     |
 | Exact cache                              | `src/lib/semanticCache.ts` (signature मा आधारित)                                                           |
-| Evaluators / eval-सञ्चालित राउटिङ        | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                       |
 | Combo निर्णयको व्याख्येयता               | `open-sse/services/combo/decisionTrace.ts`                                                                 |
 | Dashboard का real-time events            | `src/lib/events/eventBus.ts` (UI notification channel, `unknown` payloads, 100-entry history)              |
 
@@ -250,8 +249,6 @@ OmniRoute ले Future AGI (वा कुनै पनि मूल्याङ
 - भावी `Evaluator` (डिटर्मिनिस्टिक, स्थानीय जज, HTTP, WASM) ले
   इभेन्ट/ट्रेसहरू उपभोग गरेर `QualityScore` फर्काउनेछ, जसले उही
   `getQualityScore`/गुणस्तर-फ्याक्टर पाथमा इनपुट दिन्छ।
-- विद्यमान मूल्याङ्कन-सञ्चालित राउटिङ (`open-sse/services/evalRouting.ts`) ले सक्षम हुँदा
-  `eval_runs` पास-दरका आधारमा कम्बो लक्ष्यहरू पहिले नै पुनःक्रमबद्ध गर्छ।
 
 अनुरोध पाथमा कुनै पनि मूल्याङ्कन सिंक्रोनस रूपमा चल्दैन, र मूल्याङ्कनकर्ता अनुपस्थित हुँदा पनि
 गेटवे पूर्ण रूपमा सञ्चालन हुन्छ।

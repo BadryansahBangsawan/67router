@@ -61,7 +61,6 @@ const PATH_LABELS = {
   activity: "activity",
   "agent-skills": "agentSkills",
   "combo-health": "comboHealth",
-  evals: "evals",
   search: "search",
   utilization: "utilization",
   "api-endpoints": "apiEndpoints",

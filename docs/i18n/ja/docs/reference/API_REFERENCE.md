@@ -1392,9 +1392,8 @@ GET レスポンスには、`agents[]`（id、name、binary、version、installe
 
 ### 評価
 
-| エンドポイント | メソッド | 説明                               |
-| -------------- | -------- | ---------------------------------- |
-| `/api/evals`   | GET/POST | 評価スイートの一覧表示／評価の実行 |
+| エンドポイント | メソッド | 説明 |
+| -------------- | -------- | ---- |
 
 ### ポリシー
 
@@ -1920,12 +1919,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | クラウド同期に公開されているモデルエイリアスを一覧表示 |
 | GET | `/api/assess` | 最新のアセスメント分類を読み取り（プロバイダー／モデル単位） |
 | POST | `/api/assess` | アセスメントを実行 — 本文：`{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | 組み込み評価スイートと最新の実行結果を一覧表示 |
-| POST | `/api/evals` | 評価実行を開始 |
-| POST | `/api/evals/suites` | カスタム評価スイートを作成 — 本文は`evalSuiteSaveSchema`で検証 |
-| GET | `/api/evals/suites/[id]` | カスタム評価スイートを取得 |
 
-**認証：** `/api/cloud/auth`はBearerキーを直接検証し、`manage` / `admin`スコープを持つキーの場合にのみ、各接続のマスクされたキーと`projectId`を返します。その他の`/api/cloud/*`、`/api/evals/*`、`/api/assess`ルートには、管理セッションまたはAPIキーが必要です。`/api/assess`のPOSTは、判別共用体のスコープスキーマとともに`validateBody`を使用します。
+**認証：** `/api/cloud/auth`はBearerキーを直接検証し、`manage` / `admin`スコープを持つキーの場合にのみ、各接続のマスクされたキーと`projectId`を返します。その他の`/api/cloud/*`、`/api/assess`ルートには、管理セッションまたはAPIキーが必要です。`/api/assess`のPOSTは、判別共用体のスコープスキーマとともに`validateBody`を使用します。
 
 ---
 

@@ -1438,9 +1438,8 @@ De GET-respons bevat `agents[]` (id, name, binary, version, installed, protocol,
 
 ### Evaluaties
 
-| Endpoint     | Methode  | Beschrijving                                    |
-| ------------ | -------- | ----------------------------------------------- |
-| `/api/evals` | GET/POST | Evaluatiesuites weergeven / evaluatie uitvoeren |
+| Endpoint | Methode | Beschrijving |
+| -------- | ------- | ------------ |
 
 ### Beleidsregels
 
@@ -1968,12 +1967,8 @@ Retourneert de openbare A2A-agentkaart (naam, beschrijving, mogelijkheden, skill
 | GET | `/api/cloud/models/alias` | Geef modelaliassen weer zoals beschikbaar gesteld aan cloudsynchronisatie |
 | GET | `/api/assess` | Lees de nieuwste beoordelingscategorisaties (per provider/model) |
 | POST | `/api/assess` | Voer een beoordeling uit — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Geef ingebouwde evaluatiesuites + de meest recente uitvoeringen weer |
-| POST | `/api/evals` | Start een evaluatie-uitvoering |
-| POST | `/api/evals/suites` | Maak een aangepaste evaluatiesuite aan — body gevalideerd door `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Haal een aangepaste evaluatiesuite op |
 
-**Authenticatie:** `/api/cloud/auth` valideert rechtstreeks een Bearer-sleutel en retourneert de gemaskeerde sleutel en `projectId` van elke verbinding alleen voor een sleutel met het bereik `manage` / `admin`; de overige routes `/api/cloud/*`, `/api/evals/*` en `/api/assess` vereisen een beheersessie/API-sleutel. POST voor `/api/assess` gebruikt `validateBody` met een scopeschema op basis van een gediscrimineerde union.
+**Authenticatie:** `/api/cloud/auth` valideert rechtstreeks een Bearer-sleutel en retourneert de gemaskeerde sleutel en `projectId` van elke verbinding alleen voor een sleutel met het bereik `manage` / `admin`; de overige routes `/api/cloud/*` en `/api/assess` vereisen een beheersessie/API-sleutel. POST voor `/api/assess` gebruikt `validateBody` met een scopeschema op basis van een gediscrimineerde union.
 
 ---
 

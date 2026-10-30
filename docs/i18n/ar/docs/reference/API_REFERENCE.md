@@ -1437,9 +1437,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### التقييمات
 
-| نقطة النهاية | الطريقة  | الوصف                           |
-| ------------ | -------- | ------------------------------- |
-| `/api/evals` | GET/POST | سرد حزم التقييم / تشغيل التقييم |
+| نقطة النهاية | الطريقة | الوصف |
+| ------------ | ------- | ----- |
 
 ### السياسات
 
@@ -1967,12 +1966,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | سرد الأسماء المستعارة للنماذج كما تظهر للمزامنة السحابية |
 | GET | `/api/assess` | قراءة أحدث تصنيفات التقييم (لكل مزوّد خدمة/نموذج) |
 | POST | `/api/assess` | تشغيل تقييم — المتن: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | سرد حِزم الاختبارات المدمجة + أحدث عمليات التشغيل |
-| POST | `/api/evals` | تشغيل اختبار |
-| POST | `/api/evals/suites` | إنشاء حزمة اختبارات مخصّصة — يُتحقق من المتن بواسطة `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | استرداد حزمة اختبارات مخصّصة |
 
-**المصادقة:** يتحقق `/api/cloud/auth` من مفتاح Bearer مباشرةً، ولا يُرجع المفتاح المحجوب و`projectId` لكل اتصال إلا إذا كان المفتاح يمتلك نطاق `manage` / `admin`؛ وتتطلب مسارات `/api/cloud/*` و`/api/evals/*` و`/api/assess` الأخرى جلسة إدارة/مفتاح API. يستخدم طلب POST إلى `/api/assess` الدالة `validateBody` مع مخطط نطاق اتحاد مميّز.
+**المصادقة:** يتحقق `/api/cloud/auth` من مفتاح Bearer مباشرةً، ولا يُرجع المفتاح المحجوب و`projectId` لكل اتصال إلا إذا كان المفتاح يمتلك نطاق `manage` / `admin`؛ وتتطلب مسارات `/api/cloud/*` وو`/api/assess` الأخرى جلسة إدارة/مفتاح API. يستخدم طلب POST إلى `/api/assess` الدالة `validateBody` مع مخطط نطاق اتحاد مميّز.
 
 ---
 

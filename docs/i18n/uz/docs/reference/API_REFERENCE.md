@@ -1359,9 +1359,8 @@ GET javobi `agents[]` (id, name, binary, version, installed, protocol, isCustom)
 
 ### Baholashlar
 
-| Endpoint     | Metod    | Tavsif                                                        |
-| ------------ | -------- | ------------------------------------------------------------- |
-| `/api/evals` | GET/POST | Baholash toʻplamlarini roʻyxatlash/baholashni ishga tushirish |
+| Endpoint | Metod | Tavsif |
+| -------- | ----- | ------ |
 
 ### Siyosatlar
 
@@ -1887,12 +1886,8 @@ Ommaviy A2A agent kartasini (nomi, tavsifi, imkoniyatlari, ko‘nikmalar katalog
 | GET | `/api/cloud/models/alias` | Bulutli sinxronlashga taqdim etilgan model taxalluslari ro‘yxatini olish |
 | GET | `/api/assess` | Eng so‘nggi baholash toifalarini o‘qish (har bir provayder/model bo‘yicha) |
 | POST | `/api/assess` | Baholashni ishga tushirish — so‘rov tanasi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Ichki sinov to‘plamlari va eng so‘nggi ishga tushirishlar ro‘yxatini olish |
-| POST | `/api/evals` | Sinovni ishga tushirish |
-| POST | `/api/evals/suites` | Maxsus sinov to‘plamini yaratish — so‘rov tanasi `evalSuiteSaveSchema` orqali tekshiriladi |
-| GET | `/api/evals/suites/[id]` | Maxsus sinov to‘plamini olish |
 
-**Autentifikatsiya:** `/api/cloud/auth` Bearer kalitini bevosita tekshiradi va faqat `manage` / `admin` vakolat doirasiga ega kalit uchun har bir ulanishning niqoblangan kaliti va `projectId` qiymatini qaytaradi; boshqa `/api/cloud/*`, `/api/evals/*` va `/api/assess` yo‘nalishlari boshqaruv sessiyasi/API kalitini talab qiladi. `/api/assess` POST diskriminatorli birlashma ko‘lam sxemasi bilan `validateBody` dan foydalanadi.
+**Autentifikatsiya:** `/api/cloud/auth` Bearer kalitini bevosita tekshiradi va faqat `manage` / `admin` vakolat doirasiga ega kalit uchun har bir ulanishning niqoblangan kaliti va `projectId` qiymatini qaytaradi; boshqa `/api/cloud/*` va `/api/assess` yo‘nalishlari boshqaruv sessiyasi/API kalitini talab qiladi. `/api/assess` POST diskriminatorli birlashma ko‘lam sxemasi bilan `validateBody` dan foydalanadi.
 
 ---
 

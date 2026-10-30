@@ -746,51 +746,6 @@
       "description": "Rodyti užduoties sugeneruotų šaltinio failų sąrašą"
     }
   },
-  "eval": {
-    "description": "Tvarkyti vertinimo rinkinius ir vykdymus",
-    "suites": {
-      "description": "Tvarkyti vertinimo rinkinius",
-      "list": {
-        "description": "Rodyti vertinimo rinkinių sąrašą"
-      },
-      "get": {
-        "description": "Gauti vertinimo rinkinio informaciją pagal ID"
-      },
-      "create": {
-        "description": "Sukurti vertinimo rinkinį iš JSON failo",
-        "file": "Kelias į rinkinio aprašo JSON failą"
-      }
-    },
-    "run": {
-      "description": "Pradėti rinkinio vertinimo vykdymą",
-      "model": "Vertintino modelio ID (numatytoji reikšmė: auto)",
-      "combo": "Priverstinai naudoti konkretų derinį pagal pavadinimą",
-      "concurrency": "Vienu metu vykdomų pavyzdžių skaičius (numatytoji reikšmė: 4)",
-      "tag": "Pažymėti šį vykdymą žyma vėlesniam filtravimui",
-      "watch": "Stebėti vykdymo eigą iki pabaigos"
-    },
-    "list": {
-      "description": "Rodyti vertinimo vykdymų sąrašą",
-      "suite": "Filtruoti pagal rinkinio ID",
-      "status": "Filtruoti pagal būseną",
-      "since": "Grąžinti vykdymus nuo šios laiko žymos",
-      "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 50)"
-    },
-    "get": {
-      "description": "Gauti vertinimo vykdymo informaciją pagal ID"
-    },
-    "results": {
-      "description": "Rodyti vertinimo vykdymo pavyzdžių rezultatus",
-      "failed": "Rodyti tik nesėkmingus pavyzdžius"
-    },
-    "cancel": {
-      "description": "Atšaukti vykdomą vertinimą",
-      "yes": "Praleisti patvirtinimo raginimą"
-    },
-    "scorecard": {
-      "description": "Rodyti užbaigto vertinimo vykdymo rezultatų suvestinę"
-    }
-  },
   "program": {
     "description": "OmniRoute — išmanusis DI maršruto parinktuvas su automatiniu atsarginiu perjungimu",
     "version": "Parodyti versiją ir išeiti",

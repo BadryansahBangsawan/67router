@@ -746,51 +746,6 @@
       "description": "タスクによって生成されたソースファイルを一覧表示"
     }
   },
-  "eval": {
-    "description": "評価スイートと実行を管理",
-    "suites": {
-      "description": "評価スイートを管理",
-      "list": {
-        "description": "評価スイートを一覧表示"
-      },
-      "get": {
-        "description": "IDで評価スイートの詳細を取得"
-      },
-      "create": {
-        "description": "JSONファイルから評価スイートを作成",
-        "file": "スイート定義JSONファイルのパス"
-      }
-    },
-    "run": {
-      "description": "スイートの評価実行を開始",
-      "model": "評価するモデルID（デフォルト: auto）",
-      "combo": "名前で特定のコンボを強制指定",
-      "concurrency": "同時実行サンプル数（デフォルト: 4）",
-      "tag": "後でフィルタリングできるようにこの実行にタグを付ける",
-      "watch": "完了するまで実行の進捗を監視"
-    },
-    "list": {
-      "description": "評価実行を一覧表示",
-      "suite": "スイートIDでフィルタリング",
-      "status": "ステータスでフィルタリング",
-      "since": "このタイムスタンプ以降の実行を返す",
-      "limit": "最大結果数（デフォルト: 50）"
-    },
-    "get": {
-      "description": "IDで評価実行の詳細を取得"
-    },
-    "results": {
-      "description": "評価実行のサンプル結果を表示",
-      "failed": "失敗したサンプルのみ表示"
-    },
-    "cancel": {
-      "description": "実行中の評価をキャンセル",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "scorecard": {
-      "description": "完了した評価実行のスコアカードを表示"
-    }
-  },
   "program": {
     "description": "OmniRoute — 自動フォールバック付きスマートAIルーター",
     "version": "バージョンを表示して終了",

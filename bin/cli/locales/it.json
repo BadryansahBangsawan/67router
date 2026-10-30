@@ -746,51 +746,6 @@
       "description": "Elenca i file sorgente prodotti da un'attività"
     }
   },
-  "eval": {
-    "description": "Gestisci le suite di valutazione e le esecuzioni",
-    "suites": {
-      "description": "Gestisci le suite di valutazione",
-      "list": {
-        "description": "Elenca le suite di valutazione"
-      },
-      "get": {
-        "description": "Ottieni i dettagli della suite di valutazione in base all'ID"
-      },
-      "create": {
-        "description": "Crea una suite di valutazione da un file JSON",
-        "file": "Percorso del file JSON di definizione della suite"
-      }
-    },
-    "run": {
-      "description": "Avvia un'esecuzione di valutazione per una suite",
-      "model": "ID del modello da valutare (predefinito: auto)",
-      "combo": "Forza una combinazione specifica in base al nome",
-      "concurrency": "Numero di campioni simultanei (predefinito: 4)",
-      "tag": "Assegna un tag a questa esecuzione per filtrarla in seguito",
-      "watch": "Monitora l'avanzamento dell'esecuzione fino al completamento"
-    },
-    "list": {
-      "description": "Elenca le esecuzioni di valutazione",
-      "suite": "Filtra per ID della suite",
-      "status": "Filtra per stato",
-      "since": "Restituisci le esecuzioni successive a questo timestamp",
-      "limit": "Numero massimo di risultati (predefinito: 50)"
-    },
-    "get": {
-      "description": "Ottieni i dettagli dell'esecuzione di valutazione in base all'ID"
-    },
-    "results": {
-      "description": "Mostra i risultati dei campioni per un'esecuzione di valutazione",
-      "failed": "Mostra solo i campioni non riusciti"
-    },
-    "cancel": {
-      "description": "Annulla un'esecuzione di valutazione in corso",
-      "yes": "Salta la richiesta di conferma"
-    },
-    "scorecard": {
-      "description": "Mostra la scheda dei punteggi per un'esecuzione di valutazione completata"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI intelligente con fallback automatico",
     "version": "Stampa la versione ed esci",

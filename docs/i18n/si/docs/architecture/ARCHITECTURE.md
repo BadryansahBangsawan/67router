@@ -251,7 +251,6 @@ flowchart LR
 - අයවැය: `src/app/api/usage/budget` (GET/POST)
 - Fallback දාම: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - අනුකූලතා විගණනය: `src/app/api/compliance/audit-log` (GET, පිටුකරණය + ව්යුහගත metadata සමඟ)
-- ඇගයීම්: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ප්රතිපත්ති: `src/app/api/policies` (GET/POST)
 - සමමුහුර්තකරණ tokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - වින්යාස bundle: `src/app/api/sync/bundle` (GET, සැකසුම්/සපයන්නන්/සංයෝජන/යතුරු පිළිබඳ ETag අනුවාදගත snapshot එකක්)
@@ -315,7 +314,6 @@ flowchart LR
 - Fetch කාල සීමාව: `src/shared/utils/fetchTimeout.ts`
 - ඉල්ලීම් දුරමිතිය: `src/shared/utils/requestTelemetry.ts`
 - අනුකූලතාව/විගණනය: `src/lib/compliance/index.ts`
-- ඇගයීම් ධාවකය: `src/lib/evals/evalRunner.ts`
 - වසම් තත්ත්ව ස්ථායීකරණය: `src/lib/db/domainState.ts` — පසුබැසීමේ දාම, අයවැය, පිරිවැය ඉතිහාසය, අගුලු දැමීමේ තත්ත්වය සහ පරිපථ බිඳින සඳහා SQLite CRUD
 
 OAuth සපයන්නාගේ මොඩියුල (`src/lib/oauth/providers/` යටතේ තනි ගොනු 27ක්):

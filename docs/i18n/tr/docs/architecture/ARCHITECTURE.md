@@ -251,7 +251,6 @@ Yönetim alanları:
 - Bütçe: `src/app/api/usage/budget` (GET/POST)
 - Geri dönüş zincirleri: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Uyumluluk denetimi: `src/app/api/compliance/audit-log` (GET, sayfalama + yapılandırılmış meta veriler ile)
-- Değerlendirmeler: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politikalar: `src/app/api/policies` (GET/POST)
 - Senkronizasyon belirteçleri: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Yapılandırma paketi: `src/app/api/sync/bundle` (GET, ayarların/sağlayıcıların/kombinasyonların/anahtarların ETag sürümlü anlık görüntüsü)
@@ -315,7 +314,6 @@ Etki alanı katmanı modülleri:
 - Getirme zaman aşımı: `src/shared/utils/fetchTimeout.ts`
 - İstek telemetrisi: `src/shared/utils/requestTelemetry.ts`
 - Uyumluluk/denetim: `src/lib/compliance/index.ts`
-- Değerlendirme çalıştırıcısı: `src/lib/evals/evalRunner.ts`
 - Etki alanı durumu kalıcılığı: `src/lib/db/domainState.ts` — geri dönüş zincirleri, bütçeler, maliyet geçmişi, kilitleme durumu ve devre kesiciler için SQLite CRUD işlemleri
 
 OAuth sağlayıcı modülleri (`src/lib/oauth/providers/` altında 27 ayrı dosya):

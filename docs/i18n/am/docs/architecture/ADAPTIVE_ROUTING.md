@@ -49,7 +49,6 @@ AI Agent / IDE
 | የጥላ ትራፊክ                     | `open-sse/services/combo/shadowRouting.ts`                                                      |
 | Guardrails                   | `src/lib/guardrails/` (የቅድመ/ድህረ hooks)                                                          |
 | ትክክለኛ cache                  | `src/lib/semanticCache.ts` (በsignature ላይ የተመሠረተ)                                               |
-| ገምጋሚዎች / በግምገማ የሚመራ ማዘዋወር    | `src/lib/evals/`፣ `open-sse/services/evalRouting.ts`                                            |
 | የCombo ውሳኔ ማብራሪያ             | `open-sse/services/combo/decisionTrace.ts`                                                      |
 | የDashboard ቅጽበታዊ ክስተቶች       | `src/lib/events/eventBus.ts` (የUI ማሳወቂያ ቻናል፣ `unknown` payloads፣ የ100 ግቤቶች ታሪክ)                 |
 
@@ -267,8 +266,6 @@ OmniRoute Future AGIን (ወይም ማንኛውንም evaluator) እንደ **ሊ
 - ወደፊት የሚኖር `Evaluator` (ወሳኝ፣ አካባቢያዊ ዳኛ፣ HTTP፣ WASM) ክስተቶችን/መከታተያዎችን
   ይጠቀማል እና ወደዚያው `getQualityScore`/የጥራት-ምክንያት መንገድ
   የሚገባ `QualityScore` ይመልሳል።
-- አሁን ያለው በeval የሚመራ ማዘዋወር (`open-sse/services/evalRouting.ts`) ሲነቃ
-  የcombo ዒላማዎችን በ`eval_runs` የማለፍ መጠኖች መሠረት አስቀድሞ እንደገና ያደራጃል።
 
 ምንም ግምገማ በጥያቄው መንገድ ላይ በተመሳሳይ ጊዜ አይሠራም፣ እና gateway ያለ evaluator
 ሙሉ በሙሉ ይሠራል።

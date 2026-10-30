@@ -258,7 +258,6 @@ Domeny zarządzania:
 - Budżet: `src/app/api/usage/budget` (GET/POST)
 - Łańcuchy fallback: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audyt compliance: `src/app/api/compliance/audit-log` (GET, z paginacją + ustrukturyzowanymi metadanymi)
-- Evale: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Polityki: `src/app/api/policies` (GET/POST)
 - Tokeny sync: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Pakiet konfiguracji: `src/app/api/sync/bundle` (GET, snapshot settings/providers/combos/keys wersjonowany ETag)
@@ -322,7 +321,6 @@ Moduły warstwy domenowej:
 - Limit czasu pobierania: `src/shared/utils/fetchTimeout.ts`
 - Telemetria żądań: `src/shared/utils/requestTelemetry.ts`
 - Zgodność/audyt: `src/lib/compliance/index.ts`
-- Moduł uruchamiania ewaluacji: `src/lib/evals/evalRunner.ts`
 - Trwałe przechowywanie stanu domeny: `src/lib/db/domainState.ts` — operacje CRUD SQLite dla łańcuchów awaryjnych, budżetów, historii kosztów, stanu blokad i wyłączników obwodu
 
 Moduły dostawców OAuth (27 osobnych plików w katalogu `src/lib/oauth/providers/`):

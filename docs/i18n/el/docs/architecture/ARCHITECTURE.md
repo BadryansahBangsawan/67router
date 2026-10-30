@@ -251,7 +251,6 @@ flowchart LR
 - Προϋπολογισμός: `src/app/api/usage/budget` (GET/POST)
 - Αλυσίδες εφεδρικής υποστήριξης: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ελεγκτικό αρχείο συμμόρφωσης: `src/app/api/compliance/audit-log` (GET, με σελιδοποίηση + δομημένα μεταδεδομένα)
-- Αξιολογήσεις: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Πολιτικές: `src/app/api/policies` (GET/POST)
 - Διακριτικά συγχρονισμού: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Πακέτο ρυθμίσεων: `src/app/api/sync/bundle` (GET, στιγμιότυπο ρυθμίσεων/παρόχων/συνδυασμών/κλειδιών με έκδοση ETag)
@@ -315,7 +314,6 @@ flowchart LR
 - Χρονικό όριο ανάκτησης: `src/shared/utils/fetchTimeout.ts`
 - Τηλεμετρία αιτημάτων: `src/shared/utils/requestTelemetry.ts`
 - Συμμόρφωση/έλεγχος: `src/lib/compliance/index.ts`
-- Εκτελεστής αξιολογήσεων: `src/lib/evals/evalRunner.ts`
 - Μόνιμη αποθήκευση κατάστασης τομέα: `src/lib/db/domainState.ts` — λειτουργίες CRUD SQLite για αλυσίδες εναλλακτικής χρήσης, προϋπολογισμούς, ιστορικό κόστους, κατάσταση αποκλεισμού και διακόπτες κυκλώματος
 
 Μονάδες παρόχων OAuth (27 μεμονωμένα αρχεία στον κατάλογο `src/lib/oauth/providers/`):

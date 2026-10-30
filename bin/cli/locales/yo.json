@@ -746,51 +746,6 @@
       "description": "Ṣàtòjọ àwọn fáìlì orísun tí iṣẹ́ kan ṣẹ̀dá"
     }
   },
-  "eval": {
-    "description": "Ṣàkóso àwọn àkójọpọ̀ eval àti àwọn ìṣiṣẹ́ wọn",
-    "suites": {
-      "description": "Ṣàkóso àwọn àkójọpọ̀ eval",
-      "list": {
-        "description": "Ṣàtòjọ àwọn àkójọpọ̀ eval"
-      },
-      "get": {
-        "description": "Gba àwọn àlàyé àkójọpọ̀ eval nípasẹ̀ ID"
-      },
-      "create": {
-        "description": "Ṣẹ̀dá àkójọpọ̀ eval láti inú fáìlì JSON kan",
-        "file": "Ọ̀nà sí fáìlì JSON ìtumọ̀ àkójọpọ̀"
-      }
-    },
-    "run": {
-      "description": "Bẹ̀rẹ̀ ìṣiṣẹ́ eval fún àkójọpọ̀ kan",
-      "model": "ID àwòṣe láti ṣe àyẹ̀wò (àiyipada: auto)",
-      "combo": "Fi tipátipá lo àkópọ̀ pàtó kan nípasẹ̀ orúkọ",
-      "concurrency": "Iye àwọn àpẹẹrẹ tí yóò ṣiṣẹ́ lẹ́ẹ̀kan náà (àiyipada: 4)",
-      "tag": "Fi àmì sí ìṣiṣẹ́ yìí fún àsẹ̀jáde lẹ́yìn náà",
-      "watch": "Ṣàkíyèsí ìlọsíwájú ìṣiṣẹ́ títí yóò fi parí"
-    },
-    "list": {
-      "description": "Ṣàtòjọ àwọn ìṣiṣẹ́ eval",
-      "suite": "Ṣe àsẹ̀jáde nípasẹ̀ ID àkójọpọ̀",
-      "status": "Ṣe àsẹ̀jáde nípasẹ̀ ipò",
-      "since": "Dá àwọn ìṣiṣẹ́ padà láti ìgbà àmì-àkókò yìí",
-      "limit": "Iye àbájáde tó pọ̀ jù (àiyipada: 50)"
-    },
-    "get": {
-      "description": "Gba àwọn àlàyé ìṣiṣẹ́ eval nípasẹ̀ ID"
-    },
-    "results": {
-      "description": "Ṣàfihàn àwọn àbájáde àpẹẹrẹ fún ìṣiṣẹ́ eval kan",
-      "failed": "Ṣàfihàn àwọn àpẹẹrẹ tó kùnà nìkan"
-    },
-    "cancel": {
-      "description": "Fagilé eval tí ń lọ lọ́wọ́",
-      "yes": "Fo ìbéèrè ìmúdájú kọjá"
-    },
-    "scorecard": {
-      "description": "Ṣàfihàn káàdì ìṣírò fún ìṣiṣẹ́ eval tó ti parí"
-    }
-  },
   "program": {
     "description": "OmniRoute — Olùdarí AI ọlọ́gbọ́n pẹ̀lú ìpadà-aifọwọ́yi",
     "version": "Ṣàfihàn ẹ̀dà kí o sì jáde",

@@ -746,51 +746,6 @@
       "description": "Vis kildefiler, der er oprettet af en opgave"
     }
   },
-  "eval": {
-    "description": "Administrer evalueringspakker og kørsler",
-    "suites": {
-      "description": "Administrer evalueringspakker",
-      "list": {
-        "description": "Vis evalueringssuiter"
-      },
-      "get": {
-        "description": "Hent oplysninger om evalueringssuite via ID"
-      },
-      "create": {
-        "description": "Opret en evalueringssuite fra en JSON-fil",
-        "file": "Sti til JSON-filen med suitedefinitionen"
-      }
-    },
-    "run": {
-      "description": "Start en evalueringskørsel for en suite",
-      "model": "Model-ID, der skal evalueres (standard: auto)",
-      "combo": "Gennemtving en bestemt kombination efter navn",
-      "concurrency": "Antal samtidige prøver (standard: 4)",
-      "tag": "Mærk denne kørsel til senere filtrering",
-      "watch": "Overvåg kørslens status, indtil den er fuldført"
-    },
-    "list": {
-      "description": "Vis evalueringskørsler",
-      "suite": "Filtrer efter suite-ID",
-      "status": "Filtrer efter status",
-      "since": "Returner kørsler siden dette tidsstempel",
-      "limit": "Maksimalt antal resultater (standard: 50)"
-    },
-    "get": {
-      "description": "Hent oplysninger om evalueringskørsel via ID"
-    },
-    "results": {
-      "description": "Vis prøveresultater for en evalueringskørsel",
-      "failed": "Vis kun mislykkede prøver"
-    },
-    "cancel": {
-      "description": "Annuller en igangværende evaluering",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "scorecard": {
-      "description": "Vis scorekort for en fuldført evalueringskørsel"
-    }
-  },
   "program": {
     "description": "OmniRoute — Smart AI-router med automatisk fallback",
     "version": "Vis version og afslut",

@@ -1438,9 +1438,8 @@ Răspunsul GET include `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evaluări
 
-| Endpoint     | Metodă   | Descriere                                      |
-| ------------ | -------- | ---------------------------------------------- |
-| `/api/evals` | GET/POST | Listează suitele de evaluare/rulează evaluarea |
+| Endpoint | Metodă | Descriere |
+| -------- | ------ | --------- |
 
 ### Politici
 
@@ -1968,12 +1967,8 @@ Returnează fișa publică a agentului A2A (nume, descriere, capabilități, cat
 | GET | `/api/cloud/models/alias` | Listează aliasurile modelelor așa cum sunt expuse sincronizării în cloud |
 | GET | `/api/assess` | Citește cele mai recente clasificări ale evaluărilor (pentru fiecare furnizor/model) |
 | POST | `/api/assess` | Rulează o analiză — corp: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Listează suitele de evaluare încorporate + cele mai recente rulări |
-| POST | `/api/evals` | Declanșează o rulare de evaluare |
-| POST | `/api/evals/suites` | Creează o suită de evaluare personalizată — corp validat de `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Preia o suită de evaluare personalizată |
 
-**Autentificare:** `/api/cloud/auth` validează direct o cheie Bearer și returnează cheia mascată și `projectId` pentru fiecare conexiune numai în cazul unei chei cu domeniul de aplicare `manage` / `admin`; celelalte rute `/api/cloud/*`, `/api/evals/*` și `/api/assess` necesită o sesiune/cheie API de administrare. Solicitările POST către `/api/assess` utilizează `validateBody` cu o schemă de domeniu de aplicare de tip uniune discriminată.
+**Autentificare:** `/api/cloud/auth` validează direct o cheie Bearer și returnează cheia mascată și `projectId` pentru fiecare conexiune numai în cazul unei chei cu domeniul de aplicare `manage` / `admin`; celelalte rute `/api/cloud/*` și `/api/assess` necesită o sesiune/cheie API de administrare. Solicitările POST către `/api/assess` utilizează `validateBody` cu o schemă de domeniu de aplicare de tip uniune discriminată.
 
 ---
 

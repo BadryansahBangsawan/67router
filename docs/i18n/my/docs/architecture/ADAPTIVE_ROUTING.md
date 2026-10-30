@@ -42,7 +42,6 @@ AI Agent / IDE
 | Shadow traffic                             | `open-sse/services/combo/shadowRouting.ts`                                                                 |
 | Guardrails                                 | `src/lib/guardrails/` (မလုပ်ဆောင်မီ/လုပ်ဆောင်ပြီး hooks)                                                   |
 | Exact cache                                | `src/lib/semanticCache.ts` (signature အခြေပြု)                                                             |
-| Evaluators / eval အခြေပြု routing          | `src/lib/evals/`၊ `open-sse/services/evalRouting.ts`                                                       |
 | Combo ဆုံးဖြတ်ချက် ရှင်းလင်းဖော်ပြနိုင်မှု | `open-sse/services/combo/decisionTrace.ts`                                                                 |
 | Dashboard အချိန်နှင့်တစ်ပြေးညီ events      | `src/lib/events/eventBus.ts` (UI အသိပေးချက် channel၊ `unknown` payloads၊ မှတ်တမ်း 100 ခု)                  |
 
@@ -248,8 +247,6 @@ intelligence/evaluation backend အဖြစ်သာ သတ်မှတ်ပ�
 - အနာဂတ် `Evaluator` (deterministic, local judge, HTTP, WASM) သည်
   event/trace များကို လက်ခံအသုံးပြုပြီး တူညီသော `getQualityScore`/quality-factor လမ်းကြောင်းထဲသို့
   ထည့်သွင်းမည့် `QualityScore` ကို ပြန်ပေးမည်။
-- ရှိပြီးသား eval-driven routing (`open-sse/services/evalRouting.ts`) သည် ဖွင့်ထားသည့်အခါ
-  `eval_runs` pass-rate များအလိုက် combo target များကို ပြန်လည်စီစဉ်ပြီးဖြစ်သည်။
 
 Request လမ်းကြောင်းပေါ်တွင် evaluation ကို synchronous ပုံစံဖြင့် လုပ်ဆောင်ခြင်းမရှိဘဲ evaluator
 မရှိသည့်အခါတွင်လည်း gateway သည် အပြည့်အဝ လည်ပတ်နိုင်သည်။

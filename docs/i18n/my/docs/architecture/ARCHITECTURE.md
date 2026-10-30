@@ -251,7 +251,6 @@ flowchart LR
 - ဘတ်ဂျက်: `src/app/api/usage/budget` (GET/POST)
 - Fallback chain များ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - စည်းမျဉ်းလိုက်နာမှု စစ်ဆေးမှတ်တမ်း: `src/app/api/compliance/audit-log` (GET၊ pagination + ဖွဲ့စည်းပုံသတ်မှတ်ထားသော metadata ပါဝင်သည်)
-- အကဲဖြတ်မှုများ: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - မူဝါဒများ: `src/app/api/policies` (GET/POST)
 - Sync token များ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Config bundle: `src/app/api/sync/bundle` (GET၊ ဆက်တင်များ/provider များ/combo များ/key များ၏ ETag-versioned snapshot)
@@ -315,7 +314,6 @@ Domain layer module များ:
 - Fetch timeout: `src/shared/utils/fetchTimeout.ts`
 - Request telemetry: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Eval runner: `src/lib/evals/evalRunner.ts`
 - Domain state persistence: `src/lib/db/domainState.ts` — fallback chain များ၊ budget များ၊ cost history၊ lockout state နှင့် circuit breaker များအတွက် SQLite CRUD
 
 OAuth provider module များ (`src/lib/oauth/providers/` အောက်ရှိ သီးခြား file 27 ခု):

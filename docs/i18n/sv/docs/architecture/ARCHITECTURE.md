@@ -251,7 +251,6 @@ Hanteringsområden:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Reservkedjor: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Efterlevnadsgranskning: `src/app/api/compliance/audit-log` (GET, med sidindelning + strukturerade metadata)
-- Utvärderingar: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Policyer: `src/app/api/policies` (GET/POST)
 - Synkroniseringstoken: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurationspaket: `src/app/api/sync/bundle` (GET, ETag-versionshanterad ögonblicksbild av inställningar/leverantörer/kombinationer/nycklar)
@@ -315,7 +314,6 @@ Domänlagermoduler:
 - Tidsgräns för hämtning: `src/shared/utils/fetchTimeout.ts`
 - Telemetri för förfrågningar: `src/shared/utils/requestTelemetry.ts`
 - Regelefterlevnad/granskning: `src/lib/compliance/index.ts`
-- Utvärderingskörare: `src/lib/evals/evalRunner.ts`
 - Beständig lagring av domäntillstånd: `src/lib/db/domainState.ts` — SQLite CRUD för reservkedjor, budgetar, kostnadshistorik, utelåsningstillstånd och kretsbrytare
 
 OAuth-leverantörsmoduler (27 enskilda filer under `src/lib/oauth/providers/`):

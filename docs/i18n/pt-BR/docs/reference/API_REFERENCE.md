@@ -1439,9 +1439,8 @@ A resposta GET inclui `agents[]` (id, name, binary, version, installed, protocol
 
 ### Avaliações
 
-| Endpoint     | Método   | Descrição                                          |
-| ------------ | -------- | -------------------------------------------------- |
-| `/api/evals` | GET/POST | Listar conjuntos de avaliação / executar avaliação |
+| Endpoint | Método | Descrição |
+| -------- | ------ | --------- |
 
 ### Políticas
 
@@ -1960,12 +1959,8 @@ Retorna o cartão público do agente A2A (nome, descrição, recursos, catálogo
 | GET | `/api/cloud/models/alias` | Lista aliases de modelos conforme expostos à sincronização com a nuvem |
 | GET | `/api/assess` | Lê as categorizações da avaliação mais recente (por provedor/modelo) |
 | POST | `/api/assess` | Executa uma avaliação — corpo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Lista conjuntos de avaliações integrados + execuções mais recentes |
-| POST | `/api/evals` | Aciona uma execução de avaliação |
-| POST | `/api/evals/suites` | Cria um conjunto de avaliações personalizado — corpo validado por `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Recupera um conjunto de avaliações personalizado |
 
-**Autenticação:** `/api/cloud/auth` valida diretamente uma chave Bearer e retorna a chave mascarada e o `projectId` de cada conexão somente para uma chave com o escopo `manage` / `admin`; as outras rotas `/api/cloud/*`, `/api/evals/*` e `/api/assess` exigem uma sessão/chave de API de gerenciamento. O POST de `/api/assess` usa `validateBody` com um esquema de escopo de união discriminada.
+**Autenticação:** `/api/cloud/auth` valida diretamente uma chave Bearer e retorna a chave mascarada e o `projectId` de cada conexão somente para uma chave com o escopo `manage` / `admin`; as outras rotas `/api/cloud/*` e `/api/assess` exigem uma sessão/chave de API de gerenciamento. O POST de `/api/assess` usa `validateBody` com um esquema de escopo de união discriminada.
 
 ---
 
