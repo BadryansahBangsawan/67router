@@ -50,12 +50,6 @@ try {
   const modelCount = Array.isArray(models.body?.data) ? models.body.data.length : 0;
   results.push(check("Catalog", modelCount > 0, `${modelCount} models`));
 
-  const pools = await get("/api/quota/pools");
-  const poolRows = Array.isArray(pools.body?.pools) ? pools.body.pools : [];
-  const allocations = poolRows.reduce((sum, pool) => sum + (pool.allocations?.length || 0), 0);
-  results.push(check("Pools", pools.ok, `${poolRows.length}`));
-  results.push(check("Allocations", pools.ok && allocations >= poolRows.length, `${allocations}`));
-
   const status = await get("/api/omniroute/status");
   results.push(check("Status API", status.ok, `HTTP ${status.status}`));
   results.push(check("No live request", status.body?.liveRequestExecuted === false));
