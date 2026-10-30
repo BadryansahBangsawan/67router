@@ -74,20 +74,6 @@ test("administrative pricing and routing routes require management authenticatio
   }
 });
 
-test("memory management routes require management authentication", () => {
-  const routePaths = ["src/app/api/memory/route.ts", "src/app/api/memory/[id]/route.ts"];
-
-  for (const routePath of routePaths) {
-    const content = fs.readFileSync(routePath, "utf8");
-    assert.ok(content.includes('from "@/lib/api/requireManagementAuth"'), routePath);
-    assert.ok(
-      content.includes("const authError = await requireManagementAuth(request);"),
-      routePath
-    );
-    assert.ok(content.includes("if (authError) return authError;"), routePath);
-  }
-});
-
 test("provider validation routes require management authentication before reading credentials", () => {
   const routePaths = [
     "src/app/api/provider-nodes/validate/route.ts",
@@ -309,15 +295,4 @@ test("management routes sanitize error.message before returning it to clients", 
       `${routePath} must route error.message through sanitizeErrorMessage() or buildErrorBody() — Hard Rule #12`
     );
   }
-});
-
-test("memory health endpoint requires management authentication", () => {
-  // verifyExtractionPipeline() exposes the memory subsystem state (Qdrant
-  // reachability, DB error paths). Same precedent as /api/db/health and
-  // /api/monitoring/health, which require management auth.
-  const routePath = "src/app/api/memory/health/route.ts";
-  const content = fs.readFileSync(routePath, "utf8");
-  assert.ok(content.includes('from "@/lib/api/requireManagementAuth"'));
-  assert.ok(content.includes("const authError = await requireManagementAuth(request);"));
-  assert.ok(content.includes("if (authError) return authError;"));
 });

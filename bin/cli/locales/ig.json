@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Jikwaa ebe nchekwa mkparịta ụka OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Chọọ ndenye ebe nchekwa site na ajụjụ dabere na nghọta",
-      "type": "Nyochaa site n'ụdị ebe nchekwa (user|feedback|project|reference)",
-      "limit": "Nsonaazụ kachasị (ndabara: 20)",
-      "api_key": "Nyochaa site na API key",
-      "token_budget": "Kpebie oke token niile dị na nsonaazụ"
-    },
-    "add": {
-      "description": "Tinye ndenye ebe nchekwa ọhụrụ",
-      "content": "Ọdịnaya ederede ebe nchekwa",
-      "file": "Gụọ ọdịnaya site na faịlụ",
-      "type": "Ụdị ebe nchekwa (ndabara: user)",
-      "metadata": "Ihe metadata JSON",
-      "api_key": "Jikọta ya na API key"
-    },
-    "clear": {
-      "description": "Hichapụ ndenye ebe nchekwa kwekọrọ na nzacha",
-      "type": "Nyochaa site n'ụdị",
-      "older": "Hichapụ ndenye ndị tọrọ oge a kara aka (30d, 6m, 1y)",
-      "api_key": "Nyochaa site na API key",
-      "yes": "Mafere ozi nkwenye"
-    },
-    "list": {
-      "description": "Depụta ndenye ebe nchekwa na-enweghị nhazi ọkwa ọchụchọ",
-      "type": "Jiri ụdị yọcha",
-      "limit": "Nsonaazụ kachasị (ndabara: 100)",
-      "api_key": "Jiri igodo API yọcha"
-    },
-    "get": {
-      "description": "Were otu ndenye ebe nchekwa site na ID"
-    },
-    "delete": {
-      "description": "Hichapụ ndenye ebe nchekwa site na ID",
-      "yes": "Mafere ozi nkwenye"
-    },
-    "health": {
-      "description": "Gosi ọnọdụ ahụike nke sistemụ ebe nchekwa (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Jikwaa njikọ ndị na-eweta OAuth",
     "providers": {

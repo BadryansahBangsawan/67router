@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Upravljanje konverzacijskom memorijom OmniRoute (FTS5 + vektor)",
-    "search": {
-      "description": "Pretraži unose memorije prema semantičkom upitu",
-      "type": "Filtriraj po tipu memorije (user|feedback|project|reference)",
-      "limit": "Maksimalan broj rezultata (zadano: 20)",
-      "api_key": "Filtriraj po API ključu",
-      "token_budget": "Ograniči ukupan broj tokena u rezultatima"
-    },
-    "add": {
-      "description": "Dodaj novi unos memorije",
-      "content": "Tekstualni sadržaj memorije",
-      "file": "Učitaj sadržaj iz datoteke",
-      "type": "Tip memorije (zadano: user)",
-      "metadata": "JSON objekt metapodataka",
-      "api_key": "Povezati s API ključem"
-    },
-    "clear": {
-      "description": "Izbriši unose memorije koji odgovaraju filtrima",
-      "type": "Filtriraj po tipu",
-      "older": "Izbriši unose starije od trajanja (30d, 6m, 1y)",
-      "api_key": "Filtriraj po API ključu",
-      "yes": "Preskoči potvrdu"
-    },
-    "list": {
-      "description": "Prikaži unose memorije bez rangiranja pretraživanja",
-      "type": "Filtriraj po tipu",
-      "limit": "Maksimalan broj rezultata (zadano: 100)",
-      "api_key": "Filtriraj po API ključu"
-    },
-    "get": {
-      "description": "Dohvati jedan unos memorije po ID-u"
-    },
-    "delete": {
-      "description": "Izbriši unos memorije po ID-u",
-      "yes": "Preskoči potvrdu"
-    },
-    "health": {
-      "description": "Prikaži stanje podsustava memorije (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Upravljaj OAuth vezama s pružateljima usluga",
     "providers": {

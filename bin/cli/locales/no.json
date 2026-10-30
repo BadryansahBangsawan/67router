@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Administrer samtaleminnet i OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Søk i minneoppføringer med semantisk spørring",
-      "type": "Filtrer etter minnetype (user|feedback|project|reference)",
-      "limit": "Maksimalt antall resultater (standard: 20)",
-      "api_key": "Filtrer etter API-nøkkel",
-      "token_budget": "Begrens totalt antall tokener i resultatene"
-    },
-    "add": {
-      "description": "Legg til en ny minneoppføring",
-      "content": "Tekstinnhold i minnet",
-      "file": "Les innhold fra fil",
-      "type": "Minnetype (standard: user)",
-      "metadata": "JSON-metadataobjekt",
-      "api_key": "Knytt til API-nøkkel"
-    },
-    "clear": {
-      "description": "Slett minneoppføringer som samsvarer med filtrene",
-      "type": "Filtrer etter type",
-      "older": "Slett oppføringer eldre enn angitt varighet (30d, 6m, 1y)",
-      "api_key": "Filtrer etter API-nøkkel",
-      "yes": "Hopp over bekreftelsesforespørsel"
-    },
-    "list": {
-      "description": "Vis minneoppføringer uten søkerangering",
-      "type": "Filtrer etter type",
-      "limit": "Maksimalt antall resultater (standard: 100)",
-      "api_key": "Filtrer etter API-nøkkel"
-    },
-    "get": {
-      "description": "Hent én minneoppføring etter ID"
-    },
-    "delete": {
-      "description": "Slett en minneoppføring etter ID",
-      "yes": "Hopp over bekreftelsesforespørsel"
-    },
-    "health": {
-      "description": "Vis tilstanden til minneundersystemet (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Administrer tilkoblinger til OAuth-leverandører",
     "providers": {

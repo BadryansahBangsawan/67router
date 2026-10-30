@@ -118,7 +118,6 @@ export const COLLECTORS = [
   },
   { glob: "tests/unit/autoCombo/**/*.test.ts", sources: ["vitest.mcp.config.ts"] },
   { glob: "tests/unit/api/**/*.spec.ts", sources: ["vitest.mcp.config.ts"] },
-  { glob: "src/lib/memory/__tests__/generic-backend.test.ts", sources: ["vitest.mcp.config.ts"] },
   { glob: "tests/unit/encryption.spec.ts", sources: ["vitest.mcp.config.ts"] },
   { glob: "src/shared/components/**/*.test.tsx", sources: ["vitest.mcp.config.ts"] },
   { glob: "src/shared/hooks/__tests__/**/*.test.tsx", sources: ["vitest.mcp.config.ts"] },
@@ -139,12 +138,7 @@ export const COLLECTORS = [
     sources: ["vitest.config.ts"],
     anchors: { "vitest.config.ts": "open-sse/**/__tests__/**/*.test.ts" },
   },
-  // vitest.config.ts include — src/lib/memory and src/lib/skills __tests__ collected by vitest.config.ts.
-  {
-    glob: "src/lib/memory/__tests__/**/*.test.ts",
-    sources: ["vitest.config.ts"],
-    anchors: { "vitest.config.ts": "src/lib/memory/__tests__/**/*.test.ts" },
-  },
+  // vitest.config.ts include — src/lib/skills __tests__ collected by vitest.config.ts.
   {
     glob: "src/lib/skills/__tests__/**/*.test.ts",
     sources: ["vitest.config.ts"],

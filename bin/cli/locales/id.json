@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Kelola memori percakapan OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Cari entri memori berdasarkan kueri semantik",
-      "type": "Filter berdasarkan jenis memori (user|feedback|project|reference)",
-      "limit": "Jumlah hasil maksimum (default: 20)",
-      "api_key": "Filter berdasarkan kunci API",
-      "token_budget": "Batasi jumlah total token dalam hasil"
-    },
-    "add": {
-      "description": "Tambahkan entri memori baru",
-      "content": "Konten teks memori",
-      "file": "Baca konten dari file",
-      "type": "Jenis memori (default: user)",
-      "metadata": "Objek metadata JSON",
-      "api_key": "Kaitkan dengan kunci API"
-    },
-    "clear": {
-      "description": "Hapus entri memori yang cocok dengan filter",
-      "type": "Filter berdasarkan jenis",
-      "older": "Hapus entri yang lebih lama dari durasi (30d, 6m, 1y)",
-      "api_key": "Filter berdasarkan kunci API",
-      "yes": "Lewati permintaan konfirmasi"
-    },
-    "list": {
-      "description": "Cantumkan entri memori tanpa pemeringkatan pencarian",
-      "type": "Filter berdasarkan jenis",
-      "limit": "Jumlah hasil maksimum (default: 100)",
-      "api_key": "Filter berdasarkan kunci API"
-    },
-    "get": {
-      "description": "Dapatkan satu entri memori berdasarkan ID"
-    },
-    "delete": {
-      "description": "Hapus entri memori berdasarkan ID",
-      "yes": "Lewati permintaan konfirmasi"
-    },
-    "health": {
-      "description": "Tampilkan kesehatan subsistem memori (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Kelola koneksi penyedia OAuth",
     "providers": {

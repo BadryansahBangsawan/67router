@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Halda OmniRoute'i vestlusmälu (FTS5 + vektor)",
-    "search": {
-      "description": "Otsi mälukirjeid semantilise päringu järgi",
-      "type": "Filtreeri mälu tüübi järgi (user|feedback|project|reference)",
-      "limit": "Maksimaalne tulemuste arv (vaikeväärtus: 20)",
-      "api_key": "Filtreeri API võtme järgi",
-      "token_budget": "Piira tulemuste tokenite üldarvu"
-    },
-    "add": {
-      "description": "Lisa uus mälukirje",
-      "content": "Mälu tekstiline sisu",
-      "file": "Loe sisu failist",
-      "type": "Mälu tüüp (vaikeväärtus: user)",
-      "metadata": "JSON metaandmete objekt",
-      "api_key": "Seosta API võtmega"
-    },
-    "clear": {
-      "description": "Kustuta filtritele vastavad mälukirjed",
-      "type": "Filtreeri tüübi järgi",
-      "older": "Kustuta kirjed, mis on vanemad kui määratud aeg (30d, 6m, 1y)",
-      "api_key": "Filtreeri API võtme järgi",
-      "yes": "Jäta kinnitusküsimus vahele"
-    },
-    "list": {
-      "description": "Loetle mäluandmed ilma otsingu järjestuseta",
-      "type": "Filtreeri tüübi alusel",
-      "limit": "Maksimaalne tulemuste arv (vaikimisi: 100)",
-      "api_key": "Filtreeri API-võtme alusel"
-    },
-    "get": {
-      "description": "Hangi üksik mäluandme kirje ID järgi"
-    },
-    "delete": {
-      "description": "Kustuta mäluandme kirje ID järgi",
-      "yes": "Jäta kinnitusküsimus vahele"
-    },
-    "health": {
-      "description": "Kuva mälu allsüsteemi olek (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Halda OAuth-teenusepakkujate ühendusi",
     "providers": {

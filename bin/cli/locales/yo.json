@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Ṣàkóso ìrántí ìjíròrò OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Ṣàwárí àwọn àkọsílẹ̀ ìrántí nípasẹ̀ ìbéèrè ìtumọ̀",
-      "type": "Ṣe àlẹ̀mọ́ nípa irú ìrántí (user|feedback|project|reference)",
-      "limit": "Àbájáde tó pọ̀ jù (àkọ́kọ́: 20)",
-      "api_key": "Ṣe àlẹ̀mọ́ nípa kọ́kọ́rọ́ API",
-      "token_budget": "Fi ààlà sí àpapọ̀ àwọn token nínú àbájáde"
-    },
-    "add": {
-      "description": "Ṣàfikún àkọsílẹ̀ ìrántí tuntun",
-      "content": "Àkóónú ọ̀rọ̀ ìrántí",
-      "file": "Ka àkóónú láti inú fáìlì",
-      "type": "Irú ìrántí (àkọ́kọ́: user)",
-      "metadata": "Ohun metadata JSON",
-      "api_key": "So pọ̀ mọ́ kọ́kọ́rọ́ API"
-    },
-    "clear": {
-      "description": "Pa àwọn àkọsílẹ̀ ìrántí tó bá àwọn àlẹ̀mọ́ mu rẹ́",
-      "type": "Ṣe àlẹ̀mọ́ nípa irú",
-      "older": "Pa àwọn àkọsílẹ̀ tó ti pé ju iye àkókò lọ rẹ́ (30d, 6m, 1y)",
-      "api_key": "Ṣe àlẹ̀mọ́ nípa kọ́kọ́rọ́ API",
-      "yes": "Fo ìbéèrè ìmúdájú kọjá"
-    },
-    "list": {
-      "description": "Ṣe àtòjọ àwọn àkọsílẹ̀ ìrántí láìsí ìṣètò ipò ìṣàwárí",
-      "type": "Ṣe àlẹ̀mọ́ nípa irú",
-      "limit": "Iye èsì tó pọ̀ jù (àìyẹsẹ̀: 100)",
-      "api_key": "Ṣe àlẹ̀mọ́ nípa kọ́kọ́rọ́ API"
-    },
-    "get": {
-      "description": "Gba àkọsílẹ̀ ìrántí kan ṣoṣo nípasẹ̀ ID"
-    },
-    "delete": {
-      "description": "Pa àkọsílẹ̀ ìrántí kan rẹ́ nípasẹ̀ ID",
-      "yes": "Fo ìbéèrè ìmúdájú kọjá"
-    },
-    "health": {
-      "description": "Ṣàfihàn ìlera ètò abẹ́lẹ̀ ìrántí (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Ṣàkóso àwọn àsopọ̀ olùpèsè OAuth",
     "providers": {

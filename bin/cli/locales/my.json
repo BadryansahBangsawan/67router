@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "OmniRoute စကားပြောဆိုမှု memory (FTS5 + vector) ကို စီမံရန်",
-    "search": {
-      "description": "အဓိပ္ပာယ်ဆိုင်ရာ query ဖြင့် memory entry များကို ရှာဖွေရန်",
-      "type": "memory အမျိုးအစားဖြင့် စစ်ထုတ်ရန် (user|feedback|project|reference)",
-      "limit": "အများဆုံး ရလဒ်အရေအတွက် (မူလသတ်မှတ်ချက်: 20)",
-      "api_key": "API key ဖြင့် စစ်ထုတ်ရန်",
-      "token_budget": "ရလဒ်များရှိ စုစုပေါင်း token အရေအတွက်ကို ကန့်သတ်ရန်"
-    },
-    "add": {
-      "description": "memory entry အသစ်တစ်ခု ထည့်ရန်",
-      "content": "Memory စာသားအကြောင်းအရာ",
-      "file": "ဖိုင်မှ အကြောင်းအရာကို ဖတ်ရန်",
-      "type": "Memory အမျိုးအစား (မူလသတ်မှတ်ချက်: user)",
-      "metadata": "JSON မက်တာဒေတာ အရာဝတ္ထု",
-      "api_key": "API key နှင့် ချိတ်ဆက်ရန်"
-    },
-    "clear": {
-      "description": "စစ်ထုတ်မှုများနှင့် ကိုက်ညီသော memory entry များကို ဖျက်ရန်",
-      "type": "အမျိုးအစားဖြင့် စစ်ထုတ်ရန်",
-      "older": "သတ်မှတ်ကာလထက် ပိုဟောင်းသော entry များကို ဖျက်ရန် (30d, 6m, 1y)",
-      "api_key": "API key ဖြင့် စစ်ထုတ်ရန်",
-      "yes": "အတည်ပြုရန် အချက်ပေးချက်ကို ကျော်ရန်"
-    },
-    "list": {
-      "description": "ရှာဖွေမှုအဆင့်သတ်မှတ်ချက်မပါဘဲ memory မှတ်တမ်းများကို စာရင်းပြုရန်",
-      "type": "အမျိုးအစားအလိုက် စစ်ထုတ်ရန်",
-      "limit": "အများဆုံးရလဒ်အရေအတွက် (မူလသတ်မှတ်ချက်: 100)",
-      "api_key": "API key အလိုက် စစ်ထုတ်ရန်"
-    },
-    "get": {
-      "description": "ID ဖြင့် memory မှတ်တမ်းတစ်ခုကို ရယူရန်"
-    },
-    "delete": {
-      "description": "ID ဖြင့် memory မှတ်တမ်းတစ်ခုကို ဖျက်ရန်",
-      "yes": "အတည်ပြုရန် အချက်ပေးချက်ကို ကျော်ရန်"
-    },
-    "health": {
-      "description": "memory စနစ်ခွဲ၏ ကျန်းမာရေးအခြေအနေကို ပြရန် (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth provider ချိတ်ဆက်မှုများကို စီမံရန်",
     "providers": {

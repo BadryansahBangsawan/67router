@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Dhibiti kumbukumbu ya mazungumzo ya OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Tafuta maingizo ya kumbukumbu kwa hoja ya kisemantiki",
-      "type": "Chuja kwa aina ya kumbukumbu (user|feedback|project|reference)",
-      "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 20)",
-      "api_key": "Chuja kwa ufunguo wa API",
-      "token_budget": "Weka kikomo cha jumla ya tokeni katika matokeo"
-    },
-    "add": {
-      "description": "Ongeza ingizo jipya la kumbukumbu",
-      "content": "Maudhui ya maandishi ya kumbukumbu",
-      "file": "Soma maudhui kutoka kwenye faili",
-      "type": "Aina ya kumbukumbu (chaguo-msingi: user)",
-      "metadata": "Kipengee cha metadata cha JSON",
-      "api_key": "Husianisha na ufunguo wa API"
-    },
-    "clear": {
-      "description": "Futa maingizo ya kumbukumbu yanayolingana na vichujio",
-      "type": "Chuja kwa aina",
-      "older": "Futa maingizo yaliyo na umri unaozidi muda uliobainishwa (30d, 6m, 1y)",
-      "api_key": "Chuja kwa ufunguo wa API",
-      "yes": "Ruka ombi la uthibitisho"
-    },
-    "list": {
-      "description": "Orodhesha maingizo ya kumbukumbu bila upangaji wa matokeo ya utafutaji",
-      "type": "Chuja kwa aina",
-      "limit": "Idadi ya juu ya matokeo (chaguo-msingi: 100)",
-      "api_key": "Chuja kwa ufunguo wa API"
-    },
-    "get": {
-      "description": "Pata ingizo moja la kumbukumbu kwa ID"
-    },
-    "delete": {
-      "description": "Futa ingizo la kumbukumbu kwa ID",
-      "yes": "Ruka ombi la uthibitisho"
-    },
-    "health": {
-      "description": "Onyesha hali ya mfumo mdogo wa kumbukumbu (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Dhibiti miunganisho ya watoa huduma wa OAuth",
     "providers": {

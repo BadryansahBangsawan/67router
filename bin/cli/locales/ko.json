@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "OmniRoute 대화형 메모리 관리(FTS5 + vector)",
-    "search": {
-      "description": "의미론적 쿼리로 메모리 항목 검색",
-      "type": "메모리 유형으로 필터링(user|feedback|project|reference)",
-      "limit": "최대 결과 수(기본값: 20)",
-      "api_key": "API 키로 필터링",
-      "token_budget": "결과의 총 토큰 수 제한"
-    },
-    "add": {
-      "description": "새 메모리 항목 추가",
-      "content": "메모리 텍스트 콘텐츠",
-      "file": "파일에서 콘텐츠 읽기",
-      "type": "메모리 유형(기본값: user)",
-      "metadata": "JSON 메타데이터 객체",
-      "api_key": "API 키와 연결"
-    },
-    "clear": {
-      "description": "필터와 일치하는 메모리 항목 삭제",
-      "type": "유형으로 필터링",
-      "older": "지정된 기간보다 오래된 항목 삭제(30d, 6m, 1y)",
-      "api_key": "API 키로 필터링",
-      "yes": "확인 메시지 건너뛰기"
-    },
-    "list": {
-      "description": "검색 순위 없이 메모리 항목 목록 보기",
-      "type": "유형으로 필터링",
-      "limit": "최대 결과 수(기본값: 100)",
-      "api_key": "API 키로 필터링"
-    },
-    "get": {
-      "description": "ID로 단일 메모리 항목 가져오기"
-    },
-    "delete": {
-      "description": "ID로 메모리 항목 삭제",
-      "yes": "확인 프롬프트 건너뛰기"
-    },
-    "health": {
-      "description": "메모리 하위 시스템 상태 표시(FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth 제공자 연결 관리",
     "providers": {

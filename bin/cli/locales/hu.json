@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Az OmniRoute társalgási memóriájának kezelése (FTS5 + vector)",
-    "search": {
-      "description": "Memóriabejegyzések keresése szemantikai lekérdezéssel",
-      "type": "Szűrés memóriatípus szerint (user|feedback|project|reference)",
-      "limit": "Találatok maximális száma (alapértelmezett: 20)",
-      "api_key": "Szűrés API-kulcs alapján",
-      "token_budget": "A találatokban szereplő tokenek teljes számának korlátozása"
-    },
-    "add": {
-      "description": "Új memóriabejegyzés hozzáadása",
-      "content": "A memória szöveges tartalma",
-      "file": "Tartalom beolvasása fájlból",
-      "type": "Memóriatípus (alapértelmezett: user)",
-      "metadata": "JSON-metaadatobjektum",
-      "api_key": "Társítás API-kulccsal"
-    },
-    "clear": {
-      "description": "A szűrőknek megfelelő memóriabejegyzések törlése",
-      "type": "Szűrés típus szerint",
-      "older": "A megadott időtartamnál régebbi bejegyzések törlése (30d, 6m, 1y)",
-      "api_key": "Szűrés API-kulcs alapján",
-      "yes": "Megerősítő kérdés kihagyása"
-    },
-    "list": {
-      "description": "Memóriabejegyzések listázása keresési rangsorolás nélkül",
-      "type": "Szűrés típus szerint",
-      "limit": "Találatok maximális száma (alapértelmezett: 100)",
-      "api_key": "Szűrés API-kulcs alapján"
-    },
-    "get": {
-      "description": "Egyetlen memóriabejegyzés lekérése azonosító alapján"
-    },
-    "delete": {
-      "description": "Memóriabejegyzés törlése azonosító alapján",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "health": {
-      "description": "A memória-alrendszer állapotának megjelenítése (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth-szolgáltatói kapcsolatok kezelése",
     "providers": {

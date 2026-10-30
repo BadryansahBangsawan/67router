@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Pamahalaan ang memorya ng pag-uusap ng OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Maghanap sa mga entry ng memorya gamit ang semantic query",
-      "type": "I-filter ayon sa uri ng memorya (user|feedback|project|reference)",
-      "limit": "Pinakamaraming resulta (default: 20)",
-      "api_key": "I-filter ayon sa API key",
-      "token_budget": "Limitahan ang kabuuang token sa mga resulta"
-    },
-    "add": {
-      "description": "Magdagdag ng bagong entry sa memorya",
-      "content": "Nilalamang teksto ng memorya",
-      "file": "Basahin ang nilalaman mula sa file",
-      "type": "Uri ng memory (default: user)",
-      "metadata": "JSON metadata object",
-      "api_key": "Iugnay sa API key"
-    },
-    "clear": {
-      "description": "Tanggalin ang mga memory entry na tumutugma sa mga filter",
-      "type": "I-filter ayon sa uri",
-      "older": "Tanggalin ang mga entry na mas luma sa itinakdang tagal (30d, 6m, 1y)",
-      "api_key": "I-filter ayon sa API key",
-      "yes": "Laktawan ang prompt ng kumpirmasyon"
-    },
-    "list": {
-      "description": "Ilista ang mga memory entry nang walang pagraranggo ng paghahanap",
-      "type": "I-filter ayon sa uri",
-      "limit": "Pinakamaraming resulta (default: 100)",
-      "api_key": "I-filter ayon sa API key"
-    },
-    "get": {
-      "description": "Kumuha ng isang memory entry ayon sa ID"
-    },
-    "delete": {
-      "description": "Tanggalin ang isang memory entry ayon sa ID",
-      "yes": "Laktawan ang prompt ng kumpirmasyon"
-    },
-    "health": {
-      "description": "Ipakita ang kalagayan ng memory subsystem (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Pamahalaan ang mga koneksyon ng OAuth provider",
     "providers": {

@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Konversationsgedächtnis von OmniRoute verwalten (FTS5 + Vektor)",
-    "search": {
-      "description": "Gedächtniseinträge mittels semantischer Abfrage durchsuchen",
-      "type": "Nach Gedächtnistyp filtern (user|feedback|project|reference)",
-      "limit": "Maximale Anzahl an Ergebnissen (Standard: 20)",
-      "api_key": "Nach API-Schlüssel filtern",
-      "token_budget": "Gesamtzahl der Tokens in den Ergebnissen begrenzen"
-    },
-    "add": {
-      "description": "Einen neuen Gedächtniseintrag hinzufügen",
-      "content": "Textinhalt des Gedächtniseintrags",
-      "file": "Inhalt aus Datei lesen",
-      "type": "Gedächtnistyp (Standard: user)",
-      "metadata": "JSON-Metadatenobjekt",
-      "api_key": "Mit API-Schlüssel verknüpfen"
-    },
-    "clear": {
-      "description": "Gedächtniseinträge löschen, die den Filtern entsprechen",
-      "type": "Nach Typ filtern",
-      "older": "Einträge löschen, die älter als die angegebene Dauer sind (30d, 6m, 1y)",
-      "api_key": "Nach API-Schlüssel filtern",
-      "yes": "Bestätigungsaufforderung überspringen"
-    },
-    "list": {
-      "description": "Gedächtniseinträge ohne Suchrangfolge auflisten",
-      "type": "Nach Typ filtern",
-      "limit": "Maximale Anzahl an Ergebnissen (Standard: 100)",
-      "api_key": "Nach API-Schlüssel filtern"
-    },
-    "get": {
-      "description": "Einen einzelnen Gedächtniseintrag anhand der ID abrufen"
-    },
-    "delete": {
-      "description": "Einen Gedächtniseintrag anhand der ID löschen",
-      "yes": "Bestätigungsabfrage überspringen"
-    },
-    "health": {
-      "description": "Zustand des Speichersubsystems anzeigen (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth-Anbieterverbindungen verwalten",
     "providers": {

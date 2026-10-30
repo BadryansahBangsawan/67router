@@ -228,16 +228,7 @@ test("boot wiring: registerNodejs routes optional inits through the headless gat
   assert.match(body, /skipInHeadless\("cloud-sync"\)/);
 });
 
-test("boot (headless): the memory subsystems stay on the core path and still start", () => {
+test("boot: the removed memory subsystems are no longer started", () => {
   const source = fs.readFileSync("src/instrumentation-node.ts", "utf8");
-  const tableStart = source.indexOf("export const OPTIONAL_BOOT_SUBSYSTEMS");
-  const tableEnd = source.indexOf("export async function startOptionalBootSubsystems");
-  const table = source.slice(tableStart, tableEnd);
-  const body = source.slice(source.indexOf("export async function registerNodejs"));
-  for (const mod of ['import("@/lib/memory/index")', 'import("@/lib/memory/typedDecay")']) {
-    assert.ok(!table.includes(mod), `${mod} must not be in the headless-skipped table`);
-    assert.ok(body.includes(mod), `${mod} must be started inline by registerNodejs`);
-  }
-  // Inline core inits are not wrapped by any headless guard.
-  assert.doesNotMatch(body, /skipInHeadless\("memory/);
+  assert.doesNotMatch(source, /@\/lib\/memory\//);
 });

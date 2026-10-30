@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Bainistigh cuimhne comhrá OmniRoute (FTS5 + veicteoir)",
-    "search": {
-      "description": "Cuardaigh iontrálacha cuimhne le ceist shéimeantach",
-      "type": "Scag de réir cineál cuimhne (úsáideoir|aiseolas|tionscadal|tagairt)",
-      "limit": "Uaslíon torthaí (réamhshocrú: 20)",
-      "api_key": "Scag de réir eochair API",
-      "token_budget": "Teorainn le huaslíon comharthaí i dtorthaí"
-    },
-    "add": {
-      "description": "Cuir iontráil cuimhne nua leis",
-      "content": "Ábhar téacs cuimhne",
-      "file": "Léigh ábhar ó chomhad",
-      "type": "Cineál cuimhne (réamhshocrú: úsáideoir)",
-      "metadata": "Cuspóir metadata JSON",
-      "api_key": "Ceangail le heochair API"
-    },
-    "clear": {
-      "description": "Scrios iontrálacha cuimhne a mheaitseálann scagairí",
-      "type": "Scag de réir cineáil",
-      "older": "Scrios iontrálacha níos sine ná ainm tréimhse (30l, 6m, 1b)",
-      "api_key": "Scag de réir eochair API",
-      "yes": "Cuir an moladh deimhnithe ar ceal"
-    },
-    "list": {
-      "description": "Liostaigh iontrálacha cuimhine gan rátáil cuardaigh",
-      "type": "Scag de réir cineál",
-      "limit": "Uasmhéid torthaí (réamhshocrú: 100)",
-      "api_key": "Scag de réir eochair API"
-    },
-    "get": {
-      "description": "Faigh iontráil cuimhine amháin le ID"
-    },
-    "delete": {
-      "description": "Scrios iontráil cuimhine le ID",
-      "yes": "Cuir an moladh deimhnithe ar ceal"
-    },
-    "health": {
-      "description": "Taispeáin sláinte subsistéim cuimhine (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Bainistigh ceangail soláthraithe OAuth",
     "providers": {

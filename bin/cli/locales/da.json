@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Administrer OmniRoute-samtalehukommelse (FTS5 + vector)",
-    "search": {
-      "description": "Søg i hukommelsesposter med en semantisk forespørgsel",
-      "type": "Filtrer efter hukommelsestype (user|feedback|project|reference)",
-      "limit": "Maksimalt antal resultater (standard: 20)",
-      "api_key": "Filtrer efter API-nøgle",
-      "token_budget": "Begræns det samlede antal tokens i resultaterne"
-    },
-    "add": {
-      "description": "Tilføj en ny hukommelsespost",
-      "content": "Hukommelsens tekstindhold",
-      "file": "Læs indhold fra fil",
-      "type": "Hukommelsestype (standard: user)",
-      "metadata": "JSON-metadataobjekt",
-      "api_key": "Knyt til API-nøgle"
-    },
-    "clear": {
-      "description": "Slet hukommelsesposter, der matcher filtrene",
-      "type": "Filtrer efter type",
-      "older": "Slet poster, der er ældre end varigheden (30d, 6m, 1y)",
-      "api_key": "Filtrer efter API-nøgle",
-      "yes": "Spring bekræftelsesprompt over"
-    },
-    "list": {
-      "description": "Vis hukommelsesposter uden søgerangering",
-      "type": "Filtrer efter type",
-      "limit": "Maksimalt antal resultater (standard: 100)",
-      "api_key": "Filtrer efter API-nøgle"
-    },
-    "get": {
-      "description": "Hent en enkelt hukommelsespost efter ID"
-    },
-    "delete": {
-      "description": "Slet en hukommelsespost efter ID",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "health": {
-      "description": "Vis hukommelsesundersystemets tilstand (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Administrer forbindelser til OAuth-udbydere",
     "providers": {

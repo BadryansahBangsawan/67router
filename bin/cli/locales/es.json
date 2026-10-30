@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Gestionar la memoria conversacional de OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Buscar entradas de memoria mediante una consulta semántica",
-      "type": "Filtrar por tipo de memoria (user|feedback|project|reference)",
-      "limit": "Número máximo de resultados (predeterminado: 20)",
-      "api_key": "Filtrar por clave de API",
-      "token_budget": "Limitar el total de tokens en los resultados"
-    },
-    "add": {
-      "description": "Añadir una nueva entrada de memoria",
-      "content": "Contenido de texto de la memoria",
-      "file": "Leer el contenido desde un archivo",
-      "type": "Tipo de memoria (predeterminado: user)",
-      "metadata": "Objeto de metadatos JSON",
-      "api_key": "Asociar con una clave de API"
-    },
-    "clear": {
-      "description": "Eliminar las entradas de memoria que coincidan con los filtros",
-      "type": "Filtrar por tipo",
-      "older": "Eliminar entradas anteriores a la duración indicada (30d, 6m, 1y)",
-      "api_key": "Filtrar por clave de API",
-      "yes": "Omitir la solicitud de confirmación"
-    },
-    "list": {
-      "description": "Listar las entradas de memoria sin clasificación de búsqueda",
-      "type": "Filtrar por tipo",
-      "limit": "Número máximo de resultados (predeterminado: 100)",
-      "api_key": "Filtrar por clave de API"
-    },
-    "get": {
-      "description": "Obtener una única entrada de memoria por ID"
-    },
-    "delete": {
-      "description": "Eliminar una entrada de memoria por ID",
-      "yes": "Omitir la solicitud de confirmación"
-    },
-    "health": {
-      "description": "Mostrar el estado del subsistema de memoria (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Gestionar conexiones de proveedores OAuth",
     "providers": {

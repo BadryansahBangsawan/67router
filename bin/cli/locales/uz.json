@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "OmniRoute suhbat xotirasini boshqarish (FTS5 + vector)",
-    "search": {
-      "description": "Semantik so‘rov orqali xotira yozuvlarini qidirish",
-      "type": "Xotira turi bo‘yicha filtrlash (user|feedback|project|reference)",
-      "limit": "Maksimal natijalar soni (standart: 20)",
-      "api_key": "API kaliti bo‘yicha filtrlash",
-      "token_budget": "Natijalardagi jami tokenlar sonini cheklash"
-    },
-    "add": {
-      "description": "Yangi xotira yozuvini qo‘shish",
-      "content": "Xotira matni mazmuni",
-      "file": "Kontentni fayldan o‘qish",
-      "type": "Xotira turi (standart: user)",
-      "metadata": "JSON metama’lumotlar obyekti",
-      "api_key": "API kaliti bilan bog‘lash"
-    },
-    "clear": {
-      "description": "Filtrlarga mos xotira yozuvlarini o‘chirish",
-      "type": "Tur bo‘yicha filtrlash",
-      "older": "Ko‘rsatilgan muddatdan eski yozuvlarni o‘chirish (30d, 6m, 1y)",
-      "api_key": "API kaliti bo‘yicha filtrlash",
-      "yes": "Tasdiqlash so‘rovini o‘tkazib yuborish"
-    },
-    "list": {
-      "description": "Xotira yozuvlarini qidiruv reytingisiz ko‘rsatish",
-      "type": "Tur bo‘yicha filtrlash",
-      "limit": "Natijalarning maksimal soni (standart: 100)",
-      "api_key": "API kaliti bo‘yicha filtrlash"
-    },
-    "get": {
-      "description": "ID bo‘yicha bitta xotira yozuvini olish"
-    },
-    "delete": {
-      "description": "ID bo‘yicha xotira yozuvini o‘chirish",
-      "yes": "Tasdiqlash so‘rovini o‘tkazib yuborish"
-    },
-    "health": {
-      "description": "Xotira quyi tizimi holatini ko‘rsatish (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth provayder ulanishlarini boshqarish",
     "providers": {

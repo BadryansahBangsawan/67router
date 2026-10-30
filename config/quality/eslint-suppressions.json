@@ -270,7 +270,7 @@
   },
   "open-sse/mcp-server/server.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 3
+      "count": 2
     }
   },
   "open-sse/mcp-server/tools/advancedTools.ts": {
@@ -945,11 +945,6 @@
       "count": 3
     }
   },
-  "src/app/api/memory/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
   "src/app/api/oauth/[provider]/[action]/route.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 4
@@ -988,11 +983,6 @@
   "src/app/api/settings/obsidian/route.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
-    }
-  },
-  "src/app/api/settings/qdrant/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
     }
   },
   "src/app/api/settings/route.ts": {
@@ -1320,31 +1310,6 @@
       "count": 1
     }
   },
-  "src/lib/memory/__tests__/generic-backend.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 4
-    }
-  },
-  "src/lib/memory/__tests__/schemas.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/lib/memory/genericBackend.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/lib/memory/retrieval.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/lib/memory/sqliteBackend.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
   "src/lib/monitoring/providerHealthAutopilot.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -1444,11 +1409,6 @@
     }
   },
   "src/lib/skills/githubCollector.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/lib/skills/memoryBuiltins.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
     }
@@ -1966,35 +1926,6 @@
       "count": 2
     }
   },
-  "tests/integration/memory-pipeline.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/integration/memory-reindex.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
-  "tests/integration/memory-route-put.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 5
-    }
-  },
-  "tests/integration/memory-summarize.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "tests/integration/modelsDevSync.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -2006,14 +1937,6 @@
     },
     "@typescript-eslint/no-unused-vars": {
       "count": 3
-    }
-  },
-  "tests/integration/performance-regression.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
     }
   },
   "tests/integration/pipeline-combo.test.ts": {
@@ -2029,11 +1952,6 @@
   "tests/integration/proxy-registry-flow.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 9
-    }
-  },
-  "tests/integration/qdrant-routes.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 3
     }
   },
   "tests/integration/quota-pools-usage.test.ts": {
@@ -2576,11 +2494,6 @@
   "tests/unit/cli-mcp-call-commands.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 10
-    }
-  },
-  "tests/unit/cli-memory-commands.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 18
     }
   },
   "tests/unit/cli-memory-types.test.mjs": {
@@ -3597,46 +3510,6 @@
   "tests/unit/management-password.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 4
-    }
-  },
-  "tests/unit/memory-cache-safe-injection.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 4
-    }
-  },
-  "tests/unit/memory-embedding-remote.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
-  "tests/unit/memory-extraction.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/memory-glm-injection.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
-  "tests/unit/memory-retrieve-preview.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/memory-route.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 2
-    }
-  },
-  "tests/unit/memory-store.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
-  "tests/unit/memory-summarization.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 2
     }
   },
   "tests/unit/minimax-tts-1043.test.ts": {
@@ -4737,19 +4610,9 @@
       "count": 1
     }
   },
-  "tests/unit/ui/engine-tab.test.tsx": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "tests/unit/ui/fleetAggregation.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 3
-    }
-  },
-  "tests/unit/ui/memories-tab.test.tsx": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
     }
   },
   "tests/unit/ui/model-alias-edit.test.tsx": {

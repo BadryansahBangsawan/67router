@@ -39,7 +39,6 @@ test("flags node:test imports in the Vitest-only config roots", () => {
   const dirs = [
     "open-sse/services/__tests__",
     "open-sse/translator/helpers/__tests__",
-    "src/lib/memory/__tests__",
     "src/lib/skills/__tests__",
   ];
 

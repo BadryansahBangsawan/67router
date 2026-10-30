@@ -53,6 +53,22 @@ const REMOVED_PATHS: string[] = [
   "src/app/api/webhooks",
   "src/app/(dashboard)/dashboard/webhooks",
   "bin/cli/commands/webhooks.mjs",
+  // memory
+  "src/lib/memory",
+  "src/app/api/memory",
+  "src/app/api/settings/memory",
+  "src/app/api/settings/qdrant",
+  "src/app/(dashboard)/dashboard/memory",
+  "src/app/(dashboard)/dashboard/settings/components/MemorySkillsTab.tsx",
+  "src/shared/schemas/memory.ts",
+  "src/shared/schemas/qdrant.ts",
+  "src/lib/db/memoryVec.ts",
+  "src/lib/skills/memoryBuiltins.ts",
+  "open-sse/mcp-server/tools/memoryTools.ts",
+  "open-sse/handlers/chatCore/memoryExtraction.ts",
+  "open-sse/handlers/chatCore/memorySkillsInjection.ts",
+  "bin/cli/commands/memory.mjs",
+  "bin/cli/api-commands/memory.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -89,6 +105,15 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /api\/webhooks/,
   /dashboard\/webhooks/,
   /\bparseAndValidateWebhookUrl\b/,
+  // memory
+  /lib\/memory\//,
+  /api\/memory\b|api\/settings\/(memory|qdrant)\b/,
+  /dashboard\/memory\b/,
+  /schemas\/memory\b/,
+  /db\/memoryVec\b/,
+  /\bmemoryTools\b|omniroute_memory_/,
+  /memoryBuiltins|memorySkillsInjection|chatCore\/memoryExtraction/,
+  /\b(injectMemory|retrieveMemories|extractFacts|runMemoryExtractionGate)\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

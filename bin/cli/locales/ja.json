@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "OmniRouteの会話メモリ（FTS5 + vector）を管理",
-    "search": {
-      "description": "セマンティッククエリでメモリエントリを検索",
-      "type": "メモリタイプでフィルタリング（user|feedback|project|reference）",
-      "limit": "最大結果数（デフォルト: 20）",
-      "api_key": "APIキーでフィルタリング",
-      "token_budget": "結果内の合計トークン数を制限"
-    },
-    "add": {
-      "description": "新しいメモリエントリを追加",
-      "content": "メモリのテキストコンテンツ",
-      "file": "ファイルからコンテンツを読み込む",
-      "type": "メモリタイプ（デフォルト: user）",
-      "metadata": "JSONメタデータオブジェクト",
-      "api_key": "APIキーに関連付ける"
-    },
-    "clear": {
-      "description": "フィルターに一致するメモリエントリを削除",
-      "type": "タイプでフィルタリング",
-      "older": "指定期間（30d, 6m, 1y）より古いエントリを削除",
-      "api_key": "APIキーでフィルタリング",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "list": {
-      "description": "検索ランキングなしでメモリエントリの一覧を表示",
-      "type": "タイプでフィルタリング",
-      "limit": "最大結果数（デフォルト: 100）",
-      "api_key": "APIキーでフィルタリング"
-    },
-    "get": {
-      "description": "IDを指定して単一のメモリエントリを取得"
-    },
-    "delete": {
-      "description": "IDを指定してメモリエントリを削除",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "health": {
-      "description": "メモリサブシステムの稼働状態を表示（FTS5 + Qdrant）"
-    }
-  },
   "oauth": {
     "description": "OAuthプロバイダー接続を管理",
     "providers": {

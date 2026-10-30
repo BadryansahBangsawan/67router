@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Hallitse OmniRouten keskustelumuistia (FTS5 + vector)",
-    "search": {
-      "description": "Hae muistimerkintöjä semanttisella kyselyllä",
-      "type": "Suodata muistityypin mukaan (user|feedback|project|reference)",
-      "limit": "Tulosten enimmäismäärä (oletus: 20)",
-      "api_key": "Suodata API-avaimen mukaan",
-      "token_budget": "Rajoita tulosten tunnisteiden kokonaismäärää"
-    },
-    "add": {
-      "description": "Lisää uusi muistimerkintä",
-      "content": "Muistin tekstisisältö",
-      "file": "Lue sisältö tiedostosta",
-      "type": "Muistityyppi (oletus: user)",
-      "metadata": "JSON-metatieto-objekti",
-      "api_key": "Liitä API-avaimeen"
-    },
-    "clear": {
-      "description": "Poista suodattimia vastaavat muistimerkinnät",
-      "type": "Suodata tyypin mukaan",
-      "older": "Poista kestoa vanhemmat merkinnät (30d, 6m, 1y)",
-      "api_key": "Suodata API-avaimen mukaan",
-      "yes": "Ohita vahvistuskehote"
-    },
-    "list": {
-      "description": "Luettele muistimerkinnät ilman hakutulosten järjestystä",
-      "type": "Suodata tyypin mukaan",
-      "limit": "Tulosten enimmäismäärä (oletus: 100)",
-      "api_key": "Suodata API-avaimen mukaan"
-    },
-    "get": {
-      "description": "Hae yksittäinen muistimerkintä tunnuksen perusteella"
-    },
-    "delete": {
-      "description": "Poista muistimerkintä tunnuksen perusteella",
-      "yes": "Ohita vahvistuskehote"
-    },
-    "health": {
-      "description": "Näytä muistialijärjestelmän tila (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Hallitse OAuth-palveluntarjoajayhteyksiä",
     "providers": {

@@ -88,7 +88,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "cli-agents": "agentsDescription",
   "acp-agents": "agentsDescription",
   "cloud-agents": "cloudAgentsDescription",
-  memory: "memoryDescription",
   skills: "skillsDescription",
   "agent-skills": "agentSkillsDescription",
   "omni-skills": "omniSkillsDescription",

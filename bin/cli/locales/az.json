@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "OmniRoute danışıq yaddaşını idarə et (FTS5 + vector)",
-    "search": {
-      "description": "Yaddaş qeydlərini semantik sorğu ilə axtar",
-      "type": "Yaddaş növünə görə filtrlə (user|feedback|project|reference)",
-      "limit": "Maksimum nəticə sayı (standart: 20)",
-      "api_key": "API açarına görə filtrlə",
-      "token_budget": "Nəticələrdəki ümumi token sayını məhdudlaşdır"
-    },
-    "add": {
-      "description": "Yeni yaddaş qeydi əlavə et",
-      "content": "Yaddaşın mətn məzmunu",
-      "file": "Məzmunu fayldan oxu",
-      "type": "Yaddaş növü (standart: user)",
-      "metadata": "JSON metadata obyekti",
-      "api_key": "API açarı ilə əlaqələndir"
-    },
-    "clear": {
-      "description": "Filtrlərə uyğun yaddaş qeydlərini sil",
-      "type": "Növə görə filtrlə",
-      "older": "Müddətdən daha köhnə qeydləri sil (30d, 6m, 1y)",
-      "api_key": "API açarına görə filtrlə",
-      "yes": "Təsdiq sorğusunu ötür"
-    },
-    "list": {
-      "description": "Yaddaş qeydlərini axtarış sıralaması olmadan sadala",
-      "type": "Növə görə filtrlə",
-      "limit": "Maksimum nəticə sayı (standart: 100)",
-      "api_key": "API açarına görə filtrlə"
-    },
-    "get": {
-      "description": "ID əsasında tək yaddaş qeydini əldə et"
-    },
-    "delete": {
-      "description": "Yaddaş qeydini ID əsasında sil",
-      "yes": "Təsdiq sorğusunu ötür"
-    },
-    "health": {
-      "description": "Yaddaş alt sisteminin vəziyyətini göstər (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth provayder bağlantılarını idarə et",
     "providers": {

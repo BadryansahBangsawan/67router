@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Hantera OmniRoutes konversationsminne (FTS5 + vektor)",
-    "search": {
-      "description": "Sök efter minnesposter med en semantisk fråga",
-      "type": "Filtrera efter minnestyp (user|feedback|project|reference)",
-      "limit": "Maximalt antal resultat (standard: 20)",
-      "api_key": "Filtrera efter API-nyckel",
-      "token_budget": "Begränsa det totala antalet token i resultaten"
-    },
-    "add": {
-      "description": "Lägg till en ny minnespost",
-      "content": "Minnets textinnehåll",
-      "file": "Läs innehåll från fil",
-      "type": "Minnestyp (standard: user)",
-      "metadata": "JSON-metadataobjekt",
-      "api_key": "Koppla till API-nyckel"
-    },
-    "clear": {
-      "description": "Ta bort minnesposter som matchar filtren",
-      "type": "Filtrera efter typ",
-      "older": "Ta bort poster som är äldre än angiven tidsperiod (30d, 6m, 1y)",
-      "api_key": "Filtrera efter API-nyckel",
-      "yes": "Hoppa över bekräftelsefrågan"
-    },
-    "list": {
-      "description": "Lista minnesposter utan sökrankning",
-      "type": "Filtrera efter typ",
-      "limit": "Maximalt antal resultat (standard: 100)",
-      "api_key": "Filtrera efter API-nyckel"
-    },
-    "get": {
-      "description": "Hämta en enskild minnespost efter ID"
-    },
-    "delete": {
-      "description": "Ta bort en minnespost efter ID",
-      "yes": "Hoppa över bekräftelsefrågan"
-    },
-    "health": {
-      "description": "Visa hälsostatus för minnesundersystemet (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Hantera anslutningar till OAuth-leverantörer",
     "providers": {

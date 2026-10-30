@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "OmniRoute-gespreksgeheugen beheren (FTS5 + vector)",
-    "search": {
-      "description": "Geheugenitems zoeken met een semantische zoekopdracht",
-      "type": "Filteren op geheugentype (user|feedback|project|reference)",
-      "limit": "Maximaal aantal resultaten (standaard: 20)",
-      "api_key": "Filteren op API-sleutel",
-      "token_budget": "Totaal aantal tokens in resultaten beperken"
-    },
-    "add": {
-      "description": "Een nieuw geheugenitem toevoegen",
-      "content": "Tekstinhoud van het geheugen",
-      "file": "Inhoud uit bestand lezen",
-      "type": "Geheugentype (standaard: user)",
-      "metadata": "JSON-metadataobject",
-      "api_key": "Koppelen aan API-sleutel"
-    },
-    "clear": {
-      "description": "Geheugenitems verwijderen die overeenkomen met filters",
-      "type": "Filteren op type",
-      "older": "Items verwijderen die ouder zijn dan de duur (30d, 6m, 1y)",
-      "api_key": "Filteren op API-sleutel",
-      "yes": "Bevestigingsprompt overslaan"
-    },
-    "list": {
-      "description": "Geheugenitems weergeven zonder zoekrangschikking",
-      "type": "Filteren op type",
-      "limit": "Maximaal aantal resultaten (standaard: 100)",
-      "api_key": "Filteren op API-sleutel"
-    },
-    "get": {
-      "description": "Eén geheugenitem ophalen op basis van ID"
-    },
-    "delete": {
-      "description": "Een geheugenitem verwijderen op basis van ID",
-      "yes": "Bevestigingsprompt overslaan"
-    },
-    "health": {
-      "description": "Status van geheugensubsysteem weergeven (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth-providerverbindingen beheren",
     "providers": {

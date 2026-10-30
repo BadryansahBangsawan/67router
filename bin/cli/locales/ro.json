@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Gestionează memoria conversațională OmniRoute (FTS5 + vectorială)",
-    "search": {
-      "description": "Caută intrări în memorie prin interogare semantică",
-      "type": "Filtrează după tipul memoriei (user|feedback|project|reference)",
-      "limit": "Numărul maxim de rezultate (implicit: 20)",
-      "api_key": "Filtrează după cheia API",
-      "token_budget": "Limitează numărul total de tokenuri din rezultate"
-    },
-    "add": {
-      "description": "Adaugă o intrare nouă în memorie",
-      "content": "Conținutul text al memoriei",
-      "file": "Citește conținutul din fișier",
-      "type": "Tipul memoriei (implicit: user)",
-      "metadata": "Obiect de metadate JSON",
-      "api_key": "Asociază cu cheia API"
-    },
-    "clear": {
-      "description": "Șterge intrările din memorie care corespund filtrelor",
-      "type": "Filtrează după tip",
-      "older": "Șterge intrările mai vechi decât durata specificată (30d, 6m, 1y)",
-      "api_key": "Filtrează după cheia API",
-      "yes": "Omite solicitarea de confirmare"
-    },
-    "list": {
-      "description": "Listează intrările din memorie fără clasificare după relevanța căutării",
-      "type": "Filtrează după tip",
-      "limit": "Numărul maxim de rezultate (implicit: 100)",
-      "api_key": "Filtrează după cheia API"
-    },
-    "get": {
-      "description": "Obține o singură intrare din memorie după ID"
-    },
-    "delete": {
-      "description": "Șterge o intrare din memorie după ID",
-      "yes": "Omite solicitarea de confirmare"
-    },
-    "health": {
-      "description": "Afișează starea subsistemului de memorie (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Gestionează conexiunile furnizorilor OAuth",
     "providers": {

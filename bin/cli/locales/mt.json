@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Ħaddem il-memorja konversazzjonali ta' OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Fittex il-memorji permezz ta' kweri semantika",
-      "type": "Filtru bit-tip ta' memorja (user|feedback|project|reference)",
-      "limit": "Riżultati massimi (default: 20)",
-      "api_key": "Filtru bil-API key",
-      "token_budget": "Limita t-tokens totali fir-riżultati"
-    },
-    "add": {
-      "description": "Żid memorja ġdida",
-      "content": "Kontenut test tal-memorja",
-      "file": "Qara kontenut minn fajl",
-      "type": "Tip ta' memorja (default: user)",
-      "metadata": "Oġġett metadata JSON",
-      "api_key": "Assoċja mal-API key"
-    },
-    "clear": {
-      "description": "Tneħħi il-memorji li jikkorrispondu mal-filtri",
-      "type": "Filtru bit-tip",
-      "older": "Tneħħi memorji eqdem minn tul (30d, 6m, 1y)",
-      "api_key": "Filtru bil-API key",
-      "yes": "Qabbel il-prompt tal-konferma"
-    },
-    "list": {
-      "description": "Elenca d-daħliet tal-memorja mingħajr klassifikazzjoni tat-tiftix",
-      "type": "Iffiltra skont it-tip",
-      "limit": "Riżultati Massimi (predefinit: 100)",
-      "api_key": "Iffiltra b'API key"
-    },
-    "get": {
-      "description": "Aqbad daħla waħda tal-memorja b'ID"
-    },
-    "delete": {
-      "description": "Ħassar entrata tal-memorja bl-ID",
-      "yes": "Qabbaż il-konferma tal-mistoqsija"
-    },
-    "health": {
-      "description": "Uri s-saħħa tas-sotto-sistema tal-memorja (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Immaniġġja l-konnessjonijiet tal-fornitur OAuth",
     "providers": {

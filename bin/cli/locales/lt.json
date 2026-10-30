@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Tvarkyti OmniRoute pokalbių atmintį (FTS5 + vektorinė paieška)",
-    "search": {
-      "description": "Ieškoti atminties įrašų pagal semantinę užklausą",
-      "type": "Filtruoti pagal atminties tipą (user|feedback|project|reference)",
-      "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 20)",
-      "api_key": "Filtruoti pagal API raktą",
-      "token_budget": "Riboti bendrą leksemų skaičių rezultatuose"
-    },
-    "add": {
-      "description": "Pridėti naują atminties įrašą",
-      "content": "Atminties tekstinis turinys",
-      "file": "Nuskaityti turinį iš failo",
-      "type": "Atminties tipas (numatytoji reikšmė: user)",
-      "metadata": "JSON metaduomenų objektas",
-      "api_key": "Susieti su API raktu"
-    },
-    "clear": {
-      "description": "Ištrinti filtrus atitinkančius atminties įrašus",
-      "type": "Filtruoti pagal tipą",
-      "older": "Ištrinti senesnius nei nurodyta trukmė įrašus (30d, 6m, 1y)",
-      "api_key": "Filtruoti pagal API raktą",
-      "yes": "Praleisti patvirtinimo užklausą"
-    },
-    "list": {
-      "description": "Rodyti atminties įrašus netaikant paieškos reitingavimo",
-      "type": "Filtruoti pagal tipą",
-      "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 100)",
-      "api_key": "Filtruoti pagal API raktą"
-    },
-    "get": {
-      "description": "Gauti vieną atminties įrašą pagal ID"
-    },
-    "delete": {
-      "description": "Ištrinti atminties įrašą pagal ID",
-      "yes": "Praleisti patvirtinimo užklausą"
-    },
-    "health": {
-      "description": "Rodyti atminties posistemės būklę (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Tvarkyti OAuth teikėjų ryšius",
     "providers": {

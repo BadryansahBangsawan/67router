@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Sarrafa ma'ajiyar tattaunawar OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Nemo shigarwar ma'ajiya ta tambayar ma'ana",
-      "type": "Tace ta nau'in ma'ajiya (user|feedback|project|reference)",
-      "limit": "Matsakaicin sakamako (tsoho: 20)",
-      "api_key": "Tace ta API key",
-      "token_budget": "Ƙayyade jimillar tokens a sakamako"
-    },
-    "add": {
-      "description": "Ƙara sabuwar shigarwar ma'ajiya",
-      "content": "Abun rubutun ma'ajiya",
-      "file": "Karanta abun ciki daga fayil",
-      "type": "Nau'in ma'ajiya (tsoho: user)",
-      "metadata": "Abin metadata na JSON",
-      "api_key": "Haɗa da API key"
-    },
-    "clear": {
-      "description": "Share shigarwar ma'ajiya da suka dace da matatu",
-      "type": "Tace ta nau'i",
-      "older": "Share shigarwar da suka girmi tsawon lokaci (30d, 6m, 1y)",
-      "api_key": "Tace ta API key",
-      "yes": "Tsallake saƙon neman tabbatarwa"
-    },
-    "list": {
-      "description": "Jera bayanan ƙwaƙwalwa ba tare da matsayin bincike ba",
-      "type": "Tace ta nau'i",
-      "limit": "Matsakaicin sakamako (tsoho: 100)",
-      "api_key": "Tace ta API key"
-    },
-    "get": {
-      "description": "Samo shigarwar ƙwaƙwalwa guda ɗaya ta ID"
-    },
-    "delete": {
-      "description": "Share shigarwar ƙwaƙwalwa ta ID",
-      "yes": "Tsallake saƙon neman tabbatarwa"
-    },
-    "health": {
-      "description": "Nuna lafiyar tsarin ƙwaƙwalwa (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Sarrafa haɗin masu samar da OAuth",
     "providers": {

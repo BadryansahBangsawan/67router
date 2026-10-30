@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "管理 OmniRoute 对话记忆（FTS5 + 向量）",
-    "search": {
-      "description": "按语义查询搜索记忆条目",
-      "type": "按记忆类型筛选（user|feedback|project|reference）",
-      "limit": "最大结果数（默认：20）",
-      "api_key": "按 API 密钥筛选",
-      "token_budget": "限制结果中的总令牌数"
-    },
-    "add": {
-      "description": "添加新的记忆条目",
-      "content": "记忆文本内容",
-      "file": "从文件读取内容",
-      "type": "记忆类型（默认：user）",
-      "metadata": "JSON 元数据对象",
-      "api_key": "关联到 API 密钥"
-    },
-    "clear": {
-      "description": "删除匹配筛选条件的记忆条目",
-      "type": "按类型筛选",
-      "older": "删除早于指定时长的条目（30d, 6m, 1y）",
-      "api_key": "按 API 密钥筛选",
-      "yes": "跳过确认提示"
-    },
-    "list": {
-      "description": "列出记忆条目（不按搜索排名）",
-      "type": "按类型筛选",
-      "limit": "最大结果数（默认：100）",
-      "api_key": "按 API 密钥筛选"
-    },
-    "get": {
-      "description": "按 ID 获取单个记忆条目"
-    },
-    "delete": {
-      "description": "按 ID 删除记忆条目",
-      "yes": "跳过确认提示"
-    },
-    "health": {
-      "description": "显示记忆子系统健康状态（FTS5 + Qdrant）"
-    }
-  },
   "oauth": {
     "description": "管理 OAuth 提供者连接",
     "providers": {

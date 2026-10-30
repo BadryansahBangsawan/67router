@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "管理 OmniRoute 對話記憶（FTS5 + 向量）",
-    "search": {
-      "description": "按語義查詢搜尋記憶條目",
-      "type": "按記憶型別篩選（user|feedback|project|reference）",
-      "limit": "最大結果數（預設：20）",
-      "api_key": "按 API 金鑰篩選",
-      "token_budget": "限制結果中的總權杖數"
-    },
-    "add": {
-      "description": "新增新的記憶條目",
-      "content": "記憶文本內容",
-      "file": "從檔案讀取內容",
-      "type": "記憶型別（預設：user）",
-      "metadata": "JSON 後設資料物件",
-      "api_key": "關聯到 API 金鑰"
-    },
-    "clear": {
-      "description": "刪除匹配篩選條件的記憶條目",
-      "type": "按型別篩選",
-      "older": "刪除早於指定時長的條目（30d, 6m, 1y）",
-      "api_key": "按 API 金鑰篩選",
-      "yes": "跳過確認提示"
-    },
-    "list": {
-      "description": "列出記憶條目（不按搜尋排名）",
-      "type": "按型別篩選",
-      "limit": "最大結果數（預設：100）",
-      "api_key": "按 API 金鑰篩選"
-    },
-    "get": {
-      "description": "按 ID 獲取單個記憶條目"
-    },
-    "delete": {
-      "description": "按 ID 刪除記憶條目",
-      "yes": "跳過確認提示"
-    },
-    "health": {
-      "description": "顯示記憶子系統健康狀態（FTS5 + Qdrant）"
-    }
-  },
   "oauth": {
     "description": "管理 OAuth 提供者連線",
     "providers": {

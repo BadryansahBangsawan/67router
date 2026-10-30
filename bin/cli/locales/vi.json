@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Quản lý bộ nhớ hội thoại của OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Tìm kiếm các mục bộ nhớ bằng truy vấn ngữ nghĩa",
-      "type": "Lọc theo loại bộ nhớ (user|feedback|project|reference)",
-      "limit": "Số kết quả tối đa (mặc định: 20)",
-      "api_key": "Lọc theo khóa API",
-      "token_budget": "Giới hạn tổng số token trong kết quả"
-    },
-    "add": {
-      "description": "Thêm mục bộ nhớ mới",
-      "content": "Nội dung văn bản của bộ nhớ",
-      "file": "Đọc nội dung từ tệp",
-      "type": "Loại bộ nhớ (mặc định: user)",
-      "metadata": "Đối tượng siêu dữ liệu JSON",
-      "api_key": "Liên kết với khóa API"
-    },
-    "clear": {
-      "description": "Xóa các mục bộ nhớ khớp với bộ lọc",
-      "type": "Lọc theo loại",
-      "older": "Xóa các mục cũ hơn khoảng thời gian (30d, 6m, 1y)",
-      "api_key": "Lọc theo khóa API",
-      "yes": "Bỏ qua lời nhắc xác nhận"
-    },
-    "list": {
-      "description": "Liệt kê các mục bộ nhớ không xếp hạng tìm kiếm",
-      "type": "Lọc theo loại",
-      "limit": "Số kết quả tối đa (mặc định: 100)",
-      "api_key": "Lọc theo khóa API"
-    },
-    "get": {
-      "description": "Lấy một mục bộ nhớ theo ID"
-    },
-    "delete": {
-      "description": "Xóa một mục bộ nhớ theo ID",
-      "yes": "Bỏ qua lời nhắc xác nhận"
-    },
-    "health": {
-      "description": "Hiển thị tình trạng hệ thống con bộ nhớ (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Quản lý các kết nối nhà cung cấp OAuth",
     "providers": {

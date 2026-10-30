@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Spravovat konverzační paměť OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Vyhledávat záznamy v paměti pomocí sémantického dotazu",
-      "type": "Filtrovat podle typu paměti (user|feedback|project|reference)",
-      "limit": "Maximální počet výsledků (výchozí: 20)",
-      "api_key": "Filtrovat podle klíče API",
-      "token_budget": "Omezit celkový počet tokenů ve výsledcích"
-    },
-    "add": {
-      "description": "Přidat nový záznam do paměti",
-      "content": "Textový obsah paměti",
-      "file": "Načíst obsah ze souboru",
-      "type": "Typ paměti (výchozí: user)",
-      "metadata": "Objekt metadat JSON",
-      "api_key": "Přidružit ke klíči API"
-    },
-    "clear": {
-      "description": "Odstranit záznamy v paměti odpovídající filtrům",
-      "type": "Filtrovat podle typu",
-      "older": "Odstranit záznamy starší než zadaná doba (30d, 6m, 1y)",
-      "api_key": "Filtrovat podle klíče API",
-      "yes": "Přeskočit výzvu k potvrzení"
-    },
-    "list": {
-      "description": "Vypsat záznamy v paměti bez řazení podle relevance vyhledávání",
-      "type": "Filtrovat podle typu",
-      "limit": "Maximální počet výsledků (výchozí: 100)",
-      "api_key": "Filtrovat podle klíče API"
-    },
-    "get": {
-      "description": "Získat jeden záznam paměti podle ID"
-    },
-    "delete": {
-      "description": "Odstranit záznam paměti podle ID",
-      "yes": "Přeskočit výzvu k potvrzení"
-    },
-    "health": {
-      "description": "Zobrazit stav paměťového subsystému (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Spravovat připojení poskytovatelů OAuth",
     "providers": {

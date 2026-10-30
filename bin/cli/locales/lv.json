@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Pārvaldīt OmniRoute sarunu atmiņu (FTS5 + vektors)",
-    "search": {
-      "description": "Meklēt atmiņas ierakstus ar semantisko vaicājumu",
-      "type": "Filtrēt pēc atmiņas veida (user|feedback|project|reference)",
-      "limit": "Maksimālie rezultāti (noklusējums: 20)",
-      "api_key": "Filtrēt pēc API atslēgas",
-      "token_budget": "Ierobežot kopējo žetonu skaitu rezultātos"
-    },
-    "add": {
-      "description": "Pievienot jaunu atmiņas ierakstu",
-      "content": "Atmiņas teksta saturs",
-      "file": "Lasīt saturu no faila",
-      "type": "Atmiņas veids (noklusējums: user)",
-      "metadata": "JSON metadatu objekts",
-      "api_key": "Asociēt ar API atslēgu"
-    },
-    "clear": {
-      "description": "Dzēst atmiņas ierakstus, kas atbilst filtriem",
-      "type": "Filtrēt pēc veida",
-      "older": "Dzēst ierakstus vecākus par ilgumu (30d, 6m, 1y)",
-      "api_key": "Filtrēt pēc API atslēgas",
-      "yes": "Izlaidīt apstiprinājuma uzvedni"
-    },
-    "list": {
-      "description": "Uzskaitīt atmiņas ierakstus bez meklēšanas reitinga",
-      "type": "Filtrēt pēc veida",
-      "limit": "Maksimālie rezultāti (noklusējums: 100)",
-      "api_key": "Filtrēt pēc API atslēgas"
-    },
-    "get": {
-      "description": "Iegūt vienu atmiņas ierakstu pēc ID"
-    },
-    "delete": {
-      "description": "Dzēst atmiņas ierakstu pēc ID",
-      "yes": "Izlaidīt apstiprinājuma uzvedni"
-    },
-    "health": {
-      "description": "Rādīt atmiņas apakšsistēmas veselību (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Pārvaldīt OAuth pakalpojumu sniedzēju savienojumus",
     "providers": {

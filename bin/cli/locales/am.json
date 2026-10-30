@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "የOmniRoute የውይይት ማህደረ ትውስታን አስተዳድር (FTS5 + vector)",
-    "search": {
-      "description": "የፍቺ ጥያቄን በመጠቀም የማህደረ ትውስታ ግቤቶችን ፈልግ",
-      "type": "በማህደረ ትውስታ ዓይነት አጣራ (user|feedback|project|reference)",
-      "limit": "ከፍተኛው የውጤቶች ብዛት (ነባሪ፦ 20)",
-      "api_key": "በAPI ቁልፍ አጣራ",
-      "token_budget": "በውጤቶች ውስጥ ያሉትን ጠቅላላ ቶከኖች ገድብ"
-    },
-    "add": {
-      "description": "አዲስ የማህደረ ትውስታ ግቤት ጨምር",
-      "content": "የማህደረ ትውስታ ጽሑፍ ይዘት",
-      "file": "ይዘትን ከፋይል አንብብ",
-      "type": "የማህደረ ትውስታ ዓይነት (ነባሪ፦ user)",
-      "metadata": "የJSON ሜታዳታ ኦብጀክት",
-      "api_key": "ከAPI ቁልፍ ጋር አያይዝ"
-    },
-    "clear": {
-      "description": "ከማጣሪያዎች ጋር የሚዛመዱ የማህደረ ትውስታ ግቤቶችን ሰርዝ",
-      "type": "በዓይነት አጣራ",
-      "older": "ከተጠቀሰው ቆይታ የሚበልጥ ዕድሜ ያላቸውን ግቤቶች ሰርዝ (30d, 6m, 1y)",
-      "api_key": "በAPI ቁልፍ አጣራ",
-      "yes": "የማረጋገጫ ጥያቄውን ዝለል"
-    },
-    "list": {
-      "description": "የማስታወሻ ግቤቶችን ያለ ፍለጋ ደረጃ አሰጣጥ ዘርዝር",
-      "type": "በዓይነት አጣራ",
-      "limit": "ከፍተኛው የውጤቶች ብዛት (ነባሪ፦ 100)",
-      "api_key": "በAPI ቁልፍ አጣራ"
-    },
-    "get": {
-      "description": "አንድ የማስታወሻ ግቤት በID አግኝ"
-    },
-    "delete": {
-      "description": "አንድ የማስታወሻ ግቤት በID ሰርዝ",
-      "yes": "የማረጋገጫ ጥያቄውን ዝለል"
-    },
-    "health": {
-      "description": "የማስታወሻ ንዑስ ስርዓቱን ጤና (FTS5 + Qdrant) አሳይ"
-    }
-  },
   "oauth": {
     "description": "የOAuth አቅራቢ ግንኙነቶችን አስተዳድር",
     "providers": {

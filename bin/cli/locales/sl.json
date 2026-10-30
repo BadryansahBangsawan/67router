@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "Upravljaj pogovorni pomnilnik OmniRoute (FTS5 + vektorsko iskanje)",
-    "search": {
-      "description": "Išči vnose v pomnilniku s semantično poizvedbo",
-      "type": "Filtriraj po vrsti pomnilnika (user|feedback|project|reference)",
-      "limit": "Največje število rezultatov (privzeto: 20)",
-      "api_key": "Filtriraj po ključu API",
-      "token_budget": "Omeji skupno število žetonov v rezultatih"
-    },
-    "add": {
-      "description": "Dodaj nov vnos v pomnilnik",
-      "content": "Besedilna vsebina pomnilnika",
-      "file": "Preberi vsebino iz datoteke",
-      "type": "Vrsta pomnilnika (privzeto: user)",
-      "metadata": "Objekt JSON z metapodatki",
-      "api_key": "Poveži s ključem API"
-    },
-    "clear": {
-      "description": "Izbriši vnose v pomnilniku, ki ustrezajo filtrom",
-      "type": "Filtriraj po vrsti",
-      "older": "Izbriši vnose, starejše od navedenega obdobja (30d, 6m, 1y)",
-      "api_key": "Filtriraj po ključu API",
-      "yes": "Preskoči poziv za potrditev"
-    },
-    "list": {
-      "description": "Prikaži vnose v pomnilniku brez razvrščanja po ustreznosti iskanja",
-      "type": "Filtriraj po vrsti",
-      "limit": "Največje število rezultatov (privzeto: 100)",
-      "api_key": "Filtriraj po ključu API"
-    },
-    "get": {
-      "description": "Pridobi posamezen vnos v pomnilniku po ID-ju"
-    },
-    "delete": {
-      "description": "Izbriši vnos v pomnilniku po ID-ju",
-      "yes": "Preskoči poziv za potrditev"
-    },
-    "health": {
-      "description": "Prikaži stanje podsistema pomnilnika (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Upravljaj povezave ponudnikov OAuth",
     "providers": {

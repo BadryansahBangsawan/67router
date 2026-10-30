@@ -633,47 +633,6 @@
       }
     }
   },
-  "memory": {
-    "description": "OmniRoute konuşma belleğini yönet (FTS5 + vector)",
-    "search": {
-      "description": "Bellek girdilerini anlamsal sorguyla ara",
-      "type": "Bellek türüne göre filtrele (user|feedback|project|reference)",
-      "limit": "Maksimum sonuç sayısı (varsayılan: 20)",
-      "api_key": "API anahtarına göre filtrele",
-      "token_budget": "Sonuçlardaki toplam token sayısını sınırla"
-    },
-    "add": {
-      "description": "Yeni bir bellek girdisi ekle",
-      "content": "Bellek metin içeriği",
-      "file": "İçeriği dosyadan oku",
-      "type": "Bellek türü (varsayılan: user)",
-      "metadata": "JSON meta veri nesnesi",
-      "api_key": "API anahtarıyla ilişkilendir"
-    },
-    "clear": {
-      "description": "Filtrelerle eşleşen bellek girdilerini sil",
-      "type": "Türe göre filtrele",
-      "older": "Belirtilen süreden daha eski girdileri sil (30d, 6m, 1y)",
-      "api_key": "API anahtarına göre filtrele",
-      "yes": "Onay istemini atla"
-    },
-    "list": {
-      "description": "Bellek girdilerini arama sıralaması olmadan listele",
-      "type": "Türe göre filtrele",
-      "limit": "Maksimum sonuç sayısı (varsayılan: 100)",
-      "api_key": "API anahtarına göre filtrele"
-    },
-    "get": {
-      "description": "Kimliğe göre tek bir bellek girdisi getir"
-    },
-    "delete": {
-      "description": "Kimliğe göre bir bellek girdisini sil",
-      "yes": "Onay istemini atla"
-    },
-    "health": {
-      "description": "Bellek alt sisteminin durumunu göster (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth sağlayıcı bağlantılarını yönet",
     "providers": {
