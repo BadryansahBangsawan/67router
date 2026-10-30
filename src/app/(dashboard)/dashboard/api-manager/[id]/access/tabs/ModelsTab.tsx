@@ -454,7 +454,7 @@ function ClaudeCodeDefaultScopeChip({
           <Icon
             name={claudeCodeFamiliesExpanded ? "expand_less" : "expand_more"}
             size={12}
-            className="text-primary"
+            className="text-text-muted"
           />
         </Button>
         <Button

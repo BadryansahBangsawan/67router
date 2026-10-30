@@ -463,7 +463,7 @@ export default function ReasoningRoutingRules({
       <Card>
         <div className="flex flex-wrap items-start justify-between gap-5">
           <div className="min-w-0 flex-1 space-y-2">
-            <h2 className="text-lg font-semibold text-text-main">{e("workspace")}</h2>
+            <h2 className="text-[15px] font-semibold text-text-main">{e("workspace")}</h2>
             <p className="text-sm text-text-muted">{e("scopeHint")}</p>
           </div>
           <Button
@@ -559,8 +559,8 @@ export default function ReasoningRoutingRules({
                     size="sm"
                     ariaLabel={t("toggleAria", { name: rule.name })}
                   />
-                  <h3 className="break-words font-semibold text-text-main">{rule.name}</h3>
-                  <span className="rounded-full bg-surface px-2 py-1 text-xs text-text-muted">
+                  <h3 className="break-words text-sm font-semibold text-text-main">{rule.name}</h3>
+                  <span className="rounded-md border border-border px-1.5 py-0.5 text-[11.5px] text-text-muted">
                     {t(rule.enabled ? "enabled" : "disabled")}
                   </span>
                 </div>
@@ -595,7 +595,9 @@ export default function ReasoningRoutingRules({
               <div className="mt-4 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
                 <div className="min-w-0">
                   <p className="text-xs text-text-muted">{e("when")}</p>
-                  <p className="mt-1 break-all text-text-main">{sourceLabel(rule)}</p>
+                  <p className="mt-1 break-all font-mono text-[13px] text-text-main">
+                    {sourceLabel(rule)}
+                  </p>
                   <p className="mt-1 text-xs text-text-muted">
                     {t("sourceEffort")}:{" "}
                     {rule.sourceEffort === "any"
@@ -607,7 +609,9 @@ export default function ReasoningRoutingRules({
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs text-text-muted">{e("then")}</p>
-                  <p className="mt-1 break-all text-text-main">{targetLabel(rule)}</p>
+                  <p className="mt-1 break-all font-mono text-[13px] text-text-main">
+                    {targetLabel(rule)}
+                  </p>
                   <p className="mt-1 text-text-muted">
                     {e("effort." + rule.effortMode)}
                     {rule.effortMode !== "inherit" ? ": " + rule.targetEffort : ""}
@@ -658,7 +662,7 @@ export default function ReasoningRoutingRules({
                   />
                 </div>
                 <section className="space-y-4 border-t border-border pt-6">
-                  <h3 className="font-semibold text-text-main">1 · {e("when")}</h3>
+                  <h3 className="text-sm font-semibold text-text-main">1 · {e("when")}</h3>
                   {!apiKeyId && (
                     <div className={grid}>
                       <Select
@@ -762,7 +766,7 @@ export default function ReasoningRoutingRules({
                       {catalogError && sourceKind === "model" && (
                         <p className="text-sm text-warning">{e("catalogError")}</p>
                       )}
-                      <p className="rounded-lg bg-primary/5 p-3 text-sm leading-relaxed text-text-muted">
+                      <p className="rounded-lg border border-border bg-bg-subtle p-3 text-sm leading-relaxed text-text-muted">
                         {e("matchStageHint")}
                       </p>
                     </>
@@ -786,7 +790,7 @@ export default function ReasoningRoutingRules({
                   </div>
                 </section>
                 <section className="space-y-4 border-t border-border pt-6">
-                  <h3 className="font-semibold text-text-main">2 · {e("then")}</h3>
+                  <h3 className="text-sm font-semibold text-text-main">2 · {e("then")}</h3>
                   <div className={grid}>
                     <Select
                       label={t("routingTarget")}
@@ -913,9 +917,9 @@ export default function ReasoningRoutingRules({
                     )}
                   </div>
                 </details>
-                <div className="rounded-xl bg-primary/5 p-4 text-sm">
+                <div className="rounded-xl border border-border bg-bg-subtle p-4 text-sm">
                   <p className="font-medium text-text-main">{e("draftSummary")}</p>
-                  <p className="mt-2 break-all text-text-muted">
+                  <p className="mt-2 break-all font-mono text-[13px] text-text-muted">
                     {form.scope === "combo"
                       ? comboName(form.comboId)
                       : form.modelPattern || (sourceKind === "all" ? e("sourceAll") : "—")}{" "}
