@@ -1,8 +1,9 @@
 import { finalizeTranslatedRequest } from "./chatCore/translatedRequestFinalize.ts";
 import {
-  injectMemoryAndSkills,
   mergeInjectedFallbackOwnerNames,
-} from "./chatCore/memorySkillsInjection.ts";
+  resolveToolOwnerId,
+  sortToolsByName,
+} from "./chatCore/injectedToolOwnership.ts";
 import { resolveChatCoreRequestSetup } from "./chatCore/requestSetup.ts";
 import { shouldSkipNativeCodexReactiveCompaction } from "./chatCore/nativeCodexCompaction.ts";
 import {
@@ -43,11 +44,7 @@ import { runStreamingTail } from "./chatCore/streamingTail.ts";
 import { sanitizeChatRequestBody } from "./chatCore/sanitization.ts";
 import { isReasoningContinuationIncompatible } from "./chatCore/reasoningInputGate.ts";
 
-import {
-  getHeaderValueCaseInsensitive,
-  isNoMemoryRequested,
-  resolveCompressionHeader,
-} from "./chatCore/headers.ts";
+import { getHeaderValueCaseInsensitive, resolveCompressionHeader } from "./chatCore/headers.ts";
 
 import {
   isCodexOriginatedHeaders,
@@ -90,7 +87,6 @@ export {
   buildStreamingResponseHeaders,
   stripStaleForwardingHeaders,
 };
-import { resolveMemoryOwnerId, runMemoryExtractionGate } from "./chatCore/memoryExtraction.ts";
 import { checkResourcePressureGuard } from "../utils/resourcePressure.ts";
 import { normalizeHeaders } from "../utils/headers.ts";
 import { resolveChatCoreRequestFormat } from "./chatCore/requestFormat.ts";
@@ -409,9 +405,7 @@ async function handleChatCoreInner({
   // Each combo leg gets its own execution context; nothing is written to shared accounts.
   const reasoningRuleDirective = body?._omnirouteReasoningRule;
   // #12150 P1b: true iff the video-bridge guardrail rendered >=1 transcript
-  // cue into a replaced part of this request. Gates both request- and
-  // response-derived Memory extraction
-  // (chatCore/memoryExtraction.ts::runMemoryExtractionGate).
+  // cue into a replaced part of this request (keeps it out of the semantic cache).
   const videoBridgeObserved: boolean =
     (videoBridgeLog as VideoBridgeLogParam | undefined)?.observed === true;
   // resume flag from chat.ts, noted under the attempt store opened above.
@@ -648,9 +642,8 @@ async function handleChatCoreInner({
   // Model-specific targetFormat takes priority over provider default
 
   // ── Background Task Redirection (T41) — decision extracted to chatCore/backgroundRedirect.ts (#3501)
-  // backgroundReason is the detection signal (threaded into memory/skills injection below); redirect
-  // is the actual model downgrade to apply, if any.
-  const { backgroundReason, redirect: bgRedirect } = resolveBackgroundTaskRedirect({
+  // redirect is the actual model downgrade to apply, if any.
+  const { redirect: bgRedirect } = resolveBackgroundTaskRedirect({
     body,
     headers: clientRawRequest?.headers,
     model,
@@ -1134,35 +1127,22 @@ async function handleChatCoreInner({
   }
 
   body = sanitizeChatRequestBody(body, sourceFormat, targetFormat);
-  // Per-request opt-out: clients that manage their own context send
-  // `x-omniroute-no-memory: true` to skip memory+skills injection (a null owner
-  // disables both branches in injectMemoryAndSkills). See PRD-2026-06-19-no-memory-header.
-  const memoryOwnerId = isNoMemoryRequested(clientRawRequest?.headers ?? null)
-    ? null
-    : resolveMemoryOwnerId(apiKeyInfo as Record<string, unknown> | null);
-  const injectionResult = await injectMemoryAndSkills({
-    body,
-    memoryOwnerId,
-    provider,
-    effectiveModel,
-    sourceFormat,
-    targetFormat,
-    backgroundReason,
-    log,
-  });
-  body = injectionResult.body;
-  const memorySettings = injectionResult.memorySettings;
+  // Owner of server-executed builtin tools (web_search / web_fetch fallbacks):
+  // the API key id, or null for keyless requests (the tool loop then uses "local").
+  const toolOwnerId = resolveToolOwnerId(apiKeyInfo as Record<string, unknown> | null);
+  // Stable tool order keeps the prompt-cache prefix identical across turns.
+  if (Array.isArray(body.tools) && body.tools.length > 1) {
+    body = { ...body, tools: sortToolsByName(body.tools) };
+  }
 
-  // Merge web-search/web-fetch fallback tool names into the builtin owner set.
-  // injectMemoryAndSkills only tracks memory tools; the fallback names were
-  // injected into body.tools by prepareWebSearchFallbackBody/prepareWebFetchFallbackBody
-  // above, so they must be carried into the owner provenance chain here.
-  const mergedOwnerNames = mergeInjectedFallbackOwnerNames(
-    injectionResult,
+  // The web-search/web-fetch fallback tool names were injected into body.tools by
+  // prepareWebSearchFallbackBody/prepareWebFetchFallbackBody above, so they must be
+  // carried into the owner provenance chain here.
+  const injectionResult = mergeInjectedFallbackOwnerNames(
+    { builtinToolNames: [] },
     [webSearchFallbackPlan, webFetchFallbackPlan],
     preConversionClientToolNames
   );
-  injectionResult.builtinToolNames = mergedOwnerNames.builtinToolNames;
 
   // Translate request (pass reqLogger for intermediate logging)
   // ── Proactive Context Compression (Phase 4) ──
@@ -3207,6 +3187,7 @@ async function handleChatCoreInner({
       idempotencyKey,
       incrementTokenUsage,
       injectionResult,
+      toolOwnerId,
       isClaudeCodeCompatible,
       isCombo,
       isJsonRecord,
@@ -3219,8 +3200,6 @@ async function handleChatCoreInner({
       managedLease,
       managedLeaseFenceErrorResult,
       markAccountSemaphoreBlocked,
-      memoryOwnerId,
-      memorySettings,
       model,
       normalizeHeaders,
       normalizeUsage,
@@ -3247,7 +3226,6 @@ async function handleChatCoreInner({
       reqLogger,
       requestToolIdentityMap,
       resolveReportedServiceTier,
-      runMemoryExtractionGate,
       runPluginOnResponseHook,
       sanitizeErrorMessage,
       sanitizeUpstreamDetails,
@@ -3334,8 +3312,6 @@ async function handleChatCoreInner({
     isResponsesEndpoint,
     log,
     managedLease,
-    memoryOwnerId,
-    memorySettings,
     model,
     onRequestSuccess,
     onStreamFailure,

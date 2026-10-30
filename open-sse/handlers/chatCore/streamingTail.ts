@@ -42,7 +42,6 @@ import { recordContextEditingTelemetryHook } from "./contextEditingTelemetry.ts"
 import { readCpaAuthIndex } from "./failureUsage.ts";
 import { emitRequestGamificationEvent } from "./gamificationEvent.ts";
 import { maybeConvertJsonBodyToSse } from "./jsonBodyToSse.ts";
-import { runMemoryExtractionGate } from "./memoryExtraction.ts";
 import { mergeResponseToolNameMap } from "./passthroughToolNames.ts";
 import { runPluginOnResponseHook, runPluginOnStreamCompleteHook } from "./pluginOnResponse.ts";
 import { routingFinishReason } from "./routingFinishReason.ts";
@@ -57,7 +56,6 @@ import { recordStreamingUsageStats } from "./streamingUsageStats.ts";
 import { maybeSyncClaudeExtraUsageState } from "./telemetryHelpers.ts";
 import { getExecutorTimeoutMs, resolveConnectionTimeoutMs } from "./upstreamTimeouts.ts";
 import { recordCost, recordUnpricedBudgetUsage } from "@/domain/costRules";
-import { extractFacts } from "@/lib/memory/extraction";
 import { calculateCost, calculateCostDetailed } from "@/lib/usage/costCalculator";
 import { appendRequestLog, trackPendingRequest } from "@/lib/usageDb";
 import { isFeatureFlagEnabled } from "@/shared/utils/featureFlags.ts";
@@ -104,8 +102,6 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
     isResponsesEndpoint,
     log,
     managedLease,
-    memoryOwnerId,
-    memorySettings,
     model,
     modelInfo,
     onRequestSuccess,
@@ -114,7 +110,6 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
     pendingRequestId,
     persistAttemptLogs,
     persistFailureUsage,
-    pipelineSessionId,
     provider,
     providerHeaders,
     providerRequestCapture,
@@ -575,22 +570,6 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
       log,
     });
     // === /Quota Share POST-hook streaming ===
-
-    if (streamStatus === 200) {
-      // #12150 P1b surface 3 (fix round 1): see the matching non-streaming
-      // gate above — an observed request populates NO durable memory from
-      // either the request-derived text or this streamed response.
-      runMemoryExtractionGate({
-        memoryOwnerId,
-        memorySettings,
-        videoBridgeObserved,
-        pipelineSessionId,
-        requestBody: body as Record<string, unknown>,
-        responseBody: (streamResponseBody ?? null) as Record<string, unknown> | null,
-        extractFacts,
-        log,
-      });
-    }
 
     // Semantic cache: store assembled streaming response for future cache hits
     storeStreamingSemanticCacheResponse({
