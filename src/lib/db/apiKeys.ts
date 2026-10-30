@@ -59,6 +59,7 @@ import {
   parseAccessSchedule,
   parseRateLimits,
   parseAllowedConnections,
+  hasRetiredQuotaAllocation,
   parseStringList,
   parseNullableTimestamp,
   parseIsBanned,
@@ -116,6 +117,8 @@ interface ApiKeyMetadata {
   blockedModels: string[];
   allowedCombos: string[];
   allowedConnections: string[];
+  /** Key still carries a removed Quota Share allocation; refused by policy. */
+  retiredQuotaScope?: boolean;
   noLog: boolean;
   autoResolve: boolean;
   isActive: boolean;
@@ -480,10 +483,10 @@ function getPreparedStatements(db: ApiKeysDbLike): ApiKeysStatements {
     _stmtGetAllKeys = db.prepare<ApiKeyRow>("SELECT * FROM api_keys ORDER BY created_at");
     _stmtGetKeyById = db.prepare<ApiKeyRow>("SELECT * FROM api_keys WHERE id = ?");
     _stmtValidateKey = db.prepare<JsonRecord>(
-      "SELECT id, expires_at, revoked_at, is_active, is_banned FROM api_keys WHERE key_hash = ?"
+      "SELECT id, expires_at, revoked_at, is_active, is_banned, allowed_quotas FROM api_keys WHERE key_hash = ?"
     );
     _stmtGetKeyMetadata = db.prepare<ApiKeyRow>(
-      "SELECT id, name, machine_id, model_access_mode, allowed_models, blocked_models, allowed_combos, allowed_connections, no_log, auto_resolve, is_active, access_schedule, max_requests_per_day, max_requests_per_minute, throttle_delay_ms, max_sessions, revoked_at, expires_at, ip_allowlist, scopes, rate_limits, is_banned, key_hash, allowed_endpoints, stream_default_mode, cache_default_mode, codex_service_mode, disable_non_public_models, allow_usage_command, usage_limit_enabled, daily_usage_limit_usd, weekly_usage_limit_usd, chaos_mode_enabled, compression_enabled, allow_auto_combos, catalog_scope, forced_model, proxy_id FROM api_keys WHERE key_hash = ?"
+      "SELECT id, name, machine_id, model_access_mode, allowed_models, blocked_models, allowed_combos, allowed_connections, allowed_quotas, no_log, auto_resolve, is_active, access_schedule, max_requests_per_day, max_requests_per_minute, throttle_delay_ms, max_sessions, revoked_at, expires_at, ip_allowlist, scopes, rate_limits, is_banned, key_hash, allowed_endpoints, stream_default_mode, cache_default_mode, codex_service_mode, disable_non_public_models, allow_usage_command, usage_limit_enabled, daily_usage_limit_usd, weekly_usage_limit_usd, chaos_mode_enabled, compression_enabled, allow_auto_combos, catalog_scope, forced_model, proxy_id FROM api_keys WHERE key_hash = ?"
     );
     _stmtInsertKey = db.prepare(
       "INSERT INTO api_keys (id, name, key, machine_id, model_access_mode, allowed_models, allowed_combos, allowed_connections, no_log, created_at, key_prefix, key_hash, scopes, expires_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
@@ -1283,6 +1286,18 @@ export async function setApiKeyExpiry(id: string, expiresAt: string | null): Pro
   return true;
 }
 
+const _warnedRetiredQuotaKeys = new Set<string>();
+
+function warnRetiredQuotaKey(id: unknown): void {
+  const keyId = typeof id === "string" ? id : "unknown";
+  if (_warnedRetiredQuotaKeys.has(keyId)) return;
+  _warnedRetiredQuotaKeys.add(keyId);
+  console.warn(
+    `[API_KEYS] Refusing API key ${keyId}: it is still allocated to a Quota Share pool ` +
+      "(api_keys.allowed_quotas), and Quota Share was removed. Revoke it and issue a new key."
+  );
+}
+
 /**
  * Validate API key with lifecycle gates and caching.
  *
@@ -1290,7 +1305,8 @@ export async function setApiKeyExpiry(id: string, expiresAt: string | null): Pro
  *   - the row exists,
  *   - is_active = 1,
  *   - revoked_at IS NULL,
- *   - expires_at IS NULL OR expires_at > now.
+ *   - expires_at IS NULL OR expires_at > now,
+ *   - allowed_quotas is empty (Quota Share was removed; an allocated key fails closed).
  *
  * Cache TTL is short (CACHE_TTL) and the metadata cache is also invalidated
  * by revokeApiKey/updateApiKeyPermissions/deleteApiKey, so a revoke takes
@@ -1330,6 +1346,13 @@ export async function validateApiKey(key: string | null | undefined) {
 
   const revokedAt = row.revoked_at ?? row.revokedAt;
   if (typeof revokedAt === "string" && revokedAt.trim() !== "") return false;
+
+  // Quota Share was removed: a key still allocated to a pool cannot be held to it
+  // any more, so refuse it rather than let it act as an unrestricted key.
+  if (hasRetiredQuotaAllocation(row.allowed_quotas)) {
+    warnRetiredQuotaKey(row.id);
+    return false;
+  }
 
   const expiresAt = row.expires_at ?? row.expiresAt;
   if (typeof expiresAt === "string" && expiresAt.trim() !== "") {
@@ -1487,6 +1510,7 @@ export async function getApiKeyMetadata(
     allowedConnections: parseAllowedConnections(
       record.allowed_connections ?? record.allowedConnections
     ),
+    retiredQuotaScope: hasRetiredQuotaAllocation((record as JsonRecord).allowed_quotas),
     noLog: parseNoLog(record.no_log ?? record.noLog),
     autoResolve: parseAutoResolve(record.auto_resolve ?? record.autoResolve),
     isActive: parseIsActive(record.is_active ?? record.isActive),

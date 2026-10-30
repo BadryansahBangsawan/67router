@@ -81,6 +81,8 @@ export interface ApiKeyMetadata {
   blockedModels?: string[];
   allowedCombos?: string[];
   allowedConnections?: string[];
+  /** Key still carries a removed Quota Share allocation (api_keys.allowed_quotas). */
+  retiredQuotaScope?: boolean;
   noLog?: boolean;
   autoResolve?: boolean;
   budget?: number;
@@ -449,6 +451,13 @@ function validateKeyStatus(context: PolicyContext): Response | null {
   const { apiKeyInfo } = context;
   if (apiKeyInfo.isActive === false) {
     return errorResponse(HTTP_STATUS.FORBIDDEN, "This API key is disabled");
+  }
+  if (apiKeyInfo.retiredQuotaScope === true) {
+    // Fail closed: the pool scope this key was limited to no longer exists.
+    return errorResponse(
+      HTTP_STATUS.FORBIDDEN,
+      "This API key was limited to a Quota Share pool, and Quota Share was removed. Ask the operator for a new key."
+    );
   }
   if (apiKeyInfo.isBanned === true) {
     return errorResponse(HTTP_STATUS.FORBIDDEN, "This API key is banned due to policy violations");
