@@ -332,6 +332,8 @@ test("text-primary resolves to a readable primary ink through the 67router layer
   assert.match(theme, /--text-color-accent:\s*var\(--color-primary-ink\);/);
   assert.match(theme, /--color-accent:\s*var\(--color-accent\);/);
   assert.match(theme, /--color-fallback:\s*var\(--color-fallback\);/);
+  // `text-fallback` reads the AA text token; `bg-fallback` / `border-fallback` keep the orange.
+  assert.match(theme, /--text-color-fallback:\s*var\(--color-fallback-text\);/);
 
   const root = block(":root {\n  --desktop-safe-top");
   assert.ok(root.includes("--color-primary: var(--ci-color-accent);"));
@@ -362,8 +364,9 @@ test("text-primary resolves to a readable primary ink through the 67router layer
   const r67Dark = declarations(appCss, DARK);
   const mapping = declarations(appCss, MAPPING);
   const darkOverrides = declarations(appCss, DARK, 1);
-  const lightScopes = [mapping, r67Light, kitLight];
-  const darkScopes = [darkOverrides, mapping, r67Dark, kitDark, r67Light, kitLight];
+  const appRoot = declarations(appCss, /^:root \{\n\s*--desktop-safe-top/);
+  const lightScopes = [mapping, appRoot, r67Light, kitLight];
+  const darkScopes = [darkOverrides, mapping, appRoot, r67Dark, kitDark, r67Light, kitLight];
 
   const resolve = (token: string, scopes: Map<string, string>[]) => {
     let value = `var(${token})`;
@@ -408,6 +411,18 @@ test("text-primary resolves to a readable primary ink through the 67router layer
     // The orange is the fallback marker, never the accent / primary.
     assert.equal(resolve("--r67-fallback", scopes), "#ff4f00");
     assert.notEqual(accent, "#ff4f00");
+    // #FF4F00 is only 3.3:1 on white: fills / bars / dots keep it, TEXT reads a darker token
+    // that stays AA on the page and on the fallback tint.
+    const fallbackText = resolve("--color-fallback-text", scopes);
+    assert.ok(contrast(fallbackText, bg) >= 4.5, `${name} fallback text on the page`);
+    assert.ok(
+      contrast(fallbackText, resolve("--color-fallback-bg", scopes)) >= 4.5,
+      `${name} fallback text on the fallback tint`
+    );
+    assert.ok(
+      contrast(fallbackText, resolve("--ci-color-surface", scopes)) >= 4.5,
+      `${name} fallback text on a surface`
+    );
   }
 
   // The inline ::selection rule colours TEXT, so it reads the ink too.
@@ -438,7 +453,7 @@ test("the primary Badge tone is a neutral chip; the fallback tone is the only or
     /\.ci-badge\[data-tone="primary"\] \{\s*color: var\(--ci-color-accent\);\s*background: var\(--ci-color-accent-surface-strong\);/
   );
   assert.doesNotMatch(css, /:root\[data-theme="dark"\] \.ci-badge\[data-tone="primary"\]/);
-  assert.match(css, /\.ci-badge\[data-tone="fallback"\] \{\s*color: var\(--color-fallback\);/);
+  assert.match(css, /\.ci-badge\[data-tone="fallback"\] \{\s*color: var\(--color-fallback-text\);/);
 });
 
 test("kit Stat values follow the 28/600 KPI spec and section headers use a 15 px title", () => {

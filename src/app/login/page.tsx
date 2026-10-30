@@ -355,7 +355,7 @@ export default function LoginPage() {
               <span className="text-[var(--ci-color-text-muted)]">
                 {"→ anthropic  429  rate limited\n"}
               </span>
-              <span className="text-[var(--color-fallback)]">
+              <span className="text-[var(--color-fallback-text)]">
                 {"→ openai     200  412 ms  recovered by fallback"}
               </span>
             </pre>

@@ -42,7 +42,8 @@
    and come later in source order, so each one wins over the kit block it shadows.
    Accent rule: the kit "accent" is the solid primary (near-black in light, near-white in dark).
    The 67router orange (`--r67-fallback`) is NOT an accent — it marks fallback / recovered
-   requests only (`--color-fallback`, `bg-fallback`, `text-fallback`). */
+   requests only (`--color-fallback`, `bg-fallback`, `text-fallback`). Text reads
+   `--color-fallback-text` (darker in light mode for WCAG AA); fills keep `--r67-fallback`. */
 :root,
 .ci-theme {
   --r67-page: #ffffff;
@@ -59,6 +60,8 @@
   --r67-primary-hover: #262626;
   --r67-primary-active: #3f3f3f;
   --r67-fallback: #ff4f00;
+  /* #FF4F00 is 3.3:1 on white: text uses this darker orange (5.2:1 on white, 4.8:1 on the tint). */
+  --r67-fallback-text: #c2410c;
   --r67-fallback-bg: #fff3ec;
   --r67-success: #16a34a;
   --r67-success-bg: #effaf3;
@@ -97,6 +100,7 @@
   --r67-primary-hover: #e5e5e5;
   --r67-primary-active: #d4d4d4;
   --r67-fallback: #ff4f00;
+  --r67-fallback-text: #ff4f00;
   --r67-fallback-bg: #2a1305;
   --r67-success: #22c55e;
   --r67-success-bg: #0d1f14;
@@ -262,6 +266,7 @@
   /* 67router fallback orange — ONLY for fallback / recovered-request semantics, never a
      general accent. No kit equivalent, so it reads the 67router palette directly. */
   --color-fallback: var(--r67-fallback);
+  --color-fallback-text: var(--r67-fallback-text);
   --color-fallback-bg: var(--r67-fallback-bg);
 
   /* Orchestration status tokens (flow edges, badges, cockpit) */
@@ -362,6 +367,9 @@
   --color-info: var(--color-info);
   --color-info-bg: var(--color-info-bg);
   --color-fallback: var(--color-fallback);
+  --color-fallback-text: var(--color-fallback-text);
+  /* `text-fallback` reads the AA text orange; bg- / border- / fill-fallback keep #FF4F00. */
+  --text-color-fallback: var(--color-fallback-text);
   --color-fallback-bg: var(--color-fallback-bg);
   --color-accent-foreground: var(--color-accent-foreground);
   --color-border-strong: var(--color-border-strong);
@@ -1022,7 +1030,7 @@ html[dir="rtl"] :where(.react-flow) {
   }
   /* Fallback tone: the one place the 67router orange appears on a badge. */
   .ci-badge[data-tone="fallback"] {
-    color: var(--color-fallback);
+    color: var(--color-fallback-text);
     background: var(--color-fallback-bg);
     border-color: transparent;
   }
