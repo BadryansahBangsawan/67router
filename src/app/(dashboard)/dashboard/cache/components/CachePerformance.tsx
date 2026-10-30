@@ -124,15 +124,21 @@ export default function CachePerformance({
             {/* Hit / Miss / Total breakdown */}
             <div className="grid grid-cols-3 gap-4 pt-3 border-t border-border/30 text-center">
               <div>
-                <div className="text-lg font-semibold tabular-nums text-success">{hits}</div>
+                <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums text-success">
+                  {hits}
+                </div>
                 <div className="text-xs text-text-muted mt-0.5">{t("hits")}</div>
               </div>
               <div>
-                <div className="text-lg font-semibold tabular-nums text-error">{misses}</div>
+                <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums text-error">
+                  {misses}
+                </div>
                 <div className="text-xs text-text-muted mt-0.5">{t("misses")}</div>
               </div>
               <div>
-                <div className="text-lg font-semibold tabular-nums">{totalRequests}</div>
+                <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums">
+                  {totalRequests}
+                </div>
                 <div className="text-xs text-text-muted mt-0.5">{t("total")}</div>
               </div>
             </div>
@@ -142,7 +148,9 @@ export default function CachePerformance({
               <div className="grid grid-cols-2 gap-4 pt-3 border-t border-border/30 text-center">
                 {avgLatencyMs !== undefined && (
                   <div>
-                    <div className="text-lg font-semibold tabular-nums">{avgLatencyMs}</div>
+                    <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums">
+                      {avgLatencyMs}
+                    </div>
                     <div className="text-xs text-text-muted mt-0.5">
                       {t("cachePerformanceAvgLatency")}
                     </div>
@@ -150,7 +158,9 @@ export default function CachePerformance({
                 )}
                 {p95LatencyMs !== undefined && (
                   <div>
-                    <div className="text-lg font-semibold tabular-nums">{p95LatencyMs}</div>
+                    <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums">
+                      {p95LatencyMs}
+                    </div>
                     <div className="text-xs text-text-muted mt-0.5">
                       {t("cachePerformanceP95Latency")}
                     </div>

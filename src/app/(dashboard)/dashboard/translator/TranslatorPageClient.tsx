@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Badge, Card, SegmentedControl } from "@/shared/components";
 // Imported from its module (not the barrel) so the page's barrel stubs in tests stay as they were.
 import KitButton from "@/shared/components/Button";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import TranslatorConceptCard from "./components/TranslatorConceptCard";
 import TranslateTab from "./components/TranslateTab";
 import MonitorTab from "./components/MonitorTab";
@@ -36,6 +37,7 @@ function TranslatorLoading() {
 
 function TranslatorPageClientInner() {
   const t = useTranslations("translator");
+  const tSidebar = useTranslations("sidebar");
   const [sharedInputContent, setSharedInputContent] = useState("");
   const { state, setTab, setAdvanced } = useTranslateDeepLink();
 
@@ -165,20 +167,27 @@ function TranslatorPageClientInner() {
 
   return (
     <div className="space-y-6 min-w-0">
+      <PageHeader
+        compact
+        title={tSidebar("translator")}
+        description={tSidebar("translatorSubtitle")}
+        actions={
+          <div className="min-w-0 overflow-x-auto">
+            <SegmentedControl
+              options={tabOptions}
+              value={state.tab}
+              onChange={(v) => setTab(v as TranslatorTab)}
+              size="md"
+              aria-label={t("tabTranslateAriaLabel")}
+              className="min-w-max"
+            />
+          </div>
+        }
+      />
+
       <TranslatorConceptCard />
 
       <AutoFeaturesCard />
-
-      <div className="flex justify-end min-w-0 overflow-x-auto">
-        <SegmentedControl
-          options={tabOptions}
-          value={state.tab}
-          onChange={(v) => setTab(v as TranslatorTab)}
-          size="md"
-          aria-label={t("tabTranslateAriaLabel")}
-          className="min-w-max"
-        />
-      </div>
 
       {state.tab === "translate" && (
         <TranslateTab
@@ -201,7 +210,7 @@ function AutoFeaturesCard() {
   const [showFeatures, setShowFeatures] = useState(false);
 
   return (
-    <Card className="border-primary/10 bg-primary/5">
+    <Card>
       <KitButton
         variant="ghost"
         onClick={() => setShowFeatures((prev) => !prev)}
@@ -210,9 +219,9 @@ function AutoFeaturesCard() {
         className="h-auto w-full justify-between p-4 text-left"
       >
         <div className="flex items-center gap-2">
-          <Icon name="auto_fix_high" size={20} className="text-primary" />
+          <Icon name="auto_fix_high" size={18} className="text-text-muted" />
           <h3 className="text-sm font-semibold text-text-main">{t("autoFeaturesTitle")}</h3>
-          <Badge variant="primary" size="sm">
+          <Badge variant="default" size="sm">
             {t("autoFeaturesCount")}
           </Badge>
         </div>
@@ -294,25 +303,19 @@ function FeatureChip({
   description: string;
   color: "purple" | "blue" | "amber" | "emerald" | "cyan" | "orange" | "pink" | "indigo";
 }) {
-  // Categorical chip accents on the kit chart/status tokens (theme-aware).
-  const colorMap = {
-    purple: { shell: "border-chart-3/20 bg-chart-3/5", icon: "text-chart-3" },
-    blue: { shell: "border-chart-2/20 bg-chart-2/5", icon: "text-chart-2" },
-    amber: { shell: "border-warning/20 bg-warning/5", icon: "text-warning" },
-    emerald: { shell: "border-chart-4/20 bg-chart-4/5", icon: "text-chart-4" },
-    cyan: { shell: "border-info/20 bg-info/5", icon: "text-info" },
-    orange: { shell: "border-chart-5/20 bg-chart-5/5", icon: "text-chart-5" },
-    pink: { shell: "border-chart-5/20 bg-chart-5/5", icon: "text-chart-5" },
-    indigo: { shell: "border-chart-3/20 bg-chart-3/5", icon: "text-chart-3" },
-  }[color];
+  // 67router chips are monochrome; `color` stays in the signature for the call sites.
+  void color;
 
   return (
-    <div className={`rounded-lg border p-3 ${colorMap.shell}`} data-testid="feature-chip">
+    <div
+      className="rounded-control border border-border bg-bg-subtle p-3"
+      data-testid="feature-chip"
+    >
       <div className="mb-1 flex items-center gap-2">
-        <Icon name={icon} size={16} className={colorMap.icon} />
+        <Icon name={icon} size={16} className="text-text-muted" />
         <p className="text-xs font-semibold text-text-main">{title}</p>
       </div>
-      <p className="text-[10px] leading-relaxed text-text-muted">{description}</p>
+      <p className="text-[11px] leading-relaxed text-text-muted">{description}</p>
     </div>
   );
 }

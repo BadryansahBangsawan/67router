@@ -281,7 +281,7 @@ export default function ReasoningCacheTab() {
 
       {/* By Provider */}
       {providerEntries.length > 0 && (
-        <div className="rounded-xl border border-border bg-bg-subtle p-5">
+        <div className="rounded-card border border-border bg-surface p-5">
           <h3 className="text-sm font-medium text-text-main">{t("reasoningByProvider")}</h3>
           <Table
             className="text-sm"
@@ -336,7 +336,7 @@ export default function ReasoningCacheTab() {
 
       {/* By Model */}
       {modelEntries.length > 0 && (
-        <div className="rounded-xl border border-border bg-bg-subtle p-5">
+        <div className="rounded-card border border-border bg-surface p-5">
           <h3 className="text-sm font-medium text-text-main">{t("reasoningByModel")}</h3>
           <Table
             className="text-sm"
@@ -375,7 +375,7 @@ export default function ReasoningCacheTab() {
       )}
 
       {/* Recent Entries */}
-      <div className="rounded-xl border border-border bg-bg-subtle p-5">
+      <div className="rounded-card border border-border bg-surface p-5">
         <div className="mb-4 flex flex-col gap-1">
           <h3 className="text-sm font-medium text-text-main">{t("reasoningRecentEntries")}</h3>
           <p className="text-sm text-text-muted">{t("reasoningCacheDesc")}</p>
@@ -491,7 +491,7 @@ export default function ReasoningCacheTab() {
       </div>
 
       {/* Behavior Info */}
-      <div className="rounded-xl border border-border bg-bg-subtle p-5">
+      <div className="rounded-card border border-border bg-surface p-5">
         <h3 className="text-sm font-medium text-text-main">{t("reasoningBehavior")}</h3>
         <div className="mt-4 grid gap-3">
           <InfoRow icon="info">{t("reasoningBehaviorCapture")}</InfoRow>

@@ -274,7 +274,7 @@ export default function StreamTransformerAccordion({
         <div className={cn("p-4", !open && "hidden")}>
           <div className="space-y-5 min-w-0">
             {/* Info banner */}
-            <div className="flex items-start gap-3 px-4 py-3 rounded-lg bg-primary/5 border border-primary/10 text-sm text-text-muted">
+            <div className="flex items-start gap-3 px-4 py-3 rounded-control border border-border bg-bg-subtle text-sm text-text-muted">
               <Icon name="swap_horiz" size={20} className="text-primary mt-0.5" />
               <div>
                 <p className="font-medium text-text-main mb-0.5">

@@ -305,10 +305,9 @@ test("every flow surface expresses state with --orch-status-* tokens; categorica
   // Deliberately NOT migrated — categorical/brand palettes, not state.
   assert.ok(strategy.includes("STRATEGY_COLORS"), "strategy hues stay a categorical palette");
   assert.ok(engine.includes("LAYER_COLORS"), "layer pills stay a categorical palette");
-  assert.ok(
-    io.includes('isInput ? "#6366f1" : "#22c55e"'),
-    "IoNode keeps its indigo/green input-output identity pair"
-  );
+  // 67router: the input/output identity is the label; the node frame is monochrome ink.
+  assert.ok(io.includes('"var(--color-text-main)"'), "IoNode reads the text ink token");
+  assert.ok(!io.includes('"#6366f1"'), "IoNode hardcodes no indigo hex");
 });
 
 test("@theme inline still exposes bg-surface-2 and rounded-card", () => {
