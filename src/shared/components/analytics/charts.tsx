@@ -60,6 +60,7 @@ export function StatCard({
   subValue,
   tooltip,
   color = "text-text-main",
+  variant = "card",
 }: {
   icon: any;
   label: any;
@@ -67,6 +68,8 @@ export function StatCard({
   subValue?: any;
   tooltip?: string;
   color?: string;
+  /** `cell` renders a bare cell for a KpiStrip (one bordered card split by dividers). */
+  variant?: "card" | "cell";
 }) {
   const isCost = String(label).toLowerCase().includes("cost");
   const tooltipText = tooltip
@@ -77,9 +80,14 @@ export function StatCard({
         : `tokens : ${tooltip} tokens`
     : null;
 
+  const isCell = variant === "cell";
   const valueElement = (
     <span
-      className={`text-2xl font-bold ${color} truncate cursor-default`}
+      className={
+        isCell
+          ? `text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums ${color} truncate cursor-default`
+          : `text-2xl font-bold ${color} truncate cursor-default`
+      }
       data-tooltip={tooltip}
       title={tooltip ? undefined : String(value)}
     >
@@ -87,12 +95,18 @@ export function StatCard({
     </span>
   );
 
-  return (
-    <Card className="px-4 py-3 flex flex-col gap-1 min-w-0">
-      <div className="flex items-center gap-1.5 text-text-muted text-[11px] uppercase font-semibold tracking-wide min-w-0">
-        <Icon name={icon} size={14} />
-        <span className="truncate">{label}</span>
-      </div>
+  const body = (
+    <>
+      {isCell ? (
+        <div className="flex items-center gap-1.5 text-text-muted text-[13px] min-w-0">
+          <span className="truncate">{label}</span>
+        </div>
+      ) : (
+        <div className="flex items-center gap-1.5 text-text-muted text-[11px] uppercase font-semibold tracking-wide min-w-0">
+          <Icon name={icon} size={14} />
+          <span className="truncate">{label}</span>
+        </div>
+      )}
       {tooltipText ? (
         <Tooltip
           content={
@@ -109,9 +123,16 @@ export function StatCard({
       ) : (
         valueElement
       )}
-      {subValue && <span className="text-xs text-text-muted truncate">{subValue}</span>}
-    </Card>
+      {subValue && (
+        <span className={`${isCell ? "text-[12.5px]" : "text-xs"} text-text-muted truncate`}>
+          {subValue}
+        </span>
+      )}
+    </>
   );
+
+  if (isCell) return <div className="px-5 py-4 flex flex-col gap-1 min-w-0">{body}</div>;
+  return <Card className="px-4 py-3 flex flex-col gap-1 min-w-0">{body}</Card>;
 }
 
 // ── CompactStatGrid (secondary metrics in a single card, grouped) ─────────
@@ -130,7 +151,7 @@ export function CompactStatGrid({ sections }: { sections: CompactStatSection[] }
         {sections.map((section, si) => (
           <div key={si}>
             {si > 0 && <div className="border-t border-border mb-3" />}
-            <div className="text-[10px] uppercase font-semibold tracking-widest text-text-muted/50 mb-2">
+            <div className="text-[11px] uppercase font-medium tracking-[0.04em] text-text-muted mb-2">
               {section.title}
             </div>
             <div
@@ -143,7 +164,7 @@ export function CompactStatGrid({ sections }: { sections: CompactStatSection[] }
               {section.items.map((stat, i) => {
                 const statValueEl = (
                   <span
-                    className={`text-sm font-bold text-right cursor-default ${section.wideValues ? "truncate min-w-0" : "shrink-0"} ${stat.color || "text-text-main"}`}
+                    className={`text-[13px] font-semibold tabular-nums text-right cursor-default ${section.wideValues ? "truncate min-w-0" : "shrink-0"} ${stat.color || "text-text-main"}`}
                     data-tooltip={stat.tooltip}
                     title={stat.tooltip ? undefined : String(stat.value)}
                   >
@@ -158,7 +179,7 @@ export function CompactStatGrid({ sections }: { sections: CompactStatSection[] }
                     >
                       <Icon name={stat.icon} size={14} className="text-text-muted" />
                       <span
-                        className={`text-[11px] uppercase font-semibold tracking-wide text-text-muted ${section.wideValues ? "whitespace-nowrap" : "truncate"}`}
+                        className={`text-[12.5px] text-text-muted ${section.wideValues ? "whitespace-nowrap" : "truncate"}`}
                       >
                         {stat.label}
                       </span>
@@ -280,9 +301,7 @@ export function ActivityHeatmap({ activityMap }) {
   return (
     <Card className="p-4 h-full min-w-0 overflow-hidden">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-          {t("overview")}
-        </h3>
+        <h3 className="text-sm font-semibold text-text-main">{t("overview")}</h3>
         <span className="text-xs text-text-muted">
           {t("activitySummary", {
             active: Object.keys(activityMap || {}).length,
@@ -404,9 +423,7 @@ export function ApiKeyTable({
   if (!hasData) {
     return (
       <Card className="p-4 flex-1">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
-          {t("chartApiKeyBreakdown")}
-        </h3>
+        <h3 className="text-sm font-semibold text-text-main mb-3">{t("chartApiKeyBreakdown")}</h3>
         <div className="text-center text-text-muted text-sm py-8">{t("chartNoData")}</div>
       </Card>
     );
@@ -415,9 +432,7 @@ export function ApiKeyTable({
   return (
     <Card className="overflow-hidden">
       <div className="p-4 border-b border-border flex items-center justify-between gap-3">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-          {t("chartApiKeyBreakdown")}
-        </h3>
+        <h3 className="text-sm font-semibold text-text-main">{t("chartApiKeyBreakdown")}</h3>
         <Input
           type="search"
           value={query}
@@ -739,7 +754,7 @@ export function ServiceTierBreakdown({ byServiceTier, summary }) {
   return (
     <Card className="overflow-hidden">
       <div className="p-4 border-b border-border flex items-center justify-between gap-3">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
+        <h3 className="text-sm font-semibold text-text-main">
           {translateCostText(t, "serviceTierBreakdownTitle", "Service Tier")}
         </h3>
         <span className="text-[11px] text-text-muted">
@@ -828,9 +843,7 @@ export function UsageDetail({ summary }) {
 
   return (
     <Card className="p-4 flex-1">
-      <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
-        {t("chartUsageDetail")}
-      </h3>
+      <h3 className="text-sm font-semibold text-text-main mb-3">{t("chartUsageDetail")}</h3>
       <div className="flex flex-col gap-2">
         {items.map((item, i) => (
           <div key={i} className="flex items-center justify-between">
@@ -881,9 +894,7 @@ export function ProviderTable({
   if (!data.length) {
     return (
       <Card className="p-4">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
-          {t("chartProviderBreakdown")}
-        </h3>
+        <h3 className="text-sm font-semibold text-text-main mb-3">{t("chartProviderBreakdown")}</h3>
         <div className="text-center text-text-muted text-sm py-8">{t("chartNoData")}</div>
       </Card>
     );
@@ -892,9 +903,7 @@ export function ProviderTable({
   return (
     <Card className="overflow-hidden">
       <div className="p-4 border-b border-border">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-          {t("chartProviderBreakdown")}
-        </h3>
+        <h3 className="text-sm font-semibold text-text-main">{t("chartProviderBreakdown")}</h3>
       </div>
       <Table
         containerClassName="rounded-none border-0"

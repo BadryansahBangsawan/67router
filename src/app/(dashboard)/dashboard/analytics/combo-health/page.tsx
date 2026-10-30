@@ -1,7 +1,12 @@
 "use client";
 
+import AnalyticsSubpage from "../components/AnalyticsSubpage";
 import ComboHealthTab from "../ComboHealthTab";
 
 export default function AnalyticsComboHealthPage() {
-  return <ComboHealthTab />;
+  return (
+    <AnalyticsSubpage titleKey="analyticsComboHealth" subtitleKey="analyticsComboHealthSubtitle">
+      <ComboHealthTab />
+    </AnalyticsSubpage>
+  );
 }

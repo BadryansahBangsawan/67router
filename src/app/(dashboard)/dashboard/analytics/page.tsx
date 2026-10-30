@@ -3,8 +3,8 @@
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@omniroute/ui-kit/tabs";
-import Icon from "@/shared/components/Icon";
 import { UsageAnalytics, CardSkeleton } from "@/shared/components";
 import EvalsTab from "../usage/components/EvalsTab";
 import CacheHealthTab from "./CacheHealthTab";
@@ -66,6 +66,7 @@ function normalizeTab(tab: string | null): AnalyticsTab {
 
 function AnalyticsPageContent() {
   const t = useTranslations("analytics") as AnalyticsTranslator;
+  const tSidebar = useTranslations("sidebar");
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<AnalyticsTab>(normalizeTab(searchParams.get("tab")));
   const [initialRequestId] = useState(searchParams.get("id") || "");
@@ -88,39 +89,42 @@ function AnalyticsPageContent() {
   };
 
   return (
-    <Tabs
-      value={activeTab}
-      onValueChange={(next) => handleTabChange(next as AnalyticsTab)}
-      className="flex flex-col gap-6"
-    >
-      <TabsList aria-label={t("sectionsAria")} className="flex-wrap">
-        {ANALYTICS_TABS.map((tab) => (
-          <TabsTrigger key={tab.id} value={tab.id} className="gap-1.5">
-            <Icon name={tab.icon} size={16} />
-            {analyticsText(t, tab.labelKey, tab.label)}
-          </TabsTrigger>
-        ))}
-      </TabsList>
+    <div className="flex flex-col gap-6">
+      <PageHeader compact title={tSidebar("usage")} description={tSidebar("usageSubtitle")} />
+      <Tabs
+        variant="underline"
+        value={activeTab}
+        onValueChange={(next) => handleTabChange(next as AnalyticsTab)}
+        className="flex flex-col gap-6"
+      >
+        <TabsList aria-label={t("sectionsAria")} className="max-w-full flex-wrap overflow-x-auto">
+          {ANALYTICS_TABS.map((tab) => (
+            <TabsTrigger key={tab.id} value={tab.id}>
+              {analyticsText(t, tab.labelKey, tab.label)}
+            </TabsTrigger>
+          ))}
+        </TabsList>
 
-      <TabsContent value={activeTab} className="flex flex-col gap-6 focus-visible:outline-none">
-        <Suspense fallback={<CardSkeleton />}>
-          {activeTab === "overview" ? (
-            <>
-              <UsageAnalytics />
-              <DiversityScoreCard />
-            </>
-          ) : null}
-          {activeTab === "evals" ? <EvalsTab /> : null}
-          {activeTab === "search" ? <SearchAnalyticsTab /> : null}
-          {activeTab === "utilization" ? <ProviderUtilizationTab /> : null}
-          {activeTab === "combo-health" ? <ComboHealthTab /> : null}
-          {activeTab === "cache-health" ? <CacheHealthTab /> : null}
-          {activeTab === "route-trace" ? (
-            <RouteExplainabilityTab initialRequestId={initialRequestId} />
-          ) : null}
-        </Suspense>
-      </TabsContent>
-    </Tabs>
+        <TabsContent value={activeTab} className="flex flex-col gap-6 focus-visible:outline-none">
+          <Suspense fallback={<CardSkeleton />}>
+            {activeTab === "overview" ? (
+              <>
+                <UsageAnalytics />
+                <DiversityScoreCard />
+              </>
+            ) : null}
+            {activeTab === "evals" ? <EvalsTab /> : null}
+            {activeTab === "search" ? <SearchAnalyticsTab /> : null}
+            {activeTab === "utilization" ? <ProviderUtilizationTab /> : null}
+            {activeTab === "combo-health" ? <ComboHealthTab /> : null}
+            {activeTab === "cache-health" ? <CacheHealthTab /> : null}
+            {activeTab === "route-trace" ? (
+              <RouteExplainabilityTab initialRequestId={initialRequestId} />
+            ) : null}
+          </Suspense>
+        </TabsContent>
+      </Tabs>
+    </div>
   );
 }
 

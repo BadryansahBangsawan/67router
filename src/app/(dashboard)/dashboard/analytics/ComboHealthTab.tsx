@@ -502,7 +502,9 @@ function ComboHealthCard({
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2">
-              <h3 className="text-lg font-semibold text-text-main">{combo.comboName}</h3>
+              <h3 className="text-base font-semibold tracking-[-0.01em] text-text-main">
+                {combo.comboName}
+              </h3>
               <Badge variant="primary" size="sm">
                 {combo.strategy}
               </Badge>

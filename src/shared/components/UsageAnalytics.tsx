@@ -27,6 +27,7 @@ import {
   CustomRangePicker,
   RequestCountByProviderDateTable,
 } from "./analytics";
+import { KpiStrip } from "./analytics/KpiStrip";
 
 // ============================================================================
 // Main Component
@@ -240,8 +241,7 @@ export default function UsageAnalytics() {
     <div className="flex flex-col gap-5 min-w-0">
       {/* Header + Filters */}
       <div className="flex items-center justify-between flex-wrap gap-3">
-        <h2 className="text-xl font-semibold flex items-center gap-2">
-          <Icon name="analytics" size={22} className="text-primary" />
+        <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main">
           {t("usageAnalyticsTitle")}
         </h2>
         <div className="flex flex-wrap items-center gap-2.5">
@@ -291,7 +291,7 @@ export default function UsageAnalytics() {
               <Button
                 key={r.value}
                 size="sm"
-                variant={range === r.value ? "primary" : "ghost"}
+                variant={range === r.value ? "secondary" : "ghost"}
                 aria-pressed={range === r.value}
                 onClick={() => handleRangeSelect(r.value)}
                 className="h-7 min-h-7 px-3 text-xs"
@@ -301,7 +301,7 @@ export default function UsageAnalytics() {
             ))}
             <Button
               size="sm"
-              variant={range === "custom" ? "primary" : "ghost"}
+              variant={range === "custom" ? "secondary" : "ghost"}
               aria-pressed={range === "custom"}
               onClick={() => handleRangeSelect("custom")}
               className="h-7 min-h-7 px-3 text-xs gap-1"
@@ -337,9 +337,10 @@ export default function UsageAnalytics() {
         </div>
       </div>
 
-      {/* Primary KPI Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      {/* Primary KPI row — one bordered card split by dividers */}
+      <KpiStrip columns={4}>
         <StatCard
+          variant="cell"
           icon="generating_tokens"
           label={t("totalTokens")}
           value={tokenDisplayMode === "exact" ? fmtFull(s.totalTokens) : fmt(s.totalTokens)}
@@ -347,15 +348,16 @@ export default function UsageAnalytics() {
           subValue={`${fmtFull(s.totalRequests)} ${t("chartRequests")}`}
         />
         <StatCard
+          variant="cell"
           icon="input"
           label={t("inputTokens")}
           value={tokenDisplayMode === "exact" ? fmtFull(s.promptTokens) : fmt(s.promptTokens)}
           tooltip={
             tokenDisplayMode === "exact" ? `~${fmt(s.promptTokens)}` : fmtFull(s.promptTokens)
           }
-          color="text-primary"
         />
         <StatCard
+          variant="cell"
           icon="output"
           label={t("outputTokens")}
           value={
@@ -366,9 +368,9 @@ export default function UsageAnalytics() {
               ? `~${fmt(s.completionTokens)}`
               : fmtFull(s.completionTokens)
           }
-          color="text-success"
         />
         <StatCard
+          variant="cell"
           icon="payments"
           label={t("estCost")}
           value={fmtCost(s.totalCost)}
@@ -377,9 +379,8 @@ export default function UsageAnalytics() {
               ? `$${Number(s.totalCost).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })}`
               : undefined
           }
-          color="text-warning"
         />
-      </div>
+      </KpiStrip>
 
       {/* Secondary Metrics — compact grid with sections */}
       <CompactStatGrid
@@ -392,7 +393,6 @@ export default function UsageAnalytics() {
                 icon: "dns",
                 label: t("infraProviders"),
                 value: providerCount,
-                color: "text-chart-2",
               },
               { icon: "vpn_key", label: t("infraApiKeys"), value: s.uniqueApiKeys || 0 },
               { icon: "model_training", label: t("infraModels"), value: s.uniqueModels || 0 },
@@ -410,7 +410,6 @@ export default function UsageAnalytics() {
                   tokenDisplayMode === "exact"
                     ? `tokens : ~${fmt(avgTokensPerReq)} tokens`
                     : `tokens : ${fmtFull(avgTokensPerReq)} tokens`,
-                color: "text-info",
               },
               {
                 icon: "request_quote",
@@ -419,13 +418,11 @@ export default function UsageAnalytics() {
                 tooltip: costPerReq
                   ? `cost : $${Number(costPerReq).toLocaleString(undefined, { minimumFractionDigits: 4, maximumFractionDigits: 6 })}`
                   : undefined,
-                color: "text-warning",
               },
               {
                 icon: "compare_arrows",
                 label: t("perfIoRatio"),
                 value: `${ioRatio}x`,
-                color: "text-chart-3",
               },
               {
                 icon: "bolt",
@@ -438,7 +435,6 @@ export default function UsageAnalytics() {
                   tokenDisplayMode === "exact"
                     ? `requests : ~${fmt(s.fastRequests || 0)} requests`
                     : `requests : ${fmtFull(s.fastRequests || 0)} requests`,
-                color: "text-info",
               },
             ],
           },
@@ -450,31 +446,28 @@ export default function UsageAnalytics() {
                 icon: "star",
                 label: t("highlightsTopModel"),
                 value: topModel,
-                color: "text-chart-5",
               },
               {
                 icon: "cloud",
                 label: t("highlightsTopProvider"),
                 value: topProvider,
-                color: "text-chart-4",
               },
               {
                 icon: "today",
                 label: t("highlightsBusiestDay"),
                 value: busiestDay,
-                color: "text-error",
               },
               {
                 icon: "network_node",
                 label: t("highlightsDiversity"),
                 value: `${providerDiversity.toFixed(1)}%`,
-                color: "text-info",
               },
               {
                 icon: "swap_horiz",
                 label: t("highlightsFallbackRate"),
                 value: `${Number(s.fallbackRatePct || 0).toFixed(1)}%`,
-                color: "text-warning",
+                // 67router: orange is reserved for fallback semantics.
+                color: Number(s.fallbackRatePct || 0) > 0 ? "text-fallback" : undefined,
               },
             ],
           },
