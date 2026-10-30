@@ -89,6 +89,19 @@ const ENGINE_ICON_ALIASES: Record<string, string> = {
   brain: "psychology",
 };
 
+/** 1-based position of `engine` among the stackable engines in stackPriority order. */
+function pipelinePosition(
+  engines: EngineEntry[],
+  engine: EngineEntry | null
+): { current: number; total: number } | null {
+  if (!engine?.stackable) return null;
+  const ordered = engines
+    .filter((e) => e.stackable)
+    .sort((a, b) => a.stackPriority - b.stackPriority);
+  const index = ordered.findIndex((e) => e.id === engine.id);
+  return index === -1 ? null : { current: index + 1, total: ordered.length };
+}
+
 // ── Sub-components ────────────────────────────────────────────────────────
 
 function renderDiffSegment(
@@ -136,6 +149,9 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
   const [engineSettings, setEngineSettings] = useState<{ enabled?: boolean } | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  // This engine's position in the stacked pipeline (stackable engines in stackPriority order),
+  // derived from the engines list the page already reads — display only.
+  const [pipelineStep, setPipelineStep] = useState<{ current: number; total: number } | null>(null);
 
   // ── Preview state ───────────────────────────────────────────────────────
   const [previewText, setPreviewText] = useState(() => t("previewSample"));
@@ -188,6 +204,7 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
         if (analyticsData) setAnalytics(analyticsData);
         setEngineSettings(settingsData?.engines?.[engineId] ?? null);
         setEngine(foundEngine);
+        setPipelineStep(pipelinePosition(enginesData?.engines ?? [], foundEngine));
         const seeded = seedEngineForm(engineId, foundEngine?.configSchema ?? [], stored);
         setConfigState(seeded);
         setSavedConfig(seeded);
@@ -381,6 +398,14 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
             <span className="rounded-[5px] border border-border px-1.5 py-px font-mono text-xs font-normal tracking-normal text-text-muted">
               {engine.id}
             </span>
+            {pipelineStep && (
+              <span
+                data-testid="engine-pipeline-step"
+                className="text-[12.5px] font-normal tracking-normal text-text-muted tabular-nums"
+              >
+                {t("pipelineStep", pipelineStep)}
+              </span>
+            )}
           </span>
         }
         description={subtitle || undefined}
