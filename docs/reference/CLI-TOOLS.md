@@ -89,7 +89,7 @@ writing. Two supported ways forward — install the CLI on the host and
 `--allow-container-write` when configuring the container's own CLIs is what you
 actually meant; `OMNIROUTE_ALLOW_CONTAINER_CONFIG_WRITE=true` does the same for
 the server. See
-[Docker Guide → Configuring host CLI tools](../guides/DOCKER_GUIDE.md#configuring-host-cli-tools-when-omniroute-runs-in-docker).
+[Docker Guide → Configuring host CLI tools](../guides/DOCKER_GUIDE.md#configuring-host-cli-tools-when-67router-runs-in-docker).
 
 The dashboard's **apply endpoint** (`POST /api/cli-tools/apply`) enforces the
 same guard: in a container, a write whose target is not bind-mounted from the

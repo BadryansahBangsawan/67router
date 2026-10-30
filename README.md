@@ -102,8 +102,8 @@
   <tr>
     <td align="right"><b>💡 Learn</b></td>
     <td align="center"><a href="#-the-promise">💥 The Promise</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Why 67router</a></td>
-    <td align="center"><a href="#-what-sets-omniroute-apart">🏆 What Sets Apart</a></td>
+    <td align="center"><a href="#-why-67router">🤔 Why 67router</a></td>
+    <td align="center"><a href="#-what-sets-67router-apart">🏆 What Sets Apart</a></td>
   </tr>
   <tr>
     <td align="right"><b>⚙️ Features</b></td>
@@ -114,18 +114,18 @@
   <tr>
     <td align="right"></td>
     <td align="center"><a href="#%EF%B8%8F-save-1595-tokens--automatically">🗜️ Compression</a></td>
-    <td align="center"><a href="#%EF%B8%8F-where-omniroute-runs--anywhere">🖥️ Where It Runs</a></td>
+    <td align="center"><a href="#%EF%B8%8F-where-67router-runs--anywhere">🖥️ Where It Runs</a></td>
     <td align="center"><a href="#-private--local-first">🔒 Private</a></td>
   </tr>
   <tr>
     <td align="right"><b>👀 See it</b></td>
-    <td align="center"><a href="#-omniroute-in-action">🎬 In Action</a></td>
+    <td align="center"><a href="#-67router-in-action">🎬 In Action</a></td>
     <td align="center"><a href="#-whats-new">✨ What's New</a></td>
     <td align="center"><a href="#-compatible-clis--coding-agents">🤖 Compatible CLIs</a></td>
   </tr>
   <tr>
     <td align="right"><b>💚 Support</b></td>
-    <td align="center"><a href="#-support-omniroute">💚 Support / Donate</a></td>
+    <td align="center"><a href="#-support-67router">💚 Support / Donate</a></td>
     <td align="center"><a href="#-community--help">💬 Community</a></td>
     <td align="center"><a href="#-sponsors">💖 Sponsors</a></td>
   </tr>
@@ -1294,7 +1294,7 @@ Métricas canônicas em 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
 | 📦 **Source code**                         | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                            |
 | 🐛 **Report a bug**                        | [open an issue](https://github.com/diegosouzapw/OmniRoute/issues) — attach `npm run system-info` output                   |
 | 🤝 **Contribute**                          | [CONTRIBUTING.md](CONTRIBUTING.md) · [Branching & Release Model](docs/ops/BRANCHING_MODEL.md) · pick a `good first issue` |
-| 💚 **Support the project**                 | [Ways to support ↑](#-support-omniroute) · [GitHub Sponsors](https://github.com/sponsors/diegosouzapw)                    |
+| 💚 **Support the project**                 | [Ways to support ↑](#-support-67router) · [GitHub Sponsors](https://github.com/sponsors/diegosouzapw)                     |
 
 </div>
 

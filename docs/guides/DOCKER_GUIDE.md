@@ -14,7 +14,7 @@ lastUpdated: 2026-10-16
 - [With Environment File](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Available Profiles](#available-profiles)
-- [Configuring host CLI tools when 67router runs in Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Configuring host CLI tools when 67router runs in Docker](#configuring-host-cli-tools-when-67router-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [Production Compose](#production-compose)
 - [Dockerfile Stages](#dockerfile-stages)
