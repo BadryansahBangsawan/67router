@@ -955,9 +955,7 @@ export default function ProviderLimits({
                   }}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] uppercase tracking-wider font-semibold text-text-muted">
-                      {labelMap[key]}
-                    </span>
+                    <span className="text-[12.5px] text-text-muted">{labelMap[key]}</span>
                     {key !== "all" && (
                       <span
                         className="w-1.5 h-1.5 rounded-full"
@@ -967,7 +965,7 @@ export default function ProviderLimits({
                     )}
                   </div>
                   <div
-                    className="mt-0.5 text-2xl font-bold tabular-nums"
+                    className="mt-0.5 text-[22px] font-semibold leading-8 tracking-[-0.03em] tabular-nums"
                     style={{ color: key === "all" ? "var(--color-text-main)" : tone.text }}
                   >
                     {count}

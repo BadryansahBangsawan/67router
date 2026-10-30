@@ -9,6 +9,7 @@ import Icon from "@/shared/components/Icon";
 import { useProviderNodeMap, resolveProviderName } from "@/lib/display/useProviderNodeMap";
 import Card from "@/shared/components/Card";
 import Badge from "@/shared/components/Badge";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { Skeleton, Spinner } from "@/shared/components/Loading";
 import TimeRangeSelector from "@/shared/components/analytics/TimeRangeSelector";
 import type {
@@ -104,15 +105,18 @@ function MetricBlock({
   value: string;
   subValue?: string;
 }) {
+  // One cell of a 67router KPI strip (the parent grid is a <KpiStrip>).
   return (
-    <div className="rounded-lg border border-border bg-surface-2 p-4">
-      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted">
-        <Icon name={icon} size={16} />
-        {label}
-      </div>
-      <div className="mt-2 text-2xl font-semibold text-text-main">{value}</div>
-      {subValue ? <div className="mt-1 text-xs text-text-muted">{subValue}</div> : null}
-    </div>
+    <KpiCell
+      label={
+        <span className="inline-flex items-center gap-1.5">
+          <Icon name={icon} size={14} />
+          {label}
+        </span>
+      }
+      value={value}
+      footnote={subValue || undefined}
+    />
   );
 }
 
@@ -164,7 +168,7 @@ function ComboForecastPanel({ forecast }: { forecast: ComboForecastMetrics }) {
         </div>
       </div>
 
-      <div className="mt-4 grid gap-3 md:grid-cols-3">
+      <KpiStrip className="mt-4" gridClassName="grid-cols-1 md:grid-cols-3">
         <MetricBlock
           icon="payments"
           label={t("comboHealthProjectedCost")}
@@ -198,7 +202,7 @@ function ComboForecastPanel({ forecast }: { forecast: ComboForecastMetrics }) {
                 })
           }
         />
-      </div>
+      </KpiStrip>
 
       {topTargets.length > 0 ? (
         <div className="mt-4 grid gap-3 lg:grid-cols-3">
@@ -288,7 +292,7 @@ function ComboAutopilotPanel({ report }: { report: ComboAutopilotReport }) {
           </div>
           <p className="mt-1 text-sm text-text-muted">{t("comboHealthAutopilotDescription")}</p>
         </div>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:min-w-90">
+        <KpiStrip className="lg:min-w-90" gridClassName="grid-cols-2 sm:grid-cols-4">
           <MetricBlock
             icon="monitor_heart"
             label={t("comboHealthIssues")}
@@ -312,7 +316,7 @@ function ComboAutopilotPanel({ report }: { report: ComboAutopilotReport }) {
             label={t("comboHealthHealthy")}
             value={report.summary.healthyCount.toLocaleString()}
           />
-        </div>
+        </KpiStrip>
       </div>
 
       <div className="px-6 py-5">
@@ -521,7 +525,7 @@ function ComboHealthCard({
               })}
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:min-w-105">
+          <KpiStrip className="lg:min-w-105" gridClassName="grid-cols-1 sm:grid-cols-3">
             <MetricBlock
               icon="battery_status_good"
               label={t("comboHealthWorstQuotaLeft")}
@@ -541,7 +545,7 @@ function ComboHealthCard({
                 count: combo.performance.totalRequests.toLocaleString(),
               })}
             />
-          </div>
+          </KpiStrip>
         </div>
       </div>
 
@@ -652,7 +656,7 @@ function ComboHealthCard({
             </div>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+          <KpiStrip gridClassName="grid-cols-1 sm:grid-cols-3 xl:grid-cols-1">
             <MetricBlock
               icon="timer"
               label={t("comboHealthAvgLatency")}
@@ -668,7 +672,7 @@ function ComboHealthCard({
               label={t("comboHealthTotalRequests")}
               value={combo.performance.totalRequests.toLocaleString()}
             />
-          </div>
+          </KpiStrip>
         </section>
       </div>
 
@@ -953,7 +957,7 @@ export default function ComboHealthTab() {
               <p className="text-xs font-medium text-text-main">{t("comboHealthGettingStarted")}</p>
               <ul className="mt-2 text-left text-xs text-text-muted">
                 <li className="flex items-start gap-2">
-                  <Icon name="check_circle" size={14} className="text-primary" />
+                  <Icon name="check_circle" size={14} className="text-text-muted" />
                   <span>
                     {t.rich("comboHealthStepCreate", {
                       strong: (chunks) => <strong>{chunks}</strong>,
@@ -961,11 +965,11 @@ export default function ComboHealthTab() {
                   </span>
                 </li>
                 <li className="mt-1 flex items-start gap-2">
-                  <Icon name="check_circle" size={14} className="text-primary" />
+                  <Icon name="check_circle" size={14} className="text-text-muted" />
                   <span>{t("comboHealthStepSend")}</span>
                 </li>
                 <li className="mt-1 flex items-start gap-2">
-                  <Icon name="check_circle" size={14} className="text-primary" />
+                  <Icon name="check_circle" size={14} className="text-text-muted" />
                   <span>{t("comboHealthStepAutomatic")}</span>
                 </li>
               </ul>
@@ -978,7 +982,7 @@ export default function ComboHealthTab() {
         <div className="flex flex-col gap-4">
           {autopilotData ? <ComboAutopilotPanel report={autopilotData} /> : null}
           <div className="flex items-center gap-2 text-sm text-text-muted">
-            <Spinner size="sm" className="text-primary [&_.oi-icon]:size-4" />
+            <Spinner size="sm" className="text-text-muted [&_.oi-icon]:size-4" />
             {t("comboHealthTracking", { count: combos.length, range })}
           </div>
           {combos.map((combo) => (
