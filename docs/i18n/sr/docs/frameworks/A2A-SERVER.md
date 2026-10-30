@@ -161,7 +161,7 @@ OmniRoute izlaže 6 A2A veština povezanih u `src/lib/a2a/taskExecution.ts::A2A_
 | Provider Discovery | `provider-discovery` | Navodi instalirane provajdere sa mogućnostima, oznakama besplatnog nivoa i OAuth statusom                                                            | providers, discovery       | "Koji provajderi su dostupni?"               |
 | Cost Analysis      | `cost-analysis`      | Procenjuje trošak zahteva/razgovora na osnovu kataloga i skorašnje upotrebe                                                                          | cost, usage                | "Proceni trošak ovog razgovora"              |
 | Health Report      | `health-report`      | Objedinjuje stanje circuit breaker-a, cooldown-a i lockout-a po provajderu                                                                           | health, resilience         | "Prikaži zdravstveni status svih provajdera" |
-| List Capabilities  | `list-capabilities`  | Vraća kompletan katalog Agent Skills sa 45 stavki (23 API + 21 CLI + 1 config) kao markdown tabelu sa raw SKILL.md URL-ovima za ubacivanje konteksta | catalog, discovery, skills | "Navedi sve OmniRoute mogućnosti"            |
+| List Capabilities  | `list-capabilities`  | Vraća kompletan katalog Agent Skills sa 43 stavki (22 API + 20 CLI + 1 config) kao markdown tabelu sa raw SKILL.md URL-ovima za ubacivanje konteksta | catalog, discovery, skills | "Navedi sve OmniRoute mogućnosti"            |
 
 > Agent Card treba da bude usklađen sa aktivnim katalogom od 375 provajdera; broj provajdera i metapodaci o besplatnom pristupu/pristupu bez autentifikacije preuzimaju se iz runtime registra.
 

@@ -280,7 +280,7 @@ Payloadها برای هر row از artifact موجود در filesystem خوان�
 - `send()` در صورت شکست جزئی **حتماً باید خطا پرتاب کند**. resolve شدن یعنی «مقصد این ردیفها را در اختیار دارد»،
   و مکاننما برای همیشه از آنها عبور میکند.
 - مقصدی که یک URL ارائهشده توسط کاربر را دریافت میکند، باید پیش از fetch کردن، آن را از طریق
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) اعتبارسنجی کند؛
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) اعتبارسنجی کند؛
   دقیقاً همانطور که webhookها انجام میدهند. BigQuery به این کار نیازی ندارد، زیرا میزبانهای آن ثابت هستند.
 
 ---

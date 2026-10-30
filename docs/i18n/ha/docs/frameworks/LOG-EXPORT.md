@@ -273,7 +273,7 @@ Ka'idoji biyu don sabon wurin aikawa:
 - `send()` **dole ne ya jefa kuskure** idan an samu gazawar wani ɓangare. Idan ya kammala cikin nasara, hakan yana nufin "wurin aikawa yana da waɗannan layukan",
   kuma siginar matsayi za ta wuce su har abada.
 - Wurin aikawa da yake karɓar URL da mai amfani ya bayar dole ne ya tabbatar da ingancinsa ta
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) kafin ɗauko bayanai,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) kafin ɗauko bayanai,
   kamar yadda webhooks suke yi. BigQuery ba ya buƙatar wannan: rundunoninsa tabbatattu ne.
 
 ---

@@ -28,11 +28,10 @@ test("known ids are kept and unknown or non-string entries are dropped", () => {
 });
 
 test("duplicates collapse and the canonical order wins over the stored order", () => {
-  assert.deepEqual(normalizeHiddenSidebarGroupLabels(["batch", "audit", "batch", "tools"]), [
-    "tools",
-    "audit",
-    "batch",
-  ]);
+  assert.deepEqual(
+    normalizeHiddenSidebarGroupLabels(["gamification", "audit", "gamification", "tools"]),
+    ["tools", "audit", "gamification"]
+  );
 });
 
 test("every hideable id survives a round trip in canonical order", () => {

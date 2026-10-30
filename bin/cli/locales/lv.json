@@ -791,38 +791,6 @@
       "description": "Rādīt rezultātu karti pabeigtai vērtēšanas palaišanai"
     }
   },
-  "webhooks": {
-    "description": "Pārvaldīt OmniRoute tīmekļa āķus",
-    "events": {
-      "description": "Uzskaitīt visus pieejamos tīmekļa āķa notikumu veidus"
-    },
-    "list": {
-      "description": "Uzskaitīt konfigurētos tīmekļa āķus"
-    },
-    "get": {
-      "description": "Iegūt tīmekļa āķa detaļas pēc ID"
-    },
-    "add": {
-      "description": "Reģistrēt jaunu tīmekļa āķi",
-      "url": "Mērķa URL",
-      "events": "Ar komatu atdalīts notikumu veidu saraksts",
-      "secret": "HMAC parakstīšanas noslēpums",
-      "header": "Papildu galvene atslēgas=vērtība formātā (atkārtojama)",
-      "no_enabled": "Izveidot tīmekļa āķi atspējotā stāvoklī"
-    },
-    "update": {
-      "description": "Atjaunināt esošu tīmekļa āķi",
-      "enabled": "Iestatīt iespējošanas stāvokli (true|false)"
-    },
-    "remove": {
-      "description": "Dzēst tīmekļa āķi",
-      "yes": "Izlaidiet apstiprinājuma pieprasījumu"
-    },
-    "test": {
-      "description": "Sūtīt testa notikumu uz tīmekļa āķi",
-      "event": "Notikuma tips, ko simulēt (noklusējums: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Viedais AI maršrutētājs ar automātisko rezerves režīmu",
     "version": "Drukāt versiju un iziet",
@@ -834,59 +802,6 @@
     "base_url": "OmniRoute servera bāzes URL",
     "context": "Servera konteksts/profils šai komandai",
     "lang": "Iestatīt CLI displeja valodu (pārraksta OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Pārvaldīt failus (augšupielādēt, uzskaitīt, iegūt, lejupielādēt, dzēst)",
-    "list": {
-      "purpose": "Filtrēt pēc mērķa",
-      "limit": "Maks. rezultāti"
-    },
-    "get": {
-      "description": "Iegūt faila metadatus"
-    },
-    "upload": {
-      "description": "Augšupielādēt failu",
-      "purpose": "Faila mērķis (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Lejupielādēt faila saturu",
-      "out": "Saglabāt ceļā (noklusējums: stdout)"
-    },
-    "delete": {
-      "yes": "Izlaidiet apstiprinājumu"
-    }
-  },
-  "batches": {
-    "description": "Pārvaldīt OpenAI savietojamus partijas darbus",
-    "list": {
-      "status": "Filtrēt pēc statusa",
-      "limit": "Maks. rezultāti"
-    },
-    "create": {
-      "description": "Izveidot partijas darbu",
-      "inputFile": "Ievades faila ID",
-      "endpoint": "Mērķa gala punkts",
-      "window": "Pabeigšanas logs",
-      "metadata": "Pievienot metadatus atslēga=vērtība"
-    },
-    "submit": {
-      "description": "Augšupielādēt JSONL failu un izveidot partiju",
-      "jsonl": "Ceļš uz JSONL failu",
-      "endpoint": "Mērķa gala punkts",
-      "wait": "Gaidīt pabeigšanu"
-    },
-    "cancel": {
-      "yes": "Izlaidiet apstiprinājumu"
-    },
-    "wait": {
-      "timeout": "Taimauts ms"
-    },
-    "output": {
-      "out": "Saglabāt izvadu ceļā"
-    },
-    "errors": {
-      "out": "Saglabāt kļūdas ceļā"
-    }
   },
   "translator": {
     "description": "Tulkot pieprasījuma ķermeņus starp LLM formātiem",
@@ -1122,33 +1037,6 @@
       "top": "Rādāmo augstāko kandidātu skaits (noklusējums: 5)",
       "explain": "Izdrukāt pamatojumu uz stderr",
       "switch": "Aktivizēt visaugstāk novērtēto kombināciju"
-    }
-  },
-  "oneproxy": {
-    "description": "Pārvaldīt OneProxy augšējā līmeņa baseinu",
-    "stats": {
-      "provider": "Filtrēt pēc pakalpojuma sniedzēja",
-      "period": "Laika periods (noklusējums: 24h)"
-    },
-    "fetch": {
-      "description": "Iegūt starpniekserverus no baseina",
-      "count": "Iegūstamo starpniekserveru skaits (noklusējums: 1)",
-      "type": "Starpniekservera tips: http|socks5 (noklusējums: http)"
-    },
-    "rotate": {
-      "description": "Piespiest starpniekservera maiņu",
-      "provider": "Pakalpojuma sniedzējs, kam veikt maiņu",
-      "connectionId": "Konkrētais savienojuma ID, kam veikt maiņu"
-    },
-    "config": {
-      "description": "Rādīt vai atjaunināt OneProxy konfigurāciju",
-      "enabled": "Iespējot starpniekserveru baseinu (true|false)",
-      "poolSize": "Baseina lielums",
-      "providerSource": "URL starpniekserveru sniedzējam",
-      "rotationPolicy": "Maiņas politika: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Parādīt pašreizējo starpniekserveru baseinu ar metrikām"
     }
   },
   "open": {

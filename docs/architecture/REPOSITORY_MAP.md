@@ -200,7 +200,6 @@ src/
 | `promptCache/`                           | Anthropic-style prompt cache breakpoints                                                                                                                                                                                                                                                                                |
 | `skills/`                                | Skills framework (built-in + marketplace + SkillsSH) — see `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                  |
 | `playground/`                            | Playground Studio shared helpers: `codeExport.ts` (curl/Python/TS generator), `promptImprover.ts` (meta-prompt builder), `streamMetrics.ts` (pure TTFT/TPS), `types.ts` (pricing table) — see `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                    |
-| `webhookDispatcher.ts`                   | HMAC webhook delivery — see `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                               |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | Tunnel managers — see `docs/ops/TUNNELS_GUIDE.md`                                                                                                                                                                                                                                                                       |
 | `cloudSync.ts`, `initCloudSync.ts`       | Optional cloud sync of state                                                                                                                                                                                                                                                                                            |
 | `localDb.ts`                             | Re-export barrel for db modules (no logic — re-exports only)                                                                                                                                                                                                                                                            |
@@ -271,7 +270,7 @@ open-sse/
 ├── translator/          # Format converters (9 request, 9 response, 9 helpers)
 ├── transformer/         # Responses API ↔ Chat Completions (TransformStream)
 ├── services/            # ~80+ service modules (combo, accountFallback, autoCombo, reasoningCache, claude code/chatgpt stealth, modelDeprecation, taskAwareRouter, workflowFSM, etc.)
-├── mcp-server/          # MCP server (110 tools, 3 transports, 33 scopes)
+├── mcp-server/          # MCP server (107 tools, 3 transports, 32 scopes)
 ├── config/              # Provider/model registries, header config, model aliases
 ├── utils/               # TLS client, proxy fetch/dispatcher, network helpers
 ├── index.ts             # Workspace entry
@@ -420,7 +419,7 @@ open-sse/
 
 | Doc                                         | Purpose                                                              |
 | ------------------------------------------- | -------------------------------------------------------------------- |
-| `MCP-SERVER.md`                             | MCP server: 110 tools, 3 transports, 33 scopes, REST endpoints       |
+| `MCP-SERVER.md`                             | MCP server: 107 tools, 3 transports, 32 scopes, REST endpoints       |
 | `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, 6 skills, REST helpers, agent card               |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | Unified guide: A2A vs ACP vs Cloud Agents                            |
 | `CLOUD_AGENT.md`                            | Codex Cloud / Devin / Jules orchestration                            |
@@ -430,7 +429,6 @@ open-sse/
 | `EVALS.md`                                  | Eval framework (suites, runs, rubrics)                               |
 | `GUARDRAILS.md`                             | PII masker, prompt injection, vision bridge                          |
 | `COMPLIANCE.md`                             | Audit log, retention, noLog opt-out                                  |
-| `WEBHOOKS.md`                               | HMAC-signed webhook delivery                                         |
 | `REASONING_REPLAY.md`                       | Hybrid memory/SQLite cache for `reasoning_content`                   |
 | `AUTHZ_GUIDE.md`                            | Authorization pipeline (`classify` → `policies` → `enforce`)         |
 | `RESILIENCE_GUIDE.md`                       | Circuit breaker + cooldown + model lockout                           |
@@ -458,7 +456,7 @@ open-sse/
 | `PWA_GUIDE.md`               | Progressive Web App install + service worker                      |
 | `ELECTRON_GUIDE.md`          | Desktop app build + sign + distribute                             |
 | `TUNNELS_GUIDE.md`           | Cloudflared + ngrok + Tailscale Funnel                            |
-| `PROXY_GUIDE.md`             | 4-level outbound proxy + 1proxy marketplace                       |
+| `PROXY_GUIDE.md`             | 4-level outbound proxy and proxy registry                         |
 
 ### Subdirectories
 

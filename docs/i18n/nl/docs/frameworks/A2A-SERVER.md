@@ -161,7 +161,7 @@ OmniRoute stelt 6 A2A-skills beschikbaar die zijn gedefinieerd in `src/lib/a2a/t
 | Provider Discovery | `provider-discovery` | Toont geïnstalleerde providers met mogelijkheden, free-tier-vlaggen en OAuth-status                                                                 | providers, discovery       | "What providers are available?"        |
 | Cost Analysis      | `cost-analysis`      | Schat de kosten van een verzoek/gesprek op basis van de catalogus + recent gebruik                                                                  | cost, usage                | "Estimate cost for this conversation"  |
 | Health Report      | `health-report`      | Aggregeert de status van circuit breaker, cooldown en lockout per provider                                                                          | health, resilience         | "Show health status of all providers"  |
-| List Capabilities  | `list-capabilities`  | Geeft de volledige catalogus met 45 Agent Skills (23 API + 21 CLI + 1 config) terug als markdown-tabel met ruwe SKILL.md-URL's voor contextinjectie | catalog, discovery, skills | "List all OmniRoute capabilities"      |
+| List Capabilities  | `list-capabilities`  | Geeft de volledige catalogus met 43 Agent Skills (22 API + 20 CLI + 1 config) terug als markdown-tabel met ruwe SKILL.md-URL's voor contextinjectie | catalog, discovery, skills | "List all OmniRoute capabilities"      |
 
 > De Agent Card moet worden afgestemd op de live catalogus met 375 providers; het aantal providers en de free/no-auth-metadata zijn afkomstig uit het runtime-register.
 

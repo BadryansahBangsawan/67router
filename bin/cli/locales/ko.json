@@ -791,38 +791,6 @@
       "description": "완료된 평가 실행의 스코어카드 보기"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute 웹훅 관리",
-    "events": {
-      "description": "사용 가능한 모든 웹훅 이벤트 유형 목록 보기"
-    },
-    "list": {
-      "description": "구성된 웹훅 목록 보기"
-    },
-    "get": {
-      "description": "ID로 웹훅 세부 정보 가져오기"
-    },
-    "add": {
-      "description": "새 웹훅 등록",
-      "url": "대상 URL",
-      "events": "쉼표로 구분된 이벤트 유형 목록",
-      "secret": "HMAC 서명 비밀 키",
-      "header": "key=value 형식의 추가 헤더(반복 가능)",
-      "no_enabled": "비활성화 상태로 웹훅 만들기"
-    },
-    "update": {
-      "description": "기존 웹훅 업데이트",
-      "enabled": "활성화 상태 설정(true|false)"
-    },
-    "remove": {
-      "description": "웹훅 삭제",
-      "yes": "확인 프롬프트 건너뛰기"
-    },
-    "test": {
-      "description": "웹훅에 테스트 이벤트 보내기",
-      "event": "시뮬레이션할 이벤트 유형(기본값: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — 자동 폴백 기능을 갖춘 스마트 AI 라우터",
     "version": "버전 출력 후 종료",
@@ -834,59 +802,6 @@
     "base_url": "OmniRoute 서버 기본 URL",
     "context": "이 명령에 사용할 서버 컨텍스트/프로필",
     "lang": "CLI 표시 언어 설정 (OMNIROUTE_LANG 재정의)"
-  },
-  "files": {
-    "description": "파일 관리(업로드, 목록 보기, 가져오기, 다운로드, 삭제)",
-    "list": {
-      "purpose": "용도별 필터링",
-      "limit": "최대 결과 수"
-    },
-    "get": {
-      "description": "파일 메타데이터 가져오기"
-    },
-    "upload": {
-      "description": "파일 업로드",
-      "purpose": "파일 용도 (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "파일 콘텐츠 다운로드",
-      "out": "저장 경로 (기본값: stdout)"
-    },
-    "delete": {
-      "yes": "확인 건너뛰기"
-    }
-  },
-  "batches": {
-    "description": "OpenAI 호환 배치 작업 관리",
-    "list": {
-      "status": "상태별 필터링",
-      "limit": "최대 결과 수"
-    },
-    "create": {
-      "description": "배치 작업 생성",
-      "inputFile": "입력 파일 ID",
-      "endpoint": "대상 엔드포인트",
-      "window": "완료 기간",
-      "metadata": "메타데이터 key=value 추가"
-    },
-    "submit": {
-      "description": "JSONL 파일 업로드 및 배치 생성",
-      "jsonl": "JSONL 파일 경로",
-      "endpoint": "대상 엔드포인트",
-      "wait": "완료될 때까지 대기"
-    },
-    "cancel": {
-      "yes": "확인 건너뛰기"
-    },
-    "wait": {
-      "timeout": "제한 시간(ms)"
-    },
-    "output": {
-      "out": "출력 저장 경로"
-    },
-    "errors": {
-      "out": "오류 저장 경로"
-    }
   },
   "translator": {
     "description": "LLM 형식 간 요청 본문 변환",
@@ -1122,33 +1037,6 @@
       "top": "표시할 상위 후보 수(기본값: 5)",
       "explain": "근거를 stderr에 출력",
       "switch": "가장 높은 순위의 콤보 활성화"
-    }
-  },
-  "oneproxy": {
-    "description": "OneProxy 업스트림 풀 관리",
-    "stats": {
-      "provider": "제공업체별 필터링",
-      "period": "기간(기본값: 24h)"
-    },
-    "fetch": {
-      "description": "풀에서 프록시 가져오기",
-      "count": "가져올 프록시 수(기본값: 1)",
-      "type": "프록시 유형: http|socks5 (기본값: http)"
-    },
-    "rotate": {
-      "description": "프록시 강제 교체",
-      "provider": "교체할 제공업체",
-      "connectionId": "교체할 특정 연결 ID"
-    },
-    "config": {
-      "description": "OneProxy 설정 표시 또는 업데이트",
-      "enabled": "프록시 풀 활성화 (true|false)",
-      "poolSize": "풀 크기",
-      "providerSource": "프록시 제공업체 URL",
-      "rotationPolicy": "로테이션 정책: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "현재 프록시 풀과 메트릭 목록 표시"
     }
   },
   "open": {

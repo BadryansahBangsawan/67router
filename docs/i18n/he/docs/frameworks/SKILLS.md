@@ -23,7 +23,7 @@ Skill הוא יחידת עבודה מנוהלת גרסאות ומוגדרת בא
 | מקור האמת    | `src/lib/skills/` + מרקטפלייס                                | `src/lib/agentSkills/` + התיקייה `skills/`                                                            |
 | מצב זמן ריצה | מוזרקים לבקשות יוצאות ומופעלים באירועי קריאת כלים            | קטלוג Markdown סטטי + נקודות קצה לגילוי באמצעות REST/MCP/A2A                                          |
 | מי משתמש בהם | OmniRoute עצמה (ניתוב משולב, קריאות LLM נכנסות)              | סוכנים חיצוניים, לקוחות MCP ומתזמרי A2A                                                               |
-| כמות         | משתנה (מונעת על ידי המרקטפלייס)                              | 45 רשומות קטלוג (23 API + 21 CLI + 1 תצורה)                                                           |
+| כמות         | משתנה (מונעת על ידי המרקטפלייס)                              | 43 רשומות קטלוג (22 API + 20 CLI + 1 תצורה)                                                           |
 | פורמט        | `SkillDefinition` עם סכמת כלי + מטפל                         | frontmatter של `SKILL.md` + גוף Markdown                                                              |
 | גילוי        | REST דרך `/api/skills/*` + כלי MCP מסוג `omniroute_skills_*` | REST דרך `/api/agent-skills/*` + כלי MCP מסוג `omniroute_agent_skills_*` + `list-capabilities` של A2A |
 

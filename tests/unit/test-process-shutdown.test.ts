@@ -2,18 +2,7 @@ import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { once } from "node:events";
 import test from "node:test";
-import { readFileSync } from "node:fs";
 import { stopTestProcess } from "../_helpers/stopTestProcess.ts";
-
-test("batch HTTP fixture uses the peer-stamping server entrypoint", () => {
-  const source = readFileSync(
-    new URL("../integration/batch-e2e-rate-limit.test.ts", import.meta.url),
-    "utf8"
-  );
-  assert.ok(source.includes('["scripts/dev/run-next.mjs", "dev"]'));
-  assert.ok(!source.includes('["scripts/dev/run-next-playwright.mjs", "dev"]'));
-  assert.ok(source.includes('HOST: "127.0.0.1"'));
-});
 
 test(
   "test server cleanup returns when the process already exited",

@@ -23,7 +23,7 @@ OmniRoute are două sisteme de skill-uri distincte, dar complementare:
 | Sursa de referință | `src/lib/skills/` + marketplace                                                          | `src/lib/agentSkills/` + directorul `skills/`                                                       |
 | Mod de rulare      | Injectate în solicitările trimise, executate la evenimentele de apelare a instrumentelor | Catalog Markdown static + endpoint-uri REST/MCP/A2A pentru descoperire                              |
 | Cine le utilizează | OmniRoute însuși (rutare combo, apeluri LLM de intrare)                                  | Agenți externi, clienți MCP, orchestratoare A2A                                                     |
-| Număr              | Variabil (determinat de marketplace)                                                     | 45 de intrări în catalog (23 API + 21 CLI + 1 config)                                               |
+| Număr              | Variabil (determinat de marketplace)                                                     | 43 de intrări în catalog (22 API + 20 CLI + 1 config)                                               |
 | Format             | `SkillDefinition` cu schema instrumentului + handler                                     | Frontmatter `SKILL.md` + corp Markdown                                                              |
 | Descoperire        | REST `/api/skills/*` + instrumentele MCP `omniroute_skills_*`                            | REST `/api/agent-skills/*` + instrumentele MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 

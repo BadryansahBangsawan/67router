@@ -163,7 +163,7 @@ OmniRoute, `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` içinde tanımlanm
 | Provider Discovery | `provider-discovery` | Yüklü sağlayıcıları yetenekleri, ücretsiz katman bayrakları ve OAuth durumuyla birlikte listeler                                                                           | providers, discovery       | "Hangi sağlayıcılar mevcut?"                 |
 | Cost Analysis      | `cost-analysis`      | Katalog ve son kullanım verilerine dayanarak bir isteğin/konuşmanın maliyetini tahmin eder                                                                                 | cost, usage                | "Bu konuşmanın maliyetini tahmin et"         |
 | Health Report      | `health-report`      | Sağlayıcı başına circuit breaker, cooldown ve lockout durumlarını bir araya getirir                                                                                        | health, resilience         | "Tüm sağlayıcıların sağlık durumunu göster"  |
-| List Capabilities  | `list-capabilities`  | 45 girdilik Agent Skills kataloğunun tamamını (23 API + 21 CLI + 1 config), bağlam enjeksiyonu için ham SKILL.md URL'leriyle birlikte bir markdown tablosu olarak döndürür | catalog, discovery, skills | "Tüm OmniRoute yeteneklerini listele"        |
+| List Capabilities  | `list-capabilities`  | 43 girdilik Agent Skills kataloğunun tamamını (22 API + 20 CLI + 1 config), bağlam enjeksiyonu için ham SKILL.md URL'leriyle birlikte bir markdown tablosu olarak döndürür | catalog, discovery, skills | "Tüm OmniRoute yeteneklerini listele"        |
 
 > Agent Card, canlı 375 sağlayıcılı katalogla uyumlu tutulmalıdır; sağlayıcı sayıları ile ücretsiz/kimlik doğrulamasız (no-auth) meta verileri çalışma zamanı kayıt defterinden (runtime registry) alınır.
 

@@ -23,7 +23,7 @@ OmniRoute'il on kaks erinevat, kuid teineteist täiendavat oskuste süsteemi:
 | Tõeallikas       | `src/lib/skills/` + turuplats                                                       | `src/lib/agentSkills/` + kataloog `skills/`                                                      |
 | Käitusrežiim     | Lisatakse väljaminevatesse päringutesse, käitatakse tööriistakutse sündmuste korral | Staatiline markdown-kataloog + REST/MCP/A2A avastuslõpp-punktid                                  |
 | Kes seda kasutab | OmniRoute ise (kombineeritud marsruutimine, sissetulevad LLM-kutsed)                | Välised agendid, MCP-kliendid, A2A-orkestreerijad                                                |
-| Arv              | Muutuv (turuplatsi juhitud)                                                         | 45 kataloogikirjet (23 API + 21 CLI + 1 konfiguratsioon)                                         |
+| Arv              | Muutuv (turuplatsi juhitud)                                                         | 43 kataloogikirjet (22 API + 20 CLI + 1 konfiguratsioon)                                         |
 | Vorming          | `SkillDefinition` koos tööriista skeemi + töötlejaga                                | `SKILL.md` frontmatter + markdown-keha                                                           |
 | Avastamine       | `/api/skills/*` REST + `omniroute_skills_*` MCP-tööriistad                          | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-tööriistad + A2A `list-capabilities` |
 

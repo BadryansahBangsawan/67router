@@ -236,7 +236,7 @@ Didefinisikan dalam `open-sse/mcp-server/tools/agentSkillTools.ts`. Didukung ole
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Mencantumkan seluruh 45 keterampilan agen dengan filter opsional `category` (api\|cli) dan `area`; mengembalikan metadata + cakupan                   |
 | `omniroute_agent_skills_get`      | `read:catalog` | Mendapatkan metadata lengkap + konten SKILL.md untuk satu keterampilan berdasarkan `id` kanonis                                                       |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistik cakupan: jumlah dari 23 keterampilan API, 21 CLI, dan 1 konfigurasi yang memiliki file SKILL.md di sistem berkas dibandingkan total katalog |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistik cakupan: jumlah dari 22 keterampilan API, 20 CLI, dan 1 konfigurasi yang memiliki file SKILL.md di sistem berkas dibandingkan total katalog |
 
 Lihat [AGENT-SKILLS.md](./AGENT-SKILLS.md) untuk katalog lengkap dan cara agen eksternal menggunakannya.
 

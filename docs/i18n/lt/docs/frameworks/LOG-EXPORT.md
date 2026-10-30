@@ -268,7 +268,7 @@ Dvi naujos paskirties vietos taisyklės:
 - `send()` **privalo išmesti klaidą**, jei įvyko dalinė triktis. Sėkmingas užbaigimas reiškia „ši
   paskirties vieta turi šias eilutes“, o žymeklis negrįžtamai perkeliamas už jų.
 - Paskirties vieta, naudojanti naudotojo pateiktą URL, prieš siųsdama užklausą privalo jį patikrinti
-  per `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) taip pat, kaip
+  per `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) taip pat, kaip
   tai daro „webhook“ iškvietos. „BigQuery“ to nereikia, nes jos pagrindinių kompiuterių vardai yra
   konstantos.
 

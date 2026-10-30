@@ -34,14 +34,14 @@ via API keys), embedded services run on the same machine as OmniRoute and commun
 
 Seven services are embedded:
 
-| Service         | npm package                        | Default port | Purpose                                                                                                                                                                                |
-| --------------- | ---------------------------------- | :----------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                          |    20130     | AI router that OmniRoute can use as a sub-provider. Models exposed as `9router/{sub}/{model}`                                                                                          |
-| **CLIProxyAPI** | GitHub release binary (`cliproxy`) |     8317     | Local proxy adapter for Anthropic CLI auth flows. Provides fallback routing when OAuth tokens expire                                                                                   |
-| **Mux**         | `mux` (headless `mux server`)      |     8322     | Local agent-orchestration daemon (coder/mux). Lifecycle-managed only — not a routing target (no LLM proxying).                                                                         |
-| **Bifrost**     | `@maximhq/bifrost`                 |     8080     | Go AI-gateway relay backend. When running, auto-selected by the relay route (`/v1/relay/`)                                                                                             |
-| **Dario**       | `@askalf/dario`                    |     3456     | Claude-subscription proxy — alternative/failover to CLIProxyAPI for Claude-Code-shaped traffic; the injected key becomes `DARIO_ADMIN_TOKEN` gating its `/admin/*` OAuth control plane |
-| **open-wa**     | `@open-wa/wa-automate`             |     8323     | WhatsApp Web automation (headless Chromium via Puppeteer). Lifecycle-managed only — not a routing target.                                                                              |
+| Service         | npm package                        | Default port | Purpose                                                                                                                                                                                                                                                                                                                          |
+| --------------- | ---------------------------------- | :----------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **9Router**     | `9router`                          |    20130     | AI router that OmniRoute can use as a sub-provider. Models exposed as `9router/{sub}/{model}`                                                                                                                                                                                                                                    |
+| **CLIProxyAPI** | GitHub release binary (`cliproxy`) |     8317     | Local proxy adapter for Anthropic CLI auth flows. Provides fallback routing when OAuth tokens expire                                                                                                                                                                                                                             |
+| **Mux**         | `mux` (headless `mux server`)      |     8322     | Local agent-orchestration daemon (coder/mux). Lifecycle-managed only — not a routing target (no LLM proxying).                                                                                                                                                                                                                   |
+| **Bifrost**     | `@maximhq/bifrost`                 |     8080     | Go AI gateway, available as an embedded service                                                                                                                                                                                                                                                                                  |
+| **Dario**       | `@askalf/dario`                    |     3456     | Claude-subscription proxy — alternative/failover to CLIProxyAPI for Claude-Code-shaped traffic; the injected key becomes `DARIO_ADMIN_TOKEN` gating its `/admin/*` OAuth control plane                                                                                                                                           |
+| **open-wa**     | `@open-wa/wa-automate`             |     8323     | WhatsApp Web automation (headless Chromium via Puppeteer). Lifecycle-managed only — not a routing target.                                                                                                                                                                                                                        |
 | **LLMLingua**   | `@atjsh/llmlingua-2`               |    20135     | Prompt-compression sidecar — real LLMLingua-2 ONNX model (JS/TS port of Microsoft's algorithm). `open-sse/services/compression/engines/llmlingua/index.ts` dispatches `/compress` over HTTP to it, falling back to the in-process worker-thread backend when the sidecar is down. Lifecycle-managed only — not a routing target. |
 
 All seven follow the same supervisory model:
@@ -154,7 +154,7 @@ All seven follow the same supervisory model:
 | `src/lib/services/installers/cliproxy.ts`   | npm install/update/uninstall for CLIProxyAPI     |
 | `src/lib/services/installers/mux.ts`        | npm install/update/uninstall for Mux             |
 | `src/lib/services/installers/openwa.ts`     | npm install/update/uninstall for open-wa         |
-| `src/lib/services/installers/llmlingua.ts`   | npm install/update/uninstall for LLMLingua       |
+| `src/lib/services/installers/llmlingua.ts`  | npm install/update/uninstall for LLMLingua       |
 | `src/app/api/services/9router/_lib.ts`      | `getOrInitSupervisor()` helper                   |
 | `src/app/api/services/[name]/logs/route.ts` | Shared SSE logs endpoint                         |
 | `open-sse/executors/ninerouter.ts`          | Provider executor (Layer 4)                      |
@@ -493,10 +493,8 @@ keys in `config.json` under its `-app-dir`).
 | `POST` | `/api/services/bifrost/auto-start` | Toggle auto-start                                     |
 | `GET`  | `/api/services/bifrost/logs`       | SSE log tail (via shared `[name]/logs` dynamic route) |
 
-**Routing wiring:** When `BIFROST_BASE_URL` is unset and the supervised Bifrost
-instance is running, `getBifrostRoutingConfig()` (in `routingBackend.ts`) automatically
-uses `http://127.0.0.1:{port}` as the relay base URL. Explicit `BIFROST_BASE_URL` env
-always takes precedence.
+**Routing wiring:** none in 67router. The relay route that dispatched to Bifrost was
+removed, so the supervised instance is not consumed by request routing.
 
 ---
 

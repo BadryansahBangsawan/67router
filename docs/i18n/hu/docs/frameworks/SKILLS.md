@@ -23,7 +23,7 @@ Az OmniRoute két különálló, de egymást kiegészítő skillrendszerrel rend
 | Hiteles forrás | `src/lib/skills/` + piactér                                       | `src/lib/agentSkills/` + `skills/` könyvtár                                                    |
 | Futásidejű mód | Kimenő kérésekbe illesztve, eszközhívási eseményeknél végrehajtva | Statikus markdownkatalógus + REST/MCP/A2A felderítési végpontok                                |
 | Ki használja   | Maga az OmniRoute (kombinált útválasztás, bejövő LLM-hívások)     | Külső ügynökök, MCP-kliensek, A2A-orchestrátorok                                               |
-| Darabszám      | Változó (piactérvezérelt)                                         | 45 katalógusbejegyzés (23 API + 21 CLI + 1 konfiguráció)                                       |
+| Darabszám      | Változó (piactérvezérelt)                                         | 43 katalógusbejegyzés (22 API + 20 CLI + 1 konfiguráció)                                       |
 | Formátum       | `SkillDefinition` eszközsémával + kezelővel                       | `SKILL.md` frontmatter + markdown-törzs                                                        |
 | Felderítés     | `/api/skills/*` REST + `omniroute_skills_*` MCP-eszközök          | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-eszközök + A2A `list-capabilities` |
 

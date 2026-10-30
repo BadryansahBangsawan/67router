@@ -160,7 +160,7 @@ OmniRoute `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` ichida ulangan 6 ta
 | Provider Discovery | `provider-discovery` | O'rnatilgan provayderlarni imkoniyatlari, bepul daraja bayroqlari va OAuth holati bilan ro'yxatlaydi                                                              | providers, discovery       | "Qanday provayderlar mavjud?"                          |
 | Cost Analysis      | `cost-analysis`      | Katalog va so'nggi foydalanish ma'lumotlariga asoslanib so'rov/suhbat narxini taxmin qiladi                                                                       | cost, usage                | "Ushbu suhbat narxini taxmin qiling"                   |
 | Health Report      | `health-report`      | Har bir provayder bo'yicha circuit breaker, cooldown va lockout holatini jamlaydi                                                                                 | health, resilience         | "Barcha provayderlarning holatini ko'rsating"          |
-| List Capabilities  | `list-capabilities`  | To'liq 45 yozuvli Agent Skills katalogini (23 API + 21 CLI + 1 config) kontekst kiritish uchun xom SKILL.md URL'lari bilan markdown jadval ko'rinishida qaytaradi | catalog, discovery, skills | "Barcha OmniRoute imkoniyatlarini ro'yxatlang"         |
+| List Capabilities  | `list-capabilities`  | To'liq 43 yozuvli Agent Skills katalogini (22 API + 20 CLI + 1 config) kontekst kiritish uchun xom SKILL.md URL'lari bilan markdown jadval ko'rinishida qaytaradi | catalog, discovery, skills | "Barcha OmniRoute imkoniyatlarini ro'yxatlang"         |
 
 > Agent Card jonli 375 provayderli katalog bilan mos holda saqlanishi kerak; provayderlar soni va bepul/avtorizatsiyasiz metadata ish vaqti reestrida (runtime registry) olinadi.
 

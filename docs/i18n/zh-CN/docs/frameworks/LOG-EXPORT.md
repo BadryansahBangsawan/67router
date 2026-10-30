@@ -252,7 +252,7 @@ insertAll 调用，因此较大的 `batch_size` 不会触发 BigQuery 的 10 MB 
 - `send()` 在部分失败时**必须抛出异常**。成功返回意味着“目标中已有这些行”，
   此时游标将永久越过这些行。
 - 接受用户提供 URL 的目标在发起请求前，必须通过
-  `parseAndValidateWebhookUrl`（`src/shared/network/outboundUrlGuardPolicy.ts`）进行验证，
+  `parseAndValidatePublicUrl`（`src/shared/network/outboundUrlGuard.ts`）进行验证，
   其方式与 webhook 相同。BigQuery 不需要此验证，因为它的主机地址是常量。
 
 ---

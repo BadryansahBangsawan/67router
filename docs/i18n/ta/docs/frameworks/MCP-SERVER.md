@@ -234,7 +234,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `omniroute_agent_skills_list`     | `read:catalog`   | விருப்பத்திற்குரிய `category` (api\|cli) மற்றும் `area` வடிப்பான்களுடன் அனைத்து 45 agent skill-களையும் பட்டியலிடுகிறது; metadata + coverage-ஐ வழங்குகிறது     |
 | `omniroute_agent_skills_get`      | `read:catalog`   | canonical `id` மூலம் ஓர் skill-க்கான முழுமையான metadata + SKILL.md உள்ளடக்கத்தைப் பெறுகிறது                                                                   |
-| `omniroute_agent_skills_coverage` | `read:catalog`   | coverage புள்ளிவிவரங்கள்: 23 API, 21 CLI மற்றும் 1 config skill-களில், பட்டியல் மொத்தங்களுடன் ஒப்பிடும்போது கோப்பு முறைமையில் SKILL.md கோப்புகள் எத்தனை உள்ளன |
+| `omniroute_agent_skills_coverage` | `read:catalog`   | coverage புள்ளிவிவரங்கள்: 22 API, 20 CLI மற்றும் 1 config skill-களில், பட்டியல் மொத்தங்களுடன் ஒப்பிடும்போது கோப்பு முறைமையில் SKILL.md கோப்புகள் எத்தனை உள்ளன |
 
 முழுப் பட்டியலுக்கும், வெளிப்புற முகவர்கள் அதை எவ்வாறு பயன்படுத்துகிறார்கள் என்பதற்கும் [AGENT-SKILLS.md](./AGENT-SKILLS.md)-ஐப் பார்க்கவும்.
 

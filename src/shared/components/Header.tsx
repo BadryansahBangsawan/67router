@@ -78,7 +78,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "api-manager": "apiManagerDescription",
   providers: "providerDescription",
   combos: "comboDescription",
-  batch: "batchDescription",
   costs: "costsDescription",
   analytics: "analyticsDescription",
   cache: "cacheDescription",
@@ -101,7 +100,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "search-tools": "searchToolsDescription",
   logs: "logsDescription",
   audit: "auditDescription",
-  webhooks: "webhooksDescription",
   health: "healthDescription",
   proxy: "proxyDescription",
   changelog: "changelogDescription",
@@ -109,8 +107,6 @@ const HEADER_DESCRIPTIONS: Partial<
   mcp: "mcpDescription",
   a2a: "a2aDescription",
   "api-endpoints": "apiEndpointsDescription",
-  // Agents & AI sub-pages
-  "batch-files": "batchFilesDescription",
   // Analytics sub-pages
   "analytics-evals": "analyticsEvalsDescription",
   "analytics-search": "analyticsSearchDescription",
@@ -137,7 +133,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "settings-advanced": "settingsAdvancedDescription",
   // Proxy sub-pages
   "mitm-proxy": "mitmProxyDescription",
-  "1proxy": "oneProxyDescription",
 };
 
 // Build href → sidebar item lookup (non-external items only)

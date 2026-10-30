@@ -791,38 +791,6 @@
       "description": "Näytä valmistuneen arviointiajon tuloskortti"
     }
   },
-  "webhooks": {
-    "description": "Hallitse OmniRoute-webhookeja",
-    "events": {
-      "description": "Listaa kaikki käytettävissä olevat webhook-tapahtumatyypit"
-    },
-    "list": {
-      "description": "Listaa määritetyt webhookit"
-    },
-    "get": {
-      "description": "Hae webhookin tiedot tunnuksella"
-    },
-    "add": {
-      "description": "Rekisteröi uusi webhook",
-      "url": "Kohde-URL",
-      "events": "Pilkuilla eroteltu tapahtumatyyppien luettelo",
-      "secret": "HMAC-allekirjoitussalaisuus",
-      "header": "Ylimääräinen otsake muodossa key=value (toistettavissa)",
-      "no_enabled": "Luo webhook pois käytöstä -tilassa"
-    },
-    "update": {
-      "description": "Päivitä olemassa oleva webhook",
-      "enabled": "Aseta käyttötila (true|false)"
-    },
-    "remove": {
-      "description": "Poista webhook",
-      "yes": "Ohita vahvistuskehote"
-    },
-    "test": {
-      "description": "Lähetä testitapahtuma webhookiin",
-      "event": "Simuloitava tapahtumatyyppi (oletus: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Älykäs AI-reititin automaattisella fallbackilla",
     "version": "Tulosta versio ja poistu",
@@ -834,59 +802,6 @@
     "base_url": "OmniRoute-palvelimen perus-URL",
     "context": "Palvelimen konteksti/profiili tälle komennolle",
     "lang": "Aseta CLI-näyttökieli (ohittaa OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Hallitse tiedostoja (lähetä, listaa, hae, lataa, poista)",
-    "list": {
-      "purpose": "Suodata käyttötarkoituksen perusteella",
-      "limit": "Tulosten enimmäismäärä"
-    },
-    "get": {
-      "description": "Hae tiedoston metatiedot"
-    },
-    "upload": {
-      "description": "Lataa tiedosto palveluun",
-      "purpose": "Tiedoston käyttötarkoitus (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Lataa tiedoston sisältö",
-      "out": "Tallenna polkuun (oletus: stdout)"
-    },
-    "delete": {
-      "yes": "Ohita vahvistus"
-    }
-  },
-  "batches": {
-    "description": "Hallitse OpenAI-yhteensopivia erätöitä",
-    "list": {
-      "status": "Suodata tilan mukaan",
-      "limit": "Tulosten enimmäismäärä"
-    },
-    "create": {
-      "description": "Luo erätyö",
-      "inputFile": "Syötetiedoston tunnus",
-      "endpoint": "Kohdepäätepiste",
-      "window": "Valmistumisaikaikkuna",
-      "metadata": "Lisää metatieto avain=arvo"
-    },
-    "submit": {
-      "description": "Lataa JSONL-tiedosto palveluun ja luo erätyö",
-      "jsonl": "JSONL-tiedoston polku",
-      "endpoint": "Kohdepäätepiste",
-      "wait": "Odota valmistumista"
-    },
-    "cancel": {
-      "yes": "Ohita vahvistus"
-    },
-    "wait": {
-      "timeout": "Aikakatkaisu millisekunteina"
-    },
-    "output": {
-      "out": "Tallenna tuloste polkuun"
-    },
-    "errors": {
-      "out": "Tallenna virheet polkuun"
-    }
   },
   "translator": {
     "description": "Muunna pyyntöjen rungot LLM-muotojen välillä",
@@ -1122,33 +1037,6 @@
       "top": "Näytettävien parhaiden ehdokkaiden määrä (oletus: 5)",
       "explain": "Tulosta perustelut vakiovirhetulosteeseen",
       "switch": "Aktivoi parhaaksi sijoittunut yhdistelmä"
-    }
-  },
-  "oneproxy": {
-    "description": "Hallitse OneProxy-ylävirran välityspalvelinjoukkoa",
-    "stats": {
-      "provider": "Suodata palveluntarjoajan mukaan",
-      "period": "Ajanjakso (oletus: 24h)"
-    },
-    "fetch": {
-      "description": "Nouda välityspalvelimia joukosta",
-      "count": "Noudettavien välityspalvelimien määrä (oletus: 1)",
-      "type": "Välityspalvelimen tyyppi: http|socks5 (oletus: http)"
-    },
-    "rotate": {
-      "description": "Pakota välityspalvelimen vaihto",
-      "provider": "Palveluntarjoaja, jolle vaihto tehdään",
-      "connectionId": "Tietty vaihdettava yhteystunnus"
-    },
-    "config": {
-      "description": "Näytä tai päivitä OneProxy-määritykset",
-      "enabled": "Ota välityspalvelinpooli käyttöön (true|false)",
-      "poolSize": "Poolin koko",
-      "providerSource": "Välityspalveluntarjoajan URL",
-      "rotationPolicy": "Kierrätyskäytäntö: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Listaa nykyinen välityspalvelinpooli mittareineen"
     }
   },
   "open": {

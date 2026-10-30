@@ -161,7 +161,7 @@ OmniRoute надає 6 навичок A2A, підключених у `src/lib/a2
 | Provider Discovery | `provider-discovery` | Перелічує встановлених провайдерів із можливостями, прапорцями free-tier, статусом OAuth                                                                      | providers, discovery       | "Які провайдери доступні?"                 |
 | Cost Analysis      | `cost-analysis`      | Оцінює вартість запиту/розмови на основі каталогу + недавнього використання                                                                                   | cost, usage                | "Оціни вартість цієї розмови"              |
 | Health Report      | `health-report`      | Агрегує стан circuit breaker, cooldown та lockout для кожного провайдера                                                                                      | health, resilience         | "Покажи стан здоров'я всіх провайдерів"    |
-| List Capabilities  | `list-capabilities`  | Повертає повний каталог Agent Skills із 45 записів (23 API + 21 CLI + 1 config) у вигляді markdown-таблиці з raw-URL-адресами SKILL.md для ін'єкції контексту | catalog, discovery, skills | "Перелічи всі можливості OmniRoute"        |
+| List Capabilities  | `list-capabilities`  | Повертає повний каталог Agent Skills із 43 записів (22 API + 20 CLI + 1 config) у вигляді markdown-таблиці з raw-URL-адресами SKILL.md для ін'єкції контексту | catalog, discovery, skills | "Перелічи всі можливості OmniRoute"        |
 
 > Картку агента слід підтримувати узгодженою з актуальним каталогом із 375 провайдерів; кількість провайдерів та метадані free/no-auth беруться з реєстру середовища виконання.
 

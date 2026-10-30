@@ -3,7 +3,7 @@
  *
  * Verifies:
  *  - Return shape matches §3.7 contract
- *  - Markdown table contains all 45 categorized skill IDs (the 46th catalog
+ *  - Markdown table contains all 43 categorized skill IDs (the 44th catalog
  *    entry, "ponytail", is category "external" and lives outside the
  *    api/cli/config canonical lists — #9058)
  *  - Coverage bounds are within declared totals
@@ -37,12 +37,12 @@ test("executeListCapabilities returns shape matching §3.7 contract", async () =
   const { metadata } = result;
   assert.ok(metadata, "metadata exists");
   assert.equal(metadata.source, "agent-skills-catalog", "metadata.source matches");
-  assert.equal(metadata.totalSkills, 46, "metadata.totalSkills === 46");
+  assert.equal(metadata.totalSkills, 44, "metadata.totalSkills === 44");
   assert.ok(metadata.coverage, "metadata.coverage exists");
   assert.ok(metadata.coverage.api, "metadata.coverage.api exists");
   assert.ok(metadata.coverage.cli, "metadata.coverage.cli exists");
-  assert.equal(metadata.coverage.api.total, 23, "api.total === 23");
-  assert.equal(metadata.coverage.cli.total, 21, "cli.total === 21");
+  assert.equal(metadata.coverage.api.total, 22, "api.total === 22");
+  assert.equal(metadata.coverage.cli.total, 20, "cli.total === 20");
   assert.equal(metadata.coverage.config.total, 1, "config.total === 1");
 });
 
@@ -50,28 +50,28 @@ test("executeListCapabilities markdown table contains all categorized skill IDs"
   const result = await executeListCapabilities(stubTask);
   const content = result.artifacts[0].content;
 
-  // 45 categorized IDs; the 46th catalog entry ("ponytail") is category
+  // 43 categorized IDs; the 44th catalog entry ("ponytail") is category
   // "external" and intentionally absent from these canonical lists (#9058).
   const allIds = [...API_SKILL_IDS, ...CLI_SKILL_IDS, ...CONFIG_SKILL_IDS] as string[];
-  assert.equal(allIds.length, 45, "canonical api/cli/config lists declare 45 skill IDs");
+  assert.equal(allIds.length, 43, "canonical api/cli/config lists declare 43 skill IDs");
 
   for (const id of allIds) {
     assert.ok(content.includes(id), `Markdown table missing skill ID: ${id}`);
   }
 });
 
-test("metadata.coverage.api.have is within [0, 23]", async () => {
+test("metadata.coverage.api.have is within [0, 22]", async () => {
   const result = await executeListCapabilities(stubTask);
   const { api } = result.metadata.coverage;
   assert.ok(api.have >= 0, "api.have >= 0");
-  assert.ok(api.have <= 23, "api.have <= 23");
+  assert.ok(api.have <= 22, "api.have <= 22");
 });
 
-test("metadata.coverage.cli.have is within [0, 21]", async () => {
+test("metadata.coverage.cli.have is within [0, 20]", async () => {
   const result = await executeListCapabilities(stubTask);
   const { cli } = result.metadata.coverage;
   assert.ok(cli.have >= 0, "cli.have >= 0");
-  assert.ok(cli.have <= 21, "cli.have <= 21");
+  assert.ok(cli.have <= 20, "cli.have <= 20");
 });
 
 test("metadata.coverage.config.have is within [0, 1]", async () => {

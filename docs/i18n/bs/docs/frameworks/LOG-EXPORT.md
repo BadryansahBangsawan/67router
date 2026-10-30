@@ -240,7 +240,7 @@ To je cijela izmjena: perzistencija, cron zadatak, REST sloj, enkripcija tajni i
 Dva pravila za novo odredište:
 
 - `send()` **mora baciti izuzetak** (throw) u slučaju djelimičnog neuspjeha. Razrješavanje (resolving) znači "odredište ima ove redove", a kursor se trajno pomjera preko njih.
-- Odredište koje prihvata URL koji unosi korisnik mora ga validirati kroz `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) prije preuzimanja, na isti način kao što to rade webhooks. BigQuery ovo ne treba: njegovi hostovi su konstante.
+- Odredište koje prihvata URL koji unosi korisnik mora ga validirati kroz `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) prije preuzimanja, na isti način kao što to rade webhooks. BigQuery ovo ne treba: njegovi hostovi su konstante.
 
 ---
 

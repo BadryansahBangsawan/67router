@@ -136,7 +136,6 @@ export {
 } from "./config/audioRegistry.ts";
 
 // Moderations
-export { handleModeration } from "./handlers/moderations.ts";
 export {
   MODERATION_PROVIDERS,
   getModerationProvider,

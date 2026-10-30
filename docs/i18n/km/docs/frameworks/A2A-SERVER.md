@@ -154,7 +154,7 @@ OmniRoute ផ្តល់ជំនាញ A2A ចំនួន 6 ដែលត្�
 | Provider Discovery | `provider-discovery` | រាយបញ្ជី provider ដែលបានដំឡើង ជាមួយសមត្ថភាព ទង់ free-tier និងស្ថានភាព OAuth                                                                   | providers, discovery       | "តើមាន provider អ្វីខ្លះដែលអាចប្រើបាន?"   |
 | Cost Analysis      | `cost-analysis`      | ប៉ាន់ស្មានថ្លៃដើមនៃសំណើ/ការសន្ទនា ដោយផ្អែកលើកាតាឡុក និងការប្រើប្រាស់ថ្មីៗ                                                                     | cost, usage                | "ប៉ាន់ស្មានថ្លៃដើមសម្រាប់ការសន្ទនានេះ"    |
 | Health Report      | `health-report`      | បូកបញ្ចូលស្ថានភាព circuit breaker, cooldown និង lockout តាម provider នីមួយៗ                                                                   | health, resilience         | "បង្ហាញស្ថានភាពសុខភាពនៃ provider ទាំងអស់" |
-| List Capabilities  | `list-capabilities`  | ត្រឡប់កាតាឡុក Agent Skills ពេញលេញចំនួន 45 ធាតុ (23 API + 21 CLI + 1 config) ជាតារាង markdown ដែលមាន URL ឆៅរបស់ SKILL.md សម្រាប់ការបញ្ចូលបរិបទ | catalog, discovery, skills | "រាយបញ្ជីសមត្ថភាពទាំងអស់របស់ OmniRoute"   |
+| List Capabilities  | `list-capabilities`  | ត្រឡប់កាតាឡុក Agent Skills ពេញលេញចំនួន 43 ធាតុ (22 API + 20 CLI + 1 config) ជាតារាង markdown ដែលមាន URL ឆៅរបស់ SKILL.md សម្រាប់ការបញ្ចូលបរិបទ | catalog, discovery, skills | "រាយបញ្ជីសមត្ថភាពទាំងអស់របស់ OmniRoute"   |
 
 > Agent Card គួរតែត្រូវបានរក្សាឱ្យស្របគ្នាជាមួយកាតាឡុក provider ចំនួន 375 ដែលកំពុងដំណើរការ។ ចំនួន provider និង metadata អំពី free/no-auth ត្រូវបានយកមកពី runtime registry។
 

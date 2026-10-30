@@ -266,7 +266,7 @@ dashboard පෝරමය යන සියල්ල registry එක කියව
 - අර්ධ අසාර්ථකත්වයකදී `send()` **අනිවාර්යයෙන්ම throw කළ යුතුය**. එය සාර්ථකව resolve වීම යනු "ගමනාන්තය සතුව මෙම පේළි ඇත" යන්නයි,
   එවිට cursor එක ඒවා පසුකර ස්ථිරවම ඉදිරියට යයි.
 - පරිශීලකයා සපයන URL එකක් භාවිත කරන ගමනාන්තයක්, fetch කිරීමට පෙර,
-  webhooks කරන ආකාරයටම `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) හරහා එය වලංගු කළ යුතුය.
+  webhooks කරන ආකාරයටම `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) හරහා එය වලංගු කළ යුතුය.
   BigQuery සඳහා මෙය අවශ්ය නොවේ: එහි hosts නියත අගයන් වේ.
 
 ---

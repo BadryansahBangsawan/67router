@@ -237,7 +237,7 @@ Definēti failā `open-sse/mcp-server/tools/agentSkillTools.ts`. Nodrošināti a
 | :-------------------------------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Uzskaitīt visas 45 aģentu prasmes ar neobligātiem `category` (api\|cli) un `area` filtriem; atgriež metadatus + pārklājumu                     |
 | `omniroute_agent_skills_get`      | `read:catalog` | Iegūt pilnus metadatus + `SKILL.md` saturu vienai prasmei pēc kanoniskā `id`                                                                   |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Pārklājuma statistika: cik no 23 API, 21 CLI un 1 konfigurācijas prasmes failu sistēmā ir `SKILL.md` faili salīdzinājumā ar kataloga kopsummām |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Pārklājuma statistika: cik no 22 API, 20 CLI un 1 konfigurācijas prasmes failu sistēmā ir `SKILL.md` faili salīdzinājumā ar kataloga kopsummām |
 
 Pilnu katalogu un informāciju par to, kā ārējie aģenti to izmanto, skatiet [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 

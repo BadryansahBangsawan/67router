@@ -59,13 +59,6 @@ test("a dashboard OFF for the SSRF Guard takes effect without the env var", asyn
   });
 });
 
-test("the webhook check follows the dashboard SSRF Guard toggle", async () => {
-  await withFlag("false", "true", async () => {
-    const { parseAndValidateWebhookUrl } = await policy();
-    assert.throws(() => parseAndValidateWebhookUrl("http://192.168.1.10/hook"));
-  });
-});
-
 test("OUTBOUND_SSRF_GUARD_ENABLED=false in env still opens private URLs with no DB override", async () => {
   await withFlag("false", undefined, async () => {
     const { arePrivateProviderUrlsAllowed } = await policy();

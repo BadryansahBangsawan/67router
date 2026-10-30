@@ -649,12 +649,6 @@ export async function registerNodejs(): Promise<void> {
   // Proxy health scheduler (auto-removes dead proxies on interval)
   await import("@/lib/proxyHealth/scheduler");
 
-  // Free-proxy auto-sync scheduler (re-fetches free-proxy sources on interval, #7079).
-  // Optional: skipped in headless mode (src/lib/system/headless.ts).
-  if (!skipInHeadless("free-proxy-sync")) {
-    await import("@/lib/freeProxyProviders/scheduler");
-  }
-
   initGracefulShutdown();
   initApiBridgeServer();
   startSpendBatchWriter();
@@ -681,9 +675,6 @@ export async function registerNodejs(): Promise<void> {
         `[STARTUP] Cloud/model sync background bootstrap ${cloudSyncInitialized ? "initialized" : "skipped"}`
       );
     }
-    const { initBatchProcessor } = await import("@omniroute/open-sse/services/batchProcessor");
-    initBatchProcessor();
-    console.log("[STARTUP] Batch processor started");
   }
 
   try {

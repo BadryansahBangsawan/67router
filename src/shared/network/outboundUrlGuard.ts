@@ -142,8 +142,8 @@ export function parseAndValidateNonMetadataUrl(input: string | URL) {
 }
 
 // NOTE (#7682): `arePrivateProviderUrlsAllowed`, `areLocalProviderUrlsAllowed`,
-// `getProviderOutboundGuard`, `getProviderValidationGuard`, and `parseAndValidateWebhookUrl`
-// live in the sibling `./outboundUrlGuardPolicy.ts` module, NOT here. Those helpers need
+// `getProviderOutboundGuard`, and `getProviderValidationGuard` live in the sibling
+// `./outboundUrlGuardPolicy.ts` module, NOT here. Those helpers need
 // `@/shared/utils/featureFlags` (which transitively pulls in the DB layer), and this file is
 // loaded by the packaged CLI (`omniroute setup-opencode` → cli-helper/config-generator/
 // opencode.ts) where no `tsconfig.json` is present to resolve the `@/*` path alias. Keeping

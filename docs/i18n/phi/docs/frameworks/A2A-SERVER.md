@@ -161,7 +161,7 @@ Nag-eexpose ang OmniRoute ng 6 A2A skill na nakakabit sa `src/lib/a2a/taskExecut
 | Provider Discovery | `provider-discovery` | Nagli-lista ng mga naka-install na provider kasama ang mga capability, free-tier flag, at OAuth status                                                        | providers, discovery       | "What providers are available?"        |
 | Cost Analysis      | `cost-analysis`      | Nag-eestimate ng gastos ng isang request/kombensasyon batay sa catalog + kamakailang usage                                                                    | cost, usage                | "Estimate cost for this conversation"  |
 | Health Report      | `health-report`      | Nag-a-aggregate ng circuit breaker, cooldown, at lockout state ng bawat provider                                                                              | health, resilience         | "Show health status of all providers"  |
-| List Capabilities  | `list-capabilities`  | Nagbabalik ng buong 45-entry na Agent Skills catalog (23 API + 21 CLI + 1 config) bilang markdown table na may mga raw SKILL.md URL para sa context injection | catalog, discovery, skills | "List all OmniRoute capabilities"      |
+| List Capabilities  | `list-capabilities`  | Nagbabalik ng buong 43-entry na Agent Skills catalog (22 API + 20 CLI + 1 config) bilang markdown table na may mga raw SKILL.md URL para sa context injection | catalog, discovery, skills | "List all OmniRoute capabilities"      |
 
 > Ang Agent Card ay dapat panatilihing naka-align sa live na 375-provider catalog; ang mga bilang ng provider at free/no-auth metadata ay mula sa runtime registry.
 

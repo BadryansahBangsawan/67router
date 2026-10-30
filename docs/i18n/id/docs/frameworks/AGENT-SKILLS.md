@@ -13,7 +13,7 @@ Agent Skills adalah file SKILL.md terstruktur yang mengajarkan agen eksternal, k
 
 ## Ikhtisar
 
-Katalog ini berisi **45 Agent Skills** (23 REST API + 21 CLI + 1 alur kerja konfigurasi). Setiap skill memiliki:
+Katalog ini berisi **43 Agent Skills** (22 REST API + 20 CLI + 1 alur kerja konfigurasi). Setiap skill memiliki:
 
 - Sebuah **ID kanonis** (`omni-auth`, `cli-serve`, dll.)
 - Sebuah file **SKILL.md** di `skills/{id}/SKILL.md` dengan frontmatter YAML (`name`, `description`) + isi markdown yang kaya

@@ -161,7 +161,7 @@ OmniRoute چھ (6) A2A مہارتیں فراہم کرتا ہے جو `src/lib/a2a
 | Provider ڈسکوری (Provider Discovery)  | `provider-discovery` | انسٹال شدہ providers کی فہرست capabilities، free-tier flags اور OAuth status کے ساتھ فراہم کرتا ہے                                                                   | providers, discovery       | "کون سے providers دستیاب ہیں؟"               |
 | لاگت کا تجزیہ (Cost Analysis)         | `cost-analysis`      | catalog اور حالیہ usage کی بنیاد پر کسی request/گفتگو کی لاگت کا تخمینہ لگاتا ہے                                                                                     | cost, usage                | "اس گفتگو کی لاگت کا تخمینہ لگائیں"          |
 | ہیلتھ رپورٹ (Health Report)           | `health-report`      | فی provider circuit breaker، cooldown اور lockout حالت کو یکجا کرتا ہے                                                                                               | health, resilience         | "تمام providers کی health status دکھائیں"    |
-| صلاحیتوں کی فہرست (List Capabilities) | `list-capabilities`  | مکمل 45 آئٹمز پر مشتمل Agent Skills catalog (23 API + 21 CLI + 1 config) کو markdown table کی صورت میں، context injection کے لیے raw SKILL.md URLs سمیت واپس کرتا ہے | catalog, discovery, skills | "OmniRoute کی تمام صلاحیتیں فہرست کریں"      |
+| صلاحیتوں کی فہرست (List Capabilities) | `list-capabilities`  | مکمل 43 آئٹمز پر مشتمل Agent Skills catalog (22 API + 20 CLI + 1 config) کو markdown table کی صورت میں، context injection کے لیے raw SKILL.md URLs سمیت واپس کرتا ہے | catalog, discovery, skills | "OmniRoute کی تمام صلاحیتیں فہرست کریں"      |
 
 > Agent Card کو لائیو 375-provider catalog کے ہم آہنگ رکھا جانا چاہیے؛ providers کی تعداد اور free/no-auth metadata رن ٹائم registry سے حاصل کیا جاتا ہے۔
 

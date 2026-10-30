@@ -79,7 +79,6 @@ test("the chat handler is imported by exactly these modules (the chat-family rou
     "src/app/api/v1/completions/route.ts",
     "src/app/api/v1/messages/route.ts",
     "src/app/api/v1/providers/[provider]/chat/completions/route.ts",
-    "src/app/api/v1/relay/chat/completions/route.ts",
     "src/app/api/v1/responses/[...path]/route.ts",
     "src/app/api/v1/responses/route.ts",
     "src/app/api/v1beta/models/[...path]/route.ts",

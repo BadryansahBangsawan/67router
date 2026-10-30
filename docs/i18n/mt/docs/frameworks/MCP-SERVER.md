@@ -235,7 +235,7 @@ Definit f'`open-sse/mcp-server/tools/agentSkillTools.ts`. Appoġġjat minn `src/
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Lista ta' l-45 ħila tal-aġenti bi filtri fakultattivi `category` (api\|cli) u `area`; jirritorna metadata + koperanza                           |
 | `omniroute_agent_skills_get`      | `read:catalog` | Ħu metadata sħiħ + kontenut SKILL.md għal ħila waħda permezz tal-`id` kanonika                                                                  |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistiċi tal-koperanza: kemm mill-23 API, 21 CLI u 1 ħila tal-konfigurazzjoni għandhom fajls SKILL.md fuq il-filesystem vs totali tal-katalgu |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistiċi tal-koperanza: kemm mill-22 API, 20 CLI u 1 ħila tal-konfigurazzjoni għandhom fajls SKILL.md fuq il-filesystem vs totali tal-katalgu |
 
 Ara [AGENT-SKILLS.md](./AGENT-SKILLS.md) għall-katalgu sħiħ u kif l-aġenti esterni jikkunsmawh.
 

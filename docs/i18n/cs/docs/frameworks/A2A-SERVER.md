@@ -161,7 +161,7 @@ OmniRoute zpřístupňuje 6 dovedností A2A zapojených v `src/lib/a2a/taskExecu
 | Provider Discovery | `provider-discovery` | Vypisuje nainstalované poskytovatele s jejich schopnostmi, příznaky free-tier a stavem OAuth                                                             | providers, discovery       | "Jací poskytovatelé jsou k dispozici?"      |
 | Cost Analysis      | `cost-analysis`      | Odhaduje náklady požadavku/konverzace na základě katalogu + nedávného využití                                                                            | cost, usage                | "Odhadni náklady této konverzace"           |
 | Health Report      | `health-report`      | Agreguje stav circuit breakeru, cooldownu a zablokování pro jednotlivé poskytovatele                                                                     | health, resilience         | "Zobraz stav všech poskytovatelů"           |
-| List Capabilities  | `list-capabilities`  | Vrací kompletní katalog Agent Skills se 45 položkami (23 API + 21 CLI + 1 config) jako markdown tabulku s raw URL adresami SKILL.md pro vložení kontextu | catalog, discovery, skills | "Vypiš všechny schopnosti OmniRoute"        |
+| List Capabilities  | `list-capabilities`  | Vrací kompletní katalog Agent Skills se 43 položkami (22 API + 20 CLI + 1 config) jako markdown tabulku s raw URL adresami SKILL.md pro vložení kontextu | catalog, discovery, skills | "Vypiš všechny schopnosti OmniRoute"        |
 
 > Agent Card by měl být udržován v souladu s živým katalogem 375 poskytovatelů; počty poskytovatelů a metadata free/no-auth pocházejí z běhového registru.
 

@@ -161,7 +161,7 @@ OmniRoute cung cấp 6 kỹ năng A2A được kết nối trong `src/lib/a2a/ta
 | Provider Discovery | `provider-discovery` | Liệt kê các provider đã cài đặt cùng với capabilities, cờ free-tier, trạng thái OAuth                                                        | providers, discovery       | "Có những provider nào khả dụng?"            |
 | Cost Analysis      | `cost-analysis`      | Ước tính chi phí của một request/cuộc hội thoại dựa trên catalog + mức sử dụng gần đây                                                       | cost, usage                | "Ước tính chi phí cho cuộc hội thoại này"    |
 | Health Report      | `health-report`      | Tổng hợp trạng thái circuit breaker, cooldown, lockout theo từng provider                                                                    | health, resilience         | "Hiển thị tình trạng của tất cả provider"    |
-| List Capabilities  | `list-capabilities`  | Trả về toàn bộ catalog Agent Skills gồm 45 mục (23 API + 21 CLI + 1 config) dưới dạng bảng markdown kèm URL SKILL.md thô để chèn vào context | catalog, discovery, skills | "Liệt kê tất cả khả năng của OmniRoute"      |
+| List Capabilities  | `list-capabilities`  | Trả về toàn bộ catalog Agent Skills gồm 43 mục (22 API + 20 CLI + 1 config) dưới dạng bảng markdown kèm URL SKILL.md thô để chèn vào context | catalog, discovery, skills | "Liệt kê tất cả khả năng của OmniRoute"      |
 
 > Agent Card cần được giữ đồng bộ với catalog 375 provider đang hoạt động; số lượng provider cùng metadata free/no-auth được lấy từ registry tại runtime.
 

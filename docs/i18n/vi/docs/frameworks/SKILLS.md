@@ -23,7 +23,7 @@ OmniRoute có hai hệ thống skill riêng biệt nhưng bổ trợ lẫn nhau:
 | Nguồn chuẩn       | `src/lib/skills/` + marketplace                                       | `src/lib/agentSkills/` + thư mục `skills/`                                                        |
 | Chế độ runtime    | Được chèn vào các yêu cầu gửi đi, thực thi khi có sự kiện gọi công cụ | Danh mục markdown tĩnh + các endpoint khám phá REST/MCP/A2A                                       |
 | Đối tượng sử dụng | Chính OmniRoute (định tuyến kết hợp, các lệnh gọi LLM đến)            | Agent bên ngoài, client MCP, trình điều phối A2A                                                  |
-| Số lượng          | Thay đổi (do marketplace quyết định)                                  | 45 mục danh mục (23 API + 21 CLI + 1 cấu hình)                                                    |
+| Số lượng          | Thay đổi (do marketplace quyết định)                                  | 43 mục danh mục (22 API + 20 CLI + 1 cấu hình)                                                    |
 | Định dạng         | `SkillDefinition` với schema công cụ + handler                        | Frontmatter `SKILL.md` + nội dung markdown                                                        |
 | Khám phá          | REST `/api/skills/*` + các công cụ MCP `omniroute_skills_*`           | REST `/api/agent-skills/*` + các công cụ MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 

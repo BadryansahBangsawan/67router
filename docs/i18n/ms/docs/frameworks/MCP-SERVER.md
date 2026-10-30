@@ -236,7 +236,7 @@ Ditakrifkan dalam `open-sse/mcp-server/tools/agentSkillTools.ts`. Disokong oleh 
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Senaraikan kesemua 45 kemahiran ejen dengan penapis pilihan `category` (api\|cli) dan `area`; mengembalikan metadata + liputan                           |
 | `omniroute_agent_skills_get`      | `read:catalog` | Dapatkan metadata penuh + kandungan SKILL.md untuk satu kemahiran berdasarkan `id` kanonik                                                               |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistik liputan: bilangan daripada 23 kemahiran API, 21 CLI dan 1 konfigurasi yang mempunyai fail SKILL.md dalam sistem fail berbanding jumlah katalog |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistik liputan: bilangan daripada 22 kemahiran API, 20 CLI dan 1 konfigurasi yang mempunyai fail SKILL.md dalam sistem fail berbanding jumlah katalog |
 
 Lihat [AGENT-SKILLS.md](./AGENT-SKILLS.md) untuk katalog penuh dan cara ejen luaran menggunakannya.
 

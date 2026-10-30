@@ -13,7 +13,7 @@ Agentų įgūdžiai yra struktūrizuoti SKILL.md failai, mokantys išorinius age
 
 ## Apžvalga
 
-Kataloge yra **45 agentų įgūdžiai** (23 REST API + 21 CLI + 1 konfigūravimo darbo eiga). Kiekvienas įgūdis turi:
+Kataloge yra **43 agentų įgūdžiai** (22 REST API + 20 CLI + 1 konfigūravimo darbo eiga). Kiekvienas įgūdis turi:
 
 - **Kanoninį ID** (`omni-auth`, `cli-serve` ir t. t.)
 - **SKILL.md** failą, esantį `skills/{id}/SKILL.md`, su YAML metaduomenimis (`name`, `description`) ir išsamiu markdown turiniu

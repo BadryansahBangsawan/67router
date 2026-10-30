@@ -270,7 +270,7 @@ Sheria mbili za lengwa jipya:
 - `send()` **lazima itupe hitilafu** ikiwa kuna kutofaulu kwa sehemu. Kukamilika kunamaanisha "lengwa lina safu hizi",
   na kishale husogea mbele yao kabisa.
 - Lengwa linalotumia URL iliyotolewa na mtumiaji lazima liithibitishe kupitia
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) kabla ya kuichota,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) kabla ya kuichota,
   kwa njia ileile inayotumiwa na webhooks. BigQuery haihitaji hili: vipangishi vyake ni thabiti.
 
 ---

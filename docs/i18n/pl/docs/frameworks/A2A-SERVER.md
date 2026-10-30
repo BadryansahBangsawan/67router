@@ -161,7 +161,7 @@ OmniRoute udostępnia 6 umiejętności A2A podłączonych w `src/lib/a2a/taskExe
 | Provider Discovery | `provider-discovery` | Wyświetla listę zainstalowanych dostawców wraz z możliwościami, flagami darmowego planu i statusem OAuth                                                      | providers, discovery       | "Jacy dostawcy są dostępni?"                  |
 | Cost Analysis      | `cost-analysis`      | Szacuje koszt żądania/konwersacji na podstawie katalogu i ostatniego użycia                                                                                   | cost, usage                | "Oszacuj koszt tej konwersacji"               |
 | Health Report      | `health-report`      | Agreguje stan circuit breakera, cooldownu i blokady dla każdego dostawcy                                                                                      | health, resilience         | "Pokaż stan zdrowia wszystkich dostawców"     |
-| List Capabilities  | `list-capabilities`  | Zwraca pełny, 45-pozycyjny katalog Agent Skills (23 API + 21 CLI + 1 config) jako tabelę markdown z surowymi adresami URL SKILL.md do wstrzykiwania kontekstu | catalog, discovery, skills | "Wymień wszystkie możliwości OmniRoute"       |
+| List Capabilities  | `list-capabilities`  | Zwraca pełny, 43-pozycyjny katalog Agent Skills (22 API + 20 CLI + 1 config) jako tabelę markdown z surowymi adresami URL SKILL.md do wstrzykiwania kontekstu | catalog, discovery, skills | "Wymień wszystkie możliwości OmniRoute"       |
 
 > Kartę agenta (Agent Card) należy utrzymywać w zgodności z aktywnym katalogiem 375 dostawców; liczby dostawców oraz metadane dotyczące darmowego dostępu/braku uwierzytelniania pochodzą z rejestru środowiska uruchomieniowego.
 

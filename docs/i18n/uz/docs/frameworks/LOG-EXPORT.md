@@ -301,7 +301,7 @@ Yangi manzil uchun ikkita qoida:
 - Qisman xatolik yuz berganda `send()` **xatolik chiqarishi shart**. Muvaffaqiyatli yakunlanish “ushbu manzilda bu qatorlar mavjud” degan maʼnoni anglatadi
   va kursor ulardan doimiy ravishda oʻtib ketadi.
 - Foydalanuvchi taqdim etgan URL manzilini qabul qiladigan manzil soʻrov yuborishdan oldin uni,
-  xuddi vebhuklar kabi, `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) orqali tekshirishi shart.
+  xuddi vebhuklar kabi, `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) orqali tekshirishi shart.
   BigQuery uchun bu talab qilinmaydi: uning hostlari oʻzgarmas.
 
 ---

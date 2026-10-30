@@ -274,7 +274,7 @@ Batch များကို row အရေအတွက်နှင့် serialis
 Destination အသစ်တစ်ခုအတွက် စည်းမျဉ်းနှစ်ခုရှိသည်-
 
 - တစ်စိတ်တစ်ပိုင်း မအောင်မြင်မှုဖြစ်ပါက `send()` သည် **မဖြစ်မနေ throw လုပ်ရမည်**။ Resolve ဖြစ်ခြင်းသည် "destination တွင် ဤ row များ ရှိနေပြီ" ဟု အဓိပ္ပာယ်ရပြီး cursor သည် ၎င်းတို့ကို အပြီးတိုင် ကျော်သွားမည်ဖြစ်သည်။
-- အသုံးပြုသူပေးသည့် URL ကို လက်ခံသော destination သည် fetch မလုပ်မီ webhook များလုပ်ဆောင်သည့်နည်းအတိုင်း `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) မှတစ်ဆင့် ၎င်း URL ကို validate လုပ်ရမည်။ BigQuery ၏ host များသည် constants များဖြစ်သောကြောင့် ဤအဆင့် မလိုအပ်ပါ။
+- အသုံးပြုသူပေးသည့် URL ကို လက်ခံသော destination သည် fetch မလုပ်မီ webhook များလုပ်ဆောင်သည့်နည်းအတိုင်း `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) မှတစ်ဆင့် ၎င်း URL ကို validate လုပ်ရမည်။ BigQuery ၏ host များသည် constants များဖြစ်သောကြောင့် ဤအဆင့် မလိုအပ်ပါ။
 
 ---
 

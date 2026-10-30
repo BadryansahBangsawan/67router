@@ -13,7 +13,7 @@ Az Agent Skills strukturált SKILL.md fájlok, amelyek megtanítják a külső �
 
 ## Áttekintés
 
-A katalógus **45 Agent Skillt** tartalmaz (23 REST API + 21 CLI + 1 konfigurációs munkafolyamat). Minden skill a következőkkel rendelkezik:
+A katalógus **43 Agent Skillt** tartalmaz (22 REST API + 20 CLI + 1 konfigurációs munkafolyamat). Minden skill a következőkkel rendelkezik:
 
 - Egy **kanonikus azonosító** (`omni-auth`, `cli-serve` stb.)
 - Egy **SKILL.md** fájl a `skills/{id}/SKILL.md` helyen, YAML frontmatterrel (`name`, `description`) és részletes markdown-törzzsel

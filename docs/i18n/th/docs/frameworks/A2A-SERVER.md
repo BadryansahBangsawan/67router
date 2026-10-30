@@ -161,7 +161,7 @@ OmniRoute เปิดให้ใช้งาน 6 สกิล A2A ที่�
 | Provider Discovery | `provider-discovery` | แสดงรายการ provider ที่ติดตั้งไว้ พร้อมความสามารถ แฟล็ก free-tier และสถานะ OAuth                                                                | providers, discovery       | "มี provider อะไรบ้างที่ใช้งานได้?"   |
 | Cost Analysis      | `cost-analysis`      | ประมาณค่าใช้จ่ายของคำขอ/บทสนทนา โดยอิงจากแคตตาล็อกและการใช้งานล่าสุด                                                                            | cost, usage                | "ประมาณค่าใช้จ่ายสำหรับบทสนทนานี้"    |
 | Health Report      | `health-report`      | รวบรวมสถานะ circuit breaker, cooldown และ lockout ของ provider แต่ละราย                                                                         | health, resilience         | "แสดงสถานะสุขภาพของ provider ทั้งหมด" |
-| List Capabilities  | `list-capabilities`  | คืนค่าแคตตาล็อก Agent Skills ทั้งหมด 45 รายการ (23 API + 21 CLI + 1 config) ในรูปแบบตาราง markdown พร้อม URL ดิบของ SKILL.md สำหรับการแทรกบริบท | catalog, discovery, skills | "แสดงความสามารถทั้งหมดของ OmniRoute"  |
+| List Capabilities  | `list-capabilities`  | คืนค่าแคตตาล็อก Agent Skills ทั้งหมด 43 รายการ (22 API + 20 CLI + 1 config) ในรูปแบบตาราง markdown พร้อม URL ดิบของ SKILL.md สำหรับการแทรกบริบท | catalog, discovery, skills | "แสดงความสามารถทั้งหมดของ OmniRoute"  |
 
 > ควรปรับ Agent Card ให้สอดคล้องกับแคตตาล็อก 375 provider ที่ใช้งานจริงอยู่เสมอ โดยจำนวน provider และเมทาดาทา free/no-auth มาจากรีจิสทรีขณะรันไทม์
 

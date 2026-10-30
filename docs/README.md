@@ -88,8 +88,6 @@ Lookup material — API surface, environment variables, CLI flags, provider cata
 - [FEATURE_FLAGS.md](reference/FEATURE_FLAGS.md) — feature flags and their defaults.
 - [CLI-TOOLS.md](reference/CLI-TOOLS.md) — bundled CLI commands.
 - [FREE_TIERS.md](reference/FREE_TIERS.md) — free-tier LLM provider directory.
-- [FREE_PROXIES_API.md](reference/FREE_PROXIES_API.md) — free proxies API.
-- [RELAY_BACKEND_STRATEGY.md](reference/RELAY_BACKEND_STRATEGY.md) — relay backend strategy.
 - [RELAY_TROUBLESHOOTING.md](reference/RELAY_TROUBLESHOOTING.md) — relay troubleshooting.
 
 ## frameworks/
@@ -105,7 +103,6 @@ Pluggable subsystems exposed to clients, agents, and operators.
 - [CLOUD_AGENT.md](frameworks/CLOUD_AGENT.md) — cloud agent runtime and providers.
 - [SKILLS.md](frameworks/SKILLS.md) — Skills framework (sandboxed extension).
 - [MEMORY.md](frameworks/MEMORY.md) — persistent memory (FTS5 + Qdrant).
-- [WEBHOOKS.md](frameworks/WEBHOOKS.md) — webhook events and dispatch.
 - [EVALS.md](frameworks/EVALS.md) — eval suites.
 - [GAMIFICATION.md](frameworks/GAMIFICATION.md) — gamification & leaderboard system.
 - [EMBEDDED-SERVICES.md](frameworks/EMBEDDED-SERVICES.md) — embedded sidecar services (9Router, CLIProxyAPI).

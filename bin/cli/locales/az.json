@@ -791,38 +791,6 @@
       "description": "Tamamlanmış qiymətləndirmə icrası üçün qiymət cədvəlini göstər"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute vebhuklarını idarə et",
-    "events": {
-      "description": "Bütün mövcud vebhuk hadisə növlərini siyahıya al"
-    },
-    "list": {
-      "description": "Konfiqurasiya edilmiş vebhukları siyahıya al"
-    },
-    "get": {
-      "description": "Vebhuk təfərrüatlarını ID üzrə əldə et"
-    },
-    "add": {
-      "description": "Yeni vebhuk qeydiyyatdan keçir",
-      "url": "Təyinat URL-i",
-      "events": "Vergüllə ayrılmış hadisə növlərinin siyahısı",
-      "secret": "HMAC imzalama sirri",
-      "header": "key=value formatında əlavə başlıq (təkrarlana bilər)",
-      "no_enabled": "Vebhuku deaktiv vəziyyətdə yarat"
-    },
-    "update": {
-      "description": "Mövcud vebhuku yenilə",
-      "enabled": "Aktivlik vəziyyətini təyin et (true|false)"
-    },
-    "remove": {
-      "description": "Vebhuku sil",
-      "yes": "Təsdiq sorğusunu keç"
-    },
-    "test": {
-      "description": "Vebhuka sınaq hadisəsi göndər",
-      "event": "Simulyasiya ediləcək hadisə növü (standart: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Avtomatik Fallback ilə Ağıllı AI Marşrutlaşdırıcısı",
     "version": "Versiyasını çap et və çıx",
@@ -834,59 +802,6 @@
     "base_url": "OmniRoute server baza URL-i",
     "context": "Bu əmr üçün server konteksti/profili",
     "lang": "CLI ekran dilini təyin edin (OMNIROUTE_LANG-ı keçir)"
-  },
-  "files": {
-    "description": "Faylları idarə et (yüklə, siyahıya al, əldə et, endir, sil)",
-    "list": {
-      "purpose": "Təyinata görə filtrlə",
-      "limit": "Maksimum nəticə sayı"
-    },
-    "get": {
-      "description": "Fayl metadatasını əldə edin"
-    },
-    "upload": {
-      "description": "Fayl yükləyin",
-      "purpose": "Faylın təyinatı (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Fayl məzmununu endirin",
-      "out": "Yaddaş yolu (standart: stdout)"
-    },
-    "delete": {
-      "yes": "Təsdiqi keçin"
-    }
-  },
-  "batches": {
-    "description": "OpenAI-uyğun paket tapşırıqlarını idarə edin",
-    "list": {
-      "status": "Statusa görə filtrləyin",
-      "limit": "Maksimum nəticə sayı"
-    },
-    "create": {
-      "description": "Paket tapşırığı yaradın",
-      "inputFile": "Giriş faylının ID-si",
-      "endpoint": "Hədəf son nöqtə",
-      "window": "Tamamlanma müddəti",
-      "metadata": "Metadata əlavə edin: key=value"
-    },
-    "submit": {
-      "description": "JSONL faylını yükləyib paket yaradın",
-      "jsonl": "JSONL faylının yolu",
-      "endpoint": "Hədəf son nöqtə",
-      "wait": "Tamamlanmasını gözləyin"
-    },
-    "cancel": {
-      "yes": "Təsdiqi keçin"
-    },
-    "wait": {
-      "timeout": "Taymaut, ms ilə"
-    },
-    "output": {
-      "out": "Çıxışı göstərilən yolda yadda saxlayın"
-    },
-    "errors": {
-      "out": "Xətaları göstərilən yolda yadda saxlayın"
-    }
   },
   "translator": {
     "description": "Sorğu gövdələrini LLM formatları arasında çevirin",
@@ -1122,33 +1037,6 @@
       "top": "Göstəriləcək ən yaxşı namizədlərin sayı (standart: 5)",
       "explain": "Əsaslandırmanı stderr-ə çıxarın",
       "switch": "Ən yüksək reytinqli kombinasiyanı aktivləşdirin"
-    }
-  },
-  "oneproxy": {
-    "description": "OneProxy yuxarı axın hovuzunu idarə edin",
-    "stats": {
-      "provider": "Provayderə görə filtrləyin",
-      "period": "Vaxt müddəti (standart: 24h)"
-    },
-    "fetch": {
-      "description": "Hovuzdan proksiləri əldə edin",
-      "count": "Əldə ediləcək proksilərin sayı (standart: 1)",
-      "type": "Proksi növü: http|socks5 (standart: http)"
-    },
-    "rotate": {
-      "description": "Proksinin məcburi rotasiyası",
-      "provider": "Rotasiya ediləcək provayder",
-      "connectionId": "Rotasiya ediləcək konkret bağlantı ID-si"
-    },
-    "config": {
-      "description": "OneProxy konfiqurasiyasını göstərin və ya yeniləyin",
-      "enabled": "Proksi hovuzunu aktivləşdir (true|false)",
-      "poolSize": "Hovuz ölçüsü",
-      "providerSource": "Proksi provayderinin URL-i",
-      "rotationPolicy": "Rotasiya siyasəti: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Cari proksi hovuzunu metrikalarla birlikdə siyahıla"
     }
   },
   "open": {

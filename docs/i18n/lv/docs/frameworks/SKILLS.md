@@ -23,7 +23,7 @@ OmniRoute ir divas atšķirīgas, taču savstarpēji papildinošas prasmju sist�
 | Patiesības avots | `src/lib/skills/` + tirgus                                                      | `src/lib/agentSkills/` + direktorijs `skills/`                                             |
 | Izpildes režīms  | Tiek ievietotas izejošajos pieprasījumos un izpildītas rīku izsaukumu notikumos | Statisks Markdown katalogs + REST/MCP/A2A atklāšanas galapunkti                            |
 | Kas to izmanto   | Pats OmniRoute (kombinētā maršrutēšana, ienākošie LLM izsaukumi)                | Ārējie aģenti, MCP klienti, A2A orķestratori                                               |
-| Skaits           | Mainīgs (atkarīgs no tirgus)                                                    | 45 kataloga ieraksti (23 API + 21 CLI + 1 konfigurācija)                                   |
+| Skaits           | Mainīgs (atkarīgs no tirgus)                                                    | 43 kataloga ieraksti (22 API + 20 CLI + 1 konfigurācija)                                   |
 | Formāts          | `SkillDefinition` ar rīka shēmu un apstrādātāju                                 | `SKILL.md` priekšdaļa + Markdown pamatteksts                                               |
 | Atklāšana        | `/api/skills/*` REST + `omniroute_skills_*` MCP rīki                            | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP rīki + A2A `list-capabilities` |
 

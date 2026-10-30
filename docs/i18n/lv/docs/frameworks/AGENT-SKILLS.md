@@ -13,7 +13,7 @@ Agentu prasmes ir strukturēti SKILL.md faili, kas ārējiem aģentiem, MCP klie
 
 ## Pārskats
 
-Katalogā ir **45 Agentu prasmes** (23 REST API + 21 CLI + 1 konfigurācijas darbplūsma). Katrai prasmei ir:
+Katalogā ir **43 Agentu prasmes** (22 REST API + 20 CLI + 1 konfigurācijas darbplūsma). Katrai prasmei ir:
 
 - **Kanoniskais ID** (`omni-auth`, `cli-serve` utt.)
 - **SKILL.md** fails direktorijā `skills/{id}/SKILL.md` ar YAML priekšdaļu (`name`, `description`) + bagātīgi formatētu markdown pamatdaļu

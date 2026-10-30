@@ -284,7 +284,7 @@ dashboard form، سبھی registry کو پڑھتے ہیں۔
 - جزوی ناکامی پر `send()` کو **لازماً throw کرنا چاہیے**۔ Resolve ہونے کا مطلب ہے کہ "منزل کے پاس یہ rows موجود ہیں"،
   اور cursor مستقل طور پر ان سے آگے بڑھ جاتا ہے۔
 - صارف کا فراہم کردہ URL استعمال کرنے والی منزل کو fetch کرنے سے پہلے
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) کے ذریعے اس کی توثیق کرنی چاہیے،
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) کے ذریعے اس کی توثیق کرنی چاہیے،
   بالکل اسی طرح جیسے webhooks کرتے ہیں۔ BigQuery کو اس کی ضرورت نہیں ہے: اس کے hosts مستقل ہیں۔
 
 ---

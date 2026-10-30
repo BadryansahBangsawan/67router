@@ -25,7 +25,6 @@ Complete guide for configuring providers, creating combos, integrating CLI tools
 - [MCP & A2A Integration](#-mcp--a2a-integration)
 - [Skills System](#-skills-system)
 - [Memory System](#-memory-system)
-- [Webhooks](#-webhooks)
 - [Cloud Agents](#-cloud-agents)
 - [Programmatic Management](#-programmatic-management)
 - [Internal CLI](#-internal-cli)
@@ -1270,19 +1269,6 @@ OmniRoute persists **long-term conversational memory** with hybrid retrieval:
 - Memories are scoped per API key and per session
 
 Manage memories in **Dashboard → Memory** (search, edit, export, purge). The HTTP surface (`/api/memory/*`) lets agents push and query facts programmatically — see [MEMORY.md](../frameworks/MEMORY.md).
-
----
-
-## 🔔 Webhooks
-
-Subscribe to OmniRoute events for real-time monitoring and automation.
-
-- Create a webhook in **Dashboard → Webhooks** with target URL and HMAC signing secret
-- Available events: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
-- Every payload includes `X-OmniRoute-Signature` (HMAC-SHA256) for verification
-- Retries: 3 attempts with exponential backoff, then dead-letter queue
-
-Full schema in [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ---
 

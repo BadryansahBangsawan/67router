@@ -236,7 +236,7 @@ Defineeritud failis `open-sse/mcp-server/tools/agentSkillTools.ts`. Töötab `sr
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Loetleb kõik 45 agendioskust valikuliste `category` (api\|cli) ja `area` filtritega; tagastab metaandmed + katvuse                              |
 | `omniroute_agent_skills_get`      | `read:catalog` | Hangib ühe oskuse täieliku metaandmestiku + SKILL.md sisu kanoonilise `id` järgi                                                                |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Katvuse statistika: kui paljudel 23 API, 21 CLI ja 1 konfiguratsiooni oskusest on failisüsteemis SKILL.md failid võrreldes kataloogi koguarvuga |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Katvuse statistika: kui paljudel 22 API, 20 CLI ja 1 konfiguratsiooni oskusest on failisüsteemis SKILL.md failid võrreldes kataloogi koguarvuga |
 
 Vaata [AGENT-SKILLS.md](./AGENT-SKILLS.md) täielikku kataloogi ja seda, kuidas välised agendid seda kasutavad.
 

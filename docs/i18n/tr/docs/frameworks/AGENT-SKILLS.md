@@ -13,7 +13,7 @@ Agent Skills; harici agent'lara, MCP istemcilerine ve A2A orkestratörlerine Omn
 
 ## Genel Bakış
 
-Katalogda **45 Agent Skill** bulunur (23 REST API + 21 CLI + 1 yapılandırma iş akışı). Her skill şunlara sahiptir:
+Katalogda **43 Agent Skill** bulunur (22 REST API + 20 CLI + 1 yapılandırma iş akışı). Her skill şunlara sahiptir:
 
 - Bir **standart ID** (`omni-auth`, `cli-serve` vb.)
 - YAML frontmatter (`name`, `description`) ve zengin bir markdown gövdesi içeren `skills/{id}/SKILL.md` konumundaki bir **SKILL.md** dosyası

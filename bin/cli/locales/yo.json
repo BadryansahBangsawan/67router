@@ -791,38 +791,6 @@
       "description": "Ṣàfihàn káàdì ìṣírò fún ìṣiṣẹ́ eval tó ti parí"
     }
   },
-  "webhooks": {
-    "description": "Ṣàkóso àwọn webhook OmniRoute",
-    "events": {
-      "description": "Ṣàtòjọ gbogbo irú ìṣẹ̀lẹ̀ webhook tó wà"
-    },
-    "list": {
-      "description": "Ṣàtòjọ àwọn webhook tí a ti ṣètò"
-    },
-    "get": {
-      "description": "Gba àwọn àlàyé webhook nípasẹ̀ ID"
-    },
-    "add": {
-      "description": "Forúkọsílẹ̀ webhook tuntun kan",
-      "url": "URL ibi àfojúsùn",
-      "events": "Àtòjọ irú ìṣẹ̀lẹ̀ tí a fi àmì-kọ́má yà",
-      "secret": "Àṣírí ìfọwọ́sí HMAC",
-      "header": "Àfikún àkọlé ní ìrísí key=value (ó ṣeé tún ṣe)",
-      "no_enabled": "Ṣẹ̀dá webhook ní ipò àìṣiṣẹ́"
-    },
-    "update": {
-      "description": "Ṣàfikún webhook tó ti wà",
-      "enabled": "Ṣètò ipò ìṣiṣẹ́ (true|false)"
-    },
-    "remove": {
-      "description": "Pa webhook rẹ́",
-      "yes": "Fò ìbéèrè ìmúdájú"
-    },
-    "test": {
-      "description": "Fi ìṣẹ̀lẹ̀ ìdánwò ránṣẹ́ sí webhook kan",
-      "event": "Irú ìṣẹ̀lẹ̀ láti ṣe àfarawé (àìpéye: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Olùdarí AI ọlọ́gbọ́n pẹ̀lú ìpadà-aifọwọ́yi",
     "version": "Ṣàfihàn ẹ̀dà kí o sì jáde",
@@ -834,59 +802,6 @@
     "base_url": "URL ìpìlẹ̀ olupin OmniRoute",
     "context": "Àyíká/prófáìlì olupin láti lò fún àṣẹ yìí",
     "lang": "Ṣètò èdè àfihàn CLI (ó borí OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Ṣàkóso àwọn fáìlì (gbé sókè, ṣe àkójọ, gbà, ṣe ìgbàsílẹ̀, pa rẹ́)",
-    "list": {
-      "purpose": "Ṣàlẹ̀mọ́ gẹ́gẹ́ bí ète",
-      "limit": "Iye àbájáde tó pọ̀ jù"
-    },
-    "get": {
-      "description": "Gba metadata fáìlì"
-    },
-    "upload": {
-      "description": "Gbé fáìlì kan sókè",
-      "purpose": "Ète fáìlì (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Ṣe ìgbàsílẹ̀ àkóónú fáìlì",
-      "out": "Fi pamọ́ sí path (àìpéye: stdout)"
-    },
-    "delete": {
-      "yes": "Fò ìmúdájú"
-    }
-  },
-  "batches": {
-    "description": "Ṣàkóso àwọn iṣẹ́ batch tó bá OpenAI mu",
-    "list": {
-      "status": "Ṣàlẹ̀mọ́ gẹ́gẹ́ bí ipò",
-      "limit": "Iye àbájáde tó pọ̀ jù"
-    },
-    "create": {
-      "description": "Ṣẹ̀dá iṣẹ́ batch kan",
-      "inputFile": "ID fáìlì ìwọlé",
-      "endpoint": "Endpoint àfojúsùn",
-      "window": "Àkókò ìparí",
-      "metadata": "Ṣàfikún metadata key=value"
-    },
-    "submit": {
-      "description": "Gbé fáìlì JSONL sókè kí o sì ṣẹ̀dá batch",
-      "jsonl": "Path sí fáìlì JSONL",
-      "endpoint": "Endpoint àfojúsùn",
-      "wait": "Dúró de ìparí"
-    },
-    "cancel": {
-      "yes": "Fò ìmúdájú"
-    },
-    "wait": {
-      "timeout": "Àkókò ìparí ní ms"
-    },
-    "output": {
-      "out": "Fi àbájáde pamọ́ sí path"
-    },
-    "errors": {
-      "out": "Fi àwọn àṣìṣe pamọ́ sí path"
-    }
   },
   "translator": {
     "description": "Túmọ̀ àwọn ara ìbéèrè láàárín àwọn àgbékalẹ̀ LLM",
@@ -1122,33 +1037,6 @@
       "top": "Iye àwọn olùdíje tó ga jù láti ṣàfihàn (àìyípadà: 5)",
       "explain": "Tẹ ìdí jáde sí stderr",
       "switch": "Mú combo tó wà ní ipò àkọ́kọ́ ṣiṣẹ́"
-    }
-  },
-  "oneproxy": {
-    "description": "Ṣàkóso àkójọpọ̀ upstream OneProxy",
-    "stats": {
-      "provider": "Ṣe àlẹ̀mọ́ nípa olùpèsè",
-      "period": "Àkókò (àìyípadà: 24h)"
-    },
-    "fetch": {
-      "description": "Gba àwọn proxy láti inú àkójọpọ̀ náà",
-      "count": "Iye àwọn proxy láti gbà (àìyípadà: 1)",
-      "type": "Irú proxy: http|socks5 (àìyípadà: http)"
-    },
-    "rotate": {
-      "description": "Fi ipá mú ìyípo proxy ṣẹlẹ̀",
-      "provider": "Olùpèsè tí a ó yípo fún",
-      "connectionId": "ID ìsopọ̀ pàtó láti yípo"
-    },
-    "config": {
-      "description": "Ṣàfihàn tàbí ṣàfikún àtúnṣe sí ìṣètò OneProxy",
-      "enabled": "Mú àkójọpọ̀ proxy ṣiṣẹ́ (true|false)",
-      "poolSize": "Ìwọ̀n àkójọpọ̀",
-      "providerSource": "URL fún olùpèsè proxy",
-      "rotationPolicy": "Ìlànà ìyípo: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Ṣàkọsílẹ̀ àkójọpọ̀ proxy lọ́wọ́lọ́wọ́ pẹ̀lú àwọn òṣùwọ̀n"
     }
   },
   "open": {

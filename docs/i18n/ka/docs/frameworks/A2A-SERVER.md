@@ -161,7 +161,7 @@ OmniRoute ამჟღავნებს 6 A2A უნარს, რომლე�
 | პროვაიდერების აღმოჩენა      | `provider-discovery` | აჩვენებს დაყენებული პროვაიდერების სიას შესაძლებლობებით, უფასო დონის ფლაგებითა და OAuth სტატუსით                                                                 | providers, discovery       | "What providers are available?"        |
 | ღირებულების ანალიზი         | `cost-analysis`      | აფასებს მოთხოვნის/საუბრის ღირებულებას კატალოგისა და ბოლო გამოყენების მონაცემების საფუძველზე                                                                     | cost, usage                | "Estimate cost for this conversation"  |
 | ჯანმრთელობის ანგარიში       | `health-report`      | აერთიანებს circuit breaker, cooldown და lockout მდგომარეობებს თითოეული პროვაიდერისთვის                                                                          | health, resilience         | "Show health status of all providers"  |
-| შესაძლებლობების ჩამონათვალი | `list-capabilities`  | აბრუნებს Agent Skills-ის სრულ 45-ჩანაწერიან კატალოგს (23 API + 21 CLI + 1 კონფიგურაცია) markdown ცხრილის სახით, უმუშავი SKILL.md URL-ებით კონტექსტის ჩასასმელად | catalog, discovery, skills | "List all OmniRoute capabilities"      |
+| შესაძლებლობების ჩამონათვალი | `list-capabilities`  | აბრუნებს Agent Skills-ის სრულ 43-ჩანაწერიან კატალოგს (22 API + 20 CLI + 1 კონფიგურაცია) markdown ცხრილის სახით, უმუშავი SKILL.md URL-ებით კონტექსტის ჩასასმელად | catalog, discovery, skills | "List all OmniRoute capabilities"      |
 
 > Agent Card უნდა შეესაბამებოდეს მოქმედ 375-პროვაიდერიან კატალოგს; პროვაიდერების რაოდენობა და უფასო/ავტორიზაციის გარეშე მეტამონაცემები მოწოდებულია სამუშაო (runtime) რეესტრიდან.
 

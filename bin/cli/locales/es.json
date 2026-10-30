@@ -791,38 +791,6 @@
       "description": "Mostrar el cuadro de puntuación de una ejecución de evaluación completada"
     }
   },
-  "webhooks": {
-    "description": "Gestionar webhooks de OmniRoute",
-    "events": {
-      "description": "Listar todos los tipos de eventos de webhook disponibles"
-    },
-    "list": {
-      "description": "Listar los webhooks configurados"
-    },
-    "get": {
-      "description": "Obtener los detalles de un webhook por ID"
-    },
-    "add": {
-      "description": "Registrar un nuevo webhook",
-      "url": "URL de destino",
-      "events": "Lista de tipos de eventos separados por comas",
-      "secret": "Secreto de firma HMAC",
-      "header": "Encabezado adicional con formato key=value (repetible)",
-      "no_enabled": "Crear el webhook en estado deshabilitado"
-    },
-    "update": {
-      "description": "Actualizar un webhook existente",
-      "enabled": "Establecer el estado habilitado (true|false)"
-    },
-    "remove": {
-      "description": "Eliminar un webhook",
-      "yes": "Omitir la solicitud de confirmación"
-    },
-    "test": {
-      "description": "Enviar un evento de prueba a un webhook",
-      "event": "Tipo de evento que se simulará (predeterminado: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router de IA inteligente con fallback automático",
     "version": "Mostrar versión y salir",
@@ -834,59 +802,6 @@
     "base_url": "URL base del servidor OmniRoute",
     "context": "Contexto/perfil del servidor para este comando",
     "lang": "Establecer idioma del CLI (reemplaza OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Gestionar archivos (subir, listar, obtener, descargar y eliminar)",
-    "list": {
-      "purpose": "Filtrar por propósito",
-      "limit": "Máximo de resultados"
-    },
-    "get": {
-      "description": "Obtener metadatos del archivo"
-    },
-    "upload": {
-      "description": "Subir un archivo",
-      "purpose": "Propósito del archivo (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Descargar el contenido del archivo",
-      "out": "Guardar en la ruta (predeterminado: stdout)"
-    },
-    "delete": {
-      "yes": "Omitir confirmación"
-    }
-  },
-  "batches": {
-    "description": "Gestionar trabajos por lotes compatibles con OpenAI",
-    "list": {
-      "status": "Filtrar por estado",
-      "limit": "Máximo de resultados"
-    },
-    "create": {
-      "description": "Crear un trabajo por lotes",
-      "inputFile": "ID del archivo de entrada",
-      "endpoint": "Endpoint de destino",
-      "window": "Ventana de finalización",
-      "metadata": "Añadir metadatos clave=valor"
-    },
-    "submit": {
-      "description": "Subir un archivo JSONL y crear un lote",
-      "jsonl": "Ruta al archivo JSONL",
-      "endpoint": "Endpoint de destino",
-      "wait": "Esperar a que finalice"
-    },
-    "cancel": {
-      "yes": "Omitir confirmación"
-    },
-    "wait": {
-      "timeout": "Tiempo de espera en ms"
-    },
-    "output": {
-      "out": "Guardar la salida en la ruta"
-    },
-    "errors": {
-      "out": "Guardar los errores en la ruta"
-    }
   },
   "translator": {
     "description": "Traducir cuerpos de solicitudes entre formatos de LLM",
@@ -1122,33 +1037,6 @@
       "top": "Número de candidatos principales que se mostrarán (predeterminado: 5)",
       "explain": "Imprimir la justificación en stderr",
       "switch": "Activar la combinación mejor clasificada"
-    }
-  },
-  "oneproxy": {
-    "description": "Gestionar el grupo de servidores upstream de OneProxy",
-    "stats": {
-      "provider": "Filtrar por proveedor",
-      "period": "Periodo de tiempo (predeterminado: 24h)"
-    },
-    "fetch": {
-      "description": "Obtener proxies del grupo",
-      "count": "Número de proxies que se obtendrán (predeterminado: 1)",
-      "type": "Tipo de proxy: http|socks5 (predeterminado: http)"
-    },
-    "rotate": {
-      "description": "Forzar la rotación del proxy",
-      "provider": "Proveedor para el que se realizará la rotación",
-      "connectionId": "ID de conexión específica que se va a rotar"
-    },
-    "config": {
-      "description": "Mostrar o actualizar la configuración de OneProxy",
-      "enabled": "Habilitar el grupo de proxies (true|false)",
-      "poolSize": "Tamaño del grupo",
-      "providerSource": "URL del proveedor de proxies",
-      "rotationPolicy": "Política de rotación: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Listar el grupo de proxies actual con métricas"
     }
   },
   "open": {

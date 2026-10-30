@@ -791,38 +791,6 @@
       "description": "ለተጠናቀቀ የግምገማ አሂድ የውጤት ሰሌዳን አሳይ"
     }
   },
-  "webhooks": {
-    "description": "የOmniRoute webhooksን አስተዳድር",
-    "events": {
-      "description": "ሁሉንም የሚገኙ የwebhook ክስተት አይነቶች ዘርዝር"
-    },
-    "list": {
-      "description": "የተዋቀሩ webhooksን ዘርዝር"
-    },
-    "get": {
-      "description": "የwebhook ዝርዝሮችን በID አግኝ"
-    },
-    "add": {
-      "description": "አዲስ webhook መዝግብ",
-      "url": "መድረሻ URL",
-      "events": "በኮማ የተለየ የክስተት አይነቶች ዝርዝር",
-      "secret": "የHMAC ፊርማ ሚስጥር",
-      "header": "ተጨማሪ ራስጌ በkey=value ቅርጸት (ሊደገም የሚችል)",
-      "no_enabled": "webhookን በቦዘነ ሁኔታ ፍጠር"
-    },
-    "update": {
-      "description": "ነባር webhookን አዘምን",
-      "enabled": "የነቃ ሁኔታን አዘጋጅ (true|false)"
-    },
-    "remove": {
-      "description": "ዌብሁክ ሰርዝ",
-      "yes": "የማረጋገጫ ጥያቄን ዝለል"
-    },
-    "test": {
-      "description": "የሙከራ ክስተት ወደ ዌብሁክ ላክ",
-      "event": "ለማስመሰል የክስተት ዓይነት (ነባሪ፦ request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — ራስ-ሰር ተተኪ ያለው ብልህ AI ራውተር",
     "version": "ስሪቱን አትምና ውጣ",
@@ -834,59 +802,6 @@
     "base_url": "የOmniRoute አገልጋይ መሠረታዊ URL",
     "context": "ለዚህ ትዕዛዝ የሚያገለግል የአገልጋይ ዐውድ/መገለጫ",
     "lang": "የCLI ማሳያ ቋንቋን አዘጋጅ (OMNIROUTE_LANGን ይሽራል)"
-  },
-  "files": {
-    "description": "ፋይሎችን አስተዳድር (ስቀል፣ ዘርዝር፣ አግኝ፣ አውርድ፣ ሰርዝ)",
-    "list": {
-      "purpose": "በዓላማ አጣራ",
-      "limit": "ከፍተኛው የውጤቶች ብዛት"
-    },
-    "get": {
-      "description": "የፋይል ሜታዳታን አግኝ"
-    },
-    "upload": {
-      "description": "ፋይል ስቀል",
-      "purpose": "የፋይል ዓላማ (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "የፋይል ይዘትን አውርድ",
-      "out": "ወደ ዱካ አስቀምጥ (ነባሪ፦ stdout)"
-    },
-    "delete": {
-      "yes": "ማረጋገጫን ዝለል"
-    }
-  },
-  "batches": {
-    "description": "ከOpenAI ጋር ተኳሃኝ የቡድን ሥራዎችን አስተዳድር",
-    "list": {
-      "status": "በሁኔታ አጣራ",
-      "limit": "ከፍተኛው የውጤቶች ብዛት"
-    },
-    "create": {
-      "description": "የቡድን ሥራ ፍጠር",
-      "inputFile": "የግቤት ፋይል ID",
-      "endpoint": "የታለመ endpoint",
-      "window": "የማጠናቀቂያ ጊዜ መስኮት",
-      "metadata": "ሜታዳታ key=value አክል"
-    },
-    "submit": {
-      "description": "JSONL ፋይል ስቀልና የቡድን ሥራ ፍጠር",
-      "jsonl": "ወደ JSONL ፋይል የሚወስድ ዱካ",
-      "endpoint": "የታለመ endpoint",
-      "wait": "እስኪጠናቀቅ ጠብቅ"
-    },
-    "cancel": {
-      "yes": "ማረጋገጫን ዝለል"
-    },
-    "wait": {
-      "timeout": "የጊዜ ገደብ በms"
-    },
-    "output": {
-      "out": "ውጤቱን ወደ ዱካ አስቀምጥ"
-    },
-    "errors": {
-      "out": "ስህተቶችን ወደ ዱካ አስቀምጥ"
-    }
   },
   "translator": {
     "description": "የጥያቄ አካሎችን በLLM ቅርጸቶች መካከል ተርጉም",
@@ -1122,33 +1037,6 @@
       "top": "የሚታዩ ከፍተኛ እጩዎች ብዛት (ነባሪ፦ 5)",
       "explain": "ምክንያቱን ወደ stderr አትም",
       "switch": "ከፍተኛ ደረጃ ያገኘውን ጥምረት አግብር"
-    }
-  },
-  "oneproxy": {
-    "description": "የOneProxy የወራጅ አገልጋዮች ስብስብን አስተዳድር",
-    "stats": {
-      "provider": "በአቅራቢ አጣራ",
-      "period": "የጊዜ ክልል (ነባሪ፦ 24h)"
-    },
-    "fetch": {
-      "description": "ከስብስቡ ፕሮክሲዎችን አምጣ",
-      "count": "የሚመጡ ፕሮክሲዎች ብዛት (ነባሪ፦ 1)",
-      "type": "የፕሮክሲ አይነት፦ http|socks5 (ነባሪ፦ http)"
-    },
-    "rotate": {
-      "description": "የፕሮክሲ ማዞርን አስገድድ",
-      "provider": "የሚዞርለት አቅራቢ",
-      "connectionId": "የሚዞር የተወሰነ የግንኙነት ID"
-    },
-    "config": {
-      "description": "የOneProxy ውቅርን አሳይ ወይም አዘምን",
-      "enabled": "የፕሮክሲ ስብስብን አንቃ (true|false)",
-      "poolSize": "የስብስብ መጠን",
-      "providerSource": "የፕሮክሲ አቅራቢ URL",
-      "rotationPolicy": "የማዞር ፖሊሲ፦ sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "የአሁኑን የፕሮክሲ ስብስብ ከመለኪያዎቹ ጋር ዘርዝር"
     }
   },
   "open": {

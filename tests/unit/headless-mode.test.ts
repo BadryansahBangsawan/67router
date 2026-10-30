@@ -225,7 +225,6 @@ test("boot wiring: registerNodejs routes optional inits through the headless gat
   const source = fs.readFileSync("src/instrumentation-node.ts", "utf8");
   const body = source.slice(source.indexOf("export async function registerNodejs"));
   assert.match(body, /startOptionalBootSubsystems\(\)/);
-  assert.match(body, /skipInHeadless\("free-proxy-sync"\)/);
   assert.match(body, /skipInHeadless\("cloud-sync"\)/);
 });
 

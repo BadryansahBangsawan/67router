@@ -13,7 +13,7 @@ Is comhaid struchtúrtha SKILL.md iad Scileanna Gníomhaire a mhúineann do ghn�
 
 ## Forléargas
 
-Tá **45 Scil Gníomhaire** sa chatalóg (23 REST API + 21 CLI + 1 sreabhadh oibre cumraíochta). Tá na nithe seo a leanas ag gach scil:
+Tá **43 Scil Gníomhaire** sa chatalóg (22 REST API + 20 CLI + 1 sreabhadh oibre cumraíochta). Tá na nithe seo a leanas ag gach scil:
 
 - **Aitheantas canónach** (`omni-auth`, `cli-serve`, etc.)
 - Comhad **SKILL.md** in `skills/{id}/SKILL.md` le réamhábhar YAML (`name`, `description`) + corp saibhir markdown

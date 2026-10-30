@@ -23,7 +23,7 @@ OmniRoute verfügt über zwei eigenständige, aber einander ergänzende Skill-Sy
 | Maßgebliche Quelle | `src/lib/skills/` + Marketplace                                         | `src/lib/agentSkills/` + Verzeichnis `skills/`                                              |
 | Laufzeitmodus      | In ausgehende Anfragen eingefügt, bei Tool-Aufrufereignissen ausgeführt | Statischer Markdown-Katalog + REST-/MCP-/A2A-Discovery-Endpunkte                            |
 | Verwendet von      | OmniRoute selbst (Combo-Routing, eingehende LLM-Aufrufe)                | Externen Agenten, MCP-Clients, A2A-Orchestratoren                                           |
-| Anzahl             | Variabel (Marketplace-gesteuert)                                        | 45 Katalogeinträge (23 API + 21 CLI + 1 Konfiguration)                                      |
+| Anzahl             | Variabel (Marketplace-gesteuert)                                        | 43 Katalogeinträge (22 API + 20 CLI + 1 Konfiguration)                                      |
 | Format             | `SkillDefinition` mit Tool-Schema + Handler                             | `SKILL.md`-Frontmatter + Markdown-Inhalt                                                    |
 | Ermittlung         | `/api/skills/*` REST + `omniroute_skills_*` MCP-Tools                   | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-Tools + A2A `list-capabilities` |
 

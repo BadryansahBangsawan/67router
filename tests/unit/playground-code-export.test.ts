@@ -1,9 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-const { exportCode, exportAllLanguages, endpointToPath, API_KEY_PLACEHOLDER } = await import(
-  "../../src/lib/playground/codeExport.ts"
-);
+const {
+  exportCode,
+  exportAllLanguages,
+  endpointToPath,
+  normalizePlaygroundEndpoint,
+  API_KEY_PLACEHOLDER,
+} = await import("../../src/lib/playground/codeExport.ts");
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -14,16 +18,29 @@ function assertSecurityInvariants(generated: string, label: string) {
   assert.doesNotMatch(
     generated,
     /sk-[A-Za-z0-9_\-]{16,}/,
-    `${label}: must not contain real API keys`,
+    `${label}: must not contain real API keys`
   );
   assert.doesNotMatch(
     generated,
     /Bearer\s+[A-Za-z0-9_\-]{20,}\s/,
-    `${label}: must not contain real Bearer tokens`,
+    `${label}: must not contain real Bearer tokens`
   );
 }
 
 // ── endpointToPath ─────────────────────────────────────────────────────────────
+
+test("normalizePlaygroundEndpoint: keeps known endpoints, falls back to chat for unknown or removed ones", () => {
+  assert.equal(normalizePlaygroundEndpoint("embeddings"), "embeddings");
+  assert.equal(normalizePlaygroundEndpoint("web.fetch"), "web.fetch");
+  // A preset saved before /v1/moderations was removed.
+  assert.equal(normalizePlaygroundEndpoint("moderations"), "chat.completions");
+  assert.equal(normalizePlaygroundEndpoint("nope"), "chat.completions");
+  assert.equal(normalizePlaygroundEndpoint(undefined), "chat.completions");
+  assert.equal(normalizePlaygroundEndpoint(null), "chat.completions");
+  // Prototype keys must not count as endpoints.
+  assert.equal(normalizePlaygroundEndpoint("toString"), "chat.completions");
+  assert.equal(endpointToPath(normalizePlaygroundEndpoint("moderations")), "/v1/chat/completions");
+});
 
 test("endpointToPath: maps all 13 endpoints correctly (D4-rev2)", () => {
   assert.equal(endpointToPath("chat.completions"), "/v1/chat/completions");
@@ -35,7 +52,6 @@ test("endpointToPath: maps all 13 endpoints correctly (D4-rev2)", () => {
   assert.equal(endpointToPath("audio.speech"), "/v1/audio/speech");
   assert.equal(endpointToPath("video"), "/v1/videos/generations");
   assert.equal(endpointToPath("music"), "/v1/music/generations");
-  assert.equal(endpointToPath("moderations"), "/v1/moderations");
   assert.equal(endpointToPath("rerank"), "/v1/rerank");
   assert.equal(endpointToPath("search"), "/v1/search");
   assert.equal(endpointToPath("web.fetch"), "/v1/web/fetch");
@@ -93,9 +109,7 @@ test("chat.completions: uses systemPrompt when messages is empty", () => {
 test("chat.completions: uses messages when provided", () => {
   const state = {
     ...baseState,
-    messages: [
-      { role: "user" as const, content: "My custom message" },
-    ],
+    messages: [{ role: "user" as const, content: "My custom message" }],
   };
   for (const lang of ["curl", "python", "typescript"] as const) {
     const generated = exportCode(state, lang);
@@ -235,22 +249,6 @@ test("audio.speech × all languages: security + path", () => {
   }
 });
 
-// ── moderations ───────────────────────────────────────────────────────────────
-
-test("moderations × all languages: security + path", () => {
-  const state = {
-    endpoint: "moderations" as const,
-    baseUrl: "http://localhost:20128",
-    model: "text-moderation-latest",
-    prompt: "Hello world",
-  };
-  for (const lang of ["curl", "python", "typescript"] as const) {
-    const generated = exportCode(state, lang);
-    assertSecurityInvariants(generated, `moderations/${lang}`);
-    assert.ok(generated.includes("/v1/moderations"), `${lang}: correct path`);
-  }
-});
-
 // ── exportAllLanguages ─────────────────────────────────────────────────────────
 
 test("exportAllLanguages returns all 3 snippets with valid content", () => {
@@ -261,7 +259,7 @@ test("exportAllLanguages returns all 3 snippets with valid content", () => {
   assert.ok(typeof result.python === "string" && result.python.length > 0, "python non-empty");
   assert.ok(
     typeof result.typescript === "string" && result.typescript.length > 0,
-    "typescript non-empty",
+    "typescript non-empty"
   );
 
   for (const [lang, snippet] of Object.entries(result)) {
@@ -321,7 +319,10 @@ test("chat.completions: defaults model when not provided", () => {
     // default prompt "Hello!" should appear (no messages, no systemPrompt, no prompt)
     assert.ok(generated.includes("Hello!"), `${lang}: default prompt fallback`);
     // default stream=false
-    assert.ok(generated.includes("false") || generated.includes("stream"), `${lang}: stream default`);
+    assert.ok(
+      generated.includes("false") || generated.includes("stream"),
+      `${lang}: stream default`
+    );
   }
 });
 
@@ -493,19 +494,6 @@ test("music: defaults when no model/prompt provided", () => {
     const generated = exportCode(state, lang);
     assertSecurityInvariants(generated, `music/defaults/${lang}`);
     assert.ok(generated.includes("music-1"), `${lang}: default model`);
-  }
-});
-
-test("moderations: defaults model and prompt when not provided", () => {
-  const state = {
-    endpoint: "moderations" as const,
-    baseUrl: "http://localhost:20128",
-    // no model, no prompt
-  };
-  for (const lang of ["curl", "python", "typescript"] as const) {
-    const generated = exportCode(state, lang);
-    assertSecurityInvariants(generated, `moderations/defaults/${lang}`);
-    assert.ok(generated.includes("text-moderation-latest"), `${lang}: default model`);
   }
 });
 

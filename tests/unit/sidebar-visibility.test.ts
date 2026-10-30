@@ -74,7 +74,6 @@ test("primary sidebar items place limits after cache", () => {
       "traffic-inspector",
       "discovery",
       "api-endpoints",
-      "webhooks",
       "log-export",
       "proxy",
     ]

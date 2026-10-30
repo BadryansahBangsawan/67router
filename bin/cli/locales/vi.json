@@ -791,38 +791,6 @@
       "description": "Hiển thị bảng điểm của một lượt chạy đánh giá đã hoàn tất"
     }
   },
-  "webhooks": {
-    "description": "Quản lý webhook của OmniRoute",
-    "events": {
-      "description": "Liệt kê tất cả các loại sự kiện webhook hiện có"
-    },
-    "list": {
-      "description": "Liệt kê các webhook đã cấu hình"
-    },
-    "get": {
-      "description": "Lấy thông tin chi tiết về webhook theo ID"
-    },
-    "add": {
-      "description": "Đăng ký webhook mới",
-      "url": "URL đích",
-      "events": "Danh sách các loại sự kiện, phân tách bằng dấu phẩy",
-      "secret": "Khóa bí mật ký HMAC",
-      "header": "Tiêu đề bổ sung ở định dạng key=value (có thể lặp lại)",
-      "no_enabled": "Tạo webhook ở trạng thái vô hiệu hóa"
-    },
-    "update": {
-      "description": "Cập nhật webhook hiện có",
-      "enabled": "Đặt trạng thái kích hoạt (true|false)"
-    },
-    "remove": {
-      "description": "Xóa webhook",
-      "yes": "Bỏ qua lời nhắc xác nhận"
-    },
-    "test": {
-      "description": "Gửi một sự kiện thử nghiệm đến webhook",
-      "event": "Loại sự kiện cần mô phỏng (mặc định: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Bộ định tuyến AI thông minh với tự động chuyển đổi dự phòng",
     "version": "In phiên bản và thoát",
@@ -834,59 +802,6 @@
     "base_url": "URL cơ sở của máy chủ OmniRoute",
     "context": "Bối cảnh/hồ sơ máy chủ cho lệnh này",
     "lang": "Đặt ngôn ngữ hiển thị CLI (ghi đè OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Quản lý tệp (tải lên, liệt kê, lấy, tải xuống, xóa)",
-    "list": {
-      "purpose": "Lọc theo mục đích",
-      "limit": "Số kết quả tối đa"
-    },
-    "get": {
-      "description": "Lấy siêu dữ liệu tệp"
-    },
-    "upload": {
-      "description": "Tải tệp lên",
-      "purpose": "Mục đích của tệp (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Tải xuống nội dung tệp",
-      "out": "Lưu vào đường dẫn (mặc định: stdout)"
-    },
-    "delete": {
-      "yes": "Bỏ qua xác nhận"
-    }
-  },
-  "batches": {
-    "description": "Quản lý các tác vụ batch tương thích với OpenAI",
-    "list": {
-      "status": "Lọc theo trạng thái",
-      "limit": "Số kết quả tối đa"
-    },
-    "create": {
-      "description": "Tạo tác vụ batch",
-      "inputFile": "ID tệp đầu vào",
-      "endpoint": "Điểm cuối đích",
-      "window": "Khoảng thời gian hoàn tất",
-      "metadata": "Thêm siêu dữ liệu key=value"
-    },
-    "submit": {
-      "description": "Tải tệp JSONL lên và tạo tác vụ batch",
-      "jsonl": "Đường dẫn đến tệp JSONL",
-      "endpoint": "Điểm cuối đích",
-      "wait": "Chờ hoàn tất"
-    },
-    "cancel": {
-      "yes": "Bỏ qua xác nhận"
-    },
-    "wait": {
-      "timeout": "Thời gian chờ tính bằng ms"
-    },
-    "output": {
-      "out": "Lưu đầu ra vào đường dẫn"
-    },
-    "errors": {
-      "out": "Lưu lỗi vào đường dẫn"
-    }
   },
   "translator": {
     "description": "Chuyển đổi nội dung yêu cầu giữa các định dạng LLM",
@@ -1122,33 +1037,6 @@
       "top": "Số ứng viên hàng đầu cần hiển thị (mặc định: 5)",
       "explain": "In lý do ra stderr",
       "switch": "Kích hoạt tổ hợp được xếp hạng cao nhất"
-    }
-  },
-  "oneproxy": {
-    "description": "Quản lý nhóm máy chủ thượng nguồn của OneProxy",
-    "stats": {
-      "provider": "Lọc theo nhà cung cấp",
-      "period": "Khoảng thời gian (mặc định: 24h)"
-    },
-    "fetch": {
-      "description": "Lấy proxy từ nhóm",
-      "count": "Số lượng proxy cần lấy (mặc định: 1)",
-      "type": "Loại proxy: http|socks5 (mặc định: http)"
-    },
-    "rotate": {
-      "description": "Buộc xoay vòng proxy",
-      "provider": "Nhà cung cấp cần xoay vòng",
-      "connectionId": "ID kết nối cụ thể cần xoay vòng"
-    },
-    "config": {
-      "description": "Hiển thị hoặc cập nhật cấu hình OneProxy",
-      "enabled": "Bật nhóm proxy (true|false)",
-      "poolSize": "Kích thước nhóm",
-      "providerSource": "URL của nhà cung cấp proxy",
-      "rotationPolicy": "Chính sách luân chuyển: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Liệt kê nhóm proxy hiện tại cùng các chỉ số"
     }
   },
   "open": {

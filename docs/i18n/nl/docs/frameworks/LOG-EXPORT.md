@@ -270,7 +270,7 @@ Twee regels voor een nieuwe bestemming:
 - `send()` **moet een fout genereren** bij een gedeeltelijke mislukking. Als de functie succesvol wordt afgehandeld, betekent dit: "de bestemming bevat deze rijen",
   en de cursor wordt er permanent voorbij verplaatst.
 - Een bestemming die een door de gebruiker opgegeven URL accepteert, moet deze vóór het ophalen valideren met
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   op dezelfde manier als webhooks. Voor BigQuery is dit niet nodig: de hosts zijn constanten.
 
 ---

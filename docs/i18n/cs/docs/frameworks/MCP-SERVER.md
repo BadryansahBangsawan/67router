@@ -235,7 +235,7 @@ Definovány v `open-sse/mcp-server/tools/agentSkillTools.ts`. Využívají `src/
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------ |
 | `omniroute_agent_skills_list`     | `read:catalog` | Vypíše všech 45 dovedností agentů s volitelnými filtry `category` (api\|cli) a `area`; vrací metadata a pokrytí                 |
 | `omniroute_agent_skills_get`      | `read:catalog` | Získá úplná metadata a obsah souboru SKILL.md pro jednu dovednost podle kanonického `id`                                        |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistiky pokrytí: kolik z 23 API, 21 CLI a 1 konfigurační dovednosti má v souborovém systému soubory SKILL.md oproti katalogu |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistiky pokrytí: kolik z 22 API, 20 CLI a 1 konfigurační dovednosti má v souborovém systému soubory SKILL.md oproti katalogu |
 
 Úplný katalog a informace o tom, jak jej využívají externí agenti, najdete v [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 

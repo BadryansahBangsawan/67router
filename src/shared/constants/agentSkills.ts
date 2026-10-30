@@ -200,19 +200,10 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     icon: "backup",
   },
   {
-    id: "omni-webhooks",
-    name: "Webhooks",
-    description:
-      "Register, list, test, and remove webhook endpoints. Configure event subscriptions (request.completed, request.failed, quota.exceeded, etc.) and manage delivery retries.",
-    category: "api",
-    area: "webhooks",
-    icon: "webhook",
-  },
-  {
     id: "omni-mcp",
     name: "MCP Server",
     description:
-      "Connect to the OmniRoute MCP server (110 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 33 permission scopes.",
+      "Connect to the OmniRoute MCP server (107 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 33 permission scopes.",
     category: "api",
     area: "mcp",
     icon: "electrical_services",
@@ -239,7 +230,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-inference",
     name: "Inference (OpenAI-compatible)",
     description:
-      "The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, and the Responses API. The primary integration surface for AI agents.",
+      "The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), rerank, and the Responses API. The primary integration surface for AI agents.",
     category: "api",
     area: "inference",
     icon: "hub",
@@ -391,15 +382,6 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     category: "cli",
     area: "cli-policy-audit",
     icon: "policy",
-  },
-  {
-    id: "cli-batches",
-    name: "CLI: Batches & Files",
-    description:
-      "Submit and monitor batch inference jobs from the CLI. Upload and manage files for batch processing, retrieve results, and integrate batch pipelines with CI/CD workflows.",
-    category: "cli",
-    area: "cli-batches",
-    icon: "batch_prediction",
   },
   {
     id: "cli-eval",

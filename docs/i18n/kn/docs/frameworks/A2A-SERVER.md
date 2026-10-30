@@ -161,7 +161,7 @@ OmniRoute `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` ನಲ್ಲಿ ಜ
 | Provider Discovery | `provider-discovery` | ಸಾಮರ್ಥ್ಯಗಳು, ಫ್ರೀ-ಟಿಯರ್ ಫ್ಲ್ಯಾಗ್ಗಳು, OAuth ಸ್ಥಿತಿಯೊಂದಿಗೆ ಇನ್ಸ್ಟಾಲ್ ಮಾಡಲಾದ ಪ್ರೊವೈಡರ್ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡುತ್ತದೆ                                                                | providers, discovery       | "ಯಾವ ಪ್ರೊವೈಡರ್ಗಳು ಲಭ್ಯವಿದ್ದಾರೆ?"                    |
 | Cost Analysis      | `cost-analysis`      | ಕ್ಯಾಟಲಾಗ್ + ಇತ್ತೀಚಿನ ಬಳಕೆಯ ಆಧಾರದ ಮೇಲೆ ವಿನಂತಿ/ಸಂವಾದದ ವೆಚ್ಚವನ್ನು ಅಂದಾಜಿಸುತ್ತದೆ                                                                                             | cost, usage                | "ಈ ಸಂವಾದದ ವೆಚ್ಚವನ್ನು ಅಂದಾಜಿಸಿ"                      |
 | Health Report      | `health-report`      | ಪ್ರತಿ ಪ್ರೊವೈಡರ್ಗೆ ಸರ್ಕ್ಯೂಟ್ ಬ್ರೇಕರ್, ಕೂಲ್ಡೌನ್, ಲಾಕ್ಔಟ್ ಸ್ಥಿತಿಯನ್ನು ಒಟ್ಟುಗೂಡಿಸುತ್ತದೆ                                                                                      | health, resilience         | "ಎಲ್ಲಾ ಪ್ರೊವೈಡರ್ಗಳ ಆರೋಗ್ಯ ಸ್ಥಿತಿಯನ್ನು ತೋರಿಸಿ"       |
-| List Capabilities  | `list-capabilities`  | ಸಂಪೂರ್ಣ 45-ಎಂಟ್ರಿ Agent Skills ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು (23 API + 21 CLI + 1 config) ಕಾನ್ಟೆಕ್ಸ್ಟ್ ಇಂಜೆಕ್ಷನ್ಗಾಗಿ ಕಚ್ಚಾ SKILL.md URL ಗಳೊಂದಿಗೆ ಮಾರ್ಕ್ಡೌನ್ ಟೇಬಲ್ ಆಗಿ ಹಿಂದಿರುಗಿಸುತ್ತದೆ | catalog, discovery, skills | "ಎಲ್ಲಾ OmniRoute ಸಾಮರ್ಥ್ಯಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ"         |
+| List Capabilities  | `list-capabilities`  | ಸಂಪೂರ್ಣ 43-ಎಂಟ್ರಿ Agent Skills ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು (22 API + 20 CLI + 1 config) ಕಾನ್ಟೆಕ್ಸ್ಟ್ ಇಂಜೆಕ್ಷನ್ಗಾಗಿ ಕಚ್ಚಾ SKILL.md URL ಗಳೊಂದಿಗೆ ಮಾರ್ಕ್ಡೌನ್ ಟೇಬಲ್ ಆಗಿ ಹಿಂದಿರುಗಿಸುತ್ತದೆ | catalog, discovery, skills | "ಎಲ್ಲಾ OmniRoute ಸಾಮರ್ಥ್ಯಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ"         |
 
 > Agent Card ಅನ್ನು ಲೈವ್ 375-ಪ್ರೊವೈಡರ್ ಕ್ಯಾಟಲಾಗ್ನೊಂದಿಗೆ ಸಂರೇಖಿಸಿ ಇರಿಸಬೇಕು; ಪ್ರೊವೈಡರ್ ಸಂಖ್ಯೆಗಳು ಮತ್ತು ಫ್ರೀ/ನೋ-ಆತ್ ಮೆಟಾಡೇಟಾವನ್ನು ರನ್ಟೈಮ್ ರಿಜಿಸ್ಟ್ರಿಯಿಂದ ಪಡೆಯಲಾಗುತ್ತದೆ.
 

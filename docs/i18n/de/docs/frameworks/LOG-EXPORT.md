@@ -284,7 +284,7 @@ Für ein neues Ziel gelten zwei Regeln:
 - `send()` **muss bei einem teilweisen Fehlschlag eine Ausnahme auslösen**. Eine erfolgreiche Rückgabe bedeutet: „Das Ziel enthält diese Zeilen“,
   und der Cursor wird dauerhaft über sie hinaus verschoben.
 - Ein Ziel, das eine vom Benutzer bereitgestellte URL akzeptiert, muss diese vor dem Abruf mit
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) validieren,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) validieren,
   genauso wie Webhooks. Für BigQuery ist dies nicht erforderlich: Dessen Hosts sind Konstanten.
 
 ---

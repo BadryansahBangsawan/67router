@@ -154,7 +154,7 @@ OmniRoute `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` daxilində bağlanm
 | Provayder Kəşfi     | `provider-discovery` | Quraşdırılmış provayderləri imkanlar, pulsuz səviyyə bayraqları, OAuth statusu ilə siyahıya alır                                                                          | providers, discovery       | "Hansı provayderlər mövcuddur?"                   |
 | Xərc Təhlili        | `cost-analysis`      | Kataloq + son istifadə məlumatları əsasında sorğu/söhbətin dəyərini təxmin edir                                                                                           | cost, usage                | "Bu söhbətin xərcini təxmin et"                   |
 | Sağlamlıq Hesabatı  | `health-report`      | Hər provayder üzrə circuit breaker, cooldown, lockout vəziyyətini aqreqasiya edir                                                                                         | health, resilience         | "Bütün provayderlərin sağlamlıq statusunu göstər" |
-| İmkanların Siyahısı | `list-capabilities`  | Kontekst inyeksiyası üçün xam SKILL.md URL-ləri ilə birlikdə 45 elementlik tam Agent Skills kataloqunu (23 API + 21 CLI + 1 konfiqurasiya) markdown cədvəli kimi qaytarır | catalog, discovery, skills | "Bütün OmniRoute imkanlarını siyahıya al"         |
+| İmkanların Siyahısı | `list-capabilities`  | Kontekst inyeksiyası üçün xam SKILL.md URL-ləri ilə birlikdə 43 elementlik tam Agent Skills kataloqunu (22 API + 20 CLI + 1 konfiqurasiya) markdown cədvəli kimi qaytarır | catalog, discovery, skills | "Bütün OmniRoute imkanlarını siyahıya al"         |
 
 > Agent Card canlı 375 provayderli kataloqla uyğun saxlanılmalıdır; provayder sayları və pulsuz/autentifikasiyasız metadata runtime reyestrindən götürülür.
 

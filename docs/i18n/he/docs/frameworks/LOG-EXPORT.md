@@ -268,7 +268,7 @@ BigQuery כבר עומד בחוזה הזה. מטמוני אסימוני הגיש
 - `send()` **חייב לזרוק חריגה** במקרה של כשל חלקי. השלמה מוצלחת פירושה "היעד מכיל את השורות האלה",
   והסמן מתקדם מעבר להן לצמיתות.
 - יעד שמקבל כתובת URL מהמשתמש חייב לאמת אותה באמצעות
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) לפני ביצוע הבקשה,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) לפני ביצוע הבקשה,
   באותו אופן שבו webhooks עושים זאת. BigQuery אינו זקוק לכך: המארחים שלו קבועים.
 
 ---

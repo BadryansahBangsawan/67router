@@ -791,38 +791,6 @@
       "description": "نمایش کارت امتیاز یک اجرای ارزیابی تکمیلشده"
     }
   },
-  "webhooks": {
-    "description": "مدیریت وبهوکهای OmniRoute",
-    "events": {
-      "description": "فهرست همه انواع رویداد وبهوک موجود"
-    },
-    "list": {
-      "description": "فهرست وبهوکهای پیکربندیشده"
-    },
-    "get": {
-      "description": "دریافت جزئیات وبهوک بر اساس ID"
-    },
-    "add": {
-      "description": "ثبت یک وبهوک جدید",
-      "url": "URL مقصد",
-      "events": "فهرست انواع رویداد با جداکننده ویرگول",
-      "secret": "رمز امضای HMAC",
-      "header": "هدر اضافی با قالب key=value (قابل تکرار)",
-      "no_enabled": "ایجاد وبهوک در حالت غیرفعال"
-    },
-    "update": {
-      "description": "بهروزرسانی یک وبهوک موجود",
-      "enabled": "تنظیم وضعیت فعالبودن (true|false)"
-    },
-    "remove": {
-      "description": "حذف یک وبهوک",
-      "yes": "ردکردن درخواست تأیید"
-    },
-    "test": {
-      "description": "ارسال یک رویداد آزمایشی به وبهوک",
-      "event": "نوع رویداد برای شبیهسازی (پیشفرض: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — روتر هوشمند هوش مصنوعی با fallback خودکار",
     "version": "نمایش نسخه و خروج",
@@ -834,59 +802,6 @@
     "base_url": "URL پایه سرور OmniRoute",
     "context": "زمینه/پروفایل سرور برای این دستور",
     "lang": "تنظیم زبان نمایش CLI (OMNIROUTE_LANG را نادیده می‌گیرد)"
-  },
-  "files": {
-    "description": "مدیریت فایلها (بارگذاری، فهرستکردن، دریافت، دانلود، حذف)",
-    "list": {
-      "purpose": "فیلتر بر اساس کاربرد",
-      "limit": "حداکثر نتایج"
-    },
-    "get": {
-      "description": "دریافت فرادادهٔ فایل"
-    },
-    "upload": {
-      "description": "بارگذاری فایل",
-      "purpose": "هدف فایل (batch، assistants، fine-tune)"
-    },
-    "content": {
-      "description": "دانلود محتوای فایل",
-      "out": "ذخیره در مسیر (پیشفرض: stdout)"
-    },
-    "delete": {
-      "yes": "رد کردن تأیید"
-    }
-  },
-  "batches": {
-    "description": "مدیریت کارهای دستهای سازگار با OpenAI",
-    "list": {
-      "status": "فیلتر بر اساس وضعیت",
-      "limit": "حداکثر نتایج"
-    },
-    "create": {
-      "description": "ایجاد کار دستهای",
-      "inputFile": "شناسهٔ فایل ورودی",
-      "endpoint": "نقطهٔ پایانی مقصد",
-      "window": "بازهٔ تکمیل",
-      "metadata": "افزودن فراداده بهصورت key=value"
-    },
-    "submit": {
-      "description": "بارگذاری فایل JSONL و ایجاد کار دستهای",
-      "jsonl": "مسیر فایل JSONL",
-      "endpoint": "نقطهٔ پایانی مقصد",
-      "wait": "انتظار تا تکمیل"
-    },
-    "cancel": {
-      "yes": "رد کردن تأیید"
-    },
-    "wait": {
-      "timeout": "مهلت زمانی بر حسب ms"
-    },
-    "output": {
-      "out": "ذخیرهٔ خروجی در مسیر"
-    },
-    "errors": {
-      "out": "ذخیرهٔ خطاها در مسیر"
-    }
   },
   "translator": {
     "description": "ترجمهٔ بدنهٔ درخواستها بین قالبهای LLM",
@@ -1122,33 +1037,6 @@
       "top": "تعداد نامزدهای برتر برای نمایش (پیشفرض: 5)",
       "explain": "چاپ دلیل انتخاب در stderr",
       "switch": "فعالکردن ترکیب دارای بالاترین رتبه"
-    }
-  },
-  "oneproxy": {
-    "description": "مدیریت مخزن بالادستی OneProxy",
-    "stats": {
-      "provider": "فیلتر بر اساس ارائهدهنده",
-      "period": "بازه زمانی (پیشفرض: 24h)"
-    },
-    "fetch": {
-      "description": "دریافت پروکسیها از مخزن",
-      "count": "تعداد پروکسیهای قابل دریافت (پیشفرض: 1)",
-      "type": "نوع پروکسی: http|socks5 (پیشفرض: http)"
-    },
-    "rotate": {
-      "description": "اجبار به چرخش پروکسی",
-      "provider": "ارائهدهندهای که چرخش برای آن انجام میشود",
-      "connectionId": "شناسه اتصال مشخص برای چرخش"
-    },
-    "config": {
-      "description": "نمایش یا بهروزرسانی پیکربندی OneProxy",
-      "enabled": "فعالسازی مخزن پراکسی (true|false)",
-      "poolSize": "اندازه مخزن",
-      "providerSource": "URL ارائهدهنده پراکسی",
-      "rotationPolicy": "سیاست چرخش: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "فهرست مخزن فعلی پراکسی همراه با معیارها"
     }
   },
   "open": {

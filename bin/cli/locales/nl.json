@@ -791,38 +791,6 @@
       "description": "Scorekaart voor een voltooide evaluatierun weergeven"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute-webhooks beheren",
-    "events": {
-      "description": "Alle beschikbare webhookgebeurtenistypen weergeven"
-    },
-    "list": {
-      "description": "Geconfigureerde webhooks weergeven"
-    },
-    "get": {
-      "description": "Webhookdetails ophalen op ID"
-    },
-    "add": {
-      "description": "Een nieuwe webhook registreren",
-      "url": "Bestemmings-URL",
-      "events": "Door komma's gescheiden lijst met gebeurtenistypen",
-      "secret": "HMAC-ondertekeningsgeheim",
-      "header": "Extra header in key=value-indeling (herhaalbaar)",
-      "no_enabled": "Webhook in uitgeschakelde status maken"
-    },
-    "update": {
-      "description": "Een bestaande webhook bijwerken",
-      "enabled": "Ingeschakelde status instellen (true|false)"
-    },
-    "remove": {
-      "description": "Een webhook verwijderen",
-      "yes": "Bevestigingsprompt overslaan"
-    },
-    "test": {
-      "description": "Een testgebeurtenis naar een webhook verzenden",
-      "event": "Te simuleren gebeurtenistype (standaard: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Slimme AI-router met automatische fallback",
     "version": "Versie afdrukken en afsluiten",
@@ -834,59 +802,6 @@
     "base_url": "Basis-URL van de OmniRoute-server",
     "context": "Servercontext/profiel voor dit commando",
     "lang": "CLI-weergavetaal instellen (overschrijft OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Bestanden beheren (uploaden, weergeven, ophalen, downloaden, verwijderen)",
-    "list": {
-      "purpose": "Filteren op doel",
-      "limit": "Maximaal aantal resultaten"
-    },
-    "get": {
-      "description": "Bestandsmetadata ophalen"
-    },
-    "upload": {
-      "description": "Een bestand uploaden",
-      "purpose": "Bestandsdoel (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Bestandsinhoud downloaden",
-      "out": "Opslaan in pad (standaard: stdout)"
-    },
-    "delete": {
-      "yes": "Bevestiging overslaan"
-    }
-  },
-  "batches": {
-    "description": "OpenAI-compatibele batchtaken beheren",
-    "list": {
-      "status": "Filteren op status",
-      "limit": "Maximumaantal resultaten"
-    },
-    "create": {
-      "description": "Een batchtaak aanmaken",
-      "inputFile": "Invoerbestands-ID",
-      "endpoint": "Doelendpoint",
-      "window": "Voltooiingsvenster",
-      "metadata": "Metagegevens key=value toevoegen"
-    },
-    "submit": {
-      "description": "JSONL-bestand uploaden en batch aanmaken",
-      "jsonl": "Pad naar JSONL-bestand",
-      "endpoint": "Doelendpoint",
-      "wait": "Wachten op voltooiing"
-    },
-    "cancel": {
-      "yes": "Bevestiging overslaan"
-    },
-    "wait": {
-      "timeout": "Time-out in ms"
-    },
-    "output": {
-      "out": "Uitvoer opslaan in pad"
-    },
-    "errors": {
-      "out": "Fouten opslaan in pad"
-    }
   },
   "translator": {
     "description": "Aanvraaginhoud vertalen tussen LLM-indelingen",
@@ -1122,33 +1037,6 @@
       "top": "Aantal beste kandidaten om weer te geven (standaard: 5)",
       "explain": "Motivering naar stderr uitvoeren",
       "switch": "De hoogst gerangschikte combinatie activeren"
-    }
-  },
-  "oneproxy": {
-    "description": "De OneProxy-upstreampool beheren",
-    "stats": {
-      "provider": "Filteren op provider",
-      "period": "Tijdsperiode (standaard: 24h)"
-    },
-    "fetch": {
-      "description": "Proxy's ophalen uit de pool",
-      "count": "Aantal op te halen proxy's (standaard: 1)",
-      "type": "Proxytype: http|socks5 (standaard: http)"
-    },
-    "rotate": {
-      "description": "Proxyrotatie forceren",
-      "provider": "Provider waarvoor moet worden geroteerd",
-      "connectionId": "Specifieke verbindings-ID om te roteren"
-    },
-    "config": {
-      "description": "OneProxy-configuratie weergeven of bijwerken",
-      "enabled": "Proxypool inschakelen (true|false)",
-      "poolSize": "Poolgrootte",
-      "providerSource": "URL voor proxyprovider",
-      "rotationPolicy": "Rotatiebeleid: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Huidige proxypool met statistieken weergeven"
     }
   },
   "open": {

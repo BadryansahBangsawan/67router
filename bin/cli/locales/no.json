@@ -791,38 +791,6 @@
       "description": "Vis poengkortet for en fullført evalueringskjøring"
     }
   },
-  "webhooks": {
-    "description": "Administrer OmniRoute-webhooks",
-    "events": {
-      "description": "List alle tilgjengelige hendelsestyper for webhooks"
-    },
-    "list": {
-      "description": "List konfigurerte webhooks"
-    },
-    "get": {
-      "description": "Hent detaljer om webhook etter ID"
-    },
-    "add": {
-      "description": "Registrer en ny webhook",
-      "url": "Måladresse (URL)",
-      "events": "Kommaseparert liste over hendelsestyper",
-      "secret": "HMAC-signeringshemmelighet",
-      "header": "Ekstra topptekst i formatet key=value (kan gjentas)",
-      "no_enabled": "Opprett webhook i deaktivert tilstand"
-    },
-    "update": {
-      "description": "Oppdater en eksisterende webhook",
-      "enabled": "Angi aktivert tilstand (true|false)"
-    },
-    "remove": {
-      "description": "Slett en webhook",
-      "yes": "Hopp over bekreftelsesforespørselen"
-    },
-    "test": {
-      "description": "Send en testhendelse til en webhook",
-      "event": "Hendelsestype som skal simuleres (standard: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Smart AI-ruter med automatisk fallback",
     "version": "Skriv ut versjon og avslutt",
@@ -834,59 +802,6 @@
     "base_url": "OmniRoute-serverens basis-URL",
     "context": "Serverkontekst/profil for denne kommandoen",
     "lang": "Angi CLI-visningsspråk (overstyrer OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Administrer filer (last opp, list, hent, last ned, slett)",
-    "list": {
-      "purpose": "Filtrer etter formål",
-      "limit": "Maksimalt antall resultater"
-    },
-    "get": {
-      "description": "Hent filmetadata"
-    },
-    "upload": {
-      "description": "Last opp en fil",
-      "purpose": "Filformål (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Last ned filinnhold",
-      "out": "Lagre til bane (standard: stdout)"
-    },
-    "delete": {
-      "yes": "Hopp over bekreftelse"
-    }
-  },
-  "batches": {
-    "description": "Administrer OpenAI-kompatible batchjobber",
-    "list": {
-      "status": "Filtrer etter status",
-      "limit": "Maks. antall resultater"
-    },
-    "create": {
-      "description": "Opprett en batchjobb",
-      "inputFile": "ID for inndatafil",
-      "endpoint": "Målendepunkt",
-      "window": "Fullføringsvindu",
-      "metadata": "Legg til metadata key=value"
-    },
-    "submit": {
-      "description": "Last opp JSONL-fil og opprett batch",
-      "jsonl": "Bane til JSONL-fil",
-      "endpoint": "Målendepunkt",
-      "wait": "Vent til fullføring"
-    },
-    "cancel": {
-      "yes": "Hopp over bekreftelse"
-    },
-    "wait": {
-      "timeout": "Tidsavbrudd i ms"
-    },
-    "output": {
-      "out": "Lagre utdata til bane"
-    },
-    "errors": {
-      "out": "Lagre feil til bane"
-    }
   },
   "translator": {
     "description": "Oversett forespørselskropper mellom LLM-formater",
@@ -1122,33 +1037,6 @@
       "top": "Antall toppkandidater som skal vises (standard: 5)",
       "explain": "Skriv begrunnelsen til stderr",
       "switch": "Aktiver den høyest rangerte kombinasjonen"
-    }
-  },
-  "oneproxy": {
-    "description": "Administrer oppstrømsservergruppen for OneProxy",
-    "stats": {
-      "provider": "Filtrer etter leverandør",
-      "period": "Tidsperiode (standard: 24h)"
-    },
-    "fetch": {
-      "description": "Hent proxyer fra gruppen",
-      "count": "Antall proxyer som skal hentes (standard: 1)",
-      "type": "Proxytype: http|socks5 (standard: http)"
-    },
-    "rotate": {
-      "description": "Tving proxyrotasjon",
-      "provider": "Leverandør det skal roteres for",
-      "connectionId": "Spesifikk tilkoblings-ID som skal roteres"
-    },
-    "config": {
-      "description": "Vis eller oppdater OneProxy-konfigurasjonen",
-      "enabled": "Aktiver proxy-pool (true|false)",
-      "poolSize": "Poolstørrelse",
-      "providerSource": "URL til proxy-leverandør",
-      "rotationPolicy": "Rotasjonspolicy: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Vis gjeldende proxy-pool med måledata"
     }
   },
   "open": {

@@ -791,38 +791,6 @@
       "description": "Tampilkan kartu skor untuk proses evaluasi yang telah selesai"
     }
   },
-  "webhooks": {
-    "description": "Kelola webhook OmniRoute",
-    "events": {
-      "description": "Cantumkan semua jenis peristiwa webhook yang tersedia"
-    },
-    "list": {
-      "description": "Cantumkan webhook yang dikonfigurasi"
-    },
-    "get": {
-      "description": "Dapatkan detail webhook berdasarkan ID"
-    },
-    "add": {
-      "description": "Daftarkan webhook baru",
-      "url": "URL tujuan",
-      "events": "Daftar jenis peristiwa yang dipisahkan koma",
-      "secret": "Rahasia penandatanganan HMAC",
-      "header": "Header tambahan dalam format key=value (dapat diulang)",
-      "no_enabled": "Buat webhook dalam keadaan dinonaktifkan"
-    },
-    "update": {
-      "description": "Perbarui webhook yang ada",
-      "enabled": "Atur status aktif (true|false)"
-    },
-    "remove": {
-      "description": "Hapus webhook",
-      "yes": "Lewati permintaan konfirmasi"
-    },
-    "test": {
-      "description": "Kirim peristiwa pengujian ke webhook",
-      "event": "Jenis peristiwa yang akan disimulasikan (default: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI Cerdas dengan Fallback Otomatis",
     "version": "Cetak versi dan keluar",
@@ -834,59 +802,6 @@
     "base_url": "URL dasar server OmniRoute",
     "context": "Konteks/profil server untuk perintah ini",
     "lang": "Atur bahasa tampilan CLI (menggantikan OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Kelola file (unggah, cantumkan, dapatkan, unduh, hapus)",
-    "list": {
-      "purpose": "Filter berdasarkan tujuan",
-      "limit": "Hasil maksimum"
-    },
-    "get": {
-      "description": "Dapatkan metadata file"
-    },
-    "upload": {
-      "description": "Unggah file",
-      "purpose": "Tujuan file (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Unduh konten file",
-      "out": "Simpan ke path (default: stdout)"
-    },
-    "delete": {
-      "yes": "Lewati konfirmasi"
-    }
-  },
-  "batches": {
-    "description": "Kelola tugas batch yang kompatibel dengan OpenAI",
-    "list": {
-      "status": "Filter berdasarkan status",
-      "limit": "Hasil maksimum"
-    },
-    "create": {
-      "description": "Buat tugas batch",
-      "inputFile": "ID file input",
-      "endpoint": "Endpoint target",
-      "window": "Jangka waktu penyelesaian",
-      "metadata": "Tambahkan metadata key=value"
-    },
-    "submit": {
-      "description": "Unggah file JSONL dan buat batch",
-      "jsonl": "Path ke file JSONL",
-      "endpoint": "Endpoint target",
-      "wait": "Tunggu hingga selesai"
-    },
-    "cancel": {
-      "yes": "Lewati konfirmasi"
-    },
-    "wait": {
-      "timeout": "Batas waktu dalam ms"
-    },
-    "output": {
-      "out": "Simpan output ke path"
-    },
-    "errors": {
-      "out": "Simpan kesalahan ke path"
-    }
   },
   "translator": {
     "description": "Terjemahkan body permintaan antarformat LLM",
@@ -1122,33 +1037,6 @@
       "top": "Jumlah kandidat teratas yang ditampilkan (default: 5)",
       "explain": "Cetak alasan ke stderr",
       "switch": "Aktifkan kombinasi berperingkat teratas"
-    }
-  },
-  "oneproxy": {
-    "description": "Kelola kumpulan upstream OneProxy",
-    "stats": {
-      "provider": "Filter berdasarkan penyedia",
-      "period": "Periode waktu (default: 24h)"
-    },
-    "fetch": {
-      "description": "Ambil proxy dari kumpulan",
-      "count": "Jumlah proxy yang akan diambil (default: 1)",
-      "type": "Jenis proxy: http|socks5 (default: http)"
-    },
-    "rotate": {
-      "description": "Paksa rotasi proxy",
-      "provider": "Penyedia yang akan dirotasi",
-      "connectionId": "ID koneksi tertentu yang akan dirotasi"
-    },
-    "config": {
-      "description": "Tampilkan atau perbarui konfigurasi OneProxy",
-      "enabled": "Aktifkan kumpulan proksi (true|false)",
-      "poolSize": "Ukuran kumpulan",
-      "providerSource": "URL untuk penyedia proksi",
-      "rotationPolicy": "Kebijakan rotasi: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Tampilkan kumpulan proksi saat ini beserta metrik"
     }
   },
   "open": {

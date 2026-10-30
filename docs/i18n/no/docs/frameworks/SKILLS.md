@@ -23,7 +23,7 @@ OmniRoute har to separate, men komplementære ferdighetssystemer:
 | Sannhetskilde   | `src/lib/skills/` + markedsplass                            | `src/lib/agentSkills/` + `skills/`-katalog                                                    |
 | Kjøremodus      | Injiseres i utgående forespørsler og kjøres ved verktøykall | Statisk Markdown-katalog + REST/MCP/A2A-endepunkter for oppdagelse                            |
 | Hvem bruker det | OmniRoute selv (kombinasjonsruting, innkommende LLM-kall)   | Eksterne agenter, MCP-klienter, A2A-orkestratorer                                             |
-| Antall          | Variabelt (markedsplassdrevet)                              | 45 katalogoppføringer (23 API + 21 CLI + 1 konfigurasjon)                                     |
+| Antall          | Variabelt (markedsplassdrevet)                              | 43 katalogoppføringer (22 API + 20 CLI + 1 konfigurasjon)                                     |
 | Format          | `SkillDefinition` med verktøyskjema + behandler             | `SKILL.md`-frontmatter + Markdown-innhold                                                     |
 | Oppdagelse      | `/api/skills/*` REST + `omniroute_skills_*` MCP-verktøy     | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-verktøy + A2A `list-capabilities` |
 

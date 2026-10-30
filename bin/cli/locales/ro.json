@@ -791,38 +791,6 @@
       "description": "Afișează fișa de evaluare pentru o rulare de evaluare finalizată"
     }
   },
-  "webhooks": {
-    "description": "Gestionează webhook-urile OmniRoute",
-    "events": {
-      "description": "Listează toate tipurile disponibile de evenimente webhook"
-    },
-    "list": {
-      "description": "Listează webhook-urile configurate"
-    },
-    "get": {
-      "description": "Obține detaliile webhook-ului după ID"
-    },
-    "add": {
-      "description": "Înregistrează un webhook nou",
-      "url": "URL-ul de destinație",
-      "events": "Lista tipurilor de evenimente, separate prin virgulă",
-      "secret": "Secretul de semnare HMAC",
-      "header": "Antet suplimentar în formatul key=value (poate fi repetat)",
-      "no_enabled": "Creează webhook-ul în stare dezactivată"
-    },
-    "update": {
-      "description": "Actualizează un webhook existent",
-      "enabled": "Setează starea de activare (true|false)"
-    },
-    "remove": {
-      "description": "Șterge un webhook",
-      "yes": "Omite solicitarea de confirmare"
-    },
-    "test": {
-      "description": "Trimite un eveniment de test către un webhook",
-      "event": "Tipul de eveniment de simulat (implicit: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Router AI inteligent cu fallback automat",
     "version": "Afișează versiunea și ieși",
@@ -834,59 +802,6 @@
     "base_url": "URL de bază al serverului OmniRoute",
     "context": "Contextul/profilul serverului pentru această comandă",
     "lang": "Setează limba de afișare CLI (suprascrie OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Gestionează fișierele (încărcare, listare, obținere, descărcare, ștergere)",
-    "list": {
-      "purpose": "Filtrează după scop",
-      "limit": "Numărul maxim de rezultate"
-    },
-    "get": {
-      "description": "Obține metadatele fișierului"
-    },
-    "upload": {
-      "description": "Încarcă un fișier",
-      "purpose": "Scopul fișierului (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Descarcă conținutul fișierului",
-      "out": "Salvează în calea specificată (implicit: stdout)"
-    },
-    "delete": {
-      "yes": "Omite confirmarea"
-    }
-  },
-  "batches": {
-    "description": "Gestionează joburile batch compatibile cu OpenAI",
-    "list": {
-      "status": "Filtrează după stare",
-      "limit": "Număr maxim de rezultate"
-    },
-    "create": {
-      "description": "Creează un job batch",
-      "inputFile": "ID-ul fișierului de intrare",
-      "endpoint": "Endpoint țintă",
-      "window": "Fereastra de finalizare",
-      "metadata": "Adaugă metadate cheie=valoare"
-    },
-    "submit": {
-      "description": "Încarcă fișierul JSONL și creează un job batch",
-      "jsonl": "Calea către fișierul JSONL",
-      "endpoint": "Endpoint țintă",
-      "wait": "Așteaptă finalizarea"
-    },
-    "cancel": {
-      "yes": "Omite confirmarea"
-    },
-    "wait": {
-      "timeout": "Timp-limită în ms"
-    },
-    "output": {
-      "out": "Salvează rezultatul în calea specificată"
-    },
-    "errors": {
-      "out": "Salvează erorile în calea specificată"
-    }
   },
   "translator": {
     "description": "Tradu corpurile cererilor între formatele LLM",
@@ -1122,33 +1037,6 @@
       "top": "Numărul de candidați de top de afișat (implicit: 5)",
       "explain": "Afișează justificarea în stderr",
       "switch": "Activează combinația clasată pe primul loc"
-    }
-  },
-  "oneproxy": {
-    "description": "Gestionează grupul de servere upstream OneProxy",
-    "stats": {
-      "provider": "Filtrează după furnizor",
-      "period": "Perioadă de timp (implicit: 24h)"
-    },
-    "fetch": {
-      "description": "Preia proxy-uri din grup",
-      "count": "Numărul de proxy-uri de preluat (implicit: 1)",
-      "type": "Tip de proxy: http|socks5 (implicit: http)"
-    },
-    "rotate": {
-      "description": "Forțează rotația proxy-ului",
-      "provider": "Furnizorul pentru care se efectuează rotația",
-      "connectionId": "ID-ul specific al conexiunii pentru care se efectuează rotația"
-    },
-    "config": {
-      "description": "Afișează sau actualizează configurația OneProxy",
-      "enabled": "Activează grupul de proxy-uri (true|false)",
-      "poolSize": "Dimensiunea grupului",
-      "providerSource": "URL pentru furnizorul de proxy",
-      "rotationPolicy": "Politica de rotație: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Listează grupul curent de proxy-uri cu metrici"
     }
   },
   "open": {

@@ -97,7 +97,6 @@ test("remaining handleChat aliases wrap POST with withChatAdmission (#10790)", a
     "src/app/api/v1/api/chat/route.ts",
     "src/app/api/v1/completions/route.ts",
     "src/app/api/v1/providers/[provider]/chat/completions/route.ts",
-    "src/app/api/v1/relay/chat/completions/route.ts",
   ];
   for (const rel of files) {
     const src = readFileSync(new URL("../../" + rel, import.meta.url), "utf8");

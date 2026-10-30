@@ -161,7 +161,7 @@ Nochtann OmniRoute 6 scil A2A atá nasctha in `src/lib/a2a/taskExecution.ts::A2A
 | Fionnachtain Soláthraithe | `provider-discovery` | Liostaítear soláthraithe suiteáilte le cumais, bratacha saorsraice, stádas OAuth                                                                                  | providers, discovery       | "Cad iad na soláthraithe atá ar fáil?"             |
 | Anailís Costais           | `cost-analysis`      | Meastar costas iarratais/comhrá bunaithe ar an gcatalóg + úsáid le déanaí                                                                                         | cost, usage                | "Déan meastachán ar chostas an chomhrá seo"        |
 | Tuairisc Sláinte          | `health-report`      | Comhshlonnaítear stádas circuit breaker, cooldown agus lockout in aghaidh an tsoláthraí                                                                           | health, resilience         | "Taispeáin stádas sláinte na soláthraithe go léir" |
-| Liostú Cumas              | `list-capabilities`  | Tugtar an catalóg iomlán Agent Skills le 45 iontráil (23 API + 21 CLI + 1 config) mar thábla markdown le URLanna amha SKILL.md le haghaidh instealladh comhthéacs | catalog, discovery, skills | "Liostaigh cumais OmniRoute go léir"               |
+| Liostú Cumas              | `list-capabilities`  | Tugtar an catalóg iomlán Agent Skills le 43 iontráil (22 API + 20 CLI + 1 config) mar thábla markdown le URLanna amha SKILL.md le haghaidh instealladh comhthéacs | catalog, discovery, skills | "Liostaigh cumais OmniRoute go léir"               |
 
 > Ba cheart an Agent Card a choinneáil ailínithe leis an gcatalóg beo de 375 soláthraí; faightear líonmhaireachtaí soláthraithe agus meiteashonraí saor/gan údarú ón gclárlann rith-ama.
 

@@ -13,7 +13,7 @@ Agent Skills ውጫዊ ኤጀንቶችን፣ MCP ደንበኞችን እና A2A �
 
 ## አጠቃላይ እይታ
 
-ካታሎጉ **45 Agent Skills** (23 REST API + 21 CLI + 1 የውቅር የሥራ ፍሰት) ይዟል። እያንዳንዱ ክህሎት የሚከተሉት አሉት፦
+ካታሎጉ **43 Agent Skills** (22 REST API + 20 CLI + 1 የውቅር የሥራ ፍሰት) ይዟል። እያንዳንዱ ክህሎት የሚከተሉት አሉት፦
 
 - **መደበኛ ID** (`omni-auth`፣ `cli-serve`፣ ወዘተ)
 - በ`skills/{id}/SKILL.md` ውስጥ YAML frontmatter (`name`፣ `description`) + ዝርዝር markdown ይዘት ያለው **SKILL.md** ፋይል

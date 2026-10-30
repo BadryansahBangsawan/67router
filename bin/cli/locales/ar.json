@@ -791,38 +791,6 @@
       "description": "عرض بطاقة النتائج لتشغيل تقييم مكتمل"
     }
   },
-  "webhooks": {
-    "description": "إدارة خطافات الويب في OmniRoute",
-    "events": {
-      "description": "عرض جميع أنواع أحداث خطافات الويب المتاحة"
-    },
-    "list": {
-      "description": "عرض خطافات الويب المُعدّة"
-    },
-    "get": {
-      "description": "الحصول على تفاصيل خطاف الويب حسب المعرّف"
-    },
-    "add": {
-      "description": "تسجيل خطاف ويب جديد",
-      "url": "عنوان URL للوجهة",
-      "events": "قائمة أنواع الأحداث مفصولة بفواصل",
-      "secret": "سر توقيع HMAC",
-      "header": "ترويسة إضافية بتنسيق key=value (قابلة للتكرار)",
-      "no_enabled": "إنشاء خطاف الويب في حالة معطّلة"
-    },
-    "update": {
-      "description": "تحديث خطاف ويب موجود",
-      "enabled": "تعيين حالة التمكين (true|false)"
-    },
-    "remove": {
-      "description": "حذف خطاف ويب",
-      "yes": "تخطي مطالبة التأكيد"
-    },
-    "test": {
-      "description": "إرسال حدث اختباري إلى خطاف ويب",
-      "event": "نوع الحدث المراد محاكاته (الافتراضي: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — جهاز توجيه الذكاء الاصطناعي مع التبديل التلقائي",
     "version": "عرض الإصدار والخروج",
@@ -834,59 +802,6 @@
     "base_url": "عنوان URL الأساسي لخادم OmniRoute",
     "context": "سياق/ملف تعريف الخادم المستخدم في هذا الأمر",
     "lang": "تعيين لغة عرض CLI (يتجاوز OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "إدارة الملفات (رفع، عرض، الحصول، تنزيل، حذف)",
-    "list": {
-      "purpose": "التصفية حسب الغرض",
-      "limit": "الحد الأقصى للنتائج"
-    },
-    "get": {
-      "description": "الحصول على بيانات الملف الوصفية"
-    },
-    "upload": {
-      "description": "رفع ملف",
-      "purpose": "الغرض من الملف (batch، assistants، fine-tune)"
-    },
-    "content": {
-      "description": "تنزيل محتوى الملف",
-      "out": "الحفظ في مسار (الافتراضي: stdout)"
-    },
-    "delete": {
-      "yes": "تخطي التأكيد"
-    }
-  },
-  "batches": {
-    "description": "إدارة مهام الدُفعات المتوافقة مع OpenAI",
-    "list": {
-      "status": "التصفية حسب الحالة",
-      "limit": "الحد الأقصى للنتائج"
-    },
-    "create": {
-      "description": "إنشاء مهمة دُفعة",
-      "inputFile": "معرّف ملف الإدخال",
-      "endpoint": "نقطة النهاية المستهدفة",
-      "window": "مهلة الإكمال",
-      "metadata": "إضافة بيانات وصفية key=value"
-    },
-    "submit": {
-      "description": "رفع ملف JSONL وإنشاء دُفعة",
-      "jsonl": "مسار ملف JSONL",
-      "endpoint": "نقطة النهاية المستهدفة",
-      "wait": "انتظار الإكمال"
-    },
-    "cancel": {
-      "yes": "تخطي التأكيد"
-    },
-    "wait": {
-      "timeout": "المهلة بالمللي ثانية"
-    },
-    "output": {
-      "out": "حفظ المخرجات في مسار"
-    },
-    "errors": {
-      "out": "حفظ الأخطاء في مسار"
-    }
   },
   "translator": {
     "description": "ترجمة نصوص الطلبات بين تنسيقات LLM",
@@ -1122,33 +1037,6 @@
       "top": "عدد أفضل المرشحين المراد عرضهم (الافتراضي: 5)",
       "explain": "طباعة المبررات إلى stderr",
       "switch": "تفعيل التركيبة الأعلى تصنيفًا"
-    }
-  },
-  "oneproxy": {
-    "description": "إدارة مجموعة المصادر العليا في OneProxy",
-    "stats": {
-      "provider": "التصفية حسب المزوّد",
-      "period": "الفترة الزمنية (الافتراضية: 24h)"
-    },
-    "fetch": {
-      "description": "جلب الوكلاء من المجموعة",
-      "count": "عدد الوكلاء المراد جلبهم (الافتراضي: 1)",
-      "type": "نوع الوكيل: http|socks5 (الافتراضي: http)"
-    },
-    "rotate": {
-      "description": "فرض تدوير الوكيل",
-      "provider": "المزوّد المراد إجراء التدوير له",
-      "connectionId": "معرّف الاتصال المحدد المراد تدويره"
-    },
-    "config": {
-      "description": "عرض إعدادات OneProxy أو تحديثها",
-      "enabled": "تمكين تجمّع الوكلاء (true|false)",
-      "poolSize": "حجم التجمّع",
-      "providerSource": "عنوان URL لمزوّد الوكيل",
-      "rotationPolicy": "سياسة التدوير: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "عرض تجمّع الوكلاء الحالي مع المقاييس"
     }
   },
   "open": {

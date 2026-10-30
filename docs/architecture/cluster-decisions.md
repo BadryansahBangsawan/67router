@@ -21,7 +21,7 @@ OmniRoute's existing deployment shape is already lean and proven:
 - **`redis:7-alpine`** handles the rate-limit/cache workload at production scale.
 - **SQLite + sqlite-vec + FTS5** cover local memory + vector + text-search (see [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
 - **Caddy** is already the LB + TLS terminator ([`docker-compose.yml`](../../docker-compose.yml)).
-- **Bifrost** is already integrated as the Tier-1 router in [`src/app/api/v1/relay/chat/completions/bifrost/route.ts`](../../src/app/api/v1/relay/chat/completions/bifrost/route.ts) (sidecar proxy with kill switch via `BIFROST_ENABLED` env var — set `=0` to bypass the sidecar and fall through to the TS path).
+- **Bifrost** is already integrated as the Tier-1 router in the former relay Bifrost sidecar route (removed in 67router).
 
 The two profiles here are **scale-out options for deployments that hit the SQLite ceiling** — not migrations. Both are default-off.
 
@@ -59,7 +59,7 @@ The two profiles here are **scale-out options for deployments that hit the SQLit
 | --------- | --------------------------------- | ------ | ----------------------------------------------------------------------- |
 | `bifrost` | `ghcr.io/maximhq/bifrost:v1.6.11` | `8080` | Go-based Tier-1 router; persistent logs volume `omniroute_bifrost_logs` |
 
-**Activation:** set `BIFROST_BASE_URL=http://bifrost:8080` in `.env.example`. The existing sidecar proxy route at [`src/app/api/v1/relay/chat/completions/bifrost/route.ts`](../../src/app/api/v1/relay/chat/completions/bifrost/route.ts) (added in PR #4381) will pick this up automatically.
+**Activation:** set `BIFROST_BASE_URL=http://bifrost:8080` in `.env.example`. The existing sidecar proxy route at the former relay Bifrost sidecar route (removed in 67router) (added in PR #4381) will pick this up automatically.
 
 **Env vars:** `BIFROST_BASE_URL`, `BIFROST_API_KEY`, `BIFROST_STREAMING_ENABLED`, `BIFROST_TIMEOUT_MS` (see `.env.example` lines 1685-1695).
 
@@ -82,7 +82,7 @@ If a future use case proves out one of these, this doc is the place to amend.
 ## 4-week rollout (if approved)
 
 1. **Wk 1** — Land this PR + verification of opt-in profiles with a 3-replica compose stack.
-2. **Wk 2** — Bifrost full activation for OpenAI/Claude/Gemini/Ollama (4 of 14+ providers) using the sidecar proxy route at [`src/app/api/v1/relay/chat/completions/bifrost/route.ts`](../../src/app/api/v1/relay/chat/completions/bifrost/route.ts) (gated by `BIFROST_ENABLED`, kill-switchable at runtime).
+2. **Wk 2** — Bifrost full activation for OpenAI/Claude/Gemini/Ollama (4 of 14+ providers) using the sidecar proxy route at the former relay Bifrost sidecar route (removed in 67router).
 3. **Wk 3** — Qdrant memory profile enabled in a single test deployment; measure latency delta vs sqlite-vec.
 4. **Wk 4** — Observability healthchecks (`docker compose ps` exit codes + `wget` smoke tests); 71-pillar refresh per ADR-041.
 

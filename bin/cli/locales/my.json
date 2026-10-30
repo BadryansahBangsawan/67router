@@ -791,38 +791,6 @@
       "description": "ပြီးဆုံးသည့် အကဲဖြတ်မှု လုပ်ဆောင်ချက်အတွက် ရမှတ်ကတ်ကို ပြရန်"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute webhooks များကို စီမံရန်",
-    "events": {
-      "description": "ရရှိနိုင်သည့် webhook ဖြစ်ရပ်အမျိုးအစားအားလုံးကို စာရင်းပြုစုရန်"
-    },
-    "list": {
-      "description": "ပြင်ဆင်သတ်မှတ်ထားသည့် webhooks များကို စာရင်းပြုစုရန်"
-    },
-    "get": {
-      "description": "ID ဖြင့် webhook အသေးစိတ်အချက်အလက်များကို ရယူရန်"
-    },
-    "add": {
-      "description": "webhook အသစ်တစ်ခုကို မှတ်ပုံတင်ရန်",
-      "url": "ပို့ဆောင်မည့် URL",
-      "events": "ကော်မာဖြင့် ခွဲထားသည့် ဖြစ်ရပ်အမျိုးအစားစာရင်း",
-      "secret": "HMAC လက်မှတ်ရေးထိုးခြင်း လျှို့ဝှက်ချက်",
-      "header": "key=value ပုံစံဖြင့် အပို header (ထပ်ခါတလဲလဲ အသုံးပြုနိုင်သည်)",
-      "no_enabled": "ပိတ်ထားသည့် အခြေအနေဖြင့် webhook ကို ဖန်တီးရန်"
-    },
-    "update": {
-      "description": "ရှိပြီးသား webhook ကို အပ်ဒိတ်လုပ်ရန်",
-      "enabled": "ဖွင့်ထားမှုအခြေအနေကို သတ်မှတ်ရန် (true|false)"
-    },
-    "remove": {
-      "description": "Webhook တစ်ခုကို ဖျက်ရန်",
-      "yes": "အတည်ပြုချက်တောင်းဆိုမှုကို ကျော်ရန်"
-    },
-    "test": {
-      "description": "Webhook တစ်ခုသို့ စမ်းသပ် event ပို့ရန်",
-      "event": "တုပမည့် event အမျိုးအစား (မူလသတ်မှတ်ချက်: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — အလိုအလျောက် အရန်ပြောင်းစနစ်ပါဝင်သော စမတ် AI Router",
     "version": "ဗားရှင်းကို ပြသပြီး ထွက်ရန်",
@@ -834,59 +802,6 @@
     "base_url": "OmniRoute ဆာဗာ၏ အခြေခံ URL",
     "context": "ဤ command အတွက် အသုံးပြုမည့် ဆာဗာ context/profile",
     "lang": "CLI ပြသဘာသာစကား သတ်မှတ်ရန် (OMNIROUTE_LANG ကို ထပ်ဆင့်အစားထိုးသည်)"
-  },
-  "files": {
-    "description": "ဖိုင်များကို စီမံရန် (အပ်လုဒ်တင်ခြင်း၊ စာရင်းပြုစုခြင်း၊ ရယူခြင်း၊ ဒေါင်းလုဒ်လုပ်ခြင်း၊ ဖျက်ခြင်း)",
-    "list": {
-      "purpose": "ရည်ရွယ်ချက်အလိုက် စစ်ထုတ်ရန်",
-      "limit": "အများဆုံး ရလဒ်အရေအတွက်"
-    },
-    "get": {
-      "description": "ဖိုင် metadata ကို ရယူရန်"
-    },
-    "upload": {
-      "description": "ဖိုင်တစ်ခုကို အပ်လုဒ်တင်ရန်",
-      "purpose": "ဖိုင်ရည်ရွယ်ချက် (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "ဖိုင်အကြောင်းအရာကို ဒေါင်းလုဒ်လုပ်ရန်",
-      "out": "သိမ်းဆည်းမည့် path (မူလသတ်မှတ်ချက်: stdout)"
-    },
-    "delete": {
-      "yes": "အတည်ပြုချက်ကို ကျော်ရန်"
-    }
-  },
-  "batches": {
-    "description": "OpenAI နှင့် ကိုက်ညီသော batch အလုပ်များကို စီမံရန်",
-    "list": {
-      "status": "အခြေအနေအလိုက် စစ်ထုတ်ရန်",
-      "limit": "အများဆုံး ရလဒ်အရေအတွက်"
-    },
-    "create": {
-      "description": "Batch အလုပ်တစ်ခု ဖန်တီးရန်",
-      "inputFile": "ထည့်သွင်းဖိုင် ID",
-      "endpoint": "ပစ်မှတ် endpoint",
-      "window": "ပြီးစီးရမည့် အချိန်ကာလ",
-      "metadata": "Metadata key=value ထည့်ရန်"
-    },
-    "submit": {
-      "description": "JSONL ဖိုင်ကို အပ်လုဒ်တင်ပြီး batch ဖန်တီးရန်",
-      "jsonl": "JSONL ဖိုင်သို့ path",
-      "endpoint": "ပစ်မှတ် endpoint",
-      "wait": "ပြီးစီးသည်အထိ စောင့်ရန်"
-    },
-    "cancel": {
-      "yes": "အတည်ပြုချက်ကို ကျော်ရန်"
-    },
-    "wait": {
-      "timeout": "အချိန်ကုန်ဆုံးကာလကို ms ဖြင့်"
-    },
-    "output": {
-      "out": "အထွက်ကို path တွင် သိမ်းရန်"
-    },
-    "errors": {
-      "out": "အမှားများကို path တွင် သိမ်းရန်"
-    }
   },
   "translator": {
     "description": "တောင်းဆိုမှု body များကို LLM format များအကြား ဘာသာပြန်ရန်",
@@ -1122,33 +1037,6 @@
       "top": "ပြသမည့် ထိပ်တန်းရွေးချယ်စရာ အရေအတွက် (မူလသတ်မှတ်ချက်: 5)",
       "explain": "အကြောင်းပြချက်ကို stderr သို့ ထုတ်ပြပါ",
       "switch": "အဆင့်အမြင့်ဆုံး combo ကို အသက်သွင်းပါ"
-    }
-  },
-  "oneproxy": {
-    "description": "OneProxy အထက်ပိုင်း pool ကို စီမံပါ",
-    "stats": {
-      "provider": "ပံ့ပိုးသူအလိုက် စစ်ထုတ်ပါ",
-      "period": "အချိန်ကာလ (မူလသတ်မှတ်ချက်: 24h)"
-    },
-    "fetch": {
-      "description": "pool မှ proxy များကို ရယူပါ",
-      "count": "ရယူမည့် proxy အရေအတွက် (မူလသတ်မှတ်ချက်: 1)",
-      "type": "Proxy အမျိုးအစား: http|socks5 (မူလသတ်မှတ်ချက်: http)"
-    },
-    "rotate": {
-      "description": "Proxy လှည့်ပြောင်းခြင်းကို အတင်းလုပ်ဆောင်ပါ",
-      "provider": "လှည့်ပြောင်းမည့် ပံ့ပိုးသူ",
-      "connectionId": "လှည့်ပြောင်းမည့် သီးခြား ချိတ်ဆက်မှု ID"
-    },
-    "config": {
-      "description": "OneProxy config ကို ပြပါ သို့မဟုတ် အပ်ဒိတ်လုပ်ပါ",
-      "enabled": "Proxy pool ကို ဖွင့်ပါ (true|false)",
-      "poolSize": "Pool အရွယ်အစား",
-      "providerSource": "Proxy ပံ့ပိုးသူအတွက် URL",
-      "rotationPolicy": "လှည့်ပြောင်းမှု မူဝါဒ: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "လက်ရှိ proxy pool ကို တိုင်းတာချက်များနှင့်အတူ စာရင်းပြုစုပါ"
     }
   },
   "open": {

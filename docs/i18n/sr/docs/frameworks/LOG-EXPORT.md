@@ -283,7 +283,7 @@ Dva pravila za novo odredište:
 - `send()` **mora da izazove izuzetak** pri delimičnom neuspehu. Uspešno izvršenje znači „odredište ima ove redove“,
   a kursor se trajno pomera iza njih.
 - Odredište koje prihvata URL koji je uneo korisnik mora da ga validira pomoću
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) pre slanja zahteva,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) pre slanja zahteva,
   na isti način kao webhook-ovi. BigQuery ovo ne zahteva: njegovi hostovi su konstante.
 
 ---

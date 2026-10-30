@@ -160,7 +160,7 @@ OmniRoute `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`ରେ ସଂଯୋ�
 | ପ୍ରୋଭାଇଡର ଆବିଷ୍କାର | `provider-discovery` | କ୍ଷମତା, ଫ୍ରି-ଟିଅର୍ ଫ୍ଲାଗ୍, OAuth ସ୍ଥିତି ସହିତ ଇନ୍ଷ୍ଟଲ୍ ହୋଇଥିବା ପ୍ରୋଭାଇଡରମାନଙ୍କୁ ତାଲିକାଭୁକ୍ତ କରେ                                                              | ପ୍ରୋଭାଇଡରଗୁଡ଼ିକ, ଆବିଷ୍କାର       | "What providers are available?"        |
 | ଖର୍ଚ୍ଚ ବିଶ୍ଳେଷଣ    | `cost-analysis`      | କାଟାଲଗ୍ + ସାମ୍ପ୍ରତିକ ବ୍ୟବହାର ଆଧାରରେ ଏକ ଅନୁରୋଧ/ବାର୍ତ୍ତାଳାପର ଖର୍ଚ୍ଚ ଆକଳନ କରେ                                                                                  | ଖର୍ଚ୍ଚ, ବ୍ୟବହାର                 | "Estimate cost for this conversation"  |
 | ସ୍ୱାସ୍ଥ୍ୟ ରିପୋର୍ଟ  | `health-report`      | ପ୍ରତି ପ୍ରୋଭାଇଡର ପାଇଁ ସର୍କିଟ୍ ବ୍ରେକର୍, କୁଲ୍ଡାଉନ୍, ଲକ୍ଆଉଟ୍ ସ୍ଥିତିକୁ ଏକାଠି କରେ                                                                                 | ସ୍ୱାସ୍ଥ୍ୟ, ସ୍ଥିତିସ୍ଥାପକତା       | "Show health status of all providers"  |
-| କ୍ଷମତା ତାଲିକା      | `list-capabilities`  | କଣ୍ଟେକ୍ସଟ ଇନଜେକ୍ସନ ପାଇଁ raw SKILL.md URLଗୁଡ଼ିକ ସହିତ ସମ୍ପୂର୍ଣ୍ଣ 45-ଏଣ୍ଟ୍ରି Agent Skills କାଟାଲଗ୍ (23 API + 21 CLI + 1 config)କୁ ମାର୍କଡାଉନ୍ ଟେବୁଲ୍ ଭାବରେ ଫେରାଏ | କାଟାଲଗ୍, ଆବିଷ୍କାର, ସ୍କିଲ୍ଗୁଡ଼ିକ | "List all OmniRoute capabilities"      |
+| କ୍ଷମତା ତାଲିକା      | `list-capabilities`  | କଣ୍ଟେକ୍ସଟ ଇନଜେକ୍ସନ ପାଇଁ raw SKILL.md URLଗୁଡ଼ିକ ସହିତ ସମ୍ପୂର୍ଣ୍ଣ 43-ଏଣ୍ଟ୍ରି Agent Skills କାଟାଲଗ୍ (22 API + 20 CLI + 1 config)କୁ ମାର୍କଡାଉନ୍ ଟେବୁଲ୍ ଭାବରେ ଫେରାଏ | କାଟାଲଗ୍, ଆବିଷ୍କାର, ସ୍କିଲ୍ଗୁଡ଼ିକ | "List all OmniRoute capabilities"      |
 
 > Agent Cardକୁ ଲାଇଭ୍ 375-ପ୍ରୋଭାଇଡର କାଟାଲଗ୍ ସହିତ ସଂଲଗ୍ନ ରଖାଯିବା ଉଚିତ୍; ପ୍ରୋଭାଇଡର ସଂଖ୍ୟା ଏବଂ ଫ୍ରି/ନୋ-ଅଥ୍ ମେଟାଡେଟା ରନ୍ଟାଇମ୍ ରେଜିଷ୍ଟ୍ରିରୁ ନିଆଯାଇଥାଏ।
 

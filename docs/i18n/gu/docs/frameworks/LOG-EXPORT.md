@@ -280,7 +280,7 @@ dashboard form—આ બધાં registry વાંચે છે.
 - આંશિક નિષ્ફળતા પર `send()` એ **અવશ્ય throw કરવું જોઈએ**. Resolve થવાનો અર્થ છે કે "ગંતવ્ય પાસે આ rows છે",
   અને cursor કાયમ માટે તેમની આગળ વધી જાય છે.
 - User-supplied URL લેતું ગંતવ્ય fetching પહેલાં તેને
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) દ્વારા validate કરવું જ જોઈએ,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) દ્વારા validate કરવું જ જોઈએ,
   જેમ webhooks કરે છે એ જ રીતે. BigQuery માટે આ જરૂરી નથી: તેના hosts constants છે.
 
 ---

@@ -273,7 +273,7 @@ Yeni təyinat yeri üçün iki qayda:
 - Qismən nasazlıq olduqda `send()` **mütləq xəta atmalıdır**. Uğurlu tamamlanma “təyinat yerində bu sətirlər var” deməkdir
   və kursor həmişəlik onların sonrasına keçir.
 - İstifadəçinin təqdim etdiyi URL-i qəbul edən təyinat yeri sorğu göndərməzdən əvvəl onu,
-  vebhuklarda olduğu kimi, `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) vasitəsilə doğrulamalıdır.
+  vebhuklarda olduğu kimi, `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) vasitəsilə doğrulamalıdır.
   BigQuery üçün buna ehtiyac yoxdur: onun hostları sabitdir.
 
 ---

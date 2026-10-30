@@ -23,7 +23,7 @@ OmniRoute-இல் தனித்தனியான, ஆனால் ஒன்
 | உண்மைக்கான ஆதாரம்        | `src/lib/skills/` + marketplace                                                   | `src/lib/agentSkills/` + `skills/` அடைவு                                                    |
 | இயக்கநேர முறை            | வெளியே செல்லும் கோரிக்கைகளில் செலுத்தப்பட்டு, tool-call நிகழ்வுகளில் இயக்கப்படும் | நிலையான markdown பட்டியல் + REST/MCP/A2A கண்டறிதல் முனைப்புள்ளிகள்                          |
 | இதைப் பயன்படுத்துபவர்கள் | OmniRoute தானே (combo routing, உள்வரும் LLM அழைப்புகள்)                           | வெளிப்புற agents, MCP clients, A2A orchestrators                                            |
-| எண்ணிக்கை                | மாறக்கூடியது (marketplace-ஆல் இயக்கப்படுகிறது)                                    | 45 பட்டியல் உள்ளீடுகள் (23 API + 21 CLI + 1 config)                                         |
+| எண்ணிக்கை                | மாறக்கூடியது (marketplace-ஆல் இயக்கப்படுகிறது)                                    | 43 பட்டியல் உள்ளீடுகள் (22 API + 20 CLI + 1 config)                                         |
 | வடிவம்                   | tool schema + handler கொண்ட `SkillDefinition`                                     | `SKILL.md` frontmatter + markdown உள்ளடக்கம்                                                |
 | கண்டறிதல்                | `/api/skills/*` REST + `omniroute_skills_*` MCP tools                             | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP tools + A2A `list-capabilities` |
 

@@ -161,7 +161,7 @@ OmniRoute exponerar 6 A2A-skills som är kopplade i `src/lib/a2a/taskExecution.t
 | Provider Discovery | `provider-discovery` | Listar installerade providers med funktioner, free-tier-flaggor och OAuth-status                                                                      | providers, discovery       | "Vilka providers är tillgängliga?"                 |
 | Cost Analysis      | `cost-analysis`      | Uppskattar kostnaden för en förfrågan/konversation utifrån katalogen + senaste användning                                                             | cost, usage                | "Uppskatta kostnaden för den här konversationen"   |
 | Health Report      | `health-report`      | Aggregerar tillstånd för circuit breaker, cooldown och lockout per provider                                                                           | health, resilience         | "Visa hälsostatus för alla providers"              |
-| List Capabilities  | `list-capabilities`  | Returnerar hela Agent Skills-katalogen med 45 poster (23 API + 21 CLI + 1 config) som en markdown-tabell med råa SKILL.md-URL:er för kontextinjektion | catalog, discovery, skills | "Lista alla OmniRoute-funktioner"                  |
+| List Capabilities  | `list-capabilities`  | Returnerar hela Agent Skills-katalogen med 43 poster (22 API + 20 CLI + 1 config) som en markdown-tabell med råa SKILL.md-URL:er för kontextinjektion | catalog, discovery, skills | "Lista alla OmniRoute-funktioner"                  |
 
 > Agentkortet bör hållas synkroniserat med den aktuella katalogen med 375 providers; providerantal och free/no-auth-metadata hämtas från runtime-registret.
 

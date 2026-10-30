@@ -23,7 +23,7 @@ OmniRoute មានប្រព័ន្ធ skill ពីរដាច់ដោយ
 | ប្រភពយោងផ្លូវការ | `src/lib/skills/` + ទីផ្សារ                                     | `src/lib/agentSkills/` + ថត `skills/`                                                        |
 | របៀបដំណើរការ     | បញ្ចូលទៅក្នុងសំណើចេញ និងប្រតិបត្តិនៅពេលមានព្រឹត្តិការណ៍ហៅឧបករណ៍ | កាតាឡុក markdown ឋិតិវន្ត + endpoint សម្រាប់ការស្វែងរកតាម REST/MCP/A2A                       |
 | អ្នកប្រើប្រាស់   | OmniRoute ខ្លួនឯង (ការកំណត់ផ្លូវបញ្ចូលគ្នា និងការហៅ LLM ចូល)    | agent ខាងក្រៅ កម្មវិធីភ្ញៀវ MCP និងកម្មវិធីសម្របសម្រួល A2A                                   |
-| ចំនួន            | អថេរ (កំណត់ដោយទីផ្សារ)                                          | ធាតុកាតាឡុក 45 (23 API + 21 CLI + 1 ការកំណត់រចនាសម្ព័ន្ធ)                                    |
+| ចំនួន            | អថេរ (កំណត់ដោយទីផ្សារ)                                          | ធាតុកាតាឡុក 43 (22 API + 20 CLI + 1 ការកំណត់រចនាសម្ព័ន្ធ)                                    |
 | ទម្រង់           | `SkillDefinition` ដែលមាន schema ឧបករណ៍ + handler                | frontmatter របស់ `SKILL.md` + ខ្លឹមសារ markdown                                              |
 | ការស្វែងរក       | REST `/api/skills/*` + ឧបករណ៍ MCP `omniroute_skills_*`          | REST `/api/agent-skills/*` + ឧបករណ៍ MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 

@@ -15,7 +15,7 @@ Agent Skills are structured SKILL.md files that teach external agents, MCP clien
 
 ## Overview
 
-The catalog contains **45 Agent Skills** (23 REST API + 21 CLI + 1 configuration workflow). Each skill has:
+The catalog contains **43 Agent Skills** (22 REST API + 20 CLI + 1 configuration workflow). Each skill has:
 
 - A **canonical ID** (`omni-auth`, `cli-serve`, etc.)
 - A **SKILL.md** file in `skills/{id}/SKILL.md` with YAML frontmatter (`name`, `description`) + rich markdown body
@@ -195,7 +195,6 @@ See [A2A-SERVER.md](./A2A-SERVER.md) for protocol details.
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
-| `cli-batches`         | cli-batches        | `omniroute batch`       |
 | `cli-eval`            | cli-eval           | `omniroute eval`        |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |

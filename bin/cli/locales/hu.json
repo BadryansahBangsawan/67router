@@ -791,38 +791,6 @@
       "description": "Befejezett kiértékelési futtatás eredménykártyájának megjelenítése"
     }
   },
-  "webhooks": {
-    "description": "OmniRoute-webhookok kezelése",
-    "events": {
-      "description": "Az összes elérhető webhook-eseménytípus listázása"
-    },
-    "list": {
-      "description": "Beállított webhookok listázása"
-    },
-    "get": {
-      "description": "Webhook részleteinek lekérése azonosító alapján"
-    },
-    "add": {
-      "description": "Új webhook regisztrálása",
-      "url": "Cél-URL",
-      "events": "Eseménytípusok vesszővel elválasztott listája",
-      "secret": "HMAC-aláírási titok",
-      "header": "További fejléc key=value formátumban (ismételhető)",
-      "no_enabled": "Webhook létrehozása letiltott állapotban"
-    },
-    "update": {
-      "description": "Meglévő webhook frissítése",
-      "enabled": "Engedélyezett állapot beállítása (true|false)"
-    },
-    "remove": {
-      "description": "Webhook törlése",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "test": {
-      "description": "Tesztesemény küldése egy webhooknak",
-      "event": "Szimulálandó eseménytípus (alapértelmezett: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Intelligens AI útválasztó automatikus fallbackkel",
     "version": "Verzió kiírása és kilépés",
@@ -834,59 +802,6 @@
     "base_url": "Az OmniRoute szerver alap URL-je",
     "context": "Szerverkontextus/profil ehhez a parancshoz",
     "lang": "CLI megjelenítési nyelv beállítása (felülírja az OMNIROUTE_LANG-ot)"
-  },
-  "files": {
-    "description": "Fájlok kezelése (feltöltés, listázás, lekérés, letöltés, törlés)",
-    "list": {
-      "purpose": "Szűrés rendeltetés alapján",
-      "limit": "Találatok maximális száma"
-    },
-    "get": {
-      "description": "Fájl metaadatainak lekérése"
-    },
-    "upload": {
-      "description": "Fájl feltöltése",
-      "purpose": "Fájl célja (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Fájltartalom letöltése",
-      "out": "Mentés elérési útra (alapértelmezett: stdout)"
-    },
-    "delete": {
-      "yes": "Megerősítés kihagyása"
-    }
-  },
-  "batches": {
-    "description": "OpenAI-kompatibilis kötegelt feladatok kezelése",
-    "list": {
-      "status": "Szűrés állapot szerint",
-      "limit": "Találatok maximális száma"
-    },
-    "create": {
-      "description": "Kötegelt feladat létrehozása",
-      "inputFile": "Bemeneti fájl azonosítója",
-      "endpoint": "Célvégpont",
-      "window": "Befejezési időablak",
-      "metadata": "Metaadat hozzáadása kulcs=érték formátumban"
-    },
-    "submit": {
-      "description": "JSONL-fájl feltöltése és köteg létrehozása",
-      "jsonl": "A JSONL-fájl elérési útja",
-      "endpoint": "Célvégpont",
-      "wait": "Várakozás a befejezésre"
-    },
-    "cancel": {
-      "yes": "Megerősítés kihagyása"
-    },
-    "wait": {
-      "timeout": "Időtúllépés ezredmásodpercben"
-    },
-    "output": {
-      "out": "Kimenet mentése elérési útra"
-    },
-    "errors": {
-      "out": "Hibák mentése elérési útra"
-    }
   },
   "translator": {
     "description": "Kérés törzsének átalakítása LLM-formátumok között",
@@ -1122,33 +1037,6 @@
       "top": "A megjelenítendő legjobb jelöltek száma (alapértelmezett: 5)",
       "explain": "Indoklás kiírása stderr-re",
       "switch": "A legmagasabbra rangsorolt kombináció aktiválása"
-    }
-  },
-  "oneproxy": {
-    "description": "A OneProxy upstream-készlet kezelése",
-    "stats": {
-      "provider": "Szűrés szolgáltató alapján",
-      "period": "Időszak (alapértelmezett: 24h)"
-    },
-    "fetch": {
-      "description": "Proxyk lekérése a készletből",
-      "count": "A lekérendő proxyk száma (alapértelmezett: 1)",
-      "type": "Proxy típusa: http|socks5 (alapértelmezett: http)"
-    },
-    "rotate": {
-      "description": "Proxyrotáció kényszerítése",
-      "provider": "Szolgáltató, amelynél a rotáció végrehajtandó",
-      "connectionId": "A rotálandó konkrét kapcsolat azonosítója"
-    },
-    "config": {
-      "description": "A OneProxy konfigurációjának megjelenítése vagy frissítése",
-      "enabled": "Proxytár engedélyezése (true|false)",
-      "poolSize": "Tár mérete",
-      "providerSource": "A proxyszolgáltató URL-je",
-      "rotationPolicy": "Rotációs szabályzat: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Az aktuális proxytár listázása mérőszámokkal"
     }
   },
   "open": {

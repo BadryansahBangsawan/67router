@@ -161,7 +161,7 @@ OmniRoute 6 A2A स्किल्स प्रदान करता है, �
 | Provider Discovery | `provider-discovery` | capabilities, free-tier flags, OAuth status के साथ इंस्टॉल किए गए providers की सूची बनाता है                                                                | providers, discovery       | "कौन से providers उपलब्ध हैं?"                       |
 | Cost Analysis      | `cost-analysis`      | catalog + recent usage के आधार पर किसी request/conversation की लागत का अनुमान लगाता है                                                                      | cost, usage                | "इस conversation की लागत का अनुमान लगाएं"            |
 | Health Report      | `health-report`      | प्रति provider circuit breaker, cooldown, lockout स्थिति को एकत्रित करता है                                                                                 | health, resilience         | "सभी providers की health स्थिति दिखाएं"              |
-| List Capabilities  | `list-capabilities`  | context injection के लिए raw SKILL.md URLs के साथ संपूर्ण 45-entry Agent Skills catalog (23 API + 21 CLI + 1 config) को markdown table के रूप में लौटाता है | catalog, discovery, skills | "सभी OmniRoute capabilities की सूची बनाएं"           |
+| List Capabilities  | `list-capabilities`  | context injection के लिए raw SKILL.md URLs के साथ संपूर्ण 43-entry Agent Skills catalog (22 API + 20 CLI + 1 config) को markdown table के रूप में लौटाता है | catalog, discovery, skills | "सभी OmniRoute capabilities की सूची बनाएं"           |
 
 > Agent Card को live 375-provider catalog के साथ संरेखित रखा जाना चाहिए; provider संख्याएँ और free/no-auth metadata runtime registry से प्राप्त किए जाते हैं।
 

@@ -13,7 +13,7 @@ Agent Skills ovat rakenteisia SKILL.md-tiedostoja, jotka opastavat ulkoisia agen
 
 ## Yleiskatsaus
 
-Luettelo sisältää **45 Agent Skilliä** (23 REST API + 21 CLI + 1 määritystyönkulku). Jokaisella skillillä on:
+Luettelo sisältää **43 Agent Skilliä** (22 REST API + 20 CLI + 1 määritystyönkulku). Jokaisella skillillä on:
 
 - **Kanoninen tunniste** (`omni-auth`, `cli-serve` jne.)
 - **SKILL.md**-tiedosto polussa `skills/{id}/SKILL.md`, joka sisältää YAML-alkumetadatan (`name`, `description`) ja monipuolisen markdown-rungon

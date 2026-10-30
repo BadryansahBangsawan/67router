@@ -23,7 +23,7 @@ OmniRoute turi dvi skirtingas, tačiau viena kitą papildančias įgūdžių sis
 | Tiesos šaltinis | `src/lib/skills/` + prekyvietė                                            | `src/lib/agentSkills/` + katalogas `skills/`                                                   |
 | Veikimo režimas | Įtraukiami į siunčiamas užklausas, vykdomi per įrankių iškvietimo įvykius | Statinis Markdown katalogas + REST/MCP/A2A aptikimo galiniai taškai                            |
 | Kas naudoja     | Pats OmniRoute (kombinuotas maršrutizavimas, gaunami LLM iškvietimai)     | Išoriniai agentai, MCP klientai, A2A orkestratoriai                                            |
-| Kiekis          | Kintamas (priklauso nuo prekyvietės)                                      | 45 katalogo įrašai (23 API + 21 CLI + 1 konfigūracijos)                                        |
+| Kiekis          | Kintamas (priklauso nuo prekyvietės)                                      | 43 katalogo įrašai (22 API + 20 CLI + 1 konfigūracijos)                                        |
 | Formatas        | `SkillDefinition` su įrankio schema + apdorojimo funkcija                 | `SKILL.md` metaduomenų antraštė + Markdown turinys                                             |
 | Aptikimas       | `/api/skills/*` REST + `omniroute_skills_*` MCP įrankiai                  | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP įrankiai + A2A `list-capabilities` |
 

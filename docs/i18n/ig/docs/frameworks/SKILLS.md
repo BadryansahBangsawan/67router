@@ -23,7 +23,7 @@ OmniRoute nwere sistemụ skill abụọ dị iche mana na-arụkọ ọrụ:
 | Isi mmalite nke eziokwu | `src/lib/skills/` + ahịa                                                | `src/lib/agentSkills/` + ndekọ `skills/`                                                       |
 | Ụdị runtime             | A na-etinye ya n’arịrịọ ndị a na-ezipụ, a na-arụ ya mgbe tool-call mere | Katalọgụ markdown kwụụrụ onwe ya + endpoint nchọpụta REST/MCP/A2A                              |
 | Ndị na-eji ya           | OmniRoute n’onwe ya (combo routing, oku LLM ndị na-abata)               | Ndị agent mpụga, ndị ahịa MCP, ndị nhazi A2A                                                   |
-| Ọnụọgụ                  | Na-agbanwe (ahịa na-achịkwa ya)                                         | Ndenye katalọgụ 45 (23 API + 21 CLI + 1 nhazi)                                                 |
+| Ọnụọgụ                  | Na-agbanwe (ahịa na-achịkwa ya)                                         | Ndenye katalọgụ 43 (22 API + 20 CLI + 1 nhazi)                                                 |
 | Ọdịdị                   | `SkillDefinition` nwere schema ngwá ọrụ + handler                       | frontmatter `SKILL.md` + ahụ markdown                                                          |
 | Nchọpụta                | `/api/skills/*` REST + ngwá ọrụ MCP `omniroute_skills_*`                | `/api/agent-skills/*` REST + ngwá ọrụ MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 

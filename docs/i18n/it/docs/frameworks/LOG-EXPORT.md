@@ -294,7 +294,7 @@ Due regole per una nuova destinazione:
 - `send()` **deve generare un'eccezione** in caso di errore parziale. La risoluzione indica che «la destinazione contiene queste righe»
   e il cursore le supera definitivamente.
 - Una destinazione che accetta un URL fornito dall'utente deve convalidarlo tramite
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) prima di eseguire il recupero,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) prima di eseguire il recupero,
   come avviene per i webhook. BigQuery non ne ha bisogno: i suoi host sono costanti.
 
 ---

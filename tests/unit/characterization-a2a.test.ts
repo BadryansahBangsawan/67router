@@ -184,8 +184,8 @@ test("list-capabilities handler returns a markdown catalog artifact and coverage
     coverage: Record<string, { have: number; total: number }>;
   };
   assert.equal(metadata.source, "agent-skills-catalog");
-  assert.equal(metadata.coverage.api.total, 23);
-  assert.equal(metadata.coverage.cli.total, 21);
+  assert.equal(metadata.coverage.api.total, 22);
+  assert.equal(metadata.coverage.cli.total, 20);
   assert.equal(metadata.coverage.config.total, 1);
   assert.ok(metadata.totalSkills > 0);
 });

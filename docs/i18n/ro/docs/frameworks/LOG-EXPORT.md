@@ -268,7 +268,7 @@ Două reguli pentru o destinație nouă:
 - `send()` **trebuie să genereze o excepție** în cazul unui eșec parțial. Rezolvarea înseamnă „destinația conține aceste rânduri”,
   iar cursorul avansează permanent dincolo de acestea.
 - O destinație care acceptă un URL furnizat de utilizator trebuie să îl valideze prin
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) înainte de preluare,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) înainte de preluare,
   la fel ca webhook-urile. BigQuery nu necesită acest lucru: gazdele sale sunt constante.
 
 ---

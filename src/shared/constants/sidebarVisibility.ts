@@ -170,7 +170,6 @@ const ESSENTIALS_SHOWN: ReadonlySet<HideableSidebarItemId> = new Set([
 export const ESSENTIALS_ADVANCED_TOOL_IDS: ReadonlySet<HideableSidebarItemId> = new Set([
   "playground",
   "logs",
-  "batch",
   "translator",
   "combos",
   "quota",

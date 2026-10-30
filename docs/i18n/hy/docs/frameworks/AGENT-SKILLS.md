@@ -13,7 +13,7 @@ Agent Skills-ը կառուցվածքավորված SKILL.md ֆայլեր են, �
 
 ## Ընդհանուր նկարագրություն
 
-Կատալոգը պարունակում է **45 Agent Skills** (23 REST API + 21 CLI + 1 կազմաձևման աշխատանքային հոսք)։ Յուրաքանչյուր skill ունի՝
+Կատալոգը պարունակում է **43 Agent Skills** (22 REST API + 20 CLI + 1 կազմաձևման աշխատանքային հոսք)։ Յուրաքանչյուր skill ունի՝
 
 - **Կանոնական ID** (`omni-auth`, `cli-serve` և այլն)
 - **SKILL.md** ֆայլ՝ `skills/{id}/SKILL.md`-ում, YAML frontmatter-ով (`name`, `description`) + բովանդակությամբ հարուստ markdown մարմին

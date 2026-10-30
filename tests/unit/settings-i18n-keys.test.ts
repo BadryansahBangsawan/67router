@@ -41,7 +41,7 @@ const requestBodyLimitSettingsKeys = [
   "requestBodyLimitCurrent",
 ];
 
-const proxyPageSettingsKeys = ["httpProxy", "1proxy", "proxySubTabsAria"];
+const proxyPageSettingsKeys = ["httpProxy", "proxySubTabsAria"];
 
 const resilienceTabSettingsKeys = [
   "scopeLabel",

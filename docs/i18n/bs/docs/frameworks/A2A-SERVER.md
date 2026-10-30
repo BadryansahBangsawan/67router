@@ -163,7 +163,7 @@ OmniRoute izlaže 6 A2A vještina povezanih u `src/lib/a2a/taskExecution.ts::A2A
 | Provider Discovery | `provider-discovery` | Navodi instalirane dobavljače sa mogućnostima, oznakama besplatnog nivoa, OAuth statusom                                                               | providers, discovery       | "Koji dobavljači su dostupni?"            |
 | Cost Analysis      | `cost-analysis`      | Procjenjuje trošak zahtjeva/razgovora na osnovu kataloga + nedavne upotrebe                                                                            | cost, usage                | "Procijeni trošak ovog razgovora"         |
 | Health Report      | `health-report`      | Agregira stanje circuit breakera, cooldowna i lockouta po dobavljaču                                                                                   | health, resilience         | "Prikaži status zdravlja svih dobavljača" |
-| List Capabilities  | `list-capabilities`  | Vraća kompletan katalog Agent Skills sa 45 stavki (23 API + 21 CLI + 1 config) kao markdown tabelu sa raw SKILL.md URL-ovima za ubrizgavanje konteksta | catalog, discovery, skills | "Navedi sve OmniRoute mogućnosti"         |
+| List Capabilities  | `list-capabilities`  | Vraća kompletan katalog Agent Skills sa 43 stavki (22 API + 20 CLI + 1 config) kao markdown tabelu sa raw SKILL.md URL-ovima za ubrizgavanje konteksta | catalog, discovery, skills | "Navedi sve OmniRoute mogućnosti"         |
 
 > Agent Card treba držati usklađenim sa katalogom od 375 dobavljača uživo; brojevi dobavljača i metapodaci o besplatnom pristupu/pristupu bez autentifikacije dolaze iz runtime registra.
 

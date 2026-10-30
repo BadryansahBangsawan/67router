@@ -791,38 +791,6 @@
       "description": "Taispeáin scórchairt i gcomhthráthadh luaidhméadrach críochtha"
     }
   },
-  "webhooks": {
-    "description": "Bainistigh ciorcaid shnáithe OmniRoute",
-    "events": {
-      "description": "Liostaigh gach cineál ócáid webhook atá ar fáil"
-    },
-    "list": {
-      "description": "Liostaigh gréasánóideanna cumraithe"
-    },
-    "get": {
-      "description": "Faigh sonraí gréasáin oibre de réir ID"
-    },
-    "add": {
-      "description": "Cláraigh webhook nua",
-      "url": "URL a bhfuil sé dírithe air",
-      "events": "Liosta cineálacha imeartha scartha le camóga",
-      "secret": "Rúin shíniúcháin HMAC",
-      "header": "Buntáiste breise i bhformáid eochair=luach (in-athdhéanta)",
-      "no_enabled": "Cruthaigh giucfhrá i riocht díchumasaithe"
-    },
-    "update": {
-      "description": "Uathghrádaigh webhook atá ann cheana",
-      "enabled": "Socraigh stát cumasaithe (true|false)"
-    },
-    "remove": {
-      "description": "Scriosadh webhook",
-      "yes": "Scipeáil an t-atarraing dearbhaithe"
-    },
-    "test": {
-      "description": "Seol tarlú tástála go webhook",
-      "event": "Cineál tarlú le hiomadú (réamhshocrú: request.completed)"
-    }
-  },
   "program": {
     "description": "OmniRoute — Ródaí AI Cliste le Filleadh Uathoibríoch",
     "version": "Priontáil leagan agus scoir",
@@ -834,59 +802,6 @@
     "base_url": "Bun-URL freastalaí OmniRoute",
     "context": "Comhthéacs/próifíl freastalaí le húsáid don ordú seo",
     "lang": "Socraigh teanga taispeáinte CLI (forbronnar OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Bainisteáil comhaid (uaslódáil, liostáil, faigh, íoslódáil, scrios)",
-    "list": {
-      "purpose": "Scag de réir cuspóra",
-      "limit": "Uasmhéid torthaí"
-    },
-    "get": {
-      "description": "Faigh meiteashonraí comhaid"
-    },
-    "upload": {
-      "description": "Uaslódáil comhad",
-      "purpose": "Cuspóir comhaid (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Íoslódáil ábhar comhaid",
-      "out": "Sábháil go cosán (réamhshocrú: stdout)"
-    },
-    "delete": {
-      "yes": "Scipeáil dearbhú"
-    }
-  },
-  "batches": {
-    "description": "Bainisteáil poist bathais comhoiriúnach le OpenAI",
-    "list": {
-      "status": "Scag de réir stádais",
-      "limit": "Uasmhéid torthaí"
-    },
-    "create": {
-      "description": "Cruthaigh post bathais",
-      "inputFile": "ID comhaid ionchuir",
-      "endpoint": "Sprioc-deireadh pointe",
-      "window": "Fuinneog críochnaithe",
-      "metadata": "Cuir eochair meiteashonraí leis key=value"
-    },
-    "submit": {
-      "description": "Uaslódáil comhad JSONL agus cruthaigh bathais",
-      "jsonl": "Cosán go comhad JSONL",
-      "endpoint": "Sprioc-deireadh pointe",
-      "wait": "Fan le críochnú"
-    },
-    "cancel": {
-      "yes": "Scipeáil dearbhú"
-    },
-    "wait": {
-      "timeout": "Am ama i soicindí milliúmana"
-    },
-    "output": {
-      "out": "Sábháil aschur go cosán"
-    },
-    "errors": {
-      "out": "Sábháil earráidí go cosán"
-    }
   },
   "translator": {
     "description": "Aistrigh coirp iarratais idir formáidí LLM",
@@ -1122,33 +1037,6 @@
       "top": "Líon na moltaí is fearr le taispeáint (réamhshocrú: 5)",
       "explain": "Priontáil an fáth chuig stderr",
       "switch": "Gníomhachtaigh an comhoiriú is fearr ranga"
-    }
-  },
-  "oneproxy": {
-    "description": "Bainistigh linn uachtarach OneProxy",
-    "stats": {
-      "provider": "Scag de réir soláthraí",
-      "period": "Tréimhse ama (réamhshocrú: 24h)"
-    },
-    "fetch": {
-      "description": "Faigh seachfhreastalaithe ón linn",
-      "count": "Líon na seachfhreastalaithe le fáil (réamhshocrú: 1)",
-      "type": "Cineál seachfhreastalaí: http|socks5 (réamhshocrú: http)"
-    },
-    "rotate": {
-      "description": "Éiligh rothlú seachfhreastalaí",
-      "provider": "Soláthraí le rothlú dó",
-      "connectionId": "ID ceangail shonrach le rothlú"
-    },
-    "config": {
-      "description": "Taispeáin nó nuashonraigh cumraíocht OneProxy",
-      "enabled": "Cumasaigh linn seachfhreastalaí (true|false)",
-      "poolSize": "Méid na linne",
-      "providerSource": "URL do sholáthraí seachfhreastalaí",
-      "rotationPolicy": "Polasaí rothlú: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Liostáil linn seachfhreastalaí reatha le meitricí"
     }
   },
   "open": {

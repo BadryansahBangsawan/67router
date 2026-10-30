@@ -280,7 +280,7 @@ To regler for en ny destination:
 - `send()` **skal udløse en fejl** ved delvis fejl. Hvis funktionen returnerer normalt, betyder det, at "destinationen har disse rækker",
   og markøren flyttes permanent forbi dem.
 - En destination, der accepterer en brugerangivet URL, skal validere den via
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) før hentning,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) før hentning,
   på samme måde som webhooks gør. BigQuery behøver ikke dette: dens værter er konstanter.
 
 ---

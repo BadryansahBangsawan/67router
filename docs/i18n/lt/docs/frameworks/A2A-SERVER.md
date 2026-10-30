@@ -161,7 +161,7 @@ OmniRoute atveria 6 A2A įgūdžius, prijungtus `src/lib/a2a/taskExecution.ts::A
 | Teikėjų aptikimas       | `provider-discovery` | Išvardija įdiegtus teikėjus su jų galimybėmis, nemokamo plano žymėmis ir OAuth būsena                                                                           | providers, discovery       | „Kokie teikėjai prieinami?“                     |
 | Išlaidų analizė         | `cost-analysis`      | Įvertina užklausos/pokalbio kainą pagal katalogą + naujausią naudojimą                                                                                          | cost, usage                | „Įvertinkite šio pokalbio kainą“                |
 | Būklės ataskaita        | `health-report`      | Apibendrina grandinės pertraukiklio (circuit breaker), atvėsimo (cooldown) ir blokavimo (lockout) būsenas kiekvienam teikėjui                                   | health, resilience         | „Rodykite visų teikėjų būklę“                   |
-| Galimybių sąrašas       | `list-capabilities`  | Grąžina visą 45 įrašų agentų įgūdžių katalogą (23 API + 21 CLI + 1 konfigūraciją) kaip markdown lentelę su neapdorotomis (raw) SKILL.md URL konteksto įterpimui | catalog, discovery, skills | „Išvardykite visas OmniRoute galimybes“         |
+| Galimybių sąrašas       | `list-capabilities`  | Grąžina visą 43 įrašų agentų įgūdžių katalogą (22 API + 20 CLI + 1 konfigūraciją) kaip markdown lentelę su neapdorotomis (raw) SKILL.md URL konteksto įterpimui | catalog, discovery, skills | „Išvardykite visas OmniRoute galimybes“         |
 
 > Agent Card turėtų būti nuolat suderinama su tiesioginiu 375 teikėjų katalogu; teikėjų skaičiai bei metaduomenys apie nemokamą prieigą / prieigą be autentifikacijos gaunami iš vykdymo laiko registro.
 

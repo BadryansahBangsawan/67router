@@ -361,7 +361,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
     const audioSpeech = allModels.filter(
       (m) => m.type === "audio" && m.subtype === "speech" && !m.parent
     );
-    const moderation = allModels.filter((m) => m.type === "moderation" && !m.parent);
     const music = allModels.filter((m) => m.type === "music" && !m.parent);
     return {
       chat,
@@ -371,7 +370,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
       rerank,
       audioTranscription,
       audioSpeech,
-      moderation,
       music,
     };
   }, [allModels]);
@@ -391,9 +389,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
       endpointData.music,
       endpointData.video,
     ].filter((m) => m.length > 0).length;
-    const utilityFixed = 3; // batch + files + list models (always available)
-    const modelUtility =
-      (endpointData.rerank.length > 0 ? 1 : 0) + (endpointData.moderation.length > 0 ? 1 : 0);
+    const utilityFixed = 1; // list models (always available)
+    const modelUtility = endpointData.rerank.length > 0 ? 1 : 0;
     const searchCount = searchProviders.length > 0 ? 1 : 0;
     return chatCount + imageCount + otherMedia + utilityFixed + modelUtility + searchCount;
   }, [endpointData, searchProviders]);
@@ -2062,41 +2059,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
               copied={copied}
               baseUrl={currentEndpoint}
               modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="shield"
-              iconColor="text-warning"
-              iconBg="bg-warning/10"
-              title={t("moderations")}
-              path="/v1/moderations"
-              models={endpointData.moderation}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="view_list"
-              iconColor="text-chart-4"
-              iconBg="bg-chart-4/10"
-              title={t("batchApi")}
-              path="/v1/batches"
-              models={null}
-              badge="OpenAI"
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-            />
-            <EndpointCard
-              icon="folder"
-              iconColor="text-warning"
-              iconBg="bg-warning/10"
-              title={t("filesApi")}
-              path="/v1/files"
-              models={null}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
             />
             <EndpointCard
               icon="list"

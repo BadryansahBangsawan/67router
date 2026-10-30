@@ -160,7 +160,7 @@ OmniRoute 6টি A2A স্কিল এক্সপোজ করে, যেগ
 | Provider Discovery | `provider-discovery` | ক্ষমতা, ফ্রি-টিয়ার ফ্ল্যাগ, OAuth স্ট্যাটাসসহ ইনস্টল করা প্রোভাইডারদের তালিকাভুক্ত করে                                                                   | providers, discovery       | "What providers are available?"        |
 | Cost Analysis      | `cost-analysis`      | ক্যাটালগ + সাম্প্রতিক ব্যবহারের ভিত্তিতে একটি রিকোয়েস্ট/কথোপকথনের খরচ অনুমান করে                                                                         | cost, usage                | "Estimate cost for this conversation"  |
 | Health Report      | `health-report`      | প্রতি প্রোভাইডারের সার্কিট ব্রেকার, কুলডাউন, লকআউট অবস্থা একত্রিত করে                                                                                     | health, resilience         | "Show health status of all providers"  |
-| List Capabilities  | `list-capabilities`  | কনটেক্সট ইনজেকশনের জন্য raw SKILL.md URL সহ সম্পূর্ণ 45-এন্ট্রির Agent Skills ক্যাটালগ (23 API + 21 CLI + 1 config) একটি মার্কডাউন টেবিল হিসেবে ফেরত দেয় | catalog, discovery, skills | "List all OmniRoute capabilities"      |
+| List Capabilities  | `list-capabilities`  | কনটেক্সট ইনজেকশনের জন্য raw SKILL.md URL সহ সম্পূর্ণ 43-এন্ট্রির Agent Skills ক্যাটালগ (22 API + 20 CLI + 1 config) একটি মার্কডাউন টেবিল হিসেবে ফেরত দেয় | catalog, discovery, skills | "List all OmniRoute capabilities"      |
 
 > Agent Cardটি লাইভ 375-প্রোভাইডার ক্যাটালগের সাথে সামঞ্জস্যপূর্ণ রাখা উচিত; প্রোভাইডার সংখ্যা এবং ফ্রি/নো-অথ মেটাডেটা রানটাইম রেজিস্ট্রি থেকে সংগৃহীত হয়।
 

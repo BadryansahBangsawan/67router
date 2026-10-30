@@ -273,7 +273,7 @@ Iwu abụọ maka ebe mbupu ọhụrụ:
 - `send()` **ga-atụrịrị njehie** ma ọ bụrụ na e nwere ọdịda n'akụkụ ụfọdụ. Mmecha na-enweghị njehie pụtara "ebe mbupu ahụ nwere ahịrị ndị a",
   cursor ahụ ga-agafekwa ha kpamkpam.
 - Ebe mbupu nke na-anata URL onye ọrụ nyere ga-eji
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) nyochaa ya tupu ọ kpọta data,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) nyochaa ya tupu ọ kpọta data,
   dịka webhooks si eme. BigQuery achọghị nke a: hosts ya bụ constants.
 
 ---

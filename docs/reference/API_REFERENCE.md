@@ -25,15 +25,12 @@ For the focused OpenAI-compatible protocol and provider capability matrix, see
 - [List Models](#list-models)
 - [Provider Plugin Manifest](#provider-plugin-manifest)
 - [Compatibility Endpoints](#compatibility-endpoints)
-- [Files API](#files-api)
-- [Batches API](#batches-api)
 - [Search API](#search-api)
 - [WebSocket Streaming](#websocket-streaming)
 - [Quotas & Issues Reporting](#quotas--issues-reporting)
 - [Semantic Cache](#semantic-cache)
 - [Dashboard & Management](#dashboard--management)
 - [Combo Management](#combo-management)
-- [Webhooks](#webhooks)
 - [Registered Keys (Auto-Management)](#registered-keys-auto-management)
 - [Agents Protocol](#agents-protocol)
 - [Management Proxies](#management-proxies)
@@ -135,7 +132,7 @@ account per project:
 Source: `src/sse/handlers/chat.ts` (header read), `src/sse/services/auth.ts` and
 `src/sse/services/sessionAffinityPin.ts` (pin release and the missing-from-pool check).
 
-> **Cost telemetry headers:** non-streaming success responses also carry the `X-OmniRoute-*` cost-telemetry set — `X-OmniRoute-Response-Cost` (USD, fixed 10 decimals; `0.0000000000` for free/unpriced), `X-OmniRoute-Tokens-In` / `X-OmniRoute-Tokens-Out`, `X-OmniRoute-Model`, `X-OmniRoute-Provider`, `X-OmniRoute-Latency-Ms`, `X-OmniRoute-Cache-Hit`, and `X-OmniRoute-Fallback-Attempts` (only when > 0), plus `X-OmniRoute-Request-Id` and `X-OmniRoute-Version`. These are emitted by chat completions, `/v1/responses`, `/v1/messages`, **and the media endpoints** — `/v1/embeddings`, `/v1/images/generations`, `/v1/audio/speech`, `/v1/audio/transcriptions`, `/v1/rerank`, `/v1/videos/generations`, `/v1/music/generations`, and `/v1/moderations` (always cost `0`). Media cost is computed per modality (per-image, per-second, per-character, per search-unit) when pricing is available, otherwise `0` (fail-open).
+> **Cost telemetry headers:** non-streaming success responses also carry the `X-OmniRoute-*` cost-telemetry set — `X-OmniRoute-Response-Cost` (USD, fixed 10 decimals; `0.0000000000` for free/unpriced), `X-OmniRoute-Tokens-In` / `X-OmniRoute-Tokens-Out`, `X-OmniRoute-Model`, `X-OmniRoute-Provider`, `X-OmniRoute-Latency-Ms`, `X-OmniRoute-Cache-Hit`, and `X-OmniRoute-Fallback-Attempts` (only when > 0), plus `X-OmniRoute-Request-Id` and `X-OmniRoute-Version`. These are emitted by chat completions, `/v1/responses`, `/v1/messages`, **and the media endpoints** — `/v1/embeddings`, `/v1/images/generations`, `/v1/audio/speech`, `/v1/audio/transcriptions`, `/v1/rerank`, `/v1/videos/generations`, and `/v1/music/generations`. Media cost is computed per modality (per-image, per-second, per-character, per search-unit) when pricing is available, otherwise `0` (fail-open).
 
 > **Cache-hit cost semantics:** on a semantic-cache HIT (`X-OmniRoute-Cache-Hit: true`) no upstream call is made, so `X-OmniRoute-Response-Cost` is `0.0000000000` (the **incremental** cost of serving the hit). The original/would-have-been cost is reported separately in `X-OmniRoute-Cost-Saved`. Billing consumers should sum `X-OmniRoute-Response-Cost` (hits cost nothing); cache analytics can aggregate `X-OmniRoute-Cost-Saved`.
 
@@ -725,7 +722,6 @@ Upstream contracts: [sound effects](https://elevenlabs.io/docs/api-reference/tex
 | POST   | `/v1/rerank`                              | Cohere/Voyage-style rerank         |
 | POST   | `/v1/classify`                            | Jina classify (`api.jina.ai`)      |
 | POST   | `/v1/segment`                             | Jina segmenter (`segment.jina.ai`) |
-| POST   | `/v1/moderations`                         | OpenAI Moderations                 |
 | GET    | `/v1/models`                              | OpenAI                             |
 | POST   | `/v1/models/query`                        | Filtered model shortlist           |
 | POST   | `/v1/messages/count_tokens`               | Anthropic                          |
@@ -755,9 +751,6 @@ POST /v1/segment     { "content": "...", "return_chunks": true }
 
 # Jina search (s.jina.ai; provider aliases: jina-search, jina-ai, jina)
 POST /v1/search      { "query": "...", "provider": "jina-search" }
-
-# Moderations
-POST /v1/moderations { "model": "omni-moderation-latest", "input": "..." }
 
 # TTS — returns audio/mpeg (or requested format) body
 POST /v1/audio/speech { "model": "openai/tts-1", "input": "Hello", "voice": "alloy" }
@@ -808,46 +801,6 @@ POST /v1/providers/{provider}/images/generations
 ```
 
 The provider prefix is auto-added if missing. Mismatched models return `400`.
-
----
-
-## Files API
-
-OpenAI-compatible files endpoint for batch input/output and file-purpose uploads.
-
-| Method | Path                     | Description                                                                                                   |
-| ------ | ------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| POST   | `/v1/files`              | Upload a file (multipart: `file`, `purpose`, `expires_after[anchor]`, `expires_after[seconds]`) — 512 MiB max |
-| GET    | `/v1/files`              | List files for the authenticated API key                                                                      |
-| GET    | `/v1/files/[id]`         | Retrieve a file's metadata                                                                                    |
-| DELETE | `/v1/files/[id]`         | Delete a file                                                                                                 |
-| GET    | `/v1/files/[id]/content` | Stream the raw file body back                                                                                 |
-
-**Auth:** Bearer API key — files are scoped per-API-key via `getApiKeyRequestScope`. A key
-sees, downloads and deletes its own files only; a dashboard session without a key reads the
-whole instance; a file with no owner (anonymous or dashboard-session upload) is denied to every
-non-session caller. `GET /v1/files` rejects an anonymous caller — and a presented key that does
-not resolve — with `401` even when `REQUIRE_API_KEY=false`, instead of listing every tenant's
-files (GHSA-m3hp-hq9g-fpmv, GHSA-2jm2-mpx8-6523).
-
----
-
-## Batches API
-
-OpenAI-compatible batch processing.
-
-| Method | Path                      | Description                                                                                               |
-| ------ | ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| POST   | `/v1/batches`             | Create batch — body validated by `v1BatchCreateSchema` (`input_file_id`, `endpoint`, `completion_window`) |
-| GET    | `/v1/batches`             | List batches                                                                                              |
-| GET    | `/v1/batches/[id]`        | Retrieve batch status + `request_counts`                                                                  |
-| DELETE | `/v1/batches/[id]`        | Delete a finished/failed batch                                                                            |
-| POST   | `/v1/batches/[id]/cancel` | Cancel an in-progress batch                                                                               |
-
-**Auth:** Bearer API key. Batches are scoped per-API-key under the same three-way rule as
-files: own key only, dashboard session instance-wide, null-owner records denied to every
-non-session caller (retrieve, delete, cancel, and the `input_file_id` check on create).
-`GET /v1/batches` rejects an anonymous caller with `401` even when `REQUIRE_API_KEY=false`.
 
 ---
 
@@ -1732,23 +1685,6 @@ Higher-level routing combos (already summarized under `/api/combos*`) can also b
 
 ---
 
-## Webhooks
-
-Outbound webhook subscriptions for OmniRoute events (request completion, quota exhaustion, key rotation, etc.).
-
-| Method | Path                      | Description                                                           |
-| ------ | ------------------------- | --------------------------------------------------------------------- |
-| GET    | `/api/webhooks`           | List webhooks (secrets are masked to `<prefix>...`)                   |
-| POST   | `/api/webhooks`           | Create webhook — body: `{url, events?: ["*"], secret?, description?}` |
-| GET    | `/api/webhooks/[id]`      | Retrieve a webhook                                                    |
-| PUT    | `/api/webhooks/[id]`      | Update url/events/secret/description                                  |
-| DELETE | `/api/webhooks/[id]`      | Remove a webhook                                                      |
-| POST   | `/api/webhooks/[id]/test` | Send a test payload to the webhook URL and return delivery status     |
-
-**Auth:** management session/API key (`requireManagementAuth`).
-
----
-
 ## Registered Keys (Auto-Management)
 
 Used by the auto-key management subsystem to issue and rotate API keys against a backing provider/account, with daily/hourly quotas.
@@ -2203,26 +2139,6 @@ Manage persistent memory (FTS5 + vector embeddings).
 | GET    | `/api/memory?q=`   | Search memory (FTS5 + vector) — stats are included in the same response |
 
 **Auth:** Requires management session or management-scoped API key.
-
----
-
-## Webhooks
-
-Manage webhook subscriptions for events.
-
-| Method | Path                            | Description                                                               |
-| ------ | ------------------------------- | ------------------------------------------------------------------------- |
-| GET    | `/api/webhooks`                 | List all webhook subscriptions                                            |
-| POST   | `/api/webhooks`                 | Create a webhook subscription — body: `{url, events[], secret?, active?}` |
-| GET    | `/api/webhooks/[id]`            | Get a specific webhook subscription                                       |
-| PUT    | `/api/webhooks/[id]`            | Update a webhook subscription                                             |
-| DELETE | `/api/webhooks/[id]`            | Delete a webhook subscription                                             |
-| GET    | `/api/webhooks/[id]/deliveries` | List delivery history for a webhook (success/failure log)                 |
-| POST   | `/api/webhooks/[id]/test`       | Send a test event to a webhook                                            |
-
-**Auth:** Requires management session.
-
-See [Webhooks Framework](../frameworks/WEBHOOKS.md) for full event types.
 
 ---
 

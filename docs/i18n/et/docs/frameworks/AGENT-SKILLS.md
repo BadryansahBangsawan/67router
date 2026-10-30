@@ -13,7 +13,7 @@ Agent Skills on struktureeritud SKILL.md failid, mis õpetavad välistele agenti
 
 ## Ülevaade
 
-Kataloog sisaldab **45 Agent Skill'i** (23 REST API + 21 CLI + 1 konfiguratsiooni töövoog). Igal oskusel on:
+Kataloog sisaldab **43 Agent Skill'i** (22 REST API + 20 CLI + 1 konfiguratsiooni töövoog). Igal oskusel on:
 
 - **Kanooniline ID** (`omni-auth`, `cli-serve` jne)
 - Fail **SKILL.md** asukohas `skills/{id}/SKILL.md`, mis sisaldab YAML-i eessisu (`name`, `description`) ja põhjalikku markdown-sisu

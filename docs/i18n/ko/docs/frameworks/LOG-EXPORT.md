@@ -271,7 +271,7 @@ insertAll 호출로 나누므로, `batch_size`가 커도 BigQuery의 10MB 요청
 - 부분 실패가 발생하면 `send()`는 **반드시 예외를 발생시켜야 합니다**. 정상적으로 반환된다는 것은 "대상에 이 행들이 존재한다"는 의미이며,
   커서는 해당 행들을 영구적으로 지나 이동합니다.
 - 사용자가 제공한 URL을 사용하는 대상은 가져오기를 수행하기 전에 웹후크와 동일한 방식으로
-  `parseAndValidateWebhookUrl`(`src/shared/network/outboundUrlGuardPolicy.ts`)을 통해 URL을 검증해야 합니다.
+  `parseAndValidatePublicUrl`(`src/shared/network/outboundUrlGuard.ts`)을 통해 URL을 검증해야 합니다.
   BigQuery는 호스트가 상수이므로 이 검증이 필요하지 않습니다.
 
 ---

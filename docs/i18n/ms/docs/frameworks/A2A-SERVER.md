@@ -161,7 +161,7 @@ OmniRoute mendedahkan 6 kemahiran A2A yang disambungkan dalam `src/lib/a2a/taskE
 | Provider Discovery | `provider-discovery` | Menyenaraikan penyedia terpasang berserta keupayaan, penanda peringkat percuma, status OAuth                                                             | providers, discovery       | "Penyedia apa yang tersedia?"               |
 | Cost Analysis      | `cost-analysis`      | Menganggarkan kos sesuatu permintaan/perbualan berdasarkan katalog + penggunaan terkini                                                                  | cost, usage                | "Anggarkan kos untuk perbualan ini"         |
 | Health Report      | `health-report`      | Mengagregatkan keadaan circuit breaker, cooldown dan lockout setiap penyedia                                                                             | health, resilience         | "Tunjukkan status kesihatan semua penyedia" |
-| List Capabilities  | `list-capabilities`  | Mengembalikan katalog Agent Skills 45 entri penuh (23 API + 21 CLI + 1 config) sebagai jadual markdown dengan URL SKILL.md mentah untuk suntikan konteks | catalog, discovery, skills | "Senaraikan semua keupayaan OmniRoute"      |
+| List Capabilities  | `list-capabilities`  | Mengembalikan katalog Agent Skills 43 entri penuh (22 API + 20 CLI + 1 config) sebagai jadual markdown dengan URL SKILL.md mentah untuk suntikan konteks | catalog, discovery, skills | "Senaraikan semua keupayaan OmniRoute"      |
 
 > Kad Ejen harus dikekalkan sejajar dengan katalog 375 penyedia langsung; bilangan penyedia dan metadata percuma/tanpa-auth bersumber daripada pendaftar runtime.
 

@@ -80,7 +80,7 @@ Check the relay awareness headers returned by OmniRoute's auto-test probe
 
 A high `x-relay-fallback` rate with low `relayAlive` means the sidecar
 backend is unhealthy and you should either fix it or switch the relay backend
-strategy to `ts` (see `RELAY_BACKEND_STRATEGY.md`).
+strategy to `ts`.
 
 ## API reference
 
