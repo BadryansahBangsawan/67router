@@ -20,19 +20,21 @@ test("a value that is not an array hides nothing", () => {
   }
 });
 
+// Sidebar v2: the "logs" / "audit" groups were renamed "logs-more" / "audit-more"; a saved
+// legacy id maps onto its new group (sidebarGroupVisibility.ts → LEGACY_SIDEBAR_GROUP_ID_MAP).
 test("known ids are kept and unknown or non-string entries are dropped", () => {
-  assert.deepEqual(normalizeHiddenSidebarGroupLabels(["logs", "nope", 5, null, "tools"]), [
+  assert.deepEqual(normalizeHiddenSidebarGroupLabels(["logs-more", "nope", 5, null, "tools"]), [
     "tools",
-    "logs",
+    "logs-more",
   ]);
+  assert.deepEqual(normalizeHiddenSidebarGroupLabels(["logs"]), ["logs-more"], "legacy id");
 });
 
 test("duplicates collapse and the canonical order wins over the stored order", () => {
-  assert.deepEqual(normalizeHiddenSidebarGroupLabels(["batch", "audit", "batch", "tools"]), [
-    "tools",
-    "audit",
-    "batch",
-  ]);
+  assert.deepEqual(
+    normalizeHiddenSidebarGroupLabels(["batch", "audit-more", "batch", "audit", "tools"]),
+    ["tools", "audit-more", "batch"]
+  );
 });
 
 test("every hideable id survives a round trip in canonical order", () => {

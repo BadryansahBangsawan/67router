@@ -9,8 +9,18 @@ import { z } from "zod";
 import { CONNECTION_TEST_PROMPT_MAX_LENGTH } from "@/shared/constants/connectionTest";
 import { COMBO_CONFIG_MODES } from "@/shared/constants/comboConfigMode";
 import { MAX_REQUEST_BODY_LIMIT_MB, MIN_REQUEST_BODY_LIMIT_MB } from "@/shared/constants/bodySize";
-import { HIDEABLE_SIDEBAR_GROUP_IDS } from "@/shared/constants/sidebarGroupVisibility";
-import { HIDEABLE_SIDEBAR_ITEM_IDS, SIDEBAR_SECTIONS } from "@/shared/constants/sidebarVisibility";
+import {
+  ACCEPTED_SIDEBAR_GROUP_IDS,
+  normalizeHiddenSidebarGroupLabels,
+} from "@/shared/constants/sidebarGroupVisibility";
+import {
+  HIDEABLE_SIDEBAR_ITEM_IDS,
+  LEGACY_SIDEBAR_SECTION_IDS,
+  SIDEBAR_SECTIONS,
+  migrateHiddenSidebarSectionIds,
+  migrateSidebarItemOrder,
+  migrateSidebarSectionIds,
+} from "@/shared/constants/sidebarVisibility";
 import { ACCOUNT_FALLBACK_STRATEGY_VALUES } from "@/shared/constants/routingStrategies";
 import { RESPONSES_PREVIOUS_RESPONSE_ID_MODES } from "@/shared/constants/responsesPreviousResponseId";
 import {
@@ -101,6 +111,11 @@ const transformObfuscateWordsSchema = z.object({
     .max(3)
     .optional(),
 });
+
+const SIDEBAR_SECTION_SCHEMA_IDS = [
+  ...SIDEBAR_SECTIONS.map((section) => section.id),
+  ...LEGACY_SIDEBAR_SECTION_IDS,
+] as [string, ...string[]];
 
 export const updateSettingsSchema = z.object({
   connectionTestPrompt: z.string().trim().min(1).max(CONNECTION_TEST_PROMPT_MAX_LENGTH).optional(),
@@ -226,14 +241,25 @@ export const updateSettingsSchema = z.object({
   debugMode: z.boolean().optional(),
   logToolSources: z.boolean().optional(),
   hiddenSidebarItems: z.array(z.enum(HIDEABLE_SIDEBAR_ITEM_IDS)).optional(),
+  // Sidebar v2 (67router): current AND pre-v2 section / group ids are accepted, then migrated
+  // to the v2 ids before they are stored (sidebarVisibility/legacy.ts), so an older client or a
+  // settings export from before the regrouping still saves.
   hiddenSidebarSections: z
-    .array(z.enum(SIDEBAR_SECTIONS.map((s) => s.id) as [string, ...string[]]))
+    .array(z.enum(SIDEBAR_SECTION_SCHEMA_IDS))
+    .transform(migrateHiddenSidebarSectionIds)
     .optional(),
-  hiddenSidebarGroupLabels: z.array(z.enum(HIDEABLE_SIDEBAR_GROUP_IDS)).optional(),
+  hiddenSidebarGroupLabels: z
+    .array(z.enum(ACCEPTED_SIDEBAR_GROUP_IDS as [string, ...string[]]))
+    .transform(normalizeHiddenSidebarGroupLabels)
+    .optional(),
   sidebarSectionOrder: z
-    .array(z.enum(SIDEBAR_SECTIONS.map((s) => s.id) as [string, ...string[]]))
+    .array(z.enum(SIDEBAR_SECTION_SCHEMA_IDS))
+    .transform(migrateSidebarSectionIds)
     .optional(),
-  sidebarItemOrder: z.record(z.string(), z.array(z.string().max(100))).optional(),
+  sidebarItemOrder: z
+    .record(z.string(), z.array(z.string().max(100)))
+    .transform(migrateSidebarItemOrder)
+    .optional(),
   sidebarActivePreset: z
     .enum(["all", "essentials", "minimal", "developer", "admin"])
     .nullable()

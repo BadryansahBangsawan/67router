@@ -58,14 +58,14 @@ test("applySectionOrder appends sections not in order list at end", () => {
 // ─── applyItemOrder ───────────────────────────────────────────────────────────
 
 test("applyItemOrder returns original children when order is empty", () => {
-  const section = SIDEBAR_SECTIONS.find((s) => s.id === "omni-proxy")!;
+  const section = SIDEBAR_SECTIONS.find((s) => s.id === "routing")!; // sidebar v2
   const children = [...section.children];
   const result = applyItemOrder(children, []);
   assert.deepEqual(result.length, children.length);
 });
 
 test("applyItemOrder reorders items by provided list", () => {
-  const section = SIDEBAR_SECTIONS.find((s) => s.id === "help")!;
+  const section = SIDEBAR_SECTIONS.find((s) => s.id === "system")!; // sidebar v2 (holds Help)
   const children = [...section.children] as any[];
   const ids = children.map((c) => c.id);
   const reversed = [...ids].reverse();
@@ -77,7 +77,7 @@ test("applyItemOrder reorders items by provided list", () => {
 });
 
 test("applyItemOrder ignores unknown IDs in order list", () => {
-  const section = SIDEBAR_SECTIONS.find((s) => s.id === "help")!;
+  const section = SIDEBAR_SECTIONS.find((s) => s.id === "system")!; // sidebar v2 (holds Help)
   const children = [...section.children] as any[];
   const ids = children.map((c) => c.id);
   const orderWithUnknown = ["ghost-item", ids[1], ids[0], ids[2]];
@@ -153,8 +153,9 @@ test("settings-sidebar is in HIDEABLE_SIDEBAR_ITEM_IDS", () => {
 });
 
 test("settings-sidebar item is present in configuration section", () => {
-  const configSection = SIDEBAR_SECTIONS.find((s) => s.id === "configuration");
-  assert.ok(configSection, "configuration section should exist");
+  // Sidebar v2: the Configuration section is System → "Settings" sub-group.
+  const configSection = SIDEBAR_SECTIONS.find((s) => s.id === "system");
+  assert.ok(configSection, "system section should exist");
   const items = configSection.children.flatMap((c) =>
     "type" in c && c.type === "group" ? c.items : [c as any]
   );

@@ -50,6 +50,8 @@ import {
   applySectionOrder,
   applyItemOrder,
   isSidebarItemVisibleForFlags,
+  migrateSidebarItemOrder,
+  migrateSidebarSectionIds,
   resolveRuntimeSidebarSections,
   type SidebarSectionId,
   type SidebarItemDefinition,
@@ -74,9 +76,13 @@ export function useSidebarSide(): "left" | "right" {
 }
 
 const isE2EMode = process.env.NEXT_PUBLIC_OMNIROUTE_E2E_MODE === "1";
-const DEFAULT_EXPANDED: SidebarSectionId = "omni-proxy";
-const EXPANDED_SECTIONS_KEY = "sidebar-expanded-sections";
-const PINNED_SECTIONS_KEY = "sidebar-pinned-sections";
+const DEFAULT_EXPANDED: SidebarSectionId = "routing";
+// Sidebar v2 (67router) regrouped the sections, so the per-browser expanded / pinned SECTION
+// state starts fresh under new keys: every v2 section is `defaultPinned` (always open, the
+// design's flat look) until the user unpins it. Pinned ITEMS keep their key — item ids did not
+// change. Saved settings (hidden sections, orders) are migrated, see sidebarVisibility/legacy.ts.
+const EXPANDED_SECTIONS_KEY = "sidebar-expanded-sections-v2";
+const PINNED_SECTIONS_KEY = "sidebar-pinned-sections-v2";
 const PINNED_ITEMS_KEY = "sidebar-pinned-items";
 
 type SidebarProps = {
@@ -246,10 +252,10 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
       .then((data) => {
         applySettings(data);
         if (Array.isArray(data?.[SIDEBAR_SECTION_ORDER_KEY])) {
-          setSidebarSectionOrder(data[SIDEBAR_SECTION_ORDER_KEY] as SidebarSectionId[]);
+          setSidebarSectionOrder(migrateSidebarSectionIds(data[SIDEBAR_SECTION_ORDER_KEY]));
         }
         if (data?.[SIDEBAR_ITEM_ORDER_KEY] && typeof data[SIDEBAR_ITEM_ORDER_KEY] === "object") {
-          setSidebarItemOrder(data[SIDEBAR_ITEM_ORDER_KEY] as SidebarItemOrder);
+          setSidebarItemOrder(migrateSidebarItemOrder(data[SIDEBAR_ITEM_ORDER_KEY]));
         }
       })
       .catch(() => {});
@@ -273,14 +279,14 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
         );
       }
       if (SIDEBAR_SECTION_ORDER_KEY in detail && Array.isArray(detail[SIDEBAR_SECTION_ORDER_KEY])) {
-        setSidebarSectionOrder(detail[SIDEBAR_SECTION_ORDER_KEY] as SidebarSectionId[]);
+        setSidebarSectionOrder(migrateSidebarSectionIds(detail[SIDEBAR_SECTION_ORDER_KEY]));
       }
       if (
         SIDEBAR_ITEM_ORDER_KEY in detail &&
         detail[SIDEBAR_ITEM_ORDER_KEY] &&
         typeof detail[SIDEBAR_ITEM_ORDER_KEY] === "object"
       ) {
-        setSidebarItemOrder(detail[SIDEBAR_ITEM_ORDER_KEY] as SidebarItemOrder);
+        setSidebarItemOrder(migrateSidebarItemOrder(detail[SIDEBAR_ITEM_ORDER_KEY]));
       }
       if ("instanceName" in detail) setCustomAppName((detail.instanceName as string) || null);
       if ("customLogoBase64" in detail) {
@@ -375,8 +381,8 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
     .map((id) => allVisibleItems.find((item) => item.id === id))
     .filter(Boolean) as (SidebarItemDefinition & { label: string; subtitle?: string })[];
 
-  const homeIndex = visibleSections.findIndex((s) => s.id === "home");
-  const insertIndex = homeIndex >= 0 ? homeIndex + 1 : 0;
+  // Pinned items lead the navigation (v2 has no separate Home section to follow).
+  const insertIndex = 0;
   // Same element type as visibleSections so the union keeps `showTitle` and the
   // other resolved-section fields the renderer reads below.
   const pinnedSection: (typeof visibleSections)[number] = {
@@ -521,22 +527,18 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
     const isItemPinned = pinnedItems.has(item.id);
     const itemKey = keyPrefix ? `${keyPrefix}-${item.href}` : item.href;
     const showPin = !collapsed && item.id !== "home";
+    // Sidebar v2 rows are one line (label only); the subtitle stays in the tooltip and in search.
     const title = item.subtitle ? `${item.label} — ${item.subtitle}` : item.label;
-    // On the active (accent) row the subtitle inherits the accent ink; elsewhere it is muted.
-    const subtitleClassName = active
-      ? "truncate text-[10px]"
-      : "truncate text-[10px] text-text-muted";
     const content = (
       <>
-        <Icon name={item.icon} size={18} fill={active} />
+        <Icon name={item.icon} size={16} />
         {/* Icon rail: the label lives in the tooltip/aria-label. (The kit hides non-svg children
             when collapsed, but this span's `flex` utility would out-rank that rule.) */}
         {!collapsed && (
-          <span className="flex min-w-0 flex-1 flex-col">
-            <span className={cn("truncate text-sm", active ? "font-semibold" : "font-medium")}>
+          <span className="flex min-w-0 flex-1 items-center">
+            <span className={cn("truncate text-[13.5px]", active ? "font-medium" : "font-normal")}>
               {item.label}
             </span>
-            {item.subtitle && <span className={subtitleClassName}>{item.subtitle}</span>}
           </span>
         )}
       </>
@@ -582,12 +584,8 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
             title={isItemPinned ? t("unpinItem") : t("pinItem")}
             aria-label={isItemPinned ? t("unpinItem") : t("pinItem")}
             className={cn(
-              "absolute end-1 top-1/2 flex size-7 -translate-y-1/2 items-center justify-center rounded-control transition-opacity focus-visible:opacity-100",
-              active
-                ? "text-accent-foreground"
-                : isItemPinned
-                  ? "text-text-main"
-                  : "text-text-muted",
+              "absolute end-1 top-1/2 flex size-6 -translate-y-1/2 items-center justify-center rounded-control transition-opacity focus-visible:opacity-100",
+              isItemPinned ? "text-text-main" : "text-text-muted",
               !isItemPinned && "opacity-0 group-hover/nav-item:opacity-100"
             )}
           >
@@ -621,12 +619,12 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
                 [child.id]: !groupExpanded,
               }))
             }
-            className="flex min-h-9 w-full items-center justify-between gap-2 rounded-control px-3 text-start text-xs font-semibold text-text-muted hover:bg-surface hover:text-text-main"
+            className="flex h-[30px] w-full items-center justify-between gap-2 rounded-control px-[11px] text-start text-[13px] font-normal text-text-muted hover:text-text-main"
           >
-            {child.title}
+            <span className="truncate">{child.title}</span>
             <Icon
               name="chevron_right"
-              size={16}
+              size={14}
               className={cn("transition-transform", groupExpanded && "rotate-90")}
             />
           </button>
@@ -649,8 +647,8 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
     <>
       {/* The skip link lives in DashboardShell, before the sidebar: below the mobile breakpoint
           this aside exists only inside the closed Sheet. */}
-      <SidebarHeader>
-        <div className={cn("flex items-center gap-2", collapsed && "flex-col")}>
+      <SidebarHeader className="r67-sidebar-header">
+        <div className={cn("flex h-full items-center gap-2", collapsed && "justify-center")}>
           <Link
             href="/home"
             prefetch={false}
@@ -658,7 +656,7 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
             title={`${brandName} v${APP_CONFIG.version}`}
             className={cn(
               "flex min-w-0 items-center rounded-control focus-visible:outline-2 focus-visible:outline-offset-4",
-              collapsed ? "justify-center" : "flex-1 flex-col items-start gap-0.5"
+              collapsed ? "justify-center" : "flex-1"
             )}
           >
             {collapsed ? (
@@ -669,16 +667,18 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
                 <OmniRouteLogo size={22} />
               )
             ) : (
-              <>
-                <OmniRouteLockup
-                  name={customAppName}
-                  logoSrc={customLogo}
-                  className="max-w-full flex-nowrap gap-1.5 whitespace-nowrap [&>.ci-keak-logo]:text-[1.1rem] [&>.ci-keak-product-icon]:size-7 [&_.ci-keak-product]:text-[0.95rem]"
-                />
-                <span className="text-xs text-text-muted">v{APP_CONFIG.version}</span>
-              </>
+              <OmniRouteLockup
+                name={customAppName}
+                logoSrc={customLogo}
+                className="max-w-full flex-nowrap whitespace-nowrap"
+              />
             )}
           </Link>
+          {!collapsed && (
+            <span className="ms-auto shrink-0 rounded-[6px] border border-border bg-bg px-1.5 py-0.5 text-[11px] font-medium tabular-nums text-text-muted">
+              v{APP_CONFIG.version}
+            </span>
+          )}
           {/* The shell Header owns the collapse/expand trigger (one per page). Only the mobile
               drawer needs its own control: the modal Sheet hides the header while it is open. */}
           {isMobile && (
@@ -699,7 +699,7 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
         {!collapsed && (
           // -top-2 / -mt-2 pt-2 cover the content's 8 px top padding, so scrolled rows do not
           // peek through a strip above the box.
-          <div className="sticky -top-2 z-10 -mt-2 bg-[var(--ci-color-background)] pt-2 pb-1">
+          <div className="sticky -top-2 z-10 -mt-2 bg-[var(--ci-sidebar-bg)] pt-2 pb-1">
             <Input
               type="search"
               value={searchQuery}
@@ -708,14 +708,14 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
               aria-label={tc("search")}
               icon="search"
               className="gap-0"
-              inputClassName="min-h-10 py-2 text-sm"
+              inputClassName="min-h-[34px] py-1.5 text-[13px]"
             />
           </div>
         )}
         {/* scroll-mt-14 (≈ the sticky search box) keeps a focused row clear of it on Shift+Tab. */}
         <nav
           aria-label={t("mainNavigation")}
-          className="flex flex-col gap-3 [&_a]:scroll-mt-14 [&_button]:scroll-mt-14"
+          className="flex flex-col gap-3.5 [&_a]:scroll-mt-14 [&_button]:scroll-mt-14"
         >
           {isSearching && displaySections.length === 0 && (
             <p className="px-2 py-3 text-xs text-text-muted">{tc("noResults")}</p>
@@ -757,7 +757,7 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
 
             return (
               <SidebarGroup key={section.id}>
-                <SidebarGroupLabel className="group/header h-auto gap-1 px-0">
+                <SidebarGroupLabel className="group/header h-auto gap-1 px-0 normal-case">
                   {/* kit-exception: Native disclosure button on kit tokens (track F): a full-width section header
                       inside the kit SidebarGroupLabel (the kit Button is a fixed-height pill). */}
                   <button
@@ -765,13 +765,18 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
                     onClick={() => toggleSection(sectionId)}
                     aria-expanded={isExpanded}
                     aria-controls={`${navigationId}-${section.id}`}
-                    className="flex min-h-9 min-w-0 flex-1 items-center justify-between gap-2 rounded-control px-2 text-start uppercase hover:bg-surface hover:text-text-main"
+                    className="flex min-h-7 min-w-0 flex-1 items-center justify-between gap-2 rounded-control px-2.5 text-start text-[11px] font-medium tracking-[0.04em] uppercase text-text-muted hover:text-text-main"
                   >
                     <span className="truncate">{section.title}</span>
+                    {/* The chevron only shows on hover / focus: v2 sections read as flat labels. */}
                     <Icon
                       name="expand_more"
-                      size={16}
-                      className={cn("transition-transform", isExpanded && "rotate-180")}
+                      size={14}
+                      className={cn(
+                        "opacity-0 transition group-hover/header:opacity-100 group-focus-within/header:opacity-100",
+                        isExpanded && "rotate-180",
+                        !isExpanded && "opacity-100"
+                      )}
                     />
                   </button>
                   {sectionId !== "pinned" && (
@@ -784,10 +789,10 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
                       aria-pressed={isPinned}
                       title={isPinned ? t("unpinSection") : t("pinSectionOpen")}
                       className={cn(
-                        "flex size-8 shrink-0 items-center justify-center rounded-control transition-opacity hover:bg-surface focus-visible:opacity-100",
-                        isPinned
-                          ? "text-text-main"
-                          : "text-text-muted opacity-0 group-hover/header:opacity-100 group-focus-within/header:opacity-100"
+                        "flex size-7 shrink-0 items-center justify-center rounded-control transition-opacity hover:text-text-main focus-visible:opacity-100",
+                        // v2 sections start pinned, so the pin is hover-revealed in both states.
+                        isPinned ? "text-text-main" : "text-text-muted",
+                        "opacity-0 group-hover/header:opacity-100 group-focus-within/header:opacity-100"
                       )}
                     >
                       <Icon name="push_pin" size={14} fill={isPinned} />

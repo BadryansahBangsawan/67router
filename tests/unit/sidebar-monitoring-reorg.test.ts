@@ -1,123 +1,80 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
+// Sidebar v2 (67router): the Monitoring section folded into Observe. The headline rows are flat
+// (Usage, Costs, Request logs, Health, Audit) and the remaining monitoring pages sit in Observe's
+// sub-groups — the same pages as the old Monitoring section, regrouped.
+
 const sidebarVisibility = await import("../../src/shared/constants/sidebarVisibility.ts");
 
-function findSection(id: string) {
-  return sidebarVisibility.SIDEBAR_SECTIONS.find((s) => s.id === id);
+function observe() {
+  const section = sidebarVisibility.SIDEBAR_SECTIONS.find((s) => s.id === "observe");
+  assert.ok(section, "observe section must exist");
+  return section;
 }
 
-test("monitoring section exists", () => {
-  const section = findSection("monitoring");
-  assert.ok(section, "monitoring section must exist");
+function group(id: string) {
+  const found = observe().children.find(
+    (c): c is sidebarVisibility.SidebarItemGroup => "type" in c && c.type === "group" && c.id === id
+  );
+  assert.ok(found, `${id} group must exist in observe`);
+  return found;
+}
+
+test("the legacy monitoring section id maps to observe", () => {
+  assert.equal(sidebarVisibility.migrateSidebarSectionId("monitoring"), "observe");
 });
 
-test("monitoring section has exactly 4 children: 1 item (activity) + 3 groups (logs, audit, system)", () => {
-  const section = findSection("monitoring");
-  assert.ok(section, "monitoring section must exist");
-
-  const children = section.children;
-  assert.equal(children.length, 4, "monitoring must have 4 children");
-
-  // First child is the activity item (not a group)
-  const first = children[0] as sidebarVisibility.SidebarItemDefinition;
-  assert.ok(!("type" in first) || first.type !== "group", "first child must not be a group");
-  assert.equal(
-    (first as sidebarVisibility.SidebarItemDefinition).id,
-    "activity",
-    "first child must be activity item"
-  );
-
-  // Remaining 3 children are groups
-  const groups = children.slice(1);
-  for (const g of groups) {
-    assert.ok("type" in g && g.type === "group", "children[1..3] must all be groups");
-  }
-
-  const groupIds = groups.map((g) => (g as sidebarVisibility.SidebarItemGroup).id);
-  assert.deepEqual(
-    groupIds,
-    ["logs", "audit", "system"],
-    "group ids must be logs, audit, system in order"
-  );
+test("observe leads with flat rows, then the sub-groups", () => {
+  const children = observe().children;
+  const flat = children.filter((c) => !("type" in c)).map((c) => c.id);
+  const groups = children.filter((c) => "type" in c && c.type === "group").map((c) => c.id);
+  assert.deepEqual(flat, ["analytics", "costs", "logs", "health", "audit"]);
+  assert.deepEqual(groups, ["analytics-more", "costs-more", "logs-more", "system", "audit-more"]);
+  // Flat rows come first.
+  const firstGroup = children.findIndex((c) => "type" in c);
+  assert.ok(children.slice(firstGroup).every((c) => "type" in c && c.type === "group"));
 });
 
-test("getSectionItems of monitoring does NOT contain logs-activity", () => {
-  const section = findSection("monitoring");
-  assert.ok(section, "monitoring section must exist");
-
-  const items = sidebarVisibility.getSectionItems(section);
-  const itemIds = items.map((i) => i.id);
-
+test("getSectionItems of observe does NOT contain logs-activity", () => {
+  const itemIds = sidebarVisibility.getSectionItems(observe()).map((i) => i.id);
   assert.equal(
     itemIds.includes("logs-activity" as sidebarVisibility.HideableSidebarItemId),
     false,
-    "logs-activity must not be in monitoring section items"
+    "logs-activity must not be in observe section items"
   );
 });
 
-test("monitoring section does NOT have a group with id costs-parameters", () => {
-  const section = findSection("monitoring");
-  assert.ok(section, "monitoring section must exist");
-
-  const groupIds = section.children
-    .filter((c): c is sidebarVisibility.SidebarItemGroup => "type" in c && c.type === "group")
+test("observe does NOT have a group with id costs-parameters", () => {
+  const groupIds = observe()
+    .children.filter((c) => "type" in c && c.type === "group")
     .map((g) => g.id);
-
-  assert.equal(
-    groupIds.includes("costs-parameters"),
-    false,
-    "costs-parameters group must not exist in monitoring"
-  );
+  assert.equal(groupIds.includes("costs-parameters"), false);
 });
 
-test("monitoring section activity item has correct href and icon", () => {
-  const section = findSection("monitoring");
-  assert.ok(section, "monitoring section must exist");
-
-  const activityItem = sidebarVisibility.getSectionItems(section).find((i) => i.id === "activity");
-
-  assert.ok(activityItem, "activity item must be in monitoring section");
+test("activity item keeps its href and icon (now in the logs sub-group)", () => {
+  const activityItem = group("logs-more").items.find((i) => i.id === "activity");
+  assert.ok(activityItem, "activity item must be in the logs sub-group");
   assert.equal(activityItem.href, "/dashboard/activity");
   assert.equal(activityItem.icon, "timeline");
   assert.equal(activityItem.i18nKey, "activity");
 });
 
-test("monitoring logs group contains logs, logs-proxy, logs-console, logs-timeline, conversations", () => {
-  const section = findSection("monitoring");
-  assert.ok(section, "monitoring section must exist");
-
-  const logsGroup = section.children.find(
-    (c): c is sidebarVisibility.SidebarItemGroup =>
-      "type" in c && c.type === "group" && c.id === "logs"
+test("request logs is a flat row; the other log pages are in the logs sub-group", () => {
+  const logs = observe().children.find((c) => !("type" in c) && c.id === "logs");
+  assert.ok(logs && "href" in logs);
+  assert.equal(logs.href, "/dashboard/logs");
+  assert.deepEqual(
+    group("logs-more").items.map((i) => i.id),
+    ["activity", "logs-proxy", "logs-console", "logs-timeline", "conversations"]
   );
-  assert.ok(logsGroup, "logs group must exist in monitoring");
-
-  const itemIds = logsGroup.items.map((i) => i.id);
-  assert.deepEqual(itemIds, [
-    "logs",
-    "logs-proxy",
-    "logs-console",
-    "logs-timeline",
-    "conversations",
-  ]);
 });
 
-test("monitoring system group contains health, runtime, connection resilience and cooldowns", () => {
-  const section = findSection("monitoring");
-  assert.ok(section, "monitoring section must exist");
-
-  const systemGroup = section.children.find(
-    (c): c is sidebarVisibility.SidebarItemGroup =>
-      "type" in c && c.type === "group" && c.id === "system"
+test("health is a flat row; runtime and resilience are in the runtime sub-group", () => {
+  const health = observe().children.find((c) => !("type" in c) && c.id === "health");
+  assert.ok(health, "health row");
+  assert.deepEqual(
+    group("system").items.map((i) => i.id),
+    ["runtime", "resilience-connections", "resilience-cooldowns"]
   );
-  assert.ok(systemGroup, "system group must exist in monitoring");
-
-  const itemIds = systemGroup.items.map((i) => i.id);
-  assert.deepEqual(itemIds, [
-    "health",
-    "runtime",
-    "resilience-connections",
-    "resilience-cooldowns",
-  ]);
 });

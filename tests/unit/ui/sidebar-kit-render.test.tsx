@@ -73,16 +73,18 @@ describe("Sidebar rendered with the kit Sidebar family", () => {
     expect(within(navEl).getByRole("link", { name: "Home" }).getAttribute("aria-current")).toBe(
       "page"
     );
-    // At /home the accordion keeps only the active (Home) section open; OmniProxy is a closed
-    // disclosure button that opens on click (sidebar logic is unchanged by the kit rendering).
-    const section = within(navEl).getByRole("button", { name: "OmniProxy", exact: true });
-    expect(section.getAttribute("aria-expanded")).toBe("false");
+    // Sidebar v2: every section starts pinned open (flat look); a section header is still a
+    // disclosure button that collapses and re-opens its panel.
+    const section = within(navEl).getByRole("button", { name: "Optimize", exact: true });
+    expect(section.getAttribute("aria-expanded")).toBe("true");
     expect(section.getAttribute("aria-controls")).toBeTruthy();
+    expect(document.getElementById(section.getAttribute("aria-controls")!)).not.toBeNull();
+    await userEvent.setup().click(section);
+    expect(section.getAttribute("aria-expanded")).toBe("false");
     await userEvent.setup().click(section);
     expect(section.getAttribute("aria-expanded")).toBe("true");
-    expect(document.getElementById(section.getAttribute("aria-controls")!)).not.toBeNull();
     expect(screen.getByRole("searchbox")).not.toBeNull();
-    expect(screen.getByRole("img", { name: "Keak OmniRoute" })).not.toBeNull();
+    expect(screen.getByRole("img", { name: "67router" })).not.toBeNull();
     expect(navEl.querySelector(".material-symbols-outlined")).toBeNull();
     expect(navEl.querySelectorAll("svg.oi-icon").length).toBeGreaterThan(5);
   });
@@ -148,7 +150,6 @@ describe("Sidebar rendered with the kit Sidebar family", () => {
     const user = userEvent.setup();
     render(<Harness />);
     const navEl = await screen.findByRole("navigation", { name: "Main navigation" });
-    await user.click(within(navEl).getByRole("button", { name: "OmniProxy", exact: true }));
     await user.click(within(navEl).getAllByRole("button", { name: "Pin item" })[0]);
     expect(within(navEl).getByRole("button", { name: "Pinned", exact: true })).not.toBeNull();
     expect(JSON.parse(localStorage.getItem("sidebar-pinned-items")!).length).toBe(1);

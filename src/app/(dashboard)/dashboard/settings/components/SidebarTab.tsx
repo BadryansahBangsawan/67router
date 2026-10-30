@@ -44,6 +44,8 @@ import {
   SIDEBAR_PRESETS,
   PROTECTED_SIDEBAR_ITEM_IDS,
   applySectionOrder,
+  migrateSidebarItemOrder,
+  migrateSidebarSectionIds,
   applyItemOrder,
   HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY,
   isSidebarSectionHideable,
@@ -453,14 +455,10 @@ export default function SidebarTab() {
         setHiddenSidebarGroupLabels(
           normalizeHiddenSidebarGroupLabels(data?.[HIDDEN_SIDEBAR_GROUP_LABELS_SETTING_KEY])
         );
-        setSectionOrder(
-          Array.isArray(data?.[SIDEBAR_SECTION_ORDER_KEY]) ? data[SIDEBAR_SECTION_ORDER_KEY] : []
-        );
-        setItemOrder(
-          data?.[SIDEBAR_ITEM_ORDER_KEY] && typeof data[SIDEBAR_ITEM_ORDER_KEY] === "object"
-            ? data[SIDEBAR_ITEM_ORDER_KEY]
-            : {}
-        );
+        // Saved orders may predate sidebar v2: fold legacy section ids into the v2 ones, so the
+        // next save writes v2 ids only.
+        setSectionOrder(migrateSidebarSectionIds(data?.[SIDEBAR_SECTION_ORDER_KEY]));
+        setItemOrder(migrateSidebarItemOrder(data?.[SIDEBAR_ITEM_ORDER_KEY]));
         setActivePreset(data?.[SIDEBAR_PRESET_KEY] ?? null);
         setShowDebug(data?.debugMode === true);
         setRadarAdminUrl(data?.radarAdminUrl ?? null);

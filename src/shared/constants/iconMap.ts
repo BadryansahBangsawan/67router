@@ -347,6 +347,8 @@ import {
 
 // F4 (Task 41) — picks that the F4 sweep block above does not import (KEA-7886).
 import { ArrowBigUpDash, Blend } from "lucide-react";
+// 67router sidebar v2: design-specific nav glyphs (Models, Request logs, Audit).
+import { Boxes, FileClock, ScrollText } from "lucide-react";
 
 /**
  * Icon name (the Material Symbols vocabulary the screens use) → Lucide icon. Every name in use
@@ -427,6 +429,10 @@ export const ICON_MAP: Record<string, LucideIcon> = {
   database: Database,
   storage: Database,
   // ── sidebar sections (src/shared/constants/sidebarVisibility/sections.ts) ──
+  // 67router sidebar v2 — own names so the existing category/article/manage_history picks stay.
+  nav_models: Boxes,
+  nav_request_logs: ScrollText,
+  nav_audit: FileClock,
   account_balance_wallet: Wallet,
   account_tree: Network,
   admin_panel_settings: ShieldCheck,

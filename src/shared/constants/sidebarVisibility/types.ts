@@ -124,9 +124,16 @@ export type AlwaysVisibleSidebarItemId = "proxy";
 
 export type SidebarItemId = HideableSidebarItemId | AlwaysVisibleSidebarItemId;
 
+/** Sidebar v2 (67router) sections, plus the synthetic "pinned" items section. */
 export type SidebarSectionId =
+  "pinned" | "routing" | "optimize" | "agents" | "access" | "observe" | "system";
+
+/**
+ * Section ids saved before sidebar v2. Still accepted on load / save and migrated with
+ * `migrateSidebarSectionId()` (sidebarVisibility/legacy.ts).
+ */
+export type LegacySidebarSectionId =
   | "home"
-  | "pinned"
   | "omni-proxy"
   | "analytics"
   | "costs"

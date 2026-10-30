@@ -1,5 +1,11 @@
 export * from "./sidebarVisibility/types";
+export * from "./sidebarVisibility/legacy";
 export { COMPRESSION_CONTEXT_GROUP, SIDEBAR_SECTIONS } from "./sidebarVisibility/sections";
+
+import {
+  migrateHiddenSidebarSectionIds,
+  migrateSidebarSectionIds,
+} from "./sidebarVisibility/legacy";
 
 import { SIDEBAR_SECTIONS } from "./sidebarVisibility/sections";
 import { HIDEABLE_SIDEBAR_ITEM_IDS } from "./sidebarVisibility/types";
@@ -72,7 +78,8 @@ export function normalizeHiddenSidebarSections(value: unknown): SidebarSectionId
   if (!Array.isArray(value)) return [];
 
   const hidden = new Set<SidebarSectionId>();
-  for (const id of value) {
+  // Pre-v2 section ids are folded into their v2 section first (see sidebarVisibility/legacy.ts).
+  for (const id of migrateHiddenSidebarSectionIds(value)) {
     if (typeof id === "string" && HIDEABLE_SIDEBAR_SECTION_IDS.includes(id as SidebarSectionId)) {
       hidden.add(id as SidebarSectionId);
     }
@@ -130,20 +137,32 @@ export function resolveRuntimeSidebarSections(
   if (!radarAdminUrl) return [...sections];
 
   return sections.map((section) => {
-    if (section.id !== "costs") return section;
+    // Sidebar v2: Radar lives in Observe → "Costs" sub-group; the admin entry goes right after it.
+    if (section.id !== "observe") return section;
+    const adminItem = { ...RADAR_ADMIN_ITEM, href: radarAdminUrl };
+    const withoutAdmin = <T extends SidebarSectionChild>(list: readonly T[]) =>
+      list.filter((child) => !("id" in child && child.id === RADAR_ADMIN_ITEM.id));
+    const insertAfterRadar = (list: SidebarItemDefinition[]) => {
+      const radarIndex = list.findIndex((child) => child.id === "radar");
+      if (radarIndex < 0) return null;
+      const next = [...list];
+      next.splice(radarIndex + 1, 0, adminItem);
+      return next;
+    };
 
-    const children = section.children.filter(
-      (child) => !("id" in child && child.id === RADAR_ADMIN_ITEM.id)
-    );
-    const radarIndex = children.findIndex((child) => !("type" in child) && child.id === "radar");
-    const insertionIndex = radarIndex >= 0 ? radarIndex + 1 : children.length;
-    const resolvedChildren = [...children];
-    resolvedChildren.splice(insertionIndex, 0, {
-      ...RADAR_ADMIN_ITEM,
-      href: radarAdminUrl,
+    let inserted = false;
+    const children = withoutAdmin(section.children).map((child) => {
+      if (inserted || !("type" in child) || child.type !== "group") return child;
+      const items = insertAfterRadar(withoutAdmin(child.items) as SidebarItemDefinition[]);
+      if (!items) return child;
+      inserted = true;
+      return { ...child, items };
     });
-
-    return { ...section, children: resolvedChildren };
+    if (!inserted) {
+      const flat = insertAfterRadar(children as SidebarItemDefinition[]);
+      return { ...section, children: flat ?? [...children, adminItem] };
+    }
+    return { ...section, children };
   });
 }
 
@@ -294,7 +313,8 @@ export function applySectionOrder(
 ): SidebarSectionDefinition[] {
   if (order.length === 0) return [...sections];
   const knownIds = new Set(sections.map((s) => s.id));
-  const validOrder = order.filter((id) => knownIds.has(id));
+  // A saved order may still use pre-v2 section ids.
+  const validOrder = migrateSidebarSectionIds(order).filter((id) => knownIds.has(id));
   const orderMap = new Map(validOrder.map((id, i) => [id, i]));
   return [...sections].sort((a, b) => {
     const ai = orderMap.get(a.id) ?? validOrder.length + sections.indexOf(a);

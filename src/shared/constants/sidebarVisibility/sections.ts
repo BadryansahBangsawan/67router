@@ -822,74 +822,232 @@ const HELP_ITEMS: readonly SidebarItemDefinition[] = [
   },
 ];
 
-// ─── Sections ────────────────────────────────────────────────────────────────
+// ─── Catalog ─────────────────────────────────────────────────────────────────
+// Every item above, by id. The v2 sections below are composed from it, so an item keeps one
+// definition (id, href, i18n keys) wherever it is placed — saved hidden-item / pinned-item ids
+// and the i18n labels stay valid across the information-architecture change.
+
+const LEGACY_GROUPS: readonly SidebarItemGroup[] = [
+  COMPRESSION_CONTEXT_GROUP,
+  TOOLS_GROUP,
+  INTEGRATIONS_GROUP,
+  LOGS_GROUP,
+  SYSTEM_GROUP,
+  AUDIT_GROUP,
+  GAMIFICATION_GROUP,
+  BATCH_GROUP,
+];
+
+const ITEM_CATALOG: ReadonlyMap<string, SidebarItemDefinition> = new Map(
+  [
+    ...HOME_ITEMS,
+    ...OMNI_PROXY_ITEMS,
+    PROXY_ITEM,
+    ...ANALYTICS_ITEMS,
+    ...MONITORING_ITEMS,
+    ...COSTS_ITEMS,
+    ...DEVTOOLS_ITEMS,
+    MCP_ITEM,
+    ...(AGENTIC_FEATURES_ITEMS as readonly SidebarItemDefinition[]),
+    ...OTHER_FEATURES_ITEMS,
+    ...CONFIGURATION_ITEMS,
+    ...HELP_ITEMS,
+    ...LEGACY_GROUPS.flatMap((g) => g.items),
+  ].map((item) => [item.id, item])
+);
+
+/**
+ * Sidebar v2 glyphs (67router design). Only the icon changes; labels keep their i18n keys so the
+ * 66 translated catalogs keep working (copy changes belong to the rebrand pass).
+ */
+const V2_ICONS: Partial<Record<string, string>> = {
+  home: "dashboard",
+  providers: "dns",
+  combos: "network_node",
+  "model-catalog": "nav_models",
+  cache: "database",
+  translator: "translate",
+  "cli-agents": "smart_toy",
+  skills: "extension",
+  "api-manager": "vpn_key",
+  endpoints: "lan",
+  analytics: "monitor_heart",
+  costs: "analytics",
+  logs: "nav_request_logs",
+  health: "shield",
+  audit: "nav_audit",
+  proxy: "public",
+};
+
+function item(id: string): SidebarItemDefinition {
+  const found = ITEM_CATALOG.get(id);
+  if (!found) throw new Error(`sidebar catalog has no item "${id}"`);
+  const icon = V2_ICONS[id];
+  return icon ? { ...found, icon } : found;
+}
+
+function group(
+  id: string,
+  titleKey: string,
+  titleFallback: string,
+  ids: readonly string[]
+): SidebarItemGroup {
+  return { type: "group", id, titleKey, titleFallback, items: ids.map(item) };
+}
+
+// ─── Sections (sidebar v2) ───────────────────────────────────────────────────
+// Six groups: Routing, Optimize, Agents, Access, Observe, System. Each starts with the design's
+// headline entries as flat rows; every other existing page stays reachable from a collapsible
+// sub-group of the closest section (no route was removed). Legacy section ids are mapped onto
+// these in sidebarVisibility/legacy.ts so saved preferences keep loading.
 
 export const SIDEBAR_SECTIONS: readonly SidebarSectionDefinition[] = [
   {
-    id: "home",
-    titleKey: "home",
-    titleFallback: "Home",
-    children: HOME_ITEMS,
-    showTitle: false,
-  },
-  {
-    id: "omni-proxy",
-    titleKey: "omniProxySection",
-    titleFallback: "OmniProxy",
+    id: "routing",
+    titleKey: "routingSection",
+    titleFallback: "Routing",
+    defaultPinned: true,
     children: [
-      ...OMNI_PROXY_ITEMS,
-      COMPRESSION_CONTEXT_GROUP,
-      TOOLS_GROUP,
-      INTEGRATIONS_GROUP,
-      PROXY_ITEM,
+      item("home"),
+      item("providers"),
+      item("combos"),
+      item("model-catalog"),
+      group("routing-more", "routingMoreGroup", "More routing", [
+        "combos-live",
+        "quota",
+        "costs-quota-share",
+        "embedded-services",
+      ]),
     ],
   },
   {
-    id: "analytics",
-    titleKey: "analyticsSection",
-    titleFallback: "Analytics",
-    children: ANALYTICS_ITEMS,
+    id: "optimize",
+    titleKey: "optimizeSection",
+    titleFallback: "Optimize",
+    defaultPinned: true,
+    children: [
+      {
+        ...COMPRESSION_CONTEXT_GROUP,
+        titleKey: "contextCompressionGroup",
+        titleFallback: "Context & compression",
+      },
+      item("cache"),
+      item("translator"),
+      group("optimize-more", "optimizeMoreGroup", "More tools", [
+        "media",
+        "playground",
+        "search-tools",
+        "chaos-config",
+      ]),
+    ],
   },
   {
-    id: "costs",
-    titleKey: "costsSection",
-    titleFallback: "Costs",
-    children: COSTS_ITEMS,
+    id: "agents",
+    titleKey: "agents",
+    titleFallback: "Agents",
+    defaultPinned: true,
+    children: [
+      item("cli-agents"),
+      item("skills"),
+      group("tools", TOOLS_GROUP.titleKey, TOOLS_GROUP.titleFallback, [
+        "cli-code",
+        "acp-agents",
+        "cloud-agents",
+        "conductor",
+        "orchestration",
+        "agent-bridge",
+        "traffic-inspector",
+        "discovery",
+      ]),
+      group("agents-more", "agentsMoreGroup", "More agent features", [
+        "agent-skills",
+        "memory",
+        "plugins",
+      ]),
+    ],
   },
   {
-    id: "monitoring",
-    titleKey: "monitoringSection",
-    titleFallback: "Monitoring",
-    children: [...MONITORING_ITEMS, LOGS_GROUP, AUDIT_GROUP, SYSTEM_GROUP],
+    id: "access",
+    titleKey: "accessSection",
+    titleFallback: "Access",
+    defaultPinned: true,
+    children: [
+      item("api-manager"),
+      item("endpoints"),
+      group("integrations", INTEGRATIONS_GROUP.titleKey, INTEGRATIONS_GROUP.titleFallback, [
+        "mcp",
+        "a2a",
+        "api-endpoints",
+        "webhooks",
+        "log-export",
+      ]),
+    ],
   },
   {
-    id: "devtools",
-    titleKey: "devtoolsSection",
-    titleFallback: "Dev Tools",
-    children: DEVTOOLS_ITEMS,
+    id: "observe",
+    titleKey: "observeSection",
+    titleFallback: "Observe",
+    defaultPinned: true,
+    children: [
+      item("analytics"),
+      item("costs"),
+      item("logs"),
+      item("health"),
+      item("audit"),
+      group("analytics-more", "analyticsMoreGroup", "More analytics", [
+        "analytics-combo-health",
+        "analytics-utilization",
+        "analytics-compression",
+        "analytics-search",
+        "analytics-evals",
+        "provider-stats",
+      ]),
+      group("costs-more", "costsSection", "Costs", [
+        "costs-pricing",
+        "costs-budget",
+        "costs-free-tiers",
+        "free-provider-rankings",
+        "radar",
+      ]),
+      // Was the "logs" group; renamed because the "logs" item now sits beside it as a flat row
+      // (a section's children share one id space for ordering). Legacy id mapped in legacy.ts.
+      group("logs-more", "moreLogsGroup", "More logs", [
+        "activity",
+        "logs-proxy",
+        "logs-console",
+        "logs-timeline",
+        "conversations",
+      ]),
+      group("system", "runtime", "Runtime", [
+        "runtime",
+        "resilience-connections",
+        "resilience-cooldowns",
+      ]),
+      // Was the "audit" group (same reason as "logs-more").
+      group("audit-more", "protocolAuditGroup", "Protocol audit", ["audit-mcp", "audit-a2a"]),
+    ],
   },
   {
-    id: "agentic-features",
-    titleKey: "agenticFeaturesSection",
-    titleFallback: "Agentic Features",
-    children: AGENTIC_FEATURES_ITEMS,
-  },
-  {
-    id: "other-features",
-    titleKey: "otherFeaturesSection",
-    titleFallback: "Other Features",
-    children: [GAMIFICATION_GROUP, ...OTHER_FEATURES_ITEMS, BATCH_GROUP],
-  },
-  {
-    id: "configuration",
-    titleKey: "configurationSection",
-    titleFallback: "Configuration",
-    children: CONFIGURATION_ITEMS,
-  },
-  {
-    id: "help",
-    titleKey: "helpSection",
-    titleFallback: "Help",
-    children: HELP_ITEMS,
+    id: "system",
+    titleKey: "systemSection",
+    titleFallback: "System",
+    defaultPinned: true,
+    children: [
+      item("proxy"),
+      group(
+        "configuration",
+        "settings",
+        "Settings",
+        CONFIGURATION_ITEMS.map((i) => i.id)
+      ),
+      group(
+        "help",
+        "helpSection",
+        "Help",
+        HELP_ITEMS.map((i) => i.id)
+      ),
+      GAMIFICATION_GROUP,
+      BATCH_GROUP,
+    ],
   },
 ] as const;

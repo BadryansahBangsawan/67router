@@ -17,7 +17,12 @@ import { fileURLToPath } from "node:url";
 // `<aside class="ci-sidebar">`: the item label carries no colour class and inherits the kit's
 // `.ci-sidebar__menu-button` ink, the subtitle keeps `text-text-muted`, and the real background is
 // the kit sidebar's (`.ci-sidebar` background). Both the legacy `--color-sidebar` and the kit
-// sidebar background are checked; the active row (accent ink on the accent fill) too.
+// sidebar background are checked; the active row too.
+//
+// 67router (sidebar v2): rows are one line (the subtitle moved to the tooltip), so the muted
+// texts checked are the section label and the sub-group header; the token chain now goes
+// through the 67router palette layer in globals.css, which shadows the kit tokens (same
+// selectors, later in source), and the active row is the white pill (--ci-sidebar-active-*).
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const read = (relative: string) => fs.readFileSync(path.join(root, relative), "utf8");
@@ -47,8 +52,9 @@ function kitRuleVar(selector: string, prop: string): string {
   return match[1];
 }
 
-function cssBlock(source: string, selector: string): Record<string, string> {
-  const start = source.indexOf(selector);
+function cssBlock(source: string, selector: string, nth = 0): Record<string, string> {
+  let start = -1;
+  for (let i = 0; i <= nth; i++) start = source.indexOf(selector, start + 1);
   assert(start >= 0, `no "${selector}" block`);
   const body = source.slice(start, source.indexOf("\n}", start));
   const out: Record<string, string> = {};
@@ -67,17 +73,42 @@ function resolveHex(name: string, scopes: Record<string, string>[]): string {
   return value.toLowerCase();
 }
 
-const kitMenuInk = kitRuleVar(".ci-sidebar__menu-button", "color");
+// The 67router adapter re-inks the rows with the sidebar token (globals.css).
+const kitMenuInk = "--ci-sidebar-fg";
+assert.match(
+  globals,
+  /\.ci-sidebar__menu-button \{[^}]*color: var\(--ci-sidebar-fg\);/,
+  "the adapter sets the row ink"
+);
 const kitSidebarBg = kitRuleVar(".ci-sidebar", "background");
 
+const R67_LIGHT = ":root,\n.ci-theme {\n  --r67-page";
+const R67_DARK =
+  ':root[data-theme="dark"],\n.ci-theme[data-theme="dark"],\n[data-theme="dark"] .ci-theme {\n  --r67-page';
+const R67_MAPPING = ':root,\n.ci-theme,\n:root[data-theme="dark"]';
+const R67_DARK_OVERRIDES =
+  ':root[data-theme="dark"],\n.ci-theme[data-theme="dark"],\n[data-theme="dark"] .ci-theme {\n  --ci-sidebar-active-bg';
+
 function themeTokens(theme: "light" | "dark"): Record<string, string> {
+  const bridge = cssBlock(globals, ":root {\n  --desktop-safe-top");
+  const mapping = cssBlock(globals, R67_MAPPING);
   const light = [
-    cssBlock(globals, ":root {\n  --desktop-safe-top"),
+    bridge,
+    mapping,
+    cssBlock(globals, R67_LIGHT),
     cssBlock(kitTokens, ":root,\n.ci-theme {"),
   ];
   const scopes =
     theme === "dark"
-      ? [cssBlock(globals, ".dark {"), cssBlock(kitTokens, ':root[data-theme="dark"]'), ...light]
+      ? [
+          cssBlock(globals, R67_DARK_OVERRIDES),
+          cssBlock(globals, ".dark {"),
+          bridge,
+          mapping,
+          cssBlock(globals, R67_DARK),
+          cssBlock(kitTokens, ':root[data-theme="dark"]'),
+          ...light,
+        ]
       : light;
   return Object.fromEntries(
     [
@@ -86,8 +117,10 @@ function themeTokens(theme: "light" | "dark"): Record<string, string> {
       "--color-text-muted",
       kitMenuInk,
       kitSidebarBg,
-      "--ci-color-accent",
-      "--ci-color-accent-foreground",
+      "--ci-sidebar-bg",
+      "--ci-sidebar-fg",
+      "--ci-sidebar-active-bg",
+      "--ci-sidebar-active-fg",
     ].map((t) => [t, resolveHex(t, scopes)])
   );
 }
@@ -113,20 +146,24 @@ function contrast(fg: string, alpha: number, bg: string): number {
 const themes = { light: themeTokens("light"), dark: themeTokens("dark") };
 // The item label must not override the kit ink (an override would escape this check and the
 // kit's hover/active colours).
-const labelLine = sidebarSource.split("\n").find((line) => line.includes('"truncate text-sm"'));
-assert(labelLine, 'Sidebar.tsx no longer contains the item label marker "truncate text-sm"');
+const labelLine = sidebarSource
+  .split("\n")
+  .find((line) => line.includes('"truncate text-[13.5px]"'));
+assert(labelLine, 'Sidebar.tsx no longer contains the item label marker "truncate text-[13.5px]"');
 test("the item label inherits the kit menu-button ink (no text-text-* override)", () => {
   assert.doesNotMatch(labelLine, TEXT_CLASS, labelLine.trim());
 });
 const inactiveItem = { token: kitMenuInk, alpha: 1 };
-const subtitle = classOn('"truncate text-[10px] text-text-muted"');
+const sectionLabel = classOn("tracking-[0.04em] uppercase text-text-muted");
+const groupHeader = classOn("text-[13px] font-normal text-text-muted");
 
 for (const [theme, palette] of Object.entries(themes)) {
   test(`nested sidebar item text meets WCAG AA on the ${theme} sidebar background`, () => {
-    for (const background of ["--color-sidebar", kitSidebarBg]) {
+    for (const background of ["--color-sidebar", kitSidebarBg, "--ci-sidebar-bg"]) {
       for (const [what, cls] of [
         ["inactive item label", inactiveItem],
-        ["item subtitle", subtitle],
+        ["section label", sectionLabel],
+        ["sub-group header", groupHeader],
       ] as const) {
         const ratio = contrast(palette[cls.token], cls.alpha, palette[background]);
         assert(
@@ -138,12 +175,8 @@ for (const [theme, palette] of Object.entries(themes)) {
     }
   });
 
-  test(`the active row (accent ink on the accent fill) meets WCAG AA in ${theme}`, () => {
-    const ratio = contrast(
-      palette["--ci-color-accent-foreground"],
-      1,
-      palette["--ci-color-accent"]
-    );
+  test(`the active row (the white pill) meets WCAG AA in ${theme}`, () => {
+    const ratio = contrast(palette["--ci-sidebar-active-fg"], 1, palette["--ci-sidebar-active-bg"]);
     assert(ratio >= 4.5, `active row is ${ratio.toFixed(2)}:1 in ${theme}`);
   });
 }

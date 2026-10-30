@@ -16,19 +16,25 @@ function sectionItems(sectionId: string) {
 
 test("HIDEABLE_SIDEBAR_ITEM_IDS does NOT contain costs-quota-plans (retired)", () => {
   assert.ok(
-    !(sidebarVisibility.HIDEABLE_SIDEBAR_ITEM_IDS as readonly string[]).includes("costs-quota-plans"),
+    !(sidebarVisibility.HIDEABLE_SIDEBAR_ITEM_IDS as readonly string[]).includes(
+      "costs-quota-plans"
+    ),
     "costs-quota-plans must have been removed from HIDEABLE_SIDEBAR_ITEM_IDS"
   );
 });
 
+// Sidebar v2: the Costs section folded into Observe (costs + the "Costs" sub-group).
 test("costs section does not include costs-quota-plans item (retired)", () => {
-  const items = sectionItems("costs");
+  const items = sectionItems("observe");
   const ids = items.map((i) => i.id);
   assert.ok(!ids.includes("costs-quota-plans"), "costs section must NOT include costs-quota-plans");
 });
 
 test("costs section does NOT contain costs-quota-share (removed from section, kept in HIDEABLE list)", () => {
-  const items = sectionItems("costs");
+  const items = sectionItems("observe");
   const ids = items.map((i) => i.id);
-  assert.ok(!ids.includes("costs-quota-share"), "costs-quota-share was removed from section children");
+  assert.ok(
+    !ids.includes("costs-quota-share"),
+    "costs-quota-share was removed from section children"
+  );
 });

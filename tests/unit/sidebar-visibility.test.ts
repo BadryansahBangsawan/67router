@@ -14,78 +14,104 @@ function sectionItems(sectionId: string) {
   return sidebarVisibility.getSectionItems(section);
 }
 
-test("system sidebar items: monitoring has activity at top then logs/audit/system groups", () => {
-  const items = sectionItems("monitoring");
-  assert.deepEqual(
-    items.map((item) => item.id),
-    [
-      "activity",
-      "logs",
-      "logs-proxy",
-      "logs-console",
-      "logs-timeline",
-      "conversations",
-      "audit",
-      "audit-mcp",
-      "audit-a2a",
-      "health",
-      "runtime",
-      "resilience-connections",
-      "resilience-cooldowns",
-    ]
-  );
+// Sidebar v2 (67router): the full item order of each section — every page of the old
+// OmniProxy / Analytics / Costs / Monitoring / Dev Tools / Agentic / Other / Configuration /
+// Help sections, regrouped. Pins the IA so a page cannot silently drop out of the navigation.
+test("v2 sidebar sections hold every page, in this order", () => {
+  const ids = (sectionId: string) => sectionItems(sectionId).map((item) => item.id);
+  assert.deepEqual(ids("routing"), [
+    "home",
+    "providers",
+    "combos",
+    "model-catalog",
+    "combos-live",
+    "quota",
+    "costs-quota-share",
+    "embedded-services",
+  ]);
+  assert.deepEqual(ids("optimize"), [
+    "context-settings",
+    "context-combos",
+    "context-caveman",
+    "context-rtk",
+    "context-headroom",
+    "context-session-dedup",
+    "context-ccr",
+    "context-llmlingua",
+    "context-lite",
+    "context-aggressive",
+    "context-ultra",
+    "context-omniglyph",
+    "compression-studio",
+    "compression-exclusions",
+    "cache",
+    "translator",
+    "media",
+    "playground",
+    "search-tools",
+    "chaos-config",
+  ]);
+  assert.deepEqual(ids("agents"), [
+    "cli-agents",
+    "skills",
+    "cli-code",
+    "acp-agents",
+    "cloud-agents",
+    "conductor",
+    "orchestration",
+    "agent-bridge",
+    "traffic-inspector",
+    "discovery",
+    "agent-skills",
+    "memory",
+    "plugins",
+  ]);
+  assert.deepEqual(ids("access"), [
+    "api-manager",
+    "endpoints",
+    "mcp",
+    "a2a",
+    "api-endpoints",
+    "webhooks",
+    "log-export",
+  ]);
+  assert.deepEqual(ids("observe"), [
+    "analytics",
+    "costs",
+    "logs",
+    "health",
+    "audit",
+    "analytics-combo-health",
+    "analytics-utilization",
+    "analytics-compression",
+    "analytics-search",
+    "analytics-evals",
+    "provider-stats",
+    "costs-pricing",
+    "costs-budget",
+    "costs-free-tiers",
+    "free-provider-rankings",
+    "radar",
+    "activity",
+    "logs-proxy",
+    "logs-console",
+    "logs-timeline",
+    "conversations",
+    "runtime",
+    "resilience-connections",
+    "resilience-cooldowns",
+    "audit-mcp",
+    "audit-a2a",
+  ]);
+  assert.deepEqual(ids("system").slice(0, 2), ["proxy", "settings-general"]);
+  assert.ok(ids("system").includes("settings-sidebar"));
 });
 
-test("primary sidebar items place limits after cache", () => {
-  const items = sectionItems("omni-proxy");
-  assert.deepEqual(
-    items.map((item) => item.id),
-    [
-      "endpoints",
-      "api-manager",
-      "providers",
-      "model-catalog",
-      "embedded-services",
-      "combos",
-      "combos-live",
-      "quota",
-      "costs-quota-share",
-      "context-settings",
-      "context-combos",
-      "context-caveman",
-      "context-rtk",
-      "context-headroom",
-      "context-session-dedup",
-      "context-ccr",
-      "context-llmlingua",
-      "context-lite",
-      "context-aggressive",
-      "context-ultra",
-      "context-omniglyph",
-      "compression-studio",
-      "compression-exclusions",
-      "cli-code",
-      "cli-agents",
-      "acp-agents",
-      "cloud-agents",
-      "conductor",
-      "orchestration", // +1: orchestration (PR-2 of the orchestration canvas)
-      "agent-bridge",
-      "traffic-inspector",
-      "discovery",
-      "api-endpoints",
-      "webhooks",
-      "log-export",
-      "proxy",
-    ]
-  );
-});
-
-test("context sidebar section sits between primary and cli", () => {
+test("context sidebar group leads the Optimize section", () => {
   const sectionIds = sidebarVisibility.SIDEBAR_SECTIONS.map((section) => section.id);
-  assert.deepEqual(sectionIds.slice(0, 4), ["home", "omni-proxy", "analytics", "costs"]);
+  assert.deepEqual(sectionIds.slice(0, 2), ["routing", "optimize"]);
 
-  const items = sectionItems("omni-proxy");
+  const items = sectionItems("optimize");
   assert.deepEqual(
     items
       .filter((item) => item.id.startsWith("context-"))
@@ -128,7 +154,10 @@ test("sidebar visibility drops stale entries from saved settings", () => {
 });
 
 test("help sidebar exposes changelog after docs and issues", () => {
-  const items = sectionItems("help");
+  // Sidebar v2: Help is a sub-group of System.
+  const items = sectionItems("system").filter((item) =>
+    ["docs", "issues", "changelog"].includes(item.id)
+  );
   assert.deepEqual(
     items.map((item) => ({
       id: item.id,
@@ -149,9 +178,9 @@ test("help sidebar exposes changelog after docs and issues", () => {
 });
 
 test("plugins has a discoverable sidebar entry (#3656 follow-up)", async () => {
-  const items = sectionItems("agentic-features");
+  const items = sectionItems("agents"); // sidebar v2 (ex Agentic Features)
   const plugins = items.find((item) => item.id === "plugins");
-  assert.ok(plugins, "expected a plugins item in the agentic-features section");
+  assert.ok(plugins, "expected a plugins item in the agents section");
   assert.equal(plugins.href, "/dashboard/plugins");
   assert.equal(sidebarVisibility.HIDEABLE_SIDEBAR_ITEM_IDS.includes("plugins"), true);
 
@@ -165,8 +194,8 @@ test("plugins has a discoverable sidebar entry (#3656 follow-up)", async () => {
   assert.match(pluginsPage, /scanForPlugins|installedTab|fetchPlugins/i);
 });
 
-test("model catalog is available from the OmniProxy sidebar and can be hidden", () => {
-  const item = sectionItems("omni-proxy").find((candidate) => candidate.id === "model-catalog");
+test("model catalog is available from the Routing sidebar and can be hidden", () => {
+  const item = sectionItems("routing").find((candidate) => candidate.id === "model-catalog");
   assert.ok(item, "expected the model catalog sidebar item to exist");
   assert.equal(item.href, "/dashboard/models");
   assert.equal(sidebarVisibility.HIDEABLE_SIDEBAR_ITEM_IDS.includes("model-catalog"), true);

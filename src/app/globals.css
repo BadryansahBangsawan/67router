@@ -1028,6 +1028,59 @@ html[dir="rtl"] :where(.react-flow) {
   }
 }
 
+/* === 67router sidebar v2 (adapter; never patch packages/ui-kit) === */
+@layer components {
+  /* The sidebar carries its own fill (#FAFAFA / #111111), not the page colour. */
+  .ci-sidebar {
+    background: var(--ci-sidebar-bg);
+    border-color: var(--ci-color-border);
+  }
+  /* Brand row: 60 px, hairline under it — lines up with the 60 px topbar. */
+  .ci-sidebar__header.r67-sidebar-header {
+    height: 60px;
+    padding-block: 0;
+    padding-inline: 1.25rem 1rem;
+    border-bottom: var(--ci-border-default) solid var(--ci-color-border);
+  }
+  .ci-sidebar[data-state="collapsed"] .ci-sidebar__header.r67-sidebar-header {
+    padding-inline: 0.5rem;
+  }
+  .ci-sidebar__content {
+    padding: 0.875rem 0.75rem 0.5rem;
+  }
+  .ci-sidebar__group-label {
+    height: auto;
+  }
+  .ci-sidebar__menu {
+    gap: 1px;
+  }
+  /* Rows: 30 px, secondary ink, no lime gradient on hover. */
+  .ci-sidebar__menu-button {
+    min-height: 30px;
+    gap: 0.625rem;
+    padding-inline: 0.6875rem;
+    border: var(--ci-border-default) solid transparent;
+    color: var(--ci-sidebar-fg);
+    font-weight: var(--ci-font-weight-regular);
+  }
+  .ci-sidebar__menu-button:hover {
+    color: var(--ci-color-heading);
+    background: var(--ci-color-neutral-tint);
+  }
+  /* Active row: a white pill with a hairline border (light) / the subtle fill (dark). */
+  .ci-sidebar__menu-button[data-active="true"],
+  .ci-sidebar__branch .ci-sidebar__menu-button[data-active="true"] {
+    color: var(--ci-sidebar-active-fg);
+    background: var(--ci-sidebar-active-bg);
+    border-color: var(--ci-color-border);
+    box-shadow: var(--ci-shadow-xs);
+    font-weight: var(--ci-font-weight-medium);
+  }
+  .ci-sidebar__footer {
+    border-color: var(--ci-color-border);
+  }
+}
+
 /* === OmniRoute kit extensions: trilha C === */
 @layer components {
   /* Native <select> fallback for callers that pass <option> children (Select adapter). */
