@@ -1116,6 +1116,22 @@ html[dir="rtl"] :where(.react-flow) {
   .ci-page-header__description {
     font-size: var(--ci-font-size-sm);
   }
+  /* Section header: 15 px semibold (between the 14 px card title and the 26 px page title);
+     the kit default is font-size-lg (18 px). */
+  .ci-section-header__title {
+    font-size: 0.9375rem;
+  }
+  /* Kit Stat / StatRow values: the 28/600 KPI spec (same as KpiCell) in Geist with tabular
+     figures, instead of the kit's 32–48 px regular display serif. */
+  .ci-stat__value,
+  .ci-stat[data-label-variant="eyebrow"] .ci-stat__value {
+    font-family: var(--ci-font-ui);
+    font-size: 1.75rem;
+    font-weight: var(--ci-font-weight-semibold);
+    line-height: 2.25rem;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+  }
   .ci-display,
   .ci-dashboard-display {
     font-weight: var(--ci-font-weight-semibold);

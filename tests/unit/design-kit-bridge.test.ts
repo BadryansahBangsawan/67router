@@ -440,3 +440,12 @@ test("the primary Badge tone is a neutral chip; the fallback tone is the only or
   assert.doesNotMatch(css, /:root\[data-theme="dark"\] \.ci-badge\[data-tone="primary"\]/);
   assert.match(css, /\.ci-badge\[data-tone="fallback"\] \{\s*color: var\(--color-fallback\);/);
 });
+
+test("kit Stat values follow the 28/600 KPI spec and section headers use a 15 px title", () => {
+  const stat = block(".ci-stat__value,");
+  assert.match(stat, /font-family: var\(--ci-font-ui\);/);
+  assert.match(stat, /font-size: 1\.75rem;/);
+  assert.match(stat, /font-weight: var\(--ci-font-weight-semibold\);/);
+  assert.match(stat, /letter-spacing: -0\.03em;/);
+  assert.match(css, /\.ci-section-header__title \{\s*font-size: 0\.9375rem;/);
+});
