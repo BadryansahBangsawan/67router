@@ -11,6 +11,7 @@ import {
 } from "@omniroute/ui-kit/table";
 import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import Select from "@/shared/components/Select";
 import { useTranslations } from "next-intl";
 
@@ -320,7 +321,7 @@ export default function A2ADashboardPage() {
 
   return (
     <div className="space-y-6">
-      <div className="grid overflow-hidden rounded-xl border border-border bg-surface md:grid-cols-2 xl:grid-cols-4">
+      <KpiStrip gridClassName="grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
         <StatCard label={t("health")} value={status?.status === "ok" ? t("ok") : "—"} />
         <StatCard label={t("totalTasks")} value={status?.tasks?.total || 0} />
         <StatCard label={t("activeStreams")} value={status?.tasks?.activeStreams || 0} />
@@ -330,7 +331,7 @@ export default function A2ADashboardPage() {
             status?.tasks?.lastTaskAt ? new Date(status.tasks.lastTaskAt).toLocaleTimeString() : "—"
           }
         />
-      </div>
+      </KpiStrip>
 
       <Card className="p-5">
         <h2 className="text-sm font-semibold mb-4">{t("taskStateOverview")}</h2>
@@ -599,14 +600,5 @@ export default function A2ADashboardPage() {
 }
 
 function StatCard({ label, value }: { label: string; value: string | number }) {
-  // One cell of a KPI strip (one bordered card split by hairline dividers): each cell draws its
-  // top/left border, pulled 1px out so the strip's own border hides the outer ones.
-  return (
-    <div className="-ml-px -mt-px border-l border-t border-border px-5 py-4">
-      <p className="text-[13px] text-text-muted">{label}</p>
-      <p className="mt-1.5 text-[22px] font-semibold leading-7 tracking-[-0.03em] tabular-nums">
-        {value}
-      </p>
-    </div>
-  );
+  return <KpiCell label={label} value={value} valueClassName="text-[22px] leading-7" />;
 }

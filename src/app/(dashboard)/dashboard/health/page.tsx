@@ -9,7 +9,7 @@ import { Progress } from "@omniroute/ui-kit/progress";
 import Button from "@/shared/components/Button";
 import Icon from "@/shared/components/Icon";
 import { Card } from "@/shared/components";
-import { KpiStrip } from "@/shared/components/analytics/KpiStrip";
+import { KpiStrip } from "@/shared/components/KpiStrip";
 import { AI_PROVIDERS } from "@/shared/constants/providers";
 import { getProviderDisplayName } from "@/lib/display/names";
 import { useProviderNodeMap, resolveProviderName } from "@/lib/display/useProviderNodeMap";

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { PageHeader } from "@omniroute/ui-kit/page-header";
 import Icon from "@/shared/components/Icon";
-import { KpiCell, KpiStrip } from "@/shared/components/analytics/KpiStrip";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { Button, Input, EmptyState, Select, Checkbox } from "@/shared/components";
 import { useNotificationStore } from "@/store/notificationStore";
 import { compareTr, matchesSearch } from "@/shared/utils/turkishText";

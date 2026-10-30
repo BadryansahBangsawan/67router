@@ -10,7 +10,7 @@ import Badge from "@/shared/components/Badge";
 import ProviderIcon from "@/shared/components/ProviderIcon";
 import { CliConceptCard, CliComparisonCard } from "@/shared/components/cli";
 import { useTranslations } from "next-intl";
-import { KpiCell, KpiStrip } from "../_r67/KpiStrip";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 
 interface AgentInfo {
   id: string;

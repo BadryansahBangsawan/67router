@@ -11,6 +11,7 @@ import {
 } from "@omniroute/ui-kit/table";
 import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import Input from "@/shared/components/Input";
 import Select from "@/shared/components/Select";
 import { useTranslations } from "next-intl";
@@ -395,12 +396,12 @@ export default function McpDashboardPage() {
 
   return (
     <div className="space-y-6">
-      <div className="grid overflow-hidden rounded-xl border border-border bg-surface md:grid-cols-2 xl:grid-cols-4">
+      <KpiStrip gridClassName="grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
         <StatCard label={t("processStatus")} value={status?.online ? t("online") : t("offline")} />
         <StatCard label={t("pid")} value={status?.heartbeat?.pid ?? "—"} />
         <StatCard label={t("sessionUptime")} value={runtimeUptime} />
         <StatCard label={t("lastHeartbeat")} value={heartbeatLabel} />
-      </div>
+      </KpiStrip>
 
       <Card className="p-5">
         <h2 className="text-sm font-semibold mb-4">{t("activity24h")}</h2>
@@ -683,14 +684,12 @@ function StatCard({
       </div>
     );
   }
-  // One cell of a KPI strip (one bordered card split by hairline dividers): each cell draws its
-  // top/left border, pulled 1px out so the strip's own border hides the outer ones.
   return (
-    <div className="-ml-px -mt-px min-h-[84px] border-l border-t border-border px-5 py-4">
-      <p className="text-[13px] text-text-muted">{label}</p>
-      <p className="mt-1.5 text-[22px] font-semibold leading-7 tracking-[-0.03em] tabular-nums">
-        {value}
-      </p>
-    </div>
+    <KpiCell
+      label={label}
+      value={value}
+      className="min-h-[84px]"
+      valueClassName="text-[22px] leading-7"
+    />
   );
 }

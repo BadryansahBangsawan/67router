@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Alert } from "@omniroute/ui-kit/alert";
-import { KpiCell, KpiStrip } from "../../_r67/KpiStrip";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { PageHeader, SectionHeader } from "@omniroute/ui-kit/page-header";
 import { Collapsible, SegmentedControl } from "@/shared/components";
 import Button from "@/shared/components/Button";

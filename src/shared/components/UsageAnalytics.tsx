@@ -27,7 +27,7 @@ import {
   CustomRangePicker,
   RequestCountByProviderDateTable,
 } from "./analytics";
-import { KpiStrip } from "./analytics/KpiStrip";
+import { KpiStrip } from "./KpiStrip";
 
 // ============================================================================
 // Main Component

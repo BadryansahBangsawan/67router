@@ -16,7 +16,7 @@ import Toggle from "@/shared/components/Toggle";
 import Button from "@/shared/components/Button";
 import Badge from "@/shared/components/Badge";
 import Select from "@/shared/components/Select";
-import { KpiCell, KpiStrip } from "../../_r67/KpiStrip";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { PageHeader as KitPageHeader } from "@omniroute/ui-kit/page-header";
 import { SAMPLE_BEFORE_TEXT, SAMPLE_PAGE_PNG_DATA_URI, SAMPLE_METRICS } from "./sampleData";
 

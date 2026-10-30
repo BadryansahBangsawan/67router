@@ -1,6 +1,6 @@
 "use client";
 
-import type { HTMLAttributes, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { cn } from "@/shared/utils/cn";
 
 const COLUMNS = {
@@ -12,23 +12,26 @@ const COLUMNS = {
 } as const;
 
 /**
- * 67router KPI row: ONE bordered card split into equal cells by hairline dividers. Every cell
- * draws its own left + top rule and the grid is pulled up/left by one pixel inside the clipped
- * card, so the dividers stay correct whatever the column count is at the current breakpoint.
+ * 67router KPI row: ONE bordered card split into equal cells by hairline dividers (instead of a
+ * row of separate cards). Every cell draws its own left + top rule; the grid is pulled up/left by
+ * one pixel inside the clipped card, so the first column and first row lose theirs and the
+ * dividers stay correct whatever the column count is at the current breakpoint.
  *
- * Page-local copy for the Optimize / Agents / Routing-extras pages; same API as the Observe
- * pages' strip so both can collapse into one shared component later.
+ * This is the one shared implementation: use it instead of copying the cell pattern into pages.
  */
 export function KpiStrip({
   children,
   columns = 4,
+  gridClassName,
   className,
   ...props
 }: {
   children: ReactNode;
   columns?: keyof typeof COLUMNS;
+  /** Overrides the responsive column classes picked by `columns`. */
+  gridClassName?: string;
   className?: string;
-} & Omit<HTMLAttributes<HTMLDivElement>, "children">) {
+} & Omit<React.HTMLAttributes<HTMLDivElement>, "children">) {
   return (
     <div
       className={cn("overflow-hidden rounded-card border border-border bg-surface", className)}
@@ -38,7 +41,7 @@ export function KpiStrip({
         className={cn(
           "-ml-px -mt-px grid",
           "[&>*]:border-l [&>*]:border-t [&>*]:border-border",
-          COLUMNS[columns]
+          gridClassName ?? COLUMNS[columns]
         )}
       >
         {children}

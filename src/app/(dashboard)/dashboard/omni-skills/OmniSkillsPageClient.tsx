@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { PageHeader } from "@omniroute/ui-kit/page-header";
-import { KpiCell, KpiStrip } from "../_r67/KpiStrip";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { Tabs, TabsList, TabsTrigger } from "@omniroute/ui-kit/tabs";
 import { SkillsConceptCard } from "@/shared/components";
 import Button from "@/shared/components/Button";

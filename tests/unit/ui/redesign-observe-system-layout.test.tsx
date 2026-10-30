@@ -8,7 +8,7 @@ import SettingsShell, {
   isSettingsNavItemActive,
 } from "@/app/(dashboard)/dashboard/settings/components/SettingsShell";
 import SettingsTemplate from "@/app/(dashboard)/dashboard/settings/template";
-import { KpiCell, KpiStrip } from "@/shared/components/analytics/KpiStrip";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { SIDEBAR_SECTIONS } from "@/shared/constants/sidebarVisibility";
 
 const navigation = vi.hoisted(() => ({ pathname: "/dashboard/settings/routing" }));

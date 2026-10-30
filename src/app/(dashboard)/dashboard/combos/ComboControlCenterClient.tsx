@@ -9,6 +9,7 @@ import { PageHeader } from "@omniroute/ui-kit/page-header";
 import Badge from "@/shared/components/Badge";
 import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import SegmentedControl from "@/shared/components/SegmentedControl";
 import { CardSkeleton } from "@/shared/components/Loading";
 import {
@@ -104,17 +105,7 @@ function shortId(value: string | null | undefined, fallback: string, max = 10): 
 }
 
 function metricValue(label: string, value: string, hint?: string) {
-  return (
-    // One cell of the KPI strip: the hairline dividers come from each cell's top/left border,
-    // pulled 1px out so the strip's own border hides the outer ones.
-    <div className="-ml-px -mt-px border-l border-t border-border px-5 py-4">
-      <p className="text-[13px] text-text-muted">{label}</p>
-      <p className="mt-1.5 text-[28px] font-semibold leading-8 tracking-[-0.03em] tabular-nums text-text-main">
-        {value}
-      </p>
-      {hint && <p className="mt-1.5 text-[12.5px] text-text-muted">{hint}</p>}
-    </div>
-  );
+  return <KpiCell label={label} value={value} footnote={hint} />;
 }
 
 function stateLabel(
@@ -386,7 +377,7 @@ export default function ComboControlCenterClient({ comboId }: { comboId: string 
         }
       />
 
-      <div className="grid overflow-hidden rounded-xl border border-border bg-surface md:grid-cols-2 xl:grid-cols-4">
+      <KpiStrip gridClassName="grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
         {metricValue(t("requests"), String(summary.totalRequests), t("rangeWindow", { range }))}
         {metricValue(t("success"), fmtPercent(summary.successRate), t("runtimeHealthBlend"))}
         {metricValue(t("latency"), fmtMs(summary.avgLatencyMs), t("averageResponseTime"))}
@@ -395,7 +386,7 @@ export default function ComboControlCenterClient({ comboId }: { comboId: string 
           fmtPercent(summary.worstQuotaRemainingPct),
           t("providerAccountTelemetry")
         )}
-      </div>
+      </KpiStrip>
 
       <Card padding="none" className="p-5">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">

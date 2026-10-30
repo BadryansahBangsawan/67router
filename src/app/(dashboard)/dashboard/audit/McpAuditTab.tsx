@@ -14,7 +14,7 @@ import {
 } from "@omniroute/ui-kit/table";
 import { TableLoadingState } from "@omniroute/ui-kit/table-loading";
 import { Badge, Button, EmptyState, Input, Select } from "@/shared/components";
-import { KpiCell, KpiStrip } from "@/shared/components/analytics/KpiStrip";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 
 type McpAuditEntry = {
   id: number;
