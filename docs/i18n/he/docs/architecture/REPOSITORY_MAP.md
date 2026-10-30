@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # נכסי תמונה לשיווק / README
 ├── @omniroute/           # חבילות נלוות הניתנות לפרסום (opencode-plugin, opencode-provider)
 ├── skills/               # חבילות מיומנויות ל-CLI/סוכנים (cli-* + omni-* + config-codex-cli)
-├── examples/             # תוספים לדוגמה + תבנית התחלה של omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # תרומות מהקהילה (podman/)
 ├── .source/              # תצורת המקור של Fumadocs‏ (source.config.mjs + server/browser/dynamic)
 ├── .github/              # תהליכי עבודה של GitHub Actions + תבניות לדיווחים + תבנית PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — מעבד ברקע זיכרונות עם `needs_reindex=1`; נקרא על ידי `POST /api/memory/reindex` ובמסלול המילוי החסר העצל. (תוכנית 21)                                                                                                                                                                        |
 | `monitoring/`                            | בדיקות תקינות, הפקת מדדים                                                                                                                                                                                                                                                                                          |
 | `oauth/`                                 | תהליכי OAuth/ייבוא עבור 22 מודולי ספקים (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                |
-| `plugins/`                               | מרשם תוספים                                                                                                                                                                                                                                                                                                        |
 | `promptCache/`                           | נקודות עצירה של מטמון הנחיות בסגנון Anthropic                                                                                                                                                                                                                                                                      |
 | `skills/`                                | תשתית מיומנויות (מובנות + שוק + SkillsSH) — ראו `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                        |
 | `playground/`                            | כלי עזר משותפים של Playground Studio:‏ `codeExport.ts` (מחולל curl/Python/TS),‏ `promptImprover.ts` (בונה מטא-הנחיות),‏ `streamMetrics.ts` (חישוב TTFT/TPS טהור),‏ `types.ts` (טבלת תמחור) — ראו `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                            |

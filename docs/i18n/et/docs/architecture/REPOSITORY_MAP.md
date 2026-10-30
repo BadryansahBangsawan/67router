@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Turunduse / README pildiressursid
 ├── @omniroute/           # Avaldatavad kaaspaketid (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/agentide oskustepaketid (cli-* + omni-* + config-codex-cli)
-├── examples/             # Näidispluginad + omniroute-cmd-hello alustuspõhi
+├── examples/             # Quickstart client samples
 ├── contrib/              # Kogukonna panused (podman/)
 ├── .source/              # Fumadocs lähtekoodi konfiguratsioon (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actionsi töövood + probleemimallid + PR-mall
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — töötleb taustal mälukirjeid, millel on `needs_reindex=1`; seda kutsuvad `POST /api/memory/reindex` ja viittäitmise tee. (plaan 21)                                                                                                                                                                 |
 | `monitoring/`                            | Tervisekontrollid, mõõdikute väljastamine                                                                                                                                                                                                                                                                                |
 | `oauth/`                                 | OAuthi-/impordivood 22 teenusepakkuja moodulile (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                              |
-| `plugins/`                               | Pistikprogrammide register                                                                                                                                                                                                                                                                                               |
 | `promptCache/`                           | Anthropicu-laadse viibavahemälu katkestuspunktid                                                                                                                                                                                                                                                                         |
 | `skills/`                                | Oskuste raamistik (sisseehitatud + turuplats + SkillsSH) — vt `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                |
 | `playground/`                            | Playground Studio jagatud abifunktsioonid: `codeExport.ts` (curl/Pythoni/TS-i generaator), `promptImprover.ts` (metaviiba koostaja), `streamMetrics.ts` (puhas TTFT/TPS), `types.ts` (hinnatabel) — vt `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                            |

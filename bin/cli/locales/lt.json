@@ -1156,16 +1156,6 @@
     "system": "Sistemos raginimas",
     "resume": "Tęsti išsaugotą seansą pagal pavadinimą"
   },
-  "plugin": {
-    "description": "Valdyti CLI papildinius (omniroute-cmd-*)",
-    "list": "Pateikti įdiegtų papildinių sąrašą",
-    "install": "Įdiegti papildinį iš npm arba vietinio kelio",
-    "remove": "Pašalinti įdiegtą papildinį",
-    "info": "Rodyti išsamią informaciją apie įdiegtą papildinį",
-    "search": "Ieškoti galimų papildinių npm registre",
-    "update": "Atnaujinti įdiegtą (-us) papildinį (-ius)",
-    "scaffold": "Sukurti naujo papildinio pradinį šabloną"
-  },
   "launch": {
     "description": "Paleisti Claude Code, nukreiptą į OmniRoute (vietinį arba nuotolinį, naudojant --profile)",
     "token": "Atpažinimo ženklas, kurį turi siųsti Claude klientas (ANTHROPIC_AUTH_TOKEN)",

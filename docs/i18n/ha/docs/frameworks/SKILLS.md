@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | Gudanar da Code         | `eval_code` (JavaScript/Python mai keɓantaccen muhalli)  | HYBRID |
 | System                  | `execute_command` (gudanar da CLI a keɓantaccen muhalli) | MANUAL |
 
-### Ƙara Custom Skill
-
-Duba [Plugin SDK & Haɗa Skills](./PLUGIN_SDK.md) don yadda ake ƙara custom skill ta hanyar tsarin plugin.
-
 ---
 
 ## Duba Kuma

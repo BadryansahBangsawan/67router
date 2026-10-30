@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | تنفيذ الشيفرة       | `eval_code` ‏(JavaScript/Python ضمن بيئة معزولة) | HYBRID |
 | النظام              | `execute_command` (تنفيذ CLI ضمن بيئة معزولة)    | MANUAL |
 
-### إضافة مهارة مخصصة
-
-راجع [حزمة SDK للإضافات وتكامل المهارات](./PLUGIN_SDK.md) لمعرفة كيفية إضافة مهارة مخصصة عبر نظام الإضافات.
-
 ---
 
 ## انظر أيضًا

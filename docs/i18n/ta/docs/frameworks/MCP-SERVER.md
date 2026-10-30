@@ -414,8 +414,6 @@ Scope அமலாக்கம் `open-sse/mcp-server/scopeEnforcement.ts`-இ�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                             |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                      |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                        |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                    |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                       |
 | `read:obsidian`       | 13 வாசிப்புக் கருவிகள் — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 எழுதும் கருவிகள் — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                   |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                     |
@@ -572,7 +570,6 @@ stdio போக்குவரத்து, உயிர்ப்புநில
 | `open-sse/mcp-server/tools/skillTools.ts`                                | திறன் கருவி வரையறைகள் (4 கருவிகள்)                                                |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion சூழல் மூலக் கருவி வரையறைகள் (6 கருவிகள்)                                   |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | விளையாட்டுமயமாக்கல் கருவி வரையறைகள் (8 கருவிகள்)                                  |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | செருகுநிரல் பதிவு மற்றும் மேலாண்மைக் கருவிகள் (8 கருவிகள்)                        |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` முனைப்புள்ளி                                                    |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` முனைப்புள்ளி                                                     |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE போக்குவரத்து வழித்தடம்                                         |

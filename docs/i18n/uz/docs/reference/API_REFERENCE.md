@@ -2162,26 +2162,6 @@ Toʻliq maʼlumot uchun [Koʻnikmalar freymvorki](../frameworks/SKILLS.md) bo‘
 
 ---
 
-## Plaginlar
-
-OmniRoute plaginlarini (uchinchi tomon kengaytmalarini) boshqaring.
-
-| Metod  | Yoʻl                               | Tavsif                              |
-| ------ | ---------------------------------- | ----------------------------------- |
-| GET    | `/api/plugins`                     | Oʻrnatilgan plaginlarni roʻyxatlash |
-| POST   | `/api/plugins/marketplace/install` | Marketpleysdan plaginni oʻrnatish   |
-| DELETE | `/api/plugins/[name]`              | Plaginni olib tashlash              |
-| POST   | `/api/plugins/[name]/activate`     | Plaginni faollashtirish             |
-| POST   | `/api/plugins/[name]/deactivate`   | Plaginni faolsizlantirish           |
-| GET    | `/api/plugins/[name]/config`       | Plagin konfiguratsiyasini olish     |
-| PUT    | `/api/plugins/[name]/config`       | Plagin konfiguratsiyasini yangilash |
-
-**Autentifikatsiya:** Boshqaruv seansi talab qilinadi.
-
-Toʻliq maʼlumot uchun [Plaginlar freymvorki](../frameworks/PLUGIN_SDK.md) bo‘limiga qarang.
-
----
-
 ## Soya marshrutlash
 
 Provayderlarni soya rejimida / A-B usulida taqqoslash **mustaqil REST interfeysi emas** — u kombinatsiyalangan marshrutlash orqali sozlanadi ([Avtomatik kombinatsiya](../routing/AUTO-COMBO.md) bo‘limiga qarang). Har bir kombinatsiya bo‘yicha taqqoslash ko‘rsatkichlari `GET /api/combos/metrics` orqali taqdim etiladi.

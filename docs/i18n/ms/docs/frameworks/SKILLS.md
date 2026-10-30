@@ -467,10 +467,6 @@ const config: SkillConfig = {
 | Pelaksanaan Kod | `eval_code` (JavaScript/Python dalam kotak pasir)     | HYBRID |
 | Sistem          | `execute_command` (pelaksanaan CLI dalam kotak pasir) | MANUAL |
 
-### Menambahkan Kemahiran Tersuai
-
-Lihat [SDK Pemalam & Penyepaduan Kemahiran](./PLUGIN_SDK.md) untuk mengetahui cara menambahkan kemahiran tersuai melalui sistem pemalam.
-
 ---
 
 ## Lihat Juga

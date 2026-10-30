@@ -2220,26 +2220,6 @@ devin-cli ወዘተ) ያስተዳድሩ። ሙሉውን ዝርዝር ለማየ�
 
 ---
 
-## ተሰኪዎች
-
-የOmniRoute ተሰኪዎችን (የሶስተኛ ወገን ቅጥያዎች) ያስተዳድሩ።
-
-| ዘዴ     | ዱካ                                 | መግለጫ              |
-| ------ | ---------------------------------- | ----------------- |
-| GET    | `/api/plugins`                     | የተጫኑ ተሰኪዎችን ይዘርዝሩ |
-| POST   | `/api/plugins/marketplace/install` | ከገበያ ቦታው ተሰኪ ይጫኑ  |
-| DELETE | `/api/plugins/[name]`              | ተሰኪን ያራግፉ         |
-| POST   | `/api/plugins/[name]/activate`     | ተሰኪን ያንቁ          |
-| POST   | `/api/plugins/[name]/deactivate`   | ተሰኪን ያሰናክሉ        |
-| GET    | `/api/plugins/[name]/config`       | የተሰኪውን ውቅር ያግኙ    |
-| PUT    | `/api/plugins/[name]/config`       | የተሰኪውን ውቅር ያዘምኑ   |
-
-**ማረጋገጫ፦** የአስተዳደር ክፍለ-ጊዜ ያስፈልጋል።
-
-ሙሉ ዝርዝሮችን በ[የተሰኪዎች ማዕቀፍ](../frameworks/PLUGIN_SDK.md) ይመልከቱ።
-
----
-
 ## ስውር ማዞሪያ
 
 የአቅራቢዎች ስውር / A-B ንጽጽር **ራሱን የቻለ REST በይነገጽ አይደለም** — በጥምር ማዞሪያ በኩል ይዋቀራል ([ራስ-ጥምር](../routing/AUTO-COMBO.md)ን ይመልከቱ)። ለእያንዳንዱ ጥምር የንጽጽር መለኪያዎች በ`GET /api/combos/metrics` ይቀርባሉ።

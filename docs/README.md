@@ -114,9 +114,6 @@ Pluggable subsystems exposed to clients, agents, and operators.
 - [PLAYGROUND_STUDIO.md](frameworks/PLAYGROUND_STUDIO.md) — Playground Studio UI.
 - [SEARCH_TOOLS_STUDIO.md](frameworks/SEARCH_TOOLS_STUDIO.md) — Search Tools Studio UI.
 - [TRAFFIC_INSPECTOR.md](frameworks/TRAFFIC_INSPECTOR.md) — traffic inspector (MITM).
-- [PLUGINS.md](frameworks/PLUGINS.md) — CLI plugin system overview.
-- [PLUGIN_SDK.md](frameworks/PLUGIN_SDK.md) — plugin SDK reference.
-- [PLUGIN_MARKETPLACE.md](frameworks/PLUGIN_MARKETPLACE.md) — plugin marketplace.
 - [RADAR.md](frameworks/RADAR.md) — Radar free-model catalog overlay (optional, off by default).
 
 ## routing/

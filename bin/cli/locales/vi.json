@@ -1156,16 +1156,6 @@
     "system": "Lời nhắc hệ thống",
     "resume": "Tiếp tục một phiên đã lưu theo tên"
   },
-  "plugin": {
-    "description": "Quản lý plugin CLI (omniroute-cmd-*)",
-    "list": "Liệt kê các plugin đã cài đặt",
-    "install": "Cài đặt plugin từ npm hoặc đường dẫn cục bộ",
-    "remove": "Gỡ bỏ plugin đã cài đặt",
-    "info": "Hiển thị chi tiết về plugin đã cài đặt",
-    "search": "Tìm kiếm các plugin có sẵn trong sổ đăng ký npm",
-    "update": "Cập nhật (các) plugin đã cài đặt",
-    "scaffold": "Tạo khung mã mẫu cho plugin mới"
-  },
   "launch": {
     "description": "Khởi chạy Claude Code trỏ đến OmniRoute (cục bộ hoặc từ xa, với --profile)",
     "token": "Token mà ứng dụng Claude cần gửi (ANTHROPIC_AUTH_TOKEN)",

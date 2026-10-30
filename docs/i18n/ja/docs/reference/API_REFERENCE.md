@@ -2192,26 +2192,6 @@ AI エージェントスキル（OpenAI のカスタム GPT に似ています�
 
 ---
 
-## プラグイン
-
-OmniRoute プラグイン（サードパーティ製拡張機能）を管理します。
-
-| メソッド | パス                               | 説明                                           |
-| -------- | ---------------------------------- | ---------------------------------------------- |
-| GET      | `/api/plugins`                     | インストール済みのプラグインを一覧表示         |
-| POST     | `/api/plugins/marketplace/install` | マーケットプレイスからプラグインをインストール |
-| DELETE   | `/api/plugins/[name]`              | プラグインをアンインストール                   |
-| POST     | `/api/plugins/[name]/activate`     | プラグインを有効化                             |
-| POST     | `/api/plugins/[name]/deactivate`   | プラグインを無効化                             |
-| GET      | `/api/plugins/[name]/config`       | プラグイン設定を取得                           |
-| PUT      | `/api/plugins/[name]/config`       | プラグイン設定を更新                           |
-
-**認証:** 管理セッションが必要です。
-
-詳細については、[プラグインフレームワーク](../frameworks/PLUGIN_SDK.md)を参照してください。
-
----
-
 ## シャドールーティング
 
 プロバイダーのシャドー / A-B 比較は**独立した REST サーフェスではありません**。コンボルーティングを通じて設定します（[自動コンボ](../routing/AUTO-COMBO.md)を参照）。コンボごとの比較メトリクスは `GET /api/combos/metrics` から提供されます。

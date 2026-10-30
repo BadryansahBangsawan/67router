@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Marketing / README tasvir resurslari
 ├── @omniroute/           # Nashr qilinadigan yordamchi paketlar (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/agent ko‘nikmalar to‘plamlari (cli-* + omni-* + config-codex-cli)
-├── examples/             # Namuna plaginlar + omniroute-cmd-hello boshlang‘ich loyihasi
+├── examples/             # Quickstart client samples
 ├── contrib/              # Hamjamiyat hissalari (podman/)
 ├── .source/              # Fumadocs manba konfiguratsiyasi (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions ish jarayonlari + muammo shablonlari + PR shabloni
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — fonda `needs_reindex=1` bo‘lgan xotiralarni qayta ishlaydi; `POST /api/memory/reindex` va kechiktirilgan to‘ldirish yo‘li tomonidan chaqiriladi. (21-reja)                                                                                                                                                             |
 | `monitoring/`                            | Holat tekshiruvlari, metrikalarni chiqarish                                                                                                                                                                                                                                                                                                  |
 | `oauth/`                                 | 22 ta provayder moduli uchun OAuth/import jarayonlari (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                            |
-| `plugins/`                               | Plaginlar reyestri                                                                                                                                                                                                                                                                                                                           |
 | `promptCache/`                           | Anthropic uslubidagi prompt keshi nazorat nuqtalari                                                                                                                                                                                                                                                                                          |
 | `skills/`                                | Ko‘nikmalar freymvorki (ichki + marketplace + SkillsSH) — `docs/frameworks/SKILLS.md`ga qarang                                                                                                                                                                                                                                               |
 | `playground/`                            | Playground Studio umumiy yordamchilari: `codeExport.ts` (curl/Python/TS generatori), `promptImprover.ts` (meta-prompt tuzuvchisi), `streamMetrics.ts` (sof TTFT/TPS), `types.ts` (narxlash jadvali) — `docs/frameworks/PLAYGROUND_STUDIO.md` fayliga qarang                                                                                  |

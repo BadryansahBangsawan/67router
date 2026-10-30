@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Marketing / README image assets
 ├── @omniroute/           # ထုတ်ဝေနိုင်သော companion packages (opencode-plugin၊ opencode-provider)
 ├── skills/               # CLI/agent skill packs (cli-* + omni-* + config-codex-cli)
-├── examples/             # နမူနာ plugins + omniroute-cmd-hello starter
+├── examples/             # Quickstart client samples
 ├── contrib/              # Community contributions (podman/)
 ├── .source/              # Fumadocs source config (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions workflows + issue templates + PR template
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — နောက်ခံတွင် `needs_reindex=1` ဖြစ်သော memory များကို စီမံလုပ်ဆောင်သည်၊ `POST /api/memory/reindex` နှင့် lazy-backfill လမ်းကြောင်းတို့က ခေါ်ယူအသုံးပြုသည်။ (အစီအစဉ် ၂၁)                                                                                                                                              |
 | `monitoring/`                            | ကျန်းမာရေးစစ်ဆေးမှုများ၊ metrics ထုတ်လွှတ်မှု                                                                                                                                                                                                                                                                                             |
 | `oauth/`                                 | provider module ၂၂ ခုအတွက် OAuth/import လုပ်ငန်းစဉ်များ (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                       |
-| `plugins/`                               | Plugin registry                                                                                                                                                                                                                                                                                                                           |
 | `promptCache/`                           | Anthropic ပုံစံ prompt cache breakpoint များ                                                                                                                                                                                                                                                                                              |
 | `skills/`                                | Skills framework (built-in + marketplace + SkillsSH) — `docs/frameworks/SKILLS.md` ကို ကြည့်ပါ                                                                                                                                                                                                                                            |
 | `playground/`                            | Playground Studio မျှဝေသုံး အကူကိရိယာများ- `codeExport.ts` (curl/Python/TS ထုတ်ပေးသည့်စနစ်), `promptImprover.ts` (meta-prompt တည်ဆောက်သည့်စနစ်), `streamMetrics.ts` (သီးသန့် TTFT/TPS), `types.ts` (ဈေးနှုန်းဇယား) — `docs/frameworks/PLAYGROUND_STUDIO.md` ကို ကြည့်ပါ                                                                   |

@@ -1156,16 +1156,6 @@
     "system": "Prompt del sistema",
     "resume": "Reanudar una sesión guardada por nombre"
   },
-  "plugin": {
-    "description": "Gestionar plugins de la CLI (omniroute-cmd-*)",
-    "list": "Listar los plugins instalados",
-    "install": "Instalar un plugin desde npm o una ruta local",
-    "remove": "Eliminar un plugin instalado",
-    "info": "Mostrar los detalles de un plugin instalado",
-    "search": "Buscar plugins disponibles en el registro de npm",
-    "update": "Actualizar los plugins instalados",
-    "scaffold": "Generar la estructura inicial de un nuevo plugin"
-  },
   "launch": {
     "description": "Iniciar Claude Code conectado a OmniRoute (local o remoto, con --profile)",
     "token": "Token que debe enviar el cliente de Claude (ANTHROPIC_AUTH_TOKEN)",

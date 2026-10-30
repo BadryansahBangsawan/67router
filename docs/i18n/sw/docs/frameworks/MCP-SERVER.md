@@ -425,8 +425,6 @@ Kila zana inahitaji mawanda mahususi:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                        |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                 |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                   |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                               |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                  |
 | `read:obsidian`       | zana 13 za kusoma — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | zana 9 za kuandika — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …              |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                |
@@ -582,7 +580,6 @@ Tumia dashibodi au miishio ya REST ya `/api/mcp/audit` na `/api/mcp/audit/stats`
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Ufafanuzi wa zana za ujuzi (zana 4)                                                |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Ufafanuzi wa zana za chanzo cha muktadha wa Notion (zana 6)                        |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Ufafanuzi wa zana za uchezeshaji (zana 8)                                          |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Zana za usajili na usimamizi wa programu-jalizi (zana 8)                           |
 | `src/app/api/mcp/status/route.ts`                                        | Endpointi ya `/api/mcp/status`                                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpointi ya `/api/mcp/tools`                                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | Njia ya usafirishaji ya SSE ya `/api/mcp/sse`                                      |

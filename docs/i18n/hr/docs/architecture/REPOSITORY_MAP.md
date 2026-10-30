@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Slike za marketing / README
 ├── @omniroute/           # Popratni paketi koji se mogu objaviti (opencode-plugin, opencode-provider)
 ├── skills/               # Paketi vještina za CLI/agente (cli-* + omni-* + config-codex-cli)
-├── examples/             # Primjeri dodataka + početni projekt omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Doprinosi zajednice (podman/)
 ├── .source/              # Konfiguracija izvora za Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Radni tijekovi za GitHub Actions + predlošci problema + predložak PR-a
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — obrađuje memorije s `needs_reindex=1` u pozadini; poziva ga `POST /api/memory/reindex` i putanja za lijenu naknadnu popunu. (plan 21)                                                                                                                                                                         |
 | `monitoring/`                            | Provjere stanja, emitiranje metrika                                                                                                                                                                                                                                                                                                 |
 | `oauth/`                                 | OAuth/tijekovi uvoza za 22 modula pružatelja usluga (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                     |
-| `plugins/`                               | Registar dodataka                                                                                                                                                                                                                                                                                                                   |
 | `promptCache/`                           | Prijelomne točke predmemorije promptova u stilu Anthropic                                                                                                                                                                                                                                                                           |
 | `skills/`                                | Okvir vještina (ugrađene + tržište + SkillsSH) — pogledajte `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                             |
 | `playground/`                            | Dijeljeni pomoćni alati za Playground Studio: `codeExport.ts` (generator za curl/Python/TS), `promptImprover.ts` (alat za izradu metauputa), `streamMetrics.ts` (čisti TTFT/TPS), `types.ts` (tablica cijena) — pogledajte `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                   |

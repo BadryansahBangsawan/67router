@@ -1156,16 +1156,6 @@
     "system": "Sistem sorğusu",
     "resume": "Saxlanılmış sessiyanı adına görə davam etdirin"
   },
-  "plugin": {
-    "description": "CLI plaginlərini idarə edin (omniroute-cmd-*)",
-    "list": "Quraşdırılmış plaginləri siyahıya alın",
-    "install": "npm-dən və ya lokal yoldan plagin quraşdırın",
-    "remove": "Quraşdırılmış plagini silin",
-    "info": "Quraşdırılmış plagin haqqında ətraflı məlumat göstərin",
-    "search": "Mövcud plaginlər üçün npm reyestrində axtarış aparın",
-    "update": "Quraşdırılmış plagin(lər)i yeniləyin",
-    "scaffold": "Yeni plagin üçün başlanğıc şablonu yaradın"
-  },
   "launch": {
     "description": "OmniRoute-a yönləndirilmiş Claude Code-u işə salın (lokal və ya uzaqdan, --profile ilə)",
     "token": "Claude klientinin göndərməli olduğu token (ANTHROPIC_AUTH_TOKEN)",

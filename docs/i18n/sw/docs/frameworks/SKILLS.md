@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | Utekelezaji wa Msimbo | `eval_code` (JavaScript/Python iliyotengwa)       | HYBRID |
 | Mfumo                 | `execute_command` (utekelezaji wa CLI uliotengwa) | MANUAL |
 
-### Kuongeza Ujuzi Maalum
-
-Tazama [SDK ya Programu-jalizi na Ujumuishaji wa Ujuzi](./PLUGIN_SDK.md) ili kujua jinsi ya kuongeza ujuzi maalum kupitia mfumo wa programu-jalizi.
-
 ---
 
 ## Tazama Pia

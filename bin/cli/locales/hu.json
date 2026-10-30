@@ -1156,16 +1156,6 @@
     "system": "Rendszerüzenet",
     "resume": "Mentett munkamenet folytatása név alapján"
   },
-  "plugin": {
-    "description": "CLI-bővítmények kezelése (omniroute-cmd-*)",
-    "list": "Telepített bővítmények listázása",
-    "install": "Bővítmény telepítése npm-csomagból vagy helyi elérési útról",
-    "remove": "Telepített bővítmény eltávolítása",
-    "info": "Telepített bővítmény részleteinek megjelenítése",
-    "search": "Elérhető bővítmények keresése az npm-jegyzékben",
-    "update": "Telepített bővítmény(ek) frissítése",
-    "scaffold": "Új bővítmény sablonjának létrehozása"
-  },
   "launch": {
     "description": "A Claude Code indítása az OmniRoute használatával (helyileg vagy távolról, --profile kapcsolóval)",
     "token": "A Claude kliens által küldendő token (ANTHROPIC_AUTH_TOKEN)",

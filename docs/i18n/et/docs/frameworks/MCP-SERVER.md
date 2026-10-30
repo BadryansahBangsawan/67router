@@ -426,8 +426,6 @@ Iga tööriist nõuab kindlaid lube:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                          |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                   |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                     |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                 |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                    |
 | `read:obsidian`       | 13 lugemistööriista — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 kirjutamistööriista — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …             |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
@@ -588,7 +586,6 @@ Kasuta töölauda või `/api/mcp/audit` ja `/api/mcp/audit/stats` REST lõpp-pun
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Oskustööriistade definitsioonid (4 tööriista)                                            |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notioni kontekstiallika tööriistade definitsioonid (6 tööriista)                         |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Mängustamise tööriistade definitsioonid (8 tööriista)                                    |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Pluginate registreerimise ja haldamise tööriistad (8 tööriista)                          |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` lõpp-punkt                                                             |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` lõpp-punkt                                                              |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE transpordi tee                                                        |

@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # На ниво проект (зарежда се при стартиране)
 ```
 
-Или ги заредете програмно от приставка:
+Or register it programmatically at startup:
 
 ```ts
-// Във вашата приставка
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK на приставката предоставя куките onRequest / onResponse / onError. Регистрирайте
-  // машината при зареждане на модула на приставката (или при първия onRequest); отменете регистрацията ѝ
-  // чрез вашия собствен механизъм за почистване.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// При приключване:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

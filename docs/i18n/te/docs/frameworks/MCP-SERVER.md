@@ -422,8 +422,6 @@ API కీపై `manage`, MCP టూల్పై `read:compression`, మరి�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                     |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                              |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                            |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                               |
 | `read:obsidian`       | 13 రీడ్ టూల్స్ — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 రైట్ టూల్స్ — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                             |
@@ -586,7 +584,6 @@ stdio ట్రాన్స్పోర్ట్ ప్రతి 5 సెకన�
 | `open-sse/mcp-server/tools/skillTools.ts`                                | స్కిల్ టూల్ నిర్వచనాలు (4 టూల్స్)                                     |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion కాంటెక్స్ట్ సోర్స్ టూల్ నిర్వచనాలు (6 టూల్స్)                  |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | గేమిఫికేషన్ టూల్ నిర్వచనాలు (8 టూల్స్)                                |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | ప్లగిన్ నమోదు మరియు నిర్వహణ టూల్స్ (8 టూల్స్)                         |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` ఎండ్పాయింట్                                         |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` ఎండ్పాయింట్                                          |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE ట్రాన్స్పోర్ట్ రూట్                                |

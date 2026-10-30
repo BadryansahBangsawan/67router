@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Նախագծի մակարդակ (բեռնվում է գործարկման ժամանակ)
 ```
 
-Կամ բեռնել ծրագրային եղանակով՝ փլագինից․
+Or register it programmatically at startup:
 
 ```ts
-// Ձեր փլագինում
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Փլագինի SDK-ն տրամադրում է onRequest / onResponse / onError հուքերը։ Գրանցեք
-  // շարժիչը, երբ փլագինի մոդուլը բեռնվում է (կամ առաջին onRequest-ի ժամանակ), իսկ գրանցումը չեղարկեք
-  // ձեր սեփական ավարտական մշակման ուղուց։
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Ավարտական մշակման ժամանակ․
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

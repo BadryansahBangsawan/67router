@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # ମାର୍କେଟିଂ / README ଇମେଜ୍ ଆସେଟ୍
 ├── @omniroute/           # ପ୍ରକାଶନଯୋଗ୍ୟ ସହଯୋଗୀ ପ୍ୟାକେଜ୍ (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/ଏଜେଣ୍ଟ୍ ସ୍କିଲ୍ ପ୍ୟାକ୍ (cli-* + omni-* + config-codex-cli)
-├── examples/             # ନମୁନା ପ୍ଲଗ୍ଇନ୍ + omniroute-cmd-hello ଷ୍ଟାର୍ଟର୍
+├── examples/             # Quickstart client samples
 ├── contrib/              # କମ୍ୟୁନିଟି ଅବଦାନ (podman/)
 ├── .source/              # Fumadocs ଉତ୍ସ କନଫିଗ୍ (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions ୱର୍କଫ୍ଲୋ + ଇସ୍ୟୁ ଟେମ୍ପ୍ଲେଟ୍ + PR ଟେମ୍ପ୍ଲେଟ୍
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ପୃଷ୍ଠଭୂମିରେ `needs_reindex=1` ଥିବା ସ୍ମୃତିଗୁଡ଼ିକୁ ପ୍ରକ୍ରିୟାକରଣ କରେ; `POST /api/memory/reindex` ଏବଂ ଲେଜି-ବ୍ୟାକ୍ଫିଲ୍ ପଥ ଦ୍ୱାରା ଡକାଯାଏ। (ଯୋଜନା 21)                                                                                                                                                           |
 | `monitoring/`                            | ସ୍ୱାସ୍ଥ୍ୟ ଯାଞ୍ଚ, ମେଟ୍ରିକ୍ସ ନିର୍ଗମନ                                                                                                                                                                                                                                                                                             |
 | `oauth/`                                 | 22ଟି ପ୍ରଦାନକାରୀ ମଡ୍ୟୁଲ୍ ପାଇଁ OAuth/ଆମଦାନୀ ପ୍ରବାହ (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                   |
-| `plugins/`                               | ପ୍ଲଗଇନ୍ ରେଜିଷ୍ଟ୍ରି                                                                                                                                                                                                                                                                                                             |
 | `promptCache/`                           | Anthropic-ଶୈଳୀର ପ୍ରମ୍ପ୍ଟ କ୍ୟାଶ୍ ବ୍ରେକ୍ପଏଣ୍ଟଗୁଡ଼ିକ                                                                                                                                                                                                                                                                              |
 | `skills/`                                | ଦକ୍ଷତା ଫ୍ରେମୱର୍କ (ଅନ୍ତର୍ନିର୍ମିତ + ମାର୍କେଟ୍ପ୍ଲେସ୍ + SkillsSH) — `docs/frameworks/SKILLS.md` ଦେଖନ୍ତୁ                                                                                                                                                                                                                             |
 | `playground/`                            | Playground Studio ସହଭାଗୀ ସହାୟକଗୁଡ଼ିକ: `codeExport.ts` (curl/Python/TS ଜେନେରେଟର୍), `promptImprover.ts` (ମେଟା-ପ୍ରମ୍ପ୍ଟ ବିଲ୍ଡର୍), `streamMetrics.ts` (ଶୁଦ୍ଧ TTFT/TPS), `types.ts` (ମୂଲ୍ୟ ନିର୍ଦ୍ଧାରଣ ସାରଣୀ) — `docs/frameworks/PLAYGROUND_STUDIO.md` ଦେଖନ୍ତୁ                                                                       |

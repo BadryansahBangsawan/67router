@@ -2243,26 +2243,6 @@ Täieliku teabe leiate jaotisest [Oskuste raamistik](../frameworks/SKILLS.md).
 
 ---
 
-## Pluginad
-
-Hallake OmniRoute'i pluginaid (kolmandate osapoolte laiendusi).
-
-| Meetod | Tee                                | Kirjeldus                              |
-| ------ | ---------------------------------- | -------------------------------------- |
-| GET    | `/api/plugins`                     | Installitud pluginate loend            |
-| POST   | `/api/plugins/marketplace/install` | Plugina installimine turuplatsilt      |
-| DELETE | `/api/plugins/[name]`              | Plugina desinstallimine                |
-| POST   | `/api/plugins/[name]/activate`     | Plugina aktiveerimine                  |
-| POST   | `/api/plugins/[name]/deactivate`   | Plugina inaktiveerimine                |
-| GET    | `/api/plugins/[name]/config`       | Plugina konfiguratsiooni hankimine     |
-| PUT    | `/api/plugins/[name]/config`       | Plugina konfiguratsiooni värskendamine |
-
-**Autentimine:** Nõuab haldusseanssi.
-
-Täieliku teabe leiate jaotisest [Pluginate raamistik](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Varimarsruutimine
 
 Pakkujate vari-/A-B-võrdlus **ei ole eraldiseisev REST-liides** — see konfigureeritakse kombineeritud marsruutimise kaudu (vt [Automaatne kombinatsioon](../routing/AUTO-COMBO.md)). Kombinatsioonipõhised võrdlusmõõdikud tagastab `GET /api/combos/metrics`.

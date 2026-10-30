@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # മാർക്കറ്റിംഗ് / README ഇമേജ് അസറ്റുകൾ
 ├── @omniroute/           # പ്രസിദ്ധീകരിക്കാവുന്ന അനുബന്ധ പാക്കേജുകൾ (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/ഏജന്റ് സ്കിൽ പാക്കുകൾ (cli-* + omni-* + config-codex-cli)
-├── examples/             # മാതൃകാ പ്ലഗിനുകൾ + omniroute-cmd-hello സ്റ്റാർട്ടർ
+├── examples/             # Quickstart client samples
 ├── contrib/              # കമ്മ്യൂണിറ്റി സംഭാവനകൾ (podman/)
 ├── .source/              # Fumadocs സോഴ്സ് കോൺഫിഗ് (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions വർക്ക്ഫ്ലോകൾ + ഇഷ്യൂ ടെംപ്ലേറ്റുകൾ + PR ടെംപ്ലേറ്റ്
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — പശ്ചാത്തലത്തിൽ `needs_reindex=1` ഉള്ള മെമ്മറികൾ പ്രോസസ്സ് ചെയ്യുന്നു; `POST /api/memory/reindex`, ലേസി-ബാക്ക്ഫിൽ പാത എന്നിവ വഴി വിളിക്കപ്പെടുന്നു. (പ്ലാൻ 21)                                                                                                                                            |
 | `monitoring/`                            | ആരോഗ്യ പരിശോധനകൾ, മെട്രിക്സ് എമിഷൻ                                                                                                                                                                                                                                                                                             |
 | `oauth/`                                 | 22 പ്രൊവൈഡർ മൊഡ്യൂളുകൾക്കായുള്ള OAuth/ഇംപോർട്ട് ഫ്ലോകൾ (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                             |
-| `plugins/`                               | പ്ലഗിൻ രജിസ്ട്രി                                                                                                                                                                                                                                                                                                               |
 | `promptCache/`                           | Anthropic-ശൈലിയിലുള്ള പ്രോംപ്റ്റ് കാഷ് ബ്രേക്ക്പോയിന്റുകൾ                                                                                                                                                                                                                                                                      |
 | `skills/`                                | Skills ഫ്രെയിംവർക്ക് (ബിൽറ്റ്-ഇൻ + മാർക്കറ്റ്പ്ലേസ് + SkillsSH) — `docs/frameworks/SKILLS.md` കാണുക                                                                                                                                                                                                                            |
 | `playground/`                            | Playground Studio-യുടെ പങ്കിട്ട സഹായികൾ: `codeExport.ts` (curl/Python/TS ജനറേറ്റർ), `promptImprover.ts` (മെറ്റാ-പ്രോംപ്റ്റ് ബിൽഡർ), `streamMetrics.ts` (ശുദ്ധമായ TTFT/TPS), `types.ts` (വിലനിർണ്ണയ പട്ടിക) — `docs/frameworks/PLAYGROUND_STUDIO.md` കാണുക                                                                      |

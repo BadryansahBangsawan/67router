@@ -459,10 +459,6 @@ const config: SkillConfig = {
 | Izvršavanje koda | `eval_code` (sandboxed JavaScript/Python)   | HYBRID     |
 | Sistem           | `execute_command` (sandboxed CLI execution) | MANUAL     |
 
-### Dodavanje prilagođene vještine
-
-Pogledajte [Plugin SDK & Integracija vještina](./PLUGIN_SDK.md) za informacije o tome kako dodati prilagođenu vještinu putem sistema dodataka.
-
 ---
 
 ## Vidi također

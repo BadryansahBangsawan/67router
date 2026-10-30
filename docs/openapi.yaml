@@ -184,8 +184,6 @@ tags:
     description: Omniroute endpoints (generated route coverage)
   - name: OmnirouteApiCatchAll
     description: OmnirouteApiCatchAll endpoints (generated route coverage)
-  - name: Plugins
-    description: Plugins endpoints (generated route coverage)
   - name: Provider metrics
     description: Provider metrics endpoints (generated route coverage)
   - name: Provider stats
@@ -2593,7 +2591,6 @@ paths:
         and canonical OpenAI-compatible nodes using a single Bearer credential and an
         exact JSON model field. Specialized executors and other providers are unsupported;
         session pools, extra-key rotation, HTTP redirects and credential refresh are refused.
-        Active runtime plugins also fail closed; plugin policies are not silently skipped.
       security:
         - BearerAuth: []
       requestBody:
@@ -11523,102 +11520,6 @@ paths:
       tags:
         - Playground
       summary: "POST playground › simulate route"
-      responses:
-        "200":
-          description: OK
-  /api/plugins:
-    get:
-      tags:
-        - Plugins
-      summary: "GET plugins"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/{name}:
-    delete:
-      tags:
-        - Plugins
-      summary: "DELETE plugins › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Plugins
-      summary: "GET plugins › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/{name}/activate:
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins › <name> › activate"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/{name}/config:
-    get:
-      tags:
-        - Plugins
-      summary: "GET plugins › <name> › config"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Plugins
-      summary: "PUT plugins › <name> › config"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/{name}/deactivate:
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins › <name> › deactivate"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/marketplace:
-    get:
-      tags:
-        - Plugins
-      summary: "GET plugins › marketplace"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/marketplace/install:
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins › marketplace › install"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/scan:
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins › scan"
-      x-loopback-only: true
       responses:
         "200":
           description: OK

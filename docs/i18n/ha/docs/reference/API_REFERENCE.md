@@ -2239,26 +2239,6 @@ Duba [Tsarin Skills](../frameworks/SKILLS.md) don cikakkun bayanai.
 
 ---
 
-## Plugins
-
-Sarrafa plugins na OmniRoute (faɗaɗa ayyuka daga wasu kamfanoni).
-
-| Hanya  | Path                               | Bayani                        |
-| ------ | ---------------------------------- | ----------------------------- |
-| GET    | `/api/plugins`                     | Jera plugins da aka girka     |
-| POST   | `/api/plugins/marketplace/install` | Girka plugin daga marketplace |
-| DELETE | `/api/plugins/[name]`              | Cire plugin                   |
-| POST   | `/api/plugins/[name]/activate`     | Kunna plugin                  |
-| POST   | `/api/plugins/[name]/deactivate`   | Kashe plugin                  |
-| GET    | `/api/plugins/[name]/config`       | Samu saitunan plugin          |
-| PUT    | `/api/plugins/[name]/config`       | Sabunta saitunan plugin       |
-
-**Tabbatar da Shaida:** Ana buƙatar zaman gudanarwa.
-
-Duba [Tsarin Plugins](../frameworks/PLUGIN_SDK.md) don cikakkun bayanai.
-
----
-
 ## Shadow Routing
 
 Kwatanta masu samarwa ta Shadow / A-B **ba wani keɓantaccen REST surface ba ne** — ana saita shi ta hanyar combo routing (duba [Auto-Combo](../routing/AUTO-COMBO.md)). Ana samar da ma'aunin kwatantawa na kowane combo ta `GET /api/combos/metrics`.

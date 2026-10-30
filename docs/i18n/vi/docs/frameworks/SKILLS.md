@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | Thực thi mã | `eval_code` (JavaScript/Python trong sandbox)  | HYBRID |
 | Hệ thống    | `execute_command` (thực thi CLI trong sandbox) | MANUAL |
 
-### Thêm skill tùy chỉnh
-
-Xem [SDK plugin & Tích hợp skill](./PLUGIN_SDK.md) để biết cách thêm một skill tùy chỉnh thông qua hệ thống plugin.
-
 ---
 
 ## Xem thêm

@@ -1156,16 +1156,6 @@
     "system": "Ntuziaka sistemụ",
     "resume": "Jiri aha maliteghachi nnọkọ echekwara"
   },
-  "plugin": {
-    "description": "Jikwaa plugins CLI (omniroute-cmd-*)",
-    "list": "Depụta plugins arụnyere",
-    "install": "Wụnye plugin site na npm ma ọ bụ ụzọ faịlụ mpaghara",
-    "remove": "Wepụ plugin arụnyere",
-    "info": "Gosi nkọwa gbasara plugin arụnyere",
-    "search": "Chọọ plugins dịnụ na ndekọ npm",
-    "update": "Melite plugin(s) arụnyere",
-    "scaffold": "Mepụta usoro ntọala maka plugin ọhụrụ"
-  },
   "launch": {
     "description": "Bido Claude Code ka ọ rụtụ aka na OmniRoute (mpaghara ma ọ bụ ime, site na --profile)",
     "token": "Token onye ahịa Claude kwesịrị iziga (ANTHROPIC_AUTH_TOKEN)",

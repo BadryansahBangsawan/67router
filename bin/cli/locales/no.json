@@ -1156,16 +1156,6 @@
     "system": "Systeminstruksjon",
     "resume": "Gjenoppta en lagret økt etter navn"
   },
-  "plugin": {
-    "description": "Administrer CLI-programtillegg (omniroute-cmd-*)",
-    "list": "Vis installerte programtillegg",
-    "install": "Installer et programtillegg fra npm eller en lokal bane",
-    "remove": "Fjern et installert programtillegg",
-    "info": "Vis detaljer om et installert programtillegg",
-    "search": "Søk i npm-registeret etter tilgjengelige programtillegg",
-    "update": "Oppdater installerte programtillegg",
-    "scaffold": "Opprett en grunnstruktur for et nytt programtillegg"
-  },
   "launch": {
     "description": "Start Claude Code koblet til OmniRoute (lokalt eller eksternt, med --profile)",
     "token": "Tokenet som Claude-klienten skal sende (ANTHROPIC_AUTH_TOKEN)",

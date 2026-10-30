@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Tài nguyên hình ảnh tiếp thị / README
 ├── @omniroute/           # Các gói đồng hành có thể phát hành (opencode-plugin, opencode-provider)
 ├── skills/               # Các gói kỹ năng CLI/tác nhân (cli-* + omni-* + config-codex-cli)
-├── examples/             # Plugin mẫu + dự án khởi đầu omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Đóng góp từ cộng đồng (podman/)
 ├── .source/              # Cấu hình nguồn Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Quy trình GitHub Actions + mẫu vấn đề + mẫu PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — xử lý trong nền các bộ nhớ có `needs_reindex=1`; được gọi bởi `POST /api/memory/reindex` và luồng điền bù lười. (kế hoạch 21)                                                                                                                                                                         |
 | `monitoring/`                            | Kiểm tra tình trạng, phát số liệu                                                                                                                                                                                                                                                                                           |
 | `oauth/`                                 | Các luồng OAuth/nhập cho 22 mô-đun nhà cung cấp (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                 |
-| `plugins/`                               | Sổ đăng ký plugin                                                                                                                                                                                                                                                                                                           |
 | `promptCache/`                           | Các điểm ngắt bộ nhớ đệm prompt theo kiểu Anthropic                                                                                                                                                                                                                                                                         |
 | `skills/`                                | Framework kỹ năng (tích hợp sẵn + marketplace + SkillsSH) — xem `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                 |
 | `playground/`                            | Các tiện ích dùng chung của Playground Studio: `codeExport.ts` (trình tạo curl/Python/TS), `promptImprover.ts` (trình tạo meta-prompt), `streamMetrics.ts` (TTFT/TPS thuần túy), `types.ts` (bảng giá) — xem `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                         |

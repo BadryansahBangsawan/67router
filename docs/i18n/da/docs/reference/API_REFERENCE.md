@@ -2243,26 +2243,6 @@ Se [Skills-framework](../frameworks/SKILLS.md) for alle detaljer.
 
 ---
 
-## Plugins
-
-Administrer OmniRoute-plugins (tredjepartsudvidelser).
-
-| Metode | Sti                                | Beskrivelse                            |
-| ------ | ---------------------------------- | -------------------------------------- |
-| GET    | `/api/plugins`                     | Vis installerede plugins               |
-| POST   | `/api/plugins/marketplace/install` | Installer et plugin fra markedspladsen |
-| DELETE | `/api/plugins/[name]`              | Afinstaller et plugin                  |
-| POST   | `/api/plugins/[name]/activate`     | Aktivér et plugin                      |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivér et plugin                    |
-| GET    | `/api/plugins/[name]/config`       | Hent plugin-konfigurationen            |
-| PUT    | `/api/plugins/[name]/config`       | Opdater plugin-konfigurationen         |
-
-**Godkendelse:** Kræver en administrationssession.
-
-Se [Plugin-framework](../frameworks/PLUGIN_SDK.md) for alle detaljer.
-
----
-
 ## Skyggerouting
 
 Skygge-/A-B-sammenligning af udbydere er **ikke en selvstændig REST-grænseflade** — den konfigureres via kombinationsrouting (se [Automatisk kombination](../routing/AUTO-COMBO.md)). Sammenligningsmålinger for hver kombination leveres af `GET /api/combos/metrics`.

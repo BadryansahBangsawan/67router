@@ -419,8 +419,6 @@ Katram rīkam ir nepieciešami konkrēti tvērumi:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                        |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                 |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                   |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                               |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                  |
 | `read:obsidian`       | 13 lasīšanas rīki — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 rakstīšanas rīki — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …              |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                |
@@ -574,7 +572,6 @@ Izmantojiet informācijas paneli vai REST galapunktus `/api/mcp/audit` un `/api/
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Prasmju rīku definīcijas (4 rīki)                                             |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion konteksta avota rīku definīcijas (6 rīki)                              |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Spēļošanas rīku definīcijas (8 rīki)                                          |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Spraudņu reģistrēšanas un pārvaldības rīki (8 rīki)                           |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` galapunkts                                                  |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` galapunkts                                                   |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE transporta maršruts                                        |

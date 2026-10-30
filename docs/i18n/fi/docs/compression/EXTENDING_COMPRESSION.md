@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Projektitaso (ladataan käynnistyksen yhteydessä)
 ```
 
-Tai lataa ohjelmallisesti liitännäisestä:
+Or register it programmatically at startup:
 
 ```ts
-// Liitännäisessäsi
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Liitännäisen SDK tarjoaa onRequest-, onResponse- ja onError-koukut. Rekisteröi
-  // moottori, kun liitännäismoduuli latautuu (tai ensimmäisen onRequest-kutsun yhteydessä);
-  // poista sen rekisteröinti omassa purkupolussasi.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Purkamisen yhteydessä:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | Esecuzione codice | `eval_code` (JavaScript/Python in sandbox)    | HYBRID   |
 | Sistema           | `execute_command` (esecuzione CLI in sandbox) | MANUAL   |
 
-### Aggiunta di una skill personalizzata
-
-Consulta [SDK dei plugin e integrazione delle skill](./PLUGIN_SDK.md) per scoprire come aggiungere una skill personalizzata tramite il sistema di plugin.
-
 ---
 
 ## Vedi anche

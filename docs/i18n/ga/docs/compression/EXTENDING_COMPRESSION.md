@@ -202,27 +202,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Leibhéal tionscadail (luchtaithe ag am tosaithe)
 ```
 
-Nó luchtaigh go ríomhchláraithe é ó bhreiseán:
+Or register it programmatically at startup:
 
 ```ts
-// I do bhreiseán
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Cuireann SDK an bhreiseáin crúcaí onRequest / onResponse / onError ar fáil. Cláraigh an
-  // t-inneall nuair a luchtaítear modúl an bhreiseáin (nó ar an gcéad onRequest); díchláraigh é
-  // ó do chonair dhíshuiteála féin.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Le linn díshuiteála:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

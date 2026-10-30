@@ -60,7 +60,7 @@ The `usage.ts` service captures a **usage event** for every request:
 | `status`           | enum    | `success`, `error`, `rate_limited`, `timeout`, `cancelled` |
 | `errorClass`       | string? | Error class if status != success                           |
 | `timestamp`        | string  | ISO 8601 UTC                                               |
-| `metadata`         | object  | Custom plugin-injected data                                |
+| `metadata`         | object  | Custom request metadata                                    |
 
 ### Where Tokens Come From
 
@@ -204,14 +204,14 @@ Request ──▶ quotaCheck()
 
 `quotaSnapshots` table stores **historical quota state** for trend analysis:
 
-| Field       | Description                      |
+| Field | Description |
 | ----------- | -------------------------------- | ------ | ------- |
-| `apiKeyId`  | The key being tracked            |
-| `window`    | "day"                            | "week" | "month" |
-| `used`      | Cost used in this window (cents) |
-| `limit`     | The limit (cents)                |
-| `resetAt`   | When the window resets           |
-| `createdAt` | When the snapshot was taken      |
+| `apiKeyId` | The key being tracked |
+| `window` | "day" | "week" | "month" |
+| `used` | Cost used in this window (cents) |
+| `limit` | The limit (cents) |
+| `resetAt` | When the window resets |
+| `createdAt` | When the snapshot was taken |
 
 Snapshots are taken **on every request** that uses > 0 cost, and used to:
 

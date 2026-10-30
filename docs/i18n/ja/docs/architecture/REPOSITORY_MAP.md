@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # マーケティング用 / README用画像アセット
 ├── @omniroute/           # 公開可能な関連パッケージ（opencode-plugin、opencode-provider）
 ├── skills/               # CLI/エージェント用スキルパック（cli-* + omni-* + config-codex-cli）
-├── examples/             # サンプルプラグイン + omniroute-cmd-helloスターター
+├── examples/             # Quickstart client samples
 ├── contrib/              # コミュニティによるコントリビューション（podman/）
 ├── .source/              # Fumadocsソース設定（source.config.mjs + サーバー/ブラウザー/動的処理）
 ├── .github/              # GitHub Actionsワークフロー + Issueテンプレート + PRテンプレート
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — バックグラウンドで`needs_reindex=1`のメモリを処理します。`POST /api/memory/reindex`および遅延バックフィルパスから呼び出されます。（plan 21）                                                                                                                                                               |
 | `monitoring/`                            | ヘルスチェック、メトリクス送信                                                                                                                                                                                                                                                                                                   |
 | `oauth/`                                 | 22個のプロバイダーモジュール向けOAuth/インポートフロー（agy、antigravity、claude、cline、codebuddy-cn、codex、cursor、devin-desktop、ghe-copilot、github、gitlab-duo、grok-cli-oauth、grok-cli、kilocode、kimi-coding、kiro、openference、qoder、trae、xai-oauth、zed-hosted、zed）                                              |
-| `plugins/`                               | プラグインレジストリ                                                                                                                                                                                                                                                                                                             |
 | `promptCache/`                           | Anthropic形式のプロンプトキャッシュブレークポイント                                                                                                                                                                                                                                                                              |
 | `skills/`                                | Skillsフレームワーク（組み込み + マーケットプレイス + SkillsSH）— `docs/frameworks/SKILLS.md`を参照                                                                                                                                                                                                                              |
 | `playground/`                            | Playground Studio の共有ヘルパー: `codeExport.ts`（curl/Python/TS ジェネレーター）、`promptImprover.ts`（メタプロンプトビルダー）、`streamMetrics.ts`（純粋な TTFT/TPS）、`types.ts`（料金表）— `docs/frameworks/PLAYGROUND_STUDIO.md` を参照                                                                                    |

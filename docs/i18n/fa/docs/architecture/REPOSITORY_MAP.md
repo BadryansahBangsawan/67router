@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # داراییهای تصویری بازاریابی / README
 ├── @omniroute/           # بستههای همراه قابل انتشار (opencode-plugin، opencode-provider)
 ├── skills/               # بستههای مهارت CLI/عامل (cli-* + omni-* + config-codex-cli)
-├── examples/             # افزونههای نمونه + پروژه آغازین omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # مشارکتهای جامعه کاربری (podman/)
 ├── .source/              # پیکربندی منبع Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # گردشکارهای GitHub Actions + قالبهای مسئله + قالب PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — حافظههای دارای `needs_reindex=1` را در پسزمینه پردازش میکند؛ توسط `POST /api/memory/reindex` و مسیر پرسازی تنبل فراخوانی میشود. (برنامه 21)                                                                                                                                                                  |
 | `monitoring/`                            | بررسیهای سلامت، انتشار معیارها                                                                                                                                                                                                                                                                                                     |
 | `oauth/`                                 | جریانهای OAuth/واردسازی برای 22 ماژول ارائهدهنده (agy، antigravity، claude، cline، codebuddy-cn، codex، cursor، devin-desktop، ghe-copilot، github، gitlab-duo، grok-cli-oauth، grok-cli، kilocode، kimi-coding، kiro، openference، qoder، trae، xai-oauth، zed-hosted، zed)                                                       |
-| `plugins/`                               | رجیستری افزونهها                                                                                                                                                                                                                                                                                                                   |
 | `promptCache/`                           | نقاط شکست کش پرامپت به سبک Anthropic                                                                                                                                                                                                                                                                                               |
 | `skills/`                                | چارچوب مهارتها (داخلی + بازارچه + SkillsSH) — رجوع کنید به `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                             |
 | `playground/`                            | ابزارهای کمکی مشترک Playground Studio: `codeExport.ts` (تولیدکننده curl/Python/TS)، `promptImprover.ts` (سازنده متاپرامپت)، `streamMetrics.ts` (محاسبه خالص TTFT/TPS)، `types.ts` (جدول قیمتگذاری) — به `docs/frameworks/PLAYGROUND_STUDIO.md` مراجعه کنید                                                                         |

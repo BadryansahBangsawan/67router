@@ -1156,16 +1156,6 @@
     "system": "System prompt",
     "resume": "Ipagpatuloy ang naka-save na session ayon sa pangalan"
   },
-  "plugin": {
-    "description": "Pamahalaan ang mga CLI plugin (omniroute-cmd-*)",
-    "list": "Ilista ang mga naka-install na plugin",
-    "install": "Mag-install ng plugin mula sa npm o lokal na path",
-    "remove": "Alisin ang naka-install na plugin",
-    "info": "Ipakita ang mga detalye ng naka-install na plugin",
-    "search": "Maghanap sa npm registry ng mga available na plugin",
-    "update": "I-update ang (mga) naka-install na plugin",
-    "scaffold": "Bumuo ng boilerplate para sa bagong plugin"
-  },
   "launch": {
     "description": "Ilunsad ang Claude Code na nakaturo sa OmniRoute (lokal o remote, gamit ang --profile)",
     "token": "Token na dapat ipadala ng Claude client (ANTHROPIC_AUTH_TOKEN)",

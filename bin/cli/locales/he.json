@@ -1156,16 +1156,6 @@
     "system": "הנחיית מערכת",
     "resume": "חידוש הפעלה שמורה לפי שם"
   },
-  "plugin": {
-    "description": "ניהול תוספי CLI‏ (omniroute-cmd-*)",
-    "list": "הצגת התוספים המותקנים",
-    "install": "התקנת תוסף מ-npm או מנתיב מקומי",
-    "remove": "הסרת תוסף מותקן",
-    "info": "הצגת פרטים על תוסף מותקן",
-    "search": "חיפוש תוספים זמינים במאגר npm",
-    "update": "עדכון תוספים מותקנים",
-    "scaffold": "יצירת שלד בסיסי לתוסף חדש"
-  },
   "launch": {
     "description": "הפעלת Claude Code כשהוא מופנה אל OmniRoute (מקומי או מרוחק, עם --profile)",
     "token": "האסימון שעל לקוח Claude לשלוח (ANTHROPIC_AUTH_TOKEN)",

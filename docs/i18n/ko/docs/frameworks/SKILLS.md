@@ -462,10 +462,6 @@ const config: SkillConfig = {
 | 코드 실행 | `eval_code`(샌드박스형 JavaScript/Python) | HYBRID |
 | 시스템    | `execute_command`(샌드박스형 CLI 실행)    | MANUAL |
 
-### 사용자 정의 스킬 추가
-
-플러그인 시스템을 통해 사용자 정의 스킬을 추가하는 방법은 [플러그인 SDK 및 스킬 통합](./PLUGIN_SDK.md)을 참조하세요.
-
 ---
 
 ## 참고 자료

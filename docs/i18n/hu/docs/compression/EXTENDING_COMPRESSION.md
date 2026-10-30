@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Projektszintű (indításkor töltődik be)
 ```
 
-Vagy töltse be programozott módon egy bővítményből:
+Or register it programmatically at startup:
 
 ```ts
-// A bővítményben
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // A bővítmény SDK-ja onRequest / onResponse / onError horgokat tesz elérhetővé. Regisztrálja a
-  // motort a bővítménymodul betöltésekor (vagy az első onRequest alkalmával); a regisztrációját
-  // a saját leállítási folyamatában szüntesse meg.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Leállításkor:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

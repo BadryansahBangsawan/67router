@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Aset imej pemasaran / README
 ├── @omniroute/           # Pakej pendamping yang boleh diterbitkan (opencode-plugin, opencode-provider)
 ├── skills/               # Pek kemahiran CLI/agen (cli-* + omni-* + config-codex-cli)
-├── examples/             # Pemalam contoh + templat permulaan omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Sumbangan komuniti (podman/)
 ├── .source/              # Konfigurasi sumber Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Aliran kerja GitHub Actions + templat isu + templat PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — memproses memori dengan `needs_reindex=1` di latar belakang; dipanggil oleh `POST /api/memory/reindex` dan laluan pengisian semula malas. (pelan 21)                                                                                                                                                     |
 | `monitoring/`                            | Pemeriksaan kesihatan, pengeluaran metrik                                                                                                                                                                                                                                                                                      |
 | `oauth/`                                 | Aliran OAuth/import untuk 22 modul penyedia (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                        |
-| `plugins/`                               | Daftar pemalam                                                                                                                                                                                                                                                                                                                 |
 | `promptCache/`                           | Titik putus cache gesaan gaya Anthropic                                                                                                                                                                                                                                                                                        |
 | `skills/`                                | Rangka kerja kemahiran (terbina dalam + pasaran + SkillsSH) — lihat `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                |
 | `playground/`                            | Pembantu dikongsi Playground Studio: `codeExport.ts` (penjana curl/Python/TS), `promptImprover.ts` (pembina meta-prom), `streamMetrics.ts` (TTFT/TPS tulen), `types.ts` (jadual harga) — lihat `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                          |

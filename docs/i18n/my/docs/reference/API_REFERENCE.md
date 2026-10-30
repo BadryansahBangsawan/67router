@@ -2170,26 +2170,6 @@ Skills (agentic extensions မူဘောင်) ကို စီမံခန�
 
 ---
 
-## Plugins
-
-OmniRoute plugins (ပြင်ပအဖွဲ့အစည်း extensions) ကို စီမံခန့်ခွဲပါ။
-
-| နည်းလမ်း | လမ်းကြောင်း                        | ဖော်ပြချက်                                    |
-| -------- | ---------------------------------- | --------------------------------------------- |
-| GET      | `/api/plugins`                     | ထည့်သွင်းထားသော plugins များကို စာရင်းပြုစုပါ |
-| POST     | `/api/plugins/marketplace/install` | marketplace မှ plugin တစ်ခုကို ထည့်သွင်းပါ    |
-| DELETE   | `/api/plugins/[name]`              | plugin တစ်ခုကို ဖြုတ်ချပါ                     |
-| POST     | `/api/plugins/[name]/activate`     | plugin တစ်ခုကို အသက်သွင်းပါ                   |
-| POST     | `/api/plugins/[name]/deactivate`   | plugin တစ်ခုကို ပိတ်ပါ                        |
-| GET      | `/api/plugins/[name]/config`       | plugin configuration ကို ရယူပါ                |
-| PUT      | `/api/plugins/[name]/config`       | plugin configuration ကို အပ်ဒိတ်လုပ်ပါ        |
-
-**စစ်မှန်ကြောင်းအတည်ပြုခြင်း:** စီမံခန့်ခွဲမှု session လိုအပ်သည်။
-
-အသေးစိတ်အချက်အလက်အပြည့်အစုံအတွက် [Plugins မူဘောင်](../frameworks/PLUGIN_SDK.md) ကို ကြည့်ပါ။
-
----
-
 ## Shadow Routing
 
 Provider များကို Shadow / A-B နှိုင်းယှဉ်ခြင်းသည် **သီးခြား REST မျက်နှာပြင်တစ်ခု မဟုတ်ပါ** — ၎င်းကို combo routing မှတစ်ဆင့် ပြင်ဆင်သတ်မှတ်သည် ([Auto-Combo](../routing/AUTO-COMBO.md) ကို ကြည့်ပါ)။ Combo တစ်ခုချင်းစီအလိုက် နှိုင်းယှဉ်မှု metrics များကို `GET /api/combos/metrics` မှ ပံ့ပိုးပေးသည်။

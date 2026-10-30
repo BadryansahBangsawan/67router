@@ -2235,26 +2235,6 @@ Tazama [Mfumo wa Skills](../frameworks/SKILLS.md) kwa maelezo kamili.
 
 ---
 
-## Programu-jalizi
-
-Dhibiti programu-jalizi za OmniRoute (viendelezi vya wahusika wengine).
-
-| Mbinu  | Njia                               | Maelezo                                    |
-| ------ | ---------------------------------- | ------------------------------------------ |
-| GET    | `/api/plugins`                     | Orodhesha programu-jalizi zilizosakinishwa |
-| POST   | `/api/plugins/marketplace/install` | Sakinisha programu-jalizi kutoka sokoni    |
-| DELETE | `/api/plugins/[name]`              | Ondoa usakinishaji wa programu-jalizi      |
-| POST   | `/api/plugins/[name]/activate`     | Amilisha programu-jalizi                   |
-| POST   | `/api/plugins/[name]/deactivate`   | Lemaza programu-jalizi                     |
-| GET    | `/api/plugins/[name]/config`       | Pata usanidi wa programu-jalizi            |
-| PUT    | `/api/plugins/[name]/config`       | Sasisha usanidi wa programu-jalizi         |
-
-**Uthibitishaji:** Unahitaji kipindi cha usimamizi.
-
-Tazama [Mfumo wa Programu-jalizi](../frameworks/PLUGIN_SDK.md) kwa maelezo kamili.
-
----
-
 ## Uelekezaji Kivuli
 
 Ulinganishaji wa kivuli / A-B wa watoa huduma **si kiolesura huru cha REST** — husanidiwa kupitia uelekezaji wa mchanganyiko (tazama [Mchanganyiko Otomatiki](../routing/AUTO-COMBO.md)). Vipimo vya ulinganishaji kwa kila mchanganyiko hutolewa na `GET /api/combos/metrics`.

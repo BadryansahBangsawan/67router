@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | कोड एक्झिक्युशन | `eval_code` (सँडबॉक्स केलेले JavaScript/Python)     | HYBRID |
 | सिस्टीम         | `execute_command` (सँडबॉक्स केलेले CLI एक्झिक्युशन) | MANUAL |
 
-### कस्टम कौशल्य जोडणे
-
-प्लगइन प्रणालीद्वारे कस्टम कौशल्य कसे जोडावे यासाठी [Plugin SDK आणि कौशल्य एकत्रीकरण](./PLUGIN_SDK.md) पहा.
-
 ---
 
 ## हे देखील पहा

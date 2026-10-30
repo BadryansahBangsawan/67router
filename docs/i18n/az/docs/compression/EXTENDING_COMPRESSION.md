@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Layihə səviyyəsində (işə salınarkən yüklənir)
 ```
 
-Yaxud plagindən proqram vasitəsilə yükləyin:
+Or register it programmatically at startup:
 
 ```ts
-// Plagininizdə
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Plagin SDK-sı onRequest / onResponse / onError qarmaqlarını təqdim edir. Mühərriki
-  // plagin modulu yüklənərkən (və ya ilk onRequest zamanı) qeydiyyatdan keçirin; onu
-  // öz söndürmə yolunuzdan qeydiyyatdan çıxarın.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Söndürmə zamanı:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

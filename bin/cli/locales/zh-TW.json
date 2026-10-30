@@ -1156,16 +1156,6 @@
     "system": "系統提示",
     "resume": "按名稱恢復儲存的會話"
   },
-  "plugin": {
-    "description": "管理 CLI 外掛（omniroute-cmd-*）",
-    "list": "列出已安裝的外掛",
-    "install": "從 npm 或本地路徑安裝外掛",
-    "remove": "刪除已安裝的外掛",
-    "info": "顯示已安裝外掛的詳情",
-    "search": "搜尋 npm 登錄檔中的可用外掛",
-    "update": "更新已安裝的外掛",
-    "scaffold": "搭建新的外掛模板"
-  },
   "launch": {
     "description": "啟動指向 OmniRoute 的 Claude Code（本機或遠端，使用 --profile）",
     "token": "Claude 用戶端應傳送的令牌（ANTHROPIC_AUTH_TOKEN）",

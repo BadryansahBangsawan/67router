@@ -394,9 +394,9 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
   },
   {
     id: "cli-plugins-skills",
-    name: "CLI: Plugins, Skills & Memory",
+    name: "CLI: Skills & Memory",
     description:
-      "Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI.",
+      "Manage Omni Skills (list, install, test, remove) and persistent memory (search, add, clear) from the CLI.",
     category: "cli",
     area: "cli-plugins-skills",
     icon: "extension",

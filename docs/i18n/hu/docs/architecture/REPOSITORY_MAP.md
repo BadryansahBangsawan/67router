@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Marketing- és README-képfájlok
 ├── @omniroute/           # Közzétehető kiegészítő csomagok (opencode-plugin, opencode-provider)
 ├── skills/               # CLI-/ügynökképesség-csomagok (cli-* + omni-* + config-codex-cli)
-├── examples/             # Példabővítmények + omniroute-cmd-hello kezdősablon
+├── examples/             # Quickstart client samples
 ├── contrib/              # Közösségi hozzájárulások (podman/)
 ├── .source/              # Fumadocs-forráskonfiguráció (source.config.mjs + szerver/böngésző/dinamikus)
 ├── .github/              # GitHub Actions-munkafolyamatok + hibajegysablonok + PR-sablon
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — a háttérben dolgozza fel a `needs_reindex=1` értékű memóriákat; a `POST /api/memory/reindex` és a lusta utólagos feltöltési útvonal hívja meg. (21. terv)                                                                                                                                              |
 | `monitoring/`                            | Állapotellenőrzések, metrikák kibocsátása                                                                                                                                                                                                                                                                                    |
 | `oauth/`                                 | OAuth-/importálási folyamatok 22 szolgáltatói modulhoz (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                           |
-| `plugins/`                               | Bővítmény-nyilvántartás                                                                                                                                                                                                                                                                                                      |
 | `promptCache/`                           | Anthropic-stílusú promptgyorsítótár töréspontjai                                                                                                                                                                                                                                                                             |
 | `skills/`                                | Készségkeretrendszer (beépített + piactér + SkillsSH) — lásd: `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                    |
 | `playground/`                            | A Playground Studio megosztott segédprogramjai: `codeExport.ts` (curl/Python/TS-generátor), `promptImprover.ts` (metaprompt-összeállító), `streamMetrics.ts` (tiszta TTFT/TPS), `types.ts` (árképzési táblázat) — lásd: `docs/frameworks/PLAYGROUND_STUDIO.md`                                                               |

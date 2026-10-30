@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | Kodekørsel | `eval_code` (sandboxet JavaScript/Python) | HYBRID   |
 | System     | `execute_command` (sandboxet CLI-kørsel)  | MANUAL   |
 
-### Tilføjelse af en brugerdefineret skill
-
-Se [Plugin-SDK og integration af skills](./PLUGIN_SDK.md) for at få oplysninger om, hvordan du tilføjer en brugerdefineret skill via pluginsystemet.
-
 ---
 
 ## Se også

@@ -425,8 +425,6 @@ Vsako orodje zahteva določene obsege:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                          |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                   |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                     |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                 |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                    |
 | `read:obsidian`       | 13 orodij za branje — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 orodij za pisanje — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
@@ -583,7 +581,6 @@ Za pregled nedavnih klicev uporabite nadzorno ploščo ali končni točki REST `
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definicije orodij za veščine (4 orodja)                                             |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definicije orodij za kontekstni vir Notion (6 orodij)                               |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definicije orodij za igrifikacijo (8 orodij)                                        |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Orodja za registracijo in upravljanje vtičnikov (8 orodij)                          |
 | `src/app/api/mcp/status/route.ts`                                        | Končna točka `/api/mcp/status`                                                      |
 | `src/app/api/mcp/tools/route.ts`                                         | Končna točka `/api/mcp/tools`                                                       |
 | `src/app/api/mcp/sse/route.ts`                                           | Pot prenosa SSE `/api/mcp/sse`                                                      |

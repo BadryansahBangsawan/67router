@@ -2242,26 +2242,6 @@ Lihat [Kerangka Kerja Skills](../frameworks/SKILLS.md) untuk detail lengkap.
 
 ---
 
-## Plugin
-
-Kelola plugin OmniRoute (ekstensi pihak ketiga).
-
-| Metode | Path                               | Deskripsi                          |
-| ------ | ---------------------------------- | ---------------------------------- |
-| GET    | `/api/plugins`                     | Mencantumkan plugin yang terinstal |
-| POST   | `/api/plugins/marketplace/install` | Menginstal plugin dari marketplace |
-| DELETE | `/api/plugins/[name]`              | Menghapus instalasi plugin         |
-| POST   | `/api/plugins/[name]/activate`     | Mengaktifkan plugin                |
-| POST   | `/api/plugins/[name]/deactivate`   | Menonaktifkan plugin               |
-| GET    | `/api/plugins/[name]/config`       | Mendapatkan konfigurasi plugin     |
-| PUT    | `/api/plugins/[name]/config`       | Memperbarui konfigurasi plugin     |
-
-**Autentikasi:** Memerlukan sesi manajemen.
-
-Lihat [Kerangka Kerja Plugin](../frameworks/PLUGIN_SDK.md) untuk detail lengkap.
-
----
-
 ## Shadow Routing
 
 Perbandingan shadow/A-B antarpenyedia **bukan antarmuka REST mandiri** — fitur ini dikonfigurasi melalui combo routing (lihat [Auto-Combo](../routing/AUTO-COMBO.md)). Metrik perbandingan per combo disediakan oleh `GET /api/combos/metrics`.

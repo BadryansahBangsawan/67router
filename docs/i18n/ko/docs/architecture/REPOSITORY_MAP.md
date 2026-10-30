@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # 마케팅 / README 이미지 자산
 ├── @omniroute/           # 게시 가능한 보조 패키지(opencode-plugin, opencode-provider)
 ├── skills/               # CLI/에이전트 스킬 팩(cli-* + omni-* + config-codex-cli)
-├── examples/             # 샘플 플러그인 + omniroute-cmd-hello 스타터
+├── examples/             # Quickstart client samples
 ├── contrib/              # 커뮤니티 기여(podman/)
 ├── .source/              # Fumadocs 소스 구성(source.config.mjs + 서버/브라우저/동적)
 ├── .github/              # GitHub Actions 워크플로 + 이슈 템플릿 + PR 템플릿
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — 백그라운드에서 `needs_reindex=1`인 메모리를 처리하며, `POST /api/memory/reindex` 및 지연 백필 경로에서 호출됩니다. (계획 21)                                                                                                                                                                 |
 | `monitoring/`                            | 상태 검사, 메트릭 방출                                                                                                                                                                                                                                                                                             |
 | `oauth/`                                 | 22개 공급자 모듈의 OAuth/가져오기 흐름(agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                  |
-| `plugins/`                               | 플러그인 레지스트리                                                                                                                                                                                                                                                                                                |
 | `promptCache/`                           | Anthropic 스타일 프롬프트 캐시 중단점                                                                                                                                                                                                                                                                              |
 | `skills/`                                | 스킬 프레임워크(기본 제공 + 마켓플레이스 + SkillsSH) — `docs/frameworks/SKILLS.md` 참조                                                                                                                                                                                                                            |
 | `playground/`                            | Playground Studio 공유 헬퍼: `codeExport.ts`(curl/Python/TS 생성기), `promptImprover.ts`(메타 프롬프트 빌더), `streamMetrics.ts`(순수 TTFT/TPS), `types.ts`(가격표) — `docs/frameworks/PLAYGROUND_STUDIO.md` 참조                                                                                                  |

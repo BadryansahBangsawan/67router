@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Bilderessurser for markedsføring / README
 ├── @omniroute/           # Publiserbare tilleggspakker (opencode-plugin, opencode-provider)
 ├── skills/               # Ferdighetspakker for kommandolinjeverktøy/agenter (cli-* + omni-* + config-codex-cli)
-├── examples/             # Eksempeltillegg + omniroute-cmd-hello-startmal
+├── examples/             # Quickstart client samples
 ├── contrib/              # Bidrag fra fellesskapet (podman/)
 ├── .source/              # Fumadocs-kildekonfigurasjon (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions-arbeidsflyter + saksmaler + PR-mal
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — behandler minner med `needs_reindex=1` i bakgrunnen; kalles av `POST /api/memory/reindex` og banen for utsatt tilbakefylling. (plan 21)                                                                                                                                                             |
 | `monitoring/`                            | Helsesjekker, utsending av måledata                                                                                                                                                                                                                                                                                       |
 | `oauth/`                                 | OAuth-/importflyter for 22 leverandørmoduler (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                  |
-| `plugins/`                               | Register over programtillegg                                                                                                                                                                                                                                                                                              |
 | `promptCache/`                           | Bruddpunkter for promptbuffer i Anthropic-stil                                                                                                                                                                                                                                                                            |
 | `skills/`                                | Ferdighetsrammeverk (innebygd + markedsplass + SkillsSH) — se `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                 |
 | `playground/`                            | Delte hjelpeverktøy for Playground Studio: `codeExport.ts` (curl-/Python-/TS-generator), `promptImprover.ts` (metapromptbygger), `streamMetrics.ts` (ren TTFT/TPS), `types.ts` (pristabell) — se `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                   |

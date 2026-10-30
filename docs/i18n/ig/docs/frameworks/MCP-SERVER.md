@@ -421,8 +421,6 @@ Ngwaọrụ ọ bụla chọrọ scope ndị akọwapụtara:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                    |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                             |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                               |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                           |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                              |
 | `read:obsidian`       | Ngwa ọgụgụ 13 — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | Ngwa odide 9 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                            |
@@ -578,7 +576,6 @@ Jiri dashboard ma ọ bụ REST endpoints `/api/mcp/audit` na `/api/mcp/audit/st
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Nkọwa ngwaọrụ nka (ngwaọrụ 4)                                   |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Nkọwa ngwaọrụ isi iyi ọnọdụ Notion (ngwaọrụ 6)                  |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Nkọwa ngwaọrụ ime ka ihe bụrụ egwuregwu (ngwaọrụ 8)             |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Ngwaọrụ ndebanye na njikwa plugin (ngwaọrụ 8)                   |
 | `src/app/api/mcp/status/route.ts`                                        | Ebe njedebe `/api/mcp/status`                                   |
 | `src/app/api/mcp/tools/route.ts`                                         | Ebe njedebe `/api/mcp/tools`                                    |
 | `src/app/api/mcp/sse/route.ts`                                           | Ụzọ mbupu SSE `/api/mcp/sse`                                    |

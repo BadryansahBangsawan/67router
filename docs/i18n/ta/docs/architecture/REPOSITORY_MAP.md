@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # சந்தைப்படுத்தல் / README பட வளங்கள்
 ├── @omniroute/           # வெளியிடக்கூடிய துணைத் தொகுப்புகள் (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/முகவர் திறன் தொகுப்புகள் (cli-* + omni-* + config-codex-cli)
-├── examples/             # மாதிரி செருகுநிரல்கள் + omniroute-cmd-hello தொடக்க வார்ப்புரு
+├── examples/             # Quickstart client samples
 ├── contrib/              # சமூகப் பங்களிப்புகள் (podman/)
 ├── .source/              # Fumadocs மூல உள்ளமைவு (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions பணிப்பாய்வுகள் + சிக்கல் வார்ப்புருக்கள் + PR வார்ப்புரு
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — பின்னணியில் `needs_reindex=1` கொண்ட நினைவகங்களைச் செயலாக்குகிறது; `POST /api/memory/reindex` மற்றும் தேவைக்கேற்ப பின்நிரப்பு வழித்தடத்தால் அழைக்கப்படுகிறது. (திட்டம் 21)                                                                                                                                                |
 | `monitoring/`                            | ஆரோக்கியச் சோதனைகள், அளவீடுகள் வெளியீடு                                                                                                                                                                                                                                                                                                        |
 | `oauth/`                                 | 22 வழங்குநர் தொகுதிகளுக்கான OAuth/இறக்குமதி ஓட்டங்கள் (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                              |
-| `plugins/`                               | செருகுநிரல் பதிவகம்                                                                                                                                                                                                                                                                                                                            |
 | `promptCache/`                           | Anthropic-பாணி அறிவுறுத்தல் தற்காலிகச் சேமிப்பு முறிவுப் புள்ளிகள்                                                                                                                                                                                                                                                                             |
 | `skills/`                                | திறன்கள் கட்டமைப்பு (உள்ளமைந்தவை + சந்தை + SkillsSH) — `docs/frameworks/SKILLS.md`-ஐப் பார்க்கவும்                                                                                                                                                                                                                                             |
 | `playground/`                            | Playground Studio பகிரப்பட்ட உதவிகள்: `codeExport.ts` (curl/Python/TS உருவாக்கி), `promptImprover.ts` (மெட்டா-ப்ராம்ப்ட் உருவாக்கி), `streamMetrics.ts` (தூய TTFT/TPS), `types.ts` (விலைப்பட்டியல்) — `docs/frameworks/PLAYGROUND_STUDIO.md`-ஐப் பார்க்கவும்                                                                                   |

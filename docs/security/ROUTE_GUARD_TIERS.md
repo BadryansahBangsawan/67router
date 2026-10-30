@@ -57,7 +57,7 @@ spawn-capable prefixes and fails CI if any is not classified local-only.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy listener + system proxy                                          |
 | `/api/settings/mitm`                                                                                     | Enables MITM interception (system-level proxy state)                                            |
 | `/api/issue-agent/`                                                                                      | Issue agent — spawns local tooling against the repo                                             |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugins — load/execute via `worker_threads` + `child_process`                                   |
+| `/api/plugins/`, `/api/plugins`                                                                          | Plugins (removed) — kept loopback-only so a reintroduced route never opens remotely             |
 | `/api/system/version`                                                                                    | Auto-update (POST only; GET/HEAD/OPTIONS exempt) — spawns `git checkout` + `npm install`        |
 | `/api/db-backups/exportAll`                                                                              | Spawns `tar` for the export archive                                                             |
 | `/api/local/`                                                                                            | 1-click local launchers (Redis today) — spawns podman/docker                                    |

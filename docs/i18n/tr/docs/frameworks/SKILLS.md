@@ -470,10 +470,6 @@ const config: SkillConfig = {
 | Kod Yürütme | `eval_code` (yalıtılmış JavaScript/Python)   | HYBRID |
 | Sistem      | `execute_command` (yalıtılmış CLI yürütmesi) | MANUAL |
 
-### Özel Bir Beceri Ekleme
-
-Eklenti sistemi aracılığıyla özel bir becerinin nasıl ekleneceğini öğrenmek için [Eklenti SDK'sı ve Beceri Entegrasyonu](./PLUGIN_SDK.md) belgesine bakın.
-
 ---
 
 ## Ayrıca Bakınız

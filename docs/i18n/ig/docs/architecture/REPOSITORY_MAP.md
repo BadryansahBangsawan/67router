@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Akụrụngwa onyonyo maka mgbasa ozi / README
 ├── @omniroute/           # Ngwugwu ndị enyemaka enwere ike ibipụta (opencode-plugin, opencode-provider)
 ├── skills/               # Ngwugwu nka CLI/agent (cli-* + omni-* + config-codex-cli)
-├── examples/             # Plugin nlele + ihe mmalite omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Onyinye ndị obodo (podman/)
 ├── .source/              # Nhazi isi mmalite Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Usoro ọrụ GitHub Actions + ndebiri nsogbu + ndebiri PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — na-ahazi ebe nchekwa ndị nwere `needs_reindex=1` na ndabere; `POST /api/memory/reindex` na ụzọ lazy-backfill na-akpọ ya. (atụmatụ 21)                                                                                                                                                        |
 | `monitoring/`                            | Nlele ahụike, izipụ metrik                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | Usoro OAuth/mbubata maka modul ndị na-eweta ọrụ 22 (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                     |
-| `plugins/`                               | Ndekọ plugin                                                                                                                                                                                                                                                                                                       |
 | `promptCache/`                           | Ebe nkwụsị cache prompt nke yiri ụdị Anthropic                                                                                                                                                                                                                                                                     |
 | `skills/`                                | Framework nkà (nke etinyere n'ime ya + marketplace + SkillsSH) — lee `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                   |
 | `playground/`                            | Ngwa enyemaka ndị Playground Studio na-ekekọrịta: `codeExport.ts` (ihe na-emepụta curl/Python/TS), `promptImprover.ts` (ihe na-ewu meta-prompt), `streamMetrics.ts` (TTFT/TPS dị ọcha), `types.ts` (tebụl ọnụahịa) — lee `docs/frameworks/PLAYGROUND_STUDIO.md`                                                    |

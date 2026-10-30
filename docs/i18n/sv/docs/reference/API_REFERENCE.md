@@ -2233,26 +2233,6 @@ Se [Färdighetsramverk](../frameworks/SKILLS.md) för fullständig information.
 
 ---
 
-## Insticksprogram
-
-Hantera OmniRoute-insticksprogram (tillägg från tredje part).
-
-| Metod  | Sökväg                             | Beskrivning                                         |
-| ------ | ---------------------------------- | --------------------------------------------------- |
-| GET    | `/api/plugins`                     | Lista installerade insticksprogram                  |
-| POST   | `/api/plugins/marketplace/install` | Installera ett insticksprogram från marknadsplatsen |
-| DELETE | `/api/plugins/[name]`              | Avinstallera ett insticksprogram                    |
-| POST   | `/api/plugins/[name]/activate`     | Aktivera ett insticksprogram                        |
-| POST   | `/api/plugins/[name]/deactivate`   | Inaktivera ett insticksprogram                      |
-| GET    | `/api/plugins/[name]/config`       | Hämta insticksprogrammets konfiguration             |
-| PUT    | `/api/plugins/[name]/config`       | Uppdatera insticksprogrammets konfiguration         |
-
-**Autentisering:** Kräver en hanteringssession.
-
-Se [Ramverk för insticksprogram](../frameworks/PLUGIN_SDK.md) för fullständig information.
-
----
-
 ## Skuggroutning
 
 Skugg-/A-B-jämförelse av leverantörer är **inte en fristående REST-yta** — den konfigureras via kombinationsroutning (se [Automatisk kombination](../routing/AUTO-COMBO.md)). Jämförelsemått per kombination tillhandahålls av `GET /api/combos/metrics`.

@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # أصول الصور الخاصة بالتسويق وREADME
 ├── @omniroute/           # الحزم المصاحبة القابلة للنشر (opencode-plugin، وopencode-provider)
 ├── skills/               # حزم مهارات CLI/الوكلاء (cli-* + omni-* + config-codex-cli)
-├── examples/             # إضافات نموذجية + قالب بدء omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # مساهمات المجتمع (podman/)
 ├── .source/              # إعداد مصدر Fumadocs ‏(source.config.mjs + server/browser/dynamic)
 ├── .github/              # مهام سير عمل GitHub Actions + قوالب المشكلات + قالب طلب السحب
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — يعالج عناصر الذاكرة التي تحمل `needs_reindex=1` في الخلفية؛ ويُستدعى بواسطة `POST /api/memory/reindex` ومسار الملء اللاحق الكسول. (الخطة 21)                                                                                                                                                             |
 | `monitoring/`                            | فحوصات السلامة وإصدار المقاييس                                                                                                                                                                                                                                                                                                 |
 | `oauth/`                                 | تدفقات OAuth/الاستيراد لـ 22 وحدة من موفري الخدمة (agy، وantigravity، وclaude، وcline، وcodebuddy-cn، وcodex، وcursor، وdevin-desktop، وghe-copilot، وgithub، وgitlab-duo، وgrok-cli-oauth، وgrok-cli، وkilocode، وkimi-coding، وkiro، وopenference، وqoder، وtrae، وxai-oauth، وzed-hosted، وzed)                             |
-| `plugins/`                               | سجل المكونات الإضافية                                                                                                                                                                                                                                                                                                          |
 | `promptCache/`                           | نقاط توقف ذاكرة التخزين المؤقت للمطالبات بأسلوب Anthropic                                                                                                                                                                                                                                                                      |
 | `skills/`                                | إطار عمل المهارات (مدمجة + السوق + SkillsSH) — راجع `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                                |
 | `playground/`                            | أدوات مساعدة مشتركة لـ Playground Studio: ‏`codeExport.ts` (مولّد curl/Python/TS)، و`promptImprover.ts` (منشئ المطالبات الوصفية)، و`streamMetrics.ts` (حسابات TTFT/TPS خالصة)، و`types.ts` (جدول التسعير) — راجع `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                        |

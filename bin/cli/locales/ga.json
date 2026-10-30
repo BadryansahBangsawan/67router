@@ -1156,16 +1156,6 @@
     "system": "Prasír córas",
     "resume": "Atosaigh seisiún sábháilte de réir ainm"
   },
-  "plugin": {
-    "description": "Bainistigh breiseáin CLI (omniroute-cmd-*)",
-    "list": "Liostaigh breiseáin shuiteáilte",
-    "install": "Suiteáil breiseán ó npm nó conair logánta",
-    "remove": "Bain breiseán shuiteáilte",
-    "info": "Taispeáin sonraí do bhreiseán shuiteáilte",
-    "search": "Cuardaigh reáiste npm le haghaidh breiseáin ar fáil",
-    "update": "Nuashonraigh breiseáin shuiteáilte",
-    "scaffold": "Creadum i mbunchaighde breiseáin nua"
-  },
   "launch": {
     "description": "Seol Claude Code dírithe ar OmniRoute (logánta nó cianda, le --profile)",
     "token": "Comhartha a sheolfaidh an cliant Claude (ANTHROPIC_AUTH_TOKEN)",

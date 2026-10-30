@@ -422,8 +422,6 @@ OmniRoute μέσω του ίδιου μοντέλου σύνδεσης που χ
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
 | `read:obsidian`       | 13 εργαλεία ανάγνωσης — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 εργαλεία εγγραφής — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
@@ -579,7 +577,6 @@ MCP_TOOL_ALLOW="omniroute_route_request,omniroute_check_quota" omniroute --mcp
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Ορισμοί εργαλείων δεξιοτήτων (4 εργαλεία)                                  |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Ορισμοί εργαλείων πηγής περιεχομένου Notion (6 εργαλεία)                   |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Ορισμοί εργαλείων gamification (8 εργαλεία)                                |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Εργαλεία καταχώρισης και διαχείρισης plugin (8 εργαλεία)                   |
 | `src/app/api/mcp/status/route.ts`                                        | Τελικό σημείο `/api/mcp/status`                                            |
 | `src/app/api/mcp/tools/route.ts`                                         | Τελικό σημείο `/api/mcp/tools`                                             |
 | `src/app/api/mcp/sse/route.ts`                                           | Διαδρομή μεταφοράς SSE `/api/mcp/sse`                                      |

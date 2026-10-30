@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | Code Exec | `eval_code` (sandboxed JavaScript/Python)   | HYBRID |
 | سسٹم      | `execute_command` (sandboxed CLI execution) | MANUAL |
 
-### اپنی Custom Skill شامل کرنا
-
-plugin system کے ذریعے custom skill شامل کرنے کا طریقہ جاننے کے لیے [Plugin SDK اور Skills Integration](./PLUGIN_SDK.md) دیکھیں۔
-
 ---
 
 ## مزید دیکھیں

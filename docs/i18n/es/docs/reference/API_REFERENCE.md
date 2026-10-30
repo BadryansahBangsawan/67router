@@ -2219,26 +2219,6 @@ Consulta [Framework de Skills](../frameworks/SKILLS.md) para obtener todos los d
 
 ---
 
-## Plugins
-
-Gestiona los plugins de OmniRoute (extensiones de terceros).
-
-| Método | Ruta                               | Descripción                            |
-| ------ | ---------------------------------- | -------------------------------------- |
-| GET    | `/api/plugins`                     | Enumera los plugins instalados         |
-| POST   | `/api/plugins/marketplace/install` | Instala un plugin desde el marketplace |
-| DELETE | `/api/plugins/[name]`              | Desinstala un plugin                   |
-| POST   | `/api/plugins/[name]/activate`     | Activa un plugin                       |
-| POST   | `/api/plugins/[name]/deactivate`   | Desactiva un plugin                    |
-| GET    | `/api/plugins/[name]/config`       | Obtiene la configuración del plugin    |
-| PUT    | `/api/plugins/[name]/config`       | Actualiza la configuración del plugin  |
-
-**Autenticación:** Requiere una sesión de administración.
-
-Consulta [Framework de Plugins](../frameworks/PLUGIN_SDK.md) para obtener todos los detalles.
-
----
-
 ## Enrutamiento en sombra
 
 La comparación en sombra / A-B de proveedores **no es una superficie REST independiente**; se configura mediante el enrutamiento combinado (consulta [Auto-Combo](../routing/AUTO-COMBO.md)). Las métricas de comparación de cada combinación se proporcionan mediante `GET /api/combos/metrics`.

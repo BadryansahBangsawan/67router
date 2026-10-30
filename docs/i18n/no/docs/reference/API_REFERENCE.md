@@ -2242,26 +2242,6 @@ Se [Ferdighetsrammeverk](../frameworks/SKILLS.md) for fullstendig informasjon.
 
 ---
 
-## Programtillegg
-
-Administrer OmniRoute-programtillegg (tredjepartsutvidelser).
-
-| Metode | Bane                               | Beskrivelse                                    |
-| ------ | ---------------------------------- | ---------------------------------------------- |
-| GET    | `/api/plugins`                     | Vis installerte programtillegg                 |
-| POST   | `/api/plugins/marketplace/install` | Installer et programtillegg fra markedsplassen |
-| DELETE | `/api/plugins/[name]`              | Avinstaller et programtillegg                  |
-| POST   | `/api/plugins/[name]/activate`     | Aktiver et programtillegg                      |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktiver et programtillegg                    |
-| GET    | `/api/plugins/[name]/config`       | Hent konfigurasjonen for programtillegget      |
-| PUT    | `/api/plugins/[name]/config`       | Oppdater konfigurasjonen for programtillegget  |
-
-**Autentisering:** Krever administrasjonsøkt.
-
-Se [Rammeverk for programtillegg](../frameworks/PLUGIN_SDK.md) for fullstendig informasjon.
-
----
-
 ## Skyggeruting
 
 Skygge-/A-B-sammenligning av leverandører er **ikke en frittstående REST-overflate** — den konfigureres gjennom kombinasjonsruting (se [Automatisk kombinasjon](../routing/AUTO-COMBO.md)). Sammenligningsmålinger per kombinasjon leveres av `GET /api/combos/metrics`.

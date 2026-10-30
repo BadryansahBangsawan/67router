@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # កម្រិតគម្រោង (ត្រូវបានផ្ទុកនៅពេលចាប់ផ្ដើម)
 ```
 
-ឬផ្ទុកតាមកម្មវិធីពីកម្មវិធីជំនួយ៖
+Or register it programmatically at startup:
 
 ```ts
-// នៅក្នុងកម្មវិធីជំនួយរបស់អ្នក
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK របស់កម្មវិធីជំនួយផ្ដល់ hook onRequest / onResponse / onError។ ចុះឈ្មោះ
-  // ម៉ាស៊ីននៅពេលម៉ូឌុលកម្មវិធីជំនួយត្រូវបានផ្ទុក (ឬនៅ onRequest ដំបូង) ហើយលុបការចុះឈ្មោះវា
-  // ពីដំណើរការបិទរបស់អ្នកផ្ទាល់។
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// នៅពេលបិទ៖
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

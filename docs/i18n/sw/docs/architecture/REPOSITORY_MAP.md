@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Rasilimali za picha za uuzaji / README
 ├── @omniroute/           # Vifurushi saidizi vinavyoweza kuchapishwa (opencode-plugin, opencode-provider)
 ├── skills/               # Vifurushi vya ujuzi vya CLI/ajenti (cli-* + omni-* + config-codex-cli)
-├── examples/             # Programu-jalizi za mfano + kianzilishi cha omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Michango ya jumuiya (podman/)
 ├── .source/              # Usanidi chanzo wa Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Mitiririko ya kazi ya GitHub Actions + violezo vya masuala + kiolezo cha PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — huchakata kumbukumbu zenye `needs_reindex=1` chinichini; huitwa na `POST /api/memory/reindex` na njia ya kujaza data ya nyuma inapohitajika. (mpango wa 21)                                                                                                                                                   |
 | `monitoring/`                            | Ukaguzi wa hali, utoaji wa vipimo                                                                                                                                                                                                                                                                                                   |
 | `oauth/`                                 | Mitiririko ya OAuth/uingizaji kwa moduli 22 za watoa huduma (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                             |
-| `plugins/`                               | Sajili ya programu-jalizi                                                                                                                                                                                                                                                                                                           |
 | `promptCache/`                           | Sehemu za kukatisha akiba ya prompt za mtindo wa Anthropic                                                                                                                                                                                                                                                                          |
 | `skills/`                                | Mfumo wa ujuzi (uliopachikwa + soko + SkillsSH) — tazama `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                                |
 | `playground/`                            | Visaidizi vinavyoshirikiwa vya Playground Studio: `codeExport.ts` (kizalishaji cha curl/Python/TS), `promptImprover.ts` (kiundaji cha meta-prompt), `streamMetrics.ts` (TTFT/TPS safi), `types.ts` (jedwali la bei) — angalia `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                |

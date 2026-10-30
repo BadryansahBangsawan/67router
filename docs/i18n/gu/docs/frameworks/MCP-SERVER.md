@@ -409,8 +409,6 @@ API કી પરનું `manage`, MCP ટૂલ પરનું `read:compres
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                     |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                              |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                            |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                               |
 | `read:obsidian`       | 13 વાંચન ટૂલ્સ — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 લેખન ટૂલ્સ — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                             |
@@ -567,7 +565,6 @@ stdio ટ્રાન્સપોર્ટ દર 5 સેકન્ડે લા
 | `open-sse/mcp-server/tools/skillTools.ts`                                | કૌશલ્ય ટૂલ વ્યાખ્યાઓ (4 ટૂલ્સ)                                   |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion સંદર્ભ સ્ત્રોત ટૂલ વ્યાખ્યાઓ (6 ટૂલ્સ)                    |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | ગેમિફિકેશન ટૂલ વ્યાખ્યાઓ (8 ટૂલ્સ)                               |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | પ્લગઇન નોંધણી અને વ્યવસ્થાપન ટૂલ્સ (8 ટૂલ્સ)                     |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` એન્ડપૉઇન્ટ                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` એન્ડપૉઇન્ટ                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE ટ્રાન્સપોર્ટ રૂટ                              |

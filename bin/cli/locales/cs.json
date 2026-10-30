@@ -1156,16 +1156,6 @@
     "system": "Systémová výzva",
     "resume": "Pokračovat v uložené relaci podle názvu"
   },
-  "plugin": {
-    "description": "Spravovat pluginy CLI (omniroute-cmd-*)",
-    "list": "Vypsat nainstalované pluginy",
-    "install": "Nainstalovat plugin z npm nebo místní cesty",
-    "remove": "Odstranit nainstalovaný plugin",
-    "info": "Zobrazit podrobnosti o nainstalovaném pluginu",
-    "search": "Vyhledat dostupné pluginy v registru npm",
-    "update": "Aktualizovat nainstalované pluginy",
-    "scaffold": "Vygenerovat základní strukturu nového pluginu"
-  },
   "launch": {
     "description": "Spustit Claude Code nasměrovaný na OmniRoute (místní nebo vzdálený, s --profile)",
     "token": "Token, který má klient Claude odesílat (ANTHROPIC_AUTH_TOKEN)",

@@ -170,7 +170,7 @@ Subsequent migrations add tables such as:
 - `mcp_*` tables — MCP server audit
 - `a2a_*` tables — A2A task state
 - `usage_*` tables — usage tracking
-- `plugin_*` tables — plugin system
+- `plugins` / `plugin_*` tables — left from the removed plugin system; kept so existing databases migrate cleanly
 - `skill_executions` — skill execution history
 - `memory_*` tables — memory system
 - `compression_*` tables — compression system
@@ -361,7 +361,6 @@ The backup file includes:
 - All DB tables (serialized to JSON)
 - Call log artifacts (base64-encoded, optional)
 - Settings + secrets (encrypted)
-- Plugin configuration
 
 ### Restore
 

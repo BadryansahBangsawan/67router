@@ -2222,26 +2222,6 @@ Ara [Qafas tal-Ħiliet](../frameworks/SKILLS.md) għad-dettalji kollha.
 
 ---
 
-## Plugins
-
-Immaniġġja l-plugins ta' OmniRoute (estensjonijiet ta' partijiet terzi).
-
-| Metodu | Mogħdija                           | Deskrizzjoni                         |
-| ------ | ---------------------------------- | ------------------------------------ |
-| GET    | `/api/plugins`                     | Elenka l-plugins installati          |
-| POST   | `/api/plugins/marketplace/install` | Installa plugin mis-suq              |
-| DELETE | `/api/plugins/[name]`              | Neħħi plugin                         |
-| POST   | `/api/plugins/[name]/activate`     | Attiva plugin                        |
-| POST   | `/api/plugins/[name]/deactivate`   | Iddiżattiva plugin                   |
-| GET    | `/api/plugins/[name]/config`       | Ikseb il-konfigurazzjoni tal-plugin  |
-| PUT    | `/api/plugins/[name]/config`       | Aġġorna l-konfigurazzjoni tal-plugin |
-
-**Awtentikazzjoni:** Teħtieġ sessjoni ta' ġestjoni.
-
-Ara [Qafas tal-Plugins](../frameworks/PLUGIN_SDK.md) għad-dettalji kollha.
-
----
-
 ## Routing Parallel
 
 It-tqabbil parallel / A-B tal-fornituri **mhuwiex interfaċċa REST awtonoma** — jiġi kkonfigurat permezz tar-routing combo (ara [Auto-Combo](../routing/AUTO-COMBO.md)). Il-metriċi tat-tqabbil għal kull combo jiġu pprovduti minn `GET /api/combos/metrics`.

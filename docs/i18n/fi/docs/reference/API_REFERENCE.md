@@ -2245,26 +2245,6 @@ Katso täydelliset tiedot kohdasta [Taitokehys](../frameworks/SKILLS.md).
 
 ---
 
-## Liitännäiset
-
-Hallinnoi OmniRoute-liitännäisiä (kolmannen osapuolen laajennuksia).
-
-| Menetelmä | Polku                              | Kuvaus                               |
-| --------- | ---------------------------------- | ------------------------------------ |
-| GET       | `/api/plugins`                     | Luettele asennetut liitännäiset      |
-| POST      | `/api/plugins/marketplace/install` | Asenna liitännäinen markkinapaikasta |
-| DELETE    | `/api/plugins/[name]`              | Poista liitännäisen asennus          |
-| POST      | `/api/plugins/[name]/activate`     | Aktivoi liitännäinen                 |
-| POST      | `/api/plugins/[name]/deactivate`   | Poista liitännäinen käytöstä         |
-| GET       | `/api/plugins/[name]/config`       | Hae liitännäisen määritykset         |
-| PUT       | `/api/plugins/[name]/config`       | Päivitä liitännäisen määritykset     |
-
-**Todennus:** Edellyttää hallintaistuntoa.
-
-Katso täydelliset tiedot kohdasta [Liitännäiskehys](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Varjoreititys
 
 Palveluntarjoajien varjovertailu / A/B-vertailu **ei ole erillinen REST-rajapinta** — se määritetään yhdistelmäreitityksen kautta (katso [Automaattinen yhdistelmä](../routing/AUTO-COMBO.md)). Yhdistelmäkohtaiset vertailumittarit tarjoaa `GET /api/combos/metrics`.

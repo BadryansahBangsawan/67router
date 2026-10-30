@@ -1156,16 +1156,6 @@
     "system": "系统提示",
     "resume": "按名称恢复保存的会话"
   },
-  "plugin": {
-    "description": "管理 CLI 插件（omniroute-cmd-*）",
-    "list": "列出已安装的插件",
-    "install": "从 npm 或本地路径安装插件",
-    "remove": "删除已安装的插件",
-    "info": "显示已安装插件的详情",
-    "search": "搜索 npm 注册表中的可用插件",
-    "update": "更新已安装的插件",
-    "scaffold": "搭建新的插件模板"
-  },
   "launch": {
     "description": "启动指向 OmniRoute 的 Claude Code（本地或远程，使用 --profile）",
     "token": "Claude 客户端应发送的令牌（ANTHROPIC_AUTH_TOKEN）",

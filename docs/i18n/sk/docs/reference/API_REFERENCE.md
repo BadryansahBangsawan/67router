@@ -2244,26 +2244,6 @@ Spravujte Skills (framework agentických rozšírení).
 
 ---
 
-## Pluginy
-
-Spravujte pluginy OmniRoute (rozšírenia tretích strán).
-
-| Metóda | Cesta                              | Popis                             |
-| ------ | ---------------------------------- | --------------------------------- |
-| GET    | `/api/plugins`                     | Zoznam nainštalovaných pluginov   |
-| POST   | `/api/plugins/marketplace/install` | Inštalácia pluginu z marketplace  |
-| DELETE | `/api/plugins/[name]`              | Odinštalovanie pluginu            |
-| POST   | `/api/plugins/[name]/activate`     | Aktivácia pluginu                 |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivácia pluginu               |
-| GET    | `/api/plugins/[name]/config`       | Získanie konfigurácie pluginu     |
-| PUT    | `/api/plugins/[name]/config`       | Aktualizácia konfigurácie pluginu |
-
-**Autorizácia:** Vyžaduje reláciu správy.
-
-Úplné podrobnosti nájdete v dokumente [Framework pluginov](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Tieňové smerovanie
 
 Tieňové porovnávanie poskytovateľov / porovnávanie A-B **nie je samostatným rozhraním REST** — konfiguruje sa prostredníctvom kombinovaného smerovania (pozrite si [Automatické kombinácie](../routing/AUTO-COMBO.md)). Metriky porovnávania pre jednotlivé kombinácie poskytuje `GET /api/combos/metrics`.

@@ -471,10 +471,6 @@ const config: SkillConfig = {
 | コード実行   | `eval_code`（サンドボックス化された JavaScript/Python） | HYBRID |
 | システム     | `execute_command`（サンドボックス化された CLI 実行）    | MANUAL |
 
-### カスタムスキルの追加
-
-プラグインシステムを介してカスタムスキルを追加する方法については、[プラグイン SDK とスキルの統合](./PLUGIN_SDK.md)を参照してください。
-
 ---
 
 ## 関連項目

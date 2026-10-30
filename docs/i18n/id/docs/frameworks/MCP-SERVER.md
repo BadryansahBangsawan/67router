@@ -402,8 +402,6 @@ Setiap alat memerlukan cakupan tertentu:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                   |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                            |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                              |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                          |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                             |
 | `read:obsidian`       | 13 alat baca — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 alat tulis — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                           |
@@ -559,7 +557,6 @@ Gunakan dasbor atau endpoint REST `/api/mcp/audit` dan `/api/mcp/audit/stats` un
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definisi alat keterampilan (4 alat)                                         |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definisi alat sumber konteks Notion (6 alat)                                |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definisi alat gamifikasi (8 alat)                                           |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Alat pendaftaran dan pengelolaan plugin (8 alat)                            |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint `/api/mcp/status`                                                  |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint `/api/mcp/tools`                                                   |
 | `src/app/api/mcp/sse/route.ts`                                           | Rute transport SSE `/api/mcp/sse`                                           |

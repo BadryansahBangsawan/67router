@@ -196,7 +196,7 @@ See [A2A-SERVER.md](./A2A-SERVER.md) for protocol details.
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-eval`            | cli-eval           | `omniroute eval`        |
-| `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
+| `cli-plugins-skills`  | cli-plugins-skills | `omniroute skills`      |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
 

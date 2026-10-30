@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Մարքեթինգային / README պատկերային ռեսուրսներ
 ├── @omniroute/           # Հրապարակման ենթակա ուղեկից փաթեթներ (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/գործակալի հմտությունների փաթեթներ (cli-* + omni-* + config-codex-cli)
-├── examples/             # Պլագինների օրինակներ + omniroute-cmd-hello մեկնարկային նախագիծ
+├── examples/             # Quickstart client samples
 ├── contrib/              # Համայնքի ներդրումներ (podman/)
 ├── .source/              # Fumadocs սկզբնաղբյուրի կազմաձև (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions աշխատանքային հոսքեր + խնդրի ձևանմուշներ + PR ձևանմուշ
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ֆոնային ռեժիմում մշակում է `needs_reindex=1` ունեցող հիշողությունները․ կանչվում է `POST /api/memory/reindex`-ի և ծույլ հետադարձ լրացման ուղու կողմից։ (պլան 21)                                                                                                                                               |
 | `monitoring/`                            | Առողջական վիճակի ստուգումներ, չափիչների արտահանում                                                                                                                                                                                                                                                                                  |
 | `oauth/`                                 | OAuth/ներմուծման հոսքեր 22 մատակարարի մոդուլների համար (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                  |
-| `plugins/`                               | Փլագինների ռեեստր                                                                                                                                                                                                                                                                                                                   |
 | `promptCache/`                           | Anthropic ոճի հուշումների քեշի ընդհատման կետեր                                                                                                                                                                                                                                                                                      |
 | `skills/`                                | Հմտությունների ֆրեյմվորք (ներկառուցված + շուկա + SkillsSH) — տե՛ս `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                       |
 | `playground/`                            | Playground Studio-ի ընդհանուր օժանդակ գործիքներ՝ `codeExport.ts` (curl/Python/TS գեներատոր), `promptImprover.ts` (մետա-հուշման կառուցիչ), `streamMetrics.ts` (մաքուր TTFT/TPS), `types.ts` (գնագոյացման աղյուսակ) — տես `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                      |

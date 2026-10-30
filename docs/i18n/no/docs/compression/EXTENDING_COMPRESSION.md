@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Prosjektnivå (lastes ved oppstart)
 ```
 
-Eller last dem inn programmatisk fra et programtillegg:
+Or register it programmatically at startup:
 
 ```ts
-// I programtillegget ditt
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Programtilleggets SDK tilbyr onRequest-/onResponse-/onError-kroker. Registrer
-  // motoren når programtilleggsmodulen lastes inn (eller ved første onRequest); avregistrer den
-  // via din egen nedstengingsrutine.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Ved nedstenging:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

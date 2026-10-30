@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Obrázkové materiály pro marketing / README
 ├── @omniroute/           # Publikovatelné doprovodné balíčky (opencode-plugin, opencode-provider)
 ├── skills/               # Balíčky dovedností pro CLI/agenty (cli-* + omni-* + config-codex-cli)
-├── examples/             # Ukázkové pluginy + základní projekt omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Komunitní příspěvky (podman/)
 ├── .source/              # Konfigurace zdrojů Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Pracovní postupy GitHub Actions + šablony problémů + šablona PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — zpracovává na pozadí záznamy paměti s `needs_reindex=1`; voláno prostřednictvím `POST /api/memory/reindex` a cestou líného zpětného doplnění. (plán 21)                                                                                                                                        |
 | `monitoring/`                            | Kontroly stavu, generování metrik                                                                                                                                                                                                                                                                                    |
 | `oauth/`                                 | Toky OAuth/importu pro 22 modulů poskytovatelů (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                           |
-| `plugins/`                               | Registr pluginů                                                                                                                                                                                                                                                                                                      |
 | `promptCache/`                           | Body přerušení mezipaměti promptů ve stylu Anthropic                                                                                                                                                                                                                                                                 |
 | `skills/`                                | Framework dovedností (vestavěné + tržiště + SkillsSH) — viz `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                              |
 | `playground/`                            | Sdílené pomocné moduly Playground Studia: `codeExport.ts` (generátor curl/Python/TS), `promptImprover.ts` (tvůrce metapromptů), `streamMetrics.ts` (čisté TTFT/TPS), `types.ts` (tabulka cen) — viz `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                           |

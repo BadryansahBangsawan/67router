@@ -2236,26 +2236,6 @@ Sve pojedinosti potražite u dokumentu [Okvir vještina](../frameworks/SKILLS.md
 
 ---
 
-## Dodaci
-
-Upravljajte dodacima za OmniRoute (proširenjima trećih strana).
-
-| Metoda | Putanja                            | Opis                             |
-| ------ | ---------------------------------- | -------------------------------- |
-| GET    | `/api/plugins`                     | Popis instaliranih dodataka      |
-| POST   | `/api/plugins/marketplace/install` | Instalacija dodatka s tržnice    |
-| DELETE | `/api/plugins/[name]`              | Deinstalacija dodatka            |
-| POST   | `/api/plugins/[name]/activate`     | Aktivacija dodatka               |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivacija dodatka             |
-| GET    | `/api/plugins/[name]/config`       | Dohvaćanje konfiguracije dodatka |
-| PUT    | `/api/plugins/[name]/config`       | Ažuriranje konfiguracije dodatka |
-
-**Autentifikacija:** Zahtijeva sesiju za upravljanje.
-
-Sve pojedinosti potražite u dokumentu [Okvir za dodatke](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Usmjeravanje u sjeni
 
 Usporedba pružatelja u sjeni / A-B usporedba **nije zasebno REST sučelje** — konfigurira se putem kombiniranog usmjeravanja (pogledajte [Automatske kombinacije](../routing/AUTO-COMBO.md)). Metrike usporedbe za pojedinačne kombinacije dostupne su putem `GET /api/combos/metrics`.

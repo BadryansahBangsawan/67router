@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | Kodexekvering | `eval_code` (JavaScript/Python i sandlåda)    | HYBRID |
 | System        | `execute_command` (CLI-exekvering i sandlåda) | MANUAL |
 
-### Lägga till en anpassad färdighet
-
-Se [Plugin-SDK och färdighetsintegrering](./PLUGIN_SDK.md) för information om hur du lägger till en anpassad färdighet via pluginsystemet.
-
 ---
 
 ## Se även

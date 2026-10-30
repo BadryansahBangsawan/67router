@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Πόροι εικόνων για μάρκετινγκ / README
 ├── @omniroute/           # Συνοδευτικά πακέτα προς δημοσίευση (opencode-plugin, opencode-provider)
 ├── skills/               # Πακέτα δεξιοτήτων CLI/πρακτόρων (cli-* + omni-* + config-codex-cli)
-├── examples/             # Ενδεικτικά πρόσθετα + πρότυπο εκκίνησης omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Συνεισφορές κοινότητας (podman/)
 ├── .source/              # Ρυθμίσεις πηγής Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Ροές εργασίας GitHub Actions + πρότυπα ζητημάτων + πρότυπο PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — επεξεργάζεται στο παρασκήνιο μνήμες με `needs_reindex=1`· καλείται από το `POST /api/memory/reindex` και τη διαδρομή αναδρομικής συμπλήρωσης κατά απαίτηση. (σχέδιο 21)                                                                                                                                     |
 | `monitoring/`                            | Έλεγχοι εύρυθμης λειτουργίας, εκπομπή μετρικών                                                                                                                                                                                                                                                                                    |
 | `oauth/`                                 | Ροές OAuth/εισαγωγής για 22 αρθρώματα παρόχων (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                         |
-| `plugins/`                               | Μητρώο προσθέτων                                                                                                                                                                                                                                                                                                                  |
 | `promptCache/`                           | Σημεία διακοπής κρυφής μνήμης προτροπών τύπου Anthropic                                                                                                                                                                                                                                                                           |
 | `skills/`                                | Πλαίσιο δεξιοτήτων (ενσωματωμένες + marketplace + SkillsSH) — δείτε το `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                |
 | `playground/`                            | Κοινόχρηστα βοηθητικά εργαλεία του Playground Studio: `codeExport.ts` (γεννήτρια curl/Python/TS), `promptImprover.ts` (δημιουργία μετα-προτροπών), `streamMetrics.ts` (αμιγείς μετρήσεις TTFT/TPS), `types.ts` (πίνακας τιμολόγησης) — δείτε `docs/frameworks/PLAYGROUND_STUDIO.md`                                               |

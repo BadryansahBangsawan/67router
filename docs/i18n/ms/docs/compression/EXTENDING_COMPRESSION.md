@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Peringkat projek (dimuatkan semasa permulaan)
 ```
 
-Atau muatkannya secara pengaturcaraan daripada pemalam:
+Or register it programmatically at startup:
 
 ```ts
-// Dalam pemalam anda
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK pemalam menyediakan cangkuk onRequest / onResponse / onError. Daftarkan
-  // enjin apabila modul pemalam dimuatkan (atau pada onRequest pertama); nyahdaftarkannya
-  // daripada laluan pembongkaran anda sendiri.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Semasa pembongkaran:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

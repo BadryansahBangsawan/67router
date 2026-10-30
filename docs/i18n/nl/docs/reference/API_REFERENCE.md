@@ -2240,26 +2240,6 @@ Zie [Skills-framework](../frameworks/SKILLS.md) voor alle details.
 
 ---
 
-## Plugins
-
-Beheer OmniRoute-plugins (extensies van derden).
-
-| Methode | Pad                                | Beschrijving                                 |
-| ------- | ---------------------------------- | -------------------------------------------- |
-| GET     | `/api/plugins`                     | Geïnstalleerde plugins weergeven             |
-| POST    | `/api/plugins/marketplace/install` | Een plugin installeren vanuit de marketplace |
-| DELETE  | `/api/plugins/[name]`              | Een plugin verwijderen                       |
-| POST    | `/api/plugins/[name]/activate`     | Een plugin activeren                         |
-| POST    | `/api/plugins/[name]/deactivate`   | Een plugin deactiveren                       |
-| GET     | `/api/plugins/[name]/config`       | De pluginconfiguratie ophalen                |
-| PUT     | `/api/plugins/[name]/config`       | De pluginconfiguratie bijwerken              |
-
-**Authenticatie:** Vereist een beheersessie.
-
-Zie [Pluginframework](../frameworks/PLUGIN_SDK.md) voor alle details.
-
----
-
 ## Shadow-routing
 
 Shadow-/A-B-vergelijking van providers is **geen zelfstandig REST-oppervlak** — dit wordt geconfigureerd via combo-routing (zie [Auto-Combo](../routing/AUTO-COMBO.md)). Vergelijkingsmetriek per combo is beschikbaar via `GET /api/combos/metrics`.

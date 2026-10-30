@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | Eżekuzzjoni ta' Kodiċi | `eval_code` (JavaScript/Python f'sandbox)     | HYBRID   |
 | Sistema                | `execute_command` (eżekuzzjoni CLI f'sandbox) | MANUAL   |
 
-### Kif Iżżid Ħila Personalizzata
-
-Ara [SDK tal-Plugin u Integrazzjoni tal-Ħiliet](./PLUGIN_SDK.md) biex titgħallem kif iżżid ħila personalizzata permezz tas-sistema tal-plugins.
-
 ---
 
 ## Ara Wkoll

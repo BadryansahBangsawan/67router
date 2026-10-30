@@ -1156,16 +1156,6 @@
     "system": "Sistemski prompt",
     "resume": "Nastavi sačuvanu sesiju po nazivu"
   },
-  "plugin": {
-    "description": "Upravljanje CLI dodacima (omniroute-cmd-*)",
-    "list": "Prikaži instalirane dodatke",
-    "install": "Instaliraj dodatak sa npm-a ili lokalne putanje",
-    "remove": "Ukloni instalirani dodatak",
-    "info": "Prikaži detalje instaliranog dodatka",
-    "search": "Pretraži npm registar za dostupne dodatke",
-    "update": "Ažuriraj instalirane dodatke",
-    "scaffold": "Generiši osnovnu strukturu novog dodatka"
-  },
   "launch": {
     "description": "Pokreni Claude Code usmeren na OmniRoute (lokalno ili udaljeno, sa --profile)",
     "token": "Token koji Claude klijent treba da šalje (ANTHROPIC_AUTH_TOKEN)",

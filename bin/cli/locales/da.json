@@ -1156,16 +1156,6 @@
     "system": "Systemprompt",
     "resume": "Genoptag en gemt session efter navn"
   },
-  "plugin": {
-    "description": "Administrer CLI-plugins (omniroute-cmd-*)",
-    "list": "Vis installerede plugins",
-    "install": "Installer et plugin fra npm eller en lokal sti",
-    "remove": "Fjern et installeret plugin",
-    "info": "Vis oplysninger om et installeret plugin",
-    "search": "Søg i npm-registret efter tilgængelige plugins",
-    "update": "Opdater installerede plugins",
-    "scaffold": "Opret en skabelon til et nyt plugin"
-  },
   "launch": {
     "description": "Start Claude Code med forbindelse til OmniRoute (lokalt eller eksternt, med --profile)",
     "token": "Token, som Claude-klienten skal sende (ANTHROPIC_AUTH_TOKEN)",

@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Rinkodaros / README vaizdų ištekliai
 ├── @omniroute/           # Publikuojami papildomi paketai (opencode-plugin, opencode-provider)
 ├── skills/               # CLI / agentų įgūdžių paketai (cli-* + omni-* + config-codex-cli)
-├── examples/             # Papildinių pavyzdžiai + omniroute-cmd-hello pradinis šablonas
+├── examples/             # Quickstart client samples
 ├── contrib/              # Bendruomenės indėliai (podman/)
 ├── .source/              # Fumadocs šaltinio konfigūracija (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions darbo eigos + problemų šablonai + PR šablonas
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — fone apdoroja atminties įrašus, kurių `needs_reindex=1`; iškviečiama per `POST /api/memory/reindex` ir atidėtojo trūkstamų duomenų užpildymo kelią. (21 planas)                                                                                                                                        |
 | `monitoring/`                            | Būklės patikros, metrikų generavimas                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | OAuth / importavimo srautai, skirti 22 teikėjų moduliams (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                         |
-| `plugins/`                               | Papildinių registras                                                                                                                                                                                                                                                                                                         |
 | `promptCache/`                           | Anthropic stiliaus raginimų podėlio kontroliniai taškai                                                                                                                                                                                                                                                                      |
 | `skills/`                                | Įgūdžių sistema (integruoti įgūdžiai + prekyvietė + SkillsSH) — žr. `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                              |
 | `playground/`                            | Bendri „Playground Studio“ pagalbiniai moduliai: `codeExport.ts` (curl/Python/TS generatorius), `promptImprover.ts` (metaužklausų kūrimo priemonė), `streamMetrics.ts` (grynieji TTFT/TPS), `types.ts` (kainodaros lentelė) — žr. `docs/frameworks/PLAYGROUND_STUDIO.md`                                                     |

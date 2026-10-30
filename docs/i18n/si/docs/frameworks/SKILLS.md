@@ -469,10 +469,6 @@ const config: SkillConfig = {
 | කේත ක්රියාත්මක කිරීම | `eval_code` (sandbox කළ JavaScript/Python)          | HYBRID  |
 | පද්ධතිය              | `execute_command` (sandbox කළ CLI ක්රියාත්මක කිරීම) | MANUAL  |
 
-### අභිරුචි කුසලතාවක් එක් කිරීම
-
-ප්ලගින පද්ධතිය හරහා අභිරුචි කුසලතාවක් එක් කරන ආකාරය සඳහා [Plugin SDK සහ කුසලතා ඒකාබද්ධ කිරීම](./PLUGIN_SDK.md) බලන්න.
-
 ---
 
 ## මෙයද බලන්න

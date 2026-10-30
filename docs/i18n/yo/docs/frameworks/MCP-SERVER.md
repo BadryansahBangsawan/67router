@@ -411,8 +411,6 @@ Irú irinṣẹ́ kọ̀ọ̀kan nílò àwọn scope pàtó:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                          |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                   |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                     |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                 |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                    |
 | `read:obsidian`       | Àwọn irinṣẹ́ kíkà 13 — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | Àwọn irinṣẹ́ kíkọ 9 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
@@ -569,7 +567,6 @@ Lo dashboard tàbí àwọn endpoint REST `/api/mcp/audit` àti `/api/mcp/audit/
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Àwọn ìtumọ̀ irinṣẹ́ ọgbọ́n (irinṣẹ́ 4)                                      |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Àwọn ìtumọ̀ irinṣẹ́ orísun àyíká-ọ̀rọ̀ Notion (irinṣẹ́ 6)                    |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Àwọn ìtumọ̀ irinṣẹ́ ìsọdi-nǹkan-sí-eré (irinṣẹ́ 8)                         |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Ìforúkọsílẹ̀ plugin àti àwọn irinṣẹ́ ìṣàkóso (irinṣẹ́ 8)                   |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint `/api/mcp/status`                                              |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint `/api/mcp/tools`                                               |
 | `src/app/api/mcp/sse/route.ts`                                           | Ọ̀nà ìgbéjàde SSE `/api/mcp/sse`                                         |

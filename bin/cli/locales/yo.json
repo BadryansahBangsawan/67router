@@ -1156,16 +1156,6 @@
     "system": "Ìtọ́nisọ́nà ètò",
     "resume": "Tẹ̀síwájú pẹ̀lú sáà tí a fipamọ́ nípasẹ̀ orúkọ"
   },
-  "plugin": {
-    "description": "Ṣàkóso àwọn plugin CLI (omniroute-cmd-*)",
-    "list": "Ṣàkójọ àwọn plugin tí a ti fi sílẹ̀",
-    "install": "Fi plugin kan sílẹ̀ láti npm tàbí ọ̀nà àdúgbò",
-    "remove": "Yọ plugin tí a ti fi sílẹ̀ kúrò",
-    "info": "Ṣàfihàn àwọn àlàyé nípa plugin tí a ti fi sílẹ̀",
-    "search": "Ṣàwárí àwọn plugin tó wà nínú ìforúkọsílẹ̀ npm",
-    "update": "Ṣe ìmúdójúìwọ̀n àwọn plugin tí a ti fi sílẹ̀",
-    "scaffold": "Ṣẹ̀dá àwòṣe ìpilẹ̀ plugin tuntun"
-  },
   "launch": {
     "description": "Ṣí Claude Code tí a darí sí OmniRoute (àdúgbò tàbí jíjìnnà, pẹ̀lú --profile)",
     "token": "Token tí Claude client gbọ́dọ̀ fi ránṣẹ́ (ANTHROPIC_AUTH_TOKEN)",

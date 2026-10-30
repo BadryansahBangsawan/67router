@@ -418,8 +418,6 @@ HTTP 會使用 Bearer 金鑰的 `api_keys.scopes` 作為 `authInfo`
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                    |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                             |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                               |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                           |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                              |
 | `read:obsidian`       | 13 個讀取工具 — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 個寫入工具 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                            |
@@ -576,7 +574,6 @@ stdio 傳輸層每 5 秒將存活狀態持久化到 `${DATA_DIR}/runtime/mcp-hea
 | `open-sse/mcp-server/tools/skillTools.ts`                                | 技能工具定義（4 個工具）                            |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion 上下文來源工具定義（6 個工具）               |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | 遊戲化工具定義（8 個工具）                          |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | 外掛註冊與管理工具（8 個工具）                      |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` 端點                              |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` 端點                               |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE 傳輸路由                         |

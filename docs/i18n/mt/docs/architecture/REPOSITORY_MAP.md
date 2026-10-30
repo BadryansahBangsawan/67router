@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Assi tal-immaġnijiet għall-marketing / README
 ├── @omniroute/           # Pakketti anċillari li jistgħu jiġu ppubblikati (opencode-plugin, opencode-provider)
 ├── skills/               # Pakketti ta’ ħiliet għas-CLI/aġenti (cli-* + omni-* + config-codex-cli)
-├── examples/             # Plugins ta’ eżempju + mudell inizjali omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Kontribuzzjonijiet tal-komunità (podman/)
 ├── .source/              # Konfigurazzjoni tas-sors ta’ Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Flussi tax-xogħol ta’ GitHub Actions + mudelli għall-issues + mudell għall-PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — jipproċessa memorji b'`needs_reindex=1` fl-isfond; jissejjaħ minn `POST /api/memory/reindex` u mill-perkors tal-mili retroattiv għażżien. (pjan 21)                                                                                                                                                           |
 | `monitoring/`                            | Kontrolli tas-saħħa, emissjoni tal-metriċi                                                                                                                                                                                                                                                                                          |
 | `oauth/`                                 | Flussi ta' OAuth/importazzjoni għal 22 modulu ta' fornituri (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                             |
-| `plugins/`                               | Reġistru tal-plugins                                                                                                                                                                                                                                                                                                                |
 | `promptCache/`                           | Punti ta' waqfien tal-cache tal-prompt fuq l-istil ta' Anthropic                                                                                                                                                                                                                                                                    |
 | `skills/`                                | Qafas tal-ħiliet (inkorporati + suq + SkillsSH) — ara `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                                   |
 | `playground/`                            | Helpers kondiviżi ta’ Playground Studio: `codeExport.ts` (ġeneratur għal curl/Python/TS), `promptImprover.ts` (bennej ta’ meta-prompts), `streamMetrics.ts` (TTFT/TPS puri), `types.ts` (tabella tal-prezzijiet) — ara `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                       |

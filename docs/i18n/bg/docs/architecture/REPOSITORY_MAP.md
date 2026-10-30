@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Изображения за маркетингови материали / README
 ├── @omniroute/           # Съпътстващи пакети за публикуване (opencode-plugin, opencode-provider)
 ├── skills/               # Пакети с умения за CLI/агенти (cli-* + omni-* + config-codex-cli)
-├── examples/             # Примерни приставки + начален проект omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Приноси от общността (podman/)
 ├── .source/              # Конфигурация на източника за Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Работни процеси за GitHub Actions + шаблони за проблеми + шаблон за PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                         | `runReindexBatch()` — обработва във фонов режим спомени с `needs_reindex=1`; извиква се от `POST /api/memory/reindex` и пътя за отложено обратно попълване. (план 21)                                                                                                                                                                 |
 | `monitoring/`                               | Проверки на работоспособността, изпращане на метрики                                                                                                                                                                                                                                                                                  |
 | `oauth/`                                    | OAuth/потоци за импортиране за 22 модула на доставчици (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                    |
-| `plugins/`                                  | Регистър на приставките                                                                                                                                                                                                                                                                                                               |
 | `promptCache/`                              | Точки на прекъсване за кеширане на подкани в стил Anthropic                                                                                                                                                                                                                                                                           |
 | `skills/`                                   | Рамка за умения (вградени + пазар + SkillsSH) — вижте `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                                     |
 | `playground/`                               | Споделени помощни модули на Playground Studio: `codeExport.ts` (генератор за curl/Python/TS), `promptImprover.ts` (създател на метаподкани), `streamMetrics.ts` (чисти TTFT/TPS), `types.ts` (таблица с цени) — вижте `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                          |

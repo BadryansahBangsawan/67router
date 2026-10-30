@@ -1156,16 +1156,6 @@
     "system": "Sistemski poziv",
     "resume": "Nadaljuj shranjeno sejo po imenu"
   },
-  "plugin": {
-    "description": "Upravljaj vtičnike CLI (omniroute-cmd-*)",
-    "list": "Prikaži seznam nameščenih vtičnikov",
-    "install": "Namesti vtičnik iz npm ali lokalne poti",
-    "remove": "Odstrani nameščeni vtičnik",
-    "info": "Prikaži podrobnosti o nameščenem vtičniku",
-    "search": "V registru npm poišči razpoložljive vtičnike",
-    "update": "Posodobi nameščene vtičnike",
-    "scaffold": "Ustvari osnovno ogrodje novega vtičnika"
-  },
   "launch": {
     "description": "Zaženi Claude Code, usmerjen na OmniRoute (lokalno ali oddaljeno, z --profile)",
     "token": "Žeton, ki naj ga pošlje odjemalec Claude (ANTHROPIC_AUTH_TOKEN)",

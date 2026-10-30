@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Risorse grafiche per il marketing e il README
 ├── @omniroute/           # Pacchetti complementari pubblicabili (opencode-plugin, opencode-provider)
 ├── skills/               # Pacchetti di skill per CLI/agenti (cli-* + omni-* + config-codex-cli)
-├── examples/             # Plugin di esempio + starter omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Contributi della community (podman/)
 ├── .source/              # Configurazione sorgente di Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Workflow di GitHub Actions + modelli per issue + modello per PR
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — elabora in background le memorie con `needs_reindex=1`; chiamato da `POST /api/memory/reindex` e dal percorso di backfill differito. (piano 21)                                                                                                                                                                     |
 | `monitoring/`                            | Controlli di integrità, emissione di metriche                                                                                                                                                                                                                                                                                             |
 | `oauth/`                                 | Flussi OAuth/di importazione per 22 moduli provider (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                           |
-| `plugins/`                               | Registro dei plugin                                                                                                                                                                                                                                                                                                                       |
 | `promptCache/`                           | Punti di interruzione della cache dei prompt in stile Anthropic                                                                                                                                                                                                                                                                           |
 | `skills/`                                | Framework delle skill (integrate + marketplace + SkillsSH) — vedere `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                           |
 | `playground/`                            | Helper condivisi di Playground Studio: `codeExport.ts` (generatore curl/Python/TS), `promptImprover.ts` (generatore di meta-prompt), `streamMetrics.ts` (TTFT/TPS puri), `types.ts` (tabella dei prezzi) — vedere `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                  |

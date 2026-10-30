@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Kiwango cha mradi (hupakiwa wakati wa kuanza)
 ```
 
-Au ipakie kwa utaratibu kupitia programu-jalizi:
+Or register it programmatically at startup:
 
 ```ts
-// Ndani ya programu-jalizi yako
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK ya programu-jalizi hutoa vihusishi vya onRequest / onResponse / onError. Sajili
-  // injini wakati moduli ya programu-jalizi inapopakiwa (au kwenye onRequest ya kwanza); iondoe kwenye usajili
-  // kupitia njia yako mwenyewe ya kusitisha.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Wakati wa kusitisha:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

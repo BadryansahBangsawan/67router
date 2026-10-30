@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # మార్కెటింగ్ / README ఇమేజ్ అసెట్లు
 ├── @omniroute/           # ప్రచురించగల అనుబంధ ప్యాకేజీలు (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/ఏజెంట్ స్కిల్ ప్యాక్లు (cli-* + omni-* + config-codex-cli)
-├── examples/             # నమూనా ప్లగిన్లు + omniroute-cmd-hello స్టార్టర్
+├── examples/             # Quickstart client samples
 ├── contrib/              # కమ్యూనిటీ సహకారాలు (podman/)
 ├── .source/              # Fumadocs సోర్స్ కాన్ఫిగరేషన్ (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions వర్క్ఫ్లోలు + ఇష్యూ టెంప్లేట్లు + PR టెంప్లేట్
@@ -193,7 +193,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — బ్యాక్గ్రౌండ్లో `needs_reindex=1` ఉన్న మెమరీలను ప్రాసెస్ చేస్తుంది; `POST /api/memory/reindex` మరియు లేజీ-బ్యాక్ఫిల్ పాత్ ద్వారా కాల్ చేయబడుతుంది. (ప్లాన్ 21)                                                                                                                                        |
 | `monitoring/`                            | హెల్త్ చెక్లు, మెట్రిక్స్ ఉద్గారం                                                                                                                                                                                                                                                                                           |
 | `oauth/`                                 | 22 ప్రొవైడర్ మాడ్యూల్ల కోసం OAuth/ఇంపోర్ట్ ఫ్లోలు (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                               |
-| `plugins/`                               | ప్లగిన్ రిజిస్ట్రీ                                                                                                                                                                                                                                                                                                          |
 | `promptCache/`                           | Anthropic-శైలి ప్రాంప్ట్ క్యాష్ బ్రేక్పాయింట్లు                                                                                                                                                                                                                                                                             |
 | `skills/`                                | Skills ఫ్రేమ్వర్క్ (అంతర్నిర్మిత + మార్కెట్ప్లేస్ + SkillsSH) — `docs/frameworks/SKILLS.md` చూడండి                                                                                                                                                                                                                          |
 | `playground/`                            | Playground Studio భాగస్వామ్య సహాయకాలు: `codeExport.ts` (curl/Python/TS జనరేటర్), `promptImprover.ts` (మెటా-ప్రాంప్ట్ బిల్డర్), `streamMetrics.ts` (ప్యూర్ TTFT/TPS), `types.ts` (ధరల పట్టిక) — `docs/frameworks/PLAYGROUND_STUDIO.md` చూడండి                                                                                |

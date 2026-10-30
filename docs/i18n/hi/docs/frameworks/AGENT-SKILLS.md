@@ -195,7 +195,7 @@ A2A स्किल `list-capabilities` संपूर्ण 45-स्किल
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
 | `cli-eval`            | cli-eval           | `omniroute eval`        |
-| `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
+| `cli-plugins-skills`  | cli-plugins-skills | `omniroute skills`      |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
 

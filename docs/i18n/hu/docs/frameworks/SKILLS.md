@@ -471,10 +471,6 @@ const config: SkillConfig = {
 | Kódfuttatás | `eval_code` (elkülönített JavaScript/Python)  | HYBRID |
 | Rendszer    | `execute_command` (elkülönített CLI-futtatás) | MANUAL |
 
-### Egyéni készség hozzáadása
-
-Az egyéni készségek beépülőmodul-rendszeren keresztüli hozzáadásáról lásd a [Beépülőmodul-SDK és készségintegráció](./PLUGIN_SDK.md) című dokumentumot.
-
 ---
 
 ## Lásd még
