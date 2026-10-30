@@ -396,7 +396,7 @@ export default function DroidToolCard({
                     placeholder={t("baseUrlPlaceholder")}
                     aria-label={t("baseUrl")}
                     className="min-w-0 w-auto flex-1"
-                    inputClassName="text-xs"
+                    inputClassName="font-mono text-xs"
                   />
                   {customBaseUrl && customBaseUrl !== baseUrl && (
                     <Button
@@ -405,7 +405,7 @@ export default function DroidToolCard({
                       onClick={() => setCustomBaseUrl("")}
                       title={t("resetToDefault")}
                       aria-label={t("resetToDefault")}
-                      className="text-text-muted hover:text-primary"
+                      className="text-text-muted hover:text-text-main"
                     >
                       <Icon name="restart_alt" size={14} />
                     </Button>

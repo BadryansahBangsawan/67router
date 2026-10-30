@@ -545,7 +545,7 @@ openai_base_url = "${getEffectiveBaseUrl()}"
                     placeholder={t("baseUrlPlaceholder")}
                     aria-label={t("baseUrl")}
                     className="min-w-0 w-auto flex-1"
-                    inputClassName="text-xs"
+                    inputClassName="font-mono text-xs"
                   />
                   {customBaseUrl && getDisplayUrl() !== normalizeCodexBaseUrl(baseUrl, wireApi) && (
                     <Button
@@ -554,7 +554,7 @@ openai_base_url = "${getEffectiveBaseUrl()}"
                       onClick={() => setCustomBaseUrl("")}
                       title={t("resetToDefault")}
                       aria-label={t("resetToDefault")}
-                      className="text-text-muted hover:text-primary"
+                      className="text-text-muted hover:text-text-main"
                     >
                       <Icon name="restart_alt" size={14} />
                     </Button>
@@ -690,7 +690,7 @@ openai_base_url = "${getEffectiveBaseUrl()}"
                     <Icon
                       name="arrow_forward"
                       size={14}
-                      className="text-border group-hover:text-primary transition-colors"
+                      className="text-border group-hover:text-text-main transition-colors"
                     />
                     <Button
                       variant="outline"

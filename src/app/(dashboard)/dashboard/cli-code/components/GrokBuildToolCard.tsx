@@ -533,7 +533,7 @@ export default function GrokBuildToolCard({
               <Icon
                 name="arrow_forward"
                 size={14}
-                className="text-border transition-colors group-hover:text-primary"
+                className="text-border transition-colors group-hover:text-text-main"
               />
               <Button
                 variant="outline"
