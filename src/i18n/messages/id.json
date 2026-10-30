@@ -12647,7 +12647,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Hubungkan ke server MCP OmniRoute (107 alat, 3 transportasi: SSE/stdio/HTTP). Mencakup perutean, cache, kompresi, memori, keahlian, penyedia, dan alat audit di 32 cakupan izin."
+        "description": "Hubungkan ke server MCP OmniRoute (99 alat, 3 transportasi: SSE/stdio/HTTP). Mencakup perutean, cache, kompresi, memori, keahlian, penyedia, dan alat audit di 30 cakupan izin."
       },
       "omni-agents-a2a": {
         "name": "Agen & Protokol A2A",

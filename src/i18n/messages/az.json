@@ -12647,7 +12647,7 @@
       },
       "omni-mcp": {
         "name": "MCP Serveri",
-        "description": "OmniRoute MCP serverinə qoşulun (107 alət, 3 nəql növü: SSE/stdio/HTTP). 32 icazə dairəsi üzrə marşrutlaşdırma, keş, sıxılma, yaddaş, bacarıqlar, provayderlər və audit alətlərini əhatə edir."
+        "description": "OmniRoute MCP serverinə qoşulun (99 alət, 3 nəql növü: SSE/stdio/HTTP). 30 icazə dairəsi üzrə marşrutlaşdırma, keş, sıxılma, yaddaş, bacarıqlar, provayderlər və audit alətlərini əhatə edir."
       },
       "omni-agents-a2a": {
         "name": "Agentlər və A2A Protokolu",

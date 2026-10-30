@@ -463,7 +463,7 @@ open-sse/
 ├── transformer/            Responses API ↔ Chat Completions stream transformer
 ├── services/               80+ service modules (combos, fallback, quotas, identity, …)
 ├── utils/                  Streaming helpers, TLS client, AWS SigV4, proxy fetch, …
-└── mcp-server/             MCP server (3 transports, 32 scopes, 107 tools)
+└── mcp-server/             MCP server (3 transports, 30 scopes, 99 tools)
 ```
 
 ### 4.1 `open-sse/handlers/`
@@ -549,11 +549,11 @@ Highlights (full list under `open-sse/services/`):
 
 ### 4.6 `open-sse/mcp-server/`
 
-- **107 unique tools** wired in `server.ts` (42 canonical in `schemas/tools.ts` +
+- **99 unique tools** wired in `server.ts` (42 canonical in `schemas/tools.ts` +
   memory, skills, GitHub-skills, pool, gamification, plugin, Notion, Obsidian,
   local-corpus and compression modules — union counted by `countUniqueMcpTools`).
 - **3 transports**: stdio, HTTP Streamable, SSE.
-- **32 scopes** enforced at runtime — base list in `src/shared/constants/mcpScopes.ts`, full set is the union of the scopes declared by each tool module.
+- **30 scopes** enforced at runtime — base list in `src/shared/constants/mcpScopes.ts`, full set is the union of the scopes declared by each tool module.
 - Audit table: `mcp_tool_audit` (populated by `audit.ts`).
 - Files: `server.ts`, `index.ts`, `httpTransport.ts`, `audit.ts`, `scopeEnforcement.ts`,
   `runtimeHeartbeat.ts`, `descriptionCompressor.ts`, `schemas/{tools, a2a, audit, index}.ts`,

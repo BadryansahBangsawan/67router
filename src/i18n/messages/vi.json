@@ -12724,7 +12724,7 @@
       },
       "omni-mcp": {
         "name": "Máy chủ MCP",
-        "description": "Kết nối máy chủ MCP OmniRoute với 107 công cụ và 3 transport SSE/stdio/HTTP. Bao phủ định tuyến, cache, nén, bộ nhớ, skill, nhà cung cấp và kiểm toán trong 32 phạm vi quyền."
+        "description": "Kết nối máy chủ MCP OmniRoute với 99 công cụ và 3 transport SSE/stdio/HTTP. Bao phủ định tuyến, cache, nén, bộ nhớ, skill, nhà cung cấp và kiểm toán trong 30 phạm vi quyền."
       },
       "omni-agents-a2a": {
         "name": "Agent & giao thức A2A",

@@ -12647,7 +12647,7 @@
       },
       "omni-mcp": {
         "name": "Servidor MCP",
-        "description": "Ligue-se ao servidor MCP do OmniRoute (107 ferramentas, 3 transportes: SSE/stdio/HTTP). Abrange ferramentas de encaminhamento, cache, compressão, memória, competências, fornecedores e auditoria em 32 âmbitos de permissão."
+        "description": "Ligue-se ao servidor MCP do OmniRoute (99 ferramentas, 3 transportes: SSE/stdio/HTTP). Abrange ferramentas de encaminhamento, cache, compressão, memória, competências, fornecedores e auditoria em 30 âmbitos de permissão."
       },
       "omni-agents-a2a": {
         "name": "Agentes e Protocolo A2A",

@@ -217,8 +217,9 @@
       "_rebaseline_2026_08_25_v3850_release_preflight": "8045 -> 8461 (+416 gzip bytes, +5.2%). Release v3.8.50 pre-flight, measured with the real size-limit + @size-limit/file path on tip e3e188e993 (the 08-09 rebaseline was taken on e0ce95c592 and the branch kept moving). The growth is concentrated in the two entrypoints the cycle actually touched: omniroute.mjs 4380->4700 and nodeRuntimeSupport.mjs 887->983 — #11039 (native Bun backend + Dockerfile.bun), #10870 (report .env lines that never take effect) and #10101 (strip inline comments when parsing .env values). mcp-server.mjs (1195) and reset-password.mjs (1583) are unchanged. Every entry stays far below its absolute budget (4700/15000, 1195/5000, 983/8000, 1583/6000). Legitimate cycle growth; shrinking is separate debt. The direction:down ratchet stays blocking from this measured tip."
     },
     "openapiBreaking": {
-      "value": 46,
+      "value": 57,
       "_rebaseline_2026_10_27_remove_unused_pr1": "5 -> 46. 67router PR-1 permanently removes middleware hooks (5 ops), relay (7), batch + files (15), moderations (1), free proxies / oneproxy (10) and webhooks (8): 46 api-path-removed-without-deprecation findings measured with oasdiff vs 67router/main, all intentional removals of unused features.",
+      "_rebaseline_2026_10_30_remove_unused_pr3": "46 -> 57. 67router PR-3 permanently removes the plugin system: 11 api-path-removed-without-deprecation findings (/api/plugins GET+POST, /{name} GET+DELETE, /{name}/activate, /{name}/deactivate, /{name}/config GET+PUT, /marketplace, /marketplace/install, /scan) measured with oasdiff vs refactor/remove-unused-pr1 (57 vs 67router/main), all intentional removals of an unused feature.",
       "direction": "down",
       "dedicatedGate": true,
       "_note": "oasdiff breaking-change gate (Fase 9 Onda 0). Blocks any breaking change vs base spec.",

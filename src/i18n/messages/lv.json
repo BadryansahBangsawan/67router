@@ -12647,7 +12647,7 @@
       },
       "omni-mcp": {
         "name": "MCP serveris",
-        "description": "Izveidojiet savienojumu ar OmniRoute MCP serveri (107 rīki, 3 transporti: SSE/stdio/HTTP). Tas aptver maršrutēšanas, kešatmiņas, saspiešanas, atmiņas, prasmju, nodrošinātāju un audita rīkus 32 atļauju tvērumos."
+        "description": "Izveidojiet savienojumu ar OmniRoute MCP serveri (99 rīki, 3 transporti: SSE/stdio/HTTP). Tas aptver maršrutēšanas, kešatmiņas, saspiešanas, atmiņas, prasmju, nodrošinātāju un audita rīkus 30 atļauju tvērumos."
       },
       "omni-agents-a2a": {
         "name": "Aģenti un A2A protokols",
