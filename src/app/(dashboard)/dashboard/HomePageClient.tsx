@@ -108,11 +108,11 @@ function mergeUpdateStep(steps: UpdateStep[], nextStep: UpdateStep) {
 
 // Quick-start link classes, extracted so each <Link> still fits on one line with
 // prefetch={false} (#8281) — this file is size-frozen.
-const INLINE_LINK = "text-primary hover:underline";
+const INLINE_LINK = "font-medium text-text-main underline-offset-2 hover:underline";
 // The kit WorkflowGuide numbers its steps itself; the step titles carry a "1. " prefix.
 const stripStepNumber = (title: string) => title.replace(/^\s*\d+[.)]\s*/, "");
 const DOCS_LINK =
-  "hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-border text-text-muted hover:text-text-main hover:bg-bg-subtle transition-colors";
+  "hidden sm:inline-flex h-8 items-center gap-1.5 px-3 rounded-lg text-[13px] font-medium border border-border bg-surface text-text-main hover:bg-bg-subtle transition-colors";
 
 // Stable no-op subscription for useSyncExternalStore reads of never-changing
 // browser globals (location.origin does not change without a full navigation).
@@ -790,7 +790,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
 
   if (loading) {
     return (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-6">
         <CardSkeleton />
         <CardSkeleton />
       </div>
@@ -800,15 +800,15 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
   const currentEndpoint = baseUrl;
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       {/* Update Progress Overlay */}
       {showUpdateOverlay && (
         <div className="fixed inset-0 z-[999] bg-[var(--ci-color-overlay)] backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-bg-main border border-border rounded-2xl shadow-2xl max-w-md w-full p-6">
+          <div className="bg-surface border border-border rounded-xl shadow-[var(--shadow-elevated)] max-w-md w-full p-6">
             <div className="flex items-center gap-3 mb-5">
               <Icon name="progress_activity" size={28} className="text-primary animate-spin" />
               <div>
-                <h3 className="text-lg font-bold">
+                <h3 className="text-base font-semibold tracking-tight">
                   {updatePhase === "done"
                     ? t("updateCompleteTitle")
                     : updatePhase === "failed"
@@ -834,7 +834,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
                     key={s.step}
                     className={`flex items-center gap-3 px-3 py-2.5 rounded-lg border transition-all ${
                       s.status === "running"
-                        ? "border-primary/40 bg-primary/5"
+                        ? "border-border-strong bg-bg-subtle"
                         : s.status === "done"
                           ? "border-success/30 bg-success/5"
                           : s.status === "failed"
@@ -912,7 +912,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
       {/* Update Notification Banner */}
       {versionInfo?.updateAvailable && !showUpdateOverlay && (
         <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-3 rounded-lg border border-primary/20 bg-primary/10 px-5 py-4 text-primary">
+          <div className="flex flex-col gap-3 rounded-xl border border-border bg-surface px-5 py-4 text-text-main">
             <div className="flex min-h-[48px] items-center justify-between">
               <div className="flex min-w-0 items-center gap-4">
                 <Icon
@@ -921,7 +921,8 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
                       ? "downloading"
                       : "system_update_alt"
                   }
-                  size={24}
+                  size={20}
+                  className="text-text-muted"
                 />
                 <div>
                   <p className="font-semibold text-sm">
@@ -930,7 +931,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
                       desktop: isElectron ? ` ${t("desktopAppLabel")}` : "",
                     })}
                   </p>
-                  <p className="text-xs opacity-80 mt-0.5">
+                  <p className="text-[13px] text-text-muted mt-0.5">
                     {isElectron ? (
                       <>
                         {electronUpdateStatus.status === "checking" && t("checkingForUpdates")}
@@ -973,7 +974,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
                     </Button>
                   )}
                   {electronUpdateStatus.status === "downloading" && (
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/20">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-bg-subtle tabular-nums">
                       <Icon
                         name="progress_activity"
                         size={16}
@@ -1029,8 +1030,8 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
                 electronUpdateStatus.status === "idle" ||
                 electronUpdateStatus.status === "available" ||
                 electronUpdateStatus.status === "not-available") && (
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-primary/20 mt-2 pt-3 gap-2">
-                  <p className="text-xs opacity-75">{t("directDownloadHint")}</p>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-border mt-2 pt-3 gap-2">
+                  <p className="text-xs text-text-muted">{t("directDownloadHint")}</p>
                   <div className="flex gap-2">
                     <Button
                       size="sm"
@@ -1143,7 +1144,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
       )}
 
       {showProviderTopologyOnHome && (
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4">
           <HomeProviderTopologySection
             providers={topologyProviders}
             lastProvider={lastProvider}

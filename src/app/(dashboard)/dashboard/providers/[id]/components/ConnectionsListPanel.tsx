@@ -333,7 +333,7 @@ export default function ConnectionsListPanel({
     const someSelectedPage = pageConnections.some((c) => selectedIds.has(c.id));
     return (
       <>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 px-3 py-2 bg-muted/50 rounded-t-lg border border-b-0 border-border">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 px-4 py-2.5 bg-bg-subtle rounded-t-xl border border-b-0 border-border">
           <div className="flex w-full items-center gap-2 flex-wrap sm:w-auto">
             <Checkbox
               checked={allSelectedPage}
@@ -381,7 +381,7 @@ export default function ConnectionsListPanel({
           {bulkActions}
         </div>
         {paginationBar}
-        <div className="flex flex-col divide-y divide-border border border-t-0 border-border rounded-b-lg overflow-hidden">
+        <div className="flex flex-col divide-y divide-border border border-t-0 border-border rounded-b-xl overflow-hidden">
           {pageConnections.length === 0 ? (
             <div className="px-3 py-6 text-center text-sm text-text-muted">
               {t("noFilteredConnections", "No connections match the current filter.")}
@@ -520,7 +520,7 @@ export default function ConnectionsListPanel({
   return (
     <>
       {selectedIds.size > 0 || connections.length > 0 ? (
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 px-3 py-2 bg-muted/50 rounded-t-lg border border-b-0 border-border">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 px-4 py-2.5 bg-bg-subtle rounded-t-xl border border-b-0 border-border">
           <div className="flex w-full items-center gap-2 flex-wrap sm:w-auto">
             <Checkbox
               checked={allSelected}
@@ -559,7 +559,7 @@ export default function ConnectionsListPanel({
         </div>
       ) : null}
       {paginationBar}
-      <div className="flex flex-col gap-0 border border-t-0 border-border rounded-b-lg overflow-hidden">
+      <div className="flex flex-col gap-0 border border-t-0 border-border rounded-b-xl overflow-hidden">
         {visibleGroupKeys.map((tag, gi) => {
           const groupConns = pagedGroupMap.get(tag)!;
           const groupTotal = groupMap.get(tag)!.length;

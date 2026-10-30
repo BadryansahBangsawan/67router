@@ -78,11 +78,11 @@ export default function NewsBanner() {
     <div
       role="complementary"
       aria-label={announcement.title}
-      className="mb-4 flex flex-col gap-3 rounded-lg border border-primary/30 bg-primary/5 px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
+      className="flex flex-col gap-3 rounded-xl border border-border bg-surface px-5 py-4 sm:flex-row sm:items-center sm:justify-between"
     >
       <div className="flex min-w-0 items-start gap-3">
-        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-          <Icon name={announcement.icon} size={22} className="text-primary" />
+        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-border bg-bg-subtle">
+          <Icon name={announcement.icon} size={20} className="text-text-main" />
         </div>
         <div className="min-w-0">
           <p className="text-sm font-semibold text-text-main">{announcement.title}</p>

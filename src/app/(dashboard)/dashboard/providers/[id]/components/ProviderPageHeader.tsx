@@ -78,10 +78,9 @@ export default function ProviderPageHeader({
       href={noticeUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm font-medium underline underline-offset-2 opacity-70 hover:opacity-100 transition-opacity inline-flex items-center gap-1"
-      style={{ color: providerInfo.color }}
+      className="text-[13px] font-medium text-text-main underline-offset-2 hover:underline inline-flex items-center gap-1"
     >
-      <Icon name="open_in_new" size={16} />
+      <Icon name="open_in_new" size={14} />
       {t("getApiKey")}
     </a>
   ) : null;
@@ -92,18 +91,15 @@ export default function ProviderPageHeader({
       breadcrumbs={
         <Link
           href="/dashboard/providers"
-          className="inline-flex items-center gap-1 text-sm text-text-muted hover:text-primary transition-colors"
+          className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text-main transition-colors"
         >
-          <Icon name="arrow_back" size={18} />
+          <Icon name="arrow_back" size={16} />
           {t("backToProviders")}
         </Link>
       }
       title={
-        <span className="inline-flex items-center gap-4">
-          <span
-            className="inline-flex items-center justify-center rounded-lg"
-            style={{ backgroundColor: `${providerInfo.color}15` }}
-          >
+        <span className="inline-flex items-center gap-3">
+          <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-surface">
             <ProviderIcon
               providerId={getHeaderIconProviderId(
                 isOpenAICompatible,
@@ -111,7 +107,7 @@ export default function ProviderPageHeader({
                 providerInfo.id,
                 providerInfo.apiType
               )}
-              size={48}
+              size={28}
               type="color"
               src={providerInfo.iconUrl}
               alt={providerInfo.name}
@@ -124,15 +120,14 @@ export default function ProviderPageHeader({
               href={providerInfo.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline inline-flex items-center gap-2"
-              style={{ color: providerInfo.color }}
+              className="hover:underline underline-offset-4 inline-flex items-center gap-2"
               title={showPartnerNote ? kimiPartnerLinkNote : undefined}
               aria-label={
                 showPartnerNote ? `${providerInfo.name} — ${kimiPartnerLinkNote}` : undefined
               }
             >
               {providerInfo.name}
-              <Icon name="open_in_new" size={18} className="opacity-60" />
+              <Icon name="open_in_new" size={16} className="text-text-muted" />
             </a>
           ) : (
             providerInfo.name
@@ -143,7 +138,7 @@ export default function ProviderPageHeader({
         <span className="flex flex-wrap items-center gap-2">
           <span>{t("connectionCountLabel", { count: connectionsCount })}</span>
           {showPartnerNote && providerInfo.website && (
-            <span className="text-[10px] font-medium uppercase tracking-wide text-text-muted/70">
+            <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
               {kimiPartnerLinkNote}
             </span>
           )}
@@ -153,8 +148,7 @@ export default function ProviderPageHeader({
               variant="ghost"
               size="sm"
               onClick={onOpenTutorial}
-              className="h-auto min-h-0 px-0 text-sm font-medium underline underline-offset-2 opacity-70 hover:bg-transparent hover:opacity-100"
-              style={{ color: providerInfo.color }}
+              className="h-auto min-h-0 px-0 text-[13px] font-medium text-text-main underline-offset-2 hover:bg-transparent hover:underline"
             >
               Tutorial
             </Button>

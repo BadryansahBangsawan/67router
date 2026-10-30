@@ -78,13 +78,12 @@ export default function FirstRunReadinessCard({ setupComplete }: FirstRunReadine
       // The kit close button runs the same persisted dismissal as the "readinessDismiss" action.
       dismissLabel={t("readinessDismiss")}
       onDismiss={dismiss}
-      className="mb-4"
       title={
         <>
-          <span className="block text-xs font-medium uppercase tracking-wide text-info">
+          <span className="block text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
             {t("readinessEyebrow")}
           </span>
-          <span className="mt-1 block text-lg font-semibold text-text-main">
+          <span className="mt-1 block text-base font-semibold tracking-tight text-text-main">
             {t("readinessTitle")}
           </span>
         </>
@@ -95,7 +94,7 @@ export default function FirstRunReadinessCard({ setupComplete }: FirstRunReadine
           <ol className="mt-3 space-y-1.5 text-sm text-text-main">
             {steps.map((label, index) => (
               <li key={label} className="flex items-center gap-2">
-                <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-info/15 text-xs font-semibold text-info">
+                <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-border bg-bg-subtle text-xs font-medium tabular-nums text-text-main">
                   {index + 1}
                 </span>
                 <span>{label}</span>

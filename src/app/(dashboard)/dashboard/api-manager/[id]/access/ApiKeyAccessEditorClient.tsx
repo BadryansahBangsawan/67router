@@ -418,10 +418,10 @@ function AccessHeader({ context }: { context: AccessFormContext }) {
     <PageHeader
       compact
       breadcrumbs={
-        <div className="flex items-center gap-2 text-xs text-text-muted">
+        <div className="flex items-center gap-2 text-[13px] text-text-muted">
           <Link
             href="/dashboard/api-manager"
-            className="hover:text-primary transition-colors inline-flex items-center gap-1"
+            className="hover:text-text-main transition-colors inline-flex items-center gap-1"
           >
             <Icon name="arrow_back" size={14} />
             {t("keyManagement")}
@@ -460,7 +460,7 @@ function AccessTabBar({ context }: { context: AccessFormContext }) {
             onKeyDown={(e) => handleTabKeyDown(e, index)}
             className="gap-2 whitespace-nowrap"
           >
-            <Icon name={tabDef.icon} size={18} />
+            <Icon name={tabDef.icon} size={16} />
             <span>{t(tabDef.labelKey)}</span>
             {/* The space keeps the label and the badge text apart in the accessible name;
                     white space between flex items is not rendered. */}
@@ -490,7 +490,7 @@ function AccessPanel({ context }: { context: AccessFormContext }) {
       aria-labelledby={`tab-${activeTab}`}
       className="focus:outline-none"
     >
-      <Card className="p-6">
+      <Card padding="md">
         {/* Locked while saving: the post-save refresh replaces the form state, so an edit
               made during the request would otherwise be dropped without notice. */}
         <fieldset
@@ -518,7 +518,7 @@ function AccessPanel({ context }: { context: AccessFormContext }) {
 function AccessSaveBar({ context }: { context: AccessFormContext }) {
   const { form, t, ts, isSubmitting, handleSave } = context;
   return (
-    <div className="sticky bottom-0 z-30 rounded-xl border border-border bg-surface/90 p-4 shadow-lg backdrop-blur-md">
+    <div className="sticky bottom-0 z-30 rounded-xl border border-border bg-surface/90 px-5 py-3 shadow-[var(--shadow-elevated)] backdrop-blur-md">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           {form.isDirty ? (

@@ -136,7 +136,7 @@ function ComboMembersCell({ combo }: { combo: ComboCatalogRow }) {
           {combo.models.slice(0, 3).map((m, idx) => (
             <span
               key={idx}
-              className="inline-block max-w-[150px] truncate rounded bg-bg-subtle px-1.5 py-0.5 font-mono text-[10px] text-text-muted"
+              className="inline-block max-w-[150px] truncate rounded-md border border-border bg-bg-subtle px-1.5 py-0.5 font-mono text-[11px] text-text-secondary"
               title={m.model}
             >
               {m.label ||

@@ -565,7 +565,10 @@ export default function ProviderDetailPageClient() {
     return (
       <div className="text-center py-20">
         <p className="text-text-muted">{t("providerNotFound")}</p>
-        <Link href="/dashboard/providers" className="text-primary mt-4 inline-block">
+        <Link
+          href="/dashboard/providers"
+          className="mt-4 inline-block font-medium text-text-main hover:underline"
+        >
           {t("backToProviders")}
         </Link>
       </div>
@@ -573,7 +576,7 @@ export default function ProviderDetailPageClient() {
   }
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       <ProviderPageHeader
         providerId={providerId}
         providerInfo={{ ...providerInfo, website: providerHeaderWebsite }}

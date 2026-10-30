@@ -623,6 +623,7 @@ function CatalogHeader({ context }: { context: CatalogPageContext }) {
           actions={
             <Button
               variant="secondary"
+              size="sm"
               icon="refresh"
               loading={modelsLoading || combosLoading}
               onClick={refreshAll}

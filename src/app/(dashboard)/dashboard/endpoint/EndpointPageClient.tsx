@@ -1259,15 +1259,18 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
   const ngrokUrlNotice = translateOrFallback("ngrokUrlNotice", "Creates a public ngrok tunnel.");
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       {/* Guided connection header (#11228): /v1 URL + test action lead; advanced protocols demoted */}
       <div className="flex flex-col gap-2">
         <PageHeader compact title={t("title")} description={t("subtitle")} />
         <div className="flex items-center gap-3 mt-2">
-          <code className="text-sm bg-card-subtle px-3 py-1 rounded-md text-text-main font-mono">
+          <code className="text-[13px] border border-border bg-bg-subtle px-3 py-1 rounded-lg text-text-main font-mono">
             {displayBaseUrl}/v1
           </code>
-          <a href="#test" className="text-sm text-action font-medium hover:underline">
+          <a
+            href="#test"
+            className="text-[13px] text-text-main font-medium underline-offset-2 hover:underline"
+          >
             {t("testEndpoint")}
           </a>
         </div>
@@ -1294,7 +1297,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
 
       {/* Endpoint Card */}
       <Card>
-        <h2 className="text-lg font-semibold mb-4">{t("title")}</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("title")}</h2>
 
         {/* Cloud Status Toast */}
         {cloudStatus && (
@@ -1327,8 +1330,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
 
         {/* Active URLs bar */}
         {activeUrls.length > 0 && (
-          <div className="mb-4 rounded-lg border border-primary/20 bg-primary/5 p-3">
-            <p className="text-[10px] font-semibold text-primary uppercase tracking-wider mb-2">
+          <div className="mb-4 rounded-lg border border-border bg-bg-subtle p-3">
+            <p className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em] mb-2">
               {t("activeEndpoints")}
             </p>
             <div className="flex flex-col gap-1.5">
@@ -1403,7 +1406,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
           {/* Tunnels section header */}
           <div className="flex items-center gap-2 pt-4 pb-1 border-t border-border/50">
             <Icon name="network_node" size={14} className="text-text-muted" />
-            <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+            <span className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
               {t("tunnels")}
             </span>
             <div className="flex-1 h-px bg-border/50" />
@@ -1419,7 +1422,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
               status pill and the action move to the next line instead of squeezing it; only
               the URL may break anywhere ("Cloud sync d|estination" at 390 px, F4). */}
           <div className="flex flex-wrap items-center gap-3 py-3">
-            <Icon name="cloud" size={18} className="text-info" />
+            <Icon name="cloud" size={18} className="text-text-muted" />
             <div className="flex-1 min-w-[12rem]">
               <span className="text-sm font-medium">{t("cloudOmniroute")}</span>
               <p
@@ -1481,7 +1484,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
           {showCloudflaredTunnel && (
             <div className="border-t border-border/30">
               <div className="flex items-center gap-3 py-3">
-                <Icon name="cloud_queue" size={18} className="text-warning" />
+                <Icon name="cloud_queue" size={18} className="text-text-muted" />
                 <div className="flex-1 min-w-0">
                   <span className="text-sm font-medium">
                     {translateOrFallback("cloudflaredTitle", "Cloudflare Quick Tunnel")}
@@ -1561,7 +1564,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
                   }
                 }}
               >
-                <Icon name="vpn_lock" size={18} className="text-chart-3" />
+                <Icon name="vpn_lock" size={18} className="text-text-muted" />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-baseline gap-1 flex-wrap">
                     <span className="text-sm font-medium">
@@ -1720,7 +1723,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
                   }
                 }}
               >
-                <Icon name="public" size={18} className="text-chart-3" />
+                <Icon name="public" size={18} className="text-text-muted" />
                 <div className="flex-1 min-w-0">
                   <span className="text-sm font-medium">
                     {translateOrFallback("ngrokTitle", "ngrok Tunnel")}
@@ -1845,7 +1848,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
       <Card>
         <div className="flex items-center justify-between mb-5">
           <div>
-            <h2 className="text-lg font-semibold">{t("available")}</h2>
+            <h2 className="text-sm font-semibold">{t("available")}</h2>
             <p className="text-sm text-text-muted">
               {modelsLoading
                 ? translateOrFallback("loadingModels", "Loading available models...")
@@ -1860,8 +1863,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
         {/* Core APIs */}
         <div className="mb-5">
           <div className="flex items-center gap-2 mb-3">
-            <Icon name="hub" className="text-sm text-primary" />
-            <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+            <Icon name="hub" className="text-sm text-text-muted" />
+            <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
               {t("categoryCore")}
             </h3>
             <div className="flex-1 h-px bg-border/50" />
@@ -1921,8 +1924,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
         {/* Media & Multi-Modal */}
         <div className="mb-5">
           <div className="flex items-center gap-2 mb-3">
-            <Icon name="perm_media" className="text-sm text-chart-3" />
-            <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+            <Icon name="perm_media" className="text-sm text-text-muted" />
+            <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
               {t("categoryMedia")}
             </h3>
             <div className="flex-1 h-px bg-border/50" />
@@ -2019,8 +2022,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
         {searchProviders.length > 0 && (
           <div className="mb-5">
             <div className="flex items-center gap-2 mb-3">
-              <Icon name="travel_explore" className="text-sm text-info" />
-              <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+              <Icon name="travel_explore" className="text-sm text-text-muted" />
+              <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
                 {t("categorySearch")}
               </h3>
               <div className="flex-1 h-px bg-border/50" />
@@ -2044,8 +2047,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
         {/* Utility & Management */}
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <Icon name="build" className="text-sm text-warning" />
-            <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+            <Icon name="build" className="text-sm text-text-muted" />
+            <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
               {t("categoryUtility")}
             </h3>
             <div className="flex-1 h-px bg-border/50" />
@@ -2478,22 +2481,26 @@ function EndpointCard({
   const copyId = `endpoint_${path}`;
   const fullUrl = `${baseUrl.replace(/\/v1$/, "")}${path}`;
 
+  // 67router: one neutral icon chip for every endpoint; `iconColor`/`iconBg` stay in the props
+  // so the call sites keep compiling, but the calm monochrome tile ignores them.
+  void iconColor;
+  void iconBg;
   return (
-    <div className="border border-border rounded-lg p-3 hover:bg-surface/30 transition-colors flex flex-col gap-2">
+    <div className="border border-border rounded-lg p-3 hover:border-border-strong transition-colors flex flex-col gap-2">
       <div className="flex items-start gap-2.5">
-        <div className={`flex items-center justify-center size-8 rounded-lg ${iconBg} shrink-0`}>
-          <Icon name={icon} size={16} className={iconColor} />
+        <div className="flex items-center justify-center size-8 rounded-lg border border-border bg-surface shrink-0">
+          <Icon name={icon} size={16} className="text-text-muted" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-1.5 flex-wrap">
             <span className="font-semibold text-xs leading-tight">{title}</span>
             {badge && (
-              <span className="text-[9px] px-1.5 py-0.5 rounded-full border border-border/60 text-text-muted font-medium uppercase tracking-wider leading-none">
+              <span className="text-[11px] px-1.5 py-px rounded-md border border-border bg-bg-subtle text-text-secondary font-medium leading-tight">
                 {badge}
               </span>
             )}
           </div>
-          <span className="text-xs text-text-muted mt-0.5 block">
+          <span className="text-xs tabular-nums text-text-muted mt-0.5 block">
             {models === null
               ? "—"
               : modelsLoading
@@ -2503,7 +2510,7 @@ function EndpointCard({
         </div>
       </div>
       <div className="flex items-center gap-1.5">
-        <code className="flex-1 text-[10px] font-mono text-text-muted bg-surface/80 px-2 py-1 rounded truncate">
+        <code className="flex-1 text-[11px] font-mono text-text-secondary bg-bg-subtle border border-border px-2 py-1 rounded-md truncate">
           {path}
         </code>
         <Button

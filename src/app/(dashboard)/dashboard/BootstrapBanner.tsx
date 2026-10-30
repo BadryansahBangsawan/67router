@@ -25,7 +25,6 @@ export default function BootstrapBanner() {
     <Alert
       variant="warning"
       role="alert"
-      className="mb-4"
       icon={<Icon name="warning" size={18} />}
       title={t("zeroConfigBannerTitle")}
       description={t.rich("zeroConfigBannerBody", {
