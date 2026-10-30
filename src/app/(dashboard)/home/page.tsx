@@ -22,10 +22,14 @@ export default async function HomePage() {
       <PageHeader title={ts("home")} description={ts("homeSubtitle")} />
       {isBootstrapped && <BootstrapBanner />}
       <FirstRunReadinessCard setupComplete={Boolean(settings.setupComplete)} />
-      <KimiSponsorBanner />
-      <CheaperInferenceSponsorBanner />
-      <VscodeCopilotBanner />
-      <NewsBanner />
+      {/* Banners stack tighter than page sections (12 px, not 24 px); the group collapses when
+          every banner renders nothing (dismissed / gated), so it never leaves an empty gap. */}
+      <div className="flex flex-col gap-3 empty:hidden">
+        <KimiSponsorBanner />
+        <CheaperInferenceSponsorBanner />
+        <VscodeCopilotBanner />
+        <NewsBanner />
+      </div>
       <HomePageClient machineId={machineId} />
     </div>
   );
