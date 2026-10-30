@@ -10449,6 +10449,8 @@
     "unifiedProxy": "Unified AI API Proxy",
     "unifiedAiApiProxy": "Unified AI API Proxy",
     "unifiedAiApiProxyDesc": "Route requests to multiple AI providers through a single endpoint. Load balancing, failover, and usage tracking built in.",
+    "brandTagline": "One endpoint. Every model. Never a dead request.",
+    "docsLink": "Docs",
     "passwordNotEnabled": "Password protection is not enabled",
     "loading": "Loading...",
     "invalidPassword": "Invalid password",
